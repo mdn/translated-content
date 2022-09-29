@@ -3,96 +3,84 @@ title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Позволяет расширениям взаимодействовать с менеджером загрузки браузера. Этот модуль API можно использовать для загрузки, отмены, приостановки, возобновления загрузки файлов и отображения загруженных файлов в файловом менеджере.</p>
+Позволяет расширениям взаимодействовать с менеджером загрузки браузера. Этот модуль API можно использовать для загрузки, отмены, приостановки, возобновления загрузки файлов и отображения загруженных файлов в файловом менеджере.
 
-<p>Для использования этого API вам необходимо указать "downloads" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> в вашем <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> файле.</p>
+Для использования этого API вам необходимо указать "downloads" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) в вашем [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) файле.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.FilenameConflictAction")}}</dt>
- <dd>Определяет действия в случае, если имя загружаемого файла конфликтует с именем существующего файла.</dd>
- <dt>{{WebExtAPIRef("downloads.InterruptReason")}}</dt>
- <dd>Defines a set of possible reasons why a download was interrupted.</dd>
- <dt>{{WebExtAPIRef("downloads.DangerType")}}</dt>
- <dd>Defines a set of common warnings of possible dangers associated with downloadable files.</dd>
- <dt>{{WebExtAPIRef("downloads.State")}}</dt>
- <dd>Defines different states that a current download can be in.</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadItem")}}</dt>
- <dd>Represents a downloaded file.</dd>
- <dt>{{WebExtAPIRef("downloads.StringDelta")}}</dt>
- <dd>Represents the difference between two strings.</dd>
- <dt>{{WebExtAPIRef("downloads.DoubleDelta")}}</dt>
- <dd>Represents the difference between two doubles.</dd>
- <dt>{{WebExtAPIRef("downloads.BooleanDelta")}}</dt>
- <dd>Represents the difference between two booleans.</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadTime")}}</dt>
- <dd>Represents the time a download took to complete.</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadQuery")}}</dt>
- <dd>Defines a set of parameters that can be used to search the downloads manager for a specific set of downloads.</dd>
-</dl>
+- {{WebExtAPIRef("downloads.FilenameConflictAction")}}
+  - : Определяет действия в случае, если имя загружаемого файла конфликтует с именем существующего файла.
+- {{WebExtAPIRef("downloads.InterruptReason")}}
+  - : Defines a set of possible reasons why a download was interrupted.
+- {{WebExtAPIRef("downloads.DangerType")}}
+  - : Defines a set of common warnings of possible dangers associated with downloadable files.
+- {{WebExtAPIRef("downloads.State")}}
+  - : Defines different states that a current download can be in.
+- {{WebExtAPIRef("downloads.DownloadItem")}}
+  - : Represents a downloaded file.
+- {{WebExtAPIRef("downloads.StringDelta")}}
+  - : Represents the difference between two strings.
+- {{WebExtAPIRef("downloads.DoubleDelta")}}
+  - : Represents the difference between two doubles.
+- {{WebExtAPIRef("downloads.BooleanDelta")}}
+  - : Represents the difference between two booleans.
+- {{WebExtAPIRef("downloads.DownloadTime")}}
+  - : Represents the time a download took to complete.
+- {{WebExtAPIRef("downloads.DownloadQuery")}}
+  - : Defines a set of parameters that can be used to search the downloads manager for a specific set of downloads.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.download()")}}</dt>
- <dd>Downloads a file, given its URL and other optional preferences.</dd>
- <dt>{{WebExtAPIRef("downloads.search()")}}</dt>
- <dd>Queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.</dd>
- <dt>{{WebExtAPIRef("downloads.pause()")}}</dt>
- <dd>Pauses a download.</dd>
- <dt>{{WebExtAPIRef("downloads.resume()")}}</dt>
- <dd>Resumes a paused download.</dd>
- <dt>{{WebExtAPIRef("downloads.cancel()")}}</dt>
- <dd>Cancels a download.</dd>
- <dt>{{WebExtAPIRef("downloads.getFileIcon()")}}</dt>
- <dd>Retrieves an icon for the specified download.</dd>
- <dt>{{WebExtAPIRef("downloads.open()")}}</dt>
- <dd>Opens the downloaded file with its associated application.</dd>
- <dt>{{WebExtAPIRef("downloads.show()")}}</dt>
- <dd>Opens the platform's file manager application to show the downloaded file in its containing folder.</dd>
- <dt>{{WebExtAPIRef("downloads.showDefaultFolder()")}}</dt>
- <dd>Opens the platform's file manager application to show the default downloads folder.</dd>
- <dt>{{WebExtAPIRef("downloads.erase()")}}</dt>
- <dd>Erases matching {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} from the browser's download history, without deleting the downloaded files from disk.</dd>
- <dt>{{WebExtAPIRef("downloads.removeFile()")}}</dt>
- <dd>Removes a downloaded file from disk, but not from the browser's download history.</dd>
- <dt>{{WebExtAPIRef("downloads.acceptDanger()")}}</dt>
- <dd>Prompts the user to accept or cancel a dangerous download.</dd>
- <dt>{{WebExtAPIRef("downloads.drag()")}}</dt>
- <dd>Initiates dragging the downloaded file to another application.</dd>
- <dt>{{WebExtAPIRef("downloads.setShelfEnabled()")}}</dt>
- <dd>Enables or disables the gray shelf at the bottom of every window associated with the current browser profile. The shelf will be disabled as long as at least one extension has disabled it.</dd>
-</dl>
+- {{WebExtAPIRef("downloads.download()")}}
+  - : Downloads a file, given its URL and other optional preferences.
+- {{WebExtAPIRef("downloads.search()")}}
+  - : Queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
+- {{WebExtAPIRef("downloads.pause()")}}
+  - : Pauses a download.
+- {{WebExtAPIRef("downloads.resume()")}}
+  - : Resumes a paused download.
+- {{WebExtAPIRef("downloads.cancel()")}}
+  - : Cancels a download.
+- {{WebExtAPIRef("downloads.getFileIcon()")}}
+  - : Retrieves an icon for the specified download.
+- {{WebExtAPIRef("downloads.open()")}}
+  - : Opens the downloaded file with its associated application.
+- {{WebExtAPIRef("downloads.show()")}}
+  - : Opens the platform's file manager application to show the downloaded file in its containing folder.
+- {{WebExtAPIRef("downloads.showDefaultFolder()")}}
+  - : Opens the platform's file manager application to show the default downloads folder.
+- {{WebExtAPIRef("downloads.erase()")}}
+  - : Erases matching {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} from the browser's download history, without deleting the downloaded files from disk.
+- {{WebExtAPIRef("downloads.removeFile()")}}
+  - : Removes a downloaded file from disk, but not from the browser's download history.
+- {{WebExtAPIRef("downloads.acceptDanger()")}}
+  - : Prompts the user to accept or cancel a dangerous download.
+- {{WebExtAPIRef("downloads.drag()")}}
+  - : Initiates dragging the downloaded file to another application.
+- {{WebExtAPIRef("downloads.setShelfEnabled()")}}
+  - : Enables or disables the gray shelf at the bottom of every window associated with the current browser profile. The shelf will be disabled as long as at least one extension has disabled it.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.onCreated")}}</dt>
- <dd>Fires with the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} object when a download begins.</dd>
- <dt>{{WebExtAPIRef("downloads.onErased")}}</dt>
- <dd>Fires with the <code>downloadId</code> when a download is erased from history.</dd>
- <dt>{{WebExtAPIRef("downloads.onChanged")}}</dt>
- <dd>When any of a {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}'s properties except <code>bytesReceived</code> changes, this event fires with the <code>downloadId</code> and an object containing the properties that changed.</dd>
-</dl>
+- {{WebExtAPIRef("downloads.onCreated")}}
+  - : Fires with the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} object when a download begins.
+- {{WebExtAPIRef("downloads.onErased")}}
+  - : Fires with the `downloadId` when a download is erased from history.
+- {{WebExtAPIRef("downloads.onChanged")}}
+  - : When any of a {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}'s properties except `bytesReceived` changes, this event fires with the `downloadId` and an object containing the properties that changed.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Примечание:** **Acknowledgements**This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,4 +108,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

@@ -14,112 +14,87 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Позволяет  WebExtensions получить и установить куки ,а также сообщить об их изменении.</p>
+Позволяет WebExtensions получить и установить куки ,а также сообщить об их изменении.
 
-<p>Для использования этого API,вам нужно предоставить доступ  <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> в вашем файле <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>,а также  <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a> для тех сайтов чьи куки вам нужны для доступа.Смотрите <a href="/en-US/Add-ons/WebExtensions/API/cookies#Permissions">cookie Permissions</a>.</p>
+Для использования этого API,вам нужно предоставить доступ [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) в вашем файле [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json),а также [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) для тех сайтов чьи куки вам нужны для доступа.Смотрите [cookie Permissions](/en-US/Add-ons/WebExtensions/API/cookies#Permissions).
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.Cookie")}}</dt>
- <dd>Предоставляет информацию о HTTP cookie</dd>
- <dt>{{WebExtAPIRef("cookies.CookieStore")}}</dt>
- <dd>Represents a cookie store in the browser.</dd>
- <dt>{{WebExtAPIRef("cookies.OnChangedCause")}}</dt>
- <dd>Represents the reason a cookie changed.</dd>
-</dl>
+- {{WebExtAPIRef("cookies.Cookie")}}
+  - : Предоставляет информацию о HTTP cookie
+- {{WebExtAPIRef("cookies.CookieStore")}}
+  - : Represents a cookie store in the browser.
+- {{WebExtAPIRef("cookies.OnChangedCause")}}
+  - : Represents the reason a cookie changed.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.get()")}}</dt>
- <dd>Запрашивает информацию об одном кукис.</dd>
- <dt>{{WebExtAPIRef("cookies.getAll()")}}</dt>
- <dd>Выдаёт все кукис которые подходят установленному фильтру.</dd>
- <dt>{{WebExtAPIRef("cookies.set()")}}</dt>
- <dd>Устанавливает кукис с заданной информацией;в том случае если подобный кукис был информация будет перезаписана.</dd>
- <dt>{{WebExtAPIRef("cookies.remove()")}}</dt>
- <dd>Удаляет кукис по имени.</dd>
- <dt>{{WebExtAPIRef("cookies.getAllCookieStores()")}}</dt>
- <dd>Список всех существующих куки</dd>
-</dl>
+- {{WebExtAPIRef("cookies.get()")}}
+  - : Запрашивает информацию об одном кукис.
+- {{WebExtAPIRef("cookies.getAll()")}}
+  - : Выдаёт все кукис которые подходят установленному фильтру.
+- {{WebExtAPIRef("cookies.set()")}}
+  - : Устанавливает кукис с заданной информацией;в том случае если подобный кукис был информация будет перезаписана.
+- {{WebExtAPIRef("cookies.remove()")}}
+  - : Удаляет кукис по имени.
+- {{WebExtAPIRef("cookies.getAllCookieStores()")}}
+  - : Список всех существующих куки
 
-<h2 id="Event_handlers">Event handlers</h2>
+## Event handlers
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.onChanged")}}</dt>
- <dd>Происходит когда кукис задаётся или меняется.</dd>
-</dl>
+- {{WebExtAPIRef("cookies.onChanged")}}
+  - : Происходит когда кукис задаётся или меняется.
 
-<h2 id="Permissions">Permissions</h2>
+## Permissions
 
-<p>In order to use this API, an add-on must specify the "cookies" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> in its manifest, along with <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a> for any sites for which it wishes to access cookies. The add-on may read or write any cookies which could be read or written by a URL matching the host permissions. For example:</p>
+In order to use this API, an add-on must specify the "cookies" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) in its manifest, along with [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) for any sites for which it wishes to access cookies. The add-on may read or write any cookies which could be read or written by a URL matching the host permissions. For example:
 
-<dl>
- <dt><code>http://*.example.com/</code></dt>
- <dd>
- <p>An add-on with this host permission may:</p>
+- `http://*.example.com/`
 
- <ul>
-  <li>Read a non-secure cookie for <code>www.example.com</code>, with any path.</li>
-  <li>Write a secure or non-secure cookie for <code>www.example.com</code>, with any path.</li>
- </ul>
+  - : An add-on with this host permission may:
 
- <p>It may <em>not</em>:</p>
+    - Read a non-secure cookie for `www.example.com`, with any path.
+    - Write a secure or non-secure cookie for `www.example.com`, with any path.
 
- <ul>
-  <li>Read a secure cookie for <code>www.example.com</code>.</li>
- </ul>
- </dd>
- <dt><code>http://www.example.com/</code></dt>
- <dd>
- <p>An add-on with this host permission may:</p>
+    It may _not_:
 
- <ul>
-  <li>Read a non-secure cookie for <code>www.example.com</code>, with any path.</li>
-  <li>Read a non-secure cookie for <code>.example.com</code>, with any path.</li>
-  <li>Write a secure or non-secure cookie for <code>www.example.com</code> with any path.</li>
-  <li>Write a secure or non-secure cookie for <code>.example.com</code> with any path.</li>
- </ul>
+    - Read a secure cookie for `www.example.com`.
 
- <p>It may <em>not</em>:</p>
+- `http://www.example.com/`
 
- <ul>
-  <li>Read or write a cookie for <code>foo.example.com</code>.</li>
-  <li>Read or write a cookie for <code>foo.www.example.com</code>.</li>
- </ul>
- </dd>
- <dt><code>*://*.example.com/</code></dt>
- <dd>
- <p>An add-on with this host permission may:</p>
+  - : An add-on with this host permission may:
 
- <ul>
-  <li>Read or write a secure or non-secure cookie for <code>www.example.com</code> with any path.</li>
- </ul>
- </dd>
-</dl>
+    - Read a non-secure cookie for `www.example.com`, with any path.
+    - Read a non-secure cookie for `.example.com`, with any path.
+    - Write a secure or non-secure cookie for `www.example.com` with any path.
+    - Write a secure or non-secure cookie for `.example.com` with any path.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    It may _not_:
 
-<p>{{Compat}}</p>
+    - Read or write a cookie for `foo.example.com`.
+    - Read or write a cookie for `foo.www.example.com`.
 
-<h3 id="Edge_incompatibilities">Edge incompatibilities</h3>
+- `*://*.example.com/`
 
-<p>Promises are not supported in Edge. Use callbacks instead.</p>
+  - : An add-on with this host permission may:
 
-<p>{{WebExtExamples("h2")}}</p>
+    - Read or write a secure or non-secure cookie for `www.example.com` with any path.
 
-<div class="note"><strong>Acknowledgements</strong>
+## Browser compatibility
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
+{{Compat}}
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+### Edge incompatibilities
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+Promises are not supported in Edge. Use callbacks instead.
+
+{{WebExtExamples("h2")}}
+
+> **Примечание:** **Acknowledgements**This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -147,4 +122,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

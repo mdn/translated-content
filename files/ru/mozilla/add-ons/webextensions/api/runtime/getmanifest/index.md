@@ -15,46 +15,40 @@ tags:
   - метод
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Получить весь файл [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) в виде объекта JavaScript, совместимого с JSON.
 
-<div>Получить весь файл <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> в виде объекта JavaScript, совместимого с JSON.</div>
+## Синтаксис
 
+```js
+browser.runtime.getManifest()
+```
 
+### Параметры
 
-<h2 id="Синтаксис">Синтаксис</h2>
+Нет.
 
-<pre class="brush:js">browser.runtime.getManifest()
-</pre>
+### Возвращаемое значение
 
-<h3 id="Параметры">Параметры</h3>
+`object` - объект JSON, представляющий манифест.
 
-<p>Нет.</p>
+## Совместимость с браузерами
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+{{Compat}}
 
-<p><code>object</code> - объект JSON, представляющий манифест.</p>
+## Примеры
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+Получить манифест и вывести его свойство "name":
 
-<h2 id="Примеры">Примеры</h2>
+```js
+var manifest = browser.runtime.getManifest();
+console.log(manifest.name);
+```
 
-<p>Получить манифест и вывести его свойство "name":</p>
+{{WebExtExamples}}
 
-<pre class="brush: js">var manifest = browser.runtime.getManifest();
-console.log(manifest.name);</pre>
+> **Примечание:** **Справка**Этот API основан на API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-getManifest). Настоящая документация унаследована от [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) в коде Chromium.Данные о совместимости Microsoft Edge предоставлены Корпорацией Microsoft и включены сюда под лицензией Creative Commons Attribution 3.0 United States License.
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><strong>Справка</strong>
-
-<p>Этот API основан на API Chromium <a href="https://developer.chrome.com/extensions/runtime#method-getManifest"><code>chrome.runtime</code></a>. Настоящая документация унаследована от  <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> в коде Chromium.</p>
-
-<p>Данные о совместимости Microsoft Edge предоставлены Корпорацией Microsoft и включены сюда под лицензией Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -82,4 +76,3 @@ console.log(manifest.name);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

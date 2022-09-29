@@ -3,211 +3,181 @@ title: Firefox 62 для разработчиков
 slug: Mozilla/Firefox/Releases/62
 translation_of: Mozilla/Firefox/Releases/62
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p class="summary">В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 62 был выпущен 5 сентября 2018 года.</p>
+В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 62 был выпущен 5 сентября 2018 года.
 
-<h2 id="Изменения_для_веб-разработчиков">Изменения для веб-разработчиков</h2>
+## Изменения для веб-разработчиков
 
-<h3 id="Инструменты_разработчика">Инструменты разработчика</h3>
+### Инструменты разработчика
 
-<ul>
- <li>Включён по умолчанию редактор Shape Path — подробности в статье <a href="/ru/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Edit Shape Paths in CSS</a>.</li>
- <li>Появилась возможность вынести просмотр CSS-правил в отдельную от других вкладок панель. См. <a href="/ru/docs/Tools/Page_Inspector/3-pane_mode">Page inspector 3-pane mode</a> для получения подробных сведений.</li>
- <li>Инспектор CSS-сеток обзавёлся новыми возможностями и новой документацией — см. <a href="/ru/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">CSS Grid Inspector: Examine grid layouts</a>.</li>
- <li>Инструменты разработчика теперь можно разместить не только снизу и справа, но и слева (а также вынести в отдельное окно) ({{bug(1192642)}}).</li>
- <li>На панель <a href="/ru/docs/Tools/Web_Console/Split_console">консоли разделения</a> добавлена кнопка закрытия.</li>
- <li>При включённой настройке «Выбрать iframe в качестве текущего целевого документа» соответствующий значок будет появляться на панели инструментов при открытии настроек, даже если текущая страница не содержит фреймов ({{bug(1456069)}}).</li>
- <li>Вкладка «<a href="/ru/docs/Tools/Network_Monitor#Куки_(Cookies)">Куки</a>» в <a href="/ru/docs/Tools/Network_Monitor">сетевом мониторе</a> отображает атрибут <code>samesite</code> ({{bug(1452715)}}).</li>
- <li><a href="/ru/docs/Tools/Responsive_Design_View">Режим адаптивного дизайна</a> работает и во вкладках, размещённых в контейнерах ({{bug(1306975)}}).</li>
- <li>При возникновении и выводе в консоль ошибки {{Glossary("CORS")}} Firefox предоставит ссылку на соответствующую <a href="/ru/docs/Web/HTTP/CORS/Errors">страницу с описанием ошибок CORS</a> ({{bug(1475391)}}).</li>
- <li>Появилась возможность создать снимок текущей страницы (без необходимости указывать имя файла) из консоли браузера ({{bug(1464461)}}). Используется команда<br>
-  <br>
-  <code>:screenshot &lt;filename.png&gt; --fullpage</code><br>
-  <br>
-  где <code>&lt;filename.png&gt;</code> — желаемое имя файла. Файл будет сохранён в каталог загрузок. Параметр <code>--fullpage</code> не является обязательным и служит для создания снимка всей страницы. В этом случае к имени файла будет добавлено <code>-fullpage</code>. Чтобы увидеть список всех доступных параметров, введите <code>:screenshot --help</code>.</li>
-</ul>
+- Включён по умолчанию редактор Shape Path — подробности в статье [Edit Shape Paths in CSS](/ru/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes).
+- Появилась возможность вынести просмотр CSS-правил в отдельную от других вкладок панель. См. [Page inspector 3-pane mode](/ru/docs/Tools/Page_Inspector/3-pane_mode) для получения подробных сведений.
+- Инспектор CSS-сеток обзавёлся новыми возможностями и новой документацией — см. [CSS Grid Inspector: Examine grid layouts](/ru/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts).
+- Инструменты разработчика теперь можно разместить не только снизу и справа, но и слева (а также вынести в отдельное окно) ({{bug(1192642)}}).
+- На панель [консоли разделения](/ru/docs/Tools/Web_Console/Split_console) добавлена кнопка закрытия.
+- При включённой настройке «Выбрать iframe в качестве текущего целевого документа» соответствующий значок будет появляться на панели инструментов при открытии настроек, даже если текущая страница не содержит фреймов ({{bug(1456069)}}).
+- Вкладка «[Куки](</ru/docs/Tools/Network_Monitor#Куки_(Cookies)>)» в [сетевом мониторе](/ru/docs/Tools/Network_Monitor) отображает атрибут `samesite` ({{bug(1452715)}}).
+- [Режим адаптивного дизайна](/ru/docs/Tools/Responsive_Design_View) работает и во вкладках, размещённых в контейнерах ({{bug(1306975)}}).
+- При возникновении и выводе в консоль ошибки {{Glossary("CORS")}} Firefox предоставит ссылку на соответствующую [страницу с описанием ошибок CORS](/ru/docs/Web/HTTP/CORS/Errors) ({{bug(1475391)}}).
+- Появилась возможность создать снимок текущей страницы (без необходимости указывать имя файла) из консоли браузера ({{bug(1464461)}}). Используется команда
 
-<h4 id="Удалено">Удалено</h4>
+  `:screenshot <filename.png> --fullpage`
 
-<ul>
- <li>Удалена <a href="/ru/docs/Tools/GCLI">панель разработчика/GCLI</a> (которая открывалась сочетанием клавиш <kbd>Shift</kbd> + <kbd>F2</kbd>) ({{bug(1461970)}}). У интерфейса панели и библиотеки, отвечающей за работу GCLI, уже продолжительное время отсутствует мейнтейнер, некоторые функции не работают (с того времени, как появился многопроцессный режим), а сама GCLI несовместима с <code>unsafeSetInnerHTML</code>. Как следствие, по данным телеметрии панель очень редко используется, к тому же есть альтернативные способы вызова самых популярных команд.</li>
-</ul>
+  где `<filename.png>` — желаемое имя файла. Файл будет сохранён в каталог загрузок. Параметр `--fullpage` не является обязательным и служит для создания снимка всей страницы. В этом случае к имени файла будет добавлено `-fullpage`. Чтобы увидеть список всех доступных параметров, введите `:screenshot --help`.
 
-<h3 id="HTML">HTML</h3>
+#### Удалено
 
-<p><em>Без изменений.</em></p>
+- Удалена [панель разработчика/GCLI](/ru/docs/Tools/GCLI) (которая открывалась сочетанием клавиш&#x20;
 
-<h3 id="CSS">CSS</h3>
+  <kbd>Shift</kbd>
 
-<ul>
- <li>Убран префикс у псевдоэлемента <code>:-moz-selection</code>, отныне он называется {{cssxref("::selection")}} ({{bug(509958)}}).</li>
- <li>{{cssxref("&lt;resolution&gt;")}} поддерживает <code>x</code> в качестве единицы измерения ({{bug(1460655)}}).</li>
- <li>Включена по умолчанию поддержка {{cssxref("shape-margin")}}, {{cssxref("shape-outside")}} и {{cssxref("shape-image-threshold")}} ({{bug(1457297)}}).</li>
-</ul>
+  &#x20;\+&#x20;
 
-<h4 id="Удалено_2">Удалено</h4>
+  <kbd>F2</kbd>
 
-<ul>
- <li>Из документов, отличных от XUL, удалены все <a href="/ru/docs/Web/CSS/display#XUL_values">XUL-значения <code>display</code></a> за исключением <code>-moz-box</code> и <code>-moz-inline-box</code> ({{bug(1288572)}}).</li>
-</ul>
+  ) ({{bug(1461970)}}). У интерфейса панели и библиотеки, отвечающей за работу GCLI, уже продолжительное время отсутствует мейнтейнер, некоторые функции не работают (с того времени, как появился многопроцессный режим), а сама GCLI несовместима с `unsafeSetInnerHTML`. Как следствие, по данным телеметрии панель очень редко используется, к тому же есть альтернативные способы вызова самых популярных команд.
 
-<h3 id="SVG">SVG</h3>
+### HTML
 
-<p><em>Без изменений.</em></p>
+_Без изменений._
 
-<h3 id="JavaScript">JavaScript</h3>
+### CSS
 
-<ul>
- <li>Реализована поддержка конструктора {{jsxref("WebAssembly.Global()")}} и глобальных переменных в WebAssembly ({{bug(1464656)}}).</li>
- <li>Включена по умолчанию поддержка методов {{jsxref("Array.prototype.flat()")}} и {{jsxref("Array.prototype.flatMap()")}} ({{bug(1435813)}}).</li>
- <li>Реализовано свойство <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/import.meta">import.meta</a></code>, отображающее контекстно-специфичных метаданные для модуля JavaScript ({{bug(1427610)}}).</li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Литерал_String_(Строка)">Строковые литералы</a> могут напрямую содержать символы U+2028 LINE SEPARATOR и U+2029 PARAGRAPH SEPARATOR. Как следствие, синтаксис {{jsxref("JSON")}} отныне является подмножеством литерального синтаксиса JavaScript (см. {{bug(1435828)}} и предложенный TC39 <a href="https://github.com/tc39/proposal-json-superset">json-superset</a>).</li>
- <li>Для индексов, выходящих за границы <a href="/ru/docs/Web/JavaScript/Typed_arrays">типизированных массивов</a>, {{jsxref("Reflect.defineProperty()")}} и {{jsxref("Reflect.set()")}} будут возвращать <code>false</code> вместо <code>true</code> ({{bug(1308735)}}).</li>
-</ul>
+- Убран префикс у псевдоэлемента `:-moz-selection`, отныне он называется {{cssxref("::selection")}} ({{bug(509958)}}).
+- {{cssxref("&lt;resolution&gt;")}} поддерживает `x` в качестве единицы измерения ({{bug(1460655)}}).
+- Включена по умолчанию поддержка {{cssxref("shape-margin")}}, {{cssxref("shape-outside")}} и {{cssxref("shape-image-threshold")}} ({{bug(1457297)}}).
 
-<h4 id="Удалено_3">Удалено</h4>
+#### Удалено
 
-<ul>
- <li>Конструкторы <code>DOMPoint</code> и <code>DOMPointReadOnly</code> больше не поддерживают входной параметр типа <code>DOMPointInit</code>; значения свойств требуется указывать с помощью параметров <code>x</code>, <code>y</code>, <code>z</code> и <code>w</code> ({{bug(1186265)}}).</li>
- <li>Метод {{domxref("URL.createObjectURL()")}} больше не поддерживает создание URL-адресов объектов для представления {{domxref("MediaStream")}}. Эта возможность уже не актуальна, поскольку можно напрямую задать {{domxref("HTMLMediaElement.srcObject")}} в <code>MediaStream</code> ({{bug(1454889)}}).</li>
-</ul>
+- Из документов, отличных от XUL, удалены все [XUL-значения `display`](/ru/docs/Web/CSS/display#XUL_values) за исключением `-moz-box` и `-moz-inline-box` ({{bug(1288572)}}).
 
-<h3 id="API">API</h3>
+### SVG
 
-<h4 id="Новые_API">Новые API</h4>
+_Без изменений._
 
-<ul>
- <li>В версии для Android включён по умолчанию {{domxref("Web_Speech_API", "API Speech Synthesis (Text-to-Speech)", "", "1")}} ({{bug(1463496)}}).</li>
-</ul>
+### JavaScript
 
-<h4 id="DOM">DOM</h4>
+- Реализована поддержка конструктора {{jsxref("WebAssembly.Global()")}} и глобальных переменных в WebAssembly ({{bug(1464656)}}).
+- Включена по умолчанию поддержка методов {{jsxref("Array.prototype.flat()")}} и {{jsxref("Array.prototype.flatMap()")}} ({{bug(1435813)}}).
+- Реализовано свойство [`import.meta`](/ru/docs/Web/JavaScript/Reference/Statements/import.meta), отображающее контекстно-специфичных метаданные для модуля JavaScript ({{bug(1427610)}}).
+- [Строковые литералы](</ru/docs/Web/JavaScript/Reference/Lexical_grammar#Литерал_String_(Строка)>) могут напрямую содержать символы U+2028 LINE SEPARATOR и U+2029 PARAGRAPH SEPARATOR. Как следствие, синтаксис {{jsxref("JSON")}} отныне является подмножеством литерального синтаксиса JavaScript (см. {{bug(1435828)}} и предложенный TC39 [json-superset](https://github.com/tc39/proposal-json-superset)).
+- Для индексов, выходящих за границы [типизированных массивов](/ru/docs/Web/JavaScript/Typed_arrays), {{jsxref("Reflect.defineProperty()")}} и {{jsxref("Reflect.set()")}} будут возвращать `false` вместо `true` ({{bug(1308735)}}).
 
-<ul>
- <li>Интерфейс {{domxref("DOMPointReadOnly")}} поддерживает статическую функцию {{domxref("DOMPointReadOnly.fromPoint()")}}, создающую новый точечный объект из совместимого с {{domxref("DOMPointInit")}} словаря, который содержит любой объект {{domxref("DOMPoint")}}. Функция также доступна на {{domxref("DOMPoint")}} ({{bug(1186265)}}).</li>
- <li>В целях совместимости реализована поддержка свойства {{domxref("Event.srcElement")}}. Оно является ссылкой на {{domxref("Event.target")}} ({{bug(453968)}}).</li>
- <li>{{domxref("Navigator.registerProtocolHandler()")}} может быть вызван лишь в безопасном контексте ({{bug(1460506)}}).</li>
- <li>Отключена по умолчанию поддержка метода {{domxref("Navigator.registerContentHandler()")}}. Он будет удалён в будущем, поскольку уже некоторое время является устаревшим ({{bug(1460481)}}).</li>
- <li>Реализован конструктор {{domxref("DataTransfer.DataTransfer", "DataTransfer()")}} ({{bug(1351193)}}).</li>
- <li>{{domxref("Document.domain")}} больше не может вернуть <code>null</code> ({{bug(819475)}}). Если не удалось идентифицировать домен, <code>domain</code> вернёт пустую строку вместо <code>null</code>.</li>
- <li>Реализован метод {{domxref("Console.timeLog()")}}, отображающий текущее значение таймера консоли без остановки самого таймера ({{bug(1458466)}}).</li>
- <li>Реализован метод {{domxref("Console.countReset()")}}, сбрасывающий значение счётчика консоли ({{bug(1459279)}}).</li>
-</ul>
+#### Удалено
 
-<h4 id="События_DOM">События DOM</h4>
+- Конструкторы `DOMPoint` и `DOMPointReadOnly` больше не поддерживают входной параметр типа `DOMPointInit`; значения свойств требуется указывать с помощью параметров `x`, `y`, `z` и `w` ({{bug(1186265)}}).
+- Метод {{domxref("URL.createObjectURL()")}} больше не поддерживает создание URL-адресов объектов для представления {{domxref("MediaStream")}}. Эта возможность уже не актуальна, поскольку можно напрямую задать {{domxref("HTMLMediaElement.srcObject")}} в `MediaStream` ({{bug(1454889)}}).
 
-<p><em>Без изменений.</em></p>
+### API
 
-<h4 id="Сервис-воркеры">Сервис-воркеры</h4>
+#### Новые API
 
-<p><em>Без изменений.</em></p>
+- В версии для Android включён по умолчанию {{domxref("Web_Speech_API", "API Speech Synthesis (Text-to-Speech)", "", "1")}} ({{bug(1463496)}}).
 
-<h4 id="Медиа_Web_Audio_и_WebRTC">Медиа, Web Audio и WebRTC</h4>
+#### DOM
 
-<ul>
- <li>Настройка <code>media.autoplay.enabled</code> распространяется не только на видео-, но и на аудиосодержимое ({{bug(1413098)}}).</li>
- <li>Интерфейс {{domxref("ChannelSplitterNode")}} приведён в соответствие спецификации: по умолчанию у него 6 каналов, <code>channelInterpretation</code> имеет значение <code>"discrete"</code>, а <code>channelCountMode</code> — <code>"explicit"</code> ({{bug(1456265)}}).</li>
-</ul>
+- Интерфейс {{domxref("DOMPointReadOnly")}} поддерживает статическую функцию {{domxref("DOMPointReadOnly.fromPoint()")}}, создающую новый точечный объект из совместимого с {{domxref("DOMPointInit")}} словаря, который содержит любой объект {{domxref("DOMPoint")}}. Функция также доступна на {{domxref("DOMPoint")}} ({{bug(1186265)}}).
+- В целях совместимости реализована поддержка свойства {{domxref("Event.srcElement")}}. Оно является ссылкой на {{domxref("Event.target")}} ({{bug(453968)}}).
+- {{domxref("Navigator.registerProtocolHandler()")}} может быть вызван лишь в безопасном контексте ({{bug(1460506)}}).
+- Отключена по умолчанию поддержка метода {{domxref("Navigator.registerContentHandler()")}}. Он будет удалён в будущем, поскольку уже некоторое время является устаревшим ({{bug(1460481)}}).
+- Реализован конструктор {{domxref("DataTransfer.DataTransfer", "DataTransfer()")}} ({{bug(1351193)}}).
+- {{domxref("Document.domain")}} больше не может вернуть `null` ({{bug(819475)}}). Если не удалось идентифицировать домен, `domain` вернёт пустую строку вместо `null`.
+- Реализован метод {{domxref("Console.timeLog()")}}, отображающий текущее значение таймера консоли без остановки самого таймера ({{bug(1458466)}}).
+- Реализован метод {{domxref("Console.countReset()")}}, сбрасывающий значение счётчика консоли ({{bug(1459279)}}).
 
-<h4 id="Удалено_4">Удалено</h4>
+#### События DOM
 
-<ul>
- <li>Поддержка событий {{event("userproximity")}}, {{event("deviceproximity")}} (см. {{domxref("UserProximityEvent")}} и {{domxref("DeviceProximityEvent")}}) отключена по умолчанию и управляется настройкой <code>device.sensors.proximity.enabled</code> ({{bug(1462308)}}).</li>
- <li>Поддержка события {{event("devicelight")}} (см. также {{domxref("DeviceLightEvent")}}) отключена по умолчанию и управляется настройкой <code>device.sensors.ambientLight.enabled</code> ({{bug(1462308)}}).</li>
- <li><a href="/ru/docs/Web/Guide/Events/Mutation_events">События мутации</a> {{event("DOMSubtreeModified")}} и {{event("DOMAttrModified")}} больше не выбрасываются, когда атрибут {{htmlattrxref("style")}} изменяется с помощью CSSOM ({{bug(1460295)}}).</li>
- <li>Прекращена поддержка {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} ({{bug(1408301)}}).</li>
- <li>Прекращена поддержка {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}} и {{domxref("CSSValueList")}} ({{bug(1459871)}}).</li>
- <li>{{domxref("window.getComputedStyle()")}} больше не возвращает <code>null</code>, если вызван на <code>Window</code>, у которого нет представления ({{bug(1467722)}}).</li>
-</ul>
+_Без изменений._
 
-<ul>
-</ul>
+#### Сервис-воркеры
 
-<ul>
-</ul>
+_Без изменений._
 
-<h3 id="HTTP">HTTP</h3>
+#### Медиа, Web Audio и WebRTC
 
-<h4 id="Удалено_5">Удалено</h4>
+- Настройка `media.autoplay.enabled` распространяется не только на видео-, но и на аудиосодержимое ({{bug(1413098)}}).
+- Интерфейс {{domxref("ChannelSplitterNode")}} приведён в соответствие спецификации: по умолчанию у него 6 каналов, `channelInterpretation` имеет значение `"discrete"`, а `channelCountMode` — `"explicit"` ({{bug(1456265)}}).
 
-<ul>
- <li>Удалена поддержка устаревшей CSP-директивы {{CSP("referrer")}}. Вместо неё следует использовать заголовок {{HTTPHeader("Referrer-Policy")}} ({{bug(1302449)}}).</li>
-</ul>
+#### Удалено
 
-<h3 id="Безопасность">Безопасность</h3>
+- Поддержка событий {{event("userproximity")}}, {{event("deviceproximity")}} (см. {{domxref("UserProximityEvent")}} и {{domxref("DeviceProximityEvent")}}) отключена по умолчанию и управляется настройкой `device.sensors.proximity.enabled` ({{bug(1462308)}}).
+- Поддержка события {{event("devicelight")}} (см. также {{domxref("DeviceLightEvent")}}) отключена по умолчанию и управляется настройкой `device.sensors.ambientLight.enabled` ({{bug(1462308)}}).
+- [События мутации](/ru/docs/Web/Guide/Events/Mutation_events) {{event("DOMSubtreeModified")}} и {{event("DOMAttrModified")}} больше не выбрасываются, когда атрибут {{htmlattrxref("style")}} изменяется с помощью CSSOM ({{bug(1460295)}}).
+- Прекращена поддержка {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} ({{bug(1408301)}}).
+- Прекращена поддержка {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}} и {{domxref("CSSValueList")}} ({{bug(1459871)}}).
+- {{domxref("window.getComputedStyle()")}} больше не возвращает `null`, если вызван на `Window`, у которого нет представления ({{bug(1467722)}}).
 
-<p><em>Без изменений.</em></p>
+<!---->
 
-<h3 id="Плагины">Плагины</h3>
+<!---->
 
-<p><em>Без изменений.</em></p>
+### HTTP
 
-<h3 id="WebDriver_(Marionette)">WebDriver (Marionette)</h3>
+#### Удалено
 
-<h4 id="Новые_возможности">Новые возможности</h4>
+- Удалена поддержка устаревшей CSP-директивы {{CSP("referrer")}}. Вместо неё следует использовать заголовок {{HTTPHeader("Referrer-Policy")}} ({{bug(1302449)}}).
 
-<ul>
- <li>Команда <code>WebDriver:ElementSendKeys</code> приносит в WebDriver возможность загружать файлы ({{bug(1448792)}}).</li>
- <li>Запросы к пользователю, вызванные событиями <code>beforeunload</code>, автоматически отклоняются для команд <code>WebDriver:Get</code>, <code>WebDriver:Back</code>, <code>WebDriver:Forward</code>, <code>WebDriver:Refresh</code> и <code>WebDriver:Close</code> ({{bug(1434872)}}).</li>
- <li><code>WebDriver:PerformActions</code> при нажатии <kbd>Ctrl</kbd> + <code>Click</code> синтезирует событие {{event("contextmenu")}} ({{bug(1421323)}}).</li>
-</ul>
+### Безопасность
 
-<h4 id="Изменения_API">Изменения API</h4>
+_Без изменений._
 
-<ul>
- <li>Удалены устаревшие конечные точки, включая <code>getWindowPosition</code>, <code>setWindowPosition</code>, <code>getWindowSize и</code> <code>setWindowSize</code> ({{bug(1348145)}}).</li>
- <li>Команды WebDriver, возвращающие успех с данными <code>null</code>, отныне возвращают пустой словарь ({{bug(1461463)}}).</li>
-</ul>
+### Плагины
 
-<h4 id="Исправленные_ошибки">Исправленные ошибки</h4>
+_Без изменений._
 
-<ul>
- <li><code>WebDriver:ExecuteScript</code> вызывал ошибку циклической ссылки для коллекций <a href="/ru/docs/Web/WebDriver/WebElement">WebElement</a> ({{bug(1447977)}}).</li>
- <li>
-  <p>Отправка примитива действия <code>pointerMove</code> или <code>pause</code> могла привести к зависанию, таким образом, команда никогда не отправляла ответ ({{bug(1467743)}}, {{bug(1447449)}}).</p>
- </li>
-</ul>
+### WebDriver (Marionette)
 
-<h3 id="Прочее">Прочее</h3>
+#### Новые возможности
 
-<p><em>Без изменений.</em></p>
+- Команда `WebDriver:ElementSendKeys` приносит в WebDriver возможность загружать файлы ({{bug(1448792)}}).
+- Запросы к пользователю, вызванные событиями `beforeunload`, автоматически отклоняются для команд `WebDriver:Get`, `WebDriver:Back`, `WebDriver:Forward`, `WebDriver:Refresh` и `WebDriver:Close` ({{bug(1434872)}}).
+- `WebDriver:PerformActions` при нажатии&#x20;
 
-<h2 id="Изменения_для_разработчиков_дополнений">Изменения для разработчиков дополнений</h2>
+  <kbd>Ctrl</kbd>
 
-<h3 id="Изменения_API_2">Изменения API</h3>
+  &#x20;\+ `Click` синтезирует событие {{event("contextmenu")}} ({{bug(1421323)}}).
 
-<ul>
- <li>Добавлен API {{WebExtAPIRef("webRequest.getSecurityInfo()")}}, позволяющий получить подробные сведения о TLS-соединениях ({{bug(1322748)}}).</li>
- <li>Добавлен {{WebExtAPIRef("browserSettings.newTabPosition")}}, позволяющий настроить положение новой вкладки ({{bug(1344749)}}).</li>
- <li><code>windowTypes</code> объявлен устаревшим в {{WebExtAPIRef("windows.get()")}}, {{WebExtAPIRef("windows.getCurrent()")}} и {{WebExtAPIRef("windows.getLastFocused()")}} ({{bug(1419132)}}).</li>
- <li>Появилась возможность изменять каждое окно браузера в отдельности ({{bug(1419893)}}).</li>
-</ul>
+#### Изменения API
 
-<h3 id="Изменения_манифеста">Изменения манифеста</h3>
+- Удалены устаревшие конечные точки, включая `getWindowPosition`, `setWindowPosition`, `getWindowSize и` `setWindowSize` ({{bug(1348145)}}).
+- Команды WebDriver, возвращающие успех с данными `null`, отныне возвращают пустой словарь ({{bug(1461463)}}).
 
-<ul>
- <li>Новое свойство <code>open_at_install</code> ключа <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code> манифеста позволяет дополнениям при установке автоматически открывать или не открывать боковые панели ({{bug(1460910)}}).</li>
- <li>Изменено свойство <code>browser_style</code> различных ключей манифеста:
-  <ul>
-   <li>У <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> и <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> оно по умолчанию стало <code>false</code>.</li>
-   <li>У <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code> и <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> оно по умолчанию стало <code>true</code>.</li>
-  </ul>
- </li>
-</ul>
+#### Исправленные ошибки
 
-<h3 id="Изменения_темы">Изменения темы</h3>
+- `WebDriver:ExecuteScript` вызывал ошибку циклической ссылки для коллекций [WebElement](/ru/docs/Web/WebDriver/WebElement) ({{bug(1447977)}}).
+- Отправка примитива действия `pointerMove` или `pause` могла привести к зависанию, таким образом, команда никогда не отправляла ответ ({{bug(1467743)}}, {{bug(1447449)}}).
 
-<ul>
- <li>Новое свойство <code>tab_background_separator</code> ключа <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></code> манифеста позволяет дополнениям изменять цвет разделителя вкладок ({{bug(1459455)}}).</li>
-</ul>
+### Прочее
 
-<h3 id="Удалено_6">Удалено</h3>
+_Без изменений._
 
-<ul>
- <li>Прекращена поддержка установки распакованных дополнений ({{bug(1385057)}}).</li>
- <li>Убран показ предупреждения о <code>browser_style</code> при временной загрузке дополнения для тестирования ({{bug(1404724)}}).</li>
-</ul>
+## Изменения для разработчиков дополнений
 
-<h2 id="Предыдущие_версии">Предыдущие версии</h2>
+### Изменения API
 
-<p>{{Firefox_for_developers(61)}}</p>
+- Добавлен API {{WebExtAPIRef("webRequest.getSecurityInfo()")}}, позволяющий получить подробные сведения о TLS-соединениях ({{bug(1322748)}}).
+- Добавлен {{WebExtAPIRef("browserSettings.newTabPosition")}}, позволяющий настроить положение новой вкладки ({{bug(1344749)}}).
+- `windowTypes` объявлен устаревшим в {{WebExtAPIRef("windows.get()")}}, {{WebExtAPIRef("windows.getCurrent()")}} и {{WebExtAPIRef("windows.getLastFocused()")}} ({{bug(1419132)}}).
+- Появилась возможность изменять каждое окно браузера в отдельности ({{bug(1419893)}}).
+
+### Изменения манифеста
+
+- Новое свойство `open_at_install` ключа [`sidebar_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) манифеста позволяет дополнениям при установке автоматически открывать или не открывать боковые панели ({{bug(1460910)}}).
+- Изменено свойство `browser_style` различных ключей манифеста:
+
+  - У [`page_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) и [`browser_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) оно по умолчанию стало `false`.
+  - У [`sidebar_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) и [`options_ui`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) оно по умолчанию стало `true`.
+
+### Изменения темы
+
+- Новое свойство `tab_background_separator` ключа [`theme`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) манифеста позволяет дополнениям изменять цвет разделителя вкладок ({{bug(1459455)}}).
+
+### Удалено
+
+- Прекращена поддержка установки распакованных дополнений ({{bug(1385057)}}).
+- Убран показ предупреждения о `browser_style` при временной загрузке дополнения для тестирования ({{bug(1404724)}}).
+
+## Предыдущие версии
+
+{{Firefox_for_developers(61)}}

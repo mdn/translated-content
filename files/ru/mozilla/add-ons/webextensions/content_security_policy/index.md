@@ -7,105 +7,103 @@ tags:
   - Расширение
 translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="summary">
-<p>Политика защиты содержимого (англ. Content Security Policy) автоматически применяется ко всем расширениям, разработанным с использованием WebExtension API. Она ограничивает источники, из которых расширение может загружать <a href="/ru/docs/Web/HTML/Element/script">&lt;script&gt;</a> и <a href="/ru/docs/Web/HTML/Element/object">&lt;object&gt;</a> ресурсы, и препятствует потенциально опасным практикам, например использованию <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>.</p>
+Политика защиты содержимого (англ. Content Security Policy) автоматически применяется ко всем расширениям, разработанным с использованием WebExtension API. Она ограничивает источники, из которых расширение может загружать [\<script>](/ru/docs/Web/HTML/Element/script) и [\<object>](/ru/docs/Web/HTML/Element/object) ресурсы, и препятствует потенциально опасным практикам, например использованию [`eval()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
-<p>Статья в краткой форме объясняет значимость этой политики, каковы её изначальные правила, как они влияют на расширение, и как расширение может изменять эти правила.</p>
-</div>
+Статья в краткой форме объясняет значимость этой политики, каковы её изначальные правила, как они влияют на расширение, и как расширение может изменять эти правила.
 
-<p><a href="/ru/docs/Web/HTTP/CSP">Политика защиты содержимого</a> - это механизм, помогающий веб-сайтам предотвращать выполнение умышленно вредного кода. Веб-сайт устанавливает политику защиты, используя HTTP заголовок, посылаемый с сервера. Главным образом эта политика участвует в устанавливании допустимых источников для загрузки различного вида контента, к примеру, скриптов или встроенных плагинов. Например, веб-сайт может использовать политику защиты для инструктирования браузера, чтобы тот выполнял скрипты, загруженные только с самого сайта, а не из каких-либо других источников. Политика защиты содержимого так же может запретить браузеру использовать потенциально опасные практики, например использование <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a>.</p>
+[Политика защиты содержимого](/ru/docs/Web/HTTP/CSP) - это механизм, помогающий веб-сайтам предотвращать выполнение умышленно вредного кода. Веб-сайт устанавливает политику защиты, используя HTTP заголовок, посылаемый с сервера. Главным образом эта политика участвует в устанавливании допустимых источников для загрузки различного вида контента, к примеру, скриптов или встроенных плагинов. Например, веб-сайт может использовать политику защиты для инструктирования браузера, чтобы тот выполнял скрипты, загруженные только с самого сайта, а не из каких-либо других источников. Политика защиты содержимого так же может запретить браузеру использовать потенциально опасные практики, например использование [eval()](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
-<p>Так же как веб-сайты, расширения могут загружать контент из различных источников. Например, всплывающее окно расширения определяется HTML документом, и может подключать JavaScript и CSS файлы из различных источников, точно так же, как и нормальная веб-страница:</p>
+Так же как веб-сайты, расширения могут загружать контент из различных источников. Например, всплывающее окно расширения определяется HTML документом, и может подключать JavaScript и CSS файлы из различных источников, точно так же, как и нормальная веб-страница:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-  &lt;/head&gt;
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
 
-  &lt;body&gt;
+  <body>
 
-    &lt;!-- Некоторый HTML контент --&gt;
+    <!-- Некоторый HTML контент -->
 
-    &lt;!--
+    <!--
       Подключение сторонней библиотеки.
       Смотрите также https://developer.mozilla.org/ru/docs/Web/Security/Subresource_Integrity.
-    --&gt;
-    &lt;script&gt;
+    -->
+    <script>
       src="https://code.jquery.com/jquery-2.2.4.js"
       integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-      crossorigin="anonymous"&gt;
-    &lt;/script&gt;
+      crossorigin="anonymous">
+    </script>
 
-    &lt;!-- Include my popup's own script--&gt;
-    &lt;script src="popup.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
+    <!-- Include my popup's own script-->
+    <script src="popup.js"></script>
+  </body>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-<p>В сравнении с веб-сайтами, расширения имеют доступ к дополнительному привилегированному API, так что вероятность получения к нему доступа сторонним кодом - это очень большой риск. По этой причине:</p>
+В сравнении с веб-сайтами, расширения имеют доступ к дополнительному привилегированному API, так что вероятность получения к нему доступа сторонним кодом - это очень большой риск. По этой причине:
 
-<ul>
- <li>довольно строгая политика по защите содержимого применяются изначально. Смотрите <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#%D0%98%D0%B7%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0_%D0%BF%D0%BE_%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B5_%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D0%BE%D0%B3%D0%BE">изначальные правила по защите содержимого</a>.</li>
- <li>авторы расширений могут изменять изначальную политику, используя <code>content_security_policy</code> ключ в manifest.json, но даже в этом случае существуют  ограничения на возможные разрешения. Для дополнительной информации смотрите <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code>.</li>
-</ul>
+- довольно строгая политика по защите содержимого применяются изначально. Смотрите [изначальные правила по защите содержимого](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#%D0%98%D0%B7%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0_%D0%BF%D0%BE_%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B5_%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D0%BE%D0%B3%D0%BE).
+- авторы расширений могут изменять изначальную политику, используя `content_security_policy` ключ в manifest.json, но даже в этом случае существуют ограничения на возможные разрешения. Для дополнительной информации смотрите [`content_security_policy`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy).
 
-<h2 id="Изначальные_правила_по_защите_содержимого">Изначальные правила по защите содержимого</h2>
+## Изначальные правила по защите содержимого
 
-<p>Следующие правила по защите содержимого являются изначальными:</p>
+Следующие правила по защите содержимого являются изначальными:
 
-<pre>"script-src 'self'; object-src 'self';"</pre>
+```
+"script-src 'self'; object-src 'self';"
+```
 
-<p>Они применяются к любому расширению, которое самостоятельно не указывает свою политику защиты, используя <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> ключ в manifest.json. Это имеет следующие последствия:</p>
+Они применяются к любому расширению, которое самостоятельно не указывает свою политику защиты, используя [`content_security_policy`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) ключ в manifest.json. Это имеет следующие последствия:
 
-<ul>
- <li>
-  <p><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#%D0%A0%D0%B0%D1%81%D0%BF%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_script_%D0%B8_object_%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D0%BE%D0%B2">Вы можете загружать только локальные к расширению &lt;script&gt; и &lt;object&gt; ресурсы.</a></p>
- </li>
- <li>
-  <p><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval()_%D0%B8_%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B8%D1%89%D0%B8">Расширению не разрешено выполнять код, представленный в виде JavaScript строк.</a></p>
- </li>
- <li>
-  <p><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#%D0%92%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_(inline)_JavaScript">Встраиваемый (inline) JavaScript-код не будет выполняться.</a></p>
- </li>
-</ul>
+- [Вы можете загружать только локальные к расширению \<script> и \<object> ресурсы.](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#%D0%A0%D0%B0%D1%81%D0%BF%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_script_%D0%B8_object_%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D0%BE%D0%B2)
+- [Расширению не разрешено выполнять код, представленный в виде JavaScript строк.](</ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval()_%D0%B8_%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B8%D1%89%D0%B8>)
+- [Встраиваемый (inline) JavaScript-код не будет выполняться.](</ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#%D0%92%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_(inline)_JavaScript>)
 
-<h3 id="Расположение_script_и_object_ресурсов">Расположение script и object ресурсов</h3>
+### Расположение script и object ресурсов
 
-<p>Используя изначальную политику защиты содержимого, вы можете загружать только локальные к расширению <a href="/ru/docs/Web/HTML/Element/script">&lt;script&gt;</a> и <a href="/ru/docs/Web/HTML/Element/object">&lt;object&gt;</a> ресурсы. Например, рассмотрите эту строку из документа расширения:</p>
+Используя изначальную политику защиты содержимого, вы можете загружать только локальные к расширению [\<script>](/ru/docs/Web/HTML/Element/script) и [\<object>](/ru/docs/Web/HTML/Element/object) ресурсы. Например, рассмотрите эту строку из документа расширения:
 
-<pre class="brush: html"> &lt;script src="https://code.jquery.com/jquery-2.2.4.js"&gt;&lt;/script&gt;</pre>
+```html
+ <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+```
 
-<p>Она не будет загружать запрашиваемый ресурс, и вы не сможете найти ни один ожидаемый от ресурса объект. К этой ситуации существует два решения:</p>
+Она не будет загружать запрашиваемый ресурс, и вы не сможете найти ни один ожидаемый от ресурса объект. К этой ситуации существует два решения:
 
-<ul>
- <li>
-  <p>Скачать этот ресурс, упаковать его в ваше расширение и ссылаться к нему локально.</p>
- </li>
- <li>
-  <p>Использовать ключ <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> в manifest.json, чтобы позволить загрузку контента из вышеупомянутого источника..</p>
- </li>
-</ul>
+- Скачать этот ресурс, упаковать его в ваше расширение и ссылаться к нему локально.
+- Использовать ключ [`content_security_policy`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) в manifest.json, чтобы позволить загрузку контента из вышеупомянутого источника..
 
-<h3 id="eval()_и_товарищи">eval() и товарищи</h3>
+### eval() и товарищи
 
-<p>Изначальная политика защиты содержимого не позволяет выполнять код из JavaScript строк. Это означает, что следующие примеры кода изначально запрещены:</p>
+Изначальная политика защиты содержимого не позволяет выполнять код из JavaScript строк. Это означает, что следующие примеры кода изначально запрещены:
 
-<pre class="brush: js">eval("console.log('some output');");</pre>
+```js
+eval("console.log('some output');");
+```
 
-<pre class="brush: js">window.setTimeout("alert('Hello World!');", 500);</pre>
+```js
+window.setTimeout("alert('Hello World!');", 500);
+```
 
-<pre class="brush: js">var f = new Function("console.log('foo');");</pre>
+```js
+var f = new Function("console.log('foo');");
+```
 
-<h3 id="Встраиваемый_(inline)_JavaScript">Встраиваемый (inline) JavaScript</h3>
+### Встраиваемый (inline) JavaScript
 
-<p>Изначальная политика защиты содержимого не позволяет выполнять JavaScript-код, встраиваемый в HTML теги. Это запрещает как выполнение JavaScript-кода вложенного прямо в <code>&lt;script&gt;</code> тег, так и выполнение вписанных в атрибут обработчиков событий, означая, что следующий код так же не будет работать:</p>
+Изначальная политика защиты содержимого не позволяет выполнять JavaScript-код, встраиваемый в HTML теги. Это запрещает как выполнение JavaScript-кода вложенного прямо в `<script>` тег, так и выполнение вписанных в атрибут обработчиков событий, означая, что следующий код так же не будет работать:
 
-<pre class="brush: html">&lt;script&gt;console.log("foo");&lt;/script&gt;</pre>
+```html
+<script>console.log("foo");</script>
+```
 
-<pre class="brush: html">&lt;div onclick="console.log('click')"&gt;Click me!&lt;/div&gt;</pre>
+```html
+<div onclick="console.log('click')">Click me!</div>
+```
 
-<p>Вместо того, чтобы использовать код <code>&lt;body onload="main()"&gt;</code> для запуска вашего скрипта после загрузки страницы, поставьте обработчики событий на <a href="/ru/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> или <a href="/ru/docs/Web/Events/load">load</a>.</p>
+Вместо того, чтобы использовать код `<body onload="main()">` для запуска вашего скрипта после загрузки страницы, поставьте обработчики событий на [DOMContentLoaded](/ru/docs/Web/Events/DOMContentLoaded) или [load](/ru/docs/Web/Events/load).

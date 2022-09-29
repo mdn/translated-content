@@ -9,75 +9,66 @@ tags:
   - Release
 translation_of: Mozilla/Firefox/Releases/33
 ---
-<div>{{FirefoxSidebar}}</div><div>Хотите помочь с документацией к Firefox 33? Взгляните на <a class="external" href="http://beta.elchi3.de/doctracker/#list=fx&amp;version=33.0">список багов нуждающихся в описании</a> и помогите нам!</div>
+{{FirefoxSidebar}}Хотите помочь с документацией к Firefox 33? Взгляните на [список багов нуждающихся в описании](http://beta.elchi3.de/doctracker/#list=fx&version=33.0) и помогите нам!
 
-<h2 id="Список_изменения_для_веб_-_разработки">Список изменения для веб - разработки</h2>
+## Список изменения для веб - разработки
 
-<h3 id="Инструменты_разработчика">Инструменты разработчика</h3>
+### Инструменты разработчика
 
-<p><em>Нет изменений.</em></p>
+_Нет изменений._
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>Реализовано <strong>@counter-style</strong> правило({{bug(966166)}}).</li>
- <li>Больше нет необходимости использовать префикс <strong>-moz-ethiopic-numeric</strong>({{bug(985825)}}).</li>
- <li>Добавлена поддержка <strong>disclosure-open/disclosure-closed</strong> стилей счётчиков({{bug(982355)}}).</li>
- <li>CSS-анимация с пустыми keyframes свойствами обрабатывает события по умолчанию({{bug(1004377)}}).</li>
-</ul>
+- Реализовано **@counter-style** правило({{bug(966166)}}).
+- Больше нет необходимости использовать префикс **-moz-ethiopic-numeric**({{bug(985825)}}).
+- Добавлена поддержка **disclosure-open/disclosure-closed** стилей счётчиков({{bug(982355)}}).
+- CSS-анимация с пустыми keyframes свойствами обрабатывает события по умолчанию({{bug(1004377)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p><em>Нет изменений.</em></p>
+_Нет изменений._
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>Удалён нестандартный метод {{jsxref("Number.toInteger()")}} ({{bug(1022396)}}).</li>
- <li>Методы {{jsxref("Map.prototype.set()")}}, {{jsxref("WeakMap.prototype.set()")}} and {{jsxref("Set.prototype.add()")}} можно использовать последовательно, больше не возвращают <code>undefined</code> в место этого возвращают объект. ({{bug(1031632)}}).</li>
- <li>Добавлена поддержка типа данных "Symbol" из стандарта ECMAScript 6 ({{bug(645416)}}):
-  <ul>
-   <li>{{jsxref("Symbol")}}</li>
-   <li>{{jsxref("Symbol.for()")}}</li>
-   <li>{{jsxref("Symbol.keyFor()")}}</li>
-   <li>{{jsxref("Object.getOwnPropertySymbols()")}}</li>
-  </ul>
- </li>
- <li>Параметры по умолчанию инициализированные до инициализации функции или в теле функции не могут быть использованы в качестве параметров по умолчанию ({{bug(1022962)}}).</li>
-</ul>
+- Удалён нестандартный метод {{jsxref("Number.toInteger()")}} ({{bug(1022396)}}).
+- Методы {{jsxref("Map.prototype.set()")}}, {{jsxref("WeakMap.prototype.set()")}} and {{jsxref("Set.prototype.add()")}} можно использовать последовательно, больше не возвращают `undefined` в место этого возвращают объект. ({{bug(1031632)}}).
+- Добавлена поддержка типа данных "Symbol" из стандарта ECMAScript 6 ({{bug(645416)}}):
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+  - {{jsxref("Symbol")}}
+  - {{jsxref("Symbol.for()")}}
+  - {{jsxref("Symbol.keyFor()")}}
+  - {{jsxref("Object.getOwnPropertySymbols()")}}
 
-<p><em>Нет изменений.</em></p>
+- Параметры по умолчанию инициализированные до инициализации функции или в теле функции не могут быть использованы в качестве параметров по умолчанию ({{bug(1022962)}}).
 
-<h3 id="MathML">MathML</h3>
+### Interfaces/APIs/DOM
 
-<ul>
- <li>Используются <a href="https://wiki.mozilla.org/MathML:Open_Type_MATH_Table#Implementation_Status">Open Type MATH</a> для задания констант fractions, stacks, radicals и скриптов ({{bug(961365)}}).</li>
-</ul>
+_Нет изменений._
 
-<h3 id="SVG">SVG</h3>
+### MathML
 
-<p><em>Нет изменений.</em></p>
+- Используются [Open Type MATH](https://wiki.mozilla.org/MathML:Open_Type_MATH_Table#Implementation_Status) для задания констант fractions, stacks, radicals и скриптов ({{bug(961365)}}).
 
-<h3 id="AudioVideo">Audio/Video</h3>
+### SVG
 
-<p><em>Нет изменений.</em></p>
+_Нет изменений._
 
-<h2 id="Безопасность">Безопасность</h2>
+### Audio/Video
 
-<p><em>Нет изменений.</em></p>
+_Нет изменений._
 
-<h2 id="Изменения_для_плагинов_и_методов_их_разработки">Изменения для плагинов и методов их разработки</h2>
+## Безопасность
 
-<p><em>Нет изменений.</em></p>
+_Нет изменений._
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Изменения для плагинов и методов их разработки
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/33/Site_Compatibility">Совместимость сайтов для Firefox 33</a></li>
-</ul>
+_Нет изменений._
 
-<h3 id="Предыдущие_версии">Предыдущие версии</h3>
+## Смотрите также
 
-<p>{{Firefox_for_developers('32')}}</p>
+- [Совместимость сайтов для Firefox 33](/ru/docs/Mozilla/Firefox/Releases/33/Site_Compatibility)
+
+### Предыдущие версии
+
+{{Firefox_for_developers('32')}}

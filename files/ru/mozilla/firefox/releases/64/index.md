@@ -3,202 +3,160 @@ title: Firefox 64 для разработчиков
 slug: Mozilla/Firefox/Releases/64
 translation_of: Mozilla/Firefox/Releases/64
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p class="summary">В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 64 был выпущен 11 декабря 2018 года.</p>
+В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 64 был выпущен 11 декабря 2018 года.
 
-<h2 id="Изменения_для_веб-разработчиков">Изменения для веб-разработчиков</h2>
+## Изменения для веб-разработчиков
 
-<h3 id="Инструменты_разработчика">Инструменты разработчика</h3>
+### Инструменты разработчика
 
-<ul>
- <li><a href="/ru/docs/Tools/Accessibility_inspector#Выделение_элементов_интерфейса">Информационная панель в инструменте поддержки доступности</a> теперь показывает сведения о соотношении контрастности цветов текста или изображений на странице ({{bug(1473037)}}).</li>
- <li>Выбор устройства в <a href="/ru/docs/Tools/Responsive_Design_Mode">режиме адаптивного дизайна</a> запоминается и сохраняется между сеансами ({{bug(1248619)}}).</li>
- <li><a href="/ru/docs/Tools/Network_Monitor">Сетевой монитор</a> теперь выделяет ресурсы, на которые потенциально может повлиять <a href="/ru/docs/Mozilla/Firefox/Privacy/Tracking_Protection">защита от отслеживания</a> ({{bug(1333994)}}).</li>
- <li><a href="/ru/docs/Tools/Web_Console">Веб-консоль</a> получила усовершенствования, связанные с вводом и оценкой кода:
-  <ul>
-   <li>Регистронезависимое <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Autocomplete">автодополнение</a> выражений ({{bug(672733)}}).</li>
-   <li>Возможность просмотреть <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Command_history">историю выражений консоли</a> с помощью bash-подобного обратного поиска ({{bug(1024913)}}).</li>
-   <li>Подсветка <a href="/ru/docs/Tools/Web_Console/The_command_line_interpreter">оценённого кода</a> и при вводе, и при выводе ({{bug(1463669)}}).</li>
-  </ul>
- </li>
- <li>Пошаговое выполнение кода в <a href="/ru/docs/Tools/Debugger">отладчике JavaScript </a>также было улучшено:
-  <ul>
-   <li>Отладчик сохраняет <a href="/en-US/docs/Tools/Debugger/UI_Tour#Scopes">развёрнутые переменные</a> при пошаговом выполнении кода ({{bug(1491471)}}).</li>
-   <li><a href="/ru/docs/Tools/Debugger/How_to/Step_through_code">Выход из функции</a> пропускает возвращаемое значение ({{bug(923975)}}).</li>
-  </ul>
- </li>
-</ul>
+- [Информационная панель в инструменте поддержки доступности](/ru/docs/Tools/Accessibility_inspector#Выделение_элементов_интерфейса) теперь показывает сведения о соотношении контрастности цветов текста или изображений на странице ({{bug(1473037)}}).
+- Выбор устройства в [режиме адаптивного дизайна](/ru/docs/Tools/Responsive_Design_Mode) запоминается и сохраняется между сеансами ({{bug(1248619)}}).
+- [Сетевой монитор](/ru/docs/Tools/Network_Monitor) теперь выделяет ресурсы, на которые потенциально может повлиять [защита от отслеживания](/ru/docs/Mozilla/Firefox/Privacy/Tracking_Protection) ({{bug(1333994)}}).
+- [Веб-консоль](/ru/docs/Tools/Web_Console) получила усовершенствования, связанные с вводом и оценкой кода:
 
-<h4 id="Удалено">Удалено</h4>
+  - Регистронезависимое [автодополнение](/ru/docs/Tools/Web_Console/The_command_line_interpreter#Autocomplete) выражений ({{bug(672733)}}).
+  - Возможность просмотреть [историю выражений консоли](/ru/docs/Tools/Web_Console/The_command_line_interpreter#Command_history) с помощью bash-подобного обратного поиска ({{bug(1024913)}}).
+  - Подсветка [оценённого кода](/ru/docs/Tools/Web_Console/The_command_line_interpreter) и при вводе, и при выводе ({{bug(1463669)}}).
 
-<ul>
- <li>Окончательно удалена панель разработчика (GCLI) ({{bug(1429421)}}). Её интерфейс был удалён в <a href="/ru/docs/Mozilla/Firefox/Releases/62">Firefox 62</a>, а теперь удалён и оставшийся код.</li>
-</ul>
+- Пошаговое выполнение кода в [отладчике JavaScript ](/ru/docs/Tools/Debugger)также было улучшено:
 
-<h3 id="HTML"><a>HTML</a></h3>
+  - Отладчик сохраняет [развёрнутые переменные](/ru/docs/Tools/Debugger/UI_Tour#Scopes) при пошаговом выполнении кода ({{bug(1491471)}}).
+  - [Выход из функции](/ru/docs/Tools/Debugger/How_to/Step_through_code) пропускает возвращаемое значение ({{bug(923975)}}).
 
-<p><em>Без изменений.</em></p>
+#### Удалено
 
-<h3 id="CSS"><a>CSS</a></h3>
+- Окончательно удалена панель разработчика (GCLI) ({{bug(1429421)}}). Её интерфейс был удалён в [Firefox 62](/ru/docs/Mozilla/Firefox/Releases/62), а теперь удалён и оставшийся код.
 
-<ul>
- <li>Включена по умолчанию поддержка <a href="/ru/docs/Web/CSS/CSS_Scrollbars">полос прокрутки CSS</a> ({{bug(1492012)}}).</li>
- <li>Реализована поддержка Interaction Media Features, включающая <code><a href="/ru/docs/Web/CSS/@media/pointer">pointer:coarse</a></code> ({{bug(1035774)}}). Подробности реализации <code><a href="/ru/docs/Web/CSS/@media/any-pointer">any-pointer</a></code> и <code><a href="/ru/docs/Web/CSS/@media/any-hover">any-hover</a></code> см в {{bug(1483111)}}.</li>
- <li>Android-версия обзавелась поддержкой <code><a href="/ru/docs/Web/CSS/@media/prefers-reduced-motion">prefers-reduced-motion</a></code> ({{bug(1478505)}}).</li>
- <li>Значения {{cssxref("&lt;gradient&gt;")}} теперь поддерживают мультипозиционный синтаксис остановки цвета, например, <code>yellow 25%, yellow 50%</code> можно записать в виде <code>yellow 25% 50%</code> ({{bug(1352643)}}).</li>
- <li>Свойство {{cssxref("text-transform")}} теперь принимает значение <code>full-size-kana</code> ({{bug(1498148)}}).</li>
- <li>Из-за проблем веб-совместимости добавлена поддержка {{cssxref("appearance", "-webkit-appearance")}} ({{bug(1368555)}}).</li>
- <li>Кроме того, удалена большая часть специфичных для Firefox значений <code>-moz-appearance</code> ({{bug(1496720)}}).</li>
- <li>{{cssxref("display")}}: <code>list-item</code> отныне поддерживается на элементах {{htmlelement("legend")}} ({{bug(1486602)}}).</li>
- <li>SVG <code>path()</code>, при использовании в {{cssxref("offset-path")}}, теперь могут быть анимированными ({{bug(1486094)}}).</li>
- <li>Псевдоэлементы с префиксом <code>-webkit-</code> больше не делают цепочку или группу селекторов недействительной ({{bug(1424106)}}). См. {{bug(1486325)}}, чтобы узнать, как включить эту возможность.</li>
-</ul>
+### HTML
 
-<h4 id="Удалено_2">Удалено</h4>
+_Без изменений._
 
-<ul>
- <li>Нестандартные значения <a href="/ru/docs/Mozilla/Gecko/Chrome/CSS/display-xul"><code style="white-space: nowrap;">-moz-box</code> и <code style="white-space: nowrap;">-moz-inline-box</code></a> {{CSSxRef("display")}} скрыты от веб-содержимого ({{bug(1496961)}}).</li>
- <li>Нестандартные <a href="/ru/docs/Web/CSS/Pseudo-elements" style="white-space: nowrap;">псевдоэлементы</a> {{CSSxRef("::-moz-tree")}} скрыты от веб-содержимого ({{bug(1496961)}}).</li>
- <li>Удалена настройка <code>layout.css.filters.enabled</code>; <a href="/ru/docs/Web/CSS/Filter_Effects">CSS-фильтры</a> отныне нельзя отключить ({{bug(1408841)}}).</li>
- <li>Отменено ({{bug(1492567)}}) изменение, сделанное в прошлом выпуске — перемена мест значений {{cssxref("overflow")}} ({{bug(1481866)}}). См. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1481866#c14">причину</a>.</li>
-</ul>
+### CSS
 
-<h3 id="SVG">SVG</h3>
+- Включена по умолчанию поддержка [полос прокрутки CSS](/ru/docs/Web/CSS/CSS_Scrollbars) ({{bug(1492012)}}).
+- Реализована поддержка Interaction Media Features, включающая [`pointer:coarse`](/ru/docs/Web/CSS/@media/pointer) ({{bug(1035774)}}). Подробности реализации [`any-pointer`](/ru/docs/Web/CSS/@media/any-pointer) и [`any-hover`](/ru/docs/Web/CSS/@media/any-hover) см в {{bug(1483111)}}.
+- Android-версия обзавелась поддержкой [`prefers-reduced-motion`](/ru/docs/Web/CSS/@media/prefers-reduced-motion) ({{bug(1478505)}}).
+- Значения {{cssxref("&lt;gradient&gt;")}} теперь поддерживают мультипозиционный синтаксис остановки цвета, например, `yellow 25%, yellow 50%` можно записать в виде `yellow 25% 50%` ({{bug(1352643)}}).
+- Свойство {{cssxref("text-transform")}} теперь принимает значение `full-size-kana` ({{bug(1498148)}}).
+- Из-за проблем веб-совместимости добавлена поддержка {{cssxref("appearance", "-webkit-appearance")}} ({{bug(1368555)}}).
+- Кроме того, удалена большая часть специфичных для Firefox значений `-moz-appearance` ({{bug(1496720)}}).
+- {{cssxref("display")}}: `list-item` отныне поддерживается на элементах {{htmlelement("legend")}} ({{bug(1486602)}}).
+- SVG `path()`, при использовании в {{cssxref("offset-path")}}, теперь могут быть анимированными ({{bug(1486094)}}).
+- Псевдоэлементы с префиксом `-webkit-` больше не делают цепочку или группу селекторов недействительной ({{bug(1424106)}}). См. {{bug(1486325)}}, чтобы узнать, как включить эту возможность.
 
-<p><em>Без изменений.</em></p>
+#### Удалено
 
-<h3 id="JavaScript">JavaScript</h3>
+- Нестандартные значения [`-moz-box` и `-moz-inline-box`](/ru/docs/Mozilla/Gecko/Chrome/CSS/display-xul) {{CSSxRef("display")}} скрыты от веб-содержимого ({{bug(1496961)}}).
+- Нестандартные [псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements) {{CSSxRef("::-moz-tree")}} скрыты от веб-содержимого ({{bug(1496961)}}).
+- Удалена настройка `layout.css.filters.enabled`; [CSS-фильтры](/ru/docs/Web/CSS/Filter_Effects) отныне нельзя отключить ({{bug(1408841)}}).
+- Отменено ({{bug(1492567)}}) изменение, сделанное в прошлом выпуске — перемена мест значений {{cssxref("overflow")}} ({{bug(1481866)}}). См. [причину](https://bugzilla.mozilla.org/show_bug.cgi?id=1481866#c14).
 
-<ul>
- <li>Реализовано предложение TC39 <a href="https://github.com/tc39/proposal-well-formed-stringify">Well-formed JSON.stringify</a>, чтобы {{jsxref("JSON.stringify")}} не мог возвращать плохо сформированные строки Unicode ({{bug(1469021)}}).</li>
- <li>Проксируемые функции теперь могут быть переданы {{jsxref("Function.prototype.toString")}}<code>.call()</code> ({{bug(1440468)}}).</li>
- <li>Если значение не указано, конструктор {{jsxref("WebAssembly.Global")}} будет использовать типизированный 0. Это определяется алгоритмом <a href="https://webassembly.github.io/spec/js-api/#defaultvalue"><code>DefaultValue</code></a> ({{bug(1490286)}}).</li>
-</ul>
+### SVG
 
-<h3 id="API">API</h3>
+_Без изменений._
 
-<h4 id="DOM">DOM</h4>
+### JavaScript
 
-<ul>
- <li>Ряд изменений {{domxref("Fullscreen_API", "API Fullscreen", "", "1")}}:
-  <ul>
-   <li>API лишился префикса ({{bug(1269276)}}).</li>
-   <li>Методы {{domxref("Element.requestFullscreen()")}} и {{domxref("Document.exitFullscreen()")}} отныне возвращают {{jsxref("Promise")}}, который исполняется, когда завершено изменение режима ({{bug(1188256)}} и {{bug(1491212)}}).</li>
-   <li>События {{domxref("fullscreenchange")}} и {{domxref("fullscreenerror")}} сначала отправлялись в {{domxref("Document")}}, а затем в {{domxref("Element")}}. Теперь всё стало наоборот. Это поведение отражено в спецификации и совпадает с поведением Chrome ({{bug(1375319)}}).</li>
-  </ul>
- </li>
- <li>На платформе macOS снова включён {{domxref("WebVR_API", "API WebVR", "", "1")}} 1.1 ({{bug(1476091)}}).</li>
- <li>В качестве ссылок на {{domxref("Window.screenX")}} и {{domxref("Window.screenY")}} добавлены {{domxref("Window.screenLeft")}} и {{domxref("Window.screenTop")}} ({{bug(1498860)}}).</li>
- <li>Метод {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} отныне возвращает имена заголовков в нижнем регистре, в соответствии со спецификацией ({{bug(1398718)}}).</li>
- <li>Устаревший интерфейс <code>HTMLAllCollection</code> обновлён в соответствии с последними изменениями <a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#htmlallcollection">спецификации</a> ({{bug(1398354)}}).</li>
- <li>В целях конфиденциальности {{domxref("Navigator.buildID")}} будет возвращать фиксированную метку времени ({{bug(583181)}}).</li>
- <li>По умолчанию отключены следующие возможности {{domxref("Document.execCommand()")}} ({{bug(1490641)}}):
-  <ul>
-   <li><code>enableObjectResizing</code></li>
-   <li><code>enableInlineTableEditing</code></li>
-   <li><code>enableAbsolutePositionEditor</code></li>
-  </ul>
- </li>
-</ul>
+- Реализовано предложение TC39 [Well-formed JSON.stringify](https://github.com/tc39/proposal-well-formed-stringify), чтобы {{jsxref("JSON.stringify")}} не мог возвращать плохо сформированные строки Unicode ({{bug(1469021)}}).
+- Проксируемые функции теперь могут быть переданы {{jsxref("Function.prototype.toString")}}`.call()` ({{bug(1440468)}}).
+- Если значение не указано, конструктор {{jsxref("WebAssembly.Global")}} будет использовать типизированный 0. Это определяется алгоритмом [`DefaultValue`](https://webassembly.github.io/spec/js-api/#defaultvalue) ({{bug(1490286)}}).
 
-<h4 id="Сервис-воркеры">Сервис-воркеры</h4>
+### API
 
-<ul>
- <li>Реализован метод {{domxref("ServiceWorkerContainer.startMessages()")}} ({{bug(1263734)}}).</li>
-</ul>
+#### DOM
 
-<h4 id="Media_Web_Audio_и_WebRTC">Media, Web Audio и WebRTC</h4>
+- Ряд изменений {{domxref("Fullscreen_API", "API Fullscreen", "", "1")}}:
 
-<ul>
- <li>Свойства {{domxref("PannerNode.refDistance")}}, {{domxref("PannerNode.maxDistance")}}, {{domxref("PannerNode.rolloffFactor")}} и {{domxref("PannerNode.coneOuterGain")}} отныне корректно выбрасывают исключения, когда их значения установлены за пределами допустимого ({{bug(1487963)}}).</li>
- <li>Настройки {{domxref("RTCRtpEncodingParameters")}}, изменённые с помощью {{domxref("RTCRtpSender.setParameters()")}}, не обновлялись, если были изменены во время звонка. Теперь они будут обновляться без переподключения ({{bug(1253499)}}).</li>
- <li>Реализован {{domxref("RTCIceCandidateStats.relayProtocol")}} — стандартная версия {{domxref("RTCIceCandidateStats.mozLocalTransport")}}, который объявлен устаревшим ({{bug(1435789)}}).</li>
- <li>Включена по умолчанию автоматическая регулировка усиления (AGC). Эта возможность управляется настройкой <code>media.getusermedia.agc_enabled</code> ({{bug(1496714)}}).</li>
-</ul>
+  - API лишился префикса ({{bug(1269276)}}).
+  - Методы {{domxref("Element.requestFullscreen()")}} и {{domxref("Document.exitFullscreen()")}} отныне возвращают {{jsxref("Promise")}}, который исполняется, когда завершено изменение режима ({{bug(1188256)}} и {{bug(1491212)}}).
+  - События {{domxref("fullscreenchange")}} и {{domxref("fullscreenerror")}} сначала отправлялись в {{domxref("Document")}}, а затем в {{domxref("Element")}}. Теперь всё стало наоборот. Это поведение отражено в спецификации и совпадает с поведением Chrome ({{bug(1375319)}}).
 
-<h4 id="Удалено_3">Удалено</h4>
+- На платформе macOS снова включён {{domxref("WebVR_API", "API WebVR", "", "1")}} 1.1 ({{bug(1476091)}}).
+- В качестве ссылок на {{domxref("Window.screenX")}} и {{domxref("Window.screenY")}} добавлены {{domxref("Window.screenLeft")}} и {{domxref("Window.screenTop")}} ({{bug(1498860)}}).
+- Метод {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} отныне возвращает имена заголовков в нижнем регистре, в соответствии со спецификацией ({{bug(1398718)}}).
+- Устаревший интерфейс `HTMLAllCollection` обновлён в соответствии с последними изменениями [спецификации](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#htmlallcollection) ({{bug(1398354)}}).
+- В целях конфиденциальности {{domxref("Navigator.buildID")}} будет возвращать фиксированную метку времени ({{bug(583181)}}).
+- По умолчанию отключены следующие возможности {{domxref("Document.execCommand()")}} ({{bug(1490641)}}):
 
-<ul>
- <li>Свойство {{domxref("Window.event")}}, добавленное в Firefox 63 для разрешения проблем веб-совместимости, скрыто за отключённой в релизных версиях настройкой <code>dom.window.event.enabled</code>, поскольку вскрылись иные затруднения ({{bug(1493869)}}). На самом деле, это было сделано в одном из минорных обновлений Firefox 63, мы просто обращаем на это ваше внимание.</li>
- <li>Удалён интерфейс {{domxref("LocalMediaStream")}} и его метод <code>stop()</code> ({{bug(1258143)}}). См. {{SectionOnPage("/en-US/docs/Web/API/MediaStreamTrack/stop", "Stopping a video stream")}}, чтобы узнать, как остановить поток целиком.</li>
- <li>Удалены интерфейсы <code>AudioStreamTrack</code> и <code>VideoStreamTrack</code>, поскольку они уже некоторое время объявлены устаревшими ({{bug(1377146)}}). Их функции перенесены в {{domxref("MediaStreamTrack")}}; дорожки отныне идентифицируются по значению свойств {{domxref("MediaStreamTrack.kind", "kind")}}, таких, как <code>audio</code> или <code>video</code>.</li>
-</ul>
+  - `enableObjectResizing`
+  - `enableInlineTableEditing`
+  - `enableAbsolutePositionEditor`
 
-<h3 id="Безопасность">Безопасность</h3>
+#### Сервис-воркеры
 
-<ul>
- <li>Прекращено доверие сертификатам, выданным удостоверяющими центрами Symantec (см. {{bug(1409257)}}; также см. подробности в обсуждении <a href="https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion">Mozilla’s Plan for Symantec Roots</a>).</li>
- <li>Теперь можно использовать {{httpheader("Referrer-Policy")}} для управления ресурсами, полученными через таблицы стилей ({{bug(1330487)}}) — см. {{SectionOnPage("/en-US/docs/Web/HTTP/Headers/Referrer-Policy", "Integration with CSS")}} для получения подробных сведений.</li>
-</ul>
+- Реализован метод {{domxref("ServiceWorkerContainer.startMessages()")}} ({{bug(1263734)}}).
 
-<h3 id="Плагины">Плагины</h3>
+#### Media, Web Audio и WebRTC
 
-<p><em>Без изменений.</em></p>
+- Свойства {{domxref("PannerNode.refDistance")}}, {{domxref("PannerNode.maxDistance")}}, {{domxref("PannerNode.rolloffFactor")}} и {{domxref("PannerNode.coneOuterGain")}} отныне корректно выбрасывают исключения, когда их значения установлены за пределами допустимого ({{bug(1487963)}}).
+- Настройки {{domxref("RTCRtpEncodingParameters")}}, изменённые с помощью {{domxref("RTCRtpSender.setParameters()")}}, не обновлялись, если были изменены во время звонка. Теперь они будут обновляться без переподключения ({{bug(1253499)}}).
+- Реализован {{domxref("RTCIceCandidateStats.relayProtocol")}} — стандартная версия {{domxref("RTCIceCandidateStats.mozLocalTransport")}}, который объявлен устаревшим ({{bug(1435789)}}).
+- Включена по умолчанию автоматическая регулировка усиления (AGC). Эта возможность управляется настройкой `media.getusermedia.agc_enabled` ({{bug(1496714)}}).
 
-<h3 id="WebDriver_(Marionette)">WebDriver (Marionette)</h3>
+#### Удалено
 
-<h4 id="Изменения_API">Изменения API</h4>
+- Свойство {{domxref("Window.event")}}, добавленное в Firefox 63 для разрешения проблем веб-совместимости, скрыто за отключённой в релизных версиях настройкой `dom.window.event.enabled`, поскольку вскрылись иные затруднения ({{bug(1493869)}}). На самом деле, это было сделано в одном из минорных обновлений Firefox 63, мы просто обращаем на это ваше внимание.
+- Удалён интерфейс {{domxref("LocalMediaStream")}} и его метод `stop()` ({{bug(1258143)}}). См. {{SectionOnPage("/en-US/docs/Web/API/MediaStreamTrack/stop", "Stopping a video stream")}}, чтобы узнать, как остановить поток целиком.
+- Удалены интерфейсы `AudioStreamTrack` и `VideoStreamTrack`, поскольку они уже некоторое время объявлены устаревшими ({{bug(1377146)}}). Их функции перенесены в {{domxref("MediaStreamTrack")}}; дорожки отныне идентифицируются по значению свойств {{domxref("MediaStreamTrack.kind", "kind")}}, таких, как `audio` или `video`.
 
-<ul>
- <li>Удалены устаревшие конечные точки без префикса <code>Marionette:</code>, <code>L10n:</code> или <code>Addon:</code> (включая <code>singeTap</code>) ({{bug(1504478)}}, {{bug(1504940)}}).</li>
-</ul>
+### Безопасность
 
-<h4 id="Исправленные_ошибки">Исправленные ошибки</h4>
+- Прекращено доверие сертификатам, выданным удостоверяющими центрами Symantec (см. {{bug(1409257)}}; также см. подробности в обсуждении [Mozilla’s Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion)).
+- Теперь можно использовать {{httpheader("Referrer-Policy")}} для управления ресурсами, полученными через таблицы стилей ({{bug(1330487)}}) — см. {{SectionOnPage("/en-US/docs/Web/HTTP/Headers/Referrer-Policy", "Integration with CSS")}} для получения подробных сведений.
 
-<ul>
- <li>Синтезированные события <code>Shift</code> с использованием <code>WebDriver:PerformActions</code> не создавали заглавные буквы ({{bug(1405370)}}).</li>
- <li><code>WebDriver:Navigate</code> мог вызвать бесконечное зависание, если низлежащий процесс контента вкладки менялся много раз во время навигации ({{bug(1504807)}}).</li>
- <li>Для улучшения производительности и сокращения количества потребляемой памяти страница, в новой вкладке или окне будет загружаться не <code>about:newtab</code>, а <code>about:blank</code> ({{bug(1506643)}}).</li>
- <li>Отключено по умолчанию предложение использовать панель блокировки контента, показ которого препятствует взаимодействию с элементами интерфейса ({{bug(1488826)}}).</li>
-</ul>
+### Плагины
 
-<h2 id="Изменения_для_разработчиков_дополнений">Изменения для разработчиков дополнений</h2>
+_Без изменений._
 
-<h3 id="Изменения_API_2">Изменения API</h3>
+### WebDriver (Marionette)
 
-<h4 id="Меню">Меню</h4>
+#### Изменения API
 
-<ul>
- <li>Добавлен новый API <code>browser.menus.overrideContext()</code>, который может быть вызван из события DOM <code>contextmenu</code> и позволяет скрыть все пункты меню по умолчанию, чтобы создать собственное контекстное меню на страницах, относящихся к дополнению. Это контекстное меню может состоять из нескольких пунктов меню верхнего уровня дополнения и может включать элементы контекстного меню вкладок или закладок из других дополнений. См. <a href="https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm">блог</a> для получения подробных сведений.
+- Удалены устаревшие конечные точки без префикса `Marionette:`, `L10n:` или `Addon:` (включая `singeTap`) ({{bug(1504478)}}, {{bug(1504940)}}).
 
-  <ul>
-   <li>Реализован <code>browser.menus.overrideContext()</code> (({{bug(1280347)}}).</li>
-   <li>Реализована опция <code>showDefaults: false</code>, позволяющая скрывать из контекстного меню пункты по умолчанию ({{bug(1367160)}}).</li>
-   <li><code>documentURLPatterns</code> теперь может соответствовать адресу <code>moz-extension://</code>, даже если используется <code>browser.menus.overrideContext()</code>. Таким образом, он может надёжно ограничивать пользовательские пункты меню для определённых документов ({{bug(1498896)}}).</li>
-  </ul>
- </li>
- <li>С помощью нового свойства <code>viewTypes</code> в {{WebExtAPIRef("menus.create()")}} и {{WebExtAPIRef("menus.update()")}} можно ограничить места появления контекстного меню в дополнении ({{bug(1416839)}}).</li>
- <li>{{WebExtAPIRef("menus.update()")}} теперь позволяет обновить значок существующего пункта меню ({{bug(1414566)}}).</li>
- <li>С помощью нового свойства <code>button</code> {{WebExtAPIRef("menus.OnClickData")}} дополнения могут определять, какая кнопка мыши использована для выбора пункта меню ({{bug(1469148)}}).</li>
-</ul>
+#### Исправленные ошибки
 
-<h4 id="Окна">Окна</h4>
+- Синтезированные события `Shift` с использованием `WebDriver:PerformActions` не создавали заглавные буквы ({{bug(1405370)}}).
+- `WebDriver:Navigate` мог вызвать бесконечное зависание, если низлежащий процесс контента вкладки менялся много раз во время навигации ({{bug(1504807)}}).
+- Для улучшения производительности и сокращения количества потребляемой памяти страница, в новой вкладке или окне будет загружаться не `about:newtab`, а `about:blank` ({{bug(1506643)}}).
+- Отключено по умолчанию предложение использовать панель блокировки контента, показ которого препятствует взаимодействию с элементами интерфейса ({{bug(1488826)}}).
 
-<ul>
- <li>Метод {{WebExtAPIRef("windows.create()")}} обзавёлся опцией <code>cookieStoreId</code>, которая определяет <code>CookieStoreId</code> для всех вкладок, созданных при открытии окна ({{bug(1393570)}}).</li>
-</ul>
+## Изменения для разработчиков дополнений
 
-<h4 id="Конфиденциальность">Конфиденциальность</h4>
+### Изменения API
 
-<ul>
- <li>Свойство <code>cookieConfig</code> {{WebExtAPIRef("privacy.websites")}} — это объект, который может принимать свойство <code>behavior</code>. Это свойство теперь может, в свою очередь, принимать новое значение — <code>reject_trackers</code>, которое указывает дополнению отвергать куки, связанными с отслеживанием ({{bug(1493057)}}).</li>
-</ul>
+#### Меню
 
-<h4 id="API_devtools.panels">API devtools.panels</h4>
+- Добавлен новый API `browser.menus.overrideContext()`, который может быть вызван из события DOM `contextmenu` и позволяет скрыть все пункты меню по умолчанию, чтобы создать собственное контекстное меню на страницах, относящихся к дополнению. Это контекстное меню может состоять из нескольких пунктов меню верхнего уровня дополнения и может включать элементы контекстного меню вкладок или закладок из других дополнений. См. [блог](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) для получения подробных сведений.
 
-<ul>
- <li>Реализована поддержка метода <code>Sidebar.setPage()</code> <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/elements">devtools.panels.elements</a></code> ({{bug(1398734)}}).</li>
-</ul>
+  - Реализован `browser.menus.overrideContext()` (({{bug(1280347)}}).
+  - Реализована опция `showDefaults: false`, позволяющая скрывать из контекстного меню пункты по умолчанию ({{bug(1367160)}}).
+  - `documentURLPatterns` теперь может соответствовать адресу `moz-extension://`, даже если используется `browser.menus.overrideContext()`. Таким образом, он может надёжно ограничивать пользовательские пункты меню для определённых документов ({{bug(1498896)}}).
 
-<h3 id="Изменения_манифеста">Изменения манифеста</h3>
+- С помощью нового свойства `viewTypes` в {{WebExtAPIRef("menus.create()")}} и {{WebExtAPIRef("menus.update()")}} можно ограничить места появления контекстного меню в дополнении ({{bug(1416839)}}).
+- {{WebExtAPIRef("menus.update()")}} теперь позволяет обновить значок существующего пункта меню ({{bug(1414566)}}).
+- С помощью нового свойства `button` {{WebExtAPIRef("menus.OnClickData")}} дополнения могут определять, какая кнопка мыши использована для выбора пункта меню ({{bug(1469148)}}).
 
-<ul>
- <li>Новое свойство <code>pinned</code> ключа манифеста <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> позволяет дополнениям управлять тем, должны ли при установке их действия на странице быть прикреплены к адресной строке или нет ({{bug(1494135)}}).</li>
- <li>В Windows наличие ключей NativeMessagingHosts сначала будет проверяться в 32-разрядном представлении реестра (<a class="external external-icon" href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system" rel="noopener">Wow6432Node)</a>); следует использовать то, что подходит для вашего приложения ({{bug(1494709)}}).</li>
- <li>Объект <code>search_provider</code> поля <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides</a></code> отныне может включать новые свойства — <code>suggest_url</code>, <code>suggest_url_post_params</code> ({{bug(1486819)}}) и <code>search_url_post_params</code>.</li>
-</ul>
+#### Окна
 
-<h2 id="Предыдущие_версии">Предыдущие версии</h2>
+- Метод {{WebExtAPIRef("windows.create()")}} обзавёлся опцией `cookieStoreId`, которая определяет `CookieStoreId` для всех вкладок, созданных при открытии окна ({{bug(1393570)}}).
 
-<p>{{Firefox_for_developers(64)}}</p>
+#### Конфиденциальность
+
+- Свойство `cookieConfig` {{WebExtAPIRef("privacy.websites")}} — это объект, который может принимать свойство `behavior`. Это свойство теперь может, в свою очередь, принимать новое значение — `reject_trackers`, которое указывает дополнению отвергать куки, связанными с отслеживанием ({{bug(1493057)}}).
+
+#### API devtools.panels
+
+- Реализована поддержка метода `Sidebar.setPage()` [`devtools.panels.elements`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/elements) ({{bug(1398734)}}).
+
+### Изменения манифеста
+
+- Новое свойство `pinned` ключа манифеста [`page_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) позволяет дополнениям управлять тем, должны ли при установке их действия на странице быть прикреплены к адресной строке или нет ({{bug(1494135)}}).
+- В Windows наличие ключей NativeMessagingHosts сначала будет проверяться в 32-разрядном представлении реестра ([Wow6432Node)](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system)); следует использовать то, что подходит для вашего приложения ({{bug(1494709)}}).
+- Объект `search_provider` поля [`chrome_settings_overrides`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) отныне может включать новые свойства — `suggest_url`, `suggest_url_post_params` ({{bug(1486819)}}) и `search_url_post_params`.
+
+## Предыдущие версии
+
+{{Firefox_for_developers(64)}}

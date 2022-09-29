@@ -7,6 +7,8 @@ tags:
   - TopicStub
 translation_of: Mozilla/Firefox/Releases
 ---
-<div>{{FirefoxSidebar}}</div><p>Далее ссылки на "Firefox X for developer"  (Firefox для разработчиков, где X это версия релиза). Эти замечания описывают новые фичи к релизу и исправленные баги.</p>
+{{FirefoxSidebar}}
 
-<div class="multiColumnList">{{ListSubpages("",1,1,1)}}</div>
+Далее ссылки на "Firefox X for developer" (Firefox для разработчиков, где X это версия релиза). Эти замечания описывают новые фичи к релизу и исправленные баги.
+
+{{ListSubpages("",1,1,1)}}

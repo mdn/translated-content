@@ -8,102 +8,82 @@ tags:
   - Расширения
 translation_of: Mozilla/Add-ons/WebExtensions
 ---
-<div style="">{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p style="">WebExtensions - это кросс-браузерная система разработки дополнений (для браузеров). В значительной степени эта система совместима с <a class="external-icon external" href="https://developer.chrome.com/extensions" style="">API-расширений</a>, поддерживаемых Google Chrome и Opera. Расширения, написанные для этих браузеров, в большинстве случаев будут работать с Firefox или <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/" style="">Microsoft Edge</a> <a href="/ru/Add-ons/WebExtensions/Porting_from_Google_Chrome" style="">лишь с минимальными изменениями</a>. Эти API также полностью совместимы с <a href="/ru/Firefox/Multiprocess_Firefox" style="">мультипоточным Firefox</a>.</p>
+WebExtensions - это кросс-браузерная система разработки дополнений (для браузеров). В значительной степени эта система совместима с [API-расширений](https://developer.chrome.com/extensions), поддерживаемых Google Chrome и Opera. Расширения, написанные для этих браузеров, в большинстве случаев будут работать с Firefox или [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) [лишь с минимальными изменениями](/ru/Add-ons/WebExtensions/Porting_from_Google_Chrome). Эти API также полностью совместимы с [мультипоточным Firefox](/ru/Firefox/Multiprocess_Firefox).
 
-<p style="">Также мы намерены расширять API для поддержки нужд разработчиков дополнений, поэтому, если у вас есть идеи, то мы их с удовольствием выслушаем. Вы можете связаться с нами через <a href="https://mail.mozilla.org/listinfo/dev-addons" style="">dev-addons mailing list</a> или <a href="irc://irc.mozilla.org/webextensions" style="">#webextensions</a> на <a href="https://wiki.mozilla.org/IRC" style="">IRC</a>.</p>
+Также мы намерены расширять API для поддержки нужд разработчиков дополнений, поэтому, если у вас есть идеи, то мы их с удовольствием выслушаем. Вы можете связаться с нами через [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) или [#webextensions](irc://irc.mozilla.org/webextensions) на [IRC](https://wiki.mozilla.org/IRC).
 
-<div class="row topicpage-table" style="">
-<div class="section" style="">
-<h3 id="Приступая_к_работе" style="">Приступая к работе</h3>
+### Приступая к работе
 
-<ul style="">
- <li style=""><a href="/ru/Add-ons/WebExtensions/What_are_WebExtensions" style="">Что такое WebExtensions?</a></li>
- <li style=""><a href="/ru/Add-ons/WebExtensions/Your_first_WebExtension" style="">Первое WebExtension</a></li>
- <li style=""><a href="/ru/Add-ons/WebExtensions/Your_second_WebExtension" style="">Второе WebExtension</a></li>
- <li style=""><a href="/ru/Add-ons/WebExtensions/Anatomy_of_a_WebExtension" style="">Анатомия WebExtension</a></li>
- <li style=""><a href="/ru/Add-ons/WebExtensions/Examples" style="">Примеры WebExtensions</a></li>
-</ul>
+- [Что такое WebExtensions?](/ru/Add-ons/WebExtensions/What_are_WebExtensions)
+- [Первое WebExtension](/ru/Add-ons/WebExtensions/Your_first_WebExtension)
+- [Второе WebExtension](/ru/Add-ons/WebExtensions/Your_second_WebExtension)
+- [Анатомия WebExtension](/ru/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [Примеры WebExtensions](/ru/Add-ons/WebExtensions/Examples)
 
-<h3 id="How_to" style="">How to</h3>
+### How to
 
-<ul style="">
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests" style="">Перехват HTTP-запросов</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page" style="">Изменить веб-страницу</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar" style="">Добавить кнопку на панель инструментов</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page" style="">Реализация страницы настроек</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard" style="">Работа с буфером обмена</a></li>
- <li style="">Работа с вкладками браузера</li>
- <li style="">Доступ и изменение закладок</li>
- <li style="">Доступ и изменение куки (cookies)</li>
-</ul>
+- [Перехват HTTP-запросов](/ru/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests)
+- [Изменить веб-страницу](/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)
+- [Добавить кнопку на панель инструментов](/ru/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
+- [Реализация страницы настроек](/ru/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
+- [Работа с буфером обмена](/ru/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)
+- Работа с вкладками браузера
+- Доступ и изменение закладок
+- Доступ и изменение куки (cookies)
 
-<h3 id="Интерфейс_пользователя" style="">Интерфейс пользователя</h3>
+### Интерфейс пользователя
 
-<ul style="">
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface" style="">Введение</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action" style="">Кнопка на панели инструментов</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions" style="">Кнопка в адресной строке</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups" style="">Всплывающие окна</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items" style="">Контекстное меню</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars" style="">Боковые панели </a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_page" style="">Страница настройки дополнения</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages" style="">Дополнительные web-страницы</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications" style="">Уведомления</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox" style="">Угадывание адреса по мере ввода</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels" style="">Панели инструмента разработчика</a></li>
-</ul>
+- [Введение](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface)
+- [Кнопка на панели инструментов](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)
+- [Кнопка в адресной строке](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
+- [Всплывающие окна](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
+- [Контекстное меню](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items)
+- [Боковые панели](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
+- [Страница настройки дополнения](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_page)
+- [Дополнительные web-страницы](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages)
+- [Уведомления](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications)
+- [Угадывание адреса по мере ввода](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox)
+- [Панели инструмента разработчика](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels)
 
-<h3 id="Основные_понятия" style="">Основные понятия</h3>
+### Основные понятия
 
-<ul style="">
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API" style="">Обзор JavaScript API</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/User_interface_components" style="">Компоненты пользовательского интерфейса</a></li>
- <li style=""><a href="/ru/Add-ons/WebExtensions/Content_scripts" style="">Скрипты Content scripts</a></li>
- <li style=""><a href="/ru/Add-ons/WebExtensions/Match_patterns" style="">Match patterns (шаблоны совпадения)</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization" style="">Internationalization</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy" style="">Content Security Policy (политика безопасного контента)</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Native_messaging" style="">Native messaging (нативный обмен сообщениями)</a></li>
-</ul>
+- [Обзор JavaScript API](/ru/docs/Mozilla/Add-ons/WebExtensions/API)
+- [Компоненты пользовательского интерфейса](/ru/docs/Mozilla/Add-ons/WebExtensions/User_interface_components)
+- [Скрипты Content scripts](/ru/Add-ons/WebExtensions/Content_scripts)
+- [Match patterns (шаблоны совпадения)](/ru/Add-ons/WebExtensions/Match_patterns)
+- [Internationalization](/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
+- [Content Security Policy (политика безопасного контента)](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [Native messaging (нативный обмен сообщениями)](/ru/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
 
-<h3 id="Адаптация" style="">Адаптация</h3>
+### Адаптация
 
-<ul style="">
- <li style=""><a href="/ru/Add-ons/WebExtensions/Porting_from_Google_Chrome" style="">Портирование расширения из Google Chrome</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on" style="">Портирование старых дополнений Firefox</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions" style="">Embedded WebExtensions</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK" style="">Сравнение с Add-on SDK</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions" style="">Сравнение с XUL/XPCOM-расширениями</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities" style="">Несовместимость с Chrome</a></li>
-</ul>
+- [Портирование расширения из Google Chrome](/ru/Add-ons/WebExtensions/Porting_from_Google_Chrome)
+- [Портирование старых дополнений Firefox](/ru/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on)
+- [Embedded WebExtensions](/ru/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions)
+- [Сравнение с Add-on SDK](/ru/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK)
+- [Сравнение с XUL/XPCOM-расширениями](/ru/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions)
+- [Несовместимость с Chrome](/ru/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 
-<h3 id="Рабочий_процесс_workflow_Firefox" style="">Рабочий процесс (workflow) Firefox</h3>
+### Рабочий процесс (workflow) Firefox
 
-<ul style="">
- <li style=""><a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox" style="">Установка</a></li>
- <li style=""><a href="/ru/Add-ons/WebExtensions/Debugging" style="">Отладка</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext" style="">Начало работы с инструментом Web-ext</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference" style="">Справочник команд Web-ext</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID" style="">WebExtensions и Add-on ID</a></li>
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension" style="">Публикация вашего дополнения WebExtension</a></li>
-</ul>
-</div>
+- [Установка](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+- [Отладка](/ru/Add-ons/WebExtensions/Debugging)
+- [Начало работы с инструментом Web-ext](/ru/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)
+- [Справочник команд Web-ext](/ru/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference)
+- [WebExtensions и Add-on ID](/ru/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID)
+- [Публикация вашего дополнения WebExtension](/ru/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)
 
-<div class="section" style="">
-<h3 id="Справочники" style="">Справочники</h3>
+### Справочники
 
-<ul style="">
- <li style=""><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API" style="">Обзор JavaScript API</a></li>
- <li style=""><a href="/ru/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs" style="">Таблицы совместимости браузера для JavaScript APIs</a></li>
-</ul>
+- [Обзор JavaScript API](/ru/docs/Mozilla/Add-ons/WebExtensions/API)
+- [Таблицы совместимости браузера для JavaScript APIs](/ru/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
 
-<h4 id="JavaScript_APIs" style="">JavaScript APIs</h4>
+#### JavaScript APIs
 
-<div class="twocolumns" style="">{{ ListSubpages ("/ru/Add-ons/WebExtensions/API") }}</div>
+{{ ListSubpages ("/ru/Add-ons/WebExtensions/API") }}
 
-<h4 id="Manifest_keys" style="">Manifest keys</h4>
+#### Manifest keys
 
-<div class="twocolumns" style="">{{ ListSubpages ("/ru/Add-ons/WebExtensions/manifest.json") }}</div>
-</div>
-</div>
+{{ ListSubpages ("/ru/Add-ons/WebExtensions/manifest.json") }}
