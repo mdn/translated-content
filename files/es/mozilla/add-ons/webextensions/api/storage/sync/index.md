@@ -36,9 +36,13 @@ El objeto de sincronización implementa los métodos definidos en el {{WebExtAPI
 
 {{WebExtExamples}}
 
-> **Nota:** **Agradecimientos**Esta API está basada en la API de Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-sync) API. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
+> **Nota:** **Agradecimientos**
+>
+> Esta API está basada en la API de Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-sync) API. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
+>
+> Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
 
-```
+<!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -66,4 +70,4 @@ El objeto de sincronización implementa los métodos definidos en el {{WebExtAPI
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-```
+-->

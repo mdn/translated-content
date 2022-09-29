@@ -13,7 +13,7 @@ translation_of: Mozilla/Firefox
 
 Firefox es un proyecto de código abierto; la mayor parte del código lo aporta nuestra gran comunidad de voluntarios. Aquí aprenderás a contribuir al proyecto de Firefox y también encontrarás enlaces a información sobre la creación de complementos de Firefox, utilizando las herramientas de desarrollo de Firefox, y otros temas.
 
-Aprende a crear complementos para [FireAAAfox](https://www.mozilla.org/es-ES/firefox/new/), cómo desarrollar y construir Firefox y cómo funciona Firefox desde dentro y sus subproyectos.
+Aprende a crear complementos para [Firefox](https://www.mozilla.org/es-ES/firefox/new/), cómo desarrollar y construir Firefox y cómo funciona Firefox desde dentro y sus subproyectos.
 
 - Notas de la Versión para Desarrolladores
 

@@ -45,9 +45,13 @@ Para obtener más información sobre el uso de i18n en su extensión, consulte:
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Reconocimientos**Esta API se basa en la API [`chrome.i18n`](https://developer.chrome.com/extensions/i18n) de Chromium. Esta documentación deriva del archivo [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) en el código fuente de Chromium.Los datos de compatibilidad de Microsoft Edge son suministrados por Microsoft Corporation y se incluyen aquí según los términos de la licencia Creative Commons Atribución 3.0, versión estadounidense.
+> **Nota:** **Reconocimientos**
+>
+> Esta API se basa en la API [`chrome.i18n`](https://developer.chrome.com/extensions/i18n) de Chromium. Esta documentación deriva del archivo [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) en el código fuente de Chromium.
+>
+> Los datos de compatibilidad de Microsoft Edge son suministrados por Microsoft Corporation y se incluyen aquí según los términos de la licencia Creative Commons Atribución 3.0, versión estadounidense.
 
-```
+<!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -75,4 +79,4 @@ Para obtener más información sobre el uso de i18n en su extensión, consulte:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-```
+-->
