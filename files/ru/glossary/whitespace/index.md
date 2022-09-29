@@ -4,34 +4,25 @@ slug: Glossary/Whitespace
 translation_of: Glossary/Whitespace
 original_slug: Глоссарий/Пробельные_символы
 ---
-<p><span class="seoSummary"><strong>Пробельные символы</strong> </span>— <span class="seoSummary">это множество {{Glossary("Character", "символов")}}  использующихся для горизонтального или вертикального разделения остальных символов. Они используются для разделения токенов в {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}} и других компьютерных языках.</span></p>
+**Пробельные символы** — это множество {{Glossary("Character", "символов")}} использующихся для горизонтального или вертикального разделения остальных символов. Они используются для разделения токенов в {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}} и других компьютерных языках.
 
-<h2 id="В_HTML">В HTML</h2>
+## В HTML
 
-<p><a href="https://html.spec.whatwg.org/">Текущий стандарт HTML</a> описывает как пробельные 5 символов из таблицы ASCII: U+0009 TAB, U+000A LF, U+000C FF, U+000D CR и U+0020 SPACE. В тексте они будут отображены как обычные пробелы, а последовательность пробельных символов, в большинстве случаев, будет схлопнута в один пробел (это поведение можно изменить CSS-свойством {{cssxref("white-space")}}). Они могут быть использованы как разделители между названием элемента и его атрибутами, между названиями классов и т. д.</p>
+[Текущий стандарт HTML](https://html.spec.whatwg.org/) описывает как пробельные 5 символов из таблицы ASCII: U+0009 TAB, U+000A LF, U+000C FF, U+000D CR и U+0020 SPACE. В тексте они будут отображены как обычные пробелы, а последовательность пробельных символов, в большинстве случаев, будет схлопнута в один пробел (это поведение можно изменить CSS-свойством {{cssxref("white-space")}}). Они могут быть использованы как разделители между названием элемента и его атрибутами, между названиями классов и т. д.
 
-<section id="Quick_links">
-<ol>
- <li>Спецификация
-  <ol>
-   <li><a href="https://infra.spec.whatwg.org/#ascii-whitespace">Пробельные символы ASCII</a></li>
-  </ol>
- </li>
- <li>Ссылки
-  <ol>
-   <li><a href="/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">Пробельные символы в модели DOM</a></li>
-   <li>{{cssxref("white-space")}}</li>
-  </ol>
- </li>
- <li>Статья Википедии
-  <ol>
-   <li>{{interwiki("wikipedia", "Whitespace character")}}</li>
-  </ol>
- </li>
- <li><a href="/en-US/docs/Glossary">Глоссарий</a>
-  <ol>
-   <li>{{Glossary("Character", "Символы")}}</li>
-  </ol>
- </li>
-</ol>
-</section>
+1.  Спецификация
+
+    1.  [Пробельные символы ASCII](https://infra.spec.whatwg.org/#ascii-whitespace)
+
+2.  Ссылки
+
+    1.  [Пробельные символы в модели DOM](/ru/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)
+    2.  {{cssxref("white-space")}}
+
+3.  Статья Википедии
+
+    1.  {{interwiki("wikipedia", "Whitespace character")}}
+
+4.  [Глоссарий](/ru/docs/Glossary)
+
+    1.  {{Glossary("Character", "Символы")}}

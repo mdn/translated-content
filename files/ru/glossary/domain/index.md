@@ -9,10 +9,8 @@ tags:
 translation_of: Glossary/Domain
 original_slug: Глоссарий/Домен
 ---
-<p><strong>Домен</strong> - это часть компьютерной сети, в которой один объект контролирует ресурсы обработки данных, например веб-сайт.</p>
+**Домен** - это часть компьютерной сети, в которой один объект контролирует ресурсы обработки данных, например веб-сайт.
 
-<h2 id="Узнать_больше">Узнать больше</h2>
+## Узнать больше
 
-<ul>
- <li><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD">https://ru.wikipedia.org/wiki/Домен</a> on Wikipedia</li>
-</ul>
+- [https://ru.wikipedia.org/wiki/Домен](https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD) on Wikipedia

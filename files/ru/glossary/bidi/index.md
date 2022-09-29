@@ -9,18 +9,14 @@ tags:
 translation_of: Glossary/BiDi
 original_slug: Глоссарий/BiDi
 ---
-<p><strong>BiDi</strong> (BiDirectional) относится к документу, содержащему текст справа налево и слева направо. Даже когда оба направления встречаются в одном и том же абзаце, текст на каждом языке должен отображаться в правильной направленности.</p>
+**BiDi** (BiDirectional) относится к документу, содержащему текст справа налево и слева направо. Даже когда оба направления встречаются в одном и том же абзаце, текст на каждом языке должен отображаться в правильной направленности.
 
-<h2 id="Подробности">Подробности</h2>
+## Подробности
 
-<h3 id="Общие_сведения">Общие сведения</h3>
+### Общие сведения
 
-<ul>
- <li>{{Interwiki("wikipedia", "Bi-directional text")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Bi-directional text")}} on Wikipedia
 
-<h3 id="Техническая_справка">Техническая справка</h3>
+### Техническая справка
 
-<ul>
- <li><a href="/ru/docs/Archive/B2G_OS/Firefox_OS_apps/Localization/Developing_Bidi_Apps">Разработка Bidi приложений</a></li>
-</ul>
+- [Разработка Bidi приложений](/ru/docs/Archive/B2G_OS/Firefox_OS_apps/Localization/Developing_Bidi_Apps)

@@ -21,12 +21,10 @@ tags:
 translation_of: Glossary/Internet
 original_slug: Глоссарий/Internet
 ---
-<p><span id="result_box" lang="ru"><span>Интернет </span></span><span lang="ru"><span>— это всемирная сеть сетей, в которой используется набор интернет-протоколов (называемый также </span></span>{{glossary("TCP")}}/{{glossary("IPv6","IP")}} <span lang="ru"><span> по двум наиболее важным </span></span> {{glossary("protocol","протоколам")}}).</p>
+Интернет — это всемирная сеть сетей, в которой используется набор интернет-протоколов (называемый также {{glossary("TCP")}}/{{glossary("IPv6","IP")}} по двум наиболее важным {{glossary("protocol","протоколам")}}).
 
-<h2 id="Подробнее">Подробнее</h2>
+## Подробнее
 
-<h3 id="Читать_об_этом">Читать об этом</h3>
+### Читать об этом
 
-<ul>
- <li><a href="/en-US/Learn/How_the_Internet_works">Как работает Интернет</a> (введение для начинающих)</li>
-</ul>
+- [Как работает Интернет](/en-US/Learn/How_the_Internet_works) (введение для начинающих)

@@ -4,23 +4,15 @@ slug: Glossary/Scroll_container
 translation_of: Glossary/Scroll_container
 original_slug: Глоссарий/Scroll_container
 ---
-<p><strong>Scroll-контейнер</strong> создаётся путём применения к элементу свойства <code>overflow: scroll</code> или <code>overflow: auto</code>, при условии, что содержимого достаточно много для появления переполнения.</p>
+**Scroll-контейнер** создаётся путём применения к элементу свойства `overflow: scroll` или `overflow: auto`, при условии, что содержимого достаточно много для появления переполнения.
 
-<p>Scroll-контейнер позволяет пользователю с помощью прокрутки достигать участков переполняющего содержимого, которые в ином случае были бы обрезаны и поэтому недоступны для просмотра. Видимая часть scroll-контейнера называется {{glossary("Scrollport", "scrollport")}}.</p>
+Scroll-контейнер позволяет пользователю с помощью прокрутки достигать участков переполняющего содержимого, которые в ином случае были бы обрезаны и поэтому недоступны для просмотра. Видимая часть scroll-контейнера называется {{glossary("Scrollport", "scrollport")}}.
 
-<section id="Quick_links">
-<ul>
- <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>:
+- [MDN Web Docs Glossary](/ru/docs/Glossary):
 
-  <ul>
-   <li>{{glossary("Scroll container")}}</li>
-   <li>{{glossary("Scrollport")}}</li>
-  </ul>
- </li>
- <li>Related CSS Properties:
-  <ul>
-   <li>{{cssxref("overflow")}}</li>
-  </ul>
- </li>
-</ul>
-</section>
+  - {{glossary("Scroll container")}}
+  - {{glossary("Scrollport")}}
+
+- Related CSS Properties:
+
+  - {{cssxref("overflow")}}

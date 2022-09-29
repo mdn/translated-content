@@ -4,18 +4,14 @@ slug: Glossary/ECMAScript
 translation_of: Glossary/ECMAScript
 original_slug: Глоссарий/ECMAScript
 ---
-<p><strong>ECMAScript</strong> - это скриптовый язык на котором основан {{glossary("JavaScript")}}. <a href="http://www.ecma-international.org">Ecma International</a> - организация отвечающая за стандартизацию ECMAScript.</p>
+**ECMAScript** - это скриптовый язык на котором основан {{glossary("JavaScript")}}. [Ecma International](http://www.ecma-international.org) - организация отвечающая за стандартизацию ECMAScript.
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<h3 id="General_knowledge">General knowledge</h3>
+### General knowledge
 
-<ul>
- <li>{{Interwiki("wikipedia", "ECMAScript")}} на Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "ECMAScript")}} на Wikipedia
 
-<h3 id="Technical_reference">Technical reference</h3>
+### Technical reference
 
-<ul>
- <li><a href="http://www.ecmascript.org/">ECMAScript</a></li>
-</ul>
+- [ECMAScript](http://www.ecmascript.org/)

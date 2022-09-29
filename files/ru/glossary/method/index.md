@@ -7,38 +7,28 @@ tags:
 translation_of: Glossary/Method
 original_slug: Глоссарий/Method
 ---
-<p><strong>Метод</strong> это {{glossary("function","функция")}}, являющаяся {{glossary("property","свойством")}} {{glossary("object","объекта")}}. Существует два типа методов: <em>Методы Экземпляра</em> которые являются встроенными задачами, выполняемыми экземпляром объекта, или <em>{{Glossary("static method", "Статические Методы")}}</em> которые являются задачами, вызываемыми непосредственно в конструкторе объекта.</p>
+**Метод** это {{glossary("function","функция")}}, являющаяся {{glossary("property","свойством")}} {{glossary("object","объекта")}}. Существует два типа методов: _Методы Экземпляра_ которые являются встроенными задачами, выполняемыми экземпляром объекта, или _{{Glossary("static method", "Статические Методы")}}_ которые являются задачами, вызываемыми непосредственно в конструкторе объекта.
 
-<div class="note">
-<p><strong>Примечание:</strong> В JavaScript функции сами по себе являются объектами, поэтому в этом контексте метод фактически является {{glossary("object reference","ссылкой на объект")}} для функции.</p>
-</div>
+> **Примечание:** В JavaScript функции сами по себе являются объектами, поэтому в этом контексте метод фактически является {{glossary("object reference","ссылкой на объект")}} для функции.
 
-<h2 id="Узнать_больше">Узнать больше</h2>
+## Узнать больше
 
-<h3 id="Узнайте_об_этом">Узнайте об этом</h3>
+### Узнайте об этом
 
-<ul>
- <li>{{InterWiki("wikipedia","Метод_(программирование)")}} в Wikipedia</li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов">Определение методов в JavaScript</a> (<span class="tlid-translation translation" lang="ru"><span title="">сравнение традиционного синтаксиса и нового короткого</span></span>)</li>
-</ul>
+- {{InterWiki("wikipedia","Метод_(программирование)")}} в Wikipedia
+- [Определение методов в JavaScript](/ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов) (сравнение традиционного синтаксиса и нового короткого)
 
-<h3 id="Техническая_информация">Техническая информация</h3>
+### Техническая информация
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Reference">Список встроенных методов JavaScript</a></li>
-</ul>
+- [Список встроенных методов JavaScript](/ru/docs/Web/JavaScript/Reference)
 
-<section id="Quick_links">
-<ul>
- <li><a href="/ru/docs/Glossary">Глоссарий MDN</a>
+<!---->
 
-  <ul>
-   <li>{{Glossary("function","Функция")}}</li>
-   <li>{{Glossary("object","Объект")}}</li>
-   <li>{{Glossary("property","Свойство")}}</li>
-   <li>{{Glossary("static method","Статический метод")}}</li>
-  </ul>
- </li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов">Определение методов в JavaScript</a></li>
-</ul>
-</section>
+- [Глоссарий MDN](/ru/docs/Glossary)
+
+  - {{Glossary("function","Функция")}}
+  - {{Glossary("object","Объект")}}
+  - {{Glossary("property","Свойство")}}
+  - {{Glossary("static method","Статический метод")}}
+
+- [Определение методов в JavaScript](/ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов)

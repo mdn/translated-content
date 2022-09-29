@@ -6,16 +6,14 @@ tags:
 translation_of: Glossary/Character
 original_slug: Глоссарий/Character
 ---
-<p><strong>Символ</strong> (англ. <strong>Character</strong> или <strong>Symbol</strong>) - буква, цифра, знак препинания, непечатаемый символ (например возврат каретки).  {{glossary("UTF-8")}} - самый распространённый стандарт кодировки символов, содержащий большое количество графем популярных языков людей.</p>
+**Символ** (англ. **Character** или **Symbol**) - буква, цифра, знак препинания, непечатаемый символ (например возврат каретки). {{glossary("UTF-8")}} - самый распространённый стандарт кодировки символов, содержащий большое количество графем популярных языков людей.
 
-<h2 id="Узнайте_больше">Узнайте больше</h2>
+## Узнайте больше
 
-<h3 id="Связанные_темы">Связанные темы</h3>
+### Связанные темы
 
-<ul>
- <li>{{interwiki("wikipedia", "Character (computing)")}} в Wikipedia</li>
- <li>{{interwiki("wikipedia", "Character encoding")}} в Wikipedia</li>
- <li>{{interwiki("wikipedia", "ASCII")}} в Wikipedia</li>
- <li>{{interwiki("wikipedia", "UTF-8")}} в Wikipedia</li>
- <li>{{interwiki("wikipedia", "Unicode")}} в Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Character (computing)")}} в Wikipedia
+- {{interwiki("wikipedia", "Character encoding")}} в Wikipedia
+- {{interwiki("wikipedia", "ASCII")}} в Wikipedia
+- {{interwiki("wikipedia", "UTF-8")}} в Wikipedia
+- {{interwiki("wikipedia", "Unicode")}} в Wikipedia

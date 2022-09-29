@@ -6,14 +6,12 @@ tags:
 translation_of: Glossary/Prototype
 original_slug: Глоссарий/Прототип
 ---
-<p>Прототип — модель, отображающая внешний вид и поведение приложения или продукта в начале цикла разработки.</p>
+Прототип — модель, отображающая внешний вид и поведение приложения или продукта в начале цикла разработки.
 
-<p>См. в разделе <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Наследование и цепочка прототипов</a></p>
+См. в разделе [Наследование и цепочка прототипов](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
-<h2 id="Узнать_больше">Узнать больше</h2>
+## Узнать больше
 
-<h3 id="Общие_сведения">Общие сведения</h3>
+### Общие сведения
 
-<ul>
- <li>{{Interwiki("wikipedia", "Software Prototyping")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Software Prototyping")}} on Wikipedia

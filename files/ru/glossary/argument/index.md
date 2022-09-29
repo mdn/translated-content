@@ -8,18 +8,14 @@ tags:
 translation_of: Glossary/Argument
 original_slug: Глоссарий/Аргумент
 ---
-<p>Аргумент - это {{glossary("value","значение")}}, ({{glossary("primitive","примитив")}} или {{glossary("object","объект")}}), переданное в качестве входных данных в {{glossary("function","функцию")}}.</p>
+Аргумент - это {{glossary("value","значение")}}, ({{glossary("primitive","примитив")}} или {{glossary("object","объект")}}), переданное в качестве входных данных в {{glossary("function","функцию")}}.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<h3 id="Общие_сведения">Общие сведения</h3>
+### Общие сведения
 
-<ul>
- <li>{{Interwiki("wikipedia", "Параметр (программирование)", "Разница между параметром и аргументом")}} на Википедии</li>
-</ul>
+- {{Interwiki("wikipedia", "Параметр (программирование)", "Разница между параметром и аргументом")}} на Википедии
 
-<h3 id="Техническая_документация">Техническая документация</h3>
+### Техническая документация
 
-<ul>
- <li>Объект {{jsxref("Functions/arguments","arguments")}} в {{glossary("JavaScript")}}</li>
-</ul>
+- Объект {{jsxref("Functions/arguments","arguments")}} в {{glossary("JavaScript")}}

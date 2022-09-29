@@ -7,16 +7,14 @@ tags:
 translation_of: Glossary/Cookie
 original_slug: Глоссарий/Cookie
 ---
-<p><span id="result_box" lang="ru"><span>Cookie - это</span> <span>небольшой фрагмент информации,</span> <span class="alt-edited">сохранённый</span> <span>на</span> <span class="alt-edited">компьютере посетителя</span> <span>веб-сайтом</span> <span>через веб-браузер</span><span>.</span></span></p>
+Cookie - это небольшой фрагмент информации, сохранённый на компьютере посетителя веб-сайтом через веб-браузер.
 
-<p><span id="result_box" lang="ru"><span>Файлы Cookie</span> <span>используются</span> <span class="alt-edited">для персонализации </span> <span class="alt-edited">работы пользователя</span> <span>с веб-сайтом</span></span> . <span id="result_box" lang="ru"><span>Они могут содержать</span> <span>предпочтения или</span> <span class="alt-edited">введённые данные</span> <span>пользователя</span> <span>при работе с</span> <span class="alt-edited">этим веб сайтом </span></span>. <span id="result_box" lang="ru"><span>Пользователь может</span> <span>настроить свой</span> <span class="alt-edited">веб-браузер таким образом</span><span>, чтобы он принимал</span><span>, отклонял или</span> <span>удалял куки</span><span>.</span></span></p>
+Файлы Cookie используются для персонализации работы пользователя с веб-сайтом . Они могут содержать предпочтения или введённые данные пользователя при работе с этим веб сайтом . Пользователь может настроить свой веб-браузер таким образом, чтобы он принимал, отклонял или удалял куки.
 
-<p><span id="result_box" lang="ru"><span>Файлы Cookie</span> <span>могут быть установлены</span> <span>и изменены</span> <span>на уровне сервера</span> <span class="alt-edited">с помощью заголовка Set-Cookie</span> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">HTTP</a> <span>или с помощью</span> <span>JavaScript</span><span>, используя</span></span> <code><a href="/en-US/docs/Web/API/Document/cookie">document.cookie</a></code>.</p>
+Файлы Cookie могут быть установлены и изменены на уровне сервера с помощью заголовка Set-Cookie [HTTP](/ru/docs/Web/HTTP/Cookies) или с помощью JavaScript, используя [`document.cookie`](/en-US/docs/Web/API/Document/cookie).
 
-<h2 id="Узнать_больше"><span class="short_text" id="result_box" lang="ru"><span class="alt-edited">Узнать больше</span></span></h2>
+## Узнать больше
 
-<h3 id="Общие_знания"><span class="short_text" id="result_box" lang="ru"><span>Общие знания</span></span></h3>
+### Общие знания
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/HTTP_cookie">HTTP cookie</a> <span class="short_text" id="result_box" lang="ru"><span>в Википедии</span></span></li>
-</ul>
+- [HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie) в Википедии

@@ -9,15 +9,11 @@ tags:
 translation_of: Glossary/FTP
 original_slug: Глоссарий/FTP
 ---
-<p><span class="seoSummary"><strong>FTP </strong>(англ. <span lang="en">file transfer protocol</span> — протокол передачи файлов) — стандартный сетевой {{glossary("protocol", "протокол")}} для передачи файлов с одного {{glossary("host", "хост")}}а на другой через Интернет по протоколу {{Glossary("TCP")}}.</span></p>
+**FTP** (англ. file transfer protocol — протокол передачи файлов) — стандартный сетевой {{glossary("protocol", "протокол")}} для передачи файлов с одного {{glossary("host", "хост")}}а на другой через Интернет по протоколу {{Glossary("TCP")}}.
 
-<h2 id="Узнать_больше">Узнать больше</h2>
+## Узнать больше
 
-<h3 id="Общие_сведения">Общие сведения</h3>
+### Общие сведения
 
-<ul>
- <li><a href="/en-US/Learn/Upload_files_to_a_web_server">Руководство по загрузке файлов через FTP для новичка (англ.)</a>.</li>
- <li><a href="http://ru.wikipedia.org/wiki/FTP">FTP в Википедии</a>.</li>
-</ul>
-
-<p> </p>
+- [Руководство по загрузке файлов через FTP для новичка (англ.)](/en-US/Learn/Upload_files_to_a_web_server).
+- [FTP в Википедии](http://ru.wikipedia.org/wiki/FTP).

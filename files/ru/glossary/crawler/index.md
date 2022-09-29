@@ -4,21 +4,12 @@ slug: Glossary/Crawler
 translation_of: Glossary/Crawler
 original_slug: Глоссарий/Crawler
 ---
-<p>Поисковый робот(паук, краулер) часто называемый просто "бот" или "робот" это программа, систематически обходящая {{glossary("World Wide Web","Web")}} для сбора данных со страниц веб-сайтов. Обычно поисковые сервисы (напр. Google, Bing, и пр.) используют поисковых роботов для индексирования сайтов.</p>
+Поисковый робот(паук, краулер) часто называемый просто "бот" или "робот" это программа, систематически обходящая {{glossary("World Wide Web","Web")}} для сбора данных со страниц веб-сайтов. Обычно поисковые сервисы (напр. Google, Bing, и пр.) используют поисковых роботов для индексирования сайтов.
 
-<h2 id="Узнать_больше">Узнать больше</h2>
+## Узнать больше
 
-<ul>
- <li><a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9_%D1%80%D0%BE%D0%B1%D0%BE%D1%82">Поисковый робот</a> на Википедии</li>
-</ul>
+- [Поисковый робот](https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9_%D1%80%D0%BE%D0%B1%D0%BE%D1%82) на Википедии
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
+1.  [MDN Web Docs Glossary](/ru/docs/Glossary)
 
-  <ol>
-   <li>{{Glossary("Search engine")}}</li>
-  </ol>
- </li>
-</ol>
-</section>
+    1.  {{Glossary("Search engine")}}

@@ -4,82 +4,70 @@ slug: Glossary/Base64
 translation_of: Glossary/Base64
 original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 ---
-<p><strong>Base64</strong> - это группа схожих <a href="https://en.wikipedia.org/wiki/Binary-to-text_encoding">binary-to-text encoding</a> схем, которые представляют двоичные данные в ASCII-формате методом перевода в radix-64 представление. Термин <em>Base64</em> происходит от a specific <a href="https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding">MIME content transfer encoding</a>.</p>
+**Base64** - это группа схожих [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) схем, которые представляют двоичные данные в ASCII-формате методом перевода в radix-64 представление. Термин _Base64_ происходит от a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
 
-<p>Кодирование Base64 широко используется в случаях, когда требуется перекодировать двоичные данные для передачи по каналу приспособленному для передачи текстовых данных. Это делается с целью защиты двоичных данных от любых возможных повреждений при передаче. Base64 широко используется во многих приложениях, включая электронную почту (<a href="https://en.wikipedia.org/wiki/MIME">MIME</a>), и при сохранении больших объёмов данных в <a href="/en-US/docs/XML">XML</a>.</p>
+Кодирование Base64 широко используется в случаях, когда требуется перекодировать двоичные данные для передачи по каналу приспособленному для передачи текстовых данных. Это делается с целью защиты двоичных данных от любых возможных повреждений при передаче. Base64 широко используется во многих приложениях, включая электронную почту ([MIME](https://en.wikipedia.org/wiki/MIME)), и при сохранении больших объёмов данных в [XML](/ru/docs/XML).
 
-<p>В языке JavaScript существуют две функции, для кодирования и декодирования данных в/из формат Base64 соответственно:</p>
+В языке JavaScript существуют две функции, для кодирования и декодирования данных в/из формат Base64 соответственно:
 
-<ul>
- <li>{{domxref("WindowBase64.btoa","btoa()")}}</li>
- <li>{{domxref("WindowBase64.atob","atob()")}}</li>
-</ul>
+- {{domxref("WindowBase64.btoa","btoa()")}}
+- {{domxref("WindowBase64.atob","atob()")}}
 
-<p><code>Функция atob()</code> декодирует Base64-кодированную строку. В противоположность ей, функция <code>btoa()</code> создаёт Base64 кодированную ASCII строку из "строки" бинарных данных.</p>
+`Функция atob()` декодирует Base64-кодированную строку. В противоположность ей, функция `btoa()` создаёт Base64 кодированную ASCII строку из "строки" бинарных данных.
 
-<p>Обе функции <code>atob()</code> и <code>btoa()</code> работают со строками. Если вам необходимо работать с <a href="/en-US/docs/Web/API/ArrayBuffer"><code>ArrayBuffers</code></a>, обратитесь к <a href="#">этому параграфу</a>.</p>
+Обе функции `atob()` и `btoa()` работают со строками. Если вам необходимо работать с [`ArrayBuffers`](/ru/docs/Web/API/ArrayBuffer), обратитесь к этому параграфу.
 
+## Документация
 
-<h2>Документация</h2>
+- [`data` URIs](/ru/docs/data_URIs)
+  - : `data` URIs, описанные в [RFC 2397](http://tools.ietf.org/html/rfc2397), позволяют создателям контента встроить в документ маленькие файлы в виде строки (инлайном).
+- [Base64](https://en.wikipedia.org/wiki/Base64)
+  - : Wikipedia article about Base64 encoding.
+- {{domxref("WindowBase64.atob","atob()")}}
+  - : Decodes a string of data which has been encoded using base-64 encoding.
+- {{domxref("WindowBase64.btoa","btoa()")}}
+  - : Creates a base-64 encoded ASCII string from a "string" of binary data.
+- [The "Unicode Problem"](#The_Unicode_Problem)
+  - : In most browsers, calling `btoa()` on a Unicode string will cause a `Character Out Of Range` exception. This paragraph shows some solutions.
+- [URIScheme](/ru/docs/URIScheme)
+  - : List of Mozilla supported URI schemes
+- [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView)
 
-<dl>
-    <dt><a href="/ru/docs/data_URIs"><code>data</code> URIs</a></dt>
-    <dd><small><code>data</code> URIs, описанные в <a href="http://tools.ietf.org/html/rfc2397">RFC 2397</a>, позволяют создателям контента встроить в документ маленькие файлы в виде строки (инлайном).</small></dd>
-    <dt><a href="https://en.wikipedia.org/wiki/Base64">Base64</a></dt>
-    <dd><small>Wikipedia article about Base64 encoding.</small></dd>
-    <dt>{{domxref("WindowBase64.atob","atob()")}}</dt>
-    <dd><small>Decodes a string of data which has been encoded using base-64 encoding.</small></dd>
-    <dt>{{domxref("WindowBase64.btoa","btoa()")}}</dt>
-    <dd><small>Creates a base-64 encoded ASCII string from a "string" of binary data.</small></dd>
-    <dt><a href="#The_Unicode_Problem">The "Unicode Problem"</a></dt>
-    <dd><small>In most browsers, calling <code>btoa()</code> on a Unicode string will cause a <code>Character Out Of Range</code> exception. This paragraph shows some solutions.</small></dd>
-    <dt><a href="/en-US/docs/URIScheme">URIScheme</a></dt>
-    <dd><small>List of Mozilla supported URI schemes</small></dd>
-    <dt><a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code></a></dt>
-    <dd>In this article is published a library of ours whose aims are:
-    <ul>
-    <li>creating a <a href="http://en.wikipedia.org/wiki/C_%28programming_language%29">C</a>-like interface for strings (i.e. array of characters codes —<a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView"> <code>ArrayBufferView</code></a> in JavaScript) based upon the JavaScript <a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a> interface,</li>
-    <li>creating a collection of methods for such string-like objects (since now: <code>stringView</code>s) which work <strong>strictly on array of numbers</strong> rather than on immutable JavaScript strings,</li>
-    <li>working with other Unicode encodings, different from default JavaScript's UTF-16 <a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a>s,</li>
-    </ul>
-    </dd>
-</dl>
+  - : In this article is published a library of ours whose aims are:
 
-<h2>Tools</h2>
+    - creating a [C](http://en.wikipedia.org/wiki/C_%28programming_language%29)-like interface for strings (i.e. array of characters codes —[ `ArrayBufferView`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBufferView) in JavaScript) based upon the JavaScript [`ArrayBuffer`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBuffer) interface,
+    - creating a collection of methods for such string-like objects (since now: `stringView`s) which work **strictly on array of numbers** rather than on immutable JavaScript strings,
+    - working with other Unicode encodings, different from default JavaScript's UTF-16 [`DOMString`](/ru/docs/Web/API/DOMString)s,
 
-<ul>
-    <li><a href="#Solution_2_–_rewrite_the_DOMs_atob()_and_btoa()_using_JavaScript's_TypedArrays_and_UTF-8">Rewriting <code>atob()</code> and <code>btoa()</code> using <code>TypedArray</code>s and UTF-8</a></li>
-    <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
-</ul>
+## Tools
 
+- [Rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8](<#Solution_2_–_rewrite_the_DOMs_atob()_and_btoa()_using_JavaScript's_TypedArrays_and_UTF-8>)
+- [`StringView` – a C-like representation of strings based on typed arrays](/ru/docs/Web/JavaScript/Typed_arrays/StringView)
 
-<h2>Related Topics</h2>
+## Related Topics
 
-<ul>
-    <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a></li>
-    <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed arrays</a></li>
-    <li><code><a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView">ArrayBufferView</a></code></li>
-    <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array"><code>Uint8Array</code></a></li>
-    <li><a href="/ru/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
-    <li><a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a></li>
-    <li><a href="/en-US/docs/URI"><code>URI</code></a></li>
-    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI"><code>encodeURI()</code></a></li>
-</ul>
+- [`ArrayBuffer`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBuffer)
+- [Typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [`ArrayBufferView`](/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView)
+- [`Uint8Array`](/ru/docs/Web/JavaScript/Typed_arrays/Uint8Array)
+- [`StringView` – a C-like representation of strings based on typed arrays](/ru/docs/Web/JavaScript/Typed_arrays/StringView)
+- [`DOMString`](/ru/docs/Web/API/DOMString)
+- [`URI`](/ru/docs/URI)
+- [`encodeURI()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
 
-<h2 id="The_Unicode_Problem">The "Unicode Problem"</h2>
+## The "Unicode Problem"
 
-<p>Since <a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a>s are 16-bit-encoded strings, in most browsers calling <code>window.btoa</code> on a Unicode string will cause a <code>Character Out Of Range</code> exception if a character exceeds the range of a 8-bit byte (0x00~0xFF). There are two possible methods to solve this problem:</p>
+Since [`DOMString`](/ru/docs/Web/API/DOMString)s are 16-bit-encoded strings, in most browsers calling `window.btoa` on a Unicode string will cause a `Character Out Of Range` exception if a character exceeds the range of a 8-bit byte (0x00\~0xFF). There are two possible methods to solve this problem:
 
-<ul>
- <li>the first one is to escape the whole string (with UTF-8, see {{jsxref("encodeURIComponent")}}) and then encode it;</li>
- <li>the second one is to convert the UTF-16 <a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a> to an UTF-8 array of characters and then encode it.</li>
-</ul>
+- the first one is to escape the whole string (with UTF-8, see {{jsxref("encodeURIComponent")}}) and then encode it;
+- the second one is to convert the UTF-16 [`DOMString`](/ru/docs/Web/API/DOMString) to an UTF-8 array of characters and then encode it.
 
-<p>Here are the two possible methods.</p>
+Here are the two possible methods.
 
-<h3 id="Solution_1_–_escaping_the_string_before_encoding_it">Solution #1 – escaping the string before encoding it</h3>
+### Solution #1 – escaping the string before encoding it
 
-<pre class="brush:js">function b64EncodeUnicode(str) {
+```js
+function b64EncodeUnicode(str) {
     // first we use encodeURIComponent to get percent-encoded UTF-8,
     // then we convert the percent encodings into raw bytes which
     // can be fed into btoa.
@@ -91,11 +79,12 @@ original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 
 b64EncodeUnicode('✓ à la mode'); // "4pyTIMOgIGxhIG1vZGU="
 b64EncodeUnicode('\n'); // "Cg=="
-</pre>
+```
 
-<p>To decode the Base64-encoded value back into a String:</p>
+To decode the Base64-encoded value back into a String:
 
-<pre class="brush: js">function b64DecodeUnicode(str) {
+```js
+function b64DecodeUnicode(str) {
     // Going backwards: from bytestream, to percent-encoding, to original string.
     return decodeURIComponent(atob(str).split('').map(function(c) {
         return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
@@ -104,19 +93,20 @@ b64EncodeUnicode('\n'); // "Cg=="
 
 b64DecodeUnicode('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
 b64DecodeUnicode('Cg=='); // "\n"
-</pre>
+```
 
-<p><a href="https://github.com/coolaj86/unibabel-js">Unibabel</a> implements common conversions using this strategy.</p>
+[Unibabel](https://github.com/coolaj86/unibabel-js) implements common conversions using this strategy.
 
-<h3 id="Solution_2_–_rewrite_the_DOMs_atob_and_btoa_using_JavaScripts_TypedArrays_and_UTF-8">Solution #2 – rewrite the DOMs <code>atob()</code> and <code>btoa()</code> using JavaScript's <code>TypedArray</code>s and UTF-8</h3>
+### Solution #2 – rewrite the DOMs `atob()` and `btoa()` using JavaScript's `TypedArray`s and UTF-8
 
-<p>Use a <a href="/en-US/docs/Web/API/TextEncoder">TextEncoder</a> polyfill such as <a href="https://github.com/inexorabletash/text-encoding">TextEncoding</a> (also includes legacy windows, mac, and ISO encodings), <a href="https://github.com/coolaj86/TextEncoderLite">TextEncoderLite</a>, combined with a <a href="https://github.com/feross/buffer">Buffer</a> and a Base64 implementation such as <a href="https://github.com/beatgammit/base64-js">base64-js</a>.</p>
+Use a [TextEncoder](/ru/docs/Web/API/TextEncoder) polyfill such as [TextEncoding](https://github.com/inexorabletash/text-encoding) (also includes legacy windows, mac, and ISO encodings), [TextEncoderLite](https://github.com/coolaj86/TextEncoderLite), combined with a [Buffer](https://github.com/feross/buffer) and a Base64 implementation such as [base64-js](https://github.com/beatgammit/base64-js).
 
-<p>When a native <code>TextEncoder</code> implementation is not available, the most light-weight solution would be to use <a href="https://github.com/coolaj86/TextEncoderLite">TextEncoderLite</a> with <a href="https://github.com/beatgammit/base64-js">base64-js</a>. Use the browser implementation when you can.</p>
+When a native `TextEncoder` implementation is not available, the most light-weight solution would be to use [TextEncoderLite](https://github.com/coolaj86/TextEncoderLite) with [base64-js](https://github.com/beatgammit/base64-js). Use the browser implementation when you can.
 
-<p>The following function implements such a strategy. It assumes base64-js imported as <code>&lt;script type="text/javascript" src="base64js.min.js"/&gt;</code>. Note that TextEncoderLite only works with UTF-8.</p>
+The following function implements such a strategy. It assumes base64-js imported as `<script type="text/javascript" src="base64js.min.js"/>`. Note that TextEncoderLite only works with UTF-8.
 
-<pre class="brush: js">function Base64Encode(str, encoding = 'utf-8') {
+```js
+function Base64Encode(str, encoding = 'utf-8') {
     var bytes = new (TextEncoder || TextEncoderLite)(encoding).encode(str);
     return base64js.fromByteArray(bytes);
 }
@@ -125,4 +115,4 @@ function Base64Decode(str, encoding = 'utf-8') {
     var bytes = base64js.toByteArray(str);
     return new (TextDecoder || TextDecoderLite)(encoding).decode(bytes);
 }
-</pre>
+```

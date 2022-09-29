@@ -7,13 +7,11 @@ tags:
 translation_of: Glossary/Progressive_web_apps
 original_slug: Глоссарий/Progressive_web_apps
 ---
-<p>Прогрессивные веб-приложения — это термин, используемый для описания современного состояния разработки веб-приложений. <span class="tlid-translation translation" lang="ru"><span title="">Включает в себя использование стандартов веб-сайтов/приложений, которые используют все лучшие части Интернета, такие как возможность обнаружения поисковыми системами, возможность ссылки через</span></span> {{Glossary("URL")}} <span class="tlid-translation translation" lang="ru"><span title=""> работу с различными форм-факторами, и их усиление</span> <span title="">с современными API-интерфейсами (такими как <a href="/ru/docs/Web/API/Service_Worker_API">Service Workers</a> и <a href="/ru/docs/Web/API/Push_API">Push</a>) и функциями, которые предоставляют другие преимущества, обычно присущие нативным приложениям.</span></span></p>
+Прогрессивные веб-приложения — это термин, используемый для описания современного состояния разработки веб-приложений. Включает в себя использование стандартов веб-сайтов/приложений, которые используют все лучшие части Интернета, такие как возможность обнаружения поисковыми системами, возможность ссылки через {{Glossary("URL")}} работу с различными форм-факторами, и их усиление с современными API-интерфейсами (такими как [Service Workers](/ru/docs/Web/API/Service_Worker_API) и [Push](/ru/docs/Web/API/Push_API)) и функциями, которые предоставляют другие преимущества, обычно присущие нативным приложениям.
 
-<p>Эти функции включают в себя возможность установки, работу в автономном режиме, а также простоту синхронизации и повторного подключения пользователя с сервера.</p>
+Эти функции включают в себя возможность установки, работу в автономном режиме, а также простоту синхронизации и повторного подключения пользователя с сервера.
 
-<h2 id="Узнать_больше">Узнать больше</h2>
+## Узнать больше
 
-<ul>
- <li><a href="/ru/docs/Web/Progressive_web_apps">App Center</a> MDN</li>
- <li><a href="https://developers.google.com/web/progressive-web-apps">Progressive web apps</a> на Google Developers</li>
-</ul>
+- [App Center](/ru/docs/Web/Progressive_web_apps) MDN
+- [Progressive web apps](https://developers.google.com/web/progressive-web-apps) на Google Developers

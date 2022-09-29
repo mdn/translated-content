@@ -4,14 +4,10 @@ slug: Glossary/CMS
 translation_of: Glossary/CMS
 original_slug: Глоссарий/CMS
 ---
-<p>CMS (Content Management System, рус. "Система управления содержимым")  - это программа, которая позволяет пользователям публиковать, организовывать, изменять или удалять различные виды контента: не только текст, но и встроенные картинки, видео, аудио, и интерактивный код.</p>
+CMS (Content Management System, рус. "Система управления содержимым") - это программа, которая позволяет пользователям публиковать, организовывать, изменять или удалять различные виды контента: не только текст, но и встроенные картинки, видео, аудио, и интерактивный код.
 
-<h2 id="Learn_More">Learn More</h2>
+## Learn More
 
-<h3 id="General_Knowledge">General Knowledge</h3>
+### General Knowledge
 
-<ul>
- <li>{{Interwiki("wikipedia", "Content management system")}} on Wikipedia</li>
-</ul>
-
-<p> </p>
+- {{Interwiki("wikipedia", "Content management system")}} on Wikipedia

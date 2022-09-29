@@ -10,6 +10,6 @@ tags:
   - Глоссарий
 translation_of: Glossary/Block
 ---
-<p>Термин <strong>блок</strong> в зависимости от контекста имеет несколько значений:</p>
+Термин **блок** в зависимости от контекста имеет несколько значений:
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}

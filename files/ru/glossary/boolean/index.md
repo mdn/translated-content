@@ -11,53 +11,55 @@ tags:
 translation_of: Glossary/Boolean
 original_slug: Глоссарий/Boolean
 ---
-<p><strong>Boolean (Булев, Логический тип данных)</strong> — примитивный тип данных в информатике, которые могут принимать два возможных значения, иногда называемых истиной (<code>true</code>) и ложью (<code>false</code>). Например, в JavaScript Булевы состояния часто используются для того, чтобы определить какие части кода выполнять (например, в <a href="/ru/docs/Web/JavaScript/Reference/Statements/if...else">операторах if</a>) или повторять (например, <a href="/ru/docs/Web/JavaScript/Reference/Statements/for">циклы for</a>).</p>
+**Boolean (Булев, Логический тип данных)** — примитивный тип данных в информатике, которые могут принимать два возможных значения, иногда называемых истиной (`true`) и ложью (`false`). Например, в JavaScript Булевы состояния часто используются для того, чтобы определить какие части кода выполнять (например, в [операторах if](/ru/docs/Web/JavaScript/Reference/Statements/if...else)) или повторять (например, [циклы for](/ru/docs/Web/JavaScript/Reference/Statements/for)).
 
-<p>Ниже приведён некоторый псевдокод JavaScript (это не действительно исполняемый код), демонстрирующий эту концепцию.</p>
+Ниже приведён некоторый псевдокод JavaScript (это не действительно исполняемый код), демонстрирующий эту концепцию.
 
-<p>Пример использования оператора <code>if</code>:</p>
+Пример использования оператора `if`:
 
-<pre class="syntaxbox">if (условие) {
+```
+if (условие) {
     блок кода, выполняемый если условие возвращает true
 } else {
     блок кода, выполняемый если условие возвращает false
 }
-</pre>
+```
 
-<p>К примеру:</p>
+К примеру:
 
-<pre class="brush: js">if (hour &lt; 18) {
+```js
+if (hour < 18) {
     greeting = "Добрый день";
 } else {
     greeting = "Добрый вечер";
-}</pre>
+}
+```
 
-<p>Пример использования логического условия в цикле <code>for</code>:</p>
+Пример использования логического условия в цикле `for`:
 
-<pre class="syntaxbox">for (начало; условие; шаг) {
+```
+for (начало; условие; шаг) {
     // ... тело цикла ...
 }
-</pre>
+```
 
-<p>К примеру:</p>
+К примеру:
 
-<pre class="brush: js">for (let i = 0; i &lt; 3; i++) {
+```js
+for (let i = 0; i < 3; i++) {
     alert(i);
-}</pre>
+}
+```
 
-<p>Булевы значения названы в честь английского математика {{interwiki("wikipedia", "George Boole")}}, который был первопроходцем в области математической логики.</p>
+Булевы значения названы в честь английского математика {{interwiki("wikipedia", "George Boole")}}, который был первопроходцем в области математической логики.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<h3 id="Общие_сведения">Общие сведения</h3>
+### Общие сведения
 
-<ul>
- <li>{{Interwiki("wikipedia", "Boolean data type", "Boolean")}} на Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Boolean data type", "Boolean")}} на Wikipedia
 
-<h3 id="Техническая_справка">Техническая справка</h3>
+### Техническая справка
 
-<ul>
- <li>Глобальный объект JavaScript: {{jsxref("Boolean")}}</li>
- <li><a href="/ru/docs/Web/JavaScript/Data_structures">Типы данных JavaScript и структуры данных</a></li>
-</ul>
+- Глобальный объект JavaScript: {{jsxref("Boolean")}}
+- [Типы данных JavaScript и структуры данных](/ru/docs/Web/JavaScript/Data_structures)

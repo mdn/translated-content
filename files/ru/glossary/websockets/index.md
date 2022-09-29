@@ -10,27 +10,21 @@ tags:
 translation_of: Glossary/WebSockets
 original_slug: Глоссарий/WebSockets
 ---
-<p><em>WebSocket </em>- это {{Glossary("protocol", "протокол")}}, который позволяет создать постоянное {{Glossary("TCP")}} соединение между сервером и клиентом, чтобы они могли обмениваться данными в любое время.</p>
+_WebSocket_ - это {{Glossary("protocol", "протокол")}}, который позволяет создать постоянное {{Glossary("TCP")}} соединение между сервером и клиентом, чтобы они могли обмениваться данными в любое время.
 
-<p>Любые приложения могут использовать WebSocket, но обычно подразумевается {{Glossary("Browser", "браузер")}} и веб-сервер. При использовании WebSocket сервер может передать данные клиенту без запроса от последнего, что позволяет реализовать динамическое обновление содержимого.</p>
+Любые приложения могут использовать WebSocket, но обычно подразумевается {{Glossary("Browser", "браузер")}} и веб-сервер. При использовании WebSocket сервер может передать данные клиенту без запроса от последнего, что позволяет реализовать динамическое обновление содержимого.
 
-<h2 id="Узнать_больше">Узнать больше</h2>
+## Узнать больше
 
-<h3 id="Общие_сведения" style="line-height: 24px;">Общие сведения</h3>
+### Общие сведения
 
-<ul>
- <li>{{interwiki("wikipedia", "WebSocket", "WebSocket")}} на Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "WebSocket", "WebSocket")}} на Wikipedia
 
-<h3 id="Техническая_справка">Техническая справка</h3>
+### Техническая справка
 
-<ul>
- <li><a href="/ru/docs/Web/API/WebSocket">WebSocket на MDN</a></li>
-</ul>
+- [WebSocket на MDN](/ru/docs/Web/API/WebSocket)
 
-<h3 id="Примеры_использования">Примеры использования</h3>
+### Примеры использования
 
-<ul>
- <li><a href="/ru/docs/WebSockets/Writing_WebSocket_client_applications">Создание клиентского приложения WebSocket</a></li>
- <li><a href="/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_servers">Создание сервера с использованием WebSocket</a></li>
-</ul>
+- [Создание клиентского приложения WebSocket](/ru/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Создание сервера с использованием WebSocket](/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

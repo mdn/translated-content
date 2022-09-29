@@ -4,64 +4,62 @@ slug: Glossary/Global_object
 translation_of: Glossary/Global_object
 original_slug: Глоссарий/Global_object
 ---
-<p>Глобальный объект - это {{glossary("object","объект")}}, который всегда существует в {{glossary("global scope","глобальной области видимости")}}.</p>
+Глобальный объект - это {{glossary("object","объект")}}, который всегда существует в {{glossary("global scope","глобальной области видимости")}}.
 
-<p>В JavaScript всегда определён глобальный объект. В веб-браузере, когда скрипты создают глобальные переменные, они создаются как свойства глобального объекта. (В {{Glossary("Node.js")}} это не так.) {{Glossary("Interface")}} глобального объекта зависит от контекста, в котором выполняется скрипт.К примеру:</p>
+В JavaScript всегда определён глобальный объект. В веб-браузере, когда скрипты создают глобальные переменные, они создаются как свойства глобального объекта. (В {{Glossary("Node.js")}} это не так.) {{Glossary("Interface")}} глобального объекта зависит от контекста, в котором выполняется скрипт.К примеру:
 
-<ul>
- <li>В веб-браузере любой код, который не запускается скриптом явно как фоновую задачу, имеет {{domxref("Window")}} в качестве своего глобального объекта. Это покрывает большую часть JavaScript-кода в сети.</li>
- <li>Код, работающий в {{domxref("Worker")}} имеет {{domxref("WorkerGlobalScope")}} объект в качестве своего глобального объекта.</li>
- <li>Скрипты, работающие в {{Glossary("Node.js")}} имеют объект, который называется <code><a href="https://nodejs.org/api/globals.html#globals_global">global</a></code> в качестве своего глобального объекта.</li>
-</ul>
+- В веб-браузере любой код, который не запускается скриптом явно как фоновую задачу, имеет {{domxref("Window")}} в качестве своего глобального объекта. Это покрывает большую часть JavaScript-кода в сети.
+- Код, работающий в {{domxref("Worker")}} имеет {{domxref("WorkerGlobalScope")}} объект в качестве своего глобального объекта.
+- Скрипты, работающие в {{Glossary("Node.js")}} имеют объект, который называется [`global`](https://nodejs.org/api/globals.html#globals_global) в качестве своего глобального объекта.
 
-<h2 id="Объект_window_в_Браузере">Объект <code>window</code> в Браузере</h2>
+## Объект `window` в Браузере
 
-<p>Объект <code>window</code> - Глобальный Объект в браузере. Доступ к любым Глобальным Переменным или функциям может быть получен как к <em>свойствам</em> объекта <code>window</code>.</p>
+Объект `window` - Глобальный Объект в браузере. Доступ к любым Глобальным Переменным или функциям может быть получен как к _свойствам_ объекта `window`.
 
-<h3 id="Получение_доступа_к_Глобальным_Переменным">Получение доступа к Глобальным Переменным</h3>
+### Получение доступа к Глобальным Переменным
 
-<pre class="brush: js">var foo = "foobar";
+```js
+var foo = "foobar";
 foo === window.foo; // Возвращает: true
-</pre>
+```
 
-<p>После определения Глобальной Переменной <code>foo</code>, мы можем получить доступ к его значению прямо с объекта <code>window</code>, использую имя переменной <code>foo</code> в качестве имени свойства Глобального Объекта <code>window</code><code>.foo</code>.</p>
+После определения Глобальной Переменной `foo`, мы можем получить доступ к его значению прямо с объекта `window`, использую имя переменной `foo` в качестве имени свойства Глобального Объекта ` window``.foo `.
 
-<h4 id="Объяснение">Объяснение:</h4>
+#### Объяснение:
 
-<p>Глобальная Переменная <code>foo</code> была сохранена в объекте <code>window</code>, подобно следующему примеру:</p>
+Глобальная Переменная `foo` была сохранена в объекте `window`, подобно следующему примеру:
 
-<pre class="brush: js">foo: "foobar"</pre>
+```js
+foo: "foobar"
+```
 
-<h3 id="Получение_доступа_к_Глобальным_Функциям">Получение доступа к Глобальным Функциям</h3>
+### Получение доступа к Глобальным Функциям
 
-<pre class="brush: js">function greeting() {
+```js
+function greeting() {
    console.log("Hi!");
 }
 
 window.greeting(); // Тоже самое что и обычный вызов: greeting();
-</pre>
+```
 
-<p>Пример выше показывает как Глобальные Функции хранятся в качестве свойств объекта <code>window</code>. Мы создали Глобальную Функцию <code>greeting<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;"> и вызвали её с помощью объекта </span></font></code><code>window</code>.</p>
+Пример выше показывает как Глобальные Функции хранятся в качестве свойств объекта `window`. Мы создали Глобальную Функцию ` greeting и вызвали её с помощью объекта ``window `.
 
-<h4 id="Объяснение_2">Объяснение:</h4>
+#### Объяснение:
 
-<p>Глобальная функция <code>greeting</code> была сохранена в объекте <code>window</code>, подобно следующему примеру:</p>
+Глобальная функция `greeting` была сохранена в объекте `window`, подобно следующему примеру:
 
-<pre class="brush: js">greeting: function greeting() {
+```js
+greeting: function greeting() {
    console.log("Hi!");
-}</pre>
+}
+```
 
-<section id="Quick_links">
-<ul>
- <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
+- [MDN Web Docs Glossary](/ru/docs/Glossary)
 
-  <ul>
-   <li>{{glossary("global scope")}}</li>
-   <li>{{glossary("object")}}</li>
-  </ul>
- </li>
- <li>{{domxref("Window")}}</li>
- <li>{{domxref("WorkerGlobalScope")}}</li>
- <li><code><a href="https://nodejs.org/api/globals.html#globals_global">global</a></code></li>
-</ul>
-</section>
+  - {{glossary("global scope")}}
+  - {{glossary("object")}}
+
+- {{domxref("Window")}}
+- {{domxref("WorkerGlobalScope")}}
+- [`global`](https://nodejs.org/api/globals.html#globals_global)
