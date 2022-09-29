@@ -7,132 +7,104 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
 original_slug: Learn/CSS/Building_blocks/Селекторы/Селекторы_Задачи
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
+Цель этой задачи — помочь вам проверить ваше понимание селекторов в CSS.
 
+> **Примечание:** вы можете проверять решения в интерактивном редакторе, расположенном ниже, но, возможно, вам будут полезны онлайн-инструменты, такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/), которые можно использовать для работы над заданием, предварительно загрузив в них код.
+>
+> Если вы зашли в тупик, обратитесь к нам за помощью — смотрите раздел [Оценка или дальнейшая помощь](/ru/docs/Learn/CSS/Building_blocks/%D0%9A%D0%B0%D1%81%D0%BA%D0%B0%D0%B4_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8#Оценка_или_дальнейшая_помощь) внизу этой страницы.
 
-<p>Цель этой задачи — помочь вам проверить ваше понимание селекторов в CSS.</p>
+## Selectors One
 
-<div class="blockIndicator note">
-<p><strong>Примечание</strong>: вы можете проверять решения в интерактивном редакторе, расположенном ниже, но, возможно, вам будут полезны онлайн-инструменты, такие как  <a class="external external-icon" href="https://codepen.io/" rel="noopener">CodePen</a>, <a class="external external-icon" href="https://jsfiddle.net/" rel="noopener">jsFiddle</a> или <a class="external external-icon" href="https://glitch.com/" rel="noopener">Glitch</a>, которые можно использовать для работы над заданием, предварительно загрузив в них код.<br>
- <br>
- Если вы зашли в тупик, обратитесь к нам за помощью — смотрите раздел <a href="/ru/docs/Learn/CSS/Building_blocks/%D0%9A%D0%B0%D1%81%D0%BA%D0%B0%D0%B4_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8#Оценка_или_дальнейшая_помощь">Оценка или дальнейшая помощь</a> внизу этой страницы.</p>
-</div>
+Without changing the HTML, use CSS to do the following things:
 
-<h2 id="Selectors_One">Selectors One</h2>
+- Make h1 headings blue.
+- Give h2 headings a blue background and white text.
+- Cause text wrapped in a span to have a font-size of 200%.
 
-<p>Without changing the HTML, use CSS to do the following things:</p>
+![Text with the CSS applied for the solution to task 1.](https://mdn.mozillademos.org/files/17118/selectors1.jpg)
 
-<ul>
- <li>Make h1 headings blue.</li>
- <li>Give h2 headings a blue background and white text.</li>
- <li>Cause text wrapped in a span to have a font-size of 200%.</li>
-</ul>
+Try updating the live code below to recreate the finished example:
 
-<p><img alt="Text with the CSS applied for the solution to task 1." src="https://mdn.mozillademos.org/files/17118/selectors1.jpg" style="height: 781px; width: 1026px;"></p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/type.html", '100%', 700)}}
 
-<p>Try updating the live code below to recreate the finished example:</p>
+> **Примечание:** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/type-download.html) to work in your own editor or in an online editor.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/type.html", '100%', 700)}}</p>
+## Selectors Two
 
-<div class="blockIndicator note">
-<p>For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/type-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+Without changing the HTML, make the following changes to the look of the content in this example:
 
-<h2 id="Selectors_Two">Selectors Two</h2>
+- Give the element with an id of `special` a yellow background.
+- Give the element with a class of `alert` a 1px grey border.
+- If the element with a class of `alert` also has a class of `stop`, make the background red.
+- If the element with a class of `alert` also has a class of `go`, make the background green.
 
-<p>Without changing the HTML, make the following changes to the look of the content in this example:</p>
+![Text with the CSS applied for the solution to task 2.](https://mdn.mozillademos.org/files/17119/selectors2.jpg)
 
-<ul>
- <li>Give the element with an id of <code>special</code> a yellow background.</li>
- <li>Give the element with a class of <code>alert</code> a 1px grey border.</li>
- <li>If the element with a class of <code>alert</code> also has a class of <code>stop</code>, make the background red.</li>
- <li>If the element with a class of <code>alert</code> also has a class of <code>go</code>, make the background green.</li>
-</ul>
+Try updating the live code below to recreate the finished example:
 
-<p><img alt="Text with the CSS applied for the solution to task 2." src="https://mdn.mozillademos.org/files/17119/selectors2.jpg" style="height: 891px; width: 1027px;"></p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/class-id.html", '100%', 800)}}
 
-<p>Try updating the live code below to recreate the finished example:</p>
+> **Примечание:** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/class-id-download.html) to work in your own editor or in an online editor.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/class-id.html", '100%', 800)}}</p>
+## Selectors Three
 
-<div class="blockIndicator note">
-<p>For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/class-id-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+In this example, try making the following changes without adding to the HTML.
 
-<h2 id="Selectors_Three">Selectors Three</h2>
+- Style links, making the link-state orange, visited links green, and remove the underline on hover.
+- Make the first element inside the container font-size: 150% and the first line of that element red.
+- Stripe every other row in the table by selecting these rows and giving them a background color of #333 and foreground of white.
 
-<p>In this example, try making the following changes without adding to the HTML.</p>
+![Text with the CSS applied for the solution to task 3.](https://mdn.mozillademos.org/files/17120/selectors3.jpg)
 
-<ul>
- <li>Style links, making the link-state orange, visited links green, and remove the underline on hover.</li>
- <li>Make the first element inside the container font-size: 150% and the first line of that element red.</li>
- <li>Stripe every other row in the table by selecting these rows and giving them a background color of #333 and foreground of white.</li>
-</ul>
+Try updating the live code below to recreate the finished example:
 
-<p><img alt="Text with the CSS applied for the solution to task 3." src="https://mdn.mozillademos.org/files/17120/selectors3.jpg" style="height: 926px; width: 1227px;"></p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/pseudo.html", '100%', 800)}}
 
-<p>Try updating the live code below to recreate the finished example:</p>
+> **Примечание:** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/pseudo-download.html) to work in your own editor or in an online editor.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/pseudo.html", '100%', 800)}}</p>
+## Selectors Four
 
-<div class="blockIndicator note">
-<p>For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/pseudo-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+In this task try the following:
 
-<h2 id="Selectors_Four">Selectors Four</h2>
+- Make any paragraph that directly follows an h2 element red.
+- Remove the bullets and add a 1px grey bottom border only to list items that are a direct child of the ul with a class of list.
 
-<p>In this task try the following:</p>
+![Text with the CSS applied for the solution to task 4.](https://mdn.mozillademos.org/files/17121/selectors4.jpg)
 
-<ul>
- <li>Make any paragraph that directly follows an h2 element red.</li>
- <li>Remove the bullets and add a 1px grey bottom border only to list items that are a direct child of the ul with a class of list.</li>
-</ul>
+Try updating the live code below to recreate the finished example:
 
-<p><img alt="Text with the CSS applied for the solution to task 4." src="https://mdn.mozillademos.org/files/17121/selectors4.jpg" style="height: 788px; width: 1222px;"></p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/combinators.html", '100%', 800)}}
 
-<p>Try updating the live code below to recreate the finished example:</p>
+> **Примечание:** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/combinators-download.html) to work in your own editor or in an online editor.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/combinators.html", '100%', 800)}}</p>
+## Selectors Five
 
-<div class="blockIndicator note">
-<p>For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/combinators-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+In this final task add CSS using attribute selectors to do the following:
 
-<h2 id="Selectors_Five">Selectors Five</h2>
+- Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
+- Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
+- Target the `<a>` element with an `href` value starting with `https` and give it a green border (`border-color: green`).
 
-<p>In this final task add CSS using attribute selectors to do the following:</p>
+![Four links with different color borders.](https://mdn.mozillademos.org/files/17147/selectors-attribute.png)
 
-<ul>
- <li>Target the <code>&lt;a&gt;</code> element with a <code>title</code> attribute and make the border pink (<code>border-color: pink</code>).</li>
- <li>Target the <code>&lt;a&gt;</code> element with an <code>href</code> attribute that contains the word <code>contact</code> somewhere in its value and make the border orange (<code>border-color: orange</code>).</li>
- <li>Target the <code>&lt;a&gt;</code> element with an <code>href</code> value starting with <code>https</code> and give it a green border (<code>border-color: green</code>).</li>
-</ul>
+Try updating the live code below to recreate the finished example:
 
-<p><img alt="Four links with different color borders." src="https://mdn.mozillademos.org/files/17147/selectors-attribute.png" style="height: 485px; width: 1264px;"></p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/attribute-links.html", '100%', 800)}}
 
-<p>Try updating the live code below to recreate the finished example:</p>
+> **Примечание:** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/attribute-links-download.html) to work in your own editor or in an online editor.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/attribute-links.html", '100%', 800)}}</p>
+## Assessment or further help
 
-<div class="blockIndicator note">
-<p>For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/attribute-links-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+You can practice these examples in the Interactive Editors mentioned above.
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<p>You can practice these examples in the Interactive Editors mentioned above.</p>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
-
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a class="external external-icon" href="https://discourse.mozilla.org/c/mdn/learn" rel="noopener">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Selectors skill test 1".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want to be assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+    - A descriptive title such as "Assessment wanted for Selectors skill test 1".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want to be assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

@@ -17,40 +17,34 @@ tags:
   - фильтры
 translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p class="summary">В этой статье описаны некоторые хитрости, которые познакомят вас с такими узкоспециализированными свойствами, как box-shadow, режимы смешивания и фильтры.</p>
+В этой статье описаны некоторые хитрости, которые познакомят вас с такими узкоспециализированными свойствами, как box-shadow, режимы смешивания и фильтры.
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Необходимые знания:</th>
-   <td>Основы HTML (изучите <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML">Введение в HTML</a>) и CSS (статья <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>).</td>
-  </tr>
-  <tr>
-   <th scope="row">Задача:</th>
-   <td>Понять принцип работы узко используемых эффектов в современных браузерах.</td>
-  </tr>
- </tbody>
-</table>
+| Необходимые знания: | Основы HTML (изучите [Введение в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML)) и CSS (статья [Введение в CSS](/ru/docs/Learn/CSS/First_steps)). |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Задача:             | Понять принцип работы узко используемых эффектов в современных браузерах.                                                                                                                  |
 
-<h2 id="Блок-тень">Блок-тень</h2>
+## Блок-тень
 
-<p>{{cssxref("box-shadow")}} позволяет добавить одну и более тень к контейнеру. Как и <code>text-shadow</code>, <code>box-shadows</code> отлично поддерживаются браузерами, включая IE9+ и Edge. У пользователей ранних версий IE будет просто копия без тени, поэтому убедитесь, что контент с дизайном разборчив и без теней.</p>
+{{cssxref("box-shadow")}} позволяет добавить одну и более тень к контейнеру. Как и `text-shadow`, `box-shadows` отлично поддерживаются браузерами, включая IE9+ и Edge. У пользователей ранних версий IE будет просто копия без тени, поэтому убедитесь, что контент с дизайном разборчив и без теней.
 
-<p>Вы можете найти примеры из стати на <a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html">box-shadow.html</a> (или в <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html">исходном коде</a>).</p>
+Вы можете найти примеры из стати на [box-shadow.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (или в [исходном коде](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html)).
 
-<h3 id="Обычная_тень">Обычная тень</h3>
+### Обычная тень
 
-<p>Для начала взглянем на простой пример:</p>
+Для начала взглянем на простой пример:
 
-<pre class="brush: html">&lt;article class="simple"&gt;
-  &lt;p&gt;&lt;strong&gt;Предупреждение&lt;/strong&gt;: Температура ракетного двигателя достигла критической отметки.&lt;/p&gt;
-&lt;/article&gt;</pre>
+```html
+<article class="simple">
+  <p><strong>Предупреждение</strong>: Температура ракетного двигателя достигла критической отметки.</p>
+</article>
+```
 
-<p>А теперь CSS:</p>
+А теперь CSS:
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 0;
 }
 
@@ -63,34 +57,34 @@ article {
 
 .simple {
   box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
-}</pre>
+}
+```
 
-<p>В результате получится вот это:</p>
+В результате получится вот это:
 
-<p>{{ EmbedLiveSample('Обычная_тень', '100%', 100) }}</p>
+{{ EmbedLiveSample('Обычная_тень', '100%', 100) }}
 
-<p>Как видите, у нас четыре значения в свойстве <code>box-shadow</code>:</p>
+Как видите, у нас четыре значения в свойстве `box-shadow`:
 
-<ol>
- <li>Первое значение — <strong>смещение по горизонтали</strong> — расстояние, на которое смещена тень вправо (если значение отрицательное, то влево).</li>
- <li><strong>Смещение по вертикали</strong> — расстояние, на которое смещена тень вниз (или вверх, если значение отрицательное).</li>
- <li>Третье значение — это <strong>радиус размытия</strong> — уровень размытия тени.</li>
- <li>Значение цвета — это <strong>основной цвет</strong> тени.</li>
-</ol>
+1.  Первое значение — **смещение по горизонтали** — расстояние, на которое смещена тень вправо (если значение отрицательное, то влево).
+2.  **Смещение по вертикали** — расстояние, на которое смещена тень вниз (или вверх, если значение отрицательное).
+3.  Третье значение — это **радиус размытия** — уровень размытия тени.
+4.  Значение цвета — это **основной цвет** тени.
 
-<p>Вы можете использовать абсолютно любые значения и цвета, если это необходимо.</p>
+Вы можете использовать абсолютно любые значения и цвета, если это необходимо.
 
-<h3 id="Несколько_теней">Несколько теней</h3>
+### Несколько теней
 
-<p>Вы можете определить несколько блок-теней, разделяя их запятыми при объявлении <code>box-shadow</code>:</p>
+Вы можете определить несколько блок-теней, разделяя их запятыми при объявлении `box-shadow`:
 
-<div class="hidden">
-<pre class="brush: html">&lt;article class="multiple"&gt;
-  &lt;p&gt;&lt;strong&gt;Предупреждение&lt;/strong&gt;: Температура ракетного двигателя достигла критической отметки.&lt;/p&gt;
-&lt;/article&gt;</pre>
-</div>
+```html hidden
+<article class="multiple">
+  <p><strong>Предупреждение</strong>: Температура ракетного двигателя достигла критической отметки.</p>
+</article>
+```
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 0;
 }
 
@@ -108,23 +102,27 @@ article {
               4px 4px 1px red,
               5px 5px 1px black,
               6px 6px 1px black;
-}</pre>
+}
+```
 
-<p>В итоге мы получим:</p>
+В итоге мы получим:
 
-<p>{{ EmbedLiveSample('Несколько_теней', '100%', 100) }}</p>
+{{ EmbedLiveSample('Несколько_теней', '100%', 100) }}
 
-<p>Мы сделали контейнер с несколькими ступенчатыми цветными тенями, но вы можете делать, как считаете то нужным, например, чтобы добавить реалистичности, опираясь на какие-нибудь источники света.</p>
+Мы сделали контейнер с несколькими ступенчатыми цветными тенями, но вы можете делать, как считаете то нужным, например, чтобы добавить реалистичности, опираясь на какие-нибудь источники света.
 
-<h3 id="Другие_опции_блок-теней">Другие опции блок-теней</h3>
+### Другие опции блок-теней
 
-<p>В отличие от {{cssxref("text-shadow")}}, у свойства {{cssxref("box-shadow")}} есть значение <code>inset</code> — оно добавляет внутреннюю тень. Поясним это на примере.</p>
+В отличие от {{cssxref("text-shadow")}}, у свойства {{cssxref("box-shadow")}} есть значение `inset` — оно добавляет внутреннюю тень. Поясним это на примере.
 
-<p>Для этого примера используем другой HTML-код:</p>
+Для этого примера используем другой HTML-код:
 
-<pre class="brush: html">&lt;button&gt;Нажми на меня!&lt;/button&gt;</pre>
+```html
+<button>Нажми на меня!</button>
+```
 
-<pre class="brush: css">button {
+```css
+button {
   width: 150px;
   font-size: 1.1rem;
   line-height: 2;
@@ -144,67 +142,65 @@ button:active {
   box-shadow: inset 2px 2px 1px black,
               inset 2px 3px 5px rgba(0,0,0,0.3),
               inset -2px -3px 5px rgba(255,255,255,0.5);
-}</pre>
+}
+```
 
-<p>Получим:</p>
+Получим:
 
-<p>{{ EmbedLiveSample('Другие_опции_блок-теней', '100%', 70) }}</p>
+{{ EmbedLiveSample('Другие_опции_блок-теней', '100%', 70) }}
 
-<p>Мы стилизовали кнопку с помощью состояний <em>focus</em>, <em>hover</em> и <em>active</em>. Для кнопки по умолчанию установлены несколько простых чёрных теней плюс пара внутренних теней в противоположном углу кнопки для эстетичности.</p>
+Мы стилизовали кнопку с помощью состояний _focus_, _hover_ и _active_. Для кнопки по умолчанию установлены несколько простых чёрных теней плюс пара внутренних теней в противоположном углу кнопки для эстетичности.
 
-<p>При нажатии на кнопку первая тень становится внутренней, чтобы создать ощущение нажатия кнопки.</p>
+При нажатии на кнопку первая тень становится внутренней, чтобы создать ощущение нажатия кнопки.
 
-<div class="note">
-<p><strong>Примечание</strong>: Есть ещё одно значение <code>box-shadow</code>, которое устанавливается перед значением свойства, — <strong>радиус разброса</strong>. При его использовании тень становится больше оригинального контейнера. Свойство не так часто используют, но оно стоит упоминания.</p>
+> **Примечание:** Есть ещё одно значение `box-shadow`, которое устанавливается перед значением свойства, — **радиус разброса**. При его использовании тень становится больше оригинального контейнера. Свойство не так часто используют, но оно стоит упоминания.
+
+## Фильтры
+
+Замечательное свойство, благодаря которому ваш дизайн станет интереснее, — это свойство {{cssxref("filter")}}. Это что-то вроде фильтров Photoshop, но в CSS.
+
+В примере ниже мы использовали два значения этого свойства: первое — `blur()` — определяет, насколько изображение размыто.
+
+Второе значение — `grayscale()`; оно определяет, насколько изображение насыщено.
+
+{{EmbedGHLiveSample("css-examples/learn/images/filter.html", '100%', 700)}}
+
+**Попробуйте изменить значения в примере, чтобы посмотреть на изменения. Вы можете менять значения на другие. Попробуйте добавить `contrast(200%)`, `invert(100%)` или `hue-rotate(20deg)` в примере ниже. Прочтите статью [`filter`](https://developer.mozilla.org/ru/docs/Web/CSS/filter), чтобы узнать о многих других значениях этого свойства.**
+
+Вы можете добавлять фильтры к любым объектам. Некоторые значения свойства работают почти так же, как CSS-свойства, например, `drop-shadow()` даёт эффект, схожий с [`box-shadow`](/ru/docs/Web/CSS/box-shadow "The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas.") или [`text-shadow`](/ru/docs/Web/CSS/text-shadow "The text-shadow CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its decorations.").
+
+В фильтрах замечательно то, что они применяются к каждому элементу контейнера. Ниже мы сравнили фильтр и блок-тень. Как видите, фильтр применился к каждой чёрточке. А блок-тень просто выделила тень, равную размерам контейнера.
+
+{{EmbedGHLiveSample("css-examples/learn/images/filter-text.html", '100%', 600)}}
+
+## Режимы смешивания
+
+Режимы смешивания CSS позволяют определить смешивание при наложении двух элементов. Смешивание очень знакомо пользователям редакторов вроде Photoshop.
+
+В режимах смешивания CSS два значения:
+
+- {{cssxref("background-blend-mode")}}, которое смешивает цвет фона и цвета отдельного элемента.
+- {{cssxref("mix-blend-mode")}}, которое смешивает элементы, наложенные друг на друга.
+
+Вы можете найти больше примеров смешивания на странице [blend-modes.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) (смотрите [источник](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)) и на странице {{cssxref("&lt;blend-mode&gt;")}}.
+
+> **Примечание:** Смешивание относительно новое свойство, поэтому поддерживается хуже, чем фильтры. Оно совсем не поддерживается на Edge, а Safari поддерживает лишь некоторые значения свойства.
+
+### background-blend-mode
+
+Снова обратимся к примеру. Во-первых, {{cssxref("background-blend-mode")}} — мы покажем несколько контейнеров {{htmlelement("div")}}, чтобы вы сравнили оригинал с редактированной версией:
+
+```html
+<div>
 </div>
-
-<h2 id="Фильтры">Фильтры</h2>
-
-<p>Замечательное свойство, благодаря которому ваш дизайн станет интереснее, — это свойство {{cssxref("filter")}}. Это что-то вроде фильтров Photoshop, но в CSS.</p>
-
-<p>В примере ниже мы использовали два значения этого свойства: первое — <code>blur()</code> — определяет, насколько изображение размыто.</p>
-
-<p>Второе значение — <code>grayscale()</code>; оно определяет, насколько изображение насыщено.</p>
-
-<p>{{EmbedGHLiveSample("css-examples/learn/images/filter.html", '100%', 700)}}</p>
-
-<p><strong>Попробуйте изменить значения в примере, чтобы посмотреть на изменения. Вы можете менять значения на другие. Попробуйте добавить <code>contrast(200%)</code>, <code>invert(100%)</code> или <code>hue-rotate(20deg)</code> в примере ниже. Прочтите статью <code><a href="https://developer.mozilla.org/ru/docs/Web/CSS/filter">filter</a></code>, чтобы узнать о многих других значениях этого свойства.</strong></p>
-
-<p>Вы можете добавлять фильтры к любым объектам. Некоторые значения свойства работают почти так же, как CSS-свойства, например, <code>drop-shadow()</code> даёт эффект, схожий с <a href="https://developer.mozilla.org/ru/docs/Web/CSS/box-shadow" title="The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas."><code>box-shadow</code></a> или <a href="https://developer.mozilla.org/ru/docs/Web/CSS/text-shadow" title="The text-shadow CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its decorations."><code>text-shadow</code></a>.</p>
-
-<p>В фильтрах замечательно то, что они применяются к каждому элементу контейнера. Ниже мы сравнили фильтр и блок-тень. Как видите, фильтр применился к каждой чёрточке. А блок-тень просто выделила тень, равную размерам контейнера.</p>
-
-<p>{{EmbedGHLiveSample("css-examples/learn/images/filter-text.html", '100%', 600)}}</p>
-
-<h2 id="Режимы_смешивания">Режимы смешивания</h2>
-
-<p>Режимы смешивания CSS позволяют определить смешивание при наложении двух элементов. Смешивание очень знакомо пользователям редакторов вроде Photoshop.</p>
-
-<p>В режимах смешивания CSS два значения:</p>
-
-<ul>
- <li>{{cssxref("background-blend-mode")}}, которое смешивает цвет фона и цвета отдельного элемента.</li>
- <li>{{cssxref("mix-blend-mode")}}, которое смешивает элементы, наложенные друг на друга.</li>
-</ul>
-
-<p>Вы можете найти больше примеров смешивания на странице <a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html">blend-modes.html</a> (смотрите <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html">источник</a>) и на странице {{cssxref("&lt;blend-mode&gt;")}}.</p>
-
-<div class="note">
-<p><strong>Примечание</strong>: Смешивание относительно новое свойство, поэтому поддерживается хуже, чем фильтры. Оно совсем не поддерживается на Edge, а Safari поддерживает лишь некоторые значения свойства.</p>
+<div class="multiply">
 </div>
+```
 
-<h3 id="background-blend-mode">background-blend-mode</h3>
+Воспользуемся CSS — добавим к `<div>` одно фоновое изображение и зелёный фон:
 
-<p>Снова обратимся к примеру. Во-первых, {{cssxref("background-blend-mode")}} — мы покажем несколько контейнеров {{htmlelement("div")}}, чтобы вы сравнили оригинал с редактированной версией:</p>
-
-<pre class="brush: html">&lt;div&gt;
-&lt;/div&gt;
-&lt;div class="multiply"&gt;
-&lt;/div&gt;</pre>
-
-<p>Воспользуемся CSS — добавим к <code>&lt;div&gt;</code> одно фоновое изображение и зелёный фон:</p>
-
-<pre class="brush: css">div {
+```css
+div {
   width: 250px;
   height: 130px;
   padding: 10px;
@@ -216,37 +212,41 @@ button:active {
 
 .multiply {
   background-blend-mode: multiply;
-}</pre>
+}
+```
 
-<p>Слева вы видите оригинал, справа — изменённое изображение:</p>
+Слева вы видите оригинал, справа — изменённое изображение:
 
-<p>{{ EmbedLiveSample('background-blend-mode', '100%', 200) }}</p>
+{{ EmbedLiveSample('background-blend-mode', '100%', 200) }}
 
-<h3 id="mix-blend-mode">mix-blend-mode</h3>
+### mix-blend-mode
 
-<p>Рассмотрим {{cssxref("mix-blend-mode")}}. Здесь мы также используем несколько <code>&lt;div&gt;</code>, но каждый из них расположен над простым <code>&lt;div&gt;</code> с фиолетовым фоном, чтобы показать, как элементы будут смешаны:</p>
+Рассмотрим {{cssxref("mix-blend-mode")}}. Здесь мы также используем несколько `<div>`, но каждый из них расположен над простым `<div>` с фиолетовым фоном, чтобы показать, как элементы будут смешаны:
 
-<pre class="brush: html">&lt;article&gt;
+```html
+<article>
   Нет режима смешивания
-  &lt;div&gt;
+  <div>
 
-  &lt;/div&gt;
-  &lt;div&gt;
-  &lt;/div&gt;
-&lt;/article&gt;
+  </div>
+  <div>
+  </div>
+</article>
 
-&lt;article&gt;
+<article>
   Множественное смешивание
-  &lt;div class="multiply-mix"&gt;
+  <div class="multiply-mix">
 
-  &lt;/div&gt;
-  &lt;div&gt;
-  &lt;/div&gt;
-&lt;/article&gt;</pre>
+  </div>
+  <div>
+  </div>
+</article>
+```
 
-<p>А здесь CSS:</p>
+А здесь CSS:
 
-<pre class="brush: css">article {
+```css
+article {
   width: 280px;
   height: 180px;
   margin: 10px;
@@ -279,51 +279,48 @@ article div:last-child {
 
 .multiply-mix {
   mix-blend-mode: multiply;
-}</pre>
+}
+```
 
-<p>И это даст нам следующее:</p>
+И это даст нам следующее:
 
-<p>{{ EmbedLiveSample('mix-blend-mode', '100%', 200) }}</p>
+{{ EmbedLiveSample('mix-blend-mode', '100%', 200) }}
 
-<p>Как видите, смешались не только фоновые изображения, но и <code>&lt;div&gt;</code> под ними.</p>
+Как видите, смешались не только фоновые изображения, но и `<div>` под ними.
 
-<div class="note">
-<p><strong>Примечание</strong>: Не переживайте, если вы не знаете такие свойства разметки, как {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}} и т. д. Мы детально рассмотрим это в модуле <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout">CSS Layout</a>.</p>
-</div>
+> **Примечание:** Не переживайте, если вы не знаете такие свойства разметки, как {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}} и т. д. Мы детально рассмотрим это в модуле [CSS Layout](/ru/docs/Learn/CSS/CSS_layout).
 
-<h2 id="CSS-фигуры">CSS-фигуры</h2>
+## CSS-фигуры
 
-<p>Мы можем сделать обтекание содержимым непрямоугольных фигур, используя <a href="/ru/docs/Web/CSS/CSS_Shapes">CSS-фигуры</a>.</p>
+Мы можем сделать обтекание содержимым непрямоугольных фигур, используя [CSS-фигуры](/ru/docs/Web/CSS/CSS_Shapes).
 
-<p>В примере ниже мы эффектно округлили воздушный шар. В действительности изображение прямоугольное, но с определением свойства <em>float</em> (по-другому формы не добавляются) и использованием свойства {{cssxref("shape-outside")}} со значением <code>circle(50%)</code>, мы можем создать эффект обтекания текста.</p>
+В примере ниже мы эффектно округлили воздушный шар. В действительности изображение прямоугольное, но с определением свойства _float_ (по-другому формы не добавляются) и использованием свойства {{cssxref("shape-outside")}} со значением `circle(50%)`, мы можем создать эффект обтекания текста.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/images/shapes.html", '100%', 1000)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/images/shapes.html", '100%', 1000)}}
 
-<p>Форма в этом примере не реагирует на содержание изображения. Вместо этого в центре изображения определяется центр окружности, как если бы мы начертили циркулем окружность, вписанную в изображение. Это та окружность, которую обтекает текст.</p>
+Форма в этом примере не реагирует на содержание изображения. Вместо этого в центре изображения определяется центр окружности, как если бы мы начертили циркулем окружность, вписанную в изображение. Это та окружность, которую обтекает текст.
 
-<div class="blockIndicator note">
-<p><strong>Примечание</strong>: В Firefox вы можете использовать <a href="https://developer.mozilla.org/ru/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Инспектор фигур</a>, чтобы редактировать фигуры.</p>
-</div>
+> **Примечание:** В Firefox вы можете использовать [Инспектор фигур](/ru/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes), чтобы редактировать фигуры.
 
-<p>Значение <code>circle()</code> — лишь одно из нескольких базовых фигур для этого свойства, но можно и создавать формы. (Читайте <a href="/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Обзор CSS-фигур</a> на MDN.)</p>
+Значение `circle()` — лишь одно из нескольких базовых фигур для этого свойства, но можно и создавать формы. (Читайте [Обзор CSS-фигур](/ru/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes) на MDN.)
 
-<h2 id="-webkit-background-clip_text">-webkit-background-clip: text</h2>
+## -webkit-background-clip: text
 
-<p>Функция, о которой мы, кажется, упомянули в свойстве <code>text</code> для значения {{cssxref("background-clip")}}. Опция <code>-webkit-text-fill-color: transparent;</code> позволяет обрезать фоновые изображения под форму текста. Это неофициальный стандарт, но он был подключён во множестве браузеров. В данном контексте обязательно используется префикс <code>-webkit-</code> для любых браузеров:</p>
+Функция, о которой мы, кажется, упомянули в свойстве `text` для значения {{cssxref("background-clip")}}. Опция `-webkit-text-fill-color: transparent;` позволяет обрезать фоновые изображения под форму текста. Это неофициальный стандарт, но он был подключён во множестве браузеров. В данном контексте обязательно используется префикс `-webkit-` для любых браузеров:
 
-<pre class="brush: css">.text-clip {
+```css
+.text-clip {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}</pre>
+}
+```
 
-<p>Так почему остальные браузеры используют префикс <code>-webkit-</code>? В основном для совместимости — поэтому многие веб-разработчики стали вставлять префиксы <code>-webkit-</code>, отчего другие браузеры казались сломанными, когда, по факту, всё было выполнено по всем стандартам. Поэтому были введены некоторые такие функции.</p>
+Так почему остальные браузеры используют префикс `-webkit-`? В основном для совместимости — поэтому многие веб-разработчики стали вставлять префиксы `-webkit-`, отчего другие браузеры казались сломанными, когда, по факту, всё было выполнено по всем стандартам. Поэтому были введены некоторые такие функции.
 
-<p>Если вы собираетесь использовать подобные опции, проверьте совместимость их с браузерами.</p>
+Если вы собираетесь использовать подобные опции, проверьте совместимость их с браузерами.
 
-<div class="note">
-<p><strong>Примечание</strong>: Пример с <code>-webkit-background-clip: text</code> смотрите на <a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html">background-clip-text.html</a> (или <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html">источнике</a>).</p>
-</div>
+> **Примечание:** Пример с `-webkit-background-clip: text` смотрите на [background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (или [источнике](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
 
-<h2 id="Итог">Итог</h2>
+## Итог
 
-<p>Надеемся, статья была весёлой — игра с кодами уж точно. Всегда интересно следить за появлением новых узконаправленных свойств в современных браузерах.</p>
+Надеемся, статья была весёлой — игра с кодами уж точно. Всегда интересно следить за появлением новых узконаправленных свойств в современных браузерах.

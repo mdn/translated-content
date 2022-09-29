@@ -3,114 +3,91 @@ title: HTML таблицы продвинутые возможности и до
 slug: Learn/HTML/Tables/Advanced
 translation_of: Learn/HTML/Tables/Advanced
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
-<div>{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}</div>
+Во второй статье этого модуля мы рассматриваем ещё несколько продвинутых возможностей в HTML таблицах — такие как заголовок/описание и группировка строк внутри head, body и footer секциях таблицы, а также доступность таблиц для пользователей с ограниченными возможностями.
 
-<p class="summary">Во второй статье этого модуля мы рассматриваем ещё несколько продвинутых возможностей в HTML таблицах — такие как заголовок/описание и группировка строк внутри head, body и footer секциях таблицы, а также доступность таблиц для пользователей с ограниченными возможностями.</p>
+| Необходимые знания: | Базовый HTML ([Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)). |
+| ------------------- | --------------------------------------------------------------------------- |
+| Цель:               | Изучить более продвинутые возможности HTML таблиц и их доступность.         |
 
+## Добавление заголовка к таблице с помощью \<caption>
+
+Вы можете добавить заголовок для таблицы установив его в элементе {{htmlelement("caption")}} и этот элемент необходимо поместить внутрь элемента {{htmlelement("table")}}. Причём вам нужно поместить его сразу после открытия тега `<table>`.
+
+```html
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Необходимые знания:</th>
-   <td>Базовый HTML (<a href="/ru/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>).</td>
-  </tr>
-  <tr>
-   <th scope="row">Цель:</th>
-   <td>Изучить более продвинутые возможности HTML таблиц и их доступность.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Добавление_заголовка_к_таблице_с_помощью_&lt;caption>">Добавление заголовка к таблице с помощью &lt;caption&gt;</h2>
-
-<p>Вы можете добавить заголовок для таблицы установив его в элементе {{htmlelement("caption")}} и этот элемент необходимо поместить внутрь  элемента {{htmlelement("table")}}. Причём вам нужно поместить его сразу после открытия тега <code>&lt;table&gt;</code>.</p>
-
-<pre class="brush: html">&lt;table&gt;
-  &lt;caption&gt;Dinosaurs in the Jurassic period&lt;/caption&gt;
+  <caption>Dinosaurs in the Jurassic period</caption>
 
   ...
-&lt;/table&gt;</pre>
+</table>
+```
 
-<p>Как можно понять из короткого примера выше, заголовок отражает в себе описание контента таблицы. Это полезно для всех читателей просматривающих страницу и желающих получить краткое представление от том полезна ли для них таблица,  что особенно важно для слепых пользователей. Вместо того чтобы читать содержимое множества ячеек чтобы понять о чем таблица, он или она могут полагаться на заголовок и принимать решение читать ли таблицу более подробно.</p>
+Как можно понять из короткого примера выше, заголовок отражает в себе описание контента таблицы. Это полезно для всех читателей просматривающих страницу и желающих получить краткое представление от том полезна ли для них таблица, что особенно важно для слепых пользователей. Вместо того чтобы читать содержимое множества ячеек чтобы понять о чем таблица, он или она могут полагаться на заголовок и принимать решение читать ли таблицу более подробно.
 
-<p>Заголовок помещают сразу после тега <code>&lt;table&gt;</code>.</p>
+Заголовок помещают сразу после тега `<table>`.
 
-<div class="note">
-<p><strong>Примечание</strong>: Атрибут {{htmlattrxref("summary","table")}} также может быть использован в <code>&lt;table&gt;</code> элементе предоставляя описание — это также читается скринридерами. Однако мы рекомендуем вместо этого использовать <code>&lt;caption&gt;</code> элемент, так как <code>summary</code> {{glossary("deprecated")}} в HTML5 спецификации и не может быть прочитан зрячими пользователями (он не отображается на странице).</p>
-</div>
+> **Примечание:** Атрибут {{htmlattrxref("summary","table")}} также может быть использован в `<table>` элементе предоставляя описание — это также читается скринридерами. Однако мы рекомендуем вместо этого использовать `<caption>` элемент, так как `summary` {{glossary("deprecated")}} в HTML5 спецификации и не может быть прочитан зрячими пользователями (он не отображается на странице).
 
-<h3 id="Упражнение_Добавление_заголовка">Упражнение: Добавление заголовка</h3>
+### Упражнение: Добавление заголовка
 
-<p>Давайте попробуем это, вернёмся к примеру который мы ранее встретили в прошлой статье.</p>
+Давайте попробуем это, вернёмся к примеру который мы ранее встретили в прошлой статье.
 
-<ol>
- <li>Откройте расписание занятий школьного учителя по языку в конце статьи <a href="/ru/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col">HTML таблицы основы</a>, или сделайте копию нашего <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html">timetable-fixed.html</a> файла.</li>
- <li>Добавьте подходящий заголовок к таблице.</li>
- <li>Сохраните свой код и откройте его в браузере, чтобы посмотреть как это выглядит.</li>
-</ol>
+1.  Откройте расписание занятий школьного учителя по языку в конце статьи [HTML таблицы основы](/ru/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col), или сделайте копию нашего [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) файла.
+2.  Добавьте подходящий заголовок к таблице.
+3.  Сохраните свой код и откройте его в браузере, чтобы посмотреть как это выглядит.
 
-<div class="note">
-<p><strong>Примечание</strong>: Этот пример можно найти на GitHub по ссылке <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html">timetable-caption.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">живой пример</a>).</p>
-</div>
+> **Примечание:** Этот пример можно найти на GitHub по ссылке [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([живой пример](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
-<h2 id="Добавление_структуры_с_помощью_&lt;thead>_&lt;tfoot>_и_&lt;tbody>">Добавление структуры с помощью &lt;thead&gt;, &lt;tfoot&gt; и &lt;tbody&gt;</h2>
+## Добавление структуры с помощью \<thead>, \<tfoot> и \<tbody>
 
-<p>Когда таблицы становятся более сложными по структуре полезно дать им более структурированное определение. Отличный способ  сделать это используя {{htmlelement("thead")}}, {{htmlelement("tfoot")}} и {{htmlelement("tbody")}}, которые позволяют вам разметить header, footer и body секции таблицы.</p>
+Когда таблицы становятся более сложными по структуре полезно дать им более структурированное определение. Отличный способ сделать это используя {{htmlelement("thead")}}, {{htmlelement("tfoot")}} и {{htmlelement("tbody")}}, которые позволяют вам разметить header, footer и body секции таблицы.
 
-<p>Эти элементы не создают дополнительной доступности для пользователей со скринридерами и не приводят к какому-то визуальному улучшению при их использовании. Зато они очень полезны при стилизации и разметке, как точки для добавления CSS к вашей таблице. Вот несколько интересных примеров, в случае длинной таблицы вы можете сделать header и footer таблицы повторяемый на каждой печатной странице, или вы можете сделать body таблицы отображаемое на одной странице и иметь доступ ко всему содержимому контенту прокручивая вверх и вниз.</p>
+Эти элементы не создают дополнительной доступности для пользователей со скринридерами и не приводят к какому-то визуальному улучшению при их использовании. Зато они очень полезны при стилизации и разметке, как точки для добавления CSS к вашей таблице. Вот несколько интересных примеров, в случае длинной таблицы вы можете сделать header и footer таблицы повторяемый на каждой печатной странице, или вы можете сделать body таблицы отображаемое на одной странице и иметь доступ ко всему содержимому контенту прокручивая вверх и вниз.
 
-<p>Использование:</p>
+Использование:
 
-<ul>
- <li>Элементом <code>&lt;thead&gt;</code> нужно обернуть часть таблицы которая относится к заголовку — обычно это первая строка содержащая заголовки колонок, но это не обязательно всегда такой случай. Если вы используете {{htmlelement("col")}}/{{htmlelement("colgroup")}} элемент, тогда заголовок должен находиться ниже его.</li>
- <li>Элементом <code>&lt;tfoot&gt;</code> нужно обернуть ту часть, которая относится к footer таблицы — например, это может быть последняя строка в которой отражаются суммы по столбцам таблицы. Вы можете включить сюда footer таблицы, как и следовало ожидать, или чуть ниже заголовка таблицы (браузер всё равно отобразит его внизу таблицы).</li>
- <li>Элементом <code>&lt;tbody&gt;</code> необходимо обернуть остальную часть содержимого таблицы которая не находится в header или footer таблицы. Этот блок располагают ниже заголовка таблицы или иногда footer таблицы, зависит от того какую структуру вы решите использовать (читать выше по тексту).</li>
-</ul>
+- Элементом `<thead>` нужно обернуть часть таблицы которая относится к заголовку — обычно это первая строка содержащая заголовки колонок, но это не обязательно всегда такой случай. Если вы используете {{htmlelement("col")}}/{{htmlelement("colgroup")}} элемент, тогда заголовок должен находиться ниже его.
+- Элементом `<tfoot>` нужно обернуть ту часть, которая относится к footer таблицы — например, это может быть последняя строка в которой отражаются суммы по столбцам таблицы. Вы можете включить сюда footer таблицы, как и следовало ожидать, или чуть ниже заголовка таблицы (браузер всё равно отобразит его внизу таблицы).
+- Элементом `<tbody>` необходимо обернуть остальную часть содержимого таблицы которая не находится в header или footer таблицы. Этот блок располагают ниже заголовка таблицы или иногда footer таблицы, зависит от того какую структуру вы решите использовать (читать выше по тексту).
 
-<div class="note">
-<p><strong>Примечание</strong>: <code>&lt;tbody&gt;</code> всегда включён в каждой таблице, неявно если не укажете его в коде. Проверьте это, открыв один из предыдущих примеров в котором не используется <code>&lt;tbody&gt;</code> и посмотрите HTML код в <a href="/ru/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a> — вы увидите, что браузер добавил этот тег самостоятельно. Вы могли бы задаться вопросом почему мы должны волноваться о его включении, но вы должны, потому что это даёт больше контроля над структурой таблицы и стилем.</p>
-</div>
+> **Примечание:** `<tbody>` всегда включён в каждой таблице, неявно если не укажете его в коде. Проверьте это, открыв один из предыдущих примеров в котором не используется `<tbody>` и посмотрите HTML код в [browser developer tools](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools) — вы увидите, что браузер добавил этот тег самостоятельно. Вы могли бы задаться вопросом почему мы должны волноваться о его включении, но вы должны, потому что это даёт больше контроля над структурой таблицы и стилем.
 
-<h3 id="Упражнение_Добавление_структуры_таблицы">Упражнение: Добавление структуры таблицы</h3>
+### Упражнение: Добавление структуры таблицы
 
-<p>Давайте используем эти новые элементы.</p>
+Давайте используем эти новые элементы.
 
-<ol>
- <li>В первую очередь,  сделайте копию <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html">spending-record.html</a> и <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css">minimal-table.css</a> в новой папке.</li>
- <li>Попробуйте открыть это в браузере — вы увидите, что все выглядит классно, но могло бы быть лучше. Строка "SUM" которая содержит потраченные суммы кажется находится не в том месте и некоторые детали отсутствуют в коде.</li>
- <li>Поместите очевидную строку заголовка внутрь <code>&lt;thead&gt;</code> элемента, строку "SUM" внутрь <code>&lt;tfoot&gt;</code> элемента и оставшийся контент внутрь <code>&lt;tbody&gt;</code> элемента.</li>
- <li>Сохраните, перезагрузите и вы увидите, что добавление элемента <code>&lt;tfoot&gt;</code> привело к тому,  что строка "SUM" опустилась к нижней части таблицы.</li>
- <li>Далее, добавьте атрибут {{htmlattrxref("colspan","td")}}, чтобы ячейка "SUM" занимала первые четыре столбца, таким образом числовое значение "Cost" появится в последнем столбце.</li>
- <li>Давайте добавим несколько простых дополнительных стилей к таблице, чтобы дать вам представление насколько эти элементы полезны при использовании CSS. Внутри в <code>&lt;head&gt;</code> вашего HTML документа вы увидите пустой элемент {{htmlelement("style")}}. Внутри этого элемента добавьте следующие строки CSS кода:
-  <pre class="brush: css">tbody {
-  font-size: 90%;
-  font-style: italic;
-}
+1.  В первую очередь, сделайте копию [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) и [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) в новой папке.
+2.  Попробуйте открыть это в браузере — вы увидите, что все выглядит классно, но могло бы быть лучше. Строка "SUM" которая содержит потраченные суммы кажется находится не в том месте и некоторые детали отсутствуют в коде.
+3.  Поместите очевидную строку заголовка внутрь `<thead>` элемента, строку "SUM" внутрь `<tfoot>` элемента и оставшийся контент внутрь `<tbody>` элемента.
+4.  Сохраните, перезагрузите и вы увидите, что добавление элемента `<tfoot>` привело к тому, что строка "SUM" опустилась к нижней части таблицы.
+5.  Далее, добавьте атрибут {{htmlattrxref("colspan","td")}}, чтобы ячейка "SUM" занимала первые четыре столбца, таким образом числовое значение "Cost" появится в последнем столбце.
+6.  Давайте добавим несколько простых дополнительных стилей к таблице, чтобы дать вам представление насколько эти элементы полезны при использовании CSS. Внутри в `<head>` вашего HTML документа вы увидите пустой элемент {{htmlelement("style")}}. Внутри этого элемента добавьте следующие строки CSS кода:
 
-tfoot {
-  font-weight: bold;
-}
-</pre>
- </li>
- <li>Сохраните, обновите и вы увидите результат. Если <code>&lt;tbody&gt;</code> и <code>&lt;tfoot&gt;</code> элементы не были установлены, то вам придётся писать много сложных селекторов/правил для применения одного и того же стиля.</li>
-</ol>
+    ```css
+    tbody {
+      font-size: 90%;
+      font-style: italic;
+    }
 
-<div class="note">
-<p><strong>Примечание</strong>: Мы не ожидаем что сейчас вы полностью поймёте CSS. Вы узнаете больше когда пройдёте наши CSS курсы (например, <a href="/ru/docs/Learn/CSS/Introduction_to_CSS">Вступление в CSS</a> это хорошее место для начала; у нас также есть статья конкретно о <a href="/ru/docs/Learn/CSS/Building_blocks/Styling_tables">стилизации таблиц</a>).</p>
-</div>
+    tfoot {
+      font-weight: bold;
+    }
+    ```
 
-<p>Ваша готовая таблица должна выглядеть примерно так:</p>
+7.  Сохраните, обновите и вы увидите результат. Если `<tbody>` и `<tfoot>` элементы не были установлены, то вам придётся писать много сложных селекторов/правил для применения одного и того же стиля.
 
-<div class="hidden">
-<h6 id="Hidden_example">Hidden example</h6>
+> **Примечание:** Мы не ожидаем что сейчас вы полностью поймёте CSS. Вы узнаете больше когда пройдёте наши CSS курсы (например, [Вступление в CSS](/ru/docs/Learn/CSS/Introduction_to_CSS) это хорошее место для начала; у нас также есть статья конкретно о [стилизации таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)).
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;My spending record&lt;/title&gt;
-    &lt;style&gt;
+Ваша готовая таблица должна выглядеть примерно так:
+
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My spending record</title>
+    <style>
 
         html {
           font-family: sans-serif;
@@ -156,268 +133,264 @@ tfoot {
         tfoot {
           font-weight: bold;
         }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-      &lt;table&gt;
-        &lt;caption&gt;How I chose to spend my money&lt;/caption&gt;
-        &lt;thead&gt;
-          &lt;tr&gt;
-            &lt;th&gt;Purchase&lt;/th&gt;
-            &lt;th&gt;Location&lt;/th&gt;
-            &lt;th&gt;Date&lt;/th&gt;
-            &lt;th&gt;Evaluation&lt;/th&gt;
-            &lt;th&gt;Cost (€)&lt;/th&gt;
-          &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tfoot&gt;
-          &lt;tr&gt;
-            &lt;td colspan="4"&gt;SUM&lt;/td&gt;
-            &lt;td&gt;118&lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tfoot&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Haircut&lt;/td&gt;
-            &lt;td&gt;Hairdresser&lt;/td&gt;
-            &lt;td&gt;12/09&lt;/td&gt;
-            &lt;td&gt;Great idea&lt;/td&gt;
-            &lt;td&gt;30&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Lasagna&lt;/td&gt;
-            &lt;td&gt;Restaurant&lt;/td&gt;
-            &lt;td&gt;12/09&lt;/td&gt;
-            &lt;td&gt;Regrets&lt;/td&gt;
-            &lt;td&gt;18&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Shoes&lt;/td&gt;
-            &lt;td&gt;Shoeshop&lt;/td&gt;
-            &lt;td&gt;13/09&lt;/td&gt;
-            &lt;td&gt;Big regrets&lt;/td&gt;
-            &lt;td&gt;65&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Toothpaste&lt;/td&gt;
-            &lt;td&gt;Supermarket&lt;/td&gt;
-            &lt;td&gt;13/09&lt;/td&gt;
-            &lt;td&gt;Good&lt;/td&gt;
-            &lt;td&gt;5&lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
+    </style>
+  </head>
+  <body>
+      <table>
+        <caption>How I chose to spend my money</caption>
+        <thead>
+          <tr>
+            <th>Purchase</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Evaluation</th>
+            <th>Cost (€)</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td colspan="4">SUM</td>
+            <td>118</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td>Haircut</td>
+            <td>Hairdresser</td>
+            <td>12/09</td>
+            <td>Great idea</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>Lasagna</td>
+            <td>Restaurant</td>
+            <td>12/09</td>
+            <td>Regrets</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>Shoes</td>
+            <td>Shoeshop</td>
+            <td>13/09</td>
+            <td>Big regrets</td>
+            <td>65</td>
+          </tr>
+          <tr>
+            <td>Toothpaste</td>
+            <td>Supermarket</td>
+            <td>13/09</td>
+            <td>Good</td>
+            <td>5</td>
+          </tr>
+        </tbody>
+    </table>
 
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
+  </body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Hidden_example', '100%', 300) }}</p>
+{{ EmbedLiveSample('Hidden_example', '100%', 300) }}
 
-<div class="note">
-<p><strong>Примечание</strong>: Этот пример можно также найти на GitHub по ссылке <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html">spending-record-finished.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">живой пример</a>).</p>
-</div>
+> **Примечание:** Этот пример можно также найти на GitHub по ссылке [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([живой пример](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
-<h2 id="Вложенные_таблицы">Вложенные таблицы</h2>
+## Вложенные таблицы
 
-<p>В одну таблицу вкладывать другую таблицу возможно, если вы используете полную структуру включая элемент <code>&lt;table&gt;</code>. Это как правило не рекомендуется, так как делает разметку более запутанной и менее доступной для пользователей скринридеров, так в большинстве случаев вы можете просто вставить дополнительные ячейки/строки/столбцы в существующую таблицу. Однако, иногда это необходимо, например, если вы хотите легко импортировать контент из других источников.</p>
+В одну таблицу вкладывать другую таблицу возможно, если вы используете полную структуру включая элемент `<table>`. Это как правило не рекомендуется, так как делает разметку более запутанной и менее доступной для пользователей скринридеров, так в большинстве случаев вы можете просто вставить дополнительные ячейки/строки/столбцы в существующую таблицу. Однако, иногда это необходимо, например, если вы хотите легко импортировать контент из других источников.
 
-<p>Разметка простой вложенной таблицы:</p>
+Разметка простой вложенной таблицы:
 
-<pre class="brush: html">&lt;table id="table1"&gt;
-  &lt;tr&gt;
-    &lt;th&gt;title1&lt;/th&gt;
-    &lt;th&gt;title2&lt;/th&gt;
-    &lt;th&gt;title3&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td id="nested"&gt;
-      &lt;table id="table2"&gt;
-        &lt;tr&gt;
-          &lt;td&gt;cell1&lt;/td&gt;
-          &lt;td&gt;cell2&lt;/td&gt;
-          &lt;td&gt;cell3&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/table&gt;
-    &lt;/td&gt;
-    &lt;td&gt;cell2&lt;/td&gt;
-    &lt;td&gt;cell3&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;cell4&lt;/td&gt;
-    &lt;td&gt;cell5&lt;/td&gt;
-    &lt;td&gt;cell6&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table id="table1">
+  <tr>
+    <th>title1</th>
+    <th>title2</th>
+    <th>title3</th>
+  </tr>
+  <tr>
+    <td id="nested">
+      <table id="table2">
+        <tr>
+          <td>cell1</td>
+          <td>cell2</td>
+          <td>cell3</td>
+        </tr>
+      </table>
+    </td>
+    <td>cell2</td>
+    <td>cell3</td>
+  </tr>
+  <tr>
+    <td>cell4</td>
+    <td>cell5</td>
+    <td>cell6</td>
+  </tr>
+</table>
+```
 
-<h2 id="Таблицы_для_пользователей_с_ограниченными_возможностями">Таблицы для пользователей с ограниченными возможностями</h2>
+## Таблицы для пользователей с ограниченными возможностями
 
-<p>Давайте кратко опишем как мы используем данные таблицы. Таблицы могут быть удобным инструментом, который даёт нам быстрый доступ к данным и позволяет искать разные значения. Например, быстрого взгляда на таблицу ниже достаточно, чтобы найти сколько колец было продано в Амстердаме в августе 2016. Чтобы понять эту информацию, мы проводим визуальные ассоциации между данными в этой таблице и её заголовками колонок и/или строк.</p>
+Давайте кратко опишем как мы используем данные таблицы. Таблицы могут быть удобным инструментом, который даёт нам быстрый доступ к данным и позволяет искать разные значения. Например, быстрого взгляда на таблицу ниже достаточно, чтобы найти сколько колец было продано в Амстердаме в августе 2016. Чтобы понять эту информацию, мы проводим визуальные ассоциации между данными в этой таблице и её заголовками колонок и/или строк.
 
 <table>
- <caption>Items Sold August 2016</caption>
- <tbody>
-  <tr>
-   <td></td>
-   <td></td>
-   <th colspan="3" scope="colgroup">Clothes</th>
-   <th colspan="2" scope="colgroup">Accessories</th>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <th scope="col">Trousers</th>
-   <th scope="col">Skirts</th>
-   <th scope="col">Dresses</th>
-   <th scope="col">Bracelets</th>
-   <th scope="col">Rings</th>
-  </tr>
-  <tr>
-   <th rowspan="3" scope="rowgroup">Belgium</th>
-   <th scope="row">Antwerp</th>
-   <td>56</td>
-   <td>22</td>
-   <td>43</td>
-   <td>72</td>
-   <td>23</td>
-  </tr>
-  <tr>
-   <th scope="row">Gent</th>
-   <td>46</td>
-   <td>18</td>
-   <td>50</td>
-   <td>61</td>
-   <td>15</td>
-  </tr>
-  <tr>
-   <th scope="row">Brussels</th>
-   <td>51</td>
-   <td>27</td>
-   <td>38</td>
-   <td>69</td>
-   <td>28</td>
-  </tr>
-  <tr>
-   <th rowspan="2" scope="rowgroup">The Netherlands</th>
-   <th scope="row">Amsterdam</th>
-   <td>89</td>
-   <td>34</td>
-   <td>69</td>
-   <td>85</td>
-   <td>38</td>
-  </tr>
-  <tr>
-   <th scope="row">Utrecht</th>
-   <td>80</td>
-   <td>12</td>
-   <td>43</td>
-   <td>36</td>
-   <td>19</td>
-  </tr>
- </tbody>
+  <caption>
+    Items Sold August 2016
+  </caption>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <th colspan="3" scope="colgroup">Clothes</th>
+      <th colspan="2" scope="colgroup">Accessories</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <th scope="col">Trousers</th>
+      <th scope="col">Skirts</th>
+      <th scope="col">Dresses</th>
+      <th scope="col">Bracelets</th>
+      <th scope="col">Rings</th>
+    </tr>
+    <tr>
+      <th rowspan="3" scope="rowgroup">Belgium</th>
+      <th scope="row">Antwerp</th>
+      <td>56</td>
+      <td>22</td>
+      <td>43</td>
+      <td>72</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th scope="row">Gent</th>
+      <td>46</td>
+      <td>18</td>
+      <td>50</td>
+      <td>61</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th scope="row">Brussels</th>
+      <td>51</td>
+      <td>27</td>
+      <td>38</td>
+      <td>69</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th rowspan="2" scope="rowgroup">The Netherlands</th>
+      <th scope="row">Amsterdam</th>
+      <td>89</td>
+      <td>34</td>
+      <td>69</td>
+      <td>85</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <th scope="row">Utrecht</th>
+      <td>80</td>
+      <td>12</td>
+      <td>43</td>
+      <td>36</td>
+      <td>19</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Но что если вы не можете провести эти визуальные ассоциации? Как тогда вы сможете прочитать таблицу выше? Люди с ослабленным зрением часто используют скринридер, который читает им информацию с веб-страницы. Это не проблема когда вы читаете простой текст, но интерпретация таблицы может быть сложной проблемой для слепых людей. Тем не менее, вместе с правильной разметкой мы можем заменить визуальные ассоциации программными.</p>
+Но что если вы не можете провести эти визуальные ассоциации? Как тогда вы сможете прочитать таблицу выше? Люди с ослабленным зрением часто используют скринридер, который читает им информацию с веб-страницы. Это не проблема когда вы читаете простой текст, но интерпретация таблицы может быть сложной проблемой для слепых людей. Тем не менее, вместе с правильной разметкой мы можем заменить визуальные ассоциации программными.
 
-<p>В этой части статьи приводятся дополнительные способы которые делают таблицы более доступными.</p>
+В этой части статьи приводятся дополнительные способы которые делают таблицы более доступными.
 
-<h3 class="attTitle" id="Использование_заголовков_столбцов_и_строк">Использование заголовков столбцов и строк</h3>
+### Использование заголовков столбцов и строк
 
-<p>Скринридеры будут определять все заголовки и использовать их создавая программные ассоциации между этими заголовками и ячейками к которым они относятся. Сочетание заголовков столбцов и строк будет определять и интерпретировать данные в каждой ячейке так, что пользователи скринридеров могут интерпретировать таблицу также как это делают зрячие пользователи.</p>
+Скринридеры будут определять все заголовки и использовать их создавая программные ассоциации между этими заголовками и ячейками к которым они относятся. Сочетание заголовков столбцов и строк будет определять и интерпретировать данные в каждой ячейке так, что пользователи скринридеров могут интерпретировать таблицу также как это делают зрячие пользователи.
 
-<p>Мы уже разобрали заголовки в предыдущей статье, смотри по ссылке <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements">Добавление заголовков с помощью элемента &lt;th&gt;</a>.</p>
+Мы уже разобрали заголовки в предыдущей статье, смотри по ссылке [Добавление заголовков с помощью элемента \<th>](/ru/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements).
 
-<h3 class="attTitle" id="Атрибут_scope">Атрибут scope</h3>
+### Атрибут scope
 
-<p>Новая тема в этой статье это атрибут {{htmlattrxref("scope","th")}}, который может быть добавлен к элементу <code>&lt;th&gt;</code> он сообщает скринридеру какие ячейки точно являются заголовками — например, заголовок строки в которой он находится или столбца. Возвращаясь назад к нашему примеру с записями расходов, вы могли однозначно определить заголовки столбцов как здесь:</p>
+Новая тема в этой статье это атрибут {{htmlattrxref("scope","th")}}, который может быть добавлен к элементу `<th>` он сообщает скринридеру какие ячейки точно являются заголовками — например, заголовок строки в которой он находится или столбца. Возвращаясь назад к нашему примеру с записями расходов, вы могли однозначно определить заголовки столбцов как здесь:
 
-<pre class="brush: html">&lt;thead&gt;
-  &lt;tr&gt;
-    &lt;th scope="col"&gt;Purchase&lt;/th&gt;
-    &lt;th scope="col"&gt;Location&lt;/th&gt;
-    &lt;th scope="col"&gt;Date&lt;/th&gt;
-    &lt;th scope="col"&gt;Evaluation&lt;/th&gt;
-    &lt;th scope="col"&gt;Cost (€)&lt;/th&gt;
-  &lt;/tr&gt;
-&lt;/thead&gt;</pre>
+```html
+<thead>
+  <tr>
+    <th scope="col">Purchase</th>
+    <th scope="col">Location</th>
+    <th scope="col">Date</th>
+    <th scope="col">Evaluation</th>
+    <th scope="col">Cost (€)</th>
+  </tr>
+</thead>
+```
 
-<p>И у каждой строки может быть определён заголовок, как здесь (если мы добавили заголовки строк и заголовки столбцов):</p>
+И у каждой строки может быть определён заголовок, как здесь (если мы добавили заголовки строк и заголовки столбцов):
 
-<pre class="brush: html">&lt;tr&gt;
-  &lt;th scope="row"&gt;Haircut&lt;/th&gt;
-  &lt;td&gt;Hairdresser&lt;/td&gt;
-  &lt;td&gt;12/09&lt;/td&gt;
-  &lt;td&gt;Great idea&lt;/td&gt;
-  &lt;td&gt;30&lt;/td&gt;
-&lt;/tr&gt;</pre>
+```html
+<tr>
+  <th scope="row">Haircut</th>
+  <td>Hairdresser</td>
+  <td>12/09</td>
+  <td>Great idea</td>
+  <td>30</td>
+</tr>
+```
 
-<p>Скринридер распознает разметку структурированную таким образом, что позволяют пользователям прочитать весь столбец или строку целиком.</p>
+Скринридер распознает разметку структурированную таким образом, что позволяют пользователям прочитать весь столбец или строку целиком.
 
-<p>Атрибут <code>scope</code> имеет ещё два возможных значения — <code>colgroup</code> и <code>rowgroup</code>. Они используются для заголовков, которые располагаются вверху ваших столбцов или строк. Если вы посмотрите на таблицу "Items sold..." в начале этого раздела статьи, вы увидите что ячейка с "Clothes" находится над ячейками "Trousers", "Skirts" и "Dresses". Все эти ячейки должны быть помечены как заголовки (<code>&lt;th&gt;</code>), но "Clothes"  заголовок который находится сверху и определяет остальные три подзаголовка. Поэтому "Clothes" должна получить атрибут <code>scope="colgroup"</code>, тогда как другие получат атрибут <code>scope="col"</code>.</p>
+Атрибут `scope` имеет ещё два возможных значения — `colgroup` и `rowgroup`. Они используются для заголовков, которые располагаются вверху ваших столбцов или строк. Если вы посмотрите на таблицу "Items sold..." в начале этого раздела статьи, вы увидите что ячейка с "Clothes" находится над ячейками "Trousers", "Skirts" и "Dresses". Все эти ячейки должны быть помечены как заголовки (`<th>`), но "Clothes" заголовок который находится сверху и определяет остальные три подзаголовка. Поэтому "Clothes" должна получить атрибут `scope="colgroup"`, тогда как другие получат атрибут `scope="col"`.
 
-<h3 class="attTitle" id="Атрибуты_id_и_headers">Атрибуты id и headers</h3>
+### Атрибуты id и headers
 
-<p>Альтернатива атрибута <code>scope</code> это использование атрибутов {{htmlattrxref("id")}} и {{htmlattrxref("headers", "td")}} задавая ассоциации между заголовками и ячейками. Этот способ выглядит следующим образом:</p>
+Альтернатива атрибута `scope` это использование атрибутов {{htmlattrxref("id")}} и {{htmlattrxref("headers", "td")}} задавая ассоциации между заголовками и ячейками. Этот способ выглядит следующим образом:
 
-<ol>
- <li>Вы устанавливаете уникальный <code>id</code> для каждого<code>&lt;th&gt;</code> элемента.</li>
- <li>Вы устанавливаете атрибут <code>headers</code> для каждого <code>&lt;td&gt;</code> элемента. Каждый <code>headers</code> атрибут должен содержать список всех <code>id</code> , разделённый пробелами, ко всем <code>&lt;th&gt;</code> элементам которые действуют как заголовок для этой ячейки.</li>
-</ol>
+1.  Вы устанавливаете уникальный `id` для каждого`<th>` элемента.
+2.  Вы устанавливаете атрибут `headers` для каждого `<td>` элемента. Каждый `headers` атрибут должен содержать список всех `id` , разделённый пробелами, ко всем `<th>` элементам которые действуют как заголовок для этой ячейки.
 
-<p>Это обеспечивает явное определение позиции для каждой ячейки вашей HTML таблицы, определяет заголовки столбцов и строк таблицы. Для того чтобы это работало реально хорошо таблице нужно определить и заголовки столбцов, и заголовки строк.</p>
+Это обеспечивает явное определение позиции для каждой ячейки вашей HTML таблицы, определяет заголовки столбцов и строк таблицы. Для того чтобы это работало реально хорошо таблице нужно определить и заголовки столбцов, и заголовки строк.
 
-<p>Вернёмся к нашему примеру с расчётом затрат, его можно переписать следующим образом:</p>
+Вернёмся к нашему примеру с расчётом затрат, его можно переписать следующим образом:
 
-<pre class="brush: html">&lt;thead&gt;
-  &lt;tr&gt;
-    &lt;th id="purchase"&gt;Purchase&lt;/th&gt;
-    &lt;th id="location"&gt;Location&lt;/th&gt;
-    &lt;th id="date"&gt;Date&lt;/th&gt;
-    &lt;th id="evaluation"&gt;Evaluation&lt;/th&gt;
-    &lt;th id="cost"&gt;Cost (€)&lt;/th&gt;
-  &lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-  &lt;th id="haircut"&gt;Haircut&lt;/th&gt;
-  &lt;td headers="location haircut"&gt;Hairdresser&lt;/td&gt;
-  &lt;td headers="date haircut"&gt;12/09&lt;/td&gt;
-  &lt;td headers="evaluation haircut"&gt;Great idea&lt;/td&gt;
-  &lt;td headers="cost haircut"&gt;30&lt;/td&gt;
-&lt;/tr&gt;
+```html
+<thead>
+  <tr>
+    <th id="purchase">Purchase</th>
+    <th id="location">Location</th>
+    <th id="date">Date</th>
+    <th id="evaluation">Evaluation</th>
+    <th id="cost">Cost (€)</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <th id="haircut">Haircut</th>
+  <td headers="location haircut">Hairdresser</td>
+  <td headers="date haircut">12/09</td>
+  <td headers="evaluation haircut">Great idea</td>
+  <td headers="cost haircut">30</td>
+</tr>
 
   ...
 
-&lt;/tbody&gt;</pre>
+</tbody>
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: Этот метод создания очень точного определения ассоциаций между заголовками и данными в ячейках, но использует <strong>гораздо</strong> больше разметки и оставляет обширное пространство для ошибок.  Атрибута <code>scope</code> обычно достаточно для большинства таблиц.</p>
-</div>
+> **Примечание:** Этот метод создания очень точного определения ассоциаций между заголовками и данными в ячейках, но использует **гораздо** больше разметки и оставляет обширное пространство для ошибок. Атрибута `scope` обычно достаточно для большинства таблиц.
 
-<h3 id="Упражнение_играем_со_scope_и_headers">Упражнение: играем со scope и headers</h3>
+### Упражнение: играем со scope и headers
 
-<ol>
- <li>Для заключительного упражнения мы, вначале создадим копию <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html">items-sold.html</a> и <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css">minimal-table.css</a> в новой папке.</li>
- <li>Теперь попробуем добавить соответствующий атрибут <code>scope</code>, который наиболее соответствует этой таблице.</li>
- <li>И наконец попробуем сделать другую копию изначальных файлов, на этот раз делая таблицу более доступной используя атрибуты <code>id</code> и <code>headers</code>.</li>
-</ol>
+1.  Для заключительного упражнения мы, вначале создадим копию [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) и [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) в новой папке.
+2.  Теперь попробуем добавить соответствующий атрибут `scope`, который наиболее соответствует этой таблице.
+3.  И наконец попробуем сделать другую копию изначальных файлов, на этот раз делая таблицу более доступной используя атрибуты `id` и `headers`.
 
-<div class="note">
-<p><strong>Примечание</strong>: вы можете проверить как работает последние примеры здесь <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html">items-sold-scope.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html">also see this live</a>) и <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html">items-sold-headers.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html">see this live too</a>).</p>
-</div>
+> **Примечание:** вы можете проверить как работает последние примеры здесь [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([also see this live](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) и [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([see this live too](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
-<h2 id="Заключение">Заключение</h2>
+## Заключение
 
-<p>Есть ещё некоторые вещи которые можно узнать о HTML таблицах, но мы действительно дали всё что нужно на настоящий момент. Дальше вы возможно захотите больше узнать о стилизации HTML таблиц, посмотрите статью <a href="/ru/docs/Learn/CSS/Styling_boxes/Styling_tables">"Стилизация таблиц"</a>.</p>
+Есть ещё некоторые вещи которые можно узнать о HTML таблицах, но мы действительно дали всё что нужно на настоящий момент. Дальше вы возможно захотите больше узнать о стилизации HTML таблиц, посмотрите статью ["Стилизация таблиц"](/ru/docs/Learn/CSS/Styling_boxes/Styling_tables).
 
-<div>{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}</div>
+{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
-<div>
-<h2 id="В_этом_блоке">В этом блоке</h2>
+## В этом блоке
 
-<ul>
- <li><a href="/ru/docs/Learn/HTML/Tables/Basics">HTML таблицы основы</a></li>
- <li><a href="/ru/docs/Learn/HTML/Tables/Advanced">HTML таблицы продвинутые возможности и доступность</a></li>
- <li><a href="/ru/docs/Learn/HTML/Tables/Structuring_planet_data">Структурирование данных о планетах</a></li>
-</ul>
-</div>
+- [HTML таблицы основы](/ru/docs/Learn/HTML/Tables/Basics)
+- [HTML таблицы продвинутые возможности и доступность](/ru/docs/Learn/HTML/Tables/Advanced)
+- [Структурирование данных о планетах](/ru/docs/Learn/HTML/Tables/Structuring_planet_data)

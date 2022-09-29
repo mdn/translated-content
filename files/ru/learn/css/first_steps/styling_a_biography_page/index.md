@@ -11,93 +11,72 @@ tags:
 translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
-<p>{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
+{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-<p>С учётом того что вы узнали за последние несколько уроков, вы должны обнаружить, что вы можете форматировать простые текстовые документы с использованием CSS, чтобы добавить к ним свой собственный стиль. Эта статья даёт вам возможность сделать это.</p>
+С учётом того что вы узнали за последние несколько уроков, вы должны обнаружить, что вы можете форматировать простые текстовые документы с использованием CSS, чтобы добавить к ним свой собственный стиль. Эта статья даёт вам возможность сделать это.
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Необходимые знания:</th>
-   <td>Перед тем как начать, вы должны разобраться в основах CSS и HTML (смотрите <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>).</td>
-  </tr>
-  <tr>
-   <th scope="row">Задача:</th>
-   <td>Попрактиковать использование CSS с вашими новыми знаниями.</td>
-  </tr>
- </tbody>
-</table>
+| Необходимые знания: | Перед тем как начать, вы должны разобраться в основах CSS и HTML (смотрите [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)). |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:             | Попрактиковать использование CSS с вашими новыми знаниями.                                                                               |
 
-<h2 id="Перед_началом">Перед началом</h2>
+## Перед началом
 
-<p>Вы можете писать код в редакторе ниже или <a href="https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/">скачать исходный код</a>, чтобы работать в вашем собственном редакторе. Это страница с кодом HTML и CSS внутри него. Если вам так удобнее, вы можете переместить CSS в отдельный файл на вашем компьютере. Или вы можете использовать онлайн-редакторы, такие как <a href="https://codepen.io/" rel="noopener">CodePen</a>, <a href="https://jsfiddle.net/" rel="noopener">jsFiddle</a> или <a href="https://glitch.com/" rel="noopener">Glitch</a>.</p>
+Вы можете писать код в редакторе ниже или [скачать исходный код](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/), чтобы работать в вашем собственном редакторе. Это страница с кодом HTML и CSS внутри него. Если вам так удобнее, вы можете переместить CSS в отдельный файл на вашем компьютере. Или вы можете использовать онлайн-редакторы, такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/).
 
-<div class="blockIndicator note">
-<p><strong>Примечание</strong>: Если у вас не получается, попросите о помощи — читайте раздел <a href="#помощь">Помощь</a> с кодом ниже.</p>
-</div>
+> **Примечание:** Если у вас не получается, попросите о помощи — читайте раздел [Помощь](#помощь) с кодом ниже.
 
-<h2 id="Работа_с_CSS">Работа с CSS</h2>
+## Работа с CSS
 
-<p>В следующем примере демонстрируется биография, стилизованная с помощью CSS. Каждое использованное мной свойство CSS — ссылка на соответствующую страницу MDN.</p>
+В следующем примере демонстрируется биография, стилизованная с помощью CSS. Каждое использованное мной свойство CSS — ссылка на соответствующую страницу MDN.
 
-<ul>
- <li>{{cssxref("font-family")}}</li>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("border-bottom")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li>{{cssxref("font-size")}}</li>
- <li>{{cssxref("text-decoration")}}</li>
-</ul>
+- {{cssxref("font-family")}}
+- {{cssxref("color")}}
+- {{cssxref("border-bottom")}}
+- {{cssxref("font-weight")}}
+- {{cssxref("font-size")}}
+- {{cssxref("text-decoration")}}
 
-<p>Я использовал разные селекторы, такие как h1 и h2, а также создал класс для названия профессии для его стилизации.</p>
+Я использовал разные селекторы, такие как h1 и h2, а также создал класс для названия профессии для его стилизации.
 
-<p>Измените значения свойств CSS, чтобы поменять внешний вид биографии.</p>
+Измените значения свойств CSS, чтобы поменять внешний вид биографии.
 
-<ol>
- <li>Сделайте заголовок розовым, используя CSS-цвет <code>hotpink</code>.</li>
- <li>Значение свойства заголовка {{cssxref("border-bottom")}} сделайте пунктирным (10px dotted) и добавьте цвет <code>purple</code>.</li>
- <li>Примените к подзаголовку <code>&lt;h2&gt;</code> курсив.</li>
- <li>Установите цвет <code>#eeeeee</code> для фона {{cssxref("background-color")}} маркированного списка с контактными данными и значение 5px solid purple для {{cssxref("border")}}. Используйте {{cssxref("padding")}}, чтобы отделить содержимое блока от границы.</li>
- <li>Сделайте ссылки <code>зелёными</code> при наведении.</li>
-</ol>
+1.  Сделайте заголовок розовым, используя CSS-цвет `hotpink`.
+2.  Значение свойства заголовка {{cssxref("border-bottom")}} сделайте пунктирным (10px dotted) и добавьте цвет `purple`.
+3.  Примените к подзаголовку `<h2>` курсив.
+4.  Установите цвет `#eeeeee` для фона {{cssxref("background-color")}} маркированного списка с контактными данными и значение 5px solid purple для {{cssxref("border")}}. Используйте {{cssxref("padding")}}, чтобы отделить содержимое блока от границы.
+5.  Сделайте ссылки `зелёными` при наведении.
 
-<p>У вас должно получиться примерно как-то так:</p>
+У вас должно получиться примерно как-то так:
 
-<p><img alt="Screenshot of how the example should look after completing the assessment." src="https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png" style="height: 1199px; width: 1104px;"></p>
+![Screenshot of how the example should look after completing the assessment.](https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png)
 
-<p>После этого попробуйте использовать селекторы, не указанные здесь, но описанные в <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Reference">Руководстве по CSS</a>. Не бойтесь ошибок — практикуйтесь!</p>
+После этого попробуйте использовать селекторы, не указанные здесь, но описанные в [Руководстве по CSS](/ru/docs/Web/CSS/Reference). Не бойтесь ошибок — практикуйтесь!
 
-<p>Помните: тут нет неверного решения — сейчас вы предоставлены сами себе; развлекайтесь!</p>
+Помните: тут нет неверного решения — сейчас вы предоставлены сами себе; развлекайтесь!
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}} </p>
+{{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}}
 
-<h2 id="Помощь">Помощь</h2>
+## Помощь
 
-<p>Если вы хотите, чтобы вашу работу оценили, или вы не справляетесь, и вам нужна помощь:</p>
+Если вы хотите, чтобы вашу работу оценили, или вы не справляетесь, и вам нужна помощь:
 
-<ol>
- <li>Загрузите ваш код на <a href="https://codepen.io/" rel="noopener">CodePen</a>, <a href="https://jsfiddle.net/" rel="noopener">jsFiddle</a> или <a href="https://glitch.com/" rel="noopener">Glitch</a>.</li>
- <li>Напишите пост с просьбой о помощи и / или оценке на <a href="https://discourse.mozilla.org/c/mdn">форуме MDN</a>. Добавьте тег "learning" к вашему посту, чтобы нам легче было его найти. В вашем посте должны быть:
-  <ul>
-   <li>Заголовок с описанием наподобие "Assessment wanted for CSS First Steps".</li>
-   <li>Описание того, что вам нужно, — к примеру, что вы уже пробовали, что у вас не получается и вам нужна помощь.</li>
-   <li>Ссылка на ваш код в онлайн-редакторе.</li>
-   <li>Ссылка на страницу о помощи, чтобы мы смогли помочь вам с вашим вопросом.</li>
-  </ul>
- </li>
-</ol>
+1.  Загрузите ваш код на [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/).
+2.  Напишите пост с просьбой о помощи и / или оценке на [форуме MDN](https://discourse.mozilla.org/c/mdn). Добавьте тег "learning" к вашему посту, чтобы нам легче было его найти. В вашем посте должны быть:
 
-<h2 id="Что_дальше">Что дальше?</h2>
+    - Заголовок с описанием наподобие "Assessment wanted for CSS First Steps".
+    - Описание того, что вам нужно, — к примеру, что вы уже пробовали, что у вас не получается и вам нужна помощь.
+    - Ссылка на ваш код в онлайн-редакторе.
+    - Ссылка на страницу о помощи, чтобы мы смогли помочь вам с вашим вопросом.
 
-<p>Поздравляем вас с завершением первого модуля! Теперь вы неплохо разбираетесь в CSS и можете разобраться в таблицах стилей. В следующем модуле, <a href="/ru/docs/Learn/CSS/Building_blocks">Как устроен CSS</a>, мы глубже разберёмся в некоторых аспектах языка.</p>
+## Что дальше?
 
-<p>{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
+Поздравляем вас с завершением первого модуля! Теперь вы неплохо разбираетесь в CSS и можете разобраться в таблицах стилей. В следующем модуле, [Как устроен CSS](/ru/docs/Learn/CSS/Building_blocks), мы глубже разберёмся в некоторых аспектах языка.
 
-<h2 id="В_этом_модуле">В этом модуле</h2>
+{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-<ol>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">Что такое CSS?</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Начало работы с CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">Как структурирован CSS</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/First_steps/How_CSS_works">Как работает CSS</a></li>
-</ol>
+## В этом модуле
+
+1.  [Что такое CSS?](/ru/docs/Learn/CSS/First_steps/What_is_CSS)
+2.  [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)
+3.  [Как структурирован CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
+4.  [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)

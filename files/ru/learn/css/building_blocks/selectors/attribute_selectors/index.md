@@ -10,152 +10,86 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 original_slug: Learn/CSS/Building_blocks/Селекторы/Attribute_selectors
 ---
-<p>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}</p>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 
-<p>Как вы знаете из курса о HTML, элементы могут иметь атрибуты, которые дают дополнительную информацию о размечаемом элементе. В CSS вы можете использовать селекторы атрибута для стилизации элементов с определёнными атрибутами. Этот урок покажет вам, как использовать эти очень полезные селекторы.</p>
+Как вы знаете из курса о HTML, элементы могут иметь атрибуты, которые дают дополнительную информацию о размечаемом элементе. В CSS вы можете использовать селекторы атрибута для стилизации элементов с определёнными атрибутами. Этот урок покажет вам, как использовать эти очень полезные селекторы.
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Необходимые условия:</th>
-   <td>Базовая компьютерная грамотность, <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">установка базового ПО</a>, базовые знания о <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работе с файлами</a>, основы HTML (изучите <a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML">Введение в HTML</a>) и понимание работы CSS (изучите <a href="/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>.)</td>
-  </tr>
-  <tr>
-   <th scope="row">Задача:</th>
-   <td>Узнать, что такое селекторы атрибута и как их использовать.</td>
-  </tr>
- </tbody>
-</table>
+| Необходимые условия: | Базовая компьютерная грамотность, [установка базового ПО](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F), базовые знания о [работе с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), основы HTML (изучите [Введение в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML)) и понимание работы CSS (изучите [Введение в CSS](/ru/docs/Learn/CSS/First_steps).) |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:              | Узнать, что такое селекторы атрибута и как их использовать.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-<h2 id="Селекторы_наличия_и_значения">Селекторы наличия и значения</h2>
+## Селекторы наличия и значения
 
-<p>Эти селекторы делают возможным выбор элемента, основанный только на наличии атрибута (например, <code>href</code>) или на всевозможных разного рода сочетаниях со значением атрибута.</p>
+Эти селекторы делают возможным выбор элемента, основанный только на наличии атрибута (например, `href`) или на всевозможных разного рода сочетаниях со значением атрибута.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Селектор</th>
-   <th scope="col">Пример</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>[<em>attr</em>]</code></td>
-   <td><code>a[title]</code></td>
-   <td>Выбирает элементы с атрибутом <em>attr</em> (имя которого  —  это значение в квадратных скобках).</td>
-  </tr>
-  <tr>
-   <td><code>[<em>attr</em>=<em>value</em>]</code></td>
-   <td><code>a[href="https://example.com"]</code></td>
-   <td>Выбирает элементы с атрибутом <em>attr</em>, значение которого в точности равно <em>value</em>  — строке внутри кавычек.</td>
-  </tr>
-  <tr>
-   <td><code>[<em>attr</em>~=<em>value</em>]</code></td>
-   <td><code>p[class~="special"]</code></td>
-   <td>
-    <p>Выбирает элементы с атрибутом <em>attr,</em> значение которого в точности равно <em>value</em> или содержит <em>value</em> в своём (разделённом пробелами) списке значений.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>[<em>attr</em>|=<em>value</em>]</code></td>
-   <td><code>div[lang|="zh"]</code></td>
-   <td>Выбирает элементы с атрибутом <em>attr</em>, значение которого в точности равно <em>value </em>или начинается с <em>value</em>, за которым сразу следует дефис.</td>
-  </tr>
- </tbody>
-</table>
+| Селектор         | Пример                          | Описание                                                                                                                                               |
+| ---------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `[attr]`         | `a[title]`                      | Выбирает элементы с атрибутом _attr_ (имя которого — это значение в квадратных скобках).                                                               |
+| `[attr=value]`   | `a[href="https://example.com"]` | Выбирает элементы с атрибутом _attr_, значение которого в точности равно _value_ — строке внутри кавычек.                                              |
+| `[attr~=value]`  | `p[class~="special"]`           | Выбирает элементы с атрибутом _attr,_ значение которого в точности равно _value_ или содержит _value_ в своём (разделённом пробелами) списке значений. |
+| `[attr\|=value]` | `div[lang\|="zh"]`              | Выбирает элементы с атрибутом _attr_, значение которого в точности равно _value_ или начинается с _value_, за которым сразу следует дефис.             |
 
-<p>В приведённом ниже примере вы можете увидеть использование этих селекторов.</p>
+В приведённом ниже примере вы можете увидеть использование этих селекторов.
 
-<ul>
- <li>Используя <code>li[class],</code> мы можем выбрать каждый селектор с атрибутом класса. Это соответствует всем пунктам списка, за исключением первого.</li>
- <li><code>li[class="a"]</code> выбирает селектор с классом <code>a</code>, но не селектор с классом <code>a</code> в сочетании с другим, отделённым запятой, классом как частью значения. Он выбирает второй пункт списка.</li>
- <li><code>li[class~="a"]</code> выберет класс <code>a</code>, а также значение, которое содержит класс <code>a</code> как часть разделённого пробелом списка. Он выберет второй и третий пункты списка.</li>
-</ul>
+- Используя `li[class],` мы можем выбрать каждый селектор с атрибутом класса. Это соответствует всем пунктам списка, за исключением первого.
+- `li[class="a"]` выбирает селектор с классом `a`, но не селектор с классом `a` в сочетании с другим, отделённым запятой, классом как частью значения. Он выбирает второй пункт списка.
+- `li[class~="a"]` выберет класс `a`, а также значение, которое содержит класс `a` как часть разделённого пробелом списка. Он выберет второй и третий пункты списка.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}
 
-<h2 id="Селекторы_вхождения_подстроки">Селекторы вхождения подстроки</h2>
+## Селекторы вхождения подстроки
 
-<p>Эти селекторы предоставляют более широкие возможности для выявления вхождения подстроки в значение атрибута. Например, если у вас есть классы <code>box-warning</code> и <code>box-error</code> и вы хотите выбрать всё, что начинается со строки "box-", вы можете использовать <code>[class^="box-"]</code>, чтобы выбрать оба класса (или <code>[class|="box"]</code> как описано в предыдущем разделе).</p>
+Эти селекторы предоставляют более широкие возможности для выявления вхождения подстроки в значение атрибута. Например, если у вас есть классы `box-warning` и `box-error` и вы хотите выбрать всё, что начинается со строки "box-", вы можете использовать `[class^="box-"]`, чтобы выбрать оба класса (или `[class|="box"]` как описано в предыдущем разделе).
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Селектор</th>
-   <th scope="col">Пример</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>[<em>attr</em>^=<em>value</em>]</code></td>
-   <td><code>li[class^="box-"]</code></td>
-   <td>Выбирает элементы с атрибутом <em>attr</em> (его имя  —  это значение в квадратных скобках), значение которого начинается с <em>value</em>.</td>
-  </tr>
-  <tr>
-   <td><code>[<em>attr</em>$=<em>value</em>]</code></td>
-   <td><code>li[class$="-box"]</code></td>
-   <td>Выбирает элементы с атрибутом <em>attr</em>, значение которого заканчивается на <em>value</em>.</td>
-  </tr>
-  <tr>
-   <td><code>[<em>attr</em>*=<em> </em>]</code></td>
-   <td><code>li[class*="box"]</code></td>
-   <td>Выбирает элементы с атрибутом <em>attr</em>, значение которого содержит <em>value</em>, независимо от его положения внутри строки.</td>
-  </tr>
- </tbody>
-</table>
+| Селектор        | Пример              | Описание                                                                                                                    |
+| --------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `[attr^=value]` | `li[class^="box-"]` | Выбирает элементы с атрибутом _attr_ (его имя — это значение в квадратных скобках), значение которого начинается с _value_. |
+| `[attr$=value]` | `li[class$="-box"]` | Выбирает элементы с атрибутом _attr_, значение которого заканчивается на _value_.                                           |
+| `[attr*= ]`     | `li[class*="box"]`  | Выбирает элементы с атрибутом _attr_, значение которого содержит _value_, независимо от его положения внутри строки.        |
 
-<p>(Отступление: возможно, будет полезным заметить, что <code>^</code> и <code>$</code> давно используются как <em>якоря </em>в так называемых <em>регулярных выражениях</em> и обозначают <em>начинается с </em>и <em>заканчивается на</em>.)</p>
+(Отступление: возможно, будет полезным заметить, что `^` и `$` давно используются как _якоря_ в так называемых _регулярных выражениях_ и обозначают _начинается с_ и _заканчивается на_.)
 
-<p>Следующий пример показывает, как используются эти селекторы:</p>
+Следующий пример показывает, как используются эти селекторы:
 
-<ul>
- <li><code>li[class^="a"]</code> выбирает все значения атрибута, которые начинаются с <code>a</code>, что соответствует первым двум элементам списка.</li>
- <li><code>li[class$="a"]</code> выбирает все значения атрибута, которые заканчиваются на <code>a</code>, что соответствует первому и третьему элементу списка.</li>
- <li><code>li[class*="a"]</code> выбирает все значения атрибута, где появляется <code>a</code>, независимо от положения в строке, что соответствует всем элементам нашего списка.</li>
-</ul>
+- `li[class^="a"]` выбирает все значения атрибута, которые начинаются с `a`, что соответствует первым двум элементам списка.
+- `li[class$="a"]` выбирает все значения атрибута, которые заканчиваются на `a`, что соответствует первому и третьему элементу списка.
+- `li[class*="a"]` выбирает все значения атрибута, где появляется `a`, независимо от положения в строке, что соответствует всем элементам нашего списка.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-substring.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-substring.html", '100%', 800)}}
 
-<h2 id="Чувствительность_к_регистру">Чувствительность к регистру</h2>
+## Чувствительность к регистру
 
-<p>Если вы хотите выбрать значения атрибута без учёта регистра, вы можете использовать значение <code>i</code> перед закрывающей скобкой. Этот признак говорит браузеру, что символы ASCII должны сопоставляться без учёта регистра. Без этого признака значения будут сопоставлены в соответствии с чувствительностью к регистру языка документа — в случае HTML такая чувствительность присутствует.</p>
+Если вы хотите выбрать значения атрибута без учёта регистра, вы можете использовать значение `i` перед закрывающей скобкой. Этот признак говорит браузеру, что символы ASCII должны сопоставляться без учёта регистра. Без этого признака значения будут сопоставлены в соответствии с чувствительностью к регистру языка документа — в случае HTML такая чувствительность присутствует.
 
-<p>В примере ниже первый селектор выберет значение, начинающееся с <code>a</code> — это соответствует только первому элементу списка, потому что два других элемента списка начинаются с заглавной буквы A. Второй селектор использует признак нечувствительности к регистру и поэтому выберет все элементы списка.</p>
+В примере ниже первый селектор выберет значение, начинающееся с `a` — это соответствует только первому элементу списка, потому что два других элемента списка начинаются с заглавной буквы A. Второй селектор использует признак нечувствительности к регистру и поэтому выберет все элементы списка.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
 
-<div class="blockIndicator note">
-<p><strong>Примечание</strong>: Существует также более новое значение <code>s</code>, которое вызывает сопоставление с учётом регистра в контекстах, где сопоставление обычно не учитывает регистр, однако это не так хорошо поддерживается в браузерах и не очень полезно в контексте HTML.</p>
-</div>
+> **Примечание:** Существует также более новое значение `s`, которое вызывает сопоставление с учётом регистра в контекстах, где сопоставление обычно не учитывает регистр, однако это не так хорошо поддерживается в браузерах и не очень полезно в контексте HTML.
 
-<h2 id="Следующие_шаги">Следующие шаги</h2>
+## Следующие шаги
 
-<p>Итак, мы рассмотрели селекторы атрибута, и вы можете перейти к следующей статье, в которой рассказывается о <a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">псевдоклассах и псевдоэлементах</a>.</p>
+Итак, мы рассмотрели селекторы атрибута, и вы можете перейти к следующей статье, в которой рассказывается о [псевдоклассах и псевдоэлементах](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements).
 
-<p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}</p>
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 
-<h2 id="В_этом_модуле">В этом модуле</h2>
+## В этом модуле
 
-<ol>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Каскад и наследование</a></li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B">Селекторы CSS</a>
-  <ul>
-   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors">Селекторы типа, класса и ID</a></li>
-   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors">Селекторы атрибута</a></li>
-   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">Псевдоклассы и псевдоэлементы</a></li>
-   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators">Комбинаторы</a></li>
-  </ul>
- </li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/The_box_model">Модель коробки (The box model)</a></li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Фон и границы</a></li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Обработка разных направлений текста</a></li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/Overflowing_content">Переполнение содержимого</a></li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/Values_and_units">Значения и единицы измерения</a></li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Изменение размеров в CSS</a></li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Элементы изображений, форм и медиа-элементы</a></li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a></li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS">Отладка CSS</a></li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/Organizing">Организация вашей CSS</a></li>
-</ol>
+1.  [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2.  [Селекторы CSS](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B)
+
+    - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors)
+    - [Селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors)
+    - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements)
+    - [Комбинаторы](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators)
+
+3.  [Модель коробки (The box model)](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
+4.  [Фон и границы](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5.  [Обработка разных направлений текста](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6.  [Переполнение содержимого](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7.  [Значения и единицы измерения](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
+8.  [Изменение размеров в CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9.  [Элементы изображений, форм и медиа-элементы](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+10. [Стилизация таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
+11. [Отладка CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+12. [Организация вашей CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)

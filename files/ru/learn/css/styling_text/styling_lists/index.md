@@ -4,90 +4,78 @@ slug: Learn/CSS/Styling_text/Styling_lists
 translation_of: Learn/CSS/Styling_text/Styling_lists
 original_slug: Learn/CSS/Styling_text/Стилизация_списков
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-<div>{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}</div>
+[Списки](/ru/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists), по-большому счету, ведут себя также как любой другой текст, но существуют некоторые специфичные настройки CSS, о которых вы должны знать. В этой статье они все описываются.
 
-<p class="summary"><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists">Списки</a>, по-большому счету, ведут себя также как любой другой текст, но существуют некоторые специфичные настройки CSS, о которых вы должны знать. В этой статье они все описываются.</p>
+| Требования: | Базовая компьютерная грамотность, основы HTML (изучите [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), основы CSS (изучите [Введение в CSS](/ru/docs/Learn/CSS/First_steps)), [CSS основы по тексту и шрифтам.](/ru/docs/Learn/CSS/Styling_text/Fundamentals) |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:       | Познакомиться с лучшими практиками и свойствами по стилизации списков.                                                                                                                                                                                                      |
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Требования:</th>
-   <td>
-    <p>Базовая компьютерная грамотность, основы HTML (изучите <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>), основы CSS (изучите <a href="/en-US/docs/Learn/CSS/First_steps">Введение в CSS</a>), <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">CSS основы по тексту и шрифтам.</a></p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Цель:</th>
-   <td>Познакомиться с лучшими практиками и свойствами по стилизации списков.</td>
-  </tr>
- </tbody>
-</table>
+## Пример простого списка
 
-<h2 id="Пример_простого_списка">Пример простого списка</h2>
+Для начала, давайте взглянем на пример простого списка. В данной статье мы рассмотрим ненумерованный, нумерованный и описательный списки — все они имеют аналогичные свойства стилизации, но некоторые имеют свои специальные свойства. Не стилизованный пример [доступен на Github](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (проверьте также [источник кода](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html).)
 
-<p>Для начала, давайте взглянем на пример простого списка. В данной статье мы рассмотрим ненумерованный, нумерованный и описательный списки  — все они имеют аналогичные свойства стилизации, но некоторые имеют свои специальные свойства. Не стилизованный пример <a href="https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">доступен на Github</a> (проверьте также <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">источник кода</a>.)</p>
+HTML для нашего примера списка представлен ниже:
 
-<p>HTML для нашего примера списка представлен ниже:</p>
+```html
+<h2>Shopping (unordered) list</h2>
 
-<pre class="brush: html">&lt;h2&gt;Shopping (unordered) list&lt;/h2&gt;
-
-&lt;p&gt;Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Hummus&lt;/li&gt;
-  &lt;li&gt;Pita&lt;/li&gt;
-  &lt;li&gt;Green salad&lt;/li&gt;
-  &lt;li&gt;Halloumi&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Recipe (ordered) list&lt;/h2&gt;
-
-&lt;p&gt;Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Toast pita, leave to cool, then slice down the edge.&lt;/li&gt;
-  &lt;li&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
-  &lt;li&gt;Wash and chop the salad.&lt;/li&gt;
-  &lt;li&gt;Fill pita with salad, hummus, and fried halloumi.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2&gt;Ingredient description list&lt;/h2&gt;
-
-&lt;p&gt;Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Hummus&lt;/dt&gt;
-  &lt;dd&gt;A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.&lt;/dd&gt;
-  &lt;dt&gt;Pita&lt;/dt&gt;
-  &lt;dd&gt;A soft, slightly leavened flatbread.&lt;/dd&gt;
-  &lt;dt&gt;Halloumi&lt;/dt&gt;
-  &lt;dd&gt;A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.&lt;/dd&gt;
-  &lt;dt&gt;Green salad&lt;/dt&gt;
-  &lt;dd&gt;That green healthy stuff that many of us just use to garnish kebabs.&lt;/dd&gt;
-&lt;/dl&gt;</pre>
-
-<p>Если вы перейдёте к живому примеру прямо сейчас и изучите элемент списка используя <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">инструменты разработчика браузера</a>, то вы заметите несколько стилей установленных по умолчанию:</p>
+<p>Paragraph for reference, paragraph for reference, paragraph for reference,
+paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
 <ul>
- <li>Элементы {{htmlelement("ul")}} и {{htmlelement("ol")}} имеют верхний и нижний {{cssxref("margin")}} по <code>16px</code> (<code>1em</code>) и {{cssxref("padding-left")}} <code>40px</code> (<code>2.5em</code>.)</li>
- <li>Объекты списка (элементы {{htmlelement("li")}}) не имеют заданных значений по умолчанию для интервалов.</li>
- <li>Элемент {{htmlelement("dl")}} имеет верхний и нижний {{cssxref("margin")}} по <code>16px</code> (<code>1em</code>), но padding не задан.</li>
- <li>Элементы {{htmlelement("dd")}} имеют {{cssxref("margin-left")}} <code>40px</code> (<code>2.5em</code>.)</li>
- <li>Элементы {{htmlelement("p")}} которые мы включили для ссылок (сноски) имеют верхний и нижний {{cssxref("margin")}} по <code>16px</code> (<code>1em</code>), точно так же, как и различные типы списков.</li>
+  <li>Hummus</li>
+  <li>Pita</li>
+  <li>Green salad</li>
+  <li>Halloumi</li>
 </ul>
 
-<h2 id="Управление_интервалами_списков">Управление интервалами списков</h2>
+<h2>Recipe (ordered) list</h2>
 
-<p>При оформлении списков, вам необходимо настроить их стили так, чтоб они сохраняли то же вертикальное расстояние, что и окружающие их элементы (такие как параграфы и изображения; иногда называемые вертикальным ритмом) и то же расстояние по горизонтали как и между собой (посмотреть <a href="https://mdn.github.io/learning-area/css/styling-text/styling-lists/">законченный стилизированный пример</a> на Github, а также <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html">найти исходный код</a>.)</p>
+<p>Paragraph for reference, paragraph for reference, paragraph for reference,
+paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
-<p>CSS, используемый для оформления текста и интервалов, выглядит следующим образом:</p>
+<ol>
+  <li>Toast pita, leave to cool, then slice down the edge.</li>
+  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>Wash and chop the salad.</li>
+  <li>Fill pita with salad, hummus, and fried halloumi.</li>
+</ol>
 
-<pre class="brush: css">/* General styles */
+<h2>Ingredient description list</h2>
+
+<p>Paragraph for reference, paragraph for reference, paragraph for reference,
+paragraph for reference, paragraph for reference, paragraph for reference.</p>
+
+<dl>
+  <dt>Hummus</dt>
+  <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+  <dt>Pita</dt>
+  <dd>A soft, slightly leavened flatbread.</dd>
+  <dt>Halloumi</dt>
+  <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+  <dt>Green salad</dt>
+  <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+</dl>
+```
+
+Если вы перейдёте к живому примеру прямо сейчас и изучите элемент списка используя [инструменты разработчика браузера](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools), то вы заметите несколько стилей установленных по умолчанию:
+
+- Элементы {{htmlelement("ul")}} и {{htmlelement("ol")}} имеют верхний и нижний {{cssxref("margin")}} по `16px` (`1em`) и {{cssxref("padding-left")}} `40px` (`2.5em`.)
+- Объекты списка (элементы {{htmlelement("li")}}) не имеют заданных значений по умолчанию для интервалов.
+- Элемент {{htmlelement("dl")}} имеет верхний и нижний {{cssxref("margin")}} по `16px` (`1em`), но padding не задан.
+- Элементы {{htmlelement("dd")}} имеют {{cssxref("margin-left")}} `40px` (`2.5em`.)
+- Элементы {{htmlelement("p")}} которые мы включили для ссылок (сноски) имеют верхний и нижний {{cssxref("margin")}} по `16px` (`1em`), точно так же, как и различные типы списков.
+
+## Управление интервалами списков
+
+При оформлении списков, вам необходимо настроить их стили так, чтоб они сохраняли то же вертикальное расстояние, что и окружающие их элементы (такие как параграфы и изображения; иногда называемые вертикальным ритмом) и то же расстояние по горизонтали как и между собой (посмотреть [законченный стилизированный пример](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) на Github, а также [найти исходный код](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html).)
+
+CSS, используемый для оформления текста и интервалов, выглядит следующим образом:
+
+```css
+/* General styles */
 
 html {
   font-family: Helvetica, Arial, sans-serif;
@@ -119,65 +107,69 @@ dt {
 
 dd {
   margin-bottom: 1.5rem;
-}</pre>
+}
+```
 
-<ul>
- <li>Первое правило устанавливает шрифт сайта и основной размер шрифта 10px. Они наследуются всеми на этой странице.</li>
- <li>Правила 2 и 3 задают относительные размеры шрифтов заголовков, различных типов списков (их наследуют дочерние элементы списков) и параграфов. Это значит, что каждый параграф и список будут иметь одинаковый размер шрифта, а также верхний и нижний интервалы, помогая сохранить согласованность вертикального ритма.</li>
- <li>Правило 4 задаёт одинаковую высоту {{cssxref("line-height")}} в параграфах и пунктах списка — так, что параграфы и каждый отдельный пункт списка будут иметь те же интервалы между строками. Это также поможет сохранить согласованность вертикального ритма.</li>
- <li>Правила 5 и 6 применяются к списку описаний — мы задаём одинаковую высоту <code>line-height</code> между терминами и описаниями списке описаний как мы это делали с параграфами и пунктами списка. И снова, согласованность хорошая! Мы также делаем описание терминов жирным шрифтом, чтобы они визуально выделялись легче.  </li>
-</ul>
+- Первое правило устанавливает шрифт сайта и основной размер шрифта 10px. Они наследуются всеми на этой странице.
+- Правила 2 и 3 задают относительные размеры шрифтов заголовков, различных типов списков (их наследуют дочерние элементы списков) и параграфов. Это значит, что каждый параграф и список будут иметь одинаковый размер шрифта, а также верхний и нижний интервалы, помогая сохранить согласованность вертикального ритма.
+- Правило 4 задаёт одинаковую высоту {{cssxref("line-height")}} в параграфах и пунктах списка — так, что параграфы и каждый отдельный пункт списка будут иметь те же интервалы между строками. Это также поможет сохранить согласованность вертикального ритма.
+- Правила 5 и 6 применяются к списку описаний — мы задаём одинаковую высоту `line-height` между терминами и описаниями списке описаний как мы это делали с параграфами и пунктами списка. И снова, согласованность хорошая! Мы также делаем описание терминов жирным шрифтом, чтобы они визуально выделялись легче.
 
-<h2 id="Стили_специфичные_для_списков">Стили специфичные для списков</h2>
+## Стили специфичные для списков
 
-<p>Теперь, рассмотрев общие методы интервалов для списков, давайте изучим некоторые специфичные спискам свойства. Существует три свойства, с которых вам надо начать знакомство, которые могут быть установлены для элементов {{htmlelement("ul")}} или {{htmlelement("ol")}}:</p>
+Теперь, рассмотрев общие методы интервалов для списков, давайте изучим некоторые специфичные спискам свойства. Существует три свойства, с которых вам надо начать знакомство, которые могут быть установлены для элементов {{htmlelement("ul")}} или {{htmlelement("ol")}}:
 
-<ul>
- <li>{{cssxref("list-style-type")}}: задаёт тип маркеров для использования в списке, например, квадратные или круглые маркеры для неупорядоченного списка, или цифры, буквы или римские цифры для упорядоченного списка.</li>
- <li>{{cssxref("list-style-position")}}: управляет будет ли маркер появляется внутри пунктов списка или вне их перед началом каждого элемента.</li>
- <li>{{cssxref("list-style-image")}}: позволяет вам использовать пользовательские изображения в качестве маркеров, а не просто квадрат или круг.</li>
-</ul>
+- {{cssxref("list-style-type")}}: задаёт тип маркеров для использования в списке, например, квадратные или круглые маркеры для неупорядоченного списка, или цифры, буквы или римские цифры для упорядоченного списка.
+- {{cssxref("list-style-position")}}: управляет будет ли маркер появляется внутри пунктов списка или вне их перед началом каждого элемента.
+- {{cssxref("list-style-image")}}: позволяет вам использовать пользовательские изображения в качестве маркеров, а не просто квадрат или круг.
 
-<h3 id="Стили_маркеров">Стили маркеров</h3>
+### Стили маркеров
 
-<p>Как указано выше, свойство {{cssxref("list-style-type")}} позволяет вам устанавливать какой тип маркера использовать в качестве точек маркера. В нашем примере мы установили использование заглавных римских цифр в упорядоченном списке:</p>
+Как указано выше, свойство {{cssxref("list-style-type")}} позволяет вам устанавливать какой тип маркера использовать в качестве точек маркера. В нашем примере мы установили использование заглавных римских цифр в упорядоченном списке:
 
-<pre class="brush: css">ol {
+```css
+ol {
   list-style-type: upper-roman;
-}</pre>
+}
+```
 
-<p>Это даёт нам следующий вид:</p>
+Это даёт нам следующий вид:
 
-<p><img alt="an ordered list with the bullet points set to appear outside the list item text." src="outer-bullets.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![an ordered list with the bullet points set to appear outside the list item text.](outer-bullets.png)
 
-<p>Вы можете найти гораздо больше опций, заглянув на справочную страницу {{cssxref ("list-style-type")}}.</p>
+Вы можете найти гораздо больше опций, заглянув на справочную страницу {{cssxref ("list-style-type")}}.
 
-<h3 id="Позиция_маркера">Позиция маркера</h3>
+### Позиция маркера
 
-<p>Свойство {{cssxref("list-style-position")}} устанавливает будет ли появляться маркер внутри пунктов списка или снаружи перед началом каждого пункта. Значение по умолчанию — <code>outside</code>, которое заставляет маркеры находится снаружи пунктов списка, как видно выше.</p>
+Свойство {{cssxref("list-style-position")}} устанавливает будет ли появляться маркер внутри пунктов списка или снаружи перед началом каждого пункта. Значение по умолчанию — `outside`, которое заставляет маркеры находится снаружи пунктов списка, как видно выше.
 
-<p>Если вы установите значение на <code>inside</code>, то маркеры будут находиться внутри строк:</p>
+Если вы установите значение на `inside`, то маркеры будут находиться внутри строк:
 
-<pre class="brush: css">ol {
+```css
+ol {
   list-style-type: upper-roman;
   list-style-position: inside;
-}</pre>
+}
+```
 
-<p><img alt="an ordered list with the bullet points set to appear inside the list item text." src="inner-bullets.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![an ordered list with the bullet points set to appear inside the list item text.](inner-bullets.png)
 
-<h3 id="Использование_пользовательского_изображения_как_маркер">Использование пользовательского изображения как маркер</h3>
+### Использование пользовательского изображения как маркер
 
-<p>Свойство {{cssxref("list-style-image")}} позволяет вам использовать пользовательское изображение в качестве вашего маркера. Синтаксис довольно прост:</p>
+Свойство {{cssxref("list-style-image")}} позволяет вам использовать пользовательское изображение в качестве вашего маркера. Синтаксис довольно прост:
 
-<pre class="brush: css">ul {
+```css
+ul {
   list-style-image: url(star.svg);
-}</pre>
+}
+```
 
-<p>Однако это свойство немного ограничено с точки зрения управления позициями, размерами (и т.д.) маркеров. Вам лучше использовать семейство свойств {{cssxref ("background")}}, о которых вы узнаете намного больше в модуле <a href="/en-US/docs/Learn/CSS/Building_blocks">Styling boxes</a>. А пока вот вам образец для дегустации!</p>
+Однако это свойство немного ограничено с точки зрения управления позициями, размерами (и т.д.) маркеров. Вам лучше использовать семейство свойств {{cssxref ("background")}}, о которых вы узнаете намного больше в модуле [Styling boxes](/ru/docs/Learn/CSS/Building_blocks). А пока вот вам образец для дегустации!
 
-<p>В нашем законченном примере мы оформили неупорядоченный список следующим образом (поверх того, что вы уже видели выше):</p>
+В нашем законченном примере мы оформили неупорядоченный список следующим образом (поверх того, что вы уже видели выше):
 
-<pre class="brush: css">ul {
+```css
+ul {
   padding-left: 2rem;
   list-style-type: none;
 }
@@ -188,145 +180,145 @@ ul li {
   background-position: 0 0;
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
-}</pre>
+}
+```
 
-<p>Мы сделали следующее:</p>
+Мы сделали следующее:
 
-<ul>
- <li>Установили {{cssxref("padding-left")}} элемента {{htmlelement("ul")}} с <code>40px</code> по умолчанию на <code>20px</code>, затем установили то же самое количество в пунктах списка. Это для того, чтобы все пункты списка продолжали выравниваться с порядком пунктов списка и описаний списка описаний, но пункты списка имеют некоторый padding для фоновых изображений чтобы сидеть внутри. Если бы мы не сделали этого, то фоновые изображения накладывались бы с текстом пунктов списка, что выглядело бы неряшливо.</li>
- <li>Установили {{cssxref("list-style-type")}} на <code>none</code>, для того чтобы маркеры не появлялись по умолчанию. Мы собираемся использовать свойства {{cssxref("background")}} для управления маркерами.</li>
- <li>Вставили маркер в каждый пункт неупорядоченного списка. Соответствующие свойства, следующие:
-  <ul>
-   <li>{{cssxref("background-image")}}: Указывает путь к файлу изображения, который вы хотите использовать в качестве маркера.</li>
-   <li>{{cssxref("background-position")}}: Определяет где в фоне выбранного элемента появится изображение — в данном случае мы говорим <code>0 0</code>, что значит что маркер будет появляться в самом верху слева каждого пункта списка.</li>
-   <li>{{cssxref("background-size")}}: Задаёт размер фонового изображения. В идеале мы хотим, чтоб маркеры были того же размера что и пункты списка (или самую малость меньше или крупнее). Мы используем размер <code>1.6rem</code> (<code>16px</code>), что очень хорошо сочетается с отступом (padding) <code>20px</code>, который мы позволили разместить внутри маркера — 16px плюс 4px интервала между маркером и текстом пункта списка работают хорошо.</li>
-   <li>{{cssxref("background-repeat")}}: По умолчанию, фоновые изображения повторяются пока не заполнят доступное фоновое пространство. Мы хотим всего лишь одну копию вставленного изображения в каждом случае, поэтому мы установили значение <code>no-repeat</code>.</li>
-  </ul>
- </li>
-</ul>
+- Установили {{cssxref("padding-left")}} элемента {{htmlelement("ul")}} с `40px` по умолчанию на `20px`, затем установили то же самое количество в пунктах списка. Это для того, чтобы все пункты списка продолжали выравниваться с порядком пунктов списка и описаний списка описаний, но пункты списка имеют некоторый padding для фоновых изображений чтобы сидеть внутри. Если бы мы не сделали этого, то фоновые изображения накладывались бы с текстом пунктов списка, что выглядело бы неряшливо.
+- Установили {{cssxref("list-style-type")}} на `none`, для того чтобы маркеры не появлялись по умолчанию. Мы собираемся использовать свойства {{cssxref("background")}} для управления маркерами.
+- Вставили маркер в каждый пункт неупорядоченного списка. Соответствующие свойства, следующие:
 
-<p>Это даёт нам следующий результат:</p>
+  - {{cssxref("background-image")}}: Указывает путь к файлу изображения, который вы хотите использовать в качестве маркера.
+  - {{cssxref("background-position")}}: Определяет где в фоне выбранного элемента появится изображение — в данном случае мы говорим `0 0`, что значит что маркер будет появляться в самом верху слева каждого пункта списка.
+  - {{cssxref("background-size")}}: Задаёт размер фонового изображения. В идеале мы хотим, чтоб маркеры были того же размера что и пункты списка (или самую малость меньше или крупнее). Мы используем размер `1.6rem` (`16px`), что очень хорошо сочетается с отступом (padding) `20px`, который мы позволили разместить внутри маркера — 16px плюс 4px интервала между маркером и текстом пункта списка работают хорошо.
+  - {{cssxref("background-repeat")}}: По умолчанию, фоновые изображения повторяются пока не заполнят доступное фоновое пространство. Мы хотим всего лишь одну копию вставленного изображения в каждом случае, поэтому мы установили значение `no-repeat`.
 
-<p><img alt="an unordered list with the bullet points set as little star images" src="list_formatting.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+Это даёт нам следующий результат:
 
-<h3 id="короткая_запись_list-style">короткая запись list-style</h3>
+![an unordered list with the bullet points set as little star images](list_formatting.png)
 
-<p>Эти три свойства упомянутые выше могут все быть заданы, используя лишь одну короткую запись свойства, {{cssxref("list-style")}}. Например, следующий CSS:</p>
+### короткая запись list-style
 
-<pre class="brush: css">ul {
+Эти три свойства упомянутые выше могут все быть заданы, используя лишь одну короткую запись свойства, {{cssxref("list-style")}}. Например, следующий CSS:
+
+```css
+ul {
   list-style-type: square;
   list-style-image: url(example.png);
   list-style-position: inside;
-}</pre>
+}
+```
 
-<p>Может быть заменён этим:</p>
+Может быть заменён этим:
 
-<pre class="brush: css">ul {
+```css
+ul {
   list-style: square url(example.png) inside;
-}</pre>
+}
+```
 
-<p>Значения могут быть перечислены в любом порядке, и вы можете использовать одно, два и все три (значения по умолчанию, использованные для свойств, которые не включены — <code>disc</code>, <code>none</code>, и <code>outside</code>). Если указаны и <code>type</code> и <code>image</code>, тип используется в качестве запасного варианта, если изображение по какой-либо причине не может быть загружено.</p>
+Значения могут быть перечислены в любом порядке, и вы можете использовать одно, два и все три (значения по умолчанию, использованные для свойств, которые не включены — `disc`, `none`, и `outside`). Если указаны и `type` и `image`, тип используется в качестве запасного варианта, если изображение по какой-либо причине не может быть загружено.
 
-<h2 id="Контроль_счета_списка">Контроль счета списка</h2>
+## Контроль счета списка
 
-<p>Иногда вам может понадобиться вести счёт в упорядоченном списке по-другому — например начинать с цифры отличной от 1, или считать в обратном порядке, или вести счёт с шагом больше 1. HTML и CSS имеют несколько инструментов которые помогут с этим.</p>
+Иногда вам может понадобиться вести счёт в упорядоченном списке по-другому — например начинать с цифры отличной от 1, или считать в обратном порядке, или вести счёт с шагом больше 1. HTML и CSS имеют несколько инструментов которые помогут с этим.
 
-<h3 id="start">start</h3>
+### start
 
-<p>Атрибут {{htmlattrxref("start","ol")}} позволит вам начать счёт списка с цифры отличной от 1. Например:</p>
+Атрибут {{htmlattrxref("start","ol")}} позволит вам начать счёт списка с цифры отличной от 1. Например:
 
-<pre class="brush: html">&lt;ol start="4"&gt;
-  &lt;li&gt;Toast pita, leave to cool, then slice down the edge.&lt;/li&gt;
-  &lt;li&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
-  &lt;li&gt;Wash and chop the salad.&lt;/li&gt;
-  &lt;li&gt;Fill pita with salad, hummus, and fried halloumi.&lt;/li&gt;
-&lt;/ol&gt;</pre>
-
-<p>что даст вам такой результат:</p>
-
-<p>{{ EmbedLiveSample('start', '100%', 150) }}</p>
-
-<h3 id="reversed">reversed</h3>
-
-<p>Атрибут {{htmlattrxref("reversed","ol")}} начнёт отсчёт по убыванию вместо возрастания. Например:</p>
-
-<pre class="brush: html">&lt;ol start="4" reversed&gt;
-  &lt;li&gt;Toast pita, leave to cool, then slice down the edge.&lt;/li&gt;
-  &lt;li&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
-  &lt;li&gt;Wash and chop the salad.&lt;/li&gt;
-  &lt;li&gt;Fill pita with salad, hummus, and fried halloumi.&lt;/li&gt;
-&lt;/ol&gt;</pre>
-
-<p>что даст вам такой результат:</p>
-
-<p>{{ EmbedLiveSample('reversed', '100%', 150) }}</p>
-
-<div class="note">
-<p><strong>Обратите внимание</strong>: Если пунктов в списке в обратном списке больше, чем значение атрибута <code>start</code>, счёт продолжится до нуля и далее отрицательные значения.</p>
-</div>
-
-<h3 id="value">value</h3>
-
-<p>Атрибут {{htmlattrxref("value","ol")}} позволит вам установить специфичные цифровые значения к пунктам списка. Например:</p>
-
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li value="2"&gt;Toast pita, leave to cool, then slice down the edge.&lt;/li&gt;
-  &lt;li value="4"&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
-  &lt;li value="6"&gt;Wash and chop the salad.&lt;/li&gt;
-  &lt;li value="8"&gt;Fill pita with salad, hummus, and fried halloumi.&lt;/li&gt;
-&lt;/ol&gt;</pre>
-
-<p>что даст вам такой результат:</p>
-
-<p>{{ EmbedLiveSample('value', '100%', 150) }}</p>
-
-<div class="note">
-<p><strong>Обратите внимание</strong>: Даже если вы используете нечисловой {{cssxref("list-style-type")}}, вам всё равно надо использовать эквивалентное цифровое значение в атрибуте <code>value</code>.</p>
-</div>
-
-<h2 id="Активное_изучение_Стилизация_вложенного_списка">Активное изучение: Стилизация вложенного списка</h2>
-
-<p>В этой сессии активного изучения, мы хотим, чтобы вы взяли всё что вы выучили выше и попробовали стилизовать вложенный список. Мы предоставили вам HTML и хотим, чтобы вы:</p>
-
-<ol>
- <li>Задали неупорядоченному списку квадратные маркеры.</li>
- <li>Задали пунктам неупорядоченного и упорядоченного списка 1,5 межстрочный интервал их размера шрифта.</li>
- <li>Задали упорядоченному списку маркеры в виде строчных букв.</li>
- <li>Не стесняйтесь играться с примерами списков столько сколько вам нравится, экспериментируя с типами маркеров, интервалами или со всем что вы найдёте.</li>
+```html
+<ol start="4">
+  <li>Toast pita, leave to cool, then slice down the edge.</li>
+  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>Wash and chop the salad.</li>
+  <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
+```
 
-<p>Если вы допустите ошибку, вы всегда можете сделать сброс используя кнопку <em>Reset</em>. Если вы застрянете, нажмите кнопку <em>Show solution </em>чтобы посмотреть возможный ответ.</p>
+что даст вам такой результат:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+{{ EmbedLiveSample('start', '100%', 150) }}
 
-<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
-  &lt;h2&gt;HTML Input&lt;/h2&gt;
-  &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;ul&gt;
-  &lt;li&gt;First, light the candle.&lt;/li&gt;
-  &lt;li&gt;Next, open the box.&lt;/li&gt;
-  &lt;li&gt;Finally, place the three magic items in the box, in this exact order, to complete the spell:
-    &lt;ol&gt;
-      &lt;li&gt;The book of spells&lt;/li&gt;
-      &lt;li&gt;The shiny rod&lt;/li&gt;
-      &lt;li&gt;The goblin statue&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;&lt;/textarea&gt;
+### reversed
 
-  &lt;h2&gt;CSS Input&lt;/h2&gt;
-  &lt;textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;/textarea&gt;
+Атрибут {{htmlattrxref("reversed","ol")}} начнёт отсчёт по убыванию вместо возрастания. Например:
 
-  &lt;h2&gt;Output&lt;/h2&gt;
-  &lt;div class="output" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"&gt;&lt;/div&gt;
-  &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
-    &lt;input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;"&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<ol start="4" reversed>
+  <li>Toast pita, leave to cool, then slice down the edge.</li>
+  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>Wash and chop the salad.</li>
+  <li>Fill pita with salad, hummus, and fried halloumi.</li>
+</ol>
+```
 
-<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
+что даст вам такой результат:
+
+{{ EmbedLiveSample('reversed', '100%', 150) }}
+
+> **Примечание:** **Обратите внимание**: Если пунктов в списке в обратном списке больше, чем значение атрибута `start`, счёт продолжится до нуля и далее отрицательные значения.
+
+### value
+
+Атрибут {{htmlattrxref("value","ol")}} позволит вам установить специфичные цифровые значения к пунктам списка. Например:
+
+```html
+<ol>
+  <li value="2">Toast pita, leave to cool, then slice down the edge.</li>
+  <li value="4">Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li value="6">Wash and chop the salad.</li>
+  <li value="8">Fill pita with salad, hummus, and fried halloumi.</li>
+</ol>
+```
+
+что даст вам такой результат:
+
+{{ EmbedLiveSample('value', '100%', 150) }}
+
+> **Примечание:** **Обратите внимание**: Даже если вы используете нечисловой {{cssxref("list-style-type")}}, вам всё равно надо использовать эквивалентное цифровое значение в атрибуте `value`.
+
+## Активное изучение: Стилизация вложенного списка
+
+В этой сессии активного изучения, мы хотим, чтобы вы взяли всё что вы выучили выше и попробовали стилизовать вложенный список. Мы предоставили вам HTML и хотим, чтобы вы:
+
+1.  Задали неупорядоченному списку квадратные маркеры.
+2.  Задали пунктам неупорядоченного и упорядоченного списка 1,5 межстрочный интервал их размера шрифта.
+3.  Задали упорядоченному списку маркеры в виде строчных букв.
+4.  Не стесняйтесь играться с примерами списков столько сколько вам нравится, экспериментируя с типами маркеров, интервалами или со всем что вы найдёте.
+
+Если вы допустите ошибку, вы всегда можете сделать сброс используя кнопку _Reset_. Если вы застрянете, нажмите кнопку _Show solution_ чтобы посмотреть возможный ответ.
+
+```html hidden
+<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+  <h2>HTML Input</h2>
+  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><ul>
+  <li>First, light the candle.</li>
+  <li>Next, open the box.</li>
+  <li>Finally, place the three magic items in the box, in this exact order, to complete the spell:
+    <ol>
+      <li>The book of spells</li>
+      <li>The shiny rod</li>
+      <li>The goblin statue</li>
+    </ol>
+  </li>
+</ul></textarea>
+
+  <h2>CSS Input</h2>
+  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
+
+  <h2>Output</h2>
+  <div class="output" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
+  <div class="controls">
+    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
+  </div>
+</div>
+```
+
+```js hidden
+var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -358,33 +350,28 @@ solution.addEventListener("click", function() {
 htmlInput.addEventListener("input", drawOutput);
 cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 800) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 800) }}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p>Счётчики CSS предоставляют расширенные инструменты для настройки счета и оформления списков, но они довольно сложные. Мы рекомендуем изучить это, если вы захотите размяться. Смотрите:</p>
+Счётчики CSS предоставляют расширенные инструменты для настройки счета и оформления списков, но они довольно сложные. Мы рекомендуем изучить это, если вы захотите размяться. Смотрите:
 
-<ul>
- <li>{{cssxref("@counter-style")}}</li>
- <li>{{cssxref("counter-increment")}}</li>
- <li>{{cssxref("counter-reset")}}</li>
-</ul>
+- {{cssxref("@counter-style")}}
+- {{cssxref("counter-increment")}}
+- {{cssxref("counter-reset")}}
 
-<h2 id="Заключение">Заключение</h2>
+## Заключение
 
-<p>В плане стилизации списки сравнительно легко освоить, как только вы освоите несколько связанных базовых принципов и специфичные свойства. В следующей статье мы перейдём к методам стилизации ссылок.</p>
+В плане стилизации списки сравнительно легко освоить, как только вы освоите несколько связанных базовых принципов и специфичные свойства. В следующей статье мы перейдём к методам стилизации ссылок.
 
-<p>{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}</p>
+{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-<h2 id="В_этом_модуле">В этом модуле</h2>
+## В этом модуле
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Основы стилизации текста и шрифта</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_lists">Стилизация списков</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_links">Стилизация ссылок</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Веб-шрифты</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">Вёрстка домашней страницы общественной школы</a></li>
-</ul>
+- [Основы стилизации текста и шрифта](/ru/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Стилизация списков](/ru/docs/Learn/CSS/Styling_text/Styling_lists)
+- [Стилизация ссылок](/ru/docs/Learn/CSS/Styling_text/Styling_links)
+- [Веб-шрифты](/ru/docs/Learn/CSS/Styling_text/Web_fonts)
+- [Вёрстка домашней страницы общественной школы](/ru/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

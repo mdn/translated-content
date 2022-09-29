@@ -16,144 +16,160 @@ tags:
 translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 original_slug: Learn/JavaScript/Первые_шаги/Useful_string_methods
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}
 
-<p>Мы рассмотрели базовые понятия, касающиеся строк. Давайте пойдём дальше и рассмотрим, какие полезные операции мы можем выполнять со строками, используя встроенные функции, такие как поиск длины текстовой строки, объединение и разделение строк, замена одного символа из строки другим и многое другое.</p>
+Мы рассмотрели базовые понятия, касающиеся строк. Давайте пойдём дальше и рассмотрим, какие полезные операции мы можем выполнять со строками, используя встроенные функции, такие как поиск длины текстовой строки, объединение и разделение строк, замена одного символа из строки другим и многое другое.
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row" style="background-color: rgb(255, 232, 212);"><strong>Необходимые знания:</strong></th>
-   <td style="background-color: rgb(255, 232, 212);">Базовая компьютерная грамотность, базовое понимание HTML и CSS, понимание того, что такое JavaScript.</td>
-  </tr>
-  <tr>
-   <th scope="row" style="background-color: rgb(255, 232, 212);"><strong>Задача:</strong></th>
-   <td style="background-color: rgb(255, 232, 212);">Понять, что строки являются объектами, и изучить, как использовать некоторые из основных методов, доступных для этих объектов для управления строками.</td>
-  </tr>
- </tbody>
-</table>
+| **Необходимые знания:** | Базовая компьютерная грамотность, базовое понимание HTML и CSS, понимание того, что такое JavaScript.                                                  |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Задача:**             | Понять, что строки являются объектами, и изучить, как использовать некоторые из основных методов, доступных для этих объектов для управления строками. |
 
-<h2 id="Строки_как_объекты">Строки как объекты</h2>
+## Строки как объекты
 
-<p id="Useful_string_methods">Почти всё в JavaScript является объектами. Когда вы создаёте строку, например: </p>
+Почти всё в JavaScript является объектами. Когда вы создаёте строку, например:
 
-<pre>let string = 'This is my string';</pre>
+```
+let string = 'This is my string';
+```
 
-<p>ваша переменная становится строковым объектом, и, как результат, ей доступно множество свойств и методов. Можете убедиться в этом, перейдя на страницу {{jsxref ("String")}} и просмотрев на ней список свойств и методов!</p>
+ваша переменная становится строковым объектом, и, как результат, ей доступно множество свойств и методов. Можете убедиться в этом, перейдя на страницу {{jsxref ("String")}} и просмотрев на ней список свойств и методов!
 
-<p><strong>Только не волнуйтесь!</strong> Большинство из них вам не нужно знать сейчас на ранней стадии вашего обучения. Но некоторые из них вы, возможно, будете использовать довольно часто. Их мы и рассмотрим.</p>
+**Только не волнуйтесь!** Большинство из них вам не нужно знать сейчас на ранней стадии вашего обучения. Но некоторые из них вы, возможно, будете использовать довольно часто. Их мы и рассмотрим.
 
-<p>Введем несколько примеров в <a href="/ru/docs/Learn/Common_questions/What_are_browser_developer_tools">консоль разработчика</a>.</p>
+Введем несколько примеров в [консоль разработчика](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools).
 
-<h3 id="Поиск_длины_строки">Поиск длины строки</h3>
+### Поиск длины строки
 
-<p>Это легко — вы просто используете свойство {{jsxref ("String.prototype.length", "length")}}. Попробуйте ввести следующие строки:</p>
+Это легко — вы просто используете свойство {{jsxref ("String.prototype.length", "length")}}. Попробуйте ввести следующие строки:
 
-<pre>let browserType = 'mozilla';
-browserType.length;</pre>
+```
+let browserType = 'mozilla';
+browserType.length;
+```
 
-<p>Результатом должно быть число 7, потому что слово «mozilla» состоит из 7 символов. Это свойство можно применить, например, если вы захотите найти длины серии имён, чтобы их можно было отображать по порядку длины или сообщить пользователю, что имя пользователя, которое он ввёл в поле формы, слишком длинное, если оно превышает определённую длину.</p>
+Результатом должно быть число 7, потому что слово «mozilla» состоит из 7 символов. Это свойство можно применить, например, если вы захотите найти длины серии имён, чтобы их можно было отображать по порядку длины или сообщить пользователю, что имя пользователя, которое он ввёл в поле формы, слишком длинное, если оно превышает определённую длину.
 
-<h3 id="Получение_определённого_строкового_символа">Получение определённого строкового символа</h3>
+### Получение определённого строкового символа
 
-<p>Вы можете вернуть любой символ внутри строки, используя <strong>обозначение в квадратных скобках.</strong> Это означает, что вы добавляете квадратные скобки ([ ]) в конце вашего имени переменной. В квадратных скобках вы указываете номер символа, который хотите вернуть. Например, чтобы получить первую букву, нужно написать:</p>
+Вы можете вернуть любой символ внутри строки, используя **обозначение в квадратных скобках.** Это означает, что вы добавляете квадратные скобки (\[ ]) в конце вашего имени переменной. В квадратных скобках вы указываете номер символа, который хотите вернуть. Например, чтобы получить первую букву, нужно написать:
 
-<pre class="syntaxbox">browserType[0];</pre>
+```
+browserType[0];
+```
 
-<p>Компьютеры считают от 0, а не 1! Чтобы получить последний символ <em>любой</em> строки, мы могли бы использовать следующую строку, объединив эту технику с свойством <code>length</code>:</p>
+Компьютеры считают от 0, а не 1! Чтобы получить последний символ _любой_ строки, мы могли бы использовать следующую строку, объединив эту технику с свойством `length`:
 
-<pre class="syntaxbox"> browserType[browserType.length-1];</pre>
+```
+ browserType[browserType.length-1];
+```
 
-<p>Длина слова «mozilla» равна 7, но, поскольку счёт начинается с 0, позиция последнего символа равна 6, поэтому нам нужна <code>length-1</code>. Такой способ можно использовать, чтобы найти первую букву ряда строк и упорядочить их по алфавиту.</p>
+Длина слова «mozilla» равна 7, но, поскольку счёт начинается с 0, позиция последнего символа равна 6, поэтому нам нужна `length-1`. Такой способ можно использовать, чтобы найти первую букву ряда строк и упорядочить их по алфавиту.
 
-<h3 id="Поиск_подстроки_внутри_строки_и_её_извлечение">Поиск подстроки внутри строки и её извлечение</h3>
+### Поиск подстроки внутри строки и её извлечение
 
-<ol>
- <li>Иногда вам может понадобиться выяснить, присутствует ли меньшая строка внутри большей (обычно мы говорим, что внутри строки есть подстрока). Это можно сделать с помощью метода {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, который принимает одну {{glossary ("parameter")}} - подстроку, которую вы хотите найти. Введите:
-  <pre>browserType.indexOf('zilla');</pre>
-  Это даёт нам результат 2, потому что подстрока «zilla» начинается в позиции 2 ("m" — 0, "o" — 1, "z" — 2) внутри «mozilla». Такой код можно использовать для фильтрации строк. Например, если есть список веб-адресов и вы хотите распечатать только те, которые содержат «mozilla».</li>
- <li>Это можно сделать по-другому, что, возможно, ещё более эффективно. Введите следующее:
-  <pre>browserType.indexOf('vanilla');</pre>
-  Это должно дать вам результат -1. Такое значение возвращается, когда подстрока, в данном случае «vanilla», не найдена в основной строке.<br>
-  <br>
-  Вы можете использовать это, чтобы найти все экземпляры строк, которые не содержат подстроку «mozilla» (для обратного эффекта, используйте оператор отрицания):
-  <pre>if(browserType.indexOf('mozilla') === -1) {
-  // сделать что-то, если 'mozilla'
-  // не является частью этой строки
-}
+1.  Иногда вам может понадобиться выяснить, присутствует ли меньшая строка внутри большей (обычно мы говорим, что внутри строки есть подстрока). Это можно сделать с помощью метода {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, который принимает одну {{glossary ("parameter")}} - подстроку, которую вы хотите найти. Введите:
 
-if(browserType.indexOf('mozilla') !== -1) {
-  // сделать что-то, если 'mozilla'
-  // является частью этой строки
-}</pre>
- </li>
- <li>Когда вы знаете, где подстрока начинается внутри строки, и вы знаете, на каком символе вы хотите её завершить, можно использовать {{jsxref ("String.prototype.slice ()", "slice ()")}}  для извлечения. Попробуйте следующее:
-  <pre>browserType.slice(0,3);</pre>
-  Это возвращает «moz». Первым параметром является позиция символа, с которого начинается извлечение, а второй параметр — позиция последнего символа, перед которым нужно отсечь строку<em>.</em> Таким образом, срез происходит с первой позиции, вплоть до последней позиции, но не включая её <em>(</em>помним, что <em>счёт идёт с 0, а не с 1)</em>. Также можно сказать, что второй параметр равен длине возвращаемой строки.</li>
- <li>Кроме того, если вы знаете, что хотите извлечь все остальные символы в строке после определённого символа, вам не нужно включать второй параметр. Достаточно включить только положение символа, с которого вы хотите начать извлечение оставшихся символов в строке. Введите:
-  <pre>browserType.slice(2);</pre>
-  Этот код возвращает «zilla» — это потому, что позиция символа 2 — это буква z, и поскольку вы не указали второй параметр, возвращаемая подстрока состояла из всех остальных символов в строке.</li>
-</ol>
+    ```
+    browserType.indexOf('zilla');
+    ```
 
-<div class="blockIndicator note">
-<p><strong>Примечание</strong>: второй параметр <code>slice()</code> не обязателен: если вы его не включите в код, обрезание закончится на конце оригинальной строки. Есть и другие варианты; изучите страницу {{jsxref ("String.prototype.slice ()", "slice ()")}}, чтобы узнать, что ещё вы можете узнать.</p>
+    Это даёт нам результат 2, потому что подстрока «zilla» начинается в позиции 2 ("m" — 0, "o" — 1, "z" — 2) внутри «mozilla». Такой код можно использовать для фильтрации строк. Например, если есть список веб-адресов и вы хотите распечатать только те, которые содержат «mozilla».
+
+2.  Это можно сделать по-другому, что, возможно, ещё более эффективно. Введите следующее:
+
+    ```
+    browserType.indexOf('vanilla');
+    ```
+
+    Это должно дать вам результат -1. Такое значение возвращается, когда подстрока, в данном случае «vanilla», не найдена в основной строке.
+
+    Вы можете использовать это, чтобы найти все экземпляры строк, которые не содержат подстроку «mozilla» (для обратного эффекта, используйте оператор отрицания):
+
+    ```
+    if(browserType.indexOf('mozilla') === -1) {
+      // сделать что-то, если 'mozilla'
+      // не является частью этой строки
+    }
+
+    if(browserType.indexOf('mozilla') !== -1) {
+      // сделать что-то, если 'mozilla'
+      // является частью этой строки
+    }
+    ```
+
+3.  Когда вы знаете, где подстрока начинается внутри строки, и вы знаете, на каком символе вы хотите её завершить, можно использовать {{jsxref ("String.prototype.slice ()", "slice ()")}} для извлечения. Попробуйте следующее:
+
+    ```
+    browserType.slice(0,3);
+    ```
+
+    Это возвращает «moz». Первым параметром является позиция символа, с которого начинается извлечение, а второй параметр — позиция последнего символа, перед которым нужно отсечь строку*.* Таким образом, срез происходит с первой позиции, вплоть до последней позиции, но не включая её *(*помним, что _счёт идёт с 0, а не с 1)_. Также можно сказать, что второй параметр равен длине возвращаемой строки.
+
+4.  Кроме того, если вы знаете, что хотите извлечь все остальные символы в строке после определённого символа, вам не нужно включать второй параметр. Достаточно включить только положение символа, с которого вы хотите начать извлечение оставшихся символов в строке. Введите:
+
+    ```
+    browserType.slice(2);
+    ```
+
+    Этот код возвращает «zilla» — это потому, что позиция символа 2 — это буква z, и поскольку вы не указали второй параметр, возвращаемая подстрока состояла из всех остальных символов в строке.
+
+> **Примечание:** второй параметр `slice()` не обязателен: если вы его не включите в код, обрезание закончится на конце оригинальной строки. Есть и другие варианты; изучите страницу {{jsxref ("String.prototype.slice ()", "slice ()")}}, чтобы узнать, что ещё вы можете узнать.
+
+### Изменение регистра
+
+Строковые методы {{jsxref ("String.prototype.toLowerCase ()", "toLowerCase ()")}} и {{jsxref ("String.prototype.toUpperCase ()", "toUpperCase ()")}} преобразовывают все символы в строке в нижний или верхний регистр соответственно. Этот способ можно применить, если вы хотите нормализовать все введённые пользователем данные перед их сохранением в базе данных.
+
+Попробуем ввести следующие строки, чтобы узнать, что происходит:
+
+```
+var radData = 'My NaMe Is MuD';
+radData.toLowerCase();
+radData.toUpperCase();
+```
+
+### Обновление частей строки
+
+Вы можете заменить одну подстроку внутри строки на другую подстроку, используя метод {{jsxref ("String.prototype.replace ()", "replace ()")}}. Этот метод работает очень просто на базовом уровне, но у него есть некоторые продвинутые свойства, но мы пока не будем вдаваться в детали.
+
+Он принимает два параметра — строку, которую вы хотите заменить, и строку, которую вы хотите вставить вместо заменяемой. Попробуйте этот пример:
+
+```
+browserType.replace('moz','van');
+```
+
+Обратите внимание, что для фактического получения обновлённого значения, отражённого в переменной browserType в реальной программе, вам нужно будет установить значение переменной в результате операции; он не просто обновляет значение подстроки автоматически. Таким образом, вы должны были бы написать это: `browserType = browserType.replace('moz','van');`
+
+## Активные примеры обучения
+
+В этом разделе мы дадим вам попробовать набить руку и вместе напишем код строковой манипуляции. В каждом упражнении ниже у нас есть массив строк и цикл, который обрабатывает каждое значение в массиве и отображает его в маркированном списке. Вам не нужно понимать массивы или циклы прямо сейчас — это будет объяснено в будущих статьях. Все, что вам нужно сделать в каждом случае, — написать код, который выводит строки в том формате, в котором мы предлагаем.
+
+В каждом примере есть кнопка _Сбросить_, которую вы можете использовать для сброса кода, если вы допустили ошибку и не можете заставить его работать снова, а кнопку _Показать решение_ вы можете нажать, чтобы увидеть потенциальный ответ, если вы действительно застрянете на решении.
+
+### Фильтрация приветственных сообщений
+
+В первом упражнении мы начнём с простого: у нас есть множество сообщений поздравительных открыток, но мы хотим отсортировать их, чтобы перечислять только рождественские сообщения. Мы хотим, чтобы вы заполнили условный тест внутри структуры if( ... ), чтобы проверить каждую строку и отобразить её в списке, только если это рождественское сообщение.
+
+1.  Сначала подумайте о том, как вы можете проверить, является ли сообщение в каждом случае рождественским сообщением. Какая строка присутствует во всех этих сообщениях и какой метод вы можете использовать для проверки?
+2.  Затем вам нужно будет написать условный тест _операнд1 оператор операнд2_. Соответствует ли результат слева результату справа? Или в этом случае вызов метода слева возвращает результат справа?
+3.  Подсказка. В этом случае, вероятно, полезнее проверить, не является ли часть строки не равной (!==) определённому результату.
+
+```html hidden
+<h2>Результат</h2>
+
+<div class="output" style="min-height: 125px;">
+
+<ul>
+
+</ul>
+
 </div>
 
-<h3 id="Изменение_регистра">Изменение регистра</h3>
+<h2>Редактируемый код</h2>
+<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
 
-<p>Строковые методы {{jsxref ("String.prototype.toLowerCase ()", "toLowerCase ()")}} и {{jsxref ("String.prototype.toUpperCase ()", "toUpperCase ()")}} преобразовывают все символы в строке в нижний или верхний регистр соответственно. Этот способ можно применить, если вы хотите нормализовать все введённые пользователем данные перед их сохранением в базе данных.</p>
-
-<p>Попробуем ввести следующие строки, чтобы узнать, что происходит:</p>
-
-<pre>var radData = 'My NaMe Is MuD';
-radData.toLowerCase();
-radData.toUpperCase();</pre>
-
-<h3 id="Обновление_частей_строки">Обновление частей строки</h3>
-
-<p>Вы можете заменить одну подстроку внутри строки на другую подстроку, используя метод {{jsxref ("String.prototype.replace ()", "replace ()")}}. Этот метод работает очень просто на базовом уровне, но у него есть некоторые продвинутые свойства, но мы пока не будем вдаваться в детали.</p>
-
-<p>Он принимает два параметра — строку, которую вы хотите заменить, и строку, которую вы хотите вставить вместо заменяемой. Попробуйте этот пример:</p>
-
-<pre>browserType.replace('moz','van');</pre>
-
-<p>Обратите внимание, что для фактического получения обновлённого значения, отражённого в переменной browserType в реальной программе, вам нужно будет установить значение переменной в результате операции; он не просто обновляет значение подстроки автоматически. Таким образом, вы должны были бы написать это: <code>browserType = browserType.replace('moz','van');</code></p>
-
-<h2 id="Активные_примеры_обучения">Активные примеры обучения</h2>
-
-<p>В этом разделе мы дадим вам попробовать набить руку и вместе напишем код строковой манипуляции. В каждом упражнении ниже у нас есть массив строк и цикл, который обрабатывает каждое значение в массиве и отображает его в маркированном списке. Вам не нужно понимать массивы или циклы прямо сейчас — это будет объяснено в будущих статьях. Все, что вам нужно сделать в каждом случае, — написать код, который выводит строки в том формате, в котором мы предлагаем.</p>
-
-<p>В каждом примере есть кнопка <em>Сбросить</em>, которую вы можете использовать для сброса кода, если вы допустили ошибку и не можете заставить его работать снова, а кнопку <em>Показать решение</em> вы можете нажать, чтобы увидеть потенциальный ответ, если вы действительно застрянете на решении.</p>
-
-<h3 id="Фильтрация_приветственных_сообщений">Фильтрация приветственных сообщений</h3>
-
-<p>В первом упражнении мы начнём с простого: у нас есть множество сообщений поздравительных открыток, но мы хотим отсортировать их, чтобы перечислять только рождественские сообщения. Мы хотим, чтобы вы заполнили условный тест внутри структуры if( ... ), чтобы проверить каждую строку и отобразить её в списке, только если это рождественское сообщение.</p>
-
-<ol>
- <li>Сначала подумайте о том, как вы можете проверить, является ли сообщение в каждом случае рождественским сообщением. Какая строка присутствует во всех этих сообщениях и какой метод вы можете использовать для проверки?</li>
- <li>Затем вам нужно будет написать условный тест <em>операнд1 оператор операнд2</em>. Соответствует ли результат слева результату справа? Или в этом случае вызов метода слева возвращает результат справа?</li>
- <li>Подсказка. В этом случае, вероятно, полезнее проверить, не является ли часть строки не равной (!==) определённому результату.</li>
-</ol>
-
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;h2&gt;Результат&lt;/h2&gt;
-
-&lt;div class="output" style="min-height: 125px;"&gt;
-
-&lt;ul&gt;
-
-&lt;/ul&gt;
-
-&lt;/div&gt;
-
-&lt;h2&gt;Редактируемый код&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;</code>Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).<code class="language-html">&lt;/p&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 290px; width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var greetings = ['С днём рождения!',
@@ -162,7 +178,7 @@ var greetings = ['С днём рождения!',
                  'Ты — та, кто нужен мне на Рождество',
                  'Поправляйся скорее'];
 
-for (var i = 0; i &lt; greetings.length; i++) {
+for (var i = 0; i < greetings.length; i++) {
   var input = greetings[i];
   // Ваше решение должно быть в фигурных скобках
   // ниже: вы должны что-то добавить
@@ -173,14 +189,16 @@ for (var i = 0; i &lt; greetings.length; i++) {
     list.appendChild(listItem);
   }
 }
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Сбросить"&gt;
-  &lt;input id="solution" type="button" value="Показать решение"&gt;
-&lt;/div&gt;</code></pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Сбросить">
+  <input id="solution" type="button" value="Показать решение">
+</div>
+```
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -198,9 +216,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</code></pre>
+}
+```
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -214,22 +234,22 @@ reset.addEventListener('click', function() {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = '</code><code class="language-html">Показать решение</code><code class="language-js">';
+  solution.value = 'Показать решение';
   updateCode();
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === '</code><code class="language-html">Показать решение</code><code class="language-js">') {
+  if(solution.value === 'Показать решение') {
     textarea.value = solutionEntry;
-    solution.value = '</code><code class="language-html">Спрятать решение</code><code class="language-js">';
+    solution.value = 'Спрятать решение';
   } else {
     textarea.value = userEntry;
-    solution.value = '</code><code class="language-html">Показать решение</code><code class="language-js">';
+    solution.value = 'Показать решение';
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'</code><code class="language-html">С днём рождения!</code><code class="language-js">\',\n \'</code><code class="language-html">С Рождеством, любовь моя</code><code class="language-js">\',\n \'</code><code class="language-html">Счастливого Рождества всей твоей семье</code><code class="language-js">\',\n \'</code><code class="language-html">Ты — та, кто нужен мне на Рождество</code><code class="language-js">\',\n \'</code><code class="language-html">Поправляйся скорее</code><code class="language-js">\'];\n\nfor(var i = 0; i &lt; greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Рождеств\') !== -1) {\n var result = input;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'С днём рождения!\',\n \'С Рождеством, любовь моя\',\n \'Счастливого Рождества всей твоей семье\',\n \'Ты — та, кто нужен мне на Рождество\',\n \'Поправляйся скорее\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Рождеств\') !== -1) {\n var result = input;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -268,54 +288,48 @@ function insertAtCaret(text) {
 textarea.onkeyup = function(){
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === '</code><code class="language-html">Показать решение</code><code class="language-js">') {
+  if(solution.value === 'Показать решение') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
   }
 
   updateCode();
-};</code></pre>
+};
+```
+
+{{ EmbedLiveSample('Playable_code', '100%', 590, "", "", "hide-codepen-jsfiddle") }}
+
+### Исправление регистра (_размера букв в тексте—прим. пер._)
+
+В этом упражнении у нас есть названия городов в Великобритании, но написанных разным регистром. Мы хотим, чтобы вы изменили их так, чтобы они были в нижнем регистре, за исключением первой буквы. Хороший способ сделать это:
+
+1.  Преобразуйте всю строку, содержащуюся в переменной input, в нижний регистр и сохраните её в новой переменной.
+2.  Возьмите первую букву строки в этой новой переменной и сохраните её в другой переменной.
+3.  Используя эту последнюю переменную в качестве подстроки, замените первую букву строчной строки первой буквой строчной строки, изменённой на верхний регистр. Сохраните результат этой процедуры замены в другой новой переменной.
+4.  Измените значение переменной `result` на равную конечному результату (не `input`).
+
+> **Примечание:** Подсказка — параметры строковых методов не обязательно должны быть строковыми литералами; они также могут быть переменными или даже переменными с вызываемым ими методом.
+
+```html hidden
+<h2>Результат</h2>
+
+<div class="output" style="min-height: 125px;">
+
+<ul>
+
+</ul>
+
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 590, "", "", "hide-codepen-jsfiddle") }}</p>
+<h2>Редактируемый код</h2>
+<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
 
-<h3 id="Исправление_регистра_размера_букв_в_тексте—прим._пер.">Исправление регистра (<em>размера букв в тексте—прим. пер.</em>)</h3>
-
-<p>В этом упражнении у нас есть названия городов в Великобритании, но написанных разным регистром. Мы хотим, чтобы вы изменили их так, чтобы они были в нижнем регистре, за исключением первой буквы. Хороший способ сделать это:</p>
-
-<ol>
- <li>Преобразуйте всю строку, содержащуюся в переменной input, в нижний регистр и сохраните её в новой переменной.</li>
- <li>Возьмите первую букву строки в этой новой переменной и сохраните её в другой переменной.</li>
- <li>Используя эту последнюю переменную в качестве подстроки, замените первую букву строчной строки первой буквой строчной строки, изменённой на верхний регистр. Сохраните результат этой процедуры замены в другой новой переменной.</li>
- <li>Измените значение переменной <code>result</code> на равную конечному результату (не <code>input</code>).</li>
-</ol>
-
-<div class="note">
-<p><strong>Примечание</strong>: Подсказка — параметры строковых методов не обязательно должны быть строковыми литералами; они также могут быть переменными или даже переменными с вызываемым ими методом.</p>
-</div>
-
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;h2&gt;Результат&lt;/h2&gt;
-
-&lt;div class="output" style="min-height: 125px;"&gt;
-
-&lt;ul&gt;
-
-&lt;/ul&gt;
-
-&lt;/div&gt;
-
-&lt;h2&gt;Редактируемый код&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;</code>Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).<code class="language-html">&lt;/p&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 250px; width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var cities = ['лонДон', 'МанЧЕСТёр', 'БиРминГЕМ', 'лиВЕРпуЛЬ'];
-for(var i = 0; i &lt; cities.length; i++) {
+for(var i = 0; i < cities.length; i++) {
   var input = cities[i];
   // пишите код ниже
 
@@ -324,14 +338,16 @@ for(var i = 0; i &lt; cities.length; i++) {
   listItem.textContent = result;
   list.appendChild(listItem);
 }
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Сбросить"&gt;
-  &lt;input id="solution" type="button" value="Показать решение"&gt;
-&lt;/div&gt;</code></pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Сбросить">
+  <input id="solution" type="button" value="Показать решение">
+</div>
+```
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -349,9 +365,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</code></pre>
+}
+```
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -365,22 +383,22 @@ reset.addEventListener('click', function() {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = '</code><code class="language-html">Показать решение</code><code class="language-js">';
+  solution.value = 'Показать решение';
   updateCode();
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === '</code><code class="language-html">Показать решение</code><code class="language-js">') {
+  if(solution.value === 'Показать решение') {
     textarea.value = solutionEntry;
     solution.value = 'Спрятать решение';
   } else {
     textarea.value = userEntry;
-    solution.value = '</code><code class="language-html">Показать решение</code><code class="language-js">';
+    solution.value = 'Показать решение';
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'</code><code class="language-html">лонДон</code><code class="language-js">\', \'</code><code class="language-html">МанЧЕСТёр</code><code class="language-js">\', \'</code><code class="language-html">БиРминГЕМ</code><code class="language-js">\', \'</code><code class="language-html">лиВЕРпуЛЬ</code><code class="language-js">\'];\n\nfor(var i = 0; i &lt; cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'лонДон\', \'МанЧЕСТёр\', \'БиРминГЕМ\', \'лиВЕРпуЛЬ\'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -419,55 +437,55 @@ function insertAtCaret(text) {
 textarea.onkeyup = function(){
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === '</code><code class="language-html">Показать решение</code><code class="language-js">') {
+  if(solution.value === 'Показать решение') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
   }
 
   updateCode();
-};</code></pre>
+};
+```
+
+{{ EmbedLiveSample('Playable_code_2', '100%', 550, "", "", "hide-codepen-jsfiddle") }}
+
+### Создание новых строк из старых частей
+
+В этом последнем упражнении массив содержит кучу строк, содержащих информацию о железнодорожных станциях на севере Англии. Строки представляют собой элементы данных, которые содержат трёхбуквенный код станции, за которым следуют некоторые машиночитаемые данные, за которыми следует точка с запятой, а затем название станции, пригодное для чтения человеком. Например:
+
+```
+MAN675847583748sjt567654;Manchester Piccadilly
+```
+
+Мы хотим извлечь код станции и имя и поместить их в строку со следующей структурой:
+
+```
+MAN: Manchester Piccadilly
+```
+
+Мы бы рекомендовали реализовать это следующим образом:
+
+1.  Извлеките трёхбуквенный код станции и сохраните его в новой переменной.
+2.  Найдите номер символьного номера точки с запятой.
+3.  Извлеките название для чтения человеком, используя номер индекса точки с запятой в качестве контрольной точки и сохраните его в новой переменной.
+4.  Объедините две новые переменные и строковый литерал, чтобы сделать финальную строку.
+5.  Измените значение переменной `result` равной конечной строке (не `input`).
+
+```html hidden
+<h2>Результат</h2>
+
+<div class="output" style="min-height: 125px;">
+
+<ul>
+
+</ul>
+
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 550, "", "", "hide-codepen-jsfiddle") }}</p>
+<h2>Редактируемый код</h2>
+<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
 
-<h3 id="Создание_новых_строк_из_старых_частей">Создание новых строк из старых частей</h3>
-
-<p>В этом последнем упражнении массив содержит кучу строк, содержащих информацию о железнодорожных станциях на севере Англии. Строки представляют собой элементы данных, которые содержат трёхбуквенный код станции, за которым следуют некоторые машиночитаемые данные, за которыми следует точка с запятой, а затем название станции, пригодное для чтения человеком. Например:</p>
-
-<pre>MAN675847583748sjt567654;Manchester Piccadilly</pre>
-
-<p>Мы хотим извлечь код станции и имя и поместить их в строку со следующей структурой:</p>
-
-<pre>MAN: Manchester Piccadilly</pre>
-
-<p>Мы бы рекомендовали реализовать это следующим образом:</p>
-
-<ol>
- <li>Извлеките трёхбуквенный код станции и сохраните его в новой переменной.</li>
- <li>Найдите номер символьного номера точки с запятой.</li>
- <li>Извлеките название для чтения человеком, используя номер индекса точки с запятой в качестве контрольной точки и сохраните его в новой переменной.</li>
- <li>Объедините две новые переменные и строковый литерал, чтобы сделать финальную строку.</li>
- <li>Измените значение переменной <code>result</code> равной конечной строке (не <code>input</code>). </li>
-</ol>
-
-<div class="hidden">
-<h6 id="Playable_code_3">Playable code 3</h6>
-
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;h2&gt;Результат&lt;/h2&gt;
-
-&lt;div class="output" style="min-height: 125px;"&gt;
-
-&lt;ul&gt;
-
-&lt;/ul&gt;
-
-&lt;/div&gt;
-
-&lt;h2&gt;Редактируемый код&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;</code>Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).<code class="language-html">&lt;/p&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 285px; width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
@@ -476,7 +494,7 @@ var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                 'SYB4f65hf75f736463;Stalybridge',
                 'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
-for (var i = 0; i &lt; stations.length; i++) {
+for (var i = 0; i < stations.length; i++) {
   var input = stations[i];
   // пишите ваш код ниже
 
@@ -485,14 +503,16 @@ for (var i = 0; i &lt; stations.length; i++) {
   listItem.textContent = result;
   list.appendChild(listItem);
 }
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Сбросить"&gt;
-  &lt;input id="solution" type="button" value="Показать решение"&gt;
-&lt;/div&gt;</code></pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Сбросить">
+  <input id="solution" type="button" value="Показать решение">
+</div>
+```
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -510,9 +530,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</code></pre>
+}
+```
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -526,22 +548,22 @@ reset.addEventListener('click', function() {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = '</code><code class="language-html">Показать решение</code><code class="language-js">';
+  solution.value = 'Показать решение';
   updateCode();
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === '</code><code class="language-html">Показать решение</code><code class="language-js">') {
+  if(solution.value === 'Показать решение') {
     textarea.value = solutionEntry;
-    solution.value = '</code><code class="language-html">Спрятать решение</code><code class="language-js">';
+    solution.value = 'Спрятать решение';
   } else {
     textarea.value = userEntry;
-    solution.value = '</code><code class="language-html">Показать решение</code><code class="language-js">';
+    solution.value = 'Показать решение';
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n \'GNF576746573fhdg4737dh4;Greenfield\',\n \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n \'SYB4f65hf75f736463;Stalybridge\',\n \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i &lt; stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(\';\');\n var name = input.slice(semiC + 1);\n var result = code + \': \' + name;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n \'GNF576746573fhdg4737dh4;Greenfield\',\n \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n \'SYB4f65hf75f736463;Stalybridge\',\n \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(\';\');\n var name = input.slice(semiC + 1);\n var result = code + \': \' + name;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n}';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -580,34 +602,32 @@ function insertAtCaret(text) {
 textarea.onkeyup = function(){
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === '</code><code class="language-html">Показать решение</code><code class="language-js">') {
+  if(solution.value === 'Показать решение') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
   }
 
   updateCode();
-};</code></pre>
-</div>
+};
+```
 
-<p>{{ EmbedLiveSample('Playable_code_3', '100%', 585, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Playable_code_3', '100%', 585, "", "", "hide-codepen-jsfiddle") }}
 
-<h2 id="Заключение">Заключение</h2>
+## Заключение
 
-<p>Нельзя не согласиться с тем, что способность обрабатывать слова и предложения в программировании очень важна — особенно в JavaScript, поскольку веб-сайты — все связаны с людьми. Эта статья дала вам основы, которые вам нужно знать о манипуляции строками на данный момент. Это пойдёт вам на пользу, когда вы займётесь более сложными темами в будущем. Далее мы рассмотрим последний важный тип данных, на который нам нужно сосредоточиться в краткосрочной перспективе — массивы.</p>
+Нельзя не согласиться с тем, что способность обрабатывать слова и предложения в программировании очень важна — особенно в JavaScript, поскольку веб-сайты — все связаны с людьми. Эта статья дала вам основы, которые вам нужно знать о манипуляции строками на данный момент. Это пойдёт вам на пользу, когда вы займётесь более сложными темами в будущем. Далее мы рассмотрим последний важный тип данных, на который нам нужно сосредоточиться в краткосрочной перспективе — массивы.
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}
 
-<h2 id="В_этом_модуле">В этом модуле</h2>
+## В этом модуле
 
-<ul>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/What_is_JavaScript">Что такое JavaScript?</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/A_first_splash">Знакомство с JavaScript</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/%D0%A7%D1%82%D0%BE_%D0%BF%D0%BE%D1%88%D0%BB%D0%BE_%D0%BD%D0%B5_%D1%82%D0%B0%D0%BA">Устранение ошибок в JavaScript</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Variables">Переменные — место хранения необходимой информации</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Math">Базовая математика в JavaScript</a></li>
- <li><a href="/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/%D0%A1%D1%82%D1%80%D0%BE%D0%BA%D0%B8">Работа с текстом — строки в JavaScript</a></li>
- <li><a href="/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Useful_string_methods">Полезные методы для строк</a></li>
- <li><a href="/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Arrays">Массивы</a></li>
- <li><a href="/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C_%D0%B3%D0%BB%D1%83%D1%8B%D1%85_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B9">Генератор глупых историй</a></li>
-</ul>
+- [Что такое JavaScript?](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/What_is_JavaScript)
+- [Знакомство с JavaScript](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/A_first_splash)
+- [Устранение ошибок в JavaScript](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/%D0%A7%D1%82%D0%BE_%D0%BF%D0%BE%D1%88%D0%BB%D0%BE_%D0%BD%D0%B5_%D1%82%D0%B0%D0%BA)
+- [Переменные — место хранения необходимой информации](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Variables)
+- [Базовая математика в JavaScript](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Math)
+- [Работа с текстом — строки в JavaScript](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/%D0%A1%D1%82%D1%80%D0%BE%D0%BA%D0%B8)
+- [Полезные методы для строк](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Useful_string_methods)
+- [Массивы](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Arrays)
+- [Генератор глупых историй](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C_%D0%B3%D0%BB%D1%83%D1%8B%D1%85_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B9)

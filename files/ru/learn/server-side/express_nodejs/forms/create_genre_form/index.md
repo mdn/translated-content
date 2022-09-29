@@ -3,31 +3,35 @@ title: Create genre form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 ---
-<p>В этом подразделе рассказано, как сделать страницу для создания жанра (<code>Genre</code>). Хорошая точка для старта, у жанра всего одно поле - <code>name</code>. Как и для любой другой страницы, здесь потребуется внести изменения в соответствующие маршрут, контроллер и шаблон (route, controller, view).</p>
+В этом подразделе рассказано, как сделать страницу для создания жанра (`Genre`). Хорошая точка для старта, у жанра всего одно поле - `name`. Как и для любой другой страницы, здесь потребуется внести изменения в соответствующие маршрут, контроллер и шаблон (route, controller, view).
 
-<h2 id="Import_validation_and_sanitisation_methods">Import validation and sanitisation methods</h2>
+## Import validation and sanitisation methods
 
-<p>To use the <em>express-validator </em>in our controllers we have to <em>require</em> the functions we want to use from the <strong>'express-validator/check</strong>' and <strong>'express-validator/filter</strong>' modules.</p>
+To use the _express-validator_ in our controllers we have to _require_ the functions we want to use from the **'express-validator/check**' and **'express-validator/filter**' modules.
 
-<p>Open <strong>/controllers/genreController.js</strong>, and add the following line at the top of the file:</p>
+Open **/controllers/genreController.js**, and add the following line at the top of the file:
 
-<pre class="brush: js">const validator = require('express-validator');
-</pre>
+```js
+const validator = require('express-validator');
+```
 
-<h2 id="Controller—get_route">Controller—get route</h2>
+## Controller—get route
 
-<p>Find the exported <code>genre_create_get()</code> controller method and replace it with the following code. This simply renders the <strong>genre_form.pug</strong> view, passing a title variable.</p>
+Find the exported `genre_create_get()` controller method and replace it with the following code. This simply renders the **genre_form.pug** view, passing a title variable.
 
-<pre class="brush: js">// Display Genre create form on GET.
+```js
+// Display Genre create form on GET.
 exports.genre_create_get = function(req, res, next) {
   res.render('genre_form', { title: 'Create Genre' });
-};</pre>
+};
+```
 
-<h2 id="Controller—post_route">Controller—post route</h2>
+## Controller—post route
 
-<p>Find the exported <code>genre_create_post()</code> controller method and replace it with the following code.</p>
+Find the exported `genre_create_post()` controller method and replace it with the following code.
 
-<pre class="brush: js">// Handle Genre create on POST.
+```js
+// Handle Genre create on POST.
 exports.genre_create_post =  [
 
   // Validate that the name field is not empty.
@@ -37,7 +41,7 @@ exports.genre_create_post =  [
   validator.sanitizeBody('name').escape(),
 
   // Process request after validation and sanitization.
-  (req, res, next) =&gt; {
+  (req, res, next) => {
 
     // Extract the validation errors from a request.
     const errors = validator.validationResult(req);
@@ -77,26 +81,28 @@ exports.genre_create_post =  [
          });
     }
   }
-];</pre>
+];
+```
 
-<p>The first thing to note is that instead of being a single middleware function (with arguments <code>(req, res, next)</code>) the controller specifies an <em>array</em> of middleware functions. The array is passed to the router function and each method is called in order.</p>
+The first thing to note is that instead of being a single middleware function (with arguments `(req, res, next)`) the controller specifies an _array_ of middleware functions. The array is passed to the router function and each method is called in order.
 
-<div class="note">
-<p><strong>Note:</strong> This approach is needed, because the sanitisers/validators are middleware functions.</p>
-</div>
+> **Примечание:** This approach is needed, because the sanitisers/validators are middleware functions.
 
-<p>The first method in the array defines a validator (<code>validator.body()</code>) from the <code>validator</code>  module to check that the <em>name</em> field is not empty (calling <code>trim()</code> to remove any trailing/leading whitespace before performing the validation). The  second method in the array (<code>validator.sanitizeBody()</code>) creates a sanitizer to <code>escape()</code> any dangerous  HTML characters in the <em>name</em> field.</p>
+The first method in the array defines a validator (`validator.body()`) from the `validator` module to check that the _name_ field is not empty (calling `trim()` to remove any trailing/leading whitespace before performing the validation). The second method in the array (`validator.sanitizeBody()`) creates a sanitizer to `escape()` any dangerous HTML characters in the _name_ field.
 
-<pre class="brush: js">// Validate that the name field is not empty.
-validator<code>.</code>body('name', 'Genre name required').isLength({ min: 1 }).trim(),
+```js
+// Validate that the name field is not empty.
+validator.body('name', 'Genre name required').isLength({ min: 1 }).trim(),
 
 // Sanitize (escape) the name field.
-validator.sanitizeBody('name').escape()</pre>
+validator.sanitizeBody('name').escape()
+```
 
-<p>After specifying the validators and sanitizers we create a middleware function to extract any validation errors. We use <code>isEmpty()</code> to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitised genre object and the array of error messages (<code>errors.array()</code>).</p>
+After specifying the validators and sanitizers we create a middleware function to extract any validation errors. We use `isEmpty()` to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitised genre object and the array of error messages (`errors.array()`).
 
-<pre class="brush: js">// Process request after validation and sanitization.
-(req, res, next) =&gt; {
+```js
+// Process request after validation and sanitization.
+(req, res, next) => {
 
   // Extract the validation errors from a request.
   const errors = validator.validationResult(req);
@@ -113,13 +119,15 @@ validator.sanitizeBody('name').escape()</pre>
   }
   else {
     // Data from form is valid.
-    ... &lt;save the result/&gt; ...
+    ... <save the result/> ...
   }
-};</pre>
+};
+```
 
-<p>If the genre name data is valid then we check if a <code>Genre</code> with the same name already exists (as we don't want to create duplicates). If it does, we redirect to the existing genre's detail page. If not, we save the new <code>Genre</code> and redirect to its detail page.</p>
+If the genre name data is valid then we check if a `Genre` with the same name already exists (as we don't want to create duplicates). If it does, we redirect to the existing genre's detail page. If not, we save the new `Genre` and redirect to its detail page.
 
-<pre class="brush: js">// Check if Genre with same name already exists.
+```js
+// Check if Genre with same name already exists.
 Genre.findOne({ 'name': req.body.name })
   .exec( function(err, found_genre) {
   if (err) { return next(err); }
@@ -134,20 +142,24 @@ Genre.findOne({ 'name': req.body.name })
           res.redirect(genre.url);
         });
     }
-});</pre>
+});
+```
 
-<p>This same pattern is used in all our post controllers: we run validators, then sanitisers,  then check for errors and either re-render the form with error information or save the data. </p>
+This same pattern is used in all our post controllers: we run validators, then sanitisers, then check for errors and either re-render the form with error information or save the data.
 
-<h2 id="View">View</h2>
+## View
 
-<p>The same view is rendered in both the <code>GET</code> and <code>POST</code> controllers/routes when we create a new <code>Genre</code> (and later on it is also used when we <em>update</em> a <code>Genre</code>). In the <code>GET</code> case the form is empty, and we just pass a title variable. In the <code>POST</code> case the user has previously entered invalid data—in the <code>genre</code> variable we pass back a sanitized version of the entered data and in the <code>errors</code> variable we pass back an array of error messages.</p>
+The same view is rendered in both the `GET` and `POST` controllers/routes when we create a new `Genre` (and later on it is also used when we _update_ a `Genre`). In the `GET` case the form is empty, and we just pass a title variable. In the `POST` case the user has previously entered invalid data—in the `genre` variable we pass back a sanitized version of the entered data and in the `errors` variable we pass back an array of error messages.
 
-<pre class="brush: js">res.render('genre_form', { title: 'Create Genre'});
-res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});</pre>
+```js
+res.render('genre_form', { title: 'Create Genre'});
+res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
+```
 
-<p>Create <strong>/views/genre_form.pug</strong> and copy in the text below.</p>
+Create **/views/genre_form.pug** and copy in the text below.
 
-<pre class="brush: html">extends layout
+```html
+extends layout
 
 block content
   h1 #{title}
@@ -161,39 +173,36 @@ block content
   if errors
    ul
     for error in errors
-     li!= error.msg</pre>
+     li!= error.msg
+```
 
-<p>Much of this template will be familiar from our previous tutorials. First, we extend the <strong>layout.pug</strong> base template and override the <code>block</code> named '<strong>content</strong>'. We then have a heading with the <code>title</code> we passed in from the controller (via the <code>render()</code> method).</p>
+Much of this template will be familiar from our previous tutorials. First, we extend the **layout.pug** base template and override the `block` named '**content**'. We then have a heading with the `title` we passed in from the controller (via the `render()` method).
 
-<p>Next, we have the pug code for our HTML form that uses the <code>POST</code> <code>method</code> to send the data to the server, and because the <code>action</code> is an empty string, will send the data to the same URL as the page.</p>
+Next, we have the pug code for our HTML form that uses the `POST` `method` to send the data to the server, and because the `action` is an empty string, will send the data to the same URL as the page.
 
-<p>The form defines a single required field of type "text" called "name". The default <em>value</em> of the field depends on whether the <code>genre</code> variable is defined. If called from the <code>GET</code> route it will be empty as this is a new form. If called from a <code>POST</code> route it will contain the (invalid) value originally entered by the user.</p>
+The form defines a single required field of type "text" called "name". The default _value_ of the field depends on whether the `genre` variable is defined. If called from the `GET` route it will be empty as this is a new form. If called from a `POST` route it will contain the (invalid) value originally entered by the user.
 
-<p>The last part of the page is the error code. This simply prints a list of errors, if the error variable has been defined (in other words, this section will not appear when the template is rendered on the <code>GET</code> route).</p>
+The last part of the page is the error code. This simply prints a list of errors, if the error variable has been defined (in other words, this section will not appear when the template is rendered on the `GET` route).
 
-<div class="note">
-<p><strong>Note:</strong> This is just one way to render the errors. You can also get the names of the affected fields from the error variable, and use these to control where the error messages are rendered, whether to apply custom CSS, etc.</p>
-</div>
+> **Примечание:** This is just one way to render the errors. You can also get the names of the affected fields from the error variable, and use these to control where the error messages are rendered, whether to apply custom CSS, etc.
 
-<h2 id="What_does_it_look_like">What does it look like?</h2>
+## What does it look like?
 
-<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new genre </em>link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.</p>
+Run the application, open your browser to <http://localhost:3000/>, then select the _Create new genre_ link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.
 
-<p><img alt="Genre Create Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14476/LocalLibary_Express_Genre_Create_Empty.png" style="border-style: solid; border-width: 1px; display: block; height: 301px; margin: 0px auto; width: 800px;"></p>
+![Genre Create Page - Express Local Library site](https://mdn.mozillademos.org/files/14476/LocalLibary_Express_Genre_Create_Empty.png)
 
-<p>The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).</p>
+The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14480/LocalLibary_Express_Genre_Create_Error.png" style="border-style: solid; border-width: 1px; display: block; height: 249px; margin: 0px auto; width: 400px;"></p>
+![](https://mdn.mozillademos.org/files/14480/LocalLibary_Express_Genre_Create_Error.png)
 
-<div class="note">
-<p><strong>Note:</strong> Our validation uses <code>trim()</code> to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value <code>required='true'</code> to the field definition in the form:</p>
+> **Примечание:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
+>
+> ```js
+> input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), required='true' )
+> ```
 
-<pre class="brush: js">input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), <strong>required='true'</strong> )</pre>
-</div>
+## Next steps
 
-<h2 id="Next_steps">Next steps</h2>
-
-<ol>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms.</a></li>
- <li>Proceed to the next sub article of part 6: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form">Create Author form</a>.</li>
-</ol>
+1.  Return to [Express Tutorial Part 6: Working with forms.](/ru/docs/Learn/Server-side/Express_Nodejs/forms)
+2.  Proceed to the next sub article of part 6: [Create Author form](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form).

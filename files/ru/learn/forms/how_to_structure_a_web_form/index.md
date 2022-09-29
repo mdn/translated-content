@@ -11,311 +11,307 @@ tags:
 translation_of: Learn/Forms/How_to_structure_a_web_form
 original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Ваша_первая_HTML_форма", "Learn/HTML/Forms/Стандартные_виджеты_форм", "Learn/HTML/Forms")}}
 
-<div>{{PreviousMenuNext("Learn/HTML/Forms/Ваша_первая_HTML_форма", "Learn/HTML/Forms/Стандартные_виджеты_форм", "Learn/HTML/Forms")}}</div>
+Получив базовые знания, теперь мы более подробно рассмотрим элементы, используемые для придания структуры и значения различным частям форм.
 
-<p class="summary">Получив базовые знания, теперь мы более подробно рассмотрим элементы, используемые для придания структуры и значения различным частям форм.</p>
+| Уровень подготовки: | Основы компьютерной грамотности, и базовые [знания HTML](/ru/docs/Learn/HTML/Introduction_to_HTML).                            |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Цель:               | Разобраться как структурировать HTML формы и задавать им семантику для того, чтобы они были удобны и доступны в использовании. |
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Уровень подготовки:</th>
-   <td>Основы компьютерной грамотности, и базовые <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">знания HTML</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Цель:</th>
-   <td>Разобраться как структурировать HTML формы и задавать им семантику для того, чтобы они были удобны и доступны в использовании.</td>
-  </tr>
- </tbody>
-</table>
+Гибкость HTML форм делает их одной из самых сложных структур в [HTML](/ru/docs/Learn/HTML "/en-US/docs/HTML"); вы можете создать любую форму, используя элементы и атрибуты форм. Использование правильной структуры, при создании HTML форм, поможет гарантировать их удобство и [доступность](/ru/docs/Learn/Accessibility).
 
-<p>Гибкость HTML форм делает их одной из самых сложных структур в <a href="/en-US/docs/Learn/HTML" title="/en-US/docs/HTML">HTML</a>; вы можете создать любую форму, используя элементы и атрибуты форм. Использование правильной структуры, при создании HTML форм, поможет гарантировать их удобство и <a href="/en-US/docs/Learn/Accessibility">доступность</a>.</p>
+## Элемент \<form>
 
-<h2 id="Элемент_&lt;form>">Элемент &lt;form&gt;</h2>
+Элемент {{HTMLElement("form")}} формально определяет форму и атрибуты, которые определяют поведение этой формы. Каждый раз, когда вы хотите создать HTML-форму, вам нужно начать с создания элемента {{HTMLElement("form")}}, поместив внутрь него всё содержимое. Многие вспомогательные технологии или браузерные плагины могут обнаруживать элементы {{HTMLElement("form")}} и реализовывать специальные хуки, чтобы их было проще использовать.
 
-<p>Элемент {{HTMLElement("form")}} формально определяет форму и атрибуты, которые определяют поведение этой формы. Каждый раз, когда вы хотите создать HTML-форму, вам нужно начать с создания элемента {{HTMLElement("form")}}, поместив внутрь него всё содержимое. Многие вспомогательные технологии или браузерные плагины могут обнаруживать элементы {{HTMLElement("form")}} и реализовывать специальные хуки, чтобы их было проще использовать.</p>
+Мы уже встречались с этим в предыдущей статье.
 
-<p>Мы уже встречались с этим в предыдущей статье.</p>
+> **Предупреждение:** **Внимание:** Строго запрещается размещать форму внутри другой формы. Такое размещение может привести к непредсказуемому поведению форм, в зависимости от браузера.
 
-<div class="blockIndicator warning">
-<p><strong>Внимание:</strong> Строго запрещается размещать форму внутри другой формы. Такое размещение может привести к непредсказуемому поведению форм, в зависимости от браузера. </p>
+Стоит учесть, что всегда можно использовать элементы формы вне {{HTMLElement("form")}}. Тогда по умолчанию этот элемент формы не имеет ничего общего со всеми формами. Вы можете связать его с формой с помощью атрибута `form`. В HTML5 был представлен атрибут `form` для элементов HTML форм, который позволяет явно связать элемент с формой, даже если он не заключён внутри {{ HTMLElement("form") }}.
+
+## Элементы \<fieldset> и \<legend>
+
+Элемент {{HTMLElement("fieldset")}} - это удобный способ стилистической и семантической группировки элементов формы. Вы можете установить заголовок {{HTMLElement("fieldset")}}, добавив элемент {{HTMLElement("legend")}} сразу после открывающего тега {{HTMLElement("fieldset")}}. Текст элемента {{HTMLElement("legend")}} формально описывает назначение содержимого {{HTMLElement("fieldset")}}.
+
+Различные вспомогательные технологии будут использовать {{HTMLElement("legend")}} как часть метки `label` всех элементов внутри {{HTMLElement("fieldset")}}. Например, такие экранные дикторы как [Jaws](http://www.freedomscientific.com/products/fs/jaws-product-page.asp) или [NVDA](http://www.nvda-project.org/) произносят заголовок формы {{HTMLElement("legend")}} перед произношением названия меток элементов.
+
+Небольшой пример:
+
+```html
+<form>
+  <fieldset>
+    <legend>Fruit juice size</legend>
+    <p>
+      <input type="radio" name="size" id="size_1" value="small">
+      <label for="size_1">Small</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_2" value="medium">
+      <label for="size_2">Medium</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_3" value="large">
+      <label for="size_3">Large</label>
+    </p>
+  </fieldset>
+</form>
+```
+
+> **Примечание:** вы можете найти этот пример в [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) ([также посмотрите на результат](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
+
+Читая эту форму, экранный диктор произнесёт "Fruit juice size small" для первого элемента, "Fruit juice size medium" - для второго, "Fruit juice size large" - для третьего.
+
+Вариант использования в этом примере является одним из наиболее важных. Каждый раз, когда у вас есть набор переключателей, вам нужно поместить их внутри {{HTMLElement("fieldset")}}. Также {{HTMLElement("fieldset")}} можно использовать для разделения формы. В идеале, длинную форму разделяют на несколько страниц, однако, если она должна находиться на одной странице, распределение связанных элементов в разные {{HTMLElement("fieldset")}} может повысить удобство использования.
+
+Из-за своего влияния на вспомогательные технологии элемент {{HTMLElement("fieldset")}} является одним из ключевых элементов для построения доступных форм; однако вы не должны им злоупотреблять. Если возможно, старайтесь проверять, как [экранный диктор](https://www.nvaccess.org/download/) интерпретирует вашу форму.
+
+## Элемент \<label>
+
+В предыдущей статье мы увидели, что элемент {{HTMLElement("label")}} принято использовать для указания текстов-подсказок (лейблов) в HTML-формах. Это самый важный элемент для построения доступных форм — при правильной реализации скринридеры будут озвучивать текст-подсказку вместе со связанными элементами. Посмотрите на этот пример из предыдущей статьи:
+
+```html
+<label for="name">Name:</label> <input type="text" id="name" name="user_name">
+```
+
+При правильно связанном элементе `<label>` с элементом `<input>` через атрибуты `for` и `id` соответственно (атрибут `for` ссылается на атрибут `id` соответствующего виджета формы), скринридер прочтёт вслух что-то наподобие "Name, edit text".
+
+Если `<label>` не правильно установлен, скринридер прочитает это как "Edit text blank", что не несёт в себе никакой уточняющей информации, позволяющей понять предназначение данного текстового поля.
+
+Обратите внимание на то, что виджет формы может быть вложен в элемент {{HTMLElement("label")}}, как на примере:
+
+```html
+<label for="name">
+  Name: <input type="text" id="name" name="user_name">
+</label>
+```
+
+Однако даже в таких случаях лучше всё равно указывать атрибут `for`, так как некоторые вспомогательные технологии не распознают неявную связь между текстами-подсказками и виджетами.
+
+### Лейблы тоже кликабельны!
+
+Ещё одно преимущество при правильно установленных текстах-подсказках заключается в том, что по ним можно кликнуть для активации связанных с ними виджетов. Это поддерживается во всех браузерах. Это удобно как для текстовых полей ввода, в которых устанавливается фокус при клике на текст-подсказку, так и для радио-кнопок и чекбоксов — область попадания такого элемента управления может быть очень маленькой, поэтому полезно сделать её как можно больше.
+
+Например:
+
+```html
+<form>
+  <p>
+    <label for="taste_1">I like cherry</label>
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+  </p>
+  <p>
+    <label for="taste_2">I like banana</label>
+    <input type="checkbox" id="taste_2" name="taste_banana" value="2">
+  </p>
+</form>
+```
+
+> **Примечание:** вы можете посмотреть этот пример тут [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) ([также можно посмотреть код вживую](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
+
+### Несколько лейблов
+
+На самом деле вы можете добавить несколько текстов-подсказок на один виджет формы, но это не очень хорошая идея, так как у некоторых вспомогательных технологий могут возникнуть проблемы с обработкой такой структуры. Вместо использования нескольких лейблов, лучше вложить виджет формы внутрь одного элемента {{htmlelement("label")}}.
+
+Рассмотрим этот пример:
+
+```html
+<p>Required fields are followed by <abbr title="required">*</abbr>.</p>
+
+<!-- Тогда это: -->
+<div>
+  <label for="username">Name:</label>
+  <input type="text" name="username">
+  <label for="username"><abbr title="required">*</abbr></label>
 </div>
 
-<p>Стоит учесть, что всегда можно использовать элементы формы вне {{HTMLElement("form")}}. Тогда по умолчанию этот элемент формы не имеет ничего общего со всеми формами. Вы можете связать его с формой с помощью атрибута <code>form</code>. В HTML5 был представлен атрибут <code>form</code> для элементов HTML форм, который позволяет  явно связать элемент с формой, даже если он не заключён внутри {{ HTMLElement("form") }}.</p>
-
-<h2 id="Элементы_&lt;fieldset>_и_&lt;legend>">Элементы &lt;fieldset&gt; и &lt;legend&gt;</h2>
-
-<p>Элемент {{HTMLElement("fieldset")}} - это удобный способ стилистической и семантической группировки элементов формы. Вы можете установить заголовок {{HTMLElement("fieldset")}}, добавив элемент {{HTMLElement("legend")}} сразу после открывающего тега {{HTMLElement("fieldset")}}. Текст элемента {{HTMLElement("legend")}} формально описывает назначение содержимого {{HTMLElement("fieldset")}}.</p>
-
-<p>Различные вспомогательные технологии будут использовать {{HTMLElement("legend")}} как часть метки <code>label</code> всех элементов внутри {{HTMLElement("fieldset")}}. Например, такие экранные дикторы как <a href="http://www.freedomscientific.com/products/fs/jaws-product-page.asp" rel="external">Jaws</a> или <a href="http://www.nvda-project.org/" rel="external">NVDA</a> произносят заголовок формы {{HTMLElement("legend")}} перед произношением названия меток элементов.</p>
-
-<p>Небольшой пример:</p>
-
-<pre class="brush:html;">&lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Fruit juice size&lt;/legend&gt;
-    &lt;p&gt;
-      &lt;input type="radio" name="size" id="size_1" value="small"&gt;
-      &lt;label for="size_1"&gt;Small&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;input type="radio" name="size" id="size_2" value="medium"&gt;
-      &lt;label for="size_2"&gt;Medium&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;input type="radio" name="size" id="size_3" value="large"&gt;
-      &lt;label for="size_3"&gt;Large&lt;/label&gt;
-    &lt;/p&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
-
-<div class="note">
-<p><strong>Примечание</strong>: вы можете найти этот пример в <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html">fieldset-legend.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html">также посмотрите на результат</a>).</p>
+<!-- лучше сделать таким образом: -->
+<div>
+  <label for="username">
+    <span>Name:</span>
+    <input id="username" type="text" name="username">
+    <abbr title="required">*</abbr>
+  </label>
 </div>
 
-<p>Читая эту форму, экранный диктор произнесёт "Fruit juice size small" для первого элемента, "Fruit juice size medium" - для второго, "Fruit juice size large" - для третьего.</p>
-
-<p>Вариант использования в этом примере является одним из наиболее важных. Каждый раз, когда у вас есть набор переключателей, вам нужно поместить их внутри {{HTMLElement("fieldset")}}. Также {{HTMLElement("fieldset")}} можно использовать для разделения формы. В идеале, длинную форму разделяют на несколько страниц, однако, если она должна находиться на одной странице, распределение связанных элементов в разные {{HTMLElement("fieldset")}} может повысить удобство использования.</p>
-
-<p>Из-за своего влияния на вспомогательные технологии элемент {{HTMLElement("fieldset")}} является одним из ключевых элементов для построения доступных форм; однако вы не должны им злоупотреблять. Если возможно, старайтесь проверять, как <a href="https://www.nvaccess.org/download/">экранный диктор</a> интерпретирует вашу форму. </p>
-
-<h2 id="Элемент_&lt;label>">Элемент &lt;label&gt;</h2>
-
-<p>В предыдущей статье мы увидели, что элемент {{HTMLElement("label")}} принято использовать для указания текстов-подсказок (лейблов) в HTML-формах. Это самый важный элемент для построения доступных форм — при правильной реализации скринридеры будут озвучивать текст-подсказку вместе со связанными элементами. Посмотрите на этот пример из предыдущей статьи:</p>
-
-<pre class="brush: html">&lt;label for="name"&gt;Name:&lt;/label&gt; &lt;input type="text" id="name" name="user_name"&gt;</pre>
-
-<p>При правильно связанном элементе <code>&lt;label&gt;</code> с элементом <code>&lt;input&gt;</code> через атрибуты <code>for</code> и <code>id</code> соответственно (атрибут <code>for</code> ссылается на атрибут <code>id</code> соответствующего виджета формы), скринридер прочтёт вслух что-то наподобие "Name, edit text".</p>
-
-<p>Если <code>&lt;label&gt;</code> не правильно установлен, скринридер прочитает это как "Edit text blank", что не несёт в себе никакой уточняющей информации, позволяющей понять предназначение данного текстового поля.</p>
-
-<p>Обратите внимание на то, что виджет формы может быть вложен в элемент {{HTMLElement("label")}}, как на примере:</p>
-
-<pre class="brush: html">&lt;label for="name"&gt;
-  Name: &lt;input type="text" id="name" name="user_name"&gt;
-&lt;/label&gt;</pre>
-
-<p>Однако даже в таких случаях лучше всё равно указывать атрибут <code>for</code>, так как некоторые вспомогательные технологии не распознают неявную связь между текстами-подсказками и виджетами.</p>
-
-<h3 id="Лейблы_тоже_кликабельны!">Лейблы тоже кликабельны!</h3>
-
-<p>Ещё одно преимущество при правильно установленных текстах-подсказках заключается в том, что по ним можно кликнуть для активации связанных с ними виджетов. Это поддерживается во всех браузерах. Это удобно как для текстовых полей ввода, в которых устанавливается фокус при клике на текст-подсказку, так и для радио-кнопок и чекбоксов — область попадания такого элемента управления может быть очень маленькой, поэтому полезно сделать её как можно больше.</p>
-
-<p>Например:</p>
-
-<pre class="brush:html;">&lt;form&gt;
-  &lt;p&gt;
-    &lt;label for="taste_1"&gt;I like cherry&lt;/label&gt;
-    &lt;input type="checkbox" id="taste_1" name="taste_cherry" value="1"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="taste_2"&gt;I like banana&lt;/label&gt;
-    &lt;input type="checkbox" id="taste_2" name="taste_banana" value="2"&gt;
-  &lt;/p&gt;
-&lt;/form&gt;</pre>
-
-<div class="note">
-<p><strong>Примечание</strong>: вы можете посмотреть этот пример тут <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html">checkbox-label.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html">также можно посмотреть код вживую</a>).</p>
+<!-- Но этот вариант лучше всего: -->
+<div>
+  <label for="username">Name: <abbr title="required">*</abbr></label>
+  <input id="username" type="text" name="username">
 </div>
+```
 
-<h3 id="Несколько_лейблов">Несколько лейблов</h3>
+{{EmbedLiveSample("Несколько_лейблов", 120, 120)}}
 
-<p>На самом деле вы можете добавить несколько текстов-подсказок на один виджет формы, но это не очень хорошая идея, так как у некоторых вспомогательных технологий могут возникнуть проблемы с обработкой такой структуры. Вместо использования нескольких лейблов, лучше вложить виджет формы внутрь одного элемента {{htmlelement("label")}}. </p>
+Параграф на первой строке примера описывает правило для обязательных элементов. Вначале необходимо убедиться, что вспомогательные технологии, такие как программы чтения с экрана, отображают или озвучивают их пользователю, прежде чем он найдёт требуемый элемент. Таким образом они будут знать, что означает звёздочка. Программа чтения с экрана будет произносить звёздочку как «звёздочку» или «обязательно», в зависимости от настроек программы чтения с экрана — в любом случае, первый абзац даёт понимание того, что будет означать звёздочка далее в форме.
 
-<p>Рассмотрим этот пример:</p>
+- В первом примере лейбл не будет прочитан вместе с текстовым полем — получится лишь "edit text blank" и отдельно читаемые тексты-подсказки. Множественные элементы `<label>` могут быть неправильно интерпретированы программой чтения с экрана.
+- Второй пример немного лучше — лейбл будет прочитан вместе с текстовым полем и будет звучать как "name star name edit text", однако тексты-подсказки всё ещё разделены. Это всё ещё немного сбивает с толку, но на этот раз ситуация немного лучше, потому что с текстовое поле связано с текстом-подсказкой.
+- Третий пример — лучший, так как весь лейбл будет связан с текстовым полем и озвучен целиком, а при чтении текст будет звучать как "name star edit text".
 
-<pre class="brush: html">&lt;p&gt;Required fields are followed by &lt;abbr title="required"&gt;*&lt;/abbr&gt;.&lt;/p&gt;
+> **Примечание:** В зависимости от программы для чтения с экрана результаты могут немного отличаться. В данной статье для тестирования использовался VoiceOver (NVDA ведёт себя аналогично). Также мы были бы рады, если бы вы поделились своим опытом.
 
-&lt;!-- Тогда это: --&gt;
-&lt;div&gt;
-  &lt;label for="username"&gt;Name:&lt;/label&gt;
-  &lt;input type="text" name="username"&gt;
-  &lt;label for="username"&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/label&gt;
-&lt;/div&gt;
+> **Примечание:** вы можете найти этот пример на GitHub [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) ([также можно посмотреть вживую](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Запускайте пример, закомментировав остальные, иначе скриридеры не смогут правильно распознать контент, если у вас будет несколько лейблов и несколько текстовых полей с одинаковым ID!
 
-&lt;!-- лучше сделать таким образом: --&gt;
-&lt;div&gt;
-  &lt;label for="username"&gt;
-    &lt;span&gt;Name:&lt;/span&gt;
-    &lt;input id="username" type="text" name="username"&gt;
-    &lt;abbr title="required"&gt;*&lt;/abbr&gt;
-  &lt;/label&gt;
-&lt;/div&gt;
+## Часто используемые с формами HTML-структуры
 
-&lt;!-- Но этот вариант лучше всего: --&gt;
-&lt;div&gt;
-  &lt;label for="username"&gt;Name: &lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/label&gt;
-  &lt;input id="username" type="text" name="username"&gt;
-&lt;/div&gt;</pre>
+Помимо структур, характерных только для HTML-форм, хорошо помнить, что формы — это просто HTML. Это означает, что вы можете использовать всю мощь HTML для структурирования HTML-формы.
 
-<p>{{EmbedLiveSample("Несколько_лейблов", 120, 120)}}</p>
+Как вы можете заметить в примерах, оборачивать лейбл и виджет формы в элемент {{HTMLElement("div")}} — это общепринятая практика. Элемент {{HTMLElement("p")}} также часто используется, как и HTML-списки (последние часто используются для структурирования множественных чекбоксом или радио-кнопок).
 
-<p>Параграф на первой строке примера описывает правило для обязательных элементов. Вначале необходимо убедиться, что вспомогательные технологии, такие как программы чтения с экрана, отображают или озвучивают их пользователю, прежде чем он найдёт требуемый элемент. Таким образом они будут знать, что означает звёздочка. Программа чтения с экрана будет произносить звёздочку как «звёздочку» или «обязательно», в зависимости от настроек программы чтения с экрана — в любом случае, первый абзац даёт понимание того, что будет означать звёздочка далее в форме.</p>
+В добавок к элементу {{HTMLElement("fieldset")}} часто используют HTML-заголовки (например, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}) и секционирование (например, {{HTMLElement("section")}}) для структурирования сложных форм.
 
-<ul>
- <li>В первом примере лейбл не будет прочитан вместе с текстовым полем — получится лишь "edit text blank" и отдельно читаемые тексты-подсказки. Множественные элементы <code>&lt;label&gt;</code> могут быть неправильно интерпретированы программой чтения с экрана.</li>
- <li>Второй пример немного лучше — лейбл будет прочитан вместе с текстовым полем и будет звучать как "name star name edit text", однако тексты-подсказки всё ещё разделены. Это всё ещё немного сбивает с толку, но на этот раз ситуация немного лучше, потому что с текстовое поле связано с текстом-подсказкой.</li>
- <li>Третий пример — лучший, так как весь лейбл будет связан с текстовым полем и озвучен целиком, а при чтении текст будет звучать как "name star edit text".</li>
-</ul>
+Прежде всего, вам нужно найти стиль, который будет удобен именно вам для программирования и который также позволит создавать доступные и удобные формы.
 
-<div class="note">
-<p><strong>Примечание</strong>: В зависимости от программы для чтения с экрана результаты могут немного отличаться. В данной статье для тестирования использовался VoiceOver (NVDA ведёт себя аналогично). Также мы были бы рады, если бы вы поделились своим опытом.</p>
-</div>
+Каждый отдельный раздел функциональности содержится в элементах {{HTMLElement ("section")}} и {{HTMLElement ("fieldset")}}, содержащий переключатели. Каждый отдельный раздел функциональности должен находиться в отдельном элементе {{HTMLElement ("section")}} с элементами {{HTMLElement ("fieldset")}}, содержащими переключатели.
 
-<div class="note">
-<p><strong>Примечание</strong>: вы можете найти этот пример на GitHub <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html">required-labels.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html">также можно посмотреть вживую</a>). Запускайте пример, закомментировав остальные, иначе скриридеры не смогут правильно распознать контент, если у вас будет несколько лейблов и несколько текстовых полей с одинаковым ID!</p>
-</div>
+### Активное обучение: построение структуры формы
 
-<h2 id="Часто используемые_с_формами_HTML-структуры">Часто используемые с формами HTML-структуры</h2>
+Давайте применим эти идеи на практике и построим более сложноструктурируемую форму — формы оплаты. Форма будет содержать некоторые типы виджетов формы, которые вы можете пока не понять — не переживайте об этом, вы найдёте информацию в следующей статье ([Основные нативные элементы управления формами](/ru/docs/Learn/HTML/Forms/The_native_form_widgets)). А пока внимательно прочитайте описание, следуя приведённым ниже инструкциям, и начинайте формировать представление о том, какие элементы обёртки мы используем для структурирования формы и почему.
 
-<p>Помимо структур, характерных только для HTML-форм, хорошо помнить, что формы — это просто HTML. Это означает, что вы можете использовать всю мощь HTML для структурирования HTML-формы.</p>
+1.  Для начала сделайте локальную копию [пустого шаблона](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) и [CSS для нашей платёжной формы](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) в новой директории на вашем компьютере.
+2.  Сначала подключите CSS к HTML, добавив следующую строку кода внутрь HTML-элемента {{htmlelement("head")}}:
 
-<p>Как вы можете заметить в примерах, оборачивать лейбл и виджет формы в элемент {{HTMLElement("div")}} — это общепринятая практика. Элемент {{HTMLElement("p")}} также часто используется, как и HTML-списки (последние часто используются для структурирования множественных чекбоксом или радио-кнопок).</p>
+    ```html
+    <link href="payment-form.css" rel="stylesheet">
+    ```
 
-<p>В добавок к элементу {{HTMLElement("fieldset")}} часто используют HTML-заголовки (например, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}) и секционирование (например, {{HTMLElement("section")}}) для структурирования сложных форм.</p>
+3.  Далее начните создавать свою форму с добавления внешнего элемента {{htmlelement("form")}}:
 
-<p>Прежде всего, вам нужно найти стиль, который будет удобен именно вам для программирования и который также позволит создавать доступные и удобные формы.</p>
+    ```html
+    <form>
 
-<p>Каждый отдельный раздел функциональности содержится в элементах {{HTMLElement ("section")}} и {{HTMLElement ("fieldset")}}, содержащий переключатели. Каждый отдельный раздел функциональности должен находиться в отдельном элементе {{HTMLElement ("section")}} с элементами {{HTMLElement ("fieldset")}}, содержащими переключатели.</p>
+    </form>
+    ```
 
-<h3 id="Активное_обучение_построение_структуры_формы">Активное обучение: построение структуры формы</h3>
+4.  Внутри тега `<form>`, добавьте заголовок и параграф, информирующий пользователей о том, как помечены поля, обязательные для заполнения:
 
-<p>Давайте применим эти идеи на практике и построим более сложноструктурируемую форму — формы оплаты. Форма будет содержать некоторые типы виджетов формы, которые вы можете пока не понять — не переживайте об этом, вы найдёте информацию в следующей статье (<a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">Основные нативные элементы управления формами</a>). А пока внимательно прочитайте описание, следуя приведённым ниже инструкциям, и начинайте формировать представление о том, какие элементы обёртки мы используем для структурирования формы и почему.</p>
+    ```html
+    <h1>Payment form</h1>
+    <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+    ```
 
-<ol>
- <li>Для начала сделайте локальную копию <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">пустого шаблона</a> и <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css">CSS для нашей платёжной формы</a> в новой директории на вашем компьютере.</li>
- <li>Сначала подключите CSS к HTML, добавив следующую строку кода внутрь HTML-элемента {{htmlelement("head")}}:
-  <pre class="brush: html">&lt;link href="payment-form.css" rel="stylesheet"&gt;</pre>
- </li>
- <li>Далее начните создавать свою форму с добавления внешнего элемента {{htmlelement("form")}}:
-  <pre class="brush: html">&lt;form&gt;
+5.  Далее нам надо добавить более крупный кусок кода под нашей предыдущей записью. Здесь вы можете увидеть, что мы оборачиваем поля с контактной информацией в отдельный элемент {{htmlelement("section")}}. Более того, у нас есть набор из двух радио-кнопок, каждую из которых мы помещаем в отдельный элемент списка ({{htmlelement("li")}}). Наконец, у нас есть два текстовых поля {{htmlelement("input")}} и связанные с ними элементы {{htmlelement("label")}}, которые находятся внутри элементов {{htmlelement("p")}}, а также поле для ввода пароля. Добавьте этот код в вашу форму:
 
-&lt;/form&gt;</pre>
- </li>
- <li>Внутри тега <code>&lt;form&gt;</code>, добавьте заголовок и параграф, информирующий пользователей о том, как помечены поля, обязательные для заполнения:
-  <pre class="brush: html">&lt;h1&gt;Payment form&lt;/h1&gt;
-&lt;p&gt;Required fields are followed by &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;.&lt;/p&gt;</pre>
- </li>
- <li>Далее нам надо добавить более крупный кусок кода под нашей предыдущей записью. Здесь вы можете увидеть, что мы оборачиваем поля с контактной информацией в отдельный элемент {{htmlelement("section")}}. Более того, у нас есть набор из двух радио-кнопок, каждую из которых мы помещаем в отдельный элемент списка ({{htmlelement("li")}}). Наконец, у нас есть два текстовых поля {{htmlelement("input")}} и связанные с ними элементы {{htmlelement("label")}}, которые находятся внутри элементов {{htmlelement("p")}}, а также поле для ввода пароля. Добавьте этот код в вашу форму:
-  <pre class="brush: html">&lt;section&gt;
-    &lt;h2&gt;Contact information&lt;/h2&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Title&lt;/legend&gt;
-      &lt;ul&gt;
-          &lt;li&gt;
-            &lt;label for="title_1"&gt;
-              &lt;input type="radio" id="title_1" name="title" value="M." &gt;
-              Mister
-            &lt;/label&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;label for="title_2"&gt;
-              &lt;input type="radio" id="title_2" name="title" value="Ms."&gt;
-              Miss
-            &lt;/label&gt;
-          &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/fieldset&gt;
-    &lt;p&gt;
-      &lt;label for="name"&gt;
-        &lt;span&gt;Name: &lt;/span&gt;
-        &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-      &lt;/label&gt;
-      &lt;input type="text" id="name" name="username"&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;label for="mail"&gt;
-        &lt;span&gt;E-mail: &lt;/span&gt;
-        &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-      &lt;/label&gt;
-      &lt;input type="email" id="mail" name="usermail"&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;label for="pwd"&gt;
-        &lt;span&gt;Password: &lt;/span&gt;
-        &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-      &lt;/label&gt;
-      &lt;input type="password" id="pwd" name="password"&gt;
-    &lt;/p&gt;
-&lt;/section&gt;</pre>
- </li>
- <li>Сейчас мы перейдём к второму разделу <code>&lt;section&gt;</code> нашей формы — платёжной информации. В этом разделе у нас есть три отдельных виджета формы со связанными с ними лейблами, находящимися внутри тега <code>&lt;p&gt;</code>. Первый — это выпадающее меню ({{htmlelement("select")}}) для выбора типа кредитной карты. Второй — это элемент <code>&lt;input&gt;</code> с типом <code>number</code> для ввода номера карты. Последний виджет — это элемент <code>&lt;input&gt;</code> с типом date для указания даты окончания действия карты (должен будет появиться виджет с выбором даты или обычное текстовое поле в браузерах, не поддерживающих данные тип). Более новые типы полей описаны в статье <a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a>.<br>
-  <br>
-  Вставьте следующий код под предыдущим разделом:
-  <pre class="brush: html">&lt;section&gt;
-    &lt;h2&gt;Payment information&lt;/h2&gt;
-    &lt;p&gt;
-      &lt;label for="card"&gt;
-        &lt;span&gt;Card type:&lt;/span&gt;
-      &lt;/label&gt;
-      &lt;select id="card" name="usercard"&gt;
-        &lt;option value="visa"&gt;Visa&lt;/option&gt;
-        &lt;option value="mc"&gt;Mastercard&lt;/option&gt;
-        &lt;option value="amex"&gt;American Express&lt;/option&gt;
-      &lt;/select&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;label for="number"&gt;
-        &lt;span&gt;Card number:&lt;/span&gt;
-        &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-      &lt;/label&gt;
-      &lt;input type="number" id="number" name="cardnumber"&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;label for="date"&gt;
-        &lt;span&gt;Expiration date:&lt;/span&gt;
-        &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-        &lt;em&gt;formatted as mm/yy&lt;/em&gt;
-      &lt;/label&gt;
-      &lt;input type="date" id="date" name="expiration"&gt;
-    &lt;/p&gt;
-&lt;/section&gt;</pre>
- </li>
- <li>Последняя секция, которую мы добавим выглядит намного проще и содержит в себе только элемент {{htmlelement("button")}} с типом <code>submit</code>, для отправки данных. Добавьте этот код в конец вашей формы:
-  <pre class="brush: html">&lt;p&gt; &lt;button type="submit"&gt;Validate the payment&lt;/button&gt; &lt;/p&gt;</pre>
- </li>
-</ol>
+    ```html
+    <section>
+        <h2>Contact information</h2>
+        <fieldset>
+          <legend>Title</legend>
+          <ul>
+              <li>
+                <label for="title_1">
+                  <input type="radio" id="title_1" name="title" value="M." >
+                  Mister
+                </label>
+              </li>
+              <li>
+                <label for="title_2">
+                  <input type="radio" id="title_2" name="title" value="Ms.">
+                  Miss
+                </label>
+              </li>
+          </ul>
+        </fieldset>
+        <p>
+          <label for="name">
+            <span>Name: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="text" id="name" name="username">
+        </p>
+        <p>
+          <label for="mail">
+            <span>E-mail: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="email" id="mail" name="usermail">
+        </p>
+        <p>
+          <label for="pwd">
+            <span>Password: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="password" id="pwd" name="password">
+        </p>
+    </section>
+    ```
 
-<p>Вы можете увидеть законченную форму в действии ниже (также её можно найти на GitHub — посмотрите <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html">payment-form.html</a> и <a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html">живой пример</a>):</p>
+6.  Сейчас мы перейдём к второму разделу `<section>` нашей формы — платёжной информации. В этом разделе у нас есть три отдельных виджета формы со связанными с ними лейблами, находящимися внутри тега `<p>`. Первый — это выпадающее меню ({{htmlelement("select")}}) для выбора типа кредитной карты. Второй — это элемент `<input>` с типом `number` для ввода номера карты. Последний виджет — это элемент `<input>` с типом date для указания даты окончания действия карты (должен будет появиться виджет с выбором даты или обычное текстовое поле в браузерах, не поддерживающих данные тип). Более новые типы полей описаны в статье [The HTML5 input types](/ru/docs/Learn/Forms/HTML5_input_types).
 
-<p>{{EmbedLiveSample("A_payment_form","100%",620, "", "Learn/HTML/Forms/How_to_structure_an_HTML_form/Example")}}</p>
+    Вставьте следующий код под предыдущим разделом:
 
-<h2 id="Протестируйте_себя!">Протестируйте себя!</h2>
+    ```html
+    <section>
+        <h2>Payment information</h2>
+        <p>
+          <label for="card">
+            <span>Card type:</span>
+          </label>
+          <select id="card" name="usercard">
+            <option value="visa">Visa</option>
+            <option value="mc">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+        </p>
+        <p>
+          <label for="number">
+            <span>Card number:</span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="number" id="number" name="cardnumber">
+        </p>
+        <p>
+          <label for="date">
+            <span>Expiration date:</span>
+            <strong><abbr title="required">*</abbr></strong>
+            <em>formatted as mm/yy</em>
+          </label>
+          <input type="date" id="date" name="expiration">
+        </p>
+    </section>
+    ```
 
-<p>Вы дошли до конца статьи, но можете ли вспомнить самую важную информацию? Далее вы можете найти тест, который поможет убедиться, что вы усвоили знания прежде чем двигаться дальше — посмотрите <a href="/en-US/docs/Learn/Forms/Test_your_skills:_Form_structure">Test your skills: Form structure</a>.</p>
+7.  Последняя секция, которую мы добавим выглядит намного проще и содержит в себе только элемент {{htmlelement("button")}} с типом `submit`, для отправки данных. Добавьте этот код в конец вашей формы:
 
-<h2 id="Заключение">Заключение</h2>
+    ```html
+    <p> <button type="submit">Validate the payment</button> </p>
+    ```
 
-<p>Теперь у вас есть все необходимые знания для того, чтобы правильно структурировать вашу HTML-форму. Мы подробнее раскроем затронутые здесь темы в нескольких последующих статьях. В следующей же статье мы изучим все возможные типы виджетов форм, которые могут понадобиться для сбора информации от ваших пользователей.</p>
+Вы можете увидеть законченную форму в действии ниже (также её можно найти на GitHub — посмотрите [payment-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) и [живой пример](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{EmbedLiveSample("A_payment_form","100%",620, "", "Learn/HTML/Forms/How_to_structure_an_HTML_form/Example")}}
 
-<ul>
- <li><a href="http://www.alistapart.com/articles/sensibleforms/" rel="external">A List Apart: <em>Sensible Forms: A Form Usability Checklist</em></a></li>
-</ul>
+## Протестируйте себя!
 
-<p>{{PreviousMenuNext("Learn/HTML/Forms/Ваша_первая_HTML_форма", "Learn/HTML/Forms/Стандартные_виджеты_форм", "Learn/HTML/Forms")}}</p>
+Вы дошли до конца статьи, но можете ли вспомнить самую важную информацию? Далее вы можете найти тест, который поможет убедиться, что вы усвоили знания прежде чем двигаться дальше — посмотрите [Test your skills: Form structure](/ru/docs/Learn/Forms/Test_your_skills:_Form_structure).
 
-<h2 id="В_этом_разделе">В этом разделе</h2>
+## Заключение
 
-<ul>
- <li><a href="/ru/docs/Learn/HTML/Forms/Ваша_первая_HTML_форма">Ваша первая HTML форма</a></li>
- <li><a href="/ru/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">Как структурировать HTML-формы</a></li>
- <li><a href="/ru/docs/Learn/HTML/Forms/Стандартные_виджеты_форм">Стандартные виджеты форм</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
- <li><a href="/ru/docs/Learn/HTML/Forms/Styling_HTML_forms">Стили HTML-форм</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>
- <li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
- <li><a href="/ru/docs/Learn/HTML/Forms/Валидация_формы">Проверка данных формы</a></li>
- <li><a href="/ru/docs/Learn/HTML/Forms/Отправка_и_Получение_данных_формы">Отправка данных формы</a></li>
-</ul>
+Теперь у вас есть все необходимые знания для того, чтобы правильно структурировать вашу HTML-форму. Мы подробнее раскроем затронутые здесь темы в нескольких последующих статьях. В следующей же статье мы изучим все возможные типы виджетов форм, которые могут понадобиться для сбора информации от ваших пользователей.
 
-<h3 id="Дополнительные_темы">Дополнительные темы</h3>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">Как создавать пользовательские виджеты форм</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
-</ul>
+- [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
+
+{{PreviousMenuNext("Learn/HTML/Forms/Ваша_первая_HTML_форма", "Learn/HTML/Forms/Стандартные_виджеты_форм", "Learn/HTML/Forms")}}
+
+## В этом разделе
+
+- [Ваша первая HTML форма](/ru/docs/Learn/HTML/Forms/Ваша_первая_HTML_форма)
+- [Как структурировать HTML-формы](/ru/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
+- [Стандартные виджеты форм](/ru/docs/Learn/HTML/Forms/Стандартные_виджеты_форм)
+- [The HTML5 input types](/ru/docs/Learn/Forms/HTML5_input_types)
+- [Other form controls](/ru/docs/Learn/Forms/Other_form_controls)
+- [Стили HTML-форм](/ru/docs/Learn/HTML/Forms/Styling_HTML_forms)
+- [Advanced form styling](/ru/docs/Learn/Forms/Advanced_form_styling)
+- [UI pseudo-classes](/ru/docs/Learn/Forms/UI_pseudo-classes)
+- [Проверка данных формы](/ru/docs/Learn/HTML/Forms/Валидация_формы)
+- [Отправка данных формы](/ru/docs/Learn/HTML/Forms/Отправка_и_Получение_данных_формы)
+
+### Дополнительные темы
+
+- [Как создавать пользовательские виджеты форм](/ru/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
+- [Sending forms through JavaScript](/ru/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
+- [Property compatibility table for form widgets](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

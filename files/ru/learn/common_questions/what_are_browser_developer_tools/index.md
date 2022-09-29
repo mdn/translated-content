@@ -15,159 +15,134 @@ tags:
 translation_of: Learn/Common_questions/What_are_browser_developer_tools
 original_slug: Learn/Discover_browser_developer_tools
 ---
-<div>{{IncludeSubnav("/ru-RU/Learn")}}</div>
+{{IncludeSubnav("/ru-RU/Learn")}}
 
-<p>{{Previous("Learn/Getting_started_with_the_web")}}</p>
+{{Previous("Learn/Getting_started_with_the_web")}}
 
-<div class="summary">
-<p>Каждый современный интернет-браузер оснащён мощными инструментами для веб-разработчика. Эти инструменты позволяют делать различные вещи, от изучения загруженных в настоящий момент HTML, CSS и JavaScript до отображения в каких ресурсах нуждается страница и как долго она будет загружаться. Эта статья научит вас использовать базовые функции инструментов разработчика в вашем браузере.</p>
-</div>
+Каждый современный интернет-браузер оснащён мощными инструментами для веб-разработчика. Эти инструменты позволяют делать различные вещи, от изучения загруженных в настоящий момент HTML, CSS и JavaScript до отображения в каких ресурсах нуждается страница и как долго она будет загружаться. Эта статья научит вас использовать базовые функции инструментов разработчика в вашем браузере.
 
-<div class="note">
-<p><strong>Примечание</strong>: Прежде чем начать заниматься с примерами, откройте <a href="http://mdn.github.io/beginner-html-site-scripted/">пример сайта для начинающих</a>, с которым мы работали на <a href="/en-US/Learn/Getting_started_with_the_web">предыдущих занятиях</a>. Вам следует держать его открытым, чтобы выполнить описанные ниже действия.</p>
-</div>
+> **Примечание:** Прежде чем начать заниматься с примерами, откройте [пример сайта для начинающих](http://mdn.github.io/beginner-html-site-scripted/), с которым мы работали на [предыдущих занятиях](/en-US/Learn/Getting_started_with_the_web). Вам следует держать его открытым, чтобы выполнить описанные ниже действия.
 
-<h2 id="Как_открыть_инструменты_веб-разработчика_в_Вашем_браузере">Как открыть инструменты веб-разработчика в вашем браузере?</h2>
+## Как открыть инструменты веб-разработчика в вашем браузере?
 
-<p>Панель разработчика находится в нижней части вашего браузера :</p>
+Панель разработчика находится в нижней части вашего браузера :
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9561/Screenshot%20from%202014-11-25%2012:32:57.png" style="display: block; height: 625px; margin: 0px auto; width: 775px;"></p>
+![](https://mdn.mozillademos.org/files/9561/Screenshot%20from%202014-11-25%2012:32:57.png)
 
-<p>Как её отобразить? Есть три варианта:</p>
+Как её отобразить? Есть три варианта:
 
-<ul>
- <li><em><strong>Клавиатура.</strong></em> <em>Ctrl + Shift + I</em>, кроме
+- _**Клавиатура.**_ _Ctrl + Shift + I_, кроме
 
-  <ul>
-   <li><strong>Internet Explorer. </strong><em>(клавиша - F12) </em></li>
-   <li><strong>Mac OS X. </strong><em>(сочетание клавиш - ⌘ + ⌥ + I )</em></li>
-  </ul>
- </li>
- <li><em><strong>Панель Меню. </strong></em>
-  <ul>
-   <li><strong>Firefox. </strong>Открыть меню <img alt="" src="https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png" style="height: 16px; width: 16px;"> <em>➤ <img alt="" src="https://mdn.mozillademos.org/files/9639/Screenshot%20from%202014-11-26%2014:24:56.png" style="height: 40px; width: 45px;"></em><em>➤ Инструменты разработки, или</em> <em>Инструменты ➤</em><em> Веб-разработка ➤ Инструменты разработки</em></li>
-   <li><strong>Chrome.</strong> <em>Дополнительные инструменты ➤ Инструменты разработчика</em></li>
-   <li><strong>Safari.</strong> <em>Разработка ➤ Показать Web Inspector .</em> Если вы не видите меню "Разработка", зайдите в  <em>Safari ➤ Настройки ➤ Дополнительно, </em> и проверьте стоит ли галочка <em>напротив "Показать меню разработки"</em>. </li>
-   <li><strong>Opera</strong>. <em>Меню </em> <em>➤ </em> <em>Разработка ➤ Инструменты разработчика. </em> Если вы не видите меню "Разработка",  включите его отображение, перейдя в Меню <em>➤ </em> Другие инструменты <em>➤ </em>Показать меню разработчика.</li>
-  </ul>
- </li>
- <li><strong><em>Контекстное меню.</em></strong> Нажмите правой кнопкой мыши на любом участке веб-страницы (Ctrl-клик для Mac), появится контекстное меню, в котором вам нужно выбрать пункт <em>Исследовать Элемент</em>. (<em>дополнение: </em>этот способ отобразит вам код того элемента, на котором вы щёлкнули правой кнопкой.)</li>
-</ul>
+  - **Internet Explorer.** _(клавиша - F12)_
+  - **Mac OS X.** _(сочетание клавиш - ⌘ + ⌥ + I )_
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9605/inspect-element-option.png" style="display: block; height: 264px; margin: 0px auto; width: 350px;"></p>
+- _**Панель Меню.**_
 
-<h2 id="Inspector_DOM_обозреватель_и_CSS_редактор">Inspector: DOM обозреватель и CSS редактор</h2>
+  - **Firefox.** Открыть меню ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ ![](https://mdn.mozillademos.org/files/9639/Screenshot%20from%202014-11-26%2014:24:56.png)\_\_➤ Инструменты разработки, или_ _Инструменты ➤_ _Веб-разработка ➤ Инструменты разработки_
+  - **Chrome.** _Дополнительные инструменты ➤ Инструменты разработчика_
+  - **Safari.** _Разработка ➤ Показать Web Inspector ._ Если вы не видите меню "Разработка", зайдите в _Safari ➤ Настройки ➤ Дополнительно,_ и проверьте стоит ли галочка _напротив "Показать меню разработки"_.
+  - **Opera**. _Меню_ _➤_ _Разработка ➤ Инструменты разработчика._ Если вы не видите меню "Разработка", включите его отображение, перейдя в Меню _➤_ Другие инструменты _➤_ Показать меню разработчика.
 
-<p>По умолчанию, в панели открывается вкладка<em> </em>Inspector, вы можете увидеть это на скриншоте снизу. Этот инструмент позволяет вам видеть, как HTML-код выглядит на странице в настоящем времени, также как CSS, который применён к каждому элементу на странице. Это также позволяет вам в реальном времени редактировать как HTML, так и CSS. Внесённые изменения можно увидеть непосредственно в окне браузера.</p>
+- **_Контекстное меню._** Нажмите правой кнопкой мыши на любом участке веб-страницы (Ctrl-клик для Mac), появится контекстное меню, в котором вам нужно выбрать пункт _Исследовать Элемент_. (_дополнение:_ этот способ отобразит вам код того элемента, на котором вы щёлкнули правой кнопкой.)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9607/inspector.png" style="display: block; height: 727px; margin: 0px auto; width: 800px;"></p>
+![](https://mdn.mozillademos.org/files/9605/inspect-element-option.png)
 
-<p>Если вы н<em>е видите</em> Inspector,</p>
+## Inspector: DOM обозреватель и CSS редактор
 
-<ul>
- <li>Нажмите на вкладку <em>Inspector </em>.</li>
- <li>В Internet Explorer, нажмите на <em>DOM Обозреватель, </em>или нажмите Ctrl + 1.</li>
- <li>В Safari, элементы управления представлены не так чётко, но вы должны увидеть HTML код, если вы не выбрали что-то другое в окне разработки. Нажмите на кнопку <em>Стиль,</em> чтобы увидеть CSS.</li>
-</ul>
+По умолчанию, в панели открывается вкладка\_ \_Inspector, вы можете увидеть это на скриншоте снизу. Этот инструмент позволяет вам видеть, как HTML-код выглядит на странице в настоящем времени, также как CSS, который применён к каждому элементу на странице. Это также позволяет вам в реальном времени редактировать как HTML, так и CSS. Внесённые изменения можно увидеть непосредственно в окне браузера.
 
-<h3 id="Обзор_DOM_inspector">Обзор DOM inspector</h3>
+![](https://mdn.mozillademos.org/files/9607/inspector.png)
 
-<p>Для начала, попробуйте нажать правой кнопкой мыши (Ctrl+клик) по элементу HTML в DOM inspector и посмотрите на контекстное меню. Пункты меню могут различаться в разных браузерах, но важными из них являются одни и те же:</p>
+Если вы н*е видите* Inspector,
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9609/dev-tool-context-menu.png" style="display: block; height: 236px; margin: 0px auto; width: 200px;"></p>
+- Нажмите на вкладку _Inspector_ .
+- В Internet Explorer, нажмите на _DOM Обозреватель,_ или нажмите Ctrl + 1.
+- В Safari, элементы управления представлены не так чётко, но вы должны увидеть HTML код, если вы не выбрали что-то другое в окне разработки. Нажмите на кнопку _Стиль,_ чтобы увидеть CSS.
 
-<ul>
- <li><strong>Удалить узел</strong> (иногда <em>Удалить элемент</em>). Удаляет текущий элемент.</li>
- <li><strong>Править как HTML</strong> (иногда <em>Добавить атрибут</em>/<em>Править текст</em>). Позволяет редактировать HTML и видеть результат "вживую". Очень полезно для отладки и тестирования.</li>
- <li><strong>:hover/:active/:focus</strong>. Заставляет элементы переключить своё состояние на то, к которому применён ваш стиль.</li>
- <li><strong>Копировать/Копировать как HTML</strong>. Копирует текущий выделенный HTML.</li>
-</ul>
+### Обзор DOM inspector
 
-<p>Попробуйте изменить что-нибудь через окно Inspector на вашей странице прямо сейчас. Дважды кликните по элементу, или нажмите правой кнопкой мыши и выберите <em>Править как HTML </em>из контекстного меню. Вы можете сделать любые изменения, какие захотите, но вы не сможете их сохранить.</p>
+Для начала, попробуйте нажать правой кнопкой мыши (Ctrl+клик) по элементу HTML в DOM inspector и посмотрите на контекстное меню. Пункты меню могут различаться в разных браузерах, но важными из них являются одни и те же:
 
-<h3 id="Обзор_CSS_редактора">Обзор CSS редактора</h3>
+![](https://mdn.mozillademos.org/files/9609/dev-tool-context-menu.png)
 
-<p>По умолчанию, CSS редактор отображает CSS-свойства применённые к текущему выбранному элементу:</p>
+- **Удалить узел** (иногда _Удалить элемент_). Удаляет текущий элемент.
+- **Править как HTML** (иногда _Добавить атрибут_/_Править текст_). Позволяет редактировать HTML и видеть результат "вживую". Очень полезно для отладки и тестирования.
+- **:hover/:active/:focus**. Заставляет элементы переключить своё состояние на то, к которому применён ваш стиль.
+- **Копировать/Копировать как HTML**. Копирует текущий выделенный HTML.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9631/css-viewer-2.png" style="border: 1px solid black; display: block; height: 218px; margin: 0px auto; width: 326px;"></p>
+Попробуйте изменить что-нибудь через окно Inspector на вашей странице прямо сейчас. Дважды кликните по элементу, или нажмите правой кнопкой мыши и выберите _Править как HTML_ из контекстного меню. Вы можете сделать любые изменения, какие захотите, но вы не сможете их сохранить.
 
-<p>Эти функции особенно удобны:</p>
+### Обзор CSS редактора
 
-<ul>
- <li>Свойства, применённые к текущему элементу, отображаются в порядке убывания приоритета.</li>
- <li>Можно убирать галочки напротив свойств для того чтобы видеть, что получится, если их удалить.</li>
- <li>Нажмите на маленькую стрелочку рядом со свойством, чтобы увидеть все его эквиваленты.</li>
- <li>Нажмите на имя свойства или его значение, чтобы открыть текстовое окошко, в котором вы можете задать новые значения и увидеть, как изменится ваш элемент с новыми значениями.</li>
- <li>Рядом с каждым свойством указаны имя файла и номер строки. где располагается это свойство. Щелчок по этому пути перенесёт вас в окно, где можно редактировать этот CSS и сохранить.</li>
- <li>Вы можете также нажать на закрывающуюся фигурную скобку любого свойства, чтобы вывести текстовое поле на новую строку, где вы сможете написать совершенно новую декларацию для вашей страницы.</li>
-</ul>
+По умолчанию, CSS редактор отображает CSS-свойства применённые к текущему выбранному элементу:
 
-<p>Вы должно быть уже заметили другие вкладки в  CSS редакторе:</p>
+![](https://mdn.mozillademos.org/files/9631/css-viewer-2.png)
 
-<ul>
- <li><em>Вычислено</em>: Здесь указаны все вычисления свойств выделенного элемента (окончательные, нормализованные значения применённые браузером).</li>
- <li><em>Блоковая модель</em>: Отображает блочную модель выделенного элемента, здесь вы можете увидеть внешние и внутренние отступы, а также границы применённые к элементу, здесь также указан их размер.</li>
- <li><em>Анимации</em>: В Firefox, на вкладке <em>Анимации</em> вы можете увидеть анимации применённые к выделенному элементу.</li>
-</ul>
+Эти функции особенно удобны:
 
-<h3 id="Узнать_больше">Узнать больше</h3>
+- Свойства, применённые к текущему элементу, отображаются в порядке убывания приоритета.
+- Можно убирать галочки напротив свойств для того чтобы видеть, что получится, если их удалить.
+- Нажмите на маленькую стрелочку рядом со свойством, чтобы увидеть все его эквиваленты.
+- Нажмите на имя свойства или его значение, чтобы открыть текстовое окошко, в котором вы можете задать новые значения и увидеть, как изменится ваш элемент с новыми значениями.
+- Рядом с каждым свойством указаны имя файла и номер строки. где располагается это свойство. Щелчок по этому пути перенесёт вас в окно, где можно редактировать этот CSS и сохранить.
+- Вы можете также нажать на закрывающуюся фигурную скобку любого свойства, чтобы вывести текстовое поле на новую строку, где вы сможете написать совершенно новую декларацию для вашей страницы.
 
-<p>Узнать больше об Inspector в различных браузерах:</p>
+Вы должно быть уже заметили другие вкладки в CSS редакторе:
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector">Firefox Page inspector</a></li>
- <li><a href="http://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx">IE DOM Explorer</a></li>
- <li><a href="https://developer.chrome.com/devtools/docs/dom-and-styles">Chrome DOM inspector</a> (Inspector в Opera схож с Inspector в Chrome)</li>
- <li><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1">Safari DOM inspector and style explorer</a></li>
-</ul>
+- _Вычислено_: Здесь указаны все вычисления свойств выделенного элемента (окончательные, нормализованные значения применённые браузером).
+- _Блоковая модель_: Отображает блочную модель выделенного элемента, здесь вы можете увидеть внешние и внутренние отступы, а также границы применённые к элементу, здесь также указан их размер.
+- _Анимации_: В Firefox, на вкладке _Анимации_ вы можете увидеть анимации применённые к выделенному элементу.
 
-<h2 id="Консоль_JavaScript">Консоль JavaScript </h2>
+### Узнать больше
 
-<p>Консоль JavaScript невероятно полезный инструмент для отладки JavaScript, если он не работает, как ожидалось. Она позволяет вам загружать JavaScript вопреки порядку загрузки скрипта в браузере, и докладывает об ошибках как только браузер пытается выполнить ваш код. Для доступа к консоли из любого браузера просто нажмите на кнопку Console. (В Internet Explorer, нажмите <em>Ctrl + 2</em>.) Откроется окно, как показано ниже:</p>
+Узнать больше об Inspector в различных браузерах:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9541/console.png" style="border: 1px solid black; display: block; height: 249px; margin: 0px auto; width: 821px;"></p>
+- [Firefox Page inspector](/ru/docs/Tools/Page_Inspector)
+- [IE DOM Explorer](http://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx)
+- [Chrome DOM inspector](https://developer.chrome.com/devtools/docs/dom-and-styles) (Inspector в Opera схож с Inspector в Chrome)
+- [Safari DOM inspector and style explorer](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
-<p>Чтобы понять, что происходит, попробуйте ввести фрагменты кода в консоль один за другим (и затем нажмите Enter):</p>
+## Консоль JavaScript
 
-<ol>
- <li>
-  <pre class="brush: js">alert('hello!');</pre>
- </li>
- <li>
-  <pre class="brush: js">document.querySelector('html').style.backgroundColor = 'purple';</pre>
- </li>
- <li>
-  <pre class="brush: js">var myImage = document.createElement('img');
-myImage.setAttribute('src','https://farm4.staticflickr.com/3455/3372925208_e1f2aae4e3_b.jpg');
-document.querySelector('h1').appendChild(myImage);</pre>
- </li>
-</ol>
+Консоль JavaScript невероятно полезный инструмент для отладки JavaScript, если он не работает, как ожидалось. Она позволяет вам загружать JavaScript вопреки порядку загрузки скрипта в браузере, и докладывает об ошибках как только браузер пытается выполнить ваш код. Для доступа к консоли из любого браузера просто нажмите на кнопку Console. (В Internet Explorer, нажмите _Ctrl + 2_.) Откроется окно, как показано ниже:
 
-<p>Теперь попробуйте ввести следующую, неправильную версию кода и посмотрите, что из этого получится.</p>
+![](https://mdn.mozillademos.org/files/9541/console.png)
 
-<ol>
- <li>
-  <pre class="brush: js">alert('hello!);</pre>
- </li>
- <li>
-  <pre class="brush: js">document.cheeseSelector('html').style.backgroundColor = 'purple';</pre>
- </li>
- <li>
-  <pre class="brush: js">var myImage = document.createElement('img');
-myBanana.setAttribute('src','https://farm4.staticflickr.com/3455/3372925208_e1f2aae4e3_b.jpg');
-document.querySelector('h1').appendChild(myImage);</pre>
- </li>
-</ol>
+Чтобы понять, что происходит, попробуйте ввести фрагменты кода в консоль один за другим (и затем нажмите Enter):
 
-<p>Вы увидите некоторые ошибки, которые сообщит вам браузер. Зачастую эти ошибки выглядят довольно загадочно, но они должны быть довольно простыми, чтобы можно было выяснить проблему!</p>
+1.  ```js
+    alert('hello!');
+    ```
+2.  ```js
+    document.querySelector('html').style.backgroundColor = 'purple';
+    ```
+3.  ```js
+    var myImage = document.createElement('img');
+    myImage.setAttribute('src','https://farm4.staticflickr.com/3455/3372925208_e1f2aae4e3_b.jpg');
+    document.querySelector('h1').appendChild(myImage);
+    ```
 
-<h3 id="Узнать_больше_2">Узнать больше</h3>
+Теперь попробуйте ввести следующую, неправильную версию кода и посмотрите, что из этого получится.
 
-<p>Узнать больше о JavaScript консоли в различных браузерах:</p>
+1.  ```js
+    alert('hello!);
+    ```
+2.  ```js
+    document.cheeseSelector('html').style.backgroundColor = 'purple';
+    ```
+3.  ```js
+    var myImage = document.createElement('img');
+    myBanana.setAttribute('src','https://farm4.staticflickr.com/3455/3372925208_e1f2aae4e3_b.jpg');
+    document.querySelector('h1').appendChild(myImage);
+    ```
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console">Firefox Web Console</a></li>
- <li><a href="http://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx">IE JavaScript console</a></li>
- <li><a href="https://developer.chrome.com/devtools/docs/console">Chrome JavaScript Console</a> (Inpector в Opera схож с Inspector в Chrome)</li>
- <li><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1">Safari Console</a></li>
-</ul>
+Вы увидите некоторые ошибки, которые сообщит вам браузер. Зачастую эти ошибки выглядят довольно загадочно, но они должны быть довольно простыми, чтобы можно было выяснить проблему!
+
+### Узнать больше
+
+Узнать больше о JavaScript консоли в различных браузерах:
+
+- [Firefox Web Console](/ru/docs/Tools/Web_Console)
+- [IE JavaScript console](http://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx)
+- [Chrome JavaScript Console](https://developer.chrome.com/devtools/docs/console) (Inpector в Opera схож с Inspector в Chrome)
+- [Safari Console](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)

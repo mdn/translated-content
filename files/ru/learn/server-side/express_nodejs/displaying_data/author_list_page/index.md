@@ -3,15 +3,16 @@ title: Список авторов. Тест - список жанров
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
-<p>Страница списка авторов должна показывать список всех авторов, хранимых в БД, причём каждое имя автора должно быть связано со страницей подробностей для этого автора. Дата рождения автора и дата смерти должны выводиться в одной строке после имени автора.</p>
+Страница списка авторов должна показывать список всех авторов, хранимых в БД, причём каждое имя автора должно быть связано со страницей подробностей для этого автора. Дата рождения автора и дата смерти должны выводиться в одной строке после имени автора.
 
-<h2 class="highlight-spanned" id="Контроллер">Контроллер</h2>
+## Контроллер
 
-<p>Функция контроллера списка авторов должна получить список всех элементов в  <code>Author</code> , и передать этот список в шаблон для отображения.</p>
+Функция контроллера списка авторов должна получить список всех элементов в `Author` , и передать этот список в шаблон для отображения.
 
-<p>Откройте файл <strong>/controllers/authorController.js</strong>. Найдите экспортируемый метод <code>author_list()</code> в начале файла и замените его следующим ниже кодом:</p>
+Откройте файл **/controllers/authorController.js**. Найдите экспортируемый метод `author_list()` в начале файла и замените его следующим ниже кодом:
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display list of all Authors.
+```js
+// Display list of all Authors.
 exports.author_list = function(req, res, next) {
 
   Author.find()
@@ -22,15 +23,17 @@ exports.author_list = function(req, res, next) {
       res.render('author_list', { title: 'Author List', author_list: list_authors });
     });
 
-};</code></pre>
+};
+```
 
-<p>Метод использует такие функции модели как <code>find()</code>, <code>sort()</code> и <code>exec()</code> для того, чтобы вернуть все объекты  <code>Author</code> отсортированными по  <code>family_name</code> в алфавитном порядке. В вызове <code>exec()</code> колбэк-функция имеет первый параметр- объект ошибок  (или <code>null</code>) и второй параметр - список всех авторов, если ошибок не было. При ошибках вызывается следующая функция промежуточного слоя  с полученным значением объекта ошибок, а если ошибок не было, отображается шаблон <strong>author_list</strong>(.pug), передавая странице <code>title</code> и список авторов (<code>author_list</code>).</p>
+Метод использует такие функции модели как `find()`, `sort()` и `exec()` для того, чтобы вернуть все объекты `Author` отсортированными по `family_name` в алфавитном порядке. В вызове `exec()` колбэк-функция имеет первый параметр- объект ошибок (или `null`) и второй параметр - список всех авторов, если ошибок не было. При ошибках вызывается следующая функция промежуточного слоя с полученным значением объекта ошибок, а если ошибок не было, отображается шаблон **author_list**(.pug), передавая странице `title` и список авторов (`author_list`).
 
-<h2 class="highlight-spanned" id="Представление">Представление</h2>
+## Представление
 
-<p>Создайте файл <strong>/views/author_list.pug</strong> и поместите в него следующий текст:</p>
+Создайте файл **/views/author_list.pug** и поместите в него следующий текст:
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">extends layout
+```js
+extends layout
 
 block content
   h1= title
@@ -42,44 +45,40 @@ block content
         |  (#{author.date_of_birth} - #{author.date_of_death})
 
     else
-      li There are no authors.</code></pre>
+      li There are no authors.
+```
 
-<p>Представление создано по тому же образцу, что и другие шаблоны.</p>
+Представление создано по тому же образцу, что и другие шаблоны.
 
-<h2 class="highlight-spanned" id="Как_это_выглядит">Как это выглядит?</h2>
+## Как это выглядит?
 
-<p>Запустите приложение и откройте браузер с адресом <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Выберите ссылку <em>All authors</em>. Если все было сделано правильно, страница должна выглядеть примерно так, как на следующем скриншоте.</p>
+Запустите приложение и откройте браузер с адресом <http://localhost:3000/>. Выберите ссылку _All authors_. Если все было сделано правильно, страница должна выглядеть примерно так, как на следующем скриншоте.
 
-<p><img alt="Author List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14468/LocalLibary_Express_Author_List.png" style="display: block; height: 453px; margin: 0px auto; width: 1200px;"></p>
+![Author List Page - Express Local Library site](https://mdn.mozillademos.org/files/14468/LocalLibary_Express_Author_List.png)
 
-<div class="note">
-<p><strong>Примечание:</strong> Представление дат продолжительности жизни автора выглядит безобразно! Это можно исправить, если использовать <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting">тот же подход</a> , который применялся для списка <code>BookInstance</code>  (добавить в модель <code>Author</code> виртуальное свойство  продолжительности жизни).  Но в этот раз, однако, некоторые даты могут отсутствовать, и ссылки на несуществующие свойства игнорируются, если не задан строгий режим.  Метод <code>moment()</code> возвращает текущее время, и нежелательно, чтобы отсутствующие  даты форматировались как "сегодня". Один из способов состоит в том, чтобы форматирующая функция возвращала пустую строку, если дата не существует. Например:</p>
+> **Примечание:** Представление дат продолжительности жизни автора выглядит безобразно! Это можно исправить, если использовать [тот же подход](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting) , который применялся для списка `BookInstance` (добавить в модель `Author` виртуальное свойство продолжительности жизни). Но в этот раз, однако, некоторые даты могут отсутствовать, и ссылки на несуществующие свойства игнорируются, если не задан строгий режим. Метод `moment()` возвращает текущее время, и нежелательно, чтобы отсутствующие даты форматировались как "сегодня". Один из способов состоит в том, чтобы форматирующая функция возвращала пустую строку, если дата не существует. Например:
+>
+> `return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';`
 
-<p><code>return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';</code></p>
-</div>
+## Тест - страница списка жанров!
 
-<h2 id="Тест_-_страница_списка_жанров!Edit">Тест - страница списка жанров!</h2>
+В этой части требуется создать собственную страницу списка жанров. Страница должна показывать жанры, имеющиеся в БД, а для каждого жанра должна быть создана ссылка на страницу с детальной информацией. Скриншот ожидаемого результата приводится ниже.
 
-<p>В этой части требуется создать собственную страницу списка жанров. Страница должна показывать жанры, имеющиеся в БД, а для каждого жанра должна быть создана ссылка на страницу с детальной информацией. Скриншот ожидаемого результата приводится ниже.</p>
+![Genre List - Express Local Library site](https://mdn.mozillademos.org/files/14460/LocalLibary_Express_Genre_List.png)
 
-<p><img alt="Genre List - Express Local Library site" src="https://mdn.mozillademos.org/files/14460/LocalLibary_Express_Genre_List.png" style="border-style: solid; border-width: 1px; display: block; height: 346px; margin: 0px auto; width: 600px;"></p>
+Функция контроллера списка жанров должна получить список всех экземпляров `Genre`, и передать его в шаблон для отображения.
 
-<p>Функция контроллера списка жанров должна получить список всех экземпляров <code>Genre</code>, и передать его в шаблон для отображения.</p>
+1.  Следует отредактировать `genre_list()` в файле **/controllers/genreController.js**.
+2.  Реализация почти такая же, как и для контроллера `author_list()` .
 
-<ol>
- <li>Следует отредактировать <code>genre_list()</code> в файле  <strong>/controllers/genreController.js</strong>. </li>
- <li>Реализация почти такая же, как и для контроллера <code>author_list()</code> .
-  <ul>
-   <li>Sort the results by name, in ascending order.</li>
-  </ul>
- </li>
- <li>Отображающий шаблон должен быть назван <strong>genre_list.pug</strong>.</li>
- <li>Шаблону для отображения должны быть переданы переменные <code>title</code> (строка 'Genre List') и <code>genre_list</code> (the list of список жанров, который вернёт колбэк-функция <code>Genre.find()</code>.</li>
- <li>Представление должно соответствовать скриншоту, приведённому ранее (оно должно иметь структуру и формат, похожие на таковые в представлении списка авторов, за исключением, конечно, продолжительности жизни, так как для жанров даты не заданы).</li>
-</ol>
+    - Sort the results by name, in ascending order.
 
-<h2 id="Далее">Далее</h2>
+3.  Отображающий шаблон должен быть назван **genre_list.pug**.
+4.  Шаблону для отображения должны быть переданы переменные `title` (строка 'Genre List') и `genre_list` (the list of список жанров, который вернёт колбэк-функция `Genre.find()`.
+5.  Представление должно соответствовать скриншоту, приведённому ранее (оно должно иметь структуру и формат, похожие на таковые в представлении списка авторов, за исключением, конечно, продолжительности жизни, так как для жанров даты не заданы).
 
-<p>Вернуться к части 5 -  <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</p>
+## Далее
 
-<p>Перейти к следующему подразделу в части 5: подробная информация о жанрах (<a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page">Genre detail page</a>).</p>
+Вернуться к части 5 - [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+
+Перейти к следующему подразделу в части 5: подробная информация о жанрах ([Genre detail page](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)).

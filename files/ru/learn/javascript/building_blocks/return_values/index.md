@@ -3,170 +3,162 @@ title: Возвращаемые значения функций
 slug: Learn/JavaScript/Building_blocks/Return_values
 translation_of: Learn/JavaScript/Building_blocks/Return_values
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/События", "Learn/JavaScript/Building_blocks")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/События", "Learn/JavaScript/Building_blocks")}}</div>
+Для нас в этом курсе имеется ещё один важный момент. Посмотрим внимательнее на возвращаемое значение функций. Некоторые функции не возвращают существенное значение после завершения, но некоторые возвращают, и важно понимать что это за значение и как использовать его в своём коде и как сделать так чтобы ваши собственные функции возвращали полезные значения. Мы объясним всё это ниже.
 
-<p class="summary">Для нас в этом курсе имеется ещё один важный момент. Посмотрим внимательнее на возвращаемое значение функций. Некоторые функции не возвращают существенное значение после завершения, но некоторые возвращают, и важно понимать что это за значение и как использовать его в своём коде и как сделать так чтобы ваши собственные функции возвращали полезные значения. Мы объясним всё это ниже. </p>
+| Необходимые навыки: | Базовая компьютерная грамотность, знание основ HTML и CSS, [JavaScript first steps](/ru/docs/Learn/JavaScript/First_steps), [Functions — reusable blocks of code](/ru/docs/Learn/JavaScript/Building_blocks/Functions). |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цели:               | Понять что такое возвращаемое значение функции и как его использовать.                                                                                                                                                  |
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Необходимые навыки:</th>
-   <td>
-    <p>Базовая компьютерная грамотность, знание основ HTML и CSS, <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a>.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Цели:</th>
-   <td>Понять что такое возвращаемое значение функции и как его использовать.</td>
-  </tr>
- </tbody>
-</table>
+## Что из себя представляют возвращаемые значения?
 
-<h2 id="Что_из_себя_представляют_возвращаемые_значения">Что из себя представляют возвращаемые значения?</h2>
+**Возвращаемые значения** - это на самом деле просто значения, которые функция возвращает после своего завершения. Вы уже неоднократно встречали возвращаемые значения, хотя, возможно, и не осознавали этого. Напишем небольшой код:
 
-<p><strong>Возвращаемые значения </strong>- это на самом деле просто значения, которые функция возвращает после своего завершения. Вы уже неоднократно встречали возвращаемые значения, хотя, возможно, и не осознавали этого. Напишем небольшой код: </p>
-
-<pre class="brush: js">var myText = 'I am a string';
+```js
+var myText = 'I am a string';
 var newString = myText.replace('string', 'sausage');
 console.log(newString);
 // функция replace() принимает строку,
 // заменяет одну подстроку другой и возвращает
-// новую строку со сделанными заменами</pre>
+// новую строку со сделанными заменами
+```
 
-<p>Мы уже видели этот блок кода в нашей первой статье про функции. Мы вызываем функцию <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a> на строке <code>myText</code> и передаём ей 2 параметра —  заменяемую подстроку и подстроку, которой будем заменять. Когда функция завершит выполнение, она вернёт значение, которым является новая строка со сделанными в ней заменами.  В коде выше мы сохраняем это возвращаемое значение как значение переменной <code>newString</code>.</p>
+Мы уже видели этот блок кода в нашей первой статье про функции. Мы вызываем функцию [replace()](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/replace) на строке `myText` и передаём ей 2 параметра — заменяемую подстроку и подстроку, которой будем заменять. Когда функция завершит выполнение, она вернёт значение, которым является новая строка со сделанными в ней заменами. В коде выше мы сохраняем это возвращаемое значение как значение переменной `newString`.
 
-<p>Если вы посмотрите на функцию replace() на MDN reference page, вы увидите секцию под названием <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value">Return value</a>.  Очень важно знать и понимать какие значения возвращаются функциями, так что мы пытаемся включать эту информацию везде, где это возможно.</p>
+Если вы посмотрите на функцию replace() на MDN reference page, вы увидите секцию под названием [Return value](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value). Очень важно знать и понимать какие значения возвращаются функциями, так что мы пытаемся включать эту информацию везде, где это возможно.
 
-<p>Некоторые функции не возвращают значения( на наших reference pages, возвращаемое значение обозначено как <code>void</code> или <code>undefined</code> в таких случаях). Например, в функции <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50">displayMessage()</a> которую мы сделали в прошлой статье, в результате выполнения функции не возвращается никакого значения. Функция всего лишь отображает что-то где-то на экране.</p>
+Некоторые функции не возвращают значения( на наших reference pages, возвращаемое значение обозначено как `void` или `undefined` в таких случаях). Например, в функции [displayMessage()](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) которую мы сделали в прошлой статье, в результате выполнения функции не возвращается никакого значения. Функция всего лишь отображает что-то где-то на экране.
 
-<p>В основном, возвращаемое значение используется там, где функция является чем-то вроде вспомогательного звена при вычислениях. Вы хотите получить результат, который включает в себя некоторые значения. Эти значения вычисляются функцией, которая возвращает результат так, что он может быть использован в следующих стадиях вычисления.</p>
+В основном, возвращаемое значение используется там, где функция является чем-то вроде вспомогательного звена при вычислениях. Вы хотите получить результат, который включает в себя некоторые значения. Эти значения вычисляются функцией, которая возвращает результат так, что он может быть использован в следующих стадиях вычисления.
 
-<h3 id="Использование_возвращаемых_значений_в_ваших_собственных_функциях">Использование возвращаемых значений в ваших собственных функциях</h3>
+### Использование возвращаемых значений в ваших собственных функциях
 
-<p>Чтобы вернуть значение своей функции, вы должны использовать ключевое слово <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a>. Мы видели это в действии недавно - в нашем примере <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a>. Наша функция<code>draw()</code>отрисовывает где-то на экране 100 случайных кружков. </p>
+Чтобы вернуть значение своей функции, вы должны использовать ключевое слово [return](/ru/docs/Web/JavaScript/Reference/Statements/return). Мы видели это в действии недавно - в нашем примере [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html). Наша функция`draw()`отрисовывает где-то на экране 100 случайных кружков.
 
-<p>{{htmlelement("canvas")}}:</p>
+{{htmlelement("canvas")}}:
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   ctx.clearRect(0,0,WIDTH,HEIGHT);
-  for (var i = 0; i &lt; 100; i++) {
+  for (var i = 0; i < 100; i++) {
     ctx.beginPath();
     ctx.fillStyle = 'rgba(255,0,0,0.5)';
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
-}</pre>
+}
+```
 
-<p>Внутри каждой итерации есть 3 вызова функции <code>random()</code>. Это сделано чтобы сгенерировать случайное значение для текущей координаты x, y и для радиуса. Функция <code>random()</code> принимает 1 параметр (целое число) и возвращает случайное число в диапазоне от 0 до этого числа. Выглядит это вот так: </p>
+Внутри каждой итерации есть 3 вызова функции `random()`. Это сделано чтобы сгенерировать случайное значение для текущей координаты x, y и для радиуса. Функция `random()` принимает 1 параметр (целое число) и возвращает случайное число в диапазоне от 0 до этого числа. Выглядит это вот так:
 
-<pre class="brush: js">function random(number) {
+```js
+function random(number) {
   return Math.floor(Math.random()*number);
-}</pre>
+}
+```
 
-<p>Тоже самое может быть написано вот так:</p>
+Тоже самое может быть написано вот так:
 
-<pre class="brush: js">function random(number) {
+```js
+function random(number) {
   var result = Math.floor(Math.random()*number);
   return result;
-}</pre>
-
-<p>Но первую версию написать быстрее и она более компактна.</p>
-
-<p>Мы возвращаем результат вычисления <code>Math.floor(Math.random()*number)</code> каждый раз когда функция вызывается. Это возвращаемое значение появляется в момент вызова функции и код продолжается. Так, например, если мы выполним следующую строчку:</p>
-
-<pre class="brush: js">ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);</pre>
-
-<p>и 3 вызова <code>random()</code> вернут значения 500, 200 и 35, соответственно, строчка будет выполнена как если бы она была такой:</p>
-
-<pre class="brush: js">ctx.arc(500, 200, 35, 0, 2 * Math.PI);
-</pre>
-
-<p>Сначала выполняются вызовы функции <code>random()</code>, на место которых подставляются возвращаемые ей значения, а затем выполнятся сама строка.</p>
-
-<h2 id="Активное_обучение_наша_собственная_возвращающая_значение_функция">Активное обучение: наша собственная, возвращающая значение функция</h2>
-
-<p>Теперь напишем нашу собственную возвращающую значение функцию.</p>
-
-<ol>
- <li>Первым делом, сделайте локальную копию файла <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html">function-library.html</a> из GitHub. Это простая HTML страничка, содержащая текстовое поле {{htmlelement("input")}} и параграф Также там есть элемент {{htmlelement("script")}} в котором мы храним в 2ух переменных ссылки на оба HTML-элемента. Это маленькая страничка позволит вам ввести число в text box и отобразит различные, относящиеся к нему числа в параграфе ниже.</li>
- <li>Теперь добавим несколько полезных функций в элемент <code>&lt;script&gt;</code> . Ниже двух существующих строчек JavaScript, добавьте следующие описания функций:
-  <pre class="brush: js">function squared(num) {
-  return num * num;
 }
+```
 
-function cubed(num) {
-  return num * num * num;
-}
+Но первую версию написать быстрее и она более компактна.
 
-function factorial(num) {
-  var x = num;
-  while (x &gt; 1) {
-    num *= x-1;
-    x--;
-  }
-  return num;
-}</pre>
-  <code>Ф</code>функции <code>squared()</code> и <code>cubed()</code> довольно очевидны— они возвращают квадрат или куб переданного как параметр числа. Функция <code>factorial()</code> возвращает <a href="https://en.wikipedia.org/wiki/Factorial">factorial</a> переданного числа.</li>
- <li>Далее мы добавим способ выводить нашу информацию введённым в  text input числе. Добавьте обработчик событий ниже существующих функций:
-  <pre class="brush: js">input.onchange = function() {
-  var num = input.value;
-  if (isNaN(num)) {
-    para.textContent = 'You need to enter a number!';
-  } else {
-    para.textContent = num + ' squared is ' + squared(num) + '. ' +
-                       num + ' cubed is ' + cubed(num) + '. ' +
-                       num + ' factorial is ' + factorial(num) + '.';
-  }
-}</pre>
+Мы возвращаем результат вычисления `Math.floor(Math.random()*number)` каждый раз когда функция вызывается. Это возвращаемое значение появляется в момент вызова функции и код продолжается. Так, например, если мы выполним следующую строчку:
 
-  <p>Здесь мы создаём обработчик событий <code>onchange</code>  который срабатывает когда меняется когда новое значение вводится в text input и подтверждается (введите значение и, например, нажмите tab). Когда анонимная функция срабатывает, введённое в input значение сохраняется в переменной <code>num</code> .</p>
- </li>
- <li>
-  <p>Далее мы делаем условный тест — если введённое значение не является числом, мы выводим в параграф сообщение об ошибке . Тест смотрит возвращает ли выражение <code>isNaN(num)</code>  true. Мы используем функцию <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN">isNaN()</a> чтобы проверить что значение переменной num не число — если так то функция возвращает<code>true</code>, если нет- <code>false</code>.</p>
- </li>
- <li>
-  <p>Если тест возвращает <code>false</code>, значение переменной <code>num</code>число, и поэтому мы выводим сообщение внутри параграфа о значениях квадрата, куба и факториала числа. Предложение вызывает  функции <code>squared()</code>, <code>cubed() и</code><code>factorial()</code> чтобы получить нужные значения. Сохраните ваш код, загрузите его в браузере и посмотрите на то что получилось.</p>
- </li>
-</ol>
+```js
+ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+```
 
-<div class="note">
-<p><strong>Замечание</strong>:  Если у вас проблемы с работой данного примера, не стесняйтесь сверить ваш код с работающей версией <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html">finished version on GitHub</a> (или <a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html">смотрите живой пример</a>), или спросите нас.</p>
-</div>
+и 3 вызова `random()` вернут значения 500, 200 и 35, соответственно, строчка будет выполнена как если бы она была такой:
 
-<p>К этому моменту мы хотели бы чтобы вы написали парочку собственных функций и добавили их в библиотеку. Как на счёт квадратного или кубического корня числа или длины окружности круга с длиной радиуса равной числу <code>num</code>?</p>
+```js
+ctx.arc(500, 200, 35, 0, 2 * Math.PI);
+```
 
-<p>Это упражнение привнесло парочку важных понятий в изучении того, как использовать ключевое слово <code>return</code> . В дополнение:</p>
+Сначала выполняются вызовы функции `random()`, на место которых подставляются возвращаемые ей значения, а затем выполнятся сама строка.
 
-<ul>
- <li>Приведите другой пример написание обработчика ошибок. Это довольно хорошая идея проверять что важные параметры предоставлены в правильном типе и если они опциональны то предусматривать для них значения по умолчанию. В таком случая ваша программа с меньшей вероятность подвержена ошибкам. </li>
- <li>Поразмышляйте о идее создания библиотеки функций. Чем дальше вы будите расти в профессиональном плане, тем больше будете сталкиваться с однотипными вещами. Это хорошая идея начать собирать свою собственную библиотеку функций, которые вы часто используют — в таком случае вы сможете просто скопировать их в ваш новый код или просто добавить их в любую HTML страничку, где это требуется.</li>
-</ul>
+## Активное обучение: наша собственная, возвращающая значение функция
 
-<h2 id="Заключение">Заключение</h2>
+Теперь напишем нашу собственную возвращающую значение функцию.
 
-<p>Функции очень полезны и несмотря на то, что об их синтаксисе и функциональности можно говорить долго, у нас есть довольно понятные статьи для дальнейшего обучения.</p>
+1.  Первым делом, сделайте локальную копию файла [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) из GitHub. Это простая HTML страничка, содержащая текстовое поле {{htmlelement("input")}} и параграф Также там есть элемент {{htmlelement("script")}} в котором мы храним в 2ух переменных ссылки на оба HTML-элемента. Это маленькая страничка позволит вам ввести число в text box и отобразит различные, относящиеся к нему числа в параграфе ниже.
+2.  Теперь добавим несколько полезных функций в элемент `<script>` . Ниже двух существующих строчек JavaScript, добавьте следующие описания функций:
 
-<p>Если в статье есть что-то что вы не поняли, не стесняйтесь перечитать статью ещё раз или <a href="/en-US/Learn#Contact_us">свяжитесь с нами</a> для получения помощи.</p>
+    ```js
+    function squared(num) {
+      return num * num;
+    }
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+    function cubed(num) {
+      return num * num * num;
+    }
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions">Функции более подробно</a> — подробное руководство, охватывающее более продвинутую информацию, связанную с функциями.</li>
- <li><a href="https://www.impressivewebs.com/callback-functions-javascript/">Колбэк-функции в JavaScript</a> — распространённый паттерн JavaScript для передачи функции в другую функцию как аргумент, который затем вызывается внутри первой функции.</li>
-</ul>
+    function factorial(num) {
+      var x = num;
+      while (x > 1) {
+        num *= x-1;
+        x--;
+      }
+      return num;
+    }
+    ```
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}</p>
+    `Ф`функции `squared()` и `cubed()` довольно очевидны— они возвращают квадрат или куб переданного как параметр числа. Функция `factorial()` возвращает [factorial](https://en.wikipedia.org/wiki/Factorial) переданного числа.
 
-<h2 id="In_this_module">In this module</h2>
+3.  Далее мы добавим способ выводить нашу информацию введённым в text input числе. Добавьте обработчик событий ниже существующих функций:
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
-</ul>
+    ```js
+    input.onchange = function() {
+      var num = input.value;
+      if (isNaN(num)) {
+        para.textContent = 'You need to enter a number!';
+      } else {
+        para.textContent = num + ' squared is ' + squared(num) + '. ' +
+                           num + ' cubed is ' + cubed(num) + '. ' +
+                           num + ' factorial is ' + factorial(num) + '.';
+      }
+    }
+    ```
+
+    Здесь мы создаём обработчик событий `onchange` который срабатывает когда меняется когда новое значение вводится в text input и подтверждается (введите значение и, например, нажмите tab). Когда анонимная функция срабатывает, введённое в input значение сохраняется в переменной `num` .
+
+4.  Далее мы делаем условный тест — если введённое значение не является числом, мы выводим в параграф сообщение об ошибке . Тест смотрит возвращает ли выражение `isNaN(num)` true. Мы используем функцию [isNaN()](/ru/docs/Web/JavaScript/Reference/Global_Objects/isNaN) чтобы проверить что значение переменной num не число — если так то функция возвращает`true`, если нет- `false`.
+5.  Если тест возвращает `false`, значение переменной `num`число, и поэтому мы выводим сообщение внутри параграфа о значениях квадрата, куба и факториала числа. Предложение вызывает функции `squared()`, ` cubed() и``factorial() ` чтобы получить нужные значения. Сохраните ваш код, загрузите его в браузере и посмотрите на то что получилось.
+
+> **Примечание:** **Замечание**: Если у вас проблемы с работой данного примера, не стесняйтесь сверить ваш код с работающей версией [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html) (или [смотрите живой пример](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)), или спросите нас.
+
+К этому моменту мы хотели бы чтобы вы написали парочку собственных функций и добавили их в библиотеку. Как на счёт квадратного или кубического корня числа или длины окружности круга с длиной радиуса равной числу `num`?
+
+Это упражнение привнесло парочку важных понятий в изучении того, как использовать ключевое слово `return` . В дополнение:
+
+- Приведите другой пример написание обработчика ошибок. Это довольно хорошая идея проверять что важные параметры предоставлены в правильном типе и если они опциональны то предусматривать для них значения по умолчанию. В таком случая ваша программа с меньшей вероятность подвержена ошибкам.
+- Поразмышляйте о идее создания библиотеки функций. Чем дальше вы будите расти в профессиональном плане, тем больше будете сталкиваться с однотипными вещами. Это хорошая идея начать собирать свою собственную библиотеку функций, которые вы часто используют — в таком случае вы сможете просто скопировать их в ваш новый код или просто добавить их в любую HTML страничку, где это требуется.
+
+## Заключение
+
+Функции очень полезны и несмотря на то, что об их синтаксисе и функциональности можно говорить долго, у нас есть довольно понятные статьи для дальнейшего обучения.
+
+Если в статье есть что-то что вы не поняли, не стесняйтесь перечитать статью ещё раз или [свяжитесь с нами](/en-US/Learn#Contact_us) для получения помощи.
+
+## Смотрите также
+
+- [Функции более подробно](/ru/docs/Web/JavaScript/Reference/Functions) — подробное руководство, охватывающее более продвинутую информацию, связанную с функциями.
+- [Колбэк-функции в JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — распространённый паттерн JavaScript для передачи функции в другую функцию как аргумент, который затем вызывается внутри первой функции.
+
+{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+
+## In this module
+
+- [Making decisions in your code — conditionals](/ru/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Looping code](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [Functions — reusable blocks of code](/ru/docs/Learn/JavaScript/Building_blocks/Functions)
+- [Build your own function](/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [Function return values](/ru/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction to events](/ru/docs/Learn/JavaScript/Building_blocks/Events)
+- [Image gallery](/ru/docs/Learn/JavaScript/Building_blocks/Image_gallery)

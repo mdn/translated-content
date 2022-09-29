@@ -13,67 +13,55 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 original_slug: Learn/Getting_started_with_the_web/Установка_базового_программного_обеспечения
 ---
-<div>
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
-<div>{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}</div>
-</div>
+В _Установке базового программного обеспечения_, мы покажем вам, какие инструменты вам необходимы для простой веб-разработки, и как правильно установить их.
 
-<div class="summary">
-<p>В <em>Установке базового программного обеспечения</em>, мы покажем вам, какие инструменты вам необходимы для простой веб-разработки, и как правильно установить их.</p>
-</div>
+## Какие инструменты используют профессионалы?
 
-<h2 id="Какие_инструменты_используют_профессионалы">Какие инструменты используют профессионалы?</h2>
+- **Компьютер**. Может быть, это звучит очевидно для некоторых людей, но некоторые из вас читают эту статью с телефона или библиотечного компьютера. Для серьёзной веб-разработки, лучше приобрести настольный компьютер (Windows, Mac или Linux).
+- **Текстовый редактор**, чтобы писать код. Это может быть текстовый редактор (например, [Visual Studio Code](https://code.visualstudio.com/), [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [GNU Emacs](https://www.gnu.org/software/emacs/), или [VIM](https://www.vim.org/)) или гибридный редактор (например, [Dreamweaver ](https://www.adobe.com/products/dreamweaver.html)or [WebStorm](https://www.jetbrains.com/webstorm/)). Офисные редакторы не подходят для этого, поскольку они зависят от скрытых элементов, которые мешают движкам рендеринга, используемым веб-браузерами.
+- **Веб-браузеры**, для тестирования кода. В настоящее время наиболее часто используемые браузеры это [Firefox](https://www.mozilla.org/ru/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/), [Safari](https://www.apple.com/safari/), и [Internet Explorer](http://windows.microsoft.com/ru/internet-explorer/download-ie). Вы также должны тестировать ваш сайт на то, как он работает на мобильных устройствах и на любых старых браузерах, которые ваша целевая аудитория может все ещё широко использовать (например, IE 6-8). [Lynx](https://lynx.browser.org/), текстовый веб-браузер для терминала, отлично подходит для того, чтобы увидеть, как ваш сайт воспринимается слабовидящими пользователями.
+- **Графический редактор**, такие как [The Gimp](http://www.gimp.org/), [Paint.NET](http://www.getpaint.net/), или [Photoshop](http://www.adobe.com/uk/products/photoshop.html), чтобы создавать изображения для ваших веб-страниц.
+- **Система контроля версий**, чтобы управлять файлами на сервере, для совместной работы над проектом с командой, обмениваться кодом и избегать редакторских конфликтов. Сейчас [Git](http://git-scm.com/) является наиболее популярным инструментом контроля версий, и репозиторий кода [Github](https://github.com/), основанный на Git, также является очень популярным.
+- **FTP программа**, чтобы загружать веб-страницы на сервер для публичного просмотра. Существует обилие таких программ, доступных в том числе [Cyberduck](https://cyberduck.io/), [Fetch](http://fetchsoftworks.com/), и [FileZilla](https://filezilla-project.org/).
+- **Система автоматизации**, такая как [Grunt](http://gruntjs.com/) или [Gulp](http://gulpjs.com/), для автоматического выполнения повторяющихся задач, например, минимизации кода и запуска тестов.
+- Шаблоны, библиотеки, фреймворки и т. д., чтобы ускорить написание общей функциональности.
+- А также некоторые другие инструменты!
 
-<ul>
- <li><strong>Компьютер</strong>. Может быть, это звучит очевидно для некоторых людей, но некоторые из вас читают эту статью с телефона или библиотечного компьютера. Для серьёзной веб-разработки, лучше приобрести настольный компьютер (Windows, Mac или Linux).</li>
- <li><strong>Текстовый редактор</strong>, чтобы писать код. Это может быть текстовый редактор (например, <a href="https://code.visualstudio.com/">Visual Studio Code</a>, <a href="https://notepad-plus-plus.org/">Notepad++</a>, <a href="https://www.sublimetext.com/">Sublime Text</a>, <a href="https://atom.io/">Atom</a>, <a href="https://www.gnu.org/software/emacs/">GNU Emacs</a>, или <a href="https://www.vim.org/">VIM</a>) или гибридный редактор (например, <a href="https://www.adobe.com/products/dreamweaver.html">Dreamweaver </a>or <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>). Офисные редакторы не подходят для этого, поскольку они зависят от скрытых элементов, которые мешают движкам рендеринга, используемым веб-браузерами.</li>
- <li><strong>Веб-браузеры</strong>, для тестирования кода. В настоящее время наиболее часто используемые браузеры это <a href="https://www.mozilla.org/ru/firefox/new/">Firefox</a>, <a href="https://www.google.com/chrome/browser/">Chrome</a>, <a href="http://www.opera.com/">Opera</a>, <a href="https://www.apple.com/safari/">Safari</a>, и <a href="http://windows.microsoft.com/ru/internet-explorer/download-ie">Internet Explorer</a>. Вы также должны тестировать ваш сайт на то, как он работает на мобильных устройствах и на любых старых браузерах, которые ваша целевая аудитория может все ещё широко использовать (например, IE 6-8). <a href="https://lynx.browser.org/">Lynx</a>, текстовый веб-браузер для терминала, отлично подходит для того, чтобы увидеть, как ваш сайт воспринимается слабовидящими пользователями.</li>
- <li><strong>Графический редактор</strong>, такие как <a href="http://www.gimp.org/">The Gimp</a>, <a href="http://www.getpaint.net/">Paint.NET</a>, или <a href="http://www.adobe.com/uk/products/photoshop.html">Photoshop</a>, чтобы создавать изображения для ваших веб-страниц.</li>
- <li><strong>Система контроля версий</strong>, чтобы управлять файлами на сервере, для совместной работы над проектом с командой, обмениваться кодом и избегать редакторских конфликтов. Сейчас <a href="http://git-scm.com/">Git</a> является наиболее популярным инструментом контроля версий, и репозиторий кода <a href="https://github.com/">Github</a>, основанный на Git, также является очень популярным.</li>
- <li><strong>FTP программа</strong>, чтобы загружать веб-страницы на сервер для публичного просмотра. Существует обилие таких программ, доступных в том числе <a href="https://cyberduck.io/">Cyberduck</a>, <a href="http://fetchsoftworks.com/">Fetch</a>, и <a href="https://filezilla-project.org/">FileZilla</a>.</li>
- <li><strong>Система автоматизации</strong>, такая как <a href="http://gruntjs.com/">Grunt</a> или <a href="http://gulpjs.com/">Gulp</a>, для автоматического выполнения повторяющихся задач, например, минимизации кода и запуска тестов.</li>
- <li>Шаблоны, библиотеки, фреймворки и т. д., чтобы ускорить написание общей функциональности.</li>
- <li>А также некоторые другие инструменты!</li>
-</ul>
+## Какие инструменты на самом деле нужны мне прямо сейчас?
 
-<h2 id="Какие_инструменты_на_самом_деле_нужны_мне_прямо_сейчас">Какие инструменты на самом деле нужны мне прямо сейчас?</h2>
+Этот список выглядит страшновато, но, к счастью, вы можете начать веб-разработку, не зная ничего о большинстве из того, что в нем написано. В этой статье мы установим базовый минимум - текстовый редактор и некоторые современные веб-браузеры.
 
-<p>Этот список выглядит страшновато, но, к счастью, вы можете начать веб-разработку, не зная ничего о большинстве из того, что в нем написано. В этой статье мы установим базовый минимум - текстовый редактор и некоторые современные веб-браузеры.</p>
+### Установка текстового редактора
 
-<h3 id="Установка_текстового_редактора">Установка текстового редактора</h3>
+У вас, наверное, уже есть базовый текстовый редактор на вашем компьютере. По умолчанию Windows включает [Блокнот](https://ru.wikipedia.org/wiki/%D0%91%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82_%28%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%29) и Mac OS X поставляется с [TextEdit](https://ru.wikipedia.org/wiki/TextEdit). Linux дистрибутивы варьируются; Ubuntu поставляется с [gedit](https://ru.wikipedia.org/wiki/Gedit) по умолчанию.
 
-<p>У вас, наверное, уже есть базовый текстовый редактор на вашем компьютере. По умолчанию Windows включает <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82_%28%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%29">Блокнот</a> и Mac OS X поставляется с <a href="https://ru.wikipedia.org/wiki/TextEdit">TextEdit</a>. Linux дистрибутивы варьируются; Ubuntu поставляется с <a href="https://ru.wikipedia.org/wiki/Gedit">gedit</a> по умолчанию.</p>
+Для веб-разработки вам, вероятно, понадобится больше, чем могут предложить Notepad или TextEdit. Мы рекомендуем начать с [](https://www.sublimetext.com/)[Visual Studio Code](https://code.visualstudio.com/), который является бесплатным редактором, который предлагает предварительный просмотр и подсказки во время написания кода.
 
-<p>Для веб-разработки вам, вероятно, понадобится больше, чем могут предложить Notepad или TextEdit. Мы рекомендуем начать с <a href="https://www.sublimetext.com/"> </a><a href="https://code.visualstudio.com/">Visual Studio Code</a>, который является бесплатным редактором, который предлагает предварительный просмотр и подсказки во время написания кода.</p>
+### Установка современных веб-браузеров
 
-<h3 id="Установка_современных_веб-браузеров">Установка современных веб-браузеров</h3>
+На данный момент, мы установим только пару настольных веб-браузеров, чтобы проверять наш код. Выберите вашу операционную систему ниже и нажмите на соответствующие ссылки для загрузки установочных программ ваших любимых браузеров:
 
-<p>На данный момент, мы установим только пару настольных веб-браузеров, чтобы проверять наш код. Выберите вашу операционную систему ниже и нажмите на соответствующие ссылки для загрузки установочных программ ваших любимых браузеров:</p>
+- Linux: [Firefox](https://www.mozilla.org/ru/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/), [Brave](https://brave.com).
+- Windows: [Firefox](https://www.mozilla.org/ru/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/), [Internet Explorer](http://windows.microsoft.com/ru/internet-explorer/download-ie), [Brave](https://brave.com) (Если у вас есть Windows 8 или выше, вы можете установить IE 10 или более позднюю версию; иначе, вам следует установить альтернативный браузер)
+- Mac: [Firefox](https://www.mozilla.org/ru/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/), [Safari](https://www.apple.com/safari/), [Brave](https://brave.com) (Safari поставляется с iOS и OS X по умолчанию)
 
-<ul>
- <li>Linux: <a href="https://www.mozilla.org/ru/firefox/new/">Firefox</a>, <a href="https://www.google.com/chrome/browser/">Chrome</a>, <a href="http://www.opera.com/">Opera</a>, <a href="https://brave.com">Brave</a>.</li>
- <li>Windows: <a href="https://www.mozilla.org/ru/firefox/new/">Firefox</a>, <a href="https://www.google.com/chrome/browser/">Chrome</a>, <a href="http://www.opera.com/">Opera</a>, <a href="http://windows.microsoft.com/ru/internet-explorer/download-ie">Internet Explorer</a>, <a href="https://brave.com">Brave</a> (Если у вас есть Windows 8 или выше, вы можете установить IE 10 или более позднюю версию; иначе, вам следует установить альтернативный браузер)</li>
- <li>Mac: <a href="https://www.mozilla.org/ru/firefox/new/">Firefox</a>, <a href="https://www.google.com/chrome/browser/">Chrome</a>, <a href="http://www.opera.com/">Opera</a>, <a href="https://www.apple.com/safari/">Safari</a>, <a href="https://brave.com">Brave</a> (Safari поставляется с iOS и OS X по умолчанию)</li>
-</ul>
+Прежде, чем идти дальше, вам следует установить, по крайней мере, два из этих браузеров, чтобы использовать их для тестирования.
 
-<p>Прежде, чем идти дальше, вам следует установить, по крайней мере, два из этих браузеров, чтобы использовать их для тестирования.</p>
+### Установка локального веб-сервера
 
-<h3 id="Установка_локального_веб-сервера">Установка локального веб-сервера</h3>
+Некоторые примеры для успешной работы необходимо будет запустить на веб-сервере. Вы можете узнать, как это сделать в статье [Как настроить локальный сервер для тестирования?](/ru/docs/Learn/Common_questions/set_up_a_local_testing_server)
 
-<p>Некоторые примеры для успешной работы необходимо будет запустить на веб-сервере. Вы можете узнать, как это сделать в статье <a href="https://developer.mozilla.org/ru/docs/Learn/Common_questions/set_up_a_local_testing_server">Как настроить локальный сервер для тестирования?</a></p>
+{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
-<p>{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}</p>
+## В этом модуле
 
-<h2 id="В_этом_модуле">В этом модуле</h2>
-
-<ul>
- <li id="Installing_basic_software"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">Установка базового программного обеспечения</a></li>
- <li id="What_will_your_website_look_like"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">Каким должен быть ваш веб-сайт?</a></li>
- <li id="Dealing_with_files"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Работа с файлами</a></li>
- <li id="HTML_basics"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics">Основы HTML</a></li>
- <li id="CSS_basics"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/CSS_basics">Основы CSS</a></li>
- <li id="JavaScript_basics"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Основы JavaScript</a></li>
- <li id="Publishing_your_website"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Публикация вашего веб-сайта</a></li>
- <li id="How_the_web_works"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works">Как работает Веб</a></li>
-</ul>
+- [Установка базового программного обеспечения](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)
+- [Каким должен быть ваш веб-сайт?](/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [Работа с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [Основы HTML](/ru/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [Основы CSS](/ru/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [Основы JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [Публикация вашего веб-сайта](/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [Как работает Веб](/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

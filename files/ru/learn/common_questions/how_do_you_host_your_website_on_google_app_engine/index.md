@@ -3,58 +3,55 @@ title: Как разместить свой сайт в Google App Engine
 slug: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
 translation_of: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
 ---
-<p class="summary"><a href="https://cloud.google.com/appengine/" title="App Engine - Build Scalable Web &amp; Mobile Backends in Any Language  |  Google Cloud Platform">Google App Engine</a> - это мощная платформа, которая позволяет создавать и запускать приложения в инфраструктуре Google - нужно ли создавать многоуровневое веб-приложение с нуля или размещать статический веб-сайт. Вот пошаговое руководство по размещению вашего сайта в Google App Engine.</p>
+[Google App Engine](https://cloud.google.com/appengine/ "App Engine - Build Scalable Web & Mobile Backends in Any Language  |  Google Cloud Platform") - это мощная платформа, которая позволяет создавать и запускать приложения в инфраструктуре Google - нужно ли создавать многоуровневое веб-приложение с нуля или размещать статический веб-сайт. Вот пошаговое руководство по размещению вашего сайта в Google App Engine.
 
-<h2 id="Создание_проекта_Google_Cloud_Platform">Создание проекта Google Cloud Platform</h2>
+## Создание проекта Google Cloud Platform
 
-<p>Чтобы использовать инструменты Google для своего собственного сайта или приложения, вам нужно создать новый проект на Google Cloud Platform. Для этого требуется наличие учётной записи Google.</p>
+Чтобы использовать инструменты Google для своего собственного сайта или приложения, вам нужно создать новый проект на Google Cloud Platform. Для этого требуется наличие учётной записи Google.
 
-<ol>
- <li>Перейдите на панель <a href="https://console.cloud.google.com/projectselector/appengine">App Engine dashboard</a> в консоли Google Cloud Platform и нажмите кнопку «Создать» (<em>Create</em>).</li>
- <li>Введите название проекта, отредактируйте свой ID проекта и отметьте его. Для этого урока используются следующие значения:
-  <ul>
-   <li>Project name: <em>GAE Sample Site</em></li>
-   <li>Project ID: <em>gaesamplesite</em></li>
-  </ul>
- </li>
- <li>Если вы ещё не создали проект раньше, вам нужно будет выбрать, хотите ли вы получать обновления электронной почты или нет, соглашайтесь с Условиями обслуживания, а затем вы можете нажать кнопку «Создать», чтобы создать свой проект.</li>
-</ol>
+1.  Перейдите на панель [App Engine dashboard](https://console.cloud.google.com/projectselector/appengine) в консоли Google Cloud Platform и нажмите кнопку «Создать» (_Create_).
+2.  Введите название проекта, отредактируйте свой ID проекта и отметьте его. Для этого урока используются следующие значения:
 
-<h2 id="Создание_приложения">Создание приложения</h2>
+    - Project name: _GAE Sample Site_
+    - Project ID: _gaesamplesite_
 
-<p>Каждый проект Cloud Platform может содержать одно приложение App Engine. Давайте подготовим приложение для нашего проекта.</p>
+3.  Если вы ещё не создали проект раньше, вам нужно будет выбрать, хотите ли вы получать обновления электронной почты или нет, соглашайтесь с Условиями обслуживания, а затем вы можете нажать кнопку «Создать», чтобы создать свой проект.
 
-<ol>
- <li>Нам понадобится образец приложения для публикации. Если у вас его нет, загрузите и распакуйте это <a href="http://gaesamplesite.appspot.com/downloads.html">sample app</a>..</li>
- <li>Посмотрите на структуру образца приложения - папка <code>website</code> содержит содержимое вашего сайта, а <code>app.yaml</code> - ваш файл конфигурации приложения.
-  <ul>
-   <li>Ваш веб-сайт должен войти в папку <code>website</code>, а его целевую страницу нужно называть <code>index.html</code>, но кроме того, она может принимать любую форму.</li>
-   <li>Файл <code>app.yaml</code> - это файл конфигурации, который сообщает App Engine, как сопоставлять URL-адреса вашим статическим файлам. Вам не нужно его редактировать.</li>
-  </ul>
- </li>
-</ol>
+## Создание приложения
 
-<h2 id="Публикация_приложения">Публикация приложения</h2>
+Каждый проект Cloud Platform может содержать одно приложение App Engine. Давайте подготовим приложение для нашего проекта.
 
-<p>Каждый проект Cloud Platform может содержать одно приложение App Engine. Давайте подготовим приложение для нашего проекта.</p>
+1.  Нам понадобится образец приложения для публикации. Если у вас его нет, загрузите и распакуйте это [sample app](http://gaesamplesite.appspot.com/downloads.html)..
+2.  Посмотрите на структуру образца приложения - папка `website` содержит содержимое вашего сайта, а `app.yaml` - ваш файл конфигурации приложения.
 
-<ol>
- <li>Нажмите кнопку Активировать Google Cloud Shell в верхней части окна консоли.<br>
-  <img alt="Activate Google Cloud Shell button" src="https://mdn.mozillademos.org/files/15041/activate-google-cloud-shell-button.png" style="height: 47px; margin: 1em 0; width: 1279px;"></li>
- <li>Откройте редактор кода с панели инструментов Cloud Shell.<br>
-  <img alt="Code Editor from Cloud Shell toolbar" src="https://mdn.mozillademos.org/files/15940/Screen%20Shot%202018-05-09%20at%2023.13.21.png" style="height: 590px; width: 3000px;"></li>
- <li>С помощью drag and drop разместите папку <code>sample-app</code> в левой панели редактора кода.</li>
- <li>Вернитесь обратно в Cloud Shell и введите следующую команду для перехода в директорию вашего приложения:
-  <pre class="brush:bash no-line-numbers" style="margin: 1em 0;">cd sample-app</pre>
- </li>
- <li>Теперь вы готовы развернуть ваше приложение, т.е. загрузить его в App Engine:
-  <pre class="brush:bash no-line-numbers" style="margin: 1em 0;">gcloud app deploy</pre>
- </li>
- <li>Введите число от одного до семи, чтобы выбрать регион, в котором вы хотите разместить своё приложение.</li>
- <li>Нажмите <code>Y</code> для подтверждения.</li>
- <li>Теперь перейдите по ссылке <em>your-project-id</em>.appspot.com, чтобы увидеть ваш сайт. Например, для проекта с ID <em>gaesamplesite, </em>перейдите по ссылке <a href="http://gaesamplesite.appspot.com/">gaesamplesite.appspot.com</a>.</li>
-</ol>
+    - Ваш веб-сайт должен войти в папку `website`, а его целевую страницу нужно называть `index.html`, но кроме того, она может принимать любую форму.
+    - Файл `app.yaml` - это файл конфигурации, который сообщает App Engine, как сопоставлять URL-адреса вашим статическим файлам. Вам не нужно его редактировать.
 
-<h2 id="See_also">See also</h2>
+## Публикация приложения
 
-<p>Чтобы узнать больше, смотрите <a href="https://cloud.google.com/appengine/docs/">Google App Engine Documentation</a>.</p>
+Каждый проект Cloud Platform может содержать одно приложение App Engine. Давайте подготовим приложение для нашего проекта.
+
+1.  Нажмите кнопку Активировать Google Cloud Shell в верхней части окна консоли.
+    ![Activate Google Cloud Shell button](https://mdn.mozillademos.org/files/15041/activate-google-cloud-shell-button.png)
+2.  Откройте редактор кода с панели инструментов Cloud Shell.
+    ![Code Editor from Cloud Shell toolbar](https://mdn.mozillademos.org/files/15940/Screen%20Shot%202018-05-09%20at%2023.13.21.png)
+3.  С помощью drag and drop разместите папку `sample-app` в левой панели редактора кода.
+4.  Вернитесь обратно в Cloud Shell и введите следующую команду для перехода в директорию вашего приложения:
+
+    ```bash
+    cd sample-app
+    ```
+
+5.  Теперь вы готовы развернуть ваше приложение, т.е. загрузить его в App Engine:
+
+    ```bash
+    gcloud app deploy
+    ```
+
+6.  Введите число от одного до семи, чтобы выбрать регион, в котором вы хотите разместить своё приложение.
+7.  Нажмите `Y` для подтверждения.
+8.  Теперь перейдите по ссылке _your-project-id_.appspot.com, чтобы увидеть ваш сайт. Например, для проекта с ID _gaesamplesite,_ перейдите по ссылке [gaesamplesite.appspot.com](http://gaesamplesite.appspot.com/).
+
+## See also
+
+Чтобы узнать больше, смотрите [Google App Engine Documentation](https://cloud.google.com/appengine/docs/).
