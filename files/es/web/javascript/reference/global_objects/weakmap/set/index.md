@@ -18,7 +18,9 @@ El método **`set()`** añade un nuevo elemento con su `key` y `value` específi
 
 ## Sintaxis
 
-    wm.set(key, value);
+```
+wm.set(key, value);
+```
 
 ### Parámetros
 

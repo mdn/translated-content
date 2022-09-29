@@ -2,6 +2,7 @@
 title: class
 slug: Web/HTML/Global_attributes/class
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`class`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は、要素のクラスを空白区切りで並べたリストで、大文字小文字を区別します。クラスは CSS の [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) や JavaScript の DOM メソッド {{domxref("document.getElementsByClassName")}} といった関数により、特定の要素を選択したり特定の要素にアクセスしたりすることを可能にします。

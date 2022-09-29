@@ -10,7 +10,9 @@ El método **`Number.isNaN()`** determina si el valor pasado es {{jsxref("NaN")}
 
 ## Sintaxis
 
-    Number.isNaN(value)
+```
+Number.isNaN(value)
+```
 
 ### Parámetros
 

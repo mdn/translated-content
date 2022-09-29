@@ -2,6 +2,7 @@
 title: font-display
 slug: Web/CSS/@font-face/font-display
 ---
+
 {{CSSRef}}
 
 **`font-display`** 記述子は、フォントがダウンロード済みで利用できるかに基づいて、どのようにフォントの種類を表示するかを定めます。

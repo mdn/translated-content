@@ -12,7 +12,7 @@ slug: Web/Accessibility/ARIA/Roles/Form_Role
 
 これは、ユーザーの連絡先を収集して保存するフォームです。
 
-> **Warning:** **重要**: 十分に正当な理由がない限り、ARIA の フォーム (`form`) ロールではなく、HTML の {{htmlelement("form")}} 要素を使用してフォームコントロールを格納してください。 HTML の `<form>` 要素は、支援技術にフォームがあることを伝えるのに十分です。
+> **Warning:** 十分に正当な理由がない限り、ARIA の フォーム (`form`) ロールではなく、HTML の {{htmlelement("form")}} 要素を使用してフォームコントロールを格納してください。 HTML の `<form>` 要素は、支援技術にフォームがあることを伝えるのに十分です。
 
 ## 説明
 

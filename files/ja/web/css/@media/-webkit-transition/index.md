@@ -2,6 +2,7 @@
 title: '-webkit-transition'
 slug: Web/CSS/@media/-webkit-transition
 ---
+
 {{ CSSRef }} {{deprecated_header}} {{ Non-standard_header }}
 
 **`-webkit-transition`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、閲覧コンテキストが [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)に対応していれば値が `true` になります。 WebKit または Blink 以外を使用したブラウザーでは対応していません。

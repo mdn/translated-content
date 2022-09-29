@@ -40,7 +40,7 @@ Para elementos que normalmente son receptores de entrada por parte del usuario, 
 - enabled
   - : El elemento acepta entrada por parte del usuario. Para cajas de texto es el comportamiento por defecto.
 - disabled
-  - : El elemento no acepta datos del usuario. Sin embargo, no es lo mismo que establecer {{XULAttr("disabled")}} a true, en ese caso el elemento es dibujado normalmente.
+  - : El elemento no acepta datos del usuario. Sin embargo, no es lo mismo que establecer `disabled` a true, en ese caso el elemento es dibujado normalmente.
 
 ### Síntaxis Formal
 

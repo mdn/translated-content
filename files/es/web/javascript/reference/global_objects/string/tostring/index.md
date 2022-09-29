@@ -17,7 +17,9 @@ El **`toString()`** método devuelve una cadena que representa al objeto especif
 
 ## Sintaxis
 
-    cadena.toString()
+```
+cadena.toString()
+```
 
 ## Descripción
 

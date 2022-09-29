@@ -348,7 +348,7 @@ A drop can occur inside the same window or over another application. The `{{even
 
 After the `{{event("dragend")}}` event has finished propagating, the drag and drop operation is complete.
 
-\[1] In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}). [bug 460801](https://bugzilla.mozilla.org/show_bug.cgi?id=460801 "New D&D API: dragend is not dispatched if the source node was moved or removed during the drag session")
+\[1] In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}). [bug 460801](https://bugzilla.mozilla.org/show_bug.cgi?id=460801)
 
 ## See also
 

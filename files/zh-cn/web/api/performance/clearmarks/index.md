@@ -25,7 +25,7 @@ performance.clearMarks(name);
 
 ## 例子
 
-下面的例子演示`clearMarks() 的两种用法。`
+下面的例子演示 `clearMarks()` 的两种用法。
 
 ```js
 function clear_mark(name) {

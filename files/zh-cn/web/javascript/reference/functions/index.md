@@ -404,7 +404,7 @@ if (shouldDefineZero) {
 
 ECMAScript 6 中，如果`shouldDefineZero`是 false，则永远不会定义 zero，因为这个块从不执行。然而，这是标准的新的一部分。这是历史遗留问题，无论这个块是否执行，一些浏览器会定义 zero。
 
-`在`[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)`下，所有支持`ECMAScript 6 的`浏览器以相同的方式处理：只有在 shouldDefineZero 为 true 的情况下定义 zero，并且作用域只是这个块内。`
+在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 下，所有支持 `ECMAScript 6` 的浏览器以相同的方式处理：只有在 shouldDefineZero 为 `true` 的情况下定义 `zero`，并且作用域只是这个块内。
 
 有条件地定义一个函数的一个更安全的方法是把函数表达式赋给一个变量：
 

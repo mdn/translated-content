@@ -2,6 +2,7 @@
 title: '@layer'
 slug: Web/CSS/@layer
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、*カスケードレイヤー*を宣言します。カスケードレイヤー内のルールは一緒にカスケードされるため、ウェブ開発者はカスケードをより自由に制御することができます。

@@ -2,6 +2,7 @@
 title: outline
 slug: Web/CSS/outline
 ---
+
 {{CSSRef}}
 
 **`outline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、輪郭線 (outline) に関する様々なプロパティを単一の宣言で設定します。

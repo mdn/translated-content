@@ -14,10 +14,12 @@ Los **`Uint8Array`** representan un array de enteros sin signo de 8 bits. El con
 
 ## Sintaxis
 
-    new Uint8Array(tamaño);
-    new Uint8Array(typedArray);
-    new Uint8Array(objeto);
-    new Uint8Array(buffer [, byteOffset [, tamaño]]);
+```
+new Uint8Array(tamaño);
+new Uint8Array(typedArray);
+new Uint8Array(objeto);
+new Uint8Array(buffer [, byteOffset [, tamaño]]);
+```
 
 Para más información acerca de la sintaxis del constructor y sus parámetros, mire _[TypedArray](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
@@ -48,7 +50,7 @@ Todos los objetos `Uint8Array` son heredados de {{jsxref("TypedArray.prototype",
 - `Uint8Array.prototype.constructor`
   - : Retorna la función que crea una instancia del prototype. Éste es el constructor por defecto de `Uint8Array`.
 - {{jsxref("TypedArray.prototype.buffer", "Uint8Array.prototype.buffer")}} {{readonlyInline}}
-  - : Retorna el {{jsxref("ArrayBuffer")}} con la referencia del `Uint8Array. `Fijado en el tiempo de construcción y es de **sólo lectura**.
+  - : Retorna el {{jsxref("ArrayBuffer")}} con la referencia del `Uint8Array`. Fijado en el tiempo de construcción y es de **sólo lectura**.
 - {{jsxref("TypedArray.prototype.byteLength", "Uint8Array.prototype.byteLength")}} {{readonlyInline}}
   - : Retorna el tamaño (en bytes) del array `Uint8Array`. Fijado en el tiempo de construcción y es de **sólo lectura**.
 - {{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}} {{readonlyInline}}

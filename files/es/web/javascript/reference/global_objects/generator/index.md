@@ -76,7 +76,7 @@ Firefox(SpderMonkey) tambén implementa una versón mas temprana de generadores 
 
 ### Métodos de generadores legados
 
-- `Generator.prototype.next() `{{non-standard_inline}}
+- `Generator.prototype.next()` {{non-standard_inline}}
   - : Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}. Esto se corresponde con el método next() en el objeto generador de ES2015.
 - `Generator.prototype.close()` {{non-standard_inline}}
   - : Cierra el generador. Sí el método next() es llamado por la expresión {{jsxref("StopIteration")}}, un error será lanzado. Esto se corresponde con el método return() del objeto generador de ES2015.
@@ -113,8 +113,6 @@ console.log(it.next());   // throws StopIteration (as the generator is now close
 ## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.Generator")}}
-
-##
 
 ## Vea también
 

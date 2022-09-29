@@ -19,7 +19,9 @@ El método obsoleto **`compile()`** es usado para (re-)compilar una expresión r
 
 ## Sintaxis
 
-    regexObj.compile(patrón, flags)
+```
+regexObj.compile(patrón, flags)
+```
 
 ### Parámetros
 

@@ -2,6 +2,7 @@
 title: '@document'
 slug: Web/CSS/@document
 ---
+
 {{CSSRef}}{{Deprecated_header}}
 
 **`@document`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、文書の URL に基づいて、その中に含まれるスタイルルールを制約します。これは主にユーザー定義スタイルシート用に設計されていますが、独自定義のスタイルシートにも使うことができます。

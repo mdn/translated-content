@@ -14,7 +14,9 @@ El valor de _this_ es ignorado cuando la función es llamada con el operador _ne
 
 ## Sintaxis
 
-    fun.bind(thisArg[, arg1[, arg2[, ...]]])
+```
+fun.bind(thisArg[, arg1[, arg2[, ...]]])
+```
 
 ### Parametros
 
@@ -25,7 +27,7 @@ El valor de _this_ es ignorado cuando la función es llamada con el operador _ne
 
 ### Valor de retorno
 
-Una copia de la función entregada con el valor especificado `this `y los argumentos iniciales.
+Una copia de la función entregada con el valor especificado `this` y los argumentos iniciales.
 
 ## Descripción
 

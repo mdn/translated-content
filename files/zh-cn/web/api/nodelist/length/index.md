@@ -7,7 +7,7 @@ slug: Web/API/NodeList/length
 
 ## 摘要
 
-返回 [NodeList](/zh-CN/docs/Web/API/NodeList) `集合中`子节点数量`。`
+返回 [`NodeList`](/zh-CN/docs/Web/API/NodeList) 集合中子节点数量。
 
 ## 语法
 
@@ -15,7 +15,7 @@ slug: Web/API/NodeList/length
 numItems =nodeList.length
 ```
 
-- `numItems` `是一个整数，表示` `NodeList` `子节点的数量。`
+- `numItems` 是一个整数，表示 `NodeList` 子节点的数量。
 
 ## 例子
 

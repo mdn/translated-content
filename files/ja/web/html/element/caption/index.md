@@ -2,6 +2,7 @@
 title: '<caption>: 表キャプション要素'
 slug: Web/HTML/Element/caption
 ---
+
 {{HTMLRef}}
 
 **HTML の `<caption>` 要素**は、表のキャプション (またはタイトル) を指定します。
