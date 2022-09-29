@@ -92,7 +92,7 @@ O seguinte exemplo chama a função `flashtext()` uma vez por segundo até o bot
 
 ### Exemplo 3: Simulação de máquina de escrever
 
-O seguinte exemplo simula uma máquina de escrever primeiro limpando e digitando lentamente o conteúdo para [`NodeList`](https://developer.mozilla.org/en-US/docs/DOM/NodeList) que corresponde a um grupo especificado de seletores.
+O seguinte exemplo simula uma máquina de escrever primeiro limpando e digitando lentamente o conteúdo para [`NodeList`](/en-US/docs/DOM/NodeList) que corresponde a um grupo especificado de seletores.
 
 ```html
 <!DOCTYPE html>
@@ -317,11 +317,11 @@ Iniciado no Gecko 5.0 {{geckoRelease("5.0")}}, intervalos são fixados para disp
 
 ## O problema do "[`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)"
 
-Quando você passa um método para `setInterval()` ou qualquer outra função, ela é chamada com o valor do [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) errado. Este problema é explicado em detalhes em [JavaScript reference](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method).
+Quando você passa um método para `setInterval()` ou qualquer outra função, ela é chamada com o valor do [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) errado. Este problema é explicado em detalhes em [JavaScript reference](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method).
 
 ### Explicação
 
-O código executado pelo `setInterval()` roda em um contexto de execução separado da função que foi chamada. Como uma consequência, o [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) da função chamada, é setado como o objeto `window` (ou `global`), esse não é o mesmo valor do `this` para a função chamada em setTimeout. veja o seguinte exemplo (que usa `setTimeout()` ao invés de `setInterval()` - o problema segue para ambos os temporizadores)
+O código executado pelo `setInterval()` roda em um contexto de execução separado da função que foi chamada. Como uma consequência, o [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) da função chamada, é setado como o objeto `window` (ou `global`), esse não é o mesmo valor do `this` para a função chamada em setTimeout. veja o seguinte exemplo (que usa `setTimeout()` ao invés de `setInterval()` - o problema segue para ambos os temporizadores)
 
 ```js
 myArray = ['zero', 'one', 'two'];
@@ -346,7 +346,7 @@ Como você pode ver, não há maneiras de passar o objeto `this` para a função
 
 ### Uma possível solução
 
-Um possível caminho para resolver o problema do `this`, é sobreescrever as duas funções globais nativas `setTimeout()` ou `setInterval()` com duas _non-native_ que permitem sua invocação através do método [`Function.prototype.call`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/call). O seguinte exemplo mostra a possível substituição.
+Um possível caminho para resolver o problema do `this`, é sobreescrever as duas funções globais nativas `setTimeout()` ou `setInterval()` com duas _non-native_ que permitem sua invocação através do método [`Function.prototype.call`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/call). O seguinte exemplo mostra a possível substituição.
 
 ```js
 // Enable the passage of the 'this' object through the JavaScript timers
@@ -471,7 +471,9 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 ### Syntax
 
-` var myDaemon = new MiniDaemon(thisObject, callback[``, rate``[, length]]); `
+```
+var myDaemon = new MiniDaemon(thisObject, callback[, rate[, length]]);
+```
 
 ### Description
 
