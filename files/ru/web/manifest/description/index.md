@@ -7,71 +7,53 @@ tags:
   - description
 translation_of: Web/Manifest/description
 ---
-<div>{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}</div>
+{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
-"description": "Удивительное приложение, которое поможет вам достичь вашей мечты."</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json no-line-numbers">
+"description": "Удивительное приложение, которое поможет вам достичь вашей мечты."</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p><dfn><code>description</code></dfn> это строка, в которой разработчики могут объяснить, что делает приложение. <code>description</code> способно к направленности, что означает, что оно может отображаться слева направо или справа налево на основе значений свойств <code><a href="./dir">dir</a></code> and <code><a href="./lang">lang</a></code> манифеста.</p>
+_`description`_ это строка, в которой разработчики могут объяснить, что делает приложение. `description` способно к направленности, что означает, что оно может отображаться слева направо или справа налево на основе значений свойств [`dir`](./dir) and [`lang`](./lang) манифеста.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Простой <code>description</code> на языке слева направо:</p>
+Простой `description` на языке слева направо:
 
-<pre class="brush: json">"description": "Удивительное приложение, которое поможет вам достичь вашей мечты."</pre>
+```json
+"description": "Удивительное приложение, которое поможет вам достичь вашей мечты."
+```
 
-<p><code>description</code> на арабском языке, который будет отображаться справа налево:</p>
+`description` на арабском языке, который будет отображаться справа налево:
 
-<pre class="brush: json" dir="rtl"><code>"dir": "rtl",
+```json
+"dir": "rtl",
 "lang": "ar",
-"</code>description<code>": ".تطبيق رائع سيساعدك على تحقيق أحلامك"</code></pre>
+"description": ".تطبيق رائع سيساعدك على تحقيق أحلامك"
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-   <th scope="col">Feedback</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p>{{SpecName('Manifest', '#description-member', 'description')}}</p>
-   </td>
-   <td>
-    <p>{{Spec2('Manifest')}}</p>
-   </td>
-   <td>
-    <p>Initial definition.</p>
-   </td>
-   <td>
-    <p><a href="https://github.com/w3c/manifest/issues/">Web App Manifest Working Group drafts</a></p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                       | Comment             | Feedback                                                                         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
+| {{SpecName('Manifest', '#description-member', 'description')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

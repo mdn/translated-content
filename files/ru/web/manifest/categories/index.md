@@ -7,72 +7,45 @@ tags:
   - categories
 translation_of: Web/Manifest/categories
 ---
-<div>{{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Array</code> of <code>String</code>s</td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
-"categories": ["music"]</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Array</code> of <code>String</code>s</td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json no-line-numbers">"categories": ["music"]</pre>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p><dfn><code>categories</code></dfn> - это массив строк, определяющих имена категорий, к которым, предположительно, относится приложение. Нет стандартного списка возможных значений, но W3C поддерживает <a href="https://github.com/w3c/manifest/wiki/Categories">список известных категорий</a>.</p>
+_`categories`_ - это массив строк, определяющих имена категорий, к которым, предположительно, относится приложение. Нет стандартного списка возможных значений, но W3C поддерживает [список известных категорий](https://github.com/w3c/manifest/wiki/Categories).
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> <code>categories</code> используются только в качестве подсказок для каталогов или магазинов, содержащих веб-приложения. Как и поисковые системы и meta ключевые слова, каталоги и магазины могут игнорировать их.</p>
-</div>
+> **Примечание:** `categories` используются только в качестве подсказок для каталогов или магазинов, содержащих веб-приложения. Как и поисковые системы и meta ключевые слова, каталоги и магазины могут игнорировать их.
 
-<div class="blockIndicator note">
-<p><strong>Note: </strong>значения <code>categories</code> изменяются в каталогах и магазинах перед обработкой на нижний регистр, поэтому «Новости» и «новости» рассматриваются как одно и то же значение. Разработчикам рекомендуется использовать строчные буквы в первую очередь.</p>
-</div>
+> **Примечание:**значения `categories` изменяются в каталогах и магазинах перед обработкой на нижний регистр, поэтому «Новости» и «новости» рассматриваются как одно и то же значение. Разработчикам рекомендуется использовать строчные буквы в первую очередь.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: json">"categories": ["books", "education", "medical"]
-</pre>
+```json
+"categories": ["books", "education", "medical"]
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-   <th scope="col">Feedback</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p>{{SpecName('Manifest', '#categories-member', 'categories')}}</p>
-   </td>
-   <td>
-    <p>{{Spec2('Manifest')}}</p>
-   </td>
-   <td>
-    <p>Initial definition.</p>
-   </td>
-   <td>
-    <p><a href="https://github.com/w3c/manifest/issues/">Web App Manifest Working Group drafts</a></p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                       | Comment             | Feedback                                                                         |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
+| {{SpecName('Manifest', '#categories-member', 'categories')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

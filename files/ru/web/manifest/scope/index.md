@@ -7,78 +7,55 @@ tags:
   - scope
 translation_of: Web/Manifest/scope
 ---
-<div>{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}</div>
+{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
-"scope": "/app/"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td><pre class="brush: json no-line-numbers">"scope": "/app/"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Определяет область навигации контекста веб-приложения. Обычно ограничивается тем, какая веб-страница может быть просмотрена, пока манифест загружается. Если пользователь выходит за пределы области, приложение возвращается к нормальному виду веб-страницы.</p>
+Определяет область навигации контекста веб-приложения. Обычно ограничивается тем, какая веб-страница может быть просмотрена, пока манифест загружается. Если пользователь выходит за пределы области, приложение возвращается к нормальному виду веб-страницы.
 
-<p>Если область относительный URL, базовым URL будет URL манифеста.</p>
+Если область относительный URL, базовым URL будет URL манифеста.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Если область относительная, URL манифеста используется как базовый URL:</p>
+Если область относительная, URL манифеста используется как базовый URL:
 
-<pre class="brush: json">"scope": "/app/"
-</pre>
+```json
+"scope": "/app/"
+```
 
-<p>Следующая область ограничивает навигацию текущим сайтом:</p>
+Следующая область ограничивает навигацию текущим сайтом:
 
-<pre class="brush: json">"scope": "https://example.com/"
-</pre>
+```json
+"scope": "https://example.com/"
+```
 
-<p>Наконец, в следующем примере навигация ограничена подкаталогом текущего сайта:</p>
+Наконец, в следующем примере навигация ограничена подкаталогом текущего сайта:
 
-<pre class="brush: json">"scope": "https://example.com/subdirectory/"
-</pre>
+```json
+"scope": "https://example.com/subdirectory/"
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-   <th scope="col">Feedback</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p>{{SpecName('Manifest', '#scope-member', 'scope')}}</p>
-   </td>
-   <td>
-    <p>{{Spec2('Manifest')}}</p>
-   </td>
-   <td>
-    <p>Initial definition.</p>
-   </td>
-   <td>
-    <p><a href="https://github.com/w3c/manifest/issues/">Web App Manifest Working Group drafts</a></p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                       | Comment             | Feedback                                                                         |
+| -------------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
+| {{SpecName('Manifest', '#scope-member', 'scope')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

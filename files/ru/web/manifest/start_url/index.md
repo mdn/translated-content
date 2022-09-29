@@ -7,77 +7,55 @@ tags:
   - start_url
 translation_of: Web/Manifest/start_url
 ---
-<div>{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}</div>
+{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
-"start_url": "https://example.com"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json no-line-numbers">
+"start_url": "https://example.com"</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p><dfn><code>start_url</code></dfn> является строкой, представляющей начальный URL-адрес веб-приложения — предпочтительный URL-адрес, который должен быть загружен при запуске пользователем веб-приложения (например, когда пользователь нажимает на значок веб-приложения в меню приложений или на домашнем экране).</p>
+_`start_url`_ является строкой, представляющей начальный URL-адрес веб-приложения — предпочтительный URL-адрес, который должен быть загружен при запуске пользователем веб-приложения (например, когда пользователь нажимает на значок веб-приложения в меню приложений или на домашнем экране).
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> <code>start_url</code> носит чисто рекомендательный характер, и пользовательский агент может его игнорировать или разрешить пользователю изменять его во время установки или после.</p>
-</div>
+> **Примечание:** `start_url` носит чисто рекомендательный характер, и пользовательский агент может его игнорировать или разрешить пользователю изменять его во время установки или после.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Absolute_URL">Absolute URL</h3>
+### Absolute URL
 
-<pre class="brush: json"><code>"start_url": "https://example.com"</code>
-</pre>
+```json
+"start_url": "https://example.com"
+```
 
-<h3 id="Relative_URL">Relative URL</h3>
+### Relative URL
 
-<p>Если URL является относительным, для его разрешения используется URL манифеста.</p>
+Если URL является относительным, для его разрешения используется URL манифеста.
 
-<pre class="brush: json"><code>"start_url": "../startpoint.html"</code>
-</pre>
+```json
+"start_url": "../startpoint.html"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-   <th scope="col">Feedback</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p>{{SpecName('Manifest', '#start_url-member', 'start_url')}}</p>
-   </td>
-   <td>
-    <p>{{Spec2('Manifest')}}</p>
-   </td>
-   <td>
-    <p>Initial definition.</p>
-   </td>
-   <td>
-    <p><a href="https://github.com/w3c/manifest/issues/">Web App Manifest Working Group drafts</a></p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                       | Comment             | Feedback                                                                         |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
+| {{SpecName('Manifest', '#start_url-member', 'start_url')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
