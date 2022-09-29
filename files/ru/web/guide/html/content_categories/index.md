@@ -3,169 +3,149 @@ title: Категории контента
 slug: Web/Guide/HTML/Content_categories
 translation_of: Web/Guide/HTML/Content_categories
 ---
-<p><span class="seoSummary">Каждый элемент <a href="/ru/docs/Web/HTML">HTML</a> принадлежит некоторому количеству категорий контента, которые объединяют элементы с общим набором характеристик. Такая группировка является свободной, то есть не задаёт на самом деле отношение между элементами таких типов, но помогает определить и описать их поведение и правила, которым они должны следовать, особенно когда дело доходит до сложных деталей. Также возможна ситуация, когда элемент не входит <em>ни в одну</em> из этих категорий.</span></p>
+Каждый элемент [HTML](/ru/docs/Web/HTML) принадлежит некоторому количеству категорий контента, которые объединяют элементы с общим набором характеристик. Такая группировка является свободной, то есть не задаёт на самом деле отношение между элементами таких типов, но помогает определить и описать их поведение и правила, которым они должны следовать, особенно когда дело доходит до сложных деталей. Также возможна ситуация, когда элемент не входит _ни в одну_ из этих категорий.
 
-<p>Существует три типа категорий контента:</p>
+Существует три типа категорий контента:
 
-<ul>
- <li>Основные категории контента, описывающие общие для многих элементов правила;</li>
- <li>Категории контента для элементов форм, описывающие общие правила для элементов форм;</li>
- <li>Особые категории контента, описывающие редкие категории, актуальные только для нескольких элементов, возможно, лишь в особом контексте.</li>
-</ul>
+- Основные категории контента, описывающие общие для многих элементов правила;
+- Категории контента для элементов форм, описывающие общие правила для элементов форм;
+- Особые категории контента, описывающие редкие категории, актуальные только для нескольких элементов, возможно, лишь в особом контексте.
 
-<div class="note">
-<p><strong>Обратите внимание:</strong> Более подробное обсуждение данных категорий контента и их сравнительных особенностей выходит за рамки данной статьи; можно обратиться к <a href="https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content">соответствующим разделам спецификации HTML</a> (на английском).</p>
-</div>
+> **Примечание:** **Обратите внимание:** Более подробное обсуждение данных категорий контента и их сравнительных особенностей выходит за рамки данной статьи; можно обратиться к [соответствующим разделам спецификации HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content) (на английском).
 
-<div style="width: 50%;"><a href="/@api/deki/files/6244/=Content_categories_venn.png" title="Content_categories_venn.png"><img alt="Content_categories_venn.png" class="default internal" src="/@api/deki/files/6244/=Content_categories_venn.png?size=webview" style="height: 200px; width: 350px;"></a></div>
+[![Content_categories_venn.png](/@api/deki/files/6244/=Content_categories_venn.png?size=webview)](/@api/deki/files/6244/=Content_categories_venn.png "Content_categories_venn.png")
 
-<h2 id="Main_content_categories">Основные категории контента</h2>
+## Основные категории контента
 
-<h3 id="Метаданные">Метаданные</h3>
+### Метаданные
 
-<p>Элементы, принадлежащие к <em>категории метаданных,</em> изменяют отображение или поведение HTML-документа, связывают его с другими документами и предоставляют другую <em>дополнительную</em> информацию о документе.</p>
+Элементы, принадлежащие к _категории метаданных,_ изменяют отображение или поведение HTML-документа, связывают его с другими документами и предоставляют другую _дополнительную_ информацию о документе.
 
-<p>Элементами метаданных являются:  {{HTMLElement("base")}}, {{ Obsolete_inline() }}{{HTMLElement("command")}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} и {{HTMLElement("title")}}.</p>
+Элементами метаданных являются: {{HTMLElement("base")}}, {{ Obsolete_inline() }}{{HTMLElement("command")}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} и {{HTMLElement("title")}}.
 
-<h3 id="Основной_поток">Основной поток</h3>
+### Основной поток
 
-<p>Элементы основного потока обычно содержат текст и встроенный контент.</p>
+Элементы основного потока обычно содержат текст и встроенный контент.
 
-<p>{{HTMLElement("a")}}, {{HTMLElement("abbr")}}, {{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}},{{HTMLElement("bdo")}}, {{HTMLElement("bdi")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{ Obsolete_inline() }}{{HTMLElement("command")}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("del")}}, {{HTMLElement("details")}}, {{HTMLElement("dfn")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("figure")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("hr")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("ins")}}, {{HTMLElement("kbd")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("main")}}, {{HTMLElement("map")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("menu")}}, {{HTMLElement("meter")}}, {{HTMLElement("nav")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("ol")}}, {{HTMLElement("output")}}, {{HTMLElement("p")}}, {{HTMLElement("pre")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("section")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("table")}}, {{HTMLElement("template")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("ul")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} и Текст.</p>
+{{HTMLElement("a")}}, {{HTMLElement("abbr")}}, {{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}},{{HTMLElement("bdo")}}, {{HTMLElement("bdi")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{ Obsolete_inline() }}{{HTMLElement("command")}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("del")}}, {{HTMLElement("details")}}, {{HTMLElement("dfn")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("figure")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("hr")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("ins")}}, {{HTMLElement("kbd")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("main")}}, {{HTMLElement("map")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("menu")}}, {{HTMLElement("meter")}}, {{HTMLElement("nav")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("ol")}}, {{HTMLElement("output")}}, {{HTMLElement("p")}}, {{HTMLElement("pre")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("section")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("table")}}, {{HTMLElement("template")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("ul")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} и Текст.
 
-<p>Несколько других элементов, которые тоже принадлежат к этому типу, но требуют определённых условий:</p>
+Несколько других элементов, которые тоже принадлежат к этому типу, но требуют определённых условий:
 
-<ul>
- <li>{{HTMLElement("area")}}, только внутри элемента {{HTMLElement("map")}}</li>
- <li>{{HTMLElement("link")}}, при наличии атрибута <code><a href="/ru/docs/HTML/Global_attributes#attr-itemprop">itemprop</a></code></li>
- <li>{{HTMLElement("meta")}}, при наличии атрибута <code><a href="/ru/docs/HTML/Global_attributes#attr-itemprop">itemprop</a></code></li>
- <li>{{HTMLElement("style")}}, при наличии атрибута {{htmlattrxref("scoped","style")}}</li>
-</ul>
+- {{HTMLElement("area")}}, только внутри элемента {{HTMLElement("map")}}
+- {{HTMLElement("link")}}, при наличии атрибута [`itemprop`](/ru/docs/HTML/Global_attributes#attr-itemprop)
+- {{HTMLElement("meta")}}, при наличии атрибута [`itemprop`](/ru/docs/HTML/Global_attributes#attr-itemprop)
+- {{HTMLElement("style")}}, при наличии атрибута {{htmlattrxref("scoped","style")}}
 
-<h3 id="Секционный_контент">Секционный контент</h3>
+### Секционный контент
 
-<p>Подобные элементы создают <a href="/ru/docs/Sections_and_Outlines_of_an_HTML5_document">секции (блоки) в текущей структуре документа</a>, определяющие область действия <a href="/ru/docs/Web/Guide/HTML/Content_categories#Заголовочный_контент">заголовочного контента</a> и элементов {{HTMLElement("header")}} и {{HTMLElement("footer")}}</p>
+Подобные элементы создают [секции (блоки) в текущей структуре документа](/ru/docs/Sections_and_Outlines_of_an_HTML5_document), определяющие область действия [заголовочного контента](/ru/docs/Web/Guide/HTML/Content_categories#Заголовочный_контент) и элементов {{HTMLElement("header")}} и {{HTMLElement("footer")}}
 
-<p>К этой категории принадлежат элементы {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} и {{HTMLElement("section")}}. </p>
+К этой категории принадлежат элементы {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} и {{HTMLElement("section")}}.
 
-<div class="note">
-<p>Не стоит путать данную модель контента с категорией <a href="/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Корни_задания_разделов">корня задания разделов</a>, которая изолирует своё содержимое от обычной структуры.</p>
-</div>
+> **Примечание:** Не стоит путать данную модель контента с категорией [корня задания разделов](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Корни_задания_разделов), которая изолирует своё содержимое от обычной структуры.
 
-<h3 id="Заголовочный_контент_2"><a>Заголовочный контент</a></h3>
+### Заголовочный контент
 
-<p>Заголовочный контент задаёт заголовок секции, явно отмеченной структурным элементом или неявно – самим заголовочным.</p>
+Заголовочный контент задаёт заголовок секции, явно отмеченной структурным элементом или неявно – самим заголовочным.
 
-<p>Данной категории принадлежат такие элементы, как {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} и {{HTMLElement("hgroup")}}.</p>
+Данной категории принадлежат такие элементы, как {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} и {{HTMLElement("hgroup")}}.
 
-<div class="note">
-<p><em>Э</em>лемент {{HTMLElement("header")}} сам по себе не является заголовочным, хотя с большой вероятностью содержит контент такого типа.</p>
-</div>
+> **Примечание:** *Э*лемент {{HTMLElement("header")}} сам по себе не является заголовочным, хотя с большой вероятностью содержит контент такого типа.
 
-<div class="note">
-<p>Стоит заметить, что элемент {{HTMLElement("hgroup")}} был удалён из спецификации W3C HTML до приведения HTML 5 к окончательному варианту, но до сих пор является частью спецификации WHATWG и по крайней мере частично поддерживается большинством браузеров.</p>
-</div>
+> **Примечание:** Стоит заметить, что элемент {{HTMLElement("hgroup")}} был удалён из спецификации W3C HTML до приведения HTML 5 к окончательному варианту, но до сих пор является частью спецификации WHATWG и по крайней мере частично поддерживается большинством браузеров.
 
-<h3 id="Phrasing_content">Фразовый контент</h3>
+### Фразовый контент
 
-<p>Фразовый контент определяет текст и его формат. Серии фразового контента образуют параграфы.</p>
+Фразовый контент определяет текст и его формат. Серии фразового контента образуют параграфы.
 
-<p>К данной категории принадлежат следующие элементы:  {{HTMLElement("abbr")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{ Obsolete_inline() }}{{HTMLElement("command")}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("dfn")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("kbd")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("meter")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} и обычный текст (не только состоящий из символов пробелов).</p>
+К данной категории принадлежат следующие элементы: {{HTMLElement("abbr")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{ Obsolete_inline() }}{{HTMLElement("command")}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("dfn")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("kbd")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("meter")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} и обычный текст (не только состоящий из символов пробелов).
 
-<p>Ещё несколько элементов входят в данную категорию при соблюдении особых условий:</p>
+Ещё несколько элементов входят в данную категорию при соблюдении особых условий:
 
-<ul>
- <li>{{HTMLElement("a")}}, если содержит в себе только фразовый контент</li>
- <li>{{HTMLElement("area")}}, только внутри элемента {{HTMLElement("map")}}</li>
- <li>{{HTMLElement("del")}}, если содержит в себе только фразовый контент</li>
- <li>{{HTMLElement("ins")}}, если содержит в себе только фразовый контент</li>
- <li>{{HTMLElement("link")}}, при наличии атрибута <code><a href="/ru/docs/HTML/Global_attributes#attr-itemprop">itemprop</a></code></li>
- <li>{{HTMLElement("map")}}, если содержит в себе только фразовый контент</li>
- <li>{{HTMLElement("meta")}}, при наличии атрибута <code><a href="/ru/docs/HTML/Global_attributes#attr-itemprop">itemprop</a></code></li>
-</ul>
+- {{HTMLElement("a")}}, если содержит в себе только фразовый контент
+- {{HTMLElement("area")}}, только внутри элемента {{HTMLElement("map")}}
+- {{HTMLElement("del")}}, если содержит в себе только фразовый контент
+- {{HTMLElement("ins")}}, если содержит в себе только фразовый контент
+- {{HTMLElement("link")}}, при наличии атрибута [`itemprop`](/ru/docs/HTML/Global_attributes#attr-itemprop)
+- {{HTMLElement("map")}}, если содержит в себе только фразовый контент
+- {{HTMLElement("meta")}}, при наличии атрибута [`itemprop`](/ru/docs/HTML/Global_attributes#attr-itemprop)
 
-<h3 id="Встроенный_контент">Встроенный контент</h3>
+### Встроенный контент
 
-<p>Встроенный контент импортирует в документ другой ресурс или вставляет содержимое на другом языке разметки или принадлежащее другому пространству имён. Элементами данной категории являются: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, {{HTMLElement("video")}}.</p>
+Встроенный контент импортирует в документ другой ресурс или вставляет содержимое на другом языке разметки или принадлежащее другому пространству имён. Элементами данной категории являются: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, {{HTMLElement("video")}}.
 
-<h3 id="Интерактивный_контент"><a>Интерактивный контент</a></h3>
+### Интерактивный контент
 
-<p>К интерактивному контенту относятся элементы, который специально разработаны для взаимодействия с пользователем. В данную категорию входят {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}.<br>
- Некоторые элементы считаются интерактивным контентом только при соблюдении определённых условий:</p>
+К интерактивному контенту относятся элементы, который специально разработаны для взаимодействия с пользователем. В данную категорию входят {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}.
+Некоторые элементы считаются интерактивным контентом только при соблюдении определённых условий:
 
-<ul>
- <li>{{HTMLElement("audio")}}, если указан атрибут {{htmlattrxref("controls", "audio")}}</li>
- <li>{{HTMLElement("img")}}, если указан атрибут {{htmlattrxref("usemap", "img")}}</li>
- <li>{{HTMLElement("input")}}, если атрибут {{htmlattrxref("type", "input")}} не скрыт</li>
- <li>{{HTMLElement("menu")}}, если атрибут {{htmlattrxref("type", "menu")}} имеет значение <code>toolbar</code></li>
- <li>{{HTMLElement("object")}}, если указан атрибут {{htmlattrxref("usemap", "object")}}</li>
- <li>{{HTMLElement("video")}}, если указан атрибут {{htmlattrxref("controls", "video")}}</li>
-</ul>
+- {{HTMLElement("audio")}}, если указан атрибут {{htmlattrxref("controls", "audio")}}
+- {{HTMLElement("img")}}, если указан атрибут {{htmlattrxref("usemap", "img")}}
+- {{HTMLElement("input")}}, если атрибут {{htmlattrxref("type", "input")}} не скрыт
+- {{HTMLElement("menu")}}, если атрибут {{htmlattrxref("type", "menu")}} имеет значение `toolbar`
+- {{HTMLElement("object")}}, если указан атрибут {{htmlattrxref("usemap", "object")}}
+- {{HTMLElement("video")}}, если указан атрибут {{htmlattrxref("controls", "video")}}
 
-<h3 id="Явный_контент">Явный контент</h3>
+### Явный контент
 
-<p>Контент считается явным, когда он не скрыт и не является пустым, это контент, который отображён и предметен. У элементов потокового или фразового контента должен быть хотя бы один явный узел.</p>
+Контент считается явным, когда он не скрыт и не является пустым, это контент, который отображён и предметен. У элементов потокового или фразового контента должен быть хотя бы один явный узел.
 
-<h3 id="Контент_форм">Контент форм</h3>
+### Контент форм
 
-<p>Контент форм включает в себя элементы, у которых есть владелец формы, обозначенный атрибутом <strong>form</strong>. Владельцем формы является либо элемент {{HTMLElement("form")}}, либо элемент, id которого указан в атрибуте <strong>form</strong>.</p>
+Контент форм включает в себя элементы, у которых есть владелец формы, обозначенный атрибутом **form**. Владельцем формы является либо элемент {{HTMLElement("form")}}, либо элемент, id которого указан в атрибуте **form**.
 
-<ul>
- <li>{{HTMLElement("button")}}</li>
- <li>{{HTMLElement("fieldset")}}</li>
- <li>{{HTMLElement("input")}}</li>
- <li>{{deprecated_inline()}}{{HTMLElement("keygen")}}</li>
- <li>{{HTMLElement("label")}}</li>
- <li>{{HTMLElement("meter")}}</li>
- <li>{{HTMLElement("object")}}</li>
- <li>{{HTMLElement("output")}}</li>
- <li>{{HTMLElement("progress")}}</li>
- <li>{{HTMLElement("select")}}</li>
- <li>{{HTMLElement("textarea")}}</li>
-</ul>
+- {{HTMLElement("button")}}
+- {{HTMLElement("fieldset")}}
+- {{HTMLElement("input")}}
+- {{deprecated_inline()}}{{HTMLElement("keygen")}}
+- {{HTMLElement("label")}}
+- {{HTMLElement("meter")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("output")}}
+- {{HTMLElement("progress")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("textarea")}}
 
-<p>Данная категория включает несколько подкатегорий:</p>
+Данная категория включает несколько подкатегорий:
 
-<dl>
- <dt><a name="Form_listed">listed</a></dt>
- <dd>Элементы, перечисленные в IDL коллекциях <a href="/ru/docs/DOM/form.elements" title="DOM/form.elements">form.elements</a> и fieldset.elements. Включают {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, и {{HTMLElement("textarea")}}.</dd>
- <dt><a name="Form_labelable">labelable</a></dt>
- <dd>Элементы, которые могут ассоциироваться с элементами {{HTMLElement("label")}}. Включают {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}.</dd>
- <dt><a name="Form_submittable">submittable</a></dt>
- <dd>Элементы, которые могут использоваться для построения набора данных формы при отправке на сервер. Включают {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}.</dd>
- <dt><a name="Form_resettable">resettable</a></dt>
- <dd>Элементы, которые могут быть затронуты при сбросе данных формы. Включают {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("output")}},{{HTMLElement("select")}} и {{HTMLElement("textarea")}}.</dd>
-</dl>
+- listed
+  - : Элементы, перечисленные в IDL коллекциях [form.elements](/ru/docs/DOM/form.elements "DOM/form.elements") и fieldset.elements. Включают {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, и {{HTMLElement("textarea")}}.
+- labelable
+  - : Элементы, которые могут ассоциироваться с элементами {{HTMLElement("label")}}. Включают {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}.
+- submittable
+  - : Элементы, которые могут использоваться для построения набора данных формы при отправке на сервер. Включают {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}.
+- resettable
+  - : Элементы, которые могут быть затронуты при сбросе данных формы. Включают {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("output")}},{{HTMLElement("select")}} и {{HTMLElement("textarea")}}.
 
-<h2 id="Вторичные_категории">Вторичные категории</h2>
+## Вторичные категории
 
-<p>Существуют некоторые вторичные классификации элементов, о которых тоже полезно знать.</p>
+Существуют некоторые вторичные классификации элементов, о которых тоже полезно знать.
 
-<h3 id="Элементы_поддержки_скриптов">Элементы поддержки скриптов</h3>
+### Элементы поддержки скриптов
 
-<p>Элементы поддержки скриптов – это элементы, которые напрямую не влияют на отрисовку документа. Вместо этого они служат для внедрения скриптов, путём либо содержания кода скрипта напрямую, либо указания данных, которые будут использованы скриптами.</p>
+Элементы поддержки скриптов – это элементы, которые напрямую не влияют на отрисовку документа. Вместо этого они служат для внедрения скриптов, путём либо содержания кода скрипта напрямую, либо указания данных, которые будут использованы скриптами.
 
-<p>Элементами поддержки скриптов являются:</p>
+Элементами поддержки скриптов являются:
 
-<ul>
- <li>{{HTMLElement("script")}}</li>
- <li>{{HTMLElement("template")}}</li>
-</ul>
+- {{HTMLElement("script")}}
+- {{HTMLElement("template")}}
 
-<h2 id="Прозрачная_модель_контента">Прозрачная модель контента</h2>
+## Прозрачная модель контента
 
-<p>Если элемент обладает прозрачной моделью контента, его содержимое должно быть структурировано таким образом, чтобы оно оставалось валидным HTML5, даже при удалении прозрачного элемента или заменой его на дочерние элементы.</p>
+Если элемент обладает прозрачной моделью контента, его содержимое должно быть структурировано таким образом, чтобы оно оставалось валидным HTML5, даже при удалении прозрачного элемента или заменой его на дочерние элементы.
 
-<p>Например, элементы {{HTMLElement("del")}} и {{HTMLELement("ins")}} являются прозрачными:</p>
+Например, элементы {{HTMLElement("del")}} и {{HTMLELement("ins")}} являются прозрачными:
 
-<pre>&lt;p&gt;Мы почитаем следующие истины &lt;del&gt;&lt;em&gt;священными &amp;amp; неоспоримыми&lt;/em&gt;&lt;/del&gt; &lt;ins&gt;само собой разумеющимися&lt;/ins&gt;.&lt;/p&gt;
-</pre>
+```
+<p>Мы почитаем следующие истины <del><em>священными &amp; неоспоримыми</em></del> <ins>само собой разумеющимися</ins>.</p>
+```
 
-<p>Если удалить эти элементы, данный фрагмент всё равно будет представлять собой валидный HTML.</p>
+Если удалить эти элементы, данный фрагмент всё равно будет представлять собой валидный HTML.
 
-<pre>&lt;p&gt;Мы почитаем следующие истины &lt;em&gt;священными &amp;amp; неоспоримыми&lt;/em&gt; само собой разумеющимися.&lt;/p&gt;
-</pre>
+```
+<p>Мы почитаем следующие истины <em>священными &amp; неоспоримыми</em> само собой разумеющимися.</p>
+```
 
-<h2 id="Прочие_модели_контента">Прочие модели контента</h2>
+## Прочие модели контента
 
-<p>Корень задания разделов.</p>
+Корень задания разделов.

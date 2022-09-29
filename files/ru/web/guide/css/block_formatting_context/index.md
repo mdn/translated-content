@@ -8,135 +8,129 @@ tags:
   - Основы
 translation_of: Web/Guide/CSS/Block_formatting_context
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p><strong>Блочный контекст форматирования </strong>— часть механизма отображения веб-страницы в CSS. Это та область, в которой происходит расположение блочных элементов, и в котором плавающие элементы взаимодействуют с другими элементами.</p>
+**Блочный контекст форматирования** — часть механизма отображения веб-страницы в CSS. Это та область, в которой происходит расположение блочных элементов, и в котором плавающие элементы взаимодействуют с другими элементами.
 
-<p>Блочный контекст форматирования создаёт один из следующих способов (методов):</p>
+Блочный контекст форматирования создаёт один из следующих способов (методов):
 
-<ul>
- <li>корневой элемент документа (<code>&lt;html&gt;</code>).</li>
- <li>плавающие элементы (элементы, у которых {{ cssxref("float") }} не равно <code>none</code>)</li>
- <li>абсолютно позиционированные элементы (элементы, значение  {{ cssxref("position") }} которых либо <code>absolute</code>, либо <code>fixed</code>)</li>
- <li>«строчные блоки» (элементы с {{cssxref("display")}}<code>: inline-block</code>)</li>
- <li>ячейки таблицы (элементы с {{ cssxref("display")}}<code>: table-cell</code>, являющимся значением по умолчанию для ячеек таблицы в HTML)</li>
- <li>заголовки таблицы (элементы с {{ cssxref("display")}}<code>: table-caption</code>, являющимся значением по умолчанию для заголовков таблицы в HTML)</li>
- <li>анонимные ячейки таблицы, неявно создаваемые элементами с {{ cssxref("display") }}<code>: table</code>, <code>table-row</code>, <code>table-row-group</code>, <code>table-header-group</code>, <code>table-footer-group</code> (значения по умолчанию для таблиц, строк таблиц, «шапок», «подвалов» и тел таблиц в HTML соответственно) либо <code>inline-table</code></li>
- <li>элементы, у которых значение свойства {{ cssxref("overflow") }} отличается от <code>visible</code></li>
- <li>{{ cssxref("display") }}<code>: <a href="https://drafts.csswg.org/css-display/#valdef-display-flow-root">flow-root</a></code></li>
- <li>элементы с {{ cssxref("contain") }}<code>: layout</code>, <code>content</code> или <code>strict</code></li>
- <li>флекс-элементы (непосредственные потомки элемента с {{ cssxref("display") }}<code>: flex</code> или <code>inline-flex</code>)</li>
- <li>грид-элементы (непосредственные потомки элемента с {{ cssxref("display") }}<code>: grid</code> или <code>inline-grid</code>)</li>
- <li>многоколоночные контейнеры (элементы, у которых {{ cssxref("column-count") }} или {{ cssxref("column-width") }}  не равно <code>auto</code>, включая элементы с <code>column-count: 1</code>)</li>
- <li>{{ cssxref("column-span") }}<code>: all</code> должно всегда создавать новый блочный контекст форматирования, даже если элемент с <code>column-span: all</code> не находится в многоколоночном контейнере (<a href="https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51">изменение в спецификации</a>, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=709362">баг Chrome</a>).</li>
-</ul>
+- корневой элемент документа (`<html>`).
+- плавающие элементы (элементы, у которых {{ cssxref("float") }} не равно `none`)
+- абсолютно позиционированные элементы (элементы, значение {{ cssxref("position") }} которых либо `absolute`, либо `fixed`)
+- «строчные блоки» (элементы с {{cssxref("display")}}`: inline-block`)
+- ячейки таблицы (элементы с {{ cssxref("display")}}`: table-cell`, являющимся значением по умолчанию для ячеек таблицы в HTML)
+- заголовки таблицы (элементы с {{ cssxref("display")}}`: table-caption`, являющимся значением по умолчанию для заголовков таблицы в HTML)
+- анонимные ячейки таблицы, неявно создаваемые элементами с {{ cssxref("display") }}`: table`, `table-row`, `table-row-group`, `table-header-group`, `table-footer-group` (значения по умолчанию для таблиц, строк таблиц, «шапок», «подвалов» и тел таблиц в HTML соответственно) либо `inline-table`
+- элементы, у которых значение свойства {{ cssxref("overflow") }} отличается от `visible`
+- {{ cssxref("display") }}`: flow-root`
+- элементы с {{ cssxref("contain") }}`: layout`, `content` или `strict`
+- флекс-элементы (непосредственные потомки элемента с {{ cssxref("display") }}`: flex` или `inline-flex`)
+- грид-элементы (непосредственные потомки элемента с {{ cssxref("display") }}`: grid` или `inline-grid`)
+- многоколоночные контейнеры (элементы, у которых {{ cssxref("column-count") }} или {{ cssxref("column-width") }} не равно `auto`, включая элементы с `column-count: 1`)
+- {{ cssxref("column-span") }}`: all` должно всегда создавать новый блочный контекст форматирования, даже если элемент с `column-span: all` не находится в многоколоночном контейнере ([изменение в спецификации](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [баг Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=709362)).
 
-<p>Блочный контекст форматирования применяется ко всему содержимому того элемента, который его создал.</p>
+Блочный контекст форматирования применяется ко всему содержимому того элемента, который его создал.
 
-<p>Блочные контексты форматирования важны для размещения плавающих элементов (см. {{ cssxref("float") }}) и отмены их обтекания (см.{{ cssxref("clear") }}) . Правила размещения плавающих элементов и сброса обтекания применяются только к элементам внутри одного и того же блочного контекста форматирования. Плавающие элементы не влияют на размещение содержимого внутри других блочных контекстов форматирования, и отмена обтекания распространяется только на плавающие элементы из того же самого контекста форматирования. <a href="/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Схлопывание внешних отступов</a> тоже происходит только между блоками из одного и того же блочного контекста форматирования.</p>
+Блочные контексты форматирования важны для размещения плавающих элементов (см. {{ cssxref("float") }}) и отмены их обтекания (см.{{ cssxref("clear") }}) . Правила размещения плавающих элементов и сброса обтекания применяются только к элементам внутри одного и того же блочного контекста форматирования. Плавающие элементы не влияют на размещение содержимого внутри других блочных контекстов форматирования, и отмена обтекания распространяется только на плавающие элементы из того же самого контекста форматирования. [Схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) тоже происходит только между блоками из одного и того же блочного контекста форматирования.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Как_сделать_плавающему_контенту_и_соседнему_с_ним_контенту_одинаковую_высоту">Как сделать плавающему контенту и соседнему с ним контенту одинаковую высоту</h3>
+### Как сделать плавающему контенту и соседнему с ним контенту одинаковую высоту
 
-<p>Давайте рассмотрим пару примеров, чтобы рассмотреть эффект от создания нового блочного контекста форматирования.</p>
+Давайте рассмотрим пару примеров, чтобы рассмотреть эффект от создания нового блочного контекста форматирования.
 
-<p>В примере ниже мы имеем плавающий элемент внутри <code>&lt;</code><code>div&gt;</code> с заданным <code>border</code>. Содержимое этого <code>&lt;div&gt;</code> обтекает плавающий элемент. Так как содержимое <code>float</code> выше, чем остальное содержимое, обтекающее его, <code>border</code> элемента <code>div</code> теперь проходит сквозь <code>float</code>. Как объясняется в руководстве <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">In Flow and Out of Flow</a>, плавающий элемент был исключён из потока элементов, так что фон и граница <code>div</code> включает только его содержимое, но не элемент <code>float</code>. </p>
+В примере ниже мы имеем плавающий элемент внутри ` <``div> ` с заданным `border`. Содержимое этого `<div>` обтекает плавающий элемент. Так как содержимое `float` выше, чем остальное содержимое, обтекающее его, `border` элемента `div` теперь проходит сквозь `float`. Как объясняется в руководстве [In Flow and Out of Flow](/ru/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow), плавающий элемент был исключён из потока элементов, так что фон и граница `div` включает только его содержимое, но не элемент `float`.
 
-<p>{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 
-<h3 id="Использование_overflow_auto">Использование <code>overflow: auto;</code></h3>
+### Использование `overflow: auto;`
 
-<p>Создадим новый блочный контекст форматирования, который будет содержать в себе плавающий элемент. Раньше обычным способом сделать это было установить <code>overflow: auto</code> или другое значение, отличное от значения по умолчанию <code>overflow: visible</code>.</p>
+Создадим новый блочный контекст форматирования, который будет содержать в себе плавающий элемент. Раньше обычным способом сделать это было установить `overflow: auto` или другое значение, отличное от значения по умолчанию `overflow: visible`.
 
-<p>{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/bfc-overflow.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/bfc-overflow.html", '100%', 720)}}
 
-<p>Задание <code>overflow: auto</code> создало новый блочный контекст форматирования, включающий <code>float</code>. Теперь <code>div</code> стал мини-слоем внутри нашего слоя. Любые дочерние элементы войдут в него.</p>
+Задание `overflow: auto` создало новый блочный контекст форматирования, включающий `float`. Теперь `div` стал мини-слоем внутри нашего слоя. Любые дочерние элементы войдут в него.
 
-<p>Проблема использования <code>overflow</code> для создания нового блочного контекста форматирования в том, что свойство <code>overflow</code> предназначено для сообщения браузеру как обращаться с переполнением содержимого. Существуют случаи, в которых оно вызовет появление нежелательных скролл-баров или обрезание теней, когда вы используете это свойство только для того, чтобы создать блочный контекст форматирования. Кроме того, оно потенциально делает код менее понятным для следующего разработчика, так как не всегда очевидно, почему использовано <code>overflow</code> в данном случае. Если вы используете этот подход, хорошей идеей будет прокомментировать код, чтобы объяснить это.</p>
+Проблема использования `overflow` для создания нового блочного контекста форматирования в том, что свойство `overflow` предназначено для сообщения браузеру как обращаться с переполнением содержимого. Существуют случаи, в которых оно вызовет появление нежелательных скролл-баров или обрезание теней, когда вы используете это свойство только для того, чтобы создать блочный контекст форматирования. Кроме того, оно потенциально делает код менее понятным для следующего разработчика, так как не всегда очевидно, почему использовано `overflow` в данном случае. Если вы используете этот подход, хорошей идеей будет прокомментировать код, чтобы объяснить это.
 
-<h3 id="Использование_display_flow-root">Использование <code>display: flow-root</code></h3>
+### Использование `display: flow-root`
 
-<div id="flowroot">
-<p>Одно из новых значений свойства <code>display</code>  позволяет нам создавать новый блочный контекст форматирования без всяких потенциально проблемных побочных эффектов. Использование <code>display: flow-root</code> как свойство содержащего блока, создаёт новый блочный контекст форматирования.</p>
+Одно из новых значений свойства `display` позволяет нам создавать новый блочный контекст форматирования без всяких потенциально проблемных побочных эффектов. Использование `display: flow-root` как свойство содержащего блока, создаёт новый блочный контекст форматирования.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<div class="hidden">
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>box<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>float<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>I am a floated box!<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>I am content inside the container.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+```html hidden
+<div class="box">
+    <div class="float">I am a floated box!</div>
+    <p>I am content inside the container.</p>
 </div>
+```
+
+```css
+.box {
+    background-color: rgb(224, 206, 247);
+    border: 5px solid rebeccapurple;
+    display: flow-root
+}
+.float {
+    float: left;
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    border:1px solid black;
+    padding: 10px;
+}
+```
+
+{{EmbedLiveSample("flowroot", 200, 200)}}
+
+С помощью `display: flow-root;` применённом на элементе `<div>`, всё внутри этого контейнера будет участвовать в едином блочном контексте форматирования этого контейнера, и плавающие элементы не будут торчать из нижней части контейнера.
+
+Задание значения `flow-root` имеет смысл тогда, когда вы понимаете, что вы создаёте что-то, что будет действовать так же, как действует корневой `root` элемент (`<html>` в браузерах) в том плане, что он создаёт новый контекст для компоновки потока внутри него.
+
+> **Примечание:** `display: flow-root;` [не поддерживается](https://caniuse.com/#search=flow-root) в Safari.
+
+### Схлопывание границ margin
+
+Создание нового блочного контекста форматирования предотвращает эффект [схлопывания границ](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) между двумя соседними div:
+
+#### HTML
+
+```html
+<div class="blue"></div>
+<div class="red-outer">
+  <div class="red-inner">red inner</div>
 </div>
+```
 
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token"><span class="class token">.box</span></span> <span class="punctuation token">{</span>
-    <span class="property token">background-color</span><span class="punctuation token">:</span> <span class="function token">rgb</span><span class="punctuation token">(</span><span class="number token">224</span><span class="punctuation token">,</span> <span class="number token">206</span><span class="punctuation token">,</span> <span class="number token">247</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="property token">border</span><span class="punctuation token">:</span> <span class="number token">5</span><span class="token unit">px</span> solid rebeccapurple<span class="punctuation token">;</span>
-    <span class="property token">display</span><span class="punctuation token">:</span> flow-root
-<span class="punctuation token">}</span>
-<span class="selector token"><span class="class token">.float</span></span> <span class="punctuation token">{</span>
-    <span class="property token">float</span><span class="punctuation token">:</span> left<span class="punctuation token">;</span>
-    <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">200</span><span class="token unit">px</span><span class="punctuation token">;</span>
-    <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">150</span><span class="token unit">px</span><span class="punctuation token">;</span>
-    <span class="property token">background-color</span><span class="punctuation token">:</span> white<span class="punctuation token">;</span>
-    <span class="property token">border</span><span class="punctuation token">:</span><span class="number token">1</span><span class="token unit">px</span> solid black<span class="punctuation token">;</span>
-    <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">10</span><span class="token unit">px</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+#### CSS
 
-<div id="flowroot">
-<p>{{EmbedLiveSample("flowroot", 200, 200)}}</p>
-</div>
+```css
+.blue, .red-inner {
+  height: 50px;
+  margin: 10px 0;
+}
 
-<p>С помощью <code>display: flow-root;</code> применённом на элементе <code>&lt;div&gt;</code>, всё внутри этого контейнера будет участвовать в едином блочном контексте форматирования этого контейнера, и плавающие элементы не будут торчать из нижней части контейнера.</p>
+.blue {
+  background: blue;
+}
 
-<p>Задание значения <code>flow-root</code> имеет смысл тогда, когда вы понимаете, что вы создаёте что-то, что будет действовать так же, как действует корневой <code>root</code> элемент (<code>&lt;html&gt;</code> в браузерах) в том плане, что он создаёт новый контекст для компоновки потока внутри него.</p>
+.red-outer {
+  overflow: hidden;
+  background: red;
+}
+```
 
-<div class="blockIndicator note">
-<p><strong>Примечание:</strong>  <code>display: flow-root;</code> <a href="https://caniuse.com/#search=flow-root">не поддерживается</a> в Safari.</p>
-</div>
+{{EmbedLiveSample("Схлопывание_границ_margin", 120, 120)}}
 
-<h3 id="Схлопывание_границ_margin">Схлопывание границ margin</h3>
+## Спецификации
 
-<p>Создание нового блочного контекста форматирования предотвращает эффект <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">схлопывания границ</a> между двумя соседними div:</p>
+- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#q15)
+- [CSS Display Level 3](https://drafts.csswg.org/css-display/#block-formatting-context)
 
-<h4 id="HTML">HTML</h4>
+## Статьи по теме
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>blue<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>red-outer<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>red-inner<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>red inner<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
-
-<h4 id="CSS_2">CSS</h4>
-
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token"><span class="class token">.blue</span>, <span class="class token">.red-inner</span></span> <span class="punctuation token">{</span>
-  <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">50</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">10</span><span class="token unit">px</span> <span class="number token">0</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-
-<span class="selector token"><span class="class token">.blue</span></span> <span class="punctuation token">{</span>
-  <span class="property token">background</span><span class="punctuation token">:</span> blue<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-
-<span class="selector token"><span class="class token">.red-outer</span></span> <span class="punctuation token">{</span>
-  <span class="property token">overflow</span><span class="punctuation token">:</span> hidden<span class="punctuation token">;</span>
-  <span class="property token">background</span><span class="punctuation token">:</span> red<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
-
-<p>{{EmbedLiveSample("Схлопывание_границ_margin", 120, 120)}}</p>
-
-<h2 id="Specifications">Спецификации</h2>
-
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#q15">CSS 2.1</a></li>
- <li><a class="external" href="https://drafts.csswg.org/css-display/#block-formatting-context">CSS Display Level 3</a></li>
-</ul>
-
-<h2 id="See_Also">Статьи по теме</h2>
-
-<ul>
- <li>{{ cssxref("float") }}, {{ cssxref("clear") }}</li>
- <li>{{css_key_concepts}}</li>
-</ul>
+- {{ cssxref("float") }}, {{ cssxref("clear") }}
+- {{css_key_concepts}}
