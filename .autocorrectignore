@@ -1,1 +1,5 @@
-files/zh-cn/conflicting
+files/
+docs/
+!docs/zh-cn/
+!files/zh-cn/
+files/zh-cn/web/javascript/reference/global_objects/bigint/tolocalestring/index.md
