@@ -31,7 +31,7 @@ Math.min(value0, value1, /* … ,*/ valueN)
 
 因为 `min()` 是 `Math` 的静态方法，所以你总是将其作为 `Math.min()` 使用，而不是作为您创建的 `Math` 对象的方法（`Math` 不是构造函数）。
 
-[`Math.min.length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 是 2，这弱信号表明它被设计来处理至少两个参数。
+[`Math.min.length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 是 2，这从某种程度上表明了它旨在处理至少两个参数。
 
 ## 示例
 
@@ -45,7 +45,7 @@ const y = -20;
 const z = Math.min(x, y); // -20
 ```
 
-### 使用 Math.min() 裁剪值（Clipping a value）
+### 使用 Math.min() 裁剪值
 
 `Math.min()` 经常用于裁剪一个值，以便使其总是小于或等于某个边界值。例如：
 
@@ -63,7 +63,7 @@ if (x > boundary) {
 const x = Math.min(f(foo), boundary);
 ```
 
-{{jsxref("Math.max()")}} 可以以类似的方式用于在另一端剪辑一个值。
+{{jsxref("Math.max()")}} 可以以类似的方式用于在另一端裁剪一个值。
 
 ## 规范
 
