@@ -11,7 +11,7 @@ Firefox 57 (別名 Firefox Quantum) は、米国時間 2017 年 11 月 14 日に
 
 Firefox 57 は、Firefox を徹底的に再構築してパフォーマンス、安定性、外見を大きく向上させることを目指す [Firefox Quantum](https://wiki.mozilla.org/Quantum) エンジニアリングプロジェクトにちなんで **Quantum** というリリース名を与えられました。Firefox 57 はこれらの改善点の一部をリリースする最初のバージョンであり、祝福を求めていました。
 
-> **Note:** このリリースの Quantum の特徴について詳しくは、Dan Callahan による記事 [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) をご覧ください。
+> **メモ:** このリリースの Quantum の特徴について詳しくは、Dan Callahan による記事 [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) をご覧ください。
 
 [Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/)、別名 **Quantum CSS** または **Stylo** はデスクトップ版の Firefox 57 でデフォルトで有効であり、モバイル版の Firefox は追って有効化します。多くのパフォーマンス向上は別として、開発者が何らかの大きな違いに気づくことがあってはいけません。Stylo には多くの小規模な機能差がありますが、Gecko で取り除くべき非標準の動作を修正するために実装したものです。このような差異は、適宜リファレンスのページやリリースノートに掲載します ([Quantum CSS に関する補足](#quantum_css_notes) を参照)。
 
@@ -88,7 +88,7 @@ _変更なし。_
 
 - SCTP メッセージの end-of-record (EOR) フラグを使用することにより、{{DOMxRef("RTCDataChannel")}} で任意のサイズ (256kiB が相互運用性が高いのですが、最大 1GiB まで) のメッセージをサポートしました。詳しくは {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}} をご覧ください ({{bug(979417)}})。
 
-  > **Note:** Firefox は、複数のソースの SCTP メッセージを多重化する機能を提供する SCTP ndata プロトコルが未サポートですので、大きなデータオブジェクトを送信すると他のすべての SCTP 通信で著しい遅延が発生する可能性があります。Firefox の ndata サポートの実装および展開の進捗を追跡するには、{{bug(1381145)}} をご覧ください。
+  > **メモ:** Firefox は、複数のソースの SCTP メッセージを多重化する機能を提供する SCTP ndata プロトコルが未サポートですので、大きなデータオブジェクトを送信すると他のすべての SCTP 通信で著しい遅延が発生する可能性があります。Firefox の ndata サポートの実装および展開の進捗を追跡するには、{{bug(1381145)}} をご覧ください。
 
 - {{DOMxRef("RTCDataChannel.send()")}} メソッドで、送信しようとしたメッセージのサイズが受信側の {{Glossary("user agent","ユーザーエージェント")}} と互換性がない場合に `TypeError` 例外を発生できるようになりました (これは {{bug(979417)}} の一部として実装しました)。
 - 録画中に発生した問題を報告するために送信される {{event("error")}} イベントを一般的なイベントから {{DOMxRef("MediaRecorderErrorEvent")}} 型にするため、[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) を更新しました。
@@ -123,7 +123,7 @@ _変更なし。_
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
-> **Note:** Firefox 57 より、XPCOM ベースのアドオンのサポートを全面的に廃止します。すべての拡張機能は新しい [ブラウザー拡張機能](/ja/Add-ons/WebExtensions) (WebExtensions としても知られています) への移行が必要であり、そうしなければ動作しません。
+> **メモ:** Firefox 57 より、XPCOM ベースのアドオンのサポートを全面的に廃止します。すべての拡張機能は新しい [ブラウザー拡張機能](/ja/Add-ons/WebExtensions) (WebExtensions としても知られています) への移行が必要であり、そうしなければ動作しません。
 
 ### WebExtensions
 
