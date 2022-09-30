@@ -189,13 +189,11 @@ new ClassWithPrivateAccessor();
 
 ## Spécifications
 
-| Spécification                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.classes.private_class_fields")}}
+{{Compat}}
 
 ## Voir aussi
 

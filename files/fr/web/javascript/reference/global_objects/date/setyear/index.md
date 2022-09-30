@@ -51,16 +51,11 @@ leGrandJour.setYear(2000);
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                                                |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0.                                       |
-| {{SpecName('ES5.1', '#sec-B.2.5', 'Date.prototype.setYear')}}                             | {{Spec2('ES5.1')}}     | Définie dans l'annexe informative sur la compatibilité.                                     |
-| {{SpecName('ES6', '#sec-date.prototype.setyear', 'Date.prototype.setYear')}}         | {{Spec2('ES6')}}         | Définie dans l'annexe normative sur les fonctionnalités additionnelles des navigateurs web. |
-| {{SpecName('ESDraft', '#sec-date.prototype.setyear', 'Date.prototype.setYear')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe normative sur les fonctionnalités additionnelles des navigateurs web. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.setYear")}}
+{{Compat}}
 
 ## Voir aussi
 
