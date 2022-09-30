@@ -5,7 +5,7 @@ slug: Web/API/BaseAudioContext/createConvolver
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioContext") }}的方法`createConvolver() 能创建一个`{{ domxref("ConvolverNode") }}，通常用来对你的音频应用混响效果。在 [Convolution 规范定义](http://webaudio.github.io/web-audio-api/#background-3) 中查看更多信息。
+{{ domxref("AudioContext") }}的方法 `createConvolver()` 能创建一个 {{ domxref("ConvolverNode") }}，通常用来对你的音频应用混响效果。在 [Convolution 规范定义](https://webaudio.github.io/web-audio-api/#background-3) 中查看更多信息。
 
 ## 语法
 

@@ -40,7 +40,7 @@ imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 0/1/2/3];
 var numBytes = imageData.data.length;
 ```
 
-## 创建一个`ImageData 对象`
+## 创建一个 ImageData 对象
 
 去创建一个新的，空白的 ImageData`对象`，你应该会使用{{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 方法。有 2 个版本的 createImageData() 方法。
 
