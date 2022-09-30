@@ -118,7 +118,7 @@ customElements.define('popup-info', PopUpInfo);
   back of your card."></popup-info>
 ```
 
-> **Note:** こちらで[完全な JavaScript ソース](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) を見ることができます。
+> **メモ:** こちらで[完全な JavaScript ソース](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) を見ることができます。
 
 ### 内部スタイルと外部スタイル
 
@@ -179,7 +179,7 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 
 通常のように `<ul>` を使用していますが、カスタム要素の名前が `is` 属性で指定されています。
 
-> **Note:** 繰り返しますが、完全な [JavaScript のソースコード](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)はこちらにあります。
+> **メモ:** 繰り返しますが、完全な [JavaScript のソースコード](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)はこちらにあります。
 
 ## ライフサイクルコールバックの使用
 
@@ -187,7 +187,7 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 
 - `connectedCallback`: 文書に接続された要素にカスタム要素が追加されるたびに呼び出されます。これはそのノードが移動するために発生するので、要素の内容が完全に解釈される前に発生することがあります。
 
-  > **Note:** `connectedCallback` は要素の接続が終了したときにも呼び出されることがあります。 {{domxref("Node.isConnected")}} を使用して確認してください。
+  > **メモ:** `connectedCallback` は要素の接続が終了したときにも呼び出されることがあります。 {{domxref("Node.isConnected")}} を使用して確認してください。
 
 - `disconnectedCallback`: カスタム要素が文書の DOM から切断されるたびに呼び出されます。
 - `adoptedCallback`: カスタム要素が新しい文書に移動するたびに呼び出されます。
@@ -263,7 +263,7 @@ static get observedAttributes() { return ['c', 'l']; }
 
 この例では、これはコンストラクターの最上部に配置されています。
 
-> **Note:** [完全な JavaScript のソース](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)はこちらから探してください。
+> **メモ:** [完全な JavaScript のソース](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)はこちらから探してください。
 
 ## トランスパイラーとクラス
 
