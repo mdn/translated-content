@@ -6,106 +6,52 @@ tags:
   - XPath
 translation_of: Web/XPath
 ---
-<p>
-  El <strong>
-  Lenguaje de Caminos XML</strong>
-   proporciona un modo flexible de dirigirse (señalando a) a las distintas partes de un documento XML. También puede ser usado para cotejar nodos y determinar si encajan un modelo o no.</p>
+El **Lenguaje de Caminos XML**
+proporciona un modo flexible de dirigirse (señalando a) a las distintas partes de un documento XML. También puede ser usado para cotejar nodos y determinar si encajan un modelo o no.
 
-<p>
-  XPath es principalmente usado con <a href="/es/XSLT" title="es/XSLT">
-  XSLT</a>
-  , pero también puede ser usado como un modo mucho más eficaz de navegar por el DOM de cualquier documento basado en XML, como <a href="/es/XHTML" title="es/XHTML">
-  XHTML</a>
-   y <a href="/es/XUL" title="es/XUL">
-  XUL</a>
-  , en vez de confiar en el método <code>
-  getElementById</code>
-  , las propiedades <code>
-  childNodes</code>
-  , etc.</p>
+XPath es principalmente usado con [XSLT](/es/XSLT "es/XSLT")
+, pero también puede ser usado como un modo mucho más eficaz de navegar por el DOM de cualquier documento basado en XML, como [XHTML](/es/XHTML "es/XHTML")
+y [XUL](/es/XUL "es/XUL")
+, en vez de confiar en el método `getElementById`
+, las propiedades `childNodes`
+, etc.
 
-<p>
-  XPath usa una notación de caminos (como en los URLs) para navegar por la estructura jerárquica de un documento XML. Su sintaxis no es XML para que pueda ser usado en URIs o en valores de atributos XML.</p>
+XPath usa una notación de caminos (como en los URLs) para navegar por la estructura jerárquica de un documento XML. Su sintaxis no es XML para que pueda ser usado en URIs o en valores de atributos XML.
 
-   <h4 id="Documentaci.C3.B3n">
-  <a href="/Special:Tags?tag=XPath&amp;language=es" title="Special:Tags?tag=XPath&amp;language=es">
-  Documentación</a>
-</h4>
-   <dl>
-   <dt>
-  <a class="external" href="http://www.sidar.org/recur/desdi/traduc/es/xml/xpath.html">
-  Especificación de XPath 1.0</a>
-</dt>
-   <dd>
-  <small>
-  Este documento es una traducción al castellano de la Recomendación del W3C: "XML Path Language (XPath) Version 1.0".</small>
-</dd>
- </dl>
-   <dl>
-   <dt>
-  <a href="/es/XPath/Ejes" title="es/XPath/Ejes">
-  XPath:Ejes</a>
-</dt>
-   <dd>
-  <small>
-  Listado y descripción de los ejes definidos en la especificación de XPath. Los ejes se usan para describir las relaciones entre los nodos de un documento.</small>
-</dd>
- </dl>
-   <dl>
-   <dt>
-  <a href="/es/XPath/Funciones" title="es/XPath/Funciones">
-  XPath:Funciones</a>
-</dt>
-   <dd>
-  <small>
-  List and description of the core XPath functions and XSLT-specific additions to XPath.</small>
-</dd>
- </dl>
-   <dl>
-   <dt>
-  <a href="/es/Transformando_XML_con_XSLT" title="es/Transformando_XML_con_XSLT">
-  Transformando XML con XSLT</a>
-</dt>
-   <dd>
-  <small>
-  XSLT usa XPath para señalar la dirección de los fragmentos de código en documentos XML que se quieren transformar.</small>
-</dd>
- </dl>
-   <dl>
-   <dt>
-  <a class="external" href="http://www.zvon.org/xxl/XPathTutorial/General_spa/examples.html">
-  Tutorial de XPath </a>
-</dt>
-   <dd>
-  <small>
-  Tutorial basado en ejemplos que te ayudaran a dar tus primeros pasos.</small>
-</dd>
- </dl>
-   <p>
-  <span>
-  <a href="/Special:Tags?tag=XPath&amp;language=es" title="Special:Tags?tag=XPath&amp;language=es">
-  Ver más...</a>
-</span>
-</p>
+#### [Documentación](/Special:Tags?tag=XPath&language=es "Special:Tags?tag=XPath&language=es")
 
-   <h4 id="Comunidad">
-  Comunidad</h4>
-   <h4 id="Herramientas">
-  Herramientas</h4>
-   <dl><dt>
-  Temas relacionados</dt>
-   <dd>
-  <a href="/es/XSLT" title="es/XSLT">
-  XSLT</a>
-  , <a href="/es/XML" title="es/XML">
-  XML</a>
-  , <a href="/es/DOM" title="es/DOM">
-  DOM</a>
-</dd>
- </dl>
-   <p>
-   </p>
+- [Especificación de XPath 1.0](http://www.sidar.org/recur/desdi/traduc/es/xml/xpath.html)
+  - : Este documento es una traducción al castellano de la Recomendación del W3C: "XML Path Language (XPath) Version 1.0".
 
-<p>
-  {{ languages( { "cs": "cs/XPath", "en": "en/XPath", "fr": "fr/XPath", "ja": "ja/XPath", "ko": "ko/XPath", "pl": "pl/XPath", "zh-cn": "cn/XPath" } ) }}</p>
+<!---->
 
+- [XPath:Ejes](/es/XPath/Ejes "es/XPath/Ejes")
+  - : Listado y descripción de los ejes definidos en la especificación de XPath. Los ejes se usan para describir las relaciones entre los nodos de un documento.
+
+<!---->
+
+- [XPath:Funciones](/es/XPath/Funciones "es/XPath/Funciones")
+  - : List and description of the core XPath functions and XSLT-specific additions to XPath.
+
+<!---->
+
+- [Transformando XML con XSLT](/es/Transformando_XML_con_XSLT "es/Transformando_XML_con_XSLT")
+  - : XSLT usa XPath para señalar la dirección de los fragmentos de código en documentos XML que se quieren transformar.
+
+<!---->
+
+- [Tutorial de XPath](http://www.zvon.org/xxl/XPathTutorial/General_spa/examples.html)
+  - : Tutorial basado en ejemplos que te ayudaran a dar tus primeros pasos.
+
+[Ver más...](/Special:Tags?tag=XPath&language=es "Special:Tags?tag=XPath&language=es")
+
+#### Comunidad
+
+#### Herramientas
+
+- Temas relacionados
+  - : [XSLT](/es/XSLT "es/XSLT")
+    , [XML](/es/XML "es/XML")
+    , [DOM](/es/DOM "es/DOM")
+
+{{ languages( { "cs": "cs/XPath", "en": "en/XPath", "fr": "fr/XPath", "ja": "ja/XPath", "ko": "ko/XPath", "pl": "pl/XPath", "zh-cn": "cn/XPath" } ) }}

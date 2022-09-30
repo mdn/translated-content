@@ -4,126 +4,123 @@ slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 translation_of: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 ---
-<p>Este documento describe la interfaz para usar <a href="/en-US/docs/Web/XPath">XPath</a> internamente en JavaScript,  en extensiones y desde sitios web. Mozilla implementa una gran parte del <a class="external" href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html">DOM 3 XPath</a>. Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.</p>
+Este documento describe la interfaz para usar [XPath](/es/docs/Web/XPath) internamente en JavaScript, en extensiones y desde sitios web. Mozilla implementa una gran parte del [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html). Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.
 
-<p>La interfaz principal a usar con XPath es la función <a href="/en/DOM/document.evaluate" title="en/DOM/document.evaluate">evaluate</a> del objeto <a href="/en/DOM/document" title="en/DOM/document">document</a>.</p>
+La interfaz principal a usar con XPath es la función [evaluate](/en/DOM/document.evaluate "en/DOM/document.evaluate") del objeto [document](/en/DOM/document "en/DOM/document").
 
-<h2 id="document.evaluate" name="document.evaluate">document.evaluate</h2>
+## document.evaluate
 
-<p>Este método evalúa expresiones <a href="/en/XPath" title="en/XPath">XPath</a> contra un documento basado en <a href="/en/XML" title="en/XML">XML</a>  (incluyendo documentos HTML), y regresa un objeto <code><a href="/en/XPathResult" title="en/XPathResult">XPathResult</a></code>, el cual puede ser un solo nodo o un conjunto de nodos. La documentación existente para este método se encuentra en <a href="/en/DOM/document.evaluate" title="en/DOM/document.evaluate">document.evaluate</a>, pero de momento es más bien escasa para nuestras necesidades; una examinación más abarcativa será dada a continuación.</p>
+Este método evalúa expresiones [XPath](/en/XPath "en/XPath") contra un documento basado en [XML](/en/XML "en/XML") (incluyendo documentos HTML), y regresa un objeto [`XPathResult`](/en/XPathResult "en/XPathResult"), el cual puede ser un solo nodo o un conjunto de nodos. La documentación existente para este método se encuentra en [document.evaluate](/en/DOM/document.evaluate "en/DOM/document.evaluate"), pero de momento es más bien escasa para nuestras necesidades; una examinación más abarcativa será dada a continuación.
 
-<pre class="brush: js">var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
-</pre>
+```js
+var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
+```
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<p>La función <a href="/en/DOM/document.evaluate" title="en/DOM/document.evaluate">evaluate</a> toma un total de 5 parámetros:</p>
+La función [evaluate](/en/DOM/document.evaluate "en/DOM/document.evaluate") toma un total de 5 parámetros:
 
-<ul>
- <li><code>xpathExpression</code>: Una cadena que contiene la expresión XPath a evaluar.</li>
- <li><code>contextNode</code>: Un nodo en el documento contra la  <code>xpathExpression</code> debe ser evaluada, incluyendo todos los nodos descendientes. El nodo <a href="/en/DOM/document" title="en/DOM/document">document</a> es el usado más comúnmente.</li>
- <li><code>namespaceResolver</code>: Una función que pasará cualquier prefijo de namespace contenido en una <code>xpathExpression</code> la cúal regresará una cadena representando al URI del namespace asociado con ese prefijo. Esto activa la conversión entre los prefijos usados en las expresiones XPath y los posiblemente distintos prefijos usados en el documento. La función puede ser:
-  <ul>
-   <li>Creada usando el metodo <code><a href="/en/DOM/document.createNSResolver" title="en/DOM/document.createNSResolver">createNSResolver</a></code> de un objeto <code><a href="/en/XPathEvaluator" title="en/XPathEvaluator">XPathEvaluator</a></code>. Deberías usar este virtualmente todo el tiempo.</li>
-   <li><code>null</code>, el cúal puede ser usado para documentos HTML o cuando no son usados prefijos de namespace. Note que, si la expresión XPath contiene un prefijo de namespace, esto resultará en una <code>DOMException</code> siendo arrojada con el código <code>NAMESPACE_ERR</code>.</li>
-   <li>Una función definida por el usuario. Mira la sección <a href="#Implementing_a_User_Defined_Namespace_Resolver">Usar un Solucionador de Namespace definido por el usuario</a> en el apéndice para detalles.</li>
-  </ul>
- </li>
- <li><code>resultType</code>: Una <a href="#XPathResult_Defined_Constants">constante</a> que especifica el tipo del resultado deseado a ser regresado. La constante más comúnmente pasada es <code>XPathResult.ANY_TYPE</code> la cúal regresará los resultados de la expresión XPath como el tipo más natural. Hay una sección en el apéndice que contiene una lista completa de las <a href="#XPathResult_Defined_Constants">constantes disponibles</a>. Estas son explicadas debajo, en la sección "<a href="#Specifying_the_Return_Type">Especificando el tipo de valor regresado</a>".</li>
- <li><code>result</code>: Si un objeto <code>XPathResult</code>  existente es especificado, sera reusado para regresar el resultado. Especificando <code>null</code>, un nuevo objeto <code>XPathResult</code> será creado.</li>
-</ul>
+- `xpathExpression`: Una cadena que contiene la expresión XPath a evaluar.
+- `contextNode`: Un nodo en el documento contra la `xpathExpression` debe ser evaluada, incluyendo todos los nodos descendientes. El nodo [document](/en/DOM/document "en/DOM/document") es el usado más comúnmente.
+- `namespaceResolver`: Una función que pasará cualquier prefijo de namespace contenido en una `xpathExpression` la cúal regresará una cadena representando al URI del namespace asociado con ese prefijo. Esto activa la conversión entre los prefijos usados en las expresiones XPath y los posiblemente distintos prefijos usados en el documento. La función puede ser:
 
-<h3 id="Return_Value" name="Return_Value">Valor regresado</h3>
+  - Creada usando el metodo [`createNSResolver`](/en/DOM/document.createNSResolver "en/DOM/document.createNSResolver") de un objeto [`XPathEvaluator`](/en/XPathEvaluator "en/XPathEvaluator"). Deberías usar este virtualmente todo el tiempo.
+  - `null`, el cúal puede ser usado para documentos HTML o cuando no son usados prefijos de namespace. Note que, si la expresión XPath contiene un prefijo de namespace, esto resultará en una `DOMException` siendo arrojada con el código `NAMESPACE_ERR`.
+  - Una función definida por el usuario. Mira la sección [Usar un Solucionador de Namespace definido por el usuario](#Implementing_a_User_Defined_Namespace_Resolver) en el apéndice para detalles.
 
-<p>Regresa <code>xpathResult</code>, que es un objeto <code>XPathResult</code> del tipo especificado en el parámetro <code>resultType</code>. La interfaz <code>XPathResult</code> está definida en{{ Source("dom/interfaces/xpath/nsIDOMXPathResult.idl", "here") }}.</p>
+- `resultType`: Una [constante](#XPathResult_Defined_Constants) que especifica el tipo del resultado deseado a ser regresado. La constante más comúnmente pasada es `XPathResult.ANY_TYPE` la cúal regresará los resultados de la expresión XPath como el tipo más natural. Hay una sección en el apéndice que contiene una lista completa de las [constantes disponibles](#XPathResult_Defined_Constants). Estas son explicadas debajo, en la sección "[Especificando el tipo de valor regresado](#Specifying_the_Return_Type)".
+- `result`: Si un objeto `XPathResult` existente es especificado, sera reusado para regresar el resultado. Especificando `null`, un nuevo objeto `XPathResult` será creado.
 
-<h3 id="Implementing_a_Default_Namespace_Resolver" name="Implementing_a_Default_Namespace_Resolver">Implementando un Solucionador de Namespace predefinido</h3>
+### Valor regresado
 
-<p>Nosotros creamos un solucionador de namespace usando el método <code>createNSResolver</code> del objeto <a href="/en/DOM/document" title="en/DOM/document">document</a>.</p>
+Regresa `xpathResult`, que es un objeto `XPathResult` del tipo especificado en el parámetro `resultType`. La interfaz `XPathResult` está definida en{{ Source("dom/interfaces/xpath/nsIDOMXPathResult.idl", "here") }}.
 
-<pre class="brush: js">var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
-</pre>
+### Implementando un Solucionador de Namespace predefinido
 
-<p><span class="comment">O alternativamente, usar el método <code>createNSResolver</code> de un objeto<code> XPathEvaluator</code>. </span></p>
+Nosotros creamos un solucionador de namespace usando el método `createNSResolver` del objeto [document](/en/DOM/document "en/DOM/document").
 
-<pre><span class="comment">var xpEvaluator = new XPathEvaluator();
-var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement ); </span></pre>
+```js
+var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+```
 
-<p>Y entonces pasar a <code>document.evaluate</code> la variable <code>nsResolver</code>, como el parámetro <code>namespaceResolver</code>.</p>
+O alternativamente, usar el método `createNSResolver` de un objeto` XPathEvaluator`.
 
-<p>Nota: XPath define QNames sin un prefijo sólo al igualar elementos en el namespace null. No hay manera en XPath de tomar el namespace predefinido tal como se aplica a un elemento de referencia regular (e.g., <code>p[@id='_myid']</code> for <code><span class="nowiki">xmlns='http://www.w3.org/1999/xhtml</span>'</code>). Para igualar elementos predefinidos en un namespace no-nulo, , se tiene que hacer refencia a un elemento en particular usando una forma como <code>['namespace-uri()='<span class="nowiki">http://www.w3.org/1999/xhtml</span>' and name()='p' and @id='_myid']</code> (este enfoque funciona bien para expresiones XPath dinámicas donde el namespace puede ser dessconocido) o usar un nombre de prueba prefijado, y crear un solucionador de namespace mapeando el prefijo al namespace. Lee más sobre como crear un solucionador de namespace definido por el usuario, si deseas tomar el último enfoque.</p>
+```
+var xpEvaluator = new XPathEvaluator();
+var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+```
 
-<h3 id="Notes" name="Notes">Notas</h3>
+Y entonces pasar a `document.evaluate` la variable `nsResolver`, como el parámetro `namespaceResolver`.
 
-<p>Se adapta cualquier nodo DOM a resolver namespaces, así que una expresión XPath puede ser fácilmente evaluada relativa al contexto del nodo donde este aparece dentro del documento. Este adaptador funciona como el método de DOM Nivel 3 <code>lookupNamespaceURI</code> en nodos a resolver el <code>namespaceURI</code> desde un prefijo dado, usando la información actual disponible en la jerarquía del nodo en el momento en que lookupNamespaceURI es llamado. También resuelve correctamente el prefijo implícito de XML.</p>
+Nota: XPath define QNames sin un prefijo sólo al igualar elementos en el namespace null. No hay manera en XPath de tomar el namespace predefinido tal como se aplica a un elemento de referencia regular (e.g., `p[@id='_myid']` for `xmlns='http://www.w3.org/1999/xhtml'`). Para igualar elementos predefinidos en un namespace no-nulo, , se tiene que hacer refencia a un elemento en particular usando una forma como `['namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']` (este enfoque funciona bien para expresiones XPath dinámicas donde el namespace puede ser dessconocido) o usar un nombre de prueba prefijado, y crear un solucionador de namespace mapeando el prefijo al namespace. Lee más sobre como crear un solucionador de namespace definido por el usuario, si deseas tomar el último enfoque.
 
-<h3 id="Specifying_the_Return_Type" name="Specifying_the_Return_Type">Especificando el tipo de valor regresado</h3>
+### Notas
 
-<p>La variable regresado <code>xpathResult</code> desde <code>document.evaluate</code> puede estar compuesto de nodos individuales (tipos simples), o una colección de nodos (tipo de conjunto de nodos)</p>
+Se adapta cualquier nodo DOM a resolver namespaces, así que una expresión XPath puede ser fácilmente evaluada relativa al contexto del nodo donde este aparece dentro del documento. Este adaptador funciona como el método de DOM Nivel 3 `lookupNamespaceURI` en nodos a resolver el `namespaceURI` desde un prefijo dado, usando la información actual disponible en la jerarquía del nodo en el momento en que lookupNamespaceURI es llamado. También resuelve correctamente el prefijo implícito de XML.
 
-<h4 id="Simple_Types" name="Simple_Types">Tipos simples</h4>
+### Especificando el tipo de valor regresado
 
-<p>Cuando el tipo de resultado deseado especificado en <code>resultType</code> es uno de los siguientes :</p>
+La variable regresado `xpathResult` desde `document.evaluate` puede estar compuesto de nodos individuales (tipos simples), o una colección de nodos (tipo de conjunto de nodos)
 
-<ul>
- <li><code>NUMBER_TYPE</code> - un doble</li>
- <li><code>STRING_TYPE</code> - una cadena</li>
- <li><code>BOOLEAN_TYPE</code> - un booleano</li>
-</ul>
+#### Tipos simples
 
-<p>Obtenemos el valor regresado por la expresión accediendo a las siguientes propiedades, respectivamente, del objeto <code>XPathResult</code>.</p>
+Cuando el tipo de resultado deseado especificado en `resultType` es uno de los siguientes :
 
-<ul>
- <li><code>numberValue</code></li>
- <li><code>stringValue</code></li>
- <li><code>booleanValue</code></li>
-</ul>
+- `NUMBER_TYPE` - un doble
+- `STRING_TYPE` - una cadena
+- `BOOLEAN_TYPE` - un booleano
 
-<h5 id="Example" name="Example">Ejemplo</h5>
+Obtenemos el valor regresado por la expresión accediendo a las siguientes propiedades, respectivamente, del objeto `XPathResult`.
 
-<p>El siguiente código usa la expresión XPath <code><a href="/en/XPath/Functions/count" title="en/XPath/Functions/count">count(//p)</a></code> para obtener el número de elementos &lt;p&gt; en un  documento HTML:</p>
+- `numberValue`
+- `stringValue`
+- `booleanValue`
 
-<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">var</span> paragraphCount <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">evaluate<span class="punctuation token">(</span></span> 'count<span class="comment token">(//p)', document, null, XPathResult.ANY_TYPE, null );
-</span>
-<span class="function token">alert<span class="punctuation token">(</span></span> <span class="string token">'This document contains '</span> <span class="operator token">+</span> paragraphCount<span class="punctuation token">.</span>numberValue <span class="operator token">+</span> <span class="string token">' paragraph elements'</span> <span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+##### Ejemplo
 
-<p>Aunque JavaScript nos permite convertir el número a una cadena para desplegarlo, la interfaz <code>XPath</code> no convertirá el resultado numérico si la propiedad <code>stringValue</code> es solicitada, así que el siguiente código no funcionará:</p>
+El siguiente código usa la expresión XPath [`count(//p)`](/en/XPath/Functions/count "en/XPath/Functions/count") para obtener el número de elementos \<p> en un documento HTML:
 
-<pre class="brush: js">var paragraphCount = document.evaluate('count(//p)', document, null, XPathResult.ANY_TYPE, null );
+```js
+var paragraphCount = document.evaluate( 'count(//p)', document, null, XPathResult.ANY_TYPE, null );
+
+alert( 'This document contains ' + paragraphCount.numberValue + ' paragraph elements' );
+```
+
+Aunque JavaScript nos permite convertir el número a una cadena para desplegarlo, la interfaz `XPath` no convertirá el resultado numérico si la propiedad `stringValue` es solicitada, así que el siguiente código no funcionará:
+
+```js
+var paragraphCount = document.evaluate('count(//p)', document, null, XPathResult.ANY_TYPE, null );
 
 alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elements' );
-</pre>
+```
 
-<p>A su vez, regresará una excepción con el código <code>NS_DOM_TYPE_ERROR</code>.</p>
+A su vez, regresará una excepción con el código `NS_DOM_TYPE_ERROR`.
 
-<h4 id="Node-Set_Types" name="Node-Set_Types">Tipos de conjuntos de Nodos</h4>
+#### Tipos de conjuntos de Nodos
 
-<p>El objeto <code>XPathResult</code> permite a los conjuntos de nodos ser regresados en 3 diferentes tipos principales:</p>
+El objeto `XPathResult` permite a los conjuntos de nodos ser regresados en 3 diferentes tipos principales:
 
-<ul>
- <li><a href="#Iterators">Iteradores</a></li>
- <li><a href="#Snapshots">Capturas</a></li>
- <li><a href="#First_Node">Primeros nodos</a></li>
-</ul>
+- [Iteradores](#Iterators)
+- [Capturas](#Snapshots)
+- [Primeros nodos](#First_Node)
 
-<h5 id="Iterators" name="Iterators">Iteradores</h5>
+##### Iteradores
 
-<p>Cuando el tipo de resultado especificado en el <code>resultType</code> es uno de los siguientes:</p>
+Cuando el tipo de resultado especificado en el `resultType` es uno de los siguientes:
 
-<ul>
- <li><code>UNORDERED_NODE_ITERATOR_TYPE</code></li>
- <li><code>ORDERED_NODE_ITERATOR_TYPE</code></li>
-</ul>
+- `UNORDERED_NODE_ITERATOR_TYPE`
+- `ORDERED_NODE_ITERATOR_TYPE`
 
-<p>El objeto <code>XPathResult</code> regresado es un conjunto de nodos de los nodos coincidentes los cuales se comportarán como un iterador, perimitiendo el acceso individual a los nodos mediante el uso de método <span id="cke_bm_118S"> </span><code>iterateNext()</code><span id="cke_bm_118E"> </span> del <code>XPathResult</code><span id="cke_bm_119E"> </span>.</p>
+El objeto `XPathResult` regresado es un conjunto de nodos de los nodos coincidentes los cuales se comportarán como un iterador, perimitiendo el acceso individual a los nodos mediante el uso de método `iterateNext()` del `XPathResult` .
 
-<p>Una vez que hemos iterado sobre todos los nodos individuales coincidentes,<code> iterateNext()</code> regresará <code>null</code>.</p>
+Una vez que hemos iterado sobre todos los nodos individuales coincidentes,` iterateNext()` regresará `null`.
 
-<p>Es importante señalar que si el documento se ha transformado (el arbol del documento se ha modificado) entre iteraciones </p>
+Es importante señalar que si el documento se ha transformado (el arbol del documento se ha modificado) entre iteraciones
 
-<h6 id="Iterator_Example" name="Iterator_Example">Iterator Example</h6>
+###### Iterator Example
 
-<pre class="brush: js">var iterator = document.evaluate('//phoneNumber', documentNode, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null );
+```js
+var iterator = document.evaluate('//phoneNumber', documentNode, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null );
 
 try {
   var thisNode = iterator.iterateNext();
@@ -136,77 +133,77 @@ try {
 catch (e) {
   dump( 'Error: Document tree modified during iteration ' + e );
 }
-</pre>
+```
 
-<h5 id="Snapshots" name="Snapshots">Snapshots</h5>
+##### Snapshots
 
-<p>When the specified result type in the <code>resultType</code> parameter is either:</p>
+When the specified result type in the `resultType` parameter is either:
 
-<ul>
- <li><code>UNORDERED_NODE_SNAPSHOT_TYPE</code></li>
- <li><code>ORDERED_NODE_SNAPSHOT_TYPE</code></li>
-</ul>
+- `UNORDERED_NODE_SNAPSHOT_TYPE`
+- `ORDERED_NODE_SNAPSHOT_TYPE`
 
-<p>The <code>XPathResult</code> object returned is a static node-set of matched nodes, which allows us to access each node through the <code>snapshotItem(itemNumber)</code> method of the <code>XPathResult</code> object, where <code>itemNumber</code> is the index of the node to be retrieved. The total number of nodes contained can be accessed through the <code>snapshotLength</code> property.</p>
+The `XPathResult` object returned is a static node-set of matched nodes, which allows us to access each node through the `snapshotItem(itemNumber)` method of the `XPathResult` object, where `itemNumber` is the index of the node to be retrieved. The total number of nodes contained can be accessed through the `snapshotLength` property.
 
-<p>Snapshots do not change with document mutations, so unlike the iterators the snapshot does not become invalid, but it may not correspond to the current document, for example the nodes may have been moved, it might contain nodes that no longer exist, or new nodes could have been added.</p>
+Snapshots do not change with document mutations, so unlike the iterators the snapshot does not become invalid, but it may not correspond to the current document, for example the nodes may have been moved, it might contain nodes that no longer exist, or new nodes could have been added.
 
-<h6 id="Snapshot_Example" name="Snapshot_Example">Snapshot Example</h6>
+###### Snapshot Example
 
-<pre class="brush: js">var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+```js
+var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
 
-for ( var i=0 ; i &lt; nodesSnapshot.snapshotLength; i++ )
+for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
 {
   dump( nodesSnapshot.snapshotItem(i).textContent );
 }
-</pre>
+```
 
-<h5 id="First_Node" name="First_Node">First Node</h5>
+##### First Node
 
-<p>When the specified result type in the <code>resultType</code> parameter is either:</p>
+When the specified result type in the `resultType` parameter is either:
 
-<ul>
- <li><code>ANY_UNORDERED_NODE_TYPE</code></li>
- <li><code>FIRST_ORDERED_NODE_TYPE</code></li>
-</ul>
+- `ANY_UNORDERED_NODE_TYPE`
+- `FIRST_ORDERED_NODE_TYPE`
 
-<p>The <code>XPathResult</code> object returned is only the first found node that matched the XPath expression. This can be accessed through the <code>singleNodeValue</code> property of the <code>XPathResult</code> object. This will be <code>null</code> if the node set is empty.</p>
+The `XPathResult` object returned is only the first found node that matched the XPath expression. This can be accessed through the `singleNodeValue` property of the `XPathResult` object. This will be `null` if the node set is empty.
 
-<p>Note that, for the unordered subtype the single node returned might not be the first in document order, but for the ordered subtype you are guaranteed to get the first matched node in the document order.</p>
+Note that, for the unordered subtype the single node returned might not be the first in document order, but for the ordered subtype you are guaranteed to get the first matched node in the document order.
 
-<h6 id="First_Node_Example" name="First_Node_Example">First Node Example</h6>
+###### First Node Example
 
-<pre class="brush: js">var firstPhoneNumber = document.evaluate('//phoneNumber', documentNode, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
+```js
+var firstPhoneNumber = document.evaluate('//phoneNumber', documentNode, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
 
 dump( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.textContent );
-</pre>
+```
 
-<h4 id="The_ANY_TYPE_Constant" name="The_ANY_TYPE_Constant">The ANY_TYPE Constant</h4>
+#### The ANY_TYPE Constant
 
-<p>When the result type in the <code>resultType</code> parameter is specified as <code>ANY_TYPE</code>, the <code>XPathResult</code> object returned, will be whatever type that naturally results from the evaluation of the expression.</p>
+When the result type in the `resultType` parameter is specified as `ANY_TYPE`, the `XPathResult` object returned, will be whatever type that naturally results from the evaluation of the expression.
 
-<p>It could be any of the simple types (<code>NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE</code>), <strong>but</strong>, if the returned result type is a node-set then it will <strong>only</strong> be an <code>UNORDERED_NODE_ITERATOR_TYPE</code>.</p>
+It could be any of the simple types (`NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE`), **but**, if the returned result type is a node-set then it will **only** be an `UNORDERED_NODE_ITERATOR_TYPE`.
 
-<p>To determine that type after evaluation, we use the <code>resultType</code> property of the <code>XPathResult</code> object. The <a href="#XPathResult_Defined_Constants">constant</a> values of this property are defined in the appendix. <span class="comment">None Yet =====Any_Type Example===== &lt;pre&gt; &lt;/pre&gt;</span></p>
+To determine that type after evaluation, we use the `resultType` property of the `XPathResult` object. The [constant](#XPathResult_Defined_Constants) values of this property are defined in the appendix. None Yet =====Any_Type Example===== \<pre> \</pre>
 
-<h2 id="Examples" name="Examples">Examples</h2>
+## Examples
 
-<h3 id="Within_an_HTML_Document" name="Within_an_HTML_Document">Within an HTML Document</h3>
+### Within an HTML Document
 
-<p>The following code is intended to be placed in any JavaScript fragment within or linked to the HTML document against which the XPath expression is to be evaluated.</p>
+The following code is intended to be placed in any JavaScript fragment within or linked to the HTML document against which the XPath expression is to be evaluated.
 
-<p>To extract all the <code>&lt;h2&gt;</code> heading elements in an HTML document using XPath, the <code>xpathExpression</code> is simply '<code>//h2</code>'. Where, <code>//</code> is the Recursive Descent Operator that matches elements with the nodeName <code>h2</code> anywhere in the document tree. The full code for this is: <span class="comment">link to introductory xpath doc</span></p>
+To extract all the `<h2>` heading elements in an HTML document using XPath, the `xpathExpression` is simply '`//h2`'. Where, `//` is the Recursive Descent Operator that matches elements with the nodeName `h2` anywhere in the document tree. The full code for this is: link to introductory xpath doc
 
-<pre class="brush: js">var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null );
-</pre>
+```js
+var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null );
+```
 
-<p>Notice that, since HTML does not have namespaces, we have passed <code>null</code> for the <code>namespaceResolver</code> parameter.</p>
+Notice that, since HTML does not have namespaces, we have passed `null` for the `namespaceResolver` parameter.
 
-<p>Since we wish to search over the entire document for the headings, we have used the <a href="/en/DOM/document" title="en/DOM/document">document</a> object itself as the <code>contextNode</code>.</p>
+Since we wish to search over the entire document for the headings, we have used the [document](/en/DOM/document "en/DOM/document") object itself as the `contextNode`.
 
-<p>The result of this expression is an <code>XPathResult</code> object. If we wish to know the type of result returned, we may evaluate the <code>resultType</code> property of the returned object. In this case, that will evaluate to <code>4</code>, an <code>UNORDERED_NODE_ITERATOR_TYPE</code>. This is the default return type when the result of the XPath expression is a node set. It provides access to a single node at a time and may not return nodes in a particular order. To access the returned nodes, we use the <code>iterateNext()</code> method of the returned object:</p>
+The result of this expression is an `XPathResult` object. If we wish to know the type of result returned, we may evaluate the `resultType` property of the returned object. In this case, that will evaluate to `4`, an `UNORDERED_NODE_ITERATOR_TYPE`. This is the default return type when the result of the XPath expression is a node set. It provides access to a single node at a time and may not return nodes in a particular order. To access the returned nodes, we use the `iterateNext()` method of the returned object:
 
-<pre class="brush: js">var thisHeading = headings.iterateNext();
+```js
+var thisHeading = headings.iterateNext();
 
 var alertText = 'Level 2 headings in this document are:\n'
 
@@ -214,34 +211,36 @@ while (thisHeading) {
   alertText += thisHeading.textContent + '\n';
   thisHeading = headings.iterateNext();
 }
-</pre>
+```
 
-<p>Once we iterate to a node, we have access to all the standard DOM interfaces on that node. After iterating through all the <code>h2</code> elements returned from our expression, any further calls to <code>iterateNext()</code> will return <code>null</code>.</p>
+Once we iterate to a node, we have access to all the standard DOM interfaces on that node. After iterating through all the `h2` elements returned from our expression, any further calls to `iterateNext()` will return `null`.
 
-<h3 id="Evaluating_against_an_XML_document_within_an_Extension" name="Evaluating_against_an_XML_document_within_an_Extension">Evaluating against an XML document within an Extension</h3>
+### Evaluating against an XML document within an Extension
 
-<p>The following uses an XML document located at <span class="nowiki">chrome://yourextension/content/peopleDB.xml</span> as an example.</p>
+The following uses an XML document located at chrome://yourextension/content/peopleDB.xml as an example.
 
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" &gt;
-  &lt;person&gt;
-	&lt;name first="george" last="bush" /&gt;
-	&lt;address street="1600 pennsylvania avenue" city="washington" country="usa"/&gt;
-	&lt;phoneNumber&gt;202-456-1111&lt;/phoneNumber&gt;
-  &lt;/person&gt;
-  &lt;person&gt;
-	&lt;name first="tony" last="blair" /&gt;
-	&lt;address street="10 downing street" city="london" country="uk"/&gt;
-	&lt;phoneNumber&gt;020 7925 0918&lt;/phoneNumber&gt;
-  &lt;/person&gt;
-&lt;/people&gt;
-</pre>
+```xml
+<?xml version="1.0"?>
+<people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
+  <person>
+	<name first="george" last="bush" />
+	<address street="1600 pennsylvania avenue" city="washington" country="usa"/>
+	<phoneNumber>202-456-1111</phoneNumber>
+  </person>
+  <person>
+	<name first="tony" last="blair" />
+	<address street="10 downing street" city="london" country="uk"/>
+	<phoneNumber>020 7925 0918</phoneNumber>
+  </person>
+</people>
+```
 
-<p>To make the contents of the XML document available within the extension, we create an <code><a href="/en/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a></code> object to load the document synchronously, the variable <code>xmlDoc</code> will contain the document as an <code><a href="/en/XMLDocument" title="en/XMLDocument">XMLDocument</a></code> object against which we can use the <code>evaluate</code> method</p>
+To make the contents of the XML document available within the extension, we create an [`XMLHttpRequest`](/en/XMLHttpRequest "en/XMLHttpRequest") object to load the document synchronously, the variable `xmlDoc` will contain the document as an [`XMLDocument`](/en/XMLDocument "en/XMLDocument") object against which we can use the `evaluate` method
 
-<p>JavaScript used in the extensions xul/js documents.</p>
+JavaScript used in the extensions xul/js documents.
 
-<pre class="brush: js">var req = new XMLHttpRequest();
+```js
+var req = new XMLHttpRequest();
 
 req.open("GET", "chrome://yourextension/content/peopleDB.xml", false);
 req.send(null);
@@ -251,167 +250,118 @@ var xmlDoc = req.responseXML;
 var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
 
 var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
-</pre>
+```
 
-<h3 id="Note">Note</h3>
+### Note
 
-<p>When the XPathResult object is not defined, the constants can be retreived in privileged code using <code>Components.interfaces.nsIDOMXPathResult.ANY_TYPE</code> (<code>CI.nsIDOMXPathResult</code>). Similarly, an XPathEvaluator can be created using:</p>
+When the XPathResult object is not defined, the constants can be retreived in privileged code using `Components.interfaces.nsIDOMXPathResult.ANY_TYPE` (`CI.nsIDOMXPathResult`). Similarly, an XPathEvaluator can be created using:
 
-<pre class="brush: js">Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Components.interfaces.nsIDOMXPathEvaluator)</pre>
+```js
+Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Components.interfaces.nsIDOMXPathEvaluator)
+```
 
-<h2 id="Appendix" name="Appendix">Appendix</h2>
+## Appendix
 
-<h4 id="Implementing_a_User_Defined_Namespace_Resolver" name="Implementing_a_User_Defined_Namespace_Resolver">Implementing a User Defined Namespace Resolver</h4>
+#### Implementing a User Defined Namespace Resolver
 
-<p>This is an example for illustration only. This function will need to take namespace prefixes from the <code>xpathExpression</code> and return the URI that corresponds to that prefix. For example, the expression:</p>
+This is an example for illustration only. This function will need to take namespace prefixes from the `xpathExpression` and return the URI that corresponds to that prefix. For example, the expression:
 
-<pre>'//xhtml:td/mathml:math'
-</pre>
+```
+'//xhtml:td/mathml:math'
+```
 
-<p>will select all <a href="/en/MathML" title="en/MathML">MathML</a> expressions that are the children of (X)HTML table data cell elements.</p>
+will select all [MathML](/en/MathML "en/MathML") expressions that are the children of (X)HTML table data cell elements.
 
-<p>In order to associate the '<code>mathml:</code>' prefix with the namespace URI '<code><span class="nowiki">http://www.w3.org/1998/Math/MathML</span></code>' and '<code>xhtml:</code>' with the URI '<code><span class="nowiki">http://www.w3.org/1999/xhtml</span></code>' we provide a function:</p>
+In order to associate the '`mathml:`' prefix with the namespace URI '`http://www.w3.org/1998/Math/MathML`' and '`xhtml:`' with the URI '`http://www.w3.org/1999/xhtml`' we provide a function:
 
-<pre class="brush: js">function nsResolver(prefix) {
+```js
+function nsResolver(prefix) {
   var ns = {
     'xhtml' : 'http://www.w3.org/1999/xhtml',
     'mathml': 'http://www.w3.org/1998/Math/MathML'
   };
   return ns[prefix] || null;
 }
-</pre>
+```
 
-<p>Our call to <code>document.evaluate</code> would then looks like:</p>
+Our call to `document.evaluate` would then looks like:
 
-<pre class="brush: js">document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null );
-</pre>
+```js
+document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null );
+```
 
-<h4 id="Implementing_a_default_namespace_for_XML_documents" name="Implementing_a_default_namespace_for_XML_documents">Implementing a default namespace for XML documents</h4>
+#### Implementing a default namespace for XML documents
 
-<p>As noted in the <a href="#Implementing_a_Default_Namespace_Resolver">Implementing a Default Namespace Resolver</a> previously, the default resolver does not handle the default namespace for XML documents. For example with this document:</p>
+As noted in the [Implementing a Default Namespace Resolver](#Implementing_a_Default_Namespace_Resolver) previously, the default resolver does not handle the default namespace for XML documents. For example with this document:
 
-<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;feed xmlns="http://www.w3.org/2005/Atom"&gt;
-    &lt;entry /&gt;
-    &lt;entry /&gt;
-    &lt;entry /&gt;
-&lt;/feed&gt;
-</pre>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <entry />
+    <entry />
+    <entry />
+</feed>
+```
 
-<p><code>doc.evaluate('//entry', doc, nsResolver, XPathResult.ANY_TYPE, null)</code> will return an empty set, where <code>nsResolver</code> is the resolver returned by <code>createNSResolver</code>. Passing a <code>null</code> resolver doesn't work any better, either.</p>
+`doc.evaluate('//entry', doc, nsResolver, XPathResult.ANY_TYPE, null)` will return an empty set, where `nsResolver` is the resolver returned by `createNSResolver`. Passing a `null` resolver doesn't work any better, either.
 
-<p>One possible workaround is to create a custom resolver that returns the correct default namespace (the Atom namespace in this case). Note that you still have to use some namespace prefix in your XPath expression, so that the resolver function will be able to change it to your required namespace. E.g.:</p>
+One possible workaround is to create a custom resolver that returns the correct default namespace (the Atom namespace in this case). Note that you still have to use some namespace prefix in your XPath expression, so that the resolver function will be able to change it to your required namespace. E.g.:
 
-<pre class="brush: js">function resolver() {
+```js
+function resolver() {
     return 'http://www.w3.org/2005/Atom';
 }
 doc.evaluate('//myns:entry', doc, resolver, XPathResult.ANY_TYPE, null)
-</pre>
+```
 
-<p>Note that a more complex resolver will be required if the document uses multiple namespaces.</p>
+Note that a more complex resolver will be required if the document uses multiple namespaces.
 
-<p>An approach which might work better (and allow namespaces not to be known ahead of time) is described in the next section.</p>
+An approach which might work better (and allow namespaces not to be known ahead of time) is described in the next section.
 
-<h4 id="Using_XPath_functions_to_reference_elements_with_a_default_namespace" name="Using_XPath_functions_to_reference_elements_with_a_default_namespace">Using XPath functions to reference elements with a default namespace</h4>
+#### Using XPath functions to reference elements with a default namespace
 
-<p>Another approach to match default elements in a non-null namespace (and one which works well for dynamic XPath expressions where the namespaces might not be known), involves referring to a particular element using a form such as <code>[namespace-uri()='<span class="nowiki">http://www.w3.org/1999/xhtml</span>' and name()='p' and @id='_myid']</code>. This circumvents the problem of an XPath query not being able to detect the default namespace on a regularly labeled element.</p>
+Another approach to match default elements in a non-null namespace (and one which works well for dynamic XPath expressions where the namespaces might not be known), involves referring to a particular element using a form such as `[namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']`. This circumvents the problem of an XPath query not being able to detect the default namespace on a regularly labeled element.
 
-<h4 id="Getting_specifically_namespaced_elements_and_attributes_regardless_of_prefix" name="Getting_specifically_namespaced_elements_and_attributes_regardless_of_prefix">Getting specifically namespaced elements and attributes regardless of prefix</h4>
+#### Getting specifically namespaced elements and attributes regardless of prefix
 
-<p>If one wishes to provide flexibility in namespaces (as they are intended) by not necessarily requiring a particular prefix to be used when finding a namespaced element or attribute, one must use special techniques.</p>
+If one wishes to provide flexibility in namespaces (as they are intended) by not necessarily requiring a particular prefix to be used when finding a namespaced element or attribute, one must use special techniques.
 
-<p>While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using <code><a href="/en/XPath/Functions/local-name" title="en/XPath/Functions/local-name">local-name()</a></code> in combination with <code><a href="/en/XPath/Functions/namespace-uri" title="en/XPath/Functions/namespace-uri">namespace-uri()</a></code> instead of <code><a href="/en/XPath/Functions/name" title="en/XPath/Functions/name">name()</a></code>), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).</p>
+While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using [`local-name()`](/en/XPath/Functions/local-name "en/XPath/Functions/local-name") in combination with [`namespace-uri()`](/en/XPath/Functions/namespace-uri "en/XPath/Functions/namespace-uri") instead of [`name()`](/en/XPath/Functions/name "en/XPath/Functions/name")), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).
 
-<p>For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: <code>var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='<span class="nowiki">http://www.w3.org/1999/xlink</span>'];</code></p>
+For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
-<p>This could inadvertently grab some elements if one of its attributes existed that had a local name of "<code>href</code>", but it was a different attribute which had the targeted (XLink) namespace (instead of <code><a href="/en/XPath/Axes/attribute" title="en/XPath/Axes/attribute">@href</a></code>).</p>
+This could inadvertently grab some elements if one of its attributes existed that had a local name of "`href`", but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en/XPath/Axes/attribute "en/XPath/Axes/attribute")).
 
-<p>In order to accurately grab elements with the XLink <code>@href</code> attribute (without also being confined to predefined prefixes in a namespace resolver), one could obtain them as follows:</p>
+In order to accurately grab elements with the XLink `@href` attribute (without also being confined to predefined prefixes in a namespace resolver), one could obtain them as follows:
 
-<pre class="brush: js">var xpathEls = 'someElements[@*[local-name() = "href" and namespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Grabs elements with any single attribute that has both the local name 'href' and the XLink namespace
+```js
+var xpathEls = 'someElements[@*[local-name() = "href" and namespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Grabs elements with any single attribute that has both the local name 'href' and the XLink namespace
 var thislevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
 var thisitemEl = thislevel.iterateNext();
-</pre>
+```
 
-<h4 id="XPathResult_Defined_Constants" name="XPathResult_Defined_Constants">XPathResult Defined Constants</h4>
+#### XPathResult Defined Constants
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <td class="header">Result Type Defined Constant</td>
-   <td class="header">Value</td>
-   <td class="header">Description</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>ANY_TYPE</td>
-   <td>0</td>
-   <td>A result set containing whatever type naturally results from evaluation of the expression. Note that if the result is a node-set then UNORDERED_NODE_ITERATOR_TYPE is always the resulting type.</td>
-  </tr>
-  <tr>
-   <td>NUMBER_TYPE</td>
-   <td>1</td>
-   <td>A result containing a single number. This is useful for example, in an XPath expression using the <code>count()</code> function.</td>
-  </tr>
-  <tr>
-   <td>STRING_TYPE</td>
-   <td>2</td>
-   <td>A result containing a single string.</td>
-  </tr>
-  <tr>
-   <td>BOOLEAN_TYPE</td>
-   <td>3</td>
-   <td>A result containing a single boolean value. This is useful for example, in an XPath expression using the <code>not()</code> function.</td>
-  </tr>
-  <tr>
-   <td>UNORDERED_NODE_ITERATOR_TYPE</td>
-   <td>4</td>
-   <td>A result node-set containing all the nodes matching the expression. The nodes may not necessarily be in the same order that they appear in the document.</td>
-  </tr>
-  <tr>
-   <td>ORDERED_NODE_ITERATOR_TYPE</td>
-   <td>5</td>
-   <td>A result node-set containing all the nodes matching the expression. The nodes in the result set are in the same order that they appear in the document.</td>
-  </tr>
-  <tr>
-   <td>UNORDERED_NODE_SNAPSHOT_TYPE</td>
-   <td>6</td>
-   <td>A result node-set containing snapshots of all the nodes matching the expression. The nodes may not necessarily be in the same order that they appear in the document.</td>
-  </tr>
-  <tr>
-   <td>ORDERED_NODE_SNAPSHOT_TYPE</td>
-   <td>7</td>
-   <td>A result node-set containing snapshots of all the nodes matching the expression. The nodes in the result set are in the same order that they appear in the document.</td>
-  </tr>
-  <tr>
-   <td>ANY_UNORDERED_NODE_TYPE</td>
-   <td>8</td>
-   <td>A result node-set containing any single node that matches the expression. The node is not necessarily the first node in the document that matches the expression.</td>
-  </tr>
-  <tr>
-   <td>FIRST_ORDERED_NODE_TYPE</td>
-   <td>9</td>
-   <td>A result node-set containing the first node in the document that matches the expression.</td>
-  </tr>
- </tbody>
-</table>
+| Result Type Defined Constant | Value | Description                                                                                                                                                                                      |
+| ---------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ANY_TYPE                     | 0     | A result set containing whatever type naturally results from evaluation of the expression. Note that if the result is a node-set then UNORDERED_NODE_ITERATOR_TYPE is always the resulting type. |
+| NUMBER_TYPE                  | 1     | A result containing a single number. This is useful for example, in an XPath expression using the `count()` function.                                                                            |
+| STRING_TYPE                  | 2     | A result containing a single string.                                                                                                                                                             |
+| BOOLEAN_TYPE                 | 3     | A result containing a single boolean value. This is useful for example, in an XPath expression using the `not()` function.                                                                       |
+| UNORDERED_NODE_ITERATOR_TYPE | 4     | A result node-set containing all the nodes matching the expression. The nodes may not necessarily be in the same order that they appear in the document.                                         |
+| ORDERED_NODE_ITERATOR_TYPE   | 5     | A result node-set containing all the nodes matching the expression. The nodes in the result set are in the same order that they appear in the document.                                          |
+| UNORDERED_NODE_SNAPSHOT_TYPE | 6     | A result node-set containing snapshots of all the nodes matching the expression. The nodes may not necessarily be in the same order that they appear in the document.                            |
+| ORDERED_NODE_SNAPSHOT_TYPE   | 7     | A result node-set containing snapshots of all the nodes matching the expression. The nodes in the result set are in the same order that they appear in the document.                             |
+| ANY_UNORDERED_NODE_TYPE      | 8     | A result node-set containing any single node that matches the expression. The node is not necessarily the first node in the document that matches the expression.                                |
+| FIRST_ORDERED_NODE_TYPE      | 9     | A result node-set containing the first node in the document that matches the expression.                                                                                                         |
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en/Using_XPath" title="en/Using_XPath">Using XPath</a></li>
-</ul>
+- [Using XPath](/en/Using_XPath "en/Using_XPath")
 
-<div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+## Original Document Information
 
-<ul>
- <li>Based Upon Original Document <a class="external" href="http://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html">Mozilla XPath Tutorial</a></li>
- <li>Original Source Author: James Graham.</li>
- <li>Other Contributors: James Thompson.</li>
- <li>Last Updated Date: 2006-3-25.</li>
-</ul>
-</div>
-
-<p> </p>
+- Based Upon Original Document [Mozilla XPath Tutorial](http://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html)
+- Original Source Author: James Graham.
+- Other Contributors: James Thompson.
+- Last Updated Date: 2006-3-25.
