@@ -52,7 +52,7 @@ const arr = [1, 2, 3];
 const max = arr.reduce((a, b) => Math.max(a, b), -Infinity);
 ```
 
-下面的方法使用 {{jsxref(" function .prototype.apply()")}} 来获取数组的最大值。`getMaxOfArray([1, 2, 3])` 相当于 `Math.max(1, 2, 3)`，但是你可以使用 `getMaxOfArray()` 作用于任意长度的数组上。这应该只用于元素相对较少的数组。
+下面的方法使用 {{jsxref("Function.prototype.apply()")}} 来获取数组的最大值。`getMaxOfArray([1, 2, 3])` 相当于 `Math.max(1, 2, 3)`，但是你可以使用 `getMaxOfArray()` 作用于任意长度的数组上。这应该只用于元素相对较少的数组。
 
 ```js
 function getMaxOfArray(numArray) {
