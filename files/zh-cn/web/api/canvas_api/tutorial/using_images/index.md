@@ -19,7 +19,7 @@ canvas 更有意思的一项特性就是图像操作能力。可以用于动态�
 canvas 的 API 可以使用下面这些类型中的一种作为图片的源：
 
 - **{{domxref("HTMLImageElement")}}**
-  - : 这些图片是由`Image()函数构造出来的，或者任何的{{HTMLElement("img")}}元素`
+  - : 这些图片是由`Image() 函数构造出来的，或者任何的{{HTMLElement("img")}}元素`
 - **{{domxref("HTMLVideoElement")}}**
   - : 用一个 HTML 的 {{HTMLElement("video")}}元素作为你的图片源，可以从视频中抓取当前帧作为一个图像
 - **{{domxref("HTMLCanvasElement")}}**

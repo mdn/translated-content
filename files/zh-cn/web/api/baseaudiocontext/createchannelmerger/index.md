@@ -5,7 +5,7 @@ slug: Web/API/BaseAudioContext/createChannelMerger
 
 {{ APIRef("Web Audio API") }}
 
-AudioContext.`createChannelMerger()方法，会创建一个`ChannelMergerNode，后者可以把多个音频流的通道整合到一个音频流。
+AudioContext.`createChannelMerger() 方法，会创建一个`ChannelMergerNode，后者可以把多个音频流的通道整合到一个音频流。
 
 ## 语法
 
