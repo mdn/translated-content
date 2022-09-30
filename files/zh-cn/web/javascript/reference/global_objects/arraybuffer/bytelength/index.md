@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 
 {{JSRef}}
 
-`byteLength 访问器属性`表示一个{{jsxref("ArrayBuffer")}} 对象的字节长度。
+`byteLength` 访问器属性表示一个 {{jsxref("ArrayBuffer")}} 对象的字节长度。
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}
 
