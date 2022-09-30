@@ -5,7 +5,7 @@ slug: Web/API/BaseAudioContext/currentTime
 
 {{ APIRef("Web Audio API") }}
 
-`currentTime` 是 {{ domxref("AudioContext") }} 的一个 `read-only` 属性，返回`double 秒（从 0 开始）表示一个只增不减的硬件时间戳，可以用来控制音频回放，实现可视化时间轴等等。
+`currentTime` 是 {{ domxref("AudioContext") }} 的一个 `read-only` 属性，返回`double` 秒（从 0 开始）表示一个只增不减的硬件时间戳，可以用来控制音频回放，实现可视化时间轴等等。
 
 ## 语法
 
