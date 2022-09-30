@@ -20,7 +20,7 @@ var mediaStreamTracks[] = mediaStream.getVideoTracks();
 
 {{domxref("MediaStreamTrack")}} オブジェクトの配列で、それぞれがメディアストリームに含まれるそれぞれの動画トラックを表します。動画トラックは {{domxref("MediaStreamTrack.kind", "kind")}} プロパティが `video` であるトラックです。ストリームに動画トラックが含まれていない場合、配列は空となります。
 
-> **Note:** トラックの順序は仕様で定義されておらず、 `getVideoTracks()` の呼び出しごとに同じ順序になるとは限りません。
+> **メモ:** トラックの順序は仕様で定義されておらず、 `getVideoTracks()` の呼び出しごとに同じ順序になるとは限りません。
 
 この API の初期の版では、特別な `VideoStreamTrack` インターフェイスがあり、動画ストリームのリストに含まれる各項目の型として使用されていましたが、これはその後でメインの {{domxref("MediaStreamTrack")}} インターフェイスに統合されました。
 

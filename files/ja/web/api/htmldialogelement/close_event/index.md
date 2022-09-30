@@ -10,7 +10,7 @@ original_slug: Web/API/GlobalEventHandlers/onclose
 
 `close` イベントは、ユーザーが `<dialog>` を閉じたときに発生します。
 
-> **Note:** ウィンドウのクローズを処理するには、{{domxref("WindowEventHandlers.onbeforeunload", "onbeforeunload")}} または {{domxref("WindowEventHandlers.onunload", "onunload")}} を使用します。
+> **メモ:** ウィンドウのクローズを処理するには、{{domxref("WindowEventHandlers.onbeforeunload", "onbeforeunload")}} または {{domxref("WindowEventHandlers.onunload", "onunload")}} を使用します。
 
 ## 構文
 

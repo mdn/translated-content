@@ -19,7 +19,7 @@ slug: Web/API/NDEFRecord
   - : このレコードの {{Glossary("MIME type", "MIME タイプ")}}です。この値は `recordType` が `"mime"` と等しくない場合は `null` になります。
 - {{DOMxRef("NDEFRecord.id")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : レコード識別子、レコードを識別するために使用される絶対または相対 URL を返します。
-    > **Note:** 識別子の一意性は、レコードの生成者によってのみ強制されます。
+    > **メモ:** 識別子の一意性は、レコードの生成者によってのみ強制されます。
 - {{DOMxRef("NDEFRecord.data")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : このレコードのペイロードの生のバイト列が入った {{jsxref("DataView")}} を返します。
 - {{DOMxRef("NDEFRecord.encoding")}} {{Experimental_Inline}} {{ReadOnlyInline}}

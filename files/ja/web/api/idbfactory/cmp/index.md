@@ -6,7 +6,7 @@ slug: Web/API/IDBFactory/cmp
 
 {{domxref("IDBFactory")}}インターフェイスの`cmp()`メソッドは、2 つのキーが等価か決定するために比較し、そして、IndexedDB で保存や統合のような操作を命令します。
 
-> **Note:** Do not use this method for comparing arbitrary JavaScript values, because many JavaScript values are either not valid IndexedDB keys (booleans and objects, for example) or are treated as equivalent IndexedDB keys (for example, since IndexedDB ignores arrays with non-numeric properties and treats them as empty arrays, so any non-numeric arrays are treated as equivalent). This throws an exception if either of the values is not a valid key.
+> **メモ:** Do not use this method for comparing arbitrary JavaScript values, because many JavaScript values are either not valid IndexedDB keys (booleans and objects, for example) or are treated as equivalent IndexedDB keys (for example, since IndexedDB ignores arrays with non-numeric properties and treats them as empty arrays, so any non-numeric arrays are treated as equivalent). This throws an exception if either of the values is not a valid key.
 
 ## 構文
 

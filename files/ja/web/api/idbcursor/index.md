@@ -42,7 +42,7 @@ slug: Web/API/IDBCursor
 
 {{ deprecated_header(13) }}
 
-> **Warning:** これらの constants は利用できません — Gecko 25 で削除されました。代わりに直接 string constants を使う必要があります。({{ bug(891944) }})
+> **警告:** これらの constants は利用できません — Gecko 25 で削除されました。代わりに直接 string constants を使う必要があります。({{ bug(891944) }})
 
 - `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
 - `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.

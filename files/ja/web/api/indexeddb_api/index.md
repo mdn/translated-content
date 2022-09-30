@@ -8,7 +8,7 @@ IndexedDB は、ファイルや blob を含む大量の構造化データをク�
 
 {{AvailableInWorkers}}
 
-> **Note:**  IndexedDB API は強力ですが、シンプルな用途にはとても複雑に見えるかもしれません。シンプルな API が好ましいのであれば、[関連情報](#see_also)の節にある IndexedDB をプログラマーにとって扱いやすくするライブラリーを試してみてください。
+> **メモ:** IndexedDB API は強力ですが、シンプルな用途にはとても複雑に見えるかもしれません。シンプルな API が好ましいのであれば、[関連情報](#see_also)の節にある IndexedDB をプログラマーにとって扱いやすくするライブラリーを試してみてください。
 
 ## 主要概念と使用法
 
@@ -18,7 +18,7 @@ IndexedDB は SQL ベースの RDBMS に似たトランザクショナルデー�
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)のガイドで、で、非同期的に IndexedDB を使用する方法を基本原理から学びます。
 - データをオフラインで保存するための IndexedDB と、資産をオフラインで保存するためのサービスワーカーを組み合わせる方法は、 [サービスワーカーにより PWA をオフラインで動作させる](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)で概説しています。
 
-> **Note:**  たいていのウェブストレージ技術と同様に、IndexedDB も[同一オリジンポリシー](https://www.w3.org/Security/wiki/Same_Origin_Policy)に従います。よって、保存済みデータは同一ドメイン内からアクセスできますが、異なるドメインにまたがってデータへアクセスすることはできません。
+> **メモ:** たいていのウェブストレージ技術と同様に、IndexedDB も[同一オリジンポリシー](https://www.w3.org/Security/wiki/Same_Origin_Policy)に従います。よって、保存済みデータは同一ドメイン内からアクセスできますが、異なるドメインにまたがってデータへアクセスすることはできません。
 
 ### 同期と非同期
 

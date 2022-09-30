@@ -86,7 +86,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 
 ここでは、一致を見つける必要のある制約可能なプロパティ（`width`、`height`、`frameRate`、`facingMode`）がサポートされていることを確認した後、幅は 640 以上 1920 以下（できれば 1920）、高さは 400 以上（理想的には 1080）、アスペクト比は 16：9（1.777777778）、フレームレートは 30 フレーム/秒以下を要求する制約を設定します。 さらに、唯一の許容可能な入力デバイスは、ユーザーに面したカメラ（自撮りカメラ）です。 `width`、`height`、`frameRate`、または `facingMode` の制約が満たされない場合、`applyConstraints()` によって返された promise は拒否されます。
 
-> **Note:** `max`、`min`、`exact` のいずれかまたはすべてを使用して指定された制約は、常に必須として扱われます。 `applyConstraints()` を呼び出して、使用する制約を 1 つ以上を満たすことができない場合、promise は拒否されます。
+> **メモ:** `max`、`min`、`exact` のいずれかまたはすべてを使用して指定された制約は、常に必須として扱われます。 `applyConstraints()` を呼び出して、使用する制約を 1 つ以上を満たすことができない場合、promise は拒否されます。
 
 ### 高度な制約
 
@@ -96,7 +96,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 
 {{domxref("MediaStreamTrack.getCapabilities()")}} を呼び出して、サポートしているすべての能力と、そのそれぞれが現在のプラットフォームとユーザーエージェントで受け入れられる値または値の範囲のリストを取得できます。 この関数は、ブラウザーがサポートしている各制約可能なプロパティと、それらのプロパティのそれぞれがサポートしている値または値の範囲をリストする {{domxref("MediaTrackCapabilities")}} オブジェクトを返します。
 
-> **Note:** `getCapabilities()` は、まだすべての主要なブラウザーで実装されていません。 とりあえず、あなたは必要なものを手に入れようとする必要があり、もしそれができなければ、その時点で何をすべきかを決定します。 例えば、{{bug(1179084)}} を参照してください。
+> **メモ:** `getCapabilities()` は、まだすべての主要なブラウザーで実装されていません。 とりあえず、あなたは必要なものを手に入れようとする必要があり、もしそれができなければ、その時点で何をすべきかを決定します。 例えば、{{bug(1179084)}} を参照してください。
 
 ## 制約の適用
 
@@ -120,7 +120,7 @@ navigator.mediaDevices.getUserMedia({
 
 この例では、`getUserMedia()` の時点で制約が適用され、動画のためのフォールバックを備えた理想的なオプションのセットが要求されます。
 
-> **Note:** 1 つ以上のメディア入力デバイス ID を指定して、入力ソースが許可される制限を設定できます。 利用可能なデバイスのリストを収集するには、{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} を呼び出してから、目的の条件を満たす各デバイスに対して、その `deviceId` を `MediaConstraints` オブジェクトに追加して、最終的に `getUserMedia()` に渡します。
+> **メモ:** 1 つ以上のメディア入力デバイス ID を指定して、入力ソースが許可される制限を設定できます。 利用可能なデバイスのリストを収集するには、{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} を呼び出してから、目的の条件を満たす各デバイスに対して、その `deviceId` を `MediaConstraints` オブジェクトに追加して、最終的に `getUserMedia()` に渡します。
 
 次のようにトラックの {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} メソッドを呼び出し、トラックに適用する制約を表すオブジェクトを渡すことで、既存の {{domxref("MediaStreamTrack")}} の制約を臨機応変に変更することもできます。
 
@@ -486,7 +486,7 @@ audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 
 パズルの最後の重要な部分: ユーザーの参照用に、ブラウザーがサポートする制約可能なプロパティのリストを表示するコード。 各プロパティは、ユーザーの利便性のために MDN のドキュメントへのリンクです。 このコードの動作の詳細については、[`MediaDevices.getSupportedConstraints()` の例](/ja/docs/Web/API/MediaDevices/getSupportedConstraints#Example)を参照してください。
 
-> **Note:** もちろん、このリストには非標準のプロパティが含まれている場合があります。 その場合、ドキュメントのリンクはあまり役に立たないでしょう。
+> **メモ:** もちろん、このリストには非標準のプロパティが含まれている場合があります。 その場合、ドキュメントのリンクはあまり役に立たないでしょう。
 
 ```js
 let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();

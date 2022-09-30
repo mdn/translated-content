@@ -32,7 +32,30 @@ slug: Web/API/HTMLFormElement/submit_event
 
 `submit` イベントは、ユーザーが送信ボタン ({{HtmlElement("button")}} または {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}) を押したり、 <kbd>Enter</kbd> キーをフォーム内のフィールド (例えば {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) の編集中に押したりしたときに発生します。このイベントは {{domxref("HTMLFormElement.submit()", "form.submit()")}} メソッドを呼び出した場合には送信されません。
 
-> **Note:** [フォームの検証](/ja/docs/Learn/HTML/Forms/Form_validation)に合格していないフォームを送信しようとすると、 {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントが発生します。この場合、フォーム検証が送信を阻止しますので、 `submit` イベントは発生しません。
+> **メモ:** [フォームの検証](/ja/docs/Learn/Forms/Form_validation)に合格していないフォームを送信しようとすると、 {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントが発生します。この場合、フォーム検証が送信を阻止しますので、 `submit` イベントは発生しません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
+
+```js
+addEventListener('submit', (event) => {});
+
+onsubmit = (event) => { };
+```
+
+## イベント型
+
+{{domxref("SubmitEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("SubmitEvent")}}
+
+## イベントプロパティ
+
+_以下に列挙したプロパティに加えて、このインターフェイスは親インターフェイスである {{domxref("Event")}} を継承しています。_
+
+- {{domxref("SubmitEvent.submitter", "submitter")}} {{ReadOnlyInline}}
+  - : {{domxref("HTMLElement")}} オブジェクトで、フォームの送信を起動するために関わったボタンやその他の要素を示します。
 
 ## 例
 

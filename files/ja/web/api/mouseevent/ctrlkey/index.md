@@ -6,7 +6,7 @@ slug: Web/API/MouseEvent/ctrlKey
 
 **`MouseEvent.ctrlKey`** は読み取り専用のプロパティで、このマウスイベントが発生した際に <kbd>ctrl</kbd> キーが押されていたかどうかを示す論理値です。
 
-> **Note:** Macintosh のキーボードでは、このキーは <kbd>control</kbd> キーです。
+> **メモ:** Macintosh のキーボードでは、このキーは <kbd>control</kbd> キーです。
 
 ## 値
 
