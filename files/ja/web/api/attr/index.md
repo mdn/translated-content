@@ -18,7 +18,7 @@ slug: Web/API/Attr
 | `myAttr`  | `mynamespace`  | _なし_           | `myAttr`             | `myAttr`                 |
 | `myAttr`  | `mynamespace`  | `myns`           | `myAttr`             | `myns:myAttr`            |
 
-> **Note:** このインターフェイスは、SVG、HTML、MathML のいずれかの要素である {{domxref("Element")}} のツリー表現に存在する属性のみを表します。例えば {{HTMLElement("table")}} 要素に対する {{domxref("HTMLTableElement")}} のような、その要素に関連付けられたインターフェイスの*プロパティ*を表すことはありません。（属性とそれがどのようにプロパティに*反映*されるかについての詳細は{{Glossary("Attribute", "この記事")}}を参照してください。）
+> **メモ:** このインターフェイスは、SVG、HTML、MathML のいずれかの要素である {{domxref("Element")}} のツリー表現に存在する属性のみを表します。例えば {{HTMLElement("table")}} 要素に対する {{domxref("HTMLTableElement")}} のような、その要素に関連付けられたインターフェイスの*プロパティ*を表すことはありません。（属性とそれがどのようにプロパティに*反映*されるかについての詳細は{{Glossary("Attribute", "この記事")}}を参照してください。）
 
 ## プロパティ
 

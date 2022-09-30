@@ -32,7 +32,7 @@ importNode(externalNode, deep)
 
 インポートする側の文書のスコープにコピーされた `importedNode` です。
 
-> **Note:** `importedNode` の {{domxref("Node.parentNode")}} は `null` になります。まだ文書ツリーに挿入されていないからです。
+> **メモ:** `importedNode` の {{domxref("Node.parentNode")}} は `null` になります。まだ文書ツリーに挿入されていないからです。
 
 ## 例
 
@@ -50,7 +50,7 @@ document.getElementById("container").appendChild(newNode);
 - {{domXref("document.importNode()")}} でクローンする、または
 - {{domXref("document.adoptNode()")}} で移行する
 
-> **Note:** Firefox は今のところこのルールを強制していませんが、将来の互換性を改善するために、このルールに従うことを強く推奨します。
+> **メモ:** Firefox は今のところこのルールを強制していませんが、将来の互換性を改善するために、このルールに従うことを強く推奨します。
 
 {{domXref("Node.ownerDocument")}} の問題に関して詳しくは、W3C DOM FAQ を参照してください。
 

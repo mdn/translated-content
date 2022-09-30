@@ -110,7 +110,7 @@ slug: Web/API/Event/Comparison_of_Event_Targets
 
 ### `explicitOriginalTarget` と `originalTarget` の使用
 
-> **Note:** これらのプロパティは、 Mozilla ベースのブラウザーでのみ利用可能です。
+> **メモ:** これらのプロパティは、 Mozilla ベースのブラウザーでのみ利用可能です。
 
 ### 例
 

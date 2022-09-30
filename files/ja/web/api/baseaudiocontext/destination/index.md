@@ -13,7 +13,7 @@ original_slug: Web/API/AudioContext/destination
 
 ## 例
 
-> **Note:** 完全な実装の例は、 [MDN GitHub リポジトリー](https://github.com/mdn/)の [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic) などを参照してください。
+> **メモ:** 完全な実装の例は、 [MDN GitHub リポジトリー](https://github.com/mdn/)の [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic) などを参照してください。
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;

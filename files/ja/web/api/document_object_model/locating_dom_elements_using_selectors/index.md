@@ -15,7 +15,7 @@ slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 - {{domxref("Element.querySelectorAll", "querySelectorAll()")}}
   - : ノードのサブツリー内で一致するすべての `Element` ノードを含む {{domxref("NodeList")}} を返すか、一致するものが見つからなかった場合は空の `NodeList` を返します。
 
-> **Note:** {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} が返す {{domxref("NodeList")}} はライブではありません。すなわち、 DOM で行われた変更がコレクションに反映されません。これは他の DOM クエリメソッドがライブのノードリストを返すのと異なります。
+> **メモ:** {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} が返す {{domxref("NodeList")}} はライブではありません。すなわち、 DOM で行われた変更がコレクションに反映されません。これは他の DOM クエリメソッドがライブのノードリストを返すのと異なります。
 
 例や詳細については、 {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}} メソッドの記事を参照してください。
 

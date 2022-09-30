@@ -38,11 +38,11 @@ var elements = document.getElementsByName(name);
 
 返却された {{domxref("NodeList")}} コレクションには、 {{htmlelement("meta")}} や {{htmlelement("object")}} など、それに `name` 属性にまったく対応していない要素も含め、指定された `name` を持つ*すべての*要素が含まれます。
 
-> **Warning:** **getElementsByName** メソッドは、 IE10 以前では動作が異なります。この場合、 `getElementsByName()` は指定された [`id` 属性](/ja/docs/Web/HTML/Global_attributes/id)を持つ要素も返します。 `name` および `id` で同じ文字列を使用しないように注意してください。
+> **警告:** **getElementsByName** メソッドは、 IE10 以前では動作が異なります。この場合、 `getElementsByName()` は指定された [`id` 属性](/ja/docs/Web/HTML/Global_attributes/id)を持つ要素も返します。 `name` および `id` で同じ文字列を使用しないように注意してください。
 
-> **Warning:** **getElementsByName** メソッドは IE では動作が異なります。この場合、 `getElementsByName()` は `name` 属性を許容しない要素 (`<span>` など) を返しません。
+> **警告:** **getElementsByName** メソッドは IE では動作が異なります。この場合、 `getElementsByName()` は `name` 属性を許容しない要素 (`<span>` など) を返しません。
 
-> **Warning:** IE および Edge では、 {{domxref("NodeList")}} ではなく {{domxref("HTMLCollection")}} を返します。
+> **警告:** IE および Edge では、 {{domxref("NodeList")}} ではなく {{domxref("HTMLCollection")}} を返します。
 
 ## 仕様書
 

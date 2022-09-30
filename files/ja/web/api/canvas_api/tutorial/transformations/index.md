@@ -124,7 +124,7 @@ draw();
 
 この例は、まずはキャンバスの原点で矩形を回転するために `rotate()` メソッドを使用して、次に矩形自身の中心で回転するために `translate()` の助けを借りています。
 
-> **Note:** 角度はラジアン (radians) で表しており、度数 (degrees) ではありません。これは `radians = (Math.PI/180)*degrees` のようにすると変換できます。
+> **メモ:** 角度はラジアン (radians) で表しており、度数 (degrees) ではありません。これは `radians = (Math.PI/180)*degrees` のようにすると変換できます。
 
 ```js
 function draw() {

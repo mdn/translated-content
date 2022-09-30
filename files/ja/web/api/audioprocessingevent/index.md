@@ -6,7 +6,7 @@ slug: Web/API/AudioProcessingEvent
 
 [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) の `AudioProcessingEvent` は {{domxref("ScriptProcessorNode")}} 入力バッファーが処理可能な状態になったときに発生するイベントを表します。
 
-> **Note:** 2014 年 8 月 29 日のウェブ音声 API 仕様書公開時点で、この機能は非推奨とされ、まもなく [AudioWorklet](https://webaudio.github.io/web-audio-api/#audioworklet) に置き換わる予定です。
+> **メモ:** 2014 年 8 月 29 日のウェブ音声 API 仕様書公開時点で、この機能は非推奨とされ、まもなく [AudioWorklet](https://webaudio.github.io/web-audio-api/#audioworklet) に置き換わる予定です。
 
 {{InheritanceDiagram}}
 

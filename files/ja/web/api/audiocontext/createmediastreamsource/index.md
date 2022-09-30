@@ -30,7 +30,7 @@ var source = audioCtx.createMediaStreamSource(stream);
 
 {{ htmlelement("video") }}要素の下のスライダーはローパスフィルタの増幅量を操作します—スライダーで値を大きくすると、より低音が強くなります!
 
-> **Note:** [この例の実行](http://mdn.github.io/stream-source-buffer/)と[ソースの閲覧](https://github.com/mdn/stream-source-buffer)もできます。
+> **メモ:** [この例の実行](http://mdn.github.io/stream-source-buffer/)と[ソースの閲覧](https://github.com/mdn/stream-source-buffer)もできます。
 
 ```js
 // プレフィックスが必要な場合を考慮して、getUserMediaはブラウザのバージョンごとに分ける
@@ -111,7 +111,7 @@ if (navigator.getUserMedia) {
 pre.innerHTML = myScript.innerHTML;
 ```
 
-> **Note:** `createMediaStreamSource()`の呼び出しによるメディアストリームの音声は、再び`AudioContext`の処理グラフに再び入ります。よって、ストリームの再生/停止は、まだメディア API とプレイヤーの操作で行えます。
+> **メモ:** `createMediaStreamSource()`の呼び出しによるメディアストリームの音声は、再び`AudioContext`の処理グラフに再び入ります。よって、ストリームの再生/停止は、まだメディア API とプレイヤーの操作で行えます。
 
 ## 仕様
 

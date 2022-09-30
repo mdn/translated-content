@@ -12,7 +12,7 @@ slug: Web/API/Document/selectedStyleSheetSet
 
 このプロパティに値を設定することは、 {{domxref("document.enableStyleSheetsForSet()")}} を `currentStyleSheetSet` の値で呼び出し、 `lastStyleSheetSet` の値をその値に設定することに等価です。
 
-> **Note:** この属性の値は生きています。スタイルシートの `disabled` 属性を変更すると、この属性の値に影響します。
+> **メモ:** この属性の値は生きています。スタイルシートの `disabled` 属性を変更すると、この属性の値に影響します。
 
 ## 例
 

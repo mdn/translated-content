@@ -8,7 +8,7 @@ slug: Web/API/CanvasRenderingContext2D/strokeText
 
 このメソッドは現在のパスを変更することなく、直接キャンバスに描画を行います。その後の {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} や {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} には影響を与えません。
 
-> **Note:** 輪郭線のみを描くのではなく、テキスト文字を塗りつぶすのであれば {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} メソッドを使用してください。
+> **メモ:** 輪郭線のみを描くのではなく、テキスト文字を塗りつぶすのであれば {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} メソッドを使用してください。
 
 ## 構文
 

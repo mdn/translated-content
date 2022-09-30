@@ -25,7 +25,7 @@ new CloseEvent(typeArg, closeEventInit);
     - `"code"`: オプションで既定値は `0` です。 `unsigned short` 型で、サーバーから送られる接続クローズコードです。
     - `"reason"`: オプションで既定値は `''` です。 {{domxref("DOMString")}} 型で、サーバーが接続を閉じる理由を人間が理解できる形で表したものです。
 
-    > **Note:** `CloseEventInit` 辞書は {{domxref("Event.Event", "EventInit")}} 辞書のフィールドも受け入れます。
+    > **メモ:** `CloseEventInit` 辞書は {{domxref("Event.Event", "EventInit")}} 辞書のフィールドも受け入れます。
 
 ## 仕様書
 

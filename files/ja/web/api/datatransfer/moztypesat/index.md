@@ -8,7 +8,7 @@ slug: Web/API/DataTransfer/mozTypesAt
 
 **`DataTransfer.mozTypesAt()`** メソッドは、指定された位置の項目に格納されている形式のリストを返します。位置が 0 から項目の数 - 1 を引いた範囲にない場合、空の文字列リストが返されます。
 
-> **Note:** このメソッドは Firefox 固有のものです。
+> **メモ:** このメソッドは Firefox 固有のものです。
 
 ## 構文
 

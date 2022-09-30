@@ -13,7 +13,7 @@ original_slug: Web/API/AudioContext/listener
 
 ## 例
 
-> **Note:** 完全な三次元音声空間処理の例は、 [panner-node](https://github.com/mdn/panner-node) のデモを参照してください。
+> **メモ:** 完全な三次元音声空間処理の例は、 [panner-node](https://github.com/mdn/panner-node) のデモを参照してください。
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;

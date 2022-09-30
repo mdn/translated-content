@@ -6,7 +6,7 @@ slug: Web/API/CanvasRenderingContext2D/strokeStyle
 
 **`CanvasRenderingContext2D.strokeStyle`** はキャンバス 2D API のプロパティで、図形の辺（輪郭）に使用する色、グラデーション、またはパターンを指定します。既定値は `#000` （黒色）です。
 
-> **Note:** 輪郭と塗りつぶしのスタイル例については、 [canvas チュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の [スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) をご覧ください。
+> **メモ:** 輪郭と塗りつぶしのスタイル例については、 [canvas チュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の [スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) をご覧ください。
 
 ## 構文
 

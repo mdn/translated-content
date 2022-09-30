@@ -55,7 +55,7 @@ slug: Web/API/Document/requestStorageAccess
 
 一時的または永続的なストレージアクセス許可が期限切れになると、要求側のオリジンのストレージアクセスを持つオリジンの数が1ずつ減ります。
 
-> **Note:** 要求側のオリジンが[追跡オリジン (tracking origin) として分類](/ja/docs/Web/Privacy/Storage_Access_Policy#Tracking_protection_explained)されていない場合、アクセス要求には、ページが再読み込みされると消滅する一時的なストレージアクセス許可が自動的に付与されます。 この場合、ユーザーにはプロンプトが表示されないため、`requestStorageAccess()` を呼び出しても、{{domxref("Document.hasStorageAccess()")}} によって返される値を変更する以外に副作用はありません。
+> **メモ:** 要求側のオリジンが[追跡オリジン (tracking origin) として分類](/ja/docs/Web/Privacy/Storage_Access_Policy#Tracking_protection_explained)されていない場合、アクセス要求には、ページが再読み込みされると消滅する一時的なストレージアクセス許可が自動的に付与されます。 この場合、ユーザーにはプロンプトが表示されないため、`requestStorageAccess()` を呼び出しても、{{domxref("Document.hasStorageAccess()")}} によって返される値を変更する以外に副作用はありません。
 
 ## デバッグ
 
