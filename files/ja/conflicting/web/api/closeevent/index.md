@@ -11,7 +11,7 @@ original_slug: Web/API/CloseEvent/initCloseEvent
 {{ domxref("EventTarget.dispatchEvent()") }} を使用してイベントを配信する前に、イベントを設定するために呼び出す必要があります。
 配信されると、もう何もしません。
 
-> **Note:** このメソッドは非推奨であるため、今後は使用しないでください。
+> **メモ:** このメソッドは非推奨であるため、今後は使用しないでください。
 >
 > 代わりに特定のイベントのコンストラクター、例えば {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} を使用してください。
 > [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページでは、これらの使用方法についてのより詳細な情報を提供しています。

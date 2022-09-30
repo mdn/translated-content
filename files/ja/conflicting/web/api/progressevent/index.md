@@ -9,7 +9,7 @@ original_slug: Web/API/ProgressEvent/initProgressEvent
 
 この方法で作成された `ProgressEvent` は信頼できません。
 
-> **Note:** このメソッドは標準化プロセスで削除されました。非推奨となり、ほとんどの実装から削除されました。もうこれを使用せず、標準のコンストラクター {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} を使用して、合成した {{domxref("ProgressEvent")}} を生成してください。
+> **メモ:** このメソッドは標準化プロセスで削除されました。非推奨となり、ほとんどの実装から削除されました。もうこれを使用せず、標準のコンストラクター {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} を使用して、合成した {{domxref("ProgressEvent")}} を生成してください。
 
 ## 構文
 

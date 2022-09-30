@@ -63,7 +63,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 これは実に役立ちます。教師と生徒は名前、性別、年齢のように多数の共通機能を共有しており、これらの機能を一度だけ定義すればいいので便利です。異なるクラスで、同じ機能を分けて定義することもでき、その機能の各定義は異なる名前空間に置かれます。例えば、生徒の挨拶は "Yo, I'm \[firstName]" (例：_Yo, I'm Sam) という形式とし、一方の教師の挨拶は、より形式的に_ "Hello, my name is \[Prefix] \[lastName], and I teach \[Subject]." (例：_Hello, My name is Mr Griffiths, and I teach Chemistry) のように。_
 
-> **Note:** 同じ機能を複数のオブジェクトタイプが実装する能力のことを示す用語に、**ポリモーフィズム**があります。不思議に感じているかも知れないので念のため。
+> **メモ:** 同じ機能を複数のオブジェクトタイプが実装する能力のことを示す用語に、**ポリモーフィズム**があります。不思議に感じているかも知れないので念のため。
 
 子クラスのオブジェクトインスタンスを生成しましょう。例：
 
@@ -115,7 +115,7 @@ JavaScript でコンストラクターを通じてクラスを作り、そこか
 
 コンストラクター関数は、 JavaScript 版のクラスです。それは関数に期待される全ての機能を持っていますが、何も返さないし、明示的にオブジェクトを生成しもしないという点に注意してください。基本的には、プロパティとメソッドを定義するだけです。加えて、 `this` キーワードが使われていることにも注意してください。基本、オブジェクトインスタンスの 1 つが作成されるときにはいつでも、オブジェクトの `name` プロパティはコンストラクター呼び出しに渡される name 値と等しくなり、 `greeting()` メソッドもコンストラクター呼び出しに渡される name 値を使用します。
 
-> **Note:**  通常、コンストラクター関数の名前は大文字で始まります。コードの中で、コンストラクター関数がより容易に認識されるようにするための慣習です。
+> **メモ:** 通常、コンストラクター関数の名前は大文字で始まります。コードの中で、コンストラクター関数がより容易に認識されるようにするための慣習です。
 
 では、オブジェクトを生成するために、どのようにコンストラクターを呼び出したらよいでしょうか？
 
@@ -214,7 +214,7 @@ person1.bio()
 // etc.
 ```
 
-> **Note:**  もしこの工程で何らかのトラブルがあった場合は、あなたのコードを我々のバージョン ([oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html)。[ライブサンプル](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)も) と比べてみてください。
+> **メモ:** もしこの工程で何らかのトラブルがあった場合は、あなたのコードを我々のバージョン ([oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html)。[ライブサンプル](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)も) と比べてみてください。
 
 ### さらなる練習
 
@@ -222,7 +222,7 @@ person1.bio()
 
 加えて、 `bio()` メソッドにはいくつかの問題点があります。人物が女性である、あるいは他の優先される性別分類の場合でも、その出力には常に "He" という代名詞が含まれています。また、 bio は `interests` 配列により多くのものが列挙されていても、2 つの趣味しか含みません。このクラス定義 (コンストラクター) の問題を、あなたはどのように修正することができますか？コンストラクター内に任意のコード (恐らく、いくつかの条件分岐やループが必要となるでしょう) を入れてみてください。性別や、趣味の数が 1、2、あるいは 2 よりも多いかどうかによって、文がどのように構築されるべきか考えてみてください。
 
-> **Note:** もし行き詰まってしまった場合は、[GitHub に答えとなるリポジトリ](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([ライブ](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) があります。最初はあなた自身で書いてみてください！
+> **メモ:** もし行き詰まってしまった場合は、[GitHub に答えとなるリポジトリ](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([ライブ](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) があります。最初はあなた自身で書いてみてください！
 
 ## オブジェクトインスタンスを生成する他の方法
 

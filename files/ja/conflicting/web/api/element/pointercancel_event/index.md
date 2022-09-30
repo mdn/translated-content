@@ -37,7 +37,7 @@ original_slug: Web/API/Document/pointercancel_event
 - ユーザーが突然、ポインターの入力を始めたとブラウザーが判断した場合。これが発生するのは、例えば、スタイラスを使用中に画面上で手が反応するのを防ぐために掌を除外して予期せずイベントを起動することを防ぐことに、ハードウェアが対応している場合などです。
 - CSS の {{cssxref("touch-action")}} プロパティが、入力の継続を防止している場合。
 
-> **Note:** `pointercancel` イベントの発生後、ブラウザーは {{event("pointerout")}} イベントと、続いて {{event("pointerleave")}} イベントを送信します。
+> **メモ:** `pointercancel` イベントの発生後、ブラウザーは {{event("pointerout")}} イベントと、続いて {{event("pointerleave")}} イベントを送信します。
 
 ## 例
 

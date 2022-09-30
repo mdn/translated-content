@@ -8,7 +8,7 @@ original_slug: Web/API/RTCIdentityErrorEvent
 
 **`RTCIdentityErrorEvent`** インタフェースは、通常 {{domxref("RTCPeerConnection")}} に関連付けられたアイデンティティー・プロバイダ(IdP) を示すイベントを表現します。これは、?遭遇したエラーを持ちます。{{event("idpassertionerror")}} と{{event("idpvalidationerror")}}の 2 つのイベントタイプを持ちます。
 
-> **Note:** Firefox implements this interface under the following name: `RTCPeerConnectionIdentityErrorEvent.` It is likely that it will correct this name when it will unprefix {{domxref("RTCPeerConnection")}}, once spec and implementation will have been stabilized.
+> **メモ:** Firefox implements this interface under the following name: `RTCPeerConnectionIdentityErrorEvent.` It is likely that it will correct this name when it will unprefix {{domxref("RTCPeerConnection")}}, once spec and implementation will have been stabilized.
 
 ## プロパティ
 
