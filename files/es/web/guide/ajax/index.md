@@ -61,4 +61,3 @@ Una introducción a AJAX.
 - #### Temas relacionados
   - : [HTML](es/HTML) · [XHTML](es/XHTML) · [CSS](es/CSS) · [DOM](es/DOM) · [JavaScript](es/JavaScript) · [XML](es/XML) · [XMLHttpRequest](es/XMLHttpRequest) · [XSLT](es/XSLT) · [DHTML](es/DHTML)
 
-{{ languages( { "ca": "ca/AJAX", "cs": "cs/AJAX", "en": "en/AJAX", "fr": "fr/AJAX", "it": "it/AJAX", "ja": "ja/AJAX", "ko": "ko/AJAX", "nl": "nl/AJAX", "pl": "pl/AJAX", "pt": "pt/AJAX", "ru": "ru/AJAX", "zh-cn": "cn/AJAX", "zh-tw": "zh\_tw/AJAX" } ) }}
