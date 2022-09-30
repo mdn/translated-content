@@ -3,74 +3,62 @@ title: AJAX
 slug: Web/Guide/AJAX
 translation_of: Web/Guide/AJAX
 ---
-<p> </p>
+**[Primeros Pasos](/es/docs/Web/Guide/AJAX/Getting_Started)**
+Una introducción a AJAX.
 
-<div class="callout-box"><strong><a href="/es/docs/Web/Guide/AJAX/Getting_Started">Primeros Pasos</a></strong><br>
-Una introducción a AJAX.</div>
+**JavaScript Asíncrono + XML (AJAX)** no es una tecnología por sí misma, es un término que describe un nuevo modo de utilizar conjuntamente varias tecnologías existentes. Esto incluye: [HTML](es/HTML) o [XHTML](es/XHTML), [CSS](es/CSS), [JavaScript](es/JavaScript), [DOM](es/DOM), [XML](es/XML), [XSLT](es/XSLT), y lo más importante, el objeto [XMLHttpRequest](es/XMLHttpRequest). Cuando estas tecnologías se combinan en un modelo AJAX, es posible lograr aplicaciones web capaces de actualizarse continuamente sin tener que volver a cargar la página completa. Esto crea aplicaciones más rápidas y con mejor respuesta a las acciones del usuario.
 
-<p><strong>JavaScript Asíncrono + XML (AJAX)</strong> no es una tecnología por sí misma, es un término que describe un nuevo modo de utilizar conjuntamente varias tecnologías existentes. Esto incluye: <a href="es/HTML">HTML</a> o <a href="es/XHTML">XHTML</a>, <a href="es/CSS">CSS</a>, <a href="es/JavaScript">JavaScript</a>, <a href="es/DOM">DOM</a>, <a href="es/XML">XML</a>, <a href="es/XSLT">XSLT</a>, y lo más importante, el objeto <a href="es/XMLHttpRequest">XMLHttpRequest</a>. Cuando estas tecnologías se combinan en un modelo AJAX, es posible lograr aplicaciones web capaces de actualizarse continuamente sin tener que volver a cargar la página completa. Esto crea aplicaciones más rápidas y con mejor respuesta a las acciones del usuario.</p>
+#### [Documentación](/Special:Tags?tag=AJAX&language=es "Special:Tags?tag=AJAX&language=es")
 
-    <h4 id="Documentaci.C3.B3n" name="Documentaci.C3.B3n"><a href="/Special:Tags?tag=AJAX&amp;language=es" title="Special:Tags?tag=AJAX&amp;language=es">Documentación</a></h4>
+- [Primeros pasos con AJAX](/es/docs/Web/Guide/AJAX/Getting_Started)
+  - : Este artículo te guiará por los conceptos básicos de AJAX y te proporcionará dos ejemplos prácticos para que empieces.
 
-    <dl>
-     <dt><a href="/es/docs/Web/Guide/AJAX/Getting_Started">Primeros pasos con AJAX</a></dt>
-     <dd><small>Este artículo te guiará por los conceptos básicos de AJAX y te proporcionará dos ejemplos prácticos para que empieces.</small></dd>
-    </dl>
+<!---->
 
-    <dl>
-     <dt><a class="external" href="http://www.webreference.com/programming/ajax_tech/">Técnicas Ajax Alternativas</a></dt>
-     <dd><small>La mayoría de los artículos sobre Ajax se enfocaron en utilizar XMLHttp como el medio para llevar a cabo dicha comunicación, pero las técnicas Ajax no están limitadas solo a XMLHttp. Existen otros métodos más.</small></dd>
-    </dl>
+- [Técnicas Ajax Alternativas](http://www.webreference.com/programming/ajax_tech/)
+  - : La mayoría de los artículos sobre Ajax se enfocaron en utilizar XMLHttp como el medio para llevar a cabo dicha comunicación, pero las técnicas Ajax no están limitadas solo a XMLHttp. Existen otros métodos más.
 
-    <dl>
-     <dt><a class="external" href="http://thinkcoderepeat.blogspot.com/2006/02/tutorial-de-ajax-con-php-y-json.html">Ajax con PHP, JSON y CSS</a></dt>
-     <dd><small>Con este tutorial puedes programar con AJAX utilizando PHP y JSON, un nuevo estándar más simple que XML. Programarás en AJAX, PHP y CSS de forma simple y natural.</small></dd>
-    </dl>
+<!---->
 
-    <dl>
-     <dt><a class="external" href="http://webdev20.blogspot.com/2006/02/ajax-upload-file.html">Ajax Upload File</a></dt>
-     <dd><small>Artículo en el que se explica la carga de archivos de un formulario usando AJAX y PHP, además de otros ejemplos en los que se puede visualizar la barra de progreso de la carga.</small></dd>
-    </dl>
+- [Ajax con PHP, JSON y CSS](http://thinkcoderepeat.blogspot.com/2006/02/tutorial-de-ajax-con-php-y-json.html)
+  - : Con este tutorial puedes programar con AJAX utilizando PHP y JSON, un nuevo estándar más simple que XML. Programarás en AJAX, PHP y CSS de forma simple y natural.
 
-    <dl>
-     <dt><a class="external" href="http://www.baluart.net/articulo/346/edicion-in-situ-con-ajax.php">Creando formulario editables in situ</a></dt>
-     <dd><small>Breve tutorial que nos muestra como crear nuestros formularios editables in situ con AJAX, PHP y MySQL, al estilo Flickr.</small></dd>
-    </dl>
+<!---->
 
-    <dl>
-     <dt><a class="external" href="http://thinkcoderepeat.blogspot.com/2006/08/arquitectura-cliente-servidor-con-ajax.html">Arquitectura Cliente Servidor con AJAX</a></dt>
-     <dd><small>Artículo avanzado que muestra un patrón de diseño para desarrollar con AJAX, haciendo el modelo de la aplicación como web-services, la interface (view) con HTML y el controlador (controller) en Javascript, para crear aplicaciones siguiendo el paradigma MVC. Herramientas: Prototype, JSON y CSS.</small></dd>
-    </dl>
+- [Ajax Upload File](http://webdev20.blogspot.com/2006/02/ajax-upload-file.html)
+  - : Artículo en el que se explica la carga de archivos de un formulario usando AJAX y PHP, además de otros ejemplos en los que se puede visualizar la barra de progreso de la carga.
 
-    <h4 id="Comunidad" name="Comunidad">Comunidad</h4>
+<!---->
 
-    <ul>
-     <li><a class="external" href="http://groups.google.es/group/Ajax-es?lnk=sg&amp;hl=es">Ajax-es</a>. Foro sobre AJAX.</li>
-    </ul>
+- [Creando formulario editables in situ](http://www.baluart.net/articulo/346/edicion-in-situ-con-ajax.php)
+  - : Breve tutorial que nos muestra como crear nuestros formularios editables in situ con AJAX, PHP y MySQL, al estilo Flickr.
 
-    <ul>
-     <li>Foros sobre AJAX en la comunidad Mozilla en inglés:</li>
-    </ul>
+<!---->
 
-    <p>{{ DiscussionList("dev-ajax", "mozilla.dev.ajax") }}</p>
+- [Arquitectura Cliente Servidor con AJAX](http://thinkcoderepeat.blogspot.com/2006/08/arquitectura-cliente-servidor-con-ajax.html)
+  - : Artículo avanzado que muestra un patrón de diseño para desarrollar con AJAX, haciendo el modelo de la aplicación como web-services, la interface (view) con HTML y el controlador (controller) en Javascript, para crear aplicaciones siguiendo el paradigma MVC. Herramientas: Prototype, JSON y CSS.
 
-    <h4 id="Herramientas" name="Herramientas">Herramientas</h4>
+#### Comunidad
 
-    <ul>
-     <li><a class="external" href="http://www.ajaxprojects.com">Toolkits y Frameworks</a></li>
-     <li><a class="external" href="http://www.getfirebug.com/">Firebug - Herramienta de Desarrollo Ajax/Web</a></li>
-     <li><a class="external" href="http://blog.monstuff.com/archives/000252.html">Herramienta de Depuración de AJAX</a></li>
-     <li><a class="external" href="http://www.osflash.org/doku.php?id=flashjs">Kit de Integración Flash/AJAX</a></li>
-     <li><a class="external" href="http://xkr.us/code/javascript/XHConn/">Una Simple Librería de Interfaz XMLHTTP</a></li>
-    </ul>
+- [Ajax-es](http://groups.google.es/group/Ajax-es?lnk=sg&hl=es). Foro sobre AJAX.
 
-    
+<!---->
 
-    <dl>
-      <dt><h4 id="Temas_relacionados" name="Temas_relacionados">Temas relacionados</h4></dt>
-     <dd><a href="es/HTML">HTML</a> · <a href="es/XHTML">XHTML</a> · <a href="es/CSS">CSS</a> · <a href="es/DOM">DOM</a> · <a href="es/JavaScript">JavaScript</a> · <a href="es/XML">XML</a> · <a href="es/XMLHttpRequest">XMLHttpRequest</a> · <a href="es/XSLT">XSLT</a> · <a href="es/DHTML">DHTML</a></dd>
-    </dl>
+- Foros sobre AJAX en la comunidad Mozilla en inglés:
 
-<div class="noinclude"> </div>
+{{ DiscussionList("dev-ajax", "mozilla.dev.ajax") }}
 
-<p>{{ languages( { "ca": "ca/AJAX", "cs": "cs/AJAX", "en": "en/AJAX", "fr": "fr/AJAX", "it": "it/AJAX", "ja": "ja/AJAX", "ko": "ko/AJAX", "nl": "nl/AJAX", "pl": "pl/AJAX", "pt": "pt/AJAX", "ru": "ru/AJAX", "zh-cn": "cn/AJAX", "zh-tw": "zh_tw/AJAX" } ) }}</p>
+#### Herramientas
+
+- [Toolkits y Frameworks](http://www.ajaxprojects.com)
+- [Firebug - Herramienta de Desarrollo Ajax/Web](http://www.getfirebug.com/)
+- [Herramienta de Depuración de AJAX](http://blog.monstuff.com/archives/000252.html)
+- [Kit de Integración Flash/AJAX](http://www.osflash.org/doku.php?id=flashjs)
+- [Una Simple Librería de Interfaz XMLHTTP](http://xkr.us/code/javascript/XHConn/)
+
+<!---->
+
+- #### Temas relacionados
+  - : [HTML](es/HTML) · [XHTML](es/XHTML) · [CSS](es/CSS) · [DOM](es/DOM) · [JavaScript](es/JavaScript) · [XML](es/XML) · [XMLHttpRequest](es/XMLHttpRequest) · [XSLT](es/XSLT) · [DHTML](es/DHTML)
+
+{{ languages( { "ca": "ca/AJAX", "cs": "cs/AJAX", "en": "en/AJAX", "fr": "fr/AJAX", "it": "it/AJAX", "ja": "ja/AJAX", "ko": "ko/AJAX", "nl": "nl/AJAX", "pl": "pl/AJAX", "pt": "pt/AJAX", "ru": "ru/AJAX", "zh-cn": "cn/AJAX", "zh-tw": "zh\_tw/AJAX" } ) }}

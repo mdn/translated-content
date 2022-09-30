@@ -17,36 +17,16 @@ tags:
   - graficos
 translation_of: Web/Guide/Graphics
 ---
-<p> </p>
+Los sitios web modernos a menudo necesitan aplicaciones para presentar y/o visualizar gráficos . Se
 
+- [Dibujando gráficas con canvas](/es/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas "/en-US/docs/Web/Reference")
+  - : Una guía inicial para usar el elemento {{HTMLElement("canvas")}} para dibujar gráficos en 2D.
+- [SVG](/es/docs/SVG)
+  - : Scalable Vector Graphics ( SVG ), Gráficos Vectoriales Escalables, le permite utilizar líneas , curvas y otras formas geométricas para representar gráficos . Al evitar el uso de mapas de bits , puede crear imágenes que se escalan sin falla a cualquier tamaño.
 
+## Gráficas en 3D
 
-<p>Los sitios web modernos a menudo necesitan aplicaciones para presentar y/o visualizar gráficos . Se</p>
+- [WebGL](/es/docs/Web/WebGL "/en-US/docs/WebGL")
+  - : Una guía de cómo empezar con WebGL , la API (bibliteca de contenidos) de gráficos 3D para la Web. Esta tecnología le permite utilizar estándar OpenGL ES en el contenido Web .
 
-<div class="row topicpage-table">
-<div class="section">
-<dl>
- <dt><a href="/en-US/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas" title="/en-US/docs/Web/Reference">Dibujando gráficas con canvas</a></dt>
- <dd>Una guía inicial para usar el elemento {{HTMLElement("canvas")}} para dibujar gráficos en 2D.</dd>
- <dt><a href="/en-US/docs/SVG" title="/en-US/docs/SVG">SVG</a></dt>
- <dd>
- <p>Scalable Vector Graphics ( SVG ), Gráficos Vectoriales Escalables, le permite utilizar líneas , curvas y otras formas geométricas para representar gráficos . Al evitar el uso de mapas de bits , puede crear imágenes que se escalan sin falla a cualquier tamaño.</p>
- </dd>
-</dl>
-
-</div>
-
-<div class="section">
-<h2 id="Docs_for_add-on_developers" name="Docs_for_add-on_developers">Gráficas en 3D</h2>
-
-<dl>
- <dt><a href="/en-US/docs/Web/WebGL" title="/en-US/docs/WebGL">WebGL</a></dt>
- <dd>
- <p>Una guía de cómo empezar con WebGL , la API (bibliteca de contenidos) de gráficos 3D para la Web. Esta tecnología le permite utilizar estándar OpenGL ES en el contenido Web .</p>
- </dd>
-</dl>
-
-<dl>
-</dl>
-</div>
-</div>
+<!---->
