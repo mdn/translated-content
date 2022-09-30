@@ -46,7 +46,7 @@ X-Frame-Options: SAMEORIGIN
 
 ## 例
 
-> **Note:** X-Frame-Options を {{HTMLElement("meta")}} 要素に設定しても意味がありません。例えば、`<meta http-equiv="X-Frame-Options" content="deny">` は効果がありません。使用しないでください。以下の例にあるように、 `X-Frame-Options` は HTTP ヘッダーを通じて設定された場合のみ動作します。
+> **メモ:** X-Frame-Options を {{HTMLElement("meta")}} 要素に設定しても意味がありません。例えば、`<meta http-equiv="X-Frame-Options" content="deny">` は効果がありません。使用しないでください。以下の例にあるように、 `X-Frame-Options` は HTTP ヘッダーを通じて設定された場合のみ動作します。
 
 ### Apache の設定
 

@@ -70,7 +70,7 @@ CORS は様々なエラーで失敗することがありますが、セキュリ
 - {{domxref("XMLHttpRequest")}} オブジェクトを使用してリクエストを行う場合は、 {{domxref("XMLHttpRequest.upload")}} プロパティから返されるオブジェクトにイベントリスナーが登録されていないこと。すなわち、 {{domxref("XMLHttpRequest")}} インスタンスを `xhr` とした場合、どのコードも `xhr.upload.addEventListener()` が呼び出してアップロードを監視するためのイベントリスナーを追加していないこと。
 - リクエストに {{domxref("ReadableStream")}} オブジェクトが使用されていないこと。
 
-> **Note:** WebKit Nightly および Safari Technology Preview は、 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Content-Language")}} ヘッダーの値に追加の制限を掛けています。これらのヘッダーが「標準外」の値の場合、 WebKit/Safari はそのリクエストが「単純リクエスト」の条件に合うとは判断しません。 WebKit/Safari がこれらのヘッダーのどの値を「標準外」と判断するかについては、以下の WebKit のバグを除いて文書化されていません。
+> **メモ:** WebKit Nightly および Safari Technology Preview は、 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Content-Language")}} ヘッダーの値に追加の制限を掛けています。これらのヘッダーが「標準外」の値の場合、 WebKit/Safari はそのリクエストが「単純リクエスト」の条件に合うとは判断しません。 WebKit/Safari がこれらのヘッダーのどの値を「標準外」と判断するかについては、以下の WebKit のバグを除いて文書化されていません。
 >
 > - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)
 > - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)
@@ -133,7 +133,7 @@ Access-Control-Allow-Origin: *
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **Note:** [資格情報を含むリクエスト](#資格情報を含むリクエスト)に応答する場合、サーバーは `Access-Control-Allow-Origin` ヘッダーにオリジンを値として指定する必要があり、"`*`" ワイルドカードを指定することはできません。
+> **メモ:** [資格情報を含むリクエスト](#資格情報を含むリクエスト)に応答する場合、サーバーは `Access-Control-Allow-Origin` ヘッダーにオリジンを値として指定する必要があり、"`*`" ワイルドカードを指定することはできません。
 
 <h3 id="Preflighted_requests">プリフライトリクエスト</h3>
 
@@ -154,7 +154,7 @@ xhr.send('<person><name>Arun</name></person>');
 
 ![](preflight_correct.png)
 
-> **Note:** 後述するように、実際の `POST` リクエストでは `Access-Control-Request-*` ヘッダーを含みません。`OPTIONS` リクエストのみで必要になります。
+> **メモ:** 後述するように、実際の `POST` リクエストでは `Access-Control-Request-*` ヘッダーを含みません。`OPTIONS` リクエストのみで必要になります。
 
 クライアントとサーバーとの間のやりとりの全容を見てみましょう。最初のやり取りは*プリフライトリクエスト/レスポンス*です。
 
@@ -263,7 +263,7 @@ Content-Type: text/plain
 
 ### 資格情報を含むリクエスト
 
-> **Note:** 資格情報を含むリクエストを異なるドメインに行う場合、サードパーティクッキーポリシーも適用されます。このポリシーは、この章で説明しているように、サーバーやクライアントでの設定とは無関係に常に実施されます。
+> **メモ:** 資格情報を含むリクエストを異なるドメインに行う場合、サードパーティクッキーポリシーも適用されます。このポリシーは、この章で説明しているように、サーバーやクライアントでの設定とは無関係に常に実施されます。
 
 {{domxref("XMLHttpRequest")}} や [Fetch](/en-US/docs/Web/API/Fetch_API) と CORS の両方によって明らかになる最も興味深い機能は、[HTTP クッキー](/en-US/docs/Web/HTTP/Cookies)と HTTP 資格情報によってわかる「資格情報を含む」リクエストを作成することができることです。既定では、サイト間の `XMLHttpRequest` または [Fetch](/en-US/docs/Web/API/Fetch_API) の呼び出しにおいて、ブラウザーは資格情報を送信**しません**。 `XMLHttpRequest` オブジェクトまたは {{domxref("Request")}} のコンストラクターの呼び出し時に、特定のフラグを設定する必要があります。
 
@@ -325,7 +325,7 @@ Content-Type: text/plain
 
 CORS のプリフライトリクエストに資格情報を含めてはいけません。プリフライトリスクエストへの*レスポンス*には `Access-Control-Allow-Credentials: true` を指定して、実際のリクエストを資格情報付きで行うことができることを示す必要があります。
 
-> **Note:** エンタープライズ認証サービスの中には、 {{SpecName("Fetch","#cors-protocol-and-credentials")}} 仕様書に反して、プリフライトリクエストで TLS クライアント証明書を送信することを要求するものがあります。
+> **メモ:** エンタープライズ認証サービスの中には、 {{SpecName("Fetch","#cors-protocol-and-credentials")}} 仕様書に反して、プリフライトリクエストで TLS クライアント証明書を送信することを要求するものがあります。
 >
 > Firefox 87 では、`network.cors_preflight.allow_client_cert` を `true` に設定することで、この準拠していない動作を有効にすることができます。({{bug(1511151)}}). Chromium ベースのブラウザーでは現在、CORS プリフライトリクエストで TLS クライアント証明書を常に送信します ([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438))。
 
@@ -444,7 +444,7 @@ Origin: <origin>
 
 origin は、リクエストを開始したサーバーを示す URL です。ここにパス情報は含めず、サーバー名だけにします。
 
-> **Note:** `origin` の値は `null` にすることができます。
+> **メモ:** `origin` の値は `null` にすることができます。
 
 なお、すべてのアクセス制御リクエストにおいて、 {{HTTPHeader("Origin")}} ヘッダーは**常に**送信されます。
 
