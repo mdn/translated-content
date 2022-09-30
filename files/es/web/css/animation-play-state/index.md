@@ -42,7 +42,7 @@ animation-play-state: unset;
 
 ## Ejemplos
 
-Visita [animaciones CSS](https://developer.mozilla.org/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
+Visita [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
 
 ## Especificaciones
 

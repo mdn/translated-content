@@ -3,6 +3,7 @@ title: fit-content()
 slug: Web/CSS/fit-content_function
 original_slug: Web/CSS/fit-content()
 ---
+
 {{CSSRef}}
 
 **`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、指定された寸法を `min(max-content, max(min-content, 引数))` の式に従って有効な範囲の寸法に収めます。

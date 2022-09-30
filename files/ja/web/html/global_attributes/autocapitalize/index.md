@@ -2,6 +2,7 @@
 title: autocapitalize
 slug: Web/HTML/Global_attributes/autocapitalize
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`autocapitalize`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は列挙型の属性で、ユーザーによって入力／編集されたとき、入力文字列の先頭大文字化が自動的に行われるかどうか、どのように行われるかを制御します。以下の値を指定することができます。

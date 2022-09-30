@@ -2,6 +2,7 @@
 title: '@viewport'
 slug: Web/CSS/@viewport
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 > **Note:** <https://github.com/w3c/csswg-drafts/issues/4766> に @viewport を標準化路線から除外することに関する議論があります。

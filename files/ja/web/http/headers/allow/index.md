@@ -2,6 +2,7 @@
 title: Allow
 slug: Web/HTTP/Headers/Allow
 ---
+
 {{HTTPSidebar}}
 
 **`Allow`** ヘッダーは、あるリソースが対応しているメソッドの一覧を示します。

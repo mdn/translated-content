@@ -406,7 +406,7 @@ def renew_book_librarian(request, pk):
 
 更酷的是，您可以通过使用点表示法，索引其属性，来完全控制表单每个部分的呈现。例如，我们可以为`renewal_date` 字段访问许多单独的项目：
 
-- `\{{form.renewal_date}}:` 整个领域。
+- `\{{form.renewal_date}}`: 整个领域。
 - `\{{form.renewal_date.errors}}`: 错误列表。
 - `\{{form.renewal_date.id_for_label}}`: 标签的 id。
 - `\{{form.renewal_date.help_text}}`: 字段帮助文本。

@@ -21,7 +21,9 @@ Provoca que una cadena ponga en cursiva, como si estuviese dentro de una etiquet
 
 ## Sintaxis
 
-    cadena.italics()
+```
+cadena.italics()
+```
 
 ## Descripción
 

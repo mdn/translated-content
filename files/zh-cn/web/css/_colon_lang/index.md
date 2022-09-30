@@ -63,6 +63,6 @@ p:lang(en) {
 
 ## 参见
 
-- 语言相关伪类: {{ cssxref(":lang") }}, {{ cssxref(":dir") }}
+- 语言相关伪类：{{ cssxref(":lang") }}, {{ cssxref(":dir") }}
 - HTML {{htmlattrxref("lang")}} 属性
 - [BCP 47 - Tags for Identifying Languages](https://tools.ietf.org/html/bcp47)

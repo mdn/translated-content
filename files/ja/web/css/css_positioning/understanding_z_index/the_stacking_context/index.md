@@ -2,6 +2,7 @@
 title: 重ね合わせコンテキスト
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 ---
+
 {{CSSRef}}
 
 **重ね合わせコンテキスト** (Stacking context) は、ビューポートまたはウェブページに面していると想定されるユーザーに対する仮想的な Z 軸に沿って並べられた HTML 要素の三次元の概念化です。 HTML 要素は、要素の属性に基づいてこの空間を優先度つきの順序で占有します。

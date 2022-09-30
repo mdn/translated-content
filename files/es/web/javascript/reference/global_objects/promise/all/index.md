@@ -16,7 +16,9 @@ El método **`Promise.all(iterable)`** devuelve una promesa que termina correcta
 
 ## Sintaxis
 
-    Promise.all(iterable);
+```
+Promise.all(iterable);
+```
 
 - iterable
   - : Un objeto iterable, por ejemplo un {{jsxref("Array")}}. Vea [iterable](/es/docs/Web/JavaScript/Guide/iterable).

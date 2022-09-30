@@ -2,6 +2,7 @@
 title: user-modify
 slug: Web/CSS/user-modify
 ---
+
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 **`user-modify`** プロパティは Firefox では効果がありません。元々は要素の内容をユーザーが編集できるかどうかを決める予定でした。

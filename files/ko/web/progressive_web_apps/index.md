@@ -17,11 +17,11 @@ PWA는 발견 가능, 설치 가능, 연결 가능해야 하고, 네트워크에
 
 다음 가이드는 간단한 예제를 살펴보고 모든 조각이 어떻게 동작하는지 보여줌으로써 PWA 구현을 위해 해야하는 것들이 무엇인지 보여줍니다.
 
-1.  [프로그레시브 웹 앱 소개](/ko/docs/Web/Apps/Progressive/Introduction)
-2.  [프로그레시브 웹 앱 구조](/ko/docs/Web/Apps/Progressive/App_structure)
-3.  [Service worker를 사용해 PWA를 오프라인에서 동작하게 만들기](/ko/docs/Web/Apps/Progressive/Offline_Service_workers)
-4.  [PWA를 설치가능하게 만드는 방법](/ko/docs/Web/Apps/Progressive/Installable_PWAs)
-5.  [알림과 푸시를 사용해 PWA를 재참여(re-engageable)가능하게 만드는 방법](/ko/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)
+1. [프로그레시브 웹 앱 소개](/ko/docs/Web/Apps/Progressive/Introduction)
+2. [프로그레시브 웹 앱 구조](/ko/docs/Web/Apps/Progressive/App_structure)
+3. [Service worker를 사용해 PWA를 오프라인에서 동작하게 만들기](/ko/docs/Web/Apps/Progressive/Offline_Service_workers)
+4. [PWA를 설치가능하게 만드는 방법](/ko/docs/Web/Apps/Progressive/Installable_PWAs)
+5. [알림과 푸시를 사용해 PWA를 재참여(re-engageable)가능하게 만드는 방법](/ko/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)
 
 ## 기술 가이드
 

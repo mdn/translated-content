@@ -29,7 +29,7 @@ typedarray.reduce(callback[, initialValue])
       - : `reduce` 在其上调用的类型化数组。
 
 - `initialValue`
-  - : `可选。用作 callback` `首次调用`的第一个参数的对象。
+  - : 可选。用作 `callback` 首次调用`的第一个参数的对象。
 
 ### 返回值
 

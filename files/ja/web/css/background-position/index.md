@@ -2,6 +2,7 @@
 title: background-position
 slug: Web/CSS/background-position
 ---
+
 {{CSSRef}}
 
 **`background-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、それぞれの背景画像の初期位置を設定します。位置は {{cssxref("background-origin")}} で設定された位置レイヤーからの相対です。

@@ -2,6 +2,7 @@
 title: end
 slug: Web/SVG/Attribute/end
 ---
+
 {{SVGRef}}
 
 **`end`** 属性は、アクティブな期間を制限できるアニメーションの終了値を定義します。

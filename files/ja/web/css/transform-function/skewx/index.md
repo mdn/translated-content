@@ -3,6 +3,7 @@ title: skewX()
 slug: Web/CSS/transform-function/skewX
 original_slug: Web/CSS/transform-function/skewX()
 ---
+
 {{CSSRef}}
 
 **`skewX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上で水平方向にゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

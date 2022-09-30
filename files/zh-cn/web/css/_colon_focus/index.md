@@ -5,7 +5,7 @@ slug: Web/CSS/:focus
 
 {{CSSRef}}
 
-CSS[伪类](/zh-CN/CSS/Pseudo-classes) `:focus`表示获得焦点的元素（如表单输入）。当用户点击或触摸元素或通过键盘的 “tab” 键选择它时会被触发。
+CSS[伪类](/zh-CN/CSS/Pseudo-classes) `:focus`表示获得焦点的元素（如表单输入）。当用户点击或触摸元素或通过键盘的“tab”键选择它时会被触发。
 
 ```css
 /* Selects any <input> when focused */

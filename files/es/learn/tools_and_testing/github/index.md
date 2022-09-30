@@ -72,4 +72,4 @@ Ten en cuenta que los enlaces a continuación te llevan a recursos en sitios ext
 - [Introducción a las páginas de GitHub](https://guides.github.com/features/pages/) (cómo publicar demostraciones y sitios web en GitHub).
 - [Aprende la ramificación de Git](https://learngitbranching.js.org/)
 - [Reglas de vuelo para Git](https://github.com/k88hudson/git-flight-rules) (un compendio muy útil de formas de lograr cosas específicas en Git, incluida la forma de corregir las cosas cuando te equivocaste).
-- [Dangit, git! ](https://dangitgit.com/)(otro compendio útil, específicamente de formas de corregir las cosas cuando te equivocaste).
+- [Dangit, git!](https://dangitgit.com/) (otro compendio útil, específicamente de formas de corregir las cosas cuando te equivocaste).

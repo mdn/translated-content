@@ -80,7 +80,7 @@ isNaN("blabla")   // true: "blabla"不能转换成数值
 
 ### 有用的特殊行为
 
-有许多方式来看待`isNaN()`：如果`isNaN(x)`返回 false，那么 x 在任何算数表达式中都不会使表达式等于 NaN；如果返回 true，x 会使所有算数表达式返回 NaN。这就意味着，在 JavaScript 中，isNaN(x)==true 等价于 x-0=NaN(在 JavaScript 中 x-0 == NaN 总是返回 false，所以你不用去测试它)。实际上， `isNaN(x)`, `isNaN(x - 0)`,`isNaN(Number(x))`, `Number.isNaN(x - 0)`,和`Number.isNaN(Number(x))` 的返回值都是一样的 并且在 JavaScript 中 isNaN(x) 是这些表达式中最短的表达。
+有许多方式来看待 `isNaN()`：如果`isNaN(x)`返回 false，那么 x 在任何算数表达式中都不会使表达式等于 NaN；如果返回 true，x 会使所有算数表达式返回 NaN。这就意味着，在 JavaScript 中，`isNaN(x)==true` 等价于 x-0=NaN(在 JavaScript 中 x-0 == NaN 总是返回 `false`，所以你不用去测试它)。实际上， `isNaN(x)`, `isNaN(x - 0)`, `isNaN(Number(x))`, `Number.isNaN(x - 0)`, 和 `Number.isNaN(Number(x))` 的返回值都是一样的 并且在 JavaScript 中 isNaN(x) 是这些表达式中最短的表达。
 
 举个例子，可以利用这个特殊行为来检测函数的参数是可运算的（可以像 number 一样进行加减乘除等运算）。如果不可运算，则可赋予这个参数一个默认的值或其他合适的内容。这样，就可以得到一个隐式转换参数值的函数，而这得益于 Javascript 的全功能性。
 

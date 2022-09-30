@@ -23,7 +23,7 @@ ECMAScript 5 引入了 [strict mode](/zh-CN/docs/JavaScript/Strict_mode) ,现在
 - [`with`](/zh-CN/docs/JavaScript/Reference/Statements/with)语句
 - 使用[delete](/zh-CN/docs/JavaScript/Reference/Operators/delete)删除一个变量名 (而不是属性名)`:delete myVariable`
 - 使用`eval`或`arguments`作为变量名或函数名
-- 使用未来保留字 (也许会在 ECMAScript 6 中使用):`implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`,和`yield`作为变量名或函数名
+- 使用未来保留字 (也许会在 ECMAScript 6 中使用): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, 和 `yield` 作为变量名或函数名
 - 在语句块中使用函数声明：`if(a<b){ function f(){} }`
 - 其他错误
 
@@ -104,15 +104,15 @@ s.opacity = 1;
 
 #### 函数调用中的`this`
 
-在普通的函数调用`f() 中`,`this`的值会指向全局对象。在严格模式中，`this`的值会指向`undefined`.当函数通过[call](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/call)和[apply](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply)调用时，如果传入的`thisvalue`参数是一个`null`和`undefined`除外的原始值 (字符串，数字，布尔值),则`this 的值会成为那个原始值对应的包装对象`,如果`thisvalue`参数的值是`undefined`或`null`,则`this 的值会指向全局对象`.在严格模式中，`this` 的值就是 `thisvalue` 参数的值，没有任何类型转换。
+在普通的函数调用`f()` 中, `this` 的值会指向全局对象。在严格模式中，`this` 的值会指向 `undefined`。当函数通过 [call](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/call) 和 [apply](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply) 调用时，如果传入的 `thisvalue` 参数是一个 `null` 和 `undefined` 除外的原始值 (字符串，数字，布尔值),则 `this` 的值会成为那个原始值对应的包装对象,如果 `thisvalue` 参数的值是 `undefined` 或 `null`,则 `this` 的值会指向全局对象。在严格模式中，`this` 的值就是 `thisvalue` 参数的值，没有任何类型转换。
 
 #### `arguments`对象属性不与对应的形参变量同步更新
 
-在非严格模式中，修改`arguments`对象中某个索引属性的值，和这个属性对应的形参变量的值也会同时变化，反之亦然。这会让 JavaScript 的代码混淆引擎让代码变得更难读和理解。在严格模式中`arguments 对象会以形参变量的拷贝的形式被创建和初始化，因此 arguments 对象的改变不会影响形参。`
+在非严格模式中，修改 `arguments` 对象中某个索引属性的值，和这个属性对应的形参变量的值也会同时变化，反之亦然。这会让 JavaScript 的代码混淆引擎让代码变得更难读和理解。在严格模式中``arguments` 对象会以形参变量的拷贝的形式被创建和初始化，因此 `arguments` 对象的改变不会影响形参。
 
 #### `eval 相关的区别`
 
-在严格模式中，`eval`不会在当前的作用域内创建新的变量。另外，传入 eval 的字符串参数也会按照严格模式来解析。你需要全面测试来确保没有代码收到影响。另外，如果你并不是为了解决一个非常实际的解决方案中，尽量不要使用`eval。`
+在严格模式中，`eval` 不会在当前的作用域内创建新的变量。另外，传入 `eval` 的字符串参数也会按照严格模式来解析。你需要全面测试来确保没有代码收到影响。另外，如果你并不是为了解决一个非常实际的解决方案中，尽量不要使用 `eval`。
 
 ## 严格中立的代码
 

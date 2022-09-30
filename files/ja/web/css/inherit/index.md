@@ -2,6 +2,7 @@
 title: inherit
 slug: Web/CSS/inherit
 ---
+
 {{CSSRef}}
 
 **`inherit`** は CSS のキーワードで、要素のプロパティの[計算値](/ja/docs/Web/CSS/computed_value)を親要素から取得するよう指定します。 CSS の一括指定 {{cssxref("all")}} を含め、すべての CSS プロパティに適用することができます。

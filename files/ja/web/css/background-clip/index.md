@@ -2,6 +2,7 @@
 title: background-clip
 slug: Web/CSS/background-clip
 ---
+
 {{CSSRef}}
 
 **`background-clip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景を境界ボックス、パディングボックス、コンテンツボックスのどれまで拡張するかを設定します。

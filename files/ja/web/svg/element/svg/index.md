@@ -2,6 +2,7 @@
 title: svg
 slug: Web/SVG/Element/svg
 ---
+
 {{SVGRef}}
 
 `svg` 要素は、新しい座標系と[ビューポート](/ja/docs/Web/SVG/Attribute/viewBox)を定義するコンテナです。これは SVG ドキュメントの最も外側の要素として使用されますが、SVG または HTML ドキュメントの中に SVG フラグメントを埋め込むためにも使用できます。

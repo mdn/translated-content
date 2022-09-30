@@ -14,9 +14,11 @@ The **`Number.parseInt()`** El método Number.parseInt () analiza un argumento d
 
 {{EmbedInteractiveExample("pages/js/number-parseint.html", "taller")}}
 
-## Syntax
+## Sintaxis
 
-    Number.parseInt(string,[ radix])
+```
+Number.parseInt(string,[ radix])
+```
 
 ### Parameters
 

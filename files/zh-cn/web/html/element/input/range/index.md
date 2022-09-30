@@ -76,7 +76,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 允许值范围内的最大值。 如果输入到元素中的{{htmlattrxref("value", "input")}}超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)。 如果 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
 
-此值必须大于或等于 min 属性的值。 请参见 [HTML `max`](/zh-CN/docs/Web/HTML/Attributes/max)`属性。`
+此值必须大于或等于 `min` 属性的值。 请参见 [HTML `max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性。
 
 ### min
 

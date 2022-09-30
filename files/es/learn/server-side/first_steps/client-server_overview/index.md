@@ -76,19 +76,21 @@ Puedes realizar una petición `GET` simplemente pinchando sobre un enlace o busc
 
 Cada linea de la petición contiene información sobre ella. La primera parte se llama **cabecera** o **header**, y contiene información útil sobre la petición, de la misma manera que un [HTML head](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) contiene información útil sobre un documento (pero no el contenido mismo, que está en el cuerpo):
 
-    GET https://developer.mozilla.org/en-US/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1
-    Host: developer.mozilla.org
-    Connection: keep-alive
-    Pragma: no-cache
-    Cache-Control: no-cache
-    Upgrade-Insecure-Requests: 1
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-    Referer: https://developer.mozilla.org/en-US/
-    Accept-Encoding: gzip, deflate, sdch, br
-    Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7
-    Accept-Language: en-US,en;q=0.8,es;q=0.6
-    Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _gat=1; _ga=GA1.2.1688886003.1471911953; ffo=true
+```
+GET https://developer.mozilla.org/en-US/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1
+Host: developer.mozilla.org
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Referer: https://developer.mozilla.org/en-US/
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7
+Accept-Language: en-US,en;q=0.8,es;q=0.6
+Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _gat=1; _ga=GA1.2.1688886003.1471911953; ffo=true
+```
 
 La primera y segunda líneas contienen la mayoría de la información de la que hemos hablado arriba:
 
@@ -233,13 +235,13 @@ El diagrama de abajo muestra los elementos principales del sitio web del "entren
 
 Después de que el entrenador envíe el formulario con el nombre del equipo y el número de jugadores, la secuencia de operaciones es la siguiente:
 
-1.  El explorador web crea una petición HTTP `GET` al servidor usando la URL base del recurso (`/best`) y codifica el equipo y número de jugadores como parámetros URL (ej. `/best?team=my_team_name&show=11)` o formando parte de un patrón URL (ej. `/best/my_team_name/11/`). Se usa una petición `GET` porque la petición sólo recoge datos (no modifica ninguno).
-2.  El S*ervidor Web* detecta que la petición es "dinámica" y la reenvía a la _Aplicación_ para que la procese (el servidor web determina como manejar diferentes URLs basándose en reglas de emparejamiento de patrones definidas en su configuración).
-3.  La _Aplicación Web_ identifica que la intención de la petición es obtener la "lista del mejor equipo" basándose en la URL (`/best/`) y encuentra el nombre del equipo y el número de jugadores requeridos a partir de la URL. La _Aplicación Web_ obtiene entonces la información solicitada de la base de datos (usando parámetros "internos" adicionales que definen qué jugadores son los "mejores", y posiblemente también obteniendo la identidad del entrenador que ha iniciado sesión a partir de un cookie del lado cliente).
-4.  La _Aplicación Web_ crea dinámicamente una página HTML por medio de colocar los datos (de la _base_) en marcadores de posición dentro de la plantilla HTML.
-5.  La _Aplicación Web_ devuelve el HTML generado al explorador web (via el _Servidor Web_), junto con un código de estado HTTP de 200 ("éxito"). Si algo impide que se pueda devolver el HTML entonces la _Aplicación Web_ devolverá otro código — por ejemplo "404" para indicar que el equipo no existe.
-6.  El Explorador Web comenzará a continuación a procesar el HTML devuelto, enviando peticiones separadas para obtener cualquier otro fichero CSS o JavaScript que sea referenciado (ver paso 7).
-7.  El Servidor Web carga ficheros estáticos del sistema de ficheros y los devuelve al explorador directamente (de nuevo, la gestión correcta de los ficheros está basada en las reglas de configuración y de emparejamiento de patrones URL).
+1. El explorador web crea una petición HTTP `GET` al servidor usando la URL base del recurso (`/best`) y codifica el equipo y número de jugadores como parámetros URL (ej. `/best?team=my_team_name&show=11)` o formando parte de un patrón URL (ej. `/best/my_team_name/11/`). Se usa una petición `GET` porque la petición sólo recoge datos (no modifica ninguno).
+2. El S*ervidor Web* detecta que la petición es "dinámica" y la reenvía a la _Aplicación_ para que la procese (el servidor web determina como manejar diferentes URLs basándose en reglas de emparejamiento de patrones definidas en su configuración).
+3. La _Aplicación Web_ identifica que la intención de la petición es obtener la "lista del mejor equipo" basándose en la URL (`/best/`) y encuentra el nombre del equipo y el número de jugadores requeridos a partir de la URL. La _Aplicación Web_ obtiene entonces la información solicitada de la base de datos (usando parámetros "internos" adicionales que definen qué jugadores son los "mejores", y posiblemente también obteniendo la identidad del entrenador que ha iniciado sesión a partir de un cookie del lado cliente).
+4. La _Aplicación Web_ crea dinámicamente una página HTML por medio de colocar los datos (de la _base_) en marcadores de posición dentro de la plantilla HTML.
+5. La _Aplicación Web_ devuelve el HTML generado al explorador web (via el _Servidor Web_), junto con un código de estado HTTP de 200 ("éxito"). Si algo impide que se pueda devolver el HTML entonces la _Aplicación Web_ devolverá otro código — por ejemplo "404" para indicar que el equipo no existe.
+6. El Explorador Web comenzará a continuación a procesar el HTML devuelto, enviando peticiones separadas para obtener cualquier otro fichero CSS o JavaScript que sea referenciado (ver paso 7).
+7. El Servidor Web carga ficheros estáticos del sistema de ficheros y los devuelve al explorador directamente (de nuevo, la gestión correcta de los ficheros está basada en las reglas de configuración y de emparejamiento de patrones URL).
 
 La operación de actualizar un registro de la base de datos se gestionaría de forma similar, excepto que, como para cualquier actualización de la base de datos, la petición HTTP desde el explorador debería ser codificada como petición `POST`.
 

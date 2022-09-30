@@ -98,7 +98,7 @@ Object 自身没有提供方法删除其自身属性（Map 中的 `{{jsxref("Map
 - {{jsxref("Object.prototype.propertyIsEnumerable", "Object.prototype.propertyIsEnumerable()")}}
   - : 返回一个布尔值，用于表示内部属性 [ECMAScript \[\[Enumerable\]\] attribute](/zh-CN/docs/Web/JavaScript/Data_structures#属性) 是否被设置。
 - {{jsxref("Object.prototype.toLocaleString", "Object.prototype.toLocaleString()")}}
-  - : 调用 `toString()。`
+  - : 调用 `toString()`。
 - {{jsxref("Object.prototype.toString", "Object.prototype.toString()")}}
   - : 返回一个代表该对象的字符串。
 - {{jsxref("Object.prototype.valueOf", "Object.prototype.valueOf()")}}

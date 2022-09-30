@@ -2,6 +2,7 @@
 title: mask-border-mode
 slug: Web/CSS/mask-border-mode
 ---
+
 {{CSSRef}}
 
 **`mask-border-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[マスク境界](/ja/docs/Web/CSS/mask-border)の混合モードを指定します。
