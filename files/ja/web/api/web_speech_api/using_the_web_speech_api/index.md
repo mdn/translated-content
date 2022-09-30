@@ -15,11 +15,11 @@ Web Speech API には、このための主要なコントローラインター�
 
 ### デモ
 
-Web 音声認識の簡単な使い方を示すために、[Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer)というデモを書いてみました。画面をタップ/クリックし、HTML の色のキーワードを言うと、アプリの背景色がその色に変わります。
+Web 音声認識の簡単な使い方を示すために、[Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer)というデモを書いてみました。画面をタップ/クリックし、HTML の色のキーワードを言うと、アプリの背景色がその色に変わります。
 
-![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](https://mdn.mozillademos.org/files/11975/speech-color-changer.png)
+![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API/speech-color-changer.png)
 
-デモを実行するには、それが一部となっている Github リポジトリをクローン（または[直接ダウンロード](https://github.com/mdn/web-speech-api/archive/master.zip)）し、サポートされているデスクトップブラウザで HTML index ファイルを開くか、Chrome のようなサポートされているモバイルブラウザで[ライブデモの URL](https://mdn.github.io/web-speech-api/speech-color-changer/)に移動することができます。
+デモを実行するには、それが一部となっている Github リポジトリをクローン（または[直接ダウンロード](https://github.com/mdn/web-speech-api/archive/master.zip)）し、サポートされているデスクトップブラウザで HTML index ファイルを開くか、Chrome のようなサポートされているモバイルブラウザで[ライブデモの URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/)に移動することができます。
 
 ### ブラウザ対応
 
