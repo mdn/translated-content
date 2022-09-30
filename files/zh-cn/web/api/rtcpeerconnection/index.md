@@ -51,7 +51,7 @@ _该接口的属性继承了其父接口，{{domxref("EventTarget")}}._
 - {{domxref("RTCPeerConnection.localDescription")}} {{ReadOnlyInline}}
   - : 只读属性，返回一个 {{domxref("RTCSessionDescription")}} ，它描述了这条连接的本地端的会话控制（用户会话所需的属性以及配置信息）。如果本地的会话控制还没有被设置，它的值就会是 null。
 - {{domxref("RTCPeerConnection.peerIdentity")}} {{ReadOnlyInline}}
-  - : 只读属性，返回一个`RTCIdentityAssertion，它由一组信息构成，包括一个域名（idp）以及一个名称（name），它们代表了这条连接的远端机器的身份识别信息。如果远端机器还没有被设置以及校验，这个属性会返回一个 null 值。一旦被设置，它不能被一般方法改变。`
+  - : 只读属性，返回一个 `RTCIdentityAssertion`，它由一组信息构成，包括一个域名（idp）以及一个名称（name），它们代表了这条连接的远端机器的身份识别信息。如果远端机器还没有被设置以及校验，这个属性会返回一个 `null` 值。一旦被设置，它不能被一般方法改变。
 - {{domxref("RTCPeerConnection.pendingLocalDescription")}} {{ReadOnlyInline}}
   - : blah
 - {{domxref("RTCPeerConnection.pendingRemoteDescription")}} {{ReadOnlyInline}}
@@ -165,7 +165,7 @@ _这个接口从它的父元素中继承属性，{{domxref("EventTarget")}}._
 - {{domxref("RTCPeerConnection.localDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("RTCSessionDescription")}} ，它描述了这条连接的本地端的会话控制（用户会话所需的属性以及配置信息）。如果本地的会话控制还没有被设置，它的值就会是 null。
 - {{domxref("RTCPeerConnection.peerIdentity")}} {{ReadOnlyInline}}
-  - : 返回一个`RTCIdentityAssertion，它由一组信息构成，包括一个域名（idp）以及一个名称（name），它们代表了这条连接的远端机器的身份识别信息。如果远端机器还没有被设置以及校验，这个属性会返回一个 null 值。一旦被设置，它不能被一般方法改变。`
+  - : 返回一个`RTCIdentityAssertion，它由一组信息构成，包括一个域名（idp）以及一个名称（name），它们代表了这条连接的远端机器的身份识别信息。如果远端机器还没有被设置以及校验，这个属性会返回一个 null 值。一旦被设置，它不能被一般方法改变`。
 - {{domxref("RTCPeerConnection.remoteDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("RTCSessionDescription")}} 它描述了这条连接的远端机器的会话控制，如果远端机器还未被设置，它的值会是 null。
 - {{domxref("RTCPeerConnection.signalingState")}} {{ReadOnlyInline}}

@@ -14,7 +14,9 @@ El método **`toString()`** devuelve una cadena que representa el patrón de la 
 
 ## Sintaxis
 
-    regexObj.toString();
+```
+regexObj.toString();
+```
 
 ### Valor de Retorno
 

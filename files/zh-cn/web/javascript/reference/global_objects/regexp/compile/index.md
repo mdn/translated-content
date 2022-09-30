@@ -32,7 +32,7 @@ regexObj.compile(pattern, flags)
 
 ## 描述
 
-`不推荐 compile 方法。你可以使用` `RegExp` 构造函数来得到相同效果。
+不推荐 `compile` 方法。你可以使用 `RegExp` 构造函数来得到相同效果。
 
 ## 示例
 

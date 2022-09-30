@@ -2,6 +2,7 @@
 title: CSS カスタムプロパティ (変数) の使用
 slug: Web/CSS/Using_CSS_custom_properties
 ---
+
 {{cssref}}
 
 **カスタムプロパティ** (**CSS 変数**や**カスケード変数**と呼ばれることもあります) は、 CSS の作者によって作成され、文書全体で再利用可能な特定の値を含むエンティティです。それらは、カスタムプロパティ記法 (たとえば、**`--main-color: black;`**) によって設定し、 [`var()`](/ja/docs/Web/CSS/var) 関数 (たとえば、 `color: var(--main-color);`) を使ってアクセスします。

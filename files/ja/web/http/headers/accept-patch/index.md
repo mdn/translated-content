@@ -2,6 +2,7 @@
 title: Accept-Patch
 slug: Web/HTTP/Headers/Accept-Patch
 ---
+
 {{HTTPSidebar}}
 
 **`Accept-Patch`** は HTTP のレスポンスヘッダーで、サーバーが認識できるメディアタイプを伝えます。

@@ -3,6 +3,7 @@ title: rotateX()
 slug: Web/CSS/transform-function/rotateX
 original_slug: Web/CSS/transform-function/rotateX()
 ---
+
 {{CSSRef}}
 
 **`rotateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素の形を変化させずに横座標 (水平軸) の周りを回転させる変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

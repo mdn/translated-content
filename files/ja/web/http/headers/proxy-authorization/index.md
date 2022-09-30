@@ -2,6 +2,7 @@
 title: Proxy-Authorization
 slug: Web/HTTP/Headers/Proxy-Authorization
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`Proxy-Authorization`** リクエストヘッダーは、プロキシサーバーに対してユーザーエージェントを認証するための認証情報を保持し、ふつうはサーバーが {{HTTPStatus("407")}} `Proxy Authentication Required` ステータスと {{HTTPHeader("Proxy-Authenticate")}} ヘッダーを返した後に使われます。

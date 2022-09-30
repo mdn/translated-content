@@ -18,7 +18,7 @@ slug: Web/API/AudioParam
 
 ## 属性
 
-`AudioParam` _继承的属性来自于它的父类，_ `AudioNode。`
+`AudioParam` _继承的属性来自于它的父类，_ `AudioNode`。
 
 - {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
   - : 代表被具体的{{domxref("AudioNode")}} 创建的 `AudioParam` 的属性的初始的音量。
@@ -36,17 +36,17 @@ AudioParam _初始化的方法来自它的父类，_`AudioNode`.
 - {{domxref("AudioParam.setValueAtTime()")}}
   - : 在一个确切的时间，即时更改 `AudioParam` 的值，按照{{domxref("AudioContext.currentTime")}} 的时间。新的值会被传递到 `value` 参数。
 - {{domxref("AudioParam.linearRampToValueAtTime()")}}
-  - : 调整 `AudioParam 的值，使其逐渐按线性变化。这个改变会从上一个事件指定的事件开始，跟随一个线性“斜坡”到参数给的新值，并在 endTime 参数给定的时间到达新值。`
+  - : 调整 `AudioParam` 的值，使其逐渐按线性变化。这个改变会从上一个事件指定的事件开始，跟随一个线性“斜坡”到参数给的新值，并在 `endTime` 参数给定的时间到达新值。
 - {{domxref("AudioParam.exponentialRampToValueAtTime()")}}
-  - : 调整 `AudioParam 的值，使其逐渐按指数变化。这个改变会从上一个事件指定的事件开始，跟随一个指数“斜坡”到参数给的新值，并在 endTime 参数给定的时间到达新值。`
+  - : 调整 `AudioParam` 的值，使其逐渐按指数变化。这个改变会从上一个事件指定的事件开始，跟随一个指数“斜坡”到参数给的新值，并在 `endTime` 参数给定的时间到达新值。
 - {{domxref("AudioParam.setTargetAtTime()")}}
-  - : 将开始计划改变 `AudioParam 的值`。这个改变将从 `startTime 指定的时间开始，并且以指定的方式向目标参数给定的值改变。指数衰减速率由 timeConstant 参数定义，`time 参数使以秒作为测量单位的时间。
+  - : 将开始计划改变 `AudioParam` 的值。这个改变将从 `startTime` 指定的时间开始，并且以指定的方式向目标参数给定的值改变。指数衰减速率由 `timeConstant` 参数定义，`time` 参数使以秒作为测量单位的时间。
 - {{domxref("AudioParam.setValueCurveAtTime()")}}
   - : 调整 `AudioParam` 的值以跟随一组定义为 {{domxref("Float32Array")}} 的值，数值会缩放到适应给定的间隔，从 `startTime` 时间开始并具有特定的持续时间（duration）。
 - {{domxref("AudioParam.cancelScheduledValues()")}}
-  - : 取消全部在 `AudioParam 中`的未来计划发生的改变。
+  - : 取消全部在 `AudioParam` 中的未来计划发生的改变。
 - {{domxref("AudioParam.cancelAndHoldAtTime()")}}
-  - : 取消全部计划将来对 `AudioParam 的`改变，但是保持给定时间的值，直到将来的使用其他方法产生改变。新的值会被赋予到 `value` 属性中。
+  - : 取消全部计划将来对 `AudioParam` 的改变，但是保持给定时间的值，直到将来的使用其他方法产生改变。新的值会被赋予到 `value` 属性中。
 
 ## 例子
 

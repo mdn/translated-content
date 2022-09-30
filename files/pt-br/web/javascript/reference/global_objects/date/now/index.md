@@ -30,7 +30,7 @@ Nenhum.
 
 O método **`now()`** retorna os milisegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC até agora como um {{jsxref("Global_Objects/Number", "Number")}}.
 
-Por que **`now` **é um método estático de **`Date`**, você sempre o usará como **`Date.now()`**.
+Por que **`now`** é um método estático de **`Date`**, você sempre o usará como **`Date.now()`**.
 
 ## Polyfill
 

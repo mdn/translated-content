@@ -2,6 +2,7 @@
 title: ':user-valid (:-moz-ui-valid)'
 slug: web/css/:user-valid
 ---
+
 {{CSSRef}}
 
 **`:user-valid`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、[制約検証](/ja/docs/Learn/Forms#constraint_validation)に基づき値の検証が正しく行われた有効なフォーム要素を表します。ただし、 {{cssxref(":valid")}} とは異なり、ユーザーが操作した後にのみ一致します。

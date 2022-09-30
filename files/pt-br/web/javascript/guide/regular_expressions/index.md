@@ -914,7 +914,7 @@ As ocorrências de `/d(b+)d/g` nas duas declarações são objetos expressões r
 
 ### Usando as Substrings entre Parênteses na Expressão Regular
 
-A inclusão de parênteses em um padrão de expressão regular faz com que a sub-correspondência correspondente seja lembrada. Por exemplo, `/a(b)c/` corresponde aos caracteres 'abc' e lembra 'b'. Para recuperar essas correspondências de substring entre parênteses, use o ` Arra``[1] `, ..., `[n]`.
+A inclusão de parênteses em um padrão de expressão regular faz com que a sub-correspondência correspondente seja lembrada. Por exemplo, `/a(b)c/` corresponde aos caracteres 'abc' e lembra 'b'. Para recuperar essas correspondências de substring entre parênteses, use o `Arra[1]`, ..., `[n]`.
 
 O número de substring entre parênteses possíveis é ilimitado. A matriz retornada contém tudo o que foi encontrado. Os exemplos a seguir ilustram como usar parênteses entre parênteses.
 

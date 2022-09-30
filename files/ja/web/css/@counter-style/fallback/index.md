@@ -2,6 +2,7 @@
 title: fallback
 slug: Web/CSS/@counter-style/fallback
 ---
+
 {{CSSRef}}
 
 **`fallback`** 記述子は、現在のカウンタースタイルが特定のカウンター値でマーカー表現を生成できなかった場合に、代替で使用されるカウンタースタイルを指定するために使用します。

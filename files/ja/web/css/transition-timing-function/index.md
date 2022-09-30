@@ -2,6 +2,7 @@
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 ---
+
 {{CSSRef}}
 
 **`transition-timing-function`** は CSS のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)の影響を受ける CSS プロパティにおいて、中間状態の値を算出する方法を設定するために使用されます。

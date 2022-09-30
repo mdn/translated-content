@@ -19,7 +19,9 @@ El método **`matchAll()`** retorna un iterador de todos los resultados de ocurr
 
 ## Sintaxis
 
-    cadena.matchAll(expresionRegular)
+```
+cadena.matchAll(expresionRegular)
+```
 
 ### Parámetros
 

@@ -2,6 +2,7 @@
 title: PWA をインストール可能にするには
 slug: Web/Progressive_web_apps/Installable_PWAs
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 前回の記事では、サンプルアプリケーション [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) が[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)によってオフラインで動作する方法を見てきましたが、さらに、対応しているモバイルブラウザーやデスクトップブラウザーでは、ウェブアプリをユーザーがインストールできるようにすることができます。インストールされたウェブアプリは、ネイティブアプリと同様にユーザーが起動することができます。 この記事では、ウェブアプリマニフェストと「ホーム画面に追加」と呼ばれる機能を使用して、これを実現する方法を説明します。

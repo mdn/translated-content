@@ -2,6 +2,7 @@
 title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
 ---
+
 {{CSSRef}}
 
 **`border-top-right-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、角の曲率を定義する楕円の半径 (または半長軸と半短軸) を指定することで、要素の右上の角を丸めます。

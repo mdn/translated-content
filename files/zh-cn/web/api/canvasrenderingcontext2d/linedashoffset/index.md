@@ -14,7 +14,7 @@ ctx.lineDashOffset = value;
 ```
 
 - `value`
-  - : 偏移量是 float 精度的数字。初始值为 `0.0。`
+  - : 偏移量是 float 精度的数字。初始值为 `0.0`。
 
 ## 示例
 

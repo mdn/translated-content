@@ -2,6 +2,7 @@
 title: '-webkit-touch-callout'
 slug: Web/CSS/-webkit-touch-callout
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 `-webkit-touch-callout` は [CSS](/ja/docs/Web/CSS) のプロパティで、対象を長押しすることで現れるコールアウト表示を制御します。

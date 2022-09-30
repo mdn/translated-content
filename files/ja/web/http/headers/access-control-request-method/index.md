@@ -2,6 +2,7 @@
 title: Access-Control-Request-Method
 slug: Web/HTTP/Headers/Access-Control-Request-Method
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Request-Method`** リクエストヘッダーは、{{glossary("preflight request", "プリフライトリクエスト")}}を発行する際にブラウザーが使用し、実際のリクエストが行われた際にどの HTTP メソッドが使用されるかをサーバーに知らせるために使用されます。プリフライトリクエストは常に OPTIONS であり、実際のリクエストとは同じメソッドを使用しないため、このヘッダーが必要です。

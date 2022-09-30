@@ -10,7 +10,9 @@ El método **`add()`** añade un nuevo elemento con un valor específico al fina
 
 ## Sintaxis
 
-    mySet.add(value);
+```
+mySet.add(value);
+```
 
 ### Parameters
 

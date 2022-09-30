@@ -23,11 +23,13 @@ Las cadenas son útiles para almacenar datos que se pueden representar en forma 
 
 Las cadenas se pueden crear como primitivas, a partir de cadena literales o como objetos, usando el constructor {{jsxref("String/String", "String()")}}:
 
-    const string1 = "Una cadena primitiva";
-    const string2 = 'También una cadena primitiva';
-    const string3 = `Otra cadena primitiva más`;
+```js
+const string1 = "Una cadena primitiva";
+const string2 = 'También una cadena primitiva';
+const string3 = `Otra cadena primitiva más`;
 
-    const string4 = new String("Un objeto String");
+const string4 = new String("Un objeto String");
+```
 
 Las `string`s primitivas y los objetos `string` se pueden usar indistintamente en la mayoría de las situaciones. Consulta "[Primitivas `String` y objetos `String`](#Primitivas_string_y_objetos_string)" a continuación.
 
@@ -69,10 +71,12 @@ Puedes lograr un resultado similar usando el método {{jsxref("String.prototype.
 
 Ten en cuenta que `a == b` compara las cadenas en `a` y `b` por ser igual en la forma habitual que distingue entre mayúsculas y minúsculas. Si deseas comparar sin tener en cuenta los caracteres en mayúsculas o minúsculas, usa una función similar a esta:
 
-    function isEqual(str1, str2)
-    {
-        return str1.toUpperCase() === str2.toUpperCase()
-    } // isEqual
+```js
+function isEqual(str1, str2)
+{
+  return str1.toUpperCase() === str2.toUpperCase()
+} // isEqual
+```
 
 En esta función se utilizan mayúsculas en lugar de minúsculas, debido a problemas con ciertas conversiones de caracteres UTF-8.
 

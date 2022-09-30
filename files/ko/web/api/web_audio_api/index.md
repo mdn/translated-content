@@ -108,7 +108,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 - {{domxref("PeriodicWave")}}
   - : {{domxref("OscillatorNode")}}의 출력을 형성하는데 사용될 수 있는 주기적 파형을 설명합니다.
 - {{domxref("IIRFilterNode")}}
-  - : 일반적인 **[infinite impulse response](https://en.wikipedia.org/wiki/infinite%20impulse%20response "infinite impulse response")** (IIR) 필터를 구현합니다; 이 유형의 필터는 음색 제어 장치와 그래픽 이퀄라이저를 구현하는 데 사용될 수 있습니다.
+  - : 일반적인 **[infinite impulse response](https://en.wikipedia.org/wiki/infinite%20impulse%20response)** (IIR) 필터를 구현합니다; 이 유형의 필터는 음색 제어 장치와 그래픽 이퀄라이저를 구현하는 데 사용될 수 있습니다.
 
 ### 오디오 목적지 정의하기
 

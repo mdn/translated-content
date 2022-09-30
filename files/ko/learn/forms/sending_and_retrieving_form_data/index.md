@@ -25,7 +25,7 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 
 ##### Examples
 
-첫번째 예제로 데이터는 http\://foo.com로 보낼 것이다.
+첫번째 예제로 데이터는 `http://foo.com` 로 보낼 것이다.
 
 ```html
 <form action="http://foo.com">

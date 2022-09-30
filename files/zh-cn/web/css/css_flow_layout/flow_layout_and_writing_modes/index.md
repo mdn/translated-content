@@ -29,7 +29,7 @@ While certain languages will use a particular writing mode or text direction, we
 
 ## The `writing-mode` property and block flow<br>写入模式属性和块流
 
-The {{cssxref("writing-mode")}} property accepts the values `horizontal-tb`, `vertical-rl` and `vertical-lr`. These values control the direction that blocks flow on the page. The initial value is `horizontal-tb,` which is a top to bottom block flow direction with a horizontal inline direction. Left to right languages, such as English, and Right to left languages. such as Arabic, are all `horizontal-tb`.
+The {{cssxref("writing-mode")}} property accepts the values `horizontal-tb`, `vertical-rl` and `vertical-lr`. These values control the direction that blocks flow on the page. The initial value is `horizontal-tb`, which is a top to bottom block flow direction with a horizontal inline direction. Left to right languages, such as English, and Right to left languages. such as Arabic, are all `horizontal-tb`.
 写入模式属性接受值水平 tb、垂直 rl 和垂直 lr。这些值控制阻止页面流动的方向。初始值是水平 tb，这是一个顶部到底部的块流方向，具有水平的内联方向。从左到右的语言，如英语和从右到左的语言。如阿拉伯语，都是水平结核。
 
 The following example shows blocks using `horizontal-tb`.

@@ -27,7 +27,7 @@ dateObj.getMonth()
 
 ### 使用 `getMonth()`
 
-下面第二条语句，基于 {{jsxref("Date")}} 对象 Xmas95 的值，把 11 赋值给变量 `month。`
+下面第二条语句，基于 {{jsxref("Date")}} 对象 Xmas95 的值，把 11 赋值给变量 `month`。
 
 ```js
 var Xmas95 = new Date('December 25, 1995 23:15:30');

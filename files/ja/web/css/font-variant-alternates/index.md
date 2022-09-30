@@ -2,6 +2,7 @@
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 ---
+
 {{CSSRef}}
 
 **`font-variant-alternates`** は CSS のプロパティで、代替書体の使用を制御します。代替書体は {{cssxref("@font-feature-values")}} で定義された代替名で参照される可能性があります。
