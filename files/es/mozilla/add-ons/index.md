@@ -22,7 +22,7 @@ Existen varios tipos de complementos, pero el tipo más común son las extension
 
 En el pasado, habían varias juegos de herramientas para el desarrollo de las extensiones de Firefox, pero al finalizar el mes de noviembre de 2017, las extensiones deben crearse utilizando las [API de WebExtensions](/es/Add-ons/WebExtensions). Los otros juegos de herramientas, incluidos los complementos de overlay, los complementos de bootstrap y el complemento SDK, se espera que queden obsoletos durante el mismo período de tiempo.
 
-Si usted está escribiendo un nuevo complemento, le recomendamos que utilice la [API de WebExtensions](es/Add-ons/WebExtensions).
+Si usted está escribiendo un nuevo complemento, le recomendamos que utilice la [API de WebExtensions](/es/Add-ons/WebExtensions).
 
 Las WebExtensions están diseñadas para que sean compatibles cross-browser. En la mayoría de los casos podran ser ejecutadas por Chrome, Edge, y Opera con pocos o ningún cambio. También serán completamente compatibles con el multiproceso Firefox.
 
