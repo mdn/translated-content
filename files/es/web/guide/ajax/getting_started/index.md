@@ -226,4 +226,3 @@ De esta manera se utiliza el objeto `XMLDocument` dado por `responseXML` y se us
 
 Para más información sobre los metodos del DOM, visita los documentos de la [implementación del DOM de Mozilla](http://www.mozilla.org/docs/dom/).
 
-{{ languages( { "ca": "ca/AJAX/Primers\_passos", "de": "de/AJAX/Getting\_Started", "en": "en/AJAX/Getting\_Started", "fr": "fr/AJAX/Premiers\_pas", "it": "it/AJAX/Iniziare", "ja": "ja/AJAX/Getting\_Started", "ko": "ko/AJAX/Getting\_Started", "pl": "pl/AJAX/Na\_pocz\u0105tek", "pt": "pt/AJAX/Como\_come\u00e7ar", "ru": "ru/AJAX/\u0421\_\u0447\u0435\u0433\u043e\_\u043d\u0430\u0447\u0430\u0442\u044c", "zh-cn": "cn/AJAX/\u5f00\u59cb", "zh-tw": "zh\_tw/AJAX/\u4e0a\u624b\u7bc7" } ) }}
