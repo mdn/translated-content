@@ -277,7 +277,7 @@ A função `alertContents()` pode ser escrita da mesma forma que se encontrava n
 
 `{"userData":"Jane","computedString":"Hi, Jane!"}`
 
-Para utilizar estes dados dentro de `alertContents()`, nós não podemos simplesmente exibir com `alert()` a propriedade `responseText`. Temos que analisar (parse) e então alertar (`alert()`) `computedString,` a propriedade que queremos:
+Para utilizar estes dados dentro de `alertContents()`, nós não podemos simplesmente exibir com `alert()` a propriedade `responseText`. Temos que analisar (parse) e então alertar (`alert()`) `computedString`, a propriedade que queremos:
 
 ```js
 function alertContents() {
