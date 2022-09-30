@@ -5,7 +5,7 @@ slug: Web/API/Cache/delete
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-{{domxref("Cache")}} 接口的 **`delete()`** 方法查询 request 为 key 的 {{domxref("Cache")}} 条目，如果找到，则删除该 {{domxref("Cache")}} 条目并返回 resolve 为 true 的 {{jsxref("Promise")}} 。 如果没有找到，则返回 resolve 为 false 的 {{jsxref("Promise")}} 。
+{{domxref("Cache")}} 接口的 **`delete()`** 方法查询 request 为 key 的 {{domxref("Cache")}} 条目，如果找到，则删除该 {{domxref("Cache")}} 条目并返回 resolve 为 true 的 {{jsxref("Promise")}} 。如果没有找到，则返回 resolve 为 false 的 {{jsxref("Promise")}} 。
 
 ## 语法
 
