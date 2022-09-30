@@ -8,11 +8,12 @@ tags:
   - Visión general
 translation_of: Web/HTTP/Overview
 ---
+
 {{HTTPSidebar}}
 
 HTTP, de sus siglas en inglés: "Hypertext Transfer Protocol", es el nombre de un protocolo el cual nos permite realizar una petición de datos y recursos, como pueden ser documentos {{glossary("HTML")}}. Es la base de cualquier intercambio de datos en la Web, y un protocolo de estructura cliente-servidor, esto quiere decir que una petición de datos es iniciada por el elemento que recibirá los datos (el cliente), normalmente un navegador Web. Así, una página web completa resulta de la unión de distintos sub-documentos recibidos, como, por ejemplo: un documento que especifique el estilo de maquetación de la página web ({{glossary("CSS")}}), el texto, las imágenes, vídeos, scripts, etc...
 
-![A Web document is the composition of different resources](https://mdn.mozillademos.org/files/13677/Fetching_a_page.png)
+![A Web document is the composition of different resources](fetching_a_page.png)
 
 Clientes y servidores se comunican intercambiando mensajes individuales (en contraposición a las comunicaciones que utilizan flujos continuos de datos). Los mensajes que envía el cliente, normalmente un navegador Web, se llaman _peticiones_, y los mensajes enviados por el servidor se llaman _respuestas_.
 
@@ -102,26 +103,24 @@ Cuando el cliente quiere comunicarse con el servidor, tanto si es directamente c
 1. Abre una conexión TCP: la conexión TCP se usará para hacer una petición, o varias, y recibir la respuesta. El cliente pude abrir una conexión nueva, reusar una existente, o abrir varias a la vez hacia el servidor.
 2. Hacer una petición HTTP: Los mensajes HTTP (previos a HTTP/2) son legibles en texto plano. A partir de la versión del protocolo HTTP/2, los mensajes se encapsulan en franjas, haciendo que no sean directamente interpretables, aunque el principio de operación es el mismo.
 
-    ```html
-    GET / HTTP/1.1
-    Host: developer.mozilla.org
-    Accept-Language: fr
-    ```
+   ```html
+   GET / HTTP/1.1 Host: developer.mozilla.org Accept-Language: fr
+   ```
 
 3. Leer la respuesta enviada por el servidor:
 
-    ```html
-    HTTP/1.1 200 OK
-    Date: Sat, 09 Oct 2010 14:28:02 GMT
-    Server: Apache
-    Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
-    ETag: "51142bc1-7449-479b075b2891b"
-    Accept-Ranges: bytes
-    Content-Length: 29769
-    Content-Type: text/html
+   ```html
+   HTTP/1.1 200 OK
+   Date: Sat, 09 Oct 2010 14:28:02 GMT
+   Server: Apache
+   Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+   ETag: "51142bc1-7449-479b075b2891b"
+   Accept-Ranges: bytes
+   Content-Length: 29769
+   Content-Type: text/html
 
-    <!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
-    ```
+   <!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
+   ```
 
 4. Cierre o reuso de la conexión para futuras peticiones.
 
