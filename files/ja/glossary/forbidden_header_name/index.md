@@ -32,7 +32,7 @@ slug: Glossary/Forbidden_header_name
 - `Upgrade`
 - `Via`
 
-> **Note:** `User-Agent` ヘッダーは[仕様としては](https://fetch.spec.whatwg.org/#terminology-headers)禁止ではなくなりました (Firefox 43 で実装された forbidden header name list を参照)。 Fetch の [Headers](/ja/docs/Web/API/Headers) オブジェクトや、XHR の [setRequestHeader()](/ja/docs/Web/API/XMLHttpRequest#setRequestHeader%28%29) などでこのヘッダーを設定することが可能です。ただし、 Chrome は Fetch リクエストからこのヘッダーを暗黙的に削除します ([Chromium バグ 571722](https://bugs.chromium.org/p/chromium/issues/detail?id=571722) を参照)。
+> **メモ:** `User-Agent` ヘッダーは[仕様としては](https://fetch.spec.whatwg.org/#terminology-headers)禁止ではなくなりました (Firefox 43 で実装された forbidden header name list を参照)。 Fetch の [Headers](/ja/docs/Web/API/Headers) オブジェクトや、XHR の [setRequestHeader()](/ja/docs/Web/API/XMLHttpRequest#setRequestHeader%28%29) などでこのヘッダーを設定することが可能です。ただし、 Chrome は Fetch リクエストからこのヘッダーを暗黙的に削除します ([Chromium バグ 571722](https://bugs.chromium.org/p/chromium/issues/detail?id=571722) を参照)。
 
 ## 関連情報
 
