@@ -33,7 +33,7 @@ JavaScript は、最も人気のある現代のウェブ技術のひとつです
 
 しかし、 JavaScript を使いこなせるようになるのは HTML や CSS よりも少し難しいです。小さなものから始め、小さく確実な手順で作業を続ける必要があるかもしれません。始めるにあたって、_"hello world!"_ を表示する例（[基本的なプログラミング例の標準](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)）を作りながら、基本的な JavaScript をページに追加する方法を紹介しましょう。
 
-> **Warning:** これまでこのコースに沿って進めてきていない場合は、[このサンプルコードをダウンロードして](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages)作業を進めてください。
+> **警告:** これまでこのコースに沿って進めてきていない場合は、[このサンプルコードをダウンロードして](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages)作業を進めてください。
 
 1. 最初にテストサイトに行き、 `scripts` という名前の新しいフォルダーを作成してください。それから、この scripts フォルダーの中に `main.js` という新しいファイルを作成して保存してください。
 2. `index.html` ファイルの `</body>` 終了タグの直前に新しい行で、以下の新しい要素を追加してください。
@@ -54,7 +54,7 @@ JavaScript は、最も人気のある現代のウェブ技術のひとつです
 
 !["hello world" の見出しが firefox のロゴの上にある](hello-world.png)
 
-> **Note:** 上記の説明で {{htmlelement("script")}} 要素を HTML ファイルの末尾付近に置いたのは、**ブラウザーがファイルに現れる順番でコードを読み込むからです**。
+> **メモ:** 上記の説明で {{htmlelement("script")}} 要素を HTML ファイルの末尾付近に置いたのは、**ブラウザーがファイルに現れる順番でコードを読み込むからです**。
 >
 > JavaScript が先に読み込まれ、まだ読み込まれていない HTML に影響を与えることになると、問題が生じる可能性があります。 JavaScript を HTML ページの下部に配置することは、この依存関係に対応する一つの方法です。その他の方法については、[スクリプトの読み込み方針](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#スクリプトの読み込み方針)をご覧ください。
 
@@ -64,13 +64,13 @@ JavaScript を使用して、見出しの文字列が _Hello world!_ に変更�
 
 その後、 `myHeading` 変数の {{domxref("Node.textContent", "textContent")}} プロパティ（見出しの内容を表す）の値を _Hello world!_ に設定します。
 
-> **Note:** 上の例で使用した機能はどちらも[ドキュメントオブジェクトモデル (DOM) API](/ja/docs/Web/API/Document_Object_Model) の一部であり、これを使って文書を操作することができます。
+> **メモ:** 上の例で使用した機能はどちらも[ドキュメントオブジェクトモデル (DOM) API](/ja/docs/Web/API/Document_Object_Model) の一部であり、これを使って文書を操作することができます。
 
 ## 言語の短期集中コース
 
 どのように動作するかをよりよく理解できるように、 JavaScript 言語の基本機能のいくつかを説明しましょう。これらの機能はすべてのプログラミング言語に共通しているので、これらの基本をマスターすれば、ほとんど何でもプログラムできるようになります！
 
-> **Warning:** この記事では、 JavaScript コンソールにサンプルコードを入力して、何が起こるのかを確認してみます。 JavaScript コンソールの詳細については、 [ブラウザー開発ツールを探る](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を参照してください。
+> **警告:** この記事では、 JavaScript コンソールにサンプルコードを入力して、何が起こるのかを確認してみます。 JavaScript コンソールの詳細については、 [ブラウザー開発ツールを探る](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を参照してください。
 
 ### 変数
 
@@ -80,11 +80,11 @@ JavaScript を使用して、見出しの文字列が _Hello world!_ に変更�
 let myVariable;
 ```
 
-> **Note:** 行末のセミコロンは文が終わる場所を示します。単一の行で複数の文を区切る場合には絶対に必要です。しかし、個々の文の末尾に置くことが良い習慣だと信じている人もいます。使用する場面と使用しない場合については他のルールもあります。詳しくは [Your Guide to Semicolons in JavaScript](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/) を参照してください。
+> **メモ:** 行末のセミコロンは文が終わる場所を示します。単一の行で複数の文を区切る場合には絶対に必要です。しかし、個々の文の末尾に置くことが良い習慣だと信じている人もいます。使用する場面と使用しない場合については他のルールもあります。詳しくは [Your Guide to Semicolons in JavaScript](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/) を参照してください。
 
-> **Note:** 変数にはほとんど何でも名前を付けることができますが、いくらかの制約があります([変数の命名規則についてはこの記事](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数)を参照してください)。自信がない場合は、有効かどうか[変数名を調べる](https://mothereff.in/js-variables)ことができます。
+> **メモ:** 変数にはほとんど何でも名前を付けることができますが、いくらかの制約があります([変数の命名規則についてはこの記事](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数)を参照してください)。自信がない場合は、有効かどうか[変数名を調べる](https://mothereff.in/js-variables)ことができます。
 
-> **Note:** JavaScript は大文字と小文字を区別します。 `myVariable` は `myvariable` とは異なる変数です。コードで問題が発生している場合は、大文字・小文字をチェックしてください。
+> **メモ:** JavaScript は大文字と小文字を区別します。 `myVariable` は `myvariable` とは異なる変数です。コードで問題が発生している場合は、大文字・小文字をチェックしてください。
 
 変数を宣言したら、以下のように値を割り当てることができます。
 
@@ -258,7 +258,7 @@ myVariable = 'Steve';
 
 他にも演算子はもっとたくさんありますが、今のところはこれで十分です。全体の一覧については、[式と演算子](/ja/docs/Web/JavaScript/Reference/Operators)を参照してください。
 
-> **Note:** データ型を混在させると、計算を実行するときに奇妙な結果になる可能性があるため、変数を正しく参照し、期待通りの結果を得るように注意してください。例えばコンソールに `'35' + '25'` と入力してみてください。期待通りの結果にならないのはなぜでしょうか。引用符は数字を文字列に変換するので、数字を加算するのではなく、文字列を連結する結果になったのです。 `35 + 25` を入力すれば、正しい結果が得られます。
+> **メモ:** データ型を混在させると、計算を実行するときに奇妙な結果になる可能性があるため、変数を正しく参照し、期待通りの結果を得るように注意してください。例えばコンソールに `'35' + '25'` と入力してみてください。期待通りの結果にならないのはなぜでしょうか。引用符は数字を文字列に変換するので、数字を加算するのではなく、文字列を連結する結果になったのです。 `35 + 25` を入力すれば、正しい結果が得られます。
 
 ### 条件文
 
@@ -310,7 +310,7 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **Note:** [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は `result` の値を関数内から関数の外に戻すことをブラウザーに指示し、それを利用できるようにします。これが必要な理由は、関数内で定義された変数が、その関数内でしか利用できないためです。これは変数の{{Glossary("Scope", "スコープ")}}と呼ばれています([変数のスコープのより詳しい説明](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数のスコープ)をお読みください)。
+> **メモ:** [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は `result` の値を関数内から関数の外に戻すことをブラウザーに指示し、それを利用できるようにします。これが必要な理由は、関数内で定義された変数が、その関数内でしか利用できないためです。これは変数の{{Glossary("Scope", "スコープ")}}と呼ばれています([変数のスコープのより詳しい説明](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数のスコープ)をお読みください)。
 
 ### イベント
 
