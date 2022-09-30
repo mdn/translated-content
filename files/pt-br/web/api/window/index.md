@@ -25,7 +25,7 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : O ponto de entrada para muitas características XPCOM. Algumas propriedades, por exemplo, classes, estão apenas disponíveis para código suficientemente privilegiado. Código de Web não deve usar essa propriedade.
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Retorna uma referência para o objeto console fornecendo acesso ao console debugging do navegador.
-- {{domxref("Window.content")}} and Window.\_content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
   - : Retorna uma referência para o elemento de conteúdo na janela atual. A variante obsoleta com sublinhado não está disponível a partir do conteúdo da Web.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Retorna os objetos de controlador XUL para a janela atual do crome.

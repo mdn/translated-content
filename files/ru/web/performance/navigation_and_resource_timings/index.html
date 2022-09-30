@@ -5,7 +5,7 @@ tags:
   - Производительность
 translation_of: Web/Performance/Navigation_and_resource_timings
 ---
-<p><span class="seoSummary"><strong>Тайминги навигации (Navigation timings) </strong>- это показатели, указывающие временные метки, в которые произошли события навигации. <strong>Тайминги ресурсов (Resource timings) </strong>- это детальные показатели по времени загрузки ресурсов. </span></p>
+<p><strong>Тайминги навигации (Navigation timings) </strong>- это показатели, указывающие временные метки, в которые произошли события навигации. <strong>Тайминги ресурсов (Resource timings) </strong>- это детальные показатели по времени загрузки ресурсов. </p>
 
 <p>В этой статье мы рассмотрим как <a href="/en-US/docs/Web/API/PerformanceTiming">Performance Timing API</a>, так и Performance Entry API. И хотя первый API считается устаревшим, он все ещё поддерживается всеми браузерами, он прост и о нем полезно знать. В свою очередь, Performance Entry API является более продвинутым инструментом, который позволяет не только получить более сложные данные, но и позволяет разработчику измерять другие показатели, в дополнение к данным о навигации и загрузке ресурсов.</p>
 
@@ -252,27 +252,27 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
 
 <p>Мы можем проверить протокол, который используется дл получения ресурсов:</p>
 
-<pre>let protocol = <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">timing</span>.<span class="cm-property">nextHopProtocol</span></span></span></span></pre>
+<pre>let protocol = timing.nextHopProtocol</pre>
 
-<p>В текущем случае в ответ будет <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-property"><code>h2</code> для <code>http/2</code>.</span></span></span></span></p>
+<p>В текущем случае в ответ будет <code>h2</code> для <code>http/2</code>.</p>
 
 <h3 id="Сжатие">Сжатие</h3>
 
-<p>Чтобы узнать, как эффективно сжимаются данные при передаче, мы можем разделить  <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><code><span class="cm-property">transferSize</span></code><span class="cm-property"> на <code>decodedBodySize</code></span>, а затем вычесть результат из 100%. Для текущей страницы сжатие составляет до 74%.</span></span></span></p>
+<p>Чтобы узнать, как эффективно сжимаются данные при передаче, мы можем разделить  <code>transferSize</code> на <code>decodedBodySize</code>, а затем вычесть результат из 100%. Для текущей страницы сжатие составляет до 74%.</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-keyword">let</span> <span class="cm-def">compressionSavings</span> <span class="cm-operator">=</span> <span class="cm-number">1</span> <span class="cm-operator">-</span> (<span class="cm-variable">timing</span>.<span class="cm-property">transferSize</span> <span class="cm-operator">/</span> <span class="cm-variable">timing</span>.<span class="cm-property">decodedBodySize</span>)</span></span></span></pre>
+<pre>let compressionSavings = 1 - (timing.transferSize / timing.decodedBodySize)</pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-number">Мы могли бы использовать</span></span></span></span></p>
+<p>Мы могли бы использовать</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-keyword">let</span> <span class="cm-def">compressionSavings</span> <span class="cm-operator">= </span><span class="cm-number">1</span> <span class="cm-operator">-</span> (<span class="cm-variable">timing</span>.<span class="cm-property">encodedBodySize</span> <span class="cm-operator">/</span> <span class="cm-variable">timing</span>.<span class="cm-property">decodedBodySize</span>)</span></span></span></pre>
+<pre>let compressionSavings = 1 - (timing.encodedBodySize / timing.decodedBodySize)</pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">но <code>transfersize</code> так же включает в себя байты заголовков.</span></span></span></p>
+<p>но <code>transfersize</code> так же включает в себя байты заголовков.</p>
 
-<p>Для сравнение, мы можем посмотреть на вкладку Network, где увидим, что было передано <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">22.04KB для файла, который в разархивированном виде занимает 87.24KB. </span></span></span></p>
+<p>Для сравнение, мы можем посмотреть на вкладку Network, где увидим, что было передано 22.04KB для файла, который в разархивированном виде занимает 87.24KB. </p>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><img alt="View of the bytes transferred and the size via the network tab" src="https://mdn.mozillademos.org/files/16826/bytesdownloaded.png" style="height: 107px; width: 709px;"></span></span></span></p>
+<p><img alt="View of the bytes transferred and the size via the network tab" src="https://mdn.mozillademos.org/files/16826/bytesdownloaded.png" style="height: 107px; width: 709px;"></p>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Если мы проверим вычисления, то результат получится схожим: </span></span></span><code>1 - (22.04 / 87.24) = 0.747</code>. Тайминги навигации позволяют нам получить такие данные программно.</p>
+<p>Если мы проверим вычисления, то результат получится схожим: <code>1 - (22.04 / 87.24) = 0.747</code>. Тайминги навигации позволяют нам получить такие данные программно.</p>
 
 <p>Обратите внимание, что это данные для одного единственно документа, а не для всех ресурсов вместе взятых. В то же время, длительность загрузки, события-обработчики и тайминги построения DOM / CSSOM влияют на продолжительность загрузки всего приложения, не только одного конкретного ресурса. Клиентские приложения, выполняющиеся в браузере, могут выглядеть быстрее, если данные объёмом 300КБ вы передаёте сжатыми до 100КБ, но это все не значит, что JavaScript, CSS или другие медиа-ресурсы не раздувают приложение и не делают его медленнее. Проверка уровня сжатия - это очень важно, но не менее важно проверять длительность парсинга ресурсов и время между тем, как завершён DOMContentLoaded и DOM готов к работе. Может случиться так, что время парсинга скриптов и обработка скриптами результатов в основном потоке (main thread) приведёт к зависанию интерфейса.</p>
 
@@ -308,7 +308,7 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
 
 <p>Для того, чтобы получить эти данные, выполните команду:</p>
 
-<pre class="syntaxbox"><code><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">performance</span>.<span class="cm-property">getEntriesByType</span>(<span class="cm-string">"resource"</span>)</span></span></span></code></pre>
+<pre class="syntaxbox"><code>performance.getEntriesByType("resource")</code></pre>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

@@ -18,7 +18,9 @@ El método **`get()`** devuelve un elemento específico del objeto `WeakMap`.
 
 ## Sintaxis
 
-    wm.get(key);
+```
+wm.get(key);
+```
 
 ### Parámetros
 

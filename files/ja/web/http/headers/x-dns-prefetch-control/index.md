@@ -2,6 +2,7 @@
 title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
 ---
+
 {{HTTPSidebar}}
 
 **`X-DNS-Prefetch-Control`** は HTTP のレスポンスヘッダーで、 DNS 先読み、つまりユーザーが進むことができるリンクと、画像、 CSS、 JavaScript などの文書から参照される項目の両方で、ブラウザーが事前にドメイン名の解決を実行する機能を制御します。

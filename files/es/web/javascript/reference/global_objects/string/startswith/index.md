@@ -22,7 +22,9 @@ El método **`startsWith()`** indica si una cadena de texto comienza con los car
 
 ## Sintaxis
 
-    str.startsWith(stringBuscada[, posicion])
+```
+str.startsWith(stringBuscada[, posicion])
+```
 
 ### Parámetros
 

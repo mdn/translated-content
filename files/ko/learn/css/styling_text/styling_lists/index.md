@@ -133,8 +133,6 @@ dd {
 - Rule 4 sets the same {{cssxref("line-height")}} on the paragraphs and list items — so the paragraphs and each individual list item will have the same spacing between lines. This will also help to keep the vertical rhythm consistent.
 - Rules 5 and 6 apply to the description list — we set the same `line-height` on the description list terms and descriptions as we did with the paragraphs and list items. Again, consistency is good! We also make the description terms have bold font, so they visually stand out easier.
 
-  <span id="cke_bm_126E" class="hidden"></span>
-
 ## List-specific styles
 
 Now we've looked at general spacing techniques for lists, let's explore some list-specific properties. There are three properties you should know about to start with, which can be set on {{htmlelement("ul")}} or {{htmlelement("ol")}} elements:

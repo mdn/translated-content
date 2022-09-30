@@ -2,6 +2,7 @@
 title: text-decoration-skip-ink
 slug: Web/CSS/text-decoration-skip-ink
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`text-decoration-skip-ink`** プロパティは、上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定します。

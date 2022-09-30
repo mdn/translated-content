@@ -3,6 +3,7 @@ title: OpenSearch 記述形式
 slug: Web/OpenSearch
 original_slug: Creating_OpenSearch_plugins_for_Firefox
 ---
+
 {{AddonSidebar}}
 
 **[OpenSearch 記述形式](https://github.com/dewitt/opensearch)** は、ウェブサイトが自分自身のために検索エンジンを記述し、ブラウザーやその他のクライアントアプリケーションがその検索エンジンを使用できるようにするものです。 OpenSearch は、(少なくとも) Firefox、Edge、Internet Explorer、Safari、Chrome が対応しています。(他のブラウザーのドキュメントへのリンクは[参考資料](#reference_material)をご覧ください。)

@@ -5,7 +5,7 @@ slug: Web/CSS/justify-items
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 的 **`justify-items`** 属性为所有盒中的项目定义了默认的 {{CSSxRef("justify-self")}} ， 可以使这些项目以默认方式沿适当轴线对齐到每个盒子。
+[CSS](/zh-CN/docs/CSS) 的 **`justify-items`** 属性为所有盒中的项目定义了默认的 {{CSSxRef("justify-self")}} ，可以使这些项目以默认方式沿适当轴线对齐到每个盒子。
 
 {{EmbedInteractiveExample("pages/css/justify-items.html")}}
 

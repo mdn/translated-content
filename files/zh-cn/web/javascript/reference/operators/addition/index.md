@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Operators/Addition
 original_slug: Web/JavaScript/Reference/Operators/相加
 ---
 
-{{jsSidebar("相加运算符")}}
+{{jsSidebar("Operators")}}
 
 相加运算符 (`+`) 用于对两个操作数进行相加运算，如果操作数中有一方为字符串，则该运算符将两个操作数连接成一个字符串。
 

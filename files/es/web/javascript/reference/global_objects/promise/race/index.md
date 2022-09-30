@@ -16,7 +16,9 @@ El método **`Promise.race(iterable)`** retorna una promesa que se cumplirá o n
 
 ## Sintaxis
 
-    Promise.race(iterable);
+```
+Promise.race(iterable);
+```
 
 ### Parámetros
 

@@ -15,17 +15,17 @@ slug: Web/HTTP/Link_prefetching_FAQ
 
 浏览器会查找关系类型 (rel) 为 next 或 prefetch 的 HTML{{ HTMLElement("link") }} 或 [HTTP `Link:` header](/zh-CN/docs/Web/HTTP/Headers)。下面是一个使用 link 标签的例子：
 
-```plain
+```html
 <link rel="prefetch" href="/images/big.jpeg">
 ```
 
-同样效果的使用 HTTP Link: header 的例子：
+同样效果的使用 HTTP `Link:` header 的例子：
 
 ```plain
 Link: </images/big.jpeg>; rel=prefetch
 ```
 
-Link: header 也可以通过使用 HTML meta 标签定义在 HTML 文档中：
+`Link:` header 也可以通过使用 HTML meta 标签定义在 HTML 文档中：
 
 ```plain
 <meta http-equiv="Link" content="</images/big.jpeg>; rel=prefetch">

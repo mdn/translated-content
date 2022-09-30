@@ -19,7 +19,9 @@ El método **`match()`** se usa para obtener todas las ocurrencias de una _expre
 
 ## Sintaxis
 
-    cadena.match(regexp)
+```
+cadena.match(regexp)
+```
 
 ### Parámetros
 

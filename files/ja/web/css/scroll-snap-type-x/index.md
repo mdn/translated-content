@@ -2,6 +2,7 @@
 title: scroll-snap-type-x
 slug: Web/CSS/scroll-snap-type-x
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`scroll-snap-type-x`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールコンテナーの水平軸にスナップ点がある場合に、どの程度厳密に実行されるかを定義します。

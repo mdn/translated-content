@@ -55,10 +55,10 @@ Django te ayuda a escribir software que es:
 
       Internamente, mientras ofrece opciones para casi cualquier funcionalidad que desees (distintos motores de base de datos , motores de plantillas, etc.), también puede ser extendido para usar otros componentes si es necesario.
 - Seguro
-  - : Django ayuda a los desarrolladores evitar varios errores comunes de seguridad al proveer un framework que ha sido diseñado para "hacer lo correcto" para proteger el sitio web automáticamente. Por ejemplo, Django, proporciona una manera segura de administrar cuentas de usuario y contraseñas, evitando así errores comunes como colocar informaciones de sesión en cookies donde es vulnerable (en lugar de eso las cookies solo contienen una clave y los datos se almacenan en la base de datos) o se almacenan directamente las contraseñas en un hash de contraseñas.  
-  
-      _Un hash de contraseña es un valor de longitud fija creado al enviar la contraseña a una [cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). Django puede validar si la contraseña ingresada es correcta enviándola a través de una función hash y comparando la salida con el valor hash almacenado. Sin embargo debido a la naturaleza "unidireccional" de la función, incluso si un valor hash almacenado se ve comprometido es difícil para un atacante resolver la contraseña original._  
-        
+  - : Django ayuda a los desarrolladores evitar varios errores comunes de seguridad al proveer un framework que ha sido diseñado para "hacer lo correcto" para proteger el sitio web automáticamente. Por ejemplo, Django, proporciona una manera segura de administrar cuentas de usuario y contraseñas, evitando así errores comunes como colocar informaciones de sesión en cookies donde es vulnerable (en lugar de eso las cookies solo contienen una clave y los datos se almacenan en la base de datos) o se almacenan directamente las contraseñas en un hash de contraseñas.
+
+      _Un hash de contraseña es un valor de longitud fija creado al enviar la contraseña a una [cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). Django puede validar si la contraseña ingresada es correcta enviándola a través de una función hash y comparando la salida con el valor hash almacenado. Sin embargo debido a la naturaleza "unidireccional" de la función, incluso si un valor hash almacenado se ve comprometido es difícil para un atacante resolver la contraseña original._
+
       Django permite protección contra algunas vulnerabilidades de forma predeterminada, incluida la inyección SQL, scripts entre sitios, falsificación de solicitudes entre sitios y clickjacking (consulte [Seguridad de sitios web](/es/docs/Learn/Server-side/First_steps/Website_security) para obtener más detalles sobre dichos ataques).
 - Escalable
   - : Django usa un componente basado en la arquitectura “[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)” (cada parte de la arquitectura es independiente de las otras, y por lo tanto puede ser reemplazado o cambiado si es necesario). Teniendo en cuenta una clara separación entre las diferentes partes significa que puede escalar para aumentar el tráfico al agregar hardware en cualquier nivel: servidores de cache, servidores de bases de datos o servidores de aplicación. Algunos de los sitios más concurridos han escalado a Django para satisfacer sus demandas (por ejemplo, Instagram y Disqus, por nombrar solo dos).
@@ -118,12 +118,15 @@ Las secciones de más abajo te darán una idea de la pinta que tienen estas part
 
 Un mapeador URL está normalmente almacenado en un fichero llamado **urls.py**. En el ejemplo más abajo el mapeador (`urlpatterns`) define una lista de mapeos entre _patrones_ URL específicos y sus correspondientes funciones de visualización. Si se recibe una Petición HTTP que tiene una URL que empareja un patrón específico (ej. `r'^$'`, más abajo) se realizará una llamada y se pasará la petición a la función de visualización asociada (ej. `views.index`).
 
-    urlpatterns = [
-        url(r'^$', views.index),
-        url(r'^([0-9]+)/$', views.best),
-    ]
+```python
+urlpatterns = [
+    url(r'^$', views.index),
+    url(r'^([0-9]+)/$', views.best),
+]
+```
 
 > **Nota:** Un poco de Python:
+>
 > - El objeto `urlpatterns` es una lista de funciones `url()`. En Python, las listas se definen usando using corchetes. Los elementos se separan con comas y pueden tener una [coma colgante opcional](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). Por ejemplo: `[item1, item2, item3,]`.
 > - La extraña sintaxis de los patrones se conoce como _"expresión regular"_. ¡Hablaremos sobre ellas en un artículo posterior!.
 > - El segundo argumento de `url()` es otra función a la que se llamará cuando se encuentre un patrón que coincida. La notación `views.index` indica que la función se llama `index()` y se puede encontrar en un módulo llamado `views` (es decir, dentro del fichero llamado `views.py`).
@@ -146,6 +149,7 @@ def index(request):
 ```
 
 > **Nota:** Un poco de Python:
+>
 > - [Módulos Python](https://docs.python.org/3/tutorial/modules.html) son "bibliotecas" de funciones, almacenadas en ficheros separados, que podríamos querer usar en nuestro código. Aquí importamos sólo el objeto `HttpResponse` desde el módulo `django.http` de manera que podamos usarlo en nuestra vista: `from django.http import HttpResponse`. Hay también otras formas de importar algunos o todos los objetos de un módulo.
 > - Las funciones se declaran usando la plabra clave `def` tal como se muestra arriba, con parámetros con nombre listados entre paréntesis después del nombre de la función; la línea entera termina con dos puntos. Fíjate como las líneas siguientes están todas ellas **indentadas**. La indentación es importante, ya que especifica que las líneas de código están dentro de ese bloque en particular (la indentación obligatoria es una característica clave de Python, y es una razón por la que el código de Python es tan fácil de leer.
 
@@ -175,6 +179,7 @@ class Team(models.Model):
 ```
 
 > **Nota:** Un poco de Python:
+>
 > - Python soporta "programación orientada a objetos", un estilo de programación donde organizamos nuestro código en objetos, que incluyen datos relacionados y funciones para operar con los datos. Los objetos también pueden heredarse/extenderse/derivarse de otros objetos, permitiendo que se comparta un comportamiento común entre objetos relacionados. En Python usamos la palabra clave `class` para definir el "prototipo" de un objeto. Podemos crear múltiples _instancias_ específicas de ese tipo de objeto basado en el modelo especificado en la clase.
 >
 >   Así por ejemplo, aquí tenemos una clase `Team`, que deriva de la clase `Model`. Esto significa que es un modelo y que contendrá los métodos de un modelo, pero también podemos darle características especializadas propias. En nuestro modelo definimos los campos de nuestra base que necesitaremos para almacenar nuestros datos, dándoles nombres específicos. Django usa estas definiciones, incluídos los nombres de los campos para crear la base subyacente.
@@ -183,7 +188,7 @@ class Team(models.Model):
 
 El modelo de Django proporciona una API de consulta simple para buscar en la base de datos. Esta puede buscar concidencias contra varios campos al mismo tiempo usando diferentes criterios (ej. exacto, insensible a las mayúsculas, mayor que, etc.), y puede soportar sentencias complejas (por ejemplo, puedes especificar que se busque equipos U11 que tengan un nombre de equipo que empiece por "Fr" o termine con "al").
 
-El fragmento de código de más abajo muestra una función de visualización (manejador de recursos) para presentar en pantalla todos nuestros equipos U09. La línea en negrilla muestra como podemos usar la API de consulta del modelo para filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate como este criterio se pasa como argumento a la función` filter()` con el nombre del campo y tipo de coincidencia separados por un doble guion bajo: **team_level\_\_exact**).
+El fragmento de código de más abajo muestra una función de visualización (manejador de recursos) para presentar en pantalla todos nuestros equipos U09. La línea en negrilla muestra como podemos usar la API de consulta del modelo para filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate como este criterio se pasa como argumento a la función `filter()` con el nombre del campo y tipo de coincidencia separados por un doble guion bajo: **team_level\_\_exact**).
 
 ```python
 ## filename: views.py

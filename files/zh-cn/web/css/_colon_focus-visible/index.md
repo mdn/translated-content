@@ -92,7 +92,7 @@ custom-button:focus-visible {
 
 保证视觉焦点指示对低视力对人群可见。这对在强光环境下使用屏幕的人同样有益 (比如在户外的阳光下)。 [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) 要求视觉焦点指示至少在 3 到 1。
 
-可访问的视觉焦点指示: [给你的网站一些焦点！设计有效且可用的焦点指示的一些建议。](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+可访问的视觉焦点指示：[给你的网站一些焦点！设计有效且可用的焦点指示的一些建议。](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 
 ## 规范
 

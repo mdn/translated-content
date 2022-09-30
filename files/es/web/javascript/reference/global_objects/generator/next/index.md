@@ -10,7 +10,9 @@ El método **`next()`** regresa un objeto con las propiedades `done` y `value`. 
 
 ## Sintaxis
 
-    gen.next(valor)
+```
+gen.next(valor)
+```
 
 ### Parámetros
 

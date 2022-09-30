@@ -2,6 +2,7 @@
 title: animation-delay
 slug: Web/CSS/animation-delay
 ---
+
 {{CSSRef}}
 
 **`animation-delay`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションをいつ開始するかを指定します。アニメーションは未来のある時点から、直ちに最初から、または直ちにアニメーション周期の途中から始めることができます。

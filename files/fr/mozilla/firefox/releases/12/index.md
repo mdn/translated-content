@@ -87,7 +87,7 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 ### XUL
 
-- La définition des valeurs pour l'attribut {{XULAttr("chromemargin")}} a été légèrement modifié, pour que ce soit plus facile de faire du code XUL multi-plateforme qui rend bien sur les plateformes avec des largeurs par défaut des bordures de fenêtres différentes.
+- La définition des valeurs pour l'attribut `chromemargin` a été légèrement modifié, pour que ce soit plus facile de faire du code XUL multi-plateforme qui rend bien sur les plateformes avec des largeurs par défaut des bordures de fenêtres différentes.
 
 ### XPCOM
 

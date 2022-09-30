@@ -2,6 +2,7 @@
 title: grid-row-end
 slug: Web/CSS/grid-row-end
 ---
+
 {{CSSRef}}
 
 **`grid-row-end`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド行内のグリッドアイテムの末尾位置、すなわち{{Glossary("grid areas", "グリッド領域")}}のインラインの末尾側の端を指定します。

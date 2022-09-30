@@ -45,7 +45,7 @@ El ambiente de desarrollo _Express_ incluye una instalación de _Nodejs_, el _NP
 
 _Node_ y el administrador de paquetes _NPM_ se instalan juntos desde paquetes binarios, instaladores, administradores de paquetes del sistema operativo o desde los fuentes (como se muestra en las siguientes secciónes). _Express_ es entonces instalado por NPM como una dependencia individual de sus aplicaciones web _Express_ (conjuntamente con otras librerías como motores de plantillas, controladores de bases de datos, middleware de autenticación, middleware para servir archivos estáticos, etc.)
 
-_NPM_ puede ser usado también para (globalmente) instalar el Generador de Aplicaciones de _Express_, una herramienta manual para crear la estructura de las web apps de _Express_ que siguen el [patrón MVC ](/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture). El generador de aplicaciones es opcional porque no necesita utilizar esta herramienta para crear apps que usan Express, o construir apps Express que tienen el mismo diseño arquitectónico o dependencias. No obstante estaremos usandolo, porque hace mucho más fácil, y promueve una estrucura modular de aplicación.
+_NPM_ puede ser usado también para (globalmente) instalar el Generador de Aplicaciones de _Express_, una herramienta manual para crear la estructura de las web apps de _Express_ que siguen el [patrón MVC](/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture). El generador de aplicaciones es opcional porque no necesita utilizar esta herramienta para crear apps que usan Express, o construir apps Express que tienen el mismo diseño arquitectónico o dependencias. No obstante estaremos usandolo, porque hace mucho más fácil, y promueve una estrucura modular de aplicación.
 
 > **Nota:** A diferencia de otros frameworks web , el ambiente de desarrollo no incluye un servidor web independiente. Una aplicación web _Node_/_Express_ crea y ejecuta su propio servidor web!
 
@@ -79,12 +79,12 @@ Para poder utilizar _Express_ primero tiene que instalar _Nodejs_ y el [Administ
 
 Instalar _Node_ y _NPM_ en Windows y macOS es sencillo, porque simplemente debe utilizar el instalador provisto:
 
-1.  Descargue el instalador requerido:
+1. Descargue el instalador requerido:
 
-    1.  Vaya a [https://nodejs.org/es/](https://nodejs.org/en/)
-    2.  Seleccione el boton para descargar la versión LTS que es "Recomendada la mayoría de los usuarios".
+    1. Vaya a [https://nodejs.org/es/](https://nodejs.org/en/)
+    2. Seleccione el boton para descargar la versión LTS que es "Recomendada la mayoría de los usuarios".
 
-2.  Instale Node al dar doble-click en el archivo de descarga y en seguida la instalación inicia.
+2. Instale Node al dar doble-click en el archivo de descarga y en seguida la instalación inicia.
 
 ### Ubuntu 18.04
 
@@ -115,7 +115,7 @@ The administrador de paquetes _NPM_ de _Nodejs_ también debería haber sido ins
 
 Como una prueba un poco más emocionante creemos un muy básico "básico servidor node" que simplemente imprima "Hola Mundo" en el browser cuando visite la URL correcta en él:
 
-1.  Copie el siguiente texto en un archivo llamado **holanode.js**. Este utiliza características básicas de Node (nada desde Express) y algo de sintáxis ES6:
+1. Copie el siguiente texto en un archivo llamado **holanode.js**. Este utiliza características básicas de Node (nada desde Express) y algo de sintáxis ES6:
 
     ```js
     //Load HTTP module
@@ -142,14 +142,14 @@ Como una prueba un poco más emocionante creemos un muy básico "básico servido
 
     > **Nota:** ¡No se preocupe si aún no comprende exactamente lo que está haciendo este código! ¡Explicaremos nuestro código con mayor detalle una vez que comencemos a usar Express!
 
-2.  Inicie el servidor navegando en el mismo directorio que su archivo `hellonode.js` en su símbolo del sistema, y llamando a `node` junto con el nombre del script, así:
+2. Inicie el servidor navegando en el mismo directorio que su archivo `hellonode.js` en su símbolo del sistema, y llamando a `node` junto con el nombre del script, así:
 
     ```bash
     >node hellonode.js
     Server running at http://127.0.0.1:3000/
     ```
 
-3.  Navega a la URL [http://127.0.0.1:3000 ](http://127.0.0.1:3000). Sí todo esta funciona, el navegador simplemente debe mostrar la cadena de texto "Hello World".
+3. Navega a la URL `http://127.0.0.1:3000`. Sí todo esta funciona, el navegador simplemente debe mostrar la cadena de texto "Hello World".
 
 ## Usando NPM
 
@@ -165,15 +165,15 @@ Los siguientes pasos muestran cómo puede usar NPM para descargar un paquete, gu
 
 > **Nota:** Aquí mostramos las instrucciones para buscar e instalar el paquete _Express_. Más adelante mostraremos cómo este paquete y otros ya están especificados para nosotros utilizando el _Generador de aplicaciones Express_. Esta sección se proporciona porque es útil para comprender cómo funciona NPM y qué está creando el generador de aplicaciones.
 
-1.  Primero cree un directorio para su nueva aplicación y acceda a él:
+1. Primero cree un directorio para su nueva aplicación y acceda a él:
 
     ```bash
     mkdir myapp
     cd myapp
     ```
 
-2.  Use el comando `npm init` para crear un archivo **package.json** para su aplicación. Este comando le solicita varias cosas, incluido el nombre y la versión de su aplicación y el nombre del archivo de punto de entrada inicial (de forma predeterminada, esto es **index.js**). Por ahora, solo acepte los valores predeterminados:
-3.  
+2. Use el comando `npm init` para crear un archivo **package.json** para su aplicación. Este comando le solicita varias cosas, incluido el nombre y la versión de su aplicación y el nombre del archivo de punto de entrada inicial (de forma predeterminada, esto es **index.js**). Por ahora, solo acepte los valores predeterminados:
+
     ```bash
     npm init
     ```
@@ -194,8 +194,8 @@ Los siguientes pasos muestran cómo puede usar NPM para descargar un paquete, gu
     }
     ```
 
-4.  Ahora instale Express en el directorio `myapp` y guárdelo en la lista de dependencias de su archivo package.json
-5.  
+3. Ahora instale Express en el directorio `myapp` y guárdelo en la lista de dependencias de su archivo package.json
+
     ```bash
     npm install express --save
     ```
@@ -219,7 +219,8 @@ Los siguientes pasos muestran cómo puede usar NPM para descargar un paquete, gu
     }
     ```
 
-6.  Para usar la biblioteca, llame a la función `require ()` como se muestra a continuación en su archivo **index.js**.
+4. Para usar la biblioteca, llame a la función `require ()` como se muestra a continuación en su archivo **index.js**.
+    Cree un archivo llamado **index.js** en la raíz del directorio de la aplicación "myapp" y dele el contenido que se muestra arriba.
 
     ```js
     const express = require('express')
@@ -236,15 +237,14 @@ Los siguientes pasos muestran cómo puede usar NPM para descargar un paquete, gu
 
     Este código muestra una aplicación web mínima "HelloWorld" Express. Esto importa el módulo "express" y lo usa para crear un servidor (`app`) que escucha las solicitudes HTTP en el puerto 8000 e imprime un mensaje en la consola que indica qué URL del navegador puede usar para probar el servidor. La función `app.get ()` solo responde a las solicitudes HTTP `GET` con la ruta URL especificada (`'/'`), en este caso llamando a una función para enviar nuestro mensaje Hello World! .
 
-7.  Cree un archivo llamado **index.js** en la raíz del directorio de la aplicación "myapp" y dele el contenido que se muestra arriba.
-8.  Puede iniciar el servidor llamando a node con el script en su símbolo del sistema:
+5. Puede iniciar el servidor llamando a node con el script en su símbolo del sistema:
 
     ```bash
     >node index.js
     Example app listening on port 8000
     ```
 
-9.  Navega a la URL (<http://127.0.0.1:8000/>). Sí todo esta funciona, el navegador simplemente debe mostrar la cadena de texto "Hello World".
+6. Navega a la URL (`http://127.0.0.1:8000/`). Sí todo esta funciona, el navegador simplemente debe mostrar la cadena de texto "Hello World".
 
 ### Dependencias de Desarrollo
 
@@ -280,7 +280,7 @@ Por ejemplo, para definir un script para ejecutar la dependencia de desarrollo d
 }
 ```
 
-Para explicar un poco más, `eslint src/js` es un comando que podríamos ingresar en nuestra línea de terminal/linea de comandos para ejecutar `eslint `en archivos JavaScript contenidos en el directorio `src/js` dentro de nuestro directorio de aplicaciones. Incluir lo anterior dentro del archivo package.json de nuestra aplicación proporciona un acceso directo para este comando: `lint`.
+Para explicar un poco más, `eslint src/js` es un comando que podríamos ingresar en nuestra línea de terminal/linea de comandos para ejecutar `eslint`en archivos JavaScript contenidos en el directorio `src/js` dentro de nuestro directorio de aplicaciones. Incluir lo anterior dentro del archivo package.json de nuestra aplicación proporciona un acceso directo para este comando: `lint`.
 
 Entonces podríamos ejecutar eslint usando NPM llamando a:
 
@@ -296,7 +296,9 @@ Es posible que este ejemplo no parezca más corto que el comando original, pero 
 
 La herramienta [Express Application Generator](https://expressjs.com/en/starter/generator.html) genera un "esqueleto" de la aplicación Express. Instale el generador usando NPM como se muestra (el indicador `-g` instala la herramienta globalmente para que pueda llamarla desde cualquier lugar):
 
-    npm install express-generator -g
+```
+npm install express-generator -g
+```
 
 Para crear una aplicación _Express_ llamada "helloworld" con la configuración predeterminada, navegue hasta donde desea crearla y ejecute la aplicación como se muestra:
 
@@ -304,7 +306,8 @@ Para crear una aplicación _Express_ llamada "helloworld" con la configuración 
 express helloworld
 ```
 
-> **Nota:** También puede especificar la biblioteca de plantillas para usar y una serie de otras configuraciones. Use el comando `--help` para ver todas las opciones: 
+> **Nota:** También puede especificar la biblioteca de plantillas para usar y una serie de otras configuraciones. Use el comando `--help` para ver todas las opciones:
+>
 > ```
 > express --help
 > ```

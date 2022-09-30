@@ -313,7 +313,7 @@ One very experimental feature of streams is the ability to pipe streams into one
 
 This functionality is at a very experimental stage and is subject to change, so we have no explored it too deeply as of yet.
 
-We have created an example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream <span class="pl-c">that retrieves PNG chunks out of a binary data stream.</span>
+We have created an example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.
 
 ```js
 // Fetch the original image

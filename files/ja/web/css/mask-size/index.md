@@ -2,6 +2,7 @@
 title: mask-size
 slug: Web/CSS/mask-size
 ---
+
 {{CSSRef}}
 
 **`mask-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスク画像の寸法を指定します。画像の寸法は、その本質的な比率を維持するために、完全または部分的に制約を受けることがあります。

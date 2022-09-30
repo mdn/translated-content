@@ -81,7 +81,7 @@ Grava bytes do buffer, _offset_ e _size_ determinam o tamanho da mensagem.
 Read(Byte[] buffer, int offset, int size)
 ```
 
-Lê bytes para o _buffer, offset e size_ determinam o tamanho da mensagem.\_\_
+Lê bytes para o _buffer_, _offset_ e _size_ determinam o tamanho da mensagem.
 
 Vamos estender nosso exemplo.
 

@@ -79,7 +79,7 @@ MIDDLEWARE = [
 Ya creaste tu primer usuario cuando revisamos el [sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site) en el tutorial 4 (fue un superusuario, creado con el comando `python manage.py createsuperuser`). Nuestro superusuario ya está autenticado y tiene todos los permisos, así que necesitaremos crear un usuario de prueba que represente un usuario normal del sitio. Estaremos usando el sitio de administración para crear los grupos y logins de nuestro sitio web _BibliotecaLocal_, ya que es una de las formas más rápidas de hacerlo.
 
 > **Nota:** Puedes también crear usuarios mediante programación, como se muestra abajo. Tendrías que hacerlo, por ejemplo, si estuvieras desarrollando una interfaz para permitir a los usuarios crear sus propios logins (no deberías dar a los usuarios acceso al sito de administración).
-> 
+>
 > ```python
 > from django.contrib.auth.models import User
 > 
@@ -102,21 +102,21 @@ Inicia el servidor de desarrollo y navega hasta el sitio de administracion en tu
 
 Primero vamos a crear un nuevo grupo para los miembros de nuestra biblioteca.
 
-1.  Da click en el boton **Add** "Añadir" (Enseguida de Group) para crear un nuevo grupo ; ingresa el **Nombre** "Name" para el grupo de "Library Members".![Admin site - add group](https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png)
-2.  No necesitamos de ningun permiso para el grupo , entonces solo presiona Save (Seras redirigido a una lista de los grupos disponibles).
+1. Da click en el boton **Add** "Añadir" (Enseguida de Group) para crear un nuevo grupo ; ingresa el **Nombre** "Name" para el grupo de "Library Members".![Admin site - add group](https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png)
+2. No necesitamos de ningun permiso para el grupo , entonces solo presiona Save (Seras redirigido a una lista de los grupos disponibles).
 
 Ahora vamos a crear un usuario:
 
-1.  Navega de vuelta a la pagina de inicio "home" del sitio de administracion "Admin site".
-2.  Da click en el boton **Add** "Añadir" que queda enseguida de Users "Usuarios" para abrir el cuadro de dialogo de Usuario **Add** "Añadir usuario".![Admin site - add user pt1](https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png)
-3.  Ingresa un **Nombre de Usuario** "Username", **Contraseña** "Password" y **Confirmacion de Contraseña** "Password confirmation" apropiado para tu usuario de prueba.
-4.  Presiona **Save** "Guardar" para crear el usuario.
+1. Navega de vuelta a la pagina de inicio "home" del sitio de administracion "Admin site".
+2. Da click en el boton **Add** "Añadir" que queda enseguida de Users "Usuarios" para abrir el cuadro de dialogo de Usuario **Add** "Añadir usuario".![Admin site - add user pt1](https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png)
+3. Ingresa un **Nombre de Usuario** "Username", **Contraseña** "Password" y **Confirmacion de Contraseña** "Password confirmation" apropiado para tu usuario de prueba.
+4. Presiona **Save** "Guardar" para crear el usuario.
 
     El sitio de administrador creara el nuevo usuario e inmediatamente te llevara a la pantalla de _Change user_ "Cambios del usuario" donde puedes cambiar tu **nombre de usuario** "Username" y agregar informacion para los campos opcionales del modelo de Usuario "User". Estos campos incluyen el primer nombre "first name", el apellido "last name", la direcion de correo electronico "email adress", los estados de los usuarios y sus permisos "users status and permissions" (solo el indicador **Active** "Activo" deberia ser activado). Mas abajo puedes especificar los grupos y permisos del usuario, y ver datos importantes relacionados a el usuario (ej: la fecha en que se agrego y la fecha del ultimo inicio de sesion)
 
-5.  ![Admin site - add user pt2](https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png)
-6.  En la seccion _Groups_ "Grupos", selecciona el grupo **Library Member** de la lista de grupos disponibles, y entonces presiona la **la flecha apuntando a la derecha** entre las dos cajas para moverlo dentro de la caja de _Chosen groups_ "Grupos seleccionados".![Admin site - add user to group](https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png)
-7.  Aqui no necesitamos hacer nada adicional, entonces de nuevo solo seleciona **SAVE** "Guardar", para ir a la lista de usuarios.
+5. ![Admin site - add user pt2](https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png)
+6. En la seccion _Groups_ "Grupos", selecciona el grupo **Library Member** de la lista de grupos disponibles, y entonces presiona la **la flecha apuntando a la derecha** entre las dos cajas para moverlo dentro de la caja de _Chosen groups_ "Grupos seleccionados".![Admin site - add user to group](https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png)
+7. Aqui no necesitamos hacer nada adicional, entonces de nuevo solo seleciona **SAVE** "Guardar", para ir a la lista de usuarios.
 
 ¡Esta hecho! Ahora tienes la cuenta de un miembro normal de la libreria, el cual estara disponible para ser usado en tus pruebas (una vez que hayamos implementado las paginas para permitirles iniciar sesion).
 
@@ -146,7 +146,7 @@ urlpatterns += [
 Navega hasta la URL <http://127.0.0.1:8000/accounts/> (¡Nota la barra inclinada hacia adelante!) y Django mostrara un error, diciendo que no puede encontrar esta URL, y listando todas las URL's que ha intentado. Aqui puedes ver las URL's que funcionaran, por ejemplo:
 
 > **Nota:** Usando el metodo anterior, añade las siguientes URL's con sus respectivos nombres entre corchetes, los cuales pueden ser usados para revertir "reverse" el mapeado de las URL's. No necesitas implementar nada mas, el anterior mapeado de URL's asigna automaticamente las mencionadas URL's.
-> 
+>
 > ```
 > ^accounts/login/$ [name='login']
 > ^accounts/logout/$ [name='logout']
@@ -174,6 +174,7 @@ Las URL's (y vistas "views" implicitas) que recien hemos añadido esperan encont
 Para este sitio pondremos nuestra pagina HTML en el directorio **"templates/registration/".** Este directorio debera estar en el directorio raiz de tu proyecto, es decir, el mismo directorio de las carpetas donde estan **catalog** y **locallibrary**. Por favor ahora crea las carpetas "templates" y dentro de esta "registration".
 
 > **Nota:** Your folder structure should now look like the below:
+>
 > ```
 > locallibrary (django project folder)
 >   |\_catalog
@@ -436,7 +437,7 @@ def my_view(request):
 
 > **Nota:** ¡Tú puedes hacer el mismo tipo de cosas manualmente probando con `request.user.is_authenticated`, pero el decorador es mucho más conveniente!
 
-De manera similar, la forma más fácil de restringir el acceso a los usuarios que han iniciado sesión en tus vistas basadas en clases es extender de `LoginRequiredMixin`. Necesitas declarar primeramente este `mixin `en la lista de super clases, antes de la clase de vista principal.
+De manera similar, la forma más fácil de restringir el acceso a los usuarios que han iniciado sesión en tus vistas basadas en clases es extender de `LoginRequiredMixin`. Necesitas declarar primeramente este `mixin` en la lista de super clases, antes de la clase de vista principal.
 
 ```python
 from django.contrib.auth.mixins import LoginRequiredMixin

@@ -50,13 +50,13 @@ Este artículo muestra como puedes crear un sitio web "esqueleto", que puedes lu
 
 El proceso es sencillo:
 
-1.  Usar la herramienta `django-admin` para crear la carpeta del proyecto, los ficheros de plantillas básicos y el script de gestión del proyecto (**manage.py**).
-2.  Usar **manage.py** para crear una o más _aplicaciones_.
+1. Usar la herramienta `django-admin` para crear la carpeta del proyecto, los ficheros de plantillas básicos y el script de gestión del proyecto (**manage.py**).
+2. Usar **manage.py** para crear una o más _aplicaciones_.
 
     > **Nota:** Un sitio web puede consistir de una o más secciones, ej. sitio principal, blog, wiki, area de descargas, etc. Django te recomienda encarecidamente que desarrolles estos componentes como _aplicaciones_ separadas que podrían ser reutilizadas, si se desea, en otros proyectos.
 
-3.  Registrar las nuevas aplicaciones para incluirlas en el proyecto.
-4.  Conectar el mapeador url de cada aplicación.
+3. Registrar las nuevas aplicaciones para incluirlas en el proyecto.
+4. Conectar el mapeador url de cada aplicación.
 
 Para el [sitio web de la BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) la carpeta del sitio y la carpeta de su proyecto se llamarán _locallibrary_, y tendremos sólo una aplicación llamada _catalog_. El nivel más alto de la estructura de carpetas quedará por tanto como sigue:
 
@@ -252,10 +252,12 @@ Deja el primer parámetro de la función path vacío, para implicar '/'. Si escr
 
 _La comprobación del sistema encontró algunos problemas:_
 
-    WARNINGS:
-    ?: (urls.W002) Tu patrón URL '/' tiene una ruta que empieza con una '/'.
-    Quita esta barra invertida ya que es inncesaria.
-    Si este patrón figura como destino en un include(), asegúrate que el patrón include() tiene un '/' final.
+```
+WARNINGS:
+?: (urls.W002) Tu patrón URL '/' tiene una ruta que empieza con una '/'.
+Quita esta barra invertida ya que es inncesaria.
+Si este patrón figura como destino en un include(), asegúrate que el patrón include() tiene un '/' final.
+```
 
 Django no sirve ficheros estáticos como CSS, JavaScript e imágenes por defecto, pero puede ser útil para el servidor web de desarrollo hacerlo así mientras creas tu sitio. Como adición final a este mapeador URL, puedes habilitar el servicio de ficheros estáticos durante el desarrollo añadiendo las líneas siguientes.
 

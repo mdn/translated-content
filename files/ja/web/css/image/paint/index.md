@@ -3,6 +3,7 @@ title: paint()
 slug: Web/CSS/image/paint
 original_slug: Web/CSS/image/paint()
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`paint()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 PaintWorklet で生成された {{cssxref("&lt;image&gt;")}} の値を定義します。
