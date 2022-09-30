@@ -3,7 +3,9 @@ title: box-align
 slug: Web/CSS/box-align
 ---
 
-{{CSSRef}}{{Non-standard_header}}{{warning("このプロパティは、当初の CSS Flexible Box Layout Module の草案段階のものでしたが、より新しい標準で置き換えられました。")}}
+{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+
+> **警告:** このプロパティは、当初の CSS Flexible Box Layout Module の草案段階のものでしたが、より新しい標準で置き換えられました。
 
 **`box-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、交差軸方向に子要素をどう整列させるかを定義します。ボックス内に余分な空間がある場合にかぎり、その効果を確認することができます。
 
