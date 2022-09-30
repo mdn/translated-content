@@ -89,7 +89,7 @@ slug: Web/HTML/Element/meta
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-> **Note:** {{htmlattrxref("name", "meta")}} 属性は `<meta>` 要素において特別な意味を持ちます。また、 [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性は、 `<meta>` 要素にすでに {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}}, {{htmlattrxref("charset", "meta")}} のいずれかがある場合は設定してはいけません。
+> **メモ:** {{htmlattrxref("name", "meta")}} 属性は `<meta>` 要素において特別な意味を持ちます。また、 [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性は、 `<meta>` 要素にすでに {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}}, {{htmlattrxref("charset", "meta")}} のいずれかがある場合は設定してはいけません。
 
 - {{htmlattrdef("charset")}}
   - : この属性は、文書の文字エンコーディングを宣言します。この属性が存在する場合、その値は大文字小文字の区別なく "`utf-8`" という ASCII 文字列と一致する必要があります。 UTF-8 が HTML5 文書で唯一の有効なエンコーディングだからです。文字エンコーディングを宣言する `<meta>` 要素は、文書の最初の 1024 バイトの中に完全に収まっている必要があります。
@@ -120,7 +120,7 @@ slug: Web/HTML/Element/meta
       - {{htmlattrxref("content", "meta")}} 属性に正の整数が 1 つだけ含まれている場合は、ページを再読み込みするまでの秒数。
       - {{htmlattrxref("content", "meta")}} 属性に正の整数と、その後に文字列 '`;url=`' と有効な URL がある場合は、別のページにリダイレクトするまでの秒数。
 
-      > **Note:**
+      > **警告:**
       >
       > `refresh` の値で設定されたページは、時間間隔が短すぎになるという危険性があります。画面の内側から読み上げるような支援技術を利用している人は、自動的にリダイレクトされる前にページの内容を読み、理解することができないかもしれません。また、弱視の人にとっても、突然に予告なくページ内容が更新されると、混乱させる可能性があります。
       >
