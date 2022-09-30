@@ -147,7 +147,103 @@ Los medios tempo-dependientes se refieren a multimedia con una duración (audio 
 
 Esta pauta hace referencia a la posibilidad de que todo contenido pueda ser consumido de distintas formas, adaptándose a las necesidades del usuario.
 
-««Tabla»»
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="col">Criterios de éxito</th>
+      <th scope="col">Cómo cumplir</th>
+      <th scope="col">Recursos prácticos</th>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1">1.3.1 Info and relationships (A)</td>
+      <td>
+        <p>Any content structure — or visual relationship made between content — can also be determined
+          programmatically, or be inferred from text description. The main situations in which this is
+          relevant are:</p>
+        <ul>
+          <li>Text labels and the form elements they describe are associated unambiguously using the
+            {{htmlelement("label")}} element, which can be picked up by screenreaders, etc.</li>
+          <li>Image alt text — content images should have text available that clearly describes the image's
+            contents, which can be programmatically associated with it (e.g. <code>alt</code> text), or
+            otherwise is easy to associate (e.g. describes it and is sat right next to it). This should
+            means that the full meaning can still be inferred even if you can't see the image.</li>
+          <li>Lists — if the order of list items is important, and ordered list should be used
+            ({{htmlelement("ol")}}).</li>
+        </ul>
+      </td>
+      <td>The whole of
+        <p><a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> is packed
+          with information about this, but you should particularly refer to <a
+            href="/en-US/docs/Learn/Accessibility/HTML#Good_semantics">Good semantics</a>, <a
+            href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a>, and <a
+            href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1">1.3.2 Meaningful content sequence (A)</td>
+      <td>A sensible, logical reading order should be easy to determine for any content, even if it is visually
+        presented in an unusual way. The order should be made obvious by use of correct semantic elements (e.g.
+        headings, paragraphs), with CSS being used to create any unusual layout styles, irrespective of the
+        markup.</td>
+      <td>Again, refer to <a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a>.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1">1.3.3 Sensory characteristics (A)</td>
+      <td>
+        <p>Instructions for operating controls or understanding content do not rely on a single sense — this may
+          prove inaccessible to people with a disability related to that sense, or a device that does not
+          support that sense. So for example:</p>
+        <ul>
+          <li>"Click the round button to continue" — The button should be clearly labelled so that it is
+            obvious that it is the button you need to press. If there are multiple buttons, make sure there
+            are all clearly labelled to distinguish their function.</li>
+          <li>"Listen to the audio instructions for guidance" — This is obviously problematic — audio will be
+            inaccessible to those with heading impairments, whereas text can be read, but also spoken by a
+            screenreader if required.</li>
+          <li>"Swipe from the right hand side of the screen to reveal the menu" — some users might not be able
+            to swipe the screen, either due to disability or because their device does not support touch. An
+            alternative should be provided, such as a keyboard shortcut or button that can be activated by
+            keyboard or other means.</li>
+        </ul>
+        <div class="note">
+          <p><strong>Note</strong>: Conveying instructions solely by color is related, but covered in a
+            different guideline — 1.4.1.</p>
+        </div>
+      </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td colspan="1">1.3.4 Orientation (AA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added
+            in 2.1</a></em></td>
+      <td>Content does not restrict its view and operation to a single display orientation, such as portrait or
+        landscape, unless a specific display orientation is essential.</td>
+      <td>
+        <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">Understanding Orientation</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1">1.3.5 Identify Input Purpose (AA) <em><a
+            href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+      <td>
+        <p> </p>
+        <p>Follow the list of <a href="https://www.w3.org/TR/WCAG21/#input-purposes">53 input fields</a> to
+          programmatically identify the purpose of a field. </p>
+      </td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html">Understanding Identify
+          Input Purpose</a></td>
+    </tr>
+    <tr>
+      <td colspan="1">1.3.6 Identify Purpose (AAA) <em><a
+            href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+      <td>In content implemented using markup languages, the purpose of User Interface Components, icons, and
+        regions can be programmatically determined.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-purpose.html">Understanding Identify
+          Purpose</a></td>
+    </tr>
+  </tbody>
+</table>
 
 > **Nota:** Ver también la descripción de WCAG: [Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.](https://www.w3.org/TR/WCAG21/#adaptable)
 
@@ -155,6 +251,149 @@ Esta pauta hace referencia a la posibilidad de que todo contenido pueda ser cons
 
 Esta pauta tiene como objetivo la creación de contenido que sea fácil de diferenciar del fondo y otras decoraciones. El ejemplo clásico es sobre color (tanto en relación al contraste como utilizarlo para transmitir información), pero aplica también en otras situaciones.
 
-««Tabla»»
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Criterios de éxito</th>
+      <th scope="col">Cómo cumplir</th>
+      <th scope="col">Recursos prácticos</th>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1">1.4.1 Use of color (A)</td>
+      <td>
+        <p>Color should not be solely relied upon to convey information — for example, in forms you should never mark
+          required fields purely with a color (like red). Instead (or as well as), something like an asterisk with a
+          label of "required" would be more appropriate.</p>
+      </td>
+      <td>See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color
+          contrast</a> and <a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form#Multiple_labels">Multiple
+          labels</a>.</td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.2 Audio controls (A)</td>
+      <td>For any audio that plays for longer than three seconds, accessible controls should be provided to play and
+        pause the audio/video, and mute/adjust volume.</td>
+      <td>Use native <code>&lt;button&gt;</code>s to provide accessible keyboard controls, as shown in <a
+          href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics">Video player
+          syling basics</a>.</td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.3 Minimum contrast (AA)</td>
+      <td>
+        <p>The color contrast between background and foreground content should be at a minimum level to ensure
+          legibility:</p>
+        <ul>
+          <li>Text and its background should have a contrast ratio of at least 4.5.1.</li>
+          <li>Heading (or just larger) text should have a ratio of at least 3.1. Larger text is defined as at least
+            18pt, or 14pt bold.</li>
+        </ul>
+      </td>
+      <td>See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color
+          contrast</a>.</td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.4 Resize text (AA)</td>
+      <td>The page should be readable and usable when the text size is doubled. This means that designs should be
+        responsive, so that when the text size is increased, the content is still accessible.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.5 Images of text (AA)</td>
+      <td>Images should NOT be used to present content where text would do the job. For example, if an image is mostly
+        textual, it could be represented using text as well as images.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.6 Enhanced contrast (AAA)</td>
+      <td>
+        <p>This follows, and builds on, criterion 1.4.3.</p>
+        <ul>
+          <li>Text and its background should have a contrast ratio of at least 7.1.</li>
+          <li>Heading (or just larger) text should have a ratio of at least 4.5.1. Larger text is defined as at least
+            18pt, or 14pt bold.</li>
+        </ul>
+      </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.7 Low or no background audio (AAA)</td>
+      <td>Prerecorded audio recordings that primarily feature speech should have minimal background noise, so the
+        content can be easily understood.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.8 Visual presentation (AAA)</td>
+      <td>
+        <p>For text content presentation, the following should be true:</p>
+        <ul>
+          <li>Foreground and background colors should be user-selectable.</li>
+          <li>Text blocks should be no wider than 80 characters (or glyphs), for maximum readability.</li>
+          <li>Text should not be fully justified (e.g. <code>text-align: justify;</code>)</li>
+          <li>line height should be at least 1.5 times the text size within paragraphs (e.g.
+            <code>line-height: 1.5;</code>), and at least 2.25 times the text size between paragraphs (e.g.
+            <code>padding: 2.25rem;</code>)</li>
+          <li>When the text size is doubled, the content should not need to be scrolled.</li>
+        </ul>
+      </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.9 Images of text (No Exception) (AAA)</td>
+      <td>Text should not be presented as part of an image unless it is purely decoration (i.e. it does not convey any
+        content), or cannot be presented in any other way.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.10 Reflow (AA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in
+            2.1</a></em></td>
+      <td>
+        <ul>
+          <li>No horizontal scrolling for right-to-left languages (like English) or left-to-right languages (like
+            Arabic) </li>
+          <li>No vertical scrolling for top-to-bottom languages (like Japanese)</li>
+          <li>Except for parts of the content which require two-dimensional layout for usage or meaning (like a large
+            data table).</li>
+        </ul>
+      </td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html">Understanding Reflow</a></td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.11 Non-Text Contrast(AA) <em><a
+            href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+      <td>Minimum color contrast ratio of 3 to 1 for user interface components and graphical objects. </td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">Understanding Non-Text
+          Contrast</a></td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.12 Text Spacing (AA) <em><a
+            href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+      <td>
+        <p>No loss of content or functionality occurs when the following styles are applied: </p>
+        <ul>
+          <li>Line height (line spacing) to at least 1.5 times the font size;</li>
+          <li>Spacing following paragraphs to at least 2 times the font size;</li>
+          <li>Letter spacing (tracking) to at least 0.12 times the font size;</li>
+          <li>Word spacing to at least 0.16 times the font size.</li>
+        </ul>
+      </td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html">Understanding Text Spacing</a></td>
+    </tr>
+    <tr>
+      <td colspan="1">1.4.13 Content on Hover or Focus (AA) <em><a
+            href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+      <td>
+        <p>Additional content appear and disappear in coordination with hover and keyboard focus, this success criterion
+          specifies three conditions that must be met:</p>
+        <ul>
+          <li>dismissable (can be closed/removed)</li>
+          <li>hoverable (the additional content does not disappear when the pointer is over it) </li>
+          <li>persistent (the additional content does not disappear without user action)</li>
+        </ul>
+      </td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html">Understanding Content on
+          Hover or Focus</a></td>
+    </tr>
+  </thead>
+</table>
 
 > **Nota:** Ver también la descripción de WCAG: [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG21/#distinguishable)[.](https://www.w3.org/TR/WCAG21/#distinguishable)
