@@ -31,7 +31,7 @@ slug: Web/API/PointerEvent/PointerEvent
     - `pointerType` — インスタンスの {{domxref("PointerEvent.pointerType")}} の値を設定する {{domxref("DOMString")}} 型のオプションで、デフォルトは `""` です。
     - `isPrimary` — インスタンスの {{domxref("PointerEvent.isPrimary")}} の値を設定する {{jsxref("Boolean")}} 型のオプションで、デフォルトは `false` です。
 
-    > **Note:** `PointerEventInit` ディクショナリは、{{domxref("MouseEvent.MouseEvent","MouseEvent")}}、{{domxref("UIEvent.UIEvent", "UIEventInit")}}、および {{domxref("Event.Event", "EventInit")}} ディクショナリからのフィールドも受け入れます。
+    > **メモ:** `PointerEventInit` ディクショナリは、{{domxref("MouseEvent.MouseEvent","MouseEvent")}}、{{domxref("UIEvent.UIEvent", "UIEventInit")}}、および {{domxref("Event.Event", "EventInit")}} ディクショナリからのフィールドも受け入れます。
 
 ## 例
 

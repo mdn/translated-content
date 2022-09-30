@@ -6,7 +6,7 @@ slug: Web/API/PushSubscription/getKey
 
 {{domxref("PushSubscription")}} インターフェースの `getKey()` メソッドは、サーバに送信されてプッシュメッセージデータを暗号化するために使用される、クライアントパブリックキーを表す {{domxref("ArrayBuffer")}} を返します。
 
-> **Note:** **ノート**： 現在、Firefox のみの実装であり、まだ　 Push API 仕様には含まれていません。
+> **メモ:** 現在、Firefox のみの実装であり、まだ　 Push API 仕様には含まれていません。
 
 ## 構文
 

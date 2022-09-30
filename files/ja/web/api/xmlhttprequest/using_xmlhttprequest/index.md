@@ -24,9 +24,9 @@ oReq.send();
 
 `XMLHttpRequest` によって作成されたリクエストは、非同期または同期のいずれかの方法でデータを取得することが可能です。リクエストをどちらの方法で行うかは、 {{domxref("XMLHttpRequest.open()")}} メソッドの `async` 引数 (第 3 引数) で指示できます (オプション)。このプロパティを `true` に指定するか指定しなければ `XMLHttpRequest` は非同期で処理され、それ以外だと同期的に扱われます。これら二つの種類のリクエストに関する詳細および使用例は、[同期および非同期リクエスト](/ja/docs/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)のページを参照してください。ウェブワーカー以外では同期リクエストを使用しないでください。
 
-> **Note:** Gecko 30.0 {{ geckoRelease("30.0") }} から、メインスレッドにおける同期リクエストはユーザーの使い勝手に悪影響を与えるため、非推奨になりました。
+> **メモ:** Gecko 30.0 {{ geckoRelease("30.0") }} から、メインスレッドにおける同期リクエストはユーザーの使い勝手に悪影響を与えるため、非推奨になりました。
 
-> **Note:** コンストラクター関数 `XMLHttpRequest` は XML 文書に限定されていません。 **"XML"** で始まっているのは、これが作成されたときに非同期データ交換に使用されていた主要な形式が XML であったからです。
+> **メモ:** コンストラクター関数 `XMLHttpRequest` は XML 文書に限定されていません。 **"XML"** で始まっているのは、これが作成されたときに非同期データ交換に使用されていた主要な形式が XML であったからです。
 
 ## レスポンスの取り扱い
 
@@ -41,7 +41,7 @@ HTML Living Standard 仕様書で定義されている {{domxref("XMLHttpRequest
 3. {{domxref("XMLSerializer")}} を使って **DOM ツリーを文字列やファイルに**シリアライズする。
 4. 事前に XML 文書の中身が常に分かっている場合は {{jsxref("RegExp")}} を使うこともできます。改行を `RegExp` でスキャンする場合に、改行を除去した方がよく見えることもありますが、 XML 文書が少しでも変更されると、メソッドは失敗しがちなため、このメソッドは「最後の手段」です。
 
-> **Note:** `XMLHttpRequest` は {{domxref("XMLHttpRequest.responseXML", "responseXML")}} プロパティを使用することによって、 HTML を解釈できるようになりました。この方法について学ぶには、 [XMLHttpRequest での HTML](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) についての記事をお読みください。
+> **メモ:** `XMLHttpRequest` は {{domxref("XMLHttpRequest.responseXML", "responseXML")}} プロパティを使用することによって、 HTML を解釈できるようになりました。この方法について学ぶには、 [XMLHttpRequest での HTML](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) についての記事をお読みください。
 
 ### HTML 文書を含む responseText プロパティの処理
 
@@ -129,7 +129,7 @@ function transferCanceled(evt) {
 
 3-6 行目で `XMLHttpRequest` を使ってデータ転送を行うときに送られる色々なイベントへのためのイベントリスナーを追加しています。
 
-> **Note:** イベントリスナーはリクエストの `open()` を呼び出す前に追加する必要があります。そうしないと `progress` イベントは発火しません。
+> **メモ:** イベントリスナーはリクエストの `open()` を呼び出す前に追加する必要があります。そうしないと `progress` イベントは発火しません。
 
 進捗のイベントハンドラーは、この例では `updateProgress()` 関数で指定され、全転送バイト数と、これまで転送されたバイト数をイベントの `total` と `loaded` フィールドで受け取ります。しかし、`lengthComputable` フィールドが false なら、全体の長さは不明で、ゼロになります。
 
@@ -146,11 +146,11 @@ oReq.upload.addEventListener("abort", transferCanceled);
 oReq.open();
 ```
 
-> **Note:** 進捗イベントは `file:` プロトコルでは利用できません。
+> **メモ:** 進捗イベントは `file:` プロトコルでは利用できません。
 
-> **Note:** {{Gecko("9.0")}} から、進捗イベントは受け取ったデータチャンクごとに起こり、最後のパケットを受け取って進捗イベントが発火する前に接続が閉じた場合のチャンクも含まれます。この場合、進捗イベントはそのパケットのロードイベントが起きた時に自動的に発火します。これで「進捗」イベントをウォッチするだけで安定した進捗を監視できます。
+> **メモ:** {{Gecko("9.0")}} から、進捗イベントは受け取ったデータチャンクごとに起こり、最後のパケットを受け取って進捗イベントが発火する前に接続が閉じた場合のチャンクも含まれます。この場合、進捗イベントはそのパケットのロードイベントが起きた時に自動的に発火します。これで「進捗」イベントをウォッチするだけで安定した進捗を監視できます。
 
-> **Note:** {{Gecko("12.0")}} 以降、"moz-blob" の `responseType` で進捗イベントが呼ばれた場合、レスポンスの値はこれまで受け取ったデータを含む {{domxref("Blob")}} となります。
+> **メモ:** {{Gecko("12.0")}} 以降、"moz-blob" の `responseType` で進捗イベントが呼ばれた場合、レスポンスの値はこれまで受け取ったデータを含む {{domxref("Blob")}} となります。
 
 ロードを終える 3 つの条件 (`abort`, `load`, か `error`) を `loadend` イベントで検出することもできます:
 
@@ -528,11 +528,11 @@ print_r($_FILES);
 AJAXSubmit(myForm);
 ```
 
-> **Note:** このフレームワークはファイルのアップロード送信に {{domxref("FileReader")}} API を使っています。これは最近の API であり、 IE9 以下では実装されていません。このため、 AJAX のみのアップロードは**実験的なテクニック**と考えられています。バイナリーファイルをアップロードする必要がなければ、このフレームワークはたいていのブラウザーでうまく動作します。
+> **メモ:** このフレームワークはファイルのアップロード送信に {{domxref("FileReader")}} API を使っています。これは最近の API であり、 IE9 以下では実装されていません。このため、 AJAX のみのアップロードは**実験的なテクニック**と考えられています。バイナリーファイルをアップロードする必要がなければ、このフレームワークはたいていのブラウザーでうまく動作します。
 
-> **Note:** バイナリコンテンツを送信する場合、 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 又は {{domxref("Blob", "Blobs")}} を使用して {{domxref("XMLHttpRequest.send()", "send()")}} メソッド及び、できれば `FileReader` API の {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} メソッドと組み合わせて送信するのが最良の方法です。しかし、このスクリプトのねらいは[文字列化可能](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)な生データを扱うことであり、 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} メソッドに、`FileReader` API の {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} メソッドを組み合わせて使用しました。このように、上記のスクリプトは小さいファイルを扱うときのみ意味を持ちます。バイナリコンテンツをアップロードするのでなければ、代わりに `FormData` API を使用することを検討してください。
+> **メモ:** バイナリコンテンツを送信する場合、 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 又は {{domxref("Blob", "Blobs")}} を使用して {{domxref("XMLHttpRequest.send()", "send()")}} メソッド及び、できれば `FileReader` API の {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} メソッドと組み合わせて送信するのが最良の方法です。しかし、このスクリプトのねらいは[文字列化可能](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)な生データを扱うことであり、 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} メソッドに、`FileReader` API の {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} メソッドを組み合わせて使用しました。このように、上記のスクリプトは小さいファイルを扱うときのみ意味を持ちます。バイナリコンテンツをアップロードするのでなければ、代わりに `FormData` API を使用することを検討してください。
 
-> **Note:** 標準外の `sendAsBinary` メソッドは Gecko 31 {{geckoRelease(31)}} から非推奨と扱われるようになり、まもなく削除されます。その代わりに標準の `send(Blob data)` メソッドを使用できます。
+> **メモ:** 標準外の `sendAsBinary` メソッドは Gecko 31 {{geckoRelease(31)}} から非推奨と扱われるようになり、まもなく削除されます。その代わりに標準の `send(Blob data)` メソッドを使用できます。
 
 ### FormData オブジェクトの使用
 
@@ -662,7 +662,7 @@ function AJAXSubmit (oFormElement) {
 </html>
 ```
 
-> **Note:** 前述のように、 **{{domxref("FormData")}} オブジェクトは[文字列化できる](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) オブジェクトではありません**。送信データを文字列化したい場合、[前の*純粋な* AJAX の例](#A_little_vanilla_framework)を使ってください。また、この例では `file` {{ HTMLElement("input") }} フィールドがいくつかあり、 **`FormData` API を使ってフォームを送信するときに {{domxref("FileReader")}} API を使う必要もありません**。ファイルは自動的に読み込まれてアップロードされます。
+> **メモ:** 前述のように、 **{{domxref("FormData")}} オブジェクトは[文字列化できる](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) オブジェクトではありません**。送信データを文字列化したい場合、[前の*純粋な* AJAX の例](#A_little_vanilla_framework)を使ってください。また、この例では `file` {{ HTMLElement("input") }} フィールドがいくつかあり、 **`FormData` API を使ってフォームを送信するときに {{domxref("FileReader")}} API を使う必要もありません**。ファイルは自動的に読み込まれてアップロードされます。
 
 ## 最終更新日を取得する
 

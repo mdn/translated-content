@@ -44,7 +44,7 @@ When the observer (callback) is invoked, the callback's parameters include a _{{
 
 Besides the {{domxref("PerformanceObserver","PerformanceObserver's")}} interface's {{domxref("PerformanceObserver.observe","observe()")}} method (which is used to register the {{domxref("PerformanceEntry.entryType","entry types")}} to _observe_), the {{domxref("PerformanceObserver")}} interface also has a {{domxref("PerformanceObserver.disconnect","disconnect()")}} method that stops an observer from receiving further events.
 
-> **Note:** Performance observers were added to the `Level 2` version of the standard and were not widely implemented.
+> **メモ:** Performance observers were added to the `Level 2` version of the standard and were not widely implemented.
 
 ## 実装状況
 

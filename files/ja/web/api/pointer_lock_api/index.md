@@ -97,7 +97,7 @@ function lockError(e) {
 }
 ```
 
-> **Note:** Firefox 50 まで、上記のイベントは `moz` 接頭辞を付加していました。
+> **メモ:** Firefox 50 まで、上記のイベントは `moz` 接頭辞を付加していました。
 
 ## Mouse イベントの拡張
 
