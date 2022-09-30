@@ -27,8 +27,8 @@ original_slug: Web/Accessibility/ARIA/forms/Etiquetas_complejas
 
 <p>Tanto <strong>aria-labelledby</strong> y <strong>aria-describedby</strong> se especifican en el elemento de formulario   que debe etiquetarse, por ejemplo un &lt;input&gt;. En ambos casos, la etiqueta for/label para ligar a los controles que puedan existir son anuladas por <strong>aria-labelledby</strong>. Si en una página se provee <strong>aria-labelledby</strong>, se debería colocar también una etiqueta para también soportar navegadores antiguos que no tengan aún soperte ARIA. Con Firefox 3, los usuarios ciegos tendrán automáticamente mejor accesibilidad con el nuevo atributo, pero los usuarios de navadores antiguos de esta forma no son dejados en la oscuridad.</p>
 
-<p>Ejemplo:</p>
-<input> <span id="labelShutdown">apagar computadora después de </span> <input> <span id="shutdownUnit"> minutos</span>
+<h4>Ejemplo:</h4>
+{{EmbedLiveSample('')}}
 
 <pre class="brush: html">&lt;input aria-labelledby="etiquetaApagado tiempoApagado unidadApagado" type="checkbox" /&gt;
 &lt;span id="etiquetaApagado"&gt;Apagar computadora después de &lt;/span&gt;
