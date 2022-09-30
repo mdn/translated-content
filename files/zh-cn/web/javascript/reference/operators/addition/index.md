@@ -1,5 +1,5 @@
 ---
-title: 相加运算符 (+)
+title: 相加运算符（+）
 slug: Web/JavaScript/Reference/Operators/Addition
 ---
 
@@ -70,7 +70,7 @@ false + false // 0
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - [Subtraction operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
 - [Division operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
