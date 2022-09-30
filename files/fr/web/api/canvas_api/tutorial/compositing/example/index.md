@@ -68,7 +68,7 @@ window.onload = () => {
         g: 0.33,
         b: 0.33
     };
-    // redimensionne le canvas
+    // redimensionne le canevas
     canvas1.width = width;
     canvas1.height = height;
     canvas2.width = width;
