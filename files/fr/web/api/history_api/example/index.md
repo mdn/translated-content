@@ -4,6 +4,7 @@ slug: Web/API/History_API/Example
 translation_of: Web/API/History_API/Example
 original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur/Example
 ---
+
 Voici un exemple de site web AJAX composé uniquement de trois pages (_page_un.php_, *page_deux.php* et *page_trois.php*). Pour tester cet exemple, merci de créer les fichiers suivants :
 
 **page_un.php**:

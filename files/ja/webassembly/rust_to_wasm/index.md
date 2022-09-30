@@ -4,6 +4,7 @@ slug: WebAssembly/Rust_to_wasm
 l10n:
   sourceCommit: 51f2cde58fff4a44242577b2540bdfdfc525dda4
 ---
+
 {{WebAssemblySidebar}}
 
 Rust のコードがあれば、それを [WebAssembly](/ja/docs/WebAssembly) (wasm) にコンパイルすることができます。このチュートリアルでは Rust プロジェクトをコンパイルして既存のウェブアプリケーションで使用するために必要なことについて説明します。
@@ -27,7 +28,7 @@ Rust と WebAssembly には、主に 2 つの用途があります。
 
 [Install Rust](https://www.rust-lang.org/install.html) ページに行って指示に従い、Rust をインストールしてください。これによって "rustup" と呼ばれる複数のバージョンの Rust を管理できるようにするツールがインストールされます。既定の設定では、通常の Rust 開発で使いたいであろう最新の安定版 Rust リリースをインストールします。rustup は Rust コンパイラーの `rustc` や Rust のパッケージマネージャーの `cargo` や Rust の標準ライブラリーの `rust-std` やいくつかの助けになるドキュメント — `rust-docs` をインストールします。
 
-> **Note:** **メモ**: インストール後のメモで、cargo の `bin` ディレクトリーをシステムの `PATH` に追加する必要があるという点に注意してください。これは自動的に追加されるはずですが、有効にするためにターミナルを再起動する必要があります。
+> **Note:**  インストール後のメモで、cargo の `bin` ディレクトリーをシステムの `PATH` に追加する必要があるという点に注意してください。これは自動的に追加されるはずですが、有効にするためにターミナルを再起動する必要があります。
 
 ### wasm-pack
 

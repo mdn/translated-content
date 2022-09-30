@@ -2,6 +2,7 @@
 title: 使用 channel messaging
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 [Channel Messaging API](/zh-CN/docs/Web/API/Channel_Messaging_API) 可以让运行在不同浏览器上下文中的独立脚本，连接到同一份文档（比如：两个 IFrame, 或者主文档和一个 IFrame, 或者使用同一个 {{domxref("SharedWorker")}} 的两份文档），并直接通信，通过每端一个 port 的双向频道（或管道）在两者之间传递消息。

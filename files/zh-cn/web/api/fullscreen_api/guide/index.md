@@ -2,6 +2,7 @@
 title: 全屏指南
 slug: Web/API/Fullscreen_API/Guide
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 本文主要说明如何使用全屏 API 将给定元素设置为全屏模式，以及如何检测浏览器何时进入或退出全屏模式。
@@ -41,7 +42,7 @@ if (elem.requestFullscreen) {
 }
 ```
 
-另一方面，如果你尝试在在 Gecko 上模拟 WebKit 的行为，你需要把你想要呈现的元素放在另一个实际调整为全屏幕的元素中， 并使用 CSS 规则调整内部的元素，从而达到你想要的样式。
+另一方面，如果你尝试在在 Gecko 上模拟 WebKit 的行为，你需要把你想要呈现的元素放在另一个实际调整为全屏幕的元素中，并使用 CSS 规则调整内部的元素，从而达到你想要的样式。
 
 ### 通知
 

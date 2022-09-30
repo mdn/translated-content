@@ -2,6 +2,7 @@
 title: 2D maze game with device orientation
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 ---
+
 {{GamesSidebar}}
 
 在本教程中，我们将介绍构建 HTML5 移动游戏的过程。本游戏使用 [Device Orientation](/zh-CN/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) 和 [Vibration](/zh-CN/docs/Web/Guide/API/Vibration) **APIs** 来增强游戏玩法，并使用 [Phaser](http://phaser.io/) 框架构建。为了充分理解本教程建议您先学习基础的 JavaScript 知识。
@@ -26,7 +27,7 @@ slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 
 - `img`: 我们将在游戏中使用的所有图片。
 - `src`:定义了游戏中所有源代码的 JavaScript 文件。
-- `audio:` 在游戏中使用的声音文件。
+- `audio`: 在游戏中使用的声音文件。
 
 ## Setting up the Canvas
 

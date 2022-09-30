@@ -2,6 +2,7 @@
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 ---
+
 {{JSRef}}
 
 **`Function` 建構函式**可建立一個新的 `Function` 物件。在 JavaScript 中，所有的函式實際上都是 `Function` 物件。

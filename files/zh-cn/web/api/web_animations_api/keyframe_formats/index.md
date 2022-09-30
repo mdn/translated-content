@@ -2,6 +2,7 @@
 title: 关键帧 (Keyframe) 格式
 slug: Web/API/Web_Animations_API/Keyframe_Formats
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
 {{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect()")}}, 和 {{domxref("KeyframeEffect.setKeyframes()")}} 都接受格式为一组关键帧的对象， 这种格式有以下几种选项。
@@ -105,7 +106,7 @@ slug: Web/API/Web_Animations_API/Keyframe_Formats
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.animate")}}
+{{Compat}}
 
 ## 相关推荐
 

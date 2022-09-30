@@ -2,6 +2,7 @@
 title: Request.clone()
 slug: Web/API/Request/clone
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}} 接口中的**`clone()`** 方法可以创建一个当前`Request` 对象的副本。

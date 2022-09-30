@@ -2,6 +2,7 @@
 title: compositionstart
 slug: Web/API/Element/compositionstart_event
 ---
+
 {{APIRef}}
 
 文本合成系统如 {{glossary("input method editor")}}（即输入法编辑器）开始新的输入合成时会触发 **`compositionstart`** 事件。

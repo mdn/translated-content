@@ -2,6 +2,7 @@
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS)属性 **`font-variant-caps`** 使您可以控制大写字母特殊字符的使用。
@@ -53,7 +54,7 @@ font-variant-caps: unset;
 - `all-petite-caps`
   - : 将大小写字母全部转化为小型大写字母。（OpenType 特性：`c2pc`, `pcap`）。
 - `unicase`
-  - : 允许将大写字母转化为小型大写字母与普通小写字母的混用 （OpenType 特性：`unic`）。
+  - : 允许将大写字母转化为小型大写字母与普通小写字母的混用（OpenType 特性：`unic`）。
 - `titling-caps`
   - : 允许首字母大写（OpenType 特性：`titl`）。大写字母变体字符通常被设计成与用于小写字母。在标题序列中，如果均使用大写字母，可能会带来过于强烈的视觉效果。首字母大写即用来应对这种情况。
 
@@ -102,4 +103,4 @@ font-variant-caps: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-variant-caps")}}
+{{Compat}}

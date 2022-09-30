@@ -2,6 +2,7 @@
 title: transition-property
 slug: Web/CSS/transition-property
 ---
+
 {{CSSRef}}
 
 **`transition-property`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)を適用する CSS プロパティを指定します。

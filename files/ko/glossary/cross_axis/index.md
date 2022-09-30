@@ -1,11 +1,6 @@
 ---
 title: 교차축
 slug: Glossary/Cross_Axis
-tags:
-  - CSS
-  - Glossary
-  - flexbox
-translation_of: Glossary/Cross_Axis
 ---
 {{glossary("flexbox", "플렉스박스")}}에서, **교차축**이란 {{glossary("main axis", "주축")}}에 수직하는 축으로, {{cssxref("flex-direction")}}이 `row` 또는 `row-reverse` 인 경우 교차축은 열 방향을 따라갑니다.
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/lossy_compression
 original_slug: Glossaire/compression_avec_perte
 ---
+
 La **compression** **avec perte**, ou compression irréversible, est une méthode de compression des données qui réalise des approximations inexactes et abandonne une partie des données pour représenter un contenu.
 
 Pour le dire simplement : la compression avec perte entraîne une perte de données du fichier d'origine, entraînant une possible dégradation de sa qualité.

@@ -2,6 +2,7 @@
 title: IDBObjectStore.openCursor
 slug: Web/API/IDBObjectStore/openCursor
 ---
+
 {{ APIRef("IDBObjectStore") }}
 
 {{domxref("IDBObjectStore")}} 的 `openCursor()` 方法 返回一个{{domxref("IDBRequest")}} 对象，并在一个单独的线程中，返回一个新的 {{domxref("IDBCursorWithValue")}} 对象。此方法目的是用一个游标来遍历一个对象存储空间。

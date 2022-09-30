@@ -5,6 +5,7 @@ translation_of: Web/CSS/cross-fade()
 original_slug: Web/CSS/cross-fade()
 browser-compat: css.types.image.cross-fade
 ---
+
 {{CSSRef}}
 
 La fonction [CSS](/fr/docs/Web/CSS) **`cross-fade()`** peut être utilisée afin de fusionner deux ou plusieurs images avec une transparence donnée.

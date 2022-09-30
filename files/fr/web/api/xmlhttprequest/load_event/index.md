@@ -4,6 +4,7 @@ slug: Web/API/XMLHttpRequest/load_event
 translation_of: Web/API/XMLHttpRequestEventTarget/onload
 original_slug: Web/API/XMLHttpRequestEventTarget/onload
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`XMLHttpRequestEventTarget.onload`** is the function called when an {{domxref("XMLHttpRequest")}} transaction completes successfully.

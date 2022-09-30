@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-padding-top
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-padding-top`** est une propriété qui permet de définir le remplissage sur le côté haut entre l'élément et la zone de défilement.

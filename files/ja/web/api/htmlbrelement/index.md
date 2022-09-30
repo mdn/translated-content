@@ -2,6 +2,7 @@
 title: HTMLBRElement
 slug: Web/API/HTMLBRElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLBRElement`** インターフェースは HTML 改行要素 ({{htmlelement("br")}}) を表現します。{{domxref("HTMLElement")}}より継承しています。

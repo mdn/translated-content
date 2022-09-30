@@ -62,13 +62,11 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
     > **Note:**Do not use this attribute as it is obsolete (not supported) in the latest standard.- To achieve the same effect as the `left`, `center`, `right` or `justify` values:
     >
-    >     -   Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
-    >     -   If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b `to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
-    >     -   If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    > - Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
+    > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b`to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
+    > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
     >
     > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "col")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
-
-<!---->
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
@@ -86,15 +84,11 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
     > **Note:** **Usage note:** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: the {{HTMLElement("col")}} element should be styled using [CSS](/pt-BR/docs/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/pt-BR/docs/CSS) property {{cssxref("background-color")}}, on the relevant {{HTMLElement("td")}} elements.
 
-<!---->
-
 - {{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
 
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "col")}} is not set to `char`, this attribute is ignored.
 
     > **Note:**Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "col")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "col")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
-
-<!---->
 
 - {{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
 
@@ -102,12 +96,8 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
     > **Note:**Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 
-<!---->
-
 - {{htmlattrdef("span")}}
   - : This attribute contains a positive integer indicating the number of consecutive columns the `<col>` element spans. If not present, its default value is `1`.
-
-<!---->
 
 - {{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
 
@@ -122,8 +112,6 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
     >
     > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("vertical-align")}} property can be used.
     > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
-
-<!---->
 
 - {{htmlattrdef("width")}} {{obsolete_inline("html5")}}
   - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `0.5*` also can be used.

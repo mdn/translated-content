@@ -4,6 +4,7 @@ slug: Web/API/Element/animate
 translation_of: Web/API/Element/animate
 browser-compat: api.Element.animate
 ---
+
 {{APIRef('Web Animations')}}
 
 La méthode **`animate()`** de l'interface [`Element`](/fr/docs/Web/API/Element) est un raccourci permettant de créer un nouvel objet [`Animation`](/fr/docs/Web/API/Animation), de l'appliquer à un élément puis de la jouer. Elle retourne l'instance [`Animation`](/fr/docs/Web/API/Animation) alors créée.

@@ -2,6 +2,7 @@
 title: justify-content
 slug: Web/CSS/justify-content
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`justify-content`** プロパティは、フレックスコンテナーの{{Glossary("Main Axis", "主軸")}}およびグリッドコンテナーのインライン軸に沿って、中身のアイテムの間や周囲に間隔を配置する方法を定義します。

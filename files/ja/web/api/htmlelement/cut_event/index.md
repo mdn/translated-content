@@ -3,6 +3,7 @@ title: 'HTMLElement: cut イベント'
 slug: Web/API/HTMLElement/cut_event
 original_slug: Web/API/HTMLElement/oncut
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`cut`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから切り取り操作を行おうとした時に発行されます。

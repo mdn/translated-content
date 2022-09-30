@@ -3,6 +3,7 @@ title: data URIs
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
+
 `data` URIs, 由 [RFC 2397](http://tools.ietf.org/html/rfc2397) 文件定義, 允許作者在文件中嵌入檔案.
 
 ## 表達式

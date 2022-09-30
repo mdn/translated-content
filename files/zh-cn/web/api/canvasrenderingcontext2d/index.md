@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D`**接口是 Canvas API 的一部分，可为{{HTMLElement("canvas")}}元素的绘图表面提供 2D 渲染上下文。它用于绘制形状，文本，图像和其他对象。
@@ -106,7 +107,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.lineJoin")}}
   - : 定义两线相交拐点的类型。允许的值：`round`, `bevel`, `miter`(默认)。
 - {{domxref("CanvasRenderingContext2D.miterLimit")}}
-  - : 斜接面限制比例。默认 `10。`
+  - : 斜接面限制比例。默认 `10`。
 - {{domxref("CanvasRenderingContext2D.getLineDash()")}}
   - : 返回当前线段样式的数组，数组包含一组数量为偶数的非负数数字。
 - {{domxref("CanvasRenderingContext2D.setLineDash()")}}
@@ -119,13 +120,13 @@ ctx.stroke();
 下面的属性控制如何设计文本。
 
 - {{domxref("CanvasRenderingContext2D.font")}}
-  - : 字体设置。默认值 `10px sans-serif。`
+  - : 字体设置。默认值 `10px sans-serif`。
 - {{domxref("CanvasRenderingContext2D.textAlign")}}
   - : 文本对齐设置。允许的值： `start` (默认), `end`, `left`, `right` 或 `center`.
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
-  - : 基线对齐设置。允许的值： `top`, `hanging`, `middle`, `alphabetic` (默认),`ideographic`, `bottom`.
+  - : 基线对齐设置。允许的值： `top`, `hanging`, `middle`, `alphabetic` (默认), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
-  - : 文本的方向。 允许的值： `ltr, rtl`, `inherit` (默认).
+  - : 文本的方向。 允许的值： `ltr`, `rtl`, `inherit` (默认).
 
 ## 填充和描边样式
 
@@ -366,7 +367,7 @@ ctx.stroke();
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D")}}
+{{Compat}}
 
 ## 参见
 

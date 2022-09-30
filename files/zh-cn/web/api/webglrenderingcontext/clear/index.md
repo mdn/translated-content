@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.clear()
 slug: Web/API/WebGLRenderingContext/clear
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.clear()`** 方法使用预设值来清空缓冲。
@@ -57,7 +58,7 @@ gl.getParameter(gl.STENCIL_CLEAR_VALUE);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.clear")}}
+{{Compat}}
 
 ## 相关内容
 

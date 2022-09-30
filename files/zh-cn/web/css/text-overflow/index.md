@@ -2,6 +2,7 @@
 title: text-overflow
 slug: Web/CSS/text-overflow
 ---
+
 {{CSSRef}}
 
 **`text-overflow`** [CSS](/zh-CN/docs/Web/CSS) 属性用于确定如何提示用户存在隐藏的溢出内容。其形式可以是裁剪、显示一个省略号（“`…`”）或显示一个自定义字符串。
@@ -206,5 +207,5 @@ for (let para of paras) {
 
 ## 参见
 
-- 相关 CSS 属性: {{cssxref("overflow")}}、{{cssxref("white-space")}}
-- 控制换行的 CSS 属性: {{cssxref("overflow-wrap")}}、{{cssxref("word-break")}}
+- 相关 CSS 属性：{{cssxref("overflow")}}、{{cssxref("white-space")}}
+- 控制换行的 CSS 属性：{{cssxref("overflow-wrap")}}、{{cssxref("word-break")}}

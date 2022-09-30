@@ -2,6 +2,7 @@
 title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
 ---
+
 {{CSSRef}}
 
 **`radial-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)创建一个图像，该图像由从原点辐射的两种或多种颜色之间的渐进过渡组成。它的形状可以是圆形或椭圆形。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象。这是一种特别的 {{cssxref("&lt;image&gt;")}}。

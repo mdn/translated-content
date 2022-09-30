@@ -2,6 +2,7 @@
 title: feFuncG
 slug: Web/SVG/Element/feFuncG
 ---
+
 {{SVGRef}}
 
 该滤镜为它的父{{SVGElement("feComponentTransfer")}}元素的输入图形的绿色成分定义了变换函数。

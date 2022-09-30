@@ -2,6 +2,7 @@
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
 ---
+
 {{HTMLRef}}
 
 > **Warning:** `<hgroup>` は支援技術にサポートされていないため、使用すべきではありません。使用すると、中にある見出し要素の認識に悪影響を与えます。

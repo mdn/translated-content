@@ -2,6 +2,7 @@
 title: HTMLEmbedElement
 slug: Web/API/HTMLEmbedElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLEmbedElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて） {{HTMLElement("embed")}} 要素を操作するための特別なプロパティを提供します。

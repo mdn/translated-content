@@ -15,6 +15,7 @@ translation_of: >-
 original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject
 ---
+
 {{AddonSidebar()}}
 
 Affiche un objet JSON dans le volet de la barre latérale de l'extension.

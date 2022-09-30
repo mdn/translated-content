@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.getLineDash()
 slug: Web/API/CanvasRenderingContext2D/getLineDash
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.getLineDash()`** 是 Canvas 2D API 获取当前线段样式的方法。
@@ -14,7 +15,7 @@ ctx.getLineDash();
 
 ### 返回值
 
-一个 {{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。如果数组元素的数量是奇数，数组元素会被复制并重复。 例如，设置线段为 `[5, 15, 25]` 将会得到以下返回值 `[5, 15, 25, 5, 15, 25]。`
+一个 {{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。如果数组元素的数量是奇数，数组元素会被复制并重复。 例如，设置线段为 `[5, 15, 25]` 将会得到以下返回值 `[5, 15, 25, 5, 15, 25]`。
 
 ## 示例
 
@@ -93,7 +94,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.getLineDash")}}
+{{Compat}}
 
 ## 参见
 

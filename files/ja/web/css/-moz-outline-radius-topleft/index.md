@@ -2,6 +2,7 @@
 title: '-moz-outline-radius-topleft'
 slug: Web/CSS/-moz-outline-radius-topleft
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 Mozilla アプリケーションにおいて、 **`-moz-outline-radius-topleft`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線 ({{cssxref("outline")}}) の左上の角を丸くするために使用することができます。

@@ -2,6 +2,7 @@
 title: 迭代協議
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
+
 {{jsSidebar("More")}}
 
 為 ECMAScript 2015 中的一些補充內容，並非新的內建物件或語法，而是協議。這些協議可被任何遵守特定協定的物件所實作。

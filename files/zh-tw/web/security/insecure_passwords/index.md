@@ -2,6 +2,7 @@
 title: 不安全的密碼
 slug: Web/Security/Insecure_passwords
 ---
+
 提供 HTTP 的登入表單非常危險，因為目前有很多已知的用戶密碼擷取手法。竊聽者可以透過側錄該網路或修改傳輸頁面進行大量的惡意攻擊，並直接竊取用戶憑證或密碼。本頁將詳細說明 Firefox 用以警示用戶與開發者有關不安全的密碼及密碼竊取風險的安全機制。
 
 [HTTPS](/zh-TW/docs/Glossary/https) 通訊協定，旨在保護用戶的資料於傳輸時不會遭到竊聽與竄改，並保護其機密性與原始完整性。負責處理用戶資料的網站應使用 HTTPS 保護其用戶不受惡意駭客攻擊。如果沒有使用 HTTPS，竊取諸如登入憑證之類的用戶資訊是小事一樁。著名的 [Firesheep](https://codebutler.github.io/firesheep/) 附加套件曾示範過此種攻擊方式。

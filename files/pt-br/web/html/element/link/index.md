@@ -7,7 +7,7 @@ translation_of: Web/HTML/Element/link
 
 O **Elemento HTML _\<link>_** especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais usado para vincular as folhas de estilo.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Metadata content. If {{htmlattrxref("itemprop", "link")}} is present: [flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content)[ phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content)
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Metadata content. If {{htmlattrxref("itemprop", "link")}} is present: [flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content) [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content)
 - _Conteúdo permitido_ None, it is an {{Glossary("empty element")}}.
 - _Omissão de tag_ As it is a void element, the start tag must be present and the end tag must not be present
 - _Elementos pai permitidos_ Any element that accepts metadata elements. If {{htmlattrxref("itemprop", "link")}} is present: any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
@@ -19,9 +19,6 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("as")}}
   - : Esse atributo é usado apenas quando `rel="preload"` foi enviado no elemento `<link>`. Especifica o tipo de conteúdo carregado pelo `<link>`, que é necessário para a priorização do conteúdo, solicitação de correspondência, aplicação de [política de segurança de conteúdo](/pt-BR/docs/Web/HTTP/CSP) correta, e configuração do cabeçalho de pedido {{httpheader("Accept")}} correta.
-
-<!---->
-
 - {{htmlattrdef("charset")}}{{obsolete_inline}}
 
   - : Este atributo define a codificação de caracteres do recurso vinculado. O valor é umespaço e/ou lista delimitada por vírgulas de conjuntos de caracteres, conformedefinido na RFC 2045. O valor padrão é ISO-8859-1.
@@ -76,12 +73,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource. It must be present only if the {{htmlattrxref("rel","link")}} contains the icon [link types value](/pt-BR/docs/Web/HTML/Link_types). It may have the following values:
 
-    - `any`, meaning that the icon can be scaled to any size as it is in a vectorial format, like `image/svg+xml`.
-    - a white-space separated list of sizes, each in the format _\<width in pixels>\_x_\<height in pixels>_ or _\<width in pixels>_X_\<height in pixels>\_. Each of these sizes must be contained in the resource.
+    - `any`, meaning that the icon can be scaled to any size as it is in a vector format, like `image/svg+xml`.
+    - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
 
-    > **Note:** **Usage note:**- Most icon format are only able to store one single icon; therefore most of the time the {{htmlattrxref("sizes")}} contains only one entry. Among the major browsers, only the Apple's ICNS format allows the storage of multiple icons, and this format is only supported in WebKit.
-    >
-    > - Apple's iOS does not support this attribute, hence Apple's iPhone and iPad use special, non-standard [link types values](/pt-BR/docs/Web/HTML/Link_types) to define icon to be used as Web Clip or start-up placeholder: apple-touch-icon and apple-touch-startup-icon.
+    > **Note:** Most icon formats are only able to store one single icon; therefore most of the time the {{HTMLAttrxRef("sizes")}} attribute contains only one entry.
+    > MS's ICO format does, as well as Apple's ICNS. ICO is more ubiquitous, so you should use this format if cross-browser support is a concern (especially for old IE versions).
 
 - {{htmlattrdef("target")}}{{Non-standard_inline}}
   - : Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.

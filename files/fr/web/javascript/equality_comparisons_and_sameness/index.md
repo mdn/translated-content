@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 original_slug: Web/JavaScript/Les_différents_tests_d_égalité
 ---
+
 {{jsSidebar("Intermediate")}}
 
 JavaScript fournit trois opérations permettant de comparer des valeurs :

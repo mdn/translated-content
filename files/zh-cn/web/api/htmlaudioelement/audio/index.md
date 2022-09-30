@@ -2,6 +2,7 @@
 title: Audio()
 slug: Web/API/HTMLAudioElement/Audio
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Audio()`** 构造器创建并返回一个 {{domxref("HTMLAudioElement")}}，可以将它附加到文档中以供用户交互，也可以用于管理和播放背景音乐。
@@ -54,7 +55,7 @@ myAudioElement.addEventListener("canplaythrough", event => {
 
 The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
 
-{{Compat("api.HTMLAudioElement.Audio")}}
+{{Compat}}
 
 ## 参见
 

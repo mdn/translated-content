@@ -2,6 +2,7 @@
 title: 內容腳本
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
+
 {{AddonSidebar}}內容腳本（content script）是擴充套件的一部分，它會在在特定的網頁執行（與之相對的則是同樣屬於套件的後端腳本（background scripts）或者網站本身的腳本，像是那些那些透過 {{HTMLElement("script")}} 標籤讀取的內容）
 
 [後端腳本](/zh-TW/Add-ons/WebExtensions/Background_scripts)可以使用所有的 [擴充套件 JavaScript APIs](/zh-TW/Add-ons/WebExtensions/API)，但它們無法直接使用網頁中的內容。所以如果你的套件必須要透過 content scripts 才能使用它們。

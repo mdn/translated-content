@@ -2,11 +2,12 @@
 title: 使用样式和颜色
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}在[绘制图形](/zh-CN/Canvas_tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
 
 ## 色彩 Colors
 
-到目前为止，我们只看到过绘制内容的方法。如果我们想要给图形上色，有两个重要的属性可以做到：`fillStyle` 和 `strokeStyle。`
+到目前为止，我们只看到过绘制内容的方法。如果我们想要给图形上色，有两个重要的属性可以做到：`fillStyle` 和 `strokeStyle`。
 
 - {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}
   - : 设置图形的填充颜色。
@@ -254,7 +255,7 @@ draw();
 
 #### `lineCap` 属性的例子
 
-![](/@api/deki/files/88/=Canvas_linecap.png)属性 `lineCap` 的值决定了线段端点显示的样子。它可以为下面的三种的其中之一：`butt`，`round` 和 `square`。默认是 `butt。`
+![](/@api/deki/files/88/=Canvas_linecap.png)属性 `lineCap` 的值决定了线段端点显示的样子。它可以为下面的三种的其中之一：`butt`，`round` 和 `square`。默认是 `butt`。
 
 在这个例子里面，我绘制了三条直线，分别赋予不同的 `lineCap` 值。还有两条辅助线，为了可以看得更清楚它们之间的区别，三条线的起点终点都落在辅助线上。
 
@@ -563,13 +564,13 @@ draw();
 
 这里，我让起点稍微偏离终点，这样可以达到一种球状 3D 效果。但最好不要让里圆与外圆部分交叠，那样会产生什么效果就真是不得而知了。
 
-4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，`#019F62 = rgba(1,159,98,1)。`
+4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，`#019F62 = rgba(1,159,98,1)`。
 
 {{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}
 
 ## 图案样式 Patterns
 
-上一节的一个例子里面，我用了循环来实现图案的效果。其实，有一个更加简单的方法：`createPattern。`
+上一节的一个例子里面，我用了循环来实现图案的效果。其实，有一个更加简单的方法：`createPattern`。
 
 - {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
   - : 该方法接受两个参数。Image 可以是一个 `Image` 对象的引用，或者另一个 canvas 对象。`Type` 必须是下面的字符串值之一：`repeat`，`repeat-x`，`repeat-y` 和 `no-repeat`。

@@ -2,6 +2,7 @@
 title: 函数
 slug: Web/JavaScript/Reference/Functions
 ---
+
 {{jsSidebar("Functions")}}一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function)对象。
 
 有关更多示例和说明，请参阅[有关函数的 JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/Functions)。
@@ -403,7 +404,7 @@ if (shouldDefineZero) {
 
 ECMAScript 6 中，如果`shouldDefineZero`是 false，则永远不会定义 zero，因为这个块从不执行。然而，这是标准的新的一部分。这是历史遗留问题，无论这个块是否执行，一些浏览器会定义 zero。
 
-`在`[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)`下，所有支持`ECMAScript 6 的`浏览器以相同的方式处理：只有在 shouldDefineZero 为 true 的情况下定义 zero，并且作用域只是这个块内。`
+在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 下，所有支持 `ECMAScript 6` 的浏览器以相同的方式处理：只有在 shouldDefineZero 为 `true` 的情况下定义 `zero`，并且作用域只是这个块内。
 
 有条件地定义一个函数的一个更安全的方法是把函数表达式赋给一个变量：
 

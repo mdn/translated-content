@@ -14,6 +14,7 @@ tags:
 translation_of: Web/HTML/Element/dir
 browser-compat: html.elements.dir
 ---
+
 {{HTMLRef}}
 
 > **Attention :** Cette fonctionnalité est obsolète. Bien qu'encore supportée par des navigateurs, son utilisation est découragée pour tout nouveau projet. Évitez de l'utiliser.

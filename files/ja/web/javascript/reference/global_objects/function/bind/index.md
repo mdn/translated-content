@@ -2,6 +2,7 @@
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
+
 {{JSRef}}
 
 **`bind()`** メソッドは、呼び出された際に `this` キーワードに指定された値が設定される新しい関数を生成します。この値は新しい関数が呼び出されたとき、一連の引数の前に置かれます。
@@ -145,7 +146,7 @@ flower.bloom();
 
 ### コンストラクターとして使用するバインドされた関数
 
-> **Warning:** **警告**: この節では、 JavaScript の機能性を実演するため、 `bind()` メソッドの極端な例を説明しています。
+> **Warning:** この節では、 JavaScript の機能性を実演するため、 `bind()` メソッドの極端な例を説明しています。
 >
 > 以下の方法は何かを実現するのに最適な方法ではなく、むしろ本番環境では使用するべきでない方法です。
 

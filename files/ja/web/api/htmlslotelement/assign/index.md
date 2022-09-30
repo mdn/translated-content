@@ -2,6 +2,7 @@
 title: HTMLSlotElement.assign()
 slug: Web/API/HTMLSlotElement/assign
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 **`assign()`** は {{domxref("HTMLSlotElement")}} インターフェイスのメソッドで、このスロットの**手動で割り当てられたノード**をスロットテーブルの順序付きリストに設定します。手動で割り当てられたノードは初期状態では、ノードに `assign()` を使用して割り当てられるまで空です。

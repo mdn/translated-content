@@ -2,6 +2,7 @@
 title: FormData.append()
 slug: Web/API/FormData/append
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 インターフェイスの **`append()`** メソッドは、FormData オブジェクト内の既存のキーに新しい値を追加するか、キーがまだ存在しない場合は追加します。

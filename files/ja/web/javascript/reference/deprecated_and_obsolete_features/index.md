@@ -2,6 +2,7 @@
 title: 非推奨の機能、廃止された機能
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
+
 {{JsSidebar("More")}}
 
 このページのリストは JavaScript で廃止予定（まだ使用できるが削除する予定）とされた、あるいは既に廃止され使用不可となった機能の一覧です。
@@ -24,7 +25,7 @@ slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
       <td>{{jsxref("RegExp.n", "$1-$9")}}</td>
       <td>
         <p>
-          （もしあれば）括弧で囲まれた部分文字列にイッチします。
+          （もしあれば）括弧で囲まれた部分文字列に一致します。
           <strong>警告:</strong>このプロパティを使うことで、問題が起こる恐れがあります。なぜなら、ブラウザーの拡張機能がそれらを変更可能なためです。使用は避けるべきです。
         </p>
       </td>

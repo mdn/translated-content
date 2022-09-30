@@ -7,7 +7,7 @@ original_slug: Web/API/FileSystemEntrySync
 
 File and Directory Entries API の`FileSystemEntrySync` インターフェイスは、ファイルシステム内のエントリを表します。 {{domxref("FileEntrySync")}} か {{domxref("DirectoryEntry")}} のいずれかになります。 ファイルのコピー、移動、削除、および読み込みを含むファイルの操作方法や、ファイル名やルートからエントリまでのパスなど、それが指すファイルに関する情報が含まれています。
 
-> **Warning:** **警告:** この API は決して受け入れられず、標準化もされませんでした。さまざまなブラウザが [File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API) (ファイルシステム API とも呼ばれます) を実装していますが、使用を避けるようにしてください。
+> **Warning:** この API は決して受け入れられず、標準化もされませんでした。さまざまなブラウザが [File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API) (ファイルシステム API とも呼ばれます) を実装していますが、使用を避けるようにしてください。
 
 ## 基本のコンセプト
 

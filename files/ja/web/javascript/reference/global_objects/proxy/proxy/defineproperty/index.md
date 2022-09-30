@@ -2,6 +2,7 @@
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 ---
+
 {{JSRef}}
 
 **`handler.defineProperty()`** は {{jsxref("Object.defineProperty()")}} に対するトラップです。

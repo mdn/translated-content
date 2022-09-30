@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-margin-left
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-margin-left`** définit la marge de défilement de l'élément sur le côté gauche. La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.

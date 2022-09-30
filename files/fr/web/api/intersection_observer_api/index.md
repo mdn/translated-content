@@ -3,6 +3,7 @@ title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 translation_of: Web/API/Intersection_Observer_API
 ---
+
 {{SeeCompatTable}}{{DefaultAPISidebar("Intersection Observer API")}}
 
 L'API _Intersection Observer_ permet d'observer de manière asynchrone l'évolution de l'intersection d'un élément cible avec un élément ancêtre ou avec la zone d'affichage d'un document de niveau supérieur.

@@ -2,6 +2,7 @@
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 ---
+
 {{JSRef}}
 
 **`toLocaleUpperCase()`** メソッドは、呼び出した文字列の値を、ロケールに依存した対応付けに基づいて大文字に変換して返します。

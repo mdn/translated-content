@@ -2,6 +2,7 @@
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ---
+
 {{JSRef}}
 
 **`Array[@@species]`** 访问器属性返回 `Array` 的构造函数。

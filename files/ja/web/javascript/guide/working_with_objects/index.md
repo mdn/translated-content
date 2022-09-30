@@ -1,17 +1,8 @@
 ---
 title: オブジェクトでの作業
 slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - Beginner
-  - Document
-  - Guide
-  - JavaScript
-  - Object
-  - l10n:priority
-  - オブジェクトの比較
-  - コンストラクター
-translation_of: Web/JavaScript/Guide/Working_with_Objects
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript は、シンプルなオブジェクトベースの枠組みを持つ言語として設計されています。JavaScript におけるオブジェクトはプロパティの集まりであり、プロパティは名前 (あるいは*キー*) と値との関連付けから成り立っています。プロパティの値を関数にすることもでき、これはいわゆるオブジェクトのメソッドとなります。ブラウザーにあらかじめ定義されているオブジェクトに加え、独自のオブジェクトを定義することもできます。この節ではオブジェクト、プロパティ、関数、メソッドの使い方と、独自のオブジェクトを作成する方法を説明します。

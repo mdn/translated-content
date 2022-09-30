@@ -2,6 +2,7 @@
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
 ---
+
 {{HTTPSidebar}}
 
 **User-Agent** 首部包含了一个特征字符串，用来让网络协议的对端来识别发起请求的用户代理软件的应用类型、操作系统、软件开发商以及版本号。

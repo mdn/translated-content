@@ -3,6 +3,7 @@ title: translateX()
 slug: Web/CSS/transform-function/translateX
 original_slug: Web/CSS/transform-function/translateX()
 ---
+
 {{CSSRef}}
 
 **`translateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上の水平方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

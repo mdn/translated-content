@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Firefox_differentiators
 ---
+
 {{AddonSidebar}}
 
 Firefox est un excellent endroit pour commencer le développement de votre extension de navigateur. Pour commencer, vous obtenez la conformité la plus élevée avec l'API d'extension de navigateur proposée, y compris l'utilisation de l'espace de noms `browser.*` et les promesses pour la gestion des événements asynchrones. Ensuite, il y a une communauté de développeurs de vulgarisation très solidaire, prêts à vous aider.

@@ -10,18 +10,18 @@ O **Elemento HTML `<figure>` **representa o conteúdo independente, frequentemen
 
 > **Note:** _Notas de uso:_
 >
-> - Being a [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root "Sections and Outlines of an HTML5 document#Sectioning root"), the outline of the content of the \<figure> element is excluded from the main outline of the document.
+> - Being a [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root), the outline of the content of the \<figure> element is excluded from the main outline of the document.
 > - Uma legenda pode ser associada com o elemento `<figure>` inserindo o elemento {{HTMLElement("figcaption")}} dentro dele (no inicio ou no fim).
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root "Sections and Outlines of an HTML5 document#Sectioning root"), palpable content.
-- _Permite conteúdo\_\_A {{HTMLElement("figcaption")}} element, followed by [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"); or flow content followed by a {{HTMLElement("figcaption")}} element; or flow content_.
+- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root), palpable content.
+- _Permite conteúdo_ A {{HTMLElement("figcaption")}} element, followed by [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content); or flow content followed by a {{HTMLElement("figcaption")}} element; or flow content.
 - _Omissão de TAGs_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content").
+- _Permitted parent elements_ Any element that accepts [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content).
 - _DOM interface_ {{domxref("HTMLElement")}}
 
 ## Atributos
 
-Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Exemplos
 
@@ -30,13 +30,13 @@ Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attribut
 ```html
 <!-- Apenas uma imagem-->
 <figure>
-	<img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante">
+  <img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante">
 </figure>
 <p></p>
 <!-- Imagem com legenda -->
 <figure>
-	<img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante">
-	<figcaption>Legenda para a imagem impressionante</figcaption>
+  <img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante">
+  <figcaption>Legenda para a imagem impressionante</figcaption>
 </figure>
 <p></p>
 ```

@@ -2,6 +2,7 @@
 title: Arguments 对象
 slug: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments`** 是一个对应于传递给函数的参数的类数组对象。
@@ -88,12 +89,10 @@ var args = [...arguments];
   - : 指向参数所属的当前执行的函数。
 - [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : 传递给函数的参数数量。
-- [`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
-  - : 返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。
+- [`arguments[@@iterator]`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+  - : 返回一个新的 {{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}}对象，该对象包含参数中每个索引的值。
 
-> **备注：** 在严格模式下，`arguments`对象已与过往不同。[`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)不再与函数的实际形参之间共享，同时 caller 属性也被移除。
-
-## 例子
+## 示例
 
 ### 遍历参数求和
 

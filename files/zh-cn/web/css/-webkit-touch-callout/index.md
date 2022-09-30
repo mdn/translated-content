@@ -2,11 +2,12 @@
 title: '-webkit-touch-callout'
 slug: Web/CSS/-webkit-touch-callout
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 ## 概述
 
-`-webkit-touch-callout` 这个[CSS](/zh-CN/docs/Web/CSS) 属性禁用了默认的 callout 展示， callout 是指当触摸并按住一个元素的时候出现的提示。
+`-webkit-touch-callout` 这个[CSS](/zh-CN/docs/Web/CSS) 属性禁用了默认的 callout 展示，callout 是指当触摸并按住一个元素的时候出现的提示。
 
 当在 iOS 上一直按住一个目标元素时，Safari 会展示一个关于这个链接的 callout 信息。`webkit-touch-callout`属性允许禁用掉这一行为。
 
@@ -42,4 +43,4 @@ Formal syntax: default | none
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.-webkit-touch-callout")}}
+{{Compat}}

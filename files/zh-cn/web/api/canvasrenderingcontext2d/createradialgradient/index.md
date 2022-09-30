@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.createRadialGradient()
 slug: Web/API/CanvasRenderingContext2D/createRadialGradient
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.createRadialGradient()`** 是 Canvas 2D API 根据参数确定两个圆的坐标，绘制放射性渐变的方法。这个方法返回 {{domxref("CanvasGradient")}}。
@@ -107,12 +108,12 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.createRadialGradient")}}
+{{Compat}}
 
 ### Gecko-specific 注解
 
-- 从 Gecko 2.0 {{geckoRelease("2.0")}}开始， 指定非限制的值会抛出 `NOT_SUPPORTED_ERR` ，用来替代 `SYNTAX_ERR。`
-- 从 Gecko 5.0 {{geckoRelease("5.0")}}开始，指定一个负的半径会抛出 `INDEX_SIZE_ERR。`
+- 从 Gecko 2.0 {{geckoRelease("2.0")}}开始， 指定非限制的值会抛出 `NOT_SUPPORTED_ERR`，用来替代 `SYNTAX_ERR`。
+- 从 Gecko 5.0 {{geckoRelease("5.0")}}开始，指定一个负的半径会抛出 `INDEX_SIZE_ERR`。
 
 ## 参见
 

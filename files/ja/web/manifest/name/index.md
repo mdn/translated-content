@@ -2,6 +2,7 @@
 title: name
 slug: Web/Manifest/name
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

@@ -2,6 +2,7 @@
 title: Range.selectNodeContents()
 slug: Web/API/Range/selectNodeContents
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.selectNodeContents()`** 方法用于设置 {{ domxref("Range") }}，使其包含一个 {{ domxref("Node") }} 的内容。

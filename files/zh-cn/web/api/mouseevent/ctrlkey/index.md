@@ -2,6 +2,7 @@
 title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.ctrlKey`** 是只读属性，可返回一个布尔值，当 ctrl 键被按下，返回 true，否则返回 false。
@@ -49,7 +50,7 @@ You can also use the SHIFT key together with the CTRL key.</p>
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.ctrlKey")}}
+{{Compat}}
 
 ## 相关链接
 

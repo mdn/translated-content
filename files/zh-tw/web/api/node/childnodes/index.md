@@ -2,6 +2,7 @@
 title: Node.childNodes
 slug: Web/API/Node/childNodes
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.childNodes`** 唯讀屬性會回傳一個*即時更新的動態集合（live collection）*，其包含了指定元素的子{{domxref("Node","節點")}}，而第一個子節點會被指派為索引 0。

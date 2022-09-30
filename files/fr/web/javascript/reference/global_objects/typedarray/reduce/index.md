@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/reduce
 ---
+
 {{JSRef}}
 
 La méthode **`reduce()`** applique une fonction sur un accumulateur et chaque valeur du tableau typé (de la gauche vers la droite) afin de réduire le tableau en une seule valeur. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reduce()")}}. Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).

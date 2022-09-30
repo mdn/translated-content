@@ -2,6 +2,7 @@
 title: Float64Array
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array
 ---
+
 {{JSRef}}
 
 **`Float64Array`** 类型数组代表的是平台字节顺序为 64 位的浮点数型数组 (对应于 C 浮点数据类型) 。 如果需要控制字节顺序，使用 {{jsxref("DataView")}} 替代。其内容初始化为`0`。一旦建立起来，你可以使用这个对象的方法对其元素进行操作，或者使用标准数组索引语法 (使用方括号)。
@@ -20,7 +21,7 @@ new Float64Array(buffer [, byteOffset [, length]]);
 ## 属性
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float64Array.BYTES_PER_ELEMENT")}}
-  - : 返回元素字节数。`在` `Float64Array` 的情况下返回 8。
+  - : 返回元素字节数。在 `Float64Array` 的情况下返回 8。
 - Float64Array.length
   - : 长度属性的值为 3。关于其实际长度 (元素数量) 参见 {{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}}。
 - {{jsxref("TypedArray.name", "Float64Array.name")}}

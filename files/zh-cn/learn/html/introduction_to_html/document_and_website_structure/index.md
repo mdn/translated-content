@@ -3,6 +3,7 @@ title: 文档与网站架构
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 {{glossary("HTML")}} 不仅能够定义网页的单独部分（例如“段落”或“图片”），还可以使用块级元素（例如“标题栏”、“导航菜单”、“主内容列”）来定义网站中的复合区域。本文将探讨如何规划基本的网站结构，并根据规划的结构来编写 HTML。
@@ -211,7 +212,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 1. 时刻记住，大多数（不是全部）页面会使用一些相同的元素，例如导航菜单以及页脚内容。若网站为商业站点，不妨在所有页面的页脚都加上联系方式。请记录这些对所有页面都通用的内容：![所有页面共有的内容，包括：站点标题、Logo、联系方式、版权声明、语言等信息。](common-features.png)
 2. 接下来，可为页面结构绘制草图（这里与前文那个站点页面的截图类似）。记录每一块的作用：![简单的页面布局示意图，有页眉、页脚、主内容、侧边栏。](site-structure.png)
 3. 下面，对于期望添加进站点的所有其它（通用内容以外的）内容展开头脑风暴，直接罗列出来。![把假日旅行站点的所有功能罗列到一个列表中](feature-list.png)
-4. 下一步，试着对这些内容进行分组，这样可以让你了解哪些内容可以放在同一个页面。这种做法和 {{glossary("Card sorting", "卡片分类法")}} 非常相似。![假日网站的页面应分5类：搜索、特别提供、具体国家信息、搜索结果、购物。](card-sorting.png)
+4. 下一步，试着对这些内容进行分组，这样可以让你了解哪些内容可以放在同一个页面。这种做法和 {{glossary("Card sorting", "卡片分类法")}} 非常相似。![假日网站的页面应分 5 类：搜索、特别提供、具体国家信息、搜索结果、购物。](card-sorting.png)
 5. 接下来，试着绘制一个站点地图的草图，使用一个气泡代表网站的一个页面，并绘制连线来表示页面间的一般工作流。主页面一般置于中心，且链接到其他大多数页面；小型网站的大多数页面都可以从主页的导航栏中链接跳转。也可记录下内容的显示方式。![](site-map.png)
 
 ### 主动学习：创建站点地图

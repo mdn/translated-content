@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/symbols
 ---
+
 {{CSSRef}}
 
 Le descripteur **`symbols`**, rattaché à la règle @ {{cssxref("@counter-style")}}, est utilisé pour définir les symboles à utiliser pour construire les représentations du compteur. Un symbole peut être une chaîne de caractères, une image ou un identifiant.

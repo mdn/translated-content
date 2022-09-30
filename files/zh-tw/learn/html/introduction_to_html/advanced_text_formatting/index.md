@@ -2,6 +2,7 @@
 title: Advanced text formatting
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
 There are many other elements in HTML for formatting text, which we didn't get to in the [HTML text fundamentals](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) article. The elements described in this article are less well-known, but still useful to know about (and this is still not a complete list by any means.) In here you'll learn about marking up quotations, description lists, computer code and other related text, subscript and superscript, contact information, and more.

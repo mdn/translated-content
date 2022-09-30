@@ -3,6 +3,7 @@ title: 使用媒体查询
 slug: Web/CSS/Media_Queries/Using_media_queries
 original_slug: Web/Guide/CSS/Media_queries
 ---
+
 {{cssref}}
 
 **媒体查询**（**Media queries**）非常实用，尤其是当你想要根据设备的大致类型（如打印设备与带屏幕的设备）或者特定的特征和设备参数（例如屏幕分辨率和浏览器{{glossary("viewport", "视窗")}}宽度）来修改网站或应用程序时。
@@ -213,7 +214,7 @@ _逻辑操作符_（_logical operators_） `not`, `and`, 和 `only` 可用于联
 
 ### 提升老版本浏览器兼容性
 
-`only`关键字可防止不支持带有媒体功能的媒体查询的旧版浏览器应用给定的样式。 _它对现代浏览器没有影响。_
+`only`关键字可防止不支持带有媒体功能的媒体查询的旧版浏览器应用给定的样式。_它对现代浏览器没有影响。_
 
 ```css
 @media only screen and (color) { ... }

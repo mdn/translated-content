@@ -3,6 +3,7 @@ title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 original_slug: Web/JavaScript/Reference/Global_Objects/Map
 ---
+
 {{JSRef}}
 
 **`Map`** 是保存了鍵值對（key-value pairs）的物件。任何值（包括物件及{{Glossary("Primitive", "基本型別（primitive）值")}}）都可以作為鍵或值。

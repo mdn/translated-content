@@ -11,6 +11,7 @@ tags:
   - Sélecteurs
 translation_of: Learn/CSS/First_steps/Getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 Dans cet article nous vous montrons comment appliquer un style CSS à un document HTML simple. Vous apprendrez des choses pratiques concernant CSS.

@@ -2,6 +2,7 @@
 title: delete 操作符
 slug: Web/JavaScript/Reference/Operators/delete
 ---
+
 {{jsSidebar("Operators")}}
 
 **`delete` 操作符**用于删除对象的某个属性；如果没有指向这个属性的引用，那它最终会被释放。
@@ -31,9 +32,9 @@ delete object['property']
 ### 异常
 
 - {{jsxref("TypeError")}}
-    - : 如果属性是自身不可配置的属性且处于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中，则会抛出该异常。
+  - : 如果属性是自身不可配置的属性且处于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中，则会抛出该异常。
 - {{jsxref("ReferenceError")}}
-    - : 当 `object` 是父对象（[`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)）时抛出。
+  - : 当 `object` 是父对象（[`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)）时抛出。
 
 ## 描述
 

@@ -2,6 +2,7 @@
 title: AudioContext.onstatechange
 slug: Web/API/BaseAudioContext/statechange_event
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}的`onstatechange属性定义了一个事件处理器函数，触发`{{Event("statechange")}}会被调用，也就是说 audio context 的状态发生变化时会执行。
@@ -29,7 +30,7 @@ audioCtx.onstatechange = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.statechange_event")}}
+{{Compat}}
 
 ## 另见
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-auto-columns
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-auto-columns`** définit la taille d'une colonne de grille créée de façon implicite.

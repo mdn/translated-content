@@ -2,6 +2,7 @@
 title: <input type="file">
 slug: Web/HTML/Element/input/file
 ---
+
 {{HTMLRef("Input_types")}}
 
 **`type="file"`** 型の {{HTMLElement("input")}} 要素は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn/HTML/Forms)を使用してサーバーにアップロードしたり、 JavaScript コードと [File API](/ja/docs/Web/API/File/Using_files_from_web_applications) を使用して操作したりすることができます。
@@ -69,7 +70,7 @@ slug: Web/HTML/Element/input/file
 
 ファイル入力欄の {{htmlattrxref("value", "input")}} 属性には、選択されたファイルへのパスを表す {{domxref("DOMString")}} が入ります。ユーザーが複数のファイルを選択すると、 `value` は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは input 要素の `HTMLInputElement.files` プロパティを使って得ることができます。
 
-> **Note:** **注:**1. 複数のファイルが選択された場合、文字列は最初に選択されたファイルを表します。 JavaScript は他のファイルに [input の `FileList` プロパティを通して](/ja/docs/Using_files_from_web_applications#Getting_information_about_selected_files)アクセスすることができます。 2. ファイルが選択されていない場合、文字列は `""` (空) になります。 3. 疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するため、文字列には [`C:\fakepath\` の接頭辞が付きます](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)。
+> **Note:** 1. 複数のファイルが選択された場合、文字列は最初に選択されたファイルを表します。 JavaScript は他のファイルに [input の `FileList` プロパティを通して](/ja/docs/Using_files_from_web_applications#Getting_information_about_selected_files)アクセスすることができます。 2. ファイルが選択されていない場合、文字列は `""` (空) になります。 3. 疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するため、文字列には [`C:\fakepath\` の接頭辞が付きます](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)。
 
 ## 追加の属性
 

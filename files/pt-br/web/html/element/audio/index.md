@@ -7,11 +7,11 @@ translation_of: Web/HTML/Element/audio
 
 O elemento `audio` é utilizado para embutir conteúdo de som em um documento HTML ou XHTML.O elemento `audio` foi adicionado como parte do HTML5.
 
-Você pode utilizar recursos avançados da API de áudio — que são específicas do Gecko — para gerar e manipular diretamente fluxo de áudio a partir do código JavaScript. Veja [Introducing the audio API extension](/pt-BR/docs/Introducing_the_Audio_API_Extension "en-US/docs/Introducing the Audio API Extension") para detalhes.
+Você pode utilizar recursos avançados da API de áudio — que são específicas do Gecko — para gerar e manipular diretamente fluxo de áudio a partir do código JavaScript. Veja [Introducing the audio API extension](/pt-BR/docs/Introducing_the_Audio_API_Extension) para detalhes.
 
 ## Contexto de Uso
 
-| Conteúdo permitido       | [Transparent content](/pt-BR/docs/HTML/Content_categories#transparent_content "en-US/docs/HTML/Content categories#transparent content"), tanto um atributo `src` quanto um ou mais elementos {{ HTMLElement("source") }}, seguidos por um [flow content](/pt-BR/docs/HTML/Content_categories#flow_content "en-US/docs/HTML/Content categories#flow content") ou [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content "en-US/docs/HTML/Content categories#phrasing content"), sem{{ HTMLElement("video") }} ou elementos `<audio>`. |
+| Conteúdo permitido       | [Transparent content](/pt-BR/docs/HTML/Content_categories#transparent_content), tanto um atributo `src` quanto um ou mais elementos {{ HTMLElement("source") }}, seguidos por um [flow content](/pt-BR/docs/HTML/Content_categories#flow_content) ou [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content), sem{{ HTMLElement("video") }} ou elementos `<audio>`. |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Omissão de tag           | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Elementos pai permitidos | Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#flow_content), ou qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                                                                                                                                                 |
@@ -19,7 +19,7 @@ Você pode utilizar recursos avançados da API de áudio — que são específic
 
 ## Atributos
 
-Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-BR/docs/HTML/Global_attributes "en-US/docs/HTML/Global attributes").
+Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-BR/docs/HTML/Global_attributes).
 
 - {{ htmlattrdef("autoplay") }}
   - : Um atributo Booleano; se especificado (mesmo se o valor for "false"!), o áudio iniciará automaticamente assim que possível sem parar de carregar os dados.
@@ -53,7 +53,7 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
 
 - {{ htmlattrdef("src") }}
-  - : A URL do áudio a ser incorporado. Isso é sujeito a [HTTP access controls](/pt-BR/docs/HTTP_access_control "en-US/docs/HTTP access control"). Isto é opcional; ao invés disso você pode usar o elemento [`<source>`](http://developer.mozilla.org/en-US/docs/pt-BR/HTML/Element/source) dentro do bloco do áudio para especificar o vídeo a ser incorporado .
+  - : A URL do áudio a ser incorporado. Isso é sujeito a [HTTP access controls](/pt-BR/docs/HTTP_access_control). Isto é opcional; ao invés disso você pode usar o elemento [`<source>`](http://developer.mozilla.org/en-US/docs/pt-BR/HTML/Element/source) dentro do bloco do áudio para especificar o vídeo a ser incorporado .
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.
 
@@ -78,7 +78,7 @@ Reproduz o arquivo de áudio anexado a esse artigo.
 
 ## Interface do DOM
 
-- [HTMLAudioElement](/pt-BR/docs/DOM/HTMLAudioElement "en-US/docs/DOM/HTMLAudioElement")
+- [HTMLAudioElement](/pt-BR/docs/DOM/HTMLAudioElement)
 
 ## Compatibilidade com navegadores
 
@@ -86,10 +86,10 @@ Reproduz o arquivo de áudio anexado a esse artigo.
 
 ## Veja também
 
-- [Media formats supported by the audio and video elements](/pt-BR/docs/Media_formats_supported_by_the_audio_and_video_elements "en-US/docs/Media formats supported by the audio and video elements")
-- [Introducing the audio API extension](/pt-BR/docs/Introducing_the_Audio_API_Extension "en-US/docs/Introducing the Audio API Extension")
-- [`HTMLAudioElement`](/pt-BR/docs/DOM/HTMLAudioElement "en-US/docs/DOM/HTMLAudioElement")
-- [`nsIDOMHTMLMediaElement`](/pt-BR/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement "en-US/docs/NsIDOMHTMLMediaElement")
-- [`video`](http://developer-new.mozilla.org/pt-BR/docs/HTML/Element/Video "pt-BR/docs/HTML/Element/Video")
-- [Using audio and video](/pt-BR/docs/Using_HTML5_audio_and_video "en-US/docs/Using audio and video in Firefox")
+- [Media formats supported by the audio and video elements](/pt-BR/docs/Media_formats_supported_by_the_audio_and_video_elements)
+- [Introducing the audio API extension](/pt-BR/docs/Introducing_the_Audio_API_Extension)
+- [`HTMLAudioElement`](/pt-BR/docs/DOM/HTMLAudioElement)
+- [`nsIDOMHTMLMediaElement`](/pt-BR/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
+- [`video`](http://developer-new.mozilla.org/pt-BR/docs/HTML/Element/Video)
+- [Using audio and video](/pt-BR/docs/Using_HTML5_audio_and_video)
 - [The `audio` element](http://www.whatwg.org/specs/web-apps/current-work/#audio) (Especificação HTML5)

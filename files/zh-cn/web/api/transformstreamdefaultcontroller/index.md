@@ -2,6 +2,7 @@
 title: TransformStreamDefaultController
 slug: Web/API/TransformStreamDefaultController
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`TransformStreamDefaultController`** 接口提供了操作关联的 {{domxref("ReadableStream")}} 和 {{domxref("WritableStream")}} 的方法。

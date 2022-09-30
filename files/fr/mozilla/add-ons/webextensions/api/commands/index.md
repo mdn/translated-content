@@ -11,6 +11,7 @@ tags:
   - commands
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 ---
+
 {{AddonSidebar}}
 
 Écoutez l'utilisateur exécutant les commandes que vous avez enregistrées à l'aide des [clés `commandes` du fichier manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).

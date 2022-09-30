@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bufferData()`** 方法创建并初始化了 Buffer 对象的数据存储区。
@@ -97,7 +98,7 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.bufferData")}}
+{{Compat}}
 
 ## 更多
 

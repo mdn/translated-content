@@ -2,6 +2,7 @@
 title: WeakRef.prototype.deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 ---
+
 {{JSRef}}
 
 `deref` メソッドは {{jsxref("WeakRef")}} インスタンスのターゲットオブジェクトを返します。そのオブジェクトが既にガベージコレクションされている場合は `undefined` を返します。

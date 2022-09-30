@@ -2,6 +2,7 @@
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.readyState** 属性返回一个 XMLHttpRequest 代理当前所处的状态。一个 XHR 代理总是处于下列状态中的一个：
@@ -25,7 +26,7 @@ slug: Web/API/XMLHttpRequest/readyState
 - DONE
   - : 请求操作已经完成。这意味着数据传输已经彻底完成或失败。
 
-> **备注：** 在 IE 中，状态有着不同的名称，并不是 `UNSENT`，`OPENED` ，`HEADERS_RECEIVED` ，`LOADING` `和 DONE，而是 READYSTATE_UNINITIALIZED` (0)，`READYSTATE_LOADING` (1) ，`READYSTATE_LOADED` (2) ，`READYSTATE_INTERACTIVE` (3) `和 READYSTATE_COMPLETE` (4) 。
+> **备注：** 在 IE 中，状态有着不同的名称，并不是 `UNSENT`，`OPENED` ，`HEADERS_RECEIVED` ，`LOADING` 和 `DONE`，而是 `READYSTATE_UNINITIALIZED` (0)，`READYSTATE_LOADING` (1) ，`READYSTATE_LOADED` (2) ，`READYSTATE_INTERACTIVE` (3) `和 READYSTATE_COMPLETE` (4) 。
 
 ## 示例
 

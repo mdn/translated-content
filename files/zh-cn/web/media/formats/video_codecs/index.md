@@ -2,6 +2,7 @@
 title: 网页视频编码指南
 slug: Web/Media/Formats/Video_codecs
 ---
+
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 本文介绍了你在网络中最常遇见的视频编码，总结了这些编码方式的能力、兼容性以及使用时需要考虑的事项，并且提供了一些为你的项目的视频选择编码的建议。
@@ -151,7 +152,7 @@ slug: Web/Media/Formats/Video_codecs
       </td>
     </tr>
     <tr>
-      <th scope="row">Noise</th>
+      <th scope="row">噪声</th>
       <td>
         图片噪声（例如胶片颗粒效果、灰尘或图像的其他粗糙度）会引入易变性。易变性通常使压缩更加困难，因为为了达到相同的压缩水平需要丢弃掉更多的细节，因此会导致更多的质量损失。
       </td>
@@ -193,13 +194,13 @@ slug: Web/Media/Formats/Video_codecs
   <tbody>
     <tr>
       <th scope="row">无损压缩</th>
-      <td>No loss of quality</td>
+      <td>无质量损失</td>
       <td>
         无损压缩不能像有损压缩那样减小整体视频大小；生成的文件对于一般用途来说可能仍然太大。
       </td>
     </tr>
     <tr>
-      <th scope="row">Lossy compression</th>
+      <th scope="row">有损压缩</th>
       <td>
         在某种程度上，会出现鬼影和其他形式的质量下降，具体取决于特定的编解码器和应用了多少压缩
       </td>
@@ -242,7 +243,6 @@ slug: Web/Media/Formats/Video_codecs
       <td>
         <h4 id="Moiré_patterns">摩尔纹</h4>
         <p>
-          A
           <a href="https://zh.wikipedia.org/wiki/莫列波紋"
             ><strong>摩尔纹</strong></a
           >是当源图像中的一个图案和编码器的操作方式在空间上略微失准时产生的大尺度空间干涉图案。然后，编码器生成的鬼影会在解码时在源图像的图案中引入奇怪的漩涡效果。
@@ -269,7 +269,7 @@ slug: Web/Media/Formats/Video_codecs
       <td>
         <h4 id="Wagon-wheel_effect">马车车轮效应</h4>
         <p>
-          <strong>马车车轮效应</strong>（或<strong><a href="https://en.wikipedia.org/wiki/Stroboscopic_effect">频闪效应</a></strong>）是电影中常见的视觉效果，由于帧速率和压缩算法之间的相互作用，车轮似乎以错误的速度旋转，甚至反向旋转.任何重复的移动模式都会出现同样的效果，例如铁路线上的枕木、路边的柱子等等。这是一个时间（基于时间）混叠问题；旋转速度会干扰压缩或编码期间执行的采样频率。
+          <strong>马车车轮效应</strong>（或<strong><a href="https://en.wikipedia.org/wiki/Stroboscopic_effect">频闪效应</a></strong>）是电影中常见的视觉效果，由于帧速率和压缩算法之间的相互作用，车轮似乎以错误的速度旋转，甚至反向旋转。任何重复的移动模式都会出现同样的效果，例如铁路线上的枕木、路边的柱子等等。这是一个时间（基于时间）混叠问题；旋转速度会干扰压缩或编码期间执行的采样频率。
         </p>
       </td>
       <td>
@@ -389,7 +389,7 @@ slug: Web/Media/Formats/Video_codecs
 
 同样，你可以完全从视频中删除帧并降低帧速率以进行补偿。这有两个好处：它使整个视频更小，并且更小的尺寸允许运动补偿带来更好的效果。例如，不是计算由于帧间运动而相隔两个像素的两个帧的运动差异，而是每隔一帧跳过一次可能会导致计算得出四个运动像素的差异。这使得相机的整体运动可以用更少的剩余帧来表示。
 
-视频在其内容不再被人眼感知为运动之前可以达到的绝对最小帧速率约为每秒 12 帧。少于这个临界值，视频就变成了一系列静止图像。电影胶片通常是每秒 24 帧，而标准清晰度电视大约是每秒 30 帧（稍微少一点，但足够接近），而高清电视是每秒 24 到 60 帧。任何从 24 FPS 以上的图像通常看起来都会很平滑； 30 或 60 FPS 是理想的帧率，具体的取决于需求。
+视频在其内容不再被人眼感知为运动之前可以达到的绝对最小帧速率约为每秒 12 帧。少于这个临界值，视频就变成了一系列静止图像。电影胶片通常是每秒 24 帧，而标准清晰度电视大约是每秒 30 帧（稍微少一点，但足够接近），而高清电视是每秒 24 到 60 帧。任何从 24 FPS 以上的图像通常看起来都会很平滑；30 或 60 FPS 是理想的帧率，具体的取决于需求。
 
 最后，做出哪些牺牲完全取决于你和你的设计团队。
 
@@ -536,7 +536,7 @@ AV1 目前提供三种配置文件：**main**、**high** 和 **professional**，
 
 MPEG-4 规范套件的**高级视频编码**（**AVC**）标准由相同的 ITU H.264 规范和 MPEG-4 Part 10 规范指定。它是一种基于运动补偿的编解码器，如今广泛用于各种媒体，包括广播电视、{{Glossary("RTP")}} 视频会议以及蓝光光盘的视频编解码器。
 
-AVC 高度灵活，具有许多不同功能的配置文件；例如，Constrained Baseline Profile 设计用于视频会议和移动场景，使用的带宽少于 Main Profile（在某些地区用于标清数字电视）或 High Profile（用于蓝光光盘视频） .大多数配置文件使用 8 位颜色分量和 4:2:0 色度二次采样； High 10 Profile 增加了对 10 位颜色的支持，High 10 的高级形式增加了 4:2:2 和 4:4:4 色度二次采样。
+AVC 高度灵活，具有许多不同功能的配置文件；例如，Constrained Baseline Profile 设计用于视频会议和移动场景，使用的带宽少于 Main Profile（在某些地区用于标清数字电视）或 High Profile（用于蓝光光盘视频） .大多数配置文件使用 8 位颜色分量和 4:2:0 色度二次采样；High 10 Profile 增加了对 10 位颜色的支持，High 10 的高级形式增加了 4:2:2 和 4:4:4 色度二次采样。
 
 AVC 还具有特殊功能，例如支持同一场景的多个视图（多视图视频编码），它允许制作立体视频等。
 
@@ -705,7 +705,7 @@ ITU 的 **H.263** 编解码器主要设计用于低带宽情况。特别是，�
 
 H.263 从未在网络上广泛使用。H.263 的变体已被用作其他专有格式的基础，例如 Flash 视频或 Sorenson 编解码器。但是，没有任何主流浏览器默认包含 H.263 支持。某些媒体插件已启用对 H.263 媒体的支持。
 
-与大多数编解码器不同，H.263 以每帧（图片）的最大比特率或 **BPPmaxKb** 来定义编码视频的基本原理。编码时为BPPmaxKb选择一个值，然后视频每帧不能超过这个值。最终比特率将取决于此、帧速率、压缩以及选择的分辨率和块格式。
+与大多数编解码器不同，H.263 以每帧（图片）的最大比特率或 **BPPmaxKb** 来定义编码视频的基本原理。编码时为 BPPmaxKb 选择一个值，然后视频每帧不能超过这个值。最终比特率将取决于此、帧速率、压缩以及选择的分辨率和块格式。
 
 H.263 已被 H.264 取代，因此被视为一种传统媒体格式，你通常应该尽可能避免使用。在新项目中使用 H.263 的唯一真正原因是，如果你需要支持非常旧的设备，而 H.263 是你的最佳选择。
 
@@ -1303,7 +1303,7 @@ MPEG-2 有几个具有不同功能的配置文件。然后每个配置文件有�
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>、MPEG-TS（MPEG传输流）、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>、MPEG-TS（MPEG 传输流）、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
       </td>
     </tr>
     <tr>
@@ -1740,7 +1740,7 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。V
     </video>
     ```
 
-> **备注：** 无论 {{HTMLElement("video")}} 元素中是否有任何 {{HTMLElement("source")}} 元素，{{HTMLElement("video")}} 元素都是需要闭合的 `</video> ` 标签。
+> **备注：** 无论 {{HTMLElement("video")}} 元素中是否有任何 {{HTMLElement("source")}} 元素，{{HTMLElement("video")}} 元素都是需要闭合的 `</video>` 标签。
 
 ### 高质量视频演示的建议
 
@@ -1797,7 +1797,7 @@ let recorder = new MediaRecorder(sourceStream, options);
 
 将 `codecs` 参数的值分解为其点描述的属性，我们看到以下内容：
 
-| Value  | Description                                                                                                                                                                                                                                                                             |
+| Value  | Description                                                                                                                                                                                                                                                                              |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `av01` | The four-character code (4CC) designation identifying the [AV1](#av1) codec.                                                                                                                                                                                                             |
 | `2`    | The profile. A value of 2 indicates the Professional profile. A value of 1 is the High profile, while a value of 0 would specify the Main profile.                                                                                                                                       |
@@ -1807,7 +1807,7 @@ let recorder = new MediaRecorder(sourceStream, options);
 | `000`  | The chroma subsampling mode, taken from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification. A value of 000, combined with the monochrome mode value 0, indicates that we want 4:4:4 chroma subsampling, or no loss of color data. |
 | `09`   | The color primaries to use. This value comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification; 9 indicates that we want to use BT.2020 color, which is used for HDR.                                                       |
 | `16`   | The transfer characteristics to use. This comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) as well; 16 indicates that we want to use the characteristics for BT.2100 PQ color.                                                                |
-| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                        |
+| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                       |
 | `1`    | The video "full range" flag. A value of 1 indicates that we want the full color range to be used.                                                                                                                                                                                        |
 
 你选择编解码器的文档可能会提供你在构建 `codecs` 参数时将使用的信息。

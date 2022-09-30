@@ -2,6 +2,7 @@
 title: 通常フローでのブロック及びインラインレイアウト
 slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 ---
+
 {{CSSRef}}
 
 このガイドでは、通常フローの中でブロック及びインライン要素がどのように動作するかの基本を見てみます。
@@ -54,7 +55,7 @@ slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 
 マージンの相殺については、[マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)の記事で詳しく解説しています。
 
-> **Note:** 注: マージンが相殺されているかどうか分からない場合は、ブラウザーのの DevTools でボックスモデルの値を確認してください。これにより、マージンの実際のサイズが表示されるので、何が起こっているかを特定するのに役立ちます。
+> **Note:** マージンが相殺されているかどうか分からない場合は、ブラウザーのの DevTools でボックスモデルの値を確認してください。これにより、マージンの実際のサイズが表示されるので、何が起こっているかを特定するのに役立ちます。
 >
 > ![](https://mdn.mozillademos.org/files/16124/box-model.png)
 

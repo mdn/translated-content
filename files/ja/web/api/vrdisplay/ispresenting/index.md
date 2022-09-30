@@ -3,6 +3,7 @@ title: VRDisplay.isPresenting
 slug: Web/API/VRDisplay/isPresenting
 original_slug: Web/API/VRDevice/isPresenting
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`isPresenting`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` が現在コンテンツを表示中かどうかを示す論理値を返します。

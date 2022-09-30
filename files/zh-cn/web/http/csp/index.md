@@ -2,6 +2,7 @@
 title: 内容安全策略 ( CSP )
 slug: Web/HTTP/CSP
 ---
+
 {{HTTPSidebar}}
 
 内容安全策略 ({{Glossary("CSP")}}) 是一个额外的安全层，用于检测并削弱某些特定类型的攻击，包括跨站脚本 ({{Glossary("XSS")}}) 和数据注入攻击等。无论是数据盗取、网站内容污染还是散发恶意软件，这些攻击都是主要的手段。
@@ -143,7 +144,7 @@ Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.e
 
 ## 违例报告样本
 
-我们假设页面位于 `http://example.com/signup.html`。它使用如下策略，该策略禁止任何资源的加载，除了来自`cdn.example.com 的样式表。`
+我们假设页面位于 `http://example.com/signup.html`。它使用如下策略，该策略禁止任何资源的加载，除了来自 `cdn.example.com` 的样式表。
 
 ```plain
 Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
@@ -182,7 +183,7 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.csp")}}
+{{Compat}}
 
 ## 参见
 

@@ -13,6 +13,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
 ---
+
 {{AddonSidebar()}}
 
 Un objet de ce type est renvoyé par les auditeurs d'événements qui ont défini le `"blocking"` dans leur argument `extraInfoSpec`.

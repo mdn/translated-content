@@ -2,6 +2,7 @@
 title: block-size
 slug: Web/CSS/block-size
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 的 **`block-size`** 属性会根据元素的书写模式来定义元素块的水平宽度或垂直高度。它会根据 {{cssxref("writing-mode")}} 的值来映射至 {{cssxref("width")}} 属性或 {{cssxref("height")}} 属性。

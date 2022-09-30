@@ -2,6 +2,7 @@
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 {{domxref("MutationObserver")}} 的 **`observe()`** 方法配置了 `MutationObserver` 对象的回调方法以开始接收与给定选项匹配的 DOM 变化的通知。根据配置，观察者会观察 DOM 树中的单个 {{domxref("Node")}}，也可能会观察被指定节点的部分或者所有的子孙节点。
@@ -67,7 +68,7 @@ mutationObserver.observe(target[, options])
 
 换句话说，在你收到有关节点从被观察子树中拆分的通知之前，你将收到有关该拆分子树及其节点的更改的通知。这可以防止你丢失在切断连接之后以及在你有机会专门开始观察已移动的节点或子树之前发生的变化。
 
-这意味着理论上如果你跟踪描述发生的变化的 {{domxref("MutationRecord")}} 对象，你就可以 “撤销” 这些改动，将 DOM 恢复到初始状态。
+这意味着理论上如果你跟踪描述发生的变化的 {{domxref("MutationRecord")}} 对象，你就可以“撤销”这些改动，将 DOM 恢复到初始状态。
 
 ## 示例
 
@@ -94,4 +95,4 @@ observer.observe(elementToObserve, {subtree: true, childList: true});
 
 ## 浏览器兼容性
 
-{{Compat("api.MutationObserver.observe")}}
+{{Compat}}

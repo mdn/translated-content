@@ -2,6 +2,7 @@
 title: WebSocket.url
 slug: Web/API/WebSocket/url
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket.url`** は読み取り専用のプロパティで、コンストラクターによって解決された {{domxref("WebSocket")}} の絶対 URL を返します。

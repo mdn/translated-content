@@ -2,6 +2,7 @@
 title: Request.redirect
 slug: Web/API/Request/redirect
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}} インターフェイスの **`redirect`** 読み取り専用プロパティには、リダイレクトの処理方法モードが含まれています。

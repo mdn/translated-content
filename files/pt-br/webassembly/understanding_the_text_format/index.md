@@ -496,11 +496,11 @@ Our `.wat` examples look like so:
 
 These work as follows:
 
-1.  The function `shared0func` is defined in `shared0.wat`, and stored in our imported table.
-2.  This function creates a constant containing the value `0`, and then uses the `i32.load` command to load the value contained in the provided memory index. The index provided is `0` — again, it implicitly pops the previous value off the stack. So `shared0func` loads and returns the value stored at memory index `0`.
-3.  In `shared1.wat`, we export a function called `doIt` — this fucntion creates two constants containing the values `0` and `42`, then calls `i32.store` to store a provided value at a provided index of the imported memory. Again, it implicitly pops these values off the stack, so the result is that it stores the value `42` in memory index `0`,
-4.  In the last part of the function, we create a constant with value `0`, then call the function at this index 0 of the table, which is `shared0func`, stored there earlier by the `elem` block in `shared0.wat`.
-5.  When called, `shared0func` loads the `42` we stored in memory using the `i32.store` command in `shared1.wat`.
+1. The function `shared0func` is defined in `shared0.wat`, and stored in our imported table.
+2. This function creates a constant containing the value `0`, and then uses the `i32.load` command to load the value contained in the provided memory index. The index provided is `0` — again, it implicitly pops the previous value off the stack. So `shared0func` loads and returns the value stored at memory index `0`.
+3. In `shared1.wat`, we export a function called `doIt` — this fucntion creates two constants containing the values `0` and `42`, then calls `i32.store` to store a provided value at a provided index of the imported memory. Again, it implicitly pops these values off the stack, so the result is that it stores the value `42` in memory index `0`,
+4. In the last part of the function, we create a constant with value `0`, then call the function at this index 0 of the table, which is `shared0func`, stored there earlier by the `elem` block in `shared0.wat`.
+5. When called, `shared0func` loads the `42` we stored in memory using the `i32.store` command in `shared1.wat`.
 
 > **Nota:** The above expressions again pop values from the stack implicitly, but you could declare these explicitly inside the command calls instead, for example:
 >

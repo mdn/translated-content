@@ -8,6 +8,7 @@ tags:
   - Étiquettes
 translation_of: Web/API/HTMLInputElement/labels
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`HTMLInputElement.labels`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments {{HTMLElement("label")}} (_étiquette_) associés avec l'élément {{HTMLElement("input")}} (_entrée_).

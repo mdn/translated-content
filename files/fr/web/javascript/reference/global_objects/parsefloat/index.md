@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 original_slug: Web/JavaScript/Reference/Objets_globaux/parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`parseFloat()`** permet de transformer une chaîne de caractères en un nombre flottant après avoir analysée celle-ci (_parsing_).

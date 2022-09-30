@@ -2,6 +2,7 @@
 title: Tabs API を使う
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ---
+
 {{AddonSidebar}}
 
 タブを使うとユーザーはブラウザーウィンドウに複数のウェブページを開いてウェブページ間をスイッチできるようになります。Tabs API により、タブを操作して、新しい方法でタブを使ったり拡張機能の機能として配布できます。
@@ -16,7 +17,7 @@ slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 
 その次には、API で提供されるその他のいろいろな機能を見て終わります。
 
-> **Note:** **注:** There are some Tab API features covered elsewhere. These are the methods you can use to manipulate tab content with scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, and {{WebExtAPIRef("tabs.executeScript")}}). If you want more information on these methods, see the Concepts article [Content scripts](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and the how-to guide [Modify a web page](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page).
+> **Note:** There are some Tab API features covered elsewhere. These are the methods you can use to manipulate tab content with scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, and {{WebExtAPIRef("tabs.executeScript")}}). If you want more information on these methods, see the Concepts article [Content scripts](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and the how-to guide [Modify a web page](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page).
 
 ## 権限と Tabs API
 

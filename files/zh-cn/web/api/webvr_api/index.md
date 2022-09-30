@@ -2,6 +2,7 @@
 title: WebVR API
 slug: Web/API/WebVR_API
 ---
+
 {{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
 
 **WebVR API 能为虚拟现实设备的渲染提供支持 — 例如像 Oculus Rift 或者**HTC Vive **这样的头戴式设备与 Web apps 的连接。它能让开发者将位置和动作信息转换成 3D 场景中的运动。基于这项技术能产生很多有趣的应用，比如虚拟的产品展示，可交互的培训课程，以及超强沉浸感的第一人称游戏。**

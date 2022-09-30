@@ -2,6 +2,7 @@
 title: CORS のエラー
 slug: Web/HTTP/CORS/Errors
 ---
+
 {{HTTPSidebar}}
 
 [オリジン間リソース共有](/ja/docs/Web/HTTP/CORS) (Cross-Origin Resource Sharing) ({{Glossary("CORS")}}) は、サーバーが[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を緩和することができる標準です。例えば、サイトが埋め込み可能なサービスを提供する場合、このような制約を緩和する必要があるかもしれません。このような CORS の構成の設定は必ずしも簡単ではなく、いくらか冒険的です。これらのページでは、よくある CORS のエラーメッセージと解決方法を調査します。

@@ -2,6 +2,7 @@
 title: 数字和日期
 slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}本章节介绍了在 JavaScript 中使用数字和日期来处理和执行计算的概念，对象和函数。
 
 本章节介绍如何掌握 Javascript 里的数字和日期类型
@@ -111,7 +112,7 @@ var notANum = Number.NaN;
 | {{jsxref("Number.isNaN()")}}             | 判断传递的值是否为 {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
 | {{jsxref("Number.isSafeInteger()")}} | 判断传递的值是否为安全整数。                                                                                                                                                      |
 
-数字的类型提供了不同格式的方法以从数字对象中检索信息。以下表格总结了 `数字类型原型上的方法。`
+数字的类型提供了不同格式的方法以从数字对象中检索信息。以下表格总结了 数字类型原型上的方法。
 
 | 方法                                                                     | 描述                                                                                                        |
 | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
@@ -121,7 +122,7 @@ var notANum = Number.NaN;
 
 ## 数学对象（Math）
 
-对于内置的{{jsxref("Math")}}数学常项和函数也有一些属性和方法。 比方说， `Math 对象的` `PI` 属性会有属性值 pi (3.141...)，你可以像这样调用它：
+对于内置的{{jsxref("Math")}}数学常项和函数也有一些属性和方法。 比方说， `Math` 对象的 `PI` 属性会有属性值 pi (3.141...)，你可以像这样调用它：
 
 ```js
 Math.PI // π
@@ -179,7 +180,7 @@ var dateObjectName = new Date([parameters]);
 
 - 无参数 : 创建今天的日期和时间，例如： `today = new Date();`.
 - 一个符合以下格式的表示日期的字符串: "月 日，年 时：分:秒." 例如： `var Xmas95 = new Date("December 25, 1995 13:30:00")。`如果你省略时、分、秒，那么他们的值将被设置为 0。
-- 一个年，月，日的整型值的集合，例如： `var Xmas95 = new Date(1995, 11, 25)。`
+- 一个年，月，日的整型值的集合，例如： `var Xmas95 = new Date(1995, 11, 25)`。
 - 一个年，月，日，时，分，秒的集合，例如： `var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
 
 ### `Date 对象的方法`

@@ -2,6 +2,7 @@
 title: 字串
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 **`String`** 全域物件為字串的構造函數，或是一個字符序列。
@@ -234,7 +235,7 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.String.String")}}
+{{Compat}}
 
 ## 參見
 

@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.toBlob()`** メソッドは、 キャンバスに含まれる画像を表す {{domxref("Blob")}} オブジェクトを生成します；このファイルは、ユーザーエージェントの裁量によって、ディスクにキャッシュされるか、メモリに保存されます。`type` が指定されてない場合、画像の type は、 `image/png` です。生成された画像の解像度は、96dpi です。

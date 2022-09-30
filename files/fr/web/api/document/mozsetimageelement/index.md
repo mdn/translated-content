@@ -10,6 +10,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/mozSetImageElement
 ---
+
 {{ ApiRef("DOM") }}{{ non-standard_header() }}
 
 Change l'élément utilisé comme arrière-plan CSS par un arrière-plan avec un ID d'élément d'arrière-plan donné.

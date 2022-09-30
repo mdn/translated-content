@@ -2,6 +2,7 @@
 title: border-block
 slug: Web/CSS/border-block
 ---
+
 {{CSSRef}}
 
 该[CSS](/zh-CN/docs/Web/CSS)属性是一个[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)在样式表一个单一的地方设置单独的逻辑块边界属性值。**`border-block`**
@@ -82,7 +83,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-block")}}
+{{Compat}}
 
 ## 也可以看看
 

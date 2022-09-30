@@ -2,6 +2,7 @@
 title: 开始使用 Vue
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 现在让我们介绍 Vue，我们的第三个框架。在本文中，我们将了解一点 Vue 的背景知识，了解如何安装它并创建一个新项目，研究整个项目和单个组件的高级结构，了解如何在本地运行项目，并为开始构建示例做好准备。
@@ -31,7 +32,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_star
 
 ## 一个更简洁的框架——Vue
 
-Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——不像许多其他框架，您可以使用 Vue 增强现有的 HTML。这使您可以使用 Vue 作为[jQuery](/zh-CN/docs/Glossary/jQuery)等库的临时替代品。
+Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——不像许多其他框架，您可以使用 Vue 增强现有的 HTML。这使您可以使用 Vue 作为 [jQuery](https://jquery.com/) 等库的临时替代品。
 
 也就是说，您还可以使用 Vue 编写整个单页应用程序 (SPA)。这允许您创建标记完全由 Vue 管理，可以提高开发人员的经验和性能在处理复杂的应用程序。当你需要的时候它还允许您利用其他库对客户端路由和状态进行管理。此外，Vue 需要“中间地带”的方法工具客户端路由和状态管理。虽然 Vue 核心团队维护了建议的函数库，但他们并没有直接捆绑到 Vue 里。这样你就可以选择一个其他路由/状态管理库，来更好地适应您的应用程序。
 

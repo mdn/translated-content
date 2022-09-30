@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-y
 ---
+
 {{CSSRef}}
 
 La propriété **`overflow-y`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords haut et bas de la boîte.

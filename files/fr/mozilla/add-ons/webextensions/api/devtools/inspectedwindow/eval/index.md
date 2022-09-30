@@ -12,6 +12,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval
 ---
+
 {{AddonSidebar()}}
 
 Exécute JavaScript dans la fenêtre à laquelle les devtools sont attachés.

@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/3/Full_page_zoom
 translation_of: Mozilla/Firefox/Releases/3/Full_page_zoom
 original_slug: Zoom_pleine_page
 ---
+
 {{FirefoxSidebar}}
 
 Le zoom pleine page (ou fullZoom) est une nouvelle fonctionnalité qui sera probablement disponible dans [Firefox 3](fr/Firefox_3_pour_les_d%c3%a9veloppeurs). Elle peut être utilisée dans les compilations courantes du tronc depuis la version 1.9a7. Bien qu'il n'y ait actuellement aucune interface utilisateur visible, il est possible d'utiliser JavaScript et l'interface [XPCOM](fr/XPCOM) [nsIMarkupDocumentViewer](http://www.xulplanet.com/references/xpcomref/ifaces/nsIMarkupDocumentViewer.html).

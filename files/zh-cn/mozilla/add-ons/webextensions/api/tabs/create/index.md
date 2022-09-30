@@ -2,6 +2,7 @@
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
+
 {{AddonSidebar()}}
 
 新建一个 tab.
@@ -55,7 +56,7 @@ A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.tabs.create", 10)}}
+{{Compat}}
 
 ## 实例
 

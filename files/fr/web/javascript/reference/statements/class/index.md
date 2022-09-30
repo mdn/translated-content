@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/class
 original_slug: Web/JavaScript/Reference/Instructions/class
 ---
+
 {{jsSidebar("Statements")}}
 
 La **déclaration class** crée une nouvelle classe avec le nom fourni en utilisant l'héritage à base de prototypes pour émuler le fonctionnement de classe.

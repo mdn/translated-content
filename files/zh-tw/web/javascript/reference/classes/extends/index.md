@@ -2,6 +2,7 @@
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 ---
+
 {{jsSidebar("Classes")}}
 
 **`extends`** 關鍵字被使用於[類別（class）宣告](/zh-TW/docs/Web/JavaScript/Reference/Statements/class)或[類別（class）表達式](/zh-TW/docs/Web/JavaScript/Reference/Operators/class)中來建立擴展的子類別 。
@@ -81,7 +82,7 @@ new nullExtends(); //ReferenceError: this is not defined
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.classes.extends")}}
+{{Compat}}
 
 ## 參見
 

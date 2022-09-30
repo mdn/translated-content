@@ -3,6 +3,7 @@ title: mask-type
 slug: Web/CSS/mask-type
 translation_of: Web/CSS/mask-type
 ---
+
 {{CSSRef}}
 
 La propriété **`mask-type`** définit si un masque sera utilisé comme un masque de _luminance_ ou comme un masque de transparence (aussi appelé masque _alpha_). Cette propriété s'applique sur l'élément SVG {{SVGElement("mask")}}. Le comportement de cette propriété peut être surchargée par la propriété {{cssxref("mask-mode")}} qui définit sur quel élément le masque est appliqué. De façon générale, les masques alpha sont appliqués plus rapidement que les masques de luminance.

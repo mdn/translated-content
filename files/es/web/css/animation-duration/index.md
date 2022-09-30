@@ -25,12 +25,14 @@ Es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajust
 
 ## Sintaxis
 
-    Gramatica formal: {{csssyntax("animation-duration")}}
+```
+Gramatica formal: {{csssyntax("animation-duration")}}
 
-    animation-duration: 6s
-    animation-duration: 120ms
-    animation-duration: 1s, 15s
-    animation-duration: 10s, 30s, 230ms
+animation-duration: 6s
+animation-duration: 120ms
+animation-duration: 1s, 15s
+animation-duration: 10s, 30s, 230ms
+```
 
 ### Valores
 
@@ -41,7 +43,7 @@ Es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajust
 
 ## Ejemplos
 
-Visitar [CSS animations](/es/CSS/Usando_animaciones_CSS "en/CSS/CSS_animations") para ver algunos ejemplos.
+Visitar [CSS animations](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
 
 ## Especificaciones
 
@@ -55,5 +57,5 @@ Visitar [CSS animations](/es/CSS/Usando_animaciones_CSS "en/CSS/CSS_animations")
 
 ## Consultar también
 
-- [Usando animaciones CSS](/es/docs/CSS/Usando_animaciones_CSS "Tutorial about CSS animations")
+- [Usando animaciones CSS](/es/docs/CSS/Usando_animaciones_CSS)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

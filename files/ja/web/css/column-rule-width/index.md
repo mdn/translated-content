@@ -2,6 +2,7 @@
 title: column-rule-width
 slug: Web/CSS/column-rule-width
 ---
+
 {{ CSSRef}}
 
 **`column-rule-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さを設定します。

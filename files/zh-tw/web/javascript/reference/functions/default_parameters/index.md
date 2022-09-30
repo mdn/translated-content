@@ -2,6 +2,7 @@
 title: 預設參數( Default parameters )
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **函式預設參數** 允許沒有值傳入或是傳入值為 `undefined 的情況下，參數能以指定的預設值初始化。`

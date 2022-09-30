@@ -2,6 +2,7 @@
 title: FileReaderSync
 slug: Web/API/FileReaderSync
 ---
+
 {{APIRef("File API")}}
 
 `FileReaderSync` インターフェイスで、 {{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的に読み込むことができます。

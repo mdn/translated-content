@@ -2,6 +2,7 @@
 title: '@viewport'
 slug: Web/CSS/@viewport
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`@viewport`** 规则让我们可以对文档的大小进行设置 {{glossary("viewport")}} 。这个特性主要被用于移动设备，但是也可以用在支持类似“固定到边缘”等特性的桌面浏览器，如微软的 Edge。
@@ -80,7 +81,7 @@ slug: Web/CSS/@viewport
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.viewport")}}
+{{Compat}}
 
 ## See also
 

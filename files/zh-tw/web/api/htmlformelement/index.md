@@ -2,6 +2,7 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLFormElement`** 介面提供了建立及修改 {{HTMLElement("form")}} 元素的方法。
@@ -157,7 +158,7 @@ If you want to know how to serialize and submit a form using the {{domxref("XMLH
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLFormElement")}}
+{{Compat}}
 
 ## 參見
 

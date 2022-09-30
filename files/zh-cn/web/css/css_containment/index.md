@@ -2,8 +2,9 @@
 title: CSS Containment
 slug: Web/CSS/CSS_Containment
 ---
+
 {{CSSRef}}
-CSS Containment 主要是通过允许开发者将某些子树从页面中独立出来，从而提高页面的性能。如果浏览器知道页面中的某部分是独立的，就能够优化渲染并获得性能提升。 这个定义通过一个 CSS 属性 {{cssxref("contain")}}来实现。本文阐述了这个定义的基础用法。
+CSS Containment 主要是通过允许开发者将某些子树从页面中独立出来，从而提高页面的性能。如果浏览器知道页面中的某部分是独立的，就能够优化渲染并获得性能提升。这个定义通过一个 CSS 属性 {{cssxref("contain")}}来实现。本文阐述了这个定义的基础用法。
 
 ## 基本示例
 

@@ -133,4 +133,4 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
 ## Veja também
 
 - Outros elemtnos relacionados: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("article") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};
-- [Seções e estrurura do um documento HTML5](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document").
+- [Seções e estrurura do um documento HTML5](/en/Sections_and_Outlines_of_an_HTML5_document).

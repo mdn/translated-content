@@ -3,11 +3,12 @@ title: API リファレンスには何が必要ですか？
 slug: orphaned/MDN/Structures/API_references/What_does_an_API_reference_need
 original_slug: MDN/Structures/API_references/What_does_an_API_reference_need
 ---
+
 {{MDNSidebar}}
 
 この記事では、完全な API リファレンスに必要なページについて説明します。
 
-> **Note:** **メモ**: API リファレンスで作業しているときに書いたり更新したりする必要があるドキュメントのリストを作成し、完了したらチェックを外すことをお勧めします。
+> **Note:**  API リファレンスで作業しているときに書いたり更新したりする必要があるドキュメントのリストを作成し、完了したらチェックを外すことをお勧めします。
 
 ## API ページの概要
 

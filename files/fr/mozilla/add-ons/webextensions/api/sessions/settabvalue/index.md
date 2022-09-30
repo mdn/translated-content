@@ -12,6 +12,7 @@ tags:
   - setTabValue
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue
 ---
+
 {{AddonSidebar()}}
 
 Stocke une paire clé / valeur à associer à un onglet donné. Vous pouvez ensuite récupérer cette valeur en utilisant {{WebExtAPIRef("sessions.getTabValue")}}.

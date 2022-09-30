@@ -10,6 +10,7 @@ tags:
   - mouseleave
 translation_of: Web/API/Element/mouseleave_event
 ---
+
 {{APIRef}}
 
 L'évènement **`mouseleave`** est déclenché à partir d'un {{domxref("Element")}} lorsque le curseur d'un dispositif de pointage (ex. une souris) se déplace en dehors de cet élément.

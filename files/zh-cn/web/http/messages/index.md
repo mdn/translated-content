@@ -2,6 +2,7 @@
 title: HTTP 消息
 slug: Web/HTTP/Messages
 ---
+
 {{HTTPSidebar}}
 
 HTTP 消息是服务器和客户端之间交换数据的方式。有两种类型的消息︰ 请求（requests）-- 由客户端发送用来触发一个服务器上的动作；响应（responses）-- 来自服务器的应答。
@@ -72,7 +73,7 @@ Body 大致可分为两类：
 
 HTTP 响应的起始行被称作 _状态行_ _(status line)_，包含以下信息：
 
-1. _协议版本_，通常为 `HTTP/1.1。`
+1. _协议版本_，通常为 `HTTP/1.1`。
 2. _状态码_ (_status code_)，表明请求是成功或失败。常见的状态码是 {{HTTPStatus("200")}}，{{HTTPStatus("404")}}，或 {{HTTPStatus("302")}}。
 3. _状态文本 (status text)_。一个简短的，纯粹的信息，通过状态码的文本描述，帮助人们理解该 HTTP 消息。
 

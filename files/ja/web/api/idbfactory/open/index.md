@@ -36,9 +36,9 @@ var IDBOpenDBRequest = indexedDB.open(name, version);
 
   - : Gecko では、[バージョン 26](/ja/Firefox/Releases/26) から、標準外の `options` オブジェクトを {{ domxref("IDBFactory.open") }} の引数として指定することができ、データベースの `version` 番号と、加えてストレージに `persistent` (永続的) または `temporary` (一時的) のどちらを使用したいかを指定する storage 値を指定することができます。
 
-    > **Warning:** **警告:** `storage` 属性は非推奨であり、まもなく Gecko から削除される予定です。永続的なストレージを得るには、代わりに {{domxref("StorageManager.persist()")}} を使用してください。
+    > **Warning:** `storage` 属性は非推奨であり、まもなく Gecko から削除される予定です。永続的なストレージを得るには、代わりに {{domxref("StorageManager.persist()")}} を使用してください。
 
-> **Note:** **メモ**: 利用可能な様々なストレージ種別における詳細情報や、 Firefox がクライアント側データストレージを扱う方法については、 [ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)で見つけることができます。
+> **Note:**  利用可能な様々なストレージ種別における詳細情報や、 Firefox がクライアント側データストレージを扱う方法については、 [ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)で見つけることができます。
 
 ### 返値
 

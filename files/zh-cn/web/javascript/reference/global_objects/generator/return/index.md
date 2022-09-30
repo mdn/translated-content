@@ -2,6 +2,7 @@
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 ---
+
 {{JSRef}}
 
 **`return()`** 方法返回给定的值并结束生成器。

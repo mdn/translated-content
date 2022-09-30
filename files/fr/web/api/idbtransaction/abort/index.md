@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/abort
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`abort()`**, rattachée à l'interface {{domxref("IDBTransaction")}}, permet d'annuler les modifications apportées aux objets de la base de données pendant la transaction courante.

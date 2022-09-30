@@ -2,6 +2,7 @@
 title: word-spacing
 slug: Web/CSS/word-spacing
 ---
+
 {{ CSSRef() }}
 
 ## Summary

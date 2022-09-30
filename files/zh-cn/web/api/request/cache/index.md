@@ -2,6 +2,7 @@
 title: Request.cache
 slug: Web/API/Request/cache
 ---
+
 {{APIRef("Fetch")}}
 
 **`cache`** 作为{{domxref("Request")}} 接口只读属性包含着请求的缓存模式。它控制着请求以何种方式与浏览器的 [HTTP](/zh-CN/docs/Web/HTTP/Caching) 缓存进行交互。

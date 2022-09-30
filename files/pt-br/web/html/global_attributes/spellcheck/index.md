@@ -15,7 +15,7 @@ Por padrão, áreas de texto e documentos [`designMode`](/pt-BR/docs/Web/API/Doc
 
 Porém, podem haver situações nas quais este comportamento não é necessariamente apropriado. Por exemplo, se uma área de texto tem o objetivo de ser usada para editar HTML ou servir de entrada para outro tipo de texto que não seja semântico, a verificação ortográfica seria um entrave em vez de uma ajuda. Da mesma forma, podem haver casos nos quais um site faça uma recomendação de que o Firefox habilite a verificação ortográfica para um campo de texto específico, como campos de busca ou assunto/título de e-mail, mesmo estes sendo geralmente campos de texto de uma única linha.
 
-Se um site deseja recomendar o uso ou não de verificação ortográfica para um elemento` <input>` específico, ele pode usar o atributo `spellcheck`, espefcificando o valor `true` para recomendar o uso da verificação ortográfica ou `false` para recomendar o não uso.
+Se um site deseja recomendar o uso ou não de verificação ortográfica para um elemento `<input>` específico, ele pode usar o atributo `spellcheck`, espefcificando o valor `true` para recomendar o uso da verificação ortográfica ou `false` para recomendar o não uso.
 
 Tenha em mente que a recomendação do site pode ser ignorada pelo usuário se o mesmo tiver desativado a verificação ortográfica setando a configuração `layout.spellcheckDefault` para 0. Se a configuração `layout.spellcheckDefault` tiver qualquer outro valor, as recomendações serão consideradas.
 

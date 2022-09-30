@@ -2,6 +2,7 @@
 title: resize
 slug: Web/API/Window/resize_event
 ---
+
 文档视图调整大小时会触发 **resize** 事件。
 
 ## 基本信息

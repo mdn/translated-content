@@ -2,6 +2,7 @@
 title: HTMLMediaElement.srcObject
 slug: Web/API/HTMLMediaElement/srcObject
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`srcObject`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、 {{domxref("HTMLMediaElement")}} に関連付けられたメディアソースを提供するオブジェクトを設定または取得します。

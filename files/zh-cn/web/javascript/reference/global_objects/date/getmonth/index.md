@@ -2,6 +2,7 @@
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 ---
+
 {{JSRef}}
 
 根据本地时间，返回一个指定的日期对象的月份，为基于 0 的值（0 表示一年中的第一月）。
@@ -26,7 +27,7 @@ dateObj.getMonth()
 
 ### 使用 `getMonth()`
 
-下面第二条语句，基于 {{jsxref("Date")}} 对象 Xmas95 的值，把 11 赋值给变量 `month。`
+下面第二条语句，基于 {{jsxref("Date")}} 对象 Xmas95 的值，把 11 赋值给变量 `month`。
 
 ```js
 var Xmas95 = new Date('December 25, 1995 23:15:30');

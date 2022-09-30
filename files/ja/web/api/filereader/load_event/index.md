@@ -2,6 +2,7 @@
 title: 'FileReader: load イベント'
 slug: Web/API/FileReader/load_event
 ---
+
 {{APIRef}}
 
 `load` イベントは、ファイルが正常に読み込めたときに発生します。

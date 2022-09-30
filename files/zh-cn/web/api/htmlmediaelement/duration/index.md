@@ -2,6 +2,7 @@
 title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.duration`** 属性以秒为单位给出媒体的长度，如果没有媒体数据可用，则为零。
@@ -29,7 +30,7 @@ console.log(obj.duration); // NaN
 
 ## 浏览器支持
 
-{{Compat("api.HTMLMediaElement.duration")}}
+{{Compat}}
 
 ## 相关内容
 

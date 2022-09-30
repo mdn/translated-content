@@ -2,6 +2,7 @@
 title: WheelEvent
 slug: Web/API/WheelEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`WheelEvent`** インターフェイスは、ユーザーがマウスホイールやそれに似た機器を動かしたときに発行されるイベントを表します。

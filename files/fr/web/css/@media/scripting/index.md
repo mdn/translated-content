@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/scripting
 ---
+
 {{CSSRef}}
 
 **`scripting`** est une caractéristique média CSS qui permet de savoir si les outils de script (ex. JavaScript) sont disponibles.

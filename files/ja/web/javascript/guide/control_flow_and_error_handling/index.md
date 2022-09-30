@@ -1,19 +1,8 @@
 ---
 title: 制御フローとエラー処理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Beginner
-  - Decision making
-  - Error Handling
-  - Flow control
-  - Guide
-  - JavaScript
-  - Logic
-  - control
-  - l10n:priority
-  - statements
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript は、特に制御フロー文についてはコンパクトな文のセットに対応しており、アプリケーションに多様な対話的機能を組み込むために利用することができます。この節ではこれらの文の概要を説明します。
@@ -147,7 +136,7 @@ if ((x = y)) {
 
 上記以外の—オブジェクトを含む—すべての値は、条件文に渡されると `true` と評価されます。
 
-> **Note:** **注意:** プリミティブな真偽値の `true` と `false` を、{{jsxref("Boolean")}} オブジェクトの true や false という値と混同しないでください。
+> **Note:** プリミティブな真偽値の `true` と `false` を、{{jsxref("Boolean")}} オブジェクトの true や false という値と混同しないでください。
 >
 > 例:
 >
