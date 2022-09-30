@@ -3,85 +3,90 @@ title: Usando shadow DOM
 slug: Web/Web_Components/Using_shadow_DOM
 translation_of: Web/Web_Components/Using_shadow_DOM
 ---
-<div>{{DefaultAPISidebar("Web Components")}}</div>
+{{DefaultAPISidebar("Web Components")}}
 
-<p class="summary">Un aspecto importante de los componentes Web es la encapsulación — ser capaz de mantener la estructura de marcado, estilo, y comportamiento oculto y separado de otro código en la página para que las diferentes partes no entre en conflicto, y el código pueda permanecer limpio y agradable. El API de DOM Shadow es un parte clave para esto, proporcionando una forma de enlazar un DOM oculto y separado a un elemento. Este artículo cubre los aspectos básicos para utilizar Shadow DOM.</p>
+Un aspecto importante de los componentes Web es la encapsulación — ser capaz de mantener la estructura de marcado, estilo, y comportamiento oculto y separado de otro código en la página para que las diferentes partes no entre en conflicto, y el código pueda permanecer limpio y agradable. El API de DOM Shadow es un parte clave para esto, proporcionando una forma de enlazar un DOM oculto y separado a un elemento. Este artículo cubre los aspectos básicos para utilizar Shadow DOM.
 
-<div class="note">
-<p><strong>Nota</strong>: Shadow DOM es soportado por defecto en Firefox (63 en adelante), Chrome, Opera, y Safari. Edge también está trabajando en una implemetanción.</p>
-</div>
+> **Nota:** Shadow DOM es soportado por defecto en Firefox (63 en adelante), Chrome, Opera, y Safari. Edge también está trabajando en una implemetanción.
 
-<h2 id="Vista_de_alto_nivel">Vista de alto nivel</h2>
+## Vista de alto nivel
 
-<p>Este artículo asume que usted está familiarizado con el concepto de <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM (Document Object Model)</a> — una estructura en forma de arbol de nodos conectados que representan los diferentes elementos y cadenas de texto que aparecen en un documento de marcado (generalmente un documento HTML en el caso de documentos web). Como ejemplo, considere el siguiente fragmento HTML:</p>
+Este artículo asume que usted está familiarizado con el concepto de [DOM (Document Object Model)](/es/docs/Web/API/Document_Object_Model/Introduction) — una estructura en forma de arbol de nodos conectados que representan los diferentes elementos y cadenas de texto que aparecen en un documento de marcado (generalmente un documento HTML en el caso de documentos web). Como ejemplo, considere el siguiente fragmento HTML:
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Simple DOM example&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-      &lt;section&gt;
-        &lt;img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."&gt;
-        &lt;p&gt;Here we will add a link to the &lt;a href="https://www.mozilla.org/"&gt;Mozilla homepage&lt;/a&gt;&lt;/p&gt;
-      &lt;/section&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+  </body>
+</html>
+```
 
-<p>Este fragmento produce la siguientre estructura de DOM:</p>
+Este fragmento produce la siguientre estructura de DOM:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14559/dom-screenshot.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![](https://mdn.mozillademos.org/files/14559/dom-screenshot.png)
 
-<p><em>Shadow</em> DOM permite adjuntar arboles DOM ocultos a elementos en el arbol DOM regular — este arbol shadow DOM comienza con un elemento <strong>shadow root,</strong> debajo del cual se puede adjuntar cualquier elemento que desee, de la misma manera que el DOM normal.</p>
+_Shadow_ DOM permite adjuntar arboles DOM ocultos a elementos en el arbol DOM regular — este arbol shadow DOM comienza con un elemento **shadow root,** debajo del cual se puede adjuntar cualquier elemento que desee, de la misma manera que el DOM normal.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15788/shadow-dom.png" style="height: 543px; width: 1138px;"></p>
+![](https://mdn.mozillademos.org/files/15788/shadow-dom.png)
 
-<p>Hay algunos conceptos de Shadow DOM que deben ser tomados en cuenta:</p>
+Hay algunos conceptos de Shadow DOM que deben ser tomados en cuenta:
 
-<ul>
- <li><strong>Shadow host</strong>: El nodo regular del DOM al que es atado el shadow DOM.</li>
- <li><strong>Shadow tree</strong>: El arbol DOM dentro del shadow DOM.</li>
- <li><strong>Shadow boundary</strong>: El punto en el que el shadow DOM termina y el DOM regular comienza.</li>
- <li><strong>Shadow root</strong>: El nodo raiz del arbol Shadow.</li>
-</ul>
+- **Shadow host**: El nodo regular del DOM al que es atado el shadow DOM.
+- **Shadow tree**: El arbol DOM dentro del shadow DOM.
+- **Shadow boundary**: El punto en el que el shadow DOM termina y el DOM regular comienza.
+- **Shadow root**: El nodo raiz del arbol Shadow.
 
-<p>Puede manipular los nodos del 'shadow DOM' de la misma manera que los nodos del arbol DOM regular. Por ejemplo, agregando hijos o estableciendo atributos, dando estilo a nodos individuales utilizando element.style.foo, o agregando estilo a todo el árbol de 'shadow DOM' dentro del elemento &lt;style&gt;. La diferencia es que nada del código dentro de un 'shadow DOM' puede afectar a nada fuera de él, lo que permite una encapsulación práctica.</p>
+Puede manipular los nodos del 'shadow DOM' de la misma manera que los nodos del arbol DOM regular. Por ejemplo, agregando hijos o estableciendo atributos, dando estilo a nodos individuales utilizando element.style.foo, o agregando estilo a todo el árbol de 'shadow DOM' dentro del elemento \<style>. La diferencia es que nada del código dentro de un 'shadow DOM' puede afectar a nada fuera de él, lo que permite una encapsulación práctica.
 
-<p>Cabe destacar que el shadow DOM no es algo nuevo — los exploradores lo han usado por un largo tiempo para encapsular la estructura interna de un elemento. Piensa por ejemplo en un elemento {{htmlelement("video")}}, con los controles predeterminados del explorador a la vista. Todo lo que ves en el DOM es el elemento <code>&lt;video&gt;</code>, pero este contiene una serie de botones y otros controles dentro de su shadow DOM. Las especificaciones del shadow DOM fueron hechas para que seas capaz de manipular el shadow DOM de tus elementos personalizados.</p>
+Cabe destacar que el shadow DOM no es algo nuevo — los exploradores lo han usado por un largo tiempo para encapsular la estructura interna de un elemento. Piensa por ejemplo en un elemento {{htmlelement("video")}}, con los controles predeterminados del explorador a la vista. Todo lo que ves en el DOM es el elemento `<video>`, pero este contiene una serie de botones y otros controles dentro de su shadow DOM. Las especificaciones del shadow DOM fueron hechas para que seas capaz de manipular el shadow DOM de tus elementos personalizados.
 
-<h2 id="Uso_básico">Uso básico</h2>
+## Uso básico
 
-<p>Puede adjuntar un 'shadow root' a cualquier elemento utilizando el método {{domxref ("Element.attachShadow ()")}}. Éste toma como parámetro un objeto que contiene una propiedad — modo — con dos posibles valores: 'open' o 'closed'.</p>
+Puede adjuntar un 'shadow root' a cualquier elemento utilizando el método {{domxref ("Element.attachShadow ()")}}. Éste toma como parámetro un objeto que contiene una propiedad — modo — con dos posibles valores: 'open' o 'closed'.
 
-<pre class="brush: js notranslate">let shadow = elementRef.attachShadow({mode: 'open'});
-let shadow = elementRef.attachShadow({mode: 'closed'});</pre>
+```js
+let shadow = elementRef.attachShadow({mode: 'open'});
+let shadow = elementRef.attachShadow({mode: 'closed'});
+```
 
-<p><code>open</code> siginifica que puede acceder al shadow DOM usando JavaScript en el contexto principal de la página. Por ejemplo, usando la propiedad {{domxref("Element.shadowRoot")}}:</p>
+`open` siginifica que puede acceder al shadow DOM usando JavaScript en el contexto principal de la página. Por ejemplo, usando la propiedad {{domxref("Element.shadowRoot")}}:
 
-<pre class="brush: js notranslate">let myShadowDom = myCustomElem.shadowRoot;</pre>
+```js
+let myShadowDom = myCustomElem.shadowRoot;
+```
 
-<p>If you attach a shadow root to a custom element with <code>mode: closed</code> set, you won't be able to access the shadow DOM from the outside — <code>myCustomElem.shadowRoot</code> returns <code>null</code>. This is the case with built in elements that contain shadow DOMs, such as <code>&lt;video&gt;</code>.</p>
+If you attach a shadow root to a custom element with `mode: closed` set, you won't be able to access the shadow DOM from the outside — `myCustomElem.shadowRoot` returns `null`. This is the case with built in elements that contain shadow DOMs, such as `<video>`.
 
-<div class="note">
-<p><strong>Note</strong>: As <a href="https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af">this blog post shows</a>, it is actually fairly easy to work around closed shadow DOMs, and the hassle to completely hide them is often more than it's worth.</p>
-</div>
+> **Nota:** As [this blog post shows](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af), it is actually fairly easy to work around closed shadow DOMs, and the hassle to completely hide them is often more than it's worth.
 
-<p>If you are attaching a shadow DOM to a custom element as part of its constructor (by far the most useful application of the shadow DOM), you would use something like this:</p>
+If you are attaching a shadow DOM to a custom element as part of its constructor (by far the most useful application of the shadow DOM), you would use something like this:
 
-<pre class="brush: js notranslate">let shadow = this.attachShadow({mode: 'open'});</pre>
+```js
+let shadow = this.attachShadow({mode: 'open'});
+```
 
-<p>When you've attached a shadow DOM to an element, manipulating it is a matter of just using the same DOM APIs as you use for the regular DOM manipulation:</p>
+When you've attached a shadow DOM to an element, manipulating it is a matter of just using the same DOM APIs as you use for the regular DOM manipulation:
 
-<pre class="brush: js notranslate">var para = document.createElement('p');
+```js
+var para = document.createElement('p');
 shadow.appendChild(para);
-// etc.</pre>
+// etc.
+```
 
-<h2 id="Working_through_a_simple_example">Working through a simple example</h2>
+## Working through a simple example
 
-<p>Now let's walk through a simple example to demonstrate the shadow DOM in action inside a custom element — <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info-box&gt;</a></code> (see a <a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">live example</a> also). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information. To begin with, in our JavaScript file we define a class called <code>PopUpInfo</code>, which extends <code>HTMLElement</code>:</p>
+Now let's walk through a simple example to demonstrate the shadow DOM in action inside a custom element — [`<popup-info-box>`](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) (see a [live example](https://mdn.github.io/web-components-examples/popup-info-box-web-component/) also). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information. To begin with, in our JavaScript file we define a class called `PopUpInfo`, which extends `HTMLElement`:
 
-<pre class="brush: js notranslate">class PopUpInfo extends HTMLElement {
+```js
+class PopUpInfo extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
@@ -90,22 +95,26 @@ shadow.appendChild(para);
 
     ...
   }
-}</pre>
+}
+```
 
-<p>Inside the class definition we define the element's constructor, which defines all the functionality the element will have when an instance of it is instantiated.</p>
+Inside the class definition we define the element's constructor, which defines all the functionality the element will have when an instance of it is instantiated.
 
-<h3 id="Creating_the_shadow_root">Creating the shadow root</h3>
+### Creating the shadow root
 
-<p>We first attach a shadow root to the custom element:</p>
+We first attach a shadow root to the custom element:
 
-<pre class="brush: js notranslate">// Create a shadow root
-var shadow = this.attachShadow({mode: 'open'});</pre>
+```js
+// Create a shadow root
+var shadow = this.attachShadow({mode: 'open'});
+```
 
-< id="Creating_the_shadow_DOM_structure">Creating the shadow DOM structure</h3>
+< id="Creating_the_shadow_DOM_structure">Creating the shadow DOM structure
 
-<p class="brush: js">Next, we use some DOM manipulation to create the element's internal shadow DOM structure:</p>
+Next, we use some DOM manipulation to create the element's internal shadow DOM structure:
 
-<pre class="brush: js notranslate">// Create spans
+```js
+// Create spans
 var wrapper = document.createElement('span');
 wrapper.setAttribute('class','wrapper');
 var icon = document.createElement('span');
@@ -128,13 +137,14 @@ if(this.hasAttribute('img')) {
 var img = document.createElement('img');
 img.src = imgUrl;
 icon.appendChild(img);
-</pre>
+```
 
-< id="Styling_the_shadow_DOM">Styling the shadow DOM</h3>
+< id="Styling_the_shadow_DOM">Styling the shadow DOM
 
-<p class="brush: js">After that we create a {{htmlelement("style")}} element and populate it with some CSS to style it:</p>
+After that we create a {{htmlelement("style")}} element and populate it with some CSS to style it:
 
-<pre class="brush: js notranslate">// Create some CSS to apply to the shadow dom
+```js
+// Create some CSS to apply to the shadow dom
 var style = document.createElement('style');
 
 style.textContent = `
@@ -165,35 +175,36 @@ img {
 .icon:hover + .info, .icon:focus + .info {
   opacity: 1;
 }`;
+```
 
-</pre>
+### Attaching the shadow DOM to the shadow root
 
-<h3 id="Attaching_the_shadow_DOM_to_the_shadow_root">Attaching the shadow DOM to the shadow root</h3>
+The final step is to attach all the created elements to the shadow root:
 
-<p>The final step is to attach all the created elements to the shadow root:</p>
-
-<pre class="brush: js notranslate">// attach the created elements to the shadow dom
+```js
+// attach the created elements to the shadow dom
 shadow.appendChild(style);
 shadow.appendChild(wrapper);
 wrapper.appendChild(icon);
-wrapper.appendChild(info);</pre>
+wrapper.appendChild(info);
+```
 
-<h3 id="Using_our_custom_element">Using our custom element</h3>
+### Using our custom element
 
-<p>Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a>:</p>
+Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in [Using custom elements](/es/docs/Web/Web_Components/Using_custom_elements):
 
-<pre class="brush: js notranslate">// Define the new element
-customElements.define('popup-info', PopUpInfo);</pre>
+```js
+// Define the new element
+customElements.define('popup-info', PopUpInfo);
+```
 
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">popup-info</span> <span class="pl-e">img</span>=<span class="pl-s"><span class="pl-pds">"</span>img/alt.png<span class="pl-pds">"</span></span> <span class="pl-e">text</span>=<span class="pl-s"><span class="pl-pds">"</span>Your card validation code (CVC) is an extra
+```html
+<popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
-                                    numbers on the back of your card.<span class="pl-pds">"</span></span>&gt;</pre>
+                                    numbers on the back of your card.">
+```
 
-<div>
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a></li>
- <li><a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a></li>
-</ul>
-</div>
+- [Using custom elements](/es/docs/Web/Web_Components/Using_custom_elements)
+- [Using templates and slots](/es/docs/Web/Web_Components/Using_templates_and_slots)
