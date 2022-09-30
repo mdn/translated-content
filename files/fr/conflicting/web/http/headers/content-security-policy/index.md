@@ -1,10 +1,10 @@
 ---
 title: 'CSP : navigate-to'
-slug: Web/HTTP/Headers/Content-Security-Policy/navigate-to
+slug: conflicting/Web/HTTP/Headers/Content-Security-Policy
 translation_of: Web/HTTP/Headers/Content-Security-Policy/navigate-to
+original_slug: Web/HTTP/Headers/Content-Security-Policy/navigate-to
 browser-compat: http.headers.csp.Content-Security-Policy.navigate-to
 ---
-
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`navigate-to`** restreint les URL vers lesquelles un document peut initier une navigation de quelque manière que ce soit ([`<form>`](/fr/docs/Web/HTML/Element/Form), si [`form-action`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/form-action) n'est pas spécifié&nbsp;; [`<a>`](/fr/docs/Web/HTML/Element/a), [`window.location`](/fr/docs/Web/API/Window/location), [`window.open`](/fr/docs/Web/API/Window/open), etc.). Cette contrainte ne concerne que les navigations *initiées* par le document et **pas** les destinations vers lesquelles il est possible de naviguer depuis le document.
