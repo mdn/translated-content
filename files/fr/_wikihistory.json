@@ -28105,10 +28105,6 @@
       "dattaz"
     ]
   },
-  "conflicting/Web/HTTP/Headers/Content-Security-Policy": {
-    "modified": "2020-11-05T08:46:21.988Z",
-    "contributors": ["JNa0"]
-  },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2020-10-15T21:27:51.341Z",
     "contributors": [

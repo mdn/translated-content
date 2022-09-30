@@ -4753,7 +4753,7 @@
 /fr/docs/Web/HTTP/Cache	/fr/docs/Web/HTTP/Caching
 /fr/docs/Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent	/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /fr/docs/Web/HTTP/FAQ_sur_le_préchargement_des_liens	/fr/docs/Web/HTTP/Link_prefetching_FAQ
-/fr/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to	/fr/docs/conflicting/Web/HTTP/Headers/Content-Security-Policy
+/fr/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
 /fr/docs/Web/HTTP/Headers/Serveur	/fr/docs/Web/HTTP/Headers/Server
 /fr/docs/Web/HTTP/Index	/fr/docs/Web/HTTP
 /fr/docs/Web/HTTP/Méthode	/fr/docs/Web/HTTP/Methods
@@ -6368,6 +6368,7 @@
 /fr/docs/conflicting/Web/HTML/Global_attributes	/fr/docs/Web/HTML/Global_attributes
 /fr/docs/conflicting/Web/HTTP	/fr/docs/Web/HTTP
 /fr/docs/conflicting/Web/HTTP/Basics_of_HTTP/MIME_types	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+/fr/docs/conflicting/Web/HTTP/Headers/Content-Security-Policy	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
 /fr/docs/conflicting/Web/HTTP/Status/404	/fr/docs/Web/HTTP/Status/404
 /fr/docs/conflicting/Web/HTTP/Status/502	/fr/docs/Web/HTTP/Status/502
 /fr/docs/conflicting/Web/JavaScript/Equality_comparisons_and_sameness	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
