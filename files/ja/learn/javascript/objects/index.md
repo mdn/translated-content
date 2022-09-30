@@ -12,7 +12,7 @@ JavaScript では、文字列や配列などの JavaScript のコア機能から
 
 また、JavaScript オブジェクトを詳細に調べる前に、JavaScript の基本についていくらか精通している必要があります。このモジュールを試す前に、[JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps) と [JavaScript の構成要素](/ja/docs/Learn/JavaScript/Building_blocks)を通して学習してください。
 
-> **Note:** もしあなたが作業しているコンピューター・タブレットやその他のデバイスで自分でファイルを作れない場合は、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) といったようなオンラインコーディングプログラムで (ほとんどの場合) 試すことができます。
+> **メモ:** もしあなたが作業しているコンピューター・タブレットやその他のデバイスで自分でファイルを作れない場合は、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) といったようなオンラインコーディングプログラムで (ほとんどの場合) 試すことができます。
 
 ## ガイド
 

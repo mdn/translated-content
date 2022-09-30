@@ -55,7 +55,7 @@ HTML の学習で学んだように、要素はマークアップについてさ
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
 
-> **Note:** 新しい値 `s` もあります。これは、通常大文字と小文字が区別されないコンテキストで大文字と小文字を区別するマッチングを強制しますが、これはブラウザーではあまりサポートされておらず、HTML コンテキストではあまり役に立ちません。
+> **メモ:** 新しい値 `s` もあります。これは、通常大文字と小文字が区別されないコンテキストで大文字と小文字を区別するマッチングを強制しますが、これはブラウザーではあまりサポートされておらず、HTML コンテキストではあまり役に立ちません。
 
 ## やってみよう
 
@@ -67,7 +67,7 @@ HTML の学習で学んだように、要素はマークアップについてさ
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute-links.html", '100%', 800)}}
 
-> **Note:** [ここで解答を見ることができます](https://github.com/mdn/css-examples/blob/master/learn/solutions.md)が、まずは自分で考えてみてください。
+> **メモ:** [ここで解答を見ることができます](https://github.com/mdn/css-examples/blob/master/learn/solutions.md)が、まずは自分で考えてみてください。
 
 ## 次のステップ
 

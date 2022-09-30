@@ -22,7 +22,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 それと同じことで、そうですね、例えば 3 次元グラフィックのプログラムを JavaScript や Python のような高レベル言語で書かれた API を使ってやる方が、C や C++ のような低レベル言語から直接コンピューターの GPU やグラフィック機能を叩いてやるよりも、ずっと簡単です。
 
-> **Note:** API という語についてもっと詳しいことは [API の用語解説](/ja/docs/Glossary/API) を参照して下さい。
+> **メモ:** API という語についてもっと詳しいことは [API の用語解説](/ja/docs/Glossary/API) を参照して下さい。
 
 ### クライアントサイド JavaScript での API
 
@@ -71,7 +71,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 - [Twilio API](https://www.twilio.com/)はあなたのアプリで音声・ビデオ電話の機能を作成したり、SMS/MMS を送信したりなどするためのフレームワークを提供します。
 - [Mastodon API](https://docs.joinmastodon.org/api/) を使用すると、Mastodon ソーシャルネットワークの機能をプログラムで操作できます。
 
-> **Note:** サードパーティ API については [Programmable Web API directory](http://www.programmableweb.com/category/all/apis) でもっと多くの情報を見られます。
+> **メモ:** サードパーティ API については [Programmable Web API directory](http://www.programmableweb.com/category/all/apis) でもっと多くの情報を見られます。
 
 ## API はどのように動作する?
 
@@ -81,7 +81,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 あなたのコードは一つ以上の [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects)を通じて API とやりとりし、オブジェクトは API が使用するデータ (オブジェクトのプロパティとして持つ) や API が提供する機能(オブジェクトメソッドとして持つ) の容れ物として使われます。
 
-> **Note:** もしまだオブジェクトがどのように動作するかについて理解があやふやなら、先に進む前に [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects) モジュールを読みなおし、練習するのをおすすめします。
+> **メモ:** もしまだオブジェクトがどのように動作するかについて理解があやふやなら、先に進む前に [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects) モジュールを読みなおし、練習するのをおすすめします。
 
 Web Audio API の例に戻ってみましょう。Web Audio API はとても複雑な API で、たくさんのオブジェクトから成り立っています。わかりやすいものでいうと下記が挙げられます：
 
@@ -150,7 +150,7 @@ audioElement.addEventListener('ended', function() {
 });
 ```
 
-> **Note:** 気づいた方もいるかも知れませんが、音声を再生・停止する `play()` と `pause()` メソッドは Web Audio API の一部ではなく、 {{domxref("HTMLMediaElement")}} API の一部です。これらは異なりますが密接に関連しています。
+> **メモ:** 気づいた方もいるかも知れませんが、音声を再生・停止する `play()` と `pause()` メソッドは Web Audio API の一部ではなく、 {{domxref("HTMLMediaElement")}} API の一部です。これらは異なりますが密接に関連しています。
 
 次に、 {{domxref("BaseAudioContext.createGain")}} を使用して {{domxref("GainNode")}} オブジェクトを作成します。このオブジェクトを使用して音声全体の音量を調整し、スライダーの値が変更される度にオーディオグラフのゲイン（音量）の値を変更する別のイベントハンドラーを作成します。
 
@@ -201,7 +201,7 @@ Ball.prototype.draw = function() {
 };
 ```
 
-> **Note:** この実例を[弾むボールのデモ](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) ([ライブ実行](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) も見てね)で見られます。
+> **メモ:** この実例を[弾むボールのデモ](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) ([ライブ実行](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) も見てね)で見られます。
 
 ### 状態の変化を捉えるのにイベントを使います
 
@@ -229,7 +229,7 @@ request.onload = function() {
 }
 ```
 
-> **Note:** [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) でこの例の動作を見られます([ライブ実行版](https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html)もどうぞ)。
+> **メモ:** [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) でこの例の動作を見られます([ライブ実行版](https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html)もどうぞ)。
 
 最初の 5 行で取得したいリソースを指定し、`XMLHttpRequest()` コンストラクタを使って新しいリクエストオブジェクトを生成し、指定のリソースを取得するために `GET` リクエストを作り、レスポンスを JSON 形式として吐き出すよう指定、そしてリクエストを送信します。
 
@@ -245,7 +245,7 @@ WebAPI 機能は JavaScript や他の Web 技術と同等のセキュリティ�
 
 Web Audio および {{domxref("HTMLMediaElement")}} API には、[自動再生 (autoplay) ポリシー](/ja/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy) と呼ばれるセキュリティ機構が適用されます。これは、基本的に、ページの読み込み時に音声を自動的に再生できないことを意味します。ユーザーに次のことを許可する必要があります。ボタンのようなコントロールを介して音声再生を開始します。これは、音声の自動再生は通常非常に煩わしいものであり、ユーザーにそれを課すべきではないためです。
 
-> **Note:** ブラウザーの厳格さによっては、このようなセキュリティ機構により、例がローカルで機能しなくなる場合があります。つまり、ローカルの例のファイルをウェブサーバーから実行するのではなく、ブラウザーに読み込んだ場合です。執筆時点では、Web Audio API の例はローカルでは Google Chrome で動作しません。動作する前に、GitHub にアップロードする必要がありました。
+> **メモ:** ブラウザーの厳格さによっては、このようなセキュリティ機構により、例がローカルで機能しなくなる場合があります。つまり、ローカルの例のファイルをウェブサーバーから実行するのではなく、ブラウザーに読み込んだ場合です。執筆時点では、Web Audio API の例はローカルでは Google Chrome で動作しません。動作する前に、GitHub にアップロードする必要がありました。
 
 ## まとめ
 

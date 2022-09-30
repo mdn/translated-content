@@ -29,7 +29,7 @@ slug: Learn/Common_questions/Upload_files_to_a_web_server
 
 SFTP クライアントには、いくつもの選択肢があります。ここのデモは [FileZilla](https://filezilla-project.org/) を使うことにします。 Windows、macOS、Linux で使え、無料だからです。 FileZilla をインストールするには、 [FileZilla ダウンロードページ](https://filezilla-project.org/download.php?type=client)に移動し、大きなダウンロードボタンをクリックしてから、通常の方法でインストーラーファイルからインストールします。
 
-> **Note:** もちろん他にもたくさんの選択肢があります。詳しくは[公開ツール](/ja/docs/Learn/Common_questions/How_much_does_it_cost#公開ツール)を参照してください。
+> **メモ:** もちろん他にもたくさんの選択肢があります。詳しくは[公開ツール](/ja/docs/Learn/Common_questions/How_much_does_it_cost#公開ツール)を参照してください。
 
 FileZilla アプリケーションを開きます。次のようなものが表示されます。
 
@@ -59,7 +59,7 @@ FileZilla アプリケーションを開きます。次のようなものが表�
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **Note:** ホスティングプロバイダーによっては、最初にあなたのウェブアドレスに行ったときに、「このウェブサイトは[ホスティングサービス]によってホストされています。」というようなページが表示されます。
+> **メモ:** ホスティングプロバイダーによっては、最初にあなたのウェブアドレスに行ったときに、「このウェブサイトは[ホスティングサービス]によってホストされています。」というようなページが表示されます。
 
 SFTP クライアントを遠隔のサーバーに接続するには、次の手順を実行します。
 

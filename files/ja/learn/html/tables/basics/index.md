@@ -241,7 +241,7 @@ HTML テーブルは表形式のデータに使用する必要があります - 
 | ------------------------ | --------------------- | -------------------- | --------------------- |
 | Second row, first cell.  | Cell 2.               | Cell 3.              | Cell 4.               |
 
-> **Note:** GitHub では [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) としても見つけることができます ([こちらも参照してください](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html))。
+> **メモ:** GitHub では [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) としても見つけることができます ([こちらも参照してください](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html))。
 
 ## \<th> 要素による見出しの追加
 
@@ -306,13 +306,13 @@ HTML テーブルは表形式のデータに使用する必要があります - 
 2. テーブルのヘッダを視覚的にも意味的にもヘッダとして認識させるには、**[`<th>`](/ja/docs/Web/HTML/Element/th)** 要素を使用します ('th' は 'table header' を表します)。これは `<td>` とまったく同じように機能しますが、通常のセルではなくヘッダーを表す点が異なります。HTML を開き、テーブルのヘッダを囲む全ての `<td>` 要素を `<th>` 要素に変更してください。
 3. HTML を保存してブラウザーにロードすると、ヘッダーがヘッダーらしく見えます。
 
-> **Note:** 完成した例は GitHub の [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html))。
+> **メモ:** 完成した例は GitHub の [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html))。
 
 ### なぜ見出しは便利なのか
 
 私たちはすでにこの質問に部分的に答えました — ヘッダーがはっきり目立つときには探しているデータを見つけやすく、デザインは一般的に見栄えがよくなります。
 
-> **Note:** テーブルの見出しにはデフォルトのスタイルがいくつかあります。テーブルに独自のスタイルを追加しなくても、目立つように太字で中央に配置されています。
+> **メモ:** テーブルの見出しにはデフォルトのスタイルがいくつかあります。テーブルに独自のスタイルを追加しなくても、目立つように太字で中央に配置されています。
 
 テーブルヘッダには、`scope` 属性 (次の記事で学ぶことになります) とともに、追加の利点もあります。それらを使用すると、各ヘッダーを同じ行または列のすべてのデータに関連付けることで、テーブルをよりアクセスしやすくすることができます。これにより、スクリーンリーダーはデータの行全体または列全体を一度に読み取ることができます。これは非常に便利です。
 
@@ -370,7 +370,7 @@ HTML テーブルは表形式のデータに使用する必要があります - 
 3. 最後に、`rowspan` を使用して "Horse" と "Chicken" を 2 行にまたがるようにします。
 4. 改善を確認するには、ブラウザーでコードを保存して開きます。
 
-> **Note:** 完成した例は GitHub の [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html))。
+> **メモ:** 完成した例は GitHub の [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html))。
 
 ## 列への共通のスタイル付け
 

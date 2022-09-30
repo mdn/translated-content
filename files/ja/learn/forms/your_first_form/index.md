@@ -70,7 +70,7 @@ l10n:
 - `action` 属性は、フォームで収集したデータを送信すべき場所 (URL) を定義します。
 - `method` 属性は、データを送信するために使用する HTTP メソッド（`get` または `post`）を定義します。
 
-> **Note:** これらの属性がどのように働くかについて、詳しくは[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)で説明しています。
+> **メモ:** これらの属性がどのように働くかについて、詳しくは[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)で説明しています。
 
 今のところは、上の {{htmlelement("form")}} 要素を HTML の {{htmlelement("body")}} に追加します。
 
@@ -157,13 +157,13 @@ l10n:
 - `reset` ボタンをクリックすると、直ちにすべてのフォームウィジェットを既定値にリセットします。 UX の観点では、このボタンは悪い行為であると考えられており、必要な理由がない限りこのボタンは使用しないようにしてください。
 - `button` ボタンをクリックすると*何もしません*! おかしなことのように見えますが、独自のボタンを作成するのに驚くほど役立ちます。 JavaScript でその機能を定義することができます。
 
-> **Note:** {{HTMLElement("input")}} 要素を使用して、対応する `type` を指定してボタンを作成することもできます。例えば `<input type="submit">` のように。{{HTMLElement("button")}} 要素との大きな違いは、{{HTMLElement("input")}} 要素ではラベルとしてプレーンテキストしか許容しませんが、{{HTMLElement("button")}} 要素ではすべての HTML コンテンツを使用して、もっと複雑でクリエイティブなボタンの内容を作成することができます。
+> **メモ:** {{HTMLElement("input")}} 要素を使用して、対応する `type` を指定してボタンを作成することもできます。例えば `<input type="submit">` のように。{{HTMLElement("button")}} 要素との大きな違いは、{{HTMLElement("input")}} 要素ではラベルとしてプレーンテキストしか許容しませんが、{{HTMLElement("button")}} 要素ではすべての HTML コンテンツを使用して、もっと複雑でクリエイティブなボタンの内容を作成することができます。
 
 ## 基本的なフォームの整形
 
 フォームの HTML コードの記述ができました。このフォームを保存してブラウザーで見てみてください。今のところ、かなり不格好であることがわかると思います。
 
-> **Note:** 作成した HTML コードが正しくないと思われる場合は、完成例と比較してみてください — [first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html) にあります ([ライブ版も参照](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html))。
+> **メモ:** 作成した HTML コードが正しくないと思われる場合は、完成例と比較してみてください — [first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html) にあります ([ライブ版も参照](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html))。
 
 フォームをきれいにスタイル付けするのは、なかなか難しいものです。フォームのスタイル付けを詳しく教えるのはこの記事の範囲外なので、とりあえず見た目が問題ないように CSS を追加してもらうだけにしておきましょう。
 
@@ -247,7 +247,7 @@ button {
 
 保存して再読み込みすると、フォームがよりきれいになりました。
 
-> **Note:** Github の [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) にあります([ライブ版も確認](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html))。
+> **メモ:** Github の [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) にあります([ライブ版も確認](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html))。
 
 ## ウェブサーバーへのデータの送信
 

@@ -71,7 +71,7 @@ Run the application and open your browser to <http://localhost:3000/>. Select th
 
 Currently most _dates_ displayed on the site use the default JavaScript format (e.g. _Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. The challenge for this article is to improve the appearance of the date display for `Author` lifespan information (date of death/birth) and for _BookInstance detail_ pages to use the format: December 6th, 2016.
 
-> **Note:** You can use the [same approach](#date_formatting) as we used for the _Book Instance List_ (adding the virtual property for the lifespan to the `Author` model and use [moment](https://www.npmjs.com/package/moment) to format the date strings).
+> **メモ:** You can use the [same approach](#date_formatting) as we used for the _Book Instance List_ (adding the virtual property for the lifespan to the `Author` model and use [moment](https://www.npmjs.com/package/moment) to format the date strings).
 
 The requirements to meet this challenge:
 

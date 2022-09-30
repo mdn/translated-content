@@ -261,7 +261,7 @@ Ball.prototype.update = function() {
 
 4. 保存とデモのリフレッシュをして、ボールがぶつかった時に色が変わるのを見てください!
 
-> **Note:** この例題を動かすのに困った時は、あなたの JavaScript コードを私たちの[完成版](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js)と比べてみてください([ライブ実行版](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)も見られます)。
+> **メモ:** この例題を動かすのに困った時は、あなたの JavaScript コードを私たちの[完成版](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js)と比べてみてください([ライブ実行版](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)も見られます)。
 
 ## まとめ
 

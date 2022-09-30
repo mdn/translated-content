@@ -29,7 +29,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 または、評価のために、 [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) を使うことができます。これらのオンラインエディターに HTML、CSS や JavaScript を貼り付けることができます。もしあなたが使用しているオンラインエディターが、別々の JavaScript/CSS のパネルを持っていない場合は、HTML内の `<script>`/`<style>` 要素を使って、インラインで書くことができます。
 
-> **Note:** 行き詰まった場合は、サポートを依頼してください。このページの下部にある[評価とさらなる支援](#評価とさらなる支援)の節を参照してください。
+> **メモ:** 行き詰まった場合は、サポートを依頼してください。このページの下部にある[評価とさらなる支援](#評価とさらなる支援)の節を参照してください。
 
 ## ヒントと tips
 

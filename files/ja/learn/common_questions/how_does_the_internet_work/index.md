@@ -42,7 +42,7 @@ slug: Learn/Common_questions/How_does_the_Internet_work
 
 2 つのコンピューターが通信を必要とする時、物理的に (通常は[イーサネットケーブル](https://ja.wikipedia.org/wiki/%E3%82%A4%E3%83%BC%E3%82%B5%E3%83%8D%E3%83%83%E3%83%88#%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB)) や無線 ([Wi-Fi](https://ja.wikipedia.org/wiki/Wi-Fi) や [Bluetooth](https://ja.wikipedia.org/wiki/Bluetooth) など) で接続する必要があります。現在のすべてのコンピューターでは通信を維持することができます。
 
-> **Note:** 残りの記事では物理ケーブルのみ説明を行いますが、無線ネットワークでも同じように動きます。
+> **メモ:** 残りの記事では物理ケーブルのみ説明を行いますが、無線ネットワークでも同じように動きます。
 
 ![2 台のコンピューターを連動させる](internet-schema-1.png)
 

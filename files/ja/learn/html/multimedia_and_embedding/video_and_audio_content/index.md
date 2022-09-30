@@ -44,7 +44,7 @@ l10n:
 
 音声/動画ファイルの作成方法は、完全に別のスキルが必要なため、ここでは教えません。私たちは、自分自身で実験するために、[音声や動画のファイルの例とコード](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) を提供しています。
 
-> **Note:** ここで始める前に、 [YouTube](https://www.youtube.com/)、[Dailymotion](http://www.dailymotion.com)、[Vimeo](https://vimeo.com/) のような OVP （オンライン動画プロバイダー）と [Soundcloud](https://soundcloud.com/) のようなオンライン音声プロバイダーがあることも知っておく必要があります。そのような企業は、動画をホストして消費するための便利で簡単な方法を提供するので、莫大な帯域幅の消費を心配する必要はありません。 OVP は通常、ウェブページに動画や音声を埋め込むための既製コードを提供しています。その道を行くなら、この記事で取り上げるいくつかの困難を避けることができます。この種のサービスについては、次の記事でもう少し詳しく説明します。
+> **メモ:** ここで始める前に、 [YouTube](https://www.youtube.com/)、[Dailymotion](http://www.dailymotion.com)、[Vimeo](https://vimeo.com/) のような OVP （オンライン動画プロバイダー）と [Soundcloud](https://soundcloud.com/) のようなオンライン音声プロバイダーがあることも知っておく必要があります。そのような企業は、動画をホストして消費するための便利で簡単な方法を提供するので、莫大な帯域幅の消費を心配する必要はありません。 OVP は通常、ウェブページに動画や音声を埋め込むための既製コードを提供しています。その道を行くなら、この記事で取り上げるいくつかの困難を避けることができます。この種のサービスについては、次の記事でもう少し詳しく説明します。
 
 ### \<video> 要素
 
@@ -99,7 +99,7 @@ l10n:
 
 #### ブラウザーで対応しているメディアファイル
 
-> **Note:** MP3 や MP4/H.264 などの一般的な形式は優れていますが、特許に阻まれています。つまり、ベースとなっている技術の一部または全部に応じた特許が存在するのです。米国では、 MP3 は 2017 年まで、 H.264 は少なくとも 2027 年までの特許が適用されています。
+> **メモ:** MP3 や MP4/H.264 などの一般的な形式は優れていますが、特許に阻まれています。つまり、ベースとなっている技術の一部または全部に応じた特許が存在するのです。米国では、 MP3 は 2017 年まで、 H.264 は少なくとも 2027 年までの特許が適用されています。
 >
 > これらの特許のために、これらのコーデックに対応するために実装しようとするブラウザーは、通常、膨大なライセンス料を支払わなければなりません。さらに、制限のあるソフトウェアを避けて、オープンな形式だけを使用することを好む人々もいます。このような法的・選好的な理由から、ウェブ開発者は、視聴者全員を取り込むために複数の形式に対応しなければならないことが分かっています。
 
@@ -183,7 +183,7 @@ HTML 動画に含めることができる他の多くの機能があります。
 
 ![再生ボタン、タイマー、音量コントロール、および進行状況バーを備えたシンプルなオーディオプレーヤー](audio-player.png)
 
-> **Note:** Github で[音声デモをライブで実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)こともできます (オーディオプレーヤーの[ソースコード](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)も参照してください)。
+> **メモ:** Github で[音声デモをライブで実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)こともできます (オーディオプレーヤーの[ソースコード](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)も参照してください)。
 
 ビジュアルコンポーネントがないため、動画プレーヤーよりもスペースが小さくなります。音声を再生するコントロールを表示するだけで済みます。 HTML 動画とのその他の相違点は次のとおりです。
 
@@ -203,7 +203,7 @@ HTML 動画に含めることができる他の多くの機能があります。
 
 音声や動画の中で話されている言葉を文字起こししたものを、このような人たちに提供できたらいいと思いませんか？ HTML 動画のおかげで、それが可能になりました。そのためには、 [WebVTT](/ja/docs/Web/API/WebVTT_API) ファイル形式と {{htmlelement("track")}} 要素を使用します。
 
-> **Note:** 「文字起こし」とは、「話し言葉をテキストとして書き留める」という意味です。出来上がったテキストが「文字起こししたもの」です。
+> **メモ:** 「文字起こし」とは、「話し言葉をテキストとして書き留める」という意味です。出来上がったテキストが「文字起こししたもの」です。
 
 WebVTT は、複数の文字列と、それぞれの文字列が動画の中で表示されるべき時間、さらには限定的なスタイル設定/位置情報などのメタデータを含むテキストファイルを書くための形式です。これらの文字列は**キュー**と呼ばれ、異なる目的で使用されるいくつかの種類のキューがあります。最も一般的なキューは以下の通りです。
 
@@ -251,7 +251,7 @@ WEBVTT
 
 詳しくは、[HTML 動画にキャプションと字幕を追加する](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。Github には Ian Devlin によって書かれた[この記事の例](http://iandevlin.github.io/mdn/video-player-with-captions/)があります ([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/main/mdn/video-player-with-captions)も参照してください)。この例では、JavaScript を使用してさまざまな字幕を選択できるようにしています。字幕をオンにするには、\[CC] ボタンを押して、英語、ドイツ語、スペイン語のオプションを選択する必要があります。
 
-> **Note:** テキストトラックは検索エンジンが特にテキスト上で成功するため、 {{glossary("SEO")}} にも役立ちます。テキストトラックを使用すると、検索エンジンは動画の途中地点に直接リンクすることもできます。
+> **メモ:** テキストトラックは検索エンジンが特にテキスト上で成功するため、 {{glossary("SEO")}} にも役立ちます。テキストトラックを使用すると、検索エンジンは動画の途中地点に直接リンクすることもできます。
 
 ### アクティブラーニング: 自分の音声と動画を埋め込む
 

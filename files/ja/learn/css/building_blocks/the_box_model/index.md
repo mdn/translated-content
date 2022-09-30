@@ -41,7 +41,7 @@ CSS には、**ブロックボックス**と**インラインボックス**の 2
 
 ただし、`flex` などの `display` の値を使用して、内部の表示タイプを変更できます。要素に `display: flex;` を設定する場合、外側の表示タイプは `block` ですが、内側の表示タイプは `flex` に変更されます。このボックスの直接の子要素はすべてフレックスアイテムになり、[Flexbox](/ja/docs/Learn/CSS/CSS_layout/Flexbox) 仕様で規定されているルールに従ってレイアウトされます。これについては後で学習します。
 
-> **Note:** ディスプレイの値、およびブロックおよびインラインレイアウトでのボックスの動作の詳細については、[ブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)に関する MDN ガイドを参照してください。
+> **メモ:** ディスプレイの値、およびブロックおよびインラインレイアウトでのボックスの動作の詳細については、[ブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)に関する MDN ガイドを参照してください。
 
 CSS レイアウトについてさらに詳しく学習すると、`flex` や、例えば [`grid`](/ja/docs/Learn/CSS/CSS_layout/Grids) のようなボックスに設定できる他のさまざまな内部の値と出会うでしょう。
 
@@ -104,7 +104,7 @@ CSS でブロックボックスを構成するには、次のものがありま�
 
 標準のボックスモデルを使用してボックスが占めるスペースは、実際には 410px (350 + 25 + 25 + 5 + 5) で、高さは 210px (150 + 25 + 25 + 5 + 5) であり、padding と border は コンテンツボックスに使用される幅に追加されます。![Showing the size of the box when the standard box model is being used.](standard-box-model.png)
 
-> **Note:** マージンは、ボックスの実際のサイズにはカウントされません。確かに、ボックスがページ上で占める合計スペースに影響しますが、ボックスの外側のスペースにのみ影響します。ボックスの領域は境界線で停止します—マージンまでは達しません。
+> **メモ:** マージンは、ボックスの実際のサイズにはカウントされません。確かに、ボックスがページ上で占める合計スペースに影響しますが、ボックスの外側のスペースにのみ影響します。ボックスの領域は境界線で停止します—マージンまでは達しません。
 
 ### CSS ボックスモデルの代替
 
@@ -131,7 +131,7 @@ html {
 }
 ```
 
-> **Note:** 興味深い歴史 — Internet Explorer は以前は代替ボックスモデルにデフォルト設定されていましたが、切り替え可能なメカニズムはありませんでした。
+> **メモ:** 興味深い歴史 — Internet Explorer は以前は代替ボックスモデルにデフォルト設定されていましたが、切り替え可能なメカニズムはありませんでした。
 
 ## ボックスモデルを試してみる
 
@@ -141,7 +141,7 @@ html {
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1000)}}
 
-> **Note:** [ここ](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model)でこのタスクの解決策を見つけることができます。
+> **メモ:** [ここ](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model)でこのタスクの解決策を見つけることができます。
 
 ### ブラウザーの開発ツールを利用して、ボックスモデルを見てみる
 

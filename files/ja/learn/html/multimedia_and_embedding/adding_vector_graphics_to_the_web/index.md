@@ -26,7 +26,7 @@ l10n:
   </tbody>
 </table>
 
-> **Note:** この記事は SVG を教えるためのものではありません。 SVG が何であるかと、ウェブページに追加する方法について説明します。
+> **メモ:** この記事は SVG を教えるためのものではありません。 SVG が何であるかと、ウェブページに追加する方法について説明します。
 
 ## ベクターグラフィックとは何か？
 
@@ -43,7 +43,7 @@ l10n:
 
 ![2 つの星の画像が拡大表示され、1 つがくっきりとしており、もう一方はギザギザになっている](raster-vector-zoomed.png)
 
-> **Note:** 上の画像は実際には全て PNG です — いずれの場合も、左の星はラスター画像を表し、右の星はベクター画像を表します。 実際の例については、[vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) デモを参照してください！
+> **メモ:** 上の画像は実際には全て PNG です — いずれの場合も、左の星はラスター画像を表し、右の星はベクター画像を表します。 実際の例については、[vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) デモを参照してください！
 
 さらに、ベクター画像ファイルは、画像内のすべてのピクセルの情報ではなく、一握りのアルゴリズムを保持するだけで済むので、ラスター同等物よりもはるかに軽くなります。
 
@@ -82,7 +82,7 @@ SVG にはこれまで説明したもの以外にも、いくつかの長所が�
 
 ラスターグラフィックは、前述の理由から、写真などの複雑な高精度画像に対しては、ほぼ間違いなく優れています。
 
-> **Note:** Inkscape では、スペースを節約するためにファイルを Plain SVG として保存してください。 また、[ウェブ用の SVG を作成する方法について説明しているこの記事](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html) (英語) を参照してください。
+> **メモ:** Inkscape では、スペースを節約するためにファイルを Plain SVG として保存してください。 また、[ウェブ用の SVG を作成する方法について説明しているこの記事](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html) (英語) を参照してください。
 
 ## ページへの SVG の追加
 

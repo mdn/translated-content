@@ -80,7 +80,7 @@ Run the application and open your browser to <http://localhost:3000/>. Select th
 
 ![Author Detail Page - Express Local Library site](LocalLibary_Express_Author_Detail.png)
 
-> **Note:** The appearance of the author _lifespan_ dates is ugly! We'll address that in the final challenge in this article.
+> **メモ:** The appearance of the author _lifespan_ dates is ugly! We'll address that in the final challenge in this article.
 
 ## Next steps
 

@@ -17,7 +17,7 @@ original_slug: Learn/CSS/Styling_boxes/A_cool_looking_box
 
 - [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html) と [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css) のローカルコピーを作成します — それらを `index.html` と `style.css` として新しいディレクトリーに保存します。
 
-> **Note:** あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力できます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
+> **メモ:** あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力できます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
 
 ## プロジェクトの概要
 

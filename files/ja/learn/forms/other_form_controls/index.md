@@ -52,7 +52,7 @@ l10n:
 
 ![Mac OSX の Firefox 71 と Safari 13、 Windows 10 の Edge 18、Yandex 14、Firefox、Chrome で、既定、フォーカス中、無効状態の \<textarea> 要素を示しています。](textarea_basic.png)
 
-> **Note:** 多少面白いテキストエリアの使用例は、このシリーズの最初の記事の[例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) が見つかります ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html))。
+> **メモ:** 多少面白いテキストエリアの使用例は、このシリーズの最初の記事の[例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) が見つかります ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html))。
 
 ### 複数行レンダリングの制御
 
@@ -81,7 +81,7 @@ l10n:
 
 ドロップダウンコントロールは、ユーザーインターフェイスのスペースをあまり取らずに、ユーザーがさまざまなオプションから選択できるようにするためのシンプルな方法です。HTML には、**選択ボックス**と**自動補完ボックス**という 2 つの形式のドロップダウンコンテンツがあります。どちらの場合も相互作用は同じです。コントロールを有効にすると、ブラウザーにはユーザーが選択できる値のリストが表示されます。
 
-> **Note:** すべてのドロップダウンボックスの例は、GitHub の [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html)にあります ([ライブでもご覧ください](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html))。
+> **メモ:** すべてのドロップダウンボックスの例は、GitHub の [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html)にあります ([ライブでもご覧ください](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html))。
 
 ### 選択ボックス
 
@@ -162,9 +162,9 @@ l10n:
 
 {{EmbedLiveSample("Multiple_choice_select_box", 120, 120)}}
 
-> **Note:** 複数選択可能な選択ボックスの場合、選択ボックスはドロップダウンコンテンツとして値を表示しないことに気づくでしょう - 代わりに、すべての値がリストに一度に表示され、オプションの [`size`](/ja/docs/Web/HTML/Attributes/size)属性はウィジェットの高さを決定します。
+> **メモ:** 複数選択可能な選択ボックスの場合、選択ボックスはドロップダウンコンテンツとして値を表示しないことに気づくでしょう - 代わりに、すべての値がリストに一度に表示され、オプションの [`size`](/ja/docs/Web/HTML/Attributes/size)属性はウィジェットの高さを決定します。
 
-> **Note:** {{HTMLElement("select")}} 要素に対応しているすべてのブラウザーは、 {{htmlattrxref("multiple", "select")}} 属性にも対応しています。
+> **メモ:** {{HTMLElement("select")}} 要素に対応しているすべてのブラウザーは、 {{htmlattrxref("multiple", "select")}} 属性にも対応しています。
 
 ### 自動補完のボックス
 
@@ -242,7 +242,7 @@ l10n:
 
 このほかにも、これまで述べてきたような目立つものではありませんが、状況によっては有用なフォーム機能がいくつかありますので、簡単にご紹介しておきましょう。
 
-> **Note:** この節の例は GitHub 上の [other-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) にあります（[ライブでも確認してください](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)）。
+> **メモ:** この節の例は GitHub 上の [other-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) にあります（[ライブでも確認してください](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)）。
 
 ### メーターとプログレスバー
 

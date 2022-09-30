@@ -223,7 +223,7 @@ textarea.onkeyup = function(){
 - {{htmlattrxref('sandbox','iframe')}}
   - : この属性は、他の `<iframe>` の機能よりも若干現代的なブラウザー(たとえば、IE 10 以上)で機能し、高度なセキュリティ設定を要求します。これについては、次のセクションで詳しく説明します。
 
-> **Note:** 速度を向上させるためには、メインコンテンツの読み込みが完了した後に iframe の `src` 属性を JavaScript で設定することをお勧めします。これにより、ページがより早く使用できるようになり、公式ページの読み込み時間が短縮されます（重要な {{glossary("SEO")}} の測定基準）。
+> **メモ:** 速度を向上させるためには、メインコンテンツの読み込みが完了した後に iframe の `src` 属性を JavaScript で設定することをお勧めします。これにより、ページがより早く使用できるようになり、公式ページの読み込み時間が短縮されます（重要な {{glossary("SEO")}} の測定基準）。
 
 ### セキュリティ上の懸念
 
@@ -231,7 +231,7 @@ textarea.onkeyup = function(){
 
 ブラウザーメーカーやウェブ開発者は、 iframe がウェブ上の悪意ある人物（しばしば**ハッカー**、またはより正確には**クラッカー**と呼ばれます）の共通のターゲット（公式の用語: **攻撃ベクター**）であるということを苦労して学びました。悪意ある人物は、あなたのウェブページを悪意を持って改ざんすることや、ユーザー名やパスワードなどの機密情報を明らかにするなど、人を騙し望んでいないことを行います。このため、仕様技術者とブラウザー開発者は、`<iframe>` をより安全にするためのさまざまなセキュリティメカニズムを開発しました。また、考慮すべき最善の措置もあります。これらのいくつかを以下で説明します。
 
-> **Note:** [クリックジャッキング](/ja/docs/Glossary/Clickjacking)は、ハッカーが目に見えない iframe を文書に埋め込んだり（文書を自分の悪意のあるウェブサイトに埋め込んだり）して、ユーザーの操作を乗っ取るための一般的な iframe 攻撃の一種です。これは、ユーザーを誤解させたり機密データを盗む一般的な方法です。
+> **メモ:** [クリックジャッキング](/ja/docs/Glossary/Clickjacking)は、ハッカーが目に見えない iframe を文書に埋め込んだり（文書を自分の悪意のあるウェブサイトに埋め込んだり）して、ユーザーの操作を乗っ取るための一般的な iframe 攻撃の一種です。これは、ユーザーを誤解させたり機密データを盗む一般的な方法です。
 
 簡単な例ですが、先ほど紹介した例をブラウザーに読み込んでみましょう。Github に[ライブ](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)が公開されています（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)も参照してください）。実際にページに何も表示されませんが、[ブラウザーの開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)のコンソールに、理由を示すメッセージが表示されます。 Firefox では、_The loading of "https\://developer.mozilla.org/en-US/docs/Glossary" in a frame is denied by "X-Frame-Options" directive set to "DENY"_ （フレーム内への https\://developer.mozilla.org/en-US/docs/Glossary の読み込みは、 X-Frame-Options ディレクティブが "DENY" に設定されているため、拒否されました）というメッセージが表示されます。これは、MDN を作成した開発者が、`<iframe>` 内に埋め込まれないようにウェブサイトのページを提供する設定をサーバーに組み込んだためです（下記の [CSP ディレクティブの設定](#csp_ディレクティブの設定)を参照してください）。これは実に理にかなっています。MDN のページ全体を他のページに埋め込むことは、自分のサイトに埋め込んで自分自身で主張するようなことをしない限り、実に意味がありませんし、また[クリックジャッキング](/ja/docs/Glossary/Clickjacking)によってデータを盗もうとすることも、どちらも本当に悪いことです。さらに、もしみんながこれをやり始めたら、必要な通信帯域が増え、 Mozilla にたくさん課金されてしまうでしょう。
 
@@ -252,7 +252,7 @@ textarea.onkeyup = function(){
 
 サイトで HTTPS を有効にするには、特別なセキュリティ証明書をインストールする必要があります。多くのホスティングプロバイダーは、自分自身で資格情報を所有するための設定をすることなく、 HTTPS 対応のホスティングを提供しています。しかし、自分自身でサイトの HTTPS 対応を設定する必要がある場合、 [Let's Encrypt](https://letsencrypt.org/) は、必要な証明書を自動的に作成してインストールするためのツールや手順を、Apache web server、Nginx など、最も広く使用されているウェブサーバーの組み込み対応で使用する方法を提供しています。 Let's Encrypt のツールは、可能な限りプロセスを簡単にするように設計されているので、サイトを HTTPS 化するために、このツールまたは他に使用できる手段を避ける理由は、実に何もないのです。
 
-> **Note:** [GitHub ページ](/ja/docs/Learn/Common_questions/Using_Github_pages)では、既定で HTTPS 経由でコンテンツを提供できるため、コンテンツのホスティングに便利です。異なるホスティングを使用していて、わからない場合は、ホスティングプロバイダーに問い合わせてください。
+> **メモ:** [GitHub ページ](/ja/docs/Learn/Common_questions/Using_Github_pages)では、既定で HTTPS 経由でコンテンツを提供できるため、コンテンツのホスティングに便利です。異なるホスティングを使用していて、わからない場合は、ホスティングプロバイダーに問い合わせてください。
 
 #### 常に `sandbox` 属性を使用する
 
@@ -262,13 +262,13 @@ textarea.onkeyup = function(){
 
 絶対に必要な場合は、権限を（`sandbox=""` 属性値内に） 1 つずつ追加することができます。使用可能なすべてのオプションについては、 {{htmlattrxref('sandbox','iframe')}} のリファレンスの記事を参照してください。重要な注意点の 1 つは、 `sandbox` 属性に `allow-scripts` と `allow-same-origin` の両方を追加しないことです。この場合、埋め込みコンテンツは、サイトのスクリプトの実行を停止する同一オリジンセキュリティポリシーをバイパスし、 JavaScript を使用してサンドボックスを完全に無効にすることができます。
 
-> **Note:** 攻撃者が欺いて悪意のあるコンテンツ（iframe 外にある）を直接訪問させることができれば、サンドボックスは保護を提供しません。特定のコンテンツが悪意のあるコンテンツ（ユーザー生成コンテンツなど）である可能性がある場合は、別の{{glossary("domain","ドメイン")}}からメインサイトへ配信してください。
+> **メモ:** 攻撃者が欺いて悪意のあるコンテンツ（iframe 外にある）を直接訪問させることができれば、サンドボックスは保護を提供しません。特定のコンテンツが悪意のあるコンテンツ（ユーザー生成コンテンツなど）である可能性がある場合は、別の{{glossary("domain","ドメイン")}}からメインサイトへ配信してください。
 
 #### CSP ディレクティブの設定
 
 {{Glossary("CSP")}} は **[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)** の略で、HTML 文書のセキュリティを強化するために設計された[一連の HTTP ヘッダー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)（ウェブサーバーから配信されたときにウェブページとともに送信されるメタデータ）を提供します。`<iframe>` を保護する場合、[適切な X-Frame-Options ヘッダーを送信するようにサーバーを構成](/ja/docs/Web/HTTP/Headers/X-Frame-Options)できます。これにより、他のウェブサイトがそのウェブページにあなたのコンテンツを埋め込むのを防ぐことができます（[クリックジャッキング](/ja/docs/Glossary/Clickjacking)や他の攻撃のホストを可能にする）。以前に見たように、これはまさに MDN 開発者が行ったことです。
 
-> **Note:** Frederik Braun 氏の投稿 [X-Frame-Options セキュリティヘッダーについて](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)（英語）で、このトピックの背景情報を読むことができます。明らかに、これは、この記事の説明の範囲外です。
+> **メモ:** Frederik Braun 氏の投稿 [X-Frame-Options セキュリティヘッダーについて](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)（英語）で、このトピックの背景情報を読むことができます。明らかに、これは、この記事の説明の範囲外です。
 
 ## \<embed> 要素と \<object> 要素
 

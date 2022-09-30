@@ -6,11 +6,11 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
 
 このスキルテストの目的は、[JavaScript での基本演算 — 数値と演算子](/ja/docs/Learn/JavaScript/First_steps/Math) の記事を理解しているかどうかを評価することです。
 
-> **Note:** 下記のインタラクティブエディターのソリューションで試してみることができますが、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインツールを利用すると、タスクに取り組むのに役立つかもしれません。
+> **メモ:** 下記のインタラクティブエディターのソリューションで試してみることができますが、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインツールを利用すると、タスクに取り組むのに役立つかもしれません。
 >
 > 行き詰まったなら、私たちに助けを求めてください。 — このページの下部の [Assessment or further help](#assessment_or_further_help) セクションを参照
 
-> **Note:** 下記の作成では、あなたのコードにエラーがあれば、このページの結果パネル（または、ダウンロード可能なバージョンでは、ブラウザーの JavaScript コンソール）に出力され、答えにたどり着くための助けとなります。
+> **メモ:** 下記の作成では、あなたのコードにエラーがあれば、このページの結果パネル（または、ダウンロード可能なバージョンでは、ブラウザーの JavaScript コンソール）に出力され、答えにたどり着くための助けとなります。
 
 ## 数学 1
 
@@ -26,7 +26,7 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math1.html", '100%', 400)}}
 
-> **Note:** [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math1-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしてください。
+> **メモ:** [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math1-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしてください。
 
 ## 数学 2
 
@@ -43,7 +43,7 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
 
-> **Note:** [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math2-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしてください。
+> **メモ:** [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math2-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしてください。
 
 ## 数学 3
 
@@ -51,7 +51,7 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math3.html", '100%', 400)}}
 
-> **Note:** [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math3-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしてください。
+> **メモ:** [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math3-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしてください。
 
 ## 評価またはさらなる助け
 

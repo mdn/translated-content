@@ -41,7 +41,7 @@ slug: Learn/Common_questions/set_up_a_local_testing_server
 非同期リクエストの問題を回避するには、ローカルウェブサーバーを介して実行することによって、そのようなサンプルをテストする必要があります。
 私たちの目的のためにこれを行う最も簡単な方法の 1 つは、 Python の `http.server` モジュールを使用することです。
 
-> **Note:** 古いバージョンの Python (バージョン 2.7 まで) では、`SimpleHTTPServer` という名前の似たようなモジュールが提供されていました。Python 2.x を使用している場合、`http.server` の使用をすべて `SimpleHTTPServer` に置き換えることで、このガイドを実行することができます。しかし、最新バージョンの Python を使用することをお勧めします。
+> **メモ:** 古いバージョンの Python (バージョン 2.7 まで) では、`SimpleHTTPServer` という名前の似たようなモジュールが提供されていました。Python 2.x を使用している場合、`http.server` の使用をすべて `SimpleHTTPServer` に置き換えることで、このガイドを実行することができます。しかし、最新バージョンの Python を使用することをお勧めします。
 
 このためには次のようにします。
 
@@ -85,7 +85,7 @@ slug: Learn/Common_questions/set_up_a_local_testing_server
 
 5. 既定では、これはローカルウェブサーバー上のディレクトリーの内容を 8000 番ポート上で実行します。このサーバーにアクセスするには、ウェブブラウザーで `localhost:8000` の URL に移動します。ここにディレクトリーの内容が表示されるので、実行する HTML ファイルをクリックしてください。
 
-> **Note:** すでに 8000 番ポートで何かが稼働している場合は、 server コマンドを実行して別のポート番号を選択することができます。例えば `python3 -m http.server 7800` (Python 3.x) または `python -m SimpleHTTPServer 7800` (Python 2.x) です。これで `localhost:7800` でコンテンツにアクセスできます。
+> **メモ:** すでに 8000 番ポートで何かが稼働している場合は、 server コマンドを実行して別のポート番号を選択することができます。例えば `python3 -m http.server 7800` (Python 3.x) または `python -m SimpleHTTPServer 7800` (Python 2.x) です。これで `localhost:7800` でコンテンツにアクセスできます。
 
 ## サーバー側の言語をローカルで実行する
 

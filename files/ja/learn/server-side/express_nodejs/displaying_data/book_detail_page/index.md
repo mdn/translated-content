@@ -39,7 +39,7 @@ exports.book_detail = function(req, res, next) {
 };
 ```
 
-> **Note:** We don't need to require _async_ and _BookInstance_, as we already imported those modules when we implemented the home page controller.
+> **メモ:** We don't need to require _async_ and _BookInstance_, as we already imported those modules when we implemented the home page controller.
 
 The method uses `async.parallel()` to find the `Book` and its associated copies (`BookInstances`) in parallel. The approach is exactly the same as described for the _Genre detail page_ above.
 
@@ -86,7 +86,7 @@ block content
 
 Almost everything in this template has been demonstrated in previous sections.
 
-> **Note:** The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.
+> **メモ:** The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.
 >
 > ```
 >   p #[strong Genre:]

@@ -14,7 +14,7 @@ JavaScript の基本的な構成要素を見てきたところで、これから
 
 この評価を始めるために、サンプルが入っているサイトから [ZIP ファイル](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) を取得して、コンピュータのどこかに展開しておきます。
 
-> **Note:** 別の方法として, この評価を行うために [JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使うことができます。これらのオンラインエディターに HTML、CSS、JavaScript を貼り付けることができます。利用するオンラインエディターが JavaScript/CSS パネルに分かれていなければ、 HTML ページの中の `<script>`/`<style>` 要素にそれらを貼り付けてください 。
+> **メモ:** 別の方法として, この評価を行うために [JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使うことができます。これらのオンラインエディターに HTML、CSS、JavaScript を貼り付けることができます。利用するオンラインエディターが JavaScript/CSS パネルに分かれていなければ、 HTML ページの中の `<script>`/`<style>` 要素にそれらを貼り付けてください 。
 
 ## プロジェクト概要
 

@@ -50,7 +50,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 ![](dom-screenshot.png)
 
-> **Note:** この DOM ツリーの図は Ian Hickson の [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) を使って作成しました。
+> **メモ:** この DOM ツリーの図は Ian Hickson の [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) を使って作成しました。
 
 これを見ると、それぞれのドキュメント内の要素とちょっとばかりのテキストそれぞれが、ツリーの中でそれ自身のエントリーがあるのがわかるでしょう — これら一つ一つを**ノード**と呼びます。またノードの種類を示す語や、ノードそれぞれの関係によりツリーでの位置があるのがわかるでしょう:
 
@@ -191,7 +191,7 @@ linkPara.parentNode.removeChild(linkPara);
     <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>
     ```
 
-> **Note:** CSS ではハイフン記法になっているものを、JavaScript プロパティ版の CSS スタイルはどんな風に小文字のキャメルケースで書いている(`background-color` と `backgroundColor` とか)か見ておいて下さい。まぜこぜにしないよう注意して下さい、さもないと動きませんよ。
+> **メモ:** CSS ではハイフン記法になっているものを、JavaScript プロパティ版の CSS スタイルはどんな風に小文字のキャメルケースで書いている(`background-color` と `backgroundColor` とか)か見ておいて下さい。まぜこぜにしないよう注意して下さい、さもないと動きませんよ。
 
 ドキュメントのスタイルを動的にいじる際によく使われる別のやり方をこれから見ていきましょう。
 
@@ -224,7 +224,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 次の二つのセクションでは、DOM API のもっと実践的な使い方を見ていきます。
 
-> **Note:** 私たちによる [dom-example.htm l 完成版](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html) のデモが GitHub にあります ([ライブ実行もどうぞー](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html))。
+> **メモ:** 私たちによる [dom-example.htm l 完成版](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html) のデモが GitHub にあります ([ライブ実行もどうぞー](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html))。
 
 ## 実践学習: ウィンドウオブジェクトから使える情報を取り出す
 
@@ -261,7 +261,7 @@ linkPara.parentNode.removeChild(linkPara);
     }
     ```
 
-> **Note:** もし行き詰まったら、私たちによる [完成版ウィンドウリサイズ例題](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html) ([ライブ実行版もあるよ](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html)) を見て下さい。
+> **メモ:** もし行き詰まったら、私たちによる [完成版ウィンドウリサイズ例題](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html) ([ライブ実行版もあるよ](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html)) を見て下さい。
 
 ## 実践学習: 動的な買い物リスト
 
@@ -289,7 +289,7 @@ linkPara.parentNode.removeChild(linkPara);
 10. 削除ボタンにイベントハンドラーを追加して、クリックされたらボタンが含まれているリスト項目全体を削除するようにします。
 11. 最後に、[`focus()`](/ja/docs/Web/API/HTMLElement/focus)メソッドを使って input 要素にフォーカスし、次の買い物リスト商品をすぐに入力できるようにします。
 
-> **Note:** 本当にどうしようもなく詰まったら、私たちの [完成版買い物リスト](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([ライブ実行版もあるよ](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html))を見て下さい。
+> **メモ:** 本当にどうしようもなく詰まったら、私たちの [完成版買い物リスト](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([ライブ実行版もあるよ](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html))を見て下さい。
 
 ## まとめ
 
