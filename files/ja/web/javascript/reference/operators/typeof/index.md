@@ -39,7 +39,7 @@ typeof(operand)
 | [関数](/ja/docs/Glossary/Function) オブジェクト (ECMA-262 の用語では [[Call]] を実装) | `"function"`                           |
 | その他のオブジェクト                                                                         | `"object"`                             |
 
-> **Note:** ECMAScript 2019 およびそれ以前の実装では、呼び出し可能な標準外のオブジェクトに対して、`typeof` が任意の実装定義の文字列値を返すことを許可していました。
+> **メモ:** ECMAScript 2019 およびそれ以前の実装では、呼び出し可能な標準外のオブジェクトに対して、`typeof` が任意の実装定義の文字列値を返すことを許可していました。
 >
 > 実際にこれを利用したブラウザーとして知られているのは、古い Internet Explorer だけです。（[下記参照](#ie-specific_notes)）
 

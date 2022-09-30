@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 
 **`anchor()`** メソッドは、 `<a name="...">` 開始タグで始まり、いくらかのテキストが続き、 `</a>` 終了タグで終わる文字列を生成します。
 
-> **Warning:** このメソッドを使用しないでください。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) を使用してください。また、 HTML 仕様書では {{HTMLElement("a")}} 要素に `name` 属性を設定することを許容しなくなりましたので、このメソッドが生成するものは妥当なマークアップにもなりません。
+> **警告:** このメソッドを使用しないでください。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) を使用してください。また、 HTML 仕様書では {{HTMLElement("a")}} 要素に `name` 属性を設定することを許容しなくなりましたので、このメソッドが生成するものは妥当なマークアップにもなりません。
 
 ## 構文
 

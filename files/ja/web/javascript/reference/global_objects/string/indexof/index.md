@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 {{EmbedInteractiveExample("pages/js/string-indexof.html")}}
 
-> **Note:** **メモ:** 配列メソッドについては {{jsxref("Array.prototype.indexOf()")}} を参照してください。
+> **メモ:** 配列メソッドについては {{jsxref("Array.prototype.indexOf()")}} を参照してください。
 
 ## 構文
 
