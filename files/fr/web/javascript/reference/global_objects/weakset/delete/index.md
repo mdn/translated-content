@@ -49,14 +49,11 @@ ws.has(window);    // Renvoie false, window n'appartient plus au WeakSet.
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WeakSet.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -44,14 +44,11 @@ uint8.length; // 6 (correspond à la longueur en prenant en compte le décalage 
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                       | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-%typedarray%.prototype.length', 'TypedArray.prototype.length')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.length', 'TypedArray.prototype.length')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.length")}}
+{{Compat}}
 
 ## Voir aussi
 

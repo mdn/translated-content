@@ -69,14 +69,11 @@ if (!Uint8Array.prototype.fill) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.fill', 'TypedArray.prototype.fill')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.fill', 'TypedArray.prototype.fill')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.fill")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -60,14 +60,11 @@ for (var c of chaine) {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.@@iterator")}}
+{{Compat}}
 
 ## Voir aussi
 

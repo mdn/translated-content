@@ -39,14 +39,11 @@ uint8.byteOffset; // 3 (correspond au décalage défini lors de la construction 
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                       | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-%typedarray%.prototype.byteoffset', 'TypedArray.prototype.byteOffset')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.byteoffset', 'TypedArray.prototype.byteOffset')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.byteOffset")}}
+{{Compat}}
 
 ## Voir aussi
 

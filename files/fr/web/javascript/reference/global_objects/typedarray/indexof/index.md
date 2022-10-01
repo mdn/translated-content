@@ -53,18 +53,11 @@ uint8.indexOf(2, -3); // 0
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.indexof', 'TypedArray.prototype.indexOf')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.indexof', 'TypedArray.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.indexOf")}}
-
-## Notes de compatibilité
-
-- À partir de Firefox 47 ({{geckoRelease(47)}}), cette méthode ne renverra plus `-0`. Ainsi, `new Uint8Array([0]).indexOf(0, -0)` renverra toujours `+0` (cf. {{bug(1242043)}}).
+{{Compat}}
 
 ## Voir aussi
 

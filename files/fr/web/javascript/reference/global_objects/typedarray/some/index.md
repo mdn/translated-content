@@ -95,14 +95,11 @@ S'il faut également prendre en charge les moteurs JavaScript qui ne prennent pa
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.some', 'TypedArray.prototype.some')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.some', 'TypedArray.prototype.some')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.some")}}
+{{Compat}}
 
 ## Voir aussi
 

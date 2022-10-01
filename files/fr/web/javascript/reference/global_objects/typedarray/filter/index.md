@@ -77,14 +77,11 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(élém => élém >= 10);
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.filter', 'TypedArray.prototype.filter')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.filter', 'TypedArray.prototype.filter')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.filter")}}
+{{Compat}}
 
 ## Voir aussi
 

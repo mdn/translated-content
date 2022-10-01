@@ -44,14 +44,11 @@ Une chaîne de caractères ({{jsxref("String")}}) dont la longueur est celle ind
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.padend', 'String.prototype.padEnd')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES8', '#sec-string.prototype.padend', 'String.prototype.padEnd')}}     | {{Spec2('ES8')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.padEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

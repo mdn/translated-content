@@ -93,14 +93,11 @@ Uint8Array.from({length: 5}, (v, k) => k);
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.from', '%TypedArray%.from')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.from', '%TypedArray%.from')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.from")}}
+{{Compat}}
 
 ## Voir aussi
 

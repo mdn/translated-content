@@ -58,33 +58,11 @@ console.log(eArr.next().value); // [4, 50]
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('ES2015', '#sec-%typedarray%.prototype.entries', '%TypedArray%.prototype.entries()')}}
-      </td>
-      <td>{{Spec2('ES2015')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('ESDraft', '#sec-%typedarray%.prototype.entries', '%TypedArray%.prototype.entries()')}}
-      </td>
-      <td>{{Spec2('ESDraft')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

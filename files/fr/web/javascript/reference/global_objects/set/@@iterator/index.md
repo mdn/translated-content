@@ -61,14 +61,11 @@ for (const v of monSet) {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Set.@@iterator")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -48,16 +48,11 @@ unescape("%u0107");     // "ć"
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires                                                                                                       |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-unescape-string', 'unescape')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles d'ECMAScript pour les navigateurs Web. |
-| {{SpecName('ES6', '#sec-unescape-string', 'unescape')}}         | {{Spec2('ES6')}}         | Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles d'ECMAScript pour les navigateurs Web. |
-| {{SpecName('ES5.1', '#sec-B.2.2', 'unescape')}}                 | {{Spec2('ES5.1')}}     | Définie dans l'annexe B (informative) sur la compatibilité.                                                        |
-| {{SpecName('ES1', '#sec-15.1.2.5', 'unescape')}}                 | {{Spec2('ES1')}}         | Définition initiale                                                                                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.unescape")}}
+{{Compat}}
 
 ## Voir aussi
 

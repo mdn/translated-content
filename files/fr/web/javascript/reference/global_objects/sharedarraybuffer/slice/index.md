@@ -63,13 +63,11 @@ sab.slice(0,1); // SharedArrayBuffer { byteLength: 1 }
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                         | Commentaires                     |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-sharedarraybuffer.prototype.slice', 'SharedArrayBuffer.prototype.slice')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.SharedArrayBuffer.slice")}}
+{{Compat}}
 
 ## Voir aussi
 

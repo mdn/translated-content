@@ -83,14 +83,11 @@ itérableMalFormé[Symbol.iterator] = () => 1
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.iterator', 'Symbol.iterator')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.iterator', 'Symbol.iterator')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.iterator")}}
+{{Compat}}
 
 ## Voir aussi
 

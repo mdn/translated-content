@@ -98,16 +98,11 @@ if ('ab'.substr(-1) != 'b') {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                                                 |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définie dans la Compatibility Annex B (informative). Implémentée dans JavaScript 1.0.        |
-| {{SpecName('ES5.1', '#sec-B.2.3', 'String.prototype.substr')}}                         | {{Spec2('ES5.1')}}     | Définie dans la Compatibility Annex B (informative).                                         |
-| {{SpecName('ES6', '#sec-string.prototype.substr', 'String.prototype.substr')}}     | {{Spec2('ES6')}}         | Définie dans l'Annex B (normative) pour les Additional ECMAScript Features for Web Browsers. |
-| {{SpecName('ESDraft', '#sec-string.prototype.substr', 'String.prototype.substr')}} | {{Spec2('ESDraft')}} | Définie dans l'Annex B (normative) pour les Additional ECMAScript Features for Web Browsers  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.substr")}}
+{{Compat}}
 
 ## Voir aussi
 

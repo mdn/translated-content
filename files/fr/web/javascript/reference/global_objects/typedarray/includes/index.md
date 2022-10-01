@@ -52,14 +52,11 @@ new Float64Array([NaN]).includes(NaN); // true;
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES7', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}}     | {{Spec2('ES7')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.includes")}}
+{{Compat}}
 
 ## Voir aussi
 

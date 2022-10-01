@@ -60,14 +60,11 @@ Mieux vaut ne pas ajouter de prothèses pour `TypedArray.prototype` si le moteur
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.join', 'TypedArray.prototype.join')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.join', 'TypedArray.prototype.join')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.join")}}
+{{Compat}}
 
 ## Voir aussi
 

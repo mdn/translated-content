@@ -462,16 +462,11 @@ a + b;
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName("ES1")}}                                                                                             | {{Spec2("ES1")}}         | Définition initiale.                                                                  |
-| {{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}                                             | {{Spec2('ES5.1')}}     |                                                                                       |
-| {{SpecName('ES6', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}         | {{Spec2('ES6')}}         | Ajout : littéraux binaires et octaux, échappements de points de code Unicode, modèles |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}} | {{Spec2('ESDraft')}} |                                                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## Voir aussi
 

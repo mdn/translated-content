@@ -21,14 +21,11 @@ Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@replace"
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.replace', 'Symbol.replace')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.replace")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -54,14 +54,11 @@ uint8.lastIndexOf(2, -1); // 3
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.lastindexof', 'TypedArray.prototype.lastIndexOf')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.lastindexof', 'TypedArray.prototype.lastIndexOf')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.lastIndexOf")}}
+{{Compat}}
 
 ## Voir aussi
 

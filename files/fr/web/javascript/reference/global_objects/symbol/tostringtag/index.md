@@ -62,14 +62,11 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.toStringTag")}}
+{{Compat}}
 
 ## Voir aussi
 

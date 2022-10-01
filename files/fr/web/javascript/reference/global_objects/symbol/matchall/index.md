@@ -36,13 +36,11 @@ Voir les pages {{jsxref("String.prototype.matchAll()")}} et {{jsxref("RegExp.@@m
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('ESDraft', '#sec-symbol.matchall', 'Symbol.matchAll')}} | {{Spec2('ESDraft')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.matchAll")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -69,14 +69,11 @@ if (!String.prototype.endsWith) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.endsWith")}}
+{{Compat}}
 
 ## Voir aussi
 
