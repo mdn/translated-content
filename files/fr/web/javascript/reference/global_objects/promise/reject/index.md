@@ -48,14 +48,11 @@ Promise.reject(new Error("échec")).then(function() {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                    |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ESDraft')}} |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.reject")}}
+{{Compat}}
 
 ## Voir aussi
 

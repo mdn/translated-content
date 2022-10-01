@@ -180,15 +180,11 @@ o2 = Object.create({}, {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5. |
-| {{SpecName('ES2015', '#sec-object.create', 'Object.create')}}     | {{Spec2('ES2015')}}     |                                                         |
-| {{SpecName('ESDraft', '#sec-object.create', 'Object.create')}} | {{Spec2('ESDraft')}} |                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.create")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -160,14 +160,11 @@ Promise.race([p5, p6]).then(function(value) {
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires                                    |
-| -------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.race', 'Promise.race')}} | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.race', 'Promise.race')}} | {{Spec2('ESDraft')}} |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.race")}}
+{{Compat}}
 
 ## Voir aussi
 

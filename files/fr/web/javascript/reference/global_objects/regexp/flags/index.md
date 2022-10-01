@@ -47,14 +47,11 @@ if (RegExp.prototype.flags === undefined) {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-get-regexp.prototype.flags', 'RegExp.prototype.flags')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.flags', 'RegExp.prototype.flags')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.flags")}}
+{{Compat}}
 
 ## Voir aussi
 

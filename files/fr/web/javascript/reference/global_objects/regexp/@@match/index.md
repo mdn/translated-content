@@ -85,14 +85,11 @@ console.log(résultat.group(3)); // 02
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.@@match")}}
+{{Compat}}
 
 ## Voir aussi
 

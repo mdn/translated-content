@@ -34,14 +34,11 @@ Number.MIN_SAFE_INTEGER // -9007199254740991
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.MIN_SAFE_INTEGER")}}
+{{Compat}}
 
 ## Voir aussi
 

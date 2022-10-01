@@ -73,14 +73,11 @@ delete p.a; // "appelée sur : a"
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-delete-p', '[[Delete]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-delete-p', '[[Delete]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.deleteProperty")}}
+{{Compat}}
 
 ## Voir aussi
 

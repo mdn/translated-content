@@ -210,13 +210,8 @@ En résumé, lorsqu'on paramètre manuellement le constructeur, on peut obtenir 
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                       | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}                                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.constructor")}}
+{{Compat}}

@@ -236,14 +236,11 @@ p3.then(function(v) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                    |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.prototype.then', 'Promise.prototype.then')}}     | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}} | {{Spec2('ESDraft')}} |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.then")}}
+{{Compat}}
 
 ## Voir aussi
 

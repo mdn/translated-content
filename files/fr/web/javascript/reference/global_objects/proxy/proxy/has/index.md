@@ -91,14 +91,11 @@ var p = new Proxy(obj, {
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-hasproperty-p', '[[HasProperty]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-hasproperty-p', '[[HasProperty]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.has")}}
+{{Compat}}
 
 ## Voir aussi
 

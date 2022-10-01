@@ -121,18 +121,11 @@ Si la propriété `__proto__` de {{jsxref("Object.prototype")}} ne permet pas d'
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | État                         | Commentaires                                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-object.prototype.__proto__', 'Object.prototype.__proto__')}}                                     | {{Spec2('ES2015')}}     | Incluse dans l'annexe (normative) pour le fonctionnalités additionneles d'ECMAScript pour les navigateurs web (note : la spécification codifie ce qui est déjà présent dans les implémentations). |
-| {{SpecName('ESDraft', '#sec-additional-properties-of-the-object.prototype-object', 'Object.prototype.__proto__')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.proto")}}
-
-## Notes de compatibilité
-
-Bien que la spécification ES2015 rende le support de `__proto__` nécessaire pour les navigateurs web, elle n'est pas obligatoire pour les autres environnements (bien que ce soit conseillé vu le caractère normatif de l'annexe). Si votre code doit être compatible avec un environnement qui n'est pas un navigateur web, il est recommandé d'utiliser {{jsxref("Object.getPrototypeOf()")}} et {{jsxref("Object.setPrototypeOf()")}} à la place.
+{{Compat}}
 
 ## Voir aussi
 

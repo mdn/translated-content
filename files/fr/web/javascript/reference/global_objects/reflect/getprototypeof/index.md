@@ -73,14 +73,11 @@ Reflect.getPrototypeOf(Object('toto')); // String.prototype
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.getPrototypeOf")}}
+{{Compat}}
 
 ## Voir aussi
 

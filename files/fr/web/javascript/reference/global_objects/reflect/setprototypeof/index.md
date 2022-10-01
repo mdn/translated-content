@@ -66,14 +66,11 @@ Reflect.setPrototypeOf(target, proto); // false
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.setPrototypeOf")}}
+{{Compat}}
 
 ## Voir aussi
 
