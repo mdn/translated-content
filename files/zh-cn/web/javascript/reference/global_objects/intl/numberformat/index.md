@@ -177,7 +177,7 @@ console.log(new Intl.NumberFormat('de', { notation: "engineering" }).format(9876
 // → 987,654E6
 
 console.log(new Intl.NumberFormat('zh-CN', { notation: "compact" }).format(987654321));
-// → 9.9 亿
+// → 9.9亿
 
 console.log(new Intl.NumberFormat('fr', { notation: "compact" , compactDisplay: "long" }).format(987654321));
 // → 988 millions
