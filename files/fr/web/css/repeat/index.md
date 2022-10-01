@@ -122,10 +122,8 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName("CSS Grid", "#funcdef-repeat", "repeat()")}} | {{Spec2("CSS Grid")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-template-columns.repeat")}}
+{{Compat}}

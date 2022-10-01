@@ -123,9 +123,13 @@ Une ou plusieurs valeurs `<repeat-style>`, séparées par des virgules.
       </tbody>
     </table>
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -163,12 +167,8 @@ Une ou plusieurs valeurs `<repeat-style>`, séparées par des virgules.
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS Masks", "#the-mask-repeat", "mask-repeat")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.mask-repeat")}}
+{{Compat}}
