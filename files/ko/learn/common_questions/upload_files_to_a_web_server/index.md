@@ -124,7 +124,7 @@ To publish to this account, please connect through FTP with the following creden
 FTP 프로토콜은 웹사이트를 출시하기 위해 잘 알려진 방법입니다. 하지만 유일한 방법은 아닙니다. 여기 몇개의 다른 방법들도 있습니다.
 
 - **Web interfaces**. An HTML interface acting as front-end for a remote file upload service. Provided by your hosting service. 여러분의 호스팅제공자는 HTML 인터페이스로 된(브라우저에서 업로드 가능한) 원격 파일 업로드 서비스를 지원해줄 수도 있습니다.
-- **GitHub** (advanced). {{Glossary("git")}}을 이용해 commit/push 와 같은 방법으로 업로드할 수도 있습니다. [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) 가이드에서 [Publishing your website](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website) 를 읽어보세요.
+- **GitHub** (advanced). {{Glossary("git")}}을 이용해 commit/push 와 같은 방법으로 업로드할 수도 있습니다. [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) 가이드에서 [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website) 를 읽어보세요.
 - **{{Glossary("Rsync")}}** (advanced). 로컬과 원격의 파일을 동기화하는 방법입니다.
 - **{{Glossary("WebDAV")}}**. An extension of the {{Glossary("HTTP")}} 프로토콜의 확장으로 보다 나은 파일 관리를 가능하게 해주는 확장입니다.
 

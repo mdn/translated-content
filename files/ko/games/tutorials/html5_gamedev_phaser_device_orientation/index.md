@@ -5,7 +5,7 @@ translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 ---
 {{GamesSidebar}}
 
-In this tutorial we’ll go through the process of building an HTML5 mobile game that uses the [Device Orientation](https://developer.mozilla.org/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) and [Vibration](/ko/docs/Web/Guide/API/Vibration) **APIs** to enhance the gameplay and is built using the [Phaser](http://phaser.io/) framework. Basic JavaScript knowledge is recommended to get the most from this tutorial.
+In this tutorial we’ll go through the process of building an HTML5 mobile game that uses the [Device Orientation](/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) and [Vibration](/ko/docs/Web/Guide/API/Vibration) **APIs** to enhance the gameplay and is built using the [Phaser](http://phaser.io/) framework. Basic JavaScript knowledge is recommended to get the most from this tutorial.
 
 ## Example game
 

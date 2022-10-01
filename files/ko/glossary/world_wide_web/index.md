@@ -20,7 +20,7 @@ slug: Glossary/World_Wide_Web
 
 ### 더 배우고 싶다면
 
-- [Learn the Web](https://developer.mozilla.org/en-US/Learn)
+- [Learn the Web](/en-US/Learn)
 - [Web literacy map](https://learning.mozilla.org/web-literacy) (an inventory of skills needed in Web development)
 
 ### 일반적인 지식

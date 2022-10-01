@@ -86,5 +86,5 @@ let obj = {
 
 ## 같이 보기
 
-- [정규 표현식](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%EC%A0%95%EA%B7%9C%EC%8B%9D)
+- [정규 표현식](/ko/docs/Web/JavaScript/Guide/%EC%A0%95%EA%B7%9C%EC%8B%9D)
 - [XRegEx flags](http://xregexp.com/flags/) – 새로운 4개의 플래그(`n`, `s`, `x`, `A`)를 제공하는 정규 표현식 라이브러리

@@ -33,7 +33,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 ## 페이지 액션 기술하기
 
-페이지 액션의 속성은 manifest.json의 [`page_action`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 항목에서 정의한다:
+페이지 액션의 속성은 manifest.json의 [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 항목에서 정의한다:
 
 ```json
 "page_action": {
@@ -54,11 +54,11 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 browser.pageAction.onClicked.addListener(handleClick);
 ```
 
-팝업이 있으면, 클릭 이벤트는 없다: 대신, 팝업창이 열린다. 사용자는 팝업으로 일을 하고, 팝업창 바깥을 클릭하면 자동으로 닫힌다. [팝업](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups) 글에 팝업을 만들고 관리하는 보다 자세한 내용이 있다.
+팝업이 있으면, 클릭 이벤트는 없다: 대신, 팝업창이 열린다. 사용자는 팝업으로 일을 하고, 팝업창 바깥을 클릭하면 자동으로 닫힌다. [팝업](/en-US/Add-ons/WebExtensions/Popups) 글에 팝업을 만들고 관리하는 보다 자세한 내용이 있다.
 
 주목! 확장 프로그램은 페이지 액션을 하나만 가질 수 있다.
 
-페이지 액션의 속성은 [`pageAction`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API로 프로그램적으로 바꿀 수 있다.
+페이지 액션의 속성은 [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API로 프로그램적으로 바꿀 수 있다.
 
 ## 아이콘
 

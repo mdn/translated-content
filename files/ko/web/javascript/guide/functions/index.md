@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Guide/함수
 
 ### 함수 선언
 
-함수 정의(또는 함수 선언)는 다음과 같은 [`함수`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function) 키워드로 구성되어 있습니다:
+함수 정의(또는 함수 선언)는 다음과 같은 [`함수`](/ko/docs/Web/JavaScript/Reference/Statements/function) 키워드로 구성되어 있습니다:
 
 - 함수의 이름
 - 괄호 안에서 쉼표로 분리된 함수의 매개변수 목록
@@ -55,7 +55,7 @@ y = mycar.make; // y 의 값은 "Toyota" 입니다.
 
 ### 함수 표현식
 
-위에서 함수 선언은 구문적인 문(statement)이지만, **함수 표현식(** [function expression](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/function)**)**에 의해서 함수가 만들어 질 수도 있습니다. 이 같은 함수를 **익명**이라고 합니다. 이 말은 모든 함수가 이름을 가질 필요는 없다는 것을 뜻합니다. 예를 들어, 함수 `square`은 다음과 같이 정의 될 수도 있습니다:
+위에서 함수 선언은 구문적인 문(statement)이지만, **함수 표현식(** [function expression](/ko/docs/Web/JavaScript/Reference/Operators/function)**)**에 의해서 함수가 만들어 질 수도 있습니다. 이 같은 함수를 **익명**이라고 합니다. 이 말은 모든 함수가 이름을 가질 필요는 없다는 것을 뜻합니다. 예를 들어, 함수 `square`은 다음과 같이 정의 될 수도 있습니다:
 
 ```js
 var square = function(number) { return number * number };
@@ -113,7 +113,7 @@ if (num == 0){
 
 여기에 기술된 바와 같이 함수를 정의하는것에 더하여 {{jsxref("eval", "eval()")}} 과 같이 런타임에 문자열에서 함수들을 만들기위해 {{jsxref("Function")}} 생성자를 사용할 수 있습니다.
 
-객체내의 한 속성이 함수인 경우 **메서드**라고 합니다. [Working with objects](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Working_with_Objects)에서 객체와 방법에 대해 자세히 알아보세요.
+객체내의 한 속성이 함수인 경우 **메서드**라고 합니다. [Working with objects](/ko/docs/Web/JavaScript/Guide/Working_with_Objects)에서 객체와 방법에 대해 자세히 알아보세요.
 
 ## 함수 호출
 
@@ -578,7 +578,7 @@ console.log(a3); // logs [8, 6, 7, 9]
 
 ### 사전적 `this`
 
-화살표 함수에서, 모든 new함수들은 그들의 [this](/en-US/docs/Web/JavaScript/Reference/Operators/this) 값을 정의합니다 (생성자로서의 새로운 객체, 정의되지 않은 [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)의 함수 호출, 함수가 "object method"로 호출했을때의 context object ,등등.). 이런 것은 객체지향 프로그래밍 스타일에서 짜증을 불러 일으킵니다.
+화살표 함수에서, 모든 new함수들은 그들의 [this](/en-US/docs/Web/JavaScript/Reference/Operators/this) 값을 정의합니다 (생성자로서의 새로운 객체, 정의되지 않은 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)의 함수 호출, 함수가 "object method"로 호출했을때의 context object ,등등.). 이런 것은 객체지향 프로그래밍 스타일에서 짜증을 불러 일으킵니다.
 
 ```js
 function Person() {
@@ -612,7 +612,7 @@ function Person() {
 }
 ```
 
-또는, 적절한 `this` 값이 `growUp()` 함수에 전달되도록, [바인딩된 함수](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)가 생성될 수 있습니다.
+또는, 적절한 `this` 값이 `growUp()` 함수에 전달되도록, [바인딩된 함수](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)가 생성될 수 있습니다.
 
 화살표 함수에는 `this;`가 없습니다. 화살표 함수를 포함하는 객체 값이 사용됩니다. 따라서 다음 코드에서 setInterval에 전달 된 함수 내의 this 값은 화살표 함수를 둘러싼 함수의 this와 같은 값을 갖습니다.
 
@@ -639,7 +639,7 @@ var p = new Person();
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
   - : 전역 **`isFinite()`** 함수는 전달받은 값이 유한한지 결정합니다. 만약 필요하다면, 매개변수는 첫번째로 숫자로 변환됩니다.
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : **`isNaN()`** 함수는 {{jsxref("Global_Objects/NaN", "NaN")}}인지 아닌지 결정합니다. Note: `isNaN` 함수 안의 강제 변환은 [흥미로운](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description) 규칙을 가지고 있습니다; {{jsxref("Number.isNaN()")}}을 대신 사용하고 싶을것입니다, ECMAScript 6 에서 정의된,또는 값이 숫자값이 아닐때, [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) 를 사용할 수도 있습니다 .
+  - : **`isNaN()`** 함수는 {{jsxref("Global_Objects/NaN", "NaN")}}인지 아닌지 결정합니다. Note: `isNaN` 함수 안의 강제 변환은 [흥미로운](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description) 규칙을 가지고 있습니다; {{jsxref("Number.isNaN()")}}을 대신 사용하고 싶을것입니다, ECMAScript 6 에서 정의된,또는 값이 숫자값이 아닐때, [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) 를 사용할 수도 있습니다 .
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - : **`parseFloat()`** 함수는 문자열 인수 값을 해석하여 부동소숫점 수를 반환합니다.
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}

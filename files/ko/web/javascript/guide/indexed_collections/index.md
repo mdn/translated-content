@@ -159,7 +159,7 @@ for (var i = 0; i < colors.length; i++) {
 }
 ```
 
-배열이 아무런 요소를 포함하고 있지 않다면 반복문 조건에서 false로 평가됩니다. 배열의 요소가 [DOM](https://developer.mozilla.org/en-US/docs/DOM) node들을 포함한다면 보다 효율적인 코드 관용구를 사용할 수 있습니다.
+배열이 아무런 요소를 포함하고 있지 않다면 반복문 조건에서 false로 평가됩니다. 배열의 요소가 [DOM](/en-US/docs/DOM) node들을 포함한다면 보다 효율적인 코드 관용구를 사용할 수 있습니다.
 
 ```js
 var divs = document.getElementsByTagName('div');

@@ -8,7 +8,7 @@ browser-compat: javascript.operators.async_function
 
 **`async function`** 키워드는 표현식 내에서 `async` 함수를 정의하기 위해 사용됩니다.
 
-또한 [async function statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)을 사용하여 async 함수를 정의할 수 있습니다.
+또한 [async function statement](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)을 사용하여 async 함수를 정의할 수 있습니다.
 
 ## 문법
 
@@ -16,7 +16,7 @@ browser-compat: javascript.operators.async_function
     async function [name]([param1[, param2[, ..., paramN]]]) { statements }
 ```
 
-ES2015에서와 같이 [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)를 사용해도 됩니다.
+ES2015에서와 같이 [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)를 사용해도 됩니다.
 
 ### 인수
 

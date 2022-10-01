@@ -36,14 +36,14 @@ PWA는 이들과 동일한 이점을 즐길 수 있는 웹 앱을 생성하는 �
 
 다음은 웹 앱을 PWA로 식별되기 위해 확인해야 하는 몇 가지 핵심 원칙입니다.
 
-- [발견 가능](https://developer.mozilla.org/ko/Apps/Progressive/Advantages#Discoverable), 따라서 컨텐츠를 검색 엔진을 통해 찾을 수 있습니다.
-- [설치 가능](https://developer.mozilla.org/ko/Apps/Progressive/Advantages#Installable), 따라서 기기의 홈 화면에서 사용할 수 있습니다.
-- [연결 가능](https://developer.mozilla.org/ko/Apps/Progressive/Advantages#Linkable), 따라서 간단하게 URL을 전송해 공유할 수 있습니다.
-- [네트워크 독립적](https://developer.mozilla.org/ko/Apps/Progressive/Advantages#Network_independent), 따라서 오프라인이나 불안한 네트워크 연결에서 동작합니다.
-- [점진적](https://developer.mozilla.org/ko/Apps/Progressive/Advantages#Progressive), 따라서 최신 브라우저의 모든 기능은 사용할 수 없지만 이전 브라우저의 기본 기능은 여전히 사용할 수 있습니다.
-- [재 참여 가능(Re-engageable)](https://developer.mozilla.org/ko/Apps/Progressive/Advantages#Re-engageable), 따라서 새 컨텐츠가 사용 가능할 때마다 알림을 보낼 수 있습니다.
-- [반응형](https://developer.mozilla.org/ko/Apps/Progressive/Advantages#Responsive), 따라서 모든 기기의 화면이나 브라우저에서 사용할 수 있습니다 — 모바일 폰, 태블릿, 노트북, TV, 냉장고, 등.
-- [안전](https://developer.mozilla.org/ko/Apps/Progressive/Advantages#Safe), 따라서 여러분과 앱 사이의 연결이 여러분의 민감한 데이터에 접근하려는 모든 제3자로부터 안전합니다.
+- [발견 가능](/ko/Apps/Progressive/Advantages#Discoverable), 따라서 컨텐츠를 검색 엔진을 통해 찾을 수 있습니다.
+- [설치 가능](/ko/Apps/Progressive/Advantages#Installable), 따라서 기기의 홈 화면에서 사용할 수 있습니다.
+- [연결 가능](/ko/Apps/Progressive/Advantages#Linkable), 따라서 간단하게 URL을 전송해 공유할 수 있습니다.
+- [네트워크 독립적](/ko/Apps/Progressive/Advantages#Network_independent), 따라서 오프라인이나 불안한 네트워크 연결에서 동작합니다.
+- [점진적](/ko/Apps/Progressive/Advantages#Progressive), 따라서 최신 브라우저의 모든 기능은 사용할 수 없지만 이전 브라우저의 기본 기능은 여전히 사용할 수 있습니다.
+- [재 참여 가능(Re-engageable)](/ko/Apps/Progressive/Advantages#Re-engageable), 따라서 새 컨텐츠가 사용 가능할 때마다 알림을 보낼 수 있습니다.
+- [반응형](/ko/Apps/Progressive/Advantages#Responsive), 따라서 모든 기기의 화면이나 브라우저에서 사용할 수 있습니다 — 모바일 폰, 태블릿, 노트북, TV, 냉장고, 등.
+- [안전](/ko/Apps/Progressive/Advantages#Safe), 따라서 여러분과 앱 사이의 연결이 여러분의 민감한 데이터에 접근하려는 모든 제3자로부터 안전합니다.
 
 ### 이 모든 것들을 할만한 가치가 있나요?
 

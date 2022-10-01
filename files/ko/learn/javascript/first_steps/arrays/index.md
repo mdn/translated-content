@@ -160,7 +160,7 @@ inputForm.focus();
 
 ### 배열 항목의 접근과 수정
 
-그런 다음 [문자열의 문자에 접근했던 것](https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character)과 같은 방법으로 괄호 표기법을 사용하여 배열의 개별 항목에 접근 할 수 있습니다.
+그런 다음 [문자열의 문자에 접근했던 것](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character)과 같은 방법으로 괄호 표기법을 사용하여 배열의 개별 항목에 접근 할 수 있습니다.
 
 1. 콘솔에 다음을 입력하세요:
 

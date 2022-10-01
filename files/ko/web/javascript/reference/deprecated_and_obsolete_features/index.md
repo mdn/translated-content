@@ -146,7 +146,7 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 ### String methods
 
-- [HTML wrapper methods](https://developer.mozilla.org/en-US/docs/tag/HTML%20wrapper%20methods) like {{jsxref("String.prototype.fontsize")}} and {{jsxref("String.prototype.big")}}.
+- [HTML wrapper methods](/en-US/docs/tag/HTML%20wrapper%20methods) like {{jsxref("String.prototype.fontsize")}} and {{jsxref("String.prototype.big")}}.
 - {{jsxref("String.prototype.quote")}} is removed from Firefox 37.
 - non standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} are deprecated.
 

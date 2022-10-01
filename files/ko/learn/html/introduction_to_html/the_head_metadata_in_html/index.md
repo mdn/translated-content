@@ -133,7 +133,7 @@ started with developing web sites and applications.">
 
 이 설명은 검색엔진 결과 페이지에서도 사용된다. 한번 알아보자.
 
-1. 다음 링크로 간다. [front page of The Mozilla Developer Network](https://developer.mozilla.org/en-US/).
+1. 다음 링크로 간다. [front page of The Mozilla Developer Network](/en-US/).
 2. 페이지의 소스를 본다. (Right/
 
     <kbd>Ctrl</kbd>

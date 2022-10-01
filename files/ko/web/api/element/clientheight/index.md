@@ -21,7 +21,7 @@ var h = element.clientHeight;
 
 ## 예
 
-![Image:Dimensions-client.png](https://developer.mozilla.org/@api/deki/files/185/=Dimensions-client.png)
+![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
 
 ## 명세서
 

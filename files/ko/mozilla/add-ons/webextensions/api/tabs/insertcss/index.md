@@ -8,7 +8,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 > **Note:** When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} to insert and remove CSS.
 
-이 API를 사용하기 위해 여러분은 해당 페이지 URL에 대한 허가가 필요합니다. 이 허가에 대한 요청은 [호스트 허가](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)를 통하거나 [활성화 된 탭 허가](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)을 사용할 수도 있습니다.
+이 API를 사용하기 위해 여러분은 해당 페이지 URL에 대한 허가가 필요합니다. 이 허가에 대한 요청은 [호스트 허가](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)를 통하거나 [활성화 된 탭 허가](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)을 사용할 수도 있습니다.
 
 You can only inject CSS into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", or "file". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.
 

@@ -18,7 +18,7 @@ target.onscroll = functionRef;
 
 `functionRef` 은(는) 함수 표현식 또는 함수 이름 이며, 이 객체는 오직 {{domxref("UIEvent")}} 객체만 인수로 받습니다.
 
-오직 하나의 `onscroll` 이벤트만 하나의 객체에 할당 할 수 있습니다. [`EventTarget.addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener) 를 사용하여 [`scroll`](https://developer.mozilla.org/ko/docs/Web/Reference/Events/scroll) 이벤트를 정의 할 수 있습니다.
+오직 하나의 `onscroll` 이벤트만 하나의 객체에 할당 할 수 있습니다. [`EventTarget.addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener) 를 사용하여 [`scroll`](/ko/docs/Web/Reference/Events/scroll) 이벤트를 정의 할 수 있습니다.
 
 ## Example
 

@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 
 ## 무엇이 문제일까?
 
-[객체 초기자](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer) 구문으로 객체를 만들 때 콜론(`:`)은 객체의 속성을 키와 값으로 분리합니다.
+[객체 초기자](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer) 구문으로 객체를 만들 때 콜론(`:`)은 객체의 속성을 키와 값으로 분리합니다.
 
 ```js
 var obj = { propertyKey: 'value' };
@@ -83,4 +83,4 @@ var obj = { ['b'+'ar']: 'foo' };
 
 ## 같이 보기
 
-- [객체 초기자](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [객체 초기자](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)

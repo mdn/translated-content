@@ -21,7 +21,7 @@ translation_of: Web/Guide/HTML/Content_categories
 
 > **참고:** 콘텐츠 카테고리의 상세 내용과 서로간의 비교는 이 글의 범위를 벗어납니다. 궁금하시다면 [HTML 명세의 관련 항목](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)을 읽어보세요.
 
-[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](https://developer.mozilla.org/@api/deki/files/6244/=Content_categories_venn.png?size=webview)](https://developer.mozilla.org/@api/deki/files/6244/=Content_categories_venn.png)
+[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](/@api/deki/files/6244/=Content_categories_venn.png?size=webview)](/@api/deki/files/6244/=Content_categories_venn.png)
 
 ## 메인 콘텐츠 카테고리
 
@@ -74,9 +74,9 @@ translation_of: Web/Guide/HTML/Content_categories
 - {{HTMLElement("area")}}, {{HTMLElement("map")}}의 자손인 경우.
 - {{HTMLElement("del")}}, 구문 콘텐츠만 포함하는 경우.
 - {{HTMLElement("ins")}}, 구문 콘텐츠만 포함하는 경우.
-- {{HTMLElement("link")}}, [`itemprop`](https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes#attr-itemprop) 속성을 가지고 있는 경우.
+- {{HTMLElement("link")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#attr-itemprop) 속성을 가지고 있는 경우.
 - {{HTMLElement("map")}}, 구문 콘텐츠만 포함하는 경우.
-- {{HTMLElement("meta")}}, [`itemprop`](https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes#attr-itemprop) 속성을 가지고 있는 경우.
+- {{HTMLElement("meta")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#attr-itemprop) 속성을 가지고 있는 경우.
 
 ### 내장 콘텐츠
 

@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 ---
 {{jsSidebar("Statements")}}
 
-`for...in`문은 상속된 열거 가능한 속성들을 포함하여 객체에서 문자열로 키가 지정된 모든 열거 가능한 속성에 대해 반복합니다. ([Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)로 키가 지정된 속성은 무시합니다.)
+`for...in`문은 상속된 열거 가능한 속성들을 포함하여 객체에서 문자열로 키가 지정된 모든 열거 가능한 속성에 대해 반복합니다. ([Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)로 키가 지정된 속성은 무시합니다.)
 
 {{EmbedInteractiveExample("pages/js/statement-forin.html")}}
 

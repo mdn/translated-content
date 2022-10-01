@@ -58,11 +58,11 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 
 1. `index.html` 파일과 같은 디렉토리에 `main.js` 라는 이름의 파일을 새로 만듭니다.
 
-2. HTML 파일(`index.html`)에 [\<script>](https://developer.mozilla.org/ko/docs/Web/HTML/Element/script) 엘리먼트를 삽입하여 `main.js` 를 참조하도록 외부 자바스크립트 파일(`main.js`)을 적용합니다. `</body>` 태그 바로 앞에 배치하세요.
+2. HTML 파일(`index.html`)에 [\<script>](/ko/docs/Web/HTML/Element/script) 엘리먼트를 삽입하여 `main.js` 를 참조하도록 외부 자바스크립트 파일(`main.js`)을 적용합니다. `</body>` 태그 바로 앞에 배치하세요.
 
 초기 변수와 함수:
 
-1. 가공 전의 텍스트 파일에서, "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" 바로 밑의 코드를 모두 복사해서 `main.js` 파일의 맨 위에 붙여넣습니다. 이 내용은 세 개의 변수 제공하는데, `customName` 변수는 "Enter custom name" 텍스트 필드 값을 저장하고, `randomize` 변수에는 "Generate random story" 버튼 오브젝트를 저장하고, HTML 바디에 끝에 있는 클래스가 `story`인 [\<p>](https://developer.mozilla.org/ko/docs/Web/HTML/Element/p) 엘리먼트는 story 변수에 저장하며 해당 엘리먼트에는 랜덤한 이야기가 복사됩니다. 또한, randomValueFromArray() 함수는 배열을 가져와서 배열이 가진 항목 중 하나를 랜덤하게 반환합니다.
+1. 가공 전의 텍스트 파일에서, "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" 바로 밑의 코드를 모두 복사해서 `main.js` 파일의 맨 위에 붙여넣습니다. 이 내용은 세 개의 변수 제공하는데, `customName` 변수는 "Enter custom name" 텍스트 필드 값을 저장하고, `randomize` 변수에는 "Generate random story" 버튼 오브젝트를 저장하고, HTML 바디에 끝에 있는 클래스가 `story`인 [\<p>](/ko/docs/Web/HTML/Element/p) 엘리먼트는 story 변수에 저장하며 해당 엘리먼트에는 랜덤한 이야기가 복사됩니다. 또한, randomValueFromArray() 함수는 배열을 가져와서 배열이 가진 항목 중 하나를 랜덤하게 반환합니다.
 2. 가공전 텍스트 파일의 두번째 섹션 "2. RAW TEXT STRINGS"에는 프로그램에 자동으로 입력되어 랜덤 이야기 엘리먼트에 출력하는 문자열이 포함되어 있습니다.  `main.js` 에 아래 설명대로 변수를 만듭니다:
 
     1. 먼저 `storyText`변수에 가장 긴 문자열("It was 94 fahrenheit outside, so \~\~" 로 시작하는 문장)을 저장합니다.
