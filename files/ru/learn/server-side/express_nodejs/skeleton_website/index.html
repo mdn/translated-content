@@ -9,7 +9,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <p class="summary">Эта вторая статья в нашем <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">учебнике Express</a> показывает, как создать каркас проекта веб-сайта, который позже можно будет заполнить с помощью путей сайта, шаблонов представлений и обращений к базе данных.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Необходимые знания:</th>
@@ -29,7 +29,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>Далее показано, как вызвать генератор приложений, и даётся небольшое пояснение различных вариантов представлений и CSS. Мы поясним структуру каркаса веб-сайта. В конце мы покажем, как запустить веб-сайт, чтобы убедиться, что он работает.</p>
 
 <div class="note">
-<p><span style="line-height: 1.5;"><strong>Замечание</strong>: </span><em>Express Application Generator</em> — не единственный генератор Express-приложений, и созданный проект --не единственный жизнеспособный способ организации ваших файлов и каталогов. Однако созданный сайт имеет модульную структуру, которую легко понять и расширить. О <em>минимальном</em> Express приложении смотрите <a href="https://expressjs.com/en/starter/hello-world.html">Hello world example</a> в документации Express.</p>
+<p><strong>Замечание</strong>: <em>Express Application Generator</em> — не единственный генератор Express-приложений, и созданный проект --не единственный жизнеспособный способ организации ваших файлов и каталогов. Однако созданный сайт имеет модульную структуру, которую легко понять и расширить. О <em>минимальном</em> Express приложении смотрите <a href="https://expressjs.com/en/starter/hello-world.html">Hello world example</a> в документации Express.</p>
 </div>
 
 <h2 id="Применение_генератора_приложений">Применение генератора приложений</h2>
@@ -61,11 +61,11 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
     -f, --force          force on non-empty directory (работать в каталоге с файлами)
 </pre>
 
-<p>Команда <code>express</code> создаст проект в <em>текущем</em> каталоге с использованием (устаревшего) движка представления <em>Jade</em> и обычного CSS. Если указать <font face="Courier New, monospace">express </font><font face="Courier New, monospace">name</font>, проект будет создан в подкаталоге name текущего каталога. </p>
+<p>Команда <code>express</code> создаст проект в <em>текущем</em> каталоге с использованием (устаревшего) движка представления <em>Jade</em> и обычного CSS. Если указать express name, проект будет создан в подкаталоге name текущего каталога. </p>
 
 <pre class="brush: bash"><code>express</code></pre>
 
-<p>Можно выбрать движок представления (шаблон), используя --<code>view; </code><code><font face="Times New Roman, serif">параметр</font></code><code> --</code><code>css </code> позволяет выбрать движок для создания CSS.</p>
+<p>Можно выбрать движок представления (шаблон), используя --<code>view; </code><code>параметр</code><code> --</code><code>css </code> позволяет выбрать движок для создания CSS.</p>
 
 <div class="note">
 <p><strong>Примечание:</strong> Другие опции (<code>--hogan</code>, <code>--ejs</code>, <code>--hbs</code> и пр.) для выбора шаблонизатора устарели. Используйте <code>--view</code> (или<code> -v</code>)!</p>
@@ -76,7 +76,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p><em>Express-generator</em><em> </em>даёт возможность сконфигурировать несколько популярных движков, включая <a href="https://www.npmjs.com/package/ejs">EJS</a>, <a href="http://github.com/donpark/hbs">Hbs</a>, <a href="https://pugjs.org/api/getting-started.html">Pug</a> (Jade), <a href="https://www.npmjs.com/package/twig">Twig</a>, и <a href="https://www.npmjs.com/package/vash">Vash</a>, но по умолчанию  выбран Jade. Экспресс сразу после установки может поддерживать большое количество и других шаблонизаторов.</p>
 
 <div class="note">
-<p><strong>Примечание:</strong> При желании использовать шаблонизатор, который не поддерживается генератором,  просмотрите  документацию <a href="https://expressjs.com/en/guide/using-template-engines.html"><font color="#3d7e9a"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><font size="3">Using template engines with Express</font></font></font></a><font color="#333333"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><font size="3"> </font></font></font> и документацию для нужного шаблонизатора.</p>
+<p><strong>Примечание:</strong> При желании использовать шаблонизатор, который не поддерживается генератором,  просмотрите  документацию <a href="https://expressjs.com/en/guide/using-template-engines.html">Using template engines with Express</a>  и документацию для нужного шаблонизатора.</p>
 </div>
 
 <p>Как правило, следует выбрать шаблонизатор, который имеет всю необходимую вам функциональность и обеспечивает вам высокую производительность - так же, как вы выбираете любой другой компонент! Некоторые критерии для сравнения шаблонизаторов:</p>
@@ -125,12 +125,12 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <p>Разрабатывая пример - приложение <em>Local Library, </em>мы построим проект с именем <em>express-locallibrary-tutorial. </em>Используем библиотеку шаблонов Pug, а движок CSS применять не будем.</p>
 
-<p>Выберем место для нового проекта — каталог <font face="Courier New, monospace">express-locallibrary-tutorial - </font><font face="Times New Roman, serif">и выполним</font><font face="Courier New, monospace"> </font>команду:</p>
+<p>Выберем место для нового проекта — каталог express-locallibrary-tutorial - и выполним команду:</p>
 
 <pre class="brush: bash">express express-locallibrary-tutorial --view=pug
 </pre>
 
-<p>Будет создан каталог <font face="Courier New, monospace">express-locallibrary-tutorial </font><font face="Times New Roman, serif">и выведен список созданных внутри каталога проектных файлов</font>.</p>
+<p>Будет создан каталог express-locallibrary-tutorial и выведен список созданных внутри каталога проектных файлов.</p>
 
 <pre class="brush: bash">   create : express-locallibrary-tutorial
    create : express-locallibrary-tutorial/package.json
@@ -220,7 +220,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 
 
-<pre><code><font color="#333333"><font face="Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace"><font size="3">npm install -g nodemon</font></font></font></code></pre>
+<pre><code>npm install -g nodemon</code></pre>
 
 
 
@@ -461,11 +461,11 @@ module.exports = router;
 <p><strong>Совет:</strong> запустите сервер и задайте в браузере URL <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>. Вы должны увидеть<strong> </strong>сообщение: 'respond with a resource'.</p>
 </div>
 
-<p>Стоит отметить, что колбэк-функция имеет третий аргумент - '<code>next</code>', т. е. является не простой колбэк-функцией, а колбэк-функцией промежуточного модуля. Пока третий аргумент не используется, но будет полезен в дальнейшем, если мы захотим создать несколько обработчиков пути <code><font color="#333333"><font face="consolas, Liberation Mono, courier, monospace"><font size="3">'/'</font></font></font></code>.</p>
+<p>Стоит отметить, что колбэк-функция имеет третий аргумент - '<code>next</code>', т. е. является не простой колбэк-функцией, а колбэк-функцией промежуточного модуля. Пока третий аргумент не используется, но будет полезен в дальнейшем, если мы захотим создать несколько обработчиков пути <code>'/'</code>.</p>
 
 <h3 id="Представления_шаблоны">Представления (шаблоны)</h3>
 
-<p>Файлы преставлений (шаблонов) хранятся в каталоге <strong><font color="#333333"><font face="Arial, x-locale-body, sans-serif"><font size="3">/views </font></font></font></strong><font color="#333333"><font face="Times New Roman, serif"><font size="3">(это указано в </font></font><font face="Courier New, monospace"><font size="3">app.js</font></font><font face="Times New Roman, serif"><font size="3">) и имеют расширение</font></font></font><strong><font color="#333333"><font face="Times New Roman, serif"><font size="3"> </font></font></font></strong><strong>.pug</strong>. Метод <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> выполняет указанный шаблон, передавая объекту значение именованной переменной, и затем посылает результат как ответ. В коде из <strong>/routes/index.js</strong> (приводится ниже) можно увидеть, что роут отвечает, используя шаблон "index" с переданным значением переменной "title" из шаблона.</p>
+<p>Файлы преставлений (шаблонов) хранятся в каталоге <strong>/views </strong>(это указано в app.js) и имеют расширение<strong> </strong><strong>.pug</strong>. Метод <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> выполняет указанный шаблон, передавая объекту значение именованной переменной, и затем посылает результат как ответ. В коде из <strong>/routes/index.js</strong> (приводится ниже) можно увидеть, что роут отвечает, используя шаблон "index" с переданным значением переменной "title" из шаблона.</p>
 
 <pre class="brush: js">/* GET home page. */
 router.get('/', function(req, res) {

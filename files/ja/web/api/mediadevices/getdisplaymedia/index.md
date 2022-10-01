@@ -2,6 +2,7 @@
 title: MediaDevices.getDisplayMedia()
 slug: Web/API/MediaDevices/getDisplayMedia
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 {{domxref("MediaDevices")}} インターフェイスの **`getDisplayMedia()`** メソッドは、ディスプレイまたはその一部（ウィンドウなど）の内容を {{domxref("MediaStream")}} としてキャプチャする許可を選択し、許可するようユーザーに促します。

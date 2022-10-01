@@ -4,6 +4,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 l10n:
   sourceCommit: 994af9536bab4117b160cf29d61acf2489f27eb0
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
 
 フォームがクライアント側での検証が終わったら、次はフォームの送信です。前の記事では検証を扱ったので、送信する準備はできています。この記事では、ユーザーがフォームを送信したときに何が起こるか、つまりデータがどこへ行くのか、そこに来たときにどう扱うのかを見ます。また、フォームデータの送信に関連するセキュリティの考慮事項のいくつかも見てみます。

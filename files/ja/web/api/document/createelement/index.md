@@ -2,6 +2,7 @@
 title: Document.createElement()
 slug: Web/API/Document/createElement
 ---
+
 {{APIRef("DOM")}}
 
 [HTML](/ja/docs/Web/HTML) 文書において、 **`document.createElement()`** メソッドは _tagName_ で指定された HTML 要素を生成し、または _tagName_ が認識できない場合は {{domxref("HTMLUnknownElement")}} を生成します。

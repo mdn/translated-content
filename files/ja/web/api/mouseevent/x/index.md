@@ -2,6 +2,7 @@
 title: MouseEvent.x
 slug: Web/API/MouseEvent/x
 ---
+
 {{APIRef}}
 
 **`MouseEvent.x`** プロパティは、 {{domxref("MouseEvent.clientX")}} プロパティの別名です。

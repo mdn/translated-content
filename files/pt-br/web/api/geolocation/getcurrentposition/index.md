@@ -17,7 +17,7 @@ navigator.geolocation.getCurrentPosition(success, error, options)
 
 - _success_
   - : Uma função de retorno que captura um objeto {{domxref("Position")}} como seu parâmetro de entrada.
-- \_erro_r {{optional_inline}}
+- _error_ {{optional_inline}}
   - : Uma função de retorno opcional que captura um objeto {{domxref ("PositionError")}} como seu parâmetro de entrada.
 - _options_ {{optional_inline}}
   - : Um objeto opcional {{domxref("PositionOptions")}}.

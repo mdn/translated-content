@@ -38,7 +38,7 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 このアルゴリズムは [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.1 で定義されており、160 bit 長の出力を生成します。
 
-> **Warning:** **警告**: このアルゴリズムは現在脆弱であると見なされているため、暗号化アプリケーションには使用しないでください。
+> **Warning:** このアルゴリズムは現在脆弱であると見なされているため、暗号化アプリケーションには使用しないでください。
 
 ### SHA-256
 

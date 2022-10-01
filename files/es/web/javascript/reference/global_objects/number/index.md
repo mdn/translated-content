@@ -15,11 +15,13 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Number
 
 ## Sintaxis
 
-    new Number(value);
-    var a = new Number('123'); // a === 123 es false
-    var b = Number('123'); // b === 123 es true
-    a instanceof Number; // es true
-    b instanceof Number; // es false
+```js
+new Number(value);
+var a = new Number('123'); // a === 123 es false
+var b = Number('123'); // b === 123 es true
+a instanceof Number; // es true
+b instanceof Number; // es false
+```
 
 ### Parámetros
 
@@ -32,17 +34,21 @@ Los principales usos del objeto `Number(valor)` son convertir un string u otro v
 
 ### Literal syntax
 
-    123    // one-hundred twenty-three
-    123.0  // same
-    123 === 123.0  // true
+```js
+123    // one-hundred twenty-three
+123.0  // same
+123 === 123.0  // true
+```
 
 ### Function syntax
 
-    Number('123')  // retorna el número 123
-    Number('123') === 123  // retorna true
+```js
+Number('123')  // retorna el número 123
+Number('123') === 123  // retorna true
 
-    Number("unicorn")  // NaN
-    Number(undefined)  // NaN
+Number("unicorn")  // NaN
+Number(undefined)  // NaN
+```
 
 ## Constructor
 
@@ -125,8 +131,10 @@ Una posible solución es usar {{jsxref ("String")}} en su lugar.
 
 Los números más grandes se pueden representar usando el tipo {{jsxref ("BigInt")}}.
 
-    const biggestInt  = Number.MAX_SAFE_INTEGER  //  (253 - 1) =>  9007199254740991
-    const smallestInt = Number.MIN_SAFE_INTEGER  // -(253 - 1) => -9007199254740991
+```js
+const biggestInt  = Number.MAX_SAFE_INTEGER  //  (253 - 1) =>  9007199254740991
+const smallestInt = Number.MIN_SAFE_INTEGER  // -(253 - 1) => -9007199254740991
+```
 
 ### Ejemplo: Utilizando el objeto `Number` para modificar todos los objetos `Number`
 
@@ -142,24 +150,28 @@ miNúmero.descripción = "velocidad del viento";
 
 El siguiente ejemplo convierte el objeto {{jsxref ("Date")}} a un valor numérico usando `Number` como función:
 
-    var d = new Date('December 17, 1995 03:24:00');
-    console.log(Number(d));
+```js
+var d = new Date('December 17, 1995 03:24:00');
+console.log(Number(d));
+```
 
 Esto muestra "819199440000".
 
 ### Convierte cadenas numéricas a números
 
-    Number('123')     // 123
-    Number('12.3')    // 12.3
-    Number('123e-1')  // 12.3
-    Number('')        // 0
-    Number('0x11')    // 17
-    Number('0b11')    // 3
-    Number('0o11')    // 9
-    Number('foo')     // NaN
-    Number('100a')    // NaN
+```js
+Number('123')     // 123
+Number('12.3')    // 12.3
+Number('123e-1')  // 12.3
+Number('')        // 0
+Number('0x11')    // 17
+Number('0b11')    // 3
+Number('0o11')    // 9
+Number('foo')     // NaN
+Number('100a')    // NaN
 
-    Number('-Infinity') //-Infinity
+Number('-Infinity') //-Infinity
+```
 
 ### Vea También
 

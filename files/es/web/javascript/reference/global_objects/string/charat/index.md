@@ -13,11 +13,13 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/charAt
 
 ## Resumen
 
-El método **`charAt() `**`de`**` `**{{jsxref("String")}} devuelve en un nuevo String el carácter UTF-16 de una cadena.
+El método **`charAt()`** de {{jsxref("String")}} devuelve en un nuevo String el carácter UTF-16 de una cadena.
 
 ## Sintaxis
 
-    str.charAt(indice)
+```
+str.charAt(indice)
+```
 
 ### Parámetros
 
@@ -47,12 +49,14 @@ console.log("El carácter en el índice 999 es '" + cualquierCadena.charAt(999) 
 
 Estas líneas muestran lo siguiente:
 
-    El carácter en el índice 0 es 'B'
-    El carácter en el índice 1 es 'r'
-    El carácter en el índice 2 es 'a'
-    El carácter en el índice 3 es 'v'
-    El carácter en el índice 4 es 'e'
-    El carácter en el índice 999 es ''
+```
+El carácter en el índice 0 es 'B'
+El carácter en el índice 1 es 'r'
+El carácter en el índice 2 es 'a'
+El carácter en el índice 3 es 'v'
+El carácter en el índice 4 es 'e'
+El carácter en el índice 999 es ''
+```
 
 ## Especificaciónes
 

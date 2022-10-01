@@ -2,6 +2,7 @@
 title: counter-increment
 slug: Web/CSS/counter-increment
 ---
+
 {{CSSRef}}
 
 **`counter-increment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された値によって [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)の値を増加または減少させるためのプロパティです。

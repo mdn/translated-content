@@ -2,6 +2,7 @@
 title: image-resolution
 slug: Web/CSS/image-resolution
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`image-resolution`** は [CSS](/ja/docs/Web/CSS) のプロパティで、この要素で使用されているすべてのラスター画像の内在解像度を指定します。これは置換要素や生成コンテンツ、`background-image` のような装飾画像などのコンテンツ画像に作用します。

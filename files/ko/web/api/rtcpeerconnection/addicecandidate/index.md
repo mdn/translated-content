@@ -56,8 +56,6 @@ ICE candidate 추가 시도 중 에러가 발생하면, 이 메소드에서 반�
     - {{domxref("RTCIceCandidate", "candidate")}} 문자열에 존재하는 하나 혹은 여러개의 값들이 올바르지 않거나, 파싱 될 수 없음
     - 어떠한 이유에서던 candidate를 추가하려는 시도가 실패
 
-      <span class="hidden"></span>
-
 ## 예시
 
 아래의 코드는 임의의 signaling 채널을 통해 어떻게 ICE candidate를 알리는지를 보여줍니다.

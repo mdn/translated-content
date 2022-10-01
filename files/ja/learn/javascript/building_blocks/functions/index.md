@@ -2,6 +2,7 @@
 title: 関数 — 再利用可能なコードブロック
 slug: Learn/JavaScript/Building_blocks/Functions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
 コーディングにおいて、不可欠なコンセプトが**関数**です。関数を使用することで、特定のタスクをこなすコードを定義し、保持しておいて、いつでも簡単なコマンドで呼び出すことを可能にしてくれます。同じコードを何度も打たなければならないよりとっても簡単です。この記事では関数の書き方や、関数を実行する方法、定義の仕方、スコープ、引数といった関数に関する基礎を学びます。

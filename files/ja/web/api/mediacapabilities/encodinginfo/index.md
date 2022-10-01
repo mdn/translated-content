@@ -3,6 +3,7 @@ title: MediaCapabilitiesInfo
 slug: Web/API/MediaCapabilities/encodingInfo
 original_slug: Web/API/MediaCapabilitiesInfo
 ---
+
 {{APIRef("Media Capabilities API")}}
 
 [Media Capabilities API](/ja/docs/Web/API/Media_Capabilities_API) の **`MediaCapabilitiesInfo`** インターフェイスは、{{domxref("MediaCapabilities")}} インターフェイスの {{domxref("MediaCapabilities.encodingInfo()")}} メソッドまたは {{domxref("MediaCapabilities.decodingInfo()")}} メソッドによって返される promise が満たされると使用可能になり、メディアタイプがサポートされているかどうかや、そのようなメディアのエンコードまたはデコードがスムーズで電力効率が良いかどうかに関する情報を提供します。

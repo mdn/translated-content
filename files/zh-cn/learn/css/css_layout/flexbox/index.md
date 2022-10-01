@@ -42,7 +42,7 @@ slug: Learn/CSS/CSS_layout/Flexbox
 
 ## 一个简单的例子
 
-在本文中，我们将通过一系列练习来帮助你了解 弹性盒子的工作原理。开始前，您应该拷贝 mozilla github 仓库的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) 到本地 。在现代浏览器里打开它（比如 Firefox、Chrome），然后打开你的编辑器看一眼它的代码。你可以看它的[线上](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)实例。
+在本文中，我们将通过一系列练习来帮助你了解 弹性盒子的工作原理。开始前，您应该拷贝 mozilla github 仓库的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) 到本地。在现代浏览器里打开它（比如 Firefox、Chrome），然后打开你的编辑器看一眼它的代码。你可以看它的[线上](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)实例。
 
 你可以看到这个页面有一个含有顶级标题的 {{htmlelement("header")}} 元素，和一个包含三个 {{htmlelement("article")}} 的 {{htmlelement("section")}} 元素。我们将使用这些来创建一个非常的标准三列布局，如下所示：
 
@@ -64,7 +64,7 @@ section {
 
 所以，就这样一个简单的声明就给了我们所需要的一切—非常不可思议，对吧？我们的多列布局具有大小相等的列，并且列的高度都是一样。这是因为这样的 flex 项（flex 容器的子项）的默认值是可以解决这些的常见问题的。后面还有更多内容。
 
-> **备注：** 假如你想设置行内元素为 flexible box，也可以置 {{cssxref("display")}} 属性的值为 `inline-flex。`
+> **备注：** 假如你想设置行内元素为 flexible box，也可以置 {{cssxref("display")}} 属性的值为 `inline-flex`。
 
 ## flex 模型说明
 

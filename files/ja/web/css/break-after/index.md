@@ -2,6 +2,7 @@
 title: break-after
 slug: Web/CSS/break-after
 ---
+
 {{CSSRef}}
 
 **`break-after`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの後で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。

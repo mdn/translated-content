@@ -2,6 +2,7 @@
 title: SVG コア属性
 slug: Web/SVG/Attribute/Core
 ---
+
 SVG コア属性は、すべての SVG 要素に指定できる共通の属性すべてのことです。
 
 - [`id`](#attr-id)

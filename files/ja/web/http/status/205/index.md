@@ -2,6 +2,7 @@
 title: 205 Reset Content
 slug: Web/HTTP/Status/205
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`205 Reset Content`** のレスポンスステータスはクライアントにドキュメントビューをリセットするように指示します。たとえば、フォームの内容をクリアしたり、キャンバスの状態をリセットしたり、UI をリフレッシュすることができます。

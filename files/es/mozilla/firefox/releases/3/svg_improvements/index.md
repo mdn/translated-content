@@ -11,7 +11,7 @@ original_slug: Mejoras_SVG_en_Firefox_3
 
 {{FirefoxSidebar}}
 
-Firefox 3 ofrece una mejor implementación de [Gráficos Vectoriales Escalables (SVG)](es/SVG) en comparación con versiones anteriores de Firefox. Aunque estas características están documentadas en otros sitios, este artículo puede servir como una lista que indique fácilmente qué características se han añadido en Firefox 3.
+Firefox 3 ofrece una mejor implementación de [Gráficos Vectoriales Escalables (SVG)](/es/SVG) en comparación con versiones anteriores de Firefox. Aunque estas características están documentadas en otros sitios, este artículo puede servir como una lista que indique fácilmente qué características se han añadido en Firefox 3.
 
 - Se ha implementado el elemento `foreignObject` ({{ Bug(326966) }}). Vea la [especificación](https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement) o [este artículo](https://weblogs.mozillazine.org/roc/archives/2006/06/the_future_is_now.html) para más detalles.
 - Implementado el elemento `pattern` ([especificación](https://www.w3.org/TR/SVG11/pservers.html#PatternElement)).
@@ -48,6 +48,6 @@ Firefox 3 ofrece una mejor implementación de [Gráficos Vectoriales Escalables 
 
 ### Vea también
 
-- [SVG](es/SVG)
-- [SVG en Firefox](es/SVG_en_Firefox)
-- [Firefox 3 para desarrolladores](es/Firefox_3_para_desarrolladores)
+- [SVG](/es/SVG)
+- [SVG en Firefox](/es/SVG_en_Firefox)
+- [Firefox 3 para desarrolladores](/es/Firefox_3_para_desarrolladores)

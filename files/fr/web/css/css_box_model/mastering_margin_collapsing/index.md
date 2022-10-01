@@ -73,9 +73,7 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: Origin
 slug: Web/HTTP/Headers/Origin
 ---
+
 {{HTTPSidebar}}
 
 **`Origin`** リクエストヘッダーは、どこがフェッチの原点であるかを示します。パス情報は含まれず、サーバー名のみが含まれます。これは、 {{Glossary("CORS")}} リクエストと、同様に {{HTTPMethod("POST")}} リクエストでも送信されます。 {{HTTPHeader("Referer")}} ヘッダーと似ていますが、パス全体が公開されるわけではない点が異なります。

@@ -33,7 +33,7 @@ var myRequest = new Request(input, init);
 
 | **타입**    | **내용**                                                                                                                                                          |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TypeError` | [Firefox 43](/ko/docs/Mozilla/Firefox/Releases/43)부터, http://user:password@example.com와 같인 credential을 포함하는 경우 `Request()` 는 타입 에러를 반환합니다. |
+| `TypeError` | [Firefox 43](/ko/docs/Mozilla/Firefox/Releases/43)부터, `http://user:password@example.com` 와 같인 credential을 포함하는 경우 `Request()` 는 타입 에러를 반환합니다. |
 
 ## 예시
 

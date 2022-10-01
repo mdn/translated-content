@@ -2,6 +2,7 @@
 title: 'CSP: block-all-mixed-content'
 slug: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 > **Warning:** このディレクティブは、仕様上、廃止されたものとしてマークされています。すべての混合コンテンツは、自動アップグレードできない場合、ブロックされるようになりました。

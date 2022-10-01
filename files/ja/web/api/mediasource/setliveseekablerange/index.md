@@ -2,6 +2,7 @@
 title: MediaSource.setLiveSeekableRange()
 slug: Web/API/MediaSource/setLiveSeekableRange
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイスの **`setLiveSeekableRange()`** メソッドは、ユーザーがメディア要素でシークできる範囲を設定します。

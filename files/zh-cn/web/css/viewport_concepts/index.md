@@ -7,7 +7,7 @@ slug: Web/CSS/Viewport_concepts
 
 这篇文章阐述了**视口**（viewport）的概念，对视觉视口（visual viewport）和布局视口（layout viewport）进行区分，并让你了解视口的意义是什么，以及它在 CSS、SVG 和移动设备方面的影响。
 
-## 什么是视口?
+## 什么是视口？
 
 视口代表当前可见的计算机图形区域。在 Web 浏览器术语中，通常与浏览器窗口相同，但不包括浏览器的 UI，菜单栏等——即指你正在浏览的文档的那一部分。
 

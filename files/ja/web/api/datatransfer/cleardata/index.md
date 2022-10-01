@@ -2,6 +2,7 @@
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.clearData()`** メソッドは、ドラッグ操作の {{domxref("DataTransfer", "ドラッグデータ")}}の中で指定された型のものを削除します。指定された型のデータが存在しない場合、このメソッドは何もしません。

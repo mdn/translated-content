@@ -17,7 +17,9 @@ El método **`Number.isInteger()`** determina si el valor pasado es de tipo ente
 
 ## Sintaxis
 
-    Number.isInteger(valor)
+```
+Number.isInteger(valor)
+```
 
 ### Parámetros
 

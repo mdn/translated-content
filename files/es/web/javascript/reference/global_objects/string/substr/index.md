@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/substr
 ---
 {{JSRef("Objetos_globales", "String")}}
 
-> **Advertencia:** Advertencia: Aunque `String.prototype.substr(…) `no está estrictamente obsoleto (como en "eliminado de los estándares web"), se define en el anexo B de la norma ECMA-262, cuya introducción establece:
+> **Advertencia:** Advertencia: Aunque `String.prototype.substr(…)` no está estrictamente obsoleto (como en "eliminado de los estándares web"), se define en el anexo B de la norma ECMA-262, cuya introducción establece:
 > > ... Todas las características y comportamientos del lenguaje especificados en este anexo tienen una o más características indeseables y, en ausencia de uso heredado, se eliminarían de esta especificación. ... ... Los programadores no deben usar ni asumir la existencia de estas características y comportamientos al escribir un nuevo código ECMAScript.
 
 ## Resumen
@@ -20,7 +20,9 @@ El método **`substr()`** devuelve los caracteres de una cadena que comienzan en
 
 ## Sintaxis
 
-    cadena.substr(inicio[, longitud])
+```
+cadena.substr(inicio[, longitud])
+```
 
 ### Parámetros
 
@@ -40,7 +42,7 @@ Una nueva cadena que contiende la sección extraída de la cadena dada. Sí la l
 
 Si `inicio` es positivo y es mayor o igual que la longitud de la cadena, `substr()` devuelve una cadena vacía.
 
-Si `inicio` es negativo, `substr()` lo usa como un índice de carácter desde el final de la cadena. Si `inicio` es negativo y `abs(inicio)` es mayor que la longitud de la cadena, `substr` usa 0 como índice inical. Nota: el uso descrito de valores negativos del argumento `inicio` no es soportado por Microsoft JScript [.](http://msdn2.microsoft.com/en-us/library/0esxc5wy.aspx)
+Si `inicio` es negativo, `substr()` lo usa como un índice de carácter desde el final de la cadena. Si `inicio` es negativo y `abs(inicio)` es mayor que la longitud de la cadena, `substr` usa 0 como índice inical. Nota: el uso descrito de valores negativos del argumento `inicio` no es soportado por Microsoft JScript.
 
 Si `longitud` es 0 o negativa, `substr` devuelve una cadena vacía. Si se omite `longitud`, `inicio` extrae caracteres hasta el final de la cadena.
 
@@ -61,12 +63,14 @@ console.log("(20, 2): "  + cadena.substr(20,2));  // '(20, 2): '
 
 Este script muestra:
 
-    (1,2): bc
-    (-3,2): hi
-    (-3): hij
-    (1): bcdefghij
-    (-20, 2): ab
-    (20, 2):
+```
+(1,2): bc
+(-3,2): hi
+(-3): hij
+(1): bcdefghij
+(-20, 2): ab
+(20, 2):
+```
 
 ## Vea También
 

@@ -24,15 +24,15 @@ tokenList.item(index)
 
 ## 例子
 
-在下面的列子中，我们通过{{domxref("Element.classList")}}方法从{{htmlelement("span")}}元素中获取`DOMTokenList`对象。 然后使用`item(tokenList.length - 1)`检索列表中的最后的一个项，并将其写入\<span>元素的 {{domxref("Node.textContent")}}。
+在下面的列子中，我们通过{{domxref("Element.classList")}}方法从{{htmlelement("span")}}元素中获取`DOMTokenList`对象。然后使用`item(tokenList.length - 1)`检索列表中的最后的一个项，并将其写入\<span>元素的 {{domxref("Node.textContent")}}。
 
-首先， HTML：
+首先，HTML：
 
 ```html
 <span class="a b c"></span>
 ```
 
-然后， JavaScript：
+然后，JavaScript：
 
 ```js
 let span = document.querySelector("span");

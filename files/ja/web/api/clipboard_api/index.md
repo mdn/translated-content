@@ -2,6 +2,7 @@
 title: クリップボード API
 slug: Web/API/Clipboard_API
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 **クリップボード API** は、クリップボードのコマンド (切り取り、コピー、貼り付け) に応答する機能や、システムクリップボードの非同期の読み取りや書き込みを行う機能を提供します。

@@ -34,9 +34,13 @@ border-inline-end-style: groove;
 - `<'border-style'>`
   - : Le style utilisé pour la ligne de la bordure sur ce côté, voir {{cssxref("border-style")}}
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -70,15 +74,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline-end-style", "border-inline-end-style")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-inline-end-style")}}
+{{Compat}}
 
 ## Voir aussi
 

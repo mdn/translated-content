@@ -2,6 +2,7 @@
 title: 実用的な位置指定の例
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
+
 {{LearnSidebar}}
 
 この記事では、位置指定でどのようなことができるかを説明するために、実際に使用されるいくつかの例を作成する方法を示します。

@@ -13,9 +13,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/has
 
 El método **`has()`** retorna un booleano indicando si el elemento especificado existe en el objeto `Set` o no.
 
-## Syntaxis
+## Sintaxis
 
-    mySet.has(value);
+```
+mySet.has(value);
+```
 
 ### Parametros
 

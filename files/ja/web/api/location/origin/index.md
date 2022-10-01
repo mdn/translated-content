@@ -2,6 +2,7 @@
 title: location.origin
 slug: Web/API/Location/origin
 ---
+
 {{APIRef("Location")}}
 
 **`origin`** は {{domxref("Location")}} インターフェイスの読み取り専用プロパティで、 {{domxref("USVString")}} で指定された URL のオリジンの Unicode シリアライズが入ります。

@@ -2,6 +2,7 @@
 title: Notification.dir
 slug: Web/API/Notification/dir
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `dir` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `dir` オプションで指定されたテキストの書字方向を示します。

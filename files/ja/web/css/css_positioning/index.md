@@ -2,6 +2,7 @@
 title: CSS 位置指定レイアウト
 slug: Web/CSS/CSS_Positioning
 ---
+
 {{CSSRef}}
 
 **CSS 位置指定レイアウト** (CSS Positioned Layout) は CSS モジュールの一つで、ページ上での要素の位置指定方法を定義します。

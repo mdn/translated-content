@@ -2,6 +2,7 @@
 title: CompositionEvent.CompositionEvent()
 slug: Web/API/CompositionEvent/CompositionEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`CompositionEvent()`** コンストラクターは新しい {{domxref("CompositionEvent")}} オブジェクトのインスタンスを作成します。

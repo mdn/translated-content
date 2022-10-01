@@ -91,7 +91,7 @@ Podemos estilizar el texto o imágenes de la propiedad {{cssxref("content")}} de
 
 ### Tooltips
 
-El siguiente ejemplo muestra el uso del [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) `::after` en conjunto con la expresión CSS [`attr()`](/es/docs/Web/CSS/attr) y el [atributo data personalizado](/es/docs/Web/HTML/Global_attributes#attr-dataset) `data-descr` para crear un _tooltip_ de tipo glosario, completamente en CSS. Mira la vista previa más abajo, o también puedes ver el ejemplo en una [página separada.](https://developer.mozilla.org/files/4591/css-only_tooltips.html)
+El siguiente ejemplo muestra el uso del [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) `::after` en conjunto con la expresión CSS [`attr()`](/es/docs/Web/CSS/attr) y el [atributo data personalizado](/es/docs/Web/HTML/Global_attributes#attr-dataset) `data-descr` para crear un _tooltip_ de tipo glosario, completamente en CSS. Mira la vista previa más abajo, o también puedes ver el ejemplo en una [página separada.](/files/4591/css-only_tooltips.html)
 
 #### HTML
 

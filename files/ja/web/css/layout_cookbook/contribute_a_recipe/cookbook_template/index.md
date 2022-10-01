@@ -2,6 +2,7 @@
 title: 料理帳テンプレート
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
 ---
+
 {{CSSRef}}
 
 > **Callout:**

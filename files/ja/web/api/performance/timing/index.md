@@ -2,6 +2,7 @@
 title: Performance.timing
 slug: Web/API/Performance/timing
 ---
+
 {{APIRef("Navigation Timing")}}{{deprecated_header}}
 
 古い **`Performance.timing`** 読み取り専用プロパティは、遅延時間に関するパフォーマンス情報を含む {{domxref("PerformanceTiming")}} オブジェクトを返します。

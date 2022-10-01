@@ -2,6 +2,7 @@
 title: PushManager.permissionState()
 slug: Web/API/PushManager/permissionState
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 {{domxref("PushManager")}} インターフェースの **`permissionState()`** メソッドは、プッシュマネージャーの許可状態を示す {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} を返します。許可状態は、`'prompt'` か `'denied'`、`'granted'` です。

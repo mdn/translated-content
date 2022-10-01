@@ -15,9 +15,9 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}</div>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В этом уроке мы рассмотрим некоторые интересные возможности, которые вы можете сделать с помощью CSS-свойств фона и границ .</span> <span title="">Благодаря добавлению градиентов, фоновых изображений и закруглённых углов свойства фона и границ ответят на многие вопросы стилизации в CSS.</span></span></p>
+<p>В этом уроке мы рассмотрим некоторые интересные возможности, которые вы можете сделать с помощью CSS-свойств фона и границ . Благодаря добавлению градиентов, фоновых изображений и закруглённых углов свойства фона и границ ответят на многие вопросы стилизации в CSS.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Необходимые умения:</th>
@@ -32,7 +32,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h2 id="Стилизация_фона_в_CSS">Стилизация фона в CSS</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">CSS-свойство {{cssxref ("background")}} является сокращением для ряда полных свойств фона, с которыми мы познакомимся в этом уроке.</span> <span title="">Если вы обнаружите сложное свойство </span></span><code>background</code><span class="tlid-translation translation" lang="ru"><span title=""> в таблице стилей, это может показаться трудным для понимания, так как одновременно может быть передано так много значений.</span></span></p>
+<p>CSS-свойство {{cssxref ("background")}} является сокращением для ряда полных свойств фона, с которыми мы познакомимся в этом уроке. Если вы обнаружите сложное свойство <code>background</code> в таблице стилей, это может показаться трудным для понимания, так как одновременно может быть передано так много значений.</p>
 
 <pre class="brush: css"><code>.box {
   background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
@@ -40,33 +40,33 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 } </code>
 </pre>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Мы вернёмся к тому, как работает сокращение </span></span>позже<span class="tlid-translation translation" lang="ru"><span title="">, </span></span>а пока<span class="tlid-translation translation" lang="ru"><span title=""> давайте взглянем на различные вещи, которые вы можете делать с фоном в CSS, посмотрев на отдельные свойства </span></span><code>background</code><span class="tlid-translation translation" lang="ru"><span title="">.</span></span></p>
+<p>Мы вернёмся к тому, как работает сокращение позже, а пока давайте взглянем на различные вещи, которые вы можете делать с фоном в CSS, посмотрев на отдельные свойства <code>background</code>.</p>
 
 <h3 id="Фоновый_цвет">Фоновый цвет</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Свойство {{cssxref ("background-color")}} определяет цвет фона для любого элемента в CSS.</span> <span title="">Свойство принимает любой допустимый </span></span>цвет<span class="tlid-translation translation" lang="ru"><span title=""> </span></span><code><a href="/ru/docs/Web/CSS/color_value">&lt;color&gt;</a></code><span class="tlid-translation translation" lang="ru"><span title="">.</span> </span><code>background-color</code><span class="tlid-translation translation" lang="ru"><span title=""> распространяется на сам контент и отступы от него </span></span>(padding)<span class="tlid-translation translation" lang="ru"><span title="">.</span></span></p>
+<p>Свойство {{cssxref ("background-color")}} определяет цвет фона для любого элемента в CSS. Свойство принимает любой допустимый цвет <code><a href="/ru/docs/Web/CSS/color_value">&lt;color&gt;</a></code>. <code>background-color</code> распространяется на сам контент и отступы от него (padding).</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В приведённом ниже примере мы использовали различные значения цвета, чтобы добавить цвет фона к блоку, заголовку и элементу {{htmlelement ("span")}}.</span></span></p>
+<p>В приведённом ниже примере мы использовали различные значения цвета, чтобы добавить цвет фона к блоку, заголовку и элементу {{htmlelement ("span")}}.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title=""><strong>Поиграйте с ними, используя любое доступное значение</strong> </span></span><strong><a href="/ru/docs/Web/CSS/color_value">&lt;color&gt;</a><span class="tlid-translation translation" lang="ru"><span title="">.</span></span></strong></p>
+<p><strong>Поиграйте с ними, используя любое доступное значение</strong> <strong><a href="/ru/docs/Web/CSS/color_value">&lt;color&gt;</a>.</strong></p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 600)}}</p>
 
 <h3 id="Фоновое_изображение">Фоновое изображение</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Свойство {{cssxref ("background-image")}} позволяет отображать изображение </span></span>в качестве фона элемента<span class="tlid-translation translation" lang="ru"><span title="">.</span> <span title="">В приведённом ниже примере у нас есть два блока </span></span>—<span class="tlid-translation translation" lang="ru"><span title=""> в одном фоновое изображение больше, чем размеры блока, а в другом - маленькое изображение звезды.</span></span></p>
+<p>Свойство {{cssxref ("background-image")}} позволяет отображать изображение в качестве фона элемента. В приведённом ниже примере у нас есть два блока — в одном фоновое изображение больше, чем размеры блока, а в другом - маленькое изображение звезды.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Этот пример демонстрирует две </span></span>особенности<span class="tlid-translation translation" lang="ru"><span title=""> фоновых изображений.</span> <span title="">По умолчанию большое изображение не масштабируется до размера блока, поэтому мы видим только его небольшой угол, в то время как маленькое изображение повторяется, чтобы заполнить весь блок.</span> <span title="">В нашем случае фактически было использовано изображение одной маленькой звезды.</span></span></p>
+<p>Этот пример демонстрирует две особенности фоновых изображений. По умолчанию большое изображение не масштабируется до размера блока, поэтому мы видим только его небольшой угол, в то время как маленькое изображение повторяется, чтобы заполнить весь блок. В нашем случае фактически было использовано изображение одной маленькой звезды.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 600)}}</p>
 
 <div class="blockIndicator note">
-<p><strong>Если кроме фонового изображения вы добавили фоновый цвет, то изображение будет отображаться над цветом.</strong> Попробуйте добавить свойство <code>background-color</code> в <span class="tlid-translation translation" lang="ru"><span title="">приведённый выше пример, чтобы увидеть это в действии.</span></span></p>
+<p><strong>Если кроме фонового изображения вы добавили фоновый цвет, то изображение будет отображаться над цветом.</strong> Попробуйте добавить свойство <code>background-color</code> в приведённый выше пример, чтобы увидеть это в действии.</p>
 </div>
 
 <h4 id="Свойство_background-repeat">Свойство  background-repeat</h4>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Свойство {{cssxref ("background-repeat")}} используется для управления повторениями фонового изображения.</span> <span title="">Доступные значения:</span></span></p>
+<p>Свойство {{cssxref ("background-repeat")}} используется для управления повторениями фонового изображения. Доступные значения:</p>
 
 <ul>
  <li><code>no-repeat</code> — останавливает повторение фонового изображения во всех направлениях.</li>
@@ -75,46 +75,46 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
  <li><code>repeat</code> — повторение фонового изображения в обоих направлениях. Установлено по умолчанию.</li>
 </ul>
 
-<p><strong><span class="tlid-translation translation" lang="ru"><span title="">Попробуйте эти значения в примере ниже.</span> <span title="">Мы установили значение </span></span><code>no-repeat</code><span class="tlid-translation translation" lang="ru"><span title="">, поэтому вы видите только одну звезду.</span> <span title="">Попробуйте разные значения - </span></span></strong> <strong><code>repeat-x</code></strong> <strong><span class="tlid-translation translation" lang="ru"><span title=""> и </span></span></strong> <strong><code>repeat-y</code></strong> <strong>—</strong> <strong><span class="tlid-translation translation" lang="ru"><span title=""> чтобы увидеть, какие эффекты они оказывают.</span></span></strong></p>
+<p><strong>Попробуйте эти значения в примере ниже. Мы установили значение <code>no-repeat</code>, поэтому вы видите только одну звезду. Попробуйте разные значения - </strong> <strong><code>repeat-x</code></strong> <strong> и </strong> <strong><code>repeat-y</code></strong> <strong>—</strong> <strong> чтобы увидеть, какие эффекты они оказывают.</strong></p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 480)}}</p>
 
 <h4 id="Изменение_размеров_фонового_изображения">Изменение размеров фонового изображения</h4>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В приведённом выше примере у нас есть большое изображение, которое в конечном итоге было обрезано, так как оно больше, чем элемент, фоном которого оно является.</span> <span title="">В этом случае мы могли бы использовать свойство {{cssxref ("background-size")}}, которое может принимать значения </span></span><a href="/ru/docs/Web/CSS/размер">длины</a><span class="tlid-translation translation" lang="ru"><span title=""> или в <a href="/ru/docs/Web/CSS/percentage">процентах</a>, чтобы размер изображения соответствовал размеру фона.</span></span></p>
+<p>В приведённом выше примере у нас есть большое изображение, которое в конечном итоге было обрезано, так как оно больше, чем элемент, фоном которого оно является. В этом случае мы могли бы использовать свойство {{cssxref ("background-size")}}, которое может принимать значения <a href="/ru/docs/Web/CSS/размер">длины</a> или в <a href="/ru/docs/Web/CSS/percentage">процентах</a>, чтобы размер изображения соответствовал размеру фона.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Вы также можете использовать ключевые слова</span></span>:</p>
+<p>Вы также можете использовать ключевые слова:</p>
 
 <ul>
- <li><code>cover</code> <span class="tlid-translation translation" lang="ru"><span title=""> </span></span>—<span class="tlid-translation translation" lang="ru"><span title=""> браузер сделает изображение достаточно большим, чтобы оно полностью заполнило блок, сохраняя при этом соотношение сторон.</span> <span title="">В этом случае часть изображения, скорее всего, окажется за пределами блока.</span></span></li>
- <li><code>contain</code> — <span class="tlid-translation translation" lang="ru"><span title="">браузер сделает изображение нужного размера, чтобы поместиться в блоке.</span> <span title="">В этом случае могут появиться пробелы с обеих сторон или сверху и снизу изображения, если соотношение сторон изображения отличается от соотношения сторон блока.</span></span></li>
+ <li><code>cover</code>  — браузер сделает изображение достаточно большим, чтобы оно полностью заполнило блок, сохраняя при этом соотношение сторон. В этом случае часть изображения, скорее всего, окажется за пределами блока.</li>
+ <li><code>contain</code> — браузер сделает изображение нужного размера, чтобы поместиться в блоке. В этом случае могут появиться пробелы с обеих сторон или сверху и снизу изображения, если соотношение сторон изображения отличается от соотношения сторон блока.</li>
 </ul>
 
 <p>Ниже я применил значения длины к размерам изображения. Глядите, как это исказило изображение.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В приведённом ниже примере я использовал большое изображение из ранее рассмотренного примера и указал значения длины, чтобы определить его размер внутри блока.</span> <span title="">Вы можете посмотреть, как это исказило изображение.</span></span></p>
+<p>В приведённом ниже примере я использовал большое изображение из ранее рассмотренного примера и указал значения длины, чтобы определить его размер внутри блока. Вы можете посмотреть, как это исказило изображение.</p>
 
 <p>Попробуйте следующее.</p>
 
 <ul>
- <li><span class="tlid-translation translation" lang="ru"><span title="">Измените </span></span>значения<span class="tlid-translation translation" lang="ru"><span title=""> длины, используемые для изменения размера фона.</span></span></li>
+ <li>Измените значения длины, используемые для изменения размера фона.</li>
  <li>Измените значение длины на <code>background-size: cover</code> или <code>background-size: contain</code>. </li>
- <li><span class="tlid-translation translation" lang="ru"><span title="">Если ваше изображение меньше </span></span>размеров блока<span class="tlid-translation translation" lang="ru"><span title="">, вы можете изменить значение свойства </span></span><code>background-repeat</code><span class="tlid-translation translation" lang="ru"><span title="">, чтобы повторить изображение.</span></span></li>
+ <li>Если ваше изображение меньше размеров блока, вы можете изменить значение свойства <code>background-repeat</code>, чтобы повторить изображение.</li>
 </ul>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/size.html", '100%', 600)}}</p>
 
 <h4 id="Позиционирование_фонового_изображения">Позиционирование фонового изображения</h4>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Свойство {{cssxref ("background-position")}} позволяет вам изменять позицию, в которой фоновое изображение появляется в блоке.</span> <span title="">При этом используется система координат, в которой <em>левый верхний угол</em> блока равен <code>(0,0)</code>, а </span></span>сам блок располагается вдоль<span class="tlid-translation translation" lang="ru"><span title=""> горизонтальной (<code>x</code>) и вертикальной (<code>y</code>) осей.</span></span></p>
+<p>Свойство {{cssxref ("background-position")}} позволяет вам изменять позицию, в которой фоновое изображение появляется в блоке. При этом используется система координат, в которой <em>левый верхний угол</em> блока равен <code>(0,0)</code>, а сам блок располагается вдоль горизонтальной (<code>x</code>) и вертикальной (<code>y</code>) осей.</p>
 
 <div class="blockIndicator note">
 <p><strong>Примечание</strong>: По умолчанию значение <code>background-position</code> равно <code>(0,0)</code>.</p>
 </div>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Обычно свойство <code>background-position</code> задают в виде двух последовательных значений </span></span> — <span class="tlid-translation translation" lang="ru"><span title=""> значение по горизонтали, за которым следует значение по вертикали.</span></span></p>
+<p>Обычно свойство <code>background-position</code> задают в виде двух последовательных значений  —  значение по горизонтали, за которым следует значение по вертикали.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете использовать такие ключевые слова, как <code>top</code> и <code>right</code> (с остальными можете ознакомиться на странице {{cssxref ("background-position")}}):</span></span></p>
+<p>Вы можете использовать такие ключевые слова, как <code>top</code> и <code>right</code> (с остальными можете ознакомиться на странице {{cssxref ("background-position")}}):</p>
 
 <pre class="brush: css"><code>.box {
   background-image: url(star.png);
@@ -132,7 +132,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 } </code>
 </pre>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Вы также можете смешивать значения ключевых слов с длинами или процентами, например:</span></span></p>
+<p>Вы также можете смешивать значения ключевых слов с длинами или процентами, например:</p>
 
 <pre class="brush: css">.box {
   background-image: url(star.png);
@@ -140,7 +140,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
   background-position: top 20px;
 }</pre>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">И наконец, вы также можете использовать синтаксис с четырьмя значениями, чтобы указать расстояние от определённых краёв блока - единица длины в данном случае представляет собой смещение от значения ключевого слова.</span> <span title="">Итак, в CSS ниже мы сместили фон на 20 пикселей сверху и на 10 пикселей справа:</span></span></p>
+<p>И наконец, вы также можете использовать синтаксис с четырьмя значениями, чтобы указать расстояние от определённых краёв блока - единица длины в данном случае представляет собой смещение от значения ключевого слова. Итак, в CSS ниже мы сместили фон на 20 пикселей сверху и на 10 пикселей справа:</p>
 
 <pre class="brush: css"><code>.box {
   background-image: url(star.png);
@@ -148,21 +148,21 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
   background-position: top 20px right 10px;
 } </code></pre>
 
-<p><strong><span class="tlid-translation translation" lang="ru"><span title="">Используйте приведённый ниже пример, чтобы поэкспериментировать с этими значениями и переместить звезду внутри блока.</span></span></strong></p>
+<p><strong>Используйте приведённый ниже пример, чтобы поэкспериментировать с этими значениями и переместить звезду внутри блока.</strong></p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 480)}}</p>
 
 <div class="blockIndicator note">
-<p><strong>Примечание</strong>: <code>background-position</code> — это сокращение для {{cssxref("background-position-x")}} и {{cssxref("background-position-y")}}, <span class="tlid-translation translation" lang="ru"><span title="">которые позволяют вам устанавливать различные значения положения по оси индивидуально</span></span>.</p>
+<p><strong>Примечание</strong>: <code>background-position</code> — это сокращение для {{cssxref("background-position-x")}} и {{cssxref("background-position-y")}}, которые позволяют вам устанавливать различные значения положения по оси индивидуально.</p>
 </div>
 
 <h3 id="Градиент_в_качестве_фона">Градиент в качестве фона</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Градиент - при использовании для фона - действует так же, как изображение, и поэтому задаётся свойством {{cssxref ("background-image")}}.</span></span></p>
+<p>Градиент - при использовании для фона - действует так же, как изображение, и поэтому задаётся свойством {{cssxref ("background-image")}}.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете прочитать больше о различных типах градиентов и о том, что вы можете с ними делать на странице MDN для типа данных </span></span><code><a href="/en-US/docs/Web/CSS/gradient">&lt;gradient&gt;</a></code><span class="tlid-translation translation" lang="ru"><span title="">.</span> <span title="">Поиграть с градиентами вы можете используя один из многих генераторов градиентов CSS, доступных в Интернете, например </span></span><a href="https://cssgradient.io/">этот</a><span class="tlid-translation translation" lang="ru"><span title="">.</span> <span title="">Вы можете создать градиент, а затем скопировать и вставить его </span></span>в свой код<span class="tlid-translation translation" lang="ru"><span title="">.</span></span></p>
+<p>Вы можете прочитать больше о различных типах градиентов и о том, что вы можете с ними делать на странице MDN для типа данных <code><a href="/en-US/docs/Web/CSS/gradient">&lt;gradient&gt;</a></code>. Поиграть с градиентами вы можете используя один из многих генераторов градиентов CSS, доступных в Интернете, например <a href="https://cssgradient.io/">этот</a>. Вы можете создать градиент, а затем скопировать и вставить его в свой код.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Попробуйте использовать разные градиенты в примере ниже.</span> <span title="">В двух блоках соответственно у нас есть линейный градиент, растянутый на весь блок, и радиальный градиент с заданным размером, который поэтому повторяется.</span></span></p>
+<p>Попробуйте использовать разные градиенты в примере ниже. В двух блоках соответственно у нас есть линейный градиент, растянутый на весь блок, и радиальный градиент с заданным размером, который поэтому повторяется.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 600)}}</p>
 
@@ -170,70 +170,70 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p>Также возможно создавать несколько фоновых изображений — просто разделив значения свойства <code>background-image</code> запятыми.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Когда вы сделаете это, произойдёт наложение фоновых изображений друг на друга.</span> <span title="">Фоновые изображения будут наложены слоями, где каждое новое фоновое изображение, перечисленное в коде, будет накладываться поверх ранее указанного изображения.</span></span> </p>
+<p>Когда вы сделаете это, произойдёт наложение фоновых изображений друг на друга. Фоновые изображения будут наложены слоями, где каждое новое фоновое изображение, перечисленное в коде, будет накладываться поверх ранее указанного изображения. </p>
 
 <div class="blockIndicator note">
-<p><strong>Примечание</strong>: Градиенты можно <span class="tlid-translation translation" lang="ru"><span title="">легко смешивать с обычными фоновыми изображениями</span></span>.</p>
+<p><strong>Примечание</strong>: Градиенты можно легко смешивать с обычными фоновыми изображениями.</p>
 </div>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Другие свойства <code>background- *</code> также могут иметь значения, разделённые запятыми,  как и <code>background-image</code>:</span></span></p>
+<p>Другие свойства <code>background- *</code> также могут иметь значения, разделённые запятыми,  как и <code>background-image</code>:</p>
 
 <pre class="brush: css">background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position: 10px 20px,  top right;</pre>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Каждое значение различных свойств будет соответствовать значениям в той же позиции в других свойствах.</span> <span title="">Выше, например, значение <code>background-repeat</code> для <code>image1</code> будет <code>no-repeat</code>.</span> <span title="">Однако, что происходит, когда разные свойства имеют разное количество значений?</span> <span title="">Ответ заключается в том, что меньшее количество значений будет циклически повторяться - в приведённом выше примере есть четыре фоновых изображения, и только два значения <code>background-position</code>.</span> <span title="">Первые два значения позиции будут применены к первым двум изображениям, затем они снова будут циклически повторяться - <code>image3</code> будет присвоено первое значение позиции, а <code>image4</code> будет присвоено второе значение позиции.</span></span></p>
+<p>Каждое значение различных свойств будет соответствовать значениям в той же позиции в других свойствах. Выше, например, значение <code>background-repeat</code> для <code>image1</code> будет <code>no-repeat</code>. Однако, что происходит, когда разные свойства имеют разное количество значений? Ответ заключается в том, что меньшее количество значений будет циклически повторяться - в приведённом выше примере есть четыре фоновых изображения, и только два значения <code>background-position</code>. Первые два значения позиции будут применены к первым двум изображениям, затем они снова будут циклически повторяться - <code>image3</code> будет присвоено первое значение позиции, а <code>image4</code> будет присвоено второе значение позиции.</p>
 
-<p><strong><span class="tlid-translation translation" lang="ru"><span title="">Поиграем?</span> <span title="">В приведённом ниже примере я добавил два изображения.</span> <span title="">Чтобы продемонстрировать порядок наложения, попробуйте </span></span>поменять порядок фоновых изображений<span class="tlid-translation translation" lang="ru"><span title=""> в списке.</span> <span title="">Или поиграйте с другими свойствами, чтобы изменить положение, размер или повторяемость значений.</span></span></strong></p>
+<p><strong>Поиграем? В приведённом ниже примере я добавил два изображения. Чтобы продемонстрировать порядок наложения, попробуйте поменять порядок фоновых изображений в списке. Или поиграйте с другими свойствами, чтобы изменить положение, размер или повторяемость значений.</strong></p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 480)}}</p>
 
 <h3 id="Закрепление_фона">Закрепление фона</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Другая опция, которую можно применить к фону, - это указать, как он будет прокручиваться при прокрутке содержимого.</span> <span title="">Это контролируется с помощью свойства {{cssxref ("background-attachment")}}, которое может принимать следующие значения:</span></span></p>
+<p>Другая опция, которую можно применить к фону, - это указать, как он будет прокручиваться при прокрутке содержимого. Это контролируется с помощью свойства {{cssxref ("background-attachment")}}, которое может принимать следующие значения:</p>
 
 <ul>
- <li><code>scroll</code>: Заставляет <span class="tlid-translation translation" lang="ru"><span title="">элементы фона прокручиваться при прокрутке страницы.</span> <span title="">Если содержимое элемента прокручивается, фон не перемещается.</span> <span title="">Фактически, фон фиксируется в той же позиции на странице, поэтому он прокручивается по мере прокрутки страницы.</span></span></li>
- <li><code>fixed</code>: <span class="tlid-translation translation" lang="ru"><span title="">Фиксирует  элементы фона в области просмотра, чтобы он не прокручивался при прокрутке страницы или содержимого элемента.</span> <span title="">Фон всегда будет оставаться на одном и том же месте на экране.</span></span></li>
- <li><code>local</code>: <span class="tlid-translation translation" lang="ru"><span title="">Это значение было добавлено позже (оно поддерживается только в Internet Explorer 9+, тогда как другие поддерживаются в IE4+), потому что значение </span></span><code>scroll</code><span class="tlid-translation translation" lang="ru"><span title=""> довольно запутанно и во многих случаях действительно не делает то, что вы хотите.</span> <span title="">Значение </span></span><code>local</code><span class="tlid-translation translation" lang="ru"><span title=""> фиксирует фон для элемента, к которому он применён, поэтому, когда вы прокручиваете элемент, фон прокручивается вместе с ним.</span></span>  </li>
+ <li><code>scroll</code>: Заставляет элементы фона прокручиваться при прокрутке страницы. Если содержимое элемента прокручивается, фон не перемещается. Фактически, фон фиксируется в той же позиции на странице, поэтому он прокручивается по мере прокрутки страницы.</li>
+ <li><code>fixed</code>: Фиксирует  элементы фона в области просмотра, чтобы он не прокручивался при прокрутке страницы или содержимого элемента. Фон всегда будет оставаться на одном и том же месте на экране.</li>
+ <li><code>local</code>: Это значение было добавлено позже (оно поддерживается только в Internet Explorer 9+, тогда как другие поддерживаются в IE4+), потому что значение <code>scroll</code> довольно запутанно и во многих случаях действительно не делает то, что вы хотите. Значение <code>local</code> фиксирует фон для элемента, к которому он применён, поэтому, когда вы прокручиваете элемент, фон прокручивается вместе с ним.  </li>
 </ul>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Свойство {{cssxref ("background-attachment")}} действует только тогда, когда есть контент для прокрутки, поэтому мы сделали пример, чтобы продемонстрировать различия между тремя значениями - взгляните на </span></span><a href="http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">background-attachment.html</a><span class="tlid-translation translation" lang="ru"> <span title="">(также смотри <a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">исходный код</a> здесь).</span></span></p>
+<p>Свойство {{cssxref ("background-attachment")}} действует только тогда, когда есть контент для прокрутки, поэтому мы сделали пример, чтобы продемонстрировать различия между тремя значениями - взгляните на <a href="http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">background-attachment.html</a> (также смотри <a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">исходный код</a> здесь).</p>
 
-<h3 id="Использование_сокращённого_свойства_background"><span class="tlid-translation translation" lang="ru"><span title="">Использование сокращённого свойства background</span></span></h3>
+<h3 id="Использование_сокращённого_свойства_background">Использование сокращённого свойства background</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Как я упоминал в начале этого урока, вы часто будете видеть фон, заданный с помощью свойства {{cssxref ("background")}}.</span> <span title="">Это сокращение позволяет вам одновременно устанавливать все различные свойства.</span></span></p>
+<p>Как я упоминал в начале этого урока, вы часто будете видеть фон, заданный с помощью свойства {{cssxref ("background")}}. Это сокращение позволяет вам одновременно устанавливать все различные свойства.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">При использовании нескольких фонов необходимо указать все свойства для первого фона, а затем добавить следующий фон после запятой.</span> <span title="">В приведённом ниже примере у нас есть градиент с размером и положением, затем фоновое изображение со значением </span></span><code>no-repeat</code><span class="tlid-translation translation" lang="ru"><span title=""> и положением, затем цвет.</span></span></p>
+<p>При использовании нескольких фонов необходимо указать все свойства для первого фона, а затем добавить следующий фон после запятой. В приведённом ниже примере у нас есть градиент с размером и положением, затем фоновое изображение со значением <code>no-repeat</code> и положением, затем цвет.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">При записи сокращённых значений фонового изображения необходимо соблюдать несколько правил, например:</span></span></p>
+<p>При записи сокращённых значений фонового изображения необходимо соблюдать несколько правил, например:</p>
 
 <ul>
  <li><code>background-color</code> можно указывать только после последней запятой.</li>
  <li>Значения <code>background-size</code> могут быть включены только сразу после <code>background-position</code>, разделённые символом '/', например: <code>center/80%</code>. </li>
 </ul>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Посетите страницу MDN свойства {{cssref ("background")}}, чтобы увидеть полное описание.</span></span></p>
+<p>Посетите страницу MDN свойства {{cssref ("background")}}, чтобы увидеть полное описание.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 600)}} </p>
 
 <h3 id="Доступность_просмотра">Доступность просмотра</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Помещая текст поверх фонового изображения или цвета, вы должны позаботиться о том, чтобы у вас было достаточно контраста, чтобы текст был читаемым для посетителей вашего сайта.</span> <span title="">Если указывается изображение, и текст будет помещён поверх этого изображения, вы также должны указать </span></span><code>background-color</code><span class="tlid-translation translation" lang="ru"><span title="">, который позволит тексту быть разборчивым, если изображение не загружается.</span></span></p>
+<p>Помещая текст поверх фонового изображения или цвета, вы должны позаботиться о том, чтобы у вас было достаточно контраста, чтобы текст был читаемым для посетителей вашего сайта. Если указывается изображение, и текст будет помещён поверх этого изображения, вы также должны указать <code>background-color</code>, который позволит тексту быть разборчивым, если изображение не загружается.</p>
 
 <p>Программы чтения с экрана не могут анализировать фоновые изображения, поэтому они должны быть чисто декоративными; любой важный контент должен быть частью HTML-страницы, а не находиться в фоне.</p>
 
 <h2 id="Границы">Границы</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Изучая Блочную модель, мы обнаружили, как границы влияют на размер нашего блока.</span> <span title="">В этом уроке мы рассмотрим, как творчески использовать границы.</span> <span title="">Обычно, когда мы добавляем границы к элементу с помощью CSS, мы используем сокращённое свойство, которое устанавливает цвет, ширину и стиль границы в одной строке CSS.</span></span></p>
+<p>Изучая Блочную модель, мы обнаружили, как границы влияют на размер нашего блока. В этом уроке мы рассмотрим, как творчески использовать границы. Обычно, когда мы добавляем границы к элементу с помощью CSS, мы используем сокращённое свойство, которое устанавливает цвет, ширину и стиль границы в одной строке CSS.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Мы можем установить границу для всех четырёх сторон блока с помощью {{cssxref ("border")}}:</span></span></p>
+<p>Мы можем установить границу для всех четырёх сторон блока с помощью {{cssxref ("border")}}:</p>
 
 <pre class="brush: css"><code>.box {
   border: 1px solid black;
 } </code></pre>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Или мы можем нацеливаться на один край блока, например:</span></span></p>
+<p>Или мы можем нацеливаться на один край блока, например:</p>
 
 <pre class="brush: css"><code>.box {
   border-top: 1px solid black;
@@ -247,7 +247,7 @@ background-position: 10px 20px,  top right;</pre>
   border-color: black;
 } </code></pre>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">И более детально:</span></span></p>
+<p>И более детально:</p>
 
 <pre class="brush: css"><code>.box {
   border-top-width: 1px;
@@ -256,10 +256,10 @@ background-position: 10px 20px,  top right;</pre>
 } </code></pre>
 
 <div class="blockIndicator note">
-<p><strong><span class="tlid-translation translation" lang="ru"><span title="">Примечание</span></span></strong>: <span class="tlid-translation translation" lang="ru"><span title="">Свойства границ </span></span>top, right, bottom, и left<span class="tlid-translation translation" lang="ru"><span title=""> также имеют сопоставленные <em>логические</em> свойства, которые относятся к режиму написания документа (например, текст слева направо, справа налево или сверху вниз).</span></span> <span class="tlid-translation translation" lang="ru"><span title="">Мы рассмотрим их в следующем уроке, который касается <a href="/ru/docs/CSS/Building_blocks/Handling_different_text_directions">работы с разными направлениями текста</a>.</span></span></p>
+<p><strong>Примечание</strong>: Свойства границ top, right, bottom, и left также имеют сопоставленные <em>логические</em> свойства, которые относятся к режиму написания документа (например, текст слева направо, справа налево или сверху вниз). Мы рассмотрим их в следующем уроке, который касается <a href="/ru/docs/CSS/Building_blocks/Handling_different_text_directions">работы с разными направлениями текста</a>.</p>
 </div>
 
-<p><strong>Есть множество стилей, которые вы можете использовать для границ. В приведённом ниже примере мы использовали <span class="tlid-translation translation" lang="ru"><span title="">разные стили границ для четырёх сторон моего блока</span></span>. Поиграйте со стилем, шириной и цветом границы, чтобы увидеть, как они работают.</strong></p>
+<p><strong>Есть множество стилей, которые вы можете использовать для границ. В приведённом ниже примере мы использовали разные стили границ для четырёх сторон моего блока. Поиграйте со стилем, шириной и цветом границы, чтобы увидеть, как они работают.</strong></p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/borders.html", '100%', 640)}}</p>
 
@@ -296,7 +296,7 @@ background-position: 10px 20px,  top right;</pre>
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%', 555)}} </p>
 
 <div class="blockIndicator note">
-<p><strong><span class="tlid-translation translation" lang="ru"><span title="">Примечание</span></span>:</strong> вы можете посмотреть <a href="https://github.com/mdn/css-examples/blob/master/learn/solutions.md">решение</a> здесь — <span class="tlid-translation translation" lang="ru"><span title="">но сначала попробуйте сделать это сами</span></span>!</p>
+<p><strong>Примечание:</strong> вы можете посмотреть <a href="https://github.com/mdn/css-examples/blob/master/learn/solutions.md">решение</a> здесь — но сначала попробуйте сделать это сами!</p>
 </div>
 
 <h2 id="Итоги">Итоги</h2>

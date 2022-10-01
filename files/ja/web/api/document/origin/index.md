@@ -2,6 +2,7 @@
 title: Document.origin
 slug: Web/API/Document/origin
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 > **Note:** 代わりに `self.origin` を使用してください。

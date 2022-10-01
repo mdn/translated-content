@@ -2,6 +2,7 @@
 title: クライアントサイド Web API
 slug: Learn/JavaScript/Client-side_web_APIs
 ---
+
 {{LearnSidebar}}
 
 Web サイトやアプリケーション用にクライアント側の JavaScript を書いていると、すぐに**アプリケーションプログラミングインターフェース** (**A**pprication **P**rogramming **I**nterfaces、**API**) にでくわします。API とはブラウザーやサイトが動作している OS の様々な面を操作したり、他の Web サイト、サービスから取得したデータを操作するためのプログラムされた機能です。このモジュールでは API とは何か、開発作業の中でよく見かける最もよく利用される API のいくつかについて、どのように使うかを説明していきます。
