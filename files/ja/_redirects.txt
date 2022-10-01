@@ -4189,8 +4189,7 @@
 /ja/docs/Web/CSS/transform-function/scaleZ()	/ja/docs/Web/CSS/transform-function/scaleZ
 /ja/docs/Web/CSS/transform-function/skew()	/ja/docs/Web/CSS/transform-function/skew
 /ja/docs/Web/CSS/transform-function/skewX()	/ja/docs/Web/CSS/transform-function/skewX
-/ja/docs/Web/CSS/transform-function/skewY	/ja/docs/conflicting/Web/CSS/transform-function/skewX
-/ja/docs/Web/CSS/transform-function/skewY()	/ja/docs/conflicting/Web/CSS/transform-function/skewX
+/ja/docs/Web/CSS/transform-function/skewY()	/ja/docs/Web/CSS/transform-function/skewY
 /ja/docs/Web/CSS/transform-function/translate()	/ja/docs/Web/CSS/transform-function/translate
 /ja/docs/Web/CSS/transform-function/translate3d()	/ja/docs/Web/CSS/transform-function/translate3d
 /ja/docs/Web/CSS/transform-function/translateX()	/ja/docs/Web/CSS/transform-function/translateX
