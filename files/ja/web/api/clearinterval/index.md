@@ -3,6 +3,7 @@ title: clearInterval()
 slug: Web/API/clearInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 グローバルの **`clearInterval()`** メソッドは、以前に {{domxref("setInterval", "setInterval()")}} の呼び出しによって確立されたタイマーを利用した繰り返し動作を取り消します。

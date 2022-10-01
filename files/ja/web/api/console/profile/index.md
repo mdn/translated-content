@@ -4,6 +4,7 @@ slug: Web/API/console/profile
 l10n:
   sourceCommit: 6c498a447fb5e776a67af7f9801a3aa407fc4d1c
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 **`console.profile()`** はパフォーマンスプロファイル（例えば [Firefox の パフォーマンスツール](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)）の記録を開始します。
