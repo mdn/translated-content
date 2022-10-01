@@ -20,7 +20,7 @@ typedarray.reduce(callback[, initialValue])
   - : 对类型数组的每一个值应用的函数，它接受以下参数：
 
     - `previousValue`
-      - : 在上一次迭代中，调用 callback 的返回值，或者是提供的 `initialValue。`.
+      - : 在上一次迭代中，调用 callback 的返回值，或者是提供的 `initialValue`。
     - `currentValue`
       - : 类型化数组中当前要处理的值。
     - `index`
