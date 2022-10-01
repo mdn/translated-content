@@ -19,7 +19,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index
 
 В следующем примере, абсолютно и относительно спозиционированным блокам определена величина и позиция таким образом, чтобы продемонстрировать правила наложения.
 
-> **Примечание:** **Примечания:**
+> **Примечания:**
 >
 > - Given a homogeneous group of elements without any z-index property, such as the positioned blocks (DIV #1 to #4) in the example, the element's stacking order is their order in the HTML hierarchy, regardless of their position.
 > - Standard blocks (DIV #5) in the normal flow, without any positioning property, are always rendered before positioned elements, and appear below them, even if they come later in the HTML hierarchy.
