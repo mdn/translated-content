@@ -22,7 +22,7 @@ overflow-clip-margin: unset;
 
 `overflow-clip-margin` プロパティは長さで指定します。負の値は許可されていません。
 
-> **メモ:** `overflow: clip` を持たない要素では、このプロパティは無視されます。
+> **Note:** `overflow: clip` を持たない要素では、このプロパティは無視されます。
 
 ## 公式定義
 

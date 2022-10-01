@@ -7,7 +7,7 @@ slug: Web/CSS/overflow-inline
 
 **`overflow-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、内容がボックスのインライン方向の先頭および末尾方向の端をはみ出した時に、どのように表示するかを設定します。これは表示なし、スクロールバー付き、内容をはみ出させるの何れかになります。
 
-> **メモ:** `overflow-inline` プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。
+> **Note:** `overflow-inline` プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。
 
 ## 構文
 

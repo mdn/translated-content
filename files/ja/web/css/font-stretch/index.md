@@ -49,7 +49,7 @@ font-stretch: unset;
 
   - : {{cssxref("&lt;percentage&gt;")}} 値です。このプロパティでは負の数は許可されていません。
 
-    > **メモ:** `font-stretch` の古いバージョンの仕様書では、このプロパティは 9 つのキーワード値のみを受け付けていました。
+    > **Note:** `font-stretch` の古いバージョンの仕様書では、このプロパティは 9 つのキーワード値のみを受け付けていました。
     >
     > **{{ SpecName('CSS4 Fonts', '#propdef-font-stretch') }} 仕様書**で、構文が `<percentage>` を受け付けるように拡張されました。これによって、文字幅がもっと連続的になるように提供することができます。 TrueType や OpenType のフォントでは、 "`wdth`" バリエーションが様々な幅を実装するために使用されます。
     >
@@ -141,7 +141,7 @@ font-stretch: unset;
 
 ### フォントの引き伸ばしパーセント値の設定
 
-> **メモ:** この例は、`<percentage>` 値に対応しているブラウザーでのみ動作します。
+> **Note:** この例は、`<percentage>` 値に対応しているブラウザーでのみ動作します。
 
 {{EmbedGHLiveSample("css-examples/variable-fonts/font-stretch.html", '100%', 950)}}
 
@@ -149,7 +149,7 @@ font-stretch: unset;
 
 {{Specifications}}
 
-> **メモ:** CSS プロパティ `font-stretch` は初め CSS 2 で定義されましたが、CSS 2.1 で実装経験不足のため外されました。CSS 3 では新しく定義されました。
+> **Note:** CSS プロパティ `font-stretch` は初め CSS 2 で定義されましたが、CSS 2.1 で実装経験不足のため外されました。CSS 3 では新しく定義されました。
 
 ## ブラウザーの互換性
 

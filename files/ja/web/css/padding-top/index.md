@@ -13,7 +13,7 @@ slug: Web/CSS/padding-top
 
 ![CSS の padding-top プロパティの要素ボックスへの影響](padding-top.svg)
 
-> **メモ:** {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
+> **Note:** {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
 
 ## 構文
 

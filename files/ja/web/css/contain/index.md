@@ -9,7 +9,7 @@ slug: Web/CSS/contain
 
 このプロパティはページ上にそれぞれ独立したたくさんのウィジェットがあるときに有益であり、ウィジェットの内部を、ウィジェットの囲みボックスの外側の副作用から守るために使用することができます。
 
-> **メモ:** (`paint`, `strict`, `content` のいずれかの値で) 適用された場合、このプロパティは以下のものを生成します。
+> **Note:**  (`paint`, `strict`, `content` のいずれかの値で) 適用された場合、このプロパティは以下のものを生成します。
 >
 > 1. 新しい[包含ブロック](/ja/docs/Web/CSS/Containing_block) ({{cssxref("position")}} プロパティが `absolute` または `fixed` である子孫を対象とする)。
 > 2. 新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)。

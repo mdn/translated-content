@@ -9,7 +9,7 @@ Edge や Internet Explorer のような Microsoft のアプリケーションは
 
 ## Microsoft 独自プロパティ (ウェブサイトでの使用は避けてください)
 
-> **メモ:** これらのプロパティは Microsoft のアプリケーションのみで動作し、標準化路線には乗っていません。
+> **Note:** これらのプロパティは Microsoft のアプリケーションのみで動作し、標準化路線には乗っていません。
 
 - {{CSSxRef("-ms-accelerator")}}
 - {{CSSxRef("-ms-block-progression")}}

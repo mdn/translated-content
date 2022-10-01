@@ -39,7 +39,7 @@ Firefox などの Mozilla アプリケーションにおいて、**`-moz-outline
 
 ### 値
 
-> **メモ:** 楕円形の輪郭線や `<percentage>` の値は、 {{cssxref("border-radius")}} で説明されている構文に従います。
+> **Note:** 楕円形の輪郭線や `<percentage>` の値は、 {{cssxref("border-radius")}} で説明されている構文に従います。
 
 1 ～ 4 つの `<outline-radius>` 値で、次のうちの一つを表します。
 

@@ -19,7 +19,7 @@ slug: Web/CSS/string
 
 ただし、改行を行うためには、{{cssxref("white-space")}} プロパティに適切な値を設定する必要があります。
 
-> **メモ:** [HTML エンティティ](/ja/docs/Glossary/Entity) (`&nbsp;` や `&#8212;` など) は、 CSS の `<string>` の中で使用することはできません。
+> **Note:** [HTML エンティティ](/ja/docs/Glossary/Entity) (`&nbsp;` や `&#8212;` など) は、 CSS の `<string>` の中で使用することはできません。
 
 ## 例
 

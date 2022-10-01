@@ -17,11 +17,11 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **注目:**
+> **Callout:**
 >
 > [この例をダウンロードする](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
 
-> **メモ:** 上記の例では 2 つのセレクターを使用して、最初の物を除いてそれぞれの `li` の前にコンテンツを挿入しています。これは次のようにすると、 1 つのセレクターのみで実現することもできます。
+> **Note:** 上記の例では 2 つのセレクターを使用して、最初の物を除いてそれぞれの `li` の前にコンテンツを挿入しています。これは次のようにすると、 1 つのセレクターのみで実現することもできます。
 >
 > ```css
 > .breadcrumb li:not(:first-child)::before {

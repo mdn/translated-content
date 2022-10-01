@@ -17,7 +17,7 @@ slug: Web/CSS/Layout_cookbook/List_group_with_badges
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/list-group-badges.html", '100%', 720)}}
 
-> **注目:**
+> **Callout:**
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/list-group-badges--download.html)
 

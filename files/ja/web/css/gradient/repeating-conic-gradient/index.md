@@ -33,7 +33,7 @@ background: repeating-conic-gradient(
 - `<color-hint>`
   - : 隣接する色経由点の間でグラデーションがどのように進行するかを定義する補間のヒントです。長さは、 2 つの色経由点の間のどの位置でグラデーションの色が色の遷移の中間点に到達するかを定義します。省略した場合、色の遷移の中間点は 2 つの色経由点間の中間点になります。
 
-> **メモ:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じ規則に従います。
+> **Note:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じ規則に従います。
 
 ## 解説
 
@@ -45,7 +45,7 @@ background: repeating-conic-gradient(
 
 `<gradient>` は `<image>` データ型に属するため、 `<image>` が使用できるところでしか使用できません。このため、 `conic-gradient()` は {{CSSxRef("background-color")}} や、その他の {{CSSxRef("&lt;color&gt;")}} データ型を使用するプロパティでは動作しません。</p>
 
-> **メモ:** 反復しない扇形グラデーションを作成するには、グラデーションを 360 度の回転にするか、 {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} 関数を使用するかしてください。
+> **Note:** 反復しない扇形グラデーションを作成するには、グラデーションを 360 度の回転にするか、 {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} 関数を使用するかしてください。
 
 ### 反復扇形グラデーションの理解
 

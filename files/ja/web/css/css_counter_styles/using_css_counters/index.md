@@ -114,7 +114,7 @@ counter-reset: reversed(section);
 
 {{cssxref("counter-increment")}} に負の値を指定すると、カウンター値が減少します。
 
-> **メモ:** 逆行ではないカウンターを減少させるには、 {{cssxref("counter-increment")}} を使うこともできます。
+> **Note:** 逆行ではないカウンターを減少させるには、 {{cssxref("counter-increment")}} を使うこともできます。
 > 逆行カウンターを使用する主な利点は、既定の初期値と、 `list-item` カウンターが自動的に逆行カウンターを減少させてくれることです。
 
 ### list-item カウンター

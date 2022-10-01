@@ -7,7 +7,7 @@ slug: Web/CSS/:empty
 
 **`:empty`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、子を持たない要素を表します。子とは要素のノードまたは文字列 (ホワイトスペースを含む) です。コメント、処理指示、 CSS の {{cssxref("content")}} は要素が空であるかどうかの判断には影響しません。
 
-> **メモ:** {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} では、 `:empty` 擬似クラスは {{CSSxRef(":-moz-only-whitespace")}} のような動作に変更されましたが、現在これに対応しているブラウザーはありません。
+> **Note:** {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} では、 `:empty` 擬似クラスは {{CSSxRef(":-moz-only-whitespace")}} のような動作に変更されましたが、現在これに対応しているブラウザーはありません。
 
 ```css
 /* 内容を含まない <div> 要素を選択 */

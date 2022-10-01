@@ -69,7 +69,7 @@ slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 
 次のライブ例では、折り返されていないフレックスコンテナーを使用しています。3 番目のアイテムは他のアイテムよりもコンテンツが多いのですが、`visibility: collapse` に設定されているため、フレックスコンテナーはこのアイテムを表示するために必要な高さの*支柱*を保持しています。CSS から `visibility: collapse` を削除するか、値を `visible` に変更すると、アイテムが消えて、折り畳まれていないアイテムの間にスペースが再分配されますが、フレックスコンテナの高さは変わりません。
 
-> **メモ:** Chrome や Safari では折りたたまれている部分は非表示として扱われるため、以下の 2 つの例は Firefox を使用してください。
+> **Note:** Chrome や Safari では折りたたまれている部分は非表示として扱われるため、以下の 2 つの例は Firefox を使用してください。
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}
 

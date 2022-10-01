@@ -13,7 +13,7 @@ slug: Web/CSS/border-radius
 
 `border-radius` プロパティは {{cssxref("border-collapse")}} が `collapse` の table 要素には適用されません。
 
-> **メモ:** 他の一括指定プロパティと同様、個別のサブプロパティは `border-radius:0 0 inherit inherit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
+> **Note:** 他の一括指定プロパティと同様、個別のサブプロパティは `border-radius:0 0 inherit inherit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
 
 ## 構成要素のプロパティ
 

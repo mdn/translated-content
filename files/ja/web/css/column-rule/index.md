@@ -11,7 +11,7 @@ slug: Web/CSS/column-rule
 
 これは[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)であり、一回の便利な宣言で個別の `column-rule-*` プロパティ ({{Cssxref("column-rule-width")}}, {{Cssxref("column-rule-style")}}, {{Cssxref("column-rule-color")}}) を設定できます。
 
-> **メモ:** 他の一括指定プロパティと同様に、指定されなかった個別の値は初期値が設定されます (以前に個別指定プロパティを使用して設定された値を上書きする可能性があります)。
+> **Note:** 他の一括指定プロパティと同様に、指定されなかった個別の値は初期値が設定されます (以前に個別指定プロパティを使用して設定された値を上書きする可能性があります)。
 
 ## 構文
 

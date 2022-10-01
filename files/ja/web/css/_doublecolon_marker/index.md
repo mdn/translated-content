@@ -25,7 +25,7 @@ slug: Web/CSS/::marker
 - {{CSSxRef("content")}} プロパティ
 - すべての[アニメーション](/ja/docs/Web/CSS/CSS_Animations#css_プロパティ)および[トランジション](/ja/docs/Web/CSS/CSS_Transitions#プロパティ)プロパティ
 
-> **メモ:** この仕様書は、将来追加の CSS プロパティにも対応する可能性があることを示しています。
+> **Note:** この仕様書は、将来追加の CSS プロパティにも対応する可能性があることを示しています。
 
 ## 構文
 

@@ -5,7 +5,7 @@ slug: Web/CSS/@media/prefers-reduced-data
 
 {{CSSRef}}{{SeeCompatTable}}
 
-> **メモ:** この特性は、どのユーザーエージェントも対応しておらず、その仕様が変更される可能性があります。
+> **Note:** この特性は、どのユーザーエージェントも対応しておらず、その仕様が変更される可能性があります。
 
 **`prefers-reduced-data`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#メディア特性)で、ユーザーがウェブコンテンツのインターネット通信を削減するようリクエストしていることを検出するために使用します。
 
@@ -22,7 +22,7 @@ slug: Web/CSS/@media/prefers-reduced-data
 
 ## 例
 
-> **メモ:** 現在、この特性を実装しているブラウザーはありませんので、以下の例は動作しません。
+> **Note:** 現在、この特性を実装しているブラウザーはありませんので、以下の例は動作しません。
 
 この例では、 `montserrat-regular.woff2` フォントファイルは先読みもダウンロードもされません。もしユーザーがデータを削減従っているのであれば、この場合「[システムフォントスタック](https://css-tricks.com/snippets/css/system-font-stack/)」が予備フォントとして機能することになります。
 

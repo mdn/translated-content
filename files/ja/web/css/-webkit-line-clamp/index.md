@@ -13,7 +13,7 @@ slug: Web/CSS/-webkit-line-clamp
 
 アンカー要素に適用すると、切り捨てがテキストの途中で行われる場合があるかもしれませんが、必ずしも末尾で切り捨てが行われるとは限りません。
 
-> **メモ:** このプロパティは元々 WebKit ブラウザーで実装されていたものですが、いくつかの問題があります。レガシーサポートのために標準化されました。 [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) の仕様では、このプロパティを置き換えて問題を回避することを目的として {{cssxref("line-clamp")}} プロパティが定義されています。
+> **Note:** このプロパティは元々 WebKit ブラウザーで実装されていたものですが、いくつかの問題があります。レガシーサポートのために標準化されました。 [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) の仕様では、このプロパティを置き換えて問題を回避することを目的として {{cssxref("line-clamp")}} プロパティが定義されています。
 
 ## 構文
 

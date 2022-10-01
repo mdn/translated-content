@@ -39,7 +39,7 @@ user-select: unset;
 -ms-user-select: element;
 ```
 
-> **メモ:** `user-select` は継承されるプロパティではありませんが、多くの場合、初期値の `auto` は継承されているように見えます。 WebKit/Chromium ベースのブラウザーは、仕様書に書かれている動作に従わず、このプロパティを継承するように実装して*おり*、いくつかの問題を発生させています。現在までに、 Chromium は[この問題を修正し](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de)、最終的な動作が仕様書に合うようにすることを選択しています。
+> **Note:** `user-select` は継承されるプロパティではありませんが、多くの場合、初期値の `auto` は継承されているように見えます。 WebKit/Chromium ベースのブラウザーは、仕様書に書かれている動作に従わず、このプロパティを継承するように実装して*おり*、いくつかの問題を発生させています。現在までに、 Chromium は[この問題を修正し](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de)、最終的な動作が仕様書に合うようにすることを選択しています。
 
 ## 構文
 
@@ -64,7 +64,7 @@ user-select: unset;
 - `element`{{non-standard_inline}} (IE 特有のエイリアス)
   - : `contain` と同じです。 Internet Explorer だけが対応しています。
 
-> **メモ:** CSS UI 4 では、 [`user-select: element` が `contain` に名称が変わります。](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05)
+> **Note:** CSS UI 4 では、 [`user-select: element` が `contain` に名称が変わります。](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05)
 </div>
 
 ## 公式定義
