@@ -4,6 +4,7 @@ slug: Learn/JavaScript/First_steps/What_is_JavaScript
 l10n:
   sourceCommit: e0e09686eb5ce3db9686ecb24bc1e4b08d1d0437
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 MDN 初心者向け JavaScript コースへようこそ！ この最初の記事では、高水準から JavaScript を見ていき、「JavaScript とは何か？」「これを使うと何ができるか？」などの質問に答えます。 JavaScript の用途にきっちりと親しめるようになります。

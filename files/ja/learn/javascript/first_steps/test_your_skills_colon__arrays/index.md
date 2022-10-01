@@ -2,6 +2,7 @@
 title: 'あなたのスキルをテストしよう: 配列'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 ---
+
 {{learnsidebar}}
 
 このスキルテストの目的は、[配列](/ja/docs/Learn/JavaScript/First_steps/Arrays) の記事を理解しているかどうかを評価することです。

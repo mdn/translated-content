@@ -2,6 +2,7 @@
 title: '評価: 太陽系の惑星のデータを構造化する'
 slug: Learn/HTML/Tables/Structuring_planet_data
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 テーブルの評価では、太陽系の惑星に関するいくつかのデータを提供し、それを HTML テーブルに構造化しましょう。

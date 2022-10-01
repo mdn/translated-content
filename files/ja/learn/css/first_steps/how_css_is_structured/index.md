@@ -2,6 +2,7 @@
 title: CSS の全体像
 slug: Learn/CSS/First_steps/How_CSS_is_structured
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 CSS の概要と基本的な使い方について理解できたので、今度は CSS の構造をもう少し詳しく見てみましょう。

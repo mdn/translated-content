@@ -3,6 +3,7 @@ title: 'TypeError: can''t access property "x" of "y"'
 slug: conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 original_slug: Web/JavaScript/Reference/Errors/Cant_access_property
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "can't access property" は、 {{jsxref("undefined")}} または {{jsxref("null")}} の値に対してプロパティのアクセスが行われた場合に発生します。

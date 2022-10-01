@@ -3,6 +3,7 @@ title: PublicKeyCredentialCreationOptions
 slug: conflicting/Web/API/CredentialsContainer/create_18148a708412fc42b1affe2f08eab270
 original_slug: Web/API/PublicKeyCredentialCreationOptions
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`PublicKeyCredentialCreationOptions`** は [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) の辞書で、 {{domxref("CredentialsContainer.create()","navigators.credentials.create()")}} で {{domxref("PublicKeyCredential")}} を生成するために渡されるオプションを保持します。

@@ -3,6 +3,7 @@ title: CSS の一般的な質問
 slug: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Common_CSS_Questions
 ---
+
 この記事には、 CSS に関するいくつかのよくある質問（FAQ）とその解答が見つかり、ウェブ開発者になるための道で役に立つでしょう。
 
 ## なぜ CSS が妥当なのに正しくレンダリングされないのか？

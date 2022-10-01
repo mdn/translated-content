@@ -3,6 +3,7 @@ title: 'Document: dragend イベント'
 slug: conflicting/Web/API/HTMLElement/dragend_event_2823bae8fed3efe03a09d01597d1cde8
 original_slug: Web/API/Document/dragend_event
 ---
+
 {{APIRef}}
 
 `dragend` イベントは、ドラッグ操作が終わろうとしているとき (マウスボタンを離したり、エスケープキーを押したりしたとき) に発生します。
