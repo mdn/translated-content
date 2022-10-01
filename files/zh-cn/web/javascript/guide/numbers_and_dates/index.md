@@ -33,7 +33,7 @@ JavaScript 最近添加了 {{jsxref("BigInt")}} 的支持，能够用于表示�
 
 ### 二进制数字 (Binary numbers)
 
-二进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 B(`0b 或者是 0B`)。假如 0b 后面的数字不是 0 或者 1，那么就会提示这样的语法错误（ `SyntaxError）：` "Missing binary digits after 0b(0b 之后缺失二有效的二进制数据)"。
+二进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 B(`0b` 或者是 `0B`)。假如 0b 后面的数字不是 0 或者 1，那么就会提示这样的语法错误（ `SyntaxError`）："Missing binary digits after 0b(0b 之后缺失二有效的二进制数据)"。
 
 ```js
 var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
