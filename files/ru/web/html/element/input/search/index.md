@@ -32,7 +32,7 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 
 | Attribute                     | Description                                                                                                                         |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| [`list`](#list)               | The id of the \<datalist> element that contains the optional pre-defined autocomplete options                                        |
+| [`list`](#list)               | The id of the `<datalist>` element that contains the optional pre-defined autocomplete options                                        |
 | [`maxlength`](#maxlength)     | The maximum number of characters the input should accept                                                                            |
 | [`minlength`](#minlength)     | The minimum number of characters long the input can be and still be considered valid                                                |
 | [`pattern`](#pattern)         | A regular expression the input's contents must match in order to be valid                                                           |
