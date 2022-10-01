@@ -7,64 +7,66 @@ tags:
   - preconnect
 translation_of: Web/Performance/dns-prefetch
 ---
-<p><code><strong>DNS-prefetch</strong></code> (предзагрузка DNS) - это попытка определить IP адрес по имени домена до того, как ресурс с этого домена будет фактически запрошен. Это может быть загрузчик файлов, который используется позже или ссылка, по которой, вероятно, перейдёт пользователь. </p>
+**`DNS-prefetch`** (предзагрузка DNS) - это попытка определить IP адрес по имени домена до того, как ресурс с этого домена будет фактически запрошен. Это может быть загрузчик файлов, который используется позже или ссылка, по которой, вероятно, перейдёт пользователь.
 
-<h2 id="Зачем_использовать_dns-prefetch">Зачем использовать dns-prefetch?</h2>
+## Зачем использовать dns-prefetch?
 
-<p>Бывают случаи, когда в вашем приложении используются ссылки на домены, отличные от основного домена приложения. Например, внутри вашего приложения на "a.com" есть ссылка на домен "b.org". Для того, чтобы пройти по этой ссылке, пользовательский клиент должен сначала выяснить, какой адрес в интернете соответствует доменному имени "b.org". Этот процесс называется <code>DNS resolution.</code> И хотя механизмы кеширования DNS помогают сократить время запросов, DNS Resolution заметно влияет на время ожидания запроса из-за того, что первый клиентский запрос уходит сначала на DNS сервера и дожидается ответа от них. Для приложений, которые открывают соединения ко многим сторонним доменам, влияние DNS Resolution может сильно уменьшить производительность загрузки.</p>
+Бывают случаи, когда в вашем приложении используются ссылки на домены, отличные от основного домена приложения. Например, внутри вашего приложения на "a.com" есть ссылка на домен "b.org". Для того, чтобы пройти по этой ссылке, пользовательский клиент должен сначала выяснить, какой адрес в интернете соответствует доменному имени "b.org". Этот процесс называется `DNS resolution.` И хотя механизмы кеширования DNS помогают сократить время запросов, DNS Resolution заметно влияет на время ожидания запроса из-за того, что первый клиентский запрос уходит сначала на DNS сервера и дожидается ответа от них. Для приложений, которые открывают соединения ко многим сторонним доменам, влияние DNS Resolution может сильно уменьшить производительность загрузки.
 
-<p><code>dns-prefetch</code> помогает разработчикам замаскировать ожидание DNS resolution. <a href="/en-US/docs/Web/HTML/Element/link">HTML <code>&lt;link&gt;</code> элемент</a> предлагает подобную функциональность с помощью атрибута <a href="/en-US/docs/Web/HTML/Attributes/rel"><code>rel</code></a>, значение которого может содержать <code>dns-prefetch</code>. В этом случае, предзагрузка DNS произойдёт для домена, указанного в атрибуте <a href="/en-US/docs/Web/HTML/Attributes">href</a>:</p>
+`dns-prefetch` помогает разработчикам замаскировать ожидание DNS resolution. [HTML `<link>` элемент](/ru/docs/Web/HTML/Element/link) предлагает подобную функциональность с помощью атрибута [`rel`](/ru/docs/Web/HTML/Attributes/rel), значение которого может содержать `dns-prefetch`. В этом случае, предзагрузка DNS произойдёт для домена, указанного в атрибуте [href](/ru/docs/Web/HTML/Attributes):
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: html">&lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/" &gt;
-</pre>
+```html
+<link rel="dns-prefetch" href="https://fonts.gstatic.com/" >
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;head&gt;
-    &lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/"&gt;
-    &lt;!-- and all other head elements --&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;!-- your page content --&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<html>
+  <head>
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+    <!-- and all other head elements -->
+  </head>
+  <body>
+    <!-- your page content -->
+  </body>
+</html>
+```
 
-<p>Вы должны помещать <code>dns-prefetch</code> подсказки в элемент <a href="/en-US/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a> для каждого уникального стороннего домена, с которого могут быть запрошены ресурсы, но нужно держать некоторые детали в голове.</p>
+Вы должны помещать `dns-prefetch` подсказки в элемент [`<head>`](/ru/docs/Web/HTML/Element/head) для каждого уникального стороннего домена, с которого могут быть запрошены ресурсы, но нужно держать некоторые детали в голове.
 
-<h2 id="Лучшие_практики">Лучшие практики</h2>
+## Лучшие практики
 
-<p id="Three_things_to_keep_in_mind">Необходимо учитывать 3 вещи:</p>
+Необходимо учитывать 3 вещи:
 
-<p><strong>Во-первых,</strong> <code>dns-prefetch</code> эффективен только для выполнения DNS запросов на сторонние <a href="/en-US/docs/Web/HTTP/CORS">cross-origin</a> домены, поэтому следует избегать этой инструкции при попытке загрузить ресурсы с текущего домена. Связано это с тем, что IP вашего домена уже был определён к тому времени, когда браузер увидел эту инструкцию.</p>
+**Во-первых,** `dns-prefetch` эффективен только для выполнения DNS запросов на сторонние [cross-origin](/ru/docs/Web/HTTP/CORS) домены, поэтому следует избегать этой инструкции при попытке загрузить ресурсы с текущего домена. Связано это с тем, что IP вашего домена уже был определён к тому времени, когда браузер увидел эту инструкцию.
 
-<p><strong>Во-вторых,</strong> существует возможность добавить <code>dns-prefetch</code> (и другие подсказки) как <a href="/en-US/docs/Web/HTTP/Headers">HTTP заголовок</a> с помощью <a href="/en-US/docs/Web/HTTP/Headers/Link">HTTP Link field</a>:</p>
+**Во-вторых,** существует возможность добавить `dns-prefetch` (и другие подсказки) как [HTTP заголовок](/ru/docs/Web/HTTP/Headers) с помощью [HTTP Link field](/ru/docs/Web/HTTP/Headers/Link):
 
-<pre>Link: &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</pre>
+```
+Link: <https://fonts.gstatic.com/>; rel=dns-prefetch
+```
 
-<p><strong>В третьих, </strong> хорошей практикой считается использование <code>dns-prefetch</code> в паре с  <code>preconnect</code>. В то время, как <code>dns-prefetch</code> срабатывает только при DNS поиске, <code>preconnect</code> устанавливает соединение к нужному серверу. Этот процесс включает в себя DNS resolution, установку TCP соединения и установление безопасного соединения (<a href="/en-US/docs/Glossary/TLS">TLS</a> рукопожатие), если оно доступно. Комбинирование этих двух инструкций даёт возможность ещё больше сократить время ожидания для кросс-доменных запросов. Вы можете использовать их вместе таким образом:</p>
+**В третьих,** хорошей практикой считается использование `dns-prefetch` в паре с `preconnect`. В то время, как `dns-prefetch` срабатывает только при DNS поиске, `preconnect` устанавливает соединение к нужному серверу. Этот процесс включает в себя DNS resolution, установку TCP соединения и установление безопасного соединения ([TLS](/ru/docs/Glossary/TLS) рукопожатие), если оно доступно. Комбинирование этих двух инструкций даёт возможность ещё больше сократить время ожидания для кросс-доменных запросов. Вы можете использовать их вместе таким образом:
 
-<pre class="brush: html">&lt;link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin&gt;
-&lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/"&gt;
-</pre>
+```html
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+```
 
-<div class="blockIndicator note">
-<p><strong>Примечание: </strong> если приложению необходимо установить соединение со множеством доменов, использование preconnect контрпродуктивно. <code>preconnect</code> лучше использовать для наиболее критических соединений. Для менее важных достаточно использовать <code>&lt;link rel="dns-prefetch"&gt;</code> для сокращения времени DNS запроса.</p>
-</div>
+> **Примечание:**если приложению необходимо установить соединение со множеством доменов, использование preconnect контрпродуктивно. `preconnect` лучше использовать для наиболее критических соединений. Для менее важных достаточно использовать `<link rel="dns-prefetch">` для сокращения времени DNS запроса.
 
-<p>В совместном использовании этих двух техник есть логика. Она заключается в том, что dns-prefetch поддерживается большим количеством браузеров, чем preconnect. Клиенты, которые ещё не поддерживают preconnect, все ещё будут получать бонусы от работы dns-prefetch. Так как эти инструкции относятся к HTML, они очень толерантны к ошибкам. Если какой-то устаревший браузер встречает dns-prefetch, ваш сайт не сломается. Вы просто не получите улучшений от этой инструкции.</p>
+В совместном использовании этих двух техник есть логика. Она заключается в том, что dns-prefetch поддерживается большим количеством браузеров, чем preconnect. Клиенты, которые ещё не поддерживают preconnect, все ещё будут получать бонусы от работы dns-prefetch. Так как эти инструкции относятся к HTML, они очень толерантны к ошибкам. Если какой-то устаревший браузер встречает dns-prefetch, ваш сайт не сломается. Вы просто не получите улучшений от этой инструкции.
 
-<p>Некоторые ресурсы, например, шрифты, загружаются в анонимном режиме. В подобных случаях вы должны указывать <a href="/en-US/docs/Web/HTML/CORS_settings_attributes">crossorigin</a> атрибут с инструкцией preconnect. Если вы пропустите её, то браузер выполнит только DNS запрос.</p>
+Некоторые ресурсы, например, шрифты, загружаются в анонимном режиме. В подобных случаях вы должны указывать [crossorigin](/ru/docs/Web/HTML/CORS_settings_attributes) атрибут с инструкцией preconnect. Если вы пропустите её, то браузер выполнит только DNS запрос.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/rel">HTML атрибут: rel</a></li>
- <li><a href="/en-US/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Headers">HTTP заголовки</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Link">HTTP заголовок </a><a href="/en-US/docs/Web/HTTP/Headers/Link" title="The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML &lt;link> element.">Link</a></li>
-</ul>
+- [\<link>](/ru/docs/Web/HTML/Element/link)
+- [HTML атрибут: rel](/ru/docs/Web/HTML/Attributes/rel)
+- [crossorigin](/ru/docs/Web/HTML/CORS_settings_attributes)
+- [Cross-Origin Resource Sharing (CORS)](/ru/docs/Web/HTTP/CORS)
+- [HTTP заголовки](/ru/docs/Web/HTTP/Headers)
+- [HTTP заголовок ](/ru/docs/Web/HTTP/Headers/Link)[Link](/ru/docs/Web/HTTP/Headers/Link "The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element.")
