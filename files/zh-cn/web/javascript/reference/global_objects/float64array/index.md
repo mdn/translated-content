@@ -78,7 +78,7 @@ new Float64Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.join", "Float64Array.prototype.join()")}}
   - : 合并所有数组元素到一个字符串中。参见{{jsxref("Array.prototype.join()")}}。
 - {{jsxref("TypedArray.keys", "Float64Array.prototype.keys()")}}
-  - : `返回一个包含数组中所有索引的数组遍历器`。参见{{jsxref("Array.prototype.keys()")}}。
+  - : 返回一个包含数组中所有索引的数组遍历器。参见{{jsxref("Array.prototype.keys()")}}。
 - {{jsxref("TypedArray.lastIndexOf", "Float64Array.prototype.lastIndexOf()")}}
   - : 返回数组中等于给定值的元素的最后（最大）位置，没有找到则返回 -1。参见{{jsxref("Array.prototype.lastIndexOf()")}}。
 - {{jsxref("TypedArray.map", "Float64Array.prototype.map()")}}
