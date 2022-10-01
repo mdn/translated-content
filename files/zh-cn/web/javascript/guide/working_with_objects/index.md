@@ -9,7 +9,7 @@ JavaScript 的设计是一个简单的基于对象的范式。一个对象就是
 
 ## 对象概述
 
-javascript 中的对象 (物体)，和其它编程语言中的对象一样，可以比照现实生活中的对象 (物体) 来理解它。 javascript 中对象 (物体) 的概念可以比照着现实生活中实实在在的物体来理解。
+javascript 中的对象 (物体)，和其它编程语言中的对象一样，可以比照现实生活中的对象 (物体) 来理解它。javascript 中对象 (物体) 的概念可以比照着现实生活中实实在在的物体来理解。
 
 在 javascript 中，一个对象可以是一个单独的拥有属性和类型的实体。我们拿它和一个杯子做下类比。一个杯子是一个对象 (物体)，拥有属性。杯子有颜色，图案，重量，由什么材质构成等等。同样，javascript 对象也有属性来定义它的特征。
 
@@ -63,7 +63,7 @@ myObj[""]               = "Even an empty string";
 console.log(myObj);
 ```
 
-请注意，方括号中的所有键都将转换为字符串类型，因为 JavaScript 中的对象只能使用 String 类型作为键类型。 例如，在上面的代码中，当将键 obj 添加到 myObj 时，JavaScript 将调用 obj.toString() 方法，并将此结果字符串用作新键。
+请注意，方括号中的所有键都将转换为字符串类型，因为 JavaScript 中的对象只能使用 String 类型作为键类型。例如，在上面的代码中，当将键 obj 添加到 myObj 时，JavaScript 将调用 obj.toString() 方法，并将此结果字符串用作新键。
 
 你也可以通过存储在变量中的字符串来访问属性：
 
@@ -124,7 +124,7 @@ function listAllProperties(o){
 }
 ```
 
-这在展示 “隐藏”（在原型中的不能通过对象访问的属性，因为另一个同名的属性存在于原型链的早期）的属性时很有用。如果只想列出可访问的属性，那么只需要去除数组中的重复元素即可。
+这在展示“隐藏”（在原型中的不能通过对象访问的属性，因为另一个同名的属性存在于原型链的早期）的属性时很有用。如果只想列出可访问的属性，那么只需要去除数组中的重复元素即可。
 
 ## 创建新对象
 
@@ -507,12 +507,12 @@ fruit == fruitbear // return false
 fruit === fruitbear // return false
 ```
 
-> **备注：** "===" 运算符用来检查数值是否相等: 1 === "1"返回 false，而 1 == "1" 返回 true
+> **备注：** "===" 运算符用来检查数值是否相等：1 === "1"返回 false，而 1 == "1" 返回 true
 
 ```js
 // 两个变量，同一个对象
 var fruit = {name: "apple"};
-var fruitbear = fruit;  // 将 fruit 的对象引用(reference) 赋值给 fruitbear
+var fruitbear = fruit;  // 将 fruit 的对象引用 (reference) 赋值给 fruitbear
                         // 也称为将 fruitbear“指向”fruit 对象
 // fruit 与 fruitbear 都指向同样的对象
 fruit == fruitbear // return true
