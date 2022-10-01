@@ -71,14 +71,11 @@ Object.getOwnPropertyDescriptor("toto", 0);
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.getownpropertydescriptor', 'Reflect.getOwnPropertyDescriptor')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.getownpropertydescriptor', 'Reflect.getOwnPropertyDescriptor')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## Voir aussi
 

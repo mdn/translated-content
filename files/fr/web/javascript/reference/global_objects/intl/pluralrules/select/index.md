@@ -52,13 +52,11 @@ new Intl.PluralRules('ar-EG').select(18);
 
 ## Spécifications
 
-| Spécification                                                                                                       | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| [Brouillon pour les règles de nombre avec Intl](https://rawgit.com/caridy/intl-plural-rules-spec/master/index.html) | {{Spec2('ES Int Draft')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.PluralRules.select")}}
+{{Compat}}
 
 ## Voir aussi
 

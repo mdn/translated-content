@@ -65,13 +65,11 @@ if (!String.prototype.anchor){
 
 ## Spécifications
 
-| Spécification                                                                                            | État                 | Commentaires                                                                                                                                         |
-| -------------------------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.anchor', 'String.prototype.anchor')}} | {{Spec2('ES6')}} | Définition initiale. Implémentée avec JavaScript 1.0. Défini dans l'annexe (normative) B sur les fonctionnalités additionnelles des navigateurs web. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.anchor")}}
+{{Compat}}
 
 ## Voir aussi
 

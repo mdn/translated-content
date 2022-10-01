@@ -95,13 +95,11 @@ array[1];
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.matchall', 'String.prototype.matchAll')}} | {{Spec2('ESDraft')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.matchAll")}}
+{{Compat}}
 
 ## Voir aussi
 
