@@ -1,15 +1,8 @@
 ---
 title: 处理常见的 HTML 和 CSS 问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
-tags:
-  - CSS
-  - HTML
-  - 兼容
-  - 学习
-  - 文章
-  - 测试
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -70,7 +63,9 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 ### 验证
 
-对于 HTML，要确保所有的标签都被正确地关闭和嵌套，写好 DOCTYPE，而且正确地使用各种标签。一个好的策略是定期验证你的代码。一个可以做到这一点的[服务](https://validator.w3.org/)是 W3C[ 标记验证服务](https://validator.w3.org/)，提供您的代码，它就能返回错误列表：![The HTML validator homepage](validator.png)
+对于 HTML，要确保所有的标签都被正确地关闭和嵌套，写好 DOCTYPE，而且正确地使用各种标签。一个好的策略是定期验证你的代码。一个可以做到这一点的服务是 [W3C 标记验证服务](https://validator.w3.org/)，提供您的代码，它就能返回错误列表：
+
+![The HTML validator homepage](validator.png)
 
 CSS 有一个类似的路线——你需要检查你的属性名拼写是否正确，属性值拼写正确，并且对于它们使用的属性是有效的，你不会丢失任何大括号，等等。为了这个目的，W3C 也有一个 [CSS 验证器](http://jigsaw.w3.org/css-validator/)。
 
@@ -84,13 +79,13 @@ CSS 有一个类似的路线——你需要检查你的属性名拼写是否正�
 
 但是，将代码复制并粘贴到网页上以检查其有效性是不太方便的。你真正想要的 Linter 可以和你的工作流更加契合，减免一切窗口切换等麻烦。
 
-许多代码编辑器都有 linter 插件。Github 的[ Atom](https://atom.io/) 代码编辑器例如有一个丰富的插件生态系统可用，有很多 linting 选项。向您展示一个这样的插件通常如何工作的例子：
+许多代码编辑器都有 linter 插件。Github 的 [Atom](https://atom.io/) 代码编辑器例如有一个丰富的插件生态系统可用，有很多 linting 选项。向您展示一个这样的插件通常如何工作的例子：
 
-1.  安装 Atom（如果您还没有安装最新版本），请从上面链接的 Atom 页面下载。
-2.  转到 Atom 的*首选项...*对话框（例如在 Mac 上选择 _Atom > Preferences..._ 或在 Windows / Linux 上选择 _File > Preferences..._），然后在左侧菜单中选择 Install 选项。
-3.  在搜索包文本字段中，输入“lint”，然后按 Enter / 回车键搜索与 lint 相关的包。
-4.  您应该在列表顶部看到一个名为 lint 的包。首先安装它（使用安装按钮），因为其他短裤依靠它工作。之后，安装用于 linting CSS 的 linter-csslint 插件，和用于 lint HTML 的 linter-tidy 插件。
-5.  软件包完成安装后，尝试加载一个 HTML 文件和一个 CSS 文件：在行号旁边会看到用绿色（警告）和红色（错误）圆圈，突出显示任何存在的问题，底部则提供行号、错误消息，有时有建议的值或者其他修复。
+1. 安装 Atom（如果您还没有安装最新版本），请从上面链接的 Atom 页面下载。
+2. 转到 Atom 的*首选项...*对话框（例如在 Mac 上选择 _Atom > Preferences..._ 或在 Windows / Linux 上选择 _File > Preferences..._），然后在左侧菜单中选择 Install 选项。
+3. 在搜索包文本字段中，输入“lint”，然后按 Enter / 回车键搜索与 lint 相关的包。
+4. 您应该在列表顶部看到一个名为 lint 的包。首先安装它（使用安装按钮），因为其他短裤依靠它工作。之后，安装用于 linting CSS 的 linter-csslint 插件，和用于 lint HTML 的 linter-tidy 插件。
+5. 软件包完成安装后，尝试加载一个 HTML 文件和一个 CSS 文件：在行号旁边会看到用绿色（警告）和红色（错误）圆圈，突出显示任何存在的问题，底部则提供行号、错误消息，有时有建议的值或者其他修复。
 
 ![](atom-htmltidy.png)![](atom-csslint.png)
 
@@ -118,7 +113,7 @@ CSS 有一个类似的路线——你需要检查你的属性名拼写是否正�
 
 ### 旧版浏览器不支持新特性
 
-这是一个常见的问题，尤其是当您需要支持旧的浏览器（例如旧的 IE 版本），或者您正在使用使用 CSS 前缀实现的功能时。通常，大多数核心 HTML 和 CSS 功能（如基本的 HTML 元素，CSS 基本颜色和文本样式）在大多数浏览器中都可以使用，当您开始想要使用 [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)，[HTML5 视频/音频](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)，甚至更新的 [CSS Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout) 或 [`-webkit-background-clip：text`](/zh-CN/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#-webkit-background-clip_text) 等新功能时，会发现更多的问题。
+这是一个常见的问题，尤其是当您需要支持旧的浏览器（例如旧的 IE 版本），或者您正在使用使用 CSS 前缀实现的功能时。通常，大多数核心 HTML 和 CSS 功能（如基本的 HTML 元素，CSS 基本颜色和文本样式）在大多数浏览器中都可以使用，当您开始想要使用 [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)，[HTML5 视频/音频](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)，甚至更新的 [CSS Grid](/zh-CN/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout) 或 [`-webkit-background-clip：text`](/zh-CN/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#-webkit-background-clip_text) 等新功能时，会发现更多的问题。
 
 一旦您确定了您将要使用的潜在问题技术列表，研究它们所支持的浏览器以及相关技术是否有用是一个不错的主意。请参阅下面的[查找帮助](/zh-CN/docs/preview-wiki-content#Finding_help)。
 
@@ -219,7 +214,7 @@ button:active {
 
 为了解决这个问题，我们添加了第二个 background-color 声明，它只是指定了一个十六进制颜色 - 这在旧版本的浏览器中得到了支持，并且在现代闪亮功能无法使用的情况下作为后备。访问此页面的浏览器首先应用第一个 background-color 值，当它到达第二个 background-color 声明时，如果它支持 RGBA 颜色，它将用这个值覆盖初始值。如果不是的话，它会忽略整个声明，继续前进。
 
-> **备注：** 这同样适用于其他 CSS 功能，如真正的[媒体查询](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)，[@font-face](/zh-CN/docs/Web/CSS/@font-face) 以及 [@supports](/zh-CN/docs/Web/CSS/@supports) 块 - 如果不支持他们，浏览器只是忽略它们。
+> **备注：** 这同样适用于其他 CSS 功能，如真正的[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)，[@font-face](/zh-CN/docs/Web/CSS/@font-face) 以及 [@supports](/zh-CN/docs/Web/CSS/@supports) 块 - 如果不支持他们，浏览器只是忽略它们。
 
 #### IE 条件注释
 
@@ -269,11 +264,11 @@ form > #date
 
 （date 表单输入不是直接在里面\<form>;你最好使用一般的后代选择器而不是子选择器）。
 
-然而，出现在 IE 9 比旧的版本的另一个问题是，没有任何新的选择（主要是伪类和伪元素如 [:nth-of-type](/en-US/docs/Web/CSS/:nth-of-type)，[:not](/zh-CN/docs/Web/CSS/:not)，[::selection](/zh-CN/docs/Web/CSS/::selection)，等）的工作。如果你想在你的 CSS 中使用这些，并且需要支持较老的 IE 版本，那么一个好的方法就是使用 Keith Clark 的 [Selectivizr](http://selectivizr.com/) 库 - 这是一个小型的 JavaScript 库，可以在现有的 JavaScript 库（如 [jQuery](http://jquery.com/) 或 [MooTools](http://mootools.net/)）上工作。
+然而，出现在 IE 9 比旧的版本的另一个问题是，没有任何新的选择（主要是伪类和伪元素如 [:nth-of-type](/zh-CN/docs/Web/CSS/:nth-of-type)，[:not](/zh-CN/docs/Web/CSS/:not)，[::selection](/zh-CN/docs/Web/CSS/::selection)，等）的工作。如果你想在你的 CSS 中使用这些，并且需要支持较老的 IE 版本，那么一个好的方法就是使用 Keith Clark 的 [Selectivizr](http://selectivizr.com/) 库 - 这是一个小型的 JavaScript 库，可以在现有的 JavaScript 库（如 [jQuery](http://jquery.com/) 或 [MooTools](http://mootools.net/)）上工作。
 
-1.  要尝试此示例，请创建 [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html) 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 `p:first-child`，这在老版本的 IE 中不起作用。
-2.  现在下载 [MooTools](http://mootools.net/)和[Selectivizr](http://selectivizr.com/)，并将它们保存在与示例 HTML 相同的目录中。
-3.  将下面的代码放到 HTML 文档的开头，就在开始 `<style>` 标记之前：
+1. 要尝试此示例，请创建 [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html) 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 `p:first-child`，这在老版本的 IE 中不起作用。
+2. 现在下载 [MooTools](http://mootools.net/)和[Selectivizr](http://selectivizr.com/)，并将它们保存在与示例 HTML 相同的目录中。
+3. 将下面的代码放到 HTML 文档的开头，就在开始 `<style>` 标记之前：
 
     ```html
     <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
@@ -308,9 +303,9 @@ background-image: linear-gradient(to right,green,yellow);
 
 最后三行显示了三个不同版本的[linear-gradient()](/zh-CN/docs/Web/CSS/linear-gradient)函数，用于在元素的背景中生成线性渐变：
 
-1.  第一个有一个-moz-前缀，并显示一个略老的语法版本（Firefox）
-2.  第二个有一个-webkit-前缀，并显示一个更老的专有版本的语法（这实际上是从一个真正的旧版本的 WebKit 引擎）。
-3.  第三个没有前缀，并显示语法的最终版本（包含在定义此功能的[CSS 图像值和替换内容模块级别 3 规范中](https://drafts.csswg.org/css-images-3/#linear-gradients)）。
+1. 第一个有一个-moz-前缀，并显示一个略老的语法版本（Firefox）
+2. 第二个有一个-webkit-前缀，并显示一个更老的专有版本的语法（这实际上是从一个真正的旧版本的 WebKit 引擎）。
+3. 第三个没有前缀，并显示语法的最终版本（包含在定义此功能的[CSS 图像值和替换内容模块级别 3 规范中](https://drafts.csswg.org/css-images-3/#linear-gradients)）。
 
 前缀功能从来不应该用于生产网站——它们可能会在没有警告的情况下更改或删除，并导致跨浏览器问题。当开发人员决定只使用-webkit- 某个属性的版本时，这是一个特别的问题 - 这意味着该网站在其他浏览器中不起作用。这实际上发生了很多，其他浏览器已经开始实现-webkit-各种 CSS 属性的前缀版本，所以他们将使用这样的代码。由于这些类型的问题，浏览器供应商使用前缀最近已经下降，但仍然有一些需要注意。
 
@@ -318,16 +313,16 @@ background-image: linear-gradient(to right,green,yellow);
 
 试试这个简单的例子：
 
-1.  打开 google.com 或具有突出标题或其他块级元素的其他站点。
-2.  右键/ Cmd +单击有问题的元素并选择 Inspect / Inspect 元素（或者浏览器中的任何选项） - 这应该在浏览器中打开开发工具，在 DOM 检查器中高亮显示该元素。
-3.  寻找可以用来选择该元素的功能。例如，在撰写本文时，主要的 Google 徽标的 ID 为 hplogo。
-4.  将对此元素的引用存储在变量中，例如：
+1. 打开 google.com 或具有突出标题或其他块级元素的其他站点。
+2. 右键/ Cmd +单击有问题的元素并选择 Inspect / Inspect 元素（或者浏览器中的任何选项） - 这应该在浏览器中打开开发工具，在 DOM 检查器中高亮显示该元素。
+3. 寻找可以用来选择该元素的功能。例如，在撰写本文时，主要的 Google 徽标的 ID 为 hplogo。
+4. 将对此元素的引用存储在变量中，例如：
 
     ```js
     const test = document.getElementById('hplogo');
     ```
 
-5.  现在尝试为您感兴趣的 CSS 属性设置一个新的值，你可以使用元素的[style](/zh-CN/docs/Web/API/HTMLElement/style)属性来做到这一点，例如尝试在 JavaScript 控制台中输入这些：
+5. 现在尝试为您感兴趣的 CSS 属性设置一个新的值，你可以使用元素的[style](/zh-CN/docs/Web/API/HTMLElement/style)属性来做到这一点，例如尝试在 JavaScript 控制台中输入这些：
 
     ```js
     test.style.transform = 'rotate(90deg)'
@@ -362,9 +357,9 @@ Autoprefixer 也可用于其他更便捷的方式 - 请参阅[Autoprefixer 使�
 
 您也可以使用插件来编辑文本编辑器，如 Atom 或 Sublime 文本。例如，在 Atom 中：
 
-1.  您可以通过转到首选项>安装，搜索 Autoprefixer，然后安装。
-2.  您可以通过按“Autoprefixer 设置”按钮并在页面的“设置”部分的文本字段中输入查询来设置浏览器查询。
-3.  在你的代码中，你可以选择要添加前缀的 CSS 部分，打开命令调色板（Cmd / Ctrl + Shift + P），然后输入 Autoprefixer 并选择 Autoprefixer 自动完成的结果。
+1. 您可以通过转到首选项>安装，搜索 Autoprefixer，然后安装。
+2. 您可以通过按“Autoprefixer 设置”按钮并在页面的“设置”部分的文本字段中输入查询来设置浏览器查询。
+3. 在你的代码中，你可以选择要添加前缀的 CSS 部分，打开命令调色板（Cmd / Ctrl + Shift + P），然后输入 Autoprefixer 并选择 Autoprefixer 自动完成的结果。
 
 作为一个例子，我们输入了下面的代码：
 
@@ -397,12 +392,12 @@ body {
 
 #### 支持新的布局特性
 
-今天网络上的大部分布局工作都是使用[浮动工具](/en-US/docs/Learn/CSS/CSS_layout/Floats)完成的 - 这是因为浮动支持得很好（可以回到 IE4，尽管如此，如果您尝试支持 IE，也需要调查一些错误很久以前）。但是，它们并不是真正用于布局的目的 - 使用浮动的方式实际上是一种黑客攻击 - 而且它们有一些严重的限制（例如，请参阅[为什么选择 Flexbox？](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Why_Flexbox)）
+今天网络上的大部分布局工作都是使用[浮动工具](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)完成的 - 这是因为浮动支持得很好（可以回到 IE4，尽管如此，如果您尝试支持 IE，也需要调查一些错误很久以前）。但是，它们并不是真正用于布局的目的 - 使用浮动的方式实际上是一种黑客攻击 - 而且它们有一些严重的限制（例如，请参阅[为什么选择 Flexbox？](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Why_Flexbox)）
 
-最近，出现了专门的布局机制，例如[Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)和[CSS Grids](/zh-CN/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout)，这些布局机制使常见的布局任务变得更加容易并消除了这些缺点。但是，这些在浏览器中并没有得到很好的支持：
+最近，出现了专门的布局机制，例如[Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)和[CSS Grids](/zh-CN/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout)，这些布局机制使常见的布局任务变得更加容易并消除了这些缺点。但是，这些在浏览器中并没有得到很好的支持：
 
 - CSS Grid 是非常新的；在撰写本文的时候，他们只在最新版本的现代浏览器中才[得到支持](http://gridbyexample.com/browsers/)。
-- Flexbox 在现代浏览器中[得到](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility)了[很好的支持](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility)，但是在旧版浏览器中却存在问题。IE 9 根本不支持它，IE 10 和旧版本的 iOS /桌面 Safari 分别支持 Flexbox 规范的两种不兼容老版本。如果您想尝试在所有这些浏览器上使用 flexbox（请参阅[高级跨浏览器 Flexbox](https://dev.opera.com/articles/advanced-cross-browser-flexbox/)以获得创意），[则会](https://dev.opera.com/articles/advanced-cross-browser-flexbox/)导致一些有趣的浏览器前缀[杂乱](https://dev.opera.com/articles/advanced-cross-browser-flexbox/)。
+- Flexbox 在现代浏览器中[得到](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility)了[很好的支持](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility)，但是在旧版浏览器中却存在问题。IE 9 根本不支持它，IE 10 和旧版本的 iOS /桌面 Safari 分别支持 Flexbox 规范的两种不兼容老版本。如果您想尝试在所有这些浏览器上使用 flexbox（请参阅[高级跨浏览器 Flexbox](https://dev.opera.com/articles/advanced-cross-browser-flexbox/)以获得创意），[则会](https://dev.opera.com/articles/advanced-cross-browser-flexbox/)导致一些有趣的浏览器前缀[杂乱](https://dev.opera.com/articles/advanced-cross-browser-flexbox/)。
 
 布局功能并不像简单的颜色，阴影或渐变那样容易提供优雅的后备。如果布局属性被忽略，你的整个设计可能会崩溃。因此，您需要使用功能检测来检测访问的浏览器是否支持这些布局功能，并根据结果有选择地应用不同的布局（我们将在后面的文章中详细介绍功能检测）。
 
@@ -412,9 +407,9 @@ body {
 
 #### 响应式设计问题
 
-响应式设计是创建网页布局以适应不同设备形式因素（例如不同的屏幕宽度，方向（纵向或横向）或分辨率）的做法。例如桌面布局在移动设备上看起来会很糟糕，所以您需要使用[媒体查询](/en-US/docs/Web/CSS/Media_Queries)来提供合适的移动布局，并确保使用[视口](/zh-CN/docs/Mozilla/Mobile/Viewport_meta_tag)正确应用它。您可以在[响应式设计的构建模块中](/zh-CN/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks)找到这些实践的详细说明。
+响应式设计是创建网页布局以适应不同设备形式因素（例如不同的屏幕宽度，方向（纵向或横向）或分辨率）的做法。例如桌面布局在移动设备上看起来会很糟糕，所以您需要使用[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)来提供合适的移动布局，并确保使用[视口](/zh-CN/docs/Mozilla/Mobile/Viewport_meta_tag)正确应用它。您可以在[响应式设计的构建模块中](/zh-CN/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks)找到这些实践的详细说明。
 
-解决方案也是一个大问题 - 例如，移动设备不太可能需要比台式电脑大的图像，并且更可能具有较慢的互联网连接，并且甚至可能使昂贵的数据计划浪费带宽成为更多的问题。另外，不同的设备可以具有一系列不同的分辨率，这意味着较小的图像可以出现像素化。有许多技术可以让您解决这些问题，从简单的[移动第一媒体查询](/en-US/Apps/Progressive/Responsive/Mobile_first)到更复杂的[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes)。
+解决方案也是一个大问题 - 例如，移动设备不太可能需要比台式电脑大的图像，并且更可能具有较慢的互联网连接，并且甚至可能使昂贵的数据计划浪费带宽成为更多的问题。另外，不同的设备可以具有一系列不同的分辨率，这意味着较小的图像可以出现像素化。有许多技术可以让您解决这些问题，从简单的[移动第一媒体查询](/zh-CN/Apps/Progressive/Responsive/Mobile_first)到更复杂的[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes)。
 
 可能出现问题的另一个困难是浏览器对使上述技术成为可能的特征的支持。媒体查询没有在 IE 8 或更少的支持，所以如果你想使用移动优先布局和具有桌面布局则适用于旧版本的 IE，你将有一个媒体查询应用于[填充工具](/zh-CN/docs/Glossary/polyfill)到您的网页，如 [css3- mediaqueries-js](https://code.google.com/archive/p/css3-mediaqueries-js/) 或 [Respond.js](https://github.com/scottjehl/Respond)。
 
@@ -444,11 +439,11 @@ HTML 和 CSS 还有很多其他的问题。最重要的是如何在网上找到�
 
 ## In this module
 
-- [Introduction to cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)
+- [Introduction to cross browser testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
+- [Strategies for carrying out testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
+- [Handling common HTML and CSS problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
+- [Handling common JavaScript problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
+- [Handling common accessibility problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
+- [Implementing feature detection](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
+- [Introduction to automated testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
+- [Setting up your own test automation environment](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

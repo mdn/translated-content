@@ -1,14 +1,8 @@
 ---
 title: CSS 端末適合
 slug: Web/CSS/CSS_Device_Adaptation
-tags:
-  - CSS
-  - CSS 端末適合
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Device_Adaptation
 ---
+
 {{CSSRef}}
 
 CSS 端末適合 (CSS Device Adaptation) は CSS モジュールの一つで、ビューポートの寸法、拡大率、方向を定義することができるものです。

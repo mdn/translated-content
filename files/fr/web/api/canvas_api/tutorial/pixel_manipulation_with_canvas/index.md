@@ -4,6 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Pixel_manipulation_with_canvas
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
 Jusqu'à présent, nous n'avons pas examiné dans le détail les pixels réels de notre canevas. Avec l'objet ImageData, vous pouvez directement lire et écrire dans le tableau de données de l'image, pour manipuler les pixels un par un. Nous verrons également comment le lissage (anticrénelage) de l'image peut être contrôlé et comment sauvegarder des images depuis votre canevas.
@@ -117,7 +118,7 @@ ctx.putImageData(monImageData, 0, 0);
 
 ### Niveaux de gris et inversion de couleurs
 
-Dans cet exemple, nous itérons sur tous les pixels pour changer leurs valeurs, puis nous remettons le tableau de pixels modifié sur le canevas à l'aide de [putImageData()](/fr-FR/docs/Web/API/CanvasRenderingContext2D/putImageData). La fonction inversion soustrait simplement chaque couleur de la valeur maximale 255. La fonction grayscale _(niveaux de gris)_ fait simplement la moyenne du rouge, du vert et du bleu. Vous pouvez également utiliser une moyenne pondérée, donnée par la formule x = 0.299r + 0.587v + 0.114b, par exemple. Voir [Niveaux de gris](https://fr.wikipedia.org/wiki/Niveau_de_gris) sur Wikipedia pour plus d'informations.
+Dans cet exemple, nous itérons sur tous les pixels pour changer leurs valeurs, puis nous remettons le tableau de pixels modifié sur le canevas à l'aide de [putImageData()](/fr-FR/docs/Web/API/CanvasRenderingContext2D/putImageData). La fonction inversion soustrait simplement chaque couleur de la valeur maximale 255. La fonction grayscale _(niveaux de gris)_ fait simplement la moyenne du rouge, du vert et du bleu. Vous pouvez également utiliser une moyenne pondérée, donnée par la formule x = 0.299r + 0.587v + 0.114b, par exemple. Voir [Niveaux de gris](https://fr.wikipedia.org/wiki/Niveau_de_gris) sur Wikipédia pour plus d'informations.
 
 ```html hidden
 <canvas id="canevas" width="300" height="227"></canvas>

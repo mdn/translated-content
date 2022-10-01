@@ -3,6 +3,7 @@ title: flex
 slug: Web/CSS/flex
 translation_of: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 La propriété **`flex`** est une propriété raccourcie qui définit la capacité d'un élément flexible à modifier ses dimensions afin de remplir l'espace disponible de son conteneur.
@@ -111,7 +112,7 @@ Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initi
 
 Par défaut, les éléments flexibles ne se rétrécissent pas en dessous de la taille minimale du contenu. Pour modifier ce comportement, il faudra paramétrer {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
 
-Voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox "CSS/Using_CSS_flexible_boxes") pour plus d'informations.
+Voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations.
 
 ## Syntaxe
 
@@ -185,9 +186,13 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 
 > **Note :** Lorsqu'on utilise une ou deux valeurs sans unité dans la règle, `flex-basis` vaudra 0. Pour plus d'informations, voir [le brouillon de spécification du module des boîtes flexibles](https://drafts.csswg.org/css-flexbox/#flex-common).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -249,15 +254,11 @@ flex.addEventListener("click", function() {
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Voir aussi
 

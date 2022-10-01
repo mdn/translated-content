@@ -5,18 +5,18 @@ translation_of: Web/API/HTMLElement/offsetLeft
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p>La propiedad de solo lectura <strong><code>HTMLElement.offsetLeft</code></strong> devuelve el número de <em>píxeles a la izquierda </em>del elemento actual con respecto al nodo {{domxref("HTMLElement.offsetParent")}} .</p>
+<p>La propiedad de solo lectura <strong><code>HTMLElement.offsetLeft</code></strong> devuelve el número de <em>píxeles a la izquierda </em>del elemento actual con respecto al nodo {{domxref("HTMLElement.offsetParent")}} .</p>
 
-<p>Para los elementos de bloque, <code>offsetTop</code>, <code>offsetLeft</code>, <code>offsetWidth</code>, y <code>offsetHeight</code> determina el borde de la caja del elemento relativo al <code>offsetParent.</code></p>
+<p>Para los elementos de bloque, <code>offsetTop</code>, <code>offsetLeft</code>, <code>offsetWidth</code>, y <code>offsetHeight</code> determina el borde de la caja del elemento relativo al <code>offsetParent.</code></p>
 
-<p>Sin embargo, para los elementos inline (por ejemplo <strong>span</strong>), que puede ser cortado de un línea a otra, <code>offsetTop,</code> and <code>offsetLeft </code>describe la posición de la primer borde de la caja (usar {{domxref("Element.getClientRects()")}} para obtener el ancho y el alto), mientras que <code>offsetWidth </code>y <code>offsetHeight </code>describen las dimensiones de los límites (usar {{domxref("Element.getBoundingClientRect()")}} para obtener su posición). Por lo tanto, una caja con left, top, width y height del <code>offsetLeft</code>, <code>offsetTop</code>, <code>offsetWidth</code>, <code>offsetHeight</code>, no definirá los límites para un span con texto que continúa en otra línea.</p>
+<p>Sin embargo, para los elementos inline (por ejemplo <strong>span</strong>), que puede ser cortado de un línea a otra, <code>offsetTop,</code> and <code>offsetLeft </code>describe la posición de la primer borde de la caja (usar {{domxref("Element.getClientRects()")}} para obtener el ancho y el alto), mientras que <code>offsetWidth </code>y <code>offsetHeight </code>describen las dimensiones de los límites (usar {{domxref("Element.getBoundingClientRect()")}} para obtener su posición). Por lo tanto, una caja con left, top, width y height del <code>offsetLeft</code>, <code>offsetTop</code>, <code>offsetWidth</code>, <code>offsetHeight</code>, no definirá los límites para un span con texto que continúa en otra línea.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
 <pre class="eval"><em>left</em> = <em>element</em>.offsetLeft;
 </pre>
 
-<p><code>left</code> es un entero que representa la posición de la izquierda del elemento actual con respecto al padre.</p>
+<p><code>left</code> es un entero que representa la posición de la izquierda del elemento actual con respecto al padre.</p>
 
 <h2 id="Example" name="Example">Ejemplo</h2>
 
@@ -65,7 +65,7 @@ if (tOLeft &gt; 5) {
   <tr>
    <td>{{SpecName('CSSOM View', '#dom-htmlelement-offsetleft', 'offsetLeft')}}</td>
    <td>{{Spec2('CSSOM View')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

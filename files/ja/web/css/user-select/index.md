@@ -1,17 +1,8 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-tags:
-  - CSS
-  - CSS プロパティ
-  - プロパティ
-  - Reference
-  - Selection
-  - recipe:css-property
-  - user-select
-browser-compat: css.properties.user-select
-translation_of: Web/CSS/user-select
 ---
+
 {{CSSRef}}
 
 **`user-select`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ユーザーがテキストを範囲選択できるかどうかを制御します。これは、テキストボックスを除いて、{{Glossary("Chrome", "クローム")}}として読み込まれたコンテンツには影響を与えません。
@@ -105,10 +96,10 @@ user-select: unset;
 }
 
 .all {
-  -moz-user-select: all;
-  -webkit-user-select: all;
-  -ms-user-select: all;
-  user-select: all;
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
 }
 ```
 

@@ -11,6 +11,7 @@ tags:
   - delete
 translation_of: Web/API/FormData/delete
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode **`delete()`** de l'interface {{domxref("FormData")}} supprime une clé et sa (ses) valeur(s) d'un objet `FormData`.
@@ -48,13 +49,11 @@ formData.delete('username');
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-delete','delete()')}} | {{Spec2('XMLHttpRequest')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

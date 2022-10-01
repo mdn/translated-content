@@ -1,18 +1,9 @@
 ---
 title: url()
 slug: Web/CSS/url
-tags:
-  - CSS
-  - CSS 関数
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - url()
-translation_of: Web/CSS/url()
 original_slug: Web/CSS/url()
-browser-compat: css.types.url
 ---
+
 {{CSSRef}}
 
 **`url()`** は [CSS](/ja/docs/Web/CSS) 関数で、ファイルを含めるために使用します。引数は絶対 URL、相対 URL、 データ URI の何れかです **`url()`** 関数は {{cssxref('attr()')}} 関数のように、他の CSS 関数に引数として渡すことができます。値を使用するプロパティに応じて、求められるリソースは画像、フォント、スタイルシートの何れかになります。`url()` 関数表記は `<url>` データ型の値になります。
@@ -171,7 +162,7 @@ URL がフィルターへのパスとして使用される場合、 URL は以�
 
     ```css
     .blur {
-      filter: url(my-file.svg#svg-blur); /* フィルターとして使用する SVG ファイルの URL */
+      filter: url(my-file.svg#svg-blur); /* フィルターとして使用する SVG ファイルの URL */
     }
 
     .inline-blur {

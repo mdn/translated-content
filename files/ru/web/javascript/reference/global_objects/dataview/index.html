@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
 <div>{{JSRef}}</div>
 
-<p>Вид <strong><code>DataView</code></strong> предоставляет низко-уровневый интерфейс для чтения и записи многочисленных числовых типов в бинарном {{jsxref("ArrayBuffer")}}, независимо от порядка байтов платформы.</p>
+<p>Вид <strong><code>DataView</code></strong> предоставляет низко-уровневый интерфейс для чтения и записи многочисленных числовых типов в бинарном {{jsxref("ArrayBuffer")}}, независимо от порядка байтов платформы.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}</div>
 
@@ -19,29 +19,29 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 
 <dl>
  <dt><code>buffer</code></dt>
- <dd>Существующий {{jsxref("ArrayBuffer")}} или {{jsxref("SharedArrayBuffer")}} {{experimental_inline}} для использования как хранилище для нового объекта <code>DataView</code>.</dd>
+ <dd>Существующий {{jsxref("ArrayBuffer")}} или {{jsxref("SharedArrayBuffer")}} {{experimental_inline}} для использования как хранилище для нового объекта <code>DataView</code>.</dd>
  <dt><code>byteOffset</code> {{optional_inline}}</dt>
  <dd>Смещение в байтах к первому байту в заданном буфере. Если не определён, то вид буфера будет начинаться с первого байта.</dd>
  <dt><code>byteLength</code> {{optional_inline}}</dt>
- <dd>Количество элементов в массиве байтов. Если не определён, то длина вида будет соответствовать длине буфера.</dd>
+ <dd>Количество элементов в массиве байтов. Если не определён, то длина вида будет соответствовать длине буфера.</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Новый объект <code>DataView</code> представляющий определённый буфер данных.</p>
+<p>Новый объект <code>DataView</code> представляющий определённый буфер данных.</p>
 
 <h3 id="Исключения">Исключения</h3>
 
 <dl>
  <dt><code>{{jsxref("RangeError")}}</code></dt>
- <dd>Выкидывается если <code>byteOffset</code>  и <code>byteLength</code> заходит за пределы буфера.</dd>
+ <dd>Выкидывается если <code>byteOffset</code>  и <code>byteLength</code> заходит за пределы буфера.</dd>
 </dl>
 
 <h2 id="Описание">Описание</h2>
 
 <h3 id="Порядок_байтов">Порядок байтов</h3>
 
-<p>Многобайтовые числовые форматы представлены в памяти по разному в зависимости от архитектуры машины, см {{Glossary("Endianness")}} для объяснения. Аксессоры DataView предоставляют явный контроль над обращением к данным вне зависимости от порядка байтов архитектуры платформы.</p>
+<p>Многобайтовые числовые форматы представлены в памяти по разному в зависимости от архитектуры машины, см {{Glossary("Endianness")}} для объяснения. Аксессоры DataView предоставляют явный контроль над обращением к данным вне зависимости от порядка байтов архитектуры платформы.</p>
 
 <pre class="brush: js">var littleEndian = (function() {
   var buffer = new ArrayBuffer(2);

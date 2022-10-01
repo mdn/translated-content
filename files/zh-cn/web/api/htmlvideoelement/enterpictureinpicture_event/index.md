@@ -1,17 +1,8 @@
 ---
 title: 'HTMLVideoElement: enterpictureinpicture event'
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
-tags:
-  - API
-  - Event
-  - Interface
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Video
-  - pip
-browser-compat: api.HTMLVideoElement.enterpictureinpicture_event
 ---
+
 {{APIRef("HTMLVideoElement")}}
 
 **`enterpictureinpicture`** 事件会在 {{DOMxRef("HTMLVideoElement")}} 成功进入画中画模式时触发。

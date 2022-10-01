@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/12
 original_slug: Mozilla/Firefox/Versions/12
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume les principaux changements dans Firefox 12 qui sont utiles aux développeurs.
@@ -86,7 +87,7 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 ### XUL
 
-- La définition des valeurs pour l'attribut {{XULAttr("chromemargin")}} a été légèrement modifié, pour que ce soit plus facile de faire du code XUL multi-plateforme qui rend bien sur les plateformes avec des largeurs par défaut des bordures de fenêtres différentes.
+- La définition des valeurs pour l'attribut `chromemargin` a été légèrement modifié, pour que ce soit plus facile de faire du code XUL multi-plateforme qui rend bien sur les plateformes avec des largeurs par défaut des bordures de fenêtres différentes.
 
 ### XPCOM
 
@@ -122,6 +123,6 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 - Le composant d'édition (appelé [Midas](/fr/docs/Midas)) [n'accepte désormais que les évènements](/fr/docs/Using_the_Editor_from_XUL#Editor_event_handling) provenant du code privilégié.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('11')}}

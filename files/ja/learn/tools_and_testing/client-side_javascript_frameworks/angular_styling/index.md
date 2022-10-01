@@ -1,14 +1,6 @@
 ---
 title: Angular アプリのスタイリング
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - Angular
-  - Styling
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -44,7 +36,7 @@ Angular CLI は、次の 2 種類のスタイルファイルを生成します�
 
 - Component styles: Angular CLI は、各コンポーネントにスタイル用の独自のファイルを提供します。
   このファイルのスタイルは、そのコンポーネントにのみ適用されます。
-- `styles.css`: `src` ディレクトリでは、コンポーネントレベルでスタイルを指定しない限り、このファイルのスタイルはアプリケーション全体に適用されます。
+- `styles.css`: `src` ディレクトリーでは、コンポーネントレベルでスタイルを指定しない限り、このファイルのスタイルはアプリケーション全体に適用されます。
 
 CSS プリプロセッサを使用しているかどうかによって、CSS ファイルの拡張子は異なる場合があります。
 Angular は、プレーン CSS、SCSS、Sass、Less、および Stylus をサポートします。
@@ -174,7 +166,7 @@ ul li {
 }
 ```
 
-最後のステップは、ブラウザに再度アクセスして、スタイルがどのように更新されたかを確認することです。 スタイルが更新された事を確認出来ます。
+最後のステップは、ブラウザーに再度アクセスして、スタイルがどのように更新されたかを確認することです。 スタイルが更新された事を確認出来ます。
 
 ## まとめ
 
@@ -234,5 +226,5 @@ Angular でのスタイリングの簡単なツアーが終了したので、ア
   - [Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
   - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - [Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

@@ -1,16 +1,8 @@
 ---
 title: inset-inline-end
 slug: Web/CSS/inset-inline-end
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - NeedsContent
-  - リファレンス
-  - 'recipe:css-property'
-translation_of: Web/CSS/inset-inline-end
 ---
+
 {{CSSRef}}
 
 **`inset-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における行末からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的なオフセットに対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。

@@ -1,16 +1,8 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - Content Security Policy
-  - HTTP
-  - Reference
-  - セキュリティ
-  - header
-browser-compat: http.headers.csp.Content-Security-Policy
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。これはクロスサイトスクリプティング攻撃 ({{Glossary("Cross-site_scripting", "クロスサイトスクリプティング")}}) を防ぐのに役立ちます。
@@ -36,7 +28,7 @@ HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェ�
 Content-Security-Policy: <policy-directive>; <policy-directive>
 ```
 
-ここで、 `<policy-directive>` は `<directive> <value>` の形であり、内部に区切り文字はありません。
+ここで、 `<policy-directive>` は `<directive> <value>` の形であり、内部に区切り文字はありません。
 
 ## ディレクティブ
 

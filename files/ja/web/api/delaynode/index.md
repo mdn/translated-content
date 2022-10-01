@@ -1,17 +1,8 @@
 ---
 title: DelayNode
 slug: Web/API/DelayNode
-page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - DelayNode
-  - Interface
-  - Reference
-  - Web Audio API
-browser-compat: api.DelayNode
-translation_of: Web/API/DelayNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`DelayNode`** は[信号遅延](http://en.wikipedia.org/wiki/Digital_delay_line)を表します。 {{domxref("AudioNode")}} の一種で、入力されたデータを指定された時間遅延して、出力します。

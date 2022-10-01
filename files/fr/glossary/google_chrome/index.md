@@ -12,13 +12,14 @@ tags:
 translation_of: Glossary/Google_Chrome
 original_slug: Glossaire/Google_Chrome
 ---
+
 Google Chrome est un {{glossary("navigateur")}} Web gratuit développé par Google. Il est basé sur le projet open source [Chromium](http://www.chromium.org/). Certaines différences clés sont décrites sur le [wiki de Chromium](https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome). En ce qui concerne le moteur rendu, les deux navigateurs utilisent un fork de {{glossary("WebKit")}} appelé {{glossary("Blink")}}. Remarquez que la version iOS de Chrome utilise le moteur de rendu de cette plate-forme et non Blink.
 
 ## Pour en savoir plus
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Google Chrome", "Google Chrome")}} sur Wikipédia
+- [Google Chrome](https://fr.wikipedia.org/wiki/Google_Chrome) sur Wikipédia
 
 ### Pour les utilisateurs de Chrome
 

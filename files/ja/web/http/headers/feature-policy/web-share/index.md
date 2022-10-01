@@ -1,14 +1,8 @@
 ---
 title: 'Feature-Policy: web-share'
 slug: Web/HTTP/Headers/Feature-Policy/web-share
-tags:
-  - Feature-Policy
-  - HTTP
-  - Web Share
-  - 実験的
-browser-compat: http.headers.Feature-Policy.web-share
-translation_of: Web/HTTP/Headers/Feature-Policy/web-share
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader('Feature-Policy')}} ヘッダーにおける `web-share` ディレクティブは、減殺の文書が Web Share API の {{domxref("Navigator.share","Navigator.share()")}} メソッドを使用して、テキスト、リンク、画像、その他のコンテンツをユーザーが選択した任意の宛先にシェアすることを許可するかどうかを制御します。

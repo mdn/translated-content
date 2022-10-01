@@ -1,16 +1,8 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 背景と境界
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-image-slice
-translation_of: Web/CSS/border-image-slice
 ---
+
 {{CSSRef}}
 
 **`border-image-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("border-image-source")}} で指定された画像を複数の領域に分割します。これらの領域は[境界画像](/ja/docs/Web/CSS/border-image)の部品を構成します。

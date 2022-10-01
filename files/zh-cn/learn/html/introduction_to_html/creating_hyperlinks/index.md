@@ -1,12 +1,8 @@
 ---
 title: 创建超链接
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - HTML 指南
-  - URL
-  - 超链接
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
@@ -108,7 +104,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
    href="contacts.html">联系人页面</a>。</p>
   ```
 
-- **指向子目录**：如果 `index.html` （目录顶层 `index.html`）想要包含一个超链接指向 `projects/index.html`，你需要先进入 `projects` 项目目录，然后指明要链接到的文件 `index.html`。 通过指定目录的名称，然后是正斜杠，然后是文件的名称。因此你要使用的 URL 是 `projects/index.html`：
+- **指向子目录**：如果 `index.html` （目录顶层 `index.html`）想要包含一个超链接指向 `projects/index.html`，你需要先进入 `projects` 项目目录，然后指明要链接到的文件 `index.html`。通过指定目录的名称，然后是正斜杠，然后是文件的名称。因此你要使用的 URL 是 `projects/index.html`：
 
   ```html
   <p>请访问<a href="projects/index.html">项目页面</a>。</p>
@@ -225,7 +221,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 ```html
 <a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN"
    download="firefox-latest-64bit-installer.exe">
-  下载最新的 Firefox 中文版 - Windows（64位）
+  下载最新的 Firefox 中文版 - Windows（64 位）
 </a>
 ```
 
@@ -269,7 +265,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 ### 指定详细信息
 
-除了电子邮件地址，你还可以提供其他信息。事实上，任何标准的邮件头字段可以被添加到你提供的 `mailto` URL 中。其中最常用的是主题（subject）、抄送（cc）和主体（body）（这不是一个真正的标头字段，但允许你为新邮件指定一个简短的内容消息）。 每个字段及其值被指定为查询项。
+除了电子邮件地址，你还可以提供其他信息。事实上，任何标准的邮件头字段可以被添加到你提供的 `mailto` URL 中。其中最常用的是主题（subject）、抄送（cc）和主体（body）（这不是一个真正的标头字段，但允许你为新邮件指定一个简短的内容消息）。每个字段及其值被指定为查询项。
 
 下面是一个包含 cc、bcc、主题和主体的示例：
 
@@ -279,7 +275,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 </a>
 ```
 
-> **备注：** 每个字段的值必须是使用 URL 编码的，即使用[百分号转义的](https://zh.wikipedia.org/wiki/百分号编码)非打印字符（不可见字符比如制表符、换行符、分页符）和空格。同时注意使用问号（`?`）来分隔主 URL 与参数值，以及使用 & 符来分隔 `mailto:` URL 中的各个参数。 这是标准的 URL 查询标记方法。阅读 [GET 方法](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data#get_方法)以了解哪种 URL 查询标记方法是更常用的。
+> **备注：** 每个字段的值必须是使用 URL 编码的，即使用[百分号转义的](https://zh.wikipedia.org/wiki/百分号编码)非打印字符（不可见字符比如制表符、换行符、分页符）和空格。同时注意使用问号（`?`）来分隔主 URL 与参数值，以及使用 & 符来分隔 `mailto:` URL 中的各个参数。这是标准的 URL 查询标记方法。阅读 [GET 方法](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data#get_方法)以了解哪种 URL 查询标记方法是更常用的。
 
 这里有一些其他的示例 `mailto` 链接：
 

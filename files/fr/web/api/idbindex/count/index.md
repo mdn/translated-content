@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/count
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`count()`**, rattachée à l'interface {{domxref("IDBIndex")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, renvoie le nombre d'enregistrements contenu dans un intervalle de clé.
@@ -104,14 +105,11 @@ function displayDataByIndex() {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-count-IDBRequest-any-key', 'count()')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbindex-count", "count()")}}                         | {{Spec2("IndexedDB 2")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.count")}}
+{{Compat}}
 
 ## Voir aussi
 

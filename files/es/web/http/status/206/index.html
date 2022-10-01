@@ -5,11 +5,11 @@ translation_of: Web/HTTP/Status/206
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>El  codigo de respuesta con estado exitoso HTTP <strong><code>206 Partial Content</code></strong> indica que la solicitud se ha realizado con exito y el cuerpo contiene los rangos solicitados de la data, como esta descrito en la cabecera  {{HTTPHeader("Range")}} de la solicitud.</p>
+<p>El  codigo de respuesta con estado exitoso HTTP <strong><code>206 Partial Content</code></strong> indica que la solicitud se ha realizado con exito y el cuerpo contiene los rangos solicitados de la data, como esta descrito en la cabecera  {{HTTPHeader("Range")}} de la solicitud.</p>
 
-<p>Si solo hay un rango, el {{HTTPHeader("Content-Type")}} de toda la respuesta es asignada a un tipo de documento, y un {{HTTPHeader("Content-Range")}} es provisto.</p>
+<p>Si solo hay un rango, el {{HTTPHeader("Content-Type")}} de toda la respuesta es asignada a un tipo de documento, y un {{HTTPHeader("Content-Range")}} es provisto.</p>
 
-<p>Si muchos rangos son retornados, el {{HTTPHeader("Content-Type")}}  es asignado a <code>multipart/byteranges</code> y cada fragmento cubre un rango, con {{HTTPHeader("Content-Range")}} y  {{HTTPHeader("Content-Type")}} describiendolo .</p>
+<p>Si muchos rangos son retornados, el {{HTTPHeader("Content-Type")}}  es asignado a <code>multipart/byteranges</code> y cada fragmento cubre un rango, con {{HTTPHeader("Content-Range")}} y  {{HTTPHeader("Content-Type")}} describiendolo .</p>
 
 <h2 id="Status">Status</h2>
 

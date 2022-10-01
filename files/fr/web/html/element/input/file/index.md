@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/input/file
 ---
+
 {{HTMLRef}}
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs/Web/Guide/HTML/Formulaires) ou grâce à du code JavaScript [via l'API _File_](/fr/docs/Using_files_from_web_applications).
@@ -296,7 +297,7 @@ input.addEventListener('change', updateImageDisplay);
 
 À chaque fois que la fonction `updateImageDisplay()` est appelée :
 
-- On lance une boucle [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) afin de vider le contenu qui pourrait être dans l'élément `<div>` servant à la prévisualisation.
+- On lance une boucle [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while) afin de vider le contenu qui pourrait être dans l'élément `<div>` servant à la prévisualisation.
 - On récupère l'objet {{domxref("FileList")}} qui contient les informations sur les fichiers sélectionnés et on le stocke dans une variable intitulée `curFiles`.
 - On vérifie si aucun fichier n'a été sélectionné (ce qui se traduit par vérifier si `curFiles.length` vaut 0). Si c'est le cas, on place un message dans le `<div>` de prévisualisation pour indiquer qu'aucun fichier n'a été sélectionné.
 - Si des fichiers ont été sélectionnés, on les parcourt afin d'afficher des informations sur ces fichiers dans l'élément `<div>`. Quelques notes :
@@ -439,14 +440,11 @@ Et voici le résultat :
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#file-upload-state-(type=file)', '&lt;input type="file"&gt;')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
-| {{SpecName('HTML5.1', 'sec-forms.html#file-upload-state-typefile', '&lt;input type="file"&gt;')}}     | {{Spec2('HTML5.1')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-file")}}
+{{Compat}}
 
 ## Voir aussi
 

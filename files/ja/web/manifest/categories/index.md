@@ -1,13 +1,8 @@
 ---
 title: categories
 slug: Web/Manifest/categories
-tags:
-  - マニフェスト
-  - ウェブ
-  - categories
-browser-compat: html.manifest.categories
-translation_of: Web/Manifest/categories
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

@@ -1,15 +1,8 @@
 ---
 title: Microsoft CSS 拡張
 slug: Web/CSS/Microsoft_Extensions
-tags:
-  - CSS
-  - CSS:Microsoft 拡張
-  - ガイド
-  - 標準外
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/Microsoft_Extensions
 ---
+
 {{CSSRef}}
 
 Edge や Internet Explorer のような Microsoft のアプリケーションは、いくつもの特殊な **Microsoft [CSS](/ja/docs/Web/CSS) 拡張**に対応しています。これらの拡張には接頭辞に `-ms-` が付きます。
@@ -28,7 +21,7 @@ Edge や Internet Explorer のような Microsoft のアプリケーションは
 - {{CSSxRef("-ms-content-zoom-snap")}}
 - {{CSSxRef("-ms-content-zoom-snap-points")}}
 - {{CSSxRef("-ms-content-zoom-snap-type")}}
-- {{CSSxRef("-ms-filter")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-filter")}} {{deprecated_inline}}
 - {{CSSxRef("-ms-flow-from")}}
 - {{CSSxRef("-ms-flow-into")}}
 - {{CSSxRef("-ms-high-contrast-adjust")}}
@@ -37,14 +30,14 @@ Edge や Internet Explorer のような Microsoft のアプリケーションは
 - {{CSSxRef("-ms-hyphenate-limit-zone")}}
 - {{CSSxRef("-ms-ime-align")}}
 - {{CSSxRef("-ms-overflow-style")}}
-- {{CSSxRef("-ms-scrollbar-3dlight-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-arrow-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-base-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-darkshadow-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-face-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-highlight-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-shadow-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-track-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-3dlight-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-arrow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-base-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-darkshadow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-face-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-highlight-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-shadow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-track-color")}} {{deprecated_inline}}
 - {{CSSxRef("-ms-scroll-chaining")}}
 - {{CSSxRef("-ms-scroll-limit")}}
 - {{CSSxRef("-ms-scroll-limit-x-max")}}

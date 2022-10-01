@@ -1,12 +1,8 @@
 ---
 title: Node.isEqualNode()
 slug: Web/API/Node/isEqualNode
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.isEqualNode
-translation_of: Web/API/Node/isEqualNode
 ---
+
 {{APIRef("DOM")}}
 
 **`isEqualNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、 2 つのノードが等しいかどうかを検査します。

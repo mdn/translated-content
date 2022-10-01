@@ -1,12 +1,8 @@
 ---
 title: グリッドテンプレート領域
 slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 ---
+
 {{CSSRef}}
 
 [前回のガイド](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)では、グリッド線と、その線に対してアイテムを位置指定する方法をご紹介しました。CSS グリッドレイアウトでは、常に線が存在しており、グリッド上にアイテムを位置指定することを簡単にしています。しかし、グリッド上のアイテムを位置指定する別の方法があります。この方法は、単独で使用することも、線を使った位置指定と組み合わせて使用することもできます。この方法では、名前の付いたテンプレート領域を使ってアイテムを位置指定しますが、その方法を具体的に説明します。この方法を「アスキーアート方式のグリッドレイアウト」と呼んでいるのも、すぐにお分かりいただけるでしょう。
@@ -88,9 +84,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 ```html
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -152,9 +148,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 ```html
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -218,9 +214,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 ```html hidden
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -306,9 +302,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 ```html hidden
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -360,8 +356,8 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 <div class="media">
     <div class="image"></div>
     <div class="text">これはメディアオブジェクトの例です。
-      grid-template-areas を使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
-    </div>
+      grid-template-areas を使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
+    </div>
 </div>
 ```
 
@@ -406,10 +402,10 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```html
 <div class="media flipped">
-    <div class="image"></div>
-    <div class="text">これはメディアオブジェクトの例です。
-      grid-template-areasを使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
-    </div>
+    <div class="image"></div>
+    <div class="text">これはメディアオブジェクトの例です。
+      grid-template-areasを使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
+    </div>
 </div>
 ```
 

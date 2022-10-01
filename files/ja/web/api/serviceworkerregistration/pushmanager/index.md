@@ -1,16 +1,8 @@
 ---
 title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
-tags:
-  - API
-  - プロパティ
-  - プッシュ
-  - PushManager
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-translation_of: Web/API/ServiceWorkerRegistration/pushManager
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`pushManager`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、プッシュ購読を管理するための {{domxref("PushManager")}} インターフェイスへの参照を返します。 これには、購読申し込み、アクティブな購読の取得、プッシュ通知の許可状況へのアクセスの対応が含まれます。

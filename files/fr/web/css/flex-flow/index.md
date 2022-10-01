@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-flow
 ---
+
 {{ CSSRef}}
 
 La propriété CSS **`flex-flow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) pour les propriétés {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}}.
@@ -44,9 +45,13 @@ flex-flow: unset;
 
 Voir {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}} pour plus d'informations sur les valeurs que peuvent prendre ces deux propriétés.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -65,15 +70,11 @@ element {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox','#flex-flow-property','flex-flow')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex-flow")}}
+{{Compat}}
 
 ## Voir aussi
 

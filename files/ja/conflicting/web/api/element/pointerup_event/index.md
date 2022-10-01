@@ -1,19 +1,12 @@
 ---
-title: 'HTMLElement: pointerup イベント'
+title: 'Document: pointerup event'
 slug: conflicting/Web/API/Element/pointerup_event
-tags:
-  - イベント
-  - HTML DOM
-  - HTMLElement
-  - PointerEvent
-  - リファレンス
-translation_of: Web/API/HTMLElement/pointerup_event
-original_slug: Web/API/HTMLElement/pointerup_event
-browser-compat: api.HTMLElement.pointerup_event
+original_slug: Web/API/Document/pointerup_event
 ---
+
 {{APIRef}}
 
-`pointerup` イベントは、ポインターがアクティブでなくなったときに発生します。
+`pointerup` イベントは、ポインターがアクティブではなくなったときに発生します。
 
 <table class="properties">
   <tbody>
@@ -22,8 +15,8 @@ browser-compat: api.HTMLElement.pointerup_event
       <td>あり</td>
     </tr>
     <tr>
-      <th scope="row">キャンセル</th>
-      <td>可</td>
+      <th scope="row">キャンセル可能</th>
+      <td>はい</td>
     </tr>
     <tr>
       <th scope="row">インターフェイス</th>
@@ -32,11 +25,7 @@ browser-compat: api.HTMLElement.pointerup_event
     <tr>
       <th scope="row">イベントハンドラープロパティ</th>
       <td>
-        <code
-          ><a href="/ja/docs/Web/API/GlobalEventHandlers/onpointerup"
-            >onpointerup</a
-          ></code
-        >
+        {{domxref("GlobalEventHandlers/onpointerup", "onpointerup")}}
       </td>
     </tr>
   </tbody>
@@ -44,29 +33,27 @@ browser-compat: api.HTMLElement.pointerup_event
 
 ## 例
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用した場合
 
 ```js
-const para = document.querySelector('p');
-
-para.addEventListener('pointerup', (event) => {
-  console.log('ポインターアップ');
+document.addEventListener('pointerup', (event) => {
+  console.log('Pointer up');
 });
 ```
 
-`onpointerup` イベントハンドラープロパティを使用する場合
+`onpointerup` イベントハンドラープロパティを使用した場合
 
 ```js
-const para = document.querySelector('p');
-
-para.onpointerup = (event) => {
-  console.log('ポインターアップ');
+document.onpointerup = (event) => {
+  console.log('Pointer up');
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+| 仕様書                                                                   | 状態                                 |
+| ------------------------------------------------------------------------ | ------------------------------------ |
+| {{SpecName('Pointer Events', '#the-pointerup-event')}} | {{Spec2('Pointer Events')}} |
 
 ## ブラウザーの互換性
 
@@ -74,14 +61,14 @@ para.onpointerup = (event) => {
 
 ## 関連情報
 
-- [`gotpointercapture`](/ja/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/ja/docs/Web/API/HTMLElement/lostpointercapture_event)
-- [`pointerover`](/ja/docs/Web/API/HTMLElement/pointerover_event)
-- [`pointerenter`](/ja/docs/Web/API/HTMLElement/pointerenter_event)
-- [`pointerdown`](/ja/docs/Web/API/HTMLElement/pointerdown_event)
-- [`pointermove`](/ja/docs/Web/API/HTMLElement/pointermove_event)
-- [`pointercancel`](/ja/docs/Web/API/HTMLElement/pointercancel_event)
-- [`pointerout`](/ja/docs/Web/API/HTMLElement/pointerout_event)
-- [`pointerleave`](/ja/docs/Web/API/HTMLElement/pointerleave_event)
-- [`onpointerup`](/ja/docs/Web/API/GlobalEventHandlers/onpointerup) イベントハンドラープロパティ
-- `Document` をターゲットとしたのこのイベント: [`pointerup`](/ja/docs/Web/API/Document/pointerup_event) イベント
+- {{domxref("Document/gotpointercapture_event", "gotpointercapture")}}
+- {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
+- {{domxref("Document/pointerover_event", "pointerover")}}
+- {{domxref("Document/pointerenter_event", "pointerenter")}}
+- {{domxref("Document/pointerdown_event", "pointerdown")}}
+- {{domxref("Document/pointermove_event", "pointermove")}}
+- {{domxref("Document/pointercancel_event", "pointercancel")}}
+- {{domxref("Document/pointerout_event", "pointerout")}}
+- {{domxref("Document/pointerleave_event", "pointerleave")}}
+- {{domxref("GlobalEventHandlers/onpointerup", "onpointerup")}} イベントハンドラープロパティ
+- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/pointerup_event", "pointerup")}} イベント

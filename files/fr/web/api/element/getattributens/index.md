@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Element/getAttributeNS
 ---
+
 {{APIRef("DOM")}}
 
 **`getAttributeNS()`** est une méthode de l'interface {{domxref("Element")}} qui renvoie la valeur chaîne de l'attribut avec l'espace de noms et le nom donnés. Si l'attribut nommé n'existe pas, cette valeur sera soit `null`, soit `""` (une chaîne vide)&nbsp;; voir la section [Notes](#notes) pour plus de détails.
@@ -86,15 +87,11 @@ Avant la spécification DOM4, cette méthode était spécifiée pour renvoyer un
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaire                                                                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("DOM WHATWG", "#dom-element-getattributens", "Element.getAttributeNS()")}} | {{Spec2("DOM WHATWG")}} |                                                                                                                                                                                                             |
-| {{SpecName("DOM3 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}                 | {{Spec2("DOM3 Core")}}     | Specifie qu'une exception `NOT_SUPPORTED_ERR`  est levée si l'agent utilisateur ne supporte pas la fonctionnalité `"XML"`. Spécifie également que `null` doit être passé pour n'avoir aucun espace de noms. |
-| {{SpecName("DOM2 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}                 | {{Spec2("DOM2 Core")}}     | Définition initiale                                                                                                                                                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getAttributeNS")}}
+{{Compat}}
 
 ## Voir aussi
 

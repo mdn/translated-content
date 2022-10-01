@@ -1,17 +1,8 @@
 ---
 title: KeyboardEvent.ctrlKey
 slug: Web/API/KeyboardEvent/ctrlKey
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.KeyboardEvent.ctrlKey
-translation_of: Web/API/KeyboardEvent/ctrlKey
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.ctrlKey`** は読み取り専用のプロパティで、このイベントが発生したときに <kbd>control</kbd> キーが押されていた (`true`) または押されていなかった (`false`) ことを表す論理値を返します。

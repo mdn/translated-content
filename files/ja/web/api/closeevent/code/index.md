@@ -1,14 +1,8 @@
 ---
 title: CloseEvent.code
 slug: Web/API/CloseEvent/code
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - closeEvent
-browser-compat: api.CloseEvent.code
-translation_of: Web/API/CloseEvent/code
 ---
+
 {{APIRef("Websockets API")}}
 
 **`code`** は {{domxref("CloseEvent")}} インターフェイスの読み取り専用プロパティで、サーバーが接続を閉じた理由を示す [WebSocket 接続クローズコード](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)を返します。

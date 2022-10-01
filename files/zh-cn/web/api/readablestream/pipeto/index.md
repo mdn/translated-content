@@ -1,15 +1,8 @@
 ---
 title: ReadableStream.pipeTo()
 slug: Web/API/ReadableStream/pipeTo
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - pipeTo
-translation_of: Web/API/ReadableStream/pipeTo
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} 接口的 **`pipeTo()`** 方法通过管道将当前的 `ReadableStream` 中的数据传递给给定的 {{domxref("WritableStream")}} 并且返回一个 {{jsxref("Promise")}}，promise 在传输成功完成时兑现，在遇到任何错误时则会被拒绝。

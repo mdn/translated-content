@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
+
 {{APIRef}}
 
 La propriété globale en lecture seule **`indexedDB`** fournit un mécanisme qui permet aux applications d'accéder aux bases de données indexées de façon asynchrone.
@@ -38,14 +39,11 @@ function openDB() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
-| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}} | {{Spec2('IndexedDB 2')}} | Rattachement partiel à `WindowOrWorkerGlobalScope`. |
-| {{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}                 | {{Spec2('IndexedDB')}}     | Définition initiale.                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.indexedDB")}}
+{{Compat}}
 
 ## Voir aussi
 

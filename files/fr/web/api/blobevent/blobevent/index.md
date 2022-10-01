@@ -9,6 +9,7 @@ tags:
   - Evènement
 translation_of: Web/API/BlobEvent/BlobEvent
 ---
+
 {{APIRef("Media Capture and Streams")}}{{seeCompatTable}}
 
 Le constructeur **`BlobEvent()`** renvoie un nouvel objet {{domxref("BlobEvent")}} créé avec un {{domxref("Blob")}} associé.
@@ -30,13 +31,11 @@ _Le constructeur `BlobEvent()`_ _hérite des arguments de {{domxref("Event.Event
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('MediaStream Recording', '#blob-event', 'BlobEvent')}} | {{Spec2('MediaStream Recording')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BlobEvent.BlobEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,9 @@
 ---
 title: ':autofill'
 slug: Web/CSS/:autofill
-tags:
-  - CSS
-  - 標準外
-  - リファレンス
-  - 擬似クラス
-browser-compat: css.selectors.autofill
-translation_of: Web/CSS/:autofill
 original_slug: Web/CSS/:-webkit-autofill
 ---
+
 {{CSSRef}}
 
 **`:autofill`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}} 要素の値がブラウザーによって自動補完された時に一致します。このクラスはユーザーがフィールドを編集すると一致しなくなります。

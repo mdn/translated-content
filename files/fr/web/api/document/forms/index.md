@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/forms
 ---
+
 {{APIRef("DOM")}}
 
 La propriété `forms` de {{domxref("Document")}} retourne une collection ({{domxref("HTMLCollection")}}) des éléments {{HTMLElement("form")}} présents dans le document actuel.
@@ -90,10 +91,7 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('HTML WHATWG', '#dom-document-forms', 'Document.forms')}} | {{ Spec2('HTML WHATWG') }} |                      |
-| {{SpecName('DOM2 HTML', 'html.html#ID-1689064', 'Document.forms')}}     | {{ Spec2('DOM2 Events') }} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

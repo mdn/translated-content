@@ -1,18 +1,9 @@
 ---
 title: BaseAudioContext.destination
 slug: Web/API/BaseAudioContext/destination
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - プロパティ
-  - リファレンス
-  - ウェブ音声 API
-  - destination
-browser-compat: api.BaseAudioContext.destination
-translation_of: Web/API/BaseAudioContext/destination
 original_slug: Web/API/AudioContext/destination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `destination` は {{ domxref("BaseAudioContext") }} のプロパティで、このコンテキストのすべての音声の最終的な出力先を表す {{ domxref("AudioDestinationNode") }} を返します。これは、端末のスピーカーのような、オーディオレンダリング機器と考えることができます。

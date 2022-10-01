@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/API/CSS_Object_Model
 ---
+
 {{DefaultAPISidebar('CSSOM')}}
 
 Le **CSS Object Model** est un ensemble d’API permettant de manipuler le CSS depuis JavaScript. C’est l’équivalent des API DOM et HTML, mais pour CSS. Il permet de lire et modifier des styles CSS dynamiquement.
@@ -58,18 +59,7 @@ Quelques autres interfaces sont également étentues par les spécifications rel
 
 ## Spécifications
 
-| Spécification                                    | Statut                                       | Commentaire |
-| ------------------------------------------------ | -------------------------------------------- | ----------- |
-| {{SpecName("CSSOM")}}                     | {{Spec2("CSSOM")}}                     |             |
-| {{SpecName("CSSOM View")}}             | {{Spec2("CSSOM View")}}             |             |
-| {{SpecName("Screen Orientation")}}     | {{Spec2("Screen Orientation")}}     |             |
-| {{SpecName("CSS3 Fonts")}}             | {{Spec2("CSS3 Fonts")}}             |             |
-| {{SpecName("CSS3 Animations")}}         | {{Spec2("CSS3 Animations")}}         |             |
-| {{SpecName("CSS3 Transitions")}}     | {{Spec2("CSS3 Transitions")}}     |             |
-| {{SpecName("CSS3 Variables")}}         | {{Spec2("CSS3 Variables")}}         |             |
-| {{SpecName("CSS3 Conditional")}}     | {{Spec2("CSS3 Conditional")}}     |             |
-| {{SpecName("CSS3 Device")}}             | {{Spec2("CSS3 Device")}}             |             |
-| {{SpecName("CSS3 Counter Styles")}} | {{Spec2("CSS3 Counter Styles")}} |             |
+{{Specifications}}
 
 ## Notes sur la compatibilité des navigateurs
 

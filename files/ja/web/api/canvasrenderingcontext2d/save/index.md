@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.save()
 slug: Web/API/CanvasRenderingContext2D/save
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.save
-translation_of: Web/API/CanvasRenderingContext2D/save
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.save()`** はキャンバス 2D API のメソッドで、現在の状態をスタックにプッシュすることで、キャンバス全体の状態を保存します。

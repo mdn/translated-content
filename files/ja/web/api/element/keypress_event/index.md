@@ -1,17 +1,8 @@
 ---
 title: 'Element: keypress イベント'
 slug: Web/API/Element/keypress_event
-page-type: web-api-event
-tags:
-  - API
-  - Element
-  - Event
-  - Reference
-  - keypress
-  - Deprecated
-browser-compat: api.Element.keypress_event
-translation_of: Web/API/Element/keypress_event
 ---
+
 {{APIRef}} {{deprecated_header}}
 
 **`keypress`** イベントは、文字値を生成するキーが押下されたときに発行されます。

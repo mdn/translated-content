@@ -143,5 +143,5 @@ html,body,svg { height:100% }
 
 ## 같이 보기
 
-- [cy](/en-US/docs/Web/SVG/Attribute/cy)
-- [r](/en-US/docs/Web/SVG/Attribute/r)
+- [cy](/ko/docs/Web/SVG/Attribute/cy)
+- [r](/ko/docs/Web/SVG/Attribute/r)

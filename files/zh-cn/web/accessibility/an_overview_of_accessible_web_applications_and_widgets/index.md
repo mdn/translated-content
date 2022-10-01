@@ -1,13 +1,17 @@
 ---
 title: 可访问的 Web 应用程序和小部件概述
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 ---
-web 正在变化。静态的、基于页面的站点逐渐被动态站点所取代，桌面式的 web 应用由大量的 JavaScript 和 AJAX 组成。设计人员完全可以通过 JavaScript，HTML 和 CSS 的组合创建令人惊叹的新的小部件和控件。这种转变有可能显着提高网络的响应能力和可用性，但是由于可访问性差距，存在许多用户有无法享用这种好处的风险。用户无法访问传统上 JavaScript 对于诸如屏幕阅读器等辅助技术，但是现在有了创建动态 Web 用户界面的方法，可以被各种用户访问。
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("zh-CN/docs/Web/Accessibility", 1)}}
+</section>
+
+web 正在变化。静态的、基于页面的站点逐渐被动态站点所取代，桌面式的 web 应用由大量的 JavaScript 和 AJAX 组成。设计人员完全可以通过 JavaScript，HTML 和 CSS 的组合创建令人惊叹的新的小部件和控件。这种转变有可能显着提高网络的响应能力和可用性，但是由于无障碍差距，存在许多用户有无法享用这种好处的风险。用户无法访问传统上 JavaScript 对于诸如屏幕阅读器等辅助技术，但是现在有了创建动态 Web 用户界面的方法，可以被各种用户访问。
 
 ## 问题
 
-大多数 JavaScript 工具包提供了模拟类似桌面界面行为的客户端小部件库。 滑块，菜单栏，文件列表视图等可以通过 JavaScript，CSS 和 HTML 的组合构建。 由于 HTML 4 规范不提供语义上描述这些窗口小部件的内置标签，因此开发人员通常会使用通用元素（如\<div>和\<span>）。 虽然这导致了一个看起来像桌面对应的小部件，但标记中通常没有足够的辅助技术可用的语义信息。 网页上的动态内容对于无论何种原因无法查看屏幕的用户来说都是特别有问题的。 股票行情，实时 twitter 消息更新，进度指示器和类似内容以辅助技术（AT）可能不知道的方式修改 DOM。 那就是[ARIA](/en/ARIA)存在的意义。
+大多数 JavaScript 工具包提供了模拟类似桌面界面行为的客户端小部件库。滑块，菜单栏，文件列表视图等可以通过 JavaScript，CSS 和 HTML 的组合构建。由于 HTML 4 规范不提供语义上描述这些窗口小部件的内置标签，因此开发人员通常会使用通用元素（如\<div>和\<span>）。虽然这导致了一个看起来像桌面对应的小部件，但标记中通常没有足够的辅助技术可用的语义信息。网页上的动态内容对于无论何种原因无法查看屏幕的用户来说都是特别有问题的。股票行情，实时 twitter 消息更新，进度指示器和类似内容以辅助技术（AT）可能不知道的方式修改 DOM。那就是[ARIA](/zh-CN/ARIA)存在的意义。
 
 _Example 1: Markup for a tabs widget built without ARIA labeling. There's no information in the markup to describe the widget's form and function._
 
@@ -37,7 +41,7 @@ _Example 2: How the tabs widget might be styled visually. Users might recognize 
 
 ## ARIA
 
-[WAI-ARIA](http://www.w3.org/WAI/intro/aria.php), 来自 W3C 的网络无障碍计划（[Web Accessibility Initiative](http://www.w3.org/WAI/)） 的可访问的富互联网应用程序（**Accessible Rich Internet Applications**）规范，提供了一种添加辅助技术（如屏幕阅读器）所需的缺少语义的方法。ARIA 使开发人员可以通过向标记添加特殊属性来更详细地描述其小部件。 旨在填补在动态 web 应用在发现的标准 HTML 标签与桌面式控件之的差距，ARIA 提供了角色和状态以描述大多数常见的 UI 小部件的行为。
+[WAI-ARIA](http://www.w3.org/WAI/intro/aria.php), 来自 W3C 的网络无障碍计划（[Web Accessibility Initiative](http://www.w3.org/WAI/)）的可访问的富互联网应用程序（**Accessible Rich Internet Applications**）规范，提供了一种添加辅助技术（如屏幕阅读器）所需的缺少语义的方法。ARIA 使开发人员可以通过向标记添加特殊属性来更详细地描述其小部件。旨在填补在动态 web 应用在发现的标准 HTML 标签与桌面式控件之的差距，ARIA 提供了角色和状态以描述大多数常见的 UI 小部件的行为。
 
 The ARIA specification is split up into three different types of attributes: roles, states, and properties. Roles describe widgets that aren't otherwise available in HTML 4, such as sliders, menu bars, tabs, and dialogs. Properties describe characteristics of these widgets, such as if they are draggable, have a required element, or have a popup associated with them. States describe the current interaction state of an element, informing the assistive technology if it is busy, disabled, selected, or hidden.
 
@@ -195,7 +199,7 @@ Do not do this. Instead, implement the "view" mode using a different element alt
 
 ### 异步内容变化
 
-> **备注：** See also [Live Regions](/en/ARIA/Live_Regions)
+> **备注：** See also [Live Regions](/zh-CN/ARIA/Live_Regions)
 
 ## 键盘导航
 
@@ -211,14 +215,14 @@ Here's a summary of how keyboard navigation should work in an ARIA-enabled web a
 - Within a form, the Spacebar key should select or activate the control, while the Enter key should submit the form's default action.
 - If in doubt, mimic the standard desktop behavior of the control you are creating.
 
-So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the \<ol> in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the \<li> elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/en/Accessibility/Keyboard-navigable_JavaScript_widgets) describes how to implement this behavior with JavaScript.
+So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the \<ol> in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the \<li> elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/zh-CN/Accessibility/Keyboard-navigable_JavaScript_widgets) describes how to implement this behavior with JavaScript.
 
 For more detail about desktop-style keyboard navigation conventions, a comprehensive [DHTML style guide](http://access.aol.com/dhtml-style-guide-working-group/) is available. It provides an overview of how keyboard navigation should work for each type of widget supported by ARIA. The W3C also offers a helpful [ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html) document that includes keyboard navigation and shortcut conventions for a variety of widgets.
 
 ## 参见
 
-- [ARIA](/en/ARIA)
-- [Web applications and ARIA FAQ](/en/Accessibility/Web_applications_and_ARIA_FAQ)
+- [ARIA](/zh-CN/ARIA)
+- [Web applications and ARIA FAQ](/zh-CN/Accessibility/Web_applications_and_ARIA_FAQ)
 - [WAI-ARIA Specification](http://www.w3.org/TR/wai-aria/)
 - [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
 - [DHTML Style Guide](http://access.aol.com/dhtml-style-guide-working-group/)

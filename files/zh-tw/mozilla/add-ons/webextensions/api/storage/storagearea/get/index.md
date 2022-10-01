@@ -1,8 +1,8 @@
 ---
 title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
+
 {{AddonSidebar()}}
 
 從儲存空間內檢查一個或多個單元（item）。
@@ -11,9 +11,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 
 ## 語法
 
-    let gettingItem = browser.storage.<storageType>.get(
-      keys    // null, string, object or array of strings
-    )
+```js
+let gettingItem = browser.storage.<storageType>.get(
+  keys    // null, string, object or array of strings
+)
+```
 
 `<storageType>` 會是以下可覆寫的儲存類型之一：{{WebExtAPIRef("storage.sync")}} 或 {{WebExtAPIRef("storage.local")}}。
 
@@ -30,7 +32,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.storage.StorageArea.get")}}
+{{Compat}}
 
 ## 示例
 

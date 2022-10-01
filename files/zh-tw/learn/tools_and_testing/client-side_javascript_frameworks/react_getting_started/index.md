@@ -2,21 +2,8 @@
 title: React 新手入門
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-tags:
-  - 初學者
-  - 框架
-  - 安裝
-  - 學習
-  - 用戶端
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - jsx
-  - props
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 在本文中，我們將向 React 打個招呼。我們將探索其背後與範例的一些細節，在自己電腦設置基本的 React 工具鏈環境，並建立一個簡單入門的應用程式——好瞭解 React 基本架構。
@@ -32,7 +19,7 @@ tags:
             >CSS</a
           >、以及<a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a
           >程式語言，具備<a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >終端機/命令列環境</a
           >的基本知識。
         </p>
@@ -76,9 +63,9 @@ React 在許多設計模式中利用了現代 JavaScript 特性。它與 JavaScr
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-這個`heading`變數又稱為**JSX expression（JSX 表達式）**。React 可以在我們的應用程式中使用它，以渲染顯示[`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements)標籤
+這個`heading`變數又稱為**JSX expression（JSX 表達式）**。React 可以在我們的應用程式中使用它，以渲染顯示[`<h1>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements)標籤
 
-假如我們出於語義化的原因，想要將`heading`包裹在[`<header>`](/en-US/docs/Web/HTML/Element/header)標籤中，那該怎麼做呢？JSX 方法允許我們將元素互相嵌套，就像我們在使用 HTML 一樣：
+假如我們出於語義化的原因，想要將`heading`包裹在[`<header>`](/zh-TW/docs/Web/HTML/Element/header)標籤中，那該怎麼做呢？JSX 方法允許我們將元素互相嵌套，就像我們在使用 HTML 一樣：
 
 ```js
 const header = (
@@ -96,7 +83,7 @@ const header = (
 > </header>
 > ```
 >
-> 然而，這樣寫看起來有點不對勁，因為這段表達式[`<header>`](/en-US/docs/Web/HTML/Element/header)的開始標籤沒有縮排到與其對應結束標籤相同的位置。
+> 然而，這樣寫看起來有點不對勁，因為這段表達式[`<header>`](/zh-TW/docs/Web/HTML/Element/header)的開始標籤沒有縮排到與其對應結束標籤相同的位置。
 
 當然，若沒有其他的幫助，你的瀏覽器是無法直接讀取解析 JSX 的，當編譯完成（藉由使用像[Babel](https://babeljs.io/)或[Parcel](https://parceljs.org/)之類的工具），我們的 header 表達式看起來像這樣：
 
@@ -116,15 +103,15 @@ const header = React.createElement("header", null,
 
 有很多方法可以使用 React，但我們將使用命令行界面（CLI）工具 create-react-app。如前面所說，它可以透過安裝一些套件和創建一些文件檔案以處理上面描述的工具，使其可以用來加速開發 React 應用程式的過程。
 
-是可以[不使用 create-react-app 就將 React 加入到網站裡](https://zh-hant.reactjs.org/docs/add-react-to-a-website.html)的，藉由複製一些[`<script>`](/en-US/docs/Web/HTML/Element/script)元素並加進 HTML 檔案中即可，但 create-react-app CLI 確實是開發 React 應用程式的常見起點。使用它可以讓你花更少的時間在設置上，好使用更多的時間專注在建構應用程式上。
+是可以[不使用 create-react-app 就將 React 加入到網站裡](https://zh-hant.reactjs.org/docs/add-react-to-a-website.html)的，藉由複製一些[`<script>`](/zh-TW/docs/Web/HTML/Element/script)元素並加進 HTML 檔案中即可，但 create-react-app CLI 確實是開發 React 應用程式的常見起點。使用它可以讓你花更少的時間在設置上，好使用更多的時間專注在建構應用程式上。
 
 ### 環境要求
 
 為了使用[create-react-app](https://create-react-app.dev/)，你需要先安裝[Node.js](https://nodejs.org/en/)。建議你使用長期支援（LTS）版本。Node.js 包括 npm（Node.js 套件管理器）和 npx（Node.js 套件運行器）。
 
-你也可以使用 Yarn 套件管理器作為替代方案，但我們假設你在這個教學中使用 npm。參閱[Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)可取得有關 npm 和 yarn 的更多資訊。
+你也可以使用 Yarn 套件管理器作為替代方案，但我們假設你在這個教學中使用 npm。參閱[Package management basics](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)可取得有關 npm 和 yarn 的更多資訊。
 
-如果你使用的系統是 Windows，你需要安裝一些軟體來讓 Windows 與 Unix/macOS 的終端機 terminal 保持同等環境，以便使用本教學中提到的 terminal 終端機指令。**Gitbash**（它包含在[git for Windows toolset](https://gitforwindows.org/)工具的其中之一）或者**[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）也同樣適合。有關這些以及一般終端指令的詳細資訊，可以參閱[Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)。
+如果你使用的系統是 Windows，你需要安裝一些軟體來讓 Windows 與 Unix/macOS 的終端機 terminal 保持同等環境，以便使用本教學中提到的 terminal 終端機指令。**Gitbash**（它包含在[git for Windows toolset](https://gitforwindows.org/)工具的其中之一）或者**[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）也同樣適合。有關這些以及一般終端指令的詳細資訊，可以參閱[Command line crash course](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)。
 
 另外要記住的是，React 和 ReactDOM 建立的應用程式只能在相當現代的瀏覽器上執行——通過一些 polyfills 才可以在 IE9+上運作。建議你使用現代瀏覽器來學習這些教學，例如：Firefox、Microsoft Edge、Safari 或 Chrome 等。
 
@@ -188,11 +175,11 @@ moz-todo-react
 
 The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives.
 
-The **`public`** directory contains files that will be read by your browser while you're developing the app; the most important of these is `index.html`. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the [`<title>`](/en-US/docs/Web/HTML/Element/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
+The **`public`** directory contains files that will be read by your browser while you're developing the app; the most important of these is `index.html`. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the [`<title>`](/zh-TW/docs/Web/HTML/Element/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
 
-The `public` directory will also be published when you build and deploy a production version of your app. We won’t cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) tutorial.
+The `public` directory will also be published when you build and deploy a production version of your app. We won’t cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) tutorial.
 
-The `package.json` file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file \`package.json\`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/); we also talk about it in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
+The `package.json` file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file \`package.json\`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/); we also talk about it in our [Package management basics](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
 
 ## 探索我們的第一個 React 元件——`<App/>`
 
@@ -228,7 +215,7 @@ function App() {
 export default App;
 ```
 
-The `App.js` file consists of three main parts: some [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements at the top, the `App` component in the middle, and an [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statement at the bottom. Most React components follow this pattern.
+The `App.js` file consists of three main parts: some [`import`](/zh-TW/docs/Web/JavaScript/Reference/Statements/import) statements at the top, the `App` component in the middle, and an [`export`](/zh-TW/docs/Web/JavaScript/Reference/Statements/export) statement at the bottom. Most React components follow this pattern.
 
 ### Import 引入語法
 
@@ -279,9 +266,9 @@ function App() {
 
 The `App` function returns a JSX expression. This expression defines what your browser ultimately renders to the DOM.
 
-Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/en-US/docs/Web/HTML/Element/div) tag has a `className` attribute. This is the same as the [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
+Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/zh-TW/docs/Web/HTML/Element/div) tag has a `className` attribute. This is the same as the [`class`](/zh-TW/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
 
-Take a moment to change the [`<p>`](/en-US/docs/Web/HTML/Element/p) tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/en-US/docs/Web/HTML/Element/a) tag and save; the "Learn React" link will be gone.
+Take a moment to change the [`<p>`](/zh-TW/docs/Web/HTML/Element/p) tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/zh-TW/docs/Web/HTML/Element/a) tag and save; the "Learn React" link will be gone.
 
 Your `App` component should now look like this:
 
@@ -339,7 +326,7 @@ All of this tells React that we want to render our React application with the `A
 
 > **備註：** In JSX, React components and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
 
-[Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they’re not in scope for this article. You can delete line 5, as well as most of the code below it.
+[Service workers](/zh-TW/docs/Web/API/Service_Worker_API/Using_Service_Workers) are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they’re not in scope for this article. You can delete line 5, as well as most of the code below it.
 
 Your final `index.js` file should look like this:
 
@@ -477,55 +464,55 @@ function App(props) {
 
 ## In this module
 
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [Introduction to client-side frameworks](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+  - [Getting started with React](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
 
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+  - [Getting started with Ember](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
 
 - Vue
 
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+  - [Getting started with Vue](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
 
 - Svelte
 
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - [Getting started with Svelte](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
 
 - Angular
 
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Getting started with Angular](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

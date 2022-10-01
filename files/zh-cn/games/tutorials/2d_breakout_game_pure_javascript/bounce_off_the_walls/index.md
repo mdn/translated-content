@@ -1,13 +1,13 @@
 ---
 title: 反弹的墙壁
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
-本篇是 [Gamedev Canvas tutorial](/en-US/docs/Games/Workflows/Breakout_game_from_scratch) 10 节教程中的第三节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 看到源码。
+本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch) 10 节教程中的第三节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 看到源码。
 
 看到我们的球动起来很惊讶吧，但是它很快就从屏幕上消失了，当然我们是可以控制它的。我们会实现一些非常简单的碰撞检测 (详细后面解释),使球在画布的四周反弹回来。
 
@@ -104,6 +104,6 @@ if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
 
 ## 下一步
 
-现在我们已经到了我们的球正在移动和留在游戏板上的阶段。在第四章中，我们将看看如何实现一个可控制的 paddle - 参见[paddle 和键盘控制](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls)。
+现在我们已经到了我们的球正在移动和留在游戏板上的阶段。在第四章中，我们将看看如何实现一个可控制的 paddle - 参见[paddle 和键盘控制](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}

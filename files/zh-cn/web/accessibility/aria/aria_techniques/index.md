@@ -1,15 +1,9 @@
 ---
 title: 使用 ARIA：角色、状态和属性
 slug: Web/Accessibility/ARIA/ARIA_Techniques
-tags:
-  - ARIA
-  - 可访问性
-  - 无障碍
-  - Overview
-  - Reference
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 ---
-ARIA 定义了可以应用于元素的语义，这些语义分为 **roles**（定义一种用户界面元素）、**states** 和 **properties**，这些都是角色所支持的。作者必须在元素的生命周期中为其分配一个 ARIA 角色和适当的状态和属性，除非该元素已经具有适当的 ARIA 语义（通过使用适当的 HTML 元素）。添加 ARIA 语义只会向浏览器的可访问性 API 公开额外信息，而不会影响页面的 DOM。
+
+ARIA 定义了可以应用于元素的语义，这些语义分为 **roles**（定义一种用户界面元素）、**states** 和 **properties**，这些都是角色所支持的。作者必须在元素的生命周期中为其分配一个 ARIA 角色和适当的状态和属性，除非该元素已经具有适当的 ARIA 语义（通过使用适当的 HTML 元素）。添加 ARIA 语义只会向浏览器的无障碍 API 公开额外信息，而不会影响页面的 DOM。
 
 ## 角色
 

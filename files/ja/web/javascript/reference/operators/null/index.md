@@ -1,15 +1,9 @@
 ---
 title: 'null'
 slug: Web/JavaScript/Reference/Operators/null
-tags:
-  - JavaScript
-  - 言語機能
-  - リテラル
-  - プリミティブ
-translation_of: Web/JavaScript/Reference/Global_Objects/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
-browser-compat: javascript.builtins.null
 ---
+
 {{jsSidebar("Objects")}}
 
 `null` という値は、意図的にオブジェクトの値が存在しないことを表します。これは JavaScript の[プリミティブ値](/ja/docs/Glossary/Primitive)の 1 つであり、論理演算では[偽値](/ja/docs/Glossary/Falsy)として扱われます。

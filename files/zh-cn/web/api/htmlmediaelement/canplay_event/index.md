@@ -1,10 +1,8 @@
 ---
 title: 'HTMLMediaElement: canplay'
 slug: Web/API/HTMLMediaElement/canplay_event
-tags:
-  - canplay
-translation_of: Web/API/HTMLMediaElement/canplay_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `canplay` 事件在终端可以播放媒体文件时（但估计还没有加载足够的数据来播放媒体直到其结束，即后续可能需要停止以进一步缓冲内容）被触发。

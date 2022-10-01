@@ -3,11 +3,11 @@ title: popstate
 slug: Web/API/Window/popstate_event
 translation_of: Web/API/Window/popstate_event
 ---
-<p>Событие <code>popstate</code> вызывается, когда изменяется активная запись истории. Если изменение записи истории было вызвано методом <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_pushState()_method">history.pushState()</a></code> или <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_replaceState()_method">history.replaceState()</a></code>, то состояние события <code>popstate</code> будет содержать <code>state </code>копии входящего в историю объекта</p>
+<p>Событие <code>popstate</code> вызывается, когда изменяется активная запись истории. Если изменение записи истории было вызвано методом <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_pushState()_method">history.pushState()</a></code> или <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_replaceState()_method">history.replaceState()</a></code>, то состояние события <code>popstate</code> будет содержать <code>state </code>копии входящего в историю объекта</p>
 
-<p>Обратите внимание,  <code>history.pushState()</code> или <code>history.replaceState()</code> не вызывают событие <code>popstate</code>. Событие <code>popstate</code> будет вызвано при совершении действий в браузере, таких как нажатие кнопок "Вперёд" или "Назад" (или при вызове <code>history.back()</code> или <code> history.forward()</code> из JavaScript).</p>
+<p>Обратите внимание,  <code>history.pushState()</code> или <code>history.replaceState()</code> не вызывают событие <code>popstate</code>. Событие <code>popstate</code> будет вызвано при совершении действий в браузере, таких как нажатие кнопок "Вперёд" или "Назад" (или при вызове <code>history.back()</code> или <code> history.forward()</code> из JavaScript).</p>
 
-<p>Браузеры работают с  событием <code>popstate</code> по разному. Chrome (prior to v34) и Safari всегда вызывают <code>popstate</code> по окончании загрузки страницы, а Firefox не делает этого.</p>
+<p>Браузеры работают с  событием <code>popstate</code> по разному. Chrome (prior to v34) и Safari всегда вызывают <code>popstate</code> по окончании загрузки страницы, а Firefox не делает этого.</p>
 
 <h2 id="General_info">General info</h2>
 
@@ -95,5 +95,5 @@ history.go(2);  // Logs "location: http://example.com/example.html?page=3, state
 <h2 id="See_Also">See Also</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">Manipulating the browser history (the History API) </a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">Manipulating the browser history (the History API) </a></li>
 </ul>

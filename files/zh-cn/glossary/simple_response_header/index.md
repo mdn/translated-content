@@ -1,14 +1,13 @@
 ---
 title: Simple response header
 slug: Glossary/Simple_response_header
-tags:
-  - Simple response header
-translation_of: Glossary/Simple_response_header
 ---
-一个简单的响应头（或 CORS 安全列表的响应头）是一个 [HTTP 头 ](/zh-CN/docs/Web/HTTP/Headers)，它是以下之一：
+
+一个简单的响应头（或 CORS 安全列表的响应头）是一个 [HTTP 头](/zh-CN/docs/Web/HTTP/Headers)，它是以下之一：
 
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Content-Language")}}
+- {{HTTPHeader("Content-Length")}}
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Expires")}}
 - {{HTTPHeader("Last-Modified")}}
@@ -22,7 +21,9 @@ These headers will not be filtered when the response is filtered by CORS, they a
 
 You can extend the list of CORS-safelisted response headers by using the {{HTTPHeader("Access-Control-Expose-Headers")}} header:
 
-    Access-Control-Expose-Headers: X-Custom-Header, Content-Length
+```
+Access-Control-Expose-Headers: X-Custom-Header, Content-Length
+```
 
 ## Learn more
 

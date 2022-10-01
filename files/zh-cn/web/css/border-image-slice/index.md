@@ -1,15 +1,8 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - NeedsExample
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/border-image-slice
 ---
+
 {{CSSRef}}
 
 **`border-image-slice`** [CSS](/zh-CN/docs/Web/CSS) 属性将使用 {{cssxref("border-image-source")}} 引用的图像划分为多个区域。这些区域组成了一个元素的[边框图像](/zh-CN/docs/Web/CSS/border-image)。
@@ -24,7 +17,7 @@ translation_of: Web/CSS/border-image-slice
 
 - 区域 1-4 为角区域（corner region）。每一个都被用于组成最终边框图像的四个角。
 - 区域 5-8 边区域（edge region）。在最终的边框图像中[重复、缩放或修改](/zh-CN/docs/Web/CSS/border-image-repeat)它们以匹配元素的大小。
-- 区域 9 为中心区域（middle region）。它在默认情况下会被丢弃，但如果设置了关键字 `fill`，则会将其用作元素的背景图像。
+- 区域 9 为中心区域（middle region）。它在默认情况下会被丢弃，但如果设置了关键字 `fill`，则会将其用作元素的背景图像。
 
 {{cssxref("border-image-repeat")}}、{{cssxref("border-image-width")}} 和 {{cssxref("border-image-outset")}} 属性则用于定义如何使用这些图像。
 

@@ -1,17 +1,8 @@
 ---
 title: 'HTMLVideoElement: leavepictureinpicture event'
 slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
-tags:
-  - API
-  - Event
-  - Interface
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Video
-  - pip
-browser-compat: api.HTMLVideoElement.leavepictureinpicture_event
 ---
+
 {{APIRef("HTMLVideoElement")}}
 
 **`leavepictureinpicture`** 事件会在 {{DOMxRef("HTMLVideoElement")}} 成功离开画中画模式时触发。

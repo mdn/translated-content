@@ -4,6 +4,7 @@ slug: Web/API/WorkerGlobalScope/online_event
 translation_of: Web/API/WorkerGlobalScope/ononline
 original_slug: Web/API/WorkerGlobalScope/ononline
 ---
+
 {{APIRef("Web Workers API")}}
 
 La propriété **`ononline`** de l'interface {{domxref("WorkerGlobalScope")}} représente un {{event("Event_handlers", "event handler")}} à appeler lorsque l'événement {{event("online")}} survient et se propage à travers le {{domxref("Worker")}}.
@@ -26,13 +27,11 @@ self.ononline = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#handler-workerglobalscope-ononline", "WorkerGlobalScope.ononline")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.ononline")}}
+{{Compat}}
 
 ## Voir aussi
 

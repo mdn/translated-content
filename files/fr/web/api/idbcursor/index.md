@@ -8,6 +8,7 @@ tags:
   - Référence(2)
 translation_of: Web/API/IDBCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBCursor`** de l' [API IndexedDB](/fr/docs/Web/API/API_IndexedDB) représente un [curseur](/fr/docs/Web/API/API_IndexedDB/Basic_Concepts_Behind_IndexedDB#range) pour traverser ou itérer sur plusieurs enregistrements dans une base de données.
@@ -130,13 +131,11 @@ function afficheDonnee() {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBCursor")}}
+{{Compat}}
 
 ## Voir aussi
 

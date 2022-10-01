@@ -14,6 +14,7 @@ tags:
 translation_of: Web/API/DocumentOrShadowRoot/elementsFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 La propriété **`elementsFromPoint()`** de l'interface {{domxref("DocumentOrShadowRoot")}}  renvoie un tableau (_array_) de tous les éléments présents sous le point fourni en paramètre (relatif au _viewport_).
@@ -72,14 +73,11 @@ if (document.elementsFromPoint) {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                             | Commentaires                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('Shadow DOM','#extensions-to-the-documentorshadowroot-mixin','DocumentOrShadowRoot')}} | {{Spec2('Shadow DOM')}} | Définition initiale                                    |
-| {{SpecName('CSSOM View', '#dom-document-elementsfrompoint', 'Document')}}                                 | {{Spec2('CSSOM View')}} | Précise l'ordre selon lequel les éléments sont peints. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DocumentOrShadowRoot.elementsFromPoint")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,8 +1,8 @@
 ---
 title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 ---
+
 {{AddonSidebar()}}
 
 丢弃一个或多个标签页。
@@ -11,9 +11,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 
 对于不同的浏览器，被丢弃内容的详细内容是有所不同的，但是从大体上来说，丢弃一个标签页允许浏览器释放一些该标签页所占用的内存。
 
-The {{WebExtAPIRef("tabs.discard()")}} API enables an extension to discard one or more tabs. It's not possible to discard the currently active tab, or a tab whose document contains a [`beforeunload`](/en-US/docs/Web/Events/beforeunload) listener that would display a prompt.
+The {{WebExtAPIRef("tabs.discard()")}} API enables an extension to discard one or more tabs. It's not possible to discard the currently active tab, or a tab whose document contains a [`beforeunload`](/zh-CN/docs/Web/Events/beforeunload) listener that would display a prompt.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## 语法
 
@@ -30,13 +30,13 @@ var discarding = browser.tabs.discard(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been discarded. If any error occurs (for example, invalid tab IDs), the promise will be rejected with an error message.
+A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been discarded. If any error occurs (for example, invalid tab IDs), the promise will be rejected with an error message.
 
 If the ID of the active tab is passed in, it will not be discarded, but the promise will be fulfilled and any other tabs passed in will be discarded.
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.tabs.discard", 10)}}
+{{Compat}}
 
 ## 示例
 
@@ -74,7 +74,8 @@ discarding.then(onDiscarded, onError);
 
 > **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-discard) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,4 +102,4 @@ discarding.then(onDiscarded, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

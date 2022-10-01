@@ -1,10 +1,8 @@
 ---
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
-tags:
-  - 类型错误
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript 异常“_x_ is (not) _y_”在出现与期望不符的类型（通常为意外获得的 {{jsxref("undefined")}} 或 {{jsxref("null")}} 值）时被抛出。

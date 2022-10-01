@@ -1,19 +1,12 @@
 ---
-title: 'HTMLElement: pointerout イベント'
+title: 'Document: pointerout イベント'
 slug: conflicting/Web/API/Element/pointerout_event
-tags:
-  - イベント
-  - HTML DOM
-  - HTMLElement
-  - PointerEvent
-  - リファレンス
-translation_of: Web/API/HTMLElement/pointerout_event
-original_slug: Web/API/HTMLElement/pointerout_event
-browser-compat: api.HTMLElement.pointerout_event
+original_slug: Web/API/Document/pointerout_event
 ---
+
 {{APIRef}}
 
-`pointerout` イベントは、いくつかの理由で発生します。例えば、ポインティングデバイスが要素の*ヒットテスト*境界から外れたり、ホバーに対応していないデバイスに {{domxref("HTMLElement/pointerup_event", "pointerup")}} イベントが発生したとき（{{domxref("HTMLElement/pointerup_event", "pointerup")}} を参照）、{{domxref("HTMLElement/pointercancel_event", "pointercancel")}} イベントが発生した後（{{domxref("HTMLElement/pointercancel_event", "pointercancel")}} を参照）、ペンスタイラスがデジタイザーによって検出可能なホバー範囲を離脱したときなどです。
+`pointerout` イベントはいくつかの理由で発生します。ポインティングデバイスが要素の*ヒットテスト*境界を出たとき、ホバーに対応していない端末で {{domxref("Document/pointerup_event", "pointerup")}} イベントが発生したとき ({{domxref("Document/pointerup_event", "pointerup")}} を参照)、 {{domxref("Document/pointercancel_event", "pointercancel")}} イベントが発生した後 ({{domxref("Document/pointercancel_event", "pointercancel")}} を参照)、スタイラスペンがデジタイザーで検出可能なホバー範囲を離れたとき、などです。
 
 <table class="properties">
   <tbody>
@@ -22,8 +15,8 @@ browser-compat: api.HTMLElement.pointerout_event
       <td>あり</td>
     </tr>
     <tr>
-      <th scope="row">キャンセル</th>
-      <td>可</td>
+      <th scope="row">キャンセル可能</th>
+      <td>はい</td>
     </tr>
     <tr>
       <th scope="row">インターフェイス</th>
@@ -32,11 +25,7 @@ browser-compat: api.HTMLElement.pointerout_event
     <tr>
       <th scope="row">イベントハンドラープロパティ</th>
       <td>
-        <code
-          ><a href="/ja/docs/Web/API/GlobalEventHandlers/onpointerout"
-            >onpointerout</a
-          ></code
-        >
+        {{domxref("GlobalEventHandlers/onpointerout", "onpointerout")}}
       </td>
     </tr>
   </tbody>
@@ -44,29 +33,27 @@ browser-compat: api.HTMLElement.pointerout_event
 
 ## 例
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用した場合
 
 ```js
-const para = document.querySelector('p');
-
-para.addEventListener('pointerout', (event) => {
-  console.log('ポインターが外に移動しました');
+document.addEventListener('pointerout', (event) => {
+  console.log('Pointer moved out');
 });
 ```
 
-`onpointerout` イベントハンドラープロパティを使用する場合
+`onpointerout` イベントハンドラープロパティを使用した場合
 
 ```js
-const para = document.querySelector('p');
-
-para.onpointerout = (event) => {
-  console.log('ポインターが外に移動しました');
+document.onpointerout = (event) => {
+  console.log('Pointer moved out');
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+| 仕様書                                                                   | 状態                                 |
+| ------------------------------------------------------------------------ | ------------------------------------ |
+| {{SpecName('Pointer Events', '#the-pointerout-event')}} | {{Spec2('Pointer Events')}} |
 
 ## ブラウザーの互換性
 
@@ -74,14 +61,14 @@ para.onpointerout = (event) => {
 
 ## 関連情報
 
-- [`gotpointercapture`](/ja/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/ja/docs/Web/API/HTMLElement/lostpointercapture_event)
-- [`pointerover`](/ja/docs/Web/API/HTMLElement/pointerover_event)
-- [`pointerenter`](/ja/docs/Web/API/HTMLElement/pointerenter_event)
-- [`pointerdown`](/ja/docs/Web/API/HTMLElement/pointerdown_event)
-- [`pointermove`](/ja/docs/Web/API/HTMLElement/pointermove_event)
-- [`pointerup`](/ja/docs/Web/API/HTMLElement/pointerup_event)
-- [`pointercancel`](/ja/docs/Web/API/HTMLElement/pointercancel_event)
-- [`pointerleave`](/ja/docs/Web/API/HTMLElement/pointerleave_event)
-- [`onpointerout`](/ja/docs/Web/API/GlobalEventHandlers/onpointerout) イベントハンドラープロパティ
-- `Document` をターゲットとしたのこのイベント: [`pointerout`](/ja/docs/Web/API/Document/pointerout_event) イベント
+- {{domxref("Document/gotpointercapture_event", "gotpointercapture")}}
+- {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
+- {{domxref("Document/pointerover_event", "pointerover")}}
+- {{domxref("Document/pointerenter_event", "pointerenter")}}
+- {{domxref("Document/pointerdown_event", "pointerdown")}}
+- {{domxref("Document/pointermove_event", "pointermove")}}
+- {{domxref("Document/pointerup_event", "pointerup")}}
+- {{domxref("Document/pointercancel_event", "pointercancel")}}
+- {{domxref("Document/pointerleave_event", "pointerleave")}}
+- {{domxref("GlobalEventHandlers/onpointerout", "onpointerout")}} event handler property
+- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/pointerout_event", "pointerout")}} event

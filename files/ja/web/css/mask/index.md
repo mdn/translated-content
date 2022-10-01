@@ -1,18 +1,8 @@
 ---
 title: mask
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Layout
-  - リファレンス
-  - SVG
-  - Web
-  - recipe:css-shorthand-property
-browser-compat: css.properties.mask
-translation_of: Web/CSS/mask
 ---
+
 {{CSSRef}}
 
 **`mask`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、指定された位置での画像のマスクまたは切り取りによって要素を (部分的または全体的に) 隠します。
@@ -58,7 +48,7 @@ mask: unset;
 
 /* 複数のマスク */
 mask: url(masks.svg#star) left / 16px repeat-y,    /* SVG グラフィック内の要素が、幅 16px の左端のマスクとして使用されている */
-      url(masks.svg#circle) right / 16px repeat-y; /* SVG グラフィック内の要素が、幅 16px の右端のマスクとして使用されている */
+      url(masks.svg#circle) right / 16px repeat-y; /* SVG グラフィック内の要素が、幅 16px の右端のマスクとして使用されている */
 ```
 
 ### 値

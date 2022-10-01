@@ -1,12 +1,9 @@
 ---
 title: 算法
 slug: Glossary/Algorithm
-tags:
-  - 专业术语
-  - 编程基础
-translation_of: Glossary/Algorithm
 original_slug: Glossary/算法
 ---
+
 算法是一个良定义的具体计算步骤的一个序列。
 
 换句话说，一个算法就是由人或机器可重复的解决问题的方法。计算机科学家们使用算法的复杂度（又称 O 标记法）来表示算法的效率。
@@ -24,7 +21,7 @@ original_slug: Glossary/算法
 
 ### 通用知识库（维基百科）
 
-- {{Interwiki("wikipedia", "Algorithm", "Algorithm")}}，维基百科
+- [Algorithm](https://zh.wikipedia.org/wiki/Algorithm)，维基百科
 
 ### 技术分析
 

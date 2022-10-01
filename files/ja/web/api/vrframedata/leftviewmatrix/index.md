@@ -1,20 +1,8 @@
 ---
 title: VRFrameData.leftViewMatrix
 slug: Web/API/VRFrameData/leftViewMatrix
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - leftViewMatrix
-browser-compat: api.VRFrameData.leftViewMatrix
-translation_of: Web/API/VRFrameData/leftViewMatrix
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`leftViewMatrix`** は {{domxref("VRFrameData")}} インターフェイスの読み取り専用プロパティで、 4 行 4 列の行列を表す {{jsxref("Float32Array")}} を返します。この行列は、左目の描画に利用されるビュー変換を表します。

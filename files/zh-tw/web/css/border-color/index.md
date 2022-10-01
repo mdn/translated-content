@@ -1,21 +1,8 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - CSS Styles
-  - HTML Colors
-  - Reference
-  - Styling HTML
-  - border-color
-  - borders
-  - colors
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-color
-translation_of: Web/CSS/border-color
 ---
+
 {{CSSRef}}
 
 **`border-color`** 是一種[CSS](/zh-TW/docs/Web/CSS) [簡寫屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)，用來綜合設定元件四邊框線的顏色。

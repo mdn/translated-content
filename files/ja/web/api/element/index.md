@@ -1,17 +1,8 @@
 ---
 title: Element
 slug: Web/API/Element
-tags:
-  - API
-  - DOM
-  - DOM リファレンス
-  - Element
-  - インターフェイス
-  - リファレンス
-  - Web API
-browser-compat: api.Element
-translation_of: Web/API/Element
 ---
+
 {{APIRef("DOM")}}
 
 **`Element`** は {{DOMxRef("Document")}} が継承するオブジェクトの中にあるすべての要素オブジェクト（すなわち、要素を表現するオブジェクト）が継承する、もっとも一般的な基底クラスです。すべての種類の要素の共通するメソッドとプロパティのみを持ちます。もっと具体的なクラスが `Element` を継承しています。

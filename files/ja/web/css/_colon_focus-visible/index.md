@@ -1,17 +1,8 @@
 ---
 title: ':focus-visible'
-slug: 'Web/CSS/:focus-visible'
-tags:
-  - ':focus'
-  - ':focus-visible'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-translation_of: 'Web/CSS/:focus-visible'
+slug: Web/CSS/:focus-visible
 ---
+
 {{CSSRef}}
 
 **`:focus-visible`** 擬似クラスは、要素が {{CSSxRef(":focus")}} 擬似クラスに一致している時で、{{glossary("User Agent", "ユーザーエージェント")}}が要素にフォーカスを明示するべきであると推測的に判断した場合に適用されます (多くのブラウザーではこの場合、既定で「フォーカスリング」を表示します)。
@@ -101,7 +92,7 @@ custom-button:focus-visible {
 
 視覚的なフォーカスインジケーターが、弱視の人々からも見えるように確認してください。これは外光が明るい場所 (太陽の下の屋外など) で画面を使用するすべての人にも利益になります。 [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) は、視覚的なフォーカスインジケーターを少なくとも 3:1 にすることを要求しています。
 
-- アクセシブルな視覚的フォーカスインジケーター: [Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+- アクセシブルな視覚的フォーカスインジケーター: [Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 
 ### 認知障碍
 

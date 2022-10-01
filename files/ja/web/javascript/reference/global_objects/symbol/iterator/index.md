@@ -1,15 +1,8 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-  - Polyfill
-browser-compat: javascript.builtins.Symbol.iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
+
 <div>{{JSRef}}</div>
 
 **`Symbol.iterator`** はウェルノウンシンボルで、オブジェクトの既定の反復子を指定します。 [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) で使用されます。
@@ -91,7 +84,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 ## 関連情報
 
 - [`Symbol.iterator` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [反復処理プロトコル ](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
 - {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
 - {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Gradients
 original_slug: Web/SVG/Tutoriel/Gradients
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/Fills_and_Strokes", "Web/SVG/Tutoriel/Motifs") }}
 
 Probablement plus excitant qu'un simple remplissage et contour, est le fait de pouvoir créer et appliquer des dégradés comme remplissage ou contour.
@@ -222,6 +223,6 @@ Il y a quelques subtilités concernant l'utilisation de `gradientUnits="objectBo
 
 ### gradientTransform
 
-Vous pouvez également appliquer une transformation au gradient en utilisant l'attribut `gradientTransform`, mais puisque nous n'avons pas encore introduit les [transformations](/fr/docs/Web/SVG/Tutoriel/Transformations_de_base "en-US/Web/SVG/Tutorial/Basic Transformations"), nous le laisserons de côté pour l'instant.
+Vous pouvez également appliquer une transformation au gradient en utilisant l'attribut `gradientTransform`, mais puisque nous n'avons pas encore introduit les [transformations](/fr/docs/Web/SVG/Tutoriel/Transformations_de_base), nous le laisserons de côté pour l'instant.
 
 {{ PreviousNext("Web/SVG/Tutoriel/Fills_and_Strokes", "Web/SVG/Tutoriel/Motifs") }}

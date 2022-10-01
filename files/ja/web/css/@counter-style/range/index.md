@@ -1,16 +1,8 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
-tags:
-  - '@counter-style'
-  - アットルール記述子
-  - CSS
-  - CSS カウンタースタイル
-  - CSS 記述子
-  - リファレンス
-browser-compat: css.at-rules.counter-style.range
-translation_of: Web/CSS/@counter-style/range
 ---
+
 {{CSSRef}}
 
 カスタムカウンターのスタイルを定義する際、 **`range`** 記述子により、スタイルが適用されるカウンター値の範囲を指定することができます。カウンターの値が指定された範囲の外にある場合、代替スタイルがそのマーカーの表現を構築するために使用されます。
@@ -61,7 +53,10 @@ range を整数で指定する場合、無限大を表す値として `infinite`
 
 ## 形式文法
 
-{{csssyntax}}
+```
+[ [ <integer> | infinite ]{2} ]# |
+auto
+```
 
 ## 例
 
@@ -96,18 +91,7 @@ range を整数で指定する場合、無限大を表す値として `infinite`
 
 上記のリストは次のように表示されます。
 
-```
-1. One
-□. Two
-■. Three
-□. Four
-5. Five
-6. Six
-■. Seven
-□. Eight
-■. Nine
-10. Ten
-```
+{{EmbedLiveSample('Setting counter style over a range')}}:
 
 ## 仕様書
 
@@ -120,4 +104,4 @@ range を整数で指定する場合、無限大を表す値として `infinite`
 ## 関連情報
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()")}}、無名のカウンタースタイルを生成する関数記法
+- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを生成する関数記法

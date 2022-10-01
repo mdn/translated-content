@@ -1,12 +1,12 @@
 ---
-title: 多媒体的可访问性 (Accessible multimedia)
+title: 多媒体的无障碍 (Accessible multimedia)
 slug: Learn/Accessibility/Multimedia
-translation_of: Learn/Accessibility/Multimedia
 original_slug: learn/Accessibility/多媒体
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-可能导致可访问性问题（accessibility problems ）的另一类内容是多媒体 ——视频，音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。
+可能导致无障碍问题（accessibility problems）的另一类内容是多媒体 ——视频，音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -14,30 +14,30 @@ original_slug: learn/Accessibility/多媒体
       <th scope="row">先决条件：</th>
       <td>
         基本的计算机素养，对 HTML，CSS 和 JavaScript 的基本理解，<a
-          href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
-          >对可访问性</a
+          href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
+          >对无障碍</a
         >
         的理解。
       </td>
     </tr>
     <tr>
       <th scope="row">目的：</th>
-      <td>了解多媒体背后的可访问性问题，以及如何克服这些问题。</td>
+      <td>了解多媒体背后的无障碍问题，以及如何克服这些问题。</td>
     </tr>
   </tbody>
 </table>
 
-## 多媒体和可访问性
+## 多媒体和无障碍
 
-到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其可访问性，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有[WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)属性）。
+到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其无障碍，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有[WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)属性）。
 
-另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的可访问性。图像，视频，[`<canvas>`](/en-US/docs/Web/HTML/Element/canvas)元素，Flash 电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。
+另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的无障碍。图像，视频，[`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)元素，Flash 电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。
 
 但不要绝望 - 在这里我们将帮助您浏览可用于使多媒体更容易访问的技术。
 
 ## 简单图像
 
-我们已经介绍了 HTML 图像的简单文本替代[HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML) –– 您可以参考其中了解详细信息。简而言之，应确保在可能的情况下，视觉内容具有替代文本，供屏幕阅读器拾取和读取给其用户。
+我们已经介绍了 HTML 图像的简单文本替代[HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML) –– 您可以参考其中了解详细信息。简而言之，应确保在可能的情况下，视觉内容具有替代文本，供屏幕阅读器拾取和读取给其用户。
 
 示例：
 
@@ -171,7 +171,7 @@ stopBtn.onclick = function() {
 };
 ```
 
-在 {{domxref("HTMLMediaElement")}}s 上没有可用的 `stop() `函数，因此我们改为`pause()`它，同时将当前时间设置为 0。
+在 {{domxref("HTMLMediaElement")}}s 上没有可用的 `stop()` 函数，因此我们改为`pause()`它，同时将当前时间设置为 0。
 
 接下来，我们的快退和快进按钮–– 将以下块添加到代码的底部：
 
@@ -226,9 +226,9 @@ player.ontimeupdate = function() {
 
 这为您提供了如何向视频/音频播放器实例添加自定义播放器功能的基本想法。有关如何向视频/音频播放器添加更复杂的功能(包括旧版浏览器的 Flash 回退) 的详细信息，请参阅：
 
-- [Audio and video delivery](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)
-- [Video player styling basics](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
-- [Creating a cross-browser video player](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)
+- [Audio and video delivery](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)
+- [Video player styling basics](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
+- [Creating a cross-browser video player](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)
 
 我们还创建了一个高级示例，以演示如何创建面向对象的系统，该系统可查找页面上的每个视频和音频播放器 (无论有多少个视频和音频播放器),并将自定义控件添加到其中。请参阅[custom-controls-oojs](http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/)([see the source code](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS))。
 
@@ -322,7 +322,7 @@ This is the second.
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-有关详细信息，请阅读[Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。您可以找到与本文一起使用本文的[the example](http://iandevlin.github.io/mdn/video-player-with-captions/),本文由 Ian Devlin 编写 (请参阅[source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions))。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意，要打开字幕，您需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。
+有关详细信息，请阅读[Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。您可以找到与本文一起使用本文的[the example](http://iandevlin.github.io/mdn/video-player-with-captions/),本文由 Ian Devlin 编写 (请参阅[source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions))。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意，要打开字幕，您需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。
 
 > **备注：** 文本轨道和转录也可以帮助您使用{{glossary("SEO")}},因为搜索引擎在文本上尤其繁荣。文本轨道甚至允许搜索引擎通过视频直接链接到一个点部分。
 
@@ -330,7 +330,7 @@ This is the second.
 
 以上各节未涵盖您可能要放在网页上的所有类型的多媒体内容。您可能还需要处理使用其他可用技术创建的游戏、动画、幻灯片、嵌入式视频和内容，例如：
 
-- [HTML5 canvas](/en-US/docs/Web/API/Canvas_API)
+- [HTML5 canvas](/zh-CN/docs/Web/API/Canvas_API)
 - Flash
 - Silverlight
 
@@ -341,20 +341,20 @@ This is the second.
 
 然而，其他多媒体不是那么容易使访问。例如，如果您正在处理沉浸式 3D 游戏或虚拟现实应用，那么为此类体验提供文本替代方案确实非常困难，您可能会认为盲人用户实际上并不在此类应用的目标受众范围内。
 
-但是，您可以确保此类应用具有足够的颜色对比度和清晰的显示，以便对视力低下/色盲的人来说可以感知，并且还可以使其键盘可访问。请记住，辅助功能就是尽可能多地做，而不是一直追求 100% 的可访问性，这通常是不可能的。
+但是，您可以确保此类应用具有足够的颜色对比度和清晰的显示，以便对视力低下/色盲的人来说可以感知，并且还可以使其键盘可访问。请记住，辅助功能就是尽可能多地做，而不是一直追求 100% 的无障碍，这通常是不可能的。
 
 ## 总结
 
-本章概述了多媒体内容的可访问性问题，以及一些实用的解决方案。
+本章概述了多媒体内容的无障碍问题，以及一些实用的解决方案。
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 ## In this module
 
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [What is accessibility?](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
+- [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML)
+- [CSS and JavaScript accessibility best practices](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [Accessible multimedia](/zh-CN/docs/Learn/Accessibility/Multimedia)
+- [Mobile accessibility](/zh-CN/docs/Learn/Accessibility/Mobile)
+- [Accessibility troubleshooting](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/fill-opacity
 ---
+
 {{SVGRef}}
 
 L'attribut **`fill-opacity`** définit l'opacité du remplissage (_couleur, dégradé, motif_, etc) appliqué à une forme.
@@ -69,13 +70,10 @@ html,body,svg { height:100% }
 
 > **Note :** SVG2 introduit les valeurs en pourcentage pour `fill-opacity`. Cependant,  ce n'est pas souvent pris en charge pour le moment (_Voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
 
-## Compatibilité des navigateurs
-
-{{Compat("svg.attributes.presentation.fill-opacity")}}
-
 ## Spécifications
 
-| Spécification                                                                                        | Statut                   | Commentaire                                      |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------ |
-| {{SpecName("SVG2", "painting.html#FillOpacityProperty", "fill-opacity")}}     | {{Spec2("SVG2")}} | Définition pour les formes et le texte.          |
-| {{SpecName("SVG1.1", "painting.html#FillOpacityProperty", "fill-opacity")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte. |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

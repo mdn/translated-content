@@ -3,6 +3,7 @@ title: Element.querySelector()
 slug: Web/API/Element/querySelector
 translation_of: Web/API/Element/querySelector
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`querySelector()`** de l'interface [`Element`](/fr/docs/Web/API/Element) renvoie le premier élément descendant de l'élément sur lequel elle est invoquée qui correspond au groupe de sélecteurs spécifié.
@@ -77,15 +78,11 @@ Voir [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour 
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                                       | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG','#dom-parentnode-queryselectorall','querySelector()')}} | {{Spec2('DOM WHATWG')}}             |             |
-| {{SpecName('Selectors API Level 2','#queryselectorall','querySelectorAll()')}} | {{Spec2('Selectors API Level 2')}} |             |
-| {{SpecName('Selectors API Level 1','#queryselectorall','querySelectorAll()')}} | {{Spec2('Selectors API Level 1')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.querySelector")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -96,5 +93,5 @@ Voir [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour 
 - [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
 - [`DocumentFragment.querySelector()`](/fr/docs/Web/API/DocumentFragment/querySelector) et [`DocumentFragment.querySelectorAll()`](/fr/docs/Web/API/DocumentFragment/querySelectorAll)
 - [`ParentNode.querySelector()`](/fr/docs/Web/API/ParentNode/querySelector) et [`ParentNode.querySelectorAll()`](/fr/docs/Web/API/ParentNode/querySelectorAll)
-- [Exemples de code pour querySelector](/en-US/docs/Archive/Add-ons/Code_snippets/QuerySelector) Archive en anglais
+- [Exemples de code pour querySelector](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector) Archive en anglais
 - Autres méthodes qui prennent des sélecteurs : [`element.closest()`](/fr/docs/Web/API/Element/closest) et [`element.matches()`](/fr/docs/Web/API/Element/matches).

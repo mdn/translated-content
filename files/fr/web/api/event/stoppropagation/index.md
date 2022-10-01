@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Event/stopPropagation
 ---
+
 {{APIRef("DOM")}}
 
 Évite que l'évènement courant ne se propage plus loin dans les phases de capture et de déploiement.
@@ -29,14 +30,10 @@ Voir [DOM specification](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Eve
 
 [preventDefault](/fr/docs/Web/API/Event/preventDefault) est une méthode complémentaire qui peut être utilisée pour empêcher l'action par défaut de l'évènement.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#dom-event-stoppropagation", "Event.stopPropagation()")}}     | {{Spec2("DOM WHATWG")}} |                     |
-| {{SpecName("DOM4", "#dom-event-stoppropagation", "Event.stopPropagation()")}}             | {{Spec2("DOM4")}}         |                     |
-| {{SpecName("DOM2 Events", "#Events-Event-stopPropagation", "Event.stopPropagation()")}} | {{Spec2("DOM2 Events")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.stopPropagation")}}
+{{Compat}}

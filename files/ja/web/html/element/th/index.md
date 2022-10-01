@@ -1,22 +1,6 @@
 ---
 title: '<th>: 表見出し要素'
 slug: Web/HTML/Element/th
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Heading Cell
-  - Reference
-  - Table Cell
-  - Table Head
-  - Table Header
-  - Table Heading
-  - Table Heading Cell
-  - Tables
-  - Web
-  - cell
-browser-compat: html.elements.th
-translation_of: Web/HTML/Element/th
 ---
 
 {{HTMLRef}}
@@ -188,4 +172,4 @@ translation_of: Web/HTML/Element/th
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
- - 他の表関連 HTML 要素: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}
+- 他の表関連 HTML 要素: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}

@@ -3,6 +3,7 @@ title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
 translation_of: Web/API/AnalyserNode/getByteFrequencyData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode **`getByteFrequencyData()`** de l'objet [`AnalyserNode`](/fr/docs/Web/API/AnalyserNode) copie les données de fréquence dans le {{domxref("Uint8Array")}} passé en argument.
@@ -75,14 +76,12 @@ dessiner();
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-getByteFrequencyData-void-Uint8Array-array', 'getByteFrequencyData()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.getByteFrequencyData")}}
+{{Compat}}
 
 ## Voir aussi
 
-[Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

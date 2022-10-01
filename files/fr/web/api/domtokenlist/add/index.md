@@ -3,6 +3,7 @@ title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
 translation_of: Web/API/DOMTokenList/add
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`add()`** de l'interface {{domxref("DOMTokenList")}} ajoute le _token_ (_marque_) à la liste.
@@ -53,10 +54,8 @@ span.classList.add("d", "e", "f");
 
 ## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-add','add()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.add")}}
+{{Compat}}

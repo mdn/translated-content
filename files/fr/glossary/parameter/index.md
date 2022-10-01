@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Parameter
 original_slug: Glossaire/Parameter
 ---
+
 Un paramètre est une variable nommée passée à une {{Glossary("fonction")}}. Les paramètres servent à importer des {{Glossary("argument","arguments")}} à l'intérieur des fonctions.
 
 Remarquez la différence entre _paramètres_ et _arguments_ :
@@ -23,7 +24,7 @@ Deux sortes de paramètres :
 - paramètres de retour/sortie
   - : retournent principalement plusieurs valeurs depuis une fonction, mais ce n'est pas recommandé car cela peut prêter à confusion
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

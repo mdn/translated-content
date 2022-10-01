@@ -1,19 +1,9 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-tags:
-  - CSS
-  - CSS 関数
-  - CSS グリッド
-  - Experimental
-  - 関数
-  - リファレンス
-  - ウェブ
-  - レイアウト
-translation_of: Web/CSS/minmax()
 original_slug: Web/CSS/minmax()
-browser-compat: css.properties.grid-template-columns.minmax
 ---
+
 {{CSSRef}}
 
 **`minmax()`** は [CSS](/ja/docs/Web/CSS) の関数で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)で使用されます。
@@ -62,7 +52,7 @@ _min_ および _max_ の 2 つの引数を取る関数です。
 - {{cssxref("&lt;percentage&gt;")}}
   - : 負ではないパーセント値で、列グリッドトラックのグリッドコンテナーのインライン寸法、および行グリッドトラックのグリッドコンテナーのブロック寸法からの相対値。グリッドコンテナーの寸法がトラックの寸法に依存する場合、 `<percentage>` は `auto` として扱う必要があります。{{glossary("user agent", "ユーザーエージェント")}}は、グリッドコンテナーの寸法に対するトラックの固有の寸法の貢献度を調整し、パーセント値を尊重して最小限の量だけトラックの最終的な寸法を増加させることがあります。
 - {{cssxref("&lt;flex&gt;")}}
-  - : 単位 `fr` がついた負ではない寸法で、トラックのフレックス係数を指定します。それぞれの `&lt;flex&gt;` による寸法のトラックは、フレックス係数の割合に従って残りの空間を配分します。
+  - : 単位 `fr` がついた負ではない寸法で、トラックのフレックス係数を指定します。それぞれの `<flex>` による寸法のトラックは、フレックス係数の割合に従って残りの空間を配分します。
 - `max-content`
   - : グリッドトラックを占めるグリッドアイテムの max-content の貢献度の最大値を表します。
 - `min-content`

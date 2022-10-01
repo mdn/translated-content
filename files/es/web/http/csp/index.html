@@ -9,25 +9,25 @@ translation_of: Web/HTTP/CSP
 
 <p class="summary"><span class="tlid-translation translation"><span title=""><strong>Política de Seguridad del Contenido </strong>o<strong> </strong></span></span>( {{Glossary("CSP")}} ) - del inglés <em><strong>Content Security Policy</strong></em> - es una capa de seguridad adicional que ayuda a prevenir y mitigar algunos tipos de ataque, incluyendo Cross Site Scripting ( {{Glossary("XSS")}} ) y ataques de inyección de datos. Estos ataques son usados con diversos propósitos, desde robar información hasta desfiguración de sitios o distribución de malware .</p>
 
-<p>CSP está diseñado para ser completamente retrocompatible (excepto la versión 2 de CSP, donde hay algunas menciones explícitas de inconsistencia en la retrocompatibilidad; más detalles <a href="https://www.w3.org/TR/CSP2">aquí</a> sección 1.1).  Los navegadores que no lo soportan siguen funcionando con los servidores que lo implementan y viceversa: los navegadores que no soportan CSP simplemente lo ignoran, funcionando como siempre y delegando a la política mismo-origen para contenido web. Si el sitio web no ofrece la cabecera CSP, los navegadores igualmente usan la política estándar <a href="/en-US/docs/Web/Security/Same-origin_policy" title="En/Same origin policy for JavaScript">mismo-origen</a>.</p>
+<p>CSP está diseñado para ser completamente retrocompatible (excepto la versión 2 de CSP, donde hay algunas menciones explícitas de inconsistencia en la retrocompatibilidad; más detalles <a href="https://www.w3.org/TR/CSP2">aquí</a> sección 1.1).  Los navegadores que no lo soportan siguen funcionando con los servidores que lo implementan y viceversa: los navegadores que no soportan CSP simplemente lo ignoran, funcionando como siempre y delegando a la política mismo-origen para contenido web. Si el sitio web no ofrece la cabecera CSP, los navegadores igualmente usan la política estándar <a href="/en-US/docs/Web/Security/Same-origin_policy" title="En/Same origin policy for JavaScript">mismo-origen</a>.</p>
 
 <p>Para habilitar CSP, necesitas configurar tu servidor web para que devuelva la cabecera HTTP {{HTTPHeader("Content-Security-Policy")}} (en ocasiones verás menciones de la cabecera <code>X-Content-Security-Policy</code>, pero se trata de una versión antigua y no necesitas especificarla más).</p>
 
-<p>Alternativamente, el elemento {{HTMLElement("meta")}} puede ser usado para configurar una política, por ejemplo: <code>&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';"&gt;</code></p>
+<p>Alternativamente, el elemento {{HTMLElement("meta")}} puede ser usado para configurar una política, por ejemplo: <code>&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';"&gt;</code></p>
 
 <h2 id="Amenazas">Amenazas</h2>
 
 <h3 id="Mitigando_el_cross_site_scripting">Mitigando el cross site scripting</h3>
 
-<p>El principal objetivo del CSP es mitigar y reportar ataques XSS. Los ataques XSS se aprovechan de la confianza del navegador en el contenido que recibe del servidor. El navegador de la víctima ejecutará los scripts maliciosos porque confía en la fuente del contenido, aun cuando dicho contenido no provenga  de donde se supone.</p>
+<p>El principal objetivo del CSP es mitigar y reportar ataques XSS. Los ataques XSS se aprovechan de la confianza del navegador en el contenido que recibe del servidor. El navegador de la víctima ejecutará los scripts maliciosos porque confía en la fuente del contenido, aun cuando dicho contenido no provenga  de donde se supone.</p>
 
-<p>CSP hace posible que los  administradores de servidores reduzcan o eliminen las posibilidades de ocurrencia de XSS mediante la especificación de dominios que el navegador considerará como fuentes válidas de scripts ejecutables. Un navegador compatible con  CSP solo ejecutará scripts de los archivos fuentes especificados en esa lista blanca de dominios, ignorando completamente cualquier otro script (incluyendo los scripts inline y los atributos de HTML de manejo de eventos).</p>
+<p>CSP hace posible que los  administradores de servidores reduzcan o eliminen las posibilidades de ocurrencia de XSS mediante la especificación de dominios que el navegador considerará como fuentes válidas de scripts ejecutables. Un navegador compatible con  CSP solo ejecutará scripts de los archivos fuentes especificados en esa lista blanca de dominios, ignorando completamente cualquier otro script (incluyendo los scripts inline y los atributos de HTML de manejo de eventos).</p>
 
 <p>Como medida extrema de protección, los sitios que nunca requieran ejecutar scripts, <span class="tlid-translation translation"><span title="">pueden optar por rechazar globalmente la ejecución de scripts.</span></span></p>
 
 <h3 id="Mitigando_los_ataques_de_análisis_de_paquetes_packet_sniffing_attacks">Mitigando los ataques de análisis de paquetes <em>(packet sniffing attacks)</em></h3>
 
-<p><span class="tlid-translation translation"><span title="">Además de restringir los dominios desde los cuales se puede cargar el contenido, el servidor puede especificar qué protocolos se pueden usar;</span> <span title="">por ejemplo (e idealmente, desde un punto de vista de seguridad), un servidor puede especificar que todo el contenido debe cargarse utilizando HTTPS.</span> <span title="">Una estrategia completa de seguridad en la transmisión de datos incluye no solo aplicar HTTPS para la transferencia de datos, sino también marcar todas las cookies con el indicador de seguridad y proporcionar redirecciones automáticas desde las páginas HTTP a sus homólogas HTTPS.</span> <span title="">Los sitios también pueden usar la cabecera HTTP      {{HTTPHeader ("Strict-Transport-Security")}} para garantizar que los navegadores se conecten a ellos solo a través de un canal cifrado.</span></span></p>
+<p><span class="tlid-translation translation"><span title="">Además de restringir los dominios desde los cuales se puede cargar el contenido, el servidor puede especificar qué protocolos se pueden usar;</span> <span title="">por ejemplo (e idealmente, desde un punto de vista de seguridad), un servidor puede especificar que todo el contenido debe cargarse utilizando HTTPS.</span> <span title="">Una estrategia completa de seguridad en la transmisión de datos incluye no solo aplicar HTTPS para la transferencia de datos, sino también marcar todas las cookies con el indicador de seguridad y proporcionar redirecciones automáticas desde las páginas HTTP a sus homólogas HTTPS.</span> <span title="">Los sitios también pueden usar la cabecera HTTP      {{HTTPHeader ("Strict-Transport-Security")}} para garantizar que los navegadores se conecten a ellos solo a través de un canal cifrado.</span></span></p>
 
 <h2 id="Utilizando_CSP">Utilizando CSP</h2>
 
@@ -35,7 +35,7 @@ translation_of: Web/HTTP/CSP
 
 <h3 id="Especificando_una_política">Especificando una política</h3>
 
-<p>Para especificar una política, se puede utilizar la cabecera HTTP      {{HTTPHeader("Content-Security-Policy")}}  de la siguiente manera:</p>
+<p>Para especificar una política, se puede utilizar la cabecera HTTP      {{HTTPHeader("Content-Security-Policy")}}  de la siguiente manera:</p>
 
 <pre class="syntaxbox">Content-Security-Policy: <em>política</em></pre>
 
@@ -43,7 +43,7 @@ translation_of: Web/HTTP/CSP
 
 <h3 id="Describiendo_una_política">Describiendo una política</h3>
 
-<p><span class="tlid-translation translation"><span title="">Una política se describe utilizando una serie de directivas de políticas, cada una de las cuales describe la política para un determinado tipo de recurso o área de política.</span> <span title="">Una política debe incluir una directiva de políticas {{CSP ("default-src")}}, que es una alternativa para otros tipos de recursos cuando no tienen políticas propias (para obtener una lista completa, consulte la descripción de la directiva </span></span>{{CSP("default-src")}}<span class="tlid-translation translation"><span title=""> ).</span> <span title="">Una política debe incluir una directiva   {{CSP ("default-src")}} o {{CSP ("script-src")}} para evitar la ejecución de scripts en línea, así como bloquear el uso de </span></span><code>eval()</code><span class="tlid-translation translation"><span title="">.</span> <span title="">Una política debe incluir una directiva {{CSP ("default-src")}} o {{CSP ("style-src")}} para restringir la aplicación de estilos en línea desde un elemento {{HTMLElement ("style")}}</span><span title="">} o un atributo </span></span><code>style</code><span class="tlid-translation translation"><span title="">.</span></span></p>
+<p><span class="tlid-translation translation"><span title="">Una política se describe utilizando una serie de directivas de políticas, cada una de las cuales describe la política para un determinado tipo de recurso o área de política.</span> <span title="">Una política debe incluir una directiva de políticas {{CSP ("default-src")}}, que es una alternativa para otros tipos de recursos cuando no tienen políticas propias (para obtener una lista completa, consulte la descripción de la directiva </span></span>{{CSP("default-src")}}<span class="tlid-translation translation"><span title=""> ).</span> <span title="">Una política debe incluir una directiva   {{CSP ("default-src")}} o {{CSP ("script-src")}} para evitar la ejecución de scripts en línea, así como bloquear el uso de </span></span><code>eval()</code><span class="tlid-translation translation"><span title="">.</span> <span title="">Una política debe incluir una directiva {{CSP ("default-src")}} o {{CSP ("style-src")}} para restringir la aplicación de estilos en línea desde un elemento {{HTMLElement ("style")}}</span><span title="">} o un atributo </span></span><code>style</code><span class="tlid-translation translation"><span title="">.</span></span></p>
 
 <h2 id="Ejemplos_Casos_de_usos_frecuentes">Ejemplos: Casos de usos frecuentes</h2>
 
@@ -71,7 +71,7 @@ translation_of: Web/HTTP/CSP
 
 <ul>
  <li><span title="">Las imágenes pueden cargarse desde cualquier lugar (tenga en cuenta el comodín "*").</span></li>
- <li><span class="tlid-translation translation"><span title="">Los archivos de medios solo están permitidos desde media1.com y media2.com (y no desde los subdominios de esos sitios).</span>     </span></li>
+ <li><span class="tlid-translation translation"><span title="">Los archivos de medios solo están permitidos desde media1.com y media2.com (y no desde los subdominios de esos sitios).</span>     </span></li>
  <li><span class="tlid-translation translation"><span title="">El script ejecutable solo está permitido desde userscripts.example.com.</span></span></li>
 </ul>
 

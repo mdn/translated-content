@@ -1,21 +1,13 @@
 ---
 title: Build the brick field
 slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}
 
-这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 9 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson09.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html)完成本课后，您可以找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 9 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson09.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html)完成本课后，您可以找到源代码。
 
 建立砖块比将单个对象添加到屏幕要复杂一点，尽管使用 Phaser 还是比纯 JavaScript 更容易。我们来探讨如何创建一组砖块，并使用循环在屏幕上打印。
 
@@ -164,6 +156,6 @@ function initBricks() {
 
 ## 下一步
 
-有些东西丢失了 球不经停，经过砖块 - 我们需要适当的[碰撞检测](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Collision_detection)。
+有些东西丢失了 球不经停，经过砖块 - 我们需要适当的[碰撞检测](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Collision_detection)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}

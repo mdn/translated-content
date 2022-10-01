@@ -1,17 +1,8 @@
 ---
 title: ウェブ開発を学ぶ
 slug: Learn
-tags:
-  - 初心者
-  - CSS
-  - HTML
-  - 索引
-  - Intro
-  - Landing
-  - 学習
-  - ウェブ
-translation_of: Learn
 ---
+
 {{LearnSidebar}}
 
 MDN 学習エリアへようこそ。この一連の記事では、ウェブ開発が全くの初心者にとって、シンプルなウェブサイトのコーディングを始めるのに必要な全てを提供することを目標とします。

@@ -5,7 +5,7 @@ translation_of: Web/API/MediaStream_Recording_API
 ---
 <div>{{DefaultAPISidebar("MediaStream Recording")}}</div>
 
-<p><span class="seoSummary"><strong>MediaStream Recording API</strong>, иногда просто называемый <em>Media Recording API</em> или<em> MediaRecorder API</em>, тесно связан с <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a> и <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>. MediaStream Recording API делает возможным захват данных, сгенерированных {{domxref("MediaStream")}} или {{domxref("HTMLMediaElement")}} объектом для анализа, обработки или сохранения на дисковое пространство. С ним так же удивительно легко работать.</span></p>
+<p><strong>MediaStream Recording API</strong>, иногда просто называемый <em>Media Recording API</em> или<em> MediaRecorder API</em>, тесно связан с <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a> и <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>. MediaStream Recording API делает возможным захват данных, сгенерированных {{domxref("MediaStream")}} или {{domxref("HTMLMediaElement")}} объектом для анализа, обработки или сохранения на дисковое пространство. С ним так же удивительно легко работать.</p>
 
 <h2 id="Базовая_концепция">Базовая концепция</h2>
 
@@ -18,14 +18,14 @@ translation_of: Web/API/MediaStream_Recording_API
  <li>Как только исходная медиа запустится и будет достигнута точка, где вы будете готовы записать видео, вызовите {{domxref("MediaRecorder.start()")}} для начала записи.</li>
  <li>Ваш {{event("dataavailable")}} обработчик будет вызываться каждый раз, как появляются данные, готовые для выполнения вами над ними ожидаемых операций; событие имеет дата-атрибут, чьё значение {{domxref("Blob")}}, который содержит медиа-данные. Вы можете принудительно вызвать <code>dataavailable</code> событие, доставляя тем самым последние данные, чтобы вы могли отфильтровать их, сохранить и тд.</li>
  <li>Запись останавливается автоматически, когда исходное медиа закончит проигрываться.</li>
- <li>Вы можете остановить запись в любое время, вызвав  {{domxref("MediaRecorder.stop()")}}.</li>
+ <li>Вы можете остановить запись в любое время, вызвав  {{domxref("MediaRecorder.stop()")}}.</li>
 </ol>
 
 <p>Вы можете так же использовать свойства MediaRecorder объекта для определения состояния процесса записи и его {{domxref("MediaRecorder.pause", "pause()")}} и {{domxref("MediaRecorder.resume", "resume()")}} методы, чтобы остановить и возобновить запись исходной медиа.</p>
 
 <p>Если вам нужно или вы хотите проверить, поддерживается ли определённый MIME-тип, это так же возможно. Просто вызовите {{domxref("MediaRecorder.isMimeTypeSupported()")}}.</p>
 
-<p>Чтобы узнать больше о MediaStream Recording API, смотрите <a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</a>, который показывает, как использовать API для записи аудио клипов. Другая статья, <a href="/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element">Recording a media element</a>, описывает, как получить поток из  {{HTMLElement("audio")}} или {{HTMLElement("video")}} элементов и использовать захватывающие потоки (в этом случае, запись и сохранение их на локальный диск).</p>
+<p>Чтобы узнать больше о MediaStream Recording API, смотрите <a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</a>, который показывает, как использовать API для записи аудио клипов. Другая статья, <a href="/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element">Recording a media element</a>, описывает, как получить поток из  {{HTMLElement("audio")}} или {{HTMLElement("video")}} элементов и использовать захватывающие потоки (в этом случае, запись и сохранение их на локальный диск).</p>
 
 <h2 id="Ссылки">Ссылки</h2>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/MediaStream_Recording_API
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="table table-striped">
+<table>
   <thead>
     <tr>
       <th>Specification</th>

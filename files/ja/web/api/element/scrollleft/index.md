@@ -1,14 +1,8 @@
 ---
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
-tags:
-  - API
-  - CSSOM View
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.scrollLeft
-translation_of: Web/API/Element/scrollLeft
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.scrollLeft`** プロパティは、要素の内容が左端からスクロールするピクセル数を取得または設定します。
@@ -93,6 +87,6 @@ button.onclick = function () {
 
 ## 関連情報
 
-- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
+- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx>)
 - {{domxref("Element.scrollTop")}}
 - {{domxref("Element.scrollTo()")}}

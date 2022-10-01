@@ -1,17 +1,8 @@
 ---
 title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
-tags:
-  - API
-  - 混色
-  - Canvas
-  - CanvasRenderingContext2D
-  - Compositing
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation
-translation_of: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.globalCompositeOperation`** はキャンバス 2D API のプロパティで、新たな図形を描くときに適用する合成演算の種類を定めます。

@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML
 ---
+
 {{HTMLSidebar}}
 
 **HTML** signifie « _HyperText Markup Language_ » qu'on peut traduire par « langage de balises pour l'hypertexte ». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page ([CSS](/fr/docs/Web/CSS)) et/ou ses fonctionnalités interactives ([JavaScript](/fr/docs/Web/JavaScript)).
@@ -65,7 +66,7 @@ La section [Apprendre HTML](/fr/docs/Learn/HTML) contient plusieurs modules pour
 ## Références
 
 - [Référence HTML](/fr/docs/Web/HTML/Reference)
-  - : HTML est un langage décrivant la structure et le contenu sémantique d'un document web. Il est constitué d'**éléments**, chacun pouvant être paramétré grâce à différents **attributs**. Les documents HTML sont connectés à d'autres via des [liens](/en-US/docs/Web/HTML/Link_types)
+  - : HTML est un langage décrivant la structure et le contenu sémantique d'un document web. Il est constitué d'**éléments**, chacun pouvant être paramétré grâce à différents **attributs**. Les documents HTML sont connectés à d'autres via des [liens](/fr/docs/Web/HTML/Link_types)
 - [Référence des éléments HTML](/fr/docs/Web/HTML/Element)
   - : Cette page liste les différents éléments HTML.
 - [Liste des attributs HTML](/fr/docs/Web/HTML/Attributes)

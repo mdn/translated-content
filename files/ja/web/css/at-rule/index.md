@@ -1,15 +1,11 @@
 ---
 title: アットルール
 slug: Web/CSS/At-rule
-tags:
-  - CSS
-  - ガイド
-  - Reference
-translation_of: Web/CSS/At-rule
 ---
+
 {{CSSRef}}
 
-**アットルール**は [CSS 文](/ja/docs/Web/CSS/Syntax#css_statements)のうち、CSS の動作を既定するものです。アットルールはアットマーク、'`@`' (`U+0040 COMMERCIAL AT`) で始まり、それに続く識別子から、次のセミコロン、 '`;`' (`U+003B SEMICOLON`) もしくは次の [CSS ブロック](/ja/docs/Web/CSS/Syntax#css_declarations_blocks)のどちらかが現れるまでの部分からなります。
+**アットルール**は [CSS の文](/ja/docs/Web/CSS/Syntax#css_statements)のうち、CSS の動作を既定するものです。アットルールはアットマーク、'`@`' (`U+0040 COMMERCIAL AT`) で始まり、それに続く識別子から、次のセミコロン、 '`;`' (`U+003B SEMICOLON`) もしくは次の [CSS ブロック](/ja/docs/Web/CSS/Syntax#css_declarations_blocks)のどちらかが現れるまでの部分からなります。
 
 ## 構文
 
@@ -49,13 +45,13 @@ translation_of: Web/CSS/At-rule
 - {{cssxref("@counter-style")}} — 定義済みのスタイルにはない、独自のカウンタースタイルを定義します。_(勧告候補段階ですが、現時点で Gecko しか実装していません)_
 - {{cssxref("@font-feature-values")}} (および `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset`, `@character-variant`) — OpenType の各機能を有効化するために、 {{cssxref("font-variant-alternates")}} の一般名を定義します。_(勧告候補段階ですが、現時点で Gecko しか実装していません)_
 - {{cssxref("@property")}} {{experimental_inline}} — カスタムプロパティと変数に関して指定します。 _(現在は草稿段階)_
-- {{cssxref("@color-profile")}} {{experimental_inline}} — {{cssxref("color_value/color()", "color()")}} 関数で使用するカラープロファイルを定義できます。
+- {{cssxref("@color-profile")}} {{experimental_inline}} — {{cssxref("color_value/color", "color()")}} 関数で使用するカラープロファイルを定義できます。
 
 ## 条件付きグループルール
 
 プロパティの値と同様に、アットルールはそれぞれ異なる構文を持っています。しかし、いくつかのアットルールは **条件付きグループルール**という特別なカテゴリーに分類されます。これらの文は構文が共通しており、どれも*内側の文*—*規則セット*または*内側のアットルール*を入れることができます。さらに言えば、それらはすべて共通の意味合いがあります。 — すべては常に**真**か**偽**かで判定される何らかの条件と結びついています。条件が**真**であれば、条件付きグループルール内の文全部が適用されます。
 
-条件付きグループルールは  [CSS Conditionals Level 3](https://dev.w3.org/csswg/css3-conditional/) で定義されており、以下の規則があります。
+条件付きグループルールは  [CSS Conditionals Level 3](https://drafts.csswg.org/css-conditional-3/) で定義されており、以下の規則があります。
 
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
@@ -82,11 +78,24 @@ translation_of: Web/CSS/At-rule
 
 ## 仕様書
 
-| 仕様書                                                  | 状態                          | 備考                          |
-| ------------------------------------------------------- | ----------------------------- | ----------------------------- |
-| {{SpecName('CSS3 Conditional')}}                        | {{Spec2('CSS3 Conditional')}} | 初回定義                      |
-| {{SpecName('Compat', '#css-at-rules', 'CSS At-rules')}} | {{Spec2('Compat')}}           | `@-webkit-keyframes` を標準化 |
+{{Specifications}}
 
 ## 関連情報
 
-- {{CSS_key_concepts}}
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 値
+    - [初期値](/ja/docs/Web/CSS/initial_value)
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [使用値](/ja/docs/Web/CSS/used_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Replaced_element)

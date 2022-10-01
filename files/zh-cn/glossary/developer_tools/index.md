@@ -1,11 +1,8 @@
 ---
 title: 开发者工具
 slug: Glossary/Developer_Tools
-tags:
-  - 开发者工具
-  - 术语表
-translation_of: Glossary/Developer_Tools
 ---
+
 开发者工具 (或“开发工具”，或简称“DevTools”) 让开发者能够开发、测试和{{Glossary("调试")}}软件。
 
 目前的浏览器提供集成开发者工具，可用于审查网页，还让用户审查和调试页面的{{Glossary("HTML")}}、{{Glossary("CSS")}}和{{Glossary("JavaScript")}},，检查网络流量，测试网页性能等等。
@@ -14,7 +11,7 @@ translation_of: Glossary/Developer_Tools
 
 ### 常识
 
-- {{interwiki("wikipedia", "Web development tools", "Web development tools")}} on Wikipedia
+- [Web development tools](https://zh.wikipedia.org/wiki/Web_development_tools) on Wikipedia
 
 ### 技术参考
 

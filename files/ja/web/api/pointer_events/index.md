@@ -1,16 +1,8 @@
 ---
 title: ポインターイベント
 slug: Web/API/Pointer_events
-tags:
-  - API
-  - インターフェイス
-  - Landing
-  - 概要
-  - ポインターイベント
-  - ウェブ
-  - イベント
-translation_of: Web/API/Pointer_events
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 今日のウェブコンテンツの多くは、ユーザーのポインティング機器がマウスであることを前提としています。しかし、多くの端末がペンやスタイラス、タッチ面のような他の種類のポインティング入力機器に対応しているので、既存のポインティング機器のイベントモデルへの拡張が必要であり、そして[ポインターイベント](#ポインターイベント)はその必要性に応じます。
@@ -134,7 +126,7 @@ translation_of: Web/API/Pointer_events
         {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}
       </td>
       <td>
-        ポインターが座標を変更したときに発生します。 また、ポインターの状態の変化がこれ以外のイベントで報告できない場合もこのイベントが使われます。
+        ポインターが座標を変更したときに発生します。 また、ポインターの状態の変化がこれ以外のイベントで報告できない場合もこのイベントが使われます。
       </td>
     </tr>
     <tr>

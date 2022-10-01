@@ -1,8 +1,8 @@
 ---
 title: Firefox 33 for developers
 slug: Mozilla/Firefox/Releases/33
-translation_of: Mozilla/Firefox/Releases/33
 ---
+
 {{FirefoxSidebar}}
 
 ## 普通 Web 开发者应该注意的变化

@@ -1,8 +1,8 @@
 ---
 title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toString
 ---
+
 {{JSRef}}
 
 字符串对象的 **`toString()`** 方法返回一个字符串，表示指定的字符串。

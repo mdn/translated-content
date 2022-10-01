@@ -1,23 +1,8 @@
 ---
 title: DOMPoint.z
 slug: Web/API/DOMPoint/z
-page-type: web-api-instance-property
-tags:
-  - API
-  - Coordinate
-  - DOM
-  - DOMPoint
-  - Depth
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Position
-  - Property
-  - Reference
-  - z
-browser-compat: api.DOMPoint.z
-translation_of: Web/API/DOMPoint/z
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** インターフェースの **`z`** プロパティは、空間内の点の奥行き座標を指定します。

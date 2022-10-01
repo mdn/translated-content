@@ -9,7 +9,7 @@ translation_of: Web/API/CanvasRenderingContext2D/closePath
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.closePath()</code></strong> - метод из Canvas 2D API, добавляет в путь линию от текущей до первоначальной точки под пути и закрывает сам путь (давая возможность инициализировать новый). Если путь пустой или содержит одну точку, этот метод ничего не делает.</p>
+<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.closePath()</code></strong> - метод из Canvas 2D API, добавляет в путь линию от текущей до первоначальной точки под пути и закрывает сам путь (давая возможность инициализировать новый). Если путь пустой или содержит одну точку, этот метод ничего не делает.</p>
 
 <p>Сама функция ничего не рисует. Он лишь позволяет отрисовывать путь таким методам, как {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} и {{domxref("CanvasRenderingContext2D.fill()", "fill()")}}.</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/CanvasRenderingContext2D/closePath
 
 <h3 id="Замкнутый_треугольник">Замкнутый треугольник</h3>
 
-<p>В этом примере создаются две первые линии  сторон треугольника с использованием метода <code>lineTo()</code>. После чего метод <code>closePath()</code> заканчивает рисование треугольника, автоматически соединяя первую и последнюю точки фигуры (в данном случае треугольника).</p>
+<p>В этом примере создаются две первые линии  сторон треугольника с использованием метода <code>lineTo()</code>. После чего метод <code>closePath()</code> заканчивает рисование треугольника, автоматически соединяя первую и последнюю точки фигуры (в данном случае треугольника).</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/CanvasRenderingContext2D/closePath
 
 <p>Точки треугольника находятся в координатах (20, 150), (120, 20),и (220, 150).</p>
 
-<pre class="brush: js; highlight:[8]">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -52,8 +52,8 @@ ctx.stroke();
 
 <p>Этот пример рисует смайлик, состоящий из трёх не соединённых дуг (под путей).</p>
 
-<div class="blockIndicator note">
-<p>Хотя <code>closePath()</code> вызывается после создания всех дуг, закрывается только последняя.</p>
+<div class="note">
+<p>Хотя <code>closePath()</code> вызывается после создания всех дуг, закрывается только последняя.</p>
 </div>
 
 <h4 id="HTML_2">HTML</h4>
@@ -65,7 +65,7 @@ ctx.stroke();
 
 <p>Первые две дуги создают глаза, последняя создаёт рот.</p>
 
-<pre class="brush: js; highlight:[10]">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();

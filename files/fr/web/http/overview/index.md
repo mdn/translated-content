@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTTP/Overview
 original_slug: Web/HTTP/Aperçu
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** est un {{glossary("protocole")}} qui permet de récupérer des ressources telles que des documents HTML. Il est à la base de tout échange de données sur le Web. C'est un protocole de type client-serveur, ce qui signifie que les requêtes sont initiées par le destinataire (qui est généralement un navigateur web). Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus.
@@ -71,7 +72,7 @@ HTTP est sans état : il n'y a pas de lien entre deux requêtes qui sont effectu
 
 ### HTTP et les connexions
 
-Une connexion est contrôlée au niveau de la couche transport et est donc fondamentalement hors de portée d'HTTP. Bien que HTTP ne nécessite pas un protocole de transport basé sur une connexion. Le protocole doit être fiable ou empêcher la perte de messages (donc gérer au minimum la remontée des erreurs). Parmi les deux protocoles de transport les plus courants sur Internet, TCP est fiable et UDP ne l'est pas. HTTP s'appuie sur le standard TCP, qui est basé sur la connexion, même si une connexion n'est pas toujours nécessaire.
+Une connexion est contrôlée au niveau de la couche transport et est donc fondamentalement hors de portée d'HTTP. Bien que HTTP ne nécessite pas un protocole de transport basé sur une connexion, le protocole doit être fiable ou empêcher la perte de messages (donc gérer au minimum la remontée des erreurs). Parmi les deux protocoles de transport les plus courants sur Internet, TCP est fiable et UDP ne l'est pas. HTTP s'appuie sur le standard TCP, qui est basé sur la connexion, même si une connexion n'est pas toujours nécessaire.
 
 HTTP/1.0 ouvre une connexion TCP pour chaque échange requête/réponse, ce qui introduit deux défauts majeur : l'ouverture d'une connexion nécessite plusieurs allers-retours, ce qui est lent mais devient plus efficace lorsque plusieurs messages sont envoyés et envoyés régulièrement. On dit aussi que les connexions qui restent _chaudes_ sont plus efficaces que les communications _froides._
 

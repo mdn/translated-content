@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/size
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/size
 ---
+
 {{JSRef}}
 
 L'accesseur **`size`** est une propriété renvoyant le nombre d'éléments d'un objet {{jsxref("Map")}}.

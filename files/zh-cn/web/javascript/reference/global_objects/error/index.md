@@ -1,12 +1,8 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Error
-  - Whoops!
-  - 参考
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
+
 {{JSRef}}
 
 当运行时错误产生时，`Error` 对象会被抛出。`Error` 对象也可用于用户自定义的异常的基础对象。下面列出了各种内建的标准错误类型。
@@ -146,7 +142,7 @@ try {
 }
 ```
 
-> **备注：** 如果你在创建一个函数库，你应该使用错误原因来区分不同的错误——而不是要求你的函数库的使用者来解析错误消息。相关的示例，请参见[提供错误原因](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause)。
+> **备注：** 如果你在创建一个函数库，你应该使用错误原因来区分不同的错误——而不是要求你的函数库的使用者来解析错误消息。相关的示例，请参见[提供错误原因](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause)。
 
 [自定义错误类型](#自定义错误类型)也可以使用 [`cause`](#error.prototype.cause) 属性，前提是通过 `super()` 调用子类的构造函数时传递 `options` 参数。
 

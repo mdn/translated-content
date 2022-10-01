@@ -1,15 +1,8 @@
 ---
 title: 浮動ブロックの重ね合わせ
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - リファレンス
-  - Understanding_CSS_z-index
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 ---
+
 {{CSSRef}}
 
 浮動 (floated) ブロックについては、重ね合わせ順序が少し異なります。浮動ブロックは位置指定なしのブロックと位置指定ブロックの間に配置されます。
@@ -56,7 +49,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
   <b>DIV #5</b><br />position: absolute;</div>
 
 <div id="rel1">
-  <b>DIV #6</b><br />position: relative;</div>
+  <b>DIV #6</b><br />position: relative;</div>
 ```
 
 ### CSS
@@ -118,11 +111,11 @@ b {
 }
 
 #rel1 {
-  position: relative;
-  border: 1px dashed #996;
-  background-color: #cff;
-  margin: 0px 10px 0px 10px;
-  text-align: left;
+  position: relative;
+  border: 1px dashed #996;
+  background-color: #cff;
+  margin: 0px 10px 0px 10px;
+  text-align: left;
 }
 ```
 

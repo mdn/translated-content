@@ -3,6 +3,7 @@ title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 translation_of: Web/API/EventTarget/addEventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 \>La méthode **`addEventListener()`** de {{domxref("EventTarget")}} attache une fonction à appeler chaque fois que l'évènement spécifié est envoyé à la cible.
@@ -621,7 +622,7 @@ La méthode `attachEvent()` peut être couplée avec l'évènement `onresize` po
 
 ### Prothèse d'émulation (_polyfill_)
 
-Vous pouvez contourner le fait que `addEventListener()`, `removeEventListener()`, {{domxref("Event.preventDefault()")}} et {{domxref("Event.stopPropagation()")}} ne sont pas pris en charge par IE 8 en utilisant le code suivant au début de votre script. Le code prend en charge l'utilisation de `handleEvent()`, et aussi l'évènement {{event("DOMContentLoaded")}}.
+Vous pouvez contourner le fait que `addEventListener()`, `removeEventListener()`, {{domxref("Event.preventDefault()")}} et {{domxref("Event.stopPropagation()")}} ne sont pas pris en charge par IE 8 en utilisant le code suivant au début de votre script. Le code prend en charge l'utilisation de `handleEvent()`, et aussi l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event).
 
 > **Note :** `useCapture` n'est pas pris en charge, du fait qu'IE 8 n'a aucune méthode alternative. Le code suivant ajoute seulement la prise en charge d'IE 8. Cette émulation pour IE 8 fonctionne uniquement en mode standard : une déclaration `doctype` est requise.
 
@@ -801,15 +802,11 @@ Vous n'avez pas besoin de vous inquiéter de la valeur de `passive` pour l'évè
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}         | {{Spec2("DOM WHATWG")}} |                      |
-| {{SpecName("DOM4", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}                 | {{Spec2("DOM4")}}         |                      |
-| {{SpecName("DOM2 Events", "#Events-EventTarget-addEventListener", "EventTarget.addEventListener()")}} | {{Spec2("DOM2 Events")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventTarget.addEventListener", 3)}}
+{{Compat}}
 
 ## Voir aussi
 

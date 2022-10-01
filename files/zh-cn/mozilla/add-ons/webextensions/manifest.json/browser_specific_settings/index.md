@@ -1,11 +1,8 @@
 ---
 title: applications
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
-tags:
-  - 插件
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 ---
+
 {{AddonSidebar}}
 
 > **备注：** 注意这个 key 不被 Blink-based 浏览器 (Google Chrome 和 Opera) 支持。如果你在插件中包含了这个 key，当在这些浏览器中调用时虽然能用但是会显示警告。
@@ -20,10 +17,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
       <th scope="row">强制性</th>
       <td>
         通常不做强制性要求（详细参见<a
-          href="/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"
+          href="/zh-CN/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"
           >When do you need an Add-on ID</a
         ><a
-          href="/en-US/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key"
+          href="/zh-CN/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key"
           >?</a
         >)。在 Firefox 48 版本之前为强制要求。
       </td>

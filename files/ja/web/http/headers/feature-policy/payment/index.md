@@ -1,18 +1,8 @@
 ---
 title: 'Feature-Policy: payment'
 slug: Web/HTTP/Headers/Feature-Policy/payment
-tags:
-  - ディレクティブ
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - Payment Request API
-  - Payments API
-  - リファレンス
-  - 実験的
-browser-compat: http.headers.Feature-Policy.payment
-translation_of: Web/HTTP/Headers/Feature-Policy/payment
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーフィールドにおける `payment` ディレクティブは、現在の文書が [Payment Request API](/ja/docs/Web/API/Payment_Request_API) を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{DOMxRef("PaymentRequest()")}} コンストラクターで `SyntaxError` の {{domxref("DOMException")}} が発生します。

@@ -1,15 +1,8 @@
 ---
 title: justify-self
 slug: Web/CSS/justify-self
-tags:
-  - CSS
-  - CSS ボックス配置
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.justify-self
-translation_of: Web/CSS/justify-self
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`justify-self`** プロパティは、配置コンテナーの適切な軸に沿って内部でボックスの位置合わせをする方法を設定します。

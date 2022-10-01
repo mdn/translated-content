@@ -29,16 +29,16 @@ resize: unset;
 
 <dl>
  <dt><code>none</code></dt>
- <dd>El elemento no efrece método para que el usuario controle el cambio de tamaño del elemento.</dd>
+ <dd>El elemento no efrece método para que el usuario controle el cambio de tamaño del elemento.</dd>
  <dt><code>both</code></dt>
- <dd>El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento el cual puede ser tanto horizontal como verticalmente.</dd>
+ <dd>El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento el cual puede ser tanto horizontal como verticalmente.</dd>
  <dt><code>horizontal</code></dt>
- <dd>El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo horintalmente.</dd>
+ <dd>El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo horintalmente.</dd>
  <dt><code>vertical</code></dt>
- <dd>El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo verticalmente.</dd>
+ <dd>El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo verticalmente.</dd>
 </dl>
 
-<div class="note"><strong>Nota:</strong> <code>resize</code> no aplica abloques en los cuales la propiedad {{cssxref("overflow")}} es configurada como <code>visible</code>.</div>
+<div class="note"><strong>Nota:</strong> <code>resize</code> no aplica abloques en los cuales la propiedad {{cssxref("overflow")}} es configurada como <code>visible</code>.</div>
 
 <h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
@@ -50,10 +50,10 @@ resize: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<p>Por defecto, los elementos {{HTMLElement("textarea")}} permiten cambiar el tamaño en {{gecko("2.0")}} (Firefox 4). Se puede anular este comportamiento con el CSS mostrado abajo:</p>
+<p>Por defecto, los elementos {{HTMLElement("textarea")}} permiten cambiar el tamaño en {{gecko("2.0")}} (Firefox 4). Se puede anular este comportamiento con el CSS mostrado abajo:</p>
 
 <pre class="brush: css">textarea.example {
-  resize: none; /* disables resizability */
+  resize: none; /* disables resizability */
 }
 </pre>
 
@@ -65,9 +65,9 @@ resize: unset;
 
 <p>{{EmbedLiveSample("Deshabilitando_la_capacidad_de_cambio_de_tamaño_de_areas_de_texto","200","100")}}</p>
 
-<h3 id="Utilizando_resize_con_elementos_arbitrarios">Utilizando resize con elementos arbitrarios</h3>
+<h3 id="Utilizando_resize_con_elementos_arbitrarios">Utilizando resize con elementos arbitrarios</h3>
 
-<p>Se puede utilizar la propiedad resize para permitir a cualquier elemento ofrecer el mecanismo para cambiar de tamaño. En el ejemplo de abajo, un bloque {{HTMLElement("div")}} contiene un parrafo (elemento {{HTMLElement("p")}}) que permite cambiar su tamaño:</p>
+<p>Se puede utilizar la propiedad resize para permitir a cualquier elemento ofrecer el mecanismo para cambiar de tamaño. En el ejemplo de abajo, un bloque {{HTMLElement("div")}} contiene un parrafo (elemento {{HTMLElement("p")}}) que permite cambiar su tamaño:</p>
 
 <h4 id="CSS_2">CSS</h4>
 
@@ -94,7 +94,7 @@ p {
   &lt;p class="resizable"&gt;
     This paragraph is resizable, because the CSS resize property is set to 'both' on this
     element.
-  &lt;/p&gt;
+  &lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
@@ -116,7 +116,7 @@ p {
   <tr>
    <td>{{SpecName('CSS3 Basic UI', '#resize', 'resize')}}</td>
    <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

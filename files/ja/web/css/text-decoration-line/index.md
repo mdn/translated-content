@@ -1,15 +1,8 @@
 ---
 title: text-decoration-line
 slug: Web/CSS/text-decoration-line
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト装飾
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-decoration-line
-translation_of: Web/CSS/text-decoration-line
 ---
+
 {{CSSRef}}
 
 **`text-decoration-line`** は [CSS](/ja/docs/Web/CSS) のプロパティで、下線や上線など、要素内の文字列に使われる装飾の種類を設定します。

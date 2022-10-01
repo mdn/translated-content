@@ -1,16 +1,8 @@
 ---
 title: GLSL シェーダー
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
-tags:
-  - Beginner
-  - GLSL
-  - OpenGL
-  - Shader
-  - texture shader
-  - three.js
-  - vertex shader
-translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
+
 {{GamesSidebar}}
 
 シェーダーは、 C と同様の構文を持つ特別な OpenGL シェーディング言語である GLSL (OpenGL Shading Language) を使用します。 GLSL はグラフィックスパイプラインによって直接実行されます。[様々な種類のシェーダー](https://www.khronos.org/opengl/wiki/Shader)がありますが、ウェブ上のグラフィックを作成するのに良く使用されるのは、頂点 (バーテックス) シェーダーとフラグメント (ピクセル) シェーダーの 2 種類です。 頂点シェーダーは、形状の位置を 3D 描画座標に変換します。 フラグメントシェーダーは、形状の色やその他の属性のレンダリングを計算します。
@@ -132,9 +124,9 @@ void main() {
 次に、 [`shaderMaterial`](https://threejs.org/docs/#Reference/Materials/ShaderMaterial) を作成します。
 
 ```js
-var shaderMaterial = new THREE.ShaderMaterial( {
-  vertexShader: document.getElementById( 'vertexShader' ).textContent,
-  fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+var shaderMaterial = new THREE.ShaderMaterial({
+  vertexShader: document.getElementById('vertexShader').textContent,
+  fragmentShader: document.getElementById('fragmentShader').textContent
 });
 ```
 
@@ -190,9 +182,9 @@ Three.js は、このマテリアルが与えられたメッシュにアタッ�
 
     var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 
-    var shaderMaterial = new THREE.ShaderMaterial( {
-        vertexShader: document.getElementById( 'vertexShader' ).textContent,
-        fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+    var shaderMaterial = new THREE.ShaderMaterial({
+        vertexShader: document.getElementById('vertexShader').textContent,
+        fragmentShader: document.getElementById('fragmentShader').textContent
     });
 
     var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
@@ -217,7 +209,7 @@ canvas { width: 100%; height: 100%; }
 
 {{ EmbedLiveSample('Final_code', '100%', '400') }}
 
-<h2 id="Conclusion" name="Conclusion">結び</h2>
+## まとめ
 
 この記事では、シェーダーの基本について説明しました。 私たちの例ではあまり多くのことをしていませんが、シェーダーでできるクールなことがもっとたくさんあります。 [ShaderToy](http://shadertoy.com/) で本当にクールなものをチェックして、インスピレーションを得て、それらのソースから学んでください。
 

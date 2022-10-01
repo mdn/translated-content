@@ -1,18 +1,8 @@
 ---
 title: Notification.dir
 slug: Web/API/Notification/dir
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - dir
-browser-compat: api.Notification.dir
-translation_of: Web/API/Notification/dir
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `dir` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `dir` オプションで指定されたテキストの書字方向を示します。

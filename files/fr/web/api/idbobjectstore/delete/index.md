@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/delete
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`delete()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, supprime le ou les enregistrements concernés.
@@ -92,13 +93,11 @@ function deleteData() {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-delete-IDBRequest-any-key', 'delete()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

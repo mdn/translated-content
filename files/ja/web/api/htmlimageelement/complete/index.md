@@ -1,19 +1,8 @@
 ---
 title: HTMLImageElement.complete
 slug: Web/API/HTMLImageElement/complete
-page-type: web-api-instance-property
-tags:
-  - API
-  - Fetching
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Loading
-  - プロパティ
-  - リファレンス
-  - complete
-browser-compat: api.HTMLImageElement.complete
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} インターフェイスの **`complete`** プロパティは読み取り専用で、画像の読み込みが完了したかどうかを示す論理値です。

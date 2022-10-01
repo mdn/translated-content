@@ -1,12 +1,8 @@
 ---
 title: AudioBufferSourceNode.buffer
 slug: Web/API/AudioBufferSourceNode/buffer
-tags:
-  - API
-  - AudioBufferSourceNode
-  - Web Audio API
-translation_of: Web/API/AudioBufferSourceNode/buffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioBufferSourceNode") }} 接口的 **`buffer`** 属性提供了重复播放音频的能力，该音频使用 {{domxref("AudioBuffer")}} 作为声音文件的来源。

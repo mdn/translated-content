@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
+
 {{APIRef ("HTML DOM")}}
 La fonction `WindowOrWorkerGlobalScope.atob()` décode une chaîne de données qui a été codée en utilisant le codage en base 64. Vous pouvez utiliser la méthode [`btoa()`](/fr/docs/Web/API/btoa) pour encoder et transmettre des données qui pourraient causer des problèmes de communication, puis les transmettre et utiliser la méthode atob() pour décoder les données . Par exemple, vous pouvez coder, transmettre et décoder des caractères de contrôle tels que les valeurs ASCII 0 à 31.
 
@@ -34,16 +35,11 @@ donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-btoa', 'WindowOrWorkerGlobalScope.atob()')}} | {{Spec2('HTML WHATWG')}} | Méthode déplacée dans le mixin `WindowOrWorkerGlobalScope` dans la spéc la plus récente.                                               |
-| {{SpecName('HTML WHATWG', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}                     | {{Spec2('HTML WHATWG')}} | Pas de changement depuis l'instantané le plus récent {{SpecName("HTML5.1")}}.                                                 |
-| {{SpecName('HTML5.1', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}                         | {{Spec2('HTML5.1')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Pas de changement.                                                                 |
-| {{SpecName("HTML5 W3C", "#dom-windowbase64-atob", "WindowBase64.atob()")}}                     | {{Spec2('HTML5 W3C')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Création de `WindowBase64` (les propriétés se trouvaient sur la cible avant cela). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.atob")}}
+{{Compat}}
 
 ## Voir aussi
 

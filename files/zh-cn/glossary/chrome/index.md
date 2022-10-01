@@ -1,12 +1,8 @@
 ---
 title: Chrome
 slug: Glossary/Chrome
-tags:
-  - Chrome
-  - 术语
-  - 浏览器
-translation_of: Glossary/Chrome
 ---
+
 在浏览器中，chrome 指除了网页本身以外任何可视的部分（例如：{{glossary("UI")}}、工具栏、菜单栏、标签）。不要将这个概念与 {{glossary("Google Chrome")}} 浏览器混淆。
 
 ## 了解更多

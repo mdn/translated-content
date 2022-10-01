@@ -13,6 +13,7 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated
 ---
+
 {{AddonSidebar()}}Lancé si [identificateur dee fragment](https://en.wikipedia.org/wiki/Fragment_identifier) d'une page est modifié. Par exemple, si une page implémente une table des matières à l'aide de fragments et que l'utilisateur clique sur une entrée dans la table des matières, cet événement se déclenche. Tous les événements futurs de ce cadre utiliseront l'URL mise à jour.
 
 ## Syntaxe
@@ -102,7 +103,8 @@ browser.webNavigation.onReferenceFragmentUpdated.addListener(logOnReferenceFragm
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -129,4 +131,4 @@ browser.webNavigation.onReferenceFragmentUpdated.addListener(logOnReferenceFragm
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

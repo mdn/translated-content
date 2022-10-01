@@ -4,6 +4,7 @@ slug: Web/CSS/gradient/repeating-linear-gradient
 translation_of: Web/CSS/gradient/repeating-linear-gradient
 browser-compat: css.types.image.gradient.repeating-linear-gradient
 ---
+
 {{CSSRef}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`repeating-linear-gradient()`** créé une image composée de dégradés qui se répètent. Cela fonctionne de manière similaire aux dégradés linéaires simples représentés par [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient), mais les arrêts de couleurs sont automatiquement répétés, indéfiniment, dans toutes les directions pour couvrir l'ensemble du conteneur. Le résultat de cette fonction est un objet de type [`<gradient>`](/fr/docs/Web/CSS/gradient), un type spécifique d'[image](/fr/docs/Web/CSS/image).
@@ -15,7 +16,6 @@ La longueur du dégradé répété est la distance entre le premier et le dernie
 Comme les autres dégradés, un dégradé linéaire répété [n'a pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description), c'est-à-dire qu'il n'a pas de taille ou de proportions préférées. Sa taille réelle correspondra à la taille de l'élément auquel il est appliqué.
 
 Comme pour les autres dégradés, un dégradé linéaire répété n'est pas une couleur (type [`<color>`](/fr/docs/Web/CSS/color_value)) CSS mais un type particulier d'image (type [`<image>`](/fr/docs/Web/CSS/image). À ce titre, `repeating-linear-gradient()` ne fonctionnera pas pour [`background-color`](/fr/docs/Web/CSS/background-color) et les autres propriétés qui utilisent le type de données [`<color>`](/fr/docs/Web/CSS/color_value).
-
 
 ## Syntaxe
 

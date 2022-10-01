@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
 ---
+
 {{AddonSidebar()}}
 
 Détecte la langue principale du contenu dans un onglet, en utilisant le [détecteur de langue compact](https://github.com/CLD2Owners/cld2) (CLD).
@@ -58,7 +59,7 @@ browser.browserAction.onClicked.addListener(function() {
 });
 ```
 
-Détecter et enregistrer la langue de chaque onglet ouvert lorsque l'utilisateur clique sur une action du navigateur (notez que cet exemple nécessite l [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs") :
+Détecter et enregistrer la langue de chaque onglet ouvert lorsque l'utilisateur clique sur une action du navigateur (notez que cet exemple nécessite l [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions)) :
 
 ```js
 function onLanguageDetected(url, lang) {
@@ -95,7 +96,8 @@ browser.browserAction.onClicked.addListener(function() {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,4 +124,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

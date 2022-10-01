@@ -1,17 +1,8 @@
 ---
 title: 欄レイアウト
 slug: Web/CSS/Layout_cookbook/Column_layouts
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - 段組み
-  - columns
-  - 料理帳
-  - フレックスボックス
-  - グリッド
-translation_of: Web/CSS/Layout_cookbook/Column_layouts
 ---
+
 {{CSSRef}}
 
 いくつかの欄を含むレイアウトを作成する必要があることがよくあります。 CSS にはこれを行うためのいくつかの方法があります。 グリッド、フレックスボックス、段組みのレイアウトのどれを使用するかは、達成しようとしている内容によって異なります。 このレシピでは、これらの選択肢について説明します。

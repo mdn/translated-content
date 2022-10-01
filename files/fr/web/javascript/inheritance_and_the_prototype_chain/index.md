@@ -10,9 +10,10 @@ tags:
 translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 original_slug: Web/JavaScript/Héritage_et_chaîne_de_prototypes
 ---
+
 {{jsSidebar("Advanced")}}
 
-JavaScript peut prêter à confusion losqu'on est habitué à manipuler des langages de programmation manipulant les classes (tels que Java ou C++). En effet, JavaScript est un langage dynamique et ne possède pas de concept de classe à part entière (le mot-clé `class` a certes été ajouté avec ES2015 mais il s'agit uniquement de sucre syntaxique, JavaScript continue de reposer sur l'héritage prototypique).
+JavaScript peut prêter à confusion lorsqu'on est habitué à manipuler des langages de programmation manipulant les classes (tels que Java ou C++). En effet, JavaScript est un langage dynamique et ne possède pas de concept de classe à part entière (le mot-clé `class` a certes été ajouté avec ES2015 mais il s'agit uniquement de sucre syntaxique, JavaScript continue de reposer sur l'héritage prototypique).
 
 En ce qui concerne l'héritage, JavaScript n'utilise qu'une seule structure : les objets. Chaque objet possède une propriété privée qui contient un lien vers un autre objet appelé le **prototype**. Ce prototype possède également son prototype et ainsi de suite, jusqu'à ce qu'un objet ait {{jsxref("null")}} comme prototype. Par définition, `null` ne possède pas de prototype et est ainsi le dernier maillon de la **chaîne de prototype**.
 
@@ -22,7 +23,7 @@ Bien que cette confusion (entre classe et prototype) soit souvent avancée comme
 
 ## Héritage et chaîne de prototype
 
-### Propriété héritées
+### Propriétés héritées
 
 Les objets JavaScript sont des ensembles dynamiques de propriétés (les propriétés directement rattachées à un objet sont appelées **propriétés en propre (_own properties_)**). Les objets JavaScript possèdent également un lien vers un objet qui est leur prototype. Lorsqu'on tente d'accéder aux propriétés d'un objet, la propriété sera recherchée d'abord sur l'objet même, puis sur son prototype, puis sur le prototype du prototype et ainsi de suite jusqu'à ce qu'elle soit trouvée ou que la fin de la chaîne de prototype ait été atteinte.
 
@@ -117,7 +118,7 @@ console.log(p.m()); // 5
 
 Regardons un peu plus en détail ce qui se déroule en arrière-plan.
 
-> **Note :** Pour tous les exempls suivants, nous vous invitons à ouvrir la "console" de votre navigateur pour y copier/coller/éditer les fragments de code. Pour savoir comment lancer cette console, vous pouvez lire la documentation des navigateurs : [Firefox](/fr/docs/Tools), [Chrome](https://developers.google.com/web/tools/chrome-devtools/), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide).
+> **Note :** Pour tous les exemples suivants, nous vous invitons à ouvrir la "console" de votre navigateur pour y copier/coller/éditer les fragments de code. Pour savoir comment lancer cette console, vous pouvez lire la documentation des navigateurs : [Firefox](/fr/docs/Tools), [Chrome](https://developers.google.com/web/tools/chrome-devtools/), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide).
 
 En JavaScript, comme mentionné ci-dessus, les fonctions peuvent avoir des propriétés. Toutes les fonctions ont une propriété spéciale intitulée `prototype`.
 
@@ -211,9 +212,9 @@ Comme nous l'avons vu avant, la valeur de `__proto__` pour `uneInstance` est `fa
 
 Si `uneInstance` ne possède pas cette propriété, le moteur contrôlera la propriété sur la propriété `__proto__` de `uneInstance` (c'est-à-dire `faireUnTruc.prototype`). Si la propriété `__proto__` de `uneInstance` possède la propriété qu'on recherche, ce sera celle-ci qui sera utilisée.
 
-Si `__proto__` de `unTruc` ne possède pas la propriété recherchée, le moteur contrôle la propriété `__proto__` de la propriété `__proto__` de `uneInstance`. Par défaut, la propriété `__proto__` de n'importe quel propriété `prototype`d'une fonction est  `window.Object.prototype`. Ainsi, la propriété `__proto__` de la propriété `__proto__` de  `uneInstance` (c'est-à-dire `__proto__` de `faireUnTruc.prototype` (c'est-à-dire. `Object.prototype`)) est contrôlée pour vérifier si la propriété y est présente.
+Si `__proto__` de `unTruc` ne possède pas la propriété recherchée, le moteur contrôle la propriété `__proto__` de la propriété `__proto__` de `uneInstance`. Par défaut, la propriété `__proto__` de n'importe quelle propriété `prototype` d'une fonction est  `window.Object.prototype`. Ainsi, la propriété `__proto__` de la propriété `__proto__` de  `uneInstance` (c'est-à-dire `__proto__` de `faireUnTruc.prototype` (c'est-à-dire. `Object.prototype`)) est contrôlée pour vérifier si la propriété y est présente.
 
-Si la propriété n'est pas trouvée sur la propriété `__proto__` de la propriété `__proto__` de `uneInstance`, c'est la proriété `__proto__` de la propriété `__proto__` de la propriété `__proto__` de `uneInstance` qui est contrôlée. Cependant il y a un problème car la propriété `__proto__` de la propriété `__proto__` de la propriété `__proto__` de `unTruc` n'existe pas. Autrement dit, toute la chaîne de prototype a été parcouru et on ne peut pas remonter d'un cran sur un autre `__proto__` et le moteur peut conclure que la propriété n'existe pas pour cet objet et renvoyer `undefined`.
+Si la propriété n'est pas trouvée sur la propriété `__proto__` de la propriété `__proto__` de `uneInstance`, c'est la propriété `__proto__` de la propriété `__proto__` de la propriété `__proto__` de `uneInstance` qui est contrôlée. Cependant il y a un problème car la propriété `__proto__` de la propriété `__proto__` de la propriété `__proto__` de `unTruc` n'existe pas. Autrement dit, toute la chaîne de prototype a été parcouru et on ne peut pas remonter d'un cran sur un autre `__proto__` et le moteur peut conclure que la propriété n'existe pas pour cet objet et renvoyer `undefined`.
 
 Regardons ce qui se produit dans la console avec un peu de code :
 
@@ -363,7 +364,7 @@ var carré = new Carré(2);
 
 ### Performance
 
-Le temps de recherche des propriétés sera plus élevé si ces propriétés sont situées plus loin dans la chaîne de prototype. Tenter d'accéder à ces propriétés éloignées pourra avoir un impact négatif sur les performances. De plus, tenter d'accéder à des propriétés inexistantes entraîntera toujours le parcours de l'ensemble de la chaîne de prototype.
+Le temps de recherche des propriétés sera plus élevé si ces propriétés sont situées plus loin dans la chaîne de prototype. Tenter d'accéder à ces propriétés éloignées pourra avoir un impact négatif sur les performances. De plus, tenter d'accéder à des propriétés inexistantes entraînera toujours le parcours de l'ensemble de la chaîne de prototype.
 
 Lorsqu'on parcourt les propriétés d'un objet, **toutes** les propriétés énumérables situées sur la chaîne de prototype seront parcourues. Pour vérifier si un objet possède une propriété en propre plus que via sa chaîne de prototype, on devra utiliser la méthode [`hasOwnProperty()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty) qui est héritée grâce à `Object.prototype`. Prenons un exemple concret avec le cas du graphe traité dans un exemple précédent :
 
@@ -611,13 +612,13 @@ console.log(inst.truc_prop)</pre
 
 JavaScript peut prêter à confusion pour les développeurs utilisant Java ou C++. JavaScript est un langage dynamique et les structures peuvent évoluer lors de l'exécution.
 
-Vous avez peut-être remarqué que la fonction `A` possède une propriété spéciale intitulée `prototype`. Cette propriété spéciale fonctionne avec l'opérateur `new` Elle permet de copier la référence l'objet prototype sur la propriété interne `[[Prototype]]` de la nouvelle instance créée. Ainsi, avec `var a1 = new A()`, Le moteur JavaScript définira `a1.[[Prototype]] = A.prototype`. Quand on tente d'accéder à une des propriétés de l'instance, JavaScript vérifie la présence sur l'instance puis analyse son prototype `[[Prototype]]`. Cela signifie que tout ce qui est défini sur `prototype` est effectivement partagé par l'ensemble des instances et on peut même modifier `prototype` en cours de route afin de modifier indirectement l'ensemble des instances.
+Vous avez peut-être remarqué que la fonction `A` possède une propriété spéciale intitulée `prototype`. Cette propriété spéciale fonctionne avec l'opérateur `new`. Elle permet de copier la référence l'objet prototype sur la propriété interne `[[Prototype]]` de la nouvelle instance créée. Ainsi, avec `var a1 = new A()`, le moteur JavaScript définira `a1.[[Prototype]] = A.prototype`. Quand on tente d'accéder à une des propriétés de l'instance, JavaScript vérifie la présence sur l'instance puis analyse son prototype `[[Prototype]]`. Cela signifie que tout ce qui est défini sur `prototype` est effectivement partagé par l'ensemble des instances et on peut même modifier `prototype` en cours de route afin de modifier indirectement l'ensemble des instances.
 
 Dans l'exemple précédent, si on avait eu `var a1 = new A(); var a2 = new A();` alors `a1.faireUnTruc` aurait fait référence à `Object.getPrototypeOf(a1).faireUntruc` qui est identique à `A.prototype.faireUnTruc`. Autrement dit `Object.getPrototypeOf(a1).faireUnTruc == Object.getPrototypeOf(a2).faireUnTruc == A.prototype.faireUnTruc`.
 
 Autrement dit `prototype` peut être utilisé pour les types et `Object.getPrototypeOf()` pour les instances.
 
-`[[Prototype]]` est analysé de façon récursive. Ainsi, `a1.faireUnTruc` correspondra à chercher `Object.getPrototypeOf(a1).faireUnTruc` puis `Object.getPrototypeOf(Object.getPrototypeOf(a1)).faireUnTruc` etc., jusqu'à ce qu'elle soit trouvée ou que `Object.getPrototypeOf`renvoie `null`.
+`[[Prototype]]` est analysé de façon récursive. Ainsi, `a1.faireUnTruc` correspondra à chercher `Object.getPrototypeOf(a1).faireUnTruc` puis `Object.getPrototypeOf(Object.getPrototypeOf(a1)).faireUnTruc` etc., jusqu'à ce qu'elle soit trouvée ou que `Object.getPrototypeOf` renvoie `null`.
 
 Ainsi, quand on appelle :
 

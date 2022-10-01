@@ -1,9 +1,11 @@
 ---
 title: 键盘导航的 JavaScript 组件
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
-translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 ---
-键盘导航 JavaScript 组件
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
 
 ### 概况
 
@@ -39,7 +41,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
       <td>Yes</td>
       <td>
         No; 必须通过
-        <code><a href="../../../../En/DOM/Element.focus">focus()</a></code>
+        <a href="/zh-CN/docs/Web/API/HTMLElement/focus"><code>focus()</code></a>
         来聚焦该元素。可以在方向键或者其他键的响应里面做。
       </td>
     </tr>
@@ -95,7 +97,7 @@ _Example 1: A simple image-based checkbox widget using tabindex to allow keyboar
 
 针对像菜单、标签面板、树等这些组合控件，父元素应该在 tab 序列里面 (tabindex="0") 而每个后代选择/标签/单元/行应该从 tab 序列里面移除 (tabindex="-1")。用户应该可通过方向键来操控这些后代元素。(关于组件一般预期的键盘支持，可以查看 [DHTML Style Guide](http://access.aol.com/dhtml-style-guide-working-group/).)
 
-下面这个组合菜单的例子展示了这种技术的使用。 一旦键盘 focus 中容器 ul 元素，Javascript 开发人员需要在键盘事件里针对方向键的响应里管理里面元素的 focus 顺序。在组件里管理 focus 的办法，看下面这个 "在组合控件里管理 focus " 例子。
+下面这个组合菜单的例子展示了这种技术的使用。一旦键盘 focus 中容器 ul 元素，Javascript 开发人员需要在键盘事件里针对方向键的响应里管理里面元素的 focus 顺序。在组件里管理 focus 的办法，看下面这个 "在组合控件里管理 focus " 例子。
 
 _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
 
@@ -135,8 +137,8 @@ _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
 
 当用户从一个组件 tab 离开之后 focus 回来，焦点应该回到离开之时正被 focus 中的元素上，比如某个树节点或者网格单元。有两种办法完成这一点：
 
-1.  `流动 tabindex`: 通过编程移动 focus
-2.  `aria-activedescendent`: 管理一个“虚拟” focus
+1. `流动 tabindex`: 通过编程移动 focus
+2. `aria-activedescendent`: 管理一个“虚拟”focus
 
 #### 方法 1: 流动 tabindex
 
@@ -144,9 +146,9 @@ _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
 
 在每个元素上绑定 key down 事件，当捕捉到控制移动到另外元素的方向键时：
 
-1.  通过编码把 focus 应用到新元素上，
-2.  更改被 focus 中元素上的 tabindex 为“0”
-3.  更改之前被 focus 中元素的 tabindex 为“-1”.
+1. 通过编码把 focus 应用到新元素上，
+2. 更改被 focus 中元素上的 tabindex 为“0”
+3. 更改之前被 focus 中元素的 tabindex 为“-1”.
 
 这里有个 WAI-ARIA tree view 的例子是使用这种方案的。
 
@@ -183,7 +185,7 @@ Note that the use of this pattern requires the author to ensure that the current
 
 #### 使用 onkeydown 来捕获的关键事件，而不是 onkeypress 事件
 
-IE 不会触发非字母数字键的 `keypress `事件。使用 `onkeydown` 替代。
+IE 不会触发非字母数字键的 `keypress` 事件。使用 `onkeydown` 替代。
 
 #### 确保键盘和鼠标有相同的体验
 
@@ -195,7 +197,7 @@ IE 不会触发非字母数字键的 `keypress `事件。使用 `onkeydown` 替�
 
 #### 不要使用 :focus 来设置焦点的样式（如果要兼容 IE7 及更早版本）
 
-IE 7 及更早版本不支持 `:focus` 伪选择器，不要用它来设置焦点的样式。替代方法是在 `onfocus `事件处理程序中设置样式，例如，添加一个 CSS 样式到 `class` 属性中。
+IE 7 及更早版本不支持 `:focus` 伪选择器，不要用它来设置焦点的样式。替代方法是在 `onfocus`事件处理程序中设置样式，例如，添加一个 CSS 样式到 `class` 属性中。
 
 #### 始终用程序为 tabindex="-1" 的项和元素设置焦点样式
 
@@ -207,7 +209,9 @@ IE 不会自动为` tabindex="-1" `的元素绘制聚焦框。可以选择一种
 
 例如：
 
-    <span tabindex="-1" onkeydown="return handleKeyDown();">
+```html
+<span tabindex="-1" onkeydown="return handleKeyDown();">
+```
 
 如果 `handleKeyDown()` 返回 `false`，将会结束事件处理，阻止浏览器继续处理按键行为。
 

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 original_slug: Web/JavaScript/Reference/Objets_globaux/decodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 La méthode **`decodeURI()`** permet de décoder un Uniform Resource Identifier (URI) créé par la méthode {{jsxref("encodeURI","encodeURI()")}} ou une méthode similaire.

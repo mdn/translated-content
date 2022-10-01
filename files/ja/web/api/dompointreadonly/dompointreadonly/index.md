@@ -1,20 +1,8 @@
 ---
 title: DOMPointReadOnly()
 slug: Web/API/DOMPointReadOnly/DOMPointReadOnly
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Position
-  - Reference
-browser-compat: api.DOMPointReadOnly.DOMPointReadOnly
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPointReadOnly()`** コンストラクターは、スクリプトコードによってその値を変更できない、二次元または三次元の点を表す新しい {{domxref("DOMPointReadOnly")}} オブジェクト（オプションで遠近法を使用可能）を返します。

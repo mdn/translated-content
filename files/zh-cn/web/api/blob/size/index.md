@@ -1,8 +1,8 @@
 ---
 title: Blob.size
 slug: Web/API/Blob/size
-translation_of: Web/API/Blob/size
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} 接口的 **`size`** 属性返回 {{domxref("Blob")}} 或 {{domxref("File")}} 的字节数。

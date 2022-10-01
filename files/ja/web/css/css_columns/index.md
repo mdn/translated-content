@@ -1,15 +1,8 @@
 ---
 title: CSS 段組みレイアウト
 slug: Web/CSS/CSS_Columns
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - ガイド
-  - レイアウト
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Columns
 ---
+
 {{CSSRef("CSS3 Multicol")}}
 
 **CSS 段組みレイアウト**は CSS のモジュールの一つで、段組みレイアウトの対応を追加するものです。対応内容はレイアウトする段数の指定、段から段へのコンテンツの流れ方、段間の空白、段区切り線 (段間罫) などの対応が含まれています。

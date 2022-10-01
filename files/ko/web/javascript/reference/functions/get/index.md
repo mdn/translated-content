@@ -145,7 +145,7 @@ get notifier() {
 },
 ```
 
-### `get` Vs. `defineProperty`
+### `get` Vs. `defineProperty`
 
 `get` 키워드와 {{jsxref("Object.defineProperty()")}}는 비슷한 결과를 내지만, {{jsxref("classes", "클래스", "", 1)}}에 사용할 경우 미묘한 차이가 생깁니다.
 

@@ -9,6 +9,7 @@ tags:
   - ServiceWorker
 translation_of: Web/API/NotificationEvent
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 L'interface **`NotificationEvent`** représente un évènement de clic pour une notification et qui est dispatché vers le {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}.
@@ -61,12 +62,8 @@ self.addEventListener('notificationclick', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------ |
-| {{SpecName('Web Notifications','#notificationevent','NotificationEvent')}} | {{Spec2('Web Notifications')}} |              |
-
-> **Note :** Cette interface est définie au sein de [l'API Notifications](/fr/docs/Web/API/Notifications_API), mais on y accède via {{domxref("ServiceWorkerGlobalScope")}}.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NotificationEvent")}}
+{{Compat}}

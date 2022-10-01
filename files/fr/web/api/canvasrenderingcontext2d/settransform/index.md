@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.setTransform()
 slug: Web/API/CanvasRenderingContext2D/setTransform
 translation_of: Web/API/CanvasRenderingContext2D/setTransform
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.setTransform()`** de l'API Canvas 2D réinitialise (remplace) la transformation en cours à la matrice identité et appelle ensuite la transformation décrite par les arguments de cette méthode.
@@ -99,13 +100,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-settransform", "CanvasRenderingContext2D.setTransform")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.setTransform")}}
+{{Compat}}
 
 ## Voir aussi
 

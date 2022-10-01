@@ -1,14 +1,8 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-browser-compat: javascript.builtins.Object.constructor
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
+
 {{JSRef}}
 
 **`constructor`** 属性返回 {{jsxref("Object")}} 的构造函数（用于创建实例对象）。注意，此属性的值是对函数本身的引用，而不是一个包含函数名称的字符串。

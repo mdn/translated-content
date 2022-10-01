@@ -1,14 +1,8 @@
 ---
 title: Encoding API
 slug: Web/API/Encoding_API
-page-type: web-api-overview
-tags:
-  - API
-  - Encoding
-  - Overview
-  - Reference
-translation-of: Web/API/Encoding_API
 ---
+
 {{DefaultAPISidebar("Encoding API")}}
 
 **Encoding API** 提供了一种机制来处理各种{{Glossary("character encoding", "字符编码文本")}}，包括传统的非 {{Glossary("UTF-8")}} 编码。

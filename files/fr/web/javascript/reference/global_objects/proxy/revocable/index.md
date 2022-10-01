@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/revocable
 browser-compat: javascript.builtins.Proxy.revocable
 ---
+
 {{JSRef}}
 
 La méthode **`Proxy.revocable()`** est utilisée afin de créer un objet [`Proxy`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy) révocable.

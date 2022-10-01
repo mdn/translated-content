@@ -7,6 +7,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@font-feature-values
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/At-rule) **`@font-feature-values`** permet aux auteurs d'utiliser un nom personnalisé dans une règle utilisant la propriété {{cssxref("font-variant-alternates")}} afin de régler finement les caractéristiques OpenType. Elle permet de simplifier les feuilles de style lorsqu'on utilise plusieurs polices.
@@ -35,7 +36,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) **`@font-feature-values`** permet aux au
 }
 ```
 
-La règle @ `@font-feature-values` peut être utilisée au plus haut niveau d'une feuille de style et aussi au sein [d'un groupe de règles conditionnelles](/fr/docs/Web/CSS/At-rule "CSS/At-rule#Conditional_Group_Rules").
+La règle @ `@font-feature-values` peut être utilisée au plus haut niveau d'une feuille de style et aussi au sein [d'un groupe de règles conditionnelles](/fr/docs/Web/CSS/At-rule).
 
 ## Syntaxe
 
@@ -60,13 +61,11 @@ La règle @ `@font-feature-values` peut être utilisée au plus haut niveau d'un
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#font-feature-values', '@font-feature-values')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-feature-values")}}
+{{Compat}}
 
 ## Voir aussi
 

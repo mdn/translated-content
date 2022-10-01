@@ -1,8 +1,8 @@
 ---
 title: 在互联网上做一件事要花费多少？
 slug: Learn/Common_questions/How_much_does_it_cost
-translation_of: Learn/Common_questions/How_much_does_it_cost
 ---
+
 参与互联网（运营网站）并不像看起来那么便宜。本文中我们将讨论你所需的花费及理由。
 
 <table class="learn-box standard-table">
@@ -11,14 +11,13 @@ translation_of: Learn/Common_questions/How_much_does_it_cost
       <th scope="row">准备工作：</th>
       <td>
         <p>
-          你已经了解<a href="/en-US/Learn/What_software_do_I_need"
+          你已经了解<a href="/zh-CN/Learn/What_software_do_I_need"
             >你需要什么软件</a
-          >，以及<a href="/en-US/Learn/page_vs_site_vs_server_vs_search_engine"
+          >，以及<a href="/zh-CN/Learn/page_vs_site_vs_server_vs_search_engine"
             >网页、网站等术语</a
-          >之间的差异，以及<a href="/en-US/Learn/Understanding_domain_names"
+          >之间的差异，以及<a href="/zh-CN/Learn/Understanding_domain_names"
             >域名是什么</a
-          >
-          。
+          >。
         </p>
       </td>
     </tr>
@@ -115,8 +114,8 @@ translation_of: Learn/Common_questions/How_much_does_it_cost
 
 您可能会问，为什么在有这么多免费服务时，我还应该去支付我的托管费用？
 
-1.  当你付费，你有更多的自由。你的网站是你的，你可以从一个主机提供商无缝迁移到下一个。
-2.  免费托管服务提供商可能会将您的内容广告添加到您的内容中，而不受您的控制
+1. 当你付费，你有更多的自由。你的网站是你的，你可以从一个主机提供商无缝迁移到下一个。
+2. 免费托管服务提供商可能会将您的内容广告添加到您的内容中，而不受您的控制
 
 有些人选择了一种混合的方式：例如，将他们的主博客放在带有适当域名的付费主机上，并使用另一种免费服务来托管自发的，不太具有战略性的内容。
 

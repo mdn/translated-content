@@ -1,11 +1,11 @@
 ---
 title: 'Django Tutorial Part 6: Generic list and detail views'
 slug: Learn/Server-side/Django/Generic_views
-translation_of: Learn/Server-side/Django/Generic_views
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
 
-本教程擴充了 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，為書本與作者增加列表與細節頁面。此處我們將學到通用類別視圖，並演示如何降低你必須為一般使用案例撰寫的程式碼數量。我們也會更加深入 URL 處理細節，演示如何實施基本模式匹配。
+本教程擴充了 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，為書本與作者增加列表與細節頁面。此處我們將學到通用類別視圖，並演示如何降低你必須為一般使用案例撰寫的程式碼數量。我們也會更加深入 URL 處理細節，演示如何實施基本模式匹配。
 
 <table>
   <tbody>
@@ -13,7 +13,7 @@ translation_of: Learn/Server-side/Django/Generic_views
       <th scope="row">前提:</th>
       <td>
         Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Home_page"
+        <a href="/zh-TW/docs/Learn/Server-side/Django/Home_page"
           >Django Tutorial Part 5: Creating our home page</a
         >.
       </td>
@@ -30,7 +30,7 @@ translation_of: Learn/Server-side/Django/Generic_views
 
 ## Overview
 
-本教程中，通過為書本和作者添加列表和詳細信息頁面，我們將完成第一個版本的 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站（或者更準確地說，我們將向您展示如何實現書頁，並讓您自己創建作者頁面！） ）
+本教程中，通過為書本和作者添加列表和詳細信息頁面，我們將完成第一個版本的 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站（或者更準確地說，我們將向您展示如何實現書頁，並讓您自己創建作者頁面！） ）
 
 該過程在創建索引頁面，我們在上一個教程中展示了該頁面。我們仍然需要創建 URL 地圖，視圖和模板。主要區別在於，對於詳細信息頁面，我們還有一個額外的挑戰，即從 URL 對於這些頁面，我們將演示一種完全不同的視圖類型：基於類別的通用列表和詳細視圖。這些可以顯著減少所需的視圖代碼量，有助於更容易編寫和維護。
 
@@ -397,7 +397,9 @@ Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html*
 
 > **備註：** The author link in the template above has an empty URL because we've not yet created an author detail page. Once that exists, you should update the URL like this:
 >
->     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+> ```python
+> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+> ```
 
 Though a little larger, almost everything in this template has been described previously:
 
@@ -420,34 +422,38 @@ The one interesting thing we haven't seen before is the function `book.bookinsta
 >
 > 順帶一提，若你不再基於類的 view 或 model 定義順序（order），開發伺服器會將會報錯類似的訊息：
 >
->     [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
->     /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
->       allow_empty_first_page=allow_empty_first_page, **kwargs)
+> ```
+> [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
+> /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
+>   allow_empty_first_page=allow_empty_first_page, **kwargs)
+> ```
 >
 > That happens because the [paginator object](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects) expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order!
 >
 > This tutorial didn't reach **Pagination** (yet, but soon enough), but since you can't use `sort_by()` and pass a parameter (the same with `filter()` described above) you will have to choose between three choices:
 >
-> 1.  Add a `ordering` inside a `class Meta` declaration on your model.
-> 2.  Add a `queryset` attribute in your custom class-based view, specifying a `order_by()`.
-> 3.  Adding a `get_queryset` method to your custom class-based view and also specify the `order_by()`.
+> 1. Add a `ordering` inside a `class Meta` declaration on your model.
+> 2. Add a `queryset` attribute in your custom class-based view, specifying a `order_by()`.
+> 3. Adding a `get_queryset` method to your custom class-based view and also specify the `order_by()`.
 >
 > If you decide to go with a `class Meta` for the `Author` model (probably not as flexible as customizing the class-based view, but easy enough), you will end up with something like this:
 >
->     class Author(models.Model):
->         first_name = models.CharField(max_length=100)
->         last_name = models.CharField(max_length=100)
->         date_of_birth = models.DateField(null=True, blank=True)
->         date_of_death = models.DateField('Died', null=True, blank=True)
+> ```python
+> class Author(models.Model):
+>     first_name = models.CharField(max_length=100)
+>     last_name = models.CharField(max_length=100)
+>     date_of_birth = models.DateField(null=True, blank=True)
+>     date_of_death = models.DateField('Died', null=True, blank=True)
 >
->         def get_absolute_url(self):
->             return reverse('author-detail', args=[str(self.id)])
+>     def get_absolute_url(self):
+>         return reverse('author-detail', args=[str(self.id)])
 >
->         def __str__(self):
->             return f'{self.last_name}, {self.first_name}'
+>     def __str__(self):
+>         return f'{self.last_name}, {self.first_name}'
 >
->         class Meta:
->             ordering = ['last_name']
+>     class Meta:
+>         ordering = ['last_name']
+> ```
 >
 > Of course, the field doesn't need to be `last_name`: it could be any other.
 >
@@ -571,18 +577,18 @@ In our next articles we'll extend this library to support user accounts, and the
 
 ## In this module
 
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
+- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
+- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
+- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
+- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
+- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
+- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
+- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
+- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
+- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
+- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
+- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
+- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

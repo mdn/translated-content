@@ -1,13 +1,8 @@
 ---
 title: World Wide Web
 slug: Glossary/World_Wide_Web
-tags:
-  - Glossary
-  - Infrastructure
-  - WWW
-  - World Wide Web
-translation_of: Glossary/World_Wide_Web
 ---
+
 *万维网（World Wide Web）*一般称其为**WWW**，**W3**，或 **Web** 是通过 {{Glossary("Internet")}} 访问公共网页的互连系统。网络与互联网不一样：Web 是建立在互联网之上的许多应用程序之一。
 
 Tim Berners-Lee 提出了被称为万维网的架构。他在 1990 年在 CERN 物理研究实验室的计算机上创建了第一个网页{{Glossary("Server","server")}}，web {{Glossary("Browser","browser")}}和网页。1991 年，他在 alt.hypertext 新闻组上宣布创作，标志着 Web 首次公开的那一刻。
@@ -31,5 +26,5 @@ Tim Berners-Lee 在发明 Web 之后不久就创建了 {{Glossary("W3C")}}（万
 
 ### 基本知识
 
-- 维基百科上的 {{Interwiki("wikipedia", "World Wide Web")}}
+- 维基百科上的 [World Wide Web](https://zh.wikipedia.org/wiki/World_Wide_Web)
 - [W3C 网站](https://w3.org)

@@ -1,19 +1,8 @@
 ---
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
-page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Document
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Reference
-  - caretRangeFromPoint
-browser-compat: api.Document.caretRangeFromPoint
-translation_of: Web/API/Document/caretRangeFromPoint
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 **`caretRangeFromPoint()`** は {{domxref("Document")}} インターフェイスのメソッドで、指定された座標にある文書フラグメントの {{domxref("Range")}} オブジェクトを返します。

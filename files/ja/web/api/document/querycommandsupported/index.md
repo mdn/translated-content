@@ -1,18 +1,8 @@
 ---
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - メソッド
-  - リファレンス
-  - エディター
-  - 非推奨
-browser-compat: api.Document.queryCommandSupported
-translation_of: Web/API/Document/queryCommandSupported
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 **`Document.queryCommandSupported()`** メソッドは、指定しされたエディターコマンドにブラウザーが対応しているかどうかを報告します。

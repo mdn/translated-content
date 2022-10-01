@@ -54,7 +54,7 @@ original_slug: Web/JavaScript/Referencia/Funciones
   */</span>
  window<span class="punctuation token">.</span><span class="function token">alert<span class="punctuation token">(</span></span>mycar<span class="punctuation token">.marca</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<p>La palabra clave <a href="/es/docs/Web/JavaScript/Referencia/Operadores/this"><code>this</code></a> no hace referencia a la función que está ejecutandose actualmente, por lo que debes referirte a los objetos Function por nombre, incluso dentro del cuerpo de la función. Como alternativa, puedes utilizar la propiedad <a href="es/Referencia_de_JavaScript_1.5/Funciones/arguments/callee">arguments.callee</a> (que no se recomienda).</p>
+<p>La palabra clave <a href="/es/docs/Web/JavaScript/Referencia/Operadores/this"><code>this</code></a> no hace referencia a la función que está ejecutandose actualmente, por lo que debes referirte a los objetos Function por nombre, incluso dentro del cuerpo de la función. Como alternativa, puedes utilizar la propiedad <a href="es/Referencia_de_JavaScript_1.5/Funciones/arguments/callee">arguments.callee</a> (que no se recomienda).</p>
 
 <h2 id="Defining_functions" name="Defining_functions">Definiendo funciones</h2>
 
@@ -65,7 +65,7 @@ original_slug: Web/JavaScript/Referencia/Funciones
 <p>Hay una sintaxis especial para declarar funciones (ver la instrucción {{jsxref("Sentencias/function","function")}} para más detalles):</p>
 
 <pre class="eval">function nombre([<em>param</em>[,<em>param</em>[, ...<em>param</em>]]]) {
-   instrucciones
+   instrucciones
 }
 </pre>
 
@@ -137,7 +137,7 @@ param =&gt; expresión
 
 <dl>
  <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>Ningún o varios argumentos  son pasados para ser utilizados por la función como nombres de argumentos formales. Cada uno debe ser una cadena que se ajuste a las reglas de identificadores válidos en JavaScript, o a una lista de este tipo de cadenas separadas por comas; por ejemplo "x", "theValue", o "a,b".</dd>
+ <dd>Ningún o varios argumentos  son pasados para ser utilizados por la función como nombres de argumentos formales. Cada uno debe ser una cadena que se ajuste a las reglas de identificadores válidos en JavaScript, o a una lista de este tipo de cadenas separadas por comas; por ejemplo "x", "theValue", o "a,b".</dd>
 </dl>
 
 <dl>
@@ -174,7 +174,7 @@ param =&gt; expresión
 };
 </pre>
 
-<p>Dentro del cuerpo de la función, todo lo siguientes son lo mismo:</p>
+<p>Dentro del cuerpo de la función, todo lo siguientes son lo mismo:</p>
 
 <ol>
  <li><code>bar()</code></li>
@@ -182,7 +182,7 @@ param =&gt; expresión
  <li><code>foo()</code></li>
 </ol>
 
-<p>Una función que se llama a sí misma es llamada una <em>función recursiva. </em>En algunas ocaciones, la recursión es análoga a un bucle. Ambos ejecutan el mismo código múltiples veces, y ambas requieren una condición (para evitar un bucle infinito, o en su lugar, recursión infinita en este caso). Por ejemplo, el siguiente bucle:</p>
+<p>Una función que se llama a sí misma es llamada una <em>función recursiva. </em>En algunas ocaciones, la recursión es análoga a un bucle. Ambos ejecutan el mismo código múltiples veces, y ambas requieren una condición (para evitar un bucle infinito, o en su lugar, recursión infinita en este caso). Por ejemplo, el siguiente bucle:</p>
 
 <pre class="brush: js">var x = 0;
 while (x &lt; 10) { // "x &lt; 10" es la condición
@@ -191,7 +191,7 @@ while (x &lt; 10) { // "x &lt; 10" es la condición
 }
 </pre>
 
-<p>puede ser convertida en una función recursiva y una llamada a esa función:</p>
+<p>puede ser convertida en una función recursiva y una llamada a esa función:</p>
 
 <pre class="brush: js">function loop(x) {
    if (x &gt;= 10) // "x &gt;= 10" es la condición de salida (equivalente a "!(x &lt; 10)")
@@ -202,7 +202,7 @@ while (x &lt; 10) { // "x &lt; 10" es la condición
 loop(0);
 </pre>
 
-<p>Sin embargo, algunos algoritmos no pueden ser bucles iterativos simples. Por ejemplo, obtener todos los nodos de una estructura de arbol (e.g. el <a href="https://developer.mozilla.org/en-US/docs/DOM">DOM</a>) es realizado de manera más fácil usando recursión:</p>
+<p>Sin embargo, algunos algoritmos no pueden ser bucles iterativos simples. Por ejemplo, obtener todos los nodos de una estructura de arbol (e.g. el <a href="https://developer.mozilla.org/en-US/docs/DOM">DOM</a>) es realizado de manera más fácil usando recursión:</p>
 
 <pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">recorrerArbol <span class="punctuation token">(</span></span>nodo<span class="punctuation token">)</span> <span class="punctuation token">{</span>
    <span class="keyword token">if</span> <span class="punctuation token">(</span>nodo <span class="operator token">==</span> <span class="keyword token">null</span><span class="punctuation token">)</span><span class="comment token"> //
@@ -214,7 +214,7 @@ loop(0);
 <span class="punctuation token">}</span></code>
 </pre>
 
-<p>En comparación con el bucle de la función <code>loop</code>, cada llamada recursiva hace muchas llamadas recursivas aquí.</p>
+<p>En comparación con el bucle de la función <code>loop</code>, cada llamada recursiva hace muchas llamadas recursivas aquí.</p>
 
 <p>Es posible convertir cualquier algoritmo recursivo en uno no recursivo, pero a menudo la lógica es mucho más compleja y hacerlo requiere el uso de una pila. De hecho, la recursión utiliza una pila: la pila de funciones.</p>
 
@@ -243,7 +243,7 @@ fin:3
 
 <h2 id="Nested_functions_and_closures" name="Nested_functions_and_closures">Funciones anidadas y cierres</h2>
 
-<p>Puede anidar una función dentro de una función. La función anidada (inner) es privada a la función que la contiene (outer). También con la forma: aclosure.</p>
+<p>Puede anidar una función dentro de una función. La función anidada (inner) es privada a la función que la contiene (outer). También con la forma: aclosure.</p>
 
 <dl>
  <dd>Un cierre es una expresión (normalmente una función) que puede tener variables libres junto con un entorno que enlaza esas variables (que "cierra" la expresión).<br>
@@ -288,7 +288,7 @@ resultado = fuerade(3)(5); // retorna 8
 
 <h3 id="Efficiency_considerations" name="Efficiency_considerations"><span class="external">Consideraciones sobre la eficiencia</span></h3>
 
-<p><span class="external">Observe cómo se conserva <code>x</code> cuando se devuelve <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: #eeeeee;">dentro</span></font>. Un cierre conserva los argumentos y las variables en todos los ámbitos que contiene. Puesto que cada llamada proporciona argumentos potencialmente diferentes, debe crearse un cierre para cada llamada a la función externa. En otras palabras, cada llamada a <code>fuerade</code> crea un cierre. Por esta razón, los cierres pueden usar una gran cantidad de memoria. La memoria se puede liberar sólo cuando el <code>dentro</code> devuelto ya no es accesible. En este caso, el cierre del <code>dentro</code> se almacena en <code>resultado</code>. Como el <code>resultado</code> está en el ámbito global, el cierre permanecerá hasta que se descargue el script (en un navegador, esto sucedería cuando la página que contiene el script esté cerrada).</span></p>
+<p><span class="external">Observe cómo se conserva <code>x</code> cuando se devuelve <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: #eeeeee;">dentro</span></font>. Un cierre conserva los argumentos y las variables en todos los ámbitos que contiene. Puesto que cada llamada proporciona argumentos potencialmente diferentes, debe crearse un cierre para cada llamada a la función externa. En otras palabras, cada llamada a <code>fuerade</code> crea un cierre. Por esta razón, los cierres pueden usar una gran cantidad de memoria. La memoria se puede liberar sólo cuando el <code>dentro</code> devuelto ya no es accesible. En este caso, el cierre del <code>dentro</code> se almacena en <code>resultado</code>. Como el <code>resultado</code> está en el ámbito global, el cierre permanecerá hasta que se descargue el script (en un navegador, esto sucedería cuando la página que contiene el script esté cerrada).</span></p>
 
 <p><span class="external">Debido a esta ineficiencia, evite cierres siempre que sea posible, es decir, evite las funciones de anidamiento siempre que sea posible. Por ejemplo, considere el siguiente ejemplo:</span></p>
 
@@ -299,7 +299,7 @@ resultado = fuerade(3)(5); // retorna 8
 }
 </span></pre>
 
-<p><span class="external">Esto se puede volver a escribir para evitar el cierre. Sin embargo, la función interna anónima necesitaría ser nombrada y ya no sería privada para <code>assignOnclick</code>: </span></p>
+<p><span class="external">Esto se puede volver a escribir para evitar el cierre. Sin embargo, la función interna anónima necesitaría ser nombrada y ya no sería privada para <code>assignOnclick</code>: </span></p>
 
 <pre class="eval"><span class="brush: json">function assignOnclick(elemento) {
    elemento.onclick = elemento_onclick;
@@ -312,7 +312,7 @@ function elemento_onclick() {
 
 <h4 id="Multiply-nested_functions" name="Multiply-nested_functions">Multiples funciones anidadas</h4>
 
-<p><span class="external">Las funciones pueden ser anidadas contigua de la otra, es decir, una función (A) que contiene una función (B) que contiene una función (C), etc. Ambas funciones B y C forman cierres aquí, por lo que B puede acceder a A y C pueden acceder a B. Además, como C puede acceder a B, que puede acceder a A, C también puede acceder a A. Por lo tanto, los cierres pueden contener múltiples ámbitos; contienen recursivamente el alcance de las funciones que lo contienen. Esto es llamado encadenamiento de objetos(<em>scope chaining</em>). (Por qué se llama "<em>chaining</em>"("encadenamiento") se explicará más adelante.)</span></p>
+<p><span class="external">Las funciones pueden ser anidadas contigua de la otra, es decir, una función (A) que contiene una función (B) que contiene una función (C), etc. Ambas funciones B y C forman cierres aquí, por lo que B puede acceder a A y C pueden acceder a B. Además, como C puede acceder a B, que puede acceder a A, C también puede acceder a A. Por lo tanto, los cierres pueden contener múltiples ámbitos; contienen recursivamente el alcance de las funciones que lo contienen. Esto es llamado encadenamiento de objetos(<em>scope chaining</em>). (Por qué se llama "<em>chaining</em>"("encadenamiento") se explicará más adelante.)</span></p>
 
 <p><span class="external">Considere el siguiente ejemplo:</span></p>
 
@@ -328,15 +328,15 @@ function elemento_onclick() {
 A(1); // alerts 6 (1 + 2 + 3)
 </span></pre>
 
-<p><span class="external">En este ejemplo, <code>C</code> accede a las <code>B</code> que hayan en <code>y</code> y <code>A</code> en <code>x</code>. Esto se puede hacer porque: </span></p>
+<p><span class="external">En este ejemplo, <code>C</code> accede a las <code>B</code> que hayan en <code>y</code> y <code>A</code> en <code>x</code>. Esto se puede hacer porque: </span></p>
 
 <ol>
  <li><span class="external"><code>B</code> forma un cierre que incluye a <code>A</code>, es decir, <code>B</code> puede acceder a los argumentos y variables de <code>A</code>. </span></li>
- <li><span class="external"><code>C</code> forma un cierre que incluye a <code>B</code>. </span></li>
- <li><span class="external">Como el cierre de <code>B</code> incluye a <code>A</code>, el cierre de <code>C</code> incluye a <code>A</code>, <code>C</code> puede acceder a los argumentos y variables de la Banda <code>A</code>. En otras palabras, codifica los ámbitos de <code>B</code> y A en ese orden. </span></li>
+ <li><span class="external"><code>C</code> forma un cierre que incluye a <code>B</code>. </span></li>
+ <li><span class="external">Como el cierre de <code>B</code> incluye a <code>A</code>, el cierre de <code>C</code> incluye a <code>A</code>, <code>C</code> puede acceder a los argumentos y variables de la Banda <code>A</code>. En otras palabras, codifica los ámbitos de <code>B</code> y A en ese orden. </span></li>
 </ol>
 
-<p><span class="external">Lo contrario, sin embargo, no es cierto. <code>A</code> no puede acceder a <code>C</code>, porque <code>A</code> no puede acceder a ningún argumento o variable de <code>B</code>, que <code>C</code> es una variable de. Así, <code>C</code> permanece privado de sólo <code>B</code>. </span></p>
+<p><span class="external">Lo contrario, sin embargo, no es cierto. <code>A</code> no puede acceder a <code>C</code>, porque <code>A</code> no puede acceder a ningún argumento o variable de <code>B</code>, que <code>C</code> es una variable de. Así, <code>C</code> permanece privado de sólo <code>B</code>. </span></p>
 
 <h3 id="Conflictos_de_nombre" name="Conflictos_de_nombre"><span class="external">Conflictos de nombre </span></h3>
 
@@ -352,7 +352,7 @@ A(1); // alerts 6 (1 + 2 + 3)
 resultado = fuerade()(20); // retorna 20 en lugar de 10</span>
 </pre>
 
-<p><span class="external">El conflicto de nombres ocurre en la sentencia <code>return x</code> y está entre el parámetro <code>x</code> del <code>dentro</code>y la variable <code>x</code> del <code>fuerade</code>. La cadena de alcance aquí es {<code>dentro</code>, <code>fuerade</code>, global object}. Por lo tanto, la <code>x</code> de <code>inside</code>tiene precedentes sobre la <code>x</code> de <code>fuerade</code>, y 20 (<code>dentro</code>de <code>x</code>) se devuelve en lugar de 10 (<code>fuerade</code> de <code>x</code>).</span></p>
+<p><span class="external">El conflicto de nombres ocurre en la sentencia <code>return x</code> y está entre el parámetro <code>x</code> del <code>dentro</code>y la variable <code>x</code> del <code>fuerade</code>. La cadena de alcance aquí es {<code>dentro</code>, <code>fuerade</code>, global object}. Por lo tanto, la <code>x</code> de <code>inside</code>tiene precedentes sobre la <code>x</code> de <code>fuerade</code>, y 20 (<code>dentro</code>de <code>x</code>) se devuelve en lugar de 10 (<code>fuerade</code> de <code>x</code>).</span></p>
 
 <h2 id="constructor_versus_declaration_versus_expression" name="constructor_versus_declaration_versus_expression"><span class="external">Constructor vs declaración vs expresión</span></h2>
 
@@ -361,24 +361,24 @@ resultado = fuerade()(20); // retorna 20 en lugar de 10</span>
 <p><span class="external">Compare lo siguiente: </span></p>
 
 <ol>
- <li><span class="external">Una función definida con el constructor <code>Function</code> asignado a la variable <code>multiply</code>                                                                                                                    </span>
+ <li><span class="external">Una función definida con el constructor <code>Function</code> asignado a la variable <code>multiply</code>                                                                                                                    </span>
 
   <pre><span class="brush: js">var multiply = new Function("x", "y", "return x * y;");
 </span></pre>
  </li>
- <li><span class="external">Una declaración de una función denominada <code>multiply</code>                                                 </span>
+ <li><span class="external">Una declaración de una función denominada <code>multiply</code>                                                 </span>
   <pre><span class="brush: js">function multiply(x, y) {
    return x * y;
 }
 </span></pre>
  </li>
- <li><span class="external">Una expresión de función anónima asignada a la variable <code>multiply</code>                          </span>
+ <li><span class="external">Una expresión de función anónima asignada a la variable <code>multiply</code>                          </span>
   <pre><span class="brush: js">var multiply = function(x, y) {
    return x * y;
 }
 </span></pre>
  </li>
- <li><span class="external">Una declaración de una función denominada <code>func_name</code> asignada a la variable <code>multiply</code>                                                                                                                 </span>
+ <li><span class="external">Una declaración de una función denominada <code>func_name</code> asignada a la variable <code>multiply</code>                                                                                                                 </span>
   <pre><span class="brush: js">var multiply = function func_name(x, y) {
    return x * y;
 }
@@ -393,12 +393,12 @@ resultado = fuerade()(20); // retorna 20 en lugar de 10</span>
 
   <ul>
    <li><span class="external">El nombre de la función no se puede cambiar, mientras que la variable a la que se asigna la función puede ser reasignada.</span></li>
-   <li><span class="external">El nombre de la función sólo se puede utilizar en el cuerpo de la función. Intentar utilizarlo fuera del cuerpo de la función da como resultado un error (o <code>undefined</code> si el nombre de la función se declaró previamente mediante una instrucción <code>var</code>). Por ejemplo:                                                                                                           </span>
+   <li><span class="external">El nombre de la función sólo se puede utilizar en el cuerpo de la función. Intentar utilizarlo fuera del cuerpo de la función da como resultado un error (o <code>undefined</code> si el nombre de la función se declaró previamente mediante una instrucción <code>var</code>). Por ejemplo:                                                                                                           </span>
     <pre><span class="brush: js">var y = function x() {};
 alert(x); // arroja un error
 </span></pre>
 
-    <p><span class="external">El nombre de la función también aparece cuando la función se serializa vía el método de la </span><code>Function</code> 'toString'.</p>
+    <p><span class="external">El nombre de la función también aparece cuando la función se serializa vía el método de la </span><code>Function</code> 'toString'.</p>
 
     <p>Por otro lado, la variable a la que se asigna la función está limitada sólo por su ámbito, que está garantizado para incluir el ámbito en el que se declara la función.</p>
    </li>
@@ -420,7 +420,7 @@ alert(bar); // el string todavía contiene el nombre
             // de la función "foo"
 </pre>
  </li>
- <li>Una función definida por un<code>Function</code> no tiene un nombre de función. Sin embargo, en el <a href="/es/docs/Mozilla/Projetos/SpiderMonkey">SpiderMonkey</a> en el motor de JavaScript, la forma serializada de la función muestra como si tuviera el nombre "anónimo"("anonymous"). Por ejemplo, <code>alert(new Function())</code> salida:
+ <li>Una función definida por un<code>Function</code> no tiene un nombre de función. Sin embargo, en el <a href="/es/docs/Mozilla/Projetos/SpiderMonkey">SpiderMonkey</a> en el motor de JavaScript, la forma serializada de la función muestra como si tuviera el nombre "anónimo"("anonymous"). Por ejemplo, <code>alert(new Function())</code> salida:
   <pre class="brush: js">function anonymous() {
 }
 </pre>
@@ -431,7 +431,7 @@ alert(bar); // el string todavía contiene el nombre
 foo();
 </pre>
  </li>
- <li>A diferencia de las funciones definidas por expresiones de función o constructores <code>Function</code> se puede utilizar una función definida por una declaración de función antes de la propia declaración de la función. Por ejemplo:
+ <li>A diferencia de las funciones definidas por expresiones de función o constructores <code>Function</code> se puede utilizar una función definida por una declaración de función antes de la propia declaración de la función. Por ejemplo:
   <pre class="brush: js">foo(); // alerts FOO!
 function foo() {
    alert('FOO!');
@@ -439,7 +439,7 @@ function foo() {
 </pre>
  </li>
  <li>Una función definida por una expresión de función hereda el ámbito actual. Es decir, la función forma un cierre. Por otro lado, una función definida por un constructor de <code>Function</code> no hereda ningún ámbito que no sea el ámbito global (que todas las funciones heredan).</li>
- <li>Las funciones definidas por expresiones de función y declaraciones de función son analizadas una sola vez, mientras que las definidas por el constructor de <code>Function</code> no lo son. Es decir, la cadena de cuerpo de función pasada al constructor de <code>Function</code> debe ser analizada cada vez que se evalúa.  Aunque una expresión de función crea un cierre cada vez, el cuerpo de la función no es reparsed, por lo que las expresiones de función son aún más rápido que "<code>new Function(...)</code>". Por lo tanto, el constructor de la <code>Function</code> debe evitarse siempre que sea posible.</li>
+ <li>Las funciones definidas por expresiones de función y declaraciones de función son analizadas una sola vez, mientras que las definidas por el constructor de <code>Function</code> no lo son. Es decir, la cadena de cuerpo de función pasada al constructor de <code>Function</code> debe ser analizada cada vez que se evalúa.  Aunque una expresión de función crea un cierre cada vez, el cuerpo de la función no es reparsed, por lo que las expresiones de función son aún más rápido que "<code>new Function(...)</code>". Por lo tanto, el constructor de la <code>Function</code> debe evitarse siempre que sea posible.</li>
 </ul>
 
 <p>Una declaración de función es muy fácilmente (ya menudo involuntariamente) convertida en una expresión de función. Una declaración de función deja de ser una cuando:</p>
@@ -529,9 +529,9 @@ function a() {
 
 <h2 id="Functions_as_event_handlers" name="Functions_as_event_handlers">Funciones como manejadores de eventos</h2>
 
-<p>En JavaScript, los controladores de eventos <a href="es/DOM">DOM</a> son funciones (en oposición a los objetos que contienen un método <code>handleEvent</code> en otros enlaces de idioma DOM). Las funciones se pasan un objeto de <a href="es/DOM/event">evento</a> como el primer y único parámetro. Como cualquier otro parámetro, si el objeto de evento no necesita ser utilizado, puede omitirse en la lista de parámetros formales.</p>
+<p>En JavaScript, los controladores de eventos <a href="es/DOM">DOM</a> son funciones (en oposición a los objetos que contienen un método <code>handleEvent</code> en otros enlaces de idioma DOM). Las funciones se pasan un objeto de <a href="es/DOM/event">evento</a> como el primer y único parámetro. Como cualquier otro parámetro, si el objeto de evento no necesita ser utilizado, puede omitirse en la lista de parámetros formales.</p>
 
-<p>Los posibles objetivos de eventos en un documento <a href="es/HTML">HTML</a> incluyen: <code>window</code> (<code>Window</code> objects("objeto de ventana"), including frames("marcos")), <code>document</code> (<code>HTMLDocument</code> objects("objetos HTMLDocument")), y elementos (<code>Element</code> objects("objetos Elemento")). En el <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/">HTML DOM</a>, los destinos de evento tienen propiedades de controlador de eventos. Estas propiedades son nombres de eventos en minúsculas con prefijo "on", e.g. <code>onfocus</code>. Los eventos <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/">DOM Level 2 Events</a> proporcionan una forma alternativa y más sólida de agregar oyentes de eventos.</p>
+<p>Los posibles objetivos de eventos en un documento <a href="es/HTML">HTML</a> incluyen: <code>window</code> (<code>Window</code> objects("objeto de ventana"), including frames("marcos")), <code>document</code> (<code>HTMLDocument</code> objects("objetos HTMLDocument")), y elementos (<code>Element</code> objects("objetos Elemento")). En el <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/">HTML DOM</a>, los destinos de evento tienen propiedades de controlador de eventos. Estas propiedades son nombres de eventos en minúsculas con prefijo "on", e.g. <code>onfocus</code>. Los eventos <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/">DOM Level 2 Events</a> proporcionan una forma alternativa y más sólida de agregar oyentes de eventos.</p>
 
 <div class="note">
 <p>Nota: Los eventos son parte del DOM, no de JavaScript. (JavaScript simplemente proporciona un enlace al DOM.)</p>
@@ -564,7 +564,7 @@ function a() {
    onclick="setBGColor();"/&gt;
 </pre>
 
-  <p>Un manejador de eventos establecido de esta manera es en realidad una función, denominada después del atributo, envuelta alrededor del código especificado. Esta es la razón por la que los paréntesis en "<code>setBGColor()</code>" son necesarios aquí (en lugar de sólo "<code>setBGColor</code>").</p>
+  <p>Un manejador de eventos establecido de esta manera es en realidad una función, denominada después del atributo, envuelta alrededor del código especificado. Esta es la razón por la que los paréntesis en "<code>setBGColor()</code>" son necesarios aquí (en lugar de sólo "<code>setBGColor</code>").</p>
  </li>
 </ol>
 
@@ -575,7 +575,7 @@ function a() {
 }
 </pre>
 
-<p>Observe cómo se pasa el objeto de evento a esta función anónima como <code>event</code> de parámetro. Esto permite que el código especificado utilice el objeto Evento("Event object)":</p>
+<p>Observe cómo se pasa el objeto de evento a esta función anónima como <code>event</code> de parámetro. Esto permite que el código especificado utilice el objeto Evento("Event object)":</p>
 
 <pre>&lt;input ...
     onclick="alert(event.target.tagName);"/&gt;
@@ -586,7 +586,7 @@ function a() {
 <pre class="eval">window.onfocus();
 </pre>
 
-<p>Un error común de principiante de JavaScript es el añadir paréntesis y / o parámetros al final de la variable, es decir, llamar al manejador de eventos cuando lo asigna. La adición de estos paréntesis asignará el <em>valor devuelto al llamar al manejador de eventos</em>, que a menudo es <code>undefined</code> (si la función no devuelve nada), en lugar del controlador de eventos en sí:</p>
+<p>Un error común de principiante de JavaScript es el añadir paréntesis y / o parámetros al final de la variable, es decir, llamar al manejador de eventos cuando lo asigna. La adición de estos paréntesis asignará el <em>valor devuelto al llamar al manejador de eventos</em>, que a menudo es <code>undefined</code> (si la función no devuelve nada), en lugar del controlador de eventos en sí:</p>
 
 <pre class="eval">document.form1.button1.onclick = setBGColor();
 </pre>
@@ -642,7 +642,7 @@ resultado = padZeros(5,4);  // retorna "0005"
 
 <h4 id="2.29_Determining_whether_a_function_exists" name="2.29_Determining_whether_a_function_exists">2) Determinar si existe una función</h4>
 
-<p>Puede determinar si existe una función utilizando el operador <code>typeof</code>. En el ejemplo siguiente, se realiza una prueba para determinar si el objeto <code>window</code> tiene una propiedad llamada <code>noFunc</code> que es una función. Si es así, se utiliza; de lo contrario, se tomarán otras medidas.</p>
+<p>Puede determinar si existe una función utilizando el operador <code>typeof</code>. En el ejemplo siguiente, se realiza una prueba para determinar si el objeto <code>window</code> tiene una propiedad llamada <code>noFunc</code> que es una función. Si es así, se utiliza; de lo contrario, se tomarán otras medidas.</p>
 
 <pre> if ('function' == typeof window.noFunc) {
    // utiliza noFunc()

@@ -1,14 +1,8 @@
 ---
 title: CSS トランジションの使用
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - 上級者
-  - CSS
-  - CSS トランジション
-  - CSS3 トランジション
-  - Guide
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
+
 {{CSSref}}
 
 **CSS トランジション**は、 CSS プロパティが変化する際のアニメーションの速度を操作する手段を提供します。プロパティの変更を直ちに有効にするのではなく、プロパティの変更を一定期間にわたって発生させることを可能にします。例えば、ある要素の前景色を白色から黒色に変更した場合、通常は即座に前景色が替わります。 CSS トランジションを有効にすると、加速カーブに従った時間間隔で変更が行われ、その変化のすべてをカスタマイズすることができます。
@@ -73,8 +67,8 @@ div {
 
 ```html hidden
 <body>
-    <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
-    <div class="box">Sample</div>
+    <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
+    <div class="box">Sample</div>
 </body>
 ```
 
@@ -116,8 +110,8 @@ This is treated as if it were:
 
 ```css
 div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s, 3s, 5s;
+  transition-property: opacity, left, top, height;
+  transition-duration: 3s, 5s, 3s, 5s;
 }
 ```
 
@@ -208,7 +202,7 @@ JavaScript を使用して、ある場所にボールを移動させる効果を
 var f = document.getElementById('foo');
 document.addEventListener('click', function(ev){
     f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
+    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
 },false);
 ```
 

@@ -17,6 +17,7 @@ tags:
   - screen
 translation_of: Web/API/Screen_Capture_API
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.
@@ -33,7 +34,7 @@ captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions
 
 La {{jsxref("Promise")}} retournée par `getDisplayMedia()` résout un {{domxref("MediaStream")}} qui diffuse le dédia capturé.
 
-Voir l'article [Utiliser l'API Screen Capture](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) pour plus de détails sur l’utilisation de l’API pour capturer le contenu de l’écran sous forme de flux.
+Voir l'article [Utiliser l'API Screen Capture](/fr/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) pour plus de détails sur l’utilisation de l’API pour capturer le contenu de l’écran sous forme de flux.
 
 ## Ajouts à l'interface actuelle
 
@@ -94,19 +95,17 @@ Le dictionnaire suivant est difinit par l'API Screen Capture.
 
 La liste d’autorisations par défaut est `self`, ce qui permet à tout contenu du document d’utiliser Screen Capture.
 
-Voir [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour une explication plus en détail sur comment est utilisé Feature Policy.
+Voir [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour une explication plus en détail sur comment est utilisé Feature Policy.
 
-## Caracteristiques
+## Spécifications
 
-| Caracteristiques                         | Statut                               | Commentaire         |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Screen Capture')}} | {{Spec2('Screen Capture')}} | Définition Initiale |
+{{Specifications}}
 
-## Compatibilité des Navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser l'API Screen Capture](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Utiliser l'API Screen Capture](/fr/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - {{domxref("MediaDevices.getDisplayMedia()")}}

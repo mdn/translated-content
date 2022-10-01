@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase/objectStoreNames
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`objectStoreNames`**, rattachée à l'interface {{domxref("IDBDatabase")}}, est une liste de chaînes de caractères  ({{domxref("DOMStringList")}}) qui sont les noms des magasins d'objets ({{domxref("IDBObjectStore")}}) connectés à la base de données.
@@ -53,13 +54,11 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-objectStoreNames', 'objectStoreNames')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBDatabase.objectStoreNames")}}
+{{Compat}}
 
 ## Voir aussi
 

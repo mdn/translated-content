@@ -1,22 +1,8 @@
 ---
 title: 主軸に沿ったフレックスアイテムの比率の制御
-slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
-tags:
-  - Basis
-  - CSS
-  - Flex
-  - ガイド
-  - フレックスボックス
-  - free space
-  - grow
-  - max-content
-  - min-content
-  - shrink
-  - space
-translation_of: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
+slug: Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 ---
+
 {{CSSRef}}
 
 このガイドでは、フレックスアイテムに適用され、主軸に沿ってアイテムの寸法と自由度を制御することができる三つのプロパティ — {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, {{CSSxRef("flex-basis")}} を見ていきます。これらのプロパティがどのようにアイテムを伸縮させるかについて完全に理解することが、フレックスボックスをマスターするための鍵です。
@@ -95,7 +81,7 @@ CSS には {{CSSxRef('width','min-content','#min-content')}} と {{CSSxRef('widt
 
 すべてのアイテムの `flex-grow` 係数が同じであれば、余白はすべてのアイテムに均等に分配されます。このような場合、ふつうは値に `1` を使用しますが、すべてのアイテムに `flex-grow` の値として `88`、`100`、`1.2` など与えることもできます。これは係数です。係数がすべてのアイテムで等しく、フレックスコンテナー内に正の自由空間があれば、すべてのアイテムに均等に分配されます。
 
-### `flex-grow` と `flex-basis` を組み合わせる
+### `flex-grow` と `flex-basis` を組み合わせる
 
 `flex-grow` と `flex-basis` がどのように相互作用するかという点については混乱しやすいものです。コンテンツの長さが異なる 3 つのフレックスアイテムに、次のような `flex` ルールを適用した場合を考えてみましょう。
 
@@ -119,7 +105,7 @@ CSS には {{CSSxRef('width','min-content','#min-content')}} と {{CSSxRef('widt
 
 {{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-grow.html", '100%', 520)}}
 
-### アイテムに個別の flex-grow 要素を与える
+### アイテムに個別の flex-grow 要素を与える
 
 `flex-grow` と `flex-basis` の関係を理解すると、アイテムに様々な `flex-grow` 係数を割り当てることで、個々のアイテムの大きさをさらに制御することができるようになります。`flex-basis` を `0` にして、すべての空間を分配できるようにした場合、3 つのフレックスアイテムにそれぞれ異なる `flex-grow` ファクターを割り当てることができます。以下の例では、次のような値を使用しています。
 
@@ -147,7 +133,7 @@ CSS には {{CSSxRef('width','min-content','#min-content')}} と {{CSSxRef('widt
 
 `flex-shrink` の値を `1` に変更すると、すべてのアイテムがボックスに収まるように、各アイテムが同じ量だけ縮小されるのがわかります。これは、すべてのアイテムがボックスに収まるようにするために、最初の幅よりも小さくしたものです。
 
-### `flex-shrink` と `flex-basis` の組み合わせ
+### `flex-shrink` と `flex-basis` の組み合わせ
 
 `flex-shrink` は、`flex-grow` とほとんど同じように動作すると言えるでしょう。しかし、*完全に*同じではない理由が 2 つあります。
 
@@ -163,7 +149,7 @@ CSS には {{CSSxRef('width','min-content','#min-content')}} と {{CSSxRef('widt
 
 実際には、縮小の動作は妥当な結果をもたらす傾向があります。通常、内容物が完全に消えてしまったり、ボックスが最小の内容物よりも小さくなってしまったりすることはありません。そのため、上記のルールは、コンテナーに収まるように内容物を縮小する必要がある場合の適切な動作という点で、理にかなっています。
 
-### アイテムに別の `flex-shrink` 要素を与える
+### アイテムに別の `flex-shrink` 要素を与える
 
 `flex-grow` と同様に、それぞれのフレックスアイテムにに異なる `flex-shrink` 係数を与えることができます。これにより、たとえば、あるアイテムを兄弟アイテムよりも急速に縮小させたり、まったく縮小させないようにしたい場合に、既定の動作を変更することができます。
 

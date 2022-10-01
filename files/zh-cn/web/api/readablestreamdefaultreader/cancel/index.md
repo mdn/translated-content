@@ -1,15 +1,8 @@
 ---
 title: ReadableStreamDefaultReader.cancel()
 slug: Web/API/ReadableStreamDefaultReader/cancel
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - cancel
-translation_of: api/ReadableStreamDefaultReader/cancel
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} 接口的 **`cancel()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 在流被取消时兑现。消费者在流中调用该方法发出取消流的信号。
@@ -49,7 +42,7 @@ function fetchStream() {
   let charsReceived = 0;
   // read() 返回一个 promise，其会在接收到数据时被兑现
   reader.read().then(function processText({ done, value }) {
-    // 结果包含两个属性:
+    // 结果包含两个属性：
     // done  - 如果为 true，表示流已经返回所有的数据。
     // value - 一些数据，done 为 true 时，其值始终为 undefined。
     if (done) {

@@ -1,14 +1,6 @@
 ---
 title: React のリソース
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - framework
-  - resources
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -55,7 +47,7 @@ import "./Form.css";
 
 ## React DevTools
 
-このチュートリアルでは `console.log()` を使ってアプリケーションの state や props を確認しました。また、 React が CLI やブラウザの JavaScript コンソールに表示する便利な警告やエラーメッセージも見てきたと思います。しかし、ここでできることはまだあります。
+このチュートリアルでは `console.log()` を使ってアプリケーションの state や props を確認しました。また、 React が CLI やブラウザーの JavaScript コンソールに表示する便利な警告やエラーメッセージも見てきたと思います。しかし、ここでできることはまだあります。
 
 React DevTools はブラウザーで React アプリケーションの内部を直接検査できるようにするものです。ブラウザーの開発者ツールに新しいパネルが追加され、それを使って様々なコンポーネントの state や props を検査したり、 state や props を編集してアプリケーションにすぐに変更を加えたりすることができます。
 
@@ -163,5 +155,5 @@ React コミュニティはクライアントサイドルーティングにつ�
   - [Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
   - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - [Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

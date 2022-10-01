@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 original_slug: JavaScript/Reference/Annexes/Fonctionnalités_dépréciées
 ---
+
 {{JsSidebar("More")}}
 
 Cette page liste les fonctionnalités de JavaScript qui sont dépréciées (_deprecated_) (c'est-à-dire que ces fonctionnalités sont toujours disponibles mais qu'il est prévu de les retirer) et les fonctionnalités obsolètes (celles qui ne sont plus utilisables).
@@ -138,7 +139,7 @@ Les propriétés qui suivent sont désormais des propriétés des instances de `
 
 ### Proxy
 
-- [Proxy.create](/en-US/docs/Archive/Web/Old_Proxy_API) et [Proxy.createFunction](/en-US/docs/Archive/Web/Old_Proxy_API) sont dépréciées. L'API {{jsxref("Objets_globaux/Proxy", "Proxy")}} doit être utilisée à la place.
+- [Proxy.create](/fr/docs/Archive/Web/Old_Proxy_API) et [Proxy.createFunction](/fr/docs/Archive/Web/Old_Proxy_API) sont dépréciées. L'API {{jsxref("Objets_globaux/Proxy", "Proxy")}} doit être utilisée à la place.
 - Les trappes de captures suivantes sont obsolètes :
 
   - `hasOwn` ({{bug(980565)}}, Firefox 33).
@@ -206,4 +207,4 @@ Voir la page [E4X](/fr/docs/E4X) pour plus d'informations.
 
 ### Sharp variables
 
-Voir la page [sur les variables « Sharp » en JavaScript](/en-US/docs/Archive/Web/Sharp_variables_in_JavaScript) pour plus d'informations.
+Voir la page [sur les variables « Sharp » en JavaScript](/fr/docs/Archive/Web/Sharp_variables_in_JavaScript) pour plus d'informations.

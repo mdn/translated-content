@@ -1,8 +1,8 @@
 ---
 title: 我需要什么软件来构建一个网站
 slug: Learn/Common_questions/What_software_do_I_need
-translation_of: Learn/Common_questions/What_software_do_I_need
 ---
+
 在这篇文章我们会展示当你编辑，上传或者浏览一个网站时所需要的软件成分。
 
 <table>
@@ -145,7 +145,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Getting_s
 
 ### 上传文件到网络
 
-当你的网站已经为公众浏览做好准备，你会需要上传你的网页到你的网络服务器。你可以从不同的供应者（查看 在网络上做某些东西要花费多少 \[[How much does it cost to do something on the web?](/en-US/docs/Learn/How_much_does_it_cost)]）处购买服务器的空间。一旦你选择好供应者，供应者会通过电子邮件给你发送 FTP（文件传输协议 \[file transfer protocol]）访问信息。上传文件到一个网络服务器是创建一个网站的重要一环，所以我们会在一篇独立的文章 \[[a separate article](/en-US/docs/Learn/Upload_files_to_a_web_server)] 中介绍它。就目前而言，这里有一小列免费的基本 FTP 客户端：
+当你的网站已经为公众浏览做好准备，你会需要上传你的网页到你的网络服务器。你可以从不同的供应者（查看 在网络上做某些东西要花费多少 \[[How much does it cost to do something on the web?](/zh-CN/docs/Learn/How_much_does_it_cost)]）处购买服务器的空间。一旦你选择好供应者，供应者会通过电子邮件给你发送 FTP（文件传输协议 \[file transfer protocol]）访问信息。上传文件到一个网络服务器是创建一个网站的重要一环，所以我们会在一篇独立的文章 \[[a separate article](/zh-CN/docs/Learn/Upload_files_to_a_web_server)] 中介绍它。就目前而言，这里有一小列免费的基本 FTP 客户端：
 
 <table>
   <thead>
@@ -191,14 +191,14 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Getting_s
 - [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/download-ie)
 - [Apple Safari](https://www.apple.com/safari/)
 
-如果你正以特定的群体（比如说技术平台或者国家）为目标，你或许需要用额外的浏览器，像是 [Opera](https://www.opera.com/)、 [Dolphin](https://dolphin.com/) 或者[ UC Browser](http://www.ucweb.com/ucbrowser/)，来测试它。
+如果你正以特定的群体（比如说技术平台或者国家）为目标，你或许需要用额外的浏览器，像是 [Opera](https://www.opera.com/)、[Dolphin](https://dolphin.com/) 来测试它。
 
-但是因为某些浏览器只会在特定的操作系统上运行，测试会变得复杂。Apple Safari 在 iOS 和 Mac OS 上运行，而 Internet Explorer 则只在 Windows 上运行。这时候最好利用像是 [Browsershots](http://browsershots.org/) 或者 [Browserstack](http://www.browserstack.com/) 之类的服务。Browsershots 提供你的网站的截图，就如同它会在不同浏览器中所看到那样。Browserstack 实际上给予你完全远程访问虚拟机 \[virtual machines] 的权限，所以你可以在最普遍的环境中测试你的网站。或者，你可以设置你自己的虚拟机，不过这需要一些专业知识。（如果你选择了这样做，微软 \[Microsoft] 在 [modern.ie](https://modern.ie) 上为开发者提供了一些工具，包括随时可用的虚拟机。)
+但是因为某些浏览器只会在特定的操作系统上运行，测试会变得复杂。Apple Safari 在 iOS 和 Mac OS 上运行，而 Internet Explorer 则只在 Windows 上运行。这时候最好利用像是 [Browsershots](http://browsershots.org/) 或者 [Browserstack](http://www.browserstack.com/) 之类的服务。Browsershots 提供你的网站的截图，就如同它会在不同浏览器中所看到那样。Browserstack 实际上给予你完全远程访问虚拟机的权限，所以你可以在最普遍的环境中测试你的网站。或者，你可以设置你自己的虚拟机，不过这需要一些专业知识。（如果你选择了这样做，微软在上为开发者提供了[随时可用的虚拟机](https://developer.microsoft.com/zh-cn/microsoft-edge/tools/vms/)。）
 
-务必在一个真实设备上运行一些测试，尤其是在真实的移动设备 \[mobile devices] 上。移动设备模拟是一个崭新的，进化中的技术，而且它并不及桌面模拟可靠。当然，移动设备耗费金钱，所以我们推荐你查看一下 [Open Device Lab initiative](http://opendevicelab.com/)。你同时也可以分享设备，如果你想要不花费太多地在多平台上测试的话。
+务必在一个真实设备上运行一些测试，尤其是在真实的移动设备上。移动设备模拟是一个崭新的，进化中的技术，而且它并不及桌面模拟可靠。当然，移动设备耗费金钱，所以我们推荐你查看一下 [Open Device Lab initiative](http://opendevicelab.com/)。你同时也可以分享设备，如果你想要不花费太多地在多平台上测试的话。
 
 ## 下一步
 
-- 这里的一些软件是免费的，但不是所有都是。探寻在网络上做一些事情需要花费多少 \[[Find out how much it costs to do something on the web](/en-US/docs/Learn/Common_questions/How_much_does_it_cost)]。
-- 如果你想要了解更多关于文本编辑器的知识，阅读我们关于如何选择并安装一个文件浏览器 \[[how to choose and install a text editor](/en-US/docs/Learn/Choose,_Install_and_set_up_a_text_editor)] 的文章。
-- 如果你寻思如何在网络上发布你的网站，查阅“如何上传文件到一个网络服务器 \[[How to upload files to a web server](/en-US/docs/Learn/Upload_files_to_a_web_server)]”。
+- 这里的一些软件是免费的，但不是所有都是。探寻在网络上做一些事情需要花费多少 \[[Find out how much it costs to do something on the web](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost)]。
+- 如果你想要了解更多关于文本编辑器的知识，阅读我们关于如何选择并安装一个文件浏览器 \[[how to choose and install a text editor](/zh-CN/docs/Learn/Choose,_Install_and_set_up_a_text_editor)] 的文章。
+- 如果你寻思如何在网络上发布你的网站，查阅“如何上传文件到一个网络服务器 \[[How to upload files to a web server](/zh-CN/docs/Learn/Upload_files_to_a_web_server)]”。

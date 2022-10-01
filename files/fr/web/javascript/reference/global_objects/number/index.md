@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number
 ---
+
 {{JSRef}}
 
 L'objet **`Number`** est une enveloppe objet (_wrapper_) autour du [type primitif numérique](/fr/docs/Web/JavaScript/Structures_de_données#Le_type_nombre). Autrement dit, il est utilisé pour manipuler les nombres comme des objets. Pour créer un objet `Number`, on utilise le constructeur `Number()`.

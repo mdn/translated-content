@@ -8,6 +8,7 @@ tags:
   - Ruby
 translation_of: Web/CSS/ruby-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`ruby-align`** définit la façon dont les éléments ruby sont distribués autour du texte de base.
@@ -38,9 +39,13 @@ ruby-align: unset;
 - `space-around`
   - : Un mot-clé indiquant qu'un espace supplémentaire sera distribué entre les éléments ruby et autour d'eux.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -124,15 +129,11 @@ Avec ce CSS, on obtient le résultat suivant :
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires        |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('CSS3 Ruby', '#ruby-align-property', 'ruby-align')}} | {{Spec2('CSS3 Ruby')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.ruby-align")}}
+{{Compat}}
 
 ## Voir aussi
 

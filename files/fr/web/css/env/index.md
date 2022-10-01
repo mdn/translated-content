@@ -4,6 +4,7 @@ slug: Web/CSS/env
 translation_of: Web/CSS/env()
 original_slug: Web/CSS/env()
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`env()`** peut être utilisée afin d'insérer la valeur d'une variable d'environnement dans une règle. Les variables d'environnement sont globales pour un document donné, à la différence des [propriétés personnalisées](/fr/docs/Web/CSS/--*). Les variables d'environnement sont définies au niveau de l'agent utilisateur et non par l'utilisateur/le concepteur.
@@ -110,13 +111,11 @@ Pour la deuxième valeur, il est possible d'utiliser des virgules afin de fourni
 
 ## Spécifications
 
-| Spécification                                                                                | État                                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Environment Variables", "#env-function", "env()")}} | {{Spec2("CSS3 Environment Variables")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.custom-property.env")}}
+{{Compat}}
 
 ## Voir aussi
 

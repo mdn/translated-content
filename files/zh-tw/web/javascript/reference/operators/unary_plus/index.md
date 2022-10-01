@@ -1,13 +1,8 @@
 ---
 title: 一元正號運算子 (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.unary_plus
 ---
+
 {{jsSidebar("Operators")}}
 
 一元正號運算子 (`+`) 置於運算元之前並取其數值。如果可以，亦會將之轉為數字。

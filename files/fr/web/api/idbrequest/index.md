@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBRequest`** de l'API IndexedDB donne accès par ses gestionnaires d'événements aux résultats des requêtes asynchrones sur la base de données, les magasins d'objets ou les index. Chaque opération d'écriture ou lecture sur la base de données utilise une requête.
@@ -52,9 +53,9 @@ _Pas de méthodes spécifiques, mais hérite des méthodes de {{domxref("EventTa
 On peut écouter les évènement avec `addEventListener()` ou bien en assignant un gestionnaire d'évènement à la propriété `oneventname` de cette interface.
 
 - {{domxref("IDBRequest.onerror","onerror")}}
-  - : Le gestionnaire d'événement **`onerror`** de l'interface **`IDBRequest`** capte l'événement [`error`](/en-US/docs/Web/Events/error), déclenché quand une requête renvoie une erreur.
+  - : Le gestionnaire d'événement **`onerror`** de l'interface **`IDBRequest`** capte l'événement [`error`](/fr/docs/Web/Events/error), déclenché quand une requête renvoie une erreur.
 - {{domxref("IDBRequest.onsuccess","onsuccess")}}
-  - : Le gestionnaire d'événement **`onsuccess`** de l'interface **`IDBRequest`** capte l'événement [`success`](/en-US/docs/Web/Events/success), déclenché quand la requête réussie.
+  - : Le gestionnaire d'événement **`onsuccess`** de l'interface **`IDBRequest`** capte l'événement [`success`](/fr/docs/Web/Events/success), déclenché quand la requête réussie.
 
 ## Exemple
 
@@ -82,14 +83,11 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('IndexedDB', '#idbrequest', 'IDBRequest')}}     | {{Spec2('IndexedDB')}}     | Définition initiale. |
-| {{SpecName("IndexedDB 2", "#request-api", "IDBRequest")}} | {{Spec2("IndexedDB 2")}} |                      |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest")}}
+{{Compat}}
 
 ## Voir aussi
 

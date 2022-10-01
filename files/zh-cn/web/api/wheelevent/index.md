@@ -1,14 +1,8 @@
 ---
 title: WheelEvent
 slug: Web/API/WheelEvent
-tags:
-  - API
-  - DOM
-  - Reference
-  - WheelEvent
-  - 接口
-translation_of: Web/API/WheelEvent
 ---
+
 {{APIRef("UI Events")}}
 
 **`WheelEvent`** 接口表示用户滚动鼠标滚轮或类似的输入设备时触发的事件。

@@ -1,20 +1,8 @@
 ---
 title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
-page-type: web-api-instance-property
-tags:
-  - API
-  - Code
-  - DOM
-  - DOM Events
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
-browser-compat: api.KeyboardEvent.code
-translation_of: Web/API/KeyboardEvent/code
 ---
+
 {{APIRef("UI Events")}}
 
 `KeyboardEvent.code` プロパティは、（キー入力によって入力された文字ではなく）キーボード上の物理的なキーを表します。つまり、このプロパティはキーボードレイアウトや修飾キーの状態によって変更される前の値を返します。
@@ -25,7 +13,7 @@ translation_of: Web/API/KeyboardEvent/code
 
 例えば、返ってきた `code` が "`KeyQ`" は QWERTY レイアウトのキーボードでは <kbd>Q</kbd> キーですが、同じ Dvorak キーボードでは同じ `code` の値が <kbd>'</kbd> キーを表し、 AZERTY キーボードでは <kbd>A</kbd> キーを表すものでもあります。したがって、すべてのユーザーが特定のキーボードレイアウトを使用しているわけではないため、 `code` の値を用いてユーザーが認識しているキーの名前が何であるかを特定することはできません。
 
-キーイベントに対応する文字が何であるかを判別するには、、代わりに{{domxref("KeyboardEvent.key")}} プロパティを使用してください。
+キーイベントに対応する文字が何であるかを判別するには、代わりに{{domxref("KeyboardEvent.key")}} プロパティを使用してください。
 
 ## 値
 

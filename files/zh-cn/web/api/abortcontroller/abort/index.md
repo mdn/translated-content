@@ -1,17 +1,8 @@
 ---
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
-page-type: web-api-instance-method
-tags:
-  - API
-  - AbortController
-  - Experimental
-  - Fetch
-  - Method
-  - Reference
-  - abort()
-translation_of: Web/API/AbortController/abort
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("AbortController")}} 接口的 **`abort()`** 方法会在 DOM 请求完成之前中止它。它能够中止 [fetch 请求](/zh-CN/docs/Web/API/fetch)、各种响应主体或者流的消耗。

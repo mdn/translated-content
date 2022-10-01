@@ -1,14 +1,6 @@
 ---
 title: JavaScript에 발 담그기
 slug: Learn/JavaScript/First_steps/A_first_splash
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
@@ -182,7 +174,7 @@ JavaScript에서는 연산자로 참/거짓 판별, 수학 계산, 문자열 연
 
 | 연산자 | 이름              | 예제      |
 | ------ | ----------------- | --------- |
-| `+`    | 더하기            | `6 + 9`   |
+| `+`    | 더하기            | `6 + 9`   |
 | `-`    | 빼기              | `20 - 15` |
 | `*`    | 곱하기            | `3 * 7`   |
 | `/`    | 나누기            | `10 / 5`  |

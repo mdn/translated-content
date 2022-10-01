@@ -1,16 +1,8 @@
 ---
 title: DragEvent()
 slug: Web/API/DragEvent/DragEvent
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - Reference
-  - drag and drop
-browser-compat: api.DragEvent.DragEvent
-translation_of: Web/API/DragEvent/DragEvent
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 このコンストラクターは、合成した {{domxref("DragEvent")}} オブジェクトを作成するために使用します。

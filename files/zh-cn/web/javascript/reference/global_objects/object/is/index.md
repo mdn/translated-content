@@ -1,19 +1,8 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-tags:
-  - Comparison
-  - Condition
-  - Conditional
-  - ECMAScript 2015
-  - Equality
-  - JavaScript
-  - Method
-  - Object
-  - Polyfill
-browser-compat: javascript.builtins.Object.is
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
+
 {{JSRef}}
 
 **`Object.is()`** 方法判断两个值是否为[同一个值](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)。
@@ -37,7 +26,7 @@ Object.is(value1, value2);
 
 ## 描述
 
-`Object.is()` 方法判断两个值是否为[同一个值](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)，如果满足以下任意条件则两个值相等：
+`Object.is()` 方法判断两个值是否为[同一个值](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)，如果满足以下任意条件则两个值相等：
 
 - 都是 {{jsxref("undefined")}}
 - 都是 {{jsxref("null")}}
@@ -50,9 +39,9 @@ Object.is(value1, value2);
   - 都是 {{jsxref("NaN")}}
   - 都是同一个值，非零且都不是 {{jsxref("NaN")}}
 
-`Object.is()` 与 {{jsxref("Operators", "==", "#相等运算符")}} 不同。`==` 运算符在判断相等前对两边的变量（如果它们不是同一类型）进行强制转换（这种行为将 `"" == false` 判断为 `true`），而 `Object.is` 不会强制转换两边的值。
+`Object.is()` 与 {{jsxref("Operators", "==", "#相等运算符")}} 不同。`==` 运算符在判断相等前对两边的变量（如果它们不是同一类型）进行强制转换（这种行为将 `"" == false` 判断为 `true`），而 `Object.is` 不会强制转换两边的值。
 
-`Object.is()` 与 {{jsxref("Operators", "===", "#全等运算符")}} 也不相同。差别是它们对待有符号的零和 NaN 不同，例如，`===` 运算符（也包括 `==` 运算符）将数字 `-0` 和 `+0` 视为相等，而将 {{jsxref("Number.NaN")}} 与 {{jsxref("NaN")}} 视为不相等。
+`Object.is()` 与 {{jsxref("Operators", "===", "#全等运算符")}} 也不相同。差别是它们对待有符号的零和 NaN 不同，例如，`===` 运算符（也包括 `==` 运算符）将数字 `-0` 和 `+0` 视为相等，而将 {{jsxref("Number.NaN")}} 与 {{jsxref("NaN")}} 视为不相等。
 
 ## 示例
 

@@ -7,6 +7,7 @@ tags:
   - WebAPI
 translation_of: Web/API/Blob
 ---
+
 {{APIRef("File API")}}
 
 Un objet **`Blob`** représente un objet, semblable à un fichier, qui est immuable et qui contient des données brutes. Les _blobs_ (pour **B**inary **L**arge **Ob**jects) représentent des données qui ne sont pas dans un format JavaScript natif. L'interface {{domxref("File")}} est basée sur l'interface `Blob` et hérite des fonctionnalités de cette dernière tout en ajoutant des fonctionnalités pour gérer les fichiers sur le système de l'utilisateur.
@@ -85,13 +86,11 @@ En utilisant d'autres méthodes de {{domxref("FileReader")}}, on peut lire le co
 
 ## Spécifications
 
-| Spécification                                        | État                         | Commentaires         |
-| ---------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('File API','#blob','Blob')}} | {{Spec2('File API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Blob")}}
+{{Compat}}
 
 ## Voir aussi
 

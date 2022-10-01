@@ -1,8 +1,8 @@
 ---
 title: 地址栏按钮
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
+
 {{AddonSideBar}}通常来说的 page action，是添加到浏览器地址栏中的按钮。用户通过点击这个按钮与你的扩展进行交互。
 
 ![](address_bar_button.png)
@@ -67,17 +67,17 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 仅 default_icon 是强制（必需）的。
 
-有两种方式定义地址栏按钮：带 popup 窗口和无 popup 窗口。如果你没有指定一个 popup，则当用户点击此按钮时，事件被派送到使用[pageAction.onClicked](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked)侦听器的扩展：
+有两种方式定义地址栏按钮：带 popup 窗口和无 popup 窗口。如果你没有指定一个 popup，则当用户点击此按钮时，事件被派送到使用[pageAction.onClicked](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked)侦听器的扩展：
 
 ```js
 browser.pageAction.onClicked.addListener(handleClick);
 ```
 
-如果你指定了一个 popup，则点击事件不被派送，在用户点击按钮时显示 popup。用户可以与 popup 进行交互，并且当用户点击 popup 以外区域时，popup 自动关闭。参见[Popup](/en-US/Add-ons/WebExtensions/Popups)可获得创建和管理 popups 更详细内容。
+如果你指定了一个 popup，则点击事件不被派送，在用户点击按钮时显示 popup。用户可以与 popup 进行交互，并且当用户点击 popup 以外区域时，popup 自动关闭。参见[Popup](/zh-CN/Add-ons/WebExtensions/Popups)可获得创建和管理 popups 更详细内容。
 
 注意你的扩展只能有一个地址栏按钮。
 
-通过使用[pageAction](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API，你可以以编程方式修改地址栏按钮的任何属性。
+通过使用[pageAction](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API，你可以以编程方式修改地址栏按钮的任何属性。
 
 ## Icons
 

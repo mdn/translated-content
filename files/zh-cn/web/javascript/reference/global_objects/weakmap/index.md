@@ -1,12 +1,8 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 ---
+
 {{JSRef}}
 
 **`WeakMap`** 对象是一组键/值对的集合，其中的键是弱引用的。其键必须是对象，而值可以是任意的。
@@ -113,7 +109,7 @@ class ClearableWeakMap {
 ## 相关链接
 
 - A polyfill of `WeakMap` is available in [`core-js`](https://github.com/zloirock/core-js#weakmap)
-- [`WeakMap` in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
+- [`WeakMap` in the JavaScript guide](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
 - [Hiding Implementation Details with ECMAScript 6 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}

@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 translation_of: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 Un navigateur web contient certains outils graphiques très puissants, comme le langage [SVG](/fr/docs/Web/SVG) ou les API permettant de dessiner sur des éléments HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) (voir [l'API Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API)). Dans cet article, nous verrons une introduction au canevas et les ressources complémentaires pour approfondir ces connaissances.
@@ -449,7 +450,7 @@ Et voilà&nbsp;! L'exemple terminé devrait ressembler à ceci&nbsp;:
 
 Nous vous encourageons ici à manipuler cet exemple et à l'adapter comme bon vous semble&nbsp;! Vous pouvez par exemple&nbsp;:
 
-- Dessiner des rectangles ou des arcs voire embarquer des images plutôt que de dessiner des triangles, 
+- Dessiner des rectangles ou des arcs voire embarquer des images plutôt que de dessiner des triangles,
 - Modifier les valeurs des variables `length` et `moveOffset`.
 - Utiliser des nombres aléatoires en exploitant la fonction `rand()` que nous avons incluse mais pas utilisée.
 

@@ -1,15 +1,8 @@
 ---
 title: border-spacing
 slug: Web/CSS/border-spacing
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 表
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-spacing
-translation_of: Web/CSS/border-spacing
 ---
+
 {{CSSRef}}
 
 **`border-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("table")}} における隣り合うセルの境界同士の間隔を定めます。このプロパティは {{cssxref("border-collapse")}} が `separate` のときのみ適用されます。

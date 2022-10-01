@@ -1,17 +1,8 @@
 ---
 title: Element.closest()
 slug: Web/API/Element/closest
-tags:
-  - API
-  - CSS セレクター
-  - DOM
-  - Element
-  - メソッド
-  - リファレンス
-  - セレクター
-browser-compat: api.Element.closest
-translation_of: Web/API/Element/closest
 ---
+
 {{APIRef('DOM')}}
 
 **`closest()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素とその親に（文書ルートに向かって）、指定された [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)に一致するノードが見つかるまで探索します。

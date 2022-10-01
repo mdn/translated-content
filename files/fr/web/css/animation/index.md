@@ -3,6 +3,7 @@ title: animation
 slug: Web/CSS/animation
 translation_of: Web/CSS/animation
 ---
+
 {{CSSRef}}
 
 La propriété **`animation`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de d'appliquer une animation entre des styles.
@@ -247,9 +248,13 @@ L'ordre des valeurs est également important pour chaque définition d'animation
 - `<single-animation-play-state>`
   - : Si l'animation est lancée ou non, cf. {{cssxref("animation-play-state")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -317,21 +322,11 @@ Veillez à fournir un mécanisme qui permette d'interrompre ou de désactiver l'
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Animations', '#animation', 'animation')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.animation")}}
-
-### Notes relatives à Quantum (Firefox)
-
-- Gecko possède un bug qui fait que lorsqu'on anime un élément en dehors de l'écran pour le faire apparaître à l'écran après une durée donnée, il n'effectue pas de _repaint_ sur certaines plateformes (par exemple Windows, cf. ({{bug(1383239)}})). Ce problème a été corrigé avec le nouveau moteur de rendu CSS, [Stylo](https://wiki.mozilla.org/Quantum/Stylo), prévu pour Firefox 57.
-- Un autre bug empêche d'ouvrir les éléments {{htmlelement("details")}} par défaut avec l'attribut `open` si ceux-ci sont animés (cf. {{bug(1382124)}}). Cet autre point est également résolu avec Stylo.
-- Un autre bug ne répercute pas les modifications de {{cssxref("font-size")}} sur les animations qui utilisent l'unité `em` pour l'élément parent (cf. {{bug(1254424)}}). Stylo règle ce problème.
+{{Compat}}
 
 ## Voir aussi
 

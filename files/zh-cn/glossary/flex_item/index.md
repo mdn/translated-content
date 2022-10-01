@@ -1,8 +1,8 @@
 ---
 title: Flex Item
 slug: Glossary/Flex_Item
-translation_of: Glossary/Flex_Item
 ---
+
 {{glossary("Flex Container")}}(弹性容器) 的一级子元素 (设置`display: flex` 或 `display: inline-flex`的子元素) 将成为弹性元素。
 
 弹性容器内的连续文本，也将成为弹性元素。

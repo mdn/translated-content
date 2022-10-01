@@ -1,15 +1,8 @@
 ---
 title: 擬似要素
 slug: Web/CSS/Pseudo-elements
-tags:
-  - CSS
-  - ガイド
-  - 概要
-  - 擬似要素
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/Pseudo-elements
 ---
+
 {{CSSRef}}
 
 CSS の **擬似要素** (Pseudo-elements) は、セレクターに付加するキーワードで、選択された要素の特定の部分にスタイル付けできるようにするものです。例えば {{CSSxRef("::first-line")}} 擬似要素は、段落の最初の行のフォントを変更するために使用することができます。
@@ -42,12 +35,12 @@ CSS の一連の仕様で定義される擬似要素には、以下のような�
 
 A
 
-- {{CSSxRef("::after", "::after (:after)")}}
+- {{CSSxRef("::after", "::after (:after)")}}
 
 B
 
-- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
-- {{CSSxRef("::before", "::before (:before)")}}
+- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
+- {{CSSxRef("::before", "::before (:before)")}}
 
 C
 
@@ -56,28 +49,28 @@ C
 
 F
 
-- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
-- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
+- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
+- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
 - {{CSSxRef("::file-selector-button")}}
 
 G
 
-- {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
+- {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
 
 M
 
-- {{CSSxRef("::marker")}} {{Experimental_Inline}}
+- {{CSSxRef("::marker")}} {{Experimental_Inline}}
 
 P
 
-- {{CSSxRef("::part", "::part()")}} {{Experimental_Inline}}
-- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
+- {{CSSxRef("::part", "::part()")}} {{Experimental_Inline}}
+- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
 
 S
 
 - {{CSSxRef("::selection")}}
 - {{CSSxRef("::slotted", "::slotted()")}}
-- {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
+- {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
 
 T
 

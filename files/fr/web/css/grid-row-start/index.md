@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-row-start
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-row-start`** définit le début de la position, sur une ligne, d'un élément placé sur la grille qui participe à une ligne, à un fragment de ligne ou rien (automatique). Par conséquent, cela définit également le début de la zone de la grille pour cet élément.
@@ -73,9 +74,13 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
     ` <custom-ident``> ` ne peut pas prendre la valeur `span`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -139,15 +144,11 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-row-start", "grid-row-start")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-row-start")}}
+{{Compat}}
 
 ## Voir aussi
 

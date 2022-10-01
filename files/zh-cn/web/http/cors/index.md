@@ -1,27 +1,15 @@
 ---
 title: 跨源资源共享（CORS）
 slug: Web/HTTP/CORS
-tags:
-  - AJAX
-  - CORS
-  - Cross-Origin Resource Sharing
-  - Fetch
-  - Fetch API
-  - HTTP
-  - HTTP Access Controls
-  - Same-origin policy
-  - Security
-  - XMLHttpRequest
-  - l10n:priority
-translation_of: Web/HTTP/CORS
 ---
+
 {{HTTPSidebar}}
 
 `跨源资源共享` ({{Glossary("CORS")}})（或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其它 {{glossary("origin")}}（域，协议和端口），使得浏览器允许这些 origin 访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的"预检"请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
 
 跨源 HTTP 请求的一个例子：运行在 `https://domain-a.com` 的 JavaScript 代码使用 {{domxref("XMLHttpRequest")}} 来发起一个到 `https://domain-b.com/data.json` 的请求。
 
-出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。 例如，`XMLHttpRequest` 和 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 遵循[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。
+出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。例如，`XMLHttpRequest` 和 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 遵循[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。
 
 ![](cors_principle.png)
 
@@ -33,7 +21,7 @@ translation_of: Web/HTTP/CORS
 
 更具体地来讲，这篇文章适用于 **网站管理员**、**后端和前端开发者**。现代浏览器处理跨源资源共享的客户端部分，包括 HTTP 头和相关策略的执行。但是这一新标准意味着服务器需要处理新的请求头和响应头。
 
-## 什么情况下需要 CORS ？
+## 什么情况下需要 CORS？
 
 这份 [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) 允许在下列场景中使用跨站点 HTTP 请求：
 
@@ -41,7 +29,7 @@ translation_of: Web/HTTP/CORS
 - Web 字体 (CSS 中通过 `@font-face` 使用跨源字体资源)，[因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)。
 - [WebGL 贴图](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
 - 使用 [`drawImage`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage) 将 Images/video 画面绘制到 canvas。
-- [来自图像的 CSS 图形](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
 
 本文概述了跨源资源共享机制及其所涉及的 HTTP 头。
 
@@ -59,7 +47,7 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 
 ### 简单请求
 
-某些请求不会触发 {{Glossary("Preflight_request","CORS 预检请求")}}。本文称这样的请求为“简单请求”，请注意，该术语并不属于 {{SpecName('Fetch')}}（其中定义了 CORS）规范。若请求 **满足所有下述条件**，则该请求可视为“简单请求”：
+某些请求不会触发 {{Glossary("Preflight_request","CORS 预检请求")}}。本文称这样的请求为“简单请求”，请注意，该术语并不属于 [Fetch](https://fetch.spec.whatwg.org/)（其中定义了 CORS）规范。若请求 **满足所有下述条件**，则该请求可视为“简单请求”：
 
 - 使用下列方法之一：
 
@@ -195,7 +183,7 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-浏览器检测到，从 JavaScript 中发起的请求需要被预检。从上面的报文中，我们看到，第 1\~10 行发送了一个使用 `OPTIONS` 方法 的“预检请求”。OPTIONS 是 HTTP/1.1 协议中定义的方法，用以从服务器获取更多信息。该方法不会对服务器资源产生影响。 预检请求中同时携带了下面两个首部字段：
+浏览器检测到，从 JavaScript 中发起的请求需要被预检。从上面的报文中，我们看到，第 1\~10 行发送了一个使用 `OPTIONS` 方法 的“预检请求”。OPTIONS 是 HTTP/1.1 协议中定义的方法，用以从服务器获取更多信息。该方法不会对服务器资源产生影响。预检请求中同时携带了下面两个首部字段：
 
 ```
 Access-Control-Request-Method: POST
@@ -336,9 +324,9 @@ Content-Type: text/plain
 
 #### 预检请求和凭据
 
-CORS 预检请求不能包含凭据。预检请求的 _响应_ 必须指定 `Access-Control-Allow-Credentials: true` 来表明可以携带凭据进行实际的请求。
+CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Access-Control-Allow-Credentials: true` 来表明可以携带凭据进行实际的请求。
 
-> **备注：** 一些企业认证服务要求在预检请求时发送 TLS 客户端证书，这违反了 {{SpecName("Fetch","#cors-protocol-and-credentials")}} 的规范。
+> **备注：** 一些企业认证服务要求在预检请求时发送 TLS 客户端证书，这违反了 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 的规范。
 >
 > Firefox 87 允许通过在设置中设定 `network.cors_preflight.allow_client_cert` 为 `true`（{{bug(1511151)}}）来允许这种不规范的行为。基于 chromium 的浏览器目前总是在 CORS 预检请求中发送 TLS 客户端证书（[Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)）。
 
@@ -441,7 +429,7 @@ Access-Control-Allow-Headers: <field-name>[, <field-name>]*
 
 ## HTTP 请求首部字段
 
-本节列出了可用于发起跨源请求的首部字段。请注意，这些首部字段无须手动设置。 当开发者使用 XMLHttpRequest 对象发起跨源请求时，它们已经被设置就绪。
+本节列出了可用于发起跨源请求的首部字段。请注意，这些首部字段无须手动设置。当开发者使用 XMLHttpRequest 对象发起跨源请求时，它们已经被设置就绪。
 
 ### Origin
 
@@ -479,13 +467,11 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 规范
 
-| Specification                                                    | Status                   | Comment                                                                          |
-| ---------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://www.w3.org/TR/cors/) specification. |
+{{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## 参见
 

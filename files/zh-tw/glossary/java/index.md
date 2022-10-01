@@ -1,11 +1,8 @@
 ---
 title: Java
 slug: Glossary/Java
-tags:
-  - Java
-  - 術語表
-translation_of: Glossary/Java
 ---
+
 Java 是一個{{glossary("Compile", "編譯式")}}、{{glossary("OOP", "物件導向")}}、可攜性高的{{Glossary("computer programming", "程式設計")}}語言。
 
 Java 屬於靜態型別，並具有類 C 的語法。它還有個稱作 Java 軟體開發套件（Java Software Development Kit, SDK）的函式庫，裡面有很多易於使用的功能包。
@@ -16,6 +13,6 @@ Java 屬於靜態型別，並具有類 C 的語法。它還有個稱作 Java 軟
 
 ### 基礎知識
 
-- 維基百科的 {{interwiki("wikipedia", "Java")}}
+- 維基百科的 [Java](https://zh.wikipedia.org/wiki/Java)
 
 {{QuickLinksWithSubpages("/zh-TW/docs/Glossary")}}

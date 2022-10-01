@@ -27,7 +27,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
  <li>La conexión al servidor se perdió, cambios locales no fueron guardados</li>
 </ul>
 
-<p>Debido a su naturaleza intrusiva, el rol de alerta debe ser utilizada de forma limitada y sólo en situaciones donde la inmediata atención del usuario es requerida. Cambios dinámicos que son menos urgentes deberían usar un método menos agresivo, como, <code>aria-live="polite"</code>  u otros roles de región en vivo.</p>
+<p>Debido a su naturaleza intrusiva, el rol de alerta debe ser utilizada de forma limitada y sólo en situaciones donde la inmediata atención del usuario es requerida. Cambios dinámicos que son menos urgentes deberían usar un método menos agresivo, como, <code>aria-live="polite"</code>  u otros roles de región en vivo.</p>
 
 <h3 id="Posibles_efectos_en_agentes_de_usuario_y_tecnología_asistencial">Posibles efectos en agentes de usuario y tecnología asistencial</h3>
 
@@ -49,7 +49,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 
 <h3 id="Ejemplos">Ejemplos</h3>
 
-<h4 id="Ejemplo_1_Agregar_el_role_en_el_código_HTML">Ejemplo 1: Agregar el role en el código HTML</h4>
+<h4 id="Ejemplo_1_Agregar_el_role_en_el_código_HTML">Ejemplo 1: Agregar el role en el código HTML</h4>
 
 <p>The snippet below shows how the alert role is added directly into the html source code. The moment the element finishes loading the screen reader should be notified of the alert. If the element was already in the original source code when the page loaded, the screen reader will announce the error immediately after announcing the page title.</p>
 
@@ -66,14 +66,14 @@ myAlert.appendChild(myAlertText);
 document.body.appendChild(myAlert);
 </pre>
 
-<p><strong>Note:</strong> The same result can be achieved with less code when using a script library like jQuery:</p>
+<p><strong>Note:</strong> The same result can be achieved with less code when using a script library like jQuery:</p>
 
 <pre class="brush: js">$("&lt;p role='alert'&gt;You must agree with our terms of service to create an account.&lt;/p&gt;").appendTo(document.body);
 </pre>
 
 <h4 id="Ejemplo_3_Añadir_un_rol_de_alerta_a_un_elemento_ya_existente">Ejemplo 3: Añadir un rol de alerta a un elemento ya existente</h4>
 
-<p>Sometimes it's useful to add an alert role to an element that is already visible on the page rather than creating a new element. This allows the developer to reiterate information that has become more relevant or urgent to the user. For example, a form control may have instruction about the expected value. If a different value is entered, <code>role="alert</code> can be added to the instruction text so that the screen reader announces it as an alert. The pseudo code snippet below illustrates this approach:</p>
+<p>Sometimes it's useful to add an alert role to an element that is already visible on the page rather than creating a new element. This allows the developer to reiterate information that has become more relevant or urgent to the user. For example, a form control may have instruction about the expected value. If a different value is entered, <code>role="alert</code> can be added to the instruction text so that the screen reader announces it as an alert. The pseudo code snippet below illustrates this approach:</p>
 
 <pre class="brush: html">&lt;p id="formInstruction"&gt;You must select at least 3 options&lt;/p&gt;
 </pre>
@@ -83,12 +83,12 @@ document.getElementById("formInstruction").setAttribute("role", "alert");</pre>
 
 <h4 id="Ejemplo_4_Hacer_un_elemento_con_un_rol_de_alerta_visible">Ejemplo 4: Hacer un elemento con un rol de alerta visible</h4>
 
-<p>If an element already has <code>role="alert" </code>and is initially hidden using CSS, making it visible will cause the alert to fire as if it was just added to the page. This means that an existing alert can be "reused" multiple times. </p>
+<p>If an element already has <code>role="alert" </code>and is initially hidden using CSS, making it visible will cause the alert to fire as if it was just added to the page. This means that an existing alert can be "reused" multiple times. </p>
 
-<p><strong>Note: </strong>In most cases this approach is not recommended, because it's not ideal to hide error or alert text that is currently not applicable. Users of older assistive technology may still be able to perceive the alert text even when the alert does not currently applies, causing users to incorrectly believe that there is a problem.</p>
+<p><strong>Note: </strong>In most cases this approach is not recommended, because it's not ideal to hide error or alert text that is currently not applicable. Users of older assistive technology may still be able to perceive the alert text even when the alert does not currently applies, causing users to incorrectly believe that there is a problem.</p>
 
 <pre class="brush: css">.hidden {
-  display:none;
+  display:none;
 }
 </pre>
 
@@ -98,7 +98,7 @@ document.getElementById("formInstruction").setAttribute("role", "alert");</pre>
 <pre class="brush: js">// removing the 'hidden' class makes the element visible, which will make the screen reader announce the alert:
 document.getElementById("expirationWarning").className = ""; </pre>
 
-<h3 id="Notas">Notas </h3>
+<h3 id="Notas">Notas </h3>
 
 <ul>
  <li>Usar el rol de alerta en un elemento implica que ese elemento tiene <code>aria-live="assertive"</code>.</li>
@@ -129,4 +129,4 @@ document.getElementById("expirationWarning").className = ""; </pre>
  <li>Las mejores practicas de ARIA - Rol de Alerta <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#alert">http://www.w3.org/TR/wai-aria-practices/#alert</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

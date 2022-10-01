@@ -8,23 +8,23 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/@@iterator
 ---
 <div>{{JSRef}}</div>
 
-<p>El valor inicial de la propiedad <code><strong>@@iterator</strong></code>, es la misma función objeto que el valor inicial de la propiedad {{jsxref("Set.prototype.values()", "values")}}.</p>
+<p>El valor inicial de la propiedad <code><strong>@@iterator</strong></code>, es la misma función objeto que el valor inicial de la propiedad {{jsxref("Set.prototype.values()", "values")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}</div>
 
-<p class="hidden">El código fuente de este ejemplo interactivo lo puedes encontrar en el repositorio de Github. Si quieres contribuir con más ejemplos interactivos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una pull request.</p>
+<p class="hidden">El código fuente de este ejemplo interactivo lo puedes encontrar en el repositorio de Github. Si quieres contribuir con más ejemplos interactivos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una pull request.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
 <pre class="syntaxbox"><code><em>mySet</em>[Symbol.iterator]</code></pre>
 
-<h3 id="Valor_retornado"> Valor retornado</h3>
+<h3 id="Valor_retornado"> Valor retornado</h3>
 
-<p>La función <strong>iteradora</strong> <code>Set</code> , la cuál es {{jsxref("Set.prototype.values()", "values()")}} por defecto.</p>
+<p>La función <strong>iteradora</strong> <code>Set</code> , la cuál es {{jsxref("Set.prototype.values()", "values()")}} por defecto.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Usando_iterator">Usando <code>[@@iterator]()</code></h3>
+<h3 id="Usando_iterator">Usando <code>[@@iterator]()</code></h3>
 
 <pre class="brush:js">const mySet = new Set();
 mySet.add('0');
@@ -38,7 +38,7 @@ console.log(setIter.next().value); // 1
 console.log(setIter.next().value); // Object
 </pre>
 
-<h3 id="Usando_iterator_con_for..of">Usando <code>[@@iterator]()</code> con <code>for..of</code></h3>
+<h3 id="Usando_iterator_con_for..of">Usando <code>[@@iterator]()</code> con <code>for..of</code></h3>
 
 <pre class="brush:js">const mySet = new Set();
 mySet.add('0');

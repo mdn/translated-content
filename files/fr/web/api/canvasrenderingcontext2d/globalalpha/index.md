@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
 translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 ---
+
 {{APIRef}}La propriété **CanvasRenderingContext2D.globalAlpha** de l'API Canvas 2D spécifie la valeur alpha qui sera appliquée aux formes et aux images avant qu'elles ne soient dessinées sur le canevas. La valeur est comprise entre 0,0 (entièrement transparente) et 1,0 (entièrement opaque).
 
 Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr-FR/docs/Web/API/Canvas_API/Tutorial).
@@ -130,21 +131,11 @@ for (i = 0; i < 7; i++){
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha", "CanvasRenderingContext2D.globalAlpha")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.globalAlpha")}}
-
-## Notes spécifiques à Gecko
-
-- À partir de Gecko 5.0, la spécification de valeurs invalides pour globalAlpha ne génère plus une exception SYNTAX_ERR ; celles-ci sont silencieusement et correctement ignorées.
-
-## Notes spécifiques à WebKit/Blink
-
-- Dans les navigateurs WebKit et Blink, une méthode non standard et désapprouvée `ctx.setAlpha()` est implémentée en plus de cette propriété.
+{{Compat}}
 
 ## Voir aussi
 

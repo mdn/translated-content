@@ -1,19 +1,13 @@
 ---
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
-tags:
-  - API
-  - 扩展
-  - 方法
-  - 标签页
-  - 页面扩展
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
+
 {{AddonSidebar()}}
 
 新建一个 tab.
 
-这是一个异步函数，返回 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+这是一个异步函数，返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## 语法
 
@@ -31,13 +25,13 @@ var creating = browser.tabs.create(
     - `active` {{optional_inline}}
       - : `boolean`. Whether the tab should become the active tab in the window. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to `true`.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. Use this to create a tab whose cookie store ID is `cookieStoreId`. This option is only available if the extension has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+      - : `string`. Use this to create a tab whose cookie store ID is `cookieStoreId`. This option is only available if the extension has the `"cookies"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
     - `index`{{optional_inline}}
       - : `integer`. The position the tab should take in the window. The provided value will be clamped to between zero and the number of tabs in the window.
     - `openerTabId`{{optional_inline}}
       - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as the newly created tab.
     - `openInReaderMode`{{optional_inline}}
-      - : `boolean`. If `true`, open this tab in [Reader Mode](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Defaults to `false`.
+      - : `boolean`. If `true`, open this tab in [Reader Mode](/zh-CN/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Defaults to `false`.
     - `pinned`{{optional_inline}}
       - : `boolean`. Whether the tab should be pinned. Defaults to `false`.
     - `selected`{{optional_inline}}
@@ -51,18 +45,18 @@ var creating = browser.tabs.create(
         - file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)
         - privileged about: URLs (for example, `about:config`, `about:addons`, `about:debugging`) . Non-privileged URLs (e.g., `about:blank`) are allowed.
         - The New Tab page (`about:newtab`) can be opened if no value for URL is provided.
-        
+
         To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.
     - `windowId`{{optional_inline}}
       - : `integer`. The window to create the new tab in. Defaults to the current window.
 
 ### 返回值
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
+A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.tabs.create", 10)}}
+{{Compat}}
 
 ## 实例
 
@@ -91,7 +85,8 @@ browser.browserAction.onClicked.addListener(function() {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +113,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

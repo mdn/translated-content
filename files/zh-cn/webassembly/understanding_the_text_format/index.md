@@ -1,19 +1,8 @@
 ---
 title: 理解 WebAssembly 文本格式
 slug: WebAssembly/Understanding_the_text_format
-tags:
-  - JavaScript
-  - S-表达式
-  - WebAssembly
-  - wasm
-  - 共享地址
-  - 内存
-  - 函数
-  - 文本格式
-  - 表格
-  - 调用
-translation_of: WebAssembly/Understanding_the_text_format
 ---
+
 {{WebAssemblySidebar}}
 
 为了能够让人类阅读和编辑 WebAssembly，wasm 二进制格式提供了相应的文本表示。这是一种用来在文本编辑器、浏览器开发者工具等工具中显示的中间形式。本文用基本语法的方式解释了这种文本表示是如何工作的，以及它是如何与它表示的底层字节码，及在 JavaScript 中表示 wasm 的封装对象关联起来的。
@@ -370,7 +359,7 @@ fetchAndInstantiate('logger2.wasm', importObject).then(function(instance) {
 
 WebAssembly 需要一种做到这一点的调用指令，因此，我们有了接受一个动态函数操作数的 call_indirect 指令。问题是，在 WebAssembly 中，当前操作数的仅有的类型是 i32/i64/f32/f64。
 
-WebAssembly 可以增加一个 anyfunc 类型（"any"的含义是该类型能够持有任何签名的函数），但是，不幸的是，由于安全原因，这个 anyfunc 类型不能存储在线性内存中。**_`线性内存会把存储的原始内容作为字节暴露出去，并且这会使得wasm内容能够任意的查看和修改原始函数地址`_**，而这在网络上是不被允许的。
+WebAssembly 可以增加一个 anyfunc 类型（"any"的含义是该类型能够持有任何签名的函数），但是，不幸的是，由于安全原因，这个 anyfunc 类型不能存储在线性内存中。**_`线性内存会把存储的原始内容作为字节暴露出去，并且这会使得 wasm 内容能够任意的查看和修改原始函数地址`_**，而这在网络上是不被允许的。
 
 解决方案是在一个表格中存储函数引用，然后作为 代替，传递表格索引——它们只是 i32 类型值。因此，call_indirect 的操作数可以是一个 i32 类型索引值。
 
@@ -519,11 +508,11 @@ fetchAndInstantiate('wasm-table.wasm').then(function(instance) {
 
 运行逻辑如下：
 
-1.  函数 shared0func 在 shared0.wat 中定义并存储在我们的导出表格对象 (table) 中。
-2.  该函数先创建一个常量值为 0，然后执行 i32.load 指令。用给定的内存索引，去加载存储到内存对象中的值，给定的索引值为 0。—— 这样，会隐式地将之前的值出栈。所以，shared0func 加载并返回了存储在内存对象索引 0 处的值。
-3.  在 shared1.wat 中，我们导出了一个名为 doIt 的函数——这个函数创建了两个常量值，分别为 0 和 42，然后使用 i32.store 指令把给定的值存储在指定索引位置的内存对象中。同样的，该指令会把这些值出栈，所以，结果就是把 42 存储在内存索引 0 处。
-4.  在这个函数的最后一部分，我们创建了常量值 0，然后调用表格中索引 0 处的函数，该函数正是我们之前在 shared0.wat 中的使用元素代码段（elem block）存储的 shared0func。
-5.  shared0func 在被调用之后会加载我们在 shared1.wat 中使用 i32.store 指令存储在内存中的 42。
+1. 函数 shared0func 在 shared0.wat 中定义并存储在我们的导出表格对象 (table) 中。
+2. 该函数先创建一个常量值为 0，然后执行 i32.load 指令。用给定的内存索引，去加载存储到内存对象中的值，给定的索引值为 0。—— 这样，会隐式地将之前的值出栈。所以，shared0func 加载并返回了存储在内存对象索引 0 处的值。
+3. 在 shared1.wat 中，我们导出了一个名为 doIt 的函数——这个函数创建了两个常量值，分别为 0 和 42，然后使用 i32.store 指令把给定的值存储在指定索引位置的内存对象中。同样的，该指令会把这些值出栈，所以，结果就是把 42 存储在内存索引 0 处。
+4. 在这个函数的最后一部分，我们创建了常量值 0，然后调用表格中索引 0 处的函数，该函数正是我们之前在 shared0.wat 中的使用元素代码段（elem block）存储的 shared0func。
+5. shared0func 在被调用之后会加载我们在 shared1.wat 中使用 i32.store 指令存储在内存中的 42。
 
 > **备注：** 上面的表达式会隐式地把这些值出栈，但是，你可以在使用指令的时候进行显式地声明。例如：
 >

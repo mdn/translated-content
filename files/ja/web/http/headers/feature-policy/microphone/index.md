@@ -1,16 +1,8 @@
 ---
 title: 'Feature-Policy: microphone'
 slug: Web/HTTP/Headers/Feature-Policy/microphone
-tags:
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - ヘッダー
-  - microphone
-  - 実験的
-browser-compat: http.headers.Feature-Policy.microphone
-translation_of: Web/HTTP/Headers/Feature-Policy/microphone
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `microphone` ディレクティブは、現在の文書がオーディオ入力機器を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("MediaDevices.getUserMedia()")}} で返却された {{jsxref('Promise')}} が `NotAllowedError` で拒否されます。

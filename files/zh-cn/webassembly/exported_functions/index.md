@@ -1,16 +1,8 @@
 ---
 title: 导出的 WebAssembly 函数
 slug: WebAssembly/Exported_functions
-tags:
-  - JavaScript
-  - WebAssembly
-  - wasm
-  - 导出
-  - 导出的 wasm 函数
-  - 导出的函数
-  - 指南
-translation_of: WebAssembly/Exported_functions
 ---
+
 {{WebAssemblySidebar}}
 
 导出 WebAssembly 函数的过程，其实就是指这些函数在 JavaScript 中如何用表示。本文更详细的介绍它们。
@@ -61,7 +53,7 @@ var testFunc = otherTable.get(0);
 typeof testFunc;
 ```
 
-你得到的返回结果是 function 。对于这个函数，你可以像对待其他 JavaScript[函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)那样做你想做的任何事——[call()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、 [bind()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)等等。testFunc.toString() 返回一个有趣的结果：
+你得到的返回结果是 function。对于这个函数，你可以像对待其他 JavaScript[函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)那样做你想做的任何事——[call()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、 [bind()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)等等。testFunc.toString() 返回一个有趣的结果：
 
 ```js
 function 0() {

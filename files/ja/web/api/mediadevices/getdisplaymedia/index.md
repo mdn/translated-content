@@ -1,24 +1,8 @@
 ---
 title: MediaDevices.getDisplayMedia()
 slug: Web/API/MediaDevices/getDisplayMedia
-tags:
-  - API
-  - キャプチャ
-  - 会議
-  - メディア
-  - MediaDevices
-  - メソッド
-  - リファレンス
-  - 画面キャプチャ
-  - 画面キャプチャ API
-  - Sharing
-  - Video
-  - display
-  - getDisplayMedia
-  - screen
-browser-compat: api.MediaDevices.getDisplayMedia
-translationof: Web/API/MediaDevices/getDisplayMedia
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 {{domxref("MediaDevices")}} インターフェイスの **`getDisplayMedia()`** メソッドは、ディスプレイまたはその一部（ウィンドウなど）の内容を {{domxref("MediaStream")}} としてキャプチャする許可を選択し、許可するようユーザーに促します。

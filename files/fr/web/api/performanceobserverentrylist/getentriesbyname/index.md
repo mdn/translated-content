@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceObserverEntryList/getEntriesByName
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La méthode **`getEntriesByName()`** de l'interface [`PerformanceObserverEntryList`](/fr/docs/Web/API/PerformanceObserverEntryList) retourne une liste d'objets [d'entrée de performance](/fr/docs/Web/API/PerformanceEntry) explicitement _observés_ pour un _[`name`](/fr/docs/Web/API/PerformanceEntry/name)_ et _[`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType)_ donnés. Les membres de la liste sont déterminés par l'ensemble des [types d'entrées](/fr/docs/Web/API/PerformanceEntry/entryType) spécifiés dans l'appel à la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe). La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).
@@ -81,10 +82,8 @@ observe_frame.observe({entryTypes: ['frame']});
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                | Statut                                                   | Commentaire                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserverentrylist-getentriesbyname', 'getEntriesByName()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de la méthode `getEntriesByName()`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceObserverEntryList.getEntriesByName")}}
+{{Compat}}

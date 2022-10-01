@@ -1,17 +1,12 @@
 ---
 title: 游戏货币化
 slug: Games/Publishing_games/Game_monetization
-tags:
-  - 推广
-  - 收入
-  - 游戏
-  - 销售
-translation_of: Games/Publishing_games/Game_monetization
 original_slug: Games/Publishing_games/游戏货币化
 ---
+
 {{GamesSidebar}}
 
-当你花时间创造一个游戏的时候，从[发布](/en-US/docs/Games/Techniques/Publishing_games/Game_distribution)和[促销](/en-US/docs/Games/Techniques/Publishing_games/Game_promotion)中赚钱是你应该考虑的事。如果你正做出大量努力去成为一个能够以此为生的独立游戏开发者，接下去，看看你有哪些选择。技术手段已经足够成熟; 接下来只是选择正确的方法。
+当你花时间创造一个游戏的时候，从[发布](/zh-CN/docs/Games/Techniques/Publishing_games/Game_distribution)和[促销](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion)中赚钱是你应该考虑的事。如果你正做出大量努力去成为一个能够以此为生的独立游戏开发者，接下去，看看你有哪些选择。技术手段已经足够成熟; 接下来只是选择正确的方法。
 
 ## 付费游戏
 
@@ -23,7 +18,7 @@ original_slug: Games/Publishing_games/游戏货币化
 
 你可以提供一款带有应用内购买功能（IAP）的免费游戏，而不是让人们预先为你的游戏付费。在这种情况下，玩家不需要花一分钱就可以获得游戏——将游戏交给玩家，但要提供游戏内的货币、奖金或福利。具体的例子可以包括奖金水平，更好的武器或咒语，或补充所需的能量发挥。设计一个好的 IAP 系统本身就是一门艺术。
 
-记住，你需要下载数千次游戏才能使 IAPs 有效——只有一小部分玩家会真正为 IAPs 付费。多小？情况各不相同，但大约每千人中就有一个人处于平均水平。玩你的游戏的人越多，别人就越有可能付钱，所以你的收入很大程度取决于你的[推广](/en-US/docs/Games/Techniques/Publishing_games/Game_promotion)方式。
+记住，你需要下载数千次游戏才能使 IAPs 有效——只有一小部分玩家会真正为 IAPs 付费。多小？情况各不相同，但大约每千人中就有一个人处于平均水平。玩你的游戏的人越多，别人就越有可能付钱，所以你的收入很大程度取决于你的[推广](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion)方式。
 
 ### 免费增值模式
 
@@ -35,7 +30,7 @@ original_slug: Games/Publishing_games/游戏货币化
 
 ## 推广
 
-除了积极销售游戏以外，你也可以尝试被动销售 — 投放广告和开展相关活动或许有益于[推广](/en-US/docs/Games/Techniques/Publishing_games/Game_promotion)你的游戏，但你的游戏必须让人上瘾，这并不像听起来那么容易。你仍然需要计划好，在某种程度上，你也需要一些运气。如果你的游戏像病毒一样传播开来，人们开始分享它，你就能从广告中获得大量的下载和收益。
+除了积极销售游戏以外，你也可以尝试被动销售 — 投放广告和开展相关活动或许有益于[推广](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion)你的游戏，但你的游戏必须让人上瘾，这并不像听起来那么容易。你仍然需要计划好，在某种程度上，你也需要一些运气。如果你的游戏像病毒一样传播开来，人们开始分享它，你就能从广告中获得大量的下载和收益。
 
 有许多公司提供广告系统——你注册后，允许他们展示广告，以换取一定比例的利润。谷歌 AdSense 被认为是最有效的一个，但它不是为游戏而设计的，使用它来达到这个目的是一个非常糟糕的做法。不要冒着让你的账户被封禁，资产被冻结的风险，游戏开发者们更青睐门户网站，如[LeadBolt](https://www.leadbolt.com/)。他们提供了易于实现的系统，以在您的游戏显示广告并与您分享收益。
 
@@ -49,7 +44,7 @@ original_slug: Games/Publishing_games/游戏货币化
 
 ### 独家许可
 
-独家性许可是针对一个发行商的一种许可类型——你创造了一款游戏，并将其所有权利出售给了一个实体，同时还拥有重新发行该游戏的权利 — [Softgames](http://www.softgames.de/)就是这样一家发行商。 在出版商拥有版权的情况下，你不能再以任何形式出售它——这就是独家交易价值不菲的原因。到底是多少？这取决于游戏的质量，游戏类型，发行商，以及其他许多因素，但通常价格在 2000 到 5000 美元之间。一旦你卖出了独家授权，你就不用再参与推广这款游戏了，因为你赚不到更多钱，所以只有在你确信这款游戏足够盈利的情况下，你才会参与这样的交易。
+独家性许可是针对一个发行商的一种许可类型——你创造了一款游戏，并将其所有权利出售给了一个实体，同时还拥有重新发行该游戏的权利 — [Softgames](http://www.softgames.de/)就是这样一家发行商。在出版商拥有版权的情况下，你不能再以任何形式出售它——这就是独家交易价值不菲的原因。到底是多少？这取决于游戏的质量，游戏类型，发行商，以及其他许多因素，但通常价格在 2000 到 5000 美元之间。一旦你卖出了独家授权，你就不用再参与推广这款游戏了，因为你赚不到更多钱，所以只有在你确信这款游戏足够盈利的情况下，你才会参与这样的交易。
 
 ### 独家许可
 
@@ -81,7 +76,7 @@ original_slug: Games/Publishing_games/游戏货币化
 
 ### 撰写文章和教程
 
-你可以写一些关于你的游戏的文章，甚至可以从中获得报酬。可以同时取得游戏[推广](/en-US/docs/Games/Techniques/Publishing_games/Game_promotion)和收益化的双赢，如果你不滥用它与太多的广告，读者将享受阅读他们以及学习一两个东西。如果你专注于先分享知识，并将游戏作为例子来使用，这应该是可以的。浏览[Tuts+ Game Development](http://gamedevelopment.tutsplus.com/) 或相似的网站来找寻协作机会
+你可以写一些关于你的游戏的文章，甚至可以从中获得报酬。可以同时取得游戏[推广](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion)和收益化的双赢，如果你不滥用它与太多的广告，读者将享受阅读他们以及学习一两个东西。如果你专注于先分享知识，并将游戏作为例子来使用，这应该是可以的。浏览[Tuts+ Game Development](http://gamedevelopment.tutsplus.com/) 或相似的网站来找寻协作机会
 
 ### 周边商品
 

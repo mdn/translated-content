@@ -8,6 +8,7 @@ tags:
   - TopicStub
 translation_of: Web/API/Pointer_events
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 La plupart du contenu web d'aujourd'hui suppose que le périphérique de pointage de l'utilisateur sera une souris. Cependant, beaucoup d'appareils prennent en charge d'autres types de d'entrée pour pointeur, comme le stylet ou les doigts pour les écrans tactiles. Des extensions aux modèles d'événement de pointage sont nécessaires et les _événements de pointeur_ répondent à ce besoin.
@@ -323,7 +324,7 @@ Here are some _best practices_ to consider when using pointer events:
 
 ## Implémentation et déploiement
 
-The [pointer events browser compatibility data](/en-US/docs/Web/API/PointerEvents#Browser_compatibility) indicates pointer event support among desktop and mobile browsers is relatively low, although additional implementations are in progress.
+The [pointer events browser compatibility data](/fr/docs/Web/API/PointerEvents#Browser_compatibility) indicates pointer event support among desktop and mobile browsers is relatively low, although additional implementations are in progress.
 
 Some new value have been proposed for the {{cssxref("touch-action", "CSS touch-action")}} property as part of [Pointer Events Level 2](https://w3c.github.io/pointerevents/) specification but currently those new values have no implementation support.
 

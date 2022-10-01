@@ -1,19 +1,8 @@
 ---
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - Parsing HTML
-  - プロパティ
-  - リファレンス
-  - innerHTML
-  - プロパティ
-browser-compat: api.Element.innerHTML
-translation_of: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} オブジェクトの **`innerHTML`** プロパティは、要素内の HTML または XML のマークアップを取得したり設定したりします。

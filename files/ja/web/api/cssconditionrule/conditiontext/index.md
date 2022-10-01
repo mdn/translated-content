@@ -1,15 +1,8 @@
 ---
 title: CSSConditionRule.conditionText
 slug: Web/API/CSSConditionRule/conditionText
-tags:
-  - API
-  - CSSOM
-  - CSSConditionRule
-  - プロパティ
-  - リファレンス
-browser-compat: api.CSSConditionRule.conditionText
-translation_of: Web/API/CSSConditionRule/conditionText
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`conditionText`** は {{domxref("CSSConditionRule")}} インターフェイスのプロパティで、この CSS ルールのテキストを返したり設定したりします。

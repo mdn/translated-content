@@ -1,8 +1,8 @@
 ---
 title: 框架的主要特性
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 每种 JavaScript 框架都有自己不同的方式更新 DOM，处理浏览器事件，为开发者提供愉快的使用体验，这篇文章将探索“四大”框架的主要特性，从高级角度探讨框架的工作方式以及它们之间的区别。
@@ -12,9 +12,9 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_f
     <tr>
       <th scope="row">先决条件：</th>
       <td>
-        熟悉核心的 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a> 和
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言。
+        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a> 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言。
       </td>
     </tr>
     <tr>
@@ -24,19 +24,19 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_f
   </tbody>
 </table>
 
-## Domain-specific languages
+## 领域特定语言（DSL）
 
-All of the frameworks discussed in this module are powered by JavaScript, and all allow you to use domain-specific languages (DSLs) in order to build your applications. In particular, React has popularized the use of **JSX** for writing its components, while Ember utilizes **Handlebars**. Unlike HTML, these languages know how to read data variables, and this data can be used to streamline the process of writing your UI.
+本模块中讨论的所有框架都基于 JavaScript，并且都允许你使用领域特定语言（DSL）来构建应用程序。特别地，React 已经普及了使用 **JSX** 来编写其组件，而 Ember 则使用 **Handlebars**。与 HTML 不同，这些语言知道如何读取数据变量，并且此数据可用于简化编写 UI 的过程。
 
-Angular apps often make heavy use of **TypeScript**. TypeScript is not concerned with the writing of user interfaces, but it is a domain-specific language, and has significant differences to vanilla JavaScript.
+基于 Angular 框架的应用程序会大量地使用 **TypeScript**。TypeScript 不关心用户界面的编写，但它仍然是一种领域特定语言（DSL），而且与原生 JavaScript 有着很大的不同。
 
-DSLs can't be read by the browser directly; they must be transformed into JavaScript or HTML first. [Transformation is an extra step in the development process](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview#Transformation), but framework tooling generally includes the required tools to handle this step, or can be adjusted to include this step. While it is possible to build framework apps without using these domain-specific languages, embracing them will streamline your development process and make it easier to find help from the communities around those frameworks.
+DSL 不能直接由浏览器解析；它们首先要被转换成 JavaScript 或 HTML。虽然[转换在开发流程中是一个额外的步骤](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview#转换)，但是框架通常会包含处理此步骤所需的工具，或者与该步骤相适应。虽然你可以不使用这些领域特定语言构建框架应用程序，但使用它们会简化你的开发过程，还能更容易地从这些框架的周边社区中找到帮助。
 
 ### JSX
 
-[JSX](https://reactjs.org/docs/introducing-jsx.html), which stands for JavaScript and XML, is an extension of JavaScript that brings HTML-like syntax to a JavaScript environment. It was invented by the React team for use in React applications, but can be used to develop other applications — like Vue apps, for instance.
+[JSX](https://reactjs.org/docs/introducing-jsx.html), 意为 JavaScript 和 XML, 是 JavaScript 的扩展，为 JavaScript 带来了类似 HTML 的语法。它由 React 团队发明，用于 React 应用程序，但也可用于开发其他应用程序——例如 Vue 应用程序。
 
-The following shows a simple JSX example:
+这是一个简单的 JSX 示例：
 
 ```js
 const subject = "World";
@@ -47,9 +47,9 @@ const header = (
 );
 ```
 
-This expression represents an HTML [`<header>`](/en-US/docs/Web/HTML/Element/header) element with a [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element inside. The curly braces around `subject` on line 4 tell the application to read the value of the `subject` constant and insert it into our `<h1>`.
+小括号内的表达式表示一个 HTML [`<header>`](/zh-CN/docs/Web/HTML/Element/header) 元素，里面还有一个 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素。第 4 行被花括号围绕着的 `subject` 告诉应用程序要读取常量 subject 的值并将其插入到我们的 `<h1>` 元素当中。
 
-When used with React, the JSX from the previous snippet would be compiled into this:
+当与 React 一起使用时，上一个片段中的 JSX 将被编译成这样：
 
 ```js
 var subject = "World";
@@ -58,7 +58,7 @@ var header = React.createElement("header", null,
 );
 ```
 
-When ultimately rendered by the browser, the above snippet will produce HTML that looks like this:
+到了最后，在浏览器显示网页时，上面的代码片段将生成如下所示的 HTML：
 
 ```html
 <header>
@@ -68,11 +68,13 @@ When ultimately rendered by the browser, the above snippet will produce HTML tha
 
 ### Handlebars
 
-The [Handlebars](https://handlebarsjs.com/) templating language is not specific to Ember applications, but it is heavily utilized in Ember apps. Handlebars code resembles HTML, but it has the option of pulling data in from elsewhere. This data can be used to influence the HTML that an application ultimately builds.
+[Handlebars](https://handlebarsjs.com/) 是一种简单的模板语言，虽然它并非仅可用于 Ember 应用程序，但它在 Ember 应用程序中被大量使用。Handlebars 代码很像 HTML，但它可以选择从其他地方提取数据并应用在最终生成的 HTML 上面。
 
-Like JSX, Handlebars uses curly braces to inject the value of a variable. Handlebars uses a double-pair of curly braces, instead of a single pair.
+与 JSX 相似的是，Handlebars 使用花括号来注入变量的值。不相似的是，Handlebars 使用双花括号，而不是单花括号。
 
-Given this Handlebars template:
+下面是一个简单的 Handlebars 示例：
+
+定义以下 Handlebars 模板：
 
 ```html
 <header>
@@ -80,7 +82,7 @@ Given this Handlebars template:
 </header>
 ```
 
-And this data:
+还有这个数据：
 
 ```js
 {
@@ -88,7 +90,7 @@ And this data:
 }
 ```
 
-Handlebars will build HTML like this:
+Handlebars 将像这样构建 HTML：
 
 ```html
 <header>
@@ -98,9 +100,9 @@ Handlebars will build HTML like this:
 
 ### TypeScript
 
-[TypeScript](https://www.typescriptlang.org/) is a _superset_ of JavaScript, meaning it extends JavaScript — all JavaScript code is valid TypeScript, but not the other way around. TypeScript is useful for the strictness it allows developers to enforce on their code. For instance, consider a function `add()`, which takes integers `a` and `b` and returns their sum.
+[TypeScript](https://www.typescriptlang.org/) 是 JavaScript 的*超集*，这意味着它*扩展*了 JavaScript——所有 JavaScript 代码都是有效的 TypeScript 代码，但反之则不然。TypeScript 可以让开发者们“严格地”执行他们的代码。例如，要写一个函数 `add()`，它接受整数 `a` 和 `b` 并返回它们的总和。
 
-In JavaScript, that function could be written like this:
+在 JavaScript 中，可以这样编写：
 
 ```js
 function add(a, b) {
@@ -108,7 +110,7 @@ function add(a, b) {
 }
 ```
 
-This code might be trivial for someone accustomed to JavaScript, but it could still be clearer. JavaScript lets us use the `+` operator to concatenate strings together, so this function would technically still work if `a` and `b` were strings — it just might not give you the result you'd expect. What if we wanted to only allow numbers to be passed into this function? TypeScript makes that possible:
+对于习惯 JavaScript 的人来说，这段代码非常简单明确，但它仍然可以更加清晰明确。JavaScript 允许我们使用 `+` 运算符将​​字符串连接在一起，所以，如果传入 `add()` 函数的 `a` 和 `b` 是字符串，这个函数在技术上仍然可以工作——但是它可能不会给你期望的结果。如果我们只想允许将数字传递给这个函数怎么办？可以使用 TypeScript：
 
 ```js
 function add(a: number, b: number) {
@@ -116,15 +118,15 @@ function add(a: number, b: number) {
 }
 ```
 
-The `: number` written after each parameter here tells TypeScript that both `a` and `b` must be numbers. If we were to use this function and pass `'2'` into it as an argument, TypeScript would raise an error during compilation, and we would be forced to fix our mistake. We could write our own JavaScript that raises these errors for us, but it would make our source code significantly more verbose. It probably makes more sense to let TypeScript handle such checks for us.
+在 `a` 和 `b` 后面的 `: number` 代码告诉 TypeScript `a` 和 `b` 都必须是数字。这样的话，当我们再次将字符串（例如 `'2'`）传入这个函数的时候，TypeScript 就会在编译期间报告错误，而我们将被迫修复这个错误。虽然可以编写自己的 JavaScript 来做到与 TypeScript 一样的效果，但是这会使我们的写的代码更加繁杂。让 TypeScript 为我们处理此类检查或许更有意义。
 
-## Writing components
+## 编写组件
 
-As mentioned in the previous chapter, most frameworks have some kind of component model. React components can be written with JSX, Ember components with Handlebars, and Angular and Vue components with a templating syntax that lightly extends HTML.
+如前一章所述，大多数框架都有某种组件模型。React 组件可以使用 JSX 编写，Ember 组件可以使用 Handlebars 编写，Angular 和 Vue 组件可以使用模板语法轻松地扩展 HTML。
 
-Regardless of their opinions on how components should be written, each framework's components offer a way to describe the external properties they may need, the internal state that the component should manage, and the events a user can trigger on the component's markup.
+不管框架的作者们对于如何编写组件有多么多么不同的看法，每个框架的组件都提供了一种方法来描述组件可能需要的外部属性、组件的内部状态以及用户可以在组件上可以触发的事件。
 
-The code snippets in the rest of this section will use React as an example, and are written with JSX.
+本节其余部分的代码片段将使用 React 作为示例，并使用 JSX 编写其组件。
 
 ### Properties
 
@@ -153,7 +155,7 @@ function AuthorCredit(props) {
 />
 ```
 
-This will ultimately render the following [`<figure>`](/en-US/docs/Web/HTML/Element/figure) element in the browser, with its structure as defined in the `AuthorCredit` component, and its content as defined in the props included on the `AuthorCredit` component call:
+This will ultimately render the following [`<figure>`](/zh-CN/docs/Web/HTML/Element/figure) element in the browser, with its structure as defined in the `AuthorCredit` component, and its content as defined in the props included on the `AuthorCredit` component call:
 
 ```html
 <figure>
@@ -194,7 +196,7 @@ The `useState()` call keeps track of the `count` value in a robust way across th
 
 In order to be interactive, components need ways to respond to browser events, so our applications can respond to our users. Frameworks each provide their own syntax for listening to browser events, which reference the names of the equivalent native browser events.
 
-In React, listening for the [`click`](/en-US/docs/Web/API/Element/click_event) event requires a special property, `onClick`. Let’s update our `CounterButton` code from above to allow it to count clicks:
+In React, listening for the [`click`](/zh-CN/docs/Web/API/Element/click_event) event requires a special property, `onClick`. Let’s update our `CounterButton` code from above to allow it to count clicks:
 
 ```js
 function CounterButton() {
@@ -213,7 +215,7 @@ Each framework offers a way to define styles for your components — or for the 
 
 ## Handling dependencies
 
-All major frameworks provide mechanisms for handling dependencies — using components inside other components, sometimes with multiple hierarchy levels. As with other features, the exact mechanism will differ between frameworks, but the end result is the same. Components tend to import components into other components using the standard [JavaScript module syntax](/en-US/docs/Web/JavaScript/Guide/Modules), or at least something similar.
+All major frameworks provide mechanisms for handling dependencies — using components inside other components, sometimes with multiple hierarchy levels. As with other features, the exact mechanism will differ between frameworks, but the end result is the same. Components tend to import components into other components using the standard [JavaScript module syntax](/zh-CN/docs/Web/JavaScript/Guide/Modules), or at least something similar.
 
 ### Components in components
 
@@ -283,7 +285,7 @@ The **Glimmer VM** is unique to Ember. It is not a virtual DOM nor an incrementa
 
 ## Routing
 
-As [mentioned in the previous chapter, routing](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#Routing) is an important part of the web experience. To avoid a broken experience in sufficiently complex apps with lots of views, each of the frameworks covered in this module provides a library (or more than one library) that helps developers implement client-side routing in their applications.
+As [mentioned in the previous chapter, routing](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#Routing) is an important part of the web experience. To avoid a broken experience in sufficiently complex apps with lots of views, each of the frameworks covered in this module provides a library (or more than one library) that helps developers implement client-side routing in their applications.
 
 ## Testing
 
@@ -326,9 +328,9 @@ it("Increments the count when clicked", () => {
 
 At this point you should have more of an idea about the actual languages, features, and tools you'll be using as you create applications with frameworks. I'm sure you’re enthusiastic to get going and actually do some coding, and that's what you are going to do next! At this point you can choose which framework you'd like to start learning first:
 
-- [React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-- [Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-- [Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+- [React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+- [Vue](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
 
 > **备注：** We only have three framework tutorial series available now, but we hope to have more available in the future.
 
@@ -336,46 +338,46 @@ At this point you should have more of an idea about the actual languages, featur
 
 ## In this module
 
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [Introduction to client-side frameworks](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+  - [Getting started with React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
 
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+  - [Getting started with Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
 
 - Vue
 
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+  - [Getting started with Vue](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
 
 - Svelte
 
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - [Getting started with Svelte](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)

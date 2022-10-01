@@ -1,15 +1,8 @@
 ---
 title: WritableStream()
 slug: Web/API/WritableStream/WritableStream
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Streams
-  - WritableStream
-translation_of: Web/API/WritableStream/WritableStream
 ---
+
 {{APIRef("Streams")}}
 
 **`WritableStream()`** 构造函数创建一个新的 {{domxref("WritableStream")}} 对象实例。

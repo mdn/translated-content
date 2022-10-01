@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLIFrameElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLIFrameElement`** fournit des propriétés et des méthodes spéciales (en plus de celles de l'interface {{domxref("HTMLElement")}} auxquelles elle peut accéder par héritage) pour manipuler la disposition et la présentation des éléments "en-ligne" d'un cadre.
@@ -65,16 +66,11 @@ _Aucune méthode spécifique ; hérite des propriétés de son parent, {{domxref
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire                                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#htmliframeelement", "HTMLIFrameElement")}}                                 | {{Spec2('HTML WHATWG')}} | La propriété suivante a été ajoutée : `allowFullscreen`.                                                                                                                                                                   |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-iframe-element", "HTMLIFrameElement")}} | {{Spec2('HTML5 W3C')}}     | Les propriétés suivantes sont désormais obsolètes : `scrolling`, `marginWidth`, `marginHeight`, `longDesc`, `frameBorder` et `align`. Les propriétés suivantes ont été ajoutées : `srcdoc`, `sandbox`, et `contentWindow`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-50708718', 'HTMLIFrameElement')}}                             | {{Spec2('DOM2 HTML')}}     | La propriété `contentDocument` a été ajoutée.                                                                                                                                                                              |
-| {{SpecName('DOM1', 'level-one-html.html#ID-50708718', 'HTMLIFrameElement')}}                         | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                                                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLIFrameElement")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -10,6 +10,7 @@ tags:
   - lecture seule
 translation_of: Web/API/Document/location
 ---
+
 La propriété en lecture seule **`Document.location`** renvoie un objet [`Location`](/fr/docs/Web/API/Location), contenant les informations sur l'URL du document et fournit des moyens pour modifier cette URL ou charger une autre URL.
 
 Bien que `Document.location` soit un objet  `Location` en _lecture seule_, vous pouvez lui assigner un {{domxref("DOMString")}}. Cela signifie que vous pouvez dans la plupart des cas utiliser document.location comme s'il s'agissait d'une chaîne de caractères: `document.location = 'http://www.example.com'` est un synonyme de `document.location.href = 'http://www.example.com'`.
@@ -33,18 +34,15 @@ console.log(document.location);
 // "http://www.example.com/juicybits.html" dans la console
 ```
 
-## Spécification
+## Spécifications
 
-| Specification                                                                                                        | Status                           | Comment                                                  |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#the-location-interface", "Document.location")}} | {{Spec2('HTML WHATWG')}} | Pas de changement avec {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Document.location")}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.location")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - L'interface de la valeur renvoyée, {{domxref("Location")}}.
 - Une information similaire mais attachée au contexte de navigation, {{domxref("Window.location")}}

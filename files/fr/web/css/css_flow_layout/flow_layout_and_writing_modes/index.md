@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
 original_slug: Web/CSS/CSS_Flow_Layout/Disposition_flux_et_modes_écriture
 ---
+
 La spécification CSS 2.1, qui décrit le comportement classique du flux normal, prend l'hypothèse d'un mode d'écriture horizontal. [Les propriétés liées à la disposition](/fr/docs/Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal) devraient fonctionner de façon identique pour les modes d'écritures verticaux. Dans ce guide, nous verrons comment le flux normal se comporte selon les différents modes d'écriture.
 
 Ce guide n'est pas un guide exhaustif sur l'utilisation des modes d'écriture en CSS. Son objectif est de documenter les interactions, éventuellement inattendues, entre le flux et les modes d'écriture. Pour plus de ressources à ce sujet, vous pouvez vour référer aux [ressources externes](#Ressources_externes) ainsi qu'à la section [Voir aussi](#Voir_aussi) en fin de page.
@@ -68,7 +69,7 @@ C'est pour cela que des propriétés _logiques_ ont fait leur apparition comme {
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
 
-Le module de spécification [CSS sur les propriétés et valeurs logiques](/en-US/docs/Web/CSS/CSS_Logical_Properties) contient des versions logiques des propriétés contrôlant les marges, le remplissage (_padding_) et les bordures et d'autres correspondances pour les concepts qu'on manipulait habituellement avec des directions _physiques_.
+Le module de spécification [CSS sur les propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_Logical_Properties) contient des versions logiques des propriétés contrôlant les marges, le remplissage (_padding_) et les bordures et d'autres correspondances pour les concepts qu'on manipulait habituellement avec des directions _physiques_.
 
 ## Résumé
 

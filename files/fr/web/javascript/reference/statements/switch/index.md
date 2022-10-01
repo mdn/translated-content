@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/switch
 original_slug: Web/JavaScript/Reference/Instructions/switch
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`switch`** évalue une expression et, selon le résultat obtenu et le cas associé, exécute les instructions correspondantes.
@@ -206,7 +207,7 @@ Selon les valeurs fournies à la variable `toto`, on aura les résultats suivant
 
 ### `switch` et les variables avec une portée de bloc
 
-Avec ECMAScript 2015 (ES6), on peut utiliser les instructions [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) pour déclarer des variables dont la portée sera celle du bloc englobant.
+Avec ECMAScript 2015 (ES6), on peut utiliser les instructions [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) pour déclarer des variables dont la portée sera celle du bloc englobant.
 
 Prenons cet exemple :
 

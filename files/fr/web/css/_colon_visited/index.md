@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:visited
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:visited`** permet de modifier l'aspect d'un lien après que l'utilisateur l'a visité. Pour des raisons relatives à la vie privée, les propriétés qui peuvent être utilisées sont restreintes.
@@ -59,17 +60,11 @@ a:visited { color: #00ff00; }
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires                                                                                                                                                                                                     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-visited', ':visited')}} | {{Spec2('HTML WHATWG')}}     |                                                                                                                                                                                                                  |
-| {{SpecName('CSS4 Selectors', '#link', ':visited')}}                                 | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                                                                                                                                                             |
-| {{SpecName('CSS3 Selectors', '#link', ':visited')}}                                 | {{Spec2('CSS3 Selectors')}} | Aucune modification.                                                                                                                                                                                             |
-| {{SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':visited')}}     | {{Spec2('CSS2.1')}}             | Suppression de la restriction limitant son usage à l'élément {{HTMLElement("a")}}. Permission donnée aux navigateurs de limiter le comportement de cette pseudo-classe pour des questions de vie privée. |
-| {{SpecName('CSS1', '#anchor-pseudo-classes', ':visited')}}                         | {{Spec2('CSS1')}}             | Définition initiale.                                                                                                                                                                                             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.visited")}}
+{{Compat}}
 
 ## Voir aussi
 

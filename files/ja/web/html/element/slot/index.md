@@ -1,15 +1,6 @@
 ---
 title: '<slot>: ウェブコンポーネントのスロット要素'
 slug: Web/HTML/Element/slot
-tags:
-  - Element
-  - HTML
-  - HTML ウェブコンポーネント
-  - リファレンス
-  - ウェブコンポーネント
-  - シャドウ DOM
-  - slot
-translation_of: Web/HTML/Element/slot
 ---
 
 {{HTMLRef}}
@@ -82,13 +73,13 @@ translation_of: Web/HTML/Element/slot
     details {font-family: "Open Sans Light", Helvetica, Arial, sans-serif }
     .name {font-weight: bold; color: #217ac0; font-size: 120% }
     h4 {
-      margin: 10px 0 -8px 0;
+      margin: 10px 0 -8px 0;
       background: #217ac0;
-      color: white;
-      padding: 2px 6px;
+      color: white;
+      padding: 2px 6px;
       border: 1px solid #cee9f9;
-      border-radius: 4px;
-    }
+      border-radius: 4px;
+    }
     .attributes { margin-left: 22px; font-size: 90% }
     .attributes p { margin-left: 16px; font-style: italic }
   </style>

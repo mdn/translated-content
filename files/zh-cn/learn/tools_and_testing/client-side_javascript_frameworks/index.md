@@ -1,14 +1,8 @@
 ---
 title: 理解客户端 JavaScript 框架
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-tags:
-  - JavaScript
-  - 初学者
-  - 前段框架
-  - 学习
-  - 客户端
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
+
 {{LearnSidebar}}
 
 JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提供了构建可伸缩、交互式 web 应用程序的经过测试的工具。许多现代公司使用框架作为工具的标准部分，因此许多前端开发工作现在需要框架经验。
@@ -22,9 +16,9 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 - 框架有什么特性？它们一般是如何工作的？框架对这些特性的实现有何不同？
 - 它们与“普通的”JavaScript 或 HTML 有什么关系？
 
-在此之后，我们将提供一些教程，介绍一些主要框架的基本内容，为您提供足够的上下文和熟悉感，以便您自己开始更深入地学习。我们希望你以一种实用的方式来学习框架，不要忘记 web 平台的基本最佳实践，比如可访问性。
+在此之后，我们将提供一些教程，介绍一些主要框架的基本内容，为您提供足够的上下文和熟悉感，以便您自己开始更深入地学习。我们希望你以一种实用的方式来学习框架，不要忘记 web 平台的基本最佳实践，比如无障碍。
 
-**[通过“客户端框架介绍”即刻开始](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)**
+**[通过“客户端框架介绍”即刻开始](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)**
 
 ## 前提条件
 
@@ -34,9 +28,9 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 
 ## 说明指导
 
-- [1. 客户端框架介绍](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [1. 客户端框架介绍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
   - : 我们首先从以下话题开始研究框架，框架领域的总览，JavaScript 和框架历史的简介，为什么需要框架以及框架能带给我们什么，如何考虑选择一个框架开始学习，有什么其它的客户端框架可供选择。
-- [2. 框架的主要特性](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [2. 框架的主要特性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
   - : 每种 JavaScript 框架都有自己不同的方式更新 DOM，处理浏览器事件，为开发者提供愉悦的使用体验，这篇文章将探索“四大”框架的主要特性，从高级角度探讨框架的工作方式以及它们之间的区别。
 
 ## React 教程
@@ -45,19 +39,19 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 >
 > 如果你需要确认你的代码与我们的版本区别，你可以在我们的[todo-react repository](https://github.com/mdn/todo-react)仓库找到 React 应用示例代码的完整版本。想要获取当前最新的版本，查看<https://mdn.github.io/todo-react-build/>.
 
-- [1. 开始使用 React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [1. 开始使用 React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - : 此章节我们将向 React 打招呼。我们将能发现有关 React 的背景和使用场景的一些细节，在我们的计算机上设置基本的 React 工具链，创建和运行简单的入门应用，学习 React 在这个过程是如何工作的。
-- [2. 开始我们的 React 待办清单](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+- [2. 开始我们的 React 待办清单](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - : 假设我们计划使用 React 创建 proof-of-concept，一个允许用户添加，编辑和删除工作任务，不删除的情况标记任务完成的应用。此章节将带你完成基本的`App`组件结构和样式，为最后即将添加的独立组件定义和交互做好准备。
-- [3. 组件化我们的 React 应用](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+- [3. 组件化我们的 React 应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - : 到这个阶段，我们的应用仍是一个单一结构。在让它工作之前，我们需要将它分解为可管理的描述性组件。React 对于组件没有任何硬性规定--这完全取决于你！在此章节我们将向你展示一个合理的方式来将我们的应用分解成 组件。
-- [4. React 交互：事件和状态](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+- [4. React 交互：事件和状态](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - : 我们的组件化计划已经完成，现在是时候开始将我们的应用从一个完全静态的界面更新成允许交互和变更的界面。在这个章节我们将继续研究事件和状态，借此实现上述功能。
-- [5. React 交互：编辑，过滤，条件渲染](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+- [5. React 交互：编辑，过滤，条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
   - : 我们已经接近 React 旅程的终点（至少目前是这样），我们将对我们的 Todo 列表应用的主要功能区域做最后的更改。这包括允许编辑现有的任务，在所有列表，已完成列表和未完成列表中过滤任务。在这个过程中我们将研究条件渲染。
-- [6. React 的可访问性支持](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - : 在我们最后的教程章节，我们将重点介绍可访问性，包括 React 的焦点管理，这可以提高可用性，降低纯键盘用户和屏幕阅读器用户的困扰。
-- [7. React 资源](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+- [6. React 的无障碍支持](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - : 在我们最后的教程章节，我们将重点介绍无障碍，包括 React 的焦点管理，这可以提高可用性，降低纯键盘用户和屏幕阅读器用户的困扰。
+- [7. React 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
   - : 我们的最后章节提供了一个 React 资源列表，供你用于进一步的学习。
 
 ## Ember 教程
@@ -66,17 +60,17 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 >
 > 如果你需要确认你的代码与我们的版本区别，你可以在[ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc)找到 Ember 应用示例代码的完整版本。想要获取当前最新的版本，查看<https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> （这还包含了本教程未覆盖到的一些额外的特性）。
 
-- [1. 开始使用 Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+- [1. 开始使用 Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
   - : 在我们的 Ember 第一章节中我们将了解 Ember 的工作原理及其用途，本地安装 Ember 工具链，创建一个示例应用，然后做一些初始化设置以便开始开发。
-- [2. Ember 应用结构和组件化](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+- [2. Ember 应用结构和组件化](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
   - : 在此章节，我们将继续规划我们的 TodoMVC Ember 应用，为其添加 HTML 部分，随后将这些 HTML 分解为组件。
-- [3. Ember 交互：事件，类和状态](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+- [3. Ember 交互：事件，类和状态](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
   - : 至此，我们将添加一些交互行为到我们的应用，使其能够添加和显示新的待办事项。在此过程中，我们将研究如何在 Ember 中使用事件，创建包含 JavaScript 代码的组件类来控制交互功能，并且设置服务来跟踪我们的应用的数据状态。
-- [4. Ember 交互：页脚功能，条件渲染](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+- [4. Ember 交互：页脚功能，条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
   - : 现在是时候开始在我们的应用中处理页脚功能了。这里我们将更新待办事项计数器以正确显示待完成待办事项的数量，并正确地为已完成事项应用样式（i.e. 对应列表项的复选框处于选中状态）。我们还将实装我们的“Clear completed”按钮。在这个过程中，我们将学习在我们的模板中使用条件渲染。
-- [5. Ember 路由](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+- [5. Ember 路由](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
   - : 在此章节我们学习路由，有时也称为 URL-based 过滤。我们将使用它来为三个待办视图------"All","Active"和"Completed"提供全局唯一的 URL。
-- [6. Ember 资源和疑难解答](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+- [6. Ember 资源和疑难解答](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
   - : 我们的最后一个 Ember 章节提供了一个供你进一步学习的资源列表，还有一些有用的疑难解答和其他信息。
 
 ## Vue 教程
@@ -85,23 +79,23 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 >
 > 如果你需要确认你的代码与我们的版本区别，你可以在[todo-vue repository](https://github.com/mdn/todo-vue)找到 Vue 应用示例代码的完整版本。想要获取当前当前最新的版本，查看<https://mdn.github.io/todo-vue/dist/>.
 
-- [1. 开始使用 Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+- [1. 开始使用 Vue](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
   - : 现在让我们开始介绍 Vue，我们的第三个框架。在此章节我们将简单了解 Vue 的背景，学习如何安装 Vue 以及如何创建一个新项目，学习整个项目的高级架构以及独立的组件，了解如何在本地运行这个项目，并准备开始构建我们的示例。
-- [2. 创建我们的第一个 Vue 组件](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+- [2. 创建我们的第一个 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
   - : 现在是时候深入 Vue，创建我们自己的自定义组件了--我们将从创建一个用来展示待办列表项目的组件开始。在这个过程中，我们将学习一些重要的概念例如在一个组件中调用另一个组件，通过 props 传递数据给另一个组件并保存数据状态。
-- [3. 渲染 Vue 组件列表](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+- [3. 渲染 Vue 组件列表](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
   - : 至此我们已经得到了一个完全可用的组件，我们现在已经准备好添加多个`ToDoItem` 组件到我们的应用中了。在此章节我们将了解如何添加一组待办项数据到我们的`App.vue`组件，这组数据我们随后使用`v-for`指令将它们循环并显示到`ToDoItem`组件中。
-- [4. 添加一个新的待办表单：Vue 事件，方法和模型](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - : 现在我们的应用已经有了示例数据和一个循环来将每条数据渲染到`ToDoItem`中。下一步我们要做的是让用户能够输入他们自己的待办事项到这个应用中。 为此我们需要一个文本输入框`<input>`，一个在数据提交时触发的事件，一个在数据提交时被触发来添加数据和渲染列表的方法和一个用来控制数据的模型。这就是这个章节我们将要介绍的内容。
-- [5. 使用 CSS 美化 Vue 组件](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+- [4. 添加一个新的待办表单：Vue 事件，方法和模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - : 现在我们的应用已经有了示例数据和一个循环来将每条数据渲染到`ToDoItem`中。下一步我们要做的是让用户能够输入他们自己的待办事项到这个应用中。为此我们需要一个文本输入框`<input>`，一个在数据提交时触发的事件，一个在数据提交时被触发来添加数据和渲染列表的方法和一个用来控制数据的模型。这就是这个章节我们将要介绍的内容。
+- [5. 使用 CSS 美化 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
   - : 终于到了美化我们的应用的时间了。在此章节我们将探索用 CSS 美化 Vue 组件的不同方法。
-- [6. 使用 Vue 计算属性](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+- [6. 使用 Vue 计算属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
   - : 在这个章节我们将添加一个显示已完成待办项目数量的计数器，使用 Vue 的一个叫做计算属性的特性。计算属性与方法相似，但是只有它的依赖内容变更时才会再次运作。
-- [7. Vue 条件渲染：编辑既有待办项](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+- [7. Vue 条件渲染：编辑既有待办项](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
   - : 现在是时候加入我们还未实现一个主要功能部分了------编辑既有待办项。为了实现这个功能，我们将利用 Vue 的条件渲染能力------`v-if`和`v-else`来使既有待办项目在查看状态和文本编辑状态之间切换。我们还将添加删除待办项的功能。
-- [8. 使用 Vue refs 进行焦点管理](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+- [8. 使用 Vue refs 进行焦点管理](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
   - : 我们快要完成 Vue 的使用了。最后要看的一个功能是焦点管理，换种说法，如何改善我们的应用的键盘可操作性。我们将解决这个问题，通过 Vue refs------一个允许你直接操作虚拟 DOM 的底层 DOM，或在组件中直接操作其子组件内部 DOM 结构的高级特性。
-- [9. Vue 资源](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+- [9. Vue 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
   - : 我们将提供一个你可以用来进一步学习的资源列表来圆满结束我们的 Vue 学习教程，从这个列表中你也可以获取一些有用的技巧。
 
 ## 我们应该选择哪个框架？

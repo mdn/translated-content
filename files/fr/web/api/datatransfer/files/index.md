@@ -9,6 +9,7 @@ tags:
   - References
 translation_of: Web/API/DataTransfer/files
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 La propriété **`DataTransfer.files`** est une  {{domxref("FileList","liste de fichier")}} issue d'une manipulation de glisser-déposer. Si l'opération n'inclut pas de fichier, alors la liste est vide.
@@ -32,13 +33,10 @@ Voici deux exemples :
 - Seulement Firefox : <http://jsfiddle.net/9C2EF/>
 - Tous les navigateurs : [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                            | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#dom-datatransfer-files", "files")}} | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5.1", "editing.html#dom-datatransfer-files", "files")}}         | {{Spec2("HTML5.1")}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DataTransfer.files")}}
+{{Compat}}

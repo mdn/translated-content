@@ -1,15 +1,8 @@
 ---
 title: animation-name
 slug: Web/CSS/animation-name
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-name
-translation_of: Web/CSS/animation-name
 ---
+
 {{CSSRef}}
 
 **`animation-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に適用される 1 つまたは複数のアニメーションを記述する {{cssxref("@keyframes")}} アットルールの名前を指定します。

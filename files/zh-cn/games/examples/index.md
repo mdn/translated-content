@@ -1,10 +1,8 @@
 ---
 title: Examples
 slug: Games/Examples
-tags:
-  - 游戏
-translation_of: Games/Examples
 ---
+
 {{GamesSidebar}}
 
 这个页面列出了许多令人印象深刻的 web 技术演示，你可以从中获得灵感和乐趣。这里证明了可以利用 JavaScript，WebGL 和相关的技术做些什么。前两个部分列出了可以玩的游戏，其中在第二个部分中列出的演示不一定是可交互的或是游戏。
@@ -47,7 +45,7 @@ translation_of: Games/Examples
   - : 类似于俄罗斯方块的六边形解谜游戏。
 - [2048](https://gabrielecirulli.github.io/2048/)
   - : 一个滑动数字方块的解谜游戏。
-- [BananaBread](/en-US/demos/detail/bananabread)
+- [BananaBread](/zh-CN/demos/detail/bananabread)
   - : 多玩家的 3D 第一人称射击游戏，使用 Emscripten，WebGL 和 WebRTC 开发。
 - [Monster Madness](https://hacks.mozilla.org/2013/12/monster-madness-creating-games-on-the-web-with-emscripten/)
   - : 一个基于 WebGL 和 asm.js 的多人在线射击游戏，由 Nom Nom Games 和 Trendy entertainment 开发。
@@ -107,5 +105,5 @@ translation_of: Games/Examples
   - : Generating isometric tiles with SVG matricies.
 - [ThreeJS App Player](https://jsfiddle.net/jetienne/rkth90c9/)
   - : 你可以在其中载入和运行 Three.js 的示例。
-- [WebGL + Three.js Demo](/en-US/demos/detail/escher-puzzle/launch)
+- [WebGL + Three.js Demo](/zh-CN/demos/detail/escher-puzzle/launch)
   - : 警告：可能造成眩晕。

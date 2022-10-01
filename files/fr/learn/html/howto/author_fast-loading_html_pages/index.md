@@ -7,6 +7,7 @@ tags:
 translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide
 ---
+
 C'est connu, les internautes sont de grands impatients, ils veulent des résultats immédiats, avec des gros titres et des réponses courtes et efficaces.
 Une page web optimisé prévoit non seulement un site plus réactif, mais aussi de réduire la charge sur vos serveurs Web et votre connexion Internet. Cela peut être crucial pour les gros sites ou des sites qui ont un pic de trafic dans des circonstances exceptionnelles (telles que les Unes des journaux fracassantes). De plus, Google en tient compte pour son classement.
 
@@ -22,7 +23,7 @@ Téléchargez le html d'abords, puis le CSS et le JavaScript nécessaires à son
 
 ### Réduisez le nombre de fichiers
 
-Réduire le nombre de fichiers référencés dans une page web diminue le nombre de connexions [HTTP](/en/HTTP "https://developer.mozilla.org/en/HTTP") nécessaire pour télécharger une page.
+Réduire le nombre de fichiers référencés dans une page web diminue le nombre de connexions [HTTP](/en/HTTP) nécessaire pour télécharger une page.
 
 - Utilisez le moins d'images possible sur votre site (et de gif animés ofc). Preferez des [boutons graphiques en CSS](http://css-tricks.com/examples/ButtonMaker/).
 - Compressez vos images (éviter les .png). Vous pouvez pour cela utiliser [Gimp](http://www.gimp.org/) ou [Imagemagik](http://www.imagemagick.org/script/index.php).
@@ -106,4 +107,4 @@ Notez, cependant, que beaucoup de conseils énumérés dans cette page sont des 
 
 **Document d'information d'origine**
 
-- https\://developer.mozilla.org/en/Tips_for_Authoring_Fast-loading_HTML_Pages
+- <https://developer.mozilla.org/en/Tips_for_Authoring_Fast-loading_HTML_Pages>

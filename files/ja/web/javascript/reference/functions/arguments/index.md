@@ -1,15 +1,8 @@
 ---
 title: arguments オブジェクト
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - 関数
-  - JavaScript
-  - 名前空間
-  - リファレンス
-  - arguments
-browser-compat: javascript.functions.arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{JSSidebar("Functions")}}
 
 **`arguments`** は配列風 (`Array`-like) オブジェクトであり、[関数](/ja/docs/Web/JavaScript/Guide/Functions)に渡された引数の値を含んでおり、関数内からアクセスすることができます。
@@ -56,7 +49,7 @@ let args = Array.from(arguments);
 let args = [...arguments];
 ```
 
-`arguments` オブジェクトは、あらかじめ定義された引数の数よりも多くの引数で呼び出される関数に便利です。このテクニックは {{jsxref("Math.min()")}} などの 可変数の引数を受け入れる関数に便利です。この例の関数は、任意の数の文字列が引数で、引数の中で一番長い文字列を返します。
+`arguments` オブジェクトは、あらかじめ定義された引数の数よりも多くの引数で呼び出される関数に便利です。このテクニックは {{jsxref("Math.min()")}} などの 可変数の引数を受け入れる関数に便利です。この例の関数は、任意の数の文字列が引数で、引数の中で一番長い文字列を返します。
 
 ```js
 function longestString() {

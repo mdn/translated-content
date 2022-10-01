@@ -1,11 +1,8 @@
 ---
 title: WebDAV
 slug: Glossary/WebDAV
-tags:
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/WebDAV
 ---
+
 **WebDAV** (_Web Distributed Authoring and Versioning_) 是一种允许 web 开发者使用客户端远程更新内容的 {{Glossary("HTTP")}} 扩展。
 
 WebDAV 很少单独使用，其通常与以下两个扩展一起使用：{{Glossary("CalDAV")}} 和 {{Glossary("CardDAV")}}。
@@ -20,7 +17,7 @@ WebDAV 允许客户端执行以下操作
 
 ## 了解更多
 
-- 维基百科上的 {{interwiki("wikipedia", "WebDAV")}}
+- 维基百科上的 [WebDAV](https://zh.wikipedia.org/wiki/WebDAV)
 - 技术参考：
 
   - {{rfc(2518)}}

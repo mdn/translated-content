@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Signature/Function
 original_slug: Glossaire/Signature/Fonction
 ---
+
 Une **signature de fonction** (ou signature de _type_, ou signature de _méthode_) définit les entrées et sorties des {{Glossary("Function", "fonctions")}} et des {{Glossary("Method", "méthodes")}}.
 
 Une signature peut comporter :
@@ -51,4 +52,4 @@ public static void main(String[] args)
 
 ### `Culture générale`
 
-- {{Interwiki("wikipedia", "Signature de type#Java", "Signatures de type interne en Java")}} sur Wikipédia
+- [Signature de type](https://fr.wikipedia.org/wiki/Signature_de_type) sur Wikipédia

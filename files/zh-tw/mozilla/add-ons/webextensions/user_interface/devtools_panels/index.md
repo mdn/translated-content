@@ -1,13 +1,8 @@
 ---
 title: 開發工具面板
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-tags:
-  - 初學者
-  - 擴充套件
-  - 教學
-  - 用戶介面
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
+
 {{AddonSidebar}}
 
 > **備註：** Firefox 54 以後可以使用這個功能。
@@ -18,9 +13,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 
 ## 指定開發工具面板
 
-開發工具面板可以透過 [`devtools.panels`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels) API 添加，因此這必須在特別的開發工具頁面執行。
+開發工具面板可以透過 [`devtools.panels`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels) API 添加，因此這必須在特別的開發工具頁面執行。
 
-透過在套件的 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 添加 [`devtools_page`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) 鍵並提供 HTML 檔案來添加開發工具頁面：
+透過在套件的 [manifest.json](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 添加 [`devtools_page`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) 鍵並提供 HTML 檔案來添加開發工具頁面：
 
 ```json
 "devtools_page": "devtools-page.html"
@@ -55,7 +50,7 @@ browser.devtools.panels.create(
 });
 ```
 
-套件現在可以在檢測器視窗透過 [`devtools.inspectedWindow.eval()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval) 或透過後端腳本傳送訊息來插入內容腳本兩種方式執行。你可以在[擴充開發者工具](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)找到更多相關訊息。
+套件現在可以在檢測器視窗透過 [`devtools.inspectedWindow.eval()`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval) 或透過後端腳本傳送訊息來插入內容腳本兩種方式執行。你可以在[擴充開發者工具](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)找到更多相關訊息。
 
 ## 開發面板設計
 

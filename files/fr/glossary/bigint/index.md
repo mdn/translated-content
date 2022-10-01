@@ -10,13 +10,14 @@ tags:
 translation_of: Glossary/BigInt
 original_slug: Glossaire/BigInt
 ---
+
 Dans {{Glossary("JavaScript")}}, **BigInt** est un type de données numériques qui peut représenter des entiers au [format de précision arbitraire](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic). Dans d'autres langages de programmation, différents types numériques peuvent exister, par exemple : Entiers, Flottants, Doubles, ou Bignums.
 
 ## Apprendre plus
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Data type#Numeric_types", "Numeric types")}} sur Wikipedia
+- [Les types d'entier en informatique](https://fr.wikipedia.org/wiki/Entier_(informatique)#Types_d'entiers_courants) sur Wikipédia
 
 ### Référence technique
 

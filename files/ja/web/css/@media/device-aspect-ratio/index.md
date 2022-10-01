@@ -1,17 +1,8 @@
 ---
 title: device-aspect-ratio
 slug: Web/CSS/@media/device-aspect-ratio
-tags:
-  - '@media'
-  - CSS
-  - 非推奨
-  - メディアクエリー
-  - リファレンス
-  - ウェブ
-  - メディア特性
-browser-compat: css.at-rules.media.device-aspect-ratio
-translation_of: Web/CSS/@media/device-aspect-ratio
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 [CSS](/ja/docs/Web/CSS) の **`device-aspect-ratio`** [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、出力機器の幅対高さのアスペクト比を調べるために使用します。
@@ -26,12 +17,12 @@ translation_of: Web/CSS/@media/device-aspect-ratio
 
 ```css
 article {
-  padding: 1rem;
+  padding: 1rem;
 }
 
 @media screen and (min-device-aspect-ratio: 16/9) {
-  article {
-    padding: 1rem 5vw;
+  article {
+    padding: 1rem 5vw;
   }
 }
 ```

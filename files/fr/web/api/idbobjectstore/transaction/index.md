@@ -3,6 +3,7 @@ title: IDBObjectStore.transaction
 slug: Web/API/IDBObjectStore/transaction
 translation_of: Web/API/IDBObjectStore/transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La propriété **`transaction`** de l'interface {{domxref("IDBObjectStore")}} renvoie la {{domxref("IDBTransaction","transaction")}} à laquelle l'{{domxref("IDBObjectStore","accès")}} du magasin d'objet appartient.
@@ -73,13 +74,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                       | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-transaction', 'transaction')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.transaction")}}
+{{Compat}}
 
 ## Voir aussi
 

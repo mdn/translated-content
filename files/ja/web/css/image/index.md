@@ -1,18 +1,8 @@
 ---
 title: <image>
 slug: Web/CSS/image
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 画像
-  - データ型
-  - グラフィック
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.image
-translation_of: Web/CSS/image
 ---
+
 {{CSSRef}}
 
 **`<image>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Types)で、二次元の画像を表現します。

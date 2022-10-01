@@ -1,14 +1,8 @@
 ---
 title: Event.composed
 slug: Web/API/Event/composed
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.composed
-translation_of: Web/API/Event/composed
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`composed`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントがシャドウ DOM 境界を越えて標準 DOM に伝播するかどうかを示す論理値を返すものです。

@@ -1,9 +1,9 @@
 ---
-title: 何为可访问性？
+title: 何为无障碍？
 slug: Learn/Common_questions/What_is_accessibility
-translation_of: Learn/Common_questions/What_is_accessibility
 ---
-本文介绍了 Web 可访问性背后的一些基本概念。
+
+本文介绍了 Web 无障碍背后的一些基本概念。
 
 <table class="learn-box nostripe standard-table">
   <tbody>
@@ -13,28 +13,28 @@ translation_of: Learn/Common_questions/What_is_accessibility
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>学习可访问性，了解其重要性</td>
+      <td>学习无障碍，了解其重要性</td>
     </tr>
   </tbody>
 </table>
 
 ## 概述
 
-由于身体或技术上的限制，你的访客也许无法以像你期望的方式体验网站。本文中，我们给出了可访问性的一般原则，并解释了其中的一些规则。
+由于身体或技术上的限制，你的访客也许无法以像你期望的方式体验网站。本文中，我们给出了无障碍的一般原则，并解释了其中的一些规则。
 
 ## 自主学习
 
-_还没有可用的资料。 [Please, consider contributing](/en-US/docs/MDN/Getting_started)._
+_还没有可用的资料。 [Please, consider contributing](/zh-CN/docs/MDN/Getting_started)._
 
 ## 深入探索
 
-### 可访问性：一般原则
+### 无障碍：一般原则
 
 We might associate accessibility at first with negative limitations. This building has to be accessible, so it must follow these regulations for door width and toilet size and elevator placement.
 
 That's a narrow way to think of accessibility. Think of it as a wonderful way to empower people and serve more customers. What can the people in Brazil do with your English website? Can the people with smartphones browse a heavy, cluttered website designed for a large desktop monitor and unlimited bandwidth? They'll go somewhere else. In general, _we must think about our product from the viewpoints of all our target customers, and adapt accordingly._ Hence accessibility.
 
-### Web 可访问性
+### Web 无障碍
 
 In the specific context of the web, accessibility means that anyone can benefit from your content, regardless of disability, location, technical limitations, or other circumstances.
 
@@ -50,7 +50,7 @@ Let's consider video:
 - 键盘功能
   - : Let the user tab into/out of a video, play it, and pause it without being trapped in it.
 
-#### Web 可访问性基础
+#### Web 无障碍基础
 
 A few necessities for basic Web accessibility include:
 
@@ -61,7 +61,7 @@ A few necessities for basic Web accessibility include:
 
 而这只是个开始。
 
-### 可访问性的拥护者
+### 无障碍的拥护者
 
 Since 1999, the {{Glossary("W3C")}} has operated a working group called the {{Glossary("WAI","Web Accessibility Initiative")}} (WAI) promoting accessibility through guidelines, support material, and international resources.
 
@@ -69,12 +69,12 @@ Since 1999, the {{Glossary("W3C")}} has operated a working group called the {{Gl
 
 请参阅
 
-- 关于可访问性的[维基百科文章](https://en.wikipedia.org/wiki/Accessibility)
+- 关于无障碍的[维基百科文章](https://en.wikipedia.org/wiki/Accessibility)
 - [WAI (W3C's Web Accessibility Initiative)](http://www.w3.org/WAI/)
 
 ## 下一步
 
 Accessibility can impact both a website's design and technical structure.
 
-- From a design point of view, we suggest learning about [designing for all types of users](/en-US/docs/Learn/Design_for_all_types_of_users_101).
-- If the technical side interests you more, you could learn how to [embed images in webpages](/en-US/docs/Learn/Using_images).
+- From a design point of view, we suggest learning about [designing for all types of users](/zh-CN/docs/Learn/Design_for_all_types_of_users_101).
+- If the technical side interests you more, you could learn how to [embed images in webpages](/zh-CN/docs/Learn/Using_images).

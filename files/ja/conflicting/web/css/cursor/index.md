@@ -1,15 +1,9 @@
 ---
 title: cursor プロパティでの URL 値の使用
 slug: conflicting/Web/CSS/cursor
-tags:
-  - CSS
-  - Gecko
-  - ガイド
-  - NeedsUpdate
-  - Reference
-translation_of: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 original_slug: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 ---
+
 {{CSSRef}}
 
 [Gecko](/ja/docs/Mozilla/Gecko) 1.8 は URL の値を CSS の{{CSSxRef("cursor")}} プロパティで、 Windows と Linux で対応しています。 Mac の対応は Gecko 2 ([Firefox 4](/ja/docs/Mozilla/Firefox/Releases/4)) で追加されました。これによって任意の画像を、 Gecko が対応している画像形式ならば何でも、マウスカーソルとして指定することができます。

@@ -1,23 +1,8 @@
 ---
 title: DOMPointReadOnly.y
 slug: Web/API/DOMPointReadOnly/y
-page-type: web-api-instance-property
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Read-only
-  - Reference
-  - Vertical
-  - 'y'
-browser-compat: api.DOMPointReadOnly.y
-translation_of: Web/API/DOMPointReadOnly/y
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPointReadOnly`** インターフェイスの **`y`** プロパティは、空間の読み取り専用の点における垂直座標 y を保持します。

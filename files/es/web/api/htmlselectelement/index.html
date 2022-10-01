@@ -86,16 +86,16 @@ translation_of: Web/API/HTMLSelectElement
 
 <pre class="brush: js">/* assuming we have the following HTML
 &lt;select id='s'&gt;
-    &lt;option&gt;First&lt;/option&gt;
-    &lt;option selected&gt;Second&lt;/option&gt;
-    &lt;option&gt;Third&lt;/option&gt;
+    &lt;option&gt;First&lt;/option&gt;
+    &lt;option selected&gt;Second&lt;/option&gt;
+    &lt;option&gt;Third&lt;/option&gt;
 &lt;/select&gt;
 */
 
 var select = document.getElementById('s');
 
 // return the index of the selected option
-console.log(select.selectedIndex); // 1
+console.log(select.selectedIndex); // 1
 
 // return the value of the selected option
 console.log(select.options[select.selectedIndex].value) // Second

@@ -1,14 +1,8 @@
 ---
 title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
-tags:
-  - API
-  - MediaDevices
-  - Method
-  - Reference
-  - WebRTC
-browser-compat: api.MediaDevices.enumerateDevices
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("MediaDevices")}}方法請求一個可用的媒體輸入與媒體輸出裝置列表，像是麥克風、相機、耳機等等。返回值{{jsxref("Promise")}}可被解析為一個描述裝置的{{domxref("MediaDeviceInfo")}}陣列。

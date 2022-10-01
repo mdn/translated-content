@@ -1,8 +1,8 @@
 ---
 title: NaN
 slug: Glossary/NaN
-translation_of: Glossary/NaN
 ---
+
 NaN(不是一个数字) 是一种数值表达形式 {{Glossary("Type", "data type")}}这意味一种未定义的值或者不能够被描述的值，尤其浮点型结算的结果。
 
 举例，NaNs 能够描述无穷大，数字除 0 的结果，缺少值，或者平方根为负数（这是虚构的，而浮点数是真实的）。
@@ -13,7 +13,7 @@ NaN(不是一个数字) 是一种数值表达形式 {{Glossary("Type", "data typ
 
 ### 通常的知识点
 
-- {{Interwiki("wikipedia", "NaN")}} 在维基百科
+- [NaN](https://zh.wikipedia.org/wiki/NaN) 在维基百科
 
 ### 权威的信息
 

@@ -9,11 +9,11 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <p class="summary">With the scene set, we'll now look specifically at the common cross-browser problems you will come across in HTML and CSS code, and what tools can be used to prevent problems from happening, or fix problems that occur. This includes linting code, handling CSS prefixes, using browser dev tools to track down problems, using polyfills to add support into browsers, tackling responsive design problems, and more.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Пререквизиты:</th>
-   <td>Знакомство с основами <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, и <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>; идея высокого уровня <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">кросс-браузерного тестирования</a></td>
+   <td>Знакомство с основами <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, и <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>; идея высокого уровня <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">кросс-браузерного тестирования</a></td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -115,21 +115,21 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <p>For example:</p>
 
-<pre class="brush: html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>video</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video<span class="punctuation token">"</span></span> <span class="attr-name token">controls</span> <span class="attr-name token">preload</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>metadata<span class="punctuation token">"</span></span> <span class="attr-name token">poster</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>img/poster.jpg<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>source</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/tears-of-steel-battle-clip-medium.mp4<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/mp4<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
- <span class="tag token"><span class="tag token"><span class="punctuation token"> &lt;</span>source</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/tears-of-steel-battle-clip-medium.webm<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/webm<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>source</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/tears-of-steel-battle-clip-medium.ogg<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/ogg<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="comment token">&lt;!-- Flash fallback --&gt;</span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>object</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>application/x-shockwave-flash<span class="punctuation token">"</span></span> <span class="attr-name token">data</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>flash-player.swf?videoUrl<span class="punctuation token">=</span>video/tears-of-steel-battle-clip-medium.mp4<span class="punctuation token">"</span></span> <span class="attr-name token">width</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>1024<span class="punctuation token">"</span></span> <span class="attr-name token">height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>576<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-     <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>param</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>movie<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>flash-player.swf?videoUrl<span class="punctuation token">=</span>video/tears-of-steel-battle-clip-medium.mp4<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-     <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>param</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>allowfullscreen<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>true<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-     <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>param</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>wmode<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>transparent<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-     <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>param</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>flashvars<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>controlbar<span class="punctuation token">=</span>over&amp;amp;image<span class="punctuation token">=</span>img/poster.jpg&amp;amp;file<span class="punctuation token">=</span>flash-player.swf?videoUrl<span class="punctuation token">=</span>video/tears-of-steel-battle-clip-medium.mp4<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>img</span> <span class="attr-name token">alt</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Tears of Steel poster image<span class="punctuation token">"</span></span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>img/poster.jpg<span class="punctuation token">"</span></span> <span class="attr-name token">width</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>1024<span class="punctuation token">"</span></span> <span class="attr-name token">height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>428<span class="punctuation token">"</span></span> <span class="attr-name token">title</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>No video playback possible, please download the video from the link below<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>object</span><span class="punctuation token">&gt;</span></span>
-  <span class="comment token">&lt;!-- Offer download --&gt;</span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>a</span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/tears-of-steel-battle-clip-medium.mp4<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Download MP4<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>video</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html"><code class="language-html">&lt;video id="video" controls preload="metadata" poster="img/poster.jpg"&gt;
+  &lt;source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4"&gt;
+  &lt;source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm"&gt;
+  &lt;source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg"&gt;
+  &lt;!-- Flash fallback --&gt;
+  &lt;object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" width="1024" height="576"&gt;
+     &lt;param name="movie" value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" /&gt;
+     &lt;param name="allowfullscreen" value="true" /&gt;
+     &lt;param name="wmode" value="transparent" /&gt;
+     &lt;param name="flashvars" value="controlbar=over&amp;amp;image=img/poster.jpg&amp;amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" /&gt;
+      &lt;img alt="Tears of Steel poster image" src="img/poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" /&gt;
+  &lt;/object&gt;
+  &lt;!-- Offer download --&gt;
+  &lt;a href="video/tears-of-steel-battle-clip-medium.mp4"&gt;Download MP4&lt;/a&gt;
+&lt;/video&gt;</code></pre>
 
 <p>This example (taken from <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>) includes not only a Flash video fallback for older IE versions, but also a simple link allowing you to download the video if even the Flash player doesn't work, so at least the user can still access the video.</p>
 
@@ -181,8 +181,6 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
         width: 400px;
         margin: 0 auto;
       }</pre>
-
-<p> </p>
 
 <pre class="brush: html">&lt;form&gt;
       &lt;div&gt;
@@ -252,15 +250,15 @@ button:active {
 
 <p>IE conditional comments are a modified proprietary HTML comment syntax, which can be used to selectively apply HTML code to different versions of IE. This has proven to be a very effective mechanism for fixing cross browser bugs. The syntax looks like this:</p>
 
-<pre class="brush: html"><span class="c">&lt;!--[if lte IE 8]&gt;
-  &lt;script src="ie-fix.js"&gt;&lt;/script&gt;</span>
+<pre class="brush: html">&lt;!--[if lte IE 8]&gt;
+  &lt;script src="ie-fix.js"&gt;&lt;/script&gt;
   &lt;link href="ie-fix.css" rel="stylesheet" type="text/css"&gt;
-<span class="c">&lt;![endif]--&gt;</span></pre>
+&lt;![endif]--&gt;</pre>
 
 <p>This block will apply the IE-specific CSS and JavaScript only if the browser viewing the page is IE 8 or older. <code>lte</code> means "less than or equal to", but you can also use lt, gt, gte, <code>!</code> for NOT, and other logical syntax.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Sitepoint's <span class="l-d-i l-pa2 t-bg-white"><a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer Conditional Comments</a> provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.</span></p>
+<p><strong>Note</strong>: Sitepoint's <a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer Conditional Comments</a> provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.</p>
 </div>
 
 <p>As you can see, this is especially useful for applying code fixes to old versions of IE. The use case we mentioned earlier (making modern semantic elements styleable in old versions of IE) can be achieved easily using conditional comments, for example you could put something like this in your IE stylesheet:</p>
@@ -294,7 +292,7 @@ button:active {
 
 <ol>
  <li>To try this example, make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html">selectivizr-example-start.html</a>. If you look at this running live, you'll see that it contains two paragraphs, one of which is styled. We've selected the paragraph with <code>p:first-child</code>, which won't work in old versions of IE.</li>
- <li>Now download <a href="http://mootools.net/">MooTools</a> and <a href="http://selectivizr.com/">Selectivizr</a>, and save them in the same directory as your sample HTML.</li>
+ <li>Now download <a href="http://mootools.net/">MooTools</a> and <a href="http://selectivizr.com/">Selectivizr</a>, and save them in the same directory as your sample HTML.</li>
  <li>Put the following code into the head of your HTML document, just before the opening <code>&lt;style&gt;</code> tag:
   <pre class="brush: html">&lt;script type="text/javascript" src="MooTools-Core-1.6.0.js"&gt;&lt;/script&gt;
     &lt;!--[if (gte IE 6)&amp;(lte IE 8)]&gt;
@@ -365,7 +363,7 @@ test.style.webkitTransform = 'rotate(90deg)'</pre>
 -webkit-transform: rotate(90deg);
 transform: rotate(90deg);</pre>
 
-<p>This ensures that all browsers that support any of the above forms of the property can make the feature work. It is worth putting the non-prefixed version last, because that will be the most up-to-date version, which you'll want browsers to use if possible. If for example a browser implements both the <code>-webkit-</code> version and the non-prefixed version,  it will first apply the <code>-webkit-</code> version, then override it with the non-prefixed version. You want it to happen this way round, not the other way round.</p>
+<p>This ensures that all browsers that support any of the above forms of the property can make the feature work. It is worth putting the non-prefixed version last, because that will be the most up-to-date version, which you'll want browsers to use if possible. If for example a browser implements both the <code>-webkit-</code> version and the non-prefixed version,  it will first apply the <code>-webkit-</code> version, then override it with the non-prefixed version. You want it to happen this way round, not the other way round.</p>
 
 <p>Of course, doing this for lots of different CSS rules can get really tedious. It is better to use an automation tool to do it for you. And such tools exist:</p>
 
@@ -413,7 +411,7 @@ transform: rotate(90deg);</pre>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>:  When trying to track down a tricky layout issue, a good technique is to add a brightly colored {{cssxref("outline")}} to the offending element, or all the elements nearby. This makes it a lot easier to see where everything is placed. See <a href="http://www.otsukare.info/2016/10/05/debugging-css" rel="bookmark" title="Permalink to Debug your CSS with outline visualizations.">Debug your CSS with outline visualizations</a> for more details.</p>
+<p><strong>Note</strong>:  When trying to track down a tricky layout issue, a good technique is to add a brightly colored {{cssxref("outline")}} to the offending element, or all the elements nearby. This makes it a lot easier to see where everything is placed. See <a href="http://www.otsukare.info/2016/10/05/debugging-css" rel="bookmark" title="Permalink to Debug your CSS with outline visualizations.">Debug your CSS with outline visualizations</a> for more details.</p>
 </div>
 
 <h4 id="Support_for_new_layout_features">Support for new layout features</h4>
@@ -469,7 +467,7 @@ transform: rotate(90deg);</pre>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="In_this_module">In this module</h2>
 
@@ -484,4 +482,4 @@ transform: rotate(90deg);</pre>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

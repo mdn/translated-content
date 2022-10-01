@@ -1,21 +1,8 @@
 ---
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
-page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Reference
-  - Video
-  - WebRTC
-browser-compat: api.MediaStreamTrack
-translation_of: Web/API/MediaStreamTrack
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack`** インターフェイスは、ストリームに含まれる一つのメディアトラックを表現します。一般的に、音声や動画のトラックですが、他の種類のトラックも存在することがあります。
@@ -73,7 +60,7 @@ translation_of: Web/API/MediaStreamTrack
 
 ## イベント
 
-これらのイベントを待ち受けするには、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。。
+これらのイベントを待ち受けするには、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。
 
 - {{domxref("MediaStreamTrack/ended_event", "ended")}}
   - : トラックの再生が終わったとき（{{domxref("MediaStreamTrack.readyState", "readyState")}} の値が `ended` に変化したとき）に送られます

@@ -3,6 +3,7 @@ title: Console.countReset()
 slug: Web/API/Console/countReset
 translation_of: Web/API/Console/countReset
 ---
+
 {{APIRef("Console API")}}
 
 Remet le compteur à zero. Cette fonction prend un argument optionnel `label`
@@ -112,12 +113,10 @@ On obtiendra ce retour dans la console
 
 Remettre à zero le compteur "bob" change uniquement la valeur de celui-ci. La valeur du compteur "alice" reste inchangée.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                    | Status                           | Comment            |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#count", "console.countReset()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.Console.countReset")}}
+{{Compat}}

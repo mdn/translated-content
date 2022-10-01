@@ -1,11 +1,8 @@
 ---
 title: MDN 项目
 slug: MDN
-tags:
-  - 着陆页
-  - MDN 元数据
-translation_of: MDN
 ---
+
 {{MDNSidebar}}
 
 **MDN Web 文档** 是免费使用我们编辑的开放 web 平台文档的网站。我们的使命是为*开发者*提供*信息*，帮助他们轻松地在 *web 平台*上构建项目。

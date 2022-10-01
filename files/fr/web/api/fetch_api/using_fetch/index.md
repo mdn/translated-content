@@ -13,19 +13,12 @@ tags:
   - request
 translation_of: Web/API/Fetch_API/Using_Fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 L'[API Fetch](/fr/docs/Web/API/Fetch_API) fournit une interface JavaScript pour l'accès et la manipulation des parties de la pipeline HTTP, comme les requêtes et les réponses. Cela fournit aussi une méthode globale {{domxref("GlobalFetch.fetch","fetch()")}} qui procure un moyen facile et logique de récupérer des ressources à travers le réseau de manière asynchrone.
 
 Ce genre de fonctionnalité était auparavant réalisé avec {{domxref("XMLHttpRequest")}}. Fetch fournit une meilleure alternative qui peut être utilisée facilement par d’autres technologies comme {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch fournit aussi un endroit unique et logique pour la définition d'autres concepts liés à HTTP comme CORS et les extensions d'HTTP.
-
-## L'état actuel du support par les navigateurs
-
-Le support de Fetch est à ses débuts, mais les choses progressent. Il a été activé par défaut sur Firefox 39 et supérieur, et sur Chrome 42 et supérieur.
-
-Si vous souhaitez l'utiliser maintenant, il y a un [polyfill Fetch](https://github.com/github/fetch) disponible qui recrée la fonctionnalité pour les navigateurs qui ne le supportent pas. Gardez à l'esprit qu'il est au stade expérimental et pas encore complètement fonctionnel.
-
-> **Note :** Certaines préoccupations ont été soulevées sur le fait que la [spécification de Fetch](https://fetch.spec.whatwg.org/) est en contradition avec la [spécification de Streams](https://streams.spec.whatwg.org/); cependant, les prévisions montrent une intention d'intégrer Streams avec Fetch: pour plus d'informations reportez vous à [Fetch API integrated with Streams](https://github.com/yutakahirano/fetch-with-streams/).
 
 ## Détection de la fonctionnalité
 
@@ -284,13 +277,11 @@ Les Requêtes et Réponses (et par extension la fonction `fetch()`), vont tenter
 
 ## Spécifications
 
-| Spécification                | Statut                   | Commentaire         |
-| ---------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Voir aussi
 

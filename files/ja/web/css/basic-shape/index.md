@@ -1,13 +1,8 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-tags:
-  - CSS
-  - CSS シェイプ
-  - CSS データ型
-  - リファレンス
-translation_of: Web/CSS/basic-shape
 ---
+
 {{CSSRef}}
 
 **`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
@@ -120,7 +115,7 @@ translation_of: Web/CSS/basic-shape
 - どちらのシェイプも同じ参照ボックスを使う必要があります。
 - 両方のシェイプが同じ型で、型が `ellipse()` または `circle()` で、半径に `closest-side` または `farthest-side` のキーワードが使われていない場合、シェイプ関数のそれぞれの値の間で補間が行われます。
 - 両方のシェイプの型が `inset()` の場合、シェイプ関数のそれぞれの値の間で補間が行われます。
-- 両方のシェイプの型が `polygon()` で、両方の多角形が同じ数の角を持っており、同じ `&lt;fill-rule&gt;` を使用している場合、シェイプ関数のそれぞれの値の間で補間が行われます。
+- 両方のシェイプの型が `polygon()` で、両方の多角形が同じ数の角を持っており、同じ `<fill-rule>` を使用している場合、シェイプ関数のそれぞれの値の間で補間が行われます。
 - 両方のシェイプの型が `path()` の場合、両方の文字列が同じ数でパスデータコマンドの型が同じ順序であれば、実数でそれぞれのパスデータコマンドが補間されます。
 - それ以外の場合は補間が行われません。
 

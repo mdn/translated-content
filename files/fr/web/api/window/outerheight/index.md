@@ -3,6 +3,7 @@ title: Window.outerHeight
 slug: Web/API/Window/outerHeight
 translation_of: Web/API/Window/outerHeight
 ---
+
 {{APIRef}}
 
 `Window.outerHeight` retourne la hauteur de la fenêtre (du navigateur) en pixels. La hauteur retournée prends en compte la fenêtre du navigateur entier, y compris la barre latérale, window chrome and window resizing borders/handles.
@@ -31,13 +32,11 @@ La figure suivante montre la différence entre `outerHeight` et `innerHeight`.
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerheight', 'Window.outerHeight') }} | {{ Spec2('CSSOM View') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.outerHeight")}}
+{{Compat}}
 
 ## Voir aussi
 

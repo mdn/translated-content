@@ -1,15 +1,8 @@
 ---
 title: counter-set
 slug: Web/CSS/counter-set
-tags:
-  - CSS
-  - CSS カウンター
-  - CSS リスト
-  - CSS プロパティ
-  - recipe:css-property
-browser-compat: css.properties.counter-set
-translation_of: Web/CSS/counter-set
 ---
+
 {{CSSRef}}
 
 **`counter-set`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)を指定された値に設定します。これは既存のカウンターの値を操作し、その要素に指定された名前のカウンターがまだ存在しない場合は新しいカウンターを生成します。

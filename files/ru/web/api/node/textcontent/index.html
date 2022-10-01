@@ -36,14 +36,14 @@ element.textContent = "Это просто текст";
 <p><code>element.innerText</code> был введён Internet Explorer-ом. Работает по тому же принципу за небольшими исключениями:</p>
 
 <ul>
- <li><code>textContent</code> получает содержимое <em>всех</em> элементов, включая  {{HTMLElement("script")}} и {{HTMLElement("style")}}, тогда как <code>innerText</code> этого не делает.</li>
+ <li><code>textContent</code> получает содержимое <em>всех</em> элементов, включая  {{HTMLElement("script")}} и {{HTMLElement("style")}}, тогда как <code>innerText</code> этого не делает.</li>
  <li><code>innerText</code> умеет считывать стили и не возвращает содержимое скрытых элементов, тогда как <code>textContent</code> этого не делает.</li>
  <li>Метод <code>innerText</code> позволяет получить CSS, а <code>textContent</code> — нет.</li>
 </ul>
 
 <h3 id="Отличие_от_innerHTML">Отличие от <code>innerHTML</code></h3>
 
-<p><code>innerHTML</code>, как можно понять из его названия, возвращает HTML. Довольно часто <code>innerHTML</code> используется для получения или записи текста в элемент. Тем не менее, вместо него желательно использовать <code>textContent</code>: этот метод потребляет гораздо меньше ресурсов, так как текст парсится как текст, а не HTML. Кроме того, это защищает от <span title="cross-site scripting">XSS</span> атак.</p>
+<p><code>innerHTML</code>, как можно понять из его названия, возвращает HTML. Довольно часто <code>innerHTML</code> используется для получения или записи текста в элемент. Тем не менее, вместо него желательно использовать <code>textContent</code>: этот метод потребляет гораздо меньше ресурсов, так как текст парсится как текст, а не HTML. Кроме того, это защищает от XSS атак.</p>
 
 <h2 id="Example">Пример</h2>
 

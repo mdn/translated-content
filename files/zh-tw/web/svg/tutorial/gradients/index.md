@@ -1,8 +1,8 @@
 ---
 title: 漸層
 slug: Web/SVG/Tutorial/Gradients
-translation_of: Web/SVG/Tutorial/Gradients
 ---
+
 {{ PreviousNext("SVG/Tutorial/Fills_and_Strokes", "SVG/Tutorial/Patterns") }}
 
 除了基本的 fill 和 stroke 之外，我們還有一個更令人興奮的功能：給邊框和填充設置漸層。
@@ -46,7 +46,7 @@ translation_of: Web/SVG/Tutorial/Gradients
  <stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
 ```
 
-使用漸變時，我們需要在對象的 fill 或 stroke 屬性裡引用它。就像在 CSS 里通過`url`來引用其他元素一樣，在這裡，url 引用的是我們給漸變設置的 id，所以只需要將 fill 屬性設置成`url(#Gradient) `，我們的對象就可以呈現出五彩斑斕的效果。另外你也可以給 stroke 進行同樣的設置。
+使用漸變時，我們需要在對象的 fill 或 stroke 屬性裡引用它。就像在 CSS 里通過`url`來引用其他元素一樣，在這裡，url 引用的是我們給漸變設置的 id，所以只需要將 fill 屬性設置成`url(#Gradient)`，我們的對象就可以呈現出五彩斑斕的效果。另外你也可以給 stroke 進行同樣的設置。
 
 `<linearGradient>`元素還可以設置其他一些屬性，用來定義尺寸和样 ​​ 式。比如漸變的方向是由兩個點控制的，它們用`x1`， `x2`，`y1`，`y2`四個屬性控制，形成一條直線，漸變就沿這條直線變化。漸變默認的方向是水平方向，使用這些屬性就可以改變方向。上面例子裡的 Gradient2 就是一個垂直的漸變。
 
@@ -66,7 +66,7 @@ translation_of: Web/SVG/Tutorial/Gradients
 >     xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Gradient1"/>
 > ```
 >
-> 這裡我直接在元素裡定義了 xlink 的命名空間，通常我們會在文檔的頂部定義它。在 [talk about images](/en/SVG/Tutorial/Other_content_in_SVG) 有更多相關內容。
+> 這裡我直接在元素裡定義了 xlink 的命名空間，通常我們會在文檔的頂部定義它。在 [talk about images](/zh-TW/SVG/Tutorial/Other_content_in_SVG) 有更多相關內容。
 
 放射形漸層很類似線形漸層，只不過是從一個點向外發散漸變。在文檔的 defs 段落裡增加一個 {{SVGElement('radialGradient')}} 元素，就可以創建放射形漸層。
 
@@ -154,7 +154,7 @@ translation_of: Web/SVG/Tutorial/Gradients
  <radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse">
 ```
 
-你還可以使用`gradientTransform`屬性創建其他類型的變換，但現在我們還沒說到[introduced transforms](/en/SVG/Tutorial/Basic_Transformations)，所以這些內容會留到後面再講。
+你還可以使用`gradientTransform`屬性創建其他類型的變換，但現在我們還沒說到[introduced transforms](/zh-TW/SVG/Tutorial/Basic_Transformations)，所以這些內容會留到後面再講。
 
 當圖形對象的不是方形時，還有一個需要注意的處理方式：`gradientUnits="objectBoundingBox"`。但是它太複雜了，需要其他專家來講解。
 

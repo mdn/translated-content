@@ -3,6 +3,7 @@ title: StyleSheet.title
 slug: Web/API/StyleSheet/title
 translation_of: Web/API/StyleSheet/title
 ---
+
 {{APIRef ("CSSOM")}}
 
 `title` Renvoie le titre de conseil de la feuille de style actuelle.

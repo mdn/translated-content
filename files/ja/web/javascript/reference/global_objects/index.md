@@ -1,13 +1,8 @@
 ---
 title: 標準組み込みオブジェクト
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - JavaScript
-  - Landing page
-  - Overview
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects
 ---
+
 {{JSSidebar("Objects")}}
 
 本章では JavaScript の標準組み込みオブジェクトについて、それらのメソッドやプロパティと共にすべて文書化しています。
@@ -108,7 +103,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects
 
 ### キー付きコレクション
 
-これらのオブジェクトは、キーを使ったコレクションを表します。反復可能なコレクション ({{JSxRef("Map")}} と {{JSxRef("Set")}}) は挿入順に容易に反復処理することができます。
+これらのオブジェクトは、キーを使ったコレクションを表します。反復可能なコレクション ({{JSxRef("Map")}} と {{JSxRef("Set")}}) は挿入順に容易に反復処理することができます。
 
 - {{JSxRef("Map")}}
 - {{JSxRef("Set")}}

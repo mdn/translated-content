@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
 translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 ---
+
 {{APIRef}}
 
 La propriété **`CanvasRenderingContext2D.lineJoin`** de l'API Canvas 2D détermine la forme à utiliser pour joindre deux segments de ligne à leur intersection.
@@ -91,17 +92,11 @@ for (let i = 0; i < lineJoin.length; i++) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linejoin", "CanvasRenderingContext2D.lineJoin")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité des naviagateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.lineJoin")}}
-
-### WebKit/Blink-notes particulières
-
-- Dans les navigateurs basés sur WebKit et Blink, une méthode `ctx.setLineJoin()` non-standard et obsolète est implémentée en plus de cette propriété.
+{{Compat}}
 
 ## Voir aussi
 

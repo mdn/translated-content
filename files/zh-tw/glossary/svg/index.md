@@ -1,8 +1,8 @@
 ---
 title: SVG
 slug: Glossary/SVG
-translation_of: Glossary/SVG
 ---
+
 **可縮放向量圖形**（_Scalable Vector Graphics, SVG_）是基於 {{Glossary("XML")}} 語法的 2D 向量圖片格式。
 
 {{Glossary("W3C")}} 在 1990 晚期啟動 SVG 開發，但它要在 {{Glossary("Microsoft Internet Explorer", "IE")}} 9 開始支援 SVG 後才開始發跡。目前所有主流{{Glossary("browser","瀏覽器")}}都支援 SVG。
@@ -15,7 +15,7 @@ translation_of: Glossary/SVG
 
 ### 基本知識
 
-- 維基百科的 {{Interwiki("wikipedia", "SVG")}}
+- 維基百科的 [SVG](https://zh.wikipedia.org/wiki/SVG)
 
 ### 理解 SVG
 

@@ -7,13 +7,14 @@ tags:
 translation_of: Web/SVG/Tutorial/Introduction
 original_slug: Web/SVG/Tutoriel/Introduction
 ---
+
 {{ PreviousNext("SVG/Tutoriel", "SVG/Tutoriel/Premiers_pas") }}
 
-SVG est un langage [XML](/fr/XML "XML"), assez similaire au [XHTML](/fr/XHTML "fr/XHTML"). Ce langage peut être utilisé pour dessiner des choses complexes, comme le petit lion sur la gauche. Je l'ai dit en présentation de ce tutoriel, le SVG est un langage vectoriel. En gros, cela veut dire que l'image peut être transformée, rétrécie, agrandie, bref, manipulée, sans perte de qualité.
+SVG est un langage [XML](/fr/XML), assez similaire au [XHTML](/fr/XHTML). Ce langage peut être utilisé pour dessiner des choses complexes, comme le petit lion sur la gauche. Je l'ai dit en présentation de ce tutoriel, le SVG est un langage vectoriel. En gros, cela veut dire que l'image peut être transformée, rétrécie, agrandie, bref, manipulée, sans perte de qualité.
 
 La seconde particularité est que vous allez pouvoir lire le code. Stop ! Lire une image ? Et oui, cela vient du fait que SVG dérive du XML. Nous verrons dans ce tutoriel que le code SVG reste (la plupart du temps) humainement lisible. C'est aussi sympa car on va pouvoir le transformer en arbre DOM et ainsi le manipuler, avec du CSS et / ou du Javascript.
 
-SVG est apparu en 1999, après que plusieurs formats concurrents aient été soumis au [W3C](http://www.w3.org "en-US/W3C")  sans succès. SVG est pris en charge par tous les [principaux navigateurs](https://caniuse.com/#search=svg). Un inconvénient est que le chargement SVG peut être lent. En contrepartie, l'avantage c'est de disposer du DOM et de ne pas nécessiter d'extensions tierces. Choisir d'utiliser ou non SVG dépend souvent des cas d'utilisation.
+SVG est apparu en 1999, après que plusieurs formats concurrents aient été soumis au [W3C](http://www.w3.org)  sans succès. SVG est pris en charge par tous les [principaux navigateurs](https://caniuse.com/#search=svg). Un inconvénient est que le chargement SVG peut être lent. En contrepartie, l'avantage c'est de disposer du DOM et de ne pas nécessiter d'extensions tierces. Choisir d'utiliser ou non SVG dépend souvent des cas d'utilisation.
 
 ## Les ingrédients de base
 
@@ -29,12 +30,12 @@ Il y a un certain nombre de logiciels de dessin disponibles qui utilisent SVG co
 
 > **Note :** Tous les visionneurs SVG ne sont pas égaux, il est donc probable que quelque chose écrit pour une application ne s'affiche pas exctement de la même manière dans une autre, simplement parce qu'ils prennent en charge différentes spécifications SVG, CSS ou JavaScript.
 
-Avant de commencer, vous devez avoir une compréhension basique du XML ou d'un autre langage de balisage comme le [HTML](/fr/HTML "fr/HTML"). Si vous n'êtes pas à l'aise avec le XML, voici quelques règles à garder en-tête&nbsp;:
+Avant de commencer, vous devez avoir une compréhension basique du XML ou d'un autre langage de balisage comme le [HTML](/fr/HTML). Si vous n'êtes pas à l'aise avec le XML, voici quelques règles à garder en-tête&nbsp;:
 
 - Les éléments et attributs SVG sont sensibles à la casse (contrairement au HTML et doivent donc tous être entrés avec la casse indiquée ici).
 - Les valeurs des attributs en SVG doivent être placées entre guillemets même si ce sont des nombres.
 
-La [spécification du langage SVG (en)](http://www.w3.org/Graphics/SVG/) est énorme. Ce tutoriel a pour but d'en traiter juste assez pour pouvoir commencer. Une fois que vous serez à l'aise avec les bases du SVG, vous devriez être capables d'utiliser les [références d'éléments](/fr/SVG/Référence_d'éléments "fr/SVG/Référence_d'éléments") et les [références d'interfaces](/fr/SVG/Référence_d'interfaces "fr/SVG/Référence_d'interfaces") pour découvrir tout ce que vous aurez besoin de connaître.
+La [spécification du langage SVG (en)](http://www.w3.org/Graphics/SVG/) est énorme. Ce tutoriel a pour but d'en traiter juste assez pour pouvoir commencer. Une fois que vous serez à l'aise avec les bases du SVG, vous devriez être capables d'utiliser les [références d'éléments](/fr/SVG/Référence_d'éléments) et les [références d'interfaces](/fr/SVG/Référence_d'interfaces) pour découvrir tout ce que vous aurez besoin de connaître.
 
 ## Les versions SVG
 

@@ -11,6 +11,7 @@ tags:
   - createBuffer
 translation_of: Web/API/BaseAudioContext/createBuffer
 ---
+
 {{APIRef("API Web Audio")}}
 
 La méthode `createBuffer()` de l'interface {{domxref("BaseAudioContext")}} est utilisée pour créer un nouvel objet {{domxref("AudioBuffer")}} vide, qui peut ensuite être rempli.
@@ -94,13 +95,11 @@ source.start();
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffer', 'createBuffer()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createBuffer")}}
+{{Compat}}
 
 ## Voir aussi
 

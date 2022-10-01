@@ -1,10 +1,8 @@
 ---
 title: DoS attack
 slug: Glossary/DOS_attack
-tags:
-  - DoS 攻击
-translation_of: Glossary/DOS_attack
 ---
+
 DoS 是一种网络攻击手段，它通过给服务器（ {{glossary("server")}} ）发送大量请求来阻止对资源的合法使用。
 
 计算机资源有限，比如算力和内存。当这些资源过载时，程序可能会发生冻结或崩溃，使程序不可用。Dos 攻击结合多种技术来竭尽资源，使合法用户无法使用服务器或网络，或者至少让服务器反应迟缓。
@@ -25,6 +23,6 @@ DoS 攻击更多的是一种类型而非特定的某种攻击。下面是 Dos �
 
 ## 了解更多
 
-- {{interwiki("wikipedia", "Denial-of-service_attack", "Denial-of-service attack")}} on Wikipedia
+- [Denial-of-service attack](https://zh.wikipedia.org/wiki/Denial-of-service_attack) on Wikipedia
 - [Denial-of-service on OWASP](https://www.owasp.org/index.php/Denial_of_Service)
 - {{Glossary("Distributed Denial of Service","DDoS")}}

@@ -1,16 +1,8 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Statement
-  - Variable declaration
-  - Variables
-  - let
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 **`let`** 语句声明一个块级作用域的局部变量，并可以初始化为一个值（可选）。
@@ -39,9 +31,9 @@ let { bar } = foo; // where foo = { bar:10, baz:12 };
 
 ## 描述
 
-**`let`** 允许你声明一个作用域被限制在{{jsxref("statements/block", "块")}}作用域中的变量、语句或者表达式。与 {{jsxref("statements/var", "var")}} 关键字不同的是，`var` 声明的变量作用域是全局或者整个函数块的。 `var` 和 `let` 的另一个重要区别，`let` 声明的变量不会在作用域中被提升，它是在编译时才初始化（参考下面的[暂时性死区](#暂时性死区)）。
+**`let`** 允许你声明一个作用域被限制在{{jsxref("statements/block", "块")}}作用域中的变量、语句或者表达式。与 {{jsxref("statements/var", "var")}} 关键字不同的是，`var` 声明的变量作用域是全局或者整个函数块的。 `var` 和 `let` 的另一个重要区别，`let` 声明的变量不会在作用域中被提升，它是在编译时才初始化（参考下面的[暂时性死区](#暂时性死区)）。
 
-就像 {{jsxref("statements/const", "const", "描述")}} 一样，`let` 不会在全局声明时（在最顶层的作用域）创建 {{domxref('window')}} 对象的属性。
+就像 {{jsxref("statements/const", "const", "描述")}} 一样，`let` 不会在全局声明时（在最顶层的作用域）创建 {{domxref('window')}} 对象的属性。
 
 可以从[这里](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri)了解我们为什么使用 `let`。
 
@@ -99,7 +91,7 @@ if (x) {
 }
 ```
 
-在 {{jsxref("Statements/switch", "switch")}} 语句中也会触发这个错误，因为它是同一个块作用域。
+在 {{jsxref("Statements/switch", "switch")}} 语句中也会触发这个错误，因为它是同一个块作用域。
 
 ```js example-bad
 let x = 1;
@@ -148,7 +140,7 @@ switch(x) {
 }
 ```
 
-使用术语 “temporal” 是因为区域取决于执行顺序（时间），而不是编写代码的顺序（位置）。例如，下面的代码会生效，是因为即使使用 `let` 变量的函数出现在变量声明之前，但函数的执行是在暂时性死区的外面。
+使用术语“temporal”是因为区域取决于执行顺序（时间），而不是编写代码的顺序（位置）。例如，下面的代码会生效，是因为即使使用 `let` 变量的函数出现在变量声明之前，但函数的执行是在暂时性死区的外面。
 
 ```js
 {
@@ -232,7 +224,7 @@ console.log(a); // 11
 console.log(b); // 2
 ```
 
-然而，`var` 与 `let` 合并的声明方式会抛出 {{jsxref("SyntaxError")}} 错误，因为 `var` 会将变量提升至块的顶部，这会导致隐式地重复声明变量。
+然而，`var` 与 `let` 合并的声明方式会抛出 {{jsxref("SyntaxError")}} 错误，因为 `var` 会将变量提升至块的顶部，这会导致隐式地重复声明变量。
 
 ```js example-bad
 let x = 1;
@@ -254,7 +246,7 @@ let x = 1;
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/const", "const")}}
-- [变量提升 > `let` 和 `const` 的变量提升](/en-US/docs/Glossary/Hoisting#let_and_const_hoisting)
+- [变量提升 > `let` 和 `const` 的变量提升](/zh-CN/docs/Glossary/Hoisting#let_and_const_hoisting)
 - [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
 - [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
 - [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)

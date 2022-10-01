@@ -1,12 +1,8 @@
 ---
 title: ISP
 slug: Glossary/ISP
-tags:
-  - 互联网服务供应商
-  - 术语表
-  - 网络
-translation_of: Glossary/ISP
 ---
+
 互联网服务供应商（Internet Service Provider，简称 ISP）通过电话线上的拨号连接（这在以前比较常见），或宽带连接（如电缆调制解调器或 DSL 服务）出售互联网接入服务，有时也会提供其他服务，如电子邮件、虚拟主机和 IP 语音。
 
 ## 了解更多

@@ -1,16 +1,8 @@
 ---
 title: HTMLSlotElement.assignedNodes()
 slug: Web/API/HTMLSlotElement/assignedNodes
-tags:
-  - API
-  - HTMLSlotElement
-  - メソッド
-  - リファレンス
-  - assignedNodes
-  - シャドウ DOM
-browser-compat: api.HTMLSlotElement.assignedNodes
-translation_of: Web/API/HTMLSlotElement/assignedNodes
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 `assignedNodes()` は {{domxref("HTMLSlotElement")}} インターフェイスのプロパティで、このスロットに割り当てられた一連のノードを返します。
@@ -45,8 +37,8 @@ HTMLSlotElement.assignedNodes(options)
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
-  let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  let nodes = slots[1].assignedNodes();
+  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
 });
 ```
 

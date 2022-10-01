@@ -1,15 +1,8 @@
 ---
 title: GeolocationPositionError
 slug: Web/API/GeolocationPositionError
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationPositionError
-  - インターフェイス
-  - 安全なコンテキスト
-browser-compat: api.GeolocationPositionError
-translation_of: Web/API/GeolocationPositionError
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationPositionError`** インターフェイスは位置情報の取得時に発生したエラーの理由を表します。

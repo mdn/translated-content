@@ -1,17 +1,8 @@
 ---
 title: KeyboardEvent.charCode
 slug: Web/API/KeyboardEvent/charCode
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - KeyboardEvent
-  - Property
-  - Reference
-browser-compat: api.KeyboardEvent.charCode
-translation_of: Web/API/KeyboardEvent/charCode
 ---
+
 {{APIRef("UI Events")}} {{non-standard_header}} {{deprecated_header}}
 
 **`charCode`** は {{domxref("KeyboardEvent")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Element/keypress_event", "keypress")}} イベントの間に押されたキーの Unicode 値を返します。

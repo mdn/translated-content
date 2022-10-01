@@ -1,18 +1,12 @@
 ---
-title: 'HTMLElement: pointermove イベント'
+title: 'Document: pointermove イベント'
 slug: conflicting/Web/API/Element/pointermove_event
-tags:
-  - イベント
-  - HTML DOM
-  - HTMLElement
-  - PointerEvent
-  - リファレンス
-translation_of: Web/API/HTMLElement/pointermove_event
-original_slug: Web/API/HTMLElement/pointermove_event
+original_slug: Web/API/Document/pointermove_event
 ---
+
 {{APIRef}}
 
-`pointermove` イベントは、ポインターの座標が変更され、ブラウザーの [touch-action](/ja/docs/Web/CSS/touch-action) によってポインターが[キャンセルされて](/ja/docs/Web/API/HTMLElement/pointercancel_event)いない場合に発生します。
+`pointermove` はポインターの座標が変化し、かつブラウザーの[タッチ操作](/ja/docs/Web/CSS/touch-action)によってポインターが[キャンセル](/ja/docs/Web/Events/pointercancel)されていないときに発生します。
 
 <table class="properties">
   <tbody>
@@ -21,8 +15,8 @@ original_slug: Web/API/HTMLElement/pointermove_event
       <td>あり</td>
     </tr>
     <tr>
-      <th scope="row">キャンセル</th>
-      <td>可</td>
+      <th scope="row">キャンセル可能</th>
+      <td>はい</td>
     </tr>
     <tr>
       <th scope="row">インターフェイス</th>
@@ -37,35 +31,29 @@ original_slug: Web/API/HTMLElement/pointermove_event
   </tbody>
 </table>
 
-## 使用上の注意
-
-{{domxref("PointerEvent")}} 型のイベントは、ポインティングデバイスによるユーザーの対話に必要なすべての情報を提供します。位置、移動距離、ボタンの状態などです。
-
 ## 例
 
-`pointermove` イベントのハンドラーを {{domxref("EventTarget.addEventListener", "addEventListener()")}} で追加する場合です。
+`addEventListener()` を使用した場合
 
 ```js
-const para = document.querySelector('p');
-
-para.addEventListener('pointermove', (event) => {
-  console.log('ポインターが移動しました');
+document.addEventListener('pointermove', (event) => {
+  console.log('Pointer moved');
 });
 ```
 
-`onpointermove` イベントハンドラープロパティを使用することもできます。
+`onpointermove` イベントハンドラープロパティを使用した場合
 
 ```js
-const para = document.querySelector('p');
-
-para.onpointermove = (event) => {
-  console.log('ポインターが移動しました');
+document.onpointermove = (event) => {
+  console.log('Pointer moved');
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+| 仕様書                                                                       | 状態                                 |
+| ---------------------------------------------------------------------------- | ------------------------------------ |
+| {{SpecName('Pointer Events', '#the-pointermove-event')}} | {{Spec2('Pointer Events')}} |
 
 ## ブラウザーの互換性
 
@@ -73,16 +61,14 @@ para.onpointermove = (event) => {
 
 ## 関連情報
 
-- [`gotpointercapture`](/ja/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/ja/docs/Web/API/HTMLElement/lostpointercapture_event)
-- [`pointerover`](/ja/docs/Web/API/HTMLElement/pointerover_event)
-- [`pointerenter`](/ja/docs/Web/API/HTMLElement/pointerenter_event)
-- [`pointerdown`](/ja/docs/Web/API/HTMLElement/pointerdown_event)
-- [`pointerup`](/ja/docs/Web/API/HTMLElement/pointerup_event)
-- [`pointercancel`](/ja/docs/Web/API/HTMLElement/pointercancel_event)
-- [`pointerout`](/ja/docs/Web/API/HTMLElement/pointerout_event)
-- [`pointerleave`](/ja/docs/Web/API/HTMLElement/pointerleave_event)
-- [`onpointermove`](/ja/docs/Web/API/GlobalEventHandlers/onpointermove) イベントハンドラープロパティ
-- `Document` をターゲットとしたのこのイベント: [`pointermove`](/ja/docs/Web/API/Document/pointermove_event) イベント
-
-Internet Explorer は、`MSPointerHover` という名前のイベントにも対応していました。これは、接触（通常はペン）が表面に触れずに要素上を移動したときに発生します。 この独自の方法は Internet Explorer に固有のものであり、 Internet Explorer 11 以降、推奨されなくなりました。 IE11 以降では、 [`pointermove`](/ja/docs/Web/API/HTMLElement/pointermove_event) イベントがすべてのペンの動きに対して発生します（ホバーしているかどうかにかかわらず）。
+- {{domxref("Document/gotpointercapture_event", "gotpointercapture")}}
+- {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
+- {{domxref("Document/pointerover_event", "pointerover")}}
+- {{domxref("Document/pointerenter_event", "pointerenter")}}
+- {{domxref("Document/pointerdown_event", "pointerdown")}}
+- {{domxref("Document/pointerup_event", "pointerup")}}
+- {{domxref("Document/pointercancel_event", "pointercancel")}}
+- {{domxref("Document/pointerout_event", "pointerout")}}
+- {{domxref("Document/pointerleave_event", "pointerleave")}}
+- {{domxref("GlobalEventHandlers/onpointerout", "onpointerout")}} イベントハンドラープロパティ
+- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/pointermove_event", "pointermove")}} イベント

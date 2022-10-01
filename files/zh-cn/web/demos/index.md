@@ -1,21 +1,12 @@
 ---
 title: 开源 Web 技术示例
 slug: Web/Demos
-tags:
-  - 2D
-  - 3D
-  - CSS
-  - Canvas
-  - Design
-  - HTML
-  - SVG
-  - Video
-translation_of: Web/Demos_of_open_web_technologies
 original_slug: Web/Demos_of_open_web_technologies
 ---
+
 Mozilla 支持各种令人兴奋的开源 Web 技术，我们鼓励大家使用它们。此页面提供了有关这些技术的一些有趣演示链接。
 
-如果你知道开源 Web 技术的优秀演示或者应用，就在这里（以及 [英文页面](/en-US/docs/Web/Demos_of_open_web_technologies)）添加一个合适的链接吧。
+如果你知道开源 Web 技术的优秀演示或者应用，就在这里（以及 [英文页面](/zh-CN/docs/Web/Demos_of_open_web_technologies)）添加一个合适的链接吧。
 
 ## 2D 图形
 
@@ -81,7 +72,7 @@ Mozilla 支持各种令人兴奋的开源 Web 技术，我们鼓励大家使用�
 
 旧项目：
 
-- [CSS floating logo "Mozilla" developed by Rober Villar, from Software RVG. ](https://s.codepen.io/SoftwareRVG/debug/OXkOWj)(debug 模式)
+- [CSS floating logo "Mozilla" developed by Rober Villar, from Software RVG.](https://s.codepen.io/SoftwareRVG/debug/OXkOWj) (debug 模式)
 - [Bootstrap Contact Form Design](https://webdeveloperbareilly.in/blog/html5/responsive-contact-form-bootstrap.php)
 - [CSS Paralax Forest](http://www.lesmoffat.co.uk/folio/forest/forest.html)
 - [Responsive Login Page Design](http://webdeveloperbareilly.in/blog/css3/awesome-login-form.html)

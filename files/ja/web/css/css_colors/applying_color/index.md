@@ -1,19 +1,9 @@
 ---
 title: CSS を使った HTML の要素への色の適用
 slug: Web/CSS/CSS_Colors/Applying_color
-tags:
-  - Beginner
-  - CSS
-  - CSS 色
-  - Guide
-  - HTML
-  - HTML 色
-  - HTML スタイル
-  - Styling HTML
-  - color
-translation_of: Web/HTML/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
+
 {{HTMLRef}}
 
 この記事は、HTML での CSS の色を使用するそれぞれの方法を紹介する入門編です。
@@ -266,7 +256,7 @@ th {
 
 `.wrapper` クラスは、他のすべてのコンテンツを囲む {{HTMLElement("div")}} にスタイルを割り当てるために使っています。これは {{cssxref("width")}} と {{cssxref("height")}} を使ってコンテナのサイズを決定し、さらに {{cssxref("margin")}} と {{cssxref("padding")}} を使っています。
 
-ここでの論述でさらに興味深いのは、{{cssxref("border")}} プロパティで要素の縁に境界線を設定していることです。この境界線は幅 6 ピクセルの実線で、色は `mediumturquoise` です。
+ここでの論述でさらに興味深いのは、{{cssxref("border")}} プロパティで要素の縁に境界線を設定していることです。この境界線は幅 6 ピクセルの実線で、色は `mediumturquoise` です。
 
 2 つの色付きボックスには共通のプロパティがいくつかありますので、そのプロパティを定義するクラス `.box` を作成します。
 

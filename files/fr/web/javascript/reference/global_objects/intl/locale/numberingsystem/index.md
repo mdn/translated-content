@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/numberingSystem
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.numberingSystem`** est une propriété fournie par un accesseur qui renvoie le [système de numération](https://en.wikipedia.org/wiki/Numeral_system) utilisée par la locale.
@@ -124,7 +125,7 @@ console.log(numberingSystemStr.numberingSystem);
 
 ### Définir la valeur de `numberingSystem` grâce à un objet de configuration
 
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale "The Intl.Locale constructor is a standard built-in property of the Intl object.") possède un deuxième argument, optionnel, qui est un objet permettant de configurer la locale. Les propriétés de cet objet sont utilisées comme extensions pour la locale ; les clés des propriétés sont les noms des extensions et leurs valeurs sont celles utilisées pour chaque extension. On peut donc utiliser la propriété `numberingSystem` sur cet objet afin de définir le système de numération à utiliser pour cette locale.
+Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) possède un deuxième argument, optionnel, qui est un objet permettant de configurer la locale. Les propriétés de cet objet sont utilisées comme extensions pour la locale ; les clés des propriétés sont les noms des extensions et leurs valeurs sont celles utilisées pour chaque extension. On peut donc utiliser la propriété `numberingSystem` sur cet objet afin de définir le système de numération à utiliser pour cette locale.
 
 ```js
 let numberingSystemViaObj= new Intl.Locale("en-Latn-US", {numberingSystem: "latn"});

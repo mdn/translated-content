@@ -4,6 +4,7 @@ slug: Web/CSS/::-moz-range-thumb
 browser-compat: css.selectors.-moz-range-thumb
 translation_of: Web/CSS/::-moz-range-thumb
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-moz-range-thumb`** représente le curseur qui se déplace le long de la piste dans un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) de type `range` et qui permet de modifier la valeur numérique associée.

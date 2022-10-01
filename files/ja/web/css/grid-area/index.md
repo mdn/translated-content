@@ -1,14 +1,8 @@
 ---
 title: grid-area
 slug: Web/CSS/grid-area
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.grid-area
 ---
+
 {{CSSRef}}
 
 **`grid-area`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、 {{glossary("grid", "grid")}} 内でのグリッドアイテムの寸法と位置を指定するために、線、区間、なし (自動) をグリッド配置に適用することで、{{glossary("grid areas", "グリッド領域")}}の縁を指定します。
@@ -23,7 +17,7 @@ browser-compat: css.properties.grid-area
 
 `grid-column-start` が省略された場合、 `grid-row-start` が `<custom-ident>` であれば、 4 つの個別指定値はその値に設定されます。それ以外の場合は `auto` に設定されます。
 
-grid-area プロパティは領域の名称として動作する {{cssxref("&lt;custom-ident&gt;")}} に設定することができ、これは {{cssxref("grid-template-areas")}} を用いて配置することができます。
+grid-area プロパティは領域の名称として動作する {{cssxref("&lt;custom-ident&gt;")}} に設定することができ、これは {{cssxref("grid-template-areas")}} を用いて配置することができます。
 
 ## 構成要素のプロパティ
 

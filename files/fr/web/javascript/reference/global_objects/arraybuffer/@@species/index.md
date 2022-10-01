@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/@@species
 ---
+
 {{JSRef}}
 
 La propriété d'accesseur **`ArrayBuffer[@@species]`** renvoie le constructeur `ArrayBuffer`.

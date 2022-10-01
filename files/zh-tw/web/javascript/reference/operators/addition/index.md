@@ -1,13 +1,8 @@
 ---
 title: 相加運算子 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.addition
 ---
+
 {{jsSidebar("Operators")}}
 
 相加運算子 (`+`) 用來處理數字的相加或是進行字串的串聯。

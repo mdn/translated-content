@@ -1,20 +1,8 @@
 ---
 title: 学习 Web 开发
 slug: Learn
-tags:
-  - CSS
-  - HTML
-  - Web
-  - 交互式网站
-  - 初学者
-  - 前端
-  - 启程
-  - 学习
-  - 学习 Web 开发
-  - 索引
-  - 网站
-translation_of: Learn
 ---
+
 {{LearnSidebar}}
 
 欢迎来到 MDN 学习区。本系列文章旨在为零基础 Web 开发初学者提供指导和开始编写网站代码所需的所有内容。
@@ -58,8 +46,8 @@ translation_of: Learn
   - : JavaScript 是用于向网页添加动态功能的脚本语言。该专题涵盖有关编写和理解 JavaScript 代码所需的所有重点。
 - [Web 表单 - 操作用户数据](/zh-CN/docs/Learn/Forms)
   - : Web 表单是用于进行用户交互的强大工具 —— 其常用于收集用户数据和控制用户界面。该专题将对 Web 表单的结构、样式、交互要点进行介绍。
-- [可访问性 - 让每个人都能畅游网络](/zh-CN/docs/Learn/Accessibility)
-  - : “可访问性”（Accessibility）是开发人员对让更多的人能够不受残疾、设备、地区等因素的限制访问 Web 内容做出的努力。该专题包含一切所需了解的信息。
+- [无障碍 - 让每个人都能畅游网络](/zh-CN/docs/Learn/Accessibility)
+  - : “无障碍”（Accessibility）是开发人员对让更多的人能够不受残疾、设备、地区等因素的限制访问 Web 内容做出的努力。该专题包含一切所需了解的信息。
 - [Web 性能优化 - 让网站更快做出响应](/zh-CN/docs/Learn/Performance)
   - : Web 性能是确保网络应用的快速下载并对用户操作进行快速响应的艺术，而无论用户的带宽大小、屏幕尺寸、网络状态好坏或是设备性能高低。
 - [工具与测试](/zh-CN/docs/Learn/Tools_and_testing)

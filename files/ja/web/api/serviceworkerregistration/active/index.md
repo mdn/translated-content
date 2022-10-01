@@ -1,16 +1,8 @@
 ---
 title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - active
-browser-compat: api.ServiceWorkerRegistration.active
-translation_of: Web/API/ServiceWorkerRegistration/active
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`active`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、{{domxref("ServiceWorker.state")}} がアクティブ化中 (`activating`) またはアクティブ化済み (`activated`) のサービスワーカーを返します。 このプロパティは、最初は `null` に設定されています。

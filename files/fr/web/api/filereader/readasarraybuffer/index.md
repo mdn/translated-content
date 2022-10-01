@@ -8,6 +8,7 @@ tags:
   - Méthodes
 translation_of: Web/API/FileReader/readAsArrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 La méthode **`readAsArrayBuffer()`** de l'interface {{domxref("FileReader")}} permet de lire un {{domxref("Blob")}} ou un {{domxref("File")}} (_fichier_). Quand l'opération est finie, l'attribut {{domxref("FileReader.readyState","readyState")}} prend la valeur `"DONE"` (_terminé_) à savoir `2`, et l'événement {{event("loadend")}} est levé. L'attribut {{domxref("FileReader.result","résultat")}} contient alors les données lues sous la forme d'un objet {{domxref("ArrayBuffer")}}.
@@ -27,13 +28,11 @@ instanceOfFileReader.readAsArrayBuffer(blob);
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("File API", "#readAsArrayBuffer", "FileReader.readAsArrayBuffer")}} | {{Spec2("File API")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileReader.readAsArrayBuffer")}}.
+{{Compat}}
 
 ## Voir aussi
 

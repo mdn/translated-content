@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/element()
 original_slug: Web/CSS/element()
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La fonction **`element()`** définit une valeur {{cssxref("&lt;image&gt;")}} générée à partir d'un élément HTML arbitraire. L'image est calculée dynamiquement : si l'élément HTML change, les propriétés CSS utilisant la valeur seront automatiquement mis à jour.
@@ -120,13 +121,11 @@ Pour les navigateurs qui prennent en charge `element`, on peut ici voir un arri�
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                             | Commentaires      |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName('CSS4 Images', '#element-notation', 'Using Elements as Images: the element() notation')}} | {{Spec2('CSS4 Images')}} | Reporté pour CSS4 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.image.element")}}
+{{Compat}}
 
 ## Voir aussi
 

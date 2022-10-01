@@ -1,18 +1,8 @@
 ---
 title: Notification.icon
 slug: Web/API/Notification/icon
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - icon
-browser-compat: api.Notification.icon
-translation_of: Web/API/Notification/icon
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`icon`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `icon` オプションで指定された、通知の一部として表示されるアイコンの URL を含みます。

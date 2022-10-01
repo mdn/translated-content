@@ -8,6 +8,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Basic_Transformations
 original_slug: Web/SVG/Tutoriel/Transformations_de_base
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/Texts", "Web/SVG/Tutoriel/Découpages_et_masquages") }}
 
 Maintenant, nous sommes prêts à tordre nos images dans tous les sens. Mais avant toute chose, il faut vous présenter l'élément `<g>`. Cet assistant va vous permettre d'assigner des attributs à un ensemble d'éléments. En fait, c'est bien son seul rôle. Par exemple :
@@ -120,5 +121,3 @@ Cet exemple a le même effet que celui vu précédemment, soit un rectangle deux
 {{ EmbedLiveSample('Embarquer_du_SVG_dans_SVG', '100', '100') }}
 
 {{ PreviousNext("Web/SVG/Tutoriel/Texts", "Web/SVG/Tutoriel/Découpages_et_masquages") }}
-
-Interwiki Languages Links

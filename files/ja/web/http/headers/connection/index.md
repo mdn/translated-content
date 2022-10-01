@@ -1,16 +1,8 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - リクエストヘッダー
-  - レスポンスヘッダー
-  - リファレンス
-  - ウェブ
-browser-compat: http.headers.Connection
-translation_of: Web/HTTP/Headers/Connection
 ---
+
 {{HTTPSidebar}}
 
 **`Connection`** 一般ヘッダーは、現在のトランザクションが完了したあとも、ネットワーク接続を開いたままにするかどうかを制御します。もし送信された値が `keep-alive` であった場合は、接続が維持されて閉じられなくなり、同一のサーバーに送るべき後続のリクエストで再利用されます。

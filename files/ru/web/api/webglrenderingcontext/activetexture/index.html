@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/activeTexture
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><strong><code>WebGLRenderingContext.activeTexture()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> указывает какую текстуру сделать активной.</p>
+<p><strong><code>WebGLRenderingContext.activeTexture()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> указывает какую текстуру сделать активной.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -16,7 +16,7 @@ translation_of: Web/API/WebGLRenderingContext/activeTexture
 
 <dl>
  <dt><code>texture</code></dt>
- <dd>Номер текстуры которую необходимо активировать. Значение <code>gl.TEXTURE<em>I</em></code> где <em>I</em> значение в диапазоне от 0 до <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>.</dd>
+ <dd>Номер текстуры которую необходимо активировать. Значение <code>gl.TEXTURE<em>I</em></code> где <em>I</em> значение в диапазоне от 0 до <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>.</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
@@ -25,21 +25,21 @@ translation_of: Web/API/WebGLRenderingContext/activeTexture
 
 <h3 id="Исключения">Исключения</h3>
 
-<p>Если <em>texture</em> не относится к <code>gl.TEXTURE<em>I</em></code>, где <em>I</em> значение в диапазоне от 0 до <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>, то получаем исключение <code>gl.INVALID_ENUM</code> .</p>
+<p>Если <em>texture</em> не относится к <code>gl.TEXTURE<em>I</em></code>, где <em>I</em> значение в диапазоне от 0 до <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>, то получаем исключение <code>gl.INVALID_ENUM</code> .</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Вызов со значением <code>gl.TEXTURE1</code> выберет текстуру в качестве текущей. Последующие вызовы будут изменять эту текстуру.</p>
+<p>Вызов со значением <code>gl.TEXTURE1</code> выберет текстуру в качестве текущей. Последующие вызовы будут изменять эту текстуру.</p>
 
 <pre class="brush: js">gl.activeTexture(gl.TEXTURE1);
 </pre>
 
-<p>Количество текстур зависит от реализации, вы можете получить количество текстур с помощью константы <code>MAX_COMBINED_TEXTURE_IMAGE_UNITS</code>. Согласно спецификации не менее 8.</p>
+<p>Количество текстур зависит от реализации, вы можете получить количество текстур с помощью константы <code>MAX_COMBINED_TEXTURE_IMAGE_UNITS</code>. Согласно спецификации не менее 8.</p>
 
 <pre class="brush: js">gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
 </pre>
 
-<p>чтобы получить текущую активную текстуру вызовите <code>gl.getParameter</code> с константой <code>ACTIVE_TEXTURE</code>.</p>
+<p>чтобы получить текущую активную текстуру вызовите <code>gl.getParameter</code> с константой <code>ACTIVE_TEXTURE</code>.</p>
 
 <pre class="brush: js">gl.activeTexture(gl.TEXTURE0);
 gl.getParameter(gl.ACTIVE_TEXTURE);

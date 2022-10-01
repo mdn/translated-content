@@ -1,8 +1,8 @@
 ---
 title: File.name
 slug: Web/API/File/name
-translation_of: Web/API/File/name
 ---
+
 {{APIRef("File API")}}
 
 返回由 {{domxref("File")}} 对象表示的文件的名称。由于安全原因，该属性并不包含文件路径。

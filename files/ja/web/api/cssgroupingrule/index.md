@@ -1,14 +1,8 @@
 ---
 title: CSSGroupingRule
 slug: Web/API/CSSGroupingRule
-tags:
-  - API
-  - CSSOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.CSSGroupingRule
-translation_of: Web/API/CSSGroupingRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSGroupingRule`** は [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)のインターフェイスで、内部に他のルールを持つあらゆる CSS の[アットルール](/ja/docs/Web/CSS/At-rule)を表します。

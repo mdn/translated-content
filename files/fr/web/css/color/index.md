@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/color
 ---
+
 {{CSSRef}}
 
 La propriété **`color`** définit la couleur de premier plan d'un élément texte et de ses éventuelles [décorations](/fr/docs/Web/CSS/text-decoration). Elle définit également la valeur de {{cssxref("currentColor")}} qui peut être utilisée pour d'autres propriétés (par exemple comme valeur par défaut pour {{cssxref("border-color")}}).
@@ -63,9 +64,13 @@ La propriété `color` est définie grâce à une valeur de type {{cssxref("&lt;
 - `<color>`
   - : Une valeur de type {{cssxref("&lt;color&gt;")}} qui fournit la couleur pour les éléments textuels de l'élément.
 
-### Formal syntax
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -121,19 +126,11 @@ Le ratio de contraste est déterminé en comparant la luminosité de la couleur 
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaires                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#the-color-property', 'color')}} | {{Spec2('CSS4 Colors')}}         | Ajout de la syntaxe sans virgule pour les fonctions `rgb()`, `rgba()`, `hsl()` et `hsla()` Une valeur alpha peut être utilisée dans `rgb()` et `hsl()`, `rgba()` et `hsla()` sont donc des synonymes (dépréciés) de ces fonctions. Ajout de la couleur `rebeccapurple`. Ajout des valeurs hexadécimales sur 4 et 8 chiffres où le dernier chiffre indique la composante alpha. Ajout des fonctions `hwb()`, `device-cmyk()` et `color()`. |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'color')}} | {{Spec2('CSS3 Transitions')}} | `color` peut désormais être animée.                                                                                                                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('CSS3 Colors', '#color', 'color')}}                     | {{Spec2('CSS3 Colors')}}         | Dépréciation des couleurs système. Ajout des couleurs SVG. Ajout des fonctions `rgba()`, `hsl()` et `hsla()`.                                                                                                                                                                                                                                                                                                                             |
-| {{SpecName('CSS2.1', 'colors.html#colors', 'color')}}         | {{Spec2('CSS2.1')}}                 | Ajout de la couleur `orange` et des couleurs système.                                                                                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('CSS1', '#color', 'color')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                                                                                                                                                                                                                                                                                                                                      |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.color")}}
+{{Compat}}
 
 ## Voir aussi
 

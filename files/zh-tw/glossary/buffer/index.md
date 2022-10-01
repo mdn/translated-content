@@ -1,11 +1,8 @@
 ---
 title: 緩衝區
 slug: Glossary/buffer
-tags:
-  - 緩衝區
-  - 術語表
-translation_of: Glossary/buffer
 ---
+
 緩衝區是物理記憶軟體中的一個存儲區，用於在數據從一個地方傳輸到另一個地方時臨時存儲數據。
 
 ## 了解更多

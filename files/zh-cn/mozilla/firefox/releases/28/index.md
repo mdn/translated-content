@@ -1,11 +1,8 @@
 ---
 title: Firefox 28 for developers
 slug: Mozilla/Firefox/Releases/28
-tags:
-  - Firefox
-  - Firefox 28
-translation_of: Mozilla/Firefox/Releases/28
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 28 was released on March 18, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -29,8 +26,8 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 
 ### CSS
 
-- Support for multi-line [flexbox](/en-US/docs/Web/Guide/CSS/Flexible_boxes) has been added ({{bug("939901")}}).
-- Longhand East Asian [counter styles](/en-US/docs/Web/CSS/list-style-type) have been implemented ({{bug("934072")}}).
+- Support for multi-line [flexbox](/zh-CN/docs/Web/Guide/CSS/Flexible_boxes) has been added ({{bug("939901")}}).
+- Longhand East Asian [counter styles](/zh-CN/docs/Web/CSS/list-style-type) have been implemented ({{bug("934072")}}).
 - Experimental support for the {{cssxref("background-blend-mode")}} property has been added, but is disabled by default ({{bug("841601")}}).
 - The `none` value has been added to {{cssxref("font-variant-ligatures")}} ({{bug("913264")}}).
 - Support for the :hover user action pseudo-class on pseudo-elements({{bug("922669")}}).
@@ -41,7 +38,7 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 
 ### JavaScript
 
-- [ECMAScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues:
+- [ECMAScript 2015](/zh-CN/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues:
 
   - New `Array` methods have been implemented: {{jsxref("Array.prototype.entries()")}} and {{jsxref("Array.prototype.keys()")}} ({{bug("894658")}}).
 
@@ -79,7 +76,7 @@ _No change._
 
 ## Changes for addon and Mozilla developers
 
-- The interface of [DeferredTask.jsm](/en-US/docs/Mozilla/JavaScript_code_modules/DeferredTask.jsm) has been changed, and the `isPending()`, `start()`, `flush()`, and `cancel()` methods have been removed ({{bug("940408")}}).
+- The interface of [DeferredTask.jsm](/zh-CN/docs/Mozilla/JavaScript_code_modules/DeferredTask.jsm) has been changed, and the `isPending()`, `start()`, `flush()`, and `cancel()` methods have been removed ({{bug("940408")}}).
 
 ## Security
 
@@ -88,7 +85,7 @@ _No change._
 
 ## See also
 
-- [Site Compatibility for Firefox 28](/en-US/docs/Mozilla/Firefox/Releases/28/Site_Compatibility)
+- [Site Compatibility for Firefox 28](/zh-CN/docs/Mozilla/Firefox/Releases/28/Site_Compatibility)
 
 ### Older versions
 

@@ -1,8 +1,8 @@
 ---
 title: 填充与边框
 slug: Web/SVG/Tutorial/Fills_and_Strokes
-translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
+
 {{ PreviousNext("SVG/Tutorial/Paths", "SVG/Tutorial/Gradients") }}
 
 现在你掌握的知识已经可以绘制任何图形，下一个目标是给它们上色。在 SVG 绘图中，可以使用若干方法上色，比如给图形对象增加指定的属性，使用行间 CSS，使用 CSS 嵌入段落，或者使用外部引用的 CSS 文件。你会发现大部分 web 上的 SVG 使用的是行间 CSS，但每种方法都有自身的优点和缺点，在不同情况下，应该酌情选择合适的方法。
@@ -113,7 +113,7 @@ CSS 可以通过 style 属性插入到元素的行间:
  <rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/>
 ```
 
-或者通过\<style>设置一段样式段落。在 html 里这样的段落一般放在里，在 svg 则放在 [`<defs>`](/en/SVG/Element/defs) 标签里。`<defs>` 表示定义，这里可以定义一些不会在 SVG 图形中出现的元素，但是它们可以被其他元素使用。
+或者通过\<style>设置一段样式段落。在 html 里这样的段落一般放在里，在 svg 则放在 [`<defs>`](/zh-TW/SVG/Element/defs) 标签里。`<defs>` 表示定义，这里可以定义一些不会在 SVG 图形中出现的元素，但是它们可以被其他元素使用。
 
 ```xml
 <?xml version="1.0" standalone="no"?>

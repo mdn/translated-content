@@ -1,17 +1,9 @@
 ---
 title: 定位
 slug: Learn/CSS/CSS_layout/Positioning
-tags:
-  - CSS
-  - 初学者
-  - 定位
-  - 布局
-  - 指南
-  - 相对定位
-  - 绝对定位
-translation_of: Learn/CSS/CSS_layout/Positioning
 original_slug: Learn/CSS/CSS_layout/定位
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout")}}
@@ -41,7 +33,7 @@ original_slug: Learn/CSS/CSS_layout/定位
 
 定位是一个相当复杂的话题，所以我们深入了解代码之前，让我们审视一下布局理论，并让我们了解它的工作原理。
 
-首先，围绕元素内容添加任何内边距、边界和外边距来布置单个元素盒子——这就是[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model) ，我们前面看过。默认情况下，块级元素的内容宽度是其父元素的宽度的 100％，并且与其内容一样高。内联元素高宽与他们的内容高宽一样。你不能对内联元素设置宽度或高度——它们只是位于块级元素的内容中。 如果要以这种方式控制内联元素的大小，则需要将其设置为类似块级元素 `display: block;`。
+首先，围绕元素内容添加任何内边距、边界和外边距来布置单个元素盒子——这就是[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model) ，我们前面看过。默认情况下，块级元素的内容宽度是其父元素的宽度的 100％，并且与其内容一样高。内联元素高宽与他们的内容高宽一样。你不能对内联元素设置宽度或高度——它们只是位于块级元素的内容中。如果要以这种方式控制内联元素的大小，则需要将其设置为类似块级元素 `display: block;`。
 
 这只是解释了单个元素，但是元素相互之间如何交互呢？**正常的布局流**（在布局介绍文章中提到）是将元素放置在浏览器视口内的系统。默认情况下，块级元素在视口中垂直布局——每个都将显示在上一个元素下面的新行上，并且它们的外边距将分隔开它们。
 
@@ -250,7 +242,7 @@ span {
 
 如果所有的父元素都没有显式地定义 position 属性，那么所有的父元素默认情况下 position 属性都是 static。结果，绝对定位元素会被包含在**初始块容器**中。这个初始块容器有着和浏览器视口一样的尺寸，并且\<html>元素也被包含在这个容器里面。简单来说，绝对定位元素会被放在\<html>元素的外面，并且根据浏览器视口来定位。
 
-绝对定位元素在 HTML 源代码中，是被放在\<body>中的，但是在最终的布局里面，它离页面 (而不是\<body>) 的左边界、上边界有 30px 的距离。我们可以改变**定位上下文** —— 绝对定位的元素的相对位置元素。通过设置其中一个父元素的定位属性 —— 也就是包含绝对定位元素的那个元素（如果要设置绝对定位元素的相对元素，那么这个元素一定要包含绝对定位元素）。 为了演示这一点，将以下声明添加到你的 body 规则中：
+绝对定位元素在 HTML 源代码中，是被放在\<body>中的，但是在最终的布局里面，它离页面 (而不是\<body>) 的左边界、上边界有 30px 的距离。我们可以改变**定位上下文** —— 绝对定位的元素的相对位置元素。通过设置其中一个父元素的定位属性 —— 也就是包含绝对定位元素的那个元素（如果要设置绝对定位元素的相对元素，那么这个元素一定要包含绝对定位元素）。为了演示这一点，将以下声明添加到你的 body 规则中：
 
 ```css
 position: relative;
@@ -309,12 +301,14 @@ span {
 
 尝试添加以下到你的 CSS，使第一段也是绝对定位：
 
-    p:nth-of-type(1) {
-      position: absolute;
-      background: lime;
-      top: 10px;
-      right: 30px;
-    }
+```css
+p:nth-of-type(1) {
+  position: absolute;
+  background: lime;
+  top: 10px;
+  right: 30px;
+}
+```
 
 此时，你将看到第一段的颜色为绿色，移出文档流程，并位于原始位置上方一点。它也堆叠在原始的 `.positioned` 段落下，其中两个重叠。这是因为 `.positioned` 段落是源顺序 (HTML 标记) 中的第二个段落，并且源顺序中后定位的元素将赢得先定位的元素。
 
@@ -324,7 +318,9 @@ span {
 
 要更改堆叠顺序，请尝试将以下声明添加到 `p:nth-of-type(1)` 规则中：
 
-    z-index: 1;
+```css
+z-index: 1;
+```
 
 你现在应该可以看到完成的例子：
 
@@ -389,30 +385,36 @@ p:nth-of-type(1) {
 
 现在，更新 `body` 规则以删除`position: relative;` 声明并添加固定高度，如此：
 
-    body {
-      width: 500px;
-      height: 1400px;
-      margin: 0 auto;
-    }
+```css
+body {
+  width: 500px;
+  height: 1400px;
+  margin: 0 auto;
+}
+```
 
 现在我们要给{{htmlelement("h1")}}元素 `position: fixed;`，并让它坐在视口的顶部中心。将以下规则添加到 CSS：
 
-    h1 {
-      position: fixed;
-      top: 0;
-      width: 500px;
-      margin: 0 auto;
-      background: white;
-      padding: 10px;
-    }
+```css
+h1 {
+  position: fixed;
+  top: 0;
+  width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 10px;
+}
+```
 
 `top: 0;`是要使它贴在屏幕的顶部；我们然后给出标题与内容列相同的宽度，并使用可靠的老技巧 `margin: 0 auto;` 使它居中。然后我们给它一个白色背景和一些内边距，所以内容将不会在它下面可见。
 
 如果你现在保存并刷新，你会看到一个有趣的小效果，标题保持固定，内容显示向上滚动并消失在其下。但是我们可以改进这一点——目前标题下面挡住一些内容的开头。这是因为定位的标题不再出现在文档流中，所以其他内容向上移动到顶部。我们要把它向下移动一点；我们可以通过在第一段设置一些顶部边距来做到这一点。添加：
 
-    p:nth-of-type(1) {
-      margin-top: 60px;
-    }
+```css
+p:nth-of-type(1) {
+  margin-top: 60px;
+}
+```
 
 你现在应该看到完成的例子：
 
@@ -510,47 +512,51 @@ body {
 
 `position: sticky` 的另一种有趣且常用的用法，是创建一个滚动索引页面。在此页面上，不同的标题会停留在页面顶部。这样的示例的标记可能如下所示：
 
-    <h1>Sticky positioning</h1>
+```html
+<h1>Sticky positioning</h1>
 
-    <dl>
-        <dt>A</dt>
-        <dd>Apple</dd>
-        <dd>Ant</dd>
-        <dd>Altimeter</dd>
-        <dd>Airplane</dd>
-        <dt>B</dt>
-        <dd>Bird</dd>
-        <dd>Buzzard</dd>
-        <dd>Bee</dd>
-        <dd>Banana</dd>
-        <dd>Beanstalk</dd>
-        <dt>C</dt>
-        <dd>Calculator</dd>
-        <dd>Cane</dd>
-        <dd>Camera</dd>
-        <dd>Camel</dd>
-        <dt>D</dt>
-        <dd>Duck</dd>
-        <dd>Dime</dd>
-        <dd>Dipstick</dd>
-        <dd>Drone</dd>
-        <dt>E</dt>
-        <dd>Egg</dd>
-        <dd>Elephant</dd>
-        <dd>Egret</dd>
-    </dl>
+<dl>
+    <dt>A</dt>
+    <dd>Apple</dd>
+    <dd>Ant</dd>
+    <dd>Altimeter</dd>
+    <dd>Airplane</dd>
+    <dt>B</dt>
+    <dd>Bird</dd>
+    <dd>Buzzard</dd>
+    <dd>Bee</dd>
+    <dd>Banana</dd>
+    <dd>Beanstalk</dd>
+    <dt>C</dt>
+    <dd>Calculator</dd>
+    <dd>Cane</dd>
+    <dd>Camera</dd>
+    <dd>Camel</dd>
+    <dt>D</dt>
+    <dd>Duck</dd>
+    <dd>Dime</dd>
+    <dd>Dipstick</dd>
+    <dd>Drone</dd>
+    <dt>E</dt>
+    <dd>Egg</dd>
+    <dd>Elephant</dd>
+    <dd>Egret</dd>
+</dl>
+```
 
 CSS 可能如下所示。在正常布局流中，{{htmlelement("dt")}}元素将随内容滚动。当我们在{{htmlelement("dt")}}元素上添加`position: sticky`，并将{{cssxref("top")}}的值设置为 0，当标题滚动到视口的顶部时，支持此属性的浏览器会将标题粘贴到那个位置。随后，每个后续标题将替换前一个标题，直到它向上滚动到该位置。
 
-    dt {
-      background-color: black;
-      color: white;
-      padding: 10px;
-      position: sticky;
-      top: 0;
-      left: 0;
-      margin: 1em 0;
-    }
+```css
+dt {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 1em 0;
+}
+```
 
 ```css
 body {

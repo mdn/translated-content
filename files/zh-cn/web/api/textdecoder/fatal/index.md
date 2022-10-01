@@ -1,15 +1,8 @@
 ---
 title: TextDecoder.fatal
 slug: Web/API/TextDecoder/fatal
-page-type: web-api-instance-property
-tags:
-  - API
-  - TextDecoder
-  - fatal
-  - Property
-  - Reference
-translation_of: Web/api/TextDecoder/fatal
 ---
+
 {{DefaultAPISidebar("")}}
 
 {{domxref("TextDecoder")}} 接口的 **`fatal`** 属性是一个 {{jsxref('Boolean')}}，表示错误模式是否是致命的。如果这个值是 `true`，则在数据格式错误时，处理的文本不会被解码。如果值是 `false`，则格式错误的数据将被替换为占位符。

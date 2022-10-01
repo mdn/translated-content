@@ -5,17 +5,17 @@ translation_of: Web/HTTP/Headers/Content-Type
 ---
 <div>{{HTTPSidebar}}</div>
 
-<div>O cabeçalho <strong>Content-Type</strong> é utilizado para indicar o {{Glossary("MIME type","tipo de arquivo")}} do recurso.</div>
+<div>O cabeçalho <strong>Content-Type</strong> é utilizado para indicar o {{Glossary("MIME type","tipo de arquivo")}} do recurso.</div>
 
-<div> </div>
+<div> </div>
 
-<div>Em respostas, o <code>Content-Type</code> diz para o client qual é o tipo de conteúdo que a resposta, de fato, tem. Alguns browsers vão realizar o chamado "MIME Sniffing" em alguns casos e não vão, necessariamente, seguir o valor declarado por este cabeçalho. Para previnir este comportamento é possível definir o cabeçalho {{HTTPHeader("X-Content-Type-Options")}} para o valor <code>nosniff</code>.</div>
+<div>Em respostas, o <code>Content-Type</code> diz para o client qual é o tipo de conteúdo que a resposta, de fato, tem. Alguns browsers vão realizar o chamado "MIME Sniffing" em alguns casos e não vão, necessariamente, seguir o valor declarado por este cabeçalho. Para previnir este comportamento é possível definir o cabeçalho {{HTTPHeader("X-Content-Type-Options")}} para o valor <code>nosniff</code>.</div>
 
-<div> </div>
+<div> </div>
 
-<div>Em requisições, como {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}, o client diz ao servidor qual o tipo de dado que está, de fato, sendo enviado.</div>
+<div>Em requisições, como {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}, o client diz ao servidor qual o tipo de dado que está, de fato, sendo enviado.</div>
 
-<div> </div>
+<div> </div>
 
 <table class="properties">
  <tbody>
@@ -48,14 +48,14 @@ Content-Type: multipart/form-data; boundary=something
  <dt>charset</dt>
  <dd>O encoding da string</dd>
  <dt>boundary</dt>
- <dd>Para entidades do tipo multipart, a diretiva <code>boundary</code> é obrigatória. Ela consiste em uma sequencia de 1 a 70 caracteres de um conjunto conhecido por sua robustez em gateways de e-mail, e não podem terminar com espaço em branco. É utilizado para encapsular as bordas das multiplas partes da mensagem.</dd>
+ <dd>Para entidades do tipo multipart, a diretiva <code>boundary</code> é obrigatória. Ela consiste em uma sequencia de 1 a 70 caracteres de um conjunto conhecido por sua robustez em gateways de e-mail, e não podem terminar com espaço em branco. É utilizado para encapsular as bordas das multiplas partes da mensagem.</dd>
 </dl>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Content-Type_em_formulários_HTML"><code>Content-Type</code> em formulários HTML</h3>
+<h3 id="Content-Type_em_formulários_HTML"><code>Content-Type</code> em formulários HTML</h3>
 
-<p>Em uma requisição {{HTTPMethod("POST")}}, resultado de uma submissão de um formulário HTML, o <code>Content-Type</code> da requisição é especificado pelo atributo <code>enctype</code> do elemento {{HTMLElement("form")}} do HTML.</p>
+<p>Em uma requisição {{HTTPMethod("POST")}}, resultado de uma submissão de um formulário HTML, o <code>Content-Type</code> da requisição é especificado pelo atributo <code>enctype</code> do elemento {{HTMLElement("form")}} do HTML.</p>
 
 <pre class="brush: html">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
   &lt;input type="text" name="description" value="some text"&gt;

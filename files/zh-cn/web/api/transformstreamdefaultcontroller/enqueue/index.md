@@ -1,15 +1,8 @@
 ---
 title: TransformStreamDefaultController.enqueue()
 slug: Web/API/TransformStreamDefaultController/enqueue
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - enqueue
-  - TransformStreamDefaultController
-translation_of: Web/api/TransformStreamDefaultController/enqueue
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 {{domxref("TransformStreamDefaultController")}} 接口的 **`enqueue()`** 方法将给定的分块排入流的可读端。

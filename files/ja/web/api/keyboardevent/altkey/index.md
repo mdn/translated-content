@@ -1,17 +1,8 @@
 ---
 title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.KeyboardEvent.altKey
-translation_of: Web/API/KeyboardEvent/altKey
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.altKey`** は読み取り専用のプロパティで、イベント発生時に <kbd>alt</kbd> キー（macOS では <kbd>Option</kbd> または <kbd>⌥</kbd>）が押されたか (`true`) または押されていないか (`false`) を示す論理値です。

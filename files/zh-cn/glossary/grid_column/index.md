@@ -1,10 +1,8 @@
 ---
 title: Grid Column
 slug: Glossary/Grid_Column
-tags:
-  - CSS Grids
-translation_of: Glossary/Grid_Column
 ---
+
 **网格列**是[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中的垂直轨道，即两个垂直网格线之间的空间。它通过属性 {{cssxref("grid-template-columns")}} 或者简写属性 {{cssxref("grid")}}，{{cssxref("grid-template")}} 定义。
 
 另外，当项目被放置到显示网格中创建的列外面时，可以在隐式网格中创建网格列。默认情况这些列自动调整大小，也可以使用 {{cssxref("grid-auto-columns")}} 属性指定其大小。

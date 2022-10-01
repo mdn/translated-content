@@ -1,16 +1,8 @@
 ---
 title: box-pack
 slug: Web/CSS/box-pack
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - box-pack
-  - recipe:css-property
-browser-compat: css.properties.box-pack
-translation_of: Web/CSS/box-pack
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 > **Warning:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
@@ -113,8 +105,8 @@ div.example {
   -webkit-box-align: center; /* WebKit */
 
   /* 子をこのボックスの下にまとめる */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
+  -moz-box-pack: end;             /* Mozilla */
+  -webkit-box-pack: end;          /* WebKit */
 }
 
 div.example p {

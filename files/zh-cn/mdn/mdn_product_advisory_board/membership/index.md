@@ -1,14 +1,8 @@
 ---
 title: Product Advisory Board Charter & Membership
 slug: MDN/MDN_Product_Advisory_Board/Membership
-tags:
-  - MDN
-  - PAB
-  - 产品咨询委员会
-  - 会员
-  - 条款和条件
-translation_of: MDN/MDN_Product_Advisory_Board/Membership
 ---
+
 {{MDNSidebar}}
 
 ## 1.目的和目标
@@ -110,5 +104,5 @@ c. Costs for participant travel and living expenses or other involvement are to 
 
 ## 参见
 
-- [Product Advisory Board members](/en-US/docs/MDN/MDN_Product_Advisory_Board/Members)
+- [Product Advisory Board members](/zh-CN/docs/MDN/MDN_Product_Advisory_Board/Members)
 - Membership application

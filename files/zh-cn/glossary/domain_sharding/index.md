@@ -1,10 +1,8 @@
 ---
 title: 域名分片 (Domain sharding)
 slug: Glossary/Domain_sharding
-tags:
-  - 域名分片
-translation_of: Glossary/Domain_sharding
 ---
+
 由于浏览器限制了每个域（domain）的活动连接数。为了可以同时下载超过该限制数的资源，**域名分片**（**domain sharding**）会将内容拆分到多个子域中。当使用多个域来处理多个资源时，浏览器能够同时下载更多资源，从而缩短了页面加载时间并改善了用户体验。
 
 就性能而言，域名分片的问题在于每个域都需要额外的 DNS 查找成本以及建立每个 TCP 连接的开销。

@@ -1,14 +1,8 @@
 ---
 title: NDEFReadingEvent.message
 slug: Web/API/NDEFReadingEvent/message
-tags:
-  - API
-  - Property
-  - リファレンス
-  - message
-  - NDEFReadingEvent
-browser-compat: api.NDEFReadingEvent.message
 ---
+
 {{securecontext_header}}{{APIRef()}}
 
 **`message`** は {{domxref("NDEFReadingEvent")}} インターフェイスのプロパティで、受信したメッセージの入った {{DOMxRef("NDEFMessage")}} オブジェクトを返します。

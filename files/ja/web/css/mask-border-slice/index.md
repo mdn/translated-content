@@ -1,18 +1,8 @@
 ---
 title: mask-border-slice
 slug: Web/CSS/mask-border-slice
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 実験的
-  - NeedsCompatTable
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-border-slice
-translation_of: Web/CSS/mask-border-slice
 ---
+
 {{CSSRef}}
 
 **`mask-border-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("mask-border-source")}} で設定された画像を複数の領域に分割します。これらの領域は要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の部品を構成するために使用されます。

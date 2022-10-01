@@ -11,6 +11,7 @@ tags:
   - delete
 translation_of: Web/API/CacheStorage/delete
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La fonction **`delete()`** de l'interface {{domxref("CacheStorage")}} trouve l'objet {{domxref("Cache")}} correspondant à un `cacheName`, et si trouvé, supprime l'objet {{domxref("Cache")}} et retourne une {{jsxref("Promise", "Promesse")}} qui renvoie `true`. Si aucun objet {{domxref("Cache")}} n'est trouvé, elle retourne `false`.
@@ -56,13 +57,11 @@ this.addEventListener('activate', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#cache-storage-delete', 'CacheStorage: delete')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CacheStorage.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

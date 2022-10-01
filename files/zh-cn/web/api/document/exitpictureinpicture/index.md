@@ -1,19 +1,8 @@
 ---
 title: Document.exitPictureInPicture()
 slug: Web/API/Document/exitPictureInPicture
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - pip
-translation_of: Web/API/Document/exitPictureInPicture
 ---
+
 {{ApiRef("Picture-in-Picture API")}}
 
 {{domxref("Document")}} 的 **`exitPictureInPicture()`** 方法请求退出以画中画模式浮动在此文档中播放的视频，来恢复屏幕之前的状态。这通常与先前调用的 {{domxref("HTMLVideoElement.requestPictureInPicture()")}} 相反。

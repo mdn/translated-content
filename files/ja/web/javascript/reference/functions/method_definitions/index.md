@@ -1,16 +1,8 @@
 ---
 title: メソッド定義
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-tags:
-  - ECMAScript 2015
-  - 関数
-  - JavaScript
-  - 言語機能
-  - オブジェクト
-  - 構文
-browser-compat: javascript.functions.method_definitions
-translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 ---
+
 {{JsSidebar("Functions")}}
 
 ECMAScript 2015 より、オブジェクトイニシャライザーのメソッド定義のための短い構文が導入されました。これは、メソッドの名前に割り当てられた関数の簡略構文です。

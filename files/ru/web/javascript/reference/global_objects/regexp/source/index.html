@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/source
 console.log(regex.source); // 'fooBar', не содержит прямые слеши /.../ и флаги 'ig'.
 </pre>
 
-<p>Начиная с ECMAScript 5, свойство <code>source</code> больше не возвращает пустую строку для пустых регулярных выражений. Вместо этого, возвращается строка" (?:)". Кроме того, теперь экранируются символы окончания строк (такие как, "\n").</p>
+<p>Начиная с ECMAScript 5, свойство <code>source</code> больше не возвращает пустую строку для пустых регулярных выражений. Вместо этого, возвращается строка" (?:)". Кроме того, теперь экранируются символы окончания строк (такие как, "\n").</p>
 
 <pre>new RegExp().source; // "(?:)"
 
@@ -45,5 +45,3 @@ new RegExp('\n').source === '\\n'; // true, начиная с ES5</pre>
 <ul>
  <li>{{jsxref("RegExp.prototype.flags")}}</li>
 </ul>
-
-<div class="ddict_btn" style="top: 882px; left: 573.6px;"><img></div>

@@ -1,16 +1,8 @@
 ---
 title: HTMLElement.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.HTMLElement.offsetWidth
-translation_of: Web/API/HTMLElement/offsetWidth
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetWidth`** は読み取り専用プロパティで、要素のレイアウト幅を整数として返します。

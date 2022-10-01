@@ -1,13 +1,13 @@
 ---
 title: 游戏结束
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
-这是 [Gamedev Canvas tutorial](/en-US/docs/Games/Workflows/Breakout_game_from_scratch)教程的第五章。您可以在完成本课程后在这里[Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html)找到源代码。
+这是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch)教程的第五章。您可以在完成本课程后在这里[Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html)找到源代码。
 
 看球从墙上反弹，并能够移动球盘是很有趣的。但除此之外，游戏什么都不做，也没有任何进展或最终目标。从游戏的角度来看，我们需要一个 game over。失败的逻辑很简单。如果你的球拍错过了球，并且球到达屏幕的底部边缘，那么游戏就结束了。
 
@@ -80,6 +80,6 @@ if(y + dy < ballRadius) {
 
 ## 下一步
 
-到目前为止，我们的表现相当不错，游戏变得更有趣，并且现在你可以输了！但它仍然缺少一些东西。让我们继续前进到第六章 - [建造砖块](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Build_the_brick_field) - 并创造一些砖块来消灭它们。
+到目前为止，我们的表现相当不错，游戏变得更有趣，并且现在你可以输了！但它仍然缺少一些东西。让我们继续前进到第六章 - [建造砖块](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Build_the_brick_field) - 并创造一些砖块来消灭它们。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}

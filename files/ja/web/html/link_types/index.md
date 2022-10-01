@@ -1,14 +1,6 @@
 ---
 title: リンク種別
 slug: Web/HTML/Link_types
-tags:
-  - Attribute
-  - HTML
-  - Link
-  - Link types
-  - Reference
-browser-compat: html.elements.link.rel
-translation_of: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}
@@ -161,12 +153,12 @@ HTML では、 {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("for
       <td><code>icon</code></td>
       <td>
         ユーザーインターフェイス上でページを表すリソースを定義します。通常は（聴覚的あるいは視覚的な）アイコンです。ブラウザーでは、ふつう{{glossary("Favicon", "ファビコン")}}と呼ばれます。<br><br>複数の <code>&#x3C;link rel="icon"></code> がある場合、ブラウザーは {{HTMLAttrxRef("media","link")}}, {{HTMLAttrxRef("type","link")}}, {{HTMLAttrxRef("sizes","link")}} 属性を使用して最も適切なアイコンを選択します。もし複数のアイコンが同等に適切であれば、最後の一つが使用されます。最も適切なアイコンが後で不適切と分かった場合、例えば未対応の形式を使用していた場合などは、ブラウザーは次に適切なものを探し、以下同様にします。<br><br>
-        <div class="notecard note">
+        <div class=" note">
           <p>
             <strong>注:</strong> Apple の iOS は他のモバイルブラウザーと同様に、ウェブクリップやスタートアッププレースホルダー用のウェブページアイコンを選択する際に、このリンク種別や {{HTMLAttrxRef("sizes","link")}} 属性を使用しません。代わりに、標準外の <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> および <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> を使用します。
           </p>
         </div>
-        <div class="notecard warning">
+        <div class=" warning">
           <p>
             <strong>Warning:</strong> <code>icon</code> より以前はリンク種別 <code>shortcut</code> がよく使用されていましたが、これは非準拠で無視されますので<strong>ウェブ作者は今後使用してはいけません</strong>。
           </p>

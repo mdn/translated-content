@@ -8,6 +8,7 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/ETag
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de réponse `ETag` HTTP est un identifiant pour une version spécifique d'une ressource. Il permet aux caches d'être plus efficaces et d'économiser de la bande passante, du fait que le serveur Web n'a pas besoin d'envoyer une réponse complète si le contenu n'a pas changé. Sinon, si le contenu a changé, les etags sont utiles pour empêcher les mises à jour simultanées d'une ressource de s'écraser mutuellement ("collisions en vol").

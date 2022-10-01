@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-variant-position
 ---
+
 {{CSSRef}}
 
 La propriété **`font-variant-position`** permet d'utiliser des glyphes de plus petite taille positionnés en exposant ou en indice par rapport à la ligne de base utilisée (qui reste la même).
@@ -42,9 +43,13 @@ La valeur de cette propriété est définie grâce à l'un des mots-clés défin
 - `super`
   - : Ce mot-clé permet d'utiliser les glyphes utilisés en exposant.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -72,12 +77,8 @@ La valeur de cette propriété est définie grâce à l'un des mots-clés défin
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-variant-position', 'font-variant-position')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-variant-position")}}
+{{Compat}}

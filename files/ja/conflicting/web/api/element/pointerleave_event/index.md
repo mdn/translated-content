@@ -1,19 +1,12 @@
 ---
-title: 'HTMLElement: pointerleave イベント'
+title: 'Document: pointerleave イベント'
 slug: conflicting/Web/API/Element/pointerleave_event
-tags:
-  - イベント
-  - HTML DOM
-  - HTMLElement
-  - PointerEvent
-  - リファレンス
-translation_of: Web/API/HTMLElement/pointerleave_event
-original_slug: Web/API/HTMLElement/pointerleave_event
-browser-compat: api.HTMLElement.pointerleave_event
+original_slug: Web/API/Document/pointerleave_event
 ---
+
 {{APIRef}}
 
-`pointerleave` イベントは、ポインティングデバイスが要素のヒットテスト境界から外れると発生します。ペンデバイスの場合、このイベントは、スタイラスがデジタイザーによって検出可能なホバー範囲を離れたときに発生します。
+`pointerleave` イベントは、ポインティングデバイスが要素のヒットテスト領域を出たときに発生します。ペンデバイスでは、このイベントはデジタイザーが検出可能なホバー範囲をスタイラスが離れたときに発生します。
 
 <table class="properties">
   <tbody>
@@ -22,8 +15,8 @@ browser-compat: api.HTMLElement.pointerleave_event
       <td>なし</td>
     </tr>
     <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
+      <th scope="row">キャンセル可能</th>
+      <td>いいえ</td>
     </tr>
     <tr>
       <th scope="row">インターフェイス</th>
@@ -32,11 +25,7 @@ browser-compat: api.HTMLElement.pointerleave_event
     <tr>
       <th scope="row">イベントハンドラープロパティ</th>
       <td>
-        <code
-          ><a href="/ja/docs/Web/API/GlobalEventHandlers/onpointerleave"
-            >onpointerleave</a
-          ></code
-        >
+        {{domxref("GlobalEventHandlers/onpointerleave", "onpointerleave")}}
       </td>
     </tr>
   </tbody>
@@ -44,29 +33,27 @@ browser-compat: api.HTMLElement.pointerleave_event
 
 ## 例
 
-`addEventListener()` を使用する場合
+`addEventListener()` の使用例:
 
 ```js
-const para = document.querySelector('p');
-
-para.addEventListener('pointerleave', (event) => {
-  console.log('ポインターが要素から離脱しました');
+document.addEventListener('pointerleave', (event) => {
+  console.log('Pointer left element');
 });
 ```
 
-`onpointerleave` イベントハンドラープロパティを使用する場合
+`onpointerleave` イベントハンドラープロパティの使用例:
 
 ```js
-const para = document.querySelector('p');
-
-para.onpointerleave = (event) => {
-  console.log('ポインターが要素から離脱しました');
+document.onpointerleave = (event) => {
+  console.log('Pointer left element');
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+| 仕様書                                                                       | 状態                                 |
+| ---------------------------------------------------------------------------- | ------------------------------------ |
+| {{SpecName('Pointer Events', '#the-pointerleave-event')}} | {{Spec2('Pointer Events')}} |
 
 ## ブラウザーの互換性
 
@@ -74,14 +61,14 @@ para.onpointerleave = (event) => {
 
 ## 関連情報
 
-- [`gotpointercapture`](/ja/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/ja/docs/Web/API/HTMLElement/lostpointercapture_event)
-- [`pointerover`](/ja/docs/Web/API/HTMLElement/pointerover_event)
-- [`pointerenter`](/ja/docs/Web/API/HTMLElement/pointerenter_event)
-- [`pointerdown`](/ja/docs/Web/API/HTMLElement/pointerdown_event)
-- [`pointermove`](/ja/docs/Web/API/HTMLElement/pointermove_event)
-- [`pointerup`](/ja/docs/Web/API/HTMLElement/pointerup_event)
-- [`pointercancel`](/ja/docs/Web/API/HTMLElement/pointercancel_event)
-- [`pointerout`](/ja/docs/Web/API/HTMLElement/pointerout_event)
-- [`onpointerleave`](/ja/docs/Web/API/GlobalEventHandlers/onpointerleave) イベントハンドラープロパティ
-- `Document` をターゲットとしたのこのイベント: [`pointerleave`](/ja/docs/Web/API/Document/pointerleave_event) イベント
+- {{domxref("Document/gotpointercapture_event", "gotpointercapture")}}
+- {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
+- {{domxref("Document/pointerover_event", "pointerover")}}
+- {{domxref("Document/pointerenter_event", "pointerenter")}}
+- {{domxref("Document/pointerdown_event", "pointerdown")}}
+- {{domxref("Document/pointermove_event", "pointermove")}}
+- {{domxref("Document/pointerup_event", "pointerup")}}
+- {{domxref("Document/pointercancel_event", "pointercancel")}}
+- {{domxref("Document/pointerout_event", "pointerout")}}
+- {{domxref("GlobalEventHandlers/onpointerleave", "onpointerleave")}} イベントハンドラープロパティ
+- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} イベント

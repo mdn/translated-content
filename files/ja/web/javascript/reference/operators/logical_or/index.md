@@ -1,15 +1,8 @@
 ---
 title: 論理和 (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
-tags:
-  - JavaScript
-  - 言語機能
-  - 論理演算子
-  - 演算子
-  - リファレンス
-browser-compat: javascript.operators.logical_or
-translation_of: Web/JavaScript/Reference/Operators/Logical_OR
 ---
+
 {{jsSidebar("Operators")}}
 
 論理和 (`||`) 演算子 (論理的分割) をオペランドの組み合わせに対して使用すると、オペランドのうち 1 つ以上が true である場合に true になります。一般的には論理値（ブール値）で使用されます。その場合は論理値を返します。ただし `||` 演算子は実際には指定されたオペランドのうち一つの値を返すので、この演算子が論理値以外で使用された場合は、論理値以外の値を返すことになります。
@@ -24,7 +17,7 @@ expr1 || expr2
 
 ## 解説
 
-`expr1` が `true` に変換できる場合は `expr1` を返し、それ以外の場合は `expr2` を返します。
+`expr1` が `true` に変換できる場合は `expr1` を返し、それ以外の場合は `expr2` を返します。
 
 ある値が `true` に変換できる場合、その値は真値 ({{Glossary("truthy")}}) と呼ばれます。ある値が `false` に変換できる場合、その値は偽値 ({{Glossary("falsy")}}) と呼ばれます。
 

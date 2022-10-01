@@ -1,19 +1,8 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - CSS カスケード
-  - CSS 値
-  - カスケード
-  - キーワード
-  - レイアウト
-  - リファレンス
-  - スタイル
-  - revert
-browser-compat: css.types.global_keywords.revert
-translation_of: Web/CSS/revert
 ---
+
 {{CSSRef}}
 
 **`revert`** は CSS のキーワードで、現在の要素にカスケードされたプロパティの値を、現在の**{{Glossary("style origin", "スタイルオリジン")}}**が変更を行わなければそのプロパティが持っていたであろう値に戻します。したがって、そのプロパティが親から継承されている場合にはその継承された値に、またはユーザーエージェントのスタイルシート（またはユーザーのスタイルが存在する場合にはユーザーのスタイル）によって確立された既定値にリセットされます。これは、 CSS の一括指定 {{cssxref("all")}} を含む、あらゆる CSS プロパティに適用することができます。

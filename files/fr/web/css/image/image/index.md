@@ -4,6 +4,7 @@ slug: Web/CSS/image/image
 translation_of: Web/CSS/image/image
 browser-compat: css.types.image.image
 ---
+
 {{CSSRef}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`image()`** définit une image (type [`<image>`](/fr/docs/Web/CSS/image)) à la façon de la fonction [`url()`](/fr/docs/Web/CSS/url) mais avec des fonctionnalités supplémentaires comme la définition de la directionnalité, la possibilité d'indiquer une image par défaut si l'image initiale n'est pas prise en charge, l'affichage d'une partie de l'image ou le choix de la couleur à utiliser par défaut si aucune des images indiquées ne peut être affichée.
@@ -90,7 +91,6 @@ Pour les éléments de la liste allant de gauche à droite (ceux avec `dir="ltr"
 {{EmbedLiveSample("", "100%", 200)}}
 
 ### Afficher une section de l'image
-
 
 ```html
 <div class="box">Vous pouvez survoler cet élément pour voir un autre curseur</div>

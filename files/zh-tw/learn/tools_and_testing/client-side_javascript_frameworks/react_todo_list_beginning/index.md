@@ -2,19 +2,8 @@
 title: Beginning our React todo list
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
-tags:
-  - Accessibility
-  - App
-  - CSS
-  - React
-  - component
-  - 初學者
-  - 前端框架
-  - 框架
-  - 無障礙
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}我們被賦予做出一個 React 原型 app 的任務--這個 app 將允許使用者新增、編輯、刪除任務；且可以標記任務完成而不被刪除。文章將會與您一起完成一個基本 `App` component 的結構與畫面，以便稍後與其他 component 互動。
 
 > **備註：** 如果您需要檢查自己的程式碼與範例之間的差異，可以連到 [todo-react repository](https://github.com/mdn/todo-react)，這裡有我們完整的程式碼。 Todo list 作品示範：<https://mdn.github.io/todo-react-build/>。
@@ -25,13 +14,13 @@ translation_of: >-
       <th scope="row">預備知識：</th>
       <td>
         <p>
-          知道 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>與<a
-            href="/en-US/docs/Learn/JavaScript"
+          知道 <a href="/zh-TW/docs/Learn/HTML">HTML</a>,
+          <a href="/zh-TW/docs/Learn/CSS">CSS</a>與<a
+            href="/zh-TW/docs/Learn/JavaScript"
             >JavaScript</a
           >的核心語法、操作基本終端機指令
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >.
         </p>
@@ -189,7 +178,7 @@ function App(props) {
 }
 ```
 
-再來，請打開 `public/index.html` 改掉 [`<title>`](/en-US/docs/Web/HTML/Element/title) 元素中的文字，將文字改為 `TodoMatic`，這樣才能對應到上述 [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) 的文字。
+再來，請打開 `public/index.html` 改掉 [`<title>`](/zh-TW/docs/Web/HTML/Element/title) 元素中的文字，將文字改為 `TodoMatic`，這樣才能對應到上述 [`<h1>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 的文字。
 
 ```html
 <title>TodoMatic</title>
@@ -203,12 +192,12 @@ function App(props) {
 
 在此之前，回頭複習一下我們的 JSX，以及它與用戶故事的對應關係：
 
-- 我們有一個 [`<form>`](/en-US/docs/Web/HTML/Element/form) 元素，其中包含可以寫入新任務的 [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) 以及一個 button 來送出表單。
+- 我們有一個 [`<form>`](/zh-TW/docs/Web/HTML/Element/form) 元素，其中包含可以寫入新任務的 [`<input type="text">`](/zh-TW/docs/Web/HTML/Element/input/text) 以及一個 button 來送出表單。
 - 我們還有一個`<button>`陣列，用以過濾不同任務狀態(全部、待辦、完成)。
 - 下方接著一個標題告訴我們擁有多少任務
-- 我們有 3 個預設任務寫在無序清單`<ul>`元素中，其中包含的各項單一任務都是使用[`<li>`](/en-US/docs/Web/HTML/Element/li)。 並且在各項任務下方增加 [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/text)來勾選此任務是否完成，以及編輯、刪除按鈕`<button>`。
+- 我們有 3 個預設任務寫在無序清單`<ul>`元素中，其中包含的各項單一任務都是使用[`<li>`](/zh-TW/docs/Web/HTML/Element/li)。 並且在各項任務下方增加 [`<input type="checkbox">`](/zh-TW/docs/Web/HTML/Element/input/text)來勾選此任務是否完成，以及編輯、刪除按鈕`<button>`。
 
-這個表單[`<form>`](/en-US/docs/Web/HTML/Element/form) 允許我們新增、管理任務， `<button>`幫助我們篩選任務狀態，`<ul><li>` 則負責展示任務清單。接著由於缺乏編輯任務的 UI，讓我們開始來處理畫面美化的部分吧。
+這個表單[`<form>`](/zh-TW/docs/Web/HTML/Element/form) 允許我們新增、管理任務， `<button>`幫助我們篩選任務狀態，`<ul><li>` 則負責展示任務清單。接著由於缺乏編輯任務的 UI，讓我們開始來處理畫面美化的部分吧。
 
 ### Accessibility features 無障礙設定
 
@@ -226,7 +215,7 @@ function App(props) {
 
 class `visually-hidden` 在我們加入 CSS 前還不會有作用；當我們加入樣式後，這個 class 會對一般使用者隱藏，因為視覺使用者不需要這些文字；而仰賴閱讀器的使用者則可以聽到更多輔助文字來提高的讀取理解與體驗。
 
-您還可以發現 [`<ul>`](/en-US/docs/Web/HTML/Element/ul) 元素中：
+您還可以發現 [`<ul>`](/zh-TW/docs/Web/HTML/Element/ul) 元素中：
 
 ```html
 <ul
@@ -606,6 +595,6 @@ body {
   - [寫一個 Svelte 待辦清單(todp list app)](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
   - [Svelte 中的動態行為：變數與 props](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
   - [進階 Svelte：Reactivity、元件生命週期、網頁無障礙設定](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [Working with Svelte stores](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
   - [Svelte 中的 TypeScript](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
   - [部署與下一步](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)

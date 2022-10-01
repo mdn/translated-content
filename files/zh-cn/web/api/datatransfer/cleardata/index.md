@@ -1,16 +1,8 @@
 ---
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
-tags:
-  - API
-  - DataTransfer
-  - HTML DOM
-  - Method
-  - Reference
-  - clearData
-  - drag and drop
-translation_of: Web/API/DataTransfer/clearData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.clearData()`** 方法删除给定类型的拖动操作的 {{domxref("DataTransfer","drag data")}}。如果给定类型的数据不存在，则此方法不执行任何操作。

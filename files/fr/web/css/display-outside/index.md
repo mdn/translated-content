@@ -7,6 +7,7 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/display-outside
 ---
+
 {{CSSRef}}
 
 Les mots-clés de type `<display-outside>` définissent le mode de disposition extérieure de l'élément. Autrement dit, ces mots-clés précisent le rôle de l'élément dans le flux. Ces valeurs peuvent être utilisées pour la propriété `display`. La syntaxe historique (avant CSS 3) prendra une seule valeur et la nouvelle syntaxe combinera cette valeur avec une valeur {{CSSxRef("&lt;display-inside&gt;")}}.
@@ -75,5 +76,5 @@ span {
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Block and Inline layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Formatting Contexts explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+- [Block and Inline layout in Normal Flow](/fr/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Formatting Contexts explained](/fr/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)

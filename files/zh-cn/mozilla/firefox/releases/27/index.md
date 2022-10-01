@@ -1,8 +1,8 @@
 ---
 title: Firefox 27 for developers
 slug: Mozilla/Firefox/Releases/27
-translation_of: Mozilla/Firefox/Releases/27
 ---
+
 {{FirefoxSidebar}}
 
 ## Web 开发者需要注意的变化
@@ -26,7 +26,7 @@ translation_of: Mozilla/Firefox/Releases/27
 
 ### JavaScript
 
-[EcmaScript 6](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) 实现了：
+[EcmaScript 6](/zh-CN/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) 实现了：
 
 - [展开运算符](http://wiki.ecmascript.org/doku.php?id=harmony:spread)支持在函数调用时的实参左边位置使用 ({{bug("762363")}}).
 - 实现了多个数学函数 {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} ({{bug("896264")}}).
@@ -50,7 +50,7 @@ _No change._
 
 ## 相关链接
 
-- [Site Compatibility for Firefox 27](/en-US/docs/Mozilla/Firefox/Releases/27/Site_Compatibility)
+- [Site Compatibility for Firefox 27](/zh-CN/docs/Mozilla/Firefox/Releases/27/Site_Compatibility)
 
 ### 更早版本
 

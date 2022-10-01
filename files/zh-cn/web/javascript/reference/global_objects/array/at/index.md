@@ -1,23 +1,14 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
-  - Experimental
-  - Polyfill
-browser-compat: javascript.builtins.Array.at
 ---
+
 {{JSRef}}
 
 **`at()`** 方法接收一个整数值并返回该索引的项目，允许正数和负数。负整数从数组中的最后一个项目开始倒数。
 
-方括号符号没有问题。例如，`array[0]`将返回第一个项目。然而，对于后面的项目，不要使用{{jsxref('Array.prototype.length','array.length')}}，例如，对于最后一个项目，可以调用`array.at(-1)`。[(参见以下示例)](#examples)
+这不代表使用方括号符号有什么问题。例如，`array[0]` 将返回第一个项目。然而，对于后面的元素的读取，你需要用到 {{jsxref('Array.prototype.length','array.length')}}，例如，读取最后一个元素，你需要使用 `array[array-1]`，对比以上方法读取最后一个项目，你可以调用 `array.at(-1)`。（[参见以下示例](#示例)）
+
 {{EmbedInteractiveExample("pages/js/array-at.html")}}
 
 ## 语法
@@ -33,7 +24,7 @@ at(index)
 
 ### 返回值
 
-匹配给定索引的数组中的元素。如果找不到指定的索引，则返回{{jsxref('undefined')}}。
+匹配给定索引的数组中的元素。如果找不到指定的索引，则返回 {{jsxref('undefined')}}。
 
 ## 示例
 
@@ -62,7 +53,7 @@ console.log(item2); // 'orange'
 
 ### 比较不同的数组方法
 
-这个例子比较了选择{{jsxref('Array')}}中倒数第二项的不同方法。虽然下面显示的所有方法都是可行的，但这个例子凸显了`at()`方法的简洁性和可读性。
+这个例子比较了选择 {{jsxref('Array')}} 中倒数第二项的不同方法。虽然下面显示的所有方法都是可行的，但这个例子凸显了 `at()` 方法的简洁性和可读性。
 
 ```js
 // 数组及数组元素。
@@ -89,9 +80,9 @@ console.log(atWay); // 'green'
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- A polyfill of `Array.prototype.at` is available in [`core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [Polyfill of `Array.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
 - [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
 - {{jsxref("Array.prototype.find()")}} – 根据给定的测试返回一个值。
 - {{jsxref("Array.prototype.includes()")}} – 测试数组中是否存在某个值。

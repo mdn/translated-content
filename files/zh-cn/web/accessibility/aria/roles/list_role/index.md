@@ -1,16 +1,8 @@
 ---
 title: 'ARIA: list role'
 slug: Web/Accessibility/ARIA/Roles/List_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA list
-  - 可访问性
-  - 无障碍
-  - Reference
-  - Role
-  - list
 ---
+
 ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色结合使用，该角色用于标识包含在列表中的列表项。
 
 ```html
@@ -50,7 +42,7 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 
 ## 最佳实践
 
-仅在必要时使用 `role="list"` 和 `role="listitem"`。例如，无法控制 HTML 但能够在之后动态使用 JavaScript 提升可访问性的时候。
+仅在必要时使用 `role="list"` 和 `role="listitem"`。例如，无法控制 HTML 但能够在之后动态使用 JavaScript 提升无障碍的时候。
 
 与 HTML {{HTMLElement("ol")}} 和 {{HTMLElement("ul")}} 不同，ARIA `list` 角色不区分有序列表和无序列表。如果可能，您应该使用适当的语义 HTML 元素来标记列表（{{HTMLElement("ol")}} 和 {{HTMLElement("ul")}}）和列表项（{{HTMLElement("li")}})。例如，我们上面的例子应该改写如下：
 
@@ -74,7 +66,7 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 
 > **备注：** ARIA `list` / `listitem` 角色不区分有序列表和无序列表。
 
-顺便说一句，请注意，如果您使用 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}} 的语义 HTML 元素并应用 [`presentation`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role) 角色，则每个子 `li` 元素都会继承 `presentation` 角色，因为 ARIA 需要 `listitem` 元素具有父 `list` 元素。因此，`li` 元素不会暴露给辅助技术，但是包含在这些 `li` 元素中的元素，包括嵌套列表，对辅助技术是可见的。
+顺便说一句，请注意，如果您使用 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}} 的语义 HTML 元素并应用 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role) 角色，则每个子 `li` 元素都会继承 `presentation` 角色，因为 ARIA 需要 `listitem` 元素具有父 `list` 元素。因此，`li` 元素不会暴露给辅助技术，但是包含在这些 `li` 元素中的元素，包括嵌套列表，对辅助技术是可见的。
 
 > **备注：** 如果要标记将用作选项卡式界面的项目列表，则应改为使用 `tab`、`tabpanel` 和 `tablist` 角色。
 
@@ -96,4 +88,10 @@ TBD
 - [ARIA: listitem role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
 - [ARIA: group role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+
+   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

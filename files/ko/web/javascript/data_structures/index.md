@@ -57,7 +57,7 @@ Null 타입은 `null` 하나의 값만 가질 수 있습니다. {{glossary("Null
 
 ECMAScript는 **Number**와 **BigInt** 두 가지의 내장 숫자 타입을 가지고 있습니다. (BigInt는 아래를 보세요)
 
-Number 타입은 [배정밀도 64비트 이진 형식 IEEE 754 값](https://en.wikipedia.org/wiki/Double_precision_floating-point_format)(-(2^53 − 1)부터 2^53 − 1까지의 수)입니다. Number 타입은 부동소수점 숫자 외에도 `+Infinity`, `-Infinity`, {{jsxref("NaN")}}("**N**ot a **N**umber") 세 개의 상징적인 값을 가집니다.
+Number 타입은 [배정밀도 64비트 이진 형식 IEEE 754 값](https://en.wikipedia.org/wiki/Double_precision_floating-point_format)(-(2^53 − 1)부터 2^53 − 1까지의 수)입니다. Number 타입은 부동소수점 숫자 외에도 `+Infinity`, `-Infinity`, {{jsxref("NaN")}}("**N**ot a **N**umber") 세 개의 상징적인 값을 가집니다.
 
 {{jsxref("Infinity", "±Infinity")}} 범위 내에서 가능한 가장 크거나 작은 수를 확인하려면 {{jsxref("Number.MAX_VALUE")}}와 {{jsxref("Number.MIN_VALUE")}} 상수를 사용할 수 있습니다.
 
@@ -122,7 +122,7 @@ C 언어와 같은 일부 프로그래밍 언어와 달리 JavaScript 문자열�
 
 - 연결 연산자를 통해 복잡한 문자열을 쉽게 만들 수 있습니다.
 - 문자열은 디버깅이 쉽습니다. (출력 내용이 항상 문자열의 값과 동일)
-- 문자열은 많은 API([입력 칸](/ko/docs/Web/API/HTMLInputElement), [로컬 스토리지](/ko/docs/Web/API/Web_Storage_AP) 값, `responseText`와 함께 사용하는 [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) 등등)의 공통 분모입니다.
+- 문자열은 많은 API([입력 칸](/ko/docs/Web/API/HTMLInputElement), [로컬 스토리지](/ko/docs/Web/API/Web_Storage_AP) 값, `responseText`와 함께 사용하는 [`XMLHttpRequest`](/ko/docs/Web/API/XMLHttpRequest) 등등)의 공통 분모입니다.
 
 규칙만 잘 정한다면 어떤 자료구조라도 문자열로 표현할 수 있습니다. 그러나 그게 좋은 방법이 되는 것은 아닙니다. 예컨대, 구분자를 사용하면 (물론 JavaScript 배열이 더 적합하겠지만) 문자열로 리스트를 흉내낼 수도 있을 것입니다. 그러나 구분자를 리스트의 요소로 사용하는 순간 리스트가 망가지고 맙니다. 이제 구분자를 구분하기 위해 이스케이프 문자를 선택하고, 등등... 이 모든 것이 각자의 규칙을 필요로 하고 불필요한 유지보수 부담을 낳습니다.
 
@@ -306,10 +306,10 @@ JavaScript 객체는 키와 값 사이의 맵핑입니다. 키는 문자열 또�
 | {{jsxref("Uint16Array")}}       | `0` ~ `65535`                | 2           | 16비트 부호 없는 정수                                            | `unsigned short`      | `uint16_t`                      |
 | {{jsxref("Int32Array")}}        | `-2147483648` ~ `2147483647` | 4           | 32비트 2의 보수 부호 있는 정수                                   | `long`                | `int32_t`                       |
 | {{jsxref("Uint32Array")}}       | `0` ~ `4294967295`           | 4           | 32비트 부호 없는 정수                                            | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}      | `1.2E-38` ~ `3.4E38`         | 4           | 32비트 IEEE 부동소수점 실수 (7개의 유효숫자, e.g. `1.1234567`)   | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}      | `5E-324` ~ `1.8E308`         | 8           | 64비트 IEEE 부동소수점 실수 (16개의 유효숫자, e.g. `1.123...15`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | `-2^63` ~ `2^63 - 1`         | 8           | 64비트 2의 보수 부호 있는 정수                                   | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}    | `0` ~ `2^64 - 1`             | 8           | 64비트 부호 없는 정수                                            | `bigint`              | `uint64_t (unsigned long long)` |
+| {{jsxref("Float32Array")}}      | `1.2E-38` ~ `3.4E38`         | 4           | 32비트 IEEE 부동소수점 실수 (7개의 유효숫자, e.g. `1.1234567`)   | `unrestricted float`  | `float`                         |
+| {{jsxref("Float64Array")}}      | `5E-324` ~ `1.8E308`         | 8           | 64비트 IEEE 부동소수점 실수 (16개의 유효숫자, e.g. `1.123...15`) | `unrestricted double` | `double`                        |
+| {{jsxref("BigInt64Array")}}     | `-2^63` ~ `2^63 - 1`         | 8           | 64비트 2의 보수 부호 있는 정수                                   | `bigint`              | `int64_t (signed long long)`    |
+| {{jsxref("BigUint64Array")}}    | `0` ~ `2^64 - 1`             | 8           | 64비트 부호 없는 정수                                            | `bigint`              | `uint64_t (unsigned long long)` |
 
 ### 키 컬렉션: Map, Set, WeakMap, WeakSet
 

@@ -1,14 +1,8 @@
 ---
 title: インクリメント (++)
 slug: Web/JavaScript/Reference/Operators/Increment
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.increment
-translation_of: Web/JavaScript/Reference/Operators/Increment
 ---
+
 {{jsSidebar("Operators")}}
 
 インクリメント演算子 (`++`) は、オペランドをインクリメント (1 を加算) して値を返します。
@@ -24,9 +18,9 @@ x++
 
 ## 解説
 
-オペランドに後置で演算子を付けると (例えば、 `x++`) 、インクリメント演算子はインクリメントしますが、インクリメント前の値を返します。
+オペランドに後置で演算子を付けると (例えば、 `x++`) 、インクリメント演算子はインクリメントしますが、インクリメント前の値を返します。
 
-オペランドに前置で演算子を付けると (例えば、 `++x`) 、インクリメント演算子はインクリメントし、インクリメント後の値を返します。
+オペランドに前置で演算子を付けると (例えば、 `++x`) 、インクリメント演算子はインクリメントし、インクリメント後の値を返します。
 
 ## 例
 

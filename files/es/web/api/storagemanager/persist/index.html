@@ -11,7 +11,7 @@ translation_of: Web/API/StorageManager/persist
 ---
 <p>{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">El método <strong><code>persist()</code></strong> de la interfaz {{domxref("StorageManager")}} solicita permiso para usar el almacenamiento persistente, y devuelve una {{jsxref('Promise')}} que se resuelve como <code>true</code> si se concede el permiso y <em>box mode</em> es persistente, y <code>false</code> en cualquier otro caso.</span></p>
+<p><span class="seoSummary">El método <strong><code>persist()</code></strong> de la interfaz {{domxref("StorageManager")}} solicita permiso para usar el almacenamiento persistente, y devuelve una {{jsxref('Promise')}} que se resuelve como <code>true</code> si se concede el permiso y <em>box mode</em> es persistente, y <code>false</code> en cualquier otro caso.</span></p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -28,12 +28,12 @@ translation_of: Web/API/StorageManager/persist
 <h2 id="Ejemplo">Ejemplo</h2>
 
 <pre class="brush: js">if (navigator.storage &amp;&amp; navigator.storage.persist)
-  navigator.storage.persist().then(function(persistent) {
-    if (persistent)
-      console.log("Storage will not be cleared except by explicit user action");
-    else
-      console.log("Storage may be cleared by the UA under storage pressure.");
-  });</pre>
+  navigator.storage.persist().then(function(persistent) {
+    if (persistent)
+      console.log("Storage will not be cleared except by explicit user action");
+    else
+      console.log("Storage may be cleared by the UA under storage pressure.");
+  });</pre>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 

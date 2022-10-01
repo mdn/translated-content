@@ -1,17 +1,6 @@
 ---
 title: '<link>: 外部リソースへのリンク要素'
 slug: Web/HTML/Element/link
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - Link
-  - Reference
-  - Web
-  - Web Performance
-  - metadata
-browser-compat: html.elements.link
-translation_of: Web/HTML/Element/link
 ---
 
 {{HTMLRef}}
@@ -104,7 +93,7 @@ translation_of: Web/HTML/Element/link
           <td>fetch</td>
           <td>
             <p>fetch, XHR</p>
-            <div class="notecard note">
+            <div class=" note">
               <p>
                 <strong>Note:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性が付いたものが必要です。
               </p>

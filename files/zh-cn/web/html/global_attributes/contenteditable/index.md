@@ -1,17 +1,8 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
-tags:
-  - Editing
-  - Global attributes
-  - HTML
-  - Reference
-  - Text Editing
-  - contenteditable
-  - text entry
-  - text input
-translation_of: Web/HTML/Global_attributes/contenteditable
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) **`contenteditable`** 是一个枚举属性，表示元素是否可被用户编辑。如果可以，浏览器会修改元素的部件以允许编辑。
@@ -29,7 +20,7 @@ translation_of: Web/HTML/Global_attributes/contenteditable
 
 注意，虽然该属性允许设定的值包括 `true` 和 `false`，但该属性仍是一个*枚举*属性而非*布尔*属性。
 
-你可以使用 CSS {{cssxref("caret-color")}} 属性设置用于绘制文本插入 {{Glossary("caret")}} 的颜色。
+你可以使用 CSS {{cssxref("caret-color")}} 属性设置用于绘制文本插入 {{Glossary("caret")}} 的颜色。
 
 ## 规范
 
@@ -45,4 +36,4 @@ translation_of: Web/HTML/Global_attributes/contenteditable
 - 所有的 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} 和 {{domxref("HTMLElement.isContentEditable")}}
 - CSS {{cssxref("caret-color")}} 属性
-- [`HTMLElement` `input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)
+- [HTMLElement `input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)

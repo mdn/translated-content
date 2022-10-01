@@ -1,16 +1,8 @@
 ---
 title: BarcodeDetector.getSupportedFormats()
 slug: Web/API/BarcodeDetector/getSupportedFormats
-tags:
-  - バーコード検出 API
-  - BarcodeDetector
-  - メソッド
-  - バーコード
-  - 形状認識
-  - 実験的
-browser-compat: api.BarcodeDetector.getSupportedFormats
-translation_of: Web/API/BarcodeDetector/getSupportedFormats
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 **`getSupportedFormats()`** は {{domxref("BarcodeDetector")}} インターフェイスの静的メソッドで、対応しているバーコード形式の種類の配列 ({{jsxref('Array')}}) で履行されるプロミス ({{jsxref('Promise')}}) を返します。

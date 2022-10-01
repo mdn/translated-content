@@ -1,15 +1,8 @@
 ---
 title: <frequency>
 slug: Web/CSS/frequency
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.frequency
-translation_of: Web/CSS/frequency
 ---
+
 {{CSSRef}}
 
 **`<frequency>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、話し声の高さなどの周波数の値を表します。今のところ、どの CSS プロパティでも使われていません。

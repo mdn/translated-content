@@ -1,0 +1,1834 @@
+---
+title: '-moz-appearance (-webkit-appearance)'
+slug: Web/CSS/appearance
+---
+
+{{CSSRef}} {{SeeCompatTable}}
+
+在基于 Gecko 的浏览器（如 Firefox）中，**`-moz-appearance`** CSS 属性被用于按照 浏览器所在的操作系统所用主题，以平台本地的样式显示元素。
+
+在基于 WebKit 的浏览器（如 Safari）和基于 Blink 的浏览器（如 Chrome, Opera）中，**`-webkit-appearance`** 属性被用于达到相同 to achieve the same thing. Note that Edge also supports `-webkit-appearance` (instead of `-ms-appearance`) for compatibility reasons.
+
+```css
+/* 在 Gecko 中可用的部分值 */
+-moz-appearance: none;
+-moz-appearance: button;
+-moz-appearance: checkbox;
+-moz-appearance: scrollbarbutton-up;
+
+/* 在 WebKit/Blink 中可用的部分值 */
+-webkit-appearance: none;
+-webkit-appearance: button;
+-webkit-appearance: checkbox;
+-webkit-appearance: scrollbarbutton-up;
+```
+
+这个属性经常用在 [XUL](/zh-CN/docs/Mozilla/Tech/XUL/Tutorial) 的样式表中，用来设计拥有平台原生 UI 样式的自定义的组件，也用于 [XBL](/zh-CN/docs/XBL) 之中以实现 Mozilla 平台的组件。
+
+> **备注：** 如果您想在网站上使用此属性，您应非常小心地测试它。尽管在大部分现代浏览器中它是被支持的，它的实现差别很大。在版本较旧的浏览器中，即使是 `none` 也会在不同浏览器中产生差别，而且一些浏览器完全不支持这个属性。在版本较新的浏览器中这些差距会更小一些。
+
+{{cssinfo}}
+
+## 语法
+
+The `-moz-appearance` 属性 may be specified as a single value chosen from the list below.
+
+### 取值
+
+`<appearance>` 是其中的一个关键字：
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th>Value</th>
+      <th>Demo</th>
+      <th>Browser</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>none</code></td>
+      <td>
+        <div id="sampleNone" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: none; -webkit-appearance: none; color: black;}</pre
+          >
+          <pre class="brush:html">
+          &#x3C;div>Lorem&#x3C;/div>
+</pre
+          >
+        </div>
+        {{EmbedLiveSample("sampleNone",100,50,"","", "nobutton")}}
+      </td>
+      <td>All</td>
+      <td>
+        不应用任何特殊样式。这是未定义元素的默认值。旧版翻译中的信息：但是，有这两个
+        BUG： {{bug(649849)}} 和 {{bug(605985)}}。
+      </td>
+    </tr>
+    <tr>
+      <td><code>button</code></td>
+      <td>
+        <div id="sampleButton" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: button; -webkit-appearance: button; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleButton",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td>此元素将被作为按钮来绘制。</td>
+    </tr>
+    <tr>
+      <td><code>button-arrow-down</code></td>
+      <td>
+        <div id="sampleButtonArrowDown" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: button-arrow-down; -webkit-appearance: button-arrow-down; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleButtonArrowDown",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>button-arrow-next</code></td>
+      <td>
+        <div id="sampleButtonArrowNext" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: button-arrow-next; -webkit-appearance: button-arrow-next; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleButtonArrowNext",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>button-arrow-previous</code></td>
+      <td>
+        <div id="sampleButtonArrowPrevious" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: button-arrow-previous; -webkit-appearance: button-arrow-previous; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleButtonArrowPrevious",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>button-arrow-up</code></td>
+      <td>
+        <div id="sampleButtonArrowUp" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: button-arrow-up; -webkit-appearance: button-arrow-up; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleButtonArrowUp",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>button-bevel</code></td>
+      <td>
+        <div id="sampleButtonBevel" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: button-bevel; -webkit-appearance: button-bevel; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleButtonBevel",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>button-focus</code></td>
+      <td>
+        <div id="sampleButtonFocus" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: button-focus; -webkit-appearance: button-focus; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleButtonFocus",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>caret</code></td>
+      <td>
+        <div id="sampleCaret" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: caret; -webkit-appearance: caret; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleCaret",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>checkbox</code></td>
+      <td>
+        <div id="sampleCheckbox" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: checkbox; -webkit-appearance: checkbox; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleCheckbox",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td>此元素将被作为复选框绘制，仅包括实际的 "checkbox" 部分。</td>
+    </tr>
+    <tr>
+      <td><code>checkbox-container</code></td>
+      <td>
+        <div id="sampleCheckboxContainer" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: checkbox-container; -webkit-appearance: checkbox-container; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleCheckboxContainer",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>
+        此元素将被作为复选框容器绘制，可在相应的平台下带有高亮样式。一般情况下，它会包含一个标签（label）与一个复选框。
+      </td>
+    </tr>
+    <tr>
+      <td><code>checkbox-label</code></td>
+      <td>
+        <div id="sampleCheckboxLabel" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: checkbox-label; -webkit-appearance: checkbox-label; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleCheckboxLabel",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>checkmenuitem</code></td>
+      <td>
+        <div id="sampleCheckmenuitem" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: checkmenuitem; -webkit-appearance: checkmenuitem; height: 20px; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleCheckmenuitem",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>dualbutton</code></td>
+      <td>
+        <div id="sampleDualButton" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: dualbutton; -webkit-appearance: dualbutton; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleDualButton",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>groupbox</code></td>
+      <td>
+        <div id="sampleGroupbox" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: groupbox; -webkit-appearance: groupbox; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleGroupbox",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>inner-spin-button</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>listbox</code></td>
+      <td>
+        <div id="sampleListBox" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: listbox; -webkit-appearance: listbox; height:20px; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleListBox",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>listitem</code></td>
+      <td>
+        <div id="sampleListItem" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: listitem; -webkit-appearance: listitem; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleListItem",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-enter-fullscreen-button</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-exit-fullscreen-button</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-mute-button</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-play-button</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-overlay-play-button</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-toggle-closed-captions-button</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-slider</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-sliderthumb</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-volume-slider-container</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-volume-slider</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-volume-sliderthumb</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-controls-background</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-controls-fullscreen-background</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-current-time-display</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>media-time-remaining-display</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>menuarrow</code></td>
+      <td>
+        <div id="sampleMenuArrow" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menuarrow; -webkit-appearance: menuarrow; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuArrow",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>menubar</code></td>
+      <td>
+        <div id="sampleMenubar" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menubar; -webkit-appearance: menubar; color: balck; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenubar",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>menucheckbox</code></td>
+      <td>
+        <div id="sampleMenuCheckbox" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menucheckbox; -webkit-appearance: menucheckbox; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuCheckbox",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>menuimage</code></td>
+      <td>
+        <div id="sampleMenuImage" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menuimage; -webkit-appearance: menuimage; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuImage",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>menuitem</code></td>
+      <td>
+        <div id="sampleMenuItem" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menuitem; -webkit-appearance: menuitem; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuItem",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>此元素将被作为菜单项绘制，鼠标覆盖时会带有高亮效果。</td>
+    </tr>
+    <tr>
+      <td><code>menuitemtext</code></td>
+      <td>
+        <div id="sampleMenuItemText" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menuitemtext; -webkit-appearance: menuitemtext; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuItemText",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>menulist</code></td>
+      <td>
+        <div id="sampleMenuList" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menulist; -webkit-appearance: menulist; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuList",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>menulist-button</code></td>
+      <td></td>
+      <td><code>menulist-button</code></td>
+      <td>
+        <div id="sampleMenuListButton" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menulist-button; -webkit-appearance: menulist-button; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuListButton",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td>此元素将被绘制为显示一个下拉菜单可以打开的按钮。</td>
+    </tr>
+    <tr>
+      <td><code>menulist-text</code></td>
+      <td>
+        <div id="sampleMenuListText" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menulist-text; -webkit-appearance: menulist-text; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuListText",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>menulist-textfield</code></td>
+      <td>
+        <div id="sampleMenuListTextfield" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menulist-textfield; -webkit-appearance: menulist-textfield; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuListTextfield",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td>
+        这个元素将被作为菜单列表中的文本框绘制。（未在 Windows 平台下实现）
+      </td>
+      <td><code>menupopup</code></td>
+      <td>
+        <div id="sampleMenuPopup" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menupopup; -webkit-appearance: menupopup; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuPopup",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>menuradio</code></td>
+      <td>
+        <div id="sampleMenuRadio" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menuradio; -webkit-appearance: menuradio; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuRadio",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>menuseparator</code></td>
+      <td>
+        <div id="sampleMenuSeparator" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: menuseparator; -webkit-appearance: menuseparator; color: transparent; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMenuSeparator",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>meter</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>meterbar</code></td>
+      <td>
+        <div id="sampleMeterbar" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: meterbar; -webkit-appearance: meterbar; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMeterbar",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>New in Fx 16.</td>
+    </tr>
+    <tr>
+      <td><code>meterchunk</code></td>
+      <td>
+        <div id="sampleMeterchunk" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: meterchunk; -webkit-appearance: meterchunk; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleMeterchunk",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>New in Fx 16</td>
+    </tr>
+    <tr>
+      <td><code>progress-bar</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>progress-bar-value</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>progressbar</code></td>
+      <td>
+        <div id="sampleProgressBar" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: progressbar; -webkit-appearance: progressbar; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleProgressBar",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>The element is styled like a progress bar.</td>
+    </tr>
+    <tr>
+      <td><code>progressbar-vertical</code></td>
+      <td>
+        <div id="sampleProgressBarVertical" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: progressbar-vertical; -webkit-appearance: preogressbar-vertical; color: transparent; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleProgressBarVertical",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>progresschunk</code></td>
+      <td>
+        <div id="sampleProgressChunk" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: progresschunk; -webkit-appearance: progresschunk; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleProgressChunk",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>progresschunk-vertical</code></td>
+      <td>
+        <div id="sampleProgressChunkVertical" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: progresschunk-vertical; -webkit-appearance: progresschunk-vertical; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleProgressChunkVertical",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>push-button</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>radio</code></td>
+      <td>
+        <div id="sampleRadio" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: radio; -webkit-appearance: radio; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleRadio",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td>这个元素将被作为单选框绘制，仅包括实际的"radio button"部分。</td>
+    </tr>
+    <tr>
+      <td><code>radio-container</code></td>
+      <td>
+        <div id="sampleRadioContainer" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: radio-container; -webkit-appearance: radio-container; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleRadioContainer",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>
+        这个元素将被作为单选框容器绘制，并且可在相应平台下带有高亮样式。一般情况下，它会包含一个标签（label）与一个单选框。
+      </td>
+    </tr>
+    <tr>
+      <td><code>radio-label</code></td>
+      <td>
+        <div id="sampleRadioLabel" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: radio-label; -webkit-appearance: radio-label; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleRadioLabel",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>radiomenuitem</code></td>
+      <td>
+        <div id="sampleRadioMenuItem" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: radiomenuitem; -webkit-appearance: radiomenuitem; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleRadioMenuItem",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>range</td>
+      <td>
+        <div id="sampleRange" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: range; -webkit-appearance: radiomenuitem; color: black; }</pre
+          >
+          range
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleRange",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>range-thumb</td>
+      <td>
+        <div id="sampleRangeThumb" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: range-thumb; -webkit-appearance: range-thumb; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleRangeThumb",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>resizer</code></td>
+      <td>
+        <div id="sampleResizer" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: resizer; -webkit-appearance: resizer; color: transparent; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleResizer",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>resizerpanel</code></td>
+      <td>
+        <div id="sampleResizerPanel" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: resizerpanel; -webkit-appearance: resizerpanel; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleResizerPanel",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scale-horizontal</code></td>
+      <td>
+        <div id="sampleScaleHorizontal" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scale-horizontal; -webkit-appearance: scale-horizontal; color: transparent; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScaleHorizontal",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scalethumbend</code></td>
+      <td>
+        <div id="sampleThumbEnd" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scalethumbend; -webkit-appearance: scalethumbend; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleThumbEnd",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scalethumb-horizontal</code></td>
+      <td>
+        <div id="sampleScaleThumbHorizontal" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scalethumb-horizontal; -webkit-appearance: scalethumb-horizontal; color: transparent; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScaleThumbHorizontal",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scalethumbstart</code></td>
+      <td>
+        <div id="sampleScaleThumbStart" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scalethumbstart; -webkit-appearance: scalethumbstart; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScaleThumbStart",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scalethumbtick</code></td>
+      <td>
+        <div id="sampleScaleThumbTick" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scalethumbtick; -webkit-appearance: scalethumbtick; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScaleThumbTick",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scalethumb-vertical</code></td>
+      <td>
+        <div id="sampleScaleThumbVertical" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scalethumb-vertical; -webkit-appearance: scalethumb-vertical; color: black; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScaleThumbVertical",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scale-vertical</code></td>
+      <td>
+        <div id="sampleScaleVertical" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scale-vertical; -webkit-appearance: scale-vertical; color: transparent; }</pre
+          >
+          <pre class="brush:html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScaleVertical",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scrollbarbutton-down</code></td>
+      <td>
+        <div id="sampleScrollbarButtonDown" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scrollbarbutton-down; -webkit-appearance: scrollbarbutton-down; color: black; }</pre
+          >
+          <pre class="bruh: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScrollbarButtonDown",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scrollbarbutton-left</code></td>
+      <td>
+        <div id="sampleScrollbarButtonLeft" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scrollbarbutton-left; -webkit-appearance: scrollbarbutton-left; color: black; }</pre
+          >
+          <pre class="bruh: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScrollbarButtonLeft",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scrollbarbutton-right</code></td>
+      <td>
+        <div id="sampleScrollbarButtonRight" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scrollbarbutton-right; -webkit-appearance: scrollbarbutton-right; color: black; }</pre
+          >
+          <pre class="bruh: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScrollbarButtonRight",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scrollbarbutton-up</code></td>
+      <td>
+        <div id="sampleScrollbarButtonUp" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scrollbarbutton-up; -webkit-appearance: scrollbarbutton-up; color: black; }</pre
+          >
+          <pre class="bruh: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScrollbarButtonUp",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scrollbarthumb-horizontal</code></td>
+      <td>
+        <div id="sampleScrollbarThumbHorizontal" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scrollbarthumb-horizontal; -webkit-appearance: scrollbarthumb-horizontal; color: black; }</pre
+          >
+          <pre class="bruh: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScrollbarThumbHorizontal",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scrollbarthumb-vertical</code></td>
+      <td>
+        <div id="sampleScrollbarThumbVertical" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scrollbarthumb-vertical; -webkit-appearance: scrollbarthumb-vertical; color: black; }</pre
+          >
+          <pre class="bruh: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScrollbarThumbVertical",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scrollbartrack-horizontal</code></td>
+      <td>
+        <div id="sampleScrollbarTrackHorizontal" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scrollbartrack-horizontal; -webkit-appearance: scrollbartrack-horizontal; color: black; }</pre
+          >
+          <pre class="bruh: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScrollbarTrackHorizontal",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>scrollbartrack-vertical</code></td>
+      <td>
+        <div id="sampleScrollbarTrackVertical" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: scrollbartrack-vertical; -webkit-appearance: scrollbarbartrack-vertical; color: black; }</pre
+          >
+          <pre class="bruh: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleScrollbarTrackVertical",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>searchfield</code></td>
+      <td>
+        <div id="sampleSearchField" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: searchfield; -webkit-appearance: searchfield; color: black; }</pre
+          >
+          <pre class="bruh: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleSearchField",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>searchfield-cancel-button</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>separator</code></td>
+      <td>
+        <div id="sampleSeparator" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: separator; -webkit-appearance: separator; color: transparent; }</pre
+          >
+          <pre class="bruh: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleSeparator",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>sheet</code></td>
+      <td>
+        <div id="sampleSheet" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: sheet; -webkit-appearance: sheet; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleSheet",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>slider-horizontal</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>slider-vertical</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>sliderthumb-horizontal</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>sliderthumb-vertical</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>spinner</code></td>
+      <td>
+        <div id="sampleSpinner" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: spinner; -webkit-appearance: spinner; color: transparent; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleSpinner",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>spinner-downbutton</code></td>
+      <td>
+        <div id="sampleSpinnerDownbutton" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: spinner-downbutton; -webkit-appearance: spinner-downbutton; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleSpinnerDownbutton",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>spinner-textfield</code></td>
+      <td>
+        <div id="sampleSpinnerTextfield" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: spinner-textfield; -webkit-appearance: spinner-textfield; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleSpinnerTextfield",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>spinner-upbutton</code></td>
+      <td>
+        <div id="sampleSpinnerUpbutton" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: spinner-upbutton; -webkit-appearance: spinner-upbutton; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleSpinnerUpbutton",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>splitter</code></td>
+      <td>
+        <div id="sampleSplitter" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: splitter; -webkit-appearance: splitter; color: transparent; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleSplitter",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>square-button</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>statusbar</code></td>
+      <td>
+        <div id="sampleStatusBar" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: statusbar; -webkit-appearance: statusbar; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleStatusBar",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>statusbarpanel</code></td>
+      <td>
+        <div id="sampleStatusBarPanel" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: statusbarpanel; -webkit-appearance: statusbarpanel; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleStatusBarPanel",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>tab</code></td>
+      <td>
+        <div id="sampleTab" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: tab; -webkit-appearance: tab; height: 20px; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTab",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>tabpanel</code></td>
+      <td>
+        <div id="sampleTabPanel" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: tabpanel; -webkit-appearance: tabpanel; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTabPanel",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>tabpanels</code></td>
+      <td>
+        <div id="sampleTabPanels" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: tabpanels; -webkit-appearance: tabpanels; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTabPanels",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>tab-scroll-arrow-back</code></td>
+      <td>
+        <div id="sampleTabScrollArrowBack" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: tab-scroll-arrow-back; -webkit-appearance: tab-scroll-arrow-back; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTabScrollArrowBack",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>tab-scroll-arrow-forward</code></td>
+      <td>
+        <div id="sampleTabScrollArrowForward" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: tab-scroll-arrow-forward; -webkit-appearance: tab-scroll-arrow-forward; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTabScrollArrowForward",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>textarea</code></td>
+      <td></td>
+      <td>Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>textfield</code></td>
+      <td>
+        <div id="sampleTextField" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: textfield; -webkit-appearance: textfield; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTextField",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox Chrome</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>textfield-multiline</code></td>
+      <td>
+        <div id="sampleTextfieldMultiline" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: textfield-multiline; -webkit-appearance: textfield-multiline; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTextfieldMultiline",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>toolbar</code></td>
+      <td>
+        <div id="sampleToolbar" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: toolbar; -webkit-appearance: toolbar; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleToolbar",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>toolbarbutton</code></td>
+      <td>
+        <div id="sampleToolbarButton" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: toolbarbutton; -webkit-appearance: toolbarbutton; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleToolbarButton",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>toolbarbutton-dropdown</code></td>
+      <td>
+        <div id="sampleToolbarButtonDropdown" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: toolbarbutton-dropdown; -webkit-appearance: toolbarbutton-dropdown; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleToolbarButtonDropdown",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>toolbargripper</code></td>
+      <td>
+        <div id="sampleToolbarGripper" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: toolbargripper; -webkit-appearance: toolbargripper; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleToolbarGripper",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>toolbox</code></td>
+      <td>
+        <div id="sampleToolbox" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: toolbox; -webkit-appearance: toolbox; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleToolbox",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>tooltip</code></td>
+      <td>
+        <div id="sampleTooltip" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: tooltip; -webkit-appearance: tooltip; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTooltip",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>treeheader</code></td>
+      <td>
+        <div id="sampleTreeHeader" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: treeheader; -webkit-appearance: treeheader; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTreeHeader",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>treeheadercell</code></td>
+      <td>
+        <div id="sampleTreeHeaderCell" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: treeheadercell; -webkit-appearance: treeheadercell; height:20px; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTreeHeaderCell",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>treeheadersortarrow</code></td>
+      <td>
+        <div id="sampleTreeHeaderSortArrow" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: treeheadersortarrow; -webkit-appearance: treeheadersortarrow; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTreeHeaderSortArrow",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>treeitem</code></td>
+      <td>
+        <div id="sampleTreeItem" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: treeitem; -webkit-appearance: treeitem; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTreeItem",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>treeline</code></td>
+      <td>
+        <div id="sampleTreeLine" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: treeline; -webkit-appearance: treeline; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTreeLine",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>treetwisty</code></td>
+      <td>
+        <div id="sampleTreeTwisty" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: treetwisty; -webkit-appearance: treetwisty; color: transparent; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTreeTwisty",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>treetwistyopen</code></td>
+      <td>
+        <div id="sampleTreeTwistyOpen" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: treetwistyopen; -webkit-appearance: treetwistyopen; color: transparent; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTreeTwistyOpen",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>treeview</code></td>
+      <td>
+        <div id="sampleTreeView" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: treeview; -webkit-appearance: treeview; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleTreeView",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-win-borderless-glass</code></td>
+      <td>
+        <div id="sampleWinBorderlessGlass" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-win-borderless-glass; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWinBorderlessGlass",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>
+        <strong>Windows Vista and later only</strong>. This style applies the
+        Aero Glass effect -- but without a border -- to the element.
+      </td>
+    </tr>
+    <tr>
+      <td><code>-moz-win-browsertabbar-toolbox</code></td>
+      <td>
+        <div id="sampleWinBrowsertabbarToolbox" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-win-browsertabbar-toolbox; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWinBrowsertabbarToolbox",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>
+        <strong>仅支持 Vista 及更高版本的 Windows 系统。</strong
+        >这个样式会将磨砂玻璃（Aero Glass）样式（但是不含边框）应用到元素上。
+      </td>
+    </tr>
+    <tr>
+      <td><code>-moz-win-browsertabbar-toolbox</code></td>
+      <td>
+        <div id="sampleWinBrowsertabbarToolbox" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-win-browsertabbar-toolbox; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWinBrowsertabbarToolbox",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>
+        <strong>仅支持 Vista 及更高版本的 Windows 系统。</strong
+        >此工具栏样式主要被用于浏览器的标签栏。
+      </td>
+    </tr>
+    <tr>
+      <td><code>-moz-win-communicationstext</code></td>
+      <td>
+        <div id="sampleWinCommunicationstext" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-win-communicationstext; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWinCommunicationstext",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-win-communications-toolbox</code></td>
+      <td>
+        <div id="sampleWinCommunicationsToolbox" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-win-communications-toolbox; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWinCommunicationsToolbox",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>
+        <strong>仅支持 Vista 及更高版本的 Windows 系统。</strong
+        >此工具栏样式是为了用于通讯和生产方面的应用程序，与之对应的前景色为
+        <code>-moz-win-communicationstext</code>。
+      </td>
+    </tr>
+    <tr>
+      <td><code>-moz-win-exclude-glass</code></td>
+      <td>
+        <div id="sampleWinExcludeGlass" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-win-exclude-glass; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWinExcludeGlass",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>
+        <strong>仅支持 Vista 及更高版本的 Windows 系统。</strong
+        >此样式被用于取消元素的磨砂玻璃效果。
+      </td>
+    </tr>
+    <tr>
+      <td><code>-moz-win-glass</code></td>
+      <td>
+        <div id="sampleWinGlass" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-win-glass; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWinGlass",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>
+        <strong>仅支持 Vista 及更高版本的 Windows 系统。</strong
+        >这个样式会将磨砂玻璃（Aero Glass）样式（但是不含边框）应用到元素上。
+      </td>
+    </tr>
+    <tr>
+      <td><code>-moz-win-mediatext</code></td>
+      <td>
+        <div id="sampleWinMediaText" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-win-mediatext; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWinMediaText",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-win-media-toolbox</code></td>
+      <td>
+        <div id="sampleWinMediaToolbox" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-win-media-toolbox; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWinMediaToolbox",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td>
+        <strong>仅支持 Vista 及更高版本的 Windows 系统。</strong
+        >此工具栏样式主要用于管理媒体对象。与之对应的前景色为
+        <code>-moz-win-mediatext</code>。
+      </td>
+    </tr>
+    <tr>
+      <td><code>-moz-window-button-box</code></td>
+      <td>
+        <div id="sampleWindowButtonBox" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-window-button-box; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWindowButtonBox",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-window-button-box-maximized</code></td>
+      <td>
+        <div id="sampleWindowButtonBoxMaximized" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-window-button-box-maximized; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWindowButtonBoxMaximized",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-window-button-close</code></td>
+      <td>
+        <div id="sampleWindowButtonClose" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-window-button-close; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWindowButtonClose",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-window-button-maximize</code></td>
+      <td>
+        <div id="sampleWindowButtonMaximize" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-window-button-maximize; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWindowButtonMaximize",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-window-button-minimize</code></td>
+      <td>
+        <div id="sampleWindowButtonMinimize" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-window-button-minimize; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWindowButtonMinimize",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-window-button-restore</code></td>
+      <td>
+        <div id="sampleWindowButtonRestore" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-window-button-restore; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWindowButtonRestore",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-window-frame-bottom</code></td>
+      <td>
+        <div id="sampleWindowFrameBottom" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-window-frame-bottom; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWindowFrameBottom",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-window-frame-left</code></td>
+      <td>
+        <div id="sampleWindowFrameLeft" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-window-frame-left; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWindowFrameLeft",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-window-frame-right</code></td>
+      <td>
+        <div id="sampleWindowFrameRight" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-window-frame-right; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWindowFrameRight",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-window-titlebar</code></td>
+      <td>
+        <div id="sampleWindowTitlebar" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-window-titlebar; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWindowTitlebar",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-moz-window-titlebar-maximized</code></td>
+      <td>
+        <div id="sampleWindowTitlebarMaximized" class="hidden">
+          <pre class="brush:css">
+ div {-moz-appearance: -moz-window-titlebar-maximized; color: black; }</pre
+          >
+          <pre class="brush: html">          &#x3C;div>Lorem&#x3C;/div></pre>
+        </div>
+        {{EmbedLiveSample("sampleWindowTitlebarMaximized",100,50,"","", "nobutton")}}
+      </td>
+      <td>Firefox</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>-apple-pay-button</code></td>
+      <td></td>
+      <td></td>
+      <td>
+        <strong>iOS and macOS only</strong>. Available on the web starting in
+        iOS 10.1 and macOS 10.12.1
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## 示例
+
+以下代码将使一个元素在 Firefox 中看起来像工具栏按钮：
+
+```css
+.exampleone {
+  -moz-appearance: toolbarbutton;
+}
+```
+
+可参考 [这个 JSFiddle 示例](http://jsfiddle.net/go392m5s/)，它演示了应如何使用 `appearance: none` 已对单选框与复选框应用自定义样式。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- [Drafted in CSS Basic UI Module Level 4](https://drafts.csswg.org/css-ui-4/#appearance-switching).
+- [Definition of `appearance` in CSS 3 Basic User Interface](http://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (候选建议 2004-05-11), 过时， ( `appearance` 属性已被新规范抛弃)
+- [将 CSS3 功能从 UI 标准中移除。](http://wiki.csswg.org/spec/css4-ui#dropped-css3-features)

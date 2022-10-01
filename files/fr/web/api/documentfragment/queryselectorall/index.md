@@ -9,6 +9,7 @@ tags:
   - fragment
 translation_of: Web/API/DocumentFragment/querySelectorAll
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`DocumentFragment.querySelectorAll()`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments du {{domxref("DocumentFragment")}} (en utilisant la traversée en profondeur des noeuds du document), qui correspondent avec le groupe spécifié de sélecteurs.
@@ -38,13 +39,11 @@ var matches = documentfrag.querySelectorAll("div.note, div.alert");
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Selectors API Level 1', '#queryselector', 'DocumentFragment.querySelectorAll')}} | {{Spec2('Selectors API Level 1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DocumentFragment.querySelectorAll")}}
+{{Compat}}
 
 ## Voir aussi
 

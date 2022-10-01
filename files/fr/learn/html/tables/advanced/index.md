@@ -21,6 +21,7 @@ tags:
 translation_of: Learn/HTML/Tables/Advanced
 original_slug: Apprendre/HTML/Tableaux/Advanced
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 Dans le second article de ce module, nous examinerons quelques dispositions avancées des tableaux HTML — comme intitulés ou résumés, groupement des rangées dans l'en-tête, le corps ou le pied de page du tableau — ainsi que l'accessibilité des tableaux aux utilisateurs malvoyants.
@@ -350,7 +351,7 @@ Rappelons brièvement comment nous utilisons les tableaux de données. Un tablea
 
 Mais que faire si vous ne pouvez pas créer ces associations visuelles ? Comment pouvez-vous lire un tableau comme celui ci-dessus ? Les personnes malvoyantes utilisent souvent un lecteur d'écran qui leur lit les informations des pages web. Ce n'est pas un problème quand vous lisez du texte brut, mais l'interprêtation d'un tableau peut constituer un défi pour une personne aveugle. Néanmoins, avec le balisage approprié, nous pouvons remplacer des associations visuelles par des associations programmées.
 
-> **Note :** Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les  [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/ "Vision Impairment Data").
+> **Note :** Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les  [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/).
 
 Cette partie de l'article indique des techniques avancées pour rendre les tableaux les plus accessibles possible.
 

@@ -1,13 +1,13 @@
 ---
 title: 球板及键盘控制
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
-这是[Gamedev Canvas tutorial](/en-US/docs/Games/Workflows/Breakout_game_from_scratch)中的第四章。完成本课程后，你可以在[Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html)找到源码。
+这是[Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch)中的第四章。完成本课程后，你可以在[Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html)找到源码。
 
 你可以看到球自由的、无限次的在墙壁上反弹，但是没有和我们发生任何交互。如果我们没有对它的控制操作，这仍然不是一个游戏。下面，我们新增一些用户操作：一个可以控制球的球板。
 
@@ -21,7 +21,7 @@ var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;
 ```
 
-然后定义球拍的长和宽，以及为了之后的处理同时定义 x 轴上的初始位置。新建一个方法来在页面上描绘球板。把下列代码添加到你的`drawBall()方法里去`：
+然后定义球拍的长和宽，以及为了之后的处理同时定义 x 轴上的初始位置。新建一个方法来在页面上描绘球板。把下列代码添加到你的 `drawBall()` 方法里去：
 
 ```js
 function drawPaddle() {
@@ -49,14 +49,14 @@ var rightPressed = false;
 var leftPressed = false;
 ```
 
-这两个变量的默认值都是 false，因为在开始时按键没有被按下。为了监听按键的按下动作，我们需要添加两个监听器。把下列代码添加到底部的`setInterval()的上一列去：`
+这两个变量的默认值都是 false，因为在开始时按键没有被按下。为了监听按键的按下动作，我们需要添加两个监听器。把下列代码添加到底部的 `setInterval()` 的上一列去：
 
 ```js
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 ```
 
-当你按下任何键盘上的按键，按下事件被激活时`keyDownHandler()方法会被调用。对于松开时的处理也是类似的：当松开按键时keyUpHandler()方法会被调用。把下列代码添加到addEventListener()下方`：
+当你按下任何键盘上的按键，按下事件被激活时 `keyDownHandler()` 方法会被调用。对于松开时的处理也是类似的：当松开按键时 keyUpHandler() 方法会被调用。把下列代码添加到 addEventListener() 下方：
 
 ```js
 function keyDownHandler(e) {
@@ -126,6 +126,6 @@ drawPaddle();
 
 ## 下一步
 
-现在我们有一些类似于游戏的东西。唯一的麻烦就是无论如何你都可以继续用球拍击球。这一切都将在第五章中改变，[游戏结束](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Game_over)时，我们会为游戏添加一个最后的状态。
+现在我们有一些类似于游戏的东西。唯一的麻烦就是无论如何你都可以继续用球拍击球。这一切都将在第五章中改变，[游戏结束](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Game_over)时，我们会为游戏添加一个最后的状态。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}

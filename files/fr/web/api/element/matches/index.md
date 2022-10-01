@@ -7,6 +7,7 @@ tags:
   - Selector
 translation_of: Web/API/Element/matches
 ---
+
 {{ APIRef("DOM") }}
 
 La méthode **`element.matches()`** renvoie `true` lorsque l'élément peut être sélectionné par le sélecteur défini par la chaîne passée en paramètre&nbsp;; sinon, elle renvoie `false`.
@@ -78,15 +79,13 @@ if (!Element.prototype.matches) {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                            | Status                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-matches', 'Element.prototype.matches')}} | {{Spec2('DOM WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.matches")}}
+{{Compat}}
 
 ## Voir aussi
 

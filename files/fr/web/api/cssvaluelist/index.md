@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/CSSValueList
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`CSSValueList`** dérive de l'interface {{domxref("CSSValue")}} et fournit l'abstraction d'une collection ordonnée de valeurs CSS.
@@ -33,13 +34,11 @@ _Hérite des propriétés de son parent {{domxref("CSSValue")}}_.
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM2 Style', 'css.html#CSS-CSSValuesList', 'CSSValuesList')}} | {{Spec2('DOM2 Style')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CSSValueList")}}
+{{Compat}}
 
 ## Voir aussi
 

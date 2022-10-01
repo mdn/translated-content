@@ -10,13 +10,14 @@ tags:
   - cross-site
 translation_of: Web/HTTP/CORS
 ---
+
 {{HTTPSidebar}}
 
 Le «&nbsp; _Cross-origin resource sharing_ » (CORS) ou « partage des ressources entre origines multiples » (en français, moins usité) est un mécanisme qui consiste à ajouter des en-têtes HTTP afin de permettre à un agent utilisateur d'accéder à des ressources d'un serveur situé sur une autre origine que le site courant. Un agent utilisateur réalise une requête HTTP **multi-origine (_cross-origin_)** lorsqu'il demande une ressource provenant d'un domaine, d'un protocole ou d'un port différent de ceux utilisés pour la page courante.
 
 Prenons un exemple de requête multi-origine : une page HTML est servie depuis `http://domaine-a.com` contient un élément [`<img> src`](/fr/docs/Web/HTML/Element/Img#attr-src) ciblant `http://domaine-b.com/image.jpg`. Aujourd'hui, de nombreuses pages web chargent leurs ressources (feuilles CSS, images, scripts) à partir de domaines séparés (par exemple des CDN (_Content Delivery Network_ en anglais ou « Réseau de diffusion de contenu »).
 
-Pour des raisons de sécurité, les requêtes HTTP multi-origine émises depuis les scripts sont restreintes. Ainsi, {{domxref("XMLHttpRequest")}} et l'[API Fetch](/en-US/docs/Web/API/Fetch_API) respectent la règle [d'origine unique](/en-US/docs/Web/Security/Same-origin_policy). Cela signifie qu'une application web qui utilise ces API peut uniquement émettre des requêtes vers la même origine que celle à partir de laquelle l'application a été chargée, sauf si des en-têtes CORS sont utilisés.
+Pour des raisons de sécurité, les requêtes HTTP multi-origine émises depuis les scripts sont restreintes. Ainsi, {{domxref("XMLHttpRequest")}} et l'[API Fetch](/fr/docs/Web/API/Fetch_API) respectent la règle [d'origine unique](/fr/docs/Web/Security/Same-origin_policy). Cela signifie qu'une application web qui utilise ces API peut uniquement émettre des requêtes vers la même origine que celle à partir de laquelle l'application a été chargée, sauf si des en-têtes CORS sont utilisés.
 
 ![](cors_principle.png)
 

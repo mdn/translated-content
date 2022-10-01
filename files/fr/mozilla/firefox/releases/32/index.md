@@ -6,6 +6,7 @@ tags:
   - TopicStub
 translation_of: Mozilla/Firefox/Releases/32
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers
@@ -47,7 +48,7 @@ Highlights:
 
 ### Interfaces/APIs/DOM
 
-- The {{domxref("NavigatorLanguage.languages", "navigator.languages")}} property and {{event("languagechange")}} event have been implemented ({{Bug(889335)}}).
+- The {{domxref("NavigatorLanguage.languages", "navigator.languages")}} property and [`languagechange`](/fr/docs/Web/API/Window/languagechange_event) event have been implemented ({{Bug(889335)}}).
 - The {{domxref("Navigator.vibrate()")}} method behavior has been adapted to the latest specification: too long vibrations are now truncated ({{bug(1014581)}}).
 - The {{domxref("KeyboardEvent.getModifierState()")}} and {{domxref("MouseEvent.getModifierState()")}} methods have been extended to support the `Accel` virtual modifier ({{Bug(1009388)}}).
 - The {{domxref("KeyboardEvent.code")}} property have been experimentally implemented: it is disabled on release build ({{Bug(865649)}}).
@@ -114,7 +115,7 @@ A [getDataDirectory()](</fr/Add-ons/Add-on_Manager/Addon#getDataDirectory()>) me
 
 [Bugs fixed between Firefox 31 and Firefox 32](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-06-09&chfield=resolution&query_format=advanced&chfieldfrom=2014-04-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
 
-## See also
+## Voir aussi
 
 - [Site Compatibility for Firefox 32](/fr/docs/Mozilla/Firefox/Releases/32/Site_Compatibility)
 

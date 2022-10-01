@@ -1,12 +1,8 @@
 ---
 title: Blink
 slug: Glossary/Blink
-tags:
-  - Glossary
-  - Infrastructure
-  - Layout
-translation_of: Glossary/Blink
 ---
+
 Blink 是一套開放原始碼的瀏覽器排版引擎，由 Google 作為 Chromium 專案的一部份（所以也是 Chrome 的一部份）所打造。更仔細地講，Blink 是 {{glossary("WebKit")}} 當中處理排版、描繪、{{Glossary("DOM")}} 的 WebCore 程式庫的衍生版本。
 
 ## 了解更多

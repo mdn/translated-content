@@ -1,15 +1,8 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-tags:
-  - クラス
-  - ECMAScript 2015
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.operators.new_target
-translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
+
 {{JSSidebar("Operators")}}
 
 **`new.target`** は擬似プロパティで、関数やコンストラクターが [new](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子を使用して呼び出されたかどうかを検出することができます。 [new](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子を使用して呼び出されたコンストラクターや関数の中では、 `new.target` はコンストラクターや関数への参照を返します。通常の関数呼び出しの場合、 `new.target` は {{jsxref("undefined")}} になります。

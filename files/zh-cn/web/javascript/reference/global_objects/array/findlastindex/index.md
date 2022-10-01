@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 ---
+
 {{JSRef}}
 
 **`findLastIndex()`** 方法返回数组中满足提供的测试函数条件的最后一个元素的索引。若没有找到对应元素，则返回 -1。
@@ -21,20 +14,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 ## 语法
 
 ```js
-// Arrow function
-findLastIndex((element) => { /* ... */ } )
-findLastIndex((element, index) => { /* ... */ } )
-findLastIndex((element, index, array) => { /* ... */ } )
+// 箭头函数
+findLastIndex((element) => { /* … */ } )
+findLastIndex((element, index) => { /* … */ } )
+findLastIndex((element, index, array) => { /* … */ } )
 
-// Callback function
+// 回调函数
 findLastIndex(callbackFn)
 findLastIndex(callbackFn, thisArg)
 
-// Inline callback function
-findLastIndex(function(element) { /* ... */ })
-findLastIndex(function(element, index) { /* ... */ })
-findLastIndex(function(element, index, array){ /* ... */ })
-findLastIndex(function(element, index, array) { /* ... */ }, thisArg)
+// 内联回调函数
+findLastIndex(function(element) { /* … */ })
+findLastIndex(function(element, index) { /* … */ })
+findLastIndex(function(element, index, array){ /* … */ })
+findLastIndex(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数

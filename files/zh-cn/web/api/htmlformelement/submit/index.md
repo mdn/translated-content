@@ -1,14 +1,8 @@
 ---
 title: form.submit
 slug: Web/API/HTMLFormElement/submit
-tags:
-  - API
-  - HTML DOM
-  - 参考
-  - 方法
-  - 表单元素
-translation_of: Web/API/HTMLFormElement/submit
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 **`HTMLFormElement.submit()`** 用来提交表单 {{HtmlElement("form")}}。

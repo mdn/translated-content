@@ -12,6 +12,7 @@ tags:
   - has
 translation_of: Web/API/CacheStorage/has
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La méthode **`has()`** de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie `true` si un objet {{domxref("Cache")}} est égal au `cacheName`.
@@ -51,13 +52,11 @@ caches.has('v1').then(function() {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#cache-storage-has', 'CacheStorage: has')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CacheStorage.has")}}
+{{Compat}}
 
 ## Voir aussi
 

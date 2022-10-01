@@ -1,16 +1,8 @@
 ---
 title: CanvasRenderingContext2D.drawFocusIfNeeded()
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
-tags:
-  - API
-  - アクセシビリティ
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.drawFocusIfNeeded
-translation_of: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.drawFocusIfNeeded()`** はキャンバス 2D API のメソッドで、引数で与えられた要素にフォーカスが当たった時に、現在のパスもしくは指定されたパスの周りにフォーカスリングを描画します。

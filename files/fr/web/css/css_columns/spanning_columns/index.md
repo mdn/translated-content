@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Columns/Spanning_Columns
 original_slug: Web/CSS/CSS_Columns/Répartir_entre_les_colonnes
 ---
+
 {{CSSRef}}
 
 Dans ce guide, nous verrons comment répartir les éléments sur plusieurs colonnes et comment contrôler le remplissage des colonnes.
@@ -59,4 +60,4 @@ Dans cet exemple, on a des colonnes qui contiennent une image et du texte qui so
 
 On notera que l'équilibrage des colonnes n'est pas pris en charge de façon homogène par les navigateurs. Aussi, si vous l'utilisez, vérifiez vos résultats dans les différents navigateurs pour contrôler l'effet obtenu. Vous pouvez aussi consulter les tableaux de compatibilité des navigateurs à la fin des pages de chacune des propriétés.
 
-Dans le prochain guide, nous verrons [comment gérer le dépassement au sein d'un conteneur multi-colonnes](/en-US/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol), à l'intérieur des colonnes et lorsqu'il y a plus de contenu que le conteneur peut en avoir.
+Dans le prochain guide, nous verrons [comment gérer le dépassement au sein d'un conteneur multi-colonnes](/fr/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol), à l'intérieur des colonnes et lorsqu'il y a plus de contenu que le conteneur peut en avoir.

@@ -27,9 +27,9 @@ worker.postMessage(sab);
 
 <h3 id="Обновление_и_синхронизация_разделяемой_памяти_с_помощью_атомарных_операций">Обновление и синхронизация разделяемой памяти с помощью атомарных операций</h3>
 
-<p>Разделяемую память можно создавать и изменять одновременно в воркерах или основном потоке. В зависимости от системы (ЦПУ, ОС, браузера), распространение изменений по всем контекстам может занять некоторое время. Для синхронизации необходимы {{jsxref("Атомарные", "атомарные", "", 1)}} операции .</p>
+<p>Разделяемую память можно создавать и изменять одновременно в воркерах или основном потоке. В зависимости от системы (ЦПУ, ОС, браузера), распространение изменений по всем контекстам может занять некоторое время. Для синхронизации необходимы {{jsxref("Атомарные", "атомарные", "", 1)}} операции .</p>
 
-<h3 id="API_принимающие_объекты_SharedArrayBuffer">API, принимающие объекты <code>SharedArrayBuffer</code></h3>
+<h3 id="API_принимающие_объекты_SharedArrayBuffer">API, принимающие объекты <code>SharedArrayBuffer</code></h3>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/WebGLRenderingContext/bufferData" title="Метод WebGLRenderingContext.bufferData() WebGL API инициализирует и создает хранилище данных буферного объекта."><code>WebGLRenderingContext.bufferData()</code></a></li>
@@ -66,7 +66,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 <h3 id="Всегда_используйте_оператор_new_для_создания_SharedArrayBuffer">Всегда используйте оператор new для создания SharedArrayBuffer</h3>
 
-<p>Конструкторы <code>SharedArrayBuffer</code> необходимо вызывать с помощью оператора {{jsxref("Operators/new", "new")}}. Вызов конструктора <code>SharedArrayBuffer</code> как функции без указания <code>new</code> вызовет ошибку {{jsxref("TypeError")}}.</p>
+<p>Конструкторы <code>SharedArrayBuffer</code> необходимо вызывать с помощью оператора {{jsxref("Operators/new", "new")}}. Вызов конструктора <code>SharedArrayBuffer</code> как функции без указания <code>new</code> вызовет ошибку {{jsxref("TypeError")}}.</p>
 
 <pre class="brush: js example-bad">var sab = SharedArrayBuffer(1024);
 // TypeError: вызов встроенного конструктора SharedArrayBuffer

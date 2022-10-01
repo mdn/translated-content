@@ -1,16 +1,8 @@
 ---
 title: WritableStreamDefaultController.error()
 slug: Web/API/WritableStreamDefaultController/error
-page-type: web-api-instance-method
-tags:
-  - API
-  - Error
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultController
-translation_of: Web/API/WritableStreamDefaultController/error
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultController")}} 接口的 **`error()`** 方法会导致未来任何与关联的流的交互出错。

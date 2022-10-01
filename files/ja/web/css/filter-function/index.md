@@ -1,16 +1,8 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - フィルター効果
-  - NeedsCompatTable
-  - リファレンス
-browser-compat: css.types.filter-function
-translation_of: Web/CSS/filter-function
 ---
+
 {{CSSRef}}
 
 **`<filter-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティで使用します。
@@ -51,27 +43,27 @@ translation_of: Web/CSS/filter-function
 ```html
 <div></div>
 <ul>
-  <li>
-    <label for="filter-select">フィルター関数を選択:</label>
-    <select id="filter-select">
-      <option selected>blur</option>
-      <option>brightness</option>
-      <option>contrast</option>
-      <option>drop-shadow</option>
-      <option>grayscale</option>
-      <option>hue-rotate</option>
-      <option>invert</option>
-      <option>opacity</option>
-      <option>saturate</option>
-      <option>sepia</option>
-    </select>
-  </li>
-  <li>
-    <input type="range"><output></output>
-  </li>
-  <li>
-    <p>現在の値: <code></code></p>
-  </li>
+  <li>
+    <label for="filter-select">フィルター関数を選択:</label>
+    <select id="filter-select">
+      <option selected>blur</option>
+      <option>brightness</option>
+      <option>contrast</option>
+      <option>drop-shadow</option>
+      <option>grayscale</option>
+      <option>hue-rotate</option>
+      <option>invert</option>
+      <option>opacity</option>
+      <option>saturate</option>
+      <option>sepia</option>
+    </select>
+  </li>
+  <li>
+    <input type="range"><output></output>
+  </li>
+  <li>
+    <p>現在の値: <code></code></p>
+  </li>
 </ul>
 ```
 

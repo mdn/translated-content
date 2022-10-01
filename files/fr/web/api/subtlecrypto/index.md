@@ -14,9 +14,10 @@ tags:
   - Web Crypto API
 translation_of: Web/API/SubtleCrypto
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-The **`SubtleCrypto`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) provides a number of low-level cryptographic functions. Access to the features of `SubtleCrypto` is obtained through the {{domxref("Crypto.subtle", "subtle")}} property of the {{domxref("Crypto")}} object you get from {{domxref("Window.crypto")}}.
+The **`SubtleCrypto`** interface of the [Web Crypto API](/fr/docs/Web/API/Web_Crypto_API) provides a number of low-level cryptographic functions. Access to the features of `SubtleCrypto` is obtained through the {{domxref("Crypto.subtle", "subtle")}} property of the {{domxref("Crypto")}} object you get from {{domxref("Window.crypto")}}.
 
 > **Attention :** This API provides a number of low-level cryptographic primitives. It's very easy to misuse them, and the pitfalls involved can be very subtle.
 >
@@ -93,7 +94,7 @@ The inverse of `wrapKey()` is {{DOMxRef("SubtleCrypto.unwrapKey","unwrapKey()")}
 
 #### Storing keys
 
-`CryptoKey` objects can be stored using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), meaning that you can store and retrieve them using standard web storage APIs. The specification expects that most developers will use the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) to store `CryptoKey` objects.
+`CryptoKey` objects can be stored using the [structured clone algorithm](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), meaning that you can store and retrieve them using standard web storage APIs. The specification expects that most developers will use the [IndexedDB API](/fr/docs/Web/API/IndexedDB_API) to store `CryptoKey` objects.
 
 ### Supported algorithms
 
@@ -264,20 +265,18 @@ The table below summarises which algorithms are suitable for which cryptographic
   </tbody>
 </table>
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                        | Status                                   | Comment             |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('Web Crypto API', '#subtlecrypto-interface', 'SubtleCrypto') }} | {{ Spec2('Web Crypto API') }} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.SubtleCrypto")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
-- [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- [Web security](/en-US/docs/Web/Security)
-- [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
+- [Web Crypto API](/fr/docs/Web/API/Web_Crypto_API)
+- [Web security](/fr/docs/Web/Security)
+- [Privacy, permissions, and information security](/fr/docs/Web/Privacy)
 - {{domxref("Crypto")}} and {{domxref("Crypto.subtle")}}.
 - [Crypto 101](https://www.crypto101.io/): an introductory course on cryptography.

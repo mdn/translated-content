@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/IndexedDB_API
 original_slug: Web/API/API_IndexedDB
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB est une API de bas niveau qui permet le stockage côté client de quantités importantes de données structurées, incluant des fichiers/blobs. Cette API utilise des index afin de permettre des recherches performantes sur ces données. Alors que [Web Storage](/fr/docs/Web/API/Web_Storage_API) est utile pour stocker de petites quantités de données, il est moins utile pour stocker de grandes quantités de données structurées. IndexedDB fournit une solution. Cette page est le point d'entrée pour tout ce qui concerne IndexedDB sur MDN - vous y trouverez les liens vers la référence complète de l'API et les guides d'utilisation, le support par les navigateurs, et quelques explications des concepts clés.
@@ -108,10 +109,7 @@ Une précedente version des spécifications a défini ces interfaces, désormais
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire         |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('IndexedDB')}}     | {{Spec2('IndexedDB')}}     | Définition initiale |
-| {{SpecName("IndexedDB 2")}} | {{Spec2("IndexedDB 2")}} |                     |
+{{Specifications}}
 
 ## Voir aussi
 

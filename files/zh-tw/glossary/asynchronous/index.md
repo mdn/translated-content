@@ -1,8 +1,8 @@
 ---
 title: Asynchronous 非同步
 slug: Glossary/Asynchronous
-translation_of: Glossary/Asynchronous
 ---
+
 _非同步_（Asynchronous，又稱異步）指的是各方在方便或可能時，才接收並處理訊息，而不是立刻這麼做的通訊環境。
 
 你可以用人類的溝通環境來比喻：例如電子郵件，寄件者傳送電郵、收件者會在方便時才回覆。他們不用馬上就那麼做。

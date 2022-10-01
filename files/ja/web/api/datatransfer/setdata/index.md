@@ -1,16 +1,8 @@
 ---
 title: DataTransfer.setData()
 slug: Web/API/DataTransfer/setData
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.setData
-translation_of: Web/API/DataTransfer/setData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.setData()`** メソッドは、ドラッグ操作の {{domxref("DataTransfer","drag data")}} に指定したデータと型を設定します。与えられた型のデータが存在しない場合、このデータはドラッグデータストアの末尾に加えられ、このような {{domxref("DataTransfer.types","types")}} リストの最後の項目は新しい型になります。与えられた型のデータが存在する場合、既存のデータが同じ位置で置き換えられます。同じ型のデータが置き換えられる時、{{domxref("DataTransfer.types","types")}} リストの並び順は変更されません。

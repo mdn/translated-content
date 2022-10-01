@@ -1,15 +1,8 @@
 ---
 title: 字符类
 slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
-tags:
-  - 指南
-  - JavaScript
-  - 参考
-  - RegExp
-  - 正则表达式
-  - 字符类
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ---
+
 {{JSSidebar("JavaScript Guide")}}
 
 字符类可以区分各种字符，例如区分字母和数字。
@@ -57,17 +50,17 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
    <td>
     <p>有下列含义之一：</p>
     <ul>
-     <li>匹配除行终止符之外的任何单个字符：<code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. 例如，<code>/.y/</code> 在“yes make my day”中匹配“my”和“ay”，而不是“yes”。</li>
+     <li>匹配除行终止符之外的任何单个字符：<code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. 例如，<code>/.y/</code> 在“yes make my day”中匹配“my”和“ay”，而不是“yes”。</li>
      <li>在字符集内，点失去了它的特殊意义，并与文字点匹配。</li>
     </ul>
     <p>需要注意的是，<code>m</code> multiline 标志不会改变点的行为。因此，要跨多行匹配一个模式，可以使用字符集<code>[^]</code>—它将匹配任何字符，包括新行。</p>
-    <p>ES2018 添加了 <code>s</code>“dotAll”标志，它允许点也匹配行终止符。</p>
+    <p><code>s</code>“dotAll”标志允许点也匹配行终止符。</p>
    </td>
   </tr>
   <tr>
    <td><code>\d</code></td>
    <td>
-    <p>匹配任何数字 (阿拉伯数字)。相当于 <code>[0-9]</code>。例如，<code>/\d/</code> 或 <code>/[0-9]/</code> 匹配“B2is the suite number”中的“2”。</p>
+    <p>匹配任何数字 (阿拉伯数字)。相当于 <code>[0-9]</code>。例如，<code>/\d/</code> 或 <code>/[0-9]/</code> 匹配“B2is the suite number”中的“2”。</p>
    </td>
   </tr>
   <tr>
@@ -79,7 +72,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>\w</code></td>
    <td>
-    <p>匹配基本拉丁字母中的任何字母数字字符，包括下划线。相当于 <code>[A-Za-z0-9_]</code>。例如，<code>/\w/</code> 匹配“apple”中的“a”，匹配“$5.28”中的“5”，匹配“3D”中的“3”，以及匹配“Émanuel”中的“m”。</p>
+    <p>匹配基本拉丁字母中的任何字母数字字符，包括下划线。相当于 <code>[A-Za-z0-9_]</code>。例如，<code>/\w/</code> 匹配“apple”中的“a”，匹配“$5.28”中的“5”，匹配“3D”中的“3”，以及匹配“Émanuel”中的“m”。</p>
    </td>
   </tr>
   <tr>
@@ -91,7 +84,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>\s</code></td>
    <td>
-    <p>匹配单个空白字符，包括空格、制表符、换页符、换行符和其他 Unicode 空格。相当于 <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\s\w*/</code> 匹配“foo bar”中的“ bar”。</p>
+    <p>匹配单个空白字符，包括空格、制表符、换页符、换行符和其他 Unicode 空格。相当于 <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\s\w*/</code> 匹配“foo bar”中的“bar”。</p>
    </td>
   </tr>
   <tr>

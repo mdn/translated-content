@@ -11,6 +11,7 @@ tags:
   - has
 translation_of: Web/API/FormData/has
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode **`has()`** de l'interface {{domxref("FormData")}} renvoie un booléen indiquant si un objet `FormData` contient une certaine clé.
@@ -50,13 +51,11 @@ formData.has('username'); // Retourne true
 
 ## Spécifications
 
-| Spécification                                                                | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-has','has()')}} | {{Spec2('XMLHttpRequest')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.has")}}
+{{Compat}}
 
 ## Voir aussi
 

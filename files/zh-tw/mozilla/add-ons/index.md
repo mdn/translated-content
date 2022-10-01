@@ -1,8 +1,8 @@
 ---
 title: 附加元件
 slug: Mozilla/Add-ons
-translation_of: Mozilla/Add-ons
 ---
+
 {{AddonSidebar}}
 
 附加元件允許開發者擴充並訂製 Firefox 的功能。它們使用標準的 Web 技術－－JavaScript、HTML、CSS、還有一些專門的 JavaScript API－－寫成。另外，附加元件還能：

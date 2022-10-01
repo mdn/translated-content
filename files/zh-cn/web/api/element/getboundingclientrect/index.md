@@ -1,29 +1,8 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-tags:
-  - API
-  - Boundary
-  - Bounding
-  - Bounds
-  - CSSOM View
-  - Client
-  - Containing
-  - DOM
-  - Element
-  - Enclosing
-  - Method
-  - Minimum
-  - Rectangle
-  - Reference
-  - Smallest
-  - clientHeight
-  - getBoundingClientRect
-  - getClientRects
-  - offsetHeight
-  - scrollHeight
-translation_of: Web/API/Element/getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.getBoundingClientRect()`** 方法返回一个 {{domxref("DOMRect")}} 对象，其提供了元素的大小及其相对于[视口](/zh-CN/docs/Glossary/Viewport)的位置。
@@ -40,7 +19,7 @@ getBoundingClientRect()
 
 ### 返回值
 
-返回值是一个 {{domxref("DOMRect")}} 对象，是包含整个元素的最小矩形（包括 `padding` 和 `border-width`）。该对象使用 `left`、`top`、`right`、`bottom`、`x`、`y`、`width` 和 `height` 这几个以像素为单位的只读属性描述整个矩形的位置和大小。除了 `width` 和 `height` 以外的属性是相对于视图窗口的左上角来计算的。
+返回值是一个 {{domxref("DOMRect")}} 对象，是包含整个元素的最小矩形（包括 `padding` 和 `border-width`）。该对象使用 `left`、`top`、`right`、`bottom`、`x`、`y`、`width` 和 `height` 这几个以像素为单位的只读属性描述整个矩形的位置和大小。除了 `width` 和 `height` 以外的属性是相对于视图窗口的左上角来计算的。
 
 ![](element-box-diagram.png)
 
@@ -146,4 +125,4 @@ update();
 
 - {{domxref("Element.getClientRects", "getClientRects()")}}
 - [MSDN: `getBoundingClientRect`](https://msdn.microsoft.com/library/ms536433(VS.85).aspx)
-- [MSDN: `ClientRect`](https://msdn.microsoft.com/library/hh826029(VS.85).aspx)，更早版本的 `DOMRect`
+- [MSDN: `ClientRect`](https://msdn.microsoft.com/library/hh826029(VS.85).aspx)，更早版本的 `DOMRect`

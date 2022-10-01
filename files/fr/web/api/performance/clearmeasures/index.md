@@ -9,6 +9,7 @@ tags:
   - Performance web
 translation_of: Web/API/Performance/clearMeasures
 ---
+
 {{APIRef("User Timing API")}}
 
 La méthode **`clearMeasures()`** supprime les _mesures nommées_ du tampon d'entrée des performances du navigateur. Si la méthode est appelée sans arguments, toutes les {{domxref("PerformanceEntry", "entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} de « `measure` » seront supprimées du tampon d'entrée de performance.
@@ -65,11 +66,8 @@ logMeasureCount() // "J'ai trouvé ces nombreuses entrées : 0"
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                                       | Commentaire                        |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------- |
-| {{SpecName('User Timing Level 2', '#dom-performance-clearmeasures', 'clearMeasures()')}} | {{Spec2('User Timing Level 2')}} | Carification de `clearMeasures()`. |
-| {{SpecName('User Timing', '#dom-performance-clearmeasures', 'clearMeasures()')}}                     | {{Spec2('User Timing')}}             | Définition initiale.               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.clearMeasures")}}
+{{Compat}}

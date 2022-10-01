@@ -10,11 +10,12 @@ tags:
   - Workers
 translation_of: Web/API/WorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
-L'interface **`WorkerGlobalScope`** de l'[API Web Workers](/en-US/docs/Web/API/Web_Workers_API) est une interface représentant la portée de tout worker. Les Workers n'ont pas de contexte de navigation; cette portée contient les informations généralement véhiculées par les objets {{domxref("Window")}} — dans ce cas les gestionnaires d'événements, la console ou l'objet {{domxref("WorkerNavigator")}} associé. Chaque `WorkerGlobalScope` a sa propre boucle d'événements.
+L'interface **`WorkerGlobalScope`** de l'[API Web Workers](/fr/docs/Web/API/Web_Workers_API) est une interface représentant la portée de tout worker. Les Workers n'ont pas de contexte de navigation; cette portée contient les informations généralement véhiculées par les objets {{domxref("Window")}} — dans ce cas les gestionnaires d'événements, la console ou l'objet {{domxref("WorkerNavigator")}} associé. Chaque `WorkerGlobalScope` a sa propre boucle d'événements.
 
-Cette interface est généralement spécialisée par chaque type de worker : {{domxref("DedicatedWorkerGlobalScope")}} pour les workers dédiés, {{domxref("SharedWorkerGlobalScope")}} pour les workers partagés, et {{domxref("ServiceWorkerGlobalScope")}} pour [ServiceWorker](/en-US/docs/Web/API/ServiceWorker_API). La propriété `self` renvoie la portée spécialisée pour chaque contexte.
+Cette interface est généralement spécialisée par chaque type de worker : {{domxref("DedicatedWorkerGlobalScope")}} pour les workers dédiés, {{domxref("SharedWorkerGlobalScope")}} pour les workers partagés, et {{domxref("ServiceWorkerGlobalScope")}} pour [ServiceWorker](/fr/docs/Web/API/ServiceWorker_API). La propriété `self` renvoie la portée spécialisée pour chaque contexte.
 
 ## Propriétés
 
@@ -100,14 +101,11 @@ console.log(navigator);
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire                                                          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#workerglobalscope', 'WorkerGlobalScope')}} | {{Spec2('HTML WHATWG')}} | Aucun changement par rapport à {{SpecName ("Web Workers")}}. |
-| {{SpecName('Web Workers', '#workerglobalscope', 'WorkerGlobalScope')}} | {{Spec2('Web Workers')}} | Définition initiale.                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope")}}
+{{Compat}}
 
 ## Voir aussi
 

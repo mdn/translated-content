@@ -18,16 +18,16 @@ original_slug: Web/CSS/CSS_Animations/Usando_animaciones_CSS
 <p>Las animaciones CSS tienen tres ventajas principales sobre las técnicas tradicionales de animación basada en scripts:</p>
 
 <ol>
- <li>Son muy fáciles de usar para animaciones sencillas, puedes hacerlo incluso sin tener conocimientos de Javascript.</li>
- <li>La animación se muestra correctamente, incluso en equipos poco potentes. Animaciones simples realizadas en Javascript pueden verse mal (a menos que estén muy bien hechas). El motor de renderizado puede usar técnicas de optimización como el "frame-skipping" u otras técnicas para que la ejecución de la animación se vea tan suave como sea posible.</li>
+ <li>Son muy fáciles de usar para animaciones sencillas, puedes hacerlo incluso sin tener conocimientos de Javascript.</li>
+ <li>La animación se muestra correctamente, incluso en equipos poco potentes. Animaciones simples realizadas en Javascript pueden verse mal (a menos que estén muy bien hechas). El motor de renderizado puede usar técnicas de optimización como el "frame-skipping" u otras técnicas para que la ejecución de la animación se vea tan suave como sea posible.</li>
  <li>Al ser el navegador quien controle la secuencia de la animación, permitimos que optimice el rendimiento y eficiencia de la misma, por ejemplo, reduciendo la frecuencia de actualización de la animación ejecutándola en pestañas que no estén visibles.</li>
 </ol>
 
 <h2 id="Configurando_la_animación">Configurando la animación</h2>
 
-<p>Para crear una secuencia de animación CSS, tú estilizarás el elemento que quieras animar con la propiedad {{ cssxref("animation") }} y sus sub-propiedades. Con ellas podemos no solo configurar el ritmo y la duración de la animación sino otros detalles sobre la secuencia de la animación. Con ellas <strong>no</strong> configuramos la apariencia actual de la animación, para ello disponemos de {{ cssxref("@keyframes") }} como describiremos más adelante .</p>
+<p>Para crear una secuencia de animación CSS, tú estilizarás el elemento que quieras animar con la propiedad {{ cssxref("animation") }} y sus sub-propiedades. Con ellas podemos no solo configurar el ritmo y la duración de la animación sino otros detalles sobre la secuencia de la animación. Con ellas <strong>no</strong> configuramos la apariencia actual de la animación, para ello disponemos de {{ cssxref("@keyframes") }} como describiremos más adelante .</p>
 
-<p>Las subpropiedades de {{ cssxref("animation") }} son:</p>
+<p>Las subpropiedades de {{ cssxref("animation") }} son:</p>
 
 <dl>
  <dt>{{ cssxref("animation-delay") }}</dt>
@@ -39,7 +39,7 @@ original_slug: Web/CSS/CSS_Animations/Usando_animaciones_CSS
  <dt>{{ cssxref("animation-iteration-count") }}</dt>
  <dd>El número de veces que se repite. Podemos indicar <code>infinite</code> para repetir la animación indefinidamente.</dd>
  <dt>{{ cssxref("animation-name") }}</dt>
- <dd>Especifica el nombre de la regla {{ cssxref("@keyframes") }} que describe los fotogramas de la animación.</dd>
+ <dd>Especifica el nombre de la regla {{ cssxref("@keyframes") }} que describe los fotogramas de la animación.</dd>
  <dt>{{ cssxref("animation-play-state") }}</dt>
  <dd>Permite pausar y reanudar la secuencia de la animación</dd>
  <dt>{{ cssxref("animation-timing-function") }}</dt>
@@ -64,7 +64,7 @@ original_slug: Web/CSS/CSS_Animations/Usando_animaciones_CSS
 
 <p>Este sencillo ejemplo da estilos al elemento {{ HTMLElement("p") }} para que el texto se deslice por la pantalla entrando desde el borde derecho de la ventana del navegador.</p>
 
-<p>Animaciones como esta pueden hacer que la página se vuelva más ancha que la ventana del navegador. Para evitar este problema, pon el elemento que será animado en un contenedor y agrega {{cssxref("overflow")}}<code>:hidden</code> en el contenedor.</p>
+<p>Animaciones como esta pueden hacer que la página se vuelva más ancha que la ventana del navegador. Para evitar este problema, pon el elemento que será animado en un contenedor y agrega {{cssxref("overflow")}}<code>:hidden</code> en el contenedor.</p>
 
 <pre class="brush: css notranslate">p {
   animation-duration: 3s;
@@ -86,9 +86,9 @@ original_slug: Web/CSS/CSS_Animations/Usando_animaciones_CSS
 
 <p>El estilo del elemento {{ HTMLElement("p") }} especifica, a través de la propiedad {{ cssxref("animation-duration") }}, que la animación debe durar 3 segundos desde el inicio al fin y que el nombre de los {{ cssxref("@keyframes") }} que definen los fotogramas de la secuencia de la animación es "slidein".</p>
 
-<p>Si queremos añadir algún estilo personalizado sobre el elemento {{ HTMLElement("p") }} para usarlo en navegadores que no soporten animaciones CSS, también podemos incluirlos. En nuestro ejemplo, no queremos ningún otro estilo personalizado diferente al efecto de la animación.</p>
+<p>Si queremos añadir algún estilo personalizado sobre el elemento {{ HTMLElement("p") }} para usarlo en navegadores que no soporten animaciones CSS, también podemos incluirlos. En nuestro ejemplo, no queremos ningún otro estilo personalizado diferente al efecto de la animación.</p>
 
-<p>Los fotogramas se definen usando la regla {{ cssxref("@keyframes") }}. En nuestro ejemplo, tenemos solo dos fotogramas. El primero de ellos sucede en elt 0% (hemos usado su alias <code>from</code>). Aqui, configuramos el margen izquierdo del elemento, poniendolo al 100%  (es decir, en el borde derecho del elemento contenedor), y su ancho al 300% (o tres veces el ancho del elemento contenedor). Esto hace que en el primer fotograma de la animación tengamos el encabezado fuera del borde derecho de la ventana del navegador.</p>
+<p>Los fotogramas se definen usando la regla {{ cssxref("@keyframes") }}. En nuestro ejemplo, tenemos solo dos fotogramas. El primero de ellos sucede en elt 0% (hemos usado su alias <code>from</code>). Aqui, configuramos el margen izquierdo del elemento, poniendolo al 100%  (es decir, en el borde derecho del elemento contenedor), y su ancho al 300% (o tres veces el ancho del elemento contenedor). Esto hace que en el primer fotograma de la animación tengamos el encabezado fuera del borde derecho de la ventana del navegador.</p>
 
 <p>El segundo (y último) fotograma sucede en el 100% (hemos usado su alias <code>to</code>). Hemos puesto el margen derecho al 0% y el ancho del elemento al 100%. Esto produce que el encabezado, al finalizar la animación, esté en el borde derecho del área de contenido.</p>
 
@@ -142,7 +142,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <h3 id="Haciendo_que_se_repita">Haciendo que se repita</h3>
 
-<p>Para hacer que la animación se repita, solo hay que usar la propiedad {{ cssxref("animation-iteration-count") }} e indicarle cuántas veces debe repetirse. En nuestro caso, usamos  <code>infinite</code> para que la animación se repita indefinidamente:</p>
+<p>Para hacer que la animación se repita, solo hay que usar la propiedad {{ cssxref("animation-iteration-count") }} e indicarle cuántas veces debe repetirse. En nuestro caso, usamos  <code>infinite</code> para que la animación se repita indefinidamente:</p>
 
 <pre class="brush: css notranslate">p {
   animation-duration: 3s;
@@ -203,7 +203,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>{{EmbedLiveSample("Moviendolo_hacia_adelante_y_hacia_atrás","100%","250")}}</p>
 
-<h3 id="Usando_la_versión_abreviada_animation">Usando la versión abreviada animation</h3>
+<h3 id="Usando_la_versión_abreviada_animation">Usando la versión abreviada animation</h3>
 
 <p>La versión abreviada {{cssxref("animation")}} es usado para ahorrar espacio. Por ejemplo, la regla que hemos usado en este artículo:</p>
 
@@ -221,27 +221,27 @@ her in a languid, sleepy voice.&lt;/p&gt;
 }</code></pre>
 
 <div class="blockIndicator note">
-<p><strong>Nota: </strong>Puedes encontrar más detalles en la página de referencia {{cssxref("animation")}} </p>
+<p><strong>Nota: </strong>Puedes encontrar más detalles en la página de referencia {{cssxref("animation")}} </p>
 </div>
 
 <h3 id="Estableciendo_multiples_valores_de_propiedades_animation">Estableciendo multiples valores de propiedades animation</h3>
 
-<p>Las propiedades de la versión larga de {{cssxref("animation")}} pueden aceptar múltiples valores, separados por comas - esta característica puede ser usada cuando quieres aplicar múltiples animaciones en una solo regla, y establecer por separado duration, iteration-count, etc. para diferentes animaciones. Vamos a ver algunos ejemplos rápidos para explicar las diferentes combinaciones:</p>
+<p>Las propiedades de la versión larga de {{cssxref("animation")}} pueden aceptar múltiples valores, separados por comas - esta característica puede ser usada cuando quieres aplicar múltiples animaciones en una solo regla, y establecer por separado duration, iteration-count, etc. para diferentes animaciones. Vamos a ver algunos ejemplos rápidos para explicar las diferentes combinaciones:</p>
 
-<p>En el primer ejemplo, tenemos tres nombres de animación establecidos, pero solo una duración (duration) y número de iteraciones (iteration-count). En este caso, a las tres animaciones se les da la misma duración y número de iteraciones:</p>
+<p>En el primer ejemplo, tenemos tres nombres de animación establecidos, pero solo una duración (duration) y número de iteraciones (iteration-count). En este caso, a las tres animaciones se les da la misma duración y número de iteraciones:</p>
 
 <pre class="notranslate"><code>animation-name: fadeInOut, moveLeft300px, bounce;
 animation-duration: 3s;
 animation-iteration-count: 1;</code>
 </pre>
 
-<p>En el segundo ejemplo, tenemos tres valores establecidos en las tres propiedades. En este caso, cada animación se ejecuta con los valores correspondientes en la misma posición en cada propiedad, así por ejemplo <code>fadeInOut</code> tiene una duración de 2.5s y 2 iteraciones, etc.</p>
+<p>En el segundo ejemplo, tenemos tres valores establecidos en las tres propiedades. En este caso, cada animación se ejecuta con los valores correspondientes en la misma posición en cada propiedad, así por ejemplo <code>fadeInOut</code> tiene una duración de 2.5s y 2 iteraciones, etc.</p>
 
 <pre class="notranslate"><code>animation-name: fadeInOut, moveLeft300px, bounce;
 animation-duration: 2.5s, 5s, 1s;
 animation-iteration-count: 2, 1, 5;</code></pre>
 
-<p>En el tercer caso, hay tres animaciones especificadas, pero solo dos duraciones y número de iteraciones. En los casos en donde no hay valores suficientes para dar un valor separado a cada animación, los valores se repiten de inicio a fin. Así por ejemplo, <code>fadeInOut</code> obtiene una duración de 2.5s y <code>moveLeft300px</code> obtiene una duración de 5s. Ahora tenemos asignados todos los valores de duracion disponibles, así que empezamos desde el inicio de nuevo - por lo tanto <code>bounce</code>  tiene una duración de 2.5s. El número de iteraciones (y cualquier otra propiedad que especifiques) será asignados de la misma forma.</p>
+<p>En el tercer caso, hay tres animaciones especificadas, pero solo dos duraciones y número de iteraciones. En los casos en donde no hay valores suficientes para dar un valor separado a cada animación, los valores se repiten de inicio a fin. Así por ejemplo, <code>fadeInOut</code> obtiene una duración de 2.5s y <code>moveLeft300px</code> obtiene una duración de 5s. Ahora tenemos asignados todos los valores de duracion disponibles, así que empezamos desde el inicio de nuevo - por lo tanto <code>bounce</code>  tiene una duración de 2.5s. El número de iteraciones (y cualquier otra propiedad que especifiques) será asignados de la misma forma.</p>
 
 <pre class="notranslate"><code>animation-name: fadeInOut, moveLeft300px, bounce;
 animation-duration: 2.5s, 5s;
@@ -255,7 +255,7 @@ animation-iteration-count: 2, 1;</code></pre>
 
 <h4 id="Agregando_CSS">Agregando CSS</h4>
 
-<p>Empezamos creando el CSS para la animación. Esta animación durará 3 segundos, se llama <code>slidein</code>, se repite 3 veces, y alterna de dirección cada vez. En {{cssxref("@keyframes")}}, <code>width</code> y <code>margin-left</code> son manipulados para hacer que el elemento se deslice por la pantalla.</p>
+<p>Empezamos creando el CSS para la animación. Esta animación durará 3 segundos, se llama <code>slidein</code>, se repite 3 veces, y alterna de dirección cada vez. En {{cssxref("@keyframes")}}, <code>width</code> y <code>margin-left</code> son manipulados para hacer que el elemento se deslice por la pantalla.</p>
 
 <pre class="brush: css notranslate">.slidein {
   animation-duration: 3s;
@@ -289,7 +289,7 @@ e.className = "slidein";</pre>
 
 <p>Es la forma estándar de detectar eventos en Javascript, si quieres conocer más detalles sobre cómo funciona la detección de eventos, consulta la documentación de {{ domxref("element.addEventListener()") }}.</p>
 
-<p>La última línea pone la clase <code>slidein</code> al elemento para comenzar la animación. ¿Por qué?. Porque que el evento <code>animationstart</code> se dispara cuando comienza la animación y, en nuestro caso, esto sucedería antes de que nuestro código se hubiera ejecutado y no podríamos crear los detectores de eventos. Para evitarlo, creamos los detectores de eventos antes y añadimos la clase al elemento para iniciar la animación.</p>
+<p>La última línea pone la clase <code>slidein</code> al elemento para comenzar la animación. ¿Por qué?. Porque que el evento <code>animationstart</code> se dispara cuando comienza la animación y, en nuestro caso, esto sucedería antes de que nuestro código se hubiera ejecutado y no podríamos crear los detectores de eventos. Para evitarlo, creamos los detectores de eventos antes y añadimos la clase al elemento para iniciar la animación.</p>
 
 <h4 id="Recibiendo_los_eventos">Recibiendo los eventos</h4>
 

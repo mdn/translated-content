@@ -1,11 +1,8 @@
 ---
 title: API
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - NeedsTranslation
-  - TopicStub
-translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
+
 {{AddonSidebar}}
 
 WebExtension JavaScript API 可以在附加组件的[后台脚本](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)和附加组件定义的任何[浏览器动作](/zh-CN/Add-ons/WebExtensions/User_interface_components#Browser_actions)或[页面动作](/zh-CN/Add-ons/WebExtensions/User_interface_components#Page_actions)中使用。这里的部分 API 也可以通过附加组件的[内容脚本](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts)访问（见[内容脚本指南列表](/zh-CN/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)）。

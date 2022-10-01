@@ -3,7 +3,7 @@ title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
-<p><code><strong>Access-Control-Allow-Origin</strong></code> 응답 헤더는 이 응답이 주어진 {{glossary("origin")}}으로부터의 요청 코드와 공유될 수 있는지를 나타냅니다.</p>
+<p><code><strong>Access-Control-Allow-Origin</strong></code> 응답 헤더는 이 응답이 주어진 {{glossary("origin")}}으로부터의 요청 코드와 공유될 수 있는지를 나타냅니다.</p>
 
 <table class="properties">
  <tbody>
@@ -29,7 +29,7 @@ Access-Control-Allow-Origin: null
 
 <dl>
  <dt><code>*</code></dt>
- <dd><em>credential</em>이 없는 요청들에 와일드카드로써 문자 값 "*"이 명시될 수 있습니다. 이 값은 브라우저에 리소스에 접근하는 임의의 origin으로부터의 요청 코드를 허용함을 알립니다.  와일드카드를 credential과 함께 사용하려고 하면 <a href="/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials">오류가 발생</a>합니다.</dd>
+ <dd><em>credential</em>이 없는 요청들에 와일드카드로써 문자 값 "*"이 명시될 수 있습니다. 이 값은 브라우저에 리소스에 접근하는 임의의 origin으로부터의 요청 코드를 허용함을 알립니다.  와일드카드를 credential과 함께 사용하려고 하면 <a href="/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials">오류가 발생</a>합니다.</dd>
  <dt><code>&lt;origin&gt;</code></dt>
  <dd>origin을 명시합니다. 하나의 origin만 명시될 수 있습니다.</dd>
 </dl>
@@ -44,18 +44,18 @@ Access-Control-Allow-Origin: null
 
 <pre>Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
 
-<p>가능한 <code>Access-Control-Allow-Origin</code> 값을 허용된 origin 집합으로 제한하는 것은 요청 헤더의 {{HTTPHeader("Origin")}}를 검사하는 서버 측 코드가 필요합니다. 이를 허용된 origin 리스트와 비교하고,  {{HTTPHeader("Origin")}} 값이 리스트에 있으면 <code>Access-Control-Allow-Origin</code> 값을 {{HTTPHeader("Origin")}}과 동일한 값으로 설정합니다.</p>
+<p>가능한 <code>Access-Control-Allow-Origin</code> 값을 허용된 origin 집합으로 제한하는 것은 요청 헤더의 {{HTTPHeader("Origin")}}를 검사하는 서버 측 코드가 필요합니다. 이를 허용된 origin 리스트와 비교하고,  {{HTTPHeader("Origin")}} 값이 리스트에 있으면 <code>Access-Control-Allow-Origin</code> 값을 {{HTTPHeader("Origin")}}과 동일한 값으로 설정합니다.</p>
 
 <h3 id="CORS_and_caching">CORS and caching</h3>
 
-<p>서버가 ("<code>*</code>" 와일드카드 외에) 명시적인 origin을 <code>Access-Control-Allow-Origin</code> 과 함께 응답으로 보내면, 응답은 값이 <code>Origin</code>인 {{HTTPHeader("Vary")}} 응답 헤더 또한 포함해야 합니다 — 브라우저에 서버가 <code>Origin</code> 요청 헤더의 값에 따라 다르게 응답할 수 있음을 알리기 위해.</p>
+<p>서버가 ("<code>*</code>" 와일드카드 외에) 명시적인 origin을 <code>Access-Control-Allow-Origin</code> 과 함께 응답으로 보내면, 응답은 값이 <code>Origin</code>인 {{HTTPHeader("Vary")}} 응답 헤더 또한 포함해야 합니다 — 브라우저에 서버가 <code>Origin</code> 요청 헤더의 값에 따라 다르게 응답할 수 있음을 알리기 위해.</p>
 
 <pre>Access-Control-Allow-Origin: https://developer.mozilla.org
 Vary: Origin</pre>
 
 <h3 id="Handling_CORS_on_the_server_(Java_example)">Handling CORS on the server (Java example)</h3>
 
-<p>다음의 Java 코드는 CORS 요청 헤더를 설정합니다. 코드가 어떻게 <code>Access-Control-Allow-Origin</code> 값을 {{HTTPHeader("Origin")}} 요청 헤더와 동일한 값을 설정하는지 알아 두십시오.</p>
+<p>다음의 Java 코드는 CORS 요청 헤더를 설정합니다. 코드가 어떻게 <code>Access-Control-Allow-Origin</code> 값을 {{HTTPHeader("Origin")}} 요청 헤더와 동일한 값을 설정하는지 알아 두십시오.</p>
 
 <pre class="brush: java">import java.io.IOException;
 import javax.servlet.Filter;
@@ -106,22 +106,7 @@ public void destroy() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

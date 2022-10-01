@@ -1,15 +1,8 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-size
-translation_of: Web/CSS/background-size
 ---
+
 {{CSSRef}}
 
 **`background-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像の寸法を設定します。画像は自然な寸法になったり、引き伸ばされたり、利用可能な領域に収まるように縮小されたりします。

@@ -1,16 +1,9 @@
 ---
 title: イベントの作成と起動
 slug: Web/Events/Creating_and_triggering_events
-tags:
-  - 上級者
-  - DOM
-  - ガイド
-  - JavaScript
-  - NeedsContent
-  - イベント
-translation_of: Web/Events/Creating_and_triggering_events
 original_slug: Web/Events/Creating_and_triggering_events
 ---
+
 この記事では、 DOM イベントを作成して処理する方法を説明します。このようなイベントは、一般に、ブラウザー自体によって起動されたイベントとは対照的に、**合成イベント**と呼ばれます。
 
 ## カスタムイベントの作成
@@ -84,8 +77,8 @@ const textarea = document.querySelector('textarea');
 
 // 新しいイベントを生成し、バブリングを許可し、 "detail" プロパティに渡したいデータを設定する
 const eventAwesome = new CustomEvent('awesome', {
-  bubbles: true,
-  detail: { text: () => textarea.value }
+  bubbles: true,
+  detail: { text: () => textarea.value }
 });
 
 // フォームイベントが "awesome" カスタムイベントを待ち受けし、渡されたものの text() メソッドをコンソールに出力する
@@ -101,7 +94,7 @@ textarea.addEventListener('input', e => e.target.dispatchEvent(eventAwesome));
 
 ```html
 <form>
-  <textarea></textarea>
+  <textarea></textarea>
 </form>
 ```
 
@@ -112,9 +105,9 @@ const textarea = document.querySelector('textarea');
 form.addEventListener('awesome', e => console.log(e.detail.text()));
 
 textarea.addEventListener('input', function() {
-  // Create and dispatch/trigger an event on the fly
-  // Note: Optionally, we've also leveraged the "function expression" (instead of the "arrow function expression") so "this" will represent the element
-  this.dispatchEvent(new CustomEvent('awesome', { bubbles: true, detail: { text: () => textarea.value } }))
+  // Create and dispatch/trigger an event on the fly
+  // Note: Optionally, we've also leveraged the "function expression" (instead of the "arrow function expression") so "this" will represent the element
+  this.dispatchEvent(new CustomEvent('awesome', { bubbles: true, detail: { text: () => textarea.value } }))
 });
 ```
 
@@ -130,7 +123,7 @@ function simulateClick() {
     cancelable: true
   });
   const cb = document.getElementById('checkbox');
-  const cancelled = !cb.dispatchEvent(event);
+  const cancelled = !cb.dispatchEvent(event);
 
   if (cancelled) {
     // A handler called preventDefault.

@@ -1,15 +1,15 @@
 ---
 title: tabs.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 ---
+
 {{AddonSidebar()}}
 
 从 background scripts 中发送单个消息 (or other privileged scripts, such as popup scripts or options page scripts) 到任何 content scripts that belong to the extension and are running in the specified tab.
 
 这个消息将被 content scripts 中 {{WebExtAPIRef("runtime.onMessage")}} 事件的所有监听者收到，然后它们可以选择通过使用 `sendResponse` 这个方法发送一个 response 到 background scripts。
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
@@ -30,15 +30,15 @@ var sending = browser.tabs.sendMessage(
 - `options`{{optional_inline}}
   - : `object`.
     - `frameId`{{optional_inline}}
-      - : `integer`. Sends the message to a specific frame identified by `frameId` instead of all frames in the tab. Whether the content script is executed in all frames depends on the `all_frames` setting in the [`content_scripts`](/en-US/Add-ons/WebExtensions/manifest.json/content_scripts) section of manifest.json.
+      - : `integer`. Sends the message to a specific frame identified by `frameId` instead of all frames in the tab. Whether the content script is executed in all frames depends on the `all_frames` setting in the [`content_scripts`](/zh-CN/Add-ons/WebExtensions/manifest.json/content_scripts) section of manifest.json.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with the JSON response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response. If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message. If several frames response to the message, the promise is resolved to one of answers.
+A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with the JSON response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response. If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message. If several frames response to the message, the promise is resolved to one of answers.
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs.sendMessage")}}
+{{Compat}}
 
 ## Examples
 
@@ -91,7 +91,8 @@ browser.runtime.onMessage.addListener(request => {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +119,4 @@ browser.runtime.onMessage.addListener(request => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

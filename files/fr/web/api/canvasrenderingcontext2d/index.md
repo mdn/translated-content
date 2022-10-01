@@ -8,6 +8,7 @@ tags:
   - graphique
 translation_of: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 L'interface **CanvasRenderingContext2D** est utilisée pour dessiner des rectangles, du texte, des images et d'autres objets sur l'élément canvas. Il fournit le contexte de rendu 2D pour la surface de dessin d'un élément {{HTMLElement("canvas")}}.
@@ -147,7 +148,7 @@ The following methods can be used to manipulate paths of objects.
 - {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}
   - : Scrolls the current path or a given path into the view.
 - {{domxref("CanvasRenderingContext2D.clip()")}}
-  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
+  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}
   - : Reports whether or not the specified point is contained in the current path.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
@@ -307,16 +308,14 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 - {{non-standard_inline}} `CanvasRenderingContext2D.msFillRule`
   - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#2dcontext:canvasrenderingcontext2d", "CanvasRenderingContext2D")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - {{domxref("HTMLCanvasElement")}}

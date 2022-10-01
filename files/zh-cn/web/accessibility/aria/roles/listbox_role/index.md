@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: listbox role'
 slug: Web/Accessibility/ARIA/Roles/listbox_role
-tags:
-  - ARIA
-  - 可访问性
-  - 无障碍
-translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 ---
+
 `listbox` 角色用于列表，用户可以从中选择一个或多个静态选项，并且与 HTML {{HTMLElement("select")}} 元素不同，它可能包含图像。
 
 ## 描述
@@ -17,7 +13,7 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 
 具有 `listbox` 角色的元素含有隐式的 `aria-orientation` 和 `vertical` 值。
 
-当一个列表被 tab 聚焦到时，如果没有其他内容，将会选择列表中的第一项。可以用 Up/Down 方向键在列表中导航，按 Shift + Up/Down 方向键将移动并扩展选择。键入一个或多个字母将在列表项中导航（相同的字母指向以那个开头的每个选项，不同的字母指向以整个字符串开头的第一个选项）。如果当前选项有关联的菜单， Shift+F10 将启动该菜单。如果项目可被勾选，Space 可用于切换 [`checkbox`](https://www.w3.org/TR/wai-aria-practices/#checkbox) role。对于可选择的列表项，Space 切换它们的选择，Shift+Space 可用于选择连续的项目，Ctrl+ 方向键 移动而不选择， Ctrl+Space 可用于选择非连续的项目。建议使用 checkbox、link 或其他方法来选择所有项目，为此可以使用 Ctrl+A 作为快捷键。
+当一个列表被 tab 聚焦到时，如果没有其他内容，将会选择列表中的第一项。可以用 Up/Down 方向键在列表中导航，按 Shift + Up/Down 方向键将移动并扩展选择。键入一个或多个字母将在列表项中导航（相同的字母指向以那个开头的每个选项，不同的字母指向以整个字符串开头的第一个选项）。如果当前选项有关联的菜单，Shift+F10 将启动该菜单。如果项目可被勾选，Space 可用于切换 [`checkbox`](https://www.w3.org/TR/wai-aria-practices/#checkbox) role。对于可选择的列表项，Space 切换它们的选择，Shift+Space 可用于选择连续的项目，Ctrl+ 方向键 移动而不选择，Ctrl+Space 可用于选择非连续的项目。建议使用 checkbox、link 或其他方法来选择所有项目，为此可以使用 Ctrl+A 作为快捷键。
 
 当 listbox 角色被添加到元素中，或含有它的元素变得可见时，屏幕阅读器会在 listbox 获得焦点时读出它的 label 和 role。如果列表中的 option 或选项获得焦点，则接下来会读出它，如果屏幕阅读器支持，则会在列表中指示选项的位置。当焦点在列表中移动时，屏幕阅读器会读出相关选项。
 
@@ -26,7 +22,7 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 #### 相关角色
 
 - [option](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role)
-  - : 需要一个或多个嵌套的 `option`。 所有被选择的选项都含有 `aria-selected` 且值为 `true`。所有未选中的选项都含有 `aria-selected` 且值为 `false`。 如果某个选项不可选择，`aria-selected` 会被忽略。
+  - : 需要一个或多个嵌套的 `option`。所有被选择的选项都含有 `aria-selected` 且值为 `true`。所有未选中的选项都含有 `aria-selected` 且值为 `false`。如果某个选项不可选择，`aria-selected` 会被忽略。
 - [list](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
   - : 包含 `listitem` 元素的部分
 
@@ -47,7 +43,7 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 - aria-labelledby
   - : 标识以空格分隔的元素 ID 列表中的一个或多个可见元素，这些元素标识 listbox。如果没有可见标签，则应该使用 `aria-label` 来包含标签。（注意：带有两个 L 的 "labelled" 是基于辅助功能 API 约定的正确拼写。）
 - aria-roledescription
-  - : 一个可供人类阅读的字符串，可以更清楚地标识 listbox 的作用。屏幕阅读器通常会在阅读标签（如果存在）后向用户阅读此值，而不是说 “listbox”。
+  - : 一个可供人类阅读的字符串，可以更清楚地标识 listbox 的作用。屏幕阅读器通常会在阅读标签（如果存在）后向用户阅读此值，而不是说“listbox”。
 
 （有关更多详细信息以及 ARIA 状态和属性的完整列表，请参阅 [ARIA `listbox` (role)](https://www.w3.org/TR/wai-aria-1.1/#listbox) 文档。 )
 
@@ -130,18 +126,18 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 
 当用户选择一个选项时，必须发生以下情况：
 
-1.  取消选择先前选择的选项，将 aria-selected 设置为 false，或完全删除该属性，将新未选择的选项的外观更改为未选择的。
-2.  选择新选择的选项，在该选项上设置 aria-selected="true" 并将新选择的选项的外观更改为选中。
-3.  将列表框上的 `aria-activedescendant` 值更新为新选择的选项的 id
-4.  可视化处理选项的丢焦、聚焦和选定状态
+1. 取消选择先前选择的选项，将 aria-selected 设置为 false，或完全删除该属性，将新未选择的选项的外观更改为未选择的。
+2. 选择新选择的选项，在该选项上设置 aria-selected="true" 并将新选择的选项的外观更改为选中。
+3. 将列表框上的 `aria-activedescendant` 值更新为新选择的选项的 id
+4. 可视化处理选项的丢焦、聚焦和选定状态
 
 #### 在多选列表框中切换选项的状态
 
 当用户点击一个选项、聚焦在一个选项时按下 <kbd>Space</kbd>或者以其他方式切换一个选项的状态，必须发生以下情况：
 
-1.  切换当前聚焦选项的 aria-selected 状态，如果它是 false，则将 aria-selected 的状态更改为 true，如果为 true，则将其更改为 false。
-2.  更改选项的外观以反映其选定状态
-3.  将列表框上的 aria-activedescendant 值更新为用户刚刚与之交互的选项的 id，即使他们将选项切换为取消选择。
+1. 切换当前聚焦选项的 aria-selected 状态，如果它是 false，则将 aria-selected 的状态更改为 true，如果为 true，则将其更改为 false。
+2. 更改选项的外观以反映其选定状态
+3. 将列表框上的 aria-activedescendant 值更新为用户刚刚与之交互的选项的 id，即使他们将选项切换为取消选择。
 
 > **备注：** ARIA 使用的第一原则是您可以使用具有内置语义和行为的原生功能，而不是重新利用元素并**添加** ARIA 角色、状态或属性使其可访问。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。
 

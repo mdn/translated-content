@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
+
 {{jsSidebar("Objects")}}
 
 La valeur **`null`** est un littéral JavaScript représentant la nullité au sens où aucune valeur pour l'objet n'est présente. C'est une des valeurs primitives de JavaScript.

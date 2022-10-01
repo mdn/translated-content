@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Element/clientWidth
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Element.clientWidth`** vaut zéro pour les éléments en ligne (_inline_) et pour les éléments sans CSS. Dans les autres cas, sa valeur correspond à la largeur intérieure d'un élément, exprimée en pixel. Cette largeur inclue le rembourrage (_padding_) mais exclut les bordures, les marges et les éventuelles barres de défilement verticales.
@@ -30,17 +31,11 @@ var intElemClientWidth = element.clientWidth;
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSSOM View', '#dom-element-clientwidth', 'clientWidth')}} | {{Spec2("CSSOM View")}} |              |
-
-### Notes
-
-`clientWidth` fut d'abord introduit avec le modèle objet DHTML de Microsoft Internet Explorer.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.clientWidth")}}
+{{Compat}}
 
 ## Voir aussi
 

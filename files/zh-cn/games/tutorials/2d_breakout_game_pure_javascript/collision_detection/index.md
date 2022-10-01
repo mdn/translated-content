@@ -1,13 +1,13 @@
 ---
 title: 撞击处理
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
-本篇为[Gamedev Canvas tutorial](/en-US/docs/Games/Workflows/Breakout_game_from_scratch)10 节教程中的**第 7 节。**在你完成这篇课程之后，你可以在[Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).找到我们的源代码。
+本篇为[Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch)10 节教程中的**第 7 节。**在你完成这篇课程之后，你可以在[Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).找到我们的源代码。
 
 我们已经在屏幕上画出了砖块，但游戏仍然没有那么有趣，因为球通过它们。我们需要考虑增加碰撞检测，这样球就可以弹击砖块并打破它们。
 
@@ -126,6 +126,6 @@ collisionDetection();
 
 ## 下一节
 
-我们现在肯定到了，继续前进吧！在第八章中，我们将探讨如何跟踪得分和获胜。[Track the score and win](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win).
+我们现在肯定到了，继续前进吧！在第八章中，我们将探讨如何跟踪得分和获胜。[Track the score and win](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

@@ -1,13 +1,8 @@
 ---
 title: 'Location: ancestorOrigins'
 slug: Web/API/Location/ancestorOrigins
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
-browser-compat: api.Location.ancestorOrigins
 ---
+
 {{APIRef("Location")}}
 
 {{domxref("Location")}}接口的 **`ancestorOrigins`** 只读属性是一个静态的{{domxref("DOMStringList")}}，倒序排列了此{{domxref("Location")}}对象所属文档先前所有浏览上下文的来源。

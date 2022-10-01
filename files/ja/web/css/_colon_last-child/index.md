@@ -1,16 +1,8 @@
 ---
 title: ':last-child'
 slug: Web/CSS/:last-child
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.last-child
-translation_of: Web/CSS/:last-child
 ---
+
 {{CSSRef}}
 
 **`:last-child`** は[CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で最後の要素を表します。
@@ -106,7 +98,7 @@ ul li:last-child {
 
 ## 関連情報
 
-- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}
+- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}
 - {{CSSxRef(":last-of-type")}}
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":nth-child")}}

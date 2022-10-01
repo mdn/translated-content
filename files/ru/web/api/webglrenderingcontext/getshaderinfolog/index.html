@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/getShaderInfoLog
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><strong>WebGLRenderingContext.getShaderInfoLog</strong> возвращает логи для указанной шейдерной программы {{domxref("WebGLShader")}}. Оно содержит предупреждения, информацию для отладки и информацию о компиляции.</p>
+<p><strong>WebGLRenderingContext.getShaderInfoLog</strong> возвращает логи для указанной шейдерной программы {{domxref("WebGLShader")}}. Оно содержит предупреждения, информацию для отладки и информацию о компиляции.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/WebGLRenderingContext/getShaderInfoLog
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>{{domxref("DOMString")}} может содержать диагностические сообщения, предупреждения и другую информацию о последней операции компиляции. Когда {{domxref("WebGLShader")}} объект создан, его информационный журнал будет строкой длинной 0.</p>
+<p>{{domxref("DOMString")}} может содержать диагностические сообщения, предупреждения и другую информацию о последней операции компиляции. Когда {{domxref("WebGLShader")}} объект создан, его информационный журнал будет строкой длинной 0.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -36,7 +36,7 @@ gl.compileShader(shader);
 var message = gl.getShaderInfoLog(shader);
 
 if (message.length &gt; 0) {
-  /* Сообщение может быть ошибкой или предупреждением */
+  /* Сообщение может быть ошибкой или предупреждением */
   throw message;
 }
 </pre>
@@ -52,6 +52,6 @@ if (message.length &gt; 0) {
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li>{{domxref("WebGLRenderingContext.getShaderParameter()")}} – использование с <code>gl.COMPILE_STATUS</code> для проверки ошибок компиляции.</li>
+ <li>{{domxref("WebGLRenderingContext.getShaderParameter()")}} – использование с <code>gl.COMPILE_STATUS</code> для проверки ошибок компиляции.</li>
  <li>{{domxref("WebGLRenderingContext.getError()")}}</li>
 </ul>

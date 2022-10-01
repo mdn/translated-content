@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 ---
+
 {{AddonSidebar()}}
 
 Effectuer une recherche en utilisant le moteur de recherche spécifié, ou le moteur de recherche par défaut si aucun moteur de recherche n'est spécifié.
@@ -65,7 +66,7 @@ function search() {
 browser.browserAction.onClicked.addListener(search);
 ```
 
-Recherche à l'aide de Wikipedia. Les résultats seront affichés dans un nouvel onglet :
+Recherche à l'aide de Wikipédia. Les résultats seront affichés dans un nouvel onglet :
 
 ```js
 function search() {
@@ -78,7 +79,7 @@ function search() {
 browser.browserAction.onClicked.addListener(search);
 ```
 
-Recherche à l'aide de Wikipedia. Les résultats seront affichés dans un nouvel onglet
+Recherche à l'aide de Wikipédia. Les résultats seront affichés dans un nouvel onglet
 
 ```js
 function search(tab) {

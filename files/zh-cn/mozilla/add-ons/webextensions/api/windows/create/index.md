@@ -1,8 +1,8 @@
 ---
 title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 ---
+
 {{AddonSidebar()}}
 
 创建一个新的窗口。
@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 - 创建一个面板样式的窗口，它没有浏览器的默认样式（地址栏，工具栏等）
 - 设置窗口的多种属性，像是获得焦点或是为隐私窗口。
 
-这是一个异步的方法返回一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+这是一个异步的方法返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## 语法
 
@@ -30,7 +30,7 @@ var creating = browser.windows.create(
 - `createData`{{optional_inline}}
   - : `object`.
     - `url`{{optional_inline}}
-      - : 字符串或字符串数组. 一个 URL 或都 URL 数组要在该窗口中打开成标签页的。完整的需要包括 scheme (像。`http://www.google.com`, not `www.google.com`). 相对路径将相对于该拓展中的当前页。默认为打开新标签页。
+      - : 字符串或字符串数组。一个 URL 或都 URL 数组要在该窗口中打开成标签页的。完整的需要包括 scheme (像。`http://www.google.com`, not `www.google.com`). 相对路径将相对于该拓展中的当前页。默认为打开新标签页。
     - `tabId`{{optional_inline}}
       - : `integer`. 如果设置了该值，将该 tab 从一个现有的窗口中移到新窗口中。
     - `left`{{optional_inline}}
@@ -44,7 +44,7 @@ var creating = browser.windows.create(
     - `focused`{{optional_inline}}
       - : `boolean`.如果 为`true`, 新窗口将获取焦点。否则新窗口当在后台打开并且当前焦点窗口继续保持焦点。默认为 true
     - `incognito`{{optional_inline}}
-      - : `boolean`. 是否打开为一个隐私窗口。`如果设定为隐私窗口并且引入了tabId`, 则 tabId 对应的标签必须是一个隐私标签— 即不能把一个不是隐私标签的标签页移动到隐私窗口中。
+      - : `boolean`。是否打开为一个隐私窗口。如果设定为隐私窗口并且引入了 `tabId`, 则 tabId 对应的标签必须是一个隐私标签— 即不能把一个不是隐私标签的标签页移动到隐私窗口中。
     - `type`{{optional_inline}}
       - : 一{{WebExtAPIRef('windows.CreateType')}} 值，表示创建窗口的类型。`panel` 或者`popup` 样式将打开一个没有默认浏览器样式的窗口 (地址栏，工具栏等）。
     - `state`{{optional_inline}}
@@ -52,7 +52,7 @@ var creating = browser.windows.create(
 
 ### 返回值
 
-一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 其中传入一个包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。这个{{WebExtAPIRef('windows.Window')}} 有自己的 tabs 属性集 ,而不像 {{WebExtAPIRef("windows.get()")}}返回的窗口对象和相似的 API, 如果传递了 populate 项其仅仅包含 tabs. 如果发生了错误 promise will be rejected with an error message.
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 其中传入一个包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。这个{{WebExtAPIRef('windows.Window')}} 有自己的 tabs 属性集 ,而不像 {{WebExtAPIRef("windows.get()")}}返回的窗口对象和相似的 API, 如果传递了 populate 项其仅仅包含 tabs. 如果发生了错误 promise will be rejected with an error message.
 
 ## 示例
 
@@ -131,7 +131,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -158,4 +159,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

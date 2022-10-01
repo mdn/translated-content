@@ -1,12 +1,8 @@
 ---
 title: Node.compareDocumentPosition()
 slug: Web/API/Node/compareDocumentPosition
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.compareDocumentPosition
-translation_of: Web/API/Node/compareDocumentPosition
 ---
+
 {{APIRef("DOM")}}
 
 **`compareDocumentPosition()`** は {{domxref("Node")}} インターフェイスのメソッドで、引数のノードの位置を、呼び出されたノードからの相対位置で報告します。

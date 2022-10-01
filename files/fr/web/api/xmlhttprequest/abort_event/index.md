@@ -4,6 +4,7 @@ slug: Web/API/XMLHttpRequest/abort_event
 translation_of: Web/API/XMLHttpRequest/abort_event
 original_slug: Web/Events/abort_(ProgressEvent)
 ---
+
 L'événement **abort** est déclenché lorsque la progression a été interompue (Non causé par une erreur)
 
 ## Informations générales
@@ -39,9 +40,9 @@ L'événement **abort** est déclenché lorsque la progression a été interompu
 - {{event("progress")}}
 - {{event("error")}}
 - {{event("abort")}}
-- {{event("load")}}
+- [`load`](/fr//docs/Web/API/Window/load_event)
 - {{event("loadend")}}
 
 ## Voir aussi
 
-- [Surveillance de la progression](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+- [Surveillance de la progression](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)

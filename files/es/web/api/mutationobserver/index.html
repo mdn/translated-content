@@ -5,13 +5,13 @@ translation_of: Web/API/MutationObserver
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><code>MutationObserver</code> establece un mecanismo para reaccionar ante cambios en el <a href="/en-US/docs/DOM">DOM</a>. Ha sido diseñado como un sustituto de los <a href="/en-US/docs/DOM/Mutation_events">Mutation Events</a> definidos en las especificaciones de <em>DOM3 Events</em>.</p>
+<p><code>MutationObserver</code> establece un mecanismo para reaccionar ante cambios en el <a href="/en-US/docs/DOM">DOM</a>. Ha sido diseñado como un sustituto de los <a href="/en-US/docs/DOM/Mutation_events">Mutation Events</a> definidos en las especificaciones de <em>DOM3 Events</em>.</p>
 
 <h2 id="Constructor" name="Constructor">Constructor</h2>
 
 <h3 id="MutationObserver()" name="MutationObserver()"><code>MutationObserver()</code></h3>
 
-<p>Constructor para la instaciación de nuevos <em>DOM mutation observers</em>.</p>
+<p>Constructor para la instaciación de nuevos <em>DOM mutation observers</em>.</p>
 
 <pre class="eval">MutationObserver(
   function callback
@@ -22,7 +22,7 @@ translation_of: Web/API/MutationObserver
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>La función que será llamada en cada mutación del DOM. El <em>observer</em> llamará a esta función con dos argumentos. El primero es un array de objetos, cada uno del tipo <a href="#MutationRecord"><code>MutationRecord</code></a>. El segundo es la propia instancia del <code>MutationObserver</code>.</dd>
+ <dd>La función que será llamada en cada mutación del DOM. El <em>observer</em> llamará a esta función con dos argumentos. El primero es un array de objetos, cada uno del tipo <a href="#MutationRecord"><code>MutationRecord</code></a>. El segundo es la propia instancia del <code>MutationObserver</code>.</dd>
 </dl>
 
 <h2 id="Instance_methods" name="Instance_methods">Métodos</h2>
@@ -43,7 +43,7 @@ translation_of: Web/API/MutationObserver
 
 <h3 id="observe()" name="observe()"><code>observe()</code></h3>
 
-<p>Registra la instancia del <code>MutationObserver</code>  para recibir notificaciones de las mutaciones del DOM sobre el nodo especificado.</p>
+<p>Registra la instancia del <code>MutationObserver</code>  para recibir notificaciones de las mutaciones del DOM sobre el nodo especificado.</p>
 
 <pre class="eval">void observe(
   {{domxref("Node")}} target,
@@ -57,10 +57,10 @@ translation_of: Web/API/MutationObserver
  <dt><code>target</code></dt>
  <dd>El {{domxref("Node")}} sobre el que observar las mutaciones del DOM.</dd>
  <dt><code>options</code></dt>
- <dd><code>Un objeto <a href="#MutationObserverInit">MutationObserverInit</a></code>, que especifica que mutaciones del DOM deben ser informadas.</dd>
+ <dd><code>Un objeto <a href="#MutationObserverInit">MutationObserverInit</a></code>, que especifica que mutaciones del DOM deben ser informadas.</dd>
 </dl>
 
-<div class="note">NOTA: Añadir un observador a un elemento es igual que addEventListener, si usted observa el elemento múltiples veces no hace ninguna diferencia. Si se observa dos veces un elemento, el observe callback no se ejecutará dos veces, ni tampoco tendrá que ejecutar disconnect() dos veces. En otras palabras, una vez el elemento es observado, observarlo de nuevo con la misma instancia del observador no hará nada. Sin embargo, si el callback es diferente por supuesto se le añadirá otro observador.</div>
+<div class="note">NOTA: Añadir un observador a un elemento es igual que addEventListener, si usted observa el elemento múltiples veces no hace ninguna diferencia. Si se observa dos veces un elemento, el observe callback no se ejecutará dos veces, ni tampoco tendrá que ejecutar disconnect() dos veces. En otras palabras, una vez el elemento es observado, observarlo de nuevo con la misma instancia del observador no hará nada. Sin embargo, si el callback es diferente por supuesto se le añadirá otro observador.</div>
 
 <h3 id="disconnect()" name="disconnect()"><code>disconnect()</code></h3>
 
@@ -181,14 +181,14 @@ translation_of: Web/API/MutationObserver
    <td><code>addedNodes</code></td>
    <td><code>{{domxref("NodeList")}}</code></td>
    <td>
-    <p>Devuelve los nodos añadidos. Si no tiene nodos añadidos devuelve un <span style="font-family: courier new,andale mono,monospace;">NodeList</span> vacio.</p>
+    <p>Devuelve los nodos añadidos. Si no tiene nodos añadidos devuelve un <span style="font-family: courier new,andale mono,monospace;">NodeList</span> vacio.</p>
    </td>
   </tr>
   <tr>
    <td><code>removedNodes</code></td>
    <td><code>{{domxref("NodeList")}}</code></td>
    <td>
-    <p>Devuelve los nodos eliminados. Si no tiene nodos eliminados devuelve un <span style="font-family: courier new,andale mono,monospace;">NodeList</span> vacio.</p>
+    <p>Devuelve los nodos eliminados. Si no tiene nodos eliminados devuelve un <span style="font-family: courier new,andale mono,monospace;">NodeList</span> vacio.</p>
    </td>
   </tr>
   <tr>

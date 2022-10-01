@@ -1,22 +1,13 @@
 ---
 title: Win the game
 slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - winning
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
 
-这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 12 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson12.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html)完成本课程后找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 12 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson12.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html)完成本课程后找到源代码。
 
 在我们的游戏中实现获胜是相当容易的：如果你碰巧摧毁所有的砖块，那么你赢了。
 
@@ -43,7 +34,7 @@ function ballHitBrick(ball, brick) {
 }
 ```
 
-我们循环使用组中的砖块`bricks.children`，检查每个砖块的`.alive() `方法的活力。如果没有更多的砖块活着，那么我们会显示一个获胜的消息，一旦警报被关闭，重新启动游戏。
+我们循环使用组中的砖块`bricks.children`，检查每个砖块的`.alive()` 方法的活力。如果没有更多的砖块活着，那么我们会显示一个获胜的消息，一旦警报被关闭，重新启动游戏。
 
 ## 比较你的代码
 
@@ -53,6 +44,6 @@ function ballHitBrick(ball, brick) {
 
 ## 下一步
 
-失败和获胜都是实施的，所以我们的游戏的核心游戏就完成了。现在让我们添加一些额外的东西 - 我们会给玩家将 3 个[生活](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Extra_lives)的，而不是一个。
+失败和获胜都是实施的，所以我们的游戏的核心游戏就完成了。现在让我们添加一些额外的东西 - 我们会给玩家将 3 个[生活](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Extra_lives)的，而不是一个。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}

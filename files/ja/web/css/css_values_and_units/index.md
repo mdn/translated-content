@@ -1,13 +1,8 @@
 ---
 title: CSS 値と単位
 slug: Web/CSS/CSS_Values_and_Units
-tags:
-  - CSS
-  - ガイド
-  - リファレンス
-  - 値と単位
-translation_of: Web/CSS/CSS_Values_and_Units
 ---
+
 {{CSSRef}}
 
 CSS 宣言はすべて、プロパティと値の組を含みます。プロパティによって、値は単純な整数やキーワードから、一連のキーワードや単位つき・単位なしの値などを含みます。CSS プロパティには受け付けるデータ型の組み合わせ -- 値と単位 -- があります。以下ではデータ型の大部分を概観します。より詳しい情報は、それぞれのデータ型のページを参照してください。
@@ -86,7 +81,7 @@ left | right | none | inline-start | inline-end
 
 ```css
 .box {
-  background-image: url("images/my-background.png");
+  background-image: url("images/my-background.png");
 }
 
 .box {
@@ -283,7 +278,7 @@ CSS では、以下のものを表すために寸法を使います。
       <td>{{SpecName("CSS3 Values")}}</td>
       <td>{{Spec2("CSS3 Values")}}</td>
       <td>
-        <code>calc()</code>, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>, <code> vmax</code>, <code>Q</code> の追加
+        <code>calc()</code>, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>, <code> vmax</code>, <code>Q</code> の追加
       </td>
     </tr>
     <tr>
@@ -294,7 +289,7 @@ CSS では、以下のものを表すために寸法を使います。
         <code>hsla()</code> 関数のカンマ無し構文の追加。`rgb()` と `hsl()` にアルファ値を追加し、`rgba()` と `hsla()` をこれらへの (非推奨の) 別名に変更。<br />
         `rebeccapurple` 色キワードを追加。<br />
         4 と 8 桁の 16 進カラー値を追加、最後の桁はアルファ値を表します。<br />
-        <code>hwb()</code>, <code>device-cmyk()</code>,
+        <code>hwb()</code>, <code>device-cmyk()</code>,
         <code>color()</code> 関数の追加。
       </td>
     </tr>
@@ -302,7 +297,7 @@ CSS では、以下のものを表すために寸法を使います。
       <td>{{SpecName("CSS3 Colors")}}</td>
       <td>{{Spec2("CSS3 Colors")}}</td>
       <td>
-        システム色を非推奨化。SVG 色を追加。<code>rgba()</code>, <code>hsl()</code>,
+        システム色を非推奨化。SVG 色を追加。<code>rgba()</code>, <code>hsl()</code>,
         <code>hsla()</code> 関数の追加。
       </td>
     </tr>

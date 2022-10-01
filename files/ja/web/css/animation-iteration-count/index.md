@@ -1,15 +1,8 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - CSS プロパティアニメーション
-  - recipe:css-property
-browser-compat: css.properties.animation-iteration-count
-translation_of: Web/CSS/animation-iteration-count
 ---
+
 {{CSSRef}}
 
 **`animation-iteration-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、停止するまでにアニメーション周期が再生される回数を指定します。
@@ -26,7 +19,7 @@ translation_of: Web/CSS/animation-iteration-count
 /* キーワード値 */
 animation-iteration-count: infinite;
 
-/* &lt;number&gt; 値 */
+/* <number> 値 */
 animation-iteration-count: 3;
 animation-iteration-count: 2.4;
 

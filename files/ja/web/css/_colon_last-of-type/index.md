@@ -1,16 +1,8 @@
 ---
 title: ':last-of-type'
 slug: Web/CSS/:last-of-type
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.last-of-type
-translation_of: Web/CSS/:last-of-type
 ---
+
 {{CSSRef}}
 
 **`:last-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最後の要素を表します。
@@ -44,7 +36,7 @@ p:last-of-type {
 
 ```css
 p:last-of-type {
-  color: red;
+  color: red;
   font-style: italic;
 }
 ```

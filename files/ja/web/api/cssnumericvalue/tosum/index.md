@@ -1,18 +1,8 @@
 ---
 title: CSSNumericValue.toSum()
 slug: Web/API/CSSNumericValue/toSum
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSNumericValue
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - toSum()
-browser-compat: api.CSSNumericValue.toSum
-translation_of: Web/API/CSSNumericValue/toSum
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`toSum()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、 {{domxref("CSSMathSum")}} オブジェクトの値を、指定した単位の値に変換するものです。

@@ -1,16 +1,8 @@
 ---
 title: Request.arrayBuffer()
 slug: Web/API/Request/arrayBuffer
-page-type: web-api-instance-method
-tags:
-  - API
-  - ArrayBuffer
-  - Fetch
-  - Method
-  - Reference
-  - Request
-translation_of: Web/API/Request/arrayBuffer
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}} 接口的 **`arrayBuffer()`** 方法读取请求体并将其作为一个 promise 返回，该 promise 将兑现一个 {{jsxref("ArrayBuffer")}}。

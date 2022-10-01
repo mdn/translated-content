@@ -1,13 +1,8 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/var
 ---
+
 {{jsSidebar("Statements")}}
 
 **`var` 语句** 用于声明一个函数范围或全局范围的变量，并可将其初始化为一个值（可选）。
@@ -185,7 +180,7 @@ console.log(x, y); // 0 1
 
 // 在非严格模式下：
 // x 是全局变量。
-// y 是隐式声明的全局变量。 
+// y 是隐式声明的全局变量。 
 ```
 
 在严格模式下运行相同的示例：

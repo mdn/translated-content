@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 original_slug: Web/CSS/Requêtes_média/Utilisation_requêtes_media_accessibilité
 ---
+
 {{QuickLinksWithSubpages("/fr/docs/Web/CSS/Requêtes_média/")}}
 
 **Les requêtes média (_media queries_)** peuvent être utilisées afin d'améliorer l'accessibilité d'un site web.
@@ -56,7 +57,7 @@ Cet exemple illustre comment éviter les animations inutiles en activant une pr�
 
 ## Mode de contraste élevé{{Non-standard_inline}}
 
-La caractéristique média **`-ms-high-contrast`** est [spécifique à Microsoft](/en-US/docs/Web/CSS/Microsoft_extensions) mais permet d'indiquer si l'application est affichée avec un mode de contraste élevé et, si c'est le cas, quelle variation de couleur est utilisée.
+La caractéristique média **`-ms-high-contrast`** est [spécifique à Microsoft](/fr/docs/Web/CSS/Microsoft_extensions) mais permet d'indiquer si l'application est affichée avec un mode de contraste élevé et, si c'est le cas, quelle variation de couleur est utilisée.
 
 Cela ne bénéficie pas seulement aux utilisateurs souffrant de troubles de la vision mais aussi aux personnes qui consultent le document avec une lumière ambiante importante (ex. sur un écran faiblement éclairé et en plein soleil).
 

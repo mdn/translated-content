@@ -1,16 +1,8 @@
 ---
 title: border-collapse
 slug: Web/CSS/border-collapse
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - CSS 表
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-collapse
-translation_of: Web/CSS/border-collapse
 ---
+
 {{CSSRef}}
 
 **`border-collapse`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlElement("table")}}) の中のセルが境界を共有するか分離するかを設定します。
@@ -60,26 +52,26 @@ border-collapse: unset;
 
 ```html
 <table class="separate">
-  <caption><code>border-collapse: separate</code></caption>
-  <tbody>
-    <tr><th>Browser</th> <th>Layout Engine</th></tr>
-    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td></tr>
-    <tr><td class="ed">Edge</td> <td class="tr">EdgeHTML</td></tr>
-    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td></tr>
-    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td></tr>
-    <tr><td class="op">Opera</td> <td class="bk">Blink</td></tr>
-  </tbody>
+  <caption><code>border-collapse: separate</code></caption>
+  <tbody>
+    <tr><th>Browser</th> <th>Layout Engine</th></tr>
+    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td></tr>
+    <tr><td class="ed">Edge</td> <td class="tr">EdgeHTML</td></tr>
+    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td></tr>
+    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td></tr>
+    <tr><td class="op">Opera</td> <td class="bk">Blink</td></tr>
+  </tbody>
 </table>
 <table class="collapse">
-  <caption><code>border-collapse: collapse</code></caption>
-  <tbody>
-    <tr><th>Browser</th> <th>Layout Engine</th></tr>
-    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td></tr>
-    <tr><td class="ed">Edge</td> <td class="tr">EdgeHTML</td></tr>
-    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td></tr>
-    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td></tr>
-    <tr><td class="op">Opera</td> <td class="bk">Blink</td></tr>
-  </tbody>
+  <caption><code>border-collapse: collapse</code></caption>
+  <tbody>
+    <tr><th>Browser</th> <th>Layout Engine</th></tr>
+    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td></tr>
+    <tr><td class="ed">Edge</td> <td class="tr">EdgeHTML</td></tr>
+    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td></tr>
+    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td></tr>
+    <tr><td class="op">Opera</td> <td class="bk">Blink</td></tr>
+  </tbody>
 </table>
 ```
 
@@ -87,22 +79,22 @@ border-collapse: unset;
 
 ```css
 .collapse {
-  border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 .separate {
-  border-collapse: separate;
+  border-collapse: separate;
 }
 
 table {
-  display: inline-table;
-  margin: 1em;
-  border: dashed 5px;
+  display: inline-table;
+  margin: 1em;
+  border: dashed 5px;
 }
 
 table th,
 table td {
-  border: solid 3px;
+  border: solid 3px;
 }
 
 .fx { border-color: orange blue; }

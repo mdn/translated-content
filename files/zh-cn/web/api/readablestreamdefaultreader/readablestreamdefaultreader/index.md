@@ -1,14 +1,8 @@
 ---
 title: ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
-tags:
-  - API
-  - Constructor
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-translation_of: api/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 ---
+
 {{APIRef("Streams")}}
 
 **`ReadableStreamDefaultReader()`** 构造函数创建并返回一个 `ReadableStreamDefaultReader` 实例对象。
@@ -45,7 +39,7 @@ function fetchStream() {
   let charsReceived = 0;
   // read() 返回一个 promise，其会在接收到数据时被兑现
   reader.read().then(function processText({ done, value }) {
-    // 结果包含两个属性:
+    // 结果包含两个属性：
     // done  - 如果为 true，表示流已经返回所有的数据。
     // value - 一些数据，done 为 true 时，其值始终为 undefined。
     if (done) {

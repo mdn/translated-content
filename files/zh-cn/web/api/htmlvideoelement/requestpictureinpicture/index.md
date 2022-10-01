@@ -1,20 +1,8 @@
 ---
 title: HTMLVideoElement.requestPictureInPicture()
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
-tags:
-  - API
-  - Experimental
-  - HTML DOM
-  - HTMLVideoElement
-  - Media
-  - Method
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - pip
-browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
+
 {{ APIRef("HTML DOM") }}
 
  **{{domxref("HTMLVideoElement")}}** 接口提供的 **`requestPictureInPicture()`** 方法会发出异步请求，并以画中画的模式显示视频。

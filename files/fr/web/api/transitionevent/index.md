@@ -3,9 +3,10 @@ title: TransitionEvent
 slug: Web/API/TransitionEvent
 translation_of: Web/API/TransitionEvent
 ---
+
 {{APIRef("CSSOM")}} {{SeeCompatTable}}
 
-L'interface **`TransitionEvent`** représente des événements fournissant des informations relatives aux [transitions](/en-US/docs/Web/Guide/CSS/Using_CSS_transitions) .
+L'interface **`TransitionEvent`** représente des événements fournissant des informations relatives aux [transitions](/fr/docs/Web/Guide/CSS/Using_CSS_transitions) .
 
 ## Propriétés
 
@@ -16,7 +17,7 @@ _Hérite également des propriétés de son parent {{domxref("Event")}}_ .
 - {{domxref("TransitionEvent.elapsedTime")}} {{readonlyInline}}
   - : Est- `float`ce que la durée de l'exécution est en cours, en secondes, lorsque cet événement a été déclenché. Cette valeur n'est pas affectée par la propriété {{cssxref ("transition-delay")}}.
 - {{domxref("TransitionEvent.pseudoElement")}} {{readonlyInline}}
-  - : Est-ce qu'un {{domxref("DOMString")}}, commençant par `'::'`, contenant le nom du [pseudo-élément](/en-US/docs/Web/CSS/Pseudo-elements) sur lequel s'exécute l'animation. Si la transition ne s'exécute pas sur un pseudo-élément mais sur l'élément, une chaîne vide:` ''``. `
+  - : Est-ce qu'un {{domxref("DOMString")}}, commençant par `'::'`, contenant le nom du [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) sur lequel s'exécute l'animation. Si la transition ne s'exécute pas sur un pseudo-élément mais sur l'élément, une chaîne vide:` ''``. `
 
 ## Constructeur
 
@@ -30,17 +31,15 @@ _Hérite également des propriétés de son parent {{domxref("Event")}}_ .
 - {{domxref("TransitionEvent.initTransitionEvent ()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Initialise un `TransitionEvent`créé en utilisant la méthode {{domxref("Document.createEvent ()")}} déconseillée.
 
-## Caractéristiques
+## Spécifications
 
-| spécification                                                                                                        | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName ('Transitions CSS3', '# Événements-TransitionEvent', 'TransitionEvent')}} | {{Spec2 ('Transitions CSS3')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}
 
-## Voir également
+## Voir aussi
 
-- [Utilisation des transitions CSS](/en-US/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [Utilisation des transitions CSS](/fr/docs/Web/Guide/CSS/Using_CSS_transitions)
 - Propriétés de CSS: {{cssxref ("transition")}}, {{cssxref ("transition-delay")}}, {{cssxref ("transition-duration")}}, {{cssxref ("transition-property") }}, {{Cssxref ("transition-timing-function")}}.

@@ -3,6 +3,7 @@ title: Storage API
 slug: Web/API/Storage_API
 translation_of: Web/API/Storage_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}}
 
 Le standard _Storage_ définit un système de stockage commun et partagé utilisable par toutes les API et technologies qui stockent des données accessibles par le contenu pour des sites web individuels. L’API Storage donne aux codes des sites la capacité de déterminer quelle quantité d’espace ils peuvent utiliser, combien ils utilisent déjà, et même contrôler s’ils ont besoin ou non d’être alertés avant que l’{{Glossary("user agent", "agent utilisateur")}} n’élimine des données de site afin de faire de la place pour autre chose.
@@ -74,13 +75,9 @@ navigator.storage.estimate().then(estimate => {
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire          |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('Storage')}} | {{Spec2('Storage')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
-
-### `StorageManager`
 
 {{Compat("api.StorageManager")}}
 

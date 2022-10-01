@@ -1,16 +1,8 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-tags:
-  - Gecko
-  - HAProxy
-  - HTTP
-  - レスポンスヘッダー
-  - セキュリティ
-  - nginx
-browser-compat: http.headers.X-Frame-Options
-translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
 **`X-Frame-Options`** は [HTTP](/en-US/docs/Web/HTTP) のレスポンスヘッダーで、ブラウザーがページを {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("object")}} の中に表示することを許可するかどうかを示すために使用します。サイトはコンテンツが他のサイトに埋め込まれないよう保証することで、{{interwiki("wikipedia", "クリックジャッキング")}}攻撃を防ぐために使用することができます。
@@ -50,7 +42,7 @@ X-Frame-Options: SAMEORIGIN
 - `SAMEORIGIN`
   - : ページは、ページ自体と同じオリジンのフレーム内でのみ表示されます。仕様書ではこのオプションを最上位、親、チェーン全体のどれに適用するかをブラウザーベンダーに任せていますが、すべての祖先が同じオリジンでない限り、利用価値がないと議論されています。 ({{bug(725490)}} を参照)。対応の詳細は[ブラウザーの互換性](#ブラウザーの互換性)もご覧ください。
 - `ALLOW-FROM uri` {{deprecated_inline}}
-  - : これは廃止されたディレクティブであり、最近のブラウザーでは動作しません。使用しないでください。対応している古いブラウザーでは、ページは指定されたオリジン _uri_ のフレーム内でのみ表示されます。なお、以前の Firefox では `SAMEORIGIN` と同じ問題がありました。 — フレームの祖先が同じオリジンであるかどうかをチェックしません。 {{HTTPHeader("Content-Security-Policy")}} ヘッダーには `frame-ancestors` ディレクティブがあり、代わりにこれを使用することができます。
+  - : これは廃止されたディレクティブであり、最近のブラウザーでは動作しません。使用しないでください。対応している古いブラウザーでは、ページは指定されたオリジン _uri_ のフレーム内でのみ表示されます。なお、以前の Firefox では `SAMEORIGIN` と同じ問題がありました。 — フレームの祖先が同じオリジンであるかどうかをチェックしません。 {{HTTPHeader("Content-Security-Policy")}} ヘッダーには `frame-ancestors` ディレクティブがあり、代わりにこれを使用することができます。
 
 ## 例
 
@@ -114,7 +106,7 @@ http-response set-header X-Frame-Options SAMEORIGIN
 
 <h3 id="Configuring_Express" name="Configuring_Express">Express の設定</h3>
 
-Express で `X-Frame-Options` ヘッダーを送信するように設定するには、[helmet](https://helmetjs.github.io/) を使用して [frameguard](https://helmetjs.github.io/docs/frameguard/) でヘッダーを設定してください。以下の記述をサーバー設定に追加してください。
+Express で `X-Frame-Options` ヘッダーを送信するように設定するには、[helmet](https://helmetjs.github.io/) を使用して [frameguard](https://helmetjs.github.io/docs/frameguard/) でヘッダーを設定してください。以下の記述をサーバー設定に追加してください。
 
 ```js
 const helmet = require('helmet');

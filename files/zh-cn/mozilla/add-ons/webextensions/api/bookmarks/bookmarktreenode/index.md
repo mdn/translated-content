@@ -1,8 +1,8 @@
 ---
 title: bookmarks.BookmarkTreeNode
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 ---
+
 {{AddonSidebar()}}
 
 代表书签树中的一个节点（书签或文件夹），子节点在它们的父文件夹中按顺序排列。
@@ -32,7 +32,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.bookmarks.BookmarkTreeNode", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -40,7 +40,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -67,4 +68,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

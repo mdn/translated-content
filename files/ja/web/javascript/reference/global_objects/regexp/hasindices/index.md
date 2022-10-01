@@ -1,20 +1,11 @@
 ---
 title: RegExp.prototype.hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
-tags:
-  - Draft
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-browser-compat: javascript.builtins.RegExp.hasIndices
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 ---
+
 {{JSRef}}
 
-**`hasIndices`** プロパティは、その正規表現で "`d`" フラグが使用されたかどうかを示します。 `hasIndices` はそれぞれの正規表現インスタンスの読み取り専用プロパティです。
+**`hasIndices`** プロパティは、その正規表現で "`d`" フラグが使用されたかどうかを示します。 `hasIndices` はそれぞれの正規表現インスタンスの読み取り専用プロパティです。
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
 
@@ -22,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 
 ## 解説
 
-`hasIndices` の値は論理型であり、 "`d`" フラグが使用された場合は `true` になります。それ以外の場合は `false` になります。 "`d`" フラグは正規表現による一致の結果に、各キャプチャグループの部分文字列の開始と終了の位置を含めることを示します。
+`hasIndices` の値は論理型であり、 "`d`" フラグが使用された場合は `true` になります。それ以外の場合は `false` になります。 "`d`" フラグは正規表現による一致の結果に、各キャプチャグループの部分文字列の開始と終了の位置を含めることを示します。
 
 このプロパティを直接変更することはできません。
 

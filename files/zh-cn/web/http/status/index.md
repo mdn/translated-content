@@ -1,15 +1,8 @@
 ---
 title: HTTP 响应状态码
 slug: Web/HTTP/Status
-tags:
-  - HTTP
-  - Landing
-  - Overview
-  - Reference
-  - 状态码
-  - Web
-translation_of: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否成功完成。
@@ -30,7 +23,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - {{HTTPStatus(100, "100 Continue")}}
   - : 这个临时响应表明，迄今为止的所有内容都是可行的，客户端应该继续请求，如果已经完成，则忽略它。
 - {{HTTPStatus(101, "101 Switching Protocols")}}
-  - : 该代码是响应客户端的 {{HTTPHeader("Upgrade")}} 请求头发送的， 指明服务器即将切换的协议。
+  - : 该代码是响应客户端的 {{HTTPHeader("Upgrade")}} 请求头发送的，指明服务器即将切换的协议。
 - {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
   - : 此代码表示服务器已收到并正在处理该请求，但当前没有响应可用。
 - {{HTTPStatus(103, "103 Early Hints")}}
@@ -85,7 +78,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - {{HTTPStatus(307, "307 Temporary Redirect")}}
   - : 服务器发送此响应，以指示客户端使用在前一个请求中使用的相同方法在另一个 URI 上获取所请求的资源。这与 `302 Found` HTTP 响应代码具有相同的语义，但用户代理 _不能_ 更改所使用的 HTTP 方法：如果在第一个请求中使用了 `POST`，则在第二个请求中必须使用 `POST`
 - {{HTTPStatus(308, "308 Permanent Redirect")}}
-  - : 这意味着资源现在永久位于由`Location:` HTTP Response 标头指定的另一个 URI。 这与 `301 Moved Permanently` HTTP 响应代码具有相同的语义，但用户代理不能更改所使用的 HTTP 方法：如果在第一个请求中使用 `POST`，则必须在第二个请求中使用 `POST`。
+  - : 这意味着资源现在永久位于由`Location:` HTTP Response 标头指定的另一个 URI。这与 `301 Moved Permanently` HTTP 响应代码具有相同的语义，但用户代理不能更改所使用的 HTTP 方法：如果在第一个请求中使用 `POST`，则必须在第二个请求中使用 `POST`。
 
 ## 客户端错误响应
 
@@ -176,7 +169,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 
 ## 浏览器兼容性
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## 参见
 

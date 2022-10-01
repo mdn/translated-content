@@ -1,15 +1,8 @@
 ---
 title: CSSGroupingRule.insertRule()
 slug: Web/API/CSSGroupingRule/insertRule
-tags:
-  - API
-  - CSSOM
-  - CSSGroupingRule
-  - メソッド
-  - リファレンス
-browser-compat: api.CSSGroupingRule.insertRule
-translation_of: Web/API/CSSGroupingRule/insertRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`insertRule()`** は {{domxref("CSSGroupingRule")}} インターフェイスのメソッドで、新しい CSS ルールを CSS ルールのリストへ追加します。

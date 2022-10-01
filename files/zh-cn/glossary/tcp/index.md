@@ -1,15 +1,8 @@
 ---
 title: TCP
 slug: Glossary/TCP
-tags:
-  - TCP
-  - 传输控制协议
-  - 基础设施
-  - 数据
-  - 网络
-  - 词汇表
-translation_of: Glossary/TCP
 ---
+
 ### **摘要**
 
 传输控制协议 (TCP) 是主要的网络协议之一。它使两台主机能够建立连接并交换数据流。TCP 能保证数据的交付，维持数据包的发送顺序。TCP 在 1970 年代被两位 DARPA 的科学家 Vint Cerf 和 Bob Kahn 所设计出来，他们当时被称为互联网之父。

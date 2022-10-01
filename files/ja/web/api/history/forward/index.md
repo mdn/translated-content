@@ -1,16 +1,8 @@
 ---
 title: History.forward()
 slug: Web/API/History/forward
-tags:
-  - API
-  - HTML DOM
-  - History
-  - 履歴 API
-  - メソッド
-  - リファレンス
-browser-compat: api.History.forward
-translation_of: Web/API/History/forward
 ---
+
 {{APIRef("History API")}}
 
 **`History.forward()`** メソッドにより、ブラウザーはセッション履歴の 1 つ次のページに移動します。これは {{domxref("History.go", "history.go(1)")}} を呼び出すのと同じ効果があります。

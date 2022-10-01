@@ -1,13 +1,9 @@
 ---
 title: contextMenus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
-tags:
-  - API
-  - WebExtensions
-  - contextMenus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 ---
+
 {{AddonSidebar}}在浏览器菜单中添加条目。此 API 基于 Chrome 的“contextMenus”API 构建，该 API 可让 Chrome 扩展程序将项目添加到浏览器的上下文菜单中。 `browser.menus` API 为 Chrome 的 API 添加了一些功能，特别是可以将项目添加到浏览器的“工具”菜单以及上下文菜单中。在 Firefox 55 之前，这个 API 最初也被命名为`contextMenus`，并且这个名字被保留为别名，所以你可以使用`contextMenus`编写在 Firefox 和其他浏览器中工作的代码。你需要拥有“menus”（或别名" contextMenus "）权限来使用此 API。
 
 ## 创建菜单项
@@ -29,13 +25,13 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 ## 图标
 
-如果你使用 ["icons" manifest key](/en-US/Add-ons/WebExtensions/manifest.json/icons) 为你的扩展指定一个图标，你的菜单项的旁边就会显示一个指定的图标。浏览器会尝试在普通分辨率下使用 16 x 16 像素的图标，在高分辨率下使用 32 x 32 像素的图标：
+如果你使用 ["icons" manifest key](/zh-CN/Add-ons/WebExtensions/manifest.json/icons) 为你的扩展指定一个图标，你的菜单项的旁边就会显示一个指定的图标。浏览器会尝试在普通分辨率下使用 16 x 16 像素的图标，在高分辨率下使用 32 x 32 像素的图标：
 
 ![](menus-2.png) 你可以通过调用 {{WebExtAPIRef("menus.create()")}} 时指定 icons 选项来给子菜单项设置图标。
 
 ![](menus-3.png)
 
-## 例子
+## 示例
 
 下面是一个包含四个项目的菜单，他们分别是：一个普通选项，两个周围有分割线的单选，和一个复选框。单选框使用了自定义图标。
 
@@ -129,13 +125,14 @@ browser.menus.create({
 
 ## 浏览器兼容性
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{ Compat }}
 
 {{WebExtExamples("h2")}}
 
 > **备注：** 此 API 基于 Chromium 的 [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. 此文档来自于 Chromium 代码中的[`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json)。
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -162,4 +159,4 @@ browser.menus.create({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

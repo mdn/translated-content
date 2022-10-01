@@ -14,6 +14,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
+
 {{APIRef("Fetch")}}
 
 La méthode globale **`fetch()`** démarre le chargement d'une ressource sur le réseau et retourne une promesse qui est résolue dès que la réponse est disponible. La promesse résoud l'objet {{domxref("Response")}} représentant la réponse de votre requête. Cette promesse n'échoue pas en cas d'erreur HTTP, elle n'échoue que sur les problèmes de réseau. Vous devez utiliser un gestionnaire `then` pour identifier les erreurs HTTP.
@@ -144,15 +145,11 @@ let maRequete = new Request('fleurs.jpg', monInit);
 
 ## Spécifications
 
-| Specification                                                        | Statut                                       | Commentaire                                                                                                                                                                         |
-| -------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Fetch','#fetch-method','fetch()')}}     | {{Spec2('Fetch')}}                     | Définie dans un `WindowOrWorkerGlobalScope` dans la nouvelle spécification.                                                                                                         |
-| {{SpecName('Fetch','#dom-global-fetch','fetch()')}} | {{Spec2('Fetch')}}                     | Définition initiale                                                                                                                                                                 |
-| {{SpecName('Credential Management')}}                     | {{Spec2('Credential Management')}} | Ajoute la possiblité d'utiliser une instance de {{domxref("FederatedCredential")}} ou de {{domxref("PasswordCredential")}} comme valeur de `init.credentials`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Voir aussi
 

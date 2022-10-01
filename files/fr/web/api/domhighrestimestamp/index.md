@@ -3,6 +3,7 @@ title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
 translation_of: Web/API/DOMHighResTimeStamp
 ---
+
 {{APIRef("High Resolution Time")}}
 
 Le type **`DOMHighResTimeStamp`** est un `double` et est utilisé pour stocker une valeur temporelle. La valeur peut représenter un point dans le temps ou la différence entre deux points dans le temps.
@@ -62,16 +63,13 @@ _Ce type n'a pas de méthodes._
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                                       | Commentaire                                            |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------ |
-| {{SpecName('Highres Time Level 2', '#dom-domhighrestimestamp', 'DOMHighResTimeStamp')}} | {{Spec2('Highres Time Level 2')}} | Définitions plus strictes des interfaces et des types. |
-| {{SpecName('Highres Time', '#sec-DOMHighResTimeStamp', 'DOMHighResTimeStamp')}}             | {{Spec2('Highres Time')}}             | Définition initiale.                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMHighResTimestamp")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Navigation Timing API](/en-US/docs/Navigation_timing)
-- [performance.now()](/en-US/docs/Web/API/Performance/now)
+- [Navigation Timing API](/fr/docs/Navigation_timing)
+- [performance.now()](/fr/docs/Web/API/Performance/now)

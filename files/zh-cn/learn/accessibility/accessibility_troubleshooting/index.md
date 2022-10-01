@@ -1,8 +1,8 @@
 ---
 title: 'Assessment: Accessibility troubleshooting'
-slug: learn/Accessibility/Accessibility_troubleshooting
-translation_of: Learn/Accessibility/Accessibility_troubleshooting
+slug: Learn/Accessibility/Accessibility_troubleshooting
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 In the assessment for this module, we present to you a simple site with a number of accessibility issues that you need to diagnose and fix.
@@ -20,7 +20,7 @@ In the assessment for this module, we present to you a simple site with a number
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>理解可访问性的基础知识。</td>
+      <td>理解无障碍的基础知识。</td>
     </tr>
   </tbody>
 </table>
@@ -85,10 +85,10 @@ If you are following this assessment as part of an organized course, you should 
 
 ## In this module
 
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [What is accessibility?](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
+- [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML)
+- [CSS and JavaScript accessibility best practices](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [Accessible multimedia](/zh-CN/docs/Learn/Accessibility/Multimedia)
+- [Mobile accessibility](/zh-CN/docs/Learn/Accessibility/Mobile)
+- [Accessibility troubleshooting](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

@@ -1,14 +1,8 @@
 ---
 title: CSS Object Model (CSSOM)
 slug: Glossary/CSSOM
-tags:
-  - CSSOM
-  - DOM
-  - Web Performance
-  - 关键渲染路径
-  - 渲染树
-translation_of: Glossary/CSSOM
 ---
+
 **CSS 对象模型** **(CSSOM)** 是树形形式的所有 CSS 选择器和每个选择器的相关属性的映射，具有树的根节点，同级，后代，子级和其他关系。CSSOM 与 {{glossary('DOM', '文档对象模型 (DOM)')}} 非常相似。两者都是**关键渲染路径**的一部分，也是正确渲染一个网站必须采取的一系列步骤。
 
 CSSOM 与 DOM 一起构建**渲染树**，浏览器依次使用渲染树来布局和绘制网页。

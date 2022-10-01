@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Universal_selectors
 original_slug: Web/CSS/Sélecteurs_universels
 ---
+
 {{CSSRef("Selectors")}}
 
 L'astérisque (\*) est le sélecteur universel en CSS. Il correspond à un élément de n'importe quel type.
@@ -75,12 +76,8 @@ L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs sim
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                 | Commentaires                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#the-universal-selector', 'universal selector')}}     | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                                                                           |
-| {{SpecName('CSS3 Selectors', '#universal-selector', 'universal selector')}}         | {{Spec2('CSS3 Selectors')}} | Définition du comportement avec les espaces de noms et ajout d'indications pour omettre le sélecteur avec les pseudo-éléments. |
-| {{SpecName('CSS2.1', 'selector.html#universal-selector', 'universal selector')}} | {{Spec2('CSS2.1')}}             | Définition initiale.                                                                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.universal")}}
+{{Compat}}

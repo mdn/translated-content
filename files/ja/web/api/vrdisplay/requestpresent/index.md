@@ -1,21 +1,9 @@
 ---
 title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Display
-  - WebVR
-  - requestPresent()
-browser-compat: api.VRDisplay.requestPresent
-translation_of: Web/API/VRDisplay/requestPresent
 original_slug: Web/API/VRDevice/requestPresent
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`requestPresent()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、`VRDisplay` へのシーン表示を開始します。
@@ -32,7 +20,6 @@ requestPresent(layers)
 
 - `layers`
   - : 表示したいシーンを表す {{domxref("VRLayerInit")}} オブジェクトの配列です。現時点では、指定できるのは最小 0 要素、最大 1 要素です。
-</dl>
 
 ### 返値
 

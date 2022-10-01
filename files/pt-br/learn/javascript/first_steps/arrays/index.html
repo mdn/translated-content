@@ -107,8 +107,8 @@ translation_of: Learn/JavaScript/First_steps/Arrays
       document.body.appendChild(inputDiv);
 
       if(document.querySelectorAll('div').length &gt; 1) {
-        inputForm.focus();
-      }
+        inputForm.focus();
+      }
 
       inputForm.addEventListener('change', executeCode);
     }
@@ -174,10 +174,10 @@ shopping;
 
   <div class="note"><strong>Note</strong>: Nós dissemos isto antes, mas como lembrete — computadores começam a contar do 0!</div>
  </li>
- <li>Note que uma array dentro de uma array é chamada de array multidimensional. Você pode acessar um item dentro de uma array que está localizada dentro de outra array, colocando dois conjuntos de colchetes juntos. Por exemplo, para acessar um dos itens dentro de uma array, que é o terceiro item dentro da array <code>random</code> (veja a seção anterior), nós podemos fazer algo tipo isto:
+ <li>Note que uma array dentro de uma array é chamada de array multidimensional. Você pode acessar um item dentro de uma array que está localizada dentro de outra array, colocando dois conjuntos de colchetes juntos. Por exemplo, para acessar um dos itens dentro de uma array, que é o terceiro item dentro da array <code>random</code> (veja a seção anterior), nós podemos fazer algo tipo isto:
   <pre class="brush: js">random[2][2];</pre>
  </li>
- <li>Antes de continuar, faça algumas modificações nos exemplos, crie seus próprios arrays e veja o que funciona e o que não funciona. Divirta-se!</li>
+ <li>Antes de continuar, faça algumas modificações nos exemplos, crie seus próprios arrays e veja o que funciona e o que não funciona. Divirta-se!</li>
 </ol>
 
 <h3 id="Encontrando_o_comprimento_de_uma_array">Encontrando o comprimento de uma array</h3>
@@ -290,7 +290,7 @@ removedItem;</pre>
 
 <ol>
  <li>Abaixo do comentário <code>// number 1</code> está um número de strings, cada uma contendo um nome de produto e preço separado por uma vírgula. Nós gostaríamos que você colocasse eles dentro de uma array e armazenasse eles na array chamada <code>products</code>.</li>
- <li>Na mesma linha o comentário <code>// number 2 </code>está no começo de um laço for. Nesta linha nós temos <code>i&lt;=0</code>, o qual é um teste condicional que faz o <a href="/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops">laço for</a> parar imediatamente, porque está dizendo "pare quando <code>i</code> for menor ou igual a 0", e  <code>i</code> começa em 0. Nós gostaríamos de substituir isto com um teste condicional que termina o laço quando o <code>i </code>for menor que o tamanho da array <code>products</code>.</li>
+ <li>Na mesma linha o comentário <code>// number 2 </code>está no começo de um laço for. Nesta linha nós temos <code>i&lt;=0</code>, o qual é um teste condicional que faz o <a href="/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops">laço for</a> parar imediatamente, porque está dizendo "pare quando <code>i</code> for menor ou igual a 0", e  <code>i</code> começa em 0. Nós gostaríamos de substituir isto com um teste condicional que termina o laço quando o <code>i </code>for menor que o tamanho da array <code>products</code>.</li>
  <li>Logo abaixo do comentário <code>// number 3 </code>nós queremos que você escreva uma linha de código que divide o item da array (<code>name:price</code>) em dois itens separados, um contendo somente o nome e outro só com o preço. Se você não tem certeza de como fazer isto, consulte o artigo <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos úteis em string </a>para alguma ajuda, ou ainda melhor, veja a seção <a href="#converting_between_strings_and_arrays">Converting between strings and arrays</a> neste artigo.</li>
  <li>Como parte da linha de código acima, você também quer converter o preço de string para número. Se você não se lembra como fazer isto, veja o <a href="/en-US/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings">artigo primeiras strings</a>.</li>
  <li>Há uma variável chamada <code>total </code>que é criada e atribuída o valor 0 no começo do código. Dentro do loop (abaixo <code>// number 4</code>) nós queremos que você escreva uma linha que adicione o preço atual ao total em cada iteração do laço, então ao final do código o preço total é impresso na fatura. Você pode precisar de um <a href="/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators">operador aritiméticos </a>para isto.</li>
@@ -396,9 +396,9 @@ textarea.onkeydown = function(e){
   }
 
 
-  if (e.keyCode === 27) {
-    textarea.blur();
-  }
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {

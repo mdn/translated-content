@@ -4,6 +4,7 @@ slug: Learn/CSS/Styling_text/Styling_links
 translation_of: Learn/CSS/Styling_text/Styling_links
 original_slug: Learn/CSS/Styling_text/Mise_en_forme_des_liens
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 Lors de la mise en forme de [liens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), il est important de comprendre comment utiliser les pseudo-classes pour mettre en forme efficacement les états des liens, et comment créer des liens pour les utiliser dans diverses fonctionnalités d'interface courantes, telles que les menus de navigation et les onglets. Nous allons examiner tous ces sujets dans cet article.
@@ -305,7 +306,7 @@ Regardons un peu d'HTML et de CSS qui nous donneront l'effet que nous voulons. T
 
 ```html
 <p>Pour davantage d'information sur la météo, visitez notre <a href="http://#">page météo</a>,
-jetez un œil sur <a href="http://#">météo sur Wikipedia</a>, ou regardez la <a href="http://#">météo sur Science Extrême </a>.</p>
+jetez un œil sur <a href="http://#">météo sur Wikipédia</a>, ou regardez la <a href="http://#">météo sur Science Extrême </a>.</p>
 ```
 
 Ensuite, le CSS:

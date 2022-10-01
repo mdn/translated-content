@@ -9,6 +9,7 @@ tags:
   - évènements
 translation_of: Web/API/EventTarget/dispatchEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 Envoie un {{domxref("Event")}} (_évènement_) à la {{domxref("EventTarget")}} (_cible_) spécifiée (synchrone) en appelant les {{domxref("EventListener")}} (_écouteurs_)  dans l'ordre approprié. Le processus normal de traitement de l'évènement (y compris les phases de capture et l'éventuelle propagation) s'applique aussi aux évènements diffusés manuellement avec `dispatchEvent()`.
@@ -42,12 +43,10 @@ Voir aussi [Objet Event référence](/fr/docs/Web/API/Event).
 
 Voir [Création et déclenchement d'évènements](/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-eventtarget-dispatchevent', 'EventTarget.dispatchEvent()')}} | {{ Spec2('DOM WHATWG') }} | Définition initiale dans la spécification DOM 2 Events (_évènements_) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventTarget.dispatchEvent")}}
+{{Compat}}

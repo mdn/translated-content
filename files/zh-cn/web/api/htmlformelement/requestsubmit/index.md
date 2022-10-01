@@ -1,20 +1,8 @@
 ---
 title: HTMLFormElement.requestSubmit()
 slug: Web/API/HTMLFormElement/requestSubmit
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLFormElement
-  - Input
-  - Method
-  - button
-  - form
-  - requestSubmit
-  - submit
-translation_of: Web/api/HTMLFormElement/requestSubmit
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLFormElement")}} 的 **`requestSubmit()`** 方法要求使用一个指定的提交按钮提交表单。

@@ -1,16 +1,8 @@
 ---
 title: Mozilla 醒目页面
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-tags:
-  - 初学者
-  - 响应式
-  - 图像
-  - 多媒体
-  - 嵌入
-  - 视频
-  - 评估
-translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 在这个测验中，我们将测试你对于本模块文章所讨论的技术的掌握程度，让你将一些有关于 Mozilla 的图片和视频添加到一个漂亮的页面上！
@@ -97,7 +89,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 
 ## 评估
 
-如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。 如果你是自学，可以很容易地在 [discussion thread about this exercise](https://discourse.mozilla.org/t/mozilla-splash-page-assignment/24679)或[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！
+如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。如果你是自学，可以很容易地在 [discussion thread about this exercise](https://discourse.mozilla.org/t/mozilla-splash-page-assignment/24679)或[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！
 
 ## 在这个模块中
 

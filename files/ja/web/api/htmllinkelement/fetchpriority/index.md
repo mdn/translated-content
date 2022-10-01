@@ -1,19 +1,8 @@
 ---
 title: HTMLLinkElement.fetchPriority
 slug: Web/API/HTMLLinkElement/fetchPriority
-page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - HTMLLinkElement
-  - リンク
-  - 先読み API
-  - プロパティ
-  - リファレンス
-  - fetchPriority
-browser-compat: api.HTMLLinkElement.fetchPriority
-translation_of: Web/API/HTMLLinkElement/fetchPriority
 ---
+
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
 **`fetchPriority`** は {{domxref("HTMLLinkElement")}} インターフェイスのプロパティで、ブラウザーが同じ種類の他のリソースに対して、与えられたリソースの先読みをどのように優先させるべきかを示すヒントを表します。

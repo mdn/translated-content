@@ -1,15 +1,8 @@
 ---
 title: MediaQueryListEvent
 slug: Web/API/MediaQueryListEvent
-page-type: web-api-interface
-tags:
-  - API
-  - CSSOM View
-  - Interface
-  - Media Queries
-  - MediaQueryListEvent
-  - Reference
 ---
+
 {{APIRef("CSSOM")}}
 
 `MediaQueryListEvent` 对象存储着发生在 {{DOMxRef("MediaQueryList")}} 对象上的变化的信息——作为一个在函数中被 {{DOMxRef("MediaQueryList.change_event", "change")}} 事件引用的事件对象。

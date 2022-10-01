@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Getter_only
 original_slug: Web/JavaScript/Reference/Erreurs/Getter_only
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
@@ -21,7 +22,7 @@ TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chro
 
 ## Type d'erreur
 
-{{jsxref("TypeError")}}, uniquement en [mode strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+{{jsxref("TypeError")}}, uniquement en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 ## Quel est le problème ?
 

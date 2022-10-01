@@ -1,17 +1,8 @@
 ---
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
-tags:
-  - API
-  - DOM
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - エディター
-  - 非推奨
-browser-compat: api.Document.execCommand
-translation_of: Web/API/Document/execCommand
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 HTML 文書が [`designMode`](/ja/docs/Web/API/Document/designMode) に切り替わっていると、その `document` オブジェクトは **`execCommand`** メソッドを公開して、[フォーム入力欄](/ja/docs/Web/HTML/Element/input)や [`contentEditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) を持った要素など、現在編集可能な領域を操作するためのコマンドが実行できるようにします。

@@ -1,17 +1,8 @@
 ---
 title: MouseEvent.metaKey
 slug: Web/API/MouseEvent/metaKey
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.metaKey
-translation_of: Web/API/MouseEvent/metaKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.metaKey`** は読み取り専用のプロパティでありマウスイベントが発行されたときに <kbd>meta</kbd> キーが押されていたかどうかを論理値で示します。

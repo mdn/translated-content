@@ -13,6 +13,7 @@ tags:
   - onFocusChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
 ---
+
 {{AddonSidebar()}}
 
 Attiré lorsque la fenêtre actuellement change. Sera {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} si toutes les fenêtres du navigateur ont perdu le focus.
@@ -69,7 +70,8 @@ browser.windows.onFocusChanged.addListener((windowId) => {
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,4 +98,4 @@ browser.windows.onFocusChanged.addListener((windowId) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

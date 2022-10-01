@@ -1,14 +1,8 @@
 ---
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Promise
-browser-compat: javascript.builtins.Promise.all
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
+
 {{JSRef}}
 
 **`Promise.all()`** メソッドは入力としてプロミスの集合の反復可能オブジェクトを取り、入力したプロミスの集合の結果の配列に解決される単一の {{jsxref("Promise")}} を返します。この返却されたプロミスは、入力したプロミスがすべて解決されるか、入力した反復可能オブジェクトにプロミスが含まれていない場合に解決されます。入力したプロミスのいずれかが拒否されるか、プロミス以外のものがエラーを発生させると直ちに拒否され、最初に拒否されたメッセージまたはエラーをもって拒否されます。
@@ -204,8 +198,8 @@ Promise.all([
   p1.catch(error => { return error }),
   p2.catch(error => { return error }),
 ]).then(values => {
-  console.log(values[0]) // "p1_delayed_resolution"
-  console.error(values[1]) // "Error: p2_immediate_rejection"
+  console.log(values[0]) // "p1_delayed_resolution"
+  console.error(values[1]) // "Error: p2_immediate_rejection"
 })
 ```
 

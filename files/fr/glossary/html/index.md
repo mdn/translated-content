@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/HTML
 original_slug: Glossaire/HTML
 ---
+
 {{QuickLinksWithSubpages("/fr/docs/Glossaire")}}
 
 **HTML** (HyperText Markup Language) est un langage descriptif qui définit la structure d'une page web.
@@ -33,7 +34,7 @@ Un fichier HTML est généralement enregistré avec une extension `.htm` ou `.ht
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "HTML", "Hypertext_Markup_Language")}} sur Wikipédia
+- [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) sur Wikipédia
 
 ### Apprendre le HTML
 

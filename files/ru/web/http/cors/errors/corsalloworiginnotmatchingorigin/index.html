@@ -27,13 +27,13 @@ translation_of: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 
 <p>Эта ошибка также может произойти, если ответ содержит более одного заголовка <code>Access-Control-Allow-Origin</code>.</p>
 
-<p>Если сервис, к которому ваш код обращается с помощью CORS запроса находится под вашим контролем, убедитесь что он настроен для включения в себя вашего источника в заголовке <code>Access-Control-Allow-Origin</code> и что в ответах от сервера присутствует только один такой заголовок. Заголовок принимает список источников, поэтому указать новый источник совсем не сложно.</p>
+<p>Если сервис, к которому ваш код обращается с помощью CORS запроса находится под вашим контролем, убедитесь что он настроен для включения в себя вашего источника в заголовке <code>Access-Control-Allow-Origin</code> и что в ответах от сервера присутствует только один такой заголовок. Заголовок принимает список источников, поэтому указать новый источник совсем не сложно.</p>
 
-<p>К примеру, в Apache, вы можете добавить следующую строку в конфигурацию веб-сервера (в пределах одной из секций - <code>&lt;Directory&gt;</code>, <code>&lt;Location&gt;</code>, <code>&lt;Files&gt;</code> или <code>&lt;VirtualHost&gt;</code>). Обычно конфигурация находиться в файле <code>.conf</code> (наиболее частые имена для него - <code>httpd.conf</code> и <code>apache.conf</code>) или в файле <code>.htaccess</code>.</p>
+<p>К примеру, в Apache, вы можете добавить следующую строку в конфигурацию веб-сервера (в пределах одной из секций - <code>&lt;Directory&gt;</code>, <code>&lt;Location&gt;</code>, <code>&lt;Files&gt;</code> или <code>&lt;VirtualHost&gt;</code>). Обычно конфигурация находиться в файле <code>.conf</code> (наиболее частые имена для него - <code>httpd.conf</code> и <code>apache.conf</code>) или в файле <code>.htaccess</code>.</p>
 
 <pre>Header set Access-Control-Allow-Origin '<em>origin-list</em>'</pre>
 
-<p>В Nginx, для установки такого заголовка можно воспользоваться следующей командой: </p>
+<p>В Nginx, для установки такого заголовка можно воспользоваться следующей командой: </p>
 
 <pre>add_header 'Access-Control-Allow-Origin' '<em>origin-list</em>'</pre>
 

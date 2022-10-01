@@ -1,13 +1,8 @@
 ---
 title: JavaScript 数据类型和数据结构
 slug: Web/JavaScript/Data_structures
-tags:
-  - JavaScript
-  - 初学者
-  - 数据结构
-  - 类型
-translation_of: Web/JavaScript/Data_structures
 ---
+
 {{jsSidebar("More")}}
 
 编程语言都具有内建的数据结构，但各种编程语言的数据结构常有不同之处。本文试图列出 JavaScript 语言中内建的数据结构及其属性，它们可以用来构建其他的数据结构。同时尽可能地描述与其他语言的不同之处。
@@ -106,7 +101,7 @@ true
 
 可以对 BigInt 使用运算符 `+`、`*`、`-`、`**` 和 `%`，就像对数字一样。BigInt 严格来说并不等同于一个数字，但它也同样可以轻松地使用。
 
-在将 BigInt 转换为 `Boolean` 时（例如：`if`、`||`、`&&`、`Boolean` 和 `!`），它的行为类似于一个数字。
+在将 BigInt 转换为 `Boolean` 时（例如：`if`、`||`、`&&`、`Boolean` 和 `!`），它的行为类似于一个数字。
 
 `BigInt` 不能与数字相互运算。否则，将抛出 {{jsxref("TypeError")}}。
 
@@ -218,14 +213,14 @@ JavaScript 的字符串类型用于表示文本数据。它是一组 16 位的�
 | 特性       | 类型  | 描述                                              |
 | ---------- | ------- | --------------------------------------------- |
 | Read-only  | Boolean | ES5 [[Writable]] 属性的反状态 (Reversed state)。 |
-| DontEnum   | Boolean | ES5 [[Enumerable]] 属性的反状态。               |
+| DontEnum   | Boolean | ES5 [[Enumerable]] 属性的反状态。               |
 | DontDelete | Boolean | ES5 [[Configurable]] 属性的反状态。             |
 
 #### 访问器属性
 
 访问器属性有一个或两个访问器函数（`get` 和 `set`）来存取数值。
 
-> **备注：** 注意它是访问器**属性**，而非访问器**方法**。我们可以将函数作为值赋给 JavaScript 对象的访问器（使得对象表现得像一个类）——但这不会使对象变成类。
+> **备注：** 它是访问器**属性**，而非访问器**方法**。我们可以将函数作为值赋给 JavaScript 对象的访问器（使得对象表现得像一个类）——但这不会使对象变成类。
 
 访问器属性具有以下特性（attributes）：
 
@@ -252,7 +247,7 @@ JavaScript 的字符串类型用于表示文本数据。它是一组 16 位的�
 
 此外，数组对象还继承了 `Array.prototype` 的一些操作数组的便捷方法。例如，[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)（搜索数组中的一个值）或 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)（向数组中添加一个元素），等等。这使得数组是表示列表或集合的最优选择。
 
-[类型数组 (Typed Arrays)](/en-US/docs/Web/JavaScript/Typed_arrays) 是 ECMAScript 2015 中新定义的 JavaScript 内建对象，提供了一个基本的二进制数据缓冲区的类数组视图。下面的表格能帮助你找到对等的 C 语言数据类型：
+[类型数组 (Typed Arrays)](/zh-CN/docs/Web/JavaScript/Typed_arrays) 是 ECMAScript 2015 中新定义的 JavaScript 内建对象，提供了一个基本的二进制数据缓冲区的类数组视图。下面的表格能帮助你找到对等的 C 语言数据类型：
 
 | 类型                                         | 取值范围                                       | 占用字节数 | 描述                                                                                 | Web IDL 类型            | 对等的 C 语言类型                      |
 | --------------------------------- | --------------------------------- | ------------ | ----------------------------------------------------------- | ---------------------- | --------------------------------- |
@@ -268,9 +263,9 @@ JavaScript 的字符串类型用于表示文本数据。它是一组 16 位的�
 | {{jsxref("BigInt64Array")}}           | `-2^63` 到 `2^63 - 1`                  | 8                 | 64 位有符号整数（补码）                                               | `bigint`                        | `int64_t (signed long long)`        |
 | {{jsxref("BigUint64Array")}}         | `0` 到 `2^64 - 1`                         | 8                  | 64 位无符号整数                                                            | `bigint`                        | `uint64_t (unsigned long long)` |
 
-### 带键的集合：Maps, Sets, WeakMaps, WeakSets
+### 带键的集合：Maps, Sets, WeakMaps, WeakSets
 
-这些数据结构把对象的引用当作键，其在 ECMAScript 第 6 版中有介绍。当 {{jsxref("Map")}} 和 {{jsxref("WeakMap")}} 把一个值和对象关联起来的时候，{{jsxref("Set")}} 和 {{jsxref("WeakSet")}} 表示一组对象。 Map 和 WeakMaps 之间的差别在于，在前者中，对象键是可枚举的。这允许垃圾收集器优化后面的枚举（This allows garbage collection optimizations in the latter case）。
+这些数据结构把对象的引用当作键，其在 ECMAScript 第 6 版中有介绍。当 {{jsxref("Map")}} 和 {{jsxref("WeakMap")}} 把一个值和对象关联起来的时候，{{jsxref("Set")}} 和 {{jsxref("WeakSet")}} 表示一组对象。Map 和 WeakMaps 之间的差别在于，在前者中，对象键是可枚举的。这允许垃圾收集器优化后面的枚举（This allows garbage collection optimizations in the latter case）。
 
 在纯 ECMAScript 5 下可以实现 `Maps` 和 `Sets`。然而，因为对象并不能进行比较（就对象“小于”示例来讲），所以查询必定是线性的。它们的原生实现（包括 `WeakMap`）所需要的查询时间则是相对恒定的（呈对数增长）。
 

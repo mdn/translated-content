@@ -1,13 +1,8 @@
 ---
 title: SVG
 slug: Glossary/SVG
-tags:
-  - SVG
-  - 初学者
-  - 图像
-  - 术语
-translation_of: Glossary/SVG
 ---
+
 可缩放矢量图形 (**SVG**) 是一个基于 {{Glossary("XML")}} 语法的 2D 矢量图形格式。
 
 {{Glossary("W3C")}} 于 20 世纪 90 年代末开始着手 SVG 的工作，但是当 {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 推出 SVG 支持时，SVG 才变得流行起来。现在所有主流 {{Glossary("browser","browsers")}} 都支持 SVG。
@@ -20,7 +15,7 @@ translation_of: Glossary/SVG
 
 ### 基础知识
 
-- 维基百科上的 {{Interwiki("wikipedia", "SVG")}}
+- 维基百科上的 [SVG](https://zh.wikipedia.org/wiki/SVG)
 
 ### 学习 SVG
 

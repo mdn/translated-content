@@ -41,14 +41,14 @@ Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>
   <dt><code>style</code></dt>
   <dd>Используемый стиль форматирования. Возможными значениями являются <code>"decimal"</code> для простого форматирования числа, <code>"currency"</code> для форматирования валюты и <code>"percent"</code> для форматирования процентов; значением по умолчанию является <code>"decimal"</code>.</dd>
   <dt><code>currency</code></dt>
-  <dd>Валюта, используемая при форматировании валют. Возможными значениями являются коды валют ISO 4217, например, <code>"USD"</code> для доллара США, <code>"EUR"</code> для евро или <code>"CNY"</code> для китайского юаня — смотрите <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">список кодов текущих валют и денежных средств</a>. Свойство не имеет значения по умолчанию; если свойство <code>style</code> равно <code>"currency"</code>, свойство <code>currency</code> также должно присутствовать.</dd>
+  <dd>Валюта, используемая при форматировании валют. Возможными значениями являются коды валют ISO 4217, например, <code>"USD"</code> для доллара США, <code>"EUR"</code> для евро или <code>"CNY"</code> для китайского юаня — смотрите <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">список кодов текущих валют и денежных средств</a>. Свойство не имеет значения по умолчанию; если свойство <code>style</code> равно <code>"currency"</code>, свойство <code>currency</code> также должно присутствовать.</dd>
   <dt><code>currencyDisplay</code></dt>
   <dd>Определяет, как отображать валюту при форматировании валют. Возможными значениями являются <code>"symbol"</code> для использования локализованного символа валюты, например € для евро, <code>"code"</code> для использования кода валюты ISO, <code>"name"</code> для использования локализованного названия валюты, например <code>"доллар США"</code> для доллара; значением по умолчанию является <code>"symbol"</code>.</dd>
   <dt><code>useGrouping</code></dt>
   <dd>Определяет, использовать ли разделители групп разрядов, например, разделители тысяч или тысяч/лакх/крор. Возможными значениями являются <code>true</code> и <code>false</code>; значением по умолчанию является <code>true</code>.</dd>
  </dl>
 
- <p>Следующие свойства разбиваются на две группы: <code>minimumIntegerDigits</code>, <code>minimumFractionDigits</code> и <code>maximumFractionDigits</code> входят в одну группу, а <code>minimumSignificantDigits</code> и <code>maximumSignificantDigits</code> — в другую. Если определено хотя бы одно свойство из второй группы, свойства первой группы будут проигнорированы.</p>
+ <p>Следующие свойства разбиваются на две группы: <code>minimumIntegerDigits</code>, <code>minimumFractionDigits</code> и <code>maximumFractionDigits</code> входят в одну группу, а <code>minimumSignificantDigits</code> и <code>maximumSignificantDigits</code> — в другую. Если определено хотя бы одно свойство из второй группы, свойства первой группы будут проигнорированы.</p>
 
  <dl>
   <dt><code>minimumIntegerDigits</code></dt>
@@ -147,10 +147,10 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 
 // Запрашиваем формат валюты
 console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
-// → 123.456,79 €
+// → 123.456,79 €
 
 console.log(new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(number));
-// → 123 456,79 руб.
+// → 123 456,79 руб.
 
 // Японская йена не использует младшие единицы
 console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(number))

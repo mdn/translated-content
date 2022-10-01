@@ -1,10 +1,8 @@
 ---
 title: Firefox 65 for developers
 slug: Mozilla/Firefox/Releases/65
-tags:
-  - '65'
-translation_of: Mozilla/Firefox/Releases/65
 ---
+
 {{FirefoxSidebar}}
 
 本文提供了有关 Firefox 65 中将影响开发者的更改信息。Firefox 65 是当前的 [Nightly 版本](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), 将于 2019 年 1 月 29 日发布。
@@ -49,7 +47,7 @@ _无变化。_
 
 #### DOM
 
-- {{domxref("Performance.toJSON()")}} has been exposed to [Web Workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1504958)}}).
+- {{domxref("Performance.toJSON()")}} has been exposed to [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) ({{bug(1504958)}}).
 - {{domxref("XMLHttpRequest")}} requests will now throw a `NetworkError` if the requested content type is a `Blob`, and the request method is not `GET` ({{bug(1502599)}}).
 
 #### DOM events
@@ -59,17 +57,17 @@ _无变化。_
 #### Service workers
 
 - The {{domxref("Response.redirect()")}} method now correctly throws a `TypeError` if a non-valid URL is specified as the first parameter ({{bug(1503276)}}).
-- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) ({{bug(1354577)}}).
+- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) ({{bug(1354577)}}).
 
 #### Media, Web Audio, 和 WebRTC
 
-- 增加了对 [WebP](/en-US/docs/Glossary/webp) Google 压缩图像文件的支持 ([bug 1294490](https://bugzilla.mozilla.org/show_bug.cgi?id=1294490)) 。
+- 增加了对 [WebP](/zh-CN/docs/Glossary/webp) Google 压缩图像文件的支持 ([bug 1294490](https://bugzilla.mozilla.org/show_bug.cgi?id=1294490)) 。
 
 #### Canvas 和 WebGL
 
 #### 移除
 
-- [Mutation events](/en-US/docs/Web/Guide/Events/Mutation_events) 在 shadow trees 上已经被禁用 ({{bug(1489858)}}).
+- [Mutation events](/zh-CN/docs/Web/Guide/Events/Mutation_events) 在 shadow trees 上已经被禁用 ({{bug(1489858)}}).
 - The non-standard {{domxref("MediaStream")}} property `currentTime` has been removed ({{bug(1502927)}}).
 - The obsolete {{domxref("BasicCardRequest.supportedTypes")}} property is no longer supported by the Payment Request API; instead of requiring the web app or site to figure out what type of card is being used, it's now the server's job to deal with it ({{bug(1504032)}}).
 

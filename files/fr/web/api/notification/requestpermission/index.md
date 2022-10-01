@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Notification/requestPermission
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 > **Note :** Cette fonctionnalité n'est pas disponible dans {{domxref("SharedWorker")}}
@@ -90,14 +91,12 @@ Nous ne montrons plus d'exemple en direct sur cette page, car Chrome et Firefox 
 
 ## Spécifications
 
-| Spécification                                | Status                                   | Comment         |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.requestPermission")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

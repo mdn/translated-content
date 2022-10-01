@@ -9,6 +9,7 @@ tags:
   - Storage
 translation_of: Web/API/Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 L'interface **`Storage`** de l'[API Web Storage](/fr/docs/Web/API/Web_Storage_API) donne accès au stockage de session (`SessionStorage`) ou au stockage local (`LocalStorage`) pour un domaine donné, vous permettant par exemple d'ajouter, de modifier ou de supprimer des éléments enregistrés.
@@ -72,13 +73,11 @@ function setStyles() {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'webstorage.html#the-storage-interface', 'Storage')}} | {{Spec2('Web Storage')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage")}}
+{{Compat}}
 
 ## Voir aussi
 

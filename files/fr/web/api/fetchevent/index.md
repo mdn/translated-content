@@ -3,6 +3,7 @@ title: FetchEvent
 slug: Web/API/FetchEvent
 translation_of: Web/API/FetchEvent
 ---
+
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
 Le paramètre passé au gestionnaire {{domxref("ServiceWorkerGlobalScope.onfetch")}}, `FetchEvent` représente une action de récupération qui est délivrée sur la {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}. Il contient des informations relatives à la requête et la réponse associée, et fourni la méthode {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} , qui permet de renvoyer une réponse arbitraire à la page controlée.
@@ -72,15 +73,13 @@ self.addEventListener('fetch', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#fetch-event-section', 'FetchEvent')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FetchEvent")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{jsxref("Promise")}}
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Fetch API](/fr/docs/Web/API/Fetch_API)

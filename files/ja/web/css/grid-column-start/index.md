@@ -1,15 +1,8 @@
 ---
 title: grid-column-start
 slug: Web/CSS/grid-column-start
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-column-start
-translation_of: Web/CSS/grid-column-start
 ---
+
 {{CSSRef}}
 
 **`grid-column-start`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド列内のグリッドアイテムの先頭位置を指定します。この開始位置は、{{Glossary("grid areas", "グリッド領域")}}のブロックの開始側の端を指定します。

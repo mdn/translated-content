@@ -1,11 +1,8 @@
 ---
 title: Firefox 41 for developers
 slug: Mozilla/Firefox/Releases/41
-tags:
-  - Firefox
-  - Firefox 41
-translation_of: Mozilla/Firefox/Releases/41
 ---
+
 {{FirefoxSidebar}}[To test the latest developer features of Firefox, install Firefox Developer Edition](https://nightly.mozilla.org/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
@@ -14,13 +11,13 @@ translation_of: Mozilla/Firefox/Releases/41
 
 Highlights:
 
-- [Take a screenshot of a DOM node](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Element_popup_menu)
-- [Copy as HAR/save as HAR](/en-US/docs/Tools/Network_Monitor#CopySave_All_As_HAR)
-- ["Add Rule" button in the Rules view](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Add_rules)
-- [View source in a tab](/en-US/docs/Tools/View_source) (Disabled by default)
-- [More options to copy CSS rules](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Copy_rules)
-- [Copy image as data: URI in the Rules view](/en-US/docs/Tools/Page_Inspector/How_to/View_background_images)
-- [Added command to GCLI to display CSP info](/en-US/docs/Tools/GCLI/Display_security_information)
+- [Take a screenshot of a DOM node](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Element_popup_menu)
+- [Copy as HAR/save as HAR](/zh-CN/docs/Tools/Network_Monitor#CopySave_All_As_HAR)
+- ["Add Rule" button in the Rules view](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Add_rules)
+- [View source in a tab](/zh-CN/docs/Tools/View_source) (Disabled by default)
+- [More options to copy CSS rules](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Copy_rules)
+- [Copy image as data: URI in the Rules view](/zh-CN/docs/Tools/Page_Inspector/How_to/View_background_images)
+- [Added command to GCLI to display CSP info](/zh-CN/docs/Tools/GCLI/Display_security_information)
 
 [All devtools bugs fixed between Firefox 40 and Firefox 41](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-06-29&query_format=advanced&chfield=resolution&chfieldfrom=2015-05-11&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12283503): note that many of these bugs, especially those relating to the performance tools, were uplifted to Firefox 40.
 
@@ -44,7 +41,7 @@ Highlights:
 
 - {{HTMLElement("a")}} 没有 `href` 属性，并且不再被分类为交互内容。点击 {{HTMLElement("label")}} 将会激活标签内容 ({{bug(1167816)}}).
 - SVG 图标现在支持站点图标 (偏爱图标和快捷方式图标)({{bug(366324)}}).
-- The {{htmlattrxref('crossorigin', 'link')}} attribute is now supported for [\<link rel='preconnect'>](/en-US/docs/Web/HTML/Element/link) ({{bug(1174152)}}).
+- The {{htmlattrxref('crossorigin', 'link')}} attribute is now supported for [\<link rel='preconnect'>](/zh-CN/docs/Web/HTML/Element/link) ({{bug(1174152)}}).
 - The picture element does not react to resize/viewport changes ({{bug(1135812)}}).
 
 ### JavaScript
@@ -55,10 +52,10 @@ Highlights:
 - {{jsxref("Map.@@species", "Map[@@species]")}} 和{{jsxref("Set.@@species", "Set[@@species]")}} 获取已经被增加 ({{bug(1131043)}}).
 - 非标准 {{jsxref("Statements/let", "let expression", "#let_expressions", 1)}} 支持已经被废弃 ({{bug(1023609)}}).
 - {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment","#Destructured_parameter_with_default_value_assignment", 1)}} 现在已经被支持 ({{bug(1018628)}}).
-- Per ES2015, [方法定义](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) 需要尖括号. 从现在开始语法没有尖括号将会失败 ({{bug(1150855)}}).
-- [方法定义](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) (除了生成方法) 已经不再可构造 ({{bug(1059908)}} 和{{bug(1166950)}}).
-- As part of ES2015 specification compliance, parenthesized [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](http://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
-- The [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) syntax has been added ({{bug(1141865)}}).
+- Per ES2015, [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) 需要尖括号。从现在开始语法没有尖括号将会失败 ({{bug(1150855)}}).
+- [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) (除了生成方法) 已经不再可构造 ({{bug(1059908)}} 和{{bug(1166950)}}).
+- As part of ES2015 specification compliance, parenthesized [destructuring](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](http://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
+- The [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) syntax has been added ({{bug(1141865)}}).
 
 ### Interfaces/APIs/DOM
 
@@ -86,7 +83,7 @@ Highlights:
 
 #### Service Workers
 
-- Improvement to our experimental [Service Worker](/en-US/docs/Web/API/ServiceWorker_API) implementation:
+- Improvement to our experimental [Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API) implementation:
 
   - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} has been implemented ({{bug(1131352)}}).
   - {{domxref("Clients.claim()")}} has been added ({{bug(1130684)}}).
@@ -105,11 +102,11 @@ Highlights:
 #### Miscellaneous
 
 - On OS X and Windows, {{domxref("NavigatorOnLine.onLine", "Navigator.onLine")}} now changes regarding network connectivity (it always returned `true`, , unless "Work offline" mode was selected) before ({{bug(654579)}}).
-- {{domxref("MessagePort")}} and {{domxref("MessageChannel")}} now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API), and are enabled by default in all contexts ({{bug(952139)}}) and ({{bug(911972)}}).
-- The User Timing API is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1155761)}}).
-- The [Notifications API](/en-US/docs/Web/API/Notifications_API) is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(916893)}}).
-- {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}} are now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1167650)}}).
-- The [CSS Font Loading API](/en-US/docs/Web/API/CSSFontLoading_API) has been completely implemented and is now enabled by default ({{bug(1149381)}}).
+- {{domxref("MessagePort")}} and {{domxref("MessageChannel")}} now available in [Web workers](/zh-CN/docs/Web/API/Web_Workers_API), and are enabled by default in all contexts ({{bug(952139)}}) and ({{bug(911972)}}).
+- The User Timing API is now available in [Web workers](/zh-CN/docs/Web/API/Web_Workers_API) ({{bug(1155761)}}).
+- The [Notifications API](/zh-CN/docs/Web/API/Notifications_API) is now available in [Web workers](/zh-CN/docs/Web/API/Web_Workers_API) ({{bug(916893)}}).
+- {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}} are now available in [Web workers](/zh-CN/docs/Web/API/Web_Workers_API) ({{bug(1167650)}}).
+- The [CSS Font Loading API](/zh-CN/docs/Web/API/CSSFontLoading_API) has been completely implemented and is now enabled by default ({{bug(1149381)}}).
 - Shared workers can no longer be shared between private (i.e. browsing in a private window) and non-private documents (see {{bug(1177621)}}).
 - The {{domxref("URLUtilsSearchParams.searchParams")}} property is now read-only ({{bug(1174731)}}).
 - The {{domxref('URLUtils.hash')}} property no longer decodes URL fragment ({{bug(1093611)}}).
@@ -135,8 +132,8 @@ Highlights:
 
 ## Security
 
-- The [CSP](/en-US/docs/Web/Security/CSP) 1.1 `manifest-src` [directive](/en-US/docs/Web/Security/CSP/CSP_policy_directives) 已经被支持 ({{bug(1089255)}}).
-- Previous versions of Firefox incorrectly expected the [Content Security Policy](/en-US/docs/Web/Security/CSP) [referrer](/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer)directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
+- The [CSP](/zh-CN/docs/Web/Security/CSP) 1.1 `manifest-src` [directive](/zh-CN/docs/Web/Security/CSP/CSP_policy_directives) 已经被支持 ({{bug(1089255)}}).
+- Previous versions of Firefox incorrectly expected the [Content Security Policy](/zh-CN/docs/Web/Security/CSP) [referrer](/zh-CN/docs/Web/Security/CSP/CSP_policy_directives#referrer)directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
 
 ## Changes for add-on and Mozilla developers
 
@@ -158,7 +155,7 @@ _没有变化。_
 
 ## See also
 
-- [Site Compatibility for Firefox 41](/en-US/docs/Mozilla/Firefox/Releases/41/Site_Compatibility)
+- [Site Compatibility for Firefox 41](/zh-CN/docs/Mozilla/Firefox/Releases/41/Site_Compatibility)
 
 ## 之前版本
 

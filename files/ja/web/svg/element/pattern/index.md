@@ -1,13 +1,8 @@
 ---
 title: <pattern>
 slug: Web/SVG/Element/pattern
-tags:
-  - 要素
-  - SVG
-  - SVG コンテナー
-browser-compat: svg.elements.pattern
-translation_of: Web/SVG/Element/pattern
 ---
+
 {{SVGRef}}
 
 **`<pattern>`** 要素は、ある領域をカバーするために、x座標とy座標の間隔を繰り返して (「タイル」) 再描画することができるグラフィックオブジェクトを定義します。
@@ -22,14 +17,14 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
-      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/>
-    </pattern>
-  </defs>
+  <defs>
+    <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
+      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/>
+    </pattern>
+  </defs>
 
-  <circle cx="50"  cy="50" r="50" fill="url(#star)"/>
-  <circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/>
+  <circle cx="50"  cy="50" r="50" fill="url(#star)"/>
+  <circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/>
 </svg>
 ```
 

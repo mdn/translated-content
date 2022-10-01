@@ -22,6 +22,7 @@ tags:
 translation_of: Web/HTTP/CORS/Errors/CORSDisabled
 original_slug: Web/HTTP/CORS/Errors/CORSDesactive
 ---
+
 {{HTTPSidebar}}
 
 ## Raison

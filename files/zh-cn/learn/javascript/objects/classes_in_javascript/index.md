@@ -1,11 +1,8 @@
 ---
 title: JavaScript 中的类
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - JavaScript
-  - Learn
-translation_of: Learn/JavaScript/Objects/Classes_in_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 在[上一篇文章](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_programming)中，我们介绍了面向对象编程（OOP）的基本概念，并介绍了一个使用 OOP 原则对学校的教授和学生进行建模的示例。

@@ -3,6 +3,7 @@ title: AudioBuffer()
 slug: Web/API/AudioBuffer/AudioBuffer
 translation_of: Web/API/AudioBuffer/AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 Le constructeur **`AudioBuffer`** créer un nouvel objet {{domxref("AudioBuffer")}}.
@@ -26,10 +27,8 @@ var audioBuffer = new AudioBuffer(context[, options]);
 
 ## Spécifications
 
-| Spécification                                                                | Statut                               | Commentaire         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Audio API','#AudioBuffer','AudioBuffer')}} | {{Spec2('Web Audio API')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité des Navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer.AudioBuffer")}}
+{{Compat}}

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
 <div>{{JSRef}}</div>
 
-<p>Функция <strong><code>WebAssembly.compile()</code></strong> компилирует {{jsxref("WebAssembly.Module")}} из двоичного кода WebAssembly. Эта функция полезна, если необходимо компилировать модуль до того, как его можно создать (в противном случае следует использовать функцию {{jsxref("WebAssembly.instantiate()")}}.</p>
+<p>Функция <strong><code>WebAssembly.compile()</code></strong> компилирует {{jsxref("WebAssembly.Module")}} из двоичного кода WebAssembly. Эта функция полезна, если необходимо компилировать модуль до того, как его можно создать (в противном случае следует использовать функцию {{jsxref("WebAssembly.instantiate()")}}.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 <h3 id="Исключения">Исключения</h3>
 
 <ul>
- <li>Если <code>bufferSource</code> не является <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>, генерируется {{jsxref("TypeError")}}.</li>
+ <li>Если <code>bufferSource</code> не является <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>, генерируется {{jsxref("TypeError")}}.</li>
  <li>Если компиляция не удалась, промис отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.</li>
 </ul>
 
@@ -36,11 +36,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 <pre class="brush: js">var worker = new Worker("wasm_worker.js");
 
 fetch('simple.wasm').then(response =&gt;
-  response.arrayBuffer()
+  response.arrayBuffer()
 ).then(bytes =&gt;
-  WebAssembly.compile(bytes)
+  WebAssembly.compile(bytes)
 ).then(mod =&gt;
-  worker.postMessage(mod)
+  worker.postMessage(mod)
 );</pre>
 
 <div class="note">
@@ -61,7 +61,7 @@ fetch('simple.wasm').then(response =&gt;
   <tr>
    <td>{{SpecName('WebAssembly JS', '#webassemblycompile', 'compile()')}}</td>
    <td>{{Spec2('WebAssembly JS')}}</td>
-   <td>Первоначальное определение проекта.</td>
+   <td>Первоначальное определение проекта.</td>
   </tr>
  </tbody>
 </table>

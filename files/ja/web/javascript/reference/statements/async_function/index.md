@@ -1,15 +1,8 @@
 ---
 title: 非同期関数
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Example
-  - 関数
-  - JavaScript
-  - 言語機能
-  - 文
-browser-compat: javascript.statements.async_function
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 非同期関数は `async` キーワードで宣言され、その中で `await` キーワードを使うことができます。 `async` および `await` キーワードを使用することで、プロミスベースの非同期の動作を、プロミスチェーンを明示的に構成する必要なく、よりすっきりとした方法で書くことができます。
@@ -134,7 +127,7 @@ foo()
 async function foo() {
    const p1 = new Promise((resolve) => setTimeout(() => resolve('1'), 1000))
    const p2 = new Promise((_,reject) => setTimeout(() => reject('2'), 500))
-   const results = [await p1, await p2] // こうしないでください。 Promise.all または Promise.allSettled を使用してください。
+   const results = [await p1, await p2] // こうしないでください。 Promise.all または Promise.allSettled を使用してください。
 }
 foo().catch(() => {}) // すべてのエラーを浅くしようとする...
 ```
@@ -222,12 +215,12 @@ setTimeout(parallel, 10000) // 本当に並列処理となるため 1 秒後に 
 `concurrentStart` では、両方のタイマーが作成され、両方とも `await` される、すなわち待機させられます。タイマーは同時に実行されているため、 3 秒後ではなく 2 秒後に、すなわち最も遅いタイマーにあわせて終了します。
  しかし、 `await` の呼び出しは依然として逐次処理であり、これは 2 つ目の `await` が 1 つ目の終了まで待つことを意味します。このケースでは、最も速いタイマーが最も遅いタイマーのあとに処理されることになります。
 
-複数の処理を安全に並列に実行したい場合は、 [`Promise.all`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) または
+複数の処理を安全に並列に実行したい場合は、 [`Promise.all`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) または
 [`Promise.allSettled`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled) の呼び出しで待つ必要があります。
 
 > **Warning:** 関数 `concurrentStart` と `concurrentPromise` は機能的に同等ではありません。
 >
-> `concurrentStart` では、プロミス `fast` がプロミス `slow` の履行よりも前に拒否された場合、呼び出し元が catch 節を構成しているかどうかにかかわらず、プロミスの拒否が処理されないというエラーが発生します。
+> `concurrentStart` では、プロミス `fast` がプロミス `slow` の履行よりも前に拒否された場合、呼び出し元が catch 節を構成しているかどうかにかかわらず、プロミスの拒否が処理されないというエラーが発生します。
 >
 > `concurrentPromise` では、`Promise.all` がプロミスチェーンを一括して配線します。つまり、操作はプロミスの拒否の順番に関係なくすばやく失敗し、エラーは構成されたプロミスチェーン内で常に発生するため、通常の方法で捕捉することができます。
 

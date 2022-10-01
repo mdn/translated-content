@@ -1,13 +1,9 @@
 ---
 title: Semantics（语义）
 slug: Glossary/Semantics
-tags:
-  - 编程
-  - 语义
-  - 语义化
-translation_of: Glossary/Semantics
 original_slug: Glossary/语义
 ---
+
 在编程中，**语义**指的是一段代码的含义 — 例如 "运行这行 JavaScript 代码会产生怎样的影响？", 或者 "这个 HTML 的元素有什么作用，扮演了什么样的角色"（而不只是 "它看上去像是什么？"。）
 
 ## JavaScript 中的语义
@@ -71,7 +67,7 @@ When approaching which markup to use, ask yourself, "What element(s) best descri
 - [HTML element reference](/zh-CN/docs/Web/HTML/Element#Inline_text_semantics) on MDN
 - [Using HTML sections and outlines](/zh-CN/docs/Web/HTML/Element/Heading_Elements#Problems_solved_by_HTML5) on MDN
 - [HTML5 Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp) on w3schools
-- {{interwiki("wikipedia", "Semantics#Computer_science", "The meaning of semantics in computer science")}} on Wikipedia
+- [The meaning of semantics in computer science](https://zh.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
 - [MDN Web Docs Glossary](/zh-CN/docs/Glossary)
 
   - {{Glossary("SEO")}}

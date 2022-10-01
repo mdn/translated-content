@@ -5,6 +5,7 @@ page-type: web-api-instance-property
 translation_of: Web/API/BatteryManager/level
 browser-compat: api.BatteryManager.level
 ---
+
 {{APIRef("Battery API")}}
 
 La propriété **`BatteryManager.level`** indique le niveau de charge de la batterie en tant que valeur comprise entre `0.0` et `1.0`. Une valeur de `0.0` signifie que la batterie est vide et que le système est sur le point d'être désactivé. Une valeur de `1.0` signifie que la batterie est pleine. La valeur `1.0` est aussi retournée si le système n'est pas capable de déterminer son niveau de charge ou si le système n'est pas alimenté par une batterie. Lorsque sa valeur change, l'évènement [`levelchange`](/fr/docs/Web/API/BatteryManager/levelchange_event) est déclenché.

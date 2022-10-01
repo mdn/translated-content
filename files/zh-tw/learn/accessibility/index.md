@@ -1,25 +1,11 @@
 ---
 title: 無障礙網頁
 slug: Learn/Accessibility
-tags:
-  - ARIA
-  - Accessibility
-  - Articles
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Module
-  - NeedsTranslation
-  - TopicStub
-translation_of: Learn/Accessibility
 ---
+
 {{LearnSidebar}}
 
-如果要當 web 開發者，學會 HTML、CSS、JavaScript 是很重要的。不過除此之外，你還要學得更多：你需要**負責任地**運用這些技術，才能讓所有讀者都能使用你的網頁。要達成這點，本模塊將展示一般最佳實做（在 [HTML](/zh-TW/docs/Learn/HTML)、[CSS](/zh-TW/docs/Learn/CSS)、[JavaScript](/en-US/docs/Learn/JavaScript) 有示範）、[跨瀏覽器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing)、還有其他啟動的要點。
+如果要當 web 開發者，學會 HTML、CSS、JavaScript 是很重要的。不過除此之外，你還要學得更多：你需要**負責任地**運用這些技術，才能讓所有讀者都能使用你的網頁。要達成這點，本模塊將展示一般最佳實做（在 [HTML](/zh-TW/docs/Learn/HTML)、[CSS](/zh-TW/docs/Learn/CSS)、[JavaScript](/zh-TW/docs/Learn/JavaScript) 有示範）、[跨瀏覽器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing)、還有其他啟動的要點。
 
 ## 概觀
 

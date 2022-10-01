@@ -24,7 +24,7 @@ original_slug: Web/Performance/mejorando_rendimienot_inicial
 
 <p>Si está comenzando un proyecto de cero, generalmente es más sencillo escribir todo de la manera correcta, hacer que el código sea escrito para trabajar de manera asíncrona en mente. Hacer los cálculos iniciales en subprocesos en segundo plano cuando sea posible, crear tareas cortas para acelerar el tiempo de ejecución de los eventos de subprocesos importantes. Empezar a pintar en pantalla la interfaz gráfica para que el usuario sepa qué algo pasando y cuánto tiempo estará esperando. En teoría, de todos modos, debería ser bastante fácil diseñar una aplicación nueva para que inicie bien.</p>
 
-<p>Por otro lado,  migrar una aplicación existente a la Web puede ser una tarea más complicada. Por ejemplo, una aplicación de escritorio no necesita escribirse de forma asíncrona porque generalmente el sistema operativo se encarga de eso, o aplicación que se está ejecutando actualmente es lo único que importa, dependiendo del entorno operativo. La aplicación original puede tener un ciclo principal que puede modificarse para operar de forma asíncrona (intentando ejecutar cada iteración del ciclo principal por separado); el inicio es a menudo un procedimiento monolítico continuo que puede ir actualizando de manera periódica la interfaz gráfica para indicar progreso.</p>
+<p>Por otro lado,  migrar una aplicación existente a la Web puede ser una tarea más complicada. Por ejemplo, una aplicación de escritorio no necesita escribirse de forma asíncrona porque generalmente el sistema operativo se encarga de eso, o aplicación que se está ejecutando actualmente es lo único que importa, dependiendo del entorno operativo. La aplicación original puede tener un ciclo principal que puede modificarse para operar de forma asíncrona (intentando ejecutar cada iteración del ciclo principal por separado); el inicio es a menudo un procedimiento monolítico continuo que puede ir actualizando de manera periódica la interfaz gráfica para indicar progreso.</p>
 
 <p>Si bien se puede usar los <a href="es/docs/Web/Guide/Performance/Usando_web_workers" title="/en-US/docs/DOM/Using_web_workers">Web workers </a>para ejecutar fragmentos de forma asíncrona códigos <a href="/es/docs/JavaScript">JavaScript</a> muy grandes y/o lentos, hay una gran advertencia: Web workers no tienen accesso a <a href="/es/docs/Web/API/WebGL_API" title="/en-US/docs/WebGL">WebGL</a> o audio, y no pueden enviar mensajes síncronos al hilo principal, por lo que no se puede hacer un proxy de esos APIs al hilo principal. <span title="">Todo esto significa que, a menos que se pueda extraer fácilmente los trozos de "cálculo puro" del proceso de inicio en Web workers, se va terminar teniendo que ejecutar la mayor parte o la totalidad del código de inicio en el hilo principal.</span></p>
 
@@ -48,7 +48,7 @@ original_slug: Web/Performance/mejorando_rendimienot_inicial
 
 <h3 id="Problemas_de_Migración">Problemas de Migración</h3>
 
-<p> </p>
+<p> </p>
 
 <p>Una vez que se realiza la carga inicial y el código principal de la aplicación comienza a ejecutarse, es posible que su aplicación esté programada para trabajar en un solo hilo, especialmente cuando es una migración. Lo más importante que se puede hacer para tratar de ayudar con el proceso de inicio del código principal es refactorizar el código en partes pequeñas que se pueden ejecutrar en trozos intercalados en múltiples llamadas del ciclo principal de su aplicación, para que el hilo principal pueda manejar las interacciones del usuario y similares.</p>
 
@@ -56,7 +56,7 @@ original_slug: Web/Performance/mejorando_rendimienot_inicial
 
 <p>Eso deja, sin embargo, el problema de tener que refactorizar su código existente para que realmente funcione de esa manera. Eso puede llevar algún tiempo.</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="¿Que_tan_asíncrono_debo_ser">¿Que tan asíncrono debo ser?</h3>
 
@@ -93,4 +93,4 @@ original_slug: Web/Performance/mejorando_rendimienot_inicial
 </ul>
 </div>
 
-<p> </p>
+<p> </p>

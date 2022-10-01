@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-size-adjust
 ---
+
 {{CSSRef}}
 
 La propriété **`font-size-adjust`** permet de choisir une taille de police selon la taille des caractères en minuscules plutôt que selon la taille des majuscules.
@@ -54,9 +55,13 @@ On indique en fait que les minuscules de la fonte utilisée doivent mesurer `7px
 
     `0` entraînera une haute nulle pour le texte (qui sera donc caché). Pour d'anciens navigateurs, comme Firefox avant la version 40, `0` était géré comme `none`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -108,17 +113,11 @@ On indique en fait que les minuscules de la fonte utilisée doivent mesurer `7px
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-size-adjust', 'font-size-adjust')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
-
-La propriété CSS `font-size-adjust` fut initialement définie avec CSS 2 mais a été abandonnée dans CSS 2.1. Elle a de nouveau été définie avec CSS 3.
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-size-adjust")}}
+{{Compat}}
 
 ## Voir aussi
 

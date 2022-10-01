@@ -1,16 +1,8 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-tags:
-  - Cookies
-  - HTTP
-  - リファレンス
-  - レスポンス
-  - ヘッダー
-  - samesite
-browser-compat: http.headers.Set-Cookie
-translation_of: Web/HTTP/Headers/Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 **`Set-Cookie`** は HTTP のレスポンスヘッダーで、サーバーからユーザーエージェントへクッキーを送信するために使用され、ユーザーエージェントはそれを後でサーバーに送り返すことができます。
@@ -120,7 +112,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 - `HttpOnly` {{optional_inline}}
   - : JavaScript が {{domxref("Document.cookie")}} プロパティなどを介してこのクッキーにアクセスすることを禁止します。
-    なお、 `HttpOnly` で作成されたクッキーは、JavaScript で開始されたリクエスト、例えば、 {{domxref("XMLHttpRequest.send()")}} や {{domxref("fetch()")}} と共に送信されます。
+    なお、 `HttpOnly` で作成されたクッキーは、JavaScript で開始されたリクエスト、例えば、 {{domxref("XMLHttpRequest.send()")}} や {{domxref("fetch()")}} と共に送信されます。
     これにより、クロスサイトスクリプティング ({{Glossary("Cross-site_scripting", "XSS")}}) 攻撃を軽減します。
 - `SameSite=<samesite-value>` {{optional_inline}}
 
@@ -192,7 +184,7 @@ Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
 
 `__Secure-` または `__Host-` の接頭辞が付いたクッキー名は、安全な (HTTPS の) オリジンから `secure` ディレクティブを設定した場合のみ使用することができます。
 
-加えて、 `__Host-` の接頭辞が付いたクッキーは、 `/` (ホストの任意のパスという意味) を持つ必要があり、 `Domain` ディレクティブを持つことができません。
+加えて、 `__Host-` の接頭辞が付いたクッキーは、 `/` (ホストの任意のパスという意味) を持つ必要があり、 `Domain` ディレクティブを持つことができません。
 
 > **Warning:** クッキーの接頭辞を実装していないクライアントでは、これらの保証を受けることができず、クッキーは常に受け入れられます。
 

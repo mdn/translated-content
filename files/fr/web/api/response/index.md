@@ -11,9 +11,10 @@ tags:
   - Response
 translation_of: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
-L'interface **`Response`** de l'API de [fetch](/en-US/docs/Web/API/Fetch_API) représente la réponse d'une requête initialisée.
+L'interface **`Response`** de l'API de [fetch](/fr/docs/Web/API/Fetch_API) représente la réponse d'une requête initialisée.
 
 Vous pouvez créer un nouvel objet `Response` en utilisant le constructeur {{domxref("Response.Response()")}}. Cependant, vous rencontrerez plus fréquemment l'objet Response comme étant le résultat d'une opération de l'API, par exemple, un service worker {{domxref("Fetchevent.respondWith")}}, ou un simple {{domxref("GlobalFetch.fetch()")}}.
 
@@ -94,16 +95,14 @@ var myResponse = new Response();
 
 ## Spécifications
 
-| Spécification                                                        | Statut                   | Commentaire         |
-| -------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#response-class','Response')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/fr/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/fr/docs/Web/HTTP)

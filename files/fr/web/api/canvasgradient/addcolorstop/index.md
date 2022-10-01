@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/CanvasGradient/addColorStop
 ---
+
 {{APIRef("Canvas API")}}
 
 La méthode CanvasGradient.addColorStop () ajoute un nouvel arrêt, défini par un `décalage` et une `couleur`, au dégradé. Si le décalage n'est pas compris entre 0 et 1, une erreur INDEX_SIZE_ERR est générée, si la couleur ne peut pas être analysée en tant que {{cssxref ("&lt;color&gt;")}} CSS, une erreur SYNTAX_ERR est générée.
@@ -99,13 +100,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvasgradient-addcolorstop", "CanvasGradient.addColorStop")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasGradient.addColorStop")}}
+{{Compat}}
 
 ## Voir aussi
 

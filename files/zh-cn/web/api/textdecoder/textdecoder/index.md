@@ -1,16 +1,8 @@
 ---
 title: TextDecoder()
 slug: Web/API/TextDecoder/TextDecoder
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Encoding
-  - Experimental
-  - Reference
-  - TextDecoder
-translation_of: Web/api/TextDecoder/TextDecoder
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextDecoder()`** 构造函数使用参数中指定的编码返回一个新创建的 {{DOMxRef("TextDecoder")}} 对象。

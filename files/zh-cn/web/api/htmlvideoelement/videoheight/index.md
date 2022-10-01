@@ -1,26 +1,8 @@
 ---
 title: HTMLVideoElement.videoHeight
 slug: Web/API/HTMLVideoElement/videoHeight
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLVideoElement
-  - Intrinsic Height
-  - Intrinsic Width
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Dimensions
-  - dimension
-  - height
-  - size
-  - videoHeight
-  - videoWidth
-browser-compat: api.HTMLVideoElement.videoHeight
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLVideoElement")}} 接口提供只读的 **`videoHeight`** 属性 ，指示视频的 [固有高度](#关于固定的宽高) ，使用CSS的像素值表示。

@@ -2,18 +2,8 @@
 title: Svelte入門
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Svelte
-  - client-side
-  - 初學者
-  - 框架
-  - 學習
-  - 客戶端
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

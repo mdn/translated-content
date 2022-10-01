@@ -1,17 +1,8 @@
 ---
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - レスポンスヘッダー
-  - ヘッダー
-  - WWW-Authenticate
-  - 認証
-browser-compat: http.headers.WWW-Authenticate
-translation_of: Web/HTTP/Headers/WWW-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`WWW-Authenticate`** レスポンスヘッダーは、リソースへのアクセス権を得るために使われる [HTTP 認証](/ja/docs/Web/HTTP/Authentication)メソッド (「チャレンジ」) を定義します。</p>

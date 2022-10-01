@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 translation_of: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 La propriété `CanvasRenderingContext2D.imageSmoothingEnabled` de l'API Canvas 2D peut être affectée pour changer le fait que les images soient lissées (`true`, par défaut) ou non (`false`). Lors de la récupération de la propriété `imageSmoothingEnabled`, la dernière valeur à laquelle elle a été définie est renvoyée.
@@ -66,13 +67,11 @@ img.onload = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                    | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-imagesmoothingenabled", "CanvasRenderingContext2D.imageSmoothingEnabled")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.imageSmoothingEnabled")}}
+{{Compat}}
 
 ## Voir aussi
 

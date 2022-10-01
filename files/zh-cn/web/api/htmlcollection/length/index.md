@@ -1,15 +1,8 @@
 ---
 title: HTMLCollection.length
 slug: Web/API/HTMLCollection/length
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLCollection
-  - Reference
-  - Property
-translation_of: Web/API/HTMLCollection/length
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLCollection.length`** 属性返回 {{domxref("HTMLCollection")}} 中的元素数量。

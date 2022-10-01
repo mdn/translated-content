@@ -1,16 +1,8 @@
 ---
 title: 関数
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Function
-  - 関数
-  - ガイド
-  - JavaScript
-  - Parameter
-  - 引数
-browser-compat: javascript.functions
-translation_of: Web/JavaScript/Reference/Functions
 ---
+
 {{jsSidebar("Functions")}}
 
 一般的に言うと、関数とは外部 (再帰の場合は内部) から *呼び出す* ことのできる「サブプログラム」です。プログラムそのもののように、関数は関数本体 (*function body*) と呼ばれる連続した文で構成されます。値を関数に*渡す*ことができ、関数は値を*返す*ことができます。
@@ -109,7 +101,7 @@ var myFunction = function() {
 
 ```js
 var myFunction = function namedFunction(){
-    statements
+    statements
 }
 ```
 
@@ -117,7 +109,7 @@ var myFunction = function namedFunction(){
 
 ここまで見てきたように、どちらの例も `function` キーワードから開始されていません。 `function` から開始せずに関数を含んでいる文が関数式です。
 
-関数が一度だけ使われるとき、一般的なパターンが[即時実行関数式 (IIFE, Immediately Invoked Function Expression)](/ja/docs/Glossary/IIFE) です。
+関数が一度だけ使われるとき、一般的なパターンが[即時実行関数式 (IIFE, Immediately Invoked Function Expression)](/ja/docs/Glossary/IIFE) です。
 
 ```js
 (function() {
@@ -129,7 +121,7 @@ var myFunction = function namedFunction(){
 
 ### ジェネレーター関数宣言 (`function*` 文)
 
-ジェネレーター関数の宣言のための特別な構文です (詳細は {{jsxref('Statements/function*', 'function* 文')}} を参照してください)。
+ジェネレーター関数の宣言のための特別な構文です (詳細は {{jsxref('Statements/function*', 'function* 文')}} を参照してください)。
 
 ```js
 function* name([param[, param[, ... param]]]) {
@@ -254,7 +246,7 @@ ECMAScript 2015 からは、独自のメソッドを、ゲッターとセッタ�
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {}
 };
 ```
 
@@ -272,7 +264,7 @@ var multiply = new Function('x', 'y', 'return x * y');
 
 ```js
 function multiply(x, y) {
-   return x * y;
+   return x * y;
 } // ここにセミコロンは必要ありません
 ```
 

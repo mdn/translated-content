@@ -1,11 +1,11 @@
 ---
 title: 3D 碰撞检测
 slug: Games/Techniques/3D_collision_detection
-translation_of: Games/Techniques/3D_collision_detection
 ---
+
 {{GamesSidebar}}
 
-本文介绍了用于在 3D 环境中实现不同边界体积碰撞检测的技术。 后续文章将讨论特定 3D 库中的实现。
+本文介绍了用于在 3D 环境中实现不同边界体积碰撞检测的技术。后续文章将讨论特定 3D 库中的实现。
 
 ## Axis-aligned bounding boxes（**AABB 包围盒**）
 
@@ -19,11 +19,11 @@ translation_of: Games/Techniques/3D_collision_detection
 
 ![](rotating_knot.gif)
 
-> **备注：** 参考[这里](/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)，使用 Three.js 进行边界体积碰撞检测。
+> **备注：** 参考[这里](/zh-CN/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)，使用 Three.js 进行边界体积碰撞检测。
 
 ### 点与 AABB
 
-如果检测到一个点是否在 AABB 内部就非常简单了 — 我们只需要检查这个点的坐标是否在 AABB 内; 分别考虑到每种坐标轴。如果假设 _P<sub>x</sub>_, _P<sub>y</sub> 和_ _P<sub>z</sub>_ 是点的坐标， _B<sub>minX</sub>_–_B<sub>maxX</sub>_, _B<sub>minY</sub>_–_B<sub>maxY</sub>_, 和 _B<sub>minZ</sub>_–_B<sub>maxZ</sub>_ 是 AABB 的每一个坐标轴的范围，我们可以使用以下公式计算两者之间的碰撞是否发生：
+如果检测到一个点是否在 AABB 内部就非常简单了 — 我们只需要检查这个点的坐标是否在 AABB 内; 分别考虑到每种坐标轴。如果假设 _P<sub>x</sub>_, _P<sub>y</sub> 和_ _P<sub>z</sub>_ 是点的坐标，_B<sub>minX</sub>_–_B<sub>maxX</sub>_, _B<sub>minY</sub>_–_B<sub>maxY</sub>_, 和 _B<sub>minZ</sub>_–_B<sub>maxZ</sub>_ 是 AABB 的每一个坐标轴的范围，我们可以使用以下公式计算两者之间的碰撞是否发生：
 
 <math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>x</mi></msub><mo>>=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>X</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>x</mi></msub><mo>&#x3C;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>X</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>y</mi></msub><mo>>=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Y</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>y</mi></msub><mo>&#x3C;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Y</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>z</mi></msub><mo>>=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Z</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>z</mi></msub><mo>&#x3C;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Z</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">f(P,B)= (P*x >= B*{minX} \wedge P*x &#x3C;= B*{maxX}) \wedge (P*y >= B*{minY} \wedge P*y &#x3C;= B*{maxY}) \wedge (P*z >= B*{minZ} \wedge P*z &#x3C;= B*{maxZ})</annotation></semantics></math>
 
@@ -39,7 +39,7 @@ function isPointInsideAABB(point, box) {
 
 ### AABB 与 AABB
 
-检查一个 AABB 是否和另一个 AABB 相交类似于检测两个点一样。我们只需要基于每一条坐标轴并利用盒子的边缘去检测。下图显示了我们基于 X 轴的检测 — 当然， _A<sub>minX</sub>_–_A<sub>maxX</sub>_ 和 _B<sub>minX</sub>_–_B<sub>maxX</sub>_ 会不会重叠？
+检查一个 AABB 是否和另一个 AABB 相交类似于检测两个点一样。我们只需要基于每一条坐标轴并利用盒子的边缘去检测。下图显示了我们基于 X 轴的检测 — 当然，_A<sub>minX</sub>_–_A<sub>maxX</sub>_ 和 _B<sub>minX</sub>_–_B<sub>maxX</sub>_ 会不会重叠？
 
 ![updated version](aabb_test.png)
 
@@ -141,8 +141,8 @@ We have prepared a [live collision detection demo](http://mozdevs.github.io/game
 
 Related articles on MDN:
 
-- [Bounding volumes collision detection with Three.js](/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)
-- [2D collision detection](/en-US/docs/Games/Techniques/2D_collision_detection)
+- [Bounding volumes collision detection with Three.js](/zh-CN/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)
+- [2D collision detection](/zh-CN/docs/Games/Techniques/2D_collision_detection)
 
 External resources:
 

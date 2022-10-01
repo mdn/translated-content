@@ -1,15 +1,15 @@
 ---
 title: search.search()
 slug: Mozilla/Add-ons/WebExtensions/API/search/search
-translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 ---
+
 {{AddonSidebar()}}
 
 使用指定的搜索引擎或默认搜索引擎进行搜索。
 
 结果将显示在一个新的选项卡中，或者如果给出了 tabId 参数，则显示在由此标识的选项卡中。
 
-要在扩展程序中使用此功能，您必须要求`"search"` [有明确许可](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+要在扩展程序中使用此功能，您必须要求`"search"` [有明确许可](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
 获取安装的搜索引擎，请使用 {{WebExtAPIRef("search.get()")}}.
 
@@ -40,9 +40,9 @@ browser.search.search(
 
 ## 浏览器兼容
 
-{{Compat("webextensions.api.search.search", 10)}}
+{{Compat}}
 
-## 例子
+## 示例
 
 使用默认搜索引擎进行搜索。结果显示在新选项卡中：
 

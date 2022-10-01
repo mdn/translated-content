@@ -1,10 +1,8 @@
 ---
 title: Grid Row
 slug: Glossary/Grid_Rows
-tags:
-  - CSS Grids
-translation_of: Glossary/Grid_Rows
 ---
+
 **网格行**是[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中的水平轨道，即两个水平网格线之间的空间。它通过属性 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}}， {{cssxref("grid-template")}} 定义。
 
 另外，当项目被放置到显示网格中创建的行外面时，可以在隐式网格中创建网格行。默认情况这些行自动调整大小，也可以使用 {{cssxref("grid-auto-rows")}} 属性指定其大小。

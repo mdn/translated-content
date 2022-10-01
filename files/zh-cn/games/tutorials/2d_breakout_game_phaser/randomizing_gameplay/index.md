@@ -1,21 +1,13 @@
 ---
 title: Randomizing gameplay
 slug: Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay
 ---
+
 {{GamesSidebar}}
 
 {{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 
-这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 中的第**16 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson16.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson16.html)完成本课程后找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 中的第**16 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson16.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson16.html)完成本课程后找到源代码。
 
 我们的游戏似乎已经完成了，但是如果你看起来足够近，你会发现球在整个游戏中都以相同的角度从桨上弹起。这意味着每个游戏都非常相似。为了解决这个问题，提高可玩性，我们应该使反弹角度更加随机，在本文中我们将介绍一下如何。
 
@@ -54,6 +46,6 @@ function ballHitPaddle(ball, paddle) {
 
 一定要检查越来越多的[示例](http://examples.phaser.io/)列表和[官方文档](http://docs.phaser.io/)，如果您需要任何帮助，请访问[HTML5 Gamedevs 论坛](http://www.html5gamedevs.com/forum/14-phaser/)。
 
-您也可以返回[本教程系列的索引页](/en-US/docs/Games/Workflows/2D_breakout_game_Phaser)。
+您也可以返回[本教程系列的索引页](/zh-CN/docs/Games/Workflows/2D_breakout_game_Phaser)。
 
 {{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}

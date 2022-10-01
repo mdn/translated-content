@@ -1,13 +1,8 @@
 ---
 title: 一元負號運算子 (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.unary_negation
 ---
+
 {{jsSidebar("Operators")}}
 
 一元負號運算子 (`-`) 置於運算元之前，並將運算元轉為其負值。

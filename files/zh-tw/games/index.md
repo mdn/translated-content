@@ -1,8 +1,8 @@
 ---
 title: 遊戲開發
 slug: Games
-translation_of: Games
 ---
+
 {{GamesSidebar}}
 
 遊戲絕對是最受歡迎的電腦功能之一。而相關技術不斷推陳出新，讓玩家在任何相容標準的網路瀏覽器上，也能盡情享受畫質更優、效能更好的遊戲。

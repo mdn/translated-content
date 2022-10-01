@@ -1,14 +1,8 @@
 ---
 title: location.reload()
 slug: Web/API/Location/reload
-tags:
-  - API
-  - HTML DOM
-  - Location
-  - Method
-  - Reference
-browser-compat: api.Location.reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
  **`location.reload()`** 方法用来刷新当前页面，就像刷新按钮一样。

@@ -1,12 +1,9 @@
 ---
 title: Request header（请求头）
 slug: Glossary/Request_header
-tags:
-  - HTTP
-  - 术语
-translation_of: Glossary/Request_header
 original_slug: Glossary/请求头
 ---
+
 **请求头**是 {{glossary("header", "HTTP 头")}}的一种，它可在 HTTP 请求中使用，并且和请求主体无关。某些请求头如 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language", "Accept-*")}}、 {{HTTPHeader("If-Modified-Since", "If-*")}} 允许执行条件请求。某些请求头如：{{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}} 和 {{HTTPHeader("Referer")}} 描述了请求本身以确保服务端能返回正确的响应。
 
 并非所有出现在请求中的 HTTP 首部都属于请求头，例如在 {{HTTPMethod("POST")}} 请求中经常出现的 [`Content-Length`](/zh-CN/docs/Web/HTTP/Headers/Content-Length) 实际上是一个代表请求主体大小的 [entity header](/zh-CN/docs/Glossary/entity_header)，虽然你也可以把它叫做请求头。
@@ -15,25 +12,29 @@ original_slug: Glossary/请求头
 
 下面是一个 HTTP 请求的请求头：
 
-    GET /home.html HTTP/1.1
-    Host: developer.mozilla.org
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-    Accept-Language: en-US,en;q=0.5
-    Accept-Encoding: gzip, deflate, br
-    Referer: https://developer.mozilla.org/testpage.html
-    Connection: keep-alive
-    Upgrade-Insecure-Requests: 1
-    If-Modified-Since: Mon, 18 Jul 2016 02:36:04 GMT
-    If-None-Match: "c561c68d0ba92bbeb8b0fff2a9199f722e3a621a"
-    Cache-Control: max-age=0
+```
+GET /home.html HTTP/1.1
+Host: developer.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: https://developer.mozilla.org/testpage.html
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+If-Modified-Since: Mon, 18 Jul 2016 02:36:04 GMT
+If-None-Match: "c561c68d0ba92bbeb8b0fff2a9199f722e3a621a"
+Cache-Control: max-age=0
+```
 
 严格来说在这个例子中的 {{HTTPHeader("Content-Length")}} 不是一个请求头，而是一个实体头（{{glossary("entity header")}}）：
 
-    POST /myform.html HTTP/1.1
-    Host: developer.mozilla.org
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-    Content-Length: 128
+```
+POST /myform.html HTTP/1.1
+Host: developer.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+Content-Length: 128
+```
 
 ## 深入了解
 

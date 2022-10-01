@@ -1,13 +1,8 @@
 ---
 title: Firefox における実験的機能
 slug: Mozilla/Firefox/Experimental_features
-tags:
-  - 実験的
-  - Firefox
-  - 設定
-  - 機能
-translation_of: Mozilla/Firefox/Experimental_features
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、提案されているまたは最先端のウェブプラットフォーム標準を含む、 Firefox の実験的かつ部分的に実装された機能を一覧にしています。また、それらの機能が搭載されているビルドの情報、「既定で」有効になっているかどうか、有効または無効にするためにどの*環境設定*を使用すべきかについても説明しています。
@@ -65,7 +60,7 @@ translation_of: Mozilla/Firefox/Experimental_features
 
 ### input type="search" のレイアウト
 
-`input type="search"` のレイアウトが更新されました。これにより、何らかの入力を始めたときに、他のブラウザーの実装と同様にクリアアイコンが現れるようになります。 (詳しくは {{bug(558594)}} を参照してください。)
+`input type="search"` のレイアウトが更新されました。これにより、何らかの入力を始めたときに、他のブラウザーの実装と同様にクリアアイコンが現れるようになります。 (詳しくは {{bug(558594)}} を参照してください。)
 
 <table>
   <thead>

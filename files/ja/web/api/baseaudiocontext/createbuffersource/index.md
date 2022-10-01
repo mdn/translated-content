@@ -1,18 +1,9 @@
 ---
 title: BaseAudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createBufferSource
-browser-compat: api.BaseAudioContext.createBufferSource
-translation_of: Web/API/BaseAudioContext/createBufferSource
 original_slug: Web/API/AudioContext/createBufferSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createBufferSource()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、新しい {{ domxref("AudioBufferSourceNode") }} を作成するために使用します。これは {{ domxref("AudioBuffer") }} オブジェクトに含まれる音声データを再生するために使用されます。 {{ domxref("AudioBuffer") }} は {{domxref("BaseAudioContext.createBuffer")}} で生成さされたり、音声トラックのデコードに成功したときに {{domxref("BaseAudioContext.decodeAudioData")}} から返されたりします。
@@ -63,13 +54,13 @@ button.onclick = function() {
    var nowBuffering = myArrayBuffer.getChannelData(channel);
    for (var i = 0; i < frameCount; i++) {
      // Math.random() は [0; 1.0] である
-     // 音声は [-1.0; 1.0] である必要がある
+     // 音声は [-1.0; 1.0] である必要がある
      nowBuffering[i] = Math.random() * 2 - 1;
    }
   }
 
   // AudioBufferSourceNode を得る
-  // これは AudioBuffer を再生するときに使う AudioNode である
+  // これは AudioBuffer を再生するときに使う AudioNode である
   var source = audioCtx.createBufferSource();
   // AudioBufferSourceNode にバッファーを設定する
   source.buffer = myArrayBuffer;

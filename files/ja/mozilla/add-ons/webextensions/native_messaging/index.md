@@ -1,10 +1,8 @@
 ---
 title: ネイティブメッセージング
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
+
 {{AddonSidebar}}
 
 **ネイティブメッセージング**はユーザーのコンピューターにインストールされたアプリケーションと拡張機能との間のメッセージ交換を可能にします。ネイティブメッセージングにより、拡張機能が追加のウェブを介したアクセスなしにサービスを提供できます。
@@ -408,7 +406,7 @@ while True:
 "No such native application <name>"
 ```
 
--  `runtime.connectNative()` に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください。
+- `runtime.connectNative()` に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください。
 - OS X/Linux: アプリマニフェストのファイル名が `<name>.json` となっていることを確認してください。
 - OS X/Linux: ネイティブアプリのマニフェストの場所が[ここ](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_OS_X)で述べているところにあるのを確認してください。
 - Windows: レジストリキーが正しい場所にあり、その名前がアプリマニフェスト中の名前と一致していることを確認してください。

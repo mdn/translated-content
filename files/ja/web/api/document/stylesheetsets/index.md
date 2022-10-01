@@ -1,18 +1,8 @@
 ---
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - プロパティ
-  - リファレンス
-  - スタイルシート
-  - 非推奨
-browser-compat: api.Document.styleSheetSets
-translation_of: Web/API/Document/styleSheetSets
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 **`styleSheetSets`** プロパティは読み取り専用で、現在有効なすべてのスタイルシートセットの生きたリストを返します。

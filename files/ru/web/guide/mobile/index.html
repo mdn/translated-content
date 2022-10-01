@@ -5,37 +5,37 @@ tags:
   - Средний уровень
 translation_of: Web/Guide/Mobile
 ---
-<p>На этой странице даётся обзор основных методов разработки веб-сайтов, корректно работающих на мобильных устройствах. Если вы ищете информацию о проекте Firefox OS от Mozilla, смотрите страницу <a href="/ru/docs/Archive/B2G_OS" title="Boot to Gecko">Firefox OS</a>. Возможно вас также интересует подробная информация о  <a href="/ru/docs/Mozilla/Firefox_%D0%B4%D0%BB%D1%8F_Android" title="Firefox for Android">Firefox для Android</a>.</p>
+<p>На этой странице даётся обзор основных методов разработки веб-сайтов, корректно работающих на мобильных устройствах. Если вы ищете информацию о проекте Firefox OS от Mozilla, смотрите страницу <a href="/ru/docs/Archive/B2G_OS" title="Boot to Gecko">Firefox OS</a>. Возможно вас также интересует подробная информация о  <a href="/ru/docs/Mozilla/Firefox_%D0%B4%D0%BB%D1%8F_Android" title="Firefox for Android">Firefox для Android</a>.</p>
 
-<p>Статья разбита на два раздела: <a href="#разработка_под_мобильные_устройства">разработка под мобильные устройства</a> и <a href="#кросс_браузерная_вёрстка">кросс-браузерная совместимость</a>.<br>
- Смотрите также руководство от Jason Grlicky по <a href="/en-US/docs/Web_Development/Mobile/Mobile-friendliness" title="/en-US/docs/Web_Development/Mobile/Mobile-friendliness">дружелюбность-к-мобильным</a> для веб-разработчиков.</p>
+<p>Статья разбита на два раздела: <a href="#разработка_под_мобильные_устройства">разработка под мобильные устройства</a> и <a href="#кросс_браузерная_вёрстка">кросс-браузерная совместимость</a>.<br>
+ Смотрите также руководство от Jason Grlicky по <a href="/en-US/docs/Web_Development/Mobile/Mobile-friendliness" title="/en-US/docs/Web_Development/Mobile/Mobile-friendliness">дружелюбность-к-мобильным</a> для веб-разработчиков.</p>
 
-<h2 id="Разработка_под_мобильные_устройства"><a id="разработка_под_мобильные_устройства">Разработка под мобильные устройства</a></h2>
+<h2 id="Разработка_под_мобильные_устройства"><a id="разработка_под_мобильные_устройства">Разработка под мобильные устройства</a></h2>
 
-<p>По сравнению со стационарными компьютерами и ноутбуками у мобильных устройств гораздо больше различий в их аппаратной составляющей. Экраны мобильных устройств могут иметь как очень большое, так и очень маленькое разрешение. Помимо этого, они могут автоматически переключаться между вертикальной и горизонтальной ориентацией в момент, когда пользователь поворачивает устройство. Они обычно используют сенсорный экран для пользовательского ввода. Всевозможные API, например,  геолокация или ориентация, которые либо не поддерживаются или не используются на на стационарных компьютерах, предоставляют мобильным устройствам пользователей дополнительные способы взаимодействия с вашим сайтом.</p>
+<p>По сравнению со стационарными компьютерами и ноутбуками у мобильных устройств гораздо больше различий в их аппаратной составляющей. Экраны мобильных устройств могут иметь как очень большое, так и очень маленькое разрешение. Помимо этого, они могут автоматически переключаться между вертикальной и горизонтальной ориентацией в момент, когда пользователь поворачивает устройство. Они обычно используют сенсорный экран для пользовательского ввода. Всевозможные API, например,  геолокация или ориентация, которые либо не поддерживаются или не используются на на стационарных компьютерах, предоставляют мобильным устройствам пользователей дополнительные способы взаимодействия с вашим сайтом.</p>
 
-<h3 id="Работа_с_маленькими_экранами">Работа с  маленькими экранами</h3>
+<h3 id="Работа_с_маленькими_экранами">Работа с  маленькими экранами</h3>
 
-<p><a href="/en-US/docs/Web/Guide/Responsive_design" title="/en-US/docs/Web/Guide/Responsive_design">Адаптивный веб-дизайн</a> – это термин, означающий набор методов, позволяющих вашему веб-сайту адаптировать разметку под среду, в которой он просматривается. Как правило, это изменяющиеся размеры и ориентация. Основные методы адаптивного веб-дизайна:</p>
+<p><a href="/en-US/docs/Web/Guide/Responsive_design" title="/en-US/docs/Web/Guide/Responsive_design">Адаптивный веб-дизайн</a> – это термин, означающий набор методов, позволяющих вашему веб-сайту адаптировать разметку под среду, в которой он просматривается. Как правило, это изменяющиеся размеры и ориентация. Основные методы адаптивного веб-дизайна:</p>
 
 <ul>
  <li>обтекаемая разметка CSS, позволяющая плавно адаптировать страницу под изменяющиеся размеры окна</li>
- <li>использование <a href="/en/CSS/Media_queries" title="en/CSS/Media_queries">медиавыражений</a>, подключающих стили по условию, соответственно, <a href="/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">ширине</a> и <a href="/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">высоте</a> экрана.</li>
+ <li>использование <a href="/en/CSS/Media_queries" title="en/CSS/Media_queries">медиавыражений</a>, подключающих стили по условию, соответственно, <a href="/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">ширине</a> и <a href="/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">высоте</a> экрана.</li>
 </ul>
 
-<p><a href="/ru/docs/Mozilla/Mobile/Viewport_meta_tag" title="en/Mobile/Viewport_meta_tag">Meta-тег viewport</a> указывает браузеру, каким образом отображать ваш сайт в подходящем масштабе на устройстве пользователя.</p>
+<p><a href="/ru/docs/Mozilla/Mobile/Viewport_meta_tag" title="en/Mobile/Viewport_meta_tag">Meta-тег viewport</a> указывает браузеру, каким образом отображать ваш сайт в подходящем масштабе на устройстве пользователя.</p>
 
 <h3 id="Работа_с_сенсорными_экранами">Работа с сенсорными экранами</h3>
 
-<p>Для использования сенсорного экрана вам понадобится работать с <a href="/en/DOM/Touch_events" title="en/DOM/Touch_events">DOM Touch events</a>. Вы не сможете использовать псевдо класс <a href="/ru/docs/Web/CSS/:hover" title="En/CSS/:hover">CSS :hover</a>, а при проектировании интерактивных элементов (к примеру, кнопок) нужно будет учитывать тот факт, что пальцы толще, чем указатели мыши. Дополнительные материалы в статье <a class="external" href="https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">проектирование под сенсорные экраны</a>.</p>
+<p>Для использования сенсорного экрана вам понадобится работать с <a href="/en/DOM/Touch_events" title="en/DOM/Touch_events">DOM Touch events</a>. Вы не сможете использовать псевдо класс <a href="/ru/docs/Web/CSS/:hover" title="En/CSS/:hover">CSS :hover</a>, а при проектировании интерактивных элементов (к примеру, кнопок) нужно будет учитывать тот факт, что пальцы толще, чем указатели мыши. Дополнительные материалы в статье <a class="external" href="https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">проектирование под сенсорные экраны</a>.</p>
 
-<p>Вы можете использовать медиавыражение <a href="/en/CSS/Media_queries#-moz-touch-enabled" title="en/CSS/Media_queries#-moz-touch-enabled">-moz-touch-enabled</a>, чтобы использовать нужные вам правила CSS на устройствах, поддерживающих обработку нажатий на экран.</p>
+<p>Вы можете использовать медиавыражение <a href="/en/CSS/Media_queries#-moz-touch-enabled" title="en/CSS/Media_queries#-moz-touch-enabled">-moz-touch-enabled</a>, чтобы использовать нужные вам правила CSS на устройствах, поддерживающих обработку нажатий на экран.</p>
 
 <h3 id="Оптимизация_изображений">Оптимизация изображений</h3>
 
-<p>Для оптимизации скорости загрузки у пользователей мобильных устройств вы имеете возможность загружать различные версии изображений в соответствии со спецификациями экрана устройства. Описать правила загрузки можно в CSS при помощи медиавыражений <a href="/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">height</a>, <a href="/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">width</a>, и <a href="/en/CSS/Media_queries#-moz-device-pixel-ratio" title="en/CSS/Media_queries#-moz-device-pixel-ratio">pixel ratio</a>.</p>
+<p>Для оптимизации скорости загрузки у пользователей мобильных устройств вы имеете возможность загружать различные версии изображений в соответствии со спецификациями экрана устройства. Описать правила загрузки можно в CSS при помощи медиавыражений <a href="/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">height</a>, <a href="/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">width</a>, и <a href="/en/CSS/Media_queries#-moz-device-pixel-ratio" title="en/CSS/Media_queries#-moz-device-pixel-ratio">pixel ratio</a>.</p>
 
-<p>Также вы можете использовать свойства CSS чтобы применить визуальные эффекты типа <a href="/en/CSS/Using_CSS_gradients" title="en/CSS/Using_CSS_gradients">gradients</a> и <a href="/En/CSS/Box-shadow" title="En/CSS/Box-shadow">shadows</a> без использования изображений.</p>
+<p>Также вы можете использовать свойства CSS чтобы применить визуальные эффекты типа <a href="/en/CSS/Using_CSS_gradients" title="en/CSS/Using_CSS_gradients">gradients</a> и <a href="/En/CSS/Box-shadow" title="En/CSS/Box-shadow">shadows</a> без использования изображений.</p>
 
 <h3 id="API_для_мобильных_устройств">API для мобильных устройств</h3>
 
@@ -48,28 +48,28 @@ translation_of: Web/Guide/Mobile
 <p>Чтобы создавать веб-сайты, которые будут работать приемлемо во всех мобильных браузерах:</p>
 
 <ul>
- <li>Старайтесь избегать использования стилей, специфических для браузеров, таких как свойства CSS с вендорными префиксами.</li>
+ <li>Старайтесь избегать использования стилей, специфических для браузеров, таких как свойства CSS с вендорными префиксами.</li>
  <li>Если всё же вам необходимо ими воспользоваться, убедитесь что другие браузеры применяют свои собственные версии этих свойств, и укажите их.</li>
  <li>Для браузеров, которые не поддерживают эти свойства, обеспечьте приемлемый упрощённый вариант.</li>
 </ul>
 
-<p>Например, если вы указываете градиент в качестве фона для какого-либо текста, используя стиль с вендорным префиксом типа <code>-webkit-linear-gradient</code>, правильнее включить другие варианты с вендор-специфическими префиксами для свойства <a href="/en/CSS/linear-gradient" title="en/CSS/linear-gradient">linear-gradient</a>. Если вы этого не делаете, по крайней мере удостоверьтесь, что фон, отображаемый по умолчанию, контрастирует с текстом: тогда страница, по крайней мере, будет корректно отображаться в браузере, который не воспринимает ваше <code>linear-gradient</code> правило.</p>
+<p>Например, если вы указываете градиент в качестве фона для какого-либо текста, используя стиль с вендорным префиксом типа <code>-webkit-linear-gradient</code>, правильнее включить другие варианты с вендор-специфическими префиксами для свойства <a href="/en/CSS/linear-gradient" title="en/CSS/linear-gradient">linear-gradient</a>. Если вы этого не делаете, по крайней мере удостоверьтесь, что фон, отображаемый по умолчанию, контрастирует с текстом: тогда страница, по крайней мере, будет корректно отображаться в браузере, который не воспринимает ваше <code>linear-gradient</code> правило.</p>
 
-<p>Смотрите этот <a href="/en/CSS/CSS_Reference/Mozilla_Extensions" title="en/CSS/CSS_Reference/Mozilla_Extensions">список Gecko-специфических свойств</a>, и этот список <a href="/en/CSS/CSS_Reference/Webkit_Extensions" title="en/CSS/CSS_Reference/Webkit_Extensions">WebKit-</a><a href="/en/CSS/CSS_Reference/Mozilla_Extensions" title="en/CSS/CSS_Reference/Mozilla_Extensions">специфических свойств</a>, и <a class="external" href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">таблицу вендор-специфических свойств</a> от Peter Beverloo.</p>
+<p>Смотрите этот <a href="/en/CSS/CSS_Reference/Mozilla_Extensions" title="en/CSS/CSS_Reference/Mozilla_Extensions">список Gecko-специфических свойств</a>, и этот список <a href="/en/CSS/CSS_Reference/Webkit_Extensions" title="en/CSS/CSS_Reference/Webkit_Extensions">WebKit-</a><a href="/en/CSS/CSS_Reference/Mozilla_Extensions" title="en/CSS/CSS_Reference/Mozilla_Extensions">специфических свойств</a>, и <a class="external" href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">таблицу вендор-специфических свойств</a> от Peter Beverloo.</p>
 
-<p>Использование инструментов, наподобие <a class="external" href="http://csslint.net/">CSS Lint</a> может помочь обнаружить подобные проблемы в коде, а такие препроцессоры, как <a class="external" href="http://sass-lang.com/">SASS</a> и <a class="external" href="http://lesscss.org/">LESS</a> могут помочь вам создавать кросс-браузерный код.</p>
+<p>Использование инструментов, наподобие <a class="external" href="http://csslint.net/">CSS Lint</a> может помочь обнаружить подобные проблемы в коде, а такие препроцессоры, как <a class="external" href="http://sass-lang.com/">SASS</a> и <a class="external" href="http://lesscss.org/">LESS</a> могут помочь вам создавать кросс-браузерный код.</p>
 
-<h3 id="Позаботьтесь_об_анализе_user_agent">Позаботьтесь об анализе user agent</h3>
+<h3 id="Позаботьтесь_об_анализе_user_agent">Позаботьтесь об анализе user agent</h3>
 
-<p>Для веб-сайтов предпочтительнее обнаружить свойства, специфичные для устройства, такие как размеры экрана и наличие сенсорного экрана, используя описанные выше способы, и соответственно адаптироваться. Но иногда это непрактично, и веб-сайты прибегают к синтаксическому разбору строки user agent браузера чтобы различить десктопы, планшеты, и смартфоны, чтобы отправлять разный контент под каждый тип устройств.</p>
+<p>Для веб-сайтов предпочтительнее обнаружить свойства, специфичные для устройства, такие как размеры экрана и наличие сенсорного экрана, используя описанные выше способы, и соответственно адаптироваться. Но иногда это непрактично, и веб-сайты прибегают к синтаксическому разбору строки user agent браузера чтобы различить десктопы, планшеты, и смартфоны, чтобы отправлять разный контент под каждый тип устройств.</p>
 
-<p>Если вы это делаете, удостоверьтесь что ваш алгоритм точный, и вы не отправляете неверный тип контента на устройство из-за того что вы не знаете какой-то специфической для браузера user agent строки. Смотрите данное <a href="/en/Browser_detection_using_the_user_agent#Mobile.2C_Tablet_or_Desktop" title="browser detection using the user agent">руководство по использованию user agent строки чтобы определить тип устройства</a>.</p>
+<p>Если вы это делаете, удостоверьтесь что ваш алгоритм точный, и вы не отправляете неверный тип контента на устройство из-за того что вы не знаете какой-то специфической для браузера user agent строки. Смотрите данное <a href="/en/Browser_detection_using_the_user_agent#Mobile.2C_Tablet_or_Desktop" title="browser detection using the user agent">руководство по использованию user agent строки чтобы определить тип устройства</a>.</p>
 
-<h3 id="Проверяйте_на_многих_браузерах">Проверяйте на многих браузерах</h3>
+<h3 id="Проверяйте_на_многих_браузерах">Проверяйте на многих браузерах</h3>
 
-<p>Проверяйте ваш веб-сайт на многих браузерах. Это означает тестирование на многих платформах — по крайней мере на iOS и Android.</p>
+<p>Проверяйте ваш веб-сайт на многих браузерах. Это означает тестирование на многих платформах — по крайней мере на iOS и Android.</p>
 
 <ul>
- <li>тестируйте под мобильный Safari на iPhone используя <a class="link-https" href="https://developer.apple.com/devcenter/ios/index.action">iOS симулятор</a></li>
- <li>тестируйте под Opera и Firefox используя <a class="link-https" href="https://developer.android.com/sdk/index.html">Android SDK</a>. Смотрите эти дополнительные инструкции для <a class="link-https" href="https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator">запуска Firefox под Android используя эмулятор Android</a>.</li>
+ <li>тестируйте под мобильный Safari на iPhone используя <a class="link-https" href="https://developer.apple.com/devcenter/ios/index.action">iOS симулятор</a></li>
+ <li>тестируйте под Opera и Firefox используя <a class="link-https" href="https://developer.android.com/sdk/index.html">Android SDK</a>. Смотрите эти дополнительные инструкции для <a class="link-https" href="https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator">запуска Firefox под Android используя эмулятор Android</a>.</li>
 </ul>

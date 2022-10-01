@@ -1,12 +1,8 @@
 ---
 title: version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version
-tags:
-  - version
-  - 版本信息
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -26,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version
   </tbody>
 </table>
 
-附加组件的版本，一般格式设置为由点分隔开来数字的 ASCII 字符串。关于版本格式的详细信息，请查看 [Version format](/en-US/docs/Toolkit_version_format) .
+附加组件的版本，一般格式设置为由点分隔开来数字的 ASCII 字符串。关于版本格式的详细信息，请查看 [Version format](/zh-CN/docs/Toolkit_version_format) .
 
 需要注意的是 Chrome 浏览器的 version 格式要求 ([the syntax defined for Chrome's `version`](https://developer.chrome.com/extensions/manifest/version)) 比 Firefox 浏览器的 version 格式更严格一些，这意味这：
 
@@ -41,4 +37,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.version")}}
+{{Compat}}

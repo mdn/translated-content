@@ -1,15 +1,8 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.flex-basis
-translation_of: Web/CSS/flex-basis
 ---
+
 {{CSSRef}}
 
 **`flex-basis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムの主要部分の初期の寸法を設定します。 {{Cssxref("box-sizing")}} で設定していない限り、このプロパティはコンテンツボックスの寸法を定義します。

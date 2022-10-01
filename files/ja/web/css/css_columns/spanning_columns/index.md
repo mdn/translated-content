@@ -1,13 +1,8 @@
 ---
 title: 段抜きと段の均衡
 slug: Web/CSS/CSS_Columns/Spanning_Columns
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - ガイド
-  - レイアウト
-translation_of: Web/CSS/CSS_Columns/Spanning_Columns
 ---
+
 {{CSSRef}}
 
 このガイドでは、段組みコンテナー内で段抜きを作成する方法、段がどのように充足されるかを制御する方法を見てみます。

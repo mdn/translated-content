@@ -12,6 +12,7 @@ tags:
   - setDefaultSuggestion
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
 ---
+
 {{AddonSidebar()}}
 
 Définissez la suggestion par défaut à afficher dans la liste déroulante de la barre d'adresse lorsque l'utilisateur commence à interagir avec votre extension.

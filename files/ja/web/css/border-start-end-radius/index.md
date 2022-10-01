@@ -1,18 +1,8 @@
 ---
 title: border-start-end-radius
 slug: Web/CSS/border-start-end-radius
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-start-end-radius
-  - recipe:css-property
-  - 書字方向
-browser-compat: css.properties.border-start-end-radius
-translation_of: Web/CSS/border-start-end-radius
 ---
+
 {{CSSRef}}
 
 **`border-start-end-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/Web/CSS/text-orientation)や[書字方向](/ja/docs/Web/CSS/CSS_Writing_Modes)に依存せずにスタイルを構築する際に便利です。
@@ -69,14 +59,14 @@ div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
-  border-start-end-radius: 10px;
+  border-start-end-radius: 10px;
 }
 
 .exampleText {
   writing-mode: vertical-rl;
   padding: 10px;
   background-color: #fff;
-  border-start-end-radius: 10px;
+  border-start-end-radius: 10px;
 }
 ```
 

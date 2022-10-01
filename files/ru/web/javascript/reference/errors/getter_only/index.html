@@ -21,7 +21,7 @@ TypeError: не удаётся установить свойство "prop" из
 
 <h2 id="Что_пошло_не_так">Что пошло не так?</h2>
 
-<p>Предпринята попытка задать новое значение свойству, для которого указан только геттер. . Пока это молча будет проигнорировано в non-strict режиме, оно бросит {{jsxref("TypeError")}} в <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>.</p>
+<p>Предпринята попытка задать новое значение свойству, для которого указан только геттер. . Пока это молча будет проигнорировано в non-strict режиме, оно бросит {{jsxref("TypeError")}} в <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -47,7 +47,7 @@ arc.temperature = 30;
 
 <p>Чтобы устранить эту ошибку, необходимо либо удалить строку 16, в которой предпринята попытка задать свойство temperature, либо реализовать для неё сеттер, например, как показано ниже:</p>
 
-<pre class="brush: js example-good highlight[12]">"use strict";
+<pre class="brush: js example-good">"use strict";
 
 function Archiver() {
   var temperature = null;

@@ -1,14 +1,8 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-translation_of: Web/CSS/font-size
 ---
+
 {{CSSRef}}
 
 **`font-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの大きさを定義します。フォントの大きさを変更すると、フォントの大きさに相対的な {{cssxref("&lt;length&gt;")}} の単位例えば `em`, `ex`, なども更新されます。
@@ -94,7 +88,7 @@ p {
 }
 ```
 
-この場合、`<p>` 要素のフォントサイズは、`<p>` 要素で継承されている `font-size` の計算値の 2 倍になります。 すなわち、`1em` の `font-size` は、それが使われている要素の `font-size` の計算値に等しくなります。
+この場合、`<p>` 要素のフォントサイズは、`<p>` 要素で継承されている `font-size` の計算値の 2 倍になります。 すなわち、`1em` の `font-size` は、それが使われている要素の `font-size` の計算値に等しくなります。
 
 `font-size` が `<p>` の何れかの祖先に設定されていない場合、`1em` はブラウザーの既定の `font-size` と等しくなり、大抵は `16px` です。したがって、既定では `1em` が `16px` と同等であり、`2em` は `32px` と同等です。もし `font-size` が 20px と `<body>` 要素に設定されていれば、`1em` は `<p>` 要素において `20px` となり、`2em` は で `40px` と同等になります。
 

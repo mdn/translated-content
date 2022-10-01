@@ -6,9 +6,10 @@ tags:
 translation_of: Web/API/Network_Information_API
 original_slug: WebAPI/Network_Information
 ---
+
 {{ SeeCompatTable() }}
 
-L'API Network Information (Informations réseau) fournit des informations sur la connexion de l'appareil : la bande-passante, si la connexion est mesurée ou non. Elle peut être utilisée pour choisir entre du contenu en haute définition ou en basse définition selon la connexion de l'utilisateur. L'API ne représente qu'un seul objet, ajouté au DOM : {{domxref("window.navigator.connection")}}.
+L'API Network Information (Informations réseau) fournit des informations sur la connexion de l'appareil : la bande-passante, si la connexion est mesurée ou non. Elle peut être utilisée pour choisir entre du contenu en haute définition ou en basse définition selon la connexion de l'utilisateur. L'API ne représente qu'un seul objet, ajouté au DOM : [`Navigator.connection`](/fr/docs/Web/API/Navigator/connection).
 
 ## Exemples
 
@@ -49,11 +50,9 @@ if (connection) {
 - {{domxref("NetworkInformation")}}
   - : Fournit des informations sur la connexion de l'appareil et fournit la possibilité aux scriptes d'être informé en cas de changement. L'interface `NetworkInformation` ne peut pas être instanciée; à la place on y accède à travers l'interface {{domxref("Navigator")}}.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                            | Status                                       | Commentaire            |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------- |
-| {{SpecName('Network Information', '', 'Network Information API')}} | {{Spec2('Network Information')}} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -67,6 +66,5 @@ if (connection) {
 
 ## Voir aussi
 
-- {{spec("http://dvcs.w3.org/hg/dap/raw-file/tip/network-api/Overview.html", "Spécification de l'API Network Information", "ED")}}
 - [Les évènement online et offline](/fr/docs/Online_and_offline_events)
-- {{domxref("window.navigator.connection")}}
+- [`Navigator.connection`](/fr/docs/Web/API/Navigator/connection)

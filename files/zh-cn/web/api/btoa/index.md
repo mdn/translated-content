@@ -1,16 +1,8 @@
 ---
 title: btoa()
 slug: Web/API/btoa
-tags:
-  - API
-  - Base64
-  - Web
-  - 参考
-  - 字符串
-  - 数据
-  - 方法
-translation_of: Web/API/btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`btoa()`** 方法可以将一个*二进制字符串*（例如，将字符串中的每一个字节都视为一个二进制数据字节）编码为 {{glossary("Base64")}} 编码的 ASCII 字符串。

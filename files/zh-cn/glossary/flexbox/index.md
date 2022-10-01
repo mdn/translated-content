@@ -1,8 +1,8 @@
 ---
 title: Flexbox
 slug: Glossary/Flexbox
-translation_of: Glossary/Flexbox
 ---
+
 Flexbox 是 [CSS Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/) 的常用名称，这是一种用于在单个维度（行或列）中显示项目的布局模型。
 
 在规范中，Flexbox 被描述为用户界面设计的布局模型。Flexbox 的关键特性是 flex 布局中的项目可以增大和缩小。可以将空间（Space）分配到项目本身、项目之间或项目周围。

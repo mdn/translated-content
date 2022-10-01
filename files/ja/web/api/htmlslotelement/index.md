@@ -1,15 +1,8 @@
 ---
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
-tags:
-  - API
-  - HTMLSlotElement
-  - インターフェイス
-  - リファレンス
-  - シャドウ DOM
-browser-compat: api.HTMLSlotElement
-translation_of: Web/API/HTMLSlotElement
 ---
+
 {{APIRef('Web Components')}}
 
 **`HTMLSlotElement`** は [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) のインターフェイスで、 HTML の {{HTMLElement("slot")}} 要素の名前と割り当てられたノードにアクセスできるようにします。
@@ -40,8 +33,8 @@ translation_of: Web/API/HTMLSlotElement
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
-  let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  let nodes = slots[1].assignedNodes();
+  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
 });
 ```
 

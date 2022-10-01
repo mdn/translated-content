@@ -1,14 +1,8 @@
 ---
 title: TransformStream
 slug: Web/API/TransformStream
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Streams API
-translation_of: Web/api/TransformStream
 ---
+
 {{APIRef("Streams")}}
 
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 接口的 `TransformStream` 表示一组可转换的数据。
@@ -99,7 +93,7 @@ class JSTextEncoderStream extends TransformStream {
 }
 ```
 
-类似地，`TextDecoderStream` 可以这样写:
+类似地，`TextDecoderStream` 可以这样写：
 
 ```js
 const tds = {

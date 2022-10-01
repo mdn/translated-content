@@ -1,8 +1,8 @@
 ---
 title: 作业：构建行星数据
 slug: Learn/HTML/Tables/Structuring_planet_data
-translation_of: Learn/HTML/Tables/Structuring_planet_data
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 在我们的表格评定中，我们为你提供有关太阳系中行星的一些数据，并让你将其结构化成 HTML 表。
@@ -38,15 +38,15 @@ translation_of: Learn/HTML/Tables/Structuring_planet_data
 
 ## 要完成的步骤
 
-下面的步骤描述了：为了完成这个示例的表格，你所要做的事情 。所有你需要的数据都包含在`planets-data.txt` 文件中。如果你在获得这些数据时遇到了问题，也看看上面的实例，或者尝试绘制一个图。
+下面的步骤描述了：为了完成这个示例的表格，你所要做的事情。所有你需要的数据都包含在`planets-data.txt` 文件中。如果你在获得这些数据时遇到了问题，也看看上面的实例，或者尝试绘制一个图。
 
-1.  打开在你本地环境中的 `blank-template.html`副本，提供一个外部容器来初始化表格，一个表格 header，一个表格 body。在这个例子中，你不需要表格 footer。
-2.  为你的表格添加我们提供的标题。
-3.  在表格的 header 中添加一行，用来包括所有列的标题。
-4.  在表格的 body 部分创建所有内容行，记住要让所有是行标题的单元格语义化。
-5.  确保所有内容都插入了正确的单元格，在原始数据中，每行行星数据都显示在其相关行星的旁边。
-6.  添加一些属性，让行标题和列标题更加明确地与和它们有关的单元格进行关联，使用 rowgroups 让子标题和父标题也进行关联。
-7.  为包含所有行星标题的行标题的那一列数据，添加一个黑色边框
+1. 打开在你本地环境中的 `blank-template.html`副本，提供一个外部容器来初始化表格，一个表格 header，一个表格 body。在这个例子中，你不需要表格 footer。
+2. 为你的表格添加我们提供的标题。
+3. 在表格的 header 中添加一行，用来包括所有列的标题。
+4. 在表格的 body 部分创建所有内容行，记住要让所有是行标题的单元格语义化。
+5. 确保所有内容都插入了正确的单元格，在原始数据中，每行行星数据都显示在其相关行星的旁边。
+6. 添加一些属性，让行标题和列标题更加明确地与和它们有关的单元格进行关联，使用 rowgroups 让子标题和父标题也进行关联。
+7. 为包含所有行星标题的行标题的那一列数据，添加一个黑色边框
 
 ## 要点和提示
 
@@ -56,6 +56,6 @@ translation_of: Learn/HTML/Tables/Structuring_planet_data
 
 ## 评定
 
-如果您将此评估作为有组织的课程的一部分，您应该能够将您的工作交给您的老师/导师进行评改。 如果您是自学习的，那么您可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得标记指南。首先尝试练习 - 作弊对你没有益处！
+如果您将此评估作为有组织的课程的一部分，您应该能够将您的工作交给您的老师/导师进行评改。如果您是自学习的，那么您可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得标记指南。首先尝试练习 - 作弊对你没有益处！
 
 {{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

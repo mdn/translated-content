@@ -3,6 +3,7 @@ title: Range.insertNode()
 slug: Web/API/Range/insertNode
 translation_of: Web/API/Range/insertNode
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`Range.insertNode()`** insère un nœud au début du {{domxref("Range")}}.
@@ -34,15 +35,12 @@ range.insertNode(newNode);
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                                       | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-insertnode', 'Range.insertNode()')}}                                             | {{Spec2('DOM WHATWG')}}             | Pas de changement   |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-insertNode', 'Range.insertNode()')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Range.insertNode")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [L’index des interfaces DOM](/en-US/docs/Web/API/Document_Object_Model)
+- [L’index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)

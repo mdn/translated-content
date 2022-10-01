@@ -13,6 +13,7 @@ tags:
   - block-all-mixed-content
 translation_of: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`block-all-mixed-content`** bloque le chargement de ressources via HTTP lorsque la page utilise HTTPS.
@@ -51,8 +52,8 @@ Content-Security-Policy: img-src https:
 
 {{Compat("http.headers.csp.block-all-mixed-content")}}
 
-## Voir également
+## Voir aussi
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("upgrade-insecure-requests")}}
-- [Mixed content](/en-US/docs/Web/Security/Mixed_content)
+- [Mixed content](/fr/docs/Web/Security/Mixed_content)

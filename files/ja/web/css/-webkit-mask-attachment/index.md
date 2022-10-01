@@ -1,17 +1,8 @@
 ---
 title: '-webkit-mask-attachment'
 slug: Web/CSS/-webkit-mask-attachment
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - 標準外
-  - リファレンス
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.-webkit-mask-attachment
-translation_of: Web/CSS/-webkit-mask-attachment
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 {{CSSxRef("mask-image")}} が指定されている場合、 `-webkit-mask-attachment` はそのマスク画像の位置をビューポート内で固定するか、それとも包含ブロックと共にスクロールするかを指定します。

@@ -12,6 +12,7 @@ tags:
   - delete
 translation_of: Web/API/Cache/delete
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La méthode **`delete()`** de l'interface {{domxref("Cache")}} cherche l'entrée {{domxref("Cache")}} dont la clé est la requête passée en argument, et retourne une {{jsxref("Promise", "Promesse")}}. Si une entrée {{domxref("Cache")}} est trouvée, elle est supprimée, et la promesse est résolue à `true`. Dans le cas contraire, la promesse est résolue à `false`.
@@ -53,13 +54,11 @@ caches.open('v1').then(function(cache) {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-cache-delete', 'Cache: delete')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Cache.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

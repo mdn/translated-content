@@ -1,15 +1,8 @@
 ---
 title: I18N
 slug: Glossary/I18N
-tags:
-  - Beginner
-  - Credibility
-  - Glossary
-  - Internationalization
-  - OpenPractices
-  - i18n
-translation_of: Glossary/I18N
 ---
+
 i18n（取自 "internationalization", 共 20 个字母）是让产品或服务更容易适应各种文化的最佳实践。
 
 > **国际化**是指在设计和开发产品、应用或文档内容时，为不同文化、地区或语言的目标受众提供方便的本地化服务。（{{Glossary("W3C")}} 定义）
@@ -26,7 +19,7 @@ i18n（取自 "internationalization", 共 20 个字母）是让产品或服务�
 
 ### 基本知识
 
-- {{interwiki("wikipedia", "Internationalization and localization", "i18n")}} on Wikipedia
+- [i18n](https://zh.wikipedia.org/wiki/Internationalization_and_localization) on Wikipedia
 
 ### 技术参考
 

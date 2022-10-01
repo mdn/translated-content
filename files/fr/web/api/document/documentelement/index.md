@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/documentElement
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.documentElement`**renvoie l'[`Element`](/fr/docs/Web/API/element) qui est l'élément racine du [document](/fr/docs/Web/API/document) (par exemple, l'élément `<html>` pour les documents HTML).
@@ -38,13 +39,8 @@ Pour tout document HTML non vide, `document.documentElement` sera toujours un é
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM2 Core','core.html#ID-87CD092','Document.documentElement')}}             | {{Spec2('DOM2 Core')}}     |             |
-| {{SpecName('DOM3 Core','core.html#ID-87CD092','Document.documentElement')}}             | {{Spec2('DOM3 Core')}}     |             |
-| {{SpecName('DOM4','#dom-document-documentelement','Document.documentElement')}}         | {{Spec2('DOM4')}}         |             |
-| {{SpecName('DOM WHATWG','#dom-document-documentelement','Document.documentElement')}} | {{Spec2('DOM WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.documentElement")}}
+{{Compat}}

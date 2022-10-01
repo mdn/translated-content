@@ -7,6 +7,7 @@ tags:
   - Méthodes
 translation_of: Web/API/DOMTokenList/supports
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 La méthode **`supports()`** de l'interface {{domxref("DOMTokenList")}} renvoie `true` (_vrai_) si une marque (_token)_ donnée se trouve parmi les marques prises en charge dans l'attribut associé. Cette méthode est destinée à la détection des fonctionnalités.
@@ -44,10 +45,8 @@ if (iframe.sandbox.supports('allow-scripts')) {
 
 ## Spécifications
 
-| Spécification                                    | Statut                                       | Commentaire          |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.supports")}}
+{{Compat}}

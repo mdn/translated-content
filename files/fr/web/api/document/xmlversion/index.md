@@ -10,6 +10,7 @@ tags:
   - version
 translation_of: Web/API/Document/xmlVersion
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 Renvoie le numéro de version comme spécifié dans la déclaration XML (par exemple, `<?xml version="1.0"?>`) ou "1.0" si la déclaration est absente.
@@ -24,5 +25,4 @@ if (document.createElement("foo").tagName == "FOO") {
 
 ## Spécifications
 
-- [http://www.w3.org/TR/DOM-Level-3-Cor...ument3-version](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-version)
-- A été supprimée de {{ spec("http://www.w3.org/TR/domcore/","DOM Core Level 4","WD") }}
+{{Specifications}}

@@ -1,18 +1,13 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - 可访问性
-  - 无障碍
-  - HTML
-translation_of: Web/Accessibility/ARIA
 ---
+
 **ARIA** (Accessible Rich Internet Applications) 是一组属性，用于定义使残障人士更容易访问 Web 内容和 Web 应用程序（尤其是使用 JavaScript 开发的应用程序）的方法。
 
 它补充了 HTML，以便在没有其他机制时可以将应用程序中常用的交互和小部件传递给辅助技术。例如，ARIA 支持 HTML4 中的可访问导航地标、JavaScript 小部件、表单提示和错误消息、实时内容更新等。
 
-> **警告：** 许多这些小部件后来被合并到 HTML5 中，如果存在这样的元素，**开发人员应该更喜欢使用正确语义的 HTML 元素而不是使用 ARIA**。例如，原生元素具有内置的[键盘可访问性](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)、角色和状态。但是，如果您选择使用 ARIA，则您有责任在脚本中模仿（等效）浏览器行为。
+> **警告：** 许多这些小部件后来被合并到 HTML5 中，如果存在这样的元素，**开发人员应该更喜欢使用正确语义的 HTML 元素而不是使用 ARIA**。例如，原生元素具有内置的[键盘无障碍](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)、角色和状态。但是，如果您选择使用 ARIA，则您有责任在脚本中模仿（等效）浏览器行为。
 
 这是进度条小部件的标记：
 
@@ -43,7 +38,7 @@ function updateProgress(percentComplete) {
 }
 ```
 
-> **备注：** 请注意，ARIA 是在 HTML4 之后发明的，因此无法在 HTML4 或其 XHTML 变体中进行验证。然而，它提供的可访问性收益远远超过任何技术无效性。
+> **备注：** 请注意，ARIA 是在 HTML4 之后发明的，因此无法在 HTML4 或其 XHTML 变体中进行验证。然而，它提供的无障碍收益远远超过任何技术无效性。
 >
 > 在 HTML5 中，所有 ARIA 属性都经过验证。新的地标元素（{{HTMLElement("main")}}、{{HTMLElement("header")}}、{{HTMLElement("nav")}} 等）具有内置的 ARIA 角色，因此有无需复制它们。
 
@@ -60,7 +55,7 @@ function updateProgress(percentComplete) {
 - [ARIA 简介](/zh-CN/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
   - : 快速介绍如何使用 ARIA 访问动态内容。另请参阅 2008 年的经典 [ARIA intro by Gez Lemon](https://dev.opera.com/articles/view/introduction-to-wai-aria/)。
 - [Videos of screen readers using ARIA](https://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/)
-  - : 查看来自网络的真实和简化示例，视频包括 ARIA “之前”和 ARIA“之后”。
+  - : 查看来自网络的真实和简化示例，视频包括 ARIA“之前”和 ARIA“之后”。
 - [Using ARIA](https://w3c.github.io/using-aria/)
   - : 开发人员实用指南。它建议在 HTML 元素上使用哪些 ARIA 属性。建议是基于实施的实际情况。
 
@@ -69,7 +64,7 @@ function updateProgress(percentComplete) {
 - [Enhancing page navigation with ARIA landmarks](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : 使用 ARIA 地标改进屏幕阅读器用户的网页导航的一个很好的介绍。参考 [ARIA landmark implementation notes](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) 和真实站点上的示例（截至 2011 年 7 月更新）。
 - [Improving form accessibility](/zh-CN/docs/Web/Accessibility/ARIA/forms)
-  - : ARIA 不仅适用于动态内容！了解如何使用附加 ARIA 属性提高 HTML 表单的可访问性。
+  - : ARIA 不仅适用于动态内容！了解如何使用附加 ARIA 属性提高 HTML 表单的无障碍。
 
 ## 脚本小部件的 ARIA
 

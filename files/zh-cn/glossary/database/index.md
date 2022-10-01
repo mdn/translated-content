@@ -1,11 +1,9 @@
 ---
 title: 数据库
 slug: Glossary/Database
-tags:
-  - 数据库
-translation_of: Glossary/Database
 original_slug: Glossary/数据库
 ---
+
 **数据库**是一种用于收集已组织好的数据以便于搜索、结构化和扩充的存储系统。
 
 网站开发中，大多数数据库采用关系型数据库管理系统 (RDBMS) 来组织数据，通过 {{glossary("SQL")}}语言来编程。但有些数据库没有遵循上述的组织数据的机制，这类被称作 NoSQL 数据库。
@@ -16,7 +14,7 @@ original_slug: Glossary/数据库
 
 ## 参见
 
-- 维基百科上的词条 {{Interwiki("wikipedia", "Database")}}
+- 维基百科上的词条 [Database](https://zh.wikipedia.org/wiki/Database)
 
   - {{Glossary("IndexedDB")}}
   - {{Glossary("SQL")}}

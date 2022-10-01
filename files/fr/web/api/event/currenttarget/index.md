@@ -9,6 +9,7 @@ tags:
   - Propriété
 translation_of: Web/API/Event/currentTarget
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`currentTarget`**, accessible en lecture seule et rattachée à l'interface {{domxref("Event")}}, identifie la cible courante pour l'évènement lorsque celui-ci traverse le DOM. Elle fait toujours référence à l'élément sur lequel le gestionnaire d'évènement a été attaché tandis que {{domxref("Event.target")}} identifie l'élément à partir duquel l'évènement s'est produit (`event.target` peut donc être un descendant de `event.currentTarget`).
@@ -51,16 +52,11 @@ document.body.addEventListener('click', hide, false);
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires       |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-event-currenttarget", "Event.currentTarget")}}     | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM4", "#dom-event-currenttarget", "Event.currentTarget")}}             | {{Spec2("DOM4")}}         |                    |
-| {{SpecName("DOM3 Events", "#dfn-current-event-target", "current event target")}} | {{Spec2("DOM3 Events")}} |                    |
-| {{SpecName("DOM2 Events", "#Events-Event-currentTarget", "Event.currentTarget")}} | {{Spec2("DOM2 Events")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.currentTarget")}}
+{{Compat}}
 
 ## Voir aussi
 

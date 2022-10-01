@@ -1,15 +1,8 @@
 ---
 title: Screen
 slug: Web/API/Screen
-page-type: web-api-interface
-tags:
-  - API
-  - CSSOM View
-  - Interface
-  - Reference
-browser-compat: api.Screen
-translation_of: Web/API/Screen
 ---
+
 {{APIRef("CSSOM")}}
 
 `Screen` インターフェイスは画面を表し、通常は、現在のウィンドウが描画されている画面であり、 {{DOMxRef("window.screen")}} を使用して取得されます。
@@ -41,7 +34,7 @@ _親である {{domxref("EventTarget")}} から継承したプロパティもあ
 - {{DOMxRef("Screen.pixelDepth")}}
   - : 画面のピット深度を取得します。
 - {{DOMxRef("Screen.top")}} {{Non-standard_Inline}}
-  - : 現在の画面の上端からの距離をピクセル単位で返します。 
+  - : 現在の画面の上端からの距離をピクセル単位で返します。
 - {{DOMxRef("Screen.width")}}
   - : 画面の幅を返します。
 - {{DOMxRef("Screen.mozEnabled")}} {{Non-standard_Inline}} {{Deprecated_Inline}}

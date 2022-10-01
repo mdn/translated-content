@@ -1,13 +1,8 @@
 ---
 title: Node.isSupported()
 slug: Web/API/Node/isSupported
-tags:
-  - メソッド
-  - 非推奨
-  - リファレンス
-browser-compat: api.Node.isSupported
-translation_of: Web/API/Node/isSupported
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 **`isSupported()`** は {{domxref("Node")}} インターフェイスのメソッドで、この DOM の実装が指定された機能を実装しており、このノードがこの機能に対応しているかどうかを検査した結果を論理値で返します。

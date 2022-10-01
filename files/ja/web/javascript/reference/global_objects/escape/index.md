@@ -1,13 +1,8 @@
 ---
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
-tags:
-  - Deprecated
-  - JavaScript
-  - メソッド
-browser-compat: javascript.builtins.escape
-translation_of: Web/JavaScript/Reference/Global_Objects/escape
 ---
+
 {{jsSidebar("Objects")}}
 
 > **Warning:** `escape()` は厳密には (「ウェブ標準から削除された」という意味で) 非推奨ではありませんが、ECMA-262 標準の [Annex B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) で定義されており、その導入部には次のように書かれています。

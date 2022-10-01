@@ -1,0 +1,1056 @@
+---
+title: HTML 属性参考
+slug: Web/HTML/Attributes
+---
+
+HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配置元素或者以各种方式来调整元素的行为，进而满足用户所需的标准。
+
+## 属性列表
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th>属性名</th>
+      <th>元素</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/accept">accept</a></td>
+      <td>
+        {{ HTMLElement("form") }}, {{ HTMLElement("input") }}
+      </td>
+      <td>服务器接受内容或文件类型的列表。</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Attributes/accept-charset"
+          >accept-charset</a
+        >
+      </td>
+      <td>{{ HTMLElement("form") }}</td>
+      <td>支持的字符集列表。</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Global_attributes/accesskey">accesskey</a>
+      </td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>定义键盘快捷键来激活或者聚焦元素</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/action">action</a></td>
+      <td>{{ HTMLElement("form") }}</td>
+      <td>表单信息提交的 url 地址，指向进行处理的程序。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/align">align</a></td>
+      <td>
+        {{ HTMLElement("applet") }},
+        {{ HTMLElement("caption") }}, {{ HTMLElement("col") }},
+        {{ HTMLElement("colgroup") }},
+        {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }},
+        {{ HTMLElement("img") }}, {{ HTMLElement("table") }},
+        {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }},
+        {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }},
+        {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}
+      </td>
+      <td>设置元素的水平对齐。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/allow">allow</a></td>
+      <td>{{ HTMLElement("iframe") }}</td>
+      <td>Specifies a feature-policy for the iframe.</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/alt">alt</a></td>
+      <td>
+        <p>
+          {{ HTMLElement("applet") }},
+          {{ HTMLElement("area") }}, {{ HTMLElement("img") }},
+          {{ HTMLElement("input") }}
+        </p>
+      </td>
+      <td>在图片无法呈现时的替代文本。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/async">async</a></td>
+      <td>{{ HTMLElement("script") }}</td>
+      <td>表示该脚本应该异步执行。</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Global_attributes/autocapitalize"
+          >autocapitalize</a
+        >
+      </td>
+      <td><a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a></td>
+      <td>
+        Sets whether input is automatically capitalized when entered by user
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Attributes/autocomplete">autocomplete</a>
+      </td>
+      <td>
+        {{ HTMLElement("form") }}, {{ HTMLElement("input") }},
+        {{ HTMLElement("select") }},
+        {{ HTMLElement("textarea") }}
+      </td>
+      <td>表示该表单中是否可以由浏览器自动完成填值。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/autofocus">autofocus</a></td>
+      <td>
+        {{ HTMLElement("button") }},
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("keygen") }},
+        {{ HTMLElement("select") }},
+        {{ HTMLElement("textarea") }}
+      </td>
+      <td>在网页加载后该元素应该自动聚焦。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/autoplay">autoplay</a></td>
+      <td>
+        {{ HTMLElement("audio") }},
+        {{ HTMLElement("video") }}
+      </td>
+      <td>audio 或 video 应该自动播放</td>
+    </tr>
+    <tr>
+      <td>background</td>
+      <td>
+        {{ HTMLElement("body") }}, {{ HTMLElement("table") }},
+        {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
+      </td>
+      <td>
+        指定图像文件的 URL。
+        <div class="blockIndicator note">
+          <p>
+            注意：虽然浏览器和电子邮件客户端可能仍然支持此属性，但它已过时。改用
+            css{{Cssxref("back-image")}}。
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>bgcolor</td>
+      <td>
+        {{ HTMLElement("body") }}, {{ HTMLElement("col") }},
+        {{ HTMLElement("colgroup") }},
+        {{ HTMLElement("marquee") }},
+        {{ HTMLElement("table") }},
+        {{ HTMLElement("tbody") }},
+        {{ HTMLElement("tfoot") }}, {{ HTMLElement("td") }},
+        {{ HTMLElement("th") }}, {{ HTMLElement("tr") }}
+      </td>
+      <td>
+        <p>元素的背景颜色。</p>
+        <p>NOTE：这是一个遗留属性，请使用 css{“background-color":}代替。</p>
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>border</td>
+      <td>
+        {{ HTMLElement("img") }}, {{ HTMLElement("object") }},
+        {{ HTMLElement("table") }}
+      </td>
+      <td>
+        <p>边框宽度。</p>
+        <p>
+          Note:这是遗留属性，请使用 CSS {{ Cssxref("border") }}
+          属性代替。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/buffered">buffered</a></td>
+      <td>
+        {{ HTMLElement("audio") }},
+        {{ HTMLElement("video") }}
+      </td>
+      <td>包含已缓存媒体的时间范围。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/capture">capture</a></td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td>
+        From the
+        <a
+          href="https://w3c.github.io/html-media-capture/#the-capture-attribute"
+          >HTML Media Capture<br /><small lang="en-US"
+            >The definition of 'media capture' in that specification.</small
+          ></a
+        >spec, specifies a new file can be captured.
+      </td>
+    </tr>
+    <tr>
+      <td>challenge</td>
+      <td>{{ HTMLElement("keygen") }}</td>
+      <td>与公钥一起提交的挑战字符。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/charset">charset</a></td>
+      <td>
+        {{ HTMLElement("meta") }}, {{ HTMLElement("script") }}
+      </td>
+      <td>申明该页面或脚本的字符编码。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/checked">checked</a></td>
+      <td>
+        {{ HTMLElement("command") }},
+        {{ HTMLElement("input") }}
+      </td>
+      <td>指出该元素在页面加载后是否处于选中状态。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/cite">cite</a></td>
+      <td>
+        {{ HTMLElement("blockquote") }},
+        {{ HTMLElement("del") }}, {{ HTMLElement("ins") }},
+        {{ HTMLElement("q") }}
+      </td>
+      <td>包含一个 URI，用来指明引用或修改的源地址。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Global_attributes/class">class</a></td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>经常和 CSS 一起配合使用来修饰元素。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/code">code</a></td>
+      <td>{{ HTMLElement("applet") }}</td>
+      <td>标明被加载和执行的 applet 类文件的 URL。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/codebase">codebase</a></td>
+      <td>{{ HTMLElement("applet") }}</td>
+      <td>
+        指出存放 applet 类文件基本 URL 地址 (绝对或相对)，这些文件由 code
+        属性标明。
+      </td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td>
+        {{ HTMLElement("basefont") }},
+        {{ HTMLElement("font") }}, {{ HTMLElement("hr") }}
+      </td>
+      <td>
+        <p>此属性可用于指定颜色，颜色值一般有两种表示：</p>
+        <p>
+          1. 以`#`号开头的 RGB 十六进制数，如#112233，其中 11 表示的是 R(红),22
+          表示的是 G 绿 (),33 表示的是 B(蓝)
+        </p>
+        <p>2. 颜色的英文单词名，如`red`表示红色</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/cols">cols</a></td>
+      <td>{{ HTMLElement("textarea") }}</td>
+      <td>定义一个 textarea 中包含多少列。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/colspan">colspan</a></td>
+      <td>
+        {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
+      </td>
+      <td>
+        该属性一般用在 td 标签中，用于指定一个单元格占用多少列，例如:&#x3C;td
+        colspan='2'>表示占用一个单元格占 2 列。
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/content">content</a></td>
+      <td>{{ HTMLElement("meta") }}</td>
+      <td>
+        A value associated with <code>http-equiv</code> or
+        <code>name</code> depending on the context.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Global_attributes/contenteditable"
+          >contenteditable</a
+        >
+      </td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>指出该元素的内容是否可以被编辑。</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Attributes/contextmenu">contextmenu</a>
+      </td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>
+        定义将用作元素上下文菜单的{{HTMLElement("Menu")}}元素的 ID。
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/controls">controls</a></td>
+      <td>
+        {{ HTMLElement("audio") }},
+        {{ HTMLElement("video") }}
+      </td>
+      <td>指出浏览器是否对用户显示播放控制台 (前进或回退)</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/coords">coords</a></td>
+      <td>{{ HTMLElement("area") }}</td>
+      <td>
+        A set of values specifying the coordinates of the hot-spot region.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/CORS_settings_attributes">crossorigin</a>
+      </td>
+      <td>
+        {{ HTMLElement("audio") }}, {{ HTMLElement("img") }},
+        {{ HTMLElement("link") }}, {{ HTMLElement("script") }},
+        {{ HTMLElement("video") }}
+      </td>
+      <td>How the element handles cross-origin requests</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/zh-CN/docs/Web/API/HTMLiframeElement/csp">csp</a></code>
+        {{experimental_inline}}
+      </td>
+      <td>{{ HTMLElement("iframe") }}</td>
+      <td>
+        Specifies the Content Security Policy that an embedded document must
+        agree to enforce upon itself.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="/zh-CN/docs/Web/HTML/Attributes/data">data</a></p>
+      </td>
+      <td><p>{{ HTMLElement("object") }}</p></td>
+      <td><p>资源 URL 地址</p></td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <a href="/zh-CN/docs/Web/HTML/Global_attributes/data-*">data-*</a>
+        </p>
+      </td>
+      <td>
+        <p><a href="/en/HTML/Global_attributes">全局属性</a></p>
+      </td>
+      <td><p>允许你对于一个 HTML 元素绑定自定义的属性。</p></td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/datetime">datetime</a></td>
+      <td>
+        {{ HTMLElement("del") }}, {{ HTMLElement("ins") }},
+        {{ HTMLElement("time") }}
+      </td>
+      <td>Indicates the date and time associated with the element.</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/decoding">decoding</a></td>
+      <td>{{ HTMLElement("img") }}</td>
+      <td>Indicates the preferred method to decode the image.</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/default">default</a></td>
+      <td>{{ HTMLElement("track") }}</td>
+      <td>
+        Indicates that the track should be enabled unless the user's preferences
+        indicate something different.
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/defer">defer</a></td>
+      <td>{{ HTMLElement("script") }}</td>
+      <td>
+        Indicates that the script should be executed after the page has been
+        parsed.
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Global_attributes/dir">dir</a></td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>
+        Defines the text direction. Allowed values are ltr (Left-To-Right) or
+        rtl (Right-To-Left)
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/dirname">dirname</a></td>
+      <td>
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("textarea") }}
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/disabled">disabled</a></td>
+      <td>
+        {{ HTMLElement("button") }},
+        {{ HTMLElement("command") }},
+        {{ HTMLElement("fieldset") }},
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("keygen") }},
+        {{ HTMLElement("optgroup") }},
+        {{ HTMLElement("option") }},
+        {{ HTMLElement("select") }},
+        {{ HTMLElement("textarea") }}
+      </td>
+      <td>Indicates whether the user can interact with the element.</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/download">download</a></td>
+      <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
+      <td>
+        Indicates that the hyperlink is to be used for downloading a resource.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Global_attributes/draggable">draggable</a>
+      </td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>Defines whether the element can be dragged.</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/dropzone">dropzone</a></td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>Indicates that the element accept the dropping of content on it.</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/enctype">enctype</a></td>
+      <td>{{ HTMLElement("form") }}</td>
+      <td>
+        Defines the content type of the form date when the
+        <code>method</code> is POST.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><a href="/zh-CN/docs/Web/HTML/Attributes/enterkeyhint"
+            >enterkeyhint</a
+          ></code
+        >
+        {{experimental_inline}}
+      </td>
+      <td>
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("textarea") }},
+        <a href="/zh-CN/docs/Web/HTML/Global_attributes/contenteditable"
+          ><code>contenteditable</code></a
+        >
+      </td>
+      <td>
+        The
+        <a
+          href="https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute"
+          ><code>enterkeyhint</code></a
+        >
+        specifies what action label (or icon) to present for the enter key on
+        virtual keyboards. The attribute can be used with form controls (such as
+        the value of <code>textarea</code> elements), or in elements in an
+        editing host (e.g., using <code>contenteditable</code> attribute).
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/for">for</a></td>
+      <td>
+        {{ HTMLElement("label") }},
+        {{ HTMLElement("output") }}
+      </td>
+      <td>描述与当前元素绑定的元素。</td>
+    </tr>
+    <tr>
+      <td><a href="/zh-CN/docs/Web/HTML/Attributes/form">form</a></td>
+      <td>
+        {{ HTMLElement("button") }},
+        {{ HTMLElement("fieldset") }},
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("keygen") }},
+        {{ HTMLElement("label") }},
+        {{ HTMLElement("meter") }},
+        {{ HTMLElement("object") }},
+        {{ HTMLElement("output") }},
+        {{ HTMLElement("progress") }},
+        {{ HTMLElement("select") }},
+        {{ HTMLElement("textarea") }}
+      </td>
+      <td>Indicates the form that is the owner of the element.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Attributes/formaction">formaction</a>
+      </td>
+      <td>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"
+          ><code>&#x3C;input></code></a
+        >,
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button"
+          ><code>&#x3C;button></code></a
+        >
+      </td>
+      <td>
+        Indicates the action of the element, overriding the action defined in
+        the
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form"
+          ><code>&#x3C;form></code></a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <td>headers</td>
+      <td>
+        {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
+      </td>
+      <td>
+        IDs of the <code>&#x3C;th></code> elements which applies to this
+        element.
+      </td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>
+        {{ HTMLElement("canvas") }},
+        {{ HTMLElement("embed") }},
+        {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }},
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("object") }},
+        {{ HTMLElement("video") }}
+      </td>
+      <td>
+        注意：在某些情况下，例如&#x3C;div>，这是一个遗留属性，在这种情况下应该使用
+        CSS height 属性。
+        在其他情况下，例如&#x3C;canvas>，必须使用此属性指定高度。
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>hidden</td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>Indicates the relevance of an element.</td>
+    </tr>
+    <tr>
+      <td>high</td>
+      <td>{{ HTMLElement("meter") }}</td>
+      <td>Indicates the lower bound of the upper range.</td>
+    </tr>
+    <tr>
+      <td>href</td>
+      <td>
+        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
+        {{ HTMLElement("base") }}, {{ HTMLElement("link") }}
+      </td>
+      <td>关联资源的 URL。</td>
+    </tr>
+    <tr>
+      <td>hreflang</td>
+      <td>
+        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
+        {{ HTMLElement("link") }}
+      </td>
+      <td>Specifies the language of the linked resource.</td>
+    </tr>
+    <tr>
+      <td>http-equiv</td>
+      <td>{{ HTMLElement("meta") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>icon</td>
+      <td>{{ HTMLElement("command") }}</td>
+      <td>Specifies a picture which represents the command.</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>
+        Often used with CSS to style a specific element. The value of this
+        attribute must be unique.
+      </td>
+    </tr>
+    <tr>
+      <td>ismap</td>
+      <td>{{ HTMLElement("img") }}</td>
+      <td>Indicatesthat the image is part of a server-side image map.</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>keytype</td>
+      <td>{{ HTMLElement("keygen") }}</td>
+      <td>Specifies the type of key generated.</td>
+    </tr>
+    <tr>
+      <td>kind</td>
+      <td>{{ HTMLElement("track") }}</td>
+      <td>Specifies the kind of text track.</td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>{{ HTMLElement("track") }}</td>
+      <td>Specifies a user-readable title of the text track.</td>
+    </tr>
+    <tr>
+      <td>lang</td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>Defines the language used in the element.</td>
+    </tr>
+    <tr>
+      <td>language</td>
+      <td>{{ HTMLElement("script") }}</td>
+      <td>Defines the script language used in the element.</td>
+    </tr>
+    <tr>
+      <td>list</td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td>Identifies a list of pre-defined options to suggest to the user.</td>
+    </tr>
+    <tr>
+      <td>loop</td>
+      <td>
+        {{ HTMLElement("audio") }},
+        {{ HTMLElement("bgsound") }},
+        {{ HTMLElement("marquee") }},
+        {{ HTMLElement("video") }}
+      </td>
+      <td>
+        Indicates whether the media should start playing from the start when
+        it's finished.
+      </td>
+    </tr>
+    <tr>
+      <td>low</td>
+      <td>{{ HTMLElement("meter") }}</td>
+      <td>Indicates the upper bound of the lower range.</td>
+    </tr>
+    <tr>
+      <td>manifest</td>
+      <td>{{ HTMLElement("html") }}</td>
+      <td>Specifies the URL of the document's cache manifest.</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("meter") }},
+        {{ HTMLElement("progress") }}
+      </td>
+      <td>Indicates the maximum value allowed.</td>
+    </tr>
+    <tr>
+      <td>maxlength</td>
+      <td>
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("textarea") }}
+      </td>
+      <td>Defines the maximum number of characters allowed in the element.</td>
+    </tr>
+    <tr>
+      <td>media</td>
+      <td>
+        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
+        {{ HTMLElement("link") }}, {{ HTMLElement("source") }},
+        {{ HTMLElement("style") }}
+      </td>
+      <td>
+        Specifies a hint of the media for which the linked resource was
+        designed.
+      </td>
+    </tr>
+    <tr>
+      <td>method</td>
+      <td>{{ HTMLElement("form") }}</td>
+      <td>
+        Defines which HTTP method to use when submitting the form. Can be GET
+        (default) or POST.
+      </td>
+    </tr>
+    <tr>
+      <td>min</td>
+      <td>
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("meter") }}
+      </td>
+      <td>Indicates the minimum value allowed.</td>
+    </tr>
+    <tr>
+      <td>multiple</td>
+      <td>
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("select") }}
+      </td>
+      <td>
+        Indicates whether multiple values can be entered in an input of the type
+        <code>email</code> or <code>file</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>
+        {{ HTMLElement("button") }}, {{ HTMLElement("form") }},
+        {{ HTMLElement("fieldset") }},
+        {{ HTMLElement("iframe") }},
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("keygen") }},
+        {{ HTMLElement("object") }},
+        {{ HTMLElement("output") }},
+        {{ HTMLElement("select") }},
+        {{ HTMLElement("textarea") }},
+        {{ HTMLElement("map") }}, {{ HTMLElement("meta") }},
+        {{ HTMLElement("param") }}
+      </td>
+      <td>
+        Name of the element. For example used by the server to identify the
+        fields in form submits.
+      </td>
+    </tr>
+    <tr>
+      <td>novalidate</td>
+      <td>{{ HTMLElement("form") }}</td>
+      <td>
+        This attribute indicates that the form shouldn't be validated when
+        submitted.
+      </td>
+    </tr>
+    <tr>
+      <td>open</td>
+      <td>{{ HTMLElement("details") }}</td>
+      <td>Indicates whether the details will be shown on page load.</td>
+    </tr>
+    <tr>
+      <td>optimum</td>
+      <td>{{ HTMLElement("meter") }}</td>
+      <td>Indicates the optimal numeric value.</td>
+    </tr>
+    <tr>
+      <td>pattern</td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td>
+        Defines a regular expression which the element's value will be validated
+        against.
+      </td>
+    </tr>
+    <tr>
+      <td>ping</td>
+      <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>placeholder</td>
+      <td>
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("textarea") }}
+      </td>
+      <td>Provides a hint to the user of what can be entered in the field.</td>
+    </tr>
+    <tr>
+      <td>poster</td>
+      <td>{{ HTMLElement("video") }}</td>
+      <td>
+        A URL indicating a poster frame to show until the user plays or seeks.
+      </td>
+    </tr>
+    <tr>
+      <td>preload</td>
+      <td>
+        {{ HTMLElement("audio") }},
+        {{ HTMLElement("video") }}
+      </td>
+      <td>
+        Indicates whether the whole resource, parts of it or nothing should be
+        preloaded.
+      </td>
+    </tr>
+    <tr>
+      <td>pubdate</td>
+      <td>{{ HTMLElement("time") }}</td>
+      <td>
+        Indicates whether this date and time is the date of the nearest
+        {{ HTMLElement("article") }} ancestor element.
+      </td>
+    </tr>
+    <tr>
+      <td>radiogroup</td>
+      <td>{{ HTMLElement("command") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>readonly</td>
+      <td>
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("textarea") }}
+      </td>
+      <td>Indicates whether the element can be edited.</td>
+    </tr>
+    <tr>
+      <td>rel</td>
+      <td>
+        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
+        {{ HTMLElement("link") }}
+      </td>
+      <td>
+        Specifies the relationship of the target object to the link object.
+      </td>
+    </tr>
+    <tr>
+      <td>required</td>
+      <td>
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("select") }},
+        {{ HTMLElement("textarea") }}
+      </td>
+      <td>Indicates whether this element is required to fill out or not.</td>
+    </tr>
+    <tr>
+      <td>reversed</td>
+      <td>{{ HTMLElement("ol") }}</td>
+      <td>
+        Indicates whether the list should be displayed in a descending order
+        instead of a ascending.
+      </td>
+    </tr>
+    <tr>
+      <td>rows</td>
+      <td>{{ HTMLElement("textarea") }}</td>
+      <td>Defines the number of rows in a textarea.</td>
+    </tr>
+    <tr>
+      <td>rowspan</td>
+      <td>
+        {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
+      </td>
+      <td>Defines the number of rows a table cell should span over.</td>
+    </tr>
+    <tr>
+      <td>sandbox</td>
+      <td>{{ HTMLElement("iframe") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>spellcheck</td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>Indicates whether spell checking is allowed for the element.</td>
+    </tr>
+    <tr>
+      <td>scope</td>
+      <td>{{ HTMLElement("th") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>scoped</td>
+      <td>{{ HTMLElement("style") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>seamless</td>
+      <td>{{ HTMLElement("iframe") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>selected</td>
+      <td>{{ HTMLElement("option") }}</td>
+      <td>Defines a value which will be selected on page load.</td>
+    </tr>
+    <tr>
+      <td>shape</td>
+      <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("select") }}
+      </td>
+      <td>
+        Defines the width of the element (in pixels). If the element's
+        <code>type</code> attribute is <code>text</code> or
+        <code>password</code> then it's the number of characters.
+      </td>
+    </tr>
+    <tr>
+      <td>sizes</td>
+      <td>{{ HTMLElement("link") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>span</td>
+      <td>
+        {{ HTMLElement("col") }},
+        {{ HTMLElement("colgroup") }}
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>src</td>
+      <td>
+        {{ HTMLElement("audio") }},
+        {{ HTMLElement("embed") }},
+        {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }},
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("script") }},
+        {{ HTMLElement("source") }},
+        {{ HTMLElement("track") }},
+        {{ HTMLElement("video") }}
+      </td>
+      <td>The URL of the embeddable content.</td>
+    </tr>
+    <tr>
+      <td>srcdoc</td>
+      <td>{{ HTMLElement("iframe") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>srclang</td>
+      <td>{{ HTMLElement("track") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>start</td>
+      <td>{{ HTMLElement("ol") }}</td>
+      <td>Defines the first number if other than 1.</td>
+    </tr>
+    <tr>
+      <td>step</td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>style</td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>定义 CSS 样式，这些样式会覆盖之前设置的样式。</td>
+    </tr>
+    <tr>
+      <td>summary</td>
+      <td>{{ HTMLElement("table") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>tabindex</td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>
+        Overrides the browser's default tab order and follows the one specified
+        instead.
+      </td>
+    </tr>
+    <tr>
+      <td>target</td>
+      <td>
+        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
+        {{ HTMLElement("base") }}, {{ HTMLElement("form") }}
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
+      <td>当鼠标悬停在元素上面时，提示框显示的文本。</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>
+        {{ HTMLElement("button") }},
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("command") }},
+        {{ HTMLElement("embed") }},
+        {{ HTMLElement("object") }},
+        {{ HTMLElement("script") }},
+        {{ HTMLElement("source") }},
+        {{ HTMLElement("style") }}, {{ HTMLElement("menu") }}
+      </td>
+      <td>定义元素的类型。</td>
+    </tr>
+    <tr>
+      <td>usemap</td>
+      <td>
+        {{ HTMLElement("img") }}, {{ HTMLElement("input") }},
+        {{ HTMLElement("object") }}
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td>
+        {{ HTMLElement("button") }},
+        {{ HTMLElement("option") }},
+        {{ HTMLElement("input") }}, {{ HTMLElement("li") }},
+        {{ HTMLElement("meter") }},
+        {{ HTMLElement("progress") }},
+        {{ HTMLElement("param") }}
+      </td>
+      <td>定义页面加载时，在元素内显示的默认值。</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>
+        {{ HTMLElement("canvas") }},
+        {{ HTMLElement("embed") }},
+        {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }},
+        {{ HTMLElement("input") }},
+        {{ HTMLElement("object") }},
+        {{ HTMLElement("video") }}
+      </td>
+      <td>
+        Note: In some instances, such as {{ HTMLElement("div") }}, this
+        is a legacy attribute, in which case the CSS
+        {{ Cssxref("width") }} property should be used instead. In other
+        cases, such as {{ HTMLElement("canvas") }}, the width must be
+        specified with this attribute.
+      </td>
+    </tr>
+    <tr>
+      <td>wrap</td>
+      <td>{{ HTMLElement("textarea") }}</td>
+      <td>Indicates whether the text should be wrapped.</td>
+    </tr>
+  </tbody>
+</table>
+
+## 内容属性和 IDL 属性
+
+在 HTML 中，大多数属性都有两副面孔：**内容属性**和 **IDL（接口描述语言）属性**。
+
+内容属性需要你在内容（HTML 代码）中设置，而且可以通过 {{domxref("element.setAttribute()")}} 或 {{domxref("element.getAttribute()")}}来设置。内容属性常常是一个字符串，即使里面的值是一个整数。例如，要将 {{HTMLElement("input")}} 元素的 `maxlength` 设置为 42，你需要在元素中调用 `setAttribute("maxlength", "42")` 。
+
+IDL 属性（attribute）也就是一个 JavaScript 属性（property）。你可以使用 JavaScript 属性如 `element.foo` 来设置这些属性。当你需要获取 IDL 属性的值时，IDL 属性总会使用隐含的内容属性的值（可能先经过转换）来返回一个值。同样地，当你设置这个值时，这个值会保存在内容属性中。换句话说，IDL 属性本质上反映了内容属性。
+
+大多数时候，IDL 属性会返回元素确实在用的值。例如，{{HTMLElement("input")}} 的默认 `type` 是 "text"，所以如果你设置 `input.type="foobar"`，`<input>` 元素仍然会是文本类型（在外观上和表现上），但 "type" 内容属性的值是 "foobar"。然而，`type` IDL 属性依旧会返回字符串 "text"。
+
+IDL attributes 并不总是字符串；例如 `input.maxlength` 是一个数字（一个有符号的 long 类型）。使用 IDL 属性时，你读取或设置值的类型都是要求的类型。所以 `input.maxlength` 总会返回一个数字，而如果你要设置 `input.maxlength`，也需要使用数字。如果你传入了别的类型，则会根据标准 JavaScript 的类型转换规则被转换为数字。
+
+IDL 属性可以 [反映其他类型](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes)，如 unsigned long, URLs, booleans 等。不幸的是，并没有清晰的规则规定一个属性的 IDL 属性与相关的内容属性如何关联。大多数时候，这会遵守 [规范中列出的规则](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes)，但有时并不遵守。HTML 规范尝试将这件事尽可能变得对开发者友好，但由于很多原因（大多是历史原因），一些属性表现得很奇怪（例如 `select.size`），你就需要阅读规范以理解它们实际上到底如何表现。
+
+## 布尔值属性
+
+一些内容属性（例如 `required`, `readonly`, `disabled`）是[布尔值属性](https://www.w3.org/TR/html52/infrastructure.html#sec-boolean-attributes)。如果一个布尔值属性存在，则其值是 **true**，如果不存在，其值是 **false**。
+
+HTML5 定义了布尔值属性允许的取值：如果属性存在，其值必须是一个空字符串（即该属性的值未分配），或者是一个大小写无关的 ASCII 字符串，该字符串与属性名严格相同，前后都没有空格。下述例子是为一个布尔值属性取值的几个有效方式。
+
+```plain
+<div itemscope> This is valid HTML but invalid XML. </div>
+<div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
+<div itemscope=""> This is valid HTML and also valid XML. </div>
+<div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
+```
+
+再明确一点，布尔值属性不能取值为 "`true`" 和 "`false`"。如果需要表示 false 值，布尔值属性需要整个忽略不写。这个限制澄清了一些常见误会：比如在元素中设置 `checked="false"` ，元素的 `checked` 属性会被解读为 **true**，因为这个属性出现了。
+
+## 参见
+
+- [HTML elements](/zh-CN/docs/Web/HTML/Element)

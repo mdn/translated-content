@@ -3,8 +3,8 @@ title: >-
   Reason: missing token 'xyz' in CORS header 'Access-Control-Allow-Headers' from
   CORS preflight channel
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
-translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 ---
+
 {{HTTPSidebar}}
 
 ## 原因
@@ -13,7 +13,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 原因: 预检通道的 CORS 标头 `Access-Control-Allow-Headers` 中缺少标头名称 'xyz'
 ```
 
-## 哪里错了?
+## 哪里错了？
 
 `Access-Control-Allow-Headers` 标头由服务端发送，让客户端知道它支持哪些标头用于 {{Glossary("CORS")}} 请求。`Access-Control-Allow-Headers` 的值应该是逗号分隔的标头名称列表，例如“ `X-Custom-Information`”或任何标准但非基本的标头名称（始终允许）。
 
@@ -23,6 +23,6 @@ translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 ## 参见
 
 - [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
-- 术语: {{Glossary("CORS")}}
+- 术语：{{Glossary("CORS")}}
 - [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)

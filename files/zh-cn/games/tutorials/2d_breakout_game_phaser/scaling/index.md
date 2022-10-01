@@ -1,21 +1,13 @@
 ---
 title: Scaling
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
 
-这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser)系列的第二课。在课程完成之后，你可以在[Gamedev-Phaser-Content-Kit/demos/lesson02.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html)找到源码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser)系列的第二课。在课程完成之后，你可以在[Gamedev-Phaser-Content-Kit/demos/lesson02.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html)找到源码。
 
 缩放是指游戏画布如何在不同的屏幕尺寸上进行显示。我们可以在预加载阶段自动使游戏规模适合任何屏幕尺寸，之后就可以不用再担心屏幕尺寸的问题了。
 
@@ -57,6 +49,6 @@ game.stage.backgroundColor = '#eee';
 
 ## 下一步
 
-现在我们设置了我们游戏的缩放比例，让我们继续第三课，并设计出如何[加载资源并将其显示在屏幕上](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)。
+现在我们设置了我们游戏的缩放比例，让我们继续第三课，并设计出如何[加载资源并将其显示在屏幕上](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)。
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}

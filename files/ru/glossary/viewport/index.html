@@ -4,14 +4,14 @@ slug: Glossary/Viewport
 translation_of: Glossary/Viewport
 original_slug: Глоссарий/Viewport
 ---
-<p>Viewport - это видимая пользователю область веб-страницы, то, что может увидеть пользователь, не прибегая к прокрутке.</p>
+<p>Viewport - это видимая пользователю область веб-страницы, то, что может увидеть пользователь, не прибегая к прокрутке.</p>
 
 <p>Окно просмотра представляет собой многоугольную (обычно прямоугольную) область в компьютерной графике, которая в настоящее время просматривается. В терминах веб-браузера это относится к той части просматриваемого документа, которая в данный момент отображается в её окне (или на экране, если документ просматривается в полноэкранном режиме).<br>
  Содержимое вне окна просмотра не отображается на экране до тех пор, пока оно не будет просмотрено.</p>
 
 
 
-<p>Meta-тег <strong>viewport</strong> сообщает браузеру о том, как именно обрабатывать размеры страницы, и изменять её масштаб. Этот тег необходимо добавлять в секцию HEAD.</p>
+<p>Meta-тег <strong>viewport</strong> сообщает браузеру о том, как именно обрабатывать размеры страницы, и изменять её масштаб. Этот тег необходимо добавлять в секцию HEAD.</p>
 
 
 
@@ -21,45 +21,45 @@ original_slug: Глоссарий/Viewport
 
 <h3 id="Атрибуты_метатега_viewport">Атрибуты метатега viewport</h3>
 
-<p>Meta-тег <strong>viewport</strong> может иметь следующие атрибуты, указанные через запятую (<code>,</code>):</p>
+<p>Meta-тег <strong>viewport</strong> может иметь следующие атрибуты, указанные через запятую (<code>,</code>):</p>
 
-<p><strong>width</strong> – ширина области просмотра.</p>
+<p><strong>width</strong> – ширина области просмотра.</p>
 
-<p>Значением атрибута является целое неотрицательное число от <strong>200</strong> до <strong>10000</strong> пикселей или константа <strong>device-width</strong>, которая задаёт ширину страницы в соответствии с размером экрана.</p>
+<p>Значением атрибута является целое неотрицательное число от <strong>200</strong> до <strong>10000</strong> пикселей или константа <strong>device-width</strong>, которая задаёт ширину страницы в соответствии с размером экрана.</p>
 
 <p>Если значение не задано, по умолчанию устанавливается – в мобильном Safari = 980px, Opera = 850px, Android WebKit = 800px, IE = 974px.</p>
 
-<blockquote><u>Примечание</u>: для сайтов с адаптивным дизайном рекомендуется использовать: <code>width=device-width</code>.</blockquote>
+<blockquote><u>Примечание</u>: для сайтов с адаптивным дизайном рекомендуется использовать: <code>width=device-width</code>.</blockquote>
 
-<p><strong>height</strong> – высота области просмотра.</p>
+<p><strong>height</strong> – высота области просмотра.</p>
 
-<p>Значением атрибута является целое неотрицательное число от <strong>233</strong> до <strong>10000</strong> пикселей или константа <strong>device-height</strong>, которая задаёт высоту страницы в соответствии с размером экрана.</p>
+<p>Значением атрибута является целое неотрицательное число от <strong>233</strong> до <strong>10000</strong> пикселей или константа <strong>device-height</strong>, которая задаёт высоту страницы в соответствии с размером экрана.</p>
 
-<blockquote><u>Примечание</u>: если указан атрибут <strong>width</strong>, указывать атрибут <strong>height</strong> не обязательно.</blockquote>
+<blockquote><u>Примечание</u>: если указан атрибут <strong>width</strong>, указывать атрибут <strong>height</strong> не обязательно.</blockquote>
 
-<p><strong>initial-scale</strong> – начальный масштаб страницы.</p>
+<p><strong>initial-scale</strong> – начальный масштаб страницы.</p>
 
-<p>Значением атрибута является вещественное число от <strong>0.1</strong> до <strong>1.0</strong>. Значение <strong>1.0</strong> определяет масштаб <strong>1:1</strong>, т.е. «не масштабировать».</p>
+<p>Значением атрибута является вещественное число от <strong>0.1</strong> до <strong>1.0</strong>. Значение <strong>1.0</strong> определяет масштаб <strong>1:1</strong>, т.е. «не масштабировать».</p>
 
 <blockquote>
-<p><u>Примечание</u>: в некоторых операционных системах (iOS, Windows Phone и т.д.) ширина страницы, при повороте, остаётся неизменной. Вместо перераспределения контента выполняется его масштабирование. Поэтому рекомендуется использовать: <strong>initial-scale=1.0</strong>.</p>
+<p><u>Примечание</u>: в некоторых операционных системах (iOS, Windows Phone и т.д.) ширина страницы, при повороте, остаётся неизменной. Вместо перераспределения контента выполняется его масштабирование. Поэтому рекомендуется использовать: <strong>initial-scale=1.0</strong>.</p>
 </blockquote>
 
-<p><strong>user-scalable</strong> – доступность масштабирования страницы пользователем.</p>
+<p><strong>user-scalable</strong> – доступность масштабирования страницы пользователем.</p>
 
-<p>Значение атрибута является логическое «<strong>yes</strong>» (<code>1</code>) – можно масштабировать или «<strong>no</strong>» (<code>0</code>)– нельзя масштабировать.</p>
+<p>Значение атрибута является логическое «<strong>yes</strong>» (<code>1</code>) – можно масштабировать или «<strong>no</strong>» (<code>0</code>)– нельзя масштабировать.</p>
 
-<blockquote><u>Примечание</u>: рекомендуется использовать значение «<strong>yes</strong>» , а т.к. оно установлено по умолчанию, то <strong>user-scalable</strong> можно и не указывать.</blockquote>
+<blockquote><u>Примечание</u>: рекомендуется использовать значение «<strong>yes</strong>» , а т.к. оно установлено по умолчанию, то <strong>user-scalable</strong> можно и не указывать.</blockquote>
 
-<p><strong>minimum-scale</strong> – минимальный масштаб области просмотра.</p>
+<p><strong>minimum-scale</strong> – минимальный масштаб области просмотра.</p>
 
-<p>Значением атрибута является вещественное число от <strong>0.1</strong> до <strong>1.0</strong>. В мобильном браузере Safari по умолчанию 0.25. Значение <strong>1.0</strong> определяет масштаб <strong>1:1</strong>, т.е. «не масштабировать».</p>
+<p>Значением атрибута является вещественное число от <strong>0.1</strong> до <strong>1.0</strong>. В мобильном браузере Safari по умолчанию 0.25. Значение <strong>1.0</strong> определяет масштаб <strong>1:1</strong>, т.е. «не масштабировать».</p>
 
-<p><strong>maximum-scale</strong> – максимальный масштаб области просмотра.</p>
+<p><strong>maximum-scale</strong> – максимальный масштаб области просмотра.</p>
 
-<p>Значением атрибута является вещественное число от <strong>0.1</strong> до <strong>1.0</strong> . В мобильном браузере Safari по умолчанию 1.6. Значение <strong>1.0</strong> определяет масштаб <strong>1:1</strong>, т.е. «не масштабировать».</p>
+<p>Значением атрибута является вещественное число от <strong>0.1</strong> до <strong>1.0</strong> . В мобильном браузере Safari по умолчанию 1.6. Значение <strong>1.0</strong> определяет масштаб <strong>1:1</strong>, т.е. «не масштабировать».</p>
 
-<blockquote><u>Примечание</u>: избегайте атрибутов <strong>user-scalable</strong>, <strong>minimum-scale</strong> и <strong>maximum-scale</strong>, т.к. они отрицательно сказываются на доступности содержания.</blockquote>
+<blockquote><u>Примечание</u>: избегайте атрибутов <strong>user-scalable</strong>, <strong>minimum-scale</strong> и <strong>maximum-scale</strong>, т.к. они отрицательно сказываются на доступности содержания.</blockquote>
 
 
 
@@ -67,13 +67,13 @@ original_slug: Глоссарий/Viewport
 
 <h2 id="Дополнительные_и_полезные_метатеги">Дополнительные и полезные метатеги</h2>
 
-<p>Meta-тег <strong>HandheldFriendly</strong> определяет оптимизирована ли страница сайта под мобильные устройства на Palm и Blackberry, в таком браузере как AvantGo. Сейчас распознаётся и многими другими мобильными браузерами.</p>
+<p>Meta-тег <strong>HandheldFriendly</strong> определяет оптимизирована ли страница сайта под мобильные устройства на Palm и Blackberry, в таком браузере как AvantGo. Сейчас распознаётся и многими другими мобильными браузерами.</p>
 
 <p><u>Пример</u>:</p>
 
 <pre class="brush: html">&lt;meta name="HandheldFriendly" content="true"&gt;</pre>
 
-<p>Meta-тег <strong>MobileOptimized</strong> (<a href="http://goo.gl/ZpLjZz">http://goo.gl/ZpLjZz</a>) задаёт ширину области просмотра в мобильных браузеров IE Mobile или Pocket IE. Является аналогом атрибута <strong>width</strong> в meta-теге <strong>viewport</strong>.</p>
+<p>Meta-тег <strong>MobileOptimized</strong> (<a href="http://goo.gl/ZpLjZz">http://goo.gl/ZpLjZz</a>) задаёт ширину области просмотра в мобильных браузеров IE Mobile или Pocket IE. Является аналогом атрибута <strong>width</strong> в meta-теге <strong>viewport</strong>.</p>
 
 <p><u>Пример</u>:</p>
 
@@ -82,7 +82,7 @@ original_slug: Глоссарий/Viewport
 &lt;!-- ширина страницы в соответствии с размером экрана, аналог device-width --&gt;
 &lt;meta name="MobileOptimized" content="width"&gt;</pre>
 
-<p>Meta-тег <strong>apple-mobile-web-app-capable</strong> (<a href="http://goo.gl/VGDYQC">http://goo.gl/VGDYQC</a>) позволяет странице работать в полноэкранном режиме, актуален для мобильных устройств Apple.</p>
+<p>Meta-тег <strong>apple-mobile-web-app-capable</strong> (<a href="http://goo.gl/VGDYQC">http://goo.gl/VGDYQC</a>) позволяет странице работать в полноэкранном режиме, актуален для мобильных устройств Apple.</p>
 
 <p><u>Пример</u>:</p>
 

@@ -1,18 +1,8 @@
 ---
 title: scroll-margin
 slug: Web/CSS/scroll-margin
-tags:
-  - CSS
-  - プロパティ
-  - Reference
-  - margin
-  - recipe:css-shorthand-property
-  - scroll-margin
-  - scrollbar
-  - scrolling
-browser-compat: css.properties.scroll-margin
-translation_of: Web/CSS/scroll-margin
 ---
+
 {{CSSRef}}
 
 **`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど `margin` プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。

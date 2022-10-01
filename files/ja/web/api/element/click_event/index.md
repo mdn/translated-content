@@ -1,21 +1,8 @@
 ---
 title: 'Element: click イベント'
 slug: Web/API/Element/click_event
-tags:
-  - API
-  - DOM
-  - Element
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - リファレンス
-  - UI
-  - click
-  - マウス
-translation_of: Web/API/Element/click_event
 ---
+
 {{APIRef}}
 
 **`click`** イベントは、ポインターが要素の中にある状態で、ポインティングデバイスのボタン (マウスの第一ボタンなど) が押されて離されたときに要素に送られます。

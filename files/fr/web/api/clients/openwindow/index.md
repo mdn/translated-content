@@ -3,6 +3,7 @@ title: Clients.openWindow()
 slug: Web/API/Clients/openWindow
 translation_of: Web/API/Clients/openWindow
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 La méthode **`openWindow()`** de l'interface {{domxref("Clients")}} crée un nouveau niveau de contexte de navigation et charge une URL donnée. Si le script d'origine n'a pas la permission d'ouvrir une popup, **`openWindow()`** lèvera une InvalidAccessError.
@@ -54,10 +55,8 @@ onotificationclick = function(event) {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#clients', 'Clients')}} | {{Spec2('Service Workers')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clients.openWindow")}}
+{{Compat}}

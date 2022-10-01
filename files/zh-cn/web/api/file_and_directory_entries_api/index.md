@@ -1,15 +1,8 @@
 ---
 title: 文件与目录条目 API
 slug: Web/API/File_and_Directory_Entries_API
-tags:
-  - API
-  - File
-  - Files
-  - 参考
-  - 文件
-  - 非标准
-translation_of: Web/API/File_and_Directory_Entries_API
 ---
+
 {{DefaultAPISidebar("File and Directory Entries API")}}
 
 文件与目录条目（File and Directory Entries）API 模拟一个 web 应用可以导航和访问的本地文件系统。你可以在虚拟的沙箱文件系统中开发一个读、写、创建文件或者目录的应用。

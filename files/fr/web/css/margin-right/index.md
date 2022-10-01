@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-right
 ---
+
 {{CSSRef}}
 
 La propriété **`margin-right`** d'un élément définit l'espace horizontal à droite qui formera la marge à droite. On peut avoir une marge droite négative.
@@ -138,9 +139,13 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
       </tbody>
     </table>
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -178,16 +183,8 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                                             |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Box', '#the-margin', 'margin-right')}}                     | {{Spec2('CSS3 Box')}}             | Pas de changement significatif.                                          |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-right')}}     | {{Spec2('CSS3 Transitions')}} | `margin-right` peut désormais être animée.                               |
-| {{SpecName('CSS3 Flexbox', '#item-margins', 'margin-right')}}             | {{Spec2('CSS3 Flexbox')}}         | Le comportement de `margin-right` est défini sur les éléments flexibles. |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-right')}} | {{Spec2('CSS2.1')}}                 | L'effet sur les éléments en ligne (_inline_) est retiré.                 |
-| {{SpecName('CSS1', '#margin-right', 'margin-right')}}                     | {{Spec2('CSS1')}}                 | Définition initiale                                                      |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin-right")}}
+{{Compat}}

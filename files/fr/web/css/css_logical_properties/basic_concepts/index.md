@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Logical_Properties/Basic_concepts
 original_slug: Web/CSS/CSS_Logical_Properties/Concepts_de_base
 ---
+
 {{CSSRef}}
 
 La spécification relative aux propriétés et valeurs logiques introduit une correspondance relative au flux pour de nombreuses propriétés et valeurs CSS. Dans cet article, nous verrons une introduction de cette spécification et expliquerons les propriétés et valeurs relatives au flux.
@@ -52,7 +53,7 @@ Le diagramme suivant illustre l'axe en ligne et l'axe de bloc pour un mode d'éc
 
 ## Prise en charge des navigateurs
 
-Les propriétés et valeurs logiques peuvent être catégorisées selon différents groupes, notamment pour la compatibilité des navigateurs. Certaines des propriétés logiques sont essentiellement des correspondances de propriétés physiques équivalentes ({{CSSxRef("inline-size")}} sera la propriété logique pouvant correspondre à la propriété physique {{CSSxRef("width")}} et {{CSSxRef("margin-inline-start")}} la propriété physique correspondant à {{CSSxRef("margin-left")}}). La prise en charge de ces propriétés logiques correspondant à des propriétés physiques est plutôt correcte pour les navigateurs récents, vous pouvez consulter les pages [de référence pour ces propriétés sur MDN](/en-US/docs/Web/CSS/CSS_Logical_Properties#reference), seul Edge ne prend pas en charge ces propriétés à date (décembre 2018).
+Les propriétés et valeurs logiques peuvent être catégorisées selon différents groupes, notamment pour la compatibilité des navigateurs. Certaines des propriétés logiques sont essentiellement des correspondances de propriétés physiques équivalentes ({{CSSxRef("inline-size")}} sera la propriété logique pouvant correspondre à la propriété physique {{CSSxRef("width")}} et {{CSSxRef("margin-inline-start")}} la propriété physique correspondant à {{CSSxRef("margin-left")}}). La prise en charge de ces propriétés logiques correspondant à des propriétés physiques est plutôt correcte pour les navigateurs récents, vous pouvez consulter les pages [de référence pour ces propriétés sur MDN](/fr/docs/Web/CSS/CSS_Logical_Properties#reference), seul Edge ne prend pas en charge ces propriétés à date (décembre 2018).
 
 On a également un groupe de propriétés qui ne possèdent pas de correspondances directes avec les propriétés physiques. Ces propriétés sont des propriétés raccourcies qui font référence aux deux extrêmités d'un axe. Ainsi {{CSSxRef("margin-block")}} sera une propriété raccourcie pour {{CSSxRef("margin-block-start")}} et {{CSSxRef("margin-block-end")}}. Ce deuxième groupe n'est actuellement pas pris en charge par les navigateurs.
 

@@ -1,17 +1,9 @@
 ---
 title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
-tags:
-  - API
-  - 座標
-  - Document
-  - メソッド
-  - リファレンス
-browser-compat: api.Document.elementFromPoint
-translation_of: Web/API/DocumentOrShadowRoot/elementFromPoint
-translation_of_original: Web/API/Document/elementFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 ---
+
 {{APIRef("DOM")}}
 
 **`elementFromPoint()`** メソッドは {{domxref("Document")}} オブジェクト上で利用可能で、指定した座標（ビューポートからの相対座標）における最上位の要素 ({{domxref("Element")}}) を返します。

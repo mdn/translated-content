@@ -1,15 +1,8 @@
 ---
 title: TransformStream.writable
 slug: Web/API/TransformStream/writable
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TransformStream
-translation_of: Web/api/TransformStream/writable
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("TransformStream")}} 接口的只读属性 **`writable`** 返回由这个 `TransformStream` 控制的 {{domxref("WritableStream")}} 实例。

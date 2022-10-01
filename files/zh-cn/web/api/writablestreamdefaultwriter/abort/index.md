@@ -1,18 +1,9 @@
 ---
 title: WritableStreamDefaultWriter.abort()
 slug: Web/API/WritableStreamDefaultWriter/abort
-page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - abort
-translation_of: Web/API/WritableStreamDefaultWriter/abort
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultWriter")}} 接口的 **`abort()`** 方法用于中止流，表示生产者不能再向流写入数据（会立刻返回一个错误状态），并丢弃所有已入队的数据。
 

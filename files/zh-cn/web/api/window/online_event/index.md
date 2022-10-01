@@ -1,14 +1,8 @@
 ---
 title: Window：online 事件
 slug: Web/API/Window/online_event
-tags:
-  - API
-  - Event
-  - Online
-  - Reference
-  - Window
-translation_of: Web/API/Window/online_event
 ---
+
 {{APIRef}}
 
 当浏览器能够访问网络，且 {{domxref("Navigator.onLine")}} 的值被设为 `true` 时，{{domxref("Window")}} 接口的 **`online`** 事件将被触发。

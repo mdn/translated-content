@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Pseudo-elements
 original_slug: Web/CSS/Pseudo-éléments
 ---
+
 {{CSSRef}}
 
 Un **pseudo-élément** est un mot-clé ajouté à un sélecteur qui permet de mettre en forme certaines parties de l'élément ciblé par la règle. Ainsi, le pseudo-élément {{cssxref("::first-line")}} permettra de ne cibler que la première ligne d'un élément visé par le sélecteur.

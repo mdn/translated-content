@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/Stack
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propriété non-standard **`stack`** des objets {{jsxref("Error")}} fournit une trace des fonctions qui ont été appelées, dans quel ordre, depuis quelle ligne de quel fichier, et avec quels arguments. La chaine de pile remonte des appels les plus récents jusqu'aux plus anciens, ramenant à l'appel original de la portée globale.
@@ -108,7 +109,7 @@ try {
 // @file:///C:/exemple.html:7:6
 ```
 
-Vous pouvez aussi utiliser la directive `//# sourceURL` pour nommer une source eval. Voir aussi [Déboguer des sources évaluées](https://developer.mozilla.org/fr-FR/docs/Tools/Debugger/How_to/Debug_eval_sources) dans les docs [Débogueur](https://developer.mozilla.org/fr-FR/docs/Tools/Debugger), ainsi que ce [blog post](http://fitzgeraldnick.com/weblog/59/).
+Vous pouvez aussi utiliser la directive `//# sourceURL` pour nommer une source eval. Voir aussi [Déboguer des sources évaluées](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) dans les docs [Débogueur](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), ainsi que ce [blog post](http://fitzgeraldnick.com/weblog/59/).
 
 ## Spécifications
 

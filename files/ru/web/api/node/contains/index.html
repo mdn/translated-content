@@ -10,7 +10,7 @@ translation_of: Web/API/Node/contains
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<div>Метод <strong><code>Node.contains()</code></strong> возвращает {{jsxref ("Boolean")}} значение, указывающее, является ли узел потомком данного узла, т. е. сам узел, один из его прямых потомков ({{domxref ("Node. childNodes "," childNodes ")}}), один из детей его детей и так далее.</div>
+<div>Метод <strong><code>Node.contains()</code></strong> возвращает {{jsxref ("Boolean")}} значение, указывающее, является ли узел потомком данного узла, т. е. сам узел, один из его прямых потомков ({{domxref ("Node. childNodes "," childNodes ")}}), один из детей его детей и так далее.</div>
 
 <h2 id="Summary">Синтаксис</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/Node/contains
 
 <h2 id="Example">Пример</h2>
 
-<p>Эта функция проверяет, находится ли элемент в теле страницы.</p>
+<p>Эта функция проверяет, находится ли элемент в теле страницы.</p>
 
 <pre class="brush:js">function isInPage(node) {
   return (node === document.body) ? false : document.body.contains(node);

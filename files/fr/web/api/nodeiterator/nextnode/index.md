@@ -10,6 +10,7 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeIterator/nextNode
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`NodeIterator.nextNode()`** renvoie le noeud suivant dans l'ensemble représenté par le {{domxref("NodeIterator")}} et avance la position de l'itérateur dans cet ensemble.  Le premier appel de `nextNode()` en renvoie le premier noeud.
@@ -38,14 +39,11 @@ currentNode = nodeIterator.nextNode(); // renvoie le noeud suivant.
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                       | Commentaire                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nodeiterator-nextnode', 'NodeIterator.nextNode')}}                                         | {{Spec2('DOM WHATWG')}}             | Comme `detach()` est maintenant une méthode non opérante, cette méthode ne peut plus rien lancer. |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-nextNode', 'NodeIterator.nextNode')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator.nextNode")}}
+{{Compat}}
 
 ## Voir aussi
 

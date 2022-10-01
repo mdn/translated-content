@@ -14,6 +14,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 ---
+
 {{AddonSidebar()}}Envoi un message unique depuis le script d'arrière plan d'extension (ou autre scripts accrédité, comme les scripts popup ou les scripts de page d'options) vers n'importe quel [script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) concerné par l'extension et qui s'execute dans l'onglet spécifié.Ce message sera reçu dans script de contenu par n'importe quel gestionnaire d'évènements à l'écoute de l'évènement
 
 {{WebExtAPIRef("runtime.onMessage")}}. Les gestionnaires d'évènements peuvent optionellement envoyé une réponse en retour au script d'arrière plan en utilisant l'argument `sendResponse`.
@@ -106,7 +107,8 @@ browser.runtime.onMessage.addListener(request => {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -133,4 +135,4 @@ browser.runtime.onMessage.addListener(request => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

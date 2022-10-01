@@ -1,17 +1,8 @@
 ---
 title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.shiftKey
-translation_of: Web/API/MouseEvent/shiftKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.shiftKey`** は読み取り専用のプロパティで、このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていたかどうかを示す論理値です。

@@ -1,14 +1,6 @@
 ---
 title: HTML 元素参考
 slug: Web/HTML/Element
-tags:
-  - 入门
-  - 元素
-  - HTML
-  - 参考
-  - Web
-  - l10n:priority
-translation_of: Web/HTML/Element
 ---
 
 {{HTMLSidebar("Elements")}}

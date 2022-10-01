@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/CSS/quotes
 ---
+
 {{CSSRef}}
 
 La propriété **`quotes`** indique la façon dont les marques de citation sont affichées.
@@ -37,9 +38,13 @@ quotes: unset;
 - `[<string> <string>]+`
   - : Une ou plusieurs paires de {{cssxref("&lt;string&gt;")}} pour les valeurs `open-quote` et `close-quote`. La première paire représente les symboles utilisés pour les citations de plus haut niveau, la deuxième indique comment délimiter une citation dans une citation, la troisième paire permet d'ajouter un niveau d'imbrication supplémentaire et ainsi de suite.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -71,16 +76,11 @@ q {
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires        |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("CSS3 Content", "#quotes", "quotes")}}             | {{Spec2("CSS3 Content")}} |                     |
-| {{SpecName('CSS2.1', 'generate.html#quotes', 'quotes')}} | {{Spec2('CSS2.1')}}         | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.quotes")}}
+{{Compat}}
 
 ## Voir aussi
 

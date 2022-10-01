@@ -1,9 +1,9 @@
 ---
 title: XHTML
 slug: Glossary/XHTML
-translation_of: Glossary/XHTML
 original_slug: XHTML
 ---
+
 ### W3C 标准 XHTML
 
 ### XHTML(eXtensible HyperText Markup Language，可扩展超文本标记语言)

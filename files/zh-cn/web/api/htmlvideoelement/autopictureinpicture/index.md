@@ -1,20 +1,8 @@
 ---
 title: HTMLVideoElement.autoPictureInPicture
 slug: Web/API/HTMLVideoElement/autoPictureInPicture
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLVideoElement
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Property
-  - Reference
-  - Video
-  - pip
-browser-compat: api.HTMLVideoElement.autoPictureInPicture
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLVideoElement")}} 接口提供的 **`autoPictureInPicture`**  HTML 属性用于指示视频是否应该自动进入或离开画中画模式。

@@ -11,27 +11,27 @@ original_slug: CSS/Media_queries
 ---
 <div>{{cssref}}</div>
 
-<p class="seoSummary">Las <strong>media queries</strong> (en español "consultas de medios") son útiles cuando deseas modificar tu página web o aplicación en función del tipo de dispositivo (como una impresora o una pantalla) o de características y parámetros específicos (como la resolución de la pantalla o el ancho del {{glossary("viewport")}} del navegador).</p>
+<p class="seoSummary">Las <strong>media queries</strong> (en español "consultas de medios") son útiles cuando deseas modificar tu página web o aplicación en función del tipo de dispositivo (como una impresora o una pantalla) o de características y parámetros específicos (como la resolución de la pantalla o el ancho del {{glossary("viewport")}} del navegador).</p>
 
 <p>Se utilizan para:</p>
 
 <ul>
- <li>Aplicar estilos condicionales con las <a href="/es/docs/Web/CSS/At-rule">reglas-at</a> {{cssxref("@media")}} e {{cssxref("@import")}} de <a href="/es/docs/Web/CSS">CSS</a>.</li>
- <li>Indicar medios específicos en los elementos {{HTMLElement("link")}}, {{HTMLElement("source")}} y otros elementos <a href="/es/docs/Web/HTML">HTML</a>.</li>
- <li><a href="/es/docs/Web/Guide/CSS/probando_media_queries">Testear y monitorizar los estados de los medios</a> usando los métodos de javascript {{domxref("Window.matchMedia()")}} y {{domxref("MediaQueryList.addListener()")}}.</li>
+ <li>Aplicar estilos condicionales con las <a href="/es/docs/Web/CSS/At-rule">reglas-at</a> {{cssxref("@media")}} e {{cssxref("@import")}} de <a href="/es/docs/Web/CSS">CSS</a>.</li>
+ <li>Indicar medios específicos en los elementos {{HTMLElement("link")}}, {{HTMLElement("source")}} y otros elementos <a href="/es/docs/Web/HTML">HTML</a>.</li>
+ <li><a href="/es/docs/Web/Guide/CSS/probando_media_queries">Testear y monitorizar los estados de los medios</a> usando los métodos de javascript {{domxref("Window.matchMedia()")}} y {{domxref("MediaQueryList.addListener()")}}.</li>
 </ul>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<p> </p>
+<p> </p>
 
-<p>Las <em>media queries</em> consisten de un tipo de medio opcional y una o más expresiones de <em>características de medios</em>. Varias consultas se pueden combinar utilizando operadores lógicos. No distinguen entre mayúsculas y minúsculas.</p>
+<p>Las <em>media queries</em> consisten de un tipo de medio opcional y una o más expresiones de <em>características de medios</em>. Varias consultas se pueden combinar utilizando operadores lógicos. No distinguen entre mayúsculas y minúsculas.</p>
 
-<p>El resultado de la consulta es "verdadero" cuando el tipo de medio (si se especifica) coincide con el dispositivo en el que se está mostrando el documento y todas las expresiones en el <em>media query</em> son "verdaderas". En este caso, se aplica los estilos correspondientes, siguiendo las reglas usuales de cascada.</p>
+<p>El resultado de la consulta es "verdadero" cuando el tipo de medio (si se especifica) coincide con el dispositivo en el que se está mostrando el documento y todas las expresiones en el <em>media query</em> son "verdaderas". En este caso, se aplica los estilos correspondientes, siguiendo las reglas usuales de cascada.</p>
 
 <p>Las consultas sobre tipos de medios desconocidos son siempre falsas.</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: html"><code class="brush: html">&lt;!-- CSS media query on a link element --&gt;
 </code>&lt;link rel="stylesheet" media="(max-width: 800px)" href="example.css" /&gt;
@@ -54,7 +54,7 @@ original_slug: CSS/Media_queries
  <dt><code id="all">all</code></dt>
  <dd>Apto para todos los dispositivos.</dd>
  <dt><code id="print">print</code></dt>
- <dd>Destinado a material impreso y visualización de documentos en una pantalla en el modo de vista previa de impresión. </dd>
+ <dd>Destinado a material impreso y visualización de documentos en una pantalla en el modo de vista previa de impresión. </dd>
  <dt><code id="screen">screen</code></dt>
  <dd>Destinado principalmente a las pantallas.</dd>
  <dt><code id="speech">speech</code></dt>
@@ -62,7 +62,7 @@ original_slug: CSS/Media_queries
 </dl>
 
 <div class="blockIndicator note">
-<p><strong>Tipos de medios depreciados:</strong> CSS2.1 y <a href="/es/docs/">Media Queries 3</a> definieron varios tipos de medios adicionales (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code> y <code>aural</code>), pero fueron desaprobados en <a href="https://drafts.csswg.org/mediaqueries/#media-types">Media Queries 4</a> y no deberían ser usados. El tipo <code>aural</code> ha sido reemplazado por <code>speech</code>, que es similar.</p>
+<p><strong>Tipos de medios depreciados:</strong> CSS2.1 y <a href="/es/docs/">Media Queries 3</a> definieron varios tipos de medios adicionales (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code> y <code>aural</code>), pero fueron desaprobados en <a href="https://drafts.csswg.org/mediaqueries/#media-types">Media Queries 4</a> y no deberían ser usados. El tipo <code>aural</code> ha sido reemplazado por <code>speech</code>, que es similar.</p>
 </div>
 
 <h3 id="Operadores_Lógicos">Operadores Lógicos</h3>

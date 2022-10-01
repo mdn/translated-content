@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-repeat
 ---
+
 {{CSSRef}}
 
 La propriété **`mask-repeat`** définit la façon dont les images de masque sont répétées. Une image de masque peut être répétée horizontalement, verticalement, dans les deux directions ou pas du tout.
@@ -122,9 +123,13 @@ Une ou plusieurs valeurs `<repeat-style>`, séparées par des virgules.
       </tbody>
     </table>
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -162,12 +167,8 @@ Une ou plusieurs valeurs `<repeat-style>`, séparées par des virgules.
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS Masks", "#the-mask-repeat", "mask-repeat")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.mask-repeat")}}
+{{Compat}}

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/x-ms-acceleratorkey
 original_slug: Web/HTML/Attributs_universels/x-ms-acceleratorkey
 ---
+
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
 La propriété **`x-ms-acceleratorkey`** fournit une méthode pour déclarer si une touche d'accélération a été affectée à un élément.

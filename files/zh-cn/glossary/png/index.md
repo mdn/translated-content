@@ -1,8 +1,8 @@
 ---
 title: PNG
 slug: Glossary/PNG
-translation_of: Glossary/PNG
 ---
+
 **PNG**（便携式网络图形）是支持无损数据压缩的图形文件格式。
 
 ## 了解更多

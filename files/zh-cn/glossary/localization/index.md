@@ -1,32 +1,29 @@
 ---
 title: 本地化
 slug: Glossary/Localization
-translation_of: Glossary/Localization
 original_slug: Localization
 ---
-**Localization** (L10n) is the process of translating software user interfaces from one language to another and adapting it to suit a foreign culture. These resources are for anyone with an interest in the technical aspects involved in localization. They are for developers and all contributors.
 
-## Documentation
+**本地化**（l10n）是使软件用户界面适应特定文化环境的过程。
 
-- [Localization Quick Start Guide](/zh-CN/docs/Localization_Quick_Start_Guide)
-  - : First read for volunteers wanting to start localizing.
-- [XUL Tutorial:Localization](/zh-CN/docs/XUL_Tutorial/Localization)
-  - : [XUL Tutorial](/zh-CN/docs/XUL_Tutorial) section on localizing XUL applications.
-- [Writing localizable code](/zh-CN/docs/Writing_localizable_code)
-  - : Best practices and guidelines for programmers to play nicely with localization.
-- [Localizing Help files](http://wiki.babelzilla.org/index.php?title=Tutorials#How_to_localize_strings_from_the_help.html_file_of_an_extension)
-  - : How to separate content from HTML to make these files more easy to localize.
-- [Custom dialog size](http://wiki.babelzilla.org/index.php?title=Tutorials#How_to_resize_a_xul_pref_dialog_according_to_every_language)
-  - : How to adjust window sizes to fit specific localizations.
-- [Localizing extension descriptions](/zh-CN/docs/Localizing_extension_descriptions)
-  - : To localize the description of an extension (the string that shows up under extension's name in the Extensions window), you need to use a special preference key to override the description specified in your install.rdf file. This article contains instructions on how to modify this preference key.
-- [Frequently Asked Localization Questions](/zh-CN/docs/Frequently_Asked_Localization_Questions)
-  - : Frequently asked questions about localization.
+以下是本地化过程中经常考虑的因素：
 
-## Community
+- 语言
+- 计量单位（如：欧洲使用千米，而美国使用英里）
+- 文字方向（如：欧洲语言是从左向右书写的，而阿拉伯语是从右向左书写的）
+- 拉丁字母的大写行为（如：英语用大写字母表示工作日，西班牙语使用小写字母）
+- 习语的适配（如：“raining cats and dogs”的字面翻译没有任何意义）（译者注：上述习语翻译为中文是“下起瓢泼大雨”的意思，与猫和狗没有任何联系）
+- 情感表达（如：日语的敬语体系与休闲语有很大的不同）
+- 数字格式（如：德国使用 10 000,00，而美国使用 10,000.00）
+- 日期格式
+- 货币
+- 文化参照
+- 纸张大小
+- 颜色心理
+- 符合当地法律
+- 本地节日
+- 人名
 
-- [Community](https://wiki.mozilla.org/L10n)
+## 参见
 
-## Related Topics
-
-- [Extensions](/zh-CN/docs/Extensions), [XUL](/zh-CN/docs/XUL)
+- 维基百科上的[本地化](https://zh.wikipedia.org/wiki/语言本地化)词条

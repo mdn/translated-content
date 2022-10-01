@@ -1,13 +1,8 @@
 ---
 title: 解释基本的 3D 原理
 slug: Games/Techniques/3D_on_the_web/Basic_theory
-tags:
-  - 3D
-  - 坐标
-  - 片段
-  - 顶点
-translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 ---
+
 {{GamesSidebar}}
 
 这篇文章解释了当你开始使用 3D 工作的时候需要的所有有用的基本理论
@@ -22,7 +17,7 @@ WebGL 使用右手坐标系统 — `x` 轴向右，`y` 轴向上 `z` 轴指向�
 
 ## 物体
 
-使用顶点建立不同类型的物体。 **一个顶点**是在 3D 坐标系中拥有坐标位置的一个点以及一些额外可以定义它的信息。 每个点都包含这些属性：
+使用顶点建立不同类型的物体。 **一个顶点**是在 3D 坐标系中拥有坐标位置的一个点以及一些额外可以定义它的信息。每个点都包含这些属性：
 
 - **位置**: 在 3D 空间用来辨认 (`x`, `y`, `z`).
 - **颜色**: 包含 RGBA (R, G 和 B 分别是红，绿，蓝和 alpha 通道，alpha 通道控制透明度 — 所有通道值的范围都是 `0.0` 到 `1.0`).
@@ -59,7 +54,7 @@ WebGL 使用右手坐标系统 — `x` 轴向右，`y` 轴向上 `z` 轴指向�
 
 ![Camera](mdn-games-3d-camera.png)
 
-**投射转换**(projection transformation), 也被称作透视转换 (perspective transformation), 这一步定义摄像机设置，在此过程会设置哪些在摄像机中可见，配置包含视野 (field of view), 宽高比例 (aspect ratio) 和可选的近裁剪和远裁剪参数。阅读 Three.js 文章[摄像机](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#Camera)了解更多。
+**投射转换**(projection transformation), 也被称作透视转换 (perspective transformation), 这一步定义摄像机设置，在此过程会设置哪些在摄像机中可见，配置包含视野 (field of view), 宽高比例 (aspect ratio) 和可选的近裁剪和远裁剪参数。阅读 Three.js 文章[摄像机](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#Camera)了解更多。
 
 ![Camera settings](mdn-games-3d-camera-settings.png)
 
@@ -106,9 +101,9 @@ WebGL 使用右手坐标系统 — `x` 轴向右，`y` 轴向上 `z` 轴指向�
 
 现在你知道了 3D 操作背后的基本原理。如果你想去练习或者看学习 demo, 看看下面的教程：
 
-- [用 Three.js 创建基本 demo](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)
-- [用 Babylon.js 创建基本 demo](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)
-- [用 PlayCanvas 创建基本 demo](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas)
-- [用 A-Frame 创建基本 demo](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)
+- [用 Three.js 创建基本 demo](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)
+- [用 Babylon.js 创建基本 demo](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)
+- [用 PlayCanvas 创建基本 demo](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas)
+- [用 A-Frame 创建基本 demo](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)
 
 继续，去创建一些炫酷 3D 实验吧！

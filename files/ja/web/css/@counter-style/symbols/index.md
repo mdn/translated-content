@@ -1,16 +1,8 @@
 ---
 title: symbols
 slug: Web/CSS/@counter-style/symbols
-tags:
-  - '@counter-style'
-  - アットルール記述子
-  - CSS
-  - CSS カウンタースタイル
-  - CSS 記述子
-  - リファレンス
-browser-compat: css.at-rules.counter-style.symbols
-translation_of: Web/CSS/@counter-style/symbols
 ---
+
 {{CSSRef}}
 
 **`symbols`** は [CSS](/ja/docs/Web/CSS) の記述子で、指定されたカウンターシステムがカウンター表現を構築するために使用する記号を指定するために使用します。
@@ -49,7 +41,14 @@ symbols: indic-numbers;
 
 ## 形式文法
 
-{{csssyntax}}
+```
+<symbol>+
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## 例
 
@@ -96,5 +95,5 @@ symbols: indic-numbers;
 
 - `symbols` 記述子は {{cssxref("@counter-style")}} アットルールの中で使用されます。
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()")}}, 無名のカウンタースタイルを生成する関数記法
-- {{cssxref("url()", "url()")}} 関数
+- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法
+- {{cssxref("url", "url()")}} 関数

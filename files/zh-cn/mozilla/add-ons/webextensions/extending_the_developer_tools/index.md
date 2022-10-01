@@ -1,16 +1,11 @@
 ---
 title: 扩展开发人员工具
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
-tags:
-  - Add-ons
-  - DevTools
-  - Guide
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 ---
+
 {{AddonSidebar}}
 
-> **备注：** 本页介绍了火狐 Firefox 55 中存在的开发工具接口（dectools APIs)。虽然该接口 Api 基于 Chrome 开发工具 Api，仍有许多功能尚未实现在火狐中实现，因此未记录在本页内容中。产看当前缺失的功能，请参阅链接[开发工具 Api 的限制。](/en-US/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs)
+> **备注：** 本页介绍了火狐 Firefox 55 中存在的开发工具接口（dectools APIs)。虽然该接口 Api 基于 Chrome 开发工具 Api，仍有许多功能尚未实现在火狐中实现，因此未记录在本页内容中。产看当前缺失的功能，请参阅链接[开发工具 Api 的限制。](/zh-CN/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs)
 
 您可以使用 WebExtensions API 扩展浏览器的内置开发人员工具。要创建 devtools 扩展，请在 manifest.json 中包含“devtools_page”键：
 
@@ -32,9 +27,9 @@ devtools 页面没有任何可见的 DOM，但可以包含使用\<script>标记�
 - 与内容脚本中相同的 WebExtension API
 - The devtools APIs:
 
-  - [`devtools.inspectedWindow`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow)
-  - [`devtools.network`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network)
-  - [`devtools.panels`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels)
+  - [`devtools.inspectedWindow`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow)
+  - [`devtools.network`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network)
+  - [`devtools.panels`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels)
 
 请注意，devtools 页面无法访问任何其他 WebExtension API，并且后台页面无法访问 devtools API。相反，devtools 页面和后台页面必须使用运行时消息传递 API 进行通信。这是一个例子：
 

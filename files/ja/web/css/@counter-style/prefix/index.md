@@ -1,16 +1,8 @@
 ---
 title: prefix
 slug: Web/CSS/@counter-style/prefix
-tags:
-  - '@counter-style'
-  - アットルール記述子
-  - CSS
-  - CSS カウンタースタイル
-  - CSS 記述子
-  - リファレンス
-browser-compat: css.at-rules.counter-style.prefix
-translation_of: Web/CSS/@counter-style/prefix
 ---
+
 {{CSSRef}}
 
 **`prefix`** は {{cssxref('@counter-style')}} ルールの記述子で、マーカーに先立って表示される内容を指定します。指定されていない場合、既定値は `""` (空文字列) になります。
@@ -35,7 +27,14 @@ prefix: url(bullet.png);
 
 ## 形式文法
 
-{{csssyntax}}
+```
+<symbol>
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## 例
 
@@ -68,7 +67,7 @@ prefix: url(bullet.png);
 }
 ```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
 {{ EmbedLiveSample('Adding_a_prefix_to_a_counter') }}
 
@@ -83,4 +82,4 @@ prefix: url(bullet.png);
 ## 関連情報
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()", "symbols()")}}、無名のカウンタースタイルを作成する関数記法
+- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを作成する関数記法

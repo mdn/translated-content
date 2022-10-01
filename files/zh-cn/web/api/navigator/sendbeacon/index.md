@@ -1,18 +1,8 @@
 ---
 title: Navigator.sendBeacon()
 slug: Web/API/Navigator/sendBeacon
-tags:
-  - API
-  - Beacon
-  - Method
-  - Navigator
-  - NeedsExample
-  - Networking
-  - Reference
-  - Web Performance
-  - sendBeacon
-translation_of: Web/API/Navigator/sendBeacon
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`navigator.sendBeacon()`** 方法可用于通过 [HTTP POST](/zh-CN/docs/Web/HTTP/Methods/POST) 将少量数据 {{glossary("Asynchronous", "异步")}} 传输到 Web 服务器。
@@ -41,7 +31,7 @@ navigator.sendBeacon(url, data);
 
 这个方法主要用于满足统计和诊断代码的需要，这些代码通常尝试在卸载（unload）文档之前向 Web 服务器发送数据。过早的发送数据可能导致错过收集数据的机会。然而，对于开发者来说保证在文档卸载期间发送数据一直是一个困难。因为用户代理通常会忽略在 {{event("unload")}} 事件处理器中产生的异步 {{domxref("XMLHttpRequest")}}。
 
-过去，为了解决这个问题， 统计和诊断代码通常要在
+过去，为了解决这个问题，统计和诊断代码通常要在
 
 - 发起一个同步 `XMLHttpRequest` 来发送数据。
 - 创建一个 {{HTMLElement("img")}} 元素并设置 `src`，大部分用户代理会延迟卸载（unload）文档以加载图像。

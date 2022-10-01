@@ -7,6 +7,7 @@ tags:
   - SVG Description
 translation_of: Web/SVG/Element/desc
 ---
+
 {{SVGRef}}
 
 Tout élément graphique ou conteneur dans un dessin SVG peut définir une description en utilisant l'élément **`<desc>`**, cette description ne peut contenir que du texte.
@@ -21,7 +22,7 @@ Quand l'élément contenant une description apparaît à l'utilisateur sous form
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core")&nbsp;»
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)&nbsp;»
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -31,7 +32,7 @@ _(Aucun)_
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGDescElement`](/fr/docs/Web/API/SVGDescElement "en/DOM/SVGDescElement").
+Cet élément implémente l'interface [`SVGDescElement`](/fr/docs/Web/API/SVGDescElement).
 
 ## Compatibilitée des navigateurs
 

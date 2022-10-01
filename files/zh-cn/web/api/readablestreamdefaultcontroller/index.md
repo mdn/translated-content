@@ -1,18 +1,11 @@
 ---
 title: ReadableStreamDefaultController
 slug: Web/API/ReadableStreamDefaultController
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableStreamDefaultController
 ---
+
 {{APIRef("Streams")}}
 
-[流操作 API](/zh-CN/docs/Web/API/Streams_API) 中的 **`ReadableStreamDefaultController`** 接口是一个控制器，该控制器允许控制 {{domxref("ReadableStream")}} 的状态和内部队列。 默认控制器用于不是字节流的流。
+[流操作 API](/zh-CN/docs/Web/API/Streams_API) 中的 **`ReadableStreamDefaultController`** 接口是一个控制器，该控制器允许控制 {{domxref("ReadableStream")}} 的状态和内部队列。默认控制器用于不是字节流的流。
 
 ## 构造函数
 
@@ -59,7 +52,7 @@ const stream = new ReadableStream({
     })
   },
   pull(controller) {
-    // 在这个例子中不使用pull
+    // 在这个例子中不使用 pull
   },
   cancel() {
     // 如果取消了 reader，则会调用该函数，

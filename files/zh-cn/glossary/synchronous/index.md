@@ -1,11 +1,8 @@
 ---
 title: Synchronous（同步）
 slug: Glossary/Synchronous
-tags:
-  - Web
-  - 术语
-translation_of: Glossary/Synchronous
 ---
+
 各方都实时（或者尽可能实时）地收取（而且必要的话也处理或者回复）信息的即时沟通方式，即为**同步**。
 
 电话即为一个日常的例子：人们都倾向于在使用电话时即时地作出回应。

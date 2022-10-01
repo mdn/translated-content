@@ -1,8 +1,8 @@
 ---
 title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
+
 {{AddonSidebar()}}
 
 代表 `local` 儲存空間。通常 `local` 裡面的東西，會放在套件安裝的地方。
@@ -35,7 +35,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.storage.local")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -43,7 +43,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -70,4 +71,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

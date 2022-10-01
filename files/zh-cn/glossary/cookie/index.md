@@ -1,8 +1,8 @@
 ---
 title: Cookie
 slug: Glossary/Cookie
-translation_of: Glossary/Cookie
 ---
+
 Cookie 就是访问者在访问网站后留下的一个信息片段。
 
 Cookie 用于个性化用户的体验。可能包含用户在访问网站时的参数或输入。用户可以自定义浏览器来接受，拒绝或删除 Cookie。

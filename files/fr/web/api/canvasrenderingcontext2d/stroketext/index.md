@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
 translation_of: Web/API/CanvasRenderingContext2D/strokeText
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.strokeText()`** de l'API Canvas 2D trace le texte fourni à la position donnée _(x, y)_. Si le quatrième paramètre optionnel indiquant une largeur maximale est fourni, le texte sera mis à l'échelle pour tenir dans cette cette largeur.
@@ -96,13 +97,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-stroketext", "CanvasRenderingContext2D.strokeText")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.strokeText")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,18 +1,8 @@
 ---
 title: appearance (-moz-appearance, -webkit-appearance)
 slug: Web/CSS/appearance
-tags:
-  - '-moz-appearance'
-  - '-webkit-appearance'
-  - CSS
-  - CSS プロパティ
-  - CSS 基本ユーザーインターフェイス
-  - Reference
-  - appearance
-  - recipe:css-property
-browser-compat: css.properties.appearance
-translation_of: Web/CSS/appearance
 ---
+
 {{CSSRef}}
 
 **`appearance`** は CSS のプロパティで、 OS のテーマに基づいたプラットフォームネイティブのスタイル付けを使用して要素を表示するために使用されます。**`-moz-appearance`** および **`-webkit-appearance`** はこのプロパティの標準外のバージョンで、(それぞれ) Gecko (Firefox) と Webkit ベース (Safari など) や Blink ベース (Chrome、Opera など) のブラウザーで同じことを実現するために使用されます。なお、 Firefox や Edge もまた、互換性の理由から **`-webkit-appearance`** に対応しています。
@@ -216,7 +206,7 @@ appearance: unset;
 | `media-time-remaining-display`         | Chrome Safari              |                                                                                                                                                                                    |
 | `menulist-text`                        | Firefox Chrome Safari Edge |                                                                                                                                                                                    |
 | `menulist-textfield`                   | Firefox Chrome Safari Edge | この要素がメニューリストのテキストフィールドとしてスタイル付けされます。 (Windows プラットフォームでは実装されていません) |
-| `meterbar`                             | Firefox                    | 代わりに `meter` を使用してください。                                                                                                                                                             |
+| `meterbar`                             | Firefox                    | 代わりに `meter` を使用してください。                                                                                                                                                             |
 | `number-input`                         | Firefox                    |                                                                                                                                                                                    |
 | `progress-bar-value`                   | Chrome Safari              |                                                                                                                                                                                    |
 | `progressbar`                          | Firefox                    | この要素がプログレスバーのようにスタイル付けされます。代わりに `progress-bar` を使用してください。                                                                                                              |

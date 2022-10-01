@@ -3,6 +3,7 @@ title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
 translation_of: Web/API/AudioBufferSourceNode/start
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode `start()` de l'interface {{ domxref("AudioBufferSourceNode") }} permet de planifier la lecture du buffer audio.
@@ -51,15 +52,13 @@ source.start(contexteAudio.currentTime + 1,3,10);
 
 > **Note :** Pour un exemple plus complexe montrant la méthode `start()` en action, consulter l'exemple [`AudioContext.decodeAudioData`](/fr/docs/Web/API/BaseAudioContext/decodeAudioData). Voir aussi l'exemple complet [en direct](https://mdn.github.io/webaudio-examples/decode-audio-data/) et [son code source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-start-void-double-when-double-offset-double-duration', 'start()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode.start")}}
+{{Compat}}
 
 ## Voir aussi
 

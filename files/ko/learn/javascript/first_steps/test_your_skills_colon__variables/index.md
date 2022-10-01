@@ -1,12 +1,6 @@
 ---
 title: '당신의 기량을 시험해 보세요: 변수(variables)'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - Text your skills
-  - Variables
 ---
 {{learnsidebar}}
 
@@ -64,8 +58,8 @@ tags:
 
 만약 당신이 작업을 평가받고 싶거나, 막혀서 도움을 청하기를 원한다면:
 
-1.  당신의 작업을 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/) 같은 온라인에서 공유 가능한 에디터에 올리세요. 당신은 직접 코드를 작성하거나, 위 섹션들에 링크된 시작점 파일을 사용할 수 있습니다.
-2.  [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) 에 평가 및 또는 도움을 요청하는 글을 작성하세요. 당신의 글은 다음을 포함해야만 합니다.
+1. 당신의 작업을 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/) 같은 온라인에서 공유 가능한 에디터에 올리세요. 당신은 직접 코드를 작성하거나, 위 섹션들에 링크된 시작점 파일을 사용할 수 있습니다.
+2. [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) 에 평가 및 또는 도움을 요청하는 글을 작성하세요. 당신의 글은 다음을 포함해야만 합니다.
 
     - "변수 1 기량 테스트에 대한 평가 원함"과 같은 서술적인 제목.
     - 당신이 이미 무엇을 시도해 봤는지, 그리고 우리가 무엇을 하기를 원하는지에 대한 설명, 예를 들자면, 만약 당신이 막혀서 도움이 필요하거나, 평가를 원하거나.

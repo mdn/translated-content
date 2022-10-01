@@ -1,15 +1,15 @@
 ---
 title: 讓球碰到牆壁後反彈
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
 這是 [Gamedev Canvas tutorial](/zh-TW/docs/Games/Workflows/Breakout_game_from_scratch)中的第三步 你可以在以下的連結中查看原始碼[Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
 
-很好我們現在可以讓球移動了, 但目前他會在移動到邊緣後消失, 這使我們少了點樂趣! 為了解決這個問題我們稍後會加入一些碰撞處理 ( [later](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection) ) 使球可以再碰到邊緣時反彈.
+很好我們現在可以讓球移動了, 但目前他會在移動到邊緣後消失, 這使我們少了點樂趣! 為了解決這個問題我們稍後會加入一些碰撞處理 ( [later](/zh-TW/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection) ) 使球可以再碰到邊緣時反彈.
 
 ## 簡單的碰撞偵測
 
@@ -103,6 +103,6 @@ if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
 
 ## 下一步
 
-我們現在已經進入了舞台，我們的球是移動和停留在遊戲板上。 在第四章中，我們將討論實現一個可控制的球拍 - 參見 [Paddle and keyboard controls](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls).
+我們現在已經進入了舞台，我們的球是移動和停留在遊戲板上。 在第四章中，我們將討論實現一個可控制的球拍 - 參見 [Paddle and keyboard controls](/zh-TW/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}

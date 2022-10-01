@@ -1,15 +1,8 @@
 ---
 title: TransformStreamDefaultController.error()
 slug: Web/API/TransformStreamDefaultController/error
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - error
-  - TransformStreamDefaultController
-translation_of: Web/api/TransformStreamDefaultController/error
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 {{domxref("TransformStreamDefaultController")}} 接口的  **`error()`** 方法会使流的两端出错。与它的进一步交互都会失败并携带给定的错误信息，并且队列中的任何分块都将被丢弃。

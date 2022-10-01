@@ -3,6 +3,7 @@ title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
 translation_of: Web/API/HTMLSelectElement/selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement.selectedIndex`** est un `long` qui représente l'index du premier élément sélectionné {{HTMLElement("option")}}. La valeur `-1` indique qu'aucun élément est sélectionné.
@@ -48,11 +49,8 @@ selectElem.addEventListener('change', function() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire                                                                       |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-select-selectedindex', 'HTMLSelectElement')}}         | {{Spec2('HTML WHATWG')}} | Pas de changement depuis le snapshot précédent, {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', 'forms.html#dom-select-selectedindex', 'HTMLSelectElement')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale, snapshot de {{SpecName("HTML WHATWG")}}.            |
+{{Specifications}}
 
-## Compatibilité entre les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.HTMLSelectElement.selectedIndex")}}
+{{Compat}}

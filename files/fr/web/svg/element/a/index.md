@@ -7,6 +7,7 @@ tags:
   - SVG Conteneur
 translation_of: Web/SVG/Element/a
 ---
+
 {{SVGRef}}
 
 L'élément SVG **`<a>`** crée un hyperlien vers d'autres pages web, fichiers, emplacements dans la page en cours, adresses email, ou toute autre URL.
@@ -64,11 +65,11 @@ svgns|a:hover, svgns|a:active {
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "SVG/Attribute#Core")
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel "SVG/Attribute#ConditionalProccessing")
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Événement_graphiques "SVG/Attribute#GraphicalEvent")
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation "SVG/Attribute#Presentation")
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink "SVG/Attribute#XLink")
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel)
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Événement_graphiques)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
+- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -92,16 +93,12 @@ svgns|a:hover, svgns|a:active {
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGAElement`](/fr/docs/DOM/SVGAElement "DOM/SVGAElement").
+Cet élément implémente l'interface [`SVGAElement`](/fr/docs/DOM/SVGAElement).
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                               | Commentaire                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}} | {{Spec2('Referrer Policy')}} | Ajoute l'attribut `referrerpolicy`.                                               |
-| {{SpecName("SVG2", "linking.html#Links", "&lt;a&gt;")}}                                                                 | {{Spec2("SVG2")}}             | Remplace l'attribut {{SVGAttr("xlink:href")}} par {{SVGAttr("href")}} |
-| {{SpecName("SVG1.1", "linking.html#Links", "&lt;a&gt;")}}                                                             | {{Spec2("SVG1.1")}}             | Définition initiale                                                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.a")}}
+{{Compat}}

@@ -1,15 +1,8 @@
 ---
 title: ReadableStreamDefaultReader.read()
 slug: Web/API/ReadableStreamDefaultReader/read
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - read
-translation_of: Web/API/ReadableStreamDefaultReader/read
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} 接口的 **`read()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 提供流的内部队列中下一个分块（以供访问）。
@@ -26,7 +19,7 @@ read()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，其兑现/拒绝的结果取决于流的状态。不同的可能性如下:
+一个 {{jsxref("Promise")}}，其兑现/拒绝的结果取决于流的状态。不同的可能性如下：
 
 - 如果有分块可用，则 promise 将使用 `{ value: theChunk, done: false }` 形式的对象来兑现。
 - 如果流已经关闭，则 promise 将使用 `{ value: undefined, done: true }` 形式的对象来兑现。
@@ -51,7 +44,7 @@ function fetchStream() {
   let charsReceived = 0;
   // read() 返回一个 promise，其会在接收到数据时被兑现
   reader.read().then(function processText({ done, value }) {
-    // 结果包含两个属性:
+    // 结果包含两个属性：
     // done  - 如果为 true，表示流已经返回所有的数据。
     // value - 一些数据，done 为 true 时，其值始终为 undefined。
     if (done) {

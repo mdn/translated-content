@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/languagechange_event
 ---
+
 {{APIRef}}
 
 L'événement **`languagechange`** est déclenché sur l'objet d'étendue globale lorsque la langue préférée de l'utilisateur change.
@@ -46,7 +47,7 @@ window.addEventListener('languagechange', function() {
 });
 ```
 
-Ou utilisez la propriété du gestionnaire d'événements [`onlanguagechange`](/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange) :
+Ou utilisez la propriété du gestionnaire d'événements [`onlanguagechange`](/fr/docs/Web/API/WindowEventHandlers/onlanguagechange) :
 
 ```js
 window.onlanguagechange = function(event) {
@@ -54,17 +55,15 @@ window.onlanguagechange = function(event) {
 };
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                               |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| {{ SpecName('HTML WHATWG', 'indices.html#event-languagechange', 'languagechange') }} | {{ Spec2('HTML WHATWG') }} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.languagechange_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("NavigatorLanguage.language", "navigator.language")}}
 - {{domxref("NavigatorLanguage.languages", "navigator.languages")}}

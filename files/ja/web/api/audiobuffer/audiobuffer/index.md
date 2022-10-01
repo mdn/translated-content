@@ -1,20 +1,8 @@
 ---
 title: AudioBuffer()
 slug: Web/API/AudioBuffer/AudioBuffer
-tags:
-  - API
-  - 音声
-  - AudioBuffer
-  - バッファー
-  - コンストラクター
-  - メディア
-  - リファレンス
-  - ウェブ音声
-  - ウェブ音声 API
-  - sound
-browser-compat: api.AudioBuffer.AudioBuffer
-translation_of: Web/API/AudioBuffer/AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioBuffer`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) のコンストラクターで、新しい {{domxref("AudioBuffer")}} オブジェクトを生成します。

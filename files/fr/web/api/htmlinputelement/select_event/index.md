@@ -4,6 +4,7 @@ slug: Web/API/HTMLInputElement/select_event
 translation_of: Web/API/Element/select_event
 original_slug: Web/API/Element/select_event
 ---
+
 L'évènement `select` est déclenché quand du texte est sélectionné. L'évènement peut ne pas être disponible pour tous les éléments dans tous les langages. Par exemple, en [HTML5](http://www.w3.org/TR/DOM-Level-3-Events/#references-HTML5), les évènements select ne peuvent être envoyés que sur des éléments `input` de formulaire et `textarea`.
 
 ## Info générale
@@ -25,11 +26,11 @@ L'évènement `select` est déclenché quand du texte est sélectionné. L'évè
 
 | Property                              | Type                                             | Description                                                                                   |
 | ------------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/en-US/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
-| `type` {{readonlyInline}}       | [`DOMString`](/en-US/docs/Web/API/DOMString)     | The type of event.                                                                            |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/en-US/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                    |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/en-US/docs/Web/API/Boolean)         | Whether the event is cancellable or not.                                                      |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/en-US/docs/Web/API/WindowProxy) | [`document.defaultView`](/en-US/docs/Web/API/Document/defaultView) (`window` of the document) |
+| `target` {{readonlyInline}}     | [`EventTarget`](/fr/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
+| `type` {{readonlyInline}}       | [`DOMString`](/fr/docs/Web/API/DOMString)     | The type of event.                                                                            |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                    |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/fr/docs/Web/API/Boolean)         | Whether the event is cancellable or not.                                                      |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/fr/docs/Web/API/WindowProxy) | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`window` of the document) |
 | `detail` {{readonlyInline}}     | `long` (`float`)                                 | 0.                                                                                            |
 
 ## Exemple

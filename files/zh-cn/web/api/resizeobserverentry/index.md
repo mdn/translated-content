@@ -1,19 +1,8 @@
 ---
 title: ResizeObserverEntry
 slug: Web/API/ResizeObserverEntry
-page-type: web-api-interface
-tags:
-  - API
-  - Bounding Box
-  - Interface
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - content box
-  - observers
-translation_of: Web/API/ResizeObserverEntry
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`ResizeObserverEntry`** 接口是传递给 {{domxref('ResizeObserver.ResizeObserver','ResizeObserver()')}} 构造函数中的回调函数参数的对象，它允许你获取真正在观察的 {{domxref("Element")}} 或 {{domxref("SVGElement")}} 最新的大小。

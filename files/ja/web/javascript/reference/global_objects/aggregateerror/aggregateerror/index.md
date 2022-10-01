@@ -1,17 +1,11 @@
 ---
 title: AggregateError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
-tags:
-  - コンストラクター
-  - JavaScript
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.AggregateError.AggregateError
-translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
 ---
+
 {{JSRef}}
 
-**`AggregateError()`** コンストラクターは、単一のエラーにラップする必要があるいくつかのエラーに対してエラーを作成します。
+**`AggregateError()`** コンストラクターは、単一のエラーにラップする必要があるいくつかのエラーに対してエラーを作成します。
 
 ## 構文
 

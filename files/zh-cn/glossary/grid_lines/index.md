@@ -1,10 +1,8 @@
 ---
 title: Grid Lines
 slug: Glossary/Grid_Lines
-tags:
-  - CSS Grids
-translation_of: Glossary/Grid_Lines
 ---
+
 使用[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)在显式网格中定义{{glossary("Grid tracks", "轨道")}}的同时会创建**网格线**。在下面的例子中，有一个三列两行的网格。它给了我们 4 条列线和 3 条行线。
 
 ## 示例

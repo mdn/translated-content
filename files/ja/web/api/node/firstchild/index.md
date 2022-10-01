@@ -1,12 +1,8 @@
 ---
 title: Node.firstChild
 slug: Web/API/Node/firstChild
-tags:
-  - プロパティ
-  - リファレンス
-browser-compat: api.Node.firstChild
-translation_of: Web/API/Node/firstChild
 ---
+
 {{APIRef("DOM")}}
 
 **`firstChild`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、ツリー内におけるこのノードの最初の子、またはこのノードに子がない場合は `null` を返します。

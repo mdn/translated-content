@@ -1,12 +1,9 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - Glossary
-  - HTML
-translation_of: Glossary/HTML
 ---
-HTML（HyperText Markup Language，超文本标记语言） 是一种描述语言，用来定义网页结构。
+
+HTML（HyperText Markup Language，超文本标记语言）是一种描述语言，用来定义网页结构。
 
 ## 发展历史
 
@@ -28,7 +25,7 @@ HTML 文件通常会以 `.htm` 或 `.html` 为扩展名。用户可以从 {{Glos
 
 ### 基础知识
 
-- 维基百科 {{interwiki("wikipedia", "HTML", "HTML")}} 词条
+- 维基百科 [HTML](https://zh.wikipedia.org/wiki/HTML) 词条
 
 ### 学习 HTML
 

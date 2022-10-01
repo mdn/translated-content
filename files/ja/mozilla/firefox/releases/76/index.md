@@ -1,0 +1,87 @@
+---
+title: Firefox 76 for developers
+slug: Mozilla/Firefox/Releases/76
+---
+
+{{FirefoxSidebar}}
+
+このページでは、開発者に影響する Firefox 76 の変更点をまとめています。Firefox 76 は、[2020 年 5 月 5 日](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/) にリリースされました。
+
+**付随する hacks ブログの記事「[Firefox 76: Audio worklets and other tricks](https://hacks.mozilla.org/2020/05/firefox-76-audio-worklets-and-other-tricks/)」もご覧ください。**
+
+## ウェブ開発者向けの変更点一覧
+
+### 開発者ツール
+
+#### デバッガー
+
+- [ソースリストペイン](/ja/docs/Tools/Debugger/UI_Tour#Source_list_pane) のコンテキストメニューで、ソースグループやフォルダーのブラックボックス化や解除が可能になりました ({{bug(1118152)}})。
+- [コールスタックペイン](/ja/docs/Tools/Debugger/UI_Tour#Call_stack) のコンテキストメニュー項目「_スタックトレースをコピー_」で、ファイル名だけでなく URL 全体をコピーするようになりました ({{bug(1619039)}})。
+
+#### ネットワークモニター
+
+- ネットワーク要求の一覧で列の境目をダブルクリックすると、境目の左側の列を内容に合わせてリサイズするようになりました ({{bug(1615102)}})。
+- ネットワーク要求のコンテキストメニュー項目「_コピー > [cURL としてコピー](/ja/docs/Tools/Network_Monitor/request_list#Copy_as_cURL)_ で新たなオプション `--globoff` が利用可能になりました。これはコピーした URL に各括弧文字が含まれている場合に、cURL の globbing (ワイルドカードのマッチング) を抑制します ({{bug(1549773)}})。
+- [WebSocket 要求](/ja/docs/Tools/Network_Monitor/Inspecting_web_sockets) の詳細ペインにある _メッセージ_ タブに、制御フレームを表示する新たなフィルターである _Control_ を追加しました。また、フィルターが選択リストにグループ分けされました ({{bug(1566780)}})。
+
+#### ウェブコンソール
+
+- [マルチラインモード](/ja/docs/Tools/Web_Console/The_command_line_interpreter#Multi-line_mode) で、5 行を超えるコードスニペットを 5 行に省略して先頭に展開用の三角印 (あるいは "twistie")、末尾に省略記号 (…) をつけるようになりました。これらの領域をクリックするとコードを表示できます。もう一度クリックすると折りたたむことができます ({{bug(1578212)}})。
+- コンソールに出力した DOM 要素の参照のコンテキストメニュー項目に「インスペクターで確認」を追加しました。これは、[インスペクター](/ja/docs/Tools/Page_Inspector) の HTML ペインで要素を表示します ({{bug(1612276)}})。
+
+#### リモートデバッグ
+
+- 開発ツールのバージョンの違いのため、デスクトップ版の Firefox 69 以降からバージョン 68 ベースの Android 版 Firefox をデバッグすることができません。デバッグしようとするとデスクトップ版 Firefox は、この問題の説明と利用可能な次のステップをユーザーに知らせるメッセージを表示します ({{bug(1625906)}})。詳しくは [Connection to Firefox for Android 68](/ja/docs/Tools/about:debugging#Connection_to_Firefox_for_Android_68) をご覧ください。
+
+### HTML
+
+- {{HTMLElement("input")}} 要素の {{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} 属性が、値が周期的な (すなわち、ある時点で値が最小値に戻る) コントロールで `min` の値が `max` の値より大きい場合に、正しく動作するようになりました。これは、例えば日付や時刻の入力で午後 11 時から午前 2 時の範囲を指定するようなときに、特に役に立ちます ({{bug(1608010)}})。
+
+### CSS
+
+- [CSS4 system colors](/ja/docs/Web/CSS/color_value#System_Colors) を Firefox でサポートしました ({{bug(1590894)}})。
+
+### SVG
+
+_変更なし。_
+
+### JavaScript
+
+- {{jsxref("Intl.NumberFormat")}}、{{jsxref("Intl.DateTimeFormat")}}、{{jsxref("Intl.RelativeTimeFormat")}} コンストラクターの `numberingSystem`、`calendar` オプションを、デフォルトで有効にしました ({{bug(1625975)}})。
+
+### API
+
+#### 新規 API
+
+- Firefox で、audio worklets と {{domxref("BaseAudioContext.audioWorklet", "AudioContext.audioWorklet")}} をデフォルトでサポートしました。これは、メインスレッドの外部で音声をリアルタイム処理するために {{domxref("AudioWorkletProcessor")}} および {{domxref("AudioWorkletNode")}} インターフェイスを使用可能にします ({{bug(1616725)}})。
+
+#### DOM
+
+- {{domxref("window.open()")}} の引数 `windowFeatures` の UI 部品に関する項目で、UI 部品ごとに表示・非表示を制御できなくなり、ポップアップウィンドウを開くか否かの条件になりました ({{bug(1507375)}})。
+- [`location.href`](/ja/docs/Web/API/Location/href) や [`<meta http-equiv="refresh">`](/ja/docs/Web/HTML/Element/meta) のような方法を使用して未知のプロトコルへ移動しようとするとブロックされるようになりました ({{bug(1528305)}}、詳しくは [未知のプロトコルへのページ遷移はブロックされます](https://www.fxsitecompat.dev/ja/docs/2020/navigation-to-unknown-protocol-will-be-blocked/) をご覧ください)。
+- {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} コンストラクターが、`root` として {{domxref("Element")}} オブジェクトと同様に {{domxref("Document")}} オブジェクトも受け入れるようになりました ({{bug(1623623)}})。これにより、要素間交差の境界としてウィンドウのコンテンツ領域全体を明示的に使用できます。
+- [Fetch API](/ja/docs/Web/API/Fetch_API) で、要求の `audioworklet` {{domxref("Request.destination", "destination")}} をサポートしました。これにより、受信したデータが {{domxref("AudioWorklet")}} へ送られます ({{bug(1402784)}})。
+
+#### 廃止
+
+- [Window の `appinstalled` イベント](/ja/docs/Web/API/Window/appinstalled_event) (および関連するハンドラープロパティの [`Window.onappinstalled`](/ja/docs/Web/API/Window/onappinstalled)) を完全に削除しました。これらは公開されたことがなく、また [Web Manifest 仕様](https://w3c.github.io/manifest/) から削除されました ({{bug(1625384)}})。
+
+### HTTP
+
+_変更なし。_
+
+### セキュリティ
+
+_変更なし。_
+
+### WebDriver conformance (Marionette)
+
+- geckodriver でオートメーションやテストを行っているとき、`navigator.webdriver` が `false` を返さないようになりました ({{bug(1632556)}})。
+
+## アドオン開発者向けの変更点
+
+_変更なし。_
+
+## 過去のバージョン
+
+{{Firefox_for_developers(75)}}

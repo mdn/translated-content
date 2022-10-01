@@ -1,15 +1,8 @@
 ---
 title: ReadableStream.pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - pipeThrough
-translation_of: Web/API/ReadableStream/pipeThrough
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} 接口的 **`pipeThrough()`** 方法提供了一种链式的方式，将当前流通过转换流或者其它任何一对可写/可读的流进行管道传输。

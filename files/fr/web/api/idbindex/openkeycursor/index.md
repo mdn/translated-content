@@ -10,6 +10,7 @@ tags:
   - openKeyCursor
 translation_of: Web/API/IDBIndex/openKeyCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`openKeyCursor()`** de {{domxref("IDBIndex")}} renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée un curseur sur l'intervalle de clé passé en argument pour l'index courant.
@@ -123,13 +124,11 @@ function displayDataByIndex() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                            | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-openKeyCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openKeyCursor()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.openKeyCursor")}}
+{{Compat}}
 
 ## Voir aussi
 

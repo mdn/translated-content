@@ -1,8 +1,8 @@
 ---
 title: CRLF
 slug: Glossary/CRLF
-translation_of: Glossary/CRLF
 ---
+
 回车符（CR）和换行符（LF）是文本文件用于标记换行的控制字符（[control characters](https://en.wikipedia.org/wiki/Control_character)）或字节码（[bytecode](https://en.wikipedia.org/wiki/Bytecode)）。
 
 - CR = **Carriage Return**，回车符号（`\r`，十六进制 ascii 码为`0x0D`，十进制 ascii 码为 13），用于将鼠标移动到行首，并不前进至下一行。
@@ -14,5 +14,5 @@ translation_of: Glossary/CRLF
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "Newline#In_programming_languages", "Newline")}} on Wikipedia
-- {{interwiki("wikipedia", "Carriage_return#Computers", "Carriage return")}} on Wikipedia
+- [Newline](https://zh.wikipedia.org/wiki/Newline#In_programming_languages) on Wikipedia
+- [Carriage return](https://zh.wikipedia.org/wiki/Carriage_return#Computers) on Wikipedia

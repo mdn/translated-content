@@ -6,6 +6,7 @@ translation_of: Web/API/caches
 original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 browser-compat: api.caches
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 La propriété globale en lecture seule **`caches`** retourne l'objet [`CacheStorage`](/fr/docs/Web/API/CacheStorage) associé au contexte actuel. Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.

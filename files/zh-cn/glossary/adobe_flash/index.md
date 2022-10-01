@@ -1,14 +1,15 @@
 ---
 title: Adobe Flash
 slug: Glossary/Adobe_Flash
-translation_of: Glossary/Adobe_Flash
 ---
-Flash 是一项过时的技术，由 Adobe 开发。Flash 使得富 Web 应用程序、矢量图形和多媒体成为可能。您需要安装正确的插件以在支持的{{Glossary("Browser","网页浏览器")}}使用 Flash。
 
-## 了解更多
+Flash 是一项由 Adobe 开发的技术，它用于富 Web 应用程序、矢量图形和多媒体的呈现，目前已经过时。
 
-### 基本知识
+自从 2021 年开始，Flash 技术已不受 Adobe 或任何主流 web 浏览器的支持。
 
-- [官方网页](https://www.adobe.com/products/flashruntimes.html)
-- [Shumway，由 Mozilla 所研发的免费实现](https://mozilla.github.io/shumway/)
-- [Gnash，](http://gnashdev.org/)[由 GNU 所研发的免费实现](https://mozilla.github.io/shumway/)
+## 参见
+
+- [Adobe Flash end-of-life announcement](https://blog.adobe.com/en/publish/2017/07/25/adobe-flash-update#gs.g8mmgf)
+- [Saying goodbye to Flash in Chrome](https://www.blog.google/products/chrome/saying-goodbye-flash-chrome/)
+- [Firefox Roadmap for Flash End-of-Life](https://blog.mozilla.org/futurereleases/2017/07/25/firefox-roadmap-flash-end-life/)
+- [Microsoft Windows Flash Player removal](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/)

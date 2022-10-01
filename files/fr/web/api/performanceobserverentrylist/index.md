@@ -8,6 +8,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceObserverEntryList
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 L'interface **`PerformanceObserverEntryList`** est une liste d'[événements de performance](/fr/docs/Web/API/PerformanceEntry) qui ont été explicitement _observés_ via la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe).
@@ -39,10 +40,8 @@ const observe_all = new PerformanceObserver(function(list, obs) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2', '#idl-def-performanceobserverentrylist', 'PerformanceObserverEntryList')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceObserverEntryList")}}
+{{Compat}}

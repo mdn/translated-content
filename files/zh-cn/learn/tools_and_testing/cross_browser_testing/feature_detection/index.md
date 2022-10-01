@@ -1,8 +1,8 @@
 ---
 title: 实现特性检测
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 特性检测包括计算浏览器是否支持一个特定块中的代码，基于是否可以运行来运行不同的代码，以使所有的浏览器都可以正常工作，而不是在某些浏览器中崩溃或出错。本文列举了如何写出一个你自己的简单的特性检测，如何使用库来加速实现，以及对于特性间的的原生特性，如 `@supports`。
@@ -36,7 +36,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 特性检测的思想是，你可以运行一个测试来确定当前浏览器是否支持某个特性，然后有条件地运行代码，以便在支持该功能的浏览器和不支持该功能的浏览器中提供可接受的体验，如果不这样做，在不支持你在代码中使用的功能的浏览器中将无法正确地显示你的网站，从而产生糟糕的用户体验。
 
-Let's recap and look at the example we touched on in our [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection) — the [Geolocation API](/en-US/docs/Web/API/Geolocation/Using_geolocation) (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a `geolocation` property available on the global [Navigator](/en-US/docs/Web/API/Navigator) object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:
+Let's recap and look at the example we touched on in our [Handling common JavaScript problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection) — the [Geolocation API](/zh-CN/docs/Web/API/Geolocation/Using_geolocation) (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a `geolocation` property available on the global [Navigator](/zh-CN/docs/Web/API/Navigator) object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:
 
 ```js
 if ("geolocation" in navigator) {
@@ -50,7 +50,7 @@ if ("geolocation" in navigator) {
 
 It is probably better to use an established feature detection library however, rather than writing your own all the time. Modernizr is the industry standard for feature detection tests, and we'll look at that later on.
 
-Before we move on, we'd like to say one thing upfront — don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_bad_browser_sniffing_code) for more details.
+Before we move on, we'd like to say one thing upfront — don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_bad_browser_sniffing_code) for more details.
 
 ## Writing your own feature detection tests
 
@@ -58,23 +58,23 @@ In this section, we'll look at implementing your own feature detection tests, in
 
 ### CSS
 
-You can write tests for CSS features by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform`) in JavaScript.
+You can write tests for CSS features by testing for the existence of _[element.style.property](/zh-CN/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform`) in JavaScript.
 
-A classic example might be to test for [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) support in a browser; for browsers that support the newest Flexbox spec, we could use a flexible and robust flex layout. For browsers that don't, we could use a floated layout that works OK, although it is slightly more brittle and hacky, and not as cool-looking.
+A classic example might be to test for [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) support in a browser; for browsers that support the newest Flexbox spec, we could use a flexible and robust flex layout. For browsers that don't, we could use a floated layout that works OK, although it is slightly more brittle and hacky, and not as cool-looking.
 
 Let's implement something that demonstrates this, although we'll keep it simple for now.
 
-1.  Start by making local copies of our [`css-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect.html), [`flex-layout.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/flex-layout.css), [`float-layout.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/float-layout.css), and [`basic-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/basic-styling.css) files. Save them in a new directory.
-2.  We will add the HTML5 Shiv to our example too so that the HTML5 semantic elements will style properly in older versions of IE. Download the latest version (see [Manual installation](https://github.com/aFarkas/html5shiv#manual-installation)), unzip the ZIP file, copy the `html5shiv-printshiv.min.js` and `html5shiv.min.js` files into your example directory, and link to one of the files by putting the following under your {{htmlelement("title")}} element:
+1. Start by making local copies of our [`css-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect.html), [`flex-layout.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/flex-layout.css), [`float-layout.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/float-layout.css), and [`basic-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/basic-styling.css) files. Save them in a new directory.
+2. We will add the HTML5 Shiv to our example too so that the HTML5 semantic elements will style properly in older versions of IE. Download the latest version (see [Manual installation](https://github.com/aFarkas/html5shiv#manual-installation)), unzip the ZIP file, copy the `html5shiv-printshiv.min.js` and `html5shiv.min.js` files into your example directory, and link to one of the files by putting the following under your {{htmlelement("title")}} element:
 
     ```html
     <script src="html5shiv.min.js"></script>
     ```
 
-3.  Have a look at your example CSS files — you'll see that `basic-styling.css` handles all the styling that we want to give to every browser, whereas the other two CSS files contain the CSS we want to selectively apply to browser depending on their support levels. You can look at the different effects these two files have by manually changing the CSS file referred to by the second {{htmlelement("link")}} element, but let's instead implement some JavaScript to automatically swap them as needed.
-4.  First, remove the contents of the second `<link>` element's `href` attribute. We will fill this in dynamically later on.
-5.  Next, add a `<script></script>` element at the bottom of your body (just before the closing `</body>` tag).
-6.  Give it the following contents:
+3. Have a look at your example CSS files — you'll see that `basic-styling.css` handles all the styling that we want to give to every browser, whereas the other two CSS files contain the CSS we want to selectively apply to browser depending on their support levels. You can look at the different effects these two files have by manually changing the CSS file referred to by the second {{htmlelement("link")}} element, but let's instead implement some JavaScript to automatically swap them as needed.
+4. First, remove the contents of the second `<link>` element's `href` attribute. We will fill this in dynamically later on.
+5. Next, add a `<script></script>` element at the bottom of your body (just before the closing `</body>` tag).
+6. Give it the following contents:
 
     ```js
     const conditional = document.querySelector('.conditional');
@@ -92,11 +92,11 @@ Here we are grabbing a reference to the second `<link>` element, and creating a 
 
 When you save everything and try out your example, you should see the flexbox layout applied to the page if the browser supports modern flexbox, and the float layout if not.
 
-> **备注：** Often such an approach is overkill for a minor feature detection problem — you can often get away with using multiple vendor prefixes and fallback properties, as described in [CSS fallback behavior](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#CSS_fallback_behaviour) and [Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes).
+> **备注：** Often such an approach is overkill for a minor feature detection problem — you can often get away with using multiple vendor prefixes and fallback properties, as described in [CSS fallback behavior](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#CSS_fallback_behaviour) and [Handling CSS prefixes](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes).
 
 #### @supports
 
-In recent times, CSS has had its own native feature detection mechanism introduced — the {{cssxref("@supports")}} at-rule. This works in a similar manner to [media queries](/en-US/docs/Web/CSS/Media_Queries) (see also [Responsive design problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)) — except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported.
+In recent times, CSS has had its own native feature detection mechanism introduced — the {{cssxref("@supports")}} at-rule. This works in a similar manner to [media queries](/zh-CN/docs/Web/CSS/Media_Queries) (see also [Responsive design problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)) — except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported.
 
 For example, we could rewrite our previous example to use `@supports` — see [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) and [`supports-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). If you look at the latter, you'll see a couple of `@supports` blocks, for example:
 
@@ -166,7 +166,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
         Create an element in memory using
         {{domxref("Document.createElement()")}} and then check if a
         property exists on it. The example shown is a way of detecting
-        <a href="/en-US/docs/Web/API/Canvas_API">HTML5 Canvas</a> support.
+        <a href="/zh-CN/docs/Web/API/Canvas_API">HTML5 Canvas</a> support.
       </td>
       <td>
         <code
@@ -243,9 +243,9 @@ It is possible to implement your own feature detection tests using techniques li
 
 When you are experimenting with Modernizr you might as well use the development build, which includes every possible feature detection test. Download this now by:
 
-1.  Clicking on the [Development build](https://modernizr.com/download?do_not_use_in_production) link.
-2.  Clicking the big pink _Build_ button on the page that comes up.
-3.  Clicking the top _Download_ link in the dialog box that appears.
+1. Clicking on the [Development build](https://modernizr.com/download?do_not_use_in_production) link.
+2. Clicking the big pink _Build_ button on the page that comes up.
+3. Clicking the top _Download_ link in the dialog box that appears.
 
 Save it somewhere sensible, like the directory you've been creating your other examples for in this article.
 
@@ -255,20 +255,20 @@ When you are using Modernizr in production, you can go to the [Download page](ht
 
 Let's have a look at how Modernizr works in terms of selectively applying CSS.
 
-1.  First, make a copy of [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) and [`supports-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Save them as `modernizr-css.html` and `modernizr-css.css`.
-2.  Update your {{htmlelement("link")}} element in your HTML so it points to the correct CSS file (you should also update your {{htmlelement("title")}} element to something more suitable!):
+1. First, make a copy of [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) and [`supports-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Save them as `modernizr-css.html` and `modernizr-css.css`.
+2. Update your {{htmlelement("link")}} element in your HTML so it points to the correct CSS file (you should also update your {{htmlelement("title")}} element to something more suitable!):
 
     ```html
     <link href="modernizr-css.css" rel="stylesheet">
     ```
 
-3.  Above this `<link>` element, add a {{htmlelement("script")}} element to apply the Modernizr library to the page, as shown below. This needs to be applied to the page before any CSS (or JavaScript) that might make use of it.
+3. Above this `<link>` element, add a {{htmlelement("script")}} element to apply the Modernizr library to the page, as shown below. This needs to be applied to the page before any CSS (or JavaScript) that might make use of it.
 
     ```html
     <script src="modernizr-custom.js"></script>
     ```
 
-4.  Now edit your opening `<html>` tag, so that it looks like this:
+4. Now edit your opening `<html>` tag, so that it looks like this:
 
     ```html
     <html class="no-js">
@@ -347,10 +347,10 @@ The console will return `true`/`false` values to indicate whether your browser s
 
 Let's look at an example to show how you'd use those properties.
 
-1.  First of all, make a local copy of the [`modernizr-js.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-js.html) example file.
-2.  Attach the Modernizr library to the HTML using a `<script>` element, as we have done in previous demos. Put it above the existing `<script>` element, which is attaching the Google Maps API to the page.
-3.  Next, fill in the `YOUR-API-KEY` placeholder text in the second `<script>` element (as it is now) with a valid Google Maps API key. To get a key, sign in to a Google account, go to the [Get a Key/Authentication](https://developers.google.com/maps/documentation/javascript/get-api-key) page, then click the blue _Get a Key_ button and follow the instructions.
-4.  Finally, add another `<script>` element at the bottom of the HTML body (just before the `</body>` tag), and put the following script inside the tags:
+1. First of all, make a local copy of the [`modernizr-js.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-js.html) example file.
+2. Attach the Modernizr library to the HTML using a `<script>` element, as we have done in previous demos. Put it above the existing `<script>` element, which is attaching the Google Maps API to the page.
+3. Next, fill in the `YOUR-API-KEY` placeholder text in the second `<script>` element (as it is now) with a valid Google Maps API key. To get a key, sign in to a Google account, go to the [Get a Key/Authentication](https://developers.google.com/maps/documentation/javascript/get-api-key) page, then click the blue _Get a Key_ button and follow the instructions.
+4. Finally, add another `<script>` element at the bottom of the HTML body (just before the `</body>` tag), and put the following script inside the tags:
 
     ```js
     if (Modernizr.geolocation) {
@@ -386,11 +386,11 @@ Next up, we'll start looking at automated testing.
 
 ## In this module
 
-- [Introduction to cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)
+- [Introduction to cross browser testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
+- [Strategies for carrying out testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
+- [Handling common HTML and CSS problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
+- [Handling common JavaScript problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
+- [Handling common accessibility problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
+- [Implementing feature detection](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
+- [Introduction to automated testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
+- [Setting up your own test automation environment](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

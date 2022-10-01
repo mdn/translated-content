@@ -1,22 +1,13 @@
 ---
 title: The score
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - scoring
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
 
-这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 11 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson11.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html)完成本课程后找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 11 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson11.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html)完成本课程后找到源代码。
 
 得分也可以使游戏更有趣 - 你可以尝试击败自己的高分，或者你的朋友。在这篇文章中，我们将为我们的游戏添加一个评分系统。
 
@@ -70,6 +61,6 @@ function ballHitBrick(ball, brick) {
 
 ## 下一步
 
-我们现在有一个得分系统，但是如果你不能赢得，那么玩和保持分数是多少？让我们看看我们如何能够增加胜利的状态，让我们[赢得比赛](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Win_the_game)。
+我们现在有一个得分系统，但是如果你不能赢得，那么玩和保持分数是多少？让我们看看我们如何能够增加胜利的状态，让我们[赢得比赛](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Win_the_game)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}

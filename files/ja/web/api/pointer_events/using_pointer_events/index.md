@@ -1,15 +1,8 @@
 ---
 title: ポインターイベントの使用
 slug: Web/API/Pointer_events/Using_Pointer_Events
-tags:
-  - ガイド
-  - Input
-  - ポインターイベント
-  - PointerEvent
-  - イベント
-  - タッチ
-translation_of: Web/API/Pointer_events/Using_Pointer_Events
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 このガイドでは、[ポインターイベント](/ja/docs/Web/API/Pointer_events)と HTML の {{HTMLElement("canvas")}} 要素を使用してマルチタッチ対応の描画アプリを作成する方法について説明します。この例は、{{domxref("PointerEvent","ポインターイベント", "", 1)}}の入力イベントモデルを使用する点を除いて、[タッチイベントの概要](/ja/docs/Web/API/Touch_events)の例に基づいています。 もう 1 つの違いは、ポインターイベントはポインターデバイスに依存しないため、アプリは同じコードを使用してマウス、ペン、または指先からの座標ベースの入力を受け入れることです。

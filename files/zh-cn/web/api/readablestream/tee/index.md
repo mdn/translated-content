@@ -1,16 +1,8 @@
 ---
 title: ReadableStream.tee()
 slug: Web/API/ReadableStream/tee
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - tee
-translation_of: Web/api/ReadableStream/tee
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} 接口的 **`tee()`** 方法对当前的可读流进行[拷贝（tees）](https://streams.spec.whatwg.org/#tee-a-readable-stream)，返回包含两个 {{domxref("ReadableStream")}} 实例分支的数组。

@@ -3,6 +3,7 @@ title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
 translation_of: Web/API/ServiceWorkerContainer
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 L’interface `ServiceWorkerContainer` de l’[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API) fournit un objet représentant le service worker comme une unité globale de l’écosystème réseau, incluant des fonctionnalités pour enregistrer, désenregistrer et mettre à jour des services workers, et accéder à l’état des services workers et de leurs enregistrements.
@@ -33,9 +34,9 @@ Parmi le plus important, cette interface expose la méthode {{domxref("ServiceWo
 - {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
   - : Crée ou met à jour un {{domxref("ServiceWorkerRegistration")}} pour un `scriptURL` donné.
 - {{domxref("ServiceWorkerContainer.getRegistration()")}}
-  - : Récupère un objet {{domxref("ServiceWorkerRegistration")}} dont l’URL de la portée correspond à l’URL du document fourni.  Si la méthode ne peut retourner un {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+  - : Récupère un objet {{domxref("ServiceWorkerRegistration")}} dont l’URL de la portée correspond à l’URL du document fourni.  Si la méthode ne peut retourner un {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 - {{domxref("ServiceWorkerContainer.getRegistrations()")}}
-  - : Retourne tous les  {{domxref("ServiceWorkerRegistration")}} associés à un `ServiceWorkerContainer` dans un tableau. Si la méthode ne peut retourner les {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+  - : Retourne tous les  {{domxref("ServiceWorkerRegistration")}} associés à un `ServiceWorkerContainer` dans un tableau. Si la méthode ne peut retourner les {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Exemples
 
@@ -63,13 +64,11 @@ if ('serviceWorker' in navigator) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Status                               | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerContainer")}}
+{{Compat}}
 
 ## Voir aussi
 

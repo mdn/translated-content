@@ -1,15 +1,8 @@
 ---
 title: WritableStream
 slug: Web/API/WritableStream
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Streams
-  - WritableStream
-translation_of: Web/API/WritableStream
 ---
+
 {{APIRef("Streams")}}
 
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`WritableStream`** 接口为将流数据写入目的地（称为 sink）提供了一个标准的抽象。该对象带有内置的背压和队列。

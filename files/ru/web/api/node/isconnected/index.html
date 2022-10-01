@@ -13,16 +13,16 @@ translation_of: Web/API/Node/isConnected
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("Boolean")}} that is <code>true</code> if the node is connected to its relevant context object, and <code>false</code> if not.</p>
+<p>A {{domxref("Boolean")}} that is <code>true</code> if the node is connected to its relevant context object, and <code>false</code> if not.</p>
 
 <h2 id="Пример">Пример</h2>
 
 <p>Стандартный DOM пример:</p>
 
-<pre class="brush: js"><code class="language-html">let test = document.createElement('p');
+<pre class="brush: js">let test = document.createElement('p');
 console.log(test.isConnected); // returns false
-document.body.appendChild(test);</code>
-<code class="language-html">console.log(test.isConnected); // returns true</code>
+document.body.appendChild(test);
+console.log(test.isConnected); // returns true
 </pre>
 
 <p>A shadow DOM example:</p>
@@ -59,7 +59,7 @@ style.textContent = '.wrapper {' +
 shadow.appendChild(style);
 console.log(style.isConnected); // returns true</pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Спецификация">Спецификация</h2>
 

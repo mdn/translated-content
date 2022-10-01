@@ -4,6 +4,7 @@ slug: Web/CSS/filter
 browser-compat: css.properties.filter
 translation_of: Web/CSS/filter
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété CSS **`filter`** permet d'appliquer des filtres et d'obtenir des effets graphiques de flou, de saturation, etc. Les filtres sont généralement utilisés pour ajuster le rendu d'une image, d'un arrière-plan ou des bordures.
@@ -67,7 +68,7 @@ Lorsqu'une seule propriété `filter` possède deux fonctions (ou plus), le rés
 
 ### `url()`
 
-La fonction `url()` prend comme argument l'emplacement d'un [élément SVG &lt;filter&gt; à appliquer](/en-US/docs/Web/SVG/Element/filter). L'URL peut faire référence à une ancre d'un élément spécifique. Cet élément peut être embarqué dans un fichier XML externe.
+La fonction `url()` prend comme argument l'emplacement d'un [élément SVG &lt;filter&gt; à appliquer](/fr/docs/Web/SVG/Element/filter). L'URL peut faire référence à une ancre d'un élément spécifique. Cet élément peut être embarqué dans un fichier XML externe.
 
 ```css
 filter: url(resources.svg#c1)

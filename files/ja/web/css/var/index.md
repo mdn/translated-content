@@ -1,21 +1,9 @@
 ---
 title: var()
 slug: Web/CSS/var
-tags:
-  - CSS
-  - CSS カスタムプロパティ
-  - CSS 変数
-  - CSS 関数
-  - 実験的
-  - 関数
-  - リファレンス
-  - 変数
-  - var
-  - var()
-translation_of: Web/CSS/var()
 original_slug: Web/CSS/var()
-browser-compat: css.properties.custom-property.var
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`var()`** 関数は、他のプロパティの値の一部に代わって[カスタムプロパティ](/ja/docs/Web/CSS/--*) (「CSS 変数」と呼ばれることもあります) の値を挿入できます。

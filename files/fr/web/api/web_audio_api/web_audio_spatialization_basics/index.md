@@ -3,6 +3,7 @@ title: Web audio spatialization basics
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 translation_of: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 ---
+
 En plus de sa grande variété de fonctionnalités et d'options, la Web Audio API permet aussi d'émuler la différence dans l'écoute d'un son lorsqu'un auditeur se déplace par rapport à une source, par exemple un panoramique lorsqu'il se déplace de gauche à droite de la source. On parle alors de spatialisation. Cet article expose les notions de base pour implémenter ce type de système.
 
 Le cas d'utilisation le plus simple est la simulation des altérations d'un son de façon réaliste pour imaginer comment une source se comportera pour un personnage qui se déplace dans un environnement 3D.
@@ -61,7 +62,7 @@ var pannerData = document.querySelector('.panner-data');
 
 Next comes a little bit of slightly fiddly maths. We want to make the `boomBox`, `listener`, and `panner` appear in the center of the screen initially, so we work out the width and height of the viewport, and divide both by two to get our X and Y values for those things. The `zPos` is only used on the panner, and is updated as the zoom controls are used (see later on); the initial value of 295 was decided on fairly arbitrarily — it sounded good. As long as you set the position of the panner appropriately in relation to the listener position, you will be ok.
 
-Next for this section, we set a `leftBound` and `rightBound`, which is the furthest we want our stereo graph to travel left and right. For the layout, we are using [Flexbox](/en-US/docs/Web/Guide/CSS/Flexible_boxes) to initially place the `boomBox` right in the center of the viewport, after which we then use iterative transforms and {{domxref("window.requestAnimationFrame()")}} to apply the `boomBox` movement. Therefore the "0" position is in the center of the viewport so the rightmost position is that position plus half the viewport, but minus 50 (pixels) so the `boomBox` can't shoot all the way off the right of the screen, and the leftmost position is that position minus half the viewport, but plus 50 (pixels), so the `boomBox` can't shoot all the way off the left of the screen.
+Next for this section, we set a `leftBound` and `rightBound`, which is the furthest we want our stereo graph to travel left and right. For the layout, we are using [Flexbox](/fr/docs/Web/Guide/CSS/Flexible_boxes) to initially place the `boomBox` right in the center of the viewport, after which we then use iterative transforms and {{domxref("window.requestAnimationFrame()")}} to apply the `boomBox` movement. Therefore the "0" position is in the center of the viewport so the rightmost position is that position plus half the viewport, but minus 50 (pixels) so the `boomBox` can't shoot all the way off the right of the screen, and the leftmost position is that position minus half the viewport, but plus 50 (pixels), so the `boomBox` can't shoot all the way off the left of the screen.
 
 The last part of this code is the `xIterator` — we set this to a 150th of the screen width, and then move the `boomBox` left and right by this amount when the left and right controls are pressed. We use this rather than a constant so that the app is a little more responsive.
 

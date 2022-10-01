@@ -1,8 +1,8 @@
 ---
 title: Getting started with HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 本文將探討 HTML 最基本的部分。首先，我們將會定義元素(elements)、屬性(attributes)以及其它你可能聽過的重要名詞，然後講解該如何使用它們。我們也會告訴你典型的 HTML 頁面以及其中的元素是如何構成的，以及解釋其他重要的基礎語言特性。在此過程中，我們會撰寫一些 HTML 來引發你的興趣！
@@ -13,10 +13,10 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
       <th scope="row">需求:</th>
       <td>
         基礎電腦能力、已安裝<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software"
           >需要的基本軟體</a
         >、並知道如何<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files"
           >操作檔案</a
         >。
       </td>
@@ -32,7 +32,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 {{glossary("HTML")}} (Hypertext Markup Language) 並不是一種程式語言，而是用來告訴瀏覽器該如何呈現網頁的**標記式語言**(markup language)。它可以很複雜也可以很陽春，端看網頁開發者如何構思。HTML 由一系列的元素({{glossary("Element", "elements")}})組成，你將利用它們來圍住、包裹，或者說標記(mark up)網頁中的每個部分，使它們在外表或行為上呈現某種特定風貌。被標籤({{glossary("Tag", "tags")}})包住的內容會變成超連結，或者斜體字，以及諸如此類的功能，舉例來說，請看下列內容:
 
-    My cat is very grumpy
+```
+My cat is very grumpy
+```
 
 如果我們想要讓這行字獨立出來，不讓它跟其他東西排在一起，我們可以用段落標籤( paragraph tag {{htmlelement("p")}})讓它自成段落：
 
@@ -52,10 +54,10 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 元素中主要的內容有:
 
-1.  **起始標籤(opening tag)：**它包含了元素的名字(在這裡是 p)，夾在一對 **<、> (angle brackets)**之間。它指明元素從何開始生效 — 在上例中則代表段落的開始。
-2.  **結束標籤(closing tag)：**結束標籤和起始標籤長得差不多，只不過它在名字前面還多加了一條斜線 (forward slash) 。它表示元素結束的地方 — 在上例中表示該段落的結束。忘記加上結束標籤是初學者常犯的錯誤，這將導致奇怪的結果。
-3.  **內容(content):** 元素的內容。在上例中就是一段文字。
-4.  **元素(element):** 以上三者加起來就是元素。
+1. **起始標籤(opening tag)：**它包含了元素的名字(在這裡是 p)，夾在一對 **<、> (angle brackets)**之間。它指明元素從何開始生效 — 在上例中則代表段落的開始。
+2. **結束標籤(closing tag)：**結束標籤和起始標籤長得差不多，只不過它在名字前面還多加了一條斜線 (forward slash) 。它表示元素結束的地方 — 在上例中表示該段落的結束。忘記加上結束標籤是初學者常犯的錯誤，這將導致奇怪的結果。
+3. **內容(content):** 元素的內容。在上例中就是一段文字。
+4. **元素(element):** 以上三者加起來就是元素。
 
 ### 不要光是看：創造你的第一個 HTML 元素
 
@@ -216,7 +218,7 @@ textarea.onkeyup = function(){
 <p>fourth</p><p>fifth</p><p>sixth</p>
 ```
 
-{{htmlelement("em")}} 是一個行內元素，所以你可以看到下面的例子中，前三個元素互相緊鄰在同一行，兩兩中間並無任何空白。另一方面，{{htmlelement("p")}} 是一個區塊級元素，所以每個元素都自成一行，並且上下都有一些空間。(這些空間是由於瀏覽器套用預設的[CSS styling](/en-US/docs/Learn/CSS/Introduction_to_CSS)到這些段落上的緣故)。
+{{htmlelement("em")}} 是一個行內元素，所以你可以看到下面的例子中，前三個元素互相緊鄰在同一行，兩兩中間並無任何空白。另一方面，{{htmlelement("p")}} 是一個區塊級元素，所以每個元素都自成一行，並且上下都有一些空間。(這些空間是由於瀏覽器套用預設的[CSS styling](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)到這些段落上的緣故)。
 
 {{ EmbedLiveSample('區塊級元素_vs._行內元素Block_versus_inline_elements', 700, 200, "", "") }}
 
@@ -224,7 +226,7 @@ textarea.onkeyup = function(){
 
 > **備註：** 在本主題所使用的 block 與 inline 這兩個名詞，不應與 CSS 的 boxes 種類混淆。它們在預設時是很像的，但改變 CSS 的顯示型態(display type)並不會改變元素的類別，也不會影響該元素能包含或被包含的元素類別。HTML5 之所以會重新定義元素類別，部分也是基於此一原因。
 
-> **備註：** 你可以查看 block element 與 inline element 分別有哪些元素 — 請見 [Block-l](/en-US/docs/Web/HTML/Block-level_elements)[evel elements](/en-US/docs/Web/HTML/Block-level_elements) 和 [Inline elements](/en-US/docs/Web/HTML/Inline_elements)。
+> **備註：** 你可以查看 block element 與 inline element 分別有哪些元素 — 請見 [Block-l](/zh-TW/docs/Web/HTML/Block-level_elements)[evel elements](/zh-TW/docs/Web/HTML/Block-level_elements) 和 [Inline elements](/zh-TW/docs/Web/HTML/Inline_elements)。
 
 ### 空元素(Empty elements)
 
@@ -250,9 +252,9 @@ textarea.onkeyup = function(){
 
 一個屬性應該要有：
 
-1.  一個空白，用來隔開屬性和元素名稱(或者前一個屬性，如果該元素已經有一個以上的屬性的話)。
-2.  屬性名稱以及一個接在其後的等號。
-3.  屬性值以及一對包著它的引號。
+1. 一個空白，用來隔開屬性和元素名稱(或者前一個屬性，如果該元素已經有一個以上的屬性的話)。
+2. 屬性名稱以及一個接在其後的等號。
+3. 屬性值以及一對包著它的引號。
 
 ### 主動學習：在元素中加入屬性
 
@@ -264,9 +266,9 @@ textarea.onkeyup = function(){
 
 請編輯下面輸入區的文字，使它變成一個通往你最喜歡的網站的連結。
 
-1.  首先，加入`<a>` 元素。
-2.  再來，加入 `href` 屬性以及 `title` 屬性。
-3.  最後，將 `target` 屬性設定為在新分頁中開啟。
+1. 首先，加入`<a>` 元素。
+2. 再來，加入 `href` 屬性以及 `title` 屬性。
+3. 最後，將 `target` 屬性設定為在新分頁中開啟。
 
 你將會在底下的輸出區域裡面即時地看到你改動產生的變化。當你完成後，你應該會看到一個連結；當你滑過時，連結將顯示 `title` 屬性的內容；當你點擊連結時，將會導向到 `href` 元素中的網址。切記，你需要以空白隔開元素名字以及每一個屬性。
 
@@ -331,7 +333,9 @@ window.addEventListener("load", drawOutput);
 
 你有時會看到一些沒有值的屬性，這完全是可行的。它們叫做布林屬性，他們只能附帶一個值，而這個值一般來說會和屬性的名字一樣。以 {{htmlattrxref("disabled", "input")}} 屬性來說，你可以把它指派為 input 元素的屬性，使得輸入文字的框框變得不能輸入文字。
 
-    <input type="text" disabled="disabled">
+```html
+<input type="text" disabled="disabled">
+```
 
 你可以把它寫得更簡短(在下面的例子中，我們也寫出了沒有 disabled 屬性的 input 元素供你參考，讓你更了解兩者的差別)：
 
@@ -349,7 +353,9 @@ window.addEventListener("load", drawOutput);
 
 當你看遍全世界的網頁，你就會發現各種千奇百怪的標記風格(markup style)，包括沒加引號的屬性值。這在某些情況是被允許的，但在其他情況下則會使屬性結果不如預期。沿用我們之前的例子，我們先只用 `href` 屬性，如下:
 
-    <a href=https://www.mozilla.org/>favourite website</a>
+```html
+<a href=https://www.mozilla.org/>favourite website</a>
+```
 
 看起來沒甚麼問題，但是，一旦我們加上 `title` 屬性時，就會造成錯誤的結果:
 
@@ -385,7 +391,7 @@ window.addEventListener("load", drawOutput);
 <a href="http://www.example.com" title="Isn't this fun?">A link to my example.</a>
 ```
 
-不過，如果你想要包裹相同種類的引號，你就必須要用到 [HTML entities](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_including_special_characters_in_HTML)。例如，以下範例是錯的：
+不過，如果你想要包裹相同種類的引號，你就必須要用到 [HTML entities](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_including_special_characters_in_HTML)。例如，以下範例是錯的：
 
 ```html
  <a href='http://www.example.com' title='Isn't this fun?'>A link to my example.</a>
@@ -416,27 +422,29 @@ window.addEventListener("load", drawOutput);
 
 這裡有：
 
-1.  `<!DOCTYPE html>`: 文件類型(doctype)。 在很久很久以前，當 HTML 還年輕的時候(約莫在西元 1991 年左右)，文件類型是要作為一系列規範的連結，HTML 網頁必須要遵守這些規範才會被當作是好的 HTML，比如說具備自動錯誤檢查和其他有用的東西等。在那個時候，它們看起來像這樣：
+1. `<!DOCTYPE html>`: 文件類型(doctype)。 在很久很久以前，當 HTML 還年輕的時候(約莫在西元 1991 年左右)，文件類型是要作為一系列規範的連結，HTML 網頁必須要遵守這些規範才會被當作是好的 HTML，比如說具備自動錯誤檢查和其他有用的東西等。在那個時候，它們看起來像這樣：
 
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    ```html
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    ```
 
     不過，現在已經沒有人在乎它們了，它們只是個歷史痕跡，需要形式上地被引入，以確保一切正常。`<!DOCTYPE html>` 是字數最短的有效 doctype。你只需要知道這些就夠了。
 
-2.  `<html></html>`: {{htmlelement("html")}} 元素。該元素包裹住頁面的所有內容，有時也被稱作根元素(root element)。
-3.  `<head></head>`: {{htmlelement("head")}} 元素。這個元素放著你想含括的所有重要資訊，這些資訊不會呈現在網頁瀏覽者眼前。這些東西包括，顯示於搜尋結果的關鍵字、頁面說明、CSS 等等。你將會在這個系列的下個章節中學到更多有關這部分的知識。
-4.  `<meta charset="utf-8">`: 這個元素指定你的文件使用 UTF-8 為字元編碼，這種編碼含有這世上大部分語言的字元，理論上可以處理所有你想放文字內容，因此建議大家都要使用這種編碼，它能幫你免去許多煩惱。
-5.  `<title></title>`: {{htmlelement("title")}} 元素。這是用來設定網頁名稱的，它會顯示在分頁標籤上，當你將該網頁加入書籤或加入最愛時，則是用來形容這個網站。
-6.  `<body></body>`: {{htmlelement("body")}} 元素含括了*所有*你想要給網頁瀏覽者看到的內容，不管是文字、圖片、遊戲、可以播放的音樂或其他東西。
+2. `<html></html>`: {{htmlelement("html")}} 元素。該元素包裹住頁面的所有內容，有時也被稱作根元素(root element)。
+3. `<head></head>`: {{htmlelement("head")}} 元素。這個元素放著你想含括的所有重要資訊，這些資訊不會呈現在網頁瀏覽者眼前。這些東西包括，顯示於搜尋結果的關鍵字、頁面說明、CSS 等等。你將會在這個系列的下個章節中學到更多有關這部分的知識。
+4. `<meta charset="utf-8">`: 這個元素指定你的文件使用 UTF-8 為字元編碼，這種編碼含有這世上大部分語言的字元，理論上可以處理所有你想放文字內容，因此建議大家都要使用這種編碼，它能幫你免去許多煩惱。
+5. `<title></title>`: {{htmlelement("title")}} 元素。這是用來設定網頁名稱的，它會顯示在分頁標籤上，當你將該網頁加入書籤或加入最愛時，則是用來形容這個網站。
+6. `<body></body>`: {{htmlelement("body")}} 元素含括了*所有*你想要給網頁瀏覽者看到的內容，不管是文字、圖片、遊戲、可以播放的音樂或其他東西。
 
 ### 主動學習：在 HTML 文檔中加入一些特徵
 
 如果你想試試看在你的電腦上寫一些 HTML，你可以:
 
-1.  複製上面的 HTML 範例。
-2.  在你的文字編輯器中建立一個新檔案。
-3.  將剛複製的 HTML 範例貼到新開的檔案裡。
-4.  將檔案儲存為 `index.html`。
+1. 複製上面的 HTML 範例。
+2. 在你的文字編輯器中建立一個新檔案。
+3. 將剛複製的 HTML 範例貼到新開的檔案裡。
+4. 將檔案儲存為 `index.html`。
 
 > **備註：** 你也可以在這找到基本的 HTML 範本: [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)。
 
@@ -447,8 +455,8 @@ window.addEventListener("load", drawOutput);
 - 在 {{htmlelement("body")}} 之後，加入這個文件的主要標題。這應該由一個 `<h1>` 以及一個 `</h1>` 包著。
 - 撰寫段落的內容，這些內容可以是一些你感興趣的事物。
 - 讓其中重要的字詞以粗體顯示，讓它們更加搶眼，你可以用一個 `<strong>` 以及一個 `</strong>` 包著它們來達成這件事情。
-- 加入一個連結到你的文章段落中，像[前面所講過的那樣](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element)。
-- 在這段文字的下面加入一張圖片，[像前面所說的那樣](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements)。如果你可以使用不同的圖片(你電腦裡的或網路上的都可以)，你就能獲得加分！！
+- 加入一個連結到你的文章段落中，像[前面所講過的那樣](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element)。
+- 在這段文字的下面加入一張圖片，[像前面所說的那樣](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements)。如果你可以使用不同的圖片(你電腦裡的或網路上的都可以)，你就能獲得加分！！
 
 如果你不小心打錯了，你可以用 _Reset_ 鍵重置。如果你卡關了，可以點擊 _Show solution_ 鍵來偷看答案。
 
@@ -580,22 +588,22 @@ HTML 就像大部分的程式語言，提供了一種能讓我們可以在原始
 
 恭喜你看完了這個章節，我們你能享受這個學習基礎 HTML 的旅程！目前，你應該已經了解 HTML 長什麼樣子、它最基本的運作方式，並且能夠寫出一些元素和屬性。基礎 HTML 大致上就到這裡結束，在單元接下來的章節中，我們將會更深入探討本章節學到的內容並介紹更多 HTML 的觀念。千萬別轉台！
 
-> **備註：** 目前，在你要開始學更多有關 HTML 的知識時，你可能也想要探索基礎的 [CSS](/en-US/docs/Learn/CSS)(Cascading Style Sheets)。CSS 是一種用來為你的網頁增添花樣的語言，例如改變字型、顏色，或改變頁面的布局。你很快就會發現，同時使用 HTML 和 CSS 會帶來很棒的效果。
+> **備註：** 目前，在你要開始學更多有關 HTML 的知識時，你可能也想要探索基礎的 [CSS](/zh-TW/docs/Learn/CSS)(Cascading Style Sheets)。CSS 是一種用來為你的網頁增添花樣的語言，例如改變字型、顏色，或改變頁面的布局。你很快就會發現，同時使用 HTML 和 CSS 會帶來很棒的效果。
 
 ## 另見
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/zh-TW/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 ## 在本主題中的內容
 
-- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
+- [Getting started with HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [What’s in the head? Metadata in HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML text fundamentals](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Creating hyperlinks](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Advanced text formatting](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [Document and website structure](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Debugging HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Marking up a letter](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [Structuring a page of content](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

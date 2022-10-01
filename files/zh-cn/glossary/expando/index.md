@@ -1,13 +1,9 @@
 ---
 title: Expando
 slug: Glossary/Expando
-tags:
-  - JavaScript
-  - Reference
-  - expando
-translation_of: Glossary/Expando
 ---
-可扩展对象的动态属性 (Expando properties) 是{{glossary("JavaScript")}} 添加到{{glossary("DOM")}} 节点的属性 , 可以直接从 DOM 元素中访问。 这些属性不是{{glossary("对象")}} 的 DOM 规范的一部分：
+
+可扩展对象的动态属性 (Expando properties) 是{{glossary("JavaScript")}} 添加到{{glossary("DOM")}} 节点的属性 , 可以直接从 DOM 元素中访问。这些属性不是{{glossary("对象")}} 的 DOM 规范的一部分：
 
 ```js
 window.document.foo = 5; // foo 是一个自定义属性

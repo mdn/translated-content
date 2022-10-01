@@ -1,8 +1,8 @@
 ---
 title: caches
 slug: Web/API/caches
-translation_of: Web/API/caches
 ---
+
 {{APIRef("Service Workers API")}}
 
 全局的 **`caches`** 只读属性返回与当前上下文紧密相关的 {{domxref("CacheStorage")}} 对象。此对象激活了诸如存储用于离线使用的资源，并生成对请求的自定义响应等功能。

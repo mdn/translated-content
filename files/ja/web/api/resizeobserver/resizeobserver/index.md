@@ -1,17 +1,8 @@
 ---
 title: ResizeObserver()
 slug: Web/API/ResizeObserver/ResizeObserver
-page-type: web-api-constructor
-tags:
-  - API
-  - コンストラクター
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserver
-  - オブザーバー
-browser-compat: api.ResizeObserver.ResizeObserver
-translation_of: Web/API/ResizeObserver/ResizeObserver
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`ResizeObserver`** コンストラクターは新しい {{domxref("ResizeObserver")}} オブジェクトを作成し、これを {{domxref('Element')}} のコンテンツまたは境界ボックス、または {{domxref('SVGElement')}} のバウンディングボックスに対する変更を報告するために使用することができます。

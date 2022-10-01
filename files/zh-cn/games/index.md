@@ -1,17 +1,8 @@
 ---
 title: 游戏开发环境
 slug: Games
-tags:
-  - Apps
-  - Game Development
-  - Gamedev
-  - Games
-  - HTML5 Games
-  - JavaScript Games
-  - TopicStub
-  - Web
-translation_of: Games
 ---
+
 {{GamesSidebar}}
 
 游戏是在计算机上最风靡的活动之一。新技术不断发展已使开发出能在任何符合标准的浏览器上运行更好更炫的游戏成为可能。
@@ -28,7 +19,7 @@ translation_of: Games
 
 ## 将本地游戏移植到 Web
 
-如果你是一个本地游戏开发者 (例如你用 C++开发游戏)，并且你对如何将本地游戏移植到 Web 感兴趣，你应该更多的学习关于我们的[Emscripten](http://kripken.github.io/emscripten-site/index.html) 工具—— 这是一个 LLVM JavaScript 编译器。它能获取 LLVM 字节码 (例如用 Clang 编译 C/C++或者其他语言生成的字节码）并且将它们编译成[asm.js](/en-US/docs/Games/Tools/asm.js)以在 Web 上运行。
+如果你是一个本地游戏开发者 (例如你用 C++开发游戏)，并且你对如何将本地游戏移植到 Web 感兴趣，你应该更多的学习关于我们的[Emscripten](http://kripken.github.io/emscripten-site/index.html) 工具—— 这是一个 LLVM JavaScript 编译器。它能获取 LLVM 字节码 (例如用 Clang 编译 C/C++或者其他语言生成的字节码）并且将它们编译成[asm.js](/zh-CN/docs/Games/Tools/asm.js)以在 Web 上运行。
 
 开始，查看以下：
 

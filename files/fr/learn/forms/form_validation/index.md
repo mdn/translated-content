@@ -4,6 +4,7 @@ slug: Learn/Forms/Form_validation
 translation_of: Learn/Forms/Form_validation
 original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont dans un format correct pour pouvoir être traitées correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser les applications. La validation des données de formulaire vous aide à remplir ces objectifs — cet article indique ce qu'il est nécessaire de savoir.
@@ -368,7 +369,7 @@ HMTL5 fournit une [API de contraintes de validation](https://www.w3.org/TR/html5
 </form>
 ```
 
-En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()> "/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"):
+En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()>):
 
 ```js
 var email = document.getElementById("mail");
@@ -413,7 +414,7 @@ Propriétés de l'API de validation des contraintes
 
 | Méthodes                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `checkValidity()`            | Renvoie `true` si la valeur de l'élément n'a pas de problème de validation, `false` autrement. Si l'élément est invalide, cette méthode déclenche aussi un événement {{event("invalid")}} sur cet élément.                                                                                                                                                                                                                                                                                                                     |
+| `checkValidity()`            | Renvoie `true` si la valeur de l'élément n'a pas de problème de validation, `false` autrement. Si l'élément est invalide, cette méthode déclenche aussi un événement [`invalid`](/fr//docs/Web/API/HTMLInputElement/invalid_event) sur cet élément.                                                                                                                                                                                                                                                                                                                     |
 | `setCustomValidity(message)` | Ajoute un message d'erreur personnalisé à l'élément&nbsp;; si vous définissez un message d'erreur personnalisé, l'élément est considéré comme invalide, et le message spécifié est affiché. Cela vous permet d'utiliser du code JavaScript pour établir une erreur de validation autre que celles offertes par l'API standard des contraintes de validation. Le message est affiché à l'utilisateur lorsque le problème est rapporté. Si l'argument est une chaîne de caractères vide, l'erreur personnalisée est considérée comme effacée. |
 
 Pour les anciens navigateurs, il existe [une prothèse d'émulation (_polyfill_) comme Hyperform](https://hyperform.js.org/), pour compenser le défaut de prise en charge de cette API. Comme vous utilisez déjà JavaScript, l'utilisation d'une prethèse d'émulation n'est pas un souci supplémentaire pour la conception ou l'implémentation de votre site ou application Web.
@@ -583,7 +584,7 @@ Afin d'illustrer le propos, réécrivons le précédent exemple afin qu'il fonct
 </form>
 ```
 
-Comme vous pouvez voir, le HTML est quasiment identique; nous avons juste enlevé les fonctionnalités de validation HTML. Notez que [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") est une spécification indépendante qui n'est pas spécifiquement liée à HTML5.
+Comme vous pouvez voir, le HTML est quasiment identique; nous avons juste enlevé les fonctionnalités de validation HTML. Notez que [ARIA](/fr/docs/Accessibility/ARIA) est une spécification indépendante qui n'est pas spécifiquement liée à HTML5.
 
 ##### CSS
 

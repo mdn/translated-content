@@ -7,9 +7,10 @@ tags:
   - Reference
 translation_of: Web/CSS/:invalid
 ---
+
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:invalid`** cible tout élément {{HTMLElement("input")}} pour lequel [la validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation "en/HTML/HTML5/Constraint_validation") du contenu échoue par rapport au type de donnée attendu. Ceci permet de mettre en forme les champs non valides pour aider l'utilisateur à identifier et à corriger les erreurs.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:invalid`** cible tout élément {{HTMLElement("input")}} pour lequel [la validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) du contenu échoue par rapport au type de donnée attendu. Ceci permet de mettre en forme les champs non valides pour aider l'utilisateur à identifier et à corriger les erreurs.
 
 ```css
 /* Cible n'importe quel élément input  */
@@ -123,15 +124,11 @@ Ce halo peut être désactivé avec les règles suivantes :
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaire                                                                   |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-invalid', ':invalid')}}     | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                          |
-| {{SpecName('HTML5 W3C', '#selector-invalid', ':invalid')}}         | {{Spec2('HTML5 W3C')}}         | Définition de la sémantique relative à HTML et aux contraintes de validation. |
-| {{SpecName('CSS4 Selectors', '#validity-pseudos', ':invalid')}} | {{Spec2('CSS4 Selectors')}} | Définition initiale.                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.invalid")}}
+{{Compat}}
 
 ## Voir aussi
 

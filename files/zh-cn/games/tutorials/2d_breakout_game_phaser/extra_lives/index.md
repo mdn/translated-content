@@ -1,22 +1,13 @@
 ---
 title: Extra lives
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - lives
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}
 
-这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 13 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson13.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html)完成本课程后找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 13 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson13.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html)完成本课程后找到源代码。
 
 我们可以通过增加生活使游戏更愉快。在这篇文章中，我们将实施一个生活系统，以便玩家可以继续玩，直到他们失去了三个生命，而不仅仅是一个人。
 
@@ -34,7 +25,7 @@ var lifeLostText;
 
 ## 定义新的文本标签
 
-定义文本看起来像我们已经在[分数](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score)课上已经做[的](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score)。`scoreText`在`create()`函数内的现有定义下方添加以下行：
+定义文本看起来像我们已经在[分数](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score)课上已经做[的](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score)。`scoreText`在`create()`函数内的现有定义下方添加以下行：
 
 ```js
 livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
@@ -124,6 +115,6 @@ function ballLeaveScreen() {
 
 ## 下一步
 
-生活让游戏更加宽容 - 如果你失去一个生命，你还剩下两个，可以继续玩。现在让我们通过添加[动画和补间来](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens)扩展游戏的外观和感觉。
+生活让游戏更加宽容 - 如果你失去一个生命，你还剩下两个，可以继续玩。现在让我们通过添加[动画和补间来](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens)扩展游戏的外观和感觉。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}

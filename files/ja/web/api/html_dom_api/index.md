@@ -1,21 +1,8 @@
 ---
 title: HTML DOM API
 slug: Web/API/HTML_DOM_API
-tags:
-  - API
-  - 初心者
-  - DOM
-  - 文書
-  - 要素
-  - HTML DOM
-  - HTML DOM API
-  - ノード
-  - 概要
-  - ウェブ
-  - ウィンドウ
-  - 階層
-translation_of: Web/API/HTML_DOM_API
 ---
+
 {{DefaultAPISidebar("HTML DOM")}}
 
 **HTML DOM API** は、{{Glossary("HTML")}} の各{{Glossary("element", "要素")}}の機能を定義するインターフェイスと、それらが依存する補助的な型やインターフェイスから構成されています。

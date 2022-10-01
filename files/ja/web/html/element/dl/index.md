@@ -1,18 +1,6 @@
 ---
 title: '<dl>: 説明リスト要素'
 slug: Web/HTML/Element/dl
-tags:
-  - 定義リスト
-  - 説明リスト
-  - 要素
-  - HTML
-  - HTML グループ化コンテンツ
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.dl
-translation_of: Web/HTML/Element/dl
 ---
 
 {{HTMLRef}}

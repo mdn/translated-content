@@ -1,15 +1,8 @@
 ---
 title: TransformStream.readable
 slug: Web/API/TransformStream/readable
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - readable
-  - TransformStream
-translation_of: Web/api/TransformStream/readable
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("TransformStream")}} 接口的只读属性 **`readable`**  返回由这个 `TransformStream` 控制的 {{domxref("ReadableStream")}} 实例。

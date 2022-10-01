@@ -51,17 +51,17 @@ translation_of: Web/API/XMLHttpRequest/readyState
  <dt>UNSENT</dt>
  <dd>Объект XMLHttpRequest был создан, но метод <code>open()</code> ещё не вызывался.</dd>
  <dt>OPENED</dt>
- <dd>Был вызван метод open(). На этом этапе методом <a href="/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader">setRequestHeader()</a> могут быть установлены заголовки запроса (request headers), после чего для начала выполнения запроса может быть вызван метод <a href="/en-US/docs/Web/API/XMLHttpRequest/send">send()</a> .</dd>
+ <dd>Был вызван метод open(). На этом этапе методом <a href="/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader">setRequestHeader()</a> могут быть установлены заголовки запроса (request headers), после чего для начала выполнения запроса может быть вызван метод <a href="/en-US/docs/Web/API/XMLHttpRequest/send">send()</a> .</dd>
  <dt>HEADERS_RECEIVED</dt>
  <dd>Был вызван метод send() и получены заголовки ответа (response headers) .</dd>
  <dt>LOADING</dt>
- <dd>Получена часть ответа. Если <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code>  - это пустая строка или имеет значение "text", <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseText">responseText</a></code> будет содержать загруженную порцию текста ответа.</dd>
+ <dd>Получена часть ответа. Если <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code>  - это пустая строка или имеет значение "text", <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseText">responseText</a></code> будет содержать загруженную порцию текста ответа.</dd>
  <dt>DONE</dt>
  <dd>Операция доставки данных завершена. Это может означать как то, что передача данных полностью завершена успешно, так и то, что произошла ошибка.</dd>
 </dl>
 
 <div class="note">
-<p>Названия состояний отличаются в версиях Internet Explorer ранее 11. Вместо <code>UNSENT</code>, <code>OPENED</code>,<code> HEADERS_RECEIVED</code>,<code> LOADING</code> и <code>DONE, используются названия READYSTATE_UNINITIALIZED</code> (0), <code>READYSTATE_LOADING</code> (1), <code>READYSTATE_LOADED</code> (2), <code>READYSTATE_INTERACTIVE</code> (3) и <code>READYSTATE_COMPLETE</code> (4).</p>
+<p>Названия состояний отличаются в версиях Internet Explorer ранее 11. Вместо <code>UNSENT</code>, <code>OPENED</code>,<code> HEADERS_RECEIVED</code>,<code> LOADING</code> и <code>DONE, используются названия READYSTATE_UNINITIALIZED</code> (0), <code>READYSTATE_LOADING</code> (1), <code>READYSTATE_LOADED</code> (2), <code>READYSTATE_INTERACTIVE</code> (3) и <code>READYSTATE_COMPLETE</code> (4).</p>
 </div>
 
 <h2 id="Пример">Пример</h2>

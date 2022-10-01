@@ -1,10 +1,8 @@
 ---
 title: Blink
 slug: Glossary/Blink
-tags:
-  - 布局引擎
-translation_of: Glossary/Blink
 ---
+
 Blink 是一个开源的浏览器布局引擎，由谷歌作为 Chromium 项目的一部分开发（因而也是 Chrome 的一部分）。具体而言，Blink 是一个派生自 {{glossary("WebKit")}} 项目中 WebCore 库的分支，用于处理布局、渲染以及 {{Glossary("DOM")}}。
 
 ## 了解更多

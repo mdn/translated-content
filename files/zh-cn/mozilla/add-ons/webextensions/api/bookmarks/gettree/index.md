@@ -1,25 +1,15 @@
 ---
 title: bookmarks.getTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
-tags:
-  - API
-  - WebExtensions
-  - getTree
-  - 书签
-  - 参考
-  - 拓展
-  - 方法
-  - 附件
-  - 非标准
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.getTree()`** 返回一个数组，该数组每一项为{{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}对象，作为书签树的根节点。
 
-如果它们是文件夹的话，你可以通过其`children属性及其后代的children属性`递归地访问整个树。
+如果它们是文件夹的话，你可以通过其 `children` 属性及其后代的 `children` 属性递归地访问整个树。
 
-这是一个异步的函数，返回`Promise。`
+这是一个异步的函数，返回 `Promise`。
 
 ## 使用格式
 
@@ -33,11 +23,11 @@ var gettingTree = browser.bookmarks.getTree()
 
 ### 返回值
 
-` Promise对象，该对象未来会得到一个填充代表根节点的``bookmarks.BookmarkTreeNode对象的数组。 `
+`Promise` 对象，该对象未来会得到一个填充代表根节点的 `bookmarks.BookmarkTreeNode` 对象的数组。
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.bookmarks.getTree")}}
+{{Compat}}
 
 ## 示例
 
@@ -81,7 +71,8 @@ gettingTree.then(logTree, onRejected);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,4 +99,4 @@ gettingTree.then(logTree, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

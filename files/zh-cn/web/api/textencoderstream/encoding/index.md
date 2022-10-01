@@ -1,19 +1,11 @@
 ---
 title: TextEncoderStream.encoding
 slug: Web/API/TextEncoderStream/encoding
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - encoding
-  - TextEncoderStream
-  - Read-only
-translation_of: Web/API/TextEncoderStream/encoding
 ---
+
 {{APIRef("Encoding API")}}
 
-{{domxref("TextEncoderStream")}} 接口的只读属性 **`encoding`** 返回一个字符串,其中包含当前 `TextEncoderStream` 对象使用的编码算法的名称。
+{{domxref("TextEncoderStream")}} 接口的只读属性 **`encoding`** 返回一个字符串，其中包含当前 `TextEncoderStream` 对象使用的编码算法的名称。
 
 ## 值
 

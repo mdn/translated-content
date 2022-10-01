@@ -13,6 +13,7 @@ tags:
   - test
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Nous allons maintenant aborder les problèmes Javascript en navigateur croisé et comment les résoudre. Cela comprend des informations sur l'utilisation des outils de dev des navigateurs pour localiser et fixer les problèmes, l'utilisation des Polyfills et de librairies pour contourner les problèmes, utiliser les fonctionnalités modernes de Javascript sur des vieux navigateurs, et plus encore.
@@ -228,7 +229,7 @@ Dès que vos applis vont devenir plus complexes vous allez commencer à utiliser
 - Lorsque que vous utilisez des APIs, assurez-vous de désactiver les fonctionnalités de l'API quand elles ne sont pas utilisées ; certains appels d'API peuvent être très coûteux en puissance de traitement. Par exemple, lorsque vous montrez un stream video, assurez-vous que s'est désactivé quand vous ne pouvez pas le voir. Quand vous tracer la localisation d'un appareil en utilisant des appels répétés de Géolocalisation, assurez-vous de le désactiver quand l'utilisateur arrête de l'utiliser.
 - Les animations peuvent être très coûteuses pour la performance. Beaucoup de librairies JavaScript fournissent des possibilités d'animation programmée avec JavaScript, mais c'est beaucoup plus rentable de faire les animations via les fonctionnalités natives des navigateurs comme [les Animations CSS](/fr/docs/Web/CSS/Animations_CSS) (ou la naissante [Web Animations API](/fr/docs/Web/API/Web_Animations_API)) qu'en JavaScript. Lisez  [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) pour des théories très utiles sur l'animation coûteuse, des conseils sur comment améliorer la performance des animations, et des informations à propos de l'API Web Animations.
 
-> **Note :** Le [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/ "Read 'Writing Fast, Memory-Efficient JavaScript'") de Addy Osmani contient beaucoup de détails et de astuces impeccables pour améliorer les performances en JavaScript.
+> **Note :** Le [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) de Addy Osmani contient beaucoup de détails et de astuces impeccables pour améliorer les performances en JavaScript.
 
 ## Les problèmes JavaScript en navigateur croisé
 

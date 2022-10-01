@@ -12,6 +12,7 @@ tags:
   - close
 translation_of: Web/API/EventSource/close
 ---
+
 {{APIRef('WebSockets API')}}
 
 La fonction **`close()`** de l'interface {{domxref("EventSource")}} coupe la connection, si existante, et affecte à la variable {{domxref("EventSource.readyState")}} la valeur `2` (closed).
@@ -48,13 +49,11 @@ bouton.onclick = function() {
 
 ## Spécifications
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', "comms.html#dom-eventsource-close", "close()")}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventSource.close")}}
+{{Compat}}
 
 ## Voir aussi
 

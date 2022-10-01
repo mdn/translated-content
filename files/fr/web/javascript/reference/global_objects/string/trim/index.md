@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/trim
 ---
+
 {{JSRef}}
 
 La méthode **`trim()`** permet de retirer les blancs en début et fin de chaîne. Les blancs considérés sont les caractères d'espacement (espace, tabulation, espace insécable, etc.) ainsi que les caractères de fin de ligne (LF, CR, etc.).

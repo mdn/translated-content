@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Forms
 original_slug: Web/Guide/HTML/Formulaires
 ---
+
 {{learnSidebar}}
 
 Ce guide est constitué d'une série d'articles qui vous aideront à maîtriser les formulaires HTML. Les formulaires HTML sont des outils très puissants pour interagir avec l'utilisateur ; toutefois, à cause de raisons historiques et techniques, il n'est pas forcément évident de savoir comment les utiliser de manière optimale. Nous allons aborder tous les aspects des formulaires HTML, de la structure à la décoration, de la gestion des données aux widgets sur-mesure.
@@ -27,7 +28,7 @@ Le reste du module est toutefois un peu plus difficile — il est facile de plac
 
 - [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
   - : Le premier article de notre série vous donne une toute première expérience de création de formulaire en HTML, y compris sa conception, sa mise en œuvre en utilisant les bons éléments HTML, l'ajout de quelques très simples décorations avec les CSS et le comment de l'envoi des données à un serveur.
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML "/fr/docs/HTML/Formulaires/Comment_structurer_un_formulaire_HTML")
+- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
   - : Les bases vues, nous examinons maintenant plus en détail les éléments utilisés pour structurer et donner un sens aux différentes parties d'un formulaire.
 
 ## Quels sont les widgets pour formulaire disponibles&nbsp;?

@@ -3,6 +3,7 @@ title: change
 slug: Web/API/HTMLElement/change_event
 translation_of: Web/API/HTMLElement/change_event
 ---
+
 {{APIRef}}
 
 L'événement **change** est déclenché pour les éléments {{HTMLElement("input")}} _(entrée)_, {{HTMLElement("select")}} _(sélection)_ et {{HTMLElement("textarea")}} _(zone de texte)_ lorsqu'un changement de leur valeur est réalisé par l'utilisateur. Contrairement à l'événement {{event("input")}}, **change** n'est pas nécessairement déclenché pour chaque changement de valeur.
@@ -121,15 +122,11 @@ function updateValue(e) {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "indices.html#event-change", "change")}}             | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5 W3C", "webappapis.html#handler-onchange", "change")}}     | {{Spec2("HTML5 W3C")}}     |                     |
-| {{SpecName("DOM2 Events", "#Events-eventgroupings-htmlevents", "change")}} | {{Spec2("DOM2 Events")}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilités navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.onchange")}}
+{{Compat}}
 
 ## Voir aussi
 

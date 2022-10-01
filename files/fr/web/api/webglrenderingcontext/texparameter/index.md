@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/texParameter
 ---
+
 {{APIRef("WebGL")}}
 
 Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définissent les paramètres de texture.
@@ -162,16 +163,11 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST)
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------ |
-| {{SpecName('WebGL', "#5.14.8", "texParameter[fi]")}}                             | {{Spec2('WebGL')}}             | Définition initiale pour WebGL.                  |
-| {{SpecName('OpenGL ES 2.0', "glTexParameter.xml", "glTexParameter")}}     | {{Spec2('OpenGL ES 2.0')}} | Page man de l’API OpenGL ES 2.0 API (similaire). |
-| {{SpecName('WebGL2', "#3.7.6", "texParameter[fi]")}}                             | {{Spec2('WebGL2')}}             | Définition mise à jour pour WebGL.               |
-| {{SpecName('OpenGL ES 3.0', "glTexParameter.xhtml", "glTexParameter")}} | {{Spec2('OpenGL ES 3.0')}} | Page man de l’API OpenGL ES 3.0 API (similaire). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.texParameterf")}}
+{{Compat}}
 
 ## Voir aussi
 

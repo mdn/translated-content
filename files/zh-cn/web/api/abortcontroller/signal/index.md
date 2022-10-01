@@ -1,17 +1,8 @@
 ---
 title: AbortController.signal
 slug: Web/API/AbortController/signal
-page-type: web-api-instance-property
-tags:
-  - API
-  - AbortController
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - signal
-translation_of: Web/API/AbortController/signal
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("AbortController")}} 接口的只读属性 **`signal`** 返回一个 {{domxref("AbortSignal")}} 实例对象，该对象可以根据需要处理 DOM 请求通信，既可以建立通信，也可以终止通信。

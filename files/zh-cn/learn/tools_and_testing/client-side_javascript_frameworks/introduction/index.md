@@ -1,15 +1,9 @@
 ---
 title: 客户端框架介绍
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
-tags:
-  - JavaScript
-  - 初学者
-  - 学习
-  - 客户端
-  - 框架
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 在本章节我们开始大致了解框架，简要回顾 JavaScript 和框架的历史，为什么框架会存在以及它们提供了什么，如何开始考虑选择一个框架并学习，以及对于客户端框架还有什么替代方案。
@@ -31,7 +25,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 
 当 JavaScript 在 1996 发布以后，它给 web 增加了少许的交互性和乐趣，在那个时候，网页仍由静态文档组成。web 应该不仅仅是阅读的地方，更是创造的地方。JavaScript 变得越来越流行。使用 JavaScript 的开发者们创造工具来解决他们遇到的问题，并且将其打包成称为**库**的可复用组件，这样就能和他人共享解决方案。这种共享库的体系帮助塑造了 web 的增长。
 
-现在，JavaScript 是 web 的一部分，[95% 的网页都在使用](https://w3techs.com/technologies/details/cp-javascript)，而且 web 又是现代生活的一部分。用户在 web 上写文章，管理预算，听音乐，看电影，以及和相隔万里的人通过文字，音频，视频聊天来实时交流。 web 让我们能够做到那些过去只能在电脑上安装本地应用程序才能做到的事。这些现代的，复杂的，具有交互性的网站通常被称为 **web 应用程序**。
+现在，JavaScript 是 web 的一部分，[95% 的网页都在使用](https://w3techs.com/technologies/details/cp-javascript)，而且 web 又是现代生活的一部分。用户在 web 上写文章，管理预算，听音乐，看电影，以及和相隔万里的人通过文字，音频，视频聊天来实时交流。web 让我们能够做到那些过去只能在电脑上安装本地应用程序才能做到的事。这些现代的，复杂的，具有交互性的网站通常被称为 **web 应用程序**。
 
 现代 JavaScript 框架的到来加快了打造高度动态化和交互性强的应用程序的速度。**框架**就是提供该如何构建应用程序的意见的库。这些意见能使应用具有可预测性和同质性。可预测性让软件能在扩展到很大规模的同时仍保持可维护性。可预测性和可维护性对于一个软件的长久健康运行是十分重要的。
 
@@ -247,23 +241,23 @@ _可以使用_ JavaScript 和浏览器的原生功能来实现路由功能，但
 
 本模块中讨论的每个框架都采用不同的 Web 应用程序开发方法。每一个都在定期改进或变化，各有利弊。选择合适的框架是一个依赖于团队和项目的过程，你应该自己做研究，发现什么适合你的需求。尽管如此，我们确定了你可能需要考虑的几个问题，以便更有效地研究你的选择：
 
-1. 框架支持哪些浏览器?
-2. 框架使用哪些领域特定语言?
+1. 框架支持哪些浏览器？
+2. 框架使用哪些领域特定语言？
 3. 该框架是否有强大的社区和良好的文档（和其他支持）可用？
 
 本节中的表提供了每个框架提供的浏览器支持以及它的 **DSL 语言** 的简要描述。
 广义上，领域专用语言（**DSL**）是与软件开发的特定领域相关的编程语言。在框架的环境中，DSL 是 JavaScript 或 HTML 的变体，使让使用该框架开发变得更容易。至关重要的是，没有一个框架要求开发者使用特定的 DSL，但它们几乎都是在设计时考虑特定的 DSL。选择不使用框架首选的 DSL 将意味着你错过了改善开发者体验的功能。
 
-在为任何新项目做出选择时，你应该认真考虑框架的模型和 DSL。不匹配的浏览器支持可能会成为用户的障碍；不匹配的DSL支持可能会成为你和你的团队成员的障碍。
+在为任何新项目做出选择时，你应该认真考虑框架的模型和 DSL。不匹配的浏览器支持可能会成为用户的障碍；不匹配的 DSL 支持可能会成为你和你的团队成员的障碍。
 
 | 框架 | 浏览器支持 | DSL 偏好 | 支持的 DSL         |
 | --------- | ----------------------------------- | ------------- | ---------------------- |
 | Angular   | IE9+                                | TypeScript    | 基于 HTML、TypeScript |
-| React     | 现代的浏览器 （IE9+ with Polyfills）      | JSX           | JSX、 TypeScript        |
+| React     | 现代的浏览器（IE9+ with Polyfills）      | JSX           | JSX、 TypeScript        |
 | Vue       | IE9+                                | 基于 HTML    | 基于 HTML、JSX、Pug   |
 | Ember     | 现代的浏览器（IE9+ in Ember version 2.18）| Handlebars    | Handlebars、TypeScript |
 
-> **备注：** 我们描述为“基于HTML”的 DSL 没有官方名称。它们并不是真正的 DSL ，但它们是非标准的 HTML，所以我们认为它们值得强调。
+> **备注：** 我们描述为“基于 HTML”的 DSL 没有官方名称。它们并不是真正的 DSL，但它们是非标准的 HTML，所以我们认为它们值得强调。
 
 参考来源：
 
@@ -279,12 +273,12 @@ _可以使用_ JavaScript 和浏览器的原生功能来实现路由功能，但
 
 不要只关注我们在这件事上的话——网上到处都有讨论。维基媒体基金会最近选择使用 Vue 作为其前端，并发布了关于框架采用方面的 [RFC](https://phabricator.wikimedia.org/T241180)。RFC 的作者 Eric Gardner 概述了维基媒体项目的需求，以及为什么这个框架是团队不错选择。这个 RFC 是一个很好的例子，说明在计划使用前端框架时，你应该做一点调查和研究。
 
-[JavaScript 状况调查](https://stateofjs.com/)包含了来自JavaScript 开发者的有效反馈。它涵盖了许多与 JavaScript 相关的主题，包括关于框架的使用和开发者对框架的好恶的数据。目前，好几年的数据可以让你感受到一个框架的受欢迎程度。
+[JavaScript 状况调查](https://stateofjs.com/)包含了来自 JavaScript 开发者的有效反馈。它涵盖了许多与 JavaScript 相关的主题，包括关于框架的使用和开发者对框架的好恶的数据。目前，好几年的数据可以让你感受到一个框架的受欢迎程度。
 Vue 团队[详尽地将 Vue 与其他流行框架进行了比较](https://vuejs.org/v2/guide/comparison.html)。在这种比较中可能有一些偏见（他们注意到了这一点），但尽管如此，它还是一个宝贵的资源。
 
 ## 客户端框架的替代方案
 
-如果你正在寻找工具来加快  Web开发过程，并且你知道你的项目不需要很多客户端 JavaScript ，你可以寻求其他几种构建 Web 的解决方案：
+如果你正在寻找工具来加快  Web 开发过程，并且你知道你的项目不需要很多客户端 JavaScript，你可以寻求其他几种构建 Web 的解决方案：
 
 - 内容管理系统
 - 服务端渲染
@@ -295,11 +289,12 @@ Vue 团队[详尽地将 Vue 与其他流行框架进行了比较](https://vuejs.
 **内容管理系统**（**CMS**）是任何允许用户在不直接编写代码的情况下创建网页内容的工具。对于大型项目来说，它们是一种很好的解决方案，尤其是那些需要由编码能力有限的内容编写者来编写的项目，或者希望节省时间的程序员。然而，它们确实需要大量的时间来设置，使用 CMS 意味着你至少放弃了对网站最终输出的一些控制。例如：如果你选择的 CMS 默认不编写无障碍的内容，通常很难改进这一点。
 
 受欢迎的 CMS 的一些例子：[Wordpress](https://wordpress.com/)、[Joomla](https://www.joomla.org/) 和 [Drupal](https://www.drupal.org/)。
+
 ### 服务端渲染
 
 **服务端渲染**（**SSR**）是一种应用程序体系结构，在该体系结构中，呈现单页应用程序是服务器的工作。这与客户端渲染相反，服务端渲染是构建 JavaScript 应用程序最常见、最直接的方式。服务端渲染对于客户端的设备压力更小，因为你只发送渲染过的 HTML 文件，但它比客户端渲染更加难以构建。
 
-本模块中介绍的所有框架都支持服务端渲染和客户端渲染。给 React 的 [Next.js](https://nextjs.org/)，给 Vue 的 [Nuxt.js](https://nuxtjs.org/)（是的，这很令人困惑，它们没有关系）， 给 Ember 的 [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) 还有给 Angular 的 [Angular Universal](https://angular.io/guide/universal) 。
+本模块中介绍的所有框架都支持服务端渲染和客户端渲染。给 React 的 [Next.js](https://nextjs.org/)，给 Vue 的 [Nuxt.js](https://nuxtjs.org/)（是的，这很令人困惑，它们没有关系），给 Ember 的 [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) 还有给 Angular 的 [Angular Universal](https://angular.io/guide/universal) 。
 
 > **备注：** 有些 SSR 解决方案是由社区编写和维护的，而有些是由框架的维护者提供的“官方”解决方案。
 
@@ -349,7 +344,7 @@ Vue 团队[详尽地将 Vue 与其他流行框架进行了比较](https://vuejs.
   - [Vue 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
   - [创建第一个 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
   - [渲染一个 Vue 组件列表](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [添加一个新的待办表单: Vue 事件、方法、模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [添加一个新的待办表单：Vue 事件、方法、模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
   - [用 CSS 样式化 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
   - [使用 Vue 计算属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
   - [Vue 条件渲染：编辑存在的待办清单](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)

@@ -1,19 +1,8 @@
 ---
 title: BrowserSetting
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Extensions
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Type
-  - Types
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 ---
+
 {{AddonSidebar()}}
 
 A `BrowserSetting` is an object representing a browser setting.
@@ -38,13 +27,14 @@ Note that while this object is based on the [ChromeSetting](https://developer.ch
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.types.BrowserSetting")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
 > **备注：** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
 
-<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -71,4 +61,4 @@ Note that while this object is based on the [ChromeSetting](https://developer.ch
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

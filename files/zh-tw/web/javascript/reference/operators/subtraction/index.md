@@ -1,13 +1,8 @@
 ---
 title: 相減運算子 (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.subtraction
 ---
+
 {{jsSidebar("Operators")}}
 
 相減運算子 (`-`) 是用來將兩個值進行相減，並得出它們的差值。

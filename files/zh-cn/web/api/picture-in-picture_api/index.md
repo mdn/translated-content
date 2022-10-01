@@ -1,21 +1,8 @@
 ---
 title: 画中画（Picture-in-Picture）API
 slug: Web/API/Picture-in-Picture_API
-page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Graphics
-  - Guide
-  - Overview
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - View
-  - pip
-translation_of: Web/API/Picture-in-Picture_API
 ---
+
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
 **画中画 API** 允许网站总是在其它窗口之上创建一个浮动的视频，以便用户在其他内容站点或者设备上的应用程序交互时可以继续播放媒体。

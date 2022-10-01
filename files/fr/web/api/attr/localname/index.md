@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Attr/localName
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Attr.localName`**, en lecture seule, renvoie la partie locale du nom qualifié d'un élément.
@@ -54,15 +55,13 @@ Le nom local d'un attribut est la partie du nom qualifié de cet attribut avant 
 
 ## Spécifications
 
-| Spécification                                                                | Statut                   | Commentaire         |
-| ---------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('DOM4', '#interface-attr', 'Attr.localName')}} | {{Spec2('DOM4')}} | première définition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Attr.localName")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("Attr.namespaceURI")}}
 - {{domxref("Attr.prefix")}}

@@ -1,14 +1,8 @@
 ---
 title: location.ancestorOrigins
 slug: Web/API/Location/ancestorOrigins
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.ancestorOrigins
-translation_of: Web/API/Location/ancestorOrigins
 ---
+
 {{APIRef("Location")}}
 
 **`ancestorOrigins`** は {{domxref("Location")}} インターフェイスの読み取り専用プロパティで、静的な {{domxref("DOMStringList")}} であり、指定された {{domxref("Location")}} オブジェクトに関連付けられたこの文書の閲覧コンテキストのすべての祖先のオリジンを、逆順で保持します。

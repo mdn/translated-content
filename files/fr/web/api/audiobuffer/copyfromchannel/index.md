@@ -8,6 +8,7 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioBuffer/copyFromChannel
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode `copyFromChannel()` de l'interface [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) copie les échantillons de l'un des canaux de l'`AudioBuffer` dans un tableau.
@@ -35,15 +36,13 @@ var autreTableau = new Float32Array(length);
 tableauDonnees.copyFromChannel(autreTableau,1,0);
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                                                                                                            | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-copyFromChannel-void-Float32Array-destination-long-channelNumber-unsigned-long-startInChannel', 'copyFromChannel')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer.copyFromChannel")}}
+{{Compat}}
 
 ## Voir aussi
 

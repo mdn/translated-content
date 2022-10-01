@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/count
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`count()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, renvoie le nombre d'enregistrements qui correspondent à la clé ou à l'intervalle de clé ({{domxref("IDBKeyRange")}}) passé en argument. Si aucun argument n'est fourni, la méthode renvoie le nombre total d'enregistrements contenus dans le magasin d'objets.
@@ -56,13 +57,11 @@ countRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-count-IDBRequest-any-key', 'count()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.count")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,43 +1,35 @@
 ---
 title: ClipboardEvent()
 slug: Web/API/ClipboardEvent/ClipboardEvent
-tags:
-  - API
-  - Clipboard
-  - クリップボード API
-  - ClipboardEvent
-  - コンストラクター
-  - Cut
-  - 実験的
-  - リファレンス
-  - copy
-  - paste
-browser-compat: api.ClipboardEvent.ClipboardEvent
-translation_of: Web/API/ClipboardEvent/ClipboardEvent
 ---
-{{APIRef("Clipboard API")}}{{SeeCompatTable}}
+
+{{APIRef("Clipboard API")}}
 
 **`ClipboardEvent()`** コンストラクターは、新たに生成された {{domxref("ClipboardEvent")}} を返します。これは、{{domxref("Element/cut_event", "cut")}} や {{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} イベントで変更されたクリップボード関連の情報を提供するイベントを表します。
 
 ## 構文
 
 ```js
-var clipboardEvent = new ClipboardEvent(type[, options]);
+new ClipboardEvent(type)
+new ClipboardEvent(type, options)
 ```
 
 ### 引数
 
-_`ClipboardEvent()` コンストラクターは、 {{domxref("Event.Event", "Event()")}} の引数も継承しています。_
+- `type`
+  - : 文字列で、 `ClipboardEvent` の型を表します。これは `copy`, `cut`, `paste` の何れかで、大文字小文字を区別します。
+- `options` {{optional_inline}}
+  - : {{domxref("Event/Event", "Event()")}} で定義されるプロパティに加えて、以下のプロパティを持つオブジェクトです。
+    - `clipboardData` {{optional_inline}}
+      - : {{domxref("DataTransfer")}} で、このクリックボードイベントに関連付けられたものです。既定値は `null` です。
+    - `dataType` {{non-standard_inline}} {{optional_inline}}
+      - : 文字列で、 `data` 引数に含まれるデータの MIME タイプを指定します。既定値は `""` です。
+    - `data` {{non-standard_inline}} {{optional_inline}}
+      - : 文字列で、このクリップボードイベントに関連付けられたデータです。既定値は `""` です。
 
-- _type_
-  - : {{domxref("DOMString")}} で、 `ClipboardEvent` の型を表します。これは `'copy'`, `'cut'`, `'paste'` の何れかで、大文字小文字を区別します。
-- *options* {{optional_inline}}
+### 返値
 
-  - : 以下のようなオプションです。
-
-    - `clipboardData`: {{domxref("DataTransfer")}} で、このクリックボードイベントに関連付けられたものです。
-    - `dataType`{{non-standard_inline}}: {{domxref("DOMString")}} で、 `data` 引数に含まれるデータの MIME タイプを指定します。
-    - `data`{{non-standard_inline}}: {{domxref("DOMString")}} で、このクリップボードイベントに関連付けられたデータです。
+新しい {{domxref("ClipboardEvent")}} オブジェクトです。
 
 ## 仕様書
 

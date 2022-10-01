@@ -1,15 +1,8 @@
 ---
 title: 式と演算子
 slug: Web/JavaScript/Guide/Expressions_and_Operators
-tags:
-  - 初心者
-  - 式
-  - ガイド
-  - JavaScript
-  - 演算子
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
 この章では JavaScript の式 (expression) や演算子 (operator) について、代入、比較、算術、ビット、論理、文字列、三項演算子などを説明しています。
@@ -237,7 +230,7 @@ x[f()] = g()
            この `3` の結果は、内側の配列リテラルの次の要素になります（`f()` の `2` の後です）。
     3. 内側の配列リテラル `[ f(), x = g() ]` の評価が終わりました。
        結果は 2 つの値を持つ配列、 `[ 2, 3 ]` です。
-    4. その配列 `[ 2, 3 ]` が `y` 
+    4. その配列 `[ 2, 3 ]` が `y`
 2. 代入式 `y = [ f(), x = g() ]` の評価が終わりました。
    結果として `y` が新しい値、 `[ 2, 3 ]` になります。
    `x` には `3` が代入されました。

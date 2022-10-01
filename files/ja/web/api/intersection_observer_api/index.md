@@ -1,18 +1,8 @@
 ---
 title: 交差オブザーバー API
 slug: Web/API/Intersection_Observer_API
-tags:
-  - API
-  - Clipping
-  - 交差
-  - 交差オブザーバー API
-  - IntersectionObserver
-  - 概要
-  - パフォーマンス
-  - リファレンス
-  - ウェブ
-translation_of: Web/API/Intersection_Observer_API
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 交差オブザーバー API (Intersection Observer API) は、ターゲットとなる要素が、祖先要素または文書の最上位の{{Glossary("viewport", "ビューポート")}}と交差する変化を非同期的に監視する方法を提供します。

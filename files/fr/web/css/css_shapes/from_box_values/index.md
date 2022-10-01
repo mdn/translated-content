@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Shapes/From_box_values
 original_slug: Web/CSS/CSS_Shapes/Créer_formes_boîtes
 ---
+
 {{CSSRef}}
 
 Une méthode permettant de créer des formes consiste à utiliser les valeurs provenant du modèle de boîte CSS. Dans cet article, nous verrons comment les utiliser.
@@ -59,7 +60,7 @@ La valeur `content-box` correspond à la forme définie par le bord extérieur d
 
 {{EmbedGHLiveSample("css-examples/shapes/box/content-box.html", '100%', 800)}}
 
-> **Note :** Pour en savoir plus sur le modèle de boîte CSS, voir [cet article](/en-US/docs/Learn/CSS/Building_blocks/The_box_model).
+> **Note :** Pour en savoir plus sur le modèle de boîte CSS, voir [cet article](/fr/docs/Learn/CSS/Building_blocks/The_box_model).
 
 ## Quand utiliser les valeurs de boîte
 

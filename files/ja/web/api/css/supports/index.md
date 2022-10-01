@@ -1,16 +1,8 @@
 ---
 title: CSS.supports()
 slug: Web/API/CSS/supports
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - メソッド
-  - リファレンス
-  - supports
-browser-compat: api.CSS.supports
-translation_of: Web/API/CSS/supports
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSS.supports()`** メソッドは、ブラウザーが指定された CSS 機能に対応しているかどうかを論理値で返します。
@@ -38,7 +30,7 @@ CSS.supports(supportCondition);
 
 ### 返値
 
-ブラウザーがそのルールに対応しているのであれば `true`、そうでなければ `false` です。。
+ブラウザーがそのルールに対応しているのであれば `true`、そうでなければ `false` です。
 
 ## 例
 

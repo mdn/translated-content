@@ -1,19 +1,6 @@
 ---
 title: '<meta>: メタデータ要素'
 slug: Web/HTML/Element/meta
-tags:
-  - Document
-  - Element
-  - HTML
-  - HTML charset
-  - HTML document metadata
-  - Reference
-  - Web
-  - charset
-  - http-equiv
-  - metadata
-browser-compat: html.elements.meta
-translation_of: Web/HTML/Element/meta
 ---
 
 {{HTMLRef}}
@@ -52,23 +39,23 @@ translation_of: Web/HTML/Element/meta
       <th>許可されている親要素</th>
       <td>
         <ul>
-            - 
+          <li>
             <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>: {{HTMLElement("head")}} 要素。{{htmlattrxref("http-equiv", "meta")}} がエンコーディング宣言ではない場合は、 <code>&#x3C;head></code> 要素内にある {{HTMLElement("noscript")}} 要素の内部にも配置できます。
-          
-            - 
+          </li>
+          <li>
             <code>&#x3C;meta name></code>: <a
               href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ"
               >メタデータコンテンツ</a
             >を受け入れるすべての要素。
-          
-            - 
+          </li>
+          <li>
             <code>&#x3C;meta itemprop></code>: <a
               href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ"
               >メタデータコンテンツ</a
             >または<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
               >フローコンテンツ</a
             >を受け入れるすべての要素。
-          
+          </li>
         </ul>
       </td>
     </tr>
@@ -91,7 +78,7 @@ translation_of: Web/HTML/Element/meta
   </tbody>
 </table>
 
-<meta>` 要素で提供されるメタデータの型は、以下のいずれかになります。
+`<meta>` 要素で提供されるメタデータの型は、以下のいずれかになります。
 
 - {{htmlattrxref("name", "meta")}} 属性が設定されている場合、`<meta>` 要素は _文書レベルメタデータ_ を提供し、ページ全体に適用されます。
 - {{htmlattrxref("http-equiv", "meta")}} 属性が設定されている場合、 `<meta>` 要素は _プラグ魔ディレクティブ_ であり、同様の名前の HTTP ヘッダーによって与えられるものと同等の情報を提供します。
@@ -133,15 +120,15 @@ translation_of: Web/HTML/Element/meta
       - {{htmlattrxref("content", "meta")}} 属性に正の整数が 1 つだけ含まれている場合は、ページを再読み込みするまでの秒数。
       - {{htmlattrxref("content", "meta")}} 属性に正の整数と、その後に文字列 '`;url=`' と有効な URL がある場合は、別のページにリダイレクトするまでの秒数。
 
-      ##### アクセシビリティの考慮
-
-      `refresh` の値で設定されたページは、時間間隔が短すぎになるという危険性があります。画面の内側から読み上げるような支援技術を利用している人は、自動的にリダイレクトされる前にページの内容を読み、理解することができないかもしれません。また、弱視の人にとっても、突然に予告なくページ内容が更新されると、混乱させる可能性があります。
-
-      - [MDN Understanding WCAG, Guideline 2.1 explanations](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
-      - [MDN Understanding WCAG, Guideline 3.1 explanations](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
-      - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
-      - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
-      - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
+      > **Note:**
+      >
+      > `refresh` の値で設定されたページは、時間間隔が短すぎになるという危険性があります。画面の内側から読み上げるような支援技術を利用している人は、自動的にリダイレクトされる前にページの内容を読み、理解することができないかもしれません。また、弱視の人にとっても、突然に予告なくページ内容が更新されると、混乱させる可能性があります。
+      >
+      > - [MDN Understanding WCAG, Guideline 2.1 explanations](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.> 2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
+      > - [MDN Understanding WCAG, Guideline 3.1 explanations](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+      > - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
+      > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
+      > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
 - {{htmlattrdef("name")}}
 

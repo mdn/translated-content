@@ -1,8 +1,8 @@
 ---
 title: HTML 中的图片
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 在一开始时，Web 仅有文本，那真的是很无趣。幸运的是，没过多久网页上就能嵌入图片和其他有趣的内容了。虽然还有许多其他类型的多媒体，但是从地位比较低的{{htmlelement("img")}}元素开始是符合逻辑的，它常常被用来在网页中嵌入一张简单的图片。在这篇文章中，我们将看到怎样深入的使用它，包括基本的用{{htmlelement("figure")}}来添加说明文字，以及怎样把它和 CSS 背景图片链接起来。
@@ -38,7 +38,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 我们可以用{{htmlelement("img")}} 元素来把图片放到网页上。它是一个空元素（它不需要包含文本内容或闭合标签），最少只需要一个 `src` （一般读作其全称 *source）*来使其生效。`src` 属性包含了指向我们想要引入的图片的路径，可以是相对路径或绝对 URL，就像 {{htmlelement("a")}} 元素的 `href` 属性一样。
 
-> **备注：** 在继续之前，你应该阅读[快速入门 URL 和路径](</zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#URLs与路径(path)快速入门>)来复习一下相对和绝对 URL。
+> **备注：** 在继续之前，你应该阅读[快速入门 URL 和路径](</zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#URLs与路径(path)快速入门>) 来复习一下相对和绝对 URL。
 
 举个例子来看，如果你有一幅文件名为 `dinosaur.jpg` 的图片，且它与你的 HTML 页面存放在相同路径下，那么你可以这样嵌入它：
 
@@ -54,7 +54,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 以此类推。
 
-> **备注：** 搜索引擎也读取图像的文件名并把它们计入 SEO。因此你应该给你的图片取一个描述性的文件名：`dinosaur.jpg` 比 `img835.png `要好。
+> **备注：** 搜索引擎也读取图像的文件名并把它们计入 SEO。因此你应该给你的图片取一个描述性的文件名：`dinosaur.jpg` 比 `img835.png` 要好。
 
 你也可以像下面这样使用绝对路径：
 
@@ -66,9 +66,9 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 > **警告：** 大多数图片是有版权的。**不要**在你的网页上使用一张图片，除非：
 >
-> 1.  你是图片版权所有者
-> 2.  你有图片版权所有者明确的、书面上的使用授权
-> 3.  你有充分的证据证明这张图片是公共领域内的
+> 1. 你是图片版权所有者
+> 2. 你有图片版权所有者明确的、书面上的使用授权
+> 3. 你有充分的证据证明这张图片是公共领域内的
 >
 > 侵犯版权是违法并且不道德的。此外，在得到授权之前**永远不要**把你的`src`属性指向其他人网站上的图片。这被称为"盗链（hotlinking）"。同样，盗取其他人的带宽也是违法的。而且这会降低你的页面的加载速度，而且图片可能会在不受你控制的情况下被移走或用别的令人尴尬的东西替换掉。
 
@@ -136,7 +136,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 ### Image titles 图片标题
 
-类似于[超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用<title>添加支持信息)，你可以给图片增加`title`属性来提供需要更进一步的支持信息。在我们的例子中，可以这样做：
+类似于[超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用\<title>添加支持信息)，你可以给图片增加`title`属性来提供需要更进一步的支持信息。在我们的例子中，可以这样做：
 
 ```html
 <img src="images/dinosaur.jpg"
@@ -158,7 +158,9 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 好，轮到你了！在这个动手练习中，我们希望你可以做一个简单的嵌入图片练习。你有一个基本的 {{htmlelement("img")}} 标签; 我们希望你可以把下面这个 URL 所指向的图片嵌入到 HTML 中：
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 之前我们说过永远不要从其他服务器热链接图片，但这次只是出于学习目的，所以我们会允许你这么做一次。
 
@@ -293,13 +295,15 @@ https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and
 
 有一个更好的做法是使用 HTML5 的 {{htmlelement("figure")}} 和 {{htmlelement("figcaption")}} 元素，它正是为此而被创造出来的：为图片提供一个语义容器，在标题和图片之间建立清晰的关联。我们之前的例子可以重写为：
 
-    <figure>
-      <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
-         alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
-         width="400"
-         height="341">
-      <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>
-    </figure>
+```html
+<figure>
+  <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+      alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
+      width="400"
+      height="341">
+  <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>
+</figure>
+```
 
 这个 {{htmlelement("figcaption")}} 元素 告诉浏览器和其他辅助的技术工具这段说明文字描述了 {{htmlelement("figure")}} 元素的内容。
 

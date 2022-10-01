@@ -1,18 +1,8 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS グリッド
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - gap
-  - recipe:css-property
-browser-compat: css.properties.gap
-translation_of: Web/CSS/gap
 ---
+
 {{CSSRef}}
 
 **`gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、行や列の間のすき間 ({{glossary("gutters", "溝")}}) を定義します。これは {{CSSxRef("row-gap")}} および {{CSSxRef("column-gap")}} の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)です。

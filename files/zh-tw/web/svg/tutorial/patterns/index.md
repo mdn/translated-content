@@ -1,11 +1,11 @@
 ---
 title: 图案
 slug: Web/SVG/Tutorial/Patterns
-translation_of: Web/SVG/Tutorial/Patterns
 ---
+
 {{ PreviousNext("SVG/Tutorial/Gradients", "SVG/Tutorial/Texts") }}
 
-pattern（图案）是一个比较难理解的填充类型。同时，pattern 的作用很强大，所以在这里需要进行一些讨论，以便对填充模式有一个大致的了解。和渐变一样，[`<pattern>`](/en/SVG/Element/pattern)元素也需要放在 SVG 文件的`&ltldefs>`段落里。
+pattern（图案）是一个比较难理解的填充类型。同时，pattern 的作用很强大，所以在这里需要进行一些讨论，以便对填充模式有一个大致的了解。和渐变一样，[`<pattern>`](/zh-TW/SVG/Element/pattern)元素也需要放在 SVG 文件的`&ltldefs>`段落里。
 
 ![](/@api/deki/files/350/=SVG_Pattern_Example.png)
 

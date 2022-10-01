@@ -1,16 +1,8 @@
 ---
 title: '-webkit-text-stroke-width'
 slug: Web/CSS/-webkit-text-stroke-width
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - WebKit
-  - recipe:css-property
-browser-compat: css.properties.-webkit-text-stroke-width
-translation_of: Web/CSS/-webkit-text-stroke-width
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-text-stroke-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの線の太さを指定します。
@@ -23,7 +15,7 @@ translation_of: Web/CSS/-webkit-text-stroke-width
 -webkit-text-stroke-width: medium;
 -webkit-text-stroke-width: thick;
 
-/* &lt;length&gt; 値 */
+/* <length> 値 */
 -webkit-text-stroke-width: 2px;
 -webkit-text-stroke-width: 0.1em;
 -webkit-text-stroke-width: 1mm;

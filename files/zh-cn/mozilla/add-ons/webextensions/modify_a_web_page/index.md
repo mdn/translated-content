@@ -1,8 +1,8 @@
 ---
 title: 修改 web 页面
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
+
 {{AddonSidebar}}
 
 浏览器附加组件 ( add-on ) 常被用于修改网页。例如更改页面的样式，隐藏特定的 DOM 节点或把 DOM 节点注入到页面中。
@@ -57,7 +57,7 @@ header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
-现在安装这个[WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), 然后浏览 [https://developer.mozilla.org/](/)：
+现在安装这个[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), 然后浏览 [https://developer.mozilla.org/](/)：
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
@@ -90,8 +90,8 @@ document.body.appendChild(header);
 
 这里我们要移除"`content_scripts`"键值，并添加两个键：
 
-- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions):要向页面中注入脚本，就需要拥有修改页面对应的权限。[`activeTab`](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)可以临时获得修改当前活动标签所加载的页面的权限。另外还通过 contextmenus 来获取添加右键菜单项的权限。
-- [`background`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): 加载名为 "background.js" 的 ["background script"](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) （长期有效的后台脚本），在该脚本中，我们将设置注入右键菜单的内容脚本。
+- [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions):要向页面中注入脚本，就需要拥有修改页面对应的权限。[`activeTab`](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)可以临时获得修改当前活动标签所加载的页面的权限。另外还通过 contextmenus 来获取添加右键菜单项的权限。
+- [`background`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): 加载名为 "background.js" 的 ["background script"](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) （长期有效的后台脚本），在该脚本中，我们将设置注入右键菜单的内容脚本。
 
 在 "modify-page" 文件夹下创建名为 "background.js"的新文件，内容如下：
 
@@ -110,7 +110,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 });
 ```
 
-在该脚本中我们创建了一个右键菜单项，给了它一个具体的 id 和标题 (将在菜单中显示的文本)。然后又设置了一个事件侦听器，当用户点击菜单项时，检查该菜单项是否就是我们的吞页菜单项。如果是，就通过[`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) 接口，把"page-eater.js" 注入到活动标签页中。这个接口用标签 ID 做为参数：如果省略标签 ID 参数，就默认把脚本注入当前活动标签。
+在该脚本中我们创建了一个右键菜单项，给了它一个具体的 id 和标题 (将在菜单中显示的文本)。然后又设置了一个事件侦听器，当用户点击菜单项时，检查该菜单项是否就是我们的吞页菜单项。如果是，就通过[`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) 接口，把"page-eater.js" 注入到活动标签页中。这个接口用标签 ID 做为参数：如果省略标签 ID 参数，就默认把脚本注入当前活动标签。
 
 现在，附加组件看起来像这样：
 
@@ -121,7 +121,7 @@ modify-page/
     page-eater.js
 ```
 
-重新加载[WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：
+重新加载[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
@@ -142,14 +142,14 @@ modify-page/
       <th scope="row">发送消息</th>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime#sendMessage()"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime#sendMessage()"
             >browser.runtime.sendMessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/Tabs/sendMessage"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/Tabs/sendMessage"
             >browser.tabs.sendMessage()</a
           ></code
         >
@@ -159,14 +159,14 @@ modify-page/
       <th scope="row">接收消息</th>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime#onMessage"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime#onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
@@ -206,7 +206,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 });
 ```
 
-注入 "page-eater.js"后，通过使用 [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) 获取当前活动标签页，然后使用[`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) 将消息发送到该标签页中的内容脚本。该消息的内容 `{replacement: "Message from the add-on!"}。`
+注入 "page-eater.js"后，通过使用 [`tabs.query()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) 获取当前活动标签页，然后使用[`tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) 将消息发送到该标签页中的内容脚本。该消息的内容 `{replacement: "Message from the add-on!"}`。
 
 接下来，修改 "page-eater.js" 如下：
 
@@ -222,22 +222,22 @@ function eatPage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(eatPage);
 ```
 
-现在，不再立即执行吞页，内容脚本将先通过使用 [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)来监听消息。当监听到消息时，内容脚本才开始运作，除了来自`request.replacement`的替换文本不一样以外，其他的脚本运作本质上与之前的相同。
+现在，不再立即执行吞页，内容脚本将先通过使用 [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)来监听消息。当监听到消息时，内容脚本才开始运作，除了来自`request.replacement`的替换文本不一样以外，其他的脚本运作本质上与之前的相同。
 
-如果我们想将消息从内容脚本发送到后台页面，除了在内容脚本中使用 [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) ，其他与上面的过程相反。
+如果我们想将消息从内容脚本发送到后台页面，除了在内容脚本中使用 [`runtime.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) ，其他与上面的过程相反。
 
-> **备注：** 这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 [`tabs.insertCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 函数。
+> **备注：** 这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 [`tabs.insertCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 函数。
 
 ## 了解更多
 
-- [Content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 指南
-- [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key
-- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest key
-- [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript)
-- [`tabs.insertCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)
-- [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage)
-- [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
-- [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
+- [Content scripts](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 指南
+- [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key
+- [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest key
+- [`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript)
+- [`tabs.insertCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)
+- [`tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage)
+- [`runtime.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
+- [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - 使用`content_scripts`的例子：
 
   - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)

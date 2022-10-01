@@ -7,7 +7,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
 <p>{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}</p>
 
-<p><a class="external" href="http://www.khronos.org/webgl/">WebGL</a> позволяет веб-контенту использовать API, основанный на <a class="external" href="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0, для визуализации трёхмерной графики без использования плагинов в HTML элементе <a class="internal" href="/en/HTML/Canvas" title="en/HTML/Canvas"><code>canvas</code></a> в браузерах, которые осуществляют его поддержку. WebGL программы состоят из кода управления, написанном на JavaScript и кода специальных эффектов (шейдерного кода), который выполняется на графическом процессоре. WebGL элементы могут быть смешаны с другими HTML-элементами и собраны с другими частями веб-страницы или фоном веб-страницы.</p>
+<p><a class="external" href="http://www.khronos.org/webgl/">WebGL</a> позволяет веб-контенту использовать API, основанный на <a class="external" href="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0, для визуализации трёхмерной графики без использования плагинов в HTML элементе <a class="internal" href="/en/HTML/Canvas" title="en/HTML/Canvas"><code>canvas</code></a> в браузерах, которые осуществляют его поддержку. WebGL программы состоят из кода управления, написанном на JavaScript и кода специальных эффектов (шейдерного кода), который выполняется на графическом процессоре. WebGL элементы могут быть смешаны с другими HTML-элементами и собраны с другими частями веб-страницы или фоном веб-страницы.</p>
 
 <p>Эта статья знакомит вас с основами использования WebGL. Предполагается, что вы уже знакомы с математическими основами трёхмерной графики. Данная статья не обучит вас OpenGL.</p>
 
@@ -40,7 +40,7 @@ function start() {
     gl.enable(gl.DEPTH_TEST);                               // включает использование буфера глубины
     gl.depthFunc(gl.LEQUAL);                                // определяет работу буфера глубины: более ближние объекты перекрывают дальние
     gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);      // очистить буфер цвета и буфер глубины.
-  }
+  }
 }
 </pre>
 
@@ -60,10 +60,10 @@ function start() {
   gl = null;
 
   try {
-    // Попытаться получить стандартный контекст. Если не получится, попробовать получить экспериментальный.
-    gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  }
-  catch(e) {}
+    // Попытаться получить стандартный контекст. Если не получится, попробовать получить экспериментальный.
+    gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+  }
+  catch(e) {}
 
   // Если мы не получили контекст GL, завершить работу
   if (!gl) {
@@ -98,7 +98,7 @@ function start() {
 
 <ul>
  <li><a href="https://dev.opera.com/articles/introduction-to-webgl-part-1/">Введение в WebGL</a> - Автор: Luz Caballero Ресурс: DEV.OPERA. Эта статья адресована тем, кто хочет узнать что такое WebGL, как работает WebGL и как устроена концепция конвейера визуализации и знакомит с некоторыми библиотеками WebGL.</li>
- <li><a href="http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html">Введение в современный OpenGL</a> - Серия хороших статей о OpenGL, написанная Joe Groff. В них дана вводная информация о OpenGL, начиная с истории возникновения и заканчивая важной концепцией графического конвейера. Весь материал сопровождается примерами с демонстрацией работы OpenGL. Если вы не знакомы с OpenGL, этот материал будет вам полезен.</li>
+ <li><a href="http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html">Введение в современный OpenGL</a> - Серия хороших статей о OpenGL, написанная Joe Groff. В них дана вводная информация о OpenGL, начиная с истории возникновения и заканчивая важной концепцией графического конвейера. Весь материал сопровождается примерами с демонстрацией работы OpenGL. Если вы не знакомы с OpenGL, этот материал будет вам полезен.</li>
 </ul>
 
 <p>{{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}</p>

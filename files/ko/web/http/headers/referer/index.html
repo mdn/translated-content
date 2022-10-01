@@ -17,7 +17,7 @@ browser-compat: http.headers.Referer
 <p><code>Referer</code> 헤더는 URL 프래그먼트 (예 : "#section") 또는 "username : password" 정보를 포함 할 수 없습니다. <em>origin</em>, <em>경로</em>, 및 <em>쿼리 문자열</em>을 포함 할 수는 있습니다. 전송되는 내용은 요청에 대한 referrer 정책에 따라 다릅니다. 정보 및 예제는 Referrer-Policy를 참조하십시오. <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives">정보</a> 와 <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples">예시</a>는 이곳 {{HTTPHeader("Referrer-Policy")}}을 참고하세요.
 <div class="notecard note">
     <h4>Note</h4>
-    <p><p>referer는 단어 "referrer"의 잘못된 철자입니다. 자세한 내용은 {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}을 참고하세요.</p>
+    <p><p>referer는 단어 "referrer"의 잘못된 철자입니다. 자세한 내용은 <a href="https://en.wikipedia.org/wiki/HTTP_referer">HTTP_referer</a>을 참고하세요.</p>
   </div>
 
 <div class="warning">
@@ -57,20 +57,9 @@ Referer: https://example.com/page?q=123
 Referer: https://example.com/
 </pre>
 
-<h2 id="명세서">명세서</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">제목</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Referer", "5.5.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">브라우저 호환성</h2>
 
@@ -79,7 +68,7 @@ Referer: https://example.com/
 <h2 id="See_also">같이 보기</h2>
 
 <ul>
-  <li>{{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}</li>
+  <li><a href="https://en.wikipedia.org/wiki/HTTP_referer">HTTP_referer</a></li>
   <li><a href="/ko/docs/Web/API/Fetch_API">Fetch</a>: {{domxref("Request.referrerPolicy")}}</li>
   <li>outdated 된 {{HTTPHeader("Content-Security-Policy")}} {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} 디렉티브</li>
   <li><a href="/ko/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/aspect-ratio
 ---
+
 {{CSSRef}}
 
 **`aspect-ratio`** est une caractéristique média CSS dont la valeur correspond au ratio ({{cssxref("&lt;ratio&gt;")}}) entre la largeur et la hauteur de la zone d'affichage (_viewport_).
@@ -40,11 +41,8 @@ Pour en savoir plus, vous pouvez consulter [Définir la hauteur et largeur des i
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Media Queries', '#aspect-ratio', 'aspect-ratio')}} | {{Spec2('CSS4 Media Queries')}} | Aucune modification. |
-| {{SpecName('CSS3 Media Queries', '#aspect-ratio', 'aspect-ratio')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.aspect-ratio")}}
+{{Compat}}

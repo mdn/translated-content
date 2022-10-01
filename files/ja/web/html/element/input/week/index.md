@@ -1,21 +1,6 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Element/input/week
-tags:
-  - 要素
-  - フォーム
-  - HTML
-  - HTML 入力型
-  - HTML フォーム
-  - HTML input
-  - Input
-  - 入力要素
-  - 入力型
-  - リファレンス
-  - Week
-  - 週
-browser-compat: html.elements.input.input-week
-translation_of: Web/HTML/Element/input/week
 ---
 
 {{HTMLRef("Input_types")}}
@@ -239,7 +224,7 @@ input:valid+span:after {
 
 > **Warning:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、間違った種類のデータなど) が送信された場合に災害が発生するおそれがあります。
 
-## ブラウザーの対応の扱い
+## ブラウザーの互換性の扱い
 
 前述のように、現時点で week 入力欄を利用する上で一番の問題はブラウザーの互換性です。デスクトップでは Safari と Firefox は対応しておらず、 IE の古いバージョンも対応していません。
 
@@ -342,9 +327,9 @@ fallbackLabel.style.display = 'none';
 var test = document.createElement('input');
 
 try {
-  test.type = 'week';
+  test.type = 'week';
 } catch (e) {
-  console.log(e.description);
+  console.log(e.description);
 }
 
 // もし文字列入力になるならば、 if() {} ブロックの中のコードを実行する

@@ -11,6 +11,7 @@ tags:
   - Noeuds
 translation_of: Web/API/Document/createTreeWalker
 ---
+
 {{ApiRef("Document")}}
 
 La méthode de création **`Document.createTreeWalker()`** renvoie un nouvel objet {{domxref("TreeWalker")}}.
@@ -166,14 +167,11 @@ while(treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                                       | Commentaire                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-document-createtreewalker', 'Document.createTreeWalker')}}                                         | {{Spec2('DOM WHATWG')}}             | Suppression du paramètre `expandEntityReferences`. Les paramètres facultatifs  `whatToShow` et `filter` . |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#NodeIteratorFactory-createTreeWalker', 'Document.createTreeWalker')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.createTreeWalker")}}
+{{Compat}}
 
 ## Voir aussi
 

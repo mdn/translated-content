@@ -10,6 +10,7 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeList/values
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`NodeList.values()`** renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{domxref("Node")}} (_noeud_).
@@ -54,13 +55,11 @@ Le résultat est :
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#interface-nodelist','values() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.values")}}
+{{Compat}}
 
 ## Voir aussi
 

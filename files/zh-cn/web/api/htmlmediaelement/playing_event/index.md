@@ -1,8 +1,8 @@
 ---
 title: 'HTMLMediaElement: playing'
 slug: Web/API/HTMLMediaElement/playing_event
-translation_of: Web/API/HTMLMediaElement/playing_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `playing` 事件在播放准备开始时（之前被暂停或者由于数据缺乏被暂缓）被触发。

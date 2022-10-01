@@ -1,15 +1,8 @@
 ---
 title: カード
 slug: Web/CSS/Layout_cookbook/Card
-tags:
-  - CSS
-  - CSS 料理帳
-  - CSS グリッド
-  - ガイド
-  - カード
-  - css レイアウト
-translation_of: Web/CSS/Layout_cookbook/Card
 ---
+
 {{CSSRef}}
 
 このパターンは、オプションでフッターが付く「カード」部品のリストです。
@@ -75,5 +68,5 @@ translation_of: Web/CSS/Layout_cookbook/Card
 
 ## 関連情報
 
-- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
+- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
 - [包括的な部品: カード](https://inclusive-components.design/cards/)（英語）

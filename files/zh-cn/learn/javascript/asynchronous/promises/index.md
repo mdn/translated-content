@@ -1,9 +1,9 @@
 ---
 title: 如何使用 Promise
 slug: Learn/JavaScript/Asynchronous/Promises
-translation_of: Learn/JavaScript/Asynchronous/Promises
 original_slug: learn/JavaScript/异步/Promises语法
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
 **Promise** 是现代 JavaScript 中异步编程的基础，是一个由异步函数返回的可以向我们指示当前操作所处的状态的对象。在 Promise 返回给调用者的时候，操作往往还没有完成，但 Promise 对象可以让我们操作最终完成时对其进行处理（无论成功还是失败）。
@@ -73,7 +73,7 @@ Promise { <state>: "pending" }
 
 ## 链式使用 Promise
 
-在你通过 `fetch()` API 得到一个 `Response` 对象的时候，你需要调用另一个函数来获取响应数据。这次，我们想获得JSON格式的响应数据，所以我们会调用 `Response` 对象的 {{domxref("Response/json", "json()")}} 方法。事实上，`json()` 也是异步的，因此我们必须连续调用两个异步函数。
+在你通过 `fetch()` API 得到一个 `Response` 对象的时候，你需要调用另一个函数来获取响应数据。这次，我们想获得 JSON 格式的响应数据，所以我们会调用 `Response` 对象的 {{domxref("Response/json", "json()")}} 方法。事实上，`json()` 也是异步的，因此我们必须连续调用两个异步函数。
 
 试试这个：
 
@@ -92,7 +92,7 @@ fetchPromise.then( response => {
 
 执行代码后应该会输出“baked beans”（“products.json”中第一个产品的名称）。
 
-等等! 还记得上一篇文章吗？我们好像说过，在回调中调用另一个回调会出现多层嵌套的情况？我们是不是还说过，这种“回调地狱”使我们的代码难以理解？这不是也一样吗，只不过变成了用 `then()` 调用而已？
+等等！还记得上一篇文章吗？我们好像说过，在回调中调用另一个回调会出现多层嵌套的情况？我们是不是还说过，这种“回调地狱”使我们的代码难以理解？这不是也一样吗，只不过变成了用 `then()` 调用而已？
 
 当然如此。但 Promise 的优雅之处在于 *`then()` 本身也会返回一个 Promise，这个 Promise 将指示 `then()` 中调用的异步函数的完成状态*。这意味着我们可以（当然也应该）把上面的代码改写成这样：
 
@@ -356,7 +356,7 @@ Promise 在所有现代浏览器的最新版本中都可以使用；唯一会出
 
 在这篇文章中，我们没有涉及到所有的 Promise 功能，只是介绍了最有趣和最有用的那一部分。随着你开始学习更多关于 Promise 的知识，你会遇到更多有趣的特性。
 
-许多现代 Web API 是基于 Promise 的，包括 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)、[Web Audio API](/en-US/docs/Web/API/Web_Audio_API)、[Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API) 等等。
+许多现代 Web API 是基于 Promise 的，包括 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)、[Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API) 等等。
 
 ## 参见
 

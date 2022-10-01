@@ -1,17 +1,8 @@
 ---
 title: Notification.permission
 slug: Web/API/Notification/permission
-page-type: web-api-static-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-browser-compat: api.Notification.permission
-translation_of: Web/API/Notification/permission
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `permission` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、ユーザーが現在のオリジンに対してウェブ通知を表示することを許可したかどうか、現在の許可状態を表します。
@@ -25,7 +16,7 @@ translation_of: Web/API/Notification/permission
 - `denied`
   - : 現在のオリジンがシステム通知を表示することについて、ユーザーが明示的に拒否している。
 - `default`
-  - : ユーザーの決定は分からない。この場合、アプリケーションは許可が `denied` であるあｋのように動作する。
+  - : ユーザーの決定は分からない。この場合、アプリケーションは許可が `denied` であるかのように動作する。
 
 ## 例
 

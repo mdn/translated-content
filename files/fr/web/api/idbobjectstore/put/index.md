@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/put
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`put()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un autre _thread_, crée [un clone structuré](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur puis enregistre ce clone dans le magasin d'objet. Cette méthode permet ainsi d'ajouter de nouveaux enregistrements ou de mettre à jour des enregistrements existants dans un magasin d'objet lorsque la transaction est en mode `readwrite` (lecture-écriture)
@@ -148,13 +149,11 @@ objectStoreTitleRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-put-IDBRequest-any-value-any-key', 'put()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.put")}}
+{{Compat}}
 
 ## Voir aussi
 

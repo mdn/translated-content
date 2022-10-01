@@ -3,6 +3,7 @@ title: DedicatedWorkerGlobalScope
 slug: Web/API/DedicatedWorkerGlobalScope
 translation_of: Web/API/DedicatedWorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 L'objet **`DedicatedWorkerGlobalScope`** (le contexte global du {{domxref("Worker")}}) est accessible au moyen du mot clé {{domxref("window.self","self")}}. Certaines fonctions globales additionnelles, des espaces de nom d'objets, et des constructeurs, non associés typiquement au contexte global d'un worker, et néanmoins disponibles, sont listés dans la  [Référence JavaScript](/fr/docs/Web/JavaScript/Reference). Consultez aussi : [Fonctions et classes disponibles dans les Web Workers](/fr/docs/Web/Guide/Needs_categorization/Functions_available_to_workers).
@@ -32,9 +33,9 @@ _Cette interface hérite des propriétés de l'interface {{domxref("WorkerGlobal
 _Cette interface hérite des gestionnaires d'événement de l'interface {{domxref("WorkerGlobalScope")}}, et de son parent {{domxref("EventTarget")}}, et implémente ainsi les gestionnaires d'événement de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, et {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("DedicatedWorkerGlobalScope.onmessage")}}
-  - : C'est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsqu'un événement {{event("message")}} est déclenché. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le worker reçoit un message du document qui l'a initialisé (i.e. à partir de la méthode {{domxref("Worker.postMessage")}}.)
+  - : C'est un gestionnaire d'évènement représentant le code à appeler lorsqu'un événement [`message`]/fr/docs/Web/API/DedicatedWorkerGlobalScope/message_event) est déclenché. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le worker reçoit un message du document qui l'a initialisé (i.e. à partir de la méthode {{domxref("Worker.postMessage")}}.)
 - {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}
-  - : C'est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsqu'un événement {{event("messageerror")}} est déclenché.
+  - : C'est un gestionnaire d'évènement représentant le code à appeler lorsqu'un événement [`messageerror`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event) est déclenché.
 
 ## Méthodes
 
@@ -69,13 +70,11 @@ _Cette interface hérite des méthodes de l'interface {{domxref("WorkerGlobalSco
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dedicatedworkerglobalscope', 'DedicatedWorkerGlobalScope')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DedicatedWorkerGlobalScope")}}
+{{Compat}}
 
 ## Voir aussi
 

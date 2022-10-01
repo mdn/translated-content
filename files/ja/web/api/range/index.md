@@ -1,13 +1,8 @@
 ---
 title: Range
 slug: Web/API/Range
-page-type: web-api-interface
-tags:
-  - API
-  - DOM
-browser-compat: api.Range
-translation_of: Web/API/Range
 ---
+
 {{APIRef("DOM")}}
 
 **`Range`** インターフェイスは、ノードやテキストノードの部品を含むことができる文書の範囲を表します。

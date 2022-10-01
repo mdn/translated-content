@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLFrameSetElement
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 L'interface **`HTMLFrameSetElement`** fournit des propriétés spéciales (au-delà de celles de l'interface standard {{domxref("HTMLElement")}} dont elles héritent aussi) pour manipuler les éléments {{HTMLELEment("frameset")}}.
@@ -36,7 +37,7 @@ _Aucun gestionnaire d'événements spécifique; hérite des gestionnairs d'évé
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("beforeprint")}} est déclenché.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("beforeunload")}} est déclenché.
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event) est déclenché.
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("hashchange")}} est déclenché.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
@@ -58,20 +59,15 @@ _Aucun gestionnaire d'événements spécifique; hérite des gestionnairs d'évé
 - {{domxref("WindowEventHandlers.onstorage")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("storage")}} est déclenché.
 - {{domxref("WindowEventHandlers.onunload")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("unload")}} est déclenché.
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement [`unload`](/fr/docs/Web/API/Window/unload_event) est déclenché.
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#htmlframesetelement", "HTMLFrameSetElement")}}             | {{Spec2('HTML WHATWG')}} | À partir de l'instantané {{SpecName('HTML5 W3C')}}, l'interface {{domxref("WindowEventHandlers")}} a maintenant une propriété `onlanguagechange`. |
-| {{SpecName('HTML5 W3C', "obsolete.html#htmlframesetelement", "HTMLFrameSetElement")}} | {{Spec2('HTML5 W3C')}}     | Instantané d'un précédent {{SpecName('HTML WHATWG')}} Les cadres sont désormais obsolètes. Implémente {{domxref("WindowEventHandlers")}}.       |
-| {{SpecName('DOM2 HTML', 'html.html#ID-ID-43829095', 'HTMLBodyElement')}}                 | {{Spec2('DOM2 HTML')}}     | Aucun changement par rapport à {{SpecName("DOM1")}}.                                                                                                       |
-| {{SpecName('DOM1', 'level-one-html.html#ID-43829095', 'HTMLBodyElement')}}             | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLFrameSetElement")}}
+{{Compat}}
 
 ## Voir aussi
 

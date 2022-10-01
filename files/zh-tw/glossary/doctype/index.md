@@ -1,8 +1,8 @@
 ---
 title: Doctype
 slug: Glossary/Doctype
-translation_of: Glossary/Doctype
 ---
+
 `<!DOCTYPE>`會告知你的{{Glossary("瀏覽器")}}這個文件是用哪個版本的 {{Glossary("HTML")}} （或 {{glossary("XML")}}）撰寫。Doctype 是一種宣告，而非 {{Glossary("tag")}}。你也可以把它想作「document type declaration」（文件類型宣告），或是縮寫的 「DTD」。
 
 ## 了解詳情

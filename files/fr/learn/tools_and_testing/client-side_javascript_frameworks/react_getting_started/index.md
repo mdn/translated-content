@@ -5,6 +5,7 @@ slug: >-
 translation_of: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Dans cet article, nous aurons un premier contact avec React. Nous découvrirons quelques détails sur son contexte et ses cas d'utilisation, effectuerons une configuration basique des outils React sur notre ordinateur local, créerons une application pour démarrer simplement, apprenant au passage les bases du fonctionnement de React.
@@ -82,7 +83,7 @@ const header = (
 );
 ```
 
-> **Note :** Les parenthèses dans l'extrait de code précédent ne sont pas propres à JSX et n'ont aucun effet sur votre application. Elles sont un signal pour vous (et votre ordinateur) que plusieurs lignes de code à l'intérieur font partie de la même expression. Vous pourriez tout aussi bien écrire l'expression d'en-tête comme ceci&nbsp;:
+> **Note :** Les parenthèses dans l'extrait de code précédent ne sont pas propres à JSX et n'ont aucun effet sur votre application. Elles sont un signal pour vous (et votre ordinateur) que plusieurs lignes de code à l'intérieur font partie de la même expression. Vous pourriez tout aussi bien écrire l'expression d'en-tête comme ceci&nbsp;:
 >
 > ```js
 > const header = <header>

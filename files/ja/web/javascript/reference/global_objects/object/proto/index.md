@@ -1,17 +1,8 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-tags:
-  - Deprecated
-  - ECMAScript 2015
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Object.proto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
+
 {{JSRef}}{{Deprecated_header}}
 
 > **Warning:** オブジェクトの `[[Prototype]]` を変更することは、最新の JavaScript エンジンがプロパティアクセスを最適化する仕組み上、***すべての***ブラウザーや JavaScript エンジンにおいて、とても低速な操作となります。プロトタイプの継承関係を変更することによる性能上の影響は微細で広範囲にわたり、単に `obj.__proto__ = ...` という文の実行時間に留まらず、 `[[Prototype]]` が変更された***いずれかの***オブジェクトへのアクセスを持つ***あらゆる***コードに及ぶ可能性があります。性能を気にしている場合、オブジェクトの `[[Prototype]]` の変更は避けるべきです。代わりに、 {{JSxRef("Object.create()")}} を使用して求める `[[Prototype]]` をもつオブジェクトを新たに生成してください。
@@ -53,9 +44,9 @@ console.log(shape.__proto__ === Circle);  // false
 
 const ShapeA = function () {};
 const ShapeB = {
-    a() {
-        console.log('aaa');
-    }
+    a() {
+        console.log('aaa');
+    }
 };
 console.log(ShapeA.prototype.__proto__ = ShapeB);
 

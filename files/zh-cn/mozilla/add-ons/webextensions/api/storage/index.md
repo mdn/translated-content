@@ -1,19 +1,15 @@
 ---
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
-tags:
-  - Add-ons
-  - Extensions
-  - Strorage
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 ---
+
 {{AddonSidebar}}使浏览器扩展能够储存及获取数据，以及监听储存的数据的变化。
 
-此存储系统 API 基于 [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), 并有少许不同。
+此存储系统 API 基于 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API), 并有少许不同。
 
-为了使用该 API，您需要在[manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)文件包含"storage"[权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions)。每一个浏览器扩展有自己的储存区域，每一个储存区域又分为几种不同的存储类型。
+为了使用该 API，您需要在[manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)文件包含"storage"[权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions)。每一个浏览器扩展有自己的储存区域，每一个储存区域又分为几种不同的存储类型。
 
-虽然此 API 类似于{{domxref("Window.localStorage")}}，但仍建议您不要在插件中使用`Window.localStorage。当用户由于隐私原因清除历史浏览记录及数据时，火狐会将在浏览器扩展使用` localStorage API 存储的数据一并清除。而使用 `storage.localAPI存储的数据将会恰当保留。`
+虽然此 API 类似于 {{domxref("Window.localStorage")}}，但仍建议你不要在插件中使用 `Window.localStorage`。当用户由于隐私原因清除历史浏览记录及数据时，火狐会将在浏览器扩展使用 `localStorage API` 存储的数据一并清除。而使用 `storage.localAPI` 存储的数据将会恰当保留。
 
 ## 类型
 
@@ -40,11 +36,11 @@ storage 有 3 个属性，每一个代表不同的存储区域。
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.storage")}}
+{{Compat}}
 
-> **备注：** "Chrome 不兼容"这部分来源于 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities) 使用[WebExtChromeCompat](/en-US/docs/Template:WebExtChromeCompat) macro.
+> **备注：** "Chrome 不兼容"这部分来源于 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >
-> 如果需要更新这部分，请编辑 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities), 然后刷新页面即可看见所做更改。
+> 如果需要更新这部分，请编辑 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), 然后刷新页面即可看见所做更改。
 
 ### 在 Edge 中的不兼容
 
@@ -56,7 +52,8 @@ Promises 在 Edge 中不被支持，使用 callbacks 代替。
 >
 > Microsoft Edge 的适配数据由 Microsoft Corporation 提供并且被包含在 Creative Commons Attribution 3.0 United States License 许可证下。
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -83,4 +80,4 @@ Promises 在 Edge 中不被支持，使用 callbacks 代替。
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

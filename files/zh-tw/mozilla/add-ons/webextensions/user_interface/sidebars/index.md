@@ -1,10 +1,8 @@
 ---
 title: 側邊欄
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-tags:
-  - 擴充套件
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 ---
+
 {{AddonSidebar}}
 
 側邊欄是一個顯示在瀏覽器視窗上、網頁旁邊的面板。瀏覽器提供能讓用戶看見目前可用的側邊欄並且擇一顯示的 UI。例如，Firefox 有一個 "檢視 > 側邊欄" 的選單。一次只能有一個側邊欄顯示，而那個側邊欄會顯示在所有的頁籤以及瀏覽器視窗。
@@ -34,7 +32,7 @@ browser.windows.getCurrent({populate: true}).then((windowInfo) => {
 
 ## 指定側邊欄
 
-要指定側邊欄，在 manifest.json 裡透過 [`sidebar_action`](/en-US/Add-ons/WebExtensions/manifest.json/sidebar_action) 鍵定義文件、標題以及圖示：
+要指定側邊欄，在 manifest.json 裡透過 [`sidebar_action`](/zh-TW/Add-ons/WebExtensions/manifest.json/sidebar_action) 鍵定義文件、標題以及圖示：
 
 ```json
 "sidebar_action": {

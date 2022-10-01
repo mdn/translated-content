@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Paths
 original_slug: Web/SVG/Tutoriel/Paths
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/Formes_de_base", "Web/SVG/Tutoriel/Fills_and_Strokes") }}
 
 L’élément [`<path>`](/fr/Web/SVG/Element/path) (_chemin_ en français) est le plus versatile des éléments de la bibliothèque SVG parmi les [formes basiques](/fr/docs/Web/SVG/Tutoriel/Formes_de_base). Vous pouvez l’utiliser pour créer des lignes, des courbes, des arcs et autres.
@@ -113,7 +114,7 @@ Dans ces exemples, il serait probablement plus simple d’utiliser un élément 
 
 ## Commandes pour les courbes
 
-Il existe trois commandes différentes pour créer des courbes. Deux d’entre elles sont des courbes de Bézier, et la troisième est un «&nbsp;arc&nbsp;» ou section de cercle. Il se peut que vous ayez déjà acquis une expérience pratique avec les courbes de Bézier en utilisant les outils de chemins avec Inkscape, Illustrator ou Photoshop. Pour une description complète des concepts mathématiques sous-jacents, vous pouvez consulter la [page Wikipedia Courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier).
+Il existe trois commandes différentes pour créer des courbes. Deux d’entre elles sont des courbes de Bézier, et la troisième est un «&nbsp;arc&nbsp;» ou section de cercle. Il se peut que vous ayez déjà acquis une expérience pratique avec les courbes de Bézier en utilisant les outils de chemins avec Inkscape, Illustrator ou Photoshop. Pour une description complète des concepts mathématiques sous-jacents, vous pouvez consulter la [page Wikipédia sur les courbes de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier).
 
 Il existe une infinité de courbes de Bézier, mais seulement deux des plus simples d’entre elles sont disponibles dans les éléments `path`: l’une cubique, invoquée avec `C`, et l’autre quadratique, invoquée avec `Q`.
 
