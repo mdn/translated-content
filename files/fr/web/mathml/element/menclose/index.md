@@ -59,11 +59,8 @@ L'élément MathML `<menclose>` permet d'afficher son contenu groupé au sein d'
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.menclose', 'menclose') }} | {{ Spec2('MathML3') }} | Définition actuelle |
-| {{ SpecName('MathML2', 'chapter3.html#presm.menclose', 'menclose') }} | {{ Spec2('MathML2') }} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.menclose")}}
+{{Compat}}

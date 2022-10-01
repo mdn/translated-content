@@ -129,14 +129,11 @@ Comme vous le voyez, la rapport inclut le chemin complet de la ressource à l'or
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire          |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Content-Security-Policy-Report-Only")}}
+{{Compat}}
 
 ## Voir aussi
 

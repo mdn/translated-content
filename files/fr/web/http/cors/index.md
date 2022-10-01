@@ -58,7 +58,7 @@ Un aperçu « côté serveur » des fonctionnalités CORS se trouve dans l'artic
 
 ### Requêtes simples
 
-Certaines requêtes ne nécessitent pas de [requête CORS préliminaire](#preflight). Dans le reste de cet article, ce sont ce que nous appellerons des requêtes « simples » (bien que la spécification {{SpecName('Fetch')}} (qui définit le CORS) n'utilise pas ce terme). Une requête simple est une requête qui respecte les conditions suivantes :
+Certaines requêtes ne nécessitent pas de [requête CORS préliminaire](#preflight). Dans le reste de cet article, ce sont ce que nous appellerons des requêtes « simples » (bien que la spécification <i lang="en">Fetch</i> (qui définit le CORS) n'utilise pas ce terme). Une requête simple est une requête qui respecte les conditions suivantes :
 
 - Les seules méthodes autorisées sont :
 
@@ -502,18 +502,11 @@ Voir [ci-avant pour des exemples d'utilisation de cet en-tête](#preflight).
 
 ## Spécifications
 
-| Spécification                                                    | État                     | Commentaires                                                                                    |
-| ---------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | Nouvelle définition, remplace la spécification [W3C pour le CORS](https://www.w3.org/TR/cors/). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
-
-### Notes de compatibilité
-
-- Internet Explorer 8 et 9 exposent les fonctionnalités relatives au CORS via l'objet `XDomainRequest`. L'implémentation complète est disponible à partir d'IE 10.
-- Bien que Firefox 3.5 ait introduit la prise en charge des requêtes `XMLHttpRequest` entre différents sites et des polices web, certaines requêtes étaient limitées jusqu'à des versions ultérieures. Plus précisément, Firefox 7 permet les requêtes multi-origines pour les textures WebGL et Firefox 9 permet la récupération d'images dessinées sur un canevas via `drawImage`.
+{{Compat}}
 
 ## Voir aussi
 

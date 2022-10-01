@@ -67,13 +67,11 @@ WebAssembly est conçu comme un standard web par le [groupe communautaire du W3C
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires                                            |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('WebAssembly JS')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour l'API JavaScript. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Voir aussi
 

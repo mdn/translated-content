@@ -40,13 +40,11 @@ console.log(table.length);   // "3"
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires                                       |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblytableprototypelength', 'length')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Table.length")}}
+{{Compat}}
 
 ## Voir aussi
 

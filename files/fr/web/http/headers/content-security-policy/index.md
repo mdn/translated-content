@@ -188,18 +188,11 @@ Pour plus d'exemples, consulter [les recommandations de Mozilla pour la sécurit
 
 ## Spécifications
 
-| Spécification                                            | État                                                 | Commentaires                                                                                                                                                                |
-| -------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{specName("CSP 3.0")}}                         | {{Spec2('CSP 3.0')}}                         | Ajout de `manifest-src`, `navigation-to`, `report-to`, `strict-dynamic`, `worker-src`. `frame-src` n'est plus déprécié. `report-uri` est déprécié au profit de `report-to`. |
-| {{specName("Mixed Content")}}                 | {{Spec2("Mixed Content")}}                 | Ajout de `block-all-mixed-content`.                                                                                                                                         |
-| {{specName("Subresource Integrity")}}         | {{Spec2("Subresource Integrity")}}         | Ajout de `require-sri-for`.                                                                                                                                                 |
-| {{specName("Upgrade Insecure Requests")}} | {{Spec2("Upgrade Insecure Requests")}} | Ajout de `upgrade-insecure-requests`.                                                                                                                                       |
-| {{specName("CSP 1.1")}}                         | {{Spec2("CSP 1.1")}}                         | Ajout de `base-uri`, `child-src`, `form-action`, `frame-ancestors`, `plugin-types`, `referrer`, `reflected-xss` et `report-uri`. Dépréciation de `frame-src`.               |
-| {{specName("CSP 1.0")}}                         | {{Spec2("CSP 1.0")}}                         | Définition de `connect-src`, `default-src`, `font-src`, `frame-src`, `img-src`, `media-src`, `object-src`, report-uri, `sandbox`, `script-src` et `style-src`.              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy")}}
+{{Compat}}
 
 ## Voir aussi
 

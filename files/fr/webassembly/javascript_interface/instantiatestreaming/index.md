@@ -56,13 +56,11 @@ Ensuite, on accède au champ `instance` de l'objet `ResultObject` afin de pouvoi
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                                         | Commentaires                      |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------- |
-| {{SpecName('WebAssembly Embedding', '#webassemblyinstantiatestreaming', 'instantiateStreaming()')}} | {{Spec2('WebAssembly Embedding')}} | Brouillon de définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.instantiateStreaming")}}
+{{Compat}}
 
 ## Voir aussi
 

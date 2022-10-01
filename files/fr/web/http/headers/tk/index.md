@@ -64,15 +64,13 @@ Un entête `Tk` pour une ressource qui prétend ne pas être suivie :
 Tk: N
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                    | Status                       | Comment             |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Tracking','#Tk-header-defn', 'Tk header field')}} | {{Spec2("Tracking")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Tk")}}
+{{Compat}}
 
 ## Voir aussi
 

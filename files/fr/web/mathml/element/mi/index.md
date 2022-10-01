@@ -82,15 +82,8 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaires           |
-| ---------------------------------------------------------------------------- | ---------------------------- | ---------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mi', 'mi') }} | {{ Spec2('MathML3') }} | Spécification actuelle |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mi', 'mi') }} | {{ Spec2('MathML2') }} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.mi")}}
-
-### Note relative à Gecko
-
-À partir de Gecko 20.0 {{geckoRelease("20.0")}} une valeur sans unité est autorisée pour `mathsize`.
+{{Compat}}
