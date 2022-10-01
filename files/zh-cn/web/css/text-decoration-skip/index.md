@@ -83,4 +83,4 @@ p {
 
 ## Browser Compatibility
 
-{{Compat("css.properties.text-decoration-skip")}}
+{{Compat}}

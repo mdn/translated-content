@@ -46,8 +46,8 @@ _没有专有属性。_
 
 ## DOM 接口
 
-该元素实现了`SVGGElement的所有接口`.
+该元素实现了 `SVGGElement` 的所有接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.g")}}
+{{Compat}}

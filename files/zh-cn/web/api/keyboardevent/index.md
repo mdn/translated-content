@@ -266,7 +266,7 @@ The `KeyboardEvent` interface specification went through numerous draft versions
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent")}}
+{{Compat}}
 
 ### 兼容性说明
 

@@ -2,6 +2,7 @@
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/API/theme
 ---
+
 {{AddonSidebar}}
 
 ブラウザー拡張機能がブラウザーのテーマを更新できるようにします。

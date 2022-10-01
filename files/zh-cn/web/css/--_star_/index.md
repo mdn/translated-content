@@ -76,7 +76,7 @@ CSS 自定义属性是可以级联的：每一个自定义属性可以多次出�
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
 ## 参阅
 

@@ -2,6 +2,7 @@
 title: animation-duration
 slug: Web/CSS/animation-duration
 ---
+
 {{CSSRef}}
 
 **`animation-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 回のアニメーション周期が完了するまでの所要時間を設定します。

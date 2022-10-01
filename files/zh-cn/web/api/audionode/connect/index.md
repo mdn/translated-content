@@ -22,7 +22,7 @@ AudioNode.connect(destination, outputIndex);
 - `outputIndex` {{optional_inline}}
   - : 一个索引，用于描述当前 `AudioNode` 的哪个输出会连接到 destination。索引数字是由输出频道（详见 [Audio channels](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels)）的数量来确定的。当你只能将给定的输出连接到给定的输入一次（重复的尝试会被忽略）时，可以通过多次调用 `connect()` 将一个输出连接到多个输入。可以通过这样来实现扇出。这个参数的默认值为 0。
 - `inputIndex` {{optional_inline}}
-  - : 一个索引，用于描述当前 `AudioNode` 会连接到 destination 的哪个输入，它的默认值是 0。索引数字是由输入频道（详见 [Audio channels](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels)）的数量来确定的。将一个 `AudioNode` 连接回之前的 `AudioNode`，以此形成一个圈是可行的。 不过只在这个圈里有至少一个 {{domxref("DelayNode")}} 才可行。否则会抛出一个 `NotSupportedError` 异常。此参数在 destination 是 {{domxref("AudioParam")}}时不可用。
+  - : 一个索引，用于描述当前 `AudioNode` 会连接到 destination 的哪个输入，它的默认值是 0。索引数字是由输入频道（详见 [Audio channels](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels)）的数量来确定的。将一个 `AudioNode` 连接回之前的 `AudioNode`，以此形成一个圈是可行的。不过只在这个圈里有至少一个 {{domxref("DelayNode")}} 才可行。否则会抛出一个 `NotSupportedError` 异常。此参数在 destination 是 {{domxref("AudioParam")}}时不可用。
 
 ### 返回值
 
@@ -112,7 +112,7 @@ Therefore, it is possible to choose the range in which an {{domxref("AudioParam"
 
 ## Browser compatibility
 
-{{Compat("api.AudioNode.connect")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: Paths
 slug: Web/SVG/Tutorial/Paths
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 {{SVGElement('path')}} 要素は、 SVG の[基本図形](/ja/docs/Web/SVG/Tutorial/Basic_Shapes)ライブラリの中でもっとも強力な要素です。これは、直線、曲線、弧などを作成するために用いることができます。

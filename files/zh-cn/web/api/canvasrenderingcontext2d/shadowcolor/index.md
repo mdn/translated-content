@@ -14,7 +14,7 @@ ctx.shadowColor = color;
 ```
 
 - `color`
-  - : 可以转换成 CSS {{cssxref("&lt;color&gt;")}} 值的{{domxref("DOMString")}} 字符串。 默认值是 fully-transparent black.
+  - : 可以转换成 CSS {{cssxref("&lt;color&gt;")}} 值的{{domxref("DOMString")}} 字符串。默认值是 fully-transparent black.
 
 ## 示例
 
@@ -92,7 +92,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.shadowColor")}}
+{{Compat}}
 
 ## 参见
 

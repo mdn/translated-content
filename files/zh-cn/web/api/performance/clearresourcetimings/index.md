@@ -62,4 +62,4 @@ function clear_performance_timings() {
 
 ## Browser compatibility
 
-{{Compat("api.Performance.clearResourceTimings")}}
+{{Compat}}

@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/ellipse
 
 {{APIRef}} {{SeeCompatTable}}
 
-**`CanvasRenderingContext2D.ellipse()`** 是 Canvas 2D API 添加椭圆路径的方法。椭圆的圆心在（x,y）位置，半径分别是*radiusX* 和 _radiusY_ ，按照*anticlockwise*（默认顺时针）指定的方向，从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
+**`CanvasRenderingContext2D.ellipse()`** 是 Canvas 2D API 添加椭圆路径的方法。椭圆的圆心在（x,y）位置，半径分别是*radiusX* 和 _radiusY_，按照*anticlockwise*（默认顺时针）指定的方向，从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
 
 ## 语法
 
@@ -112,7 +112,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.ellipse")}}
+{{Compat}}
 
 ## 参见
 

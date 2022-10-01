@@ -25,4 +25,4 @@ window.stop();
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.stop")}}
+{{Compat}}

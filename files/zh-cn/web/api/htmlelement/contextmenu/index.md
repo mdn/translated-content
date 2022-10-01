@@ -24,7 +24,7 @@ contextMenu.firstElementChild.label = "New label";
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.contextMenu")}}
+{{Compat}}
 
 ## 相关链接
 

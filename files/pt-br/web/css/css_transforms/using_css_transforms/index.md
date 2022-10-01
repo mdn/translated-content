@@ -33,7 +33,7 @@ Este exemplo cria um iframe que permite que a página inicial do Google seja uti
 
 Este exemplo cria um iframe que permite que você use a página inicial do Google inclinada em 10 graus no eixo X.
 
-[Veja um exemplo funcionando](/@api/deki/files/2922/=skewed-google-sample.html "http://developer.mozilla.org/editor/fckeditor/core/editor/@api/deki/files/2922/=skewed-google-sample.html")
+[Veja um exemplo funcionando](/@api/deki/files/2922/=skewed-google-sample.html)
 [View uma foto do exemplo](/@api/deki/files/2923/=skewed-google.png)
 
 ```html
@@ -506,4 +506,4 @@ Feito isso, você pode trabalhar com elementos 3D.
 
 ## Veja também
 
-- [Usando deviceorientation com 3D Transforms](/en/Using_Deviceorientation_In_3D_Transforms "Using Deviceorientation In 3D Transforms")
+- [Usando deviceorientation com 3D Transforms](/en/Using_Deviceorientation_In_3D_Transforms)

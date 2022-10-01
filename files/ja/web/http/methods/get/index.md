@@ -2,6 +2,7 @@
 title: GET
 slug: Web/HTTP/Methods/GET
 ---
+
 {{HTTPSidebar}}
 
 **HTTP の `GET` メソッド**は、特定のリソースの表現をリクエストします。 `GET` を使用したリクエストはデータをリクエストするためだけに使用してください（データを含めるべきではありません）。

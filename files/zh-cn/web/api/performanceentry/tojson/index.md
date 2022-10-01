@@ -78,4 +78,4 @@ function check_PerformanceEntry(obj) {
 
 ## Browser compatibility
 
-{{Compat("api.PerformanceEntry.toJSON")}}
+{{Compat}}

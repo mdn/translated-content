@@ -5,7 +5,7 @@ slug: Web/SVG/Element/polygon
 
 {{SVGRef}}
 
-`polygon 元素定义了一个由一组首尾相连的直线线段构成的闭合多边形形状。最后一点连接到第一点。欲了解开放形状，请看{{SVGElement("polyline")}}元素。`
+**`polygon`** 元素定义了一个由一组首尾相连的直线线段构成的闭合多边形形状。最后一点连接到第一点。欲了解开放形状，请看{{SVGElement("polyline")}}元素。
 
 ## 用法
 
@@ -34,11 +34,11 @@ slug: Web/SVG/Element/polygon
 
 ## DOM 接口
 
-该元素实现了`SVGPolygonElement接口。`
+该元素实现了 `SVGPolygonElement` 接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.polygon")}}
+{{Compat}}
 
 ## 相关内容
 

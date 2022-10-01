@@ -5,7 +5,7 @@ translation_of: Web/API/IDBCursor
 ---
 {{APIRef("IndexedDB")}}
 
-O **`IDBCursor `**é uma interface da [API IndexedDB](/pt-BR/docs/IndexedDB) que representa o [cursor](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor) para atravessar ou interagir sobre vários registros em um banco de dados.
+O **`IDBCursor`** é uma interface da [API IndexedDB](/pt-BR/docs/IndexedDB) que representa o [cursor](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor) para atravessar ou interagir sobre vários registros em um banco de dados.
 
 O cursor tem uma fonte que indica qual índice ou armazenamento o objeto está sobre a iteração. Ele tem uma posição dentro do intervalo, e move-se numa direcção que é aumentar ou diminuir na ordem de chaves ficha. O cursor permite que um aplicativo para processar de forma assíncrona todos os registros na faixa do cursor.
 
@@ -18,7 +18,7 @@ Pode ter um número ilimitado de cursores ao mesmo tempo. Você sempre consegue 
 - {{domxref("IDBCursor.advance()")}}
   - : Define o número de vezes um cursor deve mover a sua posição para a frente.
 - {{domxref("IDBCursor.continue()")}}
-  - : Avança o cursor para a próxima posição ao longo de sua direção, para o item cuja chave corresponde ao parâmetro ` chave``  `opcional.
+  - : Avança o cursor para a próxima posição ao longo de sua direção, para o item cuja chave corresponde ao parâmetro `chave` opcional.
 - {{domxref("IDBCursor.delete()")}}
   - : Retorna um {{domxref("IDBRequest")}} objeto, e, em um segmento separado, exclui o registro na posição do cursor, sem alterar a posição do cursor. Isso pode ser usado para excluir registros específicos.
 - {{domxref("IDBCursor.update()")}}
@@ -47,10 +47,10 @@ Pode ter um número ilimitado de cursores ao mesmo tempo. Você sempre consegue 
 
 > **Aviso:** These constants are no longer available. You should use the string constants directly instead. ({{ bug(891944) }})
 
-- `NEXT `: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
+- `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
 - `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.
-- `PREV `: `"prev"` : The cursor shows all records, including duplicates. It starts at the upper bound of the key range and moves downwards (monotonically decreasing in the order of keys).
-- `PREVUNIQUE `: `"prevunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the upper bound of the key range and moves downwards.
+- `PREV`: `"prev"` : The cursor shows all records, including duplicates. It starts at the upper bound of the key range and moves downwards (monotonically decreasing in the order of keys).
+- `PREVUNIQUE`: `"prevunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the upper bound of the key range and moves downwards.
 
 ## Example
 

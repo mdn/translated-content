@@ -2,6 +2,7 @@
 title: VRDisplayCapabilities.canPresent
 slug: Web/API/VRDisplayCapabilities/canPresent
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VRDisplayCapabilities")}} インターフェイスの **`canPresent`** 読取専用プロパティは，VR ディスプレイが（HMD を通じて）コンテンツを表示(present)可能かどうかの状態を [`Boolean`](/ja/docs/Web/API/Boolean) で返します．

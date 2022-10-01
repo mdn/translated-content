@@ -115,7 +115,7 @@ xhrButtonAbort.addEventListener('click', () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.load_event")}}
+{{Compat}}
 
 **了解更多**
 

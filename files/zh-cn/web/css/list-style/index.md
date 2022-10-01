@@ -71,7 +71,7 @@ List 2
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.list-style")}}
+{{Compat}}
 
 ## 另参见
 

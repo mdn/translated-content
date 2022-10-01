@@ -226,4 +226,4 @@ html, body, .holster {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-snap-type")}}
+{{Compat}}

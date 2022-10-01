@@ -2,6 +2,7 @@
 title: SourceBuffer.appendBuffer()
 slug: Web/API/SourceBuffer/appendBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`appendBuffer()`** メソッドは、{{jsxref("ArrayBuffer")}} オブジェクトまたは `ArrayBufferView` オブジェクトからのメディアセグメントデータを `SourceBuffer` に追加します。

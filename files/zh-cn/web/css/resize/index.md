@@ -118,7 +118,7 @@ p {
 
 ## Browser compatibility
 
-{{Compat("css.properties.resize")}}
+{{Compat}}
 
 ## See also
 

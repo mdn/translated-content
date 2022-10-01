@@ -52,8 +52,8 @@ function handleOrientation(orientData) {
 关于每一个轴的记录值表示的是相对于标准的坐标系，设备在某一个给定轴上的旋转量。[Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained) 这篇文章有更详细的描述，下面是对这篇文章的总结。
 
 - {{ domxref("DeviceOrientationEvent.alpha") }} 表示设备沿 z 轴上的旋转角度，范围为 0\~360。
-- {{ domxref("DeviceOrientationEvent.beta") }} 表示设备在 x 轴上的旋转角度，范围为-180\~180。它描述的是设备由前向后旋转的情况。
-- {{ domxref("DeviceOrientationEvent.gamma") }} 表示设备在 y 轴上的旋转角度，范围为-90\~90。它描述的是设备由左向右旋转的情况。
+- {{ domxref("DeviceOrientationEvent.beta") }} 表示设备在 x 轴上的旋转角度，范围为 -180\~180。它描述的是设备由前向后旋转的情况。
+- {{ domxref("DeviceOrientationEvent.gamma") }} 表示设备在 y 轴上的旋转角度，范围为 -90\~90。它描述的是设备由左向右旋转的情况。
 
 ### 例子
 

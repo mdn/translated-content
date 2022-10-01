@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web/Installing_basic_software
 l10n:
   sourceCommit: c3f60e53c878be3cc8d196c31a83928a42449088
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
 *基本的なソフトウェアのインストール*では、簡単なウェブ開発をするのに必要なツールを紹介し、それらのツールを適切にインストールする方法を紹介します。

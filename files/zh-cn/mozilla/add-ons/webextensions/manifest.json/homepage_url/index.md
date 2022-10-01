@@ -41,4 +41,4 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/主页地址
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.manifest.homepage_url")}}
+{{Compat}}

@@ -26,7 +26,7 @@ var documentFragment = templateElement.content.cloneNode(true);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLTemplateElement.content")}}
+{{Compat}}
 
 ## 相关链接
 

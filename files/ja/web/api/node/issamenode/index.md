@@ -2,6 +2,7 @@
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
 ---
+
 {{APIRef("DOM")}}
 
 **`isSameNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、 [`===` 厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)の古い別名です。

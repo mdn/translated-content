@@ -48,7 +48,7 @@ gl.uniformMatrix2x3fv(loc, false, [1, 2, 3, 4, 5, 6]);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.uniformMatrix2fv")}}
+{{Compat}}
 
 ## 令见
 

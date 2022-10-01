@@ -9,4 +9,4 @@ slug: Web/HTTP/Headers/Sec-WebSocket-Accept
 
 ## Browser compatibility
 
-{{Compat("http.headers.Sec-WebSocket-Accept")}}
+{{Compat}}

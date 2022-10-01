@@ -2,6 +2,7 @@
 title: Request
 slug: Web/API/Request
 ---
+
 {{APIRef("Fetch API")}}
 
 **`Request`** は [Fetch API](/ja/docs/Web/API/Fetch_API) のインターフェイスで、リソースのリクエストを表します。

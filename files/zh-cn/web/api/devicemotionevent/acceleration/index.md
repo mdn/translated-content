@@ -32,7 +32,7 @@ var acceleration = instanceOfDeviceMotionEvent.acceleration;
 
 ## 浏览器兼容性
 
-{{Compat("api.DeviceMotionEvent.acceleration")}}
+{{Compat}}
 
 ## 推荐浏览
 

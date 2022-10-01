@@ -19,9 +19,9 @@ Uma **`Promise`** representa um proxy para um valor que não é necessariamente 
 
 Uma **`Promise`** está em um destes estados:
 
-- _pending (\_pendente_)\_: Estado inicial, que não foi realizada nem rejeitada.
-- \_fulfilled (\_realizada): sucesso na operação.
-- \_rejected (\_rejeitado): falha na operação.
+- _pending (pendent)_: Estado inicial, que não foi realizada nem rejeitada.
+- _fulfilled (realizada)_: sucesso na operação.
+- _rejected (rejeitado)_: falha na operação.
 
 Uma promessa pendente pode se tornar _realizada_ com um valor ou _rejeitada_ por um motivo (erro). Quando um desses estados ocorre, o método `then` do `Promise` é chamado, e ele chama o método de tratamento associado ao estado (`rejected` ou `resolved`). Se a promessa foi realizada ou rejeitada quando o método de tratamento correspondente for associado, o método será chamado, desta forma não há uma condição de competição entre uma operação assíncrona e seus manipuladores que estão sendo associados.
 
@@ -127,7 +127,7 @@ Este exemplo é executado pelo click do botão. Você precisa de uma versão de 
 
 ### Carregando uma imagem com XHR
 
-Outro simples exemplo usando `Promise` e [`XMLHTTPRequest`](/en-US/docs/Web/API/XMLHttpRequest) para carregar imagens está disponível no repositório GitHub MDN[ promise-test](https://github.com/mdn/js-examples/blob/master/promises-test/index.html). Você também pode [vê-lo em ação](https://mdn.github.io/js-examples/promises-test/). Cada passo é comentado e lhe permite acompanhar de perto a arquitetura de Promise e XHR.
+Outro simples exemplo usando `Promise` e [`XMLHTTPRequest`](/en-US/docs/Web/API/XMLHttpRequest) para carregar imagens está disponível no repositório GitHub MDN [promise-test](https://github.com/mdn/js-examples/blob/master/promises-test/index.html). Você também pode [vê-lo em ação](https://mdn.github.io/js-examples/promises-test/). Cada passo é comentado e lhe permite acompanhar de perto a arquitetura de Promise e XHR.
 
 ## Especificações
 

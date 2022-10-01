@@ -32,13 +32,13 @@ slug: Web/HTML/Element/bgsound
 
 ## 备注
 
-类似的功能在一些版本的 Netscape 中使用\<embed>标签来调用音频播放器。
+类似的功能在一些版本的 Netscape 中使用 \<embed> 标签来调用音频播放器。
 
-你可以使用自闭合标签`<bgsound />。然后由于它并非标准的一部分，XHTML 会认为它无效。`
+你可以使用自闭合标签`<bgsound />`。然后由于它并非标准的一部分，XHTML 会认为它无效。
 
 ## 浏览器兼容
 
-{{Compat("html.elements.bgsound")}}
+{{Compat}}
 
 ## 参见
 

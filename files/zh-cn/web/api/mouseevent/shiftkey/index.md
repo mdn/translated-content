@@ -52,7 +52,7 @@ You can also use the SHIFT key together with the ALT key.</p>
 
 ## Browser compatibility
 
-{{Compat("api.MouseEvent.shiftKey")}}
+{{Compat}}
 
 ## See also
 

@@ -120,7 +120,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.overflow")}}
+{{Compat}}
 
 ## See also
 

@@ -75,7 +75,7 @@ p.para2 {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-language-override")}}
+{{Compat}}
 
 ## 另请参阅
 

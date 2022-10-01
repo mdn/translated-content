@@ -52,7 +52,7 @@ li:first-of-type + li {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.adjacent_sibling")}}
+{{Compat}}
 
 ## 参阅
 

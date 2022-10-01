@@ -30,7 +30,7 @@ To use this API you need to have the "captivePortal" [permission](/zh-CN/docs/Mo
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.captivePortal")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

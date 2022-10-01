@@ -40,7 +40,7 @@ myDOMRect = new DOMRect(0,0,100,100);
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMRect.DOMRect")}}
+{{Compat}}
 
 ## 更多
 

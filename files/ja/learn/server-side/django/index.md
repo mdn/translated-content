@@ -2,6 +2,7 @@
 title: Djangoウェブフレームワーク (Python)
 slug: Learn/Server-side/Django
 ---
+
 {{LearnSidebar}}
 
 Django は、Python で書かれた高機能なサーバーサイドウェブフレームワークで、とても普及しています。このモジュールは、Django が最も人気のあるウェブサーバーフレームワークの 1 つである理由、開発環境の設定方法、独自のウェブアプリケーションを作成する方法を説明します。

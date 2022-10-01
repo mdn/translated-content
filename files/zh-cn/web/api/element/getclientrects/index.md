@@ -202,7 +202,7 @@ function addClientRectsOverlay(elt) {
 
 ## 浏览器兼容
 
-{{Compat("api.Element.getClientRects")}}
+{{Compat}}
 
 ## 参见
 

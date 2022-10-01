@@ -44,7 +44,7 @@ _不属于任何规范。苹果在[Safari Developer Library](https://developer.a
 
 ## Browser compatibility
 
-{{Compat("api.GestureEvent")}}
+{{Compat}}
 
 ## 参见
 

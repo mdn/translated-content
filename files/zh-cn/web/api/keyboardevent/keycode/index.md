@@ -39,7 +39,7 @@ window.addEventListener("keydown", function (event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.keyCode")}}
+{{Compat}}
 
 ## 键码值
 
@@ -72,7 +72,7 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
 
     1. 如果你当前的键盘布局不支持 ASCII 并且候选支持 ASCII 键盘布局可用。
 
-        1. 如果候选支持 ASCII 的键盘布局仅通过未修改的键产生 ASCII 字符，请对该字符使用`keyCode。`
+        1. 如果候选支持 ASCII 的键盘布局仅通过未修改的键产生 ASCII 字符，请对该字符使用`keyCode`。
         2. 如果候选支持 ASCII 的键盘布局产生带有 Shift 键修饰符的 ASCII 字符，请对该字符使用`keyCode`。
         3. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
 

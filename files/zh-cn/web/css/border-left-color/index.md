@@ -74,7 +74,7 @@ border-left-color: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-left-color")}}
+{{Compat}}
 
 ## See also
 

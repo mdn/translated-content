@@ -29,8 +29,8 @@ span {
 ### HTML
 
 ```html
-  <span>这里是由 span 包裹的一些文字.</span>
-  <p>这里是由 p 包裹的一些文字.</p>
+  <span>这里是由 span 包裹的一些文字。</span>
+  <p>这里是由 p 包裹的一些文字。</p>
 ```
 
 ### 效果
@@ -44,6 +44,6 @@ span {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.type")}}
+{{Compat}}
 
 ## See also

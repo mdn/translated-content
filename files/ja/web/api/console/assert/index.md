@@ -4,6 +4,7 @@ slug: Web/API/console/assert
 l10n:
   sourceCommit: b40b71d87ab041f2f36a4675bc09af983b22422a
 ---
+
 {{APIRef("Console API")}}
 
 **`console.assert()`** は、検査結果が false になった場合に、コンソールへエラーメッセージを出力します。検査結果が true になる場合は何も行いません。

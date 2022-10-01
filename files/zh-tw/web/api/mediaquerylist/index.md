@@ -56,7 +56,7 @@ void removeListener(
 
 ## 瀏覽器相容性
 
-{{Compat("api.MediaQueryList")}}
+{{Compat}}
 
 ## 規範標準
 

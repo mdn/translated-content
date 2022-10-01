@@ -26,4 +26,4 @@ if (stylesheet.disabled) {
 
 ## Browser compatibility
 
-{{Compat("api.StyleSheet.disabled")}}
+{{Compat}}

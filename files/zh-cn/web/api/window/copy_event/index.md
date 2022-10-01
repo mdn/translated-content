@@ -44,7 +44,7 @@ window.addEventListener('copy', (event) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.copy_event")}}
+{{Compat}}
 
 ## 参考
 

@@ -2,6 +2,7 @@
 title: C# で WebSocket サーバーを記述する
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 ---
+
 ## はじめに
 
 WebSocket API を使用したい場合は、サーバーを所有していると便利です。この記事では、C# で記述する方法を説明します。どんなサーバーサイドの言語でも行うことができますが、わかりやすく理解しやすいように、 Microsoft の言語を選択しました。

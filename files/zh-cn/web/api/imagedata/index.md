@@ -18,9 +18,9 @@ slug: Web/API/ImageData
 - {{domxref("ImageData.data")}} {{readonlyInline}}
   - : {{jsxref("Uint8ClampedArray")}} 描述了一个一维数组，包含以 RGBA 顺序的数据，数据使用 `0` 至 `255`（包含）的整数表示。
 - {{domxref("ImageData.height")}} {{readonlyInline}}
-  - : 无符号长整型（`unsigned` `long`），使用像素描述 **ImageData** 的实际高度。
+  - : 无符号长整型（`unsigned long`），使用像素描述 **ImageData** 的实际高度。
 - {{domxref("ImageData.width")}} {{readonlyInline}}
-  - : 无符号长整型（`unsigned` `long`），使用像素描述 **ImageData** 的实际宽度。
+  - : 无符号长整型（`unsigned long`），使用像素描述 **ImageData** 的实际宽度。
 
 ## 规范
 
@@ -28,7 +28,7 @@ slug: Web/API/ImageData
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageData")}}
+{{Compat}}
 
 ## 参见
 

@@ -71,7 +71,7 @@ slug: Web/CSS/@media/prefers-color-scheme
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.media.prefers-color-scheme")}}
+{{Compat}}
 
 ## 参见
 

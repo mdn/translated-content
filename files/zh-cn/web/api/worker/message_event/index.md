@@ -66,7 +66,7 @@ self.postMessage('I\'m alive!');
 
 ## 浏览器兼容性
 
-{{Compat("api.Worker.message_event")}}
+{{Compat}}
 
 ## 另请参阅
 

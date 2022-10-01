@@ -37,7 +37,7 @@ outline-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 轮廓颜色，规则同 `<color>`.
 - `invert`
-  - : `反色,用于确认轮廓的显示.注意不是所有浏览器都支持该属性,若不则该属性无效.`
+  - : 反色，用于确认轮廓的显示。注意不是所有浏览器都支持该属性，若不则该属性无效。
 
 ### 正规语法
 
@@ -81,7 +81,7 @@ Color contrast ratio is determined by comparing the luminosity of the text and b
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.outline-color")}}
+{{Compat}}
 
 ## 相关链接
 

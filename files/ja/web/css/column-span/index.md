@@ -2,6 +2,7 @@
 title: column-span
 slug: Web/CSS/column-span
 ---
+
 {{CSSRef}}
 
 **`column-span`** は [CSS](/ja/docs/Web/CSS) のプロパティで、値に `all` を設定した場合、段組みレイアウトで要素をすべての段にまたがらせることができます。

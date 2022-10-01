@@ -74,7 +74,7 @@ self.addEventListener('install', function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.ExtendableEvent")}}
+{{Compat}}
 
 ## See also
 

@@ -131,4 +131,4 @@ sel.add(opt, sel.options[1]);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSelectElement.add")}}
+{{Compat}}

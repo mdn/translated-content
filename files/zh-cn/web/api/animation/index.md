@@ -15,7 +15,7 @@ slug: Web/API/Animation
 ## 属性
 
 - {{domxref("Animation.currentTime")}}
-  - : 动画的当前时间值（以毫秒为单位），无论是正在运行还是已暂停。 如果动画缺少{{domxref("AnimationTimeline", "timeline")}}或尚未播放，其值为 null。
+  - : 动画的当前时间值（以毫秒为单位），无论是正在运行还是已暂停。如果动画缺少{{domxref("AnimationTimeline", "timeline")}}或尚未播放，其值为 null。
 - {{domxref("Animation.effect")}}
   - : 获取或设置与此动画相关联的{{domxref("KeyframeEffect")}}。
 - {{domxref("Animation.finished")}} {{readOnlyInline}}
@@ -51,7 +51,7 @@ slug: Web/API/Animation
 - {{domxref("Animation.play()")}}
   - : 开始或恢复播放动画，或者如果之前完成，则重新开始动画。
 - {{domxref("Animation.reverse()")}}
-  - : 反转播放动画，直到播放到动画开始时停止。 如果动画完成或未播放，它将从头到尾播放。
+  - : 反转播放动画，直到播放到动画开始时停止。如果动画完成或未播放，它将从头到尾播放。
 
 ## 规范
 
@@ -59,4 +59,4 @@ slug: Web/API/Animation
 
 ## 浏览器兼容性
 
-{{Compat("api.Animation")}}
+{{Compat}}

@@ -69,7 +69,7 @@ place-items: unset;
     这只对 flex 布局元素生效，对于不是 flex 容器的子元素，它被视为 `start` 。
 - `flex-end`
   - : 对齐方式取决于 flex 容器的的结束方向。（水平和垂直两个方向）
-    这只对 flex 布局元素生效，对于不是 flex 容器的子元素，它被视为 end 。
+    这只对 flex 布局元素生效，对于不是 flex 容器的子元素，它被视为 end。
 - `self-start`
   - : 沿着轴线的头部对齐。
 - `self-end`
@@ -239,7 +239,7 @@ display.addEventListener('change', function (evt) {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.place-items")}}
+{{Compat}}
 
 ## See also
 

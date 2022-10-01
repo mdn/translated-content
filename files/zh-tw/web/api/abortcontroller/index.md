@@ -66,7 +66,7 @@ function fetchVideo() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.AbortController")}}
+{{Compat}}
 
 ## 參見
 

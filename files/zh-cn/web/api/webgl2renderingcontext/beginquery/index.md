@@ -45,7 +45,7 @@ gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.beginQuery")}}
+{{Compat}}
 
 ## 参考
 

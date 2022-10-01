@@ -59,7 +59,7 @@ element.appendChild(fragment);
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.createDocumentFragment")}}
+{{Compat}}
 
 ## 更多參考
 

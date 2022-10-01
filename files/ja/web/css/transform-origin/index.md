@@ -2,6 +2,7 @@
 title: transform-origin
 slug: Web/CSS/transform-origin
 ---
+
 {{ CSSRef }}
 
 **`transform-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の座標変換 (transform) における原点を設定します。

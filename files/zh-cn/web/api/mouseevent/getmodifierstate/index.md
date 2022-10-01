@@ -30,7 +30,7 @@ A {{jsxref("Boolean")}}
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.getModifierState")}}
+{{Compat}}
 
 ## See also
 

@@ -74,7 +74,7 @@ window\.performance.navigation.type：
 | `TYPE_BACK_FORWARD` | 2     | 通过历史遍历操作导航。                                                                                                           |
 | `TYPE_UNDEFINED`    | 255   | 其他非以上类型的导航。                                                                                                           |
 
-`window.performance.navigation.redirectCount 表示到达最终页面前，重定向的次数（如果有的话）。`
+`window.performance.navigation.redirectCount` 表示到达最终页面前，重定向的次数（如果有的话）。
 
 Navigation Timing API 可以用于收集客户端性能数据，然后通过 XHR 发送给服务端。还可以计算那些其他方法难以计算的数据，如卸载 (unload) 上一个页面的时间、域名查找时间、window\.onload 的总时间等等。
 

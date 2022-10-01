@@ -25,7 +25,7 @@ slug: Web/API/ImageBitmap
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageBitmap")}}
+{{Compat}}
 
 ## 另见
 

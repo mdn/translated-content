@@ -24,7 +24,7 @@ _`Geolocation` 接口不实现，也不继承任何属性。_
 - {{domxref("Geolocation.watchPosition()")}}
   - : 注册一个位置改变监听器，每当设备位置改变时，返回一个 `long` 类型的该监听器的 ID 值。
 - {{domxref("Geolocation.clearWatch()")}}
-  - : 取消由 `watchPosition() 注册的位置监听器。`
+  - : 取消由 `watchPosition()` 注册的位置监听器。
 
 ## 规范
 
@@ -32,7 +32,7 @@ _`Geolocation` 接口不实现，也不继承任何属性。_
 
 ## 浏览器兼容性
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ## 参见
 

@@ -32,7 +32,7 @@ gl.commit();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.commit")}}
+{{Compat}}
 
 ## 另请参阅
 

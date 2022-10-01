@@ -33,7 +33,7 @@ div#current { color: blue; }
 
 ## 浏览器兼容性
 
-{{Compat("css.types.global_keywords.inherit")}}
+{{Compat}}
 
 ## See also
 

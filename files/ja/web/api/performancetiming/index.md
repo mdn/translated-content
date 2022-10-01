@@ -2,6 +2,7 @@
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 > **Warning:** このインターフェイスは <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 仕様</a>では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。

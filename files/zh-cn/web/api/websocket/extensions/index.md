@@ -25,4 +25,4 @@ A {{domxref("DOMString")}}.
 
 ## 浏览器兼容性
 
-{{Compat("api.WebSocket.extensions")}}
+{{Compat}}

@@ -189,7 +189,7 @@ The resulting content looks like this. You can see output into the log by moving
 
 ## Browser compatibility
 
-{{Compat("api.Element.innerHTML")}}
+{{Compat}}
 
 ## See also
 

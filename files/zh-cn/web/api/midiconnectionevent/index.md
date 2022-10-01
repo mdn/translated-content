@@ -25,4 +25,4 @@ The **`MIDIConnectionEvent`** interface of the [Web MIDI API](/zh-CN/docs/Web/AP
 
 ## 浏览器兼容性
 
-{{Compat("api.MIDIConnectionEvent")}}
+{{Compat}}

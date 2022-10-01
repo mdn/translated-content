@@ -2,6 +2,7 @@
 title: CSSVariableReferenceValue.variable
 slug: Web/API/CSSVariableReferenceValue/variable
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`variable`** は {{domxref("CSSVariableReferenceValue")}} インターフェイスのプロパティで、カスタム名で返される組み込み CSS 値です。

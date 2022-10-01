@@ -2,6 +2,7 @@
 title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 ---
+
 {{AddonSidebar()}}
 
 テキストによるタブ内の検索をします。

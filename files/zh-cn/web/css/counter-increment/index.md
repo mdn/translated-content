@@ -63,7 +63,7 @@ h1 {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.counter-increment")}}
+{{Compat}}
 
 ## 参考
 

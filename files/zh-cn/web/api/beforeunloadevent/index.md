@@ -56,7 +56,7 @@ window.addEventListener("beforeunload", function (e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.BeforeUnloadEvent")}}
+{{Compat}}
 
 ## 参见
 

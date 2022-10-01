@@ -2,6 +2,7 @@
 title: CSS.supports()
 slug: Web/API/CSS/supports
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSS.supports()`** メソッドは、ブラウザーが指定された CSS 機能に対応しているかどうかを論理値で返します。

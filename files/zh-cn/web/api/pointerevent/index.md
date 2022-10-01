@@ -97,7 +97,7 @@ An Example of each property, event type and global event handler is included in 
 
 ## Browser compatibility
 
-{{Compat("api.PointerEvent")}}
+{{Compat}}
 
 ## See also
 

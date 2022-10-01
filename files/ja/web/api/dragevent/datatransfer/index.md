@@ -2,6 +2,7 @@
 title: DragEvent.dataTransfer
 slug: Web/API/DragEvent/dataTransfer
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DragEvent.dataTransfer`** プロパティは、ドラッグ操作のデータを（{{domxref("DataTransfer")}} オブジェクトとして）保持します。

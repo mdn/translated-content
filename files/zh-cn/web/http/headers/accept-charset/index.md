@@ -27,7 +27,7 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5
 ## 指令
 
 - `<charset>`
-  - : `诸如 utf-8` 或 `iso-8859-15 的字符集。`
+  - : 诸如 `utf-8` 或 `iso-8859-15` 的字符集。
 - `*`
   - : `在这个消息头中未提及的任意其他字符集；'*'` 用来表示通配符。
 - `;q=` (q-factor weighting)
@@ -51,7 +51,7 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Accept-Charset")}}
+{{Compat}}
 
 ## 参见
 

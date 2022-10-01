@@ -146,7 +146,7 @@ var biguint64 = new BigUint64Array(iterable);
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.BigUint64Array")}}
+{{Compat}}
 
 ## See also
 

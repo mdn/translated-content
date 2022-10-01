@@ -188,4 +188,4 @@ In the HTML we just need to hook our function to the `onkeypress` event and spec
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLTextAreaElement")}}
+{{Compat}}

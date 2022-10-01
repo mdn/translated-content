@@ -2,6 +2,7 @@
 title: Plugin
 slug: Web/API/Plugin
 ---
+
 {{ApiRef("HTML DOM")}}{{deprecated_header}}
 
 Plugin` インターフェイスは、 ブラウザーのプラグインに関する情報を提供します。

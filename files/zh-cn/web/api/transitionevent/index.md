@@ -36,7 +36,7 @@ _同时也继承了父类 {{domxref("Event")}}_ 的属性.
 
 ## Browser compatibility
 
-{{Compat("api.TransitionEvent")}}
+{{Compat}}
 
 ## See also
 

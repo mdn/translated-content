@@ -2,6 +2,7 @@
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Range`** レスポンスの HTTP ヘッダーは、全体のメッセージのどこにメッセージが含まれているかを示します。

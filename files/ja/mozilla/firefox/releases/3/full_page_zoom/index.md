@@ -3,6 +3,7 @@ title: フルページズーム
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
 original_slug: Full_page_zoom
 ---
+
 {{FirefoxSidebar}}
 
 フルページズーム (あるいは単にフルズーム) は [Firefox 3](/ja/docs/Mozilla/Firefox/Releases/3) の新機能です。

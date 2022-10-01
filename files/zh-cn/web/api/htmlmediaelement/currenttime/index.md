@@ -31,7 +31,7 @@ console.log(obj.currentTime);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.currentTime")}}
+{{Compat}}
 
 ## 相关链接
 

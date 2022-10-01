@@ -7,7 +7,7 @@ translation_of: Web/API/Document/images
 
 ## Summary
 
-`document.images` retorna uma coleção de [imagens](/pt-BR/docs/DOM/Image "DOM/Image") do documento HTML.
+`document.images` retorna uma coleção de [imagens](/pt-BR/docs/DOM/Image) do documento HTML.
 
 ## Sintaxe
 

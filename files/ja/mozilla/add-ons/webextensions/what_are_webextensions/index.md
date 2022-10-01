@@ -2,6 +2,7 @@
 title: 拡張機能とは何か？
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
+
 {{AddonSidebar}}
 
 拡張機能はウェブブラウザーに機能を追加します。標準化されている web 技術（JavaScript / HTML / CSS）に専用の JavaScript API をいくつか加えて書かれます。とりわけ、拡張機能はブラウザーに新しい機能を追加したり、特定のウェブサイトが持つ見た目やコンテンツを変更したりできます。

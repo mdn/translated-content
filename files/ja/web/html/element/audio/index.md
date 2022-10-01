@@ -2,6 +2,7 @@
 title: '<audio>: 埋め込み音声要素'
 slug: Web/HTML/Element/audio
 ---
+
 {{HTMLRef}}
 
 **HTML の `<audio>` 要素**は、文書内に音声コンテンツを埋め込むために使用します。この要素は、1 つまたは複数の音源を含むことができます。音源は `src` 属性または {{HTMLElement("source")}} 要素を使用して表し、ブラウザーがもっとも適切な音源を選択します。また、 {{domxref("MediaStream")}} を使用してストリーミングメディアを指し示すこともできます。

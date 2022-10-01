@@ -2,6 +2,7 @@
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
 ---
+
 {{APIRef("DOM Events")}}
 
 **`screenX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、グローバル（スクリーン）座標における、マウスポインターの水平方向の座標（オフセット）を示します。

@@ -36,7 +36,7 @@ ImageData ctx.createImageData(imagedata);
 
 ### 使用 `createImageData` 方法
 
-这是一段简单地使用 `createImageData` 方法的代码片段。 获取更多信息，请看 [canvas 像素控制](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) 和 {{domxref("ImageData")}} 对象。
+这是一段简单地使用 `createImageData` 方法的代码片段。获取更多信息，请看 [canvas 像素控制](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) 和 {{domxref("ImageData")}} 对象。
 
 #### HTML
 
@@ -62,7 +62,7 @@ console.log(ctx.createImageData(100, 100));
 
 ## 浏览器兼容
 
-{{Compat("api.CanvasRenderingContext2D.createImageData")}}
+{{Compat}}
 
 ### 兼容性注解
 

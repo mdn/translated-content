@@ -2,6 +2,7 @@
 title: <integer>
 slug: Web/CSS/integer
 ---
+
 {{CSSRef}}
 
 **`<integer>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{cssxref("number")}} の特殊型であり、正と負の整数を表現します。整数は {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} など、数多くの CSS プロパティで使用することができます。

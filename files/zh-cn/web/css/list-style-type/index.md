@@ -214,7 +214,7 @@ ul li::before {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.list-style-type")}}
+{{Compat}}
 
 ## 参见
 

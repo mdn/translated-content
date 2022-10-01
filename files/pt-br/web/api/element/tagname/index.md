@@ -24,7 +24,7 @@ nomeDoElemento = element.tagName;
 
 ## Notas
 
-Em XML (e linguagens baseadas, como XHTML), `tagName `conserva o _case_ (caixa alta/baixa) da tag. Nos elementos HTML da árvore do DOM marcados como documentos HTML, `tagName `retorna o nome do elemento em _uppercase_ (caixa alta). O valor de `tagName `é o mesmo que o [nodeName](/pt-BR/docs/Web/API/Node/nodeName)
+Em XML (e linguagens baseadas, como XHTML), `tagName` conserva o _case_ (caixa alta/baixa) da tag. Nos elementos HTML da árvore do DOM marcados como documentos HTML, `tagName` retorna o nome do elemento em _uppercase_ (caixa alta). O valor de `tagName` é o mesmo que o [nodeName](/pt-BR/docs/Web/API/Node/nodeName)
 
 ## Exemplo
 

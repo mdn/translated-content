@@ -137,7 +137,7 @@ console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'hello')
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.get")}}
+{{Compat}}
 
 ## 參見
 

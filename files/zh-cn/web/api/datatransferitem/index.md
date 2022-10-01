@@ -12,7 +12,7 @@ slug: Web/API/DataTransferItem
 ## 属性
 
 - {{domxref("DataTransferItem.kind")}} {{readonlyInline}}
-  - : 拖拽项的种类，`string` 或是 `file。`
+  - : 拖拽项的种类，`string` 或是 `file`。
 - {{domxref("DataTransferItem.type")}} {{readonlyInline}}
   - : 拖拽项的类型，一般是一个 MIME 类型。
 
@@ -35,4 +35,4 @@ slug: Web/API/DataTransferItem
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransferItem")}}
+{{Compat}}

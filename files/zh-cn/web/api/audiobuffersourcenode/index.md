@@ -67,7 +67,7 @@ _从父级的_ _{{domxref("AudioNode")}} 继承方法_.
 
 ## 例子
 
-在这个例子中，我们将会创建一个 2 秒的缓冲器，并用白噪音填充它，然后通过{{domxref("AudioBufferSourceNode")}}来播放它. 注释里说明了它的功能。
+在这个例子中，我们将会创建一个 2 秒的缓冲器，并用白噪音填充它，然后通过{{domxref("AudioBufferSourceNode")}}来播放它。注释里说明了它的功能。
 
 > **备注：** 你可以 [查看在线演示](http://mdn.github.io/audio-buffer/) 或 [查看源代码](https://github.com/mdn/audio-buffer).
 
@@ -121,7 +121,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBufferSourceNode")}}
+{{Compat}}
 
 ## 相关页面
 

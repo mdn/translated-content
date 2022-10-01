@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSStyleDeclaration`** インターフェースは CSS 宣言ブロックのオブジェクトを表し、スタイル情報や様々なスタイルに関するメソッドやプロパティを提供します。

@@ -4,6 +4,7 @@ slug: WebAssembly/Rust_to_wasm
 l10n:
   sourceCommit: 51f2cde58fff4a44242577b2540bdfdfc525dda4
 ---
+
 {{WebAssemblySidebar}}
 
 Rust のコードがあれば、それを [WebAssembly](/ja/docs/WebAssembly) (wasm) にコンパイルすることができます。このチュートリアルでは Rust プロジェクトをコンパイルして既存のウェブアプリケーションで使用するために必要なことについて説明します。

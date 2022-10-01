@@ -49,7 +49,7 @@ gl.getParameter(gl.BLEND_COLOR);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.blendColor")}}
+{{Compat}}
 
 ## 另见
 

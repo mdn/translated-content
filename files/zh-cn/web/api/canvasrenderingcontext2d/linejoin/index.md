@@ -26,7 +26,7 @@ ctx.lineJoin = "miter";
 - `round`
   - : 通过填充一个额外的，圆心在相连部分末端的扇形，绘制拐角的形状。圆角的半径是线段的宽度。
 - `bevel`
-  - : 在相连部分的末端填充一个额外的以三角形为底的区域， 每个部分都有各自独立的矩形拐角。
+  - : 在相连部分的末端填充一个额外的以三角形为底的区域，每个部分都有各自独立的矩形拐角。
 - `miter`
   - : 通过延伸相连部分的外边缘，使其相交于一点，形成一个额外的菱形区域。这个设置可以通过 {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}} 属性看到效果。
 
@@ -136,7 +136,7 @@ for (var i = 0; i < lineJoin.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.lineJoin")}}
+{{Compat}}
 
 ## 参见
 

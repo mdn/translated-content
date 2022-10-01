@@ -129,7 +129,7 @@ Firefox 在默认情况下会在页面加载时让 {{HTMLElement("button")}} [�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.button")}}
+{{Compat}}
 
 ## 参见
 

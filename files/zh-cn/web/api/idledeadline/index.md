@@ -29,7 +29,7 @@ slug: Web/API/IdleDeadline
 
 ## Browser compatibility
 
-{{Compat("api.IdleDeadline")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
 ---
+
 {{CSSRef}}
 
 **`grid-template-areas`** は CSS のプロパティで、グリッド内でセルを確立し、名前を割り当てることにより、名前付きの {{glossary("grid areas", "グリッド領域")}} を指定します。

@@ -159,7 +159,7 @@ slug: Web/HTML/Element/label
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.label")}}
+{{Compat}}
 
 ## 参见
 

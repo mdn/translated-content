@@ -54,7 +54,7 @@ gl.getParameter(gl.ACTIVE_TEXTURE);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.activeTexture")}}
+{{Compat}}
 
 ## 另见
 

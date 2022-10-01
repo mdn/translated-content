@@ -39,7 +39,7 @@ var imageData = new ImageData(100, 100); // Creates a 100x100 black rectangle
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageData.ImageData")}}
+{{Compat}}
 
 ## 参见
 

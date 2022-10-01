@@ -60,7 +60,7 @@ slug: Web/HTML/Element/caption
 
 ## Browser compatibility
 
-{{Compat("html.elements.caption")}}
+{{Compat}}
 
 ## See also
 

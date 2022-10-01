@@ -2,6 +2,7 @@
 title: ページ付け
 slug: Web/CSS/Layout_cookbook/Pagination
 ---
+
 {{CSSRef}}
 
 この料理帳のパターンは、ページ付け（pagination）を表示するために使用されるナビゲーションのパターンを示し、ユーザーは検索結果などのコンテンツのページ間を移動できます。

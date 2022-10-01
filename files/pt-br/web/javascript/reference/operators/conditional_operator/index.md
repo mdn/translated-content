@@ -75,7 +75,7 @@ age > 18 ? (
 );
 ```
 
-Você também pode fazer mais de uma operação durante a atribuição de um valor. Neste caso, **\_o último valor separado por vírgula dentro **_dos parênteses_ **será o valor a ser atribuído\_**.
+Você também pode fazer mais de uma operação durante a atribuição de um valor. Neste caso, **o último valor separado por vírgula dentro** dos parênteses **será o valor a ser atribuído**.
 
 ```js
 var age = 16;

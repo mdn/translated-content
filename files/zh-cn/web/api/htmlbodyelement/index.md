@@ -72,7 +72,7 @@ No specific event handlers; inherits event handlers from its parent, {{domxref("
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLBodyElement")}}
+{{Compat}}
 
 ## 参考阅读
 

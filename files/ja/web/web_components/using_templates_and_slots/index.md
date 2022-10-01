@@ -2,6 +2,7 @@
 title: テンプレートとスロットの使用
 slug: Web/Web_Components/Using_templates_and_slots
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 この記事では、{{htmlelement("template")}} と {{htmlelement("slot")}} 要素を使用して柔軟なテンプレートを作成し、それをウェブコンポーネントのシャドウ DOM を表示するために使用する方法について説明します。

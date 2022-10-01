@@ -63,4 +63,4 @@ function print_PerformanceEntry(perfEntry) {
 
 ## Browser compatibility
 
-{{Compat("api.PerformanceEntry")}}
+{{Compat}}

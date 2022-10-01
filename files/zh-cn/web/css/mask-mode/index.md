@@ -85,4 +85,4 @@ maskMode.addEventListener("change", function (evt) {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.mask-mode")}}
+{{Compat}}

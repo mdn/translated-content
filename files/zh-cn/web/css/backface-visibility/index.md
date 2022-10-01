@@ -183,7 +183,7 @@ th, p, td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.backface-visibility")}}
+{{Compat}}
 
 ## 相关连接
 

@@ -135,7 +135,7 @@ gl.texImage3D(gl.TEXTURE_3D,
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.texImage3D")}}
+{{Compat}}
 
 ## 另见
 

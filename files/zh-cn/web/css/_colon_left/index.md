@@ -36,7 +36,7 @@ slug: Web/CSS/:left
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.left")}}
+{{Compat}}
 
 ## 参见
 

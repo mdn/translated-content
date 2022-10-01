@@ -25,7 +25,7 @@ text-size-adjust: unset;
 
 因为缩放适配小屏幕而导致文字会变得很小，许多手机浏览器会使用文本溢出算法放大文本，改善可读性。当一个包含文本的元素使用了 100% 的屏幕宽度，该算法会增加文本大小，但是不会修改布局。`text-size-adjust` 这个属性允许开发者去除或者修改浏览器的这种行为，比如，当网页已经适配了小屏幕之后，就不需要这么做了。
 
-> **备注：** 这个属性并不是标准。 你必须为每个你想要应用的浏览器加上属性前缀。
+> **备注：** 这个属性并不是标准。你必须为每个你想要应用的浏览器加上属性前缀。
 >
 > - 不同浏览器，这个属性有不同的行为和语法。更多的信息，请查看下面的浏览器兼容性部分。
 > - **这个属性只在一些智能手机和平板电脑上使用。**桌面浏览器和一些平板电脑浏览器并没有一些溢出算法。
@@ -57,7 +57,7 @@ text-size-adjust: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-size-adjust")}}
+{{Compat}}
 
 \[1] There is a bug in older WebKit-based desktop browsers. If `-webkit-text-size-adjust` is explicitly set to `none`, older Webkit-based desktop browsers, instead of ignoring the property, will prevent the user from zooming in or out of the web page. See [Bug 56543](https://bugs.webkit.org/show_bug.cgi?id=56543) (affected Safari≤5 & Chrome≤26), [Bug 163359](https://code.google.com/p/chromium/issues/detail?id=163359), and [Bug 84186](https://bugs.webkit.org/show_bug.cgi?id=84186).
 

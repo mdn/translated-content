@@ -68,4 +68,4 @@ em {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-synthesis")}}
+{{Compat}}

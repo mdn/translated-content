@@ -63,7 +63,7 @@ gl.getParameter(gl.TEXTURE_BINDING_2D);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindTexture")}}
+{{Compat}}
 
 ## 另见
 

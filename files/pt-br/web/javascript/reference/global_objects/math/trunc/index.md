@@ -31,7 +31,7 @@ A parte inteira de um dado número.
 
 Diferente dos demais métodos em Math: {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} e {{jsxref("Math.round()")}}, o retorno esperado da função `Math.trunc()` é simples e direto, ela apenas trunca o número passado a ela como parâmetro, removendo todas as casas decimais dele, não importando se o número é positivo ou negativo.
 
-Portanto, se o argumento passado for um número positivo, `Math.trunc()` será equivalente a ` Math.floor(), caso contrário ``Math.trunc() ` será equivalente a `Math.ceil()`.
+Portanto, se o argumento passado for um número positivo, `Math.trunc()` será equivalente a `Math.floor()`, caso contrário `Math.trunc()` será equivalente a `Math.ceil()`.
 
 O argumento passado a esse método será convertido a um tipo numérico implicitamente.
 
@@ -54,7 +54,7 @@ Math.trunc();         // NaN
 
 ## Polyfill
 
-(um*Polyfill* é um pedaço de código que o desenvolvedor pode colocar na sua página para garantir compatilibilidade do método. No exemplo abaixo, caso o navegador não tiver o método `trunc `na classe `Math`, ele será criado);
+(um*Polyfill* é um pedaço de código que o desenvolvedor pode colocar na sua página para garantir compatilibilidade do método. No exemplo abaixo, caso o navegador não tiver o método `trunc` na classe `Math`, ele será criado);
 
 ```js
 Math.trunc = Math.trunc || function(x) {

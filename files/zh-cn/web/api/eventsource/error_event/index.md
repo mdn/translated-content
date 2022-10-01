@@ -29,7 +29,7 @@ evtSource.onerror = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.EventSource.onerror")}}
+{{Compat}}
 
 ## 相关链接
 

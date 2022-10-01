@@ -2,6 +2,7 @@
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} インターフェイスの **`removeItem()`** メソッドは、キーの名称を渡すと、指定された `Storage` からキーを削除します。指定されたキーに関連付けられた項目がない場合、このメソッドは何もしません。

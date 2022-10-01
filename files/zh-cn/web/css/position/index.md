@@ -21,7 +21,7 @@ CSS **`position`** 属性用于指定一个元素在文档中的定位方式。{
 除了刚刚描述的情况（绝对定位元素填充可用空间）：
 
 - 如果 `top` 和 `bottom` 都被指定（严格来说，这里指定的值不能为 `auto` ），`top` 优先。
-- 如果指定了 `left` 和 `right` ，当 {{Cssxref("direction")}}设置为 `ltr`（水平书写的中文、英语）时 `left` 优先， 当{{Cssxref("direction")}}设置为 `rtl`（阿拉伯语、希伯来语、波斯语由右向左书写）时 `right` 优先。
+- 如果指定了 `left` 和 `right` ，当 {{Cssxref("direction")}}设置为 `ltr`（水平书写的中文、英语）时 `left` 优先，当{{Cssxref("direction")}}设置为 `rtl`（阿拉伯语、希伯来语、波斯语由右向左书写）时 `right` 优先。
 
 ## 语法
 
@@ -269,4 +269,4 @@ dd + dd {
 
 ## 浏览器兼容
 
-{{Compat("css.properties.position")}}
+{{Compat}}

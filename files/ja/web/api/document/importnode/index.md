@@ -2,6 +2,7 @@
 title: Document.importNode()
 slug: Web/API/Document/importNode
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} オブジェクトの **`importNode()`** メソッドは、後で現在の文書に挿入するために、他の文書から {{domxref("Node")}} または {{domxref("DocumentFragment")}} の複製を作成します。

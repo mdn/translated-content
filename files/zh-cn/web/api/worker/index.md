@@ -65,7 +65,7 @@ first.onchange = function() {
 
 不同类型的 worker 兼容度不一致，详细参考具体定义的页面。
 
-{{Compat("api.Worker")}}
+{{Compat}}
 
 ### 跨域行为的错误事件
 

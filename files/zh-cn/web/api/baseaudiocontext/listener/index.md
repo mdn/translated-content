@@ -5,7 +5,7 @@ slug: Web/API/BaseAudioContext/listener
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioContext") }}的`listener属性`返回一个{{ domxref("AudioListener") }} 对象，可以用来实现 3D 音频空间化。
+{{ domxref("AudioContext") }}的 `listener` 属性返回一个 {{ domxref("AudioListener") }} 对象，可以用来实现 3D 音频空间化。
 
 ## 语法
 
@@ -38,7 +38,7 @@ var myListener = audioCtx.listener;
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.listener")}}
+{{Compat}}
 
 ## 另见
 

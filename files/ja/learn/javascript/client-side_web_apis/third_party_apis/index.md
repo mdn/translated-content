@@ -2,6 +2,7 @@
 title: サードパーティ API
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
 
 これまで説明してきた API はブラウザーに組み込まれていましたが、すべての API がそうというわけではありません。Google Maps・Twitter・Facebook・PayPal などの大規模なサイトやサービスの多くは開発者がそれらのデータ (ブログに Twitter のストリームを表示するなど) やサービス (ユーザーのログインに Facebook ログインを利用するなど) を利用できるように API を提供しています。この記事ではブラウザー API とサードパーティ API の違いを見て、後者の典型的な使い方について説明します。

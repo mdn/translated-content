@@ -2,6 +2,7 @@
 title: CharacterData
 slug: Web/API/CharacterData
 ---
+
 {{APIRef("DOM")}}
 
 **`CharacterData`** 抽象インターフェイスは、文字を包含する {{domxref("Node")}} オブジェクトを表します。これは抽象インターフェイスであり、 `CharacterData` 型のオブジェクトは存在しません。抽象ではない {{domxref("Text")}}、{{domxref("Comment")}}、{{domxref("CDATASection")}}、{{domxref("ProcessingInstruction")}} といったインターフェイスによって実装されています。

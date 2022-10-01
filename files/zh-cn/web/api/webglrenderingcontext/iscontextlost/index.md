@@ -36,7 +36,7 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.isContextLost")}}
+{{Compat}}
 
 ## 另见
 

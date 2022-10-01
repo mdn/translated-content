@@ -35,7 +35,7 @@ function openDB() {
 
 ## 浏览器兼容性
 
-{{Compat("api.indexedDB")}}
+{{Compat}}
 
 ## 参见
 

@@ -32,4 +32,4 @@ document.close();
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.close")}}
+{{Compat}}

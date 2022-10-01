@@ -32,7 +32,7 @@ boolean ctx.isPointInStroke(path, x, y);
 
 ### 使用 `isPointInStroke` 方法
 
-这只是一个使用 **isPointInStroke** 方法的简单的代码片段，用于检测一个点是否在路径的描边线上`。`
+这只是一个使用 **`isPointInStroke`** 方法的简单的代码片段，用于检测一个点是否在路径的描边线上。
 
 #### HTML
 
@@ -99,7 +99,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.isPointInStroke")}}
+{{Compat}}
 
 ## 参见
 

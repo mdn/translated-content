@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/arc
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.arc()`** 是 Canvas 2D API 绘制圆弧路径的方法。圆弧路径的圆心在 _(x, y)_ 位置，半径为 _r_ ，根据*anticlockwise* （默认为顺时针）指定的方向从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
+**`CanvasRenderingContext2D.arc()`** 是 Canvas 2D API 绘制圆弧路径的方法。圆弧路径的圆心在 _(x, y)_ 位置，半径为 _r_，根据*anticlockwise* （默认为顺时针）指定的方向从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
 
 ## 语法
 
@@ -24,9 +24,9 @@ void ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 - `startAngle`
   - : 圆弧的起始点，x 轴方向开始计算，单位以弧度表示。
 - `endAngle`
-  - : 圆弧的终点， 单位以弧度表示。
+  - : 圆弧的终点，单位以弧度表示。
 - `anticlockwise` {{optional_inline}}
-  - : 可选的{{jsxref("Boolean")}}值 ，如果为 `true`，逆时针绘制圆弧，反之，顺时针绘制。
+  - : 可选的{{jsxref("Boolean")}}值，如果为 `true`，逆时针绘制圆弧，反之，顺时针绘制。
 
 ## 示例
 
@@ -135,7 +135,7 @@ for (i=0;i<4;i++){
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.arc")}}
+{{Compat}}
 
 ## 参见
 

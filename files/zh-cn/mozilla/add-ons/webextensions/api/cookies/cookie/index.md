@@ -38,7 +38,7 @@ The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information 
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.cookies.Cookie")}}
+{{Compat}}
 
 ## 举例
 

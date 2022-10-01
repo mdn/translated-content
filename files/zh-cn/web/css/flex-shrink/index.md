@@ -23,7 +23,7 @@ flex-shrink: unset
 
 ## 语法
 
-`flex-shrink` 属性只能是一个 `<number>。`
+`flex-shrink` 属性只能是一个 `<number>`。
 
 ### 取值
 
@@ -83,7 +83,7 @@ flex-shrink: unset
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## 参考
 

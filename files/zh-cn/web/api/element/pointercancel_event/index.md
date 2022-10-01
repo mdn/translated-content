@@ -46,7 +46,7 @@ function init() {
 
 ## 浏览器兼容性
 
-{{Compat("api.GlobalEventHandlers.onpointercancel")}}
+{{Compat}}
 
 ## 参见
 

@@ -101,11 +101,11 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.drawFocusIfNeeded")}}
+{{Compat}}
 
 ### 兼容性注解
 
-- \[1] 在 Gecko 28 {{geckoRelease(28)}}中， 此方法通过 "`drawSystemFocusRing`" 实现， 但是在 Gecko 29 {{geckoRelease(29)}}中已经改名。
+- \[1] 在 Gecko 28 {{geckoRelease(28)}}中，此方法通过 "`drawSystemFocusRing`" 实现，但是在 Gecko 29 {{geckoRelease(29)}}中已经改名。
 - \[1] 在 Gecko 32 {{geckoRelease(32)}} 之前，此方法默认是无效的，受控于 flag "`canvas.focusring.enabled`"标识。
 
 ## 参见

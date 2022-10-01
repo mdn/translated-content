@@ -2,6 +2,7 @@
 title: lang
 slug: Web/XPath/Functions/lang
 ---
+
 {{ XsltRef() }}
 
 `lang` 関数は、コンテキストノードの言語が渡された言語に一致するかどうかを判定し、論理値 true または false を返します。

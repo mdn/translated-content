@@ -17,10 +17,10 @@ translation_of: Web/HTML/Element/title
 ---
 O **elemento HTML** `<title>` (_Elemento HTML Título_) define o título do documento, mostrado na barra de título de um navegador ou na aba da página. Pode conter somente texto e quaisquer marcações contidas no texto não são interpretadas.
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_[Conteúdo de metadados](/pt-BR/docs/Web/Guide/HTML/Content_categories#Metadata_content).
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de metadados](/pt-BR/docs/Web/Guide/HTML/Content_categories#Metadata_content).
 - _Conteúdo permitido_ Texto que não seja whitespace entre elementos.
-- \_Omissão de marcação_Todas as marcações são necessárias. Perceba que suprimir `</title>` fará o navegador ignorar o resto da página.
-- \_Elementos pais permitidos_Um elemento {{ HTMLElement("head") }} que não contenha outro elemento {{ HTMLElement("title") }}.
+- _Omissão de marcação_ Todas as marcações são necessárias. Perceba que suprimir `</title>` fará o navegador ignorar o resto da página.
+- _Elementos pais permitidos_ Um elemento {{ HTMLElement("head") }} que não contenha outro elemento {{ HTMLElement("title") }}.
 - _Funções ARIA permitidas_ Nenhuma.
 - _Interface DOM_ {{domxref("HTMLTitleElement")}}
 

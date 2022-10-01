@@ -2,6 +2,7 @@
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
 ---
+
 {{CSSRef}}
 
 **`grid-template-columns`** は CSS のプロパティで、{{glossary("grid column", "グリッド列")}}の線名とトラックのサイズ変更機能を定義します。

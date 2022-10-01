@@ -288,7 +288,7 @@ function draw() {
 下一个十分有用的路径类型就是[贝塞尔曲线](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A)。二次及三次贝塞尔曲线都十分有用，一般用来绘制复杂有规律的图形。
 
 - `quadraticCurveTo(cp1x, cp1y, x, y)`
-  - : 绘制二次贝塞尔曲线，`cp1x,cp1y`为一个控制点，`x,y为`结束点。
+  - : 绘制二次贝塞尔曲线，`cp1x,cp1y` 为一个控制点，`x,y` 为结束点。
 - `bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)`
   - : 绘制三次贝塞尔曲线，`cp1x,cp1y`为控制点一，`cp2x,cp2y`为控制点二，`x,y`为结束点。
 

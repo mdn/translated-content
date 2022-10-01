@@ -36,4 +36,4 @@ if (fileInput.multiple == true) {
 
 ## Browser compatibility
 
-{{Compat("api.HTMLInputElement.multiple")}}
+{{Compat}}

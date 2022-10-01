@@ -2,6 +2,7 @@
 title: ':nth-of-type()'
 slug: Web/CSS/:nth-of-type
 ---
+
 {{CSSRef}}
 
 **`:nth-of-type()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で指定された型 (タグ名) の要素を、位置に基づいて選択します。

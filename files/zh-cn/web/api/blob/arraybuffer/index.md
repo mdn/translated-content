@@ -39,7 +39,7 @@ var buffer = await blob.arrayBuffer();
 
 ## 浏览器兼容性
 
-{{Compat("api.Blob.arrayBuffer")}}
+{{Compat}}
 
 ## 另见
 

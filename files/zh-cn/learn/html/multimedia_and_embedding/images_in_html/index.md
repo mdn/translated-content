@@ -38,7 +38,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 我们可以用{{htmlelement("img")}} 元素来把图片放到网页上。它是一个空元素（它不需要包含文本内容或闭合标签），最少只需要一个 `src` （一般读作其全称 *source）*来使其生效。`src` 属性包含了指向我们想要引入的图片的路径，可以是相对路径或绝对 URL，就像 {{htmlelement("a")}} 元素的 `href` 属性一样。
 
-> **备注：** 在继续之前，你应该阅读[快速入门 URL 和路径](</zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#URLs与路径(path)快速入门>)来复习一下相对和绝对 URL。
+> **备注：** 在继续之前，你应该阅读[快速入门 URL 和路径](</zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#URLs与路径(path)快速入门>) 来复习一下相对和绝对 URL。
 
 举个例子来看，如果你有一幅文件名为 `dinosaur.jpg` 的图片，且它与你的 HTML 页面存放在相同路径下，那么你可以这样嵌入它：
 

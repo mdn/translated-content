@@ -2,6 +2,7 @@
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`data-*`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は**カスタムデータ属性**と呼ばれる属性の組を作り、[HTML](/ja/docs/Web/HTML) と、スクリプトによる [DOM](/ja/docs/Web/API/Document_Object_Model) 表現との間で、固有の情報を交換できるようにします。
