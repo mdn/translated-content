@@ -5,317 +5,237 @@ tags:
   - Производительность
 translation_of: Web/Performance/Navigation_and_resource_timings
 ---
-<p><strong>Тайминги навигации (Navigation timings) </strong>- это показатели, указывающие временные метки, в которые произошли события навигации. <strong>Тайминги ресурсов (Resource timings) </strong>- это детальные показатели по времени загрузки ресурсов. </p>
+**Тайминги навигации (Navigation timings)** - это показатели, указывающие временные метки, в которые произошли события навигации. **Тайминги ресурсов (Resource timings)** - это детальные показатели по времени загрузки ресурсов.
 
-<p>В этой статье мы рассмотрим как <a href="/en-US/docs/Web/API/PerformanceTiming">Performance Timing API</a>, так и Performance Entry API. И хотя первый API считается устаревшим, он все ещё поддерживается всеми браузерами, он прост и о нем полезно знать. В свою очередь, Performance Entry API является более продвинутым инструментом, который позволяет не только получить более сложные данные, но и позволяет разработчику измерять другие показатели, в дополнение к данным о навигации и загрузке ресурсов.</p>
+В этой статье мы рассмотрим как [Performance Timing API](/ru/docs/Web/API/PerformanceTiming), так и Performance Entry API. И хотя первый API считается устаревшим, он все ещё поддерживается всеми браузерами, он прост и о нем полезно знать. В свою очередь, Performance Entry API является более продвинутым инструментом, который позволяет не только получить более сложные данные, но и позволяет разработчику измерять другие показатели, в дополнение к данным о навигации и загрузке ресурсов.
 
-<h2 id="Performance_Timing_API"><strong>Performance Timing</strong> API</h2>
+## **Performance Timing** API
 
-<p><a href="/en-US/docs/Web/API/PerformanceTiming">PerformanceTiming API</a> - это JavaScript API для измерения времени загрузки страницы. Этот API считается устаревшим, но поддерживается во всех браузерах. На текущий момент рекомендуется использовать <a href="/en-US/docs/Web/API/PerformanceNavigationTiming">performanceNavigationTiming</a> API.</p>
+[PerformanceTiming API](/ru/docs/Web/API/PerformanceTiming) - это JavaScript API для измерения времени загрузки страницы. Этот API считается устаревшим, но поддерживается во всех браузерах. На текущий момент рекомендуется использовать [performanceNavigationTiming](/ru/docs/Web/API/PerformanceNavigationTiming) API.
 
-<p><a href="/en-US/docs/Web/API/PerformanceTiming">PerformanceTiming API </a>предоставляет собой read only данные в виде объекта, где значениями полей являются числа, указывающие на количество миллисекунд, которые прошли к моменту срабатывания того или иного события. Как показано на изображении ниже, процесс навигации можно разбить на следующие этапы: <code><a href="/en-US/docs/Web/API/PerformanceTiming/navigationStart">navigationStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/unloadEventStart">unloadEventStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd">unloadEventEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/redirectStart">redirectStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/redirectEnd">redirectEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/fetchStart">fetchStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domainLookupStart">domainLookupStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd">domainLookupEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/connectStart">connectStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/connectEnd">connectEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart">secureConnectionStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/requestStart">requestStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/responseStart">responseStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/responseEnd">responseEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domLoading">domLoading</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domInteractive">domInteractive</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart">domContentLoadedEventStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventEnd">domContentLoadedEventEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domComplete">domComplete</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/loadEventStart">loadEventStart</a></code>, и <code><a href="/en-US/docs/Web/API/PerformanceTiming/loadEventEnd">loadEventEnd</a></code>.</p>
+[PerformanceTiming API ](/ru/docs/Web/API/PerformanceTiming)предоставляет собой read only данные в виде объекта, где значениями полей являются числа, указывающие на количество миллисекунд, которые прошли к моменту срабатывания того или иного события. Как показано на изображении ниже, процесс навигации можно разбить на следующие этапы: [`navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart), [`unloadEventStart`](/en-US/docs/Web/API/PerformanceTiming/unloadEventStart), [`unloadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd), [`redirectStart`](/en-US/docs/Web/API/PerformanceTiming/redirectStart), [`redirectEnd`](/en-US/docs/Web/API/PerformanceTiming/redirectEnd), [`fetchStart`](/en-US/docs/Web/API/PerformanceTiming/fetchStart), [`domainLookupStart`](/en-US/docs/Web/API/PerformanceTiming/domainLookupStart), [`domainLookupEnd`](/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd), [`connectStart`](/en-US/docs/Web/API/PerformanceTiming/connectStart), [`connectEnd`](/en-US/docs/Web/API/PerformanceTiming/connectEnd), [`secureConnectionStart`](/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart), [`requestStart`](/en-US/docs/Web/API/PerformanceTiming/requestStart), [`responseStart`](/en-US/docs/Web/API/PerformanceTiming/responseStart), [`responseEnd`](/en-US/docs/Web/API/PerformanceTiming/responseEnd), [`domLoading`](/en-US/docs/Web/API/PerformanceTiming/domLoading), [`domInteractive`](/en-US/docs/Web/API/PerformanceTiming/domInteractive), [`domContentLoadedEventStart`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart), [`domContentLoadedEventEnd`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventEnd), [`domComplete`](/en-US/docs/Web/API/PerformanceTiming/domComplete), [`loadEventStart`](/en-US/docs/Web/API/PerformanceTiming/loadEventStart), и [`loadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/loadEventEnd).
 
-<p><img alt="Navigation Timing event metrics" src="https://mdn.mozillademos.org/files/16620/Screen_Shot_2019-05-03_at_1.06.27_PM.png"></p>
+![Navigation Timing event metrics](https://mdn.mozillademos.org/files/16620/Screen_Shot_2019-05-03_at_1.06.27_PM.png)
 
-<p>Благодаря этим метрикам и небольшим вычислениям мы можем определить важные показатели, например <a href="/en-US/docs/Glossary/time_to_first_byte">время до первого байта (time to first byte</a>), скорость загрузки страницы, поиска записи dns и даже узнать, является ли соединение безопасным.</p>
+Благодаря этим метрикам и небольшим вычислениям мы можем определить важные показатели, например [время до первого байта (time to first byte](/ru/docs/Glossary/time_to_first_byte)), скорость загрузки страницы, поиска записи dns и даже узнать, является ли соединение безопасным.
 
-<p>Чтобы получить доступ к этим данным, обратитесь к следующему объекту:</p>
+Чтобы получить доступ к этим данным, обратитесь к следующему объекту:
 
-<pre>let time = window.performance.timing</pre>
+```
+let time = window.performance.timing
+```
 
-<p>Мы можем использовать эти данные, чтобы понять, как быстро работает приложение:</p>
+Мы можем использовать эти данные, чтобы понять, как быстро работает приложение:
 
-<p><img alt="entering window.performance.timing in the console lists all the timings in the PerformanceNavigationTiming interface" src="https://mdn.mozillademos.org/files/16824/navigatortiming.png"></p>
+![entering window.performance.timing in the console lists all the timings in the PerformanceNavigationTiming interface](https://mdn.mozillademos.org/files/16824/navigatortiming.png)
 
-<p>Описание показателей:</p>
+Описание показателей:
 
-<table>
- <thead>
-  <tr>
-   <th>Показатель</th>
-   <th>Пояснение</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("PerformanceTiming.navigationStart","navigationStart")}}</td>
-   <td>
-    <p>Момент, когда предыдущий документ в том же контексте (табе) запускает событие unload. Если предыдущего документа не было, значение этого показателя будет таким же, как и <code>PerformanceTiming.fetchStart</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.secureConnectionStart","secureConnectionStart")}}</td>
-   <td>
-    <p>Началась установка (handshake) безопасного соединения. Если безопасного соединения нет, то значение равно <code>0</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.redirectStart","redirectStart")}}</td>
-   <td>Начало первого HTTP редиректа. Если никаких редиректов не было, или один из редиректов перевёл документ на другой origin, то значение равно <code>0</code>.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.redirectEnd","redirectEnd")}}</td>
-   <td>
-    <p>Последний HTTP редирект завершён, то есть последний байт HTTP-ответа был получен. Если никаких редиректов не было, или один из редиректов перевёл документ на другой origin, то значение равно <code>0</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p>{{domxref("PerformanceTiming.connectStart","connectStart")}}</p>
-   </td>
-   <td>
-    <p>Запрос на открытие соединения отправлен в сеть. Если транспортный уровень модели OSI сообщает об ошибке и установка соединения запускаются заново, то возвращается время старта последней попытки соединения. Если используется постоянное соединение, то значение показателя будет таким же, как и <code>PerformanceTiming.fetchStart</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.connectEnd","connectEnd")}}</td>
-   <td>
-    <p>Момент, когда соединение открыто для передачи данных. Если транспортный уровень модели OSI сообщает об ошибке и установка соединения запускаются заново, то возвращается время  завершения последней попытки соединения. Если используется постоянное соединение, то значение показателя будет таким же, как и <code>PerformanceTiming.fetchStart</code>. Соединение считается открытым, когда завершены все этапы установление безопасного соединения, например TLS Handshake или SOCKS Authentication.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.domainLookupEnd","domainLookupEnd")}}</td>
-   <td>
-    <p>Поиск домена завершён. Если используется постоянное соединение, или используются данные, сохранённые в локальном кеше, то значение показателя будет таким же, как и <code>PerformanceTiming.fetchStart</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.domainLookupStart","domainLookupStart")}}</td>
-   <td>Начался поиск домена. Если используется постоянное соединение, или используются данные, сохранённые в локальном кеше, то значение показателя будет таким же, как и <code>PerformanceTiming.fetchStart</code>.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.fetchStart","fetchStart")}}</td>
-   <td>
-    <p>Браузер готов к загрузке документа с помощью HTTP-запроса. Этот этап всегда <strong>срабатывает до проверки</strong> кеша приложения.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.requestStart","requestStart")}}</td>
-   <td>
-    <p>Браузер посылает запрос на получение документа с сервера или из кеша. Если транспортный уровень сообщает об ошибке отправки запроса, а соединение переоткрывается - этот показатель будет перезаписан данными нового запроса.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.responseStart","responseStart")}}</td>
-   <td>
-    <p>Браузер получает первый байт ответа от сервера, кеша или локального ресурса.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.responseEnd","responseEnd")}}</td>
-   <td>
-    <p>Браузер получает последний байт ответа от сервера, кеша или локального ресурса. Если соединение закрывается раньше получения последнего байта - значение параметра указывает на момент закрытия соединения.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.domLoading","domLoading")}}</td>
-   <td>
-    <p>Парсер HTML начинает работу. В этот момент {{domxref('Document.readyState')}} изменяется на <code>'loading'</code> и срабатывает событие {{DOMxRef("Document.readystatechange_event", "readystatechange")}}.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.unloadEventStart","unloadEventStart")}}</td>
-   <td>
-    <p>Срабатывает событие {{DOMxRef("Window.unload_event", "unload")}}&gt;, что говорит о времени, когда предыдущий документ начал выгружаться. Если предыдущего документа не было или переход к текущей странице подразумевал изменение origin (в т.ч. из-за редиректов), значение параметра равно <code>0</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.unloadEventEnd","unloadEventEnd")}}</td>
-   <td>
-    <p>Обработчик события  <code><a href="/en-US/docs/Web/Events/unload">unload</a></code> завершил свою работу. Если предыдущего документа не было или переход к текущей странице подразумевал изменение origin (в т.ч. из-за редиректов), значение параметра равно <code>0</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.domInteractive","domInteractive")}}</td>
-   <td>
-    <p>HTML парсер завершил работу над основным документом. В этот момент <a href="/en-US/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> изменяется на <code>'interactive'</code> и срабатывает событие <code><a href="/en-US/docs/Web/Events/readystatechange">readystatechange</a></code></p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.domContentLoadedEventStart","domContentLoadedEventStart")}}</td>
-   <td>
-    <p>Момент сразу перед тем, как парсер запускает событие <code><a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></code>. Это событие запускается после того, как все скрипты, которые должны исполниться сразу после парсинга, выполнены.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.domContentLoadedEventEnd","domContentLoadedEventEnd")}}</td>
-   <td>
-    <p>Момент сразу после исполнения всех скриптов, которые должны были исполниться.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.domComplete","domComplete")}}</td>
-   <td>
-    <p>Парсер HTML завершил работу над основным документом. В этот момент <a href="/en-US/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> изменяется на <code>'complete'</code> и срабатывает событие <code><a href="/en-US/docs/Web/Events/readystatechange">readystatechange</a></code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.loadEventStart","loadEventStart")}}</td>
-   <td>
-    <p>Событие <code><a href="/en-US/docs/Web/Events/load">load</a></code> было отправлено текущему документу. Если это событие на момент измерения не было отправлено документу, значение параметра равно <code>0.</code></p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("PerformanceTiming.loadEventEnd","loadEventEnd")}}</td>
-   <td>
-    <p>Обработка события <code><a href="/en-US/docs/Web/Events/load">load</a></code> завершена, то есть загрузка завершена. Если это событие ещё не произошло или не было послано документу, значение параметра равно <code>0</code>.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Показатель                                                                                                           | Пояснение                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref("PerformanceTiming.navigationStart","navigationStart")}}                             | Момент, когда предыдущий документ в том же контексте (табе) запускает событие unload. Если предыдущего документа не было, значение этого показателя будет таким же, как и `PerformanceTiming.fetchStart`.                                                                                                                                                                                                                                                                                    |
+| {{domxref("PerformanceTiming.secureConnectionStart","secureConnectionStart")}}             | Началась установка (handshake) безопасного соединения. Если безопасного соединения нет, то значение равно `0`.                                                                                                                                                                                                                                                                                                                                                                               |
+| {{domxref("PerformanceTiming.redirectStart","redirectStart")}}                                 | Начало первого HTTP редиректа. Если никаких редиректов не было, или один из редиректов перевёл документ на другой origin, то значение равно `0`.                                                                                                                                                                                                                                                                                                                                             |
+| {{domxref("PerformanceTiming.redirectEnd","redirectEnd")}}                                         | Последний HTTP редирект завершён, то есть последний байт HTTP-ответа был получен. Если никаких редиректов не было, или один из редиректов перевёл документ на другой origin, то значение равно `0`.                                                                                                                                                                                                                                                                                          |
+| {{domxref("PerformanceTiming.connectStart","connectStart")}}                                     | Запрос на открытие соединения отправлен в сеть. Если транспортный уровень модели OSI сообщает об ошибке и установка соединения запускаются заново, то возвращается время старта последней попытки соединения. Если используется постоянное соединение, то значение показателя будет таким же, как и `PerformanceTiming.fetchStart`.                                                                                                                                                          |
+| {{domxref("PerformanceTiming.connectEnd","connectEnd")}}                                         | Момент, когда соединение открыто для передачи данных. Если транспортный уровень модели OSI сообщает об ошибке и установка соединения запускаются заново, то возвращается время завершения последней попытки соединения. Если используется постоянное соединение, то значение показателя будет таким же, как и `PerformanceTiming.fetchStart`. Соединение считается открытым, когда завершены все этапы установление безопасного соединения, например TLS Handshake или SOCKS Authentication. |
+| {{domxref("PerformanceTiming.domainLookupEnd","domainLookupEnd")}}                             | Поиск домена завершён. Если используется постоянное соединение, или используются данные, сохранённые в локальном кеше, то значение показателя будет таким же, как и `PerformanceTiming.fetchStart`.                                                                                                                                                                                                                                                                                          |
+| {{domxref("PerformanceTiming.domainLookupStart","domainLookupStart")}}                         | Начался поиск домена. Если используется постоянное соединение, или используются данные, сохранённые в локальном кеше, то значение показателя будет таким же, как и `PerformanceTiming.fetchStart`.                                                                                                                                                                                                                                                                                           |
+| {{domxref("PerformanceTiming.fetchStart","fetchStart")}}                                         | Браузер готов к загрузке документа с помощью HTTP-запроса. Этот этап всегда **срабатывает до проверки** кеша приложения.                                                                                                                                                                                                                                                                                                                                                                     |
+| {{domxref("PerformanceTiming.requestStart","requestStart")}}                                     | Браузер посылает запрос на получение документа с сервера или из кеша. Если транспортный уровень сообщает об ошибке отправки запроса, а соединение переоткрывается - этот показатель будет перезаписан данными нового запроса.                                                                                                                                                                                                                                                                |
+| {{domxref("PerformanceTiming.responseStart","responseStart")}}                                 | Браузер получает первый байт ответа от сервера, кеша или локального ресурса.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| {{domxref("PerformanceTiming.responseEnd","responseEnd")}}                                         | Браузер получает последний байт ответа от сервера, кеша или локального ресурса. Если соединение закрывается раньше получения последнего байта - значение параметра указывает на момент закрытия соединения.                                                                                                                                                                                                                                                                                  |
+| {{domxref("PerformanceTiming.domLoading","domLoading")}}                                         | Парсер HTML начинает работу. В этот момент {{domxref('Document.readyState')}} изменяется на `'loading'` и срабатывает событие {{DOMxRef("Document.readystatechange_event", "readystatechange")}}.                                                                                                                                                                                                                                                            |
+| {{domxref("PerformanceTiming.unloadEventStart","unloadEventStart")}}                         | Срабатывает событие {{DOMxRef("Window.unload_event", "unload")}}>, что говорит о времени, когда предыдущий документ начал выгружаться. Если предыдущего документа не было или переход к текущей странице подразумевал изменение origin (в т.ч. из-за редиректов), значение параметра равно `0`.                                                                                                                                                                              |
+| {{domxref("PerformanceTiming.unloadEventEnd","unloadEventEnd")}}                                 | Обработчик события [`unload`](/en-US/docs/Web/Events/unload) завершил свою работу. Если предыдущего документа не было или переход к текущей странице подразумевал изменение origin (в т.ч. из-за редиректов), значение параметра равно `0`.                                                                                                                                                                                                                                                  |
+| {{domxref("PerformanceTiming.domInteractive","domInteractive")}}                                 | HTML парсер завершил работу над основным документом. В этот момент [`Document.readyState`](/ru/docs/Web/API/Document/readyState) изменяется на `'interactive'` и срабатывает событие [`readystatechange`](/en-US/docs/Web/Events/readystatechange)                                                                                                                                                                                                                                           |
+| {{domxref("PerformanceTiming.domContentLoadedEventStart","domContentLoadedEventStart")}} | Момент сразу перед тем, как парсер запускает событие [`DOMContentLoaded`](/en-US/docs/Web/Events/DOMContentLoaded). Это событие запускается после того, как все скрипты, которые должны исполниться сразу после парсинга, выполнены.                                                                                                                                                                                                                                                         |
+| {{domxref("PerformanceTiming.domContentLoadedEventEnd","domContentLoadedEventEnd")}}     | Момент сразу после исполнения всех скриптов, которые должны были исполниться.                                                                                                                                                                                                                                                                                                                                                                                                                |
+| {{domxref("PerformanceTiming.domComplete","domComplete")}}                                         | Парсер HTML завершил работу над основным документом. В этот момент [`Document.readyState`](/ru/docs/Web/API/Document/readyState) изменяется на `'complete'` и срабатывает событие [`readystatechange`](/en-US/docs/Web/Events/readystatechange).                                                                                                                                                                                                                                             |
+| {{domxref("PerformanceTiming.loadEventStart","loadEventStart")}}                                 | Событие [`load`](/en-US/docs/Web/Events/load) было отправлено текущему документу. Если это событие на момент измерения не было отправлено документу, значение параметра равно `0.`                                                                                                                                                                                                                                                                                                           |
+| {{domxref("PerformanceTiming.loadEventEnd","loadEventEnd")}}                                     | Обработка события [`load`](/en-US/docs/Web/Events/load) завершена, то есть загрузка завершена. Если это событие ещё не произошло или не было послано документу, значение параметра равно `0`.                                                                                                                                                                                                                                                                                                |
 
-<h3 id="Вычисление_таймингов">Вычисление таймингов</h3>
+### Вычисление таймингов
 
-<p>Мы можем использовать все эти значения, чтобы вычислить, сколько времени потребовалось на тот или иной этап:</p>
+Мы можем использовать все эти значения, чтобы вычислить, сколько времени потребовалось на тот или иной этап:
 
-<pre class="brush: js">let
+```js
+let
     dns  = time.domainLookupEnd - time.domainLookupStart,
     tcp  = time.connectEnd - time.connectStart,
-    ssl != time.<code>secureConnectionStart</code>,</pre>
+    ssl != time.secureConnectionStart,
+```
 
-<h3 id="Время_до_первого_байта">Время до первого байта</h3>
+### Время до первого байта
 
-<p><a href="/en-US/docs/Glossary/time_to_first_byte">Время до первого байта (Time to First Byte)</a> - это время между <code>navigationStart</code> и <code>responseStart</code> (момент, когда получен первый байт от сервера / кеша). Доступно в <code>performanceTiming</code> API</p>
+[Время до первого байта (Time to First Byte)](/ru/docs/Glossary/time_to_first_byte) - это время между `navigationStart` и `responseStart` (момент, когда получен первый байт от сервера / кеша). Доступно в `performanceTiming` API
 
-<pre class="brush: js">let ttfb = time.responseStart - time.navigationStart;
-</pre>
+```js
+let ttfb = time.responseStart - time.navigationStart;
+```
 
-<h3 id="Время_загрузки_страницы">Время загрузки страницы</h3>
+### Время загрузки страницы
 
-<p><a href="/en-US/docs/Glossary/Page_load_time">Время загрузки страницы (Page load time)</a> - это время между <code>navigationStart</code> и моментом, когда событие <code>load</code> отправлено текущему документу. Доступно только в <code>performanceTiming</code> API</p>
+[Время загрузки страницы (Page load time)](/ru/docs/Glossary/Page_load_time) - это время между `navigationStart` и моментом, когда событие `load` отправлено текущему документу. Доступно только в `performanceTiming` API
 
-<pre class="brush: js">let pageloadtime = time.loadEventStart - time.navigationStart;</pre>
+```js
+let pageloadtime = time.loadEventStart - time.navigationStart;
+```
 
-<h3 id="Время_поиска_записи_DNS">Время поиска записи DNS</h3>
+### Время поиска записи DNS
 
-<p>Время поиска записи DNS (DNS lookup) - это время между <code><a href="/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupStart">domainLookupStart</a></code> и <code><a href="/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupEnd">domainLookupEnd</a></code>. Оба эти параметра доступны как в <code>performanceTiming</code>, так и в <code>performanceNavigationTiming</code>.</p>
+Время поиска записи DNS (DNS lookup) - это время между [`domainLookupStart`](/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupStart) и [`domainLookupEnd`](/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupEnd). Оба эти параметра доступны как в `performanceTiming`, так и в `performanceNavigationTiming`.
 
-<pre class="brush: js">let dns  = time.domainLookupEnd - time.domainLookupStart;</pre>
+```js
+let dns  = time.domainLookupEnd - time.domainLookupStart;
+```
 
-<h3 id="TCP">TCP</h3>
+### TCP
 
-<p>Время установки соединения <a href="/en-US/docs/Glossary/TCP">TCP</a> - это время между началом и окончанием попытки соединения:</p>
+Время установки соединения [TCP](/ru/docs/Glossary/TCP) - это время между началом и окончанием попытки соединения:
 
-<pre class="brush: js">tcp  = time.connectEnd - time.connectStart;</pre>
+```js
+tcp  = time.connectEnd - time.connectStart;
+```
 
-<h3 id="Установка_безопасного_подключения_SSL_negotiation">Установка безопасного подключения (SSL negotiation)</h3>
+### Установка безопасного подключения (SSL negotiation)
 
-<p><code><a href="/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart">secureConnectionStart</a></code> будет равен <code>undefined</code>, если SSL не доступен, <code>0</code> если <a href="/en-US/docs/Glossary/https">https</a> не используется или если временная метка доступна и используется. Другими словами, если безопасное соединение было использовано, то значение<code> secureConnectionStart</code> будет правдиво (<a href="/en-US/docs/Glossary/Truthy">truthy</a>), а время между<code> secureConnectionStart</code> и <code>requestStart</code> будет больше 0.</p>
+[`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) будет равен `undefined`, если SSL не доступен, `0` если [https](/ru/docs/Glossary/https) не используется или если временная метка доступна и используется. Другими словами, если безопасное соединение было использовано, то значение` secureConnectionStart` будет правдиво ([truthy](/ru/docs/Glossary/Truthy)), а время между` secureConnectionStart` и `requestStart` будет больше 0.
 
-<pre class="brush: js">ssl = time.requestStart - time.<code>secureConnectionStart;</code></pre>
+```js
+ssl = time.requestStart - time.secureConnectionStart;
+```
 
-<h2 id="Performance_Entry_API">Performance Entry API</h2>
+## Performance Entry API
 
-<p>Основные показатели производительности, рассмотренные выше, считаются устаревшими, но полностью поддерживаются современными браузерами. Взамен предлагается использовать {{domxref('PerformanceEntry', 'Performance Entry API')}}, который предоставляет инструмент для пометок и измерений времени одновременно с событиями navigation и загрузкой resource. Вы также можете создавать свои маркеры:</p>
+Основные показатели производительности, рассмотренные выше, считаются устаревшими, но полностью поддерживаются современными браузерами. Взамен предлагается использовать {{domxref('PerformanceEntry', 'Performance Entry API')}}, который предоставляет инструмент для пометок и измерений времени одновременно с событиями navigation и загрузкой resource. Вы также можете создавать свои маркеры:
 
-<pre class="brush: js">performance.getEntriesByType('navigation').forEach((navigation) =&gt; {
+```js
+performance.getEntriesByType('navigation').forEach((navigation) => {
   console.dir(navigation);
 });
 
-performance.getEntriesByType('resource').forEach((resource) =&gt; {
+performance.getEntriesByType('resource').forEach((resource) => {
   console.dir(resource);
 });
 
-performance.getEntriesByType('mark').forEach((mark) =&gt; {
+performance.getEntriesByType('mark').forEach((mark) => {
   console.dir(mark);
 });
 
-performance.getEntriesByType("measure").forEach((measure) =&gt; {
+performance.getEntriesByType("measure").forEach((measure) => {
   console.dir(measure);
 });
 
-performance.getEntriesByType('paint').forEach((paint) =&gt; {
+performance.getEntriesByType('paint').forEach((paint) => {
   console.dir(paint);
 });
 
-performance.getEntriesByType('frame').forEach((frame) =&gt; {
+performance.getEntriesByType('frame').forEach((frame) => {
   console.dir(frame);
-});</pre>
+});
+```
 
-<p>В некоторых браузерах вы можете использовать<code> performance.getEntriesByType('paint')</code>, чтобы запросить измерения для  <code>first-paint</code> и <code>first-contentful-paint</code>. Мы используем  <code>performance.getEntriesByType('navigation')</code> и  <code>performance.getEntriesByType('resource')</code> для запроса данных по навигации и загрузки ресурсов, соответственно.</p>
+В некоторых браузерах вы можете использовать` performance.getEntriesByType('paint')`, чтобы запросить измерения для `first-paint` и `first-contentful-paint`. Мы используем `performance.getEntriesByType('navigation')` и `performance.getEntriesByType('resource')` для запроса данных по навигации и загрузки ресурсов, соответственно.
 
-<h2 id="Navigation">Navigation</h2>
+## Navigation
 
-<p>Когда пользователь запрашивает веб-приложение,<a href="/en-US/docs/Learn/Performance/Populating_the_page:_how_browsers_work"> браузер должен получить некоторые мета-данные</a>, чтобы начать загрузку. Для этого пользовательский агент проходит серию шагов, такие как поиск записи DNS ({{glossary('DNS')}} lookup), TCP рукопожатие {{glossary('TCP handshake')}}, и установку безопасного соединения (SSL negotiation). Как только браузер установил соединение, происходит первый полезный запрос данных на сервера. Как только начинают поступать данные от сервера, браузер начинает парсить полученные данные, строит DOM, CSSOM, создаёт деревья рендера (render trees), чтобы в конце концов отрендерить страницу. В тот момент, когда браузер перестаёт парсить входящие данные, документ переходит в интерактивную стадию. Если в документе существуют отложенные к загрузке ресурсы (deferred scripts), которые должны быть обработаны, браузер парсит их. После этого запускается событие <a href="/en-US/docs/">DOMContentLoaded</a>, после которого готовность страницы завершена. Теперь документ может обрабатывать пост-загрузочные задачи. После этого документ маркируется, как полностью загруженный.</p>
+Когда пользователь запрашивает веб-приложение,[ браузер должен получить некоторые мета-данные](/ru/docs/Learn/Performance/Populating_the_page:_how_browsers_work), чтобы начать загрузку. Для этого пользовательский агент проходит серию шагов, такие как поиск записи DNS ({{glossary('DNS')}} lookup), TCP рукопожатие {{glossary('TCP handshake')}}, и установку безопасного соединения (SSL negotiation). Как только браузер установил соединение, происходит первый полезный запрос данных на сервера. Как только начинают поступать данные от сервера, браузер начинает парсить полученные данные, строит DOM, CSSOM, создаёт деревья рендера (render trees), чтобы в конце концов отрендерить страницу. В тот момент, когда браузер перестаёт парсить входящие данные, документ переходит в интерактивную стадию. Если в документе существуют отложенные к загрузке ресурсы (deferred scripts), которые должны быть обработаны, браузер парсит их. После этого запускается событие [DOMContentLoaded](/ru/docs/), после которого готовность страницы завершена. Теперь документ может обрабатывать пост-загрузочные задачи. После этого документ маркируется, как полностью загруженный.
 
-<pre>let navigationTimings = performance.getEntriesByType('navigation');</pre>
+```
+let navigationTimings = performance.getEntriesByType('navigation');
+```
 
-<p>Метод <code>performance.getEntriesByType('navigation')</code> возвращает массив <a href="/en-US/docs/Web/API/PerformanceEntry">PerformanceEntry</a>, в котором содержатся объекты Navigation Timing.</p>
+Метод `performance.getEntriesByType('navigation')` возвращает массив [PerformanceEntry](/ru/docs/Web/API/PerformanceEntry), в котором содержатся объекты Navigation Timing.
 
-<p><img alt="The results of when performance.getEntriesByType('navigation'); is entered into the console for this document" src="https://mdn.mozillademos.org/files/16825/perfgentrybytypenavigation.png" style="height: 628px; width: 897px;"></p>
+![The results of when performance.getEntriesByType('navigation'); is entered into the console for this document](https://mdn.mozillademos.org/files/16825/perfgentrybytypenavigation.png)
 
-<p>Из этих данных можно многое извлечь. На изображении выше вы видите, что помимо самих таймингов, данные содержат имя документа и некоторую другую полезную информацию.</p>
+Из этих данных можно многое извлечь. На изображении выше вы видите, что помимо самих таймингов, данные содержат имя документа и некоторую другую полезную информацию.
 
-<pre>let timing = performance.getEntriesByType('navigation')[0];</pre>
+```
+let timing = performance.getEntriesByType('navigation')[0];
+```
 
-<h3 id="Протокол">Протокол</h3>
+### Протокол
 
-<p>Мы можем проверить протокол, который используется дл получения ресурсов:</p>
+Мы можем проверить протокол, который используется дл получения ресурсов:
 
-<pre>let protocol = timing.nextHopProtocol</pre>
+```
+let protocol = timing.nextHopProtocol
+```
 
-<p>В текущем случае в ответ будет <code>h2</code> для <code>http/2</code>.</p>
+В текущем случае в ответ будет `h2` для `http/2`.
 
-<h3 id="Сжатие">Сжатие</h3>
+### Сжатие
 
-<p>Чтобы узнать, как эффективно сжимаются данные при передаче, мы можем разделить  <code>transferSize</code> на <code>decodedBodySize</code>, а затем вычесть результат из 100%. Для текущей страницы сжатие составляет до 74%.</p>
+Чтобы узнать, как эффективно сжимаются данные при передаче, мы можем разделить `transferSize` на `decodedBodySize`, а затем вычесть результат из 100%. Для текущей страницы сжатие составляет до 74%.
 
-<pre>let compressionSavings = 1 - (timing.transferSize / timing.decodedBodySize)</pre>
+```
+let compressionSavings = 1 - (timing.transferSize / timing.decodedBodySize)
+```
 
-<p>Мы могли бы использовать</p>
+Мы могли бы использовать
 
-<pre>let compressionSavings = 1 - (timing.encodedBodySize / timing.decodedBodySize)</pre>
+```
+let compressionSavings = 1 - (timing.encodedBodySize / timing.decodedBodySize)
+```
 
-<p>но <code>transfersize</code> так же включает в себя байты заголовков.</p>
+но `transfersize` так же включает в себя байты заголовков.
 
-<p>Для сравнение, мы можем посмотреть на вкладку Network, где увидим, что было передано 22.04KB для файла, который в разархивированном виде занимает 87.24KB. </p>
+Для сравнение, мы можем посмотреть на вкладку Network, где увидим, что было передано 22.04KB для файла, который в разархивированном виде занимает 87.24KB.
 
-<p><img alt="View of the bytes transferred and the size via the network tab" src="https://mdn.mozillademos.org/files/16826/bytesdownloaded.png" style="height: 107px; width: 709px;"></p>
+![View of the bytes transferred and the size via the network tab](https://mdn.mozillademos.org/files/16826/bytesdownloaded.png)
 
-<p>Если мы проверим вычисления, то результат получится схожим: <code>1 - (22.04 / 87.24) = 0.747</code>. Тайминги навигации позволяют нам получить такие данные программно.</p>
+Если мы проверим вычисления, то результат получится схожим: `1 - (22.04 / 87.24) = 0.747`. Тайминги навигации позволяют нам получить такие данные программно.
 
-<p>Обратите внимание, что это данные для одного единственно документа, а не для всех ресурсов вместе взятых. В то же время, длительность загрузки, события-обработчики и тайминги построения DOM / CSSOM влияют на продолжительность загрузки всего приложения, не только одного конкретного ресурса. Клиентские приложения, выполняющиеся в браузере, могут выглядеть быстрее, если данные объёмом 300КБ вы передаёте сжатыми до 100КБ, но это все не значит, что JavaScript, CSS или другие медиа-ресурсы не раздувают приложение и не делают его медленнее. Проверка уровня сжатия - это очень важно, но не менее важно проверять длительность парсинга ресурсов и время между тем, как завершён DOMContentLoaded и DOM готов к работе. Может случиться так, что время парсинга скриптов и обработка скриптами результатов в основном потоке (main thread) приведёт к зависанию интерфейса.</p>
+Обратите внимание, что это данные для одного единственно документа, а не для всех ресурсов вместе взятых. В то же время, длительность загрузки, события-обработчики и тайминги построения DOM / CSSOM влияют на продолжительность загрузки всего приложения, не только одного конкретного ресурса. Клиентские приложения, выполняющиеся в браузере, могут выглядеть быстрее, если данные объёмом 300КБ вы передаёте сжатыми до 100КБ, но это все не значит, что JavaScript, CSS или другие медиа-ресурсы не раздувают приложение и не делают его медленнее. Проверка уровня сжатия - это очень важно, но не менее важно проверять длительность парсинга ресурсов и время между тем, как завершён DOMContentLoaded и DOM готов к работе. Может случиться так, что время парсинга скриптов и обработка скриптами результатов в основном потоке (main thread) приведёт к зависанию интерфейса.
 
-<h3 id="Время_запроса">Время запроса</h3>
+### Время запроса
 
-<p>API не предоставляет все измерения, которые разработчик хочет получить. Например, как долго продлилось выполнение запроса? Отдельного поля в объекте данных нет. Однако, мы можем использовать измерения, чтобы вычислить то, что нам нужно.</p>
+API не предоставляет все измерения, которые разработчик хочет получить. Например, как долго продлилось выполнение запроса? Отдельного поля в объекте данных нет. Однако, мы можем использовать измерения, чтобы вычислить то, что нам нужно.
 
-<p>Чтобы определить время ответа, вычтите время старта запроса из времени старта получения ответа. Запрос стартует ровно в тот момент, когда клиент запрашивает ресурс с сервера (или из кеша). Ответ начинается ровно в тот момент, когда клиент получает первый байт.</p>
+Чтобы определить время ответа, вычтите время старта запроса из времени старта получения ответа. Запрос стартует ровно в тот момент, когда клиент запрашивает ресурс с сервера (или из кеша). Ответ начинается ровно в тот момент, когда клиент получает первый байт.
 
-<pre class="brush: js">request = <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/responseStart"><code>timing.responseStart</code></a> - <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/requestStart"><code>timing.requestStart</code></a></pre>
+```js
+request = timing.responseStart - timing.requestStart
+```
 
-<h3 id="Длительность_события_загрузки">Длительность события загрузки</h3>
+### Длительность события загрузки
 
-<pre class="brush: js">load = <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd"><code>timing.loadEventEnd</code> - <code>timing.loadEventStart</code></a> </pre>
+```js
+load = timing.loadEventEnd - timing.loadEventStart
+```
 
-<h3 id="DOMContentLoaded_event">DOMContentLoaded event</h3>
+### DOMContentLoaded event
 
-<p>Длительность события DOMContentLoaded определяется разностью моментов, когда клиент запускает событие DOMContentLoaded и когда это событие завершено. Старайтесь держать эту величину меньше 50ms - тогда ваш интерфейс будет отзывчивым.</p>
+Длительность события DOMContentLoaded определяется разностью моментов, когда клиент запускает событие DOMContentLoaded и когда это событие завершено. Старайтесь держать эту величину меньше 50ms - тогда ваш интерфейс будет отзывчивым.
 
-<pre class="brush: js">DOMContentLoaded = <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd"><code>timing.domContentLoadedEventEnd</code></a> - <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart"><code>timing.domContentLoadedEventStart</code></a></pre>
+```js
+DOMContentLoaded = timing.domContentLoadedEventEnd - timing.domContentLoadedEventStart
+```
 
-<h3 id="Длительность_Duration">Длительность (Duration)</h3>
+### Длительность (Duration)
 
-<p>В объекте данных есть поле Длительность (<code>Duration</code>). Длительность - это разница между <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd">PerformanceNavigationTiming.loadEventEnd</a> и <a href="/en-US/docs/Web/API/PerformanceEntry/startTime">PerformanceEntry.startTime</a> properties.</p>
+В объекте данных есть поле Длительность (`Duration`). Длительность - это разница между [PerformanceNavigationTiming.loadEventEnd](/ru/docs/Web/API/PerformanceNavigationTiming/loadEventEnd) и [PerformanceEntry.startTime](/ru/docs/Web/API/PerformanceEntry/startTime) properties.
 
-<p>Интерфейс PerformanceNavigationTiming, кроме того, даёт информацию о том, какой тип навигации вы измеряете, возвращая <code>navigate</code>, <code>reload</code>, <code>back_forward</code> или <code>prerender</code>.</p>
+Интерфейс PerformanceNavigationTiming, кроме того, даёт информацию о том, какой тип навигации вы измеряете, возвращая `navigate`, `reload`, `back_forward` или `prerender`.
 
-<h2 id="Resource">Resource</h2>
+## Resource
 
-<p>В то время, как тайминги навигации измеряют производительность загрузки и парсинга основного файла HTML, этот файл служит лишь точкой входа для загрузки других ресурсов. Поэтому нам так же важно знать, как быстро загружаются дополнительные ресурсы. Для измерения этих данных нужно использовать Resource Timing. Большая часть измерений в этом объекте похожи: здесь и поиск домена в DNS, и TCP установка соединения и т.д.</p>
+В то время, как тайминги навигации измеряют производительность загрузки и парсинга основного файла HTML, этот файл служит лишь точкой входа для загрузки других ресурсов. Поэтому нам так же важно знать, как быстро загружаются дополнительные ресурсы. Для измерения этих данных нужно использовать Resource Timing. Большая часть измерений в этом объекте похожи: здесь и поиск домена в DNS, и TCP установка соединения и т.д.
 
-<p><img alt="Graphic of Resource Timing timestamps" src="https://mdn.mozillademos.org/files/12093/ResourceTiming-TimeStamps.jpg"></p>
+![Graphic of Resource Timing timestamps](https://mdn.mozillademos.org/files/12093/ResourceTiming-TimeStamps.jpg)
 
-<p>Для того, чтобы получить эти данные, выполните команду:</p>
+Для того, чтобы получить эти данные, выполните команду:
 
-<pre class="syntaxbox"><code>performance.getEntriesByType("resource")</code></pre>
+```
+performance.getEntriesByType("resource")
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("PerformanceNavigationTiming")}}</li>
- <li>{{domxref("PerformanceResourceTiming")}},</li>
- <li>{{domxref("PerformanceMark")}}</li>
- <li>{{domxref("PerformanceMeasure")}}</li>
- <li>{{domxref("PerformancePaintTiming")}}</li>
-</ul>
+- {{domxref("PerformanceNavigationTiming")}}
+- {{domxref("PerformanceResourceTiming")}},
+- {{domxref("PerformanceMark")}}
+- {{domxref("PerformanceMeasure")}}
+- {{domxref("PerformancePaintTiming")}}
