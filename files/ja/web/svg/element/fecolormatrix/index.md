@@ -7,7 +7,7 @@ slug: Web/SVG/Element/feColorMatrix
 
 **`<feColorMatrix>`** は SVG のフィルター要素で、変換行列に基づいて色を変化させます。すべてのピクセルのカラー値 `[R,G,B,A]` は 5 x 5 の行列で[行列乗算](https://en.wikipedia.org/wiki/Matrix_multiplication)され、新しい色 `[R',G',B',A']` を生成します。
 
-> **メモ:** 基本的な記号 _**`'`**_ は、数学で変換された結果を表すために使用されます。
+> **Note:** 基本的な記号 _**`'`**_ は、数学で変換された結果を表すために使用されます。
 
 ```
 | R' |     | r1 r2 r3 r4 r5 |   | R |

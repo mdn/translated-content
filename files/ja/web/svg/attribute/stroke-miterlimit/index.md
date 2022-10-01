@@ -7,7 +7,7 @@ slug: Web/SVG/Attribute/stroke-miterlimit
 
 **`stroke-miterlimit`** 属性はプレゼンテーション属性で、制限長をマイター長とマイター接続に使用する {{ SVGAttr("stroke-width") }} の比率で定義します。制限長を超えると、接続はマイターからベベルへと変更されます。
 
-> **メモ:** `stroke-miterlimit` はプレゼンテーション属性なので、 CSS プロパティとして使用することができます。
+> **Note:** `stroke-miterlimit` はプレゼンテーション属性なので、 CSS プロパティとして使用することができます。
 
 この属性は、以下の SVG 要素で使用することができます。
 

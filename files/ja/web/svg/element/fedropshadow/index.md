@@ -7,7 +7,7 @@ slug: Web/SVG/Element/feDropShadow
 
 SVG の **`<feDropShadow>`** フィルタープリミティブは、入力画像のドロップシャドウを生成します。これは {{SVGElement('filter')}} 要素の中でのみ使用できます。
 
-> **メモ:** ドロップシャドウの色や不透明度は、 {{SVGAttr('flood-color')}} や {{SVGAttr('flood-opacity')}} の各プレゼンテーション属性を使用することで変更できます。
+> **Note:** ドロップシャドウの色や不透明度は、 {{SVGAttr('flood-color')}} や {{SVGAttr('flood-opacity')}} の各プレゼンテーション属性を使用することで変更できます。
 
 ```css hidden
 html,body,svg { height:100% }

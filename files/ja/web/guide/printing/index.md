@@ -26,7 +26,7 @@ slug: Web/Guide/Printing
 
 ブラウザーによっては (Firefox 6 以降や Internet Explorer など) コンテンツが印刷を開始することを判断できるように、 `beforeprint` および `afterprint` イベントを送信します。これを使用して、印刷中に表示されるユーザーインターフェイスを調整することができます (例えば、印刷処理中にユーザーインターフェイス要素を表示したり隠したりするなど)。
 
-> **メモ:** [`window.onbeforeprint`](/ja/docs/DOM/window.onbeforeprint) および [`window.onafterprint`](/ja/docs/DOM/window.onafterprint) を使用してこれらのイベントにハンドラーを割り当てることもできますが、 {{domxref("EventTarget.addEventListener()")}} を使用することをお勧めします。
+> **Note:** [`window.onbeforeprint`](/ja/docs/DOM/window.onbeforeprint) および [`window.onafterprint`](/ja/docs/DOM/window.onafterprint) を使用してこれらのイベントにハンドラーを割り当てることもできますが、 {{domxref("EventTarget.addEventListener()")}} を使用することをお勧めします。
 
 ## 例
 
@@ -106,7 +106,7 @@ function printPage (sURL) {
 </html>
 ```
 
-> **メモ:** 古いバージョン Internet Explorer は、非表示の {{HTMLElement("iframe")}} の印刷することができません。
+> **Note:** 古いバージョン Internet Explorer は、非表示の {{HTMLElement("iframe")}} の印刷することができません。
 
 ## 関連情報
 

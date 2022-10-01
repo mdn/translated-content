@@ -9,7 +9,7 @@ l10n:
 
 SVG が規定された時点では、ブラウザーでウェブフォントへの対応は普及していませんでした。しかし、テキストを正しく描画するためには、正しいフォントファイルへのアクセスが不可欠であるため、この機能を提供するためにフォント記述技術が SVG に追加されました。これは PostScript や OTF などの他のフォーマットとの互換性を目的としたものではなく、レンダリング時に書体情報を SVG に埋め込む簡単な手段です。
 
-> **メモ:** SVG フォントは、現在 Safari と Android ブラウザーのみが対応しています。
+> **Note:** SVG フォントは、現在 Safari と Android ブラウザーのみが対応しています。
 >
 > Internet Explorer は[実装を検討しておらず](https://arstechnica.com/information-technology/2010/03/platform-preview-gives-web-developers-first-taste-of-ie9/)、 [Chrome 38 (および Opera 25) では機能から削除されており](https://chromestatus.com/feature/5930075908210688)、 Firefox は [WOFF](/ja/docs/Web/Guide/WOFF) に集中するために[実装を無期限に延期しています](https://bugzilla.mozilla.org/show_bug.cgi?id=119490)。しかし、Batik や Inkscape の一部など、他のツールは SVG フォントの埋め込みに対応しています。
 

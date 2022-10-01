@@ -56,7 +56,7 @@ xhr.send();
 
 document が {{Glossary("HTML")}} である場合、上記のコードは {{domxref("Document")}} を返します。document が XML である場合、返されるオブジェクトは {{domxref("XMLDocument")}} になります。この 2 種類は基本的に同じですが、その違いは主に歴史的な部分であり、差別化にはいくつかの実用的な利点があります。
 
-> **メモ:** There is in fact an {{domxref("HTMLDocument")}} interface as well, but it is not necessarily an independent type. In some browsers it is, while in others it is simply an alias for the `Document` interface.
+> **Note:** There is in fact an {{domxref("HTMLDocument")}} interface as well, but it is not necessarily an independent type. In some browsers it is, while in others it is simply an alias for the `Document` interface.
 
 ## XML 文書のシリアライズ
 
