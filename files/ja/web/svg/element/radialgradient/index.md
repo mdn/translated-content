@@ -9,7 +9,7 @@ l10n:
 
 **`<radialGradient>`** 要素は、グラフィック要素の塗りつぶしや線の描画に適用できる放射状のグラデーションを定義することができます。
 
-> **メモ:** CSS の {{cssxref('gradient/radial-gradient', 'gradient()')}} と混同しないでください。 CSS のグラデーションは HTML 要素に対してのみ適用することができるのに対し、 SVG のグラデーションは SVG 要素にのみ適用できます。
+> **Note:** CSS の {{cssxref('gradient/radial-gradient', 'gradient()')}} と混同しないでください。 CSS のグラデーションは HTML 要素に対してのみ適用することができるのに対し、 SVG のグラデーションは SVG 要素にのみ適用できます。
 
 ## 例
 

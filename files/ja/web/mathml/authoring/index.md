@@ -56,9 +56,9 @@ HTML5 文書内部では表示 (presentation) MathML が使えます。
 </html>
 ```
 
-> **メモ:** To use MathML in XML documents (e.g. XHTML, EPUB or OpenDocument) place an explicit `xmlns="http://www.w3.org/1998/Math/MathML"` attribute on each `<math>` element.
+> **Note:** To use MathML in XML documents (e.g. XHTML, EPUB or OpenDocument) place an explicit `xmlns="http://www.w3.org/1998/Math/MathML"` attribute on each `<math>` element.
 
-> **メモ:** Some email or instant messaging clients are able to send and receive messages in the HTML format. It is thus possible to embed mathematical formulas inside such messages, as long as MathML tags are not filtered out by markup sanitizers.
+> **Note:** Some email or instant messaging clients are able to send and receive messages in the HTML format. It is thus possible to embed mathematical formulas inside such messages, as long as MathML tags are not filtered out by markup sanitizers.
 
 #### MathML に対応していないブラウザー向けの代替策
 
@@ -80,7 +80,7 @@ Alternatively, you can also just display a warning at the top of the page for br
 <script src="https://fred-wang.github.io/mathml-warning.js/mpadded-min.js"></script>
 ```
 
-> **メモ:** これら 2 つのスクリプトは [mspace](/ja/docs/Web/MathML/Element/mspace) または [mpadded](/ja/docs/Web/MathML/Element/mpadded) 要素の機能検出を行うことに注意してください (これらのページのブラウザー互換性表を参照してください)。また、良好な MathML の対応のないブラウザーのためにページの上部に警告を表示し、ユーザーに上記のフォールバックのいずれかを選択させるための同様のスクリプトもあります。
+> **Note:** これら 2 つのスクリプトは [mspace](/ja/docs/Web/MathML/Element/mspace) または [mpadded](/ja/docs/Web/MathML/Element/mpadded) 要素の機能検出を行うことに注意してください (これらのページのブラウザー互換性表を参照してください)。また、良好な MathML の対応のないブラウザーのためにページの上部に警告を表示し、ユーザーに上記のフォールバックのいずれかを選択させるための同様のスクリプトもあります。
 
 #### 数学記号用のフォント
 
@@ -98,7 +98,7 @@ Several fonts are proposed and you can just select a different style, for exampl
  <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css">
 ```
 
-> **メモ:** The fonts and stylesheets from that MathFonts page are distributed under open source licenses, so feel free to copy them on your own server and adapt them to your need.
+> **Note:** The fonts and stylesheets from that MathFonts page are distributed under open source licenses, so feel free to copy them on your own server and adapt them to your need.
 
 ## 簡易記法からの変換
 
@@ -241,7 +241,7 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/msp
 latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
 ```
 
-> **メモ:** Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mathoid).
+> **Note:** Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mathoid).
 
 ## グラフィカルインターフェイス
 
@@ -253,13 +253,13 @@ A simple approach is to integrate [converters from a simple syntax](#conversion_
 
 ![LaTeX input box in Thunderbird ](thunderbird.png)
 
-> **メモ:** You can also use the **Insert > HTML** command to paste any MathML content.
+> **Note:** You can also use the **Insert > HTML** command to paste any MathML content.
 
 [LibreOffice](https://www.libreoffice.org/)'s equation editor (File → New → Formula) shows a possible enhancement: its input box for the *StartMath* syntax provides extra equation panels to insert pre-defined mathematical constructions.
 
 ![StarMath input box in Libre Office](libreoffice.png)
 
-> **メモ:** To obtain libreoffice's MathML code, save the document as `mml` and open it with your favorite text editor.
+> **Note:** To obtain libreoffice's MathML code, save the document as `mml` and open it with your favorite text editor.
 
 ### WYSIYWG なエディター
 
@@ -269,7 +269,7 @@ Other editors provide math editing features that are directly integrated into th
 
 ![TeXmacs example](texmacs.png)
 
-> **メモ:** By default Lyx and TeXmacs will use images of formulas in their HTML output. To choose MathML instead, [follow these instructions](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx) for the former and select `User preference > Convert > Export mathematical formulas as MathML` for the latter.
+> **Note:** By default Lyx and TeXmacs will use images of formulas in their HTML output. To choose MathML instead, [follow these instructions](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx) for the former and select `User preference > Convert > Export mathematical formulas as MathML` for the latter.
 
 ## 光学文字認識・手書き文字認識
 
