@@ -80,7 +80,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
 > **备注：** 从 Chrome 52 和 Firefox 52 开始，不安全的站点（`http:`）无法使用 Cookie 的 `Secure` 标记。
 
-JavaScript {{domxref("Document.cookie")}} API 无法访问带有 `HttpOnly` 属性的 cookie；此类 Cookie 仅作用于服务器。例如，持久化服务器端会话的 Cookie 不需要对 JavaScript 可用，而应具有 `HttpOnly` 属性。此预防措施有助于缓解[跨站点脚本（XSS）](</zh-CN/docs/Web/Security/Types_of_attacks#Cross-site_scripting_(XSS)>) 攻击。
+JavaScript {{domxref("Document.cookie")}} API 无法访问带有 `HttpOnly` 属性的 cookie；此类 Cookie 仅作用于服务器。例如，持久化服务器端会话的 Cookie 不需要对 JavaScript 可用，而应具有 `HttpOnly` 属性。此预防措施有助于缓解[跨站点脚本（XSS）](/zh-CN/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss) 攻击。
 
 示例：
 
