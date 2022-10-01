@@ -6,51 +6,49 @@ tags:
   - NeedsContent
   - NeedsUpdate
   - SVG
-  - 'SVG:Руководство'
+  - SVG:Руководство
 translation_of: Web/SVG/Tutorial
 ---
-<p>Масштабируемая векторная графика (<a href="/en-US/Web/SVG" title="en-US/Web/SVG">SVG</a>), — это подмножество расширяемого языка разметки XML созданный Консорциумом Всемирной паутины (W3C). Эта технология реализована в Firefox, Opera, Internet Explorer, WebKit и в прочих браузерах.</p>
+Масштабируемая векторная графика ([SVG](/en-US/Web/SVG "en-US/Web/SVG")), — это подмножество расширяемого языка разметки XML созданный Консорциумом Всемирной паутины (W3C). Эта технология реализована в Firefox, Opera, Internet Explorer, WebKit и в прочих браузерах.
 
-<p>Это учебное пособие призвано объяснить вам суть технологии SVG и ознакомить с её техническими деталями. Если вы хотите только рисовать красивые изображения, то вы можете найти более полезные учебные ресурсы. Есть хорошее учебное пособие для знакомства с SVG — это учебное пособие от W3C <a class="external" href="http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html">SVG Primer</a>.</p>
+Это учебное пособие призвано объяснить вам суть технологии SVG и ознакомить с её техническими деталями. Если вы хотите только рисовать красивые изображения, то вы можете найти более полезные учебные ресурсы. Есть хорошее учебное пособие для знакомства с SVG — это учебное пособие от W3C [SVG Primer](http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html).
 
-<div class="note">Это учебное пособие находится в стадии разработки. Если вы можете, то, пожалуйста, помогите с написанием одного или нескольких параграфов. Плюс балл Гриффиндору за написание целой страницы!</div>
+> **Примечание:** Это учебное пособие находится в стадии разработки. Если вы можете, то, пожалуйста, помогите с написанием одного или нескольких параграфов. Плюс балл Гриффиндору за написание целой страницы!
 
-<h5 id="Введение_в_SVG">Введение в SVG</h5>
+##### Введение в SVG
 
-<ul>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Введение" title="en-US/Web/SVG/Tutorial/Introduction">Введение</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Getting_Started" title="en-US/Web/SVG/Tutorial/Getting_Started">Начало работы</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Позиции" title="en-US/Web/SVG/Tutorial/Positions">Расположение(Позиция)</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Основные_Фигуры" title="en-US/Web/SVG/Tutorial/Basic_Shapes">Основные фигуры</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Paths" title="en-US/Web/SVG/Tutorial/Paths">Пути(Paths)</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Fills_and_Strokes" title="en-US/Web/SVG/Tutorial/Fills_and_Strokes">Заливка и обводка</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Gradients" title="en-US/Web/SVG/Tutorial/Gradients">Градиенты</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Patterns" title="en-US/Web/SVG/Tutorial/Patterns">Паттерны(Шаблоны)</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Texts" title="en-US/Web/SVG/Tutorial/Texts">Текст</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Базовые_Преобразования" title="en-US/Web/SVG/Tutorial/Basic_Transformations">Базовые трансформации</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Clipping_and_masking" title="en-US/Web/SVG/Tutorial/Clipping_and_masking">Обрезка и маска</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Other_content_in_SVG" title="en-US/Web/SVG/Tutorial/Other content in SVG">Другой контент в SVG</a></li>
- <li><a href="/ru/Web/SVG/Tutorial/Filter_effects" title="en-US/Web/SVG/Tutorial/Filter effects">Фильтры</a></li>
- <li><a href="/ru/Web/SVG/Tutorial/SVG_fonts" title="en-US/Web/SVG/Tutorial/SVG fonts">SVG-шрифты</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/SVG_Image_Tag" title="en-US/Web/SVG/Tutorial/SVG Image Tag">SVG-тег Image</a></li>
- <li><a href="/ru/docs/Web/SVG/Tutorial/Tools_for_SVG" title="en-US/Web/SVG/Tutorial/Tools_for_SVG">Инструменты для SVG</a></li>
- <li><a href="/ru/docs/Web/Guide/CSS/Getting_started/SVG_%D0%B8_CSS">SVG и CSS</a></li>
-</ul>
+- [Введение](/ru/docs/Web/SVG/Tutorial/Введение "en-US/Web/SVG/Tutorial/Introduction")
+- [Начало работы](/ru/docs/Web/SVG/Tutorial/Getting_Started "en-US/Web/SVG/Tutorial/Getting_Started")
+- [Расположение(Позиция)](/ru/docs/Web/SVG/Tutorial/Позиции "en-US/Web/SVG/Tutorial/Positions")
+- [Основные фигуры](/ru/docs/Web/SVG/Tutorial/Основные_Фигуры "en-US/Web/SVG/Tutorial/Basic_Shapes")
+- [Пути(Paths)](/ru/docs/Web/SVG/Tutorial/Paths "en-US/Web/SVG/Tutorial/Paths")
+- [Заливка и обводка](/ru/docs/Web/SVG/Tutorial/Fills_and_Strokes "en-US/Web/SVG/Tutorial/Fills_and_Strokes")
+- [Градиенты](/ru/docs/Web/SVG/Tutorial/Gradients "en-US/Web/SVG/Tutorial/Gradients")
+- [Паттерны(Шаблоны)](/ru/docs/Web/SVG/Tutorial/Patterns "en-US/Web/SVG/Tutorial/Patterns")
+- [Текст](/ru/docs/Web/SVG/Tutorial/Texts "en-US/Web/SVG/Tutorial/Texts")
+- [Базовые трансформации](/ru/docs/Web/SVG/Tutorial/Базовые_Преобразования "en-US/Web/SVG/Tutorial/Basic_Transformations")
+- [Обрезка и маска](/ru/docs/Web/SVG/Tutorial/Clipping_and_masking "en-US/Web/SVG/Tutorial/Clipping_and_masking")
+- [Другой контент в SVG](/ru/docs/Web/SVG/Tutorial/Other_content_in_SVG "en-US/Web/SVG/Tutorial/Other content in SVG")
+- [Фильтры](/ru/Web/SVG/Tutorial/Filter_effects "en-US/Web/SVG/Tutorial/Filter effects")
+- [SVG-шрифты](/ru/Web/SVG/Tutorial/SVG_fonts "en-US/Web/SVG/Tutorial/SVG fonts")
+- [SVG-тег Image](/ru/docs/Web/SVG/Tutorial/SVG_Image_Tag "en-US/Web/SVG/Tutorial/SVG Image Tag")
+- [Инструменты для SVG](/ru/docs/Web/SVG/Tutorial/Tools_for_SVG "en-US/Web/SVG/Tutorial/Tools_for_SVG")
+- [SVG и CSS](/ru/docs/Web/Guide/CSS/Getting_started/SVG_%D0%B8_CSS)
 
-<p>Следующие темы более обширные, и они требуют отдельных учебных пособий.</p>
+Следующие темы более обширные, и они требуют отдельных учебных пособий.
 
-<h5 id="Написание_SVG_с_JavaScript">Написание SVG с JavaScript</h5>
+##### Написание SVG с JavaScript
 
-<p>БОП</p>
+БОП
 
-<h5 id="SVG-фильтры_—_руководство">SVG-фильтры — руководство</h5>
+##### SVG-фильтры — руководство
 
-<p>БОП</p>
+БОП
 
-<h5 id="Анимация_с_помощью_SMIL_в_SVG">Анимация с помощью SMIL в SVG</h5>
+##### Анимация с помощью SMIL в SVG
 
-<p>БОП</p>
+БОП
 
-<h5 id="Создание_шрифтов_в_SVG">Создание шрифтов в SVG</h5>
+##### Создание шрифтов в SVG
 
-<p>БОП</p>
+БОП

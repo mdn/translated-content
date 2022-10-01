@@ -6,69 +6,74 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/dur
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Атрибут <strong><code>dur</code></strong> отображает простую длительность анимации.</p>
+Атрибут **`dur`** отображает простую длительность анимации.
 
-<p>Пять элементов используют данный атрибут: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, и {{SVGElement("set")}}</p>
+Пять элементов используют данный атрибут: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, и {{SVGElement("set")}}
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect x="0" y="0" width="100" height="100"&gt;
-    &lt;animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="1s" repeatCount="indefinite"/&gt;
-  &lt;/rect&gt;
-  &lt;rect x="120" y="0" width="100" height="100"&gt;
-    &lt;animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="3s" repeatCount="indefinite"/&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="100" height="100">
+    <animate attributeType="XML" attributeName="y" from="0" to="50"
+        dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="120" y="0" width="100" height="100">
+    <animate attributeType="XML" attributeName="y" from="0" to="50"
+        dur="3s" repeatCount="indefinite"/>
+  </rect>
+</svg>
+```
 
-<p>{{EmbedLiveSample("topExample", "220", "150")}}</p>
-</div>
+{{EmbedLiveSample("topExample", "220", "150")}}
 
-<h2 id="Примечания_к_использованию">Примечания к использованию</h2>
+## Примечания к использованию
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><code><a href="/ru/SVG/Content_type#Clock-value" title="en/SVG/Content_type#Clock-value">&lt;clock-value&gt;</a></code> | <code>indefinite</code> | <code>media</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Значение по умолчанию</th>
-   <td><code>indefinite</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемый</th>
-   <td>Нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Значение</th>
+      <td>
+        <code
+          ><a
+            href="/ru/SVG/Content_type#Clock-value"
+            title="en/SVG/Content_type#Clock-value"
+            >&#x3C;clock-value></a
+          ></code
+        >
+        | <code>indefinite</code> | <code>media</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Значение по умолчанию</th>
+      <td><code>indefinite</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Анимируемый</th>
+      <td>Нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;clock-value&gt;</code></dt>
- <dd>Задаёт длину простой длительности. Значение должно быть больше 0. Это значение может быть выражено в часах (<code>h</code>), минутах (<code>m</code>), секундах (<code>s</code>) или миллисекундах (<code>ms</code>). Это позволяет объединить такое представление времени для предоставления некоторых сложных длительностей, таких как: <code>hh:mm:ss.iii</code> или  <code>mm:ss.iii</code></dd>
- <dt><code>media</code></dt>
- <dd>Задаёт простую длительность, как длительность, свойственной медиа. Это валидно только для элементов, которые определяют media.</dd>
- <dt><code>indefinite</code></dt>
- <dd>Задаёт простую длительность, как незаданную</dd>
-</dl>
+- `<clock-value>`
+  - : Задаёт длину простой длительности. Значение должно быть больше 0. Это значение может быть выражено в часах (`h`), минутах (`m`), секундах (`s`) или миллисекундах (`ms`). Это позволяет объединить такое представление времени для предоставления некоторых сложных длительностей, таких как: `hh:mm:ss.iii` или `mm:ss.iii`
+- `media`
+  - : Задаёт простую длительность, как длительность, свойственной медиа. Это валидно только для элементов, которые определяют media.
+- `indefinite`
+  - : Задаёт простую длительность, как незаданную
 
-<div class="blockIndicator note">
-<p><strong>Примечание:</strong> Интерполяция не будет работать, если простая длительность остаётся неопределённой (хотя это может быть полезно для элементов {{ SVGElement("set") }}).</p>
-</div>
+> **Примечание:** Интерполяция не будет работать, если простая длительность остаётся неопределённой (хотя это может быть полезно для элементов {{ SVGElement("set") }}).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

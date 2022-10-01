@@ -8,103 +8,83 @@ tags:
 translation_of: Web/SVG/Element/animateMotion
 original_slug: Web/SVG/Элемент/animateMotion
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Элемент <strong><code>&lt;animateMotion&gt;</code></strong> вызывает перемещение ссылочного элемента вдоль пути движения.</p>
+Элемент **`<animateMotion>`** вызывает перемещение ссылочного элемента вдоль пути движения.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+### Глобальные атрибуты
 
-<ul>
- <li><a href="/ru/docs/SVG/Attribute#Conditional_processing_attributes" title="en/SVG/Attribute#ConditionalProccessing">Условные атрибуты обработки</a> » </li>
- <li><a href="/ru/docs/SVG/Attribute#Core_attributes" title="en/SVG/Attribute#Core">Основные атрибуты</a> » </li>
- <li><a href="/ru/docs/SVG/Attribute#Animation_event_attributes" title="en/SVG/Attribute#AnimationEvent">Атрибуты события анимации</a> » </li>
- <li><a href="/ru/docs/SVG/Attribute#XLink_attributes" title="en/SVG/Attribute#XLink">Атрибуты Xlink</a> » </li>
- <li><a href="/ru/docs/SVG/Attribute#Animation_timing_attributes" title="en/SVG/Attribute#AnimationTiming">Атрибуты времени анимации</a> » </li>
- <li><a href="/ru/docs/SVG/Attribute#Animation_value_attributes" title="en/SVG/Attribute#AnimationValue">Величина атрибутов анимации</a> » </li>
- <li><a href="/ru/docs/SVG/Attribute#Animation_addition_attributes" title="en/SVG/Attribute#AnimationAddition">Атрибуты добавления анимации</a> » </li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [Условные атрибуты обработки](/ru/docs/SVG/Attribute#Conditional_processing_attributes "en/SVG/Attribute#ConditionalProccessing") »
+- [Основные атрибуты](/ru/docs/SVG/Attribute#Core_attributes "en/SVG/Attribute#Core") »
+- [Атрибуты события анимации](/ru/docs/SVG/Attribute#Animation_event_attributes "en/SVG/Attribute#AnimationEvent") »
+- [Атрибуты Xlink](/ru/docs/SVG/Attribute#XLink_attributes "en/SVG/Attribute#XLink") »
+- [Атрибуты времени анимации](/ru/docs/SVG/Attribute#Animation_timing_attributes "en/SVG/Attribute#AnimationTiming") »
+- [Величина атрибутов анимации](/ru/docs/SVG/Attribute#Animation_value_attributes "en/SVG/Attribute#AnimationValue") »
+- [Атрибуты добавления анимации](/ru/docs/SVG/Attribute#Animation_addition_attributes "en/SVG/Attribute#AnimationAddition") »
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="Собственные_атрибуты">Собственные атрибуты</h3>
+### Собственные атрибуты
 
-<ul>
- <li>{{SVGAttr("calcMode")}}</li>
- <li>{{SVGAttr("path")}}</li>
- <li>{{SVGAttr("keyPoints")}}</li>
- <li>{{SVGAttr("rotate")}}</li>
- <li>{{SVGAttr("origin")}}</li>
-</ul>
+- {{SVGAttr("calcMode")}}
+- {{SVGAttr("path")}}
+- {{SVGAttr("keyPoints")}}
+- {{SVGAttr("rotate")}}
+- {{SVGAttr("origin")}}
 
-<h2 id="DOM_интерфейс">DOM интерфейс</h2>
+## DOM интерфейс
 
-<p>Этот элемент реализует интерфейс {{domxref("SVGAnimateMotionElement")}}.</p>
+Этот элемент реализует интерфейс {{domxref("SVGAnimateMotionElement")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html; highlight[18-20]">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120" viewBox="0 0 120 120"
+```html
+<?xml version="1.0"?>
+<svg width="120" height="120" viewBox="0 0 120 120"
     xmlns="http://www.w3.org/2000/svg" version="1.1"
-    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+    xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  &lt;!-- Рисуем серый контур движения с двумя
-       маленькими кружками в ключевых точках --&gt;
-  &lt;path id="theMotionPath" stroke="lightgrey" stroke-width="2" fill="none"
-        d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110" /&gt;
-  &lt;circle cx="10" cy="110" r="3" fill="lightgrey"  /&gt;
-  &lt;circle cx="110" cy="10" r="3" fill="lightgrey"  /&gt;
+  <!-- Рисуем серый контур движения с двумя
+       маленькими кружками в ключевых точках -->
+  <path id="theMotionPath" stroke="lightgrey" stroke-width="2" fill="none"
+        d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110" />
+  <circle cx="10" cy="110" r="3" fill="lightgrey"  />
+  <circle cx="110" cy="10" r="3" fill="lightgrey"  />
 
-  &lt;!-- Рисуем красный круг, который будет перемещаться
-       вдоль траектории движения. --&gt;
-  &lt;circle cx="" cy="" r="5" fill="red"&gt;
+  <!-- Рисуем красный круг, который будет перемещаться
+       вдоль траектории движения. -->
+  <circle cx="" cy="" r="5" fill="red">
 
-  &lt;!-- Определяем анимацию пути движения --&gt;
-    &lt;animateMotion dur="6s" repeatCount="indefinite"&gt;
-      &lt;mpath xlink:href="#theMotionPath"/&gt;
-    &lt;/animateMotion&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;</pre>
+  <!-- Определяем анимацию пути движения -->
+    <animateMotion dur="6s" repeatCount="indefinite">
+      <mpath xlink:href="#theMotionPath"/>
+    </animateMotion>
+  </circle>
+</svg>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Пример", 120, 120)}}</p>
+{{EmbedLiveSample("Пример", 120, 120)}}
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#AnimateMotionElement", "&lt;animateMotion&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>Без изменений</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'animate.html#AnimateMotionElement', '&lt;animateMotion&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                     | Статус                                   | Комментарий           |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------- |
+| {{SpecName("SVG Animations 2", "#AnimateMotionElement", "&lt;animateMotion&gt;")}}     | {{Spec2("SVG Animations 2")}} | Без изменений         |
+| {{SpecName('SVG1.1', 'animate.html#AnimateMotionElement', '&lt;animateMotion&gt;')}} | {{Spec2('SVG1.1')}}                 | Начальное определение |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{SVGElement("mpath")}}</li>
-</ul>
+## Смотрите также
+
+- {{SVGElement("mpath")}}

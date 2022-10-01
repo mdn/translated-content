@@ -6,118 +6,97 @@ tags:
 translation_of: Web/SVG/Element/pattern
 original_slug: Web/SVG/Элемент/pattern
 ---
-<div>{{SVGRef}}<br>
-Элемент <strong><code>&lt;pattern&gt;</code></strong> определяет графический объект, который может быть перерисован с повторяющимися координатами <strong>x</strong> и <strong>y</strong> («мозаичным»), чтобы покрыть область.</div>
+{{SVGRef}}
+Элемент **`<pattern>`** определяет графический объект, который может быть перерисован с повторяющимися координатами **x** и **y** («мозаичным»), чтобы покрыть область.
+На ссылку `<pattern>` ссылаются атрибуты {{SVGAttr("fill")}} и / или {{SVGAttr("stroke")}} на других [графических элементах](/ru/docs/Web/SVG/Tutorial/Basic_Shapes) , чтобы заполнить или обвести эти элементы указанным шаблоном.
 
-<div><br>
-На ссылку <code>&lt;pattern&gt;</code> ссылаются атрибуты {{SVGAttr("fill")}} и / или {{SVGAttr("stroke")}} на других <a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">графических элементах</a> , чтобы заполнить или обвести эти элементы указанным шаблоном. </div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<div> </div>
+```html
+<svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
+      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/>
+    </pattern>
+  </defs>
 
-<div id="Exemple">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+  <circle cx="50"  cy="50" r="50" fill="url(#star)"/>
+  <circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/>
+</svg>
+```
 
-<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;pattern id="star" viewBox="0,0,10,10" width="10%" height="10%"&gt;
-      &lt;polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/&gt;
-    &lt;/pattern&gt;
-  &lt;/defs&gt;
+{{EmbedLiveSample('Exemple', 150, '100%')}}
 
-  &lt;circle cx="50"  cy="50" r="50" fill="url(#star)"/&gt;
-  &lt;circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/&gt;
-&lt;/svg&gt;</pre>
+## Атрибуты
 
-<p>{{EmbedLiveSample('Exemple', 150, '100%')}}</p>
-</div>
+- {{SVGAttr("height")}}
+  - : Этот атрибут определяет высоту плитки шаблона.
+    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage); _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr("href")}}
+  - : Этот атрибут по умолчанию ссылается на пример шаблона для `<pattern>`
+    _Value type_: [**\<URL>**](/docs/Web/SVG/Content_type#URL); _Default value_: _none_; _Animatable_: **yes**
+- {{SVGAttr("patternContentUnits")}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+  - : Этот атрибут определяет систему координат содержимого {{ SVGElement("pattern") }}.
+    _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
-<dl>
- <dt>{{SVGAttr("height")}}</dt>
- <dd>Этот атрибут определяет высоту плитки шаблона.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a>; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("href")}}</dt>
- <dd>Этот атрибут по умолчанию ссылается на пример шаблона для <code>&lt;pattern&gt;</code><br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#URL"><strong>&lt;URL&gt;</strong></a>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("patternContentUnits")}}</dt>
- <dd>Этот атрибут определяет систему координат содержимого {{ SVGElement("pattern") }}. <br>
- <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code>; <em>Default value</em>: <code>userSpaceOnUse</code>; <em>Animatable</em>: <strong>yes</strong></small>
- <p class="note"><strong>Сноска:</strong> Этот атрибут не действует, если в элементе <code>&lt;pattern&gt;</code> указан атрибут <code>viewBox</code>.</p>
- </dd>
- <dt>{{SVGAttr("patternTransform")}}</dt>
- <dd>Этот атрибут содержит определение необязательного дополнительного преобразования из системы координат шаблона в целевую систему координат.<br>
- <small><em>Value type</em>: <strong><a href="/docs/Web/SVG/Content_type#Transform-list">&lt;transform-list&gt;</a></strong>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("patternUnits")}}</dt>
- <dd>Этот атрибут определяет систему координат для атрибутов <code>x</code>, <code>y</code>, <code>width</code> и <code>height</code>. <br>
- <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code>; <em>Default value</em>: <code>objectBoundingBox</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("preserveAspectRatio")}}</dt>
- <dd>Этот атрибут определяет, как фрагмент svg должен быть деформирован, если он встроен в контейнер с другим соотношением сторон.<br>
- <small><em>Value type</em>: (<code>none</code>| <code>xMinYMin</code>| <code>xMidYMin</code>| <code>xMaxYMin</code>| <code>xMinYMid</code>| <code>xMidYMid</code>| <code>xMaxYMid</code>| <code>xMinYMax</code>| <code>xMidYMax</code>| <code>xMaxYMax</code>) (<code>meet</code>|<code>slice</code>)? ; <em>Default value</em>: <code>xMidYMid meet</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("viewBox")}}</dt>
- <dd>Этот атрибут определяет границы области просмотра SVG для фрагмента шаблона.<br>
- <small><em>Value type</em>: <strong><a href="/docs/Web/SVG/Content_type#List-of-Ts">&lt;list-of-numbers&gt;</a></strong> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("width")}}</dt>
- <dd>Этот атрибут определяет ширину плитки шаблона.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("x")}}</dt>
- <dd>Этот атрибут определяет смещение координаты x мозаичного изображения.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}</dt>
- <dd>Этот атрибут ссылается на пример шаблона, предоставляющего значения по умолчанию для атрибутов <code>&lt;pattern&gt;</code>.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#URL"><strong>&lt;URL&gt;</strong></a>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small>
- <p class="note"><strong>Сноска:</strong> Для браузеров, реализующих <code>href</code>, если заданы как <code>href</code>, так и <code>xlink:href</code>, <code>xlink:href</code> будет игнорироваться, используя только <code>href</code>.</p>
- </dd>
- <dt>{{SVGAttr("y")}}</dt>
- <dd>Этот атрибут определяет смещение координат y мозаичного элемента.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+    > **Примечание:** **Сноска:** Этот атрибут не действует, если в элементе `<pattern>` указан атрибут `viewBox`.
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+- {{SVGAttr("patternTransform")}}
+  - : Этот атрибут содержит определение необязательного дополнительного преобразования из системы координат шаблона в целевую систему координат.
+    _Value type_: **[\<transform-list>](/docs/Web/SVG/Content_type#Transform-list)**; _Default value_: _none_; _Animatable_: **yes**
+- {{SVGAttr("patternUnits")}}
+  - : Этот атрибут определяет систему координат для атрибутов `x`, `y`, `width` и `height`.
+    _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
+- {{SVGAttr("preserveAspectRatio")}}
+  - : Этот атрибут определяет, как фрагмент svg должен быть деформирован, если он встроен в контейнер с другим соотношением сторон.
+    _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
+- {{SVGAttr("viewBox")}}
+  - : Этот атрибут определяет границы области просмотра SVG для фрагмента шаблона.
+    _Value type_: **[\<list-of-numbers>](/docs/Web/SVG/Content_type#List-of-Ts)** ; _Default value_: none; _Animatable_: **yes**
+- {{SVGAttr("width")}}
+  - : Этот атрибут определяет ширину плитки шаблона.
+    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr("x")}}
+  - : Этот атрибут определяет смещение координаты x мозаичного изображения.
+    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
 
-<dl>
- <dt><a href="/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>XLink Attributes</dt>
- <dd><small>Most notably: {{SVGAttr("xlink:title")}}</small></dd>
-</dl>
+  - : Этот атрибут ссылается на пример шаблона, предоставляющего значения по умолчанию для атрибутов `<pattern>`.
+    _Value type_: [**\<URL>**](/docs/Web/SVG/Content_type#URL); _Default value_: _none_; _Animatable_: **yes**
 
-<h2 id="Нотации">Нотации</h2>
+    > **Примечание:** **Сноска:** Для браузеров, реализующих `href`, если заданы как `href`, так и `xlink:href`, `xlink:href` будет игнорироваться, используя только `href`.
 
-<p>{{svginfo}}</p>
+- {{SVGAttr("y")}}
+  - : Этот атрибут определяет смещение координат y мозаичного элемента.
+    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
-<h2 id="Характеристики">Характеристики</h2>
+### Глобальные атрибуты
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Характеристики</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Коммент</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'pservers.html#Patterns', '&lt;pattern&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'pservers.html#Patterns', '&lt;pattern&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+  - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Conditional Processing Attributes](/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
+  - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- XLink Attributes
+  - : Most notably: {{SVGAttr("xlink:title")}}
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Нотации
 
-<p>{{Compat}}</p>
+{{svginfo}}
+
+## Характеристики
+
+| Характеристики                                                                           | Статус                   | Коммент            |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('SVG2', 'pservers.html#Patterns', '&lt;pattern&gt;')}} | {{Spec2('SVG2')}} |                    |
+| {{SpecName('SVG1.1', 'pservers.html#Patterns', '&lt;pattern&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+
+## Совместимость браузера
+
+{{Compat}}

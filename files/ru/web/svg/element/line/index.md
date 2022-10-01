@@ -6,76 +6,68 @@ tags:
 translation_of: Web/SVG/Element/line
 original_slug: Web/SVG/Элемент/line
 ---
-<div> {{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Элемент <strong><code>&lt;line&gt;</code></strong> одна из базовых фигур SVG, используемая для создания линии, связывающей две точки.</p>
+Элемент **`<line>`** одна из базовых фигур SVG, используемая для создания линии, связывающей две точки.
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;line x1="0" y1="80" x2="100" y2="20" stroke="black" /&gt;
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
 
-  &lt;!-- Если вы не укажете цвет контура,
-       линия не будет видна --&gt;
-&lt;/svg&gt;</pre>
+  <!-- Если вы не укажете цвет контура,
+       линия не будет видна -->
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 100, 100)}}</p>
-</div>
+{{EmbedLiveSample('Example', 100, 100)}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<dl>
- <dt>{{SVGAttr('x1')}}</dt>
- <dd>Определяет координату начальной точки линии по оси x .<br>
- <small><em>Тип значения:</em> <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; А<em>неминуемый</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr('x2')}}</dt>
- <dd>Определяет координату конечной точки линии по оси x.<br>
- <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; А<em>неминуемый</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr('y1')}}</dt>
- <dd>Определяет координату начальной точки линии по оси y.<br>
- <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; А<em>неминуемый</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr('y2')}}</dt>
- <dd>Определяет координату конечной точки линии по оси y.<br>
- <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; А<em>неминуемый</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("pathLength")}}</dt>
- <dd>Определяет общую длину пути в пользовательских единицах.<br>
- <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a> ; <em>Значение по умолчанию</em>: <em>none</em>; А<em>неминуемый</em>: <strong>да</strong></small></dd>
-</dl>
+- {{SVGAttr('x1')}}
+  - : Определяет координату начальной точки линии по оси x .
+    _Тип значения:_ [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|[**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
+- {{SVGAttr('x2')}}
+  - : Определяет координату конечной точки линии по оси x.
+    _Тип значения_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|[**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
+- {{SVGAttr('y1')}}
+  - : Определяет координату начальной точки линии по оси y.
+    _Тип значения_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|[**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
+- {{SVGAttr('y2')}}
+  - : Определяет координату конечной точки линии по оси y.
+    _Тип значения_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|[**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
+- {{SVGAttr("pathLength")}}
+  - : Определяет общую длину пути в пользовательских единицах.
+    _Тип значения_: [**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: _none_; А*неминуемый*: **да**
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+### Глобальные атрибуты
 
-<dl>
- <dt><a href="/docs/Web/SVG/Attribute/Core">Основные атрибуты</a></dt>
- <dd><small>В первую очередь: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Styling">Атрибуты оформления (стилей)</a> </dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Conditional_Processing">Атрибуты условной обработки</a></dt>
- <dd><small>В первую очередь: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Атрибуты события</dt>
- <dd><small><a href="/docs/Web/SVG/Attribute/Events#Global_Event_Attributes">Глобальные атрибуты события</a>, <a href="/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes">Графические атрибуты события</a></small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Presentation">Атрибуты презентации</a></dt>
- <dd><small>В первую очередь: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>Атрибуты ARIA</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+- [Основные атрибуты](/docs/Web/SVG/Attribute/Core)
+  - : В первую очередь: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [Атрибуты оформления (стилей)](/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Атрибуты условной обработки](/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : В первую очередь: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- Атрибуты события
+  - : [Глобальные атрибуты события](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Графические атрибуты события](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+- [Атрибуты презентации](/docs/Web/SVG/Attribute/Presentation)
+  - : В первую очередь: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- Атрибуты ARIA
+  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p> </p>
+## Смотрите также:
 
-<h2 id="Смотрите_также">Смотрите также:</h2>
-
-<ul>
- <li>{{SVGElement("polygon")}}</li>
- <li>{{SVGElement("path")}}</li>
- <li><a href="https://www.svg-expert.ru/svg/line/">SVG Line - описание и примеры</a></li>
-</ul>
+- {{SVGElement("polygon")}}
+- {{SVGElement("path")}}
+- [SVG Line - описание и примеры](https://www.svg-expert.ru/svg/line/)

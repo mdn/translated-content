@@ -8,90 +8,84 @@ tags:
 translation_of: Web/SVG/Element/linearGradient
 original_slug: Web/SVG/Элемент/linearGradient
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><code>&lt;linearGradient&gt;</code></strong> позволяет определять линейные градиенты для заполнения или изменения графических элементов.</p>
+**`<linearGradient>`** позволяет определять линейные градиенты для заполнения или изменения графических элементов.
 
-<div class="notecard note">
-<p>Не путайте с CSS {{cssxref('linear-gradient()')}}, CSS-градиенты могут быть применены только к HTML-элементам, тогда как SVG-градиент применим только к SVG-элементам.</p>
-</div>
+> **Примечание:** Не путайте с CSS {{cssxref('linear-gradient()')}}, CSS-градиенты могут быть применены только к HTML-элементам, тогда как SVG-градиент применим только к SVG-элементам.
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;defs&gt;
-    &lt;linearGradient id="myGradient" gradientTransform="rotate(90)"&gt;
-      &lt;stop offset="5%"  stop-color="gold" /&gt;
-      &lt;stop offset="95%" stop-color="red" /&gt;
-    &lt;/linearGradient&gt;
-  &lt;/defs&gt;
+```html
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="myGradient" gradientTransform="rotate(90)">
+      <stop offset="5%"  stop-color="gold" />
+      <stop offset="95%" stop-color="red" />
+    </linearGradient>
+  </defs>
 
-  &lt;!-- using my linear gradient --&gt;
-  &lt;circle cx="5" cy="5" r="4" fill="url('#myGradient')" /&gt;
-&lt;/svg&gt;</pre>
+  <!-- using my linear gradient -->
+  <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
-</div>
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-<h2 id="Attributes">Атрибуты</h2>
+## Атрибуты
 
-<dl>
- <dt id="attr-gradientUnits">{{SVGAttr("gradientUnits")}}</dt>
- <dd>Определяет систему координат для атрибутов <code>x1</code>, <code>x2</code>, <code>y1</code>, <code>y2</code><br>
- <small><em>Тип значения</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code> ; <em>Значение по умолчанию</em>: <code>objectBoundingBox</code>; <em>Анимируемый</em>: <strong>да</strong></small></dd>
- <dt id="attr-gradientTransform">{{SVGAttr("gradientTransform")}}</dt>
- <dd>Этот атрибут обеспечивает дополнительное <a href="/ru/docs/Web/SVG/Attribute/transform">преобразование</a> для системы координат градиента.<br>
- <small><em>Тип значения</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#transform-list">&lt;transform-list&gt;</a></strong> ; <em>Значение по умолчанию</em>: <em>identity transform</em>; <em>Анимируемый</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("href")}}</dt>
- <dd>Этот атрибут определяет ссылку на другой элемент <code>&lt;linearGradient&gt;</code>, который будет использоваться в качестве шаблона.<br>
- <small><em>Тип значения</em>: <a href="/en-US/docs/Web/SVG/Content_type#url"><strong>&lt;URL&gt;</strong></a> ; <em>Значение по умолчанию</em>: none; <em>Анимируемый</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("spreadMethod")}}</dt>
- <dd>Этот атрибут указывает, как ведет себя градиент, если он начинается или заканчивается внутри границ фигуры, содержащей градиент.<br>
- <small><em>Тип значения</em>: <code>pad</code>|<code>reflect</code>|<code>repeat</code> ; <em>Значение по умолчанию</em>: <code>pad</code>; <em>Анимируемый</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("x1")}}</dt>
- <dd>Этот атрибут определяет координату x начальной точки векторного градиента, вдоль которой рисуется линейный градиент.<br>
- <small><em>Тип значения</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0%</code>; <em>Анимируемый</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("x2")}}</dt>
- <dd>Этот атрибут определяет координату x конечной точки векторного градиента, вдоль которой рисуется линейный градиент. <br>
- <small><em>Тип значения</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>100%</code>; <em>Анимируемый</em>: <strong>да</strong></small></dd>
- <dt id="attr-cx">{{SVGAttr("xlink:href")}}</dt>
- <dd>{{Deprecated_Header}}<a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;IRI&gt;</a> ссылка на другой <code>&lt;linearGradient&gt;</code> элемент, который будет использоваться в качестве шаблона.<br>
- <small><em>Тип значения</em>: <a href="/en-US/docs/Web/SVG/Content_type#iri"><strong>&lt;IRI&gt;</strong></a> ; <em>Значение по умолчанию</em>: none; <em>Анимируемый</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("y1")}}</dt>
- <dd>Этот атрибут определяет координату y начальной точки векторного градиента, вдоль которой рисуется линейный градиент.<br>
- <small><em>Тип значения</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0%</code>; <em>Анимируемый</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("y2")}}</dt>
- <dd>Этот атрибут определяет координату y конечной точки векторного градиента, вдоль которой рисуется линейный градиент.<br>
- <small><em>Тип значения</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0%</code>; <em>Анимируемый</em>: <strong>да</strong></small></dd>
-</dl>
+- {{SVGAttr("gradientUnits")}}
+  - : Определяет систему координат для атрибутов `x1`, `x2`, `y1`, `y2`
+    _Тип значения_: `userSpaceOnUse`|`objectBoundingBox` ; _Значение по умолчанию_: `objectBoundingBox`; _Анимируемый_: **да**
+- {{SVGAttr("gradientTransform")}}
+  - : Этот атрибут обеспечивает дополнительное [преобразование](/ru/docs/Web/SVG/Attribute/transform) для системы координат градиента.
+    _Тип значения_: **[\<transform-list>](/ru/docs/Web/SVG/Content_type#transform-list)** ; _Значение по умолчанию_: _identity transform_; _Анимируемый_: **да**
+- {{SVGAttr("href")}}
+  - : Этот атрибут определяет ссылку на другой элемент `<linearGradient>`, который будет использоваться в качестве шаблона.
+    _Тип значения_: [**\<URL>**](/ru/docs/Web/SVG/Content_type#url) ; _Значение по умолчанию_: none; _Анимируемый_: **да**
+- {{SVGAttr("spreadMethod")}}
+  - : Этот атрибут указывает, как ведет себя градиент, если он начинается или заканчивается внутри границ фигуры, содержащей градиент.
+    _Тип значения_: `pad`|`reflect`|`repeat` ; _Значение по умолчанию_: `pad`; _Анимируемый_: **да**
+- {{SVGAttr("x1")}}
+  - : Этот атрибут определяет координату x начальной точки векторного градиента, вдоль которой рисуется линейный градиент.
+    _Тип значения_: [**\<length>**](/ru/docs/Web/SVG/Content_type#length) ; _Значение по умолчанию_: `0%`; _Анимируемый_: **да**
+- {{SVGAttr("x2")}}
+  - : Этот атрибут определяет координату x конечной точки векторного градиента, вдоль которой рисуется линейный градиент.
+    _Тип значения_: [**\<length>**](/ru/docs/Web/SVG/Content_type#length) ; _Значение по умолчанию_: `100%`; _Анимируемый_: **да**
+- {{SVGAttr("xlink:href")}}
+  - : {{Deprecated_Header}}[\<IRI>](/ru/docs/Web/SVG/Content_type#iri) ссылка на другой `<linearGradient>` элемент, который будет использоваться в качестве шаблона.
+    _Тип значения_: [**\<IRI>**](/ru/docs/Web/SVG/Content_type#iri) ; _Значение по умолчанию_: none; _Анимируемый_: **да**
+- {{SVGAttr("y1")}}
+  - : Этот атрибут определяет координату y начальной точки векторного градиента, вдоль которой рисуется линейный градиент.
+    _Тип значения_: [**\<length>**](/ru/docs/Web/SVG/Content_type#length) ; _Значение по умолчанию_: `0%`; _Анимируемый_: **да**
+- {{SVGAttr("y2")}}
+  - : Этот атрибут определяет координату y конечной точки векторного градиента, вдоль которой рисуется линейный градиент.
+    _Тип значения_: [**\<length>**](/ru/docs/Web/SVG/Content_type#length) ; _Значение по умолчанию_: `0%`; _Анимируемый_: **да**
 
-<h3 id="Global_attributes">Глобальные атрибуты</h3>
+### Глобальные атрибуты
 
-<dl>
- <dt><a href="/ru/docs/Web/SVG/Attribute/Core">Основные атрибуты</a></dt>
- <dd><small>Прежде всего: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Атрибуты стилизации</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt>Атрибуты событий</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Глобальные атрибуты событий</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes">Атрибуты событий элементов документа</a></small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Presentation">Атрибуты презентации</a></dt>
- <dd><small>Прежде всего: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>XLink атрибуты</dt>
- <dd><small>{{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}</small></dd>
-</dl>
+- [Основные атрибуты](/ru/docs/Web/SVG/Attribute/Core)
+  - : Прежде всего: {{SVGAttr('id')}}
+- [Атрибуты стилизации](/ru/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- Атрибуты событий
+  - : [Глобальные атрибуты событий](/ru/docs/Web/SVG/Attribute/Events#global_event_attributes), [Атрибуты событий элементов документа](/ru/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
+- [Атрибуты презентации](/ru/docs/Web/SVG/Attribute/Presentation)
+  - : Прежде всего: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- XLink атрибуты
+  - : {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}
 
-<h2 id="Usage_notes">Примечания по использованию</h2>
+## Примечания по использованию
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

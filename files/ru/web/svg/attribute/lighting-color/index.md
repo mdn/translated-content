@@ -7,44 +7,24 @@ tags:
   - SVG фильтры
 translation_of: Web/SVG/Attribute/lighting-color
 ---
-<p>« <a href="/ru/docs/Web/SVG/Attribute" title="Справочник SVG атрибутов">Справочник SVG атрибутов</a></p>
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
 
-<p>Атрибут <code>lighting-color</code> определяет цвет источника света для примитивов фильтров  {{ SVGElement("feDiffuseLighting") }} и {{ SVGElement("feSpecularLighting") }}.</p>
+Атрибут `lighting-color` определяет цвет источника света для примитивов фильтров {{ SVGElement("feDiffuseLighting") }} и {{ SVGElement("feSpecularLighting") }}.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категория</th>
-   <td>Атрибут представления</td>
-  </tr>
-  <tr>
-   <th scope="row">Значение</th>
-   <td>currentColor | <a href="/en/SVG/Content_type#Color" title="en/SVG/Content_type#Color">&lt;color&gt;</a> | <a href="/en/SVG/Content_type#ICCColor" title="en/SVG/Content_type#ICCColor">&lt;icccolor&gt;</a> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">Начальное значение</th>
-   <td>white</td>
-  </tr>
-  <tr>
-   <th scope="row">Анимация</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Нормативный документ</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#LightingColorProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Категория            | Атрибут представления                                                                                                                                                        |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Значение             | currentColor \| [\<color>](/en/SVG/Content_type#Color "en/SVG/Content_type#Color") \| [\<icccolor>](/en/SVG/Content_type#ICCColor "en/SVG/Content_type#ICCColor") \| inherit |
+| Начальное значение   | white                                                                                                                                                                        |
+| Анимация             | Да                                                                                                                                                                           |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#LightingColorProperty)                                                                                       |
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h2 id="Элементы">Элементы</h2>
+## Элементы
 
-<p>Следующие элементы могут использовать атрибут  <code>lighting-color</code></p>
+Следующие элементы могут использовать атрибут `lighting-color`
 
-<ul>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
-</ul>
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feSpecularLighting") }}

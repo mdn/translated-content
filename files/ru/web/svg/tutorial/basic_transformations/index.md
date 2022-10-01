@@ -4,96 +4,99 @@ slug: Web/SVG/Tutorial/Basic_Transformations
 translation_of: Web/SVG/Tutorial/Basic_Transformations
 original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 ---
-<div>{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}</div>
+{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 
-<p>Теперь мы готовы начать изменять наши замечательные изображения. Но сначала давайте ознакомимся с {{SVGElement("g")}} элементом. С его помощью вы можете  назначить свойства для любого набора элементов. На самом деле, в этом и состоит его единственная цель. Например:</p>
+Теперь мы готовы начать изменять наши замечательные изображения. Но сначала давайте ознакомимся с {{SVGElement("g")}} элементом. С его помощью вы можете назначить свойства для любого набора элементов. На самом деле, в этом и состоит его единственная цель. Например:
 
-<div id="two_blocks">
-<pre class="brush: html">&lt;svg width="30" height="10"&gt;
-    &lt;g fill="red"&gt;
-        &lt;rect x="0" y="0" width="10" height="10" /&gt;
-        &lt;rect x="20" y="0" width="10" height="10" /&gt;
-    &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
-</div>
+```html
+<svg width="30" height="10">
+    <g fill="red">
+        <rect x="0" y="0" width="10" height="10" />
+        <rect x="20" y="0" width="10" height="10" />
+    </g>
+</svg>
+```
 
-<p>{{ EmbedLiveSample('two_blocks', '30', '10', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+{{ EmbedLiveSample('two_blocks', '30', '10', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
 
-<p>Все последующие преобразования суммируются в атрибуте преобразования элемента <code>transform</code> . Преобразования могут быть последовательно суммированы, разделителем выступает пробел.</p>
+Все последующие преобразования суммируются в атрибуте преобразования элемента `transform` . Преобразования могут быть последовательно суммированы, разделителем выступает пробел.
 
-<h2 id="Перемещения">Перемещения</h2>
+## Перемещения
 
-<p>Иногда необходимо сместить элемент, хотя вы спозиционировали его согласно определённым атрибутам. Для этого используется <code>translate()</code>.</p>
+Иногда необходимо сместить элемент, хотя вы спозиционировали его согласно определённым атрибутам. Для этого используется `translate()`.
 
-<pre class="brush: html">&lt;svg width="40" height="50" style="background-color:#bff;"&gt;
-    &lt;rect x="0" y="0" width="10" height="10" transform="translate(30,40)" /&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="40" height="50" style="background-color:#bff;">
+    <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
+</svg>
+```
 
-<p>Пример генерирует прямоугольник, перемещённый в точку  (30,40) вместо точки (0,0).</p>
+Пример генерирует прямоугольник, перемещённый в точку (30,40) вместо точки (0,0).
 
-<p>{{ EmbedLiveSample('Перемещения', '40', '50', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+{{ EmbedLiveSample('Перемещения', '40', '50', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
 
-<p>если второе значение не задано, то оно приравнивается <var>0</var>.</p>
+если второе значение не задано, то оно приравнивается _0_.
 
-<h2 id="Вращение">Вращение</h2>
+## Вращение
 
-<p>Вращение элементов - это достаточно типичная задача. Используйте  <code>rotate()</code> для этого:</p>
+Вращение элементов - это достаточно типичная задача. Используйте `rotate()` для этого:
 
-<pre class="brush: html">&lt;svg width="31" height="31"&gt;
-    &lt;rect x="12" y="-10" width="20" height="20" transform="rotate(45)" /&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="31" height="31">
+    <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
+</svg>
+```
 
-<p>Данный пример показывает квадрат который повернули на 45 градусов. Значение для <code>rotate()</code> задаётся в градусах.</p>
+Данный пример показывает квадрат который повернули на 45 градусов. Значение для `rotate()` задаётся в градусах.
 
-<p>{{ EmbedLiveSample('Вращение', '31', '31', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+{{ EmbedLiveSample('Вращение', '31', '31', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
 
-<h2 id="Смещение_углов">Смещение углов</h2>
+## Смещение углов
 
-<p>Чтобы сделать ромб из нашего прямоугольника, доступны преобразования skewX () и skewY (). Каждый из них принимает угол, определяющий, насколько элемент будет искажён.</p>
+Чтобы сделать ромб из нашего прямоугольника, доступны преобразования skewX () и skewY (). Каждый из них принимает угол, определяющий, насколько элемент будет искажён.
 
-<h2 id="Масштабирование">Масштабирование</h2>
+## Масштабирование
 
-<p><code>scale()</code> изменяем размер элемента. Он использует 2 параметра. Первый - это коэффициент масштабирования по оси Х, а второй - по оси Y.  Коэффициенты выражают сжатие по отношению к оригинальному изображению. Например, <var>0.5 уменьшает на 50%. Если второй параметр отсутствует, то тогда он принимается равным первому.</var></p>
+`scale()` изменяем размер элемента. Он использует 2 параметра. Первый - это коэффициент масштабирования по оси Х, а второй - по оси Y. Коэффициенты выражают сжатие по отношению к оригинальному изображению. Например, _0.5 уменьшает на 50%. Если второй параметр отсутствует, то тогда он принимается равным первому._
 
-<h2 id="Комплексные_перемещения_с_matrix"><strong id="docs-internal-guid-68ee5272-9619-cb26-01de-19a4df728cd5">Комплексные перемещения с <code>matrix()</code></strong></h2>
+## Комплексные перемещения с `matrix()`
 
-<p>Все приведённые выше преобразования могут быть описаны с помощью матрицы перемещений 2x3. Чтобы объединить несколько перемещений, можно установить результирующую матрицу с помощью <code>matrix(a, b, c, d, e, f)</code>, которая преобразует координаты из предыдущей системы координат в новую систему координат посредством:</p>
+Все приведённые выше преобразования могут быть описаны с помощью матрицы перемещений 2x3. Чтобы объединить несколько перемещений, можно установить результирующую матрицу с помощью `matrix(a, b, c, d, e, f)`, которая преобразует координаты из предыдущей системы координат в новую систему координат посредством:
 
-<p><math display="block"><semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>new</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>new</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\{ \begin{matrix} x_{\mathrm{prevCoordSys}} = a x_{\mathrm{newCoordSys}} + c y_{\mathrm{newCoordSys}} + e \\ y_{\mathrm{prevCoordSys}} = b x_{\mathrm{newCoordSys}} + d y_{\mathrm{newCoordSys}} + f \end{matrix} \right. </annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>new</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>new</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\{ \begin{matrix} x*{\mathrm{prevCoordSys}} = a x*{\mathrm{newCoordSys}} + c y*{\mathrm{newCoordSys}} + e \\ y*{\mathrm{prevCoordSys}} = b x*{\mathrm{newCoordSys}} + d y*{\mathrm{newCoordSys}} + f \end{matrix} \right.</annotation></semantics></math>
 
-<p>См. <a href="/en-US/docs/Web/SVG/Attribute/transform#General_Transformation">конкретный пример документации SVG</a>. Подробную информацию об этом свойстве можно найти в <a href="http://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined">SVG Рекомендациях</a>.</p>
+См. [конкретный пример документации SVG](/ru/docs/Web/SVG/Attribute/transform#General_Transformation). Подробную информацию об этом свойстве можно найти в [SVG Рекомендациях](http://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined).
 
-<h2 id="Эффекты_на_системе_координат">Эффекты на системе координат</h2>
+## Эффекты на системе координат
 
-<p>В случае использования преобразований вы устанавливаете новую систему координат внутри элемента, к которому применяются изменения. Это означает, что единицы измерения которые вы определяете и его дочерние еи не будут соответствовать 1:1, но также будут искажены, повёрнуты, перемещены и смаштабированы в соответствии с преобразованиями.</p>
+В случае использования преобразований вы устанавливаете новую систему координат внутри элемента, к которому применяются изменения. Это означает, что единицы измерения которые вы определяете и его дочерние еи не будут соответствовать 1:1, но также будут искажены, повёрнуты, перемещены и смаштабированы в соответствии с преобразованиями.
 
-<pre class="brush: html">&lt;svg width="100" height="100"&gt;
-    &lt;g transform="scale(2)"&gt;
-        &lt;rect width="50" height="50" /&gt;
-    &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="100" height="100">
+    <g transform="scale(2)">
+        <rect width="50" height="50" />
+    </g>
+</svg>
+```
 
-<p>В результата прямоугольник в примере выше будет 100x100px. Более интригующие эффекты возникают, когда вы используете такие атрибуты, как <code>userSpaceOnUse</code>.</p>
+В результата прямоугольник в примере выше будет 100x100px. Более интригующие эффекты возникают, когда вы используете такие атрибуты, как `userSpaceOnUse`.
 
-<p>{{ EmbedLiveSample('Эффекты_на_системе_координат', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+{{ EmbedLiveSample('Эффекты_на_системе_координат', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
 
-<h2 id="Встраивание_SVG_в_SVG">Встраивание SVG в SVG</h2>
+## Встраивание SVG в SVG
 
-<p>В отличие от HTML, SVG позволяет встраивать другие <code>svg</code> элементы без разрыва. Таким образом вы можете запросто создать новую координатную систему используя <code>viewBox</code>, <code>width</code> и<code>height</code> внутреннего <code>svg</code> элемента.</p>
+В отличие от HTML, SVG позволяет встраивать другие `svg` элементы без разрыва. Таким образом вы можете запросто создать новую координатную систему используя `viewBox`, `width` и`height` внутреннего `svg` элемента.
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100"&gt;
-  &lt;svg width="100" height="100" viewBox="0 0 50 50"&gt;
-    &lt;rect width="50" height="50" /&gt;
-  &lt;/svg&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
+  <svg width="100" height="100" viewBox="0 0 50 50">
+    <rect width="50" height="50" />
+  </svg>
+</svg>
+```
 
-<p>На примере выше, так же как и на других примерах ранее, вы можете видеть такой же эффект увеличения изображения в два раза.</p>
+На примере выше, так же как и на других примерах ранее, вы можете видеть такой же эффект увеличения изображения в два раза.
 
-<p>{{ EmbedLiveSample('Встраивание_SVG_в_SVG', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+{{ EmbedLiveSample('Встраивание_SVG_в_SVG', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
 
-<div>{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}</div>
+{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}

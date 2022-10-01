@@ -8,182 +8,169 @@ tags:
 translation_of: Web/SVG/Element/text
 original_slug: Web/SVG/Элемент/<text>
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>SVG элемент <strong><code>&lt;text&gt;</code></strong> определяет графический элемент, содержащий текст. Как и к любому другому графическому элементу SVG, к элементу <code>&lt;text&gt;</code> можно применить градиент, шаблон, окантовку, маску или фильтр.</p>
+SVG элемент **`<text>`** определяет графический элемент, содержащий текст. Как и к любому другому графическому элементу SVG, к элементу `<text>` можно применить градиент, шаблон, окантовку, маску или фильтр.
 
-<p>Текст не будет отображаться, если он не находится внутри SVG элемента <code>&lt;text&gt;</code>. Это отличается от сокрытия по умолчанию, поскольку установка <a href="/en-US/docs/Web/SVG/Attribute/display">свойства display</a> не отображает текст.</p>
+Текст не будет отображаться, если он не находится внутри SVG элемента `<text>`. Это отличается от сокрытия по умолчанию, поскольку установка [свойства display](/ru/docs/Web/SVG/Attribute/display) не отображает текст.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<div id="Пример1">
-<div class="hidden">
-<pre class="brush: css">   html,body,svg { height:100% }
- </pre>
-</div>
+```css hidden
+   html,body,svg { height:100% }
 
-<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
+```
+
+```html
+<svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <style>
     .small { font: italic 13px sans-serif; }
     .heavy { font: bold 30px sans-serif; }
 
     /* Обратите внимание, что цвет текста задаётся с помощью        *
      * fill свойства, а свойство color используется только для HTML */
     .Rrrrr { font: italic 40px serif; fill: red; }
-  &lt;/style&gt;
+  </style>
 
-  &lt;text x="20" y="35" class="small"&gt;Мой&lt;/text&gt;
-  &lt;text x="60" y="35" class="heavy"&gt;кот&lt;/text&gt;
-  &lt;text x="60" y="55" class="small"&gt;очень&lt;/text&gt;
-  &lt;text x="100" y="55" class="Rrrrr"&gt;Сердит!&lt;/text&gt;
-&lt;/svg&gt;
-</pre>
-</div>
+  <text x="20" y="35" class="small">Мой</text>
+  <text x="60" y="35" class="heavy">кот</text>
+  <text x="60" y="55" class="small">очень</text>
+  <text x="100" y="55" class="Rrrrr">Сердит!</text>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Пример', 150, '100%')}}</p>
+{{EmbedLiveSample('Пример', 150, '100%')}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+### Глобальные атрибуты
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Conditional_processing_attributes">Условные атрибуты обработки</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core_attributes">Основные атрибуты</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Graphical_event_attributes">Графические атрибуты событий</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation_attributes">Атрибуты представления</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("transform")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [Условные атрибуты обработки](/ru/docs/Web/SVG/Attribute#Conditional_processing_attributes)
+- [Основные атрибуты](/ru/docs/Web/SVG/Attribute#Core_attributes)
+- [Графические атрибуты событий](/ru/docs/Web/SVG/Attribute#Graphical_event_attributes)
+- [Атрибуты представления](/ru/docs/Web/SVG/Attribute#Presentation_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("transform")}}
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="Специфические_атрибуты">Специфические атрибуты</h3>
+### Специфические атрибуты
 
-<ul>
- <li>{{SVGAttr("х")}}</li>
- <li>{{SVGAttr("у")}}</li>
- <li>{{SVGAttr("dx")}}</li>
- <li>{{SVGAttr("dy")}}</li>
- <li>{{SVGAttr("rotate")}}</li>
- <li>{{SVGAttr("textLength")}}</li>
- <li>{{SVGAttr("text-anchor")}}</li>
- <li>{{SVGAttr("lengthAdjust")}}</li>
-</ul>
+- {{SVGAttr("х")}}
+- {{SVGAttr("у")}}
+- {{SVGAttr("dx")}}
+- {{SVGAttr("dy")}}
+- {{SVGAttr("rotate")}}
+- {{SVGAttr("textLength")}}
+- {{SVGAttr("text-anchor")}}
+- {{SVGAttr("lengthAdjust")}}
 
-<h2 id="Интерфейс_DOM">Интерфейс DOM</h2>
+## Интерфейс DOM
 
-<p>Этот элемент реализует интерфейс {{domxref("SVGTextElement")}}.</p>
+Этот элемент реализует интерфейс {{domxref("SVGTextElement")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Основы_использования_элемента_&lt;text>">Основы использования элемента &lt;text&gt;</h3>
+### Основы использования элемента \<text>
 
-<h4 id="SVG">SVG</h4>
+#### SVG
 
-<div id="Примеры2">
-<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
+```html
+<svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <style>
     .mal { font: italic 16px sans-serif; }
     .hey { font: bold 26px sans-serif; fill: #6de;}
-  &lt;/style&gt;
-  &lt;text x="0" y="68" class="mal"&gt;- Привет,&lt;/text&gt;
-  &lt;text x="110" y="40" class="hey"&gt;Сахалин!&lt;/text&gt;
-&lt;/svg&gt;
-</pre>
-</div>
+  </style>
+  <text x="0" y="68" class="mal">- Привет,</text>
+  <text x="110" y="40" class="hey">Сахалин!</text>
+</svg>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('SVG', 150, '100%')}}</p>
+{{EmbedLiveSample('SVG', 150, '100%')}}
 
-<h3 id="Изменение_направления_написания_текста.">Изменение направления написания текста.</h3>
+### Изменение направления написания текста.
 
-<p>Направление написания SVG-текста можно сменить на обратное, применив трансформацию.</p>
+Направление написания SVG-текста можно сменить на обратное, применив трансформацию.
 
-<h4 id="SVG_2">SVG</h4>
+#### SVG
 
-<div id="Реверс">
-<pre class="brush: html">
+```html
 
-&lt;svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
+<svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
     .mal {font: italic 16px sans-serif; transform: rotate(180, 50, 50);}
     .hey {font: bold 26px sans-serif; fill: #6de;}
-  &lt;/style&gt;
-  &lt;text x="-40" y="68" class="mal" transform="rotate(180, 50, 50)"&gt;
-    Пример ротации&lt;/text&gt;
-  &lt;text x="180" y="40" class="hey"&gt;SVG-текста.&lt;/text&gt;
-&lt;/svg&gt;
+  </style>
+  <text x="-40" y="68" class="mal" transform="rotate(180, 50, 50)">
+    Пример ротации</text>
+  <text x="180" y="40" class="hey">SVG-текста.</text>
+</svg>
+```
 
+#### Результат
 
-</pre>
-</div>
+{{EmbedLiveSample('Реверс', 200, '100%')}}
 
-<h4 id="Результат_2">Результат</h4>
+### Цвет текста
 
-<p>{{EmbedLiveSample('Реверс', 200, '100%')}}</p>
+Цвет текста в SVG-элементе \<text> может быть изменён посредством свойства **fill**="\[color]" внутри элемента \<text>.
 
-<h3 id="Цвет_текста">Цвет текста</h3>
+#### SVG
 
-<p>Цвет текста в SVG-элементе &lt;text&gt; может быть изменён посредством свойства <strong>fill</strong>="[color]" внутри элемента &lt;text&gt;.</p>
-
-<h4 id="SVG_3">SVG</h4>
-
-<div id="Цвет">
-<pre class="brush: html">&lt;svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"&gt;
-    &lt;style&gt;
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+    <style>
       .gri {font: italic 16px sans-serif; fill: #6dd;}
       .red {font: bold 26px sans-serif; fill: #d66;}
-    &lt;/style&gt;
-    &lt;text class="gri" x="10" y="30"&gt;Цвет текста&lt;/text&gt;
-    &lt;text class="red" x="120" y="30"&gt;SVG.&lt;/text&gt;
-&lt;/svg&gt;
-</pre>
-</div>
+    </style>
+    <text class="gri" x="10" y="30">Цвет текста</text>
+    <text class="red" x="120" y="30">SVG.</text>
+</svg>
+```
 
-<h4 id="Результат_3">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('SVG_3', 200, '100%')}}</p>
+{{EmbedLiveSample('SVG_3', 200, '100%')}}
 
-<h3 id="Применение_CSS-стилей_к_содержимому_элемента_&lt;text>.">Применение CSS-стилей к содержимому элемента &lt;text&gt;.</h3>
+### Применение CSS-стилей к содержимому элемента \<text>.
 
-<p>Содержимое SVG элемента <strong>&lt;text&gt;</strong> может быть стилизовано как обычный текст в HTML.</p>
+Содержимое SVG элемента **\<text>** может быть стилизовано как обычный текст в HTML.
 
-<h4 id="SVG_4">SVG</h4>
+#### SVG
 
-<div id="Стиляга">
-<pre class="brush: html">  &lt;svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"&gt;
-    &lt;style&gt;
+```html
+  <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+    <style>
       .stil {font: italic 16px sans-serif;}
       .list {font: bold 26px sans-serif;}
-    &lt;/style&gt;
-    &lt;text class="stil" x="10" y="30"&gt;Стиль текста&lt;/text&gt;
-    &lt;text class="list" x="140" y="30"&gt;SVG.&lt;/text&gt;
-&lt;/svg&gt;
-</pre>
-</div>
+    </style>
+    <text class="stil" x="10" y="30">Стиль текста</text>
+    <text class="list" x="140" y="30">SVG.</text>
+</svg>
+```
 
-<h4 id="Результат_4">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('SVG_4', 200, '100%')}}</p>
+{{EmbedLiveSample('SVG_4', 200, '100%')}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<p>Таблица составлена по информации из <a href="/en-US/docs/Web/SVG/Compatibility_sources">этого источника</a>.</p>
+Таблица составлена по информации из [этого источника](/ru/docs/Web/SVG/Compatibility_sources).
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+{{Compat}}
 
-<p>{{Svginfo}}</p>
+## Контекст использования
 
-<h2 id="Связь">Связь</h2>
+{{Svginfo}}
 
-<ul>
- <li>{{SVGElement("tref")}}</li>
- <li>{{SVGElement("tspan")}}</li>
- <li>{{SVGElement("altGlyph")}}</li>
-</ul>
+## Связь
+
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}

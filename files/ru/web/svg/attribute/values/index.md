@@ -3,84 +3,48 @@ title: values
 slug: Web/SVG/Attribute/values
 translation_of: Web/SVG/Attribute/values
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
 
-<p>Атрибут <code>values</code> имеет два значения в зависимости от используемого контекста.</p>
+Атрибут `values` имеет два значения в зависимости от используемого контекста.
 
-<p>Для элементов анимации атрибут <code>values</code> представляет собой разделённый точками с запятой список одного или нескольких значений. В анимации будут применены значения в порядке следования анимации. Если задан список <code>values</code>, значения атрибутов {{ SVGAttr("from") }}, {{ SVGAttr("to") }} и {{ SVGAttr("by") }} игнорируются.</p>
+Для элементов анимации атрибут `values` представляет собой разделённый точками с запятой список одного или нескольких значений. В анимации будут применены значения в порядке следования анимации. Если задан список `values`, значения атрибутов {{ SVGAttr("from") }}, {{ SVGAttr("to") }} и {{ SVGAttr("by") }} игнорируются.
 
-<p>Для элемента {{ SVGElement("feColorMatrix") }} содержимое <code>values</code> зависит от значения атрибута {{ SVGAttr("type") }}:</p>
+Для элемента {{ SVGElement("feColorMatrix") }} содержимое `values` зависит от значения атрибута {{ SVGAttr("type") }}:
 
-<ul>
- <li>Для <code>type="matrix"</code>, <code>values</code> — это список из 20 значений матрицы (А00 А01 А02 А03 А04 A10 А11... А34), разделённых пробелами и/или запятой.</li>
- <li>Для <code>type="saturate"</code>, <code>values</code> — это единственное вещественное число (от 0 до 1).</li>
- <li>Для <code>type="hueRotate"</code>, <code>values</code> — это одно вещественное число (градусов).</li>
- <li>Для <code>type="luminanceToAlpha"</code>, <code>values</code> не применимы.</li>
-</ul>
+- Для `type="matrix"`, `values` — это список из 20 значений матрицы (А00 А01 А02 А03 А04 A10 А11... А34), разделённых пробелами и/или запятой.
+- Для `type="saturate"`, `values` — это единственное вещественное число (от 0 до 1).
+- Для `type="hueRotate"`, `values` — это одно вещественное число (градусов).
+- Для `type="luminanceToAlpha"`, `values` не применимы.
 
-<p>Если атрибут не указан, то поведение по умолчанию зависит от значения атрибута {{SVGAttr("type")}}.</p>
+Если атрибут не указан, то поведение по умолчанию зависит от значения атрибута {{SVGAttr("type")}}.
 
-<ul>
- <li>Если <code>type="matrix"</code>, этот атрибут по умолчанию присваивается матрице идентификаторов.</li>
- <li>Если <code>type="saturate"</code>, то этот атрибут по умолчанию присваивает значение 1, что приводит к получению матрицы идентификаторов.<br>
-  Если <code>type="hueRotate"</code>, то этот атрибут по умолчанию присваивает значение 0, что приводит к получению матрицы идентификаторов.</li>
-</ul>
+- Если `type="matrix"`, этот атрибут по умолчанию присваивается матрице идентификаторов.
+- Если `type="saturate"`, то этот атрибут по умолчанию присваивает значение 1, что приводит к получению матрицы идентификаторов.
+  Если `type="hueRotate"`, то этот атрибут по умолчанию присваивает значение 0, что приводит к получению матрицы идентификаторов.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<h3 id="For_animation_elements">For animation elements</h3>
+### For animation elements
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>Animation value attribute</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td>&lt;list&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/animate.html#ValuesAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | Animation value attribute                                                        |
+| ------------------ | -------------------------------------------------------------------------------- |
+| Value              | \<list>                                                                          |
+| Animatable         | No                                                                               |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/animate.html#ValuesAttribute) |
 
-<h3 id="For_the_SVGElement(feColorMatrix)_element">For the {{ SVGElement("feColorMatrix") }} element</h3>
+### For the {{ SVGElement("feColorMatrix") }} element
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td>&lt;list&gt; | <a href="/en/SVG/Content_type#Number" title="en/SVG/Content_type#Paint">&lt;number&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feColorMatrixValuesAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | _None_                                                                                        |
+| ------------------ | --------------------------------------------------------------------------------------------- |
+| Value              | \<list> \| [\<number>](/en/SVG/Content_type#Number "en/SVG/Content_type#Paint")               |
+| Animatable         | Yes                                                                                           |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feColorMatrixValuesAttribute) |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>The following elements can use the <code>values</code> attribute</p>
+The following elements can use the `values` attribute
 
-<ul>
- <li><a href="/en/SVG/Element#Animation" title="en/SVG/Element#Animation">Animation elements</a> »</li>
- <li>{{ SVGElement("feColorMatrix") }}</li>
-</ul>
+- [Animation elements](/en/SVG/Element#Animation "en/SVG/Element#Animation") »
+- {{ SVGElement("feColorMatrix") }}

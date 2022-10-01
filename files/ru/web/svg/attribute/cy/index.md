@@ -6,64 +6,47 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/cy
 ---
-<p>« <a href="/ru/docs/Web/SVG/Attribute" title="Справочник SVG атрибутов">Справочник SVG атрибутов</a></p>
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
 
-<p>Для элементов {{ SVGElement("circle") }} и {{ SVGElement("ellipse") }} этот атрибут определяет координату центра элемента по оси y.  Если атрибут не определён, то эффект такой, как если бы было указано значение "0".</p>
+Для элементов {{ SVGElement("circle") }} и {{ SVGElement("ellipse") }} этот атрибут определяет координату центра элемента по оси y. Если атрибут не определён, то эффект такой, как если бы было указано значение "0".
 
-<p>Для элемента {{ SVGElement("radialGradient") }} этот атрибут определяет координату y небольшого(т.е. внешнего) круга в радиальном градиенте. Градиент будет нарисован так, чтобы значение градиента <strong>100%</strong> соответствовало периметру этого наибольшего(внешнего) круга. Если атрибут не определён, то эффект такой, как если бы было указано значение <strong>50%</strong>.</p>
+Для элемента {{ SVGElement("radialGradient") }} этот атрибут определяет координату y небольшого(т.е. внешнего) круга в радиальном градиенте. Градиент будет нарисован так, чтобы значение градиента **100%** соответствовало периметру этого наибольшего(внешнего) круга. Если атрибут не определён, то эффект такой, как если бы было указано значение **50%**.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категории</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><a href="/ru/docs/Web/SVG/Content_type#Coordinate" title="https://developer.mozilla.org/en/SVG/Content_type#Coordinate">&lt;coordinate&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемый</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Нормативные документы (en)</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/shapes.html#CircleElementCYAttribute">SVG 1.1 (2nd Edition): The circle element</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG/shapes.html#EllipseElementCYAttribute">SVG 1.1 (2nd Edition): The ellipse element</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCYAttribute">SVG 1.1 (2nd Edition): The radialGradient element</a></td>
-  </tr>
- </tbody>
-</table>
+| Категории                  | None                                                                                                                                                                                                                                                                                                                                                 |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Значение                   | [\<coordinate>](/ru/docs/Web/SVG/Content_type#Coordinate "https://developer.mozilla.org/en/SVG/Content_type#Coordinate")                                                                                                                                                                                                                             |
+| Анимируемый                | Да                                                                                                                                                                                                                                                                                                                                                   |
+| Нормативные документы (en) | [SVG 1.1 (2nd Edition): The circle element](http://www.w3.org/TR/SVG/shapes.html#CircleElementCYAttribute) [SVG 1.1 (2nd Edition): The ellipse element](http://www.w3.org/TR/SVG/shapes.html#EllipseElementCYAttribute) [SVG 1.1 (2nd Edition): The radialGradient element](http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCYAttribute) |
 
-<p>{{ page("/ru/docs/Web/SVG/Content_type","Coordinate") }}</p>
+{{ page("/ru/docs/Web/SVG/Content_type","Coordinate") }}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: xml">  &lt;svg width="120" height="220"
+```xml
+  <svg width="120" height="220"
      viewPort="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+     xmlns="http://www.w3.org/2000/svg">
 
-    &lt;style type="text/css" &gt;
+    <style type="text/css" >
 
-      &lt;![CDATA[
+      <![CDATA[
        circle.circleClass {
        stroke: #006600;
        fill:   #cc0000;
     }
 
-      ]]&gt;
-    &lt;/style&gt;
-     &lt;circle  class="circleClass"   cx="40" cy="50" r="26"/&gt;
-&lt;/svg&gt;</pre>
+      ]]>
+    </style>
+     <circle  class="circleClass"   cx="40" cy="50" r="26"/>
+</svg>
+```
 
-<h2 id="Элементы">Элементы</h2>
+## Элементы
 
-<p>Следующие элементы могут использовать атрибут <code>cy</code></p>
+Следующие элементы могут использовать атрибут `cy`
 
-<ul>
- <li>{{ SVGElement("circle") }}</li>
- <li>{{ SVGElement("ellipse") }}</li>
- <li>{{ SVGElement("radialGradient") }}</li>
-</ul>
+- {{ SVGElement("circle") }}
+- {{ SVGElement("ellipse") }}
+- {{ SVGElement("radialGradient") }}

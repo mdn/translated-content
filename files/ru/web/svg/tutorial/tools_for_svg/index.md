@@ -3,70 +3,68 @@ title: Работа с SVG
 slug: Web/SVG/Tutorial/Tools_for_SVG
 translation_of: Web/SVG/Tutorial/Tools_for_SVG
 ---
-<p>{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}</p>
+{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
 
-<p>Теперь, когда мы рассмотрели основы SVG, мы рассмотрим некоторые инструменты для работы с SVG файлами.</p>
+Теперь, когда мы рассмотрели основы SVG, мы рассмотрим некоторые инструменты для работы с SVG файлами.
 
-<h3 id="Browser_support">Поддержка браузерами</h3>
+### Поддержка браузерами
 
-<p>As of Internet Explorer 9, all major browsers support SVG: IE 9, Mozilla Firefox, Safari, Google Chrome and Opera. Mobile devices with Webkit-based browsers also support SVG. On older or smaller devices, chances are that SVG Tiny is supported.</p>
+As of Internet Explorer 9, all major browsers support SVG: IE 9, Mozilla Firefox, Safari, Google Chrome and Opera. Mobile devices with Webkit-based browsers also support SVG. On older or smaller devices, chances are that SVG Tiny is supported.
 
-<h2 id="Inkscape">Inkscape</h2>
+## Inkscape
 
-<p>URL: <a class="external" href="http://www.inkscape.org">www.inkscape.org</a></p>
+URL: [www.inkscape.org](http://www.inkscape.org)
 
-<p>Очень важно иметь в инструментарии приличную графическую программу. Inkscape предлагает современную векторную графику с открытым исходным кодом.</p>
+Очень важно иметь в инструментарии приличную графическую программу. Inkscape предлагает современную векторную графику с открытым исходным кодом.
 
-<p>Кроме того, SVG является её родным форматом. Для хранения специфичных для Inkscape данных, файл SVG расширяется элементами и атрибутами в пользовательском пространстве имён, что не мешает выбрать экспорт и в виде простого SVG.</p>
+Кроме того, SVG является её родным форматом. Для хранения специфичных для Inkscape данных, файл SVG расширяется элементами и атрибутами в пользовательском пространстве имён, что не мешает выбрать экспорт и в виде простого SVG.
 
-<h2 id="Adobe_Illustrator">Adobe Illustrator</h2>
+## Adobe Illustrator
 
-<p>URL: <a class="external" href="http://www.adobe.com/products/illustrator/">www.adobe.com/products/illustrator/</a></p>
+URL: [www.adobe.com/products/illustrator/](http://www.adobe.com/products/illustrator/)
 
-<p>Before Adobe acquired Macromedia, it was the most prominent promoter of SVG. From this time stems the good support of SVG in Illustrator. However, the resulting SVG often shows some quirks, that make it necessary to post-process it for general applicability.</p>
+Before Adobe acquired Macromedia, it was the most prominent promoter of SVG. From this time stems the good support of SVG in Illustrator. However, the resulting SVG often shows some quirks, that make it necessary to post-process it for general applicability.
 
-<h2 id="Apache_Batik">Apache Batik</h2>
+## Apache Batik
 
-<p>URL: <a class="external" href="http://xmlgraphics.apache.org/batik/">xmlgraphics.apache.org/batik/</a></p>
+URL: [xmlgraphics.apache.org/batik/](http://xmlgraphics.apache.org/batik/)
 
-<p>Batik is a set of open source tools under the roof of the Apache Software Foundation. The toolkit is written in Java and offers almost complete SVG 1.1 support, as well as some features that were originally planned for SVG 1.2.</p>
+Batik is a set of open source tools under the roof of the Apache Software Foundation. The toolkit is written in Java and offers almost complete SVG 1.1 support, as well as some features that were originally planned for SVG 1.2.
 
-<p>Batik offers a viewer (Squiggle), a rasterizer for PNG output, an SVG pretty printer to format SVG files, and a TrueType-to-SVG-Font converter.</p>
+Batik offers a viewer (Squiggle), a rasterizer for PNG output, an SVG pretty printer to format SVG files, and a TrueType-to-SVG-Font converter.
 
-<p>Together with <a class="external" href="http://xmlgraphics.apache.org/fop/">Apache FOP</a> Batik can transform SVG to PDF.</p>
+Together with [Apache FOP](http://xmlgraphics.apache.org/fop/) Batik can transform SVG to PDF.
 
-<h3 id="Other_renderers">Other renderers</h3>
+### Other renderers
 
-<p>Several projects exist that can create a raster image from an SVG source. <a class="external" href="http://ImageMagick.org">ImageMagick</a> is one of the most famous command-line image processing tools. The Gnome library <a class="external" href="http://library.gnome.org/devel/rsvg/">rsvg</a> is used by the Wikipedia to raster their SVG graphics. Usage of headless browsers such as SlimerJS and PhantomJS are also popular for this purpose, as the image produced is closer to what the SVG will look like in the browser.</p>
+Several projects exist that can create a raster image from an SVG source. [ImageMagick](http://ImageMagick.org) is one of the most famous command-line image processing tools. The Gnome library [rsvg](http://library.gnome.org/devel/rsvg/) is used by the Wikipedia to raster their SVG graphics. Usage of headless browsers such as SlimerJS and PhantomJS are also popular for this purpose, as the image produced is closer to what the SVG will look like in the browser.
 
-<h2 id="Raphael_JS">Raphael JS</h2>
+## Raphael JS
 
-<p>URL: <a class="external" href="http://raphaeljs.com/">raphaeljs.com</a></p>
+URL: [raphaeljs.com](http://raphaeljs.com/)
 
-<p>This is a JavaScript library, that acts as an abstraction layer between browser implementations. Notably older versions of Internet Explorer are supported by generating VML, a vector markup language, that is one of two ancestors of SVG and exists since IE 5.5.</p>
+This is a JavaScript library, that acts as an abstraction layer between browser implementations. Notably older versions of Internet Explorer are supported by generating VML, a vector markup language, that is one of two ancestors of SVG and exists since IE 5.5.
 
-<h2 id="Snap.svg">Snap.svg</h2>
+## Snap.svg
 
-<p>URL: <a href="http://snapsvg.io/">snapsvg.io</a></p>
+URL: [snapsvg.io](http://snapsvg.io/)
 
-<p>A newer JavaScript abstraction layer from the same author of Raphael JS. Snap.svg is designed for modern browsers and therefore supports the newest SVG features like masking, clipping, patterns, full gradients, groups. It does not support the older browsers that Raphael does.</p>
+A newer JavaScript abstraction layer from the same author of Raphael JS. Snap.svg is designed for modern browsers and therefore supports the newest SVG features like masking, clipping, patterns, full gradients, groups. It does not support the older browsers that Raphael does.
 
-<section id="sect1"> </section>
+## Google Docs
 
-<h2 id="Google_Docs">Google Docs</h2>
+URL: [www.google.com/google-d-s/drawings/](http://www.google.com/google-d-s/drawings/)
 
-<p>URL: <a class="external" href="http://www.google.com/google-d-s/drawings/">www.google.com/google-d-s/drawings/</a></p>
+Drawings from Google Docs can be exported as SVG.
 
-<p>Drawings from Google Docs can be exported as SVG.</p>
+## Science
 
-<h2 id="Science">Science</h2>
+The well-known plotting tools xfig and gnuplot both support exporting as SVG. To render graphs on the web [JSXGraph](http://jsxgraph.uni-bayreuth.de/wp/) supports VML, SVG and canvas, automatically deciding which technology to use based on browser capabilities.
 
-<p>The well-known plotting tools xfig and gnuplot both support exporting as SVG. To render graphs on the web <a class="external" href="http://jsxgraph.uni-bayreuth.de/wp/">JSXGraph</a> supports VML, SVG and canvas, automatically deciding which technology to use based on browser capabilities.</p>
+In GIS (Geographic Information System) applications SVG is often used as both storage and rendering format. See [carto.net](http://carto.net) for details.
 
-<p>In GIS (Geographic Information System) applications SVG is often used as both storage and rendering format. See <a class="external" href="http://carto.net">carto.net</a> for details.</p>
+## Больше программ!
 
-<h2 id="More_tools!">Больше программ!</h2>
+W3C предлагает [список программ](http://www.w3.org/Graphics/SVG/WG/wiki/Implementations), которые поддерживают SVG.
 
-<p>W3C предлагает <a class="external" href="http://www.w3.org/Graphics/SVG/WG/wiki/Implementations">список программ</a>, которые поддерживают SVG.</p>
-
-<p>{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}</p>
+{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}

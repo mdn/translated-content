@@ -3,169 +3,159 @@ title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
 translation_of: Web/SVG/Attribute/stroke-linecap
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Атрибут <strong><code>stroke-linecap</code></strong> - это атрибут представления, определяющий форму, которая будет использоваться в конце открытых подпутей при штриховании.</p>
+Атрибут **`stroke-linecap`** - это атрибут представления, определяющий форму, которая будет использоваться в конце открытых подпутей при штриховании.
 
-<p class="note"><strong>Сноска: </strong>В качестве атрибута представления можно использовать <code>stroke-linecap</code> в качестве свойства CSS.</p>
+> **Примечание:** **Сноска:** В качестве атрибута представления можно использовать `stroke-linecap` в качестве свойства CSS.
 
-<p>В качестве атрибута представления он может применяться к любому элементу, но он влияет только на следующие семь элементов: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}</p>
+В качестве атрибута представления он может применяться к любому элементу, но он влияет только на следующие семь элементов: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;!-- Effect of the (default) "butt" value --&gt;
-  &lt;line x1="1" y1="1" x2="5" y2="1" stroke="black"
-        stroke-linecap="butt" /&gt;
+  <!-- Effect of the (default) "butt" value -->
+  <line x1="1" y1="1" x2="5" y2="1" stroke="black"
+        stroke-linecap="butt" />
 
-  &lt;!-- Effect of the "round" value --&gt;
-  &lt;line x1="1" y1="3" x2="5" y2="3" stroke="black"
-        stroke-linecap="round" /&gt;
+  <!-- Effect of the "round" value -->
+  <line x1="1" y1="3" x2="5" y2="3" stroke="black"
+        stroke-linecap="round" />
 
-  &lt;!-- Effect of the "square" value --&gt;
-  &lt;line x1="1" y1="5" x2="5" y2="5" stroke="black"
-        stroke-linecap="square" /&gt;
+  <!-- Effect of the "square" value -->
+  <line x1="1" y1="5" x2="5" y2="5" stroke="black"
+        stroke-linecap="square" />
 
-  &lt;!--
+  <!--
   the following pink lines highlight the
   position of the path for each stroke
-  --&gt;
-  &lt;path d="M1,1 h4 M1,3 h4 M1,5 h4" stroke="pink" stroke-width="0.025" /&gt;
-&lt;/svg&gt;
-</pre>
+  -->
+  <path d="M1,1 h4 M1,3 h4 M1,5 h4" stroke="pink" stroke-width="0.025" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
-</div>
+{{EmbedLiveSample('topExample', '100%', 200)}}
 
-<h2 id="Нотации">Нотации</h2>
+## Нотации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>butt</code> | <code>round</code> | <code>square</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>butt</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | `butt` \| `round` \| `square` |
+| ------------- | ----------------------------- |
+| Default value | `butt`                        |
+| Animatable    | Yes                           |
 
-<h3 id="butt">butt</h3>
+### butt
 
-<p>Значение <code>butt</code> указывает границу каждого подпути и не выходит за пределы двух его конечных точек. На подпути нулевой длины путь не будет отображаться вообще.</p>
+Значение `butt` указывает границу каждого подпути и не выходит за пределы двух его конечных точек. На подпути нулевой длины путь не будет отображаться вообще.
 
-<h4 id="Пример">Пример</h4>
+#### Пример
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;!-- Effect of the "butt" value --&gt;
-  &lt;path d="M1,1 h4" stroke="black"
-        stroke-linecap="butt" /&gt;
+  <!-- Effect of the "butt" value -->
+  <path d="M1,1 h4" stroke="black"
+        stroke-linecap="butt" />
 
-  &lt;!-- Effect of the "butt" value on a zero length path --&gt;
-  &lt;path d="M3,3 h0" stroke="black"
-        stroke-linecap="butt" /&gt;
+  <!-- Effect of the "butt" value on a zero length path -->
+  <path d="M3,3 h0" stroke="black"
+        stroke-linecap="butt" />
 
 
-  &lt;!--
+  <!--
   the following pink lines highlight the
   position of the path for each stroke
-  --&gt;
-  &lt;path d="M1,1 h4" stroke="pink" stroke-width="0.025" /&gt;
-  &lt;circle cx="1" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="5" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="3" cy="3" r="0.05" fill="pink" /&gt;
-&lt;/svg&gt;
-</pre>
+  -->
+  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
+  <circle cx="1" cy="1" r="0.05" fill="pink" />
+  <circle cx="5" cy="1" r="0.05" fill="pink" />
+  <circle cx="3" cy="3" r="0.05" fill="pink" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('butt', '100%', 200)}}</p>
+{{EmbedLiveSample('butt', '100%', 200)}}
 
-<h3 id="round">round</h3>
+### round
 
-<p>Значение <code>round</code> указывает на то, что в конце каждого подпути обводка будет расширена на полукруг с диаметром, равным ширине обводки. На подпути нулевой длины обводка состоит из полного круга с центром в точке подпути.</p>
+Значение `round` указывает на то, что в конце каждого подпути обводка будет расширена на полукруг с диаметром, равным ширине обводки. На подпути нулевой длины обводка состоит из полного круга с центром в точке подпути.
 
-<h4 id="Пример_2">Пример</h4>
+#### Пример
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;!-- Effect of the "round" value --&gt;
-  &lt;path d="M1,1 h4" stroke="black"
-        stroke-linecap="round" /&gt;
+  <!-- Effect of the "round" value -->
+  <path d="M1,1 h4" stroke="black"
+        stroke-linecap="round" />
 
-  &lt;!-- Effect of the "round" value on a zero length path --&gt;
-  &lt;path d="M3,3 h0" stroke="black"
-        stroke-linecap="round" /&gt;
+  <!-- Effect of the "round" value on a zero length path -->
+  <path d="M3,3 h0" stroke="black"
+        stroke-linecap="round" />
 
 
-  &lt;!--
+  <!--
   the following pink lines highlight the
   position of the path for each stroke
-  --&gt;
-  &lt;path d="M1,1 h4" stroke="pink" stroke-width="0.025" /&gt;
-  &lt;circle cx="1" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="5" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="3" cy="3" r="0.05" fill="pink" /&gt;
-&lt;/svg&gt;
-</pre>
+  -->
+  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
+  <circle cx="1" cy="1" r="0.05" fill="pink" />
+  <circle cx="5" cy="1" r="0.05" fill="pink" />
+  <circle cx="3" cy="3" r="0.05" fill="pink" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('round', '100%', 200)}}</p>
+{{EmbedLiveSample('round', '100%', 200)}}
 
-<h3 id="square">square</h3>
+### square
 
-<p>Значение <code>square</code> указывает, что в конце каждого подпути обводка будет расширена прямоугольником с шириной, равной половине ширины обводки, и высотой, равной ширине обводки. На подпути с нулевой длиной обводка состоит из квадрата, ширина которого равна ширине обводки, с центром в точке подпути.</p>
+Значение `square` указывает, что в конце каждого подпути обводка будет расширена прямоугольником с шириной, равной половине ширины обводки, и высотой, равной ширине обводки. На подпути с нулевой длиной обводка состоит из квадрата, ширина которого равна ширине обводки, с центром в точке подпути.
 
-<h4 id="Пример_3">Пример</h4>
+#### Пример
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;!-- Effect of the "square" value --&gt;
-  &lt;path d="M1,1 h4" stroke="black"
-        stroke-linecap="square" /&gt;
+  <!-- Effect of the "square" value -->
+  <path d="M1,1 h4" stroke="black"
+        stroke-linecap="square" />
 
-  &lt;!-- Effect of the "square" value on a zero length path --&gt;
-  &lt;path d="M3,3 h0" stroke="black"
-        stroke-linecap="square" /&gt;
+  <!-- Effect of the "square" value on a zero length path -->
+  <path d="M3,3 h0" stroke="black"
+        stroke-linecap="square" />
 
 
-  &lt;!--
+  <!--
   the following pink lines highlight the
   position of the path for each stroke
-  --&gt;
-  &lt;path d="M1,1 h4" stroke="pink" stroke-width="0.025" /&gt;
-  &lt;circle cx="1" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="5" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="3" cy="3" r="0.05" fill="pink" /&gt;
-&lt;/svg&gt;
-</pre>
+  -->
+  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
+  <circle cx="1" cy="1" r="0.05" fill="pink" />
+  <circle cx="5" cy="1" r="0.05" fill="pink" />
+  <circle cx="3" cy="3" r="0.05" fill="pink" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('square', '100%', 200)}}</p>
+{{EmbedLiveSample('square', '100%', 200)}}
 
-<h2 id="Browser_Compatibility">Совместимость браузера</h2>
+## Совместимость браузера
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}

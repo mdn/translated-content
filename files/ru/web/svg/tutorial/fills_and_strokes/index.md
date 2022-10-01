@@ -3,143 +3,152 @@ title: Заливка и обводка
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
-<p>{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}</p>
+{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 
-<p>Есть несколько способов раскрасить фигуры SVG (в т.ч. с указанием атрибутов объекта), используя инлайн-CSS, встроенную CSS-секцию, или внешний файл CSS. Большая часть SVG, которую вы встретите в интернете, использует встроенный CSS, однако преимущества и недостатки есть у каждого типа.</p>
+Есть несколько способов раскрасить фигуры SVG (в т.ч. с указанием атрибутов объекта), используя инлайн-CSS, встроенную CSS-секцию, или внешний файл CSS. Большая часть SVG, которую вы встретите в интернете, использует встроенный CSS, однако преимущества и недостатки есть у каждого типа.
 
-<h2 id="Fill_and_Stroke_Attributes">Атрибуты заливки и обводки (Fill and Stroke Attributes)</h2>
+## Атрибуты заливки и обводки (Fill and Stroke Attributes)
 
-<h3 id="Painting">Раскраска (Painting)</h3>
+### Раскраска (Painting)
 
-<p>Основная раскраска может быть сделана установкой двух свойств на ноде - <em>fill </em>и <em>stroke. Fill - </em>устанавливает цвет внутри объекта, а <em>stroke </em>задаёт цвет линии, которая рисуется вокруг объекта. Вы можете использовать CSS-наименования цветов, что и в HTML - названия цветов (например,<em> red)</em>, rgb-значения, hex-значения, rgba-значения и т.д.</p>
+Основная раскраска может быть сделана установкой двух свойств на ноде - _fill_ и _stroke. Fill -_ устанавливает цвет внутри объекта, а _stroke_ задаёт цвет линии, которая рисуется вокруг объекта. Вы можете использовать CSS-наименования цветов, что и в HTML - названия цветов (например, _red)_, rgb-значения, hex-значения, rgba-значения и т.д.
 
-<pre class="brush:xml;"> &lt;rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
-       fill-opacity="0.5" stroke-opacity="0.8"/&gt;
-</pre>
+```xml
+ <rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
+       fill-opacity="0.5" stroke-opacity="0.8"/>
+```
 
-<p>Кроме того, вы можете задать прозрачность заливке и обводке по отдельности в SVG. Их прозрачность управляется атрибутами <em>fill-opacity, stroke-opacity.</em></p>
+Кроме того, вы можете задать прозрачность заливке и обводке по отдельности в SVG. Их прозрачность управляется атрибутами _fill-opacity, stroke-opacity._
 
-<div class="note style-wrap">Замечание: в Firefox 3+ допустимы rgba-значения и это даёт такой же эффект прозрачности, но для совместимости с другими просмотрщиками часто лучше определить прозрачность обводки/заливки отдельно. Если вы укажете и rgba-значение и значение <em>fill-opacity/stroke-opacity - </em>будут применены оба.</div>
+> **Примечание:** Замечание: в Firefox 3+ допустимы rgba-значения и это даёт такой же эффект прозрачности, но для совместимости с другими просмотрщиками часто лучше определить прозрачность обводки/заливки отдельно. Если вы укажете и rgba-значение и значение _fill-opacity/stroke-opacity -_ будут применены оба.
 
-<h3 id="Stroke">Обводка (Stroke)</h3>
+### Обводка (Stroke)
 
-<p>Кроме цветовых свойств обводки, есть несколько атрибутов, управляющих способом обводки.</p>
+Кроме цветовых свойств обводки, есть несколько атрибутов, управляющих способом обводки.
 
-<p><img alt="" class="internal" src="/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png" style="float: right;"></p>
+![](/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png)
 
-<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
-&lt;svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt"/&gt;
-  &lt;line x1="40" x2="120" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/&gt;
-  &lt;line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round"/&gt;
-&lt;/svg&gt;</pre>
+```xml
+<?xml version="1.0" standalone="no"?>
+<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt"/>
+  <line x1="40" x2="120" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/>
+  <line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round"/>
+</svg>
+```
 
-<p>Свойство <em>stroke-width </em>определяет ширину обводки. Штрихи обводки рисуются вокруг пути. В примере выше путь изображён розовым, а обводка - черным.</p>
+Свойство _stroke-width_ определяет ширину обводки. Штрихи обводки рисуются вокруг пути. В примере выше путь изображён розовым, а обводка - черным.
 
-<p>Второй атрибут, влияющий на обводку - свойство <em>stroke-linecap. </em>Демонстрируется выше. Свойство управляет отображением концов линий.</p>
+Второй атрибут, влияющий на обводку - свойство _stroke-linecap._ Демонстрируется выше. Свойство управляет отображением концов линий.
 
-<p>Есть три возможных значения для <em>stroke-linecap</em>:</p>
+Есть три возможных значения для _stroke-linecap_:
 
-<ul>
- <li><code>butt</code> обрывает линию под прямым углом к направлению обводки и делает это сразу по окончании линии.</li>
- <li><code>square</code> в основном действует также, но немного растягивает обводку по краям пути. Длина, на которую продлевается обводка - это половина заданного значения <em>stroke-width.</em></li>
- <li><code>round</code> задаёт закруглённые углы по краям обводки. Радиус этих кривых также управляется параметром <em>stroke-width.</em></li>
-</ul>
+- `butt` обрывает линию под прямым углом к направлению обводки и делает это сразу по окончании линии.
+- `square` в основном действует также, но немного растягивает обводку по краям пути. Длина, на которую продлевается обводка - это половина заданного значения _stroke-width._
+- `round` задаёт закруглённые углы по краям обводки. Радиус этих кривых также управляется параметром _stroke-width._
 
-<p>Используйте<code><em> </em>stroke-linejoin</code>, чтобы определить, как соединять обводку двух сегментов линии.</p>
+Используйте` stroke-linejoin`, чтобы определить, как соединять обводку двух сегментов линии.
 
-<p><img alt="" class="internal" src="/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png" style="float: right;"></p>
+![](/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png)
 
-<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
-&lt;svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
-      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/&gt;
+```xml
+<?xml version="1.0" standalone="no"?>
+<svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
+      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
 
-  &lt;polyline points="40 140 80 100 120 140" stroke="black" stroke-width="20"
-      stroke-linecap="round" fill="none" stroke-linejoin="round"/&gt;
+  <polyline points="40 140 80 100 120 140" stroke="black" stroke-width="20"
+      stroke-linecap="round" fill="none" stroke-linejoin="round"/>
 
-  &lt;polyline points="40 220 80 180 120 220" stroke="black" stroke-width="20"
-      stroke-linecap="square" fill="none" stroke-linejoin="bevel"/&gt;
-&lt;/svg&gt;</pre>
+  <polyline points="40 220 80 180 120 220" stroke="black" stroke-width="20"
+      stroke-linecap="square" fill="none" stroke-linejoin="bevel"/>
+</svg>
+```
 
-<p>Каждая из этих полилиний имеет два сегмента. Соединение, где они встречаются, управляется атрибутом <code>stroke-linejoin</code>. Есть три возможных значения для этого атрибута:</p>
+Каждая из этих полилиний имеет два сегмента. Соединение, где они встречаются, управляется атрибутом `stroke-linejoin`. Есть три возможных значения для этого атрибута:
 
-<ul>
- <li><code>miter </code>продолжает линию обводки дальше её обычной ширины, чтобы создать единственный квадратный угол.</li>
- <li><code>round </code>создаёт закруглённый сегмент линии</li>
- <li><code>bevel </code>создаёт новый угол для помощи в переходе между двумя сегментами</li>
-</ul>
+- `miter `продолжает линию обводки дальше её обычной ширины, чтобы создать единственный квадратный угол.
+- `round `создаёт закруглённый сегмент линии
+- `bevel `создаёт новый угол для помощи в переходе между двумя сегментами
 
-<p>Наконец, вы можете использовать пунктирные линии в обводке, определив атрибут <code>stroke-dasharray</code>.</p>
+Наконец, вы можете использовать пунктирные линии в обводке, определив атрибут `stroke-dasharray`.
 
-<p><img alt="" class="internal" src="/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png" style="float: right;"></p>
+![](/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png)
 
-<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
-&lt;svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
-    stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/&gt;
-  &lt;path d="M 10 75 L 190 75" stroke="red"
-    stroke-linecap="round" stroke-width="1" stroke-dasharray="5,5" fill="none"/&gt;
-&lt;/svg&gt;</pre>
+```xml
+<?xml version="1.0" standalone="no"?>
+<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
+    stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/>
+  <path d="M 10 75 L 190 75" stroke="red"
+    stroke-linecap="round" stroke-width="1" stroke-dasharray="5,5" fill="none"/>
+</svg>
+```
 
-<p>В качестве аргумента атрибут <code>stroke-dasharray </code>принимает последовательность чисел, разделённых запятой.</p>
+В качестве аргумента атрибут `stroke-dasharray `принимает последовательность чисел, разделённых запятой.
 
-<div class="note">
-<p>Замечание: в отличие от путей, эти числа ДОЛЖНЫ быть разделены запятыми (пробелы игнорируются).</p>
-</div>
+> **Примечание:** Замечание: в отличие от путей, эти числа ДОЛЖНЫ быть разделены запятыми (пробелы игнорируются).
 
-<p>Первое число определяет длину штриха, второе - длину между штрихами. В примере выше, второй путь чередует заливку штрихом в 5 пикселей, затем 5 пустых пикселей перед следующим штрихом в 5 пикселей. Вы можете задать больше чисел, если хотите более сложную систему штрихов. В первом примере задано 3 числа и в этом случае рендер берёт эти числа дважды, чтобы создать чётный паттерн. Т.о. первый путь отображается 5 закрашенными, 10 пустыми, 5 закрашенными и затем ещё раз 5 пустыми, 10 закрашенными, 5 пустыми "пикселями". Затем паттерн повторяется.</p>
+Первое число определяет длину штриха, второе - длину между штрихами. В примере выше, второй путь чередует заливку штрихом в 5 пикселей, затем 5 пустых пикселей перед следующим штрихом в 5 пикселей. Вы можете задать больше чисел, если хотите более сложную систему штрихов. В первом примере задано 3 числа и в этом случае рендер берёт эти числа дважды, чтобы создать чётный паттерн. Т.о. первый путь отображается 5 закрашенными, 10 пустыми, 5 закрашенными и затем ещё раз 5 пустыми, 10 закрашенными, 5 пустыми "пикселями". Затем паттерн повторяется.
 
-<p>Также есть дополнительные <strong>stroke </strong>и <strong>fill </strong>свойства: <code><a href="/en-US/docs/Web/SVG/Attribute/fill-rule">fill-rule</a>, которое определяет как будут заливаться сложные фигуры, которые имеют пересечения внутри себя;</code> <code><a href="/en-US/docs/Web/SVG/Attribute/stroke-miterlimit">stroke-miterlimit</a>, </code>which determines if a stroke should draw miters<code> и </code><a href="/en-US/docs/Web/SVG/Attribute/stroke-dashoffset">stroke-dashoffset</a>, который указывает где начинается dash-array в линии (позволяет задать смещение пунктирной обводки относительно первоначального положения)</p>
+Также есть дополнительные **stroke** и **fill** свойства: `fill-rule, которое определяет как будут заливаться сложные фигуры, которые имеют пересечения внутри себя;` `stroke-miterlimit, `which determines if a stroke should draw miters` и `[stroke-dashoffset](/ru/docs/Web/SVG/Attribute/stroke-dashoffset), который указывает где начинается dash-array в линии (позволяет задать смещение пунктирной обводки относительно первоначального положения)
 
-<h2 id="Using_CSS">Использование CSS (Using CSS)</h2>
+## Использование CSS (Using CSS)
 
-<p>В дополнение к установке атрибутов объектов, вы также можете использовать CSS для стилизации заливки и обводки. Не все атрибуты могут быть установлены через CSS. Но атрибуты взаимодействия с раскраской и заливкой обычно доступны, так что <code>fill, stroke, stroke-dasharray </code>и т.д. могут быть заданы этим способом, также как и градиенты, и паттерны, что показано ниже. Атрибуты вроде <code>width, height </code>или команд для путей SVG не могут быть установлены через CSS. Проще всего просто протестировать и узнать, что доступно, а что нет.</p>
+В дополнение к установке атрибутов объектов, вы также можете использовать CSS для стилизации заливки и обводки. Не все атрибуты могут быть установлены через CSS. Но атрибуты взаимодействия с раскраской и заливкой обычно доступны, так что `fill, stroke, stroke-dasharray `и т.д. могут быть заданы этим способом, также как и градиенты, и паттерны, что показано ниже. Атрибуты вроде `width, height `или команд для путей SVG не могут быть установлены через CSS. Проще всего просто протестировать и узнать, что доступно, а что нет.
 
-<div class="note style-wrap"><a href="http://www.w3.org/TR/SVG/propidx.html">Спецификация SVG</a> строго разделяет атрибуты на <em>свойства</em> и другие атрибуты. Первые могут быть изменены через CSS, а вторые - нет.</div>
+> **Примечание:** [Спецификация SVG](http://www.w3.org/TR/SVG/propidx.html) строго разделяет атрибуты на _свойства_ и другие атрибуты. Первые могут быть изменены через CSS, а вторые - нет.
 
-<p>CSS может использоваться инлайн через атрибут <code>style</code>:</p>
+CSS может использоваться инлайн через атрибут `style`:
 
-<pre class="brush:xml;"> &lt;rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/&gt;
-</pre>
+```xml
+ <rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/>
+```
 
-<p>или может быть помещён в специальную стилевую секцию, которую вы включите. Вместо отображения такой секции в разделе <code>&lt;head&gt;, </code>как это делается в HTML, она включается в зону <code>&lt;defs&gt;, </code>предназначенную для определений. Здесь можно создавать элементы, которые не появятся сами в SVG, но будут использованы другими элементами.</p>
+или может быть помещён в специальную стилевую секцию, которую вы включите. Вместо отображения такой секции в разделе `<head>, `как это делается в HTML, она включается в зону `<defs>, `предназначенную для определений. Здесь можно создавать элементы, которые не появятся сами в SVG, но будут использованы другими элементами.
 
-<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
-&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;defs&gt;
-    &lt;style type="text/css"&gt;&lt;![CDATA[
+```xml
+<?xml version="1.0" standalone="no"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <style type="text/css"><![CDATA[
        #MyRect {
          stroke: black;
          fill: red;
        }
-    ]]&gt;&lt;/style&gt;
-  &lt;/defs&gt;
-  &lt;rect x="10" height="180" y="10" width="180" id="MyRect"/&gt;
-&lt;/svg&gt;</pre>
+    ]]></style>
+  </defs>
+  <rect x="10" height="180" y="10" width="180" id="MyRect"/>
+</svg>
+```
 
-<p>Перемещение стилей в отдельную зону может сделать проще применение свойств к большим группам элементов. Вы также можете использовать вещи типа псевдоклассов наведения для создания эффектов переворачивания:</p>
+Перемещение стилей в отдельную зону может сделать проще применение свойств к большим группам элементов. Вы также можете использовать вещи типа псевдоклассов наведения для создания эффектов переворачивания:
 
-<pre class="brush:css;"> #MyRect:hover {
+```css
+ #MyRect:hover {
    stroke: black;
    fill: blue;
  }
-</pre>
+```
 
-<p>Также можно определить отдельный файл стилей для ваших CSS-правил через <a href="http://www.w3.org/TR/xml-stylesheet/">обычный XML-stylesheet синтаксис</a>:</p>
+Также можно определить отдельный файл стилей для ваших CSS-правил через [обычный XML-stylesheet синтаксис](http://www.w3.org/TR/xml-stylesheet/):
 
-<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
-&lt;?xml-stylesheet type="text/css" href="style.css"?&gt;
+```xml
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
 
-&lt;svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;rect height="10" width="10" id="MyRect"/&gt;
-&lt;/svg&gt;</pre>
+<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <rect height="10" width="10" id="MyRect"/>
+</svg>
+```
 
-<p>где style.css выглядит примерно так</p>
+где style.css выглядит примерно так
 
-<pre class="brush:css;">#MyRect {
+```css
+#MyRect {
   fill: red;
   stroke: black;
-}</pre>
+}
+```
 
-<p>{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}</p>
+{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}

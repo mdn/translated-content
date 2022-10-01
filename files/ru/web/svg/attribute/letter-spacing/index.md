@@ -6,55 +6,36 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/letter-spacing
 ---
-<p>« <a href="/ru/docs/Web/SVG/Attribute" title="Справочник SVG атрибутов">Справочник SVG атрибутов</a></p>
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
 
-<p>Атрибут <code>letter-spacing</code> контролирует расстояние между текстовыми символами, в дополнении к любому расстоянию атрибута {{ SVGAttr("kerning") }} .</p>
+Атрибут `letter-spacing` контролирует расстояние между текстовыми символами, в дополнении к любому расстоянию атрибута {{ SVGAttr("kerning") }} .
 
-<p>Для SVG, если значением атрибута выступает обыкновенное число (например, <code>128</code>), браузер добавляет это к <a href="/en/SVG/Content_type#Length">&lt;length&gt;</a> в текущей системе координат пользователя.</p>
+Для SVG, если значением атрибута выступает обыкновенное число (например, `128`), браузер добавляет это к [\<length>](/en/SVG/Content_type#Length) в текущей системе координат пользователя.
 
-<p>Если же значением атрибута выступают относительные величины, к примеру <code>.25em</code> или <code>1%</code>, браузер преобразовывает их в  <a href="/en/SVG/Content_type#Length">&lt;length&gt;</a> соответствующее значение в текущей системе координат пользователя.</p>
+Если же значением атрибута выступают относительные величины, к примеру `.25em` или `1%`, браузер преобразовывает их в [\<length>](/en/SVG/Content_type#Length) соответствующее значение в текущей системе координат пользователя.
 
-<p>В качестве атрибута представления он также может использоваться как свойство в CSS. Смотрите {{ cssxref("letter-spacing","CSS letter-spacing") }} для дополнительной информации.</p>
+В качестве атрибута представления он также может использоваться как свойство в CSS. Смотрите {{ cssxref("letter-spacing","CSS letter-spacing") }} для дополнительной информации.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категория</th>
-   <td>Атрибут представления</td>
-  </tr>
-  <tr>
-   <th scope="row">Значение</th>
-   <td>normal | <a href="/en/SVG/Content_type#Length">&lt;length&gt;</a> | <strong title="this is the default value">inherit</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируется </th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Нормативный документ</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/text.html#LetterSpacingProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Категория            | Атрибут представления                                                               |
+| -------------------- | ----------------------------------------------------------------------------------- |
+| Значение             | normal \| [\<length>](/en/SVG/Content_type#Length) \| **inherit**                   |
+| Анимируется          | Да                                                                                  |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#LetterSpacingProperty) |
 
-<p>{{ page("/en/SVG/Content_type","Length") }}</p>
+{{ page("/en/SVG/Content_type","Length") }}
 
-<h2 id="Элементы">Элементы</h2>
+## Элементы
 
-<p>В следующих элементах можно использовать атрибут <code>letter-spacing</code></p>
+В следующих элементах можно использовать атрибут `letter-spacing`
 
-<ul>
- <li><a href="/en/SVG/Element#Text_content_elements">Элементы текстового контента</a>, например <code>&lt;text&gt;</code> и <code>&lt;tspan&gt;</code>.</li>
-</ul>
+- [Элементы текстового контента](/en/SVG/Element#Text_content_elements), например `<text>` и `<tspan>`.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ cssxref("letter-spacing","CSS letter-spacing") }}</li>
-</ul>
+- {{ cssxref("letter-spacing","CSS letter-spacing") }}
 
-<h2 id="Примечание_об_использовании">Примечание об использовании</h2>
+## Примечание об использовании
 
-<p>Атрибут <code>letter-spacing</code> плохо поддерживается в работе с SVG. По состоянию на май 2016 года Firefox делает текст без использования <code>letter-spacing</code>. Chrome делает текст с уже буквенным интервалом, но неправильно вычисляет длину текста; <code>textNode.getComputedTextLength()</code> возвращает точно такую же длину, <code>letter-spacing</code> установлен или нет, что приводит к грубо неправильным результатам при разнесении букв.</p>
+Атрибут `letter-spacing` плохо поддерживается в работе с SVG. По состоянию на май 2016 года Firefox делает текст без использования `letter-spacing`. Chrome делает текст с уже буквенным интервалом, но неправильно вычисляет длину текста; `textNode.getComputedTextLength()` возвращает точно такую же длину, `letter-spacing` установлен или нет, что приводит к грубо неправильным результатам при разнесении букв.

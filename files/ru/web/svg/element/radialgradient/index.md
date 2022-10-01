@@ -7,99 +7,76 @@ tags:
 translation_of: Web/SVG/Element/radialGradient
 original_slug: Web/SVG/Элемент/radialGradient
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Элемент <strong><code>&lt;radialGradient&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> позволяет авторам определять радиальные градиенты для заполнения или изменения графических элементов.</p>
+Элемент **`<radialGradient>`** [SVG](/ru/docs/Web/SVG) позволяет авторам определять радиальные градиенты для заполнения или изменения графических элементов.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+### Глобальные атрибуты
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core_attributes">Основные атрибуты</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation_attributes">Атрибуты презентации</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#XLink_attributes">Атрибуты Xlink</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [Основные атрибуты](/ru/docs/Web/SVG/Attribute#Core_attributes) »
+- [Атрибуты презентации](/ru/docs/Web/SVG/Attribute#Presentation_attributes) »
+- [Атрибуты Xlink](/ru/docs/Web/SVG/Attribute#XLink_attributes) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="Специфические_атрибуты">Специфические атрибуты</h3>
+### Специфические атрибуты
 
-<ul>
- <li>{{SVGAttr("gradientUnits")}}</li>
- <li>{{SVGAttr("gradientTransform")}}</li>
- <li>{{SVGAttr("cx")}}</li>
- <li>{{SVGAttr("cy")}}</li>
- <li>{{SVGAttr("r")}}</li>
- <li>{{SVGAttr("fx")}}</li>
- <li>{{SVGAttr("fy")}}</li>
- <li>{{SVGAttr("fr")}}</li>
- <li>{{SVGAttr("spreadMethod")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+- {{SVGAttr("gradientUnits")}}
+- {{SVGAttr("gradientTransform")}}
+- {{SVGAttr("cx")}}
+- {{SVGAttr("cy")}}
+- {{SVGAttr("r")}}
+- {{SVGAttr("fx")}}
+- {{SVGAttr("fy")}}
+- {{SVGAttr("fr")}}
+- {{SVGAttr("spreadMethod")}}
+- {{SVGAttr("xlink:href")}}
 
-<h2 id="DOM_интерфейс">DOM интерфейс</h2>
+## DOM интерфейс
 
-<p>Этот элемент реализует {{domxref("SVGRadialGradientElement")}} интерфейс.</p>
+Этот элемент реализует {{domxref("SVGRadialGradientElement")}} интерфейс.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg width="120" height="120" viewBox="0 0 120 120"
-   xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg width="120" height="120" viewBox="0 0 120 120"
+   xmlns="http://www.w3.org/2000/svg">
 
-  &lt;defs&gt;
-    &lt;radialGradient id="exampleGradient"&gt;
-      &lt;stop offset="10%" stop-color="gold"/&gt;
-      &lt;stop offset="95%" stop-color="green"/&gt;
-    &lt;/radialGradient&gt;
-  &lt;/defs&gt;
+  <defs>
+    <radialGradient id="exampleGradient">
+      <stop offset="10%" stop-color="gold"/>
+      <stop offset="95%" stop-color="green"/>
+    </radialGradient>
+  </defs>
 
-  &lt;circle fill="url(#exampleGradient)" cx="60" cy="60" r="50"/&gt;
-&lt;/svg&gt;</pre>
+  <circle fill="url(#exampleGradient)" cx="60" cy="60" r="50"/>
+</svg>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Пример", 120, 120)}}</p>
+{{EmbedLiveSample("Пример", 120, 120)}}
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Коммент</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'pservers.html#RadialGradients', '&lt;radialGradient&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td>Добавлен атрибут <code>fr</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'pservers.html#RadialGradients', '&lt;radialGradient&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                 | Статус                   | Коммент               |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | --------------------- |
+| {{SpecName('SVG2', 'pservers.html#RadialGradients', '&lt;radialGradient&gt;')}}     | {{Spec2('SVG2')}} | Добавлен атрибут `fr` |
+| {{SpecName('SVG1.1', 'pservers.html#RadialGradients', '&lt;radialGradient&gt;')}} | {{Spec2('SVG1.1')}} | Начальное определение |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p> </p>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{SVGElement("linearGradient")}}</li>
-</ul>
+- {{SVGElement("linearGradient")}}

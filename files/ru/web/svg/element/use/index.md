@@ -9,119 +9,92 @@ tags:
 translation_of: Web/SVG/Element/use
 original_slug: Web/SVG/Элемент/use
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Элемент <strong><code>&lt;use&gt;</code></strong> берёт элементы из SVG-документа и дублирует их где-то ещё.</p>
+Элемент **`<use>`** берёт элементы из SVG-документа и дублирует их где-то ещё.
 
-<div id="Exemple">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/&gt;
-  &lt;use href="#myCircle" x="10" fill="blue"/&gt;
-  &lt;use href="#myCircle" x="20" fill="white" stroke="red"/&gt;
-  &lt;!--
+```html
+<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+  <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/>
+  <use href="#myCircle" x="10" fill="blue"/>
+  <use href="#myCircle" x="20" fill="white" stroke="red"/>
+  <!--
   В данном случае атрибут stroke="red" будет игнорироваться, так как
   ранее он был задан непосредственно для фигуры круга с id "myCircle".
   Большинство атрибутов (кроме x, y, width, height и (xlink:)href) не
   переопределяют значения, заданные у предка.
   Вот почему круги имеют разные координаты "x", но одинаковое значение "stroke".
-  --&gt;
-&lt;/svg&gt;</pre>
+  -->
+</svg>
+```
 
-<p>{{EmbedLiveSample('Exemple', 100, 100)}}</p>
-</div>
+{{EmbedLiveSample('Exemple', 100, 100)}}
 
-<p>Эффект такой же, как если бы элементы были полностью склонированы в DOM, а затем расположены в месте, где находится элемент <code>use</code>, подобно элементам <code>&lt;template&gt;</code> в HTML 5.<br>
- <br>
- Большинство атрибутов <code>use</code> <strong>не</strong> переопределяют те, что уже заданы у элемента, на который <code>use</code> ссылается. (Это отличается от того, как атрибуты CSS-стилей, переопределяют те, что были заданы раньше в каскаде). <strong>Только</strong> атрибуты {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} и {{SVGAttr("href")}} элемента <code>use</code> будут переопределять те, что были заданы у элемента, на который <code>use</code> ссылается. Однако к элементу <code>use</code> будут применены любые другие атрибуты, не заданные у элемента, на который <code>use</code> ссылается.<br>
- <br>
- Поскольку клонированные элементы не отображаются, нужно соблюдать осторожность при использовании <a href="/en-US/docs/Web/CSS" title="en/CSS">CSS</a> для стилизации элемента <code>use</code> и его клонированных потомков. Нет гарантии, что CSS-свойства будут унаследованы клонированным DOM, пока вы явно не зададите им использование <a href="/en-US/docs/Web/CSS/inheritance">CSS-наследования</a>.<br>
- <br>
- По соображениям безопасности, браузеры могут применять <a href="/en-US/docs/Web/Security/Same-origin_policy">правило ограничения домена</a> для элементов <code>use</code> и могут отказаться загружать URL другого источника в атрибуте {{SVGAttr("href")}}.</p>
+Эффект такой же, как если бы элементы были полностью склонированы в DOM, а затем расположены в месте, где находится элемент `use`, подобно элементам `<template>` в HTML 5.
 
-<div class="warning">
-<p>Начиная с SVG 2, атрибут {{SVGAttr("xlink:href")}} получил статус "Устарело" в пользу {{SVGAttr("href")}}. Дополнительную информацию ищите на странице {{SVGAttr("xlink:href")}}. Тем не менее,  на практике всё ещё может быть потребность в использовании {{SVGAttr("xlink:href")}} для кроссбраузерной совместимости (смотрите <a href="#browser-compatibility">таблицу совместимости</a> ниже).</p>
-</div>
+Большинство атрибутов `use` **не** переопределяют те, что уже заданы у элемента, на который `use` ссылается. (Это отличается от того, как атрибуты CSS-стилей, переопределяют те, что были заданы раньше в каскаде). **Только** атрибуты {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} и {{SVGAttr("href")}} элемента `use` будут переопределять те, что были заданы у элемента, на который `use` ссылается. Однако к элементу `use` будут применены любые другие атрибуты, не заданные у элемента, на который `use` ссылается.
 
-<h2 id="Атрибуты">Атрибуты</h2>
+Поскольку клонированные элементы не отображаются, нужно соблюдать осторожность при использовании [CSS](/ru/docs/Web/CSS "en/CSS") для стилизации элемента `use` и его клонированных потомков. Нет гарантии, что CSS-свойства будут унаследованы клонированным DOM, пока вы явно не зададите им использование [CSS-наследования](/ru/docs/Web/CSS/inheritance).
 
-<dl>
- <dt id="attr-cx">{{SVGAttr("href")}}</dt>
- <dd>Ссылка на элемент/фрагмент, который нужно продублировать.<br>
- <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#URL"><strong>&lt;URL&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>none</code>; <em>Анимируется</em>: <strong>да</strong></small></dd>
- <dt id="attr-cx">{{SVGAttr("xlink:href")}}</dt>
- <dd>{{Deprecated_Header("SVG2")}}<a href="/en/SVG/Content_type#IRI" title="https://developer.mozilla.org/en/SVG/Content_type#IRI">&lt;IRI&gt;</a>-ссылка на элемент/фрагмент, который нужно продублировать.<br>
- <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#IRI"><strong>&lt;IRI&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>none</code>; <em>Анимируется</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("x")}}</dt>
- <dd>Координата "x" элемента <code>use</code>.<br>
- <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; <em>Анимируется</em>: <strong>да</strong></small></dd>
- <dt id="attr-cy">{{SVGAttr("y")}}</dt>
- <dd>Координата "y" элемента <code>use</code>.<br>
- <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; <em>Анимируется</em>: <strong>да</strong></small></dd>
- <dt id="attr-r">{{SVGAttr("width")}}</dt>
- <dd>Ширина элемента <code>use</code>.<br>
- <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; <em>Анимируется</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("height")}}</dt>
- <dd>Высота элемента <code>use</code>.<br>
- <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; <em>Анимируется</em>: <strong>да</strong></small></dd>
-</dl>
+По соображениям безопасности, браузеры могут применять [правило ограничения домена](/ru/docs/Web/Security/Same-origin_policy) для элементов `use` и могут отказаться загружать URL другого источника в атрибуте {{SVGAttr("href")}}.
 
-<div class="note">
-<p><strong>Примечание:</strong> Начиная с SVG2, <code>x</code>, <code>y</code>, <code>width</code>, и <code>height</code> являются <em>Свойствами Геометрии</em>, то есть эти атрибуты также могут быть использованы в качестве CSS-свойств для этого элемента.</p>
-</div>
+> **Предупреждение:** Начиная с SVG 2, атрибут {{SVGAttr("xlink:href")}} получил статус "Устарело" в пользу {{SVGAttr("href")}}. Дополнительную информацию ищите на странице {{SVGAttr("xlink:href")}}. Тем не менее, на практике всё ещё может быть потребность в использовании {{SVGAttr("xlink:href")}} для кроссбраузерной совместимости (смотрите [таблицу совместимости](#browser-compatibility) ниже).
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+## Атрибуты
 
-<dl>
- <dt><a href="/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Атрибуты Событий</dt>
- <dd><small><a href="/docs/Web/SVG/Attribute/Events#Global_Event_Attributes">Global event attributes</a>, <a href="/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes">Graphical event attributes</a></small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>ARIA Атрибуты</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
- <dt>XLink Атрибуты</dt>
- <dd><small>{{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}</small></dd>
-</dl>
+- {{SVGAttr("href")}}
+  - : Ссылка на элемент/фрагмент, который нужно продублировать.
+    _Тип значения_: [**\<URL>**](/docs/Web/SVG/Content_type#URL) ; _Значение по умолчанию_: `none`; _Анимируется_: **да**
+- {{SVGAttr("xlink:href")}}
+  - : {{Deprecated_Header("SVG2")}}[\<IRI>](/en/SVG/Content_type#IRI "https://developer.mozilla.org/en/SVG/Content_type#IRI")-ссылка на элемент/фрагмент, который нужно продублировать.
+    _Тип значения_: [**\<IRI>**](/docs/Web/SVG/Content_type#IRI) ; _Значение по умолчанию_: `none`; _Анимируется_: **да**
+- {{SVGAttr("x")}}
+  - : Координата "x" элемента `use`.
+    _Тип значения_: [**\<coordinate>**](/docs/Web/SVG/Content_type#Coordinate) ; _Значение по умолчанию_: `0`; _Анимируется_: **да**
+- {{SVGAttr("y")}}
+  - : Координата "y" элемента `use`.
+    _Тип значения_: [**\<coordinate>**](/docs/Web/SVG/Content_type#Coordinate) ; _Значение по умолчанию_: `0`; _Анимируется_: **да**
+- {{SVGAttr("width")}}
+  - : Ширина элемента `use`.
+    _Тип значения_: [**\<length>**](/docs/Web/SVG/Content_type#Length) ; _Значение по умолчанию_: `0`; _Анимируется_: **да**
+- {{SVGAttr("height")}}
+  - : Высота элемента `use`.
+    _Тип значения_: [**\<length>**](/docs/Web/SVG/Content_type#Length) ; _Значение по умолчанию_: `0`; _Анимируется_: **да**
 
-<h2 id="Примечание_по_использованию">Примечание по использованию</h2>
+> **Примечание:** Начиная с SVG2, `x`, `y`, `width`, и `height` являются _Свойствами Геометрии_, то есть эти атрибуты также могут быть использованы в качестве CSS-свойств для этого элемента.
 
-<p>{{svginfo}}</p>
+### Глобальные атрибуты
 
-<h2 id="Спецификации">Спецификации</h2>
+- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+  - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Conditional Processing Attributes](/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- Атрибуты Событий
+  - : [Global event attributes](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Graphical event attributes](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
+  - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- ARIA Атрибуты
+  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+- XLink Атрибуты
+  - : {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'struct.html#UseElement', '&lt;use&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'struct.html#UseElement', '&lt;use&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+## Примечание по использованию
 
-<h2 id="Браузерная_совместимость"><a id="browser-compatibility">Браузерная совместимость</a></h2>
+{{svginfo}}
 
+## Спецификации
 
+| Specification                                                                        | Status                   | Comment            |
+| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName('SVG2', 'struct.html#UseElement', '&lt;use&gt;')}}     | {{Spec2('SVG2')}} |                    |
+| {{SpecName('SVG1.1', 'struct.html#UseElement', '&lt;use&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
 
-<p>{{Compat}}</p>
+## Браузерная совместимость
+
+{{Compat}}

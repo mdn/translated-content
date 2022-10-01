@@ -6,37 +6,39 @@ tags:
 translation_of: Web/SVG/Element/a
 original_slug: Web/SVG/Элемент/a
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>SVG элемент <strong>&lt;a&gt;</strong> создаёт гиперссылку на другие веб-страницы, файлы, позиции в этом же документе, email-адреса или другие URL. Очень похож на элемент HTML {{htmlelement("a")}}.</p>
+SVG элемент **\<a>** создаёт гиперссылку на другие веб-страницы, файлы, позиции в этом же документе, email-адреса или другие URL. Очень похож на элемент HTML {{htmlelement("a")}}.
 
-<p>Элемент <code>&lt;a&gt;</code> является контейнером. Это означает, что вы можете обернуть текст в ссылку (как в HTML). Таким же образом можно обернуть фигуру.</p>
+Элемент `<a>` является контейнером. Это означает, что вы можете обернуть текст в ссылку (как в HTML). Таким же образом можно обернуть фигуру.
 
-<div id="Exemple">
-<div class="hidden">
-<pre class="brush: css">@namespace svg url(http://www.w3.org/2000/svg);
-html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+@namespace svg url(http://www.w3.org/2000/svg);
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Ссылка в фигуре --&gt;
-  &lt;a href="/docs/Web/SVG/Element/circle"&gt;
-    &lt;circle cx="50" cy="40" r="35"/&gt;
-  &lt;/a&gt;
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ссылка в фигуре -->
+  <a href="/docs/Web/SVG/Element/circle">
+    <circle cx="50" cy="40" r="35"/>
+  </a>
 
-  &lt;!-- Ссылка в тексте --&gt;
-  &lt;a href="/docs/Web/SVG/Element/text"&gt;
-    &lt;text x="50" y="90" text-anchor="middle"&gt;
-      &amp;lt;circle&amp;gt;
-    &lt;/text&gt;
-  &lt;/a&gt;
-&lt;/svg&gt;</pre>
+  <!-- Ссылка в тексте -->
+  <a href="/docs/Web/SVG/Element/text">
+    <text x="50" y="90" text-anchor="middle">
+      &lt;circle&gt;
+    </text>
+  </a>
+</svg>
+```
 
-<pre class="brush: js">/* Так как SVG не предоставляет визуальных стилей по умолчанию для ссылок,
+```js
+/* Так как SVG не предоставляет визуальных стилей по умолчанию для ссылок,
    будет лучше задать самостоятельно */
 
 @namespace svg url(http://www.w3.org/2000/svg);
-/* Необходимо выделить только SVG элементы &lt;a&gt;, но не HTML.
+/* Необходимо выделить только SVG элементы <a>, но не HTML.
    Смотрите предупреждение ниже */
 
 svg|a:link, svg|a:visited {
@@ -51,78 +53,72 @@ text svg|a {
 
 svg|a:hover, svg|a:active {
   outline: dotted 1px blue;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Exemple', 100, 100)}}</p>
+{{EmbedLiveSample('Exemple', 100, 100)}}
 
-<div class="blockIndicator warning">
-<p>Поскольку этот элемент разделяет своё имя с <a href="/ru/docs/Web/HTML/Element/A">элементом HTML <code>&lt;a&gt;</code></a>, выбор <code>a</code> через CSS или <a href="/ru/docs/Web/API/Document/querySelector"><code>querySelector</code></a> может выбрать не тот тип элемента. Попробуйте <a href="/ru/docs/Web/CSS/@namespace">правило <code>@namespace</code></a>, чтобы разделять их.</p>
-</div>
-</div>
+> **Предупреждение:** Поскольку этот элемент разделяет своё имя с [элементом HTML `<a>`](/ru/docs/Web/HTML/Element/A), выбор `a` через CSS или [`querySelector`](/ru/docs/Web/API/Document/querySelector) может выбрать не тот тип элемента. Попробуйте [правило `@namespace`](/ru/docs/Web/CSS/@namespace), чтобы разделять их.
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<dl>
- <dt>{{htmlattrxref("download", "a")}} {{experimental_inline}}</dt>
- <dd>Указывает браузеру выполнить загрузку по {{Glossary("URL")}}, вместо того, чтобы переходить по нему. Таким образом пользователю будет предложено сохранить файл локально.<br>
- <small><em>Тип</em>: <strong>&lt;string&gt;</strong> ;<em>Значение по умолчанию</em>: <em>none</em>;<em>Анимируем</em>: <strong>нет</strong></small></dd>
- <dt>{{SVGAttr("href")}}</dt>
- <dd>{{Glossary("URL")}} или фрагмент URL для перехода.<br>
- <small><em>Тип</em>: <strong><a href="/docs/Web/SVG/Content_type#URL">&lt;URL&gt;</a></strong> ; <em>Значение по умолчанию</em>: <em>none</em>; <em>Анимируем</em>: <strong>да</strong></small></dd>
- <dt>{{htmlattrxref("hreflang", "a")}}</dt>
- <dd>URL на человеческом языке или фрагмент URL для перехода.<br>
- <small><em>Тип</em>: <strong>&lt;string&gt;</strong>; <em>Значение по умолчанию</em>: <em>none</em>; <em>Анимируем</em>: <strong>да</strong></small></dd>
- <dt>{{htmlattrxref("ping", "a")}} {{experimental_inline}}</dt>
- <dd>Разделённый пробелами список URL при переходе по которым браузер будет отправлять <code><a href="/ru/docs/Web/HTTP/Methods/POST">POST</a></code> запросы с телом <code>PING</code> (в фоне). Обычно используется для трекинга.<br>
- <small><em>Тип</em>: <strong><a href="/docs/Web/SVG/Content_type#List-of-Ts">&lt;list-of-URLs&gt;</a></strong>; <em>Значение по умолчанию</em>: <em>none</em>; <em>Анимируем</em>: <strong>нет</strong></small></dd>
- <dt>{{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}</dt>
- <dd>Какой <a href="/ru/docs/Web/HTTP/Заголовки/Referer">referrer</a> отправить при получении {{Glossary("URL")}}.<br>
- <small><em>Тип</em>: <code>no-referrer</code>|<code>no-referrer-when-downgrade</code>|<code>same-origin</code>|<code>origin</code>|<code>strict-origin</code>|<code>origin-when-cross-origin</code>|<code>strict-origin-when-cross-origin</code>|<code>unsafe-url</code> ; <em>Значение по умолчанию</em>: <em>none</em>; <em>Анимируем</em>: <strong>нет</strong></small></dd>
- <dt>{{htmlattrxref("rel", "a")}} {{experimental_inline}}</dt>
- <dd>Отношение между целевым объектом и объектом link.<br>
- <small><em>Тип</em>: <strong><a href="/docs/Web/HTML/Link_types">&lt;list-of-Link-Types&gt;</a></strong> ; <em>Значение по умолчанию</em>: <em>none</em>; <em>Анимируем</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("target")}}</dt>
- <dd>Где отобразить переход {{Glossary("URL")}}.<br>
- <small><em>Тип</em>: <code>_self</code>|<code>_parent</code>|<code>_top</code>|<code>_blank</code>|<strong>&lt;name&gt;</strong> ; <em>Значение по умолчанию</em>: <code>_self</code>; <em>Анимируем</em>: <strong>да</strong></small></dd>
- <dt>{{htmlattrxref("type", "a")}}</dt>
- <dd>{{Glossary("MIME type")}} для ссылки URL.<br>
- <small><em>Тип</em>: <strong>&lt;string&gt;</strong> ; <em>Значение по умолчанию</em>: <em>none</em>; <em>Анимируем</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}</dt>
- <dd>URL или фрагмент URL, на который указывает гиперссылка. Может понадобиться для обратной совместимости со старыми браузерами.<br>
- <small><em>Тип</em>: <strong><a href="/docs/Web/SVG/Content_type#URL">&lt;URL&gt;</a></strong> ; <em>Значение по умолчанию</em>: <em>none</em>; <em>Анимируем</em>: <strong>да</strong></small></dd>
-</dl>
+- {{htmlattrxref("download", "a")}} {{experimental_inline}}
+  - : Указывает браузеру выполнить загрузку по {{Glossary("URL")}}, вместо того, чтобы переходить по нему. Таким образом пользователю будет предложено сохранить файл локально.
+    _Тип_: **\<string>** ;_Значение по умолчанию_: _none_;_Анимируем_: **нет**
+- {{SVGAttr("href")}}
+  - : {{Glossary("URL")}} или фрагмент URL для перехода.
+    _Тип_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Значение по умолчанию_: _none_; _Анимируем_: **да**
+- {{htmlattrxref("hreflang", "a")}}
+  - : URL на человеческом языке или фрагмент URL для перехода.
+    _Тип_: **\<string>**; _Значение по умолчанию_: _none_; _Анимируем_: **да**
+- {{htmlattrxref("ping", "a")}} {{experimental_inline}}
+  - : Разделённый пробелами список URL при переходе по которым браузер будет отправлять [`POST`](/ru/docs/Web/HTTP/Methods/POST) запросы с телом `PING` (в фоне). Обычно используется для трекинга.
+    _Тип_: **[\<list-of-URLs>](/docs/Web/SVG/Content_type#List-of-Ts)**; _Значение по умолчанию_: _none_; _Анимируем_: **нет**
+- {{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}
+  - : Какой [referrer](/ru/docs/Web/HTTP/Заголовки/Referer) отправить при получении {{Glossary("URL")}}.
+    _Тип_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Значение по умолчанию_: _none_; _Анимируем_: **нет**
+- {{htmlattrxref("rel", "a")}} {{experimental_inline}}
+  - : Отношение между целевым объектом и объектом link.
+    _Тип_: **[\<list-of-Link-Types>](/docs/Web/HTML/Link_types)** ; _Значение по умолчанию_: _none_; _Анимируем_: **да**
+- {{SVGAttr("target")}}
+  - : Где отобразить переход {{Glossary("URL")}}.
+    _Тип_: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; _Значение по умолчанию_: `_self`; _Анимируем_: **да**
+- {{htmlattrxref("type", "a")}}
+  - : {{Glossary("MIME type")}} для ссылки URL.
+    _Тип_: **\<string>** ; _Значение по умолчанию_: _none_; _Анимируем_: **да**
+- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+  - : URL или фрагмент URL, на который указывает гиперссылка. Может понадобиться для обратной совместимости со старыми браузерами.
+    _Тип_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Значение по умолчанию_: _none_; _Анимируем_: **да**
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+### Глобальные атрибуты
 
-<dl>
- <dt><a href="/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Наиболее используемые: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Наиболее используемые: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/docs/Web/SVG/Attribute/Events#Global_Event_Attributes">Global event attributes</a>, <a href="/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes">Document element event attributes</a>, <a href="/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes">Graphical event attributes</a></small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Наиболее используемые: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>XLink Attributes</dt>
- <dd><small>Наиболее используемые: {{SVGAttr("xlink:title")}}</small></dd>
- <dt>ARIA Attributes</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+  - : Наиболее используемые: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}
+- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Conditional Processing Attributes](/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Наиболее используемые: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- Event Attributes
+  - : [Global event attributes](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Document element event attributes](/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes), [Graphical event attributes](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
+  - : Наиболее используемые: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- XLink Attributes
+  - : Наиболее используемые: {{SVGAttr("xlink:title")}}
+- ARIA Attributes
+  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<h2 id="Интерфейс_DOM">Интерфейс DOM</h2>
+## Интерфейс DOM
 
-<p>Этот элемент реализует интерфейс <code><a href="/ru/docs/DOM/SVGAElement" title="DOM/SVGAElement">SVGAElement</a></code>.</p>
+Этот элемент реализует интерфейс [`SVGAElement`](/ru/docs/DOM/SVGAElement "DOM/SVGAElement").
 
-<h2 id="Примечания_к_использованию">Примечания к использованию</h2>
+## Примечания к использованию
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

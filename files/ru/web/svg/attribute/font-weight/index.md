@@ -5,78 +5,60 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/font-weight
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
 
-<p><code>Атрибут font-weight</code> позволяет выбрать из шрифтового семейства начертание шрифта с указанной насыщенностью (иначе говоря, толщиной линий знаков, "жирностью") .</p>
+`Атрибут font-weight` позволяет выбрать из шрифтового семейства начертание шрифта с указанной насыщенностью (иначе говоря, толщиной линий знаков, "жирностью") .
 
-<p>Как и любой атрибут представления, <code> font-weight</code> может быть использован в виде свойства в CSS стилях, см. {{ cssxref("font-weight","CSS font-weight") }} для подробной информации.</p>
+Как и любой атрибут представления, `font-weight` может быть использован в виде свойства в CSS стилях, см. {{ cssxref("font-weight","CSS font-weight") }} для подробной информации.
 
-<h2 id="Контекст_применения">Контекст применения</h2>
+## Контекст применения
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категории</th>
-   <td>Атрибут представления</td>
-  </tr>
-  <tr>
-   <th scope="row">Значения</th>
-   <td><strong>normal</strong> | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемость</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Нормативный документ</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/text.html#FontWeightProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Категории            | Атрибут представления                                                                                             |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Значения             | **normal** \| bold \| bolder \| lighter \| 100 \| 200 \| 300 \| 400 \| 500 \| 600 \| 700 \| 800 \| 900 \| inherit |
+| Анимируемость        | Да                                                                                                                |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#FontWeightProperty)                                  |
 
-<h2 id="Значение_ключевых_слов">Значение ключевых слов</h2>
+## Значение ключевых слов
 
-<ul>
- <li><strong>bold</strong> - соответствует значению <strong>700 </strong>- полужирное начертание</li>
- <li><strong>normal</strong> - соответствует значению <strong>400 </strong>- нормальное начертание</li>
- <li><strong>bolder </strong>и <strong>lighter</strong> указывают браузеру использовать соответственно более жирное или более тонкое начертание в сравнении с текущим значением родительского элемента. Дочерние элементы, в свою очередь, унаследуют получившееся значение.</li>
- <li><strong>inherit </strong>- даёт указание браузеру унаследовать тип начертания от родительского элемента.</li>
-</ul>
+- **bold** - соответствует значению **700** - полужирное начертание
+- **normal** - соответствует значению **400** - нормальное начертание
+- **bolder** и **lighter** указывают браузеру использовать соответственно более жирное или более тонкое начертание в сравнении с текущим значением родительского элемента. Дочерние элементы, в свою очередь, унаследуют получившееся значение.
+- **inherit** - даёт указание браузеру унаследовать тип начертания от родительского элемента.
 
-<h2 id="Предостережения">Предостережения</h2>
+## Предостережения
 
-<p>Для многих шрифтов доступны только значения 400 и 700 - нормальное и полужирное начертания соответственно. Доступные значения могут варьироваться в зависимости от шрифта.</p>
+Для многих шрифтов доступны только значения 400 и 700 - нормальное и полужирное начертания соответственно. Доступные значения могут варьироваться в зависимости от шрифта.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="css">css</h3>
+### css
 
-<pre class="brush: css">p.normal {font-weight:normal;}
+```css
+p.normal {font-weight:normal;}
 p.thick {font-weight:bold;}
-p.thicker {font-weight:900;}</pre>
+p.thicker {font-weight:900;}
+```
 
-<h3 id="html">html</h3>
+### html
 
-<pre class="brush: html">&lt;p class="normal"&gt;This is a paragraph.&lt;/p&gt;
-&lt;p class="light"&gt;This is a paragraph.&lt;/p&gt;
-&lt;p class="thick"&gt;This is a paragraph.&lt;/p&gt;
-&lt;p class="thicker"&gt;This is a paragraph.&lt;/p&gt;
-</pre>
+```html
+<p class="normal">This is a paragraph.</p>
+<p class="light">This is a paragraph.</p>
+<p class="thick">This is a paragraph.</p>
+<p class="thicker">This is a paragraph.</p>
+```
 
-<h2 id="Элементы">Элементы</h2>
+## Элементы
 
-<p>Следующие элементы могут использовать атрибут <code>font-weight</code>.</p>
+Следующие элементы могут использовать атрибут `font-weight`.
 
-<ul>
- <li><a href="/en/SVG/Element#Text_content_elements" title="en/SVG/Element#Text_content_elements">Text content elements</a> »</li>
-</ul>
+- [Text content elements](/en/SVG/Element#Text_content_elements "en/SVG/Element#Text_content_elements") »
 
-<h2 id="Browser_Compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ cssxref("font-weight","CSS font-weight") }}</li>
-</ul>
+- {{ cssxref("font-weight","CSS font-weight") }}

@@ -3,54 +3,38 @@ title: class
 slug: Web/SVG/Attribute/class
 translation_of: Web/SVG/Attribute/class
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">Домашняя страница справочника по SVG атрибутам</a></p>
+« [Домашняя страница справочника по SVG атрибутам](/en/SVG/Attribute "en/SVG/Attribute")
 
-<p>Присвоение класса или набора классов элементу. Вы можете присвоить одинаковые классы/наборы классов любому количеству элементов. Если вы указываете(присваиваете) несколько имён классов, они должны быть разделены символом "пробел".</p>
+Присвоение класса или набора классов элементу. Вы можете присвоить одинаковые классы/наборы классов любому количеству элементов. Если вы указываете(присваиваете) несколько имён классов, они должны быть разделены символом "пробел".
 
-<p>Класс элемента имеет 2 ключевые роли:</p>
+Класс элемента имеет 2 ключевые роли:
 
-<ul>
- <li>Селектор таблицы стилей, для использования когда автор желает стилизировать набор(несколько) элементов.</li>
- <li>Для общих целей Броузера.</li>
-</ul>
+- Селектор таблицы стилей, для использования когда автор желает стилизировать набор(несколько) элементов.
+- Для общих целей Броузера.
 
-<p>Класс может быть использован для стилизации SVG содержимого используя CSS.</p>
+Класс может быть использован для стилизации SVG содержимого используя CSS.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категория</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><a href="/en/SVG/Content_type#List-of-Ts" title="en/SVG/Content type#List-of-Ts">&lt;list-of-class-names&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Возможна анимация</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Нормативный документ</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/styling.html#ClassAttribute">SVG 1.1 (2nd Edition): The class attribute</a></td>
-  </tr>
- </tbody>
-</table>
+| Категория            | None                                                                                               |
+| -------------------- | -------------------------------------------------------------------------------------------------- |
+| Значение             | [\<list-of-class-names>](/en/SVG/Content_type#List-of-Ts "en/SVG/Content type#List-of-Ts")         |
+| Возможна анимация    | Yes                                                                                                |
+| Нормативный документ | [SVG 1.1 (2nd Edition): The class attribute](http://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
 
-<p>{{ page("/en/SVG/Content_type","List-of-Ts") }}</p>
+{{ page("/en/SVG/Content_type","List-of-Ts") }}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;html&gt;
-    &lt;body&gt;
-        &lt;svg width="120" height="220"
+```html
+<html>
+    <body>
+        <svg width="120" height="220"
             viewPort="0 0 120 120" version="1.1"
-            xmlns="http://www.w3.org/2000/svg"&gt;
+            xmlns="http://www.w3.org/2000/svg">
 
-            &lt;style type="text/css" &gt;
-                &lt;![CDATA[
+            <style type="text/css" >
+                <![CDATA[
                     rect.rectClass {
                         stroke: #000066;
                         fill:   #00cc00;
@@ -59,76 +43,73 @@ translation_of: Web/SVG/Attribute/class
                         stroke: #006600;
                         fill:   #cc0000;
                     }
-                ]]&gt;
-            &lt;/style&gt;
+                ]]>
+            </style>
 
-            &lt;rect class="rectClass" x="10" y="10" width="100" height="100"/&gt;
-            &lt;circle  class="circleClass"   cx="40" cy="50" r="26"/&gt;
-        &lt;/svg&gt;
-    &lt;/body&gt;
-&lt;/html&gt;</pre>
+            <rect class="rectClass" x="10" y="10" width="100" height="100"/>
+            <circle  class="circleClass"   cx="40" cy="50" r="26"/>
+        </svg>
+    </body>
+</html>
+```
 
-<h2 id="Элементы">Элементы</h2>
+## Элементы
 
-<p>В следующих элементах допустимо использовать атрибут <code>class</code></p>
+В следующих элементах допустимо использовать атрибут `class`
 
-<p>:{{ SVGElement("a") }}</p>
+:{{ SVGElement("a") }}
 
-<div class="threecolumns">
-<ul>
- <li>{{ SVGElement("altGlyph") }}</li>
- <li>{{ SVGElement("circle") }}</li>
- <li>{{ SVGElement("clipPath") }}</li>
- <li>{{ SVGElement("defs") }}</li>
- <li>{{ SVGElement("desc") }}</li>
- <li>{{ SVGElement("ellipse") }}</li>
- <li>{{ SVGElement("feBlend") }}</li>
- <li>{{ SVGElement("feColorMatrix") }}</li>
- <li>{{ SVGElement("feComponentTransfer") }}</li>
- <li>{{ SVGElement("feComposite") }}</li>
- <li>{{ SVGElement("feConvolveMatrix") }}</li>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feDisplacementMap") }}</li>
- <li>{{ SVGElement("feFlood") }}</li>
- <li>{{ SVGElement("feGaussianBlur") }}</li>
- <li>{{ SVGElement("feImage") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li>{{ SVGElement("feMorphology") }}</li>
- <li>{{ SVGElement("feOffset") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
- <li>{{ SVGElement("feTile") }}</li>
- <li>{{ SVGElement("feTurbulence") }}</li>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("font") }}</li>
- <li>{{ SVGElement("foreignObject") }}</li>
- <li>{{ SVGElement("g") }}</li>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("glyphRef") }}</li>
- <li>{{ SVGElement("image") }}</li>
- <li>{{ SVGElement("line") }}</li>
- <li>{{ SVGElement("linearGradient") }}</li>
- <li>{{ SVGElement("marker") }}</li>
- <li>{{ SVGElement("mask") }}</li>
- <li>{{ SVGElement("missing-glyph") }}</li>
- <li>{{ SVGElement("path") }}</li>
- <li>{{ SVGElement("pattern") }}</li>
- <li>{{ SVGElement("polygon") }}</li>
- <li>{{ SVGElement("polyline") }}</li>
- <li>{{ SVGElement("radialGradient") }}</li>
- <li>{{ SVGElement("rect") }}</li>
- <li>{{ SVGElement("stop") }}</li>
- <li>{{ SVGElement("svg") }}</li>
- <li>{{ SVGElement("switch") }}</li>
- <li>{{ SVGElement("symbol") }}</li>
- <li>{{ SVGElement("text") }}</li>
- <li>{{ SVGElement("textPath") }}</li>
- <li>{{ SVGElement("title") }}</li>
- <li>{{ SVGElement("tref") }}</li>
- <li>{{ SVGElement("tspan") }}</li>
- <li>{{ SVGElement("use") }}</li>
-</ul>
-</div>
+- {{ SVGElement("altGlyph") }}
+- {{ SVGElement("circle") }}
+- {{ SVGElement("clipPath") }}
+- {{ SVGElement("defs") }}
+- {{ SVGElement("desc") }}
+- {{ SVGElement("ellipse") }}
+- {{ SVGElement("feBlend") }}
+- {{ SVGElement("feColorMatrix") }}
+- {{ SVGElement("feComponentTransfer") }}
+- {{ SVGElement("feComposite") }}
+- {{ SVGElement("feConvolveMatrix") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feDisplacementMap") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feGaussianBlur") }}
+- {{ SVGElement("feImage") }}
+- {{ SVGElement("feMerge") }}
+- {{ SVGElement("feMorphology") }}
+- {{ SVGElement("feOffset") }}
+- {{ SVGElement("feSpecularLighting") }}
+- {{ SVGElement("feTile") }}
+- {{ SVGElement("feTurbulence") }}
+- {{ SVGElement("filter") }}
+- {{ SVGElement("font") }}
+- {{ SVGElement("foreignObject") }}
+- {{ SVGElement("g") }}
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("glyphRef") }}
+- {{ SVGElement("image") }}
+- {{ SVGElement("line") }}
+- {{ SVGElement("linearGradient") }}
+- {{ SVGElement("marker") }}
+- {{ SVGElement("mask") }}
+- {{ SVGElement("missing-glyph") }}
+- {{ SVGElement("path") }}
+- {{ SVGElement("pattern") }}
+- {{ SVGElement("polygon") }}
+- {{ SVGElement("polyline") }}
+- {{ SVGElement("radialGradient") }}
+- {{ SVGElement("rect") }}
+- {{ SVGElement("stop") }}
+- {{ SVGElement("svg") }}
+- {{ SVGElement("switch") }}
+- {{ SVGElement("symbol") }}
+- {{ SVGElement("text") }}
+- {{ SVGElement("textPath") }}
+- {{ SVGElement("title") }}
+- {{ SVGElement("tref") }}
+- {{ SVGElement("tspan") }}
+- {{ SVGElement("use") }}
 
-<h2 id="Совместимость_с_броузерами">Совместимость с броузерами</h2>
+## Совместимость с броузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

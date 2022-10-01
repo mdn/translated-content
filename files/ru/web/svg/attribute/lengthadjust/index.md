@@ -3,31 +3,33 @@ title: lengthAdjust
 slug: Web/SVG/Attribute/lengthAdjust
 translation_of: Web/SVG/Attribute/lengthAdjust
 ---
-<p>Когда  SVG элемент <code>&lt;text&gt;</code><strong> </strong>или<strong> </strong><code>&lt;tspan&gt;</code> имеет конкретную длину, установленную с помощью атрибута  <code>textLengt</code>, атрибут <code>lengthAdjust</code> контролирует как текст помещается в эту длину (растягивается или сжимается).</p>
+Когда SVG элемент `<text>`\*\* **или** \*\*`<tspan>` имеет конкретную длину, установленную с помощью атрибута `textLengt`, атрибут `lengthAdjust` контролирует как текст помещается в эту длину (растягивается или сжимается).
 
-<p>Существует 2 допустимых значения для атрибута <code>lengthAdjust</code>: <code>spacing</code> и <code>spacingAndGlyphs</code>. Используя <code>spacing</code> (установлено по умолчанию), форма букв сохраняется, но расстояние между ними увеличивается или уменьшается. Используя <code>spacingAndGlyphs</code> весь тестовый элемент растягивается.</p>
+Существует 2 допустимых значения для атрибута `lengthAdjust`: `spacing` и `spacingAndGlyphs`. Используя `spacing` (установлено по умолчанию), форма букв сохраняется, но расстояние между ними увеличивается или уменьшается. Используя `spacingAndGlyphs` весь тестовый элемент растягивается.
 
-<h2 id="SVG_text_fitting_using_lengthAdjust">SVG текст с использованием lengthAdjust</h2>
+## SVG текст с использованием lengthAdjust
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;svg width="300" height="150" xmlns="http://www.w3.org/2000/svg"&gt;
-   &lt;g font-face="sans-serif"&gt;
-      &lt;text x="0" y="20" textLength="300" lengthAdjust="spacing"&gt;
+```html
+<svg width="300" height="150" xmlns="http://www.w3.org/2000/svg">
+   <g font-face="sans-serif">
+      <text x="0" y="20" textLength="300" lengthAdjust="spacing">
          Stretched using spacing only.
-      &lt;/text&gt;
-      &lt;text x="0" y="50" textLength="300" lengthAdjust="spacingAndGlyphs"&gt;
+      </text>
+      <text x="0" y="50" textLength="300" lengthAdjust="spacingAndGlyphs">
          Stretched using spacing and glyphs.
-      &lt;/text&gt;
-      &lt;text x="0" y="80" textLength="100" lengthAdjust="spacing"&gt;
+      </text>
+      <text x="0" y="80" textLength="100" lengthAdjust="spacing">
          Shrunk using spacing only.
-      &lt;/text&gt;
-      &lt;text x="0" y="110" textLength="100" lengthAdjust="spacingAndGlyphs"&gt;
+      </text>
+      <text x="0" y="110" textLength="100" lengthAdjust="spacingAndGlyphs">
          Shrunk using spacing and glyphs.
-      &lt;/text&gt;
-   &lt;/g&gt;
-&lt;/svg&gt;</pre>
+      </text>
+   </g>
+</svg>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('SVG_text_fitting_using_lengthAdjust') }}</p>
+{{ EmbedLiveSample('SVG_text_fitting_using_lengthAdjust') }}

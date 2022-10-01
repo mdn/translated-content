@@ -6,98 +6,81 @@ tags:
 translation_of: Web/SVG/Element/ellipse
 original_slug: Web/SVG/Элемент/ellipse
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Элемент <code>ellipse</code> — базовая SVG фигура, используемая для создания эллипсов с помощью координат центра и обоих радиусов.</p>
+Элемент `ellipse` — базовая SVG фигура, используемая для создания эллипсов с помощью координат центра и обоих радиусов.
 
-<div class="blockIndicator note">
-<p>Сам по себе элемент <code>ellipse </code>не позволяет задать точное его расположение (например, нельзя сразу отобразить эллипс, повёрнутый на 45<strong>°</strong>), однако его можно повернуть с помощью атрибута {{SVGAttr("transform")}}.</p>
-</div>
+> **Примечание:** Сам по себе элемент `ellipse `не позволяет задать точное его расположение (например, нельзя сразу отобразить эллипс, повёрнутый на 45**°**), однако его можно повернуть с помощью атрибута {{SVGAttr("transform")}}.
 
+```css hidden
+html,body,svg { height:100% }
+```
 
-<div id="LiveSample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="100" cy="50" rx="100" ry="50" />
+</svg>
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;ellipse cx="100" cy="50" rx="100" ry="50" /&gt;
-&lt;/svg&gt;</pre>
+{{EmbedLiveSample('LiveSample', 100, '100%')}}
 
-<p>{{EmbedLiveSample('LiveSample', 100, '100%')}}</p>
-</div>
+## Атрибуты
 
+- {{SVGAttr("cx")}}
+  - : Позиция эллипса по x.
+    _Тип значения_: [**\<length>**](https://developer.mozilla.org/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](https://developer.mozilla.org/docs/Web/SVG/Content_type#Percentage) ; _Значение по умолчанию_: `0`; _Можно анимировать_: **да**
+- {{SVGAttr("cy")}}
+  - : Позиция эллипса по y.
+    _Тип значения_: [**\<length>**](https://developer.mozilla.org/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](https://developer.mozilla.org/docs/Web/SVG/Content_type#Percentage) ; _Значение по умолчанию_: `0`; _Можно анимировать_: **да**
+- {{SVGAttr("rx")}}
+  - : Радиус эллипса по x.
+    _Тип значения_: `auto`|[**\<length>**](https://developer.mozilla.org/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](https://developer.mozilla.org/docs/Web/SVG/Content_type#Percentage) ;_Значение по умолчанию_: `auto`; _Можно анимировать_: **да**
+- {{SVGAttr("ry")}}
+  - : Радиус эллипса по y.
+    _Тип значения_: `auto`|[**\<length>**](https://developer.mozilla.org/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](https://developer.mozilla.org/docs/Web/SVG/Content_type#Percentage) ; _Значение по умолчанию_: `auto`; _Можно анимировать_: **да**
+- {{SVGAttr("pathLength")}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+  - : Этот атрибут позволяет установить длину всего пути.
 
+    _Тип значения_: [**\<number>**](https://developer.mozilla.org/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: _нет_; _Можно анимировать_: **да**
 
+    > **Примечание:** **Обратите внимание:** Начиная с SVG2, `cx`, `cy`, `rx` и `ry` это _Геометрические свойства_. Это означает, что они могут быть использованы как CSS-свойства элемента.
 
-<dl>
- <dt>{{SVGAttr("cx")}}</dt>
- <dd>Позиция эллипса по x.<br>
- <small><em>Тип значения</em>: <a href="https://developer.mozilla.org/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="https://developer.mozilla.org/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; <em>Можно анимировать</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("cy")}}</dt>
- <dd>Позиция эллипса по y.<br>
- <small><em>Тип значения</em>: <a href="https://developer.mozilla.org/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="https://developer.mozilla.org/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; <em>Можно анимировать</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("rx")}}</dt>
- <dd>Радиус эллипса по x.<br>
- <small><em>Тип значения</em>: <code>auto</code>|<a href="https://developer.mozilla.org/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="https://developer.mozilla.org/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ;<em>Значение по умолчанию</em>: <code>auto</code>; <em>Можно анимировать</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("ry")}}</dt>
- <dd>Радиус эллипса по y.<br>
- <small><em>Тип значения</em>: <code>auto</code>|<a href="https://developer.mozilla.org/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="https://developer.mozilla.org/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>auto</code>; <em>Можно анимировать</em>: <strong>да</strong></small></dd>
- <dt>{{SVGAttr("pathLength")}}</dt>
- <dd><p>Этот атрибут позволяет установить длину всего пути.</p>
-  <p><small><em>Тип значения</em>: <a href="https://developer.mozilla.org/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a> ; <em>Значение по умолчанию</em>: <em>нет</em>; <em>Можно анимировать</em>: <strong>да</strong></small></p>
- <div class="blockIndicator note">
- <p><strong>Обратите внимание:</strong> Начиная с SVG2, <code>cx</code>, <code>cy</code>, <code>rx</code> и <code>ry</code> это <em>Геометрические свойства</em>. Это означает, что они могут быть использованы как CSS-свойства элемента.</p>
- </div>
-</dd>
-</dl>
+### Глобальные Атрибуты
 
-<h3 id="Глобальные_Атрибуты">Глобальные Атрибуты</h3>
+- [Основные атрибуты](https://developer.mozilla.org/docs/Web/SVG/Attribute/Core)
+  - : Самые важные: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [Атрибуты стиля](https://developer.mozilla.org/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Условные атрибуты](https://developer.mozilla.org/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Самые важные: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- Атрибуты событий
+  - : [Глобальные атрибуты событий](https://developer.mozilla.org/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Атрибуты графических событий](https://developer.mozilla.org/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+- [Атрибуты представления](https://developer.mozilla.org/docs/Web/SVG/Attribute/Presentation)
+  - : Самые важные: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- ARIA-Атрибуты
+  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`,`aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`,`aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`,`aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`,`aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<dl>
- <dt><a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/Core">Основные атрибуты</a></dt>
- <dd><small>Самые важные: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/Styling">Атрибуты стиля</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/Conditional_Processing">Условные атрибуты</a></dt>
- <dd><small>Самые важные: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Атрибуты событий</dt>
- <dd><small><a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/Events#Global_Event_Attributes">Глобальные атрибуты событий</a>, <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes">Атрибуты графических событий</a></small></dd>
- <dt><a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/Presentation">Атрибуты представления</a></dt>
- <dd><small>Самые важные: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>ARIA-Атрибуты</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>,<code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>,<code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>,<code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>,<code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+## Информация
 
+{{svginfo}}
 
-<h2 id="Информация">Информация</h2>
+## Пример
 
-<p>{{svginfo}}</p>
+» [ellipse.svg](https://developer.mozilla.org/files/3253/ellipse.svg)
 
+## Интерфейс DOM
 
+Этот элемент реализует интерфейс {{ domxref("SVGEllipseElement") }}.
 
-<h2 id="Пример">Пример</h2>
-
-<p>» <a href="https://developer.mozilla.org/files/3253/ellipse.svg">ellipse.svg</a></p>
-
-<h2 id="Интерфейс_DOM">Интерфейс DOM</h2>
-
-<p>Этот элемент реализует интерфейс {{ domxref("SVGEllipseElement") }}.</p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+## Смотрите также
 
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{SVGElement("circle")}}</li>
-</ul>
+- {{SVGElement("circle")}}

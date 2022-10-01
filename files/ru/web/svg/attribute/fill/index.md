@@ -7,93 +7,59 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/fill
 ---
-<p>« <a href="/ru/docs/Web/SVG/Attribute" title="Справочник SVG атрибутов">Справочник SVG атрибутов</a></p>
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
 
-<p>Атрибут <code>fill</code> имеет два значения в зависимости от используемого контекста.</p>
+Атрибут `fill` имеет два значения в зависимости от используемого контекста.
 
-<p>По умолчанию, когда элементы анимации заканчиваются и их эффекты больше не применяются к значению представления для целевых атрибутов. Атрибут <code>fill</code> может использоваться для сохранения значения анимации после окончания активной продолжительности элемента анимации.</p>
+По умолчанию, когда элементы анимации заканчиваются и их эффекты больше не применяются к значению представления для целевых атрибутов. Атрибут `fill` может использоваться для сохранения значения анимации после окончания активной продолжительности элемента анимации.
 
-<p>Для фигур и текста атрибут <code>fill</code> является атрибутом представления, определяющим цвет внутренней части данного графического элемента. То, что называется «интерьер», зависит от самой фигуры и значения {{ SVGAttr("fill-rule") }} атрибут. Как атрибут представления, он также может использоваться как свойство непосредственно в таблице стилей CSS</p>
+Для фигур и текста атрибут `fill` является атрибутом представления, определяющим цвет внутренней части данного графического элемента. То, что называется «интерьер», зависит от самой фигуры и значения {{ SVGAttr("fill-rule") }} атрибут. Как атрибут представления, он также может использоваться как свойство непосредственно в таблице стилей CSS
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<h3 id="Для_анимируемых_элементов">Для анимируемых элементов</h3>
+### Для анимируемых элементов
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категория</th>
-   <td>Атрибуты времени анимации</td>
-  </tr>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><strong title="this is the default value">remove</strong> | freeze</td>
-  </tr>
-  <tr>
-   <th scope="row">Анимация</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Нормативный документ</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/animate.html#FillAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Категория            | Атрибуты времени анимации                                                    |
+| -------------------- | ---------------------------------------------------------------------------- |
+| Значение             | **remove** \| freeze                                                         |
+| Анимация             | Нет                                                                          |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#FillAttribute) |
 
-<dl>
- <dt>remove (default)</dt>
- <dd>Эффект анимации удаляется (больше не применяется) при завершении активной продолжительности анимации. После активного конца анимации анимация больше не влияет на конечный объект (если анимация не перезапущена).</dd>
- <dt>freeze</dt>
- <dd>Эффект анимации «заморожен» при активной длительности анимации на оставшийся срок действия документа (или до перезапуска анимации).</dd>
-</dl>
+- remove (default)
+  - : Эффект анимации удаляется (больше не применяется) при завершении активной продолжительности анимации. После активного конца анимации анимация больше не влияет на конечный объект (если анимация не перезапущена).
+- freeze
+  - : Эффект анимации «заморожен» при активной длительности анимации на оставшийся срок действия документа (или до перезапуска анимации).
 
-<h3 id="Для_текста_и_форм">Для текста и форм</h3>
+### Для текста и форм
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категория</th>
-   <td>Атрибут представления</td>
-  </tr>
-  <tr>
-   <th scope="row">Значение</th>
-   <td>
-    <p><a href="/en/SVG/Content_type#Paint" title="en/SVG/Content_type#Paint">&lt;paint&gt;</a>, <code>context-fill</code>, <code>context-stroke</code></p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Анимация</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Нормативный документ</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/painting.html#FillProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Категория            | Атрибут представления                                                                                |
+| -------------------- | ---------------------------------------------------------------------------------------------------- |
+| Значение             | [\<paint>](/en/SVG/Content_type#Paint "en/SVG/Content_type#Paint"), `context-fill`, `context-stroke` |
+| Анимация             | Да                                                                                                   |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillProperty)                         |
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Пример_1_Простой_SVG">Пример 1: Простой SVG</h3>
+### Пример 1: Простой SVG
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="100" cy="100" r="100" fill="#666"/&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="100" fill="#666"/>
+</svg>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Пример_1_Простой_SVG', 200, 200)}}</p>
+{{EmbedLiveSample('Пример_1_Простой_SVG', 200, 200)}}
 
-<h2 id="Использование_context-fill">Использование <code>context-fill</code></h2>
+## Использование `context-fill`
 
-<p>Для информации об использовании нестандартного и ограниченного значения  <code>context-fill</code> (и <code>context-stroke</code>) смотрите документацию  {{cssxref("-moz-context-properties")}}.</p>
+Для информации об использовании нестандартного и ограниченного значения `context-fill` (и `context-stroke`) смотрите документацию {{cssxref("-moz-context-properties")}}.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p>Следующие элементы могут использовать атрибут <code>fill</code></p>
+Следующие элементы могут использовать атрибут `fill`
 
-<ul>
- <li><a href="/en/SVG/Element#Animation_elements" title="en/SVG/Element#Animation">Animation elements</a> »</li>
- <li><a href="/en/SVG/Element#Shape" title="en/SVG/Element#Shape">Shape elements</a> »</li>
- <li><a href="/en/SVG/Element#TextContent" title="en/SVG/Element#TextContent">Text content elements</a> »</li>
-</ul>
+- [Animation elements](/en/SVG/Element#Animation_elements "en/SVG/Element#Animation") »
+- [Shape elements](/en/SVG/Element#Shape "en/SVG/Element#Shape") »
+- [Text content elements](/en/SVG/Element#TextContent "en/SVG/Element#TextContent") »

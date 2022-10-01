@@ -4,101 +4,91 @@ slug: Web/SVG/Tutorial/SVG_and_CSS
 translation_of: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: Web/Guide/CSS/Getting_started/SVG_и_CSS
 ---
-<p>На этой странице показано, как использовать CSS со специальным языком для создания графики: <a href="/en-US/docs/SVG">SVG</a>.</p>
+На этой странице показано, как использовать CSS со специальным языком для создания графики: [SVG](/ru/docs/SVG).
 
-<p>Вы сделаете небольшой пример, которые можно будет запустить в любом браузере с поддержкой SVG.</p>
+Вы сделаете небольшой пример, которые можно будет запустить в любом браузере с поддержкой SVG.
 
-<p>Это вторая секция Части II <a href="/en-US/docs/Web/Guide/CSS/Getting_started">Руководство по CSS</a>.<br>
- Предыдущая секция: <a href="/en-US/docs/Web/JavaScript/Getting_Started">JavaScript</a><br>
- Следующая секция: <a href="/en-US/docs/Web/Guide/CSS/Getting_started/XML_data">Данные XML</a></p>
+Это вторая секция Части II [Руководство по CSS](/ru/docs/Web/Guide/CSS/Getting_started).
+Предыдущая секция: [JavaScript](/ru/docs/Web/JavaScript/Getting_Started)
+Следующая секция: [Данные XML](/ru/docs/Web/Guide/CSS/Getting_started/XML_data)
 
-<h3 id="Information_SVG">Общая информация: SVG</h3>
+### Общая информация: SVG
 
-<p><em>SVG</em> (Scalable Vector Graphics) является подмножеством языка XML и предназначен для создания графики.</p>
+_SVG_ (Scalable Vector Graphics) является подмножеством языка XML и предназначен для создания графики.
 
-<p>SVG можно использовать для статических изображений, а также для анимаций и создания пользовательских интерфейсов.</p>
+SVG можно использовать для статических изображений, а также для анимаций и создания пользовательских интерфейсов.
 
-<p>Как и прочие языки, основанные на XML, SVG поддерживает использование таблиц стилей CSS, что позволяет отделить различные варианты визуального отображения от структуры данных.</p>
+Как и прочие языки, основанные на XML, SVG поддерживает использование таблиц стилей CSS, что позволяет отделить различные варианты визуального отображения от структуры данных.
 
-<p>Кроме того, таблицы стилей, которые вы используете в других языках разметки документов, могут содержать ссылку на SVG графику, в тех местах, где необходимо изображение. Например, в таблице стилей, для вашего HTML документа, можно указать ссылку (URL) на SVG графику в свойстве background.</p>
+Кроме того, таблицы стилей, которые вы используете в других языках разметки документов, могут содержать ссылку на SVG графику, в тех местах, где необходимо изображение. Например, в таблице стилей, для вашего HTML документа, можно указать ссылку (URL) на SVG графику в свойстве background.
 
-<table style="background-color: #f4f4f4; border: 1px solid #3366bb; margin-bottom: 1em; padding: 1em; width: 100%;">
- <caption>Немного подробностей</caption>
- <tbody>
-  <tr>
-   <td>
-    <p>На момент написания статьи (середина 2011 года), большинство современных браузеров имеет базовую поддержку SVG, в том числе Internet Explorer 9 и выше. Некоторые дополнительные возможности SVG не поддерживаются, либо поддерживаются лишь частично, в определённых браузерах. Для более подробной информации о текущей поддержке SVG, см. <a href="http://caniuse.com/#search=SVG">SVG tables on caniuse.com</a>, либо в таблицах совместимости <a href="/en-US/docs/SVG/Element">SVG element reference</a>, для информации о поддержке отдельных элементов.</p>
+| На момент написания статьи (середина 2011 года), большинство современных браузеров имеет базовую поддержку SVG, в том числе Internet Explorer 9 и выше. Некоторые дополнительные возможности SVG не поддерживаются, либо поддерживаются лишь частично, в определённых браузерах. Для более подробной информации о текущей поддержке SVG, см. [SVG tables on caniuse.com](http://caniuse.com/#search=SVG), либо в таблицах совместимости [SVG element reference](/ru/docs/SVG/Element), для информации о поддержке отдельных элементов.В остальные версии можно добавить поддержку SVG, установив дополнительный плагин, например, предоставленный компанией [Adobe](http://www.adobe.com/svg/viewer/install/main.html).Более подробная информация о SVG в Mozilla, представлена на станице [SVG](/ru/docs/SVG) в этой wiki. |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-    <p>В остальные версии можно добавить поддержку SVG, установив дополнительный плагин, например, предоставленный компанией <a href="http://www.adobe.com/svg/viewer/install/main.html">Adobe</a>.</p>
+### За дело: Демонстрация SVG
 
-    <p>Более подробная информация о SVG в Mozilla, представлена на станице <a href="/en-US/docs/SVG">SVG</a> в этой wiki.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+Создайте новый документ SVG, как обычный текстовый файл, `doc8.svg`. Скопируйте и вставьте содержимое блока ниже, убедитесь, что пролистали его полностью, чтобы скопировать все:
 
-<h3 id="Action_An_SVG_demonstration">За дело: Демонстрация SVG</h3>
+```xml
+<?xml version="1.0" standalone="no"?>
 
-<p>Создайте новый документ SVG, как обычный текстовый файл, <code>doc8.svg</code>. Скопируйте и вставьте содержимое блока ниже, убедитесь, что пролистали его полностью, чтобы скопировать все:</p>
+<?xml-stylesheet type="text/css" href="style8.css"?>
 
-<pre class="brush: xml">&lt;?xml version="1.0" standalone="no"?&gt;
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
-&lt;?xml-stylesheet type="text/css" href="style8.css"?&gt;
-
-&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
-
-&lt;svg width="600px" height="600px" viewBox="-300 -300 600 600"
+<svg width="600px" height="600px" viewBox="-300 -300 600 600"
   xmlns="http://www.w3.org/2000/svg" version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+  xmlns:xlink="http://www.w3.org/1999/xlink">
 
-&lt;title&gt;SVG demonstration&lt;/title&gt;
-&lt;desc&gt;Mozilla CSS Getting Started - SVG demonstration&lt;/desc&gt;
+<title>SVG demonstration</title>
+<desc>Mozilla CSS Getting Started - SVG demonstration</desc>
 
-&lt;defs&gt;
-  &lt;g id="segment" class="segment"&gt;
-    &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
-    &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
-    &lt;/g&gt;
-  &lt;g id="quadrant"&gt;
-    &lt;use xlink:href="#segment"/&gt;
-    &lt;use xlink:href="#segment" transform="rotate(18)"/&gt;
-    &lt;use xlink:href="#segment" transform="rotate(36)"/&gt;
-    &lt;use xlink:href="#segment" transform="rotate(54)"/&gt;
-    &lt;use xlink:href="#segment" transform="rotate(72)"/&gt;
-    &lt;/g&gt;
-  &lt;g id="petals"&gt;
-    &lt;use xlink:href="#quadrant"/&gt;
-    &lt;use xlink:href="#quadrant" transform="rotate(90)"/&gt;
-    &lt;use xlink:href="#quadrant" transform="rotate(180)"/&gt;
-    &lt;use xlink:href="#quadrant" transform="rotate(270)"/&gt;
-    &lt;/g&gt;
-  &lt;radialGradient id="fade" cx="0" cy="0" r="200"
-      gradientUnits="userSpaceOnUse"&gt;
-    &lt;stop id="fade-stop-1" offset="33%"/&gt;
-    &lt;stop id="fade-stop-2" offset="95%"/&gt;
-    &lt;/radialGradient&gt;
-  &lt;/defs&gt;
+<defs>
+  <g id="segment" class="segment">
+    <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+    <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+    </g>
+  <g id="quadrant">
+    <use xlink:href="#segment"/>
+    <use xlink:href="#segment" transform="rotate(18)"/>
+    <use xlink:href="#segment" transform="rotate(36)"/>
+    <use xlink:href="#segment" transform="rotate(54)"/>
+    <use xlink:href="#segment" transform="rotate(72)"/>
+    </g>
+  <g id="petals">
+    <use xlink:href="#quadrant"/>
+    <use xlink:href="#quadrant" transform="rotate(90)"/>
+    <use xlink:href="#quadrant" transform="rotate(180)"/>
+    <use xlink:href="#quadrant" transform="rotate(270)"/>
+    </g>
+  <radialGradient id="fade" cx="0" cy="0" r="200"
+      gradientUnits="userSpaceOnUse">
+    <stop id="fade-stop-1" offset="33%"/>
+    <stop id="fade-stop-2" offset="95%"/>
+    </radialGradient>
+  </defs>
 
-&lt;text id="heading" x="-280" y="-270"&gt;
-  SVG demonstration&lt;/text&gt;
-&lt;text  id="caption" x="-280" y="-250"&gt;
-  Move your mouse pointer over the flower.&lt;/text&gt;
+<text id="heading" x="-280" y="-270">
+  SVG demonstration</text>
+<text  id="caption" x="-280" y="-250">
+  Move your mouse pointer over the flower.</text>
 
-&lt;g id="flower"&gt;
-  &lt;circle id="overlay" cx="0" cy="0" r="200"
-    stroke="none" fill="url(#fade)"/&gt;
-  &lt;use id="outer-petals" xlink:href="#petals"/&gt;
-  &lt;use id="inner-petals" xlink:href="#petals"
-    transform="rotate(9) scale(0.33)"/&gt;
-  &lt;/g&gt;
+<g id="flower">
+  <circle id="overlay" cx="0" cy="0" r="200"
+    stroke="none" fill="url(#fade)"/>
+  <use id="outer-petals" xlink:href="#petals"/>
+  <use id="inner-petals" xlink:href="#petals"
+    transform="rotate(9) scale(0.33)"/>
+  </g>
 
-&lt;/svg&gt;
-</pre>
+</svg>
+```
 
-<p>Создайте новый файл CSS, <code>style8.css</code>. копируйте и вставьте содержимое блока ниже, убедитесь, что пролистали его полностью, чтобы скопировать все:</p>
+Создайте новый файл CSS, `style8.css`. копируйте и вставьте содержимое блока ниже, убедитесь, что пролистали его полностью, чтобы скопировать все:
 
-<pre class="brush: css">/*** SVG demonstration ***/
+```css
+/*** SVG demonstration ***/
 
 /* page */
 svg {
@@ -145,12 +135,12 @@ svg {
   stroke-width: 3;
   }
 
-#outer-petals .segment:hover &gt; .segment-fill {
+#outer-petals .segment:hover > .segment-fill {
   fill: plum;
   stroke: none;
   }
 
-#outer-petals .segment:hover &gt; .segment-edge {
+#outer-petals .segment:hover > .segment-edge {
   stroke: slateblue;
   }
 
@@ -167,46 +157,33 @@ svg {
   stroke-width: 9;
   }
 
-#inner-petals .segment:hover &gt; .segment-fill {
+#inner-petals .segment:hover > .segment-fill {
   fill: darkseagreen;
   stroke: none;
   }
 
-#inner-petals .segment:hover &gt; .segment-edge {
+#inner-petals .segment:hover > .segment-edge {
   stroke: green;
   }
-</pre>
+```
 
-<p>Откройте документ в вашем браузере с поддержкой SVG. Переместите указатель мыши на изображение.</p>
+Откройте документ в вашем браузере с поддержкой SVG. Переместите указатель мыши на изображение.
 
-<p>Эта wiki не поддерживает вставку SVG в страницы, поэтому мы не имеем возможности продемонстрировать это здесь. Изображение будет выглядеть так:</p>
+Эта wiki не поддерживает вставку SVG в страницы, поэтому мы не имеем возможности продемонстрировать это здесь. Изображение будет выглядеть так:
 
-<table style="border: 2px outset #3366bb;">
- <tbody>
-  <tr>
-   <td><img alt="SVG demonstration" src="https://mdn.mozillademos.org/files/719/SVG-flower.png"></td>
-  </tr>
- </tbody>
-</table>
+| ![SVG demonstration](https://mdn.mozillademos.org/files/719/SVG-flower.png) |
+| --------------------------------------------------------------------------- |
 
-<p>Примечания к демонстрации:</p>
+Примечания к демонстрации:
 
-<ul>
- <li>Документ SVG привязывается к таблице стилей общепринятым способом.</li>
- <li>SVG содержит собственные свойства CSS и их значения. Некоторые из них похожи на значения CSS для HTML.</li>
-</ul>
+- Документ SVG привязывается к таблице стилей общепринятым способом.
+- SVG содержит собственные свойства CSS и их значения. Некоторые из них похожи на значения CSS для HTML.
 
-<table style="background-color: #fffff4; border: 1px solid #3366bb; margin-bottom: 1em; padding: 1em;">
- <caption>Задание</caption>
- <tbody>
-  <tr>
-   <td>Изменить таблицу стилей так, чтобы все внутренние лепестки становились розовыми, по наведению курсора на одного из них, при этом нельзя менять принцип работы других лепестков.</td>
-  </tr>
- </tbody>
-</table>
+| Изменить таблицу стилей так, чтобы все внутренние лепестки становились розовыми, по наведению курсора на одного из них, при этом нельзя менять принцип работы других лепестков. |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-<p><a href="/en/CSS/Getting_Started/Challenge_solutions#SVG_and_CSS" title="https://developer.mozilla.org/en/CSS/Getting_Started/Challenge_solutions#SVG_and_CSS">Посмотреть решение к этому заданию.</a></p>
+[Посмотреть решение к этому заданию.](/en/CSS/Getting_Started/Challenge_solutions#SVG_and_CSS "https://developer.mozilla.org/en/CSS/Getting_Started/Challenge_solutions#SVG_and_CSS")
 
-<h4 id="What_next.3F">Что дальше?</h4>
+#### Что дальше?
 
-<p>В этой демонстрации, ваш браузер с поддержкой SVG уже знает, как отображать элементы  SVG. Таблица стилей всего лишь некоторым образом меняет отображение. То же самое происходит с документами HTML и XUL. Однако CSS можно использовать для любых документов XML, в которых нет предусмотренного по умолчанию способа отображения элементов. Данный пример продемонстрирован на следующей странице: <a href="/en-US/docs/Web/Guide/CSS/Getting_started/XML_data">Данные XML</a></p>
+В этой демонстрации, ваш браузер с поддержкой SVG уже знает, как отображать элементы SVG. Таблица стилей всего лишь некоторым образом меняет отображение. То же самое происходит с документами HTML и XUL. Однако CSS можно использовать для любых документов XML, в которых нет предусмотренного по умолчанию способа отображения элементов. Данный пример продемонстрирован на следующей странице: [Данные XML](/ru/docs/Web/Guide/CSS/Getting_started/XML_data)

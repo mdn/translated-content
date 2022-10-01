@@ -5,187 +5,124 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/viewBox
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
 
-<p><code>Аттрибут viewBox</code> определяет расположение и размеры окна отображения SVG.</p>
+`Аттрибут viewBox` определяет расположение и размеры окна отображения SVG.
 
-<p>Значение атрибута <code>viewBox</code> — это набор четырёх чисел: <code>min-x</code>, <code>min-y</code>, <code>width</code> и <code>height</code>, — разделённых пробелами и/или запятой, которые задают прямоугольник в пользовательском пространстве, стороны которого определяют границы окна отображения элемента SVG (не <a href="/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Viewport">браузера</a>).</p>
+Значение атрибута `viewBox` — это набор четырёх чисел: `min-x`, `min-y`, `width` и `height`, — разделённых пробелами и/или запятой, которые задают прямоугольник в пользовательском пространстве, стороны которого определяют границы окна отображения элемента SVG (не [браузера](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Viewport)).
 
-<div id="topExample">
-<pre>html, body, svg {
+```
+html, body, svg {
   height:100%
 }
 
 svg:not(:root) {
   display: inline-block;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!--
   С относительными единицами, такими как проценты,
   размер квадрата не меняется в зависимости от
   значения viewBox
-  --&gt;
-  &lt;rect x="0" y="0" width="100%" height="100%"/&gt;
+  -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  &lt;!--
+  <!--
   При больших значениях viewBox круг получается
   маленьким, потому что его радиус указан в абсолютных
   единицах: расстояние 4 получается маленьким относительно
   размера окна 100, указанного во viewBox
-  --&gt;
-  &lt;circle cx="50%" cy="50%" r="4" fill="white"/&gt;
-&lt;/svg&gt;
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
+</svg>
 
-&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Также не зависит от viewBox, как и в предыдущем примере --&gt;
-  &lt;rect x="0" y="0" width="100%" height="100%"/&gt;
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- Также не зависит от viewBox, как и в предыдущем примере -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  &lt;!--
+  <!--
   С маленьким значением размера viewBox круг получается
   большим, потому что радиус 4 намного больше, если размер
   области отображения равен 10, чем если он равен 100
-  --&gt;
-  &lt;circle cx="50%" cy="50%" r="4" fill="white"/&gt;
-&lt;/svg&gt;
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
+</svg>
 
-&lt;svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
+<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!--
   Точка с координатами (0, 0) теперь является центром области
   отображения. 100% всё ещё приравнивается к полному размеру
   области отображения (10 на 10), поэтому квадрат выглядит
   сдвинутым в правый нижний угол
-  --&gt;
-  &lt;rect x="0" y="0" width="100%" height="100%"/&gt;
+  -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  &lt;!--
+  <!--
   Так как точка (0, 0) находится в центре, а координаты круга,
   равные 50%, относительно размера области отображения (10 на 10)
   принимаются равными 5, круг оказывается с центром
   в правом нижнем углу
-  --&gt;
-  &lt;circle cx="50%" cy="50%" r="4" fill="white"/&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
-</div>
+{{EmbedLiveSample('topExample', '100%', 200)}}
 
-<p>На отображение с <code>viewBox</code> также влияет атрибут {{ SVGAttr("preserveAspectRatio") }}.</p>
+На отображение с `viewBox` также влияет атрибут {{ SVGAttr("preserveAspectRatio") }}.
 
-<div class="blockIndicator note">
-<p><strong>Обратите внимание: </strong>при значениях <code>width</code> и <code>height</code> меньших или равных <code>0</code> элемент не отображается</p>
-</div>
+> **Примечание:** **Обратите внимание:** при значениях `width` и `height` меньших или равных `0` элемент не отображается
 
-<p><br>
- Пять элементов используют этот атрибут: {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{ SVGElement("svg") }}, {{ SVGElement("symbol") }} и {{ SVGElement("view") }}.</p>
+Пять элементов используют этот атрибут: {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{ SVGElement("svg") }}, {{ SVGElement("symbol") }} и {{ SVGElement("view") }}.
 
-<h2 id="marker">marker</h2>
+## marker
 
-<p>Для элемента {{SVGElement('marker')}}, <code>viewBox</code> определяет расположение и размеры содержимого элемента <code>&lt;marker&gt;</code>.</p>
+Для элемента {{SVGElement('marker')}}, `viewBox` определяет расположение и размеры содержимого элемента `<marker>`.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Значение по умолчанию</th>
-   <td><em>нет</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемое</th>
-   <td>Да</td>
-  </tr>
- </tbody>
-</table>
+| Значение              | **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Значение по умолчанию | _нет_                                                                                                                                                                                                             |
+| Анимируемое           | Да                                                                                                                                                                                                                |
 
-<h2 id="pattern">pattern</h2>
+## pattern
 
-<p>Для элемента {{SVGElement('pattern')}}, <code>viewBox</code> определяет расположение и размеры содержимого шаблона.</p>
+Для элемента {{SVGElement('pattern')}}, `viewBox` определяет расположение и размеры содержимого шаблона.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Значение по умолчанию</th>
-   <td><em>нет</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемое</th>
-   <td>Да</td>
-  </tr>
- </tbody>
-</table>
+| Значение              | **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Значение по умолчанию | _нет_                                                                                                                                                                                                             |
+| Анимируемое           | Да                                                                                                                                                                                                                |
 
-<h2 id="svg">svg</h2>
+## svg
 
-<p>Для элемента {{SVGElement('svg')}}, <code>viewBox</code> определяет расположение и размеры содержимого элемента <code>&lt;svg&gt;</code>.</p>
+Для элемента {{SVGElement('svg')}}, `viewBox` определяет расположение и размеры содержимого элемента `<svg>`.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Значение по умолчанию</th>
-   <td><em>нет</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемое</th>
-   <td>Да</td>
-  </tr>
- </tbody>
-</table>
+| Значение              | **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Значение по умолчанию | _нет_                                                                                                                                                                                                             |
+| Анимируемое           | Да                                                                                                                                                                                                                |
 
-<h2 id="symbol">symbol</h2>
+## symbol
 
-<p>Для элемента {{SVGElement('symbol')}}, <code>viewBox</code> определяет расположение и размеры содержимого элемента <code>&lt;symbol&gt;</code>.</p>
+Для элемента {{SVGElement('symbol')}}, `viewBox` определяет расположение и размеры содержимого элемента `<symbol>`.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Значение по умолчанию</th>
-   <td><em>нет</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемое</th>
-   <td>Да</td>
-  </tr>
- </tbody>
-</table>
+| Значение              | **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Значение по умолчанию | _нет_                                                                                                                                                                                                             |
+| Анимируемое           | Да                                                                                                                                                                                                                |
 
-<h2 id="view">view</h2>
+## view
 
-<p>Для элемента {{SVGElement('view')}}, <code>viewBox</code> определяет расположение и размеры содержимого элемента <code>&lt;view&gt;</code>.</p>
+Для элемента {{SVGElement('view')}}, `viewBox` определяет расположение и размеры содержимого элемента `<view>`.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Значение по умолчанию</th>
-   <td><em>нет</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемое</th>
-   <td>Да</td>
-  </tr>
- </tbody>
-</table>
+| Значение              | **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)**?, **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Значение по умолчанию | _нет_                                                                                                                                                                                                             |
+| Анимируемое           | Да                                                                                                                                                                                                                |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en/SVG/Tutorial/Positions" title="https://developer.mozilla.org/en/SVG/Tutorial/Positions">SVG Getting Started: Positions</a></li>
-</ul>
+- [SVG Getting Started: Positions](/en/SVG/Tutorial/Positions "https://developer.mozilla.org/en/SVG/Tutorial/Positions")
