@@ -52,7 +52,7 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']
 
 ## Polyfill
 
-`如果要 Object.values`兼容不支持它的旧环境，可在 [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) 或 [es-shims/Object.values](https://github.com/es-shims/Object.values) 中找到 Polyfill。
+如果要 `Object.values`兼容不支持它的旧环境，可在 [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) 或 [es-shims/Object.values](https://github.com/es-shims/Object.values) 中找到 Polyfill。
 
 根据**Object.keys()**的 Polyfill 仿写一个：
 
