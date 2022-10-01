@@ -7,146 +7,130 @@ tags:
   - Руководство
 translation_of: Web/Tutorials
 ---
-<p>Ссылки на этой странице ведут к целому ряду учебных пособий и материалов. Если вы только начинаете учить основы, или же вы уже бывалый веб-разработчик, то здесь вы сможете найти полезные ресурсы для получения передового практического опыта.  Эти ресурсы создаются дальновидными компаниями и веб-разработчиками, включают открытые стандарты и лучшие практики для веб-разработки, предоставляют или позволяют переводы под открытой лицензией, такой, как Creative Commons.</p>
+Ссылки на этой странице ведут к целому ряду учебных пособий и материалов. Если вы только начинаете учить основы, или же вы уже бывалый веб-разработчик, то здесь вы сможете найти полезные ресурсы для получения передового практического опыта. Эти ресурсы создаются дальновидными компаниями и веб-разработчиками, включают открытые стандарты и лучшие практики для веб-разработки, предоставляют или позволяют переводы под открытой лицензией, такой, как Creative Commons.
 
-<h2>HTML учебники</h2>
+## HTML учебники
 
-<h3>Вводный уровень</h3>
+### Вводный уровень
 
-<dl>
- <dt><a href="/en-US/docs/Web/Guide/HTML/Introduction">Введение в HTML</a></dt>
- <dd>Что такое HTML, что он делает, его краткая история, и что представляет собой структура HTML документа. В последующих статьях мы подробнее рассмотрим отдельные части HTML.</dd>
- <dt><a href="http://reference.sitepoint.com/html/page-structure">Базовая структура веб-страницы</a> (SitePoint)</dt>
- <dd>Узнайте как HTML элементы сочетаются в общую картину.</dd>
- <dt><a href="/ru/docs/HTML/Element">MDN HTML Element Reference</a></dt>
- <dd>Комплексный справочник для HTML элементов, и, как различные браузеры поддерживают их.</dd>
- <dt><a href="http://wikiversity.org/wiki/Web_Design/HTML_Challenges">HTML Challenges</a> (Wikiversity)</dt>
- <dd>Используйте эти задачки, чтобы отточить свои HTML навыки (для примера, "Какой элемент нужно использовать -  &lt;h2&gt;  или &lt;STRONG&gt;?"), фокусируясь на смысле разметки.</dd>
-</dl>
+- [Введение в HTML](/ru/docs/Web/Guide/HTML/Introduction)
+  - : Что такое HTML, что он делает, его краткая история, и что представляет собой структура HTML документа. В последующих статьях мы подробнее рассмотрим отдельные части HTML.
+- [Базовая структура веб-страницы](http://reference.sitepoint.com/html/page-structure) (SitePoint)
+  - : Узнайте как HTML элементы сочетаются в общую картину.
+- [MDN HTML Element Reference](/ru/docs/HTML/Element)
+  - : Комплексный справочник для HTML элементов, и, как различные браузеры поддерживают их.
+- [HTML Challenges](http://wikiversity.org/wiki/Web_Design/HTML_Challenges) (Wikiversity)
+  - : Используйте эти задачки, чтобы отточить свои HTML навыки (для примера, "Какой элемент нужно использовать - \<h2> или \<STRONG>?"), фокусируясь на смысле разметки.
 
-<h3>Продвинутый уровень</h3>
+### Продвинутый уровень
 
-<dl>
- <dt><a href="/ru/docs/Tips_for_Authoring_Fast-loading_HTML_Pages">Tips for Authoring Fast-Loading HTML Pages</a></dt>
- <dd>Оптимизация веб-страниц, для большей адаптивности сайта и снижения нагрузки на веб-сервера и подключение к Интернету</dd>
- <dt><a href="http://www.html5rocks.com/tutorials/">HTML5 Tutorials</a> (HTML5 Rocks)</dt>
- <dd>Совершите экскурсию в код, который использует возможности HTML5.</dd>
- <dt><a href="http://www.alistapart.com/articles/semanticsinhtml5/">Semantics in HTML5</a> (A List Apart)</dt>
- <dd>Изучите рабочую разметку, обеспечивающую обратную совместимость, расширяемую и поддерживающую будущие изменения (совместимость вперёд).</dd>
- <dt><a href="/ru/docs/Canvas_tutorial">Canvas Tutorial</a></dt>
- <dd>Узнайте, как рисовать с помощью скриптов, используя элемент <code>canvas</code>.</dd>
- <dt><a href="http://html5doctor.com/">HTML5 Doctor</a></dt>
- <dd>Статьи о том, как  используется HTML5 прямо сейчас.</dd>
- <dt><a href="http://www.elated.com/articles/html5-audio/">The Joy of HTML5 Audio</a> (Elated)</dt>
- <dd>Узнайте как использовать HTML аудио элемент для того, чтобы вставлять звуки в ваши веб-страницы. В учебнике представлено много примеров кода.</dd>
-</dl>
+- [Tips for Authoring Fast-Loading HTML Pages](/ru/docs/Tips_for_Authoring_Fast-loading_HTML_Pages)
+  - : Оптимизация веб-страниц, для большей адаптивности сайта и снижения нагрузки на веб-сервера и подключение к Интернету
+- [HTML5 Tutorials](http://www.html5rocks.com/tutorials/) (HTML5 Rocks)
+  - : Совершите экскурсию в код, который использует возможности HTML5.
+- [Semantics in HTML5](http://www.alistapart.com/articles/semanticsinhtml5/) (A List Apart)
+  - : Изучите рабочую разметку, обеспечивающую обратную совместимость, расширяемую и поддерживающую будущие изменения (совместимость вперёд).
+- [Canvas Tutorial](/ru/docs/Canvas_tutorial)
+  - : Узнайте, как рисовать с помощью скриптов, используя элемент `canvas`.
+- [HTML5 Doctor](http://html5doctor.com/)
+  - : Статьи о том, как используется HTML5 прямо сейчас.
+- [The Joy of HTML5 Audio](http://www.elated.com/articles/html5-audio/) (Elated)
+  - : Узнайте как использовать HTML аудио элемент для того, чтобы вставлять звуки в ваши веб-страницы. В учебнике представлено много примеров кода.
 
-<h2>Javascript учебники</h2>
+## Javascript учебники
 
-<h3>Вводный уровень</h3>
+### Вводный уровень
 
-<dl>
- <dt><strong><a href="/ru/docs/Learn/JavaScript/First_steps">JavaScript First Steps</a></strong></dt>
- <dd>JavaScript руководство, написанное как часть MDN <a href="/ru/docs/Learn">Learning Area</a>.</dd>
- <dt><a href="http://www.codecademy.com/">Codecademy</a> (Codecademy)</dt>
- <dd>Codecademy это простой способ изучить JavaScript. Он интерактивный, и вы можете делать это вместе с друзьями</dd>
- <dt><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Getting Started with JavaScript</a></dt>
- <dd>Что такое JavaScript и как он может пригодиться вам?</dd>
- <dt><a href="http://dev.opera.com/articles/view/javascript-best-practices/">JavaScript Best Practices</a><a href="http://docs.webplatform.org/wiki/tutorials/javascript_best_practices"> </a>(WebPlatform.org)</dt>
- <dd>Узнайте о некоторых из очевидных (и не очень очевидных) лучших практиках для написания кода на  JavaScript.</dd>
-</dl>
+- **[JavaScript First Steps](/ru/docs/Learn/JavaScript/First_steps)**
+  - : JavaScript руководство, написанное как часть MDN [Learning Area](/ru/docs/Learn).
+- [Codecademy](http://www.codecademy.com/) (Codecademy)
+  - : Codecademy это простой способ изучить JavaScript. Он интерактивный, и вы можете делать это вместе с друзьями
+- [Getting Started with JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+  - : Что такое JavaScript и как он может пригодиться вам?
+- [JavaScript Best Practices](http://dev.opera.com/articles/view/javascript-best-practices/)[ ](http://docs.webplatform.org/wiki/tutorials/javascript_best_practices)(WebPlatform.org)
+  - : Узнайте о некоторых из очевидных (и не очень очевидных) лучших практиках для написания кода на JavaScript.
 
-<h3 id="Средний_уровень">Средний уровень</h3>
+### Средний уровень
 
-<dl>
- <dt><a href="/ru/docs/A_re-introduction_to_JavaScript">A Re-Introduction to JavaScript</a></dt>
- <dd>Повторение языка программирования JavaScript для разработчиков среднего уровня.</dd>
- <dt><a href="http://eloquentjavascript.net/contents.html">Eloquent JavaScript</a></dt>
- <dd>Полное руководство по "средним" и "продвинутым" методикам JavaScript.</dd>
- <dt><a href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/">Essential JavaScript Design Patterns</a> (Addy Osmani)</dt>
- <dd>Введение в основы шаблонов проектирования JavaScript.</dd>
- <dt><a href="http://www.yuiblog.com/blog/2007/01/24/video-crockford-tjpl/">The JavaScript Programming Language</a> (YUI Blog)</dt>
- <dd>Douglas Crockford исследует язык, какой он есть сегодня, и как он пришёл, чтобы быть.</dd>
- <dt><a href="/ru/docs/Introduction_to_Object-Oriented_JavaScript">Introduction to Object-Oriented JavaScript</a></dt>
- <dd>Узнайте об ООП в JavaScript.</dd>
- <dt><strong><a href="http://speakingjs.com/es5/">Speaking JavaScript</a> (Dr. Axel Rauschmayer)</strong></dt>
- <dd>Для тех программистов, кто хочет быстро и хорошо выучить  JavaScript, а так же для тех, кто хочет углубить свои навыки или же изучить какие-то специфические темы.</dd>
-</dl>
+- [A Re-Introduction to JavaScript](/ru/docs/A_re-introduction_to_JavaScript)
+  - : Повторение языка программирования JavaScript для разработчиков среднего уровня.
+- [Eloquent JavaScript](http://eloquentjavascript.net/contents.html)
+  - : Полное руководство по "средним" и "продвинутым" методикам JavaScript.
+- [Essential JavaScript Design Patterns](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/) (Addy Osmani)
+  - : Введение в основы шаблонов проектирования JavaScript.
+- [The JavaScript Programming Language](http://www.yuiblog.com/blog/2007/01/24/video-crockford-tjpl/) (YUI Blog)
+  - : Douglas Crockford исследует язык, какой он есть сегодня, и как он пришёл, чтобы быть.
+- [Introduction to Object-Oriented JavaScript](/ru/docs/Introduction_to_Object-Oriented_JavaScript)
+  - : Узнайте об ООП в JavaScript.
+- **[Speaking JavaScript](http://speakingjs.com/es5/) (Dr. Axel Rauschmayer)**
+  - : Для тех программистов, кто хочет быстро и хорошо выучить JavaScript, а так же для тех, кто хочет углубить свои навыки или же изучить какие-то специфические темы.
 
-<h3 id="Продвинутый_уровень_2">Продвинутый уровень</h3>
+### Продвинутый уровень
 
-<dl>
- <dt><a href="/ru/docs/JavaScript/Guide">JavaScript Guide</a></dt>
- <dd>Полное, регулярно обновляемое руководство по JavaScript для всех уровней обучения от начального до продвинутого.</dd>
- <dt><a href="http://ejohn.org/apps/learn/">Learning Advanced JavaScript</a> (John Resig)</dt>
- <dd>Гид по "продвинутому" JavaScript от John Resig.</dd>
- <dt><a href="http://www.elated.com/articles/javascript-dom-intro/">Introducing the JavaScript DOM</a> (Elated)</dt>
- <dd>Что такое Document Object Model, и зачем она нужна? Эта статья даёт вам постепенное введение в эту мощную способность JavaScript.</dd>
- <dt><a href="http://yuiblog.com/blog/2006/10/20/video-crockford-domtheory/">An Inconvenient API: The Theory of the DOM</a> (YUI Blog)</dt>
- <dd>Douglas Crockford объясняет Document Object Model.</dd>
- <dt><a href="http://yuiblog.com/blog/2006/11/27/video-crockford-advjs/">Advanced JavaScript</a> (YUI Blog)</dt>
- <dd>Douglas Crockford пристально следит за шаблоном кода, который JavaScript программисты могут выбрать в авторстве своих приложений.</dd>
- <dt><a href="http://bonsaiden.github.com/JavaScript-Garden/">JavaScript Garden</a></dt>
- <dd>Документация из самых необычных частей JavaScript</dd>
- <dt><a href="http://webcache.googleusercontent.com/search?q=cache:CJYRO48hw9EJ:stackoverflow.com/questions/394601/which-javascript-framework-jquery-vs-dojo-vs">Which JavaScript Framework?</a> (StackOverflow)</dt>
- <dd>Советы по выбору основы JavaScript..</dd>
- <dt><a href="http://yuiblog.com/blog/2008/07/22/non-blocking-scripts/">Non-Blocking JavaScript Downloads</a> (YUI Blog)</dt>
- <dd>Советы по улучшению производительности скачивания страниц, содержащих JavaScript</dd>
- <dt><a href="http://shichuan.github.io/javascript-patterns">JavaScript Patterns</a></dt>
- <dd>Шаблоны и антишаблоны проектирования JavaScript, которые охватывают функциональные шаблоны, шаблоны JQuery, шаблоны плагинов JQuery, шаблоны проектирования, основные шаблоны, literal patterns и шаблоны конструирования, шаблоны создания объекта, переиспользуемый шаблонный код, DOM.</dd>
- <dt><a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/">How Browsers Work</a></dt>
- <dd>Статья с подробным исследованием, описывающая различные современные браузеры, их движки, рендеринг страниц и пр.</dd>
- <dt><strong><a href="http://exploringjs.com/es6/">Exploring ES6</a> (Dr. Axel Rauschmayer)</strong></dt>
- <dd>Надёжная и подробная информация об ECMAScript 2015.</dd>
- <dt><a href="https://github.com/bolshchikov/js-must-watch">JavaScript Videos</a> (GitHub)</dt>
- <dd>Видео о JavaScript.</dd>
-</dl>
+- [JavaScript Guide](/ru/docs/JavaScript/Guide)
+  - : Полное, регулярно обновляемое руководство по JavaScript для всех уровней обучения от начального до продвинутого.
+- [Learning Advanced JavaScript](http://ejohn.org/apps/learn/) (John Resig)
+  - : Гид по "продвинутому" JavaScript от John Resig.
+- [Introducing the JavaScript DOM](http://www.elated.com/articles/javascript-dom-intro/) (Elated)
+  - : Что такое Document Object Model, и зачем она нужна? Эта статья даёт вам постепенное введение в эту мощную способность JavaScript.
+- [An Inconvenient API: The Theory of the DOM](http://yuiblog.com/blog/2006/10/20/video-crockford-domtheory/) (YUI Blog)
+  - : Douglas Crockford объясняет Document Object Model.
+- [Advanced JavaScript](http://yuiblog.com/blog/2006/11/27/video-crockford-advjs/) (YUI Blog)
+  - : Douglas Crockford пристально следит за шаблоном кода, который JavaScript программисты могут выбрать в авторстве своих приложений.
+- [JavaScript Garden](http://bonsaiden.github.com/JavaScript-Garden/)
+  - : Документация из самых необычных частей JavaScript
+- [Which JavaScript Framework?](http://webcache.googleusercontent.com/search?q=cache:CJYRO48hw9EJ:stackoverflow.com/questions/394601/which-javascript-framework-jquery-vs-dojo-vs) (StackOverflow)
+  - : Советы по выбору основы JavaScript..
+- [Non-Blocking JavaScript Downloads](http://yuiblog.com/blog/2008/07/22/non-blocking-scripts/) (YUI Blog)
+  - : Советы по улучшению производительности скачивания страниц, содержащих JavaScript
+- [JavaScript Patterns](http://shichuan.github.io/javascript-patterns)
+  - : Шаблоны и антишаблоны проектирования JavaScript, которые охватывают функциональные шаблоны, шаблоны JQuery, шаблоны плагинов JQuery, шаблоны проектирования, основные шаблоны, literal patterns и шаблоны конструирования, шаблоны создания объекта, переиспользуемый шаблонный код, DOM.
+- [How Browsers Work](http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
+  - : Статья с подробным исследованием, описывающая различные современные браузеры, их движки, рендеринг страниц и пр.
+- **[Exploring ES6](http://exploringjs.com/es6/) (Dr. Axel Rauschmayer)**
+  - : Надёжная и подробная информация об ECMAScript 2015.
+- [JavaScript Videos](https://github.com/bolshchikov/js-must-watch) (GitHub)
+  - : Видео о JavaScript.
 
-<h2 id="CSS_учебники">CSS учебники</h2>
+## CSS учебники
 
-<h3 id="Вводный_уровень_3">Вводный уровень</h3>
+### Вводный уровень
 
-<dl>
- <dt><a href="/ru/docs/CSS/Getting_Started">CSS Getting Started</a></dt>
- <dd>Этот учебник познакомит вас с каскадными таблицами стилей (CSS). Он проведёт вас через основные особенности CSS и предложит практические примеры, которые можно попробовать на вашем компьютере.</dd>
- <dt><a href="http://en.wikiversity.org/wiki/Web_Design/CSS_Classes">CSS Selector Classes</a> (Wikiversity)</dt>
- <dd>Что такое классы в CSS?</dd>
- <dt><a href="http://en.wikiversity.org/wiki/Web_Design/External_CSS">External CSS</a> (Wikiversity)</dt>
- <dd>Использование CSS из внешних источников.</dd>
- <dt><a href="http://www.w3.org/MarkUp/Guide/Style">Adding a Touch of Style</a> (W3C)</dt>
- <dd>Краткое руководство для начинающих по стилизации веб-страниц с помощью CSS.</dd>
- <dt><a href="/ru/docs/Common_CSS_Questions">Common CSS Questions</a></dt>
- <dd>Общие вопросы и ответы для начинающих.</dd>
- <dt><a href="/ru/docs/Web/Guide/CSS/Getting_started/Selectors">CSS Selectors</a></dt>
- <dd>Введение в CSS селекторы.</dd>
-</dl>
+- [CSS Getting Started](/ru/docs/CSS/Getting_Started)
+  - : Этот учебник познакомит вас с каскадными таблицами стилей (CSS). Он проведёт вас через основные особенности CSS и предложит практические примеры, которые можно попробовать на вашем компьютере.
+- [CSS Selector Classes](http://en.wikiversity.org/wiki/Web_Design/CSS_Classes) (Wikiversity)
+  - : Что такое классы в CSS?
+- [External CSS](http://en.wikiversity.org/wiki/Web_Design/External_CSS) (Wikiversity)
+  - : Использование CSS из внешних источников.
+- [Adding a Touch of Style](http://www.w3.org/MarkUp/Guide/Style) (W3C)
+  - : Краткое руководство для начинающих по стилизации веб-страниц с помощью CSS.
+- [Common CSS Questions](/ru/docs/Common_CSS_Questions)
+  - : Общие вопросы и ответы для начинающих.
+- [CSS Selectors](/ru/docs/Web/Guide/CSS/Getting_started/Selectors)
+  - : Введение в CSS селекторы.
 
-<h3 id="Средний_уровень_2">Средний уровень</h3>
+### Средний уровень
 
-<dl>
- <dt><a href="/ru/docs/CSS/CSS_Reference">CSS Reference</a></dt>
- <dd>Полный справочник по CSS, с информацией о поддержке в Firefox и других браузерах.</dd>
- <dt><a href="http://en.wikiversity.org/wiki/Web_Design/CSS_challenges">CSS Challenges</a> (Wikiversity)</dt>
- <dd>Улучшите ваши навыки CSS, и обратите внимание на то, где вам нужно больше практики.</dd>
- <dt><a href="http://www.html.net/tutorials/css/">Intermediate CSS Concepts</a> (HTML.net)</dt>
- <dd>Группировка, псевдоклассы и многое другое.</dd>
- <dt><a href="http://www.alistapart.com/articles/css-positioning-101/">CSS Positioning 101</a> (A List Apart)</dt>
- <dd>Использование позиционирования в соответствии со стандартами, без использования таблиц.</dd>
- <dt><a href="http://www.alistapart.com/articles/progressiveenhancementwithcss/">Progressive Enhancement with CSS</a> (A List Apart)</dt>
- <dd>Прогрессивное улучшение в веб-страницы с помощью CSS.</dd>
- <dt><a href="http://www.alistapart.com/articles/fluidgrids/">Fluid Grids</a> (A List Apart)</dt>
- <dd>Дизайн вёрстки, который плавно изменяется вместе с размерами окна, основанный на сетке.</dd>
-</dl>
+- [CSS Reference](/ru/docs/CSS/CSS_Reference)
+  - : Полный справочник по CSS, с информацией о поддержке в Firefox и других браузерах.
+- [CSS Challenges](http://en.wikiversity.org/wiki/Web_Design/CSS_challenges) (Wikiversity)
+  - : Улучшите ваши навыки CSS, и обратите внимание на то, где вам нужно больше практики.
+- [Intermediate CSS Concepts](http://www.html.net/tutorials/css/) (HTML.net)
+  - : Группировка, псевдоклассы и многое другое.
+- [CSS Positioning 101](http://www.alistapart.com/articles/css-positioning-101/) (A List Apart)
+  - : Использование позиционирования в соответствии со стандартами, без использования таблиц.
+- [Progressive Enhancement with CSS](http://www.alistapart.com/articles/progressiveenhancementwithcss/) (A List Apart)
+  - : Прогрессивное улучшение в веб-страницы с помощью CSS.
+- [Fluid Grids](http://www.alistapart.com/articles/fluidgrids/) (A List Apart)
+  - : Дизайн вёрстки, который плавно изменяется вместе с размерами окна, основанный на сетке.
 
-<h3 id="Продвинутый_уровень_3">Продвинутый уровень</h3>
+### Продвинутый уровень
 
-<dl>
- <dt><a href="/ru/docs/CSS/Using_CSS_transforms">Using CSS Transforms</a></dt>
- <dd>Как применять поворот, наклон, масштабирование и перемещение при помощи CSS</dd>
- <dt><a href="/ru/docs/CSS/CSS_transitions">CSS Transitions</a></dt>
- <dd>CSS переходы, спецификация CSS3 по этой теме, как анимировать изменения стилей в CSS, вместо того, чтобы делать их "сразу".</dd>
- <dt><a href="http://www.html5rocks.com/tutorials/webfonts/quick/">Quick Guide to Implement Web Fonts with @font-face</a> (HTML5 Rocks)</dt>
- <dd>Возможности @font-face в CSS3, создание собственных шрифтов и работа с ними.</dd>
- <dt><a href="http://davidwalsh.name/starting-css">Starting to Write CSS</a> (David Walsh)</dt>
- <dd>Введение в инструменты и методологии для разработки более краткого, масштабируемого и поддерживаемого CSS.</dd>
-</dl>
+- [Using CSS Transforms](/ru/docs/CSS/Using_CSS_transforms)
+  - : Как применять поворот, наклон, масштабирование и перемещение при помощи CSS
+- [CSS Transitions](/ru/docs/CSS/CSS_transitions)
+  - : CSS переходы, спецификация CSS3 по этой теме, как анимировать изменения стилей в CSS, вместо того, чтобы делать их "сразу".
+- [Quick Guide to Implement Web Fonts with @font-face](http://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)
+  - : Возможности @font-face в CSS3, создание собственных шрифтов и работа с ними.
+- [Starting to Write CSS](http://davidwalsh.name/starting-css) (David Walsh)
+  - : Введение в инструменты и методологии для разработки более краткого, масштабируемого и поддерживаемого CSS.
