@@ -134,7 +134,7 @@ console.log(new Intl.NumberFormat('en-IN').format(number));
 
 // 通过编号系统中的 nu 扩展键请求，例如：中文十进制数字
 console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
-// → 一二三，四五六。七八九
+// → 一二三,四五六.七八九
 
 //当请求的语言不被支持，例如巴里，包含一个回滚语言印尼，这时候就会使用印尼语
 console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
