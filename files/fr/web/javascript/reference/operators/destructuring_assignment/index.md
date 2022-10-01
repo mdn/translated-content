@@ -434,14 +434,11 @@ console.log(nom); // Bidule
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-destructuring-assignment', 'Destructuring assignment')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-destructuring-assignment', 'Destructuring assignment')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.destructuring")}}
+{{Compat}}
 
 ## Voir aussi
 

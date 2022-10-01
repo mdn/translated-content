@@ -100,17 +100,11 @@ function showOffsetPos (sId) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires        |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-for-statement', 'for statement')}} | {{Spec2('ESDraft')}} |                     |
-| {{SpecName('ES6', '#sec-for-statement', 'instruction for')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ES5.1', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES3', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES3')}}         |                     |
-| {{SpecName('ES1', '#sec-12.6.2', 'instruction for')}}             | {{Spec2('ES1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.for")}}
+{{Compat}}
 
 ## Voir aussi
 

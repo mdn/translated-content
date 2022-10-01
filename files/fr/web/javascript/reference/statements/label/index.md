@@ -171,16 +171,11 @@ L: function* F() {}
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                         | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-12.12', 'Labelled statement')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-labelled-statements', 'Labelled statement')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-labelled-statements', 'Labelled statement')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.label")}}
+{{Compat}}
 
 ## Voir aussi
 

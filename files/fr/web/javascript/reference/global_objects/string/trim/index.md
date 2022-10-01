@@ -61,15 +61,11 @@ if (!String.prototype.trim) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires                                            |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.5.4.20', 'String.prototype.trim')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.1. |
-| {{SpecName('ES6', '#sec-string.prototype.trim', 'String.prototype.trim')}}     | {{Spec2('ES6')}}         |                                                         |
-| {{SpecName('ESDraft', '#sec-string.prototype.trim', 'String.prototype.trim')}} | {{Spec2('ESDraft')}} |                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.trim")}}
+{{Compat}}
 
 ## Voir aussi
 

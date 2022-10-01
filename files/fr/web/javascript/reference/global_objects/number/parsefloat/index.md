@@ -52,14 +52,11 @@ if (Number.parseFloat === undefined) {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-number.parsefloat', 'Number.parseFloat')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.parsefloat', 'Number.parseFloat')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.parseFloat")}}
+{{Compat}}
 
 ## Voir aussi
 

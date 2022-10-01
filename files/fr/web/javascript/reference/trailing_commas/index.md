@@ -157,16 +157,11 @@ JSON.parse('{"foo" : 1 }');
 
 ## Spécifications
 
-| Spécification                    | État                         | Commentaires                                                                                |
-| -------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------- |
-| {{SpecName('ES5.1')}}     | {{Spec2('ES5.1')}}     | Ajout des virgules finales pour les littéraux objets.                                       |
-| {{SpecName('ES6')}}         | {{Spec2('ES6')}}         | Aucune modification.                                                                        |
-| {{SpecName('ES2017')}}     | {{Spec2('ES2017')}}     | Ajout des virgules finales à la liste des arguments d'une fonction (déclaration et appels). |
-| {{SpecName('ESDraft')}} | {{Spec2('ESDraft')}} | ES2017 added trailing function commas.                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.grammar.trailing_commas")}}
+{{Compat}}
 
 ## Voir aussi
 

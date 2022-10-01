@@ -178,14 +178,11 @@ george(); // "Salut !!"
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-object.setprototypeof', 'Object.setPrototypeOf')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-object.setprototypeof', 'Object.setPrototypeOf')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.setPrototypeOf")}}
+{{Compat}}
 
 ## Voir aussi
 

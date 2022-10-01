@@ -45,14 +45,11 @@ maMap.has("truc");    // Renvoie false. "truc" n'est plus présent.
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.delete', 'Map.prototype.delete')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.delete', 'Map.prototype.delete')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

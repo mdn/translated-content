@@ -44,16 +44,11 @@ do {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-12.6.1', 'instruction do-while')}}                     | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-do-while-statement', 'instruction do-while')}}         | {{Spec2('ES6')}}         | Le point-virgule de fin est désormais optionnel.     |
-| {{SpecName('ESDraft', '#sec-do-while-statement', 'instruction do-while')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.do_while")}}
+{{Compat}}
 
 ## Voir aussi
 

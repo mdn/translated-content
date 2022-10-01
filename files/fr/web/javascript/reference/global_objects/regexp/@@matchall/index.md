@@ -84,13 +84,11 @@ console.log(resultat[1]); // [ "2019-03-07", "2019", "03", "07" ]
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('ESDraft', '#sec-regexp-prototype-matchall', 'RegExp.prototype[@@matchAll]')}} | {{Spec2('ESDraft')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.@@matchAll")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -47,14 +47,11 @@ mySet.has(obj);     // renvoie false
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WeakSet.has")}}
+{{Compat}}
 
 ## Voir aussi
 

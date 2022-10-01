@@ -166,14 +166,11 @@ Notez qu'il n'est pas possible d'utiliser `var`, `let` ou `const` avec `export d
 
 ## Spécifications
 
-| Spécification                                                        | Statut                       | Commentaire         |
-| -------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-exports', 'Exports')}}     | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-exports', 'Exports')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Voir aussi
 

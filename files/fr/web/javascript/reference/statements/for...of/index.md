@@ -309,14 +309,11 @@ for (let o of gen){
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-for-in-and-for-of-statements', 'instruction for...of')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'instruction for...of')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.for_of")}}
+{{Compat}}
 
 ## Voir aussi
 

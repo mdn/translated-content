@@ -79,14 +79,11 @@ new Uint8Array([0, 1, 2, 3]).forEach(affichageContenuTableau);
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -118,16 +118,11 @@ x = document.formulaire[controle].value;
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}}     | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-property-accessors', 'Accesseurs de propriété')}} | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-11.2.1', 'Accesseurs de propriété')}}             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES1', '#sec-11.2.1', 'Accesseurs de propriété')}}                 | {{Spec2('ES1')}}         | Définition initiale, implémentée avec JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.property_accessors")}}
+{{Compat}}
 
 ## Voir aussi
 

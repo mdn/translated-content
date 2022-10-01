@@ -70,16 +70,11 @@ class Carré extends Polygone {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Définitions de classe')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}}         | {{Spec2('ES2016')}}     |                      |
-| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}}         | {{Spec2('ES2017')}}     |                      |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Définitions de classe')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.class")}}
+{{Compat}}
 
 ## Voir aussi
 
