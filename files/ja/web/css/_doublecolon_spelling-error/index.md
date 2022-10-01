@@ -1,16 +1,8 @@
 ---
 title: '::spelling-error'
 slug: Web/CSS/::spelling-error
-tags:
-  - CSS
-  - 実験的
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.spelling-error
-translation_of: Web/CSS/::spelling-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`::spelling-error`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、綴りが正しくないと{{glossary("user agent", "ユーザーエージェント")}}が判断したテキストの区間を示します。

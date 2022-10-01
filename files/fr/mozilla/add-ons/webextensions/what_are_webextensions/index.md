@@ -6,6 +6,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Une extension ajoute des fonctionnalités et des fonctions à un navigateur. Elle est créée en utilisant des technologies Web familière: HTML, CSS et JavaScript. Elle peut bénéficier des mêmes API Web que ce d'une page web où JavaScript est utilisée. Cependant, une extension a également accès à son propre ensemble d'API JavaScript. Cela signifie que vous pouvez faire beaucoup plus dans une extension que ce que vous pouvez faire dans une page Web. Voici quelques exemples de fonctionnalités d'extension possibles :

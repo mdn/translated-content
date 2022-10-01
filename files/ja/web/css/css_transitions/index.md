@@ -1,14 +1,8 @@
 ---
 title: CSS トランジション
 slug: Web/CSS/CSS_Transitions
-tags:
-  - CSS
-  - CSS トランジション
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Transitions
 ---
+
 {{CSSRef}}
 
 **CSS トランジション** (CSS Transition) は CSS のモジュールの一つで、特定の CSS プロパティの値の間でスムーズな変化を作り出す方法を定義します。タイミング関数を使って、ただ作り出すだけでなく、その進化を定義することもできます。

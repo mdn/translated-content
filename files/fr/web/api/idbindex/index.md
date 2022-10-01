@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBIndex
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBIndex`**de l'{{domxref("IndexedDB_API","API IndexedDB")}} est un accès à un index d'un magasins d'objet. Un index permet de trier les enregistrements d'un magasin d'objet sur une autre clé que la clé primaire.

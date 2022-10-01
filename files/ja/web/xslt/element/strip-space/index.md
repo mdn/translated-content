@@ -1,13 +1,8 @@
 ---
 title: <xsl:strip-space>
 slug: Web/XSLT/Element/strip-space
-tags:
-  - XSLT
-  - strip-space
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/strip-space
 ---
+
 {{ XsltRef() }}
 
 `<xsl:strip-space>` 要素は空白を削除する必要があるソースドキュメント内の要素を定義します。

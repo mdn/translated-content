@@ -1,21 +1,8 @@
 ---
 title: SVG 属性リファレンス
 slug: Web/SVG/Attribute
-tags:
-  - Drawing
-  - Landing
-  - Responsive Design
-  - SVG
-  - SVG Attribute
-  - SVG Reference
-  - SVG リファレンス
-  - SVG 属性
-  - Vector Graphics
-  - ベクターグラフィックス
-  - レスポンシブデザイン
-  - 描画
-translation_of: Web/SVG/Attribute
 ---
+
 {{SVGRef}}
 
 SVG 要素は、要素の扱いや描画の詳細を指定する属性を使って変更できます。以下は、すべての SVG 属性のリストです。各属性のリンク先のドキュメンテーションでは、どの要素が属性をサポートしているか、どのように動作するかを学ぶことができます。

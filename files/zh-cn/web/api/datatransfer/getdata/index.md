@@ -2,11 +2,12 @@
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`DataTransfer.getData()`** 方法接受指定类型的拖放（以{{domxref("DOMString")}}的形式）数据。如果拖放行为没有操作任何数据，会返回一个空字符串。
 
-数据类型有：`text/plain`，`text/uri-list。`
+数据类型有：`text/plain`，`text/uri-list`。
 
 ## 语法
 
@@ -87,8 +88,8 @@ function drop(dropevent) {
 
 ## 参见
 
-- [HTML 拖放 API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖拽操作](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推荐的拖拽类型](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖拽和放置多个项目](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [拖拽和放置多个项目](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

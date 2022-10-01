@@ -2,6 +2,7 @@
 title: 'Document: readystatechange 事件'
 slug: Web/API/Document/readystatechange_event
 ---
+
 {{APIRef}}
 
 当文档的 {{domxref("Document.readyState", "readyState")}} 属性发生改变时，会触发 `readystatechange` 事件。
@@ -110,7 +111,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.readystatechange_event")}}
+{{Compat}}
 
 IE 浏览器是一直支持 `readystatechange` 事件的，可作为 [DOMContentLoaded](</zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_(event)>) 事件的替代方法（参见[Browser compatibility](/zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_%28event%29#Browser_compatibility)的注释 \[2]）。
 

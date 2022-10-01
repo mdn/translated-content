@@ -1,16 +1,8 @@
 ---
 title: '<content>: シャドウ DOM のコンテンツのプレイスホルダー要素'
 slug: Web/HTML/Element/content
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - NeedsContent
-  - Reference
-  - Web
-  - Web Components
-translation_of: Web/HTML/Element/content
 ---
+
 {{Deprecated_header}}
 
 **HTML の `<content>` 要素**は、一連の[ウェブコンポーネント](/ja/docs/Web/Web_Components)技術の廃止された部分であり、 [Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM) の中で {{glossary("insertion point")}} として使われていましたが、通常の HTML で利用することは意図されていませんでした。現在では DOM の中で Shadow DOM を挿入することができる場所を作成する {{HTMLElement("slot")}} 要素に置き換えられました。
@@ -60,7 +52,7 @@ translation_of: Web/HTML/Element/content
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/HTML/Global_attributes "HTML/Global attributes")を持ちます。
+この要素は[グローバル属性](/ja/docs/HTML/Global_attributes)を持ちます。
 
 - `select`
   - : コンマ区切りで複数のセレクターを指定できます。これらは CSS セレクターと同じ文法です。 `<content>` 要素が指定された場所に挿入する内容を指定します。

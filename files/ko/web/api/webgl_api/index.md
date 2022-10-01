@@ -64,9 +64,9 @@ WebGL 2는 {{domxref("WebGL2RenderingContext")}} 인터페이스를 통해 제�
 
 - [WebGL의 데이터](/ko/docs/Web/API/WebGL_API/Data)
   - : WebGL 코드를 작성할 때 사용하는 변수, 버퍼와 그 외 다른 형태의 데이터를 알아봅니다.
-- [WebGL 우수 사례](/ko/docs/Web/WebGL/WebGL_best_practices "WebGL/WebGL best practices")
+- [WebGL 우수 사례](/ko/docs/Web/WebGL/WebGL_best_practices)
   - : WebGL 콘텐츠의 품질, 성능, 안정성을 높일 수 있는 팁과 제안입니다.
-- [확장 사용](/ko/docs/Web/WebGL/Using_Extensions "WebGL/Using_Extensions")
+- [확장 사용](/ko/docs/Web/WebGL/Using_Extensions)
   - : WebGL 확장을 사용하는 법을 알아봅니다.
 
 ### 자습서

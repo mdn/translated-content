@@ -1,17 +1,8 @@
 ---
 title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - KeyboardEvent
-  - Method
-  - Reference
-  - Non Standard
-translation_of: Web/API/KeyboardEvent/initKeyEvent
 ---
+
 {{APIRef("UI Events")}}
 
 > **Warning:** このメソッドを使わないでください。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。

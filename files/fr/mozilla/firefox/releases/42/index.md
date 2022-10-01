@@ -10,6 +10,7 @@ tags:
   - TopicStub
 translation_of: Mozilla/Firefox/Releases/42
 ---
+
 {{FirefoxSidebar}}
 
 ## Changements pour les développeurs Web
@@ -72,7 +73,7 @@ Notre implémentation expérimentale de l'[API Web Animations](/fr/docs/Web/API/
 - La propriété {{domxref('AnimationPlayer.playbackRate')}} ({{bug(1127380)}}).
 - Les interface {{domxref('CSSAnimation')}} et {{domxref('CSSTransition')}} ({{bug(1178186)}}).
 - La méthode {{domxref('Animation.reverse()')}} ({{bug(1150808)}}).
-- L'interface {{domxref('AnimationPlaybackEvent')}} a été ajoutée et {{event('cancel')}} et {{event('finish')}} sont maintenant déclenchés sur {{domxref('Animation')}} ({{bug(1178664)}}).
+- L'interface {{domxref('AnimationPlaybackEvent')}} a été ajoutée et [`cancel`](/fr/docs/Web/API/Animation/cancel_event) et [`finish`](/fr/docs/Web/API/Animation/finish_event) sont maintenant déclenchés sur {{domxref('Animation')}} ({{bug(1178664)}}).
 
 #### Composants Web
 

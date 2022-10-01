@@ -1,17 +1,8 @@
 ---
 title: Cache.match()
 slug: Web/API/Cache/match
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - match
-translation_of: Web/API/Cache/match
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Cache")}} インターフェイスの **`match()`** メソッドは、{{domxref("Cache")}} オブジェクトで最初に一致したリクエストに関連付けられた {{domxref("Response")}} に解決される {{jsxref("Promise")}} を返します。 一致が見つからない場合、{{jsxref("Promise")}} は {{jsxref("undefined")}} に解決されます。

@@ -1,16 +1,9 @@
 ---
 title: ProgressEvent.initProgressEvent()
 slug: conflicting/Web/API/ProgressEvent
-tags:
-  - API
-  - 非推奨
-  - メソッド
-  - 進捗イベント
-  - ProgressEvent
-translation_of: Web/API/ProgressEvent/initProgressEvent
 original_slug: Web/API/ProgressEvent/initProgressEvent
-browser-compat: api.ProgressEvent.initProgressEvent
 ---
+
 {{apiref("DOM Events")}} {{deprecated_header}}{{non-standard_header}}
 
 **`ProgressEvent.initProgressEvent()`** メソッドは、非推奨の {{domxref("Document.createEvent()", "Document.createEvent(\"ProgressEvent\")")}} メソッドを使用して生成されたアニメーションイベントを初期化します。

@@ -1,18 +1,8 @@
 ---
 title: <time>
 slug: Web/HTML/Element/time
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML5
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/time
 ---
+
 {{HTMLRef}}
 
 HTML の **`<time>` 要素**は、特定の時の区間を表します。 `datetime` 属性を使用して、機械可読な形式の日付を記述することができ、検索エンジンの結果を改善したりリマインダーなどの独自機能に使用したりすることができます。

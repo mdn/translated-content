@@ -2,6 +2,7 @@
 title: Class (クラス)
 slug: Glossary/Class
 ---
+
 {{glossary("OOP","オブジェクト指向プログラミング")}}では、*クラス*は{{glossary("object","オブジェクト")}}の特徴を定義します。クラスはオブジェクトの{{glossary("property","プロパティ")}}や{{glossary("method","メソッド")}}のひな形定義であり、オブジェクトのより具体的なインスタンスが描かれる「青写真」です。
 
 ## 詳細情報

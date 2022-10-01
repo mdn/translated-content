@@ -1,21 +1,8 @@
 ---
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
-tags:
-  - API
-  - CSSOM View
-  - DOM
-  - マウスイベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - UI イベント
-  - イベント
-  - pageX
-translation_of: Web/API/MouseEvent/pageX
-browser-compat: api.MouseEvent.pageX
 ---
+
 {{APIRef("CSSOM View")}}
 
 **`pageX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、マウスがクリックされた位置の X（水平）座標を、文書全体の左端からの相対座標で返します。

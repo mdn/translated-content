@@ -1,8 +1,8 @@
 ---
 title: tabs.get()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/get
 ---
+
 {{AddonSidebar()}}
 
 タブの ID を指定し、{{WebExtAPIRef("tabs.Tab")}}オブジェクトとしてタブの詳細を取得します。

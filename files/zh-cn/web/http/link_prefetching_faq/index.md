@@ -2,6 +2,7 @@
 title: Link prefetching FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
 ---
+
 ### 什么是链接预取？
 
 链接预取是一种浏览器机制，其利用浏览器空闲时间来下载或预取用户在不久的将来可能访问的文档。网页向浏览器提供一组预取提示，并在浏览器完成当前页面的加载后开始静默地拉取指定的文档并将其存储在缓存中。当用户访问其中一个预取文档时，便可以快速的从浏览器缓存中得到。
@@ -14,17 +15,17 @@ slug: Web/HTTP/Link_prefetching_FAQ
 
 浏览器会查找关系类型 (rel) 为 next 或 prefetch 的 HTML{{ HTMLElement("link") }} 或 [HTTP `Link:` header](/zh-CN/docs/Web/HTTP/Headers)。下面是一个使用 link 标签的例子：
 
-```plain
+```html
 <link rel="prefetch" href="/images/big.jpeg">
 ```
 
-同样效果的使用 HTTP Link: header 的例子：
+同样效果的使用 HTTP `Link:` header 的例子：
 
 ```plain
 Link: </images/big.jpeg>; rel=prefetch
 ```
 
-Link: header 也可以通过使用 HTML meta 标签定义在 HTML 文档中：
+`Link:` header 也可以通过使用 HTML meta 标签定义在 HTML 文档中：
 
 ```plain
 <meta http-equiv="Link" content="</images/big.jpeg>; rel=prefetch">

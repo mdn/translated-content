@@ -1,14 +1,9 @@
 ---
 title: テキストの描画
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-tags:
-  - キャンバス
-  - グラフィック
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Drawing_text_using_a_canvas
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 前の章で[スタイルや色を適用する](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)方法を見た後は、キャンバスにテキストを描画する方法を見ていきます。

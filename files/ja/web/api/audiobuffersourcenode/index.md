@@ -1,8 +1,8 @@
 ---
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
-translation_of: Web/API/AudioBufferSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioBufferSourceNode`** は{{domxref("AudioScheduledSourceNode")}}を継承するインタフェースで、{{domxref("AudioBuffer")}}に保存されたインメモリ音声データからなるオーディオソースを表します。`AudioBufferSourceNode`は、再生するタイミングに高い正確性が求められる音声を繰り返し再生する場合特に有益です。例えば、特定のリズムに合わせて、ディスクやネットワークからではなくメモリから読みだした音声を再生するといった場合です。正確なタイミングで音声を再生したいものの、音声データがディスクやネットワークから読み込まれる必要がある場合は{{domxref("AudioWorkletNode")}}を使用してください。
@@ -72,9 +72,9 @@ _親である{{domxref("AudioNode")}}のメソッドを継承しています。_
 
 ## 例
 
-次の例は、2 秒間のバッファを生成し、ホワイトノイズを書き込み、[`AudioBufferSourceNode`](/ja/docs/Web/API/AudioBufferSourceNode "The AudioBufferSourceNode インタフェーエスはメモリ上にある音声データ (AudioBuffer) を扱うオーディオソースを表します。このオブジェクトはオーディオソースとなる AudioNode です。")で再生します。コメントは何をしているかを簡単に説明しています。
+次の例は、2 秒間のバッファを生成し、ホワイトノイズを書き込み、[`AudioBufferSourceNode`](/ja/docs/Web/API/AudioBufferSourceNode)で再生します。コメントは何をしているかを簡単に説明しています。
 
-> **Note:** **注:** [コードをすぐに実行する](https://mdn.github.io/webaudio-examples/audio-buffer/)ことや、[ソースコードを閲覧する](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)こともできます。
+> **Note:** [コードをすぐに実行する](https://mdn.github.io/webaudio-examples/audio-buffer/)ことや、[ソースコードを閲覧する](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)こともできます。
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -116,7 +116,7 @@ button.onclick = function() {
 }
 ```
 
-> **Note:** **注:** `decodeAudioData`の例は、{{domxref("AudioContext.decodeAudioData")}}のページを参照してください。
+> **Note:** `decodeAudioData`の例は、{{domxref("AudioContext.decodeAudioData")}}のページを参照してください。
 
 ## 仕様
 

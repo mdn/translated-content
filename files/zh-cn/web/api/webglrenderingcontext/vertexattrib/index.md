@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.vertexAttrib[1234]f[v]()
 slug: Web/API/WebGLRenderingContext/vertexAttrib
 ---
+
 {{APIRef("WebGL")}}
 
-**`WebGLRenderingContext.vertexAttrib[1234]f[v]()`** 是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的方法，可以为顶点 attibute 变量赋值。
+**`WebGLRenderingContext.vertexAttrib[1234]f[v]()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的方法，可以为顶点 attibute 变量赋值。
 
 ## 语法
 
@@ -50,7 +51,7 @@ gl.vertexAttrib3fv(a_foobar, floatArray);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.vertexAttrib1f")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -1,12 +1,8 @@
 ---
 title: lang
 slug: Web/HTML/Global_attributes/lang
-tags:
-  - HTML
-  - Reference
-  - グローバル属性
-translation_of: Web/HTML/Global_attributes/lang
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`lang`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素の言語の定義に使われます。編集不可の要素では記述されている言語、また、編集可能な要素ではユーザーが書き込むべき言語です。属性には単一の「言語タグ」を [_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt) で定義された書式で持ちます。

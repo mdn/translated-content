@@ -1,10 +1,8 @@
 ---
 title: ネイティブメッセージング
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
+
 {{AddonSidebar}}
 
 **ネイティブメッセージング**はユーザーのコンピューターにインストールされたアプリケーションと拡張機能との間のメッセージ交換を可能にします。ネイティブメッセージングにより、拡張機能が追加のウェブを介したアクセスなしにサービスを提供できます。

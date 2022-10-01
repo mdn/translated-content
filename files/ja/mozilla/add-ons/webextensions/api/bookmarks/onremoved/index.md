@@ -1,18 +1,8 @@
 ---
 title: bookmarks.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
 ---
+
 {{AddonSidebar()}}
 
 ブックマークやフォルダが削除された際に発火します。フォルダが再帰的に削除された場合は、そのフォルダに対して 1 回だけ発火し、そのフォルダの中身に関しては発火しません。

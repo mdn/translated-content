@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-browser-compat: api.CanvasRenderingContext2D.lineTo
-translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
+
 {{APIRef}}
 
 {{domxref("CanvasRenderingContext2D")}} の **`lineTo()`** はキャンバス 2D API のメソッドで、現在のサブパスに対して、その終点から指定された `(x, y)` 座標に向けて直線を追加します。

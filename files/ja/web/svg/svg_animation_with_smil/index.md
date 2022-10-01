@@ -1,8 +1,8 @@
 ---
 title: SVG animation with SMIL
 slug: Web/SVG/SVG_animation_with_SMIL
-translation_of: Web/SVG/SVG_animation_with_SMIL
 ---
+
 Firefox 4 より、[Synchronized Multimedia Integration Language](http://www.w3.org/TR/REC-smil) (SMIL) を用いた [SVG](/ja/SVG) のアニメーションをサポートしています。SMIL では以下のようなことができます:
 
 - 要素の数値属性 (x, y など) のアニメーション
@@ -59,7 +59,7 @@ Firefox 4 より、[Synchronized Multimedia Integration Language](http://www.w3.
        <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
        <rect x="0" y="50" width="15" height="34" fill="blue" stroke="black" stroke-width="1" transform="rotation">
 
-			<animateTransform
+   <animateTransform
             attributeName="transform"
             begin="0s"
             dur="20s"
@@ -69,7 +69,7 @@ Firefox 4 より、[Synchronized Multimedia Integration Language](http://www.w3.
             to="360 100 60"
             <!-- 図形が存在しなくなるまでアニメーションを続ける -->
             repeatCount="indefinite"
-			/>
+   />
        </rect>
      </svg>
   </body>
@@ -95,12 +95,12 @@ The {{ SVGElement("animateMotion") }} 要素は、パスに従った SVG 要素�
        <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
        <rect x="0" y="50" width="15" height="34" fill="blue" stroke="black" stroke-width="1" transform="rotation">
 
-			<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
-				<rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-				<circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
-					<animateMotion path="M 0 0 H 300 Z" dur="3s" repeatCount="indefinite" />
-				</circle>
-			</svg>
+   <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
+    <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
+    <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
+     <animateMotion path="M 0 0 H 300 Z" dur="3s" repeatCount="indefinite" />
+    </circle>
+   </svg>
        </rect>
      </svg>
   </body>
@@ -124,7 +124,7 @@ The {{ SVGElement("animateMotion") }} 要素は、パスに従った SVG 要素�
         <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
         <rect x="0" y="0" width="20" height="50" fill="blue" stroke="black" stroke-width="1">
             <animateMotion path="M 50,100 Q40,75 90,70Q95,60 95,50Q180,40 170,100Z"
-				    dur="3s" repeatCount="indefinite" rotate="auto">
+        dur="3s" repeatCount="indefinite" rotate="auto">
         </rect>
     </svg>
   </body>
@@ -133,6 +133,6 @@ The {{ SVGElement("animateMotion") }} 要素は、パスに従った SVG 要素�
 
 ## 参考情報
 
-- [SVG](/ja/SVG "en/SVG")
+- [SVG](/ja/SVG)
 - [SVG Animation Specification](http://www.w3.org/TR/SVG/animate.html)
 - [SMIL Specification](http://www.w3.org/TR/REC-smil)

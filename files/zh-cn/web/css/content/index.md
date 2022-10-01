@@ -2,6 +2,7 @@
 title: content
 slug: Web/CSS/content
 ---
+
 {{ CSSRef() }}
 
 ## 概要
@@ -227,7 +228,7 @@ li {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.content")}}
+{{Compat}}
 
 ## 参考
 

@@ -3,6 +3,7 @@ title: Constructeur Intl.DateTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.DateTimeFormat()`** permet de créer des objets [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) qui formatent des horodatages en tenant compte de la locale et des options fournies.

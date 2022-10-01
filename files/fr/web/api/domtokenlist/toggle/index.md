@@ -4,6 +4,7 @@ slug: Web/API/DOMTokenList/toggle
 translation_of: Web/API/DOMTokenList/toggle
 browser-compat: api.DOMTokenList.toggle
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`toggle()`** (qui signifie _basculer_ en anglais) de l'interface [`DOMTokenList`](/fr/docs/Web/API/DOMTokenList) supprime un jeton (_token_) donné de la liste et renvoie `false`. Si _token_ n'existe pas, il est ajouté et la fonction renvoie `true`.

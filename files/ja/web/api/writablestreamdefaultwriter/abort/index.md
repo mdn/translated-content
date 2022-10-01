@@ -1,16 +1,8 @@
 ---
 title: WritableStreamDefaultWriter.abort()
 slug: Web/API/WritableStreamDefaultWriter/abort
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - abort
-translation_of: Web/API/WritableStreamDefaultWriter/abort
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`abort()`** メソッドはストリームを中止し、プロデューサーがストリームに正常に書き込むことができなくなり、キューに書き込まれた書き込みを破棄してすぐにエラー状態に移行することを通知します。

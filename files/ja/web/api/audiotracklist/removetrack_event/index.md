@@ -1,13 +1,8 @@
 ---
 title: 'AudioTrackList: removetrack イベント'
 slug: Web/API/AudioTrackList/removetrack_event
-tags:
-  - AudioTrackList
-  - Event
-  - events
-  - removeTrack
-translation_of: Web/API/AudioTrackList/removetrack_event
 ---
+
 {{APIRef}}
 
 `removeTrack` イベントは、トラックが {{domxref("AudioTrackList")}} から取り除かれたときに発生します。

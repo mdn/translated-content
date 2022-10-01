@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/byteOffset
 ---
+
 {{JSRef}}
 
 La propriété **`byteOffset`** est un accesseur qui représente le décalage, exprimé en octets, entre le début du tableau typé par rapport au début du {{jsxref("ArrayBuffer")}} correspondant.

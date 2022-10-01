@@ -1,21 +1,9 @@
 ---
 title: BaseAudioContext.createGain()
 slug: Web/API/BaseAudioContext/createGain
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ボリューム制御
-  - ウェブ音声 API
-  - createGain
-  - sound
-browser-compat: api.BaseAudioContext.createGain
-translation_of: Web/API/BaseAudioContext/createGain
 original_slug: Web/API/AudioContext/createGain
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createGain()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("GainNode") }} を生成します。これは、音声グラフの全体的なゲイン（音量）を調整するのに使用します。

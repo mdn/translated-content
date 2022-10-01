@@ -1,12 +1,8 @@
 ---
 title: CSS テキスト
 slug: Web/CSS/CSS_Text
-tags:
-  - CSS
-  - CSS テキスト
-  - ガイド
-translation_of: Web/CSS/CSS_Text
 ---
+
 {{CSSRef}}
 
 **CSS テキスト** (CSS Text) は CSS のモジュールの一つで、どのようにテキストを扱うか、例えば改行、位置揃えと配置、空白の扱い、テキストの変換などを定義します。

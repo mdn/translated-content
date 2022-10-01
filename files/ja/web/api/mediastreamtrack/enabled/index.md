@@ -1,20 +1,8 @@
 ---
 title: MediaStreamTrack.enabled
 slug: Web/API/MediaStreamTrack/enabled
-page-type: web-api-instance-property
-tags:
-  - Media
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Muting a Media Track
-  - Muting a Track
-  - Property
-  - Reference
-  - WebRTC
-  - enabled
-browser-compat: api.MediaStreamTrack.enabled
-translation_of: Web/API/MediaStreamTrack/enabled
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`enabled`** は {{domxref("MediaStreamTrack")}} インターフェイスのプロパティで、このトラックがソースストリームから出力が許可されている場合は `true`、そうでない場合は `false` となる論理値です。これは意図的にトラックをミュートするために使用することができます。

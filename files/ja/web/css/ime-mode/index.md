@@ -1,14 +1,8 @@
 ---
 title: ime-mode
 slug: Web/CSS/ime-mode
-tags:
-  - CSS
-  - CSS プロパティ
-  - Deprecated
-  - recipe:css-property
-browser-compat: css.properties.ime-mode
-translation_of: Web/CSS/ime-mode
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 **`ime-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストフィールドで Input Method Editor (以下 IME) をコントロールします。このプロパティは廃止されました。

@@ -1,7 +1,6 @@
 ---
 title: CSS 선택자
 slug: Learn/CSS/Building_blocks/Selectors
-translation_of: Learn/CSS/Building_blocks/Selectors
 original_slug: Learn/CSS/Building_blocks/선택자
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}

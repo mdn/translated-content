@@ -2,6 +2,7 @@
 title: AbortSignal.abort()
 slug: Web/API/AbortSignal/abort
 ---
+
 {{APIRef("DOM")}}
 
 静态方法 **`AbortSignal.abort()`** 返回一个已经设置为中止的 {{domxref("AbortSignal")}}（并且不会触发 {{domxref("AbortSignal/abort_event","abort")}} 事件）。

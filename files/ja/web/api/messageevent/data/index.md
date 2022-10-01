@@ -1,17 +1,8 @@
 ---
 title: MessageEvent.data
 slug: Web/API/MessageEvent/data
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - プロパティ
-  - リファレンス
-  - data
-  - messaging
-browser-compat: api.MessageEvent.data
-translation_of: Web/API/MessageEvent/data
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`data`** は {{domxref("MessageEvent")}} インターフェイスのプロパティで、このメッセージの送信元が送信するデータを表します。

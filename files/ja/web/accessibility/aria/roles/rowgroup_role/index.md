@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: rowgroup ロール'
 slug: Web/Accessibility/ARIA/Roles/Rowgroup_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Rowgroup_Role
 ---
+
 行グループロール (`role="rowgroup"`) を持つ要素は、表形式の構造内の行 ([`row`](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role)) のグループです。 行グループ (`rowgroup`) には、グリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role))、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role))、ツリーグリッド ([`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role)) 内のセル ([`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role))、グリッドセル ([`gridcell`](/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role))、列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role))、行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_Role)) の行が 1 つ以上含まれます。
 
 ```html
@@ -144,4 +140,4 @@ ARIA の表ヘッダー、表フッター、表本体を作成するには、行
 - [HTML の表フッター](/ja/docs/Web/HTML/Element/tfoot)
 - [HTML の表ヘッダー](/ja/docs/Web/HTML/Element/thead)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

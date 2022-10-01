@@ -1,16 +1,10 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Polyfill
-browser-compat: javascript.builtins.unescape
-translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 l10n:
   sourceCommit: 1931ea17c117b5eafa315c638e70429e500bdca9
 ---
+
 {{jsSidebar("Objects")}}
 
 > **Warning:** `unescape()` は厳密には (「ウェブ標準から削除された」という意味では) 非推奨になっていませんが、 ECMA-262 標準の [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) において定義されており、導入部で次のように位置付けられています。

@@ -1,15 +1,8 @@
 ---
 title: MouseEvent.offsetX
 slug: Web/API/MouseEvent/offsetX
-tags:
-  - API
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.offsetX
-translation_of: Web/API/MouseEvent/offsetX
 ---
+
 {{APIRef("DOM Events")}}
 
 **`offsetX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、このイベントと対象ノードのパディング辺との間のマウスポインターの X 座標におけるオフセットを提供します。

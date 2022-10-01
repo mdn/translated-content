@@ -1,20 +1,9 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
-tags:
-  - CSS
-  - CSS 画像
-  - CSS 関数
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
-translation_of: Web/CSS/gradient/linear-gradient()
 original_slug: Web/CSS/gradient/linear-gradient()
-browser-compat: css.types.image.gradient.linear-gradient
 ---
+
 {{CSSRef}}
 
 **`linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二つ以上の色の連続的な直線に沿った変化から構成される画像を生成します。結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。

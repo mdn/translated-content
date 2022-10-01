@@ -1,14 +1,8 @@
 ---
 title: CSSRule.cssText
 slug: Web/API/CSSRule/cssText
-tags:
-  - API
-  - CSSOM
-  - プロパティ
-  - リファレンス
-browser-compat: api.CSSRule.cssText
-translation_of: Web/API/CSSRule/cssText
 ---
+
 {{APIRef("CSSOM") }}
 
 **`cssText`** は {{domxref("CSSRule")}} インターフェイスのプロパティで、 {{domxref("CSSStyleSheet")}} スタイルルールの実際のテキストを返します。

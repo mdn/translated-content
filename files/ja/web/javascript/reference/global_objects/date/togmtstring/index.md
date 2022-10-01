@@ -1,20 +1,13 @@
 ---
 title: Date.prototype.toGMTString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
-tags:
-  - Date
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`toGMTString()`** メソッドは、インターネットグリニッジ標準時 (GMT) 協定に基づき、日付を文字列へ変換します。`toGMTString()` が返す値の正確な書式は、プラットフォームやブラウザによって変化しますが、一般に、人間が読める日付の文字列を表します。
 
-> **Note:** **注:** `toGMTString()` は非推奨であり、もはや使われていません。後方互換性のためだけに残されています。代わりに、{{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} を使用してください。
+> **Note:** `toGMTString()` は非推奨であり、もはや使われていません。後方互換性のためだけに残されています。代わりに、{{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} を使用してください。
 
 ## 構文
 

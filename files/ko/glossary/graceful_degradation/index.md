@@ -1,10 +1,6 @@
 ---
 title: 단계적 기능 축소
 slug: Glossary/Graceful_degradation
-tags:
-  - 단계적 기능 축소
-  - 우아한 낮춤
-translation_of: Glossary/Graceful_degradation
 ---
 **단계적 기능 축소**는 최신 브라우저에서 동작하는 웹 사이트 / 응용 프로그램 구축에 주력하는 설계 철학이다. 그러나 오래된 브라우저에서는 비록 좋지 않은 경험이라 할 지라도 필수 콘텐츠와 기능을 여전히 제공한다.
 

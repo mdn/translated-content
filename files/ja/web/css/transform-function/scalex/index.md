@@ -1,16 +1,9 @@
 ---
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/scaleX()
 original_slug: Web/CSS/transform-function/scaleX()
-browser-compat: css.types.transform-function.scaleX
 ---
+
 {{CSSRef}}
 
 **`scaleX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を X 軸に沿って (水平に) 変倍する変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

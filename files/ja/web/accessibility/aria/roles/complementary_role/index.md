@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: complementary ロール'
 slug: Web/Accessibility/ARIA/Roles/Complementary_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Complementary_role
 ---
+
 補足 (`complementary`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、メインコンテンツに関連する補助セクションを指定するために使用され、しかも分離しても単独で成り立つことができます。 これらのセクションは、サイドバーやコールアウトボックスとして表示されることがよくあります。 可能であれば、代わりに HTML の {{htmlelement("aside")}} 要素を使用してください。
 
 ```html
@@ -98,4 +94,4 @@ TBD
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Aside Revisited | HTML5 Doctor](http://html5doctor.com/aside-revisited/)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

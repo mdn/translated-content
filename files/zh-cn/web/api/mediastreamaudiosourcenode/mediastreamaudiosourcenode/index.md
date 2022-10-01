@@ -2,6 +2,7 @@
 title: MediaStreamAudioSourceNode.MediaStreamAudioSourceNode()
 slug: Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`MediaStreamAudioSourceNode()`**构造器创建一个新的 {{domxref("MediaStreamAudioSourceNode")}}对象实例。
@@ -60,4 +61,4 @@ if (navigator.mediaDevices.getUserMedia) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStreamAudioSourceNode.MediaStreamAudioSourceNode")}}
+{{Compat}}

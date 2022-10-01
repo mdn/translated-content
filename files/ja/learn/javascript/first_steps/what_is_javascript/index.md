@@ -4,6 +4,7 @@ slug: Learn/JavaScript/First_steps/What_is_JavaScript
 l10n:
   sourceCommit: e0e09686eb5ce3db9686ecb24bc1e4b08d1d0437
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 MDN 初心者向け JavaScript コースへようこそ！ この最初の記事では、高水準から JavaScript を見ていき、「JavaScript とは何か？」「これを使うと何ができるか？」などの質問に答えます。 JavaScript の用途にきっちりと親しめるようになります。
@@ -208,7 +209,7 @@ JavaScript は CSS と同じような方法で、HTML ページに適用する�
    </script>
    ```
 
-4.  それでは {{htmlelement("script")}} 要素内に JavaScript を書いて、もうちょっと面白いことをしてみましょう。「// JavaScript をここに書きます」と書いてあるすぐ下に、以下のコードを追加してください。
+4. それでは {{htmlelement("script")}} 要素内に JavaScript を書いて、もうちょっと面白いことをしてみましょう。「// JavaScript をここに書きます」と書いてあるすぐ下に、以下のコードを追加してください。
 
    ```js
    document.addEventListener('DOMContentLoaded', () => {
@@ -246,7 +247,7 @@ JavaScript は CSS と同じような方法で、HTML ページに適用する�
    <script src="script.js" defer></script>
    ```
 
-3.  `script.js` に、次のスクリプトを追加します。
+3. `script.js` に、次のスクリプトを追加します。
 
    ```js
    function createParagraph() {

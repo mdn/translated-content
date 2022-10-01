@@ -2,6 +2,7 @@
 title: Guide to scroll anchoring
 slug: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
 ---
+
 {{CSSRef}}
 
 As a user of the web, you are probably familiar with the problem that scroll anchoring solves. You browse to a long page on a slow connection and begin to scroll to read the content; while you are busy reading, the part of the page you are looking at suddenly jumps. This has happened because large images or some other elements have just loaded further up in the content.
@@ -78,4 +79,4 @@ Additionally, {{cssxref("position")}} changes anywhere inside the scrolling box 
 
 If you need to test whether scroll anchoring is available in a browser, use [Feature Queries](/zh-CN/docs/Web/CSS/@supports) to test support for the `overflow-anchor` property.
 
-{{Compat("css.properties.overflow-anchor")}}
+{{Compat}}

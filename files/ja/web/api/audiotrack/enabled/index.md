@@ -1,23 +1,8 @@
 ---
 title: AudioTrack.enabled
 slug: Web/API/AudioTrack/enabled
-page-type: web-api-instance-property
-tags:
-  - Audio
-  - AudioTrack
-  - HTML DOM
-  - Media
-  - Media Controls
-  - Media Track
-  - Property
-  - Reference
-  - Video
-  - enabled
-  - mute
-  - track
-browser-compat: api.AudioTrack.enabled
-translation_of: Web/API/AudioTrack/enabled
 ---
+
 {{APIRef("HTML DOM")}}
 
 **{{domxref("AudioTrack")}}** の **`enabled`** プロパティは、記述された音声トラックが現在使用可能かどうかを指定します。 `enabled` を `false` に設定してトラックを無効にすると、トラックはミュートになり、音声は生成されません。

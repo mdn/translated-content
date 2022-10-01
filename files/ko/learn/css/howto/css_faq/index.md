@@ -1,7 +1,6 @@
 ---
 title: 공통된 CSS 질문들
 slug: Learn/CSS/Howto/CSS_FAQ
-translation_of: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Common_CSS_Questions
 ---
 ## 왜 유효한 내 CSS가 왜 올바르게 그려지지 않는가?
@@ -63,7 +62,7 @@ h1 { color: red; }
 h1 { color: black; }
 ```
 
-이것은 CSS 2에서 변경되었다. 키워드 [initial](https://developer.mozilla.org/es/CSS/initial "initial")은 이제 CSS 속성에서 유효한 값이다. 지정된 속성의 CSS 사양에 정의 된 기본값으로 재설정된다.
+이것은 CSS 2에서 변경되었다. 키워드 [initial](https://developer.mozilla.org/es/CSS/initial)은 이제 CSS 속성에서 유효한 값이다. 지정된 속성의 CSS 사양에 정의 된 기본값으로 재설정된다.
 
 ```
 /* Heading default color is black */

@@ -2,6 +2,7 @@
 title: background-size
 slug: Web/CSS/background-size
 ---
+
 {{CSSRef}}
 
 `background-size` 设置背景图片大小。图片可以保有其原有的尺寸，或者拉伸到新的尺寸，或者在保持其原有比例的同时缩放到元素的可用空间的尺寸。
@@ -105,7 +106,7 @@ background-size: unset;
 
 当通过宽度和高度值来设定尺寸时，你可以提供一或者两个数值：
 
-- 如果仅有一个数值被给定，这个数值将作为宽度值大小，高度值将被设定为`auto。`
+- 如果仅有一个数值被给定，这个数值将作为宽度值大小，高度值将被设定为 `auto`。
 - 如果有两个数值被给定，第一个将作为宽度值大小，第二个作为高度值大小。
 
 `每个值可以是<length>`, 是 [`<percentage>`](/zh-CN/docs/Web/CSS/background-size#percentage), 或者 [`auto`](/zh-CN/docs/Web/CSS/background-size#auto).
@@ -164,7 +165,7 @@ background-size: 50% 25%, contain, 3em;
 
 ### Formal syntax
 
-[如何阅读 CSS 语法。](https://developer.mozilla.org/docs/Web/CSS/Value_definition_syntax)
+[如何阅读 CSS 语法。](/docs/Web/CSS/Value_definition_syntax)
 
 {{csssyntax}}
 
@@ -201,7 +202,7 @@ background-size: 50% 25%, contain, 3em;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-size")}}
+{{Compat}}
 
 ## Polyfills and Workarounds
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-bottom-right-radius
 ---
+
 {{CSSRef}}
 
 La propriété **`border-bottom-right-radius`** définit le rayon de courbure de la bordure pour le coin en bas à droite de la boîte. L'arrondi peut être un fragment de cercle ou d'ellipse. Si une des valeurs vaut `0`, aucun arrondi n'a lieu et le coin est un angle droit.

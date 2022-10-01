@@ -1,13 +1,8 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 ---
+
 {{JSRef}}
 
 **`handler.set()`** はプロパティの値を設定することに対するトラップです。

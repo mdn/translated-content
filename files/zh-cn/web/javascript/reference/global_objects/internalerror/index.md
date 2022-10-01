@@ -2,6 +2,7 @@
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`InternalError` 对象**表示出现在 JavaScript 引擎内部的错误。 例如： **"InternalError**: too much recursion"（内部错误：递归过深）。
@@ -23,7 +24,7 @@ new InternalError([message[, fileName[, lineNumber]]])
 
 ## 描述
 
-当 JavaScript 引擎出现内部错误时将会抛出`InternalError。`
+当 JavaScript 引擎出现内部错误时将会抛出 `InternalError`。
 
 示例场景通常为某些成分过大，例如：
 

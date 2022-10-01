@@ -2,6 +2,7 @@
 title: 文件系统 API 的基本概念
 slug: Web/API/File_and_Directory_Entries_API/Introduction
 ---
+
 本文是对[Basic_Concepts_About_the_Filesystem_API](/zh-CN/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)一文的译文。
 
 文件系统 API（File System API）模拟网络应用程序可以导航到的本地文件系统。你可以开发应用在一个沙盒的虚拟文件系统中读、写、创建以及索引文件。
@@ -10,15 +11,15 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 ## 关于这篇文档
 
-这篇介绍讨论了文件系统 API 中的基本概念和术语。它将给出一个大致的蓝图并引导你理解其中的 [关键概念](#concepts). 它也描述了一些[限制](#restrictions)，如果你忽略了它们将额能产生安全错误。关于该 API 中使用的更多术语，查看[定义](#definitions)部分.
+这篇介绍讨论了文件系统 API 中的基本概念和术语。它将给出一个大致的蓝图并引导你理解其中的 [关键概念](#concepts). 它也描述了一些[限制](#restrictions)，如果你忽略了它们将额能产生安全错误。关于该 API 中使用的更多术语，查看[定义](#definitions)部分。
 
-关于文件系统 API 的引用文献部分，查看[引用](/en/DOM/File_API/File_System_API/FileSystem) 的登陆页及其子页。
+关于文件系统 API 的引用文献部分，查看[引用](/zh-CN/DOM/File_API/File_System_API/FileSystem) 的登陆页及其子页。
 
 该规范仍然在定义中并可能会变更。
 
 ## 概要
 
-文件系统 API 包括[异步](/en/DOM/File_API/File_System_API#Asynchronous_APIs)和[同步](/en/DOM/File_API/File_System_API#Synchronous_APIs)两种接口。异步 API 可以应用于当你不想操作锁定 UI 的情况。另一方面，同步 API 允许简单的程序模型，但它必须和[WebWorkers 一起使用](/En/Using_web_workers).
+文件系统 API 包括[异步](/zh-CN/DOM/File_API/File_System_API#Asynchronous_APIs)和[同步](/zh-CN/DOM/File_API/File_System_API#Synchronous_APIs)两种接口。异步 API 可以应用于当你不想操作锁定 UI 的情况。另一方面，同步 API 允许简单的程序模型，但它必须和[WebWorkers 一起使用](/En/Using_web_workers).
 
 ### 该 API 的用途
 
@@ -33,7 +34,7 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 ### 文件系统 API 和其他存储 API
 
-文件系统 API 是一些其他存储 API，例如 [IndexedDB](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB), WebSQL(已于 2010 年 9 月 18 日起弃用)，以及 AppCache 等的替代品。该 API 对于那些处理 blob 的应用而言是一种更好的选择，因为：
+文件系统 API 是一些其他存储 API，例如 [IndexedDB](/zh-CN/IndexedDB/Basic_Concepts_Behind_IndexedDB), WebSQL(已于 2010 年 9 月 18 日起弃用)，以及 AppCache 等的替代品。该 API 对于那些处理 blob 的应用而言是一种更好的选择，因为：
 
 - 文件系统 API 提供客户端存储以应对不在数据库中存储的应用场景。如果你需要大型可变的数据块，比数据库而言它就是一种更有效率的存储解决方案。
 - 尽 管 Firefox 支持 IndexedDB 的 blob 存储，但是目前 Chrome 并非如此（Chrome 仍然在对 IndexedDB 的 blob 存储做实现支 持开发中）。如果你的应用面向 Chrome 并且你需要存储 blobs, 那么文件系统 API 和 App Cache 将是你唯一的选择。然而，AppCache 存储并不是本地可变的，并且不支持细粒度的客户端管理。
@@ -151,7 +152,7 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 你不能在本地通过 file://来运行你的应用。如果你那么做了，浏览器将抛出错误，或者你的应用会静默地失败。这一限制也同样针对许多其他的文件 API，包括 BlobBuilder 和 FileReader。
 
-出于测试的目的，你可以在 Chrome 中通过在启动时添加`--allow-file-access-from-files参数来绕开这一限制，这一参数仅用于这个目的。`
+出于测试的目的，你可以在 Chrome 中通过在启动时添加 `--allow-file-access-from-files` 参数来绕开这一限制，这一参数仅用于这个目的。
 
 ## 定义
 
@@ -168,9 +169,9 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 ## 其他
 
-规范:http\://dev.w3.org/2009/dap/file-system/pub/FileSystem/
+规范：<http://dev.w3.org/2009/dap/file-system/pub/FileSystem/>
 
-引用: [File System API Reference](/en/DOM/File_API/File_System_API)
+引用：[File System API Reference](/zh-CN/DOM/File_API/File_System_API)
 
 ## 参见
 

@@ -1,17 +1,8 @@
 ---
 title: MediaDevices.selectAudioOutput()
 slug: Web/API/MediaDevices/selectAudioOutput
-tags:
-  - API
-  - MediaDevices
-  - メソッド
-  - リファレンス
-  - WebRTC
-  - selectAudioOutput
-  - 実験的
-browser-compat: api.MediaDevices.selectAudioOutput
-translation_of: Web/API/MediaDevices/selectAudioOutput
 ---
+
 {{APIRef("WebRTC")}} {{SeeCompatTable}}
 
 {{domxref("MediaDevices")}} の **`selectAudioOutput()`** は、ユーザーに特定の音声出力機器、例えばスピーカーやヘッドフォンを選択するよう尋ねます。

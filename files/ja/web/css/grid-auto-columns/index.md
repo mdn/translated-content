@@ -1,14 +1,8 @@
 ---
 title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-browser-compat: css.properties.grid-auto-columns
-translation_of: Web/CSS/grid-auto-columns
 ---
+
 {{CSSRef}}
 
 **`grid-auto-columns`** は CSS のプロパティで、暗黙的に生成されたグリッドの列{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。

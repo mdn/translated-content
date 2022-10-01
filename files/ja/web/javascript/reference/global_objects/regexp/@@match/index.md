@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype[@@match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expression
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 ---
+
 {{JSRef}}
 
 **`[@@match]()`** メソッドは、*文字列*の*正規表現*に一致した部分を取得します。

@@ -1,15 +1,8 @@
 ---
 title: IDBDatabase.createObjectStore
 slug: Web/API/IDBDatabase/createObjectStore
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Storage
-  - createObjectStore
-translation_of: Web/API/IDBDatabase/createObjectStore
 ---
+
 {{ APIRef("IDBDatabase") }}
 
 {{domxref("IDBDatabase")}} インターフェイスの`createObjectStore()` メソッドは、新しいオブジェクトストアやインデックスを生成して返します。

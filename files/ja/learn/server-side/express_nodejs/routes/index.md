@@ -2,6 +2,7 @@
 title: 'Express チュートリアル Part 4: ルートとコントローラ'
 slug: Learn/Server-side/Express_Nodejs/routes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
 このチュートリアルでは、地域図書館 Web サイトで最終的に必要となるすべてのリソースエンドポイントに対して、"ダミー" ハンドラ関数を使用してルート (URL 処理コード) を設定します。完成すると、ルート処理コードのためのモジュール構造が得られます。これは、次の記事の実際のハンドラ関数で拡張できます。Express を使ってモジュラールートを作成する方法についても、非常によく理解しています。
@@ -97,7 +98,7 @@ The callback function here calls [`send()`](https://expressjs.com/en/4x/api.html
 
 The example routes above use the `Router.get()` method to respond to HTTP GET requests with a certain path.
 
-The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, ` m-``search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
+The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
 
 For example, the code below behaves just like the previous `/about` route, but only responds to HTTP POST requests.
 
@@ -118,7 +119,7 @@ Route paths can also be string patterns. String patterns use a subset of regular
 - \* : The endpoint may have an arbitrary string where the \* character is placed. E.g. a route path of `'ab\*cd'` will match endpoints `abcd`, `abXcd`, `abSOMErandomTEXTcd`, and so on.
 - () : Grouping match on a set of characters to perform another operation on. E.g. `'/ab(cd)?e'` will peform a ? match on (cd) —it will match `abe` and `abcde`.
 
-The route paths can also be JavaScript [regular expressions](/ja/docs/Web/JavaScript/Guide/Regular_Expressions). For example, the route path below will match `catfish `and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
+The route paths can also be JavaScript [regular expressions](/ja/docs/Web/JavaScript/Guide/Regular_Expressions). For example, the route path below will match `catfish` and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
 
 ```js
 app.get(/.*fish$/, function (req, res) {
@@ -396,7 +397,7 @@ The skeleton already has a **./routes** folder containing routes for the _index_
     catalog.js
 ```
 
-Open **/routes/\*\***catalog.js\*\* and copy in the code below:
+Open `/routes/catalog.js` and copy in the code below:
 
 ```js
 var express = require('express');

@@ -1,18 +1,8 @@
 ---
 title: MediaStreamTrack.muted
 slug: Web/API/MediaStreamTrack/muted
-page-type: web-api-instance-property
-tags:
-  - API
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-  - muted
-browser-compat: api.MediaStreamTrack.muted
-translation_of: Web/API/MediaStreamTrack/muted
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`muted`** は {{domxref("MediaStreamTrack")}} 読み取り専用のプロパティであり、トラックが現在メディア出力を提供できない状態であるかどうかを示します。

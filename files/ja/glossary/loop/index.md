@@ -2,6 +2,7 @@
 title: Loop (ループ)
 slug: Glossary/loop
 ---
+
 ループは、{{Glossary("computer programming","コンピュータプログラミング")}}において、一定の条件に遭遇するまで継続的に繰り返される一連の命令です。例えば、データ項目を取得して加工しながら、カウンターが所定の値に達するなどいくつかの{{Glossary("conditional","条件")}}をチェックするというような処理です。
 
 ## 例
@@ -62,10 +63,10 @@ while(i < 5){
 
 - コードブロックは変数 (i) が 5 未満である限り、実行が継続します。
 
-1.  General Knowledge
+1. General Knowledge
 
-    1.  Wikipedia の {{Interwiki("wikipedia", "制御構造#ループ", "制御構造")}}
+    1. Wikipedia の {{Interwiki("wikipedia", "制御構造#ループ", "制御構造")}}
 
-2.  [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("Loop", "ループ")}}
+    1. {{Glossary("Loop", "ループ")}}

@@ -1,21 +1,9 @@
 ---
 title: VRDisplay.resetPose()
 slug: Web/API/VRDisplay/resetPose
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDevice
-  - Virtual Reality
-  - WebVR
-  - resetPose()
-browser-compat: api.VRDisplay.resetPose
-translation_of: Web/API/VRDisplay/resetPose
 original_slug: Web/API/VRDevice/resetPose
 ---
+
 {{APIRef("WebVR API")}}{{deprecated_header}}
 
 **`resetPose()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、`VRDisplay` のポーズをリセットして、現在の {{domxref("VRPose.position")}} と {{domxref("VRPose.orientation")}} を "原点/ゼロ位置" の値として扱います。

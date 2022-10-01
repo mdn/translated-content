@@ -1,15 +1,8 @@
 ---
 title: AbortController
 slug: Web/API/AbortController
-tags:
-  - API
-  - AbortController
-  - 実験的
-  - インターフェース
-  - リファレンス
-translation_of: Web/API/AbortController
-browser-compat: api.AbortController
 ---
+
 {{APIRef("DOM")}}
 
 **`AbortController`** インターフェースは一つ以上のリクエストをいつでも中断することを可能にするコントローラーオブジェクトを表します。

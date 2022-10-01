@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/23
 translation_of: Mozilla/Firefox/Releases/23
 original_slug: Mozilla/Firefox/Versions/23
 ---
+
 {{FirefoxSidebar}}
 
 ##### Changements pour les développeurs Web

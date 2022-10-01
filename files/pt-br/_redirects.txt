@@ -264,7 +264,7 @@
 /pt-BR/docs/Glossario/conteiner_de_alinhamento	/pt-BR/docs/Glossary/Alignment_Container
 /pt-BR/docs/Glossario/degradação_graciosa	/pt-BR/docs/Glossary/Graceful_degradation
 /pt-BR/docs/Glossario/https	/pt-BR/docs/Glossary/https
-/pt-BR/docs/Glossario/jQuery	/pt-BR/docs/Glossary/jQuery
+/pt-BR/docs/Glossario/jQuery	/pt-BR/docs/orphaned/Glossary/jQuery
 /pt-BR/docs/Glossario/marcação	/pt-BR/docs/Glossary/markup
 /pt-BR/docs/Glossario/property	/pt-BR/docs/Glossary/property
 /pt-BR/docs/Glossario/property/CSS	/pt-BR/docs/Glossary/property/CSS
@@ -277,6 +277,7 @@
 /pt-BR/docs/Glossary/502	/pt-BR/docs/conflicting/Web/HTTP/Status/502
 /pt-BR/docs/Glossary/Dynamic_programming_language	/pt-BR/docs/orphaned/Glossary/Dynamic_programming_language
 /pt-BR/docs/Glossary/Symbol	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
+/pt-BR/docs/Glossary/jQuery	/pt-BR/docs/orphaned/Glossary/jQuery
 /pt-BR/docs/HTML	/pt-BR/docs/Web/HTML
 /pt-BR/docs/HTML/Attributes	/pt-BR/docs/Web/HTML/Attributes
 /pt-BR/docs/HTML/Canvas	/pt-BR/docs/Web/API/Canvas_API
@@ -332,7 +333,7 @@
 /pt-BR/docs/IndexedDB/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /pt-BR/docs/JSON	/pt-BR/docs/Glossary/JSON
 /pt-BR/docs/JavaScript	/pt-BR/docs/Web/JavaScript
-/pt-BR/docs/JavaScript/A_re-introduction_to_JavaScript	/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/pt-BR/docs/JavaScript/A_re-introduction_to_JavaScript	/pt-BR/docs/Web/JavaScript/Language_Overview
 /pt-BR/docs/JavaScript/About_JavaScript	/pt-BR/docs/Web/JavaScript/About_JavaScript
 /pt-BR/docs/JavaScript/Data_structures	/pt-BR/docs/Web/JavaScript/Data_structures
 /pt-BR/docs/JavaScript/Guide	/pt-BR/docs/Web/JavaScript/Guide
@@ -376,7 +377,7 @@
 /pt-BR/docs/JavaScript/Reference/Statements	/pt-BR/docs/Web/JavaScript/Reference/Statements
 /pt-BR/docs/JavaScript/Reference/Statements/label	/pt-BR/docs/Web/JavaScript/Reference/Statements/label
 /pt-BR/docs/JavaScript/Reference/Statements/let	/pt-BR/docs/Web/JavaScript/Reference/Statements/let
-/pt-BR/docs/JavaScript/uma_reintroduction_ao_JavaScript	/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/pt-BR/docs/JavaScript/uma_reintroduction_ao_JavaScript	/pt-BR/docs/Web/JavaScript/Language_Overview
 /pt-BR/docs/Learn/Accessibility/Acessibilidade_problemas	/pt-BR/docs/Learn/Accessibility/Accessibility_troubleshooting
 /pt-BR/docs/Learn/Accessibility/CSS_e_JavaScript	/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript
 /pt-BR/docs/Learn/CSS/CSS_layout/Fluxo_Normal	/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow
@@ -821,6 +822,7 @@
 /pt-BR/docs/Web/HTTP/Headers/Set-Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Set-Cookie
 /pt-BR/docs/Web/HTTP/Mensagens	/pt-BR/docs/Web/HTTP/Messages
 /pt-BR/docs/Web/HTTP/Redirecionamento	/pt-BR/docs/Web/HTTP/Redirections
+/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/pt-BR/docs/Web/JavaScript/Language_Overview
 /pt-BR/docs/Web/JavaScript/Enumerabilidade_e_posse_de_propriedades	/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
 /pt-BR/docs/Web/JavaScript/Guide/About	/pt-BR/docs/Web/JavaScript/Guide/Introduction
 /pt-BR/docs/Web/JavaScript/Guide/Closures	/pt-BR/docs/Web/JavaScript/Closures

@@ -1,17 +1,8 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-tags:
-  - API
-  - Debugging
-  - Overview
-  - console
-  - dump
-  - log
-  - output
-  - test
-translation_of: Web/API/Console_API
 ---
+
 {{DefaultAPISidebar("Console API")}}
 
 Console API（コンソール API）には、開発者がデバッグ作業（メッセージ、コード内の設定点での変数の値、操作の完了にかかった時間などの記録）を実行できるようにする機能が用意されています。
@@ -55,6 +46,6 @@ console.log(myString)
 
 ## 関連情報
 
-- [開発ツール](/ja/docs/Tools "Tools")
-- [ウェブコンソール](/ja/docs/Tools/Web_Console "Web Console") — Firefox のウェブコンソールが Console API の呼び出しを処理する方法
+- [開発ツール](/ja/docs/Tools)
+- [ウェブコンソール](/ja/docs/Tools/Web_Console) — Firefox のウェブコンソールが Console API の呼び出しを処理する方法
 - [リモートデバッグ](/ja/docs/Tools/Remote_Debugging) — デバッグ対象がモバイルデバイスである場合のコンソール出力の表示方法

@@ -1,14 +1,8 @@
 ---
 title: '<br>: 改行要素'
 slug: Web/HTML/Element/br
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/br
 ---
+
 {{HTMLRef}}
 
 **HTML の `<br>` 要素** は、文中に改行（キャリッジリターン）を生成します。詩や住所など、行の分割が重要な場合に有用です。

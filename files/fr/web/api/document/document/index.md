@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/Document
 ---
+
 {{APIRef}}
 
 Le constructeur **`Document`** crée un nouvel objet de {{domxref("Document")}}, lequel c'est la référence de la page courante dans le navigateur et servant comme point d'entrer aux contenus de la page.

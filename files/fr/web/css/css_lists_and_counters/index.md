@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Lists_and_Counters
 original_slug: Web/CSS/CSS_Lists
 ---
+
 {{CSSRef}}
 
 **CSS Lists** (listes CSS) est un module CSS qui définit la façon dont les listes sont mises en forme, comment des styles peuvent être appliqués aux marqueurs.

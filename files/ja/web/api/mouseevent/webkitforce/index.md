@@ -1,14 +1,8 @@
 ---
 title: MouseEvent.webkitForce
 slug: Web/API/MouseEvent/webkitForce
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - リファレンス
 ---
+
 {{Non-standard_header()}}
 
 **`MouseEvent.webkitForce`** は WebKit 独自の数値プロパティで、タッチパッドまたはタッチ画面で適用される圧力の大きさを表す値です。

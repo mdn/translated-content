@@ -1,8 +1,8 @@
 ---
 title: AudioDestinationNode.maxChannelCount
 slug: Web/API/AudioDestinationNode/maxChannelCount
-translation_of: Web/API/AudioDestinationNode/maxChannelCount
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioDestinationNode") }}インターフェースの`maxchannelCount`プロパティは、`unsigned long`で表された物理的なデバイスが扱えるチャンネルの最大数です。

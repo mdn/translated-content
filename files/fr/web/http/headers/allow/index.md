@@ -8,6 +8,7 @@ tags:
   - entête
 translation_of: Web/HTTP/Headers/Allow
 ---
+
 {{HTTPSidebar}}
 
 L'entête **`Allow`** liste les méthodes supportées par une ressource.

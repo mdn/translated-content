@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/name
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/name
 ---
+
 {{JSRef}}
 
 La propriété **`name`** est une chaîne de caractères représentant le nom du type d'erreur. La valeur initiale est "Error".

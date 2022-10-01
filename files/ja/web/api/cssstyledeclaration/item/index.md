@@ -1,14 +1,8 @@
 ---
 title: CSSStyleDeclaration.item()
 slug: Web/API/CSSStyleDeclaration/item
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/item
-browser-compat: api.CSSStyleDeclaration.item
 ---
+
 {{ APIRef("CSSOM") }}
 
 `CSSStyleDeclaration.item()` メソッドインターフェイスは、位置を指定して {{domxref('CSSStyleDeclaration')}} の CSS プロパティ名を返します。このメソッドは与えた値による例外が発生しません。位置が範囲外だった場合は空文字列が返され、引数が与えられなかった場合は `TypeError` が発生します。

@@ -1,12 +1,8 @@
 ---
 title: 507 Insufficient Storage
 slug: Web/HTTP/Status/507
-tags:
-  - HTTP
-  - Server error
-  - Status code
-translation_of: Web/HTTP/Status/507
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`507 Insufficient Storage`** レスポンスステータスコードは、Web Distributed Authoring and Versioning (WebDAV) プロトコルのコンテキストで提供される場合があります。 (参照 [RFC 4918](https://tools.ietf.org/html/rfc4918))

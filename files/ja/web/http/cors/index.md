@@ -1,20 +1,8 @@
 ---
 title: オリジン間リソース共有 (CORS)
 slug: Web/HTTP/CORS
-tags:
-  - AJAX
-  - CORS
-  - オリジン間リソース共有
-  - Fetch
-  - Fetch API
-  - HTTP
-  - HTTP アクセス制御
-  - 同一オリジンポリシー
-  - セキュリティ
-  - XMLHttpRequest
-  - l10n:priority
-translation_of: Web/HTTP/CORS
 ---
+
 {{HTTPSidebar}}
 
 オリジン間リソース共有 (Cross-Origin Resource Sharing, {{Glossary("CORS")}}) は、追加の {{Glossary("HTTP")}} ヘッダーを使用して、ある{{glossary("origin", "オリジン")}}で動作しているウェブアプリケーションに、異なるオリジンにある選択されたリソースへのアクセス権を与えるようブラウザーに指示するための仕組みです。ウェブアプリケーションは、自分とは異なるオリジン (ドメイン、プロトコル、ポート番号) にあるリソースをリクエストするとき、オリジン間 HTTP リクエストを実行します。

@@ -1,14 +1,8 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
-tags:
-  - API
-  - HTML
-  - Reference
-  - Window
-  - プロパティ
-translation_of: Web/API/Window/location
 ---
+
 {{APIRef}}
 
 **`Window.location`** 読み取り専用プロパティは、document の現在位置についての情報を持つ {{domxref("Location")}} オブジェクトを返します。

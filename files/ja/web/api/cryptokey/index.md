@@ -1,13 +1,8 @@
 ---
 title: CryptoKey
 slug: Web/API/CryptoKey
-tags:
-  - API
-  - Interface
-  - Reference
-  - Web Crypto API
-translation_of: Web/API/CryptoKey
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`CryptoKey`** インターフェイスは、特定の鍵アルゴリズムによりもたらされる暗号鍵 ({{glossary("key")}}) を表します。

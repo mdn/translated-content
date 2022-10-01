@@ -1,16 +1,8 @@
 ---
 title: メディアクエリーの使用
 slug: Web/CSS/Media_Queries/Using_media_queries
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - ウェブ
-  - メディア
-  - メディアクエリー
-  - レスポンシブデザイン
-translation_of: Web/CSS/Media_Queries/Using_media_queries
 ---
+
 {{CSSRef}}
 
 **メディアクエリー**は、一般的な端末の種類 (プリンタと画面など)や特定の特性 (画面の解像度やブラウザーの{{glossary("viewport", "ビューポート")}}の幅など) に応じてサイトやアプリを変更したいときに便利です。

@@ -2,13 +2,14 @@
 title: hyphens
 slug: Web/CSS/hyphens
 ---
+
 {{CSSRef}}
 
 ## Summary
 
 [CSS](/zh-CN/docs/CSS) 属性 **`hyphens`** 告知浏览器在换行时如何使用连字符连接单词。可以完全阻止使用连字符，也可以控制浏览器什么时候使用，或者让浏览器决定什么时候使用。
 
-连字规则具有语言特定性。在 HTML 中，语言由 lang 属性决定，浏览器只会在当前属性存在且有合适的连字字典可用的情况使用连字进行连接。 在 XML 中，必须使用 `xml:lang` 属性。
+连字规则具有语言特定性。在 HTML 中，语言由 lang 属性决定，浏览器只会在当前属性存在且有合适的连字字典可用的情况使用连字进行连接。在 XML 中，必须使用 `xml:lang` 属性。
 
 > **备注：** 在规范中，没有明确定义连字符的实现规则，所以具体的连字符在不同浏览器中可能有所区别。
 
@@ -99,7 +100,7 @@ p.auto {
 
 ## Browser compatibility
 
-{{Compat("css.properties.hyphens")}}
+{{Compat}}
 
 ## See also
 

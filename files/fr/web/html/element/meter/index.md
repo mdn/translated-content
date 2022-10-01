@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/meter
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<meter>`** représente une valeur scalaire dans un intervalle donné ou une valeur fractionnaire.
@@ -143,14 +144,11 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-meter-element', '&lt;meter&gt;')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C', 'forms.html#the-meter-element', '&lt;meter&gt;')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.meter")}}
+{{Compat}}
 
 ## Voir aussi
 

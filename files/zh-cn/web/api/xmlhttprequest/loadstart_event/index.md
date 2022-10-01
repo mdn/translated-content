@@ -2,6 +2,7 @@
 title: loadstart
 slug: Web/API/XMLHttpRequest/loadstart_event
 ---
+
 当程序开始加载时，loadstart 事件将被触发。这个事件可以被 {{domxref("XMLHttpRequest")}} 调用，也适用于 {{htmlelement("img")}} 和 {{htmlelement("video")}} 元素。
 
 ## 基本信息
@@ -46,4 +47,4 @@ slug: Web/API/XMLHttpRequest/loadstart_event
 
 ## 了解更多
 
-- [Monitoring progress](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+- [Monitoring progress](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)

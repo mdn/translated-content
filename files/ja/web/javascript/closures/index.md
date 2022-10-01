@@ -1,15 +1,8 @@
 ---
 title: クロージャ
 slug: Web/JavaScript/Closures
-tags:
-  - Closure
-  - ES5
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Closures
 ---
+
 {{jsSidebar("Intermediate")}}
 
 **クロージャ**は、組み合わされた（囲まれた）関数と、その周囲の状態（**レキシカル環境**）への参照の組み合わせです。言い換えれば、クロージャは内側の関数から外側の関数スコープへのアクセスを提供します。JavaScript では、関数が作成されるたびにクロージャが作成されます。
@@ -277,7 +270,7 @@ console.log(s3) //log 20
 
 ## よくある間違い: ループ内でクロージャを作成する
 
-ECMAScript 2015 で [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let "let") キーワードが導入される前までは、ループの内部でクロージャが作成された時にある問題がよく起こっていました。次のような例を考えてみます。
+ECMAScript 2015 で [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) キーワードが導入される前までは、ループの内部でクロージャが作成された時にある問題がよく起こっていました。次のような例を考えてみます。
 
 ```html
 <p id="help">ここにヘルプが表示されます</p>

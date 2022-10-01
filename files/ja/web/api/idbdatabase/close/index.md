@@ -1,16 +1,8 @@
 ---
 title: IDBDatabase.close
 slug: Web/API/IDBDatabase/close
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Method
-  - Storage
-  - close
-translation_of: Web/API/IDBDatabase/close
 ---
+
 {{ APIRef("IDBDatabase") }}
 
 {{domxref("IDBDatabase")}}インターフェイスの`close()は、`ただちに戻り、別スレッドで接続を閉じます。

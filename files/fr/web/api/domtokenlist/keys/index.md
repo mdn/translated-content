@@ -3,6 +3,7 @@ title: DOMTokenList.keys()
 slug: Web/API/DOMTokenList/keys
 translation_of: Web/API/DOMTokenList/keys
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`keys()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont de type `unsigned integer` _(entier non signé)_.

@@ -4,6 +4,7 @@ slug: Web/CSS/border-style
 translation_of: Web/CSS/border-style
 browser-compat: css.properties.border-style
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`border-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir le style des lignes utilisées pour les bordures des quatre côtés de la boîte d'un élément.

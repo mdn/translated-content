@@ -1,20 +1,9 @@
 ---
 title: '-moz-context-properties'
 slug: orphaned/Web/CSS/-moz-context-properties
-tags:
-  - '-moz-context-properties'
-  - CSS
-  - CSS プロパティ
-  - CSS:Mozilla 拡張
-  - Experimental
-  - Needs Privileges
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-translation_of: Web/CSS/-moz-context-properties
 original_slug: Web/CSS/-moz-context-properties
-browser-compat: css.properties.-moz-context-properties
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-moz-context-properties`** プロパティは Firefox の特権モードで使用することができ、子に SVG 画像を持つ要素の指定されたプロパティの値を共有します。

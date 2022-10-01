@@ -2,6 +2,7 @@
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`startTime`** プロパティは、{{domxref("PerformanceEntry","performance entry")}} のうち最初に記録された {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。

@@ -1,15 +1,8 @@
 ---
 title: HTMLTableElement
 slug: Web/API/HTMLTableElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLTableElement
-translation_of: Web/API/HTMLTableElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement`** インターフェイスは、（継承元でもある通常の {{DOMxRef("HTMLElement")}} オブジェクトのインターフェイスのほかに） HTML 文書内の表のレイアウトと表現を操作するための特別なプロパティやメソッドを提供します。

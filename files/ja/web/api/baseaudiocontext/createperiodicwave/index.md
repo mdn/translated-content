@@ -1,20 +1,9 @@
 ---
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
-tags:
-  - API
-  - 音声
-  - AudioContext
-  - BaseAudioContext
-  - メディア
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createPeriodicWave
-browser-compat: api.BaseAudioContext.createPeriodicWave
-translation_of: Web/API/BaseAudioContext/createPeriodicWave
 original_slug: Web/API/AudioContext/createPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createPeriodicWave()` は {{ domxref("AudioContext") }} インターフェイスのメソッドで、周期的な波形を定義するために使われる {{domxref("PeriodicWave")}} を生成します。これは {{ domxref("OscillatorNode") }} の出力を決めるために使われます。

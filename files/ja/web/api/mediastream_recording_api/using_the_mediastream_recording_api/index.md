@@ -1,15 +1,8 @@
 ---
 title: Media​Stream Recording API の使用
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
-tags:
-  - API
-  - Example
-  - Guide
-  - MediaRecorder
-  - MediaStream Recording API
-  - Tutorial
-translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 ---
+
 {{DefaultAPISidebar("MediaStream Recording")}}
 
 [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) を使用すると、音声や動画のストリームを簡単に記録できます。 {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}} と一緒に使用すると、ユーザーの入力デバイスから記録して結果を即座にウェブアプリで使用するための簡単な方法が提供されます。 音声と動画の両方を別々にまたは一緒に記録することができます。 この記事では、この API を提供する `MediaRecorder` インターフェースの使用方法に関する基本的なガイドを提供することを目的としています。

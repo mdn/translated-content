@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.toTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 ---
+
 {{JSRef}}
 
 **`toTimeString()`** メソッドは、英語の人間が読める形式で {{jsxref("Date")}} オブジェクトの「時刻」部を返します。

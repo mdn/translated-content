@@ -679,10 +679,6 @@
     "modified": "2019-03-18T20:53:11.377Z",
     "contributors": ["jisooeulee"]
   },
-  "Glossary/jQuery": {
-    "modified": "2019-10-06T09:53:54.369Z",
-    "contributors": ["Eumhongin", "jisooeulee"]
-  },
   "Glossary/undefined": {
     "modified": "2019-05-26T04:16:46.198Z",
     "contributors": ["alattalatta"]
@@ -7576,39 +7572,6 @@
       "JongChun"
     ]
   },
-  "Web/JavaScript/A_re-introduction_to_JavaScript": {
-    "modified": "2020-11-30T14:43:16.912Z",
-    "contributors": [
-      "woochul2",
-      "honggaruy",
-      "jaeminche",
-      "eunjungleecub",
-      "Teperi",
-      "Violet-Bora-Lee",
-      "jjuun",
-      "JaeyiHong",
-      "juddammu",
-      "limkukhyun",
-      "hyunggoo",
-      "ChalkPE",
-      "loslch",
-      "Kimchoky",
-      "pineoc",
-      "fureweb",
-      "zeallat",
-      "gnujoow",
-      "softage",
-      "oox",
-      "Jsfumato",
-      "stephenjang",
-      "cafrii",
-      "teoli",
-      "zziuni",
-      "JaehaAhn",
-      "Joonwon",
-      "Dyhan81"
-    ]
-  },
   "Web/JavaScript/About_JavaScript": {
     "modified": "2020-03-12T19:36:55.143Z",
     "contributors": [
@@ -7955,6 +7918,39 @@
   "Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:37:59.087Z",
     "contributors": ["alattalatta", "teoli", "ethertank", "jaemin_jo"]
+  },
+  "Web/JavaScript/Language_Overview": {
+    "modified": "2020-11-30T14:43:16.912Z",
+    "contributors": [
+      "woochul2",
+      "honggaruy",
+      "jaeminche",
+      "eunjungleecub",
+      "Teperi",
+      "Violet-Bora-Lee",
+      "jjuun",
+      "JaeyiHong",
+      "juddammu",
+      "limkukhyun",
+      "hyunggoo",
+      "ChalkPE",
+      "loslch",
+      "Kimchoky",
+      "pineoc",
+      "fureweb",
+      "zeallat",
+      "gnujoow",
+      "softage",
+      "oox",
+      "Jsfumato",
+      "stephenjang",
+      "cafrii",
+      "teoli",
+      "zziuni",
+      "JaehaAhn",
+      "Joonwon",
+      "Dyhan81"
+    ]
   },
   "Web/JavaScript/Memory_Management": {
     "modified": "2020-03-12T19:37:54.884Z",
@@ -9835,62 +9831,6 @@
     "modified": "2020-10-15T21:48:47.357Z",
     "contributors": ["alattalatta", "Netaras", "fscholz"]
   },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly": {
-    "modified": "2020-10-15T21:53:02.555Z",
-    "contributors": ["limkukhyun", "0xABCDEF"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError": {
-    "modified": "2020-10-15T22:07:58.077Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Global": {
-    "modified": "2020-10-15T22:08:05.155Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance": {
-    "modified": "2020-10-15T22:07:55.815Z",
-    "contributors": ["limkukhyun", "alattalatta"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError": {
-    "modified": "2020-10-15T22:08:04.793Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory": {
-    "modified": "2020-10-15T22:08:00.915Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module": {
-    "modified": "2020-10-15T22:07:56.280Z",
-    "contributors": ["limkukhyun", "alattalatta"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError": {
-    "modified": "2020-10-15T22:08:08.186Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table": {
-    "modified": "2020-10-15T22:07:58.705Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compile": {
-    "modified": "2020-10-15T22:07:56.654Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming": {
-    "modified": "2020-10-15T22:07:56.654Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate": {
-    "modified": "2020-10-15T22:07:57.168Z",
-    "contributors": ["fnwinter", "limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming": {
-    "modified": "2020-10-15T22:08:08.189Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/validate": {
-    "modified": "2020-10-15T22:08:00.982Z",
-    "contributors": ["limkukhyun"]
-  },
   "Web/JavaScript/Reference/Global_Objects/decodeURI": {
     "modified": "2020-10-15T22:01:55.624Z",
     "contributors": ["jeoyoho"]
@@ -10311,10 +10251,6 @@
   "Web/JavaScript/Reference/Trailing_commas": {
     "modified": "2020-11-24T03:08:45.215Z",
     "contributors": ["bckim9489", "EatChangmyeong", "samee"]
-  },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-03-12T19:44:13.687Z",
-    "contributors": ["limkukhyun", "hoony"]
   },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-03-12T19:44:00.798Z",
@@ -10993,6 +10929,62 @@
     "modified": "2019-03-18T21:27:58.372Z",
     "contributors": ["limkukhyun"]
   },
+  "WebAssembly/JavaScript_interface": {
+    "modified": "2020-10-15T21:53:02.555Z",
+    "contributors": ["limkukhyun", "0xABCDEF"]
+  },
+  "WebAssembly/JavaScript_interface/CompileError": {
+    "modified": "2020-10-15T22:07:58.077Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/Global": {
+    "modified": "2020-10-15T22:08:05.155Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/Instance": {
+    "modified": "2020-10-15T22:07:55.815Z",
+    "contributors": ["limkukhyun", "alattalatta"]
+  },
+  "WebAssembly/JavaScript_interface/LinkError": {
+    "modified": "2020-10-15T22:08:04.793Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/Memory": {
+    "modified": "2020-10-15T22:08:00.915Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/Module": {
+    "modified": "2020-10-15T22:07:56.280Z",
+    "contributors": ["limkukhyun", "alattalatta"]
+  },
+  "WebAssembly/JavaScript_interface/RuntimeError": {
+    "modified": "2020-10-15T22:08:08.186Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/Table": {
+    "modified": "2020-10-15T22:07:58.705Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/compile": {
+    "modified": "2020-10-15T22:07:56.654Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/compileStreaming": {
+    "modified": "2020-10-15T22:07:56.654Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/instantiate": {
+    "modified": "2020-10-15T22:07:57.168Z",
+    "contributors": ["fnwinter", "limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/instantiateStreaming": {
+    "modified": "2020-10-15T22:08:08.189Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/validate": {
+    "modified": "2020-10-15T22:08:00.982Z",
+    "contributors": ["limkukhyun"]
+  },
   "WebAssembly/Loading_and_running": {
     "modified": "2019-03-23T22:11:38.016Z",
     "contributors": ["limkukhyun", "kesuskim"]
@@ -11284,6 +11276,10 @@
     "modified": "2020-03-12T19:39:22.531Z",
     "contributors": ["ahnzaz", "KSH-code", "Netaras", "teoli", "NFM"]
   },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
+    "modified": "2020-03-12T19:44:13.687Z",
+    "contributors": ["limkukhyun", "hoony"]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {
     "modified": "2020-10-15T21:52:46.647Z",
     "contributors": ["alattalatta", "teoli", "Perlmint"]
@@ -11423,6 +11419,10 @@
   "orphaned/Glossary/Dynamic_programming_language": {
     "modified": "2019-03-18T21:23:35.310Z",
     "contributors": ["flat81"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2019-10-06T09:53:54.369Z",
+    "contributors": ["Eumhongin", "jisooeulee"]
   },
   "orphaned/How_to_Build_an_XPCOM_Component_in_Javascript": {
     "modified": "2019-03-23T23:49:04.482Z",

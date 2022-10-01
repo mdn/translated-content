@@ -2,6 +2,7 @@
 title: Request.url
 slug: Web/API/Request/url
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 {{domxref("Request")}} インターフェースの **`url`** 読み取り専用プロパティは、 リクエストの URL を含みます。

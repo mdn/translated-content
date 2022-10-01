@@ -2,6 +2,7 @@
 title: 函数
 slug: Web/JavaScript/Reference/Functions
 ---
+
 {{jsSidebar("Functions")}}一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function)对象。
 
 有关更多示例和说明，请参阅[有关函数的 JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/Functions)。
@@ -204,10 +205,10 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 
 你可以参阅在函数里使用`arguments`对象的函数参数。参见：[arguments](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)。
 
-- [`arguments`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
-- [`arguments.callee`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
-- [`arguments.caller`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller){{Deprecated_Inline}} : 调用当前执行函数的函数。
-- [`arguments.length`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): 传给函数的参数的数目。
+- [`arguments`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
+- [`arguments.callee`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
+- [`arguments.caller`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller){{Deprecated_Inline}} : 调用当前执行函数的函数。
+- [`arguments.length`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): 传给函数的参数的数目。
 
 ## 方法函数定义
 
@@ -403,7 +404,7 @@ if (shouldDefineZero) {
 
 ECMAScript 6 中，如果`shouldDefineZero`是 false，则永远不会定义 zero，因为这个块从不执行。然而，这是标准的新的一部分。这是历史遗留问题，无论这个块是否执行，一些浏览器会定义 zero。
 
-`在`[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)`下，所有支持`ECMAScript 6 的`浏览器以相同的方式处理：只有在 shouldDefineZero 为 true 的情况下定义 zero，并且作用域只是这个块内。`
+在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 下，所有支持 `ECMAScript 6` 的浏览器以相同的方式处理：只有在 shouldDefineZero 为 `true` 的情况下定义 `zero`，并且作用域只是这个块内。
 
 有条件地定义一个函数的一个更安全的方法是把函数表达式赋给一个变量：
 

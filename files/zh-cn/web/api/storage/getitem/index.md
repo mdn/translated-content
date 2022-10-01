@@ -2,6 +2,7 @@
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 `getItem()` 作为 {{domxref("Storage")}} 接口的方法，接受一个键名（key name）作为参数，并返回对应键名的值（key's value）。
@@ -49,7 +50,7 @@ function setStyles() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Storage.getItem")}}
+{{Compat}}
 
 ## 相关链接
 

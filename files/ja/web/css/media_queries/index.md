@@ -1,15 +1,8 @@
 ---
 title: メディアクエリー
 slug: Web/CSS/Media_Queries
-tags:
-  - CSS
-  - ガイド
-  - メディアクエリー
-  - 概要
-  - リファレンス
-  - レスポンシブデザイン
-translation_of: Web/CSS/Media_Queries
 ---
+
 {{CSSRef}}
 
 **メディアクエリー**によって、サイトやアプリを様々な引数や端末の特性に基づいて合わせることができます。

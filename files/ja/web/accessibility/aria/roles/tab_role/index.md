@@ -1,14 +1,8 @@
 ---
 title: 'ARIA: tab ロール'
 slug: Web/Accessibility/ARIA/Roles/Tab_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA Tab
-  - ARIA widget
-  - Reference
-translation_of: Web/Accessibility/ARIA/Roles/Tab_Role
 ---
+
 ARIA のタブ (`tab`) ロールは、タブリスト (`tablist`) 内のインタラクティブな要素を示し、アクティブ化されると、関連するタブパネル ([`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role)) を表示します。
 
 ```html
@@ -202,4 +196,4 @@ function changeTabs(e) {
 
 TBD
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

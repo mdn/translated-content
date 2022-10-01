@@ -1,14 +1,8 @@
 ---
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
-page-type: web-api-instance-method
-tags:
-  - 非推奨
-  - メソッド
-  - リファレンス
-browser-compat: api.CustomEvent.initCustomEvent
-translation_of: Web/API/CustomEvent/initCustomEvent
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 **`CustomEvent.initCustomEvent()`** メソッドは {{domxref("CustomEvent")}} オブジェクトを初期化します。

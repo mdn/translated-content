@@ -1,23 +1,8 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
-tags:
-  - API
-  - Audio
-  - キャプチャ
-  - メディア
-  - メディアキャプチャとストリーム API
-  - メディアストリーム API
-  - MediaDevices
-  - メソッド
-  - 写真
-  - リファレンス
-  - 動画
-  - WebRTC
-  - getusermedia
-browser-compat: api.MediaDevices.getUserMedia
-translation_of: Web/API/MediaDevices/getUserMedia
 ---
+
 {{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaDevices")}}**`.getUserMedia()`** メソッドは、要求された種類のメディアを含むトラックを持つ {{domxref("MediaStream")}} を生成するメディア入力を使用する許可をユーザーに求めます。
@@ -216,7 +201,7 @@ getUserMedia(constraints)
 Feature-Policy: camera 'self'
 ```
 
-これは、現在のオリジンと特定のオリジン https\://developer.mozilla.org のマイクへのアクセスを要求します。
+これは、現在のオリジンと特定のオリジン `https://developer.mozilla.org` のマイクへのアクセスを要求します。
 
 ```
 Feature-Policy: microphone 'self' https://developer.mozilla.org

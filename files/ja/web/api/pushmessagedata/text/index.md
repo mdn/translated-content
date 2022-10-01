@@ -2,9 +2,10 @@
 title: PushMessageData.text()
 slug: Web/API/PushMessageData/text
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-{{domxref("PushMessageData")}} インターフェースの **`text() `**メソッドは、プッシュメッセージデータをプレーンテキスト文字列として抽出します。
+{{domxref("PushMessageData")}} インターフェースの **`text()`** メソッドは、プッシュメッセージデータをプレーンテキスト文字列として抽出します。
 
 ## 構文
 

@@ -1,19 +1,8 @@
 ---
 title: ClipboardItem.getType()
 slug: Web/API/ClipboardItem/getType
-page-type: web-api-instance-method
-tags:
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Cut
-  - Method
-  - copy
-  - getTypes
-  - paste
-browser-compat: api.ClipboardItem.getType
-translation_of: Web/API/ClipboardItem/getType
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 **`getType()`** は {{domxref("ClipboardItem")}} インターフェイスのメソッドで、要求された {{Glossary("MIME type", "MIME タイプ")}} の {{domxref("Blob")}} で解決するプロミス ({{jsxref("Promise")}}) を返します。 MIME タイプが見つからない場合はエラーになります。

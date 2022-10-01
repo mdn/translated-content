@@ -1,13 +1,8 @@
 ---
 title: Attr
 slug: Web/API/Attr
-page-type: web-api-interface
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.Attr
-translation_of: Web/API/Attr
 ---
+
 {{APIRef("DOM")}}
 
 **`Attr`** インターフェイスは要素の属性の一つをオブジェクトとして表します。多くの場合、属性値を直接文字列として取得しますが（例: {{domxref("Element.getAttribute()")}}）、一部の関数（例: {{domxref("Element.getAttributeNode()")}}）や反復処理の場面では `Attr` のインスタンスを返します。

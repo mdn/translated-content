@@ -1,16 +1,10 @@
 ---
 title: console.group()
 slug: Web/API/console/group
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.group
-translation_of: Web/API/console/group
+l10n:
+  sourceCommit: 4fd581de2e31ac303a4628354c80f476ba9fd0e2
 ---
+
 {{APIRef("Console API")}}
 
 **`console.group()`** メソッドは、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)のログに、新たなインライングループを作成します。{{domxref("console.groupEnd()")}} を呼び出すまで、以降のすべての出力を 1 段階字下げします。

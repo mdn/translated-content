@@ -2,6 +2,7 @@
 title: JavaScript 中的相等性判断
 slug: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 ES2015 中有四种相等算法：
@@ -239,9 +240,9 @@ function attemptMutation(v)
 - [`~`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators),
   [`<<`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators),
   [`>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
-  - : 这些操作符内部都使用了 ToInt32 算法。因为内部 32 位整数类型只有一个 0（没有符号区别），-0 的符号在反操作后并不会保留下来。例如`Object.is(~~(-0), -0)`和`Object.is(-0 << 2 >> 2, -0)` `都会得到 false`.
+  - : 这些操作符内部都使用了 ToInt32 算法。因为内部 32 位整数类型只有一个 0（没有符号区别），-0 的符号在反操作后并不会保留下来。例如 `Object.is(~~(-0), -0)` 和 `Object.is(-0 << 2 >> 2, -0)` 都会得到 `false`.
 
-在未考虑 0 的符号的情况下依赖于[`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)`是危险的。当然，如果本意就是区分-0 和 +0 的话，`[`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)`能按照期望完成工作。`
+在未考虑 0 的符号的情况下依赖于 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 是危险的。当然，如果本意就是区分 -0 和 +0 的话，[`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 能按照期望完成工作。
 
 ## 参考
 

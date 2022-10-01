@@ -1,15 +1,6 @@
 ---
 title: Understanding WebAssembly text format
 slug: WebAssembly/Understanding_the_text_format
-tags:
-  - 공유 주소
-  - 메모리
-  - 웹어셈블리
-  - 자바스크립트
-  - 테이블
-  - 텍스트 포맷
-  - 함수
-translation_of: WebAssembly/Understanding_the_text_format
 ---
 {{WebAssemblySidebar}}
 

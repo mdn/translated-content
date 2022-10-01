@@ -1,14 +1,8 @@
 ---
 title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
-tags:
-  - Content Negotiation
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-translation_of: Web/HTTP/Headers/Accept-Charset
 ---
+
 {{HTTPSidebar}}
 
 **`Accept-Charset`** は HTTP のリクエストヘッダーで、クライアントが理解できる{{glossary("character encoding", "文字エンコーディング")}}を広報します。[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)を使用して、サーバーは提案の 1 つを選択、使用し、クライアントに選択結果を {{HTTPHeader("Content-Type")}} レスポンスヘッダー内、ふつうは `charset=` 引数の中で通知します。通常はそれぞれのリソースの既定値が正しく、これを送信すると[フィンガープリンティング](/ja/docs/Mozilla/Firefox/Privacy/Tracking_Protection)を許してしまうことがあるため、ブラウザーは通常、このヘッダーを設定しません。

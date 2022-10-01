@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-emphasis-style
 ---
+
 {{CSSRef}}
 
 La propriété **`text-emphasis-style`** définit le type d'emphase utilisée. Celui-ci peut également être (re)défini via la propriété raccourcie {{cssxref("text-emphasis")}}.

@@ -1,15 +1,8 @@
 ---
 title: IDBDatabase.name
 slug: Web/API/IDBDatabase/name
-tags:
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Property
-  - Storage
-  - name
-translation_of: Web/API/IDBDatabase/name
 ---
+
 {{ APIRef("IDBDatabase") }}
 
 `IDBDatabaseインターフェイスのnameプロパティは、接続しているデータベース名を含む` {{ domxref("DOMString")}}です。

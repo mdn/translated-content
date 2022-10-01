@@ -2,6 +2,7 @@
 title: HTMLMediaElement.videoTracks
 slug: Web/API/HTMLMediaElement/videoTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`videoTracks`** 为 {{DOMxRef("HTMLMediaElement")}} 的只读属性，它是一个 {{DOMxRef("VideoTrackList")}} 列表，列表中包含相应媒体元素的视频轨， 视频轨为{{DOMxRef("VideoTrack")}} 类型对象。
@@ -26,7 +27,7 @@ var videoTracks = mediaElement.videoTracks;
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.videoTracks")}}
+{{Compat}}
 
 ## See also
 

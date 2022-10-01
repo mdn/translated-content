@@ -1,16 +1,9 @@
 ---
 title: WindowOrWorkerGlobalScope.indexedDB
 slug: Web/API/indexedDB
-tags:
-  - API
-  - Database
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
+
 {{ APIRef() }}
 
 {{domxref("WindowOrWorkerGlobalScope")}} ミックスインの **`indexedDB`** 読み取り専用プロパティは、アプリケーションが indexed データベースのキャパビリティに非同期でアクセスするための機構を提供します。

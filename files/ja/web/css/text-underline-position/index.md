@@ -1,15 +1,8 @@
 ---
 title: text-underline-position
 slug: Web/CSS/text-underline-position
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-underline-position
-translation_of: Web/CSS/text-underline-position
 ---
+
 {{CSSRef}}
 
 **`text-underline-position`** は [CSS](/ja/docs/Web/CSS) のプロパティであり、{{cssxref("text-decoration")}} プロパティの `underline` の値で設定される下線 (傍線) の位置を指定します。

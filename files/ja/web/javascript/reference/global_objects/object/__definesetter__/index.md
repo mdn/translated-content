@@ -1,16 +1,8 @@
 ---
 title: Object.prototype.__defineSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Polyfill
-browser-compat: javascript.builtins.Object.defineSetter
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 ---
+
 {{JSRef}}
 
 > **Warning:** この機能は非推奨となり、[オブジェクト初期化子の構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)または {{jsxref("Object.defineProperty()")}} API を使用してセッターを定義する方法で置き換えられました。

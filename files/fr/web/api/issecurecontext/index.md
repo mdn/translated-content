@@ -6,6 +6,7 @@ translation_of: Web/API/isSecureContext
 original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 browser-compat: api.isSecureContext
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 La propriété globale en lecture seule **`isSecureContext`** renvoie un booléen qui indique si [le contexte est sécurisé](/fr/docs/Web/Security/Secure_Contexts).

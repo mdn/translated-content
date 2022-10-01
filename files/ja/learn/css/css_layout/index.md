@@ -2,6 +2,7 @@
 title: CSS レイアウト
 slug: Learn/CSS/CSS_layout
 ---
+
 {{LearnSidebar}}
 
 現段階で、すでに CSS の基本、テキストの装飾方法、コンテンツを格納するボックスの装飾方法と操作方法を見てきました。 今度は、ビューポートや互いを基準にしてボックスを適切な場所に配置する方法を検討します。 必要な前提知識をカバーしているので、さまざまな `display` の設定、フレックスボックス・CSS グリッド・位置指定などの最新のレイアウトツール、そしてまだ知っておきたいと思うかもしれない過去のテクニックのいくつかを見ながら、 CSS レイアウトについて深く掘り下げることができます。
@@ -12,9 +13,9 @@ slug: Learn/CSS/CSS_layout
 
 このモジュールを始める前に、次のことを理解しているべきです。
 
-1.  [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で説明したように、HTML についての基本的な知識があること。
-2.  [CSS 入門](/ja/docs/Learn/CSS/First_steps)で説明したように、CSS の基本を容易にこなせること。
-3.  [ボックスの装飾](/ja/docs/Learn/CSS/Building_blocks)の方法を理解していること。
+1. [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で説明したように、HTML についての基本的な知識があること。
+2. [CSS 入門](/ja/docs/Learn/CSS/First_steps)で説明したように、CSS の基本を容易にこなせること。
+3. [ボックスの装飾](/ja/docs/Learn/CSS/Building_blocks)の方法を理解していること。
 
 > **Note:** 使用しているコンピューター/タブレット/その他のデバイスで自分のファイルを作成できない場合は、[JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) などのオンラインコーディングプログラムで (ほとんどの) コードサンプルを試すことができます。
 

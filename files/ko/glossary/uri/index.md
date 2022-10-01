@@ -1,13 +1,6 @@
 ---
 title: URI
 slug: Glossary/URI
-tags:
-  - Glossary
-  - HTTP
-  - Search
-  - URI
-  - URL
-translation_of: Glossary/URI
 ---
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 

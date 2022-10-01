@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/-webkit-transition
 ---
+
 {{CSSRef}}{{Non-standard_header}}{{deprecated_header}}
 
 **`-webkit-transition`** est une [caractéristique média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Cibler_des_caractéristiques_média) booléenne non-standard qui permet d'indiquer si les transitions CSS ({{cssxref("transition")}}) sont prises en charge dans leurs versions préfixées.

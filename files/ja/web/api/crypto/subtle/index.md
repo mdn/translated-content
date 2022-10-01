@@ -1,15 +1,8 @@
 ---
 title: Crypto.subtle
 slug: Web/API/Crypto/subtle
-tags:
-  - API
-  - Cryptgraphy
-  - Property
-  - Read-only
-  - Reference
-  - Web Crypt API
-translation_of: Web/API/Crypto/subtle
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`Crypto.subtle`** 読み取り専用プロパティは、暗号化操作ができる {{domxref("SubtleCrypto")}} オブジェクトを返します。

@@ -11,6 +11,7 @@ tags:
   - django_admin
 translation_of: Learn/Server-side/Django/Admin_site
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
 Nous avons créé le modèle de données pour le site web de la [bibliothèque locale](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website). Dans ce chapitre nous allons utiliser le site d'administration pour introduire des données réelles pour les livres. Dans un premier temps, nous aborderons la manière d'enregistrer les données des objets sur le site d'administration et comment se connecter au site et créer des données. La fin de ce chapitre sera dédié à des éléments d'amélioration possible du site d'administration.
@@ -339,7 +340,7 @@ Beaucoup de sujets ont été abordés dans ce chapitre, c'est l'occasion de les 
 
 Beaucoup de sujets ont été abordés dans ce chapitre... Vous avez acquis les base du site d'administration et à créer un suoper-utilisateur, voius avez aussi navigué dans le site d'admlinistration et vous avez appris à modifier les formulaires de saisie et comment ajouter, modifier ou supprimer des données.
 
-## A voir aussi
+## Voir aussi
 
 - [Ecrire sa première application Dajngo, 2ème partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial02/#introducing-the-django-admin)  (Django docs)
 - [Le site d'administration de Django](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/) (Django Docs)

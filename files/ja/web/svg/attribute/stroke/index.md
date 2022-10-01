@@ -1,12 +1,8 @@
 ---
 title: stroke
 slug: Web/SVG/Attribute/stroke
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.stroke
-translation_of: Web/SVG/Attribute/stroke
 ---
+
 {{SVGRef}}
 
 **`stroke`** 属性はプレゼンテーション属性で、この図形の輪郭を描画するのに使われる色（*またはグラデーションやパターンなどの SVG ペイントサーバー*）を定義します。

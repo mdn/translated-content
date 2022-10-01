@@ -2,6 +2,7 @@
 title: Navigator.activeVRDisplays
 slug: Web/API/Navigator/activeVRDisplays
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
 
 **`activeVRDisplays`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、すべての {{domxref("VRDisplay")}} オブジェクトのうち、現在表示中 ({{domxref("VRDisplay.ispresenting")}} が `true`) のものを含んだ配列を返します。

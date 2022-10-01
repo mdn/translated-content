@@ -1,14 +1,8 @@
 ---
 title: margin
 slug: Web/CSS/margin
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 基本ボックスモデル
-  - recipe:css-shorthand-property
-browser-compat: css.properties.margin
-translation_of: Web/CSS/margin
 ---
+
 {{CSSRef}}
 
 **`margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全四辺の[マージン領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。

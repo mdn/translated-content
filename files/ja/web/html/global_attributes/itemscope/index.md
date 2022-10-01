@@ -1,15 +1,8 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-translation_of: Web/HTML/Global_attributes/itemscope
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemscope`** は論理[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、関連付けられたメタデータのスコープを定義します。 **`itemscope**` 属性を要素に指定すると、要素に関連付けられた数々の名前と値の組み合わせを持つ新しいアイテムを作成します。
@@ -76,7 +69,7 @@ translation_of: Web/HTML/Global_attributes/itemscope
 
 ### レシピの構造化データの表現
 
-以下の例には 4 つの `itemscope` 属性があります。それぞれの `itemscope` 属性は、対応する `itemtype` 属性のスコープを設定しています。以下の例にある `Recipe`, `AggregateRating`, `NutritionInformation` の `itemtype` は、レシピのための [schema.org](www.schema.org) 構造化データの一部であり、最初の `itemtype`, http\://schema.org/Recipe として定義されています。
+以下の例には 4 つの `itemscope` 属性があります。それぞれの `itemscope` 属性は、対応する `itemtype` 属性のスコープを設定しています。以下の例にある `Recipe`, `AggregateRating`, `NutritionInformation` の `itemtype` は、レシピのための [schema.org](www.schema.org) 構造化データの一部であり、最初の `itemtype`, `http://schema.org/Recipe` として定義されています。
 
 <table class="standard-table">
   <tbody>

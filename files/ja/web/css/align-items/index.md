@@ -1,15 +1,8 @@
 ---
 title: align-items
 slug: Web/CSS/align-items
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.align-items
-translation_of: Web/CSS/align-items
 ---
+
 [CSS](/ja/docs/Web/CSS) の **`align-items`** プロパティは、すべての直接の子要素に集合として {{cssxref("align-self")}} の値を設定します。フレックスボックスでは{{glossary("Cross Axis", "交差軸")}}方向のアイテムの配置を制御します。グリッドレイアウトでは、{{glossary("Grid Areas", "グリッド領域")}}におけるアイテムのブロック軸方向の配置を制御します。
 
 以下のデモは、グリッドレイアウトを使用して `align-items` のいくつかの値の動作を示しています。

@@ -1,12 +1,8 @@
 ---
 title: ARIA ライブリージョン
 slug: Web/Accessibility/ARIA/ARIA_Live_Regions
-tags:
-  - ARIA
-  - Accessibility
-  - ariaLive
-translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 ---
+
 JavaScript を使うと、検索結果のリストを瞬時に更新する、もしくはユーザーの操作を必要としないような控えめなアラートや通知を表示するなど、ページ全体をリロードせずにページの一部を動的に変更することができます。 これらの変更は通常ページを見ることのできるユーザーにとっては視覚的に明らかですが、支援技術ユーザーにとっては明確ではないかもしれません。ARIA ライブリージョンはこのギャップを埋め、動的なコンテンツの変更を支援技術により通知できるやり方で、プログラムによって表出させる方法を提供します。
 
 > **Note:** 支援技術はライブリージョンへのコンテンツの動的な変更を通知します。ライブリージョンはブラウザーと支援技術が認識できるように最初から（かつ空で）存在しなければなりません。続いて後に起こる変更は通知されます。
@@ -21,8 +17,8 @@ JavaScript を使うと、検索結果のリストを瞬時に更新する、も
 
 ページのリロードなしに更新される動的なコンテンツは、ほとんどの場合領域もしくはウィジェットのどちらかです。 対話的でないシンプルなコンテンツの変更は、ライブリージョンとして記されるべきです。以下は、関連する ARIA ライブリージョンプロパティと説明の一覧です。
 
-1.  **`aria-live`**: `aria-live=POLITENESS_SETTING` はスクリーンリーダーがライブリージョンの更新処理の優先度を設定するために使われます。設定は `off`、`polite`、` assertive` で、デフォルトは `off` です。この属性は間違いなく最も重要な属性です。
-2.  **`aria-controls`**: `aria-controls=[IDLIST]` は領域とそれをコントロールするものを関連付けるために使用されます。領域は `div` の `id` のように識別され、スペースを用いて複数の領域を aria-controls に関連付けることができます。例えば `aria-controls="myRegionID1 myRegionsID2"`。
+1. **`aria-live`**: `aria-live=POLITENESS_SETTING` はスクリーンリーダーがライブリージョンの更新処理の優先度を設定するために使われます。設定は `off`、`polite`、`assertive` で、デフォルトは `off` です。この属性は間違いなく最も重要な属性です。
+2. **`aria-controls`**: `aria-controls=[IDLIST]` は領域とそれをコントロールするものを関連付けるために使用されます。領域は `div` の `id` のように識別され、スペースを用いて複数の領域を aria-controls に関連付けることができます。例えば `aria-controls="myRegionID1 myRegionsID2"`。
 
     > **Warning:** ライブリージョンの aria-controls の側面が現在の AT に実装されているか、どの AT で実装されているかはわかりません。調査が必要です。
 
@@ -137,16 +133,16 @@ renderPlanetInfoButton.addEventListener('click', event => {
 
 The Paciello Group は、[ライブリージョンのサポート状況についての情報](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/) (2014) をいくつかもっています。Paul Jadam は特に [aira-atomic と aria-relevant のサポート](http://pauljadam.com/demos/aria-atomic-relevant.html)についてのリサーチをしました。
 
-1.  **`aria-atomic`**: `aria-atomic=BOOLEAN` は領域の一部だけが変更された場合でも、スクリーンリーダーが常にライブリージョン全体を読み上げるかどうかを設定します。可能な設定は `false` または `true` で、デフォルトは `false` です。
-2.  [**``aria-relevant**](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute "Using_the_aria-relevant_attribute"): `aria-relevant=[LIST_OF_CHANGES]` はどういったタイプの変更がライブリージョンに関連するかを設定します。可能な設定は `additions`、`removals`、`text`、`all` で、 `additions text` がデフォルトです。
-3.  **`aria-labelledby`**: `aria-labelledby=[IDLIST]` は領域とラベルを関連付けるために使われます。`aria-controls` と似ていますが、複数のラベルを領域へ関連付けられ、複数のラベル識別子は空白によって区切られます。
-4.  **`aria-describedby`**: `aria-describedby=[IDLIST]` は領域と説明の関連付けを行います。`aria-controls` と似ていますが、複数の説明を領域を関連付けられ、説明の識別子は空白によって区切られます。
+1. **`aria-atomic`**: `aria-atomic=BOOLEAN` は領域の一部だけが変更された場合でも、スクリーンリーダーが常にライブリージョン全体を読み上げるかどうかを設定します。可能な設定は `false` または `true` で、デフォルトは `false` です。
+2. [**`aria-relevant`**](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute): `aria-relevant=[LIST_OF_CHANGES]` はどういったタイプの変更がライブリージョンに関連するかを設定します。可能な設定は `additions`、`removals`、`text`、`all` で、 `additions text` がデフォルトです。
+3. **`aria-labelledby`**: `aria-labelledby=[IDLIST]` は領域とラベルを関連付けるために使われます。`aria-controls` と似ていますが、複数のラベルを領域へ関連付けられ、複数のラベル識別子は空白によって区切られます。
+4. **`aria-describedby`**: `aria-describedby=[IDLIST]` は領域と説明の関連付けを行います。`aria-controls` と似ていますが、複数の説明を領域を関連付けられ、説明の識別子は空白によって区切られます。
 
 ### 高度なユースケース: Clock
 
 `aria-atomic` についての説明のために、時間と分を表するシンプルな時計を表示するサイトを考えます。時計は単に現在のコンテンツを上書きする、新しい残り時間により毎分更新されます。
 
-```
+```html
 <div id="clock" role="timer" aria-live="polite"></div>
 ```
 
@@ -165,7 +161,7 @@ setInterval(function() {
 
 `aria-atomic="true"` はライブリージョンが更新されるたびに、コンテンツの更新がすべて (例 "Time: 17:34") 通知されることを保証します。
 
-```
+```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true"></div>
 ```
 
@@ -173,9 +169,9 @@ setInterval(function() {
 
 チャットサイトでは、現在ログインしているユーザーを表示したいと思うでしょう。ページをリロードすることなく、ユーザーのログインおよびログアウトステータスが動的に反映されるユーザーの一覧を表示します。
 
-```
+```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-	<!-- use JavaScript to add remove users here-->
+  <!-- use JavaScript to add remove users here-->
 </ul>
 ```
 

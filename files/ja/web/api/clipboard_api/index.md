@@ -1,26 +1,8 @@
 ---
 title: クリップボード API
 slug: Web/API/Clipboard_API
-page-type: web-api-overview
-tags:
-  - API
-  - Async Clipboard API
-  - Clipboard
-  - Clipboard API
-  - Clipboard Event API
-  - ClipboardEvent
-  - ClipboardItem
-  - Cut
-  - Landing
-  - Reference
-  - copy
-  - paste
-browser-compat:
-  - api.Clipboard
-  - api.ClipboardEvent
-  - api.ClipboardItem
-translation_of: Web/API/Clipboard_API
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 **クリップボード API** は、クリップボードのコマンド (切り取り、コピー、貼り付け) に応答する機能や、システムクリップボードの非同期の読み取りや書き込みを行う機能を提供します。

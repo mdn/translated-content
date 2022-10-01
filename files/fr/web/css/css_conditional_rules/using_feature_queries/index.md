@@ -9,6 +9,7 @@ translation_of: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
 original_slug: >-
   Web/CSS/CSS_Conditional_Rules/Utiliser_requêtes_fonctionnalité_(feature_queries)
 ---
+
 {{CSSRef}}
 
 **Les requêtes de fonctionnalité (ou _feature queries_)** sont créées à l'aide de la règle [`@supports`](/fr/docs/Web/CSS/@supports) et permettent aux développeurs web de tester la prise en charge d'une fonctionnalité donnée par le navigateur puis de fournir le code CSS qui sera appliqué selon le résultat de ce test. Dans ce guide, nous verrons comment gérer l'amélioration progressive grâce à l'aide des requêtes de fonctionnalité.

@@ -1,10 +1,8 @@
 ---
 title: コンテンツスクリプト
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
+
 {{AddonSidebar}}
 
 コンテンツスクリプトは、特定のウェブページのコンテキストで実行される拡張機能の一部です（拡張機能の一部であるバックグラウンドスクリプトや、ウェブサイト自体の一部であるスクリプト、例えば {{HTMLElement("script")}} 要素みたいなものと対をなすような)。
@@ -43,11 +41,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 次の 3 つの方法のいずれかを使用して、ウェブページにコンテンツスクリプトを読み込むことができます。
 
-1.  - **インストール時に、URL パターンにマッチするページ内へ**
+1. **インストール時に、URL パターンにマッチするページ内へ**
       - : `manifest.json` の [`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) キーを使用して、URL が[指定されたパターンにマッチする](/ja/Add-ons/WebExtensions/Match_patterns)ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。
-2.  - **実行時に、URL パターンにマッチするページ内へ**
+2. **実行時に、URL パターンにマッチするページ内へ**
       - : {{WebExtAPIRef("contentScripts")}} API を使って、URL が[指定されたパターンにマッチする](/ja/Add-ons/WebExtensions/Match_patterns)ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。これは method (1) のようなもので、違いは実行時にコンテンツスクリプトを追加/削除できることです。
-3.  - **実行時に、特定のタブへ**
+3. **実行時に、特定のタブへ**
       - : [`tabs.executeScript()`](/ja/Add-ons/WebExtensions/API/Tabs/executeScript) API を使用すると、ユーザーが[ブラウザーアクション](/ja/Add-ons/WebExtensions/user_interface/Browser_action)をクリックした場合など、必要なときにコンテンツスクリプトを特定のタブに読み込むことができます。
 
 *フレームごと、拡張機能ごとの*グローバルスコープしかありません。これは 1 つのコンテンツスクリプトの変数は、読み込み方にかかわらず、他のコンテンツスクリプトからアクセスできることになります。

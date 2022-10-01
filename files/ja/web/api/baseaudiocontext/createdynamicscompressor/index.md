@@ -1,18 +1,9 @@
 ---
 title: BaseAudioContext.createDynamicsCompressor()
 slug: Web/API/BaseAudioContext/createDynamicsCompressor
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createDynamicsCompressor
-browser-compat: api.BaseAudioContext.createDynamicsCompressor
-translation_of: Web/API/BaseAudioContext/createDynamicsCompressor
 original_slug: Web/API/AudioContext/createDynamicsCompressor
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createDynamicsCompressor()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{domxref("DynamicsCompressorNode")}} を生成します。これで、音声信号に圧縮をかけることができます。

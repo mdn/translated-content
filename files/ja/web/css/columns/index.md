@@ -1,15 +1,8 @@
 ---
 title: columns
 slug: Web/CSS/columns
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.columns
-translation_of: Web/CSS/columns
 ---
+
 {{CSSRef}}
 
 **`columns`** は [CSS](/ja/docs/Web/CSS) 一括指定プロパティで、要素の内容物を描画する際に使用する段数や段の幅を設定します。

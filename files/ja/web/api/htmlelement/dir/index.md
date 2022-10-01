@@ -1,15 +1,8 @@
 ---
 title: HTMLElement.dir
 slug: Web/API/HTMLElement/dir
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLElement.dir
-translation_of: Web/API/HTMLElement/dir
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLElement.dir`** プロパティは、現在の要素のコンテンツのテキストを書く書字方向を取得または設定します。

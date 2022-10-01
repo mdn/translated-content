@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/dragend_event
 translation_of: Web/API/Document/dragend_event
 original_slug: Web/API/Document/dragend_event
 ---
+
 L'événement **dragend** est déclenché lorsque une opération de glissement est terminée (en relâchant le bouton de la souris ou en appuyant sur la touche Echap).
 
 ## Informations générales
@@ -139,11 +140,11 @@ L'événement **dragend** est déclenché lorsque une opération de glissement e
 
 ## Voir aussi
 
-- {{event("drag")}}
-- {{event("dragstart")}}
-- {{event("dragend")}}
-- {{event("dragover")}}
-- {{event("dragenter")}}
-- {{event("dragleave")}}
-- {{event("dragexit")}}
-- {{event("drop")}}
+- [`drag`](/fr/docs/Web/API/Document/drag_event)
+- [`dragstart`](/fr/docs/Web/API/Document/dragstart_event)
+- [`dragend`](/fr/docs/Web/API/Document/dragend_event)
+- [`dragover`](/fr/docs/Web/API/Document/dragover_event)
+- [`dragenter`](/fr/docs/Web/API/Document/dragenter_event)
+- [`dragleave`](/fr/docs/Web/API/Document/dragleave_event)
+- [`dragexit`](/fr/docs/Web/API/Document/dragexit_event)
+- [`drop`](/fr/docs/Web/API/Document/drop_event)

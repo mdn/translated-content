@@ -1,15 +1,8 @@
 ---
 title: HTMLDivElement
 slug: Web/API/HTMLDivElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLDivElement
-translation_of: Web/API/HTMLDivElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLDivElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスの他に） {{HtmlElement("div")}} 要素を操作するための特別なプロパティを提供します。

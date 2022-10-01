@@ -1,16 +1,8 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
-tags:
-  - API
-  - CSS アニメーション
-  - Experimental
-  - Interface
-  - Reference
-  - Web Animations
-  - インターフェイス
-translation_of: Web/API/AnimationEvent
 ---
+
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
 **`AnimationEvent`** インターフェイスは、[アニメーション](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)に関する情報を提供するイベントを表します。

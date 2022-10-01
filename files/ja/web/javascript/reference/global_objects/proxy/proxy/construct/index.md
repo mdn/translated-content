@@ -1,13 +1,8 @@
 ---
 title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 ---
+
 {{JSRef}}
 
 **`handler.construct()`** メソッドは {{jsxref("Operators/new", "new")}} 演算子のトラップです。結果として得られるプロキシオブジェクトに対して新しい操作を有効にするためには、プロキシを初期化するために使われるターゲット自身が `[[Construct]]` 内部メソッドを持っていなければなりません(つまり、 `new target` が有効でなければなりません)。

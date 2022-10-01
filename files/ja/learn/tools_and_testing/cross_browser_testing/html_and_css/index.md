@@ -2,6 +2,7 @@
 title: 一般的な HTML と CSS の問題への対処
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 ここでは、HTML と CSS のコードで発生する可能性のある一般的なクロスブラウザーの問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS プレフィックスの処理、問題を追跡するためのブラウザーの開発者ツールの使用、ブラウザーにサポートを追加するための polyfill の使用、レスポンシブデザイン問題への取り組みなどが含まれます。
@@ -252,7 +253,7 @@ Generally, you will rarely need to include a prefix; and you may want to delete 
 
 Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/ja/docs/Web/CSS/Media_Queries), and make sure it is applied correctly using [viewport](/ja/docs/Web/HTML/Viewport_meta_tag). You can find a detailed account of such practices in [The building blocks of responsive design](/ja/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks).
 
-Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from simple [mobile first media queries](/ja/docs/Web/Progressive_web_apps/Responsive/Mobile_first), to more complex [responsive image techniques](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes).
+Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from simple [mobile first media queries](/ja/docs/Web/Progressive_web_apps/Responsive/Mobile_first), to more complex [responsive image techniques](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#解像度の切り替え_様々な寸法).
 
 Another difficulty that can present problems is browser support for the features that make the above techniques possible. media queries are not supported in IE 8 or less, so if you want to use a mobile first layout and have the desktop layout then apply to old IE versions, you'll have to apply a media query {{glossary("polyfill")}} to your page, like [css3-mediaqueries-js](https://code.google.com/archive/p/css3-mediaqueries-js/), or [Respond.js](https://github.com/scottjehl/Respond).
 

@@ -1,13 +1,9 @@
 ---
 title: alertdialog ロールの使用
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 ---
+
 ### 説明
 
 このテクニックは、[`alertdialog`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog) ロールの使用方法を示しています。

@@ -1,18 +1,9 @@
 ---
 title: BaseAudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createBufferSource
-browser-compat: api.BaseAudioContext.createBufferSource
-translation_of: Web/API/BaseAudioContext/createBufferSource
 original_slug: Web/API/AudioContext/createBufferSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createBufferSource()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、新しい {{ domxref("AudioBufferSourceNode") }} を作成するために使用します。これは {{ domxref("AudioBuffer") }} オブジェクトに含まれる音声データを再生するために使用されます。 {{ domxref("AudioBuffer") }} は {{domxref("BaseAudioContext.createBuffer")}} で生成さされたり、音声トラックのデコードに成功したときに {{domxref("BaseAudioContext.decodeAudioData")}} から返されたりします。

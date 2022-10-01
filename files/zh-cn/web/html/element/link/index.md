@@ -2,6 +2,7 @@
 title: <link>：外部资源链接元素
 slug: Web/HTML/Element/link
 ---
+
 {{HTMLRef}}
 
 **HTML 外部资源链接元素** (**`<link>`**) 规定了当前文档与外部资源的关系。该元素最常用于链接[样式表](/zh-CN/docs/Glossary/CSS)，此外也可以被用来创建站点图标 (比如 PC 端的 “favicon” 图标和移动设备上用以显示在主屏幕的图标) 。
@@ -111,7 +112,7 @@ slug: Web/HTML/Element/link
 - {{htmlattrdef("sizes")}}
   - : 这个属性定义了包含相应资源的可视化媒体中的 icons 的大小。它只有在{{htmlattrxref("rel","link")}}包含 icon 的[link 类型值](/zh-CN/docs/Web/HTML/Link_types)。它可能有如下的规则。
 
-    - `any` 表示图标可以按矢量格式缩放到任意大小，例如`image/svg+xml。`
+    - `any` 表示图标可以按矢量格式缩放到任意大小，例如 `image/svg+xml`。
     - 一个由空白符分隔的尺寸列表。每一个都以`<width in pixels>x<height in pixels>` 或 `<width in pixels>X<height in pixels>给出。`尺寸列表中的每一个尺寸都必须包含在资源里。
 
     > **备注：** 大多数的 icon 格式只能存储一个 icon。因此绝大多数使用 {{htmlattrxref("sizes")}}时只包含一个值。微软的 ICO 格式和苹果的 ICNS 格式都是这样，ICO 使用得更加广泛，推荐你使用它。
@@ -262,7 +263,7 @@ function sheetError() {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.link", 3)}}
+{{Compat}}
 
 ## 请参阅
 

@@ -1,17 +1,9 @@
 ---
 title: MessagePort.onmessageerror
 slug: Web/API/MessagePort/messageerror_event
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Property
-  - Reference
-  - events
-  - onmessageerror
-translation_of: Web/API/MessagePort/onmessageerror
 original_slug: Web/API/MessagePort/onmessageerror
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessagePort")}} インターフェースの **`onmessageerror`** イベントハンドラーは、ポートで `messageerror` 型の {{domxref("MessageEvent")}} が発火すると呼び出されます。つまり、{{glossary("Deserialization", "deserialized")}} できないメッセージを受け取ったときです。

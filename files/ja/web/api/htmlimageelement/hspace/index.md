@@ -1,27 +1,8 @@
 ---
 title: HTMLImageElement.hspace
 slug: Web/API/HTMLImageElement/hspace
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Horizontal
-  - 画像
-  - Layout
-  - プロパティ
-  - リファレンス
-  - hspace
-  - img
-  - left
-  - margin
-  - right
-  - spacing
-  - 非推奨
-browser-compat: api.HTMLImageElement.hspace
-translation_of: Web/API/HTMLImageElement/hspace
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`hspace`** は {{domxref("HTMLImageElement")}} インターフェイスの*廃止された*プロパティで、ページをレイアウトする際に {{HTMLElement("img")}} 要素の左右に何ピクセル分の空きを残すかを指定します。

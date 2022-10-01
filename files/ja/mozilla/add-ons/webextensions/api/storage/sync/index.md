@@ -1,18 +1,8 @@
 ---
 title: storage.sync
 slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - Storage
-  - Sync
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/sync
 ---
+
 {{AddonSidebar()}}
 
 `sync` ストレージ領域を指します。 `sync` ストレージ内のアイテムはブラウザーによって同期され、ログイン(Firefox sync や Google アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。

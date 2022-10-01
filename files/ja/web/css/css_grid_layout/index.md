@@ -1,16 +1,8 @@
 ---
 title: CSS グリッドレイアウト
 slug: Web/CSS/CSS_Grid_Layout
-tags:
-  - CSS
-  - グリッドレイアウト
-  - グリッド
-  - ガイド
-  - レイアウト
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Grid_Layout
 ---
+
 {{CSSRef}}
 
 **CSS グリッドレイアウト**は、ページを大きな領域に分割することや、 HTML のプリミティブから構成されたコントロールの部品間の、寸法、位置、レイヤーに関する関係を定義することに優れています。

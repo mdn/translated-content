@@ -2,9 +2,10 @@
 title: CanvasRenderingContext2D.setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
 ---
+
 {{APIRef}}
 
-Canvas 2D API 的{{domxref("CanvasRenderingContext2D")}}接口的**`setLineDash()`**方法在填充线时使用虚线模式。它使用一组值来指定描述模式的线和间隙的交替长度。
+Canvas 2D API 的{{domxref("CanvasRenderingContext2D")}}接口的 **`setLineDash()`** 方法在填充线时使用虚线模式。它使用一组值来指定描述模式的线和间隙的交替长度。
 
 > **备注：** 如果要切换回至实线模式，将 dash list 设置为一个空数组即可。
 
@@ -17,7 +18,7 @@ setLineDash(segments);
 ### 参数
 
 - `segments`
-  - : 一个{{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 如果数组元素的数量是奇数， 数组的元素会被复制并重复。例如， `[5, 15, 25]` 会变成 `[5, 15, 25, 5, 15, 25]。`
+  - : 一个{{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。如果数组元素的数量是奇数，数组的元素会被复制并重复。例如， `[5, 15, 25]` 会变成 `[5, 15, 25, 5, 15, 25]`。
 
 ### 返回值
 
@@ -147,7 +148,7 @@ drawDashedLine([12, 3, 3]);  // Equals [12, 3, 3, 12, 3, 3]
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.setLineDash")}}
+{{Compat}}
 
 ## 参见
 

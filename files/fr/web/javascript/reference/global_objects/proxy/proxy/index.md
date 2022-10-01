@@ -10,6 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 translation_of_original: Web/JavaScript/Reference/Global_Objects/Proxy/handler
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler
 ---
+
 {{JSRef}}
 
 L'objet gestionnaire d'un proxy est un objet qui contient les trappes de captures (_traps_) pour le  {{jsxref("Proxy", "proxy", "", 1)}}.

@@ -1,16 +1,8 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
-tags:
-  - API
-  - Apps
-  - Battery
-  - Firefox OS
-  - Guide
-  - Mobile
-  - ガイド
-translation_of: Web/API/Battery_Status_API
 ---
+
 {{DefaultAPISidebar("Battery API")}}{{deprecated_header}}
 
 **Battery Status API** は、 **Battery API** と呼ばれることの方が多いのですが、システムのバッテリー充電レベルに関する情報の提供、およびバッテリーレベルや充電状態が変化したときに発生するイベントによる通知を可能にします。これは、バッテリーが消耗したときにバッテリー消費を減らすためアプリのリソース使用状況を調整したり、データを失わないためにバッテリーが切れる前に変更点を保存したりするために使用できます。

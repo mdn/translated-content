@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Functions
 original_slug: Web/JavaScript/Guide/Fonctions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Boucles_et_it%C3%A9ration", "Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs")}}
 
 Les fonctions font partie des briques fondamentales de JavaScript. Une fonction est une procédure JavaScript, un ensemble d'instructions effectuant une tâche ou calculant une valeur. Afin d'utiliser une fonction, il est nécessaire de l'avoir auparavant définie au sein de la portée dans laquelle on souhaite l'appeler.

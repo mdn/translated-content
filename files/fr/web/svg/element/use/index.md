@@ -3,6 +3,7 @@ title: <use>
 slug: Web/SVG/Element/use
 translation_of: Web/SVG/Element/use
 ---
+
 {{SVGRef}}
 
 L'élement **`<use>`** permet la duplication de _nodes_ (noeuds du DOM, NDR) définis par [\<defs>](/fr/docs/Web/SVG/Element/defs) afin de les insérer par ailleurs. L'effet est le même que si les noeuds étaient créés dans une partie non-rendue (au sens de non-affichée) au sein du DOM puis "clonés" là où est utilisé l'élément `use` tel que le permet les [éléments de gabarit](/fr/docs/Web/HTML/Element/template) grâce à HTML5.
@@ -72,11 +73,8 @@ Cet élément est implanté par l'interface {{domxref("SVGUseElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                   | Commentaire        |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'struct.html#UseElement', '&lt;use&gt;')}}     | {{Spec2('SVG2')}} |                    |
-| {{SpecName('SVG1.1', 'struct.html#UseElement', '&lt;use&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.use")}}
+{{Compat}}

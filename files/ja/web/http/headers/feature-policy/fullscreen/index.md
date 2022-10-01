@@ -1,16 +1,8 @@
 ---
 title: 'Feature-Policy: fullscreen'
 slug: Web/HTTP/Headers/Feature-Policy/fullscreen
-tags:
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - fullscreen
-  - ヘッダー
-  - 実験的
-browser-compat: http.headers.Feature-Policy.fullscreen
-translation_of: Web/HTTP/Headers/Feature-Policy/fullscreen
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `fullscreen` ディレクティブは、現在の文書が {{domxref('Element.requestFullScreen()')}} を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 返却された {{jsxref('Promise')}} が {{jsxref('TypeError')}} で拒否されます。

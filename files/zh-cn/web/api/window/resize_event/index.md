@@ -2,12 +2,13 @@
 title: resize
 slug: Web/API/Window/resize_event
 ---
+
 文档视图调整大小时会触发 **resize** 事件。
 
 ## 基本信息
 
 - 规范
-  - [: DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](http://www.w3.org/TR/cssom-view/#resizing-viewports)
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](http://www.w3.org/TR/cssom-view/#resizing-viewports)
 - 接口
   - : UIEvent
 - 是否冒泡

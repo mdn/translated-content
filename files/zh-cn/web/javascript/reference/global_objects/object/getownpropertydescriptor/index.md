@@ -2,6 +2,7 @@
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyDescriptor()`** 方法返回指定对象上一个自有属性对应的属性描述符。（自有属性指的是直接赋予该对象的属性，不需要从原型链上进行查找的属性）
@@ -34,13 +35,13 @@ Object.getOwnPropertyDescriptor(obj, prop)
 - **`value`**
   - : 该属性的值 (仅针对数据属性描述符有效)
 - **`writable`**
-  - : `当且仅当属性的值可以被改变时为 true。(仅针对数据属性描述有效)`
+  - : 当且仅当属性的值可以被改变时为 `true`。(仅针对数据属性描述有效)
 - **`get`**
   - : 获取该属性的访问器函数（getter）。如果没有访问器，该值为 undefined。(仅针对包含访问器或设置器的属性描述有效)
 - **`set`**
   - : 获取该属性的设置器函数（setter）。如果没有设置器，该值为 undefined。(仅针对包含访问器或设置器的属性描述有效)
 - **`configurable`**
-  - : `当且仅当指定对象的属性描述可以被改变或者属性可被删除时，为 true。`
+  - : 当且仅当指定对象的属性描述可以被改变或者属性可被删除时，为 `true`。
 - **`enumerable`**
   - : 当且仅当指定对象的属性可以被枚举出时，为 `true`。
 

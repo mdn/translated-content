@@ -1,18 +1,8 @@
 ---
 title: 要素の寸法の決定
 slug: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
-tags:
-  - API
-  - CSSOM View
-  - Client width
-  - Guide
-  - Intermediate
-  - client height
-  - offsetHeight
-  - offsetWidth
-  - size of displayed content
-translation_of: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 ---
+
 {{DefaultAPISidebar("CSSOM View")}}
 
 要素の幅と高さを決定するために見ることがあるプロパティはいくつかあり、どれがニーズに適しているかを特定するのが難しい場合があります。この記事は、その決定に役立つように作られています。これらのプロパティはすべて読み取り専用であることに注意してください。要素の幅と高さを設定する場合は、 {{CSSxRef("width")}} と {{CSSxRef("height")}}、またはそれをオーバーライドする {{CSSxRef("min-width")}} と {{CSSxRef("max-width")}}、および {{CSSxRef("min-height")}} と {{CSSxRef("max-height")}} プロパティを使用してください。

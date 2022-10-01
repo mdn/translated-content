@@ -2,6 +2,7 @@
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
+
 {{JSRef}}
 
 **`has()`** 方法根据 WeakMap 对象的元素中是否存在 key 键返回一个 boolean 值。

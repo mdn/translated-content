@@ -1,13 +1,8 @@
 ---
 title: shortcuts
 slug: Web/Manifest/shortcuts
-tags:
-  - マニフェスト
-  - ウェブ
-  - shortcuts
-browser-compat: html.manifest.shortcuts
-translation_of: Web/Manifest/shortcuts
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">

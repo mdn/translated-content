@@ -1,15 +1,8 @@
 ---
 title: HTMLSelectElement.namedItem()
 slug: Web/API/HTMLSelectElement/namedItem
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLSelectElement.namedItem
-translation_of: Web/API/HTMLSelectElement/namedItem
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.namedItem()`** メソッドは、{{domxref("HTMLOptionElement")}} のうち `name` または `id` が指定された名前に一致する {{domxref("HTMLOptionElement")}} を、一致するものがない場合は `null` を返します。

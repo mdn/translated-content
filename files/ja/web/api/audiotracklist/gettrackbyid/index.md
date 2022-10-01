@@ -1,22 +1,8 @@
 ---
 title: AudioTrackList.getTrackById()
 slug: Web/API/AudioTrackList/getTrackById
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - Track ID
-  - Track List
-  - Tracks
-  - getTrackById
-  - id
-  - track
-translation_of: Web/API/AudioTrackList/getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 **{{domxref("AudioTrackList")}}** の **`getTrackById()`** メソッドは、指定された文字列と {{domxref("AudioTrack.id", "id")}} が一致するトラックリストから最初の {{domxref("AudioTrack")}} オブジェクトを返します。 ID 文字列がわかっていれば、これで特定のトラックを見つけることができます。

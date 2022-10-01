@@ -1,15 +1,8 @@
 ---
 title: page-break-after
 slug: Web/CSS/page-break-after
-tags:
-  - CSS
-  - CSS プロパティ
-  - ページ区切り
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.page-break-after
-translation_of: Web/CSS/page-break-after
 ---
+
 {{CSSRef}}
 
 > **Warning:** このプロパティは {{cssxref("break-after")}} プロパティで置き換えられました。

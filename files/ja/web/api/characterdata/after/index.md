@@ -1,12 +1,8 @@
 ---
 title: CharacterData.after()
 slug: Web/API/CharacterData/after
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.after
-translation_of: Web/API/CharacterData/after
 ---
+
 {{APIRef("DOM")}}
 
 **`after()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `CharacterData` の親ノードの子リストの、この `CharacterData` の直後に挿入します。

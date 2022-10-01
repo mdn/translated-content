@@ -1,12 +1,8 @@
 ---
 title: math:highest()
 slug: Web/EXSLT/math/highest
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - リファレンス
-translation_of: Web/EXSLT/math/highest
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/EXSLT")}}
 
 `math:highest()` は、指定されたノードセットの最大値（[`math:max()`](/ja/docs/Web/EXSLT/math/max) を使用して計算した最大値）を持つノードを返します。

@@ -1,16 +1,8 @@
 ---
 title: ByteLengthQueuingStrategy.size()
 slug: Web/API/ByteLengthQueuingStrategy/size
-tags:
-  - API
-  - ByteLengthQueuingStrategy
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - size
-translation_of: Web/API/ByteLengthQueuingStrategy/size
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ByteLengthQueuingStrategy")}} インターフェイスの **`size()`** メソッドは、所与のチャンクの `byteLength` プロパティを返します。

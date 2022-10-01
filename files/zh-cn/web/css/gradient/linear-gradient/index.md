@@ -3,6 +3,7 @@ title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
 original_slug: Web/CSS/gradient/linear-gradient()
 ---
+
 {{CSSRef}}
 
 CSS **`linear-gradient()`** 函数用于创建一个表示两种或多种颜色线性渐变的图片。其结果属于{{cssxref("&lt;gradient&gt;")}}数据类型，是一种特别的{{cssxref("&lt;image&gt;")}}数据类型。
@@ -104,7 +105,7 @@ where <side-or-corner> = [ left | right ] || [ top | bottom ]
 
 ### 语法历史
 
-`linear-gradient的语法`由 2008 年实施的[first Apple proposal](http://www.webkit.org/blog/175/introducing-css-gradients/)发展而来。
+`linear-gradient` 的语法由 2008 年实施的 [first Apple proposal](http://www.webkit.org/blog/175/introducing-css-gradients/) 发展而来。
 
 ```
 -webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*)
@@ -118,7 +119,7 @@ where <side-or-corner> = [ left | right ] || [ top | bottom ]
 -moz-linear-gradient([ [ [top | bottom] || [left | right] ],]? <color-stop>[, <color-stop>]+);
 ```
 
-新的语法不需要` to()、``from()和``color-stop()函数，所以这些函数被丢弃。而``top `/`bottom`与`left`/`right的顺序也被标记为不重要，所以`Mozilla 移除了必需首先定义`top`/`bottom`的限制。
+新的语法不需要 `to()`、`from()` 和 `color-stop()` 函数，所以这些函数被丢弃。而 `top` / `bottom` 与 `left` / `right` 的顺序也被标记为不重要，所以 `Mozilla` 移除了必需首先定义 `top` / `bottom` 的限制。
 
 新的语法仍然有一个缺点：它只允许水平和垂直渐变。在多次变更解决了方向限制的问题之后，它被增加到[CSS Images Values and Content Replacement Level 3 draft in 2011-02-17](http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient)。
 
@@ -139,7 +140,7 @@ linear-gradient([ [ [ {{cssxref("&lt;angle&gt;")}} | to [top | bottom] || [left 
 
 以上应当是最终语法。
 
-在带前缀的变体和不带前缀的提案之间仍然存在一项语义的分歧。最终 Apple 的提案显示，带前缀的语法都使用极坐标定义{{ cssxref("&lt;angle&gt;") }}参数，导致了`0deg指向东方。为了与CSS的其他部分保持一致，标准将0deg指向北方。为了防止使用前缀版本属性的站点不至于崩溃，它们保持原始的角度定义（0deg指向东方）。在使用不带前缀版本的时候将会切换到正确的规格。在这种不兼容的情况下，`Gecko 给所有语法都加上前缀，不带前缀且没有 to 关键词的语法会被丢弃。
+在带前缀的变体和不带前缀的提案之间仍然存在一项语义的分歧。最终 Apple 的提案显示，带前缀的语法都使用极坐标定义 {{ cssxref("&lt;angle&gt;") }} 参数，导致了`0deg` 指向东方。为了与 CSS 的其他部分保持一致，标准将 0deg 指向北方。为了防止使用前缀版本属性的站点不至于崩溃，它们保持原始的角度定义（0deg 指向东方）。在使用不带前缀版本的时候将会切换到正确的规格。在这种不兼容的情况下，Gecko 给所有语法都加上前缀，不带前缀且没有 to 关键词的语法会被丢弃。
 
 ## 范例
 

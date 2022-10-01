@@ -2,6 +2,7 @@
 title: Request.credentials
 slug: Web/API/Request/credentials
 ---
+
 {{APIRef("Fetch")}}
 
 **`credentials`** 是{{domxref("Request")}}接口的只读属性，用于表示用户代理是否应该在跨域请求的情况下从其他域发送 cookies。这与 XHR 的 withCredentials 标志相似，不同的是有三个可选值（后者是两个）：
@@ -39,6 +40,6 @@ var myCred = myRequest.credentials; // returns "same-origin" by default
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

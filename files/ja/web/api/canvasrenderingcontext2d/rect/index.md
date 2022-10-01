@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.rect()
 slug: Web/API/CanvasRenderingContext2D/rect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.rect
-translation_of: Web/API/CanvasRenderingContext2D/rect
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.rect()`** はキャンバス 2D API のメソッドで、現在のパスに矩形を追加します。

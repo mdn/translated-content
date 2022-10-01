@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/draggable
 original_slug: Web/HTML/Attributs_universels/draggable
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`draggable`** est un attribut à valeur contrainte qui indique si l'élément peut être déplacé avec la souris dans un geste de glisser-déposer lorsqu'on utilise l'API _[Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop)_ ou les fonctionnalités natives du navigateur. Les valeurs autorisées pour cet attribut sont les suivantes :
@@ -34,15 +35,11 @@ Par défaut, seules les sélections de texte, les images et les liens peuvent ê
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#the-draggable-attribute", "draggable")}} | {{Spec2("HTML WHATWG")}} | Aucune modification depuis la dernière dérivation de {{SpecName('HTML5.1')}} |
-| {{SpecName("HTML5.2", "interaction.html#the-draggable-attribute", "draggable")}}     | {{Spec2("HTML5.2")}}     | Aucune modification                                                                   |
-| {{SpecName("HTML5.1", "editing.html#the-draggable-attribute", "draggable")}}             | {{Spec2("HTML5.1")}}     | Dérivation de {{SpecName('HTML WHATWG')}}, définition initiale.              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.draggable")}}
+{{Compat}}
 
 ## Voir aussi
 

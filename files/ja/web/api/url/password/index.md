@@ -1,14 +1,8 @@
 ---
 title: URL.password
 slug: Web/API/URL/password
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - password
-translation_of: Web/API/URL/password
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`password`** プロパティは、ドメイン名の前に指定されたパスワードを含む {{domxref("USVString")}} です。

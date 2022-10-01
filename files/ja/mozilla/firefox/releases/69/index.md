@@ -1,13 +1,8 @@
 ---
 title: Firefox 69 for developers
 slug: Mozilla/Firefox/Releases/69
-tags:
-  - '69'
-  - Firefox
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases/69
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされました。このページでは、開発者に影響する Firefox 69 の変更点をまとめています。

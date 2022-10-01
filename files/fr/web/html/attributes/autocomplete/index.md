@@ -20,6 +20,7 @@ tags:
 translation_of: Web/HTML/Attributes/autocomplete
 original_slug: Web/HTML/Attributs/autocomplete
 ---
+
 {{HTMLSidebar}}
 
 L'attribut `autocomplete` est disponible sur les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) qui prennent une valeur textuelle ou numérique en entrée, mais aussi pour les éléments [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea), [`<select>`](/fr/docs/Web/HTML/Element/select) et [`<form>`](/fr/docs/Web/HTML/Element/Form). `autocomplete` permet aux développeuses et développeurs web de spécifier quelle est l'autorisation éventuelle, pour l'[agent utilisateur](/fr/docs/Glossary/User_agent), de fournir une assistance automatisée afin de remplir les valeurs des champs de formulaire, ainsi que des indications au navigateur quant au type d'informations attendues dans le champ.
@@ -232,13 +233,11 @@ Une adresse au Japon est généralement **écrite sur une ligne**, dans un ordre
 
 ## Spécifications
 
-| Spécification                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#attr-fe-autocomplete", "autocomplete")}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.autocomplete")}}
+{{Compat}}
 
 ## Voir aussi
 

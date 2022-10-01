@@ -1,14 +1,8 @@
 ---
 title: location.pathname
 slug: Web/API/Location/pathname
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.pathname
-translation_of: Web/API/Location/pathname
 ---
+
 {{ApiRef("Location")}}
 
 **`pathname`** は {{domxref("Location")}} インターフェイスのプロパティで、 {{domxref("USVString")}} でその位置を表す URL のパスを持ちます。パスがない場合は空文字列になります。

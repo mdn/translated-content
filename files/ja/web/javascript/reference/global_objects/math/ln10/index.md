@@ -1,13 +1,8 @@
 ---
 title: Math.LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN10
 ---
+
 {{JSRef}}
 
 **`Math.LN10`** プロパティは 10 の自然対数、およそ 2.302 を表します。

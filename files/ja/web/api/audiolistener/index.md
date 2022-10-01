@@ -1,16 +1,8 @@
 ---
 title: AudioListener
 slug: Web/API/AudioListener
-page-type: web-api-interface
-tags:
-  - API
-  - AudioListener
-  - インターフェイス
-  - リファレンス
-  - ウェブ音声 API
-browser-compat: api.AudioListener
-translation_of: Web/API/AudioListener
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `AudioListener` インターフェースは、特定の人物が聞いている音場の位置と方向を表し、それが[音声空間処理](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)に使用されます。すべての {{domxref("PannerNode")}} は、 {{domxref("BaseAudioContext.listener")}} 属性に格納されている `AudioListener` に関連して空間化されます。

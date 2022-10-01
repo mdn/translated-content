@@ -1,17 +1,8 @@
 ---
 title: MediaStream.getTrackById()
 slug: Web/API/MediaStream/getTrackById
-tags:
-  - Media
-  - MediaStream
-  - メディアストリーム API
-  - メソッド
-  - リファレンス
-  - WebRTC
-  - getTrackById
-browser-compat: api.MediaStream.getTrackById
-translation_of: Web/API/MediaStream/getTrackById
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStream.getTrackById()`** メソッドは、指定された ID 文字列を持つトラックを表現する {{domxref("MediaStreamTrack")}} オブジェクトを返します。指定した ID を持つトラックが存在しない場合は、 `null` を返します。

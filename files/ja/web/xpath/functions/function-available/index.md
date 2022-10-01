@@ -1,11 +1,8 @@
 ---
 title: function-available
 slug: Web/XPath/Functions/function-available
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/function-available
 ---
+
 {{ XsltRef() }}
 
 `function-available`関数は、指定された関数が使用可能かどうかを判断し、論理値 true または false を返します。

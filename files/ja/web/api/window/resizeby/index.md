@@ -1,16 +1,8 @@
 ---
 title: Window.resizeBy()
 slug: Web/API/Window/resizeBy
-tags:
-  - API
-  - CSSOM View
-  - メソッド
-  - NeedsMarkupWork
-  - リファレンス
-  - Window
-browser-compat: api.Window.resizeBy
-translation_of: Web/API/Window/resizeBy
 ---
+
 {{APIRef}}
 
 **`Window.resizeBy()`** メソッドは、現在のウィンドウを指定した大きさにリサイズします。

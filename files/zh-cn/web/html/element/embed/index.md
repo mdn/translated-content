@@ -2,6 +2,7 @@
 title: <embed>：外部内容嵌入元素
 slug: Web/HTML/Element/embed
 ---
+
 **HTML `<embed>` 元素**将外部内容嵌入文档中的指定位置。此内容由外部应用程序或其他交互式内容源（如浏览器插件）提供。
 
 > **备注：** 这篇文档仅定义该元素在 HTML5 中定义的部分，不包含该元素之前的声明内容和非标准的实现。
@@ -64,7 +65,7 @@ slug: Web/HTML/Element/embed
 
 > **备注：** 不同浏览器之间显示有差异。Blink 内核浏览器（Chrome，Opera）会显示 HTML 资源的内容，但 Firefox 会显示一条通知消息，指出内容需要一个插件（见 {{Bug("730768")}}）。建议使用 \<object> 或 \<iframe> 元素。
 
-{{Compat("html.elements.embed")}}
+{{Compat}}
 
 ## 参见
 

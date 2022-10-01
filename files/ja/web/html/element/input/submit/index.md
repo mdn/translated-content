@@ -1,22 +1,8 @@
 ---
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
-tags:
-  - Element
-  - Form Button
-  - Form input
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - Submit Form
-  - button
-  - form
-  - submit
-  - submit button
-translation_of: Web/HTML/Element/input/submit
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} 要素の **`submit`** 型は、ボタンとして描画されます。 {{domxref("Element/click_event", "click")}} イベントが発生したとき (ふつうはユーザーがボタンをクリックしたとき)、{{Glossary("user agent", "ユーザーエージェント")}}はサーバーへフォームを送信しようとします。

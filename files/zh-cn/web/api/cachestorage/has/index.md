@@ -2,6 +2,7 @@
 title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("CacheStorage")}} 对象的 **`has()`**方法返回一个 {{jsxref("Promise")}} 对象，当 {{domxref("Cache")}} 对象有 `cacheName` 时被处理为 `true` 。
@@ -25,7 +26,7 @@ caches.has(cacheName).then(function(boolean) {
 
 ## 例子
 
-在下面的例子中首先检测是否有名为 v1 的缓存存在， 如果存在我们会向其添加内容，，如果不存在我们会做些对应的初始化动作。
+在下面的例子中首先检测是否有名为 v1 的缓存存在，如果存在我们会向其添加内容，，如果不存在我们会做些对应的初始化动作。
 
 ```js
 caches.has('v1').then(function(hasCache) {
@@ -47,10 +48,10 @@ caches.has('v1').then(function(hasCache) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CacheStorage.has")}}
+{{Compat}}
 
 ## 参考
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

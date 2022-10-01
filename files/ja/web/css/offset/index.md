@@ -1,16 +1,8 @@
 ---
 title: offset
 slug: Web/CSS/offset
-tags:
-  - CSS
-  - CSS モーションパス
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.offset
-translation_of: Web/CSS/offset
 ---
+
 {{CSSRef}}
 
 **`offset`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素を定義された経路に沿って動かすのに必要なすべてのプロパティを設定します。

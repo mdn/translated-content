@@ -1,17 +1,9 @@
 ---
 title: CSS カウンターの使用
 slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-tags:
-  - 上級者
-  - CSS
-  - CSS カウンタースタイル
-  - ガイド
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
+
 {{CSSRef}}
 
 **CSS カウンター**では、文書内の位置に基づいてコンテンツの表示方法を調整することができます。

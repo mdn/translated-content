@@ -2,6 +2,7 @@
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
+
 {{JSRef}}
 
 **`Atomics.add()`** 静态方法会将给定的值加到数组里的某个特定位置上，并返回该位置的旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。

@@ -3,6 +3,7 @@ title: WindowClient.focused
 slug: Web/API/WindowClient/focused
 translation_of: Web/API/WindowClient/focused
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 La propriété **`focused`** , en lecture seule de l'interface  {{domxref("WindowClient")}} , est un {{domxref("Boolean")}} qui indique si client actuel a le focus .

@@ -2,6 +2,7 @@
 title: テンプレートプライマー
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 ---
+
 A template is a text file defining the _structure_ or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in _Express_, templates are referred to as _views_).
 
 ## Express template choices
@@ -90,7 +91,7 @@ h1= title
 p= 'Evaluated and <em>escaped expression</em>:' + title
 ```
 
-If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the `#{}` and` !{}` syntax, as shown below. You can also add raw HTML within the plain text.
+If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the `#{}` and `!{}` syntax, as shown below. You can also add raw HTML within the plain text.
 
 ```html
 p This is a line with #[em some emphasis] and #[strong strong text] markup.

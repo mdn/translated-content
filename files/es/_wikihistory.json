@@ -1061,10 +1061,6 @@
     "modified": "2019-03-18T21:20:16.521Z",
     "contributors": ["mikelmg", "BubuAnabelas"]
   },
-  "Glossary/jQuery": {
-    "modified": "2019-03-23T22:02:49.153Z",
-    "contributors": ["yancarq", "velizluisma"]
-  },
   "Glossary/jpeg": {
     "modified": "2019-03-23T22:15:35.380Z",
     "contributors": ["gparra989"]
@@ -3300,10 +3296,6 @@
     "modified": "2019-03-23T22:06:34.982Z",
     "contributors": ["BrodaNoel"]
   },
-  "Web/API/BlobBuilder": {
-    "modified": "2019-03-23T22:49:30.131Z",
-    "contributors": ["BrodaNoel", "japho"]
-  },
   "Web/API/CSSRule": {
     "modified": "2019-03-23T23:58:11.498Z",
     "contributors": ["SphinxKnight", "fscholz", "khalid32", "teoli", "HenryGR"]
@@ -3843,10 +3835,6 @@
       "PatoDeTuring",
       "Thargelion"
     ]
-  },
-  "Web/API/Document/selectstart_event": {
-    "modified": "2019-03-18T21:23:16.974Z",
-    "contributors": ["Grijander81"]
   },
   "Web/API/Document/styleSheets": {
     "modified": "2019-03-23T23:58:05.224Z",
@@ -5070,6 +5058,10 @@
   "Web/API/Node/replaceChild": {
     "modified": "2019-03-23T22:46:30.428Z",
     "contributors": ["pakitometal"]
+  },
+  "Web/API/Node/selectstart_event": {
+    "modified": "2019-03-18T21:23:16.974Z",
+    "contributors": ["Grijander81"]
   },
   "Web/API/Node/textContent": {
     "modified": "2020-10-15T21:21:16.429Z",
@@ -10478,33 +10470,6 @@
       "RJacinto"
     ]
   },
-  "Web/JavaScript/A_re-introduction_to_JavaScript": {
-    "modified": "2020-09-01T08:31:36.135Z",
-    "contributors": [
-      "Nachec",
-      "pmcarballo",
-      "VictorSan45",
-      "DaniNz",
-      "jlopezfdez",
-      "mariodev12",
-      "javier_junin",
-      "GdoSan",
-      "unaisainz",
-      "oleurud",
-      "JavierHspn",
-      "jlmurgas",
-      "rivacubano",
-      "aaguilera",
-      "StripTM",
-      "bicentenario",
-      "NatiiDC",
-      "NicolasMendoza",
-      "LeoHirsch",
-      "lomejordejr",
-      "rogeliomtx",
-      "Jarkaos"
-    ]
-  },
   "Web/JavaScript/About_JavaScript": {
     "modified": "2020-09-12T13:33:01.910Z",
     "contributors": [
@@ -10937,6 +10902,33 @@
       "Bluterg",
       "jairoambunad",
       "geinerjv"
+    ]
+  },
+  "Web/JavaScript/Language_Overview": {
+    "modified": "2020-09-01T08:31:36.135Z",
+    "contributors": [
+      "Nachec",
+      "pmcarballo",
+      "VictorSan45",
+      "DaniNz",
+      "jlopezfdez",
+      "mariodev12",
+      "javier_junin",
+      "GdoSan",
+      "unaisainz",
+      "oleurud",
+      "JavierHspn",
+      "jlmurgas",
+      "rivacubano",
+      "aaguilera",
+      "StripTM",
+      "bicentenario",
+      "NatiiDC",
+      "NicolasMendoza",
+      "LeoHirsch",
+      "lomejordejr",
+      "rogeliomtx",
+      "Jarkaos"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -13094,10 +13086,6 @@
       "willemsh"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakMap/clear": {
-    "modified": "2020-10-15T22:13:14.699Z",
-    "contributors": ["xochilpili"]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakMap/delete": {
     "modified": "2019-03-23T22:25:14.754Z",
     "contributors": ["xochilpili", "frank-orellana"]
@@ -13117,10 +13105,6 @@
   "Web/JavaScript/Reference/Global_Objects/WeakSet": {
     "modified": "2019-03-23T22:06:27.270Z",
     "contributors": ["OliverAcosta", "roberbnd"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly": {
-    "modified": "2020-10-15T22:00:20.969Z",
-    "contributors": ["jvalencia"]
   },
   "Web/JavaScript/Reference/Global_Objects/decodeURI": {
     "modified": "2020-03-12T19:36:57.753Z",
@@ -13780,10 +13764,6 @@
       "orasio"
     ]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-03-12T19:44:40.392Z",
-    "contributors": ["davidenriq11", "mamptecnocrata"]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T21:37:33.978Z",
     "contributors": ["Nachec", "LeoE"]
@@ -14433,6 +14413,10 @@
     "modified": "2020-12-06T14:14:45.486Z",
     "contributors": ["Sergio_Gonzalez_Collado", "mastertrooper"]
   },
+  "WebAssembly/JavaScript_interface": {
+    "modified": "2020-10-15T22:00:20.969Z",
+    "contributors": ["jvalencia"]
+  },
   "WebAssembly/Loading_and_running": {
     "modified": "2020-09-15T19:19:35.117Z",
     "contributors": ["mastertrooper"]
@@ -14615,6 +14599,10 @@
   "conflicting/Web/API": {
     "modified": "2019-03-23T22:26:11.317Z",
     "contributors": ["SoftwareRVG"]
+  },
+  "conflicting/Web/API/Blob": {
+    "modified": "2019-03-23T22:49:30.131Z",
+    "contributors": ["BrodaNoel", "japho"]
   },
   "conflicting/Web/API/CanvasRenderingContext2D": {
     "modified": "2019-03-23T22:09:10.185Z",
@@ -14868,10 +14856,6 @@
     "modified": "2019-03-23T23:32:51.331Z",
     "contributors": ["wbamberg"]
   },
-  "conflicting/Web/HTML": {
-    "modified": "2019-01-16T22:12:02.767Z",
-    "contributors": ["raecillacastellana", "pekechis"]
-  },
   "conflicting/Web/HTML/Element": {
     "modified": "2020-01-21T22:36:54.135Z",
     "contributors": [
@@ -14954,6 +14938,14 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:47:17.832Z",
     "contributors": ["lajaso", "jpmontoya182"]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
+    "modified": "2020-03-12T19:44:40.392Z",
+    "contributors": ["davidenriq11", "mamptecnocrata"]
+  },
+  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
+    "modified": "2020-10-15T22:13:14.699Z",
+    "contributors": ["xochilpili"]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2019-03-23T22:08:25.338Z",
@@ -15124,10 +15116,6 @@
   "conflicting/Web/Progressive_web_apps/Introduction": {
     "modified": "2019-11-03T14:52:14.998Z",
     "contributors": ["totopizzahn"]
-  },
-  "conflicting/Web/SVG": {
-    "modified": "2019-01-16T22:36:49.773Z",
-    "contributors": ["jwhitlock", "ComplementosMozilla"]
   },
   "conflicting/Web/Web_Components/Using_custom_elements": {
     "modified": "2019-03-23T22:21:51.809Z",
@@ -15302,6 +15290,10 @@
   "orphaned/Glossary/elemento": {
     "modified": "2019-01-16T19:38:18.287Z",
     "contributors": ["BubuAnabelas", "HerberWest"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2019-03-23T22:02:49.153Z",
+    "contributors": ["yancarq", "velizluisma"]
   },
   "orphaned/Guía_para_el_desarrollador_de_agregados_para_Firefox": {
     "modified": "2019-01-16T14:29:03.747Z",

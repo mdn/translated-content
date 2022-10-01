@@ -1,16 +1,8 @@
 ---
 title: CSSValue
 slug: Web/API/CSSValue
-tags:
-  - API
-  - CSSOM
-  - CSSValue
-  - Interface
-  - NeedsExample
-  - Obsolete
-  - Reference
-translation_of: Web/API/CSSValue
 ---
+
 {{APIRef("CSSOM")}}
 
 **`SSValue`** インターフェイスは、 CSS プロパティの現在の計算値を表します。

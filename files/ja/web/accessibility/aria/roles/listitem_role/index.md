@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: listitem ロール'
 slug: Web/Accessibility/ARIA/Roles/Listitem_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Listitem_role
 ---
+
 ARIA のリスト項目 (`listitem`) ロールは、項目のリスト内の項目を識別するために使用できます。 これは、通常、リストコンテナーを識別するために使用するリスト (`list`) ロールと組み合わせて使用します。
 
 ```html
@@ -92,4 +88,4 @@ TBD
 - [ARIA: list ロール](/ja/docs/Web/Accessibility/ARIA/Roles/List_role)
 - [ARIA: group ロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

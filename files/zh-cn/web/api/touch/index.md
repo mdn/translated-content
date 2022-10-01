@@ -2,6 +2,7 @@
 title: Touch
 slug: Web/API/Touch
 ---
+
 {{ ApiRef("Touch Events") }}
 
 **`Touch` **对象表示在触控设备上的触摸点。通常是指手指或者触控笔在触屏设备或者触摸板上的操作。
@@ -57,7 +58,7 @@ _这个接口没有方法，也没有父类，不继承任何方法。_
 
 ## 示例
 
-请看 [example on the main Touch events article](/en/DOM/Touch_events#Example)。
+请看 [example on the main Touch events article](/zh-CN/DOM/Touch_events#Example)。
 
 ## 规范
 
@@ -65,11 +66,11 @@ _这个接口没有方法，也没有父类，不继承任何方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.Touch")}}
+{{Compat}}
 
 ## 相关链接
 
-- [Touch events](/en/DOM/Touch_events)
+- [Touch events](/zh-CN/DOM/Touch_events)
 - {{domxref("Touch_events","Touch Events Overview")}}
 - {{ domxref("Document.createTouch()") }}
 - {{ domxref("Touch") }}

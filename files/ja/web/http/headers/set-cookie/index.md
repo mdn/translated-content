@@ -1,16 +1,8 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-tags:
-  - Cookies
-  - HTTP
-  - リファレンス
-  - レスポンス
-  - ヘッダー
-  - samesite
-browser-compat: http.headers.Set-Cookie
-translation_of: Web/HTTP/Headers/Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 **`Set-Cookie`** は HTTP のレスポンスヘッダーで、サーバーからユーザーエージェントへクッキーを送信するために使用され、ユーザーエージェントはそれを後でサーバーに送り返すことができます。

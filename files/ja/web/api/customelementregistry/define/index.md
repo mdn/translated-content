@@ -1,17 +1,8 @@
 ---
 title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
-tags:
-  - API
-  - CustomElementRegistry
-  - メソッド
-  - リファレンス
-  - ウェブコンポーネント
-  - カスタム要素
-  - define
-browser-compat: api.CustomElementRegistry.define
-translation_of: Web/API/CustomElementRegistry/define
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 **`define()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、新しいカスタム要素を定義します。

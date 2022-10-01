@@ -1,17 +1,8 @@
 ---
 title: MediaStream.getTracks()
 slug: Web/API/MediaStream/getTracks
-tags:
-  - API
-  - Experimental
-  - Media Streams API
-  - MediaStream
-  - MediaStreamTrack
-  - Method
-  - リファレンス
-  - getTracks
-browser-compat: api.MediaStream.getTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 **_`getTracks()`_** は {{domxref("MediaStream")}} インターフェイスのメソッドで、このストリームの[`トラックセット`](https://www.w3.org/TR/mediacapture-streams/#track-set)にあるすべての {{domxref("MediaStreamTrack")}} オブジェクトを {{domxref("MediaStreamTrack.kind")}} に関係なく表す配列を返します。

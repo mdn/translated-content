@@ -1,13 +1,8 @@
 ---
 title: <polygon>
 slug: Web/SVG/Element/polygon
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-translation_of: Web/SVG/Element/polygon
 ---
+
 {{SVGRef}}
 
 **`<polygon>`** 要素は、接続された一連の直線の区間で構成される閉じた図形を定義します。最後の点は最初の点と結ばれます。

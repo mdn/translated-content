@@ -121,7 +121,7 @@ div {
 
 ## 색상 선언 & 효과 생성
 
-All<span class="js-about-item-abstr"> CSS gradient types are a range of position-dependent colors. The colors produced by CSS gradients can vary continuously with position, producing smooth color transitions. It is also possible to create bands of solid colors, and hard transitions between two colors. The following are valid for all gradient functions:</span>
+All CSS gradient types are a range of position-dependent colors. The colors produced by CSS gradients can vary continuously with position, producing smooth color transitions. It is also possible to create bands of solid colors, and hard transitions between two colors. The following are valid for all gradient functions:
 
 ### 두 개보다 많은 색 사용하기
 

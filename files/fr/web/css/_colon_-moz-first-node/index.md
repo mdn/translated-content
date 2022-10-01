@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-first-node
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 La pseudo-classe **`:-moz-first-node`** correspond à un élément si celui-ci est le premier nœud d'un autre élément. Cette pseudo-classe est différente de {{cssxref(":first-child")}} car elle ne cible pas le premier élément qui possède du texte (hors blancs).

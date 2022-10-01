@@ -47,13 +47,12 @@ translation_of: Web/API/MediaRecorder/MediaRecorder
 <p>В этом примере показано, как создать медиа рекордер для указанного потока, чья скорость передачи звука составляет 128 Кбит / с, а скорость передачи видео - 2,5 Мбит / с. Записанные мультимедийные данные будут храниться в контейнере MP4 (поэтому, если вы соберёте порции мультимедийных данных и сохраните их на диск, они будут в файле с разрешением MP4).</p>
 
 <pre class="brush: js">...
-<code class="language-html">
 
 if (navigator.mediaDevices.getUserMedia) {
   var constraints = { audio: true, video: true };
   var chunks = [];
 
-  </code>var onSuccess = function(stream) {
+  var onSuccess = function(stream) {
     var options = {
       audioBitsPerSecond : 128000,
       videoBitsPerSecond : 2500000,

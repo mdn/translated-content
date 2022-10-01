@@ -1,24 +1,8 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Event
-  - Input
-  - Interface
-  - Key Events
-  - Keyboard Events
-  - KeyboardEvent
-  - MakeBrowserAgnostic
-  - Reference
-  - UI Events
-  - keyboard
-  - user input
-browser-compat: api.KeyboardEvent
-translation_of: Web/API/KeyboardEvent
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent`** オブジェクトは、キーボードによるユーザーの操作を示します。個々のイベントがユーザーとキーとの間の単一の操作（または修飾キーとの組み合わせ）を表します。イベントの種類 ({{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, {{domxref("Element/keyup_event", "keyup")}}) はキーボード操作が発生した種類を識別します。

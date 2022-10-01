@@ -1,18 +1,8 @@
 ---
 title: 国際化
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
-tags:
-  - Article
-  - Guide
-  - Internationalization
-  - Localization
-  - WebExtensions
-  - i18n
-  - messages.json
-  - placeholders
-  - predefined messages
-translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
+
 {{AddonSidebar}}
 
 [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) API には、拡張機能を国際化するとても簡単なモジュール — [i18n](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n) があります。この記事ではその機能を見てみて、どのように動作するのかの実例を提供します。WebExtensions API を使った拡張機能用の i18n システムは、[i18n.js](http://i18njs.com/) のような、よくある i10n 用 JavaScript ライブラリーと同様です。
@@ -99,7 +89,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 
 このファイルは標準の JSON — メンバーがそれぞれに `message` と `description`. を含む名前付きオブジェクトです。すべての項目が文字列です; `$URL$` はプレースホルダーで、拡張機能から呼ばれる `notificationContent` メンバーに置き換えられます。[Retrieving message strings from JavaScript](#retrieving_message_strings_from_javascript) 節でその方法を学びます。
 
-> **Note:** **注**: `messages.json` ファイルの中身についての詳しい情報は[ロケール固有のメッセージリファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)にあります。
+> **Note:** `messages.json` ファイルの中身についての詳しい情報は[ロケール固有のメッセージリファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)にあります。
 
 ## manifest.json を国際化する
 
@@ -120,11 +110,11 @@ manifest.json の国際化を実行するにはいくつかの異なるタスク
 
 このようなメッセージ文字列を呼び出すには、次のように指定します:
 
-1.  2 つのアンダースコアに続いて
-2.  "MSG" という文字列に続いて
-3.  1 つのアンダースコアに続いて
-4.  `messages.json` で定義した呼び出しのメッセージ名に続いて
-5.  2 つのアンダースコア
+1. 2 つのアンダースコアに続いて
+2. "MSG" という文字列に続いて
+3. 1 つのアンダースコアに続いて
+4. `messages.json` で定義した呼び出しのメッセージ名に続いて
+5. 2 つのアンダースコア
 
 ```
 __MSG_ + messageName + __
@@ -233,10 +223,10 @@ You clicked https://developer.mozilla.org.
 
 ロケールは `fr` や `en` のような言語コードによってのみ指定されるか、さらに `en_US` や `en_GB` といった地域コードつきで (これは同じ言語の地域的な変形を記述します) 認証されます。i18n に文字列を問い合わせた時、次のアルゴリズムで文字列を選択します:
 
-1.  現在のロケールと全く同じ `messages.json` ファイルがあって、そこに文字列が入っている場合、それを返します
-2.  それ以外で、現在のロケールが地域つきで認証されて (例`en_US`) 、そのロケールの地域になし版の `messages.json` ファイルがあって (例`en`)、そこに文字列が入っている場合、それを返します
-3.  それ以外で、`manifest.json`内に定義された `default_locale` 用の `messages.json` ファイルがあって、そこに文字列が入っている場合、それを返します
-4.  それ以外は空文字を返します
+1. 現在のロケールと全く同じ `messages.json` ファイルがあって、そこに文字列が入っている場合、それを返します
+2. それ以外で、現在のロケールが地域つきで認証されて (例`en_US`) 、そのロケールの地域になし版の `messages.json` ファイルがあって (例`en`)、そこに文字列が入っている場合、それを返します
+3. それ以外で、`manifest.json` 内に定義された `default_locale` 用の `messages.json` ファイルがあって、そこに文字列が入っている場合、それを返します
+4. それ以外は空文字を返します
 
 下記の例を見てみます:
 
@@ -285,7 +275,7 @@ __MSG_@@ui_locale__
 
 | メッセージ名          | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `@@extension_id`      | 拡張機能の内部生成された UUID。この文字列は拡張機能内のリソースの URL を作るのに使います。. ローカライズされた拡張機能でもこのメッセージを使用できます。このメッセージをマニフェストファイル内で使用することはできません。もう一つの注意点として、この ID は {{WebExtAPIRef("runtime.id")}} から返される、manifest.json 内の[ applications ](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)キーを用いてセットされるアドオン ID とは異なっています。これはアドオンの URL 内にある生成された UUID です。つまりこの値を{{WebExtAPIRef("runtime.sendMessage()")}} の `extensionId` パラメーターの値として使うことはできず、{{WebExtAPIRef("runtime.MessageSender")}} オブジェクトの `id` プロパティの値のチェックに使うこともできません。 |
+| `@@extension_id`      | 拡張機能の内部生成された UUID。この文字列は拡張機能内のリソースの URL を作るのに使います。. ローカライズされた拡張機能でもこのメッセージを使用できます。このメッセージをマニフェストファイル内で使用することはできません。もう一つの注意点として、この ID は {{WebExtAPIRef("runtime.id")}} から返される、manifest.json 内の [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) キーを用いてセットされるアドオン ID とは異なっています。これはアドオンの URL 内にある生成された UUID です。つまりこの値を{{WebExtAPIRef("runtime.sendMessage()")}} の `extensionId` パラメーターの値として使うことはできず、{{WebExtAPIRef("runtime.MessageSender")}} オブジェクトの `id` プロパティの値のチェックに使うこともできません。 |
 | `@@ui_locale`         | 現在のロケールで、この文字列をロケール固有の URL 生成に使うことができます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `@@bidi_dir`          | 現在のロケールにおけるテキストの向きで、英語のような左から右の言語では "ltr" で、アラビア語のような右から左への言語では "rtl" となり、このいずれかです。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `@@bidi_reversed_dir` | `@@bidi_dir` が "ltr" なら "rtl" で、そうでなれば "ltr" です。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -341,15 +331,15 @@ Firefox 45 からは、拡張機能を一時的にディスクからインスト
 
 次に、Firefox のロケールをテストしたい拡張機能がサポートするものに変えます。
 
-1.  Firefox で"about:config"を開き、`intl.locale.requested` の設定を探します (Firefox 59 より前では、この設定は `general.useragent.locale` と呼ばれます)。
-2.  設定がある場合、それをダブルクリックして (または Return/Enter を押して) 選択し、テストしたいロケールの言語コードを入力して"OK" をクリックします (または Return/Enter を押す)。例えば我々の例では "en" (英語), "de" (ドイツ語), "nl" (オランダ語), "ja" (日本語) がサポートされます。空文字(`""`)をセットすることもできて、そうするとブラウザーは OS のデフォルトロケールを使います。
-3.  `intl.locale.requested` の設定が存在しない場合、設定リストを右クリックします (あるいはキーボードからコンテキストメニューを起動します)、そして"New" と "String"を選びます。設定名に `intl.locale.requested` を入力して、上記ステップ 2 の説明の通りに "de" や "nl" などの値を設定値に入力します。
-4.  `intl.locale.matchOS` を探してその設定をダブルクリックし、`false` に設定します。
-5.  ブラウザーを再起動して変更を完了します。
+1. Firefox で"about:config"を開き、`intl.locale.requested` の設定を探します (Firefox 59 より前では、この設定は `general.useragent.locale` と呼ばれます)。
+2. 設定がある場合、それをダブルクリックして (または Return/Enter を押して) 選択し、テストしたいロケールの言語コードを入力して"OK" をクリックします (または Return/Enter を押す)。例えば我々の例では "en" (英語), "de" (ドイツ語), "nl" (オランダ語), "ja" (日本語) がサポートされます。空文字(`""`)をセットすることもできて、そうするとブラウザーは OS のデフォルトロケールを使います。
+3. `intl.locale.requested` の設定が存在しない場合、設定リストを右クリックします (あるいはキーボードからコンテキストメニューを起動します)、そして"New" と "String"を選びます。設定名に `intl.locale.requested` を入力して、上記ステップ 2 の説明の通りに "de" や "nl" などの値を設定値に入力します。
+4. `intl.locale.matchOS` を探してその設定をダブルクリックし、`false` に設定します。
+5. ブラウザーを再起動して変更を完了します。
 
-> **Note:** **注**: これはブラウザーのロケールを変更させる動作で、この言語用の[言語パック](https://addons.mozilla.org/en-US/firefox/language-tools/)がインストールされていなくてもそうなります。その場合はブラウザー UI はデフォルト言語となります。
+> **Note:** これはブラウザーのロケールを変更させる動作で、この言語用の[言語パック](https://addons.mozilla.org/en-US/firefox/language-tools/)がインストールされていなくてもそうなります。その場合はブラウザー UI はデフォルト言語となります。
 
-> **Note:** **注:** `getUILanguage` の結果を変更するには言語パックが要求されます、これはブラウザー UI 言語を変更して拡張機能メッセージ用の言語は変更しないためです。
+> **Note:** `getUILanguage` の結果を変更するには言語パックが要求されます、これはブラウザー UI 言語を変更して拡張機能メッセージ用の言語は変更しないためです。
 
 ディスクから拡張機能を読み込み直して、新しいロケールをテストします
 

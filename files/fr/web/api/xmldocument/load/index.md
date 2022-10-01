@@ -7,6 +7,7 @@ browser-compat: api.XMLDocument.load
 l10n:
   sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---
+
 {{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 `document.load()` est une méthode spécifiée dans une ancienne version de la spécification [du module de chargement et d'enregistrement du DOM de niveau 3](https://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS) du W3C. Elle peut être utilisée avec [`XMLDocument.async`](/fr/docs/Web/API/XMLDocument/async) pour indiquer si la requête est synchrone ou asynchrone (par défaut).

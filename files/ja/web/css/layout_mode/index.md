@@ -1,13 +1,8 @@
 ---
 title: レイアウトモード
 slug: Web/CSS/Layout_mode
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - リファレンス
-translation_of: Web/CSS/Layout_mode
 ---
+
 {{CSSRef}}
 
  [CSS](/ja/docs/Web/CSS) の**レイアウトモード** (または単に「レイアウト」) は、ボックスの位置やサイズを、兄弟要素や祖先要素のボックスとの相互作用を踏まえて決めるアルゴリズムです。複数のレイアウトモードがあります。

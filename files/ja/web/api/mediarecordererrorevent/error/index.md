@@ -1,17 +1,8 @@
 ---
 title: MediaRecorderErrorEvent.error
 slug: Web/API/MediaRecorderErrorEvent/error
-tags:
-  - API
-  - Error
-  - Error Handling
-  - MediaRecordingErrorEvent
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Property
-  - Reference
-translation_of: Web/API/MediaRecorderErrorEvent/error
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **{{domxref("MediaRecorderErrorEvent")}}** インタフェースの読み取り専用の `error` プロパティは、{{domxref("MediaRecorder")}} インスタンスによってスローされた例外に関する詳細を提供する {{domxref("DOMException")}} オブジェクトです。

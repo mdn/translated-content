@@ -2,6 +2,7 @@
 title: DeviceOrientationEvent
 slug: Web/API/DeviceOrientationEvent
 ---
+
 {{apiref("Device Orientation Events")}}{{SeeCompatTable}}
 
 `DeviceOrientationEvent` 提供给网页开发者当设备（指手机，平板等移动设备）在浏览页面时物理旋转的信息。
@@ -35,12 +36,12 @@ window.addEventListener('deviceorientation', function(event) {
 
 ## 浏览器支持
 
-{{Compat("api.DeviceOrientationEvent")}}
+{{Compat}}
 
 ## 参考
 
 - {{ event("deviceorientation") }}
 - {{ domxref("DeviceMotionEvent") }}
 - {{ event("devicemotion") }}
-- [监测设备方向](/en-US/docs/WebAPI/Detecting_device_orientation)
-- [转动与运动的数据说明](/en/DOM/Orientation_and_motion_data_explained)
+- [监测设备方向](/zh-CN/docs/WebAPI/Detecting_device_orientation)
+- [转动与运动的数据说明](/zh-CN/DOM/Orientation_and_motion_data_explained)

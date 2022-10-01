@@ -2,9 +2,10 @@
 title: Cache.add()
 slug: Web/API/Cache/add
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-{{domxref("Cache")}}接口的 **`add()`**方法接受一个 URL 作为参数，请求参数指定的 URL，并将返回的 response 对象添加到给定的 cache 中。 `add()` 方法在功能上等同于以下代码：
+{{domxref("Cache")}}接口的 **`add()`** 方法接受一个 URL 作为参数，请求参数指定的 URL，并将返回的 response 对象添加到给定的 cache 中。 `add()` 方法在功能上等同于以下代码：
 
 ```js
 fetch(url).then(function (response) {
@@ -46,7 +47,7 @@ void 返回值的 {{jsxref("Promise")}}
 
 ## 示例
 
-下面的代码块等待 {{domxref("InstallEvent")}} 事件触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil")}} 来处理该应用程序的安装过程。 包括调用 {{domxref("CacheStorage.open")}} 来创建一个新的缓存，然后使用 {{domxref("Cache.add")}} 来添加一个请求资源到该缓存。
+下面的代码块等待 {{domxref("InstallEvent")}} 事件触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil")}} 来处理该应用程序的安装过程。包括调用 {{domxref("CacheStorage.open")}} 来创建一个新的缓存，然后使用 {{domxref("Cache.add")}} 来添加一个请求资源到该缓存。
 
 ```js
 this.addEventListener('install', function(event) {
@@ -64,7 +65,7 @@ this.addEventListener('install', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Cache.add")}}
+{{Compat}}
 
 ## 参见
 

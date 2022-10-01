@@ -2,6 +2,7 @@
 title: 'Django チュートリアル Part 2: スケルトンウェブサイトの作成'
 slug: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 [Django チュートリアル](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website) の 2 つ目の記事では、基本的なウェブサイトプロジェクトの「スケルトン」をどのように作っていくのかを説明します。サイト固有の設定、URL、モデル、ビュー、テンプレートを作成する方法について説明します。
@@ -16,13 +17,13 @@ slug: Learn/Server-side/Django/skeleton_website
 
 そのプロセスは単純です:
 
-1.  `django-admin` ツールを使ってプロジェクトフォルダ、基本的なテンプレートファイル、プロジェクト管理スクリプト(**manage.py**)を作ります .
-2.  **manage.py** は１つ以上のアプリケーションを作ります。
+1. `django-admin` ツールを使ってプロジェクトフォルダ、基本的なテンプレートファイル、プロジェクト管理スクリプト(**manage.py**)を作ります .
+2. **manage.py** は１つ以上のアプリケーションを作ります。
 
     > **Note:** ウェブサイトは 1 つ以上のセクションから成ります。例えば、メインサイト、ブログ、ウィキ、ダウンロードエリアなど。Django は、これらのコンポーネントを別々のアプリケーションとして作成することを助けてくれます。それらは、必要なら異なるプロジェクトで再利用できます。
 
-3.  プロジェクトにアプリケーションを含めるために登録します。
-4.  url/path マッパーはそれらのアプリケーションを結びつけます。
+3. プロジェクトにアプリケーションを含めるために登録します。
+4. url/path マッパーはそれらのアプリケーションを結びつけます。
 
 [Local Library website](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website) のために、ウェブサイトフォルダとプロジェクトフォルダは*locallibrary* という名前をつけます。また、１つのアプリケーションは*catalog*という名前をつけます。 したがって、最上位のフォルダ構成は以下のようになります。:
 

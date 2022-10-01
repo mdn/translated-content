@@ -3,6 +3,7 @@ title: RTCIdentityErrorEvent
 slug: orphaned/Web/API/RTCIdentityErrorEvent
 original_slug: Web/API/RTCIdentityErrorEvent
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCIdentityErrorEvent`** インタフェースは、通常 {{domxref("RTCPeerConnection")}} に関連付けられたアイデンティティー・プロバイダ(IdP) を示すイベントを表現します。これは、?遭遇したエラーを持ちます。{{event("idpassertionerror")}} と{{event("idpvalidationerror")}}の 2 つのイベントタイプを持ちます。
@@ -47,5 +48,5 @@ pc.onidpassertionerror = function( ev ) {
 
 ## See also
 
-- [WebRTC](/ja/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- [WebRTC](/ja/docs/Web/Guide/API/WebRTC)
 - このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.

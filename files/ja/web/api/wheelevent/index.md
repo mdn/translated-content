@@ -1,14 +1,8 @@
 ---
 title: WheelEvent
 slug: Web/API/WheelEvent
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - WheelEvent
-translation_of: Web/API/WheelEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`WheelEvent`** インターフェイスは、ユーザーがマウスホイールやそれに似た機器を動かしたときに発行されるイベントを表します。

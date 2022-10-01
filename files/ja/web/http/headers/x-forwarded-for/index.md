@@ -1,15 +1,8 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - ヘッダー
-  - リクエストヘッダー
-  - リファレンス
-  - 標準外
-translation_of: Web/HTTP/Headers/X-Forwarded-For
 ---
+
 {{HTTPSidebar}}
 
 **X-Forwarded-For** (XFF) ヘッダーは、 HTTP プロキシーサーバーを通過してウェブサーバーへ接続したクライアントの、送信元 IP アドレスを特定するために事実上の標準となっているヘッダーです。

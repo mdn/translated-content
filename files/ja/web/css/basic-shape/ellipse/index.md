@@ -1,18 +1,9 @@
 ---
 title: ellipse()
 slug: Web/CSS/basic-shape/ellipse
-tags:
-  - CSS
-  - CSS データ型
-  - CSS シェイプ
-  - ellipse
-  - CSS 関数
-  - データ型
-  - Reference
-translation_of: Web/CSS/basic-shape/ellipse()
 original_slug: Web/CSS/basic-shape/ellipse()
-browser-compat: css.types.basic-shape.ellipse
 ---
+
 {{CSSRef}}
 
 **`ellipse()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。

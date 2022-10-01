@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.imageSmoothingEnabled
-translation_of: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 ---
+
 {{APIRef}}
 
 **`imageSmoothingEnabled`** は {{domxref("CanvasRenderingContext2D")}} インターフェイスのプロパティで、キャンバス 2D API の一部です。スケーリングされた画像を平滑化するか (`true`、既定値) またはしないか (`false`) を決定します。 `imageSmoothingEnabled` プロパティを取得すると、最後に設定された値が返されます。

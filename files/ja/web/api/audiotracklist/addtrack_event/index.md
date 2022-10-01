@@ -1,13 +1,8 @@
 ---
 title: 'AudioTrackList: addtrack イベント'
 slug: Web/API/AudioTrackList/addtrack_event
-tags:
-  - Audio​Track​List
-  - Event
-  - addTrack
-  - events
-translation_of: Web/API/AudioTrackList/addtrack_event
 ---
+
 {{APIRef}}
 
 `addtrack` イベントは、トラックが {{domxref("AudioTrackList")}} に追加されたときに発生します。

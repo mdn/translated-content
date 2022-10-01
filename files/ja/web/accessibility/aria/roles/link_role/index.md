@@ -1,13 +1,9 @@
 ---
 title: link ロールの使用
 slug: Web/Accessibility/ARIA/Roles/link_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
 ---
+
 ### 説明
 
 このテクニックは、[`link`](https://www.w3.org/WAI/PF/aria-1.1/roles#link) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。

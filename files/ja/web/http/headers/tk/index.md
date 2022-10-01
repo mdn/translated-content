@@ -1,16 +1,8 @@
 ---
 title: Tk
 slug: Web/HTTP/Headers/Tk
-tags:
-  - DNT
-  - HTTP
-  - ヘッダー
-  - リファレンス
-  - レスポンス
-  - レスポンスヘッダー
-  - 追跡
-translation_of: Web/HTTP/Headers/Tk
 ---
+
 {{HTTPSidebar}}
 
 **`Tk`** 応答ヘッダーは、該当する要求に適用される追跡状態を示します。

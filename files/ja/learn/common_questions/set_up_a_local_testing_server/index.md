@@ -2,6 +2,7 @@
 title: ローカルにテスト用サーバーを用意するには？
 slug: Learn/Common_questions/set_up_a_local_testing_server
 ---
+
 この記事では、マシン上に簡単なローカルテストサーバーを設定する方法と、その使い方の基本について説明します。
 
 <table>
@@ -96,6 +97,6 @@ Python の `http.server` （Python 2.0 では `SimpleHTTPServer`）モジュー�
 - PHP サーバー側コードを実行するには、[PHP の組み込み開発サーバー](http://php.net/manual/ja/features.commandline.webserver.php)を起動してください。
 
   ```bash
-  $ cd path/to/your/php/code
-  $ php -S localhost:8000
+  cd path/to/your/php/code
+  php -S localhost:8000
   ```

@@ -13,6 +13,7 @@ tags:
   - supprimer
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
+
 {{AddonSidebar()}}
 
 Supprime les données de navigation spécifiées.

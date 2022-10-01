@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.ellipse
-translation_of: Web/API/CanvasRenderingContext2D/ellipse
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.ellipse()`** はキャンバス 2D API のメソッドで、現在のサブパスに楕円の弧を追加します。

@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/drop_event
 translation_of: Web/API/Document/drop_event
 original_slug: Web/API/Document/drop_event
 ---
+
 {{APIRef}}
 
 L'événement **drop** est déclenché lorsqu'un élément ou une sélection de texte est déposé sur une cible de dépôt valide.
@@ -141,11 +142,11 @@ L'événement **drop** est déclenché lorsqu'un élément ou une sélection de 
 
 ## Voir aussi
 
-- {{event("drag")}}
-- {{event("dragstart")}}
-- {{event("dragend")}}
-- {{event("dragover")}}
-- {{event("dragenter")}}
-- {{event("dragleave")}}
-- {{event("dragexit")}}
-- {{event("drop")}}
+- [`drag`](/fr/docs/Web/API/Document/drag_event)
+- [`dragstart`](/fr/docs/Web/API/Document/dragstart_event)
+- [`dragend`](/fr/docs/Web/API/Document/dragend_event)
+- [`dragover`](/fr/docs/Web/API/Document/dragover_event)
+- [`dragenter`](/fr/docs/Web/API/Document/dragenter_event)
+- [`dragleave`](/fr/docs/Web/API/Document/dragleave_event)
+- [`dragexit`](/fr/docs/Web/API/Document/dragexit_event)
+- [`drop`](/fr/docs/Web/API/Document/drop_event)

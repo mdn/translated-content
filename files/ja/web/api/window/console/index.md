@@ -1,8 +1,8 @@
 ---
 title: Window.console
 slug: Web/API/Window/console
-translation_of: Web/API/Window/console
 ---
+
 {{ APIRef }}
 
 読み取り専用プロパティの**`Window.console`**は、ブラウザのコンソールへ情報を出力するメソッドを提供する{{domxref("Console")}}オブジェクトへの参照を返します。これらのメソッドで出力される情報はデバッグ目的のものであり、ユーザーへ情報を提示するために使われるべきではありません。

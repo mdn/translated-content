@@ -1,8 +1,8 @@
 ---
 title: MutationObserver.disconnect()
 slug: Web/API/MutationObserver/disconnect
-translation_of: Web/API/MutationObserver/disconnect
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 {{domxref("MutationObserver")}} の **`disconnect()`** メソッドは、オブザーバーに変更の監視を停止させます。 オブザーバーは、 {{domxref("MutationObserver.observe", "observe()")}} メソッドを再度呼び出すことで再利用できます。
@@ -21,7 +21,7 @@ mutationObserver.disconnect()
 
 `undefined`
 
-> **Note:** **注:** すでに検知されているものの、まだオブザーバーに報告されていない変更の通知は、すべて破棄されます。
+> **Note:** すでに検知されているものの、まだオブザーバーに報告されていない変更の通知は、すべて破棄されます。
 
 ## 使用における注意点
 

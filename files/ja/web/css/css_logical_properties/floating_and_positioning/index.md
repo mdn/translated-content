@@ -1,14 +1,8 @@
 ---
 title: 浮動と位置指定の論理的プロパティ
 slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - 浮動
-  - ガイド
-  - 位置指定
-translation_of: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 ---
+
 {{CSSRef}}
 
 [論理的プロパティと値仕様書](https://drafts.csswg.org/css-logical/) (Logical Properties and Values specification) には、 {{cssxref("float")}} および {{cssxref("clear")}} の物理的な値の論理的な対応付けと、[位置指定レイアウト](/ja/docs/Web/CSS/CSS_Positioning)で使用する位置指定プロパティを含んでいます。このガイドはこれらの使い方を見てみます。

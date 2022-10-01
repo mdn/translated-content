@@ -1,14 +1,8 @@
 ---
 title: CSS オブジェクトモデル (CSSOM)
 slug: Web/API/CSS_Object_Model
-tags:
-  - API
-  - CSSOM
-  - Overview
-  - Reference
-  - 概要
-translation_of: Web/API/CSS_Object_Model
 ---
+
 {{DefaultAPISidebar("CSSOM")}}
 
 **CSS オブジェクトモデル**は CSS を JavaScript から操作するための API の集合です。これは DOM にとても良く似ていますが、 HTML ではなく CSS のためのものです。これにより CSS スタイルを動的に読んだり変更したりすることができます。

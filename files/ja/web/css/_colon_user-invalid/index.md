@@ -1,15 +1,8 @@
 ---
 title: ':user-invalid (:-moz-ui-invalid)'
 slug: Web/CSS/:user-invalid
-tags:
-  - CSS
-  - CSS Selectors
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.user-invalid
-translation_of: Web/CSS/:user-invalid
 ---
+
 {{CSSRef}}
 
 **`:user-invalid`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーの操作の後、[制約検証](/ja/docs/Learn/Forms#constraint_validation)に基づき有効と判断されなかった検証済みのフォーム要素を表します。

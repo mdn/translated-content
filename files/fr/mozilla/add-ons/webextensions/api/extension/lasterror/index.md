@@ -13,6 +13,7 @@ tags:
   - lastError
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/lastError
 ---
+
 {{AddonSidebar()}}
 
 Un alias de {{WebExtAPIRef("runtime.lastError")}}.

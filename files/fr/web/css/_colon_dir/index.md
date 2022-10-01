@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:dir
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:dir`** permet de cibler un élément selon la direction du texte qu'il contient. En HTML, la direction est définie grâce à l'attribut {{htmlattrxref("dir", "html")}}. Pour les autres types de document, cela peut être déterminé autrement.

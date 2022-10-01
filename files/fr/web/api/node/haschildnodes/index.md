@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Node/hasChildNodes
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.hasChildNodes()`** renvoie un {{jsxref("Boolean")}} indiquant si le {{domxref("Node","noeud")}} actuel possède des [nœuds enfants](/fr/docs/Web/API/Node/childNodes) ou non.

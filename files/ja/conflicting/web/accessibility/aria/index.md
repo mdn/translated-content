@@ -1,14 +1,9 @@
 ---
 title: アラート
 slug: conflicting/Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - アクセシビリティ
-  - フォーム
-  - ウェブ
-translation_of: Web/Accessibility/ARIA/forms/alerts
 original_slug: Web/Accessibility/ARIA/forms/alerts
 ---
+
 ## 問題点
 
 アクセシブルなエラーチェックを組み入れたいフォーム、例えば問い合わせフォームがあるとします。よくある問題点は電子メールアドレスが有効ではない、あるいは名前欄に姓も名も含まれていないことです。

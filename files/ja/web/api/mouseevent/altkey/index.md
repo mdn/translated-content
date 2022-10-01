@@ -1,18 +1,8 @@
 ---
 title: MouseEvent.altKey
 slug: Web/API/MouseEvent/altKey
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.altKey
-translation_of: Web/API/MouseEvent/altKey
-translation_of_original: Web/API/event.altKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.altKey`** は読み取り専用のプロパティでありマウスイベントが発行されたときに <kbd>alt</kbd> キーが押されていたかどうかを論理値で示します。

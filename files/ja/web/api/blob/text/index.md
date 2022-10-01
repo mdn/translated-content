@@ -1,19 +1,8 @@
 ---
 title: Blob.text()
 slug: Web/API/Blob/text
-tags:
-  - API
-  - Blob
-  - File API
-  - Method
-  - Reference
-  - String
-  - Text
-  - Utf-8
-  - get
-  - read
-translation_of: Web/API/Blob/text
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} インターフェイスの **`text()`** メソッドは {{jsxref("Promise")}} を返しますが、それは Blob の内容を含む文字列で解決され、UTF-8 として解釈されます。

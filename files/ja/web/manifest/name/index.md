@@ -1,13 +1,8 @@
 ---
 title: name
 slug: Web/Manifest/name
-tags:
-  - マニフェスト
-  - ウェブ
-  - name
-browser-compat: html.manifest.name
-translation_of: Web/Manifest/name
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

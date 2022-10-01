@@ -5,6 +5,7 @@ translation_of: Web/API/Crypto/getRandomValues
 original_slug: Web/API/RandomSource/getRandomValues
 browser-compat: api.Crypto.getRandomValues
 ---
+
 {{APIRef("Web Crypto API")}}
 
 La méthode **`Crypto.getRandomValues()`** permet d'obtenir des valeurs aléatoires suffisamment fortes pour un usage cryptographique. Le tableau fourni en paramètre est rempli de nombres aléatoires (au sens cryptographique).

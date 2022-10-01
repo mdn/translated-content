@@ -1,10 +1,8 @@
 ---
 title: PIパラメータ
 slug: Web/XSLT/PI_Parameters
-tags:
-  - XSLT
-translation_of: Web/XSLT/PI_Parameters
 ---
+
 ### 概要
 
 XSLT は実行時にパラメータをスタイルシートに渡すという概念をサポートしています。これによりしばらくの間は JavaScript で [XSLTProcessor](/ja/docs/Web/API/XSLTProcessor) を使用することが可能です。しかし、 `<?xml-stylesheet?>` 処理命令（PI）を使用するときは、パラメータを提供する方法がありませんでした。

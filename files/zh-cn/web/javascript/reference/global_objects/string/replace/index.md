@@ -2,6 +2,7 @@
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
+
 {{JSRef}}
 
 **`replace()`** 方法返回一个由替换值（`replacement`）替换部分或所有的模式（`pattern`）匹配项后的新字符串。模式可以是一个字符串或者一个[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/RegExp)，替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。**如果`pattern`是字符串，则仅替换第一个匹配项。**
@@ -129,7 +130,7 @@ function styleHyphenFormat(propertyName) {
 }
 ```
 
-运行 ` styleHyphenFormat('borderTop')``， `将返回 'border-top'。
+运行 `styleHyphenFormat('borderTop')`， 将返回 `'border-top'`。
 
 因为我们想在最终的替换中进一步转变匹配结果，所以我们必须使用一个函数。这迫使我们在使用{{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}方法前进行评估。如果我们尝试不用一个函数进行匹配，那么使用{{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} 方法将不会有效。
 

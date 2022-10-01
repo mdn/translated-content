@@ -1,16 +1,8 @@
 ---
 title: MouseEvent.screenY
 slug: Web/API/MouseEvent/screenY
-tags:
-  - API
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.screenY
-translation_of: Web/API/MouseEvent/screenY
 ---
+
 {{APIRef("DOM Events")}}
 
 **`screenY`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、グローバル（スクリーン）座標における、マウスポインターの垂直方向の座標（オフセット）を示します。

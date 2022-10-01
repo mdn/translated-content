@@ -1,15 +1,8 @@
 ---
 title: Promise() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
-tags:
-  - コンストラクター
-  - JavaScript
-  - Promise
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Promise.Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** コンストラクターは、主にまだプロミスに対応していない関数をラップするために使用します。

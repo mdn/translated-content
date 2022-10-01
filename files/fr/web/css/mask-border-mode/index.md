@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-border-mode
 ---
+
 {{cssref}}{{SeeCompatTable}}
 
 La propriété CSS **`mask-border-mode`** indique le mode de fusion utilisé pour [le masque de bordure](/fr/docs/Web/CSS/mask-border).

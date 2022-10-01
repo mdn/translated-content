@@ -1,14 +1,8 @@
 ---
 title: complete
 slug: Web/API/IDBTransaction/complete_event
-tags:
-  - Event
-  - IDBTransaction
-  - Reference
-  - complete
-  - イベント
-translation_of: Web/API/IDBTransaction/complete_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 `complete` イベントはトランザクションが成功裏に終了した場合に発生します。

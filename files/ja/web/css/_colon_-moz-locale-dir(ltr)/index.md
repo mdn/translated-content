@@ -1,17 +1,8 @@
 ---
 title: ':-moz-locale-dir(ltr)'
-slug: 'Web/CSS/:-moz-locale-dir(ltr)'
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - ローカライズ
-  - NeedsCompatTable
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/:-moz-locale-dir(ltr)
+slug: Web/CSS/:-moz-locale-dir(ltr)
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`:-moz-locale-dir(ltr)`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の `intl.uidirection.locale` （_`locale`_ は現在のロケール）が "ltr" に設定されていることで特定されます。

@@ -1,13 +1,8 @@
 ---
 title: 202 Accepted
 slug: Web/HTTP/Status/202
-tags:
-  - HTTP
-  - リファレンス
-  - ステータスコード
-  - 成功レスポンス
-translation_of: Web/HTTP/Status/202
 ---
+
 {{HTTPSidebar}}
 
 HTTP (HyperText Transfer Protocol) の **`202 Accepted`** レスポンスステータスコードは、リクエストを受け取ったが、処理が完了していないことを表します。実際には、処理はまだ始まっていない可能性もあります。そのリクエストは、実際に処理が行われたときに拒否される可能性があるため、最終的に処理されるかどうかはわかりません。処理が実際に行われたときに許可されないかもしれないからです。

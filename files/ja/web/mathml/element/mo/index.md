@@ -1,13 +1,8 @@
 ---
 title: <mo>
 slug: Web/MathML/Element/mo
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
-translation_of: Web/MathML/Element/mo
 ---
+
 {{MathMLRef()}}
 
 MathML の `<mo>` 要素は広い意味の演算子を表します。厳密に数学的な意味の演算子のほかに、括弧類やカンマ・セミコロンといった区切り記号、絶対値の縦棒などの「演算子」も含みます。

@@ -1,15 +1,8 @@
 ---
 title: location.replace()
 slug: Web/API/Location/replace
-tags:
-  - API
-  - HTML DOM
-  - Location
-  - メソッド
-  - リファレンス
-browser-compat: api.Location.replace
-translation_of: Web/API/Location/replace
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`replace()`** は {{DOMXref("Location")}} インターフェイスのメソッドで、現在のリソースを指定された URL のもので置き換えます。 {{domxref("Location.assign","assign()")}} メソッドとの違いは、 `replace()` を使用すると現在のページがセッションの {{domxref("History")}} に保存されないことです。すなわち、ユーザーが*戻る*ボタンを使用して戻ることができなくなります。

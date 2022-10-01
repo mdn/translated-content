@@ -1,14 +1,8 @@
 ---
 title: CookieStore.get()
 slug: Web/API/CookieStore/get
-tags:
-  - API
-  - Method
-  - Reference
-  - get()
-  - CookieStore
-browser-compat: api.CookieStore.get
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
 {{Domxref("CookieStore")}} インターフェイスの **`get()`** メソッドは、与えられた名前またはオプションオブジェクトを持つ 1 つの Cookie を返します（下記参照）。このメソッドは渡されたパラメータに最初にマッチする Cookie を返します。

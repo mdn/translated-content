@@ -1,15 +1,8 @@
 ---
 title: <a>
 slug: Web/SVG/Element/a
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Container
-  - SVG コンテナー
-  - 要素
-translation_of: Web/SVG/Element/a
 ---
+
 {{SVGRef}}
 
 **\<a>** は SVG の要素で、他のウェブページ、ファイル、同じページ内の場所、メールアドレス、その他の URL へのハイパーリンクを生成します。 HTML の {{htmlelement("a")}} 要素ととても良く似ています。
