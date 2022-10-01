@@ -3,43 +3,26 @@ title: end
 slug: Web/SVG/Attribute/end
 translation_of: Web/SVG/Attribute/end
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
 
-<p>Этот атрибут определяет конечное значение для анимации, которое может ограничить активную длительность.</p>
+Этот атрибут определяет конечное значение для анимации, которое может ограничить активную длительность.
 
-<p>Значение атрибута представляет собой разделённый точками с запятой список значений. Каждое отдельное значение может совпадать с типом, определённым для {{ SVGAttr("begin") }} атрибута .</p>
+Значение атрибута представляет собой разделённый точками с запятой список значений. Каждое отдельное значение может совпадать с типом, определённым для {{ SVGAttr("begin") }} атрибута .
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>Animation timing attribute</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td>&lt;End-value-list&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/animate.html#EndAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | Animation timing attribute                                                  |
+| ------------------ | --------------------------------------------------------------------------- |
+| Value              | \<End-value-list>                                                           |
+| Animatable         | No                                                                          |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#EndAttribute) |
 
-<p>Для типов значений, разрешённых в, <code>&lt;end-value-list&gt;</code> см.  {{ SVGAttr("begin") }} атрибут.</p>
+Для типов значений, разрешённых в, `<end-value-list>` см. {{ SVGAttr("begin") }} атрибут.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>The following elements can use the <code>end</code> attribute</p>
+The following elements can use the `end` attribute
 
-<ul>
- <li><a href="/en/SVG/Element#Animation" title="en/SVG/Element#Animation">Animation elements</a> »</li>
-</ul>
+- [Animation elements](/en/SVG/Element#Animation "en/SVG/Element#Animation") »

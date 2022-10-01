@@ -6,64 +6,49 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/stroke
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
 
-<p>Атрибут обводки определяет цвет контура в данном графическом элементе. Значение по умолчанию для атрибута обводки — <strong>None</strong>.</p>
+Атрибут обводки определяет цвет контура в данном графическом элементе. Значение по умолчанию для атрибута обводки — **None**.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категория</th>
-   <td>Presentation attribute</td>
-  </tr>
-  <tr>
-   <th scope="row">Значения</th>
-   <td>
-    <p><a href="/en/SVG/Content_type#Paint" title="en/SVG/Content_type#Paint">&lt;paint&gt;</a>, <code>context-fill</code>, <code>context-stroke</code></p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемый</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Нормативный документ</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/painting.html#StrokeProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Категория            | Presentation attribute                                                                               |
+| -------------------- | ---------------------------------------------------------------------------------------------------- |
+| Значения             | [\<paint>](/en/SVG/Content_type#Paint "en/SVG/Content_type#Paint"), `context-fill`, `context-stroke` |
+| Анимируемый          | Да                                                                                                   |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeProperty)                       |
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="SVG_Line">SVG Line с stroke</h3>
+### SVG Line с stroke
 
-<h4 id="Пример_1_Нарисуйте_прямую_зелёную_линию_используя_stroke.">Пример 1: Нарисуйте прямую зелёную линию, используя <strong>stroke</strong>.</h4>
+#### Пример 1: Нарисуйте прямую зелёную линию, используя **stroke**.
 
-<pre class="brush: html">&lt;svg height="50" width="300"&gt;
-    &lt;path stroke="green" d="M5 20 1215 0" /&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg height="50" width="300">
+    <path stroke="green" d="M5 20 1215 0" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('Пример_1_Нарисуйте_прямую_зелёную_линию_используя_stroke.', '300', '50', '', 'Web/SVG/Attribute/stroke')}}</p>
+{{EmbedLiveSample('Пример_1_Нарисуйте_прямую_зелёную_линию_используя_stroke.', '300', '50', '', 'Web/SVG/Attribute/stroke')}}
 
-<h4 id="Пример_2_Нарисуйте_чёрный_круг_с_синей_рамкой_используя_stroke.">Пример 2: Нарисуйте чёрный круг с синей рамкой используя stroke.</h4>
+#### Пример 2: Нарисуйте чёрный круг с синей рамкой используя stroke.
 
-<pre class="brush: html">​​&lt;svg height="100" width="100"&gt;
-    &lt;circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill="black" /&gt;
-&lt;/svg&gt;</pre>
+```html
+​​<svg height="100" width="100">
+    <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill="black" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('Пример_2_Нарисуйте_чёрный_круг_с_синей_рамкой_используя_stroke.', '100', '120', '', 'Web/SVG/Attribute/stroke')}}</p>
+{{EmbedLiveSample('Пример_2_Нарисуйте_чёрный_круг_с_синей_рамкой_используя_stroke.', '100', '120', '', 'Web/SVG/Attribute/stroke')}}
 
-<h2 id="Использование_context-stroke">Использование <code>context-stroke</code></h2>
+## Использование `context-stroke`
 
-<p>Информацию об использовании значения нестандартного и ограниченного <code>context-stroke</code> (и <code>context-fill</code>) смотреть в документации для свойства {{cssxref("-moz-context-properties")}}.</p>
+Информацию об использовании значения нестандартного и ограниченного `context-stroke` (и `context-fill`) смотреть в документации для свойства {{cssxref("-moz-context-properties")}}.
 
-<h2 id="Элементы">Элементы</h2>
+## Элементы
 
-<p>Следующие элементы могут использовать атрибут <code>stroke</code>.</p>
+Следующие элементы могут использовать атрибут `stroke`.
 
-<ul>
- <li><a href="/en/SVG/Element#Shape" title="en/SVG/Element#Shape">Shape elements</a> »</li>
- <li><a href="/en/SVG/Element#TextContent" title="en/SVG/Element#TextContent">Text content elements</a> »</li>
-</ul>
+- [Shape elements](/en/SVG/Element#Shape "en/SVG/Element#Shape") »
+- [Text content elements](/en/SVG/Element#TextContent "en/SVG/Element#TextContent") »

@@ -7,81 +7,58 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/attributeName
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Атрибут <code><strong>attributeName</strong></code> задаёт имя свойства CSS или атрибута целевого элемента, которое будет изменено во время анимации.</p>
+Атрибут **`attributeName`** задаёт имя свойства CSS или атрибута целевого элемента, которое будет изменено во время анимации.
 
-<p>Четыре элемента используют данный атрибут: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateTransform")}} и {{SVGElement("set")}}</p>
+Четыре элемента используют данный атрибут: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateTransform")}} и {{SVGElement("set")}}
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect x="50" y="50" width="100" height="100"&gt;
-    &lt;animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="5s" repeatCount="indefinite"/&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="50" width="100" height="100">
+    <animate attributeType="XML" attributeName="y" from="0" to="50"
+        dur="5s" repeatCount="indefinite"/>
+  </rect>
+</svg>
+```
 
-<p>{{EmbedLiveSample("topExample", "400", "250")}}</p>
-</div>
+{{EmbedLiveSample("topExample", "400", "250")}}
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><code>&lt;name&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Значение по умолчанию</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемый</th>
-   <td>Нет</td>
-  </tr>
- </tbody>
-</table>
-
-<dl>
- <dt><code>&lt;name&gt;</code></dt>
- <dd>Это значение задаёт имя свойства CSS или атрибута целевого элемента, которое будет анимировано.</dd>
-</dl>
-
-<h2 id="Спецификации">Спецификации</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td> {{SpecName("SVG Animations 2", "#AttributeNameAttribute", "attributeName")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
+      <th scope="row">Значение</th>
+      <td><code>&#x3C;name></code></td>
     </tr>
     <tr>
-      <td> {{SpecName("SVG1.1", "animate.html#AttributeNameAttribute", "attributeName")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
+      <th scope="row">Значение по умолчанию</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Анимируемый</th>
+      <td>Нет</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+- `<name>`
+  - : Это значение задаёт имя свойства CSS или атрибута целевого элемента, которое будет анимировано.
 
-<ul>
- <li><a href="https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute">SMIL Animation specification</a></li>
-</ul>
+## Спецификации
+
+| Specification                                                                                            | Status                                   | Comment            |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName("SVG Animations 2", "#AttributeNameAttribute", "attributeName")}}     | {{Spec2("SVG Animations 2")}} | No change          |
+| {{SpecName("SVG1.1", "animate.html#AttributeNameAttribute", "attributeName")}} | {{Spec2("SVG1.1")}}                 | Initial definition |
+
+## Смотрите также
+
+- [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)

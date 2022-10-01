@@ -1,50 +1,31 @@
 ---
-title: 'xml:space'
-slug: 'Web/SVG/Attribute/xml:space'
-translation_of: 'Web/SVG/Attribute/xml:space'
+title: xml:space
+slug: Web/SVG/Attribute/xml:space
+translation_of: Web/SVG/Attribute/xml:space
 ---
-<div>{{deprecated_header("SVG2")}}</div>
+{{deprecated_header("SVG2")}}
 
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
 
-<p>SVG supports the standard XML attribute <code>xml:space</code> to specify the handling of white space characters within a given {{ SVGElement("text") }} element's character data. Note that any child element of a {{ SVGElement("text") }} element may also have an <code>xml:space</code> attribute which will apply to that child element's text content. Note that this attribute influences the way a browser should parse the xml content and therefore will change the way the DOM is built. It means that any change made to the value of this attribute through the DOM API may have no effect.</p>
+SVG supports the standard XML attribute `xml:space` to specify the handling of white space characters within a given {{ SVGElement("text") }} element's character data. Note that any child element of a {{ SVGElement("text") }} element may also have an `xml:space` attribute which will apply to that child element's text content. Note that this attribute influences the way a browser should parse the xml content and therefore will change the way the DOM is built. It means that any change made to the value of this attribute through the DOM API may have no effect.
 
-<div class="note">
-<p><strong>Note:</strong> Instead of using the <code>xml:space</code> attribute you should use the {{cssxref("white-space")}} CSS property.</p>
-</div>
+> **Примечание:** Instead of using the `xml:space` attribute you should use the {{cssxref("white-space")}} CSS property.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><strong>default</strong></code> | <code>preserve</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/text.html#WhiteSpace">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | _None_                                                                   |
+| ------------------ | ------------------------------------------------------------------------ |
+| Value              | **`default`** \| `preserve`                                              |
+| Animatable         | No                                                                       |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#WhiteSpace) |
 
-<dl>
- <dt>default</dt>
- <dd>Браузер удалит все символы перевода строки. Затем он преобразует все символы табуляции в символы пробелов. Затем он вырежет все начальные и конечные пробелы. И, наконец, все смежные пробелы будут объединены.</dd>
- <dt>preserve</dt>
- <dd>Браузер преобразует все символы перевода строки и табуляции в символы пробелов. Затем он отрендерит все символы пробелов, в том числе начальные и конечные, а также смежные. Таким образом, когда рендеринг происходит с <code>xml:space="preserve"</code>, строка "a   b" (три пробела между "a" и "b") будет иметь больше расстояние между "a" и "b", чем "a b" (один пробел между "a" и "b").</dd>
-</dl>
+- default
+  - : Браузер удалит все символы перевода строки. Затем он преобразует все символы табуляции в символы пробелов. Затем он вырежет все начальные и конечные пробелы. И, наконец, все смежные пробелы будут объединены.
+- preserve
+  - : Браузер преобразует все символы перевода строки и табуляции в символы пробелов. Затем он отрендерит все символы пробелов, в том числе начальные и конечные, а также смежные. Таким образом, когда рендеринг происходит с `xml:space="preserve"`, строка "a b" (три пробела между "a" и "b") будет иметь больше расстояние между "a" и "b", чем "a b" (один пробел между "a" и "b").
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>All the SVG elements can use the <code>xml:space</code> attribute</p>
+All the SVG elements can use the `xml:space` attribute

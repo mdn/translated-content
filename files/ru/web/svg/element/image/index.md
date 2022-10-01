@@ -7,65 +7,62 @@ tags:
 translation_of: Web/SVG/Element/image
 original_slug: Web/SVG/Элемент/image
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Элемент &lt;image&gt; позволяет включить растровые изображения в SVG документ.</p>
+Элемент \<image> позволяет включить растровые изображения в SVG документ.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+### Глобальные атрибуты
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#ConditionalProccessing">Conditional processing attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core">Core attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#GraphicalEvent">Graphical event attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#XLink">Xlink attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation">Presentation attributes</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [Conditional processing attributes](/ru/docs/Web/SVG/Attribute#ConditionalProccessing) »
+- [Core attributes](/ru/docs/Web/SVG/Attribute#Core) »
+- [Graphical event attributes](/ru/docs/Web/SVG/Attribute#GraphicalEvent) »
+- [Xlink attributes](/ru/docs/Web/SVG/Attribute#XLink) »
+- [Presentation attributes](/ru/docs/Web/SVG/Attribute#Presentation) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="Специфичные_атрибуты">Специфичные атрибуты</h3>
+### Специфичные атрибуты
 
-<ul>
- <li>{{SVGAttr("x")}}</li>
- <li>{{SVGAttr("y")}}</li>
- <li>{{SVGAttr("width")}}</li>
- <li>{{SVGAttr("height")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
- <li>{{SVGAttr("preserveAspectRatio")}}</li>
-</ul>
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("width")}}
+- {{SVGAttr("height")}}
+- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("preserveAspectRatio")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the <code><a href="/en-US/docs/Web/API/SVGImageElement">SVGImageElement</a></code> interface.</p>
+This element implements the [`SVGImageElement`](/en-US/docs/Web/API/SVGImageElement) interface.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Базовый рендеринг PNG изображения в качестве объекта SVG:</p>
+Базовый рендеринг PNG изображения в качестве объекта SVG:
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg width="200" height="200"
-  xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;image href="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" height="200" width="200"/&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="200" height="200"
+  xmlns="http://www.w3.org/2000/svg">
+  <image href="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" height="200" width="200"/>
+</svg>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Пример", 250, 260)}}</p>
+{{EmbedLiveSample("Пример", 250, 260)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

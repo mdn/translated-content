@@ -7,89 +7,75 @@ tags:
   - SVG
 translation_of: Web/SVG
 ---
-<div class="callout-box"><strong><a href="/ru/docs/Web/SVG/Tutorial">С чего начать</a></strong><br>
-Этот урок поможет вам начать использовать SVG.</div>
+**[С чего начать](/ru/docs/Web/SVG/Tutorial)**
+Этот урок поможет вам начать использовать SVG.
 
-<p><strong>Масштабируемая векторная графика (Scalable Vector Graphics — SVG)</strong> является {{Glossary("язык разметки", "языком разметки")}} расширенным из <a href="/ru/docs/XML">XML</a> для описания двухмерной {{Glossary("векторная графика", "векторной графики")}}. SVG по существу является графикой, так же, как {{Glossary("XHTML")}} — текстом.</p>
+**Масштабируемая векторная графика (Scalable Vector Graphics — SVG)** является {{Glossary("язык разметки", "языком разметки")}} расширенным из [XML](/ru/docs/XML) для описания двухмерной {{Glossary("векторная графика", "векторной графики")}}. SVG по существу является графикой, так же, как {{Glossary("XHTML")}} — текстом.
 
-<p>SVG по своим возможностям приближается к запатентованной технологии Adobe Flash, но отличается от неё тем, что SVG является <a href="http://www.w3.org/Graphics/SVG/">рекомендацией W3C</a> (то есть, стандартом), и тем, что это формат, основанный на {{Glossary("XML")}}, в противовес закрытому двоичному формату Flash. Он явно спроектирован для работы с другими стандартами <a href="http://www.w3.org/">W3C</a>, такими, как <a href="/ru/docs/CSS">CSS</a>, <a href="/ru/docs/DOM">DOM</a> и <a href="http://www.w3.org/AudioVideo/">SMIL</a>. </p>
+SVG по своим возможностям приближается к запатентованной технологии Adobe Flash, но отличается от неё тем, что SVG является [рекомендацией W3C](http://www.w3.org/Graphics/SVG/) (то есть, стандартом), и тем, что это формат, основанный на {{Glossary("XML")}}, в противовес закрытому двоичному формату Flash. Он явно спроектирован для работы с другими стандартами [W3C](http://www.w3.org/), такими, как [CSS](/ru/docs/CSS), [DOM](/ru/docs/DOM) и [SMIL](http://www.w3.org/AudioVideo/).
 
-<p>SVG-графика и связанные с ней поведения определяются в текстовых XML-файлах, что означает, что их можно искать, индексировать, создавать сценарии и сжимать. Кроме того, это означает, что они могут быть созданы и отредактированы с помощью любого текстового редактора и программ для рисования. </p>
+SVG-графика и связанные с ней поведения определяются в текстовых XML-файлах, что означает, что их можно искать, индексировать, создавать сценарии и сжимать. Кроме того, это означает, что они могут быть созданы и отредактированы с помощью любого текстового редактора и программ для рисования.
 
-<p>SVG — открытый стандарт, разработанный  <a href="https://www.w3.org/">World Wide Web консорциумом (W3C)</a> с 1999 года.</p>
+SVG — открытый стандарт, разработанный [World Wide Web консорциумом (W3C)](https://www.w3.org/) с 1999 года.
 
-<h2>Документация</h2>
+## Документация
 
-<dl>
- <dt><a href="/ru/docs/Web/SVG/Элемент">Справочник по элементам SVG</a></dt>
- <dd>Подробная информация о каждом элементе SVG.</dd>
- <dt><a href="/ru/docs/Web/SVG/Attribute">Справочник по атрибутам SVG</a></dt>
- <dd>Подробная информация о каждом атрибуте SVG.</dd>
- <dt><a href="/ru/docs/DOM/DOM_Reference#SVG_interfaces">Справочник по интерфейсу SVG DOM</a></dt>
- <dd>Подробная информация по всему SVG DOM API.</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">Применение эффектов SVG к содержимому HTML</a> </dt>
- <dd>SVG работает вместе с {{Glossary("HTML")}}, {{Glossary("CSS")}} и {{Glossary("JavaScript")}}.<br>
-  <a href="https://developer.mozilla.org/en-US/docs/SVG_In_HTML_Introduction">Используйте SVG для улучшения обычной страницы HTML или веб-приложения.</a>.</dd>
- <dt>SVG в Mozilla</dt>
- <dd>Замечания и информация о том, как SVG реализован в Mozilla.
- <ul>
-  <li><a href="/ru/docs/SVG_in_Firefox">Полнота реализации SVG в Firefox</a></li>
-  <li><a href="/ru/docs/Web/SVG/Tutorial">SVG - учебное руководство</a></li>
-  <li><a href="/ru/docs/SVG_In_HTML_Introduction">SVG в XHTML</a></li>
- </ul>
- </dd>
-</dl>
+- [Справочник по элементам SVG](/ru/docs/Web/SVG/Элемент)
+  - : Подробная информация о каждом элементе SVG.
+- [Справочник по атрибутам SVG](/ru/docs/Web/SVG/Attribute)
+  - : Подробная информация о каждом атрибуте SVG.
+- [Справочник по интерфейсу SVG DOM](/ru/docs/DOM/DOM_Reference#SVG_interfaces)
+  - : Подробная информация по всему SVG DOM API.
+- [Применение эффектов SVG к содержимому HTML](/ru/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+  - : SVG работает вместе с {{Glossary("HTML")}}, {{Glossary("CSS")}} и {{Glossary("JavaScript")}}.
+    [Используйте SVG для улучшения обычной страницы HTML или веб-приложения.](/ru/docs/SVG_In_HTML_Introduction).
+- SVG в Mozilla
 
+  - : Замечания и информация о том, как SVG реализован в Mozilla.
 
-<h2>Сообщество</h2>
+    - [Полнота реализации SVG в Firefox](/ru/docs/SVG_in_Firefox)
+    - [SVG - учебное руководство](/ru/docs/Web/SVG/Tutorial)
+    - [SVG в XHTML](/ru/docs/SVG_In_HTML_Introduction)
 
-<ul>
- <li>Обращайтесь на форумы Mozilla… {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}</li>
-</ul>
+## Сообщество
 
-<h2>Инструменты</h2>
+- Обращайтесь на форумы Mozilla… {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}
 
-<ul>
- <li><a href="http://www.w3.org/Graphics/SVG/Test/">Набор для тестирования SVG</a></li>
- <li><a href="http://jiggles.w3.org/svgvalidator/">Валидатор SVG</a> (уже не работает)</li>
- <li><a href="/ru/docs/tag/SVG:Tools">Больше инструментов…</a></li>
- <li>Другие ресурсы: <a href="/ru/docs/XML">XML</a>, <a href="/ru/docs/CSS">CSS</a>, <a href="/ru/docs/DOM">DOM</a>, <a href="/ru/docs/HTML/Canvas">Canvas</a></li>
-</ul>
+## Инструменты
 
-<h2>Примеры</h2>
+- [Набор для тестирования SVG](http://www.w3.org/Graphics/SVG/Test/)
+- [Валидатор SVG](http://jiggles.w3.org/svgvalidator/) (уже не работает)
+- [Больше инструментов…](/ru/docs/tag/SVG:Tools)
+- Другие ресурсы: [XML](/ru/docs/XML), [CSS](/ru/docs/CSS), [DOM](/ru/docs/DOM), [Canvas](/ru/docs/HTML/Canvas)
 
-<ul>
- <li><a href="http://maps.google.com">Карты Google</a> (маршруты поверх карты) и <a href="http://docs.google.com">Документы Google</a> (диаграммы в электронных таблицах)</li>
- <li><a href="http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml">Меню из пузырьков на SVG</a></li>
- <li><a href="http://jwatt.org/svg/authoring/">Рекомендации по составлению SVG</a></li>
- <li>Обзор <a href="/ru/docs/Mozilla_SVG_Project">Проекта Mozilla SVG</a></li>
- <li><a href="/ru/docs/SVG/FAQ">Часто задаваемые вопросы</a>, касающиеся SVG и Mozilla</li>
- <li>Слайды и демонстрации с обсуждения <a href="https://jwatt.org/blog/2009/11/16/slides-and-demos-from-svg-open-2009">SVG и Mozilla</a>, проходившего на SVG Open 2009</li>
- <li><a href="/ru/docs/SVG/SVG_as_an_Image">Использование SVG в качестве изображения</a></li>
- <li><a href="/ru/docs/SVG/SVG_animation_with_SMIL">SVG анимация при помощи SMIL</a></li>
- <li><a href="http://plurib.us/1shot/2007/svg_gallery/">Художественная галерея SVG</a></li>
- <li>Больше примеров (примеры SVG с <a href="http://www.carto.net/papers/svg/samples/">carto.net</a>)</li>
-</ul>
+## Примеры
 
-<h3 id="Animation_and_interactions">Анимация и взаимодействие</h3>
+- [Карты Google](http://maps.google.com) (маршруты поверх карты) и [Документы Google](http://docs.google.com) (диаграммы в электронных таблицах)
+- [Меню из пузырьков на SVG](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml)
+- [Рекомендации по составлению SVG](http://jwatt.org/svg/authoring/)
+- Обзор [Проекта Mozilla SVG](/ru/docs/Mozilla_SVG_Project)
+- [Часто задаваемые вопросы](/ru/docs/SVG/FAQ), касающиеся SVG и Mozilla
+- Слайды и демонстрации с обсуждения [SVG и Mozilla](https://jwatt.org/blog/2009/11/16/slides-and-demos-from-svg-open-2009), проходившего на SVG Open 2009
+- [Использование SVG в качестве изображения](/ru/docs/SVG/SVG_as_an_Image)
+- [SVG анимация при помощи SMIL](/ru/docs/SVG/SVG_animation_with_SMIL)
+- [Художественная галерея SVG](http://plurib.us/1shot/2007/svg_gallery/)
+- Больше примеров (примеры SVG с [carto.net](http://www.carto.net/papers/svg/samples/))
 
-<p>Как и HTML, SVG имеет объектную модель документа (DOM) и события и всё это может быть доступно через JavaScript. Это позволяет разработчикам создавать роскошные анимации и интерактивные изображения.</p>
+### Анимация и взаимодействие
 
-<ul>
- <li>Некоторые захватывающие работы с использованием SVG на <a href="http://svg-wow.org/">svg-wow.org</a></li>
- <li>Расширение Firefox (<a href="http://schepers.cc/grafox/">Grafox</a>) для добавления поддержки анимации с использованием {{Glossary("SMIL")}}</li>
- <li>Интерактивное управление <a href="http://people.mozilla.com/~vladimir/demos/photos.svg">фотографиями</a></li>
- <li>Использование <code>foreignObject</code> из SVG для <a href="http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/">изменения HTML</a></li>
- <li>Анимация <a href="http://www.creative-seo.ru/svg-speedometer/">SVG спидометр</a></li>
-</ul>
+Как и HTML, SVG имеет объектную модель документа (DOM) и события и всё это может быть доступно через JavaScript. Это позволяет разработчикам создавать роскошные анимации и интерактивные изображения.
 
-<h3 id="Mapping.2C_charting.2C_games_.26_3D_experiments">Карты, диаграммы, игры и эксперименты с 3D</h3>
+- Некоторые захватывающие работы с использованием SVG на [svg-wow.org](http://svg-wow.org/)
+- Расширение Firefox ([Grafox](http://schepers.cc/grafox/)) для добавления поддержки анимации с использованием {{Glossary("SMIL")}}
+- Интерактивное управление [фотографиями](http://people.mozilla.com/~vladimir/demos/photos.svg)
+- Использование `foreignObject` из SVG для [изменения HTML](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/)
+- Анимация [SVG спидометр](http://www.creative-seo.ru/svg-speedometer/)
 
-<p>В то время, как маленькие документы SVG могут серьёзно улучшить веб-контент, здесь представлены некоторые примеры тяжёлого использования SVG.</p>
+### Карты, диаграммы, игры и эксперименты с 3D
 
-<ul>
- <li><a href="http://www.codedread.com/yastframe.php">Тетрис</a></li>
- <li><a href="https://web.archive.org/web/20131019072450/http://www.treebuilder.de/svg/connect4.svg" title="Archive link provided because source now requires authentication.">Connect 4</a></li>
- <li><a href="http://www.carto.net/papers/svg/us_population/index.html">Популяционная карта США</a></li>
- <li><a href="http://jvectormap.com/">jVectorMap</a> (интерактивные карты для визуализации данных)</li>
-</ul>
+В то время, как маленькие документы SVG могут серьёзно улучшить веб-контент, здесь представлены некоторые примеры тяжёлого использования SVG.
+
+- [Тетрис](http://www.codedread.com/yastframe.php)
+- [Connect 4](https://web.archive.org/web/20131019072450/http://www.treebuilder.de/svg/connect4.svg "Archive link provided because source now requires authentication.")
+- [Популяционная карта США](http://www.carto.net/papers/svg/us_population/index.html)
+- [jVectorMap](http://jvectormap.com/) (интерактивные карты для визуализации данных)

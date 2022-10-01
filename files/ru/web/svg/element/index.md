@@ -8,247 +8,223 @@ tags:
 translation_of: Web/SVG/Element
 original_slug: Web/SVG/Элемент
 ---
-<p>« <a href="/ru/docs/Web/SVG" title="SVG">SVG</a> / <a href="/ru/docs/Web/SVG/Attribute" title="SVG/Attribute">Справочник SVG атрибутов</a> »</p>
+« [SVG](/ru/docs/Web/SVG "SVG") / [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "SVG/Attribute") »
 
-<h2 id="SVG_элементы">SVG элементы</h2>
+## SVG элементы
 
-<div class="index">A
+A
 
-<ul>
- <li>{{SVGElement("a")}}</li>
- <li>{{SVGElement("altGlyph")}}</li>
- <li>{{SVGElement("altGlyphDef")}}</li>
- <li>{{SVGElement("altGlyphItem")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("animateColor")}}</li>
- <li>{{SVGElement("animateMotion")}}</li>
- <li>{{SVGElement("animateTransform")}}</li>
-</ul>
+- {{SVGElement("a")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("altGlyphDef")}}
+- {{SVGElement("altGlyphItem")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+
 B C
 
-<ul>
- <li>{{SVGElement("circle")}}</li>
- <li>{{SVGElement("clipPath")}}</li>
- <li>{{SVGElement("color-profile")}}</li>
- <li>{{SVGElement("cursor")}}</li>
-</ul>
+- {{SVGElement("circle")}}
+- {{SVGElement("clipPath")}}
+- {{SVGElement("color-profile")}}
+- {{SVGElement("cursor")}}
+
 D
 
-<ul>
- <li>{{SVGElement("defs")}}</li>
- <li>{{SVGElement("desc")}}</li>
- <li>{{SVGElement("discard")}}</li>
-</ul>
+- {{SVGElement("defs")}}
+- {{SVGElement("desc")}}
+- {{SVGElement("discard")}}
+
 E
 
-<ul>
- <li>{{SVGElement("ellipse")}}</li>
-</ul>
+- {{SVGElement("ellipse")}}
+
 F
 
-<ul>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feColorMatrix")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feComposite")}}</li>
- <li>{{SVGElement("feConvolveMatrix")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feDistantLight")}}</li>
- <li>{{SVGElement("feFlood")}}</li>
- <li>{{SVGElement("feFuncA")}}</li>
- <li>{{SVGElement("feFuncB")}}</li>
- <li>{{SVGElement("feFuncG")}}</li>
- <li>{{SVGElement("feFuncR")}}</li>
- <li>{{SVGElement("feGaussianBlur")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feMergeNode")}}</li>
- <li>{{SVGElement("feMorphology")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("fePointLight")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feSpotLight")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("font")}}</li>
- <li>{{SVGElement("font-face")}}</li>
- <li>{{SVGElement("font-face-format")}}</li>
- <li>{{SVGElement("font-face-name")}}</li>
- <li>{{SVGElement("font-face-src")}}</li>
- <li>{{SVGElement("font-face-uri")}}</li>
- <li>{{SVGElement("foreignObject")}}</li>
-</ul>
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDistantLight")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMergeNode")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("fePointLight")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feSpotLight")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- {{SVGElement("filter")}}
+- {{SVGElement("font")}}
+- {{SVGElement("font-face")}}
+- {{SVGElement("font-face-format")}}
+- {{SVGElement("font-face-name")}}
+- {{SVGElement("font-face-src")}}
+- {{SVGElement("font-face-uri")}}
+- {{SVGElement("foreignObject")}}
+
 G
 
-<ul>
- <li>{{SVGElement("g")}}</li>
- <li>{{SVGElement("glyph")}}</li>
- <li>{{SVGElement("glyphRef")}}</li>
-</ul>
+- {{SVGElement("g")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("glyphRef")}}
+
 H
 
-<ul>
- <li>{{SVGElement("hatch")}}</li>
- <li>{{SVGElement("hatchpath")}}</li>
- <li>{{SVGElement("hkern")}}</li>
-</ul>
+- {{SVGElement("hatch")}}
+- {{SVGElement("hatchpath")}}
+- {{SVGElement("hkern")}}
+
 I
 
-<ul>
- <li>{{SVGElement("image")}}</li>
-</ul>
+- {{SVGElement("image")}}
+
 J K L
 
-<ul>
- <li>{{SVGElement("line")}}</li>
- <li>{{SVGElement("linearGradient")}}</li>
-</ul>
+- {{SVGElement("line")}}
+- {{SVGElement("linearGradient")}}
+
 M
 
-<ul>
- <li>{{SVGElement("marker")}}</li>
- <li>{{SVGElement("mask")}}</li>
- <li>{{SVGElement("mesh")}}</li>
- <li>{{SVGElement("meshgradient")}}</li>
- <li>{{SVGElement("meshpatch")}}</li>
- <li>{{SVGElement("meshrow")}}</li>
- <li>{{SVGElement("metadata")}}</li>
- <li>{{SVGElement("missing-glyph")}}</li>
- <li>{{SVGElement("mpath")}}</li>
-</ul>
+- {{SVGElement("marker")}}
+- {{SVGElement("mask")}}
+- {{SVGElement("mesh")}}
+- {{SVGElement("meshgradient")}}
+- {{SVGElement("meshpatch")}}
+- {{SVGElement("meshrow")}}
+- {{SVGElement("metadata")}}
+- {{SVGElement("missing-glyph")}}
+- {{SVGElement("mpath")}}
+
 N O P
 
-<ul>
- <li>{{SVGElement("path")}}</li>
- <li>{{SVGElement("pattern")}}</li>
- <li>{{SVGElement("polygon")}}</li>
- <li>{{SVGElement("polyline")}}</li>
-</ul>
+- {{SVGElement("path")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+
 Q R
 
-<ul>
- <li>{{SVGElement("radialGradient")}}</li>
- <li>{{SVGElement("rect")}}</li>
-</ul>
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("rect")}}
+
 S
 
-<ul>
- <li>{{SVGElement("script")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("solidcolor")}}</li>
- <li>{{SVGElement("stop")}}</li>
- <li>{{SVGElement("style")}}</li>
- <li>{{SVGElement("svg")}}</li>
- <li>{{SVGElement("switch")}}</li>
- <li>{{SVGElement("symbol")}}</li>
-</ul>
+- {{SVGElement("script")}}
+- {{SVGElement("set")}}
+- {{SVGElement("solidcolor")}}
+- {{SVGElement("stop")}}
+- {{SVGElement("style")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("switch")}}
+- {{SVGElement("symbol")}}
+
 T
 
-<ul>
- <li>{{SVGElement("text")}}</li>
- <li>{{SVGElement("textPath")}}</li>
- <li>{{SVGElement("title")}}</li>
- <li>{{SVGElement("tref")}}</li>
- <li>{{SVGElement("tspan")}}</li>
-</ul>
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("title")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
+
 U
 
-<ul>
- <li>{{SVGElement("unknown")}}</li>
- <li>{{SVGElement("use")}}</li>
-</ul>
+- {{SVGElement("unknown")}}
+- {{SVGElement("use")}}
+
 V — Z
 
-<ul>
- <li>{{SVGElement("view")}}</li>
- <li>{{SVGElement("vkern")}}</li>
-</ul>
-</div>
+- {{SVGElement("view")}}
+- {{SVGElement("vkern")}}
 
-<h2 id="Элементы_SVG_по_категориям">Элементы SVG по категориям</h2>
+## Элементы SVG по категориям
 
-<h3 id="Элементы_анимации">Элементы анимации</h3>
+### Элементы анимации
 
-<p>{{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}</p>
+{{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
 
-<h3 id="Базовые_фигуры">Базовые фигуры</h3>
+### Базовые фигуры
 
-<p>{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}</p>
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 
-<h3 id="Контейнеры">Контейнеры</h3>
+### Контейнеры
 
-<p>{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("glyph")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("unknown")}}</p>
+{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("glyph")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("unknown")}}
 
-<h3 id="Элементы_описания">Элементы описания</h3>
+### Элементы описания
 
-<p>{{SVGElement("desc")}}, {{SVGElement("metadata")}}, {{SVGElement("title")}}</p>
+{{SVGElement("desc")}}, {{SVGElement("metadata")}}, {{SVGElement("title")}}
 
-<h3 id="Фильтры">Фильтры</h3>
+### Фильтры
 
-<p>{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}},{{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}},{{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}</p>
+{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}},{{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}},{{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
 
-<h3 id="Элементы_шрифта">Элементы шрифта</h3>
+### Элементы шрифта
 
-<p>{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}</p>
+{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}
 
-<h3 id="Градиентные_элементы">Градиентные элементы</h3>
+### Градиентные элементы
 
-<p>{{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}</p>
+{{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
 
-<h3 id="Графические_элементы">Графические элементы</h3>
+### Графические элементы
 
-<p>{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}} </p>
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
 
-<h3 id="Элементы_ссылки_на_графику">Элементы ссылки на графику</h3>
+### Элементы ссылки на графику
 
-<p>{{SVGElement("mesh")}}, {{SVGElement("use")}}</p>
+{{SVGElement("mesh")}}, {{SVGElement("use")}}
 
-<h3 id="Источники_света">Источники света</h3>
+### Источники света
 
-<p>{{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, {{SVGElement("feSpotLight")}} </p>
+{{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, {{SVGElement("feSpotLight")}}
 
-<h3 id="Непрозрачные_элементы">Непрозрачные элементы</h3>
+### Непрозрачные элементы
 
-<p>{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("meshgradient")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}} </p>
+{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("meshgradient")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
 
-<h3 id="Элементы_сервера_печати">Элементы сервера печати</h3>
+### Элементы сервера печати
 
-<p>{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}} </p>
+{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}}
 
-<h3 id="Отличительные_элементы">Отличительные элементы</h3>
+### Отличительные элементы
 
-<p>{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("unknown")}}, {{SVGElement("use")}} </p>
+{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("unknown")}}, {{SVGElement("use")}}
 
-<h3 id="Элементы_формы">Элементы формы</h3>
+### Элементы формы
 
-<p>{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}</p>
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 
-<h3 id="Структурные_элементы">Структурные элементы</h3>
+### Структурные элементы
 
-<p>{{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}</p>
+{{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}
 
-<h3 id="Элементы_текстового_контента">Элементы текстового контента</h3>
+### Элементы текстового контента
 
-<p>{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}</p>
+{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
 
-<h3 id="Текстовые_контентные_дочерние_элементы">Текстовые контентные дочерние элементы</h3>
+### Текстовые контентные дочерние элементы
 
-<p>{{SVGElement("altGlyph")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}</p>
+{{SVGElement("altGlyph")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
 
-<h3 id="Некатегоризированные_элементы">Некатегоризированные элементы</h3>
+### Некатегоризированные элементы
 
-<p>{{SVGElement("clipPath")}}, {{SVGElement("color-profile")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("meshpatch")}}, {{SVGElement("meshrow")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}} </p>
+{{SVGElement("clipPath")}}, {{SVGElement("color-profile")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("meshpatch")}}, {{SVGElement("meshrow")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute">Ссылка на атрибут SVG</a> </li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial">Учебник SVG</a> </li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model#SVG_interfaces">Ссылка на интерфейс SVG</a> </li>
-</ul>
-
-<p> </p>
-
-<p> </p>
+- [Ссылка на атрибут SVG](/ru/docs/Web/SVG/Attribute)
+- [Учебник SVG](/ru/docs/Web/SVG/Tutorial)
+- [Ссылка на интерфейс SVG](/ru/docs/Web/API/Document_Object_Model#SVG_interfaces)

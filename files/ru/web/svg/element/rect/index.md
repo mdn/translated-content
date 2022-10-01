@@ -7,106 +7,80 @@ tags:
 translation_of: Web/SVG/Element/rect
 original_slug: Web/SVG/Элемент/rect
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>&lt;rect&gt;</code>  - это базовая SVG фигура, используется для отрисовки прямоугольников по координатам угла, длины и высоты прямоугольника. Также может использоваться для отрисовки прямоугольников со скруглёнными углами.</p>
+`<rect>` - это базовая SVG фигура, используется для отрисовки прямоугольников по координатам угла, длины и высоты прямоугольника. Также может использоваться для отрисовки прямоугольников со скруглёнными углами.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категория</th>
-   <td>Простая фигура, Графический элемент</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td>Любое количество указанных элементов в любом порядке:<br>
-    <a href="/en/SVG/Element#Animation" title="en/SVG/Attribute#Animation">Элементы анимации</a> »<br>
-    <a href="/en/SVG/Element#Descriptive" title="en/SVG/Attribute#Descriptive">Элементы описания</a> »</td>
-  </tr>
-  <tr>
-   <th scope="row">Нормативный документ</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/shapes.html#RectElement">SVG 1.1 (2ое издание)</a></td>
-  </tr>
- </tbody>
-</table>
+| Категория              | Простая фигура, Графический элемент                                                                                                                                                                                   |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое | Любое количество указанных элементов в любом порядке: [Элементы анимации](/en/SVG/Element#Animation "en/SVG/Attribute#Animation") » [Элементы описания](/en/SVG/Element#Descriptive "en/SVG/Attribute#Descriptive") » |
+| Нормативный документ   | [SVG 1.1 (2ое издание)](http://www.w3.org/TR/SVG/shapes.html#RectElement)                                                                                                                                             |
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="Простой_пример_использования_rect">Простой пример использования rect</h3>
+### Простой пример использования rect
 
-<p> </p>
-
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120"
+```xml
+<?xml version="1.0"?>
+<svg width="120" height="120"
      viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;rect x="10" y="10" width="100" height="100"/&gt;
-&lt;/svg&gt;</pre>
+  <rect x="10" y="10" width="100" height="100"/>
+</svg>
+```
 
-<p> </p>
+» [rect-1.svg](https://mdn.mozillademos.org/files/8893/rect-1.svg)
 
-<p>» <a href="https://mdn.mozillademos.org/files/8893/rect-1.svg">rect-1.svg</a></p>
+### `<rect>` со скруглёнными углами
 
-<h3 id="&lt;rect>_со_скруглёнными_углами"><code>&lt;rect&gt;</code> со скруглёнными углами</h3>
-
-<p> </p>
-
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120"
+```xml
+<?xml version="1.0"?>
+<svg width="120" height="120"
      viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;rect x="10" y="10"
+  <rect x="10" y="10"
         width="100" height="100"
-        rx="15" ry="15"/&gt;
+        rx="15" ry="15"/>
 
-&lt;/svg&gt;</pre>
+</svg>
+```
 
-<p>» <a href="https://mdn.mozillademos.org/files/8897/rect-2.svg">rect-2.svg</a></p>
+» [rect-2.svg](https://mdn.mozillademos.org/files/8897/rect-2.svg)
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+### Глобальные атрибуты
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Атрибуты условной обработки</a> »</li>
- <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Атрибуты ядра</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Атрибуты графических собы</a>тий »</li>
- <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Атрибуты представления</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [Атрибуты условной обработки](/en/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Атрибуты ядра](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Атрибуты графических собы](/en/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent")тий »
+- [Атрибуты представления](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="Специальные_атрибуты">Специальные атрибуты</h3>
+### Специальные атрибуты
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
- <li>{{ SVGAttr("rx") }}</li>
- <li>{{ SVGAttr("ry") }}</li>
-</ul>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
+- {{ SVGAttr("rx") }}
+- {{ SVGAttr("ry") }}
 
-<h2 id="DOM_Интерфейс">DOM Интерфейс</h2>
+## DOM Интерфейс
 
-<p>Данный элемент реализует интерфейс <code><a href="/en/DOM/SVGRectElement" title="en/DOM/SVGRectElement">SVGRectElement</a></code> .</p>
+Данный элемент реализует интерфейс [`SVGRectElement`](/en/DOM/SVGRectElement "en/DOM/SVGRectElement") .
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<p> </p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{ SVGElement("path") }}</li>
-</ul>
+- {{ SVGElement("path") }}

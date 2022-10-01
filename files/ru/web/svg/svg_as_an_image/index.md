@@ -3,68 +3,39 @@ title: SVG как изображение
 slug: Web/SVG/SVG_as_an_Image
 translation_of: Web/SVG/SVG_as_an_Image
 ---
-<p>Изображения SVG могут использоваться как формат изображения в ряде контекстов. Многие браузеры поддерживают изображения SVG:</p>
+Изображения SVG могут использоваться как формат изображения в ряде контекстов. Многие браузеры поддерживают изображения SVG:
 
-<ul>
- <li>Элементы HTML {{HTMLElement("img")}} или {{SVGElement("svg")}}</li>
- <li>CSS {{cssxref("background-image")}}</li>
-</ul>
+- Элементы HTML {{HTMLElement("img")}} или {{SVGElement("svg")}}
+- CSS {{cssxref("background-image")}}
 
-<h2 id="Гекко-специфические_контексты">Гекко-специфические контексты</h2>
+## Гекко-специфические контексты
 
-<p>Кроме того, Gecko 2.0 {{geckoRelease("2.0")}} представил поддержку использования  <a href="/en-US/docs/SVG">SVG</a> в следующих контекстах:</p>
+Кроме того, Gecko 2.0 {{geckoRelease("2.0")}} представил поддержку использования [SVG](/ru/docs/SVG) в следующих контекстах:
 
-<ul>
- <li>CSS {{cssxref("list-style-image")}}</li>
- <li>CSS {{cssxref("content")}}</li>
- <li>Элементы SVG {{SVGElement("image")}}</li>
- <li>Элементы SVG {{SVGElement("feImage")}}</li>
- <li>Функция Canvas <a href="/en-US/docs/HTML/Canvas/Tutorial/Using_images#drawImage"><code>drawImage</code></a></li>
-</ul>
+- CSS {{cssxref("list-style-image")}}
+- CSS {{cssxref("content")}}
+- Элементы SVG {{SVGElement("image")}}
+- Элементы SVG {{SVGElement("feImage")}}
+- Функция Canvas [`drawImage`](/ru/docs/HTML/Canvas/Tutorial/Using_images#drawImage)
 
-<h3 id="Ограничения">Ограничения</h3>
+### Ограничения
 
-<p>В целях безопасности, Gecko накладывает некоторые ограничения на контент SVG, когда он используется в качестве изображения:</p>
+В целях безопасности, Gecko накладывает некоторые ограничения на контент SVG, когда он используется в качестве изображения:
 
-<ul>
- <li><a href="/en-US/docs/JavaScript">JavaScript</a> отключён.</li>
- <li>Внешние ресурсы (например, изображения, таблицы стилей) не могут быть загружены, хотя их можно использовать, если они встроены в данные: URI.</li>
- <li>{{cssxref(":visited")}}-стили ссылок не отображаются.</li>
- <li>Стилизация виджитов на платформе (основанная на теме ОС) отключена.</li>
-</ul>
+- [JavaScript](/ru/docs/JavaScript) отключён.
+- Внешние ресурсы (например, изображения, таблицы стилей) не могут быть загружены, хотя их можно использовать, если они встроены в данные: URI.
+- {{cssxref(":visited")}}-стили ссылок не отображаются.
+- Стилизация виджитов на платформе (основанная на теме ОС) отключена.
 
-<p>Обратите внимание, что вышеуказанные ограничения являются специфическими для контекстов изображения; они не применяются, когда содержимое SVG  просматривается напрямую или когда оно внедрено в виде документа с помощью встраивания элементов {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, или {{HTMLElement("embed")}}.</p>
+Обратите внимание, что вышеуказанные ограничения являются специфическими для контекстов изображения; они не применяются, когда содержимое SVG просматривается напрямую или когда оно внедрено в виде документа с помощью встраивания элементов {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, или {{HTMLElement("embed")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> {{SpecName("HTML5 W3C", "semantics-embedded-content.html#the-img-element", "SVG within &lt;img&gt; element")}}
-      </td>
-      <td>{{Spec2("HTML5 W3C")}}</td>
-      <td> Defines the usage of SVG within {{HTMLElement("img")}} elements.
-      </td>
-    </tr>
-    <tr>
-      <td> {{SpecName("CSS3 Backgrounds", "#the-background-image", "SVG within 'background-image' CSS property")}}
-      </td>
-      <td>{{Spec2("CSS3 Backgrounds")}}</td>
-      <td> Defines the usage of SVG within the {{cssxref("background-image")}} property.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                                                                                                                        | Status                                   | Comment                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------- |
+| {{SpecName("HTML5 W3C", "semantics-embedded-content.html#the-img-element", "SVG within &lt;img&gt; element")}} | {{Spec2("HTML5 W3C")}}             | Defines the usage of SVG within {{HTMLElement("img")}} elements.                 |
+| {{SpecName("CSS3 Backgrounds", "#the-background-image", "SVG within 'background-image' CSS property")}}             | {{Spec2("CSS3 Backgrounds")}} | Defines the usage of SVG within the {{cssxref("background-image")}} property. |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/SVG_In_HTML_Introduction">SVG в HTML. Введение</a></li>
-</ul>
+- [SVG в HTML. Введение](/ru/docs/SVG_In_HTML_Introduction)

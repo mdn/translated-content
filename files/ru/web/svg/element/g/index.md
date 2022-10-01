@@ -7,69 +7,62 @@ tags:
 translation_of: Web/SVG/Element/g
 original_slug: Web/SVG/Элемент/g
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Элемент g используется для группировки других SVG элементов. Любые преобразования применяемые к g элементу наследуются его дочерними элементами. Также g используется для группировки различных элементов, чтобы позднее можно было сослаться на них с помощью {{SVGElement("use")}}.</p>
+Элемент g используется для группировки других SVG элементов. Любые преобразования применяемые к g элементу наследуются его дочерними элементами. Также g используется для группировки различных элементов, чтобы позднее можно было сослаться на них с помощью {{SVGElement("use")}}.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;svg viewBox="0 0 95 50"
-     xmlns="http://www.w3.org/2000/svg"&gt;
-   &lt;g stroke="green" fill="white" stroke-width="5"&gt;
-     &lt;circle cx="25" cy="25" r="15"/&gt;
-     &lt;circle cx="40" cy="25" r="15"/&gt;
-     &lt;circle cx="55" cy="25" r="15"/&gt;
-     &lt;circle cx="70" cy="25" r="15"/&gt;
-   &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg viewBox="0 0 95 50"
+     xmlns="http://www.w3.org/2000/svg">
+   <g stroke="green" fill="white" stroke-width="5">
+     <circle cx="25" cy="25" r="15"/>
+     <circle cx="40" cy="25" r="15"/>
+     <circle cx="55" cy="25" r="15"/>
+     <circle cx="70" cy="25" r="15"/>
+   </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Пример",220,130)}}</p>
+{{EmbedLiveSample("Пример",220,130)}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+### Глобальные атрибуты
 
-<ul>
- <li><a href="/en-US/docs/SVG/Attribute#ConditionalProccessing">Conditional processing attributes</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Core">Core attributes</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#GraphicalEvent">Graphical event attributes</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Presentation">Presentation attributes</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [Conditional processing attributes](/ru/docs/SVG/Attribute#ConditionalProccessing) »
+- [Core attributes](/ru/docs/SVG/Attribute#Core) »
+- [Graphical event attributes](/ru/docs/SVG/Attribute#GraphicalEvent) »
+- [Presentation attributes](/ru/docs/SVG/Attribute#Presentation) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="Специфичные_атрибуты">Специфичные атрибуты</h3>
+### Специфичные атрибуты
 
-<p><em>Нет специфичных атрибутов.</em></p>
+_Нет специфичных атрибутов._
 
-<h2 id="Интерфейс_DOM">Интерфейс DOM</h2>
+## Интерфейс DOM
 
-<p>Этот элемент реализует  <code><a href="/en-US/docs/DOM/SVGGElement">SVGGElement</a></code> интерес.</p>
+Этот элемент реализует [`SVGGElement`](/en-US/docs/DOM/SVGGElement) интерес.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+## Смотрите также:
 
-
-<h2 id="Смотрите_также">Смотрите также:</h2>
-
-
-
-<ul>
- <li>{{SVGElement("use")}}</li>
- <li>{{SVGElement("defs")}}</li>
- <li>{{SVGElement("symbol")}}</li>
- <li><a href="http://tutorials.jenkov.com/svg/g-element.html">SVG элемент g</a></li>
-</ul>
+- {{SVGElement("use")}}
+- {{SVGElement("defs")}}
+- {{SVGElement("symbol")}}
+- [SVG элемент g](http://tutorials.jenkov.com/svg/g-element.html)

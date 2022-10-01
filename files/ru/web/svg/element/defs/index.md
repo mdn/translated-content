@@ -9,70 +9,65 @@ tags:
 translation_of: Web/SVG/Element/defs
 original_slug: Web/SVG/Элемент/defs
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>SVG позволяет задавать графические объекты для последующего использования. Рекомендуется там, где это возможно, объявлять подобные элементы внутри элемента <strong><code>&lt;defs&gt;</code></strong>. Объекты, созданные внутри элемента <code>&lt;defs&gt;</code> не отображаются немедленно; рассматривайте их, как шаблоны или макросы, созданные для будущего использования.</p>
+SVG позволяет задавать графические объекты для последующего использования. Рекомендуется там, где это возможно, объявлять подобные элементы внутри элемента **`<defs>`**. Объекты, созданные внутри элемента `<defs>` не отображаются немедленно; рассматривайте их, как шаблоны или макросы, созданные для будущего использования.
 
-<p>Создание подобных элементов внутри элемента <code>&lt;defs&gt;</code> способствует лучшему пониманию содержимого SVG и поэтому способствует также доступности. Вы можете использовать элемент {{SVGElement("use")}}, чтобы отрисовать данные элементы в любом месте области просмотра.</p>
+Создание подобных элементов внутри элемента `<defs>` способствует лучшему пониманию содержимого SVG и поэтому способствует также доступности. Вы можете использовать элемент {{SVGElement("use")}}, чтобы отрисовать данные элементы в любом месте области просмотра.
 
-<p><code>&lt;defs&gt;</code> также можно использовать для создания градиентов; в качестве иллюстрации можно посмотреть пример для атрибута {{SVGAttr("x1")}}.</p>
+`<defs>` также можно использовать для создания градиентов; в качестве иллюстрации можно посмотреть пример для атрибута {{SVGAttr("x1")}}.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+### Глобальные атрибуты
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Conditional_processing_attributes">Conditional processing attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Graphical_event_attributes">Graphical event attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation_attributes">Presentation attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [Conditional processing attributes](/ru/docs/Web/SVG/Attribute#Conditional_processing_attributes)
+- [Core attributes](/ru/docs/Web/SVG/Attribute#Core_attributes)
+- [Graphical event attributes](/ru/docs/Web/SVG/Attribute#Graphical_event_attributes)
+- [Presentation attributes](/ru/docs/Web/SVG/Attribute#Presentation_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="Специфичные_атрибуты">Специфичные атрибуты</h3>
+### Специфичные атрибуты
 
-<p><em>Нет</em></p>
+_Нет_
 
-<h2 id="Интерфейс_DOM">Интерфейс DOM </h2>
+## Интерфейс DOM
 
-<p>Элемент реализует интерфейс {{domxref("SVGDefsElement")}}.</p>
+Элемент реализует интерфейс {{domxref("SVGDefsElement")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: xml">&lt;svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+```xml
+<svg width="80px" height="30px" viewBox="0 0 80 30"
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;defs&gt;
-    &lt;linearGradient id="Gradient01"&gt;
-      &lt;stop offset="20%" stop-color="#39F" /&gt;
-      &lt;stop offset="90%" stop-color="#F3F" /&gt;
-    &lt;/linearGradient&gt;
-  &lt;/defs&gt;
+  <defs>
+    <linearGradient id="Gradient01">
+      <stop offset="20%" stop-color="#39F" />
+      <stop offset="90%" stop-color="#F3F" />
+    </linearGradient>
+  </defs>
 
-  &lt;rect x="10" y="10" width="60" height="10"
-        fill="url(#Gradient01)" /&gt;
-&lt;/svg&gt;
-</pre>
+  <rect x="10" y="10" width="60" height="10"
+        fill="url(#Gradient01)" />
+</svg>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p> </p>
+## Связанные темы
 
-<h2 id="Связанные_темы">Связанные темы</h2>
-
-<ul>
- <li>{{SVGElement("use")}}</li>
-</ul>
+- {{SVGElement("use")}}

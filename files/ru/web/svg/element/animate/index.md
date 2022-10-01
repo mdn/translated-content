@@ -9,55 +9,49 @@ tags:
 translation_of: Web/SVG/Element/animate
 original_slug: Web/SVG/Элемент/animate
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p> Тег &lt;animate&gt; может быть помещён внутри какой-то фигуры, например,  &lt;circle&gt; . Он задаёт анимацию атрибута фигуры. Указанный атрибут будет изменяться со стартового значения и до конечного значения с определённым интервалом.</p>
+Тег \<animate> может быть помещён внутри какой-то фигуры, например, \<circle> . Он задаёт анимацию атрибута фигуры. Указанный атрибут будет изменяться со стартового значения и до конечного значения с определённым интервалом.
 
-<h2 id="Использование">Использование</h2>
+## Использование
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>» <a href="/files/3258/animate.svg">animate.svg</a></p>
+» [animate.svg](/files/3258/animate.svg)
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
+### Глобальные атрибуты
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#ConditionalProccessing">Conditional processing attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core">Core attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#AnimationEvent">Animation event attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#XLink">Xlink attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#AnimationAttributeTarget">Animation attribute target attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#AnimationTiming">Animation timing attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#AnimationValue">Animation value attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#AnimationAddition">Animation addition attributes</a> »</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [Conditional processing attributes](/ru/docs/Web/SVG/Attribute#ConditionalProccessing) »
+- [Core attributes](/ru/docs/Web/SVG/Attribute#Core) »
+- [Animation event attributes](/ru/docs/Web/SVG/Attribute#AnimationEvent) »
+- [Xlink attributes](/ru/docs/Web/SVG/Attribute#XLink) »
+- [Animation attribute target attributes](/ru/docs/Web/SVG/Attribute#AnimationAttributeTarget) »
+- [Animation timing attributes](/ru/docs/Web/SVG/Attribute#AnimationTiming) »
+- [Animation value attributes](/ru/docs/Web/SVG/Attribute#AnimationValue) »
+- [Animation addition attributes](/ru/docs/Web/SVG/Attribute#AnimationAddition) »
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="Атрибуты_элемента">Атрибуты элемента</h3>
+### Атрибуты элемента
 
-<ul>
- <li>{{SVGAttr("attributeName")}}</li>
- <li>{{SVGAttr("attributeType")}}</li>
- <li>{{SVGAttr("from")}}</li>
- <li>{{SVGAttr("to")}}</li>
- <li>{{SVGAttr("dur")}}</li>
- <li>{{SVGAttr("repeatCount")}}</li>
-</ul>
+- {{SVGAttr("attributeName")}}
+- {{SVGAttr("attributeType")}}
+- {{SVGAttr("from")}}
+- {{SVGAttr("to")}}
+- {{SVGAttr("dur")}}
+- {{SVGAttr("repeatCount")}}
 
-<h2 id="DOM_интерфейс">DOM интерфейс</h2>
+## DOM интерфейс
 
-<p>Элемент реализует <code><a href="/en-US/docs/Web/DOM/SVGAnimateElement">SVGAnimateElement</a></code> интерфейс .</p>
+Элемент реализует [`SVGAnimateElement`](/en-US/docs/Web/DOM/SVGAnimateElement) интерфейс .
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддерживаемые_браузеры">Поддерживаемые браузеры</h2>
+## Поддерживаемые браузеры
 
-<p>{{Compat}}</p>
-
-<p> </p>
+{{Compat}}

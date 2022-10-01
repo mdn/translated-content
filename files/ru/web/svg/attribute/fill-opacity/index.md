@@ -6,64 +6,44 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/fill-opacity
 ---
-<p>« <a href="/ru/docs/Web/SVG/Attribute" title="Справочник SVG атрибутов">Справочник SVG атрибутов</a></p>
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
 
-<p>Этот атрибут определяет прозрачность цвета заполнения содержимого элемента.</p>
+Этот атрибут определяет прозрачность цвета заполнения содержимого элемента.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категория</th>
-   <td>Атрибут оформления</td>
-  </tr>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><a href="/en/SVG/Content_type#Opacity_value" title="en/SVG/Content_type#Opacity_value">&lt;opacity-value&gt;</a> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">Предустановленное значение</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемый</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Спецификация</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/painting.html#FillOpacityProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Категория                  | Атрибут оформления                                                                                    |
+| -------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Значение                   | [\<opacity-value>](/en/SVG/Content_type#Opacity_value "en/SVG/Content_type#Opacity_value") \| inherit |
+| Предустановленное значение | 1                                                                                                     |
+| Анимируемый                | Да                                                                                                    |
+| Спецификация               | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillOpacityProperty)                   |
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="100" cy="100" r="100" /&gt;
-&lt;/svg&gt;
-&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="100" cy="100" r="100" fill-opacity="0.25" /&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="100" />
+</svg>
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="100" fill-opacity="0.25" />
+</svg>
+```
 
-<h3 id="результат">результат</h3>
+### результат
 
-<p>{{EmbedLiveSample('Примеры', 200, 200)}}</p>
+{{EmbedLiveSample('Примеры', 200, 200)}}
 
-<h2 id="Элементы">Элементы</h2>
+## Элементы
 
-<p>Следующие группы элементов могут быть использованы с атрибутом <code>fill-opacity</code>:</p>
+Следующие группы элементов могут быть использованы с атрибутом `fill-opacity`:
 
-<ul>
- <li><a href="/en/SVG/Element#Shape" title="en/SVG/Element#Shape">Элементы графических форм (Shape elements</a>) »</li>
- <li><a href="/en/SVG/Element#TextContent" title="en/SVG/Element#TexteContent">Текстовые элементы</a> »</li>
-</ul>
+- [Элементы графических форм (Shape elements](/en/SVG/Element#Shape "en/SVG/Element#Shape")) »
+- [Текстовые элементы](/en/SVG/Element#TextContent "en/SVG/Element#TexteContent") »
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ SVGAttr("stroke-opacity") }}</li>
- <li>{{ SVGAttr("opacity") }}</li>
-</ul>
+- {{ SVGAttr("stroke-opacity") }}
+- {{ SVGAttr("opacity") }}

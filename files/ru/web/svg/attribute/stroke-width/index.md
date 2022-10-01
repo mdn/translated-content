@@ -3,55 +3,40 @@ title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
 translation_of: Web/SVG/Attribute/stroke-width
 ---
-<p>« <a href="/ru/docs/Web/SVG/Attribute" title="Справочник SVG атрибутов">Справочник SVG атрибутов</a></p>
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
 
-<p>Атрибут <code>stroke-width</code> указывает ширину контура текущего объекта. Его значение по умолчанию: 1. Если используется &lt;percentage&gt;, значение представляет собой процент от текущего окна просмотра. Если используется значение 0, контур не будет нарисован.<br>
- <br>
- В качестве атрибута представления он также может использоваться как свойство непосредственно внутри таблицы стилей CSS</p>
+Атрибут `stroke-width` указывает ширину контура текущего объекта. Его значение по умолчанию: 1. Если используется \<percentage>, значение представляет собой процент от текущего окна просмотра. Если используется значение 0, контур не будет нарисован.
 
-<h2 id="Usage_context">Usage context</h2>
+В качестве атрибута представления он также может использоваться как свойство непосредственно внутри таблицы стилей CSS
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row"><strong>Категория</strong></th>
-   <td>Атрибут представления</td>
-  </tr>
-  <tr>
-   <th scope="row"><strong>Значения</strong></th>
-   <td><a href="/en/SVG/Content_type#Length" title="en/SVG/Content_type#Length">&lt;length&gt;</a> | <a href="/en/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row"><strong>Анимируемый</strong></th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Нормативный документ</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/painting.html#StrokeWidthProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+## Usage context
 
-<h2 id="Example">Example</h2>
+| **Категория**        | Атрибут представления                                                                                                                                                 |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Значения**         | [\<length>](/en/SVG/Content_type#Length "en/SVG/Content_type#Length") \| [\<percentage>](/en/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") \| inherit |
+| **Анимируемый**      | Да                                                                                                                                                                    |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeWidthProperty)                                                                                   |
 
-<h3 id="SVG">SVG</h3>
+## Example
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="100" cy="100" r="100" /&gt;
-&lt;/svg&gt;
-&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="100" cy="100" r="100" stroke="#ff0" stroke-width="10" /&gt;
-&lt;/svg&gt;</pre>
+### SVG
 
-<h3 id="Результат">Результат</h3>
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="100" />
+</svg>
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="100" stroke="#ff0" stroke-width="10" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 200, 200)}}</p>
+### Результат
 
-<h2 id="Элементы">Элементы</h2>
+{{EmbedLiveSample('Example', 200, 200)}}
 
-<p>Следующие элементы могут использовать атрибут <code>stroke-width</code>.</p>
+## Элементы
 
-<ul>
- <li><a href="/ru/SVG/Element#Shape" title="en/SVG/Element#Shape">Элементы форм</a> »</li>
- <li><a href="/ru/SVG/Element#TextContent" title="en/SVG/Element#TextContent">Текстовые элементы</a> »</li>
-</ul>
+Следующие элементы могут использовать атрибут `stroke-width`.
+
+- [Элементы форм](/ru/SVG/Element#Shape "en/SVG/Element#Shape") »
+- [Текстовые элементы](/ru/SVG/Element#TextContent "en/SVG/Element#TextContent") »

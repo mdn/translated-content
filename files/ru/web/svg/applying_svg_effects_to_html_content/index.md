@@ -3,230 +3,250 @@ title: Применение эффектов SVG к содержимому HTML
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
-<p>Современные браузеры поддерживают <a href="/en-US/docs/SVG">SVG</a> в стилях <a href="/en-US/docs/Web/CSS" title="Cascading Style Sheets">CSS</a> для применения графических эффектов к HTML-контенту.</p>
+Современные браузеры поддерживают [SVG](/ru/docs/SVG) в стилях [CSS](/ru/docs/Web/CSS "Cascading Style Sheets") для применения графических эффектов к HTML-контенту.
 
-<p>Вы можете указать SVG в стилях как внутри одного документа, так и из внешней таблицы стилей. Есть 3 свойства, которые вы можете использовать: <a href="/en-US/docs/Web/CSS/mask"><code>mask</code></a>, <a href="/en-US/docs/Web/CSS/clip-path"><code>clip-path</code></a>, и <a href="/en-US/docs/Web/CSS/filter"><code>filter</code></a>. </p>
+Вы можете указать SVG в стилях как внутри одного документа, так и из внешней таблицы стилей. Есть 3 свойства, которые вы можете использовать: [`mask`](/ru/docs/Web/CSS/mask), [`clip-path`](/ru/docs/Web/CSS/clip-path), и [`filter`](/ru/docs/Web/CSS/filter).
 
-<div class="note"><strong>Примечание:</strong> Ссылки на SVG во внешних файлах должны быть в том же самом источнике <a href="/en-US/docs/Web/Security/Same-origin_policy">same origin</a> , что и ссылочный документ.</div>
+> **Примечание:** Ссылки на SVG во внешних файлах должны быть в том же самом источнике [same origin](/ru/docs/Web/Security/Same-origin_policy) , что и ссылочный документ.
 
-<h2 id="Использование_встроенного_SVG">Использование встроенного SVG</h2>
+## Использование встроенного SVG
 
-<p>Чтобы применить эффект SVG с использованием стилей CSS, вам нужно сначала создать стиль CSS, который ссылается на SVG. </p>
+Чтобы применить эффект SVG с использованием стилей CSS, вам нужно сначала создать стиль CSS, который ссылается на SVG.
 
-<pre class="brush: html">&lt;style&gt;p { mask: url(#my-mask); }&lt;/style&gt;
-</pre>
+```html
+<style>p { mask: url(#my-mask); }</style>
+```
 
-<p>В приведённом выше примере все параграфы маскируются с помощью <a href="/en-US/docs/Web/SVG/Element/mask">SVG</a> <a href="/en-US/docs/Web/SVG/Element/mask"><code>&lt;mask&gt;</code></a>  с <a href="/en-US/docs/Web/HTML/Global_attributes/id">ID</a> <code>my-mask</code>. </p>
+В приведённом выше примере все параграфы маскируются с помощью [SVG](/ru/docs/Web/SVG/Element/mask) [`<mask>`](/ru/docs/Web/SVG/Element/mask) с [ID](/ru/docs/Web/HTML/Global_attributes/id) `my-mask`.
 
-<h3 id="Пример_маскировка">Пример: маскировка</h3>
+### Пример: маскировка
 
-<p>Например, вы можете сделать градиентную маску для содержимого HTML, используя код SVG и CSS, похожий на следующий, внутри вашего документа HTML:</p>
+Например, вы можете сделать градиентную маску для содержимого HTML, используя код SVG и CSS, похожий на следующий, внутри вашего документа HTML:
 
-<pre class="brush: html">&lt;svg height="0"&gt;
-  &lt;mask id="mask-1"&gt;
-    &lt;linearGradient id="gradient-1" y2="1"&gt;
-      &lt;stop stop-color="white" offset="0"/&gt;
-      &lt;stop stop-opacity="0" offset="1"/&gt;
-    &lt;/linearGradient&gt;
-    &lt;circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white"/&gt;
-    &lt;rect x="0.5" y="0.2" width="300" height="100" fill="url(#gradient-1)"/&gt;
-  &lt;/mask&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg height="0">
+  <mask id="mask-1">
+    <linearGradient id="gradient-1" y2="1">
+      <stop stop-color="white" offset="0"/>
+      <stop stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white"/>
+    <rect x="0.5" y="0.2" width="300" height="100" fill="url(#gradient-1)"/>
+  </mask>
+</svg>
+```
 
-<pre class="brush: css">.target {
+```css
+.target {
   mask: url(#mask-1);
 }
 p {
   width: 300px;
   border: 1px solid #000;
   display: inline-block;
-}</pre>
+}
+```
 
-<p>Обратите внимание, что в CSS маска указана с использованием URL-адреса ID- <code>#mask-1</code>, которая является идентификатором маски SVG, указанной ниже. Все остальное указывает подробности о самой маске градиента.</p>
+Обратите внимание, что в CSS маска указана с использованием URL-адреса ID- `#mask-1`, которая является идентификатором маски SVG, указанной ниже. Все остальное указывает подробности о самой маске градиента.
 
-<p>Применение SVG-эффекта к (X) HTML выполняется путём назначения <code>target</code> классу, определённому выше элементу, например:</p>
+Применение SVG-эффекта к (X) HTML выполняется путём назначения `target` классу, определённому выше элементу, например:
 
-<pre class="brush: html">&lt;p class="target" style="background:lime;"&gt;
+```html
+<p class="target" style="background:lime;">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-&lt;/p&gt;
-&lt;p&gt;
+</p>
+<p>
     Lorem ipsum dolor sit amet, consectetur adipisicing
-    &lt;b class="target"&gt;elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.&lt;/b&gt;
+    <b class="target">elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</b>
     Ut enim ad minim veniam.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<p>Вышеприведённый пример будет отображаться с помощью маски, применяемой к нему.</p>
+Вышеприведённый пример будет отображаться с помощью маски, применяемой к нему.
 
-<p>{{EmbedLiveSample('Пример_маскировка', 650, 200)}}</p>
+{{EmbedLiveSample('Пример_маскировка', 650, 200)}}
 
-<h3 id="Пример_обрезание">Пример: обрезание</h3>
+### Пример: обрезание
 
-<p>Этот пример демонстрирует использование SVG для клипа содержимого HTML. Обратите внимание, что даже кликаемые области для ссылок обрезаются.</p>
+Этот пример демонстрирует использование SVG для клипа содержимого HTML. Обратите внимание, что даже кликаемые области для ссылок обрезаются.
 
-<pre class="brush: html">&lt;p class="target" style="background:lime;"&gt;
+```html
+<p class="target" style="background:lime;">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-&lt;/p&gt;
-&lt;p&gt;
+</p>
+<p>
     Lorem ipsum dolor sit amet, consectetur adipisicing
-    &lt;b class="target"&gt;elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.&lt;/b&gt;
+    <b class="target">elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</b>
     Ut enim ad minim veniam.
-&lt;/p&gt;
+</p>
 
-&lt;button onclick="toggleRadius()"&gt;Toggle radius&lt;/button&gt;
+<button onclick="toggleRadius()">Toggle radius</button>
 
-&lt;svg height="0"&gt;
-  &lt;clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox"&gt;
-    &lt;circle cx="0.25" cy="0.25" r="0.25" id="circle"/&gt;
-    &lt;rect x="0.5" y="0.2" width="0.5" height="0.8"/&gt;
-  &lt;/clipPath&gt;
-&lt;/svg&gt;
-</pre>
+<svg height="0">
+  <clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox">
+    <circle cx="0.25" cy="0.25" r="0.25" id="circle"/>
+    <rect x="0.5" y="0.2" width="0.5" height="0.8"/>
+  </clipPath>
+</svg>
+```
 
-<pre class="brush: css">.target {
+```css
+.target {
   clip-path: url(#clipping-path-1);
 }
 p {
   width: 300px;
   border: 1px solid #000;
   display: inline-block;
-}</pre>
+}
+```
 
-<p>Это устанавливает область отсечения, образованную из круга и прямоугольника, присваивает ему ID <code>#clipping-path-1</code>, а затем ссылается на него в CSS. Путь клипа может быть назначен любому элементу с <code>target</code> классом.</p>
+Это устанавливает область отсечения, образованную из круга и прямоугольника, присваивает ему ID `#clipping-path-1`, а затем ссылается на него в CSS. Путь клипа может быть назначен любому элементу с `target` классом.
 
-<p>Вы можете вносить изменения в SVG в реальном времени, и они сразу же повлияют на рендеринг HTML. Например, вы можете изменить размер круга в указанном выше пути клипа:</p>
+Вы можете вносить изменения в SVG в реальном времени, и они сразу же повлияют на рендеринг HTML. Например, вы можете изменить размер круга в указанном выше пути клипа:
 
-<pre class="brush: js">function toggleRadius() {
+```js
+function toggleRadius() {
   var circle = document.getElementById("circle");
   circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Пример_обрезание', 650, 200)}}</p>
+{{EmbedLiveSample('Пример_обрезание', 650, 200)}}
 
-<h3 id="Пример_Фильтрация">Пример: Фильтрация</h3>
+### Пример: Фильтрация
 
-<p>Это демонстрирует применение фильтра к содержимому HTML с помощью SVG. Он устанавливает несколько фильтров, которые применяются с CSS к трём элементам как в нормальном состоянии, так и при <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover">hover</a> мыши.</p>
+Это демонстрирует применение фильтра к содержимому HTML с помощью SVG. Он устанавливает несколько фильтров, которые применяются с CSS к трём элементам как в нормальном состоянии, так и при [hover](/ru/docs/Web/CSS/:hover) мыши.
 
-<pre class="brush: html">&lt;p class="target" style="background: lime;"&gt;
+```html
+<p class="target" style="background: lime;">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-&lt;/p&gt;
-&lt;pre class="target"&gt;lorem&lt;/pre&gt;
-&lt;p&gt;
+</p>
+<pre class="target">lorem</pre>
+<p>
     Lorem ipsum dolor sit amet, consectetur adipisicing
-    &lt;b class="target"&gt;elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.&lt;/b&gt;
+    <b class="target">elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</b>
     Ut enim ad minim veniam.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<p>Любой SVG-фильтр может применяться таким образом. Например, чтобы применить эффект размытия, вы можете использовать:</p>
+Любой SVG-фильтр может применяться таким образом. Например, чтобы применить эффект размытия, вы можете использовать:
 
-<pre class="brush: html">&lt;svg height="0"&gt;
-  &lt;filter id="f1"&gt;
-    &lt;feGaussianBlur stdDeviation="3"/&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg height="0">
+  <filter id="f1">
+    <feGaussianBlur stdDeviation="3"/>
+  </filter>
+</svg>
+```
 
-<p>Вы также можете применить цветовую матрицу:</p>
+Вы также можете применить цветовую матрицу:
 
-<pre class="brush: html">&lt;svg height="0"&gt;
-  &lt;filter id="f2"&gt;
-    &lt;feColorMatrix values="0.3333 0.3333 0.3333 0 0
+```html
+<svg height="0">
+  <filter id="f2">
+    <feColorMatrix values="0.3333 0.3333 0.3333 0 0
                            0.3333 0.3333 0.3333 0 0
                            0.3333 0.3333 0.3333 0 0
-                           0      0      0      1 0"/&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;
-</pre>
+                           0      0      0      1 0"/>
+  </filter>
+</svg>
+```
 
-<p>И ещё несколько фильтров:</p>
+И ещё несколько фильтров:
 
-<pre class="brush: html">&lt;svg height="0"&gt;
-  &lt;filter id="f3"&gt;
-    &lt;feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
-      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/&gt;
-  &lt;/filter&gt;
-  &lt;filter id="f4"&gt;
-    &lt;feSpecularLighting surfaceScale="5" specularConstant="1"
-                        specularExponent="10" lighting-color="white"&gt;
-      &lt;fePointLight x="-5000" y="-10000" z="20000"/&gt;
-    &lt;/feSpecularLighting&gt;
-  &lt;/filter&gt;
-  &lt;filter id="f5"&gt;
-    &lt;feColorMatrix values="1 0 0 0 0
+```html
+<svg height="0">
+  <filter id="f3">
+    <feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
+      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/>
+  </filter>
+  <filter id="f4">
+    <feSpecularLighting surfaceScale="5" specularConstant="1"
+                        specularExponent="10" lighting-color="white">
+      <fePointLight x="-5000" y="-10000" z="20000"/>
+    </feSpecularLighting>
+  </filter>
+  <filter id="f5">
+    <feColorMatrix values="1 0 0 0 0
                            0 1 0 0 0
                            0 0 1 0 0
-                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;</pre>
+                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/>
+  </filter>
+</svg>
+```
 
-<p>Пять фильтров применяются с использованием следующего CSS:</p>
+Пять фильтров применяются с использованием следующего CSS:
 
-<pre class="brush: css">p.target { filter:url(#f3); }
+```css
+p.target { filter:url(#f3); }
 p.target:hover { filter:url(#f5); }
 b.target { filter:url(#f1); }
 b.target:hover { filter:url(#f4); }
 pre.target { filter:url(#f2); }
 pre.target:hover { filter:url(#f3); }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Пример_Фильтрация', 650, 200)}}</p>
+{{EmbedLiveSample('Пример_Фильтрация', 650, 200)}}
 
-<h3 id="Пример_размытый_текст">Пример: размытый текст</h3>
+### Пример: размытый текст
 
-<p>Чтобы размыть текст, браузеры, основанные на Webkit, имеют (префиксный) CSS-фильтр, называемый blur (см. Также <a href="/en-US/docs/Web/CSS/filter#blur%28%29_2">CSS filter</a>). Вы можете добиться такого же эффекта, используя фильтры SVG.</p>
+Чтобы размыть текст, браузеры, основанные на Webkit, имеют (префиксный) CSS-фильтр, называемый blur (см. Также [CSS filter](/ru/docs/Web/CSS/filter#blur%28%29_2)). Вы можете добиться такого же эффекта, используя фильтры SVG.
 
-<pre class="brush: html">&lt;p class="blur"&gt;Time to clean my glasses&lt;/p&gt;
-&lt;svg height="0"&gt;
-  &lt;defs&gt;
-    &lt;filter id="wherearemyglasses" x="0" y="0"&gt;
-    &lt;feGaussianBlur in="SourceGraphic" stdDeviation="1"/&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<p class="blur">Time to clean my glasses</p>
+<svg height="0">
+  <defs>
+    <filter id="wherearemyglasses" x="0" y="0">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+    </filter>
+  </defs>
+</svg>
+```
 
-<p>Вы можете применить SVG и CSS-фильтр в том же классе:</p>
+Вы можете применить SVG и CSS-фильтр в том же классе:
 
-<pre class="brush: css">.blur { filter: url(#wherearemyglasses); }</pre>
+```css
+.blur { filter: url(#wherearemyglasses); }
+```
 
-<p>{{ EmbedLiveSample('Пример_размытый_текст', 300, 100) }}</p>
+{{ EmbedLiveSample('Пример_размытый_текст', 300, 100) }}
 
-<p>Размытие является сложным вычислением, поэтому используйте его экономно, особенно в элементах, которые прокручиваются или анимируются.</p>
+Размытие является сложным вычислением, поэтому используйте его экономно, особенно в элементах, которые прокручиваются или анимируются.
 
-<h3 id="Пример_текстовые_эффекты">Пример: текстовые эффекты</h3>
+### Пример: текстовые эффекты
 
-<p>Эффекты SVG также могут использоваться для большей динамики и гибкого подхода к добавлению текста по сравнению с простым текстом HTML.</p>
+Эффекты SVG также могут использоваться для большей динамики и гибкого подхода к добавлению текста по сравнению с простым текстом HTML.
 
-<p>Создавая текст с использованием элементов SVG в сочетании с HTML, достигаются различные текстовые эффекты. Можно повернуть текст:</p>
+Создавая текст с использованием элементов SVG в сочетании с HTML, достигаются различные текстовые эффекты. Можно повернуть текст:
 
-<pre class="brush: html">&lt;svg height="60" width="200"&gt;
-  &lt;text x="0" y="15" fill="blue" transform="rotate(30 20,50)"&gt;Пример текста&lt;/text&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg height="60" width="200">
+  <text x="0" y="15" fill="blue" transform="rotate(30 20,50)">Пример текста</text>
+</svg>
+```
 
-<h2 id="Использование_внешних_ссылок">Использование внешних ссылок</h2>
+## Использование внешних ссылок
 
-<p>SVG, используемый для отсечения, маскировки и фильтрации, может быть загружен из внешнего источника, если этот источник исходит из того же источника, что и документ HTML, к которому он применяется.</p>
+SVG, используемый для отсечения, маскировки и фильтрации, может быть загружен из внешнего источника, если этот источник исходит из того же источника, что и документ HTML, к которому он применяется.
 
-<p>For example, if your CSS is in a file namedit can look like this: <br>
- Например, если ваш CSS находится в файле с именем <code>default.css</code>, он может выглядеть следующим образом:</p>
+For example, if your CSS is in a file namedit can look like this:
+Например, если ваш CSS находится в файле с именем `default.css`, он может выглядеть следующим образом:
 
-<pre class="brush: css" id="line1">.target { clip-path: url(resources.svg#c1); }</pre>
+```css
+.target { clip-path: url(resources.svg#c1); }
+```
 
-<p>Затем SVG импортируется из файла с именем <code>resources.svg</code>, используя путь клипа с ID <code>c1</code>. </p>
+Затем SVG импортируется из файла с именем `resources.svg`, используя путь клипа с ID `c1`.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/SVG" title="SVG">SVG</a></li>
- <li><a class="external" href="http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html">Эффекты SVG для HTML-контента</a> (запись в блоге)</li>
- <li><del><a class="external" href="/web-tech/2008/10/10/svg-external-document-references">SVG External Document References</a></del> (запись в блоге) (<a href="http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/" title="Web Tech Blog » Blog Archive » SVG External Document References">[archive.org] Web Tech Blog »Архив блога» Ссылки на внешние документы SVG</a>) </li>
-</ul>
+- [SVG](/ru/docs/SVG "SVG")
+- [Эффекты SVG для HTML-контента](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (запись в блоге)
+- ~~[SVG External Document References](/web-tech/2008/10/10/svg-external-document-references)~~ (запись в блоге) ([\[archive.org\] Web Tech Blog »Архив блога» Ссылки на внешние документы SVG](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/ "Web Tech Blog » Blog Archive » SVG External Document References"))

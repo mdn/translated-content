@@ -3,85 +3,68 @@ title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
 translation_of: Web/SVG/Attribute/keyTimes
 ---
-<p>« <a href="/en-US/docs/Web/SVG/Attribute" title="en-US/docs/Web/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/ru/docs/Web/SVG/Attribute "en-US/docs/Web/SVG/Attribute")
 
-<p>Атрибут <code>keyTimes</code> представляет собой разделённый точками с запятой список значений времени, используемых для управления темпами анимации. Каждое значение в списке соответствует значению в списке атрибутов {{ SVGAttr("values") }} и определяет, когда оно используется в анимации. Каждое значение времени в списке <code>keyTimes</code> задаётся как значение с плавающей запятой от 0 до 1 (включительно), представляющее пропорциональную величину смещения в течение элемента анимации.</p>
+Атрибут `keyTimes` представляет собой разделённый точками с запятой список значений времени, используемых для управления темпами анимации. Каждое значение в списке соответствует значению в списке атрибутов {{ SVGAttr("values") }} и определяет, когда оно используется в анимации. Каждое значение времени в списке `keyTimes` задаётся как значение с плавающей запятой от 0 до 1 (включительно), представляющее пропорциональную величину смещения в течение элемента анимации.
 
-<p>Если указан список <code>keyTimes</code>, то в списке <code>keyTimes</code> должно быть ровно столько же значений, сколько в списке {{ SVGAttr("values") }} .</p>
+Если указан список `keyTimes`, то в списке `keyTimes` должно быть ровно столько же значений, сколько в списке {{ SVGAttr("values") }} .
 
-<p>Каждое последовательное значение времени должно быть больше или равно предыдущему значению времени.</p>
+Каждое последовательное значение времени должно быть больше или равно предыдущему значению времени.
 
-<p>Семантика списка keyTimes зависит от режима интерполяции:</p>
+Семантика списка keyTimes зависит от режима интерполяции:
 
-<ul>
- <li>Для линейной и сплайновой анимации первое значение времени в списке должно быть равно 0, а Последнее значение времени в списке должно быть 1. Ключевое время, связанное с каждым значением, определяет, когда значение задаётся; значения являются интерполяцией между ключевыми моментами.</li>
- <li>Для дискретной анимации первое значение времени в списке должно быть равно 0. Время, связанное с каждым значением, определяет, когда значение задаётся; Функция анимации использует это значение до следующего времени, определённого в <code>keyTimes</code>.</li>
-</ul>
+- Для линейной и сплайновой анимации первое значение времени в списке должно быть равно 0, а Последнее значение времени в списке должно быть 1. Ключевое время, связанное с каждым значением, определяет, когда значение задаётся; значения являются интерполяцией между ключевыми моментами.
+- Для дискретной анимации первое значение времени в списке должно быть равно 0. Время, связанное с каждым значением, определяет, когда значение задаётся; Функция анимации использует это значение до следующего времени, определённого в `keyTimes`.
 
-<p>Если в качестве режима интерполяции используется <em>paced</em>, атрибут <code>keyTimes </code>игнорируется.</p>
+Если в качестве режима интерполяции используется _paced_, атрибут `keyTimes `игнорируется.
 
-<p>Если в качестве параметра длительности выбрано <em>indefinite</em>, атрибут <code>keyTimes</code> игнорируется.</p>
+Если в качестве параметра длительности выбрано _indefinite_, атрибут `keyTimes` игнорируется.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>Animation value attribute</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td>&lt;list&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/animate.html#KeyTimesAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | Animation value attribute                                                        |
+| ------------------ | -------------------------------------------------------------------------------- |
+| Value              | \<list>                                                                          |
+| Animatable         | No                                                                               |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#KeyTimesAttribute) |
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120"
+```html
+<?xml version="1.0"?>
+<svg width="120" height="120"
      viewPort="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+     xmlns="http://www.w3.org/2000/svg">
 
-    &lt;circle cx="60" cy="10" r="10"&gt;
+    <circle cx="60" cy="10" r="10">
 
-        &lt;animate attributeName="cx"
+        <animate attributeName="cx"
                  attributeType="XML"
                  dur="4s"
                  values="60 ; 110 ; 60 ; 10 ; 60"
                  keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"
-                 repeatCount="indefinite"/&gt;
+                 repeatCount="indefinite"/>
 
-        &lt;animate attributeName="cy"
+        <animate attributeName="cy"
                  attributeType="XML"
                  dur="4s"
                  values="10 ; 60 ; 110 ; 60 ; 10 "
                  keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"
-                 repeatCount="indefinite"/&gt;
+                 repeatCount="indefinite"/>
 
-    &lt;/circle&gt;
-&lt;/svg&gt;</pre>
+    </circle>
+</svg>
+```
 
-<p><strong>Демонстрация</strong></p>
+**Демонстрация**
 
-<p>{{ EmbedLiveSample('Пример','120','120') }}</p>
+{{ EmbedLiveSample('Пример','120','120') }}
 
-<h2 id="Элементы">Элементы</h2>
+## Элементы
 
-<p>Следующие элементы могут использовать атрибут <code>keyTimes</code></p>
+Следующие элементы могут использовать атрибут `keyTimes`
 
-<ul>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("animateColor") }}</li>
- <li>{{ SVGElement("animateMotion") }}</li>
- <li>{{ SVGElement("animateTransform") }}</li>
-</ul>
+- {{ SVGElement("animate") }}
+- {{ SVGElement("animateColor") }}
+- {{ SVGElement("animateMotion") }}
+- {{ SVGElement("animateTransform") }}

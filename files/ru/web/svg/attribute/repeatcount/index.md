@@ -3,45 +3,28 @@ title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
 translation_of: Web/SVG/Attribute/repeatCount
 ---
-<p>« <a href="/ru/docs/Web/SVG/Attribute" title="Справочник SVG атрибутов">Справочник SVG атрибутов</a></p>
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
 
-<p>Данный атрибут задаёт, сколько раз должна выполняться анимация.</p>
+Данный атрибут задаёт, сколько раз должна выполняться анимация.
 
-<p>Значение атрибута определяет количество итераций. Принимаются числа с плавающей точкой, которые интерпретируются как доля итерации. Значение должно быть больше нуля.</p>
+Значение атрибута определяет количество итераций. Принимаются числа с плавающей точкой, которые интерпретируются как доля итерации. Значение должно быть больше нуля.
 
-<p>Возможно также определить бесконечную зацикленную анимацию с помощью ключевого слова "indefinite".</p>
+Возможно также определить бесконечную зацикленную анимацию с помощью ключевого слова "indefinite".
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категория</th>
-   <td>Атрибут времени анимации</td>
-  </tr>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><a href="/en/SVG/Content_type#Number" title="https://developer.mozilla.org/en/SVG/Content_type#Number">&lt;number&gt;</a> | "indefinite"</td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемый</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Ссылка на стандарт</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/animate.html#RepeatCountAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Категория          | Атрибут времени анимации                                                                                            |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| Значение           | [\<number>](/en/SVG/Content_type#Number "https://developer.mozilla.org/en/SVG/Content_type#Number") \| "indefinite" |
+| Анимируемый        | Нет                                                                                                                 |
+| Ссылка на стандарт | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#RepeatCountAttribute)                                 |
 
-<p>{{ page("/en/SVG/Content_type","Number") }}</p>
+{{ page("/en/SVG/Content_type","Number") }}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h2 id="Элементы">Элементы</h2>
+## Элементы
 
-<p>Данные элементы могут использовать атрибут repeatCount</p>
+Данные элементы могут использовать атрибут repeatCount
 
-<ul>
- <li><a href="/en/SVG/Element#Animation" title="en/SVG/Element#Animation">Animation elements</a> »</li>
-</ul>
+- [Animation elements](/en/SVG/Element#Animation "en/SVG/Element#Animation") »

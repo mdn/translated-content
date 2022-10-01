@@ -6,51 +6,32 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/additive
 ---
-<p>« <a href="/ru/docs/Web/SVG/Attribute" title="Справочник SVG атрибутов">Справочник SVG атрибутов</a></p>
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
 
-<p>Этот атрибут определяет, является ли анимация аддитивной.</p>
+Этот атрибут определяет, является ли анимация аддитивной.
 
-<p>Часто бывает полезно определить анимацию как смещение или Дельта для значения атрибута, а не как абсолютные значения. Этот атрибут указывает на анимацию, если их значения добавляются к исходному значению анимированного атрибута.</p>
+Часто бывает полезно определить анимацию как смещение или Дельта для значения атрибута, а не как абсолютные значения. Этот атрибут указывает на анимацию, если их значения добавляются к исходному значению анимированного атрибута.
 
-<h2 id="Контекст_использования">Контекст использования</h2>
+## Контекст использования
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Категории</th>
-   <td>Атрибут добавления анимации</td>
-  </tr>
-  <tr>
-   <th scope="row">Значение</th>
-   <td><strong title="this is the default value">replace</strong> | sum</td>
-  </tr>
-  <tr>
-   <th scope="row">Анимируемый</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Нормативный документ</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/animate.html#AdditionAttributes">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Категории            | Атрибут добавления анимации                                                       |
+| -------------------- | --------------------------------------------------------------------------------- |
+| Значение             | **replace** \| sum                                                                |
+| Анимируемый          | Нет                                                                               |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#AdditionAttributes) |
 
-<dl>
- <dt>sum</dt>
- <dd>Указывает, что анимация добавляется к базовому значению атрибута и других анимаций с меньшим приоритетом.</dd>
- <dt>replace</dt>
- <dd>Указывает, что анимация переопределит базовое значение атрибута и другие анимации с меньшим приоритетом. Это значение по умолчанию, однако на поведение также влияют атрибуты значений анимации {{ SVGAttr("by") }} и {{ SVGAttr("to") }}, как описано в <a class="external" href="http://www.w3.org/TR/2001/REC-smil-animation-20010904/#FromToByAndAdditive">SMIL Animation: How from, to and by attributes affect additive behavior</a>.</dd>
-</dl>
+- sum
+  - : Указывает, что анимация добавляется к базовому значению атрибута и других анимаций с меньшим приоритетом.
+- replace
+  - : Указывает, что анимация переопределит базовое значение атрибута и другие анимации с меньшим приоритетом. Это значение по умолчанию, однако на поведение также влияют атрибуты значений анимации {{ SVGAttr("by") }} и {{ SVGAttr("to") }}, как описано в [SMIL Animation: How from, to and by attributes affect additive behavior](http://www.w3.org/TR/2001/REC-smil-animation-20010904/#FromToByAndAdditive).
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h2 id="Элементы">Элементы</h2>
+## Элементы
 
-<p>Следующие элементы могут использовать атрибут <code>additive</code></p>
+Следующие элементы могут использовать атрибут `additive`
 
-<ul>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("animateColor") }}</li>
- <li>{{ SVGElement("animateMotion") }}</li>
- <li>{{ SVGElement("animateTransform") }}</li>
-</ul>
+- {{ SVGElement("animate") }}
+- {{ SVGElement("animateColor") }}
+- {{ SVGElement("animateMotion") }}
+- {{ SVGElement("animateTransform") }}
