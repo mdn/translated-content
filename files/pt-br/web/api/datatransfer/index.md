@@ -43,7 +43,7 @@ O efeito atual que será usado, e deve sempre ser um dos possíveis valores de `
 
 Para os eventos `dragenter` e `dragover`, o `dropEffect` será inicializado com base na ação que o usuário está solicitando. Como isso é determinado é específico da plataforma, mas, normalmente o usuário pode pressionar teclas de modificação, como a tecla alt, para ajustar qual ação é desejada. Com um manipulador de evento para os eventos `dragenter` e `dragover, o dropEffect` deverá ser modificado se a ação desejada é diferente da ação que o usuário está solicitando.
 
-Para os eventos `dragstart, drag,` e `dragleave`, o `dropEffect` será inicializado como "none". Qualquer valor atribuído à `dropEffect` será definido, mas o valor não será usado para nada.
+Para os eventos `dragstart`, `drag`, e `dragleave`, o `dropEffect` será inicializado como "none". Qualquer valor atribuído à `dropEffect` será definido, mas o valor não será usado para nada.
 
 Para os eventos `drop` e `dragend`, o `dropEffect` será inicializado para a ação que foi desejada, que será o valor que o `dropEffect` tinha depois do último evento de `dragenter` ou `dragover`. Em um evento de dragend, por exemplo, se a o `dropEffect` desejado for "move", então os dados que estão sendo arrastados deverão ser removidos da origem.
 
