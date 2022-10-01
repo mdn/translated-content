@@ -42,9 +42,7 @@ li:first-of-type + li {
 
 ### 结果
 
-- One
-- Two!
-- Three
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## 规范
 
