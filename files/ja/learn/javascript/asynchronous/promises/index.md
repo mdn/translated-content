@@ -173,7 +173,7 @@ fetchPromise
 
 **決定 (settled)** という用語を使うこともあります。これは**履行**と**拒否**の両方を表します。
 
-プロミスが **解決 (resolved)** したというと、決定されたときか、または他のプロミスの状態に従うことで「ロックイン」された場合を表します。
+プロミスが**解決 (resolved)** したというと、決定されたときか、または他のプロミスの状態に従うことで「ロックイン」された場合を表します。
 
 [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/) の記事では、この用語の詳細について素晴らしい解説を提供しています。
 
