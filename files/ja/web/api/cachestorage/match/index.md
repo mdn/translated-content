@@ -2,6 +2,7 @@
 title: CacheStorage.match()
 slug: Web/API/CacheStorage/match
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("CacheStorage")}} インターフェイスの **`match()`** メソッドは、所与の {{domxref("Request")}} または URL 文字列が保存された {{domxref("Response")}} のキーであるかどうかをチェックします。 このメソッドは、{{domxref("Response")}} の {{jsxref("Promise")}}、または一致が見つからない場合に `undefined` に解決される {{jsxref("Promise")}} を返します。

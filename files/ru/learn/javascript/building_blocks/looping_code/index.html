@@ -9,7 +9,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 
 <p class="summary">Языки программирования очень полезны для быстрой реализации повторяющихся задач. От базовых числовых операций до любой другой ситуации, когда у вас есть много похожих операций, которые нужно выполнить. В этой статье мы рассмотрим структуры циклов, доступные в JavaScript, которые можно использовать для этих целей.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Требования:</th>
@@ -244,7 +244,7 @@ para.textContent = info;</pre>
   <ol>
    <li>В начале, <code>i = 0</code>, поэтому <code>cats[0] + ', '</code> соединятся в ("Билл, ").</li>
    <li>На втором шаге, <code>i = 1</code>, поэтому <code>cats[1] + ', '</code> соединятся в ("Макс, ")</li>
-   <li>И так далее. В конце каждого цикла <code>i</code> увеличится на 1 (<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">i++</span></font>) , и процесс будет начинаться заново.</li>
+   <li>И так далее. В конце каждого цикла <code>i</code> увеличится на 1 (<code>i++</code>) , и процесс будет начинаться заново.</li>
   </ol>
  </li>
  <li>Когда <code>i</code> достигнет величины <code>cats.length</code> цикл остановится и браузер перейдёт к следующему фрагменту кода после цикла.</li>
@@ -592,12 +592,6 @@ output.innerHTML = '';
 &lt;/div&gt;
 </pre>
 
-<p class="brush: js"></p>
-
-<p class="brush: js"></p>
-
-<p class="brush: js"></p>
-
 <pre class="brush: css">html {
   font-family: sans-serif;
 }
@@ -617,14 +611,6 @@ body {
   margin: 10px;
   background: #f5f9fa;
 }</pre>
-
-<p class="brush: js"></p>
-
-<p class="brush: js"></p>
-
-<p class="brush: js"></p>
-
-<p class="brush: js"></p>
 
 <pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -703,7 +689,6 @@ textarea.onkeyup = function(){
   updateCode();
 };</pre>
 
-<p class="brush: js"></p>
 </div>
 
 <p>{{ EmbedLiveSample('Active_learning', '100%', 880, "", "", "hide-codepen-jsfiddle") }}</p>
@@ -916,9 +901,7 @@ do {
  <li><a href="/ru/docs/Web/JavaScript/Reference/Statements/for">for свойства и характеристики</a></li>
  <li><a href="/ru/docs/Web/JavaScript/Reference/Statements/while">while</a> и <a href="/ru/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> описание</li>
  <li><a href="/ru/docs/Web/JavaScript/Reference/Statements/break">break</a> и <a href="/ru/docs/Web/JavaScript/Reference/Statements/continue">continue</a> описание</li>
- <li>
-  <p class="entry-title"><a href="https://www.impressivewebs.com/javascript-for-loop/">What’s the Best Way to Write a JavaScript For Loop?</a> — статья о практическом применении циклов</p>
- </li>
+ <li><a href="https://www.impressivewebs.com/javascript-for-loop/">What’s the Best Way to Write a JavaScript For Loop?</a> — статья о практическом применении циклов</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}</p>

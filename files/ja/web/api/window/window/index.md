@@ -2,6 +2,7 @@
 title: window.window
 slug: Web/API/Window/window
 ---
+
 {{ApiRef}}
 
 ## 概要

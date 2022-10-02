@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 9d5430a436abb2816f93935e11e1fa993a59e8ca
 ---
 
+{{Non-standard_header}}{{SeeCompatTable}}{{APIRef("XSLT")}}
+
 {{APIRef("XSLT")}}
 
 **`XSLTProcessor`** は、[XSLT](/ja/docs/Web/XSLT) スタイルシート変換を XML 文書に適用して、新しい XML 文書を出力として生成します。 XSLT スタイルシートをロードし、 `<xsl:param>` 引数の値を操作し、変換処理を文書に適用するメソッドを持っています。

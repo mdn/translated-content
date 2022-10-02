@@ -1097,7 +1097,6 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:while	/ja/docs/Web/JavaScript/Reference/Statements/while
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:with	/ja/docs/Web/JavaScript/Reference/Statements/with
 /ja/docs/Creating_toolbar_buttons	/ja/docs/orphaned/Creating_toolbar_buttons
-/ja/docs/DHTML	/ja/docs/orphaned/Glossary/DHTML
 /ja/docs/DOM	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/About_the_Document_Object_Model	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/Apps.mgmt.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
@@ -1869,16 +1868,12 @@
 /ja/docs/Glossary/404	/ja/docs/Web/HTTP/Status/404
 /ja/docs/Glossary/502	/ja/docs/Web/HTTP/Status/502
 /ja/docs/Glossary/AOM	/ja/docs/Glossary/Accessibility_tree
-/ja/docs/Glossary/Boot2Gecko	/ja/docs/conflicting/Glossary/Firefox_OS
-/ja/docs/Glossary/Bootstrap	/ja/docs/orphaned/Glossary/Bootstrap
+/ja/docs/Glossary/Boot2Gecko	/ja/docs/Glossary/Firefox_OS
 /ja/docs/Glossary/Bézier_curve	/ja/docs/Glossary/Bezier_curve
 /ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Client_hints
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
-/ja/docs/Glossary/DHTML	/ja/docs/orphaned/Glossary/DHTML
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
-/ja/docs/Glossary/Dynamic_programming_language	/ja/docs/orphaned/Glossary/Dynamic_programming_language
-/ja/docs/Glossary/GIJ	/ja/docs/orphaned/Glossary/GIJ
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/Index	/ja/docs/Glossary
@@ -1888,7 +1883,6 @@
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
 /ja/docs/Glossary/Symbol	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ja/docs/Glossary/XSS	/ja/docs/Glossary/Cross-site_scripting
-/ja/docs/Glossary/jQuery	/ja/docs/orphaned/Glossary/jQuery
 /ja/docs/Glossary/クロージャ	/ja/docs/Glossary/Closure
 /ja/docs/Glossary/スラグ	/ja/docs/Glossary/Slug
 /ja/docs/Glossary/ドメイン	/ja/docs/Glossary/Domain
@@ -4051,7 +4045,7 @@
 /ja/docs/Web/CSS/CSS_Properties_Reference	/ja/docs/orphaned/Web/CSS/CSS_Properties_Reference
 /ja/docs/Web/CSS/CSS_Reference	/ja/docs/Web/CSS/Reference
 /ja/docs/Web/CSS/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
-/ja/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat	/ja/docs/conflicting/Web/CSS/CSS_Scroll_Snap
+/ja/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat	/ja/docs/Web/CSS/CSS_Scroll_Snap
 /ja/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/ja/docs/Web/XPath/Comparison_with_CSS_selectors
 /ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/ja/docs/Web/CSS/CSS_Shapes/From_box_values
 /ja/docs/Web/CSS/CSS_User_Interface	/ja/docs/Web/CSS/CSS_Basic_User_Interface
@@ -4711,6 +4705,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Set/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Set
+/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd

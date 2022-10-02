@@ -3,6 +3,7 @@ title: アイコン,バナーの色が抜けている
 slug: orphaned/Web/Compatibility_FAQ/Empty_Background_Color.html
 original_slug: Web/Compatibility_FAQ/Empty_Background_Color.html
 ---
+
 ## 概要
 
 他ブラウザで表示されるアイコンやバナーの色が、mobile 版 Firefox では表示されません。

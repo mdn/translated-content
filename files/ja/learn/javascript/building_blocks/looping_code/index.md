@@ -2,6 +2,7 @@
 title: ループコード
 slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 プログラミング言語は、繰り返し実行するタスクを素早く終わらせるのがとても得意です。基本的な計算処理から、同じような作業がたくさんあるのならどんな状況でもこなします。今度は JavaScript でそういった目的を果たすために使用するループ構造を見てみましょう。
@@ -252,7 +253,7 @@ for (let i = 0; i < cats.length; i++) {
 
 > **Note:** [このコードは GitHub でも](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html)見られます ([動いているデモも](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)あります)。
 
-> **Warning:** **重要**: for ループ (他のループも同様) では、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が true では無くなるポイントに達するようにする必要があります。もしそうで無い場合、ループは永遠に回り続け、ブラウザーが強制的に停止するか、クラッシュしてしまうでしょう。これは**無限ループ**といいます。
+> **Warning:** for ループ (他のループも同様) では、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が true では無くなるポイントに達するようにする必要があります。もしそうで無い場合、ループは永遠に回り続け、ブラウザーが強制的に停止するか、クラッシュしてしまうでしょう。これは**無限ループ**といいます。
 
 ## break でループを終了する
 
@@ -498,7 +499,7 @@ do {
 
 > **Note:** 再度、これは期待どおりに動作します。[GitHub でライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
 
-> **Warning:** **重要**: while と do ... while では、すべてのループと同様に、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が false となるようにする必要があります。そうしなければループは永遠に進み、ブラウザーはそれ強制的に停止させるか、クラッシュします。これは**無限ループ**と呼ばれます。
+> **Warning:** while と do ... while では、すべてのループと同様に、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が false となるようにする必要があります。そうしなければループは永遠に進み、ブラウザーはそれ強制的に停止させるか、クラッシュします。これは**無限ループ**と呼ばれます。
 
 ## アクティブラーニング: カウントダウンを開始します!
 

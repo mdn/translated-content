@@ -2,6 +2,7 @@
 title: TextEncode.encode()
 slug: Web/API/TextEncoder/encode
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextEncoder.encode()`** メソッドは入力として文字列を取り、 {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}} に引数で与えられたテキストが {{domxref("TextEncoder")}} オブジェクトで指定された方法でエンコードされたものが入ったものを返します。

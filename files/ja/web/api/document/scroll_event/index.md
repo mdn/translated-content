@@ -2,6 +2,7 @@
 title: 'Document: scroll event'
 slug: Web/API/Document/scroll_event
 ---
+
 {{APIRef}}
 
 **`scroll`** イベントは、ドキュメントのビューまたは要素がスクロールされたときに生じます。

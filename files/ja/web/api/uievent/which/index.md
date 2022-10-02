@@ -3,6 +3,7 @@ title: UIEvent.which
 slug: Web/API/UIEvent/which
 original_slug: Web/API/MouseEvent/which
 ---
+
 {{ APIRef("DOM Events") }} {{Non-standard_header}}
 
 **`UIEvent.which`** は {{domxref("UIEvent")}} インターフェイスの読み取り専用プロパティで、マウスの押されたボタンを示す数値、`keyCode` の数値、キーボードで押されたキーの文字コード (`charCode`) のいずれかを返します。

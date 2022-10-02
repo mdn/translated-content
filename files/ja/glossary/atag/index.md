@@ -2,6 +2,7 @@
 title: ATAG
 slug: Glossary/ATAG
 ---
+
 ATAG (Authoring Tool {{glossary("Accessibility")}} Guidelines の略、オーサリング・ツール・アクセシビリティ・ガイドライン) は 利用しやすいコンテンツを生産する、アクセシブル・オーサリングツールをビルドするための {{Glossary("W3C")}} 勧告です。
 
 ## 関連項目

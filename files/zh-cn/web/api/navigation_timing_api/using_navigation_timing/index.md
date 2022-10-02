@@ -53,7 +53,7 @@ window.addEventListener("load", function() {
 
 此信息由 {{domxref("Performance.navigation")}} 属性提供，该属性返回包含所需信息的 {{domxref("PerformanceNavigation")}} 对象。
 
-让我们将此信息添加到上面的示例中。 新代码如下所示：
+让我们将此信息添加到上面的示例中。新代码如下所示：
 
 ```js
 window.addEventListener("load", function() {

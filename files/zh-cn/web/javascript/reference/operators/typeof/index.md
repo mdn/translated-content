@@ -171,7 +171,7 @@ typeof document.all === 'undefined';
 
 ### 获取具体类型的自定义方法
 
-`typeof` 是非常有用的，但它不像需要的那样万能。 例如，`typeof []` 是 `"object"`，以及 `typeof new Date()`、`typeof /abc/` 等。
+`typeof` 是非常有用的，但它不像需要的那样万能。例如，`typeof []` 是 `"object"`，以及 `typeof new Date()`、`typeof /abc/` 等。
 
 为了更明确地检查类型，这里我们提供了一个自定义的 `type(value)` 函数，它主要模仿 `typeof` 的行为，但对于非基本类型（即对象和函数），它在可能的情况下返回更详细的类型名。
 

@@ -2,6 +2,7 @@
 title: content_security_policy
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

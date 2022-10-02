@@ -2,6 +2,7 @@
 title: cursor
 slug: Web/CSS/cursor
 ---
+
 {{CSSRef}}
 
 **`cursor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マウスポインターが要素の上にいるときに表示されるマウスカーソルの種類を設定します。

@@ -3,6 +3,7 @@ title: radio ロールの使用
 slug: Web/Accessibility/ARIA/Roles/radio_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role
 ---
+
 ### 説明
 
 このテクニックは、[`radio`](https://www.w3.org/TR/wai-aria/#radio) ロールをどのように使用するかを示し、ブラウザーと支援技術に及ぼす影響について説明します。

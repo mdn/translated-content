@@ -2,6 +2,7 @@
 title: Node.lookupPrefix()
 slug: Web/API/Node/lookupPrefix
 ---
+
 {{APIRef("DOM")}}
 
 **`lookupPrefix()`** は {{domxref("Node")}} インターフェイスのメソッドで、指定された名前空間 URI に対応する接頭辞があれば、それを含む文字列を返します。ない場合は `null` を返します。

@@ -20,7 +20,7 @@ var p = new Proxy(target, {
 
 ### 参数
 
-下列参数将会被传递给 `isExtensible`方法。 this 绑定在 handler 对象上。
+下列参数将会被传递给 `isExtensible`方法。this 绑定在 handler 对象上。
 
 - `target`
   - : 目标对象。

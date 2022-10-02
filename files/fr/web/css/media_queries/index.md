@@ -38,13 +38,7 @@ Vous pouvez en découvrir plus dans l'article [Tester des requêtes media](/fr/d
 
 ## Spécifications
 
-| Spécification                                    | État                                     | Commentaires         |
-| ------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS5 Media Queries')}}     | {{Spec2('CSS5 Media Queries')}} |                      |
-| {{SpecName('CSS3 Conditional')}}     | {{Spec2('CSS3 Conditional')}} |                      |
-| {{SpecName('CSS4 Media Queries')}}     | {{Spec2('CSS4 Media Queries')}} |                      |
-| {{SpecName('CSS3 Media Queries')}}     | {{Spec2('CSS3 Media Queries')}} |                      |
-| {{SpecName('CSS2.1', 'media.html')}} | {{Spec2('CSS2.1')}}                 | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

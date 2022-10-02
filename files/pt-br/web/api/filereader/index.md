@@ -9,7 +9,7 @@ translation_of: Web/API/FileReader
 
 O objeto `FileReader` permite aplicações web ler assincronamente o conteúdo dos arquivos (ou buffers de dados puros) do computador do usuário, utilizando o objeto {{ domxref("File") }} ou {{ domxref("Blob") }} para especificar o arquivo ou os dados a serem lidos.
 
-Objetos File podem ser obtidos a partir de um objeto {{ domxref("FileList") }} retornado como resultado da seleção de um usuário utilizando um elemento {{ HTMLElement("input") }}, a partir de uma operação de drag and drop [`DataTransfer`](/En/DragDrop/DataTransfer "En/DragDrop/DataTransfer"), ou a partir de um `mozGetAsFile()` da api {{ domxref("HTMLCanvasElement") }}.
+Objetos File podem ser obtidos a partir de um objeto {{ domxref("FileList") }} retornado como resultado da seleção de um usuário utilizando um elemento {{ HTMLElement("input") }}, a partir de uma operação de drag and drop [`DataTransfer`](/En/DragDrop/DataTransfer), ou a partir de um `mozGetAsFile()` da api {{ domxref("HTMLCanvasElement") }}.
 
 ## Construtor
 
@@ -17,7 +17,7 @@ Objetos File podem ser obtidos a partir de um objeto {{ domxref("FileList") }} r
 FileReader FileReader();
 ```
 
-Veja [Using files from web applications](/en/Using_files_from_web_applications "en/Using files from web applications") para detalhes e exemplos.
+Veja [Using files from web applications](/en/Using_files_from_web_applications) para detalhes e exemplos.
 
 ## Propriedades
 
@@ -47,9 +47,9 @@ Veja [Using files from web applications](/en/Using_files_from_web_applications "
 
 ### Constantes de estado
 
-- `EMPTY `: `0` : Nenhum dado foi carregado ainda.
-- `LOADING` : `1` : Os dados estão sendo carregados.
-- `DONE `: `2` : Toda a requisição de leitura foi completada.
+- `EMPTY`: `0` : Nenhum dado foi carregado ainda.
+- `LOADING`: `1` : Os dados estão sendo carregados.
+- `DONE`: `2` : Toda a requisição de leitura foi completada.
 
 ## Métodos
 
@@ -76,6 +76,6 @@ Veja [Using files from web applications](/en/Using_files_from_web_applications "
 
 ## Veja também
 
-- [Using files from web applications](/en/Using_files_from_web_applications "en/Using files from web applications")
+- [Using files from web applications](/en/Using_files_from_web_applications)
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}

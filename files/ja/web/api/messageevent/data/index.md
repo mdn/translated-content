@@ -2,6 +2,7 @@
 title: MessageEvent.data
 slug: Web/API/MessageEvent/data
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`data`** は {{domxref("MessageEvent")}} インターフェイスのプロパティで、このメッセージの送信元が送信するデータを表します。

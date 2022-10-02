@@ -2,6 +2,7 @@
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} インターフェイスの `setItem()` メソッドはキーの名称と値を渡すと、ストレージにキーを追加する、またはキーがすでに存在する場合はキーに対する値を更新します。

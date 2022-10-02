@@ -2,6 +2,7 @@
 title: background-origin
 slug: Web/CSS/background-origin
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`background-origin`** プロパティは、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。

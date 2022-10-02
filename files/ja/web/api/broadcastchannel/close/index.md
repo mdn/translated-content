@@ -2,6 +2,7 @@
 title: BroadcastChannel.close()
 slug: Web/API/BroadcastChannel/close
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 **`BroadcastChannel.close()`** は、基礎となるチャネルへの接続を終了し、オブジェクトをガベージコレクションできるようにします。 このチャンネルがもう必要ないことをブラウザーが知る他の方法はないので、これは実行するのに必要なステップです。

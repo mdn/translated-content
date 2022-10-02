@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web/JavaScript_basics
 l10n:
   sourceCommit: ca3bd6f9ad181ea03b5b66bd7ca294559e169d83
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
 JavaScript は、ウェブサイトに対話性を追加するプログラミング言語です。ゲーム、ボタンを押したときの反応、フォームへのデータ入力、動的なスタイル付け、アニメーションなどがこれにあたります。

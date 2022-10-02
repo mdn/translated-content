@@ -2,6 +2,7 @@
 title: 'false'
 slug: Web/XPath/Functions/false
 ---
+
 {{ XsltRef() }}
 
 `false` 関数は論理値 false を返します。

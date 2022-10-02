@@ -3,6 +3,7 @@ title: CSSMatrix
 slug: Web/API/DOMMatrix
 original_slug: Web/API/CSSMatrix
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_header}}
 
 **`CSSMatrix`** は、2D または 3D の変形が適用できる同次の 4x4 行列を表しています。このクラスは、ある時点で CSS Transitions モジュールレベル 3 の一部ということになっていましたが、現在のワーキングドラフトで存在しません。代わりに [`DOMMatrix`](/ja/docs/Web/API/DOMMatrix) を使用してください。

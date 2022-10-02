@@ -2,6 +2,7 @@
 title: DOMTokenList.contains()
 slug: Web/API/DOMTokenList/contains
 ---
+
 {{APIRef("DOM")}}
 
 **`contains()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、論理値を返します。 `true` は渡されたトークンがそのリストに含まれていることを表し、そうでなければ `false` になります。

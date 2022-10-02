@@ -2,6 +2,7 @@
 title: Date
 slug: Web/HTTP/Headers/Date
 ---
+
 {{HTTPSidebar}}
 
 **`Date`** は HTTP の一般ヘッダーで、メッセージが発信された日時が含まれています。

@@ -2,6 +2,7 @@
 title: WritableStream
 slug: Web/API/WritableStream
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`WritableStream`** インターフェイスは、ストリーミングデータをシンクと呼ばれる宛先に書き込むための標準的な抽象化を提供します。 このオブジェクトには、バックプレッシャーとキューイングが組み込まれています。

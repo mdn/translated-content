@@ -2,6 +2,7 @@
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
 ---
+
 {{HTMLRef}}{{Deprecated_Header("HTML5.2")}}
 
 **HTML の `<menuitem>` 要素**は、ユーザーがポップアップメニューから実行できるコマンドをあらわします。メニューボタンに割り当てるメニューはもちろん、コンテキストメニューも含みます。

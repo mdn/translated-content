@@ -201,14 +201,11 @@ sera ainsi équivalente à :
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaires                       |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
-| {{SpecName("CSS4 Conditional", "#at-supports", "@supports")}} | {{Spec2("CSS4 Conditional")}} | Ajout de la fonction `selector()`. |
-| {{SpecName("CSS3 Conditional", "#at-supports", "@supports")}} | {{Spec2("CSS3 Conditional")}} | Définition initiale.               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.supports")}}
+{{Compat}}
 
 ## Voir aussi
 

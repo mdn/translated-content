@@ -2,6 +2,7 @@
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
 ---
+
 {{CSSRef}}
 
 **`border-bottom-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの下の境界の幅を設定します。

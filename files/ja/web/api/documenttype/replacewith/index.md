@@ -2,6 +2,7 @@
 title: DocumentType.replaceWith()
 slug: Web/API/DocumentType/replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 **`DocumentType.replaceWith()`** メソッドは、文書型宣言を指定されたノードで置き換えます。

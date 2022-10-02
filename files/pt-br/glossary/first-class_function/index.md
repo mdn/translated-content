@@ -53,7 +53,7 @@ function sayHello() {
 }
 ```
 
-Neste exemplo; Precisamos retornar uma função de outra função - _Podemos retornar uma função porque tratamos função em JavaScript como um\_\_ **`valor`**._
+Neste exemplo; Precisamos retornar uma função de outra função - _Podemos retornar uma função porque tratamos função em JavaScript como um **`valor`**._
 
 > **Nota:** Uma função que retorna uma função é chamada de **Higher-Order Function**
 

@@ -77,14 +77,11 @@ La pseudo-classe `:dir()` nécessite un paramètre qui indique la direction du t
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-ltr', ':dir(ltr)')}} | {{Spec2('HTML WHATWG')}}     | Aucune modification. |
-| {{SpecName('CSS4 Selectors', '#the-dir-pseudo', ':dir()')}}                 | {{Spec2('CSS4 Selectors')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.dir")}}
+{{Compat}}
 
 ## Voir aussi
 

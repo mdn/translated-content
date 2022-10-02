@@ -15,7 +15,7 @@ original_slug: Learn/Server-side/Django/Разворачивание
 
 <p class="summary">Теперь, когда вы создали (и протестировали) свой шикарный сайт <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a>, у вас скорее всего, есть желание разместить его на публичном веб-сервере, чтобы он стал доступен через интернет персоналу  и посетителям библиотеки. Данная статья даёт общее представление о том, каким образом подойти к поиску хостинга для размещения сайта, а также, что нужно сделать чтобы подготовить свой сайт к публикации.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Требования:</th>
@@ -161,32 +161,25 @@ with open('/etc/secret_key.txt') as f:
 
 <h3 id="Почему_Heroku">Почему Heroku?</h3>
 
-<p><span id="result_box" lang="ru"><span>Heroku - один из самых продолжительных и популярных облачных сервисов PaaS.</span> <span>Первоначально он поддерживал только приложения Ruby, но теперь его можно использовать для размещения приложений из многих сред программирования, включая Django!</span></span></p>
+<p>Heroku - один из самых продолжительных и популярных облачных сервисов PaaS. Первоначально он поддерживал только приложения Ruby, но теперь его можно использовать для размещения приложений из многих сред программирования, включая Django!</p>
 
 <p>Мы выбираем для использования Heroku по нескольким причинам:</p>
 
 <ul>
- <li><span id="result_box" lang="ru"><span>У Heroku есть <a href="https://www.heroku.com/pricing">свободный уровень</a>, который <em>действительно</em> свободен (хотя и с некоторыми ограничениями)</span></span></li>
- <li><span id="result_box" lang="ru"><span title="As a PaaS, Heroku takes care of a lot of the web infrastructure for us.">Как PaaS, Heroku заботится о большой веб-инфраструктуре для нас. </span><span title="This makes it much easier to get started, because you don't worry about servers, load balancers, reverse proxies, or any of the other web infrastructure that Heroku provides for us under the hood.
-    ">Это значительно облегчает работу, потому что вы не беспокоитесь о серверах, балансирах нагрузки, обратных прокси или любой другой веб-инфраструктуре, которую Heroku предоставляет нам под капотом.</span></span></li>
- <li><span id="result_box" lang="ru"><span title="While it does have some limitations these will not affect this particular application.">Хотя у этого есть некоторые ограничения, это не повлияет на это конкретное приложение. </span><span title="For example:
-        ">Например:</span></span>
+ <li>У Heroku есть <a href="https://www.heroku.com/pricing">свободный уровень</a>, который <em>действительно</em> свободен (хотя и с некоторыми ограничениями)</li>
+ <li>Как PaaS, Heroku заботится о большой веб-инфраструктуре для нас. Это значительно облегчает работу, потому что вы не беспокоитесь о серверах, балансирах нагрузки, обратных прокси или любой другой веб-инфраструктуре, которую Heroku предоставляет нам под капотом.</li>
+ <li>Хотя у этого есть некоторые ограничения, это не повлияет на это конкретное приложение. Например:
   <ul>
-   <li><span id="result_box" lang="ru"><span title="Heroku provides only short-lived storage so user-uploaded files cannot safely be stored on Heroku itself.
-        ">Heroku предоставляет только недолговечное хранилище, поэтому загруженные пользователем файлы нельзя безопасно хранить на самом Heroku.</span></span></li>
-   <li><span id="result_box" lang="ru"><span title="The free tier will sleep an inactive web app if there are no requests within a half hour period.">Свободный уровень будет спать с неактивным веб-приложением, если в течение получаса не будет запросов. </span><span title="The site may then take several seconds to respond when it is woken up.
-        ">После этого сайт может занять несколько секунд, чтобы ответить, когда он проснулся.</span></span></li>
-   <li><span id="result_box" lang="ru"><span title='The free tier limits the time that your site is running to a certain amount of hours every month (not including the time that the site is "asleep").'>Свободный уровень ограничивает время, в течение которого ваш сайт работает до определённого количества часов каждый месяц (не включая время, когда сайт «спит»). </span><span title="This is fine for a low use/demonstration site, but will not be suitable if 100% uptime is required.
-        ">Это нормально для сайта с низким уровнем использования / демонстрации, но не подходит, если требуется 100% время безотказной работы.</span></span></li>
+   <li>Heroku предоставляет только недолговечное хранилище, поэтому загруженные пользователем файлы нельзя безопасно хранить на самом Heroku.</li>
+   <li>Свободный уровень будет спать с неактивным веб-приложением, если в течение получаса не будет запросов.После этого сайт может занять несколько секунд, чтобы ответить, когда он проснулся.</li>
+   <li>Свободный уровень ограничивает время, в течение которого ваш сайт работает до определённого количества часов каждый месяц (не включая время, когда сайт «спит»).Это нормально для сайта с низким уровнем использования / демонстрации, но не подходит, если требуется 100% время безотказной работы.</li>
    <li>Другие ограничения перечислены в <a href="https://devcenter.heroku.com/articles/limits">Limits</a> (документы Heroku).</li>
   </ul>
  </li>
- <li><span id="result_box" lang="ru"><span title="Mostly it just works, and if you end up loving it, scaling your app is very easy.
-
-">В основном это просто работает, и если вы в конечном итоге полюбите его, масштабирование вашего приложения будет очень простым.</span></span></li>
+ <li>В основном это просто работает, и если вы в конечном итоге полюбите его, масштабирование вашего приложения будет очень простым.</li>
 </ul>
 
-<p><span id="result_box" lang="ru"><span title="While Heroku is perfect for hosting this demonstration it may not be perfect for your real website.">Хотя Heroku идеально подходит для проведения этой демонстрации, она может быть не идеальна для вашего реального сайта. </span><span title="Heroku makes things easy to set up and scale, at the cost of being less flexible, and potentially a lot more expensive once you get out of the free tier.">Heroku упрощает настройку и масштабирование за счёт меньшей гибкости и, возможно, обойдётся намного дороже, когда вы выходите из свободного уровня.</span></span></p>
+<p>Хотя Heroku идеально подходит для проведения этой демонстрации, она может быть не идеальна для вашего реального сайта. Heroku упрощает настройку и масштабирование за счёт меньшей гибкости и, возможно, обойдётся намного дороже, когда вы выходите из свободного уровня.</p>
 
 <h3 id="Как_работает_Heroku">Как работает Heroku?</h3>
 
@@ -217,13 +210,13 @@ with open('/etc/secret_key.txt') as f:
 
 <h3 id="Создание_репозитория_приложения_на_Github">Создание репозитория приложения на Github</h3>
 
-<p><span id="result_box" lang="ru"><span>Heroku тесно интегрирована с системой управления версиями исходного кода <strong>git</strong>, используя её для загрузки / синхронизации любых изменений, которые вы вносите в живую систему.</span> <span>Он делает это, добавляя новый «удалённый» репозиторий heroku с именем heroku, указывающий на репозиторий для вашего источника в облаке Heroku.</span> <span>Во время разработки вы используете <strong>git</strong> для хранения изменений в вашем «master» репозитории.</span> <span>Когда вы хотите развернуть свой сайт, вы синхронизируете свои изменения в репозитории Heroku.</span></span></p>
+<p>Heroku тесно интегрирована с системой управления версиями исходного кода <strong>git</strong>, используя её для загрузки / синхронизации любых изменений, которые вы вносите в живую систему. Он делает это, добавляя новый «удалённый» репозиторий heroku с именем heroku, указывающий на репозиторий для вашего источника в облаке Heroku. Во время разработки вы используете <strong>git</strong> для хранения изменений в вашем «master» репозитории. Когда вы хотите развернуть свой сайт, вы синхронизируете свои изменения в репозитории Heroku.</p>
 
 <div class="note">
-<p><strong>Примечание:</strong> <span id="result_box" lang="ru"><span>Если вы привыкли следовать хорошей практике разработки программного обеспечения, вы, вероятно, уже используете git или какую-либо другую систему SCM.</span> <span>Если у вас уже есть git-репозиторий, вы можете пропустить этот шаг.</span></span></p>
+<p><strong>Примечание:</strong> Если вы привыкли следовать хорошей практике разработки программного обеспечения, вы, вероятно, уже используете git или какую-либо другую систему SCM. Если у вас уже есть git-репозиторий, вы можете пропустить этот шаг.</p>
 </div>
 
-<p><span id="result_box" lang="ru"><span>Существует множество способов работы с git, но одним из самых простых является создание учётной записи в <a href="https://github.com/">Github</a>, создание репозитория там, а затем синхронизация с ним локально:</span></span></p>
+<p>Существует множество способов работы с git, но одним из самых простых является создание учётной записи в <a href="https://github.com/">Github</a>, создание репозитория там, а затем синхронизация с ним локально:</p>
 
 <ol>
  <li>Посетите <a href="https://github.com/">https://github.com/</a> и создайте аккаунт.</li>

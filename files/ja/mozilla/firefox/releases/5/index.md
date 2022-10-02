@@ -2,6 +2,7 @@
 title: Firefox 5 for developers
 slug: Mozilla/Firefox/Releases/5
 ---
+
 Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日にリリースされました。このページは Firefox 5 のリリースにあたり、開発者に影響する変更について情報をまとめたものです。
 
 ## Web 開発者向けの変更点一覧

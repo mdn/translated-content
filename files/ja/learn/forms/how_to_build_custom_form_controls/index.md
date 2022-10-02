@@ -5,6 +5,7 @@ l10n:
   sourceCommit: 741bc42293cb9a434367f5e998f5076a8ae8137e
 original_slug: Learn/Forms/How_to_build_custom_form_widgets
 ---
+
 {{LearnSidebar}}
 
 HTML フォームで使用可能なコントロールだけでは十分でない場合が多くあります。例えば、{{HTMLElement("select")}} 要素のようなコントロールに[高度なスタイル設定を行いたい](/ja/docs/Learn/Forms/Advanced_form_styling)場合や、独自の動作を提供したい場合は、あなた独自のコントロールを作成するしかありません。

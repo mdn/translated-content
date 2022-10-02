@@ -2,6 +2,7 @@
 title: protocol_handlers
 slug: Web/Manifest/protocol_handlers
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{Non-standard_Header}}
 
 <table class="properties">

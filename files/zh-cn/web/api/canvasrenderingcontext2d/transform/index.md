@@ -7,7 +7,7 @@ slug: Web/API/CanvasRenderingContext2D/transform
 
 **`CanvasRenderingContext2D.transform()`** 是 Canvas 2D API 使用矩阵多次叠加当前变换的方法，矩阵由方法的参数进行描述。你可以缩放、旋转、移动和倾斜上下文。
 
-参见 {{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}} 方法，这个方法使用单位矩阵重新设置当前的变换并且会调用 `transform()。`
+参见 {{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}} 方法，这个方法使用单位矩阵重新设置当前的变换并且会调用 `transform()`。
 
 ## 语法
 

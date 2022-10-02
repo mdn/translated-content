@@ -22,12 +22,8 @@ original_slug: Web/CSS/Jeux_de_caractères_CSS
 
 ## Spécifications
 
-| Spécification                                                            | État                     | Commentaires        |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('CSS2.1', 'syndata.html#x57', '@charset')}} | {{Spec2('CSS2.1')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Règle-@ `@charset`
-
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

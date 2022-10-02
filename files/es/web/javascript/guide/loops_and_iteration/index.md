@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Guide/Bucles_e_iteración
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
-Los bucles ofrecen una forma rápida y sencilla de hacer algo repetidamente. Este capítulo de la {{JSxRef("../Guide", "Guía de JavaScript")}} presenta las diferentes declaraciones de iteración disponibles para JavaScript.
+Los bucles ofrecen una forma rápida y sencilla de hacer algo repetidamente. Este capítulo de la {{JSxRef("Guide", "Guía de JavaScript")}} presenta las diferentes declaraciones de iteración disponibles para JavaScript.
 
 Puedes pensar en un bucle como una versión computarizada del juego en la que le dices a alguien que dé _X_ pasos en una dirección y luego _Y_ pasos en otra. Por ejemplo, la idea "Ve cinco pasos hacia el este" se podría expresar de esta manera como un bucle:
 

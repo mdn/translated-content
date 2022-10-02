@@ -2,6 +2,7 @@
 title: 'Feature-Policy: geolocation'
 slug: Web/HTTP/Headers/Feature-Policy/geolocation
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `geolocation` ディレクティブは、現在の文書が {{domxref('Geolocation')}} インターフェイスを使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} および {{domxref('Geolocation.watchPosition','watchPosition()')}} を呼び出すと、関数のコールバックが呼び出され、 {{domxref('GeolocationPositionError')}} のコードが `PERMISSION_DENIED` になります。</span>

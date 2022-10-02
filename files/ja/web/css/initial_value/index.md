@@ -2,6 +2,7 @@
 title: 初期値
 slug: Web/CSS/initial_value
 ---
+
 {{CSSRef}}
 
 **初期値 (initial value)** は [CSS](/ja/docs/Web/CSS) のプロパティの既定値であり、仕様書の定義表に挙げられているものです。初期値の使い方はプロパティが継承されているかどうかで異なります。

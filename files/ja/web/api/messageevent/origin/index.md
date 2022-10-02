@@ -2,6 +2,7 @@
 title: MessageEvent.origin
 slug: Web/API/MessageEvent/origin
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`origin`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信元のオリジンを表す {{domxref("USVString")}} です。

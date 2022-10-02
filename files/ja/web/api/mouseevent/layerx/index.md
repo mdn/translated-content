@@ -3,6 +3,7 @@ title: UIEvent.layerX
 slug: Web/API/MouseEvent/layerX
 original_slug: Web/API/UIEvent/layerX
 ---
+
 {{APIRef("DOM Events")}} {{Non-standard_header}}
 
 **`UIEvent.layerX`** は読み取り専用のプロパティで、現在のレイヤーに関連するイベントの水平座標を返します。

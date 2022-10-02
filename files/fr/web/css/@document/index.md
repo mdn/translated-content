@@ -68,11 +68,11 @@ Les valeurs échappées fournies à la fonction `regexp()` doivent être en outr
 
 ## Spécifications
 
-[Initialement](https://www.w3.org/TR/css3-conditional/) dans {{SpecName('CSS3 Conditional')}}, `@document` a [été repoussée](http://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) au niveau 4.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.document")}}
+{{Compat}}
 
 ## Voir aussi
 

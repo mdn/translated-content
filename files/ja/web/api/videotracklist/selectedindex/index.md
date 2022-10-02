@@ -2,6 +2,7 @@
 title: VideoTrackList.selectedIndex
 slug: Web/API/VideoTrackList/selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 読み取り専用の **{{domxref("VideoTrackList")}}** の **`selectedIndex`** プロパティは、現在選択されているトラックがある場合はそのインデックスを返し、それ以外の場合は `-1` を返します。

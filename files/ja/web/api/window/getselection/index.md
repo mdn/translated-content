@@ -4,6 +4,7 @@ slug: Web/API/Window/getSelection
 l10n:
   sourceCommit: 964126ef650d6d6c11287db3f0e5c747bc5e36ac
 ---
+
 {{ ApiRef() }}
 
 **`Window.getSelection()`** メソッドは、ユーザーが選択した文字列の範囲やキャレットの現在位置を示す {{domxref("Selection")}} オブジェクトを返します。

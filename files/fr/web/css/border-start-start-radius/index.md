@@ -77,15 +77,11 @@ background-color: #fff;
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-start-start-radius", "border-start-start-radius")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-start-start-radius")}}
+{{Compat}}
 
 ## Voir aussi
 
