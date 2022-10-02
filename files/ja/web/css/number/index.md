@@ -2,6 +2,7 @@
 title: <number>
 slug: Web/CSS/number
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`<number>`** [データ型](/ja/docs/Web/CSS/CSS_Types)は、整数または小数部分のある数値を表します。

@@ -31,7 +31,7 @@ gainNode.gain.value = 0.5;
 
 ## 瀏覽器相容度
 
-{{Compat("api.GainNode.gain")}}
+{{Compat}}
 
 ## 參見
 

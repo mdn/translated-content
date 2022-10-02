@@ -2,6 +2,7 @@
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
+
 {{JSRef}}
 
 **`Number.EPSILON`** 属性表示 1 与{{jsxref("Number")}}可表示的大于 1 的最小的浮点数之间的差值。
@@ -12,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 
 ## 描述
 
-`EPSILON` 属性的值接近于 `2.2204460492503130808472633361816E-16`，或者 `2^-52。`
+`EPSILON` 属性的值接近于 `2.2204460492503130808472633361816E-16`，或者 `2^-52`。
 
 ## 示例
 

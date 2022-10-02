@@ -2,6 +2,7 @@
 title: TextDecoder
 slug: Web/API/TextDecoder
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextDecoder`** 接口表示一个文本解码器，一个解码器只支持一种特定文本编码，例如 `utf-8`、`iso-8859-2`、`koi8`、`cp1261`，`gbk` 等等。解码器将字节流作为输入，并提供代码点流作为输出。
@@ -30,7 +31,7 @@ console.log(utf8decoder.decode(i32arr));
 
 ### 处理非 UTF8 文本
 
-在此示例中，我们对俄语文本“Привет，мир！”( "Hello, world.")进行解码。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定 Windows-1251 字符编码，适用于西里尔字母。
+在此示例中，我们对俄语文本“Привет，мир！”( "Hello, world.") 进行解码。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定 Windows-1251 字符编码，适用于西里尔字母。
 
 ```js
 let win1251decoder = new TextDecoder('windows-1251');
@@ -67,7 +68,7 @@ _`TextDecoder` 接口不继承任何方法_。
 
 ## 浏览器兼容性
 
-{{Compat("api.TextDecoder")}}
+{{Compat}}
 
 ## 相关链接
 

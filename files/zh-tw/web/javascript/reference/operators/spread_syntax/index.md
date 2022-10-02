@@ -244,7 +244,7 @@ When using spread syntax for function calls, be aware of the possibility of exce
 
 ## Browser compatibility
 
-{{Compat("javascript.operators.spread")}}
+{{Compat}}
 
 ## See also
 

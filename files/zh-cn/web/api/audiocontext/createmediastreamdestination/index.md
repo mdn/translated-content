@@ -2,11 +2,12 @@
 title: AudioContext.createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}接口的 `createMediaStreamDestination()` 方法用于创建一个新的对象，该对象关联着表示音频流的一个 [WebRTC](/zh-CN/docs/WebRTC) {{domxref("MediaStream")}}，音频流可以存储在本地文件或者被发送到另外一台计算机。
 
-The {{domxref("MediaStream")}} is created when the node is created and is accessible via the {{domxref("MediaStreamAudioDestinationNode")}}'s `stream` attribute. This stream can be used in a similar way as a `MediaStream` obtained via {{domxref("navigator.getUserMedia") }} — it can, for example, be sent to a remote peer using the `RTCPeerConnection` `addStream()` method.
+The {{domxref("MediaStream")}} is created when the node is created and is accessible via the {{domxref("MediaStreamAudioDestinationNode")}}'s `stream` attribute. This stream can be used in a similar way as a `MediaStream` obtained via {{domxref("navigator.getUserMedia") }} — it can, for example, be sent to a remote peer using the `RTCPeerConnection.addStream()` method.
 
 For more details about media stream destination nodes, check out the {{domxref("MediaStreamAudioDestinationNode")}} reference page.
 
@@ -87,7 +88,7 @@ From here, you can play and save the opus file.
 
 ## Browser compatibility
 
-{{Compat("api.AudioContext.createMediaStreamDestination")}}
+{{Compat}}
 
 ## See also
 

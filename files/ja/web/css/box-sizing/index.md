@@ -2,6 +2,7 @@
 title: box-sizing
 slug: Web/CSS/box-sizing
 ---
+
 {{CSSRef}}
 
 **`box-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全体の幅と高さをどのように計算するのかを設定します。

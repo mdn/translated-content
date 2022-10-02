@@ -2,6 +2,7 @@
 title: 渐变
 slug: Web/SVG/Tutorial/Gradients
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 
 并非只能简单填充颜色和描边，更令人兴奋的是，你还可以创建和并在填充和描边上应用渐变色。
@@ -184,6 +185,6 @@ slug: Web/SVG/Tutorial/Gradients
 
 你也可以利用属性 `gradientTransform` 给渐变添加额外的变化，但是因为我们还没有介绍 [`transforms`](/zh-CN/Web/SVG/Tutorial/Basic_Transformations)，所以我们将在后续的章节中介绍它。
 
-如果对象边界框不是一个正方形，处理`gradientUnits="objectBoundingBox"`还有一些其他警告`，但是这些方法特别复杂因此有待一些了解得更深的人来解释他们。`
+如果对象边界框不是一个正方形，处理 `gradientUnits="objectBoundingBox"` 还有一些其他警告，但是这些方法特别复杂因此有待一些了解得更深的人来解释他们。
 
 {{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}

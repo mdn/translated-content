@@ -2,6 +2,7 @@
 title: FetchEvent.request
 slug: Web/API/FetchEvent/request
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("FetchEvent")}} インターフェイスの **`request`** 読み取り専用プロパティは、イベントハンドラーをトリガーした {{domxref("Request")}} を返します。

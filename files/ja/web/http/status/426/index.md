@@ -2,6 +2,7 @@
 title: 426 Upgrade Required
 slug: Web/HTTP/Status/426
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`426 Upgrade Required`** クライアントエラーレスポンスコードは、サーバーが現在のプロトコルを使用してリクエストを実行することを拒否していることを示しますが、クライアントが別のプロトコルにアップグレードした後に発生する可能性があります。

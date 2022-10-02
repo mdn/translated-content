@@ -2,6 +2,7 @@
 title: Object のプロトタイプ
 slug: Learn/JavaScript/Objects/Object_prototypes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 
 プロトタイプは、JavaScript オブジェクトが互いに機能を継承するメカニズムです。この記事では、プロトタイプチェーンの仕組みを説明し、`prototype` プロパティを使って既存のコンストラクタにメソッドを追加する方法を見ていきます。
@@ -119,7 +120,7 @@ let myString = 'This is my string.';
 
 > **Note:** このセクションを理解して、もっと知りたいと思ったら、[JavaScript でのプロトタイプの使用](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Using_prototypes_in_JavaScript) についてのより詳細なガイドを読む価値があります。このセクションは、これらの概念に初めて出会ったときに少しでも理解しやすくするために、意図的に簡略化しています。
 
-> **Warning:** **重要**: `prototype` プロパティは JavaScript の中でも最も紛らわしい名前がついている部分の一つです (`this` は `__proto__` でアクセスできる内部オブジェクトです、覚えていますか？)。代わりに `prototype` は、継承したいメンバを定義したオブジェクトを含むプロパティです。
+> **Warning:** `prototype` プロパティは JavaScript の中でも最も紛らわしい名前がついている部分の一つです (`this` は `__proto__` でアクセスできる内部オブジェクトです、覚えていますか？)。代わりに `prototype` は、継承したいメンバを定義したオブジェクトを含むプロパティです。
 
 ## create() の再訪
 

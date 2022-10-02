@@ -2,6 +2,7 @@
 title: ':last-of-type'
 slug: Web/CSS/:last-of-type
 ---
+
 {{CSSRef}}
 
 **`:last-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最後の要素を表します。

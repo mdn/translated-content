@@ -5,7 +5,7 @@ translation_of: Web/API/Element/classList
 ---
 {{APIRef("DOM")}}
 
-O **E\*\***lement.classList\*\* é uma propriedade somente leitura que retorna uma coleção {{domxref ("DOMTokenList")}} ativa dos atributos de classe do elemento.
+O **Element.classList** é uma propriedade somente leitura que retorna uma coleção {{domxref ("DOMTokenList")}} ativa dos atributos de classe do elemento.
 
 Usar **classList** é uma alternativa conveniente para acessar a lista de classes de um elemento como uma seqüência delimitada por espaço através de {{domxref ("element.className")}}.
 
@@ -15,7 +15,7 @@ Usar **classList** é uma alternativa conveniente para acessar a lista de classe
 const elementClasses = elementNodeReference.classList;
 ```
 
-**_elementClasses_** é um DOMTokenList que representa o atributo de classe de **_elementNodeReference_**. Se o atributo de classe não foi definido ou está vazio **_elementClasses.length_** retorna 0. **element.classList** propriamente dito é somente leitura, embora você possa modificá-lo usando os métodos* **add ()***\*\* **e \_**remove ()\*\*\_.
+**elementClasses** é um DOMTokenList que representa o atributo de classe de **_elementNodeReference_**. Se o atributo de classe não foi definido ou está vazio **elementClasses.length** retorna 0. **element.classList** propriamente dito é somente leitura, embora você possa modificá-lo usando os métodos **add()** e **remove()**.
 
 ## Métodos
 

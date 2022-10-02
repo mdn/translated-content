@@ -2,6 +2,7 @@
 title: Basic Concepts of Multicol
 slug: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 ---
+
 {{CSSRef}}
 
 多列布局（通常称为 multicol）是一种规范，用于将内容布置到一组列框中，就像报纸中的列一样。本指南解释了规范如何与一些常见的用例示例一起使用。

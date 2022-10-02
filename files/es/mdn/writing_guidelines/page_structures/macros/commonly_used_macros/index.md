@@ -43,7 +43,7 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 - {{TemplateLink("event")}} enlaces a páginas en la referencia de Evento del DOM, por ejemplo: `\{{Event("change")}}` da como resultado {{Event("change")}}.
 - {{TemplateLink("HTMLElement")}} enlaza a un elemento HTML en la Referencia HTML.
 - {{TemplateLink("htmlattrxref")}} enlaza a un atributo HTML, ya sea una descripción de atributo global si solo especificas el nombre del atributo o un atributo asociado con un elemento específico si especificas un nombre de atributo y un nombre de elemento. Por ejemplo, `\{{HTMLAttrxRef("lang")}}` creará este enlace: {{HTMLAttrxRef("lang")}}. `\{{HTMLAttrxRef("type", "input")}}` creará este enlace: {{HTMLAttrxRef("type", "input")}}.
-- {{TemplateLink("jsxref")}} enlaza a una página en la {{JSxRef("../Referencia", "Referencia de JavaScript")}}.
+- {{TemplateLink("jsxref")}} enlaza a una página en la {{JSxRef("Referencia", "Referencia de JavaScript")}}.
 - {{TemplateLink("SVGAttr")}} enlaza a un atributo SVG específico. Por ejemplo, `\{{SVGAttr("d")}}` crea este enlace: {{SVGAttr("d")}}.
 - {{TemplateLink("SVGElement")}} enlaza a un elemento SVG en la Referencia SVG.
 - {{TemplateLink("httpheader")}} enlaza a un {{web.link("/es/docs/Web/HTTP/Headers", "header de HTTP")}}.

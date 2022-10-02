@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
 {{JSRef}}
 
-O método **`apply()`** chama uma função com um dado valor `this `e `arguments `providos como uma array (ou um objeto parecido com um array).
+O método **`apply()`** chama uma função com um dado valor `this` e `arguments` providos como uma array (ou um objeto parecido com um array).
 
 > **Nota:** A sintaxe desta função é quase idêntica a essa da {{jsxref("Function.call", "call()")}}, a diferença é que `call()` aceita uma **lista de** **argumentos**, enquanto `apply()` aceita um **array de argumentos**.
 
@@ -28,13 +28,13 @@ fun.apply(thisArg, [argsArray])
 
 ## Descrição
 
-Você pode atribuir um objeto `this`\_ _diferente quando chamar uma função existente. `this`_ _refere-se ao objeto atual, o objeto da chamada. Com `apply`_,\_ você pode escrever um método apenas uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.
+Você pode atribuir um objeto _`this`_ diferente quando chamar uma função existente. _`this`_ refere-se ao objeto atual, o objeto da chamada. Com _`apply`_, você pode escrever um método apenas uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.
 
-`apply `é muito parecido com {{jsxref("Function.call", "call()")}}, exceto pelo tipo de argumentos que ele suporta. Você pode usar um array de argumentos em vez de conjunto de parâmetros nomeados. Com `apply, `você pode usar um array literal, por exemplo, `fun.apply(this, ['comer', 'bananas'])`, ou um objeto {{jsxref("Array")}}, por exemplo `fun.apply(this, new Array('comer', 'bananas')).`
+`apply` é muito parecido com {{jsxref("Function.call", "call()")}}, exceto pelo tipo de argumentos que ele suporta. Você pode usar um array de argumentos em vez de conjunto de parâmetros nomeados. Com `apply`, você pode usar um array literal, por exemplo, `fun.apply(this, ['comer', 'bananas'])`, ou um objeto {{jsxref("Array")}}, por exemplo `fun.apply(this, new Array('comer', 'bananas')).`
 
-Você pode também usar {{jsxref("Functions/arguments", "arguments")}} para o parâmetro `argsArray.` `arguments `é uma variável local de uma função. Ele pode ser utilizado para todos os argumentos não especificados do objeto chamado. Assim, você não tem que saber os argumentos do objeto chamado quando você usa o método `apply`. Você pode usar `arguments `para passar todos os argumentos para o objeto da chamada. O objeto chamado fica então responsável por manipular os argumentos.
+Você pode também usar {{jsxref("Functions/arguments", "arguments")}} para o parâmetro `argsArray`. `arguments`é uma variável local de uma função. Ele pode ser utilizado para todos os argumentos não especificados do objeto chamado. Assim, você não tem que saber os argumentos do objeto chamado quando você usa o método `apply`. Você pode usar `arguments` para passar todos os argumentos para o objeto da chamada. O objeto chamado fica então responsável por manipular os argumentos.
 
-Desde a 5a versão do ECMAScript você pode utilizar qualquer tipo de objeto que é parecido com um array (array-like), então na prática isso significa que ele vai ter uma propriedade `length `e propriedades inteiras no intervalor (`0... length`). Como um exemplo, você pode agora usar um {{domxref("NodeList")}} ou um objeto personalizado como `{ 'length': 2, '0': 'comer', '1': 'bananas' }`.
+Desde a 5a versão do ECMAScript você pode utilizar qualquer tipo de objeto que é parecido com um array (array-like), então na prática isso significa que ele vai ter uma propriedade `length` e propriedades inteiras no intervalor (`0... length`). Como um exemplo, você pode agora usar um {{domxref("NodeList")}} ou um objeto personalizado como `{ 'length': 2, '0': 'comer', '1': 'bananas' }`.
 
 {{note("Muitos navegadores, incluindo o Chrome 14 e o Internet Explorer 9, ainda não aceitam objetos parecidos com array e irão lançar uma exceção.")}}.
 
@@ -42,7 +42,7 @@ Desde a 5a versão do ECMAScript você pode utilizar qualquer tipo de objeto que
 
 ### Usando `apply` para cadeia de construtores
 
-Você pode usar `apply `para encadear {{jsxref("Operators/new", "construtores", "", 1)}} em um objeto, similar ao Java. No exemplo seguinte nós iremos criar um método de {{jsxref("Global_Objects/Function", "Função")}} global chamado `construct, `que fará você capaz de usar um objeto parecido com um array com um construtor ao invés de uma lista de argumentos
+Você pode usar `apply` para encadear {{jsxref("Operators/new", "construtores", "", 1)}} em um objeto, similar ao Java. No exemplo seguinte nós iremos criar um método de {{jsxref("Global_Objects/Function", "Função")}} global chamado `construct`, que fará você capaz de usar um objeto parecido com um array com um construtor ao invés de uma lista de argumentos
 
 ```js
 Function.prototype.construct = function (aArgs) {
@@ -79,7 +79,7 @@ console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor);              // logs 'MyConstructor'
 ```
 
-> **Nota:** Este método não nativo `Function.construct `não irá funcionar com alguns construtores nativos (como {{jsxref("Date")}}, por exemplo). Nestes casos você tem que usar o método {{jsxref("Function.prototype.bind")}} (por exemplo, imagine ter um array como o seguinte, para ser usado com o construtor {{jsxref("Global_Objects/Date", "Date")}}: `[2012, 11, 4]`; Neste caso você tem que escrever algom como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))() - `de qualquer maneira essa não é a melhor forma de fazer as coisas e provavelmente não deve ser utilizado em qualquer ambiente de produção
+> **Nota:** Este método não nativo `Function.construct` não irá funcionar com alguns construtores nativos (como {{jsxref("Date")}}, por exemplo). Nestes casos você tem que usar o método {{jsxref("Function.prototype.bind")}} (por exemplo, imagine ter um array como o seguinte, para ser usado com o construtor {{jsxref("Global_Objects/Date", "Date")}}: `[2012, 11, 4]`; Neste caso você tem que escrever algom como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` - de qualquer maneira essa não é a melhor forma de fazer as coisas e provavelmente não deve ser utilizado em qualquer ambiente de produção.
 
 ### Usando `apply` e funções embutidas
 

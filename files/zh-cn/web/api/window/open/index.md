@@ -2,6 +2,7 @@
 title: Window.open()
 slug: Web/API/Window/open
 ---
+
 {{APIRef}}
 
 `Window` 接口的 **`open()`** 方法，是用指定的名称将指定的资源加载到浏览器上下文（窗口 `window` ，内嵌框架 `iframe` 或者标签 `tab` ）。如果没有指定名称，则一个新的窗口会被打开并且指定的资源会被加载进这个窗口的浏览器上下文中。
@@ -81,7 +82,7 @@ _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用
 
 > **备注：** 如果你使用了 _strWindowFeatures_ 参数，那么只需要列出新窗口中启用的特性，其它的特性（除了*titlebar*和*close*）将被禁用或移除。
 
-![Firefox Chrome Toolbars Illustration](https://developer.mozilla.org/@api/deki/files/210/=FirefoxChromeToolbarsDescription7a.gif)
+![Firefox Chrome Toolbars Illustration](/@api/deki/files/210/=FirefoxChromeToolbarsDescription7a.gif)
 
 ## 位置尺寸特征
 
@@ -599,7 +600,7 @@ _References:_
 
 ### Note on outerHeight versus height
 
-![innerHeight vs outerHeight illustration](https://developer.mozilla.org/@api/deki/files/212/=FirefoxInnerVsOuterHeight.png)
+![innerHeight vs outerHeight illustration](/@api/deki/files/212/=FirefoxInnerVsOuterHeight.png)
 
 ### Note on refreshing vs. opening a new window/tab
 

@@ -2,6 +2,7 @@
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`toDateString()`** 方法以美式英语和人类易读的形式返回一个日期对象日期部分的字符串。

@@ -6,7 +6,6 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/Updating_web_applications
 original_slug: Actualizar_aplicaciones_web_para_Firefox_3
 ---
-
 {{FirefoxSidebar}}
 
 Existen varios cambios en el próximo Firefox 3 que pueden afectar tu sitio web o aplicación web, así como nuevas características que se pueden aprovechar. Este artículo servirá como punto de partida para actualizar el contenido web de modo que se pueda aprovechar Firefox 3 al máximo.
@@ -57,9 +56,9 @@ Ver {{ Bug(322943) }} para una demostración (se debe ver con un tamaño mínimo
 
 #### Acceso Chrome
 
-En versiones anteriores de Firefox, cualquier página web podía cargar scripts o imágenes [`chrome://`]() usando el protocolo chrome. Entre otras cosas, esto hizo posible que algunos sitios no detectaran la presencia de complementos, lo cual podía ser usado para traspasar la seguridad del usuario saltando los complementos que agregaban medidas de seguridad al buscador.
+En versiones anteriores de Firefox, cualquier página web podía cargar scripts o imágenes `chrome://` usando el protocolo chrome. Entre otras cosas, esto hizo posible que algunos sitios no detectaran la presencia de complementos, lo cual podía ser usado para traspasar la seguridad del usuario saltando los complementos que agregaban medidas de seguridad al buscador.
 
-Firefox 3 solo permite contenido web para acceder a los elementos en los espacios del [`chrome://browser/`]() y en espacio chrome://toolkit/. Estos archivos pretenden ser accesibles por el contenido web. Ahora cualquier otro contenido chrome es bloqueado para el sitio web.
+Firefox 3 solo permite contenido web para acceder a los elementos en los espacios del `chrome://browser/` y en espacio chrome://toolkit/. Estos archivos pretenden ser accesibles por el contenido web. Ahora cualquier otro contenido chrome es bloqueado para el sitio web.
 
 Hay, sin embargo, métodos para ciertas extensiones que puden ser accedidos por la web. Se puede especificar una bandera en su archivo chrome.manifest de esta manera:
 

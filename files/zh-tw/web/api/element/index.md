@@ -188,4 +188,4 @@ _Inherits methods from its parents {{domxref("Node")}}, and its own parent, {{do
 
 ## 瀏覽器相容性
 
-{{Compat("api.Element")}}
+{{Compat}}

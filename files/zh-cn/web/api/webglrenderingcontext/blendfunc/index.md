@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.blendFunc()
 slug: Web/API/WebGLRenderingContext/blendFunc
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.blendFunc()`** 方法定义了一个用于混合像素算法的函数。

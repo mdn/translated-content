@@ -2,6 +2,7 @@
 title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint()`** コンストラクターは、プロパティの一部または全部の値を指定して、新しい {{domxref("DOMPoint")}} オブジェクトを作成し、それを返します。

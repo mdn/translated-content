@@ -2,6 +2,7 @@
 title: Web Audio API
 slug: Web/API/Web_Audio_API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 Web Audio API はウェブ上で音声を扱うための強力で多機能なシステムを提供します。これにより開発者は音源を選択したり、エフェクトを加えたり、ビジュアライゼーションを加えたり、パンニングなどの特殊効果を適用したり、他にもたくさんのいろいろなことができるようになります。
@@ -231,7 +232,7 @@ GitHub の [webaudio-example](https://github.com/mdn/webaudio-examples/) に多�
 
 - [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
 - [Tone.js](https://tonejs.github.io/): a framework for creating interactive music in the browser.
-- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML5 Audio](http://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
+- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML5 Audio](https://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
 - [XSound](https://korilakkuma.github.io/XSound/): Web Audio API Library for Synthesizer, Effects, Visualization, Recording ... etc
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using the Web Audio API to record and combine video and audio from different sources into a single file ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))

@@ -2,6 +2,7 @@
 title: 同一オリジンポリシー
 slug: Web/Security/Same-origin_policy
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 
 **同一オリジンポリシー**は重要なセキュリティの仕組みであり、ある{{Glossary("origin", "オリジン")}}によって読み込まれた文書やスクリプトが、他のオリジンにあるリソースにアクセスできる方法を制限するものです。
@@ -59,7 +60,7 @@ document.domain = "company.com";
 
 この仕組みにはいくつかの制限があります。例えば、 [`document-domain`](/ja/docs/Web/HTTP/Headers/Feature-Policy/document-domain) の [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy) が有効になっている場合や、文書がサンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 内にある場合は、 "`SecurityError`" の [`DOMException`](/ja/docs/Web/API/DOMException) が発生します。また、この方法でオリジンを変更しても、多くの Web API ([`localStorage`](/ja/docs/Web/API/Window/localStorage), [`indexedDB`](/ja/docs/Web/API/IndexedDB_API), [`BroadcastChannel`](/ja/docs/Web/API/BroadcastChannel), [`SharedWorker`](/ja/docs/Web/API/SharedWorker) など) で使用されているオリジンチェックには影響しません。失敗事例のより詳細なリストは、 [Document.domain > Failures](/ja/docs/Web/API/Document/domain#failures) にあります。
 
-> **Note:** **注:** サブドメインから親ドメインへアクセスさせるために `document.domain` を使用する際は、親ドメインとサブドメインの双方で同じ値を `document.domain` に設定することが必要です。この作業は、親ドメインを元の値に戻す際にも必要です。これを怠ると権限エラーが発生します。
+> **Note:** サブドメインから親ドメインへアクセスさせるために `document.domain` を使用する際は、親ドメインとサブドメインの双方で同じ値を `document.domain` に設定することが必要です。この作業は、親ドメインを元の値に戻す際にも必要です。これを怠ると権限エラーが発生します。
 
 ## 異なるオリジンへのネットワークアクセス
 

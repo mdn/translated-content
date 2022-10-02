@@ -38,8 +38,6 @@ alert( document.head === document.querySelector("head") ); // true
 
 {{Compat("api.Document.head")}}
 
-##
-
 ## Veja Também
 
 - {{domxref("document.body")}}

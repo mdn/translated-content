@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: loadstart イベント'
 slug: Web/API/HTMLMediaElement/loadstart_event
 ---
+
 {{APIRef}}
 
 **`loadstart`** イベントは、ブラウザーがリソースの読み込みを開始したときに発生します。

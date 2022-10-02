@@ -183,7 +183,7 @@ console.log(bar.foo2()); // 2
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.method_definitions")}}
+{{Compat}}
 
 ## 參見
 

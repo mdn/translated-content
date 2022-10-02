@@ -2,6 +2,7 @@
 title: 単項マイナス (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 ---
+
 {{jsSidebar("Operators")}}
 
 単項マイナス演算子 (`-`) はオペランドの前に置かれ、符号を反転します。

@@ -2,6 +2,7 @@
 title: NotificationEvent
 slug: Web/API/NotificationEvent
 ---
+
 {{APIRef("Web Notifications")}}
 
 {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} ハンドラーに渡される引数である `NotificationEvent` インターフェイスは、 {{domxref("ServiceWorker")}} の {{domxref("ServiceWorkerGlobalScope")}} で配信される通知クリックイベントを表します。
@@ -58,7 +59,7 @@ self.addEventListener('notificationclick', function(event) {
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------- |
 | {{SpecName('Web Notifications','#notificationevent','NotificationEvent')}} | {{Spec2('Web Notifications')}} | Living standard. |
 
-> **Note:** **注**: このインターフェイスは [Notifications API](/ja/docs/Web/API/Notifications_API) で定義されていますが、{{domxref("ServiceWorkerGlobalScope")}} を介してアクセスします。
+> **Note:** このインターフェイスは [Notifications API](/ja/docs/Web/API/Notifications_API) で定義されていますが、{{domxref("ServiceWorkerGlobalScope")}} を介してアクセスします。
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: CSSValue
 slug: Web/API/CSSValue
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}`CSSValue` 接口表示经过计算的当前 CSS 属性值。
 
 ## 属性
@@ -10,7 +11,7 @@ slug: Web/API/CSSValue
   - : {{domxref("DOMString")}} 代表当前值。
 - {{domxref("CSSValue.cssValueType")}} {{readonlyInline}}
 
-  - : 一个 `unsigned short` 类型的数据用来定义了值的类型。 可取值为：
+  - : 一个 `unsigned short` 类型的数据用来定义了值的类型。可取值为：
 
     | 值                    | 说明                                                                                                                                                   |
     | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |

@@ -2,6 +2,7 @@
 title: 国际化
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
+
 {{AddonSidebar}}
 
 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) API 有一个相当方便的模块可用于附加组件的国际化（[i18n](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n)）。我们将在本文中探讨其功能，并为它的运作方式提供一个实例。WebExtensions 的 i18n 系统类似常见的 i18n 用途 JavaScript 库，例如 [i18n.js](http://i18njs.com/)。

@@ -2,6 +2,7 @@
 title: 画面キャプチャ API の使用
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 この記事では、画面キャプチャ API とその {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッドを使用して、 [WebRTC](/ja/docs/Web/API/WebRTC_API) 会議セッション中に画面の一部または全部をストリーミング、録音、共有用に取得する方法を検証していきます。

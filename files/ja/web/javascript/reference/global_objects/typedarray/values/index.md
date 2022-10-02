@@ -2,6 +2,7 @@
 title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 ---
+
 {{JSRef}}
 
 **`values()`** メソッドは、配列の各インデックスの値を持つ新しい配列イテレーターオブジェクトを返します。

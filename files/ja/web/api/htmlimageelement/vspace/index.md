@@ -2,6 +2,7 @@
 title: HTMLImageElement.vspace
 slug: Web/API/HTMLImageElement/vspace
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`vspace`** は {{domxref("HTMLImageElement")}} インターフェイスの廃止されたプロパティで、ページをレイアウトする際に {{HTMLElement("img")}} 要素の上下に空ける空間のピクセル数を指定します。

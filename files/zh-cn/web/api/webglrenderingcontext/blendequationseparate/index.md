@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.blendEquationSeparate()
 slug: Web/API/WebGLRenderingContext/blendEquationSeparate
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.blendEquationSeparate()`** method of the [WebGL API](/zh-CN/docs/Web/API/WebGL_API) is used to set the RGB blend equation and alpha blend equation separately.
@@ -82,7 +83,7 @@ gl.getParameter(gl.BLEND_EQUATION_ALPHA) === gl.FUNC_ADD;
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.blendEquationSeparate")}}
+{{Compat}}
 
 ## See also
 

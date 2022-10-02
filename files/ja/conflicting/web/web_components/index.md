@@ -3,6 +3,7 @@ title: HTML インポート
 slug: conflicting/Web/Web_Components
 original_slug: Web/Web_Components/HTML_Imports
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 <div class="blockIndicator obsolete"><p><strong>Google Chrome 73 で廃止</strong><br>この機能は廃止されました。まだいくつかのブラウザーで動作するかもしれませんが、いつ削除されてもおかしくないので、使わないようにしましょう。</p></div>

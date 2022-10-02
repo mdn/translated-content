@@ -2,6 +2,7 @@
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) **`504 Gateway Timeout`** サーバーエラーレスポンスコードは、サーバーがゲートウェイまたはプロキシとして機能しているときに、リクエストを完了するために必要な上流のサーバーからのレスポンスが時間内に得られなかったことを示します。

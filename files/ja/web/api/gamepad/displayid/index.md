@@ -2,6 +2,7 @@
 title: Gamepad.displayId
 slug: Web/API/Gamepad/displayId
 ---
+
 {{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("Gamepad")}} インターフェイスの **`displayId`** 読取専用プロパティは _{{domxref("VRDisplay")}}_ に関連付けられた* {{domxref("VRDisplay.displayId")}} を返します — `VRDisplay` は表示されるシーンをそのゲームパッドで操作します．*

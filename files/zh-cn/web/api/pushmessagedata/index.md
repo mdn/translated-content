@@ -2,6 +2,7 @@
 title: PushMessageData
 slug: Web/API/PushMessageData
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 The **`PushMessageData`** interface of the [Push API](/zh-CN/docs/Web/API/Push_API) provides methods which let you retrieve the push data sent by a server in various formats.
@@ -56,7 +57,7 @@ self.addEventListener('push', function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.PushMessageData")}}
+{{Compat}}
 
 ## See also
 

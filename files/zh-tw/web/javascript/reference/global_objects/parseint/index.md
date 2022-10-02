@@ -149,7 +149,7 @@ console.log(filterInt('1.61803398875'));     // NaN
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.parseInt")}}
+{{Compat}}
 
 ## 延伸閱讀
 

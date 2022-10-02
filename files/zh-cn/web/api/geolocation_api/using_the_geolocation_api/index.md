@@ -2,6 +2,7 @@
 title: 使用地理位置 API
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 地理位置 API 用于检索用户的位置，因此，利用地图 API，可以显示用户的位置。本文将阐述基础的使用方法。

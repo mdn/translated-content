@@ -3,7 +3,8 @@ title: 控制 Flex 子元素在主轴上的比例
 slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 ---
-> **备注：** 译者注：在 html 中若一个元素的 css 设置为 display: flex，则这个元素就是 flex container , 其子元素为 flex item，若是直译过来就是弹性容器和弹性项目。但是译者认为直译过来不好理解，且不便记忆（就像我们常说 TCP 而不会说传输控制协议一样），因此在此文中，译者将不会翻译为 flex container 和 flex item，而是翻译为 flex 容器和 flex 子元素。 同样，在原文中有些单词（如 items, flex-items，container），我会根据情况译为 flex 容器和 flex 子元素。请各位读者理解。
+
+> **备注：** 译者注：在 html 中若一个元素的 css 设置为 display: flex，则这个元素就是 flex container , 其子元素为 flex item，若是直译过来就是弹性容器和弹性项目。但是译者认为直译过来不好理解，且不便记忆（就像我们常说 TCP 而不会说传输控制协议一样），因此在此文中，译者将不会翻译为 flex container 和 flex item，而是翻译为 flex 容器和 flex 子元素。同样，在原文中有些单词（如 items, flex-items，container），我会根据情况译为 flex 容器和 flex 子元素。请各位读者理解。
 >
 > 如果各位读的不舒服，请阅读原文！
 
@@ -59,7 +60,7 @@ slug: >-
 >
 > 为了不翻译花了，译者不对**positive** **free space 和 negative free space**进行翻译，参考翻译是正向自由空间和反向自由空间
 
-去谈论这些属性之前我们需要理解 positive free space 和 negative free space 的概念。当一个 flex 容器有 positive free space 时，它就有更多的空间用于在 flex 容器内显示 flex 子元素。比如说，如果我有 500px 宽的 flex 容器，{{cssxref("flex-direction")}} 属性值为 row, 三个 100px 宽的 flex 子元素， 而且我还有 200px 的 positive free space, 那么如果我想让它们（positive free space）填充 flex 容器，它们就可以填充在 flex 子元素之间。
+去谈论这些属性之前我们需要理解 positive free space 和 negative free space 的概念。当一个 flex 容器有 positive free space 时，它就有更多的空间用于在 flex 容器内显示 flex 子元素。比如说，如果我有 500px 宽的 flex 容器，{{cssxref("flex-direction")}} 属性值为 row, 三个 100px 宽的 flex 子元素，而且我还有 200px 的 positive free space, 那么如果我想让它们（positive free space）填充 flex 容器，它们就可以填充在 flex 子元素之间。
 
 ![Image showing space left over after items have been displayed.](basics7.png)
 
@@ -75,13 +76,13 @@ slug: >-
 
 {{cssxref("flex-basis")}} 属性在任何空间分配发生之前初始化 flex 子元素的尺寸。此属性的初始值为 `auto`. 如果 `flex-basis` 设置为 `auto` , 浏览器会先检查 flex 子元素的主尺寸是否设置了绝对值再计算出 flex 子元素的初始值。比如说你已经给你的 flex 子元素设置了 200px 的宽，则 200px 就是这个 flex 子元素的 `flex-basis`.
 
-如果你的 flex 子元素 为自动调整大小，则`auto` 会解析为其内容的大小. 此时你所熟知的 min-content 和 max-content 大小会变得有用， flexbox 会将 flex 子元素的 `max-content` 大小作为 `flex-basis`. 下面的例子可以证明这一点.
+如果你的 flex 子元素 为自动调整大小，则`auto` 会解析为其内容的大小。此时你所熟知的 min-content 和 max-content 大小会变得有用，flexbox 会将 flex 子元素的 `max-content` 大小作为 `flex-basis`. 下面的例子可以证明这一点。
 
 在这个例子中我创造了一些列固定的盒子，它们的 `flex-grow` 和`flex-shrink` 都设置为 `0`. 这里我们看看第一个 flex 子元素怎么样了 — 它的 150px 显示宽度被设置为主尺寸— 即设置`flex-basis`为 150px, 然而另外两个 flex 子元素 没有设置宽度而是根据它们内容的宽度设置尺寸，
 
 {{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-basis.html", '100%', 500)}}
 
-除了关键字 `auto` 以外，你还可以使用关键字 `content` 作为 `flex-basis`的值. 这会导致 `flex-basis` 根据内容大小设置即使 flex 子元素 设置了宽度。这是一个新关键字而且获得浏览器支持的比较少，但是你还是可以通过设置`flex-basis: auto`并确保你的 flex 子元素没有设置宽度来达到相同的效果 , 以便它能自动调整大小。
+除了关键字 `auto` 以外，你还可以使用关键字 `content` 作为 `flex-basis`的值。这会导致 `flex-basis` 根据内容大小设置即使 flex 子元素 设置了宽度。这是一个新关键字而且获得浏览器支持的比较少，但是你还是可以通过设置`flex-basis: auto`并确保你的 flex 子元素没有设置宽度来达到相同的效果 , 以便它能自动调整大小。
 
 空间分配时，如果你想 flexbox 完全忽略 flex 子元素的尺寸就设置`flex-basis` 为 `0`. 这基本上告诉 flexbox 所有空间都可以抢占，并按比例分享。随着我们继续关注`flex-grow`，我们将看到这方面的例子。
 
@@ -117,7 +118,7 @@ slug: >-
 
 ### flex items 设置不同的 flex-grow 值
 
-我们对`flex-grow`和`flex-basis`如何工作的理解使我们能够通过分配不同的`flex-grow`值来进一步控制我们单个 flex 子元素 大小。如果我们设置`flex-basis`值为`0`则所用空间都可以被分配，我们可以给每个 flex 子元素分配不同的`flex-grow`值. 在下面的示例中，我会使用下面的值：
+我们对`flex-grow`和`flex-basis`如何工作的理解使我们能够通过分配不同的`flex-grow`值来进一步控制我们单个 flex 子元素 大小。如果我们设置`flex-basis`值为`0`则所用空间都可以被分配，我们可以给每个 flex 子元素分配不同的`flex-grow`值。在下面的示例中，我会使用下面的值：
 
 - 设置第一个 flex item 的`flex-grow`值为`1`.
 - 设置第二个 flex item 的`flex-grow`值为`1`.

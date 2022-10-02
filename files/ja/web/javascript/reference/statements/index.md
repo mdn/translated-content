@@ -2,6 +2,7 @@
 title: 文と宣言
 slug: Web/JavaScript/Reference/Statements
 ---
+
 {{jsSidebar("Statements")}}
 
 JavaScript アプリケーションは、適切な構文で書かれた文から構成されます。ひとつの文が数行に渡る場合もあります。また複数の文それぞれがセミコロンで区切られていれば 1 行となる場合もあります。そのキーワードはひとつではなく、キーワードのグループとなっています。

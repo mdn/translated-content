@@ -2,6 +2,7 @@
 title: HTMLIFrameElement.contentWindow
 slug: Web/API/HTMLIFrameElement/contentWindow
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`contentWindow`** プロパティは、 [HTMLIFrameElement](/ja/docs/Web/API/HTMLIFrameElement) が所属する [Window](/ja/docs/Web/API/Window) オブジェクトを返します。この `Window` オブジェクトを使用して、 iframe の文書や内部 DOM にアクセスすることができます。この属性は読み取り専用ですが、グローバルの `Window` オブジェクトのように操作することができます。

@@ -69,7 +69,7 @@ Number.isNaN = Number.isNaN || function(value) {
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.Number.isNaN")}}
+{{Compat}}
 
 ## See also
 

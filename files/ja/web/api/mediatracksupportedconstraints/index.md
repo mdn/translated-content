@@ -2,6 +2,7 @@
 title: MediaTrackSupportedConstraints
 slug: Web/API/MediaTrackSupportedConstraints
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 **`MediaTrackSupportedConstraints`** 辞書は{{Glossary("user agent", "ユーザーエージェント")}}またはブラウザーが {{domxref("MediaStreamTrack")}} オブジェクトの実装で認識する制約可能なプロパティのリストを確立するものです。 `MediaTrackSupportedConstraints` に適合するオブジェクトは {{domxref("MediaDevices.getSupportedConstraints()")}} によって返されます。

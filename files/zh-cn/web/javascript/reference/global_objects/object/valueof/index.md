@@ -2,6 +2,7 @@
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** 方法返回指定对象的原始值。
@@ -20,7 +21,7 @@ object.valueOf()
 
 JavaScript 调用 `valueOf` 方法将对象转换为原始值。你很少需要自己调用 `valueOf` 方法；当遇到要预期的原始值的对象时，JavaScript 会自动调用它。
 
-默认情况下，`valueOf` 方法由 {{jsxref("Object")}} 后面的每个对象继承。 每个内置的核心对象都会覆盖此方法以返回适当的值。如果对象没有原始值，则 `valueOf` 将返回对象本身。
+默认情况下，`valueOf` 方法由 {{jsxref("Object")}} 后面的每个对象继承。每个内置的核心对象都会覆盖此方法以返回适当的值。如果对象没有原始值，则 `valueOf` 将返回对象本身。
 
 JavaScript 的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型对象的 valueOf() 方法的返回值和返回值类型均可能不同。
 
@@ -55,7 +56,7 @@ MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
 myNumberType.valueOf()
 ```
 
-> **备注：** 字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用`valueOf`转换为原始字符串的 {{jsxref("String")}} 对象不同。所有对象都能转换成一个 “`[object 类型]`” 这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。
+> **备注：** 字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用`valueOf`转换为原始字符串的 {{jsxref("String")}} 对象不同。所有对象都能转换成一个“`[object 类型]`”这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。
 
 ## 示例
 

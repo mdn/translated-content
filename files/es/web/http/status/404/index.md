@@ -15,11 +15,15 @@ Un código de estado 404 no indica si el recurso está temporalmente o permanent
 
 ## Estado
 
-    404 Not Found
+```
+404 Not Found
+```
 
 En español:
 
-    404 No Encontrado
+```
+404 No Encontrado
+```
 
 ## Paginas de error personalizadas
 
@@ -29,7 +33,7 @@ Muchos sitios web personalizan la apariencia de la pagina 404 para que sea de ut
 ErrorDocument 404 /no-encontrado.html
 ```
 
-Para una pagina 404 de ejemplo, mire la pagina [MDN 404](https://developer.mozilla.org/es/404).
+Para una pagina 404 de ejemplo, mire la pagina [MDN 404](/es/404).
 
 > **Nota:** Diseños personalizados son buenos, si se usan de manera moderada. Siente libre de hacer tus paginas 404 humoristicas y humanas, pero no confundas a tus usuarios.
 

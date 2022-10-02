@@ -2,11 +2,12 @@
 title: Window.screenY
 slug: Web/API/Window/screenY
 ---
+
 {{APIRef}}
 
 **`Window.screenY`** は読み取り専用のプロパティで、ユーザーのブラウザーのビューポートの上端から画面の上端までの垂直距離を CSS ピクセル数で返します。
 
-> **Note:** **注**: `screenY` の別名である {{domxref("Window.screenTop")}} が、最近は新しいブラウザー間で実装されていました。これはもともと IE のみが対応していましたが、有名であるためあらゆる場所で導入されています。
+> **Note:** `screenY` の別名である {{domxref("Window.screenTop")}} が、最近は新しいブラウザー間で実装されていました。これはもともと IE のみが対応していましたが、有名であるためあらゆる場所で導入されています。
 
 ## 構文
 

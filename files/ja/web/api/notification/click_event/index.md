@@ -3,6 +3,7 @@ title: 'Notification: click イベント'
 slug: Web/API/Notification/click_event
 original_slug: Web/API/Notification/onclick
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`click`** は {{domxref("Notification")}} インターフェイスのイベントで、ユーザーが表示されている {{domxref("Notification")}} をクリックしたときに発生します。

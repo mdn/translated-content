@@ -16,7 +16,9 @@ Para que un servidor verifique los encabezados de la solicitud, un cliente debe 
 
 ## Estado
 
-    100 Continue
+```
+100 Continue
+```
 
 ## Especificaciones
 

@@ -2,6 +2,7 @@
 title: KeyboardEvent.charCode
 slug: Web/API/KeyboardEvent/charCode
 ---
+
 {{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}
 
 {{domxref("KeyboardEvent.charCode")}} 只读属性，返回 {{ domxref("element.onkeypress", "keypress") }} 事件触发时按下的字符键的字符 Unicode 值。
@@ -64,4 +65,4 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.charCode")}}
+{{Compat}}

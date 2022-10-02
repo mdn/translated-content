@@ -2,6 +2,7 @@
 title: 开始学习 HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 本文将从 HTML 最基础的部分讲起，对元素（Element）、属性（Attribute）以及可能涉及的一些重要术语进行介绍，并明确它们在语言中所处的位置。本文还会讲解 HTML 元素和页面的组织方式，以及其他一些重要的基本语言特性。学习的过程中，我们会使用 HTML 做一些好玩的事情。
@@ -228,7 +229,7 @@ My cat is very grumpy
 
 1. 一个空格，在属性和元素名称之间（如果已经有一个或多个属性，就与前一个属性之间有一个空格）。
 2. 属性名称，后面跟着一个等于号。
-3. 一个属性值，由一对引号("")引起来。
+3. 一个属性值，由一对引号 ("") 引起来。
 
 ### 学习实践：为一个元素添加属性
 

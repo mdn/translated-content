@@ -2,6 +2,7 @@
 title: HTMLMediaElement.muted
 slug: Web/API/HTMLMediaElement/muted
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.muted`** は、メディア要素がミュートされているかどうかを示します。

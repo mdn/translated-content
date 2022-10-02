@@ -2,9 +2,10 @@
 title: 从服务器获取数据
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-在现代网站和应用中另一个常见的任务是从服务端获取个别数据来更新部分网页而不用加载整个页面。 这看起来是小细节却对网站性能和行为产生巨大的影响。所以我们将在这篇文章介绍概念和技术使它成为可能，例如：XMLHttpRequest 和 Fetch API.
+在现代网站和应用中另一个常见的任务是从服务端获取个别数据来更新部分网页而不用加载整个页面。这看起来是小细节却对网站性能和行为产生巨大的影响。所以我们将在这篇文章介绍概念和技术使它成为可能，例如：XMLHttpRequest 和 Fetch API.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -42,7 +43,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 这是通过使用诸如 {{domxref("XMLHttpRequest")}} 之类的 API 或者 — 最近以来的 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 来实现。这些技术允许网页直接处理对服务器上可用的特定资源的 [HTTP](/zh-CN/docs/Web/HTTP) 请求，并在显示之前根据需要对结果数据进行格式化。
 
-> **备注：** 在早期，这种通用技术被称为 Asynchronous JavaScript and XML**（Ajax），** 因为它倾向于使用{{domxref("XMLHttpRequest")}} 来请求 XML 数据。 但通常不是这种情况 (你更有可能使用 `XMLHttpRequest` 或 Fetch 来请求 JSON), 但结果仍然是一样的，术语“Ajax”仍然常用于描述这种技术。
+> **备注：** 在早期，这种通用技术被称为 Asynchronous JavaScript and XML**（Ajax），** 因为它倾向于使用{{domxref("XMLHttpRequest")}} 来请求 XML 数据。但通常不是这种情况 (你更有可能使用 `XMLHttpRequest` 或 Fetch 来请求 JSON), 但结果仍然是一样的，术语“Ajax”仍然常用于描述这种技术。
 
 ![A simple modern architecture for web sites](https://mdn.mozillademos.org/files/6477/moderne-web-site-architechture@2x.png)
 
@@ -73,7 +74,7 @@ Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不
 `XMLHttpRequest`（通常缩写为 XHR）现在是一个相当古老的技术 - 它是在 20 世纪 90 年代后期由微软发明的，并且已经在相当长的时间内跨浏览器进行了标准化。
 
 1. 为例子做些准备，将 [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) 和四个文本文件 — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — 复制到你计算机上的一个新目录。在这个例子中，我们将通过 XHR 在下拉菜单中选择一首诗（您可能会认识 — "如果谷歌翻译可以翻译的话"）加载另一首诗。
-2. 在 {{htmlelement("script")}} 的内部，添加下面的代码。将 {{htmlelement("select")}} 和 {{htmlelement("pre")}} 元素的引用存储到变量中，并定义一个 {{domxref("GlobalEventHandlers.onchange","onchange")}} 事件处理函数，可以在 select 的值改变时， 将其值传递给 `updateDisplay()` 函数作为参数。
+2. 在 {{htmlelement("script")}} 的内部，添加下面的代码。将 {{htmlelement("select")}} 和 {{htmlelement("pre")}} 元素的引用存储到变量中，并定义一个 {{domxref("GlobalEventHandlers.onchange","onchange")}} 事件处理函数，可以在 select 的值改变时，将其值传递给 `updateDisplay()` 函数作为参数。
 
     ```js
     const verseChoose = document.querySelector('select');
@@ -95,7 +96,7 @@ Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不
 
 4. 我们将通过构造一个 指向我们要加载的文本文件的相对 URL 来启动我们的函数，因为我们稍后需要它。任何时候 {{htmlelement("select")}} 元素的值都与所选的 {{htmlelement("option")}} 内的文本相同 (除非在值属性中指定了不同的值) — 例如 "Verse 1". 相应的诗歌文本文件是 "verse1.txt", 并与 HTML 文件位于同一目录中，因此只需要文件名即可。
 
-    但是，Web 服务器往往是区分大小写的，文件名没有空格。要将“Verse 1”转换为“verse1.txt”，我们需要将 V 转换为小写，删除空格，并在末尾添加.txt。 这可以通过 {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, 和 简单的 [string concatenation](/zh-CN/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings) 来完成。在 `updateDisplay()` 函数中添加以下代码：
+    但是，Web 服务器往往是区分大小写的，文件名没有空格。要将“Verse 1”转换为“verse1.txt”，我们需要将 V 转换为小写，删除空格，并在末尾添加.txt。这可以通过 {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, 和 简单的 [string concatenation](/zh-CN/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings) 来完成。在 `updateDisplay()` 函数中添加以下代码：
 
     ```js
     verse = verse.replace(" ", "");
@@ -103,7 +104,7 @@ Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不
     let url = verse + '.txt';
     ```
 
-5. 要开始创建 XHR 请求，您需要使用 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} 的构造函数创建一个新的请求对象。 你可以把这个对象叫做你喜欢的任何东西，但是我们会把它叫做 `request` 来保持简单。在之前的代码中添加以下内容：
+5. 要开始创建 XHR 请求，您需要使用 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} 的构造函数创建一个新的请求对象。你可以把这个对象叫做你喜欢的任何东西，但是我们会把它叫做 `request` 来保持简单。在之前的代码中添加以下内容：
 
     ```js
     let request = new XMLHttpRequest();
@@ -121,9 +122,9 @@ Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不
     request.responseType = 'text';
     ```
 
-8. 从网络获取资源是一个 {{glossary("asynchronous")}} "异步" 操作，这意味着您必须等待该操作完成（例如，资源从网络返回），然后才能对该响应执行任何操作，否则会出错，将被抛出错误。XHR 允许你使用它的 {{domxref("XMLHttpRequest.onload", "onload")}} 事件处理器来处理这个事件 — 当{{event("onload")}} 事件触发时（当响应已经返回时）这个事件会被运行。发生这种情况时， `response` 数据将在 XHR 请求对象的响应属性中可用。
+8. 从网络获取资源是一个 {{glossary("asynchronous")}} "异步" 操作，这意味着您必须等待该操作完成（例如，资源从网络返回），然后才能对该响应执行任何操作，否则会出错，将被抛出错误。XHR 允许你使用它的 {{domxref("XMLHttpRequest.onload", "onload")}} 事件处理器来处理这个事件——当 [`load`](/zh-CN/docs/Web/API/XMLHttpRequest/load_event) 事件触发时（当响应已经返回时）这个事件会被运行。发生这种情况时， `response` 数据将在 XHR 请求对象的响应属性中可用。
 
-    在后面添加以下内容。 你会看到，在 `onload` 事件处理程序中，我们将 `poemDisplay` ( {{htmlelement("pre")}} 元素 ) 的 [`textContent`](/zh-CN/docs/Web/API/Node/textContent) 设置为 {{domxref("XMLHttpRequest.response", "request.response")}} 属性的值。
+    在后面添加以下内容。你会看到，在 `onload` 事件处理程序中，我们将 `poemDisplay` ( {{htmlelement("pre")}} 元素 ) 的 [`textContent`](/zh-CN/docs/Web/API/Node/textContent) 设置为 {{domxref("XMLHttpRequest.response", "request.response")}} 属性的值。
 
     ```js
     request.onload = function() {
@@ -247,7 +248,7 @@ function(response) {
 
 response 对象有个 [`text()`](/zh-CN/docs/Web/API/Body/text)方法，获取响应主体中的原始数据 a 并把它转换成纯文本，那是我们想要的格式。它也返回一个 promise (解析结果文本字符串), 所以这里我们再使用 [`.then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then), 在里面我们再定义一个操作文本字符串的函数。我们设置诗歌的 [element represents preformatted text which is to be presented exactly as written in the HTML file.">`<pre>`](/zh-CN/docs/Web/HTML/Element/pre) 元素的 [`textContent`](/zh-CN/docs/Web/API/Node/textContent) 属性和这个文本字符串相同，这样就非常简单地解决了。
 
-值得注意的是你可以直接将 promise 块 (`.then()`块，但也有其他类型) 链接到另一个的尾部，顺着链条将每个块的结果传到下一个块。 这使得 promises 非常强大。
+值得注意的是你可以直接将 promise 块 (`.then()`块，但也有其他类型) 链接到另一个的尾部，顺着链条将每个块的结果传到下一个块。这使得 promises 非常强大。
 
 下面的代码块和我们原始的例子做的是相同的事，但它是不同的写法：
 

@@ -2,6 +2,7 @@
 title: Web Storage API の使用
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 Web Storage API は、ブラウザーがキーと値のペアを安全に保存できる仕組みを提供します。
@@ -18,7 +19,7 @@ localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');
 ```
 
-> **Note:** **注**: Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) の使用が推奨されており、これは単純なオブジェクトをキーバリューストアとして使うという[落とし穴](http://www.2ality.com/2012/01/objects-as-maps.html)を防ぐためです。
+> **Note:** Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) の使用が推奨されており、これは単純なオブジェクトをキーバリューストアとして使うという[落とし穴](http://www.2ality.com/2012/01/objects-as-maps.html)を防ぐためです。
 
 Web Storage には、以下の 2 種類の仕組みがあります。
 

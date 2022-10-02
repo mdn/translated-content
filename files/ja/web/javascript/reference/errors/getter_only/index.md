@@ -2,6 +2,7 @@
 title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)専用の例外 "setting getter-only property" は、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)のみが定義されているプロパティに新しい値を設定しようとした時に発生します。

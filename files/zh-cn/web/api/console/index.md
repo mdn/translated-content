@@ -2,6 +2,7 @@
 title: Console
 slug: Web/API/Console
 ---
+
 {{APIRef("Console API")}}
 
 **`Console`** 对象提供了浏览器控制台调试的接口（如：Firefox 的 [Web Console](/zh-CN/docs/Tools/Web_Console)）。在不同浏览器上它的工作方式可能不一样，但通常都会提供一套共性的功能。
@@ -113,9 +114,9 @@ console.info("My first car was a", car, ". The object is:", someObject);
 | Substitution string | Description                                                                                              |
 | ------------------- | -------------------------------------------------------------------------------------------------------- |
 | `%o` or `%O`        | 打印 JavaScript 对象。在审阅器点击对象名字可展开更多对象的信息。                                         |
-| `%d` or `%i`        | 打印整数。支持数字格式化。例如，`console.log("Foo %.2d", 1.1)` 会输出有先导 0 的两位有效数字: `Foo 01`。 |
+| `%d` or `%i`        | 打印整数。支持数字格式化。例如，`console.log("Foo %.2d", 1.1)` 会输出有先导 0 的两位有效数字：`Foo 01`。 |
 | `%s`                | 打印字符串。                                                                                             |
-| `%f`                | 打印浮点数。支持格式化，比如 `console.log("Foo %.2f", 1.1)` 会输出两位小数: `Foo 1.10`                   |
+| `%f`                | 打印浮点数。支持格式化，比如 `console.log("Foo %.2f", 1.1)` 会输出两位小数：`Foo 1.10`                   |
 
 > **备注：** Chrome 不支持精确格式化。
 

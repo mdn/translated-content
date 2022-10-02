@@ -3,6 +3,7 @@ title: rotateX()
 slug: Web/CSS/transform-function/rotateX
 original_slug: Web/CSS/transform-function/rotateX()
 ---
+
 {{CSSRef}}
 
 **`rotateX()`** 函数定义了一个转换，它可以让一个元素围绕横坐标 (水平轴) 旋转，而不会对其进行变形。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。

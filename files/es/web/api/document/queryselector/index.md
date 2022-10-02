@@ -21,7 +21,7 @@ element = document.querySelector(selectores);
 
 Donde:
 
-- `element` es un objeto de tipo [element](/es/docs/DOM/element "en-US/docs/DOM/element").
+- `element` es un objeto de tipo [element](/es/docs/DOM/element).
 - `selectores` es una cadena de caracteres que contiene uno o más [selectores CSS](/es/docs/Web/Guide/CSS/Getting_Started/Selectors) separados por coma.
 
 ## Ejemplo
@@ -80,4 +80,4 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 - {{domxref("document.querySelectorAll()")}}
 - {{domxref("element.querySelector()")}}
 - {{domxref("element.querySelectorAll()")}}
-- [Snippets para querySelector](/es/docs/Code_snippets/QuerySelector "en-US/docs/Code snippets/QuerySelector")
+- [Snippets para querySelector](/es/docs/Code_snippets/QuerySelector)

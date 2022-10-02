@@ -6,7 +6,7 @@ original_slug: Web/API/Document/height
 ---
 {{APIRef("DOM")}} {{Obsolete_header}}
 
-> **Nota:** A partir do {{Gecko("6.0")}},` document.height `não é mais suportado. Em seu lugar use `document.body.clientHeight`. Veja {{domxref("element.clientHeight")}}.
+> **Nota:** A partir do {{Gecko("6.0")}}, `document.height` não é mais suportado. Em seu lugar use `document.body.clientHeight`. Veja {{domxref("element.clientHeight")}}.
 
 ## Sumário
 

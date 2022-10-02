@@ -21,7 +21,7 @@ HTTP **`204 No Content`** 成功狀態碼表明請求成功，但客戶端不需
 
 ## 瀏覽器相容性
 
-{{Compat("http.status.204")}}
+{{Compat}}
 
 ## 相容性事項
 

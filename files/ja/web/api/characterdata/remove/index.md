@@ -2,6 +2,7 @@
 title: CharacterData.remove()
 slug: Web/API/CharacterData/remove
 ---
+
 {{APIRef("DOM")}}
 
 **`remove()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、このノードに含まれるテキストを削除します。

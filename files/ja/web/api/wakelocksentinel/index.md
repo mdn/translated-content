@@ -2,6 +2,7 @@
 title: WakeLockSentinel
 slug: Web/API/WakeLockSentinel
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 **`WakeLockSentinel`** は[画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API) のインターフェイスで、基礎となるプラットフォームの起動ロックへのハンドルを提供し、手動で解放および再取得することができます。起動ロックを表す {{jsxref('Object')}} は {{domxref('WakeLock.request()','navigator.wakelock.request()')}} メソッドを介して返されます。

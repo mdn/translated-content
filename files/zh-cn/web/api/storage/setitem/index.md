@@ -2,6 +2,7 @@
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} 接口的 **`setItem()`** 方法，接受一个键名和值作为参数，将会把键名添加到给定的 `Storage` 对象中，如果键名已存在，则更新其对应的值。

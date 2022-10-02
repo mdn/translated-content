@@ -23,4 +23,4 @@ event.stopImmediatePropagation();
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.stopImmediatePropagation")}}
+{{Compat}}

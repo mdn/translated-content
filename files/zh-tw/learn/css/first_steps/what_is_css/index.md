@@ -113,7 +113,7 @@ CSS 並沒有什麼不同，它由 W3C 一個被稱為 [CSS 工作組](https://w
 
 以下是 CSS [`font-family`](/zh-TW/docs/Web/CSS/font-family) 屬性的支援狀態表。
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## 下一步…
 

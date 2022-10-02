@@ -2,6 +2,7 @@
 title: DocumentType.before()
 slug: Web/API/DocumentType/before
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType.before()`** 一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `DocumentType` の親ノードの子リストの、この `DocumentType` の直前に挿入します。文字列は等価な {{domxref("Text")}} ノードとして挿入されます。

@@ -2,6 +2,7 @@
 title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
 ---
+
 {{APIRef("Web Animations API")}}{{SeeCompatTable}}
 
 The **`AnimationEvent()`** constructor returns a newly created {{domxref("AnimationEvent")}}, representing an event in relation with an animation.
@@ -31,7 +32,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 ## 浏览器兼容性
 
-{{Compat("api.AnimationEvent.AnimationEvent")}}
+{{Compat}}
 
 ## 参考
 

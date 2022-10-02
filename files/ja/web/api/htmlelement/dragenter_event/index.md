@@ -2,6 +2,7 @@
 title: 'HTMLElement: dragenter イベント'
 slug: Web/API/HTMLElement/dragenter_event
 ---
+
 {{APIRef}}
 
 `dragenter` イベントは、ドラッグ中のイベントやテキストの選択範囲が、妥当なドロップターゲットに入ったときに発生します。

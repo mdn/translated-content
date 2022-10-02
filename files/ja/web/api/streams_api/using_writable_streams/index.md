@@ -2,13 +2,14 @@
 title: 書き込み可能なストリームの使用
 slug: Web/API/Streams_API/Using_writable_streams
 ---
+
 {{apiref("Streams")}}
 
 JavaScript 開発者として、プログラムでストリームにデータを書き込むことは非常に便利です！ この記事では、[Streams API](/ja/docs/Web/API/Streams_API) の書き込み可能なストリームの機能について説明します。
 
-> **Note:** **注**: この記事は、書き込み可能なストリームのユースケースを理解し、高レベルの概念を理解していることを前提としています。 そうでない場合は、まず [Streams の概念と使用方法の概要](/ja/docs/Web/API/Streams_API#Concepts_and_usage)と専用の [Streams API の概念](/ja/docs/Web/API/Streams_API/Concepts)の記事を読んでから、戻ってくることをお勧めします。
+> **Note:** この記事は、書き込み可能なストリームのユースケースを理解し、高レベルの概念を理解していることを前提としています。 そうでない場合は、まず [Streams の概念と使用方法の概要](/ja/docs/Web/API/Streams_API#Concepts_and_usage)と専用の [Streams API の概念](/ja/docs/Web/API/Streams_API/Concepts)の記事を読んでから、戻ってくることをお勧めします。
 
-> **Note:** **注**: 読み取り可能なストリームに関する情報を探している場合は、代わりに[読み取り可能なストリーム](/ja/docs/Web/API/Streams_API/Using_readable_streams)の使用を試してください。
+> **Note:** 読み取り可能なストリームに関する情報を探している場合は、代わりに[読み取り可能なストリーム](/ja/docs/Web/API/Streams_API/Using_readable_streams)の使用を試してください。
 
 ## ブラウザーのサポート
 

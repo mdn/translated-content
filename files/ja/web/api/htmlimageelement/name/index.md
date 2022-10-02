@@ -2,6 +2,7 @@
 title: HTMLImageElement.name
 slug: Web/API/HTMLImageElement/name
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 {{domxref("HTMLImageElement")}} インターフェイスの **`name`** プロパティは非推奨で、要素の名前を指定します。これは、全ての要素で利用可能な {{domxref("Element.id", "id")}} プロパティに置き換えられました。

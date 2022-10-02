@@ -2,6 +2,7 @@
 title: 笑话生成器
 slug: Learn/JavaScript/First_steps/Silly_story_generator
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 本节是一个小测验，要求你运用所学知识制作一个笑话生成器。祝玩的愉快！

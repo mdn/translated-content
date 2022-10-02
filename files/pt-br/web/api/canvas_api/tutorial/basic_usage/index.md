@@ -20,11 +20,11 @@ Vamos começar esse tutorial olhando o elemento {{HTMLElement("canvas")}} em si.
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-Se parece muito com o elemento `<img> `com a diferença de não possuir os atributos `src` e `alt`. O elemento `<canvas>` tem apenas dois atributos - _**width** \_e _**height**._ Ambos são opcionais e podem ser aplicados utilizando as propriedades [DOM](/pt-BR/docs/DOM "en/DOM") respectivas. Se não forem especificados, o canvas será iniciado com \*\*300 \_pixels_**\_ \_de largura por **150 _pixels_\*\*\_ \_de altura. O elemento pode ser redimensionado por [CSS](/pt-BR/docs/Web/CSS "en/CSS"), mas durante a renderização a imagem é escalonada para caber no tamanho do layout.
+Se parece muito com o elemento `<img>`com a diferença de não possuir os atributos `src` e `alt`. O elemento `<canvas>` tem apenas dois atributos - **width**  e **height**. Ambos são opcionais e podem ser aplicados utilizando as propriedades [DOM](/pt-BR/docs/DOM) respectivas. Se não forem especificados, o canvas será iniciado com **300 _pixels_** de largura por **150 _pixels_** de altura. O elemento pode ser redimensionado por [CSS](/pt-BR/docs/Web/CSS), mas durante a renderização a imagem é escalonada para caber no tamanho do layout.
 
 > **Nota:** Se as suas renderizações parecerem distorcidas, tente especificar os atributos `width` e `height` no `<canvas>` e não usando CSS.
 
-O atributo `id` não é específico do elemento `<canvas>` mas um dos atributos padrão do HTML que pode ser aplicado em (quase) todos os elementos HTML (como o _`class` \_por exemplo). É sempre uma boa ideia inserir um `id` pois fica muito mais fácil de capturar o elemento no seu \_script._
+O atributo `id` não é específico do elemento `<canvas>` mas um dos atributos padrão do HTML que pode ser aplicado em (quase) todos os elementos HTML (como o _`class`_ por exemplo). É sempre uma boa ideia inserir um `id` pois fica muito mais fácil de capturar o elemento no seu _script._
 
 O elemento `<canvas>` pode ser estilizado como qualquer imagem (margem, borda, fundo, etc). Contudo, essas regras não afetarão o desenho no canvas. Nós veremos como isso é feito a seguir nesse tutorial. Quando nenhuma regra de estilo for aplicada, o canvas iniciará totalmente transparente.
 
@@ -56,7 +56,7 @@ Se o conteúdo alternativo não for necessário, um simples `<canvas id="foo" ..
 
 ## O contexto de renderização
 
-{{HTMLElement("canvas")}} cria uma superfície de desenho de tamanho fixo que expõe um ou mais contextos de renderização, que são usados ​​para criar e manipular o conteúdo mostrado. Vamos nos concentrar no contexto de renderização 2D. Outros contextos podem fornecer diferentes tipos de renderização; por exemplo, [WebGL](/pt-BR/docs/Web/WebGL "/en-US/docs/Web/WebGL") usa um contexto 3D ("experimental-WebGL") baseado em [OpenGL ES](http://www.khronos.org/opengles/).
+{{HTMLElement("canvas")}} cria uma superfície de desenho de tamanho fixo que expõe um ou mais contextos de renderização, que são usados ​​para criar e manipular o conteúdo mostrado. Vamos nos concentrar no contexto de renderização 2D. Outros contextos podem fornecer diferentes tipos de renderização; por exemplo, [WebGL](/pt-BR/docs/Web/WebGL) usa um contexto 3D ("experimental-WebGL") baseado em [OpenGL ES](http://www.khronos.org/opengles/).
 
 Incialmente o canvas é branco. Para mostrar alguma coisa, primeiro um _script_ precisa acessar o contexto de renderização e desenhar sobre ele. O elemento {{HTMLElement("canvas")}} tem um [método](/pt-BR/docs/Web/API/HTMLCanvasElement#Methods) chamado `getContext()`, usado para obter o contexto de renderização e suas funções de desenho. `getContext()` recebe o tipo de contexto como parâmetro. Para gráficos 2D, que serão abrangidos nesse tutorial, deverá ser especificado "2d".
 
@@ -69,7 +69,7 @@ A primeira linha recupera o nó DOM do elemento {{HTMLElement ("canvas")}} chama
 
 ## Verificação de suporte
 
-O conteúdo alternativo é mostrado nos navegadores que não suportam o elemento {{HTMLElement("canvas")}}, mas essa checagem pode ser feita através de um _script_ simplesmente testando a presença do método `getContext():`
+O conteúdo alternativo é mostrado nos navegadores que não suportam o elemento {{HTMLElement("canvas")}}, mas essa checagem pode ser feita através de um _script_ simplesmente testando a presença do método `getContext()`:
 
 ```js
 var canvas = document.getElementById('tutorial');

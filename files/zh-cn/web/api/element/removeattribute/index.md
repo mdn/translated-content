@@ -2,6 +2,7 @@
 title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
 ---
+
 {{ APIRef("DOM") }}
 
 {{domxref("Element", "元素")}}方法 **`removeAttribute()`** 从指定的元素中删除一个属性。
@@ -43,4 +44,4 @@ document.getElementById("div1").removeAttribute("align");
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.removeAttribute")}}
+{{Compat}}

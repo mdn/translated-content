@@ -3,6 +3,7 @@ title: 'HTMLElement: paste イベント'
 slug: Web/API/HTMLElement/paste_event
 original_slug: Web/API/HTMLElement/onpaste
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`paste`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから貼り付け操作を行おうとした時に発行されます。

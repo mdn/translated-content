@@ -63,9 +63,13 @@ La propriété `text-align` peut être définie grâce à l'un des mots-clés de
 - {{cssxref("&lt;string&gt;")}} {{experimental_inline}}
   - : Lorsque cette valeur est appliquée sur une cellule de tableau, elle indique le caractère sur lequel doit être aligné le contenu de la cellule.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -182,19 +186,11 @@ L'espacement créé entre les mots par la justification du texte peut rendre la 
 
 ## Spécifications
 
-| Spécification                                                                            | État                                             | Commentaires                                                                                                                 |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#text-align', 'text-align')}} | {{Spec2('CSS Logical Properties')}} | Aucun changement                                                                                                             |
-| {{SpecName('CSS4 Text', '#alignment', 'text-align')}}                 | {{Spec2('CSS4 Text')}}                     | Ajout de la gestion des valeurs `<string>`.                                                                                  |
-| {{SpecName('CSS3 Text', '#text-align-property', 'text-align')}}     | {{Spec2('CSS3 Text')}}                     | Ajout des valeurs `start`, `end` et `match-parent`. La valeur initiale qui n'était pas nommée est bien définie avec `start`. |
-| {{SpecName('CSS2.1', 'text.html#alignment-prop', 'text-align')}}     | {{Spec2('CSS2.1')}}                         | Aucun changement                                                                                                             |
-| {{SpecName('CSS1', '#text-align', 'text-align')}}                         | {{Spec2('CSS1')}}                         | Définition initiale.                                                                                                         |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-align")}}
+{{Compat}}
 
 ## Voir aussi
 

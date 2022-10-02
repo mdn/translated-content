@@ -2,6 +2,7 @@
 title: Firefox 65 for developers
 slug: Mozilla/Firefox/Releases/65
 ---
+
 {{FirefoxSidebar}}
 
 本文提供了有关 Firefox 65 中将影响开发者的更改信息。Firefox 65 是当前的 [Nightly 版本](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), 将于 2019 年 1 月 29 日发布。

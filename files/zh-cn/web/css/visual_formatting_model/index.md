@@ -3,6 +3,7 @@ title: 视觉格式化模型
 slug: Web/CSS/Visual_formatting_model
 original_slug: Web/Guide/CSS/Visual_formatting_model
 ---
+
 {{CSSRef}}
 
 CSS 视觉格式化模型（*visual formatting model）*是用来处理和在视觉媒体上显示文档时使用的计算规则。该模型是 CSS 的基础概念之一。
@@ -74,7 +75,7 @@ CSS 选择器不能作用于匿名盒子 (_anonymous boxes_)，所以它不能�
 
 此时会产生两个匿名块盒子：一个是 `<p>` 元素前面的那些文本（`Some inline text`），另一个是 \<p> 元素后面的文本（`followed by more inline text.`）。此时会生成下面的块结构：
 
-![](https://developer.mozilla.org/@api/deki/files/5996/=anonymous_block-level_boxes.png)
+![](/@api/deki/files/5996/=anonymous_block-level_boxes.png)
 
 显示为：
 
@@ -114,7 +115,7 @@ followed by more inline text.
 
 如果一个元素的 {{ cssxref("display") }} 属性为 `inline`、`inline-block` 或 `inline-table`，则称该元素为行内级元素。显示时，它不会生成内容块，但是可以与其他行内级内容一起显示为多行。一个典型的例子是包含多种格式内容（如强调文本、图片等）的段落，就可以由行内级元素组成。
 
-![](https://developer.mozilla.org/@api/deki/files/6008/=venn_inlines.png)
+![](/@api/deki/files/6008/=venn_inlines.png)
 
 > **警告：** 该图使用了过时的术语，见下面的“注意”（译注：指图中的“Atomic inline boxes”）。除此之外该图还有一个错误，右边的黄色部分应该完全包含左侧的椭圆（类似于数学上的超集），因为标准所说的是“如果行内级元素生成的盒子参与行内格式化上下文的创建，则该盒子为一个行内级盒子”，见“CSS 2.2 标准的 9.2.2 节”。
 

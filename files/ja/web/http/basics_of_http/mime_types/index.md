@@ -2,6 +2,7 @@
 title: MIME タイプ (IANA メディアタイプ)
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
+
 {{HTTPSidebar}}
 
 **メディアタイプ** (別名 **Multipurpose Internet Mail Extensions または MIME タイプ**) は、文書、ファイル、またはバイト列の性質や形式を示します。

@@ -2,6 +2,7 @@
 title: AudioTrack.id
 slug: Web/API/AudioTrack/id
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`id`** プロパティには、**{{domxref("AudioTrack")}}** によって表されるトラックを一意に識別する文字列が含まれています。

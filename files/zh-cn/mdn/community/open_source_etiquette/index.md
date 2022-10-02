@@ -2,6 +2,7 @@
 title: 开源项目礼节
 slug: MDN/Community/Open_source_etiquette
 ---
+
 {{MDNSidebar}}
 
 如果你从未在开源项目（open source project，OSP）工作过，在你开始向 MDN Web 文档（或其他开源项目）贡献之前，我们推荐你阅读这篇文章。这里有一些可供实行的最佳实践，来帮助确保你和其他项目贡献者感到受重视和安心，并保持生产力。

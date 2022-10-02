@@ -2,6 +2,7 @@
 title: HTMLFormElement.method
 slug: Web/API/HTMLFormElement/method
 ---
+
 {{APIRef}}概要
 
 `method` は、 フォーム送信時に使用する HTTP メソッドを取得 / 設定する。

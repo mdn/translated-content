@@ -2,6 +2,7 @@
 title: RegExp.prototype.source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 ---
+
 {{JSRef}}
 
 **`source`** プロパティは、正規表現オブジェクトのソーステキストを含む {{jsxref("String")}} を返します。これには、両端の 2 つのスラッシュやフラグは含まれません。

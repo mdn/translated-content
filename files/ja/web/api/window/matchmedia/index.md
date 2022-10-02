@@ -2,6 +2,7 @@
 title: window.matchMedia
 slug: Web/API/Window/matchMedia
 ---
+
 {{ApiRef}}
 
 ## 概要

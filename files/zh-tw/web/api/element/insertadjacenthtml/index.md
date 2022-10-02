@@ -62,7 +62,7 @@ It is not recommended you use `insertAdjacentHTML` when inserting plain text; in
 
 ## Browser compatibility
 
-{{Compat("api.Element.insertAdjacentHTML")}}
+{{Compat}}
 
 ## See also
 

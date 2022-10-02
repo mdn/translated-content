@@ -2,6 +2,7 @@
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{DOMxRef("XMLHttpRequest")}} の **`getResponseHeader()`** メソッドは、特定のヘッダー値のテキストを含んだ文字列を返します。

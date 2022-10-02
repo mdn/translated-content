@@ -2,6 +2,7 @@
 title: list-style-image
 slug: Web/CSS/list-style-image
 ---
+
 {{CSSRef}}
 
 **`list-style-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目のマーカーとして使われる画像を設定します。

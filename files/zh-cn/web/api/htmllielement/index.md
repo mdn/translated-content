@@ -2,6 +2,7 @@
 title: HTMLLIElement
 slug: Web/API/HTMLLIElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLLIElement`** 接口公开了特定的属性和方法(超出了常规 {{domxref("HTMLElement")}} 接口所定义的接口，它通过继承可用于操作列表元素。
@@ -27,7 +28,7 @@ _没有具体方法; 从其父级 {{domxref("HTMLElement")}} 继承属性。_
 
 ## 浏览器兼容性
 
-{{COMPAT( "api.HTMLLIElement")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,6 +2,7 @@
 title: CSS.escape()
 slug: Web/API/CSS/escape
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`CSS.escape()`** 静态方法返回 {{domxref("DOMString")}} 包含作为参数传递的转义字符串，主要用作 CSS 选择器的一部分。
@@ -49,7 +50,7 @@ var element = document.querySelector('a[href="#' + CSS.escape(fragment) + '"]');
 
 ## 浏览器兼容性
 
-{{Compat("api.CSS.escape")}}
+{{Compat}}
 
 ## 参见
 

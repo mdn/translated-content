@@ -3,6 +3,7 @@ title: 如何构建表单小工具
 slug: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 
 在许多情况下，[可用的 HTML 表单小组件](/zh-CN/docs/HTML/Forms/The_native_form_widgets)_是不够的_。如果要在某些小部件（例如 {{HTMLElement("select")}}元素）上执行[高级样式](/zh-CN/docs/Advanced_styling_for_HTML_forms)，或者如果要提供自定义表现，则别无选择，只能构建自己的小部件。
@@ -63,7 +64,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 - [UXDesign.com](http://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](http://uxdesign.smashingmagazine.com/)
 
-> **备注：** 另外， 在绝大多数系统中，还有一种方法能够打开{{HTMLElement("select")}}元素来观察其所有的选项（这和用鼠标点击{{HTMLElement("select")}}元素是一样的）。通过 Windows 下的 Alt + 向下箭头实现，在我们的例子中没有实现---但是这样做会很方便，因为鼠标点击事件就是由该原理实现的。
+> **备注：** 另外，在绝大多数系统中，还有一种方法能够打开{{HTMLElement("select")}}元素来观察其所有的选项（这和用鼠标点击{{HTMLElement("select")}}元素是一样的）。通过 Windows 下的 Alt + 向下箭头实现，在我们的例子中没有实现---但是这样做会很方便，因为鼠标点击事件就是由该原理实现的。
 
 ### 定义语义化的 HTML 结构
 
@@ -782,7 +783,7 @@ function updateValue(select, index) {
 
 ## 总结
 
-我们已经了解了所有和构建一个自定义表单组件相关的基础知识，但是如你所见做这件事非常繁琐，并且通常情况下依赖第三方库，而不是自己从头写起会更容易 ，也更好 (当然，除非你的目的就是构建一个这样的库）。
+我们已经了解了所有和构建一个自定义表单组件相关的基础知识，但是如你所见做这件事非常繁琐，并且通常情况下依赖第三方库，而不是自己从头写起会更容易，也更好 (当然，除非你的目的就是构建一个这样的库）。
 
 这儿有一些库，在你编写自己的之前应该了解一下：
 

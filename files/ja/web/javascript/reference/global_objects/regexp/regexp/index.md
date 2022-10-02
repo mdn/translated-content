@@ -2,6 +2,7 @@
 title: RegExp() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 ---
+
 {{JSRef}}
 
 **`RegExp`** コンストラクターは、パターンに従ったテキストを検索する正規表現オブジェクトを生成します。

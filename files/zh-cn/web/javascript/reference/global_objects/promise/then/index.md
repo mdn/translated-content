@@ -2,6 +2,7 @@
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
+
 {{JSRef}}
 
 **`then()`** 方法返回一个 {{domxref("Promise")}}。它最多需要有两个参数：Promise 的成功和失败情况的回调函数。
@@ -27,7 +28,7 @@ p.then(value => {
 - `onFulfilled` {{optional_inline}}
   - : 当 Promise 变成接受状态（fulfilled）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即接受的最终结果（the fulfillment value）。如果该参数不是函数，则会在内部被替换为 `(x) => x`，即原样返回 promise 最终结果的函数
 - `onRejected` {{optional_inline}}
-  - : 当 Promise 变成拒绝状态（rejected）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即拒绝的原因（`rejection reason`）。 如果该参数不是函数，则会在内部被替换为一个 "Thrower" 函数 (it throws an error it received as argument)。
+  - : 当 Promise 变成拒绝状态（rejected）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即拒绝的原因（`rejection reason`）。如果该参数不是函数，则会在内部被替换为一个 "Thrower" 函数 (it throws an error it received as argument)。
 
 ### 返回值
 
@@ -68,7 +69,7 @@ setTimeout(() => {
 
 ## 描述
 
-由于 `then` 和 {{jsxref("Promise.prototype.catch()")}} 方法都会返回 promise，它们可以被[链式调用](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#Chaining)——这同时也是一种被称为**复合**（ _composition）_ 的操作。
+由于 `then` 和 {{jsxref("Promise.prototype.catch()")}} 方法都会返回 promise，它们可以被[链式调用](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#Chaining)——这同时也是一种被称为**复合**（_composition）_ 的操作。
 
 ## 示例
 

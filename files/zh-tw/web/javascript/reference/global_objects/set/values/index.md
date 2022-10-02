@@ -44,7 +44,7 @@ console.log(setIter.next().value); // "baz"
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set.values")}}
+{{Compat}}
 
 ## 另見
 

@@ -3,9 +3,10 @@ title: HTTP Public Key Pinning (HPKP)
 slug: conflicting/Web/Security/Certificate_Transparency
 original_slug: Web/HTTP/Public_Key_Pinning
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
-> **Note:** **注:** Public Key Pinning の仕組みは [Certificate Transparency](/ja/docs/Web/Security/Certificate_Transparency) および {{HTTPHeader("Expect-CT")}} ヘッダーに置き換えられ、非推奨になりました。
+> **Note:** Public Key Pinning の仕組みは [Certificate Transparency](/ja/docs/Web/Security/Certificate_Transparency) および {{HTTPHeader("Expect-CT")}} ヘッダーに置き換えられ、非推奨になりました。
 
 **HTTP Public Key Pinning** ({{Glossary("HPKP")}}) は、ウェブクライアントに特定の公開鍵をあるウェブサーバーに関連付けさせることで、偽造された証明書による{{Glossary("MITM", "中間者攻撃")}}のリスクを減少させるためのセキュリティ機能でした。これは最近のブラウザーでは削除され、対応がなくなりました。
 
@@ -32,11 +33,11 @@ Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubDomains]
 - `report-uri` {{optional_inline}}
   - : このパラメータは省略可能です。ピンの検証に失敗した際に、失敗した旨を報告する URL を指定します。
 
-> **Note:** **注**: 現在の仕様では、本番系で運用されていないバックアップ用の第 2 のピンを指定することが必須になっています。これにより、既にピンを持っているクライアントからのアクセス性を損なうことなく、サーバの公開鍵を変更することが可能になります。例えば、本番系の鍵が危殆化したときなどに重要となります。
+> **Note:** 現在の仕様では、本番系で運用されていないバックアップ用の第 2 のピンを指定することが必須になっています。これにより、既にピンを持っているクライアントからのアクセス性を損なうことなく、サーバの公開鍵を変更することが可能になります。例えば、本番系の鍵が危殆化したときなどに重要となります。
 
 ### Base64 エンコードされた公開鍵情報を抽出するには
 
-> **Note:** **注:** 以下の例ではサーバ証明書をピン留めする方法を説明していますが、証明書の更新やローテーションを容易にするため、サーバ証明書を発行した CA の中間証明書もピン留めすることを推奨します。
+> **Note:** 以下の例ではサーバ証明書をピン留めする方法を説明していますが、証明書の更新やローテーションを容易にするため、サーバ証明書を発行した CA の中間証明書もピン留めすることを推奨します。
 
 まずは証明書や鍵ファイルから公開鍵情報を抽出し、それを Base64 でエンコードする必要があります。
 
@@ -84,7 +85,7 @@ Public-Key-Pins:
 
 HPKP ヘッダーを送信するのに必要な具体的な手順はウェブサーバーによって異なります。
 
-> **Note:** **注:** 以下の例では、2 か月間の max-age と includeSubDomains を指定しています。自身のサーバに合った適切な設定をしてください。
+> **Note:** 以下の例では、2 か月間の max-age と includeSubDomains を指定しています。自身のサーバに合った適切な設定をしてください。
 
 > **Warning:** HPKP の設定を間違えると、ユーザーが長期間接続できなくなってしまう可能性があります！バックアップの証明書を用意したり、CA の証明書をピン留めすることを推奨します。
 

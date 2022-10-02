@@ -2,6 +2,7 @@
 title: キーボードでナビゲート可能な JavaScript ウィジェット
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 ---
+
 ### 概要
 
 ウェブアプリケーションは、メニュー、ツリービュー、リッチテキストフィールド、タブパネルなどのデスクトップウィジェットを模倣するために JavaScript を使用することがよくあります。 これらのウィジェットは通常、{{htmlelement("div")}} 要素と {{htmlelement("span")}} 要素で構成されています。これらの要素は本来、デスクトップのものと同じキーボード機能を提供しません。 このドキュメントは JavaScript ウィジェットをキーボードでアクセス可能にするためのテクニックを説明します。

@@ -2,6 +2,7 @@
 title: BigInt.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは、 {{jsxref("BigInt")}} オブジェクトにラップされたプリミティブ値を返します。

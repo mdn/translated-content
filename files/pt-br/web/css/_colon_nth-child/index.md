@@ -59,9 +59,6 @@ A pseudo-classe **`nth-child`** é usada com apenas um argumento, que representa
   - : Representa todos os elementos `<p>` em um grupo de irmãos. Isso seleciona os mesmos elementos que um simples seletor `p` faria (só que com um nível maior de especificidade).
 - `p:nth-child(1)` or `p:nth-child(0n+1)`
   - : Representa todo `<p>` que seja o primeiro de seu grupo de irmãos. Ele é idêntico ao seletor {{cssxref(":first-child")}} (e tem o mesmo nível de especificidade).
-
-<!---->
-
 - `p:nth-child(n+8):nth-child(-n+15)`
   - : Representa do 8º até o 15º elementos `<p>` de um grupo de irmãos.
 

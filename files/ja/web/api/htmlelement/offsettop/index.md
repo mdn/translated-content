@@ -2,6 +2,7 @@
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetTop`** は読み取り専用プロパティで、現在の要素の外枠から、*最も近い位置にある*祖先要素である {{domxref("HTMLelement.offsetParent", "offsetParent")}} の上枠の内側までの距離を相対的に返します。

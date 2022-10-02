@@ -2,6 +2,7 @@
 title: Vary
 slug: Web/HTTP/Headers/Vary
 ---
+
 {{HTTPSidebar}}
 
 **`Vary`** 是一个 HTTP 响应头部信息，它决定了对于未来的一个请求头，应该用一个缓存的回复 (response) 还是向源服务器请求一个新的回复。它被服务器用来表明在 [content negotiation](/zh-CN/docs/Web/HTTP/Content_negotiation) algorithm（内容协商算法）中选择一个资源代表的时候应该使用哪些头部信息（headers）.
@@ -30,7 +31,7 @@ Vary: <header-name>, <header-name>, ...
 
 ### 动态服务
 
-`哪种情况下使用 Vary: 对于 User-Agent` 头部信息，例如你提供给移动端的内容是不同的，可用防止你客户端误使用了用于桌面端的缓存。 并可帮助 Google 和其他搜索引擎来发现你的移动端版本的页面，同时告知他们不需要[Cloaking](https://en.wikipedia.org/wiki/Cloaking)。
+`哪种情况下使用 Vary: 对于 User-Agent` 头部信息，例如你提供给移动端的内容是不同的，可用防止你客户端误使用了用于桌面端的缓存。并可帮助 Google 和其他搜索引擎来发现你的移动端版本的页面，同时告知他们不需要[Cloaking](https://en.wikipedia.org/wiki/Cloaking)。
 
 ```plain
 Vary: User-Agent

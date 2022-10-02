@@ -2,6 +2,7 @@
 title: Location
 slug: Web/API/Location
 ---
+
 {{APIRef("URLUtils")}}
 
 **`Location`** 接口表示其链接到的对象的位置（URL）。所做的修改反映在与之相关的对象上。 {{domxref("Document")}} 和 {{domxref("Window")}} 接口都有这样一个链接的 Location，分别通过 {{domxref("Document.location")}}和{{domxref("Window.location")}} 访问。
@@ -21,11 +22,11 @@ _`Location` 接口不继承任何属性，但是实现了那些来自 {{domxref(
 - {{domxref("Location.port")}}
   - : 包含端口号的一个{{domxref("DOMString")}}。
 - {{domxref("Location.pathname")}}
-  - : 包含 URL 中路径部分的一个{{domxref("DOMString")}}，开头有一个“`/"。`
+  - : 包含 URL 中路径部分的一个{{domxref("DOMString")}}，开头有一个 `/`。
 - {{domxref("Location.search")}}
   - : 包含 URL 参数的一个{{domxref("DOMString")}}，开头有一个`“?”`。
 - {{domxref("Location.hash")}}
-  - : 包含块标识符的{{domxref("DOMString")}}，开头有一个`“#”。`
+  - : 包含块标识符的{{domxref("DOMString")}}，开头有一个 `#`。
 - {{domxref("Location.username")}}
   - : 包含 URL 中域名前的用户名的一个{{domxref("DOMString")}}。
 - {{domxref("Location.password")}}

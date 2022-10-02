@@ -2,6 +2,7 @@
 title: 位置情報 API
 slug: Web/API/Geolocation_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 **位置情報 API** (Geolocation API) を使用すると、ユーザーが望む場合に、自分の位置情報をウェブアプリケーションに提供することができます。プライバシー上の理由から、ユーザーは位置情報を報告する許可を求められます。

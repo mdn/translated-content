@@ -2,6 +2,7 @@
 title: 使用 Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用[`XMLHttpRequest`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)执行 I/O (尽管`responseXML`和`channel`属性总是为空)。一旦创建， 一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用 Web Worker 的详细介绍。
@@ -626,7 +627,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 ## 嵌入式 worker
 
-目前没有一种「官方」的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入的网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src 特性，并且它的` `type` 特性没有指定成一个可运行的 mime-type，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。「数据块」是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
+目前没有一种「官方」的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入的网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src` 特性，并且它的 `type` 特性没有指定成一个可运行的 `mime-type`，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。「数据块」是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
 
 ```html
 <!DOCTYPE html>

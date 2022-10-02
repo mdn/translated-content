@@ -2,6 +2,7 @@
 title: JavaScriptでの基本演算 — 数値と演算子
 slug: Learn/JavaScript/First_steps/Math
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 今回は JavaScript での数学的処理についてです。我々の命令を実行するために上手く数値を操作するのにどのように {{Glossary("Operator","演算子")}} や、その他の機能を使用できるのかを見ていきましょう。
@@ -32,7 +33,7 @@ slug: Learn/JavaScript/First_steps/Math
 
 **脳みそが溶けそうだと思う前に、少し待ってください！**まず、この講座では十進数しか扱いません。それに「もしかすれば」ですが、他の数値表現について考える機会は訪れないということだってあり得ます。
 
-さらにちょっといいことを教えましょう。いくつかの他のプログラミング言語とは違い、JavaScript には数値(整数と少数の両方)を表すデータ型が一つしかありません。わかりますか？{{jsxref("Number","Number (数値)")}} で、これは整数と小数の両方です。これは JavaScript でどんな型の数値を扱おうとも、それらを全く同じように扱うことが可能だということを意味します。
+さらにちょっといいことを教えましょう。いくつかの他のプログラミング言語とは違い、JavaScript には数値(整数と小数の両方)を表すデータ型が一つしかありません。わかりますか？{{jsxref("Number","Number (数値)")}} で、これは整数と小数の両方です。これは JavaScript でどんな型の数値を扱おうとも、それらを全く同じように扱うことが可能だということを意味します。
 
 > **Note:** 実際に、JavaScript には 2 つ目の数値型である{{Glossary("BigInt")}} があり、これはとても大きな整数に使います。しかしこのコースの目的としては、`Number` の値だけに関心を持つことにします。
 

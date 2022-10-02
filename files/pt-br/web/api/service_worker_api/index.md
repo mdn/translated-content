@@ -27,9 +27,9 @@ O registro inicial de um _service worker_ é feito através do método {{domxref
 
 Nesse estágio, seu service worker seguirá o seguinte ciclo de vida:
 
-1.  Download
-2.  Instalação
-3.  Ativação
+1. Download
+2. Instalação
+3. Ativação
 
 Quando o usuário acessa pela primeira vez um site ou página controlado por um service worker, ele é descarregado imediatamente.
 
@@ -47,7 +47,7 @@ Há também o evento `activate`. O momento em que ele é disparado é geralmente
 
 Seu service worker pode responder a requisições usando o {{domxref("FetchEvent")}}. Você pode manipular a resposta a essas requisições da maneira que quiser, através do método {{domxref("FetchEvent.respondWith")}}.
 
-> **Nota:**Como ` oninstall e ``onactivate ` podem demorar a serem concluídos, a especificação de _service workers_ disponibiliza um método [waitUntil](/pt-BR/docs/Web/API/ExtendableEvent/waitUntil). Ele recebe como parâmetro uma [promessa](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), notificando o navegador que há trabalho em andamento até que aquela promessa seja resolvida. O navegador, portanto, não deverá encerrar o service worker durante esse período de espera.
+> **Nota:**Como `oninstall` e `onactivate` podem demorar a serem concluídos, a especificação de _service workers_ disponibiliza um método [waitUntil](/pt-BR/docs/Web/API/ExtendableEvent/waitUntil). Ele recebe como parâmetro uma [promessa](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), notificando o navegador que há trabalho em andamento até que aquela promessa seja resolvida. O navegador, portanto, não deverá encerrar o service worker durante esse período de espera.
 
 Para um tutorial completo, mostrando como construir seu primeiro exemplo do zero, leia [Usando Service Workers](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 
@@ -105,7 +105,7 @@ No futuro, service workers serão capazes de fazer várias outras coisas úteis 
 - {{domxref("ServiceWorkerRegistration")}}
   - : Representa o registro de um _service worker_.
 - {{domxref("ServiceWorkerState")}} {{experimental_inline}}
-  - : Associado com o estado do [`ServiceWorker`](/pt-BR/docs/Web/API/ServiceWorker "The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.").
+  - : Associado com o estado do [`ServiceWorker`](/pt-BR/docs/Web/API/ServiceWorker).
 - {{domxref("SyncEvent")}} {{non-standard_inline}}
   - : A interface SyncEvent representa uma ação de sincronização que é despachada no {{domxref("ServiceWorkerGlobalScope")}} de um ServiceWorker.
 - {{domxref("SyncManager")}} {{non-standard_inline}}

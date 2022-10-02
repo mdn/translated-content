@@ -12,7 +12,9 @@ El código de error HTTP **`418 Soy una tetera`** indica que el servidor se rehu
 
 ## Estado
 
-    418 I'm a teapot
+```
+418 I'm a teapot
+```
 
 ## Especificaciones
 

@@ -3,6 +3,7 @@ title: JavaScript での継承
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 OOJS のぞっとするような細部はほとんど説明されたので、ここでは”親”クラスからの機能を継承する”子供”のオブジェクトクラス (コンストラクタ) の生成方法について解説します。さらに、いつ、どこで OOJS を使うかについてのアドバイスを提示し、最新の ECMAScript の構文でクラスがどのように扱われるかを見ていきます。
@@ -366,7 +367,7 @@ console.log(snape.subject) // Returns "Balloon animals"
 
 ## プロトタイプチェーンを拡張するための代替案
 
-JavaScript では、上で示したものとは別に、オブジェクトのプロトタイプを拡張する方法がいくつかあります。その他の方法についての詳細は、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Different_ways_to_create_objects_and_the_resulting_prototype_chain)の記事を参照してください。
+JavaScript では、上で示したものとは別に、オブジェクトのプロトタイプを拡張する方法がいくつかあります。その他の方法についての詳細は、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#プロトタイプチェーンを作成・変更する様々な方法)の記事を参照してください。
 
 ## あなたのスキルをテストしてみましょう!
 

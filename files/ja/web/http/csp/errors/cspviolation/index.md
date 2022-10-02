@@ -3,6 +3,7 @@ title: 'Content Security Policy: The page’s settings blocked the loading of a 
   xyz'
 slug: Web/HTTP/CSP/Errors/CSPViolation
 ---
+
 {{HTTPSidebar}}
 
 警告 "Content Security Policy: The page's settings blocked the loading of a resource: xyz" は、`xyz` で指定されたページの CSP 設定が、文書のコンテキストにリソースが読み込まれるのを妨げた場合に発生します。

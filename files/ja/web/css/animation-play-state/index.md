@@ -2,6 +2,7 @@
 title: animation-play-state
 slug: Web/CSS/animation-play-state
 ---
+
 {{CSSRef}}
 
 **`animation-play-state`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションが実行中か停止中かを設定します。

@@ -2,6 +2,7 @@
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ---
+
 {{JSRef}}
 
 **`throw()`** 方法用来向生成器抛出异常，并恢复生成器的执行，返回带有 `done` 及 `value` 两个属性的对象。
@@ -15,7 +16,7 @@ gen.throw(exception)
 ### 参数
 
 - `exception`
-  - : 用于抛出的异常。 使用 {{jsxref("Error")}} 的实例对调试非常有帮助。
+  - : 用于抛出的异常。使用 {{jsxref("Error")}} 的实例对调试非常有帮助。
 
 ### 返回值
 
@@ -24,7 +25,7 @@ gen.throw(exception)
 - `done` (boolean)
 
   - 如果迭代器已经返回了迭代序列的末尾，则值为 `true`。在这种情况下，可以指定迭代器 `value` 的返回值。
-  - 如果迭代能够继续生产在序列中的下一个值，则值为 `false`。 这相当与不指定 done 属性的值。
+  - 如果迭代能够继续生产在序列中的下一个值，则值为 `false`。这相当与不指定 done 属性的值。
 
 - `value` - 迭代器返回的任何 JavaScript 值。当 done 是 true 的时候可以省略。
 

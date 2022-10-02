@@ -2,6 +2,7 @@
 title: グラフィックの描画
 slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 ブラウザーには Scalable Vector Graphics ([SVG](/ja/docs/Web/SVG)) 言語から、HTML {{htmlelement("canvas")}} 要素へ描画するための API ([The Canvas API](/ja/docs/Web/API/Canvas_API) と [WebGL](/ja/docs/Web/API/WebGL_API) を参照) まで、非常に強力なグラフィックプログラミングツールが含まれています。

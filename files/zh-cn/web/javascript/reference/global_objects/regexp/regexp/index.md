@@ -2,6 +2,7 @@
 title: RegExp() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 ---
+
 {{JSRef}}
 
 **`RegExp`** 用于创建正则表达式对象，该对象用于将文本与一个模式匹配

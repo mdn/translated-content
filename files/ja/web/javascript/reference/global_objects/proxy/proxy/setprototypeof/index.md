@@ -2,6 +2,7 @@
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 ---
+
 {{JSRef}}
 
 **`handler.setPrototypeOf()`** メソッドは、 {{jsxref("Object.setPrototypeOf()")}} に対するトラップです。

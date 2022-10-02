@@ -3,6 +3,7 @@ title: image-set()
 slug: Web/CSS/image/image-set
 original_slug: Web/CSS/image/image-set()
 ---
+
 {{cssref}}
 
 **`image-set()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)表記で、主に高解像度の画面において、指定されたセットから最も適切な CSS 画像をブラウザーに選択させる方法です。

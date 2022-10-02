@@ -2,6 +2,7 @@
 title: 'SyntaxError: illegal character'
 slug: Web/JavaScript/Reference/Errors/Illegal_character
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
