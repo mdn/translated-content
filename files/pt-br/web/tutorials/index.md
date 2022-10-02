@@ -142,5 +142,5 @@ Os links nesta página levam a uma variedade de tutoriais e materiais de treinam
 
 ### Estendendo o desenvolvimento
 
-- [WebExtensions](https://developer.mozilla.org/pt-BR/Add-ons/WebExtensions)
-  - : WebExtensions é um sistema entre navegadores para desenvolver complementos de navegador. Em larga escala o sistema é compatível com a [API de extensão](https://developer.chrome.com/extensions) suportada pelos navegadores Google Chrome e Opera. Extensões escritas para estes navegadores na maioria dos casos funcionam no Firefox ou [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/)[ com poucas mudanças](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Porting_from_Google_Chrome). A API é também completamente compatível com [multiprocessos Firefox](https://developer.mozilla.org/pt-BR/Firefox/Multiprocess_Firefox).
+- [WebExtensions](/pt-BR/Add-ons/WebExtensions)
+  - : WebExtensions é um sistema entre navegadores para desenvolver complementos de navegador. Em larga escala o sistema é compatível com a [API de extensão](https://developer.chrome.com/extensions) suportada pelos navegadores Google Chrome e Opera. Extensões escritas para estes navegadores na maioria dos casos funcionam no Firefox ou [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) [com poucas mudanças](/en-US/Add-ons/WebExtensions/Porting_from_Google_Chrome). A API é também completamente compatível com [multiprocessos Firefox](/pt-BR/Firefox/Multiprocess_Firefox).

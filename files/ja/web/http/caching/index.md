@@ -2,6 +2,7 @@
 title: HTTP キャッシュ
 slug: Web/HTTP/Caching
 ---
+
 {{HTTPSidebar}}
 
 過去に取得したリソースを再使用すると、ウェブサイトやアプリケーションのパフォーマンスが大きく向上するでしょう。ウェブキャッシュは遅延やネットワークのトラフィックを削減して、リソースを表示するために必要な時間も短縮します。HTTP キャッシュを使用すると、ウェブサイトの応答性が高まります。
@@ -12,7 +13,7 @@ slug: Web/HTTP/Caching
 
 キャッシュにはさまざまな種類があり、これらはプライベートキャッシュと共有キャッシュの 2 つのカテゴリーに大きく分類できます。*共有キャッシュ*は、複数のユーザーが再使用するためにレスポンスを保存するキャッシュです。*プライベートキャッシュ*は、ひとりのユーザーのためのキャッシュです。このページでは主にブラウザーのキャッシュとプロキシのキャッシュを扱いますが、ウェブサイトやウェブアプリケーションの信頼性、パフォーマンス、規模を向上するためにウェブサーバーで展開されるゲートウェイのキャッシュ、CDN、リバースプロキシのキャッシュ、ロードバランサーも存在します。
 
-![What a cache provide, advantages/disadvantages of shared/private caches.](/en-US/docs/Web/HTTP/Caching/http_cache_type.png)
+![What a cache provide, advantages/disadvantages of shared/private caches.](/ja/docs/Web/HTTP/Caching/http_cache_type.png)
 
 ### プライベートなブラウザーのキャッシュ
 

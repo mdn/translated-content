@@ -47,11 +47,11 @@ Float64Array();
 
 ## Description
 
-ECMAScript 2015 defines a _TypedArray_ constructor that serves as the `[[Prototype]]` of all _TypedArray_ constructors. This constructor is not directly exposed: there is no global `%TypedArray%` or `TypedArray` property. It is only directly accessible through `Object.getPrototypeOf(Int8Array)` and similar. All _TypedArray_s constructors inherit common properties from the `%TypedArray%` constructor function. Additionally, all typed array prototypes (\_TypedArray_`.prototype`) have `%TypedArray%.prototype` as their `[[Prototype]]`.
+ECMAScript 2015 defines a _TypedArray_ constructor that serves as the `[[Prototype]]` of all _TypedArray_ constructors. This constructor is not directly exposed: there is no global `%TypedArray%` or `TypedArray` property. It is only directly accessible through `Object.getPrototypeOf(Int8Array)` and similar. All _TypedArray_s constructors inherit common properties from the `%TypedArray%` constructor function. Additionally, all typed array prototypes (`TypedArray.prototype`) have `%TypedArray%.prototype` as their `[[Prototype]]`.
 
 The `%TypedArray%` constructor on its own is not particularly useful. Calling it or using it in a `new` expression will throw a `TypeError`, except when used during object creation in JS engines that support subclassing. There are at present no such engines, so `%TypedArray%` is only useful to polyfill functions or properties onto all _TypedArray_ constructors.
 
-When creating a _TypedArray_ instance (i.e. instance of Int8Array or similar), an array buffer is created internally (if ArrayBuffer object is present as constructor argument then this array buffer is used) in memory and this buffer address is saved as internal property of that instances, and all the methods of %`TypedArray`%.`prototype `uses that array buffer address to operate on i.e. set value and get value etc.
+When creating a _TypedArray_ instance (i.e. instance of Int8Array or similar), an array buffer is created internally (if ArrayBuffer object is present as constructor argument then this array buffer is used) in memory and this buffer address is saved as internal property of that instances, and all the methods of %`TypedArray`%.`prototype` uses that array buffer address to operate on i.e. set value and get value etc.
 
 ### Property access
 
@@ -114,7 +114,7 @@ Int8Array.prototype.foo = 'bar';
 
 ## TypedArray prototype
 
-All \_TypedArray_s inherit from {{jsxref("TypedArray.prototype")}}.
+All _TypedArrays_ inherit from {{jsxref("TypedArray.prototype")}}.
 
 ### Properties
 
@@ -152,6 +152,6 @@ var dv = new Int8Array([1, 2, 3]);
 
 ## See also
 
-- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays "en/JavaScript typed arrays")
+- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

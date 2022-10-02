@@ -3,6 +3,7 @@ title: WebAssembly.Table.prototype.set()
 slug: WebAssembly/JavaScript_interface/Table/set
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set
 ---
+
 {{JSRef}}
 
 **`set()`** は {{jsxref("WebAssembly.Table")}} オブジェクトのプロトタイプメソッドで、指定された位置に格納されている参照を別な値に変更します。
@@ -77,6 +78,6 @@ WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 
 ## 関連情報
 
-- [WebAssembly](/en-US/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/en-US/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
+- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)

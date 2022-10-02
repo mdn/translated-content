@@ -19,13 +19,13 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}</div>
 
-<p class="summary"><span id="result_box" lang="ru"><span>Гиперссылки действительно важны — </span></span><span lang="ru"><span>они делают Интернет Интернетом.</span> <span>В этой статье представлен синтаксис, необходимый для создания ссылки,  а также обсуждаются лучшие практики обращения со ссылками.</span></span></p>
+<p class="summary">Гиперссылки действительно важны — они делают Интернет Интернетом. В этой статье представлен синтаксис, необходимый для создания ссылки,  а также обсуждаются лучшие практики обращения со ссылками.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Предварительные требования:</th>
-   <td>Базовое <span class="short_text" id="result_box" lang="ru"><span>знакомство с HTML, описанное в статье</span></span> <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">Начало работы c HTML</a>. Форматирование текста в HTML, описанное в статье <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals">Основы редактирования текста в HTML</a>.</td>
+   <td>Базовое знакомство с HTML, описанное в статье <a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">Начало работы c HTML</a>. Форматирование текста в HTML, описанное в статье <a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals">Основы редактирования текста в HTML</a>.</td>
   </tr>
   <tr>
    <th scope="row">Задача:</th>
@@ -36,19 +36,19 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <h2 id="Что_такое_гиперссылка">Что такое гиперссылка?</h2>
 
-<p><span id="result_box" lang="ru"><span class="alt-edited">Гиперссылки — одно из самых интересных нововведений Интернета. Они были особенностью Сети с самого начала, но именно они превращают Интернет в Интернет. Они позволяют нам связывать наши документы с любым другим документом (или ресурсом), с которым мы хотим. С их помощью мы также можем связывать документы с их конкретными частями, и мы можем сделать приложения доступными на простом веб-адресе (сравните это с локальными приложениями, которые должны быть установлены, и другими такими же вещами). Почти любой веб-контент может быть преобразован в ссылку, так что когда вы кликаете по ней (или иным образом активируете), она заставляет веб-браузер перейти на другой веб-адрес</span></span> ({{glossary("URL")}}.)</p>
+<p>Гиперссылки — одно из самых интересных нововведений Интернета. Они были особенностью Сети с самого начала, но именно они превращают Интернет в Интернет. Они позволяют нам связывать наши документы с любым другим документом (или ресурсом), с которым мы хотим. С их помощью мы также можем связывать документы с их конкретными частями, и мы можем сделать приложения доступными на простом веб-адресе (сравните это с локальными приложениями, которые должны быть установлены, и другими такими же вещами). Почти любой веб-контент может быть преобразован в ссылку, так что когда вы кликаете по ней (или иным образом активируете), она заставляет веб-браузер перейти на другой веб-адрес ({{glossary("URL")}}.)</p>
 
 <div class="note">
-<p><span id="result_box" lang="ru"><span class="alt-edited"><strong>Примечание:</strong> URL-адрес может указывать на файлы HTML, текстовые файлы, изображения, текстовые документы, видео и аудиофайлы и все остальное, что может жить в Интернете. Если веб-браузер не знает, как отображать или обрабатывать файл, он спросит вас, хотите ли вы открыть файл (в этом случае обязанность открытия или обработки файла передаётся в соответствующее локальное приложение на устройстве) или загрузить файл (в этом случае вы можете попытаться разобраться с ним позже).</span></span></p>
+<p><strong>Примечание:</strong> URL-адрес может указывать на файлы HTML, текстовые файлы, изображения, текстовые документы, видео и аудиофайлы и все остальное, что может жить в Интернете. Если веб-браузер не знает, как отображать или обрабатывать файл, он спросит вас, хотите ли вы открыть файл (в этом случае обязанность открытия или обработки файла передаётся в соответствующее локальное приложение на устройстве) или загрузить файл (в этом случае вы можете попытаться разобраться с ним позже).</p>
 </div>
 
-<p><span id="result_box" lang="ru"><span>Например, домашняя страница BBC содержит большое количество ссылок, которые указывают не только на множество новостей, но и на различные области сайта (меню), страницы входа / регистрации (пользовательские инструменты) и многое другое.</span></span></p>
+<p>Например, домашняя страница BBC содержит большое количество ссылок, которые указывают не только на множество новостей, но и на различные области сайта (меню), страницы входа / регистрации (пользовательские инструменты) и многое другое.</p>
 
 <p><img alt="frontpage of bbc.co.uk, showing many news items, and navigation menu functionality" src="https://mdn.mozillademos.org/files/12405/bbc-homepage.png" style="display: block; margin: 0 auto;"></p>
 
 <h2 id="Анатомия_ссылки">Анатомия ссылки</h2>
 
-<p><span id="result_box" lang="ru"><span class="alt-edited">Простая ссылка создаётся путём обёртывания текста (или другого содержимого, смотрите  </span></span><a href="#ссылки-блоки">Ссылки-блоки</a><span lang="ru"><span class="alt-edited">), который вы хотите превратить в ссылку, в элемент {{htmlelement ("a")}}, и придания этому элементу атрибута {{htmlattrxref ("href", "a")}} (который также известен как <strong>гипертекстовая ссылка,</strong> или <strong>цель</strong>), который будет содержать веб-адрес, на который вы хотите указать ссылку.</span></span></p>
+<p>Простая ссылка создаётся путём обёртывания текста (или другого содержимого, смотрите  <a href="#ссылки-блоки">Ссылки-блоки</a>), который вы хотите превратить в ссылку, в элемент {{htmlelement ("a")}}, и придания этому элементу атрибута {{htmlattrxref ("href", "a")}} (который также известен как <strong>гипертекстовая ссылка,</strong> или <strong>цель</strong>), который будет содержать веб-адрес, на который вы хотите указать ссылку.</p>
 
 <pre class="brush: html">&lt;p&gt;Я создал ссылку на
   &lt;a href="https://www.mozilla.org/ru/"&gt;домашнюю страницу Mozilla&lt;/a&gt;.
@@ -111,7 +111,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <p><strong>Корень</strong> структуры — каталог  <code>creating-hyperlinks</code>. При работе на локальном веб-сайте у вас будет один каталог, в который входит весь сайт. В корне у нас есть два файла — <code>index.html</code> и <code>contacts.html</code>. На настоящем веб-сайте <code>index.html</code> был бы нашей домашней, или лендинг-страницей (веб-страницей, которая служит точкой входа для веб-сайта или определённого раздела веб-сайта).</p>
 
-<p>В корне есть ещё два каталога —  <code>pdfs</code> и <code>projects</code>. У каждого из них есть один файл внутри — <code>project-brief.pdf</code> и <code>index.html</code>, соответственно. Обратите внимание на то, что вы можете довольно успешно иметь два <code>index.html</code> файла в одном проекте, <span id="result_box" lang="ru"><span>пока они находятся в разных местах файловой системы.</span></span>  Многие веб-сайты так делают. Второй <code>index.html</code><span id="result_box" lang="ru"><span>, возможно, будет главной лендинг-страницей для связанной с проектом информации.</span></span></p>
+<p>В корне есть ещё два каталога —  <code>pdfs</code> и <code>projects</code>. У каждого из них есть один файл внутри — <code>project-brief.pdf</code> и <code>index.html</code>, соответственно. Обратите внимание на то, что вы можете довольно успешно иметь два <code>index.html</code> файла в одном проекте, пока они находятся в разных местах файловой системы.  Многие веб-сайты так делают. Второй <code>index.html</code>, возможно, будет главной лендинг-страницей для связанной с проектом информации.</p>
 
 <ul>
  <li>
@@ -123,7 +123,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 &lt;/p&gt;</pre>
  </li>
  <li>
-  <p><strong>Перемещение вниз в подкаталоги</strong>: Если вы хотите подключить ссылку внутри <code>index.html</code> (верхний уровень <code>index.html<font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">), указывающую на </span></font></code><code>projects/index.html</code>, вам нужно спуститься ниже в директории <code>projects</code> перед тем, как указать файл, который вы хотите. Это делается путём указания имени каталога, после которого идёт слеш и затем имя файла. Итак, URL-адрес, который вы используете - <code>projects/index.html</code>:</p>
+  <p><strong>Перемещение вниз в подкаталоги</strong>: Если вы хотите подключить ссылку внутри <code>index.html</code> (верхний уровень <code>index.html), указывающую на </code><code>projects/index.html</code>, вам нужно спуститься ниже в директории <code>projects</code> перед тем, как указать файл, который вы хотите. Это делается путём указания имени каталога, после которого идёт слеш и затем имя файла. Итак, URL-адрес, который вы используете - <code>projects/index.html</code>:</p>
 
   <pre class="brush: html">&lt;p&gt;Посетите мою
   &lt;a href="projects/index.html"&gt;домашнюю страницу проекта&lt;/a&gt;.
@@ -341,96 +341,13 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 <h2 id="В_этом_модуле">В этом модуле</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">Начало работы с HTML</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/The_head_metadata_in_HTML">Что такое заголовок? Метаданные в HTML</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals">Основы редактирования текста в HTML</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA">Создание гиперссылок</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting">Углублённое форматирование текста</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0_%D0%B8_%D0%B2%D0%B5%D0%B1-%D1%81%D0%B0%D0%B9%D1%82%D0%B0">Структура документа и веб-сайта</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Debugging_HTML">Отладка HTML</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Marking_up_a_letter">Разметка письма</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Structuring_a_page_of_content">Структурируем страницу</a></li>
+ <li><a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">Начало работы с HTML</a></li>
+ <li><a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/The_head_metadata_in_HTML">Что такое заголовок? Метаданные в HTML</a></li>
+ <li><a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals">Основы редактирования текста в HTML</a></li>
+ <li><a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA">Создание гиперссылок</a></li>
+ <li><a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting">Углублённое форматирование текста</a></li>
+ <li><a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0_%D0%B8_%D0%B2%D0%B5%D0%B1-%D1%81%D0%B0%D0%B9%D1%82%D0%B0">Структура документа и веб-сайта</a></li>
+ <li><a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Debugging_HTML">Отладка HTML</a></li>
+ <li><a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Marking_up_a_letter">Разметка письма</a></li>
+ <li><a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Structuring_a_page_of_content">Структурируем страницу</a></li>
 </ul>
-
-<div id="SL_balloon_obj" style="display: block;">
-<div class="SL_ImTranslatorLogo" id="SL_button"></div>
-
-<div id="SL_shadow_translation_result2" class="hidden"></div>
-
-<div id="SL_shadow_translator" class="hidden">
-<div id="SL_planshet">
-<div id="SL_arrow_up" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"></div>
-
-<div id="SL_Bproviders">
-<div class="SL_BL_LABLE_ON" id="SL_P0" title="Google">G</div>
-
-<div class="SL_BL_LABLE_ON" id="SL_P1" title="Microsoft">M</div>
-
-<div class="SL_BL_LABLE_ON" id="SL_P2" title="Translator">T</div>
-</div>
-
-<div id="SL_alert_bbl" class="hidden">
-<div id="SLHKclose" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"></div>
-
-<div id="SL_alert_cont"></div>
-</div>
-
-<div id="SL_TB">
-<table id="SL_tables">
- <tbody>
-  <tr>
-   <td class="SL_td"><input></td>
-   <td class="SL_td"><select><option value="auto">Detect language</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="en">English</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ko">Korean</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="mk">Macedonian</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></td>
-   <td class="SL_td">
-    <div id="SL_switch_b" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Switch languages"></div>
-   </td>
-   <td class="SL_td"><select><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="en">English</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ko">Korean</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="mk">Macedonian</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="ro">Romanian</option><option selected value="ru">Russian</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></td>
-   <td class="SL_td">
-    <div id="SL_TTS_voice" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Listen to the translation"></div>
-   </td>
-   <td class="SL_td">
-    <div class="SL_copy" id="SL_copy" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Copy translation"></div>
-   </td>
-   <td class="SL_td">
-    <div id="SL_bbl_font_patch"></div>
-
-    <div class="SL_bbl_font" id="SL_bbl_font" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Font size"></div>
-   </td>
-   <td class="SL_td">
-    <div id="SL_bbl_help" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Help"></div>
-   </td>
-   <td class="SL_td">
-    <div class="SL_pin_off" id="SL_pin" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Pin pop-up bubble"></div>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-</div>
-
-<div id="SL_shadow_translation_result"></div>
-
-<div class="SL_loading" id="SL_loading" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"></div>
-
-<div id="SL_player2"></div>
-
-<div id="SL_alert100">Text-to-speech function is limited to 200 characters</div>
-
-<div id="SL_Balloon_options" style="background: rgb(255, 255, 255)  repeat scroll 0% 0%;">
-<div id="SL_arrow_down" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"></div>
-
-<table id="SL_tbl_opt" style="width: 100%;">
- <tbody>
-  <tr>
-   <td><input></td>
-   <td>
-    <div id="SL_BBL_IMG" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Show Translator's button 3 second(s)"></div>
-   </td>
-   <td><a class="SL_options" title="Show options">Options</a> : <a class="SL_options" title="Translation History">History</a> : <a class="SL_options" title="ImTranslator Feedback">Feedback</a> : <a class="SL_options" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" title="Make a small contribution">Donate</a></td>
-   <td><span id="SL_Balloon_Close" title="Close">Close</span></td>
-  </tr>
- </tbody>
-</table>
-</div>
-</div>
-</div>

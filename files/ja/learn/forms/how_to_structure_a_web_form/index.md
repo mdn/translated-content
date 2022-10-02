@@ -5,6 +5,7 @@ l10n:
   sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
 original_slug: Learn/Forms/How_to_structure_an_HTML_form
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 基本を押さえた上で、フォームの各パーツに構造と意味を提供している要素について、より詳しく見ていきましょう。
@@ -39,7 +40,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 > **Warning:** フォームの中にフォームを入れ子にすることは厳格に禁じられています。これは予期せぬ動作を発生するおそれがあるので、悪い考えです。
 
-{{HTMLElement("form")}} 要素の外部でもフォームウィジェットを使用できますが、そのフォームウィジェットは [`form`](/en-US/docs/Web/HTML/Element/input#form) 属性を用いて関連付けなければ、どのフォームに対しても何も行わないことに注意してください。これは、フォーム内に包含されていないコントロールを明示的にフォームへ紐付けられるように導入されました。
+{{HTMLElement("form")}} 要素の外部でもフォームウィジェットを使用できますが、そのフォームウィジェットは [`form`](/ja/docs/Web/HTML/Element/input#form) 属性を用いて関連付けなければ、どのフォームに対しても何も行わないことに注意してください。これは、フォーム内に包含されていないコントロールを明示的にフォームへ紐付けられるように導入されました。
 
 それでは、フォームに入れ子になっている構造要素に移動してみましょう。
 

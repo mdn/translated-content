@@ -2,6 +2,7 @@
 title: 'CSP: plugin-types'
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`plugin-types`** ディレクティブは、文書に埋め込むことができるプラグインのセットを、読み込むことができるリソースの種類を制限することによって制限します。

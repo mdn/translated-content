@@ -2,6 +2,7 @@
 title: start_url
 slug: Web/Manifest/start_url
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

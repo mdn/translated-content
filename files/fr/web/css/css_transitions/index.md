@@ -30,9 +30,7 @@ Les **transitions CSS** permettent de créer des transitions harmonieuses entre 
 
 ## Spécifications
 
-| Spécification                                | État                                     | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Transitions')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

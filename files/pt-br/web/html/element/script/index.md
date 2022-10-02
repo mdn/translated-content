@@ -100,7 +100,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     Note that in Firefox you can use advanced features such as let statements and other features in later JS versions, by using `type=application/javascript;version=1.8` {{Non-standard_inline}}. Beware, however, that as this is a non-standard feature, this will most likely break support for other browsers, in particular Chromium-based browsers.
 
-    For how to include _exotic programming languages_, read about [Rosetta](https://developer.mozilla.org/en-US/Add-ons/Code_snippets/Rosetta).
+    For how to include _exotic programming languages_, read about [Rosetta](/en-US/Add-ons/Code_snippets/Rosetta).
 
 ### Atributos obsoletos
 

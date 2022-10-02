@@ -3,6 +3,7 @@ title: 'Document: beforescriptexecute イベント'
 slug: Web/API/Document/beforescriptexecute_event
 original_slug: Web/API/Document/onbeforescriptexecute
 ---
+
 {{APIRef}}{{non-standard_header}}
 
 `beforescriptexecute` イベントは、静的な {{HTMLElement("script")}} が実行されようとするときに発行されます。このイベントは {{domxref("Node.appendChild()", "appendChild()")}} のように動的に要素が追加された場合には発行されません。

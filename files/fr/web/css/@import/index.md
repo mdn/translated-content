@@ -40,16 +40,10 @@ où on a :
 ### Syntaxe formelle
 
 {{csssyntax}}
-
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaires                                                                                                                                                                                      |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Cascade', '#at-ruledef-import', '@import')}} | {{Spec2('CSS3 Cascade')}}         |                                                                                                                                                                                                   |
-| {{SpecName('CSS3 Media Queries', '#media0', '@import')}}     | {{Spec2('CSS3 Media Queries')}} | Extension de la syntaxe afin de prendre en charge n'importe quelle requête média et pas uniquement [celles sur les types de média](/fr/docs/Web/CSS/@media#Types_de_médias).                      |
-| {{SpecName('CSS2.1', 'cascade.html#at-import', '@import')}} | {{Spec2('CSS2.1')}}                 | Prise en charge du type {{cssxref("&lt;string&gt;")}} pour indiquer l'URL d'une feuille de style. Il est désormais nécessaire d'insérer les règles `@import` au début du document CSS. |
-| {{SpecName('CSS1', '#the-cascade', '@import')}}                 | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                                                                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.import")}}
+{{Compat}}

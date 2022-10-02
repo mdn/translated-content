@@ -56,9 +56,13 @@ writing-mode: unset;
 - `tb-rl` {{deprecated_inline}}
   - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `vertical-rl`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemple
 
@@ -167,16 +171,11 @@ Voici un aperçu du résultat avec un navigateur qui prend en charge `writing-mo
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                      |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------- |
-| {{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS3 Writing Modes")}} | Définition initiale                               |
-| {{SpecName("CSS4 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS4 Writing Modes")}} | Ajout des valeurs `sideways-lr` et `sideways-rl`. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.writing-mode")}}
+{{Compat}}
 
 ## Voir aussi
 

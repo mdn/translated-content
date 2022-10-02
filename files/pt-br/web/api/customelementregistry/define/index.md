@@ -11,7 +11,7 @@ Dois tipos de elementos personalizados podem ser criados:
 
 - **Elementos personalizados autônomos**: Elementos autônomos; estes herdam de HTMLElement (Elemento HTML genérico).
 - **Elementos personalizados pré-construídos**: Estes elementos herdam - e estendem - elementos HTML já existentes (p.ej HTMLParagraphElement que é um elemento HTML
-  [`<p>`](/pt-BR/docs/Web/HTML/Element/p "The HTML <p> element represents a paragraph.")).
+  [`<p>`](/pt-BR/docs/Web/HTML/Element/p)).
 
 ## Sintaxe
 
@@ -198,8 +198,8 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ### Criando elemento que desativa a capacidade de utilizar attach no shadow root
 
-Se a classe usada para o elemento contém a propriedade estática \`disabledFeatures\` retornando a string "shadow" isso fará com que {{domxref("Element.attachShadow()")}} retorne um
-{{domxref("DOMException")}} \`NotSupportedError\`.
+Se a classe usada para o elemento contém a propriedade estática `disabledFeatures` retornando a string "shadow" isso fará com que {{domxref("Element.attachShadow()")}} retorne um
+{{domxref("DOMException")}} `NotSupportedError`.
 
 ```js
     class PopUpInfo extends HTMLElement {

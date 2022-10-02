@@ -25,7 +25,7 @@ var currentEventTarget = event.currentTarget;
 function hide(e){
   e.currentTarget.style.visibility = "hidden";
   console.log(e.currentTarget);
-  // 该函数用作事件处理器时: this === e.currentTarget
+  // 该函数用作事件处理器时：this === e.currentTarget
 }
 
 var ps = document.getElementsByTagName('p');

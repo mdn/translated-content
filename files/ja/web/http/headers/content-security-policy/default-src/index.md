@@ -2,6 +2,7 @@
 title: 'CSP: default-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** ディレクティブは、他の CSP {{Glossary("fetch directive", "フェッチディレクティブ")}}の代替として提供します。以下のディレクティブがいずれかが存在しないと、ユーザーエージェントは `default-src` ディレクティブを探して、この値を使用します。

@@ -59,7 +59,7 @@ parentDiv.insertBefore(newNode, sp2); //隐式转换到节点类型
 //实验二结束
 
 //实验三：referenceNode 为字符类型的 "undefined"
-var sp2 = "undefined"; //不存在 id 为"childElement"的referenceNode
+var sp2 = "undefined"; //不存在 id 为"childElement"的 referenceNode
 parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
 //实验三结束
 </script>
@@ -113,7 +113,7 @@ var newElement = document.createElement("div");
 parentElement.insertBefore(newElement, theFirstChild);
 ```
 
-当元素没有首节点时，`firstChild` 返回 `null`。该元素仍然会被插入到父元素中，位于最后一个节点后面。又由于父元素没有第一个子节点，也没有最后一个子节点。 最终，新元素成为唯一的子元素。
+当元素没有首节点时，`firstChild` 返回 `null`。该元素仍然会被插入到父元素中，位于最后一个节点后面。又由于父元素没有第一个子节点，也没有最后一个子节点。最终，新元素成为唯一的子元素。
 
 ## 规范
 

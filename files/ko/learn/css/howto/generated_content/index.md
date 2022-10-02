@@ -113,7 +113,7 @@ p:before{
 }
 ```
 
-[Hide solution](#challenge)[정답 확인.](#tutochallenge "Display a possible solution for the challenge")
+[Hide solution](#challenge)[정답 확인.](#tutochallenge)
 
 ## 다음에는?
 

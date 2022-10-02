@@ -10,7 +10,7 @@ original_slug: Web/CSS/transform-function/matrix3d()
 
 ## 语法
 
-`matrix3d()` 函数由 16 个参数指定. 这些参数以列为主的顺序进行描述。
+`matrix3d()` 函数由 16 个参数指定。这些参数以列为主的顺序进行描述。
 
 ```
 matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)

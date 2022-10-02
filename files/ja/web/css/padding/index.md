@@ -2,6 +2,7 @@
 title: padding
 slug: Web/CSS/padding
 ---
+
 {{CSSRef}}
 
 **`padding`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素の全四辺の[パディング領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#パディング領域)を一度に設定します。
@@ -18,7 +19,7 @@ slug: Web/CSS/padding
 
 - {{cssxref("padding-bottom")}}
 - {{cssxref("padding-left")}}
-- {{cssxref("padding-right")}}}
+- {{cssxref("padding-right")}}
 - {{cssxref("padding-top")}}
 
 ## 構文

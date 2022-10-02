@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/shadowBlur
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.shadowBlur`** 是 Canvas 2D API 描述模糊效果程度的属性； 它既不对应像素值也不受当前转换矩阵的影响。 默认值是 0。
+**`CanvasRenderingContext2D.shadowBlur`** 是 Canvas 2D API 描述模糊效果程度的属性；它既不对应像素值也不受当前转换矩阵的影响。默认值是 0。
 
 ## 语法
 
@@ -14,7 +14,7 @@ ctx.shadowBlur = level;
 ```
 
 - `level`
-  - : 描述模糊效果程度的，float 类型的值。默认值是 0。 负数、 {{jsxref("Infinity")}} 或者 {{jsxref("NaN")}} 都会被忽略。
+  - : 描述模糊效果程度的，float 类型的值。默认值是 0。负数、 {{jsxref("Infinity")}} 或者 {{jsxref("NaN")}} 都会被忽略。
 
 ## 示例
 

@@ -2,6 +2,7 @@
 title: コンテキストメニュー項目
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 ---
+
 {{AddonSidebar}}
 
 このユーザーインターフェイスオプションは、ブラウザーのコンテキストメニューに 1 つ以上の項目を追加します。これはユーザーがウェブページを右クリックした時に利用できるコンテキストメニューです。タブも [browser.menus API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus) を通じてコンテキストメニューを持つことができます。

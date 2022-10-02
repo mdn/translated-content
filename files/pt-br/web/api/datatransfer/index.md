@@ -5,7 +5,7 @@ translation_of: Web/API/DataTransfer
 ---
 {{APIRef("HTML DOM")}}
 
-{{ gecko_minversion_header("1.9") }} O objeto `DataTransfer` é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar). Ele pode guardar um ou mais itens de dados, cada um de um ou mais tipos de dados. Para mais informações sobre drag e drop (arrastar e soltar), veja [Drag and Drop](/En/DragDrop/Drag_and_Drop "En/DragDrop/Drag and Drop").
+{{ gecko_minversion_header("1.9") }} O objeto `DataTransfer` é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar). Ele pode guardar um ou mais itens de dados, cada um de um ou mais tipos de dados. Para mais informações sobre drag e drop (arrastar e soltar), veja [Drag and Drop](/En/DragDrop/Drag_and_Drop).
 
 Esse objeto está disponível pela propriedade `dataTransfer` de todos os eventos de drag. Ele não pode ser criado separadamente.
 
@@ -13,14 +13,14 @@ Esse objeto está disponível pela propriedade `dataTransfer` de todos os evento
 
 | Propriedades                                                                                                                                                 | Tipo                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| [`dropEffect`](#dropEffect.28.29 "En/DragDrop/DataTransfer#dropEffect")                                                                                      | [`String`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String "en/String")            |
-| [`effectAllowed`](#effectAllowed.28.29 "En/DragDrop/DataTransfer#effectAllowed")                                                                             | [`String`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String "en/String")            |
-| [`files`](#files.28.29 "En/DragDrop/DataTransfer#files") {{ gecko_minversion_inline("1.9.2") }}                                                | {{ domxref("FileList") }}                                                                                       |
-| [`mozCursor`](#mozCursor "En/DragDrop/DataTransfer#mozCursor") {{ non-standard_inline() }} {{ gecko_minversion_inline("1.9.1") }}     | [`String`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String "en/String")            |
-| [`mozItemCount`](#mozItemCount.28.29 "En/DragDrop/DataTransfer#mozItemCount") {{ non-standard_inline() }}                                           | `unsigned long`                                                                                                        |
-| [`mozSourceNode`](#mozSourceNode "En/DragDrop/DataTransfer#mozSourceNode") {{ non-standard_inline() }} {{ gecko_minversion_inline("2") }} | {{ domxref("Node") }}                                                                                           |
-| [`mozUserCancelled`](#mozUserCancelled "En/DragDrop/DataTransfer#mozUserCancelled")                                                                          | [`Boolean`](/en/JavaScript/Reference/Global_Objects/Boolean "en/Core JavaScript 1.5 Reference/Global Objects/Boolean") |
-| [`types`](#types.28.29 "En/DragDrop/DataTransfer#types")                                                                                                     | [`DOMStringList`](/en-US/docs/Web/API/DOMStringList "en-US/docs/Web/API/DOMStringList")                                |
+| [`dropEffect`](#dropEffect.28.29)                                                                                      | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
+| [`effectAllowed`](#effectAllowed.28.29)                                                                             | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
+| [`files`](#files.28.29) {{ gecko_minversion_inline("1.9.2") }}                                                | {{ domxref("FileList") }}                                                                                       |
+| [`mozCursor`](#mozCursor) {{ non-standard_inline() }} {{ gecko_minversion_inline("1.9.1") }}     | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
+| [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }}                                           | `unsigned long`                                                                                                        |
+| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }} {{ gecko_minversion_inline("2") }} | {{ domxref("Node") }}                                                                                           |
+| [`mozUserCancelled`](#mozUserCancelled)                                                                          | [`Boolean`](/en/JavaScript/Reference/Global_Objects/Boolean) |
+| [`types`](#types.28.29)                                                                                                     | [`DOMStringList`](/en-US/docs/Web/API/DOMStringList)                                |
 
 ## Visão geral dos métodos
 
@@ -43,7 +43,7 @@ O efeito atual que será usado, e deve sempre ser um dos possíveis valores de `
 
 Para os eventos `dragenter` e `dragover`, o `dropEffect` será inicializado com base na ação que o usuário está solicitando. Como isso é determinado é específico da plataforma, mas, normalmente o usuário pode pressionar teclas de modificação, como a tecla alt, para ajustar qual ação é desejada. Com um manipulador de evento para os eventos `dragenter` e `dragover, o dropEffect` deverá ser modificado se a ação desejada é diferente da ação que o usuário está solicitando.
 
-Para os eventos `dragstart, drag,` e `dragleave`, o `dropEffect` será inicializado como "none". Qualquer valor atribuído à `dropEffect` será definido, mas o valor não será usado para nada.
+Para os eventos `dragstart`, `drag`, e `dragleave`, o `dropEffect` será inicializado como "none". Qualquer valor atribuído à `dropEffect` será definido, mas o valor não será usado para nada.
 
 Para os eventos `drop` e `dragend`, o `dropEffect` será inicializado para a ação que foi desejada, que será o valor que o `dropEffect` tinha depois do último evento de `dragenter` ou `dragover`. Em um evento de dragend, por exemplo, se a o `dropEffect` desejado for "move", então os dados que estão sendo arrastados deverão ser removidos da origem.
 
@@ -308,4 +308,4 @@ Holds a list of the format types of the data that is stored for an item at the s
 
 ## See also
 
-[Drag and Drop](/En/DragDrop/Drag_and_Drop "Drag and Drop")
+[Drag and Drop](/En/DragDrop/Drag_and_Drop)

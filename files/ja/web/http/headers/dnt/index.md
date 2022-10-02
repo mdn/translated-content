@@ -2,6 +2,7 @@
 title: DNT
 slug: Web/HTTP/Headers/DNT
 ---
+
 {{HTTPSidebar}}{{Deprecated_header}}
 
 **`DNT`** (**D**o **N**ot

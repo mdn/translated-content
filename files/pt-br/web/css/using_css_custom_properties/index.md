@@ -186,8 +186,8 @@ Porém, o CSS introduz a noção de "variáveis em cascata" para ajudar a soluci
 
 Variáveis CSS atualmente têm duas formas:
 
-- variáveis, que são uma associação entre um indentificador e um valor que pode ser usado em substituição a valores comuns, usando a notação funcional `var(): var(--variavel-exemplo) `retorna o valor de `--variavel-exemplo`.
-- propriedades customizadas, que são propriedades especiais na forma de `--* `onde \* representa o nome da variável. Estas variáveis são usadas para definir os valores de uma certa variável: `--variavel-exemplo: 20px;` é uma declaração CSS, usando a propriedade customizada `--*` para definir o valor da variável CSS `--variavel-exemplo` para `20px`.
+- variáveis, que são uma associação entre um indentificador e um valor que pode ser usado em substituição a valores comuns, usando a notação funcional `var(): var(--variavel-exemplo)` retorna o valor de `--variavel-exemplo`.
+- propriedades customizadas, que são propriedades especiais na forma de `--*` onde \* representa o nome da variável. Estas variáveis são usadas para definir os valores de uma certa variável: `--variavel-exemplo: 20px;` é uma declaração CSS, usando a propriedade customizada `--*` para definir o valor da variável CSS `--variavel-exemplo` para `20px`.
 
 > **Note:** **Nota:** O prefixo de propriedade customizada era `var-` na especificação anterior, porém mudou posteriormente para `--`. O Firefox 31 e superior seguem a nova especificação. ({{ bug(985838) }})
 
@@ -334,7 +334,7 @@ Neste caso o valor de `var(--test)` são:
 
 O conceito clássico de validade, ligado a cada propriedade, não é muito útil em relação a propriedades customizadas. Quando os valores das propriedades customizadas são analizados, o _browser_ não sabe onde a mesma será usada, logo, deve considerar quase todos os valores como _válidos_.
 
-Infelizmente estes valores podem ser usados, via a notação funcional `var(),` em um contexto em que não façam sentido. Propriedades e variáveis customizadas podem levar a declações CSS inválidas, criando um novo conceito de _válido no momento da computação_.\_\_
+Infelizmente estes valores podem ser usados, via a notação funcional `var()`, em um contexto em que não façam sentido. Propriedades e variáveis customizadas podem levar a declações CSS inválidas, criando um novo conceito de _válido no momento da computação_.
 
 ## Compatibilidade com navegadores
 

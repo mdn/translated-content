@@ -4753,6 +4753,7 @@
 /fr/docs/Web/HTTP/Cache	/fr/docs/Web/HTTP/Caching
 /fr/docs/Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent	/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /fr/docs/Web/HTTP/FAQ_sur_le_préchargement_des_liens	/fr/docs/Web/HTTP/Link_prefetching_FAQ
+/fr/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
 /fr/docs/Web/HTTP/Headers/Serveur	/fr/docs/Web/HTTP/Headers/Server
 /fr/docs/Web/HTTP/Index	/fr/docs/Web/HTTP
 /fr/docs/Web/HTTP/Méthode	/fr/docs/Web/HTTP/Methods
@@ -4936,7 +4937,7 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes	/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /fr/docs/Web/JavaScript/Reference/Global_Objects/String/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
@@ -6367,6 +6368,7 @@
 /fr/docs/conflicting/Web/HTML/Global_attributes	/fr/docs/Web/HTML/Global_attributes
 /fr/docs/conflicting/Web/HTTP	/fr/docs/Web/HTTP
 /fr/docs/conflicting/Web/HTTP/Basics_of_HTTP/MIME_types	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+/fr/docs/conflicting/Web/HTTP/Headers/Content-Security-Policy	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
 /fr/docs/conflicting/Web/HTTP/Status/404	/fr/docs/Web/HTTP/Status/404
 /fr/docs/conflicting/Web/HTTP/Status/502	/fr/docs/Web/HTTP/Status/502
 /fr/docs/conflicting/Web/JavaScript/Equality_comparisons_and_sameness	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
@@ -6411,6 +6413,7 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Set	/fr/docs/Web/JavaScript/Reference/Global_Objects/Set
+/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer	/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb	/fr/docs/Web/JavaScript/Reference/Global_Objects/String

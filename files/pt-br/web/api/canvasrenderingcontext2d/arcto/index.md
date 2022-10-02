@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/arcTo
 ---
 {{APIRef}}
 
-O método **`CanvasRenderingContext2D`\*\***`.arcTo()`\*\* da API 2D do Canvas adiciona um arco ao caminho quando fornecemos seus pontos de controle e raio.
+O método **`CanvasRenderingContext2D.arcTo()`** da API 2D do Canvas adiciona um arco ao caminho quando fornecemos seus pontos de controle e raio.
 
 O arco será parte de um círculo, nunca de uma elipse. Frequentemente é usado para fazer cantos arredoondados.
 

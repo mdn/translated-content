@@ -2,6 +2,7 @@
 title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
+
 {{AddonSidebar()}}
 
 通知を生成、表示します。

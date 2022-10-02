@@ -2,6 +2,7 @@
 title: border-inline-end
 slug: Web/CSS/border-inline-end
 ---
+
 {{CSSRef}}
 
 **`border-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なインライン方向の末尾側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。

@@ -25,13 +25,13 @@ with (expressão)
 - `expressão`
   - : Adiciona a dada expressão à cadeia de escopo quando estiver avaliando a declaração. O parênteses em volta da expressão é obrigatório.
 - `declaração`
-  - : Qualquer declaração. Para executação multiplas declarações, utilize a declaração em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block "JavaScript/Reference/Statements/block") ({ ... }) para agrupar estas declarações.
+  - : Qualquer declaração. Para executação multiplas declarações, utilize a declaração em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block) ({ ... }) para agrupar estas declarações.
 
 ## Descrição
 
 JavaScript procura por um nome não qualificado procurando uma cadeia de escopo associada à execução do contexto do script ou função contendo um nome não qualificado. A declaração 'with' adiciona o dado objeto à frenet dessa cadeia de escopo durante a validação desse corpo de declarações. Se um nome não qualificado usado no corpo for igual ao de uma propriedade na cadeia de escopo, então o nome ficará ligado à propriedade e ao objeto contendo a propriedade. Senão, um {{jsxref("ReferenceError")}} será invocado.
 
-> **Nota:** Usar `with` não é recomendado, e está probido no [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode "JavaScript/Strict mode") do ECMAScript 5. A alternativa recomendada é atribuir o objeto cujas propriedades você quer acessar a uma variável temporária.
+> **Nota:** Usar `with` não é recomendado, e está probido no [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode) do ECMAScript 5. A alternativa recomendada é atribuir o objeto cujas propriedades você quer acessar a uma variável temporária.
 
 ### Pros & contras de perfomance
 
@@ -69,7 +69,7 @@ Se você chamar `f([1,2,3], obj)` em um ambiente ECMAScript 5, então a referên
 
 ### Usando `with`
 
-A seguinte declaração `with` irá especificar que o objeto [`Math`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math "JavaScript/Reference/Global_Objects/Math") é o objeto padrão. As seguintes declarações seguindo a declaração `with` irão referir a propriedade [`PI`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/PI "JavaScript/Reference/Global_Objects/Math/PI") e aos métodos [`cos`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/cos "JavaScript/Reference/Global_Objects/Math/cos") e [`sin`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin "JavaScript/Reference/Global_Objects/Math/sin"), sem especificar um objeto. JavaScript assume o objeto `Math` para essas referências.
+A seguinte declaração `with` irá especificar que o objeto [`Math`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math) é o objeto padrão. As seguintes declarações seguindo a declaração `with` irão referir a propriedade [`PI`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) e aos métodos [`cos`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) e [`sin`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin), sem especificar um objeto. JavaScript assume o objeto `Math` para essas referências.
 
 ```js
 var a, x, y;

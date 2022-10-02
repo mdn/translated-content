@@ -2,6 +2,7 @@
 title: Document.write()
 slug: Web/API/Document/write
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.write()`** メソッドは、テキストの文字列を {{domxref("document.open()")}} で開かれた文書ストリームに書き込みます。

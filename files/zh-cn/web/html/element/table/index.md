@@ -82,7 +82,7 @@ slug: Web/HTML/Element/table
 
     > **备注：** 不要使用这个属性，它已经不赞成被使用。{{HTMLElement("table")}} 元素应该使用[CSS](/zh-CN/docs/CSS) 制定样式。设置 {{cssxref("margin-left")}} 、{{cssxref("margin-right")}} 为 `auto` ( 或者 {{cssxref("margin")}} `设置为 0 auto`) 来实现类似于 align 属性的效果。
     >
-    > Firefox 4 之前的版本，在 quirks mode 模式下它还支持 `middle，` `absmiddle` `和近似于 center 的 abscenter`。
+    > Firefox 4 之前的版本，在 quirks mode 模式下它还支持 `middle`，`absmiddle` 和近似于 `center` 的 `abscenter`。
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
   - : 这个属性定义了表格的背景颜色。它是一个 6 位的十六进制编码，定义于 [sRGB](http://www.w3.org/Graphics/Color/sRGB)，需要加上'#'作为前缀。当然也可以使用下面已经被预先定义的字符串，来表示常用的 16 种颜色。
 

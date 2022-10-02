@@ -2,6 +2,7 @@
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
 ---
+
 {{CSSRef}}
 
 **`aspect-ratio`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの**推奨アスペクト比**を設定します。これは auto の大きさを計算したり、他のレイアウト関数で使用されたりします。

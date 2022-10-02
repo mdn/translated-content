@@ -2,6 +2,7 @@
 title: バッジ付きリストグループ
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
 ---
+
 {{CSSRef}}
 
 このレシピでは、カウントを示すバッジ付きのリストグループのパターンを作成します。

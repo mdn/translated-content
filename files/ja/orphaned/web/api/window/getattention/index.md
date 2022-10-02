@@ -3,6 +3,7 @@ title: window.getAttention
 slug: orphaned/Web/API/Window/getAttention
 original_slug: Web/API/Window/getAttention
 ---
+
 {{ApiRef}}
 
 ## 概要

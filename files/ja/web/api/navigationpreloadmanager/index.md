@@ -2,6 +2,7 @@
 title: NavigationPreloadManager
 slug: Web/API/NavigationPreloadManager
 ---
+
 {{APIRef("Service Workers API")}}
 
 [Service Worker API](/ja/docs/Web/API/Service_Worker_API) の **`NavigationPreloadManager`** インターフェイスは、サービスワーカーによるリソースのプリロード（事前読み込み）を管理するためのメソッドを提供します。

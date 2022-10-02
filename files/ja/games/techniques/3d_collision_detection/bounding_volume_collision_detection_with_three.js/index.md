@@ -2,6 +2,7 @@
 title: THREE.js によるバウンディングボリューム衝突検出
 slug: Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
 ---
+
 {{GamesSidebar}}
 
 この記事では、**Three.js ライブラリーを使用してバウンディングボックスとバウンディングスフィアの間の衝突検出**を実装する方法を示します。 これを読む前に、まず[三次元の衝突検出](/ja/docs/Games/Techniques/3D_collision_detection)の紹介記事を読み、かつ Three.js に関する基本的な知識があることを前提としています。

@@ -2,6 +2,7 @@
 title: Node.parentNode
 slug: Web/API/Node/parentNode
 ---
+
 {{APIRef("DOM")}}
 
 **`parentNode`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、 DOM ツリー内の特定のノードの親ノードを返します。

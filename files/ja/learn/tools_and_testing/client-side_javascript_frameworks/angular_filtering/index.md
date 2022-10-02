@@ -2,6 +2,7 @@
 title: To Do アイテムのフィルタリング
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 次に、ユーザーが To Do アイテムをフィルタリングできるようにする機能を追加して、アクティブなアイテム、完了したアイテム、またはすべてのアイテムを表示できるようにしましょう。

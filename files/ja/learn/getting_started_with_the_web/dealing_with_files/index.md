@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 l10n:
   sourceCommit: 8ea72d18cda0ced287d9955621061e20a99bb003
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
 ウェブサイトは、テキストコンテンツ、コード、スタイルシート、メディアコンテンツなど、多くのファイルで構成されています。ウェブサイトを構築するときは、これらのファイルをローカルコンピューター上の適切な構造に組み立て、互いに呼び出すことができるようにして、最終的に[サーバーにアップロード](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)する前に、すべてのコンテンツを正しいものにする必要があります。「ファイルの扱い」では、ウェブサイトに適切なファイル構造を設定できるように、注意すべきいくつかの問題について説明します。

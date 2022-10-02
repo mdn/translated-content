@@ -81,7 +81,7 @@ peopleElem.appendChild(personElem2);
 doc.appendChild(peopleElem);
 ```
 
-Veja também o capítulo [DOM chapter of the XUL Tutorial](/en/XUL_Tutorial/Document_Object_Model "en/XUL_Tutorial/Document_Object_Model").
+Veja também o capítulo [DOM chapter of the XUL Tutorial](/en/XUL_Tutorial/Document_Object_Model).
 
 Você pode automatizar a criação de uma árvore DOM usando um [algoritmo reverso JXON](/en/JXON#JXON_reverse_algorithms) em associação com a seguinte representação JSON:
 
@@ -129,15 +129,15 @@ Você pode automatizar a criação de uma árvore DOM usando um [algoritmo rever
 
 ### E daí?
 
-As árvores DOM podem ser consultadas [usando expressões XPath](/en/Using_XPath), convertidas em strings ou gravadas em arquivos locais ou remotos usando [XMLSerializer](/en/Parsing_and_serializing_XML) (sem ter que primeiro converter para uma string), [POSTed para um servidor web](/en/DOM/XMLHttpRequest) (via XMLHttpRequest), transformado usando [XSLT](/en/XSLT "en/XSLT"), [XLink](/en/XLink "en/XLink"), convertido para um objeto JavaScript através de um [algoritmo JXON](/en/JXON), etc.
+As árvores DOM podem ser consultadas [usando expressões XPath](/en/Using_XPath), convertidas em strings ou gravadas em arquivos locais ou remotos usando [XMLSerializer](/en/Parsing_and_serializing_XML) (sem ter que primeiro converter para uma string), [POSTed para um servidor web](/en/DOM/XMLHttpRequest) (via XMLHttpRequest), transformado usando [XSLT](/en/XSLT), [XLink](/en/XLink), convertido para um objeto JavaScript através de um [algoritmo JXON](/en/JXON), etc.
 
 Você pode usar árvores DOM para modelar dados que não são adequados para RDF (ou talvez você simplesmente não goste de RDF). Outra aplicação é que, uma vez que XUL é XML, a UI de sua aplicação pode ser manipulada, baixada, carregada, salva, carregada, convertida ou transformada de forma bastante fácil.
 
 ## Veja também
 
-- [XML](/en/XML "en/XML")
-- [JXON](/en/JXON "en/JXON")
-- [XPath](/en/XPath "en/XPath")
-- [E4X (ECMAScript for XML)](/en/E4X "en/E4X")
-- [Parsing and serializing XML](/en/Parsing_and_serializing_XML "en/Parsing_and_serializing_XML")
-- [XMLHttpRequest](/en/DOM/XMLHttpRequest "en/XMLHttpRequest")
+- [XML](/en/XML)
+- [JXON](/en/JXON)
+- [XPath](/en/XPath)
+- [E4X (ECMAScript for XML)](/en/E4X)
+- [Parsing and serializing XML](/en/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/en/DOM/XMLHttpRequest)

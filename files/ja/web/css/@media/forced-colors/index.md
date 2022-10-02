@@ -2,6 +2,7 @@
 title: forced-colors
 slug: Web/CSS/@media/forced-colors
 ---
+
 {{CSSRef}}
 
 **`forced-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)で、{{Glossary("user agent", "ユーザーエージェント")}}が強制カラーモードを有効にしているかどうかを検出するために使用されます。強制カラーモードの例としては、 Windows のハイコントラストモードがあります。

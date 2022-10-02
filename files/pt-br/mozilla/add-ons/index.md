@@ -9,15 +9,15 @@ translation_of: Mozilla/Add-ons
 ---
 {{AddonSidebar}}Modifique e amplie os aplicativos da Mozilla
 
-**Complementos** acrescentam novas funcionalidades para os aplicativos baseados no [Gecko](/pt-BR/docs/Mozilla/Gecko "Informações do Gecko") tais como Firefox, SeaMonkey e Thunderbird. Há dois tipos de complementos principais [Extensões](/pt-BR/docs/Mozilla/Add-ons/Gerenciador_de_Add-on#Extensoes) adicionam novas características para o aplicativo, enquanto [Temas](/pt-BR/docs/Mozilla/Add-ons/Temas) modificam a interface do aplicativo do usuário.
+**Complementos** acrescentam novas funcionalidades para os aplicativos baseados no [Gecko](/pt-BR/docs/Mozilla/Gecko) tais como Firefox, SeaMonkey e Thunderbird. Há dois tipos de complementos principais [Extensões](/pt-BR/docs/Mozilla/Add-ons/Gerenciador_de_Add-on#Extensoes) adicionam novas características para o aplicativo, enquanto [Temas](/pt-BR/docs/Mozilla/Add-ons/Temas) modificam a interface do aplicativo do usuário.
 
-Para ambos, extensões e temas, a Mozilla opera o repositório em [addons.mozilla.org](https://addons.mozilla.org "Ir para a página de Complementos"), também conhecido como AMO. Quando você [Envia complementos para o AMO](/pt-BR/docs/Mozilla/Add-ons/Enviando-um-complemento-para-o-AMO "Enviando seu complemento") eles são revisados e depois de passados na revisão, são disponibilizados aos usuários. Você não tem que enviar complementos para AMO, mas se enviar, os usuários terão mais confiança no fato de que eles foram revisados, e você pode se beneficiar da visibilidade AMO como uma fonte confiável para complementos úteis.
+Para ambos, extensões e temas, a Mozilla opera o repositório em [addons.mozilla.org](https://addons.mozilla.org), também conhecido como AMO. Quando você [Envia complementos para o AMO](/pt-BR/docs/Mozilla/Add-ons/Enviando-um-complemento-para-o-AMO) eles são revisados e depois de passados na revisão, são disponibilizados aos usuários. Você não tem que enviar complementos para AMO, mas se enviar, os usuários terão mais confiança no fato de que eles foram revisados, e você pode se beneficiar da visibilidade AMO como uma fonte confiável para complementos úteis.
 
 O termo "complemento"(Add-ons) inclui plugins, extensões, temas, e plug-ins de mecanismos de busca (tal como google, bing, etc.).
 
-O [Gerenciador de complementos](/pt-BR/docs/Mozilla/Add-ons/Gerenciador_de_Add-on "Addons/Add-on Manager") pode afetar o comportamento do aplicativo que o hospeda. Nós desenvolvemos [orientações de complementos](/pt-BR/docs/Mozilla/Add-ons/Orientacoes-de-complementos "/Add-ons/Orientacoes-de-complementos") para ajudar a garantir que eles proveriam uma boa experiência para os usuários. Estas orientações se aplicam em todos tipos de complementos, mesmo se eles são hospedados em [addons.mozilla.org](https://addons.mozilla.org "Ir para a página de Complementos") ou não.
+O [Gerenciador de complementos](/pt-BR/docs/Mozilla/Add-ons/Gerenciador_de_Add-on) pode afetar o comportamento do aplicativo que o hospeda. Nós desenvolvemos [orientações de complementos](/pt-BR/docs/Mozilla/Add-ons/Orientacoes-de-complementos) para ajudar a garantir que eles proveriam uma boa experiência para os usuários. Estas orientações se aplicam em todos tipos de complementos, mesmo se eles são hospedados em [addons.mozilla.org](https://addons.mozilla.org) ou não.
 
-O [Gerenciador de complementos](/pt-BR/docs/Mozilla/Add-ons/Gerenciador_de_Add-on "Addons/Add-on Manager") dá acesso aos complementos a fim de determinar o que está disponível, instalar, remover, desativar e atualizar.
+O [Gerenciador de complementos](/pt-BR/docs/Mozilla/Add-ons/Gerenciador_de_Add-on) dá acesso aos complementos a fim de determinar o que está disponível, instalar, remover, desativar e atualizar.
 
 ## Extensões
 

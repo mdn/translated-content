@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Operators/in
 ---
 {{jsSidebar("Operators")}}
 
-O **operador** **`in` **retorna `true` se a propriedade especificada estiver no objeto especificado ou na sua cadeia de protótipo (prototype chain) desde objeto.
+O **operador** **`in`** retorna `true` se a propriedade especificada estiver no objeto especificado ou na sua cadeia de protótipo (prototype chain) desde objeto.
 
 ## Sintaxe
 
@@ -47,7 +47,7 @@ var mycar = {make: 'Honda', model: 'Accord', year: 1998};
 'model' in mycar // retorna true
 ```
 
-Você precisa especificar um objeto no lado direito do operador `in`. Por exemplo, você pode especifica um string criado com o construtor `String,` mas você não pode especificar um string literal.
+Você precisa especificar um objeto no lado direito do operador `in`. Por exemplo, você pode especifica um string criado com o construtor `String`, mas você não pode especificar um string literal.
 
 ```js
 var color1 = new String('green');

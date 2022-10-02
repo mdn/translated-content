@@ -2,6 +2,7 @@
 title: text-transform
 slug: Web/CSS/text-transform
 ---
+
 {{CSSRef}}
 
 **`text-transform`** は CSS のプロパティで、要素のテキストを大文字表記する方法を指定します。テキストをすべて大文字にしたり、すべて小文字にしたり、各単語の先頭を大文字にしたりすることを指定します。フリガナの読みやすさを向上するのにも役立ちます。

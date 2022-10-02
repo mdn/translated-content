@@ -2,6 +2,7 @@
 title: PushManager.subscribe()
 slug: Web/API/PushManager/subscribe
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 {{domxref("PushManager")}} インターフェースの **`subscribe()`** メソッドは、プッシュサービスを提供します。

@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Guide/Declarações
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
-O JavaScript suporta um conjunto compacto de\*\* \*\*declarações, especificamente de fluxo de controle, que você pode utilizar para atribuir uma grande interatividade a páginas web. Este capítulo fornece uma visão geral destas declarações.
+O JavaScript suporta um conjunto compacto de declarações, especificamente de fluxo de controle, que você pode utilizar para atribuir uma grande interatividade a páginas web. Este capítulo fornece uma visão geral destas declarações.
 
 Veja a [Referência do JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Statements) para detalhes sobre as declarações mostradas neste capítulo. No código em JavaScript, o caractere ponto e vírgula (`;`) é utilizado para separar declarações.
 
@@ -175,11 +175,11 @@ switch (expressao) {
 
 O programa primeiramente procura por uma cláusula `case` com um rótulo que corresponda ao valor da expressão e então transfere o controle para aquela cláusula, executando as declaracoes associadas. Se nenhum rótulo correspondente é encontrado, o programa procura pela cláusula opcional `default` e, se encontrada, transfere o controle àquela cláusula, executando as declarações associadas. Se nenhuma cláusula `default` é encontrada, o programa continua a execução a partir da declaracao seguinte ao `switch`. Por convenção, a cláusula `default` é a última, mas não é necessário que seja assim.
 
-A instrução `break` associada a cada cláusula `case,` garante que o programa sairá do `switch` assim que a declaração correspondente for executada e que continuará a execução a partir da declaração seguinte ao `switch`. Se a declaração `break` for omitida, o programa continua a execução a partir da próxima declaração dentro do `switch`.
+A instrução `break` associada a cada cláusula `case`, garante que o programa sairá do `switch` assim que a declaração correspondente for executada e que continuará a execução a partir da declaração seguinte ao `switch`. Se a declaração `break` for omitida, o programa continua a execução a partir da próxima declaração dentro do `switch`.
 
 #### Exemplo
 
-No exemplo a seguir, se `tipofruta` for avaliada como "`Banana`", o programa faz a correspondência do valor com `case `"`Banana`" e executa a declaração associada. Quando o `break` é encontrado, o programa termina o `switch` e executa a declaração seguinte ao condicional. Se o `break` fosse omitido, a declaração de `case `"`Cereja`" também seria executada.
+No exemplo a seguir, se `tipofruta` for avaliada como `"Banana"`, o programa faz a correspondência do valor com case `"Banana"` e executa a declaração associada. Quando o `break` é encontrado, o programa termina o `switch` e executa a declaração seguinte ao condicional. Se o `break` fosse omitido, a declaração de case `"Cereja"` também seria executada.
 
 ```js
 switch (tipofruta) {
@@ -261,7 +261,7 @@ throw new UserException("Valor muito alto");
 
 A declaração `try...catch` coloca um bloco de declarações em try, e especifica uma ou mais respostas para uma exceção lançada. Se uma exceção é lançada, a declaração `try...catch` pegá-a.
 
-A declaração `try...catch` é composta por um bloco `try`, que contém uma ou mais declarações, e zero ou mais blocos `catch`, contendo declarações que especificam o que fazer se uma exceção é lançada no bloco `try`. Ou seja, você deseja que o bloco `try` tenha sucesso, e se ele não tiver êxito, você quer o controle passado para o bloco `catch`. Se qualquer declaração do bloco `try` (ou em uma função chamada dentro do bloco `try`) lança uma exceção, o controle é imediatamente mudado para o bloco `catch`. Se nenhuma exceção é lançada no bloco `try`, o bloco `catch` é ignorado. O bloco `finally` executa após os blocos `try` e `catch` executarem, mas antes das declarações seguinte ao bloco` try...catch.`
+A declaração `try...catch` é composta por um bloco `try`, que contém uma ou mais declarações, e zero ou mais blocos `catch`, contendo declarações que especificam o que fazer se uma exceção é lançada no bloco `try`. Ou seja, você deseja que o bloco `try` tenha sucesso, e se ele não tiver êxito, você quer o controle passado para o bloco `catch`. Se qualquer declaração do bloco `try` (ou em uma função chamada dentro do bloco `try`) lança uma exceção, o controle é imediatamente mudado para o bloco `catch`. Se nenhuma exceção é lançada no bloco `try`, o bloco `catch` é ignorado. O bloco `finally` executa após os blocos `try` e `catch` executarem, mas antes das declarações seguinte ao bloco `try...catch.`
 
 O exemplo a seguir usa a declaração `try...catch`. O exemplo chama uma função que recupera o nome de um mês no array com base no valor passado para a função. Se o valor não corresponde ao número de um mês (1-12), uma exceção é lançada com o valor "`InvalidMonthNo`" e as declarações no bloco `catch` define a váriavel `monthName` para `unknown`.
 
@@ -422,7 +422,7 @@ Uma Promise assume um destes estados:
 
 ### Carregando uma imagem com XHR
 
-Um exemplo simples usando Promise e `XMLHttpRequest para carregar uma imagem disponível no repositório MDN GitHub `[promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html). Você também pode [vê-lo executando](http://mdn.github.io/promises-test/). Cada etapa está comentada o que lhe permite seguir de perto a arquitetura Promise e arquitetura XHR. Aqui está a versão não comentada, mostrando o fluxo `Promise` para que você possa ter uma ideia:
+Um exemplo simples usando Promise e `XMLHttpRequest` para carregar uma imagem disponível no repositório MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html). Você também pode [vê-lo executando](http://mdn.github.io/promises-test/). Cada etapa está comentada o que lhe permite seguir de perto a arquitetura Promise e arquitetura XHR. Aqui está a versão não comentada, mostrando o fluxo `Promise` para que você possa ter uma ideia:
 
 ```js
 function imgLoad(url) {

@@ -2,6 +2,7 @@
 title: <animate>
 slug: Web/SVG/Element/animate
 ---
+
 {{SVGRef}}
 
 SVG の **`<animate>`** 要素は、時間の経過に応じて要素の属性を変化させる方法を提供します。

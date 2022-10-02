@@ -66,11 +66,8 @@ translation_of: Web/CSS/@media/width
 
 ## Spécifications
 
-| Spécification                                                            | État                                     | Commentaires                                                                  |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#width', 'width')}} | {{Spec2('CSS4 Media Queries')}} | La valeur peut désormais être négative (ce qui correspond à un booléen faux). |
-| {{SpecName('CSS3 Media Queries', '#width', 'width')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. La valeur ne peut pas être négative.                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.width")}}
+{{Compat}}

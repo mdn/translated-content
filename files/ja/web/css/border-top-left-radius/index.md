@@ -2,9 +2,10 @@
 title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
 ---
+
 {{CSSRef}}
 
-**`border-top-left-radius`** は [CSS](/en-US/docs/Web/CSS) のプロパティは、角の曲率を定義する楕円の半径 (または半長軸と半短軸の半径) を指定することで、要素の左上の角を丸くします。
+**`border-top-left-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティは、角の曲率を定義する楕円の半径 (または半長軸と半短軸の半径) を指定することで、要素の左上の角を丸くします。
 
 {{EmbedInteractiveExample("pages/css/border-top-left-radius.html")}}
 

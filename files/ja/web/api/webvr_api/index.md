@@ -2,6 +2,7 @@
 title: WebVR API
 slug: Web/API/WebVR_API
 ---
+
 {{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}
 
 > **Note:** WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。

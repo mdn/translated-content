@@ -96,7 +96,7 @@ slug: Web/HTML/Element/th
 - {{htmlattrdef("valign")}} {{Deprecated_inline}}
   - : 这个属性指定了单元格内文本的垂直对齐方式。这个属性可能有以下值：
 
-    - `baseline`: 将文本置于单元格底部并将其与字母的[baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29)对齐而不是与底部。若字母没有 baseline 以下的部分（即为无[降部](https://www.wikiwand.com/zh/%E9%99%8D%E9%83%A8)）那么 baseline 值起到的效果便和`bottom 相同。`
+    - `baseline`: 将文本置于单元格底部并将其与字母的[baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29)对齐而不是与底部。若字母没有 `baseline` 以下的部分（即为无[降部](https://www.wikiwand.com/zh/%E9%99%8D%E9%83%A8)）那么 `baseline` 值起到的效果便和 `bottom` 相同。
     - `bottom`: 将文本置于底部。
     - `middle`: 将文本置于单元格中央。
     - `top`: 将文本置于单元格顶部。

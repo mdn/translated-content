@@ -2,6 +2,7 @@
 title: Performance API
 slug: Web/API/Performance_API
 ---
+
 {{DefaultAPISidebar("High Resolution Time")}}
 
 **High Resolution Time** 規格は、アプリケーション内でクライアント側の待ち時間測定をサポートする {{domxref("Performance")}} インターフェイスを定義しています。{{domxref("Performance")}} インターフェイスは 1000 分の 1 ミリ秒の精度であるため、高解像度と見なされます (ハードウェアまたはソフトウェアの制約を受けます)。これらのインターフェイスは、フレームレートの計算 (アニメーションでは潜在的に重要) やベンチマーク (リソースのロード時間など) を含む、さまざまな使用例をサポートしています。
