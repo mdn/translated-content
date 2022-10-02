@@ -2,6 +2,7 @@
 title: 工具列按鈕
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 ---
+
 {{AddonSidebar}}
 
 根據[工具列按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)，這個用戶介面是一個加到瀏覽器工具列的按鈕。用戶透過點擊按鈕來與你的套件互動。

@@ -2,6 +2,7 @@
 title: HTMLInputElement.multiple
 slug: Web/API/HTMLInputElement/multiple
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLInputElement.multiple`** 属性表示一个 input 是否可以有多个值。目前只有火狐支持 `<input type="file">`存有多个值。
@@ -35,4 +36,4 @@ if (fileInput.multiple == true) {
 
 ## Browser compatibility
 
-{{Compat("api.HTMLInputElement.multiple")}}
+{{Compat}}

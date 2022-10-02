@@ -2,6 +2,7 @@
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、指定された {{jsxref("Number")}} オブジェクトを表す文字列を返します。

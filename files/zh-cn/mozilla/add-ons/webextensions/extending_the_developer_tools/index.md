@@ -2,6 +2,7 @@
 title: 扩展开发人员工具
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 ---
+
 {{AddonSidebar}}
 
 > **备注：** 本页介绍了火狐 Firefox 55 中存在的开发工具接口（dectools APIs)。虽然该接口 Api 基于 Chrome 开发工具 Api，仍有许多功能尚未实现在火狐中实现，因此未记录在本页内容中。产看当前缺失的功能，请参阅链接[开发工具 Api 的限制。](/zh-CN/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs)

@@ -2,6 +2,7 @@
 title: '@page'
 slug: Web/CSS/@page
 ---
+
 {{CSSRef}}
 
 @page 规则用于在打印文档时修改某些 CSS 属性。

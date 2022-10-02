@@ -8,6 +8,7 @@ tags:
 translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 original_slug: Contrôles_DHTML_personnalisés_navigables_au_clavier
 ---
+
 ### Le problème&nbsp;: les pages DHTML actuelles ne sont pas accessibles au clavier
 
 Un nombre croissant d'applications Web utilise [JavaScript](fr/JavaScript) pour imiter des contrôles (
@@ -67,7 +68,7 @@ Il ne sera pas possible d'utiliser `:focus` ou des sélecteurs d'attribut pour s
 
 #### Toujours dessiner le focus pour les éléments avec `tabindex="-1"` et qui reçoivent le focus par programmation
 
-IE ne dessinera pas automatiquement l'encadrement du focus pour les éléments qui reçoivent le focus de manière programmée. Choisissez entre changer la couleur de fond via quelque chose comme `this.style.backgroundColor = "gray";` ou ajoutez une bordure pointillée via `this.style.border = "1px dotted invert"`. Dans le cas d'une bordure pointillée, il sera nécessaire de s'assurer que ces éléments aient une bordure invisible de \<tt>1px\</tt> au départ, afin que l'élément ne change pas de taille lorsque le style de bordure est appliqué (les bordures prennent de la place et IE n'implémente pas les encadrements CSS).
+IE ne dessinera pas automatiquement l'encadrement du focus pour les éléments qui reçoivent le focus de manière programmée. Choisissez entre changer la couleur de fond via quelque chose comme `this.style.backgroundColor = "gray";` ou ajoutez une bordure pointillée via `this.style.border = "1px dotted invert"`. Dans le cas d'une bordure pointillée, il sera nécessaire de s'assurer que ces éléments aient une bordure invisible de `1px` au départ, afin que l'élément ne change pas de taille lorsque le style de bordure est appliqué (les bordures prennent de la place et IE n'implémente pas les encadrements CSS).
 
 #### Utilisation de `onkeydown` pour les évènements clavier, plutôt que `onkeypress`
 

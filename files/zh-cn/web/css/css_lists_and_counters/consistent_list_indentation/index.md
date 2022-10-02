@@ -3,6 +3,7 @@ title: 调整列表缩进
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 original_slug: Web/Guide/CSS/Consistent_list_indentation
 ---
+
 对列表最常见的样式修改之一是改变缩进距离，即列表项向右侧移动的距离。令人沮丧的是，缩进在一个浏览器中的表现常常与其他浏览器中的效果不尽相同。例如，如果声明列表的左边距为 0，在 IE 浏览器中生效，但是在基于 Gecko 引擎的浏览器中却不起作用。本文将帮助你理解这些可能发生的问题，以及如何避免这些问题的产生。
 
 为了弄明白这是为什么，以及如何避免这些问题发生，有必要研究一下列表结构的具体细节。
@@ -21,7 +22,7 @@ original_slug: Web/Guide/CSS/Consistent_list_indentation
 
 ![Figure 3](/@api/deki/files/621/=Consistent-list-indentation-figure3.gif)
 
-这里，蓝色的虚线边框表示 \<ul> 元素内容区域的边缘。因为我们没有给 \<ul> 元素添加内边距， 所以它的内容的包裹层紧贴在三个列表项外。
+这里，蓝色的虚线边框表示 \<ul> 元素内容区域的边缘。因为我们没有给 \<ul> 元素添加内边距，所以它的内容的包裹层紧贴在三个列表项外。
 
 现在我们来添加列表项目标记，由于这是一个无序列表，我们添加传统的实心圆“着重标记”，如下图图 4 所示。
 

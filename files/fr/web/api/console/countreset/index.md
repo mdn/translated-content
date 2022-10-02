@@ -3,6 +3,7 @@ title: Console.countReset()
 slug: Web/API/Console/countReset
 translation_of: Web/API/Console/countReset
 ---
+
 {{APIRef("Console API")}}
 
 Remet le compteur à zero. Cette fonction prend un argument optionnel `label`

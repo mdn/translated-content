@@ -2,6 +2,7 @@
 title: 字符类
 slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ---
+
 {{JSSidebar("JavaScript Guide")}}
 
 字符类可以区分各种字符，例如区分字母和数字。
@@ -83,7 +84,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>\s</code></td>
    <td>
-    <p>匹配单个空白字符，包括空格、制表符、换页符、换行符和其他 Unicode 空格。相当于 <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\s\w*/</code> 匹配“foo bar”中的“ bar”。</p>
+    <p>匹配单个空白字符，包括空格、制表符、换页符、换行符和其他 Unicode 空格。相当于 <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\s\w*/</code> 匹配“foo bar”中的“bar”。</p>
    </td>
   </tr>
   <tr>

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Counter_Styles
 ---
+
 {{cssref}}
 
 **_CSS Counter Styles_** est un module CSS qui permet de définir ses propres styles pour les compteurs utilisés dans les listes numérotées.
@@ -40,20 +41,8 @@ translation_of: Web/CSS/CSS_Counter_Styles
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `@counter-style`
-
-{{Compat("css.at-rules.counter-style")}}
-
-### `counter-increment`
-
-{{Compat("css.properties.counter-increment")}}
-
-### `counter-reset`
-
-{{Compat("css.properties.counter-reset")}}
+{{Compat}}

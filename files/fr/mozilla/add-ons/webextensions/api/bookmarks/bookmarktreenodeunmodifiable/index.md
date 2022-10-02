@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable
 ---
+
 {{AddonSidebar()}}
 
 Un type **`bookmarks.BookmarkTreeNodeUnmodifiable`** est utilisé pour indiquer la raison pour laquelle un nœud de l'arborescence de signets (où chaque nœud est un signet ou un dossier de signets) ne peut pas être modifié. Ceci est utilisé comme valeur du champ {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} sur les nœuds de signets.
@@ -33,7 +34,8 @@ Un type **`bookmarks.BookmarkTreeNodeUnmodifiable`** est utilisé pour indiquer 
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -60,4 +62,4 @@ Un type **`bookmarks.BookmarkTreeNodeUnmodifiable`** est utilisé pour indiquer 
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -2,6 +2,7 @@
 title: イベントへの入門
 slug: Learn/JavaScript/Building_blocks/Events
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
 イベントは、あなたがプログラムを書いているシステムで生じた動作、出来事を指します。システムからあなたへ、イベントとして何かあった事を知らせてくるので、必要であればそれに何らかの反応を返す事ができます。例えば、ユーザーがウェブページ上でボタンを押したとき、ある情報を表示するように反応させたいと思うかもしれません。この記事では、イベントに関する重要な概念を取り上げ、ブラウザーの中でのイベントの振る舞いを見ていきます。ここでは、全てを説明するのではなく、この段階で知っておくべき内容を取り上げます。

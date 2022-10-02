@@ -2,6 +2,7 @@
 title: 'ARIA: form ロール'
 slug: Web/Accessibility/ARIA/Roles/Form_Role
 ---
+
 フォーム (`form`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、HTML のフォームと同等の機能を提供するページ上の要素のグループを識別するために使用できます。
 
 ```html
@@ -12,7 +13,7 @@ slug: Web/Accessibility/ARIA/Roles/Form_Role
 
 これは、ユーザーの連絡先を収集して保存するフォームです。
 
-> **Warning:** **重要**: 十分に正当な理由がない限り、ARIA の フォーム (`form`) ロールではなく、HTML の {{htmlelement("form")}} 要素を使用してフォームコントロールを格納してください。 HTML の `<form>` 要素は、支援技術にフォームがあることを伝えるのに十分です。
+> **Warning:** 十分に正当な理由がない限り、ARIA の フォーム (`form`) ロールではなく、HTML の {{htmlelement("form")}} 要素を使用してフォームコントロールを格納してください。 HTML の `<form>` 要素は、支援技術にフォームがあることを伝えるのに十分です。
 
 ## 説明
 

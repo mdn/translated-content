@@ -2,6 +2,7 @@
 title: OffscreenCanvas.height
 slug: Web/API/OffscreenCanvas/height
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 设置或者获取{{domxref("OffscreenCanvas")}} 对象的高度。

@@ -2,6 +2,7 @@
 title: Web Performance
 slug: Learn/Performance
 ---
+
 ## {{LearnSidebar}}
 
 构建一个网站需要 HTML、CSS 和 JavaScript。为了构建人们需要的、能吸引和留住用户的网站和应用，你需要创建一个良好的用户体验。良好用户体验的一部分是确保内容能够快速加载并响应用户交互。这就是所谓的**web 性能**，在这个模块中，你将会学到构建性能良好的网站所需要的知识。

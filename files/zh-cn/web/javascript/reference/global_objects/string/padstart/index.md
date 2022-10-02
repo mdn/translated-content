@@ -2,6 +2,7 @@
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
+
 {{JSRef}}
 
 **`padStart()`** 方法用另一个字符串填充当前字符串（如果需要的话，会重复多次），以便产生的字符串达到给定的长度。从当前字符串的左侧开始填充。
@@ -49,7 +50,7 @@ function leftFillNum(num, targetLength) {
 
 const num = 123;
 console.log(leftFillNum(num, 5));
-// 预期输出: "00123"
+// 预期输出："00123"
 ```
 
 ## 规范

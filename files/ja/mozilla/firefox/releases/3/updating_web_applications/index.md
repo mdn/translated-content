@@ -3,6 +3,7 @@ title: Firefox 3 のためのウェブアプリケーションの更新
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
 original_slug: Updating_web_applications_for_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 来たる Firefox 3 では、あなたが利用したいであろう新機能と同様に、ウェブサイトやウェブアプリケーションに影響するであろう多くの変更が施されています。この記事は Firefox 3 を最大限活用するためにあなたのコンテンツを更新する作業の出発点となるでしょう。

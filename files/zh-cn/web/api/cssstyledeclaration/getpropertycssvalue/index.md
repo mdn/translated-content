@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.getPropertyCSSValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
 ---
+
 {{ APIRef("CSSOM") }} {{deprecated_header}}
 
 **CSSStyleDeclaration.getPropertyCSSValue()** 方法接口返回一个{{domxref('CSSValue')}} 包含一个属性的 CSS 值。请注意，如果属性名称是速记属性，则返回 null。

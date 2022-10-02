@@ -2,6 +2,7 @@
 title: HTMLImageElement.decode()
 slug: Web/API/HTMLImageElement/decode
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`decode()`** は {{domxref("HTMLImageElement")}} インターフェイスのメソッドで、画像がデコードされ、 DOM に画像を追加しても安全になったときに解決されるプロミス ({{jsxref("Promise")}}) を返します。

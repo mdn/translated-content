@@ -2,6 +2,7 @@
 title: ボックスモデル
 slug: Learn/CSS/Building_blocks/The_box_model
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
 CSS にはボックスの概念があり、これを理解することは CSS でレイアウトを作成したりアイテム同士を揃えたりするためのコツとなります。このレッスンでは CSS ボックスモデルを詳しく解説し、その仕組みと関連する用語を理解することでより複雑なレイアウトができるようにします。
@@ -41,7 +42,7 @@ CSS には、**ブロックボックス**と**インラインボックス**の 2
 
 ただし、`flex` などの `display` の値を使用して、内部の表示タイプを変更できます。要素に `display: flex;` を設定する場合、外側の表示タイプは `block` ですが、内側の表示タイプは `flex` に変更されます。このボックスの直接の子要素はすべてフレックスアイテムになり、[Flexbox](/ja/docs/Learn/CSS/CSS_layout/Flexbox) 仕様で規定されているルールに従ってレイアウトされます。これについては後で学習します。
 
-> **Note:** 注：ディスプレイの値、およびブロックおよびインラインレイアウトでのボックスの動作の詳細については、[ブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)に関する MDN ガイドを参照してください。
+> **Note:** ディスプレイの値、およびブロックおよびインラインレイアウトでのボックスの動作の詳細については、[ブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)に関する MDN ガイドを参照してください。
 
 CSS レイアウトについてさらに詳しく学習すると、`flex` や、例えば [`grid`](/ja/docs/Learn/CSS/CSS_layout/Grids) のようなボックスに設定できる他のさまざまな内部の値と出会うでしょう。
 

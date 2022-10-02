@@ -2,6 +2,7 @@
 title: 'Element: fullscreenchange イベント'
 slug: Web/API/Element/fullscreenchange_event
 ---
+
 {{APIRef}}
 
 `fullscreenchange` イベントは、ある要素 ({{domxref("Element")}}) が全画面モードに切り替わったり、終了したりした直後に発生します。

@@ -2,6 +2,7 @@
 title: Firefox 3 Web-based protocol handler
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
+
 ### 摘要
 
 window\.navigator.registerProtocolHandler 讓網站可以將自己註冊為特定通訊協定的處理者。

@@ -2,6 +2,7 @@
 title: EffectTiming.easing
 slug: Web/API/KeyframeEffect/KeyframeEffect
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
 这个{{domxref("EffectTiming")}} 词的 **`easing`** 属性在 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 指定用于缩放时间以产生缓和效果的计时函数，_easing_ 是动画随时间变化的速率。

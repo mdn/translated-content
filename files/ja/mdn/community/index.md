@@ -4,6 +4,7 @@ slug: MDN/Community
 i10n:
   sourceCommit: 8dbe0b2acd7fdbf533a9bd2f517999cc2035d952
 ---
+
 {{MDNSidebar}}
 
 👋 MDN Web Docs on GitHub へようこそ! MDN Web Docs は、[HTML](/ja/docs/Web/HTML)、[CSS](/ja/docs/Web/CSS)、[JavaScript](/ja/docs/Web/JavaScript)、[Web API](/ja/docs/Web/API) など、ウェブプラットフォーム技術のオープンソースかつ共同プロジェクトで、その文書を作成しています。また、初期段階の開発者や学生向けに、豊富な[学習リソース](/ja/docs/Learn)を提供しています。

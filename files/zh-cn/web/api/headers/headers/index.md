@@ -2,6 +2,7 @@
 title: Headers()
 slug: Web/API/Headers/Headers
 ---
+
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
 `使用Headers()` 构造方法创建一个新的{{domxref("Headers")}} 对象。
@@ -52,7 +53,7 @@ secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inheri
 
 ## Browser compatibility
 
-{{Compat("api.Headers.Headers")}}
+{{Compat}}
 
 ## See also
 

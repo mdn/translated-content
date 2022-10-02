@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/ObjectStoreNames
 ---
+
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
 La propriété **`objectStoreNames`** de l'interface {{domxref("IDBTransaction")}} renvoie la {{domxref("DOMStringList","liste")}} des noms des magasins d'objets de la {{domxref("IDBTransaction","transaction")}} .

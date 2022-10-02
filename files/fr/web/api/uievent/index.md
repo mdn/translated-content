@@ -11,6 +11,7 @@ tags:
   - UIEvent
 translation_of: Web/API/UIEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 L'interface **`UIEvent`** représente des évènements simples de l'interface utilisateur.

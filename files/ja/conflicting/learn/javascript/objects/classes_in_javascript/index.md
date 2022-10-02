@@ -3,6 +3,7 @@ title: 初心者のためのオブジェクト指向 JavaScript
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 基礎が片付いたところで、オブジェクト指向 JavaScript (OOJS) について取り上げます。この記事ではオブジェクト指向プログラミング (OOP) の基本的な視点を説明し、 JavaScript がどのようにコンストラクター関数を通じてオブジェクトクラスをエミュレートしているか、またどのようにオブジェクトインスタンスを生成しているかを紹介します。
@@ -63,7 +64,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 これは実に役立ちます。教師と生徒は名前、性別、年齢のように多数の共通機能を共有しており、これらの機能を一度だけ定義すればいいので便利です。異なるクラスで、同じ機能を分けて定義することもでき、その機能の各定義は異なる名前空間に置かれます。例えば、生徒の挨拶は "Yo, I'm \[firstName]" (例：_Yo, I'm Sam) という形式とし、一方の教師の挨拶は、より形式的に_ "Hello, my name is \[Prefix] \[lastName], and I teach \[Subject]." (例：_Hello, My name is Mr Griffiths, and I teach Chemistry) のように。_
 
-> **Note:** **注**: 同じ機能を複数のオブジェクトタイプが実装する能力のことを示す用語に、**ポリモーフィズム**があります。不思議に感じているかも知れないので念のため。
+> **Note:** 同じ機能を複数のオブジェクトタイプが実装する能力のことを示す用語に、**ポリモーフィズム**があります。不思議に感じているかも知れないので念のため。
 
 子クラスのオブジェクトインスタンスを生成しましょう。例：
 
@@ -222,7 +223,7 @@ person1.bio()
 
 加えて、 `bio()` メソッドにはいくつかの問題点があります。人物が女性である、あるいは他の優先される性別分類の場合でも、その出力には常に "He" という代名詞が含まれています。また、 bio は `interests` 配列により多くのものが列挙されていても、2 つの趣味しか含みません。このクラス定義 (コンストラクター) の問題を、あなたはどのように修正することができますか？コンストラクター内に任意のコード (恐らく、いくつかの条件分岐やループが必要となるでしょう) を入れてみてください。性別や、趣味の数が 1、2、あるいは 2 よりも多いかどうかによって、文がどのように構築されるべきか考えてみてください。
 
-> **Note:** **注**: もし行き詰まってしまった場合は、[GitHub に答えとなるリポジトリ](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([ライブ](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) があります。最初はあなた自身で書いてみてください！
+> **Note:** もし行き詰まってしまった場合は、[GitHub に答えとなるリポジトリ](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([ライブ](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) があります。最初はあなた自身で書いてみてください！
 
 ## オブジェクトインスタンスを生成する他の方法
 

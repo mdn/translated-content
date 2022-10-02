@@ -2,6 +2,7 @@
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
+
 {{JSRef}}
 
 **`reduce()`** 方法对数组中的每个元素按序执行一个由您提供的 **reducer** 函数，每一次运行 **reducer** 会将先前元素的计算结果作为参数传入，最后将其结果汇总为单个返回值。
@@ -43,7 +44,7 @@ reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ },
 ### 参数
 
 - `callbackFn`
-  - : 一个 “reducer” 函数，包含四个参数：
+  - : 一个“reducer”函数，包含四个参数：
     - `previousValue`：上一次调用 `callbackFn` 时的返回值。在第一次调用时，若指定了初始值  `initialValue`，其值则为 `initialValue`，否则为数组索引为 0 的元素 `array[0]`。
     - `currentValue`：数组中正在处理的元素。在第一次调用时，若指定了初始值  `initialValue`，其值则为数组索引为 0 的元素 `array[0]`，否则为 `array[1]`。
     - `currentIndex`：数组中正在处理的元素的索引。若指定了初始值 `initialValue`，则起始索引号为 0，否则从索引 1 起始。
@@ -53,7 +54,7 @@ reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ },
 
 ### 返回值
 
-使用 “reducer” 回调函数遍历整个数组后的结果。
+使用“reducer”回调函数遍历整个数组后的结果。
 
 ### 异常
 

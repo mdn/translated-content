@@ -2,6 +2,7 @@
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的连接。

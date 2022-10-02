@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/uniform
 ---
+
 {{APIRef("WebGL")}}
 
 Les méthodes **`WebGLRenderingContext.uniform[1234][fi][v]()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) indiquent les valeurs des variables uniform.

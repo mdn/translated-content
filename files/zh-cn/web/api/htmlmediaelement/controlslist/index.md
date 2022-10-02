@@ -2,6 +2,7 @@
 title: HTMLMediaElement.controlsList
 slug: Web/API/HTMLMediaElement/controlsList
 ---
+
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
 [`HTMLMediaElement`](/zh-CN/docs/Web/API/HTMLMediaElement)接口的**`controlsList`** 属性返回 DOMTokenList，帮助用户在显示其自己的控件集时选择要在媒体元素上显示的控件。DOMTokenList 可以设置以下三个可能值中的一个或多个：nodownload，nofullscreen 和 noremoteplayback（值是一组[无序的空格分隔标记](https://wicg.github.io/controls-list/html-output/multipage/infrastructure.html#unordered-set-of-unique-space-separated-tokens)，这些[标记](https://wicg.github.io/controls-list/html-output/multipage/infrastructure.html#unordered-set-of-unique-space-separated-tokens)是[ASCII 不区分大小写的](https://infra.spec.whatwg.org/#ascii-case-insensitive)）。
@@ -36,7 +37,7 @@ A {{domxref("DOMTokenList")}}.
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.controlsList")}}
+{{Compat}}
 
 ## 参阅
 

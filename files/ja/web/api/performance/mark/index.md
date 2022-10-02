@@ -2,6 +2,7 @@
 title: performance.mark()
 slug: Web/API/Performance/mark
 ---
+
 {{APIRef("User Timing API")}}
 
 **`mark()`** メソッドは、ブラウザーのパフォーマンスエントリーバッファーに、指定された名前で{{domxref("DOMHighResTimeStamp","timestamp")}} を作成します。

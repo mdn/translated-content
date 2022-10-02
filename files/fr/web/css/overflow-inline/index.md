@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-inline
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`overflow-inline`** est une propriété logique qui définit ce qu'il faut afficher quand le contenu dépasse d'une boîte sur les bords en ligne (ceux parallèles au sens d'écriture). On peut choisir d'afficher rien, une barre de défilement ou de laisser le contenu dépasser.
@@ -42,9 +43,13 @@ La propriété `overflow-inline` se définit avec un mot-clé parmi ceux de la l
 - `auto`
   - : Le comportement de cette valeur dépend de l'agent utilisateur. Si le contenu tient dans la boîte de remplissage, elle se comportera comme `visible` mais établira un nouveau contexte de formatage. Les navigateurs de bureau affichent des barres de défilement si le contenu dépasse.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -102,15 +107,11 @@ La propriété `overflow-inline` se définit avec un mot-clé parmi ceux de la l
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow-inline', 'overflow-inline')}} | {{Spec2('CSS3 Overflow')}} |              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overflow-inline")}}
+{{Compat}}
 
 ## Voir aussi
 

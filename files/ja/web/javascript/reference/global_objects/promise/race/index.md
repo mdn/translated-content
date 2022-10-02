@@ -2,6 +2,7 @@
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
+
 {{JSRef}}
 
 **`Promise.race()`** メソッドは、反復可能オブジェクトの中のプロミスのうちの 1 つが履行されるか拒否されると、そのプロミスの値または理由で履行または拒否されるプロミスを返します。

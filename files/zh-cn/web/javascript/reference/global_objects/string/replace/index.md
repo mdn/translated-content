@@ -2,6 +2,7 @@
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
+
 {{JSRef}}
 
 **`replace()`** 方法返回一个由替换值（`replacement`）替换部分或所有的模式（`pattern`）匹配项后的新字符串。模式可以是一个字符串或者一个[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/RegExp)，替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。**如果`pattern`是字符串，则仅替换第一个匹配项。**
@@ -52,7 +53,7 @@ str.replace(regexp|substr, newSubStr|function)
 
 ### 指定一个函数作为参数
 
-你可以指定一个函数作为第二个参数。在这种情况下，当匹配执行后，该函数就会执行。 函数的返回值作为替换字符串。 (注意：上面提到的特殊替换参数在这里不能被使用。) 另外要注意的是，如果第一个参数是正则表达式，并且其为全局匹配模式，那么这个方法将被多次调用，每次匹配都会被调用。
+你可以指定一个函数作为第二个参数。在这种情况下，当匹配执行后，该函数就会执行。函数的返回值作为替换字符串。 (注意：上面提到的特殊替换参数在这里不能被使用。) 另外要注意的是，如果第一个参数是正则表达式，并且其为全局匹配模式，那么这个方法将被多次调用，每次匹配都会被调用。
 
 下面是该函数的参数：
 
@@ -64,7 +65,7 @@ str.replace(regexp|substr, newSubStr|function)
 | `string`          | 被匹配的原字符串。                                                                                                                                                                                                         |
 | NamedCaptureGroup | 命名捕获组匹配的对象                                                                                                                                                                                                       |
 
-(精确的参数个数依赖于 `replace()` 的第一个参数是否是一个正则表达式（{{jsxref("RegExp")}}）对象，以及这个正则表达式中指定了多少个括号子串，如果这个正则表达式里使用了命名捕获， 还会添加一个命名捕获的对象)
+(精确的参数个数依赖于 `replace()` 的第一个参数是否是一个正则表达式（{{jsxref("RegExp")}}）对象，以及这个正则表达式中指定了多少个括号子串，如果这个正则表达式里使用了命名捕获，还会添加一个命名捕获的对象)
 
 下面的例子将会使 `newString` 变成 `'abc - 12345 - #$*%'`：
 
@@ -129,7 +130,7 @@ function styleHyphenFormat(propertyName) {
 }
 ```
 
-运行 ` styleHyphenFormat('borderTop')``， `将返回 'border-top'。
+运行 `styleHyphenFormat('borderTop')`，将返回 `'border-top'`。
 
 因为我们想在最终的替换中进一步转变匹配结果，所以我们必须使用一个函数。这迫使我们在使用{{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}方法前进行评估。如果我们尝试不用一个函数进行匹配，那么使用{{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} 方法将不会有效。
 

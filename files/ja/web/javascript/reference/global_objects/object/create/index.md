@@ -2,6 +2,7 @@
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
+
 {{JSRef}}
 
 **`Object.create()`** メソッドは、既存のオブジェクトを新しく生成されるオブジェクトのプロトタイプとして使用して、新しいオブジェクトを生成します。

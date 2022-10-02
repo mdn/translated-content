@@ -9,6 +9,7 @@ tags:
   - Visibilité
 translation_of: Web/API/Document/visibilityState
 ---
+
 {{ ApiRef("DOM") }}
 
 La propriété en lecture seule **`Document.visibilityState`** renvoie la visibilité du {{domxref('document')}}, c'est-à-dire informe si l'élément est visible dans son contexte. Il est utile de savoir si le document est en arrière-plan ou sur un onglet invisible ou seulement chargé pour le pré-rendu. Les valeurs possibles sont :

@@ -2,6 +2,7 @@
 title: 基本的なテキストとフォントの装飾
 slug: Learn/CSS/Styling_text/Fundamentals
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 この記事では、{{glossary("CSS")}} によるテキストの装飾の習得に向けて旅を始めましょう。 ここでは、フォントの太さ、ファミリーそしてスタイルの設定、フォントの一括指定、テキストの配置とその他のエフェクト、ラインと文字の間隔などを含んだ、テキストやフォントの装飾の基本について詳しく説明します。
@@ -307,7 +308,7 @@ text-shadow: 4px 4px 5px red;
 3. ぼかし半径 — 値が大きいほど、影はより広く分散されます。 この値が含まれていない場合、デフォルトは 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を取ることができます。
 4. 影のベースカラー — 任意の [CSS カラー単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)を取ります。 含まれていない場合、デフォルトは `black` です。
 
-> **Note:** 注: 正のオフセット値は影を右下に移動させますが、`-1px -1px` のように負のオフセット値を使用して影を左上に移動させることもできます。
+> **Note:** 正のオフセット値は影を右下に移動させますが、`-1px -1px` のように負のオフセット値を使用して影を左上に移動させることもできます。
 
 #### 複数の影
 

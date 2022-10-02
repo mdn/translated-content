@@ -2,6 +2,7 @@
 title: <munder>
 slug: Web/MathML/Element/munder
 ---
+
 {{MathMLRef}}
 
 MathML の `<munder>` 要素は式の下にアクセントや範囲を付けるために使用します。これは `<munder> base underscript </munder>` のように使用します。

@@ -2,6 +2,7 @@
 title: vkern
 slug: Web/SVG/Element/vkern
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 在自上而下的字体中，`vkern` 元素可以精确地调整两个字符（glyph）间的垂直距离。这个处理被称为[字距处理](http://en.wikipedia.org/wiki/Kerning)。

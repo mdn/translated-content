@@ -31,8 +31,6 @@ El siguiente ejemplo especifica que el atributo `itemscope`. El ejemplo especifi
 </div>
 ```
 
-####
-
 #### Esctructura de informacion
 
 La siguiente tabla muestran los datos esctructurados mostrados en el anterior ejemplo.
@@ -78,7 +76,7 @@ Cuando especificas el atributo `itemscope` para un elemento, un nuevo item es cr
 
 ### Ejemplo
 
-Hay 4 atributos `itemscope` en el siguiente ejemplo. Cada atributo `itemscope` establecen el scope correspondiente a sus atributos `itemtype`. El `itemtype`s, `Recipe`, `AggregateRating`, y `NutritionInformation` en el siguiente ejemplo son parte de la informacion estructura por medio de [schema.org](www.schema.org), se especifico el primer `itemtype`, http\://schema.org/Recipe.
+Hay 4 atributos `itemscope` en el siguiente ejemplo. Cada atributo `itemscope` establecen el scope correspondiente a sus atributos `itemtype`. El `itemtype`s, `Recipe`, `AggregateRating`, y `NutritionInformation` en el siguiente ejemplo son parte de la informacion estructura por medio de [schema.org](https://schema.org), se especifico el primer `itemtype`, `http://schema.org/Recipe`.
 
 ```html
 <div itemscope itemtype="http://schema.org/Recipe">
@@ -236,7 +234,7 @@ Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejem
   </tbody>
 </table>
 
-> **Nota:** Una herramienta practica para extraer estructuras microdata del HTML es[ Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) de Google. Pruebalo en el HTML del ejemplo anterior.
+> **Nota:** Una herramienta practica para extraer estructuras microdata del HTML es [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) de Google. Pruebalo en el HTML del ejemplo anterior.
 
 ## Especificaciones
 

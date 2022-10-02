@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onauxclick
 original_slug: Web/API/GlobalEventHandlers/onauxclick
 ---
+
 {{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
 La propriété **`onauxclick`** du mixin {{domxref("GlobalEventHandlers")}} est un gestionnaire d'évènement pour le traitement des événements {{event("auxclick")}}.

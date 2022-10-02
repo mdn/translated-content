@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: timeupdate イベント'
 slug: Web/API/HTMLMediaElement/timeupdate_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `timeupdate` イベントは、`currentTime` 属性で示される時刻が更新されたときに発生します。

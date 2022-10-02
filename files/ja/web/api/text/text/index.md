@@ -2,6 +2,7 @@
 title: Text()
 slug: Web/API/Text/Text
 ---
+
 {{ APIRef("DOM")}}
 
 **`Text()`** コンストラクターは新しい {{domxref("Text")}} オブジェクトを返します。これは、引数で与えられたオプションの文字列をテキストコンテンツとして使用します。

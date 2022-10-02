@@ -2,6 +2,7 @@
 title: 属性セレクター
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 
 HTML の学習で学んだように、要素はマークアップについてさらに詳細な情報を提供する属性を持つことがあります。 CSS では、属性セレクターを使用して、ある種類の属性のある要素を対象に指定できます。このレッスンでは、これらのとても便利なセレクターの使い方を紹介します。

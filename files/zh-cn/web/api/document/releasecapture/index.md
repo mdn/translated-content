@@ -2,6 +2,7 @@
 title: document.releaseCapture
 slug: Web/API/Document/releaseCapture
 ---
+
 {{ ApiRef() }}
 
 ### 概述

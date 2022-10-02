@@ -2,6 +2,7 @@
 title: Document.queryCommandState()
 slug: Web/API/Document/queryCommandState
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 ## 语法

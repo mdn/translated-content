@@ -2,6 +2,7 @@
 title: 視覚整形モデル
 slug: Web/CSS/Visual_formatting_model
 ---
+
 {{CSSRef}}
 
 CSS の**視覚整形モデル** (Visual Formatting Model) は、ユーザーエージェントが文書ツリーをどのように受け取り、視覚メディア用に処理して表示するかを説明するものです。これには、コンピューター画面のような{{glossary("continuous media", "連続メディア")}}と、ブラウザーの印刷機能によって印刷された本や文書のような{{glossary("paged media", "ページ付きメディア")}}が含まれます。情報の大部分は、連続メディアとページ付きメディアに等しく適用されます。

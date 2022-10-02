@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:nth-last-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/CSS/Pseudo-classes) **`:nth-last-child`** permet de cibler les éléments qui possèdent `an+b-1` nœud frères qui les suivent pour un même élément parent avec un indice n entier qui est incrémenté à partir de 0. Avec CSS3, il était nécessaire que l'élément ciblé ait un élément parent, cette restriction a été levée en CSS4.
@@ -166,14 +167,11 @@ li:nth-last-child(n+3) ~ li {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires                                               |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS4 Selectors')}} | Les éléments ciblés peuvent ne pas avoir d'élément parent. |
-| {{SpecName('CSS3 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.nth-last-child")}}
+{{Compat}}
 
 ## Voir aussi
 

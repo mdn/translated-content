@@ -2,6 +2,7 @@
 title: Element.localName
 slug: Web/API/Element/localName
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.localName`** は読み取り専用プロパティで、要素の修飾名のローカル部分を返します。

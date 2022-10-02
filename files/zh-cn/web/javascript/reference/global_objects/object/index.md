@@ -2,6 +2,7 @@
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 ---
+
 {{JSRef}}
 
 **`Object`** 是 JavaScript 的一种 [数据类型](/zh-CN/docs/Web/JavaScript/Data_structures) 。它用于存储各种键值集合和更复杂的实体。Objects 可以通过 `{{jsxref("Object.prototype.Object", "Object()")}}` 构造函数或者使用 [对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer) 的方式创建
@@ -25,7 +26,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 
 ### 从一个对象上删除一个属性
 
-Object 自身没有提供方法删除其自身属性（Map 中的 `{{jsxref("Map.prototype.delete()")}}` 可以删除自身属性 ）为了删除对象上的属性，必须使用 [delete 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
+Object 自身没有提供方法删除其自身属性（Map 中的 `{{jsxref("Map.prototype.delete()")}}` 可以删除自身属性）为了删除对象上的属性，必须使用 [delete 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
 
 ## 构造函数
 
@@ -97,7 +98,7 @@ Object 自身没有提供方法删除其自身属性（Map 中的 `{{jsxref("Map
 - {{jsxref("Object.prototype.propertyIsEnumerable", "Object.prototype.propertyIsEnumerable()")}}
   - : 返回一个布尔值，用于表示内部属性 [ECMAScript \[\[Enumerable\]\] attribute](/zh-CN/docs/Web/JavaScript/Data_structures#属性) 是否被设置。
 - {{jsxref("Object.prototype.toLocaleString", "Object.prototype.toLocaleString()")}}
-  - : 调用 `toString()。`
+  - : 调用 `toString()`。
 - {{jsxref("Object.prototype.toString", "Object.prototype.toString()")}}
   - : 返回一个代表该对象的字符串。
 - {{jsxref("Object.prototype.valueOf", "Object.prototype.valueOf()")}}

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/used_value
 original_slug: Web/CSS/Valeur_utilisée
 ---
+
 {{cssref}}
 
 La **valeur utilisée** de n'importe quelle propriété CSS est la valeur finale d'une propriété après que tous les calculs aient été réalisés.
@@ -109,10 +110,11 @@ window.addEventListener('resize', updateAllUsedWidths);
 
 ## Spécifications
 
-| Spécification                                                                        | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName("CSS2.2", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.2")}} |                      |
-| {{SpecName("CSS2.1", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.1")}} | Définition initiale. |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: 国際化
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
+
 {{AddonSidebar}}
 
 [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) API には、拡張機能を国際化するとても簡単なモジュール — [i18n](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n) があります。この記事ではその機能を見てみて、どのように動作するのかの実例を提供します。WebExtensions API を使った拡張機能用の i18n システムは、[i18n.js](http://i18njs.com/) のような、よくある i10n 用 JavaScript ライブラリーと同様です。
@@ -88,7 +89,7 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 このファイルは標準の JSON — メンバーがそれぞれに `message` と `description`. を含む名前付きオブジェクトです。すべての項目が文字列です; `$URL$` はプレースホルダーで、拡張機能から呼ばれる `notificationContent` メンバーに置き換えられます。[Retrieving message strings from JavaScript](#retrieving_message_strings_from_javascript) 節でその方法を学びます。
 
-> **Note:** **注**: `messages.json` ファイルの中身についての詳しい情報は[ロケール固有のメッセージリファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)にあります。
+> **Note:** `messages.json` ファイルの中身についての詳しい情報は[ロケール固有のメッセージリファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)にあります。
 
 ## manifest.json を国際化する
 
@@ -336,9 +337,9 @@ Firefox 45 からは、拡張機能を一時的にディスクからインスト
 4. `intl.locale.matchOS` を探してその設定をダブルクリックし、`false` に設定します。
 5. ブラウザーを再起動して変更を完了します。
 
-> **Note:** **注**: これはブラウザーのロケールを変更させる動作で、この言語用の[言語パック](https://addons.mozilla.org/en-US/firefox/language-tools/)がインストールされていなくてもそうなります。その場合はブラウザー UI はデフォルト言語となります。
+> **Note:** これはブラウザーのロケールを変更させる動作で、この言語用の[言語パック](https://addons.mozilla.org/en-US/firefox/language-tools/)がインストールされていなくてもそうなります。その場合はブラウザー UI はデフォルト言語となります。
 
-> **Note:** **注:** `getUILanguage` の結果を変更するには言語パックが要求されます、これはブラウザー UI 言語を変更して拡張機能メッセージ用の言語は変更しないためです。
+> **Note:** `getUILanguage` の結果を変更するには言語パックが要求されます、これはブラウザー UI 言語を変更して拡張機能メッセージ用の言語は変更しないためです。
 
 ディスクから拡張機能を読み込み直して、新しいロケールをテストします
 

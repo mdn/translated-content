@@ -19,7 +19,7 @@ translation_of: Web/CSS/@namespace
 
 `@namespace` 규칙은 또한 네임스페이스 접두어(**namespace prefix**)를 정의하는 데도 사용될 수 있습니다. universal, type 또는 attribute 선택자가 네임스페이스 접두어로 시작되는 경우, 그때 그 선택자는 요소 또는 attribute의 네임스페이스 _및_ 이름이 일치하는 경우에만 일치합니다.
 
-[외부 요소](https://html.spec.whatwg.org/#foreign-elements "foreign elements")로 알려진 [HTML5](/ko/docs/Glossary/HTML5)에서는, 자동으로 네임스페이스가 할당됩니다. 이는 HTML 요소는 마치 XHTML 네임스페이스 (`http://www.w3.org/1999/xhtml`) 에 있는 것처럼 행동하고, 문서 어디에든 `xmlns` attribute가 없을지라도, [\<svg>](/ko/docs/Web/SVG/Element/svg) 및 [\<math>](/ko/docs/Web/MathML/Element/math) 요소는 그들의 적절한 네임스페이스 (`http://www.w3.org/2000/svg` 및 `http://www.w3.org/1998/Math/MathML`) 가 할당됨을 뜻합니다.
+[외부 요소](https://html.spec.whatwg.org/#foreign-elements)로 알려진 [HTML5](/ko/docs/Glossary/HTML5)에서는, 자동으로 네임스페이스가 할당됩니다. 이는 HTML 요소는 마치 XHTML 네임스페이스 (`http://www.w3.org/1999/xhtml`) 에 있는 것처럼 행동하고, 문서 어디에든 `xmlns` attribute가 없을지라도, [\<svg>](/ko/docs/Web/SVG/Element/svg) 및 [\<math>](/ko/docs/Web/MathML/Element/math) 요소는 그들의 적절한 네임스페이스 (`http://www.w3.org/2000/svg` 및 `http://www.w3.org/1998/Math/MathML`) 가 할당됨을 뜻합니다.
 
 > **참고:** **주의:** XML에서, 접두어가 직접 attribute (_가령_, `xlink:href`)에 정의되지 않는 한, 그 attribute은 네임스페이스가 없습니다. 다시 말해서, attribute은 그들이 붙은 요소의 네임스페이스를 상속받지 않습니다. 이 행동(behaviour)를 일치시키기 위해, CSS에서 기본 네임스페이스는 attribute 선택자에 적용되지 않습니다.
 

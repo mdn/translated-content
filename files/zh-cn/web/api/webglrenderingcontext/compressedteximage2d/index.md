@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.compressedTexImage[23]D()
 slug: Web/API/WebGLRenderingContext/compressedTexImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 下面这两个 function：

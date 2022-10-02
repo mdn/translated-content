@@ -2,6 +2,7 @@
 title: 标准元数据名称
 slug: Web/HTML/Element/meta/name
 ---
+
 {{HTMLRef}}
 
 The {{htmlelement("meta")}} 元素可用于提供 名称 - 值 对形式的文档元数据，{{htmlattrxref("name", "meta")}} 属性为元数据条目提供名称，而 {{htmlattrxref("content", "meta")}} 属性提供值。

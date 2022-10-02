@@ -2,6 +2,7 @@
 title: Exception (例外)
 slug: Glossary/Exception
 ---
+
 **例外**とは、通常のコード実行を強制停止する条件です。 JavaScript {{glossary("syntax error", "構文エラー")}} は、とてもよくある例外の情報源です。
 
 ## より詳しく知る

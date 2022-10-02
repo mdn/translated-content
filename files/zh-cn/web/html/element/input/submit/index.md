@@ -2,6 +2,7 @@
 title: <input type="submit">
 slug: Web/HTML/Element/Input/submit
 ---
+
 {{HTMLRef}}
 
 **`submit`** 类型的 {{HTMLElement("input")}} 元素被渲染成按钮。当 {{event("click")}} 事件发生时 (用户点击按钮是一个典型的点击事件), {{Glossary("用户代理")}} 试图提交表单到服务器。

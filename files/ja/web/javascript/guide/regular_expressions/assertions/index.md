@@ -2,6 +2,7 @@
 title: 言明
 slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 言明には、 行や単語の始まり・終わりを示す、境界や、（先読み、後読み、条件式を含む）何らかの方法でマッチが可能なことを示す、その他のパターンが含まれます。

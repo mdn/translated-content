@@ -3,6 +3,7 @@ title: Document.bgColor
 slug: Web/API/Document/bgColor
 translation_of: Web/API/Document/bgColor
 ---
+
 {{APIRef("DOM")}} {{ Deprecated_header() }}
 
 La propriété obsolète `bgColor` renvoie ou déinit la couleur de fond (background-color) du document courant.

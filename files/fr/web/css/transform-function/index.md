@@ -7,6 +7,7 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/transform-function
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<transform-function>`** représente une fonction qui, lorsqu'elle est appliquée à un élément, permet de modifier sa représentation géométrique. Ces transformations sont généralement exprimées sous forme de matrices et l'image obtenue peut être déterminée en appliquant la matrice de la transformation sur chaque point de l'image. On peut ainsi tourner, redimensionner, distordre. Ce type de donnée est utilisé avec la propriété {{cssxref("transform")}}.
@@ -103,14 +104,11 @@ Plusieurs fonctions sont disponibles en CSS pour décrire des transformations. C
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                     | Commentaires                  |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------- |
-| {{SpecName('CSS Transforms 2', '#transform-functions', '&lt;transform-function&gt;')}} | {{Spec2('CSS Transforms 2')}} | Added 3D transform functions. |
-| {{SpecName('CSS3 Transforms', '#transform-functions', '&lt;transform-function&gt;')}}     | {{Spec2('CSS3 Transforms')}}     | Définition initiale.          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.transform-function")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
 ---
+
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 
 **`Geolocation.clearWatch()`** メソッドは、以前 {{domxref("Geolocation.watchPosition()")}} によって登録された位置情報/エラーの監視ハンドラーを解除するために使用します。

@@ -2,6 +2,7 @@
 title: Element.onfullscreenchange
 slug: Web/API/Element/fullscreenchange_event
 ---
+
 元素接口的 **`onfullscreenchange`** 属性是在元素过渡到或过渡到全屏模式时触发的全屏更改事件的事件处理程序。
 
 ## 语法

@@ -4,6 +4,7 @@ slug: Web/CSS/gap
 translation_of: Web/CSS/gap
 browser-compat: css.properties.gap
 ---
+
 {{CSSRef}}
 
 La propriété **`gap`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) pour [`row-gap`](/fr/docs/Web/CSS/row-gap) et [`column-gap`](/fr/docs/Web/CSS/column-gap) qui permet de définir les espaces (les [gouttières](/fr/docs/Glossary/Gutters)) entre les lignes et entre les colonnes d'une grille.

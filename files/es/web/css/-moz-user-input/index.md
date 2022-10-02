@@ -11,7 +11,7 @@ translation_of: Web/CSS/-moz-user-input
 
 ## Resumen
 
-En las aplicaciones Mozilla , `-moz-user-input` determina si un elemento aceptará entrada por parte del usuario. `user-focus, `una propiedad similar fue propuesta en [primeros borradores de un predecesor de la especificación CSS3 UI](http://www.w3.org/TR/2000/WD-css3-userint-20000216) pero fue rechazada posteriormente por el grupo de trabajo..
+En las aplicaciones Mozilla , `-moz-user-input` determina si un elemento aceptará entrada por parte del usuario. `user-focus`, una propiedad similar fue propuesta en [primeros borradores de un predecesor de la especificación CSS3 UI](http://www.w3.org/TR/2000/WD-css3-userint-20000216) pero fue rechazada posteriormente por el grupo de trabajo..
 
 {{cssinfo}}
 
@@ -40,7 +40,7 @@ Para elementos que normalmente son receptores de entrada por parte del usuario, 
 - enabled
   - : El elemento acepta entrada por parte del usuario. Para cajas de texto es el comportamiento por defecto.
 - disabled
-  - : El elemento no acepta datos del usuario. Sin embargo, no es lo mismo que establecer {{XULAttr("disabled")}} a true, en ese caso el elemento es dibujado normalmente.
+  - : El elemento no acepta datos del usuario. Sin embargo, no es lo mismo que establecer `disabled` a true, en ese caso el elemento es dibujado normalmente.
 
 ### Síntaxis Formal
 

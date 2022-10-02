@@ -2,11 +2,12 @@
 title: Touch.clientX
 slug: Web/API/Touch/clientX
 ---
+
 {{ ApiRef() }}
 
 ### 概述
 
-返回触点相对于可见视区 ([visual viewport](http://www.quirksmode.org/mobile/viewports2.html)) 左边沿的的 X 坐标。不包括任何滚动偏移.这个值会根据用户对可见视区的缩放行为而发生变化。
+返回触点相对于可见视区 ([visual viewport](http://www.quirksmode.org/mobile/viewports2.html)) 左边沿的的 X 坐标。不包括任何滚动偏移。这个值会根据用户对可见视区的缩放行为而发生变化。
 
 ### 语法
 

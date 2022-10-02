@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/getCanonicalLocales
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.getCanonicalLocales()`** renvoie un tableau contenant les noms canoniques des locales. Les doublons seront fusionnés et les éléments passés en arguments doivent être des étiquettes de langues valides.

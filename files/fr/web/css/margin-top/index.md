@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-top
 ---
+
 {{CSSRef}}
 
 La propriété **`margin-top`** définit l'espace vertical pour la marge appliquée en haut de l'élément. Une valeur négative peut être utilisée.
@@ -45,9 +46,13 @@ Le mot-clé `auto` ou une valeur de longueur (`<length>`) ou de pourcentage (`<p
 - `auto`
   - : Voir {{cssxref("margin")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -85,15 +90,8 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                             |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}                 | {{Spec2('CSS3 Box')}}             | Aucun changement significatif                            |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}} | {{Spec2('CSS3 Transitions')}} | `margin-top` peut désormais être animée.                 |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}} | {{Spec2('CSS2.1')}}                 | L'effet sur les éléments en ligne (_inline_) est retiré. |
-| {{SpecName('CSS1', '#margin-top', 'margin-top')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin-top")}}
+{{Compat}}

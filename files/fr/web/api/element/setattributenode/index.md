@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Element/setAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 ` setAttributeNode``() ` ajoute un nouveau nœud `Attr` à l'élément courant.

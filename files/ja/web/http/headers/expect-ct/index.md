@@ -2,6 +2,7 @@
 title: Expect-CT
 slug: Web/HTTP/Headers/Expect-CT
 ---
+
 {{HTTPSidebar}}
 
 `Expect-CT` ヘッダーは、サイトが[証明書の透明性](/ja/docs/Web/Security/Certificate_Transparency)の要件の報告や強制に参加して、サイトの不正な認証情報の使用が通知されない状態を防ぐことができます。

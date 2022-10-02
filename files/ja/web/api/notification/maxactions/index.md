@@ -2,6 +2,7 @@
 title: Notification.maxActions
 slug: Web/API/Notification/maxActions
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`maxActions`** は {{domxref("Notification")}} インターフェイスの属性で、端末とユーザーエージェントが対応するアクションの最大数を返します。実質的には、これはユーザーエージェントが尊重する {{domxref("Notification.actions")}} 配列の最大数です。

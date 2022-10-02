@@ -2,6 +2,7 @@
 title: Feature-Policy
 slug: Web/HTTP/Headers/Feature-Policy
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}**`Feature-Policy`**响应头提供了一种可以在本页面或包含的 iframe 上启用或禁止浏览器特性的机制。
 
 更多的信息，请查看[Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)
@@ -42,7 +43,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/autoplay','autoplay')}}
   - : 控制是否允许当前文档自动播放媒体。这种控制是通过接口 {{domxref("HTMLMediaElement")}} 来实现。当这种规则被启用，而且没有用户操作的时候，{{domxref("HTMLMediaElement.play()")}}返回的 {{domxref("Promise")}}会拒绝并抛出一个`DOMException`异常。在{{HTMLELement("audio")}}和{{HTMLELement("video")}}上的 autoplay 属性会被忽略。
 - {{httpheader('Feature-Policy/camera', 'camera')}}
-  - : 控制是否允许当前文档使用视频输入设备。当这种规则被启用时，{{domxref("MediaDevices.getUserMedia()")}}返回的 the {{jsxref("Promise")}}会拒绝并抛出错误`NotAllowedError。`
+  - : 控制是否允许当前文档使用视频输入设备。当这种规则被启用时，{{domxref("MediaDevices.getUserMedia()")}}返回的 the {{jsxref("Promise")}}会拒绝并抛出错误 `NotAllowedError`。
 - {{httpheader('Feature-Policy/document-domain','document-domain')}}
   - : 控制是否允许当前文档设置{{domxref("document.domain")}}。当这种规则被启用时，尝试设置{{domxref("document.domain")}}会失败并抛出 `SecurityError` {{domxref("DOMException")}}异常。
 - {{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}
@@ -52,13 +53,13 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/geolocation','geolocation')}}
   - : 控制是否允许当前文档使用{{domxref('Geolocation')}}接口。当这种规则被启用时，调用{{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}}和{{domxref('Geolocation.watchPosition','watchPosition()')}}会返回包含`PERMISSION_DENIED`的 {{domxref('PositionError')}}。
 - {{httpheader('Feature-Policy/microphone','microphone')}}
-  - : 控制是否允许当前文档使用音频输入设备。当这种规则被启用时，{{domxref("MediaDevices.getUserMedia()")}}返回的 the {{jsxref("Promise")}}会拒绝并抛出错误`NotAllowedError。`
+  - : 控制是否允许当前文档使用音频输入设备。当这种规则被启用时，{{domxref("MediaDevices.getUserMedia()")}}返回的 the {{jsxref("Promise")}}会拒绝并抛出错误 `NotAllowedError`。
 - {{httpheader('Feature-Policy/midi', 'midi')}}
-  - : 控制是否允许当前文档使用[Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)。当这种规则被启用时，{{domxref("Navigator.requestMIDIAccess()")}} 返回的 the {{jsxref("Promise")}}会拒绝并抛出错误`DOMException。`
+  - : 控制是否允许当前文档使用[Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)。当这种规则被启用时，{{domxref("Navigator.requestMIDIAccess()")}} 返回的 the {{jsxref("Promise")}}会拒绝并抛出错误 `DOMException`。
 - {{httpheader('Feature-Policy/payment', 'payment')}}
-  - : 控制是否允许当前文档使用[Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API)。当这种规则被启用时，构造器{{domxref("PaymentRequest()")}} 会抛出错误`SecurityError。`
+  - : 控制是否允许当前文档使用[Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API)。当这种规则被启用时，构造器{{domxref("PaymentRequest()")}} 会抛出错误 `SecurityError`。
 - {{httpheader('Feature-Policy/vr', 'vr')}} / `xr`
-  - : 控制是否允许当前文档使用[WebVR API](/zh-CN/docs/Web/API/WebVR_API)。当这种规则被启用时，{{domxref("Navigator.getVRDisplays()")}} 返回的 the {{jsxref("Promise")}}会拒绝并抛出错误`DOMException。`
+  - : 控制是否允许当前文档使用[WebVR API](/zh-CN/docs/Web/API/WebVR_API)。当这种规则被启用时，{{domxref("Navigator.getVRDisplays()")}} 返回的 the {{jsxref("Promise")}}会拒绝并抛出错误 `DOMException`。
 
 ## 示例
 

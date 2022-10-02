@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/open
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`document.open()`** ouvre un document pour [l'écriture](/fr/docs/Web/API/Document/write).

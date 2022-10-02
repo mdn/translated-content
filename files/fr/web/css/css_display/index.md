@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Display
 ---
+
 {{CSSRef}}
 
 **L'affichage CSS** (_CSS Display)_ est un module CSS qui définit la façon dont l'arbre des boîtes pour la mise en forme est généré à partir de l'arbre des éléments du document et qui définit les propriétés qui le contrôlent.
@@ -65,14 +66,8 @@ translation_of: Web/CSS/CSS_Display
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires                                                                                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Display', '#the-display-properties', 'display')}} | {{Spec2('CSS3 Display')}} | Ajout des valeurs `run-in`, `flow`, `flow-root`, `contents` et de la syntaxe avec plusieurs mots-clés. |
-| {{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}}     | {{Spec2('CSS2.1')}}         | Ajout des valeurs pour les tableaux et ajout de `inline-block`.                                        |
-| {{SpecName('CSS1', '#display', 'display')}}                                 | {{Spec2('CSS1')}}         | Spécification initiale. Valeurs de base : `none`, `block`, `inline` et `list-item`.                    |
-
-En plus du module de spécification _CSS Display_ de niveau 3, d'autres modules de spécifications définissent le comportement à avoir selon les différentes valeurs de `display`.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.display", 10)}}
+{{Compat}}

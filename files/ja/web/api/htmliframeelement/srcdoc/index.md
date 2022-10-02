@@ -2,6 +2,7 @@
 title: HTMLIFrameElement.srcdoc
 slug: Web/API/HTMLIFrameElement/srcdoc
 ---
+
 {{APIRef('HTMLIFrameElement')}}
 
 **`srcdoc`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、このページの内容を指定します。

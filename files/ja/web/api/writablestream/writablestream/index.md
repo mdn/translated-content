@@ -2,6 +2,7 @@
 title: WritableStream.WritableStream()
 slug: Web/API/WritableStream/WritableStream
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 **`WritableStream()`** コンストラクターは、新しい {{domxref("WritableStream")}} オブジェクトのインスタンスを作成します。
@@ -36,7 +37,7 @@ var writableStream = new WritableStream(underlyingSink[, queuingStrategy]);
     - size(chunk)
       - : パラメータ `chunk` を含むメソッド — これは、各チャンクに使用するサイズをバイト単位で示します。
 
-    > **Note:** **注**: 独自のカスタム `queuingStrategy` を定義するか、このオブジェクト値に {{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスを使用できます。 `queuingStrategy` が指定されていない場合、使用されるデフォルトは、最高水準点が 1 の `CountQueuingStrategy` と同じです。
+    > **Note:** 独自のカスタム `queuingStrategy` を定義するか、このオブジェクト値に {{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスを使用できます。 `queuingStrategy` が指定されていない場合、使用されるデフォルトは、最高水準点が 1 の `CountQueuingStrategy` と同じです。
 
 ### 戻り値
 

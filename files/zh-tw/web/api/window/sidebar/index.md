@@ -2,6 +2,7 @@
 title: Window.sidebar
 slug: Web/API/Window/sidebar
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 Returns a sidebar object, which contains several methods for registering add-ons with the browser.

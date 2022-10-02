@@ -2,6 +2,7 @@
 title: VRLayerInit.leftBounds
 slug: Web/API/VRLayerInit/leftBounds
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`leftBounds`** は {{domxref("VRLayerInit")}} インターフェイス（辞書）のプロパティで、 {{domxref("VRDisplay")}} によってコンテンツが表示されるキャンバスの左側のテクスチャ境界を定義します。

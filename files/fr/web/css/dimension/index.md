@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/dimension
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<dimension>`** représente une valeur de type {{CSSxRef("&lt;number&gt;")}} directement suivie d'une unité : par exemple `10px`.
@@ -39,13 +40,8 @@ La syntaxe d'une valeur de type `<dimension>` est un nombre (valeur de type {{CS
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires                                      |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------- |
-| {{SpecName("CSS4 Values", "#dimensions", "&lt;dimension&gt;")}}     | {{Spec2("CSS4 Values")}} | Adds `cap`, `ic`, `lh`, `rlh`, `vi`, `vb`         |
-| {{SpecName("CSS3 Values", "#dimensions", "&lt;dimension&gt;")}}     | {{Spec2("CSS3 Values")}} | Adds `ch`, `rem`, `vw`, `vw`, `vmin`, `vmax`, `Q` |
-| {{SpecName("CSS2.1", "syndata.html#numbers", "&lt;dimension&gt;")}} | {{Spec2("CSS2.1")}}         | Defined under Numbers and Length                  |
-| {{SpecName("CSS1", "", "&lt;dimension&gt;")}}                             | {{Spec2("CSS1")}}         | Initial definition under "length units"           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.dimension")}}
+{{Compat}}

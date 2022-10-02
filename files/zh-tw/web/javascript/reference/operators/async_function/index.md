@@ -2,6 +2,7 @@
 title: async function expression
 slug: Web/JavaScript/Reference/Operators/async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 關鍵字 **`async function`** 可以用來定義陳述式中的 `async` 函式。

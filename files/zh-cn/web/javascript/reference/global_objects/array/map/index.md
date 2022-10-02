@@ -2,6 +2,7 @@
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
+
 {{JSRef}}
 
 **`map()`** 方法创建一个新数组，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
@@ -178,7 +179,7 @@ const returnInt = (element) => parseInt(element, 10);
 // A simpler way to achieve the above, while avoiding the "gotcha":
 ['1', '2', '3'].map(Number); // [1, 2, 3]
 
-// 但与 parseInt() 不同，Number() 还会返回一个浮点数或（解析）指数表示法:
+// 但与 parseInt() 不同，Number() 还会返回一个浮点数或（解析）指数表示法：
 ['1.1', '2.2e2', '3e300'].map(Number); // [1.1, 220, 3e+300]
 
 // 为了进行比较，如果我们对上面的数组使用 parseInt():
@@ -192,7 +193,7 @@ const strings = ['10', '10', '10'];
 const numbers = strings.map(parseInt);
 
 console.log(numbers);
-// 根据以上描述，[10, NaN, 2]的实际结果可能会出乎意料。
+// 根据以上描述，[10, NaN, 2] 的实际结果可能会出乎意料。
 ```
 
 ### 映射包含 undefined 的数组

@@ -3,6 +3,7 @@ title: Concepts de WebAssembly
 slug: WebAssembly/Concepts
 translation_of: WebAssembly/Concepts
 ---
+
 {{WebAssemblySidebar}}
 
 Cet article explique les concepts de fonctionnement de WebAssembly, y compris ses objectifs, les problèmes qu'il résout et la manière dont il s'exécute dans le moteur de rendu du navigateur.

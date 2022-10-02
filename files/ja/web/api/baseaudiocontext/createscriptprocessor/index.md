@@ -3,6 +3,7 @@ title: BaseAudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
 original_slug: Web/API/AudioContext/createScriptProcessor
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 `createScriptProcessor()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、直接音声処理に用いられる {{domxref("ScriptProcessorNode")}} を生成します。

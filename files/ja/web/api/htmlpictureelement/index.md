@@ -2,6 +2,7 @@
 title: HTMLPictureElement
 slug: Web/API/HTMLPictureElement
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 **`HTMLPictureElement`** インタフェースは、{{HTMLElement("picture")}} HTML 要素をあらわします。これは固有のプロパティやメソッドを実装していません。

@@ -2,6 +2,7 @@
 title: 'SpeechRecognition: result event'
 slug: Web/API/SpeechRecognition/result_event
 ---
+
 {{APIRef("Web Speech API")}} {{SeeCompatTable}}
 
 The **`result`** event of the [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) is fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app
@@ -65,7 +66,7 @@ recognition.onresult = function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.SpeechRecognition.result_event")}}
+{{Compat}}
 
 ## See also
 

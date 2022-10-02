@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 original_slug: Web/JavaScript/Reference/Erreurs/Strict_Non_Simple_Params
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

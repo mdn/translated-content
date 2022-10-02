@@ -2,6 +2,7 @@
 title: 'SyntaxError: return not in function'
 slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误信息
@@ -35,7 +36,7 @@ var cheer = function(score) {
 // 语法错误：不是在函数里返回
 ```
 
-初次看好像没什么错误，但是上面这段代码在第一个 if 后面少了一个 “ { ”。正确的应该如下：
+初次看好像没什么错误，但是上面这段代码在第一个 if 后面少了一个“ { ”。正确的应该如下：
 
 ```js example-good
 var cheer = function(score) {

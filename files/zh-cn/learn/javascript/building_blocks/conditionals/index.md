@@ -2,6 +2,7 @@
 title: 在代码中做决定——条件语句
 slug: Learn/JavaScript/Building_blocks/conditionals
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
 在任何的编程语言中，代码需要依靠不同的输入作出决定并且采取行动。例如，在游戏中，如果玩家的生命值变成了 0，那么游戏就结束了。在天气应用中，如果在早晨运行，就显示一张日出的图片；如果在晚上，就显示星星和月亮的图片。在这篇文章中，我们将探索在 JavaScript 中所谓的条件语句是怎样工作的。
@@ -34,7 +35,7 @@ slug: Learn/JavaScript/Building_blocks/conditionals
 
 ## if ... else 语句
 
-`让我们看看到目前为止你将会在JavaScript中用到的最常见的条件语句类型 — if ... else语句。`
+让我们看看到目前为止你将会在 JavaScript 中用到的最常见的条件语句类型 — `if ... else` 语句。
 
 ### 基本的的 if…else 语法
 
@@ -93,7 +94,7 @@ if (shoppingDone === true) {
 }
 ```
 
-这段代码显示的结果是变量 `shoppingDone` 总是返回 `false`， 意味着对我们的穷孩子来说很失望。如果孩子去购物的话，就需要依靠我们提供机制来使父母把变量 `shoppingDone` 变成 `true`。
+这段代码显示的结果是变量 `shoppingDone` 总是返回 `false`，意味着对我们的穷孩子来说很失望。如果孩子去购物的话，就需要依靠我们提供机制来使父母把变量 `shoppingDone` 变成 `true`。
 
 > **备注：** 你可以看到在[Github 上这个例子的完整版本](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html)（也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)）
 
@@ -143,7 +144,7 @@ function setWeather() {
 
 1. 这里我们有 HTML {{htmlelement("select")}} 元素让我们选择不同的天气，以及一个简单的段落。
 2. 在 JavaScript 中，我们同时存储了对 {{htmlelement("select")}} 和 {{htmlelement("p")}} 的引用，并对 `<select>` 添加了一个事件监听器，因此，当它的值改变时，`setWeather()`函数被执行。
-3. 当函数运行时，我们首先新建了一个 `choice` 变量去存储当前被选的 `<select>` 中的值。接着我们用条件判断语句根据 `choice` 的值选择性的展示段落中的文本。注意 `else if() {...}`段中的条件是怎么被判断的，除了第一个，它是在 `if() {...}中被判断的。`
+3. 当函数运行时，我们首先新建了一个 `choice` 变量去存储当前被选的 `<select>` 中的值。接着我们用条件判断语句根据 `choice` 的值选择性的展示段落中的文本。注意 `else if() {...}` 段中的条件是怎么被判断的，除了第一个，它是在 `if() {...}` 中被判断的。
 4. 最后一个 `else {...}` 中的选择通常被叫做“最后招数” — 在所有的条件都不为 true 时其中的代码会被执行。在这个例子中，如果用户没有选择任何一个选项，它会将段落中的文本清空，例如当用户决定重新选择最开始出现的"--Make a choice--"选项时，就会有这样的效果。
 
 > **备注：** 你可以 [在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) （也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)。）
@@ -158,7 +159,7 @@ function setWeather() {
 
 > **备注：** 如果你想复习这些内容，可以回顾之前链接上的材料。
 
-我们想特别提到测试布尔值（true / false），和一个通用模式，你会频繁遇到它，任何不是 `false`, `undefined`, `null`, `0`, `NaN` 的值，或一个空字符串（''）在作为条件语句进行测试时实际返回 true，因此您可以简单地使用变量名称来测试它是否为真，甚至是否存在（即它不是未定义的）。例如:
+我们想特别提到测试布尔值（true / false），和一个通用模式，你会频繁遇到它，任何不是 `false`, `undefined`, `null`, `0`, `NaN` 的值，或一个空字符串（''）在作为条件语句进行测试时实际返回 true，因此您可以简单地使用变量名称来测试它是否为真，甚至是否存在（即它不是未定义的）。例如：
 
 ```js
 var cheese = 'Cheddar';
@@ -293,9 +294,9 @@ switch (expression) {
 2. 括号内的表达式或值。
 3. 关键字 `case`, 后跟一个选项的表达式/值，后面跟一个冒号.
 4. 如果选择与表达式匹配，则运行一些代码。
-5. 一个 `break` 语句，分号结尾。如果先前的选择与表达式/值匹配，则浏览器在此停止执行代码块，并执行 switch 语句之后的代码.
+5. 一个 `break` 语句，分号结尾。如果先前的选择与表达式/值匹配，则浏览器在此停止执行代码块，并执行 switch 语句之后的代码。
 6. 你可以添加任意的 case 选项（选项 3-5）.
-7. 关键字 `default`, 后面跟随和 `case` 完全相同的代码模式 (选项 3–5), except that `default` 之后不需要再有选项， 并且您不需要 `break` 语句， 因为之后没有任何运行代码. 如果之前没有选项匹配，则运行`default`选项。
+7. 关键字 `default`, 后面跟随和 `case` 完全相同的代码模式 (选项 3–5), except that `default` 之后不需要再有选项，并且您不需要 `break` 语句，因为之后没有任何运行代码。如果之前没有选项匹配，则运行`default`选项。
 
 > **备注：** `default` 部分不是必须的 - 如果表达式不可能存在未知值，则可以安全地省略它。如果有机会，您需要包括它来处理未知的情况。
 
@@ -396,7 +397,7 @@ select.onchange = function() {
 
 {{ EmbedLiveSample('Ternary_operator_example', '100%', 300) }}
 
-在这里，我们有一个[元素表示一个控件，提供一个选项菜单：">`<select>`](/zh-CN/docs/Web/HTML/Element/select)选择主题（黑色或白色）的元素，加上一个简单[是最重要的，\<h6>是最少的。 标题元素简要介绍了它介绍的部分的主题。 标题信息可以由用户代理使用，例如，自动构建文档的目录。">`<h1>`](/zh-CN/docs/Web/HTML/Element/h1)的显示网站标题。我们也有一个函数叫做`update()`，它将两种颜色作为参数（输入）。网站的背景颜色设置为第一个提供的颜色，其文本颜色设置为第二个提供的颜色。
+在这里，我们有一个[元素表示一个控件，提供一个选项菜单：">`<select>`](/zh-CN/docs/Web/HTML/Element/select)选择主题（黑色或白色）的元素，加上一个简单[是最重要的，\<h6>是最少的。标题元素简要介绍了它介绍的部分的主题。标题信息可以由用户代理使用，例如，自动构建文档的目录。">`<h1>`](/zh-CN/docs/Web/HTML/Element/h1)的显示网站标题。我们也有一个函数叫做`update()`，它将两种颜色作为参数（输入）。网站的背景颜色设置为第一个提供的颜色，其文本颜色设置为第二个提供的颜色。
 
 最后，我们还有一个[onchange](/zh-CN/docs/Web/API/GlobalEventHandlers/onchange)事件监听器，用于运行一个包含三元运算符的函数。它以测试条件开始`select.value === 'black'`。如果这返回`true`，我们运行`update()`带有黑色和白色参数的函数，这意味着我们最终得到黑色的背景颜色和白色的文字颜色。如果返回`false`，我们运行`update()`带有白色和黑色参数的函数，这意味着站点颜色被反转。
 
@@ -410,7 +411,7 @@ select.onchange = function() {
 - `onchange` 事件处理器检测 `<select>` 菜单中选择的值何时更改。
 - 一个叫做 `createCalendar()` 的函数，它用来绘制日历并在 [`<h1>`](/zh-CN/docs/Web/HTML/Element/h1) 元素中显示正确的月份。
 
-我们需要你在`onchange`处理函数中写一个条件语句，就在`// ADD CONDITIONAL HERE`任务的下面 。这应该：
+我们需要你在`onchange`处理函数中写一个条件语句，就在`// ADD CONDITIONAL HERE`任务的下面。这应该：
 
 1. 查看所选月份（存储在`choice`变量中，这将是`<select>`值更改后的元素值，例如“1 月”）。
 2. 设置一个被调用`days`为等于所选月份天数的变量。为此，您必须查看一年中每个月的天数。为了这个例子的目的，你可以忽略闰年。

@@ -2,6 +2,7 @@
 title: Column layouts
 slug: Web/CSS/Layout_cookbook/Column_layouts
 ---
+
 {{CSSRef}}你可能经常需要创建一个包含几个栏目的布局，css 提供了几个方法来实现它。使用 Grid, Flexbox 或者 Multi-column layout 都取决于你想要实现什么目标，在这篇 recipe 中我们会探讨这些内容![three different styles of layouts which have two columns in the container.](cookbook-multiple-columns.png)
 
 ## Requirements
@@ -40,7 +41,7 @@ You can control the gaps between columns with the {{cssxref("column-gap")}} prop
 
 Flexbox can be used to break content into columns by setting {{cssxref("flex-direction")}} to `row`, however flexbox targets the elements inside the flex container and will place each direct child into a new column. This is a different behavior to what you saw with multicol.
 
-Flexbox 通过设置 row 的{{cssxref("flex-direction")}} ，可以用于将内容分成列， 然而，flexbox 的目标是 flex 容器内的元素，并将把每个直接的子元素放到一个新列中，这是与 multicol 不同的地方。
+Flexbox 通过设置 row 的{{cssxref("flex-direction")}} ，可以用于将内容分成列，然而，flexbox 的目标是 flex 容器内的元素，并将把每个直接的子元素放到一个新列中，这是与 multicol 不同的地方。
 
 There is currently no way to add a rule between flex items, and browser support for the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties is limited. Therefore to create gaps between items use a margin.
 
@@ -52,7 +53,7 @@ There is currently no way to add a rule between flex items, and browser support 
 
 Flexbox can also be used to create layouts where the flex items wrap onto new rows, by setting the {{cssxref("flex-wrap")}} property on the container to `wrap`. These new flex lines will distribute space along that line only — the items in the new line will not line up with items in the line above, as you'll see in the example below. This is why flexbox is described as one-dimensional. It is designed for controlling layout as a row or a column, but not both at the same time.
 
-Flexbox 还可以被用来创建 flex items 自动换行的布局，通过给 flex container 设置 {{cssxref("flex-wrap")}} 属性为 wrap. 这些新的 flex 行只会沿该行分配空间——新行中的项不会与上面行中的项对齐，你可以在下面的例子中看到。这就是为什么 flexbox 被描述为一维。 他是为了将布局控制为行或列，但不是同时控制行和列。
+Flexbox 还可以被用来创建 flex items 自动换行的布局，通过给 flex container 设置 {{cssxref("flex-wrap")}} 属性为 wrap. 这些新的 flex 行只会沿该行分配空间——新行中的项不会与上面行中的项对齐，你可以在下面的例子中看到。这就是为什么 flexbox 被描述为一维。他是为了将布局控制为行或列，但不是同时控制行和列。
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}
 
@@ -68,7 +69,7 @@ Use flexbox:
 
 If what you want is a layout where items line up in rows and columns then you should choose CSS Grid Layout. Grid Layout works on the direct children of the grid container in a similar way to the manner in which flexbox works on the direct children of the flex container, however with CSS Grid you can line your items up in rows and columns — it is described as two-dimensional.
 
-如果你想要 items 在行和列进行布局，你应该选择 Grid Layout. Grid Layout 作用于 grid container 的 直接子元素类似于 flexbox。 但是你可以在行和列两方面来控制他（flex 只能在行或者列）。
+如果你想要 items 在行和列进行布局，你应该选择 Grid Layout. Grid Layout 作用于 grid container 的 直接子元素类似于 flexbox。但是你可以在行和列两方面来控制他（flex 只能在行或者列）。
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
 

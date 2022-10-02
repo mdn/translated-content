@@ -2,9 +2,10 @@
 title: tref
 slug: Web/SVG/Element/tref
 ---
+
 {{SVGRef}}
 
-{{ SVGElement("text") }} 的文本内容既可以是直接嵌入在{{SVGElement("text")}}元素中的的字符数据 ，也可以是引用元素的字符数据内容，`tref`元素用来指定的包含文本内容的引用元素。
+{{ SVGElement("text") }} 的文本内容既可以是直接嵌入在{{SVGElement("text")}}元素中的的字符数据，也可以是引用元素的字符数据内容，`tref`元素用来指定的包含文本内容的引用元素。
 
 ## 用法
 
@@ -59,7 +60,7 @@ slug: Web/SVG/Element/tref
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.tref")}}
+{{Compat}}
 
 ## 参见
 

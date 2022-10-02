@@ -2,6 +2,7 @@
 title: AudioContext.createMediaElementSource()
 slug: Web/API/AudioContext/createMediaElementSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }} 接口的 `createMediaElementSource()` 方法用于创建一个新的 {{ domxref("MediaElementAudioSourceNode") }} 对象，输入某个存在的 HTML {{htmlelement("audio")}} or {{htmlelement("video")}} 元素，对应的音频即可被播放或者修改。
@@ -26,7 +27,7 @@ var source = audioCtx.createMediaElementSource(myMediaElement);
 
 ## 示例
 
-该示例由 {{htmlelement("audio") }} 元素，通过使用 `createMediaElementSource()` 方法，创建了一个音源，将其通过 {{ domxref("GainNode") }} 节点，输出到{{ domxref("AudioDestinationNode") }} 节点以播放。当鼠标指针移动时，`updatePage()` 函数被调用，该函数计算当前鼠标 Y 坐标与页面高度的比值， 改变 {{ domxref("GainNode") }} 节点的值以调整音量。您就可以通过鼠标上下移动而改变音乐的音量了。
+该示例由 {{htmlelement("audio") }} 元素，通过使用 `createMediaElementSource()` 方法，创建了一个音源，将其通过 {{ domxref("GainNode") }} 节点，输出到{{ domxref("AudioDestinationNode") }} 节点以播放。当鼠标指针移动时，`updatePage()` 函数被调用，该函数计算当前鼠标 Y 坐标与页面高度的比值，改变 {{ domxref("GainNode") }} 节点的值以调整音量。您就可以通过鼠标上下移动而改变音乐的音量了。
 
 > **备注：** 您也可以 [浏览该示例的在线演示](http://mdn.github.io/webaudio-examples/media-source-buffer/), 或者 [浏览源代码](https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer).
 
@@ -77,7 +78,7 @@ gainNode.connect(audioCtx.destination);
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext.createMediaElementSource")}}
+{{Compat}}
 
 ## 相关链接
 

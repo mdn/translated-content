@@ -2,6 +2,7 @@
 title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 ---
+
 {{JSRef}}
 
 **`indexOf()`** メソッドは、呼び出す {{jsxref("String")}} オブジェクト中で、 `fromIndex` から検索を始め、指定された値が最初に現れたインデックスを返します。値が見つからない場合は `-1` を返します。

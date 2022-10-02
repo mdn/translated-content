@@ -2,6 +2,7 @@
 title: browser_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -252,4 +253,4 @@ Firefox 中：
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.manifest.browser_action", 10)}}
+{{Compat}}

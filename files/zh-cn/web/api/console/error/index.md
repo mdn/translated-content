@@ -2,6 +2,7 @@
 title: Console.error()
 slug: Web/API/Console/error
 ---
+
 {{APIRef("Console API")}}
 
 向 Web 控制台输出一条错误消息。
@@ -36,7 +37,7 @@ console.exception(msg [, subst1, ..., substN]);
 
 ## 浏览器兼容性
 
-{{Compat("api.console.error")}}
+{{Compat}}
 
 ## 相关链接
 

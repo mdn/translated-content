@@ -2,6 +2,7 @@
 title: MediaStream.getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaStream")}} 接口下的 **_`getAudioTracks()`_** 方法会返回一个包含
@@ -50,4 +51,4 @@ navigator.mediaDevices.getUserMedia({audio: true, video: true})
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStream.getAudioTracks")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: パンくずナビゲーション
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
+
 {{CSSRef}}
 
 パンくず (Breadcrumb) ナビゲーションは、来た道をたどって開始ページまで戻ることができるパンくずリストを提供することによって、ユーザーがウェブサイト内の自分の位置を理解するのに役立ちます。

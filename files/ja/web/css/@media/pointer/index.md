@@ -1,15 +1,8 @@
 ---
 title: pointer
 slug: Web/CSS/@media/pointer
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.pointer
-translation_of: Web/CSS/@media/pointer
 ---
+
 {{CSSRef}}
 
 **`pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが（マウスなどの）ポインティングデバイスを持っているか、もしそうならば、*主要な*ポインティングデバイスにどれだけの正確性があるかを調べます。

@@ -7,6 +7,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@font-face
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/R%C3%A8gles_@) **`@font-face`** permet de définir les polices d'écriture à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisateur. Si la fonction `local()` est utilisée, elle indique à l'agent utilisateur de prendre en compte une police présente sur le poste de l'utilisateur.
@@ -150,15 +151,11 @@ Voici, selon les différents formats de police, les types MIME associés :
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires                                                                |
-| -------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------- |
-| {{SpecName('WOFF2.0', '', 'WOFF2 font format')}}                 | {{Spec2('WOFF2.0')}}     | Spécification du format de police avec un nouvel algorithme de compression. |
-| {{SpecName('WOFF1.0', '', 'WOFF font format')}}                 | {{Spec2('WOFF1.0')}}     | Spécification du format de police.                                          |
-| {{SpecName('CSS3 Fonts', '#font-face-rule', '@font-face')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale.                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face")}}
+{{Compat}}
 
 ## Voir aussi
 

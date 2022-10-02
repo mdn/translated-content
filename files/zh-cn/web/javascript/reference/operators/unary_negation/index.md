@@ -2,6 +2,7 @@
 title: Unary negation (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 ---
+
 {{jsSidebar("Operators")}}
 
 The unary negation operator (`-`) precedes its operand and negates it.

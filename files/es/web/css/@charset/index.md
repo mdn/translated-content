@@ -9,22 +9,24 @@ translation_of: Web/CSS/@charset
 
 ## Resumen
 
-La [regla-at](/en/CSS/At-rule "At-rule") **`@charset`** de [CSS](/en/CSS "CSS") especifica la codificación de caracteres usada en la hoja de estilos. Éste debe ser el primer elemento en la hoja de estilos, y no debe ser precedidad por ningun otro caracter; al no ser una [declaración anidada](/en/CSS/Syntax#nested_statements "en/CSS/Syntax#nested_statements"), no puede ser usada dentro de [grupos de reglas-at condicionales](/en/CSS/At-rule#Conditional_Group_Rules "en/CSS/At-rule#Conditional_Group_Rules"). Si se definen varias reglas-at `@charset`, solamente se usará la primera. La regla-at `@charset` no puede ser usada dentro de un atributo `style` style en un elemento HTML o dentro del elemento {{ HTMLElement("style") }} , ya que en estos casos se tomará en cuenta la codificación de la página HTML contenedora.
+La [regla-at](/en/CSS/At-rule) **`@charset`** de [CSS](/en/CSS) especifica la codificación de caracteres usada en la hoja de estilos. Éste debe ser el primer elemento en la hoja de estilos, y no debe ser precedidad por ningun otro caracter; al no ser una [declaración anidada](/en/CSS/Syntax#nested_statements), no puede ser usada dentro de [grupos de reglas-at condicionales](/en/CSS/At-rule#Conditional_Group_Rules). Si se definen varias reglas-at `@charset`, solamente se usará la primera. La regla-at `@charset` no puede ser usada dentro de un atributo `style` style en un elemento HTML o dentro del elemento {{ HTMLElement("style") }} , ya que en estos casos se tomará en cuenta la codificación de la página HTML contenedora.
 
 Esta regla-at es útil cuando se usan caracteres fuera de la codificación ASCII en alguna propiedad CSS, como {{ cssxref("content") }}.
 
 Habiendo diferentes maneras de definir la codificación de caracteres en una hoja de estilos, el navegador intentará seguir este orden para identificarlo (deteniéndose en el primer paso que dé resultado):
 
-1.  El valor de la [Marca de orden de bytes](https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes) al principio del archivo.
-2.  El valor dado por el atributo charset del encabezado HTTP `Content-Type:` o su equivalente en el protocolo usado para descargar la hoja de estilos.
-3.  La regla-at `@charset` de CSS.
-4.  Usar la codificación de caracteres definida en el documento de referencia: el atributo `charset` attribute del elemento {{ HTMLElement("link") }}. Este método es obsoleto para HTML5 y no debe ser usado.
-5.  Asumir que el documento es UTF-8.
+1. El valor de la [Marca de orden de bytes](https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes) al principio del archivo.
+2. El valor dado por el atributo charset del encabezado HTTP `Content-Type:` o su equivalente en el protocolo usado para descargar la hoja de estilos.
+3. La regla-at `@charset` de CSS.
+4. Usar la codificación de caracteres definida en el documento de referencia: el atributo `charset` attribute del elemento {{ HTMLElement("link") }}. Este método es obsoleto para HTML5 y no debe ser usado.
+5. Asumir que el documento es UTF-8.
 
 ## Sintaxis
 
-    @charset "UTF-8";
-    @charset 'iso-8859-15';
+```css
+@charset "UTF-8";
+@charset 'iso-8859-15';
+```
 
 - donde:
 

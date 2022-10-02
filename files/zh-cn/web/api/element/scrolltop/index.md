@@ -2,6 +2,7 @@
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.scrollTop`** 属性可以获取或设置一个元素的内容垂直滚动的像素数。
@@ -48,7 +49,7 @@ padding-bottom
 
 ## 浏览器兼容
 
-{{Compat("api.Element.scrollTop")}}
+{{Compat}}
 
 ## 参考
 

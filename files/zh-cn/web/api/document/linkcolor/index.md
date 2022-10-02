@@ -2,6 +2,7 @@
 title: document.linkColor
 slug: Web/API/Document/linkColor
 ---
+
 {{ ApiRef() }}
 
 ### 概述

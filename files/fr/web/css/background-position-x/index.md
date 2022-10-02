@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/background-position-x
 ---
+
 {{CSSRef}}
 
 La propriété **`background-position-x`** définit la position horizontale initiale de chaque image d'arrière-plan par rapport à l'origine, définie avec {{cssxref("background-origin")}}.
@@ -63,21 +64,21 @@ background-position-x: unset;
 - `<percentage>`
   - : Une valeur en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) qui définit le décalage horizontal de l'arrière-plan correspondant par rapport à un bord vertical de la zone d'arrière-plan, proportionnellement à la largeur de la zone. Si aucun côté n'est indiqué, l'écart fera référence au côté gauche.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                     | Commentaires                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Backgrounds', '#background-position-longhands', 'background-position-x')}} | {{Spec2('CSS4 Backgrounds')}} | Spécification initiale pour les propriétés détaillées de {{cssxref("background-position")}}, implémentée depuis longtemps. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.background-position-x")}}
+{{Compat}}
 
 ## Voir aussi
 

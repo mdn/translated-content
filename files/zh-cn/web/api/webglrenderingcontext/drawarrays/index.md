@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.drawArrays()
 slug: Web/API/WebGLRenderingContext/drawArrays
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.drawArrays()`** 方法用于从向量数组中绘制图元。
@@ -53,7 +54,7 @@ gl.drawArrays(gl.POINTS, 0, 8);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.drawArrays")}}
+{{Compat}}
 
 ## 另见
 

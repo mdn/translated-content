@@ -2,6 +2,7 @@
 title: <html>
 slug: Web/HTML/Element/html
 ---
+
 {{HTMLRef}}
 
 **HTML `<html>` 元素** 表示一个 HTML 文档的根（顶级元素），所以它也被称为*根元素*。所有其他元素必须是此元素的后代。

@@ -2,6 +2,7 @@
 title: Date.prototype.setUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 ---
+
 {{JSRef}}
 
 **`setUTCMonth()`** 方法根据通用的时间来设置一个准确的月份。
@@ -29,7 +30,7 @@ dateObj.setUTCMonth(monthValue[, dayValue])
 
 如果你没有明确书写`dayValue` 这个参数，那么就会从{{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} 方法返回对应的数值。
 
-如果你写了一个超过在规定的范围内的参数. `setUTCMonth() 就会试图相应的更新时间信息在 Data 对象中。例如，如果你用 15 作为`monthValue 的值，那么年份就会加 1，并且月份会变成 3.（15=12+3）
+如果你写了一个超过在规定的范围内的参数。`setUTCMonth()` 就会试图相应的更新时间信息在 Data 对象中。例如，如果你用 15 作为 `monthValue` 的值，那么年份就会加 1，并且月份会变成 3。（15=12+3）
 
 ## 示例
 

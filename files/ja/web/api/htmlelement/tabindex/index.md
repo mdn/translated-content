@@ -2,6 +2,7 @@
 title: HTMLElement.tabIndex
 slug: Web/API/HTMLElement/tabIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`tabIndex`** は {{DOMxRef("HTMLElement")}} インターフェイスのプロパティで、現在の要素のタブの順序を表します。

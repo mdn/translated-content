@@ -2,6 +2,7 @@
 title: Toolbar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 ---
+
 {{AddonSidebar}}
 
 常说的 [浏览器动作（browser action）](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), 指通过在工具栏上上添加新按钮，提供用户互动选项，用户可点击按钮与你的扩展进行互动。

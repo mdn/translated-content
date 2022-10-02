@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
+
 {{CSSRef}}
 
 Les **compteurs CSS** sont des variables dont les valeurs sont incrémentées par les règles CSS et qui permettent de savoir combien de fois elles sont utilisées. Cela permet par exemple d'adapter la mise en forme du contenu en fonction de son emplacement dans le document.
@@ -121,10 +122,7 @@ li::before {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}     | {{Spec2("CSS3 Lists")}} | Aucune modification. |
-| {{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}} | {{Spec2("CSS2.1")}}         | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/inset-block-end
 original_slug: inset-block-end
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`inset-block-end`** définit la fin du décalage logique en bloc (_block_) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou  {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
@@ -43,9 +44,13 @@ Elle est liée aux propriétés {{cssxref("inset-block-start")}}, {{cssxref("ins
 
 La propriété `inset-block-end` peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -80,15 +85,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                                           | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-inset-block-end", "inset-block-end")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.inset-block-end")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: WakeLock.request()
 slug: Web/API/WakeLock/request
 ---
+
 {{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 **`WakeLock.request()`** 方法用来获取屏幕唤醒锁定权限，防止屏幕变暗、关闭或展示屏幕保护程序。
@@ -52,7 +53,7 @@ tryKeepScreenAlive(10);
 
 ## 浏览器兼容性
 
-{{Compat("api.WakeLock.request")}}
+{{Compat}}
 
 ## 相关链接
 

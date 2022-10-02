@@ -2,6 +2,7 @@
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
 ---
+
 {{HTTPSidebar}}
 
 在 HTTP 协议中，**`CONNECT` **方法可以开启一个客户端与所请求资源之间的双向沟通的通道。它可以用来创建隧道（tunnel）。

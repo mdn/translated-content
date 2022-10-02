@@ -2,6 +2,7 @@
 title: ':is() (:matches(), :any())'
 slug: Web/CSS/:is
 ---
+
 {{CSSRef}}
 
 > **Note:** `:matches()` は `:is()` に改名されました。 ([CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258))

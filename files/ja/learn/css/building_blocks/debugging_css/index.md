@@ -2,6 +2,7 @@
 title: CSS のデバッグ
 slug: Learn/CSS/Building_blocks/Debugging_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
 CSS を書くとき、期待どおりに動作していないように見える問題が発生する場合があります。セレクターは合っているはずなのに何も起こらなかったり、ボックスのサイズが期待したどおりにならなかったりなどです。この記事では CSS の問題をデバッグする方法について案内し、何が起こっているかを調べるのに各モダンブラウザーのデベロッパーツールはどう役立つかを示します。

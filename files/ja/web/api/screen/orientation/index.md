@@ -2,6 +2,7 @@
 title: Screen.orientation
 slug: Web/API/Screen/orientation
 ---
+
 {{APIRef("Screen Orientation API")}}
 
 **`orientation`** は {{DOMxRef("Screen")}} インターフェイスの読み取り専用プロパティで、現在の画面の向きを返します。

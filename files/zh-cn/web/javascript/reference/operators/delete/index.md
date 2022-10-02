@@ -2,6 +2,7 @@
 title: delete 操作符
 slug: Web/JavaScript/Reference/Operators/delete
 ---
+
 {{jsSidebar("Operators")}}
 
 **`delete` 操作符**用于删除对象的某个属性；如果没有指向这个属性的引用，那它最终会被释放。
@@ -89,7 +90,7 @@ var nameOther = 'XYZ';
 // 通过以下方法获取全局属性：
 Object.getOwnPropertyDescriptor(window, 'nameOther');
 
-// 输出: Object {value: "XYZ",
+// 输出：Object {value: "XYZ",
 //                  writable: true,
 //                  enumerable: true,
 //                  configurable: false}
@@ -226,7 +227,7 @@ console.log(foo.bar);   //42
 // 从原型上删除属性
 delete Foo.prototype.bar; //true
 
-// 由于已删除“ bar”属性，因此不能再从 Foo 继承它。
+// 由于已删除“bar”属性，因此不能再从 Foo 继承它。
 console.log(foo.bar);    //undefined
 ```
 

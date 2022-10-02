@@ -3,6 +3,7 @@ title: Document.height
 slug: conflicting/Web/API/Element/clientHeight
 original_slug: Web/API/Document/height
 ---
+
 {{APIRef("DOM")}} {{deprecated_header}}
 
 > **Note:** {{Gecko("6.0")}} より `document.height` には対応しなくなりました。代わりに `document.body.clientHeight` を使用してください。 {{domxref("element.clientHeight")}} を参照してください。

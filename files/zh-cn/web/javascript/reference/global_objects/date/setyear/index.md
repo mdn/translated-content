@@ -2,6 +2,7 @@
 title: Date.prototype.setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`setYear()`** 方法根据一个本地时间为一个确定的日期对象设置年份。由于`setYear()` 并不设置完整年份（"正是千年虫问题"），本方法已经完全被{{jsxref("Date.prototype.setFullYear()","setFullYear()")}} 方法所取代。
@@ -29,7 +30,7 @@ dateObj.setYear(yearValue)
 
 ### 使用 `setYear()`
 
-例子前两行（除去声明）将年份设置为 1996。 第三行将年份设置为 2000.
+例子前两行（除去声明）将年份设置为 1996。第三行将年份设置为 2000.
 
 ```js
 var theBigDay = new Date();

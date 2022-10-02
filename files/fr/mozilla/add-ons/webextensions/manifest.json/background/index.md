@@ -8,6 +8,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

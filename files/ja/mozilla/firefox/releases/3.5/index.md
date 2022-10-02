@@ -2,6 +2,7 @@
 title: Firefox 3.5 開発者向け情報
 slug: Mozilla/Firefox/Releases/3.5
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox 3.5](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-US/firefox/3.5/releasenotes/) (_2009 年 7 月 30 日にリリース_) では数多くの新機能が導入され、また、幅広い種類のウェブ標準に対するサポートが追加および改善されます。この記事は主な変更点をカバーする記事へのリンクを伴う広範囲に及ぶ一覧を提供します。

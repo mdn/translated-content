@@ -3,6 +3,7 @@ title: btoa()
 slug: Web/API/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`btoa()`** method creates a {{glossary("Base64")}}-encoded ASCII string from a [binary string](/zh-TW/docs/Web/API/DOMString/Binary) (i.e., a {{jsxref("String")}} object in which each character in the string is treated as a byte of binary data).

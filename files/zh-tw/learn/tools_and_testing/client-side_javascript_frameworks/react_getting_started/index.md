@@ -3,6 +3,7 @@ title: React 新手入門
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 在本文中，我們將向 React 打個招呼。我們將探索其背後與範例的一些細節，在自己電腦設置基本的 React 工具鏈環境，並建立一個簡單入門的應用程式——好瞭解 React 基本架構。

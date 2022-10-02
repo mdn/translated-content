@@ -2,6 +2,7 @@
 title: JavaScript 数据类型和数据结构
 slug: Web/JavaScript/Data_structures
 ---
+
 {{jsSidebar("More")}}
 
 编程语言都具有内建的数据结构，但各种编程语言的数据结构常有不同之处。本文试图列出 JavaScript 语言中内建的数据结构及其属性，它们可以用来构建其他的数据结构。同时尽可能地描述与其他语言的不同之处。
@@ -264,7 +265,7 @@ JavaScript 的字符串类型用于表示文本数据。它是一组 16 位的�
 
 ### 带键的集合：Maps, Sets, WeakMaps, WeakSets
 
-这些数据结构把对象的引用当作键，其在 ECMAScript 第 6 版中有介绍。当 {{jsxref("Map")}} 和 {{jsxref("WeakMap")}} 把一个值和对象关联起来的时候，{{jsxref("Set")}} 和 {{jsxref("WeakSet")}} 表示一组对象。 Map 和 WeakMaps 之间的差别在于，在前者中，对象键是可枚举的。这允许垃圾收集器优化后面的枚举（This allows garbage collection optimizations in the latter case）。
+这些数据结构把对象的引用当作键，其在 ECMAScript 第 6 版中有介绍。当 {{jsxref("Map")}} 和 {{jsxref("WeakMap")}} 把一个值和对象关联起来的时候，{{jsxref("Set")}} 和 {{jsxref("WeakSet")}} 表示一组对象。Map 和 WeakMaps 之间的差别在于，在前者中，对象键是可枚举的。这允许垃圾收集器优化后面的枚举（This allows garbage collection optimizations in the latter case）。
 
 在纯 ECMAScript 5 下可以实现 `Maps` 和 `Sets`。然而，因为对象并不能进行比较（就对象“小于”示例来讲），所以查询必定是线性的。它们的原生实现（包括 `WeakMap`）所需要的查询时间则是相对恒定的（呈对数增长）。
 

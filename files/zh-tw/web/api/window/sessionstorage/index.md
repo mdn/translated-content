@@ -2,6 +2,7 @@
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
 ---
+
 {{APIRef()}}
 
 `sessionStorage` 屬性能讓開發人員訪問當前 origin 的 {{DOMxRef("Storage")}} 物件。`sessionStorage` 跟 {{DOMxRef("Window.localStorage", "localStorage")}} 很相似：唯一不同的地方是存放在 `localStorage` 的資料並沒有過期的時效；而存放在 `sessionStorage` 的資料則會在頁面 session 結束時清空。只要該頁面頁面(頁籤)沒被關閉或者有還原(restore)該頁面，資料就會保存。**開啟新頁籤或視窗會產生一個新的 sessionStorage**，跟 Session 與 Cookies 的做法不大一樣。
@@ -64,7 +65,7 @@ field.addEventListener("change", function() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## 相關內容
 

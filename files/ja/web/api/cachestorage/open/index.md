@@ -2,13 +2,14 @@
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("CacheStorage")}} インターフェイスの **`open()`** メソッドは、`cacheName` に一致する {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します。
 
 グローバルな {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} プロパティを介して `CacheStorage` にアクセスできます。
 
-> **Note:** **注**: 指定した {{domxref("Cache")}} が存在しない場合、その `cacheName` で新しいキャッシュを作成し、この新しい {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します。
+> **Note:** 指定した {{domxref("Cache")}} が存在しない場合、その `cacheName` で新しいキャッシュを作成し、この新しい {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します。
 
 ## 構文
 

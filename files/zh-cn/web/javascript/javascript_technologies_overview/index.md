@@ -2,6 +2,7 @@
 title: JavaScript 技术概览
 slug: Web/JavaScript/JavaScript_technologies_overview
 ---
+
 {{JsSidebar("Introductory")}}
 
 [HTML](/zh-CN/docs/Web/HTML) 定义网页的结构与内容，[CSS](/zh-CN/docs/Web/CSS) 定义其格式与样式，而 [JavaScript](/zh-CN/docs/Web/JavaScript) 则为网页增加可交互性，创作功能丰富的 Web 应用。
@@ -53,7 +54,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 - [ECMAScript 一致性测试套件仓库](https://github.com/tc39/test262)
 - [TC39 会议记录](https://github.com/tc39/notes)
 - [ECMAScript 规范讨论；当前邮件列表](https://es.discourse.group/)
-- [ECMAScript 规范讨论；历史邮件列表档案（至 2021 年 3月）](https://esdiscuss.org/)
+- [ECMAScript 规范讨论；历史邮件列表档案（至 2021 年 3 月）](https://esdiscuss.org/)
 
 ## DOM API
 

@@ -2,6 +2,7 @@
 title: FocusEvent()
 slug: Web/API/FocusEvent/FocusEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`FocusEvent()`** コンストラクターは、新しく作成された

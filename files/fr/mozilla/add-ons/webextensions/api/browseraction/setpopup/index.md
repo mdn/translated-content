@@ -13,6 +13,7 @@ tags:
   - setPopup
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
 ---
+
 {{AddonSidebar()}}
 
 Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur. Les onglets sans popup spécifique hériteront de la popup globale, qui par défaut est la [`default_popup`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) spécifiée dans le manifest.
@@ -106,7 +107,8 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -133,4 +135,4 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

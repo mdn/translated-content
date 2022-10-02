@@ -2,6 +2,7 @@
 title: Notification.body
 slug: Web/API/notification/body
 ---
+
 {{APIRef("Web Notifications")}}
 
 {{domxref("Notification")}} 的只读属性 body 返回了构造函数{{domxref("Notification")}}实例化时，options 所使用的 body 值。

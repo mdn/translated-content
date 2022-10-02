@@ -11,6 +11,7 @@ tags:
   - captivePortal
 translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/getLastChecked
 ---
+
 {{AddonSidebar()}}
 
 Retourne le temps écoulé depuis que la dernière demande a été complétée.
@@ -31,7 +32,8 @@ Une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est 
 
 {{Compat("webextensions.api.captivePortal.getLastChecked")}}
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -58,4 +60,4 @@ Une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est 
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -2,6 +2,7 @@
 title: Notification.permission
 slug: Web/API/notification/permission
 ---
+
 {{APIRef("Web Notifications")}}
 
 `Notification` 的只读属性 permission 用来表明用户是否允许当前域显示 Web Notification。

@@ -2,6 +2,7 @@
 title: Firefox 3.6 技術文件
 slug: Mozilla/Firefox/Releases/3.6
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox 3.6](http://www.firefox.com/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.

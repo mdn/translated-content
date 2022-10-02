@@ -2,6 +2,7 @@
 title: window.openDialog
 slug: Web/API/Window/openDialog
 ---
+
 {{ ApiRef() }}
 
 ### 简介
@@ -47,13 +48,13 @@ The `chrome` and `dialog` features are always assumed on, unless explicitly turn
 
 #### Passing extra parameters to the dialog
 
-To pass extra parameters into the dialog, you can simply supply them after the \<tt>windowFeatures\</tt> parameter:
+To pass extra parameters into the dialog, you can simply supply them after the `windowFeatures` parameter:
 
 ```plain
 openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
 ```
 
-The extra parameters will then get packed into a property named \<tt>arguments\</tt> of type [Array](cn/Core_JavaScript_1.5_Reference/Global_Objects/Array), and this property gets added to the newly opened dialog window.
+The extra parameters will then get packed into a property named `arguments` of type [Array](cn/Core_JavaScript_1.5_Reference/Global_Objects/Array), and this property gets added to the newly opened dialog window.
 
 To access these extra parameters from within dialog code, use the following scheme:
 
@@ -66,16 +67,16 @@ Note that you can access this property from within anywhere in the dialog code. 
 
 #### Returning values from the dialog
 
-Since \<tt>window\.close()\</tt> erases all properties associated with the dialog window (i.e. the variables specified in the JavaScript code which gets loaded from the dialog), it is not possible to pass return values back past the close operation using globals (or any other constructs).
+Since `window\.close()` erases all properties associated with the dialog window (i.e. the variables specified in the JavaScript code which gets loaded from the dialog), it is not possible to pass return values back past the close operation using globals (or any other constructs).
 
-To be able to pass values back to the caller, you have to supply some object via the extra parameters. You can then access this object from within the dialog code and set properties on it, containing the values you want to return or preserve past the \<tt>window\.close()\</tt> operation.
+To be able to pass values back to the caller, you have to supply some object via the extra parameters. You can then access this object from within the dialog code and set properties on it, containing the values you want to return or preserve past the `window.close()` operation.
 
 ```plain
 var retVals = { address: null, delivery: null };
 openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98, retVals);
 ```
 
-If you set the properties of the \<tt>retVals\</tt> object in the dialog code as described below, you can now access them via the \<tt>retVals\</tt> array after the \<tt>openDialog()\</tt> call returns.
+If you set the properties of the `retVals` object in the dialog code as described below, you can now access them via the `retVals` array after the `openDialog()` call returns.
 
 Inside the dialog code, you can set the properties as follows:
 

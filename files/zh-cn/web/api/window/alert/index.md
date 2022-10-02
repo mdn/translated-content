@@ -2,6 +2,7 @@
 title: window.alert
 slug: Web/API/Window/alert
 ---
+
 {{ ApiRef() }}
 
 ### 概述

@@ -2,6 +2,7 @@
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
 ---
+
 {{HTTPSidebar}}HTTP 响应头 **`Content-Security-Policy`** 允许站点管理者控制用户代理能够为指定的页面加载哪些资源。除了少数例外情况，设置的政策主要涉及指定服务器的源和脚本结束点。这将帮助防止跨站脚本攻击（`Cross-Site Script`）（{{Glossary("XSS")}}）。
 
 如需更多信息，请查阅[Content Security Policy (CSP)](/zh-CN/docs/Web/HTTP/CSP)。
@@ -111,7 +112,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 CSP 允许在一个资源中指定多个策略，包括通过 `Content-Security-Policy` 头，以及 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 头，和 {{HTMLElement("meta")}} 组件。
 
-你可以像以下实例一样多次调用 `Content-Security-Policy` 头。 特别注意这里的 {{CSP("connect-src")}} 指令。 尽管第二个策略允许连接，第一个策略仍然包括了 `connect-src 'none'`。添加了附加的策略后，只会让资源保护的能力更强，也就是说不会有接口可以被允许访问，等同于最严格的策略，`connect-src 'none'` 强制开启。
+你可以像以下实例一样多次调用 `Content-Security-Policy` 头。特别注意这里的 {{CSP("connect-src")}} 指令。尽管第二个策略允许连接，第一个策略仍然包括了 `connect-src 'none'`。添加了附加的策略后，只会让资源保护的能力更强，也就是说不会有接口可以被允许访问，等同于最严格的策略，`connect-src 'none'` 强制开启。
 
 ```plain
 Content-Security-Policy: default-src 'self' http://example.com;

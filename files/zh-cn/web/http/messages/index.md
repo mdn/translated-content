@@ -2,13 +2,14 @@
 title: HTTP 消息
 slug: Web/HTTP/Messages
 ---
+
 {{HTTPSidebar}}
 
 HTTP 消息是服务器和客户端之间交换数据的方式。有两种类型的消息︰ 请求（requests）-- 由客户端发送用来触发一个服务器上的动作；响应（responses）-- 来自服务器的应答。
 
 HTTP 消息由采用 ASCII 编码的多行文本构成。在 HTTP/1.1 及早期版本中，这些消息通过连接公开地发送。在 HTTP/2 中，为了优化和性能方面的改进，曾经可人工阅读的消息被分到多个 HTTP 帧中。
 
-Web 开发人员或网站管理员，很少自己手工创建这些原始的 HTTP 消息︰ 由软件、浏览器、 代理或服务器完成。他们通过配置文件（用于代理服务器或服务器），API（用于浏览器）或其他接口提供 HTTP 消息。
+Web 开发人员或网站管理员，很少自己手工创建这些原始的 HTTP 消息︰ 由软件、浏览器、代理或服务器完成。他们通过配置文件（用于代理服务器或服务器），API（用于浏览器）或其他接口提供 HTTP 消息。
 
 ![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](httpmsg2.png)
 
@@ -19,7 +20,7 @@ HTTP 请求和响应具有相似的结构，由以下部分组成︰
 1. 一行起始行用于描述要执行的请求，或者是对应的状态，成功或失败。这个起始行总是单行的。
 2. 一个可选的 HTTP 头集合指明请求或描述消息正文。
 3. 一个空行指示所有关于请求的元数据已经发送完毕。
-4. 一个可选的包含请求相关数据的正文 (比如 HTML 表单内容), 或者响应相关的文档。 正文的大小有起始行的 HTTP 头来指定。
+4. 一个可选的包含请求相关数据的正文 (比如 HTML 表单内容), 或者响应相关的文档。正文的大小有起始行的 HTTP 头来指定。
 
 起始行和 HTTP 消息中的 HTTP 头统称为请求头，而其有效负载被称为消息正文。
 
@@ -38,7 +39,7 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_�
       `POST / HTTP/1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
     - 一个完整的 URL，被称为 _绝对形式 (absolute form)_，主要在使用 `GET` 方法连接到代理时使用。
       `GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
-    - 由域名和可选端口（以`':'`为前缀）组成的 URL 的 authority component，称为 _authority form_。 仅在使用 `CONNECT` 建立 HTTP 隧道时才使用。
+    - 由域名和可选端口（以`':'`为前缀）组成的 URL 的 authority component，称为 _authority form_。仅在使用 `CONNECT` 建立 HTTP 隧道时才使用。
       `CONNECT developer.mozilla.org:80 HTTP/1.1`
     - _星号形式 (asterisk form)_，一个简单的星号 (`'*'`)，配合 `OPTIONS` 方法使用，代表整个服务器。
       `OPTIONS * HTTP/1.1`
@@ -47,7 +48,7 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_�
 
 ### Headers
 
-来自请求的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers) 遵循和 HTTP header 相同的基本结构：不区分大小写的字符串，紧跟着的冒号 `(':')` 和一个结构取决于 header 的值。 整个 header（包括值）由一行组成，这一行可以相当长。
+来自请求的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers) 遵循和 HTTP header 相同的基本结构：不区分大小写的字符串，紧跟着的冒号 `(':')` 和一个结构取决于 header 的值。整个 header（包括值）由一行组成，这一行可以相当长。
 
 有许多请求头可用，它们可以分为几组：
 
@@ -59,7 +60,7 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_�
 
 ### Body
 
-请求的最后一部分是它的 body。不是所有的请求都有一个 body：例如获取资源的请求，GET，HEAD，DELETE 和 OPTIONS，通常它们不需要 body。 有些请求将数据发送到服务器以便更新数据：常见的的情况是 POST 请求（包含 HTML 表单数据）。
+请求的最后一部分是它的 body。不是所有的请求都有一个 body：例如获取资源的请求，GET，HEAD，DELETE 和 OPTIONS，通常它们不需要 body。有些请求将数据发送到服务器以便更新数据：常见的的情况是 POST 请求（包含 HTML 表单数据）。
 
 Body 大致可分为两类：
 
@@ -72,7 +73,7 @@ Body 大致可分为两类：
 
 HTTP 响应的起始行被称作 _状态行_ _(status line)_，包含以下信息：
 
-1. _协议版本_，通常为 `HTTP/1.1。`
+1. _协议版本_，通常为 `HTTP/1.1`。
 2. _状态码_ (_status code_)，表明请求是成功或失败。常见的状态码是 {{HTTPStatus("200")}}，{{HTTPStatus("404")}}，或 {{HTTPStatus("302")}}。
 3. _状态文本 (status text)_。一个简短的，纯粹的信息，通过状态码的文本描述，帮助人们理解该 HTTP 消息。
 
@@ -80,7 +81,7 @@ HTTP 响应的起始行被称作 _状态行_ _(status line)_，包含以下信�
 
 ### Headers
 
-响应的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers) 遵循和任何其它 header 相同的结构：不区分大小写的字符串，紧跟着的冒号 (`':'`) 和一个结构取决于 header 类型的值。 整个 header（包括其值）表现为单行形式。
+响应的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers) 遵循和任何其它 header 相同的结构：不区分大小写的字符串，紧跟着的冒号 (`':'`) 和一个结构取决于 header 类型的值。整个 header（包括其值）表现为单行形式。
 
 有许多响应头可用，这些响应头可以分为几组：
 

@@ -2,6 +2,7 @@
 title: border-left-width
 slug: Web/CSS/border-left-width
 ---
+
 {{CSSRef}}
 
 **`border-left-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の境界の幅を設定します。

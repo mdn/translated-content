@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/outline-color
 ---
+
 {{CSSRef}}
 
 La propriété **`outline-color`** permet de définir la couleur avec laquelle on trace le contour de l'élément. Ce contour est tracé autour de [la boîte de bordure](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) et peut être utilisé pour faire ressortir l'élément.
@@ -42,9 +43,13 @@ La propriété `outline-color` est définie avec une des valeurs listées ci-apr
 - `invert`
   - : Afin de s'assurer que la bordure est visible, on applique une inversion de couleur avec l'arrière-plan. Cela permet de renforcer le contraste, quelle que soit la couleur de l'arrière-plan. Cette valeur ne doit pas nécessairement être supportée par les navigateurs. Si elle ne l'est pas, ils considèreront la règle comme invalide.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -84,17 +89,11 @@ Le ratio de contraste est déterminé en comparaisant les luminosités des deux 
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                                   | Commentaires                                |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------- |
-| {{SpecName('CSS3 Basic UI', '#outline-color', 'outline-color')}}             | {{Spec2('CSS3 Basic UI')}}     | Aucun changement                            |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-color')}}     | {{Spec2('CSS3 Transitions')}} | `outline-color` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline-color', 'outline-color')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline-color")}}
+{{Compat}}
 
 ## Voir aussi
 

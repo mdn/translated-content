@@ -2,6 +2,7 @@
 title: 相等比較
 slug: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 在 ES2015，有四個相等比較方法：

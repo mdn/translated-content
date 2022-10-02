@@ -2,6 +2,7 @@
 title: identity
 slug: Mozilla/Add-ons/WebExtensions/API/identity
 ---
+
 {{AddonSidebar}}
 
 identity API を使って [OAuth2](https://oauth.net/2/) の認証コードやアクセストークンを取得し、拡張機能が OAuth2 での認証 (Google や Facebook アカウントなど) をサポートするサービスからユーザーデータを取得できるようにします。

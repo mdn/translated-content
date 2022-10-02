@@ -2,13 +2,14 @@
 title: SVG 背景缩放
 slug: Web/CSS/Scaling_of_SVG_backgrounds
 ---
+
 {{cssref}}SVG 相比其他格式为我们提供了更多的灵活性，与此同时当我们把它用作背景图形 {{ cssxref("background-image") }} 时有更多需要我们注意的东西，尤其是在我们使用 {{ cssxref("background-size") }} 属性时。本文描述了在使用这些属性时如何处理 SVG 图像的缩放。
 
 ## 规则概要
 
 大部分计算方式可以用这四条规则来概括。这些规则基本上涵盖了大部分情况除了个别边缘问题。
 
-1. 当 {{ cssxref("background-size") }} 指定了固定的尺寸 （百分比或者其他单位），会按照固定的尺寸来。
+1. 当 {{ cssxref("background-size") }} 指定了固定的尺寸（百分比或者其他单位），会按照固定的尺寸来。
 2. 当图片自身存在固有的比例（宽高比恒定，诸如 16:9、4:3、2.39:1、1:1 等等)，渲染出的尺寸使用这个比例。
 3. 当图像指定了尺寸，并且这个尺寸没有被修改，则使用指定的尺寸。
 4. 当不是上述情况时，则图像将呈现与背景区域相同的大小。
@@ -39,7 +40,7 @@ slug: Web/CSS/Scaling_of_SVG_backgrounds
 
 ### 指定一个维度的尺寸，有固定比例
 
-这个图片指定了 100px 的高但没有宽。 同时指定了一个 3:4 的比例，除非是故意放大到不成比例的尺寸（也就是说，通过显式指定宽度和高度到不是这个比例）
+这个图片指定了 100px 的高但没有宽。同时指定了一个 3:4 的比例，除非是故意放大到不成比例的尺寸（也就是说，通过显式指定宽度和高度到不是这个比例）
 
 ![100px-height-3x4-ratio.png](/@api/deki/files/5857/=100px-height-3x4-ratio.png)
 
@@ -61,7 +62,7 @@ slug: Web/CSS/Scaling_of_SVG_backgrounds
 
 ### 两个维度都指定尺寸
 
-如果你使用 {{ cssxref("background-size") }} 指定了两条边的长度， those lengths are always used, per rule 1 above. In other words, the image will always get stretched to the dimensions you specify, regardless of whether or not the source image has specified its dimensions and/or aspect ratio.
+如果你使用 {{ cssxref("background-size") }} 指定了两条边的长度，those lengths are always used, per rule 1 above. In other words, the image will always get stretched to the dimensions you specify, regardless of whether or not the source image has specified its dimensions and/or aspect ratio.
 
 #### Source: No dimensions or intrinsic ratio
 

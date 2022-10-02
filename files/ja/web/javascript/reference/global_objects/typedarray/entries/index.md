@@ -2,6 +2,7 @@
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 ---
+
 {{JSRef}}
 
 **`entries()`** メソッドは、配列内の各インデックスのキーと値のペアを含む新しい配列イテレーターオブジェクトを返します。

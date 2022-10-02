@@ -2,6 +2,7 @@
 title: カスケードと継承
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 このレッスンでの目的は、CSS を HTML に適用する方法と競合した場合の解決方法について、もっとも基本的な概念（カスケード・詳細度・継承）の理解を深めていくことです。

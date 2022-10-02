@@ -2,6 +2,7 @@
 title: KeyboardEvent.location
 slug: Web/API/KeyboardEvent/location
 ---
+
 {{APIRef("DOM Events")}}
 
 **`KeyboardEvent.location`** 是一个只读属性，返回一个无符号的长整型 `unsigned long`，表示按键在键盘或其他设备上的位置
@@ -131,7 +132,7 @@ function keyEvent(event) {
 
 ## Browser compatibility
 
-{{Compat("api.KeyboardEvent.location")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 ---
+
 {{JSRef}}
 
 **`getUTCMonth()`** メソッドは、協定世界時に基づき、指定された日付の「月」を表す 0 を基点とした値 (すなわち 0 が年の最初の月を示す) を返します。

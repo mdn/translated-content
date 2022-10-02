@@ -21,7 +21,7 @@ JavaScript admite un compacto conjunto de declaraciones, específicamente declar
 
 La {{JSxRef("Sentencias", "referencia de JavaScript")}} contiene detalles exhaustivos sobre las declaraciones de este capítulo. El carácter de punto y coma (`;`) se utiliza para separar declaraciones en código JavaScript.
 
-Todas las expresiones e instrucciones de JavaScript también son una declaración. Consulta {{JSxRef("../Guide/Expressions_and_Operators", "Expresiones y operadores")}} para obtener información completa sobre las expresiones.
+Todas las expresiones e instrucciones de JavaScript también son una declaración. Consulta {{JSxRef("Guide/Expressions_and_Operators", "Expresiones y operadores")}} para obtener información completa sobre las expresiones.
 
 ## Declaración de bloque
 

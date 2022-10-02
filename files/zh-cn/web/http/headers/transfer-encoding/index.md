@@ -2,6 +2,7 @@
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
 ---
+
 {{HTTPSidebar}}
 
 **`Transfer-Encoding`** 消息首部指明了将 {{Glossary("Entity header","entity")}} 安全传递给用户所采用的编码形式。
@@ -37,7 +38,7 @@ Transfer-Encoding: gzip, chunked
 - `deflate`
   - : 采用 [zlib](http://en.wikipedia.org/wiki/Zlib) 结构 (在 [RFC 1950](http://tools.ietf.org/html/rfc1950) 中规定)，和 [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) 压缩算法 (在 [RFC 1951](http://tools.ietf.org/html/rfc1952) 中规定)。
 - `gzip`
-  - : 表示采用 [Lempel-Ziv coding](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77) 压缩算法，以及 32 位 CRC 校验的编码方式。这个编码方式最初由 UNIX 平台上的 _gzip_ 程序采用。处于兼容性的考虑， HTTP/1.1 标准提议支持这种编码方式的服务器应该识别作为别名的 `x-gzip` 指令。
+  - : 表示采用 [Lempel-Ziv coding](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77) 压缩算法，以及 32 位 CRC 校验的编码方式。这个编码方式最初由 UNIX 平台上的 _gzip_ 程序采用。处于兼容性的考虑，HTTP/1.1 标准提议支持这种编码方式的服务器应该识别作为别名的 `x-gzip` 指令。
 - `identity`
   - : 用于指代自身（例如：未经过压缩和修改）。除非特别指明，这个标记始终可以被接受。
 

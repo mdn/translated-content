@@ -2,6 +2,7 @@
 title: 装飾的なボックスの作成
 slug: Learn/CSS/Howto/create_fancy_boxes
 ---
+
 CSS ボックスは、CSS で装飾されたウェブページの構成要素です。 見栄えを良くすることは、楽しさとやりがいの両方です。 デザインのアイデアを実用的なコードに変えることがすべてだからです。 面倒な制約と CSS の使用における狂気の自由のために、それは挑戦的です。 いくつかの装飾的なボックスをやりましょう。
 
 実用的な側面に取り掛かる前に、[CSS ボックスモデル](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model)に慣れていることを確認してください。 いくつかの [CSS レイアウトの基本](/ja/docs/Learn/CSS/CSS_layout/Introduction)を熟知していることも賢明ですが、前提条件ではありません。

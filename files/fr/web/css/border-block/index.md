@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-block
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`border-block`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de paramétrer les différentes propriétés logiques relatives à la bordure sur l'axe en bloc.
@@ -36,9 +37,13 @@ La propriété `border-block` peut être utilisée avec une ou plusieurs de ces 
 - `<'color'>`
   - : La couleur de la bordure. Voir {{cssxref("color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -71,15 +76,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block", "border-block")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-block")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 ---
+
 {{AddonSidebar()}}Connecte l'extension à une appplication native sur l'ordinateur de l'utilisateur.Cela prend le nom d'une application native en tant que paramètre. Il démarre l'application native et retourne un objet  {{WebExtAPIRef("runtime.Port")}} à l'appelant.L'appelant peut utiliser le `Port` pour échanger des messages avec l'application native utilisant `Port.postMessage()` et `port.onMessage`.L'application native s'exécute jusqu'à ce qu'elle se termine, ou l'appelant appelle `Port.disconnect()`, ou la page qui a créé le `Port` est détruite. Une fois le `Port` est déconnecté, le navigateur mettra quelques secondes à se terminer pour quitter le processus, puis le désactiver s'il ne s'est pas arrêté.
 
 Pour plus d'informations, voir [messagerie native](/fr/Add-ons/WebExtensions/Native_messaging).
@@ -72,7 +73,8 @@ browser.browserAction.onClicked.addListener(() => {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,4 +101,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

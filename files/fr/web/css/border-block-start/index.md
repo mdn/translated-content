@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-block-start
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`border-block-start`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant au début de l'élément dans l'axe orthogonal au sens de lecture. Elle peut être utilisée pour définir les valeurs de {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}} et {{cssxref("border-block-start-color")}}.
@@ -41,9 +42,13 @@ Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre :
 - `<'color'>`
   - : La couleur de la bordure de ce côté, voir {{cssxref("color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -76,15 +81,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-start", "border-block-start")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-block-start")}}
+{{Compat}}
 
 ## Voir aussi
 

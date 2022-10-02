@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border
 ---
+
 {{CSSRef("CSS Borders")}}
 
 La propriété CSS **`border`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de définir les propriétés liées à la bordure. `border` peut être utilisée pour définir les valeurs de {{cssxref("border-width")}}, {{cssxref("border-style")}} et {{cssxref("border-color")}}.
@@ -58,9 +59,13 @@ La propriété `border` peut être définie grâce à une ou plusieurs valeurs [
 - `<color>`
   - : Voir {{cssxref("border-color")}}. Une valeur de type {{cssxref("&lt;color&gt;")}} qui indique la couleur de la bordure. La valeur par défaut qui sera utilisée sera la valeur de la propriété {{cssxref("color")}} de l'élément (qui est la couleur du texte de l'élément, pas de son arrière-plan).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -97,17 +102,11 @@ style {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-shorthands', 'border')}}     | {{Spec2('CSS3 Backgrounds')}} | La prise en charge du mot-clé `transparent` est retirée car celui-ci est désormais intégré au type {{cssxref("&lt;color&gt;")}}. En pratique, cela n'a pas d'impact. Bien que {{cssxref("border-image")}} ne puisse être définie via `border`, cette dernière la réinitialise quand même avec sa valeur initiale (`none`). |
-| {{SpecName('CSS2.1', 'box.html#border-shorthand-properties', 'border')}} | {{Spec2('CSS2.1')}}                 | Le mot-clé `inherit` peut être utilisé et `transparent` est considéré comme une couleur valide.                                                                                                                                                                                                                                             |
-| {{SpecName('CSS1', '#border', 'border')}}                                         | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                                                                                                                                                                                                                                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border")}}
+{{Compat}}
 
 ## Voir aussi
 

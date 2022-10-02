@@ -2,6 +2,7 @@
 title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
 ---
+
 {{JSRef("Global_Objects", "TypedArray", "Int8Array,Uint8Array,Uint8ClampedArray,Int16Array,Uint16Array,Int32Array,Uint32Array,Float32Array,Float64Array")}}
 
 **`Uint32Array`** 表示一个由基于平台字节序的 32 位无符号字节组成的数组。如果需要对字节顺序进行控制 (译者注：即 littleEndian 或 bigEndian)，请使用 {{jsxref("DataView")}} 代替。数组中每个元素的初始值都是`0`。一旦创建，你可以用对象的方法引用数组里的元素，或者使用标准的数组索引语法（即，使用中括号）。
@@ -25,7 +26,7 @@ new Uint32Array(buffer [, byteOffset [, length]]);
 - Uint32Array.length
   - : 固定值 (static) 属性，值为 3。使用 {{jsxref("TypedArray.prototype.length", "Uint32Array.prototype.length")}} 获得数组的真实长度（元素个数）。
 - {{jsxref("TypedArray.name", "Uint32Array.name")}}
-  - : 返回字符串类型的值，表示构造器的名字。`Uint32Array` 的返回值是: "Uint32Array"。
+  - : 返回字符串类型的值，表示构造器的名字。`Uint32Array` 的返回值是："Uint32Array"。
 - {{jsxref("TypedArray.prototype", "Uint32Array.prototype")}}
   - : _TypedArray_ 对象的原型链。
 
@@ -43,9 +44,9 @@ new Uint32Array(buffer [, byteOffset [, length]]);
 ### 属性
 
 - `Uint32Array.prototype.constructor`
-  - : 返回创建实例原型的函数。 默认返回 `Uint32Array` 的构造器。
+  - : 返回创建实例原型的函数。默认返回 `Uint32Array` 的构造器。
 - {{jsxref("TypedArray.prototype.buffer", "Uint32Array.prototype.buffer")}} {{readonlyInline}}
-  - : 返回 `Uint32Array`引用的 {{jsxref("ArrayBuffer")}}。 由于构造时已固定，所以是**只读的**。
+  - : 返回 `Uint32Array`引用的 {{jsxref("ArrayBuffer")}}。由于构造时已固定，所以是**只读的**。
 - {{jsxref("TypedArray.prototype.byteLength", "Uint32Array.prototype.byteLength")}} {{readonlyInline}}
   - : 返回从其 {{jsxref("ArrayBuffer")}} 开始的 `Uint32Array` 字节长度。由于构造时已固定，所以是**只读的**。
 - {{jsxref("TypedArray.prototype.byteOffset", "Uint32Array.prototype.byteOffset")}} {{readonlyInline}}

@@ -2,6 +2,7 @@
 title: JavaScript 类型化数组
 slug: Web/JavaScript/Typed_arrays
 ---
+
 {{JsSidebar("Advanced")}}
 
 **JavaScript 类型化数组**（typed array）是一种类似数组的对象，并提供了一种用于在内存缓冲区中访问原始二进制数据的机制。
@@ -87,7 +88,7 @@ for (let i = 0; i < int32View.length; i++) {
 }
 ```
 
-该代码会将数组以 `0`、`2`、`4` 和 `6` 填充 （一共 4 个 4 字节元素，所以总长度为 16 字节）。
+该代码会将数组以 `0`、`2`、`4` 和 `6` 填充（一共 4 个 4 字节元素，所以总长度为 16 字节）。
 
 ### 同一数据的多个视图
 

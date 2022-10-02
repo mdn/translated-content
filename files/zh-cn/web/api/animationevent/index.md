@@ -2,6 +2,7 @@
 title: AnimationEvent
 slug: Web/API/AnimationEvent
 ---
+
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
 ## Summary
@@ -39,7 +40,7 @@ _Also inherits methods from its parent {{domxref("Event")}}_.
 
 ## Browser compatibility
 
-{{Compat("api.AnimationEvent")}}
+{{Compat}}
 
 ## See also
 

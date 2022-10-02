@@ -68,13 +68,13 @@ target</em>.addEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</
 
 <p>Например, колбэк обработчика событий, который может использоваться для обработки {{event("fullscreenchange")}} и {{event("fullscreenerror")}} может выглядеть так:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">eventHandler</span><span class="punctuation token">(</span><span class="parameter token">event</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>event<span class="punctuation token">.</span>type <span class="operator token">==</span> <span class="string token">'fullscreenchange'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">/* Переключатель полноэкранного режима */</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="comment token">/* fullscreenerror */</span> <span class="punctuation token">{</span>
-    <span class="comment token">/* Ошибка переключателя полноэкранного режима */</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js">function eventHandler(event) {
+  if (event.type == 'fullscreenchange') {
+    /* Переключатель полноэкранного режима */
+  } else /* fullscreenerror */ {
+    /* Ошибка переключателя полноэкранного режима */
+  }
+}</pre>
 
 <h3 id="Безопасная_проверка_поддержки_option">Безопасная проверка поддержки <code>option</code></h3>
 
@@ -111,7 +111,7 @@ try {
 
 <p>Узнайте больше о <a href="https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection">EventListenerOptions</a> из  <a href="https://wicg.github.io/admin/charter.html">Web Incubator Community Group</a>.</p>
 
-<h2 id="Примеры"><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 2.5rem;'>Примеры</span></h2>
+<h2 id="Примеры">Примеры</h2>
 
 <h3 id="addEventListenerBasic">Добавление простого обработчика</h3>
 

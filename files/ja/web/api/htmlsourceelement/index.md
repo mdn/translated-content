@@ -2,6 +2,7 @@
 title: HTMLSourceElement
 slug: Web/API/HTMLSourceElement
 ---
+
 {{ApiRef}}
 
 `HTMLSourceElement` インターフェイスは {{htmlelement("source")}} 要素を操作するための (継承によって利用できる、通常の {{domxref("HTMLElement")}} オブジェクトインターフェイスにから見て) 特別なプロパティを提供します。

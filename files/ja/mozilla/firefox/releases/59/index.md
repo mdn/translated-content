@@ -2,6 +2,7 @@
 title: Firefox 59 for developers
 slug: Mozilla/Firefox/Releases/59
 ---
+
 Firefox 59 は、米国時間 2018 年 3 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 59 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

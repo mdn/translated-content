@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.strokeStyle`** 是 Canvas 2D API 描述画笔（绘制图形）颜色或者样式的属性。默认值是 `#000` (black)。
@@ -119,7 +120,7 @@ for (var i=0;i<6;i++){
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.strokeStyle")}}
+{{Compat}}
 
 ### WebKit/Blink-specific 注解
 

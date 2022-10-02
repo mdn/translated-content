@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/touch-action
 ---
+
 {{CSSRef}}
 
 La propriété **`touch-action`** définit si une région donnée peut être manipulée par l'utilisateur grâce à des interactions tactiles (en déplaçant ou en zoomant) et comment cette interaction fonctionnera.
@@ -64,9 +65,13 @@ La propriété `touch-action` peut être définie grâce à :
 - `pinch-zoom`
   - : L'agent utilisateur peut considérer que les touches qui commencent sur l'élément n'ont pour but que de zoomer sur l'ancêtre le plus proche qui contient du contenu sur lequel on peut zoomer.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -108,17 +113,11 @@ Une déclaration `touch action: none;` empêchera le navigateur de zoomer. Cela 
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                         | Commentaires                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------- |
-| {{SpecName('Compat', '#touch-action', 'touch-action')}}                                             | {{Spec2('Compat')}}                     | Ajout de la valeur `pinch-zoom` pour la propriété.                                 |
-| {{SpecName('Pointer Events 2 Ext', '#additional-touch-action-values', 'touch-action')}} | {{Spec2('Pointer Events 2 Ext')}} | Ajout des valeurs `pan-left`, `pan-right`, `pan-up`, `pan-down` pour la propriété. |
-| {{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}}         | {{Spec2('Pointer Events')}}         | Définition initiale.                                                               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{compat("css.properties.touch-action")}}
+{{Compat}}
 
 ## Voir aussi
 

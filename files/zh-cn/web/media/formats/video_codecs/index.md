@@ -2,6 +2,7 @@
 title: 网页视频编码指南
 slug: Web/Media/Formats/Video_codecs
 ---
+
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 本文介绍了你在网络中最常遇见的视频编码，总结了这些编码方式的能力、兼容性以及使用时需要考虑的事项，并且提供了一些为你的项目的视频选择编码的建议。
@@ -268,7 +269,7 @@ slug: Web/Media/Formats/Video_codecs
       <td>
         <h4 id="Wagon-wheel_effect">马车车轮效应</h4>
         <p>
-          <strong>马车车轮效应</strong>（或<strong><a href="https://en.wikipedia.org/wiki/Stroboscopic_effect">频闪效应</a></strong>）是电影中常见的视觉效果，由于帧速率和压缩算法之间的相互作用，车轮似乎以错误的速度旋转，甚至反向旋转.任何重复的移动模式都会出现同样的效果，例如铁路线上的枕木、路边的柱子等等。这是一个时间（基于时间）混叠问题；旋转速度会干扰压缩或编码期间执行的采样频率。
+          <strong>马车车轮效应</strong>（或<strong><a href="https://en.wikipedia.org/wiki/Stroboscopic_effect">频闪效应</a></strong>）是电影中常见的视觉效果，由于帧速率和压缩算法之间的相互作用，车轮似乎以错误的速度旋转，甚至反向旋转。任何重复的移动模式都会出现同样的效果，例如铁路线上的枕木、路边的柱子等等。这是一个时间（基于时间）混叠问题；旋转速度会干扰压缩或编码期间执行的采样频率。
         </p>
       </td>
       <td>
@@ -535,7 +536,7 @@ AV1 目前提供三种配置文件：**main**、**high** 和 **professional**，
 
 MPEG-4 规范套件的**高级视频编码**（**AVC**）标准由相同的 ITU H.264 规范和 MPEG-4 Part 10 规范指定。它是一种基于运动补偿的编解码器，如今广泛用于各种媒体，包括广播电视、{{Glossary("RTP")}} 视频会议以及蓝光光盘的视频编解码器。
 
-AVC 高度灵活，具有许多不同功能的配置文件；例如，Constrained Baseline Profile 设计用于视频会议和移动场景，使用的带宽少于 Main Profile（在某些地区用于标清数字电视）或 High Profile（用于蓝光光盘视频） .大多数配置文件使用 8 位颜色分量和 4:2:0 色度二次采样； High 10 Profile 增加了对 10 位颜色的支持，High 10 的高级形式增加了 4:2:2 和 4:4:4 色度二次采样。
+AVC 高度灵活，具有许多不同功能的配置文件；例如，Constrained Baseline Profile 设计用于视频会议和移动场景，使用的带宽少于 Main Profile（在某些地区用于标清数字电视）或 High Profile（用于蓝光光盘视频） .大多数配置文件使用 8 位颜色分量和 4:2:0 色度二次采样；High 10 Profile 增加了对 10 位颜色的支持，High 10 的高级形式增加了 4:2:2 和 4:4:4 色度二次采样。
 
 AVC 还具有特殊功能，例如支持同一场景的多个视图（多视图视频编码），它允许制作立体视频等。
 
@@ -704,7 +705,7 @@ ITU 的 **H.263** 编解码器主要设计用于低带宽情况。特别是，�
 
 H.263 从未在网络上广泛使用。H.263 的变体已被用作其他专有格式的基础，例如 Flash 视频或 Sorenson 编解码器。但是，没有任何主流浏览器默认包含 H.263 支持。某些媒体插件已启用对 H.263 媒体的支持。
 
-与大多数编解码器不同，H.263 以每帧（图片）的最大比特率或 **BPPmaxKb** 来定义编码视频的基本原理。编码时为BPPmaxKb选择一个值，然后视频每帧不能超过这个值。最终比特率将取决于此、帧速率、压缩以及选择的分辨率和块格式。
+与大多数编解码器不同，H.263 以每帧（图片）的最大比特率或 **BPPmaxKb** 来定义编码视频的基本原理。编码时为 BPPmaxKb 选择一个值，然后视频每帧不能超过这个值。最终比特率将取决于此、帧速率、压缩以及选择的分辨率和块格式。
 
 H.263 已被 H.264 取代，因此被视为一种传统媒体格式，你通常应该尽可能避免使用。在新项目中使用 H.263 的唯一真正原因是，如果你需要支持非常旧的设备，而 H.263 是你的最佳选择。
 
@@ -1302,7 +1303,7 @@ MPEG-2 有几个具有不同功能的配置文件。然后每个配置文件有�
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>、MPEG-TS（MPEG传输流）、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>、MPEG-TS（MPEG 传输流）、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
       </td>
     </tr>
     <tr>

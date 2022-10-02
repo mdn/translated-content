@@ -2,6 +2,7 @@
 title: <object>
 slug: Web/HTML/Element/object
 ---
+
 ## 概要
 
 {{HTMLRef}}

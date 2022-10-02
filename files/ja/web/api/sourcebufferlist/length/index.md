@@ -2,6 +2,7 @@
 title: SourceBufferList.length
 slug: Web/API/SourceBufferList/length
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBufferList")}} インターフェイスの **`length`** 読み取り専用プロパティは、リスト内の {{domxref("SourceBuffer")}} オブジェクトの数を返します。
