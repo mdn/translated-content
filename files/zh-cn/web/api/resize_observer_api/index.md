@@ -13,7 +13,7 @@ Resize Observer API 提供了一种高性能的机制，通过该机制，代码
 
 举个例子，当视口更改大小时，[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries) / {{domxref("window.matchMedia")}} 非常适合在特定点更新布局，但是如果要响应于特定元素的大小更改而更改布局，该元素又不是外部容器时，该怎么办？
 
-为此，一种有限的解决方案是监听对适当事件的更改，该事件会提示你对更改大小感兴趣的元素（例如 window [resize event](/zh-CN/docs/Web/API/Window/resize_event)），然后找出该元素之后新的尺寸或其他功能，例如，使用{{domxref("Element.getBoundingClientRect")}} 或者{{domxref("Window.getComputedStyle")}}，来调整大小。
+为此，一种有限的解决方案是监听对适当事件的更改，该事件会提示你对更改大小感兴趣的元素（例如 window [resize 事件](/zh-CN/docs/Web/API/Window/resize_event)），然后找出该元素之后新的尺寸或其他功能，例如，使用{{domxref("Element.getBoundingClientRect")}} 或者{{domxref("Window.getComputedStyle")}}，来调整大小。
 
 这样的解决方案仅适用于有限的场景，对性能不利（不断调用上述方法会导致性能严重下降），并且在不更改浏览器窗口大小的情况下通常不起作用。
 
