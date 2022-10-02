@@ -62,6 +62,8 @@ function getMonthName(mo) {
    throw new UserException("Неверно указан номер месяца");
 }
 
+let monthName;
+
 try {
    // statements to try
    const myMonth = 15; // 15 находится вне границ массива, что приведёт к исключению
