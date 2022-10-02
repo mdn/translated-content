@@ -4,6 +4,7 @@ slug: WebAssembly/Text_format_to_wasm
 i10n:
   sourceCommit: 0160aac0e623dacdce4019205f32f7b3d3e58019
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly には S 式ベースのテキスト表現があります。これはテキストエディター、ブラウザーの開発者ツールなどで見せるために設計された中間表現です。この記事では、これがどのように動作するか、テキスト形式のファイルを `.wasm` アセンブリー形式に変換するのに利用可能なツールの使用方法について少し説明します。

@@ -2,6 +2,7 @@
 title: HTTP の進化
 slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** は World Wide Web を支えるプロトコルです。 Tim Berners-Lee によって 1989-1991 年に開発されれてから、HTTP にはシンプルさのほとんどを維持しながら柔軟性をさらに形作る、多くの変更がみられます。 HTTP は初期のいくぶん信頼された研究所の環境内でファイルを交換するプロトコルから、現代のインターネットの迷宮で高解像度や 3D の画像や動画を運ぶプロトコルに進化しました。

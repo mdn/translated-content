@@ -2,6 +2,7 @@
 title: performance.measure()
 slug: Web/API/Performance/measure
 ---
+
 {{APIRef("User Timing API")}}
 
 **`measure()`** メソッドは、マーク間、ナビゲーション開始時刻、または現在時刻の間に、ブラウザーの*パフォーマンスエントリーバッファー*に名前付き {{domxref("DOMHighResTimeStamp","timestamp")}} を作成します。

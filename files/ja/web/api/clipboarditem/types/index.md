@@ -2,6 +2,7 @@
 title: ClipboardItem.types
 slug: Web/API/ClipboardItem/types
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 **`types`** は {{domxref("ClipboardItem")}} インターフェイスの読み取り専用プロパティで、この {{domxref("ClipboardItem")}} の内容で利用できる{{Glossary("MIME type", 'MIME タイプ')}}の配列 ({{jsxref("Array")}}) を返します。

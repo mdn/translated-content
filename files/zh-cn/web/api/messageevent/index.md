@@ -39,7 +39,7 @@ _继承其父类 {{domxref("Event")}} 的属性。_
 - {{domxref("MessageEvent.source")}}
   - : `MessageEventSource` (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 代表消息发送者。
 - {{domxref("MessageEvent.ports")}}
-  - : {{domxref("MessagePort")}}对象数组，表示消息正通过特定通道（数据通道）发送的相关端口（适用于通道消息传输或者向一个共享线程（shared work ）发送消息时）。
+  - : {{domxref("MessagePort")}}对象数组，表示消息正通过特定通道（数据通道）发送的相关端口（适用于通道消息传输或者向一个共享线程（shared work）发送消息时）。
 
 ## 方法
 

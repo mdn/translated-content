@@ -39,7 +39,7 @@ var sp1 = document.createElement("span");
 sp1.setAttribute("id", "newSpan");
 
 // 创建一个文本节点
-var sp1_content = document.createTextNode("新的 span 元素的内容.");
+var sp1_content = document.createTextNode("新的 span 元素的内容。");
 
 // 将文本节点插入到 span 元素中
 sp1.appendChild(sp1_content);

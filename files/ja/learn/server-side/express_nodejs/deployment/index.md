@@ -2,6 +2,7 @@
 title: 'Express チュートリアル Part 7: プロダクションへのデプロイ'
 slug: Learn/Server-side/Express_Nodejs/deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 これで素晴らしい[地域図書館](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) Web サイトを作成 (およびテスト) したので、公共の Web サーバーにインストールして、図書館のスタッフとメンバーがインターネット経由でアクセスできるようにします。この記事では Web サイトをデプロイするためのホストを見つける方法、およびサイトを運用に向けて準備するために必要な作業の概要について説明します。

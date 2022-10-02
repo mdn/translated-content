@@ -228,21 +228,11 @@ display.addEventListener('change', function (evt) {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#place-items-property", "place-items")}} | {{Spec2('CSS3 Box Alignment')}} | Définition initiale. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour les dispositions flexibles
-
-{{Compat("css.properties.place-items.flex_context")}}
-
-### Prise en charge pour les grilles
-
-{{Compat("css.properties.place-items.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

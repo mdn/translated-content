@@ -25,7 +25,7 @@ _这个接口不继承任何属性。_
 - {{domxref("FontFace.stretch")}}
   - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _stretches_ 属性，相当于 {{cssxref("@font-face/stretch", "stretch")}} 。
 - {{domxref("FontFace.unicodeRange")}}
-  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体涵盖的 _range of code_ （字符编码的范围），相当于 {{cssxref("@font-face/unicode-range", "unicode-range")}} 。
+  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体涵盖的 _range of code_（字符编码的范围），相当于 {{cssxref("@font-face/unicode-range", "unicode-range")}} 。
 - {{domxref("FontFace.variant")}}
   - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _variant_ 属性，相当于 {{cssxref("@font-face/range", "range")}} 。
 - {{domxref("FontFace.featureSettings")}}

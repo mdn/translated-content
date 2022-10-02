@@ -2,6 +2,7 @@
 title: MessagePort
 slug: Web/API/MessagePort
 ---
+
 {{APIRef("HTML DOM")}}
 
 [Channel Messaging API](/ja/docs/Web/API/Channel_Messaging_API) の **`MessagePort`** インターフェースは、{{domxref("MessageChannel")}} の 2 つのポートの一方を表し、片方のポートから送信されるメッセージをもう片方のポートで受信待機できます。

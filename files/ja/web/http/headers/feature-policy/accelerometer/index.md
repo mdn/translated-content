@@ -2,6 +2,7 @@
 title: 'Feature-Policy: accelerometer'
 slug: Web/HTTP/Headers/Feature-Policy/accelerometer
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader('Feature-Policy')}} ヘッダーにおける `accelerometer` ディレクティブは、現在の文書が {{domxref('Accelerometer')}} インターフェイスを通じて端末の加速度に関する情報を収集することを許可するかどうかを制御します。

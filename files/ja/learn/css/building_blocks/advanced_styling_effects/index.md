@@ -2,6 +2,7 @@
 title: ボックスの高度なエフェクト
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
 この記事はトリックの箱として機能し、ボックスの影、ブレンドモード、フィルタのようなボックスの装飾に使用できる高度な機能のいくつかを紹介します。

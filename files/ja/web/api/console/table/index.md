@@ -4,6 +4,7 @@ slug: Web/API/console/table
 l10n:
   sourceCommit: 49b07e57dba92be3982e3c0035bc48e7a5036f97
 ---
+
 {{APIRef("Console API")}}
 
 **`console.table()`** メソッドは、表形式のデータを表として表示します。

@@ -2,6 +2,7 @@
 title: storage.StorageChange
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
 ---
+
 {{AddonSidebar()}}`StorageChange` はストレージ領域の変更を表すオブジェクトです。
 
 ## 型

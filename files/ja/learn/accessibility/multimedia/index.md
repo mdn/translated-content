@@ -2,6 +2,7 @@
 title: アクセシブルマルチメディア
 slug: Learn/Accessibility/Multimedia
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 アクセシビリティの問題を引き起こす他のカテゴリーは、マルチメディアでです。ビデオ、オーディオ、画像といったコンテンツは、支援技術 (assistive technologies) とユーザーが理解可能となる適切な代替テキストを必要とします。この記事ではその方法を説明します。

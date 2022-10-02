@@ -5,6 +5,7 @@ original_slug: MDN/Contribute/Localize
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
+
 {{MDNSidebar}}
 
 2020 年 12 月 14 日より、MDN は GitHub ベースの新しい [Yari プラットフォーム](https://github.com/mdn/yari)で運用しています。これは MDN にとって多くの利点がありますが、ローカライズを扱う方法を大幅に変更する必要がありました。というのも、アメリカ英語以外のロケールでは、保守されていない古いコンテンツが多く存在しているため、今後はそれらをより適切に管理していきたいと考えているからです。
@@ -27,7 +28,7 @@ l10n:
 
 ### フランス語 (fr)
 
-- Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
+- ディスカッション: [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
 - 現在の貢献者: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### 日本語 (ja)

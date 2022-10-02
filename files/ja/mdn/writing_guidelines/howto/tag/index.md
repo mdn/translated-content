@@ -3,6 +3,7 @@ title: 適切にタグづけするには
 slug: MDN/Writing_guidelines/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
+
 {{MDNSidebar}}
 
 **記事のタグ**は、ユーザーが役立つコンテンツに触れるための重要な方法です。コンテンツを分類するために、それぞれのページは通常いくつかのタグを持っています。このページでは、読者が情報を見つけやすく、また私たち自身が整理しやすくするために、ページにタグ付けする最良の方法を説明します。

@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 l10n:
   sourceCommit: 3c82191324ff6ef3e3c1b0e792b5e62ff8d2267a
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 ハイパーリンクとは本当に重要なものです。ウェブをウェブたらしめているものです。

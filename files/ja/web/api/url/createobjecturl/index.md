@@ -2,6 +2,7 @@
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
 ---
+
 **`URL.createObjectURL()`** 静的メソッドは、引数で指定されたオブジェクトを表す URL を含む {{domxref("DOMString")}} を生成します。 URL の寿命は、それを作成したウィンドウ内の {{domxref("document")}} と結び付けられています。 新しいオブジェクト URL は、指定された {{domxref("File")}} オブジェクトか {{domxref("Blob")}} オブジェクトを表します。
 
 オブジェクト URL を解放するには、 {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}} を呼び出してください。
@@ -41,7 +42,7 @@ objectURL = URL.createObjectURL(object);
 
 古いバージョンの Media Source 仕様書では、 {{HTMLElement("video")}} 要素にストリームを添付するには {{domxref("MediaStream")}} にオブジェクト URL を生成する必要があるとしてます。 これはもう必要なく、ブラウザーはこのようにする対応を削除してきています。
 
-> **Warning:** **重要:** もし {{domxref("URL.createObjectURL", "createObjectURL()")}} でメディア要素にストリームを割り当てるコードが残っているのであれば、単純に {{domxref("HTMLMediaElement.srcObject", "srcObject")}} を直接 `MediaStream` に設定するよう更新する必要があります。
+> **Warning:** もし {{domxref("URL.createObjectURL", "createObjectURL()")}} でメディア要素にストリームを割り当てるコードが残っているのであれば、単純に {{domxref("HTMLMediaElement.srcObject", "srcObject")}} を直接 `MediaStream` に設定するよう更新する必要があります。
 
 ## 仕様書
 

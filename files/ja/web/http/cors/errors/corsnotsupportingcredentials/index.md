@@ -3,6 +3,7 @@ title: 'Reason: Credential is not supported if the CORS header ‘Access-Control
   is ‘*’'
 slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ---
+
 {{HTTPSidebar}}
 
 ## 理由

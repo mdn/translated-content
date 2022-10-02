@@ -2,6 +2,7 @@
 title: 'ARIA: table ロール'
 slug: Web/Accessibility/ARIA/Roles/Table_Role
 ---
+
 \\{{ariaref}}
 
 ARIA の role 属性の table 値は、このロールを含む要素を、ネイティブの {{htmlelement("table")}} HTML 要素と同様に、行と列に配置されたデータを含む非インタラクティブな表構造を持つものとして識別します。

@@ -2,6 +2,7 @@
 title: MouseEvent
 slug: Web/API/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent`** インターフェイスは、ポインティングデバイス (マウスなど) によるユーザーの操作によって発行されたイベントを表します。

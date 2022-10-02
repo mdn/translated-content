@@ -2,6 +2,7 @@
 title: y
 slug: Web/SVG/Attribute/y
 ---
+
 {{SVGRef}}
 
 **`y`** 属性はユーザー座標系の Y 軸の座標を定義します。

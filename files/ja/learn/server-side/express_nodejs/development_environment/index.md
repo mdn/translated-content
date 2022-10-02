@@ -2,6 +2,7 @@
 title: Node 開発環境の設定
 slug: Learn/Server-side/Express_Nodejs/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 Express の目的が理解できたので、Windows、Linux (Ubuntu)、および macOS 上で Node/Express 開発環境をセットアップしてテストする方法を説明します。どのような一般的な OS を使用していても、この記事では Express アプリケーションの開発を開始するために必要なものを提供します。
@@ -70,7 +71,7 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-> **Warning:** **警告:** それらは非常に古いバージョンの Node を含んでいるので、通常の Ubuntu リポジトリーから直接インストールしないでください。
+> **Warning:** それらは非常に古いバージョンの Node を含んでいるので、通常の Ubuntu リポジトリーから直接インストールしないでください。
 
 ### Nodejs および NPM インストールのテスト
 

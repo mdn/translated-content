@@ -2,6 +2,7 @@
 title: CSSNumericValue
 slug: Web/API/CSSNumericValue
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`CSSNumericValue`** は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Object_Model#css_typed_object_model)のインターフェイスで、すべての数値型が実行することができる操作を表します。

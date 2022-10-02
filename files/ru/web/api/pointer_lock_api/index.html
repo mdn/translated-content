@@ -3,7 +3,7 @@ title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 translation_of: Web/API/Pointer_Lock_API
 ---
-<p><span class="seoSummary"><strong>Pointer lock</strong> <strong>API</strong>(прежнее название Mouse Lock API) </span><span style="line-height: 1.5;">обеспечивает методы ввода, основанные на движении мыши , а не только абсолютно позиционированых координатах курсора </span><span style="line-height: 1.5;">в окне. Это даёт вам доступ к необработанным движениям мыши, прикрепляет курсор мыши к любому элементу </span><span style="line-height: 1.5;">в окне браузера</span><span style="line-height: 1.5;">, предоставляет возможность вычислять координаты мыши не ограниченной областью окна проекции, и скрывает курсор из поля зрения. Это идеальное решение для 3D игр, например.</span></p>
+<p><strong>Pointer lock</strong> <strong>API</strong>(прежнее название Mouse Lock API) обеспечивает методы ввода, основанные на движении мыши , а не только абсолютно позиционированых координатах курсора в окне. Это даёт вам доступ к необработанным движениям мыши, прикрепляет курсор мыши к любому элементу в окне браузера, предоставляет возможность вычислять координаты мыши не ограниченной областью окна проекции, и скрывает курсор из поля зрения. Это идеальное решение для 3D игр, например.</p>
 
 <p>Более того, API полезно для любых приложений, которые используют данные мыши для управления движениями, вращения объектов и изменения записей. Например пользователь может управлять наклоном просто двигая мышь, не нажимая ни на какие кнопки. Сами кнопки освобождаются под другие задачи. Примерами могут послужить  программы для просмотра карт или спутниковой съёмки.</p>
 
@@ -43,13 +43,13 @@ canvas.requestPointerLock()
 
 <p>Here is an example of using <code>pointerLockElement</code>:</p>
 
-<pre class="brush: js"><span class="idlInterface" id="idl-def-MouseLockable"><span class="idlInterface" id="idl-def-MouseLockable">if(document.pointerLockElement === canvas ||
+<pre class="brush: js">if(document.pointerLockElement === canvas ||
   document.mozPointerLockElement === canvas ||
   document.webkitPointerLockElement === canvas) {
     console.log('The pointer lock status is now locked');
 } else {
     console.log('The pointer lock status is now unlocked');
-}</span></span></pre>
+}</pre>
 
 <p>The {{domxref("Document.exitPointerLock")}} method is used to exit pointer lock, and like {{domxref("Element.requestPointerLock","requestPointerLock")}}, works asynchronously using the {{event("pointerlockchange")}} and {{event("pointerlockerror")}} events, which you'll see more about below.</p>
 
@@ -90,8 +90,8 @@ function lockChangeAlert() {
 <p>When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock")}} or {{domxref("Document.exitPointerLock","exitPointerLock")}}, the {{event("pointerlockerror")}} event is dispatched to the <code>document</code>. This is a simple event and contains no extra data.</p>
 
 <pre class="brush: js">document.addEventListener('pointerlockerror', lockError, false);
-document.addEventListener('mozpointerlock<span style="font-size: 1rem;">error</span><span style="font-size: 1rem;">', lockError, false);</span>
-document.addEventListener('webkitpointerlock<span style="font-size: 1rem;">error</span><span style="font-size: 1rem;">', lockError, false);</span>
+document.addEventListener('mozpointerlockerror', lockError, false);
+document.addEventListener('webkitpointerlockerror', lockError, false);
 
 function lockError(e) {
   alert("Pointer lock failed");
@@ -103,10 +103,10 @@ function lockError(e) {
 
 <p>The Pointer lock API extends the normal {{domxref("MouseEvent")}} interface with movement attributes.</p>
 
-<pre class="idl"><span class="idlInterface" id="idl-def-MouseEvent">partial interface <span class="idlInterfaceID">MouseEvent</span> {
-<span class="idlAttribute">    readonly attribute <span class="idlAttrType"><a>long</a></span> <span class="idlAttrName"><a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementX">movementX</a></span>;</span>
-<span class="idlAttribute">    readonly attribute <span class="idlAttrType"><a>long</a></span> <span class="idlAttrName"><a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementY">movementY</a></span>;</span>
-};</span></pre>
+<pre class="idl">partial interface MouseEvent {
+    readonly attribute <a>long</a> <a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementX">movementX</a>;
+    readonly attribute <a>long</a> <a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementY">movementY</a>;
+};</pre>
 
 <div class="note">The movement attributes are currently prefixed as <code>.mozMovementX</code> and <code>.mozMovementY</code> in Firefox, and<code>.webkitMovementX</code> and <code>.webkitMovementY</code> in Chrome.</div>
 

@@ -22,7 +22,7 @@ var node = document.importNode(externalNode, deep);
 - `deep` {{ optional_inline() }}
   - : 一个布尔值，表明是否要导入节点的后代节点。
 
-> **备注：** 在 DOM4 规范中 (实现于 Gecko 10.0 {{ geckoRelease("10.0") }}) ,`deep` 是个可选的参数。如果省略不写，则使用默认值 `true`, 表示深度克隆。如果你想使用浅克隆，则传入 false 参数。
+> **备注：** 在 DOM4 规范中 (实现于 Gecko 10.0 {{ geckoRelease("10.0") }}), `deep` 是个可选的参数。如果省略不写，则使用默认值 `true`, 表示深度克隆。如果你想使用浅克隆，则传入 false 参数。
 >
 > 在没有实现 DOM4 的浏览器中，这个参数不可以省略。
 

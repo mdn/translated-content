@@ -2,6 +2,7 @@
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket.close()`** メソッドは、 {{domxref("WebSocket")}} の接続、もしくは接続試行（存在した場合）を閉じます。接続がすでに `CLOSED` だった場合、このメソッドは何もしません。

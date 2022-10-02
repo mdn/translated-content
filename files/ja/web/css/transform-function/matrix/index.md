@@ -3,6 +3,7 @@ title: matrix()
 slug: Web/CSS/transform-function/matrix
 original_slug: Web/CSS/transform-function/matrix()
 ---
+
 {{CSSRef}}
 
 **`matrix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

@@ -2,6 +2,7 @@
 title: SourceBuffer.videoTracks
 slug: Web/API/SourceBuffer/videoTracks
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`videoTracks`** 読み取り専用プロパティは、現在 `SourceBuffer` 内に含まれている動画トラックのリストを返します。

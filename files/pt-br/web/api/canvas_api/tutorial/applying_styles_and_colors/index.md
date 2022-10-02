@@ -6,7 +6,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
-No capítulo sobre [desenhando formas com canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes"), usamos apenas os estilos padrões de preenchimento e linha. Aqui vamos explorar as opções do canvas que temos à nossa disposição para tornar nossos desenhos um pouco mais atraentes. Você aprenderá a adicionar cores diferentes, estilos de linhas, gradientes, padrões e sombras aos seus desenhos.
+No capítulo sobre [desenhando formas com canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), usamos apenas os estilos padrões de preenchimento e linha. Aqui vamos explorar as opções do canvas que temos à nossa disposição para tornar nossos desenhos um pouco mais atraentes. Você aprenderá a adicionar cores diferentes, estilos de linhas, gradientes, padrões e sombras aos seus desenhos.
 
 ## Cores
 
@@ -668,7 +668,7 @@ The `shadowBlur` property indicates the size of the blurring effect; this value 
 
 The `shadowColor` property is a standard CSS color value indicating the color of the shadow effect; by default, it is fully-transparent black.
 
-> **Nota:** Shadows are only drawn for `source-over` [compositing operations](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing "Web/Guide/HTML/Canvas_tutorial/Compositing").
+> **Nota:** Shadows are only drawn for `source-over` [compositing operations](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing).
 
 ### A shadowed text example
 

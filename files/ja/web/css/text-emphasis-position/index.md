@@ -2,6 +2,7 @@
 title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
 ---
+
 {{CSSRef}}
 
 **`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。ルビのテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。

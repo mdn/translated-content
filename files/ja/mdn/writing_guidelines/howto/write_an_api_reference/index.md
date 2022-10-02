@@ -3,6 +3,7 @@ title: API リファレンスの書き方
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference
 original_slug: MDN/Writing_guidelines/Howto/Write_an_API_reference
 ---
+
 {{MDNSidebar}}
 
 このガイドでは、 MDN で API リファレンスを書くために必要なすべてのことを説明します。

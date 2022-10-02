@@ -2,6 +2,7 @@
 title: 410 Gone
 slug: Web/HTTP/Status/410
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`410 Gone`** クライエントエラーレスポンスコードは、元のサーバーで利用できなくなっている対象リソースにアクセスしていることを示します。この状態は永久的です。

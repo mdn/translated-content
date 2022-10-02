@@ -2,6 +2,7 @@
 title: '-webkit-animation'
 slug: Web/CSS/@media/-webkit-animation
 ---
+
 {{ CSSRef }} {{ Non-standard_header }}
 
 **`-webkit-transition`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞つきの CSS {{cssxref("animation")}} に対応していれば値が `true` になります。

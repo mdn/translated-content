@@ -2,6 +2,7 @@
 title: DocumentType
 slug: Web/API/DocumentType
 ---
+
 {{APIRef("DOM")}}
 
 **`DocumentType`** インターフェイスは、 doctype を包含する {{domxref("Node")}} を表します。

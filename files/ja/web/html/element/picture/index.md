@@ -2,6 +2,7 @@
 title: '<picture>: 画像要素'
 slug: Web/HTML/Element/picture
 ---
+
 {{HTMLRef}}
 
 **HTML の `<picture>` 要素**は、0 個以上の {{HTMLElement("source")}} 要素と一つの {{HTMLElement("img")}} 要素を含み、様々な画面や端末の条件に応じた画像を提供します。

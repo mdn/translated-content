@@ -123,7 +123,7 @@ div {
 }
 ```
 
-类似地，如果某个属性的值列表长于 {{ cssxref("transition-property") }} 的，将被截短。 例如：
+类似地，如果某个属性的值列表长于 {{ cssxref("transition-property") }} 的，将被截短。例如：
 
 ```css
 div {

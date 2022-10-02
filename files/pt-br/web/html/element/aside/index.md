@@ -14,16 +14,16 @@ translation_of: Web/HTML/Element/aside
 ---
 ## Sumario
 
-O elemento \_HTML `<aside>` \_representa uma seção de uma página que consiste de conteúdo que é tangencialmente relacionado ao conteúdo do seu entorno, que poderia ser considerado separado do conteúdo. Essas seções são, muitas vezes, representadas como barras laterais. Elas muitas vezes contem explicações laterais, como a definição de um glossário; conteúdo vagamente relacionado, como avisos; a biografia do autor; ou, em aplicações web, informações de perfil ou links de blogs relacionados.
+O elemento HTML **`<aside>`** representa uma seção de uma página que consiste de conteúdo que é tangencialmente relacionado ao conteúdo do seu entorno, que poderia ser considerado separado do conteúdo. Essas seções são, muitas vezes, representadas como barras laterais. Elas muitas vezes contem explicações laterais, como a definição de um glossário; conteúdo vagamente relacionado, como avisos; a biografia do autor; ou, em aplicações web, informações de perfil ou links de blogs relacionados.
 
 > **Note:** _Notas de uso:_
 >
 > - **Não use** o elemento `<aside>` para texto entre parenteses, pois este tipo de texto é considerado parte do fluxo principal.
 
 - _[Categoria de conteudo](/pt-BR/docs/HTML/Content_categories)_ [Conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), conteudo de secionamento, conteudo palpavel.
-- _Conteudo permitido_[Conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content).
+- _Conteudo permitido_ [Conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content).
 - _Omissao de tag_ Nenhuma, ambas as tags de início e fim são obrigatórias.
-- \_Elementos pai permitidos_Qualquer elemento que aceita [conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content). Note que um elemento `<aside>` nao deve ser descendente de um elemento {{HTMLElement("address")}}.
+- _Elementos pai permitidos_ Qualquer elemento que aceita [conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content). Note que um elemento `<aside>` nao deve ser descendente de um elemento {{HTMLElement("address")}}.
 - _Interface DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos

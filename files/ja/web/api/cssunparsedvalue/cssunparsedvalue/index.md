@@ -2,6 +2,7 @@
 title: CSSUnparsedValue.CSSUnparsedValue()
 slug: Web/API/CSSUnparsedValue/CSSUnparsedValue
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`CSSUnparsedValue()`** はコンストラクターで、カスタムプロパティのプロパティ値を表す新しい {{domxref("CSSUnparsedValue")}} オブジェクトを生成します。

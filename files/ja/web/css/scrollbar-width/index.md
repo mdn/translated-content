@@ -2,6 +2,7 @@
 title: scrollbar-width
 slug: Web/CSS/scrollbar-width
 ---
+
 {{CSSRef}}
 
 **`scrollbar-width`** プロパティは、要素のスクロールバーが表示される時の最大の太さを設定することができます。

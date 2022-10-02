@@ -2,6 +2,7 @@
 title: AudioTrack.label
 slug: Web/API/AudioTrack/label
 ---
+
 {{APIRef("HTML DOM")}}
 
 **{{domxref("AudioTrack")}}** の **`label`** プロパティは読み取り専用で、音声トラックの判読可能なラベルがあればそれを指定する文字列を返します。 それ以外の場合は、空の文字列を返します。

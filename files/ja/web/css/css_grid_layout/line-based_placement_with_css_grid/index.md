@@ -2,6 +2,7 @@
 title: CSS グリッドにおける線に基づく配置
 slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
+
 {{CSSRef}}
 
 [グリッドレイアウトの基本的な考え方](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)の記事では、線番号を使ってグリッド上にアイテムを配置する方法をご紹介しました。今回は、この仕様の基本的な機能について詳しくご紹介します。

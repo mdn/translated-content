@@ -9,7 +9,7 @@ slug: Web/CSS/:fullscreen
 
 `css 伪类 :fullscreen 应用于当前处于全屏显示模式的元素。` 它不仅仅选择顶级元素，还包括所有已显示的栈内元素。
 
-> **备注：** W3C 标准使用不带破折号的单词:fullscreen，但 Webkit 和 Gecko 应用接口各自使用前缀带有破折号的变量：`:-webkit-full-screen` 和`:-moz-full-screen。`微软的 Edge 和 Internet Explorer 各自使用标准语法：`:fullscreen`和`:-ms-fullscreen。`
+> **备注：** W3C 标准使用不带破折号的单词 `:fullscreen`，但 Webkit 和 Gecko 应用接口各自使用前缀带有破折号的变量：`:-webkit-full-screen` 和`:-moz-full-screen`。微软的 Edge 和 Internet Explorer 各自使用标准语法：`:fullscreen` 和 `:-ms-fullscreen`。
 
 ## 语法
 

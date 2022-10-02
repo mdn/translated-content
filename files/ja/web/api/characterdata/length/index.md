@@ -2,6 +2,7 @@
 title: CharacterData.length
 slug: Web/API/CharacterData/length
 ---
+
 {{APIRef("DOM")}}
 
 **`CharacterData.length`** プロパティは読み取り専用で、含まれているデータの文字数を正の整数で返します。

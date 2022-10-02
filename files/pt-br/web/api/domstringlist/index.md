@@ -5,7 +5,7 @@ translation_of: Web/API/DOMStringList
 ---
 {{ APIRef("DOM") }}
 
-Um tipo retornado por algumas APIs, que contém uma lista de [DOMString](/En/DOM/DOMString "En/DOM/DOMString") (strings).
+Um tipo retornado por algumas APIs, que contém uma lista de [DOMString](/En/DOM/DOMString) (strings).
 
 ## Propriedades
 

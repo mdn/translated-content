@@ -51,4 +51,4 @@ Gera uma exceção `SYNTAX_ERR` se o grupo de seletores utilizado for inválido.
 - {{domxref("document.querySelectorAll()")}}
 - {{domxref("element.querySelector()")}}
 - {{domxref("element.querySelectorAll()")}}
-- [Code snippets for querySelector](/pt-BR/docs/Code_snippets/QuerySelector "en-US/docs/Code snippets/QuerySelector")
+- [Code snippets for querySelector](/pt-BR/docs/Code_snippets/QuerySelector)

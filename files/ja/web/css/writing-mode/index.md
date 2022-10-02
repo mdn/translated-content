@@ -2,6 +2,7 @@
 title: writing-mode
 slug: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}
 
 **`writing-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの行のレイアウトを横書きにするか縦書きにするか、ブロックのフロー方向を左向きにするか右向きにするかを設定します。文書全体に設定する場合は、ルート要素 (HTML 文書の場合は `html` 要素) に設定してください。

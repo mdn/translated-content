@@ -2,6 +2,7 @@
 title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
 ---
+
 {{CSSRef}}
 
 **`font-optical-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの描画をそれぞれの大きさでの表示に最適化して表示するかどうかを設定します。
