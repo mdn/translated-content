@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.createProgram()
 slug: Web/API/WebGLRenderingContext/createProgram
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.createProgram()`** メソッドは、{{domxref("WebGLProgram")}} オブジェクトを作成、初期化します。

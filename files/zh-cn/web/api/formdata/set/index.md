@@ -34,13 +34,13 @@ formData.set(name, value, filename);
 
 ## 示例
 
-先创建一个空的 `FormData` `对象：`
+先创建一个空的 `FormData` 对象：
 
 ```js
 var formData = new FormData(); // Currently empty
 ```
 
-使用 {{domxref("FormData.set")}} 设置键/值 ：
+使用 {{domxref("FormData.set")}} 设置键/值：
 
 ```js
 formData.set('username', 'Chris');

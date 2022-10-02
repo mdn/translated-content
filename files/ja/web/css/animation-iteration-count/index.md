@@ -2,6 +2,7 @@
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
 ---
+
 {{CSSRef}}
 
 **`animation-iteration-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、停止するまでにアニメーション周期が再生される回数を指定します。

@@ -2,6 +2,7 @@
 title: PublicKeyCredential.getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`getClientExtensionResults()`** は {{domxref("PublicKeyCredential")}} インターフェイスのメソッドであり、 {{jsxref("ArrayBuffer")}} の形で拡張機能の識別子と、クライアントが処理した後の結果の対応表を返します。

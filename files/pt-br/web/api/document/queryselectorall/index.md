@@ -57,4 +57,4 @@ Navegadores baseados em _WebKit_ têm um _bug_: quando a string `seletores` cont
 - {{ domxref("Element.querySelectorAll") }}
 - {{ domxref("Document.querySelector") }}
 - {{ domxref("Element.querySelector") }}
-- [`Exemplos de código com querySelector`](/pt-BR/docs/Code_snippets/QuerySelector "en-US/docs/Code_snippets/QuerySelector")
+- [`Exemplos de código com querySelector`](/pt-BR/docs/Code_snippets/QuerySelector)

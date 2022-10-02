@@ -5,13 +5,13 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 ---
 ## Introdução
 
-Enquanto o [HTML](/pt-BR/docs/Web/HTML) é usado para armazenar o conteúdo e a formatação de uma página web e o [CSS](/pt-BR/docs/Web/CSS) define a formatação e a aparência, o[ JavaScript](/pt-BR/docs/Web/JavaScript) é usado para adicionar interatividade a uma página web e criar aplicações web ricas.
+Enquanto o [HTML](/pt-BR/docs/Web/HTML) é usado para armazenar o conteúdo e a formatação de uma página web e o [CSS](/pt-BR/docs/Web/CSS) define a formatação e a aparência, o [JavaScript](/pt-BR/docs/Web/JavaScript) é usado para adicionar interatividade a uma página web e criar aplicações web ricas.
 
 No entanto, o termo genérico "JavaScript" tal como é entendido no contexto do navegador contém vários elementos bem diferentes. Um deles é a linguagem principal (ECMAScript), outra é a coleção das [Web APIs](/pt-BR/docs/Web/Reference/API), incluindo o DOM (Document Object Model).
 
 ## JavaScript, a linguagem principal (ECMAScript)
 
-O núcleo da linguagem JavaScript é padronizado pelo comitê ECMA TC39 como uma linguagem chamada [ECMAScript](/pt-BR/docs/JavaScript/Language_Resources "en-US/docs/JavaScript/Language_Resources"). A última versão da especificação é [ECMAScript 5.1](http://ecma-international.org/ecma-262/5.1/).
+O núcleo da linguagem JavaScript é padronizado pelo comitê ECMA TC39 como uma linguagem chamada [ECMAScript](/pt-BR/docs/JavaScript/Language_Resources). A última versão da especificação é [ECMAScript 5.1](http://ecma-international.org/ecma-262/5.1/).
 
 Este núcleo da linguagem é também usado em ambientes fora do navegador, por exemplo em [node.js](http://nodejs.org/).
 
@@ -43,7 +43,7 @@ A [API de Especificação de Internacionalização do ECMASCRIPT](http://ecma-in
 
 ### WebIDL
 
-A [Especificação da WebIDL ](http://dev.w3.org/2006/webapi/WebIDL/)provê a junção entre as tecnologias DOM e o ECMAScript.
+A [Especificação da WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) provê a junção entre as tecnologias DOM e o ECMAScript.
 
 ### O núcleo do DOM
 
@@ -61,7 +61,7 @@ Pela perspectiva do EXMScript, objetos definidos na especificação do DOM são 
 
 A especificação HTML também define restrições nos objetos; por exemplo, ela requer que todos os filhos de um elemento `ul`, que representam uma lista desordenada, sejam elementos `li`, que representem itens de lista. Em linhas gerais, ele também proíbe o uso de elementos e atributos que não estão definidos em um padrão.
 
-Procurando pelo [Document object](/pt-BR/docs/DOM/document "https://developer.mozilla.org/en-US/docs/DOM/document"), [Window object](/pt-BR/docs/DOM/window), e outros elementos DOM? Leia a[ Documentação do DOM](/pt-BR/docs/Gecko_DOM_Reference).
+Procurando pelo [Document object](/pt-BR/docs/DOM/document), [Window object](/pt-BR/docs/DOM/window), e outros elementos DOM? Leia a [Documentação do DOM](/pt-BR/docs/Gecko_DOM_Reference).
 
 ## Outras APIs de destaque
 

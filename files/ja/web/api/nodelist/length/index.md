@@ -2,6 +2,7 @@
 title: NodeList.length
 slug: Web/API/NodeList/length
 ---
+
 {{APIRef("DOM")}}
 
 ## 概要

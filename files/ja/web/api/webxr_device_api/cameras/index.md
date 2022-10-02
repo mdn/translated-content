@@ -2,6 +2,7 @@
 title: '視点とビューアー: WebXR でのカメラのシミュレーション'
 slug: Web/API/WebXR_Device_API/Cameras
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 アプリケーションで視点とカメラを管理するためのコードを検討する際に理解する最初で最も重要なことは、*WebXR にカメラがないこと*です。 [WebGL](/ja/docs/Web/API/WebGL_API) または WebXR API によって提供される、回転して移動するだけで画面に表示されるものを自動的に変更できるビューアーを表す魔法のオブジェクトはありません。 このガイドでは、カメラを動かさずに [WebGL](/ja/docs/Web/API/WebGL_API) を使用してカメラの動きをシミュレートする方法を示します。 これらの手法は、任意の WebGL（または WebXR）プロジェクトで使用できます。

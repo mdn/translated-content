@@ -2,6 +2,7 @@
 title: HTTP/1.x のコネクション管理
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
 ---
+
 {{HTTPSidebar}}
 
 コネクション管理は、 HTTP の重要なトピックです。コネクションを開いたり管理したりすることは、ウェブサイトやウェブアプリケーションのパフォーマンスに大きな影響を与えます。HTTP/1.x では*短命な (short-lived) コネクション*、_持続的な (persistent) コネクション_、*HTTP パイプライン*といったモデルがあります。

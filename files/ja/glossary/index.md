@@ -2,6 +2,7 @@
 title: 'MDN Web Docs 用語集: ウェブ関連用語の定義'
 slug: Glossary
 ---
+
 ウェブ技術には、ドキュメントやコーディングで使用される専門用語や略語の膨大なリストがあります。この用語集では、ウェブの理解と構築に役立つ用語や略語の定義を掲載しています。
 
 サイドバーから用語集を選択することができます。
@@ -12,6 +13,6 @@ slug: Glossary
 
 <section id="Quick_links">
  <ol>
-  <li><strong><a href="/ja/docs/Glossary">MDN Web Docs 用語集</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  <li><strong><a href="/ja/docs/Glossary">MDN Web Docs 用語集</a></strong>{{ListSubpagesForSidebar("/ja/docs/Glossary", 1)}}</li>
  </ol>
 </section>

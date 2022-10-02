@@ -2,6 +2,7 @@
 title: DataTransfer.mozUserCancelled
 slug: Web/API/DataTransfer/mozUserCancelled
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{ Non-standard_header() }}

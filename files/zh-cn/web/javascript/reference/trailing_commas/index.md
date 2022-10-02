@@ -28,7 +28,7 @@ arr; // [1, 2, 3]
 arr.length; // 3
 ```
 
-如果使用了多于一个尾后逗号，会产生省略（elision，或者间隙 hole）。 带有间隙的数组叫做*稀疏*数组（_sparse_ 紧凑数组 _dense_ array 没有省略/间隙）。 例如，当使用 {{jsxref("Array.prototype.forEach()")}} 或 {{jsxref("Array.prototype.map()")}} 迭代数组时，会跳过数组间隙。
+如果使用了多于一个尾后逗号，会产生省略（elision，或者间隙 hole）。带有间隙的数组叫做*稀疏*数组（_sparse_ 紧凑数组 _dense_ array 没有省略/间隙）。例如，当使用 {{jsxref("Array.prototype.forEach()")}} 或 {{jsxref("Array.prototype.map()")}} 迭代数组时，会跳过数组间隙。
 
 ```js
 var arr = [1, 2, 3,,,];
@@ -91,7 +91,7 @@ Math.max(10, 20,);
 
 ### 不合法的尾后逗号
 
-仅仅包含逗号的函数参数定义或者函数调用会抛出 {{Jsxref("SyntaxError")}}。 而且，当使用[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)的时候，并不支持尾后逗号：
+仅仅包含逗号的函数参数定义或者函数调用会抛出 {{Jsxref("SyntaxError")}}。而且，当使用[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)的时候，并不支持尾后逗号：
 
 ```js example-bad
 function f(,) {} // SyntaxError: missing formal parameter

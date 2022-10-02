@@ -22,7 +22,7 @@ O elemento **HTML `<dfn>` **(ou _Elemento Definição_ _HTML_) representa uma in
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content), conetúdo palpável.
 - _Conteúdo permitido_ [Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content), mas um elemento {{HTMLElement("dfn")}} não deve ser um descendente.
 - _Omissão de tag_ {{no_tag_omission}}
-- \_Elementos pais permitidos_Qualquer elemento que aceite [conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
+- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _Interface DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos

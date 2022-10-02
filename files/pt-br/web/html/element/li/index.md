@@ -15,9 +15,9 @@ translation_of: Web/HTML/Element/li
 
 O **_elemento_** **_HTML_ `<li>`** (ou a Lista dos Itens de um elemento HTML) é usado para representar um item que faz parte de uma lista. Este item deve estar contido em um elemento pai: uma lista ordenada ({{HTMLElement("ol")}}), uma lista desordenada ({{HTMLElement("ul")}}) , ou um menu ({{HTMLElement("menu")}}) e representa uma única entidade dessa lista. Em menus e listas desordenadas a relação de itens é exibida, normalmente, usando pontos de marcação (as bolinhas). Em listas ordenadas eles são, comumente, mostrados com algum contador ascendente - como um número, ou letra - à sua esquerda.
 
-- \_[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories) \_Nenhuma.
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Nenhuma.
 - _Conteúdo permitido_ [Flutuantes](/pt-BR/docs/Web/HTML/Content_categories#Flow_content).
-- _Omissão de etiquetas (\_tags_)\_ A etiqueta de fim pode ser omitida se esta for imediatamente seguida por um outro elemento {{HTMLElement("li")}}, ou se não houver mais conteúdo no seu elemento pai.
+- _Omissão de etiquetas (tags)_ A etiqueta de fim pode ser omitida se esta for imediatamente seguida por um outro elemento {{HTMLElement("li")}}, ou se não houver mais conteúdo no seu elemento pai.
 - _Elementos pai permitidos_ Um elemento {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, ou {{HTMLElement("menu")}}. Embora seja um uso incomum, o obsoleto {{HTMLElement("dir")}} pode ser pai, também.
 - _Interface DOM_ {{domxref("HTMLLIElement")}}
 

@@ -2,6 +2,7 @@
 title: '::-webkit-slider-thumb'
 slug: Web/CSS/::-webkit-slider-thumb
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`::-webkit-slider-thumb`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} の `type="range"` でユーザーが数値を変更するために「溝」の中を動かすことができる「つまみ」を表します。

@@ -18,10 +18,10 @@ O método **`reduce()`** executa uma função **reducer** (fornecida por você) 
 
 A função **reducer** recebe quatro parâmetros:
 
-1.  Acumulador (`acc`)
-2.  Valor Atual (`cur`)
-3.  Index Atual (`idx`)
-4.  Array original (`src`)
+1. Acumulador (`acc`)
+2. Valor Atual (`cur`)
+3. Index Atual (`idx`)
+4. Array original (`src`)
 
 O valor de retorno da sua função **reducer** é atribuída ao acumulador. O acumulador, com seu valor atualizado, é repassado para cada iteração subsequente pelo array, que por fim, se tornará o valor resultante, único, final.
 
@@ -59,10 +59,10 @@ O valor que resulta da execução da função de callback do "reducer" até a co
 
 O método `reduce()` executa a função de `callback` uma vez para cada elemento presente no array, excluindo furos (valores indefinidos), recebendo quatro argumentos:
 
-1.  _acumulador_ - valor inicial (ou o valor do callback anterior),
-2.  _valorAtual_ - o valor do elemento atual
-3.  _index_ - o índice atual e
-4.  `array` - o array onde a iteração está ocorrendo.
+1. _acumulador_ - valor inicial (ou o valor do callback anterior),
+2. _valorAtual_ - o valor do elemento atual
+3. _index_ - o índice atual e
+4. `array` - o array onde a iteração está ocorrendo.
 
 A primeira vez que o callback é chamado, o `acumulador` e o `valorAtual` podem ter um de dois valores possíveis. Se o `valorInicial` tiver sido fornecido na chamada à função `reduce()`, então o `acumulador` será igual ao `valorInicial` e o `valorAtual` será igual ao primeiro valor no array. Caso nenhum `valorInicial` seja fornecido, `acumulador` será igual ao primeiro valor no array, e `valorAtual` será igual ao segundo.
 

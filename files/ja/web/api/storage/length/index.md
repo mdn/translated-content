@@ -2,6 +2,7 @@
 title: Storage.length
 slug: Web/API/Storage/length
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} インターフェイスの読み取り専用プロパティ `length` は、`Storage` オブジェクトに保存されているデータアイテムの数を表す整数を返します。

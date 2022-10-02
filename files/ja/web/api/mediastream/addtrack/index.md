@@ -2,6 +2,7 @@
 title: MediaStream.addTrack()
 slug: Web/API/MediaStream/addTrack
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStream.addTrack()`** メソッドは、ストリームへ新しいトラックを追加します。このトラックは {{domxref("MediaStreamTrack")}} 型の引数して指定します。

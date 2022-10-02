@@ -2,6 +2,7 @@
 title: Firefox 57 (Quantum) for developers
 slug: Mozilla/Firefox/Releases/57
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 57 (別名 Firefox Quantum) は、米国時間 2017 年 11 月 14 日にリリースされました。このページでは、開発者に影響する Firefox 57 の変更点をまとめています。
@@ -85,7 +86,7 @@ _変更なし。_
 
 #### メディアと WebRTC
 
-- SCTP メッセージの end-of-record (EOR) フラグを使用することにより、{{DOMxRef("RTCDataChannel")}} で任意のサイズ (256kiB が相互運用性が高いのですが、最大 1GiB まで) のメッセージをサポートしました。詳しくは {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}} をご覧ください ({{bug(979417)}})。
+- SCTP メッセージの end-of-record (EOR) フラグを使用することにより、{{DOMxRef("RTCDataChannel")}} で任意のサイズ (256kiB が相互運用性が高いのですが、最大 1GiB まで) のメッセージをサポートしました。詳しくは {{SectionOnPage("/ja/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}} をご覧ください ({{bug(979417)}})。
 
   > **Note:** Firefox は、複数のソースの SCTP メッセージを多重化する機能を提供する SCTP ndata プロトコルが未サポートですので、大きなデータオブジェクトを送信すると他のすべての SCTP 通信で著しい遅延が発生する可能性があります。Firefox の ndata サポートの実装および展開の進捗を追跡するには、{{bug(1381145)}} をご覧ください。
 

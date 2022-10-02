@@ -2,6 +2,7 @@
 title: ':picture-in-picture'
 slug: Web/CSS/:picture-in-picture
 ---
+
 {{CSSRef}}
 
 **`:picture-in-picture`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在ピクチャインピクチャモードの要素に一致します。

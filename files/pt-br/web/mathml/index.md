@@ -11,7 +11,7 @@ tags:
   - XML
 translation_of: Web/MathML
 ---
-**Mathematical Markup Language (MathML)** é uma linguagem de marcação baseada em [XML](/pt-BR/docs/XML "/en-US/docs/XML") para descrever notações matemáticas e capturar tanto a sua estrutura quanto seu conteúdo. Aqui você encontrará links para a documentação e exemplos, bem como ferramentas para o seu trabalho com esta poderosa tecnologia. Para uma visão rápida, veja os [slides da feira de inovação do Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html).
+**Mathematical Markup Language (MathML)** é uma linguagem de marcação baseada em [XML](/pt-BR/docs/XML) para descrever notações matemáticas e capturar tanto a sua estrutura quanto seu conteúdo. Aqui você encontrará links para a documentação e exemplos, bem como ferramentas para o seu trabalho com esta poderosa tecnologia. Para uma visão rápida, veja os [slides da feira de inovação do Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html).
 
 ## Referências de MathML
 

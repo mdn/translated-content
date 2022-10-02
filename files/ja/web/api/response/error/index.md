@@ -2,6 +2,7 @@
 title: Response.error()
 slug: Web/API/Response/error
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} インターフェイスの **`error()`** メソッドはネットワークエラーに関連付けられた新規の `Response` オブジェクトを返します。

@@ -2,6 +2,7 @@
 title: writing-mode
 slug: Web/SVG/Attribute/writing-mode
 ---
+
 {{SVGRef}}
 
 **`writing-mode`** 属性は、 {{SVGElement("text")}} 要素の最初のインライン進行方向が左から右、右から左、上から下のいずれであるかを指定します。 `writing-mode` 属性は {{ SVGElement("text") }} 要素にのみ適用されます。 {{ SVGElement("tspan") }}, {{ SVGElement("tref") }}, {{ SVGElement("altGlyph") }}, {{ SVGElement("textPath") }} サブ要素には無視されます。 (なお、インライン進行方向は、 Unicode 双方向アルゴリズムとプロパティ {{ SVGAttr("direction") }} および {{ SVGAttr("unicode-bidi") }} により、 {{ SVGElement("text") }} 要素内で変更される可能性があることに注意してください)。

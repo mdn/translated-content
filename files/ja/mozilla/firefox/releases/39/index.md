@@ -2,6 +2,7 @@
 title: Firefox 39 for developers
 slug: Mozilla/Firefox/Releases/39
 ---
+
 Firefox 39 は、米国時間 2015 年 6 月 30 日にリリースされました。このページでは、開発者に影響する Firefox 39 の変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧

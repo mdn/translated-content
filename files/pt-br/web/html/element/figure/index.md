@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/figura
 ---
 ## Resumo
 
-O **Elemento HTML `<figure>` **representa o conteúdo independente, frequentemente com uma legenda ({{HTMLElement("figcaption")}})_`,`_ e é normalmente referido como uma única unidade. Enquanto ela está relacionada com o fluxo principal, sua posição é independente do fluxo principal.Normalmente, isso é uma imagem, uma ilustração, um diagrama, um trecho de código ou uma esquema que é referenciado no texto principal, mas que pode ser movido para outra página ou para um apêndice, sem afetar o fluxo principal.
+O **Elemento HTML `<figure>` **representa o conteúdo independente, frequentemente com uma legenda ({{HTMLElement("figcaption")}}), e é normalmente referido como uma única unidade. Enquanto ela está relacionada com o fluxo principal, sua posição é independente do fluxo principal.Normalmente, isso é uma imagem, uma ilustração, um diagrama, um trecho de código ou uma esquema que é referenciado no texto principal, mas que pode ser movido para outra página ou para um apêndice, sem afetar o fluxo principal.
 
 > **Note:** _Notas de uso:_
 >
@@ -14,7 +14,7 @@ O **Elemento HTML `<figure>` **representa o conteúdo independente, frequentemen
 > - Uma legenda pode ser associada com o elemento `<figure>` inserindo o elemento {{HTMLElement("figcaption")}} dentro dele (no inicio ou no fim).
 
 - _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root), palpable content.
-- _Permite conteúdo\_\_A {{HTMLElement("figcaption")}} element, followed by [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content); or flow content followed by a {{HTMLElement("figcaption")}} element; or flow content_.
+- _Permite conteúdo_ A {{HTMLElement("figcaption")}} element, followed by [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content); or flow content followed by a {{HTMLElement("figcaption")}} element; or flow content.
 - _Omissão de TAGs_ {{no_tag_omission}}
 - _Permitted parent elements_ Any element that accepts [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content).
 - _DOM interface_ {{domxref("HTMLElement")}}

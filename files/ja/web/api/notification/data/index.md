@@ -2,6 +2,7 @@
 title: Notification.data
 slug: Web/API/Notification/data
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`data`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `data` オプションで指定された通知の構造化されたデータのクローンを返します。

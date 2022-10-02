@@ -3,6 +3,7 @@ title: MDN の慣習と定義
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 original_slug: MDN/Guidelines/Conventions_definitions
 ---
+
 {{MDNSidebar}}
 
 この記事では MDN で使用されている慣習や定義、特に文書化する際に人によっては忘れがちなものを紹介します。
@@ -143,7 +144,7 @@ _「この機能が標準化過程にあり、どこかで実装されている�
   - 他の場所で議論されている場合に備えて、削除された項目への参照を MDN で検索してください。
     そこにも同様の警告ボックスを追加してください。
   - これらの項目がすぐにドキュメントから削除されることは、たとえあったとしても、まずないでしょう。
-    しかし、一部またはすべての資料がサイトの [Archive](/en-US/docs/Archive) セクションに移動される可能性があります。
+    しかし、一部またはすべての資料がサイトの [Archive](/ja/docs/Archive) セクションに移動される可能性があります。
   - [ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data)の関連する項目を更新して、影響を受ける項目の非推奨を反映させてください。
 
 上記のガイドラインで提案されている警告メッセージの文言やその他の文章の変更については、常識的な範囲でお願いします。

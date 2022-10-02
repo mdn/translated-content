@@ -2,6 +2,7 @@
 title: 'ARIA を使用する: ロール、ステート、プロパティ'
 slug: Web/Accessibility/ARIA/ARIA_Techniques
 ---
+
 ## ロール
 
 ### ウィジェットロール

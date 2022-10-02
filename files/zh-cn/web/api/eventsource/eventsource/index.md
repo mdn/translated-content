@@ -25,7 +25,7 @@ pc = new EventSource(url, configuration);
 
 ### 返回值
 
-一个新建的 {{domxref("EventSource")}} 对象，如果指定了`configuration`， 则按其配置；否则，配置为合适的基本默认值。
+一个新建的 {{domxref("EventSource")}} 对象，如果指定了`configuration`，则按其配置；否则，配置为合适的基本默认值。
 
 ## 示例
 

@@ -4,6 +4,7 @@ slug: WebAssembly/C_to_wasm
 l10n:
   sourceCommit: 1bd75874286233173bdf69e5ec8e5ec4052fb0a6
 ---
+
 {{WebAssemblySidebar}}
 
 C / C ++のような言語でコードを書いたら、[Emscripten](https://emscripten.org/) のようなツールを使って WebAssembly にコンパイルすることができます。 どのように動作するかを見てみましょう。

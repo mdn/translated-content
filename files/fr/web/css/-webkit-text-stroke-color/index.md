@@ -73,14 +73,11 @@ colorPicker.addEventListener("change", function(evt) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                                                                      | État                                        | Commentaires                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- | ------------------------------------- |
-| {{SpecName('Compat', '#the-webkit-text-stroke-color', '-webkit-text-stroke-color')}}                                                                                                                                                   | {{Spec2('Compat')}}                    | Définition initiale dans un standard. |
-| [Référence CSS Safari -webkit-text-stroke-color dans ce document.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-stroke-color) | Documentation non-officielle, non-standard. | Documentation initiale.               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-text-stroke-color")}}
+{{Compat}}
 
 ## Voir aussi
 

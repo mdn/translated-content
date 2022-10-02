@@ -4,6 +4,7 @@ slug: Learn/Forms/UI_pseudo-classes
 l10n:
   sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
 これまでの記事では、様々なフォームコントロールのスタイル設定について、一般的な方法で説明しました。これには、例えばチェックボックスが選択されたときだけターゲットにするために `:checked` を使用するような、擬似クラスの使用方法も記載しました。この記事では、さまざまな状態のフォームをスタイル設定するために、現代のブラウザーで利用できるさまざまな UI 擬似クラスについて詳しく説明します。

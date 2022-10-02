@@ -2,6 +2,7 @@
 title: border-top-style
 slug: Web/CSS/border-top-style
 ---
+
 {{CSSRef}}
 
 **`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線の形状を設定します。

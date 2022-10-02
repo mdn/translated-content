@@ -2,6 +2,7 @@
 title: IntersectionObserver.takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}} の **`takeRecords()`** メソッドは、明示的にこのメソッドを呼び出したか、監視のコールバックで暗黙的に自動呼出しされたかのどちらかで前回交差をチェックした後で交差状態の変化があった対象要素を示す {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を返します。

@@ -2,6 +2,7 @@
 title: 安全でないパスワード
 slug: Web/Security/Insecure_passwords
 ---
+
 HTTP を通じてログインフォームを提供することは、ユーザーのパスワードを暴くための広範にわたる攻撃に対して特に危険です。ネットワークの盗聴者は、ネットワークを覗き見たり、転送によって提供されたページを変更したりしてユーザーのパスワードを盗むことができます。
 
 {{glossary("HTTPS")}} プロトコルは、ネットワーク上での盗聴 (機密性) や改ざん (完全性) といった脅威から、ユーザーのデータを保護できるように設計されています。ユーザーのデータを扱うウェブサイトは、ユーザーを攻撃者から守るために HTTPS を使用してください。 HTTPS を使わなければ、ユーザーの情報 (ログインの資格情報など) が盗まれるのは当たり前になってしまいます。このことを [Firesheep](https://codebutler.github.io/firesheep/) が証明したのは有名です。
@@ -18,4 +19,4 @@ HTTP を通じてログインフォームを提供することは、ユーザー
 
 - [No More Passwords over HTTP, Please!](https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/) — detailed blog post with more information, and FAQ.
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}

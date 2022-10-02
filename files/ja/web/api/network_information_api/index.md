@@ -2,6 +2,7 @@
 title: Network Information API
 slug: Web/API/Network_Information_API
 ---
+
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
 Network Information API はシステムのネットワーク接続に関する情報を、一般的な接続タイプ (例: 'wifi' や 'cellular' など) の観点から提供します。これは、ユーザーの接続を元に高解像度コンテンツまたは低解像度コンテンツを選択するために使用することができます。API の全体像は {{domxref("NetworkInformation")}} インターフェイスの追加と、{{domxref("Navigator")}} インターフェイスに追加された 1 個のプロパティ {{domxref("Navigator.connection")}} で構成されます。

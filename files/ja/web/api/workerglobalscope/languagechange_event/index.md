@@ -4,6 +4,7 @@ slug: Web/API/WorkerGlobalScope/languagechange_event
 l10n:
   sourceCommit: 0fe2d3ee23b1b23be971d42c7c56729bd23a3f83
 ---
+
 {{APIRef}}
 
 **`languagechange`** イベントは、ユーザーの推奨言語が変更されたときにグローバルスコープオブジェクトで発生します。

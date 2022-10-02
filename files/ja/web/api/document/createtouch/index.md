@@ -2,6 +2,7 @@
 title: Document.createTouch()
 slug: Web/API/Document/createTouch
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 > **Note:** {{Gecko("25.0")}} 以前では、このメソッドは {{DOMxRef("DocumentTouch")}} ミックスインで定義されていました。

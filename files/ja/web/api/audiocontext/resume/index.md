@@ -2,6 +2,7 @@
 title: AudioContext.resume()
 slug: Web/API/AudioContext/resume
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}インターフェースの`resume()`メソッドは、一時停止されたオーディオコンテキストの時間の流れを再開します。

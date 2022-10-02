@@ -2,6 +2,7 @@
 title: management
 slug: Mozilla/Add-ons/WebExtensions/API/management
 ---
+
 {{AddonSidebar}}
 
 インストール済みのアドオンの管理情報を取得します。

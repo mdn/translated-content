@@ -3,6 +3,7 @@ title: ServiceWorkerGlobalScope.onpush
 slug: orphaned/Web/API/ServiceWorkerGlobalScope/onpush
 original_slug: Web/API/ServiceWorkerGlobalScope/onpush
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`ServiceWorkerGlobalScope.onpush`** イベントは、Service Worker がプッシュサーバー経由でメッセージを受け取るたびに発火します。

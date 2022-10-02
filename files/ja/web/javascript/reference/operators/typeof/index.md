@@ -173,7 +173,7 @@ class newClass{};
 
 ### 例外
 
-現在のブラウザーではすべて、標準外のホストオブジェクト [`document.all`](/en-US/docs/Web/API/Document/all) は `undefined` 型になります。
+現在のブラウザーではすべて、標準外のホストオブジェクト [`document.all`](/ja/docs/Web/API/Document/all) は `undefined` 型になります。
 
 ```js
 typeof document.all === 'undefined';

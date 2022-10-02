@@ -3,6 +3,7 @@ title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
 original_slug: Web/CSS/transform-function/rotate3d()
 ---
+
 {{CSSRef}}
 
 **`rotate3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)は、要素を三次元空間内の固定した軸を中心に、形を崩さずに回転させる変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

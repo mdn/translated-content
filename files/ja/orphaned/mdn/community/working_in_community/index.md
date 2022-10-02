@@ -3,6 +3,7 @@ title: コミュニティでの作業
 slug: orphaned/MDN/Community/Working_in_community
 original_slug: MDN/Community/Working_in_community
 ---
+
 {{MDNSidebar}}
 
 MDN の文書に関連して行われる、意味をなす規模での貢献の大部分は、いかに MDN コミュニティの一員として作業するかを知ることだといえます。この記事ではあなたが行う他の文書作成者、開発チームとのやりとりの多くで役に立つコツを紹介します。
@@ -31,7 +32,7 @@ Mozilla コミュニティで作業する際の品行に関する、一般的な
 
 > Hi, **MrBigglesworth**, I've been noticing your contributions to **the Wormhole API documentation**, and it's fantastic to have your help! I particularly like **the way you balanced your level of detail with readability**. That said, though, you could make these articles even better and more helpful if you **added the correct tags to the pages** as you go.
 >
-> **See the MDN tagging guide (<https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag>) for details.**
+> **See the MDN tagging guide (<https://developer.mozilla.org/ja/docs/MDN/Contribute/Howto/Tag>) for details.**
 >
 > Thanks again, and I look forward to your future contributions!
 

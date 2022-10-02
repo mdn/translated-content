@@ -3,6 +3,7 @@ title: attr()
 slug: Web/CSS/attr
 original_slug: Web/CSS/attr()
 ---
+
 {{CSSRef}}
 
 > **Note:** `attr()` 関数はどの CSS プロパティでも使用することができますが、 {{CSSxRef("content")}} 以外のプロパティでの対応は実験的であり、型や単位の引数の対応はまちまちです。

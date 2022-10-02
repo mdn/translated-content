@@ -2,6 +2,7 @@
 title: MouseEvent.getModifierState()
 slug: Web/API/MouseEvent/getModifierState
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.getModifierState()`** メソッドは、指定された修飾キーの現在の状態を返します。修飾キーが有効（すなわち、修飾キーが押されているかロックされている）ならば `true`、そうでなければ `false` を返します。

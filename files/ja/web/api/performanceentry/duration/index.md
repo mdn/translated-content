@@ -2,6 +2,7 @@
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`duration`** プロパティは、{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の期間である{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。

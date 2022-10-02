@@ -2,6 +2,7 @@
 title: ARIA
 slug: Web/Accessibility/ARIA
 ---
+
 Accessible Rich Internet Applications **(ARIA)** はウェブコンテンツやウェブアプリケーション (特に JavaScript で開発するもの) を、ハンディキャップを持つ人々にとってよりアクセシブルにする方法を定義します。
 
 ARIA は、アプリケーションで一般的に使用されている対話操作やウィジェットを、他のメカニズムがない場合に支援技術に渡すことができるように HTML を補完します。例えば ARIA は、 HTML4 のアクセシブルナビゲーションランドマーク、 JavaScript のウィジェット、フォームのヒントやエラーメッセージ、ライブコンテンツの更新などを可能にします。

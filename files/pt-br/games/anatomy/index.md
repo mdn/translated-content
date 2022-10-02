@@ -113,17 +113,17 @@ Finalmente, no JavaScript, o browser está rodando o seu loop principal e o seu 
 
 Versões modernas do Firefox e Google Chrome (e provavelmente outros) tentam conectar os callbacks do `requestAnimationFramea` a sua thread principal no primeiro intervalo de tempo de um frame. A thread principal portanto tenta fazer o seguinte:
 
-1.  Começar uma nova frame (enquanto a anterior é tratada pela exibição).
-2.  Go through the list of `requestAnimationFrame` callbacks and invoke them.
-3.  Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
-4.  Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
+1. Começar uma nova frame (enquanto a anterior é tratada pela exibição).
+2. Go through the list of `requestAnimationFrame` callbacks and invoke them.
+3. Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
+4. Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
 
 Modern versions of Firefox and Google Chrome (and probably others) _attempt_ to connect `requestAnimationFrame` callbacks to their main thread at the very beginning of a frame's timeslice. The browser's main thread thus _tries_ to look like the following:
 
-1.  Start a new frame (while the previous frame is handled by the display).
-2.  Go through the list of `requestAnimationFrame` callbacks and invoke them.
-3.  Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
-4.  Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
+1. Start a new frame (while the previous frame is handled by the display).
+2. Go through the list of `requestAnimationFrame` callbacks and invoke them.
+3. Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
+4. Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
 
 You can think about developing realtime applications as having a budget of time to do work. All of the above steps must take place every 16-and-a-half milliseconds to keep up with a 60 Hz display. Browsers invoke your code as early as possible to give it maximum computation time. Your main thread will often start workloads that are not even on the main thread (such as rasterization or shaders in WebGL). Long calculations can be performed on a Web Worker or a GPU at the same time as the browser uses its main thread to manage garbage collection, its other tasks, or handle asynchronous events.
 

@@ -31,7 +31,7 @@ console.log(utf8decoder.decode(i32arr));
 
 ### 处理非 UTF8 文本
 
-在此示例中，我们对俄语文本“Привет，мир！”( "Hello, world.")进行解码。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定 Windows-1251 字符编码，适用于西里尔字母。
+在此示例中，我们对俄语文本“Привет，мир！”( "Hello, world.") 进行解码。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定 Windows-1251 字符编码，适用于西里尔字母。
 
 ```js
 let win1251decoder = new TextDecoder('windows-1251');

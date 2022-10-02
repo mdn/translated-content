@@ -17,7 +17,7 @@ dateObj.toLocaleDateString([locales [, options]])
 
 ### 参数
 
-查看[浏览器兼容性](#Browser_Compatibility)小节，看下哪些浏览器支持 `locales` 和 `options` 参数，还可以参看[例子： 检测 `locales` 和 `options` 参数支持情况](#Example:_Checking_for_support_for_locales_and_options_arguments)。
+查看[浏览器兼容性](#Browser_Compatibility)小节，看下哪些浏览器支持 `locales` 和 `options` 参数，还可以参看[例子：检测 `locales` 和 `options` 参数支持情况](#Example:_Checking_for_support_for_locales_and_options_arguments)。
 
 {{page('zh-CN/docs/JavaScript/Reference/Global_Objects/DateTimeFormat','Parameters')}}
 

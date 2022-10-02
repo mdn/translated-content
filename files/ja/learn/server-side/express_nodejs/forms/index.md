@@ -2,6 +2,7 @@
 title: 'Express チュートリアル Part 6: フォームの操作'
 slug: Learn/Server-side/Express_Nodejs/forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
 このチュートリアルでは、Pug を使用して Express で HTML フォームを操作する方法、特にデータベースからドキュメントを作成、更新、削除するためのフォームを作成する方法を説明します。

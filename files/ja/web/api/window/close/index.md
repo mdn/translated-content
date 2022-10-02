@@ -2,6 +2,7 @@
 title: window.close
 slug: Web/API/Window/close
 ---
+
 {{APIRef}}
 
 **`Window.close()`** メソッドは、現在のウィンドウ、またはそのページ上で呼び出されたウィンドウを閉じます。

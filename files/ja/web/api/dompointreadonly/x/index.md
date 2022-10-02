@@ -2,6 +2,7 @@
 title: DOMPointReadOnly.x
 slug: Web/API/DOMPointReadOnly/x
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPointReadOnly`** インターフェイスの **`x`** プロパティは、この点の水平座標 x を保持します。これは、空間内の読み取り専用の点です。このプロパティは、 `DOMPoint` オブジェクトの読み取り専用版なので、 JavaScript コードでは変更することができません。
