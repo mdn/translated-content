@@ -180,7 +180,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Attributes/maxlength"><code>maxlength</code></a>
+        <a href="/ja/docs/Web/HTML/Attributes/maxlength"><code>maxlength</code></a>
       </td>
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,

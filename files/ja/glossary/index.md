@@ -13,6 +13,6 @@ slug: Glossary
 
 <section id="Quick_links">
  <ol>
-  <li><strong><a href="/ja/docs/Glossary">MDN Web Docs 用語集</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  <li><strong><a href="/ja/docs/Glossary">MDN Web Docs 用語集</a></strong>{{ListSubpagesForSidebar("/ja/docs/Glossary", 1)}}</li>
  </ol>
 </section>

@@ -138,7 +138,7 @@ l10n:
 - {{domxref("ServiceWorkerGlobalScope.beforeevicted_event", "onbeforeevicted")}} および {{domxref("ServiceWorkerGlobalScope.evicted_event", "onevicted")}} イベントハンドラーは、仕様書に準拠していなかったので削除されました。将来的に再導入される予定ですが、削除することで期待通りの機能検出が可能になります ({{bug(1218142)}})。
 - {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} コンストラクターで、 `isReload` が options 辞書に存在しなかった場合の既定値が `false` になりました ({{bug(1216401)}})。
 - {{domxref("Client.frameType")}} プロパティが正しいインターフェイスに実装されました。以前は {{domxref("WindowClient")}} にありました ({{bug(1218146)}})。
-- AppCache がページをオフラインに対応させるために使用された場合、コンソールに警告メッセージを表示し、開発者に[サービスワーカー](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)を使用するよう助言するようになりました ({{bug("1204581")}})。
+- AppCache がページをオフラインに対応させるために使用された場合、コンソールに警告メッセージを表示し、開発者に[サービスワーカー](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)を使用するよう助言するようになりました ({{bug("1204581")}})。
 - Gecko で、サービスワーカーが既定で有効化されました。
 
 #### WebRTC
