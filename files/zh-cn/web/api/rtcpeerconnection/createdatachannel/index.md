@@ -5,7 +5,7 @@ slug: Web/API/RTCPeerConnection/createDataChannel
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-{{domxref("RTCPeerConnection")}} 的 `createDataChannel()` 方法创建一个可以发送任意数据的数据通道 (data channel)。常用于后台传输内容，例如: 图像，文件传输，聊天文字，游戏数据更新包，等等。
+{{domxref("RTCPeerConnection")}} 的 `createDataChannel()` 方法创建一个可以发送任意数据的数据通道 (data channel)。常用于后台传输内容，例如：图像，文件传输，聊天文字，游戏数据更新包，等等。
 
 基于某个连接创建第一个 data channel 时，会通过发送一个{{event("negotiationneeded")}} event 来开始重新谈判 (renegotiation)。
 
@@ -18,7 +18,7 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
 ### 参数
 
 - `label`
-  - : 一个便于理解的通道名. 该字符串不能长于 65,535 _字节_.
+  - : 一个便于理解的通道名。该字符串不能长于 65,535 _字节_.
 - `options` {{optional_inline}}
   - : 提供 data channel 设置的一个 [`RTCDataChannelInit` dictionary](#RTCDataChannelInit_dictionary)
 

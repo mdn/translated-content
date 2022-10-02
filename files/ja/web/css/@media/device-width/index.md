@@ -2,6 +2,7 @@
 title: device-width
 slug: Web/CSS/@media/device-width
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 [CSS](/ja/docs/Web/CSS) の **`device-width`** [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、出力機器の描画面の幅を調べるために使用することができます。

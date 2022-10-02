@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Statements/function
 ---
 {{jsSidebar("Statements")}}
 
-A **declaração function** define uma função com os especificados parâmetros.\*\*\*\*
+A **declaração function** define uma função com os especificados parâmetros.
 
 Você pode também definir funções usando o construtor {{jsxref("Function")}} e uma {{jsxref("Operators/function", "function expression")}}.
 

@@ -26,9 +26,9 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]]];
 ```
 
 - `nameN`
-  - : Nome da constante. Pode ser qualquer [identificador ](/pt-BR/docs/Glossary/Identifier)válido.
+  - : Nome da constante. Pode ser qualquer [identificador](/pt-BR/docs/Glossary/Identifier) válido.
 - `valueN`
-  - : Valor atribuido a constante. Pode ser qualquer [expressão ](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)válida, incluindo uma função.
+  - : Valor atribuido a constante. Pode ser qualquer [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions) válida, incluindo uma função.
 
 ## Descrição
 
@@ -36,9 +36,9 @@ Esta declaração cria uma constante que pode pertencer tanto ao escopo global (
 
 Toda constante requer um inicializador, ou seja, é preciso especificar um valor para a constante no momento em que ela é declarada (o que faz sentido, uma vez que esse valor não pode ser alterado).
 
-A declaração **`const` **cria uma referência somente leitura a um valor. Isso **não** significa que esse valor é imutável, apenas que o identificador da variável constante não pode ser alterado. Se o conteúdo do identificador for um objeto, isso significa que o conteúdo do objeto (ex. seus parâmetros) podem ser alterados.
+A declaração **`const`** cria uma referência somente leitura a um valor. Isso **não** significa que esse valor é imutável, apenas que o identificador da variável constante não pode ser alterado. Se o conteúdo do identificador for um objeto, isso significa que o conteúdo do objeto (ex. seus parâmetros) podem ser alterados.
 
-Todas as considerações de ["temporal dead zone"](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let) se aplicam tanto a **[`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)** quanto a **`const`**.
+Todas as considerações de ["temporal dead zone"](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let) se aplicam tanto a **[`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)** quanto a **`const`**.
 
 Uma constante não pode ter o mesmo nome que uma função ou variável que esteja no mesmo escopo.
 
@@ -126,9 +126,9 @@ A declaração `const` foi implementada no Firefox muito antes de `const` aparec
 
 - Iniciando com o Gecko 36 {{geckoRelease("36")}}:
 
-  - `{const a=1};a` passa a retornar [`ReferenceError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError "The ReferenceError object represents an error when a non-existent variable is referenced.") e não retorna `1` devido block-scoping.
-  - `const a;` passa a retornar [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError "The SyntaxError object represents an error when trying to interpret syntactically invalid code.") ("missing = in const declaration`"`): É necessário incializar a constante.
-  - `const a = 1; a = 2;` passa a retornar [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError "The SyntaxError object represents an error when trying to interpret syntactically invalid code.") ("invalid assignment to const a").
+  - `{const a=1};a` passa a retornar [`ReferenceError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) e não retorna `1` devido block-scoping.
+  - `const a;` passa a retornar [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) ("missing = in const declaration`"`): É necessário incializar a constante.
+  - `const a = 1; a = 2;` passa a retornar [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) ("invalid assignment to const a").
 
 ## Veja também
 

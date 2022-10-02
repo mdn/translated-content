@@ -1,10 +1,13 @@
 ---
 title: 'カスタムプロパティ (--*): CSS 変数'
 slug: Web/CSS/--*
+l10n:
+  sourceCommit: 8318078e0cf65cd4d56e80376c03019dcb292dc1
 ---
+
 {{CSSRef}}
 
-接頭辞 `--` が付いたプロパティ名、例えば `--example-name` は、*カスタムプロパティ*を表し、 {{cssxref("var()")}} 関数を用いて他の宣言の中で使用することができる値を持ちます。
+接頭辞 `--` が付いたプロパティ名、例えば `--example-name` は、*カスタムプロパティ*を表し、 {{cssxref("var", "var()")}} 関数を用いて他の宣言の中で使用することができる値を持ちます。
 
 カスタムプロパティは宣言された要素のスコープになり、カスケードに関連します。そのようなカスタムプロパティの値は、カスケードのアルゴリズムによって決められた宣言から取られます。
 
@@ -32,10 +35,16 @@ slug: Web/CSS/--*
 ### HTML
 
 ```html
-<p id="firstParagraph">この段落は青色の背景で黄色のテキストとなります。</p>
-<p id="secondParagraph">この段落は黄色の背景で青色のテキストとなります。</p>
+<p id="firstParagraph">
+  この段落は青色の背景で黄色のテキストとなります。
+</p>
+<p id="secondParagraph">
+  この段落は黄色の背景で青色のテキストとなります。
+</p>
 <div id="container">
-  <p id="thirdParagraph">この段落は緑色の背景で黄色のテキストとなります。</p>
+  <p id="thirdParagraph">
+    この段落は緑色の背景で黄色のテキストとなります。
+  </p>
 </div>
 ```
 
@@ -82,4 +91,4 @@ slug: Web/CSS/--*
 ## 関連情報
 
 - [CSS 変数の使用](/ja/docs/Web/CSS/Using_CSS_custom_properties)
-- {{cssxref("var()")}} 関数
+- {{cssxref("var", "var()")}} 関数

@@ -2,6 +2,7 @@
 title: x
 slug: Web/SVG/Attribute/x
 ---
+
 {{SVGRef}}
 
 **`x`** 属性はユーザー座標系の X 軸の座標を定義します。

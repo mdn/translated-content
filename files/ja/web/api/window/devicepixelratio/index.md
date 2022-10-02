@@ -2,6 +2,7 @@
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 ---
+
 {{APIRef}}
 
 **`devicePixelRatio`** は {{domxref("Window")}} インターフェイスのプロパティで、現在のディスプレイ機器における  CSS 解像度と物理解像度の比を返します。

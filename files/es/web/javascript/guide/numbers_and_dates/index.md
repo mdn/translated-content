@@ -28,7 +28,7 @@ Además de poder representar números de punto flotante, el tipo `number` tiene 
 
 Una adición más reciente a JavaScript es el {{JSxRef("BigInt")}} que te permite representar números enteros que pueden ser muy grandes. Sin embargo, existen advertencias para usar `BigInt`; por ejemplo, no puedes mezclar y hacer coincidir los valores `BigInt` y {{JSxRef("Number")}} en la misma operación, y no puedes usar el objeto {{JSxRef("Math")}} con valores `BigInt`.
 
-Consulta también {{JSxRef("../Data_structures", "estructuras y tipos de datos JavaScript")}} para conocer el contexto con otros tipos primitivos en JavaScript.
+Consulta también {{JSxRef("Data_structures", "estructuras y tipos de datos JavaScript")}} para conocer el contexto con otros tipos primitivos en JavaScript.
 
 Puedes utilizar cuatro tipos de literales numéricos: decimal, binario, octal y hexadecimal.
 

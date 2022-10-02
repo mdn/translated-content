@@ -2,6 +2,7 @@
 title: AbortController
 slug: Web/API/AbortController
 ---
+
 {{APIRef("DOM")}}
 
 **`AbortController`** インターフェースは一つ以上のリクエストをいつでも中断することを可能にするコントローラーオブジェクトを表します。

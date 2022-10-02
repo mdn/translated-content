@@ -2,6 +2,7 @@
 title: <image>
 slug: Web/CSS/image
 ---
+
 {{CSSRef}}
 
 **`<image>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Types)で、二次元の画像を表現します。

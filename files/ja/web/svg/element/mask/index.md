@@ -2,6 +2,7 @@
 title: <mask>
 slug: Web/SVG/Element/mask
 ---
+
 {{SVGRef}}
 
 The **`<mask>`** element defines an alpha mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property.

@@ -51,6 +51,4 @@ Dans l'exemple qui suit, on a une image qui flotte à gauche et la propriété `
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires         |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("CSS Shapes")}} | {{Spec2("CSS Shapes")}} | Définition initiale. |
+{{Specifications}}

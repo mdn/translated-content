@@ -178,7 +178,7 @@ console.log(obj.sum); // 16
 
 ### 对象复制函数
 
-下面的代码会创建一个给定对象的副本。 创建对象的副本有不同的方法，以下是只是一种方法，并解释了 `Array.prototype.forEach()` 是如何使用 ECMAScript 5 `Object.*` 元属性（meta property）函数工作的。
+下面的代码会创建一个给定对象的副本。创建对象的副本有不同的方法，以下是只是一种方法，并解释了 `Array.prototype.forEach()` 是如何使用 ECMAScript 5 `Object.*` 元属性（meta property）函数工作的。
 
 ```js
 const copy = (obj) => {

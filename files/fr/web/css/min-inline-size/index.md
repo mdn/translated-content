@@ -47,9 +47,13 @@ min-inline-size: unset;
 
 La propriété `min-inline-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -76,15 +80,11 @@ La propriété `min-inline-size` peut prendre les mêmes valeurs que les propri�
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                                           | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-min-inline-size", "min-inline-size")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.min-inline-size")}}
+{{Compat}}
 
 ## Voir aussi
 

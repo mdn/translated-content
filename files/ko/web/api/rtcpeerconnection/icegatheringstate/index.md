@@ -21,7 +21,7 @@ var state = RTCPeerConnection.iceGatheringState;
 
 ### RTCIceGatheringState enum[섹션](/ko/docs/Web/API/RTCPeerConnection#RTCIceGatheringState_enum)
 
-[`RTCPeerConnection.iceGatheringState`](/ko/docs/Web/API/RTCPeerConnection/iceGatheringState) 속성을 사용하게되면 반환되는 `RTCIceGatheringState` enum은 현재의 ICE 수집 상태를 반영하여 알려주는 문자열 상수입니다. [`icegatheringstatechange`](https://developer.mozilla.org/ko/docs/Web/Reference/Events/icegatheringstatechange "/ko/docs/Web/Reference/Events/icegatheringstatechange") 타입의 이벤트를 감시해서 이 값이 언제 변하는지 확인 할 수 있습니다.
+[`RTCPeerConnection.iceGatheringState`](/ko/docs/Web/API/RTCPeerConnection/iceGatheringState) 속성을 사용하게되면 반환되는 `RTCIceGatheringState` enum은 현재의 ICE 수집 상태를 반영하여 알려주는 문자열 상수입니다. [`icegatheringstatechange`](https://developer.mozilla.org/ko/docs/Web/Reference/Events/icegatheringstatechange) 타입의 이벤트를 감시해서 이 값이 언제 변하는지 확인 할 수 있습니다.
 
 | 상수명        | 설명                                                                                                                                                                                                         |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

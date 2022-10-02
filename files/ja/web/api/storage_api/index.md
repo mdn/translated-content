@@ -2,6 +2,7 @@
 title: Storage API
 slug: Web/API/Storage_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}}
 
 ストレージ標準（Storage Standard）は、個々のウェブサイトのコンテンツがアクセス可能なデータを格納するすべての API およびテクノロジーで使用する、共通の共有ストレージシステムを定義しています。Storage API は、どのくらいのスペースを使用できるかや、すでにどのくらいのスペースを使用しているかを調べたり、{{Glossary("user agent","ユーザーエージェント")}}が他のもののための場所を空けるためにサイトデータを処分する前に、警告する必要があるかどうかを制御したりといった機能を、サイトのコードに提供します。

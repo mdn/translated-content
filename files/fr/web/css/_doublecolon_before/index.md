@@ -47,7 +47,7 @@ q::before {
   color: blue;
 }
 q::after {
-  content: '»';
+  content: "»";
   color: red;
 }
 ```
@@ -150,17 +150,11 @@ list.addEventListener('click', function(ev) {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                         | Commentaires                                                                     |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-before', '::before')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Pas de modification significative depuis la spécification précédente.            |
-| {{Specname("CSS3 Transitions", "#animatable-properties", "")}}             | {{Spec2("CSS3 Transitions")}}     | Les transitions peuvent être appliquées sur les propriétés de ce pseudo-élément. |
-| {{Specname("CSS3 Animations", "", "")}}                                             | {{Spec2("CSS3 Animations")}}         | Les animations peuvent être appliquées sur les propriétés de ce pseudo-élément.  |
-| {{SpecName('CSS3 Selectors', '#gen-content', '::before')}}                     | {{Spec2('CSS3 Selectors')}}         | Introduction de la syntaxe avec les deux deux-points.                            |
-| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::before')}} | {{Spec2('CSS2.1')}}                     | Définition initiale avec une seule fois le caractère deux-points.                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.before")}}
+{{Compat}}
 
 ## Voir aussi
 

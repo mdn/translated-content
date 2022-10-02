@@ -2,6 +2,7 @@
 title: XMLHttpRequest.getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の **`getAllResponseHeaders()`** メソッドは、すべてのレスポンスヘッダーを {{Glossary('CRLF')}} で区切った文字列として返し、レスポンスを受信していない場合は `null` を返します。

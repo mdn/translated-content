@@ -3,6 +3,7 @@ title: SpeechRecognition.onspeechend
 slug: Web/API/SpeechRecognition/speechend_event
 original_slug: Web/API/SpeechRecognition/onspeechend
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}} インターフェイスの **`onspeechend`** プロパティは、認識できる音声が検出し終えた時に ([`speechend`](/ja/docs/Web/API/SpeechRecognition/speechend_event) イベントが発生した時)、実行されるイベントハンドラーになります。

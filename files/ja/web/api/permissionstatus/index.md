@@ -2,6 +2,7 @@
 title: PermissionStatus
 slug: Web/API/PermissionStatus
 ---
+
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
 [Permissions API](/ja/docs/Web/API/Permissions_API) の **`PermissionStatus`** インターフェイスは、オブジェクトの状態と、その状態への変更を監視するためのイベントハンドラを提供します。

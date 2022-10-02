@@ -2,6 +2,7 @@
 title: MediaRecorder.requestData()
 slug: Web/API/MediaRecorder/requestData
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.requestData()`** メソッド（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、このメソッドを呼び出したときにあった、キャプチャされたメディアの {{domxref("Blob")}} オブジェクトを含む {{domxref("dataavailable")}} イベントを発生させるために使用します。 その後、これを入手して操作することができます。

@@ -6,7 +6,7 @@ original_slug: Web/API/Element/addEventListener
 ---
 {{apiref("DOM Events")}}
 
-`addEventListener()` registra uma única espera de evento em um único alvo. O [alvo do evento](/pt-BR/docs/DOM/EventTarget "DOM/EventTarget") pode ser um único [elemento](/pt-BR/docs/DOM/element "DOM/element") em um documento, o [`documento`](/pt-BR/docs/DOM/document "DOM/document") em si, uma [`janela`](/pt-BR/docs/DOM/window "DOM/window"), ou um [`XMLHttpRequest`](/pt-BR/docs/DOM/XMLHttpRequest "XMLHttpRequest").
+`addEventListener()` registra uma única espera de evento em um único alvo. O [alvo do evento](/pt-BR/docs/DOM/EventTarget) pode ser um único [elemento](/pt-BR/docs/DOM/element) em um documento, o [`documento`](/pt-BR/docs/DOM/document) em si, uma [`janela`](/pt-BR/docs/DOM/window), ou um [`XMLHttpRequest`](/pt-BR/docs/DOM/XMLHttpRequest).
 
 Para registrar mais de uma espera de evento como alvo, chame `addEventListener()` para o mesmo alvo mas com diferentes tipos de evento ou captura de parâmetros.
 
@@ -18,13 +18,13 @@ alvo.addEventListener(type,listener[, useCapture, wantUntrusted {{ Non-standard_
 ```
 
 - `type`
-  - : Uma linha de texto que representa o [tipo de evento](/pt-BR/docs/DOM/event.type "DOM/Event.type") a ser esperado.
+  - : Uma linha de texto que representa o [tipo de evento](/pt-BR/docs/DOM/event.type) a ser esperado.
 - listener
-  - : O objeto que recebe uma notificação quando um evento do tipo especificado ocorre. Esse objeto precisa implementar a interface do [`EventListener`](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener), ou simplesmente executar uma [função](/pt-BR/docs/JavaScript/Guide/Functions "JavaScript/Guide/Functions") JavaScript.
+  - : O objeto que recebe uma notificação quando um evento do tipo especificado ocorre. Esse objeto precisa implementar a interface do [`EventListener`](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener), ou simplesmente executar uma [função](/pt-BR/docs/JavaScript/Guide/Functions) JavaScript.
 - `useCapture` {{ optional_inline() }}
   - : Se `true`, `useCapture` indica que o usuário deseja iniciar uma captura. Depois de iniciada a captura, todos os eventos do tipo especificado serão enviados à `listener` registrada antes de serem enviados à qualquer `EventTarget` abaixo dela na hierarquia de DOMs. Eventos que borbulharem para cima na hierarquia não acionarão a escuta designada a usar a captura. Veja [Eventos DOM Nível 3](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) para uma explicação detalhada. Perceba que esse parâmetro não é opcional em todos os navegadores. Se não for especificado, `useCapture` é `false`.
 - `wantsUntrusted` {{ Non-standard_inline() }}
-  - : Se `true`, o evento pode ser acionado por conteúdo não-confiável. Veja [Interação entre páginas com e sem privilégios](/pt-BR/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages "Code snippets/Interaction between privileged and non-privileged pages").
+  - : Se `true`, o evento pode ser acionado por conteúdo não-confiável. Veja [Interação entre páginas com e sem privilégios](/pt-BR/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages).
 
 > **Nota:** `useCapture` tornou-se opcional somente nas versões mais recentes dos principais navegadores; não era opcional antes do Firefox 6, por exemplo. Você deve especificar esse parâmetro para obter uma maior compatibilidade.
 
@@ -119,7 +119,7 @@ function load() {
 
 `addEventListener` é a maneira de registrar uma espera de evento como especificada no W3C DOM. Seus benefícios são os seguintes:
 
-- Permite mais de um manipulador por evento. Isso é particularmente útil em bibliotecas [DHTML](/pt-BR/docs/DHTML "DHTML") ou em [extensões Mozilla](/pt-BR/docs/Extensions "Extensions") que precisam trabalhar bem mesmo com outras bibliotecas/extensões sendo usadas.
+- Permite mais de um manipulador por evento. Isso é particularmente útil em bibliotecas [DHTML](/pt-BR/docs/DHTML) ou em [extensões Mozilla](/pt-BR/docs/Extensions) que precisam trabalhar bem mesmo com outras bibliotecas/extensões sendo usadas.
 - Te dá um pente-fino do estágio em que a espera de evento é ativada (captura ou borbulha).
 - Funciona em qualquer elemento DOM, não só para elementos HTML.
 
@@ -131,7 +131,7 @@ Se um EventListener for somado a um EventTarget enquanto está processando um ev
 
 ### Múltiplas esperas de evento idênticas
 
-Se múltiplas esperas de evento idênticas forem registradas no mesmo EventTarget com os mesmos parâmetros, as versões duplicadas serão descartadas. Elas não fazem o EventListener ser disparado mais de uma vez, e, como as duplicatas são descartadas, elas não precisam ser removidas manualmente com o método [removeEventListener](/pt-BR/docs/DOM/element.removeEventListener "DOM/element.removeEventListener").
+Se múltiplas esperas de evento idênticas forem registradas no mesmo EventTarget com os mesmos parâmetros, as versões duplicadas serão descartadas. Elas não fazem o EventListener ser disparado mais de uma vez, e, como as duplicatas são descartadas, elas não precisam ser removidas manualmente com o método [removeEventListener](/pt-BR/docs/DOM/element.removeEventListener).
 
 ### **O valor de** **this** **no manipulador**
 
@@ -146,7 +146,7 @@ Nos exemplos acima, o valor de this em modifyText(), quando disparado pelo event
 
 O valor de this em modifyText(), quando disparado pelo evento de clique no HTML, será uma referência ao objeto global (no caso, a janela).
 
-> **Nota:** JavaScript 1.8.5 introduz o método [`Function.prototype.bind()`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/bind "JavaScript/Reference/Global Objects/Function/bind"), que permite especificar o valor que deve ser usado como `this` para todas as chamadas à uma determinada função. Isso evita problemas quando não é claro o que `this` será, dependendo do contexto do qual a sua função for chamada. Perceba, entretanto, que é preciso manter uma referência da escuta à mão, para que depois você possa removê-la.
+> **Nota:** JavaScript 1.8.5 introduz o método [`Function.prototype.bind()`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/bind), que permite especificar o valor que deve ser usado como `this` para todas as chamadas à uma determinada função. Isso evita problemas quando não é claro o que `this` será, dependendo do contexto do qual a sua função for chamada. Perceba, entretanto, que é preciso manter uma referência da escuta à mão, para que depois você possa removê-la.
 
 Este é um exemplo com e sem `bind`:
 
@@ -199,7 +199,7 @@ if (el.addEventListener) {
 }
 ```
 
-Existe um porém com `attachEvent:` o valor de `this` será a referência ao objeto `window` em vez do elemento do qual foi disparado.
+Existe um porém com `attachEvent` o valor de `this` será a referência ao objeto `window` em vez do elemento do qual foi disparado.
 
 ### Uma maneira ultrapassada de registrar esperas de evento
 
@@ -240,7 +240,7 @@ for(i=0 ; i<els.length ; i++){
 }
 ```
 
-No primeiro caso, uma nova função (anônima) é criada em cada turno do loop. No segundo caso, a mesma função previamente declarada é usada como um manipulador de evento. Isso resulta em um consumo menor de memória. Além do mais, no primeiro caso, já que nenhuma referência à função anônima é mantida, não é possível chamar [`element.removeEventListener`](/pt-BR/docs/DOM/element.removeEventListener "DOM/element.removeEventListener") porque não há uma referência ao manipulador, enquanto no segundo caso é possível fazer `myElement.removeEventListener("click", processEvent, false)`.
+No primeiro caso, uma nova função (anônima) é criada em cada turno do loop. No segundo caso, a mesma função previamente declarada é usada como um manipulador de evento. Isso resulta em um consumo menor de memória. Além do mais, no primeiro caso, já que nenhuma referência à função anônima é mantida, não é possível chamar [`element.removeEventListener`](/pt-BR/docs/DOM/element.removeEventListener) porque não há uma referência ao manipulador, enquanto no segundo caso é possível fazer `myElement.removeEventListener("click", processEvent, false)`.
 
 ## Compatiblidade de navegadores
 
@@ -248,8 +248,8 @@ No primeiro caso, uma nova função (anônima) é criada em cada turno do loop. 
 
 ## Veja também
 
-- [elemento.removeEventListener()](/pt-BR/docs/DOM/element.removeEventListener "DOM/element.removeEventListener")
-- [Criando e disparando eventos customizáveis](/pt-BR/docs/DOM/Creating_and_triggering_events "DOM/Creating_and_triggering_custom_events")
+- [elemento.removeEventListener()](/pt-BR/docs/DOM/element.removeEventListener)
+- [Criando e disparando eventos customizáveis](/pt-BR/docs/DOM/Creating_and_triggering_events)
 - [Mais detalhes no uso de `this` nos manipuladores de eventos](http://www.quirksmode.org/js/this.html)
 
 ## Especificação

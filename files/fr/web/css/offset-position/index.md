@@ -84,10 +84,8 @@ offset-position: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                                       | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('Motion Path Level 1', '#offset-position-property', 'offset-position')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité de navigateur
+## Compatibilité des navigateurs
 
-{{Compat("css.properties.offset-position")}}
+{{Compat}}

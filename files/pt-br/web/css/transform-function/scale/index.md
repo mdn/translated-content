@@ -16,7 +16,7 @@ A função [CSS](/pt-BR/docs/Web/CSS) **`scale()`** define uma transformação q
 
 Essa transformação de redimensionamento é caracterizada por um vetor bidimensional. Suas coordenadas definem o quanto cada direção deve ser redimensionada. Se as duas coordenadas forem iguais, o redimensionamento é uniforme (_isotrópico_) e a proporção do elemento é preservada (isto é uma [transformação homotética](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
-Quando o valor de uma coordenada está fora do alcance \[-1, 1], o elemento cresce ao longo daquela dimensão; quando está dentro, ele encolhe. Se for negativo, o resultado é um[ ponto de reflexão](https://en.wikipedia.org/wiki/Point_reflection) naquela dimensão. O valor 1 não tem efeito.
+Quando o valor de uma coordenada está fora do alcance \[-1, 1], o elemento cresce ao longo daquela dimensão; quando está dentro, ele encolhe. Se for negativo, o resultado é um [ponto de reflexão](https://en.wikipedia.org/wiki/Point_reflection) naquela dimensão. O valor 1 não tem efeito.
 
 > **Note:** **Nota:** A função `scale()` apenas redimensiona em 2D Para redimensionar em 3D, use [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d) ao invés.
 

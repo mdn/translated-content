@@ -51,7 +51,7 @@ slug: Web/API/Document_Object_Model
 
 ## 过时的 DOM 接口
 
-DOM 模型已经被高度简化了。为此，以下出现在 DOM level 3 或更早的规范里的接口已经被移除了。 现在不是非常确定是否有一些会被重新引进，但是当前应该把它们看作废弃的，应当避免使用：
+DOM 模型已经被高度简化了。为此，以下出现在 DOM level 3 或更早的规范里的接口已经被移除了。现在不是非常确定是否有一些会被重新引进，但是当前应该把它们看作废弃的，应当避免使用：
 
 - {{domxref("CDATASection")}}
 - {{domxref("DOMConfiguration")}}

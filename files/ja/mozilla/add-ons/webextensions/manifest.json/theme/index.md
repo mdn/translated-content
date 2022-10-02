@@ -2,6 +2,7 @@
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 ---
+
 {{AddonSidebar}}
 
 > **Note:** Note that you can't yet submit static WebExtension-based themes to addons.mozilla.org. The work to support this is tracked in <https://github.com/mozilla/addons/issues/501>. If you want to share a theme with other users, you'll need to make it either a [lightweight theme](/ja/docs/Mozilla/Add-ons/Themes/Lightweight_themes) or a [dynamic theme](/ja/Add-ons/WebExtensions/API/theme).

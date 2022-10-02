@@ -2,6 +2,7 @@
 title: mask-border
 slug: Web/CSS/mask-border
 ---
+
 {{CSSRef}}
 
 **`mask-border`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素の境界の縁に沿ったマスクを生成することができます。

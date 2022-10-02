@@ -2,6 +2,7 @@
 title: 一般的な問題解決に HTML を使う
 slug: Learn/HTML/Howto
 ---
+
 {{LearnSidebar}}
 
 下記のリンクは、日常の解決すべき問題を HTML を使って解決する解決法を指しています。

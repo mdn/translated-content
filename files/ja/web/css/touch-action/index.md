@@ -2,6 +2,7 @@
 title: touch-action
 slug: Web/CSS/touch-action
 ---
+
 {{CSSRef}}
 
 **`touch-action`** は CSS のプロパティで、タッチ画面のユーザーが要素のある領域をどのように操作できるか（例えば、ブラウザー内に組み込まれたパンまたはズーム機能）を設定します。

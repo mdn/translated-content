@@ -31317,10 +31317,6 @@
     "modified": "2019-03-23T23:28:35.294Z",
     "contributors": ["yyss", "teoli"]
   },
-  "conflicting/Web/CSS/CSS_Scroll_Snap": {
-    "modified": "2020-02-21T23:37:52.316Z",
-    "contributors": ["yuheiy", "mfuji09"]
-  },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-03-18T21:33:15.134Z",
     "contributors": ["mfuji09"]
@@ -31418,26 +31414,6 @@
   "orphaned/Creating_toolbar_buttons": {
     "modified": "2019-03-23T23:41:54.024Z",
     "contributors": ["teoli", "electrolysis", "Akanemoto", "Taken Bot"]
-  },
-  "orphaned/Glossary/Bootstrap": {
-    "modified": "2020-05-30T13:35:38.772Z",
-    "contributors": ["mfuji09", "dskmori", "blackpeach7", "hamasaki"]
-  },
-  "orphaned/Glossary/DHTML": {
-    "modified": "2019-03-23T23:49:44.167Z",
-    "contributors": ["mfuji09", "ethertank", "Marsf", "Mgjbot", "Okome"]
-  },
-  "orphaned/Glossary/Dynamic_programming_language": {
-    "modified": "2020-03-30T14:14:24.828Z",
-    "contributors": ["Uemmra3", "mfuji09"]
-  },
-  "orphaned/Glossary/GIJ": {
-    "modified": "2019-01-16T22:20:13.005Z",
-    "contributors": ["dskmori", "kubota-aoi"]
-  },
-  "orphaned/Glossary/jQuery": {
-    "modified": "2020-08-24T03:29:50.663Z",
-    "contributors": ["mfuji09", "Uemmra3"]
   },
   "orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data": {
     "modified": "2020-03-07T07:55:37.025Z",

@@ -36,7 +36,7 @@ x instanceof f;       // TypeError: invalid 'instanceof' operand f
 x instanceof x;       // TypeError: x is not a function
 ```
 
-为了解决上述问题， 你可能需要将[`instanceof` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 换成 [`typeof` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)， 或者确保你使用的是函数名称，而不是函数计算的结果。
+为了解决上述问题，你可能需要将[`instanceof` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 换成 [`typeof` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)，或者确保你使用的是函数名称，而不是函数计算的结果。
 
 ```js example-good
 typeof "test" == "string"; // true

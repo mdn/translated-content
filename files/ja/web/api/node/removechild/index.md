@@ -2,6 +2,7 @@
 title: Node.removeChild()
 slug: Web/API/Node/removeChild
 ---
+
 {{APIRef("DOM")}}
 
 **`removeChild()`** は {{domxref("Node")}} インターフェイスのメソッドで、子ノードを DOM から取り除き、取り除いたノードを返します。

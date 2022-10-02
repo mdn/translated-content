@@ -12,9 +12,9 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Attribute_selectors
 ---
 <p>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Как вы знаете из курса о HTML, элементы могут иметь атрибуты, которые дают дополнительную информацию о размечаемом элементе.</span></span> <span class="tlid-translation translation" lang="ru"><span title="">В CSS вы можете использовать селекторы атрибута</span></span> <span class="tlid-translation translation" lang="ru"><span title="">для стилизации элементов с определёнными атрибутами</span></span>. <span class="tlid-translation translation" lang="ru"><span title="">Этот урок покажет вам, как использовать эти очень полезные селекторы.</span></span></p>
+<p>Как вы знаете из курса о HTML, элементы могут иметь атрибуты, которые дают дополнительную информацию о размечаемом элементе. В CSS вы можете использовать селекторы атрибута для стилизации элементов с определёнными атрибутами. Этот урок покажет вам, как использовать эти очень полезные селекторы.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Необходимые условия:</th>
@@ -27,9 +27,9 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Attribute_selectors
  </tbody>
 </table>
 
-<h2 id="Селекторы_наличия_и_значения"><span class="tlid-translation translation" lang="ru"><span title="">Селекторы наличия и значения</span></span></h2>
+<h2 id="Селекторы_наличия_и_значения">Селекторы наличия и значения</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Эти селекторы делают возможным выбор элемента, основанный только на наличии атрибута (например,</span></span> <code>href</code>) <span class="tlid-translation translation" lang="ru"><span title="">или на всевозможных разного рода сочетаниях со значением атрибута</span></span>.</p>
+<p>Эти селекторы делают возможным выбор элемента, основанный только на наличии атрибута (например, <code>href</code>) или на всевозможных разного рода сочетаниях со значением атрибута.</p>
 
 <table class="standard-table">
  <thead>
@@ -43,29 +43,29 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Attribute_selectors
   <tr>
    <td><code>[<em>attr</em>]</code></td>
    <td><code>a[title]</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Выбирает элементы с атрибутом <em>attr</em> (имя которого </span></span> — <span class="tlid-translation translation" lang="ru"><span title=""> это значение в квадратных скобках).</span></span></td>
+   <td>Выбирает элементы с атрибутом <em>attr</em> (имя которого  —  это значение в квадратных скобках).</td>
   </tr>
   <tr>
    <td><code>[<em>attr</em>=<em>value</em>]</code></td>
    <td><code>a[href="https://example.com"]</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Выбирает элементы с атрибутом <em>attr</em>, значение которого в точности равно <em>value</em> </span></span> — <span class="tlid-translation translation" lang="ru"><span title="">строке внутри кавычек.</span></span></td>
+   <td>Выбирает элементы с атрибутом <em>attr</em>, значение которого в точности равно <em>value</em>  — строке внутри кавычек.</td>
   </tr>
   <tr>
    <td><code>[<em>attr</em>~=<em>value</em>]</code></td>
    <td><code>p[class~="special"]</code></td>
    <td>
-    <p><span class="tlid-translation translation" lang="ru"><span title="">Выбирает</span></span> элементы с атрибутом <em>attr,</em> значение которого в точности равно <em>value</em> или содержит <em>value</em> в своём (разделённом пробелами) списке значений.</p>
+    <p>Выбирает элементы с атрибутом <em>attr,</em> значение которого в точности равно <em>value</em> или содержит <em>value</em> в своём (разделённом пробелами) списке значений.</p>
    </td>
   </tr>
   <tr>
    <td><code>[<em>attr</em>|=<em>value</em>]</code></td>
    <td><code>div[lang|="zh"]</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Выбирает</span></span> элементы с атрибутом <em>attr</em>, значение которого в точности равно <em>value </em>или начинается с <em>value</em>, за которым сразу следует дефис.</td>
+   <td>Выбирает элементы с атрибутом <em>attr</em>, значение которого в точности равно <em>value </em>или начинается с <em>value</em>, за которым сразу следует дефис.</td>
   </tr>
  </tbody>
 </table>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В приведённом ниже примере вы можете увидеть использование этих селекторов.</span></span></p>
+<p>В приведённом ниже примере вы можете увидеть использование этих селекторов.</p>
 
 <ul>
  <li>Используя <code>li[class],</code> мы можем выбрать каждый селектор с атрибутом класса. Это соответствует всем пунктам списка, за исключением первого.</li>
@@ -75,9 +75,9 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Attribute_selectors
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}</p>
 
-<h2 id="Селекторы_вхождения_подстроки"><span class="tlid-translation translation" lang="ru"><span title="">Селекторы вхождения подстроки</span></span></h2>
+<h2 id="Селекторы_вхождения_подстроки">Селекторы вхождения подстроки</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Эти селекторы предоставляют более широкие возможности для выявления вхождения подстроки в значение атрибута</span></span>. Например, если у вас есть классы <code>box-warning</code> и <code>box-error</code> и вы хотите выбрать всё, что начинается со строки "box-", вы можете использовать <code>[class^="box-"]</code>, чтобы выбрать оба класса (или <code>[class|="box"]</code> как описано в предыдущем разделе).</p>
+<p>Эти селекторы предоставляют более широкие возможности для выявления вхождения подстроки в значение атрибута. Например, если у вас есть классы <code>box-warning</code> и <code>box-error</code> и вы хотите выбрать всё, что начинается со строки "box-", вы можете использовать <code>[class^="box-"]</code>, чтобы выбрать оба класса (или <code>[class|="box"]</code> как описано в предыдущем разделе).</p>
 
 <table class="standard-table">
  <thead>
@@ -91,7 +91,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Attribute_selectors
   <tr>
    <td><code>[<em>attr</em>^=<em>value</em>]</code></td>
    <td><code>li[class^="box-"]</code></td>
-   <td>Выбирает элементы с атрибутом <em>attr</em> (<span class="tlid-translation translation" lang="ru"><span title="">его имя </span></span> — <span class="tlid-translation translation" lang="ru"><span title=""> это значение в квадратных скобках</span></span>), значение которого начинается с <em>value</em>.</td>
+   <td>Выбирает элементы с атрибутом <em>attr</em> (его имя  —  это значение в квадратных скобках), значение которого начинается с <em>value</em>.</td>
   </tr>
   <tr>
    <td><code>[<em>attr</em>$=<em>value</em>]</code></td>
@@ -120,14 +120,14 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Attribute_selectors
 
 <h2 id="Чувствительность_к_регистру">Чувствительность к регистру</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Если вы хотите выбрать значения атрибута без учёта регистра</span></span><span class="tlid-translation translation" lang="ru"><span title="">, вы можете использовать значение</span></span> <code>i</code> перед закрывающей скобкой. Этот признак говорит браузеру, что символы ASCII должны сопоставляться без учёта регистра. <span class="tlid-translation translation" lang="ru"><span title="">Без этого признака значения будут сопоставлены в соответствии с чувствительностью к регистру языка документа</span></span> — <span class="tlid-translation translation" lang="ru"><span title="">в случае HTML такая чувствительность присутствует</span></span>.</p>
+<p>Если вы хотите выбрать значения атрибута без учёта регистра, вы можете использовать значение <code>i</code> перед закрывающей скобкой. Этот признак говорит браузеру, что символы ASCII должны сопоставляться без учёта регистра. Без этого признака значения будут сопоставлены в соответствии с чувствительностью к регистру языка документа — в случае HTML такая чувствительность присутствует.</p>
 
-<p>В примере ниже первый селектор выберет значение, начинающееся с <code>a</code> — <span class="tlid-translation translation" lang="ru"><span title="">это соответствует только первому элементу списка</span></span><span class="tlid-translation translation" lang="ru"><span title="">, потому что два других элемента списка начинаются с заглавной буквы A</span></span>. Второй селектор использует признак нечувствительности к регистру и поэтому выберет все элементы списка.</p>
+<p>В примере ниже первый селектор выберет значение, начинающееся с <code>a</code> — это соответствует только первому элементу списка, потому что два других элемента списка начинаются с заглавной буквы A. Второй селектор использует признак нечувствительности к регистру и поэтому выберет все элементы списка.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}</p>
 
 <div class="blockIndicator note">
-<p><strong>Примечание</strong>: Существует также более новое значение <code>s</code>, <span class="tlid-translation translation" lang="ru"><span title="">которое вызывает сопоставление с учётом регистра в контекстах, где сопоставление обычно не учитывает регистр, однако это не так хорошо поддерживается в браузерах и не очень полезно в контексте HTML.</span></span></p>
+<p><strong>Примечание</strong>: Существует также более новое значение <code>s</code>, которое вызывает сопоставление с учётом регистра в контекстах, где сопоставление обычно не учитывает регистр, однако это не так хорошо поддерживается в браузерах и не очень полезно в контексте HTML.</p>
 </div>
 
 <h2 id="Следующие_шаги">Следующие шаги</h2>

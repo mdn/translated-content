@@ -2,6 +2,7 @@
 title: 'Window: pagehide イベント'
 slug: Web/API/Window/pagehide_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`pagehide`** イベントは、ブラウザーがセッションの履歴から他のページを表示する過程において、現在のページを非表示にしたときに {{domxref("Window")}} へ送られます。例えば、ユーザーがブラウザーの戻るボタンをクリックしたとき、現在のページはひとつ前のページが表示される前に `pagehide` イベントを受け取ります。

@@ -2,6 +2,7 @@
 title: <merror>
 slug: Web/MathML/Element/merror
 ---
+
 {{MathMLRef}}
 
 MathML `<merror>` 要素は、エラーメッセージとしてコンテンツを表示するために使用されます。Firefox でこのエラーメッセージは、典型的な XML エラーメッセージのようにレンダリングされます。MathML マークアップが間違っているか整形式でない XML のときに、このエラーがスロー**されない**ことに注意してください。`<merror>` とは何の関係もない、（MathML の XHTML 表記の場合に）依然として XML 解析エラーが発生します。

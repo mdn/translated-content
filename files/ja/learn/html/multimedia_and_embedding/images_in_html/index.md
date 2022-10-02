@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 l10n:
   sourceCommit: 634b9ba6aeb5991b1c7bc9a1e44461f5be130faa
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 当初、ウェブは単なるテキストであり、とても退屈でした。幸運なことに、ウェブページ内に画像（および他のより面白い種類のコンテンツ）を埋め込む能力が追加されるまでにはあまり時間がかかりませんでした。考慮すべき他の種類のマルチメディアもありますが、単純な画像をウェブページに埋め込むために使用される、慎ましい {{htmlelement("img")}} 要素から始めるのが理にかなっています。この記事では、基本的な使い方を含め、 {{htmlelement("figure")}} を使ったキャプションの注釈付け、{{glossary("CSS")}} 背景画像との関連付けなど、詳細な使い方を見ていきます。

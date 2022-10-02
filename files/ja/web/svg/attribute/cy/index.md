@@ -2,6 +2,7 @@
 title: cy
 slug: Web/SVG/Attribute/cy
 ---
+
 {{SVGRef}}
 
 **`cy`** 属性は中心の y-座標を定義します。
