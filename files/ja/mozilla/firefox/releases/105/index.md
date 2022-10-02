@@ -1,11 +1,8 @@
 ---
 title: Firefox 105 for developers
 slug: Mozilla/Firefox/Releases/105
-tags:
-  - "105"
-  - Firefox
-  - Mozilla
-  - Release
+l10n:
+  sourceCommit: 87b4c5a0303ff0829a5abb3494a399df18155ef9
 ---
 
 {{FirefoxSidebar}}
@@ -25,13 +22,18 @@ tags:
 
 ### JavaScript
 
-変更なし。
+- [`Intl.DateTimeFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)、[`Intl.NumberFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)、[`Intl.PluralRules`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules) オブジェクトの `formatRange` および `selectRange` 関数で、範囲の制限を緩和しました。この変更により、負の値を受け入れるようになりました ({{bug(1780545)}})。
 
 ### API
 
 #### DOM
 
 - [Encoding API](/ja/docs/Web/API/Encoding_API) の一部である [TextDecoderStream](/ja/docs/Web/API/TextDecoderStream) および [TextEncoderStream](/ja/docs/Web/API/TextEncoderStream) インターフェイスをサポートしました ({{bug(1486949)}})。
+
+- [OffscreenCanvas](/ja/docs/Web/API/OffscreenCanvas) API が、window および [web worker](/ja/docs/Web/API/OffscreenCanvas#asynchronous_display_of_frames_produced_by_an_offscreencanvas) のどちらのコンテキストでもオフスクリーンで描画できる canvas を提供するようになりました。
+  これは、`<canvas>` 要素を DOM から分離することを可能にします。このために [OffscreenCanvasRenderingContext2D](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D) インターフェイスをサポートして、デフォルトで有効にしました ({{bug(1746110)}})。
+
+- [CSS Font Loading API](/ja/docs/Web/API/CSS_Font_Loading_API) を worker スレッドで使用できるようになりました ({{bug(1072107)}})。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
