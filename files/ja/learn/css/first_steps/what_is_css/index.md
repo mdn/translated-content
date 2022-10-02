@@ -2,6 +2,7 @@
 title: CSSとは何か？
 slug: Learn/CSS/First_steps/What_is_CSS
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 **{{Glossary("CSS")}}** (Cascading Style Sheets；カスケーティングスタイルシート) は見栄えのよいページを作ることができますが、内部ではどう働くのでしょうか？この記事では簡単な構文の例とともに CSS とは何かについて説明し、この言語の重要な用語についても触れます。

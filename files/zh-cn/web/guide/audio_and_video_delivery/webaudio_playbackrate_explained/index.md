@@ -56,7 +56,7 @@ window.onload = function () {
 
 ## defaultPlaybackRate 和 ratechange
 
-除了 `playbackRate,` 我们也有一个可用的 `defaultPlaybackRate` 属性，这让我们能设置默认的播放速率：对媒体文件重设置的播放速率；例如，如果我们改变视频的来源，或（在一些浏览器中）当产生一个`ended`事件。
+除了 `playbackRate`, 我们也有一个可用的 `defaultPlaybackRate` 属性，这让我们能设置默认的播放速率：对媒体文件重设置的播放速率；例如，如果我们改变视频的来源，或（在一些浏览器中）当产生一个`ended`事件。
 
 所以 `defaultPlaybackRate` 允许我们在播放媒体文件之前设置播放速率，而`playbackRate` 只允许我们在媒体播放阶段改变它。
 

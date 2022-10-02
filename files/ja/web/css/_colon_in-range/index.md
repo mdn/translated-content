@@ -2,6 +2,7 @@
 title: ':in-range'
 slug: Web/CSS/:in-range
 ---
+
 {{CSSRef}}
 
 **`:in-range`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在の値が {{htmlattrxref("min", "input")}} および {{htmlattrxref("max","input")}} 属性による制限範囲内にある {{htmlelement("input")}} 要素を表します。

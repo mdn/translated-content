@@ -3,6 +3,7 @@ title: WorkerGlobalScope.caches
 slug: Web/API/caches
 original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 {{domxref("WindowOrWorkerGlobalScope")}} インターフェイスの **`caches`** 読み取り専用プロパティは、現在のワーカーコンテキストに関連する {{domxref("CacheStorage")}} オブジェクトを返します。このオブジェクトにより、オフライン利用のために資産 (assets、アセット) を保存したり、リクエストに対するカスタムレスポンスを生成したりするなどの機能を使用できます。

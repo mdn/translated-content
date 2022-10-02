@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 l10n:
   sourceCommit: ace1400b3b5cf252d6afc0caaccf170d0316c15e
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 今回の評価試験では、このモジュールの記事で説明したいくつかの技術の知識をテストするために、Mozilla のすべてついてのファンキーなスプラッシュページに、いくつかの画像と動画を追加してもらいます！

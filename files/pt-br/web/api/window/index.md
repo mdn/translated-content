@@ -9,7 +9,7 @@ O objeto `window` representa uma janela que contém um elemento DOM; a proprieda
 
 Esta seção provê uma breve referência a todos os métodos, propriedades e eventos disponíveis através do objeto DOM `window`. O objeto `window` implementa a interface `Window`, o qual herda da interface [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Algumas funções globais, objeto de namespace, interfaces e construtores, apesar de não tipicamente associados ao objeto em questão, estão disponíveis e estão listados nas referências [JavaScript Reference](/pt-BR/docs/JavaScript/Reference) e [DOM Reference](/pt-BR/docs/DOM/DOM_Reference).
 
-Em um navegador com suporte a abas, como o Firefox, cada aba contém seu próprio objeto `window` (e, se você estiver escrevendo uma extensão, a janela do navegador é uma janela distinta também - veja [Working with windows in chrome code](/pt-BR/docs/Working_with_windows_in_chrome_code#Content_windows) para mais informação). Isto é, o objeto `window não é compartilhado entre as abas na mesma janela. Alguns métodos, nomeadamente `{{Domxref("window.resizeTo")}} e {{Domxref("window.resizeBy")}} aplicam-se à janela toda e não à aba em questão ao que o objeto `window` pertence. Geralmente, qualquer coisa que não pode racionalmente pertencer a uma aba, pertence a uma janela..
+Em um navegador com suporte a abas, como o Firefox, cada aba contém seu próprio objeto `window` (e, se você estiver escrevendo uma extensão, a janela do navegador é uma janela distinta também - veja [Working with windows in chrome code](/pt-BR/docs/Working_with_windows_in_chrome_code#Content_windows) para mais informação). Isto é, o objeto `window` não é compartilhado entre as abas na mesma janela. Alguns métodos, nomeadamente {{Domxref("window.resizeTo")}} e {{Domxref("window.resizeBy")}} aplicam-se à janela toda e não à aba em questão ao que o objeto `window` pertence. Geralmente, qualquer coisa que não pode racionalmente pertencer a uma aba, pertence a uma janela..
 
 ## Propriedades
 
@@ -25,7 +25,7 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : O ponto de entrada para muitas características XPCOM. Algumas propriedades, por exemplo, classes, estão apenas disponíveis para código suficientemente privilegiado. Código de Web não deve usar essa propriedade.
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Retorna uma referência para o objeto console fornecendo acesso ao console debugging do navegador.
-- {{domxref("Window.content")}} and Window.\_content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
   - : Retorna uma referência para o elemento de conteúdo na janela atual. A variante obsoleta com sublinhado não está disponível a partir do conteúdo da Web.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Retorna os objetos de controlador XUL para a janela atual do crome.
@@ -47,7 +47,7 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : Returns an array of the subframes in the current window.
 - {{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}
   - : This property indicates whether the window is displayed in full screen or not.
-- {{domxref("Window.globalStorage")}}` `{{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- {{domxref("Window.globalStorage")}} {{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
   - : Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.
     Was: Multiple storage objects that are used for storing data across multiple pages.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
@@ -136,7 +136,7 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : Returns a reference to the current window.
-- `window[0]`,` window[1]`, etc.
+- `window[0]`, `window[1]`, etc.
   - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
 
 ## Methods

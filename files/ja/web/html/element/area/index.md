@@ -2,6 +2,7 @@
 title: <area>
 slug: Web/HTML/Element/area
 ---
+
 {{HTMLRef}}
 
 **HTML の `<area>` 要素**は、イメージマップの中でクリック可能な領域をあらかじめ定義します。*イメージマップ*では、画像上の幾何学的な領域を{{Glossary("Hyperlink", "ハイパーテキストリンク")}}と関連付けすることができます。

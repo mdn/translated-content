@@ -237,5 +237,5 @@ function drop_handler(ev) {
 - [Drag Operations](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Dragging and Dropping Multiple Items](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Recommended Drag Types](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd "Drag and Drop Standard")
-- [Drag and Drop interoperability data from CanIUse](http://caniuse.com/#search=draganddrop "Drag and Drop interoperability data from CanIUse")
+- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [Drag and Drop interoperability data from CanIUse](http://caniuse.com/#search=draganddrop)

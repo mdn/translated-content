@@ -2,6 +2,7 @@
 title: shortcuts
 slug: Web/Manifest/shortcuts
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

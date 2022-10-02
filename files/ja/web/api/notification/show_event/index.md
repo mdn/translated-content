@@ -3,6 +3,7 @@ title: 'Notification: show イベント'
 slug: Web/API/Notification/show_event
 original_slug: Web/API/Notification/onshow
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`show`** は {{domxref("Notification")}} インターフェイスのイベントで、 {{domxref("Notification")}} が表示されるときに発生します。

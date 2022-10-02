@@ -2,6 +2,7 @@
 title: WritableStreamDefaultWriter.write()
 slug: Web/API/WritableStreamDefaultWriter/write
 ---
+
 {{APIRef("Streams")}}{{SeeCompatTable}}
 
 {{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`write()`** プロパティは、渡されたデータのチャンクを {{domxref("WritableStream")}} とその基になるシンクに書き込み、その後、書き込み操作の成功または失敗を示すために解決される {{jsxref("Promise")}} を返します。

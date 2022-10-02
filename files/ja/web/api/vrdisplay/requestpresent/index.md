@@ -3,6 +3,7 @@ title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
 original_slug: Web/API/VRDevice/requestPresent
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`requestPresent()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、`VRDisplay` へのシーン表示を開始します。

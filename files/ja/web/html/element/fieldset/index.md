@@ -2,6 +2,7 @@
 title: '<fieldset>: フィールドセット要素'
 slug: Web/HTML/Element/fieldset
 ---
+
 {{HTMLRef}}
 
 **HTML の `<fieldset>` 要素**は、ウェブフォーム内のラベル ({{HTMLElement("label")}}) などのようにいくつかのコントロールをグループ化するために使用します。

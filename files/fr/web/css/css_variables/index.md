@@ -21,6 +21,4 @@ translation_of: Web/CSS/CSS_Variables
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS3 Variables")}} | {{Spec2("CSS3 Variables")}} | Définition initiale. |
+{{Specifications}}

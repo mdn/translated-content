@@ -12,7 +12,7 @@ slug: Web/API/Document/alinkColor
 ```plain
 color = document.alinkColor
 document.alinkColor  = color
-color 可以是一个 “颜色名称”（例如，“blue”，“darkblue”，等）或者是一个 “十六进制的颜色值”（例如，#0000ff）
+color 可以是一个“颜色名称”（例如，“blue”，“darkblue”，等）或者是一个“十六进制的颜色值”（例如，#0000ff）
 ```
 
 ## 注意

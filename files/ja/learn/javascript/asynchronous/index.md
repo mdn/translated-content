@@ -2,6 +2,7 @@
 title: 非同期 JavaScript
 slug: Learn/JavaScript/Asynchronous
 ---
+
 {{LearnSidebar}}
 
 このモジュールでは、{{Glossary("asynchronous")}} {{Glossary("JavaScript")}} に触れ、なぜそれが重要なのか、そして、潜在的なブロッキング処理（例えばサーバからリソースを取得する）に効果的に対処するためにどうやって使うのかを見ていきます。

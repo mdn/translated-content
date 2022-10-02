@@ -2,6 +2,7 @@
 title: IDBDatabase.version
 slug: Web/API/IDBDatabase/version
 ---
+
 {{ APIRef("IDBDatabase") }}
 
 `{{domxref("IDBDatabase")}}インターフェイスのversion`プロパティ は、接続しているデータベースのバージョンを含む[64-bit integer](/ja/docs/NSPR_API_Reference/Long_Long_%2864-bit%29_Integers)です。データベースを初めて生成した時、この属性は空文字です。

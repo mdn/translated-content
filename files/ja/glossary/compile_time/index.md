@@ -2,6 +2,7 @@
 title: Compile time (コンパイル時間)
 slug: Glossary/Compile_time
 ---
+
 コンパイル時間は、プログラムが最初にロードされてからプログラムが{{Glossary("parse","解析")}}されるまでの時間です。
 
 ## より詳しく知る

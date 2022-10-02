@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 l10n:
   sourceCommit: bf7b8b744aba00d0457f4636e0940d3ec162931b
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 そろそろ、画像、動画、音声を含め、ウェブページに何かを埋め込むコツを実際に使用されていることでしょう。この点では、少し横道にそれて、様々な種類のコンテンツをウェブページに埋め込むことができる要素、{{htmlelement("iframe")}}、{{htmlelement("embed")}}、{{htmlelement("object")}} を見てみたいと思います。 `<iframe>` は他のウェブページを埋め込むためのもので、他の 2 つの要素は PDF ファイルのような外部リソースを埋め込むことができます。

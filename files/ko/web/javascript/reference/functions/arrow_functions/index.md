@@ -231,9 +231,9 @@ This code sample using Chrome 81 demonstrates that arrow functions allow the cre
 
 f2 illustrates that when explicitly setting the arrow function to apply strict mode, it does throw an error when attempting to assign an undeclared variable.
 
-https\://www\.ecma-international.org/ecma-262/10.0/index.html#sec-strict-mode-code
+<https://www.ecma-international.org/ecma-262/10.0/index.html#sec-strict-mode-code>
 
-https\://www\.ecma-international.org/ecma-262/10.0/index.html#sec-arrow-function-definitions-runtime-semantics-evaluation
+<https://www.ecma-international.org/ecma-262/10.0/index.html#sec-arrow-function-definitions-runtime-semantics-evaluation>
 
 **CORRECTION: END**
 

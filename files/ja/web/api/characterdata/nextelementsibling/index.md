@@ -2,6 +2,7 @@
 title: CharacterData.nextElementSibling
 slug: Web/API/CharacterData/nextElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 **`nextElementSibling`** は {{domxref("CharacterData")}} インターフェイスの読み取り専用プロパティで、親の子リストの中で、現在のノードの一つ後の {{domxref("Element")}} を返します。指定された要素がリストの最後のものであれば `null` を返します。

@@ -9,7 +9,7 @@ original_slug: Web/SVG/Элемент/svg
 <p>Элемент <code>svg</code> является контейнером, который определяет новую систему координат и <a href="/en-US/docs/Web/SVG/Attribute/viewBox">область просмотра</a>. Он используется, как самый внешний элемент документов SVG, но также может использоваться для встраивания фрагмента SVG в документ SVG или HTML.</p>
 
 <div class="note">
-<p><span class="tlid-translation translation" lang="ru"><span title="">Примечание. Атрибут <code>xmlns</code> требуется только для самого внешнего элемента <code>svg</code> документов SVG.</span> <span title="">Это не нужно для внутренних элементов <code>svg</code> или внутри документов HTML.</span></span></p>
+<p>Примечание. Атрибут <code>xmlns</code> требуется только для самого внешнего элемента <code>svg</code> документов SVG. Это не нужно для внутренних элементов <code>svg</code> или внутри документов HTML.</p>
 </div>
 
 <div id="Exeemple">
@@ -29,32 +29,32 @@ original_slug: Web/SVG/Элемент/svg
 <p>{{EmbedLiveSample('Exeemple', 150, '100%')}}</p>
 </div>
 
-<h2 id="Атрибуты"><span class="tlid-translation translation" lang="ru"><span title="">Атрибуты</span></span></h2>
+<h2 id="Атрибуты">Атрибуты</h2>
 
 <dl>
  <dt>{{SVGAttr("baseProfile")}} {{deprecated_inline('svg2')}}</dt>
  <dd>The minimum SVG language profile that the document requires.<br>
  <small><em>Value type</em>: <strong>&lt;string&gt;</strong> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>no</strong></small></dd>
  <dt>{{SVGAttr("contentScriptType")}} {{deprecated_inline('svg2')}}</dt>
- <dd><span class="tlid-translation translation" lang="ru"><span title="">Язык сценариев по умолчанию, используемый фрагментом SVG.</span></span><br>
+ <dd>Язык сценариев по умолчанию, используемый фрагментом SVG.<br>
  <small><em>Value type</em>: <strong>&lt;string&gt;</strong> ; <em>Default value</em>: <code>application/ecmascript</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
  <dt>{{SVGAttr("contentStyleType")}} {{deprecated_inline('svg2')}}</dt>
- <dd><span class="tlid-translation translation" lang="ru"><span title="">Язык таблицы стилей по умолчанию, используемый фрагментом SVG.</span></span><br>
+ <dd>Язык таблицы стилей по умолчанию, используемый фрагментом SVG.<br>
  <small><em>Value type</em>: <strong>&lt;string&gt;</strong> ; <em>Default value</em>: <code>text/css</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
  <dt>{{SVGAttr("height")}}</dt>
- <dd><span class="tlid-translation translation" lang="ru"><span class="alt-edited" title="">Отображаемая высота прямоугольной области просмотра.</span> <span title="">(Не высота его системы координат.)</span></span><br>
+ <dd>Отображаемая высота прямоугольной области просмотра. (Не высота его системы координат.)<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>auto</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("preserveAspectRatio")}}</dt>
  <dd>How the <code>svg</code> fragment must be deformed if it is displayed with a different aspect ratio.<br>
  <small><em>Value type</em>: (<code>none</code>| <code>xMinYMin</code>| <code>xMidYMin</code>| <code>xMaxYMin</code>| <code>xMinYMid</code>| <code>xMidYMid</code>| <code>xMaxYMid</code>| <code>xMinYMax</code>| <code>xMidYMax</code>| <code>xMaxYMax</code>) (<code>meet</code>|<code>slice</code>)? ; <em>Default value</em>: <code>xMidYMid meet</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("version")}} {{deprecated_inline('svg2')}}</dt>
- <dd><span class="tlid-translation translation" lang="ru"><span title="">Какая версия SVG используется для внутреннего содержимого элемента.</span></span><br>
+ <dd>Какая версия SVG используется для внутреннего содержимого элемента.<br>
  <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>no</strong></small></dd>
  <dt>{{SVGAttr("viewBox")}}</dt>
- <dd><span class="tlid-translation translation" lang="ru"><span title="">Координаты области просмотра SVG для текущего фрагмента SVG.</span></span><br>
+ <dd>Координаты области просмотра SVG для текущего фрагмента SVG.<br>
  <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#List-of-Ts">&lt;list-of-numbers&gt;</a></strong> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("width")}}</dt>
- <dd><span class="tlid-translation translation" lang="ru"><span class="alt-edited" title="">Отображаемая ширина прямоугольной области просмотра.</span> <span title="">(Не </span><span class="alt-edited" title="">ширина </span><span title="">его системы координат.)</span></span><br>
+ <dd>Отображаемая ширина прямоугольной области просмотра. (Не ширина его системы координат.)<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>auto</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("x")}}</dt>
  <dd>The displayed x coordinate of the svg container. No effect on outermost <code>svg</code> elements.<br>
@@ -65,7 +65,7 @@ original_slug: Web/SVG/Элемент/svg
 </dl>
 
 <div class="note">
-<p><span class="tlid-translation translation" lang="ru"><span title="">Примечание. Начиная с SVG2, <code>x</code>, <code>y</code>, <code>width</code> и <code>height</code> являются Geometry Properties, то есть эти атрибуты также можно использовать в качестве CSS-свойств.</span></span></p>
+<p>Примечание. Начиная с SVG2, <code>x</code>, <code>y</code>, <code>width</code> и <code>height</code> являются Geometry Properties, то есть эти атрибуты также можно использовать в качестве CSS-свойств.</p>
 </div>
 
 <h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>
@@ -85,7 +85,7 @@ original_slug: Web/SVG/Элемент/svg
  <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
 </dl>
 
-<h2 id="Примечания_по_использованию"><span class="tlid-translation translation" lang="ru"><span title="">Примечания по использованию</span></span></h2>
+<h2 id="Примечания_по_использованию">Примечания по использованию</h2>
 
 <p>{{svginfo}}</p>
 
@@ -93,7 +93,7 @@ original_slug: Web/SVG/Элемент/svg
 
 {{Specifications}}
 
-<h2 id="Кросс-браузерность"><span class="module__title__link">Кросс-браузерность</span></h2>
+<h2>Кросс-браузерность</h2>
 
 
 

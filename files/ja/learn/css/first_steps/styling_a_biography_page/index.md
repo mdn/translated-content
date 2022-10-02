@@ -3,6 +3,7 @@ title: 新しい知識を使う
 slug: Learn/CSS/First_steps/Styling_a_biography_page
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 先のいくつかのレッスンで、あなたは CSS を使ってシンプルなテキストドキュメントにスタイルを追加してフォーマットする方法を学びました。ここでは、それを実際に行ってみましょう。

@@ -2,6 +2,7 @@
 title: NDEFReadingEvent
 slug: Web/API/NDEFReadingEvent
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`NDEFReadingEvent`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API) のインターフェイスで、 {{DOMxRef("NDEFReader")}} によって得られる新しい NFC 読み取りに対して配信するイベントを表します。

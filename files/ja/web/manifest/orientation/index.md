@@ -2,6 +2,7 @@
 title: orientation
 slug: Web/Manifest/orientation
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

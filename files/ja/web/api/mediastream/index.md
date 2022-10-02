@@ -2,6 +2,7 @@
 title: MediaStream
 slug: Web/API/MediaStream
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStream`** インターフェイスは、メディアコンテンツのストリームを表します。ストリームは動画や音声など複数の**トラック**から成ります。それぞれのトラックは {{domxref("MediaStreamTrack")}} のインスタンスとして定義されます。

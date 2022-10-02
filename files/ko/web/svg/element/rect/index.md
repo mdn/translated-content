@@ -28,7 +28,7 @@ html,body,svg { height:100% }
 
 | 카테고리       | 기본 도형 요소, 그래픽 요소, 모형 요소                                                                                                                                                                                  |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 허용 된 콘텐츠 | Any number of the following elements, in any order: [Animation elements](/en/SVG/Element#Animation "en/SVG/Attribute#Animation") » [Descriptive elements](/en/SVG/Element#Descriptive "en/SVG/Attribute#Descriptive") » |
+| 허용 된 콘텐츠 | Any number of the following elements, in any order: [Animation elements](/en/SVG/Element#Animation) » [Descriptive elements](/en/SVG/Element#Descriptive) » |
 | 규범 문서      | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/shapes.html#RectElement)                                                                                                                                               |
 
 ## Example
@@ -45,10 +45,10 @@ html,body,svg { height:100% }
 
 ### 전역 속성
 
-- [Conditional processing attributes](/en/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Core attributes](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Graphical event attributes](/en/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Presentation attributes](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Conditional processing attributes](/en/SVG/Attribute#ConditionalProccessing) »
+- [Core attributes](/en/SVG/Attribute#Core) »
+- [Graphical event attributes](/en/SVG/Attribute#GraphicalEvent) »
+- [Presentation attributes](/en/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -65,7 +65,7 @@ html,body,svg { height:100% }
 
 ## DOM Interface
 
-This element implements the [`SVGRectElement`](/en/DOM/SVGRectElement "en/DOM/SVGRectElement") interface.
+This element implements the [`SVGRectElement`](/en/DOM/SVGRectElement) interface.
 
 ## Browser compatibility
 

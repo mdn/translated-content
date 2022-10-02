@@ -2,6 +2,7 @@
 title: '<shadow>: 廃止されたシャドウルート要素'
 slug: Web/HTML/Element/Shadow
 ---
+
 {{deprecated_header}}
 
 **HTML `<shadow>`** 要素 ([Web Components](/ja/docs/Web/Web_Components) 技術スイートの廃止された部分) は shadow DOM の {{glossary("insertion point")}} として使用するものでした。 shadow ホスト配下に複数の shadow ルートを生成する場合に使用しました。これは通常の HTML としては役立ちません。

@@ -2,6 +2,7 @@
 title: コミュニティスクールのホームページの組版
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 この評価では、コミュニティスクールのホームページ用にテキストを装飾することで、このモジュール全体でカバーしてきたすべてのテキスト装飾テクニックについての理解をテストします。 途中で楽しい時間があるかもしれません。

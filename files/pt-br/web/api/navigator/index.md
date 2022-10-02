@@ -59,9 +59,9 @@ _Doesn't inherit any property, but implements those defined in {{domxref("Naviga
 - {{domxref("navigator.doNotTrack")}} {{non-standard_inline}}
   - : Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.
 - {{domxref("navigator.id")}} {{non-standard_inline}}
-  - : Returns the {{domxref("window.navigator.id", "id")}} object which you can use to add support for [BrowserID](/pt-BR/docs/BrowserID "BrowserID") to your web site.
+  - : Returns the {{domxref("window.navigator.id", "id")}} object which you can use to add support for [BrowserID](/pt-BR/docs/BrowserID) to your web site.
 - {{domxref("window.navigator.mozApps", "navigator.mozApps")}} {{non-standard_inline}}
-  - : Returns an {{domxref("window.navigator.mozApps", "Apps")}} object you can use to install, manage, and control [Open Web apps](/Open_Web_Apps "Open Web apps").
+  - : Returns an {{domxref("window.navigator.mozApps", "Apps")}} object you can use to install, manage, and control [Open Web apps](/Open_Web_Apps).
 - {{domxref("Navigator.mozAudioChannelManager", "navigator.mozAudioChannelManager")}} {{non-standard_inline}}
   - : The `navigator.mozAudioChannelManager` object provides access to the {{domxref("mozAudioChannelManager")}} interface, which is used to manage your Firefox OS device's audio channels, including setting what channel's volume to affect when the volume buttons are pressed inside a particular app.
 - {{domxref("window.navigator.mozNotification","navigator.mozNotification")}} {{deprecated_inline("22")}} {{non-standard_inline}}
@@ -79,8 +79,8 @@ _Doesn't inherit any property, but implements those defined in {{domxref("Naviga
   - : Returns the vendor name of the current browser (e.g., "Netscape6").
 - {{domxref("window.navigator.vendorSub", "navigator.vendorSub")}} {{non-standard_inline}}
   - : Returns the vendor version number (e.g. "6.1").
-- [`navigator.webkitPointer`](/pt-BR/docs/API/Pointer_Lock_API "Mouse Lock API") {{non-standard_inline}}
-  - : Returns a PointerLock object for the [Mouse Lock API](/pt-BR/docs/API/Pointer_Lock_API "Mouse Lock API").
+- [`navigator.webkitPointer`](/pt-BR/docs/API/Pointer_Lock_API) {{non-standard_inline}}
+  - : Returns a PointerLock object for the [Mouse Lock API](/pt-BR/docs/API/Pointer_Lock_API).
 
 ## Methods
 
@@ -106,6 +106,6 @@ _Doesn't inherit any method, but implements those defined in {{domxref("Navigato
 - {{domxref("window.navigator.mozPay", "navigator.mozPay")}} {{non-standard_inline}}
   - : Allows in-app payment.
 - {{domxref("window.navigator.preference", "navigator.preference")}} {{obsolete_inline("2.0")}} {{non-standard_inline}}
-  - : Sets a user preference. This method is [only available to privileged code](http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en) and is obsolete; you should use the XPCOM [Preferences API](/pt-BR/docs/Preferences_API "Preferences_API") instead.
+  - : Sets a user preference. This method is [only available to privileged code](http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en) and is obsolete; you should use the XPCOM [Preferences API](/pt-BR/docs/Preferences_API) instead.
 - {{domxref("window.navigator.requestWakeLock", "navigator.requestWakeLock")}} {{non-standard_inline}}
   - : Request a wake lock for a resource. A wake lock prevents a specific part of a device from being turned off automatically.

@@ -2,6 +2,7 @@
 title: 'CSP: connect-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`connect-src`** ディレクティブは、スクリプトインターフェイスを使用して読み込むことができる URL を制限します。以下の API が制限の対象となります。

@@ -2,6 +2,7 @@
 title: 一般的な HTML と CSS の問題への対処
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 ここでは、HTML と CSS のコードで発生する可能性のある一般的なクロスブラウザーの問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS プレフィックスの処理、問題を追跡するためのブラウザーの開発者ツールの使用、ブラウザーにサポートを追加するための polyfill の使用、レスポンシブデザイン問題への取り組みなどが含まれます。

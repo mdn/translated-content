@@ -3,6 +3,7 @@ title: Response.formData()
 slug: Web/API/Response/formData
 original_slug: Web/API/Body/formData
 ---
+
 {{APIRef("Fetch")}}
 
 **`formData()`** は {{domxref("Response")}} インターフェイスのメソッドで、 {{domxref("Response")}} のストリームを取得して完全に読み取ります。 {{domxref("FormData")}} オブジェクトで解決されるプロミスを返します。

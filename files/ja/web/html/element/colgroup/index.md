@@ -2,6 +2,7 @@
 title: <colgroup>
 slug: Web/HTML/Element/colgroup
 ---
+
 {{HTMLRef}}
 
 **HTML の `<colgroup>` 要素**は、表内の列のグループを定義します。

@@ -2,6 +2,7 @@
 title: HTML 表の高度な機能とアクセシビリティ
 slug: Learn/HTML/Tables/Advanced
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 このモジュールの 2 番目の記事では、HTML テーブルのより高度な機能 (キャプション/要約、行をテーブルのヘッダー、本文、フッターのセクションにグループ化するなど) や、視覚障碍のあるユーザのためのテーブルのアクセシビリティについて調べます。

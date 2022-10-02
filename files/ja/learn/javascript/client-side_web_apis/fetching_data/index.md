@@ -2,6 +2,7 @@
 title: サーバからのデータ取得
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 モダンな Web サイトやアプリケーションでしょっちゅう必要になる仕事は、サーバから個々のデータを取ってきて、新しいページ全体を読んでくることなしに、ページの一部を書き換える事です。この一見ちょっとした事が、サイトのパフォーマンスや振舞いに巨大なインパクトを与えました。この記事ではそのコンセプトを解説し、これを可能にした技術 XMLHttpRequest や Fetch API について見ていきます。

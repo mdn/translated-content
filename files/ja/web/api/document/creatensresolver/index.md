@@ -2,6 +2,7 @@
 title: Document.createNSResolver()
 slug: Web/API/Document/createNSResolver
 ---
+
 {{ ApiRef("DOM") }}
 
 指定されたノードのスコープで定義を尊重する名前空間を解決する `XPathNSResolver` を生成します。

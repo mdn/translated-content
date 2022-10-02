@@ -2,6 +2,7 @@
 title: Document.requestStorageAccess()
 slug: Web/API/Document/requestStorageAccess
 ---
+
 {{APIRef}}
 
 **`requestStorageAccess()`** は {{domxref("Document")}} インターフェイスのメソッドで、ファーストパーティのストレージへのアクセスが許可されたら解決し、アクセスが拒否されたら拒否される {{jsxref("Promise")}} を返します。

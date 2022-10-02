@@ -118,13 +118,11 @@ Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` 
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS Grid", "#valdef-grid-template-columns-minmax", "minmax()")}} | {{Spec2("CSS Grid")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-template-columns.minmax")}}
+{{Compat}}
 
 ## Voir aussi
 

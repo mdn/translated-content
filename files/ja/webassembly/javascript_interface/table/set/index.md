@@ -3,6 +3,7 @@ title: WebAssembly.Table.prototype.set()
 slug: WebAssembly/JavaScript_interface/Table/set
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set
 ---
+
 {{JSRef}}
 
 **`set()`** は {{jsxref("WebAssembly.Table")}} オブジェクトのプロトタイプメソッドで、指定された位置に格納されている参照を別な値に変更します。

@@ -105,13 +105,11 @@ user-select: unset;
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                                                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 UI', '#propdef-user-select', 'user-select')}} | {{Spec2('CSS4 UI')}} | Définition initiale. `-webkit-user-select` est indiqué comme étant un alias déprécié de `user-select`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.user-select")}}
+{{Compat}}
 
 ## Voir aussi
 

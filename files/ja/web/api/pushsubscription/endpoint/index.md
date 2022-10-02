@@ -2,6 +2,7 @@
 title: PushSubscription.endpoint
 slug: Web/API/PushSubscription/endpoint
 ---
+
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
 {{domxref("PushSubscription")}} インターフェースの **`endpoint`** 読み取り専用プロパティは、プッシュサブスクリプションに関連するエンドポイントを含む {{domxref("USVString")}} を返します。

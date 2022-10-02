@@ -2,6 +2,7 @@
 title: PerformanceObserver.observe()
 slug: Web/API/PerformanceObserver/observe
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 監視するパフォーマンスエントリタイプのセットを指定するには、**{{domxref("PerformanceObserver")}}** インターフェイスの **`observe()`** メソッドを使用します。パフォーマンスエントリタイプは {{domxref("DOMString")}} オブジェクトの配列として指定され、それぞれが 1 つのエントリタイプを命名します。型名は{{SectionOnPage("/ja/docs/Web/API/PerformanceEntry/entryType", "パフォーマンスエントリタイプ名")}}に記載されています。

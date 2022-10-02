@@ -2,6 +2,7 @@
 title: 'ARIA: application ロール'
 slug: Web/Accessibility/ARIA/Roles/Application_Role
 ---
+
 アプリケーション (`application`) ロールは、要素とその全ての子要素をデスクトップアプリケーションと同様に扱うべきであり、伝統的な HTML 解釈手法を使用するべきでないと支援技術に指示します。 このロールは、とても動的でデスクトップ的なウェブアプリケーションを定義するためにのみ使用するべきです。
 
 ```html

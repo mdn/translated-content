@@ -20,7 +20,7 @@ typedarray.reduce(callback[, initialValue])
   - : 对类型数组的每一个值应用的函数，它接受以下参数：
 
     - `previousValue`
-      - : 在上一次迭代中，调用 callback 的返回值， 或者是提供的 `initialValue。`.
+      - : 在上一次迭代中，调用 callback 的返回值，或者是提供的 `initialValue`。
     - `currentValue`
       - : 类型化数组中当前要处理的值。
     - `index`
@@ -29,7 +29,7 @@ typedarray.reduce(callback[, initialValue])
       - : `reduce` 在其上调用的类型化数组。
 
 - `initialValue`
-  - : `可选。用作 callback` `首次调用`的第一个参数的对象。
+  - : 可选。用作 `callback` 首次调用`的第一个参数的对象。
 
 ### 返回值
 
@@ -39,7 +39,7 @@ typedarray.reduce(callback[, initialValue])
 
 `reduce`方法对类型化数组中出现的每个元素执行`callback`函数，除了类型化数组的空隙。它接受四个参数：初始值（或者来自之前`callback`调用的值），当前元素的值，当前下标，以及被遍历的类型化数组。
 
-第一次调用回调函数的时候， `previousValue` 和 `currentValue` 可以是两个值之一。如果 `initialValue` 在`reduce`的调用中提供， `previousValue` 会等于`initialValue` 并且`currentValue` 会等于类型化数组的第一个值。 如果 `initialValue` 没有提供，则`previousValue`等于类型化数组的第一个值，`currentValue`会等于第二个值。
+第一次调用回调函数的时候， `previousValue` 和 `currentValue` 可以是两个值之一。如果 `initialValue` 在`reduce`的调用中提供， `previousValue` 会等于`initialValue` 并且`currentValue` 会等于类型化数组的第一个值。如果 `initialValue` 没有提供，则`previousValue`等于类型化数组的第一个值，`currentValue`会等于第二个值。
 
 如果类型化数组为空并且没有提供 `initialValue`，会抛出 {{jsxref("Global_Objects/TypeError", "TypeError")}} 。如果类型化数组中只有一个元素（无论位置）并且没有提供`initialValue` ，或者如果提供了`initialValue` 但是类型化数组为空，会返回唯一的值，但不会调用 `callback`。
 

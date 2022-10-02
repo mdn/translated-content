@@ -5,7 +5,7 @@ slug: Web/API/Performance/clearMarks
 
 {{APIRef("User Timing API")}}
 
-**`clearMarks()`** 这个方法可以从浏览器的 performance entry 缓存中移除声明的标记。如果调用这个方法时没有传递参数， 则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。
+**`clearMarks()`** 这个方法可以从浏览器的 performance entry 缓存中移除声明的标记。如果调用这个方法时没有传递参数，则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。
 
 ## 用法
 
@@ -17,7 +17,7 @@ performance.clearMarks(name);
 ### 参数
 
 - name {{optional_inline}}
-  - : {{domxref("DOMString")}} 表示时间戳的名字，如果没有提供这个参数， 则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。
+  - : {{domxref("DOMString")}} 表示时间戳的名字，如果没有提供这个参数，则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。
 
 ### 返回值
 
@@ -25,7 +25,7 @@ performance.clearMarks(name);
 
 ## 例子
 
-下面的例子演示`clearMarks() 的两种用法。`
+下面的例子演示 `clearMarks()` 的两种用法。
 
 ```js
 function clear_mark(name) {

@@ -23,19 +23,10 @@ var panner = audioCtx.createPanner();</pre>
 
 <h2 id="Пример">Пример</h2>
 
-<div class="note_trans">
-<div>Ниже можно увидеть пример использования {{domxref("AudioListener")}}, {{domxref("PannerNode")}} и метода <code>createPanner()</code> для управления пространством объёмного звука. Обычно определяется положение в трёхмерном пространстве, изначально занимаемое обработчиком (listener) и источником звука (panner), а затем, при использовании приложения, обновляется позиция одного из них или обоих. Например, вы можете перемещать персонажа внутри игрового мира, и желательно чтобы передача звука изменялась реалистично, по мере приближения или отдаления персонажа относительно источника звука, вроде стереопроигрывателя. В этом примере можно видеть, что все это управляется функциями <code>moveRight()</code>, <code>moveLeft()</code>, и т.п., которые устанавливают новые значения для положения паннера через функцию <code>PositionPanner()</code>.</div>
 
-<div> </div>
+<p>Ниже можно увидеть пример использования {{domxref("AudioListener")}}, {{domxref("PannerNode")}} и метода <code>createPanner()</code> для управления пространством объёмного звука. Обычно определяется положение в трёхмерном пространстве, изначально занимаемое обработчиком (listener) и источником звука (panner), а затем, при использовании приложения, обновляется позиция одного из них или обоих. Например, вы можете перемещать персонажа внутри игрового мира, и желательно чтобы передача звука изменялась реалистично, по мере приближения или отдаления персонажа относительно источника звука, вроде стереопроигрывателя. В этом примере можно видеть, что все это управляется функциями <code>moveRight()</code>, <code>moveLeft()</code>, и т.п., которые устанавливают новые значения для положения паннера через функцию <code>PositionPanner()</code>.</p>
 
-<div>
-<div class="note_trans">
-<div>Чтобы увидеть полную реализацию ознакомьтесь с нашим <a href="https://mdn.github.io/webaudio-examples/panner-node/">примером panner-node</a> (<a href="https://mdn.github.io/webaudio-examples/">просмотрите весь список примеров</a>) — эта демонстрация перенесёт вас в 2.5D "Room of metal" (2,5-мерную "металлическую комнату"), где можно проиграть трек на <a class="popupspot">бумбоксе</a> и затем походить вокруг него и посмотреть как изменяется звук!</div>
-
-<div> </div>
-</div>
-</div>
-</div>
+<p>Чтобы увидеть полную реализацию ознакомьтесь с нашим <a href="https://mdn.github.io/webaudio-examples/panner-node/">примером panner-node</a> (<a href="https://mdn.github.io/webaudio-examples/">просмотрите весь список примеров</a>) — эта демонстрация перенесёт вас в 2.5D "Room of metal" (2,5-мерную "металлическую комнату"), где можно проиграть трек на бумбоксе и затем походить вокруг него и посмотреть как изменяется звук!</p>
 
 <p>Note how we have used some feature detection to either give the browser the newer property values (like {{domxref("AudioListener.forwardX")}}) for setting position, etc. if it supports those, or older methods (like {{domxref("AudioListener.setOrientation()")}}) if it still supports those but not the new properties.</p>
 

@@ -10,7 +10,7 @@ translation_of: Web/API/Document/hasFocus
 ---
 <div>{{APIRef}}</div>
 
-<div>Метод <code><strong>Document.hasFocus()</strong></code> возвращает значение {{jsxref("Boolean")}}, <span id="result_box" lang="ru"><span>указывающее имеет</span> <span>ли документ</span> <span>или</span> <span>любой элемент</span> <span>внутри документа</span> <span>фокус.</span> <span>Этот</span> <span>метод может быть использован</span><span>, чтобы</span> <span>определить,</span> <span>имеет</span> <span>ли</span> <span>активный элемент</span> <span>в документе </span><span>фокус.</span></span></div>
+<div>Метод <code><strong>Document.hasFocus()</strong></code> возвращает значение {{jsxref("Boolean")}}, указывающее имеет ли документ или любой элемент внутри документа фокус. Этот метод может быть использован, чтобы определить, имеет ли активный элемент в документе фокус.</div>
 
 <div class="note">
 <p>При просмотре документа элемент с фокусом всегда является активным элементом документа, но активный элемент не обязательно должен иметь фокус. Например, активный элемент внутри всплывающего окна, которое находится не на переднем плане, не имеет фокус.</p>
@@ -26,7 +26,7 @@ translation_of: Web/API/Document/hasFocus
 
 <h2 id="Example">Пример</h2>
 
-<pre class="brush:html;highlight:[17]">&lt;!DOCTYPE html&gt;
+<pre class="brush:html;">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8" /&gt;
@@ -61,7 +61,7 @@ function openWindow() {
 &lt;/head&gt;
 &lt;body&gt;
   &lt;h1&gt;JavaScript hasFocus пример&lt;/h1&gt;
-  &lt;div id="message"&gt;<span class="short_text" id="result_box" lang="ru"><span>Ожидание</span> <span>действий со стороны пользователя</span></span>&lt;/div&gt;
+  &lt;div id="message"&gt;Ожидание действий со стороны пользователя&lt;/div&gt;
   &lt;div&gt;&lt;button onclick="openWindow()"&gt;Открыть новое окно&lt;/button&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>

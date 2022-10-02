@@ -2,6 +2,7 @@
 title: DataTransferItemList.length
 slug: Web/API/DataTransferItemList/length
 ---
+
 {{domxref("DataTransferItemList")}} インターフェイスの **`length`** プロパティは読み取り専用で、ドラッグアイテムリストの中に現在入っているアイテムの数を返します。
 
 ## 構文

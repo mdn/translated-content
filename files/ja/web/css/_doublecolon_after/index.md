@@ -2,6 +2,7 @@
 title: '::after (:after)'
 slug: Web/CSS/::after
 ---
+
 {{CSSRef}}
 
 CSS において **`::after`** は、選択した要素の最後の子要素として[擬似要素](/ja/docs/CSS/Pseudo-elements)を生成します。よく {{cssxref("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。

@@ -2,6 +2,7 @@
 title: float
 slug: Web/CSS/float
 ---
+
 {{CSSRef}}
 
 **`float`** は CSS のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りを回りこめるように定義します。要素はウェブページの通常のフローから外れますが、 ([絶対位置指定](/ja/docs/Web/CSS/position#absolute_positioning) とは対照的に) フローの一部であり続けます。

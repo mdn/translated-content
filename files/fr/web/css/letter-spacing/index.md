@@ -39,9 +39,13 @@ letter-spacing: unset;
 - `<length>`
   - : Cette valeur indique l'espace **ajouté** à l'espace par défaut. Les valeurs peuvent être négatives mais les limites imposées dépendent de l'implémentation du moteur. Les agents utilisateurs ne pourront plus augmenter ou réduire l'interlettre afin de justifier le texte. Pour les différentes unités possibles, se référer à la page {{cssxref("&lt;length&gt;")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -78,19 +82,11 @@ L'espacement doit être déterminé au cas par cas car chaque famille de polices
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires                                 |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------- |
-| {{SpecName('CSS3 Text', '#letter-spacing-property', 'letter-spacing')}}     | {{Spec2('CSS3 Text')}}             | Aucune modification.                         |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'letter-spacing')}}         | {{Spec2('CSS3 Transitions')}} | `letter-spacing` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'text.html#propdef-letter-spacing', 'letter-spacing')}} | {{Spec2('CSS2.1')}}                 | Aucune modification.                         |
-| {{SpecName('SVG1.1', 'text.html#LetterSpacingProperty', 'letter-spacing')}} | {{Spec2('SVG1.1')}}                 | Définition initiale pour SVG.                |
-| {{SpecName('CSS1', '#letter-spacing', 'letter-spacing')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                         |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.letter-spacing")}}
+{{Compat}}
 
 ## Voir aussi
 

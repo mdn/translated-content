@@ -2,6 +2,7 @@
 title: <semantics>
 slug: Web/MathML/Element/semantics
 ---
+
 {{MathMLRef}}
 
 MathML においては、数学をタグ付けるには二つの方法があり、_表示 (presentation)_ MathML が数式の配置を制御するのに用いられる一方、_内容 (content)_ MathML は数式の論理的意味の符号化及び数式処理系 (computer algebra system) に適するような数式の変換を念頭に設計されています。MathML 要素`<semantics>`、`<annotation>`及び`<annotation-xml>`を用いることで、表示 MathML と内容 MathML を組み合せ、数式の配置情報及び論理的意味の双方を記述できます。

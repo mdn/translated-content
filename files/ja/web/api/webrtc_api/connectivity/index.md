@@ -2,6 +2,7 @@
 title: WebRTC 接続
 slug: Web/API/WebRTC_API/Connectivity
 ---
+
 {{WebRTCSidebar}}
 
 WebRTC ではさまざまなプロトコルが相互作用してピアー間の接続を確立し、データやメディアの転送を行いますが、この記事ではその仕組みを解説します。

@@ -2,6 +2,7 @@
 title: border-top-width
 slug: Web/CSS/border-top-width
 ---
+
 {{CSSRef}}
 
 **`border-top-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界の幅を設定します。

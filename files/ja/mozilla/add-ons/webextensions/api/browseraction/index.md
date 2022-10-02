@@ -2,6 +2,7 @@
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
+
 {{AddonSidebar}}
 
 ブラウザーのツールバーにボタンを追加します。

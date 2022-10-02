@@ -56,10 +56,8 @@ En [HTML5](/fr/docs/Glossaire/HTML5), les [éléments étrangers](https://html.s
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Namespaces', '#declaration', '@namespace')}} | {{Spec2('CSS3 Namespaces')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

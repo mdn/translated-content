@@ -2,6 +2,7 @@
 title: Other content in SVG
 slug: Web/SVG/Tutorial/Other_content_in_SVG
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
 
 長方形や円といったグラフィックの基本要素とは別に、SVG は画像内に他の種類のコンテンツを埋め込むための要素セットも同様に用意しています。

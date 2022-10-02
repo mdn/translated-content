@@ -3,6 +3,7 @@ title: AudioBufferSourceNode.onended
 slug: Web/API/AudioScheduledSourceNode/ended_event
 original_slug: Web/API/AudioScheduledSourceNode/onended
 ---
+
 {{ APIRef("AudioBufferSourceNode") }}
 
 `AudioBufferSourceNodeの` `onended` イベントハンドラーは{{event("ended_(Web_Audio)", "ended")}} イベントに関するコ − ルバック関数を格納します。これによりオーディオトラックの再生終了時に実行するコードを設定することができます。
