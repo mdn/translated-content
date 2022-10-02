@@ -18,7 +18,7 @@ translation_of: Web/CSS/:nth-last-child
 ## Синтаксис
 
 ```
-element:nth-last-child(an + b) {стили }
+element:nth-last-child(an + b) { стили }
 ```
 
 ## Примеры
