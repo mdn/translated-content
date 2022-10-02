@@ -262,7 +262,7 @@ Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
 
 ## async と await
 
-jsxref("Statements/async_function", "async")}} キーワードにより、非同期プロミスコードをよりシンプルに動作させることができます。関数の開始時に `async` を追加すると、その関数は非同期関数になります。
+{{jsxref("Statements/async_function", "async")}} キーワードにより、非同期プロミスコードをよりシンプルに動作させることができます。関数の開始時に `async` を追加すると、その関数は非同期関数になります。
 
 ```js
 async function myFunction() {
