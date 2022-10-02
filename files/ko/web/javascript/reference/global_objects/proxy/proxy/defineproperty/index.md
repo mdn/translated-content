@@ -62,7 +62,7 @@ new Proxy(target, {
 - 속성에 해당 대상 개체 속성이 있는 경우 `Object.defineProperty(target, prop, descriptor)`는 예외를 발생하지 않습니다.
 - 엄격 모드에서 `defineProperty()` 처리기의 `false` 반환 값은 {{jsxref("TypeError")}} 예외를 발생시킵니다.
 
-## 예제들
+## 예제
 
 ### defineProperty 트랩하기
 
@@ -79,6 +79,7 @@ const p = new Proxy({}, {
 const desc = { configurable: true, enumerable: true, value: 10 };
 Object.defineProperty(p, 'a', desc); // "호출: a"
 ```
+
 {{jsxref("Object.defineProperty()")}} 또는 {{jsxref("Reflect.defineProperty()")}}를 호출할 때 `defineProperty()` 트랩에 전달된 `descriptor`에는 한 가지 제한 사항이 있어 다음 속성만 사용할 수 있습니다.(비표준 속성은 무시됨)
 
 - `enumerable`

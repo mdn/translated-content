@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/closePath
 ---
 {{APIRef}}
 
-O método **`CanvasRenderingContext2D`\*\***`.closePath()`\*\* da API Canvas 2D faz o ponto da caneta (_pen_) mover-se de volta para o início do sub-caminho (_sub-path_) atual. Tenta adicionar uma nova linha (mas não a desenha realmente) que conecta o ponto atual até o ponto inicial. Se a região (_shape_) já estiver fechada, ou tem somente um ponto na tela, esta função não funciona.
+O método **`CanvasRenderingContext2D.closePath()`** da API Canvas 2D faz o ponto da caneta (_pen_) mover-se de volta para o início do sub-caminho (_sub-path_) atual. Tenta adicionar uma nova linha (mas não a desenha realmente) que conecta o ponto atual até o ponto inicial. Se a região (_shape_) já estiver fechada, ou tem somente um ponto na tela, esta função não funciona.
 
 ## Sintaxe
 

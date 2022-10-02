@@ -81,7 +81,7 @@ nomeDaPropriedade = "modelo";
 meuCarro[nomeDaPropriedade] = "Mustang";
 ```
 
-Você pode usar a notação de colchetes com o comando [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in "pt-BR/docs/Web/JavaScript/Reference/Statements/for...in") para iterar por todas as propriedades enumeráveis de um objeto. Para ilustrar como isso funciona, a seguinte função mostra as propriedades de um objeto quando você passa o objeto e o nome do objeto como argumentos para a função:
+Você pode usar a notação de colchetes com o comando [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) para iterar por todas as propriedades enumeráveis de um objeto. Para ilustrar como isso funciona, a seguinte função mostra as propriedades de um objeto quando você passa o objeto e o nome do objeto como argumentos para a função:
 
 ```js
 function mostrarProps(obj, nomeDoObj) {
@@ -109,27 +109,27 @@ Em JavaScript, quase tudo é um objeto. Todos os tipos primitivos - com exceçã
 
 ## Enumerando todas as propriedades de um objeto
 
-Começando com a [ECMAScript 5](/pt-BR/docs/JavaScript/ECMAScript_5_support_in_Mozilla "en-US/docs/JavaScript/ECMAScript 5 support in Mozilla"), há três formas nativas de se listar (ou "caminhar por") as propriedades de um objeto:
+Começando com a [ECMAScript 5](/pt-BR/docs/JavaScript/ECMAScript_5_support_in_Mozilla), há três formas nativas de se listar (ou "caminhar por") as propriedades de um objeto:
 
-- [for...in](/pt-BR/docs/JavaScript/Reference/Statements/for...in "en-US/docs/JavaScript/Reference/Statements/for...in") loops
+- [for...in](/pt-BR/docs/JavaScript/Reference/Statements/for...in) loops
   Esse método caminha por todas as propriedades enumeráveis de um objeto e sua cadeia de protótipos
-- [Object.keys(o)](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/keys "en-US/docs/JavaScript/Reference/Global Objects/Object/keys")
+- [Object.keys(o)](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/keys)
   Esse método retorna um array com todos os nomes ("chaves") de propriedades próprios de um objeto `o` (mas não na cadeia de protótipos).
-- [Object.getOwnPropertyNames(o)](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames "en-US/docs/JavaScript/Reference/Global Objects/Object/getOwnPropertyNames")
+- [Object.getOwnPropertyNames(o)](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
   Esse método retorna um array contendo todos os nomes de propriedades próprios (enumeráveis ou não) de um objeto `o`.
 
 Antes, na ECMAScript 5, não existia uma forma nativa de se listar todas as propriedades de um objeto. No entanto, isso pode ser feito com a seguinte função:
 
 ```js
 function listarTodasAsPropriedades(o){
-	var objectoASerInspecionado;
-	var resultado = [];
+  var objectoASerInspecionado;
+  var resultado = [];
 
-	for(objectoASerInspecionado = o; objectoASerInspecionado !== null; objectoASerInspecionado = Object.getPrototypeOf(objectoASerInspecionado)){
-		resultado = resultado.concat(Object.getOwnPropertyNames(objectoASerInspecionado));
-	}
+  for(objectoASerInspecionado = o; objectoASerInspecionado !== null; objectoASerInspecionado = Object.getPrototypeOf(objectoASerInspecionado)){
+    resultado = resultado.concat(Object.getOwnPropertyNames(objectoASerInspecionado));
+  }
 
-	return resultado;
+  return resultado;
 }
 ```
 
@@ -174,8 +174,8 @@ Você pode também usar inicializadores de objeto para criar arrays. Veja [array
 
 Alternativamente, você pode criar um objeto com estes dois passos:
 
-1.  Defina o tipo de objeto escrevendo uma função construtora. Há uma forte convenção, e com boa razão, de se usar uma letra inicial maiúscula.
-2.  Crie uma instância do objeto com `new`.
+1. Defina o tipo de objeto escrevendo uma função construtora. Há uma forte convenção, e com boa razão, de se usar uma letra inicial maiúscula.
+2. Crie uma instância do objeto com `new`.
 
 Para definir um tipo de objeto, crie uma função para o tipo de objeto que especifique seu nome, suas propriedades e seus métodos. Por exemplo, suponha que você queira criar um tipo objeto para carros. Você quer que esse tipo de objeto seja chamado `carro`, e você quer ele tenha propriedades de marca, modelo, e ano. Para fazer isto, você escreveria a seguinte função:
 
@@ -214,7 +214,7 @@ function Pessoa(nome, idade, sexo) {
 }
 ```
 
-e então você instancia dois novos objetos` pessoa` da seguinte forma:
+e então você instancia dois novos objetos `pessoa` da seguinte forma:
 
 ```js
 var jose = new Pessoa("Jose Silva", 33, "M");
@@ -255,7 +255,7 @@ adiciona uma propriedade `cor` ao `carro1`, e dá a ele o valor `"preto."` No en
 
 ### Usando o método Object.create
 
-Objetos podem também ser criados usando-se o método [`Object.create()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create). Esse método pode ser muito útil, pois permite que você escolha o objeto protótipo para o objeto que você quer criar, sem a necessidade de se definir uma função construtora.
+Objetos podem também ser criados usando-se o método [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create). Esse método pode ser muito útil, pois permite que você escolha o objeto protótipo para o objeto que você quer criar, sem a necessidade de se definir uma função construtora.
 
 ```js
 // Encapsulamento das propriedades e métodos de Animal
@@ -286,7 +286,7 @@ Você pode se referir a uma propriedade de um objeto pelo seu nome de propriedad
 
 Esta restrição se aplica quando você cria um objeto e suas propriedades com uma função construtora (como fizemos anteriormente com o objeto do tipo carro) e quando você define propriedades individuais explicitamente (por exemplo, `meuCarro.cor = "vermelho"`). Se você inicialmente definir uma propriedade do objeto com um índice, tal como `meuCarro[5] = "25 mpg"`, você pode subsequentemente referir-se á propriedade somente como `meuCarro[5]`.
 
-A exceção a esta regra é a objetos refletidos a partir do HTML, como o conjunto de formulários. Você pode sempre se referir a objetos nessas matrizes por seu número de ordem (com base em onde eles aparecem no documento) ou seu nome (se definido). Por exemplo, se a segunda tag `<FORM>` em um documento tem um atributo `NAME` de "meuFormulario", você pode se referir ao formulário como `document.forms[1]` ou `document.forms["meuFormulario"] `ou `document.meuFormulario`.
+A exceção a esta regra é a objetos refletidos a partir do HTML, como o conjunto de formulários. Você pode sempre se referir a objetos nessas matrizes por seu número de ordem (com base em onde eles aparecem no documento) ou seu nome (se definido). Por exemplo, se a segunda tag `<FORM>` em um documento tem um atributo `NAME` de "meuFormulario", você pode se referir ao formulário como `document.forms[1]` ou `document.forms["meuFormulario"]` ou `document.meuFormulario`.
 
 ## Definindo propriedades para um tipo de objeto
 
@@ -297,7 +297,7 @@ Carro.prototype.cor = null;
 carro1.cor = "preto";
 ```
 
-Consulte a [propriedade](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype) [`prototype`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype "en-US/docs/JavaScript/Reference/Global Objects/Function/prototype") do objeto `Function `na [Referência](/pt-BR/docs/JavaScript/Reference) [JavaScript](/pt-BR/docs/JavaScript/Reference "en-US/docs/JavaScript/Reference") para mais informações.
+Consulte a [propriedade](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype) [`prototype`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype) do objeto `Function` na [Referência](/pt-BR/docs/JavaScript/Reference) [JavaScript](/pt-BR/docs/JavaScript/Reference) para mais informações.
 
 ## Definindo métodos
 
@@ -333,7 +333,7 @@ function mostreCarro() {
 
 onde `pretty_print` é uma função que mostra uma linha horizontal e uma string. Observe o uso de `this` para referenciar o objeto ao qual o método pertence.
 
-Você pode fazer desta função um método de `carro,` adicionando seu estado à definição do objeto.
+Você pode fazer desta função um método de `carro`, adicionando seu estado à definição do objeto.
 
 ```js
 this.mostreCarro = mostreCarro;
@@ -369,7 +369,7 @@ function validate(obj, lowval, hival) {
 }
 ```
 
-Então, você poderia chamar `validate` no manipulador de evento `onchange` em cada elemento do formulário, usando `this `para passar o elemento, como no exemplo a seguir:
+Então, você poderia chamar `validate` no manipulador de evento `onchange` em cada elemento do formulário, usando `this` para passar o elemento, como no exemplo a seguir:
 
 ```html
 <input type="text" name="age" size="3"
@@ -422,7 +422,7 @@ Observe que nomes de função de getters e setters definidos em um objeto litera
 Objects/Object/defineProperty") (ou o legado fallback [`Object.prototype.__defineGetter__`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineGetter "en-US/docs/Core JavaScript 1.5 Reference/Global
 Objects/Object/defineGetter")).
 
-O código a seguir ilustra como getters e setters podem extender o protótipo [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) para adicionar a propriedade `ano` para todas as instâncias de classes `Date` pré-definidas. Ele usa os métodos `getFullYear` e `setFullYear` existentes da classe `Date` para suportar o getter e setter da propriedade `ano`.
+O código a seguir ilustra como getters e setters podem extender o protótipo [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) para adicionar a propriedade `ano` para todas as instâncias de classes `Date` pré-definidas. Ele usa os métodos `getFullYear` e `setFullYear` existentes da classe `Date` para suportar o getter e setter da propriedade `ano`.
 
 Estes estados definem um getter e setter para a propriedade `ano`:
 

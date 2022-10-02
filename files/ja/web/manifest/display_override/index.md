@@ -2,6 +2,7 @@
 title: display_override
 slug: Web/Manifest/display_override
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

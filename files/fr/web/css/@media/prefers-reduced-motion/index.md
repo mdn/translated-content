@@ -102,13 +102,11 @@ Cet exemple possède une animation désagréable qui sera exécutée à moins d'
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS5 Media Queries', '#descdef-media-prefers-reduced-motion', 'prefers-reduced-motion')}} | {{Spec2('CSS5 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.prefers-reduced-motion")}}
+{{Compat}}
 
 ## Voir aussi
 

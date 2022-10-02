@@ -2,6 +2,7 @@
 title: Warning
 slug: Web/HTTP/Headers/Warning
 ---
+
 {{HTTPSidebar}}
 
 > **Note:**  `Warning` ヘッダーはまもなく非推奨になる予定です。詳しくは [Warning (https://github.com/httpwg/http-core/issues/139)](https://github.com/httpwg/http-core/issues/139) や [Warning: header & stale-while-revalidate (https://github.com/whatwg/fetch/issues/913)](https://github.com/whatwg/fetch/issues/913) をご覧ください。

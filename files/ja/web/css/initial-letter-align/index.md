@@ -2,6 +2,7 @@
 title: initial-letter-align
 slug: Web/CSS/initial-letter-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 CSS の **`initial-letter-align`** プロパティは、段落内の最初の文字の配置を指定します。

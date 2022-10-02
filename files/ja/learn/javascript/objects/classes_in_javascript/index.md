@@ -3,6 +3,7 @@ title: JavaScript での継承
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 OOJS のぞっとするような細部はほとんど説明されたので、ここでは”親”クラスからの機能を継承する”子供”のオブジェクトクラス (コンストラクタ) の生成方法について解説します。さらに、いつ、どこで OOJS を使うかについてのアドバイスを提示し、最新の ECMAScript の構文でクラスがどのように扱われるかを見ていきます。

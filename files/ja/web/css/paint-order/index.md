@@ -2,6 +2,7 @@
 title: paint-order
 slug: Web/CSS/paint-order
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`paint-order`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストコンテンツやシェイプが描画されるときの塗りつぶしと輪郭 (およびマーカーの描画) の順序を制御することができます。

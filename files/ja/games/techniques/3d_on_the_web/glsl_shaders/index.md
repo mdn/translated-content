@@ -2,6 +2,7 @@
 title: GLSL シェーダー
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
+
 {{GamesSidebar}}
 
 シェーダーは、 C と同様の構文を持つ特別な OpenGL シェーディング言語である GLSL (OpenGL Shading Language) を使用します。 GLSL はグラフィックスパイプラインによって直接実行されます。[様々な種類のシェーダー](https://www.khronos.org/opengl/wiki/Shader)がありますが、ウェブ上のグラフィックを作成するのに良く使用されるのは、頂点 (バーテックス) シェーダーとフラグメント (ピクセル) シェーダーの 2 種類です。 頂点シェーダーは、形状の位置を 3D 描画座標に変換します。 フラグメントシェーダーは、形状の色やその他の属性のレンダリングを計算します。

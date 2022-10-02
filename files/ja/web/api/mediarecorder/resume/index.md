@@ -2,6 +2,7 @@
 title: MediaRecorder.resume()
 slug: Web/API/MediaRecorder/resume
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.resume()`** メソッド（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、以前に一時停止していたメディアの記録を再開するために使用します。

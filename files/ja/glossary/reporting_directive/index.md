@@ -2,6 +2,7 @@
 title: Reporting directive (報告ディレクティブ)
 slug: Glossary/Reporting_directive
 ---
+
 **{{Glossary("CSP")}} の報告ディレクティブ**は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、 CSP 違反の報告過程を制御します。
 
 完全な一覧については[報告ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#reporting_directives)を参照してください。

@@ -14,7 +14,7 @@ Atomics.sub(typedArray, index, value)
 ### 参数
 
 - `typedArray`
-  - : 一个共享的整型 typed array。 例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.
+  - : 一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.
 - `index`
   - : 要被 `value` 值减去的 `typedArray` 索引位置。
 - `value`

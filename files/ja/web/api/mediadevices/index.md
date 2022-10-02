@@ -2,6 +2,7 @@
 title: MediaDevices
 slug: Web/API/MediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaDevices`** インターフェイスは、カメラやマイク、さらに画面共有などの接続されたメディア入力機器へのアクセスを提供します。要するに、メディアデータのソースであるハードウェアにアクセスすることができるようになります。

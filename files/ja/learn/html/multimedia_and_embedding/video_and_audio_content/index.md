@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 l10n:
   sourceCommit: 4b57879ba126b492feae036c321ad7a7ee8c8138
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 ウェブページに簡単な画像を追加するのができるようになったので、次のステップは HTML 文書に動画と音声のプレイヤーを追加することです。この記事では {{htmlelement("video")}} と {{htmlelement("audio")}} 要素を使って実現することを見ていきます。それから動画にキャプションや字幕を追加する方法を見て完了します。

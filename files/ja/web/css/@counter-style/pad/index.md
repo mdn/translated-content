@@ -2,6 +2,7 @@
 title: pad
 slug: Web/CSS/@counter-style/pad
 ---
+
 {{CSSRef}}
 
 **`pad`** 記述子を使用すると、マーカー表現に最小限の長さが必要な場合に、カスタムカウンターのスタイル定義を行うことができます。

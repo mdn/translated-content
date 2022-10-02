@@ -2,6 +2,7 @@
 title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
 ---
+
 {{APIRef("UI Events")}}
 
 > **Warning:** このメソッドを使わないでください。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。

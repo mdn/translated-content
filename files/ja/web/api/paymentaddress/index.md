@@ -4,6 +4,7 @@ slug: Web/API/PaymentAddress
 l10n:
   sourceCommit: da3e8fe86e7ae4bb7342c6ccb56188b25f9be55c
 ---
+
 {{APIRef("Payment Request API")}}{{SecureContext_Header}} {{Deprecated_header}}{{Non-standard_header}}
 
 **`PaymentAddress`** は[支払いリクエスト API](/en-US/docs/Web/API/Payment_Request_API) のインターフェイスで、配送先または支払い先住所情報を保存するために使用されます。

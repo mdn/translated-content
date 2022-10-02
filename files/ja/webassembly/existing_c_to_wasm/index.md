@@ -4,6 +4,7 @@ slug: WebAssembly/existing_C_to_wasm
 l10n:
   sourceCommit: 891c7c231987ebd17a7410b3c7aab82af15e4248
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly の主な用途は、既存の C ライブラリーのエコシステムを取得し、開発者がウェブ上でそれらを利用できるようにすることです。

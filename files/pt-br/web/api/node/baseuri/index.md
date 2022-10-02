@@ -9,7 +9,7 @@ translation_of: Web/API/Node/baseURI
 
 A propriedade somente leitura **`Node.baseURI`** retorna a URL base absoluta de um nó.
 
-A URL base é usada para [resolver ](http://developers.whatwg.org/urls.html#resolving-urls)URLs relativas quando o navegador precisa obter uma URL absoluta, por exemplo, quando processa o atributo `src` do elemento HTML {{HTMLElement("img")}} ou o atributo `xlink:href` do XML.
+A URL base é usada para [resolver](http://developers.whatwg.org/urls.html#resolving-urls) URLs relativas quando o navegador precisa obter uma URL absoluta, por exemplo, quando processa o atributo `src` do elemento HTML {{HTMLElement("img")}} ou o atributo `xlink:href` do XML.
 
 No caso comum, a URL base é simplesmente a localização do documento, mas ela pode ser afetada por vários fatores, incluindo o elemento {{HTMLElement("base")}} em HTML e o atributo [xml:base](/pt-BR/docs/XML/xml:base) em XML.
 
@@ -40,7 +40,7 @@ Você pode usar `{{domxref("document")}}.baseURI` para obter a URL base de um do
 
 A URL base de um elemento em HTML é, normalmente, igual a URL base do documento onde o nó está.
 
-Se o documento contém atributos [`xml:base`](/en-US/docs/XML/xml:base) ( que você não deve fazer em documento HTML), o `element.baseURI` recebe os atributos `xml:base dos elementos pai `into account when computing the base URL. Veja [xml:base](/pt-BR/docs/XML/xml:base) para mais detalhes.
+Se o documento contém atributos [`xml:base`](/en-US/docs/XML/xml:base) ( que você não deve fazer em documento HTML), o `element.baseURI` recebe os atributos `xml:base` dos elementos pai into account when computing the base URL. Veja [xml:base](/pt-BR/docs/XML/xml:base) para mais detalhes.
 
 Você pode usar `{{domxref("element")}}.baseURI` para obter a URL base de um elemento.
 

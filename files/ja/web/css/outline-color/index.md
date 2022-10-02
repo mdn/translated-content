@@ -2,6 +2,7 @@
 title: outline-color
 slug: Web/CSS/outline-color
 ---
+
 {{CSSRef}}
 
 **`outline-color`** は CSS のプロパティで、要素の輪郭線の色を設定します。

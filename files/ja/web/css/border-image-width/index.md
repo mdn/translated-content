@@ -2,6 +2,7 @@
 title: border-image-width
 slug: Web/CSS/border-image-width
 ---
+
 {{CSSRef}}
 
 **`border-image-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)の幅を設定します。

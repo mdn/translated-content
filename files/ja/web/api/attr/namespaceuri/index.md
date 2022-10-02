@@ -2,6 +2,7 @@
 title: Attr.namespaceURI
 slug: Web/API/Attr/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 **`namespaceURI`** は {{domxref("Attr")}} インターフェイスの読み取り専用プロパティで、この属性の名前空間 URI を返し、この要素が名前空間にない場合は `null` を返します。

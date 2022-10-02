@@ -50,7 +50,7 @@ for (let number = 2; number <= 5; number += 1) {
 // Assertion failed: {number: 5, errorMsg: "the # is not even"}
 ```
 
-请注意， 你可以在大多数浏览器中使用 console.log 进行格式化输出
+请注意，你可以在大多数浏览器中使用 console.log 进行格式化输出
 
 ```js
 console.log('the word is %s try number %d', 'foo', 123);

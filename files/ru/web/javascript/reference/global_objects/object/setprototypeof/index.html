@@ -49,25 +49,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 
 <p>Используя старое свойство {{jsxref("Object.proto", "Object.prototype.__proto__")}}, мы можем легко определить <code>Object.setPrototypeOf()</code>, если он ещё не доступен:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">if</span><span class="function token"> </span><span class="punctuation token">(</span><span class="parameter token"><span class="operator token">!</span>Object<span class="punctuation token">.</span>setPrototypeOf</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="class-name token"> Object</span><span class="punctuation token">.</span>prototype<span class="punctuation token">.</span><span class="function function-variable token">setPrototypeOf </span><span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">obj<span class="punctuation token">,</span> proto</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-         <span class="keyword token">if</span><span class="punctuation token">(</span>obj<span class="punctuation token">.</span>__proto__<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-             obj<span class="punctuation token">.</span>__proto__ <span class="operator token">=</span> proto<span class="punctuation token">;</span>
-             <span class="keyword token">return</span> obj<span class="punctuation token">;</span>
-         <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-             <span class="comment token">// Если нужно будет определить прототип у Object.create(null) объекта</span>
-             <span class="function function-variable token">var Fn </span><span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-                 <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> key <span class="keyword token">in</span> obj<span class="punctuation token">)</span> <span class="punctuation token">{ //Если в объект уже были определены некоторые свойства</span>
-                     Object<span class="punctuation token">.</span><span class="function token">defineProperty</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">,</span> key<span class="punctuation token">,</span> <span class="punctuation token">{</span>
-                         value<span class="punctuation token">:</span> obj<span class="punctuation token">[</span>key<span class="punctuation token">]</span><span class="punctuation token">,</span>
-                     <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-                 <span class="punctuation token">}</span>
-             <span class="punctuation token">}</span><span class="punctuation token">;</span>
-             <span class="class-name token">Fn</span><span class="punctuation token">.</span>prototype <span class="operator token">=</span> proto<span class="punctuation token">;</span>
-             <span class="keyword token">return</span> <span class="keyword token">new</span> <span class="class-name token">Fn</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-         <span class="punctuation token">}</span>
-     <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js">if (!Object.setPrototypeOf) {
+     Object.prototype.setPrototypeOf = function(obj, proto) {
+         if(obj.__proto__) {
+             obj.__proto__ = proto;
+             return obj;
+         } else {
+             // Если нужно будет определить прототип у Object.create(null) объекта
+             var Fn = function() {
+                 for (var key in obj) { //Если в объект уже были определены некоторые свойства
+                     Object.defineProperty(this, key, {
+                         value: obj[key],
+                     });
+                 }
+             };
+             Fn.prototype = proto;
+             return new Fn();
+         }
+     }
+}</pre>
 
 <h2 id="Appending_Prototype_Chains">Добавление цепочки прототипов</h2>
 

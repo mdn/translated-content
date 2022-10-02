@@ -2,6 +2,7 @@
 title: Touch.screenY
 slug: Web/API/Touch/screenY
 ---
+
 {{ APIRef("Touch Events") }}
 
 ## 概要

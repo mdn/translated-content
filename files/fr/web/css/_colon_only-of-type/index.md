@@ -80,14 +80,11 @@ li:only-of-type {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                                        |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS4 Selectors')}} | L'élément ciblé ne doit pas nécessairement avoir un élément parent. |
-| {{SpecName('CSS3 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.only-of-type")}}
+{{Compat}}
 
 ## Voir aussi
 

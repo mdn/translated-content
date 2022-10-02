@@ -2,6 +2,7 @@
 title: VREyeParameters.fieldOfView
 slug: Web/API/VREyeParameters/fieldOfView
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VREyeParameters")}} インターフェイスの **`fieldOfView`** 読取専用プロパティは，現在の眼の視野角(field of view)を表します．この値は瞳孔間距離(IPD)をユーザが調整するとそれに応じて変化します．

@@ -3,6 +3,7 @@ title: ScrollToOptions
 slug: conflicting/Web/API/Window/scroll
 original_slug: Web/API/ScrollToOptions
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`ScrollToOptions`** は CSSOM View 仕様の辞書で、ある要素がスクロールする位置、およびスクロールがスムーズに行われるかどうかを指定するプロパティを指定します。

@@ -73,13 +73,11 @@ col.selected || td {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#the-column-combinator", "column combinator")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.sort")}}
+{{Compat}}
 
 ## Voir aussi
 

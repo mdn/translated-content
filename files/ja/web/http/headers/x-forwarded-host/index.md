@@ -2,6 +2,7 @@
 title: X-Forwarded-Host
 slug: Web/HTTP/Headers/X-Forwarded-Host
 ---
+
 {{HTTPSidebar}}
 
 **X-Forwarded-Host** (XFH) ヘッダーは、 HTTP の {{HTTPHeader("Host")}} リクエストヘッダー内でクライアントから要求された元のホストを特定するための事実上の標準となっているヘッダーです。

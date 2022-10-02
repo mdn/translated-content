@@ -25,7 +25,7 @@ console.log(p.a, p.b); // 1, 42
 
 `Proxy` 对象定义了一个目标（这里是一个空对象）和一个实现了 `get` 陷阱的 handler 对象。这里，代理的对象在获取未定义的属性时不会返回 `undefined`，而是返回 42。
 
-更多例子参见 {{jsxref("Proxy")}} 页面 。
+更多例子参见 {{jsxref("Proxy")}} 页面。
 
 ### 术语
 

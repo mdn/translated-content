@@ -16,7 +16,7 @@ ws.add(value);
 ### 参数
 
 - value
-  - : 必须。 将对象添加进 `WeakSet` 集合中。
+  - : 必须。将对象添加进 `WeakSet` 集合中。
 
 ### 返回值
 

@@ -2,6 +2,7 @@
 title: '::first-letter (:first-letter)'
 slug: Web/CSS/::first-letter
 ---
+
 {{CSSRef}}
 
 **`::first-letter`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ブロックレベル要素](/ja/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes)の最初の行の最初の文字にスタイルを適用します。ただし、最初の文字より前に他のコンテンツ (画像やインラインテーブルなど) がないときに限ります。

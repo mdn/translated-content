@@ -2,6 +2,7 @@
 title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
 ---
+
 {{APIRef("DOM")}}
 
 **`length`** は {{domxref("DOMTokenList")}} インターフェイスの読み取り専用プロパティで、オブジェクト内に格納されたオブジェクトの個数を整数で表します。

@@ -2,6 +2,7 @@
 title: SpeechRecognition
 slug: Web/API/SpeechRecognition
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechRecognition`** インターフェイスは、認識サービスの制御インターフェイスです。これは、認識サービスから送信された {{domxref("SpeechRecognitionEvent")}} も扱います。

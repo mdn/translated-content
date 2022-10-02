@@ -9,7 +9,7 @@ slug: Web/CSS/transition-timing-function
 
 CSS 属性受到 [transition effect](/zh-CN/docs/CSS/Tutorials/Using_CSS_transitions)的影响，会产生不断变化的中间值，而 [CSS](/zh-CN/docs/CSS) `transition-timing-function` 属性用来描述这个中间值是怎样计算的。实质上，通过这个函数会建立一条加速度曲线，因此在整个 transition 变化过程中，变化速度可以不断改变。
 
-这条加速度曲线被{{cssxref("&lt;timing-function&gt;")}}所定义，之后作用到每个 CSS 属性的过渡.
+这条加速度曲线被{{cssxref("&lt;timing-function&gt;")}}所定义，之后作用到每个 CSS 属性的过渡。
 
 你可以规定多个 timing function，通过使用 {{ cssxref("transition-property") }}属性，可以根据主列表 (transition property 的列表) 给每个 CSS 属性应用相应的 timing function.如果 timing function 的个数比主列表中数量少，缺少的值被设置为初始值（ease） 。如果 timing function 比主列表要多，timing function 函数列表会被截断至合适的大小。这两种情况下声明的 CSS 属性都是有效的。
 

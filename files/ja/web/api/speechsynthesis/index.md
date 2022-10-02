@@ -2,6 +2,7 @@
 title: SpeechSynthesis
 slug: Web/API/SpeechSynthesis
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechSynthesis`** インターフェイスは、speech サービスのための制御インターフェイスです。これは、端末で利用可能な合成音声についての情報を取得するために使用されます。読み上げの開始および一時停止、他のコマンドで制御します。

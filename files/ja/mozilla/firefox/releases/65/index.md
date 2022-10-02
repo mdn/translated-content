@@ -2,6 +2,7 @@
 title: Firefox 65 for developers
 slug: Mozilla/Firefox/Releases/65
 ---
+
 {{FirefoxSidebar}}
 
 この記事では、開発者に影響を与える Firefox 65 の変更点について説明します。Firefox 65 は 2019 年 1 月 29 日に出荷されました。

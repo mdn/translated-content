@@ -42,7 +42,7 @@ original_slug: Learn/CSS/First_steps/开始
     <p>这是一个段落文本。在文本中有一个 <span>span element</span>
 并且还有一个 <a href="http://example.com">链接</a>.</p>
 
-    <p>这是第二段。包含了一个 <em>强调</em> 元素.</p>
+    <p>这是第二段。包含了一个 <em>强调</em> 元素。</p>
 
     <ul>
         <li>项目 1</li>
@@ -69,7 +69,7 @@ original_slug: Learn/CSS/First_steps/开始
 <link rel="stylesheet" href="styles.css">
 ```
 
-{{htmlelement("link")}} 语句块里面，我们用属性 `rel`，让浏览器知道有 CSS 文档存在（所以需要遵守 CSS 样式的规定），并利用属性 `href` 指定，寻找 CSS 文件的位置。 你可以做测试来验证 CSS 是否有效：在 `styles.css` 里面加上 CSS 样式并观察显示的结果。下面，用你的编辑器打出下面的代码。
+{{htmlelement("link")}} 语句块里面，我们用属性 `rel`，让浏览器知道有 CSS 文档存在（所以需要遵守 CSS 样式的规定），并利用属性 `href` 指定，寻找 CSS 文件的位置。你可以做测试来验证 CSS 是否有效：在 `styles.css` 里面加上 CSS 样式并观察显示的结果。下面，用你的编辑器打出下面的代码。
 
 ```css
 h1 {

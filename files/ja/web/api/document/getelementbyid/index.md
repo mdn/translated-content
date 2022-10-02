@@ -2,6 +2,7 @@
 title: Document.getElementById()
 slug: Web/API/Document/getElementById
 ---
+
 {{ ApiRef("DOM") }}
 
 {{domxref("Document")}} の **`getElementById()`** メソッドは、 {{domxref("Element.id", "id")}} プロパティが指定された文字列に一致する要素を表す {{domxref("Element")}} オブジェクトを返します。要素の ID は指定されていれば固有であることが求められているため、特定の要素にすばやくアクセスするには便利な方法です。

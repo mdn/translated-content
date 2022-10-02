@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader.closed
 slug: Web/API/ReadableStreamDefaultReader/closed
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} インターフェイスの **`closed`** 読み取り専用プロパティは、ストリームが閉じられた場合、またはリーダーのロックが解除された場合に満たし、ストリームがエラーの場合に拒否する promise を返します。

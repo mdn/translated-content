@@ -12,9 +12,9 @@ translation_of: Web/CSS/@media
 ---
 {{CSSRef}}
 
-The **`@media`** [CSS](/en/CSS "CSS") [at-rule ](/en/CSS/At-rule "en/CSS/At-rule")pode ser usada para aplicar estilos com base no resultado de uma ou mais consultas de mídia, que testam o tipo, as características específicas e o ambiente de um dispositivo.
+The **`@media`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) pode ser usada para aplicar estilos com base no resultado de uma ou mais consultas de mídia, que testam o tipo, as características específicas e o ambiente de um dispositivo.
 
-No CSS, a regra `@media` deve ser posta na parte superior do seu código ou aninhada dentro de algum outro [conditional group at-rule](/en/CSS/At-rule#Conditional_Group_Rules "en/CSS/At-rule#Conditional_Group_Rules").
+No CSS, a regra `@media` deve ser posta na parte superior do seu código ou aninhada dentro de algum outro [conditional group at-rule](/en/CSS/At-rule#Conditional_Group_Rules).
 
 ```css
 /* Media query */
@@ -58,7 +58,7 @@ _Media types_ describe the general category of a device. Unless you use the `not
 - `all`
   - : Suitable for all devices.
 - `print`
-  - : Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on [paged media](/en/CSS/Paged_Media "https://developer.mozilla.org/en/CSS/Paged_Media"), and the [media section of the Getting Started tutorial](/en/CSS/Getting_Started/Media "https://developer.mozilla.org/en/CSS/Getting_Started/Media") for information about formatting issues that are specific to paged media.
+  - : Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on [paged media](/en/CSS/Paged_Media), and the [media section of the Getting Started tutorial](/en/CSS/Getting_Started/Media) for information about formatting issues that are specific to paged media.
 - `screen`
   - : Intended primarily for color computer screens.
 - `speech`
@@ -152,7 +152,7 @@ Each query in a comma-separated media query list is treated separately from the 
 }
 ```
 
-For more media feature examples, please see the reference page for each specific feature. For more logical operator examples, please see [Using media queries](/en/CSS/Media_queries "En/CSS/Media queries").
+For more media feature examples, please see the reference page for each specific feature. For more logical operator examples, please see [Using media queries](/en/CSS/Media_queries).
 
 ## Specifications
 
@@ -170,5 +170,5 @@ For more media feature examples, please see the reference page for each specific
 
 ## See also
 
-- [Using media queries](/en/CSS/Media_queries "En/CSS/Media queries")
+- [Using media queries](/en/CSS/Media_queries)
 - In JavaScript, `@media` can be accessed via the CSS object model interface {{domxref("CSSMediaRule")}}.

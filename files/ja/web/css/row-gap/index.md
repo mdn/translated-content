@@ -2,6 +2,7 @@
 title: row-gap (grid-row-gap)
 slug: Web/CSS/row-gap
 ---
+
 {{CSSRef}}
 
 **`row-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のグリッド行の間のすき間 ({{glossary("gutters", "溝")}}) の寸法を定義します。

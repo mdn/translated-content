@@ -3,6 +3,7 @@ title: 16 進カラー構文
 slug: orphaned/Web/CSS/color_value/hexadecimal_rgb
 original_slug: Web/CSS/color_value/hexadecimal_rgb
 ---
+
 {{CSSRef}}
 
 **16 進カラー構文**は [sRGB](/ja/docs/Glossary/RGB) カラーを 16 進数で記述するための記法で、その原色成分（赤、緑、青）と透明度を記述します。[`<color>`](/ja/docs/Web/CSS/color_value) 型が許容される箇所であればどこでも使うことができます。

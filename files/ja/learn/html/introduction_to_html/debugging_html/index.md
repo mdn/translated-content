@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 l10n:
   sourceCommit: 358158b18ad8c2b90b83fe4dc03bdd7fd2e423da
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML を書くのはいいのですが、何かがうまくいかず、コードのどこに誤りがあるのかがわからなくなったらどうしますか。この記事では、 HTML のエラーを探し、修正するのに役立つツールをいくつか紹介します。
