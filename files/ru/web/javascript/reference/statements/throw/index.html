@@ -67,7 +67,7 @@ let monthName;
 try {
    // statements to try
    const myMonth = 15; // 15 находится вне границ массива, что приведёт к исключению
-   let monthName = getMonthName(myMonth);
+   monthName = getMonthName(myMonth);
 } catch (e) {
    monthName = "неизвестен";
    logMyErrors(e.message, e.name); // передаём исключение в обработчик ошибок
