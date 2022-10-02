@@ -15,7 +15,7 @@ let doneLoading = htmlImageElement.complete;
 
 ### 值
 
-当图片完全加载完成时值为 `true` ；否则，值为 `false`。
+当图片完全加载完成时值为 `true`；否则，值为 `false`。
 
 以下任意一条为 true 则认为图片完全加载完成：
 

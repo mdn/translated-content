@@ -18,7 +18,7 @@ slug: Web/API/HTMLCollection/item
 
 ## Description
 
-HTMLCollection 中 item( ) 方法返回一个编号的元素，在 JavaScript 中把 HTMLCollection 当成是一个是数组并用数组符号去索引十分简单。
+HTMLCollection 中 `item()` 方法返回一个编号的元素，在 JavaScript 中把 HTMLCollection 当成是一个是数组并用数组符号去索引十分简单。
 
 ## Example
 
