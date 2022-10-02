@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 
 {{JSRef}}
 
-**`Math.floor()`** 函数总是返回小于或等于一个给定数字的最大整数。
+**`Math.floor()`** 函数总是返回小于等于一个给定数字的最大整数。
 
 {{EmbedInteractiveExample("pages/js/math-floor.html")}}
 
@@ -22,7 +22,7 @@ Math.floor(x)
 
 ### 返回值
 
-小于或等于 `x` 的最大整数。它的值与 [`-Math.ceil(-x)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil) 相同。
+小于等于 `x` 的最大整数。它的值与 [`-Math.ceil(-x)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil) 相同。
 
 ## 描述
 
@@ -48,7 +48,7 @@ Math.floor(Infinity); // Infinity
 
 在本例中，我们实现了一个名为 `decimalAdjust()` 的方法，它是 `Math.floor()`、{{jsxref("Math.ceil()")}} 和 {{jsxref("Math.round()")}} 的增强方法。三个 `Math` 函数总是将输入调整为个位数，`decimalAdjust` 接受 `exp` 参数，该参数指定小数点左侧应该调整的位数。例如，`-1` 表示它将在小数点后留下一位数字（如 "× 10<sup>-1</sup>"）。此外，它还允许你通过 `type` 参数选择调整方式——`round`、`bottom` 或 `ceiling`。
 
-它是这样做的：将数字乘以 10 的幂，然后四舍五入到最接近的整数，然后除以 10 的幂。为了更好地保持精度，它利用了 Number 的 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 方法，该方法表示科学记数法中的大或小数字（如 `6.02e23`）。
+它是这样做的：将数字乘以 10 的幂，然后四舍五入到最接近的整数，然后除以 10 的幂。为了更好地保持精度，它利用了数字的 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 方法，该方法使用科学记数法表示任意数字（如 `6.02e23`）。
 
 ```js
 /**
