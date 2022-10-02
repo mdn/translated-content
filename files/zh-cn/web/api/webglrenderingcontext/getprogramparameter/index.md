@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/getProgramParameter
 
 {{APIRef("WebGL")}}
 
-**`WebGLRenderingContext.getProgramParameter()`** 方法返回`WebGLProgram 的信息。`
+**`WebGLRenderingContext.getProgramParameter()`** 方法返回 `WebGLProgram` 的信息。
 
 ## 语法
 
