@@ -6,19 +6,34 @@ tags:
 translation_of: Web/XSLT/Element/otherwise
 original_slug: Web/XSLT/otherwise
 ---
-<p>{{ XsltRef() }}</p>
-<p><code>&lt;xsl:otherwise&gt;</code> 요소는 아무런 <code>&lt;xsl:when&gt;</code> 조건도 적용하지 않았을 때 취하면 좋을 동작을 정의하는 데 씁니다. 다른 프로그래밍 언어의 <code>else</code>나 <code>default</code> 경우와 비슷합니다.</p>
-<h3 id=".EB.AC.B8.EB.B2.95" name=".EB.AC.B8.EB.B2.95">문법</h3>
-<pre>&lt;xsl:otherwise&gt;
+{{ XsltRef() }}
+
+`<xsl:otherwise>` 요소는 아무런 `<xsl:when>` 조건도 적용하지 않았을 때 취하면 좋을 동작을 정의하는 데 씁니다. 다른 프로그래밍 언어의 `else`나 `default` 경우와 비슷합니다.
+
+### 문법
+
+```
+<xsl:otherwise>
 	TEMPLATE
-&lt;/xsl:otherwise&gt;</pre>
-<h3 id=".ED.95.84.EC.88.98_.EC.86.8D.EC.84.B1" name=".ED.95.84.EC.88.98_.EC.86.8D.EC.84.B1">필수 속성</h3>
-<p>없음.</p>
-<h3 id=".EC.84.A0.ED.83.9D_.EC.86.8D.EC.84.B1" name=".EC.84.A0.ED.83.9D_.EC.86.8D.EC.84.B1">선택 속성</h3>
-<p>없음.</p>
-<h3 id=".ED.83.80.EC.9E.85" name=".ED.83.80.EC.9E.85">타입</h3>
-<p>하위명령, 템플릿 안에서 <code>&lt;xsl:choose&gt;</code> 요소의 마지막 자식으로 나타나야 함.</p>
-<h3 id=".EC.A0.95.EC.9D.98" name=".EC.A0.95.EC.9D.98">정의</h3>
-<p><a class="external" href="http://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose">XSLT section 9.2, Conditional Processing with xsl:choose</a></p>
-<h3 id="Gecko_.EC.A7.80.EC.9B.90" name="Gecko_.EC.A7.80.EC.9B.90">Gecko 지원</h3>
-<p>지원함.</p>
+</xsl:otherwise>
+```
+
+### 필수 속성
+
+없음.
+
+### 선택 속성
+
+없음.
+
+### 타입
+
+하위명령, 템플릿 안에서 `<xsl:choose>` 요소의 마지막 자식으로 나타나야 함.
+
+### 정의
+
+[XSLT section 9.2, Conditional Processing with xsl:choose](http://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose)
+
+### Gecko 지원
+
+지원함.
