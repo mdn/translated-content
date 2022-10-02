@@ -23,20 +23,20 @@ Mozilla 对 MDN 产品咨询委员会的愿景是建立协作，帮助 MDN 社�
   产品经理，Spotify
   - : Sukriti Chadha 是 Spotify 的一位从移动端软件开发人员做起的产品经理，负责领导跨平台无障碍和移动端开发者体验。她还担任 [W3C WCAG（Web 内容无障碍指南）工作组](https://www.w3.org/WAI/standards-guidelines/wcag/)以及[移动无障碍任务组（MATF）](https://www.w3.org/WAI/standards-guidelines/mobile/)的特邀专家，她为 web 和移动应用的无障碍行业指南作出了重要贡献。她构建了一种新的视觉障碍用户的数据可视化方法，并[在 2019 年开源了 Android 端的解决方案](https://developer.yahoo.com/blogs/612790529269366784/)。Sukriti 负责管理开发者体验的蓝图、自动化测试，以及在产品的声明周期中嵌入无障碍功能。
 - **Hermina Condei**
-  Head of Product CE, Marketing Operations, Mozilla
-  - : Hermina Condei leads product management and engineering for MDN Web Docs and platform engineering for SUMO at Mozilla. Over the past years, she's driven company-wide projects focused on access and identity management for employees and the community. She also led the product team in the **Open Innovation Group**, with a focus on managing internal and external stakeholders for the team's portfolio of projects.
+  社区体验（Community Experience）产品负责人、营销运营，Mozilla
+  - : Hermina Condei 在 Mozilla 领导 MDN Web 文档的产品管理以及 SUMO（SUpport.MOzilla.org）平台开发。在过去的几年里，她推动了公司内的多个项目，重点是员工和社区访问权限和身份的管理。她还领导了 **Open Innovation Group**, 的产品团队，专注于管理与团队项目相关的内外部利益相关者。
 - **Dominique Hazael-Massieux**
-  W3C Web Technology Expert including [Telecommunications Vertical champion](https://www.w3.org/Telco/), [Web Real-Time Communications Working Group](https://www.w3.org/groups/wg/webrtc), [Device and Sensors Working Group](https://www.w3.org/das/)
-  - : Dominique Hazael-Massieux is part of the W3C staff, leading W3C efforts in developer relations. Dom has been working for W3C since 2000, and in addition to devrel, is currently involved in the standardization of WebRTC, device APIs and WebVR.
+  W3C Web 技术专家，包括：[Telecommunications Vertical champion](https://www.w3.org/Telco/)、[Web Real-Time Communications Working Group](https://www.w3.org/groups/wg/webrtc)、[设备和传感器工作组](https://www.w3.org/das/)
+  - : Dominique Hazael-Massieux 是 W3C 的一位工作人员，领导了 W3C 的开发者关系相关的工作。Dom 从 2000 年就开始为 W3C 工作，除了与开发相关的工作，他还参与了 WebRTC、设备 API 以及 WebVR 的标准化工作。
 - **Brian Kardell**
-  Developer Advocate, Igalia
-  - : Brian is a Developer Advocate at Igalia. He participates in W3C where he is Igalia's Advisory Committee Representative and participates in various working groups and community groups. He also has represented the Open JS Foundation there.
+  开发者倡导者，Igalia
+  - : Brian 是 Igalia 的一位开发者倡导者（Developer Advocate）。他参与了 W3C，是 Igalia 的咨询委员会代表，并参加了多个工作组和社区团体。他还是 Open JS 基金会的代表。
 - **Joe Medley**
-  Senior Technical Writer, Web Developer Relations at Google
-  - : Joe has led Google's effort to create web platform reference documentation for the last five years, which means he spends a lot of time on MDN. In addition to editing the Chrome beta release announcements targeted at web developers, he writes the occasional article for web.dev. Joe came to Web Developer Relations after a long career writing developer reference documentation for enterprise applications and a degree in education from the University of Central Missouri.
+  高级技术作家、Web 开发者关系，Google
+  - : 在过去 5 年中，Joe 领导了 Google Web 参考文档平台的创建，这意味着他在 MDN 上花费了大量的时间。除了编辑针对 Web 开发者的 Chrome 测试版发布公告外，他还偶尔为 web.dev 撰写文章。Joe 在长期为企业应用程序编写开发人员参考文档以及获得了中密苏里大学的教育学位后开始负责 Web 开发者关系。
 - **Eric Meyer**
-  Developer Advocate, Igalia
-  - : [Eric](https://meyerweb.com/) ([@meyerweb](https://twitter.com/meyerweb)) is an [author](https://meyerweb.com/eric/writing.html), speaker, blogger, sometimes teacher and consultant, Developer Advocate at [Igalia](https://www.igalia.com/), and co-founder of [An Event Apart](https://aneventapart.com/). He's been working on the Web since 1993 and still finds it deeply compelling.
+  开发者倡导者，Igalia
+  - : [Eric](https://meyerweb.com/)（[@meyerweb](https://twitter.com/meyerweb)）是 [Igalia](https://www.igalia.com/) 的一位[作家](https://meyerweb.com/eric/writing.html)、演说家、博主，有时也会作为教师或顾问，他还是 [An Event Apart](https://aneventapart.com/) 的联合创始人。他一直从事于 Web 工作，并且依然觉得它十分吸引人。
 - **Laura Morinigo**
   Web Developer Advocate, Samsung
   - : Laura is a software developer, advocate, and mentor. She is passionate about sharing her knowledge and connecting with different tech communities worldwide. Thanks to her contributions, she has been recognized as a Google Developer Expert and a Woman Techmakers Ambassador. As a mentor, she helped startups participating in accelerator programs like Google Launchpad and the World Food Programme by the United Nations. Currently, she is a web developer advocate for Samsung Internet. She contributes to web standards and spreads the word about advanced web features, helping developers create great and more inclusive web apps.
