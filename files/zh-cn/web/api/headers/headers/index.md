@@ -5,7 +5,7 @@ slug: Web/API/Headers/Headers
 
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
-`使用 Headers()` 构造方法创建一个新的{{domxref("Headers")}} 对象。
+使用 `Headers()` 构造方法创建一个新的 {{domxref("Headers")}} 对象。
 
 ## Syntax
 
