@@ -37,11 +37,8 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:root`** permet de cibler
 
 ## Spécifications
 
-| Spécification                                                            | État                                 | Commentaires         |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('CSS4 Selectors', '#root-pseudo', ':root')}} | {{Spec2('CSS4 Selectors')}} | Aucune modification. |
-| {{SpecName('CSS3 Selectors', '#root-pseudo', ':root')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.root")}}
+{{Compat}}

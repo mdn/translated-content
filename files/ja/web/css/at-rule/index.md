@@ -2,6 +2,7 @@
 title: アットルール
 slug: Web/CSS/At-rule
 ---
+
 {{CSSRef}}
 
 **アットルール**は [CSS の文](/ja/docs/Web/CSS/Syntax#css_statements)のうち、CSS の動作を既定するものです。アットルールはアットマーク、'`@`' (`U+0040 COMMERCIAL AT`) で始まり、それに続く識別子から、次のセミコロン、 '`;`' (`U+003B SEMICOLON`) もしくは次の [CSS ブロック](/ja/docs/Web/CSS/Syntax#css_declarations_blocks)のどちらかが現れるまでの部分からなります。

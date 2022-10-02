@@ -9,7 +9,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 
 <p class="summary">В этой статье даётся краткое введение в базы данных, и методика их использования в приложениях Node/Express. Затем мы покажем, как можно использовать <a href="http://mongoosejs.com/">Mongoose</a> для доступа к базе данных веб-сайта  <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a>. Мы объясним, как объявляются схемы и модели объектов, укажем основные типы полей, и методику базовой валидации. В статье также кратко показаны  основные методы доступа к данным модели.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Предварительные сведения:</th>
@@ -66,10 +66,10 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
  <li><a href="https://www.npmjs.com/package/objection">Objection</a>: Делает настолько лёгким, насколько возможно, использование всей мощи SQL и движка базы данных ( поддерживает  SQLite3, Postgres, и MySQL).</li>
  <li><a href="https://www.npmjs.com/package/sequelize">Sequelize</a>: Основанная на промисах ORM для Node.js и <a href="https://ru.wikipedia.org/wiki/Io.js">io.js</a>. Поддерживает диалекты PostgreSQL, MySQL, MariaDB, SQLite и MSSQL, обладает надёжной поддержкой транзакций, отношений, чтения копий и т.д.</li>
  <li>
-  <p><a href="https://node-orm.readthedocs.io/en/latest/"><font color="#3d7e9a"><font face="Arial, x-locale-body, sans-serif"><font size="3">Node ORM2</font></font></font></a><font color="#333333"><font face="Arial, x-locale-body, sans-serif"><font size="3"> -- это OR менеджер для NodeJS. Поддерживает MySQL, SQLite и Progress, помогает работать с БД, используя объектный подход.</font></font></font></p>
+  <p><a href="https://node-orm.readthedocs.io/en/latest/">Node ORM2</a> -- это OR менеджер для NodeJS. Поддерживает MySQL, SQLite и Progress, помогает работать с БД, используя объектный подход.</p>
  </li>
  <li>
-  <p><a href="http://1602.github.io/jugglingdb/"><font color="#3d7e9a"><font face="Arial, x-locale-body, sans-serif"><font size="3">JugglingDB</font></font></font></a><font color="#333333"><font face="Arial, x-locale-body, sans-serif"><font size="3"> -- это кросс-ДБ ORM для NodeJS, обеспечивающая общий интерфейс для доступа к наиболее популярным форматам БД. Поддерживает MySQL, SQLite3, Postgres, MongoDB, Redis и хранение данных в памяти js (собственный движок, только для тестирования).</font></font></font></p>
+  <p><a href="http://1602.github.io/jugglingdb/">JugglingDB</a> -- это кросс-ДБ ORM для NodeJS, обеспечивающая общий интерфейс для доступа к наиболее популярным форматам БД. Поддерживает MySQL, SQLite3, Postgres, MongoDB, Redis и хранение данных в памяти js (собственный движок, только для тестирования).</p>
  </li>
 </ul>
 
@@ -77,15 +77,15 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 
 <h3 id="Применение_Mongoose_и_MongoDb_для_LocalLibrary">Применение Mongoose и MongoDb для LocalLibrary</h3>
 
-<p><span id="result_box" lang="ru"><span class="alt-edited">В примере LocalLibrary (и до конца раздела) мы будем использовать Mongoose ODM для доступа к данным </span></span><span lang="ru"><span class="alt-edited">нашей библиотеки.</span> <span class="alt-edited">Mongoose является интерфейсом для MongoDB, NoSQL-базы данных с открытым исходным кодом, в которой использована документов-ориентированная модель данных.</span> В <span class="alt-edited">MongoDB </span><span class="alt-edited">«коллекции» и «документы» -- это аналоги «таблиц» и «строк» в реляционных БД</span></span>.</p>
+<p>В примере LocalLibrary (и до конца раздела) мы будем использовать Mongoose ODM для доступа к данным нашей библиотеки. Mongoose является интерфейсом для MongoDB, NoSQL-базы данных с открытым исходным кодом, в которой использована документов-ориентированная модель данных. В MongoDB «коллекции» и «документы» -- это аналоги «таблиц» и «строк» в реляционных БД.</p>
 
-<p><span id="result_box" lang="ru"><span>Это сочетание ODM и БД весьма популярно в сообществе Node, частично потому, что система хранения документов и запросов очень похожа на JSON и поэтому знакома разработчикам JavaScript</span></span>.</p>
+<p>Это сочетание ODM и БД весьма популярно в сообществе Node, частично потому, что система хранения документов и запросов очень похожа на JSON и поэтому знакома разработчикам JavaScript.</p>
 
 <div class="note">
-<p><span id="result_box" lang="ru"><span><strong>Совет</strong>: Не обязательно знать MongoDB, чтобы использовать Mongoose, хотя  <a href="http://mongoosejs.com/docs/guide.html"> документацию Mongoose</a> легче использовать и понимать, если вы уже знакомы с MongoDB.</span></span></p>
+<p><strong>Совет</strong>: Не обязательно знать MongoDB, чтобы использовать Mongoose, хотя  <a href="http://mongoosejs.com/docs/guide.html"> документацию Mongoose</a> легче использовать и понимать, если вы уже знакомы с MongoDB.</p>
 </div>
 
-<p><span id="result_box" lang="ru"><span>Далее показано, как определить и получить доступ к схеме и моделям Mongoose для примера веб-сайта LocalLibrary.</span></span></p>
+<p>Далее показано, как определить и получить доступ к схеме и моделям Mongoose для примера веб-сайта LocalLibrary.</p>
 
 <h2 id="Проектирование_моделей_LocalLibrary">Проектирование моделей LocalLibrary</h2>
 
@@ -233,7 +233,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 <ul>
  <li><code>ObjectId</code>: Представляет отдельный экземпляр модели в БД. Например, book может ссылаться на объект- автора. Поле будет содержать уникальный идентификатор (<code>_id</code>) отдельного объекта. При необходимости использования этой информации применяют метод <code>populate()</code>.</li>
  <li><a href="http://mongoosejs.com/docs/schematypes.html#mixed">Mixed</a>: Произвольный тип в схеме.</li>
- <li><font face="Consolas, Liberation Mono, Courier, monospace">[]</font>: Массив элементов. В таких моделях можно выполнять JavaScript-операции для массивов (push, pop, unshift, etc.).  Выше показан пример массивы объектов неопределённого типа и массив строк, но можно использовать массив объектов любого типа.</li>
+ <li>[]: Массив элементов. В таких моделях можно выполнять JavaScript-операции для массивов (push, pop, unshift, etc.).  Выше показан пример массивы объектов неопределённого типа и массив строк, но можно использовать массив объектов любого типа.</li>
 </ul>
 
 <p>Код содержит также два способа объявления полей:</p>

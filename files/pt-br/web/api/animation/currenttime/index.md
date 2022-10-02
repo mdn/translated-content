@@ -7,7 +7,7 @@ translation_of: Web/API/Animation/currentTime
 
 A propriedade **`Animation.currentTime`** da [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API) retorna e altera o tempo atual da animação em milésimos de segundos, seja estando em execução ou pausada.
 
-Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa, ou ainda não foi colocada em execução, o valor de retorno do `currentTime `será` null`.
+Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa, ou ainda não foi colocada em execução, o valor de retorno do `currentTime` será `null`.
 
 ## Sintaxe
 

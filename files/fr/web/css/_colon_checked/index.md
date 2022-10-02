@@ -86,14 +86,8 @@ option:checked {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires                                                       |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', '#selector-checked', ':checked')}} | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                               |
-| {{SpecName('HTML5 W3C', '#selector-checked', ':checked')}}     | {{Spec2('HTML5 W3C')}}         | La sémantique relative au HTML est définie.                        |
-| {{SpecName('CSS4 Selectors', '#checked', ':checked')}}         | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                               |
-| {{SpecName('CSS3 Basic UI', '#pseudo-checked', ':checked')}} | {{Spec2('CSS3 Basic UI')}} | Lien avec la spécification de niveau 3 pour les sélecteurs.        |
-| {{SpecName('CSS3 Selectors', '#checked', ':checked')}}         | {{Spec2('CSS3 Selectors')}} | Définition de la pseudo-classe mais pas de la sémantique associée. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.checked")}}
+{{Compat}}

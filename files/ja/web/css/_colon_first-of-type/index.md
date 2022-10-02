@@ -2,6 +2,7 @@
 title: ':first-of-type'
 slug: Web/CSS/:first-of-type
 ---
+
 {{CSSRef}}
 
 **`:first-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最初の要素を表します。

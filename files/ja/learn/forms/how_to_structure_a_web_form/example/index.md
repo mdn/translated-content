@@ -5,6 +5,7 @@ l10n:
   sourceCommit: 615d347dfc822fd49638f804317f3e95df2f7288
 original_slug: Learn/Forms/How_to_structure_an_HTML_form/Example
 ---
+
 これは記事 [ウェブフォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)の基本的なお支払いフォームの例です。
 
 ## お支払いフォーム

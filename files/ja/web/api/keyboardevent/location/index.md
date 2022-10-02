@@ -2,6 +2,7 @@
 title: KeyboardEvent.location
 slug: Web/API/KeyboardEvent/location
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.location`** は読み取り専用のプロパティで、キーボードやその他の入力機器上のキーの位置を表す `unsigned long` を返します。

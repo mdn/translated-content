@@ -2,6 +2,7 @@
 title: window.dump()
 slug: Web/API/Window/dump
 ---
+
 {{ ApiRef() }}
 
 {{Non-standard_header}}

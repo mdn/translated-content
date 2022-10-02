@@ -2,6 +2,7 @@
 title: Navigator.sendBeacon()
 slug: Web/API/Navigator/sendBeacon
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`navigator.sendBeacon()`** メソッドは、ウェブサーバーに{{glossary("Asynchronous", "非同期")}}に少量のデータを {{Glossary("HTTP")}} で送るために使用することができます。

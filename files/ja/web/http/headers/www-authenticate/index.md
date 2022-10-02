@@ -2,6 +2,7 @@
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`WWW-Authenticate`** レスポンスヘッダーは、リソースへのアクセス権を得るために使われる [HTTP 認証](/ja/docs/Web/HTTP/Authentication)メソッド (「チャレンジ」) を定義します。</p>

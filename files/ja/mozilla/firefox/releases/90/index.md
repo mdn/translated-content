@@ -2,6 +2,7 @@
 title: Firefox 90 for developers
 slug: Mozilla/Firefox/Releases/90
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 90 の変更点をまとめています。Firefox 90 は、米国時間 2021 年 7 月 13 日にリリースされました。

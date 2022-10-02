@@ -33,7 +33,7 @@ slug: Web/API/DOMTokenList
 - {{domxref("DOMTokenList.entries()")}}
   - : 返回一个迭代器（{{jsxref("Iteration_protocols","iterator")}}），以遍历这个对象中的所有键值对。
 - {{domxref("DOMTokenList.forEach()", "DOMTokenList.forEach(<var>callback</var> [, <var>thisArg</var>])")}}
-  - : 为每个 `DOMTokenList` 中的元素都调用一次传入的 `callback` 函数 。
+  - : 为每个 `DOMTokenList` 中的元素都调用一次传入的 `callback` 函数。
 - {{domxref("DOMTokenList.keys()")}}
   - : 返回一个迭代器（{{jsxref("Iteration_protocols","iterator")}}）以遍历这个对象中所有键值对的键。
 - {{domxref("DOMTokenList.values()")}}

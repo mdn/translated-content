@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 l10n:
   sourceCommit: be879d1d348cad4c917ecedb04aedabf57525ea9
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML の主要な仕事の一つは、ブラウザーが HTML 文書を開発者の意図通りに表示できるように、テキストに構造を与えることです。この記事では、 {{glossary("HTML")}} を使用して、見出しや段落を追加したり、単語を強調したり、リストを作成したりなど、ページのテキストを構造化する方法を説明します。

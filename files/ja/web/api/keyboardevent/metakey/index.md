@@ -2,6 +2,7 @@
 title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.metaKey`** は読み取り専用のプロパティで、 プロパティは、イベントが発生したときに <kbd>Meta</kbd> キーが押されていたか (`true`) あるいは押されていなかった (`false`) かを示す論理値を返します。オペレーティングシステムによっては、キーが検出されないように遮蔽されることがあります。

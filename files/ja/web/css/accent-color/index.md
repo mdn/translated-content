@@ -2,6 +2,7 @@
 title: accent-color
 slug: Web/CSS/accent-color
 ---
+
 {{CSSRef}}
 
 **`accent-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、一部の要素で生成されるユーザーインターフェイス要素の{{Glossary("accent", "強調表示")}}色を設定します。

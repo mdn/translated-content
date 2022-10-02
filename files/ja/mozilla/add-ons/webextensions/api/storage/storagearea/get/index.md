@@ -2,6 +2,7 @@
 title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
+
 {{AddonSidebar()}}
 
 ストレージ領域から 1 つ以上のアイテムを取得します。

@@ -2,6 +2,7 @@
 title: PromiseRejectionEvent.promise
 slug: Web/API/PromiseRejectionEvent/promise
 ---
+
 {{APIRef("HTML DOM") }}{{domxref("PromiseRejectionEvent")}}インターフェイスの読み取り専用プロパティである **`promise`** は、拒否された JavaScript の {{jsxref("Promise")}} を表します。promise が拒否された理由は、イベントの {{domxref("PromiseRejectionEvent.reason")}} プロパティを検査することでわかります。
 
 ## 構文

@@ -2,6 +2,7 @@
 title: exsl:object-type()
 slug: Web/EXSLT/exsl/object-type
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/EXSLT")}}
 
 `exsl:object-type()` は、指定されたオブジェクトの型を示す文字列を返します。

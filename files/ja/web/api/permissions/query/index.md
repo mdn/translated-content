@@ -2,6 +2,7 @@
 title: Permissions.query()
 slug: Web/API/Permissions/query
 ---
+
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
 {{domxref("Permissions")}} インターフェイスの **`Permissions.query()`** メソッドは、グローバルスコープに対するユーザーのパーミッションの状態を返します。

@@ -4,6 +4,7 @@ slug: Learn/Forms/Your_first_form
 l10n:
   sourceCommit: 3c4825249f93a53f0fd2b0b6d0a371663086718e
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
 このシリーズの最初の記事では、簡単なフォームの設計、HTML フォームコントロールとその他の HTML 要素を使用した正しい実装、 CSS によるとても簡単なスタイル付け、データをサーバーに送る方法を含めた、ウェブフォームを作成する本当に初歩的な経験をします。

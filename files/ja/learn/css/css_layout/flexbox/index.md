@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Flexbox
 l10n:
   sourceCommit: 1a2315572d8ae37dd1aeb387922f60cb0c3fe92d
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
 [フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) は、アイテムを行または列に並べるための 1 次元のレイアウト方法です。アイテムがたわんで（伸びて）追加の空間を埋めたり、縮んで小さい空間にに収まったりします。この記事では、すべての基本事項について説明します。

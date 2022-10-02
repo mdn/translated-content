@@ -61,9 +61,13 @@ Cette propriété peut être définie grâce à une, deux ou trois valeurs :
 - `allow-end`
   - : Un point ou une virgule en fin de ligne restera sur cette ligne si la justification du texte ne laisse pas l'espace nécessaire.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -97,12 +101,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('CSS3 Text', '#hanging-punctuation-property', 'hanging-punctuation')}} | {{Spec2('CSS3 Text')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.hanging-punctuation")}}
+{{Compat}}

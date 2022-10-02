@@ -2,6 +2,7 @@
 title: 擬似要素
 slug: Web/CSS/Pseudo-elements
 ---
+
 {{CSSRef}}
 
 CSS の **擬似要素** (Pseudo-elements) は、セレクターに付加するキーワードで、選択された要素の特定の部分にスタイル付けできるようにするものです。例えば {{CSSxRef("::first-line")}} 擬似要素は、段落の最初の行のフォントを変更するために使用することができます。

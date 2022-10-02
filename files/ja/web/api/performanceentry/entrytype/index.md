@@ -2,6 +2,7 @@
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`entryType`** プロパティは、たとえば "`mark`" などのパフォーマンスメトリックの種類を表す {{domxref("DOMString")}} を返します。このプロパティは読み取り専用です。

@@ -105,7 +105,7 @@ function logScroll(e) {
 
 ## 注意
 
-当用户滚动某个元素的内容时 `scroll` 事件将会被触发。`Element.onscroll 同等于` `element.addEventListener("scroll" ... )。`
+当用户滚动某个元素的内容时 `scroll` 事件将会被触发。`Element.onscroll` 同等于 `element.addEventListener("scroll" ... )`。
 
 ## 规范
 

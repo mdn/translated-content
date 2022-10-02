@@ -2,6 +2,7 @@
 title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
 ---
+
 {{CSSRef}}
 
 **`grid-auto-flow`** は CSS のプロパティで、自動配置のアルゴリズムの動作を制御し、自動配置されたアイテムがどのようにグリッドに流れ込むかを正確に指定するものです。

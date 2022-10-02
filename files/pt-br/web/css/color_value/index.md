@@ -964,7 +964,7 @@ A cor `rebeccapurple` é equivalente à cor `#639`, e mais informações sobre p
 
 ### `palavra-chave transparent`
 
-A palavra-chave `transparent `representa uma cor totalmente transparente, isto é, a cor vista será a cor de fundo. Tecnicamente, é um preto com canal alfa no seu valor mínimo e é um atalho para `rgba(0,0,0,0)`.
+A palavra-chave `transparent` representa uma cor totalmente transparente, isto é, a cor vista será a cor de fundo. Tecnicamente, é um preto com canal alfa no seu valor mínimo e é um atalho para `rgba(0,0,0,0)`.
 
 > **Note:** **Nota histórica**
 > A palavra-chave `transparent` não era uma cor verdadeira no CSS nível 2 (Revisão 1). Era uma palavra-chave específica que poderia ser usada no lugar de um valor `<color>` regular em duas propriedades CSS: {{Cssxref("background")}} e {{Cssxref("border")}}. Ela foi adicionada essencialmente para permitir a substituição de cores sólidas herdadas.
@@ -1009,7 +1009,7 @@ A cor deste texto é a mesma da linha:  <div style="background:currentcolor; hei
 
 Colors can be defined using the red-green-blue (RGB) model in two ways:
 
-- Hexadecimal notation `#RRGGBB,` `#RGB`
+- Hexadecimal notation `#RRGGBB`, `#RGB`
 
   - :&#x20;
 
@@ -1055,7 +1055,7 @@ Colors can also be defined via hue, saturation, and lightness, or HSL, by using 
 **Hue** is represented as an angle of the color circle (i.e. the rainbow represented in a circle). This angle is given as a unitless {{cssxref("&lt;number&gt;")}}. By definition **red=0=360**, and the other colors are spread around the circle, so **green=120**, **blue=240**, etc. As an angle, it implicitly wraps around such that -120=240 and 480=120.
 
 Saturation and lightness are represented as percentages.
-`100%` is full **saturation**, and` 0%` is a shade of grey.
+`100%` is full **saturation**, and `0%` is a shade of grey.
 `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is “normal.”
 
 ```css

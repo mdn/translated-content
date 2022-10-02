@@ -2,6 +2,7 @@
 title: developer tools の拡張
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 ---
+
 {{AddonSidebar}}
 
 > **Note:** このページでは、Firefox 55 に存在する devtools API について説明しています。この API は[Chrome devtools APIs](https://developer.chrome.com/extensions/devtools)に基づいていますが、まだ Firefox では実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、[devtools API の制限](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs)を参照してください。

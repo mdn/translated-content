@@ -2,6 +2,7 @@
 title: Web サイトのセキュリティ
 slug: Learn/Server-side/First_steps/Website_security
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 ウェブサイトのセキュリティでは、ウェブサイトのデザインと使用方法のあらゆる面で警戒が必要です。この入門記事だけではウェブサイトのセキュリティの第一人者にはなれませんが、脅威がどこから発生するのか、そして最も一般的な攻撃に対してウェブアプリケーションを強化するために何ができるのかを理解するのに役立ちます。

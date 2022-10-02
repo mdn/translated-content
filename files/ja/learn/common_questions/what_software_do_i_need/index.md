@@ -2,6 +2,7 @@
 title: ウェブサイトを作るのにどんなソフトウェアが必要？
 slug: Learn/Common_questions/What_software_do_I_need
 ---
+
 <div class="summary">
 この記事では、ウェブサイトを編集、アップロード、または閲覧するときに必要なソフトウェアについて説明します。
 </div>

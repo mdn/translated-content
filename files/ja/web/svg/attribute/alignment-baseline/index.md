@@ -2,6 +2,7 @@
 title: alignment-baseline
 slug: Web/SVG/Attribute/alignment-baseline
 ---
+
 {{SVGRef}}
 
 **`alignment-baseline`** 属性は、要素が親要素に対して配置される方法を指定します。このプロパティは、要素と親要素の対応するベースラインのどれを揃えるかを指定します。例えば、ローマ字のテキストでフォントサイズが変わった場合でも、アルファベットのベースラインを一定にすることが可能になります。既定値は `alignment-baseline` プロパティの計算値と同じ名前の値となります。
