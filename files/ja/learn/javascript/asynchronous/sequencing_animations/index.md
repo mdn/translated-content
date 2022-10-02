@@ -56,7 +56,7 @@ tags:
 
 画像のアニメーションには[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) を使用しており、具体的には {{domxref("Element/animate", "element.animate()")}} メソッドを使用しています。
 
-main.js "を更新して、以下のように `alice1.animate()` の呼び出しを追加してください。
+"main.js" を更新して、以下のように `alice1.animate()` の呼び出しを追加してください。
 
 ```js
 const aliceTumbling = [
