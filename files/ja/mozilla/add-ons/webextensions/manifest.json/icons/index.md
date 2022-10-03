@@ -69,7 +69,7 @@ You can use SVG and the browser will scale your icon appropriately. There are cu
     }
     ```
 
-> **Note:** If you are using a program like Inkscape for creating SVG, you might want to save it as a "plain SVG". Firefox might be confused by various special namespaces and not display your icon.
+> **メモ:** If you are using a program like Inkscape for creating SVG, you might want to save it as a "plain SVG". Firefox might be confused by various special namespaces and not display your icon.
 
 ## ブラウザーの互換性
 

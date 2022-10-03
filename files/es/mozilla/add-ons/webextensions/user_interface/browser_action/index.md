@@ -15,7 +15,7 @@ El botón de la barra de herramientas (acción de navegador) es muy parecido al 
 
 ## Especificando la acción de navegador
 
-Puedes definir las propiedades de la acción de navegador utilizando la llave [`browser_action`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) del archivo manifest.json:
+Puedes definir las propiedades de la acción de navegador utilizando la llave [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) del archivo manifest.json:
 
 ```json
 "browser_action": {
@@ -35,11 +35,11 @@ Existen dos formas de especificar una acción de navegador: con o sin una [venta
 browser.browserAction.onClicked.addListener(handleClick);
 ```
 
-En cambio, si especificas una ventana emergente, el evento de click no es despachado al hacer click en el botón: en su lugar, la ventana emergente es mostrada. El usuario podrá interactuar con la ventana emergente, la cual se cerrará automáticamente cada vez que el usuario haga click fuera de ella. Te recomendamos revisar el artículo de [ventanas emergentes](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups) para conocer más detalles sobre la creación y administración de éstas.
+En cambio, si especificas una ventana emergente, el evento de click no es despachado al hacer click en el botón: en su lugar, la ventana emergente es mostrada. El usuario podrá interactuar con la ventana emergente, la cual se cerrará automáticamente cada vez que el usuario haga click fuera de ella. Te recomendamos revisar el artículo de [ventanas emergentes](/en-US/Add-ons/WebExtensions/Popups) para conocer más detalles sobre la creación y administración de éstas.
 
 Cabe destacar que tu extensión puede tener solamente una acción de navegador.
 
-Puedes cambiar cualquier propiedad de la acción de navegador de forma programática, utilizando la API [`browserAction`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
+Puedes cambiar cualquier propiedad de la acción de navegador de forma programática, utilizando la API [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
 
 ## Íconos
 

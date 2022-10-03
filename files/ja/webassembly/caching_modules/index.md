@@ -7,7 +7,7 @@ l10n:
 
 {{WebAssemblySidebar}}
 
-> **Warning:** 実験的な {{jsxref("WebAssembly.Module")}} IndexedDB のシリアル化サポートがブラウザーから削除されています。{{bug("1469395")}} と[この仕様の問題](https://github.com/WebAssembly/spec/issues/821)を参照してください。
+> **警告:** 実験的な {{jsxref("WebAssembly.Module")}} IndexedDB のシリアル化サポートがブラウザーから削除されています。{{bug("1469395")}} と[この仕様の問題](https://github.com/WebAssembly/spec/issues/821)を参照してください。
 
 キャッシュはアプリケーションのパフォーマンスを向上させるのに役立ちます。コンパイルされた WebAssembly モジュールをクライアントに格納することによって、毎回ダウンロードしてコンパイルする必要がなくなります。この記事では、キャッシュまわりのベストプラクティスについて解説します。
 
@@ -23,7 +23,7 @@ IndexedDB はやや昔ながらの API です。まず、私たちは今日の�
 
 wasm-utils.js ライブラリースクリプトに `instantiateCachedURL()` があります。この関数は `url` と `dbVersion` から wasm モジュールを読み取り、 `importObject` を指定してインスタンス化を行います。そして、成功時に wasm インスタンスを渡すプロミスを返します。さらに、コンパイルされた wasm モジュールをキャッシュするデータベースの作成、新しいモジュールのデータベースへの格納、事前にキャッシュされたモジュールのデータベースからの取得（再度ダウンロードする必要がなくなります）を行います。
 
-> **Note:** サイト全体の wasm のキャッシュ（指定された URL だけではありません）は関数に渡す `dbVersion` によってバージョン管理されます。wasm モジュールコードが更新された場合や、URL が変更された場合は `dbVersion` を更新する必要があります。以降 `instantiateCachedURL()` を呼び出すと、キャッシュ全体がクリアされ、期限切れのモジュールの使用を避けることができます。
+> **メモ:** サイト全体の wasm のキャッシュ（指定された URL だけではありません）は関数に渡す `dbVersion` によってバージョン管理されます。wasm モジュールコードが更新された場合や、URL が変更された場合は `dbVersion` を更新する必要があります。以降 `instantiateCachedURL()` を呼び出すと、キャッシュ全体がクリアされ、期限切れのモジュールの使用を避けることができます。
 
 この関数はいくつかの必要な定数を定義することから始まります。
 
@@ -120,7 +120,7 @@ function instantiateCachedURL(dbVersion, url, importObject) {
   },
 ```
 
-> **Note:** {{jsxref("WebAssembly.instantiate()")}} は {{jsxref("WebAssembly.Module()", "Module")}} と {{jsxref("WebAssembly.Instance()", "Instance")}} の両方を返します。Module はコンパイルされたコードを表し、IDB に格納したり、[`postMessage()`](/ja/docs/Web/API/MessagePort/postMessage) を通じて ワーカーとの間で共有することができます。Instance はステートフルで、呼び出し可能な JavaScript の関数を含んでいるため、格納/共有することは出来ません。
+> **メモ:** {{jsxref("WebAssembly.instantiate()")}} は {{jsxref("WebAssembly.Module()", "Module")}} と {{jsxref("WebAssembly.Instance()", "Instance")}} の両方を返します。Module はコンパイルされたコードを表し、IDB に格納したり、[`postMessage()`](/ja/docs/Web/API/MessagePort/postMessage) を通じて ワーカーとの間で共有することができます。Instance はステートフルで、呼び出し可能な JavaScript の関数を含んでいるため、格納/共有することは出来ません。
 
 データベースをオープンすることに失敗した場合(例えば、パーミッションやクォータ等の原因による)、モジュールをフェッチしてコンパイルするだけにし、結果を格納しないでください (格納するデータベースがないため) 。
 

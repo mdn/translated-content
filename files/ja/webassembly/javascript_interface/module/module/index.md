@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
 
 ## 構文
 
-> **Warning:** 大きなモジュールのコンパイルにはコストがかかるため、開発者はどうしても同期コンパイルが必要な場合にのみ `Module()` コンストラクターを使用し、それ以外の場合には非同期の {{jsxref("WebAssembly.compileStreaming()")}} メソッドを使用してください。
+> **警告:** 大きなモジュールのコンパイルにはコストがかかるため、開発者はどうしても同期コンパイルが必要な場合にのみ `Module()` コンストラクターを使用し、それ以外の場合には非同期の {{jsxref("WebAssembly.compileStreaming()")}} メソッドを使用してください。
 
 ```js
 new WebAssembly.Module(bufferSource)

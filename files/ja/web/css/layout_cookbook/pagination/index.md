@@ -19,7 +19,7 @@ slug: Web/CSS/Layout_cookbook/Pagination
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/pagination.html", '100%', 720)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/pagination--download.html)
 

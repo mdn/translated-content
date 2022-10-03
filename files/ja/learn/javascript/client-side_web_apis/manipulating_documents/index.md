@@ -71,7 +71,7 @@ l10n:
 
 ![ドキュメントオブジェクトモデルをツリー構造で表現したもの。トップノードは doctype と HTML  要素です。 HTML の子ノードには、 head と body が記載されます。それぞれの子要素が分岐となる。テキストは、空白も含めてすべて表示されます。](dom-screenshot.png)
 
-> **Note:** この DOM ツリーの図は Ian Hickson の [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) を使って作成しました。
+> **メモ:** この DOM ツリーの図は Ian Hickson の [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) を使って作成しました。
 
 ツリーのそれぞれの項目は、ノードと呼ばれます。上の図では、ノードには要素（`HTML`、`HEAD`、`META` などと識別される）を表すものや 、テキスト（`#text` と識別される）を表すものがあることが分かります。[他の種類のノード](/ja/docs/Web/API/Node/nodeType)もありますが、よく見かけるものはこれらのものです。
 

@@ -51,7 +51,7 @@ _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、お�
 
   - : この要素の名前空間の URI。名前空間がない場合は `null` になります。
 
-    > **Note:** Firefox 3.5 および以前のバージョンでは、HTML 要素の名前空間はありません。以降のバージョンでは、HTML 要素は HTML ツリーおよび XML ツリーで [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) 名前空間内に存在します。
+    > **メモ:** Firefox 3.5 および以前のバージョンでは、HTML 要素の名前空間はありません。以降のバージョンでは、HTML 要素は HTML ツリーおよび XML ツリーで [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) 名前空間内に存在します。
 
 - {{DOMxRef("Element.nextElementSibling")}} {{readOnlyInline}}
   - : {{DOMxRef("Element")}} で、ツリー上で自身の直後の要素を表します。兄弟ノードがなければ `null` になります。

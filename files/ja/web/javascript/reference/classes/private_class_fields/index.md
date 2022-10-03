@@ -54,7 +54,7 @@ const instance = new ClassWithPrivateField()
 instance.#privateField === 42;   // Syntax error
 ```
 
-> **Note:** [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用すると、プライベートフィールド (またはプライベートメソッド) が欠けているかどうかをチェックできます。そのプライベートフィールドが存在すれば `true` を返し、そうでなければ `false` を返します。
+> **メモ:** [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用すると、プライベートフィールド (またはプライベートメソッド) が欠けているかどうかをチェックできます。そのプライベートフィールドが存在すれば `true` を返し、そうでなければ `false` を返します。
 
 パブリックフィールドのように、プライベートフィールドは基底クラスの構築辞典、またはサブクラス内で `super()` が呼び出される場面で追加されます。
 
