@@ -11,7 +11,7 @@ tags:
 
 {{jsSidebar("Errors")}}
 
-A exceção JavaScript "a declaration in the head of a for-of loop can't have an initializer" ocorre quando a cabeça de um [for...of](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loop contém uma expressão inicializadora tal como `for (const i = 0 in iteravel)`. Isto não é permitido no laço for-of.
+A exceção JavaScript "a declaration in the head of a for-of loop can't have an initializer" ocorre quando a cabeça de um [for...of](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loop contém uma expressão inicializadora tal como `for (const i = 0 of iteravel)`. Isto não é permitido no laço `for-of`.
 
 ## Mensagem
 
