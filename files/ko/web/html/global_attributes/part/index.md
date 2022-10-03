@@ -7,22 +7,20 @@ tags:
   - Reference
 translation_of: Web/HTML/Global_attributes/part
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><code><strong>part</strong></code> <a href="/ko/docs/Web/HTML/Global_attributes">전역 특성</a>은 요소의 파트 이름을 공백으로 구분한 목록을 지정합니다. CSS에서는 {{CSSxRef("::part")}} 의사 요소를 사용해, 섀도 트리 내의 특정 요소에 스타일을 적용할 수 있습니다.</p>
+**`part`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소의 파트 이름을 공백으로 구분한 목록을 지정합니다. CSS에서는 {{CSSxRef("::part")}} 의사 요소를 사용해, 섀도 트리 내의 특정 요소에 스타일을 적용할 수 있습니다.
 
-<p><a href="https://mdn.github.io/web-components-examples/shadow-part/">섀도 파트 예제</a>에서 사용 예를 살펴보세요.</p>
+[섀도 파트 예제](https://mdn.github.io/web-components-examples/shadow-part/)에서 사용 예를 살펴보세요.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("html.global_attributes.part")}}</p>
+{{Compat("html.global_attributes.part")}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>모든 <a href="/ko/docs/Web/HTML/Global_attributes">전역 특성</a>.</li>
-</ul>
+- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
