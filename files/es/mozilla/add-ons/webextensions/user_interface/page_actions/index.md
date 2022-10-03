@@ -34,7 +34,7 @@ Usa una página de acción cuando cuando la acción este relacionada a la págin
 
 ## Specifying the page action
 
-You define the page action's properties using the [`page_action`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key in manifest.json:
+You define the page action's properties using the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key in manifest.json:
 
 ```json
 "page_action": {
@@ -57,11 +57,11 @@ There are two ways to specify a page action: with or without a [popup](/en-US/Ad
   browser.pageAction.onClicked.addListener(handleClick);
   ```
 
-- **With a popup:** the `click` event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the [Popup](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups)article for more details on creating and managing popups.
+- **With a popup:** the `click` event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the [Popup](/en-US/Add-ons/WebExtensions/Popups)article for more details on creating and managing popups.
 
 Note that your extension can have one-page action only.
 
-You can change any of the page action properties programmatically using the [`pageAction`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API.
+You can change any of the page action properties programmatically using the [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API.
 
 ## Icons
 
