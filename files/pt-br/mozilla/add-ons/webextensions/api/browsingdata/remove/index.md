@@ -15,7 +15,7 @@ translation-of: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
 {{AddonSidebar()}}
 
-Remove dado de navegação específico.
+Remove o dado de navegação especificado.
 
 O dado de navegação a ser removido está especificado na opção  `dataTypes`, em que é um objeto {{WebExtAPIRef("browsingData.DataTypeSet")}}.
 
