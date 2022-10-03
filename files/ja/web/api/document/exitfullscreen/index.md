@@ -37,7 +37,7 @@ document.onclick = function (event) {
 }
 ```
 
-> **Note:** もっと完全な例については、{{SectionOnPage("/ja/docs/Web/API/Element/requestFullScreen", "例")}}をご覧ください。
+> **メモ:** もっと完全な例については、{{SectionOnPage("/ja/docs/Web/API/Element/requestFullScreen", "例")}}をご覧ください。
 
 ## 仕様書
 

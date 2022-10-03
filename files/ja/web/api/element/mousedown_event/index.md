@@ -7,7 +7,7 @@ slug: Web/API/Element/mousedown_event
 
 **`mousedown`** イベントは、ポインターが要素の中にあるときにポインティングデバイスのボタンが押下されたとき、その要素 ({{domxref("Element")}}) に発行されます。
 
-> **Note:** {{domxref("Element/click_event", "click")}} イベントとの違いは、 `click` イベントが完全なクリック操作の後、つまり、同じ要素内でマウスのボタンが押されて離された後で発行されることです。 `mousedown` はボタンが最初に押された時点で発行されます。
+> **メモ:** {{domxref("Element/click_event", "click")}} イベントとの違いは、 `click` イベントが完全なクリック操作の後、つまり、同じ要素内でマウスのボタンが押されて離された後で発行されることです。 `mousedown` はボタンが最初に押された時点で発行されます。
 
 <table class="properties">
   <tbody>

@@ -44,7 +44,7 @@ decodeAudioData(arrayBuffer)
 
 ボタンは単に `getData()` を実行して、それぞれトラックの読み込みと再生、停止を行うだけです。ソースの `stop()` メソッドが呼ばれると、ソースは消滅します。
 
-> **Note:** [例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/) （または[ソースを閲覧](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)することができます。）
+> **メモ:** [例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/) （または[ソースを閲覧](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)することができます。）
 
 ```js
 // 変数の定義
