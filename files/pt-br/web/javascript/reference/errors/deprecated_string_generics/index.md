@@ -9,8 +9,8 @@ tags:
 
 {{jsSidebar("Errors")}}
 
-O aviso JavaScript sobre strings genericas ocorre em versões Firefox anteriores a 68.
-As strings genericas foram removidos a partir do Firefox 68, e estas mensagens de aviso são obsoletas.
+O aviso de JavaScript sobre strings genéricas ocorre em versões do Firefox anteriores à 68.
+As strings genéricas foram removidos a partir do Firefox 68, e estas mensagens de aviso são obsoletas.
 
 ## Message
 
