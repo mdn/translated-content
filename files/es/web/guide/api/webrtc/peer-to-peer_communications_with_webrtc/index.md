@@ -12,7 +12,7 @@ Las fuentes primarias de las especificaciones para WebRTC (en constante **evoluc
 
 Gran parte de la implementación en Chrome y Firefox está basada en código que fue abierto por Google en [webrtc.org](http://www.webrtc.org/reference).
 
-**NOTA**: Las versiones actuales de FlashBlock pueden bloquear elementos HTML5 \<video>. Si es así, dile que permita el contenido en la página, o deshabilita esa opción vía Herramientas/Add-ons.
+> **Nota:** Las versiones actuales de FlashBlock pueden bloquear elementos HTML5 \<video>. Si es así, dile que permita el contenido en la página, o deshabilita esa opción vía Herramientas/Add-ons.
 
 Hay un buen tutorial en las características básicas de WebRTC en [HTML5 Rocks](http://www.html5rocks.com/en/tutorials/webrtc/basics/). Una colección de páginas de pruebas básicas para soportar el desarrollo existe en [webrtc-landing](http://mozilla.github.com/webrtc-landing).
 

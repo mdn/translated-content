@@ -13,8 +13,6 @@ translation_of: Web/MathML/Examples/MathML_Pythagorean_Theorem
 <mn>2</mn>
 </msup></mrow></math>
 
-.
-
 Podemos demostrar el teorema algebraicamente mostrando que el area del cuadrado grande
 es igual al area del cuadrado interno (hipotenusa al cuadrado) mas el area de los cuatro triangulos:
 

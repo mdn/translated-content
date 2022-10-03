@@ -49,7 +49,11 @@ div {
 }
 ```
 
-Ambos fragmentos de texto tienen color negro por defecto. El `<div>` "good" tiene un color de fondo púrpura claro, lo que hace que el texto sea fácil de leer:
+Ambos fragmentos de texto tienen color negro por defecto. 
+
+### Ejemplo bueno
+
+El `<div>` "good" tiene un color de fondo púrpura claro, lo que hace que el texto sea fácil de leer:
 
 ```html hidden
     <div class="good">
@@ -75,6 +79,8 @@ div {
 ```
 
 {{EmbedLiveSample('example1', '100%', '100')}}
+
+### Ejemplo malo
 
 El `<div>` "bad", por otro lado, tiene un color de fondo púrpura muy oscuro, lo que hace que el texto sea mucho más difícil de leer:
 

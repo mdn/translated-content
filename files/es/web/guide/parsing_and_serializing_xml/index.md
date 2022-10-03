@@ -8,7 +8,7 @@ translation_of: Web/Guide/Parsing_and_serializing_XML
 La plataforma web proveé Los siguientes objetos para hacer parsing (convertir una cadena de texto a código) y serializing (visceversa) a un XML:
 
 - [XMLSerializer](/en/XMLSerializer) para convertir a tipo string el arbol del DOM
-- [XPath](/en/XPath) para apuntar a diferentes partes de un documento** [XML](/en/XML) ( sin seguir la sintaxis XML) y convertirlas a string.**
+- [XPath](/en/XPath) para apuntar a diferentes partes de un documento **[XML](/en/XML) ( sin seguir la sintaxis XML) y convertirlas a string.**
 - [DOMParser](/en/DOM/DOMParser) para convertir a XML desde un tipo string (texto) **dentro del árbol del DOM**
 - [XMLHttpRequest](/en/nsIXMLHttpRequest) para convertit recursos URL direccionables **en arboles del DOM**
 

@@ -13,7 +13,7 @@ Para ser completamente accesible, una página web debe ser operable por alguién
 
 Si un elemento puede ser enfocado utilizando un teclado, entonces debería ser interactivo, es decir, el usuario debería ser capaz de hacer algo y producir un cambio de algún tipo (por ejemplo, activar un enlace o cambiar una opción).
 
-> **Nota:**Una excepción importante a esta regla es si el elemento tiene aplicado `role="document"`, **dentro** un contexto interactivo (como un `role="application"`). En tal caso, enfocar el documento anidado es la única forma de devolver la tecnología de asistencia a un estado de no interactividad (comúnmente llamado "modo navegador").
+> **Nota:** Una excepción importante a esta regla es si el elemento tiene aplicado `role="document"`, **dentro** un contexto interactivo (como un `role="application"`). En tal caso, enfocar el documento anidado es la única forma de devolver la tecnología de asistencia a un estado de no interactividad (comúnmente llamado "modo navegador").
 
 La mayoría de los elementos son enfocables por defecto, y se puede hacer que un elemento sea enfocable al añadir el atributo `tabindex=0`. Sin embargo, sólo se debería añadir `tabindex` si el elemento también se hace interactivo, por ejemplo, definiendo los eventos de teclado apropiados para los manejadores de eventos.
 
