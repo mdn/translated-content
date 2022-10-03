@@ -18,7 +18,7 @@ x === y
 
 ## Descripción
 
-Los operadores de estricta igualdad (`===` y `!==`) usan el [Algoritmo Estricto Comparativo de Igualdad ](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6)para comparar dos operandos:
+Los operadores de estricta igualdad (`===` y `!==`) usan el [Algoritmo Estricto Comparativo de Igualdad](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6)para comparar dos operandos:
 
 - Si los operandos son de diferente tipo de valor, produce `false`.
 - Si ambos operandos son objetos, produce `true` solo si se refiere al mismo objeto.

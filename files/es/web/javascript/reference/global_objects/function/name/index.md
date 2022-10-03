@@ -91,7 +91,7 @@ foo.bind({}).name; // "bound foo"
 
 ### Nombres de funciones getters y setters
 
-Cuando se usan [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) y `set, `"get" y "set" aparecerán en el nombre de la función.
+Cuando se usan [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) y `set,`"get" y "set" aparecerán en el nombre de la función.
 
 ```js
 var o = {

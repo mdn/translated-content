@@ -34,7 +34,7 @@ La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Exp
      <tr>
       <td><code>^</code></td>
       <td>
-       <p>Coincide con el comienzo de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca inmediatamente después de un caracter de salto de línea. Por ejemplo, <code>/^A/</code> no coincide con la "A" en "alias A", pero coincide con la primera "A" en "Alias A".</p>   
+       <p>Coincide con el comienzo de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca inmediatamente después de un caracter de salto de línea. Por ejemplo, <code>/^A/</code> no coincide con la "A" en "alias A", pero coincide con la primera "A" en "Alias A".</p>
        <div class="blockIndicator note">
        <p>Este caracter tiene un significado diferente cuando aparece al comienzo de un {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupo")}}.</p>
        </div>

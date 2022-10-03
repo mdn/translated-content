@@ -134,6 +134,7 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
   - : Habitualmente contenía una cookie HTTP, enviada previamente por el servidor con la cabecera {{HTTPHeader("Set-Cookie2")}} , pero ha quedado obsoleta por la especificación. Utiliza en su lugar {{HTTPHeader("Cookie")}}.
 - {{HTTPHeader("Set-Cookie2")}} {{obsolete_inline}}
   - : Se utilizaba para enviar cookies desde el servidor al usuario, but has been obsoleted by the specification. pero ha quedado obsoleta por la especificación. Utiliza en su lugar {{HTTPHeader("Set-Cookie")}} .
+
 - ## CORS
 
   {{HTTPHeader("Access-Control-Allow-Origin")}}
@@ -183,7 +184,9 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
   - : Indica el idioma (o idiomas) elegidos para los usuarios, de forma que se pueda mostrar contenido diferenciado para el usuario de acuerdo a sus preferencias de idioma.
 - {{HTTPHeader("Content-Location")}}
   - : Indica un punto de origen alternativo para un recurso.
+
 - ## Proxies
+
   - : Empty
 
 <!---->
@@ -324,7 +327,7 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 - {{HTTPHeader("SourceMap")}}
   - : Enlaza el código generado a un [source map](/es/docs/Tools/Debugger/How_to/Use_a_source_map).
 - {{HTTPHeader("Upgrade")}}
-  - : Éste es un Estándar de Internet Propuesto. Para leer una guía inclusiva de todos los Estándares de Internet Oficiales y Propuestos con información detallada sobre cada uno de ellos, [visita esta referencia de Estándares de Internet,](https://www.rfc-editor.org/standards) que se actualiza de forma diaria. El documento relevante de la RFC para la Actualuzación sobre los Estándares de Cabeceras es el [RFC 7230, sección 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). El estándar establece reglas para la actualización o cambios a un protocolo doferente en el cliente, servidor, o protocolo de conexiones actuales.Por ejemplo, este estándar de cabecera permite que un cliente cambie de un protocolo HTTP 1.1 al HTTP 2.0, asumiendo que el servidor decida reconocer e implementar la cabecera de Actualización. Ninguna de las partes involucradas está obligada a aceptar los cambios implementados por el campo de la Cabecera de Actualización {{HTTPHeader("Upgrade")}}. Puede usarse tanto para cabeceras de cliente como para las del servidor. Si se especifica la cabecera de Actualización, el emisor también DEBE enviar el campo de cabecera de Conexión con la opción de actualización especificada. Para más detalles sobre dicho campo, por favor revisar la[ sección 6.1 de la ya mencionada RFC](https://tools.ietf.org/html/rfc7230#section-6.1).
+  - : Éste es un Estándar de Internet Propuesto. Para leer una guía inclusiva de todos los Estándares de Internet Oficiales y Propuestos con información detallada sobre cada uno de ellos, [visita esta referencia de Estándares de Internet,](https://www.rfc-editor.org/standards) que se actualiza de forma diaria. El documento relevante de la RFC para la Actualuzación sobre los Estándares de Cabeceras es el [RFC 7230, sección 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). El estándar establece reglas para la actualización o cambios a un protocolo doferente en el cliente, servidor, o protocolo de conexiones actuales.Por ejemplo, este estándar de cabecera permite que un cliente cambie de un protocolo HTTP 1.1 al HTTP 2.0, asumiendo que el servidor decida reconocer e implementar la cabecera de Actualización. Ninguna de las partes involucradas está obligada a aceptar los cambios implementados por el campo de la Cabecera de Actualización {{HTTPHeader("Upgrade")}}. Puede usarse tanto para cabeceras de cliente como para las del servidor. Si se especifica la cabecera de Actualización, el emisor también DEBE enviar el campo de cabecera de Conexión con la opción de actualización especificada. Para más detalles sobre dicho campo, por favor revisar la[sección 6.1 de la ya mencionada RFC](https://tools.ietf.org/html/rfc7230#section-6.1).
 - {{HTTPHeader("Vary")}}
   - : Determina cómo emparejar futuras cabeceras de petición para decidir si una respuesta en caché puede utilizarse, en lugar de solicitar una cabecera nueva desde el servidor de origen.
 - {{HTTPHeader("X-DNS-Prefetch-Control")}}

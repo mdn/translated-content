@@ -50,9 +50,9 @@ Un nuevo array con los elementos que cumplen la condición. Si ningún elemento 
 
 `callback` se invoca con tres argumentos:
 
-1.  El valor de cada elemento
-2.  El índice del elemento
-3.  El objeto Array que se está recorriendo
+1. El valor de cada elemento
+2. El índice del elemento
+3. El objeto Array que se está recorriendo
 
 Si se proporciona un parámetro `thisArg` a `filter()`, este será pasado a `callback` cuando sea invocado, para usarlo como valor `this`. De lo contrario, se pasará el valor `undefined` como valor `this`. El valor `this` dentro del `callback` se determina conforme a las [las normas habituales para determinar el _this_ visto por una función.](/es/docs/Web/JavaScript/Reference/Operators/this)
 

@@ -15,9 +15,9 @@ browser-compat: javascript.statements.let
 ---
 {{jsSidebar("Statements")}}
 
-La instrucción **`let`** declara una variable de alcance local con ámbito de bloque([block ](/es/docs/Web/JavaScript/Referencia/Sentencias/block)scope), la cual, opcionalmente, puede ser inicializada con algún valor.
+La instrucción **`let`** declara una variable de alcance local con ámbito de bloque([block](/es/docs/Web/JavaScript/Referencia/Sentencias/block)scope), la cual, opcionalmente, puede ser inicializada con algún valor.
 
-> **Advertencia:** La palabra reservada **`let `**en Mozilla Firefox 44 y anteriores, está solo disponible para bloques de código en HTML que esten envueltos en una etiqueta `<script type="application/javascript;version=1.7">` (o de una version mayor). Las etiquetas [XUL](/es/docs/XUL) tienen acceso a esas características sin necesidad de dicho bloque. Es necesario tomar en cuenta que esta es una característica ~~no estándar~~ **que ya se ha hecho actualmente estándar**, ~~esto~~ **pero** puede crear conflictos con otros navegadores**, ya que fue una característica no estándar.**
+> **Advertencia:** La palabra reservada **`let`**en Mozilla Firefox 44 y anteriores, está solo disponible para bloques de código en HTML que esten envueltos en una etiqueta `<script type="application/javascript;version=1.7">` (o de una version mayor). Las etiquetas [XUL](/es/docs/XUL) tienen acceso a esas características sin necesidad de dicho bloque. Es necesario tomar en cuenta que esta es una característica ~~no estándar~~ **que ya se ha hecho actualmente estándar**, ~~esto~~ **pero** puede crear conflictos con otros navegadores**, ya que fue una característica no estándar.**
 
 ## Sintaxis
 
@@ -36,7 +36,7 @@ let var1 [= valor1] [, var2 [= valor2]] [, ..., varN [= valorN]];
 
 **`let` **te permite declarar variables limitando su alcance (_scope_) al bloque, declaración, o expresión donde se está usando.a diferencia de la palabra clave `var` la cual define una variable global o local en una función sin importar el ámbito del bloque. La otra diferencia entre `var` y `let` es que este último se inicializa a un valor sólo cuando un analizador lo evalúa (ver abajo).
 
-Al igual que `const`, `let `no crea propiedades del objeto se declara globalmente (en el alcance más alto).
+Al igual que `const`, `let`no crea propiedades del objeto se declara globalmente (en el alcance más alto).
 
 ### Alcance (_scope_) a nivel de bloque con `let`
 
@@ -127,7 +127,7 @@ if (x) {
 }
 ```
 
-En ECMAScript 2015, `let` [no eleva](/es/docs/Web/JavaScript/Referencia/Sentencias/var#Description) la variable a la parte superior del bloque. Si se hace una referencia a la variable declarada con `let` (`let foo`) antes de su declaración, terminaríamos con un error de tipo `ReferenceError `(al contrario de la variable declarada con `var`, que tendrá el valor `undefined`), esto porque la variables vive en una "zona muerta temporal" desde el inicio del bloque hasta que la declaración ha sido procesada.
+En ECMAScript 2015, `let` [no eleva](/es/docs/Web/JavaScript/Referencia/Sentencias/var#Description) la variable a la parte superior del bloque. Si se hace una referencia a la variable declarada con `let` (`let foo`) antes de su declaración, terminaríamos con un error de tipo `ReferenceError`(al contrario de la variable declarada con `var`, que tendrá el valor `undefined`), esto porque la variables vive en una "zona muerta temporal" desde el inicio del bloque hasta que la declaración ha sido procesada.
 
 ```
 function do_something() {
@@ -157,7 +157,7 @@ switch (x) {
 
 Debido al alcance léxico, el identificador `num` dentro de la expresión (`num + 55`) se evalúa como `num` del bloque `if`, y no como la variable `num` con el valor 33 que esta por encima
 
-En esa misma línea, el `num `del bloque `if` ya se ha creado en el ámbito léxico, pero aún no ha alcanzado (y **terminado**) su inicialización (que es parte de la propia declaración): todavía está en la zona muerta temporal.
+En esa misma línea, el `num`del bloque `if` ya se ha creado en el ámbito léxico, pero aún no ha alcanzado (y **terminado**) su inicialización (que es parte de la propia declaración): todavía está en la zona muerta temporal.
 
 ```
 function prueba(){
@@ -205,7 +205,7 @@ console.log(i); // ReferenceError: i is not defined
 
 ## Extensiones `let` no-estandar
 
-### Bloques` let`
+### Bloques`let`
 
 > **Advertencia:** La **sintaxis del bloque y expresion** `let` es no-estandar y sera deshechado en un futuro. ¡No deben ser usados! ver [error 1023609](https://bugzilla.mozilla.org/show_bug.cgi?id=1023609 "FIXED: Remove SpiderMonkey support for let expressions") y [error 1167029](https://bugzilla.mozilla.org/show_bug.cgi?id=1167029 "FIXED: Remove SpiderMonkey support for let blocks") para mas detalles.
 

@@ -14,8 +14,8 @@ original_slug: Web/JavaScript/Referencia/Operadores/typeof
 
 El operador `typeof` se usa en cualquiera de los siguientes modos:
 
-1.  `typeof operando`
-2.  `typeof (operando)`
+1. `typeof operando`
+2. `typeof (operando)`
 
 El operador `typeof` devuelve una cadena que indica el tipo del operando sin evaluarlo. `operando` es la cadena, variable, palabra clave u objeto para el que se devolverá su tipo. Los paréntesis son opcionales.
 

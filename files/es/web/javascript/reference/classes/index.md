@@ -84,9 +84,9 @@ El cuerpo de las _declaraciones de clase_ y las _expresiones de clase_ son ejecu
 
 ### Constructor
 
-El método [`constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) es un método especial para crear e inicializar un objeto creado con una `clase`. Solo puede haber un método especial con el nombre "constructor" en una clase. Si esta contiene mas de una ocurrencia del método **`constructor, `**se arrojará un _Error_ {{jsxref("SyntaxError")}}
+El método [`constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) es un método especial para crear e inicializar un objeto creado con una `clase`. Solo puede haber un método especial con el nombre "constructor" en una clase. Si esta contiene mas de una ocurrencia del método **`constructor,`**se arrojará un _Error_ {{jsxref("SyntaxError")}}
 
-Un **constructor** puede usar la _palabra reservada_ **`super `**para llamar al **constructor** de una _superclase_
+Un **constructor** puede usar la _palabra reservada_ **`super`**para llamar al **constructor** de una _superclase_
 
 ### Métodos prototipo
 

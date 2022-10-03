@@ -126,10 +126,10 @@ Note que ahora, ningún otro dominio aparte de `http://foo.example` (identificad
 
 A diferencia de las solicitudes simples (discutidas arriba), las solicitudes "verificadas" envían primero una solicitud HTTP por el método `OPTIONS` al recurso en el otro dominio, para determinar si es seguro enviar la verdadera solicitud. Las solicitudes de sitios cruzados son verificadas así ya que pueden tener implicaciones en la información de usuario. En particular, una solicitud es verificada sí:
 
-- Usa métodos **distintos** a `GET, HEAD` `o POST`. También, si `POST` es utilizado para enviar solicitudes de información con Content-Type **distinto** a` application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`, ej. si la solicitud `POST` envía una carga XML al servidor utilizando `application/xml` or `text/xml`, entonces la solicitud **es** verificada.
+- Usa métodos **distintos** a `GET, HEAD` `o POST`. También, si `POST` es utilizado para enviar solicitudes de información con Content-Type **distinto** a`application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`, ej. si la solicitud `POST` envía una carga XML al servidor utilizando `application/xml` or `text/xml`, entonces la solicitud **es** verificada.
 - Se establecen encabezados personalizados (ej. la solicitud usa un encabezado como `X-PINGOTHER`)
 
-> **Nota:** Empezando en {{Gecko("2.0")}}, las codificaciones de datos `text/plain`, `application/x-www-form-urlencoded`, y `multipart/form-data` pueden ser enviadas en sitios cruzados sin verificación. Anteriormente, solo` text/plain` podía ser enviado sin verificación.
+> **Nota:** Empezando en {{Gecko("2.0")}}, las codificaciones de datos `text/plain`, `application/x-www-form-urlencoded`, y `multipart/form-data` pueden ser enviadas en sitios cruzados sin verificación. Anteriormente, solo`text/plain` podía ser enviado sin verificación.
 
 Un ejemplo de este tipo de invocación puede ser:
 
@@ -329,7 +329,7 @@ Esta cabecera permite una _whitelist_ de cabeceras del servidor que los explorad
 Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 ```
 
-Esto permite a las cabeceras `X-My-Custom-Header` y` X-Another-Custom-Header` ser expuestos al explorador.
+Esto permite a las cabeceras `X-My-Custom-Header` y`X-Another-Custom-Header` ser expuestos al explorador.
 
 ### Access-Control-Max-Age
 

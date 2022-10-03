@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/flatMap
 ---
 {{JSRef}} {{SeeCompatTable}}
 
-El método **`flatMap()`** primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un [map](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de un [flatten ](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten)de profundidad 1, pero `flatMap` es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
+El método **`flatMap()`** primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un [map](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de un [flatten](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten)de profundidad 1, pero `flatMap` es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
 
 \\{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}
 

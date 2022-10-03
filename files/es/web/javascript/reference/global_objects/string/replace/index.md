@@ -67,7 +67,7 @@ La cadena de reemplazo puede incluir los siguientes patrones de reemplazo especi
 | `$&`         | Inserta la subcadena emparejada.                                                                                                                                                        |
 | `` $` ``     | Inserta la sección de cadena que precede a la subcadena emparejada.                                                                                                                     |
 | `$'`         | Inserta la porción de subcadena que sigue a la subcadena emparejada.                                                                                                                    |
-| `$n `o `$nn` | Donde `n `o `nn `son dígitos decimales positivos menores a 100, inserta la subcadena emparejada de orden _n_ del paréntesis, proporcionado por el primer argumento del objeto `RegExp`. |
+| `$n`o `$nn` | Donde `n`o `nn`son dígitos decimales positivos menores a 100, inserta la subcadena emparejada de orden _n_ del paréntesis, proporcionado por el primer argumento del objeto `RegExp`. |
 
 ### Especificando una función con un parámetro
 

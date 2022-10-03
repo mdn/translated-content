@@ -36,9 +36,9 @@ En este caso, necesitas configurar el servidor que recibe las peticiones HTTP (q
 
 Ejemplo:
 
-1.  Un servidor recibe una petición para `http://www.example.org/whaddup` (cuando el dominio canónico es example.org)
-2.  El servidor responde con un código {{HTTPStatus(301)}} con la cabecera `{{HTTPHeader("Location")}}: http://example.org/whaddup`.
-3.  El cliente emite una solicitud al dominio canónico.: `http://example.org/whatddup`
+1. Un servidor recibe una petición para `http://www.example.org/whaddup` (cuando el dominio canónico es example.org)
+2. El servidor responde con un código {{HTTPStatus(301)}} con la cabecera `{{HTTPHeader("Location")}}: http://example.org/whaddup`.
+3. El cliente emite una solicitud al dominio canónico.: `http://example.org/whatddup`
 
 El [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) tiene un ejemplo sobre [cómo configurar un servidor Apache para redirigir un dominio a otro](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
 

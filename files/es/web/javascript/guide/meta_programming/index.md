@@ -149,7 +149,7 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
         <dd><code><var>proxy</var>[foo]</code><br>
         <code><var>proxy</var>.bar</code></dd>
         <dt>Acceso a propiedad heredada</dt>
-        <dd><code>Object.create(<var>proxy</var>)[foo]</code><br>
+        <dd><code>Object.create[<var>proxy</var>](foo)</code><br>
         {{jsxref("Reflect.get()")}}</dd>
        </dl>
       </td>
@@ -168,7 +168,7 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
         <dd><code><var>proxy</var>[foo] = bar</code><br>
         <code><var>proxy</var>.foo = bar</code></dd>
         <dt>Asignación de propiedad heredada</dt>
-        <dd><code>Object.create(<var>proxy</var>)[foo] = bar</code><br>
+        <dd><code>Object.create[<var>proxy</var>](foo) = bar</code><br>
         {jsxref("Reflect.set()")}}</dd>
        </dl>
       </td>

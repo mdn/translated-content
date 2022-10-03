@@ -67,7 +67,7 @@ function test() {
 
 `eval()` es generalmente también más lenta que otras alternativas desde que se invoca en el intérprte de JS, mientras que otros muchos constructores son optimizados por los motores JS modernos.
 
-Existen alternativas más seguras (y rápidas) que `eval() `para casos de uso común.
+Existen alternativas más seguras (y rápidas) que `eval()`para casos de uso común.
 
 ### Accediendo a propiedades de los miembros
 
@@ -145,7 +145,7 @@ var result = setDescendantProp(obj, propPath, 1);  // test.a.b.c will now be 1
 
 ### Utilice funciones en lugar de evaluar fragmentos de código
 
-JavaScript tiene [funciones de primera clase ](http://en.wikipedia.org/wiki/First-class_function)(artículo en inglés), lo que quiere decir que usted puede pasar funciones como argumentos a otras APIs, almacenarlas en variables y propiedades de objetos, etc. Muchas APIs de DOM están diseñadas con esto en mente, o sea que usted puede (y debería) escribir:
+JavaScript tiene [funciones de primera clase](http://en.wikipedia.org/wiki/First-class_function)(artículo en inglés), lo que quiere decir que usted puede pasar funciones como argumentos a otras APIs, almacenarlas en variables y propiedades de objetos, etc. Muchas APIs de DOM están diseñadas con esto en mente, o sea que usted puede (y debería) escribir:
 
 ```js
 // instead of setTimeout(" ... ", 1000) use:
@@ -155,7 +155,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-Las [clausuras o cierres ](/es/docs/Web/JavaScript/Closures "JavaScript/Guide/Closures")(art. en inglés) son muy útiles como forma de crear funciones parametrizadas sin la concatenación de cadenas de caracteres o strings.
+Las [clausuras o cierres](/es/docs/Web/JavaScript/Closures "JavaScript/Guide/Closures")(art. en inglés) son muy útiles como forma de crear funciones parametrizadas sin la concatenación de cadenas de caracteres o strings.
 
 ### Analizando JSON (convirtiendo cadenas de caracteres (strings) hacia objetos de JavaScript)
 

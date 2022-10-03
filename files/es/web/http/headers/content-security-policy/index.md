@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
 {{HTTPSidebar}}
 
-La cabecera HTTP **`Content-Security-Policy `**en la respuesta permite a los administradores de un sitio web controlar los recursos que el User-Agent puede cargar a una pagina. Con algunas (Poquísimas) excepciones, las políticas implican principalmente especificar el servidor de origen la protección de puntos finales del script. Esto ayuda a protegerse contra ataques Cross-site scripting ({{Glossary("XSS")}}).
+La cabecera HTTP **`Content-Security-Policy`**en la respuesta permite a los administradores de un sitio web controlar los recursos que el User-Agent puede cargar a una pagina. Con algunas (Poquísimas) excepciones, las políticas implican principalmente especificar el servidor de origen la protección de puntos finales del script. Esto ayuda a protegerse contra ataques Cross-site scripting ({{Glossary("XSS")}}).
 
 Para mas información, ve también este articulo en [Content Security Policy (CSP)](/es/docs/Web/HTTP/CSP).
 

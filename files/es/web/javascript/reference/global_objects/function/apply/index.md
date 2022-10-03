@@ -82,7 +82,7 @@ alert(myInstance.constructor); // alerts "MyConstructor"
 
 ### **`apply`** y funciones **built-in**
 
-El uso inteligente de **`apply`** permite utilizar funciones built-in para algunas tareas que, de otra manera, habrían sido escritas recorriendo los valores del arreglo dentro de un bucle. Como ejemplo, vamos a utilizar `Math.max`/`Math.min `para encontrar el máximo/mínimo valor en un arreglo.
+El uso inteligente de **`apply`** permite utilizar funciones built-in para algunas tareas que, de otra manera, habrían sido escritas recorriendo los valores del arreglo dentro de un bucle. Como ejemplo, vamos a utilizar `Math.max`/`Math.min`para encontrar el máximo/mínimo valor en un arreglo.
 
 ```js
 /* min/max number in an array */
@@ -125,7 +125,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 (Reemplazando de manera dinámica los argumentos en tiempo de ejecución)
 
-`apply `puede ser la mejor manera de reemplazar dinámicamente una función 'built-in' de Firefox, o de una librería de JavaScript. Dada una función `someobject.foo`, puedes modificar la función de una forma 'hacker', como ésta:
+`apply`puede ser la mejor manera de reemplazar dinámicamente una función 'built-in' de Firefox, o de una librería de JavaScript. Dada una función `someobject.foo`, puedes modificar la función de una forma 'hacker', como ésta:
 
 ```js
 var originalfoo = someobject.foo;

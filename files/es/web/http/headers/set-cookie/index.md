@@ -68,7 +68,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     - Un `<cookie-name>` puede ser cualquier cosa excepto caracteres de control (CTLs) o espacios y tabulaciones. Tampoco debe contener caracteres de separación como los siguientes: `( ) < > @ , ; : \ " / [ ] ? = { }`.
     - Un `<cookie-value>` opcionalmente puede ser establecido dentro de comillas dobles y se permite usar cualquier caracter US-ASCII excluyendo CTLs, espacios en blanco, comillas dobles, comas, punto y coma y la barra invertida. **Codificación:** Muchas implementaciones realizan codificación de URL sobre los valores de la cookie, aunque esto no es requerido por la especificación RFC. Esto ayuda a satisfacer los requerimientos sobre los caracteres permitidos para \<cookie-value>.
-    - **`Prefijo __Secure-`**: Las cookies cuyo nombre comience por `__Secure-` (los guiones forman parte del prefijo) deben ser establecidas con la bandera `secure `y deben provenir de una página segura (HTTPS).
+    - **`Prefijo __Secure-`**: Las cookies cuyo nombre comience por `__Secure-` (los guiones forman parte del prefijo) deben ser establecidas con la bandera `secure`y deben provenir de una página segura (HTTPS).
     - **`Prefijo __Host-`**: Las cookies cuyo nombre comience por `__Host-` deben ser establecidas con la bandera `secure`, provenir de una página segura (HTTPS), no deben tener especificado un dominio (y por tanto no son enviadas a subdominios) y la ruta debe ser "/".
 
 - Expires=\<date> {{optional_inline}}

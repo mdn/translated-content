@@ -12,13 +12,13 @@ translation_of: Web/HTTP/Status
 
 Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una solicitud HTTP específica. Las respuestas se agrupan en cinco clases:
 
-1.  Respuestas informativas (`100`–`199`),
-2.  Respuestas satisfactorias (`200`–`299`),
-3.  Redirecciones (`300`–`399`),
-4.  Errores de los clientes (`400`–`499`),
-5.  y errores de los servidores (`500`–`599`).
+1. Respuestas informativas (`100`–`199`),
+2. Respuestas satisfactorias (`200`–`299`),
+3. Redirecciones (`300`–`399`),
+4. Errores de los clientes (`400`–`499`),
+5. y errores de los servidores (`500`–`599`).
 
-Los códigos de estado se definen en la sección 10 de[ RFC 2616](https://tools.ietf.org/html/rfc2616#section-10). Puedes obtener las especificaciones actualizadas en [RFC 7231.](https://tools.ietf.org/html/rfc7231#section-6.5.1)
+Los códigos de estado se definen en la sección 10 de[RFC 2616](https://tools.ietf.org/html/rfc2616#section-10). Puedes obtener las especificaciones actualizadas en [RFC 7231.](https://tools.ietf.org/html/rfc7231#section-6.5.1)
 
 ## Respuestas informativas
 

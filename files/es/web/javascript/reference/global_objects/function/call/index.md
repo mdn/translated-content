@@ -32,7 +32,9 @@ function.call(thisArg[, arg1[, arg2[, ...]]])
 
 - `arg1, arg2, ...`
   - : Argumentos para el objeto.
+
 - ### Valor de retorno
+
   - : El resultado de llamar a la función con el `this` especificado y los argumentos.
 
 ## Descripción

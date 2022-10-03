@@ -26,7 +26,7 @@ x == y
 
 Los operadores de igualdad (`==`y `!=`) Utilizan el algoritmo de comparación de igualdad abstracta para comparar dos operandos. Esto se puede resumir a grandes rasgos como:
 
-- Si los operandos ambos son objetos, devuelve `true `solo si ambos operandos hacen referencia al mismo objeto.
+- Si los operandos ambos son objetos, devuelve `true`solo si ambos operandos hacen referencia al mismo objeto.
 - Si un operando es `null`y el otro `undefined`, devuelve verdadero(`true`).
 - Si los operandos son de diferente tipos, intenta convertirlos al mismo tipo antes de comparar:
 
@@ -81,7 +81,7 @@ object2 == object2 // true
 
 ### Comparar String y objetos String
 
-Tenga en cuenta que las cadenas construidas con `new String() `son objetos. Si compara uno de estos con un String literal, el objeto String se convertirá en un `String` literal y se comparará el contenido. Sin embargo, si ambos operandos son objetos de tipo String, entonces se comparan como objetos y deben hacer referencia al mismo objeto para que la comparación sea exitosa:
+Tenga en cuenta que las cadenas construidas con `new String()`son objetos. Si compara uno de estos con un String literal, el objeto String se convertirá en un `String` literal y se comparará el contenido. Sin embargo, si ambos operandos son objetos de tipo String, entonces se comparan como objetos y deben hacer referencia al mismo objeto para que la comparación sea exitosa:
 
 ```js
 const string1 = "Hola";

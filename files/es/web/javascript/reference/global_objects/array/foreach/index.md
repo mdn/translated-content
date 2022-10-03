@@ -53,9 +53,9 @@ arr.forEach(function callback(currentValue, index, array) {
 
 `callback` es invocada con tres argumentos:
 
-1.  el valor del elemento
-2.  el índice del elemento
-3.  el array que está siendo recorrido
+1. el valor del elemento
+2. el índice del elemento
+3. el array que está siendo recorrido
 
 Si un parámetro `thisArg` es proporcionado a `forEach`, será usado como el valor `this` para cada invocación de `callback` como si se llamara a `callback.call(thisArg, element, index, array)`. Si `thisArg` es `undefined` o `null`, el valor `this` dentro de la función depende si la función está o no en [modo estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto "JavaScript/Strict_mode") (valor pasado si está en modo estricto, objeto global si está en modo no-estricto).
 
@@ -114,7 +114,7 @@ Nota: Dado que el parámetro `thisArg` (this) se referencia en el `forEach()`, s
 
 ### Ejemplo: Función que copia objetos
 
-El siguiente código crea una copia de un objeto dado. Hay diferentes formas de crear una copia de un objeto, ésta es sólo una de ellas y sirve para explicar cómo funciona `Array.prototype.forEach `utilizando funciones `Object.*` de ECMAScript 5.
+El siguiente código crea una copia de un objeto dado. Hay diferentes formas de crear una copia de un objeto, ésta es sólo una de ellas y sirve para explicar cómo funciona `Array.prototype.forEach`utilizando funciones `Object.*` de ECMAScript 5.
 
 ```js
 function copy(o){

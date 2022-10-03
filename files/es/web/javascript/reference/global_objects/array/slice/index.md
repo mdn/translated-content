@@ -22,7 +22,7 @@ arr.slice([inicio [, fin]])
 
 - `inicio`
   - : Índice donde empieza la extracción. El primer elemento corresponde con el índice 0.
-    Si el índice especificado es negativo, indica un desplazamiento desde el final del array.` slice(-2)`extrae los dos últimos elementos del array
+    Si el índice especificado es negativo, indica un desplazamiento desde el final del array.`slice(-2)`extrae los dos últimos elementos del array
     Si `inicio` es omitido el valor por defecto es `0`.
     Si `inicio` es mayor a la longitud del array, se devuelve un array vacío.
 - `fin`
@@ -209,7 +209,7 @@ El _shim_ también soluciona que IE pueda tratar con el caso de que el segundo a
 
 ## Compatibilidad con navegadores
 
-La tabla de compatibilidad en esta página esta generada desde datos estructurados. Si desea contribuir con los datos, por favor _"checkout"_ [https://github.com/mdn/browser-compat-data ](https://github.com/mdn/browser-compat-data)y envíenos un _"pull request"_.
+La tabla de compatibilidad en esta página esta generada desde datos estructurados. Si desea contribuir con los datos, por favor _"checkout"_ [https://github.com/mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)y envíenos un _"pull request"_.
 
 {{Compat("javascript.builtins.Array.slice")}}
 

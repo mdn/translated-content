@@ -157,9 +157,9 @@ some section about scope and functions calling other functions
 
 Una función puede referirse y llamarse a sí misma. Hay tres maneras en la que una función puede referirse a sí misma.
 
-1.  El nombre de la función
-2.  {{jsxref("arguments.callee")}}
-3.  una función dentro del ambito de ejecución que refiere a la función
+1. El nombre de la función
+2. {{jsxref("arguments.callee")}}
+3. una función dentro del ambito de ejecución que refiere a la función
 
 Por ejemplo, considere la siguiente definición de función:
 
@@ -171,9 +171,9 @@ var foo = function bar() {
 
 Dentro del cuerpo de la función, todo lo siguientes son lo mismo:
 
-1.  `bar()`
-2.  `arguments.callee()`
-3.  `foo()`
+1. `bar()`
+2. `arguments.callee()`
+3. `foo()`
 
 Una función que se llama a sí misma es llamada una _función recursiva._ En algunas ocaciones, la recursión es análoga a un bucle. Ambos ejecutan el mismo código múltiples veces, y ambas requieren una condición (para evitar un bucle infinito, o en su lugar, recursión infinita en este caso). Por ejemplo, el siguiente bucle:
 
@@ -329,9 +329,9 @@ A(1); // alerts 6 (1 + 2 + 3)
 
 En este ejemplo, `C` accede a las `B` que hayan en `y` y `A` en `x`. Esto se puede hacer porque:
 
-1.  `B` forma un cierre que incluye a `A`, es decir, `B` puede acceder a los argumentos y variables de `A`.
-2.  `C` forma un cierre que incluye a `B`.
-3.  Como el cierre de `B` incluye a `A`, el cierre de `C` incluye a `A`, `C` puede acceder a los argumentos y variables de la Banda `A`. En otras palabras, codifica los ámbitos de `B` y A en ese orden.
+1. `B` forma un cierre que incluye a `A`, es decir, `B` puede acceder a los argumentos y variables de `A`.
+2. `C` forma un cierre que incluye a `B`.
+3. Como el cierre de `B` incluye a `A`, el cierre de `C` incluye a `A`, `C` puede acceder a los argumentos y variables de la Banda `A`. En otras palabras, codifica los ámbitos de `B` y A en ese orden.
 
 Lo contrario, sin embargo, no es cierto. `A` no puede acceder a `C`, porque `A` no puede acceder a ningún argumento o variable de `B`, que `C` es una variable de. Así, `C` permanece privado de sólo `B`.
 
@@ -358,13 +358,13 @@ Las diferencias entre la `Function` constructora, la de declaración y la de exp
 
 Compare lo siguiente:
 
-1.  Una función definida con el constructor `Function` asignado a la variable `multiply`
+1. Una función definida con el constructor `Function` asignado a la variable `multiply`
 
     ```
     var multiply = new Function("x", "y", "return x * y;");
     ```
 
-2.  Una declaración de una función denominada `multiply`
+2. Una declaración de una función denominada `multiply`
 
     ```
     function multiply(x, y) {
@@ -372,7 +372,7 @@ Compare lo siguiente:
     }
     ```
 
-3.  Una expresión de función anónima asignada a la variable `multiply`
+3. Una expresión de función anónima asignada a la variable `multiply`
 
     ```
     var multiply = function(x, y) {
@@ -380,7 +380,7 @@ Compare lo siguiente:
     }
     ```
 
-4.  Una declaración de una función denominada `func_name` asignada a la variable `multiply`
+4. Una declaración de una función denominada `func_name` asignada a la variable `multiply`
 
     ```
     var multiply = function func_name(x, y) {
@@ -490,6 +490,7 @@ Ejemplos:
      function world() {}
   }
   ```
+
 - ```js
   // instrucción de la función
   function a() {
@@ -552,13 +553,13 @@ var setBGColor = new Function("document.body.style.backgroundColor = 'white';");
 
 Puede utilizar esta variable para asignar una función a un controlador de eventos de varias maneras. Aquí hay dos formas:
 
-1.  Escritura con propiedades de evento DOM HTML
+1. Escritura con propiedades de evento DOM HTML
 
     ```
     document.form1.colorButton.onclick = setBGColor;
     ```
 
-2.  Atributo de evento HTML
+2. Atributo de evento HTML
 
     ```
     <input name="colorBoton" type="button"
