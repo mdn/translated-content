@@ -84,7 +84,7 @@ Alternatively, you can also just display a warning at the top of the page for br
 
 #### 数学記号用のフォント
 
-As explained on the [MathML Fonts](/en-US/docs/Web/MathML/Fonts) article, mathematical fonts are instrumental to render MathML content. It's thus always a good idea to share the [installation instructions for such fonts](/en-US/docs/Web/MathML/Fonts#installation_instructions) or to provide them as [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts).
+As explained on the [MathML Fonts](/ja/docs/Web/MathML/Fonts) article, mathematical fonts are instrumental to render MathML content. It's thus always a good idea to share the [installation instructions for such fonts](/ja/docs/Web/MathML/Fonts#installation_instructions) or to provide them as [Web fonts](/ja/docs/Learn/CSS/Styling_text/Web_fonts).
 
 The [MathFonts page](https://fred-wang.github.io/MathFonts/) provides such Web fonts together with proper style sheets. For example, just insert the following line in your document header in order to select the Latin Modern fonts with fallback Web fonts:
 
@@ -108,7 +108,7 @@ In this section, we review some tools to convert MathML from a [lightweight mark
 
 With this approach, formulas are written directly in Web pages and a JavaScript library takes care of performing their conversion to MathML. This is probably the easiest option, but it also has some issues: extra JavaScript code must be loaded and executed, authors must escape reserved characters, Web crawlers won't have access to the MathML output...
 
-A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) can be used to host the source code and ensure the corresponding MathML output is inserted and rendered via a [shadow subtree](/en-US/docs/Web/Web_Components/Using_shadow_DOM). For example, using [TeXZilla](https://github.com/fred-wang/TeXZilla)'s [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) element, the [MathML example above](#mathml_in_html_pages) can just be rewritten more concisely as follows:
+A [custom element](/ja/docs/Web/Web_Components/Using_custom_elements) can be used to host the source code and ensure the corresponding MathML output is inserted and rendered via a [shadow subtree](/ja/docs/Web/Web_Components/Using_shadow_DOM). For example, using [TeXZilla](https://github.com/fred-wang/TeXZilla)'s [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) element, the [MathML example above](#mathml_in_html_pages) can just be rewritten more concisely as follows:
 
 ```html
 <!DOCTYPE html>
@@ -196,7 +196,7 @@ Instead of generating MathML expression at page load, you can instead rely on co
 </html>
 ```
 
-That page does contain any [`script`](/en-US/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
+That page does contain any [`script`](/ja/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
 
 ```bash
 cat input.html | node TeXZilla.js streamfilter > output.html

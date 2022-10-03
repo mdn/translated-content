@@ -68,7 +68,7 @@ API リファレンスには、一般的に次のようなページが含まれ�
 #### 概要ページ
 
 API の概要ページは、 API の役割、最上位のインターフェイス、他のインターフェイスに含まれる関連機能、その他の高水準な詳細を説明するために使われます。
-名前とスラッグは API の名前と最後に "API" を付けたものとしてください。 API リファレンスの最上位に置かれ、[https://developer.mozilla.org/ja/docs/Web/API](/en-US/docs/Web/API)の子として扱われます。
+名前とスラッグは API の名前と最後に "API" を付けたものとしてください。 API リファレンスの最上位に置かれ、[https://developer.mozilla.org/ja/docs/Web/API](/ja/docs/Web/API)の子として扱われます。
 
 例:
 

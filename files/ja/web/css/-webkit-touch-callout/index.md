@@ -57,5 +57,5 @@ iOS 上で対象が長押しされたとき、 Safari はそのリンクに関�
 
 ## 関連情報
 
-- [WebKit CSS 拡張](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions)
 - [Apple の開発者ドキュメントにおける -webkit-touch-callout](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)

@@ -22,7 +22,7 @@ new WebAssembly.Module(bufferSource)
 ### 引数
 
 - _bufferSource_
-  - : [型付き配列](/en-US/docs/Web/JavaScript/Typed_arrays)または [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) で、コンパイルしたい .wasm モジュールのバイナリーコードです。
+  - : [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)または [ArrayBuffer](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) で、コンパイルしたい .wasm モジュールのバイナリーコードです。
 
 ## 例
 
