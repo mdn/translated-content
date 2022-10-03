@@ -60,11 +60,11 @@ _Tocar ese ícono debería llevarte al mismo pasquín de confirmación que se mu
 
 ### _Google Chrome para Android_
 
-_Si tienes Google Chrome para Android disponible, la experiencia es ligeramente diferente; al cargar nuestro sitio, verás un pasquín de instalación emergente que te preguntará si deseas agregar esta aplicación a tu pantalla de inicio._
+_Si tienes Google Chrome para Android disponible, la experiencia es ligeramente diferente; al cargar nuestro sitio, verás un mensaje de instalación emergente que te preguntará si deseas agregar esta aplicación a tu pantalla de inicio._
 
 _![Captura de pantalla de un pasquín de Chrome que solicita permiso para instalar la aplicación de muestra Foxes](https://mdn.mozillademos.org/files/17159/chrome-a2hs-banner.png)_
 
-_**Nota**: Puedes obtener más información sobre los paquínes de instalación de Chrome en el artículo [Pasquínes de instalación de aplicaciones web](https://developers.google.com/web/fundamentals/app-install-banners/)._
+> **Nota:** Puedes obtener más información sobre los mensajes de instalación de Chrome en el artículo [Mensajes de instalación de aplicaciones web](https://developers.google.com/web/fundamentals/app-install-banners/)._
 
 _Si eliges no agregarlo a tu pantalla de inicio en este momento, los puedes hacer más tarde usando el ícono "Agregar a la pantalla de inicio" en el menú principal de Chrome._
 

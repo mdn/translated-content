@@ -109,7 +109,7 @@ We first attach a shadow root to the custom element:
 var shadow = this.attachShadow({mode: 'open'});
 ```
 
-< id="Creating_the_shadow_DOM_structure">Creating the shadow DOM structure
+### Creating the shadow DOM structure
 
 Next, we use some DOM manipulation to create the element's internal shadow DOM structure:
 
@@ -139,7 +139,7 @@ img.src = imgUrl;
 icon.appendChild(img);
 ```
 
-< id="Styling_the_shadow_DOM">Styling the shadow DOM
+### Styling the shadow DOM
 
 After that we create a {{htmlelement("style")}} element and populate it with some CSS to style it:
 

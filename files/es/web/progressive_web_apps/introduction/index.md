@@ -136,7 +136,9 @@ Las aplicaciones web adaptables utilizan tecnologías como {{web.link("/es/docs/
 
 ![Segura](https://mdn.mozillademos.org/files/12664/safe.svg)
 
-![Captura de pantalla que muestra una gran cantidad de resultados al buscar "Messenger" al intentar encontrar Facebook Messenger. ¿Cuál es el correcto?](https://mdn.mozillademos.org/files/17175/InstalingMessengerSoManyOptionsEek.jpeg)La plataforma web proporciona un mecanismo de entrega seguro que evita espionaje y, al mismo tiempo, garantiza que el contenido no haya sido manipulado, siempre que aproveche {{Glossary("HTTPS")}} y desarrolles tus aplicaciones pensando en la seguridad.
+La plataforma web proporciona un mecanismo de entrega seguro que evita espionaje y, al mismo tiempo, garantiza que el contenido no haya sido manipulado, siempre que aproveche {{Glossary("HTTPS")}} y desarrolles tus aplicaciones pensando en la seguridad.
+
+![Captura de pantalla que muestra una gran cantidad de resultados al buscar "Messenger" al intentar encontrar Facebook Messenger. ¿Cuál es el correcto?](https://mdn.mozillademos.org/files/17175/InstalingMessengerSoManyOptionsEek.jpeg)
 
 También es fácil para los usuarios asegurarse de que están instalando la aplicación correcta, porque su URL coincidirá con el dominio de tu sitio. Esto es muy diferente de las aplicaciones en las tiendas de aplicaciones, que pueden tener varias aplicaciones con nombres similares, algunas de las cuales incluso pueden estar basadas en su propio sitio, lo que aumenta la confusión. Las aplicaciones web eliminan esa confusión y garantizan que los usuarios obtengan la mejor experiencia posible.
 

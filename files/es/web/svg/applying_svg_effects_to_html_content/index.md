@@ -19,7 +19,7 @@ Firefox 3.5 introduce soporte para usar SVG como un componente de estilos CSS pa
 
 Puede especificar SVG en los estilos, ya sea dentro del mismo documento, o dentro de una hoja de estilos externa.
 
-> **Nota:** Nota: Las referencias a SVG en archivos externos deben ser de el mismo origen que el documento de origen.
+> **Nota:** Las referencias a SVG en archivos externos deben ser de el mismo origen que el documento de origen.
 
 ## Uso integrado SVG
 
@@ -39,7 +39,7 @@ Hay tres estilos que se pueden aplicar: puede usar la máscara, el recorrido de 
 
 Por ejemplo, puede establecer un estilo CSS que proporciona una máscara de degradado para el contenido HTML con código SVG similar a lo siguiente en su documento HTML:
 
-**NOTA: **El espaciamiento de nombre no es válida en HTML 5, dejar fuera de la "svg:" en las etiquetas de los documentos en formato HTML.
+> **Nota:** El espaciamiento de nombre no es válida en HTML 5, dejar fuera de la "svg:" en las etiquetas de los documentos en formato HTML.
 
 ```xml
   <style>.target { mask: url(#m1); }</style>
@@ -150,5 +150,3 @@ El SVG se importa desde un archivo llamado `resources.svg`, utilizando la ruta d
 - [SVG](/en/SVG)
 - [SVG Effects for HTML Content](/web-tech/2008/09/15/svg-effects-for-html-content) (blog post)
 - [SVG External Document References](/web-tech/2008/10/10/svg-external-document-references) (blog post)
-
-CESAR ORTIZ GUTIERREZ - ELPATOX - wWw\.Patito.Tk

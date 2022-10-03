@@ -67,7 +67,7 @@ Las siguientes guías te muestran lo que debes hacer para implementar una PWA, e
 - [`sw-precache`](https://github.com/GoogleChrome/sw-precache) — un módulo de `node` para generar código del servicio _worker que precargará recursos específicos._
 - _[workbox](https://github.com/GoogleChrome/workbox): sucesor espiritual de "sw-precache" con estrategias de almacenamiento en caché más avanzadas y sencillas precargas._
 - _[upup](https://www.talater.com/upup/): un diminuto script que garantiza que tu sitio siempre esté disponible para tus usuarios._
-- _[El libro de recetas para servicios \_worker_](https://serviceworke.rs/): una serie de excelentes recetas de servicios _worker_ que muestran cómo implementar una aplicación sin conexión, además de otros muchos concejos.\_
+- _[El libro de recetas para servicios worker](https://serviceworke.rs/): una serie de excelentes recetas de servicios worker que muestran cómo implementar una aplicación sin conexión, además de otros muchos concejos._
 - _[Extensión PWA de VS Code](https://marketplace.visualstudio.com/items?itemName=mayeedwin.vscode-pwa): una colección de todos los fragmentos de código esenciales que necesitas para crear aplicaciones web progresivas correctamente allí en tu entorno de VS Code._
 
 <!---->

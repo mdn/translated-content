@@ -41,7 +41,7 @@ Los scripts ejecutados desde páginas con una URL `about:blank` o `javascript:` 
 Internet Explorer tiene dos excepciones mayores en lo que se refiere a la política same-origin
 
 - Zonas de Confianza: si ambos dominios pertenecen a una zona de alta confianza e.g, dominios corporativos, entonces las limitaciones del mismo origen no son aplicadas.
-- Puerto: IE no incluye puerto en los componentes de Same Origin, por lo tanto http\://company.com:81/index.html y http\://company.com/index.html se consideran del mismo origen y no se aplican restricciones.
+- Puerto: IE no incluye puerto en los componentes de Same Origin, por lo tanto <http://company.com:81/index.html> y <http://company.com/index.html> se consideran del mismo origen y no se aplican restricciones.
 
 Estas excepciones no son estándar y no están soportadas en otro navegador pero son útiles cuando se desarrolla una app para Windows RT (o) basada en IE.
 
@@ -144,7 +144,8 @@ Las cookies usan una definición separada de orígenes. Una página puede asigna
 
 ## Ver también
 
-- [Política](http://www.w3.org/Security/wiki/Same_Origin_Policy)[Same-Origin para file: URIs](/es/docs/Same-origin_policy_for_file:_URIs)
+- [Política](http://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Same-Origin para file: URIs](/es/docs/Same-origin_policy_for_file:_URIs)
 - [Política Same-Origin en W3C](http://www.w3.org/Security/wiki/Same_Origin_Policy)
 
 ## Información de Documento Original
