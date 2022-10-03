@@ -1,15 +1,9 @@
 ---
 title: Document.getSelection()
 slug: Web/API/Document/getSelection
-tags:
-  - API
-  - Document
-  - Method
-  - Reference
-  - getSelection
-translation_of: Web/API/Document/getSelection
 original_slug: Web/API/DocumentOrShadowRoot/getSelection
 ---
+
 {{APIRef("DOM")}}
 
 **`getSelection()`** は {{DOMxRef("Document")}} インターフェイスのプロパティで、ユーザーが選択したテキストの範囲、またはキャレットの現在位置を表す {{DOMxRef("Selection")}} オブジェクトを返します。

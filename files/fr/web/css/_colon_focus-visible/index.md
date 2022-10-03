@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/CSS/:focus-visible
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La pseudo-classe **`:focus-visible`** s'applique lorsqu'un élément correspond à la pseudo-classe {{cssxref("focus")}} et que l'agent utilisateur détermine, via une heuristique, que le focus devrait être mis en évidence sur l'élément (la plupart des navigateurs affichent un contour en surbrillance par défaut).
@@ -113,13 +114,11 @@ L'apparition ou la disparition d'un indicateur de focus peut être source de con
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#the-focus-visible-pseudo", ":focus-visible")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.focus-visible")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -10,6 +10,7 @@ tags:
   - l10n:priority
 translation_of: Web/HTML/Element
 ---
+
 {{HTMLSidebar("Elements")}}
 
 Cette page répertorie tous les [éléments](/fr/docs/Glossary/Element) [HTML](/fr/docs/Glossary/HTML), qui sont créés à l'aide de [balises](/fr/docs/Glossary/Tag). Ils sont regroupés par fonction pour vous aider à trouver facilement ce que vous avez en tête. Une liste alphabétique de tous les éléments est fournie dans la barre latérale de la page de chaque élément ainsi que de celle-ci.
@@ -58,7 +59,7 @@ HTML prend en charge différents fichiers multimédias pour les images, les fich
 
 En plus du contenu multimédia, un document HTML peut embarquer d'autres contenus (bien que les interactions soient plutôt limitées).
 
-{{HTMLRefTable("multimedia")}}
+{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}
 
 ## SVG et MathML
 

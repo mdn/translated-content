@@ -1,17 +1,8 @@
 ---
 title: Document.rootElement
 slug: Web/API/Document/rootElement
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Document
-  - Property
-  - Reference
-  - SVG
-  - root
-translation_of: Web/API/Document/rootElement
 ---
+
 {{ApiRef("DOM")}}{{Deprecated_header}}
 
 **`Document.rootElement`** は {{domxref("Element")}} を返します。これは

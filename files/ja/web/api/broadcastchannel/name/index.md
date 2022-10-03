@@ -1,16 +1,8 @@
 ---
 title: BroadcastChannel.name
 slug: Web/API/BroadcastChannel/name
-tags:
-  - Broadcast Channel API
-  - BroadcastChannel
-  - Experimental
-  - HTML API
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/BroadcastChannel/name
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 読み取り専用の **`BroadcastChannel.name`** プロパティは、指定されたチャンネルをその名前で一意に識別する {{domxref("DOMString")}} を返します。 この名前は作成時に {{domxref("BroadcastChannel.BroadCastChannel", "BroadcastChannel()")}} コンストラクタに渡されるため、読み取り専用です。

@@ -1,15 +1,8 @@
 ---
 title: ゲームパッド API を使用したコントロールの実装
 slug: Games/Techniques/Controls_Gamepad_API
-tags:
-  - Controls
-  - Gamepad API
-  - Gamepads
-  - Games
-  - JavaScript
-  - controllers
-translation_of: Games/Techniques/Controls_Gamepad_API
 ---
+
 {{GamesSidebar}}
 
 この記事では、ゲームパッド API を使用してウェブゲーム用の効果的なクロスブラウザー制御システムを実装し、ゲーム機のゲームコントローラーを使用してウェブゲームを制御できるようにします。 [Enclave Games](http://enclavegames.com/) によって作成されたケーススタディゲーム Hungry Fridge を掲載しています。

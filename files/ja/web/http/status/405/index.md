@@ -1,17 +1,11 @@
 ---
 title: 405 Method Not Allowed
 slug: Web/HTTP/Status/405
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-  - クライアントエラー
-  - リファレンス
-translation_of: Web/HTTP/Status/405
 ---
+
 {{HTTPSidebar}}
 
-HyperText Transfer Protocol (HTTP) の **`405`\*\***` Method Not Allowed`\*\* レスポンスステータスコードは、リクエストメソッドをサーバー側で認識しているが、対象のリソースでは対応していないことを示します。
+HyperText Transfer Protocol (HTTP) の **`405`** `Method Not Allowed` レスポンスステータスコードは、リクエストメソッドをサーバー側で認識しているが、対象のリソースでは対応していないことを示します。
 
 サーバーは 405 レスポンスで、対象のリソースで現在対応しているメソッドの一覧を含む **`Allow`** ヘッダー欄を生成しなければなりません。
 

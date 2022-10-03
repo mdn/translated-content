@@ -1,19 +1,8 @@
 ---
 title: HTMLMediaElement.srcObject
 slug: Web/API/HTMLMediaElement/srcObject
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - srcObject
-browser-compat: api.HTMLMediaElement.srcObject
-translation_of: Web/API/HTMLMediaElement/srcObject
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`srcObject`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、 {{domxref("HTMLMediaElement")}} に関連付けられたメディアソースを提供するオブジェクトを設定または取得します。

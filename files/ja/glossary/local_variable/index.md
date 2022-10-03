@@ -1,13 +1,8 @@
 ---
 title: Local variable (ローカル変数)
 slug: Glossary/Local_variable
-tags:
-  - CodingScripting
-  - Glossary
-  - NeedsContent
-  - 用語集
-translation_of: Glossary/Local_variable
 ---
+
 {{glossary("variable", "変数")}}のうち、その{{glossary("value","値")}}を指す名前が{{Glossary("local scope","ローカルスコープ")}}内にのみあるものです。
 
 ## 例
@@ -20,6 +15,6 @@ function fun(){
 }
 ```
 
-1.  一般知識
+1. 一般知識
 
-    1.  Wikipedia 上の{{interwiki("wikipedia", "ローカル変数")}}
+    1. Wikipedia 上の{{interwiki("wikipedia", "ローカル変数")}}

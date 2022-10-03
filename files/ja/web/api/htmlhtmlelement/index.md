@@ -1,15 +1,8 @@
 ---
 title: HTMLHtmlElement
 slug: Web/API/HTMLHtmlElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLHtmlElement
-translation_of: Web/API/HTMLHtmlElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLHtmlElement`** インターフェイスはこの HTML 文書のルートノードとして機能します。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスで記述されたプロパティやメソッドを継承しています。

@@ -1,20 +1,8 @@
 ---
 title: ClipboardItem()
 slug: Web/API/ClipboardItem/ClipboardItem
-page-type: web-api-instance-property
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Constructor
-  - Cut
-  - Reference
-  - copy
-  - paste
-browser-compat: api.ClipboardItem.ClipboardItem
-translation_of: Web/API/ClipboardItem/ClipboardItem
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 **`ClipboardItem()`** は{{domxref("Clipboard API", "クリップボード API", "", 1)}} のコンストラクターで、新しい {{domxref("ClipboardItem")}} オブジェクトを生成します。これは、{{domxref("Clipboard API", "クリップボード API", "", 1)}} で保存・取得するデータを表し、それぞれ {{domxref("clipboard.write()")}} と {{domxref("clipboard.read()")}} で操作します。

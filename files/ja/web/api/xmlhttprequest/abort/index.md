@@ -1,24 +1,8 @@
 ---
 title: XMLHttpRequest.abort()
 slug: Web/API/XMLHttpRequest/abort
-tags:
-  - AJAX
-  - API
-  - XHR の中止
-  - XHR のキャンセル
-  - HTTP
-  - HttpRequest
-  - メソッド
-  - リファレンス
-  - XHR の停止
-  - XHR
-  - XMLHttpRequest
-  - abort
-  - キャンセル
-  - 停止
-browser-compat: api.XMLHttpRequest.abort
-translation_of: Web/API/XMLHttpRequest/abort
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest.abort()`** メソッドは、すでに送信されたリクエストを中止します。リクエストが中止されたら、 {{domxref("XMLHttpRequest.readyState", "readyState")}} が {{domxref("XMLHttpRequest.UNSENT")}} (0) に変化し、リクエストの {{domxref("XMLHttpRequest.status", "status")}} コードが 0 に設定されます。

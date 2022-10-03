@@ -1,15 +1,8 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 ---
+
 {{JSRef}}
 
 **`return()`** メソッドは、指定された値を返してジェネレーターを終了します。

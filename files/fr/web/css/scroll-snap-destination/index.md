@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-destination
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 La propriété **`scroll-snap-destination`** définit les coordonnées horizontale et verticale des points d'accroche dans le {{Glossary("viewport")}} du conteneur.
@@ -29,9 +30,13 @@ scroll-snap-destination: unset;
 - `<position>`
   - : Définit le décalage entre le bord du viewport du conteneur et le point d'accroche à utiliser lors du défilement. La première valeur indique la coordonnée horizontale et la seconde indique la coordonnée verticale.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -125,12 +130,8 @@ scroll-snap-destination: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-destination", "scroll-snap-destination")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-snap-destination")}}
+{{Compat}}

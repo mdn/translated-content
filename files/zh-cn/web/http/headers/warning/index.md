@@ -2,11 +2,12 @@
 title: Warning
 slug: Web/HTTP/Headers/Warning
 ---
+
 {{HTTPSidebar}}
 
 **`Warning`** 是一个通用报文首部，包含报文当前状态可能存在的问题。在响应中可以出现多个 Warning 首部。
 
-一般来说， Warning 首部可以应用于任何类型的报文。然而一部分警告码（warn-code）是为缓存代理服务器定制的，并且只可以应用在响应报文中。
+一般来说，Warning 首部可以应用于任何类型的报文。然而一部分警告码（warn-code）是为缓存代理服务器定制的，并且只可以应用在响应报文中。
 
 | Header type                                      | {{Glossary("General header")}} |
 | ------------------------------------------------ | ---------------------------------------- |
@@ -44,7 +45,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 | 113  | Heuristic Expiration   | 如果缓存服务器采用启发式方法，将缓存的有效时间设定为 24 小时，而在该响应的年龄超过 24 小时时发送。 |
 | 199  | Miscellaneous Warning  | 任意的、未明确指定的警告信息。                                                                     |
 | 214  | Transformation Applied | 由代理服务器添加，如果它对返回的展现内容进行了任何转换，比如改变了内容编码、媒体类型等。           |
-| 299  | Miscellaneous Warning  | 与 199 类似，只不过指代的是持久化警告。                                                            |
+| 299  | Miscellaneous Persistent Warning  | 与 199 类似，只不过指代的是持久化警告。                                                            |
 
 ## 示例
 

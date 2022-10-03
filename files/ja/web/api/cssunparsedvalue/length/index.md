@@ -1,18 +1,8 @@
 ---
 title: CSSUnparsedValue.length
 slug: Web/API/CSSUnparsedValue/length
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - length
-translation_of: Web/API/CSSUnparsedValue/length
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`length`** は {{domxref("CSSUnparsedValue")}} インターフェイスの読み取り専用プロパティで、オブジェクト内の項目の数を返します。

@@ -1,18 +1,8 @@
 ---
 title: CSSVariableReferenceValue.variable
 slug: Web/API/CSSVariableReferenceValue/variable
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSVariableReferenceValue
-  - Houdini
-  - NeedsExample
-  - Property
-  - Reference
-  - variable
-  - プロパティ
-translation_of: Web/API/CSSVariableReferenceValue/variable
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`variable`** は {{domxref("CSSVariableReferenceValue")}} インターフェイスのプロパティで、カスタム名で返される組み込み CSS 値です。

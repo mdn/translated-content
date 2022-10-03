@@ -1,16 +1,8 @@
 ---
 title: Document.visibilityState
 slug: Web/API/Document/visibilityState
-tags:
-  - DOM
-  - Document
-  - Page Visibility API
-  - Property
-  - Read-only
-  - Reference
-  - Web
-translation_of: Web/API/Document/visibilityState
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.visibilityState`** 読み取り専用プロパティは、文書 ({{domxref('document')}}) の可視性、つまりこの要素が現在表示されているかのコンテキストを返します。 文書がバックグラウンドにあるのか、非表示のタブにあるのか、プリレンダリングのためにのみ読み込まれるのかを知ることは有用です。 可能な値は次のとおりです。

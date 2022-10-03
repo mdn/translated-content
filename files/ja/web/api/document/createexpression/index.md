@@ -1,16 +1,8 @@
 ---
 title: Document.createExpression()
 slug: Web/API/Document/createExpression
-tags:
-  - API
-  - DOM
-  - Document
-  - Reference
-  - XPath
-  - createExpression
-  - メソッド
-translation_of: Web/API/Document/createExpression
 ---
+
 {{APIRef("DOM")}}
 
 このメソッドは、 (繰り返して) 評価を行うために使用することができる {{DOMxRef("XPathExpression")}} をコンパイルします。

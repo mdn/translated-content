@@ -1,14 +1,8 @@
 ---
 title: Web standards (ウェブ標準)
 slug: Glossary/Web_standards
-tags:
-  - Glossary
-  - Infrastructure
-  - Web Standards
-  - standards
-  - web specifications
-translation_of: Glossary/Web_standards
 ---
+
 ウェブ標準は国際標準化団体によって策定される、 {{Glossary("World Wide Web", "ウェブ")}} の仕組み (またときには {{Glossary("Internet", "インターネット")}} を制御する方法) を定義する規則です。
 
 いくつかの標準化団体がウェブのさまざまな側面を定義する責任があり、すべての標準はウェブを最大限に利用可能でアクセス可能に保つために調整する必要があります。

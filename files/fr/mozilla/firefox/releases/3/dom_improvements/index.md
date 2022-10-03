@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/DOM_improvements
 original_slug: Améliorations_DOM_dans_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3 offre un certain nombre d'améliorations dans sa gestion du [modèle objet de document](fr/DOM) (DOM), en particulier en ce qui concerne la gestion de ses extensions ajoutées par d'autres navigateurs. Cet article reprend une liste de ces améliorations ainsi que des liens vers une documentation plus détaillée.
@@ -25,7 +26,7 @@ Firefox 3 offre un certain nombre d'améliorations dans sa gestion du [modèle o
 
   — mise en majuscules). Consultez [L'évènement Keypress dans Gecko](fr/L'%c3%a9v%c3%a8nement_Keypress_dans_Gecko).
 
-### Voir également
+### Voir aussi
 
 - [Firefox 3 pour les développeurs](fr/Firefox_3_pour_les_d%c3%a9veloppeurs)
 - [Améliorations CSS dans Firefox 3](fr/Am%c3%a9liorations_CSS_dans_Firefox_3)

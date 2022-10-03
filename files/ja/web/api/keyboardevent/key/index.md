@@ -1,18 +1,8 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
-browser-compat: api.KeyboardEvent.key
-translation_of: Web/API/KeyboardEvent/key
 ---
+
 {{APIRef("UI Events")}}
 
 {{domxref("KeyboardEvent")}} インターフェイスの **`key`** プロパティは読み取り専用で、ユーザーが押したキーの値を、 <kbd>Shift</kbd> キーなどの修飾キーやキーボードのロケールやレイアウトを考慮した値で返します。

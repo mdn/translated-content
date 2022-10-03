@@ -1,14 +1,8 @@
 ---
 title: performance.setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.setResourceTimingBufferSize
-translation_of: Web/API/Performance/setResourceTimingBufferSize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`setResourceTimingBufferSize()`** メソッドは、ブラウザーのリソースタイミングバッファーサイズを、指定された数の "`resource`" の {{domxref("PerformanceEntry.entryType","パフォーマンスエントリー種別")}}のオブジェクトに設定します。

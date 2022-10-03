@@ -1,17 +1,8 @@
 ---
 title: 知覚可能
 slug: Web/Accessibility/Understanding_WCAG/Perceivable
-tags:
-  - Accessibility
-  - Principle 1
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - contrast
-  - different presentation
-  - text alternatives
-  - time-based media
-translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 ---
+
 この記事では、ウェブコンテンツ・アクセシビリティガイドライン（WCAG）2.0 および 2.1 の**知覚可能**原則に概説されている達成基準に準拠するようにウェブコンテンツを作成する方法についての実用的なアドバイスを提供します。 知覚可能とは、ユーザーが自分の感覚の 1 つ以上を使用して何らかの方法でそれを知覚できなければならないということです。
 
 > **Note:** 知覚可能の W3C 定義とそのガイドラインおよび達成基準を読むには、[原則 1: 知覚可能 — 情報とユーザーインターフェイス・コンポーネントが、ユーザーが認識できる方法で提示可能である必要があります](https://www.w3.org/TR/WCAG21/#perceivable)（英語）を参照してください。
@@ -552,7 +543,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 
 - [WCAG](/ja/docs/Web/Accessibility/Understanding_WCAG)
 
-  1.  知覚可能
-  2.  [操作可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3.  [理解可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4.  [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  1. 知覚可能
+  2. [操作可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  3. [理解可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable)
+  4. [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust)

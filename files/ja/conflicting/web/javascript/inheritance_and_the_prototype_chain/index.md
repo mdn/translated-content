@@ -1,15 +1,9 @@
 ---
 title: オブジェクトモデルの詳細
 slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - ガイド
-  - 中級者
-  - JavaScript
-  - オブジェクト
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
 
 JavaScript は、クラスではなく、プロトタイプに基づいたオブジェクトベースの言語です。この基本的な違いにより、 JavaScript がオブジェクト階層構造をどのように作り上げているか、またプロパティやその値の継承方法が表面上分かりにくいものとなっています。本章ではこれらの実態を明らかにしていきます。
@@ -139,7 +133,7 @@ class Employee {
 }
 ```
 
-#### JavaScript \*\* (代わりにこれを使う)
+#### JavaScript (代わりにこれを使う)
 
 ```js
 function Employee() {

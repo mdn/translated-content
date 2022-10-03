@@ -1,22 +1,8 @@
 ---
 title: Node 開発環境の設定
 slug: Learn/Server-side/Express_Nodejs/development_environment
-tags:
-  - CodingScripting
-  - Express
-  - Intro
-  - Learn
-  - Node
-  - nodejs
-  - npm
-  - server-side
-  - イントロダクション
-  - サーバサイド
-  - 初心者
-  - 学習
-  - 開発環境
-translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 Express の目的が理解できたので、Windows、Linux (Ubuntu)、および macOS 上で Node/Express 開発環境をセットアップしてテストする方法を説明します。どのような一般的な OS を使用していても、この記事では Express アプリケーションの開発を開始するために必要なものを提供します。
@@ -69,12 +55,12 @@ _Express_ を使用するには、まず _Nodejs_ と [Node Package Manager (NPM
 
 Windows と macOS への _Node_ と _NPM_ のインストールは、提供されているインストーラーを使用することができるため、簡単です。
 
-1.  必要なインストーラーをダウンロードします
+1. 必要なインストーラーをダウンロードします
 
-    1.  <https://nodejs.org/ja/> に進みます
-    2.  "ほとんどのユーザーに推奨" である LTS ビルドをダウンロードするためのボタンを選択してください。
+    1. <https://nodejs.org/ja/> に進みます
+    2. "ほとんどのユーザーに推奨" である LTS ビルドをダウンロードするためのボタンを選択してください。
 
-2.  ダウンロードしたファイルをダブルクリックし、インストールの指示に従って Node をインストールします。
+2. ダウンロードしたファイルをダブルクリックし、インストールの指示に従って Node をインストールします。
 
 ### Ubuntu 18.04
 
@@ -85,7 +71,7 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-> **Warning:** **警告:** それらは非常に古いバージョンの Node を含んでいるので、通常の Ubuntu リポジトリーから直接インストールしないでください。
+> **Warning:** それらは非常に古いバージョンの Node を含んでいるので、通常の Ubuntu リポジトリーから直接インストールしないでください。
 
 ### Nodejs および NPM インストールのテスト
 
@@ -105,7 +91,7 @@ _Nodejs_ パッケージマネージャー _NPM_ もインストールされて�
 
 もう少し刺激的なテストとして、ブラウザーで正しい URL にアクセスしたときにブラウザーに「Hello World」を単純に出力する、非常に基本的な "純粋な Node" サーバーを作成しましょう。
 
-1.  次のテキストを **hellonode.js** というファイルにコピーします。これは純粋な Node 関数 (Express からは何もしていません) といくつかの ES6 構文を使用します。
+1. 次のテキストを **hellonode.js** というファイルにコピーします。これは純粋な Node 関数 (Express からは何もしていません) といくつかの ES6 構文を使用します。
 
     ```js
     //HTTP モジュールを読み込む
@@ -132,14 +118,14 @@ _Nodejs_ パッケージマネージャー _NPM_ もインストールされて�
 
     > **Note:** このコードが何をしているのか正確に理解できなくても心配しないでください。Express を使い始めたら、コードについて詳しく説明します。
 
-2.  コマンドプロンプトで `hellonode.js` ファイルと同じディレクトリーに移動し、次のようにスクリプト名とともに `node` を呼び出してサーバーを起動します。
+2. コマンドプロンプトで `hellonode.js` ファイルと同じディレクトリーに移動し、次のようにスクリプト名とともに `node` を呼び出してサーバーを起動します。
 
     ```bash
     >node hellonode.js
     Server running at http://127.0.0.1:3000/
     ```
 
-3.  http\://127.0.0.1:3000 の URL に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World" を表示するはずです。
+3. `http://127.0.0.1:3000` の URL に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World" を表示するはずです。
 
 ## NPM の使用
 
@@ -155,14 +141,14 @@ Node 自体の次に、[NPM](https://docs.npmjs.com/) は Node アプリケー�
 
 > **Note:** ここでは Express パッケージを取得してインストールするための手順を示します。後で、このパッケージなどが Express Application Generator を使用してすでにどのように指定されているかを示します。このセクションは NPM がどのように機能するのか、および Application Generator によって何が作成されているのかを理解するのに役立ちます。
 
-1.  まず、新しいアプリケーション用のディレクトリーを作成し、そこに移動します。
+1. まず、新しいアプリケーション用のディレクトリーを作成し、そこに移動します。
 
     ```bash
     mkdir myapp
     cd myapp
     ```
 
-2.  アプリケーション用の **package.json** ファイルを作成するには、npm `init` コマンドを使用します。このコマンドはアプリケーションの名前とバージョン、初期エントリポイントファイルの名前 (デフォルトでは **index.js**) など、さまざまなことを要求します。今のところ、デフォルトをそのまま使用します。
+2. アプリケーション用の **package.json** ファイルを作成するには、npm `init` コマンドを使用します。このコマンドはアプリケーションの名前とバージョン、初期エントリポイントファイルの名前 (デフォルトでは **index.js**) など、さまざまなことを要求します。今のところ、デフォルトをそのまま使用します。
 
     ```bash
     npm init
@@ -184,13 +170,13 @@ Node 自体の次に、[NPM](https://docs.npmjs.com/) は Node アプリケー�
     }
     ```
 
-3.  `myapp` ディレクトリーに Express をインストールし、それをあなたの package.json ファイルの依存関係リストに保存してください。
+3. `myapp` ディレクトリーに Express をインストールし、それをあなたの package.json ファイルの依存関係リストに保存してください。
 
     ```bash
       npm install express --save
     ```
 
-4.  **package.json** の依存関係セクションが **package.json** ファイルの最後に表示され、Express が含まれます。
+4. **package.json** の依存関係セクションが **package.json** ファイルの最後に表示され、Express が含まれます。
 
     ```json
     {
@@ -209,7 +195,7 @@ Node 自体の次に、[NPM](https://docs.npmjs.com/) は Node アプリケー�
     }
     ```
 
-5.  このライブラリを使用するには、index.js ファイルで以下に示すように `require()` 関数を呼び出します。"myapp" アプリケーションディレクトリーのルートにファイルを作り、以下の内容を記述します。
+5. このライブラリを使用するには、index.js ファイルで以下に示すように `require()` 関数を呼び出します。"myapp" アプリケーションディレクトリーのルートにファイルを作り、以下の内容を記述します。
 
     ```
     const express = require('express')
@@ -226,14 +212,14 @@ Node 自体の次に、[NPM](https://docs.npmjs.com/) は Node アプリケー�
 
     このコードは、最小限の「HelloWorld」Express ウェブアプリケーションを示しています。これは「express」モジュールをインポートし、それを使用して 8000 番ポートで HTTP リクエストを待機するサーバ ー(`app`) を作成し、サーバーをテストするために使用できるブラウザー URL を説明するメッセージをコンソールに出力します。 `app.get()` 関数は、指定された URL パス ('/') で HTTP `GET` リクエストにのみ応答します。この場合、関数を呼び出して _Hello World!_ メッセージを送信します。
 
-6.  コマンドプロンプトでスクリプトを使用して node を呼び出すことでサーバーを起動できます。
+6. コマンドプロンプトでスクリプトを使用して node を呼び出すことでサーバーを起動できます。
 
     ```bash
     >node index.js
     Example app listening on port 8000
     ```
 
-7.  URL (<http://127.0.0.1:8000/>) に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World!" を表示するはずです。
+7. URL (<http://127.0.0.1:8000/>) に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World!" を表示するはずです。
 
 ### 開発の依存関係
 
@@ -356,7 +342,7 @@ DEBUG コマンドは有用なロギングを作成し、その結果、以下�
   helloworld:server Listening on port 3000 +0ms
 ```
 
-ブラウザーを開いて http\://127.0.0.1:3000/ に移動し、デフォルトの Express ウェルカムページを表示します。
+ブラウザーを開いて `http://127.0.0.1:3000/` に移動し、デフォルトの Express ウェルカムページを表示します。
 
 ![Express - Generated App Default Screen](express_default_screen.png)
 

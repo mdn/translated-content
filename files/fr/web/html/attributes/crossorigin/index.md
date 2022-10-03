@@ -12,6 +12,7 @@ tags:
 translation_of: Web/HTML/Attributes/crossorigin
 original_slug: Web/HTML/Reglages_des_attributs_CORS
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`crossorigin`**, valable sur les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<img>`](/fr/docs/Web/HTML/Element/Img), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<script>`](/fr/docs/Web/HTML/Element/script) et [`<video>`](/fr/docs/Web/HTML/Element/video), fournit la prise en charge de [CORS](/fr/docs/Web/HTTP/CORS), définissant la manière dont l'élément traite les demandes d'origine croisée, permettant ainsi la configuration des demandes CORS pour les données extraites de l'élément. Selon l'élément, l'attribut peut être un attribut de paramètres CORS.
@@ -52,24 +53,11 @@ La valeur `use-credentials` doit être utilisée lorsqu'on récupère un [manife
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}                     | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Pour l'élément script
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### Pour l'élément video
-
-{{Compat("html.elements.video.crossorigin")}}
-
-### Pour l'élément link
-
-{{Compat("html.elements.link.crossorigin")}}
+{{Compat}}
 
 ## Voir aussi
 

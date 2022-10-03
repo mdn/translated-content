@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.enableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 ---
+
 {{APIRef("WebGL")}}
 
 在[WebGL API](/zh-CN/docs/Web/API/WebGL_API)中，使用 {{domxref("WebGLRenderingContext")}} 中的**`enableVertexAttribArray()`** 方法，可以打开属性数组列表中指定索引处的通用顶点属性数组。
@@ -51,7 +52,7 @@ gl.vertexAttribPointer(aVertexPosition, vertexNumComponents,
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 ```
 
-该段代码来自于 "A basic 2D WebGL animation example." 中的 [the function `animateScene()`](/zh-CN/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene) 。 通过连接来查看全文，您可以查看产生的动画效果。
+该段代码来自于 "A basic 2D WebGL animation example." 中的 [the function `animateScene()`](/zh-CN/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene) 。通过连接来查看全文，您可以查看产生的动画效果。
 
 以上代码中，使用了{{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}来设置将用于绘图的顶点数据的缓存。然后使用{{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}来获取顶点数据在 shader 函数中的索引。
 
@@ -65,7 +66,7 @@ gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.enableVertexAttribArray")}}
+{{Compat}}
 
 ## See also
 

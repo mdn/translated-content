@@ -1,14 +1,8 @@
 ---
 title: ホワイトスペースは HTML、 CSS、そして DOM 内でどう扱われるか
 slug: Web/API/Document_Object_Model/Whitespace
-tags:
-  - CSS
-  - DOM
-  - HTML
-  - JavaScript
-  - ホワイトスペース
-translation_of: Web/API/Document_Object_Model/Whitespace
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 [DOM](/ja/docs/Web/API/Document_Object_Model) にホワイトスペースが存在すると、レイアウトの問題が発生したり、ホワイトスペースがある場所によっては、予期せぬ形でコンテンツツリーの操作が困難になることがあります。この記事では、どのような場合に問題が発生するかを探り、その結果生じる問題を軽減するために何ができるかを見ていきます。

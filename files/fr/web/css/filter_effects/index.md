@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/Filter_Effects
 ---
+
 {{CSSRef}}
 
 **_Filter Effects_** ou « module des effets de filtre » (ou plus communément « filtres CSS ») est un module de la spécification CSS qui définit une façon de traiter le rendu d'un élément avant que celui-ci soit affiché dans le document.
@@ -25,16 +26,8 @@ translation_of: Web/CSS/Filter_Effects
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Filters 1.0', '#FilterProperty', 'filter')}} | {{ Spec2('Filters 1.0') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `backdrop-filter`
-
-{{Compat("css.properties.backdrop-filter")}}
-
-### `filter`
-
-{{Compat("css.properties.filter")}}
+{{Compat}}

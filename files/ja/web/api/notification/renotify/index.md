@@ -1,17 +1,8 @@
 ---
 title: Notification.renotify
 slug: Web/API/Notification/renotify
-page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Notifications
-  - Property
-  - Reference
-  - renotify
-browser-compat: api.Notification.renotify
-translation_of: Web/API/Notification/renotify
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`renotify`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `renotify` オプションで指定され、新しい通知が古い通知を置き換えたときにユーザーに通知されるかどうかを指定します。

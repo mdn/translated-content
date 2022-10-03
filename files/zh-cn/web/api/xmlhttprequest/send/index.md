@@ -2,6 +2,7 @@
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest.send()`** 方法用于发送 HTTP 请求。如果是异步请求（默认为异步请求），则此方法会在请求发送后立即返回；如果是同步请求，则此方法直到响应到达后才会返回。`XMLHttpRequest.send()` 方法接受一个可选的参数，其作为请求主体；如果请求方法是 GET 或者 HEAD，则应将请求主体设置为 null。
@@ -20,7 +21,7 @@ XMLHttpRequest.send(body)
 
 - `body` {{optional_inline}}
 
-  - : 在 XHR 请求中要发送的数据体. 可以是：
+  - : 在 XHR 请求中要发送的数据体。可以是：
 
     - 可以为 {{domxref("Document")}}, 在这种情况下，它在发送之前被序列化。
     - 为 `XMLHttpRequestBodyInit`, 从 [per the Fetch spec](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit) （规范中）可以是 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 或者 {{domxref("USVString")}} 对象。
@@ -55,7 +56,7 @@ XMLHttpRequest.send(FormData data);
 
 发送二进制内容的最佳方法（如上传文件）是使用一个与 `send()` 方法结合的 [ArrayBufferView](/zh-CN/docs/Web/API/ArrayBufferView) 或者 [Blobs](/zh-CN/docs/Web/API/Blob)
 
-## 案例: GET
+## 案例：GET
 
 ```
 var xhr = new XMLHttpRequest();
@@ -72,7 +73,7 @@ xhr.send(null);
 // xhr.send(document);
 ```
 
-## 案例: POST
+## 案例：POST
 
 ```
 var xhr = new XMLHttpRequest();
@@ -97,7 +98,7 @@ xhr.send("foo=bar&lorem=ipsum");
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.send")}}
+{{Compat}}
 
 ## 参见
 

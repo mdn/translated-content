@@ -2,6 +2,7 @@
 title: 链接类型
 slug: Web/HTML/Link_types
 ---
+
 {{HTMLSidebar}}
 
 在超文本标记语言中，在两种文档之间可以指定{{HTMLElement("a")}}, {{HTMLElement("area")}}或{{HTMLElement("link")}} 元素使一个页面链接到另一个页面。
@@ -31,7 +32,7 @@ slug: Web/HTML/Link_types
           <li>
             如果{{htmlattrxref("type","link")}}设置为<code>application/rss+xml</code>或者<code>application/atom+xml</code>,
             则 link 被定义为<a
-              href="/en-US/docs/RSS/Getting_Started/Syndicating"
+              href="/zh-CN/docs/RSS/Getting_Started/Syndicating"
               >syndication feed</a
             >. 页面中第一个被定义的为默认的。
           </li>
@@ -124,7 +125,7 @@ slug: Web/HTML/Link_types
       <td><code>canonical</code></td>
       <td>
         <p>
-          来自维基百科:
+          来自维基百科：
           <a href="https://en.wikipedia.org/wiki/Canonical_link_element"
             >Canonical_link_element</a
           ><br />规范链接元素是一个 HTML 元素，它通过指定 web
@@ -198,7 +199,7 @@ slug: Web/HTML/Link_types
           属性允许浏览器选择其上下文中最合适的图标。如果多种资源符合条件，浏览器会选择最后一个。
         </p>
         <p>
-          在树型序列中，由于这些属性只是提示，并且这这些资源在进一步检查时可能是不适合的，浏览器可能选择另一个适合的。<br /><br /><strong
+          在树型序列中，由于这些属性只是提示，并且这些资源在进一步检查时可能是不适合的，浏览器可能选择另一个适合的。<br /><br /><strong
             >Note:</strong
           >
           苹果 iOS 不支持此链接类型，也不支持
@@ -389,7 +390,7 @@ slug: Web/HTML/Link_types
       <td><code>pingback</code><br /></td>
       <td>
         <p>
-          定义一个外部资源 URI，以便在对该网页发表评论或引用时调用。 在
+          定义一个外部资源 URI，以便在对该网页发表评论或引用时调用。在
           <a href="http://www.hixie.ch/specs/pingback/pingback">Pingback 1.0</a>
           规范中定义了用于进行此类调用的协议。
         </p>
@@ -420,11 +421,11 @@ slug: Web/HTML/Link_types
       <td>
         提示浏览器提前加载链接的资源，因为它可能会被用户请求。
         <p>
-          建议浏览器提前获取链接的资源，因为它很可能会被用户请求。 从 Firefox 44
+          建议浏览器提前获取链接的资源，因为它很可能会被用户请求。从 Firefox 44
           开始，考虑了{{HTMLAttrxRef("crossorigin", "link")}}属性的值，从而可以进行匿名预取。
         </p>
         <p>
-          注意：<a href="/en-US/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a
+          注意：<a href="/zh-CN/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a
           >详细说明了可以预取的链接以及替代方法。
         </p>
       </td>
@@ -487,7 +488,7 @@ slug: Web/HTML/Link_types
         </p>
         <p>
           如果将{{htmlattrxref("type","link")}}属性设置为<code>application/opensearchdescription+xml</code>，则该资源是<a
-            href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox"
+            href="/zh-CN/docs/Creating_OpenSearch_plugins_for_Firefox"
             >OpenSearch 插件</a
           >，可以轻松将其添加到 Firefox 或 Internet Explorer
           等某些浏览器的界面中。
@@ -506,7 +507,7 @@ slug: Web/HTML/Link_types
           <a
             href="https://code.google.com/archive/p/shortlink/wikis/Specification.wiki"
             ><code>shortlink</code> 规范</a
-          ><br />来自维基百科:
+          ><br />来自维基百科：
           <a href="https://en.wikipedia.org/wiki/URL_shortening"
             >URL shortening</a
           ><br />一些网站创建短链接，使通过即时消息共享链接更容易。
@@ -544,7 +545,7 @@ slug: Web/HTML/Link_types
           <code>type</code>，在进一步检查之前，浏览器应该假定它是
           <code>text/css</code> 样式表。<br /><br />如果与
           <code>alternate</code> 关键字结合使用，则定义一个
-          <a href="/en-US/docs/Alternative_style_sheets">可选样式表</a>
+          <a href="/zh-CN/docs/Alternative_style_sheets">可选样式表</a>
           ;在这种情况下，{{htmlattrxref("title", "link")}}
           属性必须出现，而不能是空字符串。
         </p>

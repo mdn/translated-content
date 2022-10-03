@@ -1,20 +1,8 @@
 ---
 title: ClipboardItem
 slug: Web/API/ClipboardItem
-page-type: web-api-interface
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Cut
-  - Interface
-  - Reference
-  - copy
-  - paste
-browser-compat: api.ClipboardItem
-translation_of: Web/API/ClipboardItem
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 **`ClipboardItem`** は{{domxref('Clipboard API', 'クリップボード API', '', 1)}} のインターフェイスで、 {{domxref('Clipboard API', 'クリップボード API', '', 1)}} を介して読み書きする単一の形式の項目を表します。読み書きはそれぞれ {{domxref("clipboard.read()")}} と {{domxref("clipboard.write()")}} で行います。

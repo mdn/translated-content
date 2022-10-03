@@ -1,11 +1,8 @@
 ---
 title: W3C DOM Level 1 Core の使用
 slug: Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core
-tags:
-  - DOM
-  - NeedsUpdate
-translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 W3C の [DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) は、 (他の文書のツリー風の型の中で) HTML や XML 文書の DOM ツリーを操作するための API です。 DOM は広く普及しているので、この API は Mozilla Firefox や Microsoft Internet Explorer、サーバーを含むすべての主要なブラウザーが対応しています。ウェブにおけるスクリプティングの未来を担う強力な基盤なのです。

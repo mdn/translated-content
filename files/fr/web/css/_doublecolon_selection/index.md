@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::selection
 ---
+
 {{CSSRef}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::selection`** permet d'appliquer des règles CSS à une portion du document qui a été sélectionnée par l'utilisateur (via la souris ou un autre dispositif de pointage).
@@ -99,17 +100,11 @@ Quelques ressources :
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-selection', '::selection')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Définition initiale. |
-
-> **Note :** Bien que ce pseudo-élément était inscrit dans les brouillons pour la spécification des sélecteurs CSS de niveau 3, il a été retiré dans la phase de recommandation car le comportement n'était pas suffisamment défini, notamment avec les éléments imbriqués, de plus, l'interopérabilité n'était pas encore aboutie [(selon une discussion de la liste de diffusion W3C Style)](https://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html).
->
-> Le pseudo-élément `::selection` a de nouveau été ajouté dans la spécification pour [les pseudo-éléments de niveau 4](https://dev.w3.org/csswg/css-pseudo-4/).
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.selection")}}
+{{Compat}}
 
 ## Voir aussi
 

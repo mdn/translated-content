@@ -1,14 +1,8 @@
 ---
 title: MessagePort.postMessage()
 slug: Web/API/MessagePort/postMessage
-tags:
-  - API
-  - Channel messagging
-  - MessagePort
-  - Reference
-  - postMessage
-translation_of: Web/API/MessagePort/postMessage
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessagePort")}} インターフェイスの **`postMessage()`** メソッドは、ポートからのメッセージを送信します。任意で、オブジェクトの所有権を他のブラウザコンテキストへ転送します。

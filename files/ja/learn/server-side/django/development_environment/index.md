@@ -1,13 +1,8 @@
 ---
 title: Django 開発環境の設定
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - Python
-  - Webフレームワーク
-  - django
-  - サーバーサイドプログラミング
-translation_of: Learn/Server-side/Django/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
 Django がどういうものか知ったので、Windows、Linux（Ubuntu）、および macOS で Django 開発環境をセットアップしてテストする方法を説明します。一般的なオペレーティングシステムを使っていれば、Django アプリケーションの開発を始められます。
@@ -119,12 +114,12 @@ python3 -V
 
 [python.org](https://www.python.org/)の Python 3（pip3 ツールと一緒に）を簡単にインストールできます:
 
-1.  必要なインストーラをダウンロードします:
+1. 必要なインストーラをダウンロードします:
 
-    1.  <https://www.python.org/downloads/> を開きます
-    2.  **Download Python 3.6.4** ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。
+    1. <https://www.python.org/downloads/> を開きます
+    2. **Download Python 3.6.4** ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。
 
-2.  Finder を使用してファイルを探し、パッケージファイルをダブルクリックします。インストールの後、プロンプトが表示されます。
+2. Finder を使用してファイルを探し、パッケージファイルをダブルクリックします。インストールの後、プロンプトが表示されます。
 
 以下に示すように、Python 3 を確認することで、正常にインストールされたことを確認できます:
 
@@ -143,12 +138,12 @@ pip3 list
 
 Windows にはデフォルトで Python は含まれていませんが、[python.org](https://www.python.org/)から pip3 ツールと一緒に簡単にインストールできます:
 
-1.  必要なインストーラをダウンロードします:
+1. 必要なインストーラをダウンロードします:
 
-    1.  <https://www.python.org/downloads/> を開きます
-    2.  **Download Python 3.6.4** ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。
+    1. <https://www.python.org/downloads/> を開きます
+    2. **Download Python 3.6.4** ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。
 
-2.  ダウンロードしたファイルをダブルクリックし、インストールのプロンプトに従って Python をインストールします。
+2. ダウンロードしたファイルをダブルクリックし、インストールのプロンプトに従って Python をインストールします。
 
 Python 3 がインストールされたことを確認するには、コマンドプロンプトに次のテキストを入力します:
 
@@ -328,7 +323,7 @@ py -3 -m django --version
 
 > **Note:** Windows では`py -3`コマンドをプレフィックスにして Python 3 スクリプトを起動し、Linux/macOS X では `python3`を実行します。
 
-> **Warning:** **重要**: このモジュールの残りの部分は、 Python 3 (`python3`) を呼び出すために Linux コマンドを使用します。Windows で作業している場合は、単にこの接頭辞を`py -3`に置き換えてください。
+> **Warning:** このモジュールの残りの部分は、 Python 3 (`python3`) を呼び出すために Linux コマンドを使用します。Windows で作業している場合は、単にこの接頭辞を`py -3`に置き換えてください。
 
 ## インストールのテスト
 

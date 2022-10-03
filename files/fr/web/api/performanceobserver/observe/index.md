@@ -11,6 +11,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceObserver/observe
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La méthode **`observe()`** de l'interface **[`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver)** est utilisée pour spécifier l'ensemble des types d'entrée de performance à observer. Les types d'entrée de performance sont spécifiés sous la forme d'un tableau d'objets [`DOMString`](/fr/docs/Web/API/DOMString), chacun nommant un type d'entrée ; les noms de type sont documentés sur la page [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType).
@@ -57,10 +58,8 @@ observer2.observe({entryTypes: ["measure"]});
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                                                   | Commentaire                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-observe', 'observe()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de la méthode `observe()`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceObserver.observe")}}
+{{Compat}}

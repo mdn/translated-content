@@ -1,16 +1,8 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
-tags:
-  - CSS
-  - CSS 画像
-  - CSS プロパティ
-  - Reference
-  - image-rendering
-  - recipe:css-property
-browser-compat: css.properties.image-rendering
-translation_of: Web/CSS/image-rendering
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`image-rendering`** プロパティは、画像を拡大縮小するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。

@@ -1,13 +1,8 @@
 ---
 title: PerformanceEntry.toJSON()
 slug: Web/API/PerformanceEntry/toJSON
-tags:
-  - API
-  - Web パフォーマンス
-  - メソッド
-  - リファレンス
-translation_of: Web/API/PerformanceEntry/toJSON
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`toJSON()`** メソッドは*シリアライザ*で、{{domxref("PerformanceEntry","パフォーマンスエントリ")}}オブジェクトの JSON 表現を返します。

@@ -1,12 +1,8 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-translation_of: Web/HTTP/Status/401
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`401 Unauthorized`** は、有効な認証資格が不足していることによりリクエストが適用されないことを示すクライアントエラーのレスポンスコードです。

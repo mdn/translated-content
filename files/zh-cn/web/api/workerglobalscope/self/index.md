@@ -2,9 +2,10 @@
 title: WorkerGlobalScope.self
 slug: Web/API/WorkerGlobalScope/self
 ---
+
 {{APIRef("Web Workers API")}}
 
-**`self`** 是 {{domxref("WorkerGlobalScope")}} 的只读属性，它指向 `WorkerGlobalScope` 自身。通常情况下，它是如 {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, 或 {{domxref("ServiceWorkerGlobalScope")}} 类型的 scope 。
+**`self`** 是 {{domxref("WorkerGlobalScope")}} 的只读属性，它指向 `WorkerGlobalScope` 自身。通常情况下，它是如 {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, 或 {{domxref("ServiceWorkerGlobalScope")}} 类型的 scope。
 
 ## 语法
 
@@ -51,7 +52,7 @@ undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl:
 // etc. etc.
 ```
 
-这会列出当前 worker scope 上完整的属性列表，在需要检测某个属性是否可用时非常有用。 详细列表也可查阅 [Functions and classes available to Web Workers](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+这会列出当前 worker scope 上完整的属性列表，在需要检测某个属性是否可用时非常有用。详细列表也可查阅 [Functions and classes available to Web Workers](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
 
 ## 规范
 

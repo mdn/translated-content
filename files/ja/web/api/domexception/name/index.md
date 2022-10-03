@@ -1,16 +1,8 @@
 ---
 title: DOMException.name
 slug: Web/API/DOMException/name
-tags:
-  - API
-  - DOM
-  - DOMException
-  - Property
-  - Reference
-  - name
-  - プロパティ
-translation_of: Web/API/DOMException/name
 ---
+
 {{ APIRef("DOM") }}
 
 **`name`** は {{domxref("DOMException")}} インターフェイスの読取専用プロパティで、 [エラー名](/ja/docs/Web/API/DOMException#Error_names)に結びつけられた文字列のうちの一つを含む {{domxref("DOMString")}} を返します。

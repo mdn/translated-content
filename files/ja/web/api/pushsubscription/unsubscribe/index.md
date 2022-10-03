@@ -1,18 +1,8 @@
 ---
 title: PushSubscription.unsubscribe()
 slug: Web/API/PushSubscription/unsubscribe
-tags:
-  - API
-  - Experimental
-  - Method
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - unsubscribe
-translation_of: Web/API/PushSubscription/unsubscribe
 ---
+
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
 {{domxref("PushSubscription")}} インターフェースの `unsubscribe()` メソッドは、現在のサブスクリプションが成功裏に登録解除されたときに {{domxref("Boolean")}} で解決される{{domxref("Promise")}} を返します。

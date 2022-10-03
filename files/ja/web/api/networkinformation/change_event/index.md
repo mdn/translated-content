@@ -1,17 +1,9 @@
 ---
 title: NetworkInformation.onchange
 slug: Web/API/NetworkInformation/change_event
-tags:
-  - API
-  - Event Handler
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Reference
-translation_of: Web/API/NetworkInformation/onchange
 original_slug: Web/API/NetworkInformation/onchange
 ---
+
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
 **`NetworkInformation.onchange`** イベントハンドラは、接続情報が変化したときに発火し、{{domxref("NetworkInformation")}} オブジェクトが {{event("change")}} を受け取るコードを含みます。

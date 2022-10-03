@@ -4,6 +4,7 @@ slug: Web/HTML/Element/input/password
 translation_of: Web/HTML/Element/input/password
 browser-compat: html.elements.input.input-password
 ---
+
 {{HTMLRef}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) de type **`password`** permettent à l'utilisatrice ou l'utilisateur de saisir un mot de passe sans que celui-ci ne soit lisible à l'écran.

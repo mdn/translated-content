@@ -1,17 +1,8 @@
 ---
 title: idle
 slug: Mozilla/Add-ons/WebExtensions/API/idle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 ---
+
 {{AddonSidebar}}
 
 ユーザーのシステムがアイドル状態、ロックされた状態、アクティブな状態であるのを発見します。

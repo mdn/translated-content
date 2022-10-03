@@ -1,11 +1,8 @@
 ---
 title: 知覚されるパフォーマンス
 slug: Learn/Performance/perceived_performance
-tags:
-  - Perceived Performance
-  - Web Performance
-translation_of: Learn/Performance/perceived_performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
 
 **[知覚されるパフォーマンス](/ja/docs/Glossary/Perceived_performance)**は、ユーザーから見てウェブサイトがどれくらい速く感じられるかを表します。ユーザーがパフォーマンスをどのように知覚するかは、具体的な統計値と同じくらい、あるいはどんな具体的な統計値よりも重要ですが、それは主観的で簡単に計測できるものではありません。知覚されるパフォーマンスはユーザーの視点であり、計測される値ではありません。
@@ -28,7 +25,7 @@ translation_of: Learn/Performance/perceived_performance
 
 **[Speed index](/ja/docs/Glossary/Speed_index)** も知覚されるパフォーマンスの概算として使用されます。それは目に見えるスクリーン上にピクセルが描画される平均時間を計測します。それはジッターも、どのコンテンツがユーザーによってより重要であるかも考慮しません。そのため完全な統計値ではありません。
 
-これらの統計値は最初の読み込みと描画に関わります。ユーザーがサイトとインタラクションを始めた後もサイトが速いと感じさせることは重要です。このために、**[time to interactive](/ja/docs/Glossary/Time_to_interactive)** は良い統計値です。それは読み込みプロセスにおける最後の [long task ](/ja/docs/Glossary/Long_task)が終わり、ユーザーに UI が利用可能になる時間を表します。
+これらの統計値は最初の読み込みと描画に関わります。ユーザーがサイトとインタラクションを始めた後もサイトが速いと感じさせることは重要です。このために、**[time to interactive](/ja/docs/Glossary/Time_to_interactive)** は良い統計値です。それは読み込みプロセスにおける最後の [long task](/ja/docs/Glossary/Long_task) が終わり、ユーザーに UI が利用可能になる時間を表します。
 
 UI の欠落や質の悪い反応はどちらも知覚されるパフォーマンスに悪い影響を与えます。タスクに長い時間がかかる場合であっても、それをより速く見せる方法はあります。知覚されるパフォーマンスを改善するいくつかのティップスがあります。
 

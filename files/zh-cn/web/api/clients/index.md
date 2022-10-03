@@ -2,16 +2,17 @@
 title: Clients
 slug: Web/API/Clients
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-`Clients` 接口提供对 {{domxref("Client")}} 对象的访问。通过在 [service worker](/en-US/docs/Web/API/ServiceWorker_API) 中使用 `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` 访问它。
+`Clients` 接口提供对 {{domxref("Client")}} 对象的访问。通过在 [service worker](/zh-CN/docs/Web/API/ServiceWorker_API) 中使用 `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` 访问它。
 
 ## 方法
 
 - {{domxref("Clients.get()")}}
   - : 返回一个匹配给定 {{domxref("Client.id", "id")}} 的 {{domxref("Client")}} 的 {{jsxref("Promise")}} .
 - {{domxref("Clients.matchAll()")}}
-  - : 返回一个 {{domxref("Client")}} 对象数组的 {{jsxref("Promise")}} . options 参数允许您控制返回的 clients 类型.
+  - : 返回一个 {{domxref("Client")}} 对象数组的 {{jsxref("Promise")}} . options 参数允许您控制返回的 clients 类型。
 - {{domxref("Clients.openWindow()")}}
   - : 打开给定 URL 的新浏览器窗口，并返回新 {{domxref("WindowClient")}} a 的 {{jsxref("Promise")}} .
 - {{domxref("Clients.claim()")}}
@@ -60,10 +61,10 @@ addEventListener('notificationclick', event => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clients")}}
+{{Compat}}
 
 ## See also
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}

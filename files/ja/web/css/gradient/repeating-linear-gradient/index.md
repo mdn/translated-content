@@ -1,20 +1,9 @@
 ---
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Gradients
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/gradient/repeating-linear-gradient()
 original_slug: Web/CSS/gradient/repeating-linear-gradient()
-browser-compat: css.types.image.gradient.repeating-linear-gradient
 ---
+
 {{CSSRef}}
 
 **`repeating-linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、反復線形グラデーションによる画像を生成します。 {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} と似ており、同じ引数を取りますが、両方向に無限に色経由点を繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊型です。

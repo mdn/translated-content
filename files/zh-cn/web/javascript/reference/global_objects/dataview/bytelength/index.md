@@ -2,6 +2,7 @@
 title: DataView.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 ---
+
 {{JSRef}}
 
 **`byteLength`** 属性描述了视图从它的 {{jsxref("ArrayBuffer")}} 开始的字节长度。
@@ -16,7 +17,7 @@ dataview.byteLength
 
 ## 描述
 
-`byteLength` 属性是一个获取 (accessor) 属性，它的 set 属性为 undefined，这意味着它是只读的。值在 `DataView` 被创建时就确定了，且不能改变。如果 `DataView` 没有指定偏移量或 byteLength，那么被引用的 `ArrayBuffer 的字节长度将被返回。`
+`byteLength` 属性是一个获取 (accessor) 属性，它的 set 属性为 `undefined`，这意味着它是只读的。值在 `DataView` 被创建时就确定了，且不能改变。如果 `DataView` 没有指定偏移量或 `byteLength`，那么被引用的 `ArrayBuffer` 的字节长度将被返回。
 
 ## Examples
 

@@ -1,16 +1,8 @@
 ---
 title: ゲーム開発
 slug: Games
-tags:
-  - Apps
-  - Game Development
-  - Gamedev
-  - Games
-  - HTML Games
-  - JavaScript Games
-  - Web
-translation_of: Games
 ---
+
 {{GamesSidebar}}
 
 コンピューターアクティビティの中でゲームはもっともポピュラーなものです。新技術が頻繁に登場し、標準的なウェブブラウザー上で動作するゲーム開発をより良くパワフルにしています。

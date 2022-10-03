@@ -2,6 +2,7 @@
 title: <iframe>
 slug: Web/HTML/Element/iframe
 ---
+
 {{HTMLRef}}
 
 **HTML 内联框架元素 (`<iframe>`)** 表示嵌套的{{Glossary("browsing context")}}。它能够将另一个 HTML 页面嵌入到当前页面中。
@@ -27,7 +28,7 @@ slug: Web/HTML/Element/iframe
 
     > **备注：** 这是一个历史遗留属性，已经被重新定义为 `allow="payment"`.
 - {{htmlattrdef("csp")}} {{experimental_inline}}
-  - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。 查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
+  - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
 - {{htmlattrdef("height")}}
   - : 以 CSS 像素格式，或像素格式，或百分比格式指定 frame 的高度。默认值为`150`。
 - {{htmlattrdef("importance")}} {{experimental_inline}}
@@ -120,7 +121,7 @@ slug: Web/HTML/Element/iframe
 
 ## 定位和缩放
 
-作为一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)， 可以使用 {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 来定位、对齐、缩放 `<iframe>` 元素内的文档。
+作为一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)，可以使用 {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 来定位、对齐、缩放 `<iframe>` 元素内的文档。
 
 ## 示例
 

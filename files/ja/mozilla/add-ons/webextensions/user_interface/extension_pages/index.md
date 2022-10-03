@@ -1,12 +1,8 @@
 ---
 title: 拡張機能ページ
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
-tags:
-  - 初心者
-  - ユーザーインターフェイス
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 ---
+
 {{AddonSidebar()}}
 
 拡張機能には、フォーム、ヘルプ、その他拡張機能が必要とするコンテンツを提供するために、 HTML ページを設置することができます。
@@ -69,7 +65,7 @@ function onVisited(historyItem) {
 browser.history.onVisited.addListener(onVisited);
 ```
 
-履歴 API を使用するには、 "`history`" [権限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) を [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルでリクエストする必要があります。
+履歴 API を使用するには、 "`history`" [権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) を [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルでリクエストする必要があります。
 
 ## ウェブページのデザイン
 

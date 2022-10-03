@@ -1,21 +1,9 @@
 ---
 title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Display
-  - WebVR
-  - requestPresent()
-browser-compat: api.VRDisplay.requestPresent
-translation_of: Web/API/VRDisplay/requestPresent
 original_slug: Web/API/VRDevice/requestPresent
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`requestPresent()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、`VRDisplay` へのシーン表示を開始します。
@@ -40,7 +28,7 @@ requestPresent(layers)
 - {{domxref("VRDisplayCapabilities.canPresent")}} が false の場合、または VRLayer 配列に {{domxref("VRDisplayCapabilities.maxLayers")}} を超えるレイヤーがある場合、プロミスは拒否されます。
 - `requestPresent()` が呼び出された時、 {{domxref("VRDisplay")}} が既に表示していた場合、 `VRDisplay` は表示している `VRLayer` 配列を更新します。
 - もし `requestPresent()` の呼び出しが `VRDisplay` が既に表示されている状態で拒否された場合は、その表示を終了します。
-- もし `requestPresent()` がエンゲージメントジェスチャーの外で呼び出された場合、`VRDisplay` が既に表示されていない限り、そのプロミスは拒否されます。このエンゲージメントジェスチャーは、プレゼンテーションが終了するまで [`requestPointerLock()`](/en-US/docs/Web/API/Element/requestPointerLock) の呼び出しを許可することにも使えます。
+- もし `requestPresent()` がエンゲージメントジェスチャーの外で呼び出された場合、`VRDisplay` が既に表示されていない限り、そのプロミスは拒否されます。このエンゲージメントジェスチャーは、プレゼンテーションが終了するまで [`requestPointerLock()`](/ja/docs/Web/API/Element/requestPointerLock) の呼び出しを許可することにも使えます。
 
 ## 例
 

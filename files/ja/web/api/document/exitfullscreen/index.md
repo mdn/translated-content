@@ -1,22 +1,8 @@
 ---
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
-tags:
-  - API
-  - DOM
-  - Document
-  - Full
-  - Full-screen
-  - Fullscreen API
-  - Method
-  - Reference
-  - exitFullscreen
-  - fullscreen
-  - screen
-  - メソッド
-  - 全画面
-translation_of: Web/API/Document/exitFullscreen
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 {{domxref("Document")}} の **`exitFullscreen()`** メソッドは、この文書で現在全画面モードで表示されている要素が全画面モードを向け、画面を以前の状態に戻すことを要求します。これはふつう、以前の {{domxref("Element.requestFullscreen()")}} の呼び出しの効果を取り消します。

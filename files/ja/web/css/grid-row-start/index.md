@@ -1,15 +1,8 @@
 ---
 title: grid-row-start
 slug: Web/CSS/grid-row-start
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-row-start
-tra: Web/CSS/grid-row-start
 ---
+
 {{CSSRef}}
 
 **`grid-row-start`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド行内のグリッドアイテムの先頭位置、すなわち{{Glossary("grid areas", "グリッド領域")}}のインラインの先頭側の端を指定します。

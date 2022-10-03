@@ -2,6 +2,7 @@
 title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
 ---
+
 {{jsSidebar("Errors")}}JavaScript 异常"is not a function"会在试图去调用一个像函数一样的值，但是该值实际上不是函数时被抛出。
 
 ## 信息
@@ -19,9 +20,9 @@ TypeError: "x" is not a function
 
 问题出在你试图去调用一个像函数一样的值，但是该值实际上不是函数，有时候你的代码需要调用一些函数，但是那种值并不能当作函数来被调用。
 
-也许函数名称上有错别字？ 也许你正在调用 Object 对象没有这个方法？ 例如，在 JavaScript 中单纯的对象 (Object) 没有**map**函数，但是 JavaScript 数组 (Array) 对象却有这个函数。
+也许函数名称上有错别字？也许你正在调用 Object 对象没有这个方法？例如，在 JavaScript 中单纯的对象 (Object) 没有**map**函数，但是 JavaScript 数组 (Array) 对象却有这个函数。
 
-再比如，在 JavaScript 中很多原生对象的内置方法需要你提供一个（回调）函数。 所以你必须提供一个函数，以使这些方法正常工作：
+再比如，在 JavaScript 中很多原生对象的内置方法需要你提供一个（回调）函数。所以你必须提供一个函数，以使这些方法正常工作：
 
 - 当你在使用 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 对象时：
 
@@ -168,4 +169,4 @@ import helpers from './helpers'
 
 ## 相关
 
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions)

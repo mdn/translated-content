@@ -3,6 +3,7 @@ title: 样式化链接
 slug: Learn/CSS/Styling_text/Styling_links
 original_slug: Learn/CSS/为文本添加样式/Styling_links
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
@@ -96,7 +97,7 @@ p {
 - 当用户悬停或选择 (hover 或者 focused) 的时候，使链接有相应的变化，并且在链接被激活 (active) 的时候，变化会有一些不同。可以使用以下 CSS 属性关闭/更改默认样式：
 - {{cssxref("color")}} 文字的颜色
 - {{cssxref("cursor")}} 鼠标光标的样式，你不应该把这个关掉，除非你有非常好的理由。
-- {{cssxref("outline")}} 文字的轮廓 (轮廓有点像边框，唯一的区别是边框占用了盒模型的空间，而轮廓没有； 它只是设置在背景图片的顶部)。outline 是一个有用的辅助功能，所以在把它关掉之前考虑清楚；你至少应该将悬停 (hover) 状态的样式同时应用到选中 (focus) 状态上。
+- {{cssxref("outline")}} 文字的轮廓 (轮廓有点像边框，唯一的区别是边框占用了盒模型的空间，而轮廓没有；它只是设置在背景图片的顶部)。outline 是一个有用的辅助功能，所以在把它关掉之前考虑清楚；你至少应该将悬停 (hover) 状态的样式同时应用到选中 (focus) 状态上。
 
 > **备注：** 你不仅仅只限于上述属性来把样式应用到你的链接上，你可以用任何你喜欢的属性，就是不要搞得太疯狂！
 

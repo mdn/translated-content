@@ -1,13 +1,8 @@
 ---
 title: ProcessingInstruction.sheet
 slug: Web/API/ProcessingInstruction/sheet
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.ProcessingInstruction.sheet
-translation_of: Web/API/ProcessingInstruction/sheet
 ---
+
 {{ApiRef("DOM")}}
 
 **`sheet`** は {{domxref("ProcessingInstruction")}} インターフェイスの読み取り専用プロパティで、 `ProcessingInstruction` に関連付けられたスタイルシートの名前を表します。

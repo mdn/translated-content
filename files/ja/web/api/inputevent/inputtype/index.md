@@ -1,19 +1,8 @@
 ---
 title: InputEvent.inputType
 slug: Web/API/InputEvent/inputType
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Input
-  - InputEvent
-  - Property
-  - Reference
-  - events
-  - inputType
-  - プロパティ
-translation_of: Web/API/InputEvent/inputType
 ---
+
 {{APIRef("DOM Events")}}
 
 **`inputType`** は {{domxref("InputEvent")}} インターフェイスの読取専用プロパティで、編集可能なコンテンツの変更が行われた種別を返します。変更は例えば挿入、削除、テキスト整形などがあります。
@@ -66,7 +55,7 @@ Try editing the text inside the `<div>` and see what happens.
 
 {{EmbedLiveSample("Examples", '100%', 500)}}
 
-> **Note:** **注**: もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
+> **Note:** もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
 
 ## 仕様書
 

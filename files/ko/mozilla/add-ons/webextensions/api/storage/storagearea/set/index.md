@@ -1,7 +1,6 @@
 ---
 title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
 {{AddonSidebar()}}
 

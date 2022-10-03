@@ -1,14 +1,8 @@
 ---
 title: Document.dir
 slug: Web/API/Document/dir
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/dir
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`Document.dir`** プロパティは {{domxref("DOMString")}} で、文書のテキストの書字方向が、左書き (既定) か右書きかを表します。有効な値は `'rtl'` 右書き (右から左)、または `'ltr'` 左書き (左から右) です。

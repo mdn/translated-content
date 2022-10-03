@@ -1,15 +1,8 @@
 ---
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
-tags:
-  - API
-  - Advanced
-  - Games
-  - Reference
-  - mouse lock
-  - pointer lock
-translation_of: Web/API/Pointer_Lock_API
 ---
+
 {{DefaultAPISidebar("Pointer Lock API")}}
 
 **Pointer Lock API** (以前は _Mouse Lock API_ と呼ばれていました) は、ビューポート内のマウスカーソルの絶対位置だけでなく、時間の経過に伴うマウスの動き (すなわち、デルタ) に基づく入力方法を提供します。これにより、マウスの動きそのものを知る、マウスイベントのターゲットをひとつの要素にロックする、マウスが一方向へどれだけ移動できるかの制限を除去する、視野からカーソルを取り除くことができます。これらは、本人視点の 3D ゲームなどで理想的です。
@@ -20,7 +13,7 @@ Pointer Lock では、カーソルがブラウザーやスクリーンの境界�
 
 ## 基本概念
 
-Pointer Lock は [マウスキャプチャ](/ja/docs/Web/API/Element/setCapture "element.setCapture") と関係があります。マウスキャプチャはマウスのドラッグ中にターゲットの要素へ継続的にイベントを提供しますが、マウスのボタンを離すとイベントが停止します。Pointer Lock とマウスキャプチャの違いは以下のとおりです:
+Pointer Lock は [マウスキャプチャ](/ja/docs/Web/API/Element/setCapture) と関係があります。マウスキャプチャはマウスのドラッグ中にターゲットの要素へ継続的にイベントを提供しますが、マウスのボタンを離すとイベントが停止します。Pointer Lock とマウスキャプチャの違いは以下のとおりです:
 
 - Pointer Lock は永続的です。明示的に API が呼び出されるかユーザーが特定の解放ジェスチャを行うまで、マウスを解放しません。
 - Pointer Lock はブラウザーまたはスクリーンの境界に制限されません。
@@ -105,7 +98,7 @@ function lockError(e) {
 }
 ```
 
-> **Note:** **注記**: Firefox 50 まで、上記のイベントは `moz` 接頭辞を付加していました。
+> **Note:** Firefox 50 まで、上記のイベントは `moz` 接頭辞を付加していました。
 
 ## Mouse イベントの拡張
 

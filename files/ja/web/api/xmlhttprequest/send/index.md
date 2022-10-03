@@ -1,21 +1,8 @@
 ---
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
-tags:
-  - AJAX
-  - API
-  - HTTP リクエスト
-  - メソッド
-  - NeedsContent
-  - NeedsExample
-  - リファレンス
-  - XHR
-  - XHR リクエスト
-  - XMLHttpRequest
-  - send
-browser-compat: api.XMLHttpRequest.send
-translation_of: Web/API/XMLHttpRequest/send
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の **`send()`** メソッドは、リクエストをサーバーに送信します。

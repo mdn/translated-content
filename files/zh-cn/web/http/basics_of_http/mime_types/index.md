@@ -2,6 +2,7 @@
 title: MIME 类型
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
+
 {{HTTPSidebar}}
 
 **媒体类型**（通常称为 **Multipurpose Internet Mail Extensions** 或 **MIME** 类型）是一种标准，用来表示文档、文件或字节流的性质和格式。它在[IETF RFC 6838](https://tools.ietf.org/html/rfc6838)中进行了定义和标准化。
@@ -66,7 +67,7 @@ _Multipart_ 类型表示细分领域的文件类型的种类，经常对应不�
 
 ### application/octet-stream
 
-这是应用程序文件的默认值。意思是 *未知的应用程序文件 ，*浏览器一般不会自动执行或询问执行。浏览器会像对待 设置了 HTTP 头{{HTTPHeader("Content-Disposition")}} 值为 `attachment` 的文件一样来对待这类文件。
+这是应用程序文件的默认值。意思是 *未知的应用程序文件，*浏览器一般不会自动执行或询问执行。浏览器会像对待 设置了 HTTP 头{{HTTPHeader("Content-Disposition")}} 值为 `attachment` 的文件一样来对待这类文件。
 
 ### text/plain
 
@@ -82,7 +83,7 @@ _Multipart_ 类型表示细分领域的文件类型的种类，经常对应不�
 
 所有的 HTML 内容都应该使用这种类型。XHTML 的其他 MIME 类型（如`application/xml+html`）现在基本不再使用（HTML5 统一了这些格式）。
 
-> **备注：** You still need to use `application/xml` or `application/xhtml+xml` if you intend to make use of XML’s strict parsing rules, use [`<![CDATA[…]]>`](https://developer.mozilla.org/en-US/docs/Web/API/CDATASection) or elements from non‑HTML, non‑SVG or non‑MathML XML namespaces, as `text/html`’s parsing semantics are subtly incompatible with those of `application/xml`.
+> **备注：** You still need to use `application/xml` or `application/xhtml+xml` if you intend to make use of XML’s strict parsing rules, use [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) or elements from non‑HTML, non‑SVG or non‑MathML XML namespaces, as `text/html`’s parsing semantics are subtly incompatible with those of `application/xml`.
 
 ### text/javascript
 
@@ -140,9 +141,9 @@ HTML 并没有明确定义被用于{{HTMLElement("audio")}}和{{HTMLElement("vid
 | `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | 音频流媒体文件。一般支持 PCM 音频编码 (WAVE codec "1") ，其他解码器有限支持（如果有的话）。                                                             |
 | `audio/webm`                                            | WebM 音频文件格式。Vorbis 和 Opus 是其最常用的解码器。                                                                                                  |
 | `video/webm`                                            | 采用 WebM 视频文件格式的音视频文件。VP8 和 VP9 是其最常用的视频解码器。Vorbis 和 Opus 是其最常用的音频解码器。                                          |
-| `audio/ogg`                                             | 采用 OGG 多媒体文件格式的音频文件。 Vorbis 是这个多媒体文件格式最常用的音频解码器。                                                                     |
-| `video/ogg`                                             | 采用 OGG 多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为 Vorbis 。                                                                  |
-| `application/ogg`                                       | 采用 OGG 多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为 Vorbis 。                                                                  |
+| `audio/ogg`                                             | 采用 OGG 多媒体文件格式的音频文件。Vorbis 是这个多媒体文件格式最常用的音频解码器。                                                                     |
+| `video/ogg`                                             | 采用 OGG 多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为 Vorbis。                                                                  |
+| `application/ogg`                                       | 采用 OGG 多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为 Vorbis。                                                                  |
 | `application/json`                                      | application/json (MIME_type) <https://en.wikipedia.org/wiki/Media_type#Common_examples> <https://www.iana.org/assignments/media-types/application/json> |
 
 ### multipart/form-data
@@ -240,7 +241,7 @@ Content-Range: bytes 300-400/1270
 很多 web 服务器使用默认的 `application/octet-stream` 来发送未知类型。出于一些安全原因，对于这些资源浏览器不允许设置一些自定义默认操作，导致用户必须存储到本地以使用。常见的导致服务器配置错误的文件类型如下所示：
 
 - RAR 编码文件。在这种情况，理想状态是，设置真实的编码文件类型；但这通常不可能（可能是服务器所未知的类型或者这个文件包含许多其他的不同的文件类型）。这种情况服务器将发送 `application/x-rar-compressed` 作为 MIME 类型，用户不会将其定义为有用的默认操作。
-- 音频或视频文件。只有正确设置了 MIME 类型的文件才能被 {{ HTMLElement("video") }} 或{{ HTMLElement("audio") }} 识别和播放。 可参照 [use the correct type for audio and video](https://developer.mozilla.org/En/Media_formats_supported_by_the_audio_and_video_elements)。
+- 音频或视频文件。只有正确设置了 MIME 类型的文件才能被 {{ HTMLElement("video") }} 或{{ HTMLElement("audio") }} 识别和播放。可参照 [use the correct type for audio and video](/En/Media_formats_supported_by_the_audio_and_video_elements)。
 - 专有文件类型。是专有文件时需要特别注意。使用 `application/octet-stream` 作为特殊处理是不被允许的：对于一般的 MIME 类型浏览器不允许定义默认行为（比如“在 Word 中打开”）
 
 ## MIME 嗅探
@@ -252,7 +253,7 @@ Content-Range: bytes 300-400/1270
 MIME 类型不是传达文档类型信息的唯一方式：
 
 - 有时会使用名称后缀，特别是在 Microsoft Windows 系统上。并非所有的操作系统都认为这些后缀是有意义的（特别是 Linux 和 Mac OS），并且像外部 MIME 类型一样，不能保证它们是正确的。
-- 魔术数字。不同类型的文件的语法通过查看结构来允许文件类型推断。例如，每个 GIF 文件以 47 49 46 38 十六进制值 \[GIF89] 或 89 50 4E 47 \[.PNG] 的 PNG 文件开头。 并非所有类型的文件都有幻数，所以这也不是 100％可靠的方式。
+- 魔术数字。不同类型的文件的语法通过查看结构来允许文件类型推断。例如，每个 GIF 文件以 47 49 46 38 十六进制值 \[GIF89] 或 89 50 4E 47 \[.PNG] 的 PNG 文件开头。并非所有类型的文件都有幻数，所以这也不是 100％可靠的方式。
 
 ## 其他
 

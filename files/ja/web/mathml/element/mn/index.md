@@ -1,13 +1,8 @@
 ---
 title: <mn>
 slug: Web/MathML/Element/mn
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
-translation_of: Web/MathML/Element/mn
 ---
+
 {{MathMLRef}}
 
 MathML の `<mn>` 要素は、通常は可能な区切り記号（ピリオドかカンマ）をもつ数字列である、数値リテラルを表します。しかし、「eleven」のような数量を表す任意のテキストを書くこともできます。

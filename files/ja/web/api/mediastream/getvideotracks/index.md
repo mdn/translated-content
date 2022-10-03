@@ -1,21 +1,8 @@
 ---
 title: MediaStream.getVideoTracks()
 slug: Web/API/MediaStream/getVideoTracks
-tags:
-  - API
-  - Media
-  - メディアキャプチャとストリーム API
-  - メディアストリーム API
-  - MediaStream
-  - メソッド
-  - リファレンス
-  - 動画
-  - getVideoTracks
-  - ストリーム
-  - トラック
-browser-compat: api.MediaStream.getVideoTracks
-translation_of: Web/API/MediaStream/getVideoTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`getVideoTracks()`** は {{domxref("MediaStream")}} インタフェースのメソッドで、このストリームに含まれる動画トラックを表す {{domxref("MediaStreamTrack")}} オブジェクトの配列を返します。

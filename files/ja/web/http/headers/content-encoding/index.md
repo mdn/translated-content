@@ -1,15 +1,8 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - エンティティヘッダー
-  - ヘッダー
-  - リファレンス
-translation_of: Web/HTTP/Headers/Content-Encoding
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Encoding`** エンティティヘッダーは、圧縮のメディア種別に使用します。存在する場合、値はエンティティ本体にどのエンコーディングが適用されているかを示します。これはクライアントに、 `Content-Type` ヘッダーで参照されるメディア種別を得るためにデコードする方法を知らせます。

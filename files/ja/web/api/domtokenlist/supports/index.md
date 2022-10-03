@@ -1,12 +1,8 @@
 ---
 title: DOMTokenList.supports()
 slug: Web/API/DOMTokenList/supports
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.DOMTokenList.supports
-translation_of: Web/API/DOMTokenList/supports
 ---
+
 {{APIRef("DOM")}}
 
 **`supports()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、渡されたトークンが関連する属性で対応しているトークンに含まれていれば `true` を返します。このメソッドは機能に対応しているかを検出するためのものです。

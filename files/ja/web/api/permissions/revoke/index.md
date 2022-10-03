@@ -1,16 +1,8 @@
 ---
 title: Permissions.revoke()
 slug: Web/API/Permissions/revoke
-tags:
-  - API
-  - Experimental
-  - Method
-  - Permissions
-  - Permissions API
-  - Reference
-  - revoke
-translation_of: Web/API/Permissions/revoke
 ---
+
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
 {{domxref("Permissions")}} インターフェイスの **`Permissions.revoke()`** メソッドは、現在設定されているパーミッションをデフォルト状態（通常は `prompt`）に戻します。
@@ -33,9 +25,9 @@ var revokePromise = navigator.permissions.revoke(descriptor);
     - `userVisibleOnly`: Push のみ。 Firefox はサポートしていません。 下記の[ブラウザーの互換性](#browser_compatibility)のセクションを参照してください）すべてのメッセージについて通知を表示するか、サイレントプッシュ通知を送信できるかを示します。 デフォルトは `false` です。
     - `sysex`: （MIDI のみ）システムエクスクルーシブメッセージが必要か受信するかどうかを示します。 デフォルトは `false` です。
 
-> **Note:** **注**: Firefox 44 以降、[Notifications](/ja/docs/Web/API/Notifications_API) と [Push](/ja/docs/Web/API/Push_API) のパーミッションは統合されました。 （例えば、ユーザーによって、関連するパーミッションのダイアログにより）パーミッションが与えられた場合、`navigator.permissions.query()` は `notifications` と `push` の両方に対して `true` を返します。
+> **Note:** Firefox 44 以降、[Notifications](/ja/docs/Web/API/Notifications_API) と [Push](/ja/docs/Web/API/Push_API) のパーミッションは統合されました。 （例えば、ユーザーによって、関連するパーミッションのダイアログにより）パーミッションが与えられた場合、`navigator.permissions.query()` は `notifications` と `push` の両方に対して `true` を返します。
 
-> **Note:** **注**: `persistent-storage` パーミッションは、[Storage API](https://storage.spec.whatwg.org/) のとおりに、オリジンがそのストレージとして永続的ボックス（すなわち永続的ストレージ（[persistent storage](https://storage.spec.whatwg.org/#persistence)））を使用することを許可します。
+> **Note:** `persistent-storage` パーミッションは、[Storage API](https://storage.spec.whatwg.org/) のとおりに、オリジンがそのストレージとして永続的ボックス（すなわち永続的ストレージ（[persistent storage](https://storage.spec.whatwg.org/#persistence)））を使用することを許可します。
 
 ### 戻り値
 

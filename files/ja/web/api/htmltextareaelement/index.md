@@ -1,16 +1,8 @@
 ---
 title: HTMLTextAreaElement
 slug: Web/API/HTMLTextAreaElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLTextAreaElement
-  - Interface
-  - Reference
-browser-compat: api.HTMLTextAreaElement
-translation_of: Web/API/HTMLTextAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTextAreaElement`** インターフェイスは、 {{HTMLElement("textarea")}} 要素のレイアウトや表示を操作するための特別なプロパティやメソッドを提供します。

@@ -2,13 +2,14 @@
 title: 使用 Web Speech API
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 ---
+
 Web Speech API 提供了两类不同方向的函数——语音识别和语音合成 (也被称为文本转为语音，英语简写是 tts)——开启了有趣的新可用性和控制机制。这篇文章提供了这两个方向的简单介绍，并且都带有例子。
 
 ## Speech recognition
 
 Speech recognition(语音识别) 涉及三个过程：首先，需要设备的麦克风接收这段语音；其次，speech recognition service(语音识别服务器) 会根据一系列语法 (基本上，语法是你希望在具体的应用中能够识别出来的词汇) 来检查这段语音；最后，当一个单词或者短语被成功识别后，结果会以文本字符串的形式返回 (结果可以有多个)，以及更多的行为可以设置被触发。
 
-Web Speech API 有一个主要的控制接口——[`SpeechRecognition`](/zh-CN/docs/Web/API/SpeechRecognition)， 外加一些如表示语法、表示结果等等亲密相关的接口。通常，设备都有可使用的默认语音识别系统，大部分现代操作系统使用这个语音识别系统来处理语音命令，比如 Mac OS X 上的 Dictation，iOS 上的 Siri，Win10 上的 Cortana，Android Speech 等等。
+Web Speech API 有一个主要的控制接口——[`SpeechRecognition`](/zh-CN/docs/Web/API/SpeechRecognition)，外加一些如表示语法、表示结果等等亲密相关的接口。通常，设备都有可使用的默认语音识别系统，大部分现代操作系统使用这个语音识别系统来处理语音命令，比如 Mac OS X 上的 Dictation，iOS 上的 Siri，Win10 上的 Cortana，Android Speech 等等。
 
 Demo
 
@@ -23,7 +24,7 @@ Demo
 对于 Web Speech API speech recognition(语音识别) 的支持，在各浏览器中还不成熟，还在发展，现在主要的限制如下：
 
 - Firefox 桌面端和移动端在 Gecko 44+ 中都支持，并且是没有前缀的，它可以在`about:config` 中把 `media.webspeech.recognition.enable` 设置为 `true` 打开。权限设置/UI 还没有整理出来，所以权限还不能被用户使用，也就是不能用。不过很快会修复吧\~
-- Firefox OS 2.5+ 也支持，但作为一个特权 API(privileged API) 需要权限，因此你需要在[manifest.webapp](/zh-CN/docs/Web/Apps/Build/Manifest) (也可以通过 WebIDE 下载， 或者使应用得到验证后在 [Firefox Marketplace](https://marketplace.firefox.com/) 可使用) 如下设置：
+- Firefox OS 2.5+ 也支持，但作为一个特权 API(privileged API) 需要权限，因此你需要在[manifest.webapp](/zh-CN/docs/Web/Apps/Build/Manifest) (也可以通过 WebIDE 下载，或者使应用得到验证后在 [Firefox Marketplace](https://marketplace.firefox.com/) 可使用) 如下设置：
 
   ```json
   "permissions": {

@@ -2,6 +2,7 @@
 title: Request
 slug: Web/API/Request
 ---
+
 {{APIRef("Fetch API")}}
 
 **`Request`** は [Fetch API](/ja/docs/Web/API/Fetch_API) のインターフェイスで、リソースのリクエストを表します。
@@ -57,7 +58,7 @@ slug: Web/API/Request
 - {{domxref("Request.text()")}}
   - : リクエスト本体を表す {{domxref("USVString")}} (テキスト) で解決するプロミスを返します。
 
-> **Note:** **メモ**: リクエスト本文の関数は 1 度しか呼び出せません。 2 回目以降は空の文字列または ArrayBuffer で解決します。
+> **Note:**  リクエスト本文の関数は 1 度しか呼び出せません。 2 回目以降は空の文字列または ArrayBuffer で解決します。
 
 ## 例
 

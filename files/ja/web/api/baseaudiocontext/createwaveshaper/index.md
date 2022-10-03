@@ -1,17 +1,8 @@
 ---
 title: BaseAudioContext.createWaveShaper()
 slug: Web/API/BaseAudioContext/createWaveShaper
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createWaveShaper
-browser-compat: api.BaseAudioContext.createWaveShaper
-translation_of: Web/API/BaseAudioContext/createWaveShaper
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createWaveShaper()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("WaveShaperNode") }} を生成します。これは非線形な歪みを表現します。オーディオに歪み効果を適用するために使用されます。

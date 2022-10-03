@@ -2,6 +2,7 @@
 title: Document.scripts
 slug: Web/API/Document/scripts
 ---
+
 {{ ApiRef() }}
 
 ### 概述
@@ -30,4 +31,4 @@ if (scripts.length) {
 
 ### 浏览器兼容性
 
-{{Compat("api.Document.scripts")}}
+{{Compat}}

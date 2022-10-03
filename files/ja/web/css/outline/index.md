@@ -1,16 +1,8 @@
 ---
 title: outline
 slug: Web/CSS/outline
-tags:
-  - CSS
-  - CSS 輪郭線
-  - CSS プロパティ
-  - レイアウト
-  - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.properties.outline
-translation_of: Web/CSS/outline
 ---
+
 {{CSSRef}}
 
 **`outline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、輪郭線 (outline) に関する様々なプロパティを単一の宣言で設定します。

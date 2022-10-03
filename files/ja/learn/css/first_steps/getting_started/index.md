@@ -1,17 +1,8 @@
 ---
 title: CSS 入門
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - Beginner
-  - CSS
-  - Classes
-  - Elements
-  - Learn
-  - Selectors
-  - Syntax
-  - state
-translation_of: Learn/CSS/First_steps/Getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 この記事では、かんたんな HTML コードに CSS を適用させ、その過程でこの言語についての実用的なことを学びます。
@@ -268,8 +259,8 @@ HTML のうち、スタイルが適用されるのは `<span class="special">` �
 
 ## このモジュールの記事
 
-1.  [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
-3.  [CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

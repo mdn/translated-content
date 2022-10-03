@@ -1,15 +1,8 @@
 ---
 title: MessageChannel.port2
 slug: Web/API/MessageChannel/port2
-tags:
-  - API
-  - Channel messaging
-  - HTML5
-  - MessageChannel
-  - Property
-  - Reference
-translation_of: Web/API/MessageChannel/port2
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessageChannel")}} インターフェースの **`port2`** 読み取り専用プロパティは、メッセージチャンネルの第 2 ポートを返します。このポートは、チャンネルの元となるコンテキストに付属します。

@@ -1,19 +1,8 @@
 ---
 title: StorageArea.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - WebExtensions
-  - remove
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
 ---
+
 {{AddonSidebar()}}
 
 1 つ以上のアイテムをストレージ領域から削除します。

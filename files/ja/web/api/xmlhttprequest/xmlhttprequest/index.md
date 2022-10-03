@@ -1,20 +1,8 @@
 ---
 title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
-tags:
-  - API
-  - コンストラクター
-  - XMLHttpRequest の作成
-  - データの読み取り
-  - Loading Data
-  - Reading Data
-  - リファレンス
-  - サーバーアクセス
-  - XHR
-  - XMLHttpRequest
-browser-compat: api.XMLHttpRequest.XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/XMLHttpRequest
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest()`** コンストラクターは新しい {{domxref("XMLHttpRequest")}} を生成します。

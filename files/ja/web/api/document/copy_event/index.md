@@ -1,16 +1,8 @@
 ---
 title: 'Document: copy イベント'
 slug: Web/API/Document/copy_event
-tags:
-  - API
-  - Clipboard API
-  - Document
-  - Event
-  - Reference
-  - Web
-  - copy
-translation_of: Web/API/Document/copy_event
 ---
+
 {{APIRef}}
 
 **`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を実行したときに発生します。

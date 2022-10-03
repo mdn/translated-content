@@ -11,6 +11,7 @@ tags:
   - local
 translation_of: Web/API/Element/localName
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.localName`** renvoie la partie locale du nom qualifié d'un élément.

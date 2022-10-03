@@ -3,7 +3,10 @@ title: HTTP Strict Transport Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
 original_slug: Web/HTTP/HTTP_Strict_Transport_Security
 ---
-**`HTTP Strict Transport Security`**（通常简称为{{Glossary("HSTS")}}）是一个安全功能，它告诉浏览器只能通过 HTTPS 访问当前资源，而不是[HTTP](/en/HTTP)。
+
+{{HTTPSidebar}}
+
+**`HTTP-Strict-Transport-Security`**（通常简称为 {{Glossary("HSTS")}}）响应标头用来通知浏览器应该只通过 HTTPS 访问该站点，并且以后使用 HTTP 访问该站点的所有尝试都应自动转换为 HTTPS。
 
 | Header type                                      | {{Glossary("Response header")}} |
 | ------------------------------------------------ | ---------------------------------------- |
@@ -28,13 +31,13 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 
 ## 描述
 
-一个网站接受一个 HTTP 的请求，然后跳转到 HTTPS，用户可能在开始跳转前，通过没有加密的方式和服务器对话，比如，用户输入 http\://foo.com 或者直接 foo.com。
+一个网站接受一个 HTTP 的请求，然后跳转到 HTTPS，用户可能在开始跳转前，通过没有加密的方式和服务器对话，比如，用户输入 `http://foo.com` 或者直接 foo.com。
 
 这样存在中间人攻击潜在威胁，跳转过程可能被恶意网站利用来直接接触用户信息，而不是原来的加密信息。
 
 网站通过 HTTP Strict Transport Security 通知浏览器，这个网站禁止使用 HTTP 方式加载，浏览器应该自动把所有尝试使用 HTTP 的请求自动替换为 HTTPS 请求。
 
-> **备注：** `Strict-Transport-Security` 在通过 HTTP 访问时会被浏览器**忽略;** 因为攻击者可以通过中间人攻击的方式在连接中修改、注入或删除它. 只有在你的网站通过 HTTPS 访问并且没有证书错误时，浏览器才认为你的网站支持 HTTPS 然后使用 `Strict-Transport-Security` 的值 .
+> **备注：** `Strict-Transport-Security` 在通过 HTTP 访问时会被浏览器**忽略;** 因为攻击者可以通过中间人攻击的方式在连接中修改、注入或删除它。只有在你的网站通过 HTTPS 访问并且没有证书错误时，浏览器才认为你的网站支持 HTTPS 然后使用 `Strict-Transport-Security` 的值 .
 
 ### 浏览器如何处理
 
@@ -48,7 +51,7 @@ Chrome、Firefox 等浏览器里，当您尝试访问该域名下的内容时，
 
 ### 示例场景
 
-你连接到一个免费 WiFi 接入点，然后开始浏览网站，访问你的网上银行，查看你的支出，并且支付一些订单。很不幸，你接入的 WiFi 实际上是黑客的笔记本热点，他们拦截了你最初的 HTTP 请求，然后跳转到一个你银行网站一模一样的钓鱼网站。 现在，你的隐私数据暴露给黑客了。
+你连接到一个免费 WiFi 接入点，然后开始浏览网站，访问你的网上银行，查看你的支出，并且支付一些订单。很不幸，你接入的 WiFi 实际上是黑客的笔记本热点，他们拦截了你最初的 HTTP 请求，然后跳转到一个你银行网站一模一样的钓鱼网站。现在，你的隐私数据暴露给黑客了。
 
 Strict Transport Security 解决了这个问题；只要你通过 HTTPS 请求访问银行网站，并且银行网站配置好 Strict Transport Security，你的浏览器知道自动使用 HTTPS 请求，这可以阻止黑客的中间人攻击的把戏。
 

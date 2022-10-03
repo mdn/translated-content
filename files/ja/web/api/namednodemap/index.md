@@ -1,15 +1,10 @@
 ---
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
-page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
-browser-compat: api.NamedNodeMap
-translation_of: Web/API/NamedNodeMap
 l10n:
   sourceCommit: a33268ca8d264ca3d504f65fdf11ce38a7bcb9bd
 ---
+
 {{APIRef("DOM")}}
 
 **`NamedNodeMap`** インターフェイスは {{domxref("Attr")}} （属性）オブジェクトの集合を表します。 `NamedNodeMap` の中のオブジェクトは {{domxref("NodeList")}} の場合とは異なり、特定の順序で並んでいるわけではありませんが、配列のように添字でアクセスすることもできます。

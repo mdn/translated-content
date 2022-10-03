@@ -1,18 +1,8 @@
 ---
 title: Notification.data
 slug: Web/API/Notification/data
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - data
-browser-compat: api.Notification.data
-translation_of: Web/API/Notification/data
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`data`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `data` オプションで指定された通知の構造化されたデータのクローンを返します。

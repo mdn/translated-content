@@ -1,10 +1,8 @@
 ---
 title: 前書き
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
-tags:
-  - XSLT
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
 ---
+
 ## 前書き
 
 [XSLT](/ja/docs/Web/API/XSLTProcessor)をサポートする最新のブラウザでは、開発者は JavaScript を使用して XSLT が提供する機能にアクセスできるようになりました。JavaScript を使用すると、Web アプリケーションは XML データを読み込み、XSLT を介してそれを提示可能なフォームに処理し、それを既存の文書に追加できます。読み込まれた XML データにはプレゼンテーションデータがない生の情報しか含まれていないため、ダイアルアップ時でも素早く読み込むことができます。

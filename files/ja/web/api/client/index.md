@@ -1,17 +1,8 @@
 ---
 title: Client
 slug: Web/API/Client
-tags:
-  - API
-  - Client
-  - Interface
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerClient
-  - ServiceWorkers
-translation_of: Web/API/Client
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`Client`** インターフェイスは、{{domxref("Worker")}} や {{domxref("SharedWorker")}} などの実行可能なコンテキストを表します。 {{domxref("Window")}} クライアントは、より具体的な {{domxref("WindowClient")}} によって表されます。 {{domxref("Clients.matchAll","Clients.matchAll()")}} や {{domxref("Clients.get","Clients.get()")}} などのメソッドから `Client`/`WindowClient` オブジェクトを取得できます。

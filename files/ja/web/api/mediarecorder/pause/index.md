@@ -1,26 +1,18 @@
 ---
 title: MediaRecorder.pause()
 slug: Web/API/MediaRecorder/pause
-tags:
-  - API
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Method
-  - Reference
-  - pause
-translation_of: Web/API/MediaRecorder/pause
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.pause()`** メソッド（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、メディアストリームの記録を一時停止するために使用します。
 
 `MediaRecorder` オブジェクトの `pause()` メソッドが呼び出されると、ブラウザーは次の手順を実行するタスクをキューに入れます。
 
-1.  {{domxref("MediaRecorder.state")}} が `"inactive"` の場合は、DOM の `InvalidState` エラーを発生させてこれらの手順を終了します。 そうでない場合は、次の手順に進みます。
-2.  {{domxref("MediaRecorder.state")}} を `"paused"` に設定します。
-3.  現在の {{domxref("Blob")}} へのデータ収集を停止しますが、後で記録を再開できるように使用可能な状態にしておきます。
-4.  {{event("pause")}} イベントを発生させます。
+1. {{domxref("MediaRecorder.state")}} が `"inactive"` の場合は、DOM の `InvalidState` エラーを発生させてこれらの手順を終了します。 そうでない場合は、次の手順に進みます。
+2. {{domxref("MediaRecorder.state")}} を `"paused"` に設定します。
+3. 現在の {{domxref("Blob")}} へのデータ収集を停止しますが、後で記録を再開できるように使用可能な状態にしておきます。
+4. {{event("pause")}} イベントを発生させます。
 
 ## 構文
 

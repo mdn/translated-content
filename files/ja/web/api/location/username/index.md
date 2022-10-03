@@ -1,14 +1,8 @@
 ---
 title: location.username
 slug: Web/API/Location/username
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.username
-translation_of: Web/API/Location/username
 ---
+
 {{deprecated_header}}
 
 **`username`** は {{domxref("Location")}} インターフェイスのプロパティで、ドメイン名の前に指定されたユーザー名を表す {{domxref("USVString")}} です。

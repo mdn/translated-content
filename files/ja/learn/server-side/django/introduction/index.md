@@ -1,13 +1,8 @@
 ---
 title: Djangoの紹介
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Python
-  - Webフレームワーク
-  - django
-  - サーバーサイドプログラミング
-translation_of: Learn/Server-side/Django/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 最初の Django の記事では、 "Django とは何ですか？" という疑問に答え、この Web フレームワークの特徴と概要を説明します。主な機能の概要と、このモジュールで詳しく説明しない高度な機能などを紹介します。 また、Django アプリケーションの主要な構成部品のいくつかを示します。 (この時点ではまだテストできる開発環境を持っていません).

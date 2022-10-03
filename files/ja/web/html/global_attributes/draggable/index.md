@@ -1,12 +1,8 @@
 ---
 title: draggable
 slug: Web/HTML/Global_attributes/draggable
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/draggable
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **draggable** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は列挙型属性で、要素がブラウザーの本来の動作と [HTML ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) のどちらの動作でドラッグするかを示す列挙型属性です。

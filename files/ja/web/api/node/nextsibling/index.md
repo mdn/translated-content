@@ -1,13 +1,8 @@
 ---
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.nextSibling
-translation_of: Web/API/Node/nextSibling
 ---
+
 {{APIRef("DOM")}}
 
 **`nextSibling`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、指定されたノードの親の {{domxref("Node.childNodes","childNodes")}} の中で、そのすぐ次のノードを返します。または、指定されたノードが親要素の最後の子要素である場合は `null` を返します。

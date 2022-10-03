@@ -19,7 +19,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 
 ## 구문
 
-    new SharedArrayBuffer(length)
+```js
+new SharedArrayBuffer(length)
+```
 
 ### 파라미터
 
@@ -80,12 +82,12 @@ var sab = new SharedArrayBuffer(1024);
 
 ### 속성
 
-- [](/ko/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength)`SharedArrayBuffer.prototype.byteLength`
+- [`SharedArrayBuffer.prototype.byteLength`](/ko/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength)
   - : 배열의 크기 (바이트)입니다. 이것은 배열이 구성 될 때 설정되며 변경할 수 없습니다. 읽기 전용입니다.
 
 ### 메소드
 
-- [](/ko/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)`SharedArrayBuffer.prototype.slice(begin, end)`
+- [`SharedArrayBuffer.prototype.slice(begin, end)`](/ko/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)
   - : Returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `begin`, inclusive, up to `end`, exclusive. `begin` 또는 `end` 중 하나가 음수이면 처음부터가 아니라 배열 끝의 인덱스를 참조합니다.
 
 ## 명세
@@ -102,6 +104,6 @@ var sab = new SharedArrayBuffer(1024);
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
 - [Web Workers](/ko/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– 동기화 및 작업 분리 추상화를 제공하는 간단한 라이브러리.
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – 동기화 및 작업 분리 추상화를 제공하는 간단한 라이브러리.
 - [Shared Memory – 간단한 튜토리얼](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
 - [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

@@ -1,15 +1,9 @@
 ---
 title: MessagePort.onmessage
 slug: Web/API/MessagePort/message_event
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Property
-  - Reference
-translation_of: Web/API/MessagePort/onmessage
 original_slug: Web/API/MessagePort/onmessage
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessagePort")}} インターフェイスの **`onmessage`** イベントハンドラは、{{domxref("EventListener")}} であり、ポート上で `message` 型の {{domxref("MessageEvent")}} が発動した時に呼び出されます。つまり、ポートがメッセージを受信した時に呼び出されます。

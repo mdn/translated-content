@@ -1,11 +1,8 @@
 ---
 title: ゲーム開発テクニック
 slug: Games/Techniques
-tags:
-  - Games
-  - Guide
-translation_of: Games/Techniques
 ---
+
 {{GamesSidebar}}
 
 このページでは、オープンウェブ技術を使用してゲームを開発したい人のために、必要不可欠なコア技術をリストアップしています。

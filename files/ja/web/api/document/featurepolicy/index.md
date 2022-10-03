@@ -1,15 +1,8 @@
 ---
 title: Document.featurePolicy
 slug: Web/API/Document/featurePolicy
-tags:
-  - API
-  - Document
-  - Feature Policy
-  - Feature-Policy
-  - Reference
-  - 機能ポリシー
-translation_of: Web/API/Document/featurePolicy
 ---
+
 {{APIRef("Feature Policy")}}
 
 **`featurePolicy`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、特定の文書に適用される機能ポリシーを見ることができる簡単な API を提供する {{domxref("Policy")}} インターフェイスを返します。

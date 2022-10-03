@@ -1,16 +1,8 @@
 ---
 title: 'Document: paste イベント'
 slug: Web/API/Document/paste_event
-tags:
-  - API
-  - Document
-  - Event
-  - Reference
-  - Web
-  - paste
-  - イベント
-translation_of: Web/API/Document/paste_event
 ---
+
 {{APIRef}}
 
 **`paste`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから「貼り付け」操作を実行したときに発生します。

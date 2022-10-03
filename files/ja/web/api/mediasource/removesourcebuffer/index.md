@@ -1,19 +1,8 @@
 ---
 title: MediaSource.removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - removeSourceBuffer
-translation_of: Web/API/MediaSource/removeSourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイスの **`removeSourceBuffer()`** メソッドは、この `MediaSource` オブジェクトに関連付けられた {{domxref("SourceBuffers")}} リストから指定された {{domxref("SourceBuffer")}} を削除します。

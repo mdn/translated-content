@@ -2,7 +2,8 @@
 title: HTML in XMLHttpRequest
 slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 ---
-W3C {{domxref("XMLHttpRequest")}} 规范为 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)添加 HTML 语法解析功能，此前仅支持 XML 语法解析。该功能允许 Web 应用程序使用`XMLHttpRequest 作为解析的 DOM。`
+
+W3C {{domxref("XMLHttpRequest")}} 规范为 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)添加 HTML 语法解析功能，此前仅支持 XML 语法解析。该功能允许 Web 应用程序使用`XMLHttpRequest` 作为解析的 DOM。
 
 ## 局限
 
@@ -10,7 +11,7 @@ W3C {{domxref("XMLHttpRequest")}} 规范为 [`XMLHttpRequest`](/zh-CN/docs/Web/A
 
 ## 用法
 
-使用 XMLHttpRequest 将 HTML 资源恢复为 DOM 就像使用 XMLHttpRequest 将 XML 资源恢复为 DOM 一样，除了您不能使用同步模式，您必须通过将字符串 “document” 分配给 responseType 属性来显式请求文档调用 `open()` 之后调用 `send` 之前的 XMLHttpRequest 对象。
+使用 XMLHttpRequest 将 HTML 资源恢复为 DOM 就像使用 XMLHttpRequest 将 XML 资源恢复为 DOM 一样，除了您不能使用同步模式，您必须通过将字符串“document”分配给 responseType 属性来显式请求文档调用 `open()` 之后调用 `send` 之前的 XMLHttpRequest 对象。
 
 ```js
 var xhr = new XMLHttpRequest();
@@ -26,7 +27,7 @@ xhr.send();
 
 ### 方法 1
 
-该方法依赖于功能的 “强制异步” 性质。当你尝试设置一个以 “sync” 方式打开的 XMLHttpRequest 对象后，尝试将设置 responseType 会在实现该功能的浏览器上引发错误，其他浏览器则运行良好。
+该方法依赖于功能的“强制异步”性质。当你尝试设置一个以“sync”方式打开的 XMLHttpRequest 对象后，尝试将设置 responseType 会在实现该功能的浏览器上引发错误，其他浏览器则运行良好。
 
 ```js
 function HTMLinXHR() {
@@ -104,7 +105,7 @@ function detectHtmlInXhr(callback) {
 
 ## 老版本的浏览器中处理 HTML
 
-XMLHttpRequest 最初只支持 XML 解析。 HTML 解析支持是最近的一个补充。对于较老的浏览器，您甚至可以使用与正则表达式关联的 responseText 属性，以获取例如已知其 ID 的 HTML 元素的源代码：
+XMLHttpRequest 最初只支持 XML 解析。HTML 解析支持是最近的一个补充。对于较老的浏览器，您甚至可以使用与正则表达式关联的 responseText 属性，以获取例如已知其 ID 的 HTML 元素的源代码：
 
 ```js
 function getHTML (oXHR, sTargetId) {
@@ -128,4 +129,4 @@ oReq.send(null);
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}

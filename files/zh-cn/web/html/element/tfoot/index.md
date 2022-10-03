@@ -2,6 +2,7 @@
 title: <tfoot>
 slug: Web/HTML/Element/tfoot
 ---
+
 **HTML 元素`<tfoot>` **定义了一组表格中各列的汇总行。
 
 <table class="properties">
@@ -20,7 +21,7 @@ slug: Web/HTML/Element/tfoot
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>{{HTMLElement("table")}} 元素。{{HTMLElement("tfoot")}} 必须出现在一个或多个 {{HTMLElement("caption")}}，{{HTMLElement("colgroup")}}，{{HTMLElement("thead")}}, {{HTMLElement("tbody")}}，或 {{HTMLElement("tr")}} 元素之后。 注意这是自 HTML5 起有的要求。<br>
+   <td>{{HTMLElement("table")}} 元素。{{HTMLElement("tfoot")}} 必须出现在一个或多个 {{HTMLElement("caption")}}，{{HTMLElement("colgroup")}}，{{HTMLElement("thead")}}, {{HTMLElement("tbody")}}，或 {{HTMLElement("tr")}} 元素之后。注意这是自 HTML5 起有的要求。<br>
     {{HTMLElement("tfoot")}} 元素不能放在任何 {{HTMLElement("tbody")}} 或 {{HTMLElement("tr")}} 元素之后。注意，这与上述 HTML5 的标准相冲突。</td>
   </tr>
   <tr>

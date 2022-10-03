@@ -1,24 +1,8 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - 色
-  - hsl
-  - hsla
-  - rgb
-  - rgba
-  - 単位
-  - lch
-  - lab
-browser-compat: css.types.color
-translation_of: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 **`<color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、一つの色を表します。

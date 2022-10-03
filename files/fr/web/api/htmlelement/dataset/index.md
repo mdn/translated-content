@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/dataset
 translation_of: Web/API/HTMLElement/dataset
 browser-compat: api.HTMLElement.dataset
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété en lecture seule **`dataset`**, rattachée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement), fournit un accès en lecture/écriture aux [attributs de données (`data-*`)](/fr/docs/Web/HTML/Global_attributes/data-*) de l'élément. Elle expose un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) avec un élément pour chaque attribut `data-*`.

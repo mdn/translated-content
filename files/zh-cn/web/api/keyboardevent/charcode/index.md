@@ -2,6 +2,7 @@
 title: KeyboardEvent.charCode
 slug: Web/API/KeyboardEvent/charCode
 ---
+
 {{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}
 
 {{domxref("KeyboardEvent.charCode")}} 只读属性，返回 {{ domxref("element.onkeypress", "keypress") }} 事件触发时按下的字符键的字符 Unicode 值。
@@ -46,9 +47,9 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 ## 注意
 
-在{{ domxref("element.onkeypress", "keypress") }} 事件中，按键的 Unicode 值保存在 `{{ domxref("event.keyCode", "keyCode") }}` 或 `{{ domxref("event.charCode", "charCode") }}` 属性其中之一，不会二者同时都有。如果按下的是字符键 (例如 'a'), `charCode` 被设置为字符的代码值，并区分大小写。（即 `charCode` 会考虑 `Shift` 键是否被按下）。 否则，被按下的键的代码被存储在 `keyCode` 中。
+在 {{ domxref("element.onkeypress", "keypress") }} 事件中，按键的 Unicode 值保存在 {{ domxref("event.keyCode", "keyCode") }} 或 {{ domxref("event.charCode", "charCode") }} 属性其中之一，不会二者同时都有。如果按下的是字符键 (例如 'a'), `charCode` 被设置为字符的代码值，并区分大小写。（即 `charCode` 会考虑 `Shift` 键是否被按下）。否则，被按下的键的代码被存储在 `keyCode` 中。
 
-如果有一个或多个修饰键被按下，有一些复杂的规则来产生 `charCode` 的值，细节可参考 [Gecko Keypress 事件](/en/Gecko_Keypress_Event) 。
+如果有一个或多个修饰键被按下，有一些复杂的规则来产生 `charCode` 的值，细节可参考 [Gecko Keypress 事件](/zh-CN/Gecko_Keypress_Event) 。
 
 `charCode` 用于不会在 {{ domxref("element.onkeydown", "keydown") }} 和 {{ domxref("element.onkeyup", "keyup") }} 事件中被设置。这两种情况下，`keyCode` 会被设置。
 
@@ -56,7 +57,7 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 通过输入法输入的字符，不会被设置到注册到通过 `keyCode` 和 `charCode`。 Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.
 
-要查看特定按键的 `charCode` 值的列表，运行这个示例页面 [Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants](/en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants) ，然后查看 HTML 表格结果。
+要查看特定按键的 `charCode` 值的列表，运行这个示例页面 [Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants](/zh-CN/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants) ，然后查看 HTML 表格结果。
 
 ## 规范
 
@@ -64,4 +65,4 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.charCode")}}
+{{Compat}}

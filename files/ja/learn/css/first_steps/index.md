@@ -1,15 +1,8 @@
 ---
 title: CSS の第一歩
 slug: Learn/CSS/First_steps
-tags:
-  - Beginner
-  - CSS
-  - Landing
-  - Learn
-  - Module
-  - first steps
-translation_of: Learn/CSS/First_steps
 ---
+
 {{LearnSidebar}}
 
 CSS (Cascading Style Sheets) はウェブページをスタイリングしたりレイアウトしたりするのに使われます — 例えば、文字、色、大きさを変えたり、コンテンツに余白を設けたり、複数列に分けたり、あるいはアニメーションを加えたりなど様々な装飾機能があります。このモジュールでは CSS を習得するために、どう働くかの基本とともに、構文のありかたと HTML にスタイリングを加えることを簡単な始め方を提供します。
@@ -20,9 +13,9 @@ CSS (Cascading Style Sheets) はウェブページをスタイリングしたり
 
 このモジュールを始める前に、次の状態になっておくべきです。
 
-1.  コンピューターの使い方と (ウェブを見たりコンテンツを消費したりといった)ウェブの受動的な使い方に関する基本的な知識に慣れ親しんでいること。
-2.  [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)で説明されている基本的な作業環境と、[ファイルの扱い方](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)で説明されているファイルの作り方や管理の仕方について理解していること。
-3.  [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で説明されている HTML についての基礎知識に慣れ親しんでいること。
+1. コンピューターの使い方と (ウェブを見たりコンテンツを消費したりといった)ウェブの受動的な使い方に関する基本的な知識に慣れ親しんでいること。
+2. [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)で説明されている基本的な作業環境と、[ファイルの扱い方](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)で説明されているファイルの作り方や管理の仕方について理解していること。
+3. [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で説明されている HTML についての基礎知識に慣れ親しんでいること。
 
 > **Note:** 自分自身でファイルを作れない環境 (タブレットやその他の端末) で作業する場合、(ほとんどの) コードサンプルは [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったオンラインコーディングプログラムで試すことが可能です。
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 original_slug: Web/CSS/CSS_Lists/Indentation_homogène_des_listes
 ---
+
 {{CSSRef}}
 
 La modification la plus fréquemment apportée sur une liste concerne la distance d'indentation (autrement dit, la distance de laquelle les éléments sont décalés vers la droite). Ce point peut être source de frustration car les navigateurs se comportent différemment à ce sujet. Ainsi, si on déclare une liste sans marge à gauche, elles sont déplacées Internet Explorer mais restent obstinément à la même place dans les navigateurs Gecko.

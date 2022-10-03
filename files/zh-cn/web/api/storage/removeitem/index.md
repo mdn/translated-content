@@ -2,9 +2,10 @@
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
-{{domxref("Storage")}} 接口的 `removeItem()` 方法，接受一个键名作为参数，会从给定的 Storage 对象中删除该键名（如果存在）。 如果没有与该给定键名匹配的项，则此方法将不执行任何操作。
+{{domxref("Storage")}} 接口的 `removeItem()` 方法，接受一个键名作为参数，会从给定的 Storage 对象中删除该键名（如果存在）。如果没有与该给定键名匹配的项，则此方法将不执行任何操作。
 
 ## 语法
 
@@ -43,7 +44,7 @@ function populateStorage() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Storage.removeItem")}}
+{{Compat}}
 
 ## 相关链接
 

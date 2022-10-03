@@ -1,9 +1,6 @@
 ---
 title: Tips for Authoring Fast-loading HTML Pages
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - HTML
-translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Tips_for_Authoring_Fast-loading_HTML_Pages
 ---
 Summary: Learn common-sense tips for producing HTML pages which load quickly and provide visitor satisfaction. 여기에 나온 팁들은 상식과 실험에 바탕을 두고 있습니다. 만약 당신이 페이지 불러오기 성능을 향상시킬 수 있는 팁을 알고 있다면 이 글의 토론 페이지에 조언해 주시기 바랍니다.
@@ -42,15 +39,15 @@ Summary: Learn common-sense tips for producing HTML pages which load quickly and
 
 캐시가능한 내용이 적절한 만료시간으로 캐시되었는지 확인해야 합니다.
 
-특히 `Last-Modified` 헤더에 신경써야 합니다. 이것은 페이지의 효율적인 캐싱을 가능케 합니다. 이것에 의해 브라우저가 읽어들이고자 하는 파일이 마지막으로 변경된 시간에 대한 정보가 전달됩니다. 정적인 페이지(예를 들면, `<tt>.html</tt>`, `<tt>.css</tt>`)는 대부분의 웹 서버가 파일 시스템에 저장된 마지막 변경시간을 토대로 자동적으로 `Last-Modified` 헤더를 추가합니다. 동적인 페이지(예를 들면, `<tt>.php</tt>`, `<tt>.aspx</tt>`)는 물론 불가능합니다.
+특히 `Last-Modified` 헤더에 신경써야 합니다. 이것은 페이지의 효율적인 캐싱을 가능케 합니다. 이것에 의해 브라우저가 읽어들이고자 하는 파일이 마지막으로 변경된 시간에 대한 정보가 전달됩니다. 정적인 페이지(예를 들면, `.html`, `.css`)는 대부분의 웹 서버가 파일 시스템에 저장된 마지막 변경시간을 토대로 자동적으로 `Last-Modified` 헤더를 추가합니다. 동적인 페이지(예를 들면, `.php`, `.aspx`)는 물론 불가능합니다.
 
 그러므로, 특히 동적으로 생성되는 페이지들에 대한 이 부분의 연구가 중요합니다. 이것은 조금 복잡하지만, 정상적으로 캐시 불가능한 페이지들에 대한 페이지 요청을 대폭 줄일 수 있게 합니다.
 
 추가 정보:
 
-1.  [RSS 해커들을 위한 HTTP 조건부 GET](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2.  [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
-3.  [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
+1. [RSS 해커들을 위한 HTTP 조건부 GET](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
+2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
+3. [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
 
 #### 페이지 컴포넌트의 순서를 최적화
 
@@ -129,7 +126,7 @@ table-layout: fixed;
     - `{{htmlelement('script')}}`
 
       JavaScript 파일은 페이지를 불러들일 때 필요하지만 DHTML은 페이지 불러오기가 끝난 후에만 동작합니다.
-      
+
       유지보수를 위해 관련되지 않은 JavaScript를 별도의 파일로 분리하고 성능을 위해 파일 수를 최소화하세요.
 
   - `{{htmlelement('body')}}`

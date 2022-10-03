@@ -1,13 +1,8 @@
 ---
 title: Responsive web design (レスポンシブウェブデザイン)
 slug: Glossary/Responsive_web_design
-tags:
-  - Accessibility
-  - Design
-  - Glossary
-  - Responsive web design
-translation_of: Glossary/Responsive_web_design
 ---
+
 _レスポンシブウェブデザイン_ (**RWD**) とはサイトの見た目と挙動を、デスクトップからモバイルまで全てのパーソナルコンピューティングデバイスにとって、最適化することに焦点を当てたウェブ開発の概念です。
 
 ## 詳細情報

@@ -20,7 +20,7 @@ In 1939 the [View-Master device](https://en.wikipedia.org/wiki/View-Master) was 
 
 There were various experiments conducted over the next few decades, but it wasn't resricted to science labs and battlefields anymore. Eventually pop culture took over with movie directors showing their visions of virtual reality. Movies like Tron (1982) and The Matrix (1999) were created, where people could transfer themselves into a whole new cyber world or were trapped in one without even knowing, accepting it as the real world.
 
-**在接下来的数十年中，出现了许多具有指导性作用的实验，但是它不再像从前那样只对科学实验室和战场开放。最终大众文化通过电影导演展现他们的视角，从而接过了虚拟现实的大旗。像【创：战纪 TRON: Legacy（1982）】 和【黑客帝国 The Matrix (1999)】那样的电影被拍摄出来，在那里人们能够轻易的将自己置身于一个完全由信息构成的世界，又或者，接受让自己进入一个从未认识过的新世界，并且将它当做一个真实的存在。【K】**
+**在接下来的数十年中，出现了许多具有指导性作用的实验，但是它不再像从前那样只对科学实验室和战场开放。最终大众文化通过电影导演展现他们的视角，从而接过了虚拟现实的大旗。像【创：战纪 TRON: Legacy（1982）】和【黑客帝国 The Matrix (1999)】那样的电影被拍摄出来，在那里人们能够轻易的将自己置身于一个完全由信息构成的世界，又或者，接受让自己进入一个从未认识过的新世界，并且将它当做一个真实的存在。【K】**
 
 ![](http://end3r.com/tmp/vr/matrix.jpg)
 
@@ -32,7 +32,7 @@ The first VR gaming attempts were big and expensive — in 1991 Virtuality Group
 
 So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an afforable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas the latest [Oculus Rift](https://www.oculus.com/rift/) developer kit is available for $350, and cheaper solutions are available, such as mobile device-based solutions like [Google Cardboard](https://www.google.com/get/cardboard/).
 
-**那么有什么值得我们期待的呢？VR 硬件需要传输高精度的信息，在保证低延迟的情况下传递可接受的用户的体感信息；运行 VR 设备和程序的电脑，必需强大到足以维持这些庞大的信息。直到最近的这几年，如此高精度并且能量强大的设备，才能通过大众可以接受的价格被购买到。早期的 VR 原型设备，需要花费数万美元，然而最近出现的[Oculus Rift](https://www.oculus.com/rift/) developer kit 却仅售 350$， 并且还有更加便宜的解决方案，比如基于手机的 VR 设备像是[Google Cardboard](https://www.google.com/get/cardboard/).【K】**
+**那么有什么值得我们期待的呢？VR 硬件需要传输高精度的信息，在保证低延迟的情况下传递可接受的用户的体感信息；运行 VR 设备和程序的电脑，必需强大到足以维持这些庞大的信息。直到最近的这几年，如此高精度并且能量强大的设备，才能通过大众可以接受的价格被购买到。早期的 VR 原型设备，需要花费数万美元，然而最近出现的[Oculus Rift](https://www.oculus.com/rift/) developer kit 却仅售 350$，并且还有更加便宜的解决方案，比如基于手机的 VR 设备像是[Google Cardboard](https://www.google.com/get/cardboard/).【K】**
 
 By 2015, such VRDevices gained commercial support for VR technology. Sony are developing a VR hardware kit for the PS4 (codename [Project Morpheus](http://www.cnet.com/products/sony-project-morpheus/)), Facebook bought Oculus Rift for $2 billion, Valve has created [SteamVR](http://store.steampowered.com/universe/vr) software that works with HTC's [Vive VR headset](http://www.htcvr.com/), and Google has launched a 2.0 version of its Cardboard that supports up to 6 inch phones (it is also fully compatible with iOS devices because it has a piece of conductive foam that works as a tap over the screen.)
 

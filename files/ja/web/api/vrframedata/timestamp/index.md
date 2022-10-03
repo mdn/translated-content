@@ -1,20 +1,8 @@
 ---
 title: VRFrameData.timestamp
 slug: Web/API/VRFrameData/timestamp
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - timeStamp
-browser-compat: api.VRFrameData.timestamp
-translation_of: Web/API/VRFrameData/timestamp
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`timestamp`** は {{domxref("VRFrameData")}} インターフェイスの読み取り専用プロパティで、フレームの更新が発生した時刻を表す、常に増加するタイムスタンプ値を返します。

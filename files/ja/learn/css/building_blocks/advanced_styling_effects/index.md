@@ -1,19 +1,8 @@
 ---
 title: ボックスの高度なエフェクト
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
-tags:
-  - Article
-  - Beginner
-  - Blend modes
-  - Boxes
-  - CSS
-  - CodingScripting
-  - Filters
-  - Styling
-  - box shadows
-  - effects
-translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
 この記事はトリックの箱として機能し、ボックスの影、ブレンドモード、フィルタのようなボックスの装飾に使用できる高度な機能のいくつかを紹介します。
@@ -63,10 +52,10 @@ article {
 
 `box-shadow` プロパティ値に次の 4 つの項目があることがわかります。
 
-1.  最初の長さの値は**水平オフセット**（horizontal offset）です — 影が元のボックスから右へオフセットした距離です（値が負の場合は左）。
-2.  2 番目の長さの値は**垂直オフセット**（vertical offset）です — 影が元のボックスから下方向へオフセットした距離です（値が負の場合は上方向）。
-3.  3 番目の長さの値は、**ぼかし半径**（blur radius）です — 影に適用されるぼかしの量です。
-4.  色の値は、影の**基本色**（base color）です。
+1. 最初の長さの値は**水平オフセット**（horizontal offset）です — 影が元のボックスから右へオフセットした距離です（値が負の場合は左）。
+2. 2 番目の長さの値は**垂直オフセット**（vertical offset）です — 影が元のボックスから下方向へオフセットした距離です（値が負の場合は上方向）。
+3. 3 番目の長さの値は、**ぼかし半径**（blur radius）です — 影に適用されるぼかしの量です。
+4. 色の値は、影の**基本色**（base color）です。
 
 これらの値を定義するために必要な長さと色の単位を使用できます。
 

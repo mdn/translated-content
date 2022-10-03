@@ -1,20 +1,8 @@
 ---
 title: AudioTrackList
 slug: Web/API/AudioTrackList
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Track List
-  - Tracks
-  - list
-  - インターフェイス
-translation_of: Web/API/AudioTrackList
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`AudioTrackList`** インターフェイスは、所与の HTML メディア要素内に含まれる音声トラックのリストを表すために使用します。 各トラックはリスト内の別々の {{domxref("AudioTrack")}} オブジェクトで表します。

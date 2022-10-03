@@ -1,23 +1,8 @@
 ---
 title: JavaScript オブジェクトの基本
 slug: Learn/JavaScript/Objects/Basics
-tags:
-  - API
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Syntax
-  - bracket notation
-  - dot notation
-  - instance
-  - object literal
-  - this
-  - オブジェクト
-  - 学習
-  - 理論
-translation_of: Learn/JavaScript/Objects/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 この記事では、基本的な JavaScript オブジェクトの構文を学び、このコースで以前に見た一部の JavaScript の機能を復習し、すでに提供された多くの機能がオブジェクトであるという事実を再確認します。
@@ -276,7 +261,7 @@ const myVideo = document.querySelector('video');
 
 [`Document`](/ja/docs/Web/API/Document) クラスのインスタンスで使用可能なメソッドを使っています。各ウェブページが読み込まれると、`document` と呼ばれる `Document` のインスタンスが作られ、それはウェブページ全体の構造、コンテンツ、その URL 等その他の機能を表現します。もう一度述べますが、これはいくつかの共通なメソッドやプロパティを使用できることを意味します。
 
-今まで使用してきた、`Array や `[`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) 等の、他の多くの組み込みのオブジェクトや API でも全く同じです。
+今まで使用してきた、`Array` や [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) 等の、他の多くの組み込みのオブジェクトや API でも全く同じです。
 
 組み込みのオブジェクトと API では常に自動でオブジェクトのインスタンスが生成される訳ではないことを注意する必要があります。例えば、モダンなブラウザーがシステム通知を発行することを許可する [Notifications API](/ja/docs/Web/API/Notifications_API) では、発行したい各通知のためにコンストラクターを使用した新しいオブジェクトを生成する必要があります。JavaScript コンソールに次を入力してみてください。
 

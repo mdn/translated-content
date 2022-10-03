@@ -2,6 +2,7 @@
 title: self.createImageBitmap()
 slug: Web/API/createImageBitmap
 ---
+
 {{APIRef("Canvas API")}}
 
 **`createImageBitmap`** 方法存在 windows 和 workers 中。它接受各种不同的图像来源，并返回一个{{domxref("Promise")}}, resolve 为{{domxref("ImageBitmap")}}. 可选地参数，图像被剪裁成自（sx，sy）且宽度为 sw，高度为 sh 的像素的矩形。
@@ -29,9 +30,9 @@ createImageBitmap(image, sx, sy, sw, sh[, options]).then(function(response) { ..
 
   - : 为其设置选项的对象。可用的选项是：
 
-    - `imageOrientation`: 指示图像是按原样呈现还是垂直翻转. `none` (默认不翻转) 或 `flipY`.
+    - `imageOrientation`: 指示图像是按原样呈现还是垂直翻转。`none` (默认不翻转) 或 `flipY`.
     - `premultiplyAlpha`: 指示位图颜色通道由 alpha 通道预乘。选择其一：`none`, `premultiply`, 或 `default` (默认).
-    - `colorSpaceConversion`: 指示图像是否使用色彩空间转换进行解码. `none` 或 `default` (默认). The value `default` indicates that implementation-specific behavior is used.
+    - `colorSpaceConversion`: 指示图像是否使用色彩空间转换进行解码。`none` 或 `default` (默认). The value `default` indicates that implementation-specific behavior is used.
     - `resizeWidth`: 指示新宽度的长整数。
     - `resizeHeight`: 指示新高度的长整数。
     - `resizeQuality`: 指定图像缩放算法。选择其一`pixelated`, `low` (默认), `medium`, 或 `high`.
@@ -66,7 +67,7 @@ image.src = 'sprites.png';
 
 ## Browser compatibility
 
-{{Compat("api.createImageBitmap")}}
+{{Compat}}
 
 ## See also
 

@@ -1,19 +1,8 @@
 ---
 title: MediaRecorder.isTypeSupported
 slug: Web/API/MediaRecorder/isTypeSupported
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Method
-  - Reference
-  - Video
-  - canRecordMimeType
-translation_of: Web/API/MediaRecorder/isTypeSupported
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.isTypeSupported()`** メソッドは、指定された MIME タイプがユーザーエージェントが記録できるものであれば `true` となる `Boolean` を返します。

@@ -1,15 +1,8 @@
 ---
 title: Document.characterSet
 slug: Web/API/Document/characterSet
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/Document/characterSet
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.characterSet`** プロパティは読み取り専用で、文書の[文字エンコーディング](/ja/docs/Glossary/character_encoding)を表す文字列を返します。 (文字エンコーディングは文字セットであり、入力されたバイト列をどのように文字として解釈するか規定します。)

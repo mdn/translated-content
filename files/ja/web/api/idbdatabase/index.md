@@ -1,15 +1,8 @@
 ---
 title: IDBDatabase
 slug: Web/API/IDBDatabase
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Storage
-  - transactions
-translation_of: Web/API/IDBDatabase
 ---
+
 {{APIRef()}}
 
 IndexedDB API`のIDBDatabase`インターフェイスは、[データベースへの接続](/ja/docs/IndexedDB#database_connection)を提供します。 `IDBDatabase`オブジェクトで、データベースの[transaction](/ja/docs/IndexedDB#gloss_transaction)を開き、データベースのオブジェクト（データ）を生成したり、操作したり、削除したりできます。このインターフェイスはデータベースのバージョンを取得したり、統合したりする唯一の方法を提供します。

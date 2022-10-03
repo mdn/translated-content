@@ -1,18 +1,8 @@
 ---
 title: '<tbody>: テーブル本体要素'
 slug: Web/HTML/Element/tbody
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Body
-  - Table Contents
-  - Tables
-  - Web
-  - tbody
-translation_of: Web/HTML/Element/tbody
 ---
+
 {{HTMLRef}}
 
 **HTML の表本体要素** (**`<tbody>`**) は、表の一連の行 ({{HTMLElement("tr")}} 要素) を内包し、その部分が表 ({{HTMLELement("table")}}) の本体部分を構成することを表します。

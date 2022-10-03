@@ -1,12 +1,8 @@
 ---
 title: Statement (文)
 slug: Glossary/Statement
-tags:
-  - Beginner
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Statement
 ---
+
 コンピュータープログラミング言語では、**文**はタスクを実行するコード行です。すべてのプログラムは文の連続から成っています。
 
 ## 関連項目

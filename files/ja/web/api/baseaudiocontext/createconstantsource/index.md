@@ -1,18 +1,8 @@
 ---
 title: BaseAudioContext.createConstantSource()
 slug: Web/API/BaseAudioContext/createConstantSource
-tags:
-  - API
-  - 音声
-  - AudioContext
-  - BaseAudioContext
-  - ConstantSourceNode
-  - メディア
-  - メソッド
-  - createConstantSource
-browser-compat: api.BaseAudioContext.createConstantSource
-translation_of: Web/API/BaseAudioContext/createConstantSource
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`createConstantSource()`** は {{domxref("BaseAudioContext")}} インターフェイスのプロパティで、 {{domxref("ConstantSourceNode")}} オブジェクトを作成します。これはサンプル数がすべて同じ値のモノラル（1 チャンネル）音声信号を連続的に出力する音声ソースです。

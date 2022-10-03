@@ -1,16 +1,8 @@
 ---
 title: Navigator.serviceWorker
 slug: Web/API/Navigator/serviceWorker
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-translation_of: Web/API/Navigator/serviceWorker
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`Navigator.serviceWorker`** は読み取り専用のプロパティで、[関連付けられた文書](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)で {{domxref("ServiceWorker")}} の登録、削除、更新、通信へのアクセスを提供する {{domxref("ServiceWorkerContainer")}} オブジェクトを返します。

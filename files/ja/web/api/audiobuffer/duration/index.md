@@ -1,16 +1,8 @@
 ---
 title: AudioBuffer.duration
 slug: Web/API/AudioBuffer/duration
-tags:
-  - API
-  - AudioBuffer
-  - プロパティ
-  - リファレンス
-  - ウェブ音声 API
-  - duration
-browser-compat: api.AudioBuffer.duration
-translation_of: Web/API/AudioBuffer/duration
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`duration`** は {{ domxref("AudioBuffer") }} インターフェイスのプロパティで、バッファーに格納された PCM データの再生時間を秒数で表す double 値を返します。

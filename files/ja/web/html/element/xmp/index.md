@@ -1,14 +1,6 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.xmp
-translation_of: Web/HTML/Element/xmp
 ---
 
 {{deprecated_header}}
@@ -21,7 +13,7 @@ translation_of: Web/HTML/Element/xmp
 >
 > - HTML3.2 から非推奨要素となっており、また一貫した実装も存在しません。そして HTML5 の言語からは完全に削除されています。
 > - 代わりに {{HTMLElement("pre")}} 要素か、意味的に適切であれば {{HTMLElement("code")}} 要素を使用してください。なお、マークアップとして解釈されないようにするには、 '`<`' の文字を '`&lt;`' としてエスケープする必要があります。
-> - あらゆる要素で等幅フォントを使用することができます。 [CSS](/en-US/docs/Web/CSS) のスタイルで `monospace` を {{cssxref("font-family")}} プロパティの一般的なフォントの値として使用してください。
+> - あらゆる要素で等幅フォントを使用することができます。 [CSS](/ja/docs/Web/CSS) のスタイルで `monospace` を {{cssxref("font-family")}} プロパティの一般的なフォントの値として使用してください。
 
 ## 属性
 

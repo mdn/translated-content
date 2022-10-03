@@ -1,15 +1,8 @@
 ---
 title: 'NDEFReader: readingerror イベント'
 slug: Web/API/NDEFReader/readingerror_event
-tags:
-  - Event
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-  - プロパティ
-browser-compat: api.NDEFReader.readingerror_event
-translation_of: Web/API/NDEFReader/readingerror_event
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 `readingerror` は {{DOMxRef("NDEFReader")}} インターフェイスのイベントで、 NFC タグの読み取りの際にエラーが発生するたびに発行されます。例えば、タグがリーダーの磁気誘導範囲から離れたときです。

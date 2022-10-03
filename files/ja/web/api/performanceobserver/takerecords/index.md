@@ -1,16 +1,8 @@
 ---
 title: PerformanceObserver.takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
-tags:
-  - API
-  - PerformanceObserver
-  - takeRecords()
-  - オブザーバー
-  - パフォーマンスオブザーバー API
-  - メソッド
-  - リファレンス
-translation_of: Web/API/PerformanceObserver/takeRecords
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 {{domxref('PerformanceObserver')}} インターフェイスの **`takeRecords()`** メソッドは、パフォーマンスオブザーバーに格納されている{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の現在のリストを空にして返します。

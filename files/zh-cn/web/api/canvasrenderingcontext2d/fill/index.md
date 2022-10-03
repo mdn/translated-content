@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.fill()`** 是 Canvas 2D API 根据当前的填充样式，填充当前或已存在的路径的方法。采取非零环绕或者奇偶环绕规则。
@@ -21,7 +22,7 @@ void ctx.fill(path, fillRule);
   - : 一种算法，决定点是在路径内还是在路径外。
     允许的值：
 
-    - **`"nonzero`**": [非零环绕规则](http://en.wikipedia.org/wiki/Nonzero-rule)， 默认的规则。
+    - **`"nonzero`**": [非零环绕规则](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
     - **`"evenodd"`**: [奇偶环绕规则](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
 
 - `path`
@@ -95,7 +96,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.fill")}}
+{{Compat}}
 
 ## 参见
 

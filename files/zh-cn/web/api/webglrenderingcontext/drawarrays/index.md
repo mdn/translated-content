@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.drawArrays()
 slug: Web/API/WebGLRenderingContext/drawArrays
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 中的**`WebGLRenderingContext.drawArrays()`**方法用于从向量数组中绘制图元。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.drawArrays()`** 方法用于从向量数组中绘制图元。
 
 ## 语法
 
@@ -27,7 +28,7 @@ void gl.drawArrays(mode, first, count);
     - `gl.TRIANGLES`: 绘制一系列三角形。每三个点作为顶点。
 
 - first
-  - : {{domxref("GLint")}} 类型 ，指定从哪个点开始绘制。
+  - : {{domxref("GLint")}} 类型，指定从哪个点开始绘制。
 - count
   - : {{domxref("GLsizei")}} 类型，指定绘制需要使用到多少个点。
 
@@ -53,7 +54,7 @@ gl.drawArrays(gl.POINTS, 0, 8);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.drawArrays")}}
+{{Compat}}
 
 ## 另见
 

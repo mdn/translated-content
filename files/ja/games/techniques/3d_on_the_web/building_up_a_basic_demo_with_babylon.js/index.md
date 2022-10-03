@@ -1,13 +1,8 @@
 ---
 title: Babylon.js を使った基本的なデモの作成
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js
-tags:
-  - 3D game engines
-  - Babylon.js
-  - Beginner
-  - WebGL
-translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js
 ---
+
 {{GamesSidebar}}
 
 [Babylon.js](https://www.babylonjs.com/) は開発者に使われている最も有名な 3D ゲームエンジンです。他のどんな 3D と同様に、より迅速に共通の3D機能を実装するのを助けるプラグイン機能を提供します。この記事では Babylon.js を使った基礎を通じて開発環境の構築、必要な HTML 構造、 JavaScript の書き方を提供します。

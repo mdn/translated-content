@@ -7,9 +7,10 @@ tags:
 translation_of: Glossary/undefined
 original_slug: Glossaire/undefined
 ---
+
 Une Valeur **{{Glossary("primitive")}}** affectée automatiquement aux **{{Glossary("Variable","variables")}}** qui viennent d'être déclarées ou aux **{{Glossary("Argument","arguments")}}** **formels** pour lesquels il n'y a pas d'**arguments réels**.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

@@ -4,6 +4,7 @@ slug: Web/API/IDBRequest/result
 translation_of: Web/API/IDBRequest/result
 browser-compat: api.IDBRequest.result
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`result`**, rattachée à l'interface [`IDBRequest`](/fr/docs/Web/API/IDBRequest), renvoie le résultat de la requête. Si la requête échoue et que le résultat n'est pas disponible, une exception `InvalidStateError` sera levée.

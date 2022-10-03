@@ -1,15 +1,8 @@
 ---
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
-tags:
-  - API
-  - PerformanceEntry
-  - Web パフォーマンス
-  - インターフェイス
-  - パフォーマンスタイムライン API
-  - リファレンス
-translation_of: Web/API/PerformanceEntry
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`PerformanceEntry`** オブジェクトは、*パフォーマンスタイムライン*の一部である単一のパフォーマンスメトリックをカプセル化します。パフォーマンスエントリは、アプリケーション内の明示的な時点でパフォーマンス _{{domxref("PerformanceMark","mark")}}_ または _{{domxref("PerformanceMeasure","measure")}}_ を作成する (たとえば、{{domxref("Performance.mark","mark()")}} メソッドを呼び出すことによって) ことで直接作成できます。パフォーマンスエントリは、(イメージなどの) リソースのロードなどの間接的な方法でも作成されます。

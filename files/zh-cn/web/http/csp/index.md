@@ -2,11 +2,12 @@
 title: 内容安全策略 ( CSP )
 slug: Web/HTTP/CSP
 ---
+
 {{HTTPSidebar}}
 
 内容安全策略 ({{Glossary("CSP")}}) 是一个额外的安全层，用于检测并削弱某些特定类型的攻击，包括跨站脚本 ({{Glossary("XSS")}}) 和数据注入攻击等。无论是数据盗取、网站内容污染还是散发恶意软件，这些攻击都是主要的手段。
 
-CSP 被设计成完全向后兼容（除 CSP2 在向后兼容有明确提及的不一致; 更多细节查看[这里](https://www.w3.org/TR/CSP2) 章节 1.1）。不支持 CSP 的浏览器也能与实现了 CSP 的服务器正常合作，反之亦然：不支持 CSP 的浏览器只会忽略它，如常运行，默认为网页内容使用标准的同源策略。如果网站不提供 CSP 头部，浏览器也使用标准的[同源策略](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)。
+CSP 被设计成完全向后兼容（除 CSP2 在向后兼容有明确提及的不一致; 更多细节查看[这里](https://www.w3.org/TR/CSP2) 章节 1.1）。不支持 CSP 的浏览器也能与实现了 CSP 的服务器正常合作，反之亦然：不支持 CSP 的浏览器只会忽略它，如常运行，默认为网页内容使用标准的同源策略。如果网站不提供 CSP 头部，浏览器也使用标准的[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
 
 为使 CSP 可用，你需要配置你的网络服务器返回 {{HTTPHeader("Content-Security-Policy")}} HTTP 头部 ( 有时你会看到一些关于`X-Content-Security-Policy`头部的提法，那是旧版本，你无须再如此指定它)。
 
@@ -20,7 +21,7 @@ CSP 被设计成完全向后兼容（除 CSP2 在向后兼容有明确提及的�
 
 ### 跨站脚本攻击
 
-CSP 的主要目标是减少和报告 XSS 攻击 ，XSS 攻击利用了浏览器对于从服务器所获取的内容的信任。恶意脚本在受害者的浏览器中得以运行，因为浏览器信任其内容来源，即使有的时候这些脚本并非来自于它本该来的地方。
+CSP 的主要目标是减少和报告 XSS 攻击，XSS 攻击利用了浏览器对于从服务器所获取的内容的信任。恶意脚本在受害者的浏览器中得以运行，因为浏览器信任其内容来源，即使有的时候这些脚本并非来自于它本该来的地方。
 
 CSP 通过指定有效域——即浏览器认可的可执行脚本的有效来源——使服务器管理者有能力减少或消除 XSS 攻击所依赖的载体。一个 CSP 兼容的浏览器将会仅执行从白名单域获取到的脚本文件，忽略所有的其他脚本 (包括内联脚本和 HTML 的事件处理属性)。
 
@@ -28,7 +29,7 @@ CSP 通过指定有效域——即浏览器认可的可执行脚本的有效来�
 
 ### 数据包嗅探攻击
 
-除限制可以加载内容的域，服务器还可指明哪种协议允许使用；比如 (从理想化的安全角度来说)，服务器可指定所有内容必须通过 HTTPS 加载。一个完整的数据安全传输策略不仅强制使用 HTTPS 进行数据传输，也为所有的 cookie 标记安全标识 [cookies with the secure flag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)，并且提供自动的重定向使得 HTTP 页面导向 HTTPS 版本。网站也可以使用 {{HTTPHeader("Strict-Transport-Security")}} HTTP 头部确保连接它的浏览器只使用加密通道**。**
+除限制可以加载内容的域，服务器还可指明哪种协议允许使用；比如 (从理想化的安全角度来说)，服务器可指定所有内容必须通过 HTTPS 加载。一个完整的数据安全传输策略不仅强制使用 HTTPS 进行数据传输，也为所有的 cookie 标记安全标识 [cookies with the secure flag](/zh-CN/docs/Web/HTTP/Cookies)，并且提供自动的重定向使得 HTTP 页面导向 HTTPS 版本。网站也可以使用 {{HTTPHeader("Strict-Transport-Security")}} HTTP 头部确保连接它的浏览器只使用加密通道**。**
 
 ## 使用 CSP
 
@@ -46,7 +47,7 @@ policy 参数是一个包含了各种描述你的 CSP 策略指令的字符串�
 
 ### 描述策略
 
-一个策略由一系列策略指令所组成，每个策略指令都描述了一个针对某个特定类型资源以及生效范围的策略。你的策略应当包含一个{{CSP("default-src")}}策略指令，在其他资源类型没有符合自己的策略时应用该策略 (有关完整列表查看{{CSP("default-src")}} )。一个策略可以包含 {{CSP("default-src")}} 或者 {{CSP("script-src")}} 指令来防止内联脚本运行，并杜绝`eval()`的使用。 一个策略也可包含一个 {{CSP("default-src")}} 或 {{CSP("style-src")}} 指令去限制来自一个 {{HTMLElement("style")}} 元素或者 style 属性的內联样式。
+一个策略由一系列策略指令所组成，每个策略指令都描述了一个针对某个特定类型资源以及生效范围的策略。你的策略应当包含一个{{CSP("default-src")}}策略指令，在其他资源类型没有符合自己的策略时应用该策略 (有关完整列表查看{{CSP("default-src")}} )。一个策略可以包含 {{CSP("default-src")}} 或者 {{CSP("script-src")}} 指令来防止内联脚本运行，并杜绝`eval()`的使用。一个策略也可包含一个 {{CSP("default-src")}} 或 {{CSP("style-src")}} 指令去限制来自一个 {{HTMLElement("style")}} 元素或者 style 属性的內联样式。
 
 ## 示例：常见用例
 
@@ -112,7 +113,7 @@ Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *
 Content-Security-Policy-Report-Only: policy
 ```
 
-如果{{HTTPHeader("Content-Security-Policy-Report-Only")}} 头部和 {{HTTPHeader("Content-Security-Policy")}} 同时出现在一个响应中，两个策略均有效。在`Content-Security-Policy` 头部中指定的策略有强制性 ，而`Content-Security-Policy-Report-Only`中的策略仅产生报告而不具有强制性。
+如果{{HTTPHeader("Content-Security-Policy-Report-Only")}} 头部和 {{HTTPHeader("Content-Security-Policy")}} 同时出现在一个响应中，两个策略均有效。在`Content-Security-Policy` 头部中指定的策略有强制性，而`Content-Security-Policy-Report-Only`中的策略仅产生报告而不具有强制性。
 
 支持 CSP 的浏览器将始终对于每个企图违反你所建立的策略都发送违规报告，如果策略里包含一个有效的{{CSP("report-uri")}} 指令。
 
@@ -143,7 +144,7 @@ Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.e
 
 ## 违例报告样本
 
-我们假设页面位于 `http://example.com/signup.html`。它使用如下策略，该策略禁止任何资源的加载，除了来自`cdn.example.com 的样式表。`
+我们假设页面位于 `http://example.com/signup.html`。它使用如下策略，该策略禁止任何资源的加载，除了来自 `cdn.example.com` 的样式表。
 
 ```plain
 Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
@@ -182,11 +183,11 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.csp")}}
+{{Compat}}
 
 ## 参见
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [Content Security in WebExtensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Display security and privacy policies In Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools/GCLI/Display_security_and_privacy_policies)
+- [Content Security in WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [Display security and privacy policies In Firefox Developer Tools](/zh-CN/docs/Tools/GCLI/Display_security_and_privacy_policies)

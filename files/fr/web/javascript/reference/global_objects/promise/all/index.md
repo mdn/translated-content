@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/all
 ---
+
 {{JSRef}}
 
 La méthode **`Promise.all()`** renvoie une promesse ({{jsxref("Promise")}}) qui est résolue lorsque l'ensemble des promesses contenues dans l'itérable passé en argument ont été résolues ou qui échoue avec la raison de la première promesse qui échoue au sein de l'itérable.

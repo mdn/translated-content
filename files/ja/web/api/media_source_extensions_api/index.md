@@ -1,18 +1,8 @@
 ---
 title: Media Source Extensions API
 slug: Web/API/Media_Source_Extensions_API
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Landing
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - Video
-  - streaming
-translation_of: Web/API/Media_Source_Extensions_API
 ---
+
 {{DefaultAPISidebar("Media Source Extensions")}}
 
 **Media Source Extensions API**（MSE、メディアソース拡張機能 API）は、プラグイン不要で Web ベースのストリーミングメディアを可能にする機能を提供します。 MSE を使用すると、メディアストリームを JavaScript で作成し、{{htmlelement("audio")}} 要素 や {{htmlelement("video")}} 要素で再生できます。

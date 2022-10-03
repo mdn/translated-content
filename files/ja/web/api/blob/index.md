@@ -1,15 +1,8 @@
 ---
 title: Blob
 slug: Web/API/Blob
-tags:
-  - API
-  - Blob
-  - ファイル API
-  - インターフェイス
-  - リファレンス
-browser-compat: api.Blob
-translation_of: Web/API/Blob
 ---
+
 {{APIRef("File API")}}
 
 **`Blob`** オブジェクトは blob、すなわち不変の生データであるファイルのようなオブジェクトを表します。テキストやバイナリーデータとして読み込んだり、{{DOMxRef("ReadableStream")}} に変換してそのメソッドを使ったデータ処理をしたりすることができます。

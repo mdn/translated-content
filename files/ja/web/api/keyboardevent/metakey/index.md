@@ -1,17 +1,8 @@
 ---
 title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.KeyboardEvent.metaKey
-translation_of: Web/API/KeyboardEvent/metaKey
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.metaKey`** は読み取り専用のプロパティで、 プロパティは、イベントが発生したときに <kbd>Meta</kbd> キーが押されていたか (`true`) あるいは押されていなかった (`false`) かを示す論理値を返します。オペレーティングシステムによっては、キーが検出されないように遮蔽されることがあります。

@@ -1,15 +1,8 @@
 ---
 title: PointerEvent.pointerType
 slug: Web/API/PointerEvent/pointerType
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/PointerEvent/pointerType
 ---
+
 {{ APIRef("Pointer Events") }}
 
 {{domxref("PointerEvent")}} インターフェイスの **`pointerType`** 読み取り専用プロパティは、特定のポインタイベントを引き起こしたデバイスタイプ（マウス、ペン、またはタッチ）を示します。

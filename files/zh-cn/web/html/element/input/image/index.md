@@ -2,9 +2,10 @@
 title: <input type="image">
 slug: Web/HTML/Element/Input/image
 ---
+
 {{HTMLRef}}
 
-`<input type="image"> 标签是一个图片提交按钮`。 你必须使用 **src** 属性来定义图片的源，并且使用**alt**来定义当图片无法显示的时候的替代文字。 **height** 和**width**属性是用来定义图片的高和宽的。
+`<input type="image">` 标签是一个图片提交按钮。你必须使用 **src** 属性来定义图片的源，并且使用 **alt** 来定义当图片无法显示的时候的替代文字。 **height** 和 **width** 属性是用来定义图片的高和宽的。
 
 <table class="properties">
  <tbody>

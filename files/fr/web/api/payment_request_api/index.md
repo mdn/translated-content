@@ -3,6 +3,7 @@ title: Payment Request API
 slug: Web/API/Payment_Request_API
 translation_of: Web/API/Payment_Request_API
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
 L'API *Payment Request* fournit une expérience utilisateur cohérente à la fois pour les acheteurs et pour les vendeurs. Ce n'est pas une nouvelle façon de payer ses achats, c'est plutôt une façon pour les utilisateurs de sélectionner leur moyen de paiement privilégié et de rendre cette information disponible pour le marchand.
@@ -66,19 +67,13 @@ Vous pouvez trouver un guide complet dans l'article [Using the Payment Request A
 
 ## Spécifications
 
-| Specification                                            | Status                                               | Comment                                                                                                                                                       |
-| -------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Payment')}}                         | {{Spec2('Payment')}}                         | Initial definition.                                                                                                                                           |
-| {{SpecName('Basic Card Payment')}}             | {{Spec2('Basic Card Payment')}}             | Defines {{domxref("BasicCardRequest")}} and {{domxref("BasicCardResponse")}}, among other things needed for handling credit card payment |
-| {{SpecName('Payment Method Identifiers')}} | {{Spec2('Payment Method Identifiers')}} | Defines payment method identifiers and how they are validated, and, where applicable, minted and formally registered with the W3C.                            |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-### PaymentRequest interface
+{{Compat}}
 
-{{Compat("api.PaymentRequest", 0)}}
-
-## See also
+## Voir aussi
 
 - [Using the Payment Request API](/fr/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/fr/docs/Web/API/Payment_Request_API/Concepts)

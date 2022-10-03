@@ -1,17 +1,8 @@
 ---
 title: MessageEvent.ports
 slug: Web/API/MessageEvent/ports
-tags:
-  - API
-  - DOM
-  - MessagingEvent
-  - プロパティ
-  - リファレンス
-  - messaging
-  - ports
-browser-compat: api.MessageEvent.ports
-translation_of: Web/API/MessageEvent/ports
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`ports`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージが（チャネルメッセージングや共有ワーカーにメッセージを送信する場合など、適切な場合に）送信されるチャネルに関連するポートを表す {{domxref("MessagePort")}} オブジェクトの配列です。

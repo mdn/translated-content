@@ -1,17 +1,8 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-tags:
-  - クラス
-  - ECMAScript 2015
-  - JavaScript
-  - Promise
-  - リファレンス
-  - promise.all
-  - ポリフィル
-browser-compat: javascript.builtins.Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** オブジェクトは、非同期処理の完了 (もしくは失敗) の結果およびその結果の値を表します。

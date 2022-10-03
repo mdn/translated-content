@@ -1,14 +1,8 @@
 ---
 title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Method
-  - Reference
-translation_of: Web/API/HTMLCanvasElement/toBlob
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.toBlob()`** メソッドは、 キャンバスに含まれる画像を表す {{domxref("Blob")}} オブジェクトを生成します；このファイルは、ユーザーエージェントの裁量によって、ディスクにキャッシュされるか、メモリに保存されます。`type` が指定されてない場合、画像の type は、 `image/png` です。生成された画像の解像度は、96dpi です。
@@ -27,7 +21,7 @@ void canvas.toBlob(callback, mimeType, qualityArgument);
 - `mimeType` {{optional_inline}}
   - : 画像フォーマットを示す {{domxref("DOMString")}}。既定の型は `image/png`。
 - `qualityArgument` {{optional_inline}}
-  - : 要求した type が `image/jpeg `か `image/webp` だった場合、画像の品質を示す `0` から `1` の {{jsxref("Number")}}。type 引数がそのほかの値だった場合、既定の値が画質に使用される。ほかの引数は無視される。
+  - : 要求した type が `image/jpeg` か `image/webp` だった場合、画像の品質を示す `0` から `1` の {{jsxref("Number")}}。type 引数がそのほかの値だった場合、既定の値が画質に使用される。ほかの引数は無視される。
 
 ### 返値
 

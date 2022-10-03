@@ -7,9 +7,10 @@ tags:
 translation_of: Glossary/Local_variable
 original_slug: Glossaire/Variable_locale
 ---
+
 Une {{glossary("Variable","variable")}} dont le nom est associé à sa {{glossary("Value","valeur")}} uniquement dans une {{Glossary("Local scope","portée locale")}}.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

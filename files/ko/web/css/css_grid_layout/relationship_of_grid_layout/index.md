@@ -567,34 +567,34 @@ color: #d9480f;
 
 이번 가이드에서 보셨듯이 CSS 그리드 레이아웃은 단지 여러분이 구현해 볼 수 있는 여러 기술 중 한 부분일 뿐입니다. 원하시는 다양한 효과를 얻기 위해서 다른 레이아웃 기술끼리 서로 혼합해서 사용하는 것을 두려워하지 마십시오.
 
-1.  [**CSS**](/ko/docs/Web/CSS)
-2.  [**CSS Reference**](/ko/docs/Web/CSS/Reference)
-3.  [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)
-4.  **가이드**
+1. [**CSS**](/ko/docs/Web/CSS)
+2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
+3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)
+4. **가이드**
 
-    1.  [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
-    2.  [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계)
-    3.  [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)
-    4.  [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역)
-    5.  [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃)
-    6.  [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7.  [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8.  [Grids, logical values, and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9.  [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
+    2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계)
+    3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)
+    4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역)
+    5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃)
+    6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8. [Grids, logical values, and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
     10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
     11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
-5.  **프로퍼티**
+5. **프로퍼티**
 
-    1.  [grid](/ko/docs/Web/CSS/grid)
-    2.  [grid-area](/ko/docs/Web/CSS/grid-area)
-    3.  [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
-    4.  [grid-auto-flow](/ko/docs/Web/CSS/grid-auto-flow)
-    5.  [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
-    6.  [grid-column](/ko/docs/Web/CSS/grid-column)
-    7.  [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
-    8.  [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
-    9.  [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
+    1. [grid](/ko/docs/Web/CSS/grid)
+    2. [grid-area](/ko/docs/Web/CSS/grid-area)
+    3. [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
+    4. [grid-auto-flow](/ko/docs/Web/CSS/grid-auto-flow)
+    5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
+    6. [grid-column](/ko/docs/Web/CSS/grid-column)
+    7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
+    8. [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
+    9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
     10. [grid-gap](/ko/docs/Web/CSS/grid-gap)
     11. [grid-row](/ko/docs/Web/CSS/grid-row)
     12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
@@ -605,14 +605,14 @@ color: #d9480f;
     17. [grid-template-columns](/ko/docs/Web/CSS/grid-template-columns)
     18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
 
-6.  **용어집**
+6. **용어집**
 
-    1.  [Grid](/ko/docs/Glossary/Grid)
-    2.  [Grid lines](/ko/docs/Glossary/Grid_lines)
-    3.  [Grid tracks](/ko/docs/Glossary/Grid_tracks)
-    4.  [Grid cell](/ko/docs/Glossary/Grid_cell)
-    5.  [Grid areas](/ko/docs/Glossary/Grid_areas)
-    6.  [Gutters](/ko/docs/Glossary/Gutters)
-    7.  [Grid Axis](/ko/docs/Glossary/Grid_Axis)
-    8.  [Grid row](/ko/docs/Glossary/Grid_rows)
-    9.  [Grid column](/ko/docs/Glossary/Grid_column)
+    1. [Grid](/ko/docs/Glossary/Grid)
+    2. [Grid lines](/ko/docs/Glossary/Grid_lines)
+    3. [Grid tracks](/ko/docs/Glossary/Grid_tracks)
+    4. [Grid cell](/ko/docs/Glossary/Grid_cell)
+    5. [Grid areas](/ko/docs/Glossary/Grid_areas)
+    6. [Gutters](/ko/docs/Glossary/Gutters)
+    7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
+    8. [Grid row](/ko/docs/Glossary/Grid_rows)
+    9. [Grid column](/ko/docs/Glossary/Grid_column)

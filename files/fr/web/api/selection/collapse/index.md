@@ -10,6 +10,7 @@ tags:
   - Selection
 translation_of: Web/API/Selection/collapse
 ---
+
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
 La méthode **`Selection.collapse()`** positionne la sélection en cours en un seul point. Le document n'est pas modifié. Si le focus est sur le contenu et est modifiable, le curseur d'édition s'y positionnera et sera visible.
@@ -40,14 +41,11 @@ window.getSelection().collapse(body,0);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                               | Commentaires        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Selection API', '#widl-Selection-collapse-void-Node-node-unsigned-long-offset', 'Selection.collapse()')}} | {{Spec2('Selection API')}} |                     |
-| {{SpecName('HTML Editing', '#dom-selection-collapse', 'Selection.collapse()')}}                                                     | {{Spec2('HTML Editing')}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Selection.collapse")}}
+{{Compat}}
 
 ## Voir aussi
 

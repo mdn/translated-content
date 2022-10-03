@@ -1,21 +1,8 @@
 ---
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
-tags:
-  - API
-  - 後方互換性
-  - 非推奨
-  - インターフェイス
-  - Navigation Timing
-  - Navigation Timing API
-  - Optimization
-  - Performance
-  - Reference
-  - Timing
-  - legacy
-browser-compat: api.PerformanceTiming
-translation_of: Web/API/PerformanceTiming
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 > **Warning:** このインターフェイスは <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 仕様</a>では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。

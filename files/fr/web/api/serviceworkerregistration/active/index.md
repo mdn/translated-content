@@ -3,6 +3,7 @@ title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
 translation_of: Web/API/ServiceWorkerRegistration/active
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 La propriété **`active`** de l’interface {{domxref("ServiceWorkerRegistration")}} retourne un _service worker_ dont le {{domxref("ServiceWorker.state")}} est `activating` ou `activated`. Cette propriété est initialement définie à `null`.
@@ -23,13 +24,11 @@ Un objet {{domxref("ServiceWorker")}}, si le _worker_ est actuellement dans un �
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                               | Commentaire            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('Service Workers', '#service-worker-registration-active-attribute', 'ServiceWorkerRegistration.active')}} | {{Spec2('Service Workers')}} | Définition initiale.   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerRegistration.active")}}
+{{Compat}}
 
 ## Voir aussi
 

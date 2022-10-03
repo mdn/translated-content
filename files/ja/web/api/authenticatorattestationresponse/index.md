@@ -1,17 +1,8 @@
 ---
 title: AuthenticatorAttestationResponse
 slug: Web/API/AuthenticatorAttestationResponse
-tags:
-  - API
-  - Authentication
-  - AuthenticatorAttestationResponse
-  - Interface
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-  - インターフェイス
-translation_of: Web/API/AuthenticatorAttestationResponse
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`AuthenticatorAttestationResponse`** は [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) のインターフェイスで、 {{domxref('CredentialsContainer.create()')}} に {{domxref('PublicKeyCredential')}} を渡すと返されます。そして、生成された新しいキーペアの暗号化信頼ルートを提供します。このレスポンスは認証情報の生成を完了させるために、信頼されている側のサーバーに送信されます。

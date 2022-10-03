@@ -2,6 +2,7 @@
 title: Timing element visibility with the Intersection Observer API
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
 ---
+
 {{APIRef("Intersection Observer API")}}交叉点观察者 API 使得当感兴趣的元素或多或少被共享祖先节点或元素遮蔽时，可以方便地异步通知，包括 {{domxref("Document")}}本身。
 
 The Intersection Observer API makes it easy to be asynchronously notified when elements of interest become more or less obscured by a shared ancestor node or element, including the {{domxref("Document")}} itself. In this article, we'll build a mock blog which has a number of ads interspersed among the contents of the page, then use the Intersection Observer API to track how much time each ad is visible to the user. When an ad exceeds one minute of visible time, it will be replaced with a new one.

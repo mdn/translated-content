@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/background-position-y
 ---
+
 {{CSSRef}}
 
 La propriété **`background-position-y`** définit la position verticale initiale de chaque image d'arrière-plan. La position est relative à l'origine définie par {{cssxref("background-origin")}}.
@@ -62,21 +63,21 @@ background-position-y: unset;
 - `<percentage>`
   - : Une valeur en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) qui définit le décalage vertical de l'arrière-plan correspondant par rapport à un bord horizontal de la zone d'arrière-plan, proportionnellement à la hauteur de la zone. Si aucun côté n'est indiqué, l'écart fera référence au bord haut. Une valeur de 100% indique que le bas de l'image d'arrière-plan sera aligné avec le bas du conteneur et une valeur de 50% centrera l'image.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                     | Commentaires                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Backgrounds', '#background-position-longhands', 'background-position-y')}} | {{Spec2('CSS4 Backgrounds')}} | Spécification initiale pour les propriétés détaillées de {{cssxref("background-position")}}, implémentée depuis longtemps. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.background-position-y")}}
+{{Compat}}
 
 ## Voir aussi
 

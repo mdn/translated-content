@@ -2,6 +2,7 @@
 title: HTTP 概述
 slug: Web/HTTP/Overview
 ---
+
 {{HTTPSidebar}}
 
 **HTTP 是一种能够获取如 HTML 这样的网络资源的** {{glossary("protocol")}}(通讯协议)。**它是在 Web 上进行数据交换的基础，是一种 client-server 协议，也就是说，请求通常是由像浏览器这样的接受方发起的。一个完整的 Web 文档通常是由不同的子文档拼接而成的，像是文本、布局描述、图片、视频、脚本等等。**
@@ -159,9 +160,9 @@ HTTP 响应的一个例子：
 
 ## 基于 HTTP 的 APIs
 
-基于 HTTP 的最常用 API 是{{domxref("XMLHttpRequest")}} API，可用于在{{Glossary("user agent")}}和服务器之间交换数据。 现代{{domxref("Fetch API")}}提供相同的功能，具有更强大和灵活的功能集。
+基于 HTTP 的最常用 API 是{{domxref("XMLHttpRequest")}} API，可用于在{{Glossary("user agent")}}和服务器之间交换数据。现代{{domxref("Fetch API")}}提供相同的功能，具有更强大和灵活的功能集。
 
-另一种 API，即服务器发送的事件，是一种单向服务，允许服务器使用 HTTP 作为传输机制向客户端发送事件。 使用{{domxref("EventSource")}}接口，客户端打开连接并建立事件句柄。 客户端浏览器自动将到达 HTTP 流的消息转换为适当的{{domxref("Event")}}对象，并将它们传递给专门处理这类{{domxref("Event.type", "type")}}事件的句柄，如果有这么个句柄的话。但如果相应的事件处理句柄根本没有建立，那就交给{{domxref("EventSource.onmessage", "onmessage")}}事件处理程序处理。
+另一种 API，即服务器发送的事件，是一种单向服务，允许服务器使用 HTTP 作为传输机制向客户端发送事件。使用{{domxref("EventSource")}}接口，客户端打开连接并建立事件句柄。客户端浏览器自动将到达 HTTP 流的消息转换为适当的{{domxref("Event")}}对象，并将它们传递给专门处理这类{{domxref("Event.type", "type")}}事件的句柄，如果有这么个句柄的话。但如果相应的事件处理句柄根本没有建立，那就交给{{domxref("EventSource.onmessage", "onmessage")}}事件处理程序处理。
 
 ## 总结
 

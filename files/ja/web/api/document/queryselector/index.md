@@ -1,19 +1,8 @@
 ---
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
-tags:
-  - API
-  - CSS セレクター
-  - DOM
-  - DOM 要素
-  - Document
-  - メソッド
-  - リファレンス
-  - セレクター API
-  - セレクター
-  - querySelector
-translation_of: Web/API/Document/querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 {{domxref("Document")}} の **`querySelector()`** メソッドは、指定されたセレクターまたはセレクター群に一致する、文書内の最初の {{domxref("Element")}} を返します。一致するものが見つからない場合は `null` を返します。

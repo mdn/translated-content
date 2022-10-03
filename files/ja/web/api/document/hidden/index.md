@@ -1,16 +1,8 @@
 ---
 title: Document.hidden
 slug: Web/API/Document/hidden
-tags:
-  - DOM
-  - Document
-  - Page Visibility API
-  - Property
-  - Read-only
-  - Reference
-  - Web
-translation_of: Web/API/Document/hidden
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.hidden`** は読み取り専用のプロパティで、ページが非表示になっているとみられるかどうかを示す論理値を返します。

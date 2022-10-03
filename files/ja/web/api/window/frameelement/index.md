@@ -1,14 +1,8 @@
 ---
 title: window.frameElement
 slug: Web/API/Window/frameElement
-tags:
-  - API
-  - DOM
-  - Gecko
-  - HTML DOM
-  - Window
-translation_of: Web/API/Window/frameElement
 ---
+
 {{ ApiRef }}
 
 （{{HTMLElement("iframe")}} や {{HTMLElement("object")}} のような）ウィンドウが埋め込まれた要素を返します。要素がトップレベルであるか異なるスクリプト生成元をもつ文書に埋め込まれるかのいずれかの場合は、 `null` を返します。

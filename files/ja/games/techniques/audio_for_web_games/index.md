@@ -1,15 +1,8 @@
 ---
 title: ウェブゲーム用の音声
 slug: Games/Techniques/Audio_for_Web_Games
-tags:
-  - Audio
-  - Games
-  - Web Audio API
-  - audio sprites
-  - spatialization
-  - syncing tracks
-translation_of: Games/Techniques/Audio_for_Web_Games
 ---
+
 {{GamesSidebar}}
 
 音声はゲームの重要部分です。つまりこれはフィードバックと雰囲気を与えます。ウェブベースの音声は早くから成熟していますが、まだ多くのブラウザーに案内すべき違いがあります。ゲームエクスペリエンスにとってどの音声パーツが重要で、どれがあっても良いけど不要なものかを決めて、それに従って戦略を決めるのが必要となる事がよくあります。この記事ではウェブゲーム用の音声を実装するための詳細なガイドを提供し、現在なるべく広い範囲のプラットフォームで動作するものを観察します。

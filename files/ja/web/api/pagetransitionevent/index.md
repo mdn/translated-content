@@ -1,8 +1,8 @@
 ---
 title: PageTransitionEvent
 slug: Web/API/PageTransitionEvent
-translation_of: Web/API/PageTransitionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 Page transition events fire when a webpage is being loaded or unloaded.
@@ -12,8 +12,6 @@ Page transition events fire when a webpage is being loaded or unloaded.
 ### 継承関係
 
 EventPageTransitionEvent
-
-##
 
 ## メンバ
 

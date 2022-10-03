@@ -1,17 +1,8 @@
 ---
 title: Intl.Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
-tags:
-  - クラス
-  - Collator
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Collator
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 ---
+
 {{JSRef}}
 
 **`Intl.Collator`** オブジェクトは、言語を考慮した文字列の比較を可能にします。

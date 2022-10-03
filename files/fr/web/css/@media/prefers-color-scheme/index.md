@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/prefers-color-scheme
 ---
+
 {{CSSRef}}
 
 > **Note :** Si vous avez modifié `privacy.resistFingerprinting` à **vrai**, le paramètre {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} sera redéfini à `light`.
@@ -67,13 +68,11 @@ La caractéristique média **`prefers-color-scheme`** permet de détecter les pr
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS5 Media Queries', '#descdef-media-prefers-color-scheme', 'prefers-color-scheme')}} | {{Spec2('CSS5 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.prefers-color-scheme")}}
+{{Compat}}
 
 ## Voir aussi
 

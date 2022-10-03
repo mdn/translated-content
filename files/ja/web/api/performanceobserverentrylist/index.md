@@ -1,13 +1,8 @@
 ---
 title: PerformanceObserverEntryList
 slug: Web/API/PerformanceObserverEntryList
-tags:
-  - API
-  - Web パフォーマンス
-  - インターフェイス
-  - リファレンス
-translation_of: Web/API/PerformanceObserverEntryList
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`PerformanceObserverEntryList`** インターフェイスは、{{domxref("PerformanceObserver.observe","observe()")}} メソッドを介して明示的に*監視された* {{domxref("PerformanceEntry","パフォーマンスイベント", '', 'true')}} のリストです。

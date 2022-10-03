@@ -1,21 +1,8 @@
 ---
 title: JavaScriptへの最初のダイブ
 slug: Learn/JavaScript/First_steps/A_first_splash
-tags:
-  - CodingScripting
-  - Conditionals
-  - JavaScript
-  - Objects
-  - Operators
-  - events
-  - l10n:priority
-  - 初心者
-  - 変数
-  - 学習
-  - 記事
-  - 関数
-translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
 JavaScript の理論、そしてそれを使ってできることについて学んだところで、完全に実用的なチュートリアルを通じて、JavaScript の基本的な機能についての短期集中コースをお見せします。ここでは、簡単な「数字を当てる」ゲームをステップバイステップで構築します。
@@ -159,30 +146,30 @@ JavaScript の理論、そしてそれを使ってできることについて学
 
 できるだけプログラマーのように考えると、この概要から最初に行うべきことは、簡潔な実行可能な単位に分割することです。
 
-1.  1 から 100 までの数字をランダムに一つ生成する。
-2.  プレイヤーの予想した回数を記録する。最初は 1 回から。
-3.  プレイヤーが数字が何かを予想する方法を用意する。
-4.  予想が入力されたら、プレイヤーが以前の予想を見られるように、どこかに記録する。
-5.  入力された数字が正しいかどうかを調べる。
-6.  入力された数字が正しい場合...
+1. 1 から 100 までの数字をランダムに一つ生成する。
+2. プレイヤーの予想した回数を記録する。最初は 1 回から。
+3. プレイヤーが数字が何かを予想する方法を用意する。
+4. 予想が入力されたら、プレイヤーが以前の予想を見られるように、どこかに記録する。
+5. 入力された数字が正しいかどうかを調べる。
+6. 入力された数字が正しい場合...
 
-    1.  正解したお祝いのメッセージを表示する。
-    2.  プレイヤーが次の予想を出来ないようにする。(ゲームがおかしくならないように)
-    3.  プレイヤーが次のゲームを始められるようなコントロールを表示する。
+    1. 正解したお祝いのメッセージを表示する。
+    2. プレイヤーが次の予想を出来ないようにする。(ゲームがおかしくならないように)
+    3. プレイヤーが次のゲームを始められるようなコントロールを表示する。
 
-7.  プレイヤーの予想が間違いで、予想回数の上限にはまだ達していない場合...
+7. プレイヤーの予想が間違いで、予想回数の上限にはまだ達していない場合...
 
-    1.  プレイヤーが間違っていることを表示する。
-    2.  次の予想を入力できるようにする。
-    3.  予想回数に 1 を加算する。
+    1. プレイヤーが間違っていることを表示する。
+    2. 次の予想を入力できるようにする。
+    3. 予想回数に 1 を加算する。
 
-8.  プレイヤーの予想が間違いで、予想回数の上限に達した場合...
+8. プレイヤーの予想が間違いで、予想回数の上限に達した場合...
 
-    1.  プレイヤーにゲームオーバーであることを伝える。
-    2.  プレイヤーが次の予想を出来ないようにする。(ゲームがおかしくならないように)
-    3.  プレイヤーが次のゲームを始められるようなコントロールを表示する。
+    1. プレイヤーにゲームオーバーであることを伝える。
+    2. プレイヤーが次の予想を出来ないようにする。(ゲームがおかしくならないように)
+    3. プレイヤーが次のゲームを始められるようなコントロールを表示する。
 
-9.  ゲームがもう一度始まったら、画面とロジックが完全にリセットされるようにして、1.に戻る。
+9. ゲームがもう一度始まったら、画面とロジックが完全にリセットされるようにして、1.に戻る。
 
 さあ、先に進みましょう。この手順をどのようにコードにするのか見て、JavaScript の機能を探求していきましょう。
 
@@ -321,44 +308,46 @@ true/false テスト（例えば条件内 - [below](#conditionals)参照）を�
       <td><code>===</code></td>
       <td>厳密に等しい (全く同じかどうか)</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">5</span> <span class="operator token">===</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">4</span> <span class="comment token">// false</span>
-<span class="string token">'Chris'</span> <span class="operator token">===</span> <span class="string token">'Bob'</span> <span class="comment token">// false</span>
-<span class="number token">5</span> <span class="operator token">===</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">3</span> <span class="comment token">// true</span>
-<span class="number token">2</span> <span class="operator token">===</span> <span class="string token">'2'</span> <span class="comment token">// false; number versus string</span></code></pre>
+        <pre class="brush: js">
+5 === 2 + 4 // false
+'Chris' === 'Bob' // false
+5 === 2 + 3 // true
+2 === '2' // false; number versus string
+</pre
+        >
       </td>
     </tr>
     <tr>
       <td><code>!==</code></td>
       <td>等しくない (違うかどうか)</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">5</span> <span class="operator token">!==</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">4</span> <span class="comment token">// true</span>
-<span class="string token">'Chris'</span> <span class="operator token">!==</span> <span class="string token">'Bob'</span> <span class="comment token">// true</span>
-<span class="number token">5</span> <span class="operator token">!==</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">3</span> <span class="comment token">// false</span>
-<span class="number token">2</span> <span class="operator token">!==</span> <span class="string token">'2'</span> <span class="comment token">// true; number versus string</span></code></pre>
+        <pre class="brush: js">
+5 !== 2 + 4 // true
+'Chris' !== 'Bob' // true
+5 !== 2 + 3 // false
+2 !== '2' // true; number versus string
+</pre
+        >
       </td>
     </tr>
     <tr>
       <td><code>&#x3C;</code></td>
       <td>小なり</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">6</span> <span class="operator token">&#x3C;</span> <span class="number token">10</span> <span class="comment token">// true</span>
-<span class="number token">20</span> <span class="operator token">&#x3C;</span> <span class="number token">10</span> <span class="comment token">// false</span></code></pre>
+        <pre class="brush: js">
+6 &#x3C; 10 // true
+20 &#x3C; 10 // false</pre
+        >
       </td>
     </tr>
     <tr>
       <td><code>></code></td>
       <td>大なり</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">6</span> <span class="operator token">></span> <span class="number token">10</span> <span class="comment token">// false</span>
-<span class="number token">20</span> <span class="operator token">></span> <span class="number token">10</span>  <span class="comment token">// true</span></code></pre>
+        <pre class="brush: js">
+6 > 10 // false
+20 > 10  // true</pre
+        >
       </td>
     </tr>
   </thead>
@@ -411,7 +400,7 @@ function checkGuess() {
   guessCount === 1
   ```
 
-  もしそうなら、`guesses` 段落 ({{htmlelement("p")}}要素) の内容を "`前回の予想: `" に変更します。違うなら、何もしません。
+  もしそうなら、`guesses` 段落 ({{htmlelement("p")}}要素) の内容を "`前回の予想:`" に変更します。違うなら、何もしません。
 
 - 6 行目では、`guesses` 段落の最後にスペースを付けて、現在の `userGuess` 変数の値を追加しています。なので、予想が表示されるときにはスペースで区切られて表示されます。
 - 次の部分 (8 行目～ 24 行目) には、確認すべきことがいくつかあります。
@@ -504,9 +493,9 @@ for (let i = 1 ; i < 21 ; i++) { console.log(i) }
 
 どうでしょうか。`1` から `20` の数字がコンソールに出力されましたね。これが繰り返しです。`for` ループには 3 つの入力値 (引数) が必要です。
 
-1.  **初期値**: 上の例では、`i` を 1 からはじめましたが、どんな数字でもかまいません。さらに言えば、`i` という名前でなくともかまいません。ただし、ループでは短くて覚えやすいため、`i` という変数の名前がよく使われることを覚えておいてください。
-2.  **条件**: 上の例では `i < 21` をループが継続する条件としました。つまりループは `i` が 21 未満でなくなるまで継続します。`i` が 21 になったらループの実行が終了します。
-3.  **増分**: 上の例では増分を `i++` と指定しています。つまり「`i` に 1 を足し」ます。ループは `i` が 21 になるまで(それは 2.の継続条件で説明しましたね) 、`i` の取りうる値について、それぞれ一度ずつ実行されます。今回の例では繰り返しのコードが実行される度に `i` の値を{{domxref("Console.log", "console.log()")}}を使用してコンソールに出力しています。
+1. **初期値**: 上の例では、`i` を 1 からはじめましたが、どんな数字でもかまいません。さらに言えば、`i` という名前でなくともかまいません。ただし、ループでは短くて覚えやすいため、`i` という変数の名前がよく使われることを覚えておいてください。
+2. **条件**: 上の例では `i < 21` をループが継続する条件としました。つまりループは `i` が 21 未満でなくなるまで継続します。`i` が 21 になったらループの実行が終了します。
+3. **増分**: 上の例では増分を `i++` と指定しています。つまり「`i` に 1 を足し」ます。ループは `i` が 21 になるまで(それは 2.の継続条件で説明しましたね) 、`i` の取りうる値について、それぞれ一度ずつ実行されます。今回の例では繰り返しのコードが実行される度に `i` の値を{{domxref("Console.log", "console.log()")}}を使用してコンソールに出力しています。
 
 さて、それでは数字当てゲームに登場したループを見てみましょう。`resetGame()` 関数に以下の記述がありますね。
 
@@ -551,10 +540,10 @@ guessField.focus();
 
 少しブラウザーが持っているオブジェクトで遊んでみましょう。
 
-1.  まずブラウザーでプログラムを開いてください
-2.  次に[開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を開き、JavaScript コンソールのタブが開いたのを確認します
-3.  `guessField` と入力してみてください。するとコンソールに {{htmlelement("input")}} 要素を含む変数が表示されます。また、気づいたと思いますが、コンソールは実行中の環境にある変数名を含んだオブジェクト名を自動的に補完しました!
-4.  さらに下のように入力してみてください
+1. まずブラウザーでプログラムを開いてください
+2. 次に[開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を開き、JavaScript コンソールのタブが開いたのを確認します
+3. `guessField` と入力してみてください。するとコンソールに {{htmlelement("input")}} 要素を含む変数が表示されます。また、気づいたと思いますが、コンソールは実行中の環境にある変数名を含んだオブジェクト名を自動的に補完しました!
+4. さらに下のように入力してみてください
 
     ```js
     guessField.value = 'Hello';
@@ -562,7 +551,7 @@ guessField.focus();
 
     `value` プロパティは今のテキストフィールドに入力された値を表しています。コマンドを入力したら、テキストフィールドの値が変わりましたね！
 
-5.  さらに続けて `guesses` と入力して&#x20;
+5. さらに続けて `guesses` と入力して&#x20;
 
     <kbd>Return</kbd>
 
@@ -572,7 +561,7 @@ guessField.focus();
 
     &#x20;を押します。{{htmlelement("p")}} 要素を含む変数がコンソールに表示されますね。
 
-6.  そして次のコードを入力します
+6. そして次のコードを入力します
 
     ```js
     guesses.value
@@ -580,13 +569,13 @@ guessField.focus();
 
     コンソールには `undefined` (未定義) という文字が返ってきましたね。`value` というプロパティは {{htmlelement("p")}} 要素にはないためです。
 
-7.  パラグラフ内のテキストを変えたい場合には、{{domxref("Node.textContent", "textContent")}} プロパティを使用する必要があります。こうしてみます
+7. パラグラフ内のテキストを変えたい場合には、{{domxref("Node.textContent", "textContent")}} プロパティを使用する必要があります。こうしてみます
 
     ```js
     guesses.textContent = 'Where is my paragraph?';
     ```
 
-8.  ちょっと遊んでみましょう。下のコードをひとつづつ入力してみてください。
+8. ちょっと遊んでみましょう。下のコードをひとつづつ入力してみてください。
 
     ```js
     guesses.style.backgroundColor = 'yellow';

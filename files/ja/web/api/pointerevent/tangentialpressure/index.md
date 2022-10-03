@@ -1,16 +1,8 @@
 ---
 title: PointerEvent.tangentialPressure
 slug: Web/API/PointerEvent/tangentialPressure
-tags:
-  - API
-  - DOM
-  - Pointer Events
-  - PointerEvent
-  - Property
-  - Reference
-  - tangentialPressure
-translation_of: Web/API/PointerEvent/tangentialPressure
 ---
+
 {{ APIRef("Pointer Events") }}
 
 {{domxref("PointerEvent")}} インターフェイスの **`tangentialPressure`** 読み取り専用プロパティは、ポインタ入力の正規化された接線方向の圧力（バレル圧力またはシリンダー応力（[cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)）とも呼ばれます）を表します。

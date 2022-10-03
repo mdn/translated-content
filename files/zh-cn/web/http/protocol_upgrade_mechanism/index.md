@@ -2,11 +2,12 @@
 title: 协议升级机制
 slug: Web/HTTP/Protocol_upgrade_mechanism
 ---
+
 {{HTTPSidebar}}
 
 [HTTP 协议](/zh-CN/docs/Web/HTTP) 提供了一种特殊的机制，这一机制允许将一个已建立的连接升级成新的、不相容的协议。这篇指南涵盖了其工作原理和使用场景。
 
-通常来说这一机制总是由客户端发起的（不过也有例外，比如说可以由服务端发起[升级到传输层安全协议（TLS）](#server-initiated_upgrade_to_tls)）， 服务端可以选择是否要升级到新协议。借助这一技术，连接可以以常用的协议启动（如 HTTP/1.1），随后再升级到 HTTP2 甚至是 WebSockets.
+通常来说这一机制总是由客户端发起的（不过也有例外，比如说可以由服务端发起[升级到传输层安全协议（TLS）](#server-initiated_upgrade_to_tls)），服务端可以选择是否要升级到新协议。借助这一技术，连接可以以常用的协议启动（如 HTTP/1.1），随后再升级到 HTTP2 甚至是 WebSockets.
 
 注意：HTTP/2 明确禁止使用此机制，这个机制只属于 HTTP/1.1
 
@@ -16,7 +17,7 @@ slug: Web/HTTP/Protocol_upgrade_mechanism
 
 特别这个请求需要添加两项额外的 header：
 
-- [`Connection: Upgrade`](/en-US/docs/Web/HTTP/Headers/Connection)
+- [`Connection: Upgrade`](/zh-CN/docs/Web/HTTP/Headers/Connection)
   - : 设置 `Connection` 头的值为 `"Upgrade"` 来指示这是一个升级请求。
 - [`Upgrade: protocols`](/zh-CN/docs/Web/HTTP/Headers/Upgrade)
   - : `Upgrade` 头指定一项或多项协议名，按优先级排序，以逗号分隔。
@@ -32,7 +33,7 @@ Upgrade: example/1, foo/2
 
 根据之前的请求的协议，可能需要其他头部信息，例如：从 HTTP/1.1 升级到[WebSocket](/zh-CN/docs/Web/API/WebSocket) 允许配置有关 WebSocket 连接的头部详细信息，以及在连接时提供一定程度的安全性。查看 [升级到 WebSocket 协议的连接](#升级到websocket协议的连接) 获取更多信息。
 
-如果服务器决定升级这次连接，就会返回一个 {{HTTPStatus(101, "101 Switching Protocols")}} 响应状态码，和一个要切换到的协议的头部字段 Upgrade。 如果服务器没有（或者不能）升级这次连接，它会忽略客户端发送的 `"Upgrade` 头部字段，返回一个常规的响应：例如一个{{HTTPStatus(200, "200 OK")}}).
+如果服务器决定升级这次连接，就会返回一个 {{HTTPStatus(101, "101 Switching Protocols")}} 响应状态码，和一个要切换到的协议的头部字段 Upgrade。如果服务器没有（或者不能）升级这次连接，它会忽略客户端发送的 `"Upgrade` 头部字段，返回一个常规的响应：例如一个{{HTTPStatus(200, "200 OK")}}).
 
 服务在发送 {{HTTPStatus(101)}} 状态码之后，就可以使用新的协议，并可以根据需要执行任何其他协议指定的握手。实际上，一旦这次升级完成了，连接就变成了双向管道。并且可以通过新协议完成启动升级的请求。
 

@@ -1,21 +1,8 @@
 ---
 title: DOMPoint.x
 slug: Web/API/DOMPoint/x
-page-type: web-api-instance-property
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Reference
-  - x
-browser-compat: api.DOMPoint.x
-translation_of: Web/API/DOMPoint/x
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** インターフェイスの **`x`** プロパティは、空間内のある点の水平座標 x を保持します。

@@ -2,6 +2,7 @@
 title: <ol>
 slug: Web/HTML/Element/ol
 ---
+
 {{HTMLRef}}
 
 **HTML `<ol>` 元素**表示有序列表，通常渲染为一个带编号的列表。
@@ -76,7 +77,7 @@ slug: Web/HTML/Element/ol
 
 至于如何确定该选择哪一个列表元素，可以尝试更改列表项的顺序，如果其含义会发生改变，那么就应当使用 {{HTMLElement("ol")}} 元素，否则使用 {{HTMLElement("ul")}} 更合适。
 
-> **备注：** “更改顺序” 时，不应当算上一些固定位于列表最前或最后的项，比如未完成的列表最后的占位项。
+> **备注：** “更改顺序”时，不应当算上一些固定位于列表最前或最后的项，比如未完成的列表最后的占位项。
 > 如果只有一个元素，以至于根本不存在什么顺序可言，可能最好先考虑是否应当使用列表元素，以及是否要在列表最后增加一些占位的空项。
 
 ## 示例
@@ -172,11 +173,11 @@ slug: Web/HTML/Element/ol
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.ol")}}
+{{Compat}}
 
 ## 相关
 
-- 其他列表相关的 HTML 元素: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} and the obsolete {{HTMLElement("dir")}};
+- 其他列表相关的 HTML 元素：{{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} and the obsolete {{HTMLElement("dir")}};
 - 对 `<ol>` 元素常用的 CSS 属性：
 
   - the {{cssxref("list-style")}} 属性，有用的选择序数的显示方式，

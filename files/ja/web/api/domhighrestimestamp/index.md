@@ -1,15 +1,8 @@
 ---
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
-tags:
-  - API
-  - DOMHighResTimeStamp
-  - High Resolution Time
-  - Reference
-  - Time
-  - Type
-translation_of: Web/API/DOMHighResTimeStamp
 ---
+
 {{APIRef("High Resolution Time")}}
 
 **`DOMHighResTimeStamp`** 型は `double` であり、時間の値を保存するために使用します。この値は別々の時点や、2 つの別々の時点の間の時間を表すことができます。単位はミリ秒であり、精度は 5 µs (マイクロ秒) であるべきです。ただし、ブラウザーが 5 マイクロ秒精度の時間の値を提供できない場合 (例えば、ハードウェアやソフトウェアの制約により) は、1 ミリ秒精度の時間として表すことができます。
@@ -54,5 +47,5 @@ translation_of: Web/API/DOMHighResTimeStamp
 
 ## 関連情報
 
-- [Navigation Timing API](/ja/docs/Navigation_timing "Navigation_timing")
+- [Navigation Timing API](/ja/docs/Navigation_timing)
 - [performance.now()](/ja/docs/Web/API/Performance/now)

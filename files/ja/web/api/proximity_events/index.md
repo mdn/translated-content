@@ -1,14 +1,9 @@
 ---
 title: Proximity Events
 slug: Web/API/Proximity_Events
-tags:
-  - API
-  - Experimental
-  - Proximity Events
-  - Reference
-translation_of: Web/API/Proximity_Events
 original_slug: WebAPI/Proximity
 ---
+
 {{DefaultAPISidebar("Proximity Events")}}{{ SeeCompatTable }}
 
 **proximity events** は、ユーザーが端末の近くにいるときを知るのに便利な手段です。これらのイベントは近接度の変化への対応、例えばユーザーがスマートフォンを耳の近くに持ってきて電話をしているときにスクリーンを休止することを可能にします。

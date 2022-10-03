@@ -1,17 +1,8 @@
 ---
 title: 'Document: fullscreenchange イベント'
 slug: Web/API/Document/fullscreenchange_event
-tags:
-  - API
-  - Fullscreen API
-  - Reference
-  - events
-  - fullscreen
-  - fullscreenchange
-  - イベント
-  - 全画面モード
-translation_of: Web/API/Document/fullscreenchange_event
 ---
+
 {{APIRef}}
 
 `fullscreenchange` イベントは、ブラウザーが全画面モードに移行したり終了したりした直後に発生します。

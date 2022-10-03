@@ -2,13 +2,14 @@
 title: WebGLShader
 slug: Web/API/WebGLShader
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **WebGLShader** 可以是一个顶点着色器（vertex shader）或片元着色器（fragment shader）。每个 {{domxref("WebGLProgram")}} 都需要这两种类型的着色器。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **WebGLShader** 可以是一个顶点着色器（vertex shader）或片元着色器（fragment shader）。每个 {{domxref("WebGLProgram")}} 都需要这两种类型的着色器。
 
 ## 描述
 
-要创建一个 **WebGLShader** 需要使用 {{domxref("WebGLRenderingContext.createShader")}}，通过 {{domxref("WebGLRenderingContext.shaderSource()")}} 然后挂接 GLSL 源代码 , 最后调用 {{domxref("WebGLRenderingContext.compileShader()")}} 完成着色器（shader）的编译。 此时 **WebGLShader** 仍不是可用的形式，他需要被添加到一个 {{domxref("WebGLProgram")}}里。
+要创建一个 **WebGLShader** 需要使用 {{domxref("WebGLRenderingContext.createShader")}}，通过 {{domxref("WebGLRenderingContext.shaderSource()")}} 然后挂接 GLSL 源代码 , 最后调用 {{domxref("WebGLRenderingContext.compileShader()")}} 完成着色器（shader）的编译。此时 **WebGLShader** 仍不是可用的形式，他需要被添加到一个 {{domxref("WebGLProgram")}}里。
 
 ```js
 function createShader (gl, sourceCode, type) {
@@ -29,9 +30,9 @@ function createShader (gl, sourceCode, type) {
 
 ## 范例
 
-### 创建一个顶点着色器（ vertex shader）
+### 创建一个顶点着色器（vertex shader）
 
-注意，有很多其他方式编译和访问着色器（shader）源代码字符串. 这些示例仅用于例证说明。
+注意，有很多其他方式编译和访问着色器（shader）源代码字符串。这些示例仅用于例证说明。
 
 ```js
 var vertexShaderSource =
@@ -62,7 +63,7 @@ var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLShader")}}
+{{Compat}}
 
 ## 参阅
 

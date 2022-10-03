@@ -1,15 +1,8 @@
 ---
 title: ProgressEvent
 slug: Web/API/ProgressEvent
-tags:
-  - API
-  - Interface
-  - 進捗イベント
-  - ProgressEvent
-  - Reference
-browser-compat: api.ProgressEvent
-translation_of: Web/API/ProgressEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`ProgressEvent`** インターフェイスは、プロセスの進捗、例えば HTTP リクエスト（`XMLHttpRequest`、または {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("style")}}, {{HTMLElement("link")}} のような基本的なリソースの読み込み）などを計測するイベントを表します。

@@ -1,13 +1,8 @@
 ---
 title: DeviceProximityEvent
 slug: Web/API/DeviceProximityEvent
-tags:
-  - API
-  - Interface
-  - Proximity Event
-  - Reference
-translation_of: Web/API/DeviceProximityEvent
 ---
+
 {{APIRef("Proximity Events")}}{{SeeCompatTable}}
 
 `DeviceProximityEvent` インターフェースは、端末の近接センサーを使用して近くの物理オブジェクトの距離についての情報を提供します。

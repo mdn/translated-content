@@ -1,18 +1,8 @@
 ---
 title: Performance.timing
 slug: Web/API/Performance/timing
-tags:
-  - API
-  - 後方互換性
-  - 非推奨
-  - ナビゲーションタイミング
-  - パフォーマンス
-  - プロパティ
-  - 読み取り専用
-  - legacy
-browser-compat: api.Performance.timing
-translation_of: Web/API/Performance/timing
 ---
+
 {{APIRef("Navigation Timing")}}{{deprecated_header}}
 
 古い **`Performance.timing`** 読み取り専用プロパティは、遅延時間に関するパフォーマンス情報を含む {{domxref("PerformanceTiming")}} オブジェクトを返します。

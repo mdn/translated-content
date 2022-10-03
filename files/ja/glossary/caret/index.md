@@ -1,22 +1,8 @@
 ---
 title: caret (キャレット)
 slug: Glossary/caret
-tags:
-  - Cursor
-  - Glossary
-  - Input
-  - caret
-  - insertion point
-  - text cursor
-  - text entry
-  - text input
-  - text insertion point
-  - テキストカーソル
-  - テキスト入力
-  - テキスト挿入位置
-  - 挿入位置
-translation_of: Glossary/caret
 ---
+
 **キャレット** (テキストカーソルとも呼ばれる) は、テキスト入力が挿入される場所を示すために画面に表示されるインジケーターです。 ほとんどのユーザーインターフェイスは、細い縦線または点滅する文字サイズの四角形を使用してキャレットを表しますが、これはさまざまです。 テキスト内のこの位置は**挿入位置**と呼ばれます。「キャレット」という単語は、テキストの挿入位置をマウスカーソル (マウスポインター) と区別するためのものです。
 
 ウェブ上では、{{HTMLElement("input")}} 要素と {{HTMLElement("textarea")}} 要素と、{{htmlattrxref("contenteditable")}} 属性が設定されている要素の挿入位置を表すためにキャレットが使用され、要素の内容をユーザーが編集できるようにします。

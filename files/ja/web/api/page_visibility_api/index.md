@@ -1,13 +1,9 @@
 ---
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
-tags:
-  - DOM
-  - Intermediate
-  - Tutorials
-translation_of: Web/API/Page_Visibility_API
 original_slug: Web/Guide/User_experience/Using_the_Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 タブを使って閲覧している場合、どのウェブページもバックグラウンドにあってユーザーから見えていない場合があります。 Page Visibility API では、現在ページが見えているかどうかを調べる機能とともに、文書が表示されたり非表示になったりした時を監視することができるイベントを提供します。
@@ -158,5 +154,5 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ## 関連情報
 
-- IEBlog での [Page Visibility API](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx "Page Visibility on IEBlog") の解説
-- Google による [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html "Page Visibility API by Google") の解説
+- IEBlog での [Page Visibility API](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) の解説
+- Google による [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html) の解説

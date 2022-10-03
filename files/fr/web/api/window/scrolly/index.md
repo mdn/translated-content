@@ -3,6 +3,7 @@ title: Window.scrollY
 slug: Web/API/Window/scrollY
 translation_of: Web/API/Window/scrollY
 ---
+
 {{APIRef}}
 
 La propriété **`scrollY`** de l'objet {{domxref("Window")}} est une propriété en lecture seule. Elle retourne le nombre de pixels la page actuellement défilés verticalement. Dans les navigateurs modernes, cette valeur est précise au sous-pixel près. Ainsi, la valeur retournée n'est pas forcement un entier.
@@ -48,13 +49,11 @@ var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documen
 
 ## Spécifications
 
-| Spécification                                                                                | Status                           | Commentaire(s) |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrolly', 'window.scrollY') }} | {{ Spec2('CSSOM View') }} |                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.scrollY")}}
+{{Compat}}
 
 ## Voir aussi
 

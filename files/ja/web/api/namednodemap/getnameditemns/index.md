@@ -1,15 +1,10 @@
 ---
 title: NamedNodeMap.getNamedItemNS()
 slug: Web/API/NamedNodeMap/getNamedItemNS
-page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
-browser-compat: api.NamedNodeMap.getNamedItemNS
-translation_of: Web/API/NamedNodeMap/getNamedItemNS
 l10n:
   sourceCommit: 9ce57d5046baf5d25c8eb066e60227f0fbd017cf
 ---
+
 {{APIRef("DOM")}}
 
 **`getNamedItemNS()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、指定された名前空間の指定されたローカル名に対応する {{domxref("Attr")}} を返します。対応する属性がない場合は `null` を返します。

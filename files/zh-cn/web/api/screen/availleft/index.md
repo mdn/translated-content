@@ -2,6 +2,7 @@
 title: Screen.availLeft
 slug: Web/API/Screen/availLeft
 ---
+
 {{ ApiRef() }}
 
 ### 概述

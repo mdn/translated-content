@@ -1,15 +1,8 @@
 ---
 title: MutationRecord
 slug: Web/API/MutationRecord
-tags:
-  - API
-  - Advanced
-  - DOM
-  - DOM Reference
-  - NeedsContent
-  - Reference
-translation_of: Web/API/MutationRecord
 ---
+
 {{APIRef("DOM")}}
 
 **`MutationRecord`** は、 DOM に生じた個々の変更を表します。これは {{domxref("MutationObserver")}} のコールバック関数に渡されるオブジェクトです。

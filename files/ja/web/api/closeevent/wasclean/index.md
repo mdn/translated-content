@@ -1,14 +1,8 @@
 ---
 title: CloseEvent.wasClean
 slug: Web/API/CloseEvent/wasClean
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - closeEvent
-browser-compat: api.CloseEvent.wasClean
-translation_of: Web/API/CloseEvent/wasClean
 ---
+
 {{APIRef("Websockets API")}}
 
 **`wasClean`** は {{domxref("CloseEvent")}} インターフェイスの読み取り専用プロパティで、接続がきれいに閉じられた場合は `true` を返します。

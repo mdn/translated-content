@@ -1,13 +1,8 @@
 ---
 title: Falsy (偽値)
 slug: Glossary/Falsy
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - 用語集
-translation_of: Glossary/Falsy
 ---
+
 **偽値** (_falsy_ または _falsey_ な値) は、 {{Glossary("Boolean")}} コンテキストに現れたときに偽とみなされる値です。
 
 {{Glossary("JavaScript")}} は{{Glossary("Conditional", "条件文")}}や{{Glossary("Loop", "繰り返し")}}などの場面で、任意の値を強制的に Boolean に{{Glossary("Type_Conversion", "型変換")}}します。
@@ -22,7 +17,7 @@ translation_of: Glossary/Falsy
 | `""`                             | 空[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)の値                                                                              |
 | {{Glossary("null")}}     | [null](/ja/docs/Web/JavaScript/Reference/Global_Objects/null) - 何も値が存在しないこと                                                               |
 | {{Glossary("undefined")}} | [undefined](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) - プリミティブ値                                                             |
-| {{Glossary("NaN")}}         | [NaN ](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN)- 非数                                                                                   |
+| {{Glossary("NaN")}}         | [NaN](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) - 非数                                                                                   |
 
 > **Note:** オブジェクトは、 [\[\[IsHTMLDDA\]\] 内部スロット](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot)がある場合のみ偽値になります。このスロットは {{domxref("document.all")}} にのみ存在し、 JavaScript を使用して設定することはできません。
 

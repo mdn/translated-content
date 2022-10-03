@@ -1,19 +1,8 @@
 ---
 title: PaymentMethodChangeEvent
 slug: Web/API/PaymentMethodChangeEvent
-tags:
-  - API
-  - Interface
-  - Payment Handler
-  - Payment Request
-  - Payment Request API
-  - PaymentRequestUpdateEvent
-  - Reference
-  - Secure context
-  - payment
-  - インターフェイス
-translation_of: Web/API/PaymentMethodChangeEvent
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 **`PaymentMethodChangeEvent`** は [Payment Request API](/ja/docs/Web/API/Payment_Request_API) のインターフェイスで、ユーザーが支払方法を切り替えたとき (例えば、ユーザーが Apple Pay を使用する際に、「その店舗の」カードを選択する場合) に実行される一部の支払いハンドラーが発生する {{domxref("PaymentRequest/paymentmethodchange_event", "paymentmethodchange")}} イベントを説明します。

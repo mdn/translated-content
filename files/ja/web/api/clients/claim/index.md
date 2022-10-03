@@ -1,16 +1,8 @@
 ---
 title: Clients.claim()
 slug: Web/API/Clients/claim
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - claim
-translation_of: Web/API/Clients/claim
 ---
+
 {{APIRef("Service Worker Clients")}}
 
 {{domxref("Clients")}} インターフェイスの **`claim()`** メソッドを使用すると、アクティブなサービスワーカーが自身のスコープ（{{domxref("ServiceWorkerRegistration.scope", "scope")}}）内のすべてのクライアントのコントローラー（{{domxref("ServiceWorkerContainer.controller", "controller")}}）として自分自身を設定できます。 これにより、このサービスワーカーによって制御されるようになるクライアントの {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} で `"controllerchange"` イベントがトリガーされます。

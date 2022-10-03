@@ -1,15 +1,8 @@
 ---
 title: clipboard
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard
-tags:
-  - API
-  - Add-ons
-  - Clipboard
-  - Extensions
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard
 ---
+
 {{AddonSidebar}}
 
 クリップボード API は、拡張機能がシステムのクリップボードに要素をクリップするのを可能にします。現在この API は画像のコピーだけをサボートしていますが、将来的にはテキストと HTML のコピーをサボートする計画です。

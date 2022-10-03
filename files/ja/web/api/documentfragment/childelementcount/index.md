@@ -1,14 +1,8 @@
 ---
 title: DocumentFragment.childElementCount
 slug: Web/API/DocumentFragment/childElementCount
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-translation_of: Web/API/DocumentFragment/childElementCount
-browser-compat: api.DocumentFragment.childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 **`Document.childElementCount`** は読み取り専用のプロパティで、 `DocumentFragment` の子要素の数を返します。

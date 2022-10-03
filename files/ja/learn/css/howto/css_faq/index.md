@@ -1,16 +1,9 @@
 ---
 title: CSS の一般的な質問
 slug: Learn/CSS/Howto/CSS_FAQ
-tags:
-  - CSS
-  - FAQ
-  - Web
-  - questions
-  - ガイド
-  - 例
-translation_of: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Common_CSS_Questions
 ---
+
 この記事には、 CSS に関するいくつかのよくある質問（FAQ）とその解答が見つかり、ウェブ開発者になるための道で役に立つでしょう。
 
 ## なぜ CSS が妥当なのに正しくレンダリングされないのか？
@@ -77,7 +70,7 @@ h1 { color: red; }
 h1 { color: black; }
 ```
 
-これは CSS 2 で変わり、[initial](/ja/docs/CSS/initial "initial") キーワードが CSS プロパティの正当な値になりました。これはプロパティを既定値にリセットします。この既定値は、当該プロパティの CSS 仕様で定義されています。
+これは CSS 2 で変わり、[initial](/ja/docs/CSS/initial) キーワードが CSS プロパティの正当な値になりました。これはプロパティを既定値にリセットします。この既定値は、当該プロパティの CSS 仕様で定義されています。
 
 ```css
 /* 見出しの既定の色は黒 */
@@ -108,7 +101,7 @@ HTML の要素は `class` 属性に空白区切りでクラスを並べること
 
 ## なぜ私のスタイル規則は正しく動作しないのか?
 
-構文が正しいスタイル規則が、ある状況下で適用されないことがあります。この種類の問題をデバッグするために [DOM Inspector](/ja/docs/DOM_Inspector "DOM_Inspector") の _CSS Style Rules_ ビューを活用できますが、スタイルが無視される事例でもっとも頻発するものは以下のとおりです。
+構文が正しいスタイル規則が、ある状況下で適用されないことがあります。この種類の問題をデバッグするために [DOM Inspector](/ja/docs/DOM_Inspector) の _CSS Style Rules_ ビューを活用できますが、スタイルが無視される事例でもっとも頻発するものは以下のとおりです。
 
 ### HTML 要素の階層
 
@@ -189,7 +182,7 @@ body * { font-weight: normal; }
 
 ### CSS の詳細度
 
-ある要素に複数の規則を適用すると、スタイルの[詳細さ](/ja/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity "Specificity")に従って規則が選ばれます。インラインスタイル（HTML の `style` 属性）が最上位の詳細さで他のあらゆるセレクタを上書きし、次に ID セレクタ、それからクラスセレクタ、要素名セレクタの順となります。よって、以下の {{htmlelement("div")}} の文字色は赤になります。
+ある要素に複数の規則を適用すると、スタイルの[詳細さ](/ja/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity)に従って規則が選ばれます。インラインスタイル（HTML の `style` 属性）が最上位の詳細さで他のあらゆるセレクタを上書きし、次に ID セレクタ、それからクラスセレクタ、要素名セレクタの順となります。よって、以下の {{htmlelement("div")}} の文字色は赤になります。
 
 ```
 div { color: black; }

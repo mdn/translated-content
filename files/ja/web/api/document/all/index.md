@@ -1,16 +1,8 @@
 ---
 title: Document.all
 slug: Web/API/Document/all
-tags:
-  - API
-  - DOM
-  - Document
-  - HTMLAllCollection
-  - Property
-  - Reference
-  - all
-translation_of: Web/API/Document/all
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}
 
 {{DOMxRef("Document")}} インターフェイスの **`all`** プロパティは読み取り専用で、 document ノードをルートとした {{DOMxRef("HTMLAllCollection")}} を返します。言い換えれば、文書のすべての要素を、 (配列のように) 順序および (通常のオブジェクトのように) ID でアクセスすることができる形で返します。

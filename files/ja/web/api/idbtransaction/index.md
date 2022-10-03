@@ -1,16 +1,8 @@
 ---
 title: IDBTransaction
 slug: Web/API/IDBTransaction
-tags:
-  - API
-  - Database
-  - IDBTransaction
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-translation_of: Web/API/IDBTransaction
 ---
+
 {{APIRef("IndexedDB")}}
 
 **`IDBTransaction`** は [IndexedDB API](/ja/docs/IndexedDB) のインターフェイスで、イベントハンドラー属性を使用してデータベース上の静的で非同期のトランザクションを提供します。すべてのデータの読み書きはトランザクション内で行われます。 {{domxref("IDBDatabase")}} を使用してトランザクションを開始し、 {{domxref("IDBTransaction")}} を使用してトランザクションのモードを設定し (例 `readonly` または `readwrite`)、 {{domxref("IDBObjectStore")}} にアクセスしてリクエストを作成します。 `IDBTransaction` オブジェクトを使用してトランザクションを中止することもできます。

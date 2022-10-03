@@ -1,17 +1,8 @@
 ---
 title: PushSubscription
 slug: Web/API/PushSubscription
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-translation_of: Web/API/PushSubscription
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 [Push API](/ja/docs/Web/API/Push_API) の `PushSubscription` インターフェースは、サブスクリプションの URL エンドポイントを提供するとともに、プッシュサービスの登録を解除できます。

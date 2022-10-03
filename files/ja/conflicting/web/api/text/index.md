@@ -1,14 +1,9 @@
 ---
 title: Text.replaceWholeText()
 slug: conflicting/Web/API/Text
-tags:
-  - メソッド
-  - 非推奨
-  - リファレンス
-translation_of: Web/API/Text/replaceWholeText
 original_slug: Web/API/Text/replaceWholeText
-browser-compat: api.Text.replaceWholeText
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 **`replaceWholeText()`** は {{domxref("Text")}} インターフェイスのメソッドで、ノードのテキストと、*論理的に隣接するすべてのテキストノード*を指定されたテキストで置き換えます。

@@ -1,16 +1,8 @@
 ---
 title: DataTransfer.types
 slug: Web/API/DataTransfer/types
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.types
-translation_of: Web/API/DataTransfer/types
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.types`** は読み取り専用プロパティで、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントで設定されたドラッグデータ形式の（文字列の）配列を返します。形式の順序は、ドラッグ操作に含まれるデータの順序と同じです。

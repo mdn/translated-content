@@ -1,14 +1,8 @@
 ---
 title: 'Feature-Policy: battery'
 slug: Web/HTTP/Headers/Feature-Policy/battery
-tags:
-  - Battery
-  - Feature Policy
-  - HTTP
-  - Experimental
-browser-compat: http.headers.Feature-Policy.battery
-translation_of: Web/HTTP/Headers/Feature-Policy/battery
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `battery` ディレクティブは、現在の文書で {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} で得られる {{DOMxRef("BatteryManager")}} インターフェイスを通じて、端末のバッテリーに関する情報の収集を許可するかどうかを制御します。

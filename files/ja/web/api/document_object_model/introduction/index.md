@@ -1,16 +1,8 @@
 ---
 title: DOM の紹介
 slug: Web/API/Document_Object_Model/Introduction
-tags:
-  - 初心者
-  - DOM
-  - 文書
-  - ガイド
-  - HTML DOM
-  - 導入
-  - チュートリアル
-translation_of: Web/API/Document_Object_Model/Introduction
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 **ドキュメントオブジェクトモデル** (Document Object Model, _DOM_) は、ウェブ上の文書のコンテンツと構造からなるオブジェクトのデータ表現です。このガイドでは、簡単に DOM を紹介します。 DOM がどのようにメモリー内で {{Glossary("HTML")}} 文書を表現するか、どのように API を使用してウェブコンテンツやアプリケーションを作成するのかを見てみます。

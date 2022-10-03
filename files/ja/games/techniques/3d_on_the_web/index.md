@@ -1,16 +1,8 @@
 ---
 title: ウェブ上の 3D ゲームの概要
 slug: Games/Techniques/3D_on_the_web
-tags:
-  - Games
-  - Graphics
-  - NeedsContent
-  - NeedsExample
-  - WebGL
-  - WebVR
-  - three.js
-translation_of: Games/Techniques/3D_on_the_web
 ---
+
 {{GamesSidebar}}
 
 ウェブでのリッチなゲーム体験を実現するためには、HTML の {{htmlelement("canvas")}} 上にレンダリングされる WebGL が武器となります。 WebGL は基本的にウェブ用の OpenGL ES 2.0 であり、リッチでインタラクティブなアニメーションや、もちろんゲームを構築するためのツールを提供する JavaScript API です。ハードウェアアクセラレーションによる JavaScript で、動的な 3D グラフィックを生成し、レンダリングすることができます。

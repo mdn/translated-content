@@ -11,7 +11,7 @@ translation_of: Web/API/KeyboardEvent/key
 ---
 <p>{{APIRef("События DOM")}}</p>
 
-<p><span class="seoSummary">Ключ события {{domxref("KeyboardEvent")}} <code><strong>key</strong></code> доступен только для чтения, возвращает значение клавиши, нажатой пользователем, принимая во внимание состояние клавиш-модификаторов, таких как </span><span class="seoSummary"><kbd>Shift</kbd> , а также локаль и раскладку клавиатуры.</span> Его значение определяется следующим образом:</p>
+<p>Ключ события {{domxref("KeyboardEvent")}} <code><strong>key</strong></code> доступен только для чтения, возвращает значение клавиши, нажатой пользователем, принимая во внимание состояние клавиш-модификаторов, таких как <kbd>Shift</kbd> , а также локаль и раскладку клавиатуры. Его значение определяется следующим образом:</p>
 
 <div class="moreinfo pull-aside">
 <h4 id="Key_values">Key values</h4>
@@ -134,7 +134,7 @@ btnClearConsole.addEventListener('click', (e) =&gt; {
 
 <p>{{EmbedLiveSample('KeyboardEvent_sequence_example')}}</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note:</strong> On browsers that don't fully implement the {{domxref("InputEvent")}} interface which is used for the {{event("beforeinput")}} and {{event("input")}} events, you may get incorrect output on those lines of the log output.</p>
 </div>
 

@@ -2,6 +2,7 @@
 title: delete 操作符
 slug: Web/JavaScript/Reference/Operators/delete
 ---
+
 {{jsSidebar("Operators")}}
 
 **`delete` 操作符**用于删除对象的某个属性；如果没有指向这个属性的引用，那它最终会被释放。
@@ -10,16 +11,12 @@ slug: Web/JavaScript/Reference/Operators/delete
 
 ## 语法
 
-```plain
-delete expression
-```
-
-_expression_ 的计算结果应该是某个属性的引用，例如：
-
-```plain
+```js
 delete object.property
 delete object['property']
 ```
+
+> **备注：** 该语法允许在 `delete` 操作符之后使用更广泛的表达式，但只有上述形式才能产生有意义的行为。
 
 ### 参数
 
@@ -30,11 +27,14 @@ delete object['property']
 
 ### 返回值
 
-对于所有情况都是`true`，除非属性是一个{{jsxref("Object.hasOwnProperty", "自身的")}} {{jsxref("Errors/Cant_delete", "不可配置")}}的属性，在这种情况下，非严格模式返回 `false`。
+对于所有情况都是 `true`，除非属性是一个{{jsxref("Object.hasOwnProperty", "自身的")}} {{jsxref("Errors/Cant_delete", "不可配置")}}的属性，在这种情况下，非严格模式返回 `false`。
 
 ### 异常
 
-在[严格模式](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)下，如果是属性是一个自己不可配置的属性，会抛出{{jsxref("TypeError")}}。
+- {{jsxref("TypeError")}}
+  - : 如果属性是自身不可配置的属性且处于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中，则会抛出该异常。
+- {{jsxref("ReferenceError")}}
+  - : 当 `object` 是父对象（[`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)）时抛出。
 
 ## 描述
 
@@ -90,7 +90,7 @@ var nameOther = 'XYZ';
 // 通过以下方法获取全局属性：
 Object.getOwnPropertyDescriptor(window, 'nameOther');
 
-// 输出: Object {value: "XYZ",
+// 输出：Object {value: "XYZ",
 //                  writable: true,
 //                  enumerable: true,
 //                  configurable: false}
@@ -227,7 +227,7 @@ console.log(foo.bar);   //42
 // 从原型上删除属性
 delete Foo.prototype.bar; //true
 
-// 由于已删除“ bar”属性，因此不能再从 Foo 继承它。
+// 由于已删除“bar”属性，因此不能再从 Foo 继承它。
 console.log(foo.bar);    //undefined
 ```
 

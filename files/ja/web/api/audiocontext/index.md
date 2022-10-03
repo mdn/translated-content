@@ -1,10 +1,8 @@
 ---
 title: AudioContext
 slug: Web/API/AudioContext
-tags:
-  - API
-translation_of: Web/API/AudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AudioContext` インターフェイスは{{domxref("AudioNode")}}によって表現され、一緒にリンクした音声モジュールから作った音声処理グラフを表します。音声コンテキストはコンテキストを含むノードの作成と音声処理もしくはデコードの実行の両方を制御します。コンテキスト内部で全てのことが起こるので、何かをする前に `AudioContext` を作る必要があります。

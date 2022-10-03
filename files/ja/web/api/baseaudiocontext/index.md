@@ -1,18 +1,8 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
-tags:
-  - API
-  - 音声
-  - BaseAudioContext
-  - コンテキスト
-  - インターフェイス
-  - リファレンス
-  - ウェブ音声 API
-  - sound
-browser-compat: api.BaseAudioContext
-translation_of: Web/API/BaseAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 `BaseAudioContext` は[ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、 {{domxref("AudioContext")}} と {{domxref("OfflineAudioContext")}} で表されるオンラインとオフラインのオーディオ処理グラフの基本定義として動作します。 `BaseAudioContext` を直接使用することはありません。これらの 2 つの継承されたインターフェースのいずれかを介して、その機能を使用することになります。

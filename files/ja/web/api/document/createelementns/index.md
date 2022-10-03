@@ -1,13 +1,8 @@
 ---
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/createElementNS
 ---
+
 {{APIRef("DOM")}}
 
 指定された名前空間 URI と修飾名を持つ要素を生成します。

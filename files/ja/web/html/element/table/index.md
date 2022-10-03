@@ -1,17 +1,8 @@
 ---
 title: '<table>: 表要素'
 slug: Web/HTML/Element/table
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - NeedsLiveSample
-  - Reference
-  - Sorting
-  - Tables
-  - Web
-translation_of: Web/HTML/Element/table
 ---
+
 {{HTMLRef}}
 
 **HTML の `<table>` 要素**は表形式のデータ、つまり、行と列の組み合わせによるセルに含まれたデータによる二次元の表で表現される情報です。

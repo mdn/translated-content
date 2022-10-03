@@ -2,6 +2,7 @@
 title: Performance.clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`clearResourceTimings()`** method removes all {{domxref("PerformanceEntry","performance entries")}} with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`" from the browser's performance data buffer and sets the size of the performance data buffer to zero. To set the size of the browser's performance data buffer, use the {{domxref("Performance.setResourceTimingBufferSize()")}} method.
@@ -61,4 +62,4 @@ function clear_performance_timings() {
 
 ## Browser compatibility
 
-{{Compat("api.Performance.clearResourceTimings")}}
+{{Compat}}

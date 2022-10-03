@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-margin-inline-end
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-margin-inline-end`** définit la marge de défilement de l'élément sur la fin de l'axe en ligne. La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
@@ -33,18 +34,18 @@ scroll-margin-inline-end: unset;
 - `<length>`
   - : Un décalage par rapport au côté correspondant du conteneur de défilement.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin-inline-end", "scroll-margin-inline-end")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-margin-inline-end")}}
+{{Compat}}

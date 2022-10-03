@@ -4,6 +4,7 @@ slug: Web/CSS/min
 translation_of: Web/CSS/min()
 original_slug: Web/CSS/min()
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`min()`** permet d'obtenir la plus petite valeurs parmi une liste d'expressions, séparées par des virgules afin d'utiliser ce minimum comme valeur d'une propriété CSS. La fonction `min()` peut être utilisée à tout endroit où une valeur de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est autorisée.
@@ -86,13 +87,11 @@ On aura ainsi une taille minimale de `1rem` et la taille du texte qui se met à 
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('CSS4 Values', '#calc-notation', 'min()')}} | {{Spec2('CSS4 Values')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.min")}}
+{{Compat}}
 
 ## Voir aussi
 

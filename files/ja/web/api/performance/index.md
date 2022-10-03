@@ -1,15 +1,8 @@
 ---
 title: Performance
 slug: Web/API/Performance
-tags:
-  - API
-  - Web パフォーマンス
-  - インターフェイス
-  - ナビゲーションタイミング
-  - パフォーマンス
-  - リファレンス
-translation_of: Web/API/Performance
 ---
+
 {{APIRef("High Resolution Time")}}
 
 **`Performance`** インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。これは High Resolution Time API の一部ですが、Performance Timeline API、Navigation Timing API、User Timing API、および Resource Timing API によって拡張されています。

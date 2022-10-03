@@ -2,9 +2,10 @@
 title: RTCPeerConnection.setRemoteDescription()
 slug: Web/API/RTCPeerConnection/setRemoteDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-**`RTCPeerConnection.setRemoteDescription()`** 方法改变与连接相关的描述，该描述主要是描述有些关于连接的属性，例如对端使用的解码器。 连接受此更改影响，并且必须能够支持旧的和新的描述。 方法带三个参数，{{domxref("RTCSessionDescription")}} 对象用于设置，然后是更改成功的回调方法，一个是更改失败的回调方法。
+**`RTCPeerConnection.setRemoteDescription()`** 方法改变与连接相关的描述，该描述主要是描述有些关于连接的属性，例如对端使用的解码器。连接受此更改影响，并且必须能够支持旧的和新的描述。方法带三个参数，{{domxref("RTCSessionDescription")}} 对象用于设置，然后是更改成功的回调方法，一个是更改失败的回调方法。
 
 方法是异步的，不用等待设置完成，成功会调用成功回调方法，失败则会调用错误回调方法。
 
@@ -55,4 +56,4 @@ pc.setRemoteDescription( new RTCSessionDescription( offer ), function() {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)

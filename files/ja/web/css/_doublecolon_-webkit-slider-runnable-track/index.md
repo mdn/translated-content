@@ -1,20 +1,8 @@
 ---
 title: '::-webkit-slider-runnable-track'
 slug: Web/CSS/::-webkit-slider-runnable-track
-tags:
-  - CSS
-  - CSS:WebKit 拡張
-  - NeedsBrowserCompatibility
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - 標準外
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.-webkit-slider-runnable-track
-translation_of: Web/CSS/::-webkit-slider-runnable-track
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 **`::-webkit-slider-runnable-track`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で {{HTMLElement("input/range", '&lt;input type="range"&gt;')}} の「トラック」 (インジケータがスライドする溝) を表します。

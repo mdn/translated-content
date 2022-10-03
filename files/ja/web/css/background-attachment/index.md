@@ -1,15 +1,8 @@
 ---
 title: background-attachment
 slug: Web/CSS/background-attachment
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-attachment
-translation_of: Web/CSS/background-attachment
 ---
+
 {{CSSRef}}
 
 **`background-attachment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像の位置を{{glossary("Viewport", "ビューポート")}}の中で固定するか、包含ブロックと一緒にスクロールするかを設定します。

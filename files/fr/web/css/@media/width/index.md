@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/width
 ---
+
 {{CSSRef}}
 
 **`width`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet d'appliquer des styles différents en fonction de la largeur de la zone d'affichage (_viewport_) ou de la largeur de la page (pour [les média paginés](/fr/docs/Web/CSS/M%C3%A9dia_pagin%C3%A9s)). La largeur est exprimée comme une longueur CSS (type {{cssxref("&lt;length&gt;")}}.
@@ -65,11 +66,8 @@ translation_of: Web/CSS/@media/width
 
 ## Spécifications
 
-| Spécification                                                            | État                                     | Commentaires                                                                  |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#width', 'width')}} | {{Spec2('CSS4 Media Queries')}} | La valeur peut désormais être négative (ce qui correspond à un booléen faux). |
-| {{SpecName('CSS3 Media Queries', '#width', 'width')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. La valeur ne peut pas être négative.                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.width")}}
+{{Compat}}

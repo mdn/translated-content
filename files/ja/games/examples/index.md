@@ -1,13 +1,8 @@
 ---
 title: 例
 slug: Games/Examples
-tags:
-  - Demos
-  - Example
-  - Games
-  - Web
-translation_of: Games/Examples
 ---
+
 {{GamesSidebar}}
 
 このページは数々の印象的な web テクノロジーのデモを一覧し、これからインスピレーションを得たり、一般に楽しめるでしょう。その証は、JavaScript や WebGL や関連テクノロジーで実行されます。最初の 2 節はプレイできるゲームで、2 つ目はインタラクティブ/ゲームに必要とも限らない、がらくた入れのスペースです。

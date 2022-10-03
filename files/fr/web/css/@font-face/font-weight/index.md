@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/font-weight
 ---
+
 {{CSSRef}}
 
 Le descripteur CSS **`font-weight`** permet aux auteurs d'indiquer les graisses pour les polices fournies dans une règle {{cssxref("@font-face")}}. La propriété [`font-weight`](/fr/docs/Web/CSS/font-weight) peut être utilisée séparément pour indiquer la graisse des caractères d'un texte (c'est-à-dire s'ils sont en gras, normaux ou plus fins).
@@ -92,14 +93,11 @@ Pour les personnes ayant une vision faible, il peut être extrêmement difficile
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSS4 Fonts', '#font-prop-desc', 'font-weight')}} | {{Spec2('CSS4 Fonts')}} |              |
-| {{SpecName('CSS3 Fonts', '#font-prop-desc', 'font-weight')}} | {{Spec2('CSS3 Fonts')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-weight")}}
+{{Compat}}
 
 ## Voir aussi
 

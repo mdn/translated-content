@@ -1,16 +1,9 @@
 ---
 title: Navigator.userAgent
 slug: Web/API/Navigator/userAgent
-tags:
-  - API
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/NavigatorID/userAgent
 original_slug: Web/API/NavigatorID/userAgent
-browser-compat: api.Navigator.userAgent
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`NavigatorID.userAgent`** は読み取り専用のプロパティで、現在のブラウザーのユーザーエージェント文字列を返します。

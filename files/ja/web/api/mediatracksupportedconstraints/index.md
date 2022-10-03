@@ -1,23 +1,8 @@
 ---
 title: MediaTrackSupportedConstraints
 slug: Web/API/MediaTrackSupportedConstraints
-page-type: web-api-interface
-tags:
-  - API
-  - Capture
-  - Constraints
-  - Dictionary
-  - Interface
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - screen
-browser-compat: api.MediaTrackSupportedConstraints
-translation_of: Web/API/MediaTrackSupportedConstraints
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 **`MediaTrackSupportedConstraints`** 辞書は{{Glossary("user agent", "ユーザーエージェント")}}またはブラウザーが {{domxref("MediaStreamTrack")}} オブジェクトの実装で認識する制約可能なプロパティのリストを確立するものです。 `MediaTrackSupportedConstraints` に適合するオブジェクトは {{domxref("MediaDevices.getSupportedConstraints()")}} によって返されます。

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 original_slug: Web/CSS/CSS_Transitions/Utiliser_transitions_CSS
 ---
+
 {{CSSref}}
 
 Les **transitions CSS** permettent de contrôler la vitesse d'animation lorsque les propriétés CSS sont modifiées. Plutôt que le changement soit immédiat, on peut l'étaler sur une certaine période. Ainsi, si on souhaite passer un élément de blanc à noir, on pourra utiliser les transitions CSS afin que cette modification soit effectuée progressivement, selon une courbe d'accélération donnée.
@@ -311,9 +312,7 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## Spécifications
 
-| Spécification                                        | État                                     | Commentaires         |
-| ---------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Transitions', '', '')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

@@ -1,12 +1,8 @@
 ---
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
-tags:
-  - API
-  - CSSOM
-  - Reference
-translation_of: Web/API/CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSStyleSheet`** インターフェイスは、1 枚の [CSS](/ja/docs/Web/CSS) スタイルシートを表します。これは、その親の {{domxref("StyleSheet")}} からプロパティとメソッドを継承します。

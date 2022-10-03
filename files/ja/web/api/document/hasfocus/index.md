@@ -1,16 +1,8 @@
 ---
 title: document.hasFocus()
 slug: Web/API/Document/hasFocus
-tags:
-  - API
-  - DOM
-  - Focus
-  - Method
-  - Reference
-  - フォーカス
-  - メソッド
-translation_of: Web/API/Document/hasFocus
 ---
+
 {{APIRef}}
 
 **`hasFocus()`** は {{domxref("Document")}} インターフェイスのメソッドで、 {{jsxref("Boolean")}} の値を返し、文書または文書内の何れかの要素がフォーカスを持っているかどうかを示します。このメソッドは、文書内のアクティブな要素がフォーカスを持っているかどうかを特定するために使用することができます。

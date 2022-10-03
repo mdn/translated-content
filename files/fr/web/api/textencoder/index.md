@@ -10,6 +10,7 @@ tags:
   - TextEncoder
 translation_of: Web/API/TextEncoder
 ---
+
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
 **`TextEncoder`** prend un flux de points de code en entrée et émet un flux d'octets. Pour une bibliothèque non native plus extensible, voir [`StringView` – une représentation des chaînes de caractères proche de celle de C basée sur les tableaux typés](/fr/Add-ons/Code_snippets/StringView).
@@ -102,17 +103,15 @@ if (typeof TextEncoder === "undefined") {
 }
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                            | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("Encoding", "#interface-textencoder", "TextEncoder")}} | {{Spec2("Encoding")}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.TextEncoder")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - The {{DOMxRef("TextDecoder")}} interface describing the inverse operation.
 - [`StringView`](/fr/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays

@@ -1,14 +1,8 @@
 ---
 title: Document.clear()
 slug: Web/API/Document/clear
-tags:
-  - DOM
-  - DOM_0
-  - Document
-  - Gecko
-  - HTML5
-translation_of: Web/API/Document/clear
 ---
+
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 
 **`Document.clear()`** メソッドは指定された文書全体を消去するもので、初期 (1.0 以前) の Mozilla アプリケーションにありました。
@@ -23,7 +17,7 @@ document.clear();
 
 ## 仕様書
 
-- [HTML5](http://www.whatwg.org/html/#dom-document-clear)
+- [HTML5](https://www.whatwg.org/html/#dom-document-clear)
 
 ## ブラウザーの互換性
 

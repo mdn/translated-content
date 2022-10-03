@@ -11,6 +11,7 @@ tags:
   - Service Workers
 translation_of: Web/API/Push_API
 ---
+
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
 
 L' **API Push**  donne aux applications web la possibilité de recevoir des messages qui leur sont poussés depuis un serveur, qu'il s'agisse ou non d'une application active au premier plan, ou même actuellement chargée, sur un agent utilisateur. Ceci permet aux développeurs de délivrer des notifications asynchrones et des mises-à-jour aux utilisateurs qui le choisissent, entrainant un meilleur engagement \[de l'utilisateur] avec du nouveau contenu au moment opportun.
@@ -62,9 +63,7 @@ Les ajouts à [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_W
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire         |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("Push API")}} | {{Spec2("Push API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

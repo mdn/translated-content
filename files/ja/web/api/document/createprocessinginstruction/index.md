@@ -1,15 +1,8 @@
 ---
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createProcessInstruction
-translation_of: Web/API/Document/createProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 `createProcessingInstruction()` は新しい[処理命令](/ja/docs/Web/API/ProcessingInstruction)ノードを生成して返します。

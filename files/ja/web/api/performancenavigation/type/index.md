@@ -1,17 +1,8 @@
 ---
 title: PerformanceNavigation.type
 slug: Web/API/PerformanceNavigation/type
-tags:
-  - API
-  - PerformanceNavigation
-  - legacy
-  - ナビゲーションタイミング
-  - プロパティ
-  - 後方互換性
-  - 読み取り専用
-  - 非推奨
-translation_of: Web/API/PerformanceNavigation/type
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Warning:** このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。

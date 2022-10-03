@@ -1,16 +1,11 @@
 ---
 title: NDEFReadingEvent
 slug: Web/API/NDEFReadingEvent
-tags:
-  - NDEF
-  - リファレンス
-  - Web NFC
-browser-compat: api.NDEFReadingEvent
-translation_of: Web/API/NDEFReadingEvent
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-**`NDEFReadingEvent`** は[ウェブ NFC API](/en-US/docs/Web/API/Web_NFC_API) のインターフェイスで、 {{DOMxRef("NDEFReader")}} によって得られる新しい NFC 読み取りに対して配信するイベントを表します。
+**`NDEFReadingEvent`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API) のインターフェイスで、 {{DOMxRef("NDEFReader")}} によって得られる新しい NFC 読み取りに対して配信するイベントを表します。
 
 {{InheritanceDiagram}}
 

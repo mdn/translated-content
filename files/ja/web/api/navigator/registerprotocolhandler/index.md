@@ -1,18 +1,8 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - メソッド
-  - Navigator
-  - リファレンス
-  - ウェブベースプロトコルハンドラー
-  - registerProtocolHandler
-browser-compat: api.Navigator.registerProtocolHandler
-translation_of: Web/API/Navigator/registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 **{{domxref("Navigator")}}** の **`registerProtocolHandler()`** メソッドで、ウェブサイトが特定の URL スキーム（別名プロトコル）を開いたり処理したりする機能を登録することを可能にします。

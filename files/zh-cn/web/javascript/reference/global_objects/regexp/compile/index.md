@@ -2,9 +2,10 @@
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 ---
+
 {{JSRef}} {{deprecated_header}}
 
-`已废弃的compile`**`()`** 方法被用于在脚本执行过程中（重新）编译正则表达式。与`RegExp`构造函数基本一样。
+已废弃的 **`compile()`** 方法被用于在脚本执行过程中（重新）编译正则表达式。与 `RegExp` 构造函数基本一样。
 
 ## 语法
 
@@ -15,7 +16,7 @@ regexObj.compile(pattern, flags)
 ### 参数
 
 - `pattern`
-  - : 正则表达式的文本 。
+  - : 正则表达式的文本。
 - `flags`
 
   - : 如果指定，标志可以具有以下值的任意组合：
@@ -31,7 +32,7 @@ regexObj.compile(pattern, flags)
 
 ## 描述
 
-`不推荐 compile 方法。你可以使用` `RegExp` 构造函数来得到相同效果。
+不推荐 `compile` 方法。你可以使用 `RegExp` 构造函数来得到相同效果。
 
 ## 示例
 

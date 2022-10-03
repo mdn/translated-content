@@ -10,6 +10,7 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/element
 ---
+
 {{APIRef("Element Timing API")}}
 
 La propriété en lecture seule **`element`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie un [`Element`](/fr/docs/Web/API/Element) qui est une représentation littérale de l'élément associé.
@@ -47,10 +48,8 @@ observer.observe({ entryTypes: ["element"] });
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Element Timing API','#dom-performanceelementtiming-element','PerformanceElementTiming.element')}} | {{Spec2('Element Timing API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceElementTiming.element")}}
+{{Compat}}

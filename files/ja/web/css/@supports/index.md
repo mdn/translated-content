@@ -1,16 +1,8 @@
 ---
 title: '@supports'
 slug: Web/CSS/@supports
-tags:
-  - アットルール
-  - CSS
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - supports
-browser-compat: css.at-rules.supports
-translation_of: Web/CSS/@supports
 ---
+
 {{CSSRef}}
 
 **`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、宣言をブラウザーが 1 つまたは複数の特定の CSS 機能に対応しているかによって、宣言を指定することができます。これは*機能クエリー*と呼ばれます。規則はコードの最上位または他の[条件付きグループアットルール](/ja/docs/Web/CSS/At-rule#条件付きグループルール)の中に配置することができます。

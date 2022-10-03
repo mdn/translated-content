@@ -1,17 +1,8 @@
 ---
 title: AudioProcessingEvent
 slug: Web/API/AudioProcessingEvent
-page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Internationalization
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioProcessingEvent
-translation_of: Web/API/AudioProcessingEvent
 ---
+
 {{APIRef("Web Audio API")}}
 
 [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) の `AudioProcessingEvent` は {{domxref("ScriptProcessorNode")}} 入力バッファーが処理可能な状態になったときに発生するイベントを表します。

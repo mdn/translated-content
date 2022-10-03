@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/drawArrays
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.drawArrays()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) dessine des primitives à partir de données tabulaires.
@@ -56,31 +57,11 @@ gl.drawArrays(gl.POINTS, 0, 8);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.11", "drawArrays")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glDrawArrays.xml", "glDrawArrays")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL.</p></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.drawArrays")}}
+{{Compat}}
 
 ## Voir aussi
 

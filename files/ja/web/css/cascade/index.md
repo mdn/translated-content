@@ -1,22 +1,8 @@
 ---
 title: CSS カスケード入門
 slug: Web/CSS/Cascade
-tags:
-  - CSS
-  - Cascade
-  - Guide
-  - Introduction
-  - Layout
-  - Cascade layers
-  - specificity
-  - \@layers
-  - Reference
-  - Style
-  - Style sheet
-  - Stylesheets
-spec-urls: https://drafts.csswg.org/css-cascade/
-translation_of: Web/CSS/Cascade
 ---
+
 {{CSSRef}}
 
 **カスケード**は、異なるソースから来るプロパティ値を組み合わせる方法を定義するアルゴリズムです。カスケードでは、複数の[オリジン](#オリジンの種類)や[カスケードレイヤー](/ja/docs/Web/CSS/@layer)の宣言が要素のプロパティに値を設定する場合に、何が優先されるかを定義します。
@@ -327,7 +313,7 @@ CSS 宣言のみが、つまりプロパティ/値の組だけが、カスケー
 
 {{cssxref("@keyframes")}} の中の宣言は、カスケードには参加しません。 `font-face` と同様に、カスケードアルゴリズムによって選択されるのは全体としての `@keyframes` だけです。[アニメーションの優先順位は以下に記述します](#css_アニメーションとカスケード)。
 
-{{cssxref("@import")}} に関しては、 `@import` はカスケードにそれ自身は参加しませんが、インポートされたスタイルは全てに参加します。もし `@import` が[名前付きまたは無名のレイヤー](/en-US/docs/Web/CSS/@layer)を定義していれば、インポートされたスタイルシートのコンテンツはその指定されたレイヤーに所有されます。 `@import` でインポートされた他のすべての CSS は、最後に宣言されたレイヤーとして扱われるものです。これは上で説明したとおりです。
+{{cssxref("@import")}} に関しては、 `@import` はカスケードにそれ自身は参加しませんが、インポートされたスタイルは全てに参加します。もし `@import` が[名前付きまたは無名のレイヤー](/ja/docs/Web/CSS/@layer)を定義していれば、インポートされたスタイルシートのコンテンツはその指定されたレイヤーに所有されます。 `@import` でインポートされた他のすべての CSS は、最後に宣言されたレイヤーとして扱われるものです。これは上で説明したとおりです。
 
 最後に、 {{cssxref("@charset")}} は特定のアルゴリズムに従っているため、カスケードアルゴリズムには影響を与えないことに注意してください。
 

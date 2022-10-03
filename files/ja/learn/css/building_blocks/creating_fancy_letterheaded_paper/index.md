@@ -1,22 +1,9 @@
 ---
 title: 装飾的なレターヘッド付きの便箋の作成
 slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
-tags:
-  - Assessment
-  - Background
-  - Beginner
-  - Boxes
-  - CSS
-  - CodingScripting
-  - border
-  - box
-  - letter
-  - letterhead
-  - letterheaded
-  - paper
-translation_of: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 original_slug: Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Learn/CSS/Styling_boxes")}}
 
 好印象を与えたいのなら、素敵なレターヘッドの便箋に手紙を書くのはとても良い考えです。この評価では、そのような見た目のオンラインテンプレートの作成に挑戦します。

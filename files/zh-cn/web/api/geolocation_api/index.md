@@ -2,6 +2,7 @@
 title: 地理位置 API
 slug: Web/API/Geolocation_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 **地理位置 API**（Geolocation API）允许用户向 web 应用程序提供他们的位置。出于隐私考虑，报告地理位置前会先请求用户许可。

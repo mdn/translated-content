@@ -1,19 +1,8 @@
 ---
 title: MediaRecorder.mimeType
 slug: Web/API/MediaRecorder/mimeType
-tags:
-  - API
-  - Audio
-  - Media
-  - MediaRecorder
-  - MediaRecorder API
-  - MediaStream Recording
-  - Property
-  - Reference
-  - Video
-  - mimeType
-translation_of: Web/API/MediaRecorder/mimeType
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.mimeType`** 読み取り専用プロパティは、作成時に記録コンテナとして使用する MIME タイプを返します。 これは、記録したすべてのデータをディスクに書き込むことによって生じるファイルのファイル形式です。 もちろん、個々のトラックに関連付けられているファイル形式とコーデックはまったく異なるものであることに注意してください。 WebM ビデオでうまく機能するトラックを MP4 ラッパーに書き込んでも、どこにでも再生できるファイルにならない可能性があります。

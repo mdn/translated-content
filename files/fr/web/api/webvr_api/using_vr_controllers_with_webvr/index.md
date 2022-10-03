@@ -4,6 +4,7 @@ slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 translation_of: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 original_slug: Web/API/WebVR_API/Utiliser_des_contrôleurs_de_realite_virtuelle_pour_du_WebVR
 ---
+
 {{APIRef("WebVR API")}}
 
 La plupart des matériels de WebVR possède des contrôleurs qui viennent avec le casque de réalité virtuelle. Ceux-ci peuvent être utilisés dans les application WebVR grâce à l'[API Gamepad](/fr/docs/Web/API/Gamepad_API), et plus spécifiquement avec l'[API Gamepad Extensions](/fr/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions) qui ajoute des API pour accéder, entre autres, à la [position du controller](/fr/docs/Web/API/GamepadPose), au [retour haptique](/fr/docs/Web/API/GamepadHapticActuator), etc.. Cet article fournit les bases pour utiliser ces API.
@@ -20,7 +21,7 @@ L'[API Gamepad](/fr/docs/Web/API/Gamepad_API) est une API assez bien compatible,
 
 Vous pouvez avoir plus d'information sur l'usage de API de base des Gamepad avec l'article [Utilisez l'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API), et [Implementer des contrôles en utilisant l'API Gamepad](/fr/docs/Games/Techniques/Controls_Gamepad_API).
 
-Dans cet article, nous allons nous attardez sur les nouvelles fonctionnalités offertes dans l'API {{specname("GamepadExtensions")}}, laquelle donne accès à des informations avancés comme des données de position ou d'orientation, ou encore contrôler les retours haptiques (vibrations), et bien plus. Cette API est toute nouvelle et, pour l'instant, seulement disponible dans les versions Beta ou Nightly de Firefox 55 (et suppérieur).
+Dans cet article, nous allons nous attardez sur les nouvelles fonctionnalités offertes dans l'API `GamepadExtensions`, laquelle donne accès à des informations avancés comme des données de position ou d'orientation, ou encore contrôler les retours haptiques (vibrations), et bien plus. Cette API est toute nouvelle et, pour l'instant, seulement disponible dans les versions Beta ou Nightly de Firefox 55 (et suppérieur).
 
 ## Types de contrôlleurs
 
@@ -258,7 +259,7 @@ function displayPoseStats(pose) {
 
 This article has given you a very basic idea of how to use the Gamepad Extensions to use VR controllers inside WebVR apps. In a real app you'd probably have a much more complex control system in effect, with controls assigned to the buttons on the VR controllers, and the display being affected by both the display pose and the controller poses simultaneously. Here however, we just wanted to isolate the pure Gamepad Extensions parts of that.
 
-## See also
+## Voir aussi
 
 - [WebVR API](/fr/docs/Web/API/WebVR_API)
 - [Gamepad API](/fr/docs/Web/API/Gamepad_API)

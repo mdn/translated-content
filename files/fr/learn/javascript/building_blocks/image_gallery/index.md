@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 original_slug: Apprendre/JavaScript/Building_blocks/Image_gallery
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 Maintenant que nous avons examiné les blocs fondamentaux de construction de JavaScript,  nous allons tester vos connaissances sur les boucles, les fonctions, les conditions et les événements en vous aidant à créer un élément assez commun que vous verrez sur de nombreux sites web. Une galerie JavaScript animée.

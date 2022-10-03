@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: X.prototype.y called on incompatible type'
 slug: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "called on incompatible target (or object)" は、関数が (与えられたオブジェクト上で) 呼び出されたときに、関数が期待する型に対応していない `this` を使用して呼び出された場合に発生します。

@@ -1,19 +1,8 @@
 ---
 title: MouseEvent.movementY
 slug: Web/API/MouseEvent/movementY
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - MovementY
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - mouse lock
-  - pointer lock
-browser-compat: api.MouseEvent.movementY
 ---
+
 {{APIRef("DOM Events")}}
 
 **`movementY`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、直前の {{domxref("Element/mousemove_event", "mousemove")}} イベントとこのイベントのマウスポインターの Y 座標の差を示します。このプロパティの値は `currentEvent.movementY = currentEvent.screenY - previousEvent.screenY` のように計算されます。

@@ -2,6 +2,7 @@
 title: <col>
 slug: Web/HTML/Element/col
 ---
+
 {{HTMLRef}}
 
 **HTML `<col>` 元素** 定义表格中的列，并用于定义所有公共单元格上的公共语义。它通常位于{{HTMLElement("colgroup")}}元素内。
@@ -37,9 +38,9 @@ slug: Web/HTML/Element/col
     > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "col")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
-  - : 定义列中对应的每个单元格的背景色。其值是 [sRGB](http://www.w3.org/Graphics/Color/sRGB) 定义的 6 位 16 进制代码之一，前缀为 '#'。 也可以使用以下 16 个预定义的颜色字符
+  - : 定义列中对应的每个单元格的背景色。其值是 [sRGB](http://www.w3.org/Graphics/Color/sRGB) 定义的 6 位 16 进制代码之一，前缀为 '#'。也可以使用以下 16 个预定义的颜色字符
 
-    注意：不要使用这个属性, 它是非标准的，并且只实现了 IE 浏览器中的部分版本: {{HTMLElement("col")}} 元素的样式应该使用 [CSS](/zh-CN/docs/CSS). 在{{HTMLElement("td")}}元素上使用 [CSS](/zh-CN/docs/CSS) 的 {{cssxref("background-color")}} 属性即可实现相同效果。
+    注意：不要使用这个属性，它是非标准的，并且只实现了 IE 浏览器中的部分版本：{{HTMLElement("col")}} 元素的样式应该使用 [CSS](/zh-CN/docs/CSS). 在{{HTMLElement("td")}}元素上使用 [CSS](/zh-CN/docs/CSS) 的 {{cssxref("background-color")}} 属性即可实现相同效果。
 
 - {{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "col")}} is not set to `char`, this attribute is ignored.
@@ -78,7 +79,7 @@ slug: Web/HTML/Element/col
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.col")}}
+{{Compat}}
 
 ## 相关链接
 

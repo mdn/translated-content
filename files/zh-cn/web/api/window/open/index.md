@@ -2,14 +2,14 @@
 title: Window.open()
 slug: Web/API/Window/open
 ---
+
 {{APIRef}}
 
 `Window` 接口的 **`open()`** 方法，是用指定的名称将指定的资源加载到浏览器上下文（窗口 `window` ，内嵌框架 `iframe` 或者标签 `tab` ）。如果没有指定名称，则一个新的窗口会被打开并且指定的资源会被加载进这个窗口的浏览器上下文中。
 
 ## 语法
 
-```
-
+```js
 let windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeatures]);
 ```
 
@@ -22,13 +22,13 @@ let windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeature
 ## 参数与返回值
 
 - `WindowObjectReference`
-  - : 打开的新窗口对象的引用。如果调用失败，返回值会是 `null 。如果`父子窗口满足“[同源策略](/zh-CN/JavaScript%E7%9A%84%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5)”，你可以通过这个引用访问新窗口的属性或方法。
+  - : 打开的新窗口对象的引用。如果调用失败，返回值会是 `null`。如果父子窗口满足“[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)”，你可以通过这个引用访问新窗口的属性或方法。
 - `strUrl`
   - : 新窗口需要载入的 url 地址。*strUrl*可以是 web 上的 html 页面也可以是图片文件或者其他任何浏览器支持的文件格式。
 - `strWindowName`
   - : 新窗口的名称。该字符串可以用来作为超链接 {{HTMLElement("a")}} 或表单 {{HTMLElement("form")}} 元素的目标属性值。字符串中不能含有空白字符。注意：_strWindowName_ 并不是新窗口的标题。
 - `strWindowFeatures`
-  - : 可选参数。是一个字符串值，这个值列出了将要打开的窗口的一些特性 (窗口功能和工具栏) 。 字符串中不能包含任何空白字符，特性之间用逗号分隔开。参考下文的[位置和尺寸特征](#Position_and_size_features>)。
+  - : 可选参数。是一个字符串值，这个值列出了将要打开的窗口的一些特性 (窗口功能和工具栏) 。字符串中不能包含任何空白字符，特性之间用逗号分隔开。参考下文的[位置和尺寸特征](#Position_and_size_features>)。
 
 ## 说明
 
@@ -38,7 +38,7 @@ let windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeature
 
 ## 例子
 
-```
+```js
 let windowObjectReference;
 let strWindowFeatures = `
     menubar=yes,
@@ -58,7 +58,7 @@ function openRequestedPopup() {
 }
 ```
 
-```
+```js
 let WindowObjectReference;
 
 const openRequestedPopup = () => {
@@ -70,7 +70,7 @@ const openRequestedPopup = () => {
 }
 ```
 
-如果已经存在以 _strWindowName_ 为名称的窗口，则不再打开一个新窗口，而是把 _strUrl_ 加载到这个窗口中。在这种情况下，方法的返回值是这个已经打开的窗口，并忽略参数 _strWindowFeatures_ 。*strUrl*设为空字符串时，可以在不改变窗口地址的情况下获得一个已经打开的同名窗口的引用。如果要在每次调用 `window.open()`时都打开一个新窗口，则要把参数 _strWindowName_ 设置为 `_blank`。
+如果已经存在以 _strWindowName_ 为名称的窗口，则不再打开一个新窗口，而是把 _strUrl_ 加载到这个窗口中。在这种情况下，方法的返回值是这个已经打开的窗口，并忽略参数 _strWindowFeatures_。*strUrl*设为空字符串时，可以在不改变窗口地址的情况下获得一个已经打开的同名窗口的引用。如果要在每次调用 `window.open()`时都打开一个新窗口，则要把参数 _strWindowName_ 设置为 `_blank`。
 
 _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用逗号分割的特性，在窗口打开之后，就不能用 JavaScript 改变窗口的功能和工具栏的设置。如果名称是 _strWindowName_ 的窗口不存在并且又没有提供 _strWindowFeatures_ 参数（或者 _strWindowFeatures_ 参数为空字符串），则子窗口以父窗口默认的工具栏渲染。
 
@@ -82,7 +82,7 @@ _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用
 
 > **备注：** 如果你使用了 _strWindowFeatures_ 参数，那么只需要列出新窗口中启用的特性，其它的特性（除了*titlebar*和*close*）将被禁用或移除。
 
-![Firefox Chrome Toolbars Illustration](https://developer.mozilla.org/@api/deki/files/210/=FirefoxChromeToolbarsDescription7a.gif)
+![Firefox Chrome Toolbars Illustration](/@api/deki/files/210/=FirefoxChromeToolbarsDescription7a.gif)
 
 ## 位置尺寸特征
 
@@ -329,7 +329,7 @@ function openRequestedSinglePopup(strUrl) {
     In general, users usually disable moving and resizing of existing windows because allowing authors' scripts to do so has been abused overwhelmingly in the past and the rare scripts that do not abuse such feature are often wrong, inaccurate when resizing the window. 99% of all those scripts disable window resizability and disable scrollbars when in fact they should enable both of these features to allow a cautious and sane fallback mechanism if their calculations are wrong.
     The window method [sizeToContent()](/zh-CN/docs/DOM/window.sizeToContent) is also disabled if the user unchecks the preference `Move or resize existing windows` checkbox. Moving and resizing a window remotely on the user's screen via script will very often annoy the users, will disorient the user, and will be wrong at best. The web author expects to have full control of (and can decide about) every position and size aspects of the users' browser window ... which is simply not true.
 - How do I open a referenced resource of a link in a new tab? or in a specific tab?
-  - : To open a resource in a new tab see [Tabbed browser](/zh-CN/docs/XUL/tabbrowser). Some [Code snippets](https://developer.mozilla.org/en-US/Add-ons/Code_snippets/Tabbed_browser?redirectlocale=en-US&redirectslug=Code_snippets%2FTabbed_browser) are available. If you are using the SDK, tabs are [handled a bit differently](https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs)
+  - : To open a resource in a new tab see [Tabbed browser](/zh-CN/docs/XUL/tabbrowser). Some [Code snippets](/zh-CN/Add-ons/Code_snippets/Tabbed_browser?redirectlocale=en-US&redirectslug=Code_snippets%2FTabbed_browser) are available. If you are using the SDK, tabs are [handled a bit differently](/zh-CN/Add-ons/SDK/High-Level_APIs/tabs)
     [K-meleon 1.1](http://kmeleon.sourceforge.net/), a Mozilla-based browser, gives complete control and power to the user regarding how links are opened. Only the user can set his advanced preferences to do that. Some advanced extensions also give Mozilla and Firefox a lot of power over how referenced resources are loaded.
     In a few years, the [target property of the CSS3 hyperlink module](http://www.w3.org/TR/2004/WD-css3-hyperlinks-20040224/#target0) may be implemented (if CSS3 Hyperlink module as it is right now is approved). And even if and when this happens, you can expect developers of browsers with tab-browsing to give the user entire veto power and full control over how links can open web pages. How to open a link should always be entirely under the control of the user.
 - How do I know whether a window I opened is still open?
@@ -348,7 +348,7 @@ function openRequestedSinglePopup(strUrl) {
 
 Generally speaking, it is preferable to avoid resorting to window\.open() for several reasons:
 
-- All Mozilla-based browsers offer [tab-browsing](/zh-CN/docs/XUL/tabbrowser) and this is the preferred mode of [opening referenced resources](https://developer.mozilla.org/en-US/Add-ons/Code_snippets/Tabbed_browser?redirectlocale=en-US&redirectslug=Code_snippets%2FTabbed_browser) ([SDK](https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs))... not just in Mozilla-based browsers but in all other browsers offering tab-browsing. In other words, tab-capable browser users overall prefer opening new tabs than opening new windows in a majority of webpage situations. Tab-capable browsers have rapidly gained support and enthusiasm on internet in the last 3 years; this trend will not revert back. MSIE 7, released in October 2006, has full support for tab browsing.
+- All Mozilla-based browsers offer [tab-browsing](/zh-CN/docs/XUL/tabbrowser) and this is the preferred mode of [opening referenced resources](/zh-CN/Add-ons/Code_snippets/Tabbed_browser?redirectlocale=en-US&redirectslug=Code_snippets%2FTabbed_browser) ([SDK](/zh-CN/Add-ons/SDK/High-Level_APIs/tabs))... not just in Mozilla-based browsers but in all other browsers offering tab-browsing. In other words, tab-capable browser users overall prefer opening new tabs than opening new windows in a majority of webpage situations. Tab-capable browsers have rapidly gained support and enthusiasm on internet in the last 3 years; this trend will not revert back. MSIE 7, released in October 2006, has full support for tab browsing.
 - There are now [several Mozilla extensions](https://addons.mozilla.org/seamonkey/browse/type:1/cat:48/sort:updated) (like Multizilla) and [Firefox extensions](https://addons.update.mozilla.org/firefox/browse/type:1/cat:14/sort:updated) (like [Tabbrowser preferences](https://addons.mozilla.org/firefox/addon/158)), features, settings and advanced preferences based on tab-browsing and based on converting window\.open() calls into opening tabs, based on neutralizing window\.open() calls, in particular in neutralizing unrequested openings of new windows (often referred as blocking unrequested popups or as blocking script-initiated windows opening automatically). Such features found in extensions include opening a link in a new window or not, in the same window, in a new tab or not, in "background" or not. Coding carelessly to open new windows can no longer be assured of success, can not succeed by force and, if it does, it will annoy a majority of users.
 - New windows can have menubar missing, scrollbars missing, status bar missing, window resizability disabled, etc.; new tabs can not be missing those functionalities or toolbars (or at least, the toolbars which are present by default). Therefore, tab-browsing is preferred by a lot of users because the normal user-interface of the browser window they prefer is kept intact, remains stable.
 - Opening new windows, even with reduced features, uses considerably a lot of the user's system resources (cpu, RAM) and involves considerably a lot of coding in the source code (security management, memory management, various code branchings sometimes quite complex, window frame/chrome/toolbars building, window positioning and sizing, etc.). Opening new tabs is less demanding on the user's system resources (and faster to achieve) than opening new windows.
@@ -516,7 +516,7 @@ Always provide a meaningful name to your target attribute and try to reuse such 
 
 ## 规范
 
-HTML5. See http\://www\.w3.org/TR/html5/browsers.html#dom-open for details.
+HTML5. See <https://www.w3.org/TR/html5/browsers.html#dom-open> for details.
 
 ## 注意
 
@@ -600,7 +600,7 @@ _References:_
 
 ### Note on outerHeight versus height
 
-![innerHeight vs outerHeight illustration](https://developer.mozilla.org/@api/deki/files/212/=FirefoxInnerVsOuterHeight.png)
+![innerHeight vs outerHeight illustration](/@api/deki/files/212/=FirefoxInnerVsOuterHeight.png)
 
 ### Note on refreshing vs. opening a new window/tab
 

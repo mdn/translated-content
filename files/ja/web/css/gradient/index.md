@@ -1,17 +1,8 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Images
-  - Data Type
-  - グラフィック
-  - Layout
-  - Reference
-browser-compat: css.types.image.gradient
-translation_of: Web/CSS/gradient
 ---
+
 {{CSSRef}}
 
 **`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。

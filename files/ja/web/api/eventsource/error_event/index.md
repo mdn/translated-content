@@ -3,6 +3,7 @@ title: 'EventSource: error イベント'
 slug: Web/API/EventSource/error_event
 original_slug: Web/API/EventSource/onerror
 ---
+
 {{APIRef}}
 
 {{domxref("EventSource")}} インターフェースの **`onerror`** プロパティは、エラーが発生し、`EventSource` オブジェクトに対して {{event("error")}} が送出されたときに呼び出される {{event("Event_handlers", "event handler")}} です。
@@ -21,7 +22,7 @@ evtSource.onerror = function() {
 };
 ```
 
-> **Note:** **メモ**: 完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
+> **Note:**  完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
 
 ## 仕様
 
@@ -39,6 +40,6 @@ evtSource.onerror = function() {
 
 ## See also
 
-- [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
-- [`open`](/en-US/docs/Web/API/EventSource/open_event)
-- [`message`](/en-US/docs/Web/API/EventSource/message_event)
+- [Using server-sent events](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [`open`](/ja/docs/Web/API/EventSource/open_event)
+- [`message`](/ja/docs/Web/API/EventSource/message_event)

@@ -1,15 +1,8 @@
 ---
 title: PointerEvent.pressure
 slug: Web/API/PointerEvent/pressure
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/PointerEvent/pressure
 ---
+
 {{ APIRef("Pointer Events") }}
 
 {{domxref("PointerEvent")}} インターフェイスの **`pressure`** 読み取り専用プロパティは、ポインタ入力の正規化された圧力を示します。

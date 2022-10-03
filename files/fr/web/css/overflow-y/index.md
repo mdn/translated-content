@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-y
 ---
+
 {{CSSRef}}
 
 La propriété **`overflow-y`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords haut et bas de la boîte.
@@ -43,9 +44,13 @@ La propriété `overflow-y` est définie avec un des mots-clés définis ci-apr�
 - `auto`
   - : Le comportement dépend de l'agent utilisateur. Les navigateurs de bureau comme Firefox peuvent afficher des barres de défilement si le contenu dépasse.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -115,15 +120,11 @@ La propriété `overflow-y` est définie avec un des mots-clés définis ci-apr�
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow-y', 'overflow-y')}} | {{Spec2('CSS3 Overflow')}} |              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overflow-y")}}
+{{Compat}}
 
 ## Voir aussi
 

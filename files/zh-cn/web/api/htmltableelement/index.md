@@ -2,6 +2,7 @@
 title: HTMLTableElement
 slug: Web/API/HTMLTableElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement`** 接口在常用的 {{DOMxRef("HTMLElement")}} 接口的基础上，提供了专门的属性和方法来处理 HTML 文档中表格的布局与展示。通过继承，它也可以访问父接口 {{DOMxRef("HTMLElement")}} 中的成员。
@@ -15,9 +16,9 @@ _继承自父接口，{{DOMxRef("HTMLElement")}}。_
 - {{DOMxRef("HTMLTableElement.caption")}}
   - : 这是一个 {{DOMxRef("HTMLTableCaptionElement")}} ，表示作为子元素中的第一个 {{HTMLElement("caption")}} ，如果找不到则为 `null`。当设置此属性时，如果给出的对象不是一个 `<caption>`，一个带有 `HierarchyRequestError` 名字的异常 {{DOMxRef("DOMException")}} 会被抛出。如果设置了正确的对象，它会被作为第一个子元素插入 DOM 树中，同时子元素中的第一个 `<caption>` 会被移除，如果存在的话。
 - {{DOMxRef("HTMLTableElement.tHead")}}
-  - : 这是一个 {{DOMxRef("HTMLTableSectionElement")}}，表示子元素中的第一个 {{HTMLElement("thead")}}，如果找不到则为 `null` 。当设置此属性时，如果给出的对象不是一个 `<thead>`， 一个带有 `HierarchyRequestError` 名字的异常 {{DOMxRef("DOMException")}} 会被抛出。如果设置了正确的对象，它会被立即插入到 DOM 树中既不是 {{HTMLElement("caption")}} 也不是 {{HTMLElement("colgroup")}} 的第一个元素之前，或者直接被作为最后一个元素插入（如果找不到上述元素的话），同时子元素中的第一个 `<thead>` 会被移除，如果存在的话。
+  - : 这是一个 {{DOMxRef("HTMLTableSectionElement")}}，表示子元素中的第一个 {{HTMLElement("thead")}}，如果找不到则为 `null` 。当设置此属性时，如果给出的对象不是一个 `<thead>`，一个带有 `HierarchyRequestError` 名字的异常 {{DOMxRef("DOMException")}} 会被抛出。如果设置了正确的对象，它会被立即插入到 DOM 树中既不是 {{HTMLElement("caption")}} 也不是 {{HTMLElement("colgroup")}} 的第一个元素之前，或者直接被作为最后一个元素插入（如果找不到上述元素的话），同时子元素中的第一个 `<thead>` 会被移除，如果存在的话。
 - {{DOMxRef("HTMLTableElement.tFoot")}}
-  - : 这是一个 {{DOMxRef("HTMLTableSectionElement")}}， 表示子元素中的第一个 {{HTMLElement("tfoot")}}，如果找不到则为 `null`。当设置此属性时，如果给出的对象不是一个 `<tfoot>`，一个带有 `HierarchyRequestError` 名字的异常 {{DOMxRef("DOMException")}} 会被抛出。如果设置了正确的对象，它会被立即插入到 DOM 树中既不是 {{HTMLElement("caption")}}、{{HTMLElement("colgroup")}} 也不是 {{HTMLElement("thead")}} 的第一个元素之前，或者直接被作为最后一个元素插入（如果找不到上述元素的话），同时子元素中的第一个 `<tfoot>` 会被移除，如果存在的话。
+  - : 这是一个 {{DOMxRef("HTMLTableSectionElement")}}，表示子元素中的第一个 {{HTMLElement("tfoot")}}，如果找不到则为 `null`。当设置此属性时，如果给出的对象不是一个 `<tfoot>`，一个带有 `HierarchyRequestError` 名字的异常 {{DOMxRef("DOMException")}} 会被抛出。如果设置了正确的对象，它会被立即插入到 DOM 树中既不是 {{HTMLElement("caption")}}、{{HTMLElement("colgroup")}} 也不是 {{HTMLElement("thead")}} 的第一个元素之前，或者直接被作为最后一个元素插入（如果找不到上述元素的话），同时子元素中的第一个 `<tfoot>` 会被移除，如果存在的话。
 - {{DOMxRef("HTMLTableElement.rows")}}{{ReadOnlyInline}}
   - : 返回一个实时的 {{DOMxRef("HTMLCollection")}}，它包含元素中的所有行，也就是子元素中的所有 {{HTMLElement("tr")}}，或者是 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}} 和 {{HTMLElement("tfoot")}} 三者子元素中的其中一个子元素。`<thead>` 中的行会按照 DOM 树的顺序出现在首位，`<tbody>` 中的行出现在末位，也会按照 DOM 树的顺序。`HTMLCollection` 对象是实时的，当 `HTMLTableElement` 发生变化时会自动更新。
 - {{DOMxRef("HTMLTableElement.tBodies")}}{{ReadOnlyInline}}
@@ -59,11 +60,11 @@ _继承自父接口，{{DOMxRef("HTMLElement")}}_。
 - {{DOMxRef("HTMLTableElement.deleteTFoot()")}}
   - : 移除子元素中的第一个 {{HTMLElement("tfoot")}}。
 - {{DOMxRef("HTMLTableElement.createCaption()")}}
-  - : 返回一个 {{DOMxRef("HTMLElement")}}，表示子元素中的第一个 {{HTMLElement("caption")}}。 如果找不到，则创建一个新的并且插入到 DOM 树中作为 {{HTMLElement("table")}} 的第一个子元素。
+  - : 返回一个 {{DOMxRef("HTMLElement")}}，表示子元素中的第一个 {{HTMLElement("caption")}}。如果找不到，则创建一个新的并且插入到 DOM 树中作为 {{HTMLElement("table")}} 的第一个子元素。
 - {{DOMxRef("HTMLTableElement.deleteCaption()")}}
   - : 移除子元素中的第一个 {{HTMLElement("caption")}}。
 - {{DOMxRef("HTMLTableElement.insertRow()")}}
-  - : 返回一个 {{DOMxRef("HTMLTableRowElement")}}，表示表格中的一个新行。它会被立即插入到行集合中给定 `index` 位置所表示的 {{HTMLElement("tr")}} 元素之前。如果有必要一个 {{HTMLElement("tbody")}} 会被创建。如果 `index` 值为 `-1`， 这个新行会被追加到集合中。如果 `index` 值小于 `-1` 或者大于集合中的行总数，一个带有 `IndexSizeError` 值的异常 {{DOMxRef("DOMException")}} 会发生。
+  - : 返回一个 {{DOMxRef("HTMLTableRowElement")}}，表示表格中的一个新行。它会被立即插入到行集合中给定 `index` 位置所表示的 {{HTMLElement("tr")}} 元素之前。如果有必要一个 {{HTMLElement("tbody")}} 会被创建。如果 `index` 值为 `-1`，这个新行会被追加到集合中。如果 `index` 值小于 `-1` 或者大于集合中的行总数，一个带有 `IndexSizeError` 值的异常 {{DOMxRef("DOMException")}} 会发生。
 - {{DOMxRef("HTMLTableElement.deleteRow()")}}
   - : 移除与参数中给定 `index` 值相关的行。如果 `index` 值为 `-1`，最后一行会被移除；如果 `index` 值小于 `-1` 或者大于集合中的行总数，一个带有 `IndexSizeError` 值的异常 {{DOMxRef("DOMException")}} 会发生。
 
@@ -73,7 +74,7 @@ _继承自父接口，{{DOMxRef("HTMLElement")}}_。
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLTableElement")}}
+{{Compat}}
 
 ## 另请参阅
 

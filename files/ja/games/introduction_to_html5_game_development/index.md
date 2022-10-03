@@ -1,14 +1,9 @@
 ---
 title: HTML5 ゲーム開発入門
 slug: Games/Introduction_to_HTML5_Game_Development
-tags:
-  - Firefox OS
-  - Games
-  - HTML5
-  - Mobile
-translation_of: Games/Introduction_to_HTML5_Game_Development
 original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 ---
+
 {{GamesSidebar}}
 
 ## 長所

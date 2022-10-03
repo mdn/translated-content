@@ -2,13 +2,14 @@
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
 ---
+
 {{HTTPSidebar}}
 
 状态码 **`401 Unauthorized`** 代表客户端错误，指的是由于缺乏目标资源要求的身份验证凭证，发送的请求未得到满足。
 
 这个状态码会与 {{HTTPHeader("WWW-Authenticate")}} 首部一起发送，其中包含有如何进行验证的信息。
 
-这个状态类似于 {{HTTPStatus("403")}}， 但是在该情况下，依然可以进行身份验证。
+这个状态类似于 {{HTTPStatus("403")}}，但是在该情况下，依然可以进行身份验证。
 
 ## 状态
 
@@ -34,7 +35,7 @@ WWW-Authenticate: Basic realm="Access to staging site"
 
 ## 相关内容
 
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}

@@ -2,6 +2,7 @@
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
 ---
+
 {{APIRef("Navigation Timing")}}
 
 **`PerformanceTiming`** 接口是为保持向后兼容性而保留的传统接口，并且提供了在加载和使用当前页面期间发生的各种事件的性能计时信息。
@@ -25,9 +26,9 @@ _`PerformanceTiming` 接口不包含任何继承属性。_
 - {{domxref("PerformanceTiming.fetchStart")}} {{readonlyInline}}
   - : 是一个无符号 long long 型的毫秒数，表征了浏览器准备好使用 HTTP 请求来获取 (fetch) 文档的 UNIX 时间戳。这个时间点会在检查任何应用缓存之前。
 - {{domxref("PerformanceTiming.domainLookupStart")}} {{readonlyInline}}
-  - : 是一个无符号 long long 型的毫秒数，表征了域名查询开始的 UNIX 时间戳。如果使用了持续连接 (persistent connection)，或者这个信息存储到了缓存或者本地资源上，这个值将和 `PerformanceTiming.fetchStart 一致。`
+  - : 是一个无符号 long long 型的毫秒数，表征了域名查询开始的 UNIX 时间戳。如果使用了持续连接 (persistent connection)，或者这个信息存储到了缓存或者本地资源上，这个值将和 `PerformanceTiming.fetchStart` 一致。
 - {{domxref("PerformanceTiming.domainLookupEnd")}} {{readonlyInline}}
-  - : 是一个无符号 long long 型的毫秒数，表征了域名查询结束的 UNIX 时间戳。如果使用了持续连接 (persistent connection)，或者这个信息存储到了缓存或者本地资源上，这个值将和 `PerformanceTiming.fetchStart 一致。`
+  - : 是一个无符号 long long 型的毫秒数，表征了域名查询结束的 UNIX 时间戳。如果使用了持续连接 (persistent connection)，或者这个信息存储到了缓存或者本地资源上，这个值将和 `PerformanceTiming.fetchStart` 一致。
 - {{domxref("PerformanceTiming.connectStart")}} {{readonlyInline}}
   - : 是一个无符号 long long 型的毫秒数，返回 HTTP 请求开始向服务器发送时的 Unix 毫秒时间戳。如果使用持久连接（persistent connection），则返回值等同于 fetchStart 属性的值。
 - {{domxref("PerformanceTiming.connectEnd")}} {{readonlyInline}}
@@ -60,7 +61,7 @@ _`PerformanceTiming` 接口不包含任何继承属性。_
 **`Performance` **接口不包含任何方法。
 
 - {{domxref("PerformanceTiming.toJSON()")}} {{non-Standard_Inline}}
-  - : 是一个 JSON 格式化工具，返回一个 [JSON 对象](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)，代表具体的 `PerformanceTiming` 对象。
+  - : 是一个 JSON 格式化工具，返回一个 [JSON 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)，代表具体的 `PerformanceTiming` 对象。
 
 ## 规范
 

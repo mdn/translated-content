@@ -1,16 +1,8 @@
 ---
 title: '<canvas>: グラフィックキャンバス要素'
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/canvas
 ---
+
 {{HTMLRef}}
 
 **HTML の `<canvas>` 要素** と [Canvas スクリプティング API](/ja/docs/Web/API/Canvas_API) や [WebGL API](/ja/docs/Web/API/WebGL_API) を使用して、グラフィックやアニメーションを描画することができます。

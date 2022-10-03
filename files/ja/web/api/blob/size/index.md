@@ -1,18 +1,8 @@
 ---
 title: Blob.size
 slug: Web/API/Blob/size
-tags:
-  - API
-  - Blob
-  - Bytes
-  - File API
-  - Files
-  - Property
-  - Reference
-  - length
-  - size
-translation_of: Web/API/Blob/size
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} インターフェイスの **`size`** プロパティは、{{domxref("Blob")}} または {{domxref("File")}} のサイズをバイト単位で返します。

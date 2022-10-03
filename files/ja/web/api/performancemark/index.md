@@ -1,14 +1,8 @@
 ---
 title: PerformanceMark
 slug: Web/API/PerformanceMark
-tags:
-  - API
-  - Web パフォーマンス
-  - インターフェイス
-  - パフォーマンスタイミング API
-  - リファレンス
-translation_of: Web/API/PerformanceMark
 ---
+
 {{APIRef("User Timing API")}}
 
 **`PerformanceMark`** は {{domxref("PerformanceEntry.entryType","entryType")}} の "`mark`" を持つ{{domxref("PerformanceEntry")}} オブジェクトの抽象インターフェイスです。

@@ -1,15 +1,8 @@
 ---
 title: Document.body
 slug: Web/API/Document/body
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/body
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.body`** プロパティは、その文書の {{HTMLElement("body")}} または {{HTMLElement("frameset")}} ノードを表し、そのような要素がなければ `null` になります。

@@ -8,6 +8,7 @@ tags:
   - graphique
 translation_of: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 L'interface **CanvasRenderingContext2D** est utilisée pour dessiner des rectangles, du texte, des images et d'autres objets sur l'élément canvas. Il fournit le contexte de rendu 2D pour la surface de dessin d'un élément {{HTMLElement("canvas")}}.
@@ -315,6 +316,6 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 {{Compat}}
 
-## See also
+## Voir aussi
 
 - {{domxref("HTMLCanvasElement")}}

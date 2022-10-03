@@ -1,19 +1,8 @@
 ---
 title: MediaRecorder
 slug: Web/API/MediaRecorder
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Media Capture
-  - Media Capture and Streams
-  - Media Recorder API
-  - MediaRecorder
-  - Reference
-  - Video
-translation_of: Web/API/MediaRecorder
 ---
+
 {{APIRef("Media Recorder API")}}
 
 [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の **`MediaRecorder`** インターフェイスは、メディアを簡単に記録するための機能を提供します。 これは、{{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} コンストラクタを使用して作成します。

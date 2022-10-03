@@ -1,21 +1,8 @@
 ---
 title: 必要な情報を保存する — 変数
 slug: Learn/JavaScript/First_steps/Variables
-tags:
-  - Arrays
-  - Booleans
-  - JavaScript
-  - Numbers
-  - Objects
-  - Updating
-  - Variables
-  - declaring
-  - initializing
-  - l10n:priority
-  - loose typing
-  - strings
-translation_of: Learn/JavaScript/First_steps/Variables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
 前回までの記事を読んで、高度な視点からその機能を概観し、JavaScript とは何なのか、それで何ができるのか、他の Web の技術とどう一緒に使うのか、そして、どのような機能があるのかが分かったのではないでしょうか。この記事では、本当の基本に立ち返り、JavaScript の基本的な構成要素である変数について見てみましょう。
@@ -145,7 +132,7 @@ let myDog = 'Rover';
 
 ## var と let の違い
 
-ここまでで、「なぜ変数を定義するのに 2 つのキーワードが必要なのですか。なぜ `var` と` let` があるのでしょうか」と考えるかもしれません。
+ここまでで、「なぜ変数を定義するのに 2 つのキーワードが必要なのですか。なぜ `var` と `let` があるのでしょうか」と考えるかもしれません。
 
 その理由はやや歴史的なものです。JavaScript が最初に作成されたときには、`var` しかありませんでした。ほとんどの場合、基本的にはうまく機能しますが、その機能にはいくつかの問題があります。その設計は時々混乱したり、実に迷惑になることがあります。そこで、`let` を最新のバージョンの JavaScript で作成しました。これは、`var` とは多少異なる動作をする変数を作成するための新しいキーワードで、その過程での問題を修正しています。
 

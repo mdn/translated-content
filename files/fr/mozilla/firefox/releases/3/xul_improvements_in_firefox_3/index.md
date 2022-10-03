@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3
 original_slug: Améliorations_XUL_dans_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3 fournit un certain nombre de nouveaux éléments [XUL](/fr/XUL), ainsi que des améliorations sur des éléments existants. Bien que ces éléments soient documentés ailleurs, cet article offre une liste pratique des améliorations ainsi que des liens vers la documentation détaillée.
@@ -70,7 +71,7 @@ Firefox 3 fournit un certain nombre de nouveaux éléments [XUL](/fr/XUL), ainsi
 - La gestion de l'élément `<key>` a été améliorée pour les utilisateurs de claviers non-Latins. Voir [Évènement keypress dans Gecko](/fr/Évènement_keypress_dans_Gecko).
 - Sous Mac OS X, les attributs [activetitlebarcolor](/fr/XUL/Attributs/activetitlebarcolor) et [inactivetitlebarcolor](/fr/XUL/Attributs/inactivetitlebarcolor) des éléments racine (`<window>`, `<dialog>`, `<prefwindow>` et `<wizard>`) sont disponibles pour personnaliser la couleur de la barre de titre des fenêtres.
 
-### Voir également
+### Voir aussi
 
 - [XUL](/fr/XUL)
 - [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs)

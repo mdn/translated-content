@@ -2,6 +2,7 @@
 title: Document.createElement()
 slug: Web/API/Document/createElement
 ---
+
 {{APIRef("DOM")}}
 
 於 [HTML](/zh-TW/docs/Web/HTML) 文件中，**`Document.createElement()`** 方法可以依指定的標籤名稱（`tagName`）建立 HTML 元素，或是在未定義標籤名稱下建立一個 {{domxref("HTMLUnknownElement")}}。在 [XUL](/zh-TW/docs/Mozilla/Tech/XUL) 文件中，`Document.createElement()` 將會建立指定的 XUL 元素。而在其它文件，則會建立一個 namespace URI 為 `null` 的元素。
@@ -69,7 +70,7 @@ function addElement () {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.createElement")}}
+{{Compat}}
 
 ## 參見
 

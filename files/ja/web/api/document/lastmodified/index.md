@@ -1,15 +1,8 @@
 ---
 title: Document.lastModified
 slug: Web/API/Document/lastModified
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
-translation_of: Web/API/Document/lastModified
 ---
+
 {{APIRef("DOM")}}
 
 **`lastModified`** は {{domxref("Document")}} インターフェイスのプロパティで、現在の文書が最後に更新された日付と時刻を含む文字列を返します。

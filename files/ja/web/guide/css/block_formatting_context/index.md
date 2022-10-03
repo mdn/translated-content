@@ -1,16 +1,8 @@
 ---
 title: ブロック整形コンテキスト
 slug: Web/Guide/CSS/Block_formatting_context
-tags:
-  - CSS
-  - Guide
-  - NeedsBeginnerUpdate
-  - NeedsExample
-  - Reference
-  - Web
-spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
-translation_of: Web/Guide/CSS/Block_formatting_context
 ---
+
 {{ CSSRef }}
 
 **ブロック整形コンテキスト** (block formatting context, BFC) は、ウェブページにおける CSS の視覚的なレンダリングの一部です。ブロックボックスのレイアウトが行われ、浮動が他の要素と相互作用する領域です。

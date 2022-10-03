@@ -1,12 +1,8 @@
 ---
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
-tags:
-  - HTTP
-  - Server error
-  - Status code
-translation_of: Web/HTTP/Status/501
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`501 Not Implemented`** サーバーエラーレスポンスコードは、**サーバーがリクエストを満たすのに必要な機能に対応していないこと**を示します。

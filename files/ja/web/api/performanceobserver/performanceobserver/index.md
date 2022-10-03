@@ -1,14 +1,8 @@
 ---
 title: PerformanceObserver()
 slug: Web/API/PerformanceObserver/PerformanceObserver
-tags:
-  - API
-  - PerformanceObserver
-  - Web パフォーマンス
-  - コンストラクタ
-  - リファレンス
-translation_of: Web/API/PerformanceObserver/PerformanceObserver
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`PerformanceObserver()`** コンストラクターは、指定された observer `callback` を使用して新しい {{domxref("PerformanceObserver")}} オブジェクトを作成します。observer callback は、{{domxref("PerformanceObserver.observe","observe()")}} メソッドを介して、登録された {{domxref("PerformanceEntry.entryType","エントリタイプ",'','true')}} に対して {{domxref("PerformanceEntry","パフォーマンスエントリイベント", '', 'true')}} が記録されたときに呼び出されます。

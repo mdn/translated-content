@@ -1,16 +1,8 @@
 ---
 title: HTMLEmbedElement
 slug: Web/API/HTMLEmbedElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLEmbedElement
-translation_of: Web/API/HTMLEmbedElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLEmbedElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて） {{HTMLElement("embed")}} 要素を操作するための特別なプロパティを提供します。

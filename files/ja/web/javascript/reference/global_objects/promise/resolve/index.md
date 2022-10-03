@@ -1,15 +1,8 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Promise
-  - リファレンス
-browser-compat: javascript.builtins.Promise.resolve
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
+
 {{JSRef}}
 
 **`Promise.resolve()`** メソッドは、与えられた値で解決した {{jsxref("Promise")}} オブジェクトを返します。その値がプロミスであった場合は、そのプロミスが返されます。その値が thenable (すなわち {{jsxref("Promise.then", "\"then\" メソッド")}} を持っている場合) であれば、返されるプロミスは thenable を「追跡」し、その最終的な状態を採用します。それ以外の場合は、引数で満足したプロミスが返されます。この関数は複数階層のプロミス風オブジェクト (例えば、何かで解決するプロミスで解決するプロミス) を単一の階層に平坦化します。

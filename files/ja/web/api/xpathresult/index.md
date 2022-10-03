@@ -1,8 +1,8 @@
 ---
 title: XPathResult
 slug: Web/API/XPathResult
-translation_of: Web/API/XPathResult
 ---
+
 {{APIRef}}
 
 ## Properties

@@ -1,13 +1,8 @@
 ---
 title: dir
 slug: Web/HTML/Global_attributes/dir
-tags:
-  - BiDi
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/dir
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`dir`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素のテキストの書字方向を示す列挙型属性です。

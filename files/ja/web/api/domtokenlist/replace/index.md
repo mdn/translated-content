@@ -1,15 +1,8 @@
 ---
 title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
-tags:
-- API
-- DOM
-- Document
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.replace
-translation_of: Web/API/DOMTokenList/replace
 ---
+
 {{APIRef("DOM")}}
 
 **`replace()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、既存のトークンを新しいトークンで置き換えます。最初のトークンが存在しない場合、 `replace()` はすぐに `false` を返し、トークンリストに新しいトークンを追加しません。

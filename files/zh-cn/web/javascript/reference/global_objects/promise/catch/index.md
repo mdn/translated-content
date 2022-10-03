@@ -2,6 +2,7 @@
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
+
 {{JSRef}}
 
 **catch()** 方法返回一个[Promise](/zh-CN/docs/Web/API/Promise)，并且处理拒绝的情况。它的行为与调用{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 相同。(事实上，calling `obj.catch(onRejected)` 内部 calls `obj.then(undefined, onRejected)`).
@@ -19,7 +20,7 @@ p.catch(function(reason) {
 ### 参数
 
 - **onRejected**
-  - : 当 Promise 被 rejected 时，被调用的一个{{jsxref("Function")}}。 该函数拥有一个参数：`reason` rejection 的原因。如果 `onRejected` 抛出一个错误或返回一个本身失败的 Promise ， 通过 `catch()` 返回的 Promise 被 rejected；否则，它将显示为成功（resolved）。
+  - : 当 Promise 被 rejected 时，被调用的一个{{jsxref("Function")}}。该函数拥有一个参数：`reason` rejection 的原因。如果 `onRejected` 抛出一个错误或返回一个本身失败的 Promise，通过 `catch()` 返回的 Promise 被 rejected；否则，它将显示为成功（resolved）。
 
 ### 返回值
 

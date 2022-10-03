@@ -1,16 +1,8 @@
 ---
 title: PushEvent.data
 slug: Web/API/PushEvent/data
-tags:
-  - API
-  - Experimental
-  - Property
-  - Push
-  - PushEvent
-  - Reference
-  - data
-translation_of: Web/API/PushEvent/data
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 **`PushEvent`** インターフェースの `data` 読み取り専用プロパティは、{{domxref("PushSubscription")}} に送信されてたデータを含む {{domxref("PushMessageData")}} オブジェクトへの参照を返します。

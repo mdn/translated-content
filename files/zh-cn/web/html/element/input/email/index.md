@@ -2,11 +2,12 @@
 title: <input type="email">
 slug: Web/HTML/Element/Input/email
 ---
+
 {{HTMLRef}}
 
 带有 **`"email"`** (电子邮箱) 类型标记的输入框元素 ({{HTMLElement("input")}}) 能够让用户输入或编辑一个电子邮箱地址，此外，如果指定了{{htmlattrxref("multiple", "input")}}属性，用户还可以输入多个电子邮箱地址。在表单提交前，输入框会自动验证输入值是否是一个或多个合法的电子邮箱地址 (非空值且符合电子邮箱地址格式). CSS 伪标签 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 能够在校验后自动应用。
 
-> **备注：** 不支持 “电子邮件” 类型的浏览器可以回退为标准的 “文本” 输入。
+> **备注：** 不支持“电子邮件”类型的浏览器可以回退为标准的“文本”输入。
 
 {{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-standard")}}
 
@@ -50,15 +51,15 @@ slug: Web/HTML/Element/Input/email
 
 ## Using email inputs
 
-电子邮件地址是网络上最频繁输入的文本数据表格; 登录网站，请求信息，允许订单确认，网络邮件等时使用它们。 因此，“电子邮件” 输入类型可以使您作为 Web 开发人员的工作变得更加容易，因为它可以在构建电子邮件地址的用户界面和逻辑时帮助简化您的工作。 当您使用正确的类型值 “email” 创建电子邮件输入时，您将自动验证输入的文本是否至少以正确的形式可能是合法的电子邮件地址。 这有助于避免用户输错地址或提供无效地址的情况。
+电子邮件地址是网络上最频繁输入的文本数据表格; 登录网站，请求信息，允许订单确认，网络邮件等时使用它们。因此，“电子邮件”输入类型可以使您作为 Web 开发人员的工作变得更加容易，因为它可以在构建电子邮件地址的用户界面和逻辑时帮助简化您的工作。当您使用正确的类型值“email”创建电子邮件输入时，您将自动验证输入的文本是否至少以正确的形式可能是合法的电子邮件地址。这有助于避免用户输错地址或提供无效地址的情况。
 
-然而，重要的是要注意，这不足以确保指定的文本是实际存在的电子邮件地址，对应于站点的用户，或者以任何其他方式可接受。 它只是确保将字段的值正确格式化为电子邮件地址。
+然而，重要的是要注意，这不足以确保指定的文本是实际存在的电子邮件地址，对应于站点的用户，或者以任何其他方式可接受。它只是确保将字段的值正确格式化为电子邮件地址。
 
-> **备注：** 记住用户可以在幕后修改 HTML 也很重要，因此您的站点不得出于任何安全目的使用此验证。 您必须验证所提供文本可能具有任何安全隐患的任何事务的服务器端的电子邮件地址。
+> **备注：** 记住用户可以在幕后修改 HTML 也很重要，因此您的站点不得出于任何安全目的使用此验证。您必须验证所提供文本可能具有任何安全隐患的任何事务的服务器端的电子邮件地址。
 
 ### A simple email input
 
-目前，所有实现此元素的浏览器都将其实现为具有基本验证功能的标准文本输入字段。 但是，该规范允许浏览器对此进行纬度调整。 例如，该元素可以与用户设备的内置地址簿集成，以允许从该列表中挑选电子邮件地址。 在最基本的形式中，电子邮件输入可以像这样实现：
+目前，所有实现此元素的浏览器都将其实现为具有基本验证功能的标准文本输入字段。但是，该规范允许浏览器对此进行纬度调整。例如，该元素可以与用户设备的内置地址簿集成，以允许从该列表中挑选电子邮件地址。在最基本的形式中，电子邮件输入可以像这样实现：
 
 ```html
 <input id="emailAddress" type="email">
@@ -171,11 +172,11 @@ With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s 
 
 There are two levels of content validation available for `"email"` inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid email address. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.
 
-> **警告：** HTML 表单验证不能替代确保输入的数据格式正确的脚本。 对于某些人来说，调整 HTML 非常容易，因为它允许他们绕过验证，或者完全删除它。 某人也可以完全绕过您的 HTML 并将数据直接提交给您的服务器。 如果您的服务器端代码无法验证它收到的数据，则当数据格式不正确（或数据太大，类型错误等等）输入数据库时，灾难可能会发生。
+> **警告：** HTML 表单验证不能替代确保输入的数据格式正确的脚本。对于某些人来说，调整 HTML 非常容易，因为它允许他们绕过验证，或者完全删除它。某人也可以完全绕过您的 HTML 并将数据直接提交给您的服务器。如果您的服务器端代码无法验证它收到的数据，则当数据格式不正确（或数据太大，类型错误等等）输入数据库时，灾难可能会发生。
 
 ### Basic validation
 
-支持 “电子邮件” 输入类型的浏览器会自动提供验证，以确保只有符合 Internet 电子邮件地址标准格式的文本才会输入到输入框中。 实现规范的浏览器应使用与以下正则表达式等效的算法：
+支持“电子邮件”输入类型的浏览器会自动提供验证，以确保只有符合 Internet 电子邮件地址标准格式的文本才会输入到输入框中。实现规范的浏览器应使用与以下正则表达式等效的算法：
 
 ```js
 /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
@@ -284,7 +285,7 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 
 ## Browser compatibility
 
-{{Compat("html.elements.input.input-email")}}
+{{Compat}}
 
 ## See also
 

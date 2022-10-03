@@ -10,6 +10,7 @@ tags:
   - samesite
 translation_of: Web/HTTP/Headers/Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de réponse HTTP **`Set-Cookie`** est utilisé pour envoyer un cookie depuis le serveur à l'agent utilisateur afin qu'il puisse le renvoyer dans l'avenir. Pour envoyer plusieurs cookies, on enverra plusieurs en-têtes `Set-Cookie` dans la même réponse.

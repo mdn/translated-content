@@ -1,16 +1,8 @@
 ---
 title: Cache.add()
 slug: Web/API/Cache/add
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-translation_of: Web/API/Cache/add
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Cache")}} インターフェイスの **`add()`** メソッドは、URL を受け取り、取得して、指定されたキャッシュに結果のレスポンスオブジェクトを追加します。 `add()` メソッドは、機能的に次の例と同じです。
@@ -26,7 +18,7 @@ fetch(url).then(function(response) {
 
 より複雑な操作では、 {{domxref("Cache.put","Cache.put()")}} を直接使用する必要があります。
 
-> **Note:** **メモ**: `add()` は、リクエストにマッチする、前にキャッシュに保存されたキー/値の組を上書きます。
+> **Note:**  `add()` は、リクエストにマッチする、前にキャッシュに保存されたキー/値の組を上書きます。
 
 ## 構文
 

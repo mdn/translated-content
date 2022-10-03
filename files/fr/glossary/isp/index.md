@@ -10,9 +10,10 @@ tags:
 translation_of: Glossary/ISP
 original_slug: Glossaire/FAI
 ---
+
 Un FAI (Fournisseur d'Accès à Internet) vend un accès à Internet, et parfois un service de messagerie, de l'hébergement web ou de la voix sur IP, soit sur une connexion commutée via une ligne téléphonique (le plus fréquent dans le passé), soit sur une connexion haut débit comme un service DSL ou avec un modem câble.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

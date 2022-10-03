@@ -1,12 +1,8 @@
 ---
 title: 'TypeError: invalid assignment to const "x"'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
-tags:
-  - Error
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "invalid assignment to const" は、定数を変更しようとしたときに発生します。 JavaScript の [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) で宣言すると、再代入や再宣言を行うことができません。

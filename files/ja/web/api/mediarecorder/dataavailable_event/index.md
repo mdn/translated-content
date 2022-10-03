@@ -1,20 +1,9 @@
 ---
 title: MediaRecorder.ondataavailable
 slug: Web/API/MediaRecorder/dataavailable_event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - MediaStream Recording API
-  - Property
-  - Reference
-  - Video
-  - ondataavailable
-translation_of: Web/API/MediaRecorder/ondataavailable
 original_slug: Web/API/MediaRecorder/ondataavailable
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.ondataavailable`** イベントハンドラ（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は {{event("dataavailable")}} イベントを処理します。 これにより、{{domxref("Blob")}} データが使用可能になったことに応じてコードを実行できます。

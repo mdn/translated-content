@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/form
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/formatRange
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.DateTimeFormat.prototype.formatRange()`** permet de formater un intervalle de dates de la façon la plus concise en fonction de la **`locale`** et des **`options`** fournies lors de l'initialisation de l'objet [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat).

@@ -2,6 +2,7 @@
 title: 'SyntaxError: return not in function'
 slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误信息
@@ -17,7 +18,7 @@ SyntaxError: yield not in function
 
 ## 什么地方出错了？
 
-[`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) 返回的或者 [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) 语句在函数 [function](/en-US/docs/Web/JavaScript/Guide/Functions) 外被调用。或许是少了一个花括号， `return` 返回的和 `yield` 语句必须是在一个函数里，因为它们会停止（暂停或恢复）函数的继续执行，然后返回。
+[`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 返回的或者 [`yield`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield) 语句在函数 [function](/zh-CN/docs/Web/JavaScript/Guide/Functions) 外被调用。或许是少了一个花括号， `return` 返回的和 `yield` 语句必须是在一个函数里，因为它们会停止（暂停或恢复）函数的继续执行，然后返回。
 
 ## 范例
 
@@ -35,7 +36,7 @@ var cheer = function(score) {
 // 语法错误：不是在函数里返回
 ```
 
-初次看好像没什么错误，但是上面这段代码在第一个 if 后面少了一个 “ { ”。正确的应该如下：
+初次看好像没什么错误，但是上面这段代码在第一个 if 后面少了一个“ { ”。正确的应该如下：
 
 ```js example-good
 var cheer = function(score) {
@@ -50,5 +51,5 @@ var cheer = function(score) {
 
 ## 相关信息
 
-- [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return)
-- [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield)
+- [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return)
+- [`yield`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield)

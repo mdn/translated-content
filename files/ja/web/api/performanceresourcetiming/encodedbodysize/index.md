@@ -1,13 +1,8 @@
 ---
 title: PerformanceResourceTiming.encodedBodySize
 slug: Web/API/PerformanceResourceTiming/encodedBodySize
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/encodedBodySize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`encodedBodySize`** 読み取り専用プロパティは、適用されたコンテンツコーディングを削除する前に、ペイロード本体のフェッチ (HTTP またはキャッシュ) から受信したサイズ (オクテット単位) を表します。

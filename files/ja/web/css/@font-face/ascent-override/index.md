@@ -1,16 +1,8 @@
 ---
 title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - リファレンス
-  - 記述子
-  - ascent-override
-browser-compat: css.at-rules.font-face.ascent-override
-translation_of: Web/CSS/@font-face/ascent-override
 ---
+
 {{CSSRef}}
 
 **`ascent-override`** は CSS の記述子で、フォントのアセンダーの寸法を定義します。アセンダーの寸法は CSS がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインの上の高さです。

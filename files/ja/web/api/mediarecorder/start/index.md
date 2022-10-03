@@ -1,21 +1,8 @@
 ---
 title: MediaRecorder.start()
 slug: Web/API/MediaRecorder/start
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture
-  - MediaRecorder
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Method
-  - Recording Media
-  - Reference
-  - Video
-  - start
-translation_of: Web/API/MediaRecorder/start
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 MediaStream Recording API の一部である {{domxref("MediaRecorder")}} のメソッド **`start()`** は、1 つ以上の {{domxref("Blob")}} オブジェクトへのメディアの記録を開始します。 メディアの全期間を単一の `Blob` に（または {{domxref("MediaRecorder.requestData", "requestData()")}} を呼び出すまで）記録することも、一度に記録するミリ秒数を指定することもできます。 その後、その量のメディアが記録されるたびに、記録されたメディアに対応できるようにイベントが配信され、その間に、メディアの次のスライスを記録するための新しい `Blob` が作成されます。

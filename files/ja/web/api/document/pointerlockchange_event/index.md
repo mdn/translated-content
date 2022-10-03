@@ -1,16 +1,9 @@
 ---
 title: 'Document: pointerlockchange イベント'
 slug: Web/API/Document/pointerlockchange_event
-tags:
-  - Document
-  - Event
-  - Reference
-  - Web
-  - pointerlockchange
-  - イベント
-  - ウェブ
-translation_of: Web/API/Document/pointerlockchange_event
+original_slug: Web/API/Element/pointerlockchange_event
 ---
+
 {{APIRef}}
 
 `pointerlockchange` イベントは、ポインターがロックされたり解除されたりしたときに発行されます。

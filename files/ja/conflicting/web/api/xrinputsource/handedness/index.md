@@ -1,24 +1,9 @@
 ---
 title: XRHandedness
 slug: conflicting/Web/API/XRInputSource/handedness
-tags:
-  - API
-  - AR
-  - Enum
-  - Enumerated Type
-  - Handedness
-  - Reference
-  - Type
-  - VR
-  - WebXR
-  - WebXR Device API
-  - XRHandedness
-  - hand
-  - left
-  - right
-translation_of: Web/API/XRHandedness
 original_slug: Web/API/XRHandedness
 ---
+
 {{APIRef("WebXR")}}
 
 WebXR の **`XRHandedness`** 列挙型は、使用している XR 入力デバイスに接続された特定の入力コントローラーを操作するために使用しているユーザーの手を識別する値を提供します。 `XRHandedness` は、{{domxref("XRInputSource")}} の {{domxref("XRInputSource.handedness", "handedness")}} プロパティの値として使用されます。

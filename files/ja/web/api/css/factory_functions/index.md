@@ -1,18 +1,11 @@
 ---
 title: CSS 数値ファクトリー関数
 slug: Web/API/CSS/factory_functions
-tags:
-  - API
-  - CSS
-  - CSS API
-  - Houdini
-  - リファレンス
-  - ファクトリー関数
-translation_of: Web/API/CSS/factory_functions
 ---
+
 {{SeeCompatTable}}
 
-**CSS 数値ファクトリー関数**、たとえば `CSS.em()` や `CSS.turn()` は、値を数値引数、単位を使用するメソッド名として [CSSUnitValues](/en-US/docs/Web/API/CSSUnitValue) を返すもので、このメソッドを使用すると、数値引数で単位を設定することができます。これらの関数は {{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}} コンストラクターを使うよりも冗長でなく新しい数値を生成します。
+**CSS 数値ファクトリー関数**、たとえば `CSS.em()` や `CSS.turn()` は、値を数値引数、単位を使用するメソッド名として [CSSUnitValues](/ja/docs/Web/API/CSSUnitValue) を返すもので、このメソッドを使用すると、数値引数で単位を設定することができます。これらの関数は {{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}} コンストラクターを使うよりも冗長でなく新しい数値を生成します。
 
 ## 構文
 

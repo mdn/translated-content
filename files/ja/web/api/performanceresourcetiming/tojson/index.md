@@ -1,13 +1,8 @@
 ---
 title: PerformanceResourceTiming.toJSON()
 slug: Web/API/PerformanceResourceTiming/toJSON
-tags:
-  - API
-  - Web パフォーマンス
-  - メソッド
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/toJSON
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`toJSON()`** メソッドは、{{domxref("PerformanceResourceTiming")}} オブジェクトの JSON 表現を返すシリアライザです。

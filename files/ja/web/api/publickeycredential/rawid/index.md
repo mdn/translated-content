@@ -1,16 +1,8 @@
 ---
 title: PublicKeyCredential.rawId
 slug: Web/API/PublicKeyCredential/rawId
-tags:
-  - API
-  - Property
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-  - プロパティ
-translation_of: Web/API/PublicKeyCredential/rawId
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`rawId`** は {{domxref("PublicKeyCredential")}} インターフェイスの読み取り専用プロパティで、証明書の識別子が入った {{jsxref("ArrayBuffer")}} オブジェクトです。

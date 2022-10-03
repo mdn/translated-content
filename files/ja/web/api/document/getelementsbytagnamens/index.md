@@ -1,16 +1,8 @@
 ---
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Reference
-  - getElementsByTagNameNS
-translation_of: Web/API/Document/getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 指定された名前空間の指定されたタグ名を持つ要素のリストを返します。ルートノードを含め、文書全体が検索されます。

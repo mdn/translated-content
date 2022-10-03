@@ -1,14 +1,10 @@
 ---
 title: MDN への協力
 slug: MDN/Contribute
-tags:
-  - Guide
-  - Landing
-  - MDN Meta
-translation_of: MDN/Contribute
 l10n:
   sourceCommit: b5b22824e0c66855c55b9e4d275890aa3bec9483
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs はあなたの協力を必要としています。膨大な数の修正すべき記述ミス、書くべき例、修正すべきバグ、相談相手などあり、その数はこのサイトを使い始める人が増えるにつれて増えています。このページでは、皆さんができることをまとめています。

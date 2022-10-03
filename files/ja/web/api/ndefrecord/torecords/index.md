@@ -1,13 +1,8 @@
 ---
 title: NDEFRecord.toRecords()
 slug: Web/API/NDEFRecord/toRecords
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFRecord.toRecords
-translation_of: Web/API/NDEFRecord/toRecords
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`toRecords()`** は {{DOMxRef("NDEFRecord")}} インターフェイスのメソッドで、 {{DOMxRef("NDEFRecord.data")}} を {{DOMxRef("NDEFRecord.recordType")}} に基づいた一連のレコードに変換し、その結果を返すものです。これにより、スマートポスターや外部型レコードなど、ネストしたレコードを含む可能性のあるレコード型のペイロードを解釈することができます。

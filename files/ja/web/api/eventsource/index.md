@@ -2,6 +2,7 @@
 title: EventSource
 slug: Web/API/EventSource
 ---
+
 {{APIRef("Server Sent Events")}}
 
 **`EventSource`** インターフェイスは、 [Server-sent event](/ja/docs/Web/API/Server-sent_events) のウェブコンテンツのインターフェイスです。 `EventSource` インターフェイスは、 [HTTP](/ja/docs/Web/HTTP) サーバーとの間で永続的なコネクションを開き、[イベント](/ja/docs/Web/API/Document_Object_Model/Events)を `text/event-stream` の形式で受け取ります。コネクションは {{domxref("EventSource.close()")}} を呼び出して閉じられるまで開いたままになります。
@@ -69,7 +70,7 @@ evtSource.onmessage = function(e) {
 
 受信されたそれぞれのイベントは、 `EventSource` オブジェクトの `onmessage` イベントハンドラーを実行させます。ここでは、新しい {{HTMLElement("li")}} 要素を生成してその中にメッセージのデータを書き込み、この要素を文書の中にある既存のリスト要素に追加します。
 
-> **Note:** **メモ**: この例の全容が GitHub にあります。[Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events) をご覧ください。
+> **Note:**  この例の全容が GitHub にあります。[Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events) をご覧ください。
 
 ## 仕様書
 

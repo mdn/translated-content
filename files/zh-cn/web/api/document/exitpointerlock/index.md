@@ -2,6 +2,7 @@
 title: Document.exitPointerLock()
 slug: Web/API/Document/exitPointerLock
 ---
+
 {{ apiref("DOM") }}
 
 {{ seeCompatTable }}
@@ -22,10 +23,10 @@ document.exitPointerLock();
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.exitPointerLock")}}
+{{Compat}}
 
 ## 参见
 
 - {{ domxref("Document.pointerLockElement") }}
 - {{ domxref("Element.requestPointerLock()") }}
-- [Pointer Lock](/en-US/docs/WebAPI/Pointer_Lock)
+- [Pointer Lock](/zh-CN/docs/WebAPI/Pointer_Lock)

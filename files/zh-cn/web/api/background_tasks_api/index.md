@@ -2,6 +2,7 @@
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
 ---
+
 {{DefaultAPISidebar("Background Tasks")}}
 
 **幕后任务协作调度 API** (也叫幕后任务 API 或者简单称为 `requestIdleCallback()` API) 提供了由用户代理决定，在空闲时间自动执行队列任务的能力。
@@ -18,7 +19,7 @@ slug: Web/API/Background_Tasks_API
 
 - **对非高优先级的任务使用空闲回调。** 已经创建了多少回调，用户系统的繁忙程度，你的回调多久会执行一次（除非你指定了 `timeout`），这些都是未知的。不能保证每次事件循环（甚至每次屏幕更新）后都能执行空闲回调；如果事件循环用尽了所有可用时间，那你可就倒霉了（再说一遍，除非你用了 `timeout`）。
 - **空闲回调应尽可能不超支分配到的时间。**尽管即使你超出了规定的时间上限，通常来说浏览器、代码、网页也能继续正常运行，这里的时间限制是用来保证系统能留有足够的时间去完成当前的事件循环然后进入下一个循环，而不会导致其他代码卡顿或动画效果延迟。目前，{{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 有一个 50 ms 的上限时间，但实际上你能用的时间比这个少，因为在复杂的页面中事件循环可能已经花费了其中的一部分，浏览器的扩展插件也需要处理时间，等等。
-- **避免在空闲回调中改变 DOM。** 空闲回调执行的时候，当前帧已经结束绘制了，所有布局的更新和计算也已经完成。如果你做的改变影响了布局， 你可能会强制停止浏览器并重新计算，而从另一方面来看，这是不必要的。 如果你的回调需要改变 DOM，它应该使用{{domxref("Window.requestAnimationFrame()")}}来调度它。
+- **避免在空闲回调中改变 DOM。** 空闲回调执行的时候，当前帧已经结束绘制了，所有布局的更新和计算也已经完成。如果你做的改变影响了布局，你可能会强制停止浏览器并重新计算，而从另一方面来看，这是不必要的。如果你的回调需要改变 DOM，它应该使用{{domxref("Window.requestAnimationFrame()")}}来调度它。
 - **避免运行时间无法预测的任务。** 你的空闲回调必须避免做任何占用时间不可预测的事情。比如说，应该避免做任何会影响页面布局的事情。你也必须避免 执行{{domxref("Promise")}} 的`resolve`和`reject`，因为这会在你的回调函数返回后立即引用 Promise 对象对`resolve`和`reject`的处理程序。
 - **在你需要的时候要用 timeout，但记得只在需要的时候才用。** 使用 timeout 可以保证你的代码按时执行，但是在剩余时间不足以强制执行你的代码的同时保证浏览器的性能表现的情况下，timeout 就会造成延迟或者动画不流畅。
 
@@ -377,7 +378,7 @@ function updateDisplay() {
 
 #### 向记录添加文本
 
-`log()`函数可以向记录中添加指定的文本。因为我们不知道调用`log()`的时候是否可以立即安全地联系 DOM，我们将缓存记录文本一直到可以安全更新。在上面，在` updateDisplay``() `的代码中，你可以找到更新动画帧时，实际添加记录的代码。
+`log()` 函数可以向记录中添加指定的文本。因为我们不知道调用 `log()` 的时候是否可以立即安全地联系 DOM，我们将缓存记录文本一直到可以安全更新。在上面，在 `updateDisplay()` 的代码中，你可以找到更新动画帧时，实际添加记录的代码。
 
 ```js
 function log(text) {
@@ -455,7 +456,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 - `count` 是要从任务输出到记录中的字符串数量。
 - `text` 是要输出到日志的文本（由`count`指定的次数）。
 
-我们调用`enqueueTask()`来将每个任务排入队列，将` logTaskHandler``() `传入作为处理函数，将`taskData`传入，待处理函数调用时传入其中。
+我们调用 `enqueueTask()` 来将每个任务排入队列，将 `logTaskHandler()` 传入作为处理函数，将 `taskData` 传入，待处理函数调用时传入其中。
 
 ### 结果
 
@@ -469,7 +470,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## 相关链接
 

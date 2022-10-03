@@ -1,15 +1,8 @@
 ---
 title: Document.createNodeIterator()
 slug: Web/API/Document/createNodeIterator
-tags:
-  - API
-  - DOM
-  - Gecko
-  - MakeBrowserAgnostic
-  - Method
-  - メソッド
-translation_of: Web/API/Document/createNodeIterator
 ---
+
 {{APIRef("DOM")}}
 
 新しい {{domxref("NodeIterator")}} オブジェクトを返します。

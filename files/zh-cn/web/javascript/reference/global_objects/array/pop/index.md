@@ -2,6 +2,7 @@
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
+
 {{JSRef}}
 
 **`pop()`** 方法从数组中删除最后一个元素，并返回该元素的值。此方法会更改数组的长度。
@@ -10,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 
 ## 语法
 
-```plain
-arr.pop()
+```js
+pop()
 ```
 
 ### 返回值
@@ -50,7 +51,7 @@ console.log(popped); // 'sturgeon'
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.shift()")}}

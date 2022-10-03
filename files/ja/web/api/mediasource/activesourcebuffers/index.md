@@ -1,19 +1,8 @@
 ---
 title: MediaSource.activeSourceBuffers
 slug: Web/API/MediaSource/activeSourceBuffers
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Reference
-  - Video
-  - activeSourceBuffers
-translation_of: Web/API/MediaSource/activeSourceBuffers
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 {{domxref("MediaSource")}} インターフェイスの **`activeSourceBuffers`** 読み取り専用プロパティは、{{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} に含まれる {{domxref("SourceBuffer")}} オブジェクトのサブセットを含む {{domxref("SourceBufferList")}} オブジェクトを返します。 これは、選択した動画トラック、有効な音声トラック、および表示/非表示のテキストトラックを提供するオブジェクトのリストです。

@@ -2,13 +2,14 @@
 title: <div>：内容划分元素
 slug: Web/HTML/Element/div
 ---
+
 {{HTMLRef}}
 
 **[HTML](/zh-CN/docs/Web/HTML) `<div>` 元素** (或 _HTML 文档分区元素_) 是一个通用型的流内容容器，在不使用{{glossary("CSS")}}的情况下，其对内容或布局没有任何影响。
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
-作为一个 “纯粹的” 容器，`<div>` 元素在语义上不表示任何特定类型的内容。然而，其可以将内容分组，从而可以使用{{htmlattrxref("class")}}或是{{htmlattrxref("id")}}属性方便的定义内容的格式，也可以在一段文档中划分标记出使用另一种语言书写的内容（使用{{htmlattrxref("lang")}} 属性）等等。
+作为一个“纯粹的”容器，`<div>` 元素在语义上不表示任何特定类型的内容。然而，其可以将内容分组，从而可以使用{{htmlattrxref("class")}}或是{{htmlattrxref("id")}}属性方便的定义内容的格式，也可以在一段文档中划分标记出使用另一种语言书写的内容（使用{{htmlattrxref("lang")}} 属性）等等。
 
 <table class="properties">
  <tbody>
@@ -72,7 +73,7 @@ slug: Web/HTML/Element/div
 
 ### 样式实例
 
-本例使用 CSS 将样式应用于\<div>，从而创建一个阴影框。注意使用\<div>上的 {{htmlattrxref("class")}}属性将名为 “shadowbox” 的样式应用于元素。
+本例使用 CSS 将样式应用于\<div>，从而创建一个阴影框。注意使用\<div>上的 {{htmlattrxref("class")}}属性将名为“shadowbox”的样式应用于元素。
 
 #### HTML
 
@@ -105,7 +106,7 @@ slug: Web/HTML/Element/div
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.div")}}
+{{Compat}}
 
 ## 参见
 

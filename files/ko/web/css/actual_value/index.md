@@ -14,10 +14,10 @@ translation_of: Web/CSS/actual_value
 
 The {{glossary("user agent")}} performs four steps to calculate a property's actual (final) value:
 
-1.  First, the [specified value](/ko/docs/CSS/specified_value "https://developer.mozilla.org/en/CSS/specified_value") is determined based on the result of [cascading](/ko/docs/Web/CSS/Cascade), [inheritance](/ko/docs/Web/CSS/inheritance "en/CSS/inheritance"), or using the [initial value](/ko/docs/Web/CSS/initial_value).
-2.  Next, the [computed value](/ko/docs/Web/CSS/computed_value "en/CSS/computed value") is calculated according to the specification (for example, a `span` with `position: absolute` will have its computed `display` changed to `block`).
-3.  Then, layout is calculated, resulting in the [used value](/ko/docs/Web/CSS/used_value).
-4.  Finally, the used value is transformed according to the limitations of the local environment, resulting in the actual value.
+1. First, the [specified value](/ko/docs/CSS/specified_value) is determined based on the result of [cascading](/ko/docs/Web/CSS/Cascade), [inheritance](/ko/docs/Web/CSS/inheritance), or using the [initial value](/ko/docs/Web/CSS/initial_value).
+2. Next, the [computed value](/ko/docs/Web/CSS/computed_value) is calculated according to the specification (for example, a `span` with `position: absolute` will have its computed `display` changed to `block`).
+3. Then, layout is calculated, resulting in the [used value](/ko/docs/Web/CSS/used_value).
+4. Finally, the used value is transformed according to the limitations of the local environment, resulting in the actual value.
 
 ## 명세
 

@@ -2,6 +2,7 @@
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
 ---
+
 {{jsSidebar("Operators")}}
 
 `yield` 关键字用来暂停和恢复一个生成器函数（({{jsxref("Statements/function*", "function*")}} 或[遗留的生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)）。
@@ -25,7 +26,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 一旦遇到 `yield` 表达式，生成器的代码将被暂停运行，直到生成器的 `next()` 方法被调用。每次调用生成器的`next()`方法时，生成器都会恢复执行，直到达到以下某个值：
 
-- `yield`，导致生成器再次暂停并返回生成器的新值。 下一次调用`next()`时，在`yield`之后紧接着的语句继续执行。
+- `yield`，导致生成器再次暂停并返回生成器的新值。下一次调用`next()`时，在`yield`之后紧接着的语句继续执行。
 - {{jsxref("Statements/throw", "throw")}}用于从生成器中抛出异常。这让生成器完全停止执行，并在调用者中继续执行，正如通常情况下抛出异常一样。
 - 到达生成器函数的结尾；在这种情况下，生成器的执行结束，并且`IteratorResult`给调用者返回{{jsxref("undefined")}}并且`done`为`true`。
 - 到达{{jsxref("Statements/return", "return")}} 语句。在这种情况下，生成器的执行结束，并将`IteratorResult`返回给调用者，其值是由`return`语句指定的，并且`done` 为`true`。
@@ -67,7 +68,7 @@ console.log(appleStore.next()); // { value: undefined, done: true }
 
 ## 相关链接
 
-- [The Iterator protocol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

@@ -12,6 +12,7 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API
 ---
+
 {{WebGLSidebar}}
 
 **WebGL** (la bibliothèque de graphismes web) est une API JavaScript pour l'affichage de graphismes 2D et 3D dans n'importe quel navigateur web compatible sans utilisation de modules complémentaires. WebGL réalise cela en introduisant une API qui se conforme de façon très proche à OpenGL ES 2.0 et qui peut être utilisée dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) de HTML5.
@@ -146,37 +147,11 @@ Ci-dessous, vous pourrez trouver divers guides pour vous aider à apprendre les 
 
 ## Spécifications
 
-| Spécification                            | Statut                               | Commentaire                                               |
-| ---------------------------------------- | ------------------------------------ | --------------------------------------------------------- |
-| {{SpecName('WebGL')}}             | {{Spec2('WebGL')}}             | Définition. Basée sur OpenGL ES 2.0                       |
-| {{SpecName('WebGL2')}}             | {{Spec2('WebGL2')}}             | Construite au-dessus de WebGL 1. Basée sur OpenGL ES 3.0. |
-| {{SpecName('OpenGL ES 2.0')}} | {{Spec2('OpenGL ES 2.0')}} |                                                           |
-| {{SpecName('OpenGL ES 3.0')}} | {{Spec2('OpenGL ES 3.0')}} |                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### WebGL 1
-
-{{Compat("api.WebGLRenderingContext", 0)}}
-
-### WebGL 2
-
-{{Compat("api.WebGL2RenderingContext", 0)}}
-
-### Notes de compatibilité
-
-En plus du navigateur, la GPU elle-même doit également prendre en charge la fonctionnalité. Ainsi, par exemple, S3 Texture Compression (S3TC) n'est disponible que sur les tablettes à base de Tegra. La plupart des navigateurs rendent le contexte WebGL disponible via le nom de contexte `webgl`, mais les plus anciens ont aussi besoin d'`experimental-webgl`. De plus, le prochain [WebGL 2](/fr-FR/docs/Web/API/WebGL2RenderingContext) sera entièrement rétrocompatible et comprendra le nom de contexte `webgl2`.
-
-### Notes Gecko
-
-#### Débogage et test WebGL
-
-À partir de Gecko 10.0 {{geckoRelease("10.0")}}, deux préférences sont disponibles pour vous permettre de contrôler les fonctionnalités de WebGL à des fins de test :
-
-- `webgl.min_capability_mode`
-  - : Propriété booléenne qui, lorsqu'elle est `true`, active un mode de possibilités minimales. Dans ce mode, WebGL est configuré pour prendre en charge uniquement le jeu de fonctionnalités minimal et les fonctionnalités requises par la spécification WebGL. Cela vous permet de vous assurer que votre code WebGL fonctionnera sur n'importe quel appareil ou navigateur, indépendamment de leurs possibilités. Elle est `false` par défaut.
-- `webgl.disable_extensions`
-  - : Propriété booléenne qui, lorsqu'elle est `true`, désactive toutes les extensions WebGL. Elle est `false` par défaut.
+{{Compat}}
 
 ## Voir aussi
 

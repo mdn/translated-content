@@ -1,19 +1,11 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - constants
-browser-compat: javascript.statements.const
-translation_of: Web/JavaScript/Reference/Statements/const
 ---
+
 {{jsSidebar("Statements")}}
 
-定数は、[`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) キーワードを使って定義する変数と同様にブロックスコープを持ちます。定数の値は、再代入による変更ができず、再宣言もできません。
+定数は、[`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) キーワードを使って定義する変数と同様にブロックスコープを持ちます。定数の値は、再代入による変更ができず、再宣言もできません。
 
 {{EmbedInteractiveExample("pages/js/statement-const.html")}}
 

@@ -1,22 +1,8 @@
 ---
 title: DOMPointReadOnly.toJSON()
 slug: Web/API/DOMPointReadOnly/toJSON
-page-type: web-api-instance-method
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - JSON
-  - Method
-  - Point
-  - Reference
-  - toJSON
-browser-compat: api.DOMPointReadOnly.toJSON
-translation_of: Web/API/DOMPointReadOnly/toJSON
 ---
+
 {{APIRef("DOM")}}
 
 メソッド `toJSON()` は、この点オブジェクトの {{Glossary("JSON")}} 形式を表すオブジェクトを返します。

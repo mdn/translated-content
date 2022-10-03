@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/percentage
 ---
+
 {{CSSRef}}
 
 Le type de données CSS **`<percentage>`** représente une valeur exprimée en pourcentages. De nombreuses propriétés CSS utilisent des valeurs en pourcentages, la plupart du temps pour déterminer des tailles en fonction de la taille des éléments parent.
@@ -58,13 +59,8 @@ Le fragment HTML précédent donnera ce résultat :
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                                   |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Values', '#percentages', '&lt;percentage&gt;')}}                 | {{Spec2('CSS4 Values')}} | Aucune modification significative.                                                             |
-| {{SpecName('CSS3 Values', '#percentages', '&lt;percentage&gt;')}}                 | {{Spec2('CSS3 Values')}} | Aucune modification significative depuis la spécification CSS de niveau 2 (première révision). |
-| {{SpecName('CSS2.1', 'syndata.html#percentage-units', '&lt;percentage&gt;')}} | {{Spec2('CSS2.1')}}         | Aucune modification depuis la spécification CSS de niveau 1.                                   |
-| {{SpecName('CSS1', '#percentage-units', '&lt;percentage&gt;')}}                     | {{Spec2('CSS1')}}         | Définition initiale.                                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.percentage")}}
+{{Compat}}

@@ -2,15 +2,16 @@
 title: Web Authentication API
 slug: Web/API/Web_Authentication_API
 ---
+
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
 Web Authentication API 继承自 [Credential Management API](/zh-CN/docs/Web/API/Credential_Management_API) ，使用公钥密码学使得验证更强壮，不需要 SMS 文本就能实现无密码验证和安全的双因素验证。
 
 ## Web authentication 概念和用例
 
-Web Authentication API（也称作 WebAuthn）使用[asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) （非对称加密）替代密码或 SMS 短信在网站上注册、登录、[second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)（双因素验证）。 解决了 [phishing](https://en.wikipedia.org/wiki/Phishing)（钓鱼）、[data breaches](https://en.wikipedia.org/wiki/Data_breach)（数据破坏）、SMS 文本攻击、其它双因素验证等重大安全问题，同时显著提高了易用性（因为用户不必管理许多越来越复杂的密码）。
+Web Authentication API（也称作 WebAuthn）使用[asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) （非对称加密）替代密码或 SMS 短信在网站上注册、登录、[second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)（双因素验证）。解决了 [phishing](https://en.wikipedia.org/wiki/Phishing)（钓鱼）、[data breaches](https://en.wikipedia.org/wiki/Data_breach)（数据破坏）、SMS 文本攻击、其它双因素验证等重大安全问题，同时显著提高了易用性（因为用户不必管理许多越来越复杂的密码）。
 
-许多网站已实现用户注册账号，登录已有账号的页面， WebAuthn 作为这些页面的替代和补充。类似其他形式的 [Credential Management API](/zh-CN/docs/Web/API/Credential_Management_API)（凭据管理 API)。Web Authentication API 有两个对应于注册和登录的基本方法：
+许多网站已实现用户注册账号，登录已有账号的页面，WebAuthn 作为这些页面的替代和补充。类似其他形式的 [Credential Management API](/zh-CN/docs/Web/API/Credential_Management_API)（凭据管理 API)。Web Authentication API 有两个对应于注册和登录的基本方法：
 
 - [navigator.credentials.create()](/zh-CN/docs/Web/API/CredentialsContainer/create) - 当使用 publicKey 选项时，创建一个新的凭据，无论是用于注册新账号还是将新的非对称密钥凭据与已有的账号关联。
 - [navigator.credentials.get()](/zh-CN/docs/Web/API/CredentialsContainer/get) - 当使用 publicKey 选项时，使用一组现有的凭据进行身份验证服务，无论是用于用户登录还是双因素验证中的一步。

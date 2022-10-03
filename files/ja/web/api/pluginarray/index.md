@@ -1,13 +1,8 @@
 ---
 title: PluginArray
 slug: Web/API/PluginArray
-tags:
-  - Add-ons
-  - DOM
-  - Gecko DOM Reference
-  - Plugins
-translation_of: Web/API/PluginArray
 ---
+
 {{ApiRef}} {{non-standard_header}}
 
 `PluginArray` インターフェースには使用可能なプラグインのリストが格納されています。 {{domxref("window.navigator.plugins")}} プロパティによって返されます。

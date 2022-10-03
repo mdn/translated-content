@@ -1,12 +1,8 @@
 ---
 title: パフォーマンスタイムライン
 slug: Web/API/Performance_Timeline
-tags:
-  - Web パフォーマンス
-  - ガイド
-  - 概要
-translation_of: Web/API/Performance_Timeline
 ---
+
 {{DefaultAPISidebar("Performance Timeline API")}}
 
 **パフォーマンスタイムライン** API は、{{domxref("Performance")}} インターフェイスへの拡張を定義して、アプリケーション内のクライアントサイドの待ち時間の測定をサポートします。 拡張機能は、特定のフィルタ基準に基づいて{{domxref("PerformanceEntry","performance entry metrics", '', 'true')}} を取得するためのインターフェイスを提供します。この規格には、特定のパフォーマンスイベントがブラウザのパフォーマンスタイムラインに追加されたときに通知される _[performance observer](#performance_observers)_ コールバックをアプリケーションで定義できるインターフェイスも含まれます。

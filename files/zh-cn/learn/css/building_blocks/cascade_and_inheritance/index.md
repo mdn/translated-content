@@ -2,6 +2,7 @@
 title: 层叠与继承
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 本文旨在让你理解 CSS 的一些最基本的概念——层叠、优先级和继承——这些概念决定着如何将 CSS 应用到 HTML 中，以及如何解决冲突。
@@ -165,9 +166,9 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 一个选择器的优先级可以说是由三个不同的值（或分量）相加，可以认为是百（ID）十（类）个（元素）——三位数的三个位数：
 
-2. **ID**：选择器中包含 ID 选择器则百位得一分。
-3. **类**：选择器中包含类选择器、属性选择器或者伪类则十位得一分。
-4. **元素**：选择器中包含元素、伪元素选择器则个位得一分。
+- **ID**：选择器中包含 ID 选择器则百位得一分。
+- **类**：选择器中包含类选择器、属性选择器或者伪类则十位得一分。
+- **元素**：选择器中包含元素、伪元素选择器则个位得一分。
 
 > **备注：** 通用选择器（[`*`](/zh-CN/docs/Web/CSS/Universal_selectors)）、组合符（`+`、`>`、`~`、' '）和调整优先级的选择器（[`:where()`](/zh-CN/docs/Web/CSS/:where)）不会影响优先级。
 
@@ -213,7 +214,7 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 让我们看看会发生什么——如果有什么疑问，试着删除一些属性：
 
-1. 你会发现第三个规则 {{cssxref("color")}} 和 {{cssxref("padding")}} 的值被应用了，但是 {{cssxref("background-color")}} 没有。为什么？ 应该三个都应用，因为顺序规则是后面覆盖前面。
+1. 你会发现第三个规则 {{cssxref("color")}} 和 {{cssxref("padding")}} 的值被应用了，但是 {{cssxref("background-color")}} 没有。为什么？应该三个都应用，因为顺序规则是后面覆盖前面。
 2. 无论如何，上面的规则赢了，因为类选择器比元素选择器有更高的优先级。
 3. 两个元素都有 `better` {{htmlattrxref("class")}}，但是第二个有 {{htmlattrxref("id")}} 。因为 ID 选择器比类选择器优先级更高（一个页面只能有一个独特的 ID，但是很多元素都有相同的类——ID 对于目标非常独特），红色背景和 1px 黑色边框应该都被应用到第二个元素，第一个元素应该是灰色背景和 no border，根据类选择器。
 4. 第二个元素有红色背景但是没有边框。为什么？因为 `!important` 声明在第二条规则里——在 `border: none` 后面，说明即使计算优先级低，这个属性也使用这个值。
@@ -276,10 +277,10 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 - [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [标签、类、ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+  - [标签、类、ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+  - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+  - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+  - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 - [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
 - [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

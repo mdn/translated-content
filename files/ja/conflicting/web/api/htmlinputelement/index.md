@@ -1,18 +1,9 @@
 ---
 title: HTMLInputElement.mozGetFileNameArray()
 slug: conflicting/Web/API/HTMLInputElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - NeedsBrowserCompatibility
-  - 標準外
-  - リファレンス
-translation_of: Web/API/HTMLInputElement/mozGetFileNameArray
 original_slug: Web/API/HTMLInputElement/mozGetFileNameArray
-browser-compat: api.HTMLInputElement.mozGetFileNameArray
 ---
+
 {{ APIRef("HTML DOM") }}{{Non-standard_header}}
 
 **`HTMLInputElement.mozGetFileNameArray()`** メソッドは、 HTML の `input` 要素上でユーザーによって選択されたファイルの名前の配列を返します。

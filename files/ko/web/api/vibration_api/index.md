@@ -39,33 +39,35 @@ window.navigator.vibrate([200, 100, 200]);
 
 ### 이미 실행중인 진동 캔슬하기
 
-{{domxref("window.navigator.vibrate()")}} `메소드를 0값을 호출하거나, 빈 배열, 0값으로 구성된 배열로 호출하면 `현재 진행중인 진동패턴은 취소될 것이다.
+{{domxref("window.navigator.vibrate()")}} 메소드를 0값을 호출하거나, 빈 배열, 0값으로 구성된 배열로 호출하면 현재 진행중인 진동패턴은 취소될 것이다.
 
 ### 지속적인 진동 내보내기
 
 Some basic `setInterval` and `clearInterval` action will allow you to create persistent vibration:
 
-    var vibrateInterval;
+```js
+var vibrateInterval;
 
-    // Starts vibration at passed in level
-    function startVibrate(duration) {
-        navigator.vibrate(duration);
-    }
+// Starts vibration at passed in level
+function startVibrate(duration) {
+    navigator.vibrate(duration);
+}
 
-    // Stops vibration
-    function stopVibrate() {
-        // Clear interval and stop persistent vibrating
-        if(vibrateInterval) clearInterval(vibrateInterval);
-        navigator.vibrate(0);
-    }
+// Stops vibration
+function stopVibrate() {
+    // Clear interval and stop persistent vibrating
+    if(vibrateInterval) clearInterval(vibrateInterval);
+    navigator.vibrate(0);
+}
 
-    // Start persistent vibration at given duration and interval
-    // Assumes a number value is given
-    function startPeristentVibrate(duration, interval) {
-        vibrateInterval = setInterval(function() {
-            startVibrate(duration);
-        }, interval);
-    }
+// Start persistent vibration at given duration and interval
+// Assumes a number value is given
+function startPeristentVibrate(duration, interval) {
+    vibrateInterval = setInterval(function() {
+        startVibrate(duration);
+    }, interval);
+}
+```
 
 Of course the snippet above doesn't take into account the array method of vibration; persistent array-based vibration will require calculating the sum of the array items and creating an interval based on that number (with an additional delay, probably).
 

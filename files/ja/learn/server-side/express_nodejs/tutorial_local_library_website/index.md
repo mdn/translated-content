@@ -1,21 +1,8 @@
 ---
 title: 'Express チュートリアル: 地域図書館の Web サイト'
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Intro
-  - Learn
-  - Node
-  - Tutorial
-  - nodejs
-  - イントロダクション
-  - サーバサイド
-  - 初心者
-  - 学習
-translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 
 実用的なチュートリアルシリーズの最初の記事では、これから学ぶことについて説明します。そして、私たちがこれから取り組んでいき、その後の記事で進化していく「地域図書館」のサンプルウェブサイトの概要を説明します。

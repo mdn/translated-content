@@ -1,15 +1,8 @@
 ---
 title: Document.anchors
 slug: Web/API/Document/anchors
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/anchors
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 **`anchors`** は {{domxref("Document")}} インターフェイスの読み取り専用のプロパティで、文書中のすべてのアンカーのリストを返します。

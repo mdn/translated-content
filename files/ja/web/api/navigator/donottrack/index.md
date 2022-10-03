@@ -1,15 +1,8 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
-tags:
-  - API
-  - Experimental
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
-translation_of: Web/API/Navigator/doNotTrack
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`Navigator.doNotTrack`** プロパティは、ユーザーの Do Not Track 設定を返します。これは、ユーザーがウェブサイトと広告主に対して追跡しないよう要求しているかどうかを示します。

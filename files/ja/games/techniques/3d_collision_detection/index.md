@@ -1,14 +1,8 @@
 ---
 title: 三次元の衝突検出
 slug: Games/Techniques/3D_collision_detection
-tags:
-  - 3D
-  - Games
-  - JavaScript
-  - bounding boxes
-  - collision detection
-translation_of: Games/Techniques/3D_collision_detection
 ---
+
 {{GamesSidebar}}
 
 この記事では、三次元環境で衝突検出を実装するために使用されるさまざまなバウンディングボリューム手法の概要を説明します。後続の記事では、特定の 3D ライブラリーに搭載されたものを取り上げる予定です。

@@ -10,6 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window/scrollByLines
 ---
+
 {{ ApiRef() }}
 
 {{Non-standard_header}}
@@ -43,6 +44,6 @@ window.scrollByLines(lignes)
 
 Ne fait partie d'aucune spécification.
 
-## See also
+## Voir aussi
 
 - {{domxref("window.scrollBy")}}, {{domxref("window.scrollByPages")}}

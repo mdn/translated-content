@@ -2,6 +2,7 @@
 title: <textarea>
 slug: Web/HTML/Element/textarea
 ---
+
 **HTML `<textarea>` 元素**表示一个多行纯文本编辑控件，当你希望用户输入一段相当长的、不限格式的文本，例如评论或反馈表单中的一段意见时，这很有用。
 
 {{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}
@@ -48,7 +49,7 @@ slug: Web/HTML/Element/textarea
 - {{ htmlattrdef("name") }}
   - : 元素的名称。
 - {{ htmlattrdef("placeholder") }}
-  - : 向用户提示可以在控件中输入的内容。 在渲染提示时，占位符文本中的回车符 (\r) 或换行符 (\n) 一定会被作为行断（换行）处理。
+  - : 向用户提示可以在控件中输入的内容。在渲染提示时，占位符文本中的回车符 (\r) 或换行符 (\n) 一定会被作为行断（换行）处理。
 
     > **备注：** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.
 - {{ htmlattrdef("readonly") }}

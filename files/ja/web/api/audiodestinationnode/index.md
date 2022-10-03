@@ -1,8 +1,8 @@
 ---
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
-translation_of: Web/API/AudioDestinationNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AudioDestinationNode`インターフェースは、指定のコンテキストの音声の最後の目的地 - 通常はあなたのデバイスのスピーカーを表します。`OfflineAudioContext`と共に使えば、オーディオデータを「録音」するノードにもできます。

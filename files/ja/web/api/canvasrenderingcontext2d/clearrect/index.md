@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.clearRect
-translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.clearRect()`** はキャンバス 2D API のメソッドで、矩形領域のピクセルを、透明な黒に設定することで消去します。

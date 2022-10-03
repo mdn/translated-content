@@ -1,12 +1,8 @@
 ---
 title: Node
 slug: Web/API/Node
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.Node
-translation_of: Web/API/Node
 ---
+
 {{APIRef("DOM")}}
 
 {{Glossary("DOM")}} の **`Node`** インターフェイスは、他の多くの DOM API オブジェクトのベースとなる抽象的な基底クラスです。したがって、これらのオブジェクト型と類似しており、しばしば交換して使用することができます。抽象クラスであるため、単なる `Node` オブジェクトというものは存在しません。 `Node` の機能を実装しているオブジェクトはすべて、何れかのサブクラスに基づいています。最も注目すべきものは、 {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}} です。
@@ -95,7 +91,7 @@ _以下のプロパティに加えて、親である {{DOMxRef("EventTarget")}} 
 - {{DOMxRef("Node.normalize()")}}
   - : 要素内のすべてのテキストノードをクリーンアップ（隣接ノードを統合し、空のノードを削除）します。
 - {{DOMxRef("Node.removeChild()")}}
-  - : 現在の要素から子ノードを削除します。現在の要素は現在のノードの子であることが必要です。
+  - : 現在の要素から子ノードを削除します。そのノードは現在のノードの子であることが必要です。
 - {{DOMxRef("Node.replaceChild()")}}
   - : 現在のノードの子 `Node` のひとつを、引数で指定した別のノードで置き換えます。
 

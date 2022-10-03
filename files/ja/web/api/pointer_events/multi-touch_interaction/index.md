@@ -1,12 +1,8 @@
 ---
 title: マルチタッチ操作
 slug: Web/API/Pointer_events/Multi-touch_interaction
-tags:
-  - ガイド
-  - ポインターイベント
-  - touch
-translation_of: Web/API/Pointer_events/Multi-touch_interaction
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 ポインターイベントは DOM 入力イベントを拡張して、マウスだけでなくペン/スタイラスやタッチ画面などのさまざまなポインティング入力デバイスをサポートします。*ポインター*は、特定の画面座標セットをターゲットにできるハードウェアにとらわれないデバイスです。 ポインターに単一のイベントモデルを使用すると、ウェブサイト、ウェブアプリの作成が簡単になり、ユーザーのハードウェアに関係なく優れたユーザーエクスペリエンスを提供できます。

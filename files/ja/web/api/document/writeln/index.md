@@ -1,14 +1,8 @@
 ---
 title: Document.writeln()
 slug: Web/API/Document/writeln
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/API/Document/writeln
 ---
+
 {{ ApiRef("DOM") }}
 
 テキストの文字列とその直後に続く改行文字を文書に書き込みます。

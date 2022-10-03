@@ -1,8 +1,8 @@
 ---
 title: フロー内とフローの外
 slug: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
-translation_of: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
 ---
+
 {{CSSRef}}
 
 [前のガイド](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)では、通常フロー内でのブロック及びインラインレイアウトを説明しました。フロー内のすべての要素は、この方法を使用して配置されます。

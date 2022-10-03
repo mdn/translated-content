@@ -2,13 +2,14 @@
 title: <input type="tel">
 slug: Web/HTML/Element/Input/tel
 ---
+
 {{HTMLRef}}
 
-{{HTMLElement("input")}} **`"tel"`** 类型的元素用于让用户输入和编辑电话号码。 Unli 不同于[`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) 和 [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url) , 在提交表格之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。
+{{HTMLElement("input")}} **`"tel"`** 类型的元素用于让用户输入和编辑电话号码。不同于[`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) 和 [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url) , 在提交表格之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。
 
 尽管 `tel` 类型的输入在功能上和 `text` 输入一致，但它们确实有用; 其中最明显的就是移动浏览器— 特别是在手机上 — 可能会选择提供为输入电话号码而优化的自定义键盘。使用电话号码的特定输入类型也使添加自定义验证和处理电话号码更方便。
 
-> **备注：** 不支持 `"tel"` 类型的浏览器会默认使用 [`"text"`](/en-US/docs/Web/HTML/Element/input/text) 类型输入。
+> **备注：** 不支持 `"tel"` 类型的浏览器会默认使用 [`"text"`](/zh-CN/docs/Web/HTML/Element/input/text) 类型输入。
 
 ```html
 <input id="telNo" type="tel">
@@ -47,7 +48,7 @@ slug: Web/HTML/Element/Input/tel
 
 ## 使用 tel 输入
 
-电话号码是网络上非常普遍收集的数据类型。例如，在创建任何类型的注册或电子商务网站时，无论出于商业目的还是出于紧急联系目的，您都可能需要向用户索要电话号码。鉴于通常输入的电话号码是多少，不幸的是，用于验证电话号码的 “一刀切” 解决方案是不实际的。
+电话号码是网络上非常普遍收集的数据类型。例如，在创建任何类型的注册或电子商务网站时，无论出于商业目的还是出于紧急联系目的，您都可能需要向用户索要电话号码。鉴于通常输入的电话号码是多少，不幸的是，用于验证电话号码的“一刀切”解决方案是不实际的。
 
 幸运的是，您可以考虑自己网站的要求，并自行实施适当的验证级别。有关详细信息，请参阅下面的 [验证](#验证)
 
@@ -74,7 +75,7 @@ slug: Web/HTML/Element/Input/tel
 
 ### 占位字符
 
-有时候提供关于输入数据应该采用什么形式的上下文提示是很有帮助的。如果页面设计没有为每个{{HTMLElement("input")}}页面提供描述性标签，这可能是特别重要的 。所以需要占位符。一个占位符是一个值，它通过提供一个有效值的例子来演示值的形式，当元素的值是 “” 时，它显示在编辑框中。一旦数据输入框中，占位符消失;如果该框被清空，占位符重新出现。
+有时候提供关于输入数据应该采用什么形式的上下文提示是很有帮助的。如果页面设计没有为每个{{HTMLElement("input")}}页面提供描述性标签，这可能是特别重要的。所以需要占位符。一个占位符是一个值，它通过提供一个有效值的例子来演示值的形式，当元素的值是“”时，它显示在编辑框中。一旦数据输入框中，占位符消失;如果该框被清空，占位符重新出现。
 
 在这里，我们有`"tel"` 输入的占位符`"123-4567-8901"`。请注意占位符如何消失并在编辑字段内容时重新出现。
 
@@ -102,7 +103,7 @@ slug: Web/HTML/Element/Input/tel
 
 #### 元素值的长度
 
-`size` 和电话号码的长度限制是分开的， 你可以使用 {{htmlattrxref("minlength", "input")}} 属性为输入电话的最小长度;同样使用 {{htmlattrxref("maxlength", "input")}} 设置输入电话号码的最大长度。
+`size` 和电话号码的长度限制是分开的，你可以使用 {{htmlattrxref("minlength", "input")}} 属性为输入电话的最小长度;同样使用 {{htmlattrxref("maxlength", "input")}} 设置输入电话号码的最大长度。
 
 下面的示例创建了一个 20 个字符的电话号码输入框，要求内容不少于 9 个字符且不超过 14 个字符。
 
@@ -402,5 +403,5 @@ input:valid+span:after {
 - [Forms and accessibility](/zh-CN/docs/Web/Accessibility/ARIA/forms)
 - {{HTMLElement("input")}}
 
-  - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
-  - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+  - [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)
+  - [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email)

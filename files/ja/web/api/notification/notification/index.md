@@ -1,17 +1,8 @@
 ---
 title: Notification()
 slug: Web/API/Notification/Notification
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Notification
-  - Notifications
-  - Notifications API
-  - Reference
-browser-compat: api.Notification.Notification
-translation_of: Web/API/Notification/Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`Notification()`** コンストラクターは、ユーザー通知を表す新しい {{domxref("Notification")}} オブジェクトのインスタンスを生成します。

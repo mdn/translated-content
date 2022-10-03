@@ -1,17 +1,8 @@
 ---
 title: ボックスモデル
 slug: Learn/CSS/Building_blocks/The_box_model
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - border
-  - box model
-  - display
-  - margin
-  - padding
-translation_of: Learn/CSS/Building_blocks/The_box_model
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
 CSS にはボックスの概念があり、これを理解することは CSS でレイアウトを作成したりアイテム同士を揃えたりするためのコツとなります。このレッスンでは CSS ボックスモデルを詳しく解説し、その仕組みと関連する用語を理解することでより複雑なレイアウトができるようにします。
@@ -51,7 +42,7 @@ CSS には、**ブロックボックス**と**インラインボックス**の 2
 
 ただし、`flex` などの `display` の値を使用して、内部の表示タイプを変更できます。要素に `display: flex;` を設定する場合、外側の表示タイプは `block` ですが、内側の表示タイプは `flex` に変更されます。このボックスの直接の子要素はすべてフレックスアイテムになり、[Flexbox](/ja/docs/Learn/CSS/CSS_layout/Flexbox) 仕様で規定されているルールに従ってレイアウトされます。これについては後で学習します。
 
-> **Note:** 注：ディスプレイの値、およびブロックおよびインラインレイアウトでのボックスの動作の詳細については、[ブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)に関する MDN ガイドを参照してください。
+> **Note:** ディスプレイの値、およびブロックおよびインラインレイアウトでのボックスの動作の詳細については、[ブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)に関する MDN ガイドを参照してください。
 
 CSS レイアウトについてさらに詳しく学習すると、`flex` や、例えば [`grid`](/ja/docs/Learn/CSS/CSS_layout/Grids) のようなボックスに設定できる他のさまざまな内部の値と出会うでしょう。
 
@@ -268,7 +259,7 @@ padding は、border とコンテンツ領域の間にあります。margin と�
 
 ただし、新しい行に分割されることはなく、`width` プロパティと `height` プロパティを明示的に追加した場合にのみ、コンテンツよりも大きくなります。
 
-**次の例では、`<span>` 要素に `display: inline-block` を追加しました。これを** **`display: block` \*\***変更したり、行を完全に削除したりして、表示モデルの違いを確認してください。\*\*
+次の例では、`<span>` 要素に `display: inline-block` を追加しました。これを `display: block` 変更したり、行を完全に削除したりして、表示モデルの違いを確認してください。
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 800)}}
 
@@ -290,21 +281,21 @@ padding は、border とコンテンツ領域の間にあります。margin と�
 
 ## このモジュール
 
-1.  [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [要素のはみ出し (オーバーフロー)](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [要素のはみ出し (オーバーフロー)](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

@@ -1,13 +1,8 @@
 ---
 title: ゲーム開発のためのツール
 slug: Games/Tools
-tags:
-  - Games
-  - Gecko
-  - Guide
-  - JavaScript
-translation_of: Games/Tools
 ---
+
 {{GamesSidebar}}
 
 このページにはゲーム開発ツールに関する記事へのリンクがまとまっています。ゆくゆくはフレームワークやコンパイラー、デバッグ用ツールもカバーすることを目指しています。

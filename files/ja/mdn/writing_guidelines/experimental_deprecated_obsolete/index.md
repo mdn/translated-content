@@ -1,15 +1,9 @@
 ---
 title: MDN の慣習と定義
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
-tags:
-  - ドキュメント
-  - ガイド
-  - ガイドライン
-  - MDN
-  - MDN メタ
-translation_of: MDN/Guidelines/Conventions_definitions
 original_slug: MDN/Guidelines/Conventions_definitions
 ---
+
 {{MDNSidebar}}
 
 この記事では MDN で使用されている慣習や定義、特に文書化する際に人によっては忘れがちなものを紹介します。
@@ -150,7 +144,7 @@ _「この機能が標準化過程にあり、どこかで実装されている�
   - 他の場所で議論されている場合に備えて、削除された項目への参照を MDN で検索してください。
     そこにも同様の警告ボックスを追加してください。
   - これらの項目がすぐにドキュメントから削除されることは、たとえあったとしても、まずないでしょう。
-    しかし、一部またはすべての資料がサイトの [Archive](/en-US/docs/Archive) セクションに移動される可能性があります。
+    しかし、一部またはすべての資料がサイトの [Archive](/ja/docs/Archive) セクションに移動される可能性があります。
   - [ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data)の関連する項目を更新して、影響を受ける項目の非推奨を反映させてください。
 
 上記のガイドラインで提案されている警告メッセージの文言やその他の文章の変更については、常識的な範囲でお願いします。
@@ -199,6 +193,6 @@ _「この機能が標準化過程にあり、どこかで実装されている�
 
 なお、時々 (まれに) 仕様書の異なるバージョン (特に W3C と WHATWG) が競合することがあり、例えば一方のバージョンがある機能を非推奨とする一方で、もう一方が非推奨にしない場合などがあります。このような場合、何が真実なのか — 例えば、ブラウザーは実際にどうしているか — を考慮し、「重要」なメモを書いて最新の状態を要約してください。例えば、 2019 年 1 月時点の [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) グローバル属性には競合があり、次のように要約されています。
 
-> **Warning:** 仕様の衝突: WHATWG 仕様では `inputmode` がリストアップされており(https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode)、最近のブラウザーはこれに対応する方向で動いています。
+> **Warning:** 仕様の衝突: WHATWG 仕様では `inputmode` がリストアップされており(<https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode>)、最近のブラウザーはこれに対応する方向で動いています。
 > しかし[W3C HTML 5.2 仕様書](https://html.spec.whatwg.org/multipage/index.html#contents)はこれをリストアップしていません（つまり廃止とマークしています）。
 > コンセンサスが得られるまでは、 WHATWG の定義が正しいと考えるべきでしょう。

@@ -1,19 +1,8 @@
 ---
 title: MediaSource.sourceBuffers
 slug: Web/API/MediaSource/sourceBuffers
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Reference
-  - Video
-  - sourceBuffers
-translation_of: Web/API/MediaSource/sourceBuffers
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイス の **`sourceBuffers`** 読み取り専用プロパティは、この `MediaSource` に関連付けられた {{domxref("SourceBuffer")}} オブジェクトのリストを含む {{domxref("SourceBufferList")}} オブジェクトを返します。

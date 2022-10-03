@@ -1,10 +1,8 @@
 ---
 title: ブックインスタンス詳細ページとチャレンジ
-slug: >-
-  Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
-translation_of: >-
-  Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
+
 ## BookInstance detail page
 
 The `BookInstance` detail page needs to display the information for each `BookInstance`, identified using its (automatically generated) `_id` field value. This will include the `Book` name (as a link to the _Book detail page_) along with other information in the record.
@@ -78,9 +76,9 @@ Currently most _dates_ displayed on the site use the default JavaScript format (
 
 The requirements to meet this challenge:
 
-1.  Replace the variable `due_back` with `due_back_formatted` in the _BookInstance detail_ page.
-2.  Update the Author module to add a lifespan virtual property. The lifespan should look like: _date_of_birth - date_of_death_, where both values have the same date format as `BookInstance.due_back_formatted`.
-3.  Use `Author.lifespan` in all views where you currently explicitly use `date_of_birth` and `date_of_death`.
+1. Replace the variable `due_back` with `due_back_formatted` in the _BookInstance detail_ page.
+2. Update the Author module to add a lifespan virtual property. The lifespan should look like: _date_of_birth - date_of_death_, where both values have the same date format as `BookInstance.due_back_formatted`.
+3. Use `Author.lifespan` in all views where you currently explicitly use `date_of_birth` and `date_of_death`.
 
 ## Next steps
 

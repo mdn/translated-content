@@ -1,21 +1,8 @@
 ---
 title: CSSStyleSheet.cssRules
 slug: Web/API/CSSStyleSheet/cssRules
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - レイアウト
-  - オブジェクトモデル
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - スタイルシート
-browser-compat: api.CSSStyleSheet.cssRules
-translation_of: Web/API/CSSStyleSheet/cssRules
 ---
+
 {{APIRef("CSSOM")}}
 
 {{domxref("CSSStyleSheet")}} の

@@ -1,19 +1,8 @@
 ---
 title: NotificationEvent.notification
 slug: Web/API/NotificationEvent/notification
-tags:
-  - API
-  - Experimental
-  - NotificationEvent
-  - Notifications
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - プロパティ
-  - 通知
-translation_of: Web/API/NotificationEvent/notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 `notification` は {{domxref("NotificationEvent")}} インターフェイスの読取専用プロパティで、クリックされてイベントを発行した {{domxref("Notification")}} のインスタンスを返します。 {{domxref("Notification")}} は `tag` や `data` 属性など、 Notification のインスタンス化時に設定された多くのプロパティへの読み取り専用アクセスを提供しており、あとで `notificationclick` イベントで使用するための情報を保存することができます。

@@ -11,6 +11,7 @@ tags:
   - UIEvent
 translation_of: Web/API/UIEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 L'interface **`UIEvent`** représente des évènements simples de l'interface utilisateur.
@@ -61,16 +62,11 @@ _Cette interface hérite également des méthodes de son parent, {{domxref("Even
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                                           | Commentaire                                                                                                                               |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('InputDeviceCapabilities')}}                             | {{Spec2('InputDeviceCapabilities')}} | Ajoute la propriété `sourceCapabilities`.                                                                                                 |
-| {{SpecName('UI Events')}}                                                 | {{Spec2('UI Events')}}                     | Extension de DOM3.                                                                                                                        |
-| {{SpecName('DOM3 Events', '#interface-UIEvent', 'UIEvent')}} | {{Spec2('DOM3 Events')}}                 | Ajoute le constructeur `UIEvent()`, déprécie la méthode `initUIEvent()` et change le type de `view` de `AbstractView` vers `WindowProxy`. |
-| {{SpecName('DOM2 Events', '#Events-UIEvent', 'UIEvent')}}     | {{Spec2('DOM2 Events')}}                 | Définition initiale.                                                                                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.UIEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

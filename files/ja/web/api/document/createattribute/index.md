@@ -1,14 +1,8 @@
 ---
 title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-browser-compat: api.Document.createAttribute
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.createAttribute()`** は、新しい属性ノードを生成して返します。生成されたオブジェクトは {{domxref("Attr")}} を実装したノードです。この方法では DOM は、特定の要素にどんな種類の属性を追加できるかを強制しません。

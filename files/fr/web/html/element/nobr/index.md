@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/nobr
 ---
+
 {{HTMLRef}}{{deprecated_header}}{{non-standard_header}}
 
 L'élément HTML **`<nobr>`** évite qu'un texte soit coupé par un retour à la ligne automatique ; il est donc affiché sur une seule ligne. Il peut être alors nécessaire d'utiliser les barres de défilement pour lire le texte en intégralité.
@@ -21,13 +22,11 @@ L'élément HTML **`<nobr>`** évite qu'un texte soit coupé par un retour à la
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires                                                         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "obsolete.html#nobr", "&lt;nobr&gt;")}} | {{Spec2("HTML WHATWG")}} | Rendu obsolète et remplacé par {{CSSxRef("white-space")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.nobr")}}
+{{Compat}}
 
 ## Voir aussi
 

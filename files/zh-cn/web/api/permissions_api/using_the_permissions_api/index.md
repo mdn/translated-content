@@ -2,6 +2,7 @@
 title: Using the Permissions API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
 ---
+
 {{DefaultAPISidebar("Permissions API")}}{{SeeCompatTable}}
 
 本文提供了使用 W3C Permission API 的基本说明，它提供了一种程序上的方式来查询当前上下文的 API 权限授权状态。
@@ -28,7 +29,7 @@ slug: Web/API/Permissions_API/Using_the_Permissions_API
 
 ![Screenshot showing a map of Greenfield, UK.](location-finder-with-permissions-api.png)
 
-You can [在线运行](https://chrisdavidmills.github.io/location-finder-permissions-api/)， 或 [在 Github 查看源码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)。 大部分代码都很简单且常见 ── 所以接下来我们会重点关注和 Permission API 有关的代码，如果你想学习其他部分，请自行阅读。
+You can [在线运行](https://chrisdavidmills.github.io/location-finder-permissions-api/)，或 [在 Github 查看源码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)。大部分代码都很简单且常见 ── 所以接下来我们会重点关注和 Permission API 有关的代码，如果你想学习其他部分，请自行阅读。
 
 ### 访问 Permissions API
 
@@ -74,7 +75,7 @@ handlePermission();
 
 ### 权限描述符
 
-{{domxref("Permissions.query()")}} 方法接受一个 `PermissionDescriptor` 字典作为参数 — 它包含你感兴趣的 API 的名称。一些 API 有继承自默认的 `PermissionDescriptor` 的更加复杂的 `PermissionDescriptor`s 以包含更多额外的信息。例如，`PushPermissionDescriptor` 也包含一个比尔值指定 [`userVisibleOnly`](https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe#Parameters) 是 `true` 还是 `false`.
+{{domxref("Permissions.query()")}} 方法接受一个 `PermissionDescriptor` 字典作为参数 — 它包含你感兴趣的 API 的名称。一些 API 有继承自默认的 `PermissionDescriptor` 的更加复杂的 `PermissionDescriptor`s 以包含更多额外的信息。例如，`PushPermissionDescriptor` 也包含一个比尔值指定 [`userVisibleOnly`](/zh-CN/docs/Web/API/PushManager/subscribe#Parameters) 是 `true` 还是 `false`.
 
 ### 重置权限
 
@@ -109,6 +110,6 @@ function revokePermission() {
 目前，较之我们已有的，这个 API 并没有提供太多额外内容。如果在浏览器询问时，我们选择了从不分享我们的位置，那么不使用浏览器菜单选项的话，我们将无法返回权限的初始状态（询问）：
 
 - **Firefox**: _工具 > 页面信息 > 权限 > 访问你的位置_。选择“总是询问”。
-- **Chrome**: _汉堡菜单 > 设置 > 显示高级设置。在隐私部分，点击“内容设置”。在出现的对话框中，找到 “位置” 部分，选择“当网站试图访问时询问”...最后，点击“管理特例”_，移除你对特定网站的授权。
+- **Chrome**: _汉堡菜单 > 设置 > 显示高级设置。在隐私部分，点击“内容设置”。在出现的对话框中，找到“位置”部分，选择“当网站试图访问时询问”...最后，点击“管理特例”_，移除你对特定网站的授权。
 
 但是，未来浏览器会提供 `request()` 方法，他让我们可以在任何时候以编程的方式来请求权限。这非常值得期待尽快被实现。

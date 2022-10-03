@@ -2,6 +2,7 @@
 title: WebRTC 协议介绍
 slug: Web/API/WebRTC_API/Protocols
 ---
+
 {{WebRTCSidebar}}
 
 本文介绍了基于 WebRTC API 构建的协议。
@@ -42,11 +43,11 @@ NAT 的中继穿越方式[Traversal Using Relays around NAT (TURN)](http://en.wi
 
 ### 结构体
 
-SDP 由一行或多行 UTF-8 文本组成，每行以一个字符的类型开头，后跟等号（“ =”），然后是包含值或描述的结构化文本，其格式取决于类型。以给定字母开头的文本行通常称为“字母行”。例如，提供媒体描述的行的类型为“ m”，因此这些行称为“ m 行”。
+SDP 由一行或多行 UTF-8 文本组成，每行以一个字符的类型开头，后跟等号（“ =”），然后是包含值或描述的结构化文本，其格式取决于类型。以给定字母开头的文本行通常称为“字母行”。例如，提供媒体描述的行的类型为“m”，因此这些行称为“m 行”。
 
 ### 获取更多信息
 
 要了解有关 SDP 的更多信息，请参见以下有用的资源：
 
-- 规范: {{RFC(4566, "SDP: Session Description Protocol")}}
+- 规范：{{RFC(4566, "SDP: Session Description Protocol")}}
 - [IANA registry of SDP parameters](https://www.iana.org/assignments/sip-parameters/sip-parameters.xhtml)

@@ -1,10 +1,8 @@
 ---
 title: 同期と非同期のリクエスト
 slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
-tags:
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
+
 {{domxref('XMLHttpRequest')}} は同期及び非同期通信の両方に対応しています。しかし、一般的には性能上の理由により、同期リクエストより非同期リクエストを推奨するべきです。
 
 同期リクエストはプログラムの実行をブロックし、画面を「フリーズ」させたりユーザー操作が反応しない状態にしたりすることがあります。
@@ -129,11 +127,11 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 ここではタイムアウトを 2000 ミリ秒に設定しています．
 
-> **Note:** **注:** `timeout` の対応は {{Gecko("12.0")}} で追加されました。
+> **Note:** `timeout` の対応は {{Gecko("12.0")}} で追加されました。
 
 ## 同期リクエスト
 
-> **Note:** **注:** Gecko 30.0 {{geckoRelease("30.0")}}, Blink 39.0, Edge 13 以降では、メインスレッド上での同期リクエストはユーザーの使い勝手に悪影響を与えるため、非推奨になっています。
+> **Note:** Gecko 30.0 {{geckoRelease("30.0")}}, Blink 39.0, Edge 13 以降では、メインスレッド上での同期リクエストはユーザーの使い勝手に悪影響を与えるため、非推奨になっています。
 
 同期 XHR リクエストはしばしばウェブ上でハングアップの原因となります。しかし、開発者は通常、ハングアップが発生するのはネットワークの状態が悪かったり、リモートサーバの応答が遅かったりしたときだけなので、この問題に気づくことはありません。 Synchronous XHR は現在非推奨の状態にあります。開発者は同期 API から離れて、代わりに非同期リクエストを使うことをお勧めします。
 
@@ -201,7 +199,7 @@ self.onmessage = function (event) {
 };
 ```
 
-> **Note:** **注:** 但し、 `Worker` を使っているため結果的に非同期になります。
+> **Note:** 但し、 `Worker` を使っているため結果的に非同期になります。
 
 これは、バックグラウンドでサーバーとやり取りしたり、一部のコンテンツを先読みしたりするために便利です。例と詳細については [Web Worker の利用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)を参照して下さい。
 

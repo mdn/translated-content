@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:focus
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:focus`** permet de cibler un élément lorsque celui-ci reçoit le focus (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris comme par exemple le champ d'un formulaire).
@@ -66,16 +67,11 @@ Il ne faut jamais retirer l'indicateur de focus sans le remplacer par un autre i
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                 | Commentaires                                 |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-focus', ':focus')}}                     | {{Spec2('HTML WHATWG')}}     | Définition de la sémantique relative à HTML. |
-| {{SpecName('CSS4 Selectors', '#focus-pseudo', ':focus')}}                                     | {{Spec2('CSS4 Selectors')}} | Aucune modification.                         |
-| {{SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':focus')}} | {{Spec2('CSS3 Selectors')}} | Aucune modification.                         |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':focus')}}                 | {{Spec2('CSS2.1')}}             | Définition initiale.                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.focus")}}
+{{Compat}}
 
 ## Voir aussi
 

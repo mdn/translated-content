@@ -1,13 +1,9 @@
 ---
 title: ライブコードサンプルの簡単なデモ
 slug: orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
-tags:
-  - MDN Meta
-  - Structures
-  - 例
-translation_of: MDN/Structures/Live_samples/Simple_live_sample_demo
 original_slug: MDN/Structures/Live_samples/Simple_live_sample_demo
 ---
+
 {{MDNSidebar}}
 
 ## 例
@@ -39,4 +35,4 @@ f.addEventListener('submit', function(ev) {
 
 {{ EmbedLiveSample('The_example', '', '', '') }}
 
-> **Note:** 注: ローカライズしたページでは、最初の引数の値は、サンプルを含む見出しの ID と同じにしてください．
+> **Note:** ローカライズしたページでは、最初の引数の値は、サンプルを含む見出しの ID と同じにしてください．

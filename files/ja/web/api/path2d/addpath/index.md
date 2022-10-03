@@ -1,8 +1,8 @@
 ---
 title: Path2D.addPath()
 slug: Web/API/Path2D/addPath
-translation_of: Web/API/Path2D/addPath
 ---
+
 {{APIRef("Canvas API")}}
 
 Canvas 2D API の **`Path2D.addPath()`** メソッドは、パスに対して引数でパスを追加します。

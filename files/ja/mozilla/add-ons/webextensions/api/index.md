@@ -1,10 +1,8 @@
 ---
 title: JavaScript API 群
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
+
 {{AddonSidebar}}
 
 WebExtension 用の JavaScript API は拡張機能の[バックグラウンドスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)と、その他の拡張機能にバンドルした文書 ([ブラウザーアクション](/ja/Add-ons/WebExtensions/Browser_action)や[ページアクション](/ja/Add-ons/WebExtensions/Page_actions)ポップアップや[サイドバー](/ja/Add-ons/WebExtensions/Sidebars)や[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)や[新規タブページ](/ja/Add-ons/WebExtensions/manifest.json/chrome_url_overrides)を含む) で使用できます。いくつかの API は拡張機能の[コンテンツスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts)からもアクセスできます ([コンテンツスクリプトガイドの表](/ja/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)を見てください)。
@@ -44,7 +42,7 @@ Firefox は `chrome` 名前空間の下でコールバックを使う API も実
 
 Microsoft Edge は `browser` 名前空間を使いますが、promise ベースの非同期 API はサポートされていません。Edge では当面、非同期 API はコールバックを使うのが必須です。
 
-すべてのブラウザーがすべての API をサポートしているわけではありません: 詳しくは[ JavaScript API のブラウザーサポート](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)をご覧ください。
+すべてのブラウザーがすべての API をサポートしているわけではありません: 詳しくは [JavaScript API のブラウザーサポート](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)をご覧ください。
 
 ## JavaScript API 一覧
 

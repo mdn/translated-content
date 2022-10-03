@@ -1,15 +1,8 @@
 ---
 title: 式と演算子
 slug: Web/JavaScript/Guide/Expressions_and_Operators
-tags:
-  - 初心者
-  - 式
-  - ガイド
-  - JavaScript
-  - 演算子
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
 この章では JavaScript の式 (expression) や演算子 (operator) について、代入、比較、算術、ビット、論理、文字列、三項演算子などを説明しています。
@@ -608,7 +601,7 @@ var var2 = 4;
   <tbody>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">論理積 (AND)</a> (<code>&#x26;&#x26;</code>)
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND">論理積 (AND)</a> (<code>&#x26;&#x26;</code>)
       </td>
       <td><code>expr1 &#x26;&#x26; expr2</code></td>
       <td>
@@ -618,7 +611,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">論理和 (OR)</a> (<code>||</code>)
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR">論理和 (OR)</a> (<code>||</code>)
       </td>
       <td><code>expr1 || expr2</code></td>
       <td>
@@ -628,7 +621,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">論理否定 (NOT)</a> (<code>!</code>)
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT">論理否定 (NOT)</a> (<code>!</code>)
       </td>
       <td><code>!expr</code></td>
       <td>

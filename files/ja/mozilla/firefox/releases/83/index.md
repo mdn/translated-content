@@ -1,13 +1,8 @@
 ---
 title: Firefox 83 for developers
 slug: Mozilla/Firefox/Releases/83
-tags:
-  - '83'
-  - Firefox
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases/83
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 83 の変更点をまとめています。Firefox 83 は、2020 年 11 月 17 日にリリースされました。

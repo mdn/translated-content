@@ -1,16 +1,8 @@
 ---
 title: '::-moz-color-swatch'
 slug: Web/CSS/::-moz-color-swatch
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - 標準外
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.-moz-color-swatch
-translation_of: Web/CSS/::-moz-color-swatch
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`::-moz-color-swatch`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)であり、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)で、 {{HTMLElement("input")}} の `type="color"` で選択された色を表します。

@@ -53,7 +53,7 @@ _The `RTCSessionDescription` doesn't inherit any methods._
 - {{domxref("RTCSessionDescription.toJSON()")}}
   - : Returns a {{Glossary("JSON")}} description of the object. The values of both properties, {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.
 
-## Example<span id="cke_bm_72C" class="hidden"></span>
+## Example
 
 ```js
 signalingChannel.onmessage = function (evt) {
@@ -83,5 +83,5 @@ signalingChannel.onmessage = function (evt) {
 
 ## See also
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
 - {{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}

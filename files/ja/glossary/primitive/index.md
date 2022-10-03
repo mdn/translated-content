@@ -1,13 +1,8 @@
 ---
 title: Primitive (プリミティブ)
 slug: Glossary/Primitive
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - 用語集
-translation_of: Glossary/Primitive
 ---
+
 {{Glossary("JavaScript")}} において、**プリミティブ** (primitive、プリミティブ値、プリミティブデータ型) は{{Glossary("object","オブジェクト")}}でなく、{{glossary("method","メソッド")}}を持たないデータのことです。 6 種類のプリミティブデータ型があります。{{Glossary("string","文字列")}}、{{Glossary("number","数値")}}、{{Glossary("bigint","BigInt")}}、{{Glossary("boolean","真偽値")}}、{{Glossary("undefined")}}、そして{{Glossary("symbol","シンボル")}} ({{Glossary("ECMAScript")}} 2016 で追加) です。また、プリミティブに見える {{Glossary("null")}} もありますが、実際にはすべての {{jsxref("Object")}} の特殊なケースです。そして、構造化された型はすべてプロトタイプチェーンによって `null` から派生しています。
 
 多くの場合、プリミティブ値は、その言語実装の最下層にて直接的に表現されます。
@@ -101,15 +96,15 @@ console.log(foo);   // 5
 - [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures)
 - Wikipedia の {{Interwiki("wikipedia", "プリミティブ型")}} の記事
 
-1.  [用語集](/ja/docs/Glossary)
+1. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("JavaScript")}}
-    2.  {{Glossary("string", "文字列")}}
-    3.  {{Glossary("number")}}
-    4.  {{Glossary("bigint")}}
-    5.  {{Glossary("boolean")}}
-    6.  {{Glossary("null")}}
-    7.  {{Glossary("undefined")}}
-    8.  {{Glossary("symbol")}}
+    1. {{Glossary("JavaScript")}}
+    2. {{Glossary("string", "文字列")}}
+    3. {{Glossary("number")}}
+    4. {{Glossary("bigint")}}
+    5. {{Glossary("boolean")}}
+    6. {{Glossary("null")}}
+    7. {{Glossary("undefined")}}
+    8. {{Glossary("symbol")}}
 
-2.  [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)
+2. [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)

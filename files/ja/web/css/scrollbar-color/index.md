@@ -1,16 +1,8 @@
 ---
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
-tags:
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-  - CSS スクロールバー
-  - recipe:css-property
-  - scrollbar-color
-browser-compat: css.properties.scrollbar-color
-translation_of: Web/CSS/scrollbar-color
 ---
+
 {{CSSRef}}
 
 **`scrollbar-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールバーのトラックとつまみの色を設定します。

@@ -1,13 +1,8 @@
 ---
 title: NodeList.item
 slug: Web/API/NodeList/item
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - NodeList
-translation_of: Web/API/NodeList/item
 ---
+
 {{ApiRef}}
 
 ## 概要
@@ -20,7 +15,7 @@ translation_of: Web/API/NodeList/item
 nodeItem = nodeList.item(index)
 ```
 
-- `nodeList` : `NodeList` 。これは [childNodes](/ja/docs/DOM/Node.childNodes "DOM/Node.childNodes") などの DOM プロパティやメソッドで取得可能。
+- `nodeList` : `NodeList` 。これは [childNodes](/ja/docs/DOM/Node.childNodes) などの DOM プロパティやメソッドで取得可能。
 - `index` : 取得するノードのインデックス。最初のノードの _index_ は 0 となる。
 - `nodeItem` : `nodeList` 中の、`item` メソッドに指定した _index_ の位置にあるノード。
 

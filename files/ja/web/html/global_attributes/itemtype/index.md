@@ -1,15 +1,6 @@
 ---
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-browser-compat: html.global_attributes.itemtype
-translation_of: Web/HTML/Global_attributes/itemtype
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -192,7 +183,7 @@ Google などの主要な検索エンジンは、構造化データのために 
 - [他のグローバル属性](/ja/docs/Web/HTML/Global_attributes)
 - マイクロデータに関連する他のグローバル属性:
 
-  - [`itemid`](/en-US/docs/Web/HTML/Global_attributes/itemid)
-  - [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop)
-  - [`itemref`](/en-US/docs/Web/HTML/Global_attributes/itemref)
-  - [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope)
+  - [`itemid`](/ja/docs/Web/HTML/Global_attributes/itemid)
+  - [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop)
+  - [`itemref`](/ja/docs/Web/HTML/Global_attributes/itemref)
+  - [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope)

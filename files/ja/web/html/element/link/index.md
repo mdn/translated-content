@@ -1,17 +1,6 @@
 ---
 title: '<link>: 外部リソースへのリンク要素'
 slug: Web/HTML/Element/link
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - Link
-  - Reference
-  - Web
-  - Web Performance
-  - metadata
-browser-compat: html.elements.link
-translation_of: Web/HTML/Element/link
 ---
 
 {{HTMLRef}}

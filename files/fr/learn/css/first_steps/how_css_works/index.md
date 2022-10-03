@@ -3,6 +3,7 @@ title: CSS, comment ça marche ?
 slug: Learn/CSS/First_steps/How_CSS_works
 translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
 Jusqu'ici, nous avons appris les bases du CSS, ses objectifs et comment écrire des feuilles de style élémentaires. Dans cette leçon, nous allons voir comment un navigateur prend du HTML et du CSS pour les transformer en une page web.

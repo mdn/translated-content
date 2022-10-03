@@ -1,16 +1,8 @@
 ---
 title: NetworkInformation.downlinkMax
 slug: Web/API/NetworkInformation/downlinkMax
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/NetworkInformation/downlinkMax
 ---
+
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
 **`NetworkInformation.downlinkMax`** 読み取り専用プロパティは、メガビット毎秒（Mbps）単位で、基底の接続技術の最大下り速度を返します。

@@ -1,16 +1,8 @@
 ---
 title: Notification
 slug: Web/API/Notification
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Notifications
-  - Notifications API
-  - Reference
-browser-compat: api.Notification
-translation_of: Web/API/Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `Notification` は[通知 API](/ja/docs/Web/API/Notifications_API) のインターフェイスで、ユーザーへのデスクトップ通知の設定と表示に使われます。

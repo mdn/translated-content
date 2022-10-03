@@ -3,6 +3,7 @@ title: String.prototype.trimRight()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 ---
+
 {{JSRef}}
 
 `trimEnd()` 方法从一个字符串的末端移除空白字符。trimRight() 是这个方法的别名。
@@ -28,7 +29,7 @@ str.trimRight();
 
 ### 别名
 
-为了与 {{jsxref("String.prototype.padEnd")}} 等函数保持一致，标准方法名称为`trimEnd`。 但是，出于 Web 兼容性原因，`trimRight`仍然是`trimEnd`的别名。 在某些引擎中，这意味着：
+为了与 {{jsxref("String.prototype.padEnd")}} 等函数保持一致，标准方法名称为`trimEnd`。但是，出于 Web 兼容性原因，`trimRight`仍然是`trimEnd`的别名。在某些引擎中，这意味着：
 
 ```js
 String.prototype.trimRight.name === "trimEnd";
@@ -60,7 +61,7 @@ console.log(str);       // '   foo'
 
 The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
 
-{{Compat("javascript.builtins.String.trimEnd")}}
+{{Compat}}
 
 ## 相关链接
 

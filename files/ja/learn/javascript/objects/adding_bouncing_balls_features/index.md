@@ -1,18 +1,8 @@
 ---
 title: バウンスボールのデモに機能を追加する
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - Assessment
-  - 初心者
-  - CodingScripting
-  - JavaScript
-  - 学習
-  - OOJS
-  - オブジェクト指向
-  - オブジェクト
-  - l10n:priority
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 この評価では、前の記事のバウンスボールのデモを出発点として用い、いくつかの面白い機能を新たに追加してもらいます。

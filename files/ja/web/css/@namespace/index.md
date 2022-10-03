@@ -1,16 +1,8 @@
 ---
 title: '@namespace'
 slug: Web/CSS/@namespace
-tags:
-  - アットルール
-  - CSS
-  - CSS 名前空間
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.at-rules.namespace
-translation_of: Web/CSS/@namespace
 ---
+
 {{CSSRef}}
 
 **`@namespace`** は[アットルール](/ja/docs/Web/CSS/At-rule)で、

@@ -2,6 +2,7 @@
 title: Element.requestFullscreen()
 slug: Web/API/Element/requestFullScreen
 ---
+
 {{APIRef("Fullscreen API")}}
 
 **`Element.requestFullscreen()`** メソッドは、要素を全画面表示するための非同期的な要求を発行します。

@@ -1,19 +1,11 @@
 ---
 title: '<object>: 外部オブジェクト要素'
 slug: Web/HTML/Element/object
-tags:
-  - 要素
-  - HTML
-  - HTML 埋め込みコンテンツ
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.object
-translation_of: Web/HTML/Element/object
 ---
 
 {{HTMLRef}}
 
-**`<object>`** は [HTML](/en-US/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。
+**`<object>`** は [HTML](/ja/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。
 
 {{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
 

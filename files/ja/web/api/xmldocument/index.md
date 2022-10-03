@@ -1,14 +1,8 @@
 ---
 title: XMLDocument
 slug: Web/API/XMLDocument
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - XMLDocument
-translation_of: Web/API/XMLDocument
 ---
+
 {{APIRef("DOM")}}
 
 **XMLDocument** インターフェイスは XML ドキュメントを示します。汎用的な {{DOMxRef("Document")}} を継承し、特定のメソッドやプロパティを追加しません: それでも２つのタイプのドキュメントでは、いくつかのアルゴリズムの動作がことなります。
@@ -42,4 +36,4 @@ _また、 {{DOMxRef("Document")}} からメソッドを継承します_
 
 ## 関連項目
 
-- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference "/en-US/docs/DOM/DOM_Reference")
+- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference)

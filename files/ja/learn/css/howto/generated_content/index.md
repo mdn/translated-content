@@ -1,17 +1,8 @@
 ---
 title: CSS 生成コンテンツの使用
 slug: Learn/CSS/Howto/Generated_content
-tags:
-  - 基本
-  - 初心者
-  - CSS
-  - CSS:Getting_Started
-  - グラフィック
-  - ガイド
-  - NeedsUpdate
-  - ウェブ
-translation_of: Learn/CSS/Howto/Generated_content
 ---
+
 {{LearnSidebar}}
 
 この記事では、 CSS を使用して文書を表示するときにコンテンツを追加するいくつかの方法について説明します。スタイルシートを修正して、テキストコンテンツや画像を追加するのです。

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:only-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:only-child`** représente n'importe quel élément qui est le seul enfant de son élément parent. Elle permet d'obtenir le même effet que `:first-child:last-child` ou `:nth-child(1):nth-last-child(1)`, mais avec une spécificité inférieure.
@@ -110,14 +111,11 @@ li:only-child {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires                                                          |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#only-child-pseudo', ':only-child')}} | {{Spec2('CSS4 Selectors')}} | Il n'est plus nécessaire qu'un élément ait un parent pour être ciblé. |
-| {{SpecName('CSS3 Selectors', '#only-child-pseudo', ':only-child')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.only-child")}}
+{{Compat}}
 
 ## Voir aussi
 

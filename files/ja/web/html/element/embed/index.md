@@ -1,19 +1,8 @@
 ---
 title: '<embed>: 埋め込み外部コンテンツ要素'
 slug: Web/HTML/Element/embed
-tags:
-  - Element
-  - Embedding Content
-  - External content
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Plugins
-  - Reference
-  - Web
-  - embed
-translation_of: Web/HTML/Element/embed
 ---
+
 {{HTMLRef}}
 
 **HTML の `<embed>` 要素**は、外部のコンテンツを文書中の指定された場所に埋め込みます。コンテンツは外部アプリケーションや、対話型コンテンツの他の出所 (ブラウザーのプラグインなど) によって提供されます。

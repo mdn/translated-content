@@ -1,17 +1,8 @@
 ---
 title: HTML テーブル
 slug: Learn/HTML/Tables
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - Landing
-  - Module
-  - Tables
-translation_of: Learn/HTML/Tables
 ---
+
 {{LearnSidebar}}
 
 HTML でのとてもよくある仕事はテーブルデータの構造化で、数々の要素と属性がこの目的のためにあります。スタイリング用の [CSS](/ja/docs/Learn/CSS) と組み合わせて、HTML は Web 上に、学校の授業の計画や、水泳の時間割や、好きな恐竜やフットボールチームの統計情報といった、情報のテーブルを簡単に表示できます。このモジュールでは HTML を使ってテーブルデータを構造化するのに必要な知識を一通り案内します。

@@ -2,9 +2,10 @@
 title: Window.localStorage
 slug: Web/API/Window/localStorage
 ---
+
 {{APIRef()}}
 
-只读的`localStorage` 属性允许你访问一个{{domxref("Document")}} 源（origin）的对象 {{domxref("Storage")}}；存储的数据将保存在浏览器会话中。`localStorage` 类似 {{DOMxRef("Window.sessionStorage", "sessionStorage")}}，但其区别在于：存储在 `localStorage` 的数据可以长期保留；而当页面会话结束——也就是说，当页面被关闭时，存储在 `sessionStorage` 的数据会被清除 。
+只读的`localStorage` 属性允许你访问一个{{domxref("Document")}} 源（origin）的对象 {{domxref("Storage")}}；存储的数据将保存在浏览器会话中。`localStorage` 类似 {{DOMxRef("Window.sessionStorage", "sessionStorage")}}，但其区别在于：存储在 `localStorage` 的数据可以长期保留；而当页面会话结束——也就是说，当页面被关闭时，存储在 `sessionStorage` 的数据会被清除。
 
 应注意，无论数据存储在 `localStorage` 还是 `sessionStorage` ，**它们都特定于页面的协议。**
 
@@ -18,12 +19,12 @@ myStorage = localStorage;
 
 ### 值
 
-一个可被用于访问当前源（ origin ）的本地存储空间的 {{domxref("Storage")}} 对象。
+一个可被用于访问当前源（origin）的本地存储空间的 {{domxref("Storage")}} 对象。
 
 ### 异常
 
 - `SecurityError`
-  - : 请求违反了一个策略声明，或者源（ origin ）不是 [一个有效的 scheme/host/port tuple](/zh-CN/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) （例如如果 origin 使用 `file:` 或者 `data:` 形式将可能发生）。比如，用户可以有禁用允许对指定的 origin 存留数据的浏览器配置。
+  - : 请求违反了一个策略声明，或者源（origin）不是 [一个有效的 scheme/host/port tuple](/zh-CN/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) （例如如果 origin 使用 `file:` 或者 `data:` 形式将可能发生）。比如，用户可以有禁用允许对指定的 origin 存留数据的浏览器配置。
 
 ## 示例
 
@@ -60,7 +61,7 @@ localStorage.clear();
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.localStorage")}}
+{{Compat}}
 
 ## 参见
 

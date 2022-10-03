@@ -2,9 +2,10 @@
 title: WebGLRenderbuffer
 slug: Web/API/WebGLRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
-**WebGLRenderbuffer** 接口是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的一部分，它提供了一个用于保存一个图像的缓存，并且可以用于渲染操作的源或者目标。
+**WebGLRenderbuffer** 接口是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，它提供了一个用于保存一个图像的缓存，并且可以用于渲染操作的源或者目标。
 
 ## 摘要
 
@@ -31,7 +32,7 @@ var buffer = gl.createRenderbuffer();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderbuffer")}}
+{{Compat}}
 
 ## 参见
 
@@ -39,4 +40,4 @@ var buffer = gl.createRenderbuffer();
 - {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
-- 其他缓冲: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}
+- 其他缓冲：{{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}

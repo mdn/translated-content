@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-row
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-row`** est une propriété raccourcie pour {{cssxref("grid-row-start")}} et {{cssxref("grid-row-end")}}. Elle permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.
@@ -72,9 +73,13 @@ grid-row: unset;
 
     Si l'entier n'est pas défini, la valeur par défaut qui sera utilisée sera `1`. Les entiers négatifs ou nuls sont invalides.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -119,15 +124,11 @@ grid-row: unset;
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-row", "grid-row")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-row")}}
+{{Compat}}
 
 ## Voir aussi
 

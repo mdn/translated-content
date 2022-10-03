@@ -1,17 +1,8 @@
 ---
 title: PushMessageData.arrayBuffer()
 slug: Web/API/PushMessageData/arrayBuffer
-tags:
-  - API
-  - ArrayBuffer
-  - Experimental
-  - Method
-  - Push
-  - PushMessageData
-  - Reference
-  - ServiceWorkers
-translation_of: Web/API/PushMessageData/arrayBuffer
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 {{domxref("PushMessageData")}} インターフェースの **`arrayBuffer()`** メソッドは、プッシュメッセージデータを {{domxref("ArrayBuffer")}} オブジェクトとして抽出します。

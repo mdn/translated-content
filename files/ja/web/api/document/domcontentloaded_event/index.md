@@ -1,14 +1,8 @@
 ---
 title: 'Document: DOMContentLoaded イベント'
 slug: Web/API/Document/DOMContentLoaded_event
-tags:
-  - API
-  - DOMContentLoaded
-  - Document
-  - Event
-  - Web
-translation_of: Web/API/Document/DOMContentLoaded_event
 ---
+
 {{APIRef}}
 
 **`DOMContentLoaded`** イベントは、 HTML の初期文書が完全に読み込まれ解釈された時点で発生し、スタイルシート、画像、サブフレームの読み込みが完了するのを待ちません。

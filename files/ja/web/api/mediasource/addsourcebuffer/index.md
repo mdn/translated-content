@@ -1,19 +1,8 @@
 ---
 title: MediaSource.addSourceBuffer()
 slug: Web/API/MediaSource/addSourceBuffer
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - addSourceBuffer
-translation_of: Web/API/MediaSource/addSourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 {{domxref("MediaSource")}} インターフェイスの **`addSourceBuffer()`** メソッドは、指定された {{Glossary("MIME type","MIME タイプ")}}の新しい {{domxref("SourceBuffer")}} を作成し、`MediaSource` の {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} リストに追加します。 新しい `SourceBuffer` も返されます。

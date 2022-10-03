@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.bindFramebuffer()
 slug: Web/API/WebGLRenderingContext/bindFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindFramebuffer()`** 方法将给定的 {{domxref("WebGLFramebuffer")}} 绑定到目标。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindFramebuffer()`** 方法将给定的 {{domxref("WebGLFramebuffer")}} 绑定到目标。
 
 ## 语法
 
@@ -21,7 +22,7 @@ void gl.bindFramebuffer(target, framebuffer);
     - `gl.FRAMEBUFFER`: 收集用于渲染图像的颜色，alpha，深度和模板缓冲区的缓冲区数据存储。
     - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
 
-      - `gl.DRAW_FRAMEBUFFER`: 相当于`gl.FRAMEBUFFER`， 用作绘图，渲染，清除和写入操作。
+      - `gl.DRAW_FRAMEBUFFER`: 相当于`gl.FRAMEBUFFER`，用作绘图，渲染，清除和写入操作。
       - `gl.READ_FRAMEBUFFER`: 用作读取操作的资源。
 
 - framebuffer
@@ -61,7 +62,7 @@ gl.getParameter(gl.FRAMEBUFFER_BINDING);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindFramebuffer")}}
+{{Compat}}
 
 ## 另见
 

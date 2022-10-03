@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/font-display
 ---
+
 {{CSSRef}}
 
 La propriété **`font-display`** détermine la façon dont une fonte est affichée selon qu'elle ait été chargée et prête à être utilisée.
@@ -68,10 +69,8 @@ font-display: optional;
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Fonts', '#font-display-desc', 'font-display')}} | {{Spec2('CSS4 Fonts')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-display")}}
+{{Compat}}

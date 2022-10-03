@@ -2,6 +2,7 @@
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 Intersection Observer API 提供了一种异步检测目标元素与祖先元素或 {{Glossary("viewport")}} 相交情况变化的方法。
@@ -99,7 +100,7 @@ let callback =(entries, observer) => {
 
 #### The intersection root and root margin
 
-在我们开始跟踪 target 元素和容器元素之前，我们要先知道什么是容器 (root) 元素。容器元素又称为 **intersection root**，或 **root element**。 这个既可以是 target 元素祖先元素也可以是指定 null 则使用浏览器视口做为容器 (root)。
+在我们开始跟踪 target 元素和容器元素之前，我们要先知道什么是容器 (root) 元素。容器元素又称为 **intersection root**，或 **root element**。这个既可以是 target 元素祖先元素也可以是指定 null 则使用浏览器视口做为容器 (root)。
 
 **_root intersection rectangle_** 是用来对目标元素进行相交检测的矩形，它的大小有以下几种情况：
 
@@ -117,7 +118,7 @@ IntersectionObserver API 并不会每次在元素的交集发生变化的时候�
 
 Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
 
-为了让我们感受下 thresholds 是如何工作的，尝试滚动以下的例子，每一个 colored box 的四个边角都会展示自身在 root 元素中的可见程度百分比，所以在你滚动 root 的时候你将会看到四个边角的数值一直在发生变化。 每一个 box 都有不同的 thresholds：
+为了让我们感受下 thresholds 是如何工作的，尝试滚动以下的例子，每一个 colored box 的四个边角都会展示自身在 root 元素中的可见程度百分比，所以在你滚动 root 的时候你将会看到四个边角的数值一直在发生变化。每一个 box 都有不同的 thresholds：
 
 - 第一个盒子的 thresholds 包含每个可视百分比，也就是说，{{domxref("IntersectionObserver.thresholds")}} 数组是 `[0.00, 0.01, 0.02, ..., 0.99, 1.00]`。
 - 第二个盒子只有唯一的值 `[0.5]`。
@@ -507,10 +508,10 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## 浏览器兼容性
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
-## 更多参考
+## 参见
 
-- [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver/blob/master/polyfill/intersection-observer.js)
+- [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver)
 - [Timing element visibility with the Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
 - {{domxref("IntersectionObserver")}} and {{domxref("IntersectionObserverEntry")}}

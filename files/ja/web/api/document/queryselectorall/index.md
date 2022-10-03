@@ -1,21 +1,8 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-tags:
-  - API
-  - CSS セレクター
-  - DOM
-  - Document
-  - Finding Elements
-  - Locating Elements
-  - メソッド
-  - リファレンス
-  - Searching Elements
-  - Selecting Elements
-  - セレクター
-  - querySelectorAll
-translation_of: Web/API/Document/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} の **`querySelectorAll()`** メソッドは、与えられた CSS セレクターに一致する文書中の要素のリストを示す静的な (ライブではない) {{domxref("NodeList")}} を返します。

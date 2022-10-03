@@ -1,13 +1,8 @@
 ---
 title: PerformanceResourceTiming
 slug: Web/API/PerformanceResourceTiming
-tags:
-  - DOM
-  - Web パフォーマンス
-  - インターフェイス
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`PerformanceResourceTiming`** インターフェイスは、アプリケーションのリソースのロードに関する詳細なネットワークタイミングデータの取得と分析を可能にします。アプリケーションはタイミングメトリックを使用して、たとえば、{{domxref("XMLHttpRequest")}}、{{SVGElement("SVG","SVG 要素")}}、画像、スクリプトなどの特定のリソースを取得するのにかかる時間を判断できます。

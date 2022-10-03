@@ -2,6 +2,7 @@
 title: <msup>
 slug: Web/MathML/Element/msup
 ---
+
 {{MathMLRef}}
 
 MathML **`<msup>`** 元素用于为表达式加上标。

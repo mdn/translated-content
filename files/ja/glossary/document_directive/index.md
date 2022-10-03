@@ -1,15 +1,8 @@
 ---
 title: Document directive (文書ディレクティブ)
 slug: Glossary/Document_directive
-tags:
-  - CSP
-  - ディレクティブ
-  - 文書
-  - 用語集
-  - HTTP
-  - セキュリティ
-translation_of: Glossary/Document_directive
 ---
+
 **{{Glossary("CSP")}} の文書ディレクティブ**は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、ポリシーが適用される文書または[ワーカー](/ja/docs/Web/API/Web_Workers_API)環境のプロパティを管理します。
 
 文書ディレクティブは {{CSP("default-src")}} ディレクティブで代替されることはありません。

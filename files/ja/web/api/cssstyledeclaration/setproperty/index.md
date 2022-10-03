@@ -1,14 +1,8 @@
 ---
 title: CSSStyleDeclaration.setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/setProperty
-browser-compat: api.CSSStyleDeclaration.setProperty
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSStyleDeclaration.setProperty()`** メソッドインターフェイスは、 CSS スタイル宣言オブジェクトのプロパティに新しい値を設定します。

@@ -1,16 +1,9 @@
 ---
 title: Navigator.product
 slug: Web/API/Navigator/product
-tags:
-  - API
-  - Deprecated
-  - Navigator
-  - Property
-  - Reference
-translation_of: Web/API/NavigatorID/product
 original_slug: Web/API/NavigatorID/product
-browser-compat: api.Navigator.product
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`Navigator.product`** プロパティの値は、どのブラウザーでも常に "`Gecko`" です。このプロパティは互換性のためだけに維持されています。

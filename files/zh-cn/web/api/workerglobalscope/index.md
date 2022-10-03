@@ -2,9 +2,10 @@
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
-[Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) 的 **`WorkerGlobalScope`** 接口 是一个代表了任何 scope of worker 的接口. Workers 没有浏览内容；这个 scope 包含的信息总是通过 {{domxref("Window")}} objects 传递 — 比如 event handlers, the console or the associated {{domxref("WorkerNavigator")}} object。每个 `WorkerGlobalScope` 都有自己的事件循环。
+[Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) 的 **`WorkerGlobalScope`** 接口 是一个代表了任何 scope of worker 的接口。Workers 没有浏览内容；这个 scope 包含的信息总是通过 {{domxref("Window")}} objects 传递 — 比如 event handlers, the console or the associated {{domxref("WorkerNavigator")}} object。每个 `WorkerGlobalScope` 都有自己的事件循环。
 
 每个 worker type 都有专门的这个接口：{{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for [ServiceWorker](/zh-CN/docs/Web/API/ServiceWorker_API). `self` 属性返回每个内容的专门 scope.
 
@@ -101,7 +102,7 @@ console.log(navigator);
 
 ## Browser compatibility
 
-{{Compat("api.WorkerGlobalScope")}}
+{{Compat}}
 
 ## See also
 

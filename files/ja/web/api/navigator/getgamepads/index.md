@@ -1,16 +1,8 @@
 ---
 title: Navigator.getGamepads()
 slug: Web/API/Navigator/getGamepads
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - Games
-  - Method
-  - Navigator
-  - Reference
-translation_of: Web/API/Navigator/getGamepads
 ---
+
 {{APIRef("Gamepad API")}}{{SeeCompatTable}}
 
 **`Navigator.getGamepads()`** メソッドは配列を返します。最初の値は `null` であり、その他はすべて {{ domxref("Gamepad") }} オブジェクトで、デバイスに接続されている各ゲームパッドのオブジェクトです。 したがって、ゲームパッドが接続されていない場合、メソッドは `null` を返します。

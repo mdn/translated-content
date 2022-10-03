@@ -1,18 +1,8 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Element/input/button
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Element
-  - Input Type
-  - Reference
-  - button
-translation_of: Web/HTML/Element/input/button
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} 要素の **`button`** 型は、単純なプッシュボタンとして描画され、イベントハンドラー関数 (ふつうは {{event("click")}} イベント) を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。

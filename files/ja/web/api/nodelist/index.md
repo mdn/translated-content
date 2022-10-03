@@ -1,14 +1,8 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
-tags:
-  - API
-  - DOM
-  - Interface
-  - NodeList
-  - インターフェイス
-translation_of: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeList`** オブジェクトは{{Glossary("Node/DOM", "ノード")}}の集合であり、 {{domxref("Node.childNodes")}} などのプロパティや {{domxref("document.querySelectorAll()")}} などのメソッドの返値として用いられます。

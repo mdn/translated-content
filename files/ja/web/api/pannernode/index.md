@@ -1,16 +1,8 @@
 ---
 title: PannerNode
 slug: Web/API/PannerNode
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PannerNode
-  - Reference
-  - Web Audio API
-browser-compat: api.PannerNode
-translation_of: Web/API/PannerNode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `PannerNode` は音源の空間上の位置と振る舞いを表現したインターフェイスで、{{domxref("AudioNode")}} の一種です。右手直交座標系に従って位置を表し、音源の動きは速度ベクトルと、向きを表すサウンドコーンを利用して表現します。

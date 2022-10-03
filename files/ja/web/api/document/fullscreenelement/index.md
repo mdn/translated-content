@@ -1,25 +1,9 @@
 ---
 title: DocumentOrShadowRoot.fullscreenElement
 slug: Web/API/Document/fullscreenElement
-tags:
-  - API
-  - Document
-  - DocumentOrShadowRoot
-  - Full-screen
-  - Fullscreen API
-  - Graphics
-  - Property
-  - Read-only
-  - Reference
-  - ShadowRoot
-  - fullscreenElement
-  - screen
-  - グラフィック
-  - 全画面
-  - 読み取り専用
-translation_of: Web/API/DocumentOrShadowRoot/fullscreenElement
 original_slug: Web/API/DocumentOrShadowRoot/fullscreenElement
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 **`DocumentOrShadowRoot.fullscreenElement`** プロパティは読み取り専用で、この文書内で現在全画面モードで表示されている {{ domxref("Element") }} を返し、全画面モードを使用していない場合は `null` を返します。

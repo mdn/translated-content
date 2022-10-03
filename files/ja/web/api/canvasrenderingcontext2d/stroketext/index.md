@@ -1,22 +1,8 @@
 ---
 title: CanvasRenderingContext2D.strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Draw String
-  - Draw Text
-  - 文字列の描画
-  - テキストの描画
-  - メソッド
-  - リファレンス
-  - Stroke String
-  - テキストの輪郭
-  - strokeText
-browser-compat: api.CanvasRenderingContext2D.strokeText
-translation_of: Web/API/CanvasRenderingContext2D/strokeText
 ---
+
 {{APIRef}}
 
 {{domxref("CanvasRenderingContext2D")}} の **`strokeText()`** メソッドはキャンバス 2D API の一部であり、テキスト文字列の文字の輪郭を指定した座標に描画します。オプションの引数で、描画されるテキストの最大幅を指定することができます。{{Glossary("user agent", "ユーザーエージェント")}}はこの幅を実現するために、テキストを圧縮したり、フォントサイズを縮小したりします。

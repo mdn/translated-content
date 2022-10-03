@@ -1,14 +1,8 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Status/408
-tags:
-  - HTTP
-  - HTTPステータスコード
-  - クライアントエラー
-  - ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/408
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) **`408 Request Timeout`** レスポンスステータスコードはサーバーがこの未使用のコネクションをシャットダウンすることを意味します。 _クライアントからの以前のリクエストがなくても_、一部のサーバーによってアイドル状態のコネクションで送信されます。

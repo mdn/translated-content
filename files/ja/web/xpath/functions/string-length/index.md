@@ -1,11 +1,8 @@
 ---
 title: string-length
 slug: Web/XPath/Functions/string-length
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/string-length
 ---
+
 {{ XsltRef() }}
 
 `string-length` 関数は、与えられた文字列の文字数に等しい数値を返します。

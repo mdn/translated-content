@@ -1,14 +1,9 @@
 ---
 title: API リファレンスの書き方
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference
-tags:
-  - API
-  - Documentation
-  - Guide
-  - Howto
-  - MDN Meta
 original_slug: MDN/Writing_guidelines/Howto/Write_an_API_reference
 ---
+
 {{MDNSidebar}}
 
 このガイドでは、 MDN で API リファレンスを書くために必要なすべてのことを説明します。
@@ -73,7 +68,7 @@ API リファレンスには、一般的に次のようなページが含まれ�
 #### 概要ページ
 
 API の概要ページは、 API の役割、最上位のインターフェイス、他のインターフェイスに含まれる関連機能、その他の高水準な詳細を説明するために使われます。
-名前とスラッグは API の名前と最後に "API" を付けたものとしてください。 API リファレンスの最上位に置かれ、[https://developer.mozilla.org/ja/docs/Web/API](/en-US/docs/Web/API)の子として扱われます。
+名前とスラッグは API の名前と最後に "API" を付けたものとしてください。 API リファレンスの最上位に置かれ、[https://developer.mozilla.org/ja/docs/Web/API](/ja/docs/Web/API)の子として扱われます。
 
 例:
 
@@ -208,7 +203,7 @@ API の概要ページは、 API の役割、最上位のインターフェイ�
   - end
   - …
 
-リストの各インターフェイスは、 https\://developer.mozilla.org/ja/docs/Web/API のサブページとして独立したページが作成されています。例えば、 {{domxref("AudioContext")}} の記事は、https://developer.mozilla.org/ja/docs/Web/API/AudioContext の場所にあります。各[インターフェイスページ](#インターフェイスページ)では、そのインターフェイスが何をするのかを説明し、そのインターフェイスを構成するメソッドとプロパティのリストを提供しています。そして、各メソッドとプロパティは、それがメンバーであるインターフェイスのサブページとして作成され、それ自身のページで文書化されます。例えば、 {{domxref("BaseAudioContext/currentTime")}} は、 https\://developer.mozilla.org/ja/docs/Web/API/AudioContext/currentTime で文書化されています。
+リストの各インターフェイスは、 `https://developer.mozilla.org/ja/docs/Web/API` のサブページとして独立したページが作成されています。例えば、 {{domxref("AudioContext")}} の記事は、`https://developer.mozilla.org/ja/docs/Web/API/AudioContext` の場所にあります。各[インターフェイスページ](#インターフェイスページ)では、そのインターフェイスが何をするのかを説明し、そのインターフェイスを構成するメソッドとプロパティのリストを提供しています。そして、各メソッドとプロパティは、それがメンバーであるインターフェイスのサブページとして作成され、それ自身のページで文書化されます。例えば、 {{domxref("BaseAudioContext/currentTime")}} は、 `https://developer.mozilla.org/ja/docs/Web/API/AudioContext/currentTime` で文書化されています。
 
 ## ページの作成
 

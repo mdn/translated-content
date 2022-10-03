@@ -1,13 +1,8 @@
 ---
 title: ProgressEvent.loaded
 slug: Web/API/ProgressEvent/loaded
-tags:
-  - API
-  - 進捗イベント
-  - ProgressEvent
-  - プロパティ
-browser-compat: api.ProgressEvent.loaded
 ---
+
 {{APIRef("DOM Events")}}
 
 **`ProgressEvent.loaded`** は読み取り専用プロパティであり、整数で基礎となるプロセスの既に行われた仕事の量を表します。進捗率は、このプロパティと `ProgressEvent.total` から計算することができます。

@@ -1,20 +1,8 @@
 ---
 title: CSS 座標変換の使用
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
-tags:
-  - 3D
-  - Advanced
-  - CSS
-  - CSS 座標変換
-  - グラフィック
-  - ガイド
-  - 回転
-  - 拡大縮小
-  - Scaling
-  - perspective
-  - rotation
-translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
 ---
+
 {{CSSRef}}
 
 **CSS 座標変換** (transform) は、座標空間を編集することで、通常のフロー処理を混乱させずに影響下にあるコンテンツの形状や位置を変えることができます。このガイドは座標変換の使用についての解説を行ないます。

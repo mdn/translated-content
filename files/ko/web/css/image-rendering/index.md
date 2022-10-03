@@ -10,7 +10,7 @@ translation_of: Web/CSS/image-rendering
 ---
 {{CSSRef}}
 
-**`image-rendering`** [CSS](/ko/docs/Web/CSS "CSS") 프로퍼티는 브라우저의 이미지 스케일링 방식에 대한 힌트를 제공합니다. 이 프로퍼티는 엘리먼트 자신에게 적용시킵니다. 스케일링(크기변경)이 안 된 이미지에게는 적용되지 않습니다.
+**`image-rendering`** [CSS](/ko/docs/Web/CSS) 프로퍼티는 브라우저의 이미지 스케일링 방식에 대한 힌트를 제공합니다. 이 프로퍼티는 엘리먼트 자신에게 적용시킵니다. 스케일링(크기변경)이 안 된 이미지에게는 적용되지 않습니다.
 
 예를들어, 100x100 픽셀의 이미지가 있는데 페이지에서 요구하는 이미지는 200x200픽셀 (혹은 50x50px)이라면, 이미지는 새로운 면적만큼의 특정 알고리즘으로 인해 확대(혹은 축소)됩니다. 스케일링은 사용자의 상호작용(줌기능) 으로 인해 일어날겁니다.
 
@@ -40,7 +40,7 @@ image-rendering: unset;
 - **`pixelated`**
   - : 이미지 스케일링을 크게 확대할 때는 "nearest neighbor" 혹은 비슷한 알고리즘을 반드시 사용해야 합니다. 그래서 이미지의 큰 픽셀로 구성해서 나타낼 수 있습니다. 이미지를 작게 축소할 때는 "auto" 속성과 같습니다.
 
-> **참고:** The values <span id="cke_bm_145S" class="hidden"></span>`optimizeQuality` and `optimizeSpeed` present in early draft (and coming from its SVG counterpart) are defined as synonyms for the `auto` value.
+> **참고:** The values `optimizeQuality` and `optimizeSpeed` present in early draft (and coming from its SVG counterpart) are defined as synonyms for the `auto` value.
 
 ### 공식 문법
 

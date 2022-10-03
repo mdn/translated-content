@@ -1,19 +1,8 @@
 ---
 title: フロート
 slug: Learn/CSS/CSS_layout/Floats
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Clearing
-  - CodingScripting
-  - Floats
-  - Guide
-  - Layout
-  - columns
-  - multi-column
-translation_of: Learn/CSS/CSS_layout/Floats
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
 
 {{cssxref("float")}} プロパティは、もともとはテキストブロック内の浮動画像のためのものでしたが、ウェブページ上に複数列レイアウトを作成するために最も一般的に使われるツールの 1 つになりました。 この記事で説明しているように、フレックスボックスとグリッドの出現により、今は当初の目的に戻っています。

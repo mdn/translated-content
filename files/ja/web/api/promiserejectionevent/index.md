@@ -1,18 +1,8 @@
 ---
 title: PromiseRejectionEvent
 slug: Web/API/PromiseRejectionEvent
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - JavaScript
-  - PromiseRejectionEvent
-  - Promises
-  - Reference
-  - events
-  - イベント
-translation_of: Web/API/PromiseRejectionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`PromiseRejectionEvent`** インターフェイスは、 JavaScript の {{jsxref("Promise")}} が拒否されたときにグローバルスクリプトコンテキストに送信されるイベントを表します。これらのイベントは、測定やデバッグ目的に使用すると特に有益です。

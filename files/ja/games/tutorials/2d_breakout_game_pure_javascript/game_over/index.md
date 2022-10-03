@@ -1,17 +1,9 @@
 ---
 title: ゲームオーバー
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-tags:
-  - Beginner
-  - Canvas
-  - Games
-  - Graphics
-  - JavaScript
-  - Tutorial
-  - game over
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}

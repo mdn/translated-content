@@ -4,6 +4,7 @@ slug: Web/API/Window/pageshow_event
 translation_of: Web/API/Window/pageshow_event
 original_slug: Web/Events/pageshow
 ---
+
 L’évènement `pageshow` est émis lorsqu’une entrée dans un historique de session est atteinte (cela comprend les boutons précédent / suivant ainsi que l’affichage initial de la page après l’évènement `onload`).
 
 ## Informations générales
@@ -50,14 +51,11 @@ Bien que ce ne soit pas la meilleure pratique, vous pouvez également ajouter l�
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('HTML WHATWG', 'browsing-the-web.html#event-pageshow', 'pageshow')}} | {{Spec2('HTML WHATWG')}} | Spécification initiale. |
-| {{SpecName('HTML5 W3C', 'browsers.html#event-pageshow', 'pageshow')}}             | {{Spec2('HTML5 W3C')}}     |                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.pageshow_event")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,9 @@
 ---
 title: progressbar ロールの使用
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 ---
+
 このテクニックは、[`progressbar`](http://www.w3.org/TR/wai-aria/#progressbar) ロールの使い方を示し、ブラウザーや支援技術への影響について説明します。
 
 `progressbar` ロールは、長い時間がかかったり、いくつかの手順で構成されるタスクの進捗状況を表示する要素に使用するべきです。
@@ -52,7 +48,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 
 - [progressbar](http://www.w3.org/TR/wai-aria/#progressbar)
 - [aria-valuenow](http://www.w3.org/TR/wai-aria/#aria-valuenow)
-- [aria-valuemin](http://www.w3.org/TR/wai-aria/#aria-valuemin "ARIA techniques")
+- [aria-valuemin](http://www.w3.org/TR/wai-aria/#aria-valuemin)
 - [aria-valuemax](http://www.w3.org/TR/wai-aria/#aria-valuemax)
 - [aria-valuetext](http://www.w3.org/TR/wai-aria/#aria-valuetext)
 

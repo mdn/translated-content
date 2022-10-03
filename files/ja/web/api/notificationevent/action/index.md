@@ -1,20 +1,8 @@
 ---
 title: NotificationEvent.action
 slug: Web/API/NotificationEvent/action
-tags:
-  - API
-  - Experimental
-  - NotificationEvent
-  - Notifications
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - action
-  - プロパティ
-  - 通知
-translation_of: Web/API/NotificationEvent/action
 ---
+
 {{APIRef("Web Notifications")}}
 
 ユーザーがクリックした通知ボタンの文字列 ID を返します。ユーザーがアクションボタン以外の場所で通知をクリックした場合、または通知にボタンがない場合、この値は空の文字列を返します。通知 ID は、アクション配列属性を介した通知の作成中に設定され、通知が置き換えられない限り変更することはできません。

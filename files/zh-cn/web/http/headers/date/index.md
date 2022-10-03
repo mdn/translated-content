@@ -2,6 +2,7 @@
 title: Date
 slug: Web/HTTP/Headers/Date
 ---
+
 {{HTTPSidebar}}
 
 **`Date`** 是一个通用首部，其中包含了报文创建的日期和时间。
@@ -33,7 +34,7 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 - \<second>
   - : 2 位数字表示秒数，例如， "04" 或 "59"。
 - GMT
-  - : 格林尼治标准时间。 在 HTTP 协议中，时间都是用格林尼治标准时间来表示的，而不是本地时间。
+  - : 格林尼治标准时间。在 HTTP 协议中，时间都是用格林尼治标准时间来表示的，而不是本地时间。
 
 ## 示例
 

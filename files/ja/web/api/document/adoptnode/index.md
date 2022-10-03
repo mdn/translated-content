@@ -1,17 +1,8 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - NeedsExample
-  - NeedsSpecTable
-  - NeedsUpdate
-  - Reference
-translation_of: Web/API/Document/adoptNode
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.adoptNode()`** は、{{Glossary("node/dom", "ノード")}}を他の{{domxref("Document", "文書", "", "1")}}からメソッドの文書へ移動します。取り込まれたノードおよびそのサブツリーは (もしあれば) 元の文書から削除され、 {{domxref("Node.ownerDocument", "ownerDocument")}} が現在の文書に変更されます。その後、ノードを現在の文書に挿入することができます。

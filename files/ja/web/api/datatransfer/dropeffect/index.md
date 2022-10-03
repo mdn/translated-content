@@ -1,16 +1,8 @@
 ---
 title: DataTransfer.dropEffect
 slug: Web/API/DataTransfer/dropEffect
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.dropEffect
-translation_of: Web/API/DataTransfer/dropEffect
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.dropEffect`** プロパティは、ドラッグ＆ドロップ操作中にユーザーに与えられるフィードバック（通常は視覚的）を制御します。これは、ドラッグ中に表示されるカーソルに影響します。例えば、ユーザーがターゲットのドロップ要素の上にカーソルを置くと、ブラウザーのカーソルが、どの種類の操作が発生するかを示すことができます。

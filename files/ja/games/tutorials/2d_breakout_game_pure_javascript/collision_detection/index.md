@@ -1,17 +1,9 @@
 ---
 title: 衝突検出
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-tags:
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Tutorial
-  - collision
-  - detection
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

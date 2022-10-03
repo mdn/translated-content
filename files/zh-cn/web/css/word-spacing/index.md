@@ -2,6 +2,7 @@
 title: word-spacing
 slug: Web/CSS/word-spacing
 ---
+
 {{ CSSRef() }}
 
 ## Summary
@@ -31,7 +32,7 @@ word-spacing: inherit;
 
 ### Formal syntax
 
-[How to read CSS syntax.](https://developer.mozilla.org/docs/Web/CSS/Value_definition_syntax)
+[How to read CSS syntax.](/docs/Web/CSS/Value_definition_syntax)
 
 {{csssyntax("word-spacing")}}
 
@@ -51,7 +52,7 @@ word-spacing: inherit;
 
 会为两个包含如下内容 {{ HTMLElement("div") }} 标签添加如下样式：
 
-![example.png](https://developer.mozilla.org/@api/deki/files/6103/=example.png)
+![example.png](/@api/deki/files/6103/=example.png)
 
 ## Specifications
 

@@ -1,14 +1,8 @@
 ---
 title: CloseEvent()
 slug: Web/API/CloseEvent/CloseEvent
-tags:
-  - API
-  - CloseEvent
-  - コンストラクター
-  - リファレンス
-browser-compat: api.CloseEvent.CloseEvent
-translation_of: Web/API/CloseEvent/CloseEvent
 ---
+
 {{APIRef("Websockets API")}}
 
 **`CloseEvent()`** コンストラクターは新しい {{domxref("CloseEvent")}} オブジェクトを作成します。

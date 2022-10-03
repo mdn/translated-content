@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
 original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Les_liaisons_JavaScript_XSLT
 ---
+
 ## Les liaisons JavaScript/XSLT
 
 JavaScript peut exécuter des transformations XSLT à travers l'objet `XSLTProcessor`. Un fois instancié, un `XSLTProcessor` a une méthode `importStylesheet` qui prend comme argument la feuille de style XSLT à utiliser pour la transformation. La feuille de style doit être passée comme un document XML, ce qui signifie que le fichier .xsl doit être chargé par la page avant d'appeler `importStylesheet`. Cela peut être fait par `XMLHttpRequest` ou par `XMLDocument.load`.
