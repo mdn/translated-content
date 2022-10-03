@@ -65,9 +65,9 @@ for (const i in obj) {
 ### Iteração de array
 
 O laço for...in [não deve ser usado para iteração de Array](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in).
-Pretendia utilizar um laço [for](/pt-BR/docs/Web/JavaScript/Reference/Statements/for)
-em vez de um laço "for-in" para iterar um {{jsxref("Array")}}? O
-laço "for" permite também definir um inicializador então:
+Pretendia utilizar um laço [`for`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for)
+em vez de um laço `for-in` para iterar um {{jsxref("Array")}}? O
+laço `for` permite também definir um inicializador então:
 
 ```js example-good
 const arr = ["a", "b", "c"];
