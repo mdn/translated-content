@@ -1,7 +1,6 @@
 ---
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
-browser-compat: api.AudioBufferSourceNode
 ---
 
 {{APIRef("Web Audio API")}}

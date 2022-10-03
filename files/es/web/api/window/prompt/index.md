@@ -4,7 +4,6 @@ slug: Web/API/Window/prompt
 tags:
   - Referencia
   - metodo
-browser-compat: api.Window.prompt
 translation_of: Web/API/Window/prompt
 ---
 {{ApiRef("Window")}}

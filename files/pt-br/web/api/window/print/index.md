@@ -5,7 +5,6 @@ tags:
   - DOM
   - Window
   - print
-browser-compat: api.Window.print
 translation_of: Web/API/Window/print
 ---
 {{ ApiRef() }}
