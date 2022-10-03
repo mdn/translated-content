@@ -427,5 +427,3 @@ Ejemplos de esta utilización pueden ser encontrados [arriba](/En/HTTP_access_co
 - [Discusión adicional sobre el encabezado Origin](http://crypto.stanford.edu/websec/specs/origin-header/)
 - [Usando CORS con todos los exploradores (modernos).](http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx)
 - [Usando CORS - HTML5 Rocks](http://www.html5rocks.com/en/tutorials/cors/)
-
-{{ languages( { "ja": "ja/HTTP\_access\_control" } ) }}
