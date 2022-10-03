@@ -82,7 +82,7 @@ document.getElementById("formInstruction").setAttribute("role", "alert");
 
 #### Ejemplo 4: Hacer un elemento con un rol de alerta visible
 
-If an element already has `role="alert" `and is initially hidden using CSS, making it visible will cause the alert to fire as if it was just added to the page. This means that an existing alert can be "reused" multiple times.
+If an element already has `role="alert"`and is initially hidden using CSS, making it visible will cause the alert to fire as if it was just added to the page. This means that an existing alert can be "reused" multiple times.
 
 **Note:** In most cases this approach is not recommended, because it's not ideal to hide error or alert text that is currently not applicable. Users of older assistive technology may still be able to perceive the alert text even when the alert does not currently applies, causing users to incorrectly believe that there is a problem.
 

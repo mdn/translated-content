@@ -25,11 +25,11 @@ Los Componentes Web apuntan a resolver dichos problemas — consiste en tres tec
 
 La aproximación básica para implementar un componente web, generalmente es la siguiente:
 
-1.  Crear una clase o función en la cual especificar la funcionalidad del componente web. Si se usa una clase, usar la sintaxis de ES2015 (ver [Clases](/es/docs/Web/JavaScript/Reference/Classes) para más información).
-2.  Registrar el nuevo elemento personalizado utilizando el método {{domxref("CustomElementRegistry.define()")}}, pasándole el nombre del elemento a ser definido, la clase o función en la cuál su funcionalidad esta especificada, y opcionalmente, de que elemento hereda.
-3.  Si se requiere, adjuntar un shadow DOM al elemento personalizado usando el método {{domxref("Element.attachShadow()")}}. Añadir elementos hijos, oyentes de eventos, etc., al shadow DOM utilizando métodos normales del DOM.
-4.  Si se requiere, definir una plantilla HTML utilizando {{htmlelement("template")}} y {{htmlelement("slot")}}. Nuevamente usar métodos regulares del DOM para clonar la plantilla y acoplarla al shadow DOM.
-5.  Utilizar los componentes personalizados en la página web cuando se desee, como se utilizaría cualquier otro elemento HTML.
+1. Crear una clase o función en la cual especificar la funcionalidad del componente web. Si se usa una clase, usar la sintaxis de ES2015 (ver [Clases](/es/docs/Web/JavaScript/Reference/Classes) para más información).
+2. Registrar el nuevo elemento personalizado utilizando el método {{domxref("CustomElementRegistry.define()")}}, pasándole el nombre del elemento a ser definido, la clase o función en la cuál su funcionalidad esta especificada, y opcionalmente, de que elemento hereda.
+3. Si se requiere, adjuntar un shadow DOM al elemento personalizado usando el método {{domxref("Element.attachShadow()")}}. Añadir elementos hijos, oyentes de eventos, etc., al shadow DOM utilizando métodos normales del DOM.
+4. Si se requiere, definir una plantilla HTML utilizando {{htmlelement("template")}} y {{htmlelement("slot")}}. Nuevamente usar métodos regulares del DOM para clonar la plantilla y acoplarla al shadow DOM.
+5. Utilizar los componentes personalizados en la página web cuando se desee, como se utilizaría cualquier otro elemento HTML.
 
 ## Tutoriales
 
@@ -161,8 +161,8 @@ Para revisar detalladamente el soporte para ciertas características (sobre todo
 ## Ver también
 
 - [webcomponents.org](https://www.webcomponents.org/) — Sitio que presenta ejemplos, tutoriales y otra información site featuring web components examples, tutorials, and other information.
-- [open-wc ](https://open-wc.org/)— Sitio que incluye recomendaciones para el desarrollo, linting, testeo, demos, publicación y automatización de componentes web
-- [webcomponents.dev ](https://webcomponents.dev/features/)— Sitio que provee de una interfaz de desarrollo online para trabajar con componentes web, ya sea nativamente o con diferentes librerías
+- [open-wc](https://open-wc.org/)— Sitio que incluye recomendaciones para el desarrollo, linting, testeo, demos, publicación y automatización de componentes web
+- [webcomponents.dev](https://webcomponents.dev/features/)— Sitio que provee de una interfaz de desarrollo online para trabajar con componentes web, ya sea nativamente o con diferentes librerías
 - [Hybrids](https://github.com/hybridsjs/hybrids) — Librería para componentes web de código abierto, que favorece objetos simples y funciones puras sobre la sintasis `class` y this. Provee de una sencilla y funcional API para crear elementos personalizados.
 - [LitElement (Proyecto Polymer)](https://www.polymer-project.org/) — Marcos de trabajo para componentes web de Google — con un conjunto de polyfills, mejoras y ejemplos. Actualmente es la forma más sencilla de usar componentes web.
 - [Snuggsi](https://github.com/devpunks/snuggsi#readme) — Componentes web facilmente en \~1kB _incluyedo polyfill_ — Todo lo que se necesita es un navegador y conocimientos básicos de HTML, CSS y clases de JavaScript para ser productivo.

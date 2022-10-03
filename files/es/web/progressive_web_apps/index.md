@@ -39,12 +39,12 @@ Para saber cómo implementar PWA, lee la {{web.link("/es/docs/Web/Progressive_we
 
 Las siguientes guías te muestran lo que debes hacer para implementar una PWA, examinando un ejemplo simple y mostrándote cómo funcionan todas las piezas.
 
-1.  {{web.link("/es/docs/Web/Progressive_web_apps/Introduction", "Introducción a las aplicaciones web progresivas")}}
-2.  {{web.link("/es/docs/Web/Progressive_web_apps/App_structure", "Estructura de la aplicación web progresiva")}}
-3.  {{web.link("/es/docs/Web/Progressive_web_apps/Offline_Service_workers", "Hacer que las PWAs funcionen sin conexión con el servicio de workers")}}
-4.  {{web.link("/es/docs/Web/Progressive_web_apps/Installable_PWAs", "Cómo hacer que las PWAs se puedan instalar")}}
-5.  {{web.link("/es/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Cómo hacer que las PWAs puedan volver a interactuar usando Notificaciones y Push")}}
-6.  {{web.link("/es/docs/Web/Progressive_web_apps/Loading", "Carga progresiva")}}
+1. {{web.link("/es/docs/Web/Progressive_web_apps/Introduction", "Introducción a las aplicaciones web progresivas")}}
+2. {{web.link("/es/docs/Web/Progressive_web_apps/App_structure", "Estructura de la aplicación web progresiva")}}
+3. {{web.link("/es/docs/Web/Progressive_web_apps/Offline_Service_workers", "Hacer que las PWAs funcionen sin conexión con el servicio de workers")}}
+4. {{web.link("/es/docs/Web/Progressive_web_apps/Installable_PWAs", "Cómo hacer que las PWAs se puedan instalar")}}
+5. {{web.link("/es/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Cómo hacer que las PWAs puedan volver a interactuar usando Notificaciones y Push")}}
+6. {{web.link("/es/docs/Web/Progressive_web_apps/Loading", "Carga progresiva")}}
 
 ## Guías tecnológicas
 

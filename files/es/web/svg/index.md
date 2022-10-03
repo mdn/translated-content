@@ -12,7 +12,7 @@ translation_of: Web/SVG
 **[Comenzando con SVG](/es/docs/SVG/Tutorial)**
 Este tutorial te ayudará a comenzar a usar SVG.
 
-**Gráficos vectoriales escalables** **(SVG)** es un lenguaje de marcado [XML](/es/docs/XML_Introduction) para describir [gráficos vectoriales ](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)en dos dimensiones. Básicamente, es a los gráficos lo que [HTML](/es/docs/web/HTML) es al texto.
+**Gráficos vectoriales escalables** **(SVG)** es un lenguaje de marcado [XML](/es/docs/XML_Introduction) para describir [gráficos vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)en dos dimensiones. Básicamente, es a los gráficos lo que [HTML](/es/docs/web/HTML) es al texto.
 
 SVG es un estándar Web abierto basado en texto. Está expresamente diseñado para trabajar con otros estándares web como [CSS](/es/docs/CSS "es/docs/CSS"), [DOM](/es/docs/DOM "es/docs/DOM"), y [SMIL](/es/docs/Web/SVG/SVG_animation_with_SMIL "es/docs/Web/SVG/SVG_animation_with_SMIL").
 
@@ -26,7 +26,9 @@ SVG es un estándar Web abierto basado en texto. Está expresamente diseñado pa
   - : Detalles acerca del API SVG DOM, para interacción con JavaScript.
 - [Aplicando efectos SVG a contenido HTML](/es/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
   - : SVG trabaja con with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}. Usa SVG para [mejorar una página HTML normal o aplicación web](/es/docs/SVG_In_HTML_Introduction).
+
 - ## Comunidad
+
   - : Ver foros de Mozilla... {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}
 
 ## Herramientas

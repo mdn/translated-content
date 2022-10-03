@@ -204,7 +204,7 @@ El uso de un elemento preconstruido en un documento web también es algo distint
 
 Usas el elemento `<ul>` como siempre, pero especificas el nombre del elemento personalizado mediante un atributo `is` .
 
-> **Nota:** De nuevo, puedes ver el código [fuente JavaScript completo ](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)aquí.
+> **Nota:** De nuevo, puedes ver el código [fuente JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)aquí.
 
 ## Usando callbacks de ciclo de vida
 
@@ -288,7 +288,7 @@ static get observedAttributes() { return ['c', 'l']; }
 
 Este código se coloca en la parte de arriba del constructor en nuestro ejemplo.
 
-> **Nota:** Busca el [código JavaScript completo ](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)aquí.
+> **Nota:** Busca el [código JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)aquí.
 
 ## Polyfills vs. clases
 

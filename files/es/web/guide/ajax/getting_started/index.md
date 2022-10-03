@@ -225,4 +225,3 @@ alert(root_node.firstChild.data);
 De esta manera se utiliza el objeto `XMLDocument` dado por `responseXML` y se usan métodos del DOM para acceder a la información contenida en el documento XML. El archivo `test.xml` se encuentra [aquí](http://www.w3clubs.com/mozdev/test.xml) y el script actualizado está [aquí](http://www.w3clubs.com/mozdev/httprequest_test_xml.html).
 
 Para más información sobre los metodos del DOM, visita los documentos de la [implementación del DOM de Mozilla](http://www.mozilla.org/docs/dom/).
-

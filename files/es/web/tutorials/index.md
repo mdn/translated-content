@@ -83,11 +83,11 @@ Estos recursos son creados por empresas innovadoras y desarrolladores web que ha
 
 - [Referencia CSS](/es/docs/CSS/CSS_Reference)
   - : Referencia completa para CCS con ayuda detallada por Firefox y otros navegadores.
-- [Desafíos CSS ](http://en.wikiversity.org/wiki/Web_Design/CSS_challenges)(Wikiversity)
+- [Desafíos CSS](http://en.wikiversity.org/wiki/Web_Design/CSS_challenges)(Wikiversity)
   - : Reta tus habilidades en CCS, con lo que podrás descubrir aquello que necesita mejorar.
 - [Conceptos intermedios CSS](http://www.html.net/tutorials/css/) (HTML.net)
   - : Agrupación, pseudo-clases y mucho más.
-- [Posicionamiento 101 CSS ](http://www.alistapart.com/articles/css-positioning-101/)(alistapart.com)
+- [Posicionamiento 101 CSS](http://www.alistapart.com/articles/css-positioning-101/)(alistapart.com)
   - : Usando posicionamiento con estándares complacientes y tablas de libre disposición.
 - [Mejora progresivamente con CSS](http://www.alistapart.com/articles/progressiveenhancementwithcss/) (alistapart.com)
   - : Intégrate mejorando progresivamente tus páginas web con CCS.
@@ -121,7 +121,7 @@ Estos recursos son creados por empresas innovadoras y desarrolladores web que ha
   - : ¿Qué es JavaScript y cómo puede ayudarte en el desarrollo web?
 - [Programar – Los fundamentos](http://docs.webplatform.org/wiki/concepts/programming/programming_basics) (WebPlatform.org)
   - : Fundamentos de programación. Los artículos te indican lo que puedes hacer con JavaScript, las mejores prácticas para utilizarlo y mucho más.
-- [Las mejores prácticas en JavaScript](http://dev.opera.com/articles/view/javascript-best-practices/)[ ](http://docs.webplatform.org/wiki/tutorials/javascript_best_practices)(WebPlatform.org)
+- [Las mejores prácticas en JavaScript](http://dev.opera.com/articles/view/javascript-best-practices/)[](http://docs.webplatform.org/wiki/tutorials/javascript_best_practices)(WebPlatform.org)
   - : Aprende algunas de las más evidentes (y no tan evidentes) mejores prácticas cuando escribes en JavaScript.
 
 ### Nivel intermedio
@@ -160,4 +160,4 @@ Estos recursos son creados por empresas innovadoras y desarrolladores web que ha
 
 **[Extensiones web](https://developer.mozilla.org/en-US/Add-ons/WebExtensions)**
 
-Extensiones Web es un sistema de navegación cruzada para desarrollar complementos del buscador. El sistema es en gran medida compatible con la [API (Interfaz de Programación de Aplicaciones) ](https://developer.chrome.com/extensions)respaldada por Google Chrome y Opera. En la mayoría de los casos, las extensiones escritas para estos buscadores pueden funcionar en Firefox o Microsoft Edge con [solo algunos cambios](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). La API es compatible también con el [multiprocesador de Firefox](https://developer.mozilla.org/en-US/Firefox/Multiprocess_Firefox).
+Extensiones Web es un sistema de navegación cruzada para desarrollar complementos del buscador. El sistema es en gran medida compatible con la [API (Interfaz de Programación de Aplicaciones)](https://developer.chrome.com/extensions)respaldada por Google Chrome y Opera. En la mayoría de los casos, las extensiones escritas para estos buscadores pueden funcionar en Firefox o Microsoft Edge con [solo algunos cambios](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). La API es compatible también con el [multiprocesador de Firefox](https://developer.mozilla.org/en-US/Firefox/Multiprocess_Firefox).

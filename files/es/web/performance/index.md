@@ -114,7 +114,7 @@ HTML
 
   - [Imagenes responsivas](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [Precargando contenido con `rel="preload"`](/es/docs/Web/HTML/Preloading_content) - [(https://w3c.github.io/preload/ ](https://w3c.github.io/preload/))
+- [Precargando contenido con `rel="preload"`](/es/docs/Web/HTML/Preloading_content) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
 
 CSS
 

@@ -59,5 +59,5 @@ Una introducción a AJAX.
 <!---->
 
 - #### Temas relacionados
-  - : [HTML](es/HTML) · [XHTML](es/XHTML) · [CSS](es/CSS) · [DOM](es/DOM) · [JavaScript](es/JavaScript) · [XML](es/XML) · [XMLHttpRequest](es/XMLHttpRequest) · [XSLT](es/XSLT) · [DHTML](es/DHTML)
 
+  - : [HTML](es/HTML) · [XHTML](es/XHTML) · [CSS](es/CSS) · [DOM](es/DOM) · [JavaScript](es/JavaScript) · [XML](es/XML) · [XMLHttpRequest](es/XMLHttpRequest) · [XSLT](es/XSLT) · [DHTML](es/DHTML)

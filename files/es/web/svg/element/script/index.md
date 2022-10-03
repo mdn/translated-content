@@ -92,7 +92,7 @@ Este elemento contiene los [atributos globales](es/docs/Web/HTML/Atributos_Globa
 - {{htmlattrdef("type")}}
 
   - : Este atributo identifica el lenguaje de scripting en que está escrito el código embebido dentro de la etiqueta script, o referenciada utilizando el atributo src. Los valores posibles están especificados como un MIME type (tipo MIME).
-    Algunos ejemplos de tipos MIME que pueden ser utilizados son: `text/javascript`, `text/ecmascript`, `application/javascript`, y `application/ecmascript. `Si el atributo se encuentra ausente, el valor por defecto será un script JavaScript.
+    Algunos ejemplos de tipos MIME que pueden ser utilizados son: `text/javascript`, `text/ecmascript`, `application/javascript`, y `application/ecmascript.`Si el atributo se encuentra ausente, el valor por defecto será un script JavaScript.
 
     Si el tipo MIME especificado no es un tipo JavaScript, el contenido embebido dentro de la etiqueta script es tratado como un bloque de datos que no será procesado por el navegador.
 
