@@ -22,7 +22,6 @@ TypeError: Array.prototype.sort requires the comparator argument to be a functio
 
 ## Tipo de erro
 
-w
 {{jsxref("TypeError")}}
 
 ## O que ocorreu de errado?
