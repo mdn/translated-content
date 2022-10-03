@@ -2,6 +2,7 @@
 title: 'Document: visibilitychange イベント'
 slug: Web/API/Document/visibilitychange_event
 ---
+
 {{APIRef}}
 
 `visibilitychange` イベントは、タブのコンテンツが表示状態または非表示状態になったときに document に発生します。

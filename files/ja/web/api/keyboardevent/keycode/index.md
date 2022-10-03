@@ -2,6 +2,7 @@
 title: KeyboardEvent.keyCode
 slug: Web/API/KeyboardEvent/keyCode
 ---
+
 {{APIRef("UI Events")}}{{Deprecated_Header}}
 
 非推奨の **`KeyboardEvent.keyCode`** 読み取り専用プロパティは、押されたキーの変更されていない値を識別するシステムおよび実装に依存する数値コードを表します。

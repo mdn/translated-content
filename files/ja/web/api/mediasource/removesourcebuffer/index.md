@@ -2,6 +2,7 @@
 title: MediaSource.removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイスの **`removeSourceBuffer()`** メソッドは、この `MediaSource` オブジェクトに関連付けられた {{domxref("SourceBuffers")}} リストから指定された {{domxref("SourceBuffer")}} を削除します。

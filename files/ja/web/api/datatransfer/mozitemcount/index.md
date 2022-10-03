@@ -2,6 +2,7 @@
 title: DataTransfer.mozItemCount
 slug: Web/API/DataTransfer/mozItemCount
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{ Non-standard_header() }}{{deprecated_header}}

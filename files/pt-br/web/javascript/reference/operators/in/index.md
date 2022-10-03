@@ -47,7 +47,7 @@ var mycar = {make: 'Honda', model: 'Accord', year: 1998};
 'model' in mycar // retorna true
 ```
 
-Você precisa especificar um objeto no lado direito do operador `in`. Por exemplo, você pode especifica um string criado com o construtor `String,` mas você não pode especificar um string literal.
+Você precisa especificar um objeto no lado direito do operador `in`. Por exemplo, você pode especifica um string criado com o construtor `String`, mas você não pode especificar um string literal.
 
 ```js
 var color1 = new String('green');

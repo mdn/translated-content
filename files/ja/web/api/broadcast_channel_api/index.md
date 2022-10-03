@@ -2,6 +2,7 @@
 title: Broadcast Channel API
 slug: Web/API/Broadcast_Channel_API
 ---
+
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
 **Broadcast Channel API**（放送チャンネル API）を使用すると、{{glossary("browsing context", "閲覧コンテキスト")}}（つまり、_ウィンドウ_、_タブ_、_フレーム_、_iframe_）間で、同じ{{glossary("origin","オリジン")}}（通常は同じサイトのページ）を使用して簡単に通信できます。

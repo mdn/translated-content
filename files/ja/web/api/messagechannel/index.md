@@ -2,6 +2,7 @@
 title: MessageChannel
 slug: Web/API/MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 [Channel Messaging API](/ja/docs/Web/API/Channel_Messaging_API) の **`MessageChannel`** インターフェースは、新しいメッセージチャンネルを作成し、2 つの {{domxref("MessagePort")}} プロパティを通して、その間でデータを送信できます。

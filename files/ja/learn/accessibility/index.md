@@ -2,6 +2,7 @@
 title: アクセシビリティ
 slug: Learn/Accessibility
 ---
+
 {{LearnSidebar}}
 
 ウェブ開発者になりたい場合、HTML, CSS, JavaScript の学習は役立ちます。しかし知識は単に技術を使うよりも前に進める必要があります — それらを責任を持って使う必要があり、その結果ウェブサイトの聴衆を増やし、またそれを使わないことに縛らないことになります。これを達成するには、一般的な成功事例 ([HTML](/ja/docs/Learn/HTML), [CSS](/ja/docs/Learn/CSS), [JavaScript](/ja/docs/Learn/JavaScript) のトピックに示されています) を積み上げ、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)を行って、最初からアクセシビリティを考慮しておきます。このモジュールでは後者を詳しく扱います。
@@ -10,7 +11,7 @@ slug: Learn/Accessibility
 
 このモジュールの大半の理解には、少なくとも [HTML](/ja/docs/Learn/HTML), [CSS](/ja/docs/Learn/CSS), [JavaScript](/ja/docs/Learn/JavaScript) の最初の 2 モジュールを通して読むのが良いでしょうし、 たぶんもっと良いのは、関連するテクノロジートピックを進めるにつれて、関連するアクセシビリティの部分を進めるのが良いでしょう。
 
-> **Note:** 自分のファイルを作れない コンピューター/タブレット/その他の端末で作業する場合、コードの実例の大半を [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) などのオンラインコーディングプログラム内で試すことができます。
+> **メモ:** 自分のファイルを作れない コンピューター/タブレット/その他の端末で作業する場合、コードの実例の大半を [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) などのオンラインコーディングプログラム内で試すことができます。
 
 ## ガイド
 

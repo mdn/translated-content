@@ -2,6 +2,7 @@
 title: DirectoryEntrySync
 slug: Web/API/DirectoryEntrySync
 ---
+
 {{APIRef("File System API")}}{{Non-standard_header}}
 
 [File System API](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction) の `DirectoryEntrySync` インターフェイスは、ファイルシステム内のディレクトリを表します。ディレクトリ内のファイルの作成、読み込み、検索、および再帰的に削除するためのメソッドが含まれています。

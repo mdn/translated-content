@@ -2,6 +2,7 @@
 title: Stringifier (文字列化子)
 slug: Glossary/Stringifier
 ---
+
 {{Glossary("object", "オブジェクト")}}の文字列化子は、{{Glossary("attribute", "属性")}}または{{Glossary("method", "メソッド")}}で、{{Glossary("string", "文字列")}}が期待される場面においてオブジェクトのテキスト表現を提供するために定義されるものです。
 
 ## 関連情報

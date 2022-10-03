@@ -43,7 +43,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
     - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z`: 立方体映射纹理的负 Z 面。
 
 - `level`
-  - : {{domxref("GLint")}} 指定详细级别. 0 级是基本图像等级，n 级是第 n 个金字塔简化级。
+  - : {{domxref("GLint")}} 指定详细级别。0 级是基本图像等级，n 级是第 n 个金字塔简化级。
 - `internalformat`
 
   - : {{domxref("GLenum")}} 指定纹理中的颜色组件。在 WebGL1 和 WebGL2 中可能的值：
@@ -222,7 +222,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
     - {{domxref("ImageBitmap")}}.
 
 - offset
-  - : {{domxref("GLintptr")}} 类型偏移到 {{domxref("WebGLBuffer")}}的数据存储中。 用于上传数据到当前范围 {{domxref("WebGLTexture")}} 从`WebGLBuffer` 范围到`PIXEL_UNPACK_BUFFER` 目标。(仅在 WebGL 2 中 )
+  - : {{domxref("GLintptr")}} 类型偏移到 {{domxref("WebGLBuffer")}}的数据存储中。用于上传数据到当前范围 {{domxref("WebGLTexture")}} 从`WebGLBuffer` 范围到`PIXEL_UNPACK_BUFFER` 目标。(仅在 WebGL 2 中 )
 
 ### 返回值
 

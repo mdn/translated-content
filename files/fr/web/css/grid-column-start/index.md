@@ -76,9 +76,13 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
     ` <custom-ident``> ` ne peut pas prendre la valeur `span`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -142,15 +146,11 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-column-start", "grid-column-start")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-column-start")}}
+{{Compat}}
 
 ## Voir aussi
 
