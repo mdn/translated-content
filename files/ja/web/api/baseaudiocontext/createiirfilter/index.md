@@ -9,7 +9,7 @@ slug: Web/API/BaseAudioContext/createIIRFilter
 これは一般的な**{{interwiki("wikipedia", "無限インパルス応答")}}** (IIR) フィルターを生成し、これはよって様々な種類のフィルターとして提供できるように構成することができます。
 of filter.
 
-> **Note:** {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}} コンストラクターは {{domxref("IIRFilterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}} コンストラクターは {{domxref("IIRFilterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 

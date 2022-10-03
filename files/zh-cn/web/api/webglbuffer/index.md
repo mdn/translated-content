@@ -9,7 +9,7 @@ slug: Web/API/WebGLBuffer
 
 ## 描述
 
-`WebGLBuffer` 对象没有定义任何自己的方法或属性，且内容不能被直接访问。 当使用 `WebGLBuffer` 对象时， {{domxref("WebGLRenderingContext")}} 下的这些方法会很有用：
+`WebGLBuffer` 对象没有定义任何自己的方法或属性，且内容不能被直接访问。当使用 `WebGLBuffer` 对象时， {{domxref("WebGLRenderingContext")}} 下的这些方法会很有用：
 
 - {{domxref("WebGLRenderingContext.bindBuffer()")}}
 - {{domxref("WebGLRenderingContext.createBuffer()")}}

@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Origin
 
 **`Origin`** リクエストヘッダーは、どこがフェッチの原点であるかを示します。パス情報は含まれず、サーバー名のみが含まれます。これは、 {{Glossary("CORS")}} リクエストと、同様に {{HTTPMethod("POST")}} リクエストでも送信されます。 {{HTTPHeader("Referer")}} ヘッダーと似ていますが、パス全体が公開されるわけではない点が異なります。
 
-> **Note:**  {{httpheader("Origin")}} ヘッダーは [Fetch リクエスト](/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch)を {{HTTPMethod("HEAD")}} または {{HTTPMethod("GET")}} メソッドで行った場合には設定されません (この挙動は Firefox 65 で修正されました。 — {{bug(1508661)}} を参照してください)。
+> **メモ:** {{httpheader("Origin")}} ヘッダーは [Fetch リクエスト](/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch)を {{HTTPMethod("HEAD")}} または {{HTTPMethod("GET")}} メソッドで行った場合には設定されません (この挙動は Firefox 65 で修正されました。 — {{bug(1508661)}} を参照してください)。
 
 <table class="properties">
   <tbody>

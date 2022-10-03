@@ -32,7 +32,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions
 
 正規表現パターンは、 `/abc/` のような単純な文字、または `/ab*c/` や `/Chapter (\d+)\.\d*/` のような単純な文字と特殊文字との組み合わせからなります。最後の例には記憶装置として用いられる丸括弧があります。パターンのこの丸括弧で囲まれた部分に一致した箇所は、後で使用できるように記憶されます。詳しくは[グループの使用](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups)を参照してください。
 
-> **Note:** すでに正規表現の形式に慣れている方は、[早見表](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet)を見て特定のパターンや構造を素早く検索することもできます。
+> **メモ:** すでに正規表現の形式に慣れている方は、[早見表](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet)を見て特定のパターンや構造を素早く検索することもできます。
 
 ### 単純なパターンの使い方
 
@@ -145,7 +145,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions
   </tbody>
 </table>
 
-> **Note:** [もっと大きな早見表もあります](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) (個別の記事の一部を集約しただけです)。
+> **メモ:** [もっと大きな早見表もあります](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) (個別の記事の一部を集約しただけです)。
 
 ### エスケープ
 
@@ -391,7 +391,7 @@ Unicode 正規表現と非 Unicode 正規表現との間には、他にも注意
 
 ## 例
 
-> **Note:** 複数の例が次の場所にあります。
+> **メモ:** 複数の例が次の場所にあります。
 >
 > - {{jsxref("RegExp.exec", "exec()")}}、{{jsxref("RegExp.test", "test()")}}、{{jsxref("String.match", "match()")}}、{{jsxref("String.matchAll", "matchAll()")}}、{{jsxref("String.search", "search()")}}、{{jsxref("String.replace", "replace()")}}、{{jsxref("String.split", "split()")}} のリファレンスページ
 > - ガイド記事の[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[言明](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)、[グループと範囲](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)、[数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)

@@ -15,11 +15,11 @@ slug: Web/API/Service_Worker_API
 
 サービスワーカーはセキュリティ上の理由から、 HTTPS 通信でのみ動作します。ネットワークリクエストが改変されると、中間者攻撃を受けるので、人間に広く開かれているのは本当にまずいことです。 Firefox では[プライベートブラウジングモード](https://support.mozilla.org/ja/kb/private-browsing-use-firefox-without-history)でサービスワーカー API を利用することはできません。
 
-> **Note:** Firefox では、テストのためにサービスワーカーを HTTP (安全ではない) 上で実行することができます。これは、 **HTTP による サービスワーカー を有効化 (ツールボックスを開いたとき)** オプションを Firefox Devtools 設定メニューでチェックするだけです。
+> **メモ:** Firefox では、テストのためにサービスワーカーを HTTP (安全ではない) 上で実行することができます。これは、 **HTTP による サービスワーカー を有効化 (ツールボックスを開いたとき)** オプションを Firefox Devtools 設定メニューでチェックするだけです。
 
-> **Note:** サービスワーカーは [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag) のような、この分野における以前の試みより勝っています。以前のものは、あなたがしようとしていることを想定していなかったり、想定が正しくなかったときに壊れたりしていたのに対して、サービスワーカーはあなたがすべてを細かく制御することができるためです。
+> **メモ:** サービスワーカーは [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag) のような、この分野における以前の試みより勝っています。以前のものは、あなたがしようとしていることを想定していなかったり、想定が正しくなかったときに壊れたりしていたのに対して、サービスワーカーはあなたがすべてを細かく制御することができるためです。
 
-> **Note:** サービスワーカーは[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を頻繁に使用して、レスポンスが来るのを待ってから、成功または失敗のアクションで応答します。プロミスのアーキテクチャはこの領域に対して理想的なものです。
+> **メモ:** サービスワーカーは[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を頻繁に使用して、レスポンスが来るのを待ってから、成功または失敗のアクションで応答します。プロミスのアーキテクチャはこの領域に対して理想的なものです。
 
 ### 登録
 
@@ -52,7 +52,7 @@ slug: Web/API/Service_Worker_API
 
 サービスワーカーは {{DOMxRef("FetchEvent")}} イベントを使用してリクエストに応答することができます。{{DOMxRef("FetchEvent.respondWith()")}} メソッドを使用して、これらのリクエストに対するレスポンスを何でも思うように変更できます。
 
-> **Note:** `install`/`activate` イベントは完了するまでに時間がかかる可能性があるため、サービスワーカーの仕様書では {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} メソッドを提供しており、これが `install` または `activate` を呼び出すと、プロミスを渡します。プロミスが正常に解決されるまで、関数イベントはサービスワーカーに配信されません。
+> **メモ:** `install`/`activate` イベントは完了するまでに時間がかかる可能性があるため、サービスワーカーの仕様書では {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} メソッドを提供しており、これが `install` または `activate` を呼び出すと、プロミスを渡します。プロミスが正常に解決されるまで、関数イベントはサービスワーカーに配信されません。
 
 最初の基本的な例をどのように構築するかについての完全なチュートリアルは、[サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)を読んでください。
 

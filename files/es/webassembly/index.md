@@ -53,9 +53,9 @@ Y lo mejor es que está siendo desarrollado como un estándar web a través del 
 - {{jsxref("Global_objects/WebAssembly/instantiateStreaming", "WebAssembly.instantiateStreaming()")}}
   - : La función `WebAssembly.instantiateStreaming()` es la principal API para compilar e instanciar código WebAssembly, retornando tanto un `Module` como su primera `Instance`.
 - {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
-  - : Un objeto ` WebAssembly.``Memory ` es un {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} redimensionable que contiene los bytes de memoria accedidos por una `Instance`.
+  - : Un objeto `WebAssembly.Memory` es un {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} redimensionable que contiene los bytes de memoria accedidos por una `Instance`.
 - {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
-  - : Un objeto ` WebAssembly.``Table ` es un arreglo tipado redimensionable de valores opacos, como referencias a funciones, que son accedidos por una `Instance`.
+  - : Un objeto `WebAssembly.Table` es un arreglo tipado redimensionable de valores opacos, como referencias a funciones, que son accedidos por una `Instance`.
 - {{jsxref("WebAssembly.CompileError()")}}
   - : Crea un nuevo objeto `CompileError` de WebAssembly.
 - {{jsxref("WebAssembly.LinkError()")}}

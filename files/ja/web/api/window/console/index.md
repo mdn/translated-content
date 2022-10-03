@@ -29,7 +29,7 @@ console.log("An error occurred while loading the content");
 console.dir(someObject);
 ```
 
-より詳細な例については{{SectionOnPage("/en-US/docs/Web/API/Console", "Usage")}}をご参照下さい。
+より詳細な例については{{SectionOnPage("/ja/docs/Web/API/Console", "Usage")}}をご参照下さい。
 
 ## Specifications
 
@@ -37,4 +37,4 @@ console.dir(someObject);
 | ------------------------------------ | -------------------------------- | ------------------- |
 | {{SpecName('Console API')}} | {{Spec2('Console API')}} | Initial definition. |
 
-> **Note:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.
+> **メモ:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.

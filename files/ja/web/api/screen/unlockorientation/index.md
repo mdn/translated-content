@@ -7,9 +7,9 @@ slug: Web/API/Screen/unlockOrientation
 
 **`Screen.unlockOrientation()`** メソッドは、ページやアプリによって設定されているすべての画面のロックを除去します。代わりに {{DOMxRef("ScreenOrientation.unlock()")}} を使用してください。
 
-> **Warning:** この機能は非推奨であり、代わりに {{DOMxRef("ScreenOrientation.unlock()")}} メソッドを使用してください。
+> **警告:** この機能は非推奨であり、代わりに {{DOMxRef("ScreenOrientation.unlock()")}} メソッドを使用してください。
 
-> **Note:** このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/Guide/DOM/Using_full_screen_mode)のウェブページでのみ動作します。
+> **メモ:** このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/Guide/DOM/Using_full_screen_mode)のウェブページでのみ動作します。
 
 ## 構文
 

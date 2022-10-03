@@ -34,7 +34,7 @@ l10n:
 
 あるいは、 [Glitch](https://glitch.com/) のようなオンラインツールを使用して、例を作成することもできます。このページの下にある [評価またはさらなる支援](#assessment_or_further_help) セクションを参照してください。
 
-> **Note:** 例の HTML ファイルには、ページのスタイルを設定するための CSS がかなり多く含まれています。 CSS に触れる必要はなく、 {{htmlelement("body")}} 要素内の HTML を操作するだけです。正しいマークアップを挿入していれば、スタイルは正しく表示されます。
+> **メモ:** 例の HTML ファイルには、ページのスタイルを設定するための CSS がかなり多く含まれています。 CSS に触れる必要はなく、 {{htmlelement("body")}} 要素内の HTML を操作するだけです。正しいマークアップを挿入していれば、スタイルは正しく表示されます。
 
 ## プロジェクトの概要
 
@@ -54,7 +54,7 @@ l10n:
 
 次に、 `red-panda.jpg` の 1200 ピクセル幅のランドスケープバージョンと、パンダをより近くに見せてくれる 600 ピクセル幅のポートレートバージョンを作成します。 繰り返しますが、簡単に識別できるように、判りやすい名前にしてください。 これらの両方のコピーを `index.html` と同じディレクトリーに保存してください。
 
-> **Note:** JPG 画像と PNG 画像は最適化して、できるだけ小さくして、それでも見栄えを良くしてください。 [tinypng.com](https://tinypng.com/) は簡単にこれを行うための素晴らしいサービスです。
+> **メモ:** JPG 画像と PNG 画像は最適化して、できるだけ小さくして、それでも見栄えを良くしてください。 [tinypng.com](https://tinypng.com/) は簡単にこれを行うための素晴らしいサービスです。
 
 ### ヘッダーにロゴを追加する
 
@@ -72,7 +72,7 @@ l10n:
 
 正しい画像と正しいリンクが一致していることを確認してください。
 
-> **Note:** `srcset` と `sizes` の例を適切にテストするには、サイトをサーバーにアップロードする必要があります ([Github ページ](/ja/docs/Learn/Common_questions/Using_Github_pages)を使用するのが簡単で無料の解決策です)。 そして、そこから Firefox の[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)などのツールを使用して正しく動作しているかどうかをテストできます。
+> **メモ:** `srcset` と `sizes` の例を適切にテストするには、サイトをサーバーにアップロードする必要があります ([Github ページ](/ja/docs/Learn/Common_questions/Using_Github_pages)を使用するのが簡単で無料の解決策です)。 そして、そこから Firefox の[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)などのツールを使用して正しく動作しているかどうかをテストできます。
 
 ### アートディレクションされたレッサーパンダ
 

@@ -51,7 +51,7 @@ div.menu-bar li:hover > ul {
 
 ## 索引
 
-> **Note:** この索引のプロパティ名には、CSS 標準の名前と異なる [JavaScript 名](/ja/docs/Web/CSS/CSS_Properties_Reference) は含まれて**いません**。
+> **メモ:** この索引のプロパティ名には、CSS 標準の名前と異なる [JavaScript 名](/ja/docs/Web/CSS/CSS_Properties_Reference) は含まれて**いません**。
 
 {{CSS_Ref}}
 
@@ -96,7 +96,7 @@ div.menu-bar li:hover > ul {
 - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`
   - : HTML に含まれていないエンティティを表します。
 
-> **Note:** **関連情報:** [Selectors Level 4 仕様書におけるセレクター](https://www.w3.org/TR/selectors/#overview)。
+> **メモ:** **関連情報:** [Selectors Level 4 仕様書におけるセレクター](https://www.w3.org/TR/selectors/#overview)。
 
 ## 概念
 

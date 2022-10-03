@@ -45,7 +45,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 それと同じことで、そうですね、例えば 3 次元グラフィックのプログラムを JavaScript や Python のような高水準言語で書かれた API を使ってやる方が、C や C++ のような低レベル言語から直接コンピューターの GPU やグラフィック機能を叩いてやるよりも、ずっと簡単です。
 
-> **Note:** API という語についてもっと詳しいことは [API の用語解説](/ja/docs/Glossary/API) を参照して下さい。
+> **メモ:** API という語についてもっと詳しいことは [API の用語解説](/ja/docs/Glossary/API) を参照して下さい。
 
 ### クライアントサイド JavaScript での API
 
@@ -94,7 +94,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 - [Twilio API](https://www.twilio.com/) は、自分のアプリに音声や動画の通話機能を作成したり、SMS/MMS を送信したりなどするためのフレームワークを提供します。
 - [Mastodon API](https://docs.joinmastodon.org/api/) を使用すると、Mastodon ソーシャルネットワークの機能をプログラムで操作できます。
 
-> **Note:** サードパーティ API については [Programmable Web API directory](http://www.programmableweb.com/category/all/apis) でもっと多くの情報を見られます。
+> **メモ:** サードパーティ API については [Programmable Web API directory](http://www.programmableweb.com/category/all/apis) でもっと多くの情報を見られます。
 
 ## API はどのように動作するのか
 

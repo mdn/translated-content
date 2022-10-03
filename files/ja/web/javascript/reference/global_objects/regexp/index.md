@@ -50,7 +50,7 @@ const re = new RegExp('\\w+');
 
 ### 正規表現の特殊な扱い
 
-> **Note:** 何かが「正規表現」であるかどうかは、[ダックタイピング](https://ja.wikipedia.org/wiki/%E3%83%80%E3%83%83%E3%82%AF%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0)になります。 `RegExp` である必要はありません。
+> **メモ:** 何かが「正規表現」であるかどうかは、[ダックタイピング](https://ja.wikipedia.org/wiki/%E3%83%80%E3%83%83%E3%82%AF%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0)になります。 `RegExp` である必要はありません。
 
 いくつかの組み込みメソッドは、正規表現を特別に扱います。 `x` が正規表現であるかどうかを[複数のステップ](https://tc39.es/ecma262/#sec-isregexp)を経て判断します。
 
@@ -251,7 +251,7 @@ const url = "http://xxx.domain.com";
 console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx' と出力
 ```
 
-> **Note:** URL を解釈するには、正規表現を使用するより、 [URL API](/ja/docs/Web/API/URL_API) におけるブラウザー内蔵の URL パーサーを使用することをお勧めします。
+> **メモ:** URL を解釈するには、正規表現を使用するより、 [URL API](/ja/docs/Web/API/URL_API) におけるブラウザー内蔵の URL パーサーを使用することをお勧めします。
 
 ### 動的な入力からの正規表現の構築
 
