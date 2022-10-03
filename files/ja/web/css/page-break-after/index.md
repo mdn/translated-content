@@ -2,9 +2,10 @@
 title: page-break-after
 slug: Web/CSS/page-break-after
 ---
+
 {{CSSRef}}
 
-> **Warning:** このプロパティは {{cssxref("break-after")}} プロパティで置き換えられました。
+> **警告:** このプロパティは {{cssxref("break-after")}} プロパティで置き換えられました。
 
 **`page-break-after`** は CSS のプロパティで、現在の要素の*後で*改ページが行われるように調整します。
 

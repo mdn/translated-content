@@ -23,6 +23,4 @@ translation_of: Web/CSS/CSS_Ruby
 
 ## Spécifications
 
-| Spécification                    | État                         | Commentaires         |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('CSS3 Ruby')}} | {{Spec2('CSS3 Ruby')}} | Définition initiale. |
+{{Specifications}}

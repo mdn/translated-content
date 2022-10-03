@@ -91,7 +91,7 @@ function handleStart(evt) {
 }
 ```
 
-{{ domxref("event.preventDefault()") }} 阻止了浏览器继续处理触摸（和鼠标）事件。 然后我们取得上下文，从事件的 {{ domxref("TouchEvent.changedTouches") }} 属性中获得已改变的触摸点列表。
+{{ domxref("event.preventDefault()") }} 阻止了浏览器继续处理触摸（和鼠标）事件。然后我们取得上下文，从事件的 {{ domxref("TouchEvent.changedTouches") }} 属性中获得已改变的触摸点列表。
 
 上述列表中所有的 {{ domxref("Touch") }} 对象即为当前所有活动的触摸点，把它们置于一个数组中，然后为每个触摸绘制起点。我们设置线条宽度为四像素，所以恰好会绘制一个半径为 4 像素的圆。
 
@@ -138,7 +138,7 @@ function handleMove(evt) {
 
 #### 触摸结束处理
 
-用户的手指从表面抬起时将触发 {{event("touchend")}} 事件。我们通过调用下面的 `handleEnd()` 函数来处理此类事件。 这个函数的工作就是为每个结束的触摸点绘制最后一个片段，然后将触摸点从 `ongoingTouches` 数组中移除。
+用户的手指从表面抬起时将触发 {{event("touchend")}} 事件。我们通过调用下面的 `handleEnd()` 函数来处理此类事件。这个函数的工作就是为每个结束的触摸点绘制最后一个片段，然后将触摸点从 `ongoingTouches` 数组中移除。
 
 ```js
 function handleEnd(evt) {
@@ -168,7 +168,7 @@ function handleEnd(evt) {
 }
 ```
 
-这个函数与上一个很相像，唯一的实质性区别就是在调用 [`Array.splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 时， 我们把用过的触摸实体从 `ongoingTouches` 数组中直接移除了，不再添加更新信息。对这个触摸点的跟踪随之终止。
+这个函数与上一个很相像，唯一的实质性区别就是在调用 [`Array.splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 时，我们把用过的触摸实体从 `ongoingTouches` 数组中直接移除了，不再添加更新信息。对这个触摸点的跟踪随之终止。
 
 #### 触摸取消处理
 
@@ -195,7 +195,7 @@ function handleCancel(evt) {
 
 #### 为每个触摸点选择一个颜色
 
-为了区分每个触摸点绘制的内容，我们引入 `colorForTouch()` 函数，根据每个触摸点所独有的标记设定一个颜色。 这个标记在这里可能是一个无意义的数字，但我们至少可以利用它“对于每个触摸点的值都不同”这一特性。
+为了区分每个触摸点绘制的内容，我们引入 `colorForTouch()` 函数，根据每个触摸点所独有的标记设定一个颜色。这个标记在这里可能是一个无意义的数字，但我们至少可以利用它“对于每个触摸点的值都不同”这一特性。
 
 ```js
 function colorForTouch(touch) {

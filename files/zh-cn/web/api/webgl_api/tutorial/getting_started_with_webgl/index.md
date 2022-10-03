@@ -15,7 +15,7 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 ## 准备 3D 渲染
 
-为了使用 WebGL 进行 3D 渲染，你首先需要一个 canvas 元素。下面的 HTML 片段用来建立一个 canvas 元素并设置一个 onload 事件处理程序来初始化我们的 WebGL 上下文 。
+为了使用 WebGL 进行 3D 渲染，你首先需要一个 canvas 元素。下面的 HTML 片段用来建立一个 canvas 元素并设置一个 onload 事件处理程序来初始化我们的 WebGL 上下文。
 
 ```html
 <body onload="main()">
@@ -49,11 +49,11 @@ function main() {
 }
 ```
 
-我们所要做的第一件事就是是获取 canvas 的引用，把它保存在 ‘canvas’ 变量里。
+我们所要做的第一件事就是是获取 canvas 的引用，把它保存在‘canvas’变量里。
 
-当我们获取到 canvas 之后，我们会调用[getContext](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 函数并向它传递`"webgl"`参数，来尝试获取[WebGLRenderingContext](/zh-CN/docs/Web/API/WebGLRenderingContext)。如果浏览器不支持 webgl,`getContext`将会返回`null`，我们就可以显示一条消息给用户然后退出。
+当我们获取到 canvas 之后，我们会调用[getContext](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 函数并向它传递 `"webgl"` 参数，来尝试获取[WebGLRenderingContext](/zh-CN/docs/Web/API/WebGLRenderingContext)。如果浏览器不支持 webgl, `getContext` 将会返回 `null`，我们就可以显示一条消息给用户然后退出。
 
-如果 WebGL 上下文成功初始化，变量 ‘gl’ 会用来引用该上下文。在这个例子里，我们用黑色清除上下文内已有的元素。（用背景颜色重绘 canvas）。
+如果 WebGL 上下文成功初始化，变量‘gl’会用来引用该上下文。在这个例子里，我们用黑色清除上下文内已有的元素。（用背景颜色重绘 canvas）。
 
 {{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
@@ -61,7 +61,7 @@ function main() {
 
 ## 参见
 
-- [WebGL 介绍](https://dev.opera.com/articles/introduction-to-webgl-part-1/): 由 Luz Caballero 所著， 发布在 dev.opera.com。 这篇文章说明 WebGL 是什么， 解释了 WebGL 是如何工作的 (介绍了渲染管线的概念)，并且介绍了一些 WebGL 库。
+- [WebGL 介绍](https://dev.opera.com/articles/introduction-to-webgl-part-1/): 由 Luz Caballero 所著，发布在 dev.opera.com。这篇文章说明 WebGL 是什么，解释了 WebGL 是如何工作的 (介绍了渲染管线的概念)，并且介绍了一些 WebGL 库。
 - [WebGL 基础](http://webglfundamentals.org/)
 - [现代 OpenGL 介绍：](http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) 由 Joe Groff 写的一系列关于 OpenGL 的不错的文章，提供了一个清晰的介绍，从 OpenGL 的历史到图形管线概念，也包括一些说明 OpenGL 如何工作的例子，如果你对 OpenGL 没有任何概念的话，这是不错的出发点。
 

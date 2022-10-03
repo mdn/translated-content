@@ -2,6 +2,7 @@
 title: symbols
 slug: Web/CSS/@counter-style/symbols
 ---
+
 {{CSSRef}}
 
 **`symbols`** は [CSS](/ja/docs/Web/CSS) の記述子で、指定されたカウンターシステムがカウンター表現を構築するために使用する記号を指定するために使用します。

@@ -88,7 +88,7 @@ export default {
      import uniqueId from 'lodash.uniqueid';
     ```
 
-2. 添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')。`
+2. 添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')`。
 
     `App.vue` `<script>` 元素内容如下：
 

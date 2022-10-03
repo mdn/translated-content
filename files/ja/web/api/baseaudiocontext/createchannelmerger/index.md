@@ -3,11 +3,12 @@ title: BaseAudioContext.createChannelMerger()
 slug: Web/API/BaseAudioContext/createChannelMerger
 original_slug: Web/API/AudioContext/createChannelMerger
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createChannelMerger()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("ChannelMergerNode")}} を作成します。これは複数の音声ストリームのチャンネルを一つの音声ストリームに結合します。
 
-> **Note:** {{domxref("ChannelMergerNode.ChannelMergerNode", "ChannelMergerNode()")}} コンストラクターは {{domxref("ChannelMergerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("ChannelMergerNode.ChannelMergerNode", "ChannelMergerNode()")}} コンストラクターは {{domxref("ChannelMergerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 

@@ -7,7 +7,7 @@ slug: Web/API/VRDisplay/displayName
 
 **`displayName`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` を識別する人間が読める名前を返します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 これは通常、 "Oculus VR HMD (HMD)" や "Oculus VR HMD (Sensor)" のようなものになります。
 

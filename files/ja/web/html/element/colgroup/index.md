@@ -2,6 +2,7 @@
 title: <colgroup>
 slug: Web/HTML/Element/colgroup
 ---
+
 {{HTMLRef}}
 
 **HTML の `<colgroup>` 要素**は、表内の列のグループを定義します。
@@ -70,7 +71,7 @@ slug: Web/HTML/Element/colgroup
 
   - : この属性は正の整数で、 `<colgroup>` 要素がまたがる列の数を示します。存在しない場合の既定値は `1` です。
 
-    > **Note:** この属性は列グループの属性に適用され、それに関連付けられた CSS のスタイル付け規則には影響を与えず、さらに、列グループのメンバーのセルにも影響を与えません。- `span` 属性は、1 つ以上の `<col>` 要素が `<colgroup>` の中にある場合は許可されていません。
+    > **メモ:** この属性は列グループの属性に適用され、それに関連付けられた CSS のスタイル付け規則には影響を与えず、さらに、列グループのメンバーのセルにも影響を与えません。- `span` 属性は、1 つ以上の `<col>` 要素が `<colgroup>` の中にある場合は許可されていません。
 
 ### 非推奨の属性
 
@@ -88,7 +89,7 @@ slug: Web/HTML/Element/colgroup
 
     この属性が設定されていない場合は、`left` 値であるものとします。子孫の {{HTMLElement("col")}} 要素は自身の {{htmlattrxref("align", "col")}} 属性を使用して、この値を上書きできます。
 
-    > **Note:** - {{cssxref("text-align")}} プロパティを、 {{HTMLElement("colgroup")}} 要素を与えたセレクターに設定しようとしてはいけません。 {{HTMLElement("td")}} 要素は {{HTMLElement("colgroup")}} 要素の子孫ではないため、プロパティを継承しません。
+    > **メモ:** - {{cssxref("text-align")}} プロパティを、 {{HTMLElement("colgroup")}} 要素を与えたセレクターに設定しようとしてはいけません。 {{HTMLElement("td")}} 要素は {{HTMLElement("colgroup")}} 要素の子孫ではないため、プロパティを継承しません。
     >
     > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、列ごとに 1 つずつ `td:nth-child(an+b)` CSS セレクターを使用してください。a は表内の列数、b は表内の列の位置を示す序数です。このセレクターの後でのみ `text-align` プロパティを使用できます。
     > - 値 `char` と同じ効果を得るには、CSS3 では {{cssxref("text-align")}} プロパティの値として {{htmlattrxref("char", "colgroup")}} の値を使用します。{{unimplemented_inline}}
@@ -118,7 +119,7 @@ slug: Web/HTML/Element/colgroup
     - `middle` : テキストをセルの中央部に置きます。
     - and `top` : テキストを可能な限りセルの上端に近づけて配置します。
 
-    > **Note:** - {{cssxref("vertical-align")}} プロパティを、 `<colgroup>` 要素を与えたセレクターに設定しようとしてはいけません。{{HTMLElement("td")}} 要素は `<colgroup>` 要素の子孫ではないため、プロパティを継承しません。
+    > **メモ:** - {{cssxref("vertical-align")}} プロパティを、 `<colgroup>` 要素を与えたセレクターに設定しようとしてはいけません。{{HTMLElement("td")}} 要素は `<colgroup>` 要素の子孫ではないため、プロパティを継承しません。
     >
     > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、`td:nth-child(an+b)` CSS セレクターを使用してください。 a は表の列数、 b は表内の列の位置を示す序数です。このセレクターの後でのみ `vertical-align` プロパティを使用できます。
     > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。

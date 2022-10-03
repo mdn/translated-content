@@ -2,6 +2,7 @@
 title: PointerEvent.twist
 slug: Web/API/PointerEvent/twist
 ---
+
 {{ APIRef("Pointer Events") }}
 
 {{domxref("PointerEvent")}} インターフェイスの **`twist`** 読み取り専用プロパティは、ポインタ（例えばペン/スタイラス）の主軸を中心とした時計回りの回転を度数で表します。

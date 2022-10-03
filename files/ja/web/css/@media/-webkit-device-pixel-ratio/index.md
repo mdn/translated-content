@@ -2,11 +2,12 @@
 title: '-webkit-device-pixel-ratio'
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
+
 {{ CSSRef }} {{ Non-standard_header }}
 
 **`-webkit-device-pixel-ratio`** は [CSS](/ja/docs/Web/CSS) の標準外の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、標準の[`resolution`](/ja/docs/Web/CSS/@media/resolution)メディア特性の代替です。
 
-> **Note:** このメディア特性は WebKit の機能です。可能であれば、代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) メディア特性クエリーを使用してください。
+> **メモ:** このメディア特性は WebKit の機能です。可能であれば、代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) メディア特性クエリーを使用してください。
 
 ## 構文
 

@@ -2,6 +2,7 @@
 title: Django 開発環境の設定
 slug: Learn/Server-side/Django/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
 Django がどういうものか知ったので、Windows、Linux（Ubuntu）、および macOS で Django 開発環境をセットアップしてテストする方法を説明します。一般的なオペレーティングシステムを使っていれば、Django アプリケーションの開発を始められます。
@@ -33,7 +34,7 @@ Django は、インストール場所と設定の方法に関して非常に柔�
 
 これらのオプションは、それぞれわずかに異なる構成とセットアップを必要とします。以下のサブセクションでは、いくつかの選択肢について説明します。この記事の残りの部分では、いくつかオペレーティングシステムに Django をセットアップする方法を説明します。このモジュールの残りの部分は、セットアップが済んでいる想定です。
 
-> **Note:** その他のインストールオプションについては、Django の公式ドキュメントでカバーされています。[下記で適切なドキュメントにリンクしています。](#furtherreading)
+> **メモ:** その他のインストールオプションについては、Django の公式ドキュメントでカバーされています。[下記で適切なドキュメントにリンクしています。](#furtherreading)
 
 #### どのオペレーティングシステムがサポートされていますか？
 
@@ -47,7 +48,7 @@ Django の Web アプリケーションは、Python 3 プログラミング言�
 
 必要であれば Python 3.4 以上を使用できます（Python 3.4 のサポートは将来のリリースでは廃止される予定です）。
 
-> **Note:** Python 2.7 は Django 2.0 では使用できません（Django 1.11.x 系は Python 2.7 をサポートする最後のバージョンです）。
+> **メモ:** Python 2.7 は Django 2.0 では使用できません（Django 1.11.x 系は Python 2.7 をサポートする最後のバージョンです）。
 
 #### どこで Django をダウンロードできますか？
 
@@ -65,13 +66,13 @@ Django は 4 つの主要なデータベース（PostgreSQL、MySQL、Oracle、S
 
 この記事（とこのモジュールのほとんど）では、データをファイルに保存する SQLite データベースを使用します。 SQLite は軽量データベースとしての使用を目的としており、高度な並行性はサポートできません。 ただし、主に読み取り専用のアプリケーションには最適です。
 
-> **Note:** Django は、標準ツール（django-admin）を使用して Web サイトプロジェクトを開始するときに、デフォルトで SQLite を使用するように設定されています。 これは、追加の設定やセットアップが不要なため、入門には最適な選択です。
+> **メモ:** Django は、標準ツール（django-admin）を使用して Web サイトプロジェクトを開始するときに、デフォルトで SQLite を使用するように設定されています。 これは、追加の設定やセットアップが不要なため、入門には最適な選択です。
 
 #### システム全体または Python の仮想環境にインストールするには？
 
 Python3 をインストールすると、すべての Python3 コードで共有される単一のグローバル環境が得られます。 環境に好きな Python パッケージをインストールすることはできますが、一度に 1 つのパッケージしかインストールできません。
 
-> **Note:** グローバル環境にインストールされた Python アプリケーションは、お互いに衝突する可能性があります（例えば、同じパッケージの異なるバージョンに依存する場合）。
+> **メモ:** グローバル環境にインストールされた Python アプリケーションは、お互いに衝突する可能性があります（例えば、同じパッケージの異なるバージョンに依存する場合）。
 
 Django をデフォルト/グローバル環境にインストールすると、コンピュータ上で Django の 1 つのバージョンのみを対象にできます。 古いバージョンに依存している Web サイトを維持しながら、新しい Web サイト（Django の最新バージョンを使用）を作成したい場合、これは問題になる可能性があります。
 
@@ -85,7 +86,7 @@ Django を使用するには、オペレーティングシステムに Python �
 
 このセクションでは、Ubuntu Linux 16.04、macOS X、および Windows 10 の Python のバージョンを確認し、必要に応じて新しいバージョンをインストールする方法を簡単に説明します。
 
-> **Note:** 使用しているプラットフォームによっては、オペレーティングシステム独自のパッケージマネージャやその他のメカニズムを使って Python/pip をインストールできます。ほとんどのプラットフォームでは、 <https://www.python.org/downloads/> から必要なインストールファイルをダウンロードし、適切なプラットフォーム固有の方法を使用してインストールできます。
+> **メモ:** 使用しているプラットフォームによっては、オペレーティングシステム独自のパッケージマネージャやその他のメカニズムを使って Python/pip をインストールできます。ほとんどのプラットフォームでは、 <https://www.python.org/downloads/> から必要なインストールファイルをダウンロードし、適切なプラットフォーム固有の方法を使用してインストールできます。
 
 ### Ubuntu 16.04
 
@@ -157,7 +158,7 @@ Windows インストーラには、デフォルトで pip3（Python パッケー
 pip3 list
 ```
 
-> **Note:** インストーラは、上記のコマンドが動作するために必要なものすべてをセットアップする必要があります。Python が見つからないというメッセージが表示された場合は、システムパスに追加する必要があります。
+> **メモ:** インストーラは、上記のコマンドが動作するために必要なものすべてをセットアップする必要があります。Python が見つからないというメッセージが表示された場合は、システムパスに追加する必要があります。
 
 ## Python 仮想環境内での Django の使用
 
@@ -185,7 +186,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **Note:** `VIRTUALENVWRAPPER_PYTHON`および`VIRTUALENVWRAPPER_VIRTUALENV_ARGS`変数は、Python3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh`は`virtualenvwrapper.sh` スクリプトの通常の場所を指します。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
+> **メモ:** `VIRTUALENVWRAPPER_PYTHON`および`VIRTUALENVWRAPPER_VIRTUALENV_ARGS`変数は、Python3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh`は`virtualenvwrapper.sh` スクリプトの通常の場所を指します。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
 >
 > あなたのシステムでの正しい場所は、`which virtualenvwrapper.sh`と`which python3`というコマンドを使って見つけることができます。
 
@@ -227,7 +228,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **Note:** `VIRTUALENVWRAPPER_PYTHON`変数は Python3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh`は`virtualenvwrapper.sh`スクリプトの通常の場所を指しています。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
+> **メモ:** `VIRTUALENVWRAPPER_PYTHON`変数は Python3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh`は`virtualenvwrapper.sh`スクリプトの通常の場所を指しています。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
 >
 > たとえば、macOS での 1 つのインストールテストでは、スタートアップファイルに次の行が必要になりました:
 >
@@ -242,7 +243,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 これらは Ubuntu の場合と同じ行ですが、スタートアップファイルはホームディレクトリー内で **.bash_profile** という別の名前の隠しファイルです。
 
-> **Note:** 編集する**.bash-profile**が Finder で見つからない場合は、ターミナルで nano を使用して開くこともできます。
+> **メモ:** 編集する**.bash-profile**が Finder で見つからない場合は、ターミナルで nano を使用して開くこともできます。
 >
 > コマンドは次のようになります:
 >
@@ -289,7 +290,7 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 
 これで、Django をインストールして開発を開始できる仮想環境の中に入りました。
 
-> **Note:** これ以降、この記事（と実際にはモジュール）では、上でセットアップしたような Python 仮想環境内でコマンドが実行されると仮定してください。
+> **メモ:** これ以降、この記事（と実際にはモジュール）では、上でセットアップしたような Python 仮想環境内でコマンドが実行されると仮定してください。
 
 ### 仮想環境の使用
 
@@ -320,9 +321,9 @@ py -3 -m django --version
  2.0
 ```
 
-> **Note:** Windows では`py -3`コマンドをプレフィックスにして Python 3 スクリプトを起動し、Linux/macOS X では `python3`を実行します。
+> **メモ:** Windows では`py -3`コマンドをプレフィックスにして Python 3 スクリプトを起動し、Linux/macOS X では `python3`を実行します。
 
-> **Warning:** **重要**: このモジュールの残りの部分は、 Python 3 (`python3`) を呼び出すために Linux コマンドを使用します。Windows で作業している場合は、単にこの接頭辞を`py -3`に置き換えてください。
+> **警告:** このモジュールの残りの部分は、 Python 3 (`python3`) を呼び出すために Linux コマンドを使用します。Windows で作業している場合は、単にこの接頭辞を`py -3`に置き換えてください。
 
 ## インストールのテスト
 
@@ -357,7 +358,7 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-> **Note:** 上記のコマンドは、Linux/macOS X コマンドを示しています。この時点では、 "14 unapplied migration(s)" という警告は無視できます！
+> **メモ:** 上記のコマンドは、Linux/macOS X コマンドを示しています。この時点では、 "14 unapplied migration(s)" という警告は無視できます！
 
 サーバーが稼働したら、ローカル Web ブラウザーで `http://127.0.0.1:8000/` という URL に移動して、サイトを表示できます。次のようなサイトが表示されます:
 

@@ -2,6 +2,7 @@
 title: CompositionEvent.CompositionEvent()
 slug: Web/API/CompositionEvent/CompositionEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`CompositionEvent()`** コンストラクターは新しい {{domxref("CompositionEvent")}} オブジェクトのインスタンスを作成します。
@@ -22,7 +23,7 @@ slug: Web/API/CompositionEvent/CompositionEvent
 
     - `data`: {{domxref("CompositionEvent")}} オブジェクトの {{domxref("CompositionEvent.data", "data")}} 属性を IME コンポジションにより生成された文字に初期化します。
 
-    > **Note:** **補足**: `CompositionEventInit` 辞書は、{{domxref("UIEvent.UIEvent", "UIEventInit")}} 辞書から継承するため、そこで定義されたメンバーも受け入れます。
+    > **メモ:** `CompositionEventInit` 辞書は、{{domxref("UIEvent.UIEvent", "UIEventInit")}} 辞書から継承するため、そこで定義されたメンバーも受け入れます。
 
 ## 仕様
 

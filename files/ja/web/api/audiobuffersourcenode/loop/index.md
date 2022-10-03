@@ -2,6 +2,7 @@
 title: AudioBufferSourceNode.loop
 slug: Web/API/AudioBufferSourceNode/loop
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioBufferSourceNode") }} の `loop` プロパティは、 {{domxref("AudioBuffer")}} の末端に達した時に、音声を繰り返し再生するべきかを示す論理値です。
@@ -25,7 +26,7 @@ AudioBufferSourceNode.loop = true | false;
 
 この例では、 {{domxref("AudioContext.decodeAudioData")}} 関数は音声トラックをデコードし {{domxref("AudioBufferSourceNode")}} に追加するために使用されています。再生・停止のためにボタンが配置され、スライダーが `playbackRate` プロパティを逐次変更するために使用されています。音声はループして再生されます。
 
-> **Note:** [実際に動作する例を見る](https://mdn.github.io/webaudio-examples/decode-audio-data/) ([または、ソースコードを見る](https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html))ことができます。
+> **メモ:** [実際に動作する例を見る](https://mdn.github.io/webaudio-examples/decode-audio-data/) ([または、ソースコードを見る](https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html))ことができます。
 
 ```js
 function getData() {

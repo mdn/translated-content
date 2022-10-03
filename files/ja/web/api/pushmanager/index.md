@@ -2,13 +2,14 @@
 title: PushManager
 slug: Web/API/PushManager
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 [Push API](/ja/docs/Web/API/Push_API) の `PushManager` インターフェースは、3rd パーティーのサーバーからの通知だけではなく、プッシュ通知へのリクエスト URL を取得するための方法を提供します。
 
 このインターフェースは、{{domxref("ServiceWorkerRegistration.pushManager")}} プロパティを経由してアクセスできます。
 
-> **Note:** **ノート**：このインターフェースは、廃止された {{domxref("PushRegistrationManager")}}で以前に提案されていた機能をリプレースしています。
+> **メモ:** このインターフェースは、廃止された {{domxref("PushRegistrationManager")}}で以前に提案されていた機能をリプレースしています。
 
 ## プロパティ
 

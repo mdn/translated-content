@@ -69,11 +69,11 @@ with webdriver.Firefox() as driver:
 
 ### [Capabilities](/zh-CN/docs/Web/WebDriver/Capabilities)
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}
+{{ListSubpages("/zh-CN/docs/Web/WebDriver/Capabilities")}}
 
 ### [Errors](/zh-CN/docs/Web/WebDriver/Errors)
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Errors")}}
+{{ListSubpages("/zh-CN/docs/Web/WebDriver/Errors")}}
 
 ## Tutorials
 

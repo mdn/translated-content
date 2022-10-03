@@ -97,7 +97,6 @@
 /ja/docs/API/Document/scrollingElement	/ja/docs/Web/API/Document/scrollingElement
 /ja/docs/API/Document/styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/API/Document/title	/ja/docs/Web/API/Document/title
-/ja/docs/API/Document/tooltipNode	/ja/docs/orphaned/Web/API/Document/tooltipNode
 /ja/docs/API/Document/vlinkColor	/ja/docs/Web/API/Document/vlinkColor
 /ja/docs/API/Document/width	/ja/docs/conflicting/Web/API/Element/clientWidth
 /ja/docs/API/Document/write	/ja/docs/Web/API/Document/write
@@ -1097,7 +1096,6 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:while	/ja/docs/Web/JavaScript/Reference/Statements/while
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:with	/ja/docs/Web/JavaScript/Reference/Statements/with
 /ja/docs/Creating_toolbar_buttons	/ja/docs/orphaned/Creating_toolbar_buttons
-/ja/docs/DHTML	/ja/docs/orphaned/Glossary/DHTML
 /ja/docs/DOM	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/About_the_Document_Object_Model	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/Apps.mgmt.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
@@ -1297,7 +1295,6 @@
 /ja/docs/DOM/document.referrer	/ja/docs/Web/API/Document/referrer
 /ja/docs/DOM/document.styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/DOM/document.title	/ja/docs/Web/API/Document/title
-/ja/docs/DOM/document.tooltipNode	/ja/docs/orphaned/Web/API/Document/tooltipNode
 /ja/docs/DOM/document.vlinkColor	/ja/docs/Web/API/Document/vlinkColor
 /ja/docs/DOM/document.width	/ja/docs/conflicting/Web/API/Element/clientWidth
 /ja/docs/DOM/document.write	/ja/docs/Web/API/Document/write
@@ -1870,15 +1867,11 @@
 /ja/docs/Glossary/502	/ja/docs/Web/HTTP/Status/502
 /ja/docs/Glossary/AOM	/ja/docs/Glossary/Accessibility_tree
 /ja/docs/Glossary/Boot2Gecko	/ja/docs/Glossary/Firefox_OS
-/ja/docs/Glossary/Bootstrap	/ja/docs/orphaned/Glossary/Bootstrap
 /ja/docs/Glossary/Bézier_curve	/ja/docs/Glossary/Bezier_curve
 /ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Client_hints
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
-/ja/docs/Glossary/DHTML	/ja/docs/orphaned/Glossary/DHTML
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
-/ja/docs/Glossary/Dynamic_programming_language	/ja/docs/orphaned/Glossary/Dynamic_programming_language
-/ja/docs/Glossary/GIJ	/ja/docs/orphaned/Glossary/GIJ
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/Index	/ja/docs/Glossary
@@ -1888,7 +1881,6 @@
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
 /ja/docs/Glossary/Symbol	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ja/docs/Glossary/XSS	/ja/docs/Glossary/Cross-site_scripting
-/ja/docs/Glossary/jQuery	/ja/docs/orphaned/Glossary/jQuery
 /ja/docs/Glossary/クロージャ	/ja/docs/Glossary/Closure
 /ja/docs/Glossary/スラグ	/ja/docs/Glossary/Slug
 /ja/docs/Glossary/ドメイン	/ja/docs/Glossary/Domain
@@ -3233,7 +3225,6 @@
 /ja/docs/Web/API/Document/pointerover_event	/ja/docs/conflicting/Web/API/Element/pointerover_event
 /ja/docs/Web/API/Document/pointerup_event	/ja/docs/conflicting/Web/API/Element/pointerup_event
 /ja/docs/Web/API/Document/selectstart_event	/ja/docs/Web/API/Node/selectstart_event
-/ja/docs/Web/API/Document/tooltipNode	/ja/docs/orphaned/Web/API/Document/tooltipNode
 /ja/docs/Web/API/Document/touchcancel_event	/ja/docs/conflicting/Web/API/Element/touchcancel_event
 /ja/docs/Web/API/Document/touchend_event	/ja/docs/conflicting/Web/API/Element/touchend_event
 /ja/docs/Web/API/Document/touchmove_event	/ja/docs/conflicting/Web/API/Element/touchmove_event
@@ -3778,7 +3769,6 @@
 /ja/docs/Web/API/document.scripts	/ja/docs/Web/API/Document/scripts
 /ja/docs/Web/API/document.styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/Web/API/document.title	/ja/docs/Web/API/Document/title
-/ja/docs/Web/API/document.tooltipNode	/ja/docs/orphaned/Web/API/Document/tooltipNode
 /ja/docs/Web/API/document.vlinkColor	/ja/docs/Web/API/Document/vlinkColor
 /ja/docs/Web/API/document.width	/ja/docs/conflicting/Web/API/Element/clientWidth
 /ja/docs/Web/API/document.write	/ja/docs/Web/API/Document/write
@@ -4880,7 +4870,6 @@
 /ja/docs/Web/Security/HTTP_Strict_Transport_Security	/ja/docs/Web/HTTP/Headers/Strict-Transport-Security
 /ja/docs/Web/Security/Information_Security_Basics	/ja/docs/orphaned/Web/Security/Information_Security_Basics
 /ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
-/ja/docs/Web/Specification_list	/ja/docs/orphaned/Web/Specification_list
 /ja/docs/Web/WebGL	/ja/docs/Web/API/WebGL_API
 /ja/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ja/docs/Web/WebGL/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
@@ -5436,7 +5425,6 @@
 /ja/docs/lastIndexOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 /ja/docs/method	/ja/docs/Web/API/HTMLFormElement/method
 /ja/docs/mozillaのメール	/ja/docs/Web
-/ja/docs/reftest_opportunities_files	/ja/docs/orphaned/reftest_opportunities_files
 /ja/docs/slice	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice
 /ja/docs/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString

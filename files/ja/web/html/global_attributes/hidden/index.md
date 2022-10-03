@@ -2,6 +2,7 @@
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`hidden`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は、要素はまだ、あるいはもはや*関連性*がないことを示す論理型属性です。例えば、ログインのプロセスが完了するまで使えない要素を隠すために使用できます。ブラウザーは、 `hidden` 属性を設定している要素を表示しません。
@@ -18,7 +19,7 @@ slug: Web/HTML/Global_attributes/hidden
 
 同様に、 canvas 要素に `hidden` 属性をつけたものはオフスクリーンバッファーとしてグラフィックエンジンを記述することができますし、フォーム制御では hidden のフォーム要素をフォーム属性を使用して参照することができます。
 
-> **Note:** `hidden` 属性を持つ要素について、 CSS の {{cssxref("display")}} プロパティの値を変更すると、挙動を上書きします。例えば `display: flex` を設定した要素は、 `hidden` 属性が存在しても表示されます。
+> **メモ:** `hidden` 属性を持つ要素について、 CSS の {{cssxref("display")}} プロパティの値を変更すると、挙動を上書きします。例えば `display: flex` を設定した要素は、 `hidden` 属性が存在しても表示されます。
 
 ## 仕様書
 

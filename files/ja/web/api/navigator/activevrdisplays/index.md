@@ -2,11 +2,12 @@
 title: Navigator.activeVRDisplays
 slug: Web/API/Navigator/activeVRDisplays
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
 
 **`activeVRDisplays`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、すべての {{domxref("VRDisplay")}} オブジェクトのうち、現在表示中 ({{domxref("VRDisplay.ispresenting")}} が `true`) のものを含んだ配列を返します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 値
 

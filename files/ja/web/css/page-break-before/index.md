@@ -2,9 +2,10 @@
 title: page-break-before
 slug: Web/CSS/page-break-before
 ---
+
 {{CSSRef}}
 
-> **Warning:** このプロパティは {{cssxref("break-before")}} プロパティによって置き換えられました。
+> **警告:** このプロパティは {{cssxref("break-before")}} プロパティによって置き換えられました。
 
 **`page-break-before`** CSS プロパティは、現在の要素の*前で*改ページが行われるように調整します。
 

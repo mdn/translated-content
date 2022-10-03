@@ -2,6 +2,7 @@
 title: IDBCursor
 slug: Web/API/IDBCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 [IndexedDB API](/ja/docs/IndexedDB) の **`IDBCursor`** インターフェイスはデータベースの複数レコードを横断したり繰り返すための[カーソル](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor)です。
@@ -17,7 +18,7 @@ slug: Web/API/IDBCursor
 - {{domxref("IDBCursor.source")}} {{readonlyInline}}
   - : カーソルが繰り返している{{domxref("IDBObjectStore")}} か {{domxref("IDBIndex")}} を返します。この関数は、カーソルが現在繰り返されていたり、繰り返しが終わりを過ぎたり、トランザクションがアクティブでなくても、null や例外を返しません。
 - {{domxref("IDBCursor.direction")}} {{readonlyInline}}
-  - : カーソルの横断の向きを返します。取りうる値については [Constants](/ja/docs/Web/API/IDBCursor$edit#const_next) を見てください。
+  - : カーソルの横断の向きを返します。取りうる値については [Constants](/ja/docs/Web/API/IDBCursor#const_next) を見てください。
 - {{domxref("IDBCursor.key")}} {{readonlyInline}}
   - : カーソル位置のレコードのキーを返します。カーソルが範囲外の場合、`undefined` にセットされます。カーソルキーはあらゆるデータ型となりえます。
 - {{domxref("IDBCursor.value")}} {{readonlyInline}}
@@ -42,7 +43,7 @@ slug: Web/API/IDBCursor
 
 {{ deprecated_header(13) }}
 
-> **Warning:** これらの constants は利用できません — Gecko 25 で削除されました。代わりに直接 string constants を使う必要があります。({{ bug(891944) }})
+> **警告:** これらの constants は利用できません — Gecko 25 で削除されました。代わりに直接 string constants を使う必要があります。({{ bug(891944) }})
 
 - `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
 - `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.

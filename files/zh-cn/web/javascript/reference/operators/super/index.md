@@ -129,7 +129,7 @@ console.log(y.prop); // 1
 
 ### 在对象字面量中使用 `super.prop`
 
-`Super` 也可以在 [object initializer / literal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer) 符号中使用。在下面的例子中，两个对象各定义了一个方法。在第二个对象中，我们使用 `super` 调用了第一个对象中的方法。 当然，这需要我们先利用 {{jsxref("Object.setPrototypeOf()")}} 设置 `obj2` 的原型为 `obj1`，然后才能够使用 `super` 调用 `obj1` 上的 `method1`。
+`Super` 也可以在 [object initializer / literal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer) 符号中使用。在下面的例子中，两个对象各定义了一个方法。在第二个对象中，我们使用 `super` 调用了第一个对象中的方法。当然，这需要我们先利用 {{jsxref("Object.setPrototypeOf()")}} 设置 `obj2` 的原型为 `obj1`，然后才能够使用 `super` 调用 `obj1` 上的 `method1`。
 
 ```js
 var obj1 = {

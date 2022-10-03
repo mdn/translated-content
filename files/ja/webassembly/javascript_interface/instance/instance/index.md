@@ -3,13 +3,14 @@ title: WebAssembly.Instance() コンストラクター
 slug: WebAssembly/JavaScript_interface/Instance/Instance
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance
 ---
+
 {{JSRef}}
 
 **`WebAssembly.Instance()`** コンストラクターは、新しい `Instance` オブジェクトを生成します。これはステートフルで実行可能な {{jsxref("WebAssembly.Module")}} のインスタンスです。
 
 ## 構文
 
-> **Warning:** 巨大なモジュールのインスタンス化は高コストになる可能性があるので、開発者が同期的な `Instance()` コンストラクターを使用するのは、絶対に必要な場合のみにするべきです。それ以外の場合はすべて、{{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用してください。
+> **警告:** 巨大なモジュールのインスタンス化は高コストになる可能性があるので、開発者が同期的な `Instance()` コンストラクターを使用するのは、絶対に必要な場合のみにするべきです。それ以外の場合はすべて、{{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用してください。
 
 ```js
 new WebAssembly.Instance(module, importObject)

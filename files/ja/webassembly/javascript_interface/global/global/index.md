@@ -3,6 +3,7 @@ title: WebAssembly.Global() コンストラクター
 slug: WebAssembly/JavaScript_interface/Global/Global
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global
 ---
+
 {{JSRef}}
 
 **`WebAssembly.Global()`** コンストラクターは、グローバル変数のインスタンスを表す新しい `Global` オブジェクトを表し、これは JavaScript からアクセス可能で、 1 つ以上の {{jsxref("WebAssembly.Module")}} インスタンスの間でインポート/エクスポート可能です。これにより、複数のモジュールを動的リンクすることができます。
@@ -59,7 +60,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 });
 ```
 
-> **Note:** この例は[GitHub 上の実行例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)で確認できます。また、[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)も参照してください。
+> **メモ:** この例は[GitHub 上の実行例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)で確認できます。また、[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)も参照してください。
 
 ## 仕様書
 

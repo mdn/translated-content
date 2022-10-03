@@ -2,9 +2,10 @@
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
-**`X-Frame-Options`** は [HTTP](/en-US/docs/Web/HTTP) のレスポンスヘッダーで、ブラウザーがページを {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("object")}} の中に表示することを許可するかどうかを示すために使用します。サイトはコンテンツが他のサイトに埋め込まれないよう保証することで、{{interwiki("wikipedia", "クリックジャッキング")}}攻撃を防ぐために使用することができます。
+**`X-Frame-Options`** は [HTTP](/ja/docs/Web/HTTP) のレスポンスヘッダーで、ブラウザーがページを {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("object")}} の中に表示することを許可するかどうかを示すために使用します。サイトはコンテンツが他のサイトに埋め込まれないよう保証することで、{{interwiki("wikipedia", "クリックジャッキング")}}攻撃を防ぐために使用することができます。
 
 セキュリティが強化されるのは、ユーザーが `X-Frame-Options` に対応したブラウザーを使用して文書にアクセスした場合のみです。
 
@@ -45,7 +46,7 @@ X-Frame-Options: SAMEORIGIN
 
 ## 例
 
-> **Note:** X-Frame-Options を {{HTMLElement("meta")}} 要素に設定しても意味がありません。例えば、`<meta http-equiv="X-Frame-Options" content="deny">` は効果がありません。使用しないでください。以下の例にあるように、 `X-Frame-Options` は HTTP ヘッダーを通じて設定された場合のみ動作します。
+> **メモ:** X-Frame-Options を {{HTMLElement("meta")}} 要素に設定しても意味がありません。例えば、`<meta http-equiv="X-Frame-Options" content="deny">` は効果がありません。使用しないでください。以下の例にあるように、 `X-Frame-Options` は HTTP ヘッダーを通じて設定された場合のみ動作します。
 
 ### Apache の設定
 

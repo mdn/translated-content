@@ -2,13 +2,14 @@
 title: Cross-Origin Resource Policy (CORP)
 slug: Web/HTTP/Cross-Origin_Resource_Policy_(CORP)
 ---
+
 {{HTTPSidebar}}
 
 **クロスオリジンリソースポリシー**は {{HTTPHeader("Cross-Origin-Resource-Policy")}} ヘッダーによって設定されるポリシーで、ウェブサイトやアプリケーションが他のオリジンから (`<script>` や `<img>` などの要素を使用して発行された) 特定のリクエストに対する保護をオプトインすることで、 [Spectre](https://ja.wikipedia.org/wiki/Spectre) のような投機的なサイドチャネル攻撃や、クロスサイトスクリプトインクルージョン攻撃を緩和することができます。
 
 CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加レイヤーです。クロスオリジンリソースポリシーは、既定でクロスオリジンの読み込みを保護するメカニズムである、 [クロスオリジンリードブロッキング](https://fetch.spec.whatwg.org/#corb) (CORB)を補完します。
 
-> **Note:** このポリシーは、既定で CORS セーフリストメソッド／ヘッダーに対して発行される、[`no-cors`](https://fetch.spec.whatwg.org/#concept-request-mode) リクエストに対してのみ有効です。
+> **メモ:** このポリシーは、既定で CORS セーフリストメソッド／ヘッダーに対して発行される、[`no-cors`](https://fetch.spec.whatwg.org/#concept-request-mode) リクエストに対してのみ有効です。
 
 このポリシーは*[レスポンスヘッダー](/ja/docs/Glossary/Response_header)*を介して表現されるため、実際のリクエストは防止されません。むしろ、ブラウザーは応答本文を削除することで*結果*が漏洩するのを防ぎます。
 
@@ -24,7 +25,7 @@ CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加
 
 ## 使用方法
 
-> **Note:** [Chrome のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261)が原因で、クロスオリジンリソースポリシーが PDF の描画を破壊し、訪問者が PDF の 1 ページ目以降を読めない可能性があります。本番環境ではこのヘッダーの仕様には注意してください。
+> **メモ:** [Chrome のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261)が原因で、クロスオリジンリソースポリシーが PDF の描画を破壊し、訪問者が PDF の 1 ページ目以降を読めない可能性があります。本番環境ではこのヘッダーの仕様には注意してください。
 
 ウェブアプリケーションは、次の 3 つの値の中から 1 つ受け取ることができる {{HTTPHeader("Cross-Origin-Resource-Policy")}} の HTTP レスポンスヘッダーを介してクロスオリジンリソースポリシーを設定します。
 
@@ -32,7 +33,7 @@ CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加
 
   - : 同じ _{{Glossary("Site")}}_ からのリクエストのみリソースを読み込めます。
 
-    > **Warning:** **警告:** これは{{Glossary("origin", "オリジン")}}よりも安全性が低いものです。[2 つのオリジンが同じサイトであるかどうかをチェックするアルゴリズム](https://html.spec.whatwg.org/multipage/origin.html#same-site)は HTML 標準で定義されており、*登録可能なドメイン*をチェックします。
+    > **警告:** これは{{Glossary("origin", "オリジン")}}よりも安全性が低いものです。[2 つのオリジンが同じサイトであるかどうかをチェックするアルゴリズム](https://html.spec.whatwg.org/multipage/origin.html#same-site)は HTML 標準で定義されており、*登録可能なドメイン*をチェックします。
 
 - same-origin
   - : 同じ _{{Glossary("origin")}}_ (すなわち、スキーマ + ホスト + ポート) からのリクエストのみリソースを読み込めます。

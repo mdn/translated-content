@@ -9,7 +9,7 @@ l10n:
 
 このモジュールでは{{Glossary("asynchronous", "非同期")}} {{Glossary("JavaScript")}} に触れ、なぜそれが重要なのか、そして、潜在的なブロッキング処理（例えばサーバからリソースを取得する）に効果的に対処するためにどうやって使うのかを見ていきます。
 
-> **Callout:**
+> **注目:**
 >
 > #### フロントエンドウェブ開発者を目指す方へ
 >
@@ -21,7 +21,7 @@ l10n:
 
 非同期 JavaScript はとても高度なトピックなので、事前に [JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)と [JavaScript の構成要素](/ja/docs/Learn/JavaScript/Building_blocks)のモジュールに取り組んでおくことをおすすめします。
 
-> **Note:** ファイルを作成する手段のないコンピューター・タブレット・その他の端末をお使いの場合、（ほとんどの）コード例は [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com) などのオンラインエディターでも試すことができます。
+> **メモ:** ファイルを作成する手段のないコンピューター・タブレット・その他の端末をお使いの場合、（ほとんどの）コード例は [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com) などのオンラインエディターでも試すことができます。
 
 ## ガイド
 

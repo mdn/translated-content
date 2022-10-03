@@ -12,7 +12,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 
 `onMessage` リスナーに受信させるメッセージを送るには、{{WebExtAPIRef("runtime.sendMessage()")}}、または (コンテンツスクリプトにメッセージを送るときは) {{WebExtAPIRef("tabs.sendMessage()")}} を使います。
 
-> **Note:** 同じ種類のメッセージに対する `onMessage` リスナーを複数作ることは避けてください。複数のリスナーが実行される順番は保証されていないからです。特定のリスナーへのメッセージ伝送を保証したいときは、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging) を使ってください。
+> **メモ:** 同じ種類のメッセージに対する `onMessage` リスナーを複数作ることは避けてください。複数のリスナーが実行される順番は保証されていないからです。特定のリスナーへのメッセージ伝送を保証したいときは、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging) を使ってください。
 
 メッセージ本体の他に、リスナーは次のものを受け取ります。
 
@@ -26,9 +26,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 - イベントリスナーから `true` を返す。こうすることで、リスナーから復帰した後でも `sendResponse` 関数が有効なままになるため、後で実行することができます。[例を参照してください](/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_sendResponse)。
 - イベントリスナーから `Promise` を返して、返信が準備できた後にそれを解決する (またはエラーの場合は拒否する)。[例を参照してください](/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_a_Promise)。
 
-> **Warning:** `Promise` を返すほうがより望ましい方法です。`sendResponse` は [W3C 仕様から削除される予定です](https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219)。 人気のある [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) ライブラリーは、すでに `sendResponse` 関数を実装から削除しました。
+> **警告:** `Promise` を返すほうがより望ましい方法です。`sendResponse` は [W3C 仕様から削除される予定です](https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219)。 人気のある [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) ライブラリーは、すでに `sendResponse` 関数を実装から削除しました。
 
-> **Note:** また、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging)を使うこともできます。
+> **メモ:** また、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging)を使うこともできます。
 
 ## 構文
 
@@ -78,7 +78,7 @@ browser.runtime.onMessage.hasListener(listener)
 
     リスナー関数は、Boolean か [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) のいずれかを返します。
 
-    > **Warning:** `addListener` を次のような `async` 関数を使って実行しないでください。
+    > **警告:** `addListener` を次のような `async` 関数を使って実行しないでください。
     >
     > ```
     > browser.runtime.onMessage.addListener(async (data, sender) => {
@@ -257,7 +257,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onMessage) API. このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **メモ:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onMessage) API. このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

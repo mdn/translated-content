@@ -3,13 +3,14 @@ title: opacity()
 slug: Web/CSS/filter-function/opacity
 original_slug: Web/CSS/filter-function/opacity()
 ---
+
 {{CSSRef}}
 
 **`opacity()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像のサンプルに透過性を適用します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
 {{EmbedInteractiveExample("pages/css/function-opacity.html")}}
 
-> **Note:** この関数はもっと一般的な {{Cssxref("opacity")}} プロパティと似ています。違いはフィルターの場合、ブラウザーによってはハードウェアアクセラレーションにより性能が上がることです。
+> **メモ:** この関数はもっと一般的な {{Cssxref("opacity")}} プロパティと似ています。違いはフィルターの場合、ブラウザーによってはハードウェアアクセラレーションにより性能が上がることです。
 
 ## 構文
 

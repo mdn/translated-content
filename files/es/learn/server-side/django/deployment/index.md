@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Django/Deployment
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-Ahora que has creado (y probado) un fantastico sitio web para la [Biblioteca Local](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), querrás instalarlo en un servidor web público de manera que pueda ser accedido por el personal y los miembros de la biblioteca a través de Internet. Este artículo proporciona una visión general de cómo buscar un host para desplegar tu sitio web y de lo que necesitas hacer para conseguir que tu sitio esté listo en producción.
+Ahora que has creado (y probado) un fantastico sitio web para la [Biblioteca Local](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), querrás instalarlo en un servidor web público de manera que pueda ser accedido por el personal y los miembros de la biblioteca a través de Internet. Este artículo proporciona una visión general de cómo buscar un host para desplegar tu sitio web y de lo que necesitas hacer para conseguir que tu sitio esté listo en producción.
 
 <table>
   <tbody>
@@ -194,23 +194,23 @@ Heroku está estrechamente integrado con el sistema de control de versiones de c
 
 Existen muchas formas de trabajar con git, pero una de las más sencillas es crear en primer lugar una cuenta en [Github](https://github.com/), crear allí el repositorio, y a continuación sincronizarlo localmente:
 
-1.  Visita <https://github.com/> y crea una cuenta.
-2.  Una vez conectado, haz click en el enlace **+** de la barra de tareas superior y selecciona **New repository**.
-3.  Rellena todos los campos de este formulario. Aunque no son obligatorios, es muy recomendable que los rellenes todos.
+1. Visita <https://github.com/> y crea una cuenta.
+2. Una vez conectado, haz click en el enlace **+** de la barra de tareas superior y selecciona **New repository**.
+3. Rellena todos los campos de este formulario. Aunque no son obligatorios, es muy recomendable que los rellenes todos.
 
     - Introduce el nombre del nuevo repositorio (por ejemplo, _django_local_library_), y una descripción (por ejemplo "Sitio web de la Biblioteca Local escrita en Django").
     - Selecciona **Python** en la lista de selección _Add .gitignore._
     - Selecciona tu licencia en la lista de selección _Add license_.
     - Marca **Initialize this repository with a README**.
 
-4.  Pulsa **Create repository**.
-5.  Haz click en el botón verde "**Clone or download**" en la página de tu nuevo repositorio.
-6.  Copia el valor de la URL del campo de texto situado dentro de la caja de diálogo que aparece (debería decir algo como: **https\://github.com/_\<your_git_user_id>_/django_local_library.git**).
+4. Pulsa **Create repository**.
+5. Haz click en el botón verde "**Clone or download**" en la página de tu nuevo repositorio.
+6. Copia el valor de la URL del campo de texto situado dentro de la caja de diálogo que aparece (debería decir algo como: `https://github.com/<your_git_user_id>/django_local_library.git`).
 
 Ahora que el repositorio ("repo") ha sido creado, querremos clonarlo en nuestra computadora local:
 
-1.  Instala _git_ para tu computadora local (puedes encontrar versiones para distintas plataformas [here](https://git-scm.com/downloads)).
-2.  Abre una ventana/terminal de comandos y clona tu repositorio usando la URL que copiaste anteriormente:
+1. Instala _git_ para tu computadora local (puedes encontrar versiones para distintas plataformas [here](https://git-scm.com/downloads)).
+2. Abre una ventana/terminal de comandos y clona tu repositorio usando la URL que copiaste anteriormente:
 
     ```bash
     git clone https://github.com/<your_git_user_id>/django_local_library.git
@@ -218,7 +218,7 @@ Ahora que el repositorio ("repo") ha sido creado, querremos clonarlo en nuestra 
 
     Esto creará el repositorio debajo del punto actual.
 
-3.  Navega dentro del nuevo repositorio.
+3. Navega dentro del nuevo repositorio.
 
     ```bash
     cd django_local_library.git
@@ -226,8 +226,8 @@ Ahora que el repositorio ("repo") ha sido creado, querremos clonarlo en nuestra 
 
 El paso final es copiar en él tu aplicación y a continuación añadir los archivos a tu repositorio usando git:
 
-1.  Copia tu aplicación Django en esta carpeta (todos los archivos que estén al mismo nivel que **manage.py** y por debajo, **no** su carpeta locallibrary contenedora).
-2.  Abre el archivo **.gitignore**, copia las siguientes líneas al final del mismo, y guárdalo (este archivo se utiliza para identificar los archivos que, por defecto, no deberían subirse a git).
+1. Copia tu aplicación Django en esta carpeta (todos los archivos que estén al mismo nivel que **manage.py** y por debajo, **no** su carpeta locallibrary contenedora).
+2. Abre el archivo **.gitignore**, copia las siguientes líneas al final del mismo, y guárdalo (este archivo se utiliza para identificar los archivos que, por defecto, no deberían subirse a git).
 
     ```bash
     # Text backup files
@@ -237,13 +237,13 @@ El paso final es copiar en él tu aplicación y a continuación añadir los arch
     *.sqlite3
     ```
 
-3.  Abre una ventana/terminal de comandos y utiliza el comando `add` para añadir todos los archivos a git.
+3. Abre una ventana/terminal de comandos y utiliza el comando `add` para añadir todos los archivos a git.
 
     ```bash
     git add -A
     ```
 
-4.  Utiliza el comando status para comprobar que todos los archivos que vas a añadir son correctos (quieres incluir ficheros fuentes, no binarios, archivos temporales, etc). Debería tener un aspecto similar a la lista siguiente.
+4. Utiliza el comando status para comprobar que todos los archivos que vas a añadir son correctos (quieres incluir ficheros fuentes, no binarios, archivos temporales, etc). Debería tener un aspecto similar a la lista siguiente.
 
     ```bash
     > git status
@@ -260,13 +260,13 @@ El paso final es copiar en él tu aplicación y a continuación añadir los arch
             new file:   templates/registration/password_reset_form.html
     ```
 
-5.  Si estás conforme, consolida tus archivos en el repositorio local:
+5. Si estás conforme, consolida tus archivos en el repositorio local:
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6.  A continuación, sincroniza tu repositorio local con el sitio web Github, usando lo siguiente:
+6. A continuación, sincroniza tu repositorio local con el sitio web Github, usando lo siguiente:
 
     ```bash
     git push origin master
@@ -275,7 +275,7 @@ El paso final es copiar en él tu aplicación y a continuación añadir los arch
 Una vez completada esta operación, deberías poder regresar a la página de Github donde creaste tu repositorio, refrescar la página, y comprobar que tu toda tu aplicación ha sido ya cargada. Puedes continuar actualizando tu repositorio según vayan cambiando los archivos, usando este ciclo add/commit/push.
 
 > **Nota:** Este es un buen momento para hacer una copia de seguridad de tu proyecto "simple" — algunos de los cambios que vamos a ir haciendo en las siguientes secciones podrían ser útiles para el despliegue en cualquier plataforma (o para el desarrollo), pero otros no.
-> 
+>
 > La _mejor_ manera de hacer esto es usar _git_ para gestionar tus revisiones. Con _git_ puedes no solo volver a una versión anterior en particular, sino que puedes mantener ésta en una "rama" separada de tus cambios en producción, y seleccionar determinados cambios a trasladar entre las ramas de producción y desarrollo. [Learning Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) merece la pena el esfuerzo, pero queda fuera del alcance de este tema.
 >
 > La forma _más fácil_ de hacer ésto es simplemente copiar tus archivos en otra ubicación. Usa la manera que más se ajuste a tus conocimientos de git!
@@ -288,7 +288,9 @@ Esta sección explica los cambios que necesitaras hacer a nuestra aplicación _L
 
 Crea el archivo `Procfile` (sin extensión) en la carpeta raíz de tu repositorio GitHub para declarar los tipos de procesos de la aplicación y los puntos de entrada. Copia en él el texto siguiente:
 
-    web: gunicorn locallibrary.wsgi --log-file -
+```
+web: gunicorn locallibrary.wsgi --log-file -
+```
 
 La palabra "`web:`" le dice a Heroku que se trata de una web dyno y puede ser enviada a través del tráfico HTTP. El proceso a arrancar en este dyno es _gunicorn_, un servidor de aplicaciones web popular recomendado por Heroku. Arrancamos Gunicorn usando la información de configuración que se encuentra en el módulo `locallibrary.wsgi` (creado con nuestro esqueleto de aplicación: **/locallibrary/wsgi.py**).
 
@@ -331,7 +333,8 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 ```
 
-> **Nota:** 
+> **Nota:**
+>
 > - Nosotros seguiremos utilizando SQLite durante el desarrollo porque la variable de entorno `DATABASE_URL` no será fijada en nuestra computadora de desarrollo.
 > - El valor `conn_max_age=500` hace que la conexión sea persistente, lo que es más eficiente que recrear la conexión en cada ciclo de petición. No obstante, esto es opcional y puede ser eliminado si es necesario.
 
@@ -434,11 +437,13 @@ pip3 freeze > requirements.txt
 
 Después de instalar todas las dependencias anteriores, tu archivo **requirements.txt** debería tener _al menos_ estos objetos (aunque los números de versión pueden ser diferentes). Por favor, borra cualquier otra dependencia no listada abajo, a menos que la hayas añadido explícitamente para esta aplicación.
 
-    dj-database-url==0.4.1
-    Django==1.10.2
-    gunicorn==19.6.0
-    psycopg2==2.6.2
-    whitenoise==3.2.2
+```
+dj-database-url==0.4.1
+Django==1.10.2
+gunicorn==19.6.0
+psycopg2==2.6.2
+whitenoise==3.2.2
+```
 
 > **Nota:** Asegúrate de que existe una línea **psycopg2** como la que se ve arriba! Incluso aunque no lo hayas instalado localmente, deberías añadirla a **requirements.txt**.
 
@@ -446,7 +451,9 @@ Después de instalar todas las dependencias anteriores, tu archivo **requirement
 
 El archivo **runtime.txt**, si ha sido definido, le dice a Heroku que lenguaje de programación usar. Crea el archivo en el raíz del repositorio y añade el siguiente texto:
 
-    python-3.5.2
+```
+python-3.5.2
+```
 
 > **Nota:** Heroku sólo soporta un número pequeño de [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes). Tú puedes especificar valores de runtime de Python 3, pero en el momento de esta redacción la versión anterior será soportada como definida.
 

@@ -7,7 +7,7 @@ slug: Web/API/Event/bubbles
 
 **`bubbles`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM ツリーをバブリングするかしないかを示します。
 
-> **Note:** バブリングについての詳細は、[イベントのバブリングとキャプチャ](/ja/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture)を参照してください。
+> **メモ:** バブリングについての詳細は、[イベントのバブリングとキャプチャ](/ja/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture)を参照してください。
 
 ## 値
 

@@ -5,12 +5,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 ---
 {{AddonSidebar}}
 
-Escuta por usuário executando comandos que você registrou usando o [`commands` manifest.json key](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands).
+Escuta por usuário executando comandos que você registrou usando o [`commands` manifest.json key](/en-US/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Tipos
 
 - {{WebExtAPIRef("commands.Command")}}
-  - : Objeto representando um comando. Contém a informação especificada no comando [`commands` manifest.json key](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands).
+  - : Objeto representando um comando. Contém a informação especificada no comando [`commands` manifest.json key](/en-US/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Funções
 
@@ -32,19 +32,20 @@ Escuta por usuário executando comandos que você registrou usando o [`commands`
 
 > **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.commands`](https://developer.chrome.com/extensions/commands) do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
-// * Redistributions of source code must retain the above copyright
+//    * Redistributions of source code must retain the above copyright
 // notice, this list of conditions and the following disclaimer.
-// * Redistributions in binary form must reproduce the above
+//    * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-// * Neither the name of Google Inc. nor the names of its
+//    * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
@@ -58,4 +59,5 @@ Escuta por usuário executando comandos que você registrou usando o [`commands`
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->

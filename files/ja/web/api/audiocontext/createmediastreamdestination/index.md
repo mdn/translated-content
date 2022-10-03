@@ -2,6 +2,7 @@
 title: AudioContext.createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }} インターフェイスの `createMediaStreamDestination()` メソッドは、[WebRTC](/ja/docs/WebRTC) {{domxref("MediaStream")}} と関連付けられた {{domxref("MediaStreamAudioDestinationNode")}} オブジェクトを生成します。この MediaStream はローカルファイルに格納されたり他のコンピュータに送信されたりする音声ストリームを表します。
@@ -79,7 +80,7 @@ var destination = audioCtx.createMediaStreamDestination();
 </html>
 ```
 
-> **Note:** Github で[実際に動作する例を閲覧](https://mdn.github.io/webaudio-examples/create-media-stream-destination/index.html)したり、[ソースコードを読む](https://github.com/mdn/webaudio-examples/blob/master/create-media-stream-destination/index.html)ことができます。
+> **メモ:** Github で[実際に動作する例を閲覧](https://mdn.github.io/webaudio-examples/create-media-stream-destination/index.html)したり、[ソースコードを読む](https://github.com/mdn/webaudio-examples/blob/master/create-media-stream-destination/index.html)ことができます。
 
 ## 仕様
 

@@ -2,6 +2,7 @@
 title: '<audio>: 埋め込み音声要素'
 slug: Web/HTML/Element/audio
 ---
+
 {{HTMLRef}}
 
 **HTML の `<audio>` 要素**は、文書内に音声コンテンツを埋め込むために使用します。この要素は、1 つまたは複数の音源を含むことができます。音源は `src` 属性または {{HTMLElement("source")}} 要素を使用して表し、ブラウザーがもっとも適切な音源を選択します。また、 {{domxref("MediaStream")}} を使用してストリーミングメディアを指し示すこともできます。
@@ -20,7 +21,7 @@ slug: Web/HTML/Element/audio
 
   - : 論理属性。指定された場合、音声ファイル全体のダウンロードの完了を待たずに、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
-    > **Note:** 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。[自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)には autoplay の正しい使い方についての追加情報があります。
+    > **メモ:** 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。[自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)には autoplay の正しい使い方についての追加情報があります。
 
 - {{htmlattrdef("controls")}}
   - : この属性が指定された場合、ブラウザーは再生・一時停止、音量、シークの各機能を制御するコントロールを表示します。
@@ -45,7 +46,7 @@ slug: Web/HTML/Element/audio
 
   - : 論理属性で、有線 (HDMI, DVI, など) や無線技術 (Mirachast, Chromecast, DLNA, AirPlay, など) で接続された機器のリモート再生機能を無効にするために使用します。詳しくは[この提案中の仕様書](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute)をご覧ください。
 
-    > **Note:** Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
+    > **メモ:** Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
 
 - {{htmlattrdef("duration")}} {{ReadOnlyInline}}
   - : 倍精度浮動小数点値で、メディアのタイムライン上の音声の長さ (合計の長さ) を秒単位で示します。要素上にメディアがない場合や、メディアが有効でない場合は、返値は `NaN` になります。メディアの終わりが分からない場合 (長さの分からないライブストリーミング、ウェブラジオ、 [WebRTC](/ja/docs/Web/API/WebRTC_API) から来たメディアなど)、この値は `+Infinity` になります。
@@ -64,7 +65,7 @@ slug: Web/HTML/Element/audio
 
     既定値はブラウザーによって異なります。仕様書では `metadata` にするよう助言しています。
 
-    > **Note:** **使用上のメモ:**- `autoplay` 属性は `preload` より優先します。`autoplay` を指定すると、言うまでもなくブラウザーは音声を再生するためにダウンロードを始めなければなりません。
+    > **メモ:** **使用上のメモ:**- `autoplay` 属性は `preload` より優先します。`autoplay` を指定すると、言うまでもなくブラウザーは音声を再生するためにダウンロードを始めなければなりません。
     >
     > - 仕様書は、ブラウザーがこの属性の値に従うことを強制していません。これは単なるヒントです。
 
@@ -143,7 +144,7 @@ HTML の `<audio>` 要素の使用に関する良い情報源として、[映像
 - {{domxref("HTMLMediaElement.textTracks")}}
   - : この {{domxref("TextTrackList")}} オブジェクトに `addtrack` リスナーを追加することで、要素にテキストトラックが追加されたときに通知を受け取る k とができます。
 
-> **Note:** **メモ:** `<audio>` 要素であっても、動画やテキストトラックリストを持っており、インターフェイスの実装の使用が奇妙に見えますが、実際に動画を表示するために使用することができます。
+> **メモ:** `<audio>` 要素であっても、動画やテキストトラックリストを持っており、インターフェイスの実装の使用が奇妙に見えますが、実際に動画を表示するために使用することができます。
 
 例えば、次のようなコードで `<audio>` 要素で音声トラックが追加されたり削除されたりしたときを検出することができます。
 

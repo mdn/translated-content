@@ -2,6 +2,7 @@
 title: padding-block-end
 slug: Web/CSS/padding-block-end
 ---
+
 {{CSSRef}}
 
 **`padding-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のブロック方向の論理的な末尾側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。

@@ -2,6 +2,7 @@
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} 要素の **`hidden`** 型は、フォームの送信時にユーザーが見たり変更したりすることができないデータをウェブ開発者が含めることができます。例えば、現在注文中又は編集中の ID や、一意のセキュリティトークンなどに利用できます。隠し入力欄はページの表示で完全に非表示になり、ページの中で表示させる方法はありません。
@@ -36,13 +37,13 @@ slug: Web/HTML/Element/input/hidden
   </tbody>
 </table>
 
-> **Note:** {{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
+> **メモ:** {{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
 
 ## 値
 
 {{HTMLElement("input")}} 要素の {{htmlattrxref("value", "input")}} 属性は、フォームをサーバーに送信する時に含めたい隠しデータを含みます。これは特に、ユーザーインターフェイスを通じで編集したり確認したりすることはできませんが、ブラウザーの開発者ツールから値を編集することはできます。
 
-> **Warning:** ページのコンテンツ内では値がユーザーに表示されませんが、ブラウザーの開発者ツールや「ソースを表示」機能を使用して、見たり編集したりすることができます。 `hidden` の入力欄をセキュリティの形として当てにしないでください。
+> **警告:** ページのコンテンツ内では値がユーザーに表示されませんが、ブラウザーの開発者ツールや「ソースを表示」機能を使用して、見たり編集したりすることができます。 `hidden` の入力欄をセキュリティの形として当てにしないでください。
 
 ## 追加の属性
 
@@ -78,7 +79,7 @@ slug: Web/HTML/Element/input/hidden
 
 これで悪意のあるユーザーが偽のフォームを作成して、銀行に成りすまし、騙されやすいユーザーを騙して別なところに送金させるようなことを防ぐことができます。この種の攻撃は[クロスサイトリクエストフォージェリ (CSRF)](</ja/docs/Learn/Server-side/First_steps/Website_security#Cross-Site_Request_Forgery_(CSRF)>) と呼ばれており、非常に多くの信頼されているサーバー側フレームワークがこのような攻撃を防ぐために隠した秘密を使用しています。
 
-> **Note:** 前述のように、隠し入力欄に秘密を配置することは、本質的に安全ではありません。キーの組み合わせやエンコーディングによって実現されます。隠し入力欄の値は秘密とデータを関連付け、フォームがサーバーに送信されるときに自動的に含められます。本当にウェブサイトを安全にするには、よく設計された秘密を使用する必要があります。
+> **メモ:** 前述のように、隠し入力欄に秘密を配置することは、本質的に安全ではありません。キーの組み合わせやエンコーディングによって実現されます。隠し入力欄の値は秘密とデータを関連付け、フォームがサーバーに送信されるときに自動的に含められます。本当にウェブサイトを安全にするには、よく設計された秘密を使用する必要があります。
 
 ## 検証
 
@@ -150,7 +151,7 @@ textarea {
 
 {{ EmbedLiveSample('Examples', '100%', 200) }}
 
-> **Note:** この例は GitHub にもあります ([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html)および[ライブでの動作の確認](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)も参照してください)。
+> **メモ:** この例は GitHub にもあります ([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html)および[ライブでの動作の確認](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)も参照してください)。
 
 送信されるとき、サーバーへ送信されるフォームデータは以下のようになります。
 

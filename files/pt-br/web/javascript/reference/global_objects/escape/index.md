@@ -18,7 +18,7 @@ escape(str)
 
 ## Descrição
 
-A função **`escape`** é uma propriedade do _global object_. Caracteres especiais são codificados, com a exceção de: @\*\_+-./
+A função **`escape`** é uma propriedade do _global object_. Caracteres especiais são codificados, com a exceção de: `@*_+-./`
 
 O formato hexadecimal de caracteres, que o valor unitário do código é **0xFF or less,** é uma sequência de escape de 2 digitos: %xx. Para caracteres com um código unitário maior, uma sequência de 4 digitos %**u**xxxx é usada.
 

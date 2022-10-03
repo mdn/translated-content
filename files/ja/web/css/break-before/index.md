@@ -2,6 +2,7 @@
 title: break-before
 slug: Web/CSS/break-before
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`break-before`** プロパティは、生成されたボックスの前で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
@@ -103,7 +104,7 @@ break-before: unset;
 | `avoid`           | `avoid`      |
 | `always`          | `page`       |
 
-> **Note:** ブラウザーにおいては `always` の値は `page-break-*` において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では `always` の値ではなく `page` の別名となっています。
+> **メモ:** ブラウザーにおいては `always` の値は `page-break-*` において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では `always` の値ではなく `page` の別名となっています。
 
 ## 公式定義
 

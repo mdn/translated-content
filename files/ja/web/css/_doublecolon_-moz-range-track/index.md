@@ -2,11 +2,12 @@
 title: '::-moz-range-track'
 slug: Web/CSS/::-moz-range-track
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`::-moz-range-track`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、 `type="range"` の {{HTMLElement("input")}} でインジケーターがスライドする*トラック* (すなわち、溝) を表します。
 
-> **Note:** `::-moz-range-track` を `<input type="range">` 以外で使用すると、何にも一致せず、効果がありません。
+> **メモ:** `::-moz-range-track` を `<input type="range">` 以外で使用すると、何にも一致せず、効果がありません。
 
 ## 構文
 

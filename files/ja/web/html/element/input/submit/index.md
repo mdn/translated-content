@@ -2,6 +2,7 @@
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} 要素の **`submit`** 型は、ボタンとして描画されます。 {{domxref("Element/click_event", "click")}} イベントが発生したとき (ふつうはユーザーがボタンをクリックしたとき)、{{Glossary("user agent", "ユーザーエージェント")}}はサーバーへフォームを送信しようとします。
@@ -190,7 +191,7 @@ To disable a submit button, simply specify the {{htmlattrxref("disabled")}} glob
 
 You can enable and disable buttons at run time by simply setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.
 
-> **Note:** See the [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) page for more ideas about enabling and disabling buttons.
+> **メモ:** See the [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) page for more ideas about enabling and disabling buttons.
 
 ## 検証
 

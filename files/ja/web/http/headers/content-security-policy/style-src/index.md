@@ -2,6 +2,7 @@
 title: 'CSP: style-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`style-src`** ディレクティブは、スタイルシートの有効なソースを指定します。
@@ -93,7 +94,7 @@ document.querySelector('div').style.display = 'none';
 
 ### 安全ではないインラインスタイル
 
-> **Note:** インラインスタイルとインラインスクリプトを禁止することは、 CSP が提供する最大のセキュリティ上の利点の一つです。しかし、どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。
+> **メモ:** インラインスタイルとインラインスクリプトを禁止することは、 CSP が提供する最大のセキュリティ上の利点の一つです。しかし、どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。
 
 インラインスタイルを許可するために、 `'unsafe-inline'` を指定するか、インラインブロックに一致するノンスソースまたはハッシュソースを指定することができます。
 

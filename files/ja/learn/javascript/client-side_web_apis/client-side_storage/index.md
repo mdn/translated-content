@@ -2,6 +2,7 @@
 title: クライアント側ストレージ
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -25,7 +26,7 @@ MDN 学習エリアの他の箇所で、[静的なサイト](/ja/docs/Learn/Serv
 
 クライアント側での保存とサーバ側での保存は、しばしば共に使われます。たとえば、複数の音楽ファイル (おそらくウェブゲームまたは音楽プレーヤー・アプリに使われる) をダウンロードし、それらの音楽ファイルをクライアント側のデータベース内に保存し、必要に応じて再生する、といったことが可能でしょう。ユーザーは、それらの音楽ファイルをただ一度ダウンロードするだけで済むでしょう。その後の訪問では、音楽ファイルは、ダウンロードされる代わりにデータベースから取得されるでしょう。
 
-> **Note:** クライアント側のストレージ API を使って保存できるデータの量には、上限があります (もしかすると、個別の API ごとの上限と、累積的な上限の双方があるかもしれません)。正確な上限は、ブラウザーごとに異なりますし、もしかすると、ユーザーの設定によることもあるかもしれません。より詳しくは、[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) を参照。
+> **メモ:** クライアント側のストレージ API を使って保存できるデータの量には、上限があります (もしかすると、個別の API ごとの上限と、累積的な上限の双方があるかもしれません)。正確な上限は、ブラウザーごとに異なりますし、もしかすると、ユーザーの設定によることもあるかもしれません。より詳しくは、[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) を参照。
 
 ### 旧式な方法: クッキー
 
@@ -211,9 +212,9 @@ MDN 学習エリアの他の箇所で、[静的なサイト](/ja/docs/Learn/Serv
 
 例が完成しました。よくできましたね! 現時点で残っているのは、コードを保存して HTML ページをブラウザーでテストすることだけです。[ライブ実行される完成版をここで](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 見られます。
 
-> **Note:** [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) のところには、探究するにはほんの少しだけ更に複雑な別の例もあります。
+> **メモ:** [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) のところには、探究するにはほんの少しだけ更に複雑な別の例もあります。
 
-> **Note:** 完成版のソースのうち `<script src="index.js" defer></script>` という行では、`defer` 属性により、ページをロードし終わるまでは {{htmlelement("script")}} 要素の中身を実行しないように指定しています。
+> **メモ:** 完成版のソースのうち `<script src="index.js" defer></script>` という行では、`defer` 属性により、ページをロードし終わるまでは {{htmlelement("script")}} 要素の中身を実行しないように指定しています。
 
 ## 複雑なデータを保存する—— IndexedDB
 
@@ -272,7 +273,7 @@ MDN 学習エリアの他の箇所で、[静的なサイト](/ja/docs/Learn/Serv
 
     こういったことを IndexedDB で扱うために、要求オブジェクト (何とでも好きなように呼んで構いませんが、何を目的としたものなのかが明白になるので、`request` (要求) と呼んでおきました) を作成します。それから、要求が完了する、失敗する、などの際にコードを実行するために、いくつかのイベント・ハンドラーを使います。この点については、使用されているところを後で見ることになります。
 
-    > **Note:** バージョン番号は重要です。(たとえばテーブル構造を変更することによって) データベースをアップグレードしたい場合には、上げたバージョン番号や、`onupgradeneeded` ハンドラー (下記参照) の内部で指定される別のスキーマなどを使って、コードを再度実行せねばなりません。この簡単なチュートリアルでは、データベースのアップグレードは扱いません。
+    > **メモ:** バージョン番号は重要です。(たとえばテーブル構造を変更することによって) データベースをアップグレードしたい場合には、上げたバージョン番号や、`onupgradeneeded` ハンドラー (下記参照) の内部で指定される別のスキーマなどを使って、コードを再度実行せねばなりません。この簡単なチュートリアルでは、データベースのアップグレードは扱いません。
 
 4. さて今度は、前に追加した分のすぐ下に、以下のイベント・ハンドラーを追加してください。今度もまた、`window.onload` ハンドラーの中への追加です。
 
@@ -638,7 +639,7 @@ function deleteItem(e) {
 
 キャッシュ API は、クライアント側での保存のもう一つの仕組みですが、これにはちょっとした相違点があります。キャッシュ API は HTTP 応答を保存するように設計されているのです。そのため、サービスワーカーと一緒に使うと、とてもうまく機能します。
 
-> **Note:** サービスワーカーとキャッシュは、現在、ほとんどのモダン・ブラウザーでサポートされています。執筆時点では、Safari はまだ実装するのに忙しかったのですが、もうすぐサポートされるはずです。
+> **メモ:** サービスワーカーとキャッシュは、現在、ほとんどのモダン・ブラウザーでサポートされています。執筆時点では、Safari はまだ実装するのに忙しかったのですが、もうすぐサポートされるはずです。
 
 ### サービスワーカーの例
 
@@ -660,7 +661,7 @@ function deleteItem(e) {
   }
 ```
 
-> **Note:** `sw.js` ファイルに至るまでの、与えられたパスは、サイト・オリジンに対して相対的なのであり、上記コードを含む JavaScript ファイルに対して相対的なのではありません。サービスワーカーは `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` にあります。オリジンは `https://mdn.github.io` です。よって、与えられるパスは、`/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` でなくてはなりません。もしこの例を御自分のサーバーにホストしたいとお思いでしたら、それに合わせて、ここを変更せねばなりません。これはやや混乱を招くところですが、セキュリティ上の理由から、この方法で動作する必要があるのです。
+> **メモ:** `sw.js` ファイルに至るまでの、与えられたパスは、サイト・オリジンに対して相対的なのであり、上記コードを含む JavaScript ファイルに対して相対的なのではありません。サービスワーカーは `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` にあります。オリジンは `https://mdn.github.io` です。よって、与えられるパスは、`/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` でなくてはなりません。もしこの例を御自分のサーバーにホストしたいとお思いでしたら、それに合わせて、ここを変更せねばなりません。これはやや混乱を招くところですが、セキュリティ上の理由から、この方法で動作する必要があるのです。
 
 #### サービスワーカーをインストールします
 

@@ -30,7 +30,7 @@ A medida que crecen los sitios web se vuelven más difíciles de probar a mano �
 
 ## Vista previa
 
-El [Local Library](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) actualmente tiene páginas para mostrar las listas con todos los libros y autores, vistas detalladas para los items de `Book` y `Author,`una página para renovar BookInstances y páginas para crear, actualizar y eliminar elementos de autor (y también registros de libros, si usted completó el desafío en el tutorial de formularios). Incluso con este sitio relativamente pequeño, navegar manualmente a cada página y verificar superficialmente que todo funcione como se espera, puede llevar varios minutos. A medida que hagamos cambios y el sitio vaya creciendo, el tiempo requerido para verificar manualmente que todo funcione "correctamente", aumentará de forma muy perniciosa. Si continuamos como estamos, pasaríamos la mayor parte de nuestro tiempo probando, y muy poco tiempo mejorando nuestro código.
+El [Local Library](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) actualmente tiene páginas para mostrar las listas con todos los libros y autores, vistas detalladas para los items de `Book` y `Author`, una página para renovar BookInstances y páginas para crear, actualizar y eliminar elementos de autor (y también registros de libros, si usted completó el desafío en el tutorial de formularios). Incluso con este sitio relativamente pequeño, navegar manualmente a cada página y verificar superficialmente que todo funcione como se espera, puede llevar varios minutos. A medida que hagamos cambios y el sitio vaya creciendo, el tiempo requerido para verificar manualmente que todo funcione "correctamente", aumentará de forma muy perniciosa. Si continuamos como estamos, pasaríamos la mayor parte de nuestro tiempo probando, y muy poco tiempo mejorando nuestro código.
 
 ¡Las pruebas automatizadas realmente pueden ayudar con este problema! Los beneficios obvios son que pueden ejecutarse mucho más rápido que las pruebas manuales, pueden probar con un nivel de detalle mucho más bajo y probar exactamente la misma funcionalidad cada vez (¡los testers humanos no son tan confiables!) Porque son pruebas rápidas y automatizadas se puede ejecutar más regularmente, y si falla una prueba,
 señalan exactamente dónde el código no está funcionando como se esperaba.
@@ -78,7 +78,7 @@ class YourTestClass(TestCase):
         self.assertTrue(False)
 ```
 
-La mejor clase base para la mayoría de las pruebas es [django.test.TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase). Esta clase de prueba crea una base de datos limpia antes de que se ejecuten sus pruebas y ejecuta cada función de prueba en su propia transacción. La clase también posee una prueba [Client](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#django.test.Client "django.test.Client") que puede utilizar para simular la interacción de un usuario con el código en el nivel de vista. En las siguientes secciones, nos concentraremos en las pruebas unitarias, creadas con esta clase [TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase)
+La mejor clase base para la mayoría de las pruebas es [django.test.TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase). Esta clase de prueba crea una base de datos limpia antes de que se ejecuten sus pruebas y ejecuta cada función de prueba en su propia transacción. La clase también posee una prueba [Client](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#django.test.Client) que puede utilizar para simular la interacción de un usuario con el código en el nivel de vista. En las siguientes secciones, nos concentraremos en las pruebas unitarias, creadas con esta clase [TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase)
 
 > **Nota:** La clase [django.test.TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase) es muy conveniente, pero puede resultar en que algunas pruebas sean más lentas de lo necesario (no todas las pruebas necesitarán configurar su propia base de datos o simular la interacción de la vista). Una vez que esté familiarizado con lo que puede hacer con esta clase, es posible que desee reemplazar algunas de sus pruebas con las clases de prueba más simples disponibles.
 
@@ -116,12 +116,14 @@ Antes de entrar en los detalles de "qué probar", primero veamos brevemente dón
 
 Django utiliza el descubrimiento de pruebas integrado del módulo unittest ([built-in test discovery)](https://docs.python.org/3/library/unittest.html#unittest-test-discovery "(in Python v3.5)"), que descubrirá pruebas en el directorio de trabajo actual en cualquier archivo nombrado con el patrón **test\*.py**. Siempre que asigne un nombre a los archivos de forma adecuada, puede utilizar la estructura que desee. Le recomendamos que cree un módulo para su código de prueba y que tenga archivos separados para modelos, vistas, formularios y cualquier otro tipo de código que necesite probar. Por ejemplo:
 
-    catalog/
-      /tests/
-        __init__.py
-        test_models.py
-        test_forms.py
-        test_views.py
+```
+catalog/
+  /tests/
+    __init__.py
+    test_models.py
+    test_forms.py
+    test_views.py
+```
 
 Cree una estructura de archivo como se muestra arriba en su proyecto _LocalLibrary_. El **\_\_init\_\_.py** debe ser un archivo vacío (esto le dice a Python que el directorio es un paquete). Puede crear los tres archivos de prueba copiando y cambiando el nombre del archivo de prueba de esqueleto **/catalog/tests.py**.
 
@@ -827,7 +829,7 @@ The next test (add this to the class too) checks that the view redirects to a li
 > self.assertRedirects(resp, '/catalog/')
 > ```
 
-Copy the last two functions into the class, as seen below. These again test `POST` requests, but in this case with invalid renewal dates. We use `assertFormError() `to verify that the error messages are as expected.
+Copy the last two functions into the class, as seen below. These again test `POST` requests, but in this case with invalid renewal dates. We use `assertFormError()` to verify that the error messages are as expected.
 
 ```python
     def test_form_invalid_renewal_date_past(self):

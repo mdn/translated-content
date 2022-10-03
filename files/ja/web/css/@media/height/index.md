@@ -2,6 +2,7 @@
 title: height
 slug: Web/CSS/@media/height
 ---
+
 {{CSSRef}}
 
 **`height`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の高さ (または[ページ付きメディア](/ja/docs/Web/CSS/Paged_Media)のページボックスの高さ) に基づいてスタイルを適用するために使用することができます。

@@ -3,6 +3,7 @@ title: WebAssembly.compile()
 slug: WebAssembly/JavaScript_interface/compile
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
+
 {{JSRef}}
 
 **`WebAssembly.compile()`** 関数は WebAssembly バイナリーコードを {{jsxref("WebAssembly.Module")}} の形にコンパイルします。この関数は、モジュールをインスタンス化する前にコンパイルする必要がある場合に便利です (それ以外の場合は、 {{jsxref("WebAssembly.instantiate()")}} 関数を使用してください)。</p>
@@ -45,7 +46,7 @@ fetch('simple.wasm').then(response =>
 );
 ```
 
-> **Note:** おそらく多くの場合は {{jsxref("WebAssembly.compileStreaming()")}} を使用したほうが `compile()` よりも効率的なのでそちらの方がいいでしょう。
+> **メモ:** おそらく多くの場合は {{jsxref("WebAssembly.compileStreaming()")}} を使用したほうが `compile()` よりも効率的なのでそちらの方がいいでしょう。
 
 ## 仕様書
 

@@ -3,6 +3,7 @@ title: WebAssembly.instantiateStreaming()
 slug: WebAssembly/JavaScript_interface/instantiateStreaming
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
 ---
+
 {{JSRef}}
 
 **`WebAssembly.instantiateStreaming()`** 関数は、ソースのストリームから直接 WebAssembly モジュールをコンパイルしてインスタンス化します。これは、 wasm コードをロードするための最も効率的で最適な方法です。
@@ -45,7 +46,7 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 
 最後に `ResultObject` が持つ instance メンバーにアクセスして、エクスポートされた関数を実行しています。
 
-> **Note:** これを動作するようにするには、サーバが `.wasm` ファイルを `application/wasm` の MIME タイプで返す必要があります。
+> **メモ:** これを動作するようにするには、サーバが `.wasm` ファイルを `application/wasm` の MIME タイプで返す必要があります。
 
 ## 仕様書
 

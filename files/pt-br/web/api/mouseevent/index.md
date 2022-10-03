@@ -112,7 +112,7 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
 
 ## Método
 
-_Essa interface também herda métodos de seus pais\_\_, [`UIEvent`](/pt-BR/docs/Web/API/UIEvent) e [`Event`](/pt-BR/docs/Web/API/Event)._
+_Essa interface também herda métodos de seus pais, [`UIEvent`](/pt-BR/docs/Web/API/UIEvent) e [`Event`](/pt-BR/docs/Web/API/Event)._
 
 - [`MouseEvent.getModifierState()`](/pt-BR/docs/Web/API/MouseEvent/getModifierState)
   - : Retorna o estado tual da tecla modificadora especificada. Consulte [`KeyboardEvent.getModifierState`](/pt-BR/docs/Web/API/KeyboardEvent/getModifierState)[`()`](/pt-BR/docs/Web/API/KeyboardEvent/getModifierState) para obter detalhes.

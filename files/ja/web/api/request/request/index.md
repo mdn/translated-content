@@ -109,7 +109,7 @@ var myRequest = new Request('flowers.jpg', myInit);
 var copy = new Request(myRequest);
 ```
 
-> **Note:**  最後の使い方は[サービスワーカー](/ja/docs/Web/API/ServiceWorker_API)内でのみ使用できます。
+> **メモ:** 最後の使い方は[サービスワーカー](/ja/docs/Web/API/ServiceWorker_API)内でのみ使用できます。
 
 ## 仕様書
 

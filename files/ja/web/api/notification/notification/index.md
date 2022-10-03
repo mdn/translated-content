@@ -2,6 +2,7 @@
 title: Notification()
 slug: Web/API/Notification/Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`Notification()`** コンストラクターは、ユーザー通知を表す新しい {{domxref("Notification")}} オブジェクトのインスタンスを生成します。

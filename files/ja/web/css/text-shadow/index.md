@@ -2,6 +2,7 @@
 title: text-shadow
 slug: Web/CSS/text-shadow
 ---
+
 {{CSSRef}}
 
 **`text-shadow`** は CSS のプロパティで、テキストに影を追加します。文字列およびその装飾 ([`decoration`](/ja/docs/Web/CSS/text-decoration)) に適用される影のリストをカンマで区切ったリストで受け付けます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
