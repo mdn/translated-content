@@ -98,8 +98,8 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  </ul>
  </dd>
  <dt><code>Path=&lt;path-value&gt;</code> {{optional_inline}}</dt>
- <dd>Una ruta que debe existir en la URL solicitada, o el navegador no enviará el encabezado <code>Cookie</code>.</dd>
- <dd>El caracter diagonal (<code>/</code>) es interpretado como un separador de directorios y subdirectorios que serán también comparados: para <code>Path=/docs</code>, <code>/docs</code>, <code>/docs/Web/</code>, y <code>/docs/Web/HTTP</code> todos tendrán que coincidir.</dd>
+ <dd>Una ruta que debe existir en la URL solicitada, o el navegador no enviará el encabezado <code>Cookie</code>.
+ El caracter diagonal (<code>/</code>) es interpretado como un separador de directorios y subdirectorios que serán también comparados: para <code>Path=/docs</code>, <code>/docs</code>, <code>/docs/Web/</code>, y <code>/docs/Web/HTTP</code> todos tendrán que coincidir.</dd>
  <dt id="Secure"><code>Secure</code> {{optional_inline}}</dt>
  <dd>Una cookie segura es sólo enviada al servidor cuando una petición es enviada con el esquema <code>https:</code>. (Sin embargo, información confidencial nunca debería ser almacenada en Cookies HTTP, como todo el mecanismo es  However, confidential information should never be stored in HTTP Cookies, ya que todo el mecanismo es inherentemente inseguro y no encripta ninguna información.)
  <p class="note"><strong>Nota:</strong> Sitios inseguros (<code>http:</code>) no puenden almacenar directivas "seguras" apartir de Chrome 52+ y Firefox 52+.</p>

@@ -62,7 +62,7 @@ Content-length: 16
 
 <p>Si el elemento de destino no existe y la petición <code>PUT</code> lo crea de forma satisfactoria, entonces el servidor debe informar al usuario enviando una respuesta {{HTTPStatus("201")}} (<code>Created</code>) .</p>
 
-<pre class="newpage">HTTP/1.1 201 Created
+<pre>HTTP/1.1 201 Created
 Content-Location: /nuevo.html</pre>
 
 <p>Si el elemento existe actualmente y es modificado de forma satisfactoria, entonces el servidor de origen debe enviar una respuesta {{HTTPStatus("200")}} (<code>OK</code>) o una respuesta {{HTTPStatus("204")}} (<code>No Content</code>) para indicar que la modificación del elemento se ha realizado sin problemas.</p>

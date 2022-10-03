@@ -15,10 +15,6 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 <p><br>
  La cabecera HTTP <strong><code>Content-Security-Policy  </code></strong>en la respuesta permite a los administradores de un sitio web controlar los recursos que el User-Agent puede cargar a una pagina. Con algunas (Poquísimas) excepciones, las políticas implican principalmente especificar el servidor de origen la protección de puntos finales del script. Esto ayuda a protegerse contra ataques Cross-site scripting ({{Glossary("XSS")}}).</p>
 
-<dl>
- <dt></dt>
-</dl>
-
 <p>Para mas información, ve también este articulo en <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>.</p>
 
 
@@ -71,8 +67,8 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
  <dt>{{CSP("media-src")}}</dt>
  <dd>Especifica origenes válidos para carga de archivos usando elementos como {{HTMLElement("audio")}} , {{HTMLElement("video")}} y {{HTMLElement("track")}}.</dd>
  <dt>{{CSP("object-src")}}</dt>
- <dd>Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}} elements.</dd>
- <dd class="note">Elements controlled by <code>object-src</code> are perhaps coincidentally considered legacy HTML elements and aren't recieving new standardized features (such as the security attributes <code>sandbox</code> or <code>allow</code> for <code>&lt;iframe&gt;</code>). Therefore it is <strong>recommended</strong> to restrict this fetch-directive (e.g. explicitly set <code>object-src 'none'</code> if possible).</dd>
+ <dd>Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}} elements.
+ Elements controlled by <code>object-src</code> are perhaps coincidentally considered legacy HTML elements and aren't recieving new standardized features (such as the security attributes <code>sandbox</code> or <code>allow</code> for <code>&lt;iframe&gt;</code>). Therefore it is <strong>recommended</strong> to restrict this fetch-directive (e.g. explicitly set <code>object-src 'none'</code> if possible).</dd>
  <dt>{{CSP("prefetch-src")}}</dt>
  <dd>Specifies valid sources to be prefetched or prerendered.</dd>
  <dt>{{CSP("script-src")}}</dt>

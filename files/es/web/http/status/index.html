@@ -38,10 +38,10 @@ translation_of: Web/HTTP/Status
 <h2 id="Respuestas_satisfactorias">Respuestas satisfactorias</h2>
 
 <ul>
- <li><code><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span>GET</code>: El recurso se ha obtenido y se transmite en el cuerpo del mensaje.</li>
+ <li><code><span> </span><span> </span><span> </span><span> </span>GET</code>: El recurso se ha obtenido y se transmite en el cuerpo del mensaje.</li>
  <li><code>HEAD</code>: Los encabezados de entidad están en el cuerpo del mensaje.</li>
  <li><code>PUT</code> o <code>POST</code>: El recurso que describe el resultado de la acción se transmite en el cuerpo del mensaje.</li>
- <li><code>TRACE</code>: El cuerpo del mensaje contiene el mensaje de solicitud recibido por el servidor.<span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span></li>
+ <li><code>TRACE</code>: El cuerpo del mensaje contiene el mensaje de solicitud recibido por el servidor.<span> </span><span> </span><span> </span><span> </span></li>
 </ul>
 
 <dl>
@@ -76,7 +76,6 @@ translation_of: Web/HTTP/Status
  <dd>Este código de respuesta significa que la URI  del recurso solicitado ha sido cambiado. Probablemente una nueva URI sea devuelta en la respuesta.</dd>
  <dt>{{HTTPStatus(302, "302 Found")}}</dt>
  <dd>Este código de respuesta significa que el recurso de la URI solicitada ha sido cambiado temporalmente. Nuevos cambios en la URI serán agregados en el futuro. Por lo tanto, la misma URI debe ser usada por el cliente en futuras solicitudes.</dd>
- <dd></dd>
  <dt>{{HTTPStatus(303, "303 See Other")}}</dt>
  <dd>El servidor envía esta respuesta para dirigir al cliente a un nuevo recurso solicitado a otra dirección usando una petición GET.</dd>
  <dt>{{HTTPStatus(304, "304 Not Modified")}}</dt>
@@ -84,7 +83,6 @@ translation_of: Web/HTTP/Status
  <dt><code>305 Use Proxy</code> {{deprecated_inline}}</dt>
  <dd>Fue definida en una versión previa de la especificación del protocolo HTTP para indicar que una respuesta solicitada debe ser accedida desde un proxy. Ha quedado obsoleta debido a preocupaciones de seguridad correspondientes a la configuración de un proxy.</dd>
  <dt><code>306 unused</code></dt>
- <dt></dt>
  <dd>Este código de respuesta ya no es usado más. Actualmente se encuentra reservado. Fue usado en previas versiones de la especificación HTTP1.1.</dd>
  <dt>{{HTTPStatus(307, "307 Temporary Redirect")}}</dt>
  <dd>El servidor envía esta respuesta para dirigir al cliente a obtener el recurso solicitado a otra URI con el mismo método que se usó la petición anterior. Tiene la misma semántica que el código de respuesta HTTP <code>302 Found</code>, con la excepción de que el agente usuario <em>no debe</em> cambiar el método HTTP usado: si un <code>POST</code> fue usado en la primera petición, otro <code>POST</code> debe ser usado en la segunda petición.</dd>
