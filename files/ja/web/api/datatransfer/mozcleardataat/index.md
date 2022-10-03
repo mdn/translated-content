@@ -2,6 +2,7 @@
 title: DataTransfer.mozClearDataAt()
 slug: Web/API/DataTransfer/mozClearDataAt
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{ Non-standard_header() }}{{deprecated_header}}

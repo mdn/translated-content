@@ -3,6 +3,7 @@ title: Document.activeElement
 slug: Web/API/Document/activeElement
 original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`activeElement`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、DOM 内で現在フォーカスを持っている要素 ({{domxref("Element")}}) を返します。

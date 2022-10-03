@@ -31,7 +31,7 @@ Vary: <header-name>, <header-name>, ...
 
 ### 动态服务
 
-`哪种情况下使用 Vary: 对于 User-Agent` 头部信息，例如你提供给移动端的内容是不同的，可用防止你客户端误使用了用于桌面端的缓存。 并可帮助 Google 和其他搜索引擎来发现你的移动端版本的页面，同时告知他们不需要[Cloaking](https://en.wikipedia.org/wiki/Cloaking)。
+`哪种情况下使用 Vary: 对于 User-Agent` 头部信息，例如你提供给移动端的内容是不同的，可用防止你客户端误使用了用于桌面端的缓存。并可帮助 Google 和其他搜索引擎来发现你的移动端版本的页面，同时告知他们不需要[Cloaking](https://en.wikipedia.org/wiki/Cloaking)。
 
 ```plain
 Vary: User-Agent

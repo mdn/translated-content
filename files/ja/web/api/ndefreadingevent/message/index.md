@@ -2,6 +2,7 @@
 title: NDEFReadingEvent.message
 slug: Web/API/NDEFReadingEvent/message
 ---
+
 {{securecontext_header}}{{APIRef()}}
 
 **`message`** は {{domxref("NDEFReadingEvent")}} インターフェイスのプロパティで、受信したメッセージの入った {{DOMxRef("NDEFMessage")}} オブジェクトを返します。

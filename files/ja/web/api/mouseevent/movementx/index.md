@@ -2,6 +2,7 @@
 title: MouseEvent.movementX
 slug: Web/API/MouseEvent/movementX
 ---
+
 {{APIRef("DOM Events")}}
 
 **`movementX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、直前の {{domxref("Element/mousemove_event", "mousemove")}} イベントとこのイベントのマウスポインターの X 座標の差を示します。このプロパティの値は `currentEvent.movementX = currentEvent.screenX - previousEvent.screenX` のように計算されます。

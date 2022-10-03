@@ -58,9 +58,13 @@ Cette propriété est héritée sur les différents éléments et n'est pas réi
 - `below`{{non-standard_inline}}
   - : Ce mot-clé force la ligne à être dessinée sous le texte. Lorsqu'on utilise un texte alphabétique, la valeur `auto` aura un effet semblable.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -96,15 +100,11 @@ Cette propriété est héritée sur les différents éléments et n'est pas réi
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                                       | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-underline-position-property', 'text-underline-position')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-underline-position")}}
+{{Compat}}
 
 ## Voir aussi
 

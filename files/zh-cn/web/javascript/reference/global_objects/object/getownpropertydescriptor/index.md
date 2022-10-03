@@ -28,7 +28,7 @@ Object.getOwnPropertyDescriptor(obj, prop)
 
 ## 描述
 
-该方法允许对一个属性的描述进行检索。在 Javascript 中， _属性_ 由一个字符串类型的“名字”（name）和一个“属性描述符”（property descriptor）对象构成。更多关于属性描述符类型以及他们属性的信息可以查看：{{jsxref("Object.defineProperty")}}.
+该方法允许对一个属性的描述进行检索。在 Javascript 中，_属性_ 由一个字符串类型的“名字”（name）和一个“属性描述符”（property descriptor）对象构成。更多关于属性描述符类型以及他们属性的信息可以查看：{{jsxref("Object.defineProperty")}}.
 
 一个属性描述符是一个记录，由下面属性当中的某些组成的：
 
@@ -89,7 +89,7 @@ d = Object.getOwnPropertyDescriptor(o, "baz");
 
 ```js
 Object.getOwnPropertyDescriptor('foo', 0);
-// 类型错误: "foo" 不是一个对象  // ES5 code
+// 类型错误："foo" 不是一个对象  // ES5 code
 
 Object.getOwnPropertyDescriptor('foo', 0);
 // Object returned by ES2015 code: {

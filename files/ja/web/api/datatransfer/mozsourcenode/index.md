@@ -2,6 +2,7 @@
 title: DataTransfer.mozSourceNode
 slug: Web/API/DataTransfer/mozSourceNode
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{ Non-standard_header() }}

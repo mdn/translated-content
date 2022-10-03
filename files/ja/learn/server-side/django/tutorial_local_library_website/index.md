@@ -2,6 +2,7 @@
 title: 'Django チュートリアル: 地域図書館ウェブサイト'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 
 実践的なチュートリアルシリーズの最初の記事は、学習する内容を説明し、後の記事で進めていく「地域図書館」のサンプルウェブサイトの概要を示しています。

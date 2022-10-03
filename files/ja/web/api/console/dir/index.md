@@ -4,6 +4,7 @@ slug: Web/API/console/dir
 l10n:
   sourceCommit: 4fd581de2e31ac303a4628354c80f476ba9fd0e2
 ---
+
 {{APIRef("Console API")}}
 
 **`console.dir()`** メソッドは、指定された JavaScript オブジェクトのプロパティの対話的なリストを表示します。出力は折り畳み式の階層的なリストで表示され、子オブジェクトの中身を見ることができます。

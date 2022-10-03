@@ -163,14 +163,11 @@ span, div em {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires                                                                                 |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS4 Selectors')}} | Ajout de la syntaxe `<selector>`. Les éléments ciblés peuvent ne pas avoir d'élément parent. |
-| {{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.nth-child")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -53,14 +53,11 @@ La propriété {{cssxref("all")}} peut être utilisée avec cette valeur afin de
 
 ## Spécifications
 
-| Spécification                                                        | État                             | Commentaires         |
-| -------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Cascade', '#initial', 'initial')}} | {{Spec2('CSS4 Cascade')}} | Aucun changement.    |
-| {{SpecName('CSS3 Cascade', '#initial', 'initial')}} | {{Spec2('CSS3 Cascade')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.global_keywords.initial")}}
+{{Compat}}
 
 ## Voir aussi
 

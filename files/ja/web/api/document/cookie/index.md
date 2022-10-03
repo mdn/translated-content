@@ -2,6 +2,7 @@
 title: Document.cookie
 slug: Web/API/Document/cookie
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} の `cookie` プロパティで、文書に関連付けられた[クッキー](/ja/docs/Web/HTTP/Cookies)を読み書きすることができます。これは実際のクッキーの値に対するゲッターとセッターとして動作します。

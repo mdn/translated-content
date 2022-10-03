@@ -2,6 +2,7 @@
 title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} オブジェクトの **`getElementsByName()`** メソッドは、文書内で指定した {{domxref("element.name","name")}} を持つ要素の {{domxref("NodeList")}} コレクションを返します。

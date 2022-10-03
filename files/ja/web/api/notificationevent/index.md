@@ -2,6 +2,7 @@
 title: NotificationEvent
 slug: Web/API/NotificationEvent
 ---
+
 {{APIRef("Web Notifications")}}
 
 {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} ハンドラーに渡される引数である `NotificationEvent` インターフェイスは、 {{domxref("ServiceWorker")}} の {{domxref("ServiceWorkerGlobalScope")}} で配信される通知クリックイベントを表します。

@@ -2,6 +2,7 @@
 title: IndexedDB の主な特徴と基本用語
 slug: Web/API/IndexedDB_API/Basic_Terminology
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 この記事では IndexedDB の主な特徴を説明し、IndexedDB API の理解に関連する重要な用語を紹介しています。

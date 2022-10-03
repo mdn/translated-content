@@ -40,6 +40,6 @@ evtSource.onerror = function() {
 
 ## See also
 
-- [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
-- [`open`](/en-US/docs/Web/API/EventSource/open_event)
-- [`message`](/en-US/docs/Web/API/EventSource/message_event)
+- [Using server-sent events](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [`open`](/ja/docs/Web/API/EventSource/open_event)
+- [`message`](/ja/docs/Web/API/EventSource/message_event)

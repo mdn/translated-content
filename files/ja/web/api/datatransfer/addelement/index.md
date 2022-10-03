@@ -2,6 +2,7 @@
 title: DataTransfer.addElement()
 slug: Web/API/DataTransfer/addElement
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{Non-standard_header()}}

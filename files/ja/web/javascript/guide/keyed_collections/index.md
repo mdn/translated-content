@@ -107,7 +107,7 @@ for (let item of mySet) console.log(item);
 
 {{jsxref("Array.from")}} または [スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator) を使用して `Set` から {{jsxref("Array")}} を生成できます。また、`Set` コンストラクタを使って `Array` から `Set` へと逆変換することができます。
 
-> **Note:** `Set` オブジェクトは*一意の値*を格納することにくれぐれも注意してください、重複した要素は `Array` から変換するときに削除されます。
+> **メモ:** `Set` オブジェクトは*一意の値*を格納することにくれぐれも注意してください、重複した要素は `Array` から変換するときに削除されます。
 
 ```js
 Array.from(mySet);

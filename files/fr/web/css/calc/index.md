@@ -139,13 +139,11 @@ De cette façon, la taille du texte s'adaptera si le lecteur zoome/dézoome.
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Values', '#calc-notation', 'calc()')}} | {{Spec2('CSS3 Values')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.calc")}}
+{{Compat}}
 
 ## Voir aussi
 

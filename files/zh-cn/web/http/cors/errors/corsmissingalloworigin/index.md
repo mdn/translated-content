@@ -8,7 +8,7 @@ slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ## 原因
 
 ```plain
-原因：缺少 CORS 标头 “Access-Control-Allow-Origin”
+原因：缺少 CORS 标头“Access-Control-Allow-Origin”
 ```
 
 ## 哪里出错了？
@@ -33,7 +33,7 @@ Access-Control-Allow-Origin: *
 
 如果要在*不使用* `*` 通配符的情况下让任意站点发出 CORS 请求（例如，为了启用凭证），你的服务器必须读取请求的 `Origin` 标头，将那个值设置为 `Access-Control-Allow-Origin` 的值，且必须一并设置 `Vary: Origin` 标头，表明一部分标头由 origin 动态决定。
 
-设置标头的命令取决于你的 Web 服务器。例如，在 Apache 服务器中，将下面一行添加到服务器的配置中（在相应的 `<Directory>`、`<Location>`、`<Files>` 或 `<VirtualHost>` 部分中）。 配置通常位于 `.conf` 文件中（`httpd.conf` 和 `apache.conf` 是这些文件的通用名称），或者位于 `.htaccess` 文件中。
+设置标头的命令取决于你的 Web 服务器。例如，在 Apache 服务器中，将下面一行添加到服务器的配置中（在相应的 `<Directory>`、`<Location>`、`<Files>` 或 `<VirtualHost>` 部分中）。配置通常位于 `.conf` 文件中（`httpd.conf` 和 `apache.conf` 是这些文件的通用名称），或者位于 `.htaccess` 文件中。
 
 ```
 Header set Access-Control-Allow-Origin 'origin-list'

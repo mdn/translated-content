@@ -2,6 +2,7 @@
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
 ---
+
 {{ APIRef("Web Animations") }}
 
 ウェブアニメーション API の **`cancel()`** は {{domxref("Animation")}} インターフェイスのメソッドで、このアニメーションによって引き起こされたすべての {{domxref("KeyframeEffect")}}を初期化し、再生を中止します。

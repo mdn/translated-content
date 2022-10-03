@@ -2,13 +2,14 @@
 title: Performance
 slug: Web/API/Performance
 ---
+
 {{APIRef("High Resolution Time")}}
 
 **`Performance`** インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。これは High Resolution Time API の一部ですが、Performance Timeline API、Navigation Timing API、User Timing API、および Resource Timing API によって拡張されています。
 
 このタイプのオブジェクトは読み取り専用属性 {{domxref("window.performance")}} を呼び出すことで取得できます。
 
-> **Note:** このインターフェイスとそのメンバーは、以下に示されている場合を除き、[Web Workers](/ja/docs/Web/API/Web_Workers_API) で利用可能です。 パフォーマンスマーカーと測定値はコンテキストごとにあることにも注意してください。メインスレッド (または他のワーカー) にマークを作成した場合、それを Worker スレッドには表示できません (その逆も同様)。
+> **メモ:** このインターフェイスとそのメンバーは、以下に示されている場合を除き、[Web Workers](/ja/docs/Web/API/Web_Workers_API) で利用可能です。 パフォーマンスマーカーと測定値はコンテキストごとにあることにも注意してください。メインスレッド (または他のワーカー) にマークを作成した場合、それを Worker スレッドには表示できません (その逆も同様)。
 
 ## プロパティ
 

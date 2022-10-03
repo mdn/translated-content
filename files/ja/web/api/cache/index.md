@@ -2,6 +2,7 @@
 title: Cache
 slug: Web/API/Cache
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`Cache`** インターフェイスは、[`Request`](http://fetch.spec.whatwg.org/#request) / [`Response`](http://fetch.spec.whatwg.org/#response) オブジェクトのペアのためのストレージの仕組みを提供します。例えば、 {{domxref("ServiceWorker")}} のライフサイクルの一部としてこれらをキャッシュします。なお、 `Cache` インターフェイスは、ワーカーだけでなくウィンドウスコープにも公開されています。サービスワーカーの仕様書で定義されているものですが、必ずしもサービスワーカーとの組み合わせで使用する必要はありません。

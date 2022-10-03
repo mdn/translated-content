@@ -2,6 +2,7 @@
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
 ---
+
 > **警告:** `createEvent` とともに使用される多くのメソッド (`initCustomEvent` など) は非推奨です。代わりに [イベントのコンストラクター](/ja/docs/Web/API/CustomEvent) を使用してください。
 
 {{ApiRef("DOM")}}

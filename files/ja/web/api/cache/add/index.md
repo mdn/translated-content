@@ -2,6 +2,7 @@
 title: Cache.add()
 slug: Web/API/Cache/add
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Cache")}} インターフェイスの **`add()`** メソッドは、URL を受け取り、取得して、指定されたキャッシュに結果のレスポンスオブジェクトを追加します。 `add()` メソッドは、機能的に次の例と同じです。

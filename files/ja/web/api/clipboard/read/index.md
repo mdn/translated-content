@@ -2,6 +2,7 @@
 title: Clipboard.read()
 slug: Web/API/Clipboard/read
 ---
+
 {{APIRef("Clipboard API")}}
 
 **`read()`** は {{domxref("Clipboard")}} インターフェイスのメソッドで、クリップボードの内容のコピーを要求し、返されたプロミス ({{jsxref("Promise")}}) が解決されるとそのデータを取得できます。 {{domxref("Clipboard.readText", "readText()")}} とは異なり、 `read()` メソッドは画像など任意のデータを取得することができます。
@@ -95,6 +96,6 @@ async function pasteImage() {
 
 ## 関連情報
 
-- [クリップボード API](/en-US/docs/Web/API/Clipboard_API)
+- [クリップボード API](/ja/docs/Web/API/Clipboard_API)
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
 - [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

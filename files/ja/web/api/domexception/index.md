@@ -2,6 +2,7 @@
 title: DOMException
 slug: Web/API/DOMException
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMException`** インターフェイスは、Web API のメソッドの呼び出しやプロパティへのアクセスによって異常なイベント (**例外**と呼ばれます) が発生したことを表します。これは基本的に、Web API 内部のエラーの状態を示すものです。

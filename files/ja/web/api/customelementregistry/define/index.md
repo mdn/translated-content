@@ -2,6 +2,7 @@
 title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 **`define()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、新しいカスタム要素を定義します。

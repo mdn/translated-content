@@ -3,6 +3,7 @@ title: BaseAudioContext.createPanner()
 slug: Web/API/BaseAudioContext/createPanner
 original_slug: Web/API/AudioContext/createPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createPanner()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、新しい {{domxref("PannerNode") }} を作成するために使用されます。これは、入力される音声ストリームを三次元空間で空間化するのに使われます。

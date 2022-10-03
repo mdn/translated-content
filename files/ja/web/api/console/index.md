@@ -4,6 +4,7 @@ slug: Web/API/console
 l10n:
   sourceCommit: 7d44ce9ab391c7f52bd6b7fbc39576abbe52c2d5
 ---
+
 {{APIRef("Console API")}}
 
 **`console`** オブジェクトは、ブラウザーのデバッグコンソール（例えば Firefox の[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)）へのアクセスを提供します。

@@ -53,7 +53,7 @@ console.log(greeting(null));             // "Howdy, stranger"
 
 ### 条件链
 
-这个三元操作符是右结合的，也就是说你可以像这样把它链接起来， 和 `if … else if … else if … else` 链类似：
+这个三元操作符是右结合的，也就是说你可以像这样把它链接起来，和 `if … else if … else if … else` 链类似：
 
 ```js
 function example(…) {

@@ -2,6 +2,7 @@
 title: AudioContext.createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }} インターフェイスの `createMediaStreamDestination()` メソッドは、[WebRTC](/ja/docs/WebRTC) {{domxref("MediaStream")}} と関連付けられた {{domxref("MediaStreamAudioDestinationNode")}} オブジェクトを生成します。この MediaStream はローカルファイルに格納されたり他のコンピュータに送信されたりする音声ストリームを表します。

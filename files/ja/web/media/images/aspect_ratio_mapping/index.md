@@ -41,7 +41,7 @@ img, input[type="image"], video, embed, iframe, marquee, object, table {
 
 This actually affects any element that acts as a container for complex or mixed visual media — {{htmlelement("embed")}}, {{htmlelement("iframe")}}, {{htmlelement("marquee")}}, {{htmlelement("object")}}, {{htmlelement("table")}}, and {{htmlelement("video")}}, in addition to actual images ({{htmlelement("img")}} and `<input type="image">`). When such an element has `width` and `height` attributes set on it, its aspect ratio will be calculated before load time, and be available to the browser.
 
-> **Note:** Currently this effect is being limited to actual `<img>` elements, as applying to other such elements may have undesirable results. See ({{bug(1583980)}}).
+> **メモ:** Currently this effect is being limited to actual `<img>` elements, as applying to other such elements may have undesirable results. See ({{bug(1583980)}}).
 
 When the `width`/`height` of an `<img>` element — as set using HTML attributes — is overidden using CSS using something like this:
 
@@ -65,4 +65,4 @@ Once such an image loads, if the internal aspect ratio is still applied it will 
 
 So there you have it — eliminating another piece of jank from web layout! There is no need for a web developer to do anything special to their code to take advantage of this, besides returning to the habit of using `width` and `height` attributes in their HTML. They'll just get it for free.
 
-> **Note:** This new mechanism is enabled in Firefox 69 in beta and Nightly as the spec is worked out (controlled by the `layout.css.width-and-height-map-to-aspect-ratio.enabled` pref), and it is [currently being implemented in Chrome](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/hbhKRuBzZ4o). It will ship with [Firefox 71](https://bugzilla.mozilla.org/show_bug.cgi?id=1585637).
+> **メモ:** This new mechanism is enabled in Firefox 69 in beta and Nightly as the spec is worked out (controlled by the `layout.css.width-and-height-map-to-aspect-ratio.enabled` pref), and it is [currently being implemented in Chrome](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/hbhKRuBzZ4o). It will ship with [Firefox 71](https://bugzilla.mozilla.org/show_bug.cgi?id=1585637).

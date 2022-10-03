@@ -2,6 +2,7 @@
 title: AudioNode
 slug: Web/API/AudioNode
 ---
+
 {{APIRef()}}
 
 The AudioNode interface is a generic interface for representing an audio processing module like an audio source (e.g. an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), audio destination, intermediate processing module (e.g. a filter like {{domxref("BiquadFilterNode")}} or {{domxref("ConvolverNode")}}), or volume control (like {{domxref("GainNode")}}).

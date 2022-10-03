@@ -2,6 +2,7 @@
 title: AbortSignal
 slug: Web/API/AbortSignal
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 **`AbortSignal`** インターフェイスは DOM 要求 (Fetch など) と通信し、必要に応じて {{domxref("AbortController")}} オブジェクトを介して中断することを可能にするシグナルオブジェクトを表します。

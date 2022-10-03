@@ -3,6 +3,7 @@ title: AudioBufferSourceNode.stop()
 slug: Web/API/AudioScheduledSourceNode/stop
 original_slug: Web/API/AudioBufferSourceNode/stop
 ---
+
 {{ APIRef("Web Audio API") }}
 
 インターフェースの`stop()`メソッドは、オーディオバッファの再生を停止させるために使われます。

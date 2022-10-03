@@ -2,6 +2,7 @@
 title: DragEvent
 slug: Web/API/DragEvent
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DragEvent`** インターフェイスは、ドラッグ＆ドロップ操作を表す {{domxref("Event","DOM イベント", "", 1)}}です。ユーザーはタッチ面でポインティングデバイス（マウスなど）を置くことによりドラッグを開始して、ポインタを新たな場所（別の DOM 要素など）にドラッグします。アプリケーションは独自の方法で、ドラッグ＆ドロップの操作を自由に解釈できます。

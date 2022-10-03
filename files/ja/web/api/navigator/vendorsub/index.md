@@ -2,6 +2,7 @@
 title: Navigator.vendorSub
 slug: Web/API/Navigator/vendorSub
 ---
+
 {{ApiRef}}{{deprecated_header}}
 
 **`Navigator.vendorSub`** プロパティは読み取り専用で、ベンダーバージョン番号が付いたベンダーの部分文字列です。仕様書ではブラウザーが常に空文字列を返して良いことになっているため、このプロパティから頼れる回答を期待しないでください。

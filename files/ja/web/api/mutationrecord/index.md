@@ -2,6 +2,7 @@
 title: MutationRecord
 slug: Web/API/MutationRecord
 ---
+
 {{APIRef("DOM")}}
 
 **`MutationRecord`** は、 DOM に生じた個々の変更を表します。これは {{domxref("MutationObserver")}} のコールバック関数に渡されるオブジェクトです。

@@ -2,6 +2,7 @@
 title: Cache.keys()
 slug: Web/API/Cache/keys
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Cache")}} インターフェイスの **`keys()`** メソッドは、{{domxref("Cache")}} キーの配列に解決される {{jsxref("Promise")}} を返します。

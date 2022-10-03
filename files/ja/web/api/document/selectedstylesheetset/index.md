@@ -2,6 +2,7 @@
 title: Document.selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 **`selectedStyleSheetSet`** プロパティは、現在使用中のスタイルシートセットの名前を示します。

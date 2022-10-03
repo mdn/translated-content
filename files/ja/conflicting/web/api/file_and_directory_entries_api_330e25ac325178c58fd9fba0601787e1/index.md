@@ -3,6 +3,7 @@ title: LocalFileSystem
 slug: conflicting/Web/API/File_and_Directory_Entries_API_330e25ac325178c58fd9fba0601787e1
 original_slug: Web/API/LocalFileSystem
 ---
+
 {{APIRef("File System API")}}{{non-standard_header()}}
 
 [File System API](/ja/DOM/File_API/File_System_API) の `LocalFileSystem` インターフェイスを使用すると、サンドボックスファイルシステムにアクセスできます。 これらのメソッドは、[window](/ja/docs/Web/API/Window) オブジェクトと [worker](/ja/docs/Web/API/Worker) オブジェクトによって実装されます。

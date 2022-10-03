@@ -22,11 +22,8 @@ Lorsqu'une valeur de type `<frequency-percentage>` peut être utilisée dans une
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires                                                   |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------- |
-| {{SpecName('CSS4 Values', '#mixed-percentages', '&lt;frequency-percentage&gt;')}} | {{Spec2('CSS4 Values')}} |                                                                |
-| {{SpecName('CSS3 Values', '#mixed-percentages', '&lt;frequency-percentage&gt;')}} | {{Spec2('CSS3 Values')}} | Définition du type `<frequency-percentage>`. Ajout de `calc()` |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.frequency-percentage")}}
+{{Compat}}

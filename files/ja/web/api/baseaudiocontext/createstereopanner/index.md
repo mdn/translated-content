@@ -3,6 +3,7 @@ title: BaseAudioContext.createStereoPanner()
 slug: Web/API/BaseAudioContext/createStereoPanner
 original_slug: Web/API/AudioContext/createStereoPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createStereoPanner()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、音源にステレオパンニングを適用する{{ domxref("StereoPannerNode") }}を生成します。
