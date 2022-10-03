@@ -13,8 +13,8 @@ Una **palabra clave** es una palabra o frase que describe contenido. Las palabra
 
 Cuando usas un motor de búsqueda, utilizas palabras clave para especificar lo que estás buscando y el motor de búsqueda devuelve páginas web relevantes. Para obtener resultados más precisos, prueba con palabras clave más específicas, como "Mustang GTO azul" en lugar de simplemente "Mustang". Las páginas web también utilizan palabras clave en una etiqueta `<meta>` (en la sección {{htmlelement("head")}}) para describir el contenido de la página, de manera que los motores de búsqueda puedan identificar y organizar mejor las páginas web.
 
-## **Aprende más**
+## Aprende más
 
-### **Conocimientos generales**
+### Conocimientos generales
 
 - {{interwiki("wikipedia", "Keyword_research", "Keyword")}} on Wikipedia
