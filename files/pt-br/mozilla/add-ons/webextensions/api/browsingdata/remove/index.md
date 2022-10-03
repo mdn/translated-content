@@ -79,9 +79,11 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.remove({},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
+
+browser.browsingData
+  .remove({ since: oneWeekAgo }, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}
