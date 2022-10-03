@@ -5,7 +5,7 @@ slug: Web/CSS/:is
 
 {{CSSRef}}
 
-> **Note:** `:matches()` は `:is()` に改名されました。 ([CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258))
+> **メモ:** `:matches()` は `:is()` に改名されました。 ([CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258))
 
 **`:is()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターのリストを引数に取り、リスト中のセレクターの何れか一つに当てはまる要素をすべて選択します。数多くのセレクターを小さくまとめて書くのに便利です。
 

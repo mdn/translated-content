@@ -97,7 +97,6 @@
 /ja/docs/API/Document/scrollingElement	/ja/docs/Web/API/Document/scrollingElement
 /ja/docs/API/Document/styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/API/Document/title	/ja/docs/Web/API/Document/title
-/ja/docs/API/Document/tooltipNode	/ja/docs/orphaned/Web/API/Document/tooltipNode
 /ja/docs/API/Document/vlinkColor	/ja/docs/Web/API/Document/vlinkColor
 /ja/docs/API/Document/width	/ja/docs/conflicting/Web/API/Element/clientWidth
 /ja/docs/API/Document/write	/ja/docs/Web/API/Document/write
@@ -1296,7 +1295,6 @@
 /ja/docs/DOM/document.referrer	/ja/docs/Web/API/Document/referrer
 /ja/docs/DOM/document.styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/DOM/document.title	/ja/docs/Web/API/Document/title
-/ja/docs/DOM/document.tooltipNode	/ja/docs/orphaned/Web/API/Document/tooltipNode
 /ja/docs/DOM/document.vlinkColor	/ja/docs/Web/API/Document/vlinkColor
 /ja/docs/DOM/document.width	/ja/docs/conflicting/Web/API/Element/clientWidth
 /ja/docs/DOM/document.write	/ja/docs/Web/API/Document/write
@@ -3227,7 +3225,6 @@
 /ja/docs/Web/API/Document/pointerover_event	/ja/docs/conflicting/Web/API/Element/pointerover_event
 /ja/docs/Web/API/Document/pointerup_event	/ja/docs/conflicting/Web/API/Element/pointerup_event
 /ja/docs/Web/API/Document/selectstart_event	/ja/docs/Web/API/Node/selectstart_event
-/ja/docs/Web/API/Document/tooltipNode	/ja/docs/orphaned/Web/API/Document/tooltipNode
 /ja/docs/Web/API/Document/touchcancel_event	/ja/docs/conflicting/Web/API/Element/touchcancel_event
 /ja/docs/Web/API/Document/touchend_event	/ja/docs/conflicting/Web/API/Element/touchend_event
 /ja/docs/Web/API/Document/touchmove_event	/ja/docs/conflicting/Web/API/Element/touchmove_event
@@ -3772,7 +3769,6 @@
 /ja/docs/Web/API/document.scripts	/ja/docs/Web/API/Document/scripts
 /ja/docs/Web/API/document.styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/Web/API/document.title	/ja/docs/Web/API/Document/title
-/ja/docs/Web/API/document.tooltipNode	/ja/docs/orphaned/Web/API/Document/tooltipNode
 /ja/docs/Web/API/document.vlinkColor	/ja/docs/Web/API/Document/vlinkColor
 /ja/docs/Web/API/document.width	/ja/docs/conflicting/Web/API/Element/clientWidth
 /ja/docs/Web/API/document.write	/ja/docs/Web/API/Document/write
@@ -4874,7 +4870,6 @@
 /ja/docs/Web/Security/HTTP_Strict_Transport_Security	/ja/docs/Web/HTTP/Headers/Strict-Transport-Security
 /ja/docs/Web/Security/Information_Security_Basics	/ja/docs/orphaned/Web/Security/Information_Security_Basics
 /ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
-/ja/docs/Web/Specification_list	/ja/docs/orphaned/Web/Specification_list
 /ja/docs/Web/WebGL	/ja/docs/Web/API/WebGL_API
 /ja/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ja/docs/Web/WebGL/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
@@ -5430,7 +5425,6 @@
 /ja/docs/lastIndexOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 /ja/docs/method	/ja/docs/Web/API/HTMLFormElement/method
 /ja/docs/mozillaのメール	/ja/docs/Web
-/ja/docs/reftest_opportunities_files	/ja/docs/orphaned/reftest_opportunities_files
 /ja/docs/slice	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice
 /ja/docs/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString

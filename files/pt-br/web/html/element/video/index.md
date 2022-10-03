@@ -55,7 +55,7 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/en/HT
 
     Se não definido, seu valor padrão será definido pelo navegador (isto é, cada navegador pode escolher seu valor padrão), embora a especificação recomenda que seja definido para o metadata.
 
-    > **Note:** **Notas de uso:**- O atributo `autoplay` tem precedência sobre o `preload,`pois se é necessário executar o vídeo automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
+    > **Note:** **Notas de uso:**- O atributo `autoplay` tem precedência sobre o `preload`, pois se é necessário executar o vídeo automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
     >
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
 

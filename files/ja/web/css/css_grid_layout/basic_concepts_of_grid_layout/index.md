@@ -507,7 +507,7 @@ Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Too
 }
 ```
 
-> **Note:** グリッドが最初にブラウザーに実装されたとき、 {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} に `grid-` の接頭辞がつき、それぞれ `grid-column-gap`, `grid-row-gap`, `grid-gap` のようになっていました。
+> **メモ:** グリッドが最初にブラウザーに実装されたとき、 {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} に `grid-` の接頭辞がつき、それぞれ `grid-column-gap`, `grid-row-gap`, `grid-gap` のようになっていました。
 >
 > ブラウザーは接頭辞を外すよう更新されつつありますが、接頭辞付きの版も安全に利用できるよう保守されるでしょう。
 
@@ -619,7 +619,7 @@ Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Too
 
 Level 2 のグリッド仕様書の草稿では、サブグリッド (subgrid) と呼ばれる機能があり、親グリッドのトラック定義を利用した入れ子状のグリッドを作成できます。
 
-> **Note:** この機能は Firefox 71 で初めて搭載され、これがサブグリッドを実装している唯一のブラウザーです。
+> **メモ:** この機能は Firefox 71 で初めて搭載され、これがサブグリッドを実装している唯一のブラウザーです。
 
 現在の仕様書では、入れ子上のグリッドの例を編集して、 `grid-template-columns: repeat(3, 1fr)` のトラック定義を `grid-template-columns: subgrid` へ変更します。入れ子状のグリッドは親グリッドのトラックを利用してアイテムをレイアウトします。
 

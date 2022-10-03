@@ -2,6 +2,7 @@
 title: Blob.type
 slug: Web/API/Blob/type
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} オブジェクトの **`type`** プロパティは、ファイルの {{Glossary("MIME type")}} を返します。

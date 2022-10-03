@@ -88,7 +88,7 @@ arr1.flatMap(x => x.split(" "));
 
 ### 在一个 `map()` 期间增加或去除一些项
 
-`flatMap` 能用于在 map 期间增删项目（也就是修改 items 的数量）。换句话说，它允许你遍历很多项使之成为另一些项（靠分别把它们放进去来处理），而不是总是一对一。 从这个意义上讲，它的作用类似于 [filter](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)的对立面。只需返回一个 1 项元素数组以保留该项，返回一个多元素数组以添加项，或返回一个 0 项元素数组以删除该项。
+`flatMap` 能用于在 map 期间增删项目（也就是修改 items 的数量）。换句话说，它允许你遍历很多项使之成为另一些项（靠分别把它们放进去来处理），而不是总是一对一。从这个意义上讲，它的作用类似于 [filter](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)的对立面。只需返回一个 1 项元素数组以保留该项，返回一个多元素数组以添加项，或返回一个 0 项元素数组以删除该项。
 
 ```plain
 // Let's say we want to remove all the negative numbers and split the odd numbers into an even number and a 1

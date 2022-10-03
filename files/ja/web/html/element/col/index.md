@@ -106,7 +106,7 @@ slug: Web/HTML/Element/col
     - `middle` : テキストをセルの中央部に置きます。
     - and `top` : テキストを可能な限りセルの上端に近づけて配置します。
 
-    > **Note:** **補足:**- {{cssxref("vertical-align")}} プロパティを、 `<col>` 要素を与えたセレクターに設定しようとしてはいけません。{{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
+    > **メモ:** **補足:**- {{cssxref("vertical-align")}} プロパティを、 `<col>` 要素を与えたセレクターに設定しようとしてはいけません。{{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
     >
     > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、 CSS の `td:nth-child(an+b)` セレクターを使用してください。a は表内の列数、b は表内の列の位置を示す序数です。このセレクターの後でのみ `vertical-align` プロパティを使用することができます。
     > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。

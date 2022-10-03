@@ -77,17 +77,17 @@ Aucun.
   - : Définit le format du nombre généré&nbsp;:
 
     - format="1"
-      - : \<tt>1 2 3 …\</tt> (C'est le seul format supporté à ce jour)
+      - : `1 2 3 …` (C'est le seul format supporté à ce jour)
     - format="01"
-      - : \<tt>01 02 03 … 09 10 11 …\</tt>
+      - : `01 02 03 … 09 10 11 …`
     - format="a"
-      - : \<tt>a b c … y z aa ab …\</tt>
+      - : `a b c … y z aa ab …`
     - format="A"
-      - : \<tt>A B C … Y Z AA AB …\</tt>
+      - : `A B C … Y Z AA AB …`
     - format="i"
-      - : \<tt>i ii iii iv v …\</tt>
+      - : `i ii iii iv v …`
     - format="I"
-      - : \<tt>I II III IV V …\</tt>
+      - : `I II III IV V …`
 
 - lang (Non supporté à l'heure actuelle)
   - : Définit les alphabets pouvant être utilisés pour les formats de numérotation basés sur les lettres.

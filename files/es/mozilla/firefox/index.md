@@ -61,7 +61,7 @@ Después de estabilizarse durante otras seis semanas en Beta, estamos listos par
 
 Firefox ESR es la edición de soporte a largo plazo de Firefox para escritorio para uso de grandes organizaciones, como escuelas, universidades, empresas y otras personas que necesitan un soporte extendido para implementaciones masivas.
 
-[Descubre más sobre Firefox Versión de Soporte Extendida](https://developer.mozilla.org/es/Firefox/Firefox_ESR).
+[Descubre más sobre Firefox Versión de Soporte Extendida](/es/Firefox/Firefox_ESR).
 
 [Descarga Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
 

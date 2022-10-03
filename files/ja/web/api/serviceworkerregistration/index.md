@@ -9,7 +9,7 @@ slug: Web/API/ServiceWorkerRegistration
 
 サービスワーカー登録の存続期間は、対応するサービスワーカークライアントの存続期間内でそれらを表す `ServiceWorkerRegistration` オブジェクトの存続期間を超えています。 ブラウザーは、アクティブな `ServiceWorkerRegistration` オブジェクトの永続的なリストを維持します。
 
-> **Note:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 {{InheritanceDiagram}}
 

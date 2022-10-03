@@ -2,6 +2,7 @@
 title: location.host
 slug: Web/API/Location/host
 ---
+
 {{ApiRef("Location")}}
 
 **`host`** は {{domxref("Location")}} インターフェイスのプロパティで、 {{domxref("USVString")}} でホスト、すなわち*ホスト名*と、 URL の*ポート番号*が空でなければ、 `':'` およびその*ポート番号*を保持します。

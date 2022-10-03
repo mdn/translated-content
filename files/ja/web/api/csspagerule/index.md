@@ -2,6 +2,7 @@
 title: CSSPageRule
 slug: Web/API/CSSPageRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSPageRule`** は、1 個の CSS {{cssxref("@page")}} 規則を表すインターフェイスです。これは、型定数の値が `6` (`CSSRule.PAGE_RULE`) の {{domxref("CSSRule")}} インターフェイスを実装します。

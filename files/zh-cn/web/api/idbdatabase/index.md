@@ -29,7 +29,7 @@ IndexedDB 中的 **`IDBDatabase`** 接口提供一个到 [数据库的连接](/z
 ## 属性
 
 - {{domxref("IDBDatabase.name")}} {{readonlyInline}}
-  - : {{ domxref("DOMString") }}类型，当前连接数据库名 。
+  - : {{ domxref("DOMString") }}类型，当前连接数据库名。
 - {{domxref("IDBDatabase.version")}} {{readonlyInline}}
   - : [64-bit](</zh-CN/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>) 整型数，当前连接数据库的版本。当数据第一次被创建时，这个属性是一个空的字符串。
 - {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}

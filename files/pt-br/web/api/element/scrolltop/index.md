@@ -21,7 +21,7 @@ Depois de executar este código, intElemScrollTop é um número inteiro correspo
 element.scrollTop = intValue;
 ```
 
-`scrollTop pode ser definido como qualquer valor inteiro, com algumas ressalvas:`
+`scrollTop` pode ser definido como qualquer valor inteiro, com algumas ressalvas:
 
 - Se o elemento não pode ser rolada (por exemplo, se o elemento é não-rolagem), scrollTop = 0.
 - Se for definido como um valor menor do que 0, scrollTop é definido = 0.

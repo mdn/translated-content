@@ -339,7 +339,7 @@ console.log(clone.get(1))       // one
 console.log(original === clone) // false (useful for shallow comparison)
 ```
 
-> **Note:** **重要:** *データ自身*は複製されないことに注意しておいてください。
+> **メモ:** *データ自身*は複製されないことに注意しておいてください。
 
 Map はキーの固有性を保持しながら混合可能です。
 

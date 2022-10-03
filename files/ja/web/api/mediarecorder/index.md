@@ -2,6 +2,7 @@
 title: MediaRecorder
 slug: Web/API/MediaRecorder
 ---
+
 {{APIRef("Media Recorder API")}}
 
 [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の **`MediaRecorder`** インターフェイスは、メディアを簡単に記録するための機能を提供します。 これは、{{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} コンストラクタを使用して作成します。
@@ -139,7 +140,7 @@ if (navigator.mediaDevices) {
 }
 ```
 
-> **Note:** このコードサンプルは、ウェブディクタフォン（Web Dictaphone）のデモから着想を得たものです。 簡潔にするために一部の行は省略されています。 完全なコードについては[ソースを参照](https://github.com/mdn/web-dictaphone/)してください。
+> **メモ:** このコードサンプルは、ウェブディクタフォン（Web Dictaphone）のデモから着想を得たものです。 簡潔にするために一部の行は省略されています。 完全なコードについては[ソースを参照](https://github.com/mdn/web-dictaphone/)してください。
 
 ## 仕様
 

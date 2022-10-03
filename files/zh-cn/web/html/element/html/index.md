@@ -76,5 +76,5 @@ slug: Web/HTML/Element/html
 
 ## 参见
 
-- MathML 顶级元素: {{MathMLElement("math")}}
-- SVG 顶级元素: {{SVGElement("svg")}}
+- MathML 顶级元素：{{MathMLElement("math")}}
+- SVG 顶级元素：{{SVGElement("svg")}}

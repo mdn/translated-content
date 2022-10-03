@@ -7,7 +7,7 @@ slug: Web/API/Element/setPointerCapture
 
 **`setPointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、特定の要素をこれ以降のポインターイベントの*キャプチャターゲット*として指定するために使用します。 ({{domxref("Element.releasePointerCapture()")}} を介して) キャプチャが解放されるまで、それ以降のポインターのイベントはキャプチャ要素をターゲットにします。
 
-> **Note:** ポインターキャプチャを設定している場合、 {{domxref("HTMLElement/pointerover_event", "pointerover")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}}, {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} のイベントはキャプチャターゲットの境界を横断したときにのみ生成されます。これは他のすべての要素でこれらのイベントを抑制する効果があります。
+> **メモ:** ポインターキャプチャを設定している場合、 {{domxref("HTMLElement/pointerover_event", "pointerover")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}}, {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} のイベントはキャプチャターゲットの境界を横断したときにのみ生成されます。これは他のすべての要素でこれらのイベントを抑制する効果があります。
 
 ### ポインターキャプチャの概要
 

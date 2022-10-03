@@ -2,6 +2,7 @@
 title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`Navigator.mediaDevices`** 読み取り専用プロパティは、カメラやマイク、画面共有のような接続されたメディア入力装置へのアクセスを提供する {{domxref("MediaDevices")}} オブジェクトを返します。

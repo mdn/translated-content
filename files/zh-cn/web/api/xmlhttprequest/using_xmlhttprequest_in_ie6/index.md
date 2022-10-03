@@ -15,7 +15,7 @@ var request = new XMLHttpRequest()
 
 ```js
 if (window.XMLHttpRequest) {
-    //Firefox、 Opera、 IE7 和其它浏览器使用本地 JavaScript 对象
+    //Firefox、Opera、IE7 和其它浏览器使用本地 JavaScript 对象
     var request = new XMLHttpRequest();
 } else {
     //IE 5 和 IE 6 使用 ActiveX 控件

@@ -2,9 +2,10 @@
 title: Document.createTouch()
 slug: Web/API/Document/createTouch
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
-> **Note:** {{Gecko("25.0")}} 以前では、このメソッドは {{DOMxRef("DocumentTouch")}} ミックスインで定義されていました。
+> **メモ:** {{Gecko("25.0")}} 以前では、このメソッドは {{DOMxRef("DocumentTouch")}} ミックスインで定義されていました。
 
 **`Document.createTouch()`** メソッドは、新しい {{DOMxRef("Touch")}} オブジェクトを生成して返します。
 
@@ -17,7 +18,7 @@ var touch = DocumentTouch.createTouch(view, target, identifier, pageX, pageY,
 
 ### 引数
 
-> **Note:** すべての引数が省略可能です。
+> **メモ:** すべての引数が省略可能です。
 
 - `view`
   - : タッチが発生した {{DOMxRef("window")}} です。
@@ -34,7 +35,7 @@ var touch = DocumentTouch.createTouch(view, target, identifier, pageX, pageY,
 - `screenY`
   - : {{DOMxRef("Touch.screenY")}} の値です。
 
-> **Note:** このメソッドの以前のバージョンでは、以下の追加の引数を含んでいましたが、これらの引数は下記の標準のいずれにも含まれていません。従って、これらの引数は非推奨であり、使用されないと考えてください。
+> **メモ:** このメソッドの以前のバージョンでは、以下の追加の引数を含んでいましたが、これらの引数は下記の標準のいずれにも含まれていません。従って、これらの引数は非推奨であり、使用されないと考えてください。
 
 - `clientX`
   - : {{DOMxRef("Touch.clientX")}} の値です。
