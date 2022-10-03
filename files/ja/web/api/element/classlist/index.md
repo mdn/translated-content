@@ -58,7 +58,7 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");
 ```
 
-> **Note:** Firefox 26 以前のバージョンでは、 add/remove/toggle メソッドでいくつかの引数の使用を実装していません。詳しくは <https://bugzilla.mozilla.org/show_bug.cgi?id=814014> を参照してください。
+> **メモ:** Firefox 26 以前のバージョンでは、 add/remove/toggle メソッドでいくつかの引数の使用を実装していません。詳しくは <https://bugzilla.mozilla.org/show_bug.cgi?id=814014> を参照してください。
 
 ## 仕様書
 

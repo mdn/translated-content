@@ -16,7 +16,7 @@ original_slug: Web/Events/Detecting_device_orientation
 
 方向の変化を受け取り始めるには、{{event("deviceorientation")}} イベントをリッスンします:
 
-> **Note:** [parallax](https://github.com/wagerfield/parallax) は、モバイル端末の加速度センサーやジャイロスコープのデータを正規化するためのポリフィルです。これは、端末の方向の対応状況の違いを克服するのに役立ちます。
+> **メモ:** [parallax](https://github.com/wagerfield/parallax) は、モバイル端末の加速度センサーやジャイロスコープのデータを正規化するためのポリフィルです。これは、端末の方向の対応状況の違いを克服するのに役立ちます。
 
 ```js
 window.addEventListener("deviceorientation", handleOrientation, true);

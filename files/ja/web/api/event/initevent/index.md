@@ -11,7 +11,7 @@ slug: Web/API/Event/initEvent
 このメソッドは {{ domxref("EventTarget.dispatchEvent()") }} を使用してイベントが配信される前に、イベントを設定するために呼び出す必要があります。
 配信されると、もう何もしません。
 
-> **Note:** **このメソッドは廃止されているため、使用しないでください。**
+> **メモ:** **このメソッドは廃止されているため、使用しないでください。**
 > 代わりに、 {{domxref("Event.Event", "Event()")}} のような特定のイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、これらの使用方法の詳細が記載されています。
 
 ## 構文

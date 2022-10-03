@@ -47,7 +47,7 @@ l10n:
       <td id="examplecheckbox">
         <pre class="brush: html hidden">
 &#x3C;input type="checkbox" name="checkbox"/></pre>
-        {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplecheckbox",200,55)}}
       </td>
     </tr>
     <tr>
@@ -58,18 +58,18 @@ l10n:
       <td id="examplecolor">
         <pre class="brush: html hidden">
 &#x3C;input type="color" name="color"/></pre>
-        {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplecolor",200,55)}}
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/date", "date")}}</td>
       <td>
-        日付（時刻を除く年、月、日）を入力するためのコントロールです。対応しているブラウザーでは、アクティブになったときに日付ピッカーまたは年月日の数値のホイールが開きます。
+        日付（時刻を除いた年、月、日）を入力するためのコントロールです。対応しているブラウザーでは、アクティブになったときに日付ピッカーまたは年月日の数値のホイールが開きます。
       </td>
       <td id="exampledate">
         <pre class="brush: html hidden">
 &#x3C;input type="date" name="date"/></pre>
-        {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledate",200,55)}}
       </td>
     </tr>
     <tr>
@@ -82,7 +82,7 @@ l10n:
       <td id="exampledtl">
         <pre class="brush: html hidden">
 &#x3C;input type="datetime-local" name="datetime-local"/></pre>
-        {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledtl",200,55)}}
       </td>
     </tr>
     <tr>
@@ -93,7 +93,7 @@ l10n:
       <td id="exampleemail">
         <pre class="brush: html hidden">
 &#x3C;input type="email" name="email"/></pre>
-        {{EmbedLiveSample("exampleemail",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleemail",200,55)}}
       </td>
     </tr>
     <tr>
@@ -104,7 +104,7 @@ l10n:
       <td id="examplefile">
         <pre class="brush: html hidden">
 &#x3C;input type="file" accept="image/*, text/*" name="file"/></pre>
-        {{EmbedLiveSample("examplefile",'100%',55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplefile",'100%',55)}}
       </td>
     </tr>
     <tr>
@@ -116,7 +116,7 @@ l10n:
         <pre class="brush: html hidden">
 &#x3C;input id="userId" name="userId" type="hidden" value="abc123"></pre
         >
-        {{EmbedLiveSample("examplehidden",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplehidden",200,55)}}
       </td>
     </tr>
     <tr>
@@ -127,7 +127,7 @@ l10n:
       <td id="exampleimage">
         <pre class="brush: html hidden">
 &#x3C;input type="image" name="image" src="" alt="image input"/></pre>
-        {{EmbedLiveSample("exampleimage",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleimage",200,55)}}
       </td>
     </tr>
     <tr>
@@ -136,7 +136,7 @@ l10n:
       <td id="examplemonth">
         <pre class="brush: html hidden">
 &#x3C;input type="month" name="month"/></pre>
-        {{EmbedLiveSample("examplemonth",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplemonth",200,55)}}
       </td>
     </tr>
     <tr>
@@ -147,7 +147,7 @@ l10n:
       <td id="examplenumber">
         <pre class="brush: html hidden">
 &#x3C;input type="number" name="number"/></pre>
-        {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplenumber",200,55)}}
       </td>
     </tr>
     <tr>
@@ -158,7 +158,7 @@ l10n:
       <td id="examplepassword">
         <pre class="brush: html hidden">
 &#x3C;input type="password" name="password"/></pre>
-        {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplepassword",200,55)}}
       </td>
     </tr>
     <tr>
@@ -170,18 +170,19 @@ l10n:
         <pre class="brush: html hidden">
 &#x3C;input type="radio" name="radio"/></pre
         >
-        {{EmbedLiveSample("exampleradio",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleradio",200,55)}}
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
       <td>
-        厳密な値であることが重要ではない数値を入力するためのコントロールです。範囲のウィジェットを表示し、既定では中央の値になります。 <a href="#min"><code>min</code></a> と <a href="#max"><code>max</code></a> の組み合わせで、受け入れる値の範囲を定義することができます。
+        厳密な値であることが重要ではない数値を入力するためのコントロールです。範囲のウィジェットを表示し、既定では中央の値になります。
+        <a href="#min"><code>min</code></a> と <a href="#max"><code>max</code></a> の組み合わせで、受け入れる値の範囲を定義することができます。
       </td>
       <td id="examplerange">
         <pre class="brush: html hidden">
 &#x3C;input type="range" name="range" min="0" max="25"/></pre>
-        {{EmbedLiveSample("examplerange",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplerange",200,55)}}
       </td>
     </tr>
     <tr>
@@ -193,7 +194,7 @@ l10n:
         <pre class="brush: html hidden">
 &#x3C;input type="reset" name="reset"/></pre
         >
-        {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplereset",200,55)}}
       </td>
     </tr>
     <tr>
@@ -204,7 +205,7 @@ l10n:
       <td id="examplesearch">
         <pre class="brush: html hidden">
 &#x3C;input type="search" name="search"/></pre>
-        {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplesearch",200,55)}}
       </td>
     </tr>
     <tr>
@@ -213,7 +214,7 @@ l10n:
       <td id="examplesubmit">
         <pre class="brush: html hidden">
 &#x3C;input type="submit" name="submit"/></pre>
-        {{EmbedLiveSample("examplesubmit",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplesubmit",200,55)}}
       </td>
     </tr>
     <tr>
@@ -224,7 +225,7 @@ l10n:
       <td id="exampletel">
         <pre class="brush: html hidden">
 &#x3C;input type="tel" name="tel"/></pre>
-        {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletel",200,55)}}
       </td>
     </tr>
     <tr>
@@ -236,7 +237,7 @@ l10n:
         <pre class="brush: html hidden">
 &#x3C;input type="text" name="text"/></pre
         >
-        {{EmbedLiveSample("exampletext",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletext",200,55)}}
       </td>
     </tr>
     <tr>
@@ -245,7 +246,7 @@ l10n:
       <td id="exampletime">
         <pre class="brush: html hidden">
 &#x3C;input type="time" name="time"/></pre>
-        {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletime",200,55)}}
       </td>
     </tr>
     <tr>
@@ -257,7 +258,7 @@ l10n:
         <pre class="brush: html hidden">
 &#x3C;input type="url" name="url"/></pre
         >
-        {{EmbedLiveSample("exampleurl",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleurl",200,55)}}
       </td>
     </tr>
     <tr>
@@ -268,21 +269,21 @@ l10n:
       <td id="exampleweek">
         <pre class="brush: html hidden">
 &#x3C;input type="week" name="week"/></pre>
-        {{EmbedLiveSample("exampleweek",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleweek",200,55)}}
       </td>
     </tr>
     <tr>
       <th colspan="3">廃止された値</th>
     </tr>
     <tr>
-      <td>{{HTMLElement("input/datetime", "datetime")}}</td>
+      <td>`datetime`</td>
       <td>
         {{deprecated_inline}} UTC タイムゾーンに基づく日付と時刻 (時、分、秒、秒の端数) を入力するためのコントロールです。
       </td>
       <td id="exampledatetime">
         <pre class="brush: html hidden">
 &#x3C;input type="datetime" name="datetime"/></pre>
-        {{EmbedLiveSample("exampledatetime",200,75,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledatetime",200,75)}}
       </td>
     </tr>
   </tbody>
@@ -344,7 +345,7 @@ l10n:
 
 - [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete)
 
-  - : （論理属性**ではありません**!）[`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性は空白区切りの文字列の値を取り、指定された場合は、入力欄が提供する自動補完機能の種類を示します。自動補完のよくある実装は、以前同じ入力欄に入力された値を単に再呼び出しするものですが、もっと複雑な自動補完もあり得ます。例えば、ブラウザーが端末の連絡先リストと連携して、 `email` 入力欄でメールアドレスを自動補完したりする可能性もあります。許可されている値は [autocomplete 属性の値](/ja/docs/Web/HTML/Attributes/autocomplete#values)を参照してください。
+  - : （論理属性では**ありません**!） [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性は空白区切りの文字列の値を取り、指定された場合は、入力欄が提供する自動補完機能の種類を示します。自動補完のよくある実装は、以前同じ入力欄に入力された値を単に再呼び出しするものですが、もっと複雑な自動補完もあり得ます。例えば、ブラウザーが端末の連絡先リストと連携して、 `email` 入力欄でメールアドレスを自動補完したりする可能性もあります。許可されている値は [autocomplete 属性の値](/ja/docs/Web/HTML/Attributes/autocomplete#values)を参照してください。
 
     `autocomplete` 属性は `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, `password` で有効です。この属性は数値またはテキストデータを返さない入力型では効果がなく、 `checkbox`, `radio`, `file` とすべてのボタン型を除いたすべての入力型で有効になります。
 
@@ -352,7 +353,7 @@ l10n:
 
 - `autofocus`
 
-  - : 論理属性で、指定された場合は、ページの読み込みが完了したとき (またはその要素を含む {{HTMLElement("dialog")}} が表示されたとき) に、自動的にその入力欄がフォーカスを持つことを示します。
+  - : 論理属性で、指定された場合は、ページの読み込みが完了したとき（またはその要素を含む {{HTMLElement("dialog")}} が表示されたとき）に、自動的にその入力欄がフォーカスを持つことを示します。
 
     > **メモ:** `autofocus` 属性がついた要素は、 {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発生する前にフォーカスを得ることがあります。
 
@@ -360,15 +361,15 @@ l10n:
 
     `autofocus` は `hidden` 型の入力欄にはフォーカスを受け取ることができないため、使用することができません。
 
-    > **警告:** フォームコントロールに自動的にフォーカスを与えると、読み上げ技術を利用している視覚障碍者を混乱させる可能性があります。 `autofocus` が割り当てられると、読み上げソフトは予告なしにフォームコントロールにその人を「テレポート」させることになるからです。
+    > **警告:** フォームコントロールに自動的にフォーカスを与えると、読み上げ技術を利用している視覚障碍者を混乱させる可能性があります。 `autofocus` が割り当てられると、スクリーンリーダーは予告なしにフォームコントロールにその人を「テレポート」させることになるからです。
 
-    `autofocus` 属性を適用する際には、アクセシビリティを慎重に検討してください。フォームコントロールにフォーカスを自動的に設定すると、読み込み時にページのスクロールが発生します。フォーカスを与えると、一部のタッチ端末では動的なキーボードを表示させることにもなります。読み上げソフトはフォーカスを受けているフォームコントロールのラベルをアナウンスする一方、ラベルよりも前は何もアナウンスしませんし、小さな端末を使用している視力のあるユーザーは、同様に先行するコンテンツによって作成された文脈を見逃してしまいます。
+    `autofocus` 属性を適用する際には、アクセシビリティを慎重に検討してください。フォームコントロールにフォーカスを自動的に設定すると、読み込み時にページのスクロールが発生します。フォーカスを与えると、一部のタッチ端末では動的なキーボードを表示させることにもなります。スクリーンリーダーはフォーカスを受けているフォームコントロールのラベルをアナウンスする一方、ラベルよりも前は何もアナウンスしませんし、小さな端末を使用している視力のあるユーザーは、同様に先行するコンテンツによって作成された文脈を見逃してしまいます。
 
 - `capture`
   - : HTML Media Capture 仕様書で導入され、 `file` 入力型に対してのみ有効です。 `capture` 属性は、どのメディア (マイク、ビデオ、カメラ) を使用して新しいファイルをキャプチャし、対応するシナリオで `file` アップロードコントロールを使用してアップロードするかを定義します。 {{HTMLElement("input/file", "file")}} 入力型を参照してください。
 - `checked`
 
-  - : `radio` 型と `checkbox` 型の両方で有効で、 `checked` は論理属性です。 `radio` 型に存在した場合、そのラジオボタンが同じ名前のラジオボタンのグループの中で現在選択されているものであることを示します。 `checkbox` 型に存在した場合、 (ページが読み込まれたとき) 既定でチェックボックスがチェックされていることを示します。このチェックボックスが現在チェックされているかどうかを示すものでは<em>ありません</em>。チェックボックスの状態が変更された場合でも、このコンテンツ属性はその変更を反映しません。 （[`HTMLInputElement` の `checked` IDL 属性](/ja/docs/Web/API/HTMLInputElement)のみが更新されます。）
+  - : `radio` 型と `checkbox` 型の両方で有効で、 `checked` は論理属性です。 `radio` 型に存在した場合、そのラジオボタンが同じ名前のラジオボタンのグループの中で現在選択されているものであることを示します。 `checkbox` 型に存在した場合、 (ページが読み込まれたとき) 既定でチェックボックスがチェックされていることを示します。このチェックボックスが現在チェックされているかどうかを示すものでは<em>ありません</em>。チェックボックスの状態が変更された場合でも、このコンテンツ属性はその変更を反映しません。（[`HTMLInputElement` の `checked` IDL 属性](/ja/docs/Web/API/HTMLInputElement)のみが更新されます。）
 
     > **メモ:** 他の入力コントロールとは異なり、チェックボックスやラジオボタンの値は、現在 `checked` の状態にある場合だけ送信データに含まれます。存在する場合、チェックされたコントロールの名前と値が送信されます。
     >
@@ -380,8 +381,10 @@ l10n:
 
     ```html
     <form action="page.html" method="post">
-      <label>Fruit: <input type="text" name="fruit" dirname="fruit.dir" value="cherry"></label>
-      <input type="submit"/>
+      <label>Fruit:
+        <input type="text" name="fruit" dirname="fruit.dir" value="cherry" />
+      </label>
+      <input type="submit" />
     </form>
     <!-- page.html?fruit=cherry&fruit.dir=ltr -->
     ```
@@ -394,11 +397,11 @@ l10n:
 
     特に、無効になった入力欄は {{domxref("Element/click_event", "click")}} イベントを受け取らず、フォームと共に送信されることもありません。
 
-    > **メモ:** 仕様書で要件とはされていませんが、 Firefox は既定で、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は [`autocomplete`](#autocomplete) 属性で制御することができます。
+    > **メモ:** 仕様書で要件とはされていませんが、 Firefox は既定で、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は {{htmlattrxref("autocomplete","input")}} 属性で制御することができます。
 
 - `form`
 
-  - : 文字列で、入力欄が関連づけられた {{HTMLElement("form")}} 要素 (つまり、**フォームオーナー**) を指定します。存在する場合、この文字列値は同一文書内の `<form>` 要素の  [`id`](#id) と一致している必要があります。この属性が指定されない場合は、 `<input>` 要素は直近の内包するフォームに (もしあれば) 関連付けられます。
+  - : 文字列で、入力欄が関連づけられた {{HTMLElement("form")}} 要素（つまり、**フォームオーナー**）を指定します。存在する場合、この文字列値は同一文書内の `<form>` 要素の [`id`](#id) と一致している必要があります。この属性が指定されない場合は、 `<input>` 要素は直近の内包するフォームに（もしあれば）関連付けられます。
 
     `form` 属性によって、入力欄を文書内のどこに置いても、文書内の他の場所にあるフォームと関連付けることができます。
 
@@ -436,31 +439,31 @@ l10n:
 
   - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最大値を定義します。要素に入力された [`value`](#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。 `max` 属性の値が数値でない場合は、要素に最大値は設定されません。
 
-    特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、 `max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後 10 時から午前 4 時までの自国の範囲を指定することができます。
+    特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、 `max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後10時から午前4時までの自国の範囲を指定することができます。
 
 - `maxlength`
 
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる文字数（UTF-16 コード単位）を定義します。これは `0` 以上の整数値でなければなりません。 `maxlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
-    欄に入力されたテキストの文字数が UTF-16 コード単位で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。詳しくは[クライアントサイドの検証](#クライアントサイドの検証)を参照してください。
+    欄に入力されたテキストの文字数が UTF-16 コード単位で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
 - `min`
 
   - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最も低い値を定義します。要素に入力された {{htmlattrxref("value", "input")}} がこれを下回った場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。 `min` 属性の値が数値でない場合は、要素に最小値は設定されません。
 
-    この値は `max` 属性の値以下である必要があります。 `min` 属性が存在するものの、指定されていなかったり無効であったりした場合は、 `min` の値は適用されません。 `min` 属性が有効であり、値が空ではなく `min` 属性で許可された最小値よりも小さかった場合、制約の検証によりフォームの送信が行われません。詳しくは[クライアントサイドの検証](#クライアントサイドの検証)を参照してください。
+    この値は `max` 属性の値以下である必要があります。 `min` 属性が存在するものの、指定されていなかったり無効であったりした場合は、 `min` の値は適用されません。 `min` 属性が有効であり、値が空ではなく `min` 属性で許可された最小値よりも小さかった場合、制約の検証によりフォームの送信が行われません。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
-    特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、 `max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後 10 時から午前 4 時までの時刻の範囲を指定することができます。
+    特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、 `max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後 10 時から午前 4 時までの自国の範囲を指定することができます。
 
 - `minlength`
 
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最小文字数 (UTF-16 コード単位) を定義します。これは負数ではなく、 `maxlength` で指定された値以下の整数値でなければなりません。 `minlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最小文字数が設定されません。
 
-    欄に入力されたテキストの文字数が UTF-16 コード単位で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。詳しくは[クライアントサイドの検証](#クライアントサイドの検証)を参照してください。
+    欄に入力されたテキストの文字数が UTF-16 コード単位で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
 - `multiple`
 
-  - : 論理属性の `multiple` は、設定されている場合、 email ウィジェットではカンマ区切りで複数のメールアドレスを入力できること、また `file` 入力欄では複数のファイルを選択することができることを意味します。 {{HTMLElement("input/email", "email")}} および {{HTMLElement("input/file", "file")}} 入力型を参照してください。
+  - : 論理属性の `multiple` は、設定されている場合、 email 入力欄ではユーザーがウィジェット内でカンマ区切りで複数のメールアドレスを入力できること、また `file` 入力欄では複数のファイルを選択することができることを意味します。 {{HTMLElement("input/email", "email")}} および {{HTMLElement("input/file", "file")}} 入力型を参照してください。
 
 - `name`
 
@@ -524,19 +527,20 @@ l10n:
 
 - `size`
 
-  - : `email`, `password`, `tel`, `url`, `text` で有効です。入力内容をどれだけ表示するかを指定します。基本的には、 CSS の [`width`](/ja/docs/Web/CSS/width) プロパティを設定するのと同じ効果が得られますが、いくつかの特徴があります。値の実際の単位は、入力型によって異なります。 `password` や `text` の場合は文字数（または `em` 単位）で既定値は `20`、それ以外の場合はピクセル（または `px` 単位）となります。 CSS の `width` は `size` 属性よりも優先されます。
+  - : `email`, `password`, `tel`, `text` の `input` 型でのみ有効です。入力内容をどれだけ表示するかを指定します。基本的には、 CSS の [`width`](/ja/docs/Web/CSS/width) プロパティを設定するのと同じ効果が得られますが、いくつかの特徴があります。値の実際の単位は、入力型によって異なります。 `password` や `text` の場合は文字数（または `em` 単位）で既定値は `20`、それ以外の場合はピクセルとなります。 CSS の `width` は `size` 属性よりも優先されます。
 
 - `src`
+
   - : `image` 入力ボタンにのみ有効で、 `src` は、グラフィカルな送信ボタンを表現するために表示する画像ファイルの URL を指定する文字列です。 {{HTMLElement("input/image", "image")}} 入力型を参照してください。
 
 - `step`
 
-  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` 型で有効です。 [`step`](/ja/docs/Web/HTML/Attributes/step) 属性は、値が準拠すべき粒度を指定する数値です。
+  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効です。 [`step`](/ja/docs/Web/HTML/Attributes/step) 属性は、値が準拠すべき粒度を指定する数値です。
 
     明示的に指定しない場合は次のようになります。
 
-    - `number` と `range` の場合、 `step` の既定値は 1 です。
-    - 日付や時刻の入力型では、 `step` の既定値は型に応じて変わります。個々の入力欄のページを参照してください。 [`date`](/ja/docs/Web/HTML/Element/input/date#step), [`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local#step), [`month`](/ja/docs/Web/HTML/Element/input/month#step), [`time`](/ja/docs/Web/HTML/Element/input/time#step), and [`week`](/ja/docs/Web/HTML/Element/input/week#step)
+    - `step` の既定値は、 `number` と `range` の場合は 1 です。
+    - 日付や時刻の入力型では、型ごとにふさわしい `step` の既定値があります。 [`date`](/ja/docs/Web/HTML/Element/input/date#step)、[`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local#step)、[`month`](/ja/docs/Web/HTML/Element/input/month#step)、[`time`](/ja/docs/Web/HTML/Element/input/time#step)、[`week`](/ja/docs/Web/HTML/Element/input/week#step) の個別のページを参照してください。
 
     値は、正の整数または浮動小数点実数、または特殊な値 `any` のいずれかでなければなりません。これは、刻みが考慮されず、あらゆる値が許容されることを意味します（[`min`](#min) や [`max`](#max) などの他の制約がない場合）。
 
@@ -550,7 +554,7 @@ l10n:
 
 - `tabindex`
 
-  - : すべての要素、すべての入力型で有効なグローバル属性で、要素が入力フォーカスを受けられる（フォーカス可能）かどうかを示す整数属性であり、順次キーボードナビゲーションに加わるべきかどうかを示します。 hidden 型の入力を除くすべての入力型がフォーカス可能であるため、この属性はフォームコントロールに使用すべきではありません。そうすると文書内のすべての要素のフォーカス順序を管理しなければならず、間違って行うとユーザビリティやアクセシビリティを損なう危険性があるからです。
+  - : すべての要素、すべての入力型で有効なグローバル属性で、要素が入力フォーカスを受けられる (フォーカス可能) かどうかを示す整数属性であり、順次キーボードナビゲーションに加わるべきかどうかを示します。 hidden 型の入力を除くすべての入力型がフォーカス可能であるため、この属性はフォームコントロールに使用すべきではありません。そうすると文書内のすべての要素のフォーカス順序を管理しなければならず、間違って行うとユーザビリティやアクセシビリティを損なう危険性があるからです。
 
 - `title`
 
@@ -626,7 +630,7 @@ l10n:
 
 - `autocorrect` {{non-standard_inline}}
 
-  - : （Safari のみ）。拡張である `autocorrect` 属性は文字列で、ユーザーがこの欄を編集している間に自動修正を有効にするかどうかを示します。次の値が許されています。
+  - : （Safari のみ）。文字列で、ユーザーがこの欄を編集している間に自動修正を有効にするかどうかを示します。次の値が許されています。
 
     - `on`
       - : 構成されていれば、打ち間違いの自動修正や、テキストの置き換え処理を有効にします。
@@ -642,7 +646,10 @@ l10n:
     `search` イベントは発生頻度が制限されているため、実装により定義された間隔よりも頻繁に送信されることはありません。
 
 - `orient` {{non-standard_inline}}
+
   - : CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、 `vertical` が範囲を垂直に描画することを意味します。
+
+- `results` {{non-standard_inline}}
 
 - `results` {{non-standard_inline}}
 
@@ -663,7 +670,7 @@ l10n:
 - {{domxref("HTMLInputElement.checkValidity", "checkValidity()")}}
   - : 要素の有効性チェックを直ちに実行し、値が有効でない場合は文書に対して {{domxref("HTMLInputElement.invalid_event", "invalid")}} イベントを要素に発生させます。
 - {{domxref("HTMLInputElement.reportValidity", "reportValidity()")}}
-  - : 要素の値が妥当性チェックを通った場合は `true` を返します。そうでなければ、 `false` を返し、 {{domxref("HTMLInputElement.invalid_event", "invalid")}} イベントをその要素に送り、（そのイベントがキャンセルされなければ）ユーザーに問題を報その告します。
+  - : 要素の値が有効性チェックを通過した場合は `true` を返します。それ以外の場合は `false` を返し、要素に対して {{domxref("HTMLInputElement.invalid_event", "invalid")}} イベントを発行し、（そのイベントが取り消されない場合）問題をユーザに報告します。
 - {{domxref("HTMLInputElement.select", "select()")}}
   - : 要素が選択可能な場合、 `<input>` 要素の内容を選択します。選択可能なテキストコンテンツがない要素（カラーピッカーまたはカレンダー日付入力など）では、このメソッドは何もしません。
 - {{domxref("HTMLInputElement.setCustomValidity", "setCustomValidity()")}}
@@ -717,7 +724,7 @@ l10n:
     <tr>
       <td>{{Cssxref(":placeholder-shown")}}</td>
       <td>
-        現在 <a href="#placeholder"><code>placeholder</code> のテキスト</a>が表示されている要素で、 <code>&#x3C;input></code> や {{HTMLElement("textarea")}} 要素に <a href="#placeholder"><code>placeholder</code></a> 属性が付いていて、まだ値がないものが入ります。
+        現在 <a href="#placeholder"><code>placeholder</code> のテキスト</a>を表示している要素で、 <code>&#x3C;input></code> や {{HTMLElement("textarea")}} 要素に <a href="#placeholder"><code>placeholder</code></a> 属性が付いていて、まだ値がないものを含みます。
       </td>
     </tr>
     <tr>
@@ -800,7 +807,7 @@ l10n:
 チェックボックスのラベルを、そのチェックボックスがチェックされているかどうかに基づいてスタイル設定することができます。この例では、 {{cssxref('color')}} と {{cssxref('font-weight')}} でチェックされたボックスの直後にある {{htmlelement('label')}} をスタイル設定しています。 `input` がチェックされていない場合はスタイルを適用しません。
 
 ```html hidden
-<input id="checkboxInput" type="checkbox">
+<input id="checkboxInput" type="checkbox" />
 <label for="checkboxInput">このチェックボックスのオンとオフを切り替えてください</label>
 ```
 
@@ -815,17 +822,20 @@ input:checked + label {
 
 ### 属性セレクター
 
-様々なフォームコントロールの型のターゲットを [`type`](#type) に基づいて絞ることには、[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)を使用することができます。 CSS の属性セレクターは、属性の有無または属性の値に基づいて要素を照合します。
+[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)を使用すると、様々なフォームコントロールの型のターゲットを [type](#type) に基づいて絞ることができます。 CSS の属性セレクターは、属性の有無または属性の値に基づいて要素を照合します。
 
 ```css
 /* password 入力欄に一致 */
-input[type="password"] {}
+input[type="password"] {
+}
 
 /* 有効な値の範囲が限定されているフォームコントロールに一致 */
-input[min][max] {}
+input[min][max] {
+}
 
 /* pattern 属性の付いたフォームコントロールに一致 */
- input[pattern] {}
+input[pattern] {
+}
 ```
 
 ### ::placeholder
@@ -856,7 +866,7 @@ input[min][max] {}
 
 ```html
 <label for="textInput">赤いキャレットに注意:</label>
-<input id="textInput" class="custom" size="32">
+<input id="textInput" class="custom" size="32" />
 ```
 
 #### CSS
@@ -864,7 +874,7 @@ input[min][max] {}
 ```css
 input.custom {
   caret-color: red;
-  font: 16px "Helvetica", "Arial", "sans-serif"
+  font: 16px "Helvetica", "Arial", "sans-serif";
 }
 ```
 
@@ -902,13 +912,18 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 ```html
 <!-- アクセシブルではない -->
-<p>名前を入力してください: <input id="name" type="text" size="30"></p>
+<p>名前を入力してください: <input id="name" type="text" size="30" /></p>
 
 <!-- 暗黙的なラベル -->
-<p><label>名前を入力してください: <input id="name" type="text" size="30"></label></p>
+<p>
+  <label>名前を入力してください: <input id="name" type="text" size="30" /></label>
+</p>
 
 <!-- 明示的なラベル -->
-<p><label for="name">名前を入力してください: </label><input id="name" type="text" size="30"></p>
+<p>
+  <label for="name">名前を入力してください: </label>
+  <input id="name" type="text" size="30" />
+</p>
 ```
 
 最初の例は、プロンプトと `<input>` 要素の間に関係がないため、アクセシブルではありません。
@@ -925,9 +940,9 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 > **メモ:** 避けることができるのであれば、 [`placeholder`](#placeholder) 属性を使用しないでください。 `<input>` 要素にラベルを付ける必要があるのであれば、 {{HTMLElement("label")}} 属性を使用してください。
 
-### クライアントサイドの検証
+### クライアント側の検証
 
-> **警告:** クライアントサイドの検証は便利ですが、サーバーが有効なデータを受け取ることを保証するものではありません。データが特定の形式でなければならない場合は、必ずサーバー側でも検証を行い、形式が無効な場合は [HTTP の `400` レスポンス](/ja/docs/Web/HTTP/Status/400)を返してください。
+> **警告:** クライアント側の検証は便利ですが、サーバーが有効なデータを受け取ることを保証するものではありません。データが特定の形式でなければならない場合は、必ずサーバー側でも検証を行い、形式が無効な場合は [HTTP の `400` レスポンス](/ja/docs/Web/HTTP/Status/400)を返してください。
 
 上記の [UI 擬似クラス](#ui_擬似クラス)の節で述べたように、 CSS を用いて、それぞれの入力欄の現在の状態に基づく {{cssxref(":valid")}} または {{cssxref(":invalid")}} の UI 状態に基づいて入力欄にスタイル設定をすることに加え、フォームを送信（しようと）したときに、ブラウザーはクライアントサイドの検証を行います。フォームを送信する時に、制約検証に不合格になったフォームコントロールがある場合、対応しているブラウザーは、最初の無効なフォームコントロールにエラーメッセージを表示します。エラー種別に基づいた既定のメッセージを表示したり、ユーザーが設定したメッセージを表示したりします。
 
@@ -936,7 +951,7 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 可能な値の範囲が周期的な（つまり、値が取りうる最大値で終了するのではなく、最初に戻る）入力型では、 [`max`](#max) プロパティと [`min`](#min) プロパティの値を逆にして、許可される値の範囲が `min` から始まり、可能な最小値まで回り込んで、 `max` に達するまで続くことを示すことが可能です。これは日付や時刻の場合、例えば午後 8 時から午前 8 時までの範囲を許可したい場合などに特に便利です。
 
 ```html
-<input type="time" min="20:00" max="08:00" name="overnight">
+<input type="time" min="20:00" max="08:00" name="overnight" />
 ```
 
 決まった属性と値の組み合わせが、 {{domxref('ValidityState')}} の決まったエラーを発生させます。
@@ -1058,7 +1073,7 @@ function validate(input) {
 ```html
 <form>
   <label for="name">ユーザー名を入力してください (英大文字および小文字): </label>
-  <input type="text" name="name" id="name" required pattern="[A-Za-z]+">
+  <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Submit</button>
 </form>
 ```
@@ -1091,7 +1106,7 @@ nameInput.addEventListener('invalid', () => {
 簡単に言えば、以下の通りです。
 
 - input 要素が有効であるかの状態をチェックするために、値が変更されるたびに `checkValidity()` メソッドを `input` イベントハンドラーから呼び出します。
-- 値が有効ではない場合、 `invalid` イベントが発行され、 `invalid` イベントのハンドラー関数が実行されます。この関数の中で、値が無効である原因が空欄であるためであるか、パターンに一致しないためであるかを確認し、 `if()` ブロックを使用して、独自の検証エラーメッセージを設定します。
+- 値が有効ではない場合、 `invalid` イベントが発行され、 `invalid` イベントのハンドラー関数が実行されます。この関数の中で、値が無効である原因が空欄であるためであるか、パターンに一致しないためであるかを確認し、 `if ()` ブロックを使用して、独自の検証エラーメッセージを設定します。
 - 結果として、送信ボタンが押されたときに入力値が有効ではない場合は、独自のエラーメッセージのうちの一つが表示されます。
 - 有効である場合は、期待通りに送信されます。この場合、独自の検証は `setCustomValidity()` を空文字列で呼び出すことで中断されます。従って、 `input` イベントが発生するたびにこれが行われます。以前、独自の検証が設定され、これを行わないと、送信時に有効な値を持っていたとしても、入力欄は無効であるとして登録されます。
 
@@ -1177,12 +1192,10 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
             <code>type=search</code>
             <ul>
               <li>
-                <code>list</code> 属性なし:
-                {{ARIARole("searchbox")}}
+                <code>list</code> 属性なし: {{ARIARole("searchbox")}}
               </li>
               <li>
-                <code>list</code> 属性あり:
-                {{ARIARole("combobox")}}
+                <code>list</code> 属性あり: {{ARIARole("combobox")}}
               </li>
             </ul>
           </li>
@@ -1198,8 +1211,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
                 <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                <code>list</code> 属性あり:
-                {{ARIARole("combobox")}}
+                <code>list</code> 属性あり: {{ARIARole("combobox")}}
               </li>
             </ul>
           </li>
@@ -1211,8 +1223,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
                 <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                <code>list</code> 属性あり:
-                {{ARIARole("combobox")}}
+                <code>list</code> 属性あり: {{ARIARole("combobox")}}
               </li>
             </ul>
           </li>
@@ -1224,8 +1235,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
                 <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                <code>list</code> 属性あり:
-                {{ARIARole("combobox")}}
+                <code>list</code> 属性あり: {{ARIARole("combobox")}}
               </li>
             </ul>
           </li>
@@ -1269,7 +1279,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
             {{ARIARole("spinbutton")}}
           </li>
           <li>
-            <code>type=color|date|datetime|datetime-local|email|file|hidden|</code>
+            <code>type=color|date|datetime-local|email|file|hidden|</code>
               <code>month|number|password|range|reset|search|submit|tel|url|week</code>
             または <code>text</code> に <code>list</code> 属性がある場合: 許可されている <code>role</code> なし
           </li>
@@ -1293,7 +1303,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
 
 ```html
 <label for="peas">Do you like peas?</label>
-<input type="checkbox" name="peas" id="peas">
+<input type="checkbox" name="peas" id="peas" />
 ```
 
 ### 大きさ

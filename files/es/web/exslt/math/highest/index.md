@@ -8,7 +8,7 @@ tags:
 translation_of: Web/EXSLT/math/highest
 ---
 {{XsltRef}}
-`math:highest()` devuelve el nodo con el valor más alto (donde el valor más alto se calcula usando [`math:max()`](es/EXSLT/math/max)) del conjunto de nodos (node-set) especificado.
+`math:highest()` devuelve el nodo con el valor más alto (donde el valor más alto se calcula usando [`math:max()`](/es/docs/Web/EXSLT/math/max)) del conjunto de nodos (node-set) especificado.
 
 Un nodo tiene este valor máximo si convierte su valor de cadena a un número igual al valor máximo.
 
@@ -25,7 +25,7 @@ math:highest(conjuntoNodos)
 
 ### Devuelve
 
-Un fragmento de árbol resultante que consiste en las copias de los nodos devueltos por [`math:max()`](es/EXSLT/math/max).
+Un fragmento de árbol resultante que consiste en las copias de los nodos devueltos por [`math:max()`](/es/docs/Web/EXSLT/math/max).
 
 ## Definido en
 

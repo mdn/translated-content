@@ -67,7 +67,7 @@ new String(thing)
 | `\u{X}` ... `\u{XXXXXX}` | unicode codepoint {{experimental_inline}} |
 | `\xXX`                   | Latin-1 字符 (x 小写)                              |
 
-> **备注：** 和其他语言不同，javascript 的字符串不区分单引号和双引号，所以不论是单引号还是双引号的字符串，上面的转义字符都能运行 。
+> **备注：** 和其他语言不同，javascript 的字符串不区分单引号和双引号，所以不论是单引号还是双引号的字符串，上面的转义字符都能运行。
 
 ### 长字符串
 
@@ -81,7 +81,7 @@ let longString = "This is a very long string which needs " +
                  "otherwise my code is unreadable.";
 ```
 
-其二，可以在每行末尾使用反斜杠字符（“\”），以指示字符串将在下一行继续。确保反斜杠后面没有空格或任何除换行符之外的字符或缩进; 否则反斜杠将不会工作。 如下所示：
+其二，可以在每行末尾使用反斜杠字符（“\”），以指示字符串将在下一行继续。确保反斜杠后面没有空格或任何除换行符之外的字符或缩进; 否则反斜杠将不会工作。如下所示：
 
 ```plain
 let longString = "This is a very long string which needs \
@@ -93,11 +93,11 @@ otherwise my code is unreadable.";
 
 ## 描述
 
-字符串对于保存可以以文本形式表示的数据非常有用。 一些常用的字符串操作有：查询[字符串长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)，使用 [+ 和 +=](/zh-CN/docs/Web/JavaScript/Reference/Operators/String_Operators) 运算符来构建和连接字符串，使用 [indexOf](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) 方法检查某一子字符串在父字符串中的位置，又或是使用 [substring](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 方法提取从父字符串中提取子字符串。
+字符串对于保存可以以文本形式表示的数据非常有用。一些常用的字符串操作有：查询[字符串长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)，使用 [+ 和 +=](/zh-CN/docs/Web/JavaScript/Reference/Operators/String_Operators) 运算符来构建和连接字符串，使用 [indexOf](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) 方法检查某一子字符串在父字符串中的位置，又或是使用 [substring](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 方法提取从父字符串中提取子字符串。
 
 ### 从字符串中获取单个字符
 
-获取字符串的某个字符有两种方法。 第一种是使用 {{jsxref("String.charAt", "charAt")}} 方法：
+获取字符串的某个字符有两种方法。第一种是使用 {{jsxref("String.charAt", "charAt")}} 方法：
 
 ```js
 return 'cat'.charAt(1); // returns "a"
@@ -142,7 +142,7 @@ console.log(typeof s_prim); // Logs "string"
 console.log(typeof s_obj);  // Logs "object"
 ```
 
-当使用 {{jsxref("Global_Objects/eval", "eval")}}时，基本字符串和字符串对象也会产生不同的结果。`eval` 会将基本字符串作为源代码处理; 而字符串对象则被看作对象处理，返回对象。 例如：
+当使用 {{jsxref("Global_Objects/eval", "eval")}}时，基本字符串和字符串对象也会产生不同的结果。`eval` 会将基本字符串作为源代码处理; 而字符串对象则被看作对象处理，返回对象。例如：
 
 ```js
 s1 = "2 + 2";               // creates a string primitive

@@ -73,7 +73,7 @@ p {
 }
 ```
 
-> **Note:** 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/TypeNetwork/Amstelvar/releases)できます。
+> **メモ:** 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/TypeNetwork/Amstelvar/releases)できます。
 
 ## 仕様書
 
