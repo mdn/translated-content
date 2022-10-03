@@ -43,7 +43,7 @@ new OscillatorNode(context, options)
 
 ### 返値
 
-新しい {{domxref("OscillatorNode")}} お武衛ジェクトのインスタンスです。
+新しい {{domxref("OscillatorNode")}} オブジェクトのインスタンスです。
 
 ## 仕様書
 
