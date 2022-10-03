@@ -10,120 +10,108 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/flatMap
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p>El método <code><strong>flatMap()</strong></code> primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un <a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> seguido de un <a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten">flatten </a>de profundidad 1, pero <code>flatMap</code> es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.</p>
+El método **`flatMap()`** primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un [map](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de un [flatten ](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten)de profundidad 1, pero `flatMap` es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
 
-<p>\{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}</p>
+\\{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}
 
-<p><span class="tlid-translation translation" lang="es"><span title="">La fuente de este ejemplo interactivo, se almacena en un repositorio de GitHub.</span> <span title="">Si desea contribuir al proyecto de ejemplos interactivos, clone </span></span><a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a><span class="tlid-translation translation" lang="es"><span title=""> y envíenos una solicitud de extracción.</span></span></p>
+La fuente de este ejemplo interactivo, se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
+```
+var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
     // return element for new_array
-}</var>[, <var>thisArg</var>])</pre>
+}[, thisArg])
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Función que produce un elemento de la nueva matriz, tomando tres argumentos:
- <dl>
-  <dt></dt>
-  <dt><code>currentValue</code></dt>
-  <dd>El elemento actual que se procesa en la matriz.</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd>El índice del elemento actual que se procesa en la matriz.</dd>
-  <dt><code>array</code>{{optional_inline}}</dt>
-  <dd>La matriz <code>map</code> fue llamada.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code>{{optional_inline}}</dt>
- <dd>Valor para usar como <code>this</code> al ejecutar <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+  - : Función que produce un elemento de la nueva matriz, tomando tres argumentos:
 
-<p>Una nueva matriz con cada elemento es el resultado de la función de devolución de llamada y se aplana a una profundidad de 1.</p>
+    - `currentValue`
 
-<h2 id="Descripción">Descripción</h2>
+      - : El elemento actual que se procesa en la matriz.
 
-<p>Ver {{jsxref("Array.prototype.map()")}} para una descripción detallada de la función de devolución de llamada. El método <code>flatMap</code> es idéntico a <code><a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a></code> seguido de una llamada a <code><a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten">flatten</a></code> de profundidad 1.</p>
+    - `index`{{optional_inline}}
+      - : El índice del elemento actual que se procesa en la matriz.
+    - `array`{{optional_inline}}
+      - : La matriz `map` fue llamada.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+- `thisArg`{{optional_inline}}
+  - : Valor para usar como `this` al ejecutar `callback`.
 
-<h3 id="map_y_flatMap"><code>map</code> y <code>flatMap</code></h3>
+### Valor de retorno
 
-<pre class="brush: js">var arr1 = <span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>[</span></span><span class="constant decimal js numeric"><span>1</span></span><span class="comma delimiter js meta object"><span>,</span></span><span> </span><span class="brace js meta square"><span>2, 3, 4];
+Una nueva matriz con cada elemento es el resultado de la función de devolución de llamada y se aplana a una profundidad de 1.
 
-arr1.map(</span></span></span></span></span>x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);</span></span></span></span></span>
+## Descripción
+
+Ver {{jsxref("Array.prototype.map()")}} para una descripción detallada de la función de devolución de llamada. El método `flatMap` es idéntico a [`map`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de una llamada a [`flatten`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten) de profundidad 1.
+
+## Ejemplos
+
+### `map` y `flatMap`
+
+```js
+var arr1 = [1, 2, 3, 4];
+
+arr1.map(x => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);
-// [2, 4, 6, 8]</span></span></span></span></span>
+arr1.flatMap(x => [x * 2]);
+// [2, 4, 6, 8]
 
 // solo un nivel es aplanado
-arr1.flatMap(x =&gt; [[x * 2]]);
+arr1.flatMap(x => [[x * 2]]);
 // [[2], [4], [6], [8]]
-</pre>
+```
 
-<div class="line"><span><span><span><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
+//=> \[1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-<h2 id="Alternativa">Alternativa</h2>
+## Alternativa
 
-<h3 id="reduce_y_concat"><code>reduce</code> y <code>concat</code></h3>
+### `reduce` y `concat`
 
-<pre class="brush: js">var arr1 = <span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>[</span></span><span class="constant decimal js numeric"><span>1</span></span><span class="comma delimiter js meta object"><span>,</span></span><span> </span><span class="brace js meta square"><span>2, 3, 4];
-</span></span></span></span></span>
-arr1.flatMap(x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);</span></span></span></span></span>
+```js
+var arr1 = [1, 2, 3, 4];
+
+arr1.flatMap(x => [x * 2]);
 // es equivalente a
-arr1.reduce((acc, x) =&gt; acc.concat([x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>), []);</span></span></span></span></span>
-<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>// [2, 4, 6, 8]</span></span></span></span></span>
-</pre>
+arr1.reduce((acc, x) => acc.concat([x * 2]), []);
+// [2, 4, 6, 8]
+```
 
-<div class="line"><span><span><span><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
+//=> \[1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Este polyfill necesita <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat" title="Array.prototype.flat()">Array.prototype.flat polyfill</a></p>
+Este polyfill necesita [Array.prototype.flat polyfill](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flat "Array.prototype.flat()")
 
-<pre class="brush: js">if (!Array.prototype.flatMap) {
+```js
+if (!Array.prototype.flatMap) {
   Array.prototype.flatMap = function() {
     return Array.prototype.map.apply(this, arguments).flat(1);
   };
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap"><code>Array.prototype.flatMap</code> </a></td>
-   <td>Finalizado (4)</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                    | Estado         | Comentario |
+| ------------------------------------------------------------------------------------------------- | -------------- | ---------- |
+| [`Array.prototype.flatMap`](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap) | Finalizado (4) |            |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
+{{Compat("javascript.builtins.Array.flatMap")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Array.flatMap")}}</p>
-</div>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.flatten()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.flatten()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Array.prototype.concat()")}}

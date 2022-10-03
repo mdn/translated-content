@@ -11,35 +11,35 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Cuantificadores
 ---
-<p>{{jsSidebar("JavaScript Guide")}}</p>
+{{jsSidebar("JavaScript Guide")}}
 
-<p>Los cuantificadores indican el número de caracteres o expresiones que deben coincidir.</p>
+Los cuantificadores indican el número de caracteres o expresiones que deben coincidir.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-quantifiers.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-quantifiers.html", "taller")}}
 
-<h2 id="Tipos">Tipos</h2>
+## Tipos
 
-<div>La siguiente tabla también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Cheatsheet", "esta hoja de referencia")}}. No olvides editarla también, ¡gracias!</div>
+La siguiente tabla también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Cheatsheet", "esta hoja de referencia")}}. No olvides editarla también, ¡gracias!
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: A continuación, <em>elemento</em> se refiere no solo a caracteres individuales, sino que también incluye {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}}, {{JSxRef("../Guide/Regular_Expressions/Unicode_Property_Escapes", "escapes de propiedades Unicode")}}, {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupos y rangos")}}.</p>
-</div>
+> **Nota:** A continuación, _elemento_ se refiere no solo a caracteres individuales, sino que también incluye {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}}, {{JSxRef("../Guide/Regular_Expressions/Unicode_Property_Escapes", "escapes de propiedades Unicode")}}, {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupos y rangos")}}.
 
 «Tabla»
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Patrón_repetido">Patrón repetido</h3>
+### Patrón repetido
 
-<pre class="brush: js notranslate">var palabraTerminadaConAes = /\w+a+\b/;
+```js
+var palabraTerminadaConAes = /\w+a+\b/;
 var mensajeDelicado = "Esto es Espartaaaaaaa";
 
 console.table(mensajeDelicado.match(palabraTerminadaConAes)); // [ "Espartaaaaaaa" ]
-</pre>
+```
 
-<h3 id="Conteo_de_caracteres">Conteo de caracteres</h3>
+### Conteo de caracteres
 
-<pre class="brush: js notranslate">var palabraDeUnaLetra = /\b\w\b/g;
+```js
+var palabraDeUnaLetra = /\b\w\b/g;
 var palabraNoTanLarga = /\b\w{1,6}\b/g;
 var palabraLaaaaarga = /\b\w{10,}\b/g;
 
@@ -48,11 +48,12 @@ var frase = "¿Por qué me tengo que sentar a estudiar las tablas de multiplicar
 console.table(frase.match(palabraDeUnaLetra)); // ["a"]
 console.table(frase.match(palabraNoTanLarga));    // ["Por", "qu", "me", "tengo", "que", "sentar", "a", "las", "tablas", "de"]
 console.table(frase.match(palabraLaaaaarga));      // ["multiplicar"]
-</pre>
+```
 
-<h3 id="Caracter_opcional">Caracter opcional</h3>
+### Caracter opcional
 
-<pre class="brush: js notranslate">var londinText = "He asked his neighbour a favour.";
+```js
+var londinText = "He asked his neighbour a favour.";
 var yanquiText = "He asked his neighbor a favor.";
 
 var regexpEnding = /\w+ou?r/g;
@@ -66,11 +67,12 @@ console.table(londinText.match(regexpEnding));
 
 console.table(yanquiText.match(regexpEnding));
 // ["neighbor", "favor"]
-</pre>
+```
 
-<h3 id="Codicioso_versus_no_codicioso">Codicioso versus no codicioso</h3>
+### Codicioso versus no codicioso
 
-<pre class="brush: js notranslate">var texto = "Debo estar muy cerca del centro de la tierra.";
+```js
+var texto = "Debo estar muy cerca del centro de la tierra.";
 var regexpCodiciosa = /[\w ]+/;
 // [\w ]      una letra del alfabeto latino o un espacio en blanco
 //      +     una o varias veces
@@ -83,36 +85,25 @@ var regexpNoCodiciosa = /[\w ]+?/; // Observa el signo de interrogación
 console.log(texto.match(regexpNoCodiciosa));
 // "D"
 // La coincidencia es la más pequeña posible
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-quantifier', 'RegExp: Quantifiers')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           |
+| ---------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-quantifier', 'RegExp: Quantifiers')}} |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<p>Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.</p>
+Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.
 
-<h2 id="Ve_también">Ve también</h2>
+## Ve también
 
-<ul>
- <li>{{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
+- {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
 
-  <ul>
-   <li>{{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}</li>
-   <li>{{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}</li>
-   <li>{{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}</li>
-   <li>{{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}</li>
-  </ul>
- </li>
- <li>{{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}</li>
-</ul>
+  - {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}
+  - {{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}
+  - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}
+  - {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}
+
+- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}

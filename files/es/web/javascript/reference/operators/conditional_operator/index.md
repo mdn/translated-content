@@ -7,116 +7,99 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 original_slug: Web/JavaScript/Referencia/Operadores/Conditional_Operator
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}El **operador condicional** (**ternario**) es el único operador en JavaScript que tiene tres operandos. Este operador se usa con frecuencia como atajo para la instrucción [if](/es/docs/Web/JavaScript/Referencia/Sentencias/if...else).
 
-<div>El<strong> operador condicional </strong>(<strong>ternario</strong>) es el único operador en JavaScript que tiene tres operandos. Este operador se usa con frecuencia como atajo para la instrucción <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/if...else">if</a>.</div>
+## Sintaxis
 
-<div> </div>
+```
+condición ? expr1 : expr2
+```
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Parámetros
 
-<pre class="syntaxbox"><em>condición </em>? <em>expr1</em> : <em>expr2</em> </pre>
+- `condición`
+  - : Una expresión que se evalúa como true o false.
+- `expr1`, `expr2`
+  - : Expresión con valores de algún tipo.
 
-<h3 id="Parámetros">Parámetros</h3>
+## Descripción
 
-<dl>
- <dt><code>condición</code></dt>
- <dd>Una expresión que se evalúa como true o false.</dd>
- <dt>
- <div><code>expr1</code>, <code>expr2</code></div>
- </dt>
- <dd>Expresión con valores de algún tipo.</dd>
-</dl>
- <h2 id="Descripción">Descripción</h2>
+Si la `condición` es `true`, el operador retorna el valor de la `expr1`; de lo contrario, devuelve el valor de `expr2`. Por ejemplo, para mostrar un mensaje diferente en función del valor de la variable _`isMember,`_ se puede usar esta declaración:
 
-<p>Si la <code>condición</code> es <code>true</code>, el operador retorna el valor de la <code>expr1</code>; de lo contrario,  devuelve el valor de <code>expr2</code>. Por ejemplo, para mostrar un mensaje diferente en función del valor de la variable <em><code>isMember,</code></em> se puede usar esta declaración:</p>
+```js
+"La Cuota es de:  " + (isMember ? "$2.00" : "$10.00")
+```
 
-<pre class="brush: js">"La Cuota es de:  " + (isMember ? "$2.00" : "$10.00")
-</pre>
+También puedes asignar variables dependiendo del resultado de la condición ternaria:
 
-<p>También puedes asignar variables dependiendo del resultado de la condición ternaria:</p>
+```js
+var elvisLives = Math.PI > 4 ? "Sip" : "Nop";
+```
 
-<pre class="brush: js">var elvisLives = Math.PI &gt; 4 ? "Sip" : "Nop";</pre>
+También es posible realizar evaluaciones ternarias múltiples (Nota: El operador condicional es asociativo):
 
-<p>También es posible realizar evaluaciones ternarias múltiples (Nota: El operador condicional es asociativo):</p>
-
-<pre class="brush: js">var firstCheck = false,
+```js
+var firstCheck = false,
     secondCheck = false,
     access = firstCheck ? "Acceso Denegado" : secondCheck ? "Acceso Denegado" : "Acceso Permitido";
 
-console.log( access ); // muestra "Acceso Permitido"</pre>
+console.log( access ); // muestra "Acceso Permitido"
+```
 
-<p>También puede usar operaciones ternarias en espacio vacío con el propósito de realizar diferentes operaciones:</p>
+También puede usar operaciones ternarias en espacio vacío con el propósito de realizar diferentes operaciones:
 
-<pre class="brush: js">var stop = false, age = 16;
+```js
+var stop = false, age = 16;
 
-age &gt; 18 ? location.assign("continue.html") : stop = true;
-</pre>
+age > 18 ? location.assign("continue.html") : stop = true;
+```
 
-<p>También puede realizar más de una operación por caso, separándolas con una coma:</p>
+También puede realizar más de una operación por caso, separándolas con una coma:
 
-<pre class="brush: js">var stop = false, age = 23;
+```js
+var stop = false, age = 23;
 
-age &gt; 18 ? (
+age > 18 ? (
     alert("OK, puedes continuar."),
     location.assign("continue.html")
 ) : (
     stop = true,
     alert("Disculpa, eres menor de edad!")
 );
-</pre>
+```
 
-<p>También puede realizar más de una operación durante la asignación de un valor. En este caso, <strong><em>el último valor separado por una coma del paréntesis </em>será el valor asignado</strong>.</p>
+También puede realizar más de una operación durante la asignación de un valor. En este caso, **_el último valor separado por una coma del paréntesis_ será el valor asignado**.
 
-<pre class="brush: js">var age = 16;
+```js
+var age = 16;
 
-var url = age &gt; 18 ? (
+var url = age > 18 ? (
     alert("OK, puedes continuar."),
     // alert devuelve "undefined", pero será ignorado porque
     // no es el último valor separado por comas del paréntesis
-    "continue.html" // el valor a ser asignado si age &gt; 18
+    "continue.html" // el valor a ser asignado si age > 18
 ) : (
     alert("Eres menor de edad!"),
     alert("Disculpa :-("),
     // etc. etc.
-    "stop.html" // el valor a ser asignado si !(age &gt; 18)
+    "stop.html" // el valor a ser asignado si !(age > 18)
 );
 
-location.assign(url); // "stop.html"</pre>
+location.assign(url); // "stop.html"
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-conditional-operator', 'Conditional Operator')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.12', 'The conditional operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.12', 'The conditional operator')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definición inicial implementada en JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                   | Comentario                                         |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES6', '#sec-conditional-operator', 'Conditional Operator')}} | {{Spec2('ES6')}}     |                                                    |
+| {{SpecName('ES5.1', '#sec-11.12', 'The conditional operator')}}             | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES1', '#sec-11.12', 'The conditional operator')}}                 | {{Spec2('ES1')}}     | Definición inicial implementada en JavaScript 1.0. |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("javascript.operators.conditional")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if statement</a></li>
-</ul>
+- [if statement](/es/docs/Web/JavaScript/Reference/Statements/if...else)

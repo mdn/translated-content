@@ -6,27 +6,30 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El valor inicial de la propiedad <code><strong>@@iterator</strong></code>, es la misma función objeto que el valor inicial de la propiedad {{jsxref("Set.prototype.values()", "values")}}.</p>
+El valor inicial de la propiedad **`@@iterator`**, es la misma función objeto que el valor inicial de la propiedad {{jsxref("Set.prototype.values()", "values")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}
 
-<p>El código fuente de este ejemplo interactivo lo puedes encontrar en el repositorio de Github. Si quieres contribuir con más ejemplos interactivos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una pull request.</p>
+El código fuente de este ejemplo interactivo lo puedes encontrar en el repositorio de Github. Si quieres contribuir con más ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos una pull request.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><em>mySet</em>[Symbol.iterator]</code></pre>
+```
+mySet[Symbol.iterator]
+```
 
-<h3 id="Valor_retornado"> Valor retornado</h3>
+### Valor retornado
 
-<p>La función <strong>iteradora</strong> <code>Set</code> , la cuál es {{jsxref("Set.prototype.values()", "values()")}} por defecto.</p>
+La función **iteradora** `Set` , la cuál es {{jsxref("Set.prototype.values()", "values()")}} por defecto.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_iterator">Usando <code>[@@iterator]()</code></h3>
+### Usando `[@@iterator]()`
 
-<pre class="brush:js">const mySet = new Set();
+```js
+const mySet = new Set();
 mySet.add('0');
 mySet.add(1);
 mySet.add({});
@@ -36,11 +39,12 @@ const setIter = mySet[Symbol.iterator]();
 console.log(setIter.next().value); // "0"
 console.log(setIter.next().value); // 1
 console.log(setIter.next().value); // Object
-</pre>
+```
 
-<h3 id="Usando_iterator_con_for..of">Usando <code>[@@iterator]()</code> con <code>for..of</code></h3>
+### Usando `[@@iterator]()` con `for..of`
 
-<pre class="brush:js">const mySet = new Set();
+```js
+const mySet = new Set();
 mySet.add('0');
 mySet.add(1);
 mySet.add({});
@@ -48,40 +52,21 @@ mySet.add({});
 for (const v of mySet) {
   console.log(v);
 }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   | Estado                       | Comentario          |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ES2015')}}     | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
+{{Compat("javascript.builtins.Set.@@iterator")}}
 
+## Vea también
 
-<p>{{Compat("javascript.builtins.Set.@@iterator")}}</p>
-
-<h2 id="Vea_también">Vea también</h2>
-
-<ul>
- <li>{{jsxref("Set.prototype.entries()")}}</li>
- <li>{{jsxref("Set.prototype.keys()")}}</li>
- <li>{{jsxref("Set.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}
+- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values()")}}

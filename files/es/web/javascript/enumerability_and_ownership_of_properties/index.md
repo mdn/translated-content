@@ -10,168 +10,72 @@ tags:
 translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 original_slug: Web/JavaScript/enumeracion_y_propietario_de_propiedades
 ---
-<div>{{JsSidebar("Más")}}</div>
+{{JsSidebar("Más")}}
 
-<p>Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable interno se establece en <code>true</code>, que es el valor predeterminado para las propiedades creadas mediante una asignación simple o mediante un iniciador de propiedad (propiedades definidas mediante {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty")}} y tal valor enumerable predeterminado a <code>false</code>). Se muestran numerosas propiedades en bucles {{jsref("Statements/for...in", "for...in")}} a menos que la clave de la propiedad sea {{jsxref("Global_Objects/Symbol", "Symbol")}}. La posesión de las propiedades está determinada por si la propiedad pertenece directamente al objeto y no a su cadena prototipo. Las propiedades de un objeto también se pueden recuperar en total. Hay varios medios incorporados para detectar, iterar/enumerar y recuperar propiedades de objetos, y el gráfico que se muestra a continuación está disponible. A continuación, se muestra un código de muestra que demuestra cómo obtener las categorías faltantes.</p>
+Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable interno se establece en `true`, que es el valor predeterminado para las propiedades creadas mediante una asignación simple o mediante un iniciador de propiedad (propiedades definidas mediante {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty")}} y tal valor enumerable predeterminado a `false`). Se muestran numerosas propiedades en bucles {{jsref("Statements/for...in", "for...in")}} a menos que la clave de la propiedad sea {{jsxref("Global_Objects/Symbol", "Symbol")}}. La posesión de las propiedades está determinada por si la propiedad pertenece directamente al objeto y no a su cadena prototipo. Las propiedades de un objeto también se pueden recuperar en total. Hay varios medios incorporados para detectar, iterar/enumerar y recuperar propiedades de objetos, y el gráfico que se muestra a continuación está disponible. A continuación, se muestra un código de muestra que demuestra cómo obtener las categorías faltantes.
 
-<b>Propiedad, enumerabilidad y posesión — métodos integrados de detección, recuperación e iteración</b>
+**Propiedad, enumerabilidad y posesión — métodos integrados de detección, recuperación e iteración**
 
-<dl>
-    <dt>Funcionalidad</dt>
-    <dd>
-        <dl>
-            <dt>Detección</dt>
-            <dd>
-                <b>Propia del Objeto</b>
-                <table>
-                    <thead>
-                        <tr>
-                        <th scope="col">Enumerable</th>
-                        <th scope="col">No enumerable</th>
-                        <th scope="col">Enumerable y no enumerable</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td>
-                        <p>{{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}}</p>
-                
-                        <p>{{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}}</p>
-                        </td>
-                        <td>
-                        <p>{{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}} — filtrado para excluir enumerables mediante {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}}</p>
-                        </td>
-                        <td>{{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}}</td>
-                        </tr>
-                    </tbody>
-                    </table>
+- Funcionalidad
 
-                    <b>Propia del Objeto y su cadena prototipo</b>
-                    <table>
-                        <thead>
-                         <tr>
-                          <th scope="col">Enumerable</th>
-                          <th scope="col">No enumerable</th>
-                          <th scope="col">Enumerable y no enumerable</th>
-                         </tr>
-                        </thead>
-                        <tbody>
-                         <tr>
-                          <td>No disponible sin código adicional</td>
-                          <td>No disponible sin código adicional</td>
-                          <td>{{jsxref("Operators/in", "in")}}</td>
-                         </tr>
-                        </tbody>
-                       </table>
+  - :&#x20;
 
-                       <b>Solo en cadena prototipo</b><br>
+    - Detección
 
-                       No disponible sin código adicional
-            </dd>
-            <dt>Recuperación</dt>
-            <dd>
-                <b>Propia del Objeto</b>
-                <table>
-                    <thead>
-                     <tr>
-                      <th scope="col">Enumerable</th>
-                      <th scope="col">No enumerable</th>
-                      <th scope="col">Enumerable y no enumerable</th>
-                     </tr>
-                    </thead>
-                    <tbody>
-                     <tr>
-                      <td>
-                       <p>{{jsxref("Global_Objects/Object/keys", "Object.keys")}}</p>
-               
-                       <p>{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}</p>
-               
-                       <p>{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}}</p>
-                      </td>
-                      <td>{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}, {{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} — filtrado para excluir enumerables usando {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}}</td>
-                      <td>
-                       <p>{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}</p>
-               
-                       <p>{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}}</p>
-                      </td>
-                     </tr>
-                    </tbody>
-                   </table>
-                <b>Propia del Objeto y su cadena prototipo</b><br>
+      - : **Propia del Objeto**
 
-                No disponible sin código adicional<br>
-                <b>Solo en cadena prototipo</b><br>
+        | Enumerable                                                                                                                                                                                               | No enumerable                                                                                                                                                                                                                                          | Enumerable y no enumerable                                                                   |
+        | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+        | {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}}{{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}} | {{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}} — filtrado para excluir enumerables mediante {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}} | {{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}} |
 
-                No disponible sin código adicional
-            </dd>
-            <dt>Iterable</dt>
-            <dd>
-                <b>Propia del Objeto</b>
-                <table>
-                    <thead>
-                     <tr>
-                      <th scope="col">Enumerable</th>
-                      <th scope="col">No enumerable</th>
-                      <th scope="col">Enumerable y no enumerable</th>
-                     </tr>
-                    </thead>
-                    <tbody>
-                     <tr>
-                      <td>
-                       <p>{{jsxref("Global_Objects/Object/keys", "Object.keys")}}</p>
-               
-                       <p>{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}</p>
-               
-                       <p>{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}}</p>
-                      </td>
-                      <td>{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}, {{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} — filtrado para excluir enumerables usando {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}}</td>
-                      <td>
-                       <p>{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}</p>
-               
-                       <p>{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}}</p>
-                      </td>
-                     </tr>
-                    </tbody>
-                   </table>
-                <b>Propia del Objeto y su cadena prototipo</b>
-                <table>
-                    <thead>
-                     <tr>
-                      <th scope="col">Enumerable</th>
-                      <th scope="col">No enumerable</th>
-                      <th scope="col">Enumerable y no enumerable</th>
-                     </tr>
-                    </thead>
-                    <tbody>
-                     <tr>
-                      <td>
-                       <p>{{jsxref("Statements/for...in", "for..in")}}</p>
-               
-                       <p>(no incluye símbolos)</p>
-                      </td>
-                      <td>No disponible sin código adicional</td>
-                      <td>No disponible sin código adicional</td>
-                     </tr>
-                    </tbody>
-                   </table>
-                <b>Solo en cadena prototipo</b><br>
+        **Propia del Objeto y su cadena prototipo**
 
-                No disponible sin código adicional
-            </dd>
-        </dl>
-    </dd>
-</dl>
+        | Enumerable                         | No enumerable                      | Enumerable y no enumerable                   |
+        | ---------------------------------- | ---------------------------------- | -------------------------------------------- |
+        | No disponible sin código adicional | No disponible sin código adicional | {{jsxref("Operators/in", "in")}} |
 
-<h2 id="Obtención_de_propiedades_por_enumerabilidadposesión">Obtención de propiedades por enumerabilidad/posesión</h2>
+        **Solo en cadena prototipo**
+        No disponible sin código adicional
 
-<p>Ten en cuenta que este no es el algoritmo más eficiente para todos los casos, pero es útil para una demostración rápida.</p>
+    - Recuperación
 
-<ul>
- <li>La detección puede ocurrir por <code>SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) &gt; -1</code></li>
- <li>La iteración puede ocurrir por <code>SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});</code> (o usa <code>filter()</code>, <code>map()</code>, etc.)</li>
-</ul>
+      - : **Propia del Objeto**
 
-<pre class="brush: js notranslate">var SimplePropertyRetriever = {
+        | Enumerable                                                                                                                                                                                                                                                                                   | No enumerable                                                                                                                                                                                                                                                                                                                                                                  | Enumerable y no enumerable                                                                                                                                                                                           |
+        | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | {{jsxref("Global_Objects/Object/keys", "Object.keys")}}{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}, {{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} — filtrado para excluir enumerables usando {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} |
+
+        **Propia del Objeto y su cadena prototipo**
+        No disponible sin código adicional
+        **Solo en cadena prototipo**
+        No disponible sin código adicional
+
+    - Iterable
+
+      - : **Propia del Objeto**
+
+        | Enumerable                                                                                                                                                                                                                                                                                   | No enumerable                                                                                                                                                                                                                                                                                                                                                                  | Enumerable y no enumerable                                                                                                                                                                                           |
+        | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | {{jsxref("Global_Objects/Object/keys", "Object.keys")}}{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}, {{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} — filtrado para excluir enumerables usando {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} |
+
+        **Propia del Objeto y su cadena prototipo**
+
+        | Enumerable                                                                        | No enumerable                      | Enumerable y no enumerable         |
+        | --------------------------------------------------------------------------------- | ---------------------------------- | ---------------------------------- |
+        | {{jsxref("Statements/for...in", "for..in")}}(no incluye símbolos) | No disponible sin código adicional | No disponible sin código adicional |
+
+        **Solo en cadena prototipo**
+        No disponible sin código adicional
+
+## Obtención de propiedades por enumerabilidad/posesión
+
+Ten en cuenta que este no es el algoritmo más eficiente para todos los casos, pero es útil para una demostración rápida.
+
+- La detección puede ocurrir por `SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) > -1`
+- La iteración puede ocurrir por `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (o usa `filter()`, `map()`, etc.)
+
+```js
+var SimplePropertyRetriever = {
     getOwnEnumerables: function(obj) {
         return this._getPropertyNames(obj, true, false, this._enumerable);
          // O podrías usar for..in filtrado con hasOwnProperty o simplemente esto: return Object.keys(obj);
@@ -219,7 +123,7 @@ original_slug: Web/JavaScript/enumeracion_y_propietario_de_propiedades
         do {
             if (iterateSelfBool) {
                 Object.getOwnPropertyNames(obj).forEach(function(prop) {
-                    if (props.indexOf(prop) === -1 &amp;&amp; includePropCb(obj, prop)) {
+                    if (props.indexOf(prop) === -1 && includePropCb(obj, prop)) {
                         props.push(prop);
                     }
                 });
@@ -232,104 +136,26 @@ original_slug: Web/JavaScript/enumeracion_y_propietario_de_propiedades
 
         return props;
     }
-};</pre>
+};
+```
 
-<h2 id="Tabla_de_detección">Tabla de detección</h2>
+## Tabla de detección
 
-<div style="overflow: auto; width: 100%;">
-<table>
- <thead>
-  <tr>
-   <th scope="row"></th>
-   <th scope="col"><code>in</code></th>
-   <th scope="col"><code>for..in</code></th>
-   <th scope="col"><code>obj.hasOwnProperty</code></th>
-   <th scope="col"><code>obj.propertyIsEnumerable</code></th>
-   <th scope="col"><code>Object.keys</code></th>
-   <th scope="col"><code>Object.getOwnPropertyNames</code></th>
-   <th scope="col"><code>Object.getOwnPropertyDescriptors</code></th>
-   <th scope="col"><code>Reflect.ownKeys()</code></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Enumerable</th>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-  </tr>
-  <tr>
-   <th scope="row">No enumerable</th>
-   <td>true</td>
-   <td>false</td>
-   <td>true</td>
-   <td>false</td>
-   <td>false</td>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-  </tr>
-  <tr>
-   <th scope="row">Símbolos clave</th>
-   <td>true</td>
-   <td>false</td>
-   <td>true</td>
-   <td>true</td>
-   <td>false</td>
-   <td>false</td>
-   <td>true</td>
-   <td>true</td>
-  </tr>
-  <tr>
-   <th scope="row">Enumerable heredado</th>
-   <td>true</td>
-   <td>true</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-  </tr>
-  <tr>
-   <th scope="row">Heredado no enumerable</th>
-   <td>true</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-  </tr>
-  <tr>
-   <th scope="row">Símbolos clave heredados</th>
-   <td>true</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-  </tr>
- </tbody>
-</table>
-</div>
+|                          | `in` | `for..in` | `obj.hasOwnProperty` | `obj.propertyIsEnumerable` | `Object.keys` | `Object.getOwnPropertyNames` | `Object.getOwnPropertyDescriptors` | `Reflect.ownKeys()` |
+| ------------------------ | ---- | --------- | -------------------- | -------------------------- | ------------- | ---------------------------- | ---------------------------------- | ------------------- |
+| Enumerable               | true | true      | true                 | true                       | true          | true                         | true                               | true                |
+| No enumerable            | true | false     | true                 | false                      | false         | true                         | true                               | true                |
+| Símbolos clave           | true | false     | true                 | true                       | false         | false                        | true                               | true                |
+| Enumerable heredado      | true | true      | false                | false                      | false         | false                        | false                              | false               |
+| Heredado no enumerable   | true | false     | false                | false                      | false         | false                        | false                              | false               |
+| Símbolos clave heredados | true | false     | false                | false                      | false         | false                        | false                              | false               |
 
-<h2 id="Ve_también">Ve también</h2>
+## Ve también
 
-<ul>
- <li>{{jsxref("Operators/in", "in")}}</li>
- <li>{{jsxref("Statements/for...in", "for..in")}}</li>
- <li>{{jsxref("Object.hasOwnProperty()")}}</li>
- <li>{{jsxref("Object.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyDescriptors()")}}</li>
-</ul>
+- {{jsxref("Operators/in", "in")}}
+- {{jsxref("Statements/for...in", "for..in")}}
+- {{jsxref("Object.hasOwnProperty()")}}
+- {{jsxref("Object.propertyIsEnumerable()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.getOwnPropertyDescriptors()")}}

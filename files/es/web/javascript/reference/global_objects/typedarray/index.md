@@ -10,265 +10,169 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 original_slug: Web/JavaScript/Referencia/Objetos_globales/TypedArray
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Un objeto <strong><em>TypedArray</em></strong> describe una vista similar a un arreglo de un <a href="/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">búfer de datos binarios subyacente</a>. No existe una propiedad global denominada <code>TypedArray</code>, ni existe un constructor <code>TypedArray</code> directamente visible. En cambio, hay una serie de diferentes propiedades globales, cuyos valores son constructores de arreglos tipados para tipos de elementos específicos, que se enumeran a continuación. En las siguientes páginas, encontrarás propiedades y métodos comunes que se pueden utilizar con cualquier arreglo tipado que contenga elementos de cualquier tipo.</p>
+Un objeto **_TypedArray_** describe una vista similar a un arreglo de un [búfer de datos binarios subyacente](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). No existe una propiedad global denominada `TypedArray`, ni existe un constructor `TypedArray` directamente visible. En cambio, hay una serie de diferentes propiedades globales, cuyos valores son constructores de arreglos tipados para tipos de elementos específicos, que se enumeran a continuación. En las siguientes páginas, encontrarás propiedades y métodos comunes que se pueden utilizar con cualquier arreglo tipado que contenga elementos de cualquier tipo.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
 
-<p>La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una solicitud de extracción.</p>
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
-<dl>
-</dl>
+## Descripción
 
-<h2 id="Descripción">Descripción</h2>
+ECMAScript 2015 define un constructor `TypedArray` que sirve como `[[Prototype]]` de todos los constructores `TypedArray`. Este constructor no está expuesto directamente: no existe una propiedad global `%TypedArray%` o `TypedArray`. Solo es accesible directamente a través de `Object.getPrototypeOf(Int8Array)` y similares. Todos los constructores de `TypedArray` heredan propiedades comunes de la función constructora `%TypedArray%`. Además, todos los prototipos de arreglos con tipo (` TypedArray.``prototype `) tienen `%TypedArray%.prototype` como su `[[Prototype]]`.
 
-<p>ECMAScript 2015 define un constructor <code><var>TypedArray</var></code> que sirve como <code>[[Prototype]]</code> de todos los constructores <code><var>TypedArray</var></code>. Este constructor no está expuesto directamente: no existe una propiedad global <code>%TypedArray%</code> o <code>TypedArray</code>. Solo es accesible directamente a través de <code>Object.getPrototypeOf(Int8Array)</code> y similares. Todos los constructores de <code><var>TypedArray</var></code> heredan propiedades comunes de la función constructora <code>%TypedArray%</code>. Además, todos los prototipos de arreglos con tipo (<code><var>TypedArray.</var></code><code>prototype</code>) tienen <code>%TypedArray%.prototype</code> como su <code>[[Prototype]]</code>.</p>
+El constructor `%TypedArray%` por sí solo no es particularmente útil. Llamarlo o usarlo en una expresión `new` arrojará un {{jsxref("TypeError")}}, excepto cuando se usa durante la creación de objetos en motores JS que admiten subclases. Actualmente no existen tales motores, por lo que `%TypedArray%` solo es útil para rellenar funciones o propiedades en todos los constructores `TypedArray`.
 
-<p>El constructor <code>%TypedArray%</code> por sí solo no es particularmente útil. Llamarlo o usarlo en una expresión <code>new</code> arrojará un {{jsxref("TypeError")}}, excepto cuando se usa durante la creación de objetos en motores JS que admiten subclases. Actualmente no existen tales motores, por lo que <code>%TypedArray%</code> solo es útil para rellenar funciones o propiedades en todos los constructores <code><var>TypedArray</var></code>.</p>
+Al crear una instancia de `TypedArray` (p. ej., `Int8Array`), se crea un arreglo de búfer internamente en la memoria o, si se proporciona un objeto `ArrayBuffer` como argumento del constructor, entonces se usa en su lugar. La dirección del búfer se guarda como una propiedad interna de la instancia y todos los métodos de `%TypedArray%.prototype`, es decir, establecer el valor y obtener valor, etc.., operan en esa dirección del arreglo de búfer.
 
-<p>Al crear una instancia de <code><var>TypedArray</var></code> (p. ej., <code>Int8Array</code>), se crea un arreglo de búfer internamente en la memoria o, si se proporciona un objeto <code>ArrayBuffer</code> como argumento del constructor, entonces se usa en su lugar. La dirección del búfer se guarda como una propiedad interna de la instancia y todos los métodos de <code>%<var>TypedArray</var>%.prototype</code>, es decir, establecer el valor y obtener valor, etc.., operan en esa dirección del arreglo de búfer.</p>
+### Objetos TypedArray
 
-<h3 id="Objetos_TypedArray">Objetos TypedArray</h3>
+| Tipo                                     | Intervalo de valores           | Tamaño en bytes | Descripción                                                                               | Tipo de IDL web           | Tipo C equivalente               |
+| ---------------------------------------- | ------------------------------ | --------------- | ----------------------------------------------------------------------------------------- | ------------------------- | -------------------------------- |
+| {{jsxref("Int8Array")}}         | `-128` a `127`                 | 1               | Dos enteros complementarios de 8 bits con signo                                           | `byte`                    | `int8_t`                         |
+| {{jsxref("Uint8Array")}}         | `0` a `255`                    | 1               | Entero de 8-bit sin signo                                                                 | `octet`                   | `uint8_t`                        |
+| {{jsxref("Uint8ClampedArray")}} | `0` a `255`                    | 1               | Entero de 8 bits sin signo (sujeto)                                                       | `octet`                   | `uint8_t`                        |
+| {{jsxref("Int16Array")}}         | `-32768` a `32767`             | 2               | Dos enteros complementarios de 16 bits con signo                                          | `short`                   | `int16_t`                        |
+| {{jsxref("Uint16Array")}}         | `0` a `65535`                  | 2               | Entero de 16 bits sin signo                                                               | `Short sin signo`         | `uint16_t`                       |
+| {{jsxref("Int32Array")}}         | `-2147483648` a `2147483647`   | 4               | dos enteros complementarios de 32 bits con signo                                          | `long`                    | `int32_t`                        |
+| {{jsxref("Uint32Array")}}         | `0` a `4294967295`             | 4               | Enteros de 32 bits sin signo                                                              | `long sin signo`          | `uint32_t`                       |
+| {{jsxref("Float32Array")}}     | `1.2`×`10-38` a `3.4`×`1038`   | 4               | Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., `1.1234567`)   | `float sin restricciones` | `float`                          |
+| {{jsxref("Float64Array")}}     | `5.0`×`10-324` a `1.8`×`10308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, p. Ej., `1.123...15`) | `doble sin restricciones` | `double`                         |
+| {{jsxref("BigInt64Array")}}     | `-263` a `263-1`               | 8               | Dos enteros complementarios de 64 bits con signo                                          | `bigint`                  | `int64_t (long long con signo)`  |
+| {{jsxref("BigUint64Array")}}     | `0` a `264-1`                  | 8               | Entero de 64 bits sin signo                                                               | `bigint`                  | `uint64_t (long long sin signo)` |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th class="header" scope="col">Tipo</th>
-   <th class="header" scope="col">Intervalo de valores</th>
-   <th class="header" scope="col">Tamaño en bytes</th>
-   <th class="header" scope="col">Descripción</th>
-   <th class="header" scope="col">Tipo de IDL web</th>
-   <th class="header" scope="col">Tipo C equivalente</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{jsxref("Int8Array")}}</td>
-   <td><code>-128</code> a <code>127</code></td>
-   <td>1</td>
-   <td>Dos enteros complementarios de 8 bits con signo</td>
-   <td><code>byte</code></td>
-   <td><code>int8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint8Array")}}</td>
-   <td><code>0</code> a <code>255</code></td>
-   <td>1</td>
-   <td>Entero de 8-bit sin signo</td>
-   <td><code>octet</code></td>
-   <td><code>uint8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint8ClampedArray")}}</td>
-   <td><code>0</code> a <code>255</code></td>
-   <td>1</td>
-   <td>Entero de 8 bits sin signo (sujeto)</td>
-   <td><code>octet</code></td>
-   <td><code>uint8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Int16Array")}}</td>
-   <td><code>-32768</code> a <code>32767</code></td>
-   <td>2</td>
-   <td>Dos enteros complementarios de 16 bits con signo</td>
-   <td><code>short</code></td>
-   <td><code>int16_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint16Array")}}</td>
-   <td><code>0</code> a <code>65535</code></td>
-   <td>2</td>
-   <td>Entero de 16 bits sin signo</td>
-   <td><code>Short sin signo</code></td>
-   <td><code>uint16_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Int32Array")}}</td>
-   <td><code>-2147483648</code> a <code>2147483647</code></td>
-   <td>4</td>
-   <td>dos enteros complementarios de 32 bits con signo</td>
-   <td><code>long</code></td>
-   <td><code>int32_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint32Array")}}</td>
-   <td><code>0</code> a <code>4294967295</code></td>
-   <td>4</td>
-   <td>Enteros de 32 bits sin signo</td>
-   <td><code>long sin signo</code></td>
-   <td><code>uint32_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Float32Array")}}</td>
-   <td><code>1.2</code><span>×</span><code>10<sup>-38</sup></code> a <code>3.4</code><span>×</span><code>10<sup>38</sup></code></td>
-   <td>4</td>
-   <td>Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., <code>1.1234567</code>)</td>
-   <td><code>float sin restricciones</code></td>
-   <td><code>float</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Float64Array")}}</td>
-   <td><code>5.0</code><span>×</span><code>10<sup>-324</sup></code> a <code>1.8</code><span>×</span><code>10<sup>308</sup></code></td>
-   <td>8</td>
-   <td>Número de coma flotante IEEE de 64 bits (16 dígitos significativos, p. Ej., <code>1.123...15</code>)</td>
-   <td><code>doble sin restricciones</code></td>
-   <td><code>double</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("BigInt64Array")}}</td>
-   <td><code>-2<sup>63</sup></code> a <code>2<sup>63</sup>-1</code></td>
-   <td>8</td>
-   <td>Dos enteros complementarios de 64 bits con signo</td>
-   <td><code>bigint</code></td>
-   <td><code>int64_t (long long con signo)</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("BigUint64Array")}}</td>
-   <td><code>0</code> a <code>2<sup>64</sup>-1</code></td>
-   <td>8</td>
-   <td>Entero de 64 bits sin signo</td>
-   <td><code>bigint</code></td>
-   <td><code>uint64_t (long long sin signo)</code></td>
-  </tr>
- </tbody>
-</table>
+## Constructor
 
-<h2 id="Constructor">Constructor</h2>
+No se puede crear una instancia de este objeto directamente. En su lugar, crea una instancia de un arreglo de un tipo particular, tal como {{jsxref("Int8Array")}} o {{jsxref("BigInt64Array")}}. Todos estos objetos tienen una sintaxis común para sus constructores:
 
-<p>No se puede crear una instancia de este objeto directamente. En su lugar, crea una instancia de un arreglo de un tipo particular, tal como {{jsxref("Int8Array")}} o {{jsxref("BigInt64Array")}}. Todos estos objetos tienen una sintaxis común para sus constructores:</p>
+```
+new TypedArray();
+new TypedArray(length);
+new TypedArray(typedArray);
+new TypedArray(object);
+new TypedArray(buffer [, byteOffset [, length]]);
+```
 
-<pre>new <var>TypedArray</var>();
-new <var>TypedArray</var>(<var>length</var>);
-new <var>TypedArray</var>(<var>typedArray</var>);
-new <var>TypedArray</var>(<var>object</var>);
-new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]);
-</pre>
+Donde _TypedArray_ es un constructor para uno de los tipos concretos.
 
-<p>Donde <var>TypedArray</var> es un constructor para uno de los tipos concretos.</p>
+### Parámetros
 
-<h3 id="Parámetros">Parámetros</h3>
+- `length`
+  - : Cuando se llama con un argumento `length`, se crea un búfer de arreglo interno en la memoria, de tamaño `length` _multiplicado por `BYTES_PER_ELEMENT`_ bytes, que contienen ceros.
+- `typedArray`
+  - : Cuando se llama con un argumento `typedArray`, que puede ser un objeto de cualquiera de los tipos de arreglo con tipo (como `Int32Array`), el `typedArray` se copia en un nuevo arreglo tipado. Cada valor en `typedArray` se convierte al tipo correspondiente del constructor antes de ser copiado en el nuevo arreglo. La longitud del nuevo arreglo tipado será la misma que la longitud del argumento `typedArray`.
+- `object`
+  - : Cuando se llama con un argumento `object`, se crea un nuevo arreglo tipado como si fuera el método `TypedArray.from()`.
+- `buffer`, `byteOffset`, `length`
+  - : Cuando se llama con un `buffer` y, opcionalmente, un `byteOffset` y un `length`, se crea una nueva vista del arreglo tipado que visualiza el {{jsxref("ArrayBuffer")}} especificado. Los parámetros `byteOffset` y `length` especifican el rango de memoria que será expuesto por la vista del arreglo tipado. Si se omiten ambos, se visualiza todo el `buffer`; si solo se omite `length`, se visualiza el resto de `buffer`.
 
-<dl>
- <dt><code><var>length</var></code></dt>
- <dd>Cuando se llama con un argumento <code><var>length</var></code>, se crea un búfer de arreglo interno en la memoria, de tamaño <code><var>length</var></code> <em>multiplicado por <code>BYTES_PER_ELEMENT</code></em> bytes, que contienen ceros.</dd>
- <dt><code><var>typedArray</var></code></dt>
- <dd>Cuando se llama con un argumento <code>typedArray</code>, que puede ser un objeto de cualquiera de los tipos de arreglo con tipo (como <code>Int32Array</code>), el <code><var>typedArray</var></code> se copia en un nuevo arreglo tipado. Cada valor en <code><var>typedArray</var></code> se convierte al tipo correspondiente del constructor antes de ser copiado en el nuevo arreglo. La longitud del nuevo arreglo tipado será la misma que la longitud del argumento <code><var>typedArray</var></code>.</dd>
- <dt><code><var>object</var></code></dt>
- <dd>Cuando se llama con un argumento <code><var>object</var></code>, se crea un nuevo arreglo tipado como si fuera el método <code><var>TypedArray</var>.from()</code>.</dd>
- <dt><code><var>buffer</var></code>, <code><var>byteOffset</var></code>, <code><var>length</var></code></dt>
- <dd>Cuando se llama con un <code><var>buffer</var></code> y, opcionalmente, un <code><var>byteOffset</var></code> y un <code><var>length</var></code>, se crea una nueva vista del arreglo tipado que visualiza el {{jsxref("ArrayBuffer")}} especificado. Los parámetros <code><var>byteOffset</var></code> y <code><var>length</var></code> especifican el rango de memoria que será expuesto por la vista del arreglo tipado. Si se omiten ambos, se visualiza todo el <code><var>buffer</var></code>; si solo se omite <code><var>length</var></code>, se visualiza el resto de <code><var>buffer</var></code>.</dd>
-</dl>
+## Propiedades estáticas
 
-<h2 id="Propiedades_estáticas">Propiedades estáticas</h2>
+- {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
+  - : Devuelve un valor numérico del tamaño del elemento para los diferentes objetos `TypedArray`.
+- {{jsxref("TypedArray.name")}}
+  - : Devuelve el valor de cadena del nombre del constructor (por ejemplo, `"Int8Array"`).
+- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+  - : La función constructora utilizada para crear objetos derivados.
+- {{jsxref("TypedArray.prototype")}}
+  - : Prototipo para objetos `TypedArray`.
 
-<dl>
- <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT")}}</dt>
- <dd>Devuelve un valor numérico del tamaño del elemento para los diferentes objetos <code><var>TypedArray</var></code>.</dd>
- <dt>{{jsxref("TypedArray.name")}}</dt>
- <dd>Devuelve el valor de cadena del nombre del constructor (por ejemplo, <code>"Int8Array"</code>).</dd>
- <dt>{{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}</dt>
- <dd>La función constructora utilizada para crear objetos derivados.</dd>
- <dt>{{jsxref("TypedArray.prototype")}}</dt>
- <dd>Prototipo para objetos <code><var>TypedArray</var></code>.</dd>
-</dl>
+## Métodos estáticos
 
-<h2 id="Métodos_estáticos">Métodos estáticos</h2>
+- {{jsxref("TypedArray.from()")}}
+  - : Crea un nuevo `TypedArray` a partir de un objeto iterable o similar a un arreglo. Consulta también {{jsxref("Array.from()")}}.
+- {{jsxref("TypedArray.of()")}}
+  - : Crea un nuevo `TypedArray` con un número variable de argumentos. Consulta también {{jsxref("Array.of()")}}.
 
-<dl>
- <dt>{{jsxref("TypedArray.from()")}}</dt>
- <dd>Crea un nuevo <code><var>TypedArray</var></code> a partir de un objeto iterable o similar a un arreglo. Consulta también {{jsxref("Array.from()")}}.</dd>
- <dt>{{jsxref("TypedArray.of()")}}</dt>
- <dd>Crea un nuevo <code><var>TypedArray</var></code> con un número variable de argumentos. Consulta también {{jsxref("Array.of()")}}.</dd>
-</dl>
+## Propiedades de la instancia
 
-<h2 id="Propiedades_de_la_instancia">Propiedades de la instancia</h2>
+- {{jsxref("TypedArray.prototype.buffer")}}
+  - : Devuelve el {{jsxref("ArrayBuffer")}} al que hace referencia el arreglo tipado. Corregido en el momento de la construcción y, por lo tanto, de **solo lectura**.
+- {{jsxref("TypedArray.prototype.byteLength")}}
+  - : Devuelve la longitud (en bytes) del arreglo tipado. Corregido en el momento de la construcción y, por lo tanto, de **solo lectura.**
+- {{jsxref("TypedArray.prototype.byteOffset")}}
+  - : Devuelve el desplazamiento (en bytes) del arreglo tipado desde el inicio de su {{jsxref("ArrayBuffer")}}. Corregido en el momento de la construcción y, por lo tanto, de **solo lectura.**
+- {{jsxref("TypedArray.prototype.length")}}
+  - : Devuelve el número de elementos contenidos en el arreglo tipado. Corregido en el momento de la construcción y, por lo tanto, de **solo lectura.**
 
-<dl>
- <dt>{{jsxref("TypedArray.prototype.buffer")}}</dt>
- <dd>Devuelve el {{jsxref("ArrayBuffer")}} al que hace referencia el arreglo tipado. Corregido en el momento de la construcción y, por lo tanto, de <strong>solo lectura</strong>.</dd>
- <dt>{{jsxref("TypedArray.prototype.byteLength")}}</dt>
- <dd>Devuelve la longitud (en bytes) del arreglo tipado. Corregido en el momento de la construcción y, por lo tanto, de <strong>solo lectura.</strong></dd>
- <dt>{{jsxref("TypedArray.prototype.byteOffset")}}</dt>
- <dd>Devuelve el desplazamiento (en bytes) del arreglo tipado desde el inicio de su {{jsxref("ArrayBuffer")}}. Corregido en el momento de la construcción y, por lo tanto, de <strong>solo lectura.</strong></dd>
- <dt>{{jsxref("TypedArray.prototype.length")}}</dt>
- <dd>Devuelve el número de elementos contenidos en el arreglo tipado. Corregido en el momento de la construcción y, por lo tanto, de <strong>solo lectura.</strong></dd>
-</dl>
+## Métodos de instancia
 
-<h2 id="Métodos_de_instancia">Métodos de instancia</h2>
+- {{jsxref("TypedArray.prototype.copyWithin()")}}
+  - : Copia una secuencia de elementos de arreglo dentro del arreglo. Consulta también {{jsxref("Array.prototype.copyWithin()")}}.
+- {{jsxref("TypedArray.prototype.entries()")}}
+  - : Devuelve un nuevo objeto `Array Iterator` que contiene los pares clave/valor para cada índice del arreglo. Consulta también {{jsxref("Array.prototype.entries()")}}.
+- {{jsxref("TypedArray.prototype.every()")}}
+  - : Comprueba si todos los elementos del arreglo pasan la prueba proporcionada por una función. Consulta también {{jsxref("Array.prototype.every()")}}.
+- {{jsxref("TypedArray.prototype.fill()")}}
+  - : Rellena todos los elementos de un arreglo desde un índice inicial hasta un índice final con un valor estático. Consulta también {{jsxref("Array.prototype.fill()")}}.
+- {{jsxref("TypedArray.prototype.filter()")}}
+  - : Crea un nuevo arreglo con todos los elementos de este arreglo para la cual la función de filtrado proporcionada devuelve `true`. Consulta también {{jsxref("Array.prototype.filter()")}}.
+- {{jsxref("TypedArray.prototype.find()")}}
+  - : Devuelve el valor encontrado en el arreglo, si un elemento del arreglo satisface la función de prueba proporcionada, o `undefined` si no se encuentra. Consulta también {{jsxref("Array.prototype.find()")}}.
+- {{jsxref("TypedArray.prototype.findIndex()")}}
+  - : Devuelve el índice encontrado en el arreglo, si un elemento del arreglo satisface la función de prueba proporcionada o `-1` si no se encuentra. Consulta también {{jsxref("Array.prototype.findIndex()")}}.
+- {{jsxref("TypedArray.prototype.forEach()")}}
+  - : Llama a una función para cada elemento del arreglo. Consulta también {{jsxref("Array.prototype.forEach()")}}.
+- {{jsxref("TypedArray.prototype.includes()")}}
+  - : Determina si un arreglo tipado incluye un determinado elemento, devolviendo `true` o `false` según corresponda. Consulta también {{jsxref("Array.prototype.includes()")}}.
+- {{jsxref("TypedArray.prototype.indexOf()")}}
+  - : Devuelve el primer (mínimo) índice de un elemento dentro del arreglo igual al valor especificado, o `-1` si no se encuentra ninguno. Consulta también {{jsxref("Array.prototype.indexOf()")}}.
+- {{jsxref("TypedArray.prototype.join()")}}
+  - : Une todos los elementos de un arreglo en una cadena. Consulta también {{jsxref("Array.prototype.join()")}}.
+- {{jsxref("TypedArray.prototype.keys()")}}
+  - : Devuelve un nuevo `Array Iterator` que contiene las claves para cada índice del arreglo. Consulta también {{jsxref("Array.prototype.keys()")}}.
+- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+  - : Devuelve el último (mayor) índice de un elemento dentro del arreglo igual al valor especificado, o `-1` si no se encuentra ninguno. Consulta también {{jsxref("Array.prototype.lastIndexOf()")}}.
+- {{jsxref("TypedArray.prototype.map()")}}
+  - : Crea un nuevo arreglo con los resultados de llamar a una función proporcionada en cada elemento de este arreglo. Consulta también {{jsxref("Array.prototype.map()")}}.
+- {{jsxref("TypedArray.prototype.reduce()")}}
+  - : Aplica una función contra un acumulador y cada valor del arreglo (de izquierda a derecha) para reducirlo a un solo valor. Consulta también {{jsxref("Array.prototype.reduce()")}}.
+- {{jsxref("TypedArray.prototype.reduceRight()")}}
+  - : Aplica una función contra un acumulador y cada valor del arreglo (de derecha a izquierda) para reducirlo a un solo valor. Consulta también {{jsxref("Array.prototype.reduceRight()")}}.
+- {{jsxref("TypedArray.prototype.reverse()")}}
+  - : Invierte el orden de los elementos de un arreglo: el primero se convierte en el último y el último en el primero. Consulta también {{jsxref("Array.prototype.reverse()")}}.
+- {{jsxref("TypedArray.prototype.set()")}}
+  - : Almacena múltiples valores en el arreglo tipado, leyendo valores de entrada de un arreglo especificado.
+- {{jsxref("TypedArray.prototype.slice()")}}
+  - : Extrae una sección de un arreglo y devuelve un nuevo arreglo. Consulta también {{jsxref("Array.prototype.slice()")}}.
+- {{jsxref("TypedArray.prototype.some()")}}
+  - : Devuelve `true` si al menos un elemento de este arreglo satisface la función de prueba proporcionada. Consulta también {{jsxref("Array.prototype.some()")}}.
+- {{jsxref("TypedArray.prototype.sort()")}}
+  - : Ordena los elementos de un arreglo en su lugar y devuelve el arreglo. Consulta también {{jsxref("Array.prototype.sort()")}}.
+- {{jsxref("TypedArray.prototype.subarray()")}}
+  - : Devuelve un nuevo `TypedArray` del índice del elemento inicial y final dado.
+- {{jsxref("TypedArray.prototype.values()")}}
+  - : Devuelve un nuevo objeto `Array Iterator` que contiene los valores de cada índice del arreglo. Consulta también {{jsxref("Array.prototype.values()")}}.
+- {{jsxref("TypedArray.prototype.toLocaleString()")}}
+  - : Devuelve una cadena localizada que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toLocaleString()")}}.
+- {{jsxref("TypedArray.prototype.toString()")}}
+  - : Devuelve una cadena que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toString()")}}.
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+  - : Devuelve un nuevo objeto `Array Iterator` que contiene los valores de cada índice del arreglo.
 
-<dl>
- <dt>{{jsxref("TypedArray.prototype.copyWithin()")}}</dt>
- <dd>Copia una secuencia de elementos de arreglo dentro del arreglo. Consulta también {{jsxref("Array.prototype.copyWithin()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.entries()")}}</dt>
- <dd>Devuelve un nuevo objeto <code>Array Iterator</code> que contiene los pares clave/valor para cada índice del arreglo. Consulta también {{jsxref("Array.prototype.entries()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.every()")}}</dt>
- <dd>Comprueba si todos los elementos del arreglo pasan la prueba proporcionada por una función. Consulta también {{jsxref("Array.prototype.every()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.fill()")}}</dt>
- <dd>Rellena todos los elementos de un arreglo desde un índice inicial hasta un índice final con un valor estático. Consulta también {{jsxref("Array.prototype.fill()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.filter()")}}</dt>
- <dd>Crea un nuevo arreglo con todos los elementos de este arreglo para la cual la función de filtrado proporcionada devuelve <code>true</code>. Consulta también {{jsxref("Array.prototype.filter()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.find()")}}</dt>
- <dd>Devuelve el valor encontrado en el arreglo, si un elemento del arreglo satisface la función de prueba proporcionada, o <code>undefined</code> si no se encuentra. Consulta también {{jsxref("Array.prototype.find()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.findIndex()")}}</dt>
- <dd>Devuelve el índice encontrado en el arreglo, si un elemento del arreglo satisface la función de prueba proporcionada o <code>-1</code> si no se encuentra. Consulta también {{jsxref("Array.prototype.findIndex()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.forEach()")}}</dt>
- <dd>Llama a una función para cada elemento del arreglo. Consulta también {{jsxref("Array.prototype.forEach()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.includes()")}}</dt>
- <dd>Determina si un arreglo tipado incluye un determinado elemento, devolviendo <code>true</code> o <code>false</code> según corresponda. Consulta también {{jsxref("Array.prototype.includes()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.indexOf()")}}</dt>
- <dd>Devuelve el primer (mínimo) índice de un elemento dentro del arreglo igual al valor especificado, o <code>-1</code> si no se encuentra ninguno. Consulta también {{jsxref("Array.prototype.indexOf()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.join()")}}</dt>
- <dd>Une todos los elementos de un arreglo en una cadena. Consulta también {{jsxref("Array.prototype.join()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.keys()")}}</dt>
- <dd>Devuelve un nuevo <code>Array Iterator</code> que contiene las claves para cada índice del arreglo. Consulta también {{jsxref("Array.prototype.keys()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.lastIndexOf()")}}</dt>
- <dd>Devuelve el último (mayor) índice de un elemento dentro del arreglo igual al valor especificado, o <code>-1</code> si no se encuentra ninguno. Consulta también {{jsxref("Array.prototype.lastIndexOf()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.map()")}}</dt>
- <dd>Crea un nuevo arreglo con los resultados de llamar a una función proporcionada en cada elemento de este arreglo. Consulta también {{jsxref("Array.prototype.map()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.reduce()")}}</dt>
- <dd>Aplica una función contra un acumulador y cada valor del arreglo (de izquierda a derecha) para reducirlo a un solo valor. Consulta también {{jsxref("Array.prototype.reduce()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.reduceRight()")}}</dt>
- <dd>Aplica una función contra un acumulador y cada valor del arreglo (de derecha a izquierda) para reducirlo a un solo valor. Consulta también {{jsxref("Array.prototype.reduceRight()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.reverse()")}}</dt>
- <dd>Invierte el orden de los elementos de un arreglo: el primero se convierte en el último y el último en el primero. Consulta también {{jsxref("Array.prototype.reverse()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.set()")}}</dt>
- <dd>Almacena múltiples valores en el arreglo tipado, leyendo valores de entrada de un arreglo especificado.</dd>
- <dt>{{jsxref("TypedArray.prototype.slice()")}}</dt>
- <dd>Extrae una sección de un arreglo y devuelve un nuevo arreglo. Consulta también {{jsxref("Array.prototype.slice()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.some()")}}</dt>
- <dd>Devuelve <code>true</code> si al menos un elemento de este arreglo satisface la función de prueba proporcionada. Consulta también {{jsxref("Array.prototype.some()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.sort()")}}</dt>
- <dd>Ordena los elementos de un arreglo en su lugar y devuelve el arreglo. Consulta también {{jsxref("Array.prototype.sort()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.subarray()")}}</dt>
- <dd>Devuelve un nuevo <code><var>TypedArray</var></code> del índice del elemento inicial y final dado.</dd>
- <dt>{{jsxref("TypedArray.prototype.values()")}}</dt>
- <dd>Devuelve un nuevo objeto <code>Array Iterator</code> que contiene los valores de cada índice del arreglo. Consulta también {{jsxref("Array.prototype.values()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.toLocaleString()")}}</dt>
- <dd>Devuelve una cadena localizada que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toLocaleString()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.toString()")}}</dt>
- <dd>Devuelve una cadena que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toString()")}}.</dd>
- <dt>{{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}</dt>
- <dd>Devuelve un nuevo objeto <code>Array Iterator</code> que contiene los valores de cada índice del arreglo.</dd>
-</dl>
+## Ejemplos
 
-<h2 id="Ejemplos">Ejemplos</h2>
+### Se requiere `new`
 
-<h3 id="Se_requiere_new">Se requiere <code>new</code></h3>
+A partir de ECMAScript 2015, los constructores `TypedArray` se deben construir con el operador {{jsxref("Operators/new", "new")}}. Llamar a un constructor `TypedArray` como una función sin `new` arrojará un {{jsxref("TypeError")}}.
 
-<p>A partir de ECMAScript 2015, los constructores <code>TypedArray</code> se deben construir con el operador {{jsxref("Operators/new", "new")}}. Llamar a un constructor <code>TypedArray</code> como una función sin <code>new</code> arrojará un {{jsxref("TypeError")}}.</p>
-
-<pre class="brush: js example-bad notranslate">var dv = Int8Array([1, 2, 3]);
+```js example-bad
+var dv = Int8Array([1, 2, 3]);
 // TypeError: llamar a un constructor Int8Array incorporado
-// sin new está prohibido</pre>
+// sin new está prohibido
+```
 
-<pre class="brush: js example-good notranslate">var dv = new Int8Array([1, 2, 3]);</pre>
+```js example-good
+var dv = new Int8Array([1, 2, 3]);
+```
 
-<h3 id="Acceso_a_la_propiedad">Acceso a la propiedad</h3>
+### Acceso a la propiedad
 
-<p>Puedes hacer referencia a elementos en el arreglo utilizando la sintaxis de índice de arreglo estándar (es decir, utilizando la notación entre corchetes). Sin embargo, obtener o establecer propiedades indexadas en arreglos tipados no buscará esta propiedad en la cadena de prototipos, incluso cuando los índices estén fuera de límites. Las propiedades indexadas consultarán el {{jsxref("ArrayBuffer")}} y nunca mirarán las propiedades del objeto. Aún puedes usar propiedades con nombre, al igual que con todos los objetos.</p>
+Puedes hacer referencia a elementos en el arreglo utilizando la sintaxis de índice de arreglo estándar (es decir, utilizando la notación entre corchetes). Sin embargo, obtener o establecer propiedades indexadas en arreglos tipados no buscará esta propiedad en la cadena de prototipos, incluso cuando los índices estén fuera de límites. Las propiedades indexadas consultarán el {{jsxref("ArrayBuffer")}} y nunca mirarán las propiedades del objeto. Aún puedes usar propiedades con nombre, al igual que con todos los objetos.
 
-<pre class="brush: js notranslate">// Configuración y obtención usando la sintaxis de arreglo estándar
+```js
+// Configuración y obtención usando la sintaxis de arreglo estándar
 var int16 = new Int16Array(2);
 int16[0] = 42;
 [parcial]console.log(0);
@@ -285,34 +189,22 @@ Int8Array.prototype[-1] = 'foo';
 
 // Sin embargo, se permiten propiedades con nombre (Fx 30)
 Int8Array.prototype.foo = 'bar';
-(new Int8Array(32)).foo; // "bar"</pre>
+(new Int8Array(32)).foo; // "bar"
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}} |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
+{{Compat("javascript.builtins.TypedArray")}}
 
+## Ve también
 
-<p>{{Compat("javascript.builtins.TypedArray")}}</p>
-
-<h2 id="Ve_también">Ve también</h2>
-
-<ul>
- <li><a href="/es/docs/Web/JavaScript/Typed_arrays" title="es/JavaScript arreglos tipados">Arreglos tipados JavaScript</a></li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("DataView")}}</li>
- <li><a href="/es/docs/Web/API/TextDecoder">TextDecoder</a> — Ayuda que decodifica cadenas a partir de datos numéricos</li>
-</ul>
+- [Arreglos tipados JavaScript](/es/docs/Web/JavaScript/Typed_arrays "es/JavaScript arreglos tipados")
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("DataView")}}
+- [TextDecoder](/es/docs/Web/API/TextDecoder) — Ayuda que decodifica cadenas a partir de datos numéricos

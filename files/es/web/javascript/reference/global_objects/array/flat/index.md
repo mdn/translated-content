@@ -10,34 +10,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/flat
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p>El método <code><strong>flat()</strong></code> crea una nueva matriz con todos los elementos de sub-array concatenados recursivamente hasta la profundidad especificada.</p>
+El método **`flat()`** crea una nueva matriz con todos los elementos de sub-array concatenados recursivamente hasta la profundidad especificada.
 
-<p>\{{EmbedInteractiveExample("pages/js/array-flat.html")}}</p>
+\\{{EmbedInteractiveExample("pages/js/array-flat.html")}}
 
+## Sintaxis
 
+```
+var newArray = arr.flat([depth]);
+```
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Parámetros
 
-<pre class="syntaxbox"><var>var newArray = arr</var>.flat(<var>[depth]</var>);</pre>
+- `depth` {{optional_inline}}
+  - : El nivel de profundidad que especifica qué tan profunda debe aplanarse una estructura de matriz anidada. El valor predeterminado es 1.
 
-<h3 id="Parámetros">Parámetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>depth</code> {{optional_inline}}</dt>
- <dd>El nivel de profundidad que especifica qué tan profunda debe aplanarse una estructura de matriz anidada. El valor predeterminado es 1.</dd>
-</dl>
+Una nueva matriz con los elementos de la sub-matriz concatenados en ella.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Ejemplos
 
-<p>Una nueva matriz con los elementos de la sub-matriz concatenados en ella.</p>
+### Aplanar matrices anidadas
 
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<h3 id="Aplanar_matrices_anidadas">Aplanar matrices anidadas</h3>
-
-<pre class="brush: js">var arr1 = [1, 2, [3, 4]];
+```js
+var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
 
@@ -48,45 +47,45 @@ arr2.flat();
 var arr3 = [1, 2, [3, 4, [5, 6]]];
 arr3.flat(2);
 // [1, 2, 3, 4, 5, 6]
-</pre>
+```
 
-<h3 id="Aplanamiento_y_huecos_de_matriz">Aplanamiento y huecos de matriz</h3>
+### Aplanamiento y huecos de matriz
 
-<p>El método de aplanar elimina las ranuras vacías en las matrices:</p>
+El método de aplanar elimina las ranuras vacías en las matrices:
 
-<pre class="brush: js">var arr4 = [1, 2, , 4, 5];
+```js
+var arr4 = [1, 2, , 4, 5];
 arr4.flat();
 // [1, 2, 4, 5]
-</pre>
+```
 
-<h2 id="Alternativa">Alternativa</h2>
+## Alternativa
 
-<h3 id="reduce_y_concat"><code>reduce</code> y <code>concat</code></h3>
+### `reduce` y `concat`
 
-<pre class="brush: js">var arr1 = [1, 2, [3, 4]];
+```js
+var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 
 //aplanar una matriz de nivel único
-arr1.reduce((acc, val) =&gt; acc.concat(val), []);// [1, 2, 3, 4]
+arr1.reduce((acc, val) => acc.concat(val), []);// [1, 2, 3, 4]
 
 //o
-const flatSingle = arr =&gt; [].concat(...arr);
-</pre>
+const flatSingle = arr => [].concat(...arr);
+```
 
-<p> </p>
-
-<pre class="brush: js">//para permitir el aplanamiento a nivel profundo use recursión con reduce y concat
+```js
+//para permitir el aplanamiento a nivel profundo use recursión con reduce y concat
 var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
 
 function flattenDeep(arr1) {
-   return arr1.reduce((acc, val) =&gt; Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
+   return arr1.reduce((acc, val) => Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
 }
 flattenDeep(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
-</pre>
+```
 
-<p> </p>
-
-<pre class="brush: js">//aplanamiento profundo no recursivo usando un stack
+```js
+//aplanamiento profundo no recursivo usando un stack
 var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
 function flatten(input) {
   const stack = [...input];
@@ -104,11 +103,11 @@ function flatten(input) {
   //invierte para restaurar el orden de entrada
   return res.reverse();
 }
-flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]</pre>
+flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+```
 
-<p> </p>
-
-<pre class="brush: js">//Aplanamiento profundo recursivo
+```js
+//Aplanamiento profundo recursivo
 function flatten(array) {
   var flattend = [];
   !(function flat(array) {
@@ -118,18 +117,18 @@ function flatten(array) {
     });
   })(array);
   return flattend;
-}</pre>
+}
+```
 
-<p> </p>
+## Polyfill
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js">if (!Array.prototype.flat) {
+```js
+if (!Array.prototype.flat) {
   Array.prototype.flat = function(depth) {
     var flattend = [];
     (function flat(array, depth) {
       for (let el of array) {
-        if (Array.isArray(el) &amp;&amp; depth &gt; 0) {
+        if (Array.isArray(el) && depth > 0) {
           flat(el, depth - 1);
         } else {
           flattend.push(el);
@@ -138,38 +137,22 @@ function flatten(array) {
     })(this, Math.floor(depth) || 1);
     return flattend;
   };
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flat"><code>Array.prototype.flat</code> proposal</a></td>
-   <td>Finalizado (4)</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estado         | Comentario |
+| ---------------------------------------------------------------------------------------------------- | -------------- | ---------- |
+| [`Array.prototype.flat` proposal](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flat) | Finalizado (4) |            |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
+{{Compat("javascript.builtins.Array.flat")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Array.flat")}}</p>
-</div>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.flatMap()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.flatMap()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Array.prototype.concat()")}}

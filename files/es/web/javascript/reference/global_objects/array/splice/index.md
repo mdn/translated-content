@@ -10,140 +10,124 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/splice
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>splice()</strong></code> cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.</p>
+El método **`splice()`** cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
 
-<p>{{EmbedInteractiveExample("pages/js/array-splice.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-splice.html")}}
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>array</var>.splice(<var>start[</var>, <var>deleteCount[</var>, <var>item1[</var>, <var>item2[</var>, <em>...]]]]</em>)
-</pre>
+```
+array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>start</code></dt>
- <dd>Índice donde se comenzará a cambiar el array (con 0 como origen). Si es mayor que la longitud del array, el punto inicial será la longitud del array. Si es negativo, empezará esa cantidad de elementos contando desde el final.</dd>
- <dt><code>deleteCount</code> {{optional_inline}}</dt>
- <dd>Un entero indicando el número de elementos a eliminar del array antiguo.<br>
- Si <code>deleteCount</code> se omite, o si su valor es mayor que <code>arr.length - start</code> (esto significa, si es mayor que el número de elementos restantes del array, comenzando desde <code>start</code>), entonces todos los elementos desde <code>start</code> hasta el final del array serán eliminados.<br>
- Si <code>deleteCount</code> es igual a 0 o negativo, no se eliminará ningún elemento. En este caso, se debe especificar al menos un nuevo elemento (ver más abajo).</dd>
- <dt><code>item1, item2, <em>...</em></code>  {{optional_inline}}</dt>
- <dd>Los elementos que se agregarán al array, empezando en el índice <code>start</code>. Si no se especifica ningún elemento, <code>splice()</code> solamente eliminará elementos del array.</dd>
-</dl>
+- `start`
+  - : Índice donde se comenzará a cambiar el array (con 0 como origen). Si es mayor que la longitud del array, el punto inicial será la longitud del array. Si es negativo, empezará esa cantidad de elementos contando desde el final.
+- `deleteCount` {{optional_inline}}
+  - : Un entero indicando el número de elementos a eliminar del array antiguo.
+    Si `deleteCount` se omite, o si su valor es mayor que `arr.length - start` (esto significa, si es mayor que el número de elementos restantes del array, comenzando desde `start`), entonces todos los elementos desde `start` hasta el final del array serán eliminados.
+    Si `deleteCount` es igual a 0 o negativo, no se eliminará ningún elemento. En este caso, se debe especificar al menos un nuevo elemento (ver más abajo).
+- `item1, item2, ...` {{optional_inline}}
+  - : Los elementos que se agregarán al array, empezando en el índice `start`. Si no se especifica ningún elemento, `splice()` solamente eliminará elementos del array.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Un array que contiene los elementos eliminados. Si sólo se ha eliminado un elemento, devuelve un array con un solo elemento. Si no se ha eliminado ningún elemento, devuelve un array vacío.</p>
+Un array que contiene los elementos eliminados. Si sólo se ha eliminado un elemento, devuelve un array con un solo elemento. Si no se ha eliminado ningún elemento, devuelve un array vacío.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Si especifica un número diferente de elementos a agregar que los que se eliminarán, el array tendrá un tamaño diferente al original una vez finalizada la llamada.</p>
+Si especifica un número diferente de elementos a agregar que los que se eliminarán, el array tendrá un tamaño diferente al original una vez finalizada la llamada.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Eliminar_0_elementos_desde_el_índice_2_e_insertar_drum">Eliminar 0 elementos desde el índice 2 e insertar "drum"</h3>
+### Eliminar 0 elementos desde el índice 2 e insertar "drum"
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2, 0, 'drum');
 
 // myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"]
 // removed is [], no elements removed
-</pre>
+```
 
-<h3 id="Eliminar_1_elemento_desde_el_índice_3">Eliminar 1 elemento desde el índice 3</h3>
+### Eliminar 1 elemento desde el índice 3
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(3, 1);
 
 // removed is ["mandarin"]
 // myFish is ["angel", "clown", "drum", "sturgeon"]
-</pre>
+```
 
-<h3 id="Eliminar_1_elemento_desde_el_índice_2_e_insertar_trumpet">Eliminar 1 elemento desde el índice 2 e insertar "trumpet"</h3>
+### Eliminar 1 elemento desde el índice 2 e insertar "trumpet"
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
 var removed = myFish.splice(2, 1, 'trumpet');
 
 // myFish is ["angel", "clown", "trumpet", "sturgeon"]
-// removed is ["drum"]</pre>
+// removed is ["drum"]
+```
 
-<h3 id="Eliminar_2_elementos_desde_el_índice_0_e_insertar_parrot_anemone_y_blue">Eliminar 2 elementos desde el índice 0 e insertar "parrot", "anemone" y "blue"</h3>
+### Eliminar 2 elementos desde el índice 0 e insertar "parrot", "anemone" y "blue"
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 
 // myFish is ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
-// removed is ["angel", "clown"]</pre>
+// removed is ["angel", "clown"]
+```
 
-<h3 id="Eliminar_2_elementos_desde_el_índice_2">Eliminar 2 elementos desde el índice 2</h3>
+### Eliminar 2 elementos desde el índice 2
 
-<pre class="brush: js">var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+```js
+var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(myFish.length - 3, 2);
 
 // myFish is ["parrot", "anemone", "sturgeon"]
-// removed is ["blue", "trumpet"]</pre>
+// removed is ["blue", "trumpet"]
+```
 
-<h3 id="Eliminar_1_elemento_desde_el_índice_-2">Eliminar 1 elemento desde el índice -2</h3>
+### Eliminar 1 elemento desde el índice -2
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(-2, 1);
 
 // myFish is ["angel", "clown", "sturgeon"]
-// removed is ["mandarin"]</pre>
+// removed is ["mandarin"]
+```
 
-<h3 id="Eliminar_todos_los_elementos_tras_el_índice_2_(incl.)">Eliminar todos los elementos tras el índice 2 (incl.)</h3>
+### Eliminar todos los elementos tras el índice 2 (incl.)
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2);
 
 // myFish is ["angel", "clown"]
-// removed is ["mandarin", "sturgeon"]</pre>
+// removed is ["mandarin", "sturgeon"]
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.splice', 'Array.prototype.splice')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                       | Comentario                                         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}                     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-array.prototype.splice', 'Array.prototype.splice')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
-<p>{{Compat("javascript.builtins.Array.splice")}}</p>
-</div>
+{{Compat("javascript.builtins.Array.splice")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — añade/elimina elementos desde el final de un array</li>
- <li>{{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — añade/elimina elementos desde el principio de un array</li>
- <li>{{jsxref("Array.prototype.concat()", "concat()")}} — devuelve un nuevo array compuesto por este array unido a otro/s array/s y/o valor/es</li>
-</ul>
+- {{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — añade/elimina elementos desde el final de un array
+- {{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — añade/elimina elementos desde el principio de un array
+- {{jsxref("Array.prototype.concat()", "concat()")}} — devuelve un nuevo array compuesto por este array unido a otro/s array/s y/o valor/es

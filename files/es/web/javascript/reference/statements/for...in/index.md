@@ -8,65 +8,64 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/for...in
 original_slug: Web/JavaScript/Referencia/Sentencias/for...in
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>La instrucción {{JSxRef("Sentencias/for...in", "for-in")}} itera sobre todas las {{JSxRef("../Enumerability_and_ownership_of_properties", "propiedades enumerables")}} de un objeto que está codificado por cadenas (ignorando los codificados por {{JSxRef("Objetos_globales/Symbol", "Símbolos")}}, incluidas las propiedades enumerables heredadas.</p>
+La instrucción {{JSxRef("Sentencias/for...in", "for-in")}} itera sobre todas las {{JSxRef("../Enumerability_and_ownership_of_properties", "propiedades enumerables")}} de un objeto que está codificado por cadenas (ignorando los codificados por {{JSxRef("Objetos_globales/Symbol", "Símbolos")}}, incluidas las propiedades enumerables heredadas.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-forin.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-forin.html")}}
 
-<p>La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una solicitud de extracción.</p>
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre>for (<var>variable</var> in <var>objeto</var>)
-  instrucción</pre>
+```
+for (variable in objeto)
+  instrucción
+```
 
-<dl>
- <dt><code>variable</code></dt>
- <dd>Asigna un nombre de propiedad diferente a la <em>variable</em> en cada iteración.</dd>
- <dt><code>objeto</code></dt>
- <dd>Objeto cuyas propiedades enumerables que no son símbolos se iteran.</dd>
-</dl>
+- `variable`
+  - : Asigna un nombre de propiedad diferente a la _variable_ en cada iteración.
+- `objeto`
+  - : Objeto cuyas propiedades enumerables que no son símbolos se iteran.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Un bucle <code>for...in</code> solo itera sobre propiedades enumerables que no son símbolo. Los objetos creados a partir de constructores integrados como <code>Array</code> y <code>Object</code> han heredado propiedades no enumerables de <code>Object.prototype</code> y <code>String.prototype</code>, como el método {{JSxRef("String.indexOf", "indexOf()")}} de {{JSxRef("String")}} o el método {{JSxRef("Object.toString", "toString()")}} de {{JSxRef("Object")}}. El bucle iterará sobre todas las propiedades enumerables del objeto en sí y aquellas que el objeto hereda de su cadena de prototipos (las propiedades de los prototipos más cercanos tienen prioridad sobre las de los prototipos más alejados del objeto en su cadena de prototipos).</p>
+Un bucle `for...in` solo itera sobre propiedades enumerables que no son símbolo. Los objetos creados a partir de constructores integrados como `Array` y `Object` han heredado propiedades no enumerables de `Object.prototype` y `String.prototype`, como el método {{JSxRef("String.indexOf", "indexOf()")}} de {{JSxRef("String")}} o el método {{JSxRef("Object.toString", "toString()")}} de {{JSxRef("Object")}}. El bucle iterará sobre todas las propiedades enumerables del objeto en sí y aquellas que el objeto hereda de su cadena de prototipos (las propiedades de los prototipos más cercanos tienen prioridad sobre las de los prototipos más alejados del objeto en su cadena de prototipos).
 
-<h3 id="Propiedades_deleted_added_o_modified">Propiedades <code>deleted</code>, <code>added</code> o <code>modified</code></h3>
+### Propiedades `deleted`, `added` o `modified`
 
-<p>Un bucle <code>for...in</code> itera sobre las propiedades de un objeto en un orden arbitrario (consulta el operador {{JSxRef("Operadores/delete", "delete")}} para obtener más información sobre por qué no puede depender del aparente orden de la iteración, al menos en una configuración entre navegadores).</p>
+Un bucle `for...in` itera sobre las propiedades de un objeto en un orden arbitrario (consulta el operador {{JSxRef("Operadores/delete", "delete")}} para obtener más información sobre por qué no puede depender del aparente orden de la iteración, al menos en una configuración entre navegadores).
 
-<p>Si una propiedad se modifica en una iteración y luego se visita en un momento posterior, su valor en el bucle es su valor en ese momento posterior. Una propiedad que se elimina antes de haber sido visitada no se visitará más tarde. Las propiedades agregadas al objeto sobre el que se está produciendo la iteración se pueden visitar u omitir de la iteración.</p>
+Si una propiedad se modifica en una iteración y luego se visita en un momento posterior, su valor en el bucle es su valor en ese momento posterior. Una propiedad que se elimina antes de haber sido visitada no se visitará más tarde. Las propiedades agregadas al objeto sobre el que se está produciendo la iteración se pueden visitar u omitir de la iteración.
 
-<p>En general, es mejor no agregar, modificar o eliminar propiedades del objeto durante la iteración, aparte de la propiedad que se está visitando actualmente. No hay garantía de si se visitará una propiedad agregada, si se visitará una propiedad modificada (distinta de la actual) antes o después de que se modifique, o si se visitará una propiedad eliminada antes de eliminarla.</p>
+En general, es mejor no agregar, modificar o eliminar propiedades del objeto durante la iteración, aparte de la propiedad que se está visitando actualmente. No hay garantía de si se visitará una propiedad agregada, si se visitará una propiedad modificada (distinta de la actual) antes o después de que se modifique, o si se visitará una propiedad eliminada antes de eliminarla.
 
-<h3 id="Iteración_en_arreglos_y_for...in">Iteración en arreglos y <code>for</code>...<code>in</code></h3>
+### Iteración en arreglos y `for`...`in`
 
-<div class="note">
-<p><strong>Nota</strong>: <code>for...in</code> no se debe usar para iterar sobre un {{JSxRef("Array")}} donde el orden del índice es importante.</p>
-</div>
+> **Nota:** `for...in` no se debe usar para iterar sobre un {{JSxRef("Array")}} donde el orden del índice es importante.
 
-<p>Los índices del arreglo son solo propiedades enumerables con nombres enteros y, por lo demás, son idénticos a las propiedades generales del objeto. No hay garantía de que <code>for...in</code> devuelva los índices en un orden en particular. La instrucción de bucle <code>for...in</code> devolverá todas las propiedades enumerables, incluidas aquellas con nombres no enteros y aquellas que se heredan.</p>
+Los índices del arreglo son solo propiedades enumerables con nombres enteros y, por lo demás, son idénticos a las propiedades generales del objeto. No hay garantía de que `for...in` devuelva los índices en un orden en particular. La instrucción de bucle `for...in` devolverá todas las propiedades enumerables, incluidas aquellas con nombres no enteros y aquellas que se heredan.
 
-<p>Debido a que el orden de iteración depende de la implementación, es posible que la iteración sobre un arreglo no visite los elementos en un orden coherente. Por lo tanto, es mejor usar un bucle {{JSxRef("Sentencias/for", "for")}} con un índice numérico (o {{JSxRef("Array.prototype.forEach()")}} o el bucle {{JSxRef("Sentencias/for...of", "for...of")}}) cuando se itera sobre arreglos donde el orden de acceso es importante.</p>
+Debido a que el orden de iteración depende de la implementación, es posible que la iteración sobre un arreglo no visite los elementos en un orden coherente. Por lo tanto, es mejor usar un bucle {{JSxRef("Sentencias/for", "for")}} con un índice numérico (o {{JSxRef("Array.prototype.forEach()")}} o el bucle {{JSxRef("Sentencias/for...of", "for...of")}}) cuando se itera sobre arreglos donde el orden de acceso es importante.
 
-<h3 id="Iterar_solo_sobre_propiedades_directas">Iterar solo sobre propiedades directas</h3>
+### Iterar solo sobre propiedades directas
 
-<p>Si solo deseas considerar las propiedades adjuntas al objeto en sí mismo, y no sus prototipos, usa {{JSxRef("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} o realiza una {{JSxRef("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} verificación ({{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable()")}} también se puede utilizar). Alternativamente, si sabes que no habrá ninguna interferencia de código externo, puedes extender los prototipos incorporados con un método de verificación.</p>
+Si solo deseas considerar las propiedades adjuntas al objeto en sí mismo, y no sus prototipos, usa {{JSxRef("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} o realiza una {{JSxRef("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} verificación ({{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable()")}} también se puede utilizar). Alternativamente, si sabes que no habrá ninguna interferencia de código externo, puedes extender los prototipos incorporados con un método de verificación.
 
-<h2 id="¿Por_qué_usar_for...in">¿Por qué usar <code>for</code>...<code>in</code>?</h2>
+## ¿Por qué usar `for`...`in`?
 
-<p>Dado que <code>for...in</code> está construido para iterar propiedades de objeto, no se recomienda su uso con arreglos y opciones como <code>Array.prototype.forEach()</code> y existe <code>for...of</code>, ¿cuál podría ser el uso de <code>for...in</code>?</p>
+Dado que `for...in` está construido para iterar propiedades de objeto, no se recomienda su uso con arreglos y opciones como `Array.prototype.forEach()` y existe `for...of`, ¿cuál podría ser el uso de `for...in`?
 
-<p>Es posible que se utilice de forma más práctica con fines de depuración, ya que es una forma fácil de comprobar las propiedades de un objeto (mediante la salida a la consola o de otro modo). Aunque los arreglos suelen ser más prácticos para almacenar datos, en situaciones en las que se prefiere un par clave-valor para trabajar con datos (con propiedades que actúan como la "clave"), puede haber casos en los que desees comprobar si alguna de esas claves cumple un valor particular.</p>
+Es posible que se utilice de forma más práctica con fines de depuración, ya que es una forma fácil de comprobar las propiedades de un objeto (mediante la salida a la consola o de otro modo). Aunque los arreglos suelen ser más prácticos para almacenar datos, en situaciones en las que se prefiere un par clave-valor para trabajar con datos (con propiedades que actúan como la "clave"), puede haber casos en los que desees comprobar si alguna de esas claves cumple un valor particular.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Utilizar_for...in">Utilizar <code>for</code>...<code>in</code></h3>
+### Utilizar `for`...`in`
 
-<p>El siguiente bucle <code>for...in</code> itera sobre todas las propiedades enumerables que no son símbolos del objeto y registra una cadena de los nombres de propiedad y sus valores.</p>
+El siguiente bucle `for...in` itera sobre todas las propiedades enumerables que no son símbolos del objeto y registra una cadena de los nombres de propiedad y sus valores.
 
-<pre class="brush: js notranslate">var obj = {a: 1, b: 2, c: 3};
+```js
+var obj = {a: 1, b: 2, c: 3};
 
 for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -75,13 +74,15 @@ for (const prop in obj) {
 // Produce:
 // "obj.a = 1"
 // "obj.b = 2"
-// "obj.c = 3"</pre>
+// "obj.c = 3"
+```
 
-<h3 id="Iterar_propiedades_directas">Iterar propiedades directas</h3>
+### Iterar propiedades directas
 
-<p>La siguiente función ilustra el uso de {{JSxRef("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} — las propiedades heredadas no se muestran.</p>
+La siguiente función ilustra el uso de {{JSxRef("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} — las propiedades heredadas no se muestran.
 
-<pre class="brush: js notranslate">var triangle = {a: 1, b: 2, c: 3};
+```js
+var triangle = {a: 1, b: 2, c: 3};
 
 function ColoredTriangle() {
   this.color = 'red';
@@ -99,53 +100,43 @@ for (const prop in obj) {
 
 // Produce:
 // "obj.color = red"
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'declaración for...in')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'declaración for...in')}} |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
+{{Compat("javascript.statements.for_in")}}
 
+### Compatibilidad: expresiones iniciadoras en modo estricto
 
-<p>{{Compat("javascript.statements.for_in")}}</p>
+Antes de Firefox 40, era posible utilizar una expresión iniciadora (`i=0`) en un bucle `for...in`:
 
-<h3 id="Compatibilidad_expresiones_iniciadoras_en_modo_estricto">Compatibilidad: expresiones iniciadoras en modo estricto</h3>
-
-<p>Antes de Firefox 40, era posible utilizar una expresión iniciadora (<code>i=0</code>) en un bucle <code>for...in</code>:</p>
-
-<pre class="brush: js example-bad notranslate">var obj = {a: 1, b: 2, c: 3};
+```js example-bad
+var obj = {a: 1, b: 2, c: 3};
 for (var i = 0 in obj) {
   console.log(obj[i]);
 }
 // 1
 // 2
 // 3
-</pre>
+```
 
-<p>Este comportamiento no estándar ahora se ignora en la versión 40 y posteriores, y presentará un {{JSxRef("SyntaxError")}} ("{{JSxRef("errors/Invalid_for-in_initializer", "iniciador for...in no válido", "las declaraciones de encabezado del bucle for-in posiblemente no tengan iniciadores")}} en {{JSxRef("Strict_mode", "modo estricto")}} ({{bug(748550)}} y {{bug(1164741)}}").</p>
+Este comportamiento no estándar ahora se ignora en la versión 40 y posteriores, y presentará un {{JSxRef("SyntaxError")}} ("{{JSxRef("errors/Invalid_for-in_initializer", "iniciador for...in no válido", "las declaraciones de encabezado del bucle for-in posiblemente no tengan iniciadores")}} en {{JSxRef("Strict_mode", "modo estricto")}} ({{bug(748550)}} y {{bug(1164741)}}").
 
-<p>Otros motores como v8 (Chrome), Chakra (IE/Edge) y JSC (WebKit/Safari) están investigando si eliminar también el comportamiento no estándar.</p>
+Otros motores como v8 (Chrome), Chakra (IE/Edge) y JSC (WebKit/Safari) están investigando si eliminar también el comportamiento no estándar.
 
-<h2 id="Ve_también">Ve también</h2>
+## Ve también
 
-<ul>
- <li>{{JSxRef("Sentencias/for...of", "for...of")}} — una declaración similar que itera sobre la propiedad <code>values</code></li>
- <li>{{JSxRef("Sentencias/for_each...in", "for each...in")}} — una declaración similar pero obsoleta que itera sobre los valores de las propiedades de un objeto, en lugar de los nombres de las propiedades en sí</li>
- <li>{{JSxRef("Sentencias/for", "for")}}</li>
- <li>{{JSxRef("../Guide/Iterators_and_Generators", "Expresiones generadoras")}} (usa la sintaxis <code>for...in</code>)</li>
- <li>{{JSxRef("../Enumerability_and_ownership_of_properties", "Enumerabilidad y posesión de propiedades")}}</li>
- <li>{{JSxRef("Object.getOwnPropertyNames()")}}</li>
- <li>{{JSxRef("Object.prototype.hasOwnProperty()")}}</li>
- <li>{{JSxRef("Array.prototype.forEach()")}}</li>
-</ul>
+- {{JSxRef("Sentencias/for...of", "for...of")}} — una declaración similar que itera sobre la propiedad `values`
+- {{JSxRef("Sentencias/for_each...in", "for each...in")}} — una declaración similar pero obsoleta que itera sobre los valores de las propiedades de un objeto, en lugar de los nombres de las propiedades en sí
+- {{JSxRef("Sentencias/for", "for")}}
+- {{JSxRef("../Guide/Iterators_and_Generators", "Expresiones generadoras")}} (usa la sintaxis `for...in`)
+- {{JSxRef("../Enumerability_and_ownership_of_properties", "Enumerabilidad y posesión de propiedades")}}
+- {{JSxRef("Object.getOwnPropertyNames()")}}
+- {{JSxRef("Object.prototype.hasOwnProperty()")}}
+- {{JSxRef("Array.prototype.forEach()")}}

@@ -8,76 +8,67 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/tan
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tan
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La función <strong><code>Math.tan()</code></strong> retorna la tangente de un número.</p>
+La función **`Math.tan()`** retorna la tangente de un número.
 
-<div>{{EmbedInteractiveExample("pages/js/math-tan.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-tan.html")}}
 
-<p>La fuente para este ejemplo interactivo se encuentra almacenada en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivos, por favor, clona el repositorio en este link: <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos un <em>Pull Request</em>.</p>
+La fuente para este ejemplo interactivo se encuentra almacenada en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivos, por favor, clona el repositorio en este link: <https://github.com/mdn/interactive-examples> y envíanos un _Pull Request_.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>Math.tan(<var>x</var>)</code></pre>
+```
+Math.tan(x)
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Un número que representa un ángulo en radianes.</dd>
-</dl>
+- `x`
+  - : Un número que representa un ángulo en radianes.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>La tangente del número proporcionado.</p>
+La tangente del número proporcionado.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El método <code>Math.tan()</code> retorna un valor numérico que representa la tangente de un ángulo.</p>
+El método `Math.tan()` retorna un valor numérico que representa la tangente de un ángulo.
 
-<p>Dado que <code>tan()</code> es un método estático de <code>Math</code>, siempre debes usarlo como <code>Math.tan()</code>, y no como un método de un objeto <code>Math</code> que hayas creado (<code>Math</code> no es un constructor).</p>
+Dado que `tan()` es un método estático de `Math`, siempre debes usarlo como `Math.tan()`, y no como un método de un objeto `Math` que hayas creado (`Math` no es un constructor).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_Math.tan">Usando <code>Math.tan()</code></h3>
+### Usando `Math.tan()`
 
-<pre class="brush: js">Math.tan(1); // 1.5574077246549023
-</pre>
+```js
+Math.tan(1); // 1.5574077246549023
+```
 
-<p>Ya que la función <code>Math.tan()</code> acepta radianes, pero es más fácil trabajar con grados, la siguiente función acepta un valor en grados, lo convierte a radianes, y retorna la tangente de dicho valor.</p>
+Ya que la función `Math.tan()` acepta radianes, pero es más fácil trabajar con grados, la siguiente función acepta un valor en grados, lo convierte a radianes, y retorna la tangente de dicho valor.
 
-<pre class="brush: js">function getTanDeg(deg) {
+```js
+function getTanDeg(deg) {
   var rad = deg * Math.PI/180;
   return Math.tan(rad);
 }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.tan', 'Math.tan')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                       |
+| -------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.tan', 'Math.tan')}} |
 
-<h2 id="Compatibilidad_con_el_navegador">Compatibilidad con el navegador</h2>
+## Compatibilidad con el navegador
 
+{{Compat("javascript.builtins.Math.tan")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Math.tan")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Math.acos()")}}</li>
- <li>{{jsxref("Math.asin()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.atan2()")}}</li>
- <li>{{jsxref("Math.cos()")}}</li>
- <li>{{jsxref("Math.sin()")}}</li>
-</ul>
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.atan2()")}}
+- {{jsxref("Math.cos()")}}
+- {{jsxref("Math.sin()")}}

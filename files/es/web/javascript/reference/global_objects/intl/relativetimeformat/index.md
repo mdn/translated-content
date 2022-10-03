@@ -6,46 +6,41 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/RelativeTimeFormat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El objeto <strong><code>Intl.RelativeTimeFormat</code></strong> te proporciona una manera de formatear tiempos relativos con traducciones.</p>
+El objeto **`Intl.RelativeTimeFormat`** te proporciona una manera de formatear tiempos relativos con traducciones.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
 
-<p>El código de este ejemplo interactivo está disponible en un repositorio GitHub. Si quieres contribuir a los ejemplos interactivos del proyecto, por favor, clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y manda una Pull Request.</p>
+El código de este ejemplo interactivo está disponible en un repositorio GitHub. Si quieres contribuir a los ejemplos interactivos del proyecto, por favor, clona <https://github.com/mdn/interactive-examples> y manda una Pull Request.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("RelativeTimeFormat.RelativeTimeFormat()", "Intl.RelativeTimeFormat.RelativeTimeFormat()")}}</dt>
- <dd>Crea una nueva instancia de <code>Intl.RelativeTimeFormat</code>.</dd>
-</dl>
+- {{jsxref("RelativeTimeFormat.RelativeTimeFormat()", "Intl.RelativeTimeFormat.RelativeTimeFormat()")}}
+  - : Crea una nueva instancia de `Intl.RelativeTimeFormat`.
 
-<h2 id="Métodos_estáticos">Métodos estáticos</h2>
+## Métodos estáticos
 
-<dl>
- <dt>{{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}</dt>
- <dd>Devuelve un {{jsxref("Array")}} con todos los idiomas disponibles sin necesidad de usar el que hay por defecto.</dd>
-</dl>
+- {{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
+  - : Devuelve un {{jsxref("Array")}} con todos los idiomas disponibles sin necesidad de usar el que hay por defecto.
 
-<h2 id="Métodos_de_instancia">Métodos de instancia</h2>
+## Métodos de instancia
 
-<dl>
- <dt>{{jsxref("RelativeTimeFormat.format", "Intl.RelativeTimeFormat.prototype.format()")}}</dt>
- <dd>Formatea <code>value</code> y <code>unit</code> conforme al idioma y las opciones de formateo al crear la instancia con <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat"><code>Intl.RelativeTimeFormat</code></a>.</dd>
- <dt>{{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}</dt>
- <dd>Devuelve un {{jsxref("Array")}} de objetos representando el tiempo relativo en partes que pueden ser usadas en traducciones.</dd>
- <dt>{{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}</dt>
- <dd>Devuelve un nuevo objeto con las propiedades que reflejan las opciones de localización y formato usadas durante la inicialización del objeto.</dd>
-</dl>
+- {{jsxref("RelativeTimeFormat.format", "Intl.RelativeTimeFormat.prototype.format()")}}
+  - : Formatea `value` y `unit` conforme al idioma y las opciones de formateo al crear la instancia con [`Intl.RelativeTimeFormat`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat).
+- {{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
+  - : Devuelve un {{jsxref("Array")}} de objetos representando el tiempo relativo en partes que pueden ser usadas en traducciones.
+- {{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
+  - : Devuelve un nuevo objeto con las propiedades que reflejan las opciones de localización y formato usadas durante la inicialización del objeto.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Ejemplo_básico">Ejemplo básico</h3>
+### Ejemplo básico
 
-<p>El siguiente ejemplo muestra cómo conseguir el tiempo relativo para el mejor idioma según el usuario.</p>
+El siguiente ejemplo muestra cómo conseguir el tiempo relativo para el mejor idioma según el usuario.
 
-<pre class="brush: js notranslate">// Crea un formateador de tiempo relativo en tu lenguaje
+```js
+// Crea un formateador de tiempo relativo en tu lenguaje
 // con los valores por defectos pasados expresamente.
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // otros valores: "lookup"
@@ -55,53 +50,40 @@ const rtf = new Intl.RelativeTimeFormat("en", {
 
 // Formatea el tiempo relativo con valores negativos (-1).
 rtf.format(-1, "day");
-// &gt; "Hace 1 día"
+// > "Hace 1 día"
 
 // Formatea el tiempo relativo con valores positivos (1).
 rtf.format(1, "day");
-// &gt; "Dentro de 1 día"</pre>
+// > "Dentro de 1 día"
+```
 
-<h3 id="Usando_formatToParts">Usando <code>formatToParts</code></h3>
+### Usando `formatToParts`
 
-<p>El siguiente ejemplo muestra cómo crear un formateador de tiempo relativo que devuelve las partes separadas:</p>
+El siguiente ejemplo muestra cómo crear un formateador de tiempo relativo que devuelve las partes separadas:
 
-<pre class="brush: js notranslate">const rtf = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+```js
+const rtf = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
 
 // Formatea el tiempo relativo usando día como unidad.
 rtf.formatToParts(-1, "day");
-// &gt; [{ type: "literal", value: "ayer"}]
+// > [{ type: "literal", value: "ayer"}]
 
 rtf.formatToParts(100, "day");
-// &gt; [{ type: "literal", value: "Dentro de " },
-// &gt;  { type: "integer", value: "100", unit: "day" },
-// &gt;  { type: "literal", value: " días" }]
-</pre>
+// > [{ type: "literal", value: "Dentro de " },
+// >  { type: "integer", value: "100", unit: "day" },
+// >  { type: "literal", value: " días" }]
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}}</td>
-   <td></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado | Comentario |
+| ------------------------------------------------------------------------------------------------------------ | ------ | ---------- |
+| {{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}} |        |            |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
+{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="https://developers.google.com/web/updates/2018/10/intl-relativetimeformat">The Intl.RelativeTimeFormat API</a></li>
-</ul>
+- [The Intl.RelativeTimeFormat API](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)

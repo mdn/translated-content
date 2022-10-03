@@ -4,133 +4,129 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/name
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propiedad <code><strong>function.name</strong></code> retorna el nombre de la función o retorna <code>"anonymous"</code> por funciones creadas anónimamente.</p>
+La propiedad **`function.name`** retorna el nombre de la función o retorna `"anonymous"` por funciones creadas anónimamente.
 
-<div>{{js_property_attributes(0,0,1)}}</div>
+{{js_property_attributes(0,0,1)}}Nótese que en implementaciones no estándar previas a ES2015 el atributo `configurable` también era `false`.
 
-<div>Nótese que en implementaciones no estándar previas a ES2015 el atributo <code>configurable</code> también era <code>false</code>.</div>
+## Ejemplos
 
-<h2 id="Ejemplos">Ejemplos</h2>
+### Nombre de una declaración de función
 
-<h3 id="Nombre_de_una_declaración_de_función">Nombre de una declaración de función</h3>
+La propiedad `name` retorna el nombre de una declaración de función.
 
-<p>La propiedad <code>name</code> retorna el nombre de una declaración de función.</p>
-
-<pre class="brush: js">function doSomething() {}
+```js
+function doSomething() {}
 
 console.log(doSomething.name); // imprime en pantalla "doSomething"
-</pre>
+```
 
-<h3 id="Nombre_de_constructor_de_función">Nombre de constructor de función</h3>
+### Nombre de constructor de función
 
-<p>Las funciones creadas con la sintaxis <code>new Function(...)</code> o simplemente <code>Function(...)</code> tienen como propiedad <code>name</code> una cadena vacía. En los ejemplos a continuación se crean funciones anónimas, tales que su <code>name</code> retorna una cadena vacía:</p>
+Las funciones creadas con la sintaxis `new Function(...)` o simplemente `Function(...)` tienen como propiedad `name` una cadena vacía. En los ejemplos a continuación se crean funciones anónimas, tales que su `name` retorna una cadena vacía:
 
-<pre class="brush: js">var f = function() {};
+```js
+var f = function() {};
 var object = {
   someMethod: function() {}
 };
 
 console.log(f.name == ''); // true
 console.log(object.someMethod.name == ''); // también true
-</pre>
+```
 
-<h3 id="Nombres_de_función_inferidos">Nombres de función inferidos</h3>
+### Nombres de función inferidos
 
-<p>Los navegadores que implementan funciones ES2015 pueden inferir el nombre de una función anónima de su posición sintáctica. Por ejemplo:</p>
+Los navegadores que implementan funciones ES2015 pueden inferir el nombre de una función anónima de su posición sintáctica. Por ejemplo:
 
-<pre class="brush: js">var f = function() {};
-console.log(f.name); // "f"</pre>
+```js
+var f = function() {};
+console.log(f.name); // "f"
+```
 
-<p>Se puede definir una función con un nombre en un {{jsxref("Operators/Function", "function expression", "", 1)}}:</p>
+Se puede definir una función con un nombre en un {{jsxref("Operators/Function", "function expression", "", 1)}}:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   someMethod: function object_someMethod() {}
 };
 console.log(object.someMethod.name); // imprime "object_someMethod"
 
 try { object_someMethod } catch(e) { console.log(e); }
 // ReferenceError: object_someMethod is not defined
-</pre>
+```
 
-<p>No se puede cambiar el nombre de una función, esta propiedad es de solo lectura:</p>
+No se puede cambiar el nombre de una función, esta propiedad es de solo lectura:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   // anonymous
   someMethod: function() {}
 };
 
 object.someMethod.name = 'someMethod';
 console.log(object.someMethod.name); // cadena vacía, someMethod es anónimo
-</pre>
+```
 
-<p>Sin embargo, se puede usar {{jsxref("Object.defineProperty()")}} para cambiarlo.</p>
+Sin embargo, se puede usar {{jsxref("Object.defineProperty()")}} para cambiarlo.
 
-<h3 id="Nombres_de_métodos">Nombres de métodos</h3>
+### Nombres de métodos
 
-<pre class="brush: js">var o = {
+```js
+var o = {
   foo(){}
 };
-o.foo.name; // "foo";</pre>
+o.foo.name; // "foo";
+```
 
-<h3 id="Nombres_de_funciones_atadas_(creadas_con_.bind())">Nombres de funciones atadas (creadas con .bind())</h3>
+### Nombres de funciones atadas (creadas con .bind())
 
-<p>{{jsxref("Function.bind()")}} produce una función cuyo nombre es igual a "bound " seguido del nombre de la función original.</p>
+{{jsxref("Function.bind()")}} produce una función cuyo nombre es igual a "bound " seguido del nombre de la función original.
 
-<pre class="brush: js">function foo() {};
-foo.bind({}).name; // "bound foo"</pre>
+```js
+function foo() {};
+foo.bind({}).name; // "bound foo"
+```
 
-<h3 id="Nombres_de_funciones_getters_y_setters">Nombres de funciones getters y setters</h3>
+### Nombres de funciones getters y setters
 
-<p>Cuando se usan <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></code> y <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a>, </code>"get" y "set" aparecerán en el nombre de la función.</p>
+Cuando se usan [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) y `set, `"get" y "set" aparecerán en el nombre de la función.
 
-<pre class="brush: js">var o = {
+```js
+var o = {
   get foo(){},
   set foo(x){}
 };
 
 var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
 descriptor.get.name; // "get foo"
-descriptor.set.name; // "set foo";</pre>
+descriptor.set.name; // "set foo";
+```
 
-<h2 id="Ejemplos_2">Ejemplos</h2>
+## Ejemplos
 
-<p>Se puede usar <code>obj.constructor.name</code> para saber cuál es la "clase" de un objeto:</p>
+Se puede usar `obj.constructor.name` para saber cuál es la "clase" de un objeto:
 
-<pre class="brush: js">function a() {}
+```js
+function a() {}
 
 var b = new a();
 
 console.log(b.constructor.name); // imprime "a"
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Para versiones de IE &lt; 9, se puede usar <code>fn._name()</code> en su lugar. Para IE9 o posteriores se puede usar el siguiente <a href="https://github.com/JamesMGreene/Function.name">polyfill</a>.</p>
+Para versiones de IE < 9, se puede usar `fn._name()` en su lugar. Para IE9 o posteriores se puede usar el siguiente [polyfill](https://github.com/JamesMGreene/Function.name).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-name', 'name')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-name', 'name')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                               | Estado                       | Comentarios         |
+| ------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-name', 'name')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-name', 'name')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.Function.name")}}

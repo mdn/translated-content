@@ -9,107 +9,87 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/RegExp
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El constructor <strong><code>RegExp</code></strong> crea un objeto de expresión regular para hacer coincidir el texto con un patrón.</p>
+El constructor **`RegExp`** crea un objeto de expresión regular para hacer coincidir el texto con un patrón.
 
-<p>Para ver la introducción a las expresiones regulares, lee el {{JSxRef("../Guide/Regular_Expressions", "capítulo sobre expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}.</p>
+Para ver la introducción a las expresiones regulares, lee el {{JSxRef("../Guide/Regular_Expressions", "capítulo sobre expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
 
-<p>La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una solicitud de extracción.</p>
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p>Son posibles las notaciones literal, constructor y de fábrica:</p>
+Son posibles las notaciones literal, constructor y de fábrica:
 
-<pre>/<var>patrón</var>/<var>banderas</var>
-new RegExp(<var>patrón</var>[, <var>banderas</var>])
-RegExp(<var>patrón</var>[, <var>banderas</var>])
-</pre>
+```
+/patrón/banderas
+new RegExp(patrón[, banderas])
+RegExp(patrón[, banderas])
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code><var>patrón</var></code></dt>
- <dd>El texto de la expresión regular.<br>
- A partir de ES5, también puede ser otro objeto o <code>RegExp</code> literal (solo para las dos notaciones del constructor RegExp). Los patrones pueden incluir {{JSxRef("../Guide/Regular_Expressions", "caracteres especiales", "#Usar_caracteres_especiales")}} para que coincidan con un rango de valores más amplio que el de una cadena literal.</dd>
- <dt><code><var>banderas</var></code></dt>
- <dd>
- <p>Si se especifica, <code><var>banderas</var></code> es una cadena que contiene las banderas para agregar.</p>
+- `patrón`
+  - : El texto de la expresión regular.
+    A partir de ES5, también puede ser otro objeto o `RegExp` literal (solo para las dos notaciones del constructor RegExp). Los patrones pueden incluir {{JSxRef("../Guide/Regular_Expressions", "caracteres especiales", "#Usar_caracteres_especiales")}} para que coincidan con un rango de valores más amplio que el de una cadena literal.
+- `banderas`
 
- <p>Alternativamente, si se proporciona un objeto para el patrón, la cadena <code><var>banderas</var></code> reemplazará cualquiera de las banderas de ese objeto (y <code>lastIndex</code> se restablecerá a <code>0</code>) (a partir de ES2015).</p>
+  - : Si se especifica, `banderas` es una cadena que contiene las banderas para agregar.
 
- <p>Si no se especifica <code><var>banderas</var></code> y se proporciona un objeto de expresiones regulares, las banderas de ese objeto (y el valor de <code>lastIndex</code>) se copiarán.</p>
+    Alternativamente, si se proporciona un objeto para el patrón, la cadena `banderas` reemplazará cualquiera de las banderas de ese objeto (y `lastIndex` se restablecerá a `0`) (a partir de ES2015).
 
- <p><code>banderas</code> puede contener cualquier combinación de los siguientes caracteres:</p>
+    Si no se especifica `banderas` y se proporciona un objeto de expresiones regulares, las banderas de ese objeto (y el valor de `lastIndex`) se copiarán.
 
- <dl>
-  <dt><code>g</code> (coincidencia global)</dt>
-  <dd>Encuentra todas las coincidencias en lugar de detenerse después de la primera.</dd>
-  <dt><code>i</code> (ignorar mayúsculas y minúsculas)</dt>
-  <dd>Si el indicador <code>u</code> también está habilitado, utiliza el plegado de mayúsculas y minúsculas Unicode.</dd>
-  <dt><code>m</code> (multilínea)</dt>
-  <dd>Trata los caracteres iniciales y finales (<code>^</code> y <code>$</code>) como si estuvieran trabajando en varias líneas. En otras palabras, hace coincidir el principio o el final de <em>cada</em> línea (delimitada por <code>\n</code> o <code>\r</code>), no solo al principio o final de toda la cadena de entrada.</dd>
-  <dt><code>s</code> («<em>dotAll</em>» o punto para todo)</dt>
-  <dd>Permite que el punto (<code>.</code> coincida con nuevas líneas o no.</dd>
-  <dt><code>u</code> (unicode)</dt>
-  <dd>Trata el <code><var>patrón</var></code> como una secuencia de puntos de código Unicode. (Consulta también <a href="/es/docs/Web/API/DOMString/Binary">Cadenas binarias</a>).</dd>
-  <dt><code>y</code> (sticky)</dt>
-  <dd>Coincide solo con el índice indicado por la propiedad <code>lastIndex</code> de esta expresión regular en la cadena destino. No intenta coincidir con índices posteriores.</dd>
- </dl>
- </dd>
-</dl>
+    `banderas` puede contener cualquier combinación de los siguientes caracteres:
 
-<h2 id="Ejemplos">Ejemplos</h2>
+    - `g` (coincidencia global)
+      - : Encuentra todas las coincidencias en lugar de detenerse después de la primera.
+    - `i` (ignorar mayúsculas y minúsculas)
+      - : Si el indicador `u` también está habilitado, utiliza el plegado de mayúsculas y minúsculas Unicode.
+    - `m` (multilínea)
+      - : Trata los caracteres iniciales y finales (`^` y `$`) como si estuvieran trabajando en varias líneas. En otras palabras, hace coincidir el principio o el final de _cada_ línea (delimitada por `\n` o `\r`), no solo al principio o final de toda la cadena de entrada.
+    - `s` («_dotAll_» o punto para todo)
+      - : Permite que el punto (`.` coincida con nuevas líneas o no.
+    - `u` (unicode)
+      - : Trata el `patrón` como una secuencia de puntos de código Unicode. (Consulta también [Cadenas binarias](/es/docs/Web/API/DOMString/Binary)).
+    - `y` (sticky)
+      - : Coincide solo con el índice indicado por la propiedad `lastIndex` de esta expresión regular en la cadena destino. No intenta coincidir con índices posteriores.
 
-<h3 id="Notación_literal_y_constructor">Notación literal y constructor</h3>
+## Ejemplos
 
-<p>Hay dos formas de crear un objeto <code>RegExp</code>: una <em>notación literal</em> y un <em>constructor</em>.</p>
+### Notación literal y constructor
 
-<ul>
- <li>Los parámetros de <strong>la notación literal</strong> se encierran entre barras y no utilizan comillas.</li>
- <li>Los parámetros de <strong>la función constructora</strong> no se encierran entre barras, pero utilizan comillas.</li>
-</ul>
+Hay dos formas de crear un objeto `RegExp`: una _notación literal_ y un _constructor_.
 
-<p>Las siguientes tres expresiones crean la misma expresión regular:</p>
+- Los parámetros de **la notación literal** se encierran entre barras y no utilizan comillas.
+- Los parámetros de **la función constructora** no se encierran entre barras, pero utilizan comillas.
 
-<pre class="brush: js notranslate">/ab+c/i
+Las siguientes tres expresiones crean la misma expresión regular:
+
+```js
+/ab+c/i
 new RegExp(/ab+c/, 'i') // notación literal
 new RegExp('ab+c', 'i') // constructor
-</pre>
+```
 
-<p>La notación literal da como resultado la compilación de la expresión regular cuando se evalúa la expresión. Utiliza la notación literal cuando la expresión regular permanecerá constante. Por ejemplo, si usas notación literal para construir una expresión regular usada en un bucle, la expresión regular no se volverá a compilar en cada iteración.</p>
+La notación literal da como resultado la compilación de la expresión regular cuando se evalúa la expresión. Utiliza la notación literal cuando la expresión regular permanecerá constante. Por ejemplo, si usas notación literal para construir una expresión regular usada en un bucle, la expresión regular no se volverá a compilar en cada iteración.
 
-<p>El constructor del objeto de expresión regular, por ejemplo, <code>new RegExp('ab+c')</code>, da como resultado la compilación en tiempo de ejecución de la expresión regular. Usa la función constructora cuando sepas que el patrón de la expresión regular cambiará, o no conoces el patrón y lo obtienes de otra fuente, como la entrada del usuario.</p>
+El constructor del objeto de expresión regular, por ejemplo, `new RegExp('ab+c')`, da como resultado la compilación en tiempo de ejecución de la expresión regular. Usa la función constructora cuando sepas que el patrón de la expresión regular cambiará, o no conoces el patrón y lo obtienes de otra fuente, como la entrada del usuario.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp-constructor', 'RegExp constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-regexp-constructor', 'RegExp constructor')}} |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<div>
+{{Compat("javascript.builtins.RegExp.RegExp")}}
 
+## Ve también
 
-<p>{{Compat("javascript.builtins.RegExp.RegExp")}}</p>
-</div>
-
-<h2 id="Ve_también">Ve también</h2>
-
-<ul>
- <li>El capítulo de {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}</li>
- <li>{{JSxRef("String.prototype.match()")}}</li>
- <li>{{JSxRef("String.prototype.replace()")}}</li>
-</ul>
+- El capítulo de {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}
+- {{JSxRef("String.prototype.match()")}}
+- {{JSxRef("String.prototype.replace()")}}

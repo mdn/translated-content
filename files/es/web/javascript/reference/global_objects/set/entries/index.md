@@ -4,27 +4,30 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/entries
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>entries()</strong></code> devuelve un nuevo objeto de tipo <code>Iterator</code> que contiene<strong> un array de tuplas <code>[value, value]</code></strong> por cada elemento en el <code>Set</code> original, manteniendo el orden de inserción. En los objetos de tipo <code>Set</code> no existe una clave <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">key</span></font> como ocurre en los objetos de tipo <code>Map</code>. Sin embargo, para mantener una API similar a la de los objetos de tipo <code>Map</code>, cada <em>entry</em> contiene el mismo valor para su clave y valor, devolviendo por tanto un array de tuplas <code>[value, value]</code>.</p>
+El método **`entries()`** devuelve un nuevo objeto de tipo `Iterator` que contiene **un array de tuplas `[value, value]`** por cada elemento en el `Set` original, manteniendo el orden de inserción. En los objetos de tipo `Set` no existe una clave key como ocurre en los objetos de tipo `Map`. Sin embargo, para mantener una API similar a la de los objetos de tipo `Map`, cada _entry_ contiene el mismo valor para su clave y valor, devolviendo por tanto un array de tuplas `[value, value]`.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}
 
-<p>El código de este ejemplo interactivo esta almacenado en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interativos, simplemente clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una pull request.</p>
+El código de este ejemplo interactivo esta almacenado en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interativos, simplemente clona <https://github.com/mdn/interactive-examples> y envíanos una pull request.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><em>mySet</em>.entries()</code></pre>
+```
+mySet.entries()
+```
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Un nuevo objeto de tipo <code>Iterator</code> que contiene un array de tuplas <code>[value, value]</code> por cada elemento en el <code>Set</code> original, en orden de inserción.</p>
+Un nuevo objeto de tipo `Iterator` que contiene un array de tuplas `[value, value]` por cada elemento en el `Set` original, en orden de inserción.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_el_método_entries">Usando el método <code>entries</code></h3>
+### Usando el método `entries`
 
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foobar');
 mySet.add(1);
 mySet.add('baz');
@@ -34,39 +37,20 @@ var setIter = mySet.entries();
 console.log(setIter.next().value); // ["foobar", "foobar"]
 console.log(setIter.next().value); // [1, 1]
 console.log(setIter.next().value); // ["baz", "baz"]
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Commentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-set.prototype.entries', 'Set.prototype.entries')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.entries', 'Set.prototype.entries')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                       | Commentario         |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-set.prototype.entries', 'Set.prototype.entries')}} | {{Spec2('ES2015')}}     | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-set.prototype.entries', 'Set.prototype.entries')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
+{{Compat("javascript.builtins.Set.entries")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Set.entries")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Set.prototype.keys()")}}</li>
- <li>{{jsxref("Set.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values()")}}

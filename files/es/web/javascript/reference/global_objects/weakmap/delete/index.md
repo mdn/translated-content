@@ -9,71 +9,53 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>delete()</strong></code> elimina un elemento específico del objeto <code>WeakMap</code> .</p>
+El método **`delete()`** elimina un elemento específico del objeto `WeakMap` .
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><em>wm</em>.delete(key);</code></pre>
+```
+wm.delete(key);
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>identificador (key)</dt>
- <dd>Requerido. El identificador del elemento a eliminar en el objeto <code>WeakMap</code>.</dd>
-</dl>
+- identificador (key)
+  - : Requerido. El identificador del elemento a eliminar en el objeto `WeakMap`.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p><code>true</code> si el elemento del objeto <code>WeakMap</code> ha sido eliminado correctamente. Y <code>false</code> si la llave a eliminar no fue encontrada en el objeto <code>WeakMap</code> o bien, si la llave no es un objeto.</p>
+`true` si el elemento del objeto `WeakMap` ha sido eliminado correctamente. Y `false` si la llave a eliminar no fue encontrada en el objeto `WeakMap` o bien, si la llave no es un objeto.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Utilización_del_método_delete">Utilización del método <code>delete</code> </h3>
+### Utilización del método `delete`
 
-<pre>var wm = new WeakMap();
+```
+var wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.delete(window); // Devuelve true. Eliminado correctamente.
 
 wm.has(window);    // Devuelve false. El elemento window ya no es parte de WeakMap.
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                       | Comment             |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}     | {{Spec2('ES6')}}         | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.WeakMap.delete")}}
 
-<h2 id="Notas_especificas_de_Firefox">Notas especificas de Firefox</h2>
+## Notas especificas de Firefox
 
-<ul>
- <li>Anterior a SpiderMonkey 38 {{geckoRelease(38)}}, este método lanzaba {{jsxref("TypeError")}} cuando el parámetro <code>key</code> no era un objeto. Esto ha sido corregido en la versión 38 y posteriormente devuelve <code>false</code> como parte del estándar de ES6 ({{bug(1127827)}}).</li>
-</ul>
+- Anterior a SpiderMonkey 38 {{geckoRelease(38)}}, este método lanzaba {{jsxref("TypeError")}} cuando el parámetro `key` no era un objeto. Esto ha sido corregido en la versión 38 y posteriormente devuelve `false` como parte del estándar de ES6 ({{bug(1127827)}}).
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}

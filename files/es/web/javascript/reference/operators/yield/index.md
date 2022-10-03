@@ -11,76 +11,73 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/yield
 original_slug: Web/JavaScript/Referencia/Operadores/yield
 ---
-<div>{{jsSidebar("Operadores")}}</div>
+{{jsSidebar("Operadores")}}
 
-<p>La palabra clave <code>yield</code> se usa para pausar y reanudar una función generadora ({{jsxref("Statements/function*", "function*")}} o {{jsxref("Statements/Legacy_generator_function", "función generadora heredada")}}).</p>
+La palabra clave `yield` se usa para pausar y reanudar una función generadora ({{jsxref("Statements/function*", "function*")}} o {{jsxref("Statements/Legacy_generator_function", "función generadora heredada")}}).
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
-<div>La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una solicitud de extracción.</div>
+## Sintaxis
 
-<h2 id="Sintaxis">Sintaxis</h2>
+```
+[rv] = yield [expression]
+```
 
-<pre>[<var>rv</var>] = <strong>yield</strong> [<var>expression</var>]</pre>
+- `expression` {{optional_inline}}
+  - : Define el valor que se devolverá desde la función generadora a través del {{jsxref("Iteration_protocols", "protocolo iterador", "#El_protocolo_iterador")}}. Si se omite, devuelve `undefined` en su lugar.
+- `rv` {{optional_inline}}
+  - : Recupera el valor opcional pasado al método `next()` del generador para reanudar su ejecución.
 
-<dl>
- <dt><code><var>expression</var></code> {{optional_inline}}</dt>
- <dd>Define el valor que se devolverá desde la función generadora a través del {{jsxref("Iteration_protocols", "protocolo iterador", "#El_protocolo_iterador")}}. Si se omite, devuelve <code>undefined</code> en su lugar.</dd>
- <dt><code><var>rv</var></code> {{optional_inline}}</dt>
- <dd>
- <p>Recupera el valor opcional pasado al método <code>next()</code> del generador para reanudar su ejecución.</p>
- </dd>
-</dl>
+## Descripción
 
-<h2 id="Descripción">Descripción</h2>
+La palabra clave `yield` detiene la ejecución de la función del generador y el valor de la expresión que sigue a la palabra clave `yield` se devuelve al llamador del generador. Se puede considerar como una versión basada en un generador de la palabra clave `return`.
 
-<p>La palabra clave <code>yield</code> detiene la ejecución de la función del generador y el valor de la expresión que sigue a la palabra clave <code>yield</code> se devuelve al llamador del generador. Se puede considerar como una versión basada en un generador de la palabra clave <code>return</code>.</p>
+`yield` solo se puede llamar directamente desde la función generadora que la contiene. No se puede llamar desde funciones anidadas o retrollamadas.
 
-<p><code>yield</code> solo se puede llamar directamente desde la función generadora que la contiene. No se puede llamar desde funciones anidadas o retrollamadas.</p>
+La palabra clave `yield` hace que la llamada al método `next()` del generador devuelva un objeto `IteratorResult` con dos propiedades: `value` y `done`. La propiedad `value` es el resultado de evaluar la expresión `yield`, y `done` es `false`, lo cual indica que la función generadora no se ha completado completamente.
 
-<p>La palabra clave <code>yield</code> hace que la llamada al método <code>next()</code> del generador devuelva un objeto <code>IteratorResult</code> con dos propiedades: <code>value</code> y <code>done</code>. La propiedad <code>value</code> es el resultado de evaluar la expresión <code>yield</code>, y <code>done</code> es <code>false</code>, lo cual indica que la función generadora no se ha completado completamente.</p>
+Una vez en pausa en una expresión `yield`, la ejecución del código del generador permanece en pausa hasta que se llama al método `next()` del generador. Cada vez que se llama al método `next()` del generador, el generador reanuda la ejecución y se ejecuta hasta que alcanza uno de los siguientes:
 
-<p>Una vez en pausa en una expresión <code>yield</code>, la ejecución del código del generador permanece en pausa hasta que se llama al método <code>next()</code> del generador. Cada vez que se llama al método <code>next()</code> del generador, el generador reanuda la ejecución y se ejecuta hasta que alcanza uno de los siguientes:</p>
+- Un `yield`, el cual hace que el generador vuelva a pausar y devuelva el nuevo valor del generador. La próxima vez que se llame a `next()`, la ejecución se reanudará con la instrucción inmediatamente después de `yield`.
+- {{jsxref("Statements/throw", "throw")}} se usa para lanzar una excepción desde el generador. Esta detiene la ejecución del generador por completo y la ejecución se reanuda en el llamador (como suele ser el caso cuando se lanza una excepción).
+- Se alcanza el final de la función generadora. En este caso, la ejecución del generador finaliza y se devuelve un `IteratorResult` al llamador en el que el `value` es {{jsxref("undefined")}} y `done` es `true`.
+- Se alcanza una instrucción {{jsxref("Statements/return", "return")}}. En este caso, la ejecución del generador finaliza y se devuelve un `IteratorResult` al llamador en el que el `value` es el valor especificado por la instrucción `return` y `done` es `true`.
 
-<ul>
- <li>Un <code>yield</code>, el cual hace que el generador vuelva a pausar y devuelva el nuevo valor del generador. La próxima vez que se llame a <code>next()</code>, la ejecución se reanudará con la instrucción inmediatamente después de <code>yield</code>.</li>
- <li>{{jsxref("Statements/throw", "throw")}} se usa para lanzar una excepción desde el generador. Esta detiene la ejecución del generador por completo y la ejecución se reanuda en el llamador (como suele ser el caso cuando se lanza una excepción).</li>
- <li>Se alcanza el final de la función generadora. En este caso, la ejecución del generador finaliza y se devuelve un <code>IteratorResult</code> al llamador en el que el <code>value</code> es {{jsxref("undefined")}} y <code>done</code> es <code>true</code>.</li>
- <li>Se alcanza una instrucción {{jsxref("Statements/return", "return")}}. En este caso, la ejecución del generador finaliza y se devuelve un <code>IteratorResult</code> al llamador en el que el <code>value</code> es el valor especificado por la instrucción <code>return</code> y <code>done</code> es <code>true</code>.</li>
-</ul>
+Si se pasa un valor opcional al método `next()` del generador, ese valor se convierte en el valor devuelto por la operación `yield` actual del generador.
 
-<p>Si se pasa un valor opcional al método <code>next()</code> del generador, ese valor se convierte en el valor devuelto por la operación <code>yield</code> actual del generador.</p>
+Entre la ruta del código del generador, sus operadores `yield` y la capacidad de especificar un nuevo valor inicial pasándolo a {{jsxref("Generator.prototype.next()")}}, los generadores ofrecen enorme poder y control.
 
-<p>Entre la ruta del código del generador, sus operadores <code>yield</code> y la capacidad de especificar un nuevo valor inicial pasándolo a {{jsxref("Generator.prototype.next()")}}, los generadores ofrecen enorme poder y control.</p>
+> **Advertencia:** Desafortunadamente, `next()` es asimétrico, pero eso no se puede evitar: siempre envía un valor al `yield` actualmente suspendido, pero devuelve el operando del siguiente `yield`.
 
-<div class="blockIndicator warning">
-<p>Desafortunadamente, <code>next()</code> es asimétrico, pero eso no se puede evitar: siempre envía un valor al <code>yield</code> actualmente suspendido, pero devuelve el operando del siguiente <code>yield</code>.</p>
-</div>
+## Ejemplos
 
-<h2 id="Ejemplos">Ejemplos</h2>
+### Usar `yield`
 
-<h3 id="Usar_yield">Usar <code>yield</code></h3>
+El siguiente código es la declaración de una función generadora de ejemplo.
 
-<p>El siguiente código es la declaración de una función generadora de ejemplo.</p>
-
-<pre class="brush: js notranslate">function* countAppleSales () {
+```js
+function* countAppleSales () {
   let saleList = [3, 7, 5]
-  for (let i = 0; i &lt; saleList.length; i++) {
+  for (let i = 0; i < saleList.length; i++) {
     yield saleList[i]
   }
-}</pre>
+}
+```
 
-<p>Una vez que se define una función generadora, se puede usar construyendo un iterador como el siguiente.</p>
+Una vez que se define una función generadora, se puede usar construyendo un iterador como el siguiente.
 
-<pre class="brush: js notranslate">let appleStore = countAppleSales()  // Generator { }
+```js
+let appleStore = countAppleSales()  // Generator { }
 console.log(appleStore.next())      // { value: 3, done: false }
 console.log(appleStore.next())      // { value: 7, done: false }
 console.log(appleStore.next())      // { value: 5, done: false }
-console.log(appleStore.next())      // { value: undefined, done: true }</pre>
+console.log(appleStore.next())      // { value: undefined, done: true }
+```
 
-<p>También puedes enviar un valor con <code>next(value)</code> al generador. '<code>step</code>' se evalúa como un valor de retorno en esta sintaxis [<var>rv</var>] = <strong>yield</strong> [<var>expression</var>]</p>
+También puedes enviar un valor con `next(value)` al generador. '`step`' se evalúa como un valor de retorno en esta sintaxis \[_rv_] = **yield** \[_expression_]
 
-<pre class="brush: js notranslate">function* counter(value) {
+```js
+function* counter(value) {
  let step;
 
  while (true) {
@@ -98,34 +95,22 @@ console.log(generatorFunc.next().value);   // 2
 console.log(generatorFunc.next().value);   // 3
 console.log(generatorFunc.next(10).value); // 14
 console.log(generatorFunc.next().value);   // 15
-console.log(generatorFunc.next(10).value); // 26</pre>
+console.log(generatorFunc.next(10).value); // 26
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#prod-YieldExpression', 'Yield')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                               |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#prod-YieldExpression', 'Yield')}} |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
+{{Compat("javascript.operators.yield")}}
 
+## Ve también
 
-<p>{{Compat("javascript.operators.yield")}}</p>
-
-<h2 id="Ve_también">Ve también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">El protocolo <code>Iterator</code></a></li>
- <li>{{jsxref("Statements/function*", "function*")}}</li>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("Operators/yield*", "yield*")}}</li>
-</ul>
+- [El protocolo `Iterator`](/es/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("Operators/yield*", "yield*")}}

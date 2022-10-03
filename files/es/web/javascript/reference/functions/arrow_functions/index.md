@@ -10,28 +10,27 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 original_slug: Web/JavaScript/Referencia/Funciones/Arrow_functions
 ---
-<div>{{jsSidebar("Functions", "Funciones")}}</div>
+{{jsSidebar("Functions", "Funciones")}}
 
-<p>Una <strong>expresión de función flecha</strong> es una alternativa compacta a una {{JSxRef("Operadores/function", "expresión de función")}} tradicional, pero es limitada y no se puede utilizar en todas las situaciones.</p>
+Una **expresión de función flecha** es una alternativa compacta a una {{JSxRef("Operadores/function", "expresión de función")}} tradicional, pero es limitada y no se puede utilizar en todas las situaciones.
 
-<p><strong>Diferencias y limitaciones:</strong></p>
+**Diferencias y limitaciones:**
 
-<ul>
- <li>No tiene sus propios enlaces a {{JSxRef("Operadores/this", "this")}} o {{JSxRef("Operadores/super", "super")}} y no se debe usar como {{Glossary("Method", "métodos")}}.</li>
- <li>No tiene {{JSxRef("Funciones/arguments", "argumentos")}} o palabras clave {{JSxRef("../Operadores/new.target", "new.target")}}.</li>
- <li>No apta para los métodos {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}}, que generalmente se basan en establecer un {{Glossary("Scope", "ámbito o alcance")}}</li>
- <li>No se puede utilizar como {{Glossary("constructor", "constructor")}}.</li>
- <li>No se puede utilizar {{JSxRef("Operadores/yield", "yield")}} dentro de su cuerpo.</li>
-</ul>
+- No tiene sus propios enlaces a {{JSxRef("Operadores/this", "this")}} o {{JSxRef("Operadores/super", "super")}} y no se debe usar como {{Glossary("Method", "métodos")}}.
+- No tiene {{JSxRef("Funciones/arguments", "argumentos")}} o palabras clave {{JSxRef("../Operadores/new.target", "new.target")}}.
+- No apta para los métodos {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}}, que generalmente se basan en establecer un {{Glossary("Scope", "ámbito o alcance")}}
+- No se puede utilizar como {{Glossary("constructor", "constructor")}}.
+- No se puede utilizar {{JSxRef("Operadores/yield", "yield")}} dentro de su cuerpo.
 
-<p>{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}</p>
+{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
 
-<h3 id="Comparación_de_funciones_tradicionales_con_funciones_flecha">Comparación de funciones tradicionales con funciones flecha</h3>
+### Comparación de funciones tradicionales con funciones flecha
 
-<p>Observa, paso a paso, la descomposición de una "función tradicional" hasta la "función flecha" más simple:<br>
- <strong>Nota</strong>: Cada paso a lo largo del camino es una "función flecha" válida</p>
+Observa, paso a paso, la descomposición de una "función tradicional" hasta la "función flecha" más simple:
+**Nota**: Cada paso a lo largo del camino es una "función flecha" válida
 
-<pre class="brush: js notranslate">// Función tradicional
+```js
+// Función tradicional
 function (a){
   return a + 100;
 }
@@ -39,29 +38,29 @@ function (a){
 // Desglose de la función flecha
 
 // 1. Elimina la palabra "function" y coloca la flecha entre el argumento y el corchete de apertura.
-(a) =&gt; {
+(a) => {
   return a + 100;
 }
 
 // 2. Quita los corchetes del cuerpo y la palabra "return" — el return está implícito.
-(a) =&gt; a + 100;
+(a) => a + 100;
 
 // 3. Suprime los paréntesis de los argumentos
-a =&gt; a + 100;</pre>
+a => a + 100;
+```
 
-<div class="blockIndicator note">
-<p>Como se muestra arriba, los { corchetes }, ( paréntesis ) y "return" son opcionales, pero pueden ser obligatorios.</p>
-</div>
+> **Nota:** Como se muestra arriba, los { corchetes }, ( paréntesis ) y "return" son opcionales, pero pueden ser obligatorios.
 
-<p>Por ejemplo, si tienes <strong>varios argumentos</strong> o <strong>ningún argumento</strong>, deberás volver a introducir paréntesis alrededor de los argumentos:</p>
+Por ejemplo, si tienes **varios argumentos** o **ningún argumento**, deberás volver a introducir paréntesis alrededor de los argumentos:
 
-<pre class="brush: js notranslate">// Función tradicional
+```js
+// Función tradicional
 function (a, b){
   return a + b + 100;
 }
 
 // Función flecha
-(a, b) =&gt; a + b + 100;
+(a, b) => a + b + 100;
 
 // Función tradicional (sin argumentos)
 let a = 4;
@@ -73,186 +72,199 @@ function (){
 // Función flecha (sin argumentos)
 let a = 4;
 let b = 2;
-() =&gt; a + b + 100;</pre>
+() => a + b + 100;
+```
 
-<p>Del mismo modo, si el cuerpo requiere <strong>líneas de procesamiento adicionales</strong>, deberás volver a introducir los corchetes <strong>Más el "return"</strong> (las funciones flecha no adivinan mágicamente qué o cuándo quieres "volver"):</p>
+Del mismo modo, si el cuerpo requiere **líneas de procesamiento adicionales**, deberás volver a introducir los corchetes **Más el "return"** (las funciones flecha no adivinan mágicamente qué o cuándo quieres "volver"):
 
-<pre class="brush: js notranslate">// Función tradicional
+```js
+// Función tradicional
 function (a, b){
   let chuck = 42;
   return a + b + chuck;
 }
 
 // Función flecha
-(a, b) =&gt; {
+(a, b) => {
   let chuck = 42;
   return a + b + chuck;
-}</pre>
+}
+```
 
-<div>Y finalmente, en las <strong>funciones con nombre</strong> tratamos las expresiones de flecha como variables</div>
+Y finalmente, en las **funciones con nombre** tratamos las expresiones de flecha como variables
 
-<div>
-<pre class="brush: js notranslate">// Función tradicional
+```js
+// Función tradicional
 function bob (a){
   return a + 100;
 }
 
 // Función flecha
-let bob = a =&gt; a + 100;</pre>
-</div>
+let bob = a => a + 100;
+```
 
+## Sintaxis
 
+### Sintaxis básica
 
+Un parámetro. Con una expresión simple no se necesita `return`:
 
+```js
+param => expression
+```
 
-<h2 id="Sintaxis">Sintaxis</h2>
+Varios parámetros requieren paréntesis. Con una expresión simple no se necesita `return`:
 
-<h3 id="Sintaxis_básica">Sintaxis básica</h3>
+```js
+(param1, paramN) => expression
+```
 
-<p>Un parámetro. Con una expresión simple no se necesita <code>return</code>:</p>
+Las declaraciones de varias líneas requieren corchetes y `return`:
 
-<pre class="brush: js notranslate">param =&gt; expression</pre>
-
-<p>Varios parámetros requieren paréntesis. Con una expresión simple no se necesita <code>return</code>:</p>
-
-<pre class="brush: js notranslate">(param1, paramN) =&gt; expression</pre>
-
-<p>Las declaraciones de varias líneas requieren corchetes y <code>return</code>:</p>
-
-<pre class="brush: js notranslate">param =&gt; {
+```js
+param => {
   let a = 1;
   return a + b;
-}</pre>
+}
+```
 
-<p>Varios parámetros requieren paréntesis. Las declaraciones de varias líneas requieren corchetes y <code>return</code>:</p>
+Varios parámetros requieren paréntesis. Las declaraciones de varias líneas requieren corchetes y `return`:
 
-<pre class="brush: js notranslate">(param1, paramN) =&gt; {
+```js
+(param1, paramN) => {
    let a = 1;
    return a + b;
-}</pre>
+}
+```
 
-<h3 id="Sintaxis_avanzada">Sintaxis avanzada</h3>
+### Sintaxis avanzada
 
-<p>Para devolver una expresión de objeto literal, se requieren paréntesis alrededor de la expresión:</p>
+Para devolver una expresión de objeto literal, se requieren paréntesis alrededor de la expresión:
 
-<pre class="brush: js notranslate">params =&gt; ({foo: "a"}) // devuelve el objeto {foo: "a"}</pre>
+```js
+params => ({foo: "a"}) // devuelve el objeto {foo: "a"}
+```
 
-<p>Los {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} son compatibles:</p>
+Los {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} son compatibles:
 
-<pre class="brush: js notranslate">(a, b, ...r) =&gt; expression</pre>
+```js
+(a, b, ...r) => expression
+```
 
-<p>Se admiten los {{JSxRef("Funciones/Parametros_por_defecto", "parámetros predeterminados")}}:</p>
+Se admiten los {{JSxRef("Funciones/Parametros_por_defecto", "parámetros predeterminados")}}:
 
-<pre class="brush: js notranslate">(a=400, b=20, c) =&gt; expression</pre>
+```js
+(a=400, b=20, c) => expression
+```
 
-<p class="brush: js">{{JSxRef("Operadores/Destructuring_assignment", "Desestructuración")}} dentro de los parámetros admitidos:</p>
+{{JSxRef("Operadores/Destructuring_assignment", "Desestructuración")}} dentro de los parámetros admitidos:
 
-<pre class="brush: js notranslate">([a, b] = [10, 20]) =&gt; a + b;  // el resultado es 30
-({ a, b } = { a: 10, b: 20 }) =&gt; a + b; // resultado es 30
-</pre>
+```js
+([a, b] = [10, 20]) => a + b;  // el resultado es 30
+({ a, b } = { a: 10, b: 20 }) => a + b; // resultado es 30
+```
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Consulta también <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">"ES6 en profundidad: funciones flecha" en hacks.mozilla.org</a>.</p>
+Consulta también ["ES6 en profundidad: funciones flecha" en hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/).
 
-<h3 id="this_y_funciones_flecha">"<code>this</code>" y funciones flecha</h3>
+### "`this`" y funciones flecha
 
-<p class="brush: js notranslate">Una de las razones por las que se introdujeron las funciones flecha fue para eliminar complejidades del ámbito ({{JSxRef("Operadores/this", "this")}}) y hacer que la ejecución de funciones sea mucho más intuitiva.</p>
+Una de las razones por las que se introdujeron las funciones flecha fue para eliminar complejidades del ámbito ({{JSxRef("Operadores/this", "this")}}) y hacer que la ejecución de funciones sea mucho más intuitiva.
 
-<div class="blockIndicator note">
-<p class="brush: js notranslate">Si <code>this</code> es un misterio para ti, consulta {{JSxRef("Operadores/this", "este documento")}} para obtener más información sobre cómo funciona <code>this</code>. Para resumir, <code>this</code> se refiere a la instancia. Las instancias se crean cuando se invoca la palabra clave <code>new</code>. De lo contrario, <code>this</code> se establecerá —de forma predeterminada— en el {{Glossary("Scope", "ámbito o alcance")}} de window.</p>
-</div>
+> **Nota:** Si `this` es un misterio para ti, consulta {{JSxRef("Operadores/this", "este documento")}} para obtener más información sobre cómo funciona `this`. Para resumir, `this` se refiere a la instancia. Las instancias se crean cuando se invoca la palabra clave `new`. De lo contrario, `this` se establecerá —de forma predeterminada— en el {{Glossary("Scope", "ámbito o alcance")}} de window.
 
-<p class="brush: js notranslate">En las <strong>funciones tradicionales</strong> de manera predeterminada <code>this</code> está en el ámbito de <code>window</code>:</p>
+En las **funciones tradicionales** de manera predeterminada `this` está en el ámbito de `window`:
 
-<ul>
-</ul>
-
-<pre class="brush: js notranslate">window.age = 10; // &lt;-- ¿me notas?
+```js
+window.age = 10; // <-- ¿me notas?
 function Person() {
-  this.age = 42; // &lt;-- ¿me notas?
-  setTimeout(function () {// &lt;-- La función tradicional se está ejecutando en el ámbito de window
+  this.age = 42; // <-- ¿me notas?
+  setTimeout(function () {// <-- La función tradicional se está ejecutando en el ámbito de window
     console.log("this.age", this.age); // genera "10" porque la función se ejecuta en el ámbito de window
   }, 100);
 }
 
 var p = new Person();
+```
 
-</pre>
+Las **funciones flecha** **no** predeterminan `this` al {{Glossary("Scope", "ámbito o alcance")}} de `window`, más bien se ejecutan en el {{Glossary("Scope", "ámbito o alcance")}} en que se crean:
 
-<p>Las <strong>funciones flecha</strong> <strong>no</strong> predeterminan <code>this</code> al {{Glossary("Scope", "ámbito o alcance")}} de <code>window</code>, más bien se ejecutan en el {{Glossary("Scope", "ámbito o alcance")}} en que se crean:</p>
-
-<pre class="brush: js notranslate">window.age = 10; // &lt;-- ¿me notas?
+```js
+window.age = 10; // <-- ¿me notas?
 function Person() {
-  this.age = 42; // &lt;-- ¿me notas?
-  setTimeout(() =&gt; {// &lt;-- Función flecha ejecutándose en el ámbito de "p" (una instancia de Person)
+  this.age = 42; // <-- ¿me notas?
+  setTimeout(() => {// <-- Función flecha ejecutándose en el ámbito de "p" (una instancia de Person)
     console.log("this.age", this.age); // genera "42" porque la función se ejecuta en el ámbito de Person
   }, 100);
 }
 
 var p = new Person();
+```
 
-</pre>
+En el ejemplo anterior, la función flecha no tiene su propio `this`. Se utiliza el valor `this` del {{Glossary("Scope", "ámbito")}} léxico adjunto; las funciones flecha siguen las reglas normales de búsqueda de variables. Entonces, mientras busca `this` que no está presente en el {{Glossary("Scope", "ámbito")}} actual, una función flecha termina encontrando el `this` de su {{Glossary("Scope", "ámbito")}} adjunto.
 
-<p>En el ejemplo anterior, la función flecha no tiene su propio <code>this</code>. Se utiliza el valor <code>this</code> del {{Glossary("Scope", "ámbito")}} léxico adjunto; las funciones flecha siguen las reglas normales de búsqueda de variables. Entonces, mientras busca <code>this</code> que no está presente en el {{Glossary("Scope", "ámbito")}} actual, una función flecha termina encontrando el <code>this</code> de su {{Glossary("Scope", "ámbito")}} adjunto.</p>
+**Relación con el modo estricto**
 
-<p><strong>Relación con el modo estricto</strong></p>
+Dado que `this` proviene del contexto léxico circundante, en el {{JSxRef("Modo_estricto", "modo estricto")}} se ignoran las reglas con respecto a `this`.
 
-<p>Dado que <code>this</code> proviene del contexto léxico circundante, en el {{JSxRef("Modo_estricto", "modo estricto")}} se ignoran las reglas con respecto a <code>this</code>.</p>
-
-<pre class="brush: js notranslate">var f = () =&gt; {
+```js
+var f = () => {
     'use strict';
     return this;
 };
 
-f() === window; // o el objeto global</pre>
+f() === window; // o el objeto global
+```
 
-<p>Todas las demás reglas del {{JSxRef("Modo_estricto", "modo estricto")}} se aplican normalmente.</p>
+Todas las demás reglas del {{JSxRef("Modo_estricto", "modo estricto")}} se aplican normalmente.
 
-<div class="blockIndicator warning">
-<p><strong>Nota</strong>: Comprueba las notas sobre el {{JSxRef("Modo_estricto", "modo estricto")}}.</p>
-</div>
+> **Advertencia:** **Nota**: Comprueba las notas sobre el {{JSxRef("Modo_estricto", "modo estricto")}}.
 
-<h3 id="Funciones_flecha_utilizadas_como_métodos">Funciones flecha utilizadas como métodos</h3>
+### Funciones flecha utilizadas como métodos
 
-<p>Como se indicó anteriormente, las expresiones de función flecha son más adecuadas para funciones que no son métodos. Observa qué sucede cuando intentas usarlas como métodos:</p>
+Como se indicó anteriormente, las expresiones de función flecha son más adecuadas para funciones que no son métodos. Observa qué sucede cuando intentas usarlas como métodos:
 
-<pre class="brush: js notranslate">'use strict';
+```js
+'use strict';
 
 var obj = { // no crea un nuevo ámbito
   i: 10,
-  b: () =&gt; console.log(this.i, this),
+  b: () => console.log(this.i, this),
   c: function() {
     console.log(this.i, this);
   }
 }
 
 obj.b(); // imprime indefinido, Window {...} (o el objeto global)
-obj.c(); // imprime 10, Object {...}</pre>
+obj.c(); // imprime 10, Object {...}
+```
 
-<p>Las funciones flecha no tienen su propio <code>this</code>. Otro ejemplo que involucra {{JSxRef("Object.defineProperty()")}}:</p>
+Las funciones flecha no tienen su propio `this`. Otro ejemplo que involucra {{JSxRef("Object.defineProperty()")}}:
 
-<pre class="brush: js notranslate">'use strict';
+```js
+'use strict';
 
 var obj = {
   a: 10
 };
 
 Object.defineProperty(obj, 'b', {
-  get: () =&gt; {
+  get: () => {
     console.log(this.a, typeof this.a, this); // indefinida 'undefined' Window {...} (o el objeto global)
     return this.a + 10; // representa el objeto global 'Window', por lo tanto 'this.a' devuelve 'undefined'
   }
 });
-</pre>
+```
 
-<h3 id="call_apply_y_bind"><code>call</code>, <code>apply</code> y <code>bind</code></h3>
+### `call`, `apply` y `bind`
 
-<p>Los métodos {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}} <strong>NO son adecuados</strong> para las funciones flecha, ya que fueron diseñados para permitir que los métodos se ejecuten dentro de diferentes ámbitos, porque <strong>las funciones flecha establecen "<code>this</code>" según el ámbito dentro del cual se define la función flecha.</strong></p>
+Los métodos {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}} **NO son adecuados** para las funciones flecha, ya que fueron diseñados para permitir que los métodos se ejecuten dentro de diferentes ámbitos, porque **las funciones flecha establecen "`this`" según el ámbito dentro del cual se define la función flecha.**
 
-<p>Por ejemplo, {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}} funcionan como se esperaba con las funciones tradicionales, porque establecen el ámbito para cada uno de los métodos:</p>
+Por ejemplo, {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}} funcionan como se esperaba con las funciones tradicionales, porque establecen el ámbito para cada uno de los métodos:
 
-<pre class="brush: js notranslate">// ----------------------
+```js
+// ----------------------
 // Ejemplo tradicional
 // ----------------------
 // Un objeto simplista con su propio "this".
@@ -279,11 +291,13 @@ console.log(result) // resultado 106
 
 // bind
 var result = add.bind(obj) // estable el ámbito como "obj"
-console.log(result(1, 2, 3)) // resultado 106</pre>
+console.log(result(1, 2, 3)) // resultado 106
+```
 
-<p>Con las funciones flecha, dado que la función <code>add</code> esencialmente se crea en el ámbito del <code>window</code> (global), asumirá que <code>this</code> es window.</p>
+Con las funciones flecha, dado que la función `add` esencialmente se crea en el ámbito del `window` (global), asumirá que `this` es window.
 
-<pre class="brush: js notranslate">// ----------------------
+```js
+// ----------------------
 // Ejemplo de flecha
 // ----------------------
 
@@ -296,7 +310,7 @@ var obj = {
 window.num = 2020; // ¡Ay!
 
 // Función flecha
-var add = (a, b, c) =&gt; this.num + a + b + c;
+var add = (a, b, c) => this.num + a + b + c;
 
 // call
 console.log(add.call(obj, 1, 2, 3)) // resultado 2026
@@ -308,13 +322,14 @@ console.log(add.apply(obj, arr)) // resultado 2026
 // bind
 const bound = add.bind(obj)
 console.log(bound(1, 2, 3)) // resultado 2026
-</pre>
+```
 
-<p>Quizás el mayor beneficio de usar las funciones flecha es con los métodos a nivel del DOM (<code>setTimeout</code>, <code>setInterval</code>, <code>addEventListener</code>) que generalmente requieren algún tipo de cierre, llamada, aplicación o vinculación para garantizar que la función se ejecute en el ámbito adecuado.</p>
+Quizás el mayor beneficio de usar las funciones flecha es con los métodos a nivel del DOM (`setTimeout`, `setInterval`, `addEventListener`) que generalmente requieren algún tipo de cierre, llamada, aplicación o vinculación para garantizar que la función se ejecute en el ámbito adecuado.
 
-<p><strong>Ejemplo tradicional:</strong></p>
+**Ejemplo tradicional:**
 
-<pre class="brush: js notranslate">var obj = {
+```js
+var obj = {
     count : 10,
     doSomethingLater : function (){
         setTimeout(function(){ // la función se ejecuta en el ámbito de window
@@ -324,113 +339,131 @@ console.log(bound(1, 2, 3)) // resultado 2026
     }
 }
 
-obj.doSomethingLater(); // la consola imprime "NaN", porque la propiedad "count" no está en el ámbito de window.</pre>
+obj.doSomethingLater(); // la consola imprime "NaN", porque la propiedad "count" no está en el ámbito de window.
+```
 
-<p><strong>Ejemplo de flecha:</strong></p>
+**Ejemplo de flecha:**
 
-<pre class="brush: js notranslate">var obj = {
+```js
+var obj = {
     count : 10,
     doSomethingLater : function(){  // por supuesto, las funciones flecha no son adecuadas para métodos
-        setTimeout( () =&gt; { // dado que la función flecha se creó dentro del "obj", asume el "this" del objeto
+        setTimeout( () => { // dado que la función flecha se creó dentro del "obj", asume el "this" del objeto
             this.count++;
             console.log(this.count);
         }, 300);
     }
 }
 
-obj.doSomethingLater();</pre>
+obj.doSomethingLater();
+```
 
-<h3 id="Sin_enlace_de_arguments">Sin enlace de <code>arguments</code></h3>
+### Sin enlace de `arguments`
 
-<p>Las funciones flecha no tienen su propio objeto {{JSxRef("Funciones/arguments", "arguments")}}. Por tanto, en este ejemplo, <code>arguments</code> simplemente es una referencia a los argumentos del ámbito adjunto:</p>
+Las funciones flecha no tienen su propio objeto {{JSxRef("Funciones/arguments", "arguments")}}. Por tanto, en este ejemplo, `arguments` simplemente es una referencia a los argumentos del ámbito adjunto:
 
-<pre class="brush: js notranslate">var arguments = [1, 2, 3];
-var arr = () =&gt; arguments[0];
+```js
+var arguments = [1, 2, 3];
+var arr = () => arguments[0];
 
 arr(); // 1
 
 function foo(n) {
-  var f = () =&gt; arguments[0] + n; // Los argumentos implícitos de foo son vinculantes. arguments[0] es n
+  var f = () => arguments[0] + n; // Los argumentos implícitos de foo son vinculantes. arguments[0] es n
   return f();
 }
 
-foo(3); // 6</pre>
+foo(3); // 6
+```
 
-<p>En la mayoría de los casos, usar {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} es una buena alternativa a usar un objeto <code>arguments</code>.</p>
+En la mayoría de los casos, usar {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} es una buena alternativa a usar un objeto `arguments`.
 
-<pre class="brush: js notranslate">function foo(n) {
-  var f = (...args) =&gt; args[0] + n;
+```js
+function foo(n) {
+  var f = (...args) => args[0] + n;
   return f(10);
 }
 
-foo(1); // 11</pre>
+foo(1); // 11
+```
 
-<h3 id="Uso_del_operador_new">Uso del operador <code>new</code></h3>
+### Uso del operador `new`
 
-<p>Las funciones flecha no se pueden usar como constructores y arrojarán un error cuando se usen con <code>new</code>.</p>
+Las funciones flecha no se pueden usar como constructores y arrojarán un error cuando se usen con `new`.
 
-<pre class="brush: js notranslate">var Foo = () =&gt; {};
-var foo = new Foo(); // TypeError: Foo no es un constructor</pre>
+```js
+var Foo = () => {};
+var foo = new Foo(); // TypeError: Foo no es un constructor
+```
 
-<h3 id="Uso_de_la_propiedad_prototype">Uso de la propiedad <code>prototype</code></h3>
+### Uso de la propiedad `prototype`
 
-<p>Las funciones flecha no tienen una propiedad <code>prototype</code>.</p>
+Las funciones flecha no tienen una propiedad `prototype`.
 
-<pre class="brush: js notranslate">var Foo = () =&gt; {};
+```js
+var Foo = () => {};
 console.log(Foo.prototype); // undefined
-</pre>
+```
 
-<h3 id="Uso_de_la_palabra_clave_yield">Uso de la palabra clave <code>yield</code></h3>
+### Uso de la palabra clave `yield`
 
-<p>La palabra clave {{JSxRef("Operadores/yield", "yield")}} no se puede utilizar en el cuerpo de una función flecha (excepto cuando está permitido dentro de las funciones anidadas dentro de ella). Como consecuencia, las funciones flecha no se pueden utilizar como generadores.</p>
+La palabra clave {{JSxRef("Operadores/yield", "yield")}} no se puede utilizar en el cuerpo de una función flecha (excepto cuando está permitido dentro de las funciones anidadas dentro de ella). Como consecuencia, las funciones flecha no se pueden utilizar como generadores.
 
-<h3 id="Cuerpo_de_función">Cuerpo de función</h3>
+### Cuerpo de función
 
-<p>Las funciones flecha pueden tener un "cuerpo conciso" o el "cuerpo de bloque" habitual.</p>
+Las funciones flecha pueden tener un "cuerpo conciso" o el "cuerpo de bloque" habitual.
 
-<p>En un cuerpo conciso, solo se especifica una expresión, que se convierte en el valor de retorno implícito. En el cuerpo de un bloque, debes utilizar una instrucción <code>return</code> explícita.</p>
+En un cuerpo conciso, solo se especifica una expresión, que se convierte en el valor de retorno implícito. En el cuerpo de un bloque, debes utilizar una instrucción `return` explícita.
 
-<pre class="brush: js notranslate">var func = x =&gt; x * x;
+```js
+var func = x => x * x;
 // sintaxis de cuerpo conciso, "return" implícito
 
-var func = (x, y) =&gt; { return x + y; };
+var func = (x, y) => { return x + y; };
 // con cuerpo de bloque, se necesita un "return" explícito
-</pre>
+```
 
-<h3 id="Devolver_objetos_literales">Devolver objetos literales</h3>
+### Devolver objetos literales
 
-<p>Ten en cuenta que devolver objetos literales utilizando la sintaxis de cuerpo conciso <code>params =&gt; {object: literal}</code> no funcionará como se esperaba.</p>
+Ten en cuenta que devolver objetos literales utilizando la sintaxis de cuerpo conciso `params => {object: literal}` no funcionará como se esperaba.
 
-<pre class="brush: js notranslate">var func = () =&gt; { foo: 1 };
+```js
+var func = () => { foo: 1 };
 // ¡Llamar a func() devuelve undefined!
 
-var func = () =&gt; { foo: function() {} };
-// SyntaxError: la declaración function requiere un nombre</pre>
+var func = () => { foo: function() {} };
+// SyntaxError: la declaración function requiere un nombre
+```
 
-<p>Esto se debe a que el código entre llaves ({}) se procesa como una secuencia de declaraciones (es decir, <code>foo</code> se trata como una etiqueta, no como una clave en un objeto literal).</p>
+Esto se debe a que el código entre llaves ({}) se procesa como una secuencia de declaraciones (es decir, `foo` se trata como una etiqueta, no como una clave en un objeto literal).
 
-<p>Debes envolver el objeto literal entre paréntesis:</p>
+Debes envolver el objeto literal entre paréntesis:
 
-<pre class="brush: js notranslate">var func = () =&gt; ({ foo: 1 });</pre>
+```js
+var func = () => ({ foo: 1 });
+```
 
-<h3 id="Saltos_de_línea">Saltos de línea</h3>
+### Saltos de línea
 
-<p>Una función flecha no puede contener un salto de línea entre sus parámetros y su flecha.</p>
+Una función flecha no puede contener un salto de línea entre sus parámetros y su flecha.
 
-<pre class="brush: js notranslate">var func = (a, b, c)
-  =&gt; 1;
-// SyntaxError: expresión esperada, obtuve '=&gt;'</pre>
+```js
+var func = (a, b, c)
+  => 1;
+// SyntaxError: expresión esperada, obtuve '=>'
+```
 
-<p>Sin embargo, esto se puede modificar colocando el salto de línea después de la flecha o usando paréntesis/llaves como se ve a continuación para garantizar que el código se mantenga bonito y esponjoso. También puedes poner saltos de línea entre argumentos.</p>
+Sin embargo, esto se puede modificar colocando el salto de línea después de la flecha o usando paréntesis/llaves como se ve a continuación para garantizar que el código se mantenga bonito y esponjoso. También puedes poner saltos de línea entre argumentos.
 
-<pre class="brush: js notranslate">var func = (a, b, c) =&gt;
+```js
+var func = (a, b, c) =>
   1;
 
-var func = (a, b, c) =&gt; (
+var func = (a, b, c) => (
   1
 );
 
-var func = (a, b, c) =&gt; {
+var func = (a, b, c) => {
   return 1
 };
 
@@ -438,94 +471,84 @@ var func = (
   a,
   b,
   c
-) =&gt; 1;
+) => 1;
 
-// no se lanza SyntaxError</pre>
+// no se lanza SyntaxError
+```
 
-<h3 id="Orden_de_procesamiento">Orden de procesamiento</h3>
+### Orden de procesamiento
 
-<p>Aunque la flecha en una función flecha no es un operador, las funciones flecha tienen reglas de procesamiento especiales que interactúan de manera diferente con {{JSxRef("Operadores/Operator_Precedence", "prioridad de operadores")}} en comparación con las funciones regulares.</p>
+Aunque la flecha en una función flecha no es un operador, las funciones flecha tienen reglas de procesamiento especiales que interactúan de manera diferente con {{JSxRef("Operadores/Operator_Precedence", "prioridad de operadores")}} en comparación con las funciones regulares.
 
-<pre class="brush: js notranslate">let callback;
+```js
+let callback;
 
 callback = callback || function() {}; // ok
 
-callback = callback || () =&gt; {};
+callback = callback || () => {};
 // SyntaxError: argumentos de función flecha no válidos
 
-callback = callback || (() =&gt; {});    // bien
-</pre>
+callback = callback || (() => {});    // bien
+```
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Uso_básico">Uso básico</h3>
+### Uso básico
 
-<pre class="brush: js notranslate">// Una función flecha vacía devuelve undefinided
-let empty = () =&gt; {};
+```js
+// Una función flecha vacía devuelve undefinided
+let empty = () => {};
 
-(() =&gt; 'foobar')();
+(() => 'foobar')();
 // Devuelve "foobar"
 // (esta es una expresión de función invocada inmediatamente)
 
-var simple = a =&gt; a &gt; 15 ? 15 : a;
+var simple = a => a > 15 ? 15 : a;
 simple(16); // 15
 simple(10); // 10
 
-let max = (a, b) =&gt; a &gt; b ? a : b;
+let max = (a, b) => a > b ? a : b;
 
 // Fácil filtrado de arreglos, mapeo, ...
 
 var arr = [5, 6, 13, 0, 1, 18, 23];
 
-var sum = arr.reduce((a, b) =&gt; a + b);
+var sum = arr.reduce((a, b) => a + b);
 // 66
 
-var even = arr.filter(v =&gt; v % 2 == 0);
+var even = arr.filter(v => v % 2 == 0);
 // [6, 0, 18]
 
-var double = arr.map(v =&gt; v * 2);
+var double = arr.map(v => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // Cadenas de promesas más concisas
-promise.then(a =&gt; {
+promise.then(a => {
   // ...
-}).then(b =&gt; {
+}).then(b => {
   // ...
 });
 
 // Funciones flecha sin parámetros que son visualmente más fáciles de procesar
-setTimeout( () =&gt; {
+setTimeout( () => {
   console.log('sucederá antes');
-  setTimeout( () =&gt; {
+  setTimeout( () => {
     // código más profundo
     console.log ('Sucederá más tarde');
   }, 1);
 }, 1);
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Definición de función flecha')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Definición de función flecha')}} |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<div>
+{{Compat("javascript.functions.arrow_functions")}}
 
+## Ve también
 
-<p>{{Compat("javascript.functions.arrow_functions")}}</p>
-</div>
-
-<h2 id="Ve_también">Ve también</h2>
-
-<ul>
- <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">"ES6 en profundidad: funciones flecha" en hacks.mozilla.org</a></li>
-</ul>
+- ["ES6 en profundidad: funciones flecha" en hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)

@@ -9,65 +9,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/async_function
 original_slug: Web/JavaScript/Referencia/Sentencias/funcion_asincrona
 ---
-<div>
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>La declaración de función <code><strong>async</strong></code> define una <em>función asíncrona</em>, la cual devuelve un objeto {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.</p>
+La declaración de función **`async`** define una _función asíncrona_, la cual devuelve un objeto {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.
 
-<div class="noinclude">
-<p>Es posible definir también funciones asíncronas a través de una {{jsxref("Operators/async_function", "expresión de función async", "", 1)}}.</p>
-</div>
-</div>
+Es posible definir también funciones asíncronas a través de una {{jsxref("Operators/async_function", "expresión de función async", "", 1)}}.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
 
-<p>The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
-   <em>statements</em>
+```
+async function name([param[, param[, ... param]]]) {
+   statements
 }
-</pre>
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>name</code></dt>
- <dd>El nombre de la función.</dd>
-</dl>
+- `name`
+  - : El nombre de la función.
 
-<dl>
- <dt><code>param</code></dt>
- <dd>El nombre de un argumento que se debe pasar a la función.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>statements</code></dt>
- <dd>Las declaraciones que conforman el cuerpo de la función.</dd>
-</dl>
+- `param`
+  - : El nombre de un argumento que se debe pasar a la función.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+<!---->
 
-<p>Un objeto {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}, que representa una función asíncrona que ejecuta el código contenido dentro de la función.</p>
+- `statements`
+  - : Las declaraciones que conforman el cuerpo de la función.
 
-<h2 id="Descripción">Descripción</h2>
+### Valor de retorno
 
-<p>Cuando se llama a una función <code>async</code>, esta devuelve un elemento {{jsxref("Promise")}}. Cuando la función <code>async</code> devuelve un valor, <code>Promise</code> se resolverá con el valor devuelto. Si la función <code>async</code> genera una excepción o algún valor, <code>Promise</code> se rechazará con el valor generado.</p>
+Un objeto {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}, que representa una función asíncrona que ejecuta el código contenido dentro de la función.
 
-<p>Una función <code>async</code> puede contener una expresión {{jsxref("Operators/await", "await")}}, la cual pausa la ejecución de la función asíncrona y espera la resolución de la <code>Promise</code> pasada y, a continuación, reanuda la ejecución de la función <code>async</code> y devuelve el valor resuelto.</p>
+## Descripción
 
-<div class="note">
-<p>La finalidad de las funciones <code>async</code>/<code>await</code> es simplificar el comportamiento del uso síncrono de promesas y realizar algún comportamiento específico en un grupo de <code>Promises</code>. Del mismo modo que las <code>Promises</code> son semejantes a las devoluciones de llamadas estructuradas, <code>async</code>/<code>await</code> se asemejan a una combinación de generadores y promesas.</p>
-</div>
+Cuando se llama a una función `async`, esta devuelve un elemento {{jsxref("Promise")}}. Cuando la función `async` devuelve un valor, `Promise` se resolverá con el valor devuelto. Si la función `async` genera una excepción o algún valor, `Promise` se rechazará con el valor generado.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+Una función `async` puede contener una expresión {{jsxref("Operators/await", "await")}}, la cual pausa la ejecución de la función asíncrona y espera la resolución de la `Promise` pasada y, a continuación, reanuda la ejecución de la función `async` y devuelve el valor resuelto.
 
-<h3 id="Ejemplo_sencillo">Ejemplo sencillo</h3>
+> **Nota:** La finalidad de las funciones `async`/`await` es simplificar el comportamiento del uso síncrono de promesas y realizar algún comportamiento específico en un grupo de `Promises`. Del mismo modo que las `Promises` son semejantes a las devoluciones de llamadas estructuradas, `async`/`await` se asemejan a una combinación de generadores y promesas.
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+## Ejemplos
+
+### Ejemplo sencillo
+
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -80,7 +74,7 @@ async function add1(x) {
   return x + a + b;
 }
 
-add1(10).then(v =&gt; {
+add1(10).then(v => {
   console.log(v);  // prints 60 after 4 seconds.
 });
 
@@ -91,35 +85,33 @@ async function add2(x) {
   return x + await p_a + await p_b;
 }
 
-add2(10).then(v =&gt; {
+add2(10).then(v => {
   console.log(v);  // prints 60 after 2 seconds.
 });
-</pre>
+```
 
-<div class="warning">
-<h4 id="No_se_deben_confundir_await_y_Promise.all">No se deben confundir <code>await</code> y <code>Promise.all</code></h4>
+> **Advertencia:** #### No se deben confundir `await` y `Promise.all`En `add1`, la ejecución se suspende durante dos segundos correspondientes al primer operador `await`, y luego durante otros dos segundos correspondientes al segundo `await`. El segundo temporizador no se crea hasta que el primero no se haya disparado ya. En `add2`, ambos temporizadores se crean y, acto seguido, ambos reciben `await`. Esto provoca la resolución en dos segundos y no cuatro, ya que los temporizadores se ejecutaron de manera simultánea. Sin embargo, ambas llamadas `await` aún pueden ejecutarse en series, no en paralelo: esto **no** constituye ninguna aplicación automática de `Promise.all`. Si se desea aplicar `await` a dos o más promesas en paralelo, es preciso utilizar `Promise.all`.
 
-<p>En <code>add1</code>, la ejecución se suspende durante dos segundos correspondientes al primer operador <code>await</code>, y luego durante otros dos segundos correspondientes al segundo <code>await</code>. El segundo temporizador no se crea hasta que el primero no se haya disparado ya. En <code>add2</code>, ambos temporizadores se crean y, acto seguido, ambos reciben <code>await</code>. Esto provoca la resolución en dos segundos y no cuatro, ya que los temporizadores se ejecutaron de manera simultánea. Sin embargo, ambas llamadas <code>await</code> aún pueden ejecutarse en series, no en paralelo: esto <strong>no</strong> constituye ninguna aplicación automática de <code>Promise.all</code>. Si se desea aplicar <code>await</code> a dos o más promesas en paralelo, es preciso utilizar <code>Promise.all</code>.</p>
-</div>
+### Reescritura de una cadena de promesas con una función `async`
 
-<h3 id="Reescritura_de_una_cadena_de_promesas_con_una_función_async">Reescritura de una cadena de promesas con una función <code>async</code></h3>
+Una API que devuelva una {{jsxref("Promise")}} tendrá como resultado una cadena de promesas, y dividirá la función en muchas partes. Estudie este código:
 
-<p>Una API que devuelva una {{jsxref("Promise")}} tendrá como resultado una cadena de promesas, y dividirá la función en muchas partes. Estudie este código:</p>
-
-<pre class="brush: js">function getProcessedData(url) {
+```js
+function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e =&gt; {
+    .catch(e => {
       return downloadFallbackData(url)  // returns a promise
     })
-    .then(v =&gt; {
+    .then(v => {
       return processDataInWorker(v); // returns a promise
     });
 }
-</pre>
+```
 
-<p>Es posible reescribirlo utilizando un solo operador <code>async</code> de esta manera:</p>
+Es posible reescribirlo utilizando un solo operador `async` de esta manera:
 
-<pre class="brush: js">async function getProcessedData(url) {
+```js
+async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
@@ -128,47 +120,24 @@ add2(10).then(v =&gt; {
   }
   return processDataInWorker(v);
 }
-</pre>
+```
 
-<p>Observe que, en el ejemplo anterior, no hay ninguna instrucción <code>await</code> dentro de la instrucción <code>return</code>, porque el valor de retorno de una <code>async function</code> queda implícitamente dentro de un {{jsxref("Promise.resolve")}}.</p>
+Observe que, en el ejemplo anterior, no hay ninguna instrucción `await` dentro de la instrucción `return`, porque el valor de retorno de una `async function` queda implícitamente dentro de un {{jsxref("Promise.resolve")}}.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'Función async')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definición inicial en ES2017.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES8', '#sec-async-function-definitions', 'Función async')}}</td>
-   <td>{{Spec2('ES8')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estado                       | Comentario                    |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------- |
+| {{SpecName('ESDraft', '#sec-async-function-definitions', 'Función async')}} | {{Spec2('ESDraft')}} | Definición inicial en ES2017. |
+| {{SpecName('ES8', '#sec-async-function-definitions', 'Función async')}}     | {{Spec2('ES8')}}         |                               |
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
-<div>
+{{Compat("javascript.statements.async_function")}}
 
+## Véase también
 
-<p>{{Compat("javascript.statements.async_function")}}</p>
-</div>
-
-<h2 id="Véase_también">Véase también</h2>
-
-<ul>
- <li>{{jsxref("Operators/async_function", "Expresión de función async")}}</li>
- <li>Objeto {{jsxref("AsyncFunction")}}</li>
- <li>{{jsxref("Operators/await", "await")}}</li>
- <li><a href="http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/">«Decorar funciones async de JavaScript» en innolitics.com</a> (en inglés)</li>
-</ul>
+- {{jsxref("Operators/async_function", "Expresión de función async")}}
+- Objeto {{jsxref("AsyncFunction")}}
+- {{jsxref("Operators/await", "await")}}
+- [«Decorar funciones async de JavaScript» en innolitics.com](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (en inglés)

@@ -4,72 +4,62 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/cos
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">La función estática <strong><code>Math.cos()</code></strong> devuelve el <a href="https://es.wikipedia.org/wiki/Coseno">coseno</a> del ángulo especificado, que debe ser especificado en <a href="https://es.wikipedia.org/wiki/Radi%C3%A1n" title="radians">radianes</a>. Este valor es </span><math style="display: inline;"> <mstyle displaystyle="true"> <mfrac> <msub> <mrow> <mtext>longitud</mtext> </mrow> <mrow> <mrow> <mtext>adyacente</mtext> </mrow> </mrow> </msub> <msub> <mrow> <mtext>longitud</mtext> </mrow> <mrow> <mrow> <mtext>hipotenusa</mtext> </mrow> </mrow> </msub> </mfrac> </mstyle> </math>.<span> </span></p>
+La función estática **`Math.cos()`** devuelve el [coseno](https://es.wikipedia.org/wiki/Coseno) del ángulo especificado, que debe ser especificado en [radianes](https://es.wikipedia.org/wiki/Radi%C3%A1n "radians"). Este valor es <math style="display: inline;"><mstyle displaystyle="true"><mfrac><msub><mrow><mtext>longitud</mtext> </mrow><mrow><mrow><mtext>adyacente</mtext> </mrow></mrow></msub><msub><mrow><mtext>longitud</mtext> </mrow><mrow><mrow><mtext>hipotenusa</mtext> </mrow></mrow></msub></mfrac></mstyle></math>.
 
-<div>{{EmbedInteractiveExample("pages/js/math-cos.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-cos.html")}}
 
-<p>El código fuente de este ejemplo interactivo está almacenado en un repositorio de GitHub. Si te gustaría contribuir con el proyecto de ejemplos interactivos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos un pull request.</p>
+El código fuente de este ejemplo interactivo está almacenado en un repositorio de GitHub. Si te gustaría contribuir con el proyecto de ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos un pull request.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre><code>Math.cos(<var>x</var>)</code></pre>
+```
+Math.cos(x)
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>El ángulo en radianes por el cual devolverá el coseno.</dd>
-</dl>
+- `x`
+  - : El ángulo en radianes por el cual devolverá el coseno.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>El coseno del número dado.</p>
+El coseno del número dado.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El método <code>Math.cos()</code> retorna un valor numérico entre -1 y 1, que representa el coseno del ángulo.</p>
+El método `Math.cos()` retorna un valor numérico entre -1 y 1, que representa el coseno del ángulo.
 
-<p>Debido a que <code>cos()</code> es un método estático de <code>Math</code>, siempre debes utilizarlo como <code>Math.cos()</code>, en lugar de como un método de un objeto <code>Math</code> que hayas creado (<code>Math</code> no es un constructor).</p>
+Debido a que `cos()` es un método estático de `Math`, siempre debes utilizarlo como `Math.cos()`, en lugar de como un método de un objeto `Math` que hayas creado (`Math` no es un constructor).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_Math.cos">Usando <code>Math.cos()</code></h3>
+### Usando `Math.cos()`
 
-<pre class="brush: js notranslate">Math.cos(0);           // 1
+```js
+Math.cos(0);           // 1
 Math.cos(1);           // 0.5403023058681398
 
 Math.cos(Math.PI);     // -1
 Math.cos(2 * Math.PI); // 1
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.cos', 'Math.cos')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                       |
+| -------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.cos', 'Math.cos')}} |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
+{{Compat("javascript.builtins.Math.cos")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Math.cos")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Math.acos()")}}</li>
- <li>{{jsxref("Math.asin()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.atan2()")}}</li>
- <li>{{jsxref("Math.sin()")}}</li>
- <li>{{jsxref("Math.tan()")}}</li>
-</ul>
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.atan2()")}}
+- {{jsxref("Math.sin()")}}
+- {{jsxref("Math.tan()")}}

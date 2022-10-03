@@ -13,53 +13,54 @@ translation_of: Web/JavaScript/Reference/Statements/let
 original_slug: Web/JavaScript/Referencia/Sentencias/let
 browser-compat: javascript.statements.let
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>La instrucción <strong><code>let</code></strong> declara una variable de alcance local con ámbito de bloque<font><font>(</font></font><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/block">block </a>scope<font><font>)</font></font>, la cual, opcionalmente, puede ser inicializada con algún valor.</p>
+La instrucción **`let`** declara una variable de alcance local con ámbito de bloque([block ](/es/docs/Web/JavaScript/Referencia/Sentencias/block)scope), la cual, opcionalmente, puede ser inicializada con algún valor.
 
-<div class="warning">
-<p class="p1">La palabra reservada <strong><code><span class="s1">let </span></code></strong>en Mozilla Firefox 44 y anteriores, está solo disponible para bloques de código en HTML que esten envueltos en una etiqueta <code><span class="s1">&lt;script type="application/javascript;version=1.7"&gt;</span></code> (o de una version mayor). Las etiquetas <a href="https://developer.mozilla.org/en-US/docs/XUL">XUL</a> tienen acceso a esas características sin necesidad de dicho bloque.  Es necesario tomar en cuenta que esta es una característica <s>no estándar</s> <u>que ya se ha hecho actualmente estándar</u>, <s>esto</s> <u>pero</u> puede crear conflictos con otros navegadores<u>, ya que fue una característica no estándar.</u></p>
-</div>
+> **Advertencia:** La palabra reservada **`let `**en Mozilla Firefox 44 y anteriores, está solo disponible para bloques de código en HTML que esten envueltos en una etiqueta `<script type="application/javascript;version=1.7">` (o de una version mayor). Las etiquetas [XUL](/es/docs/XUL) tienen acceso a esas características sin necesidad de dicho bloque. Es necesario tomar en cuenta que esta es una característica ~~no estándar~~ **que ya se ha hecho actualmente estándar**, ~~esto~~ **pero** puede crear conflictos con otros navegadores**, ya que fue una característica no estándar.**
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre>let var1 [= valor1] [, var2 [= valor2]] [, ..., varN [= valorN]];</pre>
+```
+let var1 [= valor1] [, var2 [= valor2]] [, ..., varN [= valorN]];
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>var1</code>, <code>var2</code>, …, <code>varN</code></dt>
- <dd>Los nombres de la variable o las variables a declarar. Cada una de ellas debe ser un identificador legal de JavaScript</dd>
- <dt><code>value1</code>, <code>value2</code>, …, <code>valueN</code></dt>
- <dd>Por cada una de las variables declaradas puedes, opcionalmente, especificar su valor inicial como una expresión legal JavaScript.</dd>
-</dl>
+- `var1`, `var2`, …, `varN`
+  - : Los nombres de la variable o las variables a declarar. Cada una de ellas debe ser un identificador legal de JavaScript
+- `value1`, `value2`, …, `valueN`
+  - : Por cada una de las variables declaradas puedes, opcionalmente, especificar su valor inicial como una expresión legal JavaScript.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p><strong><code>let</code> </strong>te permite declarar variables limitando su alcance (<em>scope</em>) al bloque, declaración, o expresión donde se está usando.a diferencia de la palabra clave <code>var</code> la cual define una variable global o local en una función sin importar el ámbito del bloque. La otra diferencia entre <code>var</code> y <code>let</code> <span lang="es"><span><span>es que este último se inicializa a un valor sólo cuando un analizador lo evalúa (ver abajo).</span></span></span></p>
+**`let` **te permite declarar variables limitando su alcance (_scope_) al bloque, declaración, o expresión donde se está usando.a diferencia de la palabra clave `var` la cual define una variable global o local en una función sin importar el ámbito del bloque. La otra diferencia entre `var` y `let` es que este último se inicializa a un valor sólo cuando un analizador lo evalúa (ver abajo).
 
-<p>Al igual que <code>const</code>, <code>let </code>no crea propiedades del objeto se declara globalmente (en el alcance más alto).</p>
+Al igual que `const`, `let `no crea propiedades del objeto se declara globalmente (en el alcance más alto).
 
-<h3 id="Alcance_scope_a_nivel_de_bloque_con_let">Alcance (<em>scope</em>) a nivel de bloque con <code>let</code></h3>
+### Alcance (_scope_) a nivel de bloque con `let`
 
-<p>Usar la palabra reservada <code>let</code> para definir variables dentro de un bloque.</p>
+Usar la palabra reservada `let` para definir variables dentro de un bloque.
 
-<pre class="brush:js notranslate">if (x &gt; y) {
+```js
+if (x > y) {
   let gamma = 12.7 + y;
   i = gamma * x;
 }
-</pre>
+```
 
-<p>Es posible usar definiciones <code>let</code> para asociar código en extensiones con un pseudo-espacio-de-nombre (pseudo-namespace). (Ver <a href="/en-US/docs/Security_best_practices_in_extensions" title="en-US/docs/Security_best_practices_in_extensions">Mejores prácticas de seguridad en extensiones</a>.)</p>
+Es posible usar definiciones `let` para asociar código en extensiones con un pseudo-espacio-de-nombre (pseudo-namespace). (Ver [Mejores prácticas de seguridad en extensiones](/es/docs/Security_best_practices_in_extensions "en-US/docs/Security_best_practices_in_extensions").)
 
-<pre class="brush:js notranslate">let Cc = Components.classes, Ci = Components.interfaces;
-</pre>
+```js
+let Cc = Components.classes, Ci = Components.interfaces;
+```
 
-<p><code>let</code> puede ser útil para escribir código más limpio cuando usamos funciones internas.</p>
+`let` puede ser útil para escribir código más limpio cuando usamos funciones internas.
 
-<pre class="brush:js notranslate">var list = document.getElementById("list");
+```js
+var list = document.getElementById("list");
 
-for (var i = 1; i &lt;= 5; i++) {
+for (var i = 1; i <= 5; i++) {
   var item = document.createElement("LI");
   item.appendChild(document.createTextNode("Item " + i));
 
@@ -69,15 +70,16 @@ for (var i = 1; i &lt;= 5; i++) {
   };
   list.appendChild(item);
 }
-</pre>
+```
 
-<p>El ejemplo anterior trabaja como se espera porque las cinco instancias de la función (anónima) interna hacen referencia a cinco diferentes instancias de la variable <code>j</code>. Nótese que esto no funcionaría como se espera si reemplazamos <code>let</code> con <code>var</code> o si removemos la variable <code>j</code> y simplemente usamos la variable <code>i</code> dentro de la función interna.</p>
+El ejemplo anterior trabaja como se espera porque las cinco instancias de la función (anónima) interna hacen referencia a cinco diferentes instancias de la variable `j`. Nótese que esto no funcionaría como se espera si reemplazamos `let` con `var` o si removemos la variable `j` y simplemente usamos la variable `i` dentro de la función interna.
 
-<h4 id="Reglas_de_alcance">Reglas de alcance</h4>
+#### Reglas de alcance
 
-<p>Variables declaradas por <code>let</code> tienen por alcance el bloque en el que se han definido, así mismo, como en cualquier bloque interno. De esta manera, <code>let</code> trabaja muy parecido a <code>var</code>. La más notable diferencia es que el alcance de una variable <code>var</code> es la función contenedora:</p>
+Variables declaradas por `let` tienen por alcance el bloque en el que se han definido, así mismo, como en cualquier bloque interno. De esta manera, `let` trabaja muy parecido a `var`. La más notable diferencia es que el alcance de una variable `var` es la función contenedora:
 
-<pre class="brush:js notranslate">function varTest() {
+```js
+function varTest() {
   var x = 31;
   if (true) {
     var x = 71;  // ¡misma variable!
@@ -97,23 +99,25 @@ function letTest() {
 // llamamos a las funciones
 varTest();
 letTest();
-</pre>
+```
 
-<p>En el nivel superior de un programa y funciones, <code>let</code> , a diferencia de <code>var</code>, <strong>no crea</strong> una propiedad en el objeto global, por ejemplo:</p>
+En el nivel superior de un programa y funciones, `let` , a diferencia de `var`, **no crea** una propiedad en el objeto global, por ejemplo:
 
-<pre class="brush:js notranslate">var x = 'global';
+```js
+var x = 'global';
 let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined
-</pre>
+```
 
-<p>La salida de este código desplegaría "global" una vez.</p>
+La salida de este código desplegaría "global" una vez.
 
-<h3 id="Zona_muerta_temporal_y_errores_con_let">Zona muerta temporal y errores con <code>let<a id="muerta" name="muerta"></a></code></h3>
+### Zona muerta temporal y errores con `let`
 
-<p>La <strong>redeclaración</strong> de la misma variable bajo un mismo <font><font><a href="https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments">ámbito léxico</a> </font></font>terminaría en un error de tipo <code><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError" title="SyntaxError">SyntaxError</a></code>. Esto también es <strong>extensible</strong> si usamos <code>var</code> dentro del <font><font>ámbito léxico</font></font>. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible  solo con <code>var.</code></p>
+La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError "SyntaxError"). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
 
-<pre class="brush: js notranslate">if (x) {
+```js
+if (x) {
   let foo;
   let foo; // Terminamos con un SyntaxError.
 }
@@ -121,20 +125,23 @@ if (x) {
   let foo;
   var foo; // Terminamos con un SyntaxError.
 }
-</pre>
+```
 
-<p>En ECMAScript 2015, <code>let</code> <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/var#Description">no eleva</a> la variable a la parte superior del bloque. Si se hace una referencia a la variable declarada con <code>let</code> (<code>let foo</code>) antes de su declaración, terminaríamos con un error de tipo <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError" title="TypeError">ReferenceError</a> </code>(al contrario de la variable declarada con <code>var</code>, que tendrá el valor <code>undefined</code>), esto porque la variables vive en una "zona muerta temporal" desde el inicio del bloque hasta que la declaración ha sido procesada.</p>
+En ECMAScript 2015, `let` [no eleva](/es/docs/Web/JavaScript/Referencia/Sentencias/var#Description) la variable a la parte superior del bloque. Si se hace una referencia a la variable declarada con `let` (`let foo`) antes de su declaración, terminaríamos con un error de tipo `ReferenceError `(al contrario de la variable declarada con `var`, que tendrá el valor `undefined`), esto porque la variables vive en una "zona muerta temporal" desde el inicio del bloque hasta que la declaración ha sido procesada.
 
-<pre class="notranslate"><code>function do_something() {
+```
+function do_something() {
   console.log(bar); // undefined
-  console.log(foo); // ReferenceError: foo </code>no está definido<code>
+  console.log(foo); // ReferenceError: foo no está definido
   var bar = 1;
   let foo = 2;
-}</code></pre>
+}
+```
 
-<p>Es posible encontrar errores en bloques de control <a href="/en-US/docs/JavaScript/Reference/Statements/switch" title="switch"><code>switch</code></a> debido a que solamente existe un block subyacente.</p>
+Es posible encontrar errores en bloques de control [`switch`](/es/docs/JavaScript/Reference/Statements/switch "switch") debido a que solamente existe un block subyacente.
 
-<pre class="brush: js notranslate">switch (x) {
+```js
+switch (x) {
   case 0:
     let foo;
     break;
@@ -143,30 +150,33 @@ if (x) {
     let foo; // Terminamos con un error de tipo SyntaxError.
              // esto debido a la redeclaracion
     break;
-}</pre>
+}
+```
 
-<h3 id="Otro_ejemplo_de_zona_muerta_temporal_combinada_con_ámbito_léxico"><font><font>Otro ejemplo de zona muerta temporal combinada con <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments">ámbito léxico</a></font></font></h3>
+### Otro ejemplo de zona muerta temporal combinada con [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments)
 
-<p>Debido al alcance léxico, el identificador <code>num</code> dentro de la expresión (<code>num + 55</code>) se evalúa como <code>num</code> del bloque <code>if</code>, y no como la variable <code>num</code> con el valor 33 que esta por encima</p>
+Debido al alcance léxico, el identificador `num` dentro de la expresión (`num + 55`) se evalúa como `num` del bloque `if`, y no como la variable `num` con el valor 33 que esta por encima
 
-<p>En esa misma línea, el <code>num </code>del bloque <code>if</code> ya se ha creado en el ámbito léxico, pero aún no ha alcanzado (y <strong>terminado</strong>) su inicialización (que es parte de la propia declaración): todavía está en la zona muerta temporal.</p>
+En esa misma línea, el `num `del bloque `if` ya se ha creado en el ámbito léxico, pero aún no ha alcanzado (y **terminado**) su inicialización (que es parte de la propia declaración): todavía está en la zona muerta temporal.
 
-<pre class="notranslate"><code>function prueba(){
+```
+function prueba(){
    var num = 33;
    if (true) {
-      let num = (num + 55);</code>//ReferenceError: no se puede acceder a la declaración léxica `num'antes de la inicialización <code>
+      let num = (num + 55);//ReferenceError: no se puede acceder a la declaración léxica `num'antes de la inicialización
    }
 }
-prueba();</code>
-</pre>
+prueba();
+```
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="let_vs_var"><code>let</code> vs <code>var</code></h3>
+### `let` vs `var`
 
-<p>Cuando usamos <code>let</code> dentro de un bloque, podemos limitar el alcance de la variable a dicho bloque. Notemos la diferencia con <code>var</code>, cuyo alcance reside dentro de la función donde ha sido declarada la variable.</p>
+Cuando usamos `let` dentro de un bloque, podemos limitar el alcance de la variable a dicho bloque. Notemos la diferencia con `var`, cuyo alcance reside dentro de la función donde ha sido declarada la variable.
 
-<pre class="brush: js notranslate">var a = 5;
+```js
+var a = 5;
 var b = 10;
 
 if (a === 5) {
@@ -178,40 +188,43 @@ if (a === 5) {
 }
 
 console.log(a); // 5
-console.log(b); // 1</pre>
+console.log(b); // 1
+```
 
-<h3 id="let_en_bucles"><code>let</code> en bucles</h3>
+### `let` en bucles
 
-<p>Es posible usar la palabra reservada <code>let</code> para enlazar variables con alcance local dentro del alcance de un bucle en lugar de usar una variable global (definida usando <code>var</code>) para dicho propósito.</p>
+Es posible usar la palabra reservada `let` para enlazar variables con alcance local dentro del alcance de un bucle en lugar de usar una variable global (definida usando `var`) para dicho propósito.
 
-<pre class="brush: js notranslate">for (let i = 0; i&lt;10; i++) {
+```js
+for (let i = 0; i<10; i++) {
   console.log(i); // 0, 1, 2, 3, 4 ... 9
 }
 
 console.log(i); // ReferenceError: i is not defined
-</pre>
+```
 
-<h2 id="Extensiones_let_no-estandar">Extensiones <code>let</code> no-estandar</h2>
+## Extensiones `let` no-estandar
 
-<h3 id="Bloques_let">Bloques<code> let</code></h3>
+### Bloques` let`
 
-<div class="warning">
-<p>La <strong>sintaxis del bloque y expresion</strong> <code>let</code> es no-estandar y sera deshechado en un futuro. ¡No deben ser usados! ver <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1023609" rel="noopener" title="FIXED: Remove SpiderMonkey support for let expressions">error 1023609</a> y <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1167029" rel="noopener" title="FIXED: Remove SpiderMonkey support for let blocks">error 1167029</a> para mas detalles.</p>
-</div>
+> **Advertencia:** La **sintaxis del bloque y expresion** `let` es no-estandar y sera deshechado en un futuro. ¡No deben ser usados! ver [error 1023609](https://bugzilla.mozilla.org/show_bug.cgi?id=1023609 "FIXED: Remove SpiderMonkey support for let expressions") y [error 1167029](https://bugzilla.mozilla.org/show_bug.cgi?id=1167029 "FIXED: Remove SpiderMonkey support for let blocks") para mas detalles.
 
-<p>Un <strong>bloque <code>let</code></strong> provee una manera de asociar valores con variables dentro del alcance de un bloque sin afectar el valor de variables con nombre similar fuera del bloque.</p>
+Un **bloque `let`** provee una manera de asociar valores con variables dentro del alcance de un bloque sin afectar el valor de variables con nombre similar fuera del bloque.
 
-<h4 id="Sintaxis_2">Sintaxis</h4>
+#### Sintaxis
 
-<pre>let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) {declaración};</pre>
+```
+let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) {declaración};
+```
 
-<h4 id="Descripción_2">Descripción</h4>
+#### Descripción
 
-<p>El bloque <code>let</code> provee alcance local para las variables. Funciona enlazando cero o más variables en el alcance léxico de un solo bloque de código; de otra manera, es exactamente lo mismo que una declaración de bloque. Hay que notar particularmente que el alcance de una variable declarada dentro de un bloque <code>let</code> usando var es equivalente a declarar esa variable fuera del bloque <code>let</code>; dicha variable aún tiene alcance dentro de la función. Al usar la sintaxis de bloque <code>let</code>, los paréntesis siguientes a <code>let</code> son requeridos. Una falla al incluir dichos paréntesis resultará en un error de sintaxis.</p>
+El bloque `let` provee alcance local para las variables. Funciona enlazando cero o más variables en el alcance léxico de un solo bloque de código; de otra manera, es exactamente lo mismo que una declaración de bloque. Hay que notar particularmente que el alcance de una variable declarada dentro de un bloque `let` usando var es equivalente a declarar esa variable fuera del bloque `let`; dicha variable aún tiene alcance dentro de la función. Al usar la sintaxis de bloque `let`, los paréntesis siguientes a `let` son requeridos. Una falla al incluir dichos paréntesis resultará en un error de sintaxis.
 
-<h4 id="Ejemplo">Ejemplo</h4>
+#### Ejemplo
 
-<pre class="brush:js notranslate">var x = 5;
+```js
+var x = 5;
 var y = 0;
 
 let (x = x+10, y = 12) {
@@ -219,54 +232,55 @@ let (x = x+10, y = 12) {
 }
 
 console.log(x + y); // 5
-</pre>
+```
 
-<p>Las reglas para el bloque de código son las mismas que para cualquier otro bloque de código en JavaScript. Es posible tener sus propias variables locales usando declaraciones <code>let</code> en dicho bloque.</p>
+Las reglas para el bloque de código son las mismas que para cualquier otro bloque de código en JavaScript. Es posible tener sus propias variables locales usando declaraciones `let` en dicho bloque.
 
-<h4 id="Reglas_de_alcance_2">Reglas de alcance</h4>
+#### Reglas de alcance
 
-<p>El alcance de las variables definidas usando <code>let</code> es el mismo bloque <code>let</code>, así como cualquier bloque interno contenido dentro de el bloque, a menos que esos bloques internos definan variables con el mismo nombre.</p>
+El alcance de las variables definidas usando `let` es el mismo bloque `let`, así como cualquier bloque interno contenido dentro de el bloque, a menos que esos bloques internos definan variables con el mismo nombre.
 
-<h3 id="expresiones_let">expresiones <code>let</code></h3>
+### expresiones `let`
 
-<div class="warning">
-<p><code>Soporte de <strong>expresiones</strong> let</code> ha sido removido en Gecko 41 ({{bug(1023609)}}).</p>
-</div>
+> **Advertencia:** `Soporte de expresiones let` ha sido removido en Gecko 41 ({{bug(1023609)}}).
 
-<p>Una <strong>expresion <code>let</code></strong> permite establecer variables con alcance dentro de una expresión.</p>
+Una **expresion `let`** permite establecer variables con alcance dentro de una expresión.
 
-<h4 id="Sintaxis_3">Sintaxis</h4>
+#### Sintaxis
 
-<pre>let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) expression;</pre>
+```
+let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) expression;
+```
 
-<h4 id="Ejemplo_2">Ejemplo</h4>
+#### Ejemplo
 
-<p>Podemos usar <code>let</code> para establecer variables que tienen como alcance solo una expresión:</p>
+Podemos usar `let` para establecer variables que tienen como alcance solo una expresión:
 
-<pre class="brush: js notranslate">var a = 5;
+```js
+var a = 5;
 let(a = 6) console.log(a); // 6
-console.log(a); // 5</pre>
+console.log(a); // 5
+```
 
-<h4 id="Reglas_de_alcance_3">Reglas de alcance</h4>
+#### Reglas de alcance
 
-<p>Dada la expresión <code>let</code> siguiente:</p>
+Dada la expresión `let` siguiente:
 
-<pre class="eval notranslate">let (<var>decls</var>) <var>expr</var>
-</pre>
+```
+let (decls) expr
+```
 
-<p>Existe un bloque implícito creado alrededor de expr.</p>
+Existe un bloque implícito creado alrededor de expr.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
 {{Specification}}
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var"><code>var</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a></li>
-</ul>
+- [`var`](/es/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/es/docs/Web/JavaScript/Reference/Statements/const)

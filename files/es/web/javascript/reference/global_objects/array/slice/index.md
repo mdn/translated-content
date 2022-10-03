@@ -6,116 +6,117 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/slice
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><font face="Open Sans, Arial, sans-serif">El método </font><strong>slice()</strong></code> devuelve una copia de una parte del array dentro de un nuevo array empezando por <em>inicio </em>hasta <em>fin</em> (<em>fin </em>no incluido). El array original no se modificará.</p>
+`El método slice()` devuelve una copia de una parte del array dentro de un nuevo array empezando por _inicio_ hasta _fin_ (_fin_ no incluido). El array original no se modificará.
 
-<p>El código fuente de esta demostración interactiva está alojado en un repositorio Github. Si desea contribuir con ella, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíenos un <em>"pull request"</em>.</p>
+El código fuente de esta demostración interactiva está alojado en un repositorio Github. Si desea contribuir con ella, por favor clone <https://github.com/mdn/interactive-examples> y envíenos un _"pull request"_.
 
-<h2 id="Sintaxis">Sintaxis </h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>arr</var>.slice([<var>inicio </var>[, <var>fin</var>]])</code></pre>
+```
+arr.slice([inicio [, fin]])
+```
 
-<h2 id="Parámetros">Parámetros</h2>
+## Parámetros
 
-<dl>
- <dt><code>inicio</code></dt>
- <dd>Índice donde empieza la extracción. El primer elemento corresponde con el índice  0.<br>
- Si el índice especificado es negativo, indica un desplazamiento desde el final del array.<code> slice(-2)</code>extrae los dos últimos elementos del array<br>
- Si <code>inicio</code> es omitido el valor por defecto es <code>0</code>.<br>
- Si <code>inicio</code> es mayor a la longitud del array, se devuelve un array vacío.</dd>
- <dt><code>fin</code></dt>
- <dd>Índice  que marca el final de la extracción. <code>slice</code> extrae hasta, pero sin incluir el final.<br>
- <code>slice(1,4)</code> extrae desde el segundo elemento hasta el cuarto  (los elementos con índices 1, 2,  y 3).<br>
- Con un índice negativo, <code>fin</code> indica un desplazamiento desde el final de la secuencia. <code>slice(2,-1)</code> extrae desde el tercer hasta el penúltimo elemento en la secuencia.<br>
- Si <code>fin</code> es omitido, slice extrae hasta el final de la secuencia (<code>arr.length</code>)<code>.</code><br>
- Si <code>fin</code> es mayor a la longitud del array, <code>slice</code> extrae hasta el final de la secuencia (<code>arr.length</code>)<code>.</code></dd>
-</dl>
+- `inicio`
+  - : Índice donde empieza la extracción. El primer elemento corresponde con el índice 0.
+    Si el índice especificado es negativo, indica un desplazamiento desde el final del array.` slice(-2)`extrae los dos últimos elementos del array
+    Si `inicio` es omitido el valor por defecto es `0`.
+    Si `inicio` es mayor a la longitud del array, se devuelve un array vacío.
+- `fin`
+  - : Índice que marca el final de la extracción. `slice` extrae hasta, pero sin incluir el final.
+    `slice(1,4)` extrae desde el segundo elemento hasta el cuarto (los elementos con índices 1, 2, y 3).
+    Con un índice negativo, `fin` indica un desplazamiento desde el final de la secuencia. `slice(2,-1)` extrae desde el tercer hasta el penúltimo elemento en la secuencia.
+    Si `fin` es omitido, slice extrae hasta el final de la secuencia (`arr.length`)`.`
+    Si `fin` es mayor a la longitud del array, `slice` extrae hasta el final de la secuencia (`arr.length`)`.`
 
-<h3 id="Valor_de_retorno"><code>Valor de retorno</code></h3>
+### `Valor de retorno`
 
-<p>Un nuevo array con los valores extraídos.</p>
+Un nuevo array con los valores extraídos.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p><code>slice</code> <strong>no modifica</strong> el array original. Devuelve una copia plana (<em>shallow copy</em>) de los elementos especificados del array original. Los elementos del array original son copiados en el array devuelto de la siguiente manera:</p>
+`slice` **no modifica** el array original. Devuelve una copia plana (_shallow copy_) de los elementos especificados del array original. Los elementos del array original son copiados en el array devuelto de la siguiente manera:
 
-<ul>
- <li>Para referencias de objeto ( <strong>no</strong> el objeto en sí ), <code>slice copia la referencia dentro del nuevo array</code>. Ambos, el array original y el nuevo, referencian al mismo objeto. Si un objeto referenciado cambia, los cambios son visibles para ambos arrays.</li>
- <li>Para strings, numbers y boolean (<strong>no</strong> objetos {{jsxref("Global_Objects/String", "String")}} y {{jsxref("Global_Objects/Number", "Number")}}), <code>slice</code> copia los valores en el nuevo array. Los cambios a los string, numbers y boolean en un array no afectan a los del otro array.</li>
-</ul>
+- Para referencias de objeto ( **no** el objeto en sí ), `slice copia la referencia dentro del nuevo array`. Ambos, el array original y el nuevo, referencian al mismo objeto. Si un objeto referenciado cambia, los cambios son visibles para ambos arrays.
+- Para strings, numbers y boolean (**no** objetos {{jsxref("Global_Objects/String", "String")}} y {{jsxref("Global_Objects/Number", "Number")}}), `slice` copia los valores en el nuevo array. Los cambios a los string, numbers y boolean en un array no afectan a los del otro array.
 
-<p>Si un nuevo elemento es agregado a cualquiera de los arrays, el otro array no es afectado.</p>
+Si un nuevo elemento es agregado a cualquiera de los arrays, el otro array no es afectado.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Ejemplo_Devolver_una_porción_de_un_array_existente">Ejemplo: Devolver una porción de un array existente</h3>
+### Ejemplo: Devolver una porción de un array existente
 
-<pre class="brush: js">var nombres = ['Rita', 'Pedro', 'Miguel', 'Ana', 'Vanesa'];
+```js
+var nombres = ['Rita', 'Pedro', 'Miguel', 'Ana', 'Vanesa'];
 var masculinos = nombres.slice(1, 3);
 
 // masculinos contiene ['Pedro','Miguel']
-</pre>
+```
 
-<h3 id="Ejemplo_Utilizando_slice">Ejemplo: Utilizando slice</h3>
+### Ejemplo: Utilizando slice
 
-<p><span style="font-size: 14px; line-height: 1.5;">Presta especial atención a:</span></p>
+Presta especial atención a:
 
-<ul>
- <li>Valores de tipos básicos, como string o number, son copiados al nuevo array. Cambiar estos valores en la copia no afecta al array original.</li>
- <li>Las referencias también se copian. Mismas referencias acceden al mismo objeto destino. Cambios en el objeto destino son compartidos por todos sus accesos.</li>
-</ul>
+- Valores de tipos básicos, como string o number, son copiados al nuevo array. Cambiar estos valores en la copia no afecta al array original.
+- Las referencias también se copian. Mismas referencias acceden al mismo objeto destino. Cambios en el objeto destino son compartidos por todos sus accesos.
 
-<p>En el siguiente ejemplo, <code>slice</code> crea un nuevo array, <code>nuevoCoche</code>, de <code>myCoche</code>. Los dos incluyen una referncia al objecto <code>miHonda</code> se cambia a púrpura, ambas matrices reflejan el cambio.</p>
+En el siguiente ejemplo, `slice` crea un nuevo array, `nuevoCoche`, de `myCoche`. Los dos incluyen una referncia al objecto `miHonda` se cambia a púrpura, ambas matrices reflejan el cambio.
 
-<pre class="brush: js"><code>var miHonda = { color: 'red', ruedas: 4, motor: { cilindros: 4, cantidad: 2.2 } };
+```js
+var miHonda = { color: 'red', ruedas: 4, motor: { cilindros: 4, cantidad: 2.2 } };
 var miCoche = [miHonda, 2, 'Buen estado', 'comprado 1997'];
-var nuevoCoche = miCoche.slice(0, 2);</code>
+var nuevoCoche = miCoche.slice(0, 2);
 
-//  Muestra los valores de myCar, newCar y el color de myHonda.<code>
+//  Muestra los valores de myCar, newCar y el color de myHonda.
 console.log('miCoche = ' + JSON.stringify(miCoche));
 console.log('nuevoCoche = ' + JSON.stringify(nuevoCoche));
 console.log('miCoche[0].color = ' + miCoche[0].color);
-console.log('nuevoCoche[0].color = ' + nuevoCoche[0].color);</code>
+console.log('nuevoCoche[0].color = ' + nuevoCoche[0].color);
 
 // Cambia el color de miHonda.
 miHonda.color = 'azul';
 console.log('El nuevo color de mi Honda es ' + miHonda.color);
 
-// Muestra el color de myHonda referenciado desde ambos arrays. <code>
-console.log('miCoche[0].color = ' + miCoche[0].color);</code>
+// Muestra el color de myHonda referenciado desde ambos arrays.
+console.log('miCoche[0].color = ' + miCoche[0].color);
 
-console.log('nuevoCoche[0].color = ' + nuevoCoche[0].color);</pre>
+console.log('nuevoCoche[0].color = ' + nuevoCoche[0].color);
+```
 
-<p>Este script escribe:</p>
+Este script escribe:
 
-<pre class="brush: js"><code>miCoche = [{color: 'rojo', ruedas: 4, motor: {cilindros: 4, cantidad: 2.2}}, 2,
+```js
+miCoche = [{color: 'rojo', ruedas: 4, motor: {cilindros: 4, cantidad: 2.2}}, 2,
          'buen estado', 'comprado 1997']
 nuevoCoche = [{color: 'rojo', ruedas: 4, motor: {cilindros: 4, cantidad: 2.2}}, 2]
 miCoche[0].color = rojo
 nuevoCoche[0].color = rojo
 El nuevo color de miHonda es azul
 miCoche[0].color = azul
-nuevoCoche[0].color = azul</code></pre>
+nuevoCoche[0].color = azul
+```
 
-<h2 id="Objetos_array-like">Objetos array-like</h2>
+## Objetos array-like
 
-<div class="note">
-<p>Se dice que un objeto es <strong>array-like</strong> ( similar o que se asemeja a un array) cuando entre sus propiedades existen algunas cuyos nombres son <strong>números</strong> y en particular tiene una propiedad llamada <strong>length</strong>. Este hecho  hace  suponer que el objeto es algún tipo de colección de elementos indexados por números. Es conveniente, a veces, convertir estos objetos a arrays para otorgarles la funcionalidad que de serie se incorpora en todos los arrays a través de su prototipo. </p>
-</div>
+> **Nota:** Se dice que un objeto es **array-like** ( similar o que se asemeja a un array) cuando entre sus propiedades existen algunas cuyos nombres son **números** y en particular tiene una propiedad llamada **length**. Este hecho hace suponer que el objeto es algún tipo de colección de elementos indexados por números. Es conveniente, a veces, convertir estos objetos a arrays para otorgarles la funcionalidad que de serie se incorpora en todos los arrays a través de su prototipo.
 
-<p>El método <code>slice</code> puede ser usado para convertir objetos parecidos a arrays o colecciones a un nuevo Array. Simplemente debe enlazar el método al objeto. El  {{jsxref("Functions_and_function_scope/arguments", "arguments")}} dentro de una función es un ejemplo de un objeto parecido a arrays.</p>
+El método `slice` puede ser usado para convertir objetos parecidos a arrays o colecciones a un nuevo Array. Simplemente debe enlazar el método al objeto. El {{jsxref("Functions_and_function_scope/arguments", "arguments")}} dentro de una función es un ejemplo de un objeto parecido a arrays.
 
-<pre class="brush: js">function list() {
+```js
+function list() {
   return Array.prototype.slice.call(arguments, 0);
 }
 
 var list1 = list(1, 2, 3); // [1, 2, 3]
-</pre>
+```
 
-<p>El enlazado puede realizarse con la función <code>.call</code> de  {{jsxref("Function.prototype")}} y puede ser abreviado también usando  <code>[].slice.call(arguments)</code> en lugar de <code>Array.prototype.slice.call</code>. En cualquier caso, puede ser simplificado usando {{jsxref("Function.prototype.bind", "bind")}}.</p>
+El enlazado puede realizarse con la función `.call` de {{jsxref("Function.prototype")}} y puede ser abreviado también usando `[].slice.call(arguments)` en lugar de `Array.prototype.slice.call`. En cualquier caso, puede ser simplificado usando {{jsxref("Function.prototype.bind", "bind")}}.
 
-<pre class="brush: js">var unboundSlice = Array.prototype.slice;
+```js
+var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.call.bind(unboundSlice);
 
 function list() {
@@ -123,22 +124,21 @@ function list() {
 }
 
 var list1 = list(1, 2, 3); // [1, 2, 3]
-</pre>
+```
 
-<h2 id="Coordinación_del_comportamiento_entre_navegadores">Coordinación del comportamiento entre navegadores</h2>
+## Coordinación del comportamiento entre navegadores
 
-<p> </p>
+La especificación permite a los objetos del host ( entre ellos los objetos del DOM ) ser dependientes de la implementación. Esta **NO** obligatoriedad, origina diferencias en el comportamiento entre aquellos comprometidos con los estándares, como Mozilla, y los que no. En lo que concierne a `Array.prototype.slice` , por lo tanto, existen importantes incompatibilidades en IE < 9 . Versiones de IE a partir de la 9 permiten un comportamiento compatible más fiable. Se puede recurrir al “_shimming_” para alcanzar la compatibilidad en otros casos. Mientras otros navegadores modernos continúan mejorando para soportar esta habilidad, en la forma en que actualmente lo hacen Mozilla, Chrome, Safari, Opera e IE, los desarrolladores de código preocupados por el soporte DOM que confíen en este _shim_ no deben dejarse engañar por la semántica, deben confiar de forma segura en ella para proporcionar el comportamiento estándar que aparentemente ahora es la norma.
 
-<p>La especificación permite a los objetos del host  ( entre ellos los objetos del DOM )  ser dependientes de la implementación.  Esta <strong>NO</strong> obligatoriedad, origina diferencias en el comportamiento entre aquellos comprometidos con los estándares, como Mozilla, y los que no. En lo que concierne a  <code>Array.prototype.slice</code> , por lo tanto, existen importantes incompatibilidades en IE &lt; 9 . Versiones de IE a partir de la 9 permiten un comportamiento compatible más fiable.  Se puede recurrir al  “<em>shimming</em>”  para alcanzar la compatibilidad en otros casos.  Mientras otros navegadores modernos continúan mejorando para soportar esta habilidad, en la forma en que actualmente lo hacen Mozilla, Chrome, Safari, Opera  e IE, los desarrolladores de código preocupados por el soporte DOM que confíen en este <em>shim</em> no deben dejarse engañar por la semántica, deben confiar de forma segura en ella para proporcionar el comportamiento estándar que aparentemente ahora es la norma.</p>
+El _shim_ también soluciona que IE pueda tratar con el caso de que el segundo argumento de `slice()` pueda ser un valor {{jsxref("Global_Objects/null", "null")}}/{{jsxref("Global_Objects/undefined", "undefined")}} explícito. Esto era un problema en versiones anteriores de IE, pero todos los navegadores modernos, incluído IE >= 9, lo hacen actualmente.
 
-<p>El <em>shim</em> también soluciona que IE pueda tratar con el caso de que el segundo argumento de <code>slice()</code> pueda ser un valor {{jsxref("Global_Objects/null", "null")}}/{{jsxref("Global_Objects/undefined", "undefined")}} explícito. Esto era un problema en versiones anteriores de IE, pero todos los navegadores modernos, incluído IE &gt;= 9, lo hacen actualmente.</p>
-
-<pre class="brush: js">/**
- * <em>Shim</em> para "solucionar" la falta de soporte de IE (IE &lt; 9) para aplicar slice
+```js
+/**
+ * Shim para "solucionar" la falta de soporte de IE (IE < 9) para aplicar slice
  * sobre objetos del host, tal como NamedNodeMap, NodeList, y HTMLCollection
  * (técnicamente, al ser los objetos del host dependientes de la implementación,
  * al menos anteriormente a ES2015, IE no tenía la necesidad de trabajar de este modo).
- * También funciona sobre strings, solucionando que IE &lt; 9 admita un undefined explícito
+ * También funciona sobre strings, solucionando que IE < 9 admita un undefined explícito
  * como segundo argumento (igual que en Firefox), y previniendo errores cuando se llama
  * sobre otros objetos del DOM.
  */
@@ -147,15 +147,15 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
   var _slice = Array.prototype.slice;
 
   try {
-    // Fallará al usarse con elementos DOM en IE &lt; 9
+    // Fallará al usarse con elementos DOM en IE < 9
     _slice.call(document.documentElement);
-  } catch (e) { // Fails in IE &lt; 9
+  } catch (e) { // Fails in IE < 9
     // Funcionará con arrays genuinos, objetos array-like,
     // NamedNodeMap (attributes, entities, notations),
     // NodeList (e.g., getElementsByTagName), HTMLCollection (e.g., childNodes),
-    // and will not fail on other DOM objects (as do DOM elements in IE &lt; 9)
+    // and will not fail on other DOM objects (as do DOM elements in IE < 9)
     Array.prototype.slice = function(begin, end) {
-      // A IE &lt; 9 no le gustan los undefined como argumento end.
+      // A IE < 9 no le gustan los undefined como argumento end.
       end = (typeof end !== 'undefined') ? end : this.length;
 
       // Con objetos Array nativos, podemos usar la función slice
@@ -169,25 +169,25 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
       // Maneja valores negativos para el argumento "inicio"
       var start = begin || 0;
-      start = (start &gt;= 0) ? start : Math.max(0, len + start);
+      start = (start >= 0) ? start : Math.max(0, len + start);
 
       // Maneja valores negativos para el argumento "fin"
       var upTo = (typeof end == 'number') ? Math.min(end, len) : len;
-      if (end &lt; 0) {
+      if (end < 0) {
         upTo = len + end;
       }
 
       // Tamaño esperado para el slice
       size = upTo - start;
 
-      if (size &gt; 0) {
+      if (size > 0) {
         cloned = new Array(size);
         if (this.charAt) {
-          for (i = 0; i &lt; size; i++) {
+          for (i = 0; i < size; i++) {
             cloned[i] = this.charAt(start + i);
           }
         } else {
-          for (i = 0; i &lt; size; i++) {
+          for (i = 0; i < size; i++) {
             cloned[i] = this[start + i];
           }
         }
@@ -197,44 +197,23 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
     };
   }
 }());
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Observaciones</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3ª edición</td>
-   <td>Estandar</td>
-   <td>Definición inicial Implementado en JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array.prototype.slice', 'Array.prototype.slice')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                   | Observaciones                                      |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| ECMAScript 3ª edición                                                                                    | Estandar                 | Definición inicial Implementado en JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}                     | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES2015', '#sec-array.prototype.slice', 'Array.prototype.slice')}} | {{Spec2('ES2015')}} |                                                    |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p>La tabla de compatibilidad en esta página esta generada desde datos estructurados. Si desea contribuir con los datos, por favor <em>"checkout" </em><a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data </a> y envíenos un <em>"pull request"</em>.</p>
+La tabla de compatibilidad en esta página esta generada desde datos estructurados. Si desea contribuir con los datos, por favor _"checkout"_ [https://github.com/mdn/browser-compat-data ](https://github.com/mdn/browser-compat-data)y envíenos un _"pull request"_.
 
 {{Compat("javascript.builtins.Array.slice")}}
 
-<h2 id="Ver_también">Ver también </h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Function.prototype.call()")}}</li>
- <li>{{jsxref("Function.prototype.bind()")}}</li>
-</ul>
+- {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Function.prototype.bind()")}}

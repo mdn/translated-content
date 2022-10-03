@@ -9,68 +9,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Boolean/Boolean
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El constructor <strong><code>Boolean()</code></strong> se usa para crear objetos {{jsxref("Boolean")}}.</p>
+El constructor **`Boolean()`** se usa para crear objetos {{jsxref("Boolean")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/boolean-constructor.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/boolean-constructor.html", "shorter")}}
 
-<p>La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una solicitud de extracción.</p>
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre>new Boolean([<var>value</var>])</pre>
+```
+new Boolean([value])
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>value</code> {{optional_inline}}</dt>
- <dd>El valor inicial del objeto <code>Boolean</code>.</dd>
-</dl>
+- `value` {{optional_inline}}
+  - : El valor inicial del objeto `Boolean`.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Creación_de_objetos_Boolean_con_un_valor_inicial_de_false">Creación de objetos <code>Boolean</code> con un valor inicial de <code>false</code></h3>
+### Creación de objetos `Boolean` con un valor inicial de `false`
 
-<pre class="brush: js notranslate">var bNoParam = new Boolean();
+```js
+var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
 var bEmptyString = new Boolean('');
 var bfalse = new Boolean(false);
-</pre>
+```
 
-<h3 id="Creación_de_objetos_Boolean_con_un_valor_inicial_de_true">Creación de objetos <code>Boolean</code> con un valor inicial de <code>true</code></h3>
+### Creación de objetos `Boolean` con un valor inicial de `true`
 
-<pre class="brush: js notranslate">var btrue = new Boolean(true);
+```js
+var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
 var bfalseString = new Boolean('false');
 var bSuLin = new Boolean('Su Lin');
 var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});</pre>
+var bObjProto = new Boolean({});
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-boolean-constructor', 'Boolean constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-boolean-constructor', 'Boolean constructor')}} |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<div>
+{{Compat("javascript.builtins.Boolean.Boolean")}}
 
+## Ve también
 
-<p>{{Compat("javascript.builtins.Boolean.Boolean")}}</p>
-</div>
-
-<h2 id="Ve_también">Ve también</h2>
-
-<ul>
- <li><a href="/es/docs/Glossary/Boolean">Boolean</a></li>
-</ul>
+- [Boolean](/es/docs/Glossary/Boolean)

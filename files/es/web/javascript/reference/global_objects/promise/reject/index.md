@@ -4,78 +4,61 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/reject
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>Promise.reject(reason)</strong></code> retorna un objeto <code>Promise</code> que es rechazado por la razón específicada.</p>
+El método **`Promise.reject(reason)`** retorna un objeto `Promise` que es rechazado por la razón específicada.
 
-<div>{{EmbedInteractiveExample("pages/js/promise-reject.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-reject.html")}}
 
-<p><span class="tlid-translation translation" lang="es"><span title="">La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub.</span> <span title="">Si desea contribuir al proyecto de ejemplos interactivos, clone https://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.</span></span></p>
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone https\://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.
 
-<p><span class="tlid-translation translation" lang="es"><span title="">La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub.</span> <span title="">Si desea contribuir al proyecto de ejemplos interactivos, clone https://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.</span></span></p>
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone https\://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.
 
-<p><span class="tlid-translation translation" lang="es"><span title="">La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub.</span> <span title="">Si desea contribuir al proyecto de ejemplos interactivos, clone https://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.</span></span></p>
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone https\://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>Promise.reject(reason)</var>;</pre>
+```
+Promise.reject(reason);
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>reason</dt>
- <dd>Razón por la cual esta {jsxref("Promise")}} fue rechazada.</dd>
-</dl>
+- reason
+  - : Razón por la cual esta {jsxref("Promise")}} fue rechazada.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Un objeto {{jsxref("Promise")}} que es rechazado por la razón específicada.</p>
+Un objeto {{jsxref("Promise")}} que es rechazado por la razón específicada.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>La función estática <code>Promise.reject</code> retorna un objecto {{jsxref("Promise")}} que es rechazado. Para fines de depuración y captura selectiva de error, se suele pasar por el parámetro <code>reason</code> un  <code>instanceof</code> {{jsxref("Error")}}.</p>
+La función estática `Promise.reject` retorna un objecto {{jsxref("Promise")}} que es rechazado. Para fines de depuración y captura selectiva de error, se suele pasar por el parámetro `reason` un `instanceof` {{jsxref("Error")}}.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_el_método_estático_Promise.reject">Usando el método estático Promise.reject()</h3>
+### Usando el método estático Promise.reject()
 
-<pre class="brush: js">Promise.reject(new Error('fail')).then(function() {
+```js
+Promise.reject(new Error('fail')).then(function() {
   // no entra en esta función
 }, function(error) {
   console.log(error); // Stacktrace
-});</pre>
+});
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-promise.reject', 'Promise.reject')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition in an ECMA standard.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                       | Comment                                 |
+| ------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------- |
+| {{SpecName('ES2015', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ES2015')}}     | Initial definition in an ECMA standard. |
+| {{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ESDraft')}} |                                         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("javascript.builtins.Promise.reject")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Promise.reject")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="https://github.com/petkaantonov/bluebird#error-handling">Selective error catching using the BlueBird Promise library</a></li>
-</ul>
+- {{jsxref("Promise")}}
+- [Selective error catching using the BlueBird Promise library](https://github.com/petkaantonov/bluebird#error-handling)

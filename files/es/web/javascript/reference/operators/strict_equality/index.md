@@ -4,43 +4,40 @@ slug: Web/JavaScript/Reference/Operators/Strict_equality
 translation_of: Web/JavaScript/Reference/Operators/Strict_equality
 original_slug: Web/JavaScript/Referencia/Operadores/Strict_equality
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>El operador de estricta igualdad (<code>===</code>) revisa si dos operandos son iguales y produce un resultado Booleano. A diferencia del operador de igualdad regular (==), el operador de estricta igualdad siempre considera que los operandos de distinto tipo de valor son diferentes y nunca similares.</p>
+El operador de estricta igualdad (`===`) revisa si dos operandos son iguales y produce un resultado Booleano. A diferencia del operador de igualdad regular (==), el operador de estricta igualdad siempre considera que los operandos de distinto tipo de valor son diferentes y nunca similares.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
 
-<div>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+## Sintaxis
 
-<h2 id="Sintaxis">Sintaxis</h2>
+```
+x === y
+```
 
-<pre>x === y</pre>
+## Descripción
 
-<h2 id="Descripción">Descripción</h2>
+Los operadores de estricta igualdad (`===` y `!==`) usan el [Algoritmo Estricto Comparativo de Igualdad ](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6)para comparar dos operandos:
 
-<p>Los operadores de estricta igualdad (<code>===</code> y <code>!==</code>) usan el <a class="external external-icon" href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6" rel="noopener">Algoritmo Estricto Comparativo de Igualdad </a> para comparar dos operandos:</p>
+- Si los operandos son de diferente tipo de valor, produce `false`.
+- Si ambos operandos son objetos, produce `true` solo si se refiere al mismo objeto.
+- Si ambos operandos son de tipo `null` o ambos operandos son `undefined`, produce `true`.
+- Si cualquier operando es de tipo NaN, produce `false`.
+- En otros casos, compara los valores de ambos operandos:
 
-<ul>
- <li>Si los operandos son de diferente tipo de valor, produce <code>false</code>.</li>
- <li> Si ambos operandos son objetos, produce <code>true</code> solo si se refiere al mismo objeto.</li>
- <li>Si ambos operandos son de tipo <code>null</code> o ambos operandos son <code>undefined</code>, produce <code>true</code>.</li>
- <li>Si cualquier operando es de tipo <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">NaN</span></font>, produce <code>false</code>.</li>
- <li>En otros casos, compara los valores de ambos operandos:
-  <ul>
-   <li>Los números deben tener el mismo valor numérico, aunque <code>+0</code> y <code>-0</code> son considerados como del mismo valor.</li>
-   <li>Los strings deben tener los mismos caracteres en el mismo orden.</li>
-   <li>Los booleanos deben ambos ser <code>true</code> o ambos ser <code>false</code>.</li>
-  </ul>
- </li>
-</ul>
+  - Los números deben tener el mismo valor numérico, aunque `+0` y `-0` son considerados como del mismo valor.
+  - Los strings deben tener los mismos caracteres en el mismo orden.
+  - Los booleanos deben ambos ser `true` o ambos ser `false`.
 
-<p>La diferencia más notable entre este operador y el operador de <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality">igualdad</a> regular (<code>==</code>) es que si los operandos son de distinto tipo de valor, el operador <code>==</code> intenta convertir los valores a un mismo tipo de dato antes de compararlos.</p>
+La diferencia más notable entre este operador y el operador de [igualdad](/es/docs/Web/JavaScript/Reference/Operators/Equality) regular (`==`) es que si los operandos son de distinto tipo de valor, el operador `==` intenta convertir los valores a un mismo tipo de dato antes de compararlos.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Comparando_operandos_del_mismo_tipo">Comparando operandos del mismo tipo</h3>
+### Comparando operandos del mismo tipo
 
-<pre class="brush: js notranslate">console.log("hello" === "hello");   // true
+```js
+console.log("hello" === "hello");   // true
 console.log("hello" === "hola");    // false
 
 console.log(3 === 3);               // true
@@ -49,19 +46,23 @@ console.log(3 === 4);               // false
 console.log(true === true);         // true
 console.log(true === false);        // false
 
-console.log(null === null);         // true</pre>
+console.log(null === null);         // true
+```
 
-<h3 id="Comparando_operandos_de_distinto_tipo">Comparando operandos de distinto tipo</h3>
+### Comparando operandos de distinto tipo
 
-<pre class="brush: js notranslate">console.log("3" === 3);           // false
+```js
+console.log("3" === 3);           // false
 
 console.log(true === 1);          // false
 
-console.log(null === undefined);  // false</pre>
+console.log(null === undefined);  // false
+```
 
-<h3 id="Comparando_objetos">Comparando objetos</h3>
+### Comparando objetos
 
-<pre class="brush: js notranslate">const object1 = {
+```js
+const object1 = {
   name: "hello"
 }
 
@@ -70,33 +71,21 @@ const object2 = {
 }
 
 console.log(object1 === object2);  // false
-console.log(object1 === object1);  // true</pre>
+console.log(object1 === object1);  // true
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}} |
 
-<h2 id="Compatibilidad_entre_exploradores">Compatibilidad entre exploradores</h2>
+## Compatibilidad entre exploradores
 
+{{Compat("javascript.operators.strict_equality")}}
 
+## También revisa
 
-<p>{{Compat("javascript.operators.strict_equality")}}</p>
-
-<h2 id="También_revisa">También revisa</h2>
-
-<ul>
- <li><a href="/es/docs/Web/JavaScript/Reference/Operators/Equality">Operador de igualdad</a></li>
- <li><a href="/es/docs/Web/JavaScript/Reference/Operators/Inequality">Operador de desigualdad</a></li>
- <li><a href="/es/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Operador de estricta desigualdad</a></li>
-</ul>
+- [Operador de igualdad](/es/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Operador de desigualdad](/es/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Operador de estricta desigualdad](/es/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

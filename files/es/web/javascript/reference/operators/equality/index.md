@@ -10,54 +10,51 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Equality
 original_slug: Web/JavaScript/Referencia/Operadores/Comparacion
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>El operador de comparacion  (<code>==</code>) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (<code>===</code>), es que este convierte y compara operandos que son de diferentes tipos.</p>
+El operador de comparacion (`==`) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (`===`), es que este convierte y compara operandos que son de diferentes tipos.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
 
-<div>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+## Sintaxis
 
-<h2 id="Sintaxis">Sintaxis</h2>
+```
+x == y
+```
 
-<pre>x == y
-</pre>
+## Descripción
 
-<h2 id="Descripción">Descripción</h2>
+Los operadores de igualdad (`==`y `!=`) Utilizan el algoritmo de comparación de igualdad abstracta para comparar dos operandos. Esto se puede resumir a grandes rasgos como:
 
-<p>Los operadores de igualdad (<code>==</code>y <code>!=</code>) Utilizan el algoritmo de comparación de igualdad abstracta para comparar dos operandos. Esto se puede resumir a grandes rasgos como:</p>
+- Si los operandos ambos son objetos, devuelve `true `solo si ambos operandos hacen referencia al mismo objeto.
+- Si un operando es `null`y el otro `undefined`, devuelve verdadero(`true`).
+- Si los operandos son de diferente tipos, intenta convertirlos al mismo tipo antes de comparar:
 
-<ul>
- <li>Si los operandos ambos son objetos, devuelve <code>true </code>solo si ambos operandos hacen referencia al mismo objeto.</li>
- <li>Si un operando es <code>null</code>y el otro <code>undefined</code>, devuelve verdadero(<code>true</code>).</li>
- <li>Si los operandos son de diferente tipos, intenta convertirlos al mismo tipo antes de comparar:
-  <ul>
-   <li>Al comparar un número con una cadena, convierte la cadena en un valor numérico.</li>
-   <li>Si uno de los operandos es booleano, convierte el operando booleano en 1 si es verdadero y en 0 en el caso de falso.</li>
-   <li>Si uno de los operandos es un objeto y el otro es un número o una cadena, convierte el objeto en una primitiva utilizando los métodos <code>valueOf()</code>y <code>toString()</code> del objeto.</li>
-  </ul>
- </li>
- <li>Si los operandos tienen el mismo tipo, se comparan de la siguiente manera:
-  <ul>
-   <li><code>String</code>: devuelve verdadero solo si ambos operandos tienen los mismos caracteres y en el mismo orden.</li>
-   <li><code>Number</code>: devuelve verdadero solo si ambos operandos tienen el mismo valor. <code>+0</code> y <code>-0</code> se tratan como el mismo valor. Si alguno de los operandos es <code>NaN</code>, devuelve falso.</li>
-   <li><code>Boolean</code>: retorna verdadero solo si ambos operandos son verdaderos o falsos.</li>
-  </ul>
- </li>
-</ul>
+  - Al comparar un número con una cadena, convierte la cadena en un valor numérico.
+  - Si uno de los operandos es booleano, convierte el operando booleano en 1 si es verdadero y en 0 en el caso de falso.
+  - Si uno de los operandos es un objeto y el otro es un número o una cadena, convierte el objeto en una primitiva utilizando los métodos `valueOf()`y `toString()` del objeto.
 
-<p>La diferencia más notable entre este operador y el operador de igualdad estricta (<code>===</code>) es que el operador de igualdad estricta no realiza la conversión de tipos. </p>
+- Si los operandos tienen el mismo tipo, se comparan de la siguiente manera:
 
-<h2 id="Ejemplos">Ejemplos</h2>
+  - `String`: devuelve verdadero solo si ambos operandos tienen los mismos caracteres y en el mismo orden.
+  - `Number`: devuelve verdadero solo si ambos operandos tienen el mismo valor. `+0` y `-0` se tratan como el mismo valor. Si alguno de los operandos es `NaN`, devuelve falso.
+  - `Boolean`: retorna verdadero solo si ambos operandos son verdaderos o falsos.
 
-<h3 id="Comparación_sin_conversión_de_tipo">Comparación sin conversión de tipo</h3>
+La diferencia más notable entre este operador y el operador de igualdad estricta (`===`) es que el operador de igualdad estricta no realiza la conversión de tipos.
 
-<pre class="brush: js notranslate">1 == 1;              // true
-"Hola" == "Hola";  // true</pre>
+## Ejemplos
 
-<h3 id="Comparación_con_conversión_de_tipos">Comparación con conversión de tipos</h3>
+### Comparación sin conversión de tipo
 
-<pre class="brush: js notranslate">"1" ==  1;            // true
+```js
+1 == 1;              // true
+"Hola" == "Hola";  // true
+```
+
+### Comparación con conversión de tipos
+
+```js
+"1" ==  1;            // true
 1 == "1";             // true
 0 == false;           // true
 0 == null;            // false
@@ -69,21 +66,25 @@ null == undefined;    // true
 const number1 = new Number(3);
 const number2 = new Number(3);
 number1 == 3;         // true
-number1 == number2;   // false</pre>
+number1 == number2;   // false
+```
 
-<h3 id="Comparación_de_objetos">Comparación de objetos</h3>
+### Comparación de objetos
 
-<pre class="brush: js notranslate">const object1 = {"key": "value"}
+```js
+const object1 = {"key": "value"}
 const object2 = {"key": "value"};
 
 object1 == object2 // false
-object2 == object2 // true</pre>
+object2 == object2 // true
+```
 
-<h3 id="Comparar_String_y_objetos_String">Comparar String y objetos String</h3>
+### Comparar String y objetos String
 
-<p>Tenga en cuenta que las cadenas construidas con <code>new String() </code>son objetos. Si compara uno de estos con un String literal, el objeto String se convertirá en un <code>String</code> literal y se comparará el contenido. Sin embargo, si ambos operandos son objetos de tipo String, entonces se comparan como objetos y deben hacer referencia al mismo objeto para que la comparación sea exitosa:</p>
+Tenga en cuenta que las cadenas construidas con `new String() `son objetos. Si compara uno de estos con un String literal, el objeto String se convertirá en un `String` literal y se comparará el contenido. Sin embargo, si ambos operandos son objetos de tipo String, entonces se comparan como objetos y deben hacer referencia al mismo objeto para que la comparación sea exitosa:
 
-<pre class="brush: js notranslate">const string1 = "Hola";
+```js
+const string1 = "Hola";
 const string2 = String("Hola");
 const string3 = new String("Hola");
 const string4 = new String("Hola");
@@ -92,39 +93,29 @@ console.log(string1 == string2); // true
 console.log(string1 == string3); // true
 console.log(string2 == string3); // true
 console.log(string3 == string4); // false
-console.log(string4 == string4); // true</pre>
+console.log(string4 == string4); // true
+```
 
-<h3 id="Comparación_de_fechas_y_cadenas">Comparación de fechas y cadenas</h3>
+### Comparación de fechas y cadenas
 
-<pre class="brush: js notranslate">const d = new Date('December 17, 1995 03:24:00');
+```js
+const d = new Date('December 17, 1995 03:24:00');
 const s = d.toString(); // Por ejemplo: "Sun Dec 17 1995 03:24:00 GMT-0800 (Hora estándar del Pacífico)"
-console.log(d == s);    //true</pre>
+console.log(d == s);    //true
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificaciones</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificaciones                                                                                 |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}} |
 
-<h2 id="Compatibilidad_con_Navegadores">Compatibilidad con Navegadores</h2>
+## Compatibilidad con Navegadores
 
+{{Compat("javascript.operators.equality")}}
 
+## Ver también
 
-<p>{{Compat("javascript.operators.equality")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Inequality">Inequality operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">Strict equality operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Strict inequality operator</a></li>
-</ul>
+- [Inequality operator](/es/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality operator](/es/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Strict inequality operator](/es/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

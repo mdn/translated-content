@@ -8,58 +8,57 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/call
 ---
-<div>{{JSRef("Objetos_globales", "Function")}}</div>
+{{JSRef("Objetos_globales", "Function")}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El método <strong><code>call()</code></strong> llama a una función con un valor dado <code>this</code> y con argumentos provistos individualmente.</p>
+El método **`call()`** llama a una función con un valor dado `this` y con argumentos provistos individualmente.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre><code><em>function</em>.call(<em>thisArg</em>[, <em>arg1</em>[, <em>arg2</em>[, ...]]])</code></pre>
+```
+function.call(thisArg[, arg1[, arg2[, ...]]])
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code><em>thisArg</em></code> {{optional_inline}}</dt>
- <dd>El valor a usar como <code>this</code> cuando se llama a <em><code>function</code></em>.
- <div class="blockIndicator note">
- <p><strong>Advertencia:</strong> En ciertos casos, <code><em>thisArg</em></code> puede no ser el valor actual visto por el método.</p>
+- `thisArg` {{optional_inline}}
 
- <p>Si el método es una función en {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} y {{jsxref("Global_Objects/undefined", "undefined")}} serán reemplazados con el objeto global, y valores primitivos serán convertidos a objetos.</p>
- </div>
- </dd>
- <dt><code>arg1, arg2, ...</code></dt>
- <dd>Argumentos para el objeto.</dd>
- <dt>
- <h3 id="Valor_de_retorno">Valor de retorno</h3>
- </dt>
- <dd>El resultado de llamar a la función con el <code>this</code> especificado y los argumentos.</dd>
-</dl>
+  - : El valor a usar como `this` cuando se llama a _`function`_.
 
-<h2 id="Descripción">Descripción</h2>
+    > **Nota:** **Advertencia:** En ciertos casos, `thisArg` puede no ser el valor actual visto por el método.
+    >
+    > Si el método es una función en {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} y {{jsxref("Global_Objects/undefined", "undefined")}} serán reemplazados con el objeto global, y valores primitivos serán convertidos a objetos.
 
-<p><code>call()</code> permite que una función/método que pertenece a un objeto, ser asignada y llamada para un objeto diferente.</p>
+- `arg1, arg2, ...`
+  - : Argumentos para el objeto.
+- ### Valor de retorno
+  - : El resultado de llamar a la función con el `this` especificado y los argumentos.
 
-<p><code>call()</code> provee un nuevo valor de <code>this</code> a la función/método. Con <code>call()</code>, puedes escribir un método ona vez y heredarlo a otro objeto, sin tener que reescribir el método en el nuevo objeto.</p>
+## Descripción
 
-<div class="note"><strong>Nota:</strong> Mientras la sintaxis de esta función es casi identica a la función {{jsxref("Function.apply", "apply()")}}, la diferencia fundamental es que <code>call()</code> acepta una <strong>lista de argumentos</strong>, mientras <code>apply()</code> accepta un <strong>arreglo sencillo de argumentos</strong>.</div>
+`call()` permite que una función/método que pertenece a un objeto, ser asignada y llamada para un objeto diferente.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+`call()` provee un nuevo valor de `this` a la función/método. Con `call()`, puedes escribir un método ona vez y heredarlo a otro objeto, sin tener que reescribir el método en el nuevo objeto.
 
-<h3 id="Usando_call_para_encadenar_constructores_para_un_objeto">Usando <code>call</code> para encadenar constructores para un objeto</h3>
+> **Nota:** Mientras la sintaxis de esta función es casi identica a la función {{jsxref("Function.apply", "apply()")}}, la diferencia fundamental es que `call()` acepta una **lista de argumentos**, mientras `apply()` accepta un **arreglo sencillo de argumentos**.
 
-<p>Puede usar <code>call</code> para encadenar constructores para un objeto (similar a Java).</p>
+## Ejemplos
 
-<p>En el siguiente ejemplo, el constructor para el objeto <code>Producto</code> es definido con dos parametros, <code>nombre</code> y <code>precio</code>.</p>
+### Usando `call` para encadenar constructores para un objeto
 
-<p>Otras dos funciones <code>Comida</code> y <code>Juguete</code> invocan a <code>Producto</code>, pasándo <code>this</code>, <code>nombre</code> y <code>precio</code>. <code>Producto</code> inicializa las propiedades <code>nombre</code> y <code>precio</code>, ambas funciones especializadas definen la <code>categoria</code>.</p>
+Puede usar `call` para encadenar constructores para un objeto (similar a Java).
 
-<pre class="brush: js notranslate">function Producto(nombre, precio) {
+En el siguiente ejemplo, el constructor para el objeto `Producto` es definido con dos parametros, `nombre` y `precio`.
+
+Otras dos funciones `Comida` y `Juguete` invocan a `Producto`, pasándo `this`, `nombre` y `precio`. `Producto` inicializa las propiedades `nombre` y `precio`, ambas funciones especializadas definen la `categoria`.
+
+```js
+function Producto(nombre, precio) {
   this.nombre = nombre;
   this.precio = precio;
 
-  if (precio &lt; 0)
+  if (precio < 0)
     throw RangeError('No se puede crear el producto "' + nombre + '" con un precio negativo');
   return this;
 }
@@ -78,24 +77,23 @@ Juguete.prototype = new Producto();
 
 var queso = new Comida('feta', 5);
 var diversion = new Juguete('robot', 40);
-</pre>
+```
 
-<h3 id="Usando_call_para_invocar_una_función_anónima">Usando <code>call</code> para invocar una función anónima</h3>
+### Usando `call` para invocar una función anónima
 
-<p>En este ejemplo, creamos una función anónima y usamos <code>call</code> para invocarla en cada objeto en un arreglo.</p>
+En este ejemplo, creamos una función anónima y usamos `call` para invocarla en cada objeto en un arreglo.
 
-<p>El propósito principal de la función anónima aquí es agregar una función <code>print</code>  a cada objeto, el cual puede imprimir el índice correcto en el arreglo.</p>
+El propósito principal de la función anónima aquí es agregar una función `print` a cada objeto, el cual puede imprimir el índice correcto en el arreglo.
 
-<div class="blockIndicator note">
-<p>Pasar el objeto como valor <code>this</code> no es estrictamente necesario, pero se hace con propósito explicativo.</p>
-</div>
+> **Nota:** Pasar el objeto como valor `this` no es estrictamente necesario, pero se hace con propósito explicativo.
 
-<pre class="brush: js notranslate">var animales = [
+```js
+var animales = [
   {especie: 'Leon', nombre: 'Rey'},
   {especie: 'Whale', nombre: 'Fail'}
 ];
 
-for (var i = 0; i &lt; animales.length; i++) {
+for (var i = 0; i < animales.length; i++) {
   (function (i) {
     this.imprimir = function () {
       console.log('#' + i  + ' ' + this.especie + ': ' + this.nombre);
@@ -103,11 +101,9 @@ for (var i = 0; i &lt; animales.length; i++) {
     this.imprimir();
   }).call(animales[i], i);
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Function.prototype.bind()")}}</li>
- <li>{{jsxref("Function.prototype.apply()")}}</li>
-</ul>
+- {{jsxref("Function.prototype.bind()")}}
+- {{jsxref("Function.prototype.apply()")}}

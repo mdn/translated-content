@@ -12,11 +12,12 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/map
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>map()</strong></code> crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.</p>
+El método **`map()`** crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
 
-<pre class="brush: js">var numbers = [1, 5, 10, 15];
+```js
+var numbers = [1, 5, 10, 15];
 var doubles = numbers.map(function(x) {
    return x * 2;
 });
@@ -29,61 +30,63 @@ var roots = numbers.map(function(num) {
 });
 // roots is now [1, 2, 3]
 // numbers is still [1, 4, 9]
-</pre>
+```
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>var nuevo_array = arr</var>.map(function <var>callback(currentValue, index, array) {
+```
+var nuevo_array = arr.map(function callback(currentValue, index, array) {
     // Elemento devuelto de nuevo_array
-}</var>[, <var>thisArg</var>])</pre>
+}[, thisArg])
+```
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Función que producirá un elemento del nuevo array, recibe tres argumentos:
- <dl>
-  <dt><code>currentValue</code></dt>
-  <dd>El elemento actual del array que se está procesando.</dd>
-  <dt><code>index</code></dt>
-  <dd>El índice del elemento actual dentro del array.</dd>
-  <dt><code>array</code></dt>
-  <dd>El array sobre el que se llama <code>map.</code></dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>Opcional. Valor a usar como <code>this </code>al ejecutar <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h2 id="Description" name="Description">Descripción</h2>
+  - : Función que producirá un elemento del nuevo array, recibe tres argumentos:
 
-<p><code>map</code> llama a la función <code>callback</code> provista <strong>una vez por elemento</strong> de un array, en orden, y construye un nuevo array con los resultados. <code>callback</code> se invoca sólo para los índices del array que tienen valores asignados; no se invoca en los índices que han sido borrados o a los que no se ha asignado valor.</p>
+    - `currentValue`
+      - : El elemento actual del array que se está procesando.
+    - `index`
+      - : El índice del elemento actual dentro del array.
+    - `array`
+      - : El array sobre el que se llama `map.`
 
-<p><code>callback</code> es llamada con tres argumentos: el valor del elemento, el índice del elemento, y el objeto array que se está recorriendo.</p>
+- `thisArg`
+  - : Opcional. Valor a usar como `this `al ejecutar `callback`.
 
-<p>Si se indica un parámetro <code>thisArg</code> a un <code>map</code>, se usará como valor de <code>this</code> en la función <code>callback</code>. En otro caso, se pasará {{jsxref("Global_Objects/undefined", "undefined")}} como su valor <code>this</code>. El valor de <code>this</code> observable por el <code>callback</code> se determina de acuerdo a las <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">reglas habituales para determinar el valor this visto por una función.</a></p>
+## Descripción
 
-<p><code>map</code> no modifica el array original en el que es llamado (aunque <code>callback</code>, si es llamada, puede modificarlo).</p>
+`map` llama a la función `callback` provista **una vez por elemento** de un array, en orden, y construye un nuevo array con los resultados. `callback` se invoca sólo para los índices del array que tienen valores asignados; no se invoca en los índices que han sido borrados o a los que no se ha asignado valor.
 
-<p>El rango de elementos procesado por <code>map</code> es establecido antes de la primera invocación del <code>callback</code>. Los elementos que sean agregados al array después de que la llamada a <code>map </code>comience no serán visitados por el <code>callback</code>. Si los elementos existentes del array son modificados o eliminados, su valor pasado al <code>callback</code> será el valor en el momento que el <code>map</code> lo visita; los elementos que son eliminados no son visitados.</p>
+`callback` es llamada con tres argumentos: el valor del elemento, el índice del elemento, y el objeto array que se está recorriendo.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+Si se indica un parámetro `thisArg` a un `map`, se usará como valor de `this` en la función `callback`. En otro caso, se pasará {{jsxref("Global_Objects/undefined", "undefined")}} como su valor `this`. El valor de `this` observable por el `callback` se determina de acuerdo a las [reglas habituales para determinar el valor this visto por una función.](/es/docs/Web/JavaScript/Reference/Operators/this)
 
-<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots" name="Example:_Mapping_an_array_of_numbers_to_an_array_of_square_roots">Procesar un array de números aplicándoles la raíz cuadrada</h3>
+`map` no modifica el array original en el que es llamado (aunque `callback`, si es llamada, puede modificarlo).
 
-<p>El siguiente código itera sobre un array de números, aplicándoles la raíz cuadrada a cada uno de sus elementos, produciendo un nuevo array a partir del inicial.</p>
+El rango de elementos procesado por `map` es establecido antes de la primera invocación del `callback`. Los elementos que sean agregados al array después de que la llamada a `map `comience no serán visitados por el `callback`. Si los elementos existentes del array son modificados o eliminados, su valor pasado al `callback` será el valor en el momento que el `map` lo visita; los elementos que son eliminados no son visitados.
 
-<pre class="brush: js">var numeros= [1, 4, 9];
+## Ejemplos
+
+### Procesar un array de números aplicándoles la raíz cuadrada
+
+El siguiente código itera sobre un array de números, aplicándoles la raíz cuadrada a cada uno de sus elementos, produciendo un nuevo array a partir del inicial.
+
+```js
+var numeros= [1, 4, 9];
 var raices = numeros.map(Math.sqrt);
 // raices tiene [1, 2, 3]
 // numeros aún mantiene [1, 4, 9]
-</pre>
+```
 
-<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots" name="Example:_Mapping_an_array_of_numbers_to_an_array_of_square_roots">Usando map para dar un nuevo formato a los objetos de un array</h3>
+### Usando map para dar un nuevo formato a los objetos de un array
 
-<p>El siguiente código toma un array de objetos y crea un nuevo array que contiene los nuevos objetos formateados.</p>
+El siguiente código toma un array de objetos y crea un nuevo array que contiene los nuevos objetos formateados.
 
-<pre class="brush: js">var kvArray = [{clave:1, valor:10},
+```js
+var kvArray = [{clave:1, valor:10},
                {clave:2, valor:20},
                {clave:3, valor: 30}];
 
@@ -99,58 +102,63 @@ var reformattedArray = kvArray.map(function(obj){
 // [{clave:1, valor:10},
 //  {clave:2, valor:20},
 //  {clave:3, valor: 30}]
-</pre>
+```
 
-<h3 id="Example_Mapping_an_array_of_numbers_using_a_function_containing_an_argument" name="Example:_Mapping_an_array_of_numbers_using_a_function_containing_an_argument">Mapear un array de números usando una función con un argumento</h3>
+### Mapear un array de números usando una función con un argumento
 
-<p>El siguiente código muestra cómo trabaja <code>map </code>cuando se utiliza una función que requiere de un argumento. El argumento será asignado automáticamente a cada elemento del arreglo conforme <code>map </code>itera el arreglo original.</p>
+El siguiente código muestra cómo trabaja `map `cuando se utiliza una función que requiere de un argumento. El argumento será asignado automáticamente a cada elemento del arreglo conforme `map `itera el arreglo original.
 
-<pre class="brush: js">var numeros = [1, 4, 9];
+```js
+var numeros = [1, 4, 9];
 var dobles  = numeros.map(function(num) {
   return num * 2;
 });
 
 // dobles es ahora [2, 8, 18]
 // numeros sigue siendo [1, 4, 9]
-</pre>
+```
 
-<h3 id="Example_using_map_generically" name="Example:_using_map_generically">Usando <code>map</code> de forma genérica</h3>
+### Usando `map` de forma genérica
 
-<p>Este ejemplo muestra como usar <code>map </code>en {{jsxref("Global_Objects/String", "String")}} para obtener un arreglo de bytes en codifcación ASCII representando el valor de los caracteres:</p>
+Este ejemplo muestra como usar `map `en {{jsxref("Global_Objects/String", "String")}} para obtener un arreglo de bytes en codifcación ASCII representando el valor de los caracteres:
 
-<pre class="brush: js">var map = Array.prototype.map;
+```js
+var map = Array.prototype.map;
 var valores = map.call('Hello World', function(char) { return char.charCodeAt(0); });
 // valores ahora tiene [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
-</pre>
+```
 
-<h3 id="Example_using_map_generically_querySelectorAll" name="Example:_using_map_generically_querySelectorAll">Usando <code>map</code> genérico con <code>querySelectorAll</code></h3>
+### Usando `map` genérico con `querySelectorAll`
 
-<p>Este ejemplo muestra como iterar sobre una colección de objetos obtenidos por <code>querySelectorAll</code>. En este caso obtenemos todas las opciones seleccionadas en pantalla y se imprimen en la consola:</p>
+Este ejemplo muestra como iterar sobre una colección de objetos obtenidos por `querySelectorAll`. En este caso obtenemos todas las opciones seleccionadas en pantalla y se imprimen en la consola:
 
-<pre class="brush: js">var elems = document.querySelectorAll('select option:checked');
+```js
+var elems = document.querySelectorAll('select option:checked');
 var values = [].map.call(elems, function(obj) {
   return obj.value;
 });
-</pre>
+```
 
-<h3 id="Usando_map_para_invertir_una_cadena">Usando <code>map</code> para invertir una cadena</h3>
+### Usando `map` para invertir una cadena
 
-<pre class="brush: js">var str = '12345';
+```js
+var str = '12345';
 [].map.call(str, function(x) {
   return x;
 }).reverse().join('');
 
 // Salida: '54321'
 // Bonus: usa'===' para probar si la cadena original era un palindromo
-</pre>
+```
 
-<h3 id="Example_Tricky_use_case" name="Example:_Tricky_use_case">Caso de uso engañoso</h3>
+### Caso de uso engañoso
 
-<p><a href="http://www.wirfs-brock.com/allen/posts/166">(inspirado por este artículo)</a></p>
+[(inspirado por este artículo)](http://www.wirfs-brock.com/allen/posts/166)
 
-<p>Es común utilizar el callback con un argumento (el elemento siendo pasado). Ciertas funciones son también usadas comunmente con un argumento, aún cuando toman argumentos adicionales opcionales.  Estos hábitos pueden llevar a comportamientos confusos.</p>
+Es común utilizar el callback con un argumento (el elemento siendo pasado). Ciertas funciones son también usadas comunmente con un argumento, aún cuando toman argumentos adicionales opcionales. Estos hábitos pueden llevar a comportamientos confusos.
 
-<pre class="brush: js">// Considera:
+```js
+// Considera:
 ['1', '2', '3'].map(parseInt);
 // Mientras uno esperaría [1, 2, 3]
 // en realidad se obtiene [1, NaN, NaN]
@@ -171,13 +179,14 @@ function returnInt(element) {
 
 // Un modo más simple de lograr lo de arriba, mientras de evita el "gotcha":
 ['1', '2', '3'].map(Number); // [1, 2, 3]
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>map</code> fue agregado al estandar ECMA-262 en la 5th edición; por lo tanto podría no estar presente en todas la implementaciones del estándar. Puedes sobrepasar esto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de <code>map</code> en implementaciones que no lo soportan de forma nativa. Este algoritmo es exactamente el mismo especificado en ECMA-262, 5th edición, asumiendo {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, y {{jsxref("Global_Objects/Array", "Array")}} tienen sus valores originales y que el <code>callback.call</code> evalua el valor original de <code>{{jsxref("Function.prototype.call")}}</code>.</p>
+`map` fue agregado al estandar ECMA-262 en la 5th edición; por lo tanto podría no estar presente en todas la implementaciones del estándar. Puedes sobrepasar esto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `map` en implementaciones que no lo soportan de forma nativa. Este algoritmo es exactamente el mismo especificado en ECMA-262, 5th edición, asumiendo {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, y {{jsxref("Global_Objects/Array", "Array")}} tienen sus valores originales y que el `callback.call` evalua el valor original de `{{jsxref("Function.prototype.call")}}`.
 
-<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.19
+```js
+// Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: http://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
 
@@ -196,7 +205,7 @@ if (!Array.prototype.map) {
     // 2. Let lenValue be the result of calling the Get internal
     //    method of O with the argument "length".
     // 3. Let len be ToUint32(lenValue).
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
     // See: http://es5.github.com/#x9.11
@@ -205,7 +214,7 @@ if (!Array.prototype.map) {
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-    if (arguments.length &gt; 1) {
+    if (arguments.length > 1) {
       T = thisArg;
     }
 
@@ -217,8 +226,8 @@ if (!Array.prototype.map) {
     // 7. Let k be 0
     k = 0;
 
-    // 8. Repeat, while k &lt; len
-    while (k &lt; len) {
+    // 8. Repeat, while k < len
+    while (k < len) {
 
       var kValue, mappedValue;
 
@@ -266,43 +275,22 @@ if (!Array.prototype.map) {
     return A;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.19', 'Array.prototype.map')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definición inicial. Implementado en JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.map', 'Array.prototype.map')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.map', 'Array.prototype.map')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estado                       | Comentario                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.4.19', 'Array.prototype.map')}}                 | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.6. |
+| {{SpecName('ES6', '#sec-array.prototype.map', 'Array.prototype.map')}}         | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-array.prototype.map', 'Array.prototype.map')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.Array.map")}}
 
-<h2 id="See_also" name="See_also">Véase también</h2>
+## Véase también
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Map")}} object</li>
- <li>{{jsxref("Array.from()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Map")}} object
+- {{jsxref("Array.from()")}}

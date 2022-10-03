@@ -7,52 +7,52 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/Invalid_date
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensaje">Mensaje</h2>
+## Mensaje
 
-<pre class="syntaxbox">RangeError: invalid date (Firefox)
+```
+RangeError: invalid date (Firefox)
 RangeError: invalid time value (Chrome)
 RangeError: Provided date is not in valid range (Chrome)
-</pre>
+```
 
-<h2 id="Tipo_de_error">Tipo de error</h2>
+## Tipo de error
 
-<p>{{jsxref("RangeError")}}</p>
+{{jsxref("RangeError")}}
 
-<h2 id="¿Cuál_es_el_problemaEdit">¿Cuál es el problema?<a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Errors/Invalid_array_length$edit#¿Cuál_es_el_problema" rel="nofollow, noindex"><span>Edit</span></a></h2>
+## ¿Cuál es el problema?[Edit](/es/docs/Web/JavaScript/Reference/Errors/Invalid_array_length$edit#¿Cuál_es_el_problema)
 
-<p><span id="noHighlight_0.5046278067977897">Se ha proporcionado una cadena con una fecha no válida para </span>{{jsxref("Date")}} o {{jsxref("Date.parse()")}}.</p>
+Se ha proporcionado una cadena con una fecha no válida para {{jsxref("Date")}} o {{jsxref("Date.parse()")}}.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Casos_no_válidos">Casos no válidos</h3>
+### Casos no válidos
 
-<div id="destText" style="direction: ltr;">
-<div><span id="noHighlight_0.47667740970902406">Las cadenas o fechas irreconocibles que contienen valores de elementos ilegales en cadenas con formato ISO suelen devolver {{jsxref("Nan")}}. Sin embargo, dependiendo de la implementación, las cadenas de formato ISO no conformes, también pueden lanzar </span><code>RangeError: invalid date</code><span>, como los siguientes casos en Firefox:</span></div>
+Las cadenas o fechas irreconocibles que contienen valores de elementos ilegales en cadenas con formato ISO suelen devolver {{jsxref("Nan")}}. Sin embargo, dependiendo de la implementación, las cadenas de formato ISO no conformes, también pueden lanzar `RangeError: invalid date`, como los siguientes casos en Firefox:
 
-<div> </div>
-</div>
-
-<pre class="brush: js example-bad">new Date('foo-bar 2014');
+```js example-bad
+new Date('foo-bar 2014');
 new Date('2014-25-23').toISOString();
 new Date('foo-bar 2014').toString();
-</pre>
+```
 
-<p>Esto, sin embargo, devuelve {{jsxref("NaN")}} en Firefox:</p>
+Esto, sin embargo, devuelve {{jsxref("NaN")}} en Firefox:
 
-<pre class="brush: js example-bad">Date.parse('foo-bar 2014'); // NaN</pre>
+```js example-bad
+Date.parse('foo-bar 2014'); // NaN
+```
 
-<p>Para más información, consulte la documentación de {{jsxref("Date.parse()")}}.</p>
+Para más información, consulte la documentación de {{jsxref("Date.parse()")}}.
 
-<h3 id="Casos_válidos">Casos válidos</h3>
+### Casos válidos
 
-<pre class="brush: js example-good">new Date('05 October 2011 14:48 UTC');</pre>
+```js example-good
+new Date('05 October 2011 14:48 UTC');
+```
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li>{{jsxref("Date")}}</li>
- <li>{{jsxref("Date.prototype.parse()")}}</li>
- <li>{{jsxref("Date.prototype.toISOString()")}}</li>
-</ul>
+- {{jsxref("Date")}}
+- {{jsxref("Date.prototype.parse()")}}
+- {{jsxref("Date.prototype.toISOString()")}}

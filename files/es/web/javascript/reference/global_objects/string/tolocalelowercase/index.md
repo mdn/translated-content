@@ -10,105 +10,66 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toLocaleLowerCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}El método **`toLocaleLowerCase()` **retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
 
-<div>El método <strong><code>toLocaleLowerCase()</code> </strong>retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.</div>
+Los fuentes para este ejemplo interactivo están almacenados en un repositorio GitHub. Si quieres contribuir en el proyecto de ejemplos interactivos, por favor clona https\://github.com/mdn/interactive-examples y envíanos un pull request.
 
-<div> </div>
+## Sintaxis
 
-<div>{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}</div>
+```
+str.toLocaleLowerCase()
+str.toLocaleLowerCase(locale)
+str.toLocaleLowerCase([locale, locale, ...])
+```
 
-<p>Los fuentes para este ejemplo interactivo están almacenados en un repositorio GitHub. Si quieres contribuir en el proyecto de ejemplos interactivos, por favor clona https://github.com/mdn/interactive-examples y envíanos un pull request.</p>
+### Parámetros
 
-<h2 id="Sintaxis">Sintaxis</h2>
+- `locale` {{optional_inline}}
+  - : El parámetro `locale` indica la localización que se utilizará para convertir a minúsculas de acuerdo con culalquier correspondencia de mayúsculas y minúsculas. Si se proporcionan múltiples locales en un {{jsxref("Array")}}, se utiliza [el mejor local disponible](https://tc39.github.io/ecma402/#sec-bestavailablelocale). La localización por defecto es la localización actual configurada en el _host_.
 
-<pre class="syntaxbox"><var>str</var>.toLocaleLowerCase()
-<var>str</var>.toLocaleLowerCase(locale)
-<var>str</var>.toLocaleLowerCase([locale, locale, ...])
-</pre>
+### Valor retornado
 
-<h3 id="Parámetros">Parámetros</h3>
+Una nueva cadena que representa la cadena desde la que se llama convertida a minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.
 
-<dl>
- <dt><code>locale</code> {{optional_inline}}</dt>
- <dd>El parámetro <code>locale</code> indica la localización que se utilizará para convertir a minúsculas de acuerdo con culalquier correspondencia de mayúsculas y minúsculas. Si se proporcionan múltiples locales en un {{jsxref("Array")}}, se utiliza <a href="https://tc39.github.io/ecma402/#sec-bestavailablelocale">el mejor local disponible</a>. La localización por defecto es la localización actual configurada en el <em>host</em>.</dd>
-</dl>
+### Excepciones
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+- Una excepción de tipo {{jsxref("RangeError")}} ("invalid language tag: xx_yy") se lanzará si el argumento `locale` no es una etiqueta válida de lenguaje.
+- Una excepción de tipo {{jsxref("TypeError")}} ("invalid element in locales argument") se lanzará si un elemento del arreglo no es del tipo cadena.
 
-<p>Una nueva cadena que representa la cadena desde la que se llama convertida a minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.</p>
+## Descripción
 
-<h3 id="Excepciones">Excepciones</h3>
+El método `toLocaleLowerCase()`\*\* \*\*retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas. `toLocaleLowerCase()` no afecta el valor de la cadena desde la que se llama. En la mayoría de los casos, producirá el mismo resultado que {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}, pero para algunos locales, como el turco, cuyas correspondencias de mayúsculas y minúsculas no siguen las correpsondencias por defecto de Unicode, podría producir de un resultado diferente.
 
-<ul>
- <li>Una excepción de tipo {{jsxref("RangeError")}} ("invalid language tag: xx_yy") se lanzará si el argumento <code>locale</code> no es una etiqueta válida de lenguaje.</li>
- <li>Una excepción de tipo {{jsxref("TypeError")}} ("invalid element in locales argument") se lanzará si un elemento del arreglo no es del tipo cadena.</li>
-</ul>
+## Ejemplos
 
-<h2 id="Descripción">Descripción</h2>
+### Utilizando `toLocaleLowerCase()`
 
-<p>El método <code>toLocaleLowerCase()</code><strong> </strong>retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.  <code>toLocaleLowerCase()</code> no afecta el valor de la cadena desde la que se llama. En la mayoría de los casos, producirá el mismo resultado que {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}, pero para algunos locales, como el turco, cuyas correspondencias de mayúsculas y minúsculas no siguen las correpsondencias por defecto de Unicode, podría producir de un resultado diferente.</p>
-
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<h3 id="Utilizando_toLocaleLowerCase()">Utilizando <code>toLocaleLowerCase()</code></h3>
-
-<pre class="brush: js">'ALPHABET'.toLocaleLowerCase(); // 'alphabet'
+```js
+'ALPHABET'.toLocaleLowerCase(); // 'alphabet'
 
 '\u0130'.toLocaleLowerCase('tr') === 'i';    // true
 '\u0130'.toLocaleLowerCase('en-US') === 'i'; // false
 
 let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
 '\u0130'.toLocaleLowerCase(locales) === 'i'; // true
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.17', 'String.prototype.toLocaleLowerCase')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sup-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}</td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td>ES Intl 2017 added the <code>locale</code> parameter.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                                   | Estatus                          | Comentario                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                                                         | {{Spec2('ES3')}}             | Initial definition. Implemented in JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.4.17', 'String.prototype.toLocaleLowerCase')}}                                         | {{Spec2('ES5.1')}}         |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}             | {{Spec2('ES6')}}             |                                                    |
+| {{SpecName('ESDraft', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}     | {{Spec2('ESDraft')}}     |                                                    |
+| {{SpecName('ES Int Draft', '#sup-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}} | {{Spec2('ES Int Draft')}} | ES Intl 2017 added the `locale` parameter.         |
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
+{{Compat("javascript.builtins.String.toLocaleLowerCase")}}
 
+## Vea también
 
-<p>{{Compat("javascript.builtins.String.toLocaleLowerCase")}}</p>
-
-<h2 id="Vea_también">Vea también</h2>
-
-<ul>
- <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
- <li>{{jsxref("String.prototype.toLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toUpperCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
+- {{jsxref("String.prototype.toLowerCase()")}}
+- {{jsxref("String.prototype.toUpperCase()")}}

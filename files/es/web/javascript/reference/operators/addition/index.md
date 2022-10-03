@@ -4,75 +4,66 @@ slug: Web/JavaScript/Reference/Operators/Addition
 translation_of: Web/JavaScript/Reference/Operators/Addition
 original_slug: Web/JavaScript/Referencia/Operadores/Adición
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>El operador de adición (<code>+</code>) produce la suma de operandos numéricos o la concatenación de (cadenas) string.</p>
+El operador de adición (`+`) produce la suma de operandos numéricos o la concatenación de (cadenas) string.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
 
+La fuente para este ejemplo interactivo está almacenado en un repositorio Github. Si te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envianos una pull-request.
 
+## Sintaxis
 
-<p>La fuente para este ejemplo interactivo está almacenado en un repositorio Github. Si te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envianos una pull-request.</p>
+```
+Operator: x + y
+```
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Ejemplos
 
-<pre><strong>Operator:</strong> <var>x</var> + <var>y</var>
-</pre>
+### Adición numérica
 
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<h3 id="Adición_numérica">Adición numérica</h3>
-
-<pre class="brush: js notranslate">// Número + Número -&gt; adición
+```js
+// Número + Número -> adición
 1 + 2 // 3
 
-// Booleano + Número -&gt; adición
+// Booleano + Número -> adición
 true + 1 // 2
 
-// Booleano + Booleano -&gt; adición
+// Booleano + Booleano -> adición
 false + false // 0
-</pre>
+```
 
-<h3 id="Concatenación_de_cadenas_String">Concatenación de (cadenas) String</h3>
+### Concatenación de (cadenas) String
 
-<pre class="brush: js notranslate">// String + String -&gt; concatenación
+```js
+// String + String -> concatenación
 'fut' + 'bol' // "futbol"
 
-// Número + String -&gt; concatenación
+// Número + String -> concatenación
 5 + 'oh' // "5oh"
 
-// String + Booleano -&gt; concatenación
-'fut' + false // "futfalse"</pre>
+// String + Booleano -> concatenación
+'fut' + false // "futfalse"
+```
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-addition-operator-plus', 'Addition operator')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-addition-operator-plus', 'Addition operator')}} |
 
-<h2 id="Compatibilidad_de_Explorador">Compatibilidad de Explorador</h2>
+## Compatibilidad de Explorador
 
+{{Compat("javascript.operators.addition")}}
 
+## También revisa
 
-<p>{{Compat("javascript.operators.addition")}}</p>
-
-<h2 id="También_revisa">También revisa</h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction operator</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder operator</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Increment">Increment operator</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement operator</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
-</ul>
+- [Subtraction operator](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/es/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](/es/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](/es/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](/es/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](/es/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_plus)

@@ -9,90 +9,67 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/abs
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La función <strong><code>Math.abs()</code></strong> retorna el valor absoluto de un número, que es </p>
+La función **`Math.abs()`** retorna el valor absoluto de un número, que es
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.abs</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&gt;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>0</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="TeX">{\mathtt{\operatorname{Math.abs}(x)}} = {|x|} = \begin{cases} x &amp; \text{if} \quad x \geq 0 \\ -x &amp; \text{if} \quad x &lt; 0 \end{cases} </annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.abs</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>></mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>0</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&#x3C;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="TeX">{\mathtt{\operatorname{Math.abs}(x)}} = {|x|} = \begin{cases} x &#x26; \text{if} \quad x \geq 0 \\ -x &#x26; \text{if} \quad x &#x3C; 0 \end{cases}</annotation></semantics></math>
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>Math.abs(<var>x</var>)</code></pre>
+```
+Math.abs(x)
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Un número.</dd>
-</dl>
- <h3 dir="ltr" id="Valor_de_retorno">Valor de retorno</h3>
+- `x`
+  - : Un número.
 
- <p dir="ltr">El valor absoluto del número dado.</p>
+### Valor de retorno
 
-<h2 id="Descripción">Descripción</h2>
+El valor absoluto del número dado.
 
-<p>Como <code>abs()</code> es un método estático de <code>Math</code>, deberías siempre usar <code>Math.abs()</code>, en lugar de un método de un objeto <code>Math</code> que crees (<code>Math</code> no es un constructor).</p>
+## Descripción
 
-<h2 id="Ejemplos">Ejemplos</h2>
+Como `abs()` es un método estático de `Math`, deberías siempre usar `Math.abs()`, en lugar de un método de un objeto `Math` que crees (`Math` no es un constructor).
 
-<h3 id="Comportamiento_de_Math.abs">Comportamiento de <code>Math.abs()</code></h3>
+## Ejemplos
 
-<p>Pasando un string no-numérico o una variable {{jsxref("undefined")}}/empty retorna {{jsxref("NaN")}}. Pasando {{jsxref("null")}} retorna 0.</p>
+### Comportamiento de `Math.abs()`
 
-<pre class="brush: js">Math.abs('-1');     // 1
+Pasando un string no-numérico o una variable {{jsxref("undefined")}}/empty retorna {{jsxref("NaN")}}. Pasando {{jsxref("null")}} retorna 0.
+
+```js
+Math.abs('-1');     // 1
 Math.abs(-2);       // 2
 Math.abs(null);     // 0
-<code>Math.abs('');       // 0
-</code>Math.abs([]);       // 0
-<code>Math.abs([2]);      // 2
-</code>Math.abs([1,2]);    // NaN
-<code>Math.abs({});       // NaN</code>
+Math.abs('');       // 0
+Math.abs([]);       // 0
+Math.abs([2]);      // 2
+Math.abs([1,2]);    // NaN
+Math.abs({});       // NaN
 Math.abs('string'); // NaN
 Math.abs();         // NaN
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definición inicial. Implementado en JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.1', 'Math.abs')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.abs', 'Math.abs')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.abs', 'Math.abs')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                       | Estado                       | Comentario                                          |
+| -------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.1', 'Math.abs')}} | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES6', '#sec-math.abs', 'Math.abs')}}     | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-math.abs', 'Math.abs')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("javascript.builtins.Math.abs")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.trunc()")}} {{experimental_inline}}</li>
-</ul>
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}} {{experimental_inline}}
+- {{jsxref("Math.trunc()")}} {{experimental_inline}}

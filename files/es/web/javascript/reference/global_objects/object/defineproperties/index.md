@@ -10,32 +10,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperties
 ---
-<div>{{JSRef("Objetos_globales", "Object")}}</div>
+{{JSRef("Objetos_globales", "Object")}}
 
-<h2 id="Summary" name="Summary">Sumario</h2>
+## Sumario
 
-<p>El metodo <strong><code>Object.defineProperties()</code></strong> define nuevas o modifica propiedades existentes directamente en el objeto, retornando el objeto.</p>
+El metodo **`Object.defineProperties()`** define nuevas o modifica propiedades existentes directamente en el objeto, retornando el objeto.
 
-<h2 id="Syntax" name="Syntax">Sintáxis</h2>
+## Sintáxis
 
-<pre class="syntaxbox"><code>Object.defineProperties(<em>obj</em>, <em>propiedades</em>)</code></pre>
+```
+Object.defineProperties(obj, propiedades)
+```
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>obj</dt>
- <dd>El objeto sobre el cual se crearán o modificaran sus propiedades.</dd>
- <dt>propiedades</dt>
- <dd>Un objeto cuyas propiedades enumerables propias consituyen descriptores para las propiedades a ser definidas o modificadas.</dd>
-</dl>
+- obj
+  - : El objeto sobre el cual se crearán o modificaran sus propiedades.
+- propiedades
+  - : Un objeto cuyas propiedades enumerables propias consituyen descriptores para las propiedades a ser definidas o modificadas.
 
-<h2 id="Description" name="Description">Descripción</h2>
+## Descripción
 
-<p><code>Object.defineProperties</code>, en escencia, define todas las propiedades correspondientes a las propiedades propias con capacidad de enumeración de <code>props</code> en el objeto <code>objrops.</code></p>
+`Object.defineProperties`, en escencia, define todas las propiedades correspondientes a las propiedades propias con capacidad de enumeración de `props` en el objeto `objrops.`
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js">Object.defineProperties(obj, {
+```js
+Object.defineProperties(obj, {
   "property1": {
     value: true,
     writable: true
@@ -45,13 +46,15 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/definePropertie
     writable: false
   }
   // etc. etc.
-});</pre>
+});
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Asumiendo una ejecución pristina del entorno con todos los nombres y propiedades referidas a sus valores iniciales, <code>Object.defineProperties</code> es casi completamente equivalente (note el comentario en <code>isCallable</code>) a la siguiente reimplementación de JavaScript:</p>
+Asumiendo una ejecución pristina del entorno con todos los nombres y propiedades referidas a sus valores iniciales, `Object.defineProperties` es casi completamente equivalente (note el comentario en `isCallable`) a la siguiente reimplementación de JavaScript:
 
-<pre>function defineProperties(obj, properties) {
+```
+function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -78,18 +81,18 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/definePropertie
     if ( hasProperty(desc, "get") ) {
       var g = desc.get;
 
-      if (!isCallable(g) &amp;&amp; g !== "undefined")
+      if (!isCallable(g) && g !== "undefined")
         throw new TypeError("bad get");
       d.get = g;
     }
     if ( hasProperty(desc, "set") ) {
       var s = desc.set;
-      if (!isCallable(s) &amp;&amp; s !== "undefined")
+      if (!isCallable(s) && s !== "undefined")
         throw new TypeError("bad set");
       d.set = s;
     }
 
-    if (("get" in d || "set" in d) &amp;&amp; ("value" in d || "writable" in d))
+    if (("get" in d || "set" in d) && ("value" in d || "writable" in d))
       throw new TypeError("identity-confused descriptor");
 
     return d;
@@ -103,47 +106,31 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/definePropertie
   var keys = Object.keys(properties);
   var descs = [];
 
-  for (var i = 0; i &lt; keys.length; i++)
+  for (var i = 0; i < keys.length; i++)
     descs.push([keys[i], convertToDescriptor(properties[keys[i]])]);
 
-  for (var i = 0; i &lt; descs.length; i++)
+  for (var i = 0; i < descs.length; i++)
     Object.defineProperty(obj, descs[i][0], descs[i][1]);
 
   return obj;
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definición inicial. Implementada en JavaScript 1.8.5</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                   | Comentario                                           |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}                 | {{Spec2('ES5.1')}} | Definición inicial. Implementada en JavaScript 1.8.5 |
+| {{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}} | {{Spec2('ES6')}}     |                                                      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-<p>Basado en <a class="external" href="http://kangax.github.com/es5-compat-table/">Kangax's compat tables</a>.</p>
+Basado en [Kangax's compat tables](http://kangax.github.com/es5-compat-table/).
 
 {{Compat("javascript.builtins.Object.defineProperties")}}
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties" title="Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.keys()")}}
+- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties "Enumerability_and_ownership_of_properties")

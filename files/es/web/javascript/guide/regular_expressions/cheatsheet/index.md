@@ -11,168 +11,81 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Hoja_de_referencia
 ---
-<div>{{jsSidebar("Guía de JavaScript")}}</div>
+{{jsSidebar("Guía de JavaScript")}}
 
-<p><span class="seoSummary">Esta página proporciona una hoja de referencia general de todas las capacidades de la sintaxis de <code>RegExp</code> agregando el contenido de los artículos en la guía <code>RegExp</code>. Si necesitas más información sobre un tema específico, sigue el enlace del título correspondiente para acceder al artículo completo o dirígete a <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/">la guía</a>.</span></p>
+Esta página proporciona una hoja de referencia general de todas las capacidades de la sintaxis de `RegExp` agregando el contenido de los artículos en la guía `RegExp`. Si necesitas más información sobre un tema específico, sigue el enlace del título correspondiente para acceder al artículo completo o dirígete a [la guía](/es/docs/Web/JavaScript/Guide/Regular_Expressions/).
 
-<h2 id="Clases_de_caracteres"><a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">Clases de caracteres</a></h2>
+## [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
 
-<div>Si deseas contribuir a este documento, edita también <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">el artículo original</a></div>
+Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)«Tabla»
 
-«Tabla»
+## [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
 
-<h2 id="Aserciones"><a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Aserciones</a></h2>
+Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
 
-<div>Si deseas contribuir a este documento, edita también <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">el artículo original</a></div>
-
-<h3 id="Aserciones_de_tipo_límite">Aserciones de tipo límite</h3>
+### Aserciones de tipo límite
 
 «Tabla»
 
-<h3 id="Otras_aserciones">Otras aserciones</h3>
+### Otras aserciones
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: El caracter <code>?</code> también se puede utilizar como cuantificador.</p>
-</div>
+> **Nota:** El caracter `?` también se puede utilizar como cuantificador.
 
 «Tabla»
 
-<h2 id="Grupos_y_rangos"><a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Grupos y rangos</a></h2>
+## [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
 
-<div>Si deseas contribuir a este documento, edita también <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">el artículo original</a></div>
+Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Caracteres</th>
-   <th scope="col">Significado</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><em>x</em>|<em>y</em></code></td>
-   <td>
-    <p>Coincide con "x" o "y". Por ejemplo, <code>/verde|roja/</code> reconoce el "verde" en "manzana verde" y "roja" en "manzana roja".</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>[xyz]<br>
-    [a-c]</code></td>
-   <td>
-    <p>Un juego de caracteres. Coincide con cualquiera de los caracteres incluidos. Puedes especificar un rango de caracteres mediante el uso de un guión, pero si el guión aparece como el primero o último caracter entre corchetes, se toma como un guión literal para incluirse en el juego de caracteres como un caracter normal. También es posible incluir una clase de caracteres en un juego de caracteres.</p>
+| Caracteres      | Significado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `x\|y`          | Coincide con "x" o "y". Por ejemplo, `/verde\|roja/` reconoce el "verde" en "manzana verde" y "roja" en "manzana roja".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `[xyz] [a-c]`   | Un juego de caracteres. Coincide con cualquiera de los caracteres incluidos. Puedes especificar un rango de caracteres mediante el uso de un guión, pero si el guión aparece como el primero o último caracter entre corchetes, se toma como un guión literal para incluirse en el juego de caracteres como un caracter normal. También es posible incluir una clase de caracteres en un juego de caracteres.Por ejemplo, `[abcd]` es lo mismo que `[a-d]`. Coincide con la "b" en "brisket" y la "c" en "chop".Por ejemplo, `[abcd-]` y `[-abcd]` reconoce la "b" en "brisket", la "c" en "chop" y el "-" (guión) en "non-profit".Por ejemplo, `[\w-]` es lo mismo que `[A-Za-z0-9_-]`. Ambos reconocen la "b" en "brisket", la "c" en "chop" y la "n" en "non-profit".                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `[^xyz] [^a-c]` | Un juego de caracteres negado o complementado. Es decir, hallan cualquier cosa que no esté encerrada entre corchetes. Puedes especificar un rango de caracteres mediante el uso de un guión, pero si el guión aparece como el primero o último caracter entre corchetes, se toma como un guión literal para incluirse en el juego de caracteres como un caracter normal. Por ejemplo, `[^abc]` es lo mismo que `[^a-c]`. Inicialmente halla la "o" en "bacon" y la "h" en "chuleta".El caracter ^ además puede indicar el [comienzo de la entrada](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `(x)`           | **Grupo de captura**: Encuentra la `x` y la recuerda. Por ejemplo, `/(foo)/` encuentra y recuerda "foo" en "foo bar".Una expresión regular puede tener varios grupos de captura. En los resultados, coincide con los grupos capturados normalmente en un arreglo cuyos miembros están en el mismo orden que los paréntesis de la izquierda en el grupo capturado. Este suele ser solo el orden de los propios grupos capturados. Esto se vuelve importante cuando los grupos capturados están anidados. Se accede a las coincidencias utilizando el índice de los elementos del resultado (`[1], ..., [n]`) o desde las propiedades predefinidas del objeto `RegExp` (`$1, ..., $9`).Los grupos de captura tienen una penalización de rendimiento. Si no necesitas que se recupere la subcadena coincidente, prefiere los paréntesis que no capturen (ve más abajo).[`String.match()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/match) no devolverá grupos si el indicador `/.../g` está configurado. Sin embargo, aún puedes usar [`String.matchAll()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) para obtener todas los encontrados. |
+| `\n`            | Donde "n" es un número entero positivo. Una referencia posterior a la última subcadena que coincide con el paréntesis n en la expresión regular (contando los paréntesis izquierdos). Por ejemplo, `/apple(,)\sorange\1/` coincide con "apple, orange" en "apple, orange, cherry, peach".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| \k\<Name>       | Una referencia inversa a la última subcadena encontrada con el grupo de captura **N\*\***ombrado\*\* especificado por `<Name>`.Por ejemplo, `/(?<title>\w+), yes \k<title>/` concuerda con "Sir, yes Sir" en "Do you copy? Sir, yes Sir!".`\k` aquí se usa literalmente para indicar el comienzo de una referencia a un grupo de captura nombrado.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `(?<Name>x)`    | **Grupo de captura nombrado**: reconoce la "x" y la almacena en la propiedad `group` del resultado devuelto bajo el nombre especificado por `<Name>`. Los corchetes angulares (`<` y `>`) son obligatorios para el nombre del grupo.Por ejemplo, para extraer el código de área de Estados Unidos de un número de teléfono, podríamos usar `/\((?<area>\d\d\d)\)/`. El número resultante debería aparecer en `matches.groups.area`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `(?:x)`         | **Grupo sin captura**: reconoce la "x" pero no recuerda el resultado. La subcadena encontrada no se puede recuperar de los elementos del arreglo resultante (`[1], ..., [n]`) o de las propiedades predefinidas del objeto `RegExp` (`$1, ..., $9`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-    <p>Por ejemplo, <code>[abcd]</code> es lo mismo que <code>[a-d]</code>. Coincide con la "b" en "brisket" y la "c" en "chop".</p>
+## [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
 
-    <p>Por ejemplo, <code>[abcd-]</code> y <code>[-abcd]</code> reconoce la "b" en "brisket", la "c" en "chop" y el "-" (guión) en "non-profit".</p>
+Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
 
-    <p>Por ejemplo, <code>[\w-]</code> es lo mismo que <code>[A-Za-z0-9_-]</code>. Ambos reconocen la "b" en "brisket", la "c" en "chop" y la "n" en "non-profit".</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>[^xyz]<br>
-     [^a-c]</code></p>
-   </td>
-   <td>
-    <p>Un juego de caracteres negado o complementado. Es decir, hallan cualquier cosa que no esté encerrada entre corchetes. Puedes especificar un rango de caracteres mediante el uso de un guión, pero si el guión aparece como el primero o último caracter entre corchetes, se toma como un guión literal para incluirse en el juego de caracteres como un caracter normal. Por ejemplo, <code>[^abc]</code> es lo mismo que <code>[^a-c]</code>. Inicialmente halla la "o" en "bacon" y la "h" en "chuleta".</p>
-
-    <div>
-    <p>El caracter ^ además puede indicar el <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">comienzo de la entrada</a>.</p>
-    </div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>(<em>x</em>)</code></td>
-   <td>
-    <p><strong>Grupo de captura</strong>: Encuentra la <code><em>x</em></code> y la recuerda. Por ejemplo, <code>/(foo)/</code> encuentra y recuerda "foo" en "foo bar". </p>
-
-    <p>Una expresión regular puede tener varios grupos de captura. En los resultados, coincide con los grupos capturados normalmente en un arreglo cuyos miembros están en el mismo orden que los paréntesis de la izquierda en el grupo capturado. Este suele ser solo el orden de los propios grupos capturados. Esto se vuelve importante cuando los grupos capturados están anidados. Se accede a las coincidencias utilizando el índice de los elementos del resultado (<code>[1], ..., [n]</code>) o desde las propiedades predefinidas del objeto <code>RegExp</code> (<code>$1, ..., $9</code>).</p>
-
-    <p>Los grupos de captura tienen una penalización de rendimiento. Si no necesitas que se recupere la subcadena coincidente, prefiere los paréntesis que no capturen (ve más abajo).</p>
-
-    <p><code><a href="/es/docs/Web/JavaScript/Reference/Global_Objects/String/match">String.match()</a></code> no devolverá grupos si el indicador <code>/.../g</code> está configurado. Sin embargo, aún puedes usar <code><a href="/es/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll">String.matchAll()</a></code> para obtener todas los encontrados.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>\<em>n</em></code></td>
-   <td>
-    <p>Donde "n" es un número entero positivo. Una referencia posterior a la última subcadena que coincide con el paréntesis n en la expresión regular (contando los paréntesis izquierdos). Por ejemplo, <code>/apple(,)\sorange\1/</code> coincide con "apple, orange" en "apple, orange, cherry, peach".</p>
-   </td>
-  </tr>
-  <tr>
-   <td>\k&lt;Name&gt;</td>
-   <td>
-    <p>Una referencia inversa a la última subcadena encontrada con el grupo de captura <strong>N</strong><strong>ombrado</strong> especificado por <code>&lt;Name&gt;</code>.</p>
-
-    <p>Por ejemplo, <code>/(?&lt;title&gt;\w+), yes \k&lt;title&gt;/</code> concuerda con "Sir, yes Sir" en "Do you copy? Sir, yes Sir!".</p>
-
-    <div>
-    <p><code>\k</code> aquí se usa literalmente para indicar el comienzo de una referencia a un grupo de captura nombrado.</p>
-    </div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>(?&lt;Name&gt;x)</code></td>
-   <td>
-    <p><strong>Grupo de captura nombrado</strong>: reconoce la "x" y la almacena en la propiedad <code>group</code> del resultado devuelto bajo el nombre especificado por <code>&lt;Name&gt;</code>. Los corchetes angulares (<code>&lt;</code> y <code>&gt;</code>) son obligatorios para el nombre del grupo.</p>
-
-    <p>Por ejemplo, para extraer el código de área de Estados Unidos de un número de teléfono, podríamos usar <code>/\((?&lt;area&gt;\d\d\d)\)/</code>. El número resultante debería aparecer en <code>matches.groups.area</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>(?:<em>x</em>)</code></td>
-   <td><strong>Grupo sin captura</strong>: reconoce la "x" pero no recuerda el resultado. La subcadena encontrada no se puede recuperar de los elementos del arreglo resultante (<code>[1], ..., [n]</code>) o de las propiedades predefinidas del objeto <code>RegExp</code> (<code>$1, ..., $9</code>).</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Cuantificadores"><a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">Cuantificadores</a></h2>
-
-<div>Si deseas contribuir a este documento, edita también <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">el artículo original</a></div>
-
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: A continuación, <em>elemento</em> se refiere no solo a caracteres singulares, sino que también incluye <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">clases de caracteres</a>, <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">escapes de propiedad Unicode</a>, <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">grupos y rangos</a>.</p>
-</div>
+> **Nota:** A continuación, _elemento_ se refiere no solo a caracteres singulares, sino que también incluye [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [escapes de propiedad Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
 
 «Tabla»
 
-<h2 id="Escapa_la_propiedad_Unicode"><a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Escapa la propiedad Unicode</a></h2>
+## [Escapa la propiedad Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
 
-<div>Si deseas contribuir a este documento, edita también <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">el artículo original</a></div>
+Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
 
-<pre class="brush: js notranslate">// Valores no binarios
-\p{<em>UnicodePropertyValue</em>}
-\p{<em>UnicodePropertyName</em>=<em>UnicodePropertyValue</em>}
+```js
+// Valores no binarios
+\p{UnicodePropertyValue}
+\p{UnicodePropertyName=UnicodePropertyValue}
 
 // Valores binarios y no binarios
-\p{<em>UnicodeBinaryPropertyName</em>}
+\p{UnicodeBinaryPropertyName}
 
 // Negación: \P is negado \p
-\P{<em>UnicodePropertyValue</em>}
-\P{<em>UnicodeBinaryPropertyName</em>}
-</pre>
+\P{UnicodePropertyValue}
+\P{UnicodeBinaryPropertyName}
+```
 
-<dl>
- <dt>UnicodeBinaryPropertyName</dt>
- <dd>El nombre de una <a href="https://tc39.es/ecma262/#table-binary-unicode-properties">propiedad binaria</a>. Por ejemplo: <code><a href="https://unicode.org/reports/tr18/#General_Category_Property">ASCII</a></code>, <code><a href="https://unicode.org/reports/tr44/#Alphabetic">Alpha</a></code>, <code>Math</code>, <code><a href="https://unicode.org/reports/tr44/#Diacritic">Diacrítica</a></code>, <code><a href="https://unicode.org/reports/tr51/#Emoji_Properties">Emoji</a></code>, <code><a href="https://unicode.org/reports/tr44/#Hex_Digit">Hex_Digit</a></code>, <code>Math</code>, <code><a href="https://unicode.org/reports/tr44/#White_Space">Espacio_blanco</a></code>, etc. Consulta <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt">Unicode Data PropList.txt</a> para obtener más información.</dd>
- <dt>UnicodePropertyName</dt>
- <dd>El nombre de una propiedad <a href="https://tc39.es/ecma262/#table-nonbinary-unicode-properties">no binaria</a>:
+- UnicodeBinaryPropertyName
+  - : El nombre de una [propiedad binaria](https://tc39.es/ecma262/#table-binary-unicode-properties). Por ejemplo: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacrítica`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`Espacio_blanco`](https://unicode.org/reports/tr44/#White_Space), etc. Consulta [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt) para obtener más información.
+- UnicodePropertyName
 
-<ul>
- <li><a href="https://unicode.org/reports/tr18/#General_Category_Property">General_Category</a> (<code>gc</code>)</li>
- <li><a href="https://unicode.org/reports/tr24/#Script">Script</a> (<code>sc</code>)</li>
- <li><a href="https://unicode.org/reports/tr24/#Script_Extensions">Script_Extensions</a> (<code>scx</code>)</li>
-</ul>
-</dd>
-</dl>
+  - : El nombre de una propiedad [no binaria](https://tc39.es/ecma262/#table-nonbinary-unicode-properties):
 
-<p>Consulta también <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt">PropertyValueAliases.txt</a></p>
+    - [General_Category](https://unicode.org/reports/tr18/#General_Category_Property) (`gc`)
+    - [Script](https://unicode.org/reports/tr24/#Script) (`sc`)
+    - [Script_Extensions](https://unicode.org/reports/tr24/#Script_Extensions) (`scx`)
 
-<dl>
- <dt>UnicodePropertyValue</dt>
- <dd>Uno de los fragmentos enumerados en la sección Valores, más adelante. Muchos valores tienen alias o abreviaturas (por ejemplo, el valor <code>Decimal_Number</code> para la propiedad <code>General_Category</code> se puede escribir cómo <code>Nd</code>, <code>digit</code>, o <code>Decimal_number</code>). Para la mayoría de los valores, la parte <em><code>UnicodePropertyName</code> </em> y el signo igual se pueden omitir. Si se especifica un <em><code>UnicodePropertyName</code></em>, el valor debe corresponder al tipo de propiedad proporcionado.</dd>
-</dl>
+Consulta también [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Puesto que hay muchas propiedades y valores disponibles, no las describiremos exhaustivamente aquí, sino que proporcionaremos varios ejemplos.</p>
-</div>
+- UnicodePropertyValue
+  - : Uno de los fragmentos enumerados en la sección Valores, más adelante. Muchos valores tienen alias o abreviaturas (por ejemplo, el valor `Decimal_Number` para la propiedad `General_Category` se puede escribir cómo `Nd`, `digit`, o `Decimal_number`). Para la mayoría de los valores, la parte _`UnicodePropertyName` \_y el signo igual se pueden omitir. Si se especifica un _`UnicodePropertyName`\_, el valor debe corresponder al tipo de propiedad proporcionado.
+
+> **Nota:** Puesto que hay muchas propiedades y valores disponibles, no las describiremos exhaustivamente aquí, sino que proporcionaremos varios ejemplos.

@@ -7,254 +7,251 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/eval
 original_slug: Web/JavaScript/Referencia/Objetos_globales/eval
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<h2 id="Resumen" name="Resumen">Resumen</h2>
+## Resumen
 
-<p>La función <code>eval()</code> evalúa un código JavaScript representado como una cadena de caracteres (string), sin referenciar a un objeto en particular.</p>
+La función `eval()` evalúa un código JavaScript representado como una cadena de caracteres (string), sin referenciar a un objeto en particular.
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js"><code>eval(<em>cadena</em> de caracteres o string)</code>
-</pre>
+```js
+eval(cadena de caracteres o string)
+```
 
-<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>cadena de caracteres (string)</code></dt>
- <dd>Una cadena de caracteres (string) que representa una expresión, sentencia o secuencia de sentencias en JavaScript. La expresión puede incluir variables y propiedades de objetos existentes.</dd>
-</dl>
- <h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Valores retornados o devueltos</h3>
+- `cadena de caracteres (string)`
+  - : Una cadena de caracteres (string) que representa una expresión, sentencia o secuencia de sentencias en JavaScript. La expresión puede incluir variables y propiedades de objetos existentes.
 
-<p>El valor que resulta de la evaluación del código proporcionado. Si este valor está vacío. {{jsxref("undefined")}} (artículo en inglés) es devuelto.</p>
+### Valores retornados o devueltos
 
-<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
+El valor que resulta de la evaluación del código proporcionado. Si este valor está vacío. {{jsxref("undefined")}} (artículo en inglés) es devuelto.
 
-<p><code>eval()</code> es una propiedad de la función del objeto global.</p>
+## Descripción
 
-<p>El argumento de la función <code>eval</code> es una cadena de caracteres. Si la cadena de caracteres representa una expresión, <code>eval()</code> evalúa la expresión. Si el argumento representa una o más sentencias JavaScript, <code>eval()</code> evalúa las sentencias. No se debe llamar a <code>eval()</code> para evaluar una expresión aritmética; ya que JavaScript evalúa las expresiones aritméticas automáticamente.</p>
+`eval()` es una propiedad de la función del objeto global.
 
-<p>Si construye una expresión aritmética como una cadena de caracteres, puede usar <code>eval()</code> para evaluarla más tarde. Por ejemplo, suponga que tiene la variable <code>x</code>. Puede posponer la evaluación de una expresión que involucre a <code>x</code> mediante la asignación del valor de la cadena de caracteres de la expresión, asignando "<code>3 * x + 2</code>" a la variable, y entonces llamar a <code>eval()</code> posteriormente en el script.</p>
+El argumento de la función `eval` es una cadena de caracteres. Si la cadena de caracteres representa una expresión, `eval()` evalúa la expresión. Si el argumento representa una o más sentencias JavaScript, `eval()` evalúa las sentencias. No se debe llamar a `eval()` para evaluar una expresión aritmética; ya que JavaScript evalúa las expresiones aritméticas automáticamente.
 
-<p>Si el argumento de <code>eval()</code> no es una cadena de caracteres, <code>eval()</code> devuelve el argumento sin cambio. En el siguiente ejemplo, el constructor <code>String</code> es especificado, y <code>eval()</code> devuelve un objeto <code>String</code> en lugar de evaluar la cadena de caracteres.</p>
+Si construye una expresión aritmética como una cadena de caracteres, puede usar `eval()` para evaluarla más tarde. Por ejemplo, suponga que tiene la variable `x`. Puede posponer la evaluación de una expresión que involucre a `x` mediante la asignación del valor de la cadena de caracteres de la expresión, asignando "`3 * x + 2`" a la variable, y entonces llamar a `eval()` posteriormente en el script.
 
-<pre>eval(new String("2 + 2")); // devuelve un objeto String que contiene "2 + 2"
+Si el argumento de `eval()` no es una cadena de caracteres, `eval()` devuelve el argumento sin cambio. En el siguiente ejemplo, el constructor `String` es especificado, y `eval()` devuelve un objeto `String` en lugar de evaluar la cadena de caracteres.
+
+```
+eval(new String("2 + 2")); // devuelve un objeto String que contiene "2 + 2"
 eval("2 + 2");             // devuelve 4
-</pre>
+```
 
-<p>Puede trabajar sobre esta limitación de una manera genérica utilizando <code>toString()</code>.</p>
+Puede trabajar sobre esta limitación de una manera genérica utilizando `toString()`.
 
-<pre>var expresion = new String("2 + 2");
+```
+var expresion = new String("2 + 2");
 eval(expresion.toString());
-</pre>
+```
 
-<p>Si utiliza la función <code>eval()</code> <em>indirectamente</em>, invocándola a través de una referencia distinta de <code>eval</code>, a partir de ECMAScript 5, ésta funciona en el ámbito global en lugar de hacerlo en el ámbito local; esto quiere decir, por ejemplo, que las declaraciones de función crean funciones globales, y que el código siendo evaluado no tiene acceso a las variables locales dentro del ámbito en donde está siendo llamada.</p>
+Si utiliza la función `eval()` _indirectamente_, invocándola a través de una referencia distinta de `eval`, a partir de ECMAScript 5, ésta funciona en el ámbito global en lugar de hacerlo en el ámbito local; esto quiere decir, por ejemplo, que las declaraciones de función crean funciones globales, y que el código siendo evaluado no tiene acceso a las variables locales dentro del ámbito en donde está siendo llamada.
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">test</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> x <span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">,</span> y <span class="operator token">=</span> <span class="number token">4</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="function token">eval</span><span class="punctuation token">(</span><span class="string token">"x + y"</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// Llamada directa, utiliza el ámbito local, el resultado es 6</span>
-  <span class="keyword token">var</span> geval <span class="operator token">=</span> eval<span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="function token">geval</span><span class="punctuation token">(</span><span class="string token">"x + y"</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Llamada indirecta, utiliza el ámbito global, através de ReferenceError por que `x` es indefinida</span>
-<span class="punctuation token">}</span></code></pre>
+```js
+function test() {
+  var x = 2, y = 4;
+  console.log(eval("x + y"));  // Llamada directa, utiliza el ámbito local, el resultado es 6
+  var geval = eval;
+  console.log(geval("x + y")); // Llamada indirecta, utiliza el ámbito global, através de ReferenceError por que `x` es indefinida
+}
+```
 
-<h2 id="No_utilice_eval_innecesariamente">No utilice <code>eval</code> innecesariamente</h2>
+## No utilice `eval` innecesariamente
 
-<p><code>eval()</code> es una función peligrosa, quel ejecuta el código el cual es pasado con los privilegios de quien llama.  Si ejecuta <code>eval()</code> con una cadena de carcteres que podría ser afectada por un elemento malicioso, podría terminar ejecutando código malicioso dentro de la computadora del usuario con los permisos de su página o extensión web . Más importante aún, una parte del código de terceros podría accesar al ámbito en el cual <code>eval()</code> fue invocada, lo que puede permitir la entrada a posibles ataques de formas a las que el constructor {{jsxref("Global_Objects/Function", "Function")}} (art. en inglés) el cual es similar, no es susceptible.</p>
+`eval()` es una función peligrosa, quel ejecuta el código el cual es pasado con los privilegios de quien llama. Si ejecuta `eval()` con una cadena de carcteres que podría ser afectada por un elemento malicioso, podría terminar ejecutando código malicioso dentro de la computadora del usuario con los permisos de su página o extensión web . Más importante aún, una parte del código de terceros podría accesar al ámbito en el cual `eval()` fue invocada, lo que puede permitir la entrada a posibles ataques de formas a las que el constructor {{jsxref("Global_Objects/Function", "Function")}} (art. en inglés) el cual es similar, no es susceptible.
 
-<p><code>eval()</code> es generalmente también más lenta que otras alternativas desde que se invoca en el intérprte de JS, mientras que otros muchos constructores son optimizados por los motores JS modernos.</p>
+`eval()` es generalmente también más lenta que otras alternativas desde que se invoca en el intérprte de JS, mientras que otros muchos constructores son optimizados por los motores JS modernos.
 
-<p>Existen alternativas más seguras (y rápidas) que <code>eval() </code>para casos de uso común.</p>
+Existen alternativas más seguras (y rápidas) que `eval() `para casos de uso común.
 
-<h3 id="Accediendo_a_propiedades_de_los_miembros">Accediendo a propiedades de los miembros</h3>
+### Accediendo a propiedades de los miembros
 
-<p>No debería utilizar <code>eval()</code> con el fin de convertir nombres de propiedades en propiedades. Observe el siguiente ejemplo en el cual la función <code>getNombreCampo(n)</code> devuelve el nombre del elemento del formulario especificado como una cadena. La primera sentencia asigna el valor de cadena del tercer elemento del formulario a la variable <code>campo</code>. La segunda sentencia utiliza <code>eval</code> para mostrar el valor del elemento del formulario.</p>
+No debería utilizar `eval()` con el fin de convertir nombres de propiedades en propiedades. Observe el siguiente ejemplo en el cual la función `getNombreCampo(n)` devuelve el nombre del elemento del formulario especificado como una cadena. La primera sentencia asigna el valor de cadena del tercer elemento del formulario a la variable `campo`. La segunda sentencia utiliza `eval` para mostrar el valor del elemento del formulario.
 
-<pre>var campo = getNombreCampo(3);
+```
+var campo = getNombreCampo(3);
 document.write("El campo llamado ", campo, " tiene un valor de ", eval(campo + ".value"));
-</pre>
+```
 
-<p>Sin embargo, <code>eval()</code> no es necesario en este código. De hecho, su uso aquí no se recomienda. En su lugar, utilice los <a href="/es/Web/JavaScript/Referencia/Operadores/Miembros">operadores de miembro</a> (art. en inglés), que son mucho más rápidos y seguros:</p>
+Sin embargo, `eval()` no es necesario en este código. De hecho, su uso aquí no se recomienda. En su lugar, utilice los [operadores de miembro](/es/Web/JavaScript/Referencia/Operadores/Miembros) (art. en inglés), que son mucho más rápidos y seguros:
 
-<pre class="brush: js">var campo = getFieldName(3);
+```js
+var campo = getFieldName(3);
 document.write("El campo llamado ", campo, " tiene un valor de ", campo[valor]);
-</pre>
+```
 
-<p>Considere ahora este nuevo ejemplo, en donde la propiedad del objeto a ser accesado no es conocida hasta que el código es ejecutado. Esto puede hacerse con eval:</p>
+Considere ahora este nuevo ejemplo, en donde la propiedad del objeto a ser accesado no es conocida hasta que el código es ejecutado. Esto puede hacerse con eval:
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> obj <span class="operator token">=</span> <span class="punctuation token">{</span> a<span class="punctuation token">:</span> <span class="number token">20</span><span class="punctuation token">,</span> b<span class="punctuation token">:</span> <span class="number token">30</span> <span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> nombreProp <span class="operator token">=</span> obtenerNombreProp<span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// devuelve "a" o "b"</span>
+```js
+var obj = { a: 20, b: 30 };
+var nombreProp = obtenerNombreProp();  // devuelve "a" o "b"
 
-<span class="function token">eval</span><span class="punctuation token">(</span> <span class="string token">"var resultado = obj."</span> <span class="operator token">+</span> nombreProp <span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+eval( "var resultado = obj." + nombreProp );
+```
 
-<p>Y con el uso de los <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors" title="JavaScript/Reference/Operators/Member_Operators">accesores de propiedades</a> (artículo en inglés), el cual es mucho más rápido y seguro, sería así:</p>
+Y con el uso de los [accesores de propiedades](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors "JavaScript/Reference/Operators/Member_Operators") (artículo en inglés), el cual es mucho más rápido y seguro, sería así:
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> obj <span class="operator token">=</span> <span class="punctuation token">{</span> a<span class="punctuation token">:</span> <span class="number token">20</span><span class="punctuation token">,</span> b<span class="punctuation token">:</span> <span class="number token">30</span> <span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> nombreProp <span class="operator token">=</span> obtenerNombreProp<span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// devuelve "a" o "b"</span>
-<span class="keyword token">var</span> resultado <span class="operator token">=</span> obj<span class="punctuation token">[</span> nombreProp <span class="punctuation token">]</span><span class="punctuation token">;</span>  <span class="comment token">//  obj[ "a" ] es el mismo que obj.a</span></code></pre>
+```js
+var obj = { a: 20, b: 30 };
+var nombreProp = obtenerNombreProp(); // devuelve "a" o "b"
+var resultado = obj[ nombreProp ];  //  obj[ "a" ] es el mismo que obj.a
+```
 
-<p>Puede incluso utilizar este método para acceder a las propiedades de los descendientes. Utilizando <code>eval()</code> esto sería de la siguiente forma:</p>
+Puede incluso utilizar este método para acceder a las propiedades de los descendientes. Utilizando `eval()` esto sería de la siguiente forma:
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> obj <span class="operator token">=</span> <span class="punctuation token">{</span>a<span class="punctuation token">:</span> <span class="punctuation token">{</span>b<span class="punctuation token">:</span> <span class="punctuation token">{</span>c<span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">}</span><span class="punctuation token">}</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> propPath <span class="operator token">=</span> <span class="function token">getPropPath</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// returns e.g. "a.b.c"</span>
+```js
+var obj = {a: {b: {c: 0}}};
+var propPath = getPropPath();  // returns e.g. "a.b.c"
 
-<span class="function token">eval</span><span class="punctuation token">(</span> <span class="string token">"var result = obj."</span> <span class="operator token">+</span> propPath <span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+eval( "var result = obj." + propPath );
+```
 
-<p>Evitando <code>eval()</code>, esto podría hacerse dividiendo la ruta de propiedad y haciendo un bucle a través de las diferentes propiedades:</p>
+Evitando `eval()`, esto podría hacerse dividiendo la ruta de propiedad y haciendo un bucle a través de las diferentes propiedades:
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">getDescendantProp</span><span class="punctuation token">(</span>obj<span class="punctuation token">,</span> desc<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> arr <span class="operator token">=</span> desc<span class="punctuation token">.</span><span class="function token">split</span><span class="punctuation token">(</span><span class="string token">"."</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">while</span><span class="punctuation token">(</span>arr<span class="punctuation token">.</span>length<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    obj <span class="operator token">=</span> obj<span class="punctuation token">[</span>arr<span class="punctuation token">.</span><span class="function token">shift</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">return</span> obj<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```js
+function getDescendantProp(obj, desc) {
+  var arr = desc.split(".");
+  while(arr.length) {
+    obj = obj[arr.shift()];
+  }
+  return obj;
+}
 
-<span class="keyword token">var</span> obj <span class="operator token">=</span> <span class="punctuation token">{</span>a<span class="punctuation token">:</span> <span class="punctuation token">{</span>b<span class="punctuation token">:</span> <span class="punctuation token">{</span>c<span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">}</span><span class="punctuation token">}</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> propPath <span class="operator token">=</span> <span class="function token">getPropPath</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// returns e.g. "a.b.c"</span>
-<span class="keyword token">var</span> result <span class="operator token">=</span> <span class="function token">getDescendantProp</span><span class="punctuation token">(</span>obj<span class="punctuation token">,</span> propPath<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+var obj = {a: {b: {c: 0}}};
+var propPath = getPropPath();  // returns e.g. "a.b.c"
+var result = getDescendantProp(obj, propPath);
+```
 
-<p>Estableciendo una propiedad que funcione de modo similar:</p>
+Estableciendo una propiedad que funcione de modo similar:
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">setDescendantProp</span><span class="punctuation token">(</span>obj<span class="punctuation token">,</span> desc<span class="punctuation token">,</span> value<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> arr <span class="operator token">=</span> desc<span class="punctuation token">.</span><span class="function token">split</span><span class="punctuation token">(</span><span class="string token">"."</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">while</span><span class="punctuation token">(</span>arr<span class="punctuation token">.</span>length <span class="operator token">&gt;</span> <span class="number token">1</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    obj <span class="operator token">=</span> obj<span class="punctuation token">[</span>arr<span class="punctuation token">.</span><span class="function token">shift</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  obj<span class="punctuation token">[</span>arr<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">]</span> <span class="operator token">=</span> value<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```js
+function setDescendantProp(obj, desc, value) {
+  var arr = desc.split(".");
+  while(arr.length > 1) {
+    obj = obj[arr.shift()];
+  }
+  obj[arr[0]] = value;
+}
 
-<span class="keyword token">var</span> obj <span class="operator token">=</span> <span class="punctuation token">{</span>a<span class="punctuation token">:</span> <span class="punctuation token">{</span>b<span class="punctuation token">:</span> <span class="punctuation token">{</span>c<span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">}</span><span class="punctuation token">}</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> propPath <span class="operator token">=</span> <span class="function token">getPropPath</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// returns e.g. "a.b.c"</span>
-<span class="keyword token">var</span> result <span class="operator token">=</span> <span class="function token">setDescendantProp</span><span class="punctuation token">(</span>obj<span class="punctuation token">,</span> propPath<span class="punctuation token">,</span> <span class="number token">1</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// test.a.b.c will now be 1</span></code></pre>
+var obj = {a: {b: {c: 0}}};
+var propPath = getPropPath();  // returns e.g. "a.b.c"
+var result = setDescendantProp(obj, propPath, 1);  // test.a.b.c will now be 1
+```
 
-<h3 id="Utilice_funciones_en_lugar_de_evaluar_fragmentos_de_código">Utilice funciones en lugar de evaluar fragmentos de código</h3>
+### Utilice funciones en lugar de evaluar fragmentos de código
 
-<p>JavaScript tiene <a class="external external-icon" href="http://en.wikipedia.org/wiki/First-class_function">funciones de primera clase </a>(artículo en inglés), lo que quiere decir que usted puede pasar funciones como argumentos a otras APIs, almacenarlas en variables y propiedades de objetos, etc. Muchas APIs de DOM están diseñadas con esto en mente, o sea que usted puede (y debería) escribir:</p>
+JavaScript tiene [funciones de primera clase ](http://en.wikipedia.org/wiki/First-class_function)(artículo en inglés), lo que quiere decir que usted puede pasar funciones como argumentos a otras APIs, almacenarlas en variables y propiedades de objetos, etc. Muchas APIs de DOM están diseñadas con esto en mente, o sea que usted puede (y debería) escribir:
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// instead of setTimeout(" ... ", 1000) use:</span>
-<span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="number token">1000</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+```js
+// instead of setTimeout(" ... ", 1000) use:
+setTimeout(function() { ... }, 1000);
 
-<span class="comment token">// instead of elt.setAttribute("onclick", "...") use:</span>
-elt<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"click"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span> <span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+// instead of elt.setAttribute("onclick", "...") use:
+elt.addEventListener("click", function() { ... } , false);
+```
 
-<p>Las <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures" title="JavaScript/Guide/Closures">clausuras o cierres </a>(art. en inglés) son muy útiles como forma de crear funciones parametrizadas sin la concatenación de cadenas de caracteres o strings.</p>
+Las [clausuras o cierres ](/es/docs/Web/JavaScript/Closures "JavaScript/Guide/Closures")(art. en inglés) son muy útiles como forma de crear funciones parametrizadas sin la concatenación de cadenas de caracteres o strings.
 
-<h3 id="Analizando_JSON_(convirtiendo_cadenas_de_caracteres_(strings)_hacia_objetos_de_JavaScript)">Analizando JSON (convirtiendo cadenas de caracteres (strings) hacia objetos de JavaScript)</h3>
+### Analizando JSON (convirtiendo cadenas de caracteres (strings) hacia objetos de JavaScript)
 
-<p>Si la cadena de caracteres que usted esta llamando <code>eval()</code> contiene datos (por ejemplo, un array: <code>"[1, 2, 3]"</code>), en contraposición al código, debería considerar un cambio a <a href="https://developer.mozilla.org/en-US/docs/Glossary/JSON" title="JSON">JSON</a> (art. en inglés), el cual permite a la cadena de caracteres utilizar un subconjunto de sintaxis de JavaScript para representar los datos. Vea también <a href="https://developer.mozilla.org/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions" title="Downloading_JSON_and_JavaScript_in_extensions">Descargando JSON y JavaScript en extensiones</a> (art. en inglés).</p>
+Si la cadena de caracteres que usted esta llamando `eval()` contiene datos (por ejemplo, un array: `"[1, 2, 3]"`), en contraposición al código, debería considerar un cambio a [JSON](/es/docs/Glossary/JSON "JSON") (art. en inglés), el cual permite a la cadena de caracteres utilizar un subconjunto de sintaxis de JavaScript para representar los datos. Vea también [Descargando JSON y JavaScript en extensiones](/es/docs/Downloading_JSON_and_JavaScript_in_extensions "Downloading_JSON_and_JavaScript_in_extensions") (art. en inglés).
 
-<p>Observe, que ya que la sintaxis de JSON es limitada en comparación con la sintaxis de JavaScript, muchas literales válidas de JavaScript no serán analizadas como JSON. Por ejemplo, seguir comas no está permitido en JSON, y los nombres de propiedades (keys) en literales de objeto deben ser entrecomilladas. Asegúrese de utilizar un serializados de JSON para generar cadenas de caracteres que posteriormente sean analizadas como JSON.</p>
+Observe, que ya que la sintaxis de JSON es limitada en comparación con la sintaxis de JavaScript, muchas literales válidas de JavaScript no serán analizadas como JSON. Por ejemplo, seguir comas no está permitido en JSON, y los nombres de propiedades (keys) en literales de objeto deben ser entrecomilladas. Asegúrese de utilizar un serializados de JSON para generar cadenas de caracteres que posteriormente sean analizadas como JSON.
 
-<h3 id="Pasar_datos_en_lugar_de_código">Pasar datos en lugar de código</h3>
+### Pasar datos en lugar de código
 
-<p>Por ejemplo, una extensión diseñada para arrastar contenido de páginas web podría tener reglas de arrastre definidas en <a href="https://developer.mozilla.org/en-US/docs/XPath" title="XPath">XPath</a> (art. en inglés) en lugar de código JavaScript.</p>
+Por ejemplo, una extensión diseñada para arrastar contenido de páginas web podría tener reglas de arrastre definidas en [XPath](/es/docs/XPath "XPath") (art. en inglés) en lugar de código JavaScript.
 
-<h3 id="Ejecutar_código_sin_privilegos_limitados">Ejecutar código sin privilegos limitados</h3>
+### Ejecutar código sin privilegos limitados
 
-<p>Si usted debe ejecutar código, considere ejecutarlo con privilegios reducidos. Este consejo aplica principalmente para las extensiones y las aplicaciones XUL, para lo cual puede utilizar <a href="https://developer.mozilla.org/en-US/docs/Components.utils.evalInSandbox" title="Components.utils.evalInSandbox">Components.utils.evalInSandbox</a> (art. en inglés).</p>
+Si usted debe ejecutar código, considere ejecutarlo con privilegios reducidos. Este consejo aplica principalmente para las extensiones y las aplicaciones XUL, para lo cual puede utilizar [Components.utils.evalInSandbox](/es/docs/Components.utils.evalInSandbox "Components.utils.evalInSandbox") (art. en inglés).
 
-<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Los siguientes ejemplos muestran el resultado usando <code>document.write</code>. En JavaScript del lado servidor, puede mostrar el mismo resultado llamando a la función <code>write</code> en vez de <code>document.write</code>.</p>
+Los siguientes ejemplos muestran el resultado usando `document.write`. En JavaScript del lado servidor, puede mostrar el mismo resultado llamando a la función `write` en vez de `document.write`.
 
-<h3 id="Utlizando_eval">Utlizando <code>eval</code></h3>
+### Utlizando `eval`
 
-<p>En el siguiente código, las dos sentencias que contienen <code>eval</code> devuelven 42. La primera evalúa la cadena "<code>x + y + 1</code>"; la segunda evalúa la cadena "<code>42</code>".</p>
+En el siguiente código, las dos sentencias que contienen `eval` devuelven 42. La primera evalúa la cadena "`x + y + 1`"; la segunda evalúa la cadena "`42`".
 
-<pre>var x = 2;
+```
+var x = 2;
 var y = 39;
 var z = "42";
 eval("x + y + 1"); // returns 42
 eval(z);           // returns 42
-</pre>
+```
 
-<h3 id="Utilizando_eval_para_evaluar_una_cadena_de_caracteres_(string)_como_sentencias_de_JavaScript">Utilizando <code>eval</code> para evaluar una cadena de caracteres (string) como sentencias de JavaScript</h3>
+### Utilizando `eval` para evaluar una cadena de caracteres (string) como sentencias de JavaScript
 
-<p>El siguiente ejemplo utiliza <code>eval</code> para evaluar una cadena de caracteres <code>str</code>. Esta cadena consiste de sentencias de JavaScript que abren un diálogo <code>Alert</code> y asignan a <code>z</code> un valor de 42 si <code>x</code> es cinco, y asigna 0 a <code>z</code> en caso contrario. Cuando se ejecuta la segunda sentencia, <code>eval</code> ocasionará que estas sentencias sean ejecutadas, y también evaluará el conjunto de sentencias y devolverá que el valor es asignado a <code>z</code>.</p>
+El siguiente ejemplo utiliza `eval` para evaluar una cadena de caracteres `str`. Esta cadena consiste de sentencias de JavaScript que abren un diálogo `Alert` y asignan a `z` un valor de 42 si `x` es cinco, y asigna 0 a `z` en caso contrario. Cuando se ejecuta la segunda sentencia, `eval` ocasionará que estas sentencias sean ejecutadas, y también evaluará el conjunto de sentencias y devolverá que el valor es asignado a `z`.
 
-<pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> x <span class="operator token">=</span> <span class="number token">5</span><span class="punctuation token">;</span></code>
+```js
+var x = 5;
 var str = "if (x == 5) {alert('z is 42'); z = 42;} else z = 0; ";
 
-document.write("&lt;P&gt;z es ", eval(str));
-</pre>
+document.write("<P>z es ", eval(str));
+```
 
-<h3 id="La_última_espresión_es_evaluada">La última espresión es evaluada</h3>
+### La última espresión es evaluada
 
-<p><code>eval()</code> devuelve el valor de la última expresión evaluada</p>
+`eval()` devuelve el valor de la última expresión evaluada
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> str <span class="operator token">=</span> <span class="string token">"if ( a ) { 1+1; } else { 1+2; }"</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> a <span class="operator token">=</span> <span class="keyword token">true</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> b <span class="operator token">=</span> <span class="function token">eval</span><span class="punctuation token">(</span>str<span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// devuelve 2</span>
+```js
+var str = "if ( a ) { 1+1; } else { 1+2; }";
+var a = true;
+var b = eval(str);  // devuelve 2
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"b is : "</span> <span class="operator token">+</span> b<span class="punctuation token">)</span><span class="punctuation token">;</span>
+console.log("b is : " + b);
 
-a <span class="operator token">=</span> <span class="keyword token">false</span><span class="punctuation token">;</span>
-b <span class="operator token">=</span> <span class="function token">eval</span><span class="punctuation token">(</span>str<span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// devuelve 3</span>
+a = false;
+b = eval(str);  // devuelve 3
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"b is : "</span> <span class="operator token">+</span> b<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+console.log("b is : " + b);
+```
 
-<h3 id="eval_como_una_cadena_de_caracteres_(string)_definiendo_funciones_requiere_(_y_)_como_prefijo_y_sufijo"><code>eval</code> como una cadena de caracteres (string) definiendo funciones requiere "(" y ")" como prefijo y sufijo</h3>
+### `eval` como una cadena de caracteres (string) definiendo funciones requiere "(" y ")" como prefijo y sufijo
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> fctStr1 <span class="operator token">=</span> <span class="string token">"function a() {}"</span>
-<span class="keyword token">var</span> fctStr2 <span class="operator token">=</span> <span class="string token">"(function a() {})"</span>
-<span class="keyword token">var</span> fct1 <span class="operator token">=</span> <span class="function token">eval</span><span class="punctuation token">(</span>fctStr1<span class="punctuation token">)</span>  <span class="comment token">// devuelve undefined</span>
-<span class="keyword token">var</span> fct2 <span class="operator token">=</span> <span class="function token">eval</span><span class="punctuation token">(</span>fctStr2<span class="punctuation token">)</span>  <span class="comment token">// deuelve una función</span></code></pre>
+```js
+var fctStr1 = "function a() {}"
+var fctStr2 = "(function a() {})"
+var fct1 = eval(fctStr1)  // devuelve undefined
+var fct2 = eval(fctStr2)  // deuelve una función
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificaciones</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.2.1', 'eval')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-eval-x', 'eval')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-eval-x', 'eval')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificaciones                                             | Status                       | Comentario          |
+| ------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ES1')}}                                     | {{Spec2('ES1')}}         | Definición inicial. |
+| {{SpecName('ES5.1', '#sec-15.1.2.1', 'eval')}} | {{Spec2('ES5.1')}}     |                     |
+| {{SpecName('ES6', '#sec-eval-x', 'eval')}}     | {{Spec2('ES6')}}         |                     |
+| {{SpecName('ESDraft', '#sec-eval-x', 'eval')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("javascript.builtins.eval")}}
 
-<h2 id="Observaciones_específicas_para_Gecko">Observaciones específicas para Gecko</h2>
+## Observaciones específicas para Gecko
 
-<ul>
- <li>Históricamente <code>eval()</code> tenía un segundo argumento opcional, especificando un objeto en cuyo contexto la evaluación era ejecutada. Este argunmento no era estándar, y fue removido del <em>SpiderMonkey en</em> Gecko 1.9.1 (Firefox 3.5). Vea {{bug(442333)}}.</li>
-</ul>
+- Históricamente `eval()` tenía un segundo argumento opcional, especificando un objeto en cuyo contexto la evaluación era ejecutada. Este argunmento no era estándar, y fue removido del _SpiderMonkey en_ Gecko 1.9.1 (Firefox 3.5). Vea {{bug(442333)}}.
 
-<h2 id="Compatibilidad_Hacia_Atr.C3.A1s" name="Compatibilidad_Hacia_Atr.C3.A1s">Compatibilidad Hacia Atrás</h2>
+## Compatibilidad Hacia Atrás
 
-<h3 id="JavaScript_1.3_y_anteriores" name="JavaScript_1.3_y_anteriores">JavaScript 1.3 y anteriores</h3>
+### JavaScript 1.3 y anteriores
 
-<p>Puede usar <code>eval</code> indirectamente, aunque ésto está desaconsejado.</p>
+Puede usar `eval` indirectamente, aunque ésto está desaconsejado.
 
-<h3 id="JavaScript_1.1" name="JavaScript_1.1">JavaScript 1.1</h3>
+### JavaScript 1.1
 
-<p><code>eval</code> también es un método de todos los objetos.</p>
+`eval` también es un método de todos los objetos.
 
-<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
+## Vea También
 
-<ul>
- <li>{{jsxref("Objetos_globales/uneval", "uneval()")}}</li>
- <li><a href="/es/docs/Web/JavaScript/Referencia/Operadores/Miembros">Miembros de operadores</a></li>
-</ul>
+- {{jsxref("Objetos_globales/uneval", "uneval()")}}
+- [Miembros de operadores](/es/docs/Web/JavaScript/Referencia/Operadores/Miembros)

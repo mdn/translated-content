@@ -11,70 +11,62 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Escapes_de_propiedades_Unicode
 ---
-<p>{{jsSidebar("JavaScript Guide")}}</p>
+{{jsSidebar("JavaScript Guide")}}
 
-<p>Los <strong>escapes de propiedad Unicode</strong> en las {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}} permiten la coincidencia de caracteres según sus propiedades Unicode. Un caracter se describe mediante varias propiedades que, o bien, son binarias ("tipo booleano") o, no binarias. Por ejemplo, puedes usar escapes de propiedades Unicode para reconocer emojis, signos de puntuación, letras (incluso letras de idiomas específicos o scripts), etc.</p>
+Los **escapes de propiedad Unicode** en las {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}} permiten la coincidencia de caracteres según sus propiedades Unicode. Un caracter se describe mediante varias propiedades que, o bien, son binarias ("tipo booleano") o, no binarias. Por ejemplo, puedes usar escapes de propiedades Unicode para reconocer emojis, signos de puntuación, letras (incluso letras de idiomas específicos o scripts), etc.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Para que funcionen los escapes de propiedad Unicode, una expresión regular debe utilizar {{JSxRef("../Guide/Regular_Expressions", "la bandera <code>u</code>", "#Busqueda_avanzada_con_banderas")}} que indica que una cadena se debe considerar como una serie de puntos de código Unicode. Consulta también {{JSxRef("Objetos_globales/RegExp/unicode", "RegExp.prototype.unicode")}}.</p>
-</div>
+> **Nota:** Para que funcionen los escapes de propiedad Unicode, una expresión regular debe utilizar {{JSxRef("../Guide/Regular_Expressions", "la bandera <code>u</code>", "#Busqueda_avanzada_con_banderas")}} que indica que una cadena se debe considerar como una serie de puntos de código Unicode. Consulta también {{JSxRef("Objetos_globales/RegExp/unicode", "RegExp.prototype.unicode")}}.
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Algunas propiedades Unicode abarcan muchos más caracteres que algunas {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}} (como <code>\w</code> que coincide solo con letras latinas, desde <code>a</code> hasta <code>z</code>) pero esta última es más compatible con los navegadores (a partir de enero de 2020).</p>
-</div>
+> **Nota:** Algunas propiedades Unicode abarcan muchos más caracteres que algunas {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}} (como `\w` que coincide solo con letras latinas, desde `a` hasta `z`) pero esta última es más compatible con los navegadores (a partir de enero de 2020).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<div>La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Hoja_de_referencia", "esta hoja de trucos")}}. No olvides editarla también, ¡gracias!</div>
+La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Hoja_de_referencia", "esta hoja de trucos")}}. No olvides editarla también, ¡gracias!
 
-<pre class="brush: js notranslate">// Valores no binarios
-\p{<em>UnicodePropertyValue</em>}
-\p{<em>UnicodePropertyName</em>=<em>UnicodePropertyValue</em>}
+```js
+// Valores no binarios
+\p{UnicodePropertyValue}
+\p{UnicodePropertyName=UnicodePropertyValue}
 
 // Valores binarios y no binarios
-\p{<em>UnicodeBinaryPropertyName</em>}
+\p{UnicodeBinaryPropertyName}
 
 // Negación: \P se niega con \p
-\P{<em>UnicodePropertyValue</em>}
-\P{<em>UnicodeBinaryPropertyName</em>}
-</pre>
+\P{UnicodePropertyValue}
+\P{UnicodeBinaryPropertyName}
+```
 
-<ul>
- <li><a href="https://unicode.org/reports/tr18/#General_Category_Property">Categoría general</a> (<code>gc</code> por «<em><strong>g</strong>eneral <strong>c</strong>ategory</em>»)</li>
- <li><a href="https://unicode.org/reports/tr24/#Script">Script</a> (<code>sc</code> por «<em><strong>sc</strong>ript</em>»)</li>
- <li><a href="https://unicode.org/reports/tr24/#Script_Extensions">Extensiones de script</a> (<code>scx</code> por «<em><strong>sc</strong>ript e<strong>x</strong>tensions</em>»)</li>
-</ul>
+- [Categoría general](https://unicode.org/reports/tr18/#General_Category_Property) (`gc` por «_**g**eneral **c**ategory_»)
+- [Script](https://unicode.org/reports/tr24/#Script) (`sc` por «_**sc**ript_»)
+- [Extensiones de script](https://unicode.org/reports/tr24/#Script_Extensions) (`scx` por «_**sc**ript e**x**tensions_»)
 
-<p>Consulta también <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt">PropertyValueAliases.txt<span> </span></a></p>
+Consulta también [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
 
-<dl>
- <dt>UnicodeBinaryPropertyName</dt>
- <dd>El nombre de una <a href="https://tc39.es/ecma262/#table-binary-unicode-properties">propiedad binaria</a>. Por ejemplo: <code><a href="https://unicode.org/reports/tr18/#General_Category_Property">ASCII</a></code>, <code><a href="https://unicode.org/reports/tr44/#Alphabetic">Alfabético</a></code>, <code>Math</code>, <code><a href="https://unicode.org/reports/tr44/#Diacritic">Diacrítico</a></code>, <code><a href="https://unicode.org/reports/tr51/#Emoji_Properties">Emoji</a></code>, <code><a href="https://unicode.org/reports/tr44/#Hex_Digit">Dígito hexadecimal</a></code>, <code>Math</code>, <code><a href="https://unicode.org/reports/tr44/#White_Space">Espacio en blanco</a></code>, etc. Consulta <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt">Unicode Data PropList.txt</a> para obtener más información.</dd>
- <dt>NombreDePropiedadUnicode</dt>
- <dd>El nombre de una propiedad <a href="https://tc39.es/ecma262/#table-nonbinary-unicode-properties">no binaria</a>:</dd>
- <dt>ValorDePropiedadUnicode</dt>
- <dd>Uno de los fragmentos enumerados en la sección Valores, más adelante. Muchos valores tienen alias o abreviaturas (por ejemplo, el valor <code>Decimal_Number</code> para la propiedad <code>General_Category</code> se puede escribir <code>Nd</code>, <code>digit</code>, o <code>Decimal_Number</code>). Para la mayoría de los valores, la parte <em><code>NombreDePropiedadUnicode</code></em> y el signo igual se pueden omitir. Si se especifica un <em><code>NombreDePropiedadUnicode</code></em>, el valor debe corresponder al tipo de propiedad proporcionado.</dd>
-</dl>
+- UnicodeBinaryPropertyName
+  - : El nombre de una [propiedad binaria](https://tc39.es/ecma262/#table-binary-unicode-properties). Por ejemplo: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alfabético`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacrítico`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Dígito hexadecimal`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`Espacio en blanco`](https://unicode.org/reports/tr44/#White_Space), etc. Consulta [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt) para obtener más información.
+- NombreDePropiedadUnicode
+  - : El nombre de una propiedad [no binaria](https://tc39.es/ecma262/#table-nonbinary-unicode-properties):
+- ValorDePropiedadUnicode
+  - : Uno de los fragmentos enumerados en la sección Valores, más adelante. Muchos valores tienen alias o abreviaturas (por ejemplo, el valor `Decimal_Number` para la propiedad `General_Category` se puede escribir `Nd`, `digit`, o `Decimal_Number`). Para la mayoría de los valores, la parte _`NombreDePropiedadUnicode`_ y el signo igual se pueden omitir. Si se especifica un _`NombreDePropiedadUnicode`_, el valor debe corresponder al tipo de propiedad proporcionado.
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Debido a que hay muchas propiedades y valores disponibles, no los describiremos exhaustivamente aquí, en su lugar proporcionaremos varios ejemplos.</p>
-</div>
+> **Nota:** Debido a que hay muchas propiedades y valores disponibles, no los describiremos exhaustivamente aquí, en su lugar proporcionaremos varios ejemplos.
 
-<h2 id="Justificación">Justificación</h2>
+## Justificación
 
-<p>Antes de ES2018, no existía una forma eficiente de hacer coincidir caracteres de diferentes conjuntos basados en <code>scripts</code> (como macedonio, griego, georgiano, etc.) o <code>propertyName</code> (como Emoji, etc.) en JavaScript. Consulta la <a href="https://github.com/tc39/proposal-regexp-unicode-property-escapes">propuesta tc39 sobre escapes de propiedad Unicode</a> para obtener más información.</p>
+Antes de ES2018, no existía una forma eficiente de hacer coincidir caracteres de diferentes conjuntos basados en `scripts` (como macedonio, griego, georgiano, etc.) o `propertyName` (como Emoji, etc.) en JavaScript. Consulta la [propuesta tc39 sobre escapes de propiedad Unicode](https://github.com/tc39/proposal-regexp-unicode-property-escapes) para obtener más información.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Categorías_generales">Categorías generales</h3>
+### Categorías generales
 
-<p>Las categorías generales se utilizan para clasificar caracteres Unicode, y hay subcategorías disponibles para definir una categorización más precisa. Es posible utilizar formas cortas o largas en los escapes de propiedades Unicode.</p>
+Las categorías generales se utilizan para clasificar caracteres Unicode, y hay subcategorías disponibles para definir una categorización más precisa. Es posible utilizar formas cortas o largas en los escapes de propiedades Unicode.
 
-<p>Se pueden utilizar para reconocer letras, números, símbolos, signos de puntuación, espacios, etc. Para obtener una lista más exhaustiva de categorías generales, consulta <a href="https://unicode.org/reports/tr18/#General_Category_Property">la especificación Unicode</a>.</p>
+Se pueden utilizar para reconocer letras, números, símbolos, signos de puntuación, espacios, etc. Para obtener una lista más exhaustiva de categorías generales, consulta [la especificación Unicode](https://unicode.org/reports/tr18/#General_Category_Property).
 
-<pre class="brush: js notranslate">// encontrar todas las letras de un texto
+```js
+// encontrar todas las letras de un texto
 let historia = "Es el gato de Cheshire: ahora tendré alguien con quien hablar";
 
 // Forma más explícita
@@ -88,15 +80,16 @@ historia.match(/\p{L}/gu);
 
 // Esto también es equivalente (conjunción de todas las subcategorías que utilizan alias cortos)
 historia.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
-</pre>
+```
 
-<h3 id="Scripts_y_extensiones_de_script">Scripts y extensiones de script</h3>
+### Scripts y extensiones de script
 
-<p>Algunos idiomas usan diferentes signos para su sistema de escritura. Por ejemplo, el Inglés y el Español se escriben con los signos latinos, mientras que el Árabe y el Ruso se escriben con otros signos (Árabe y Cirílico, respectivamente). Las propiedades Unicode <code>Script</code> y <code>Script_Extensions</code> permiten que las expresiones regulares coincidan con los caracteres según el script con el que se utilizan principalmente (<code>Script</code>) o según el conjunto de los scripts a los que pertenecen (<code>Script_Extensions</code>).</p>
+Algunos idiomas usan diferentes signos para su sistema de escritura. Por ejemplo, el Inglés y el Español se escriben con los signos latinos, mientras que el Árabe y el Ruso se escriben con otros signos (Árabe y Cirílico, respectivamente). Las propiedades Unicode `Script` y `Script_Extensions` permiten que las expresiones regulares coincidan con los caracteres según el script con el que se utilizan principalmente (`Script`) o según el conjunto de los scripts a los que pertenecen (`Script_Extensions`).
 
-<p>Por ejemplo, <code>A</code> pertenece al script <code>Latin</code> y <code>ε</code> al script <code>Greek</code> (Griego).</p>
+Por ejemplo, `A` pertenece al script `Latin` y `ε` al script `Greek` (Griego).
 
-<pre class="brush: js notranslate">let caracteresMezclados = "aεЛ";
+```js
+let caracteresMezclados = "aεЛ";
 
 // Usando el nombre canónico "largo" del script
 caracteresMezclados.match(/\p{Script=Latin}/u); // a
@@ -106,13 +99,14 @@ caracteresMezclados.match(/\p{Script=Greek}/u); // ε
 
 // Usando el nombre corto Sc para la propiedad Script
 caracteresMezclados.match(/\p{Sc=Cyrillic}/u); // Л
-</pre>
+```
 
-<p>Para obtener más detalles, consulta <a href="https://unicode.org/reports/tr24/#Script">la especificación Unicode</a> y la <a href="https://tc39.es/ecma262/#table-unicode-script-values">Tabla de scripts en la especificación ECMAScript</a>.</p>
+Para obtener más detalles, consulta [la especificación Unicode](https://unicode.org/reports/tr24/#Script) y la [Tabla de scripts en la especificación ECMAScript](https://tc39.es/ecma262/#table-unicode-script-values).
 
-<p>Si se usa un carácter en un conjunto limitado de scripts, la propiedad <code>Script</code> solo coincidirá con el script "predominante" utilizado. Si quieres hacer coincidir caracteres basados en un script "no predominante", podrías usar la propiedad <code>Script_Extensions</code> (<code>Scx</code> para abreviar).</p>
+Si se usa un carácter en un conjunto limitado de scripts, la propiedad `Script` solo coincidirá con el script "predominante" utilizado. Si quieres hacer coincidir caracteres basados en un script "no predominante", podrías usar la propiedad `Script_Extensions` (`Scx` para abreviar).
 
-<pre class="brush: js notranslate">// ٢ es el dígito 2 en notación Árabe-Índica
+```js
+// ٢ es el dígito 2 en notación Árabe-Índica
 // si bien está escrito en un script predominante en árabe
 // también se puede escribir en el script Thaana
 
@@ -121,15 +115,16 @@ caracteresMezclados.match(/\p{Sc=Cyrillic}/u); // Л
 
 "٢".match(/\p{Script_Extensions=Thaana}/u);
 // ["٢", index: 0, input: "٢", groups: undefined]
-</pre>
+```
 
-<h3 id="Escapes_de_propiedades_Unicode_versus_Clases_de_caracteres">Escapes de propiedades Unicode versus Clases de caracteres</h3>
+### Escapes de propiedades Unicode versus Clases de caracteres
 
-<p>Con las expresiones regulares de JavaScript, también es posible utilizar {{JSxRef("../Guide/Regular_Expressions/Clases_de_caracteres", "clases de caracteres")}} y especialmente <code>\w</code> o <code>\d</code> para hacer coincidir letras o dígitos. Sin embargo, estos formularios solo coinciden con caracteres de la escritura <em>latina</em> (en otras palabras, de la <code>a</code> a la <code>z</code> y <code>A</code> a <code>Z</code> para <code>\w</code> y <code>0</code> a <code>9</code> para <code>\d</code>). Como se muestra en {{JSxRef("../Guide/Regular_Expressions/Clases_de_caracteres", "este ejemplo", "#Busca_una_palabra_de_caracteres_Unicode")}}, puede ser un poco torpe trabajar con textos no latinos.</p>
+Con las expresiones regulares de JavaScript, también es posible utilizar {{JSxRef("../Guide/Regular_Expressions/Clases_de_caracteres", "clases de caracteres")}} y especialmente `\w` o `\d` para hacer coincidir letras o dígitos. Sin embargo, estos formularios solo coinciden con caracteres de la escritura _latina_ (en otras palabras, de la `a` a la `z` y `A` a `Z` para `\w` y `0` a `9` para `\d`). Como se muestra en {{JSxRef("../Guide/Regular_Expressions/Clases_de_caracteres", "este ejemplo", "#Busca_una_palabra_de_caracteres_Unicode")}}, puede ser un poco torpe trabajar con textos no latinos.
 
-<p>Las categorías de escape de propiedad Unicode abarcan muchos más caracteres y <code>\p{Letter}</code> o <code>\p{Number}</code> funcionarán para cualquier script.</p>
+Las categorías de escape de propiedad Unicode abarcan muchos más caracteres y `\p{Letter}` o `\p{Number}` funcionarán para cualquier script.
 
-<pre class="brush: js notranslate">// Intentando usar rangos para evitar limitaciones de \w:
+```js
+// Intentando usar rangos para evitar limitaciones de \w:
 
 const textoNoEs = "Приключения Алисы в Стране чудес";
 const regexpPalabraBMP = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
@@ -140,39 +135,29 @@ console.table(textoNoEs.match(regexpPalabraBMP));
 // El uso de la propiedad Unicode se escapa en su lugar
 const regexpEPU = /\p{L}+/gu;
 console.table(textoNoEs.match(regexpEPU));
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-runtime-semantics-unicodematchproperty-p', 'RegExp: Escapes de propiedades Unicode')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-runtime-semantics-unicodematchproperty-p', 'RegExp: Escapes de propiedades Unicode')}} |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<p>Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.</p>
+Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.
 
-<h2 id="Ve_también">Ve también</h2>
+## Ve también
 
-<ul>
- <li>{{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
-  <ul>
-   <li>{{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}</li>
-   <li>{{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}</li>
-   <li>{{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}</li>
-   <li>{{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}</li>
-  </ul>
- </li>
- <li>{{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}</li>
- <li>{{JSxRef("Objetos_globales/RegExp/unicode", "RegExp.prototype.unicode")}}</li>
- <li><a href="https://en.wikipedia.org/wiki/Unicode_character_property">Propiedades de caracteres unicode — Wikipedia</a></li>
- <li><a href="https://2ality.com/2017/07/regexp-unicode-property-escapes.html">Una entrada en el blog de Axel Rauschmayer sobre los escapes de propiedades Unicode</a></li>
- <li><a href="https://unicode.org/reports/tr18/#Categories">El documento Unicode para las propiedades Unicode</a></li>
-</ul>
+- {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
+
+  - {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}
+  - {{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}
+  - {{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}
+  - {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}
+
+- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}
+- {{JSxRef("Objetos_globales/RegExp/unicode", "RegExp.prototype.unicode")}}
+- [Propiedades de caracteres unicode — Wikipedia](https://en.wikipedia.org/wiki/Unicode_character_property)
+- [Una entrada en el blog de Axel Rauschmayer sobre los escapes de propiedades Unicode](https://2ality.com/2017/07/regexp-unicode-property-escapes.html)
+- [El documento Unicode para las propiedades Unicode](https://unicode.org/reports/tr18/#Categories)

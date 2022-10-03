@@ -8,35 +8,31 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 original_slug: Web/JavaScript/Referencia/Objetos_globales/decodeURIComponent
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<h2 id="Summary" name="Summary">Sumario</h2>
+## Sumario
 
-<p>Decodifica un Identificador de Recurso Uniforme (Uniform Resource Identifier, URI) previamente creado por {{jsxref("encodeURIComponent")}} o por una rutina similar.</p>
+Decodifica un Identificador de Recurso Uniforme (Uniform Resource Identifier, URI) previamente creado por {{jsxref("encodeURIComponent")}} o por una rutina similar.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p><code>decodeURIComponent(<em>encodedURI</em>) </code></p>
+`decodeURIComponent(encodedURI)`
 
-<h2 id="Parameters" name="Parameters">Parámetros</h2>
+## Parámetros
 
-<dl>
- <dt><code>encodedURI</code></dt>
- <dd>Un Identificador de Recurso Uniforme codificado.</dd>
-</dl>
+- `encodedURI`
+  - : Un Identificador de Recurso Uniforme codificado.
 
-<h2 id="Return value" name="Return value">Valor retornado</h2>
+## Valor retornado
 
-<p>Retorna una nueva cadena representando la version decodificada del componente URI dado</p>
+Retorna una nueva cadena representando la version decodificada del componente URI dado
 
-<h2 id="Description" name="Description">Descripción</h2>
+## Descripción
 
-<p>Sustituye a cada secuencia de escape codificado en URI con el carácter que representa.</p>
+Sustituye a cada secuencia de escape codificado en URI con el carácter que representa.
 
-<h2 id="See_Also" name="See_Also">Ver También</h2>
+## Ver También
 
-<ul>
- <li>{{jsxref("decodeURI")}}</li>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
-</ul>
+- {{jsxref("decodeURI")}}
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}

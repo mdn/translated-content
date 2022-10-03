@@ -4,59 +4,51 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toJSON
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El metodo <strong><code>toJSON()</code></strong> retorna una representacion de cadena del objeto {{jsxref("Date")}}</p>
+El metodo **`toJSON()`** retorna una representacion de cadena del objeto {{jsxref("Date")}}
 
-<div>{{EmbedInteractiveExample("pages/js/date-tojson.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-tojson.html")}}
 
-<p>La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, por favor clone  <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envienos un pull request.</p>
+La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, por favor clone <https://github.com/mdn/interactive-examples> y envienos un pull request.
 
-<h2 id="Syntaxis">Syntaxis</h2>
+## Syntaxis
 
-<pre><code><var>dateObj</var>.toJSON()</code></pre>
+```
+dateObj.toJSON()
+```
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Una representación de cadena de la fecha dada.</p>
+Una representación de cadena de la fecha dada.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>{{jsxref("Date")}} las instancias se refieren a un momento específico en el tiempo. Llamando a <code>toJSON()</code> retorna un string (usando {{jsxref("Date.prototype.toISOString()", "toISOString()")}}) representando el {{jsxref("Date")}} valor del objeto. Este método generalmente está destinado, de forma predeterminada, a serializar de manera útil {{jsxref("Date")}} objetos durante la serialización <a href="/en-US/docs/Glossary/JSON">JSON</a> .</p>
+{{jsxref("Date")}} las instancias se refieren a un momento específico en el tiempo. Llamando a `toJSON()` retorna un string (usando {{jsxref("Date.prototype.toISOString()", "toISOString()")}}) representando el {{jsxref("Date")}} valor del objeto. Este método generalmente está destinado, de forma predeterminada, a serializar de manera útil {{jsxref("Date")}} objetos durante la serialización [JSON](/es/docs/Glossary/JSON) .
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_toJSON">Usando <code>toJSON()</code></h3>
+### Usando `toJSON()`
 
-<pre class="brush:js notranslate">var jsonDate = (new Date()).toJSON();
+```js
+var jsonDate = (new Date()).toJSON();
 var backToDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}} |
 
-<h2 id="Compatibilidad_en_buscadores">Compatibilidad en buscadores</h2>
+## Compatibilidad en buscadores
 
+{{Compat("javascript.builtins.Date.toJSON")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Date.toJSON")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toUTCString()")}}

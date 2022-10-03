@@ -4,37 +4,38 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/round
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/round
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}La función **`Math.round() `**`retorna el valor de un número redondeado al entero más cercano.`
 
-<div>La función <strong><code>Math.round() </code></strong><code>retorna el valor de un número redondeado al entero más cercano.</code></div>
+## Sumario
 
-<h2 id="Summary" name="Summary">Sumario</h2>
+Devuelve el valor del número dado redondeado al entero más cercano.
 
-<p>Devuelve el valor del número dado redondeado al entero más cercano.</p>
+## Sintaxis
 
-<h2 id="Sintaxis">Sintaxis</h2>
+```
+Math.round(x)
+```
 
-<pre><code>Math.round(<var>x</var>)</code></pre>
-
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
 Un número.
 
-<h3 id="Valor_de_Retorno">Valor de Retorno</h3>
+### Valor de Retorno
 
 El valor del número dado redondeado al entero más cercano.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Si la porción fraccionaría del número es 0.5 o mayor, el argumento es redondeado al siguiente número entero superior. Si la porción de la fracción del número es menor a 0.5, el argumento es redondeado al siguiente número entero inferior.</p>
+Si la porción fraccionaría del número es 0.5 o mayor, el argumento es redondeado al siguiente número entero superior. Si la porción de la fracción del número es menor a 0.5, el argumento es redondeado al siguiente número entero inferior.
 
-<p>Debido a que round() es un método estático de Math, siempre se debe utilizar como  Math.round(),  en vez de un método del objeto Math que ha creado. (Math no es un constructor)</p>
+Debido a que round() es un método estático de Math, siempre se debe utilizar como Math.round(), en vez de un método del objeto Math que ha creado. (Math no es un constructor)
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_Math.round">Usando <code>Math.round()</code></h3>
+### Usando `Math.round()`
 
-<pre class="brush: js notranslate">// Retorna el valor 20
+```js
+// Retorna el valor 20
 x = Math.round(20.49);
 
 // Retorna el valor 21
@@ -50,11 +51,12 @@ x = Math.round(-20.51);
 // Note el error de redondeo debido a la inexactitud del punto aritmético.
 // Compare esto con Math.round10(1.005, -2) de el ejemplo de abajo.
 x = Math.round(1.005*100)/100;
-</pre>
+```
 
-<h3 id="Redondeo_decimal">Redondeo decimal</h3>
+### Redondeo decimal
 
-<pre class="brush: js notranslate">// Conclusión
+```js
+// Conclusión
 (function() {
   /**
    * Ajuste decimal de un número.
@@ -72,7 +74,7 @@ x = Math.round(1.005*100)/100;
     value = +value;
     exp = +exp;
     // Si el valor no es un número o el exp no es un entero...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Shift
@@ -123,47 +125,24 @@ Math.ceil10(55.51, -1);    // 55.6
 Math.ceil10(51, 1);        // 60
 Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>
-    <p>Definición inicial. Implementada en JavaScript 1.0.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.15', 'Math.round')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.round', 'Math.round')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                           | Estado                   | Comentario                                          |
+| ------------------------------------------------------------------------ | ------------------------ | --------------------------------------------------- |
+| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}     | Definición inicial. Implementada en JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.15', 'Math.round')}} | {{Spec2('ES5.1')}} |                                                     |
+| {{SpecName('ES6', '#sec-math.round', 'Math.round')}}     | {{Spec2('ES6')}}     |                                                     |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("javascript.builtins.Math.round")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.sign()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.trunc()")}} {{experimental_inline}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.sign()")}} {{experimental_inline}}
+- {{jsxref("Math.trunc()")}} {{experimental_inline}}

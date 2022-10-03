@@ -6,76 +6,79 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/caller
 ---
-<div>{{JSRef("Global_Objects", "Function")}} {{non-standard_header}}</div>
+{{JSRef("Global_Objects", "Function")}} {{non-standard_header}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>La propiedad <code><strong>function.caller</strong></code> retorna la función que llamó a la función especificada.</p>
+La propiedad **`function.caller`** retorna la función que llamó a la función especificada.
 
-<h2 id="Description" name="Description">Descripción</h2>
+## Descripción
 
-<p>Si la función <code>f</code> fue llamada por desde nivel raiz (top level code), el valor de <code>f.caller</code> es {{jsxref("Global_Objects/null", "null")}}, de lo contrario se retorna la función que llamó a <code>f</code>.</p>
+Si la función `f` fue llamada por desde nivel raiz (top level code), el valor de `f.caller` es {{jsxref("Global_Objects/null", "null")}}, de lo contrario se retorna la función que llamó a `f`.
 
-<p>Esta propiedad reemplaza a la propiedad obsoleta {{jsxref("Functions_and_function_scope/arguments/caller", "arguments.caller")}} del objeto {{jsxref("Funciones/arguments", "arguments")}}.</p>
+Esta propiedad reemplaza a la propiedad obsoleta {{jsxref("Functions_and_function_scope/arguments/caller", "arguments.caller")}} del objeto {{jsxref("Funciones/arguments", "arguments")}}.
 
-<p>la propiedad especial <code>__caller__</code>, la cual retornaba el objeto de activación del llamador y permitía reconstruir la pila de llamadas, ha sido removida por motivos de seguridad.</p>
+la propiedad especial `__caller__`, la cual retornaba el objeto de activación del llamador y permitía reconstruir la pila de llamadas, ha sido removida por motivos de seguridad.
 
-<h3 id="Notes" name="Notes">Notas</h3>
+### Notas
 
-<p>En caso de recursión se puede reconstruir la pila de llamada utilizando esta propiedad, tal como se muestra a continuación:</p>
+En caso de recursión se puede reconstruir la pila de llamada utilizando esta propiedad, tal como se muestra a continuación:
 
-<pre class="brush: js">function f(n) { g(n - 1); }
-function g(n) { if (n &gt; 0) { f(n); } else { stop(); } }
+```js
+function f(n) { g(n - 1); }
+function g(n) { if (n > 0) { f(n); } else { stop(); } }
 f(2);
-</pre>
+```
 
-<p>Al momento de ejecutar <code>stop()</code> este se llama con la siguiente pila de llamadas:</p>
+Al momento de ejecutar `stop()` este se llama con la siguiente pila de llamadas:
 
-<pre class="eval">f(2) -&gt; g(1) -&gt; f(1) -&gt; g(0) -&gt; stop()
-</pre>
+```
+f(2) -> g(1) -> f(1) -> g(0) -> stop()
+```
 
-<p>Siendo verdadero la siguiente consideración:</p>
+Siendo verdadero la siguiente consideración:
 
-<pre class="eval">stop.caller === g &amp;&amp; f.caller === g &amp;&amp; g.caller === f
-</pre>
+```
+stop.caller === g && f.caller === g && g.caller === f
+```
 
-<p>Por lo tanto si se intenta obtener el rastro de llamadas (stack trace) de la función <code>stop()</code> como se muestra a continuación:</p>
+Por lo tanto si se intenta obtener el rastro de llamadas (stack trace) de la función `stop()` como se muestra a continuación:
 
-<pre class="brush: js">var f = stop;
+```js
+var f = stop;
 var stack = 'Stack trace:';
 while (f) {
   stack += '\n' + f.name;
   f = f.caller;
 }
-</pre>
+```
 
-<p>se provocará una bucle que nunca termina.</p>
+se provocará una bucle que nunca termina.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Example:_Checking_the_value_of_a_function.27s_caller_property" name="Example:_Checking_the_value_of_a_function.27s_caller_property">Ejemplo: Verificar el valor de la propiedad <code>caller</code> de una función</h3>
+### Ejemplo: Verificar el valor de la propiedad `caller` de una función
 
-<p>El siguiente código verifica el valor de la propiedad <code>caller</code> de una función.</p>
+El siguiente código verifica el valor de la propiedad `caller` de una función.
 
-<pre class="brush: js">function myFunc() {
+```js
+function myFunc() {
   if (myFunc.caller == null) {
     return 'The function was called from the top!';
   } else {
     return 'This function\'s caller was ' + myFunc.caller;
   }
 }
-</pre>
+```
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<p>No es parte de ninguna especificación. Se implementa en JavaScript 1.5.</p>
+No es parte de ninguna especificación. Se implementa en JavaScript 1.5.
 
-<h2 id="Compatiblilidad_de_Navegadores">Compatiblilidad de Navegadores</h2>
+## Compatiblilidad de Navegadores
 
 {{Compat("javascript.builtins.Function.caller")}}
 
-<h2 id="See_also" name="See_also">Véase también</h2>
+## Véase también
 
-<ul>
- <li>Problema de implementación para SpiderMonkey {{bug(65683)}}</li>
-</ul>
+- Problema de implementación para SpiderMonkey {{bug(65683)}}

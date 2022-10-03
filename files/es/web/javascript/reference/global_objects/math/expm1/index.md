@@ -11,80 +11,67 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/expm1
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La función <strong><code>Math.expm1()</code></strong> regresa <code>e<sup>x</sup> - 1</code>, donde <code>x</code> es el argumento, y {{jsxref("Math.E", "e", "", 1)}} la base del logaritmo natural.</p>
+La función **`Math.expm1()`** regresa `ex - 1`, donde `x` es el argumento, y {{jsxref("Math.E", "e", "", 1)}} la base del logaritmo natural.
 
-<div>{{EmbedInteractiveExample("pages/js/math-expm1.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-expm1.html")}}El código para este ejemplo interactivo está almacenado en un repositorio de GitHub. Sí te gustaría contribuir al proyecto de ejemplos interactivos If you'd like to contribute, por favor clona <https://github.com/mdn/interactive-examples> y envíanos un pull request.
 
-<div>El código para este ejemplo interactivo está almacenado en un repositorio de GitHub. Sí te gustaría contribuir al proyecto de ejemplos interactivos If you'd like to contribute, por favor clona  <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos un pull request.</div>
+## Sintaxis
 
-<h2 id="Sintaxis">Sintaxis</h2>
+```
+Math.expm1(x)
+```
 
-<pre>Math.expm1(<var>x</var>)</pre>
+### Parámetos
 
-<h3 id="Parámetos">Parámetos</h3>
+- `x`
+  - : Un número.
 
-<dl>
- <dt><code><var>x</var></code></dt>
- <dd>Un número.</dd>
-</dl>
+### Valor de retorno
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+Un número representando `ex - 1`, donde `e` es {{jsxref("Math.E", "Número de Euler", "", 1)}} y `x` es el argumento.
 
-<p>Un número representando <code>e<sup>x</sup> - 1</code>, donde <code>e</code> es {{jsxref("Math.E", "Número de Euler", "", 1)}} y  <code>x</code> es el argumento.</p>
+## Descripción
 
-<h2 id="Descripción">Descripción</h2>
+Debido a que `expm1()` es un método estático de `Math`, uselo siempre como `Math.expm1()`, en lugar de como un método del objeto `Math` que creó (`Math` no es un constructor).
 
-<p>Debido a que <code>expm1()</code> es un método estático de <code>Math</code>, uselo siempre como <code>Math.expm1()</code>, en lugar de como un método del objeto <code>Math</code> que creó (<code>Math</code> no es un constructor).</p>
+## Ejemplos
 
-<h2 id="Ejemplos">Ejemplos</h2>
+### Usando Math.expm1()
 
-<h3 id="Usando_Math.expm1">Usando Math.expm1()</h3>
-
-<pre class="brush: js notranslate">Math.expm1(-1); // -0.6321205588285577
+```js
+Math.expm1(-1); // -0.6321205588285577
 Math.expm1(0);  // 0
 Math.expm1(1);  // 1.718281828459045
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Esto puede ser emulado con la ayuda de la función {{jsxref("Math.exp()")}}:</p>
+Esto puede ser emulado con la ayuda de la función {{jsxref("Math.exp()")}}:
 
-<pre class="brush: js notranslate">Math.expm1 = Math.expm1 || function(x) {
+```js
+Math.expm1 = Math.expm1 || function(x) {
   return Math.exp(x) - 1;
 };
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                               |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
+{{Compat("javascript.builtins.Math.expm1")}}
 
+## Vea también
 
-<p>{{Compat("javascript.builtins.Math.expm1")}}</p>
-
-<h2 id="Vea_también">Vea también</h2>
-
-<ul>
- <li>{{jsxref("Math.E")}}</li>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log10()")}}</li>
- <li>{{jsxref("Math.log1p()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+- {{jsxref("Math.E")}}
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}}
+- {{jsxref("Math.log1p()")}}
+- {{jsxref("Math.log2()")}}
+- {{jsxref("Math.pow()")}}

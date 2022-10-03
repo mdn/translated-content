@@ -9,61 +9,43 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/MAX_SAFE_INTEGER
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La constante <strong><code>Number.MAX_SAFE_INTEGER</code></strong> es el número mas grande 'seguro' en JavaScript (<code>2<sup>53</sup> - 1</code>).</p>
+La constante **`Number.MAX_SAFE_INTEGER`** es el número mas grande 'seguro' en JavaScript (`253 - 1`).
 
-<div>{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}
 
-<p>La fuente de este ejemplo interactivo está almacenada en GitHub. Si quieres contribuir al proyecto de ejmplos interactivos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos un 'pull request'.</p>
+La fuente de este ejemplo interactivo está almacenada en GitHub. Si quieres contribuir al proyecto de ejmplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos un 'pull request'.
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>La constante <code>MAX_SAFE_INTEGER</code> tiene un valor de <code>9007199254740991</code> (9,007,199,254,740,991 o ~9 mil billones). El razonamiento detrás de ese número es que JavaScript usa <a href="http://en.wikipedia.org/wiki/Double_precision_floating-point_format">números flotantes de doble precisión</a> tal como está especfificado en <a href="http://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a> por lo que puedes representar números de forma segura entre <code>-(2<sup>53</sup> - 1)</code> y  <code>2<sup>53</sup> - 1</code>.</p>
+La constante `MAX_SAFE_INTEGER` tiene un valor de `9007199254740991` (9,007,199,254,740,991 o \~9 mil billones). El razonamiento detrás de ese número es que JavaScript usa [números flotantes de doble precisión](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) tal como está especfificado en [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point) por lo que puedes representar números de forma segura entre `-(253 - 1)` y `253 - 1`.
 
-<p>Seguro, en este contexto, se refiere a la habilidad de representar enteros de forma exacta y compararlos de forma correcta. Por ejemplo, <code>Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2</code> evaluará como 'verdadero', lo cual es matemáticamente incorrecto. Ver {{jsxref("Number.isSafeInteger()")}} para más información.</p>
+Seguro, en este contexto, se refiere a la habilidad de representar enteros de forma exacta y compararlos de forma correcta. Por ejemplo, `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2` evaluará como 'verdadero', lo cual es matemáticamente incorrecto. Ver {{jsxref("Number.isSafeInteger()")}} para más información.
 
-<p>Debido a que <code>MAX_SAFE_INTEGER</code> es una propiedad estática de {{jsxref("Number")}}, siempre se usa como <code>Number.MAX_SAFE_INTEGER</code>, en lugar de como una propiedad de un objeto {{jsxref("Number")}} que hayas creado.</p>
+Debido a que `MAX_SAFE_INTEGER` es una propiedad estática de {{jsxref("Number")}}, siempre se usa como `Number.MAX_SAFE_INTEGER`, en lugar de como una propiedad de un objeto {{jsxref("Number")}} que hayas creado.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">Number.MAX_SAFE_INTEGER // 9007199254740991
+```js
+Number.MAX_SAFE_INTEGER // 9007199254740991
 Math.pow(2, 53) - 1     // 9007199254740991
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-number.max_safe_integer', 'Number.MAX_SAFE_INTEGER')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.max_safe_integer', 'Number.MAX_SAFE_INTEGER')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estatus                      | Comentario          |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-number.max_safe_integer', 'Number.MAX_SAFE_INTEGER')}} | {{Spec2('ES2015')}}     | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-number.max_safe_integer', 'Number.MAX_SAFE_INTEGER')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("javascript.builtins.Number.MAX_SAFE_INTEGER")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Number.MAX_SAFE_INTEGER")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Number.MIN_SAFE_INTEGER")}}</li>
- <li>{{jsxref("Number.isSafeInteger()")}}</li>
-</ul>
+- {{jsxref("Number.MIN_SAFE_INTEGER")}}
+- {{jsxref("Number.isSafeInteger()")}}

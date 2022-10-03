@@ -8,39 +8,39 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensaje">Mensaje</h2>
+## Mensaje
 
-<pre class="syntaxbox">RangeError: invalid array length (Firefox)
+```
+RangeError: invalid array length (Firefox)
 RangeError: Invalid array length (Chrome)
 RangeError: Invalid array buffer length (Chrome)
-</pre>
+```
 
-<h2 id="Tipo_de_error">Tipo de error</h2>
+## Tipo de error
 
-<p>{{jsxref("RangeError")}}</p>
+{{jsxref("RangeError")}}
 
-<h2 id="¿Cuál_es_el_problema">¿Cuál es el problema?</h2>
+## ¿Cuál es el problema?
 
-<p>Una longitud de array inválida puede presentarse en éstas situaciones:</p>
+Una longitud de array inválida puede presentarse en éstas situaciones:
 
-<ul>
- <li>Cuando se crea un {{jsxref("Array")}} o un {{jsxref("ArrayBuffer")}} el cual tiene una longitud negativa o es igual o mayor a 2<sup>32</sup>, o</li>
- <li>cuando se define la propiedad {{jsxref("Array.length")}} a un valor el cual es negativo o es igual o mayor a 2<sup>32</sup>.</li>
-</ul>
+- Cuando se crea un {{jsxref("Array")}} o un {{jsxref("ArrayBuffer")}} el cual tiene una longitud negativa o es igual o mayor a 232, o
+- cuando se define la propiedad {{jsxref("Array.length")}} a un valor el cual es negativo o es igual o mayor a 232.
 
-<p>¿Por qué el <code>Array</code> y <code>ArrayBuffer</code> tienen longitud limitada? La propiedad de longitud de un <code>Array</code> o un <code>ArrayBuffer</code> está representada con un entero sin signo de 32 bits, el cual sólo puede almacenar valores que estén en el rango de 0 a 2<sup>32</sup>-1.</p>
+¿Por qué el `Array` y `ArrayBuffer` tienen longitud limitada? La propiedad de longitud de un `Array` o un `ArrayBuffer` está representada con un entero sin signo de 32 bits, el cual sólo puede almacenar valores que estén en el rango de 0 a 232-1.
 
-<p>Si estás creando un <code>Array</code> usando el constructor, es mejor que utilices la notación literal, ya que el primer argumento es interpretado como la longitud del <code>Array</code>.</p>
+Si estás creando un `Array` usando el constructor, es mejor que utilices la notación literal, ya que el primer argumento es interpretado como la longitud del `Array`.
 
-<p>De lo contrario, puedes <span>especificar</span> un mínimo y un máximo para la longitud antes de definir la propiedad de longitud, o puedes usarla como el argumento del constructor.</p>
+De lo contrario, puedes especificar un mínimo y un máximo para la longitud antes de definir la propiedad de longitud, o puedes usarla como el argumento del constructor.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Casos_inválidos">Casos inválidos</h3>
+### Casos inválidos
 
-<pre class="brush: js example-bad">new Array(Math.pow(2, 40))
+```js example-bad
+new Array(Math.pow(2, 40))
 new Array(-1)
 new ArrayBuffer(Math.pow(2, 32))
 new ArrayBuffer(-1)
@@ -50,11 +50,12 @@ a.length = a.length - 1;         // definir la propiedad de longitud a -1
 
 let b = new Array(Math.pow(2, 32) - 1);
 b.length = b.length + 1;         // definir la propiedad de longitud a 2^32
-</pre>
+```
 
-<h3 id="Casos_válidos">Casos válidos</h3>
+### Casos válidos
 
-<pre class="brush: js example-good">[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
+```js example-good
+[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
 [ -1 ]                                  // [ -1 ]
 new ArrayBuffer(Math.pow(2, 32) - 1)
 new ArrayBuffer(0)
@@ -66,13 +67,11 @@ let b = new Array(Math.pow(2, 32) - 1);
 b.length = Math.min(0xffffffff, b.length + 1);
 
 // 0xffffffff es la notación hexadecimal de 2^32 - 1
-// el cual también se puede especificar como (-1 &gt;&gt;&gt; 0)
-</pre>
+// el cual también se puede especificar como (-1 >>> 0)
+```
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.length")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Array.length")}}
+- {{jsxref("ArrayBuffer")}}

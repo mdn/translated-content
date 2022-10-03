@@ -10,112 +10,131 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/import
 original_slug: Web/JavaScript/Referencia/Sentencias/import
 ---
-<div>{{jsSidebar("Sentencias")}}</div>
+{{jsSidebar("Sentencias")}}
 
-<p>La sentencia <code><strong>import</strong></code> se usa para importar funciones que han sido exportadas desde un módulo externo.</p>
+La sentencia **`import`** se usa para importar funciones que han sido exportadas desde un módulo externo.
 
-<div class="note">
-<p>Por el momento, esta característica sólo está <a href="https://jakearchibald.com/2017/es-modules-in-browsers/">comenzando a ser implementada</a> de forma nativa en los navegadores. Está implementada en muchos transpiladores, tales como Typescript y <a href="http://babeljs.io/">Babel</a>, y en empaquetadores como <a href="https://github.com/rollup/rollup">Rollup</a> y <a href="https://webpack.js.org/">Webpack</a>.</p>
-</div>
+> **Nota:** Por el momento, esta característica sólo está [comenzando a ser implementada](https://jakearchibald.com/2017/es-modules-in-browsers/) de forma nativa en los navegadores. Está implementada en muchos transpiladores, tales como Typescript y [Babel](http://babeljs.io/), y en empaquetadores como [Rollup](https://github.com/rollup/rollup) y [Webpack](https://webpack.js.org/).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">import <em>defaultExport</em> from "<em>module-name</em>";
-import * as <em>name</em> from "<em>module-name</em>";
-import { <em>export </em>} from "<em>module-name</em>";
-import { <em>export</em> as <em>alias </em>} from "<em>module-name</em>";
-import { <em>export1 , export2</em> } from "<em>module-name</em>";
-import { <em>export1 , export2</em> as <em>alias2</em> , <em>[...]</em> } from "<em>module-name</em>";
-import <em>defaultExport</em>, { <em>export</em> [ , <em>[...]</em> ] } from "<em>module-name</em>";
-import <em>defaultExport</em>, * as <em>name</em> from "<em>module-name</em>";
-import "<em>module-name</em>";</pre>
+```
+import defaultExport from "module-name";
+import * as name from "module-name";
+import { export } from "module-name";
+import { export as alias } from "module-name";
+import { export1 , export2 } from "module-name";
+import { export1 , export2 as alias2 , [...] } from "module-name";
+import defaultExport, { export [ , [...] ] } from "module-name";
+import defaultExport, * as name from "module-name";
+import "module-name";
+```
 
-<dl>
- <dt><code>defaultExport</code></dt>
- <dd>Nombre que se referirá al export por defecto del módulo.</dd>
- <dt><code>module-name</code></dt>
- <dd>El módulo desde el que importar. Normalmente es una ruta relativa o absoluta al archivo <code><strong>.js</strong></code> que contiene el módulo, excluyendo la extensión <code><strong>.js</strong></code>. Algunos empaquetadores pueden permitir o requerir el uso de la extensión; comprueba tu entorno. Sólo se permiten Strings con comillas simples o dobles.</dd>
- <dt><code>name</code></dt>
- <dd>Nombre del objeto del módulo que se utilizará como nombre de dominio al hacer referencia a los imports.</dd>
- <dt><span style='background-color: rgba(220, 220, 220, 0.5); font-family: consolas,"Liberation Mono",courier,monospace; font-style: inherit; font-weight: inherit;'>export, exportN</span></dt>
- <dd>Nombre de los exports a ser importados.</dd>
- <dt><code>alias, aliasN</code></dt>
- <dd>Nombre del objeto que recibirá la propiedad importada.</dd>
-</dl>
+- `defaultExport`
+  - : Nombre que se referirá al export por defecto del módulo.
+- `module-name`
+  - : El módulo desde el que importar. Normalmente es una ruta relativa o absoluta al archivo **`.js`** que contiene el módulo, excluyendo la extensión **`.js`**. Algunos empaquetadores pueden permitir o requerir el uso de la extensión; comprueba tu entorno. Sólo se permiten Strings con comillas simples o dobles.
+- `name`
+  - : Nombre del objeto del módulo que se utilizará como nombre de dominio al hacer referencia a los imports.
+- export, exportN
+  - : Nombre de los exports a ser importados.
+- `alias, aliasN`
+  - : Nombre del objeto que recibirá la propiedad importada.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El parámetro <code>name</code> es el nombre del objeto que recibirá los miembros exportados. El parámetro <code>member</code> especifica miembros individuales, mientras el parámetro <code>name</code> importa todos ellos. <font face="Courier New, Andale Mono, monospace">name</font> puede también ser una función si el módulo exporta un sólo parámetro por defecto en lugar de una serie de miembros. Abajo hay ejemplos que explican la sintaxis.</p>
+El parámetro `name` es el nombre del objeto que recibirá los miembros exportados. El parámetro `member` especifica miembros individuales, mientras el parámetro `name` importa todos ellos. name puede también ser una función si el módulo exporta un sólo parámetro por defecto en lugar de una serie de miembros. Abajo hay ejemplos que explican la sintaxis.
 
-<h3 id="Importa_el_contenido_de_todo_un_módulo.">Importa el contenido de todo un módulo.</h3>
+### Importa el contenido de todo un módulo.
 
-<p>Esto inserta <code>myModule</code> en el ámbito actual, que contiene todos los elementos exportados en el archivo ubicado en  <code>/modules/my-module.js</code>.</p>
+Esto inserta `myModule` en el ámbito actual, que contiene todos los elementos exportados en el archivo ubicado en `/modules/my-module.js`.
 
-<pre class="brush: js">import * as myModule from '/modules/my-module.js';</pre>
+```js
+import * as myModule from '/modules/my-module.js';
+```
 
-<p>Aquí, para acceder a los miembros exportados habrá que usar el alias del módulo ("myModule" en este caso) como namespace. Por ejemplo, si el módulo importado arriba incluye un miembre exportado llamado <code>doAllTheAmazingThings()</code>, habría que invocarlo de la siguiente manera:</p>
+Aquí, para acceder a los miembros exportados habrá que usar el alias del módulo ("myModule" en este caso) como namespace. Por ejemplo, si el módulo importado arriba incluye un miembre exportado llamado `doAllTheAmazingThings()`, habría que invocarlo de la siguiente manera:
 
-<pre class="brush: js">myModule.doAllTheAmazingThings();</pre>
+```js
+myModule.doAllTheAmazingThings();
+```
 
-<h3 id="Importa_un_solo_miembro_de_un_módulo.">Importa un solo miembro de un módulo.</h3>
+### Importa un solo miembro de un módulo.
 
-<p>Dado un objeto o valor llamado <code>myExport</code> que ha sido exportado del módulo <code>my-module</code> ya sea implícitamente (porque todo el módulo ha sido exportado) o explícitamente (usando la sentencia {{jsxref("Sentencias/export", "export")}} ), esto inserta <code>myExport</code> en el ámbito actual.</p>
+Dado un objeto o valor llamado `myExport` que ha sido exportado del módulo `my-module` ya sea implícitamente (porque todo el módulo ha sido exportado) o explícitamente (usando la sentencia {{jsxref("Sentencias/export", "export")}} ), esto inserta `myExport` en el ámbito actual.
 
-<pre class="brush: js">import {myExport} from '/modules/my-module.js';</pre>
+```js
+import {myExport} from '/modules/my-module.js';
+```
 
-<h3 id="Importa_multiples_miembros_de_un_módulo.">Importa multiples miembros de un módulo.</h3>
+### Importa multiples miembros de un módulo.
 
-<p>Esto inserta <code>foo</code> y <code>bar</code> en el ámbito actual.</p>
+Esto inserta `foo` y `bar` en el ámbito actual.
 
-<pre class="brush: js">import {foo, bar} from "my-module.js";</pre>
+```js
+import {foo, bar} from "my-module.js";
+```
 
-<h3 id="Importa_un_miembre_con_un_alias_mas_conveniente">Importa un miembre con un alias mas conveniente</h3>
+### Importa un miembre con un alias mas conveniente
 
-<p>Se puede renombrar un miembro exportado cuando se importa. Por ejemplo, esto inserta <code>shortName</code> en el ámbito actual.</p>
+Se puede renombrar un miembro exportado cuando se importa. Por ejemplo, esto inserta `shortName` en el ámbito actual.
 
-<pre class="brush: js">import {reallyReallyLongModuleExportName as shortName}
-  from '/modules/my-module.js';</pre>
+```js
+import {reallyReallyLongModuleExportName as shortName}
+  from '/modules/my-module.js';
+```
 
-<h3 id="Renombra_multiples_miembros_durante_la_importación">Renombra multiples miembros durante la importación</h3>
+### Renombra multiples miembros durante la importación
 
-<p>Importa múltiples miembros exportados de un módulo con un alias conveniente.</p>
+Importa múltiples miembros exportados de un módulo con un alias conveniente.
 
-<pre class="brush: js">import {
+```js
+import {
   reallyReallyLongModuleExportName as shortName,
   anotherLongModuleName as short
-} from '/modules/my-module.js';</pre>
+} from '/modules/my-module.js';
+```
 
-<h3 id="Importa_un_módulo_entero_para_efectos_secundarios_sólamente">Importa un módulo entero para efectos secundarios sólamente</h3>
+### Importa un módulo entero para efectos secundarios sólamente
 
-<p>Importa un módulo entero para efectos secundarios sólamente, sin importar ningun elemento. Esto ejecuta el código global del módulo, pero no importa ningún valor.</p>
+Importa un módulo entero para efectos secundarios sólamente, sin importar ningun elemento. Esto ejecuta el código global del módulo, pero no importa ningún valor.
 
-<pre class="brush: js">import '/modules/my-module.js';</pre>
+```js
+import '/modules/my-module.js';
+```
 
-<h3 id="Importación_de_elementos_por_defecto">Importación de elementos por defecto</h3>
+### Importación de elementos por defecto
 
-<p>Es posible tener una exportación por defecto (tanto si se trata de un objeto, función, clase, etc.). Recíprocamente, es posible usa la instrucción <code>import</code> para importar esos elementos establecidos como por defecto.</p>
+Es posible tener una exportación por defecto (tanto si se trata de un objeto, función, clase, etc.). Recíprocamente, es posible usa la instrucción `import` para importar esos elementos establecidos como por defecto.
 
-<p>La versión más sencilla de importar un elemento por defecto es:</p>
+La versión más sencilla de importar un elemento por defecto es:
 
-<pre class="brush: js">import myDefault from '/modules/my-module.js';</pre>
+```js
+import myDefault from '/modules/my-module.js';
+```
 
-<p>También es posible usar la sintaxis por defecto con lo que hemos visto anteriormente (importación de espacios de nombres o importaciones con nombre. En esos casos, la importación por defecto se deberá realizar en primer lugar. Por ejemplo:</p>
+También es posible usar la sintaxis por defecto con lo que hemos visto anteriormente (importación de espacios de nombres o importaciones con nombre. En esos casos, la importación por defecto se deberá realizar en primer lugar. Por ejemplo:
 
-<pre class="brush: js">import myDefault, * as myModule from '/modules/my-module.js';
-// myModule used as a namespace</pre>
+```js
+import myDefault, * as myModule from '/modules/my-module.js';
+// myModule used as a namespace
+```
 
-<p>o</p>
+o
 
-<pre class="brush: js">import myDefault, {foo, bar} from '/modules/my-module.js';
-// specific, named imports</pre>
+```js
+import myDefault, {foo, bar} from '/modules/my-module.js';
+// specific, named imports
+```
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Importar un archivo secundario para asistir en un procesamiento de una petición JSON AJAX.</p>
+Importar un archivo secundario para asistir en un procesamiento de una petición JSON AJAX.
 
-<h3 id="El_módulo_file.js">El módulo: file.js</h3>
+### El módulo: file.js
 
-<pre class="brush: js">function getJSON(url, callback) {
+```js
+function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
     callback(this.responseText)
@@ -125,51 +144,35 @@ import "<em>module-name</em>";</pre>
 }
 
 export function getUsefulContents(url, callback) {
-  getJSON(url, data =&gt; callback(JSON.parse(data)));
-}</pre>
+  getJSON(url, data => callback(JSON.parse(data)));
+}
+```
 
-<h3 id="El_programa_principal_main.js">El programa principal: main.js</h3>
+### El programa principal: main.js
 
-<pre class="brush: js">import { getUsefulContents } from '/modules/file.js';
+```js
+import { getUsefulContents } from '/modules/file.js';
 
 getUsefulContents('http://www.example.com',
-    data =&gt; { doSomethingUseful(data); });</pre>
+    data => { doSomethingUseful(data); });
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-imports', 'Imports')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inical</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-imports', 'Imports')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                       | Estado                       | Comentario        |
+| -------------------------------------------------------------------- | ---------------------------- | ----------------- |
+| {{SpecName('ES6', '#sec-imports', 'Imports')}}         | {{Spec2('ES6')}}         | Definición inical |
+| {{SpecName('ESDraft', '#sec-imports', 'Imports')}} | {{Spec2('ESDraft')}} |                   |
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
-<div>
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
+The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
 
-<p>{{Compat("javascript.statements.import")}}</p>
+{{Compat("javascript.statements.import")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Sentencias/export", "export")}}</li>
- <li><a href="https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/">Previewing ES6 Modules and more from ES2015, ES2016 and beyond</a></li>
- <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>, Hacks blog post by Jason Orendorff</li>
- <li><a href="http://exploringjs.com/es6/ch_modules.html">Axel Rauschmayer's book: "Exploring JS: Modules"</a></li>
-</ul>
+- {{jsxref("Sentencias/export", "export")}}
+- [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)

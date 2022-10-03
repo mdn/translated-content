@@ -11,82 +11,64 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/function*
 original_slug: Web/JavaScript/Referencia/Operadores/function*
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>La palabra clave <strong><code>function*</code></strong> puede ser utilizada para definir una función generadora en una expresión.</p>
+La palabra clave **`function*`** puede ser utilizada para definir una función generadora en una expresión.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html")}}
 
-<p>El código fuente de este ejemplo interactivo se encuentra almacenado en un repositorio GitHub. Si le gustaría contribuir al proyecto de ejemplos interactivos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíenos un pull request.</p>
+El código fuente de este ejemplo interactivo se encuentra almacenado en un repositorio GitHub. Si le gustaría contribuir al proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíenos un pull request.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">function* [<em>nombre</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
-   <em>sentencias</em>
-}</pre>
+```
+function* [nombre]([param1[, param2[, ..., paramN]]]) {
+   sentencias
+}
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>nombre</code></dt>
- <dd>Nombre de la función. Puede ser omitido, en cuyo caso la función es <em>anínima</em>. El nombre sólo es local al cuerpo de la función.</dd>
- <dt><code>paramN</code></dt>
- <dd>Nombre de un parámetro a ser pasado a la función. Una función puede tener hasta 255 argumentos.</dd>
- <dt><code>sentencias</code></dt>
- <dd>Sentencias que componen el cuerpo de la función.</dd>
-</dl>
+- `nombre`
+  - : Nombre de la función. Puede ser omitido, en cuyo caso la función es _anínima_. El nombre sólo es local al cuerpo de la función.
+- `paramN`
+  - : Nombre de un parámetro a ser pasado a la función. Una función puede tener hasta 255 argumentos.
+- `sentencias`
+  - : Sentencias que componen el cuerpo de la función.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Una expresión <code>function*</code> es muy similar y tiene casi la misma sintaxis que una {{jsxref('Statements/function*', 'function* statement')}}. La principal diferencia entre una expresión <code>function*</code> y una sentencia <code>function*</code> es el <em>nombre de la función</em>, que en expresiones <code>function*</code> puede ser omitido para creaar funciones generadoras <em>anónimas</em>. Para más información vea también el capítulo acerca de <a href="/en-US/docs/Web/JavaScript/Reference/Functions">funciones</a>.</p>
+Una expresión `function*` es muy similar y tiene casi la misma sintaxis que una {{jsxref('Statements/function*', 'function* statement')}}. La principal diferencia entre una expresión `function*` y una sentencia `function*` es el _nombre de la función_, que en expresiones `function*` puede ser omitido para creaar funciones generadoras _anónimas_. Para más información vea también el capítulo acerca de [funciones](/es/docs/Web/JavaScript/Reference/Functions).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>El siguiente ejemplo define una función generadora sin nombre y la asigna a <code>x</code>. La función produce el cuadrado de su argumento:</p>
+El siguiente ejemplo define una función generadora sin nombre y la asigna a `x`. La función produce el cuadrado de su argumento:
 
-<pre class="brush: js">var x = function*(y) {
+```js
+var x = function*(y) {
    yield y * y;
 };
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#', 'function*')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición Inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#', 'function*')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                           | Estado                       | Comentario          |
+| -------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#', 'function*')}}     | {{Spec2('ES2015')}}     | Definición Inicial. |
+| {{SpecName('ESDraft', '#', 'function*')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("javascript.operators.function_star")}}
 
+## Vea también
 
-<p>{{Compat("javascript.operators.function_star")}}</p>
-
-<h2 id="Vea_también">Vea también</h2>
-
-<ul>
- <li>{{jsxref("Statements/function*", "Sentencia function*")}}</li>
- <li>Objeto {{jsxref("GeneratorFunction")}}</li>
- <li><a href="/es/docs/Web/JavaScript/Referencia/Iteration_protocols">El protocolo iterable</a></li>
- <li>{{jsxref("Operators/yield", "yield")}}</li>
- <li>{{jsxref("Operators/yield*", "yield*")}}</li>
- <li>Objeto {{jsxref("Function")}}</li>
- <li>{{jsxref("Statements/function", "Sentencia function")}}</li>
- <li>{{jsxref("Operators/function", "Expresión function")}}</li>
- <li>{{jsxref("Functions_and_function_scope", "Funciones y alcance de funciones")}}</li>
-</ul>
+- {{jsxref("Statements/function*", "Sentencia function*")}}
+- Objeto {{jsxref("GeneratorFunction")}}
+- [El protocolo iterable](/es/docs/Web/JavaScript/Referencia/Iteration_protocols)
+- {{jsxref("Operators/yield", "yield")}}
+- {{jsxref("Operators/yield*", "yield*")}}
+- Objeto {{jsxref("Function")}}
+- {{jsxref("Statements/function", "Sentencia function")}}
+- {{jsxref("Operators/function", "Expresión function")}}
+- {{jsxref("Functions_and_function_scope", "Funciones y alcance de funciones")}}

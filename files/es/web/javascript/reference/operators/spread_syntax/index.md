@@ -8,66 +8,73 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 original_slug: Web/JavaScript/Referencia/Operadores/Sintaxis_Spread
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}**La sintaxis extendida o spread** **syntax** permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares donde cero o más argumentos (para llamadas de función) o elementos (para [Array literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales_Array)) son esperados, o a un objeto ser expandido en lugares donde cero o más pares de valores clave (para [literales Tipo Objeto](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales)) son esperados.{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
 
-<div><strong>La sintaxis extendida o spread</strong> <strong>syntax</strong> permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares donde cero o más argumentos (para llamadas de  función) o elementos (para <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales_Array">Array literales</a>) son esperados, o a un objeto ser expandido en lugares donde cero o más pares de valores clave (para <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales">literales Tipo Objeto</a>) son esperados.</div>
+La fuente para este ejemplo interactivo está almacenada en el repositorio de GitHub. Si quieres contribuir al proyecto interactivo de ejemplos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de descarga (pull).
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}</div>
+## Sintaxis
 
+Para llamadas de funciones:
 
+```
+myFunction(...iterableObj);
+```
 
-<p>La fuente para este ejemplo interactivo está almacenada en el repositorio de GitHub. Si quieres contribuir al proyecto interactivo de ejemplos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una solicitud de descarga (pull).</p>
+Para arreglos literales o cadenas de caracteres:
 
-<h2 id="Sintaxis">Sintaxis</h2>
+```
+[...iterableObj, '4', 'five', 6];
+```
 
-<p>Para llamadas de funciones:</p>
+Para objetos literales (nuevo en ECMAScript 2018):
 
-<pre>myFunction(...iterableObj);
-</pre>
+```
+let objClone = { ...obj };
+```
 
-<p>Para arreglos literales o cadenas de caracteres:</p>
+## Ejemplos
 
-<pre>[...iterableObj, '4', 'five', 6];</pre>
+### Spread en llamadas de función
 
-<p>Para objetos literales (nuevo en ECMAScript 2018):</p>
+#### Reemplaza "apply"
 
-<pre>let objClone = { ...obj };</pre>
+Es frecuente usar {{jsxref( "Function.prototype.apply")}} en casos donde quieres usar los elementos de un arreglo como argumentos de una función.
 
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<h3 id="Spread_en_llamadas_de_función">Spread en llamadas de función</h3>
-
-<h4 id="Reemplaza_apply">Reemplaza "apply"</h4>
-
-<p>Es frecuente usar {{jsxref( "Function.prototype.apply")}} en casos donde quieres usar los elementos de un arreglo como argumentos de una función.</p>
-
-<pre class="brush: js notranslate">function myFunction(x, y, z) { }
+```js
+function myFunction(x, y, z) { }
 var args = [0, 1, 2];
-myFunction.apply(null, args);</pre>
+myFunction.apply(null, args);
+```
 
-<p>Con la sintaxis expandida (spread syntax), el código anterior puede ser escrito como:</p>
+Con la sintaxis expandida (spread syntax), el código anterior puede ser escrito como:
 
-<pre class="brush: js notranslate">function myFunction(x, y, z) { }
+```js
+function myFunction(x, y, z) { }
 var args = [0, 1, 2];
-myFunction(...args);</pre>
+myFunction(...args);
+```
 
-<p>Cualquier argumento en la lista de argumentos puede usar la sintáxis expandida y esto puede ser usado varias veces.</p>
+Cualquier argumento en la lista de argumentos puede usar la sintáxis expandida y esto puede ser usado varias veces.
 
-<pre class="brush: js notranslate">function myFunction(v, w, x, y, z) { }
+```js
+function myFunction(v, w, x, y, z) { }
 var args = [0, 1];
-myFunction(-1, ...args, 2, ...[3]);</pre>
+myFunction(-1, ...args, 2, ...[3]);
+```
 
-<h4 id="Apply_para_new">"Apply" para "new"</h4>
+#### "Apply" para "new"
 
-<p>Cuando se llama un constructor con <code>new</code>, no es posible usar <strong>directamente</strong> un arreglo y <code>apply</code> (<code>apply</code> hace un <code>[[Call]]</code> y no un <code>[[Construct]]</code>). Sin embargo, un arreglo puede ser fácilmente usado con un new gracias a la sintáxis expandida:</p>
+Cuando se llama un constructor con `new`, no es posible usar **directamente** un arreglo y `apply` (`apply` hace un `[[Call]]` y no un `[[Construct]]`). Sin embargo, un arreglo puede ser fácilmente usado con un new gracias a la sintáxis expandida:
 
-<pre class="brush: js notranslate">var dateFields = [1970, 0, 1];  // 1 Jan 1970
+```js
+var dateFields = [1970, 0, 1];  // 1 Jan 1970
 var d = new Date(...dateFields);
-</pre>
+```
 
-<p>Para usar <strong>new </strong>con un arreglo de parámetros sin la sintáxis expandida, podrías tener que hacerlo <strong>indirectamente </strong>a través de una aplicación parcial:</p>
+Para usar **new** con un arreglo de parámetros sin la sintáxis expandida, podrías tener que hacerlo **indirectamente** a través de una aplicación parcial:
 
-<pre class="brush: js notranslate">function applyAndNew(constructor, args) {
+```js
+function applyAndNew(constructor, args) {
    function partial () {
       return constructor.apply(this, args);
    };
@@ -91,153 +98,143 @@ var myConstructorWithArguments = applyAndNew(myConstructor, myArguments);
 console.log(new myConstructorWithArguments);
 // (internal log of myConstructor):           arguments.length: 6
 // (internal log of myConstructor):           ["hi", "how", "are", "you", "mr", null]
-// (log of "new myConstructorWithArguments"): {prop1: "val1", prop2: "val2"}</pre>
+// (log of "new myConstructorWithArguments"): {prop1: "val1", prop2: "val2"}
+```
 
-<h3 id="Expandir_Array_literales">Expandir Array literales</h3>
+### Expandir Array literales
 
-<h4 id="Un_literal_Array_más_poderoso">Un literal Array más poderoso</h4>
+#### Un literal Array más poderoso
 
-<p>Sin <code><strong>sintaxis expandida (spread syntax)</strong></code>, para crear un nuevo arreglo usando un arreglo existente como parte de él,no es suficiente la sintaxis de Array literal y en su lugar se debe usar código imperativo con una combinación de <code>push</code>, <code>splice</code>, <code>concat</code>, etc. Con la sintaxis expandida, esto se vuelve mucho mas práctico:</p>
+Sin **`sintaxis expandida (spread syntax)`**, para crear un nuevo arreglo usando un arreglo existente como parte de él,no es suficiente la sintaxis de Array literal y en su lugar se debe usar código imperativo con una combinación de `push`, `splice`, `concat`, etc. Con la sintaxis expandida, esto se vuelve mucho mas práctico:
 
-<pre class="brush: js notranslate">var parts = ['shoulders', 'knees'];
+```js
+var parts = ['shoulders', 'knees'];
 var lyrics = ['head', ...parts, 'and', 'toes'];
 // ["head", "shoulders", "knees", "and", "toes"]
-</pre>
+```
 
-<p>Así como para expandir listas de argumentos, <code>...</code> puede ser usado en cualquier parte dentro del Array literal, y múltiples veces.</p>
+Así como para expandir listas de argumentos, `...` puede ser usado en cualquier parte dentro del Array literal, y múltiples veces.
 
-<h4 id="Copiar_un_arreglo">Copiar un arreglo</h4>
+#### Copiar un arreglo
 
-<pre class="brush: js notranslate">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 var arr2 = [...arr]; // like arr.slice()
 arr2.push(4);
 
 // arr2 becomes [1, 2, 3, 4]
 // arr remains unaffected
-</pre>
+```
 
-<p><strong>Nota:</strong> La sintaxis expandida efectivamente va a un nivel de profundidad mientras copia un arreglo. Por lo tanto, esto no permite copiar arreglos multidimensionales como se muestra en los siguientes ejemplos (es lo mismo con {{jsxref("Object.assign()")}} y sintaxis spread).</p>
+**Nota:** La sintaxis expandida efectivamente va a un nivel de profundidad mientras copia un arreglo. Por lo tanto, esto no permite copiar arreglos multidimensionales como se muestra en los siguientes ejemplos (es lo mismo con {{jsxref("Object.assign()")}} y sintaxis spread).
 
-<pre class="brush: js notranslate">var a = [[1], [2], [3]];
+```js
+var a = [[1], [2], [3]];
 var b = [...a];
 b.shift().shift(); // 1
 // Now array a is affected as well: [[], [2], [3]]
-</pre>
+```
 
-<h4 id="Una_forma_mejor_para_concatenar_arreglos">Una forma mejor para concatenar arreglos</h4>
+#### Una forma mejor para concatenar arreglos
 
-<p>{{jsxref("Array.concat")}} es usada a menudo para concatenar un arreglo al final de un arreglo ya existente. Sin la sintaxis spread se realiza:</p>
+{{jsxref("Array.concat")}} es usada a menudo para concatenar un arreglo al final de un arreglo ya existente. Sin la sintaxis spread se realiza:
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 // Append all items from arr2 onto arr1
-arr1 = arr1.concat(arr2);</pre>
+arr1 = arr1.concat(arr2);
+```
 
-<p>Con la sintaxis spread se transforma en:</p>
+Con la sintaxis spread se transforma en:
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr1, ...arr2];
-</pre>
+```
 
-<p>{{jsxref("Array.unshift")}} es a menudo usada para insertar un arreglo de valores al inicio de un arreglo existente. Sin la sintáxis spread, esto es hecho como:</p>
+{{jsxref("Array.unshift")}} es a menudo usada para insertar un arreglo de valores al inicio de un arreglo existente. Sin la sintáxis spread, esto es hecho como:
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 // Prepend all items from arr2 onto arr1
-Array.prototype.unshift.apply(arr1, arr2) // arr1 is now [3, 4, 5, 0, 1, 2]</pre>
+Array.prototype.unshift.apply(arr1, arr2) // arr1 is now [3, 4, 5, 0, 1, 2]
+```
 
-<p>Con la sintaxis spread se convierte en [Observa, sin embargo, que esto crea un nuevo arreglo <code>arr1</code>.  Diferente a {{jsxref("Array.unshift")}}, esto no modifica el arreglo original en sitio <code>arr1</code>]:</p>
+Con la sintaxis spread se convierte en \[Observa, sin embargo, que esto crea un nuevo arreglo `arr1`. Diferente a {{jsxref("Array.unshift")}}, esto no modifica el arreglo original en sitio `arr1`]:
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr2, ...arr1]; // arr1 is now [3, 4, 5, 0, 1, 2]
-</pre>
+```
 
-<h3 id="Spread_en_literales_tipo_Objeto">Spread en literales tipo Objeto</h3>
+### Spread en literales tipo Objeto
 
-<p>La propuesta <a href="https://github.com/tc39/proposal-object-rest-spread">Propiedades Rest/Spread para ECMAScript</a> (etapa 4) agrega propiedades spread a los <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">literales Tipo Objeto</a>. Esto copia sus propiedades enumerables desde un objeto provisto dentro de un nuevo objeto.</p>
+La propuesta [Propiedades Rest/Spread para ECMAScript](https://github.com/tc39/proposal-object-rest-spread) (etapa 4) agrega propiedades spread a los [literales Tipo Objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer). Esto copia sus propiedades enumerables desde un objeto provisto dentro de un nuevo objeto.
 
-<p>Shallow-cloning (excluyendo prototype) o la combinación de objetos es ahora posible usando una sintaxis más corta que {{jsxref("Object.assign()")}}.</p>
+Shallow-cloning (excluyendo prototype) o la combinación de objetos es ahora posible usando una sintaxis más corta que {{jsxref("Object.assign()")}}.
 
-<pre class="brush: js notranslate">var obj1 = { foo: 'bar', x: 42 };
+```js
+var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
 
 var clonedObj = { ...obj1 };
 // Object { foo: "bar", x: 42 }
 
 var mergedObj = { ...obj1, ...obj2 };
-// Object { foo: "baz", x: 42, y: 13 }</pre>
+// Object { foo: "baz", x: 42, y: 13 }
+```
 
-<p>Observa que {{jsxref("Object.assign()")}} desencadena <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setters</a> mientras que la sintaxis spread no lo hace.</p>
+Observa que {{jsxref("Object.assign()")}} desencadena [setters](/es/docs/Web/JavaScript/Reference/Functions/set) mientras que la sintaxis spread no lo hace.
 
-<p>Observa que tú no puedes reemplazar o replicar la función {{jsxref("Object.assign()")}}:</p>
+Observa que tú no puedes reemplazar o replicar la función {{jsxref("Object.assign()")}}:
 
-<pre class="brush: js notranslate">var obj1 = { foo: 'bar', x: 42 };
+```js
+var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
-const merge = ( ...objects ) =&gt; ( { ...objects } );
+const merge = ( ...objects ) => ( { ...objects } );
 
 var mergedObj = merge ( obj1, obj2);
 // Object { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 13 } }
 
 var mergedObj = merge ( {}, obj1, obj2);
-// Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }</pre>
+// Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
+```
 
-<p>En el ejemplo de arriba, el operador spread no trabaja como uno podría esperar: este dispersa un <em>arreglo</em> de argumentos en el literal Tipo Objeto, debido al parámetro rest.</p>
+En el ejemplo de arriba, el operador spread no trabaja como uno podría esperar: este dispersa un _arreglo_ de argumentos en el literal Tipo Objeto, debido al parámetro rest.
 
-<h3 id="Sólo_para_iterables">Sólo para iterables</h3>
+### Sólo para iterables
 
-<p>La sintaxis Spread (otra que en el caso de las propiedades spread) puede ser aplicada sólo a los objetos <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator">iterables</a>:</p>
+La sintaxis Spread (otra que en el caso de las propiedades spread) puede ser aplicada sólo a los objetos [iterables](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator):
 
-<pre class="brush: js notranslate">var obj = {'key1': 'value1'};
+```js
+var obj = {'key1': 'value1'};
 var array = [...obj]; // TypeError: obj is not iterable
-</pre>
+```
 
-<h3 id="Spread_con_muchos_valores">Spread con muchos valores</h3>
+### Spread con muchos valores
 
-<p>Cuando se usa la sintaxis spread para llamados de funciones, tenga en cuenta la posibilidad de exceder el límite de longitud de argumentos del motor de JavaScript. Vea <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object)."><code>apply()</code></a> para más detalles.</p>
+Cuando se usa la sintaxis spread para llamados de funciones, tenga en cuenta la posibilidad de exceder el límite de longitud de argumentos del motor de JavaScript. Vea [`apply()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).") para más detalles.
 
-<h2 id="Sintaxis_Rest_parámetros">Sintaxis Rest (parámetros)</h2>
+## Sintaxis Rest (parámetros)
 
-<p>La sintaxis Rest luce exactamente como la sintaxis spread, pero esto es usado por la desestructuración de arreglos y objetos. De cierta forma, la sintaxis rest es la opuesta a la sintaxis spread: spread 'expande' un arreglo en sus elementos, mientras rest agrupa múltiples elementos y los 'condensa' en un único elemento. Consulta <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters">parámetros rest.</a></p>
+La sintaxis Rest luce exactamente como la sintaxis spread, pero esto es usado por la desestructuración de arreglos y objetos. De cierta forma, la sintaxis rest es la opuesta a la sintaxis spread: spread 'expande' un arreglo en sus elementos, mientras rest agrupa múltiples elementos y los 'condensa' en un único elemento. Consulta [parámetros rest.](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array-initializer')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definido en varias secciones de la especificación: <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer">Array Initializer</a>, <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists">Argument Lists</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array-initializer')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Sin cambios.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object-initializer')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definido en <a href="https://tc39.github.io/ecma262/2018/#sec-object-initializer">Object Initializer</a></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                       | Comment                                                                                                                                                                                                                             |
+| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES2015', '#sec-array-initializer')}}     | {{Spec2('ES2015')}}     | Definido en varias secciones de la especificación: [Array Initializer](http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer), [Argument Lists](http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists) |
+| {{SpecName('ESDraft', '#sec-array-initializer')}}     | {{Spec2('ESDraft')}} | Sin cambios.                                                                                                                                                                                                                        |
+| {{SpecName('ESDraft', '#sec-object-initializer')}} | {{Spec2('ESDraft')}} | Definido en [Object Initializer](https://tc39.github.io/ecma262/2018/#sec-object-initializer)                                                                                                                                       |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
+{{Compat("javascript.operators.spread")}}
 
+## Vea también
 
-<p>{{Compat("javascript.operators.spread")}}</p>
-
-<h2 id="Vea_también">Vea también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters">Rest parameters</a> (también ‘<code>...</code>’)</li>
-</ul>
+- [Rest parameters](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (también ‘`...`’)

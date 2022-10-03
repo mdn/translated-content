@@ -9,57 +9,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/resolve
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>Promise.resolve(value)</strong></code> retorna un objeto {{jsxref("Promise")}} que es resuelto con el valor dado. Si el valor es una <em>promise</em>, esa <em>promise </em>es devuelta; si el valor es un <em>thenable </em>(si tiene un {{jsxref("Promise.then", "método \"then\"")}}), el valor devuelto le seguirá a ese <em>thenable</em>, adoptando su estado; de otro modo la <em>promise</em> devuelta estará completada con el valor.</p>
+El método **`Promise.resolve(value)`** retorna un objeto {{jsxref("Promise")}} que es resuelto con el valor dado. Si el valor es una _promise_, esa _promise_ es devuelta; si el valor es un _thenable_ (si tiene un {{jsxref("Promise.then", "método \"then\"")}}), el valor devuelto le seguirá a ese _thenable_, adoptando su estado; de otro modo la _promise_ devuelta estará completada con el valor.
 
-<div>{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}
 
-<p>La fuente para esta demostración interactiva se encuentra en un repositorio de GitHub. Si te gustaría contribuir al proyecto de la demostración interactiva, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una <em>pull request</em>.</p>
+La fuente para esta demostración interactiva se encuentra en un repositorio de GitHub. Si te gustaría contribuir al proyecto de la demostración interactiva, por favor clona <https://github.com/mdn/interactive-examples> y envíanos una _pull request_.
 
-<h2 id="Sintáxis">Sintáxis</h2>
+## Sintáxis
 
-<pre class="brush: js">Promise.resolve(value);
+```js
+Promise.resolve(value);
 Promise.resolve(promise);
 Promise.resolve(thenable);
-</pre>
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>value</dt>
- <dd>Argumento por resolver por esta <code>Promise</code>. También puede ser una <code>Promise</code> o un <em>thenable</em> por resolver.</dd>
-</dl>
+- value
+  - : Argumento por resolver por esta `Promise`. También puede ser una `Promise` o un _thenable_ por resolver.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Una {{jsxref("Promise")}} que es resuelta con el valor dado, o con la <em>promise </em>pasada como valor, si el valor era un objeto <em>promise</em>.</p>
+Una {{jsxref("Promise")}} que es resuelta con el valor dado, o con la _promise_ pasada como valor, si el valor era un objeto _promise_.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>La función estática <code>Promise.resolve</code> retorna una <code>Promise</code> que es resuelta.</p>
+La función estática `Promise.resolve` retorna una `Promise` que es resuelta.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Utilizando_el_método_estático_Promise.resolve">Utilizando el método estático <code>Promise.resolve</code></h3>
+### Utilizando el método estático `Promise.resolve`
 
-<pre class="brush: js">Promise.resolve('Éxito').then(function(value) {
+```js
+Promise.resolve('Éxito').then(function(value) {
   console.log(value); // "Éxito"
 }, function(value) {
   // no es llamada
 });
-</pre>
+```
 
-<h3 id="Resolviendo_un_arreglo">Resolviendo un arreglo</h3>
+### Resolviendo un arreglo
 
-<pre class="brush: js">var p = Promise.resolve([1,2,3]);
+```js
+var p = Promise.resolve([1,2,3]);
 p.then(function(v) {
   console.log(v[0]); // 1
-});</pre>
+});
+```
 
-<h3 id="Resolviendo_otra_Promise">Resolviendo otra <code>Promise</code></h3>
+### Resolviendo otra `Promise`
 
-<pre class="brush: js">var original = Promise.resolve(33);
+```js
+var original = Promise.resolve(33);
 var cast = Promise.resolve(original);
 cast.then(function(value) {
   console.log('valor: ' + value);
@@ -69,13 +72,14 @@ console.log('original === cast ? ' + (original === cast));
 // registros, en orden:
 // original === cast ? true
 // valor: 33
-</pre>
+```
 
-<p>El orden invertido de los registros se debe al hecho de que los <em>handler </em><code>then</code> sean llamados asíncronamente. Vea cómo funciona <code>then</code> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value">aquí</a>.</p>
+El orden invertido de los registros se debe al hecho de que los _handler_ `then` sean llamados asíncronamente. Vea cómo funciona `then` [aquí](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value).
 
-<h3 id="Resolviendo_thenables_y_arrojando_Errores">Resolviendo thenables y arrojando Errores</h3>
+### Resolviendo thenables y arrojando Errores
 
-<pre class="brush: js">// Resolviendo un objeto thenable
+```js
+// Resolviendo un objeto thenable
 var p1 = Promise.resolve({
   then: function(onFulfill, onReject) { onFulfill('¡Completada!'); }
 });
@@ -114,38 +118,19 @@ p3.then(function(v) {
 }, function(e) {
   // no es llamada
 });
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-promise.resolve', 'Promise.resolve')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición inicial en un estándar de ECMA.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                       | Comentario                                 |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------ |
+| {{SpecName('ES2015', '#sec-promise.resolve', 'Promise.resolve')}} | {{Spec2('ES2015')}}     | Definición inicial en un estándar de ECMA. |
+| {{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}} | {{Spec2('ESDraft')}} |                                            |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("javascript.builtins.Promise.resolve")}}
 
+## Véase también
 
-<p>{{Compat("javascript.builtins.Promise.resolve")}}</p>
-
-<h2 id="Véase_también">Véase también</h2>
-
-<ul>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{jsxref("Promise")}}

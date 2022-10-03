@@ -12,36 +12,36 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/for-await...of
 original_slug: Web/JavaScript/Referencia/Sentencias/for-await...of
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>La <strong>sentencia</strong> <strong><code>for await...of</code> </strong>crea un bucle iterando tanto sobre objetos iterables asincrónicos como sincrónicos, incluyendo: built-in {{jsxref("String")}}, {{jsxref("Array")}}, objetos <code>Array</code>-like (por ej., {{jsxref("Functions/arguments", "arguments")}} o {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, y async/sync iterables definidos por el usuario. Invoca un hook de iteración personalizada con sentencias a ser ejecutadas por el valor de cada propiedad diferente del objeto.</p>
+La **sentencia** **`for await...of` **crea un bucle iterando tanto sobre objetos iterables asincrónicos como sincrónicos, incluyendo: built-in {{jsxref("String")}}, {{jsxref("Array")}}, objetos `Array`-like (por ej., {{jsxref("Functions/arguments", "arguments")}} o {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, y async/sync iterables definidos por el usuario. Invoca un hook de iteración personalizada con sentencias a ser ejecutadas por el valor de cada propiedad diferente del objeto.
 
-<p>El código fuente de este ejemplo interactivo está almacenado en un repositorio Github. Si te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos un pull request.</p>
+El código fuente de este ejemplo interactivo está almacenado en un repositorio Github. Si te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos un pull request.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">for await (<em>variable</em> of <em>iterable</em>) {
-  <em>sentencia
-</em>}
-</pre>
+```
+for await (variable of iterable) {
+  sentencia
+}
+```
 
-<dl>
- <dt><code>variable</code></dt>
- <dd>En cada iteración, el valor de una propiedad diferente es asignado a <em>variable</em>. <em>variable</em> puede ser declarada con <code>const</code>, <code>let</code>, o <code>var</code>.</dd>
- <dt><code>iterable</code></dt>
- <dd>Objeto sobre cuyas propiedades se itera.</dd>
-</dl>
+- `variable`
+  - : En cada iteración, el valor de una propiedad diferente es asignado a _variable_. _variable_ puede ser declarada con `const`, `let`, o `var`.
+- `iterable`
+  - : Objeto sobre cuyas propiedades se itera.
 
-<h3 id="Iterando_sobre_iterables_asincrónicos">Iterando sobre iterables asincrónicos</h3>
+### Iterando sobre iterables asincrónicos
 
-<p>También puedes iterar sobre un objeto que explícitamente implementa el protocolo async iterable:</p>
+También puedes iterar sobre un objeto que explícitamente implementa el protocolo async iterable:
 
-<pre class="brush:js">var asyncIterable = {
+```js
+var asyncIterable = {
   [Symbol.asyncIterator]() {
     return {
       i: 0,
       next() {
-        if (this.i &lt; 3) {
+        if (this.i < 3) {
           return Promise.resolve({ value: this.i++, done: false });
         }
 
@@ -60,15 +60,16 @@ original_slug: Web/JavaScript/Referencia/Sentencias/for-await...of
 // 0
 // 1
 // 2
-</pre>
+```
 
-<h3 id="Iterando_sobre_funciones_generadoras_asincrónicas">Iterando sobre funciones generadoras asincrónicas</h3>
+### Iterando sobre funciones generadoras asincrónicas
 
-<p>Debido a que las funciones generadoras asincrónicas implementan el protocolo async iterator, las mismas pueden ser iteradas utilizando <code>for await... of</code></p>
+Debido a que las funciones generadoras asincrónicas implementan el protocolo async iterator, las mismas pueden ser iteradas utilizando `for await... of`
 
-<pre class="brush: js">async function* asyncGenerator() {
+```js
+async function* asyncGenerator() {
   var i = 0;
-  while (i &lt; 3) {
+  while (i < 3) {
     yield i++;
   }
 }
@@ -80,11 +81,13 @@ original_slug: Web/JavaScript/Referencia/Sentencias/for-await...of
 })();
 // 0
 // 1
-// 2</pre>
+// 2
+```
 
-<p>Para un ejemplo más concreto de iteración sobre una función generadora utilizando <code>for await... of</code>, considera iterar sobre datos provistos por una API. Este ejemplo primero crea un iterador asincrónico para un stream de datos, luego lo utiliza para obtener el tamaño de la respuesta desde la API.</p>
+Para un ejemplo más concreto de iteración sobre una función generadora utilizando `for await... of`, considera iterar sobre datos provistos por una API. Este ejemplo primero crea un iterador asincrónico para un stream de datos, luego lo utiliza para obtener el tamaño de la respuesta desde la API.
 
-<pre class="brush: js">async function* streamAsyncIterator(stream) {
+```js
+async function* streamAsyncIterator(stream) {
   const reader = stream.getReader();
   try {
     while (true) {
@@ -113,33 +116,19 @@ async function getResponseSize(url) {
   // salida esperada: "Tamaño de la respuesta: 1071472"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');</pre>
+getResponseSize('https://jsonplaceholder.typicode.com/photos');
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                                                                   | Estado                       | Comentarios |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
+| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}} | {{Spec2('ESDraft')}} |             |
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
+{{Compat("javascript.statements.for_await_of")}}
 
+## Ver también
 
-<p>{{Compat("javascript.statements.for_await_of")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Statements/for...of")}}</li>
-</ul>
+- {{jsxref("Statements/for...of")}}

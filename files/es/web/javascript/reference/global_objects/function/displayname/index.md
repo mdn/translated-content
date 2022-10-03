@@ -4,15 +4,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/displayName
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>The <code><strong>function.displayName</strong></code> property returns the display name of the function.</p>
+The **`function.displayName`** property returns the display name of the function.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cuando se define la propiedad <code>displayName</code> , retorna un mensaje con el nombre para mostrar en una función:</p>
+Cuando se define la propiedad `displayName` , retorna un mensaje con el nombre para mostrar en una función:
 
-<pre class="brush: js">function doSomething() {}
+```js
+function doSomething() {}
 
 console.log(doSomething.displayName); // "undefined"
 
@@ -21,11 +22,12 @@ var popup = function(content) { console.log(content); };
 popup.displayName = 'Show Popup';
 
 console.log(popup.displayName); // "Show Popup"
-</pre>
+```
 
-<p>Tu puedes definir una funcion con un nombre a mostrar en un {{jsxref("Functions", "function expression", "", 1)}}:</p>
+Tu puedes definir una funcion con un nombre a mostrar en un {{jsxref("Functions", "function expression", "", 1)}}:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   someMethod: function() {}
 };
 
@@ -35,11 +37,12 @@ console.log(object.someMethod.displayName); // logs "someMethod"
 
 try { someMethod } catch(e) { console.log(e); }
 // ReferenceError: someMethod is not defined
-</pre>
+```
 
-<p>Puedes cambiar dinámicamente el <code>displayName</code> de una función:</p>
+Puedes cambiar dinámicamente el `displayName` de una función:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   // anonymous
   someMethod: function(value) {
     arguments.callee.displayName = 'someMethod (' + value + ')';
@@ -50,29 +53,25 @@ console.log(object.someMethod.displayName); // "undefined"
 
 object.someMethod('123')
 console.log(object.someMethod.displayName); // "someMethod (123)"
-</pre>
+```
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Normalmente, se prefiere por consolas y profilers sobre {{jsxref("Function.name", "func.name")}} a mostrar el nombre de una función.</p>
+Normalmente, se prefiere por consolas y profilers sobre {{jsxref("Function.name", "func.name")}} a mostrar el nombre de una función.
 
-<p>Al ingresar lo siguiente en una consola, debería mostrarse como algo así como "<code>function My Function()</code>":</p>
+Al ingresar lo siguiente en una consola, debería mostrarse como algo así como "`function My Function()`":
 
-<pre class="brush: js">var a = function() {};
+```js
+var a = function() {};
 a.displayName = 'My Function';
 
-a; // "function My Function()"</pre>
+a; // "function My Function()"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.Function.displayName")}}</p>
-</div>
-
-<div> </div>
+{{Compat("javascript.builtins.Function.displayName")}}

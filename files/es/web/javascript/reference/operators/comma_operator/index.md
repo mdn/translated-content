@@ -6,80 +6,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 original_slug: Web/JavaScript/Referencia/Operadores/operador_coma
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>El operador coma evalua cada uno de sus operandos (de izquierda a derecha) y retorna el valor del último operando.</p>
+El operador coma evalua cada uno de sus operandos (de izquierda a derecha) y retorna el valor del último operando.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>expr1</em>, <em>expr2, expr3...</em></pre>
+```
+expr1, expr2, expr3...
+```
 
-<h2 id="Parámetros">Parámetros</h2>
+## Parámetros
 
-<dl>
- <dt><code>expr1</code>, <code>expr2, expr3...</code></dt>
- <dd>Cualquier expresión.</dd>
-</dl>
+- `expr1`, `expr2, expr3...`
+  - : Cualquier expresión.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Puede usar el operador coma cuando deseé mútiples expresiones en una localización que requiere una sola expresión. El uso más común de este operador es proveer múltiples parámetros en un búcle for</p>
+Puede usar el operador coma cuando deseé mútiples expresiones en una localización que requiere una sola expresión. El uso más común de este operador es proveer múltiples parámetros en un búcle for
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Si a es un array de dos dimensiones con 10 elementos en un lado, el siguiente código usa el operador coma para incrementar dos variables a la vez. Note que la coma en la sentencia var <strong>no </strong>es el operador coma, porque no existe adentro de una expresión.Más bien, es un carácter especial en sentencias var para combinar a múltiples de ellas en una sola. Sin embargo, esa coma se comporta casi igual que el operador coma. El código imprime los valores de los elementos diagonales en el array:</p>
+Si a es un array de dos dimensiones con 10 elementos en un lado, el siguiente código usa el operador coma para incrementar dos variables a la vez. Note que la coma en la sentencia var **no** es el operador coma, porque no existe adentro de una expresión.Más bien, es un carácter especial en sentencias var para combinar a múltiples de ellas en una sola. Sin embargo, esa coma se comporta casi igual que el operador coma. El código imprime los valores de los elementos diagonales en el array:
 
-<pre>for (var i = 0, j = 9; i &lt;= 9; i++, j--)
-  document.writeln("a[" + i + "][" + j + "] = " + a[i][j]);</pre>
+```
+for (var i = 0, j = 9; i <= 9; i++, j--)
+  document.writeln("a[" + i + "][" + j + "] = " + a[i][j]);
+```
 
-<h3 id="Procesar_y_luego_retornar">Procesar y luego retornar:</h3>
+### Procesar y luego retornar:
 
-<p>Otro ejemplo de lo que se puede hacer con el operador coma es procesar antes de retornar. Como se mencionó, solo el último elemento será retornado pero todos los otros también van a ser evaluados. Así, se puede hacer:</p>
+Otro ejemplo de lo que se puede hacer con el operador coma es procesar antes de retornar. Como se mencionó, solo el último elemento será retornado pero todos los otros también van a ser evaluados. Así, se puede hacer:
 
-<pre class="brush: js">function myFunc () {
+```js
+function myFunc () {
   var x = 0;
 
   return (x += 1, x); // the same as return ++x;
-}</pre>
+}
+```
 
-<h2 id="Específicaciones">Específicaciones</h2>
+## Específicaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-comma-operator', 'Comma operator')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-comma-operator', 'Comma operator')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.14', 'Comma operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.14', 'Comma operator')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                       | Comentario         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('ESDraft', '#sec-comma-operator', 'Comma operator')}} | {{Spec2('ESDraft')}} |                    |
+| {{SpecName('ES6', '#sec-comma-operator', 'Comma operator')}}     | {{Spec2('ES6')}}         |                    |
+| {{SpecName('ES5.1', '#sec-11.14', 'Comma operator')}}             | {{Spec2('ES5.1')}}     |                    |
+| {{SpecName('ES1', '#sec-11.14', 'Comma operator')}}                 | {{Spec2('ES1')}}         | Definición inicial |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("javascript.operators.comma")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for loop</a></li>
-</ul>
+- [for loop](/es/docs/Web/JavaScript/Reference/Statements/for)

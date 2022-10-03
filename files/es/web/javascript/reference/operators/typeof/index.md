@@ -8,70 +8,73 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/typeof
 original_slug: Web/JavaScript/Referencia/Operadores/typeof
 ---
-<div><span>{{jsSidebar("Operators")}}</span></div>
+{{jsSidebar("Operators")}}
 
-<h2 id="Resumen" name="Resumen">Resumen</h2>
+## Resumen
 
-<p>El operador <code>typeof</code> se usa en cualquiera de los siguientes modos:</p>
+El operador `typeof` se usa en cualquiera de los siguientes modos:
 
-<ol>
- <li><code>typeof <em>operando</em> </code></li>
- <li><code>typeof (<em>operando</em>)</code></li>
-</ol>
+1.  `typeof operando`
+2.  `typeof (operando)`
 
-<p>El operador <code>typeof</code> devuelve una cadena que indica el tipo del operando sin evaluarlo. <code>operando</code> es la cadena, variable, palabra clave u objeto para el que se devolverá su tipo. Los paréntesis son opcionales.</p>
+El operador `typeof` devuelve una cadena que indica el tipo del operando sin evaluarlo. `operando` es la cadena, variable, palabra clave u objeto para el que se devolverá su tipo. Los paréntesis son opcionales.
 
-<p>Suponga que define las siguientes variables:</p>
+Suponga que define las siguientes variables:
 
-<pre class="brush: js">var miFuncion = new Function("5+2")
+```js
+var miFuncion = new Function("5+2")
 var forma = "redonda"
 var tamano = 1
 var hoy = new Date()
-</pre>
+```
 
-<p>El operador <code>typeof</code> devuelve los siguientes resultados para estas variables</p>
+El operador `typeof` devuelve los siguientes resultados para estas variables
 
-<pre class="brush: js">typeof miFuncion === 'function'
+```js
+typeof miFuncion === 'function'
 typeof forma === 'string'
 typeof tamano === 'number'
 typeof hoy === 'object'
 typeof noExiste === 'undefined'
-</pre>
+```
 
-<p>Para las palabras clave <code>true</code> y <code>null</code>, el operador <code>typeof</code> devuelve los siguientes resultados:</p>
+Para las palabras clave `true` y `null`, el operador `typeof` devuelve los siguientes resultados:
 
-<pre class="brush: js">typeof true === 'boolean'
+```js
+typeof true === 'boolean'
 typeof null === 'object'
-</pre>
+```
 
-<p>Para un número o una cadena, el operador <code>typeof</code> devuelve los siguientes resultados:</p>
+Para un número o una cadena, el operador `typeof` devuelve los siguientes resultados:
 
-<pre class="brush: js">typeof 62 === 'number'
+```js
+typeof 62 === 'number'
 typeof 'Hola mundo' === 'string'
-</pre>
+```
 
-<p>Para valores de propiedades, el operador <code>typeof</code> devuelve el tipo del valor que contiene la propiedad:</p>
+Para valores de propiedades, el operador `typeof` devuelve el tipo del valor que contiene la propiedad:
 
-<pre class="brush: js">typeof document.lastModified === 'string'
+```js
+typeof document.lastModified === 'string'
 typeof window.length === 'number'
 typeof Math.LN2 === 'number'
-</pre>
+```
 
-<p>Para métodos y funciones, el operador <code>typeof</code> devuelve los resultados siguientes:</p>
+Para métodos y funciones, el operador `typeof` devuelve los resultados siguientes:
 
-<pre class="brush: js">typeof blur === 'function'
+```js
+typeof blur === 'function'
 typeof eval === 'function'
 typeof parseInt === 'function'
 typeof shape.split === 'function'
-</pre>
+```
 
-<p>Para objetos predefinidos, el operador <code>typeof</code> devuelve los siguientes resultados:</p>
+Para objetos predefinidos, el operador `typeof` devuelve los siguientes resultados:
 
-<pre class="brush: js">typeof Date === 'function'
+```js
+typeof Date === 'function'
 typeof Function === 'function'
 typeof Math === 'object'
 typeof Object === 'function'
 typeof String === 'function'
-</pre>
-
-<p> </p>
+```

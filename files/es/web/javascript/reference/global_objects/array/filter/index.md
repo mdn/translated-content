@@ -12,74 +12,74 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/filter
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>filter()</strong></code> crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.</p>
+El método **`filter()`** crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
 
-<p>{{EmbedInteractiveExample("pages/js/array-filter.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-filter.html")}}
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="notranslate"><var>var newArray = arr</var>.filter(<var>callback(currentValue[, index[, array]])</var>[, <var>thisArg</var>])</pre>
+```
+var newArray = arr.filter(callback(currentValue[, index[, array]])[, thisArg])
+```
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Función que <strong>comprueba cada elemento </strong>del array para ver si cumple la condición (también llamada predicado).  Retorna <code>true</code> si el elemento la cumple o en caso contrario retornará <code>false</code>. Acepta tres parámetros:
- <dl>
-  <dt><code>currentValue</code></dt>
-  <dd>El elemento actual del array que está siendo procesado.</dd>
-  <dt><code>index</code> {{optional_inline}}</dt>
-  <dd>El índice del elemento actual del array que está siendo procesado.</dd>
-  <dt><code>array</code> {{optional_inline}}</dt>
-  <dd>El array sobre el que se ha llamado <code>filter</code>.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code> {{optional_inline}}</dt>
- <dd>Opcional. Valor a utilizar como <code>this</code> cuando se ejecuta <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+  - : Función que **comprueba cada elemento** del array para ver si cumple la condición (también llamada predicado). Retorna `true` si el elemento la cumple o en caso contrario retornará `false`. Acepta tres parámetros:
 
-<p>Un nuevo array con los elementos que cumplen la condición. Si ningún elemento cumple la condición, se devolverá un array vacío.</p>
+    - `currentValue`
+      - : El elemento actual del array que está siendo procesado.
+    - `index` {{optional_inline}}
+      - : El índice del elemento actual del array que está siendo procesado.
+    - `array` {{optional_inline}}
+      - : El array sobre el que se ha llamado `filter`.
 
-<h2 id="Description" name="Description">Descripción</h2>
+- `thisArg` {{optional_inline}}
+  - : Opcional. Valor a utilizar como `this` cuando se ejecuta `callback`.
 
-<p><code>filter()</code> llama a la función <code>callback</code>  sobre cada elemento del array, y construye un nuevo array con todos los valores para los cuales  <code>callback</code> devuelve un valor verdadero. <code>callback</code> es invocada sólo para índices del array que tengan un valor asignado. No se invoca sobre índices que hayan sido borrados o a los que no se les haya asignado algún valor. Los elementos del array que no cumplan la condición <code>callback</code>  simplemente los salta, y no son incluidos en el nuevo array.</p>
+### Valor devuelto
 
-<p><code>callback</code> se invoca con tres argumentos:</p>
+Un nuevo array con los elementos que cumplen la condición. Si ningún elemento cumple la condición, se devolverá un array vacío.
 
-<ol>
- <li>El valor de cada elemento</li>
- <li>El índice del elemento</li>
- <li>El objeto Array que se está recorriendo</li>
-</ol>
+## Descripción
 
-<p>Si se proporciona un parámetro <code>thisArg</code> a <code>filter()</code>, este será pasado a <code>callback</code> cuando sea invocado, para usarlo como valor <code>this</code>.  De lo contrario, se pasará el valor <code>undefined</code> como valor <code>this</code>.  El valor <code>this</code> dentro del <code>callback</code> se determina conforme a las <a href="/es/docs/Web/JavaScript/Reference/Operators/this">las normas habituales para determinar el <em>this </em>visto por una función.</a></p>
+`filter()` llama a la función `callback` sobre cada elemento del array, y construye un nuevo array con todos los valores para los cuales `callback` devuelve un valor verdadero. `callback` es invocada sólo para índices del array que tengan un valor asignado. No se invoca sobre índices que hayan sido borrados o a los que no se les haya asignado algún valor. Los elementos del array que no cumplan la condición `callback` simplemente los salta, y no son incluidos en el nuevo array.
 
-<p><code>filter()</code> no hace mutar el array sobre el cual es llamado.</p>
+`callback` se invoca con tres argumentos:
 
-<p>El rango de elementos procesados por <code>filter()</code> se establece antes de la primera invocación de  <code>callback</code>. Los elementos que se añadan al array después de que comience la llamada a <code>filter()</code> no serán visitados por <code>callback</code>. Si se modifica o elimina un elemento existente del array, cuando pase su valor a <code>callback</code> será el que tenga cuando <code>filter()</code> lo recorra; los elementos que son eliminados no son recorridos.</p>
+1.  El valor de cada elemento
+2.  El índice del elemento
+3.  El objeto Array que se está recorriendo
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+Si se proporciona un parámetro `thisArg` a `filter()`, este será pasado a `callback` cuando sea invocado, para usarlo como valor `this`. De lo contrario, se pasará el valor `undefined` como valor `this`. El valor `this` dentro del `callback` se determina conforme a las [las normas habituales para determinar el _this_ visto por una función.](/es/docs/Web/JavaScript/Reference/Operators/this)
 
-<h3 id="Example_Filtering_out_all_small_values" name="Example:_Filtering_out_all_small_values">Filtrando todos los valores pequeños</h3>
+`filter()` no hace mutar el array sobre el cual es llamado.
 
-<p>El siguiente ejemplo usa <code>filter()</code> para crear un array filtrado que excluye todos los elementos con valores inferiores a 10.</p>
+El rango de elementos procesados por `filter()` se establece antes de la primera invocación de `callback`. Los elementos que se añadan al array después de que comience la llamada a `filter()` no serán visitados por `callback`. Si se modifica o elimina un elemento existente del array, cuando pase su valor a `callback` será el que tenga cuando `filter()` lo recorra; los elementos que son eliminados no son recorridos.
 
-<pre class="brush: js notranslate">function esSuficientementeGrande(elemento) {
-  return elemento &gt;= 10;
+## Ejemplos
+
+### Filtrando todos los valores pequeños
+
+El siguiente ejemplo usa `filter()` para crear un array filtrado que excluye todos los elementos con valores inferiores a 10.
+
+```js
+function esSuficientementeGrande(elemento) {
+  return elemento >= 10;
 }
 var filtrados = [12, 5, 8, 130, 44].filter(esSuficientementeGrande);
 // filtrados es [12, 130, 44]
-</pre>
+```
 
-<h3 id="Filtrando_entradas_inválidas_desde_un_JSON">Filtrando entradas inválidas desde un JSON</h3>
+### Filtrando entradas inválidas desde un JSON
 
-<p>El siguiente ejemplo emplea <code>filter()</code> para crear un json filtrado con todos lo elementos que tengan id numérico distinto de cero.</p>
+El siguiente ejemplo emplea `filter()` para crear un json filtrado con todos lo elementos que tengan id numérico distinto de cero.
 
-<pre class="brush: js notranslate">var arr = [
+```js
+var arr = [
   { id: 15 },
   { id: -1 },
   { id: 0 },
@@ -95,7 +95,7 @@ var entradasInvalidas = 0;
 // Si el elemento tiene un atributo id, y su valor correspondiente es un numero
 // Y no es el valor NaN, entonces es una entrada válida
 function filtrarPorID(obj) {
-  if ('id' in obj &amp;&amp; typeof(obj.id) === 'number' &amp;&amp; !isNaN(obj.id)) {
+  if ('id' in obj && typeof(obj.id) === 'number' && !isNaN(obj.id)) {
     return true;
   } else {
     entradasInvalidas++;
@@ -109,53 +109,59 @@ console.log('Array Filtrado\n', arrPorID);
 // [{ id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 }]
 
 console.log('Número de Entradas Invalidas = ', entradasInvalidas);
-// 4</pre>
+// 4
+```
 
-<h3 id="Búsqueda_en_el_arreglo">Búsqueda en el arreglo</h3>
+### Búsqueda en el arreglo
 
-<p>El siguiente ejemplo emplea filter() para filtrar el contendio de un arreglo en función de un criterio de búsqueda.</p>
+El siguiente ejemplo emplea filter() para filtrar el contendio de un arreglo en función de un criterio de búsqueda.
 
-<pre class="brush: js notranslate">var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+```js
+var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
  * Filtra la matríz en función de un criterio de búsqueda (query)
  */
 function filterItems(query) {
   return fruits.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) &gt; -1;
+      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
   })
 }
 
 console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']</pre>
+console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+```
 
-<h3 id="Implementación_en_ES2015">Implementación en ES2015</h3>
+### Implementación en ES2015
 
-<pre class="brush: js notranslate">const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+```js
+const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
  * Filtra la matríz en función de un criterio de búsqueda (query)
  */
-const filterItems = query =&gt; {
-  return fruits.filter((el) =&gt;
-    el.toLowerCase().indexOf(query.toLowerCase()) &gt; -1
+const filterItems = query => {
+  return fruits.filter((el) =>
+    el.toLowerCase().indexOf(query.toLowerCase()) > -1
   );
 }
 
 console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']</pre>
+console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>filter()</code> se añadió a la norma ECMA-262 en la 5ta edición; como tal puede no estar presente en todas las implementaciones de la norma. Puedes sobrellevarlo insertando el siguiente código al comienzo de su programa, para permitir el uso de <code>filter()</code> en implementaciones de ECMA-262 que no lo soporten de forma nativa. Este algoritmo es exactamente el especificado en ECMA-262, 5ta edición, supone que  <code>fn.call</code> evalua al valor original de {{jsxref("Function.prototype.call")}}, y que {{jsxref("Array.prototype.push")}} tiene su valor original.</p>
+`filter()` se añadió a la norma ECMA-262 en la 5ta edición; como tal puede no estar presente en todas las implementaciones de la norma. Puedes sobrellevarlo insertando el siguiente código al comienzo de su programa, para permitir el uso de `filter()` en implementaciones de ECMA-262 que no lo soporten de forma nativa. Este algoritmo es exactamente el especificado en ECMA-262, 5ta edición, supone que `fn.call` evalua al valor original de {{jsxref("Function.prototype.call")}}, y que {{jsxref("Array.prototype.push")}} tiene su valor original.
 
-<pre class="notranslate">if (!Array.prototype.filter){
+```
+if (!Array.prototype.filter){
   Array.prototype.filter = function(func, thisArg) {
     'use strict';
-    if ( ! ((typeof func === 'Function' || typeof func === 'function') &amp;&amp; this) )
+    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
         throw new TypeError();
 
-    var len = this.length &gt;&gt;&gt; 0,
+    var len = this.length >>> 0,
         res = new Array(len), // preallocate array
         t = this, c = 0, i = -1;
 
@@ -186,46 +192,24 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']</pre>
     res.length = c; // shrink down array to proper size
     return res;
   };
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.20', 'Array.prototype.filter')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definición Inicial. Implementado en JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.filter', 'Array.prototype.filter')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                       | Comentario                                          |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.4.20', 'Array.prototype.filter')}}                     | {{Spec2('ES5.1')}}     | Definición Inicial. Implementado en JavaScript 1.6. |
+| {{SpecName('ES6', '#sec-array.prototype.filter', 'Array.prototype.filter')}}         | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
-<p>{{Compat("javascript.builtins.Array.filter")}}</p>
-</div>
+{{Compat("javascript.builtins.Array.filter")}}
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.reduce()")}}
