@@ -2,6 +2,7 @@
 title: Attr.localName
 slug: Web/API/Attr/localName
 ---
+
 {{APIRef("DOM")}}
 
 **`localName`** は {{domxref("Attr")}} インターフェイスのプロパティで、属性の*修飾名*の*ローカル部分*、すなわち属性の名前からその前の名前空間を外したものを返します。例えば、修飾名が `xml:lang` であった場合、要素が名前空間に対応していればローカル名は `lang` となります。

@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.closePath()`** はキャンバス 2D API のメソッドで、現在の点から現在のサブパスの開始点までの間に直線を追加することを試みます。図形がすでに閉じていたり、 1 つしか点がなかったりした場合は、この関数は何もしません。

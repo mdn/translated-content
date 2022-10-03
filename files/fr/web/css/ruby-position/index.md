@@ -36,9 +36,13 @@ ruby-position: unset;
 - `inter-character`
   - : Un mot-clé qui indique que les annotations ruby doivent être placées entre les différents caractères.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -91,15 +95,11 @@ On obtiendra le résultat suivant :
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('CSS3 Ruby', '#rubypos', 'ruby-position')}} | {{Spec2('CSS3 Ruby')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.ruby-position")}}
+{{Compat}}
 
 ## Voir aussi
 

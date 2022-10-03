@@ -98,9 +98,13 @@ justify-content: unset;
 - `unsafe`
   - : Cette valeur doit être utilisée avec un mot-clé pour l'alignement. Quelle que soit la situation de dépassement ou les contraintes de taille, la valeur utilisée pour l'alignement est respectée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -158,22 +162,11 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Flexbox', '#propdef-justify-content', 'justify-content')}}         | {{Spec2('CSS3 Flexbox')}}         | Définition initiale.                                                                                                |
-| {{SpecName('CSS3 Box Alignment', '#propdef-justify-content', 'justify-content')}} | {{Spec2('CSS3 Box Alignment')}} | Ajout des valeurs `space-evenly, [ first \| last ]? baseline`, `start`, `end`, `left`, `right`, `safe` et `unsafe`. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour les dispositions flexibles
-
-{{Compat("css.properties.justify-content.flex_context")}}
-
-### Prise en charge pour les grilles
-
-{{Compat("css.properties.justify-content.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

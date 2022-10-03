@@ -69,7 +69,7 @@ A primeira linha recupera o nó DOM do elemento {{HTMLElement ("canvas")}} chama
 
 ## Verificação de suporte
 
-O conteúdo alternativo é mostrado nos navegadores que não suportam o elemento {{HTMLElement("canvas")}}, mas essa checagem pode ser feita através de um _script_ simplesmente testando a presença do método `getContext():`
+O conteúdo alternativo é mostrado nos navegadores que não suportam o elemento {{HTMLElement("canvas")}}, mas essa checagem pode ser feita através de um _script_ simplesmente testando a presença do método `getContext()`:
 
 ```js
 var canvas = document.getElementById('tutorial');

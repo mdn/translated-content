@@ -3,6 +3,7 @@ title: group ロールの使用
 slug: Web/Accessibility/ARIA/Roles/group_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 ---
+
 ### 説明
 
 このテクニックは、[`group`](http://www.w3.org/TR/wai-aria/#group) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。
@@ -27,7 +28,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 - スクリーンリーダーは、フォーカスが最初にその中のコントロールに着くとグループをアナウンスし、もし [`aria-describedby`](http://www.w3.org/TR/wai-aria/#aria-describedby) が設定されていれば、その説明が読み上げられます。 これに続いて、フォーカスされたコントロールをアナウンスすることができます。
 - スクリーン拡大鏡でグループが拡大されることがあります。
 
-> **Note:** 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+> **メモ:** 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
 ### 例
 

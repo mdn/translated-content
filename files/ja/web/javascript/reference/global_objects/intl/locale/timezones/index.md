@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/timeZones
 
 関連付けられた `Locale` で対応しているタイムゾーンを配列で返します。返されるタイムゾーンは [IANA タイムゾーン](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) を表します。
 
-> **Note:** Unicode 言語識別子が Unicode 地域サブタグシーケンスの `-` を含んでいない場合、返される値は `undefined` です。
+> **メモ:** Unicode 言語識別子が Unicode 地域サブタグシーケンスの `-` を含んでいない場合、返される値は `undefined` です。
 
 ## 例
 

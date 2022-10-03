@@ -9,7 +9,7 @@ slug: Web/HTTP/Status/401
 
 这个状态码会与 {{HTTPHeader("WWW-Authenticate")}} 首部一起发送，其中包含有如何进行验证的信息。
 
-这个状态类似于 {{HTTPStatus("403")}}， 但是在该情况下，依然可以进行身份验证。
+这个状态类似于 {{HTTPStatus("403")}}，但是在该情况下，依然可以进行身份验证。
 
 ## 状态
 

@@ -21,12 +21,8 @@ translation_of: Web/CSS/CSS_Namespaces
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS3 Namespaces")}} | {{Spec2("CSS3 Namespaces")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `@namespace`
-
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

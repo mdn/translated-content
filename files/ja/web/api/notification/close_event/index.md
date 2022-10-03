@@ -3,6 +3,7 @@ title: 'Notification: close イベント'
 slug: Web/API/Notification/close_event
 original_slug: Web/API/Notification/onclose
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`close`** は {{domxref("Notification")}} インターフェイスのイベントで、 {{domxref("Notification")}} が閉じるときに発生します。

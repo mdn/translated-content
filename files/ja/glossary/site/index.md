@@ -2,6 +2,7 @@
 title: Site (サイト)
 slug: Glossary/Site
 ---
+
 ウェブコンテンツの一部であるい*サイト*は、オリジン内にあるホストの*登録可能なドメイン*によって決定されます。これは、*公開接尾辞リスト*を参照して、*公開接尾辞*として数えられるホストの部分を見つけることによって計算されます (e.g. `com`, `org`, `co.uk`)。
 
 *サイト*の概念は、ウェブアプリケーションの [Cross-Origin Resource Policy](</ja/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>) と同様に、 [SameSite クッキー](/ja/docs/Web/HTTP/Headers/Set-Cookie#Directives)で使用されています。

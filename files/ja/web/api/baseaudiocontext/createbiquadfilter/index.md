@@ -3,6 +3,7 @@ title: BaseAudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
 original_slug: Web/API/AudioContext/createBiquadFilter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createBiquadFilter()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("BiquadFilterNode") }} を生成し、いくつかの異なる共通フィルター型として設定可能な 2 次フィルターを表現します。

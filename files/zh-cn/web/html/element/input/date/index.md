@@ -133,7 +133,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 {{ EmbedLiveSample('设置日期最大和最小值', 600, 40) }}
 
-在结果中我们可以看到，只有 2017 年 4 月份的日期可选——输入框中可以编辑的部分只有 “日” 这部分，并且超出 4 月份以外的日期不能通过日期控件的选择组件选择。
+在结果中我们可以看到，只有 2017 年 4 月份的日期可选——输入框中可以编辑的部分只有“日”这部分，并且超出 4 月份以外的日期不能通过日期控件的选择组件选择。
 
 > **备注：** 你*应该*可以使用 {{htmlattrxref("step", "input")}} 属性来改变每次最佳日期时步进（增加值）的天数（例如：或许你只希望使周六可以选）。但是，在撰写这篇文章的时候，还没有可靠的实现。
 
@@ -174,7 +174,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 {{ EmbedLiveSample('验证', 600, 100) }}
 
-这是上面例子使用的 CSS。我们基于 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-elements)来在输入框旁边添加小图标。我们必须把图标放在 input 旁边的 {{htmlelement("span")}} 里面，而并不是它本身， 因为在 Chrome 中被放置在表单中生成的内容不能有效的样式化或者显示。
+这是上面例子使用的 CSS。我们基于 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-elements)来在输入框旁边添加小图标。我们必须把图标放在 input 旁边的 {{htmlelement("span")}} 里面，而并不是它本身，因为在 Chrome 中被放置在表单中生成的内容不能有效的样式化或者显示。
 
 ```css
 label {

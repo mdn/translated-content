@@ -19,4 +19,4 @@ MDN のプラットフォームである [Yari](https://github.com/mdn/yari) は
 
 [https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch/index.json](/ja/docs/Web/API/Fetch_API/Using_Fetch/index.json)
 
-> **Warning:** MDN の `index.json` リソースの JSON データに使用されるファイル形式は、バージョン管理されておらず、意図的に文書化されていません。構造やキーの名前など、書式ののあらゆる部分が変更される可能性があります。 Yari が変更されて、 `index.json` リソースが提供されなくなる可能性もあります。
+> **警告:** MDN の `index.json` リソースの JSON データに使用されるファイル形式は、バージョン管理されておらず、意図的に文書化されていません。構造やキーの名前など、書式ののあらゆる部分が変更される可能性があります。 Yari が変更されて、 `index.json` リソースが提供されなくなる可能性もあります。

@@ -3,6 +3,7 @@ title: ブロックのかたまりを作る
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
@@ -104,7 +105,7 @@ drawBricks();
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/Lu3vtejz/","","395")}}
 
-> **Note:** 行や列にあるブロックの数や位置を替えてみましょう。
+> **メモ:** 行や列にあるブロックの数や位置を替えてみましょう。
 
 ## 次のステップ
 

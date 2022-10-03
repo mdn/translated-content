@@ -52,8 +52,8 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
         <p>
           例如，<code>[\w-]</code> 是字符集 \w 和
           “-”（连字符）的并集，与这种写法一样：
-          <code>[A-Za-z0-9_-]</code>.。他们都会 在 "brisket"中匹配 “b”, 在
-          "chop"中匹配 “c”, 在 "non-profit" 中匹配 "n"。
+          <code>[A-Za-z0-9_-]</code>.。他们都会 在 "brisket"中匹配“b”, 在
+          "chop"中匹配“c”, 在 "non-profit" 中匹配 "n"。
         </p>
       </td>
     </tr>
@@ -83,7 +83,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
       <td><code>(<em>x</em>)</code></td>
       <td>
         <p>
-          <strong>捕获组: </strong>匹配 x
+          <strong>捕获组：</strong>匹配 x
           并记住匹配项。例如，/(foo)/匹配并记住“foo bar”中的“foo”
         </p>
         <p>
@@ -127,7 +127,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           括号匹配的最后一个子字符串的反向引用 (计算左括号)。例如，<code
             >/apple(,)\sorange\1/</code
           >
-          匹配 “apple，orange，cherry，peach” 中的 "apple，orange，"， 其中
+          匹配“apple，orange，cherry，peach”中的 "apple，orange，"，其中
           <code>\1</code> 引用了 之前使用 <code>（）</code> 捕获的
           <code>，</code>
         </p>
@@ -137,15 +137,15 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
       <td><code>(?&#x3C;Name>x)</code></td>
       <td>
         <p>
-          <strong>具名捕获组: </strong>匹配"x"并将其存储在返回的匹配项的 groups
+          <strong>具名捕获组：</strong>匹配"x"并将其存储在返回的匹配项的 groups
           属性中，该属性位于<code>&#x3C;Name></code>指定的名称下。尖括号 (<code
             >&#x3C;</code
           >
           和 <code>></code>) 用于组名。
         </p>
         <p>
-          例如，使用正则 <code>/-(?&#x3C;customName>\w)/</code> 匹配 “web-doc”
-          中的 “d”
+          例如，使用正则 <code>/-(?&#x3C;customName>\w)/</code> 匹配“web-doc”
+          中的“d”
         </p>
         <p>
           <code
@@ -158,7 +158,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
     <tr>
       <td><code>(?:<em>x</em>)</code></td>
       <td>
-        <strong>非捕获组: </strong>匹配
+        <strong>非捕获组：</strong>匹配
         “x”，但不记得匹配。不能从结果数组的元素中收回匹配的子字符串 (<code
           >[1], ..., [n]</code
         >) or from the predefined <code>RegExp</code> object's properties (<code

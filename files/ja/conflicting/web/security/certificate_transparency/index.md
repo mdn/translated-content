@@ -3,6 +3,7 @@ title: HTTP Public Key Pinning (HPKP)
 slug: conflicting/Web/Security/Certificate_Transparency
 original_slug: Web/HTTP/Public_Key_Pinning
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 > **メモ:** Public Key Pinning の仕組みは [Certificate Transparency](/ja/docs/Web/Security/Certificate_Transparency) および {{HTTPHeader("Expect-CT")}} ヘッダーに置き換えられ、非推奨になりました。

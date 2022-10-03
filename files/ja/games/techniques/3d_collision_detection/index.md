@@ -2,6 +2,7 @@
 title: 三次元の衝突検出
 slug: Games/Techniques/3D_collision_detection
 ---
+
 {{GamesSidebar}}
 
 この記事では、三次元環境で衝突検出を実装するために使用されるさまざまなバウンディングボリューム手法の概要を説明します。後続の記事では、特定の 3D ライブラリーに搭載されたものを取り上げる予定です。
@@ -16,7 +17,7 @@ slug: Games/Techniques/3D_collision_detection
 
 ![Animated rotating knot showing the virtual rectangular box shrink and grow as the knots rotates within it. The box does not rotate.](rotating_knot.gif)
 
-> **Note:** この手法の実際の実装については、[Three.js を使用したバウンディングボリューム](/ja/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)の記事を確認してください。
+> **メモ:** この手法の実際の実装については、[Three.js を使用したバウンディングボリューム](/ja/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)の記事を確認してください。
 
 ### 点 対 AABB
 
@@ -83,7 +84,7 @@ function isPointInsideSphere(point, sphere) {
 }
 ```
 
-> **Note:** 上記のコードは平方根を特徴としており、計算にコストがかかる可能性があります。 これを回避する簡単な最適化は、距離の2乗と半径の2乗を比較することで構成されているため、最適化された方程式には、代わりに `distanceSqr < sphere.radius * sphere.radius` が含まれます。
+> **メモ:** 上記のコードは平方根を特徴としており、計算にコストがかかる可能性があります。 これを回避する簡単な最適化は、距離の2乗と半径の2乗を比較することで構成されているため、最適化された方程式には、代わりに `distanceSqr < sphere.radius * sphere.radius` が含まれます。
 
 ### 球 対 球
 

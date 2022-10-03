@@ -27,7 +27,7 @@ slug: Web/CSS/-webkit-mask-composite
 -webkit-mask-composite: unset;
 ```
 
-> **Note:** この標準外のプロパティの一部を別のキーワードでカバーする、標準化された {{CSSxRef("mask-composite")}} プロパティがあります。
+> **メモ:** この標準外のプロパティの一部を別のキーワードでカバーする、標準化された {{CSSxRef("mask-composite")}} プロパティがあります。
 
 ## 構文
 

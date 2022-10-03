@@ -2,6 +2,7 @@
 title: NDEFRecord.recordType
 slug: Web/API/NDEFRecord/recordType
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`recordType`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、このレコードのレコード型を返します。

@@ -2,6 +2,7 @@
 title: Intersection Observer API を使用したタイミング要素の可視性
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 [Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API) は、{{domxref("Document")}} 自体を含む共有祖先ノードまたは要素によって、対象の要素が多かれ少なかれ不明瞭になったときに、非同期的に通知されることを容易にします。 この記事では、ページのコンテンツ間に多数の広告が散在している模擬ブログを作成し、その後 Intersection Observer API を使用して、各広告がユーザに見える時間を追跡します。表示時間の 1 分を超える広告は、新しい広告と置き換えられます。
@@ -258,7 +259,7 @@ Finally, we set up an interval which triggers once a second to handle any necess
 
 ### ドキュメントの可視性の変更の処理
 
-Let's take a look at the handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) to detect these tab switches and disable our timers for the duration.
+Let's take a look at the handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the [Page Visibility API](/ja/docs/Web/API/Page_Visibility_API) to detect these tab switches and disable our timers for the duration.
 
 ```js
 function handleVisibilityChange() {
@@ -578,5 +579,5 @@ The new ad's element object is returned to the caller in case it's needed.
 
 ## あわせて参照
 
-- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)
-- [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)
+- [Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API)
+- [Page Visibility API](/ja/docs/Web/API/Page_Visibility_API)

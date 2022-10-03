@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
 ---
+
 {{APIRef}}
 
 **`setLineDash()`** はキャンバス 2D API の {{domxref("CanvasRenderingContext2D")}} インターフェイスのメソッドで、線を描画するときに使用される線の模様を設定します。 これは描画する線とその隙間の長さの値を交互に指定する配列を使用します。

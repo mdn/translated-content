@@ -3,6 +3,7 @@ title: Document.width
 slug: conflicting/Web/API/Element/clientWidth
 original_slug: Web/API/Document/width
 ---
+
 {{APIRef("DOM")}} {{deprecated_header}}
 
 > **メモ:** {{Gecko("6.0")}} より `document.width` には対応しなくなりました。代わりに `document.body.clientWidth` を使用してください。 {{domxref("element.clientWidth")}} を参照してください。

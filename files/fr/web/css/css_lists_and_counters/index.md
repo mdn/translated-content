@@ -30,7 +30,4 @@ original_slug: Web/CSS/CSS_Lists
 
 ## Spécifications
 
-| Spécification                                        | État                             | Commentaires         |
-| ---------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Lists')}}                 | {{Spec2('CSS3 Lists')}} |                      |
-| {{SpecName('CSS2.1', 'generate.html')}} | {{Spec2('CSS2.1')}}         | Définition initiale. |
+{{Specifications}}

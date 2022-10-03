@@ -85,7 +85,7 @@ exampleSocket.onopen = function (event) {
 ```js
 // 服务器向所有用户发送文本
 function sendText() {
-  // 构造一个 msg 对象， 包含了服务器处理所需的数据
+  // 构造一个 msg 对象，包含了服务器处理所需的数据
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
@@ -169,7 +169,7 @@ exampleSocket.onmessage = function(event) {
 
 ## 关闭连接
 
-当你不需要再用 WebSocket 连接了，调用 WebSocket [`close()`](</en/WebSockets/WebSockets_reference/WebSocket#close()>)方法：
+当你不需要再用 WebSocket 连接了，调用 WebSocket [`close()`](</en/WebSockets/WebSockets_reference/WebSocket#close()>) 方法：
 
 ```js
 exampleSocket.close();

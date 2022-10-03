@@ -3,6 +3,7 @@ title: FileHandle API
 slug: conflicting/Web/API/File_and_Directory_Entries_API
 original_slug: Web/API/File_Handle_API
 ---
+
 {{non-standard_header}}
 
 FileHandle API は、ファイルの作成や内容の変更など、ファイルを操作するための API です ([File API](/ja/docs/DOM/File) とは異なります)。この API を通じたファイル操作は、デバイス上に物理的に格納でき、部分的な編集には、競合問題を避けるためにターンベースのロック機構が使用されています。

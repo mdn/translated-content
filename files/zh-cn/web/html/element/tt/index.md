@@ -19,7 +19,7 @@ HTML 电报文本元素 (`<tt>`) 产生一个内联元素，使用浏览器内�
 
 这个元素实现了 {{domxref('HTMLElement')}} 接口。
 
-> **备注：** Gecko 1.9.2（包含）之前， Firefox 为这个元素实现了 {{domxref('HTMLSpanElement')}} 接口。
+> **备注：** Gecko 1.9.2（包含）之前，Firefox 为这个元素实现了 {{domxref('HTMLSpanElement')}} 接口。
 
 ## 示例
 

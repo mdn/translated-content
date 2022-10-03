@@ -44,9 +44,13 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 - \<color>
   - : L'agent utilisateur utilise la couleur ({{cssxref("&lt;color&gt;")}}) indiquée comme couleur pour le curseur de saisie.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -70,15 +74,11 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 UI", "#propdef-caret-color", "caret-color")}} | {{Spec2("CSS3 UI")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.caret-color")}}
+{{Compat}}
 
 ## Voir aussi
 

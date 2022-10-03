@@ -20,7 +20,7 @@ JavaScript 提供三种不同的值比较操作：
 
 选择使用哪个操作取决于你需要什么样的比较。
 
-简而言之，在比较两件事情时，双等号将执行类型转换; 三等号将进行相同的比较，而不进行类型转换 (如果类型不同，只是总会返回 false ); 而 Object.is 的行为方式与三等号相同，但是对于 NaN 和-0 和 +0 进行特殊处理，所以最后两个不相同，而 Object.is（NaN，NaN）将为 `true`。(通常使用双等号或三等号将 NaN 与 NaN 进行比较，结果为 false，因为 IEEE 754 如是说.) 请注意，所有这些之间的区别都与其处理原语有关; 这三个运算符的原语中，没有一个会比较两个变量是否结构上概念类似。对于任意两个不同的非原始对象，即便他们有相同的结构， 以上三个运算符都会计算得到 false 。
+简而言之，在比较两件事情时，双等号将执行类型转换; 三等号将进行相同的比较，而不进行类型转换 (如果类型不同，只是总会返回 false ); 而 Object.is 的行为方式与三等号相同，但是对于 NaN 和-0 和 +0 进行特殊处理，所以最后两个不相同，而 Object.is（NaN，NaN）将为 `true`。(通常使用双等号或三等号将 NaN 与 NaN 进行比较，结果为 false，因为 IEEE 754 如是说.) 请注意，所有这些之间的区别都与其处理原语有关; 这三个运算符的原语中，没有一个会比较两个变量是否结构上概念类似。对于任意两个不同的非原始对象，即便他们有相同的结构，以上三个运算符都会计算得到 false。
 
 ## 严格相等 `===`
 
@@ -48,7 +48,7 @@ console.log(obj === undefined); // false
 
 ## 非严格相等 `==`
 
-相等操作符比较两个值是否相等，在比较前将两个被比较的值转换为相同类型。在转换后（等式的一边或两边都可能被转换），最终的比较方式等同于全等操作符 === 的比较方式。 相等操作符满足交换律。
+相等操作符比较两个值是否相等，在比较前将两个被比较的值转换为相同类型。在转换后（等式的一边或两边都可能被转换），最终的比较方式等同于全等操作符 === 的比较方式。相等操作符满足交换律。
 
 相等操作符对于不同类型的值，进行的比较如下图所示：
 
@@ -171,7 +171,7 @@ function attemptMutation(v)
 }
 ```
 
-`Object.defineProperty` 在试图修改不可变属性时，如果这个属性确实被修改了则会抛出异常，反之什么都不会发生。例如如果 v 是 -0 ，那么没有发生任何变化，所以也不会抛出任何异常。但如果 v 是 +0 ，则会抛出异常。不可变属性和新设定的值使用 same-value 相等比较。
+`Object.defineProperty` 在试图修改不可变属性时，如果这个属性确实被修改了则会抛出异常，反之什么都不会发生。例如如果 v 是 -0，那么没有发生任何变化，所以也不会抛出任何异常。但如果 v 是 +0，则会抛出异常。不可变属性和新设定的值使用 same-value 相等比较。
 
 同值相等由 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 方法提供。
 
@@ -224,19 +224,19 @@ function attemptMutation(v)
 这里是一个会区别对待-0 和 +0 的内置方法和操作符不完全列表：
 
 - [`- (一元负)`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
-  - : 显而易见，对 `0` 一元负操作得到 `-0`。但表达式的抽象化可能在你没有意识到得情况下导致 `-0` 延续传播。例如当考虑下例时：`js let stoppingForce = obj.mass * -obj.velocity` 如果 `obj.velocity` 是 `0` (或计算结果为 `0`), 一个 `-0` 就在上处产生并被赋值为`stoppingForce 的值.
+  - : 显而易见，对 `0` 一元负操作得到 `-0`。但表达式的抽象化可能在你没有意识到得情况下导致 `-0` 延续传播。例如当考虑下例时：`js let stoppingForce = obj.mass * -obj.velocity` 如果 `obj.velocity` 是 `0` (或计算结果为 `0`), 一个 `-0` 就在上处产生并被赋值为`stoppingForce 的值。
 - [`Math.atan2`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2),
   [`Math.ceil`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil),
   [`Math.pow`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/pow),
   [`Math.round`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
-  - : 即使传入的参数中没有-0，这些方法的返回值都有可能是-0。例如当用 [`Math.pow`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)计算`-Infinity`的任何负奇指数的幂都会得到`-0`。详情请参见这些方法各自的文档。
+  - : 即使传入的参数中没有 -0，这些方法的返回值都有可能是 -0。例如当用 [`Math.pow`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)计算`-Infinity`的任何负奇指数的幂都会得到`-0`。详情请参见这些方法各自的文档。
 - [`Math.floor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/floor),
   [`Math.max`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/max),
   [`Math.min`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/min),
   [`Math.sin`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sin),
   [`Math.sqrt`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt),
   [`Math.tan`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/tan)
-  - : 当传入参数中有-0 时，这些方法也可能返回-0。例如， `Math.min(-0, +0)` 得出 `-0`。详情请参见这些方法各自的文档。
+  - : 当传入参数中有 -0 时，这些方法也可能返回 -0。例如， `Math.min(-0, +0)` 得出 `-0`。详情请参见这些方法各自的文档。
 - [`~`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators),
   [`<<`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators),
   [`>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)

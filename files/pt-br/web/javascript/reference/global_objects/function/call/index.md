@@ -36,7 +36,7 @@ Você pode atribuir um objeto `this` diferente quando executar uma função exis
 
 ### Exemplo: Usando `call` para encadear construtores para um objeto
 
-Você pode usar `call` para encadear construtores para um objeto, similar ao Java. No seguinte exemplo, o construtor do objeto `Product` é definido com dois parâmetros, `name` e `price`. Outras duas funções `Food` e `Toy` executam `Product` passando `this,` `name` e `price`. O Produto inicializa as propriedades `name` e `price`, ambos definem o `category`.
+Você pode usar `call` para encadear construtores para um objeto, similar ao Java. No seguinte exemplo, o construtor do objeto `Product` é definido com dois parâmetros, `name` e `price`. Outras duas funções `Food` e `Toy` executam `Product` passando `this`, `name` e `price`. O Produto inicializa as propriedades `name` e `price`, ambos definem o `category`.
 
 ```js
 function Product(name, price) {

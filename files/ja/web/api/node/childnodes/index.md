@@ -2,6 +2,7 @@
 title: Node.childNodes
 slug: Web/API/Node/childNodes
 ---
+
 {{APIRef("DOM")}}
 
 **`childNodes`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティであり、{{domxref("NodeList")}} で指定された要素の子{{domxref("Node", "ノード", "", 1)}}の生きたリストを返し、最初の子ノードは位置 `0` に割り当てられます。子ノードには要素、テキスト、コメントが含まれます。

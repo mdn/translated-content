@@ -32,7 +32,7 @@ l10n:
 
 セルには、 [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex), [`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colspan), [`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex), [`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) など、表形式データ構造内のセルの位置を明確にする多数のプロパティ属性を含めることができます。
 
-> **Note:** 可能であれば、ネイティブな HTML 表要素 ({{HTMLElement('table')}} を、表の行要素 ({{HTMLElement('tr')}} および表のセル要素 ({{HTMLElement('td')}} と共に使用することを強く推奨します。
+> **メモ:** 可能であれば、ネイティブな HTML 表要素 ({{HTMLElement('table')}} を、表の行要素 ({{HTMLElement('tr')}} および表のセル要素 ({{HTMLElement('td')}} と共に使用することを強く推奨します。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 

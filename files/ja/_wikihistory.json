@@ -31474,10 +31474,6 @@
       "Norah"
     ]
   },
-  "orphaned/Web/API/Document/tooltipNode": {
-    "modified": "2020-10-15T21:21:36.814Z",
-    "contributors": ["mfuji09", "fscholz", "AshfaqHossain", "ethertank"]
-  },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2020-09-27T12:30:54.835Z",
     "contributors": ["mfuji09", "dskmori", "keeponbeat", "mikamikuh"]
@@ -31992,10 +31988,6 @@
     "modified": "2020-03-15T03:29:26.429Z",
     "contributors": ["mfuji09", "takubokudori", "Uemmra3"]
   },
-  "orphaned/Web/Specification_list": {
-    "modified": "2019-03-23T22:36:04.299Z",
-    "contributors": ["lv7777"]
-  },
   "orphaned/Web/Web_Components/Status_in_Firefox": {
     "modified": "2019-03-23T22:35:08.421Z",
     "contributors": ["ueokande", "dskmori"]
@@ -32003,10 +31995,6 @@
   "orphaned/Working_with_windows_in_chrome_code": {
     "modified": "2019-01-16T17:12:27.632Z",
     "contributors": ["fscholz", "ethertank"]
-  },
-  "orphaned/reftest_opportunities_files": {
-    "modified": "2019-01-16T16:06:58.745Z",
-    "contributors": ["Taken", "Mgjbot"]
   },
   "web/Accessibility/ARIA/Attributes/aria-activedescendant": {
     "modified": "2019-03-18T20:45:37.166Z",

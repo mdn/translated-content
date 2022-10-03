@@ -19,7 +19,7 @@ var myEyeTranslation = myVRDisplay.getEyeParameters('left').offset;
 
 {{domxref("Float32Array")}}．
 
-> **Note:** _**注記**: 左目の値は負で，右目の場合は正の値になります．_
+> **メモ:** _左目の値は負で，右目の場合は正の値になります．_
 
 ## 例
 

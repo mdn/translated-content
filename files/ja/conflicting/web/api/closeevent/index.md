@@ -3,6 +3,7 @@ title: CloseEvent.initCloseEvent()
 slug: conflicting/Web/API/CloseEvent
 original_slug: Web/API/CloseEvent/initCloseEvent
 ---
+
 {{APIRef("Websockets API")}}{{deprecated_header}}
 
 **`CloseEvent.initCloseEvent()`** メソッドは、一度作成された CloseEvent の値を初期化します（通常は {{domxref("Document.createEvent()") }} メソッドを使用します）。

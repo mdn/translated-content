@@ -2,6 +2,7 @@
 title: '評価: 太陽系の惑星のデータを構造化する'
 slug: Learn/HTML/Tables/Structuring_planet_data
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 テーブルの評価では、太陽系の惑星に関するいくつかのデータを提供し、それを HTML テーブルに構造化しましょう。
@@ -14,7 +15,7 @@ slug: Learn/HTML/Tables/Structuring_planet_data
 
 この評価を開始するには、ローカルコンピュータの新しいディレクトリーに、[blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/blank-template.html)、[minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/minimal-table.css)、および [planets-data.txt](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) のローカルコピーを作成します。
 
-> **Note:** 代わりとして、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価することもできます。HTML、CSS、および JavaScript をこれらのオンラインエディタのいずれかに貼り付けることができます。使用しているオンラインエディタに個別の JavaScript/CSS パネルがない場合は、それらを HTML ページ内に `<script>`/`<style>` 要素をインラインで配置してください。
+> **メモ:** 代わりとして、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価することもできます。HTML、CSS、および JavaScript をこれらのオンラインエディタのいずれかに貼り付けることができます。使用しているオンラインエディタに個別の JavaScript/CSS パネルがない場合は、それらを HTML ページ内に `<script>`/`<style>` 要素をインラインで配置してください。
 
 ## やることの概要
 

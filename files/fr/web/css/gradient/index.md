@@ -94,14 +94,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires                 |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------------------------- |
-| {{SpecName('CSS3 Images', '#gradients', '&lt;gradient&gt;')}} | {{Spec2('CSS3 Images')}} | Définition initiale.         |
-| {{SpecName('CSS4 Images', '#gradients', '&lt;gradient&gt;')}} | {{Spec2('CSS4 Images')}} | Ajout des dégradés coniques. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.image.gradient")}}
+{{Compat}}
 
 ## Voir aussi
 

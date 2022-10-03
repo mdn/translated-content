@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
 ---
+
 {{ APIRef("CSSOM") }}
 
 **CSSStyleDeclaration.getPropertyValue()** メソッドインターフェイスは、指定された CSS プロパティの値を含む {{domxref('DOMString')}} を返します。
