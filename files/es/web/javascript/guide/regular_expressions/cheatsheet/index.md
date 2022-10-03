@@ -17,7 +17,128 @@ Esta página proporciona una hoja de referencia general de todas las capacidades
 
 ## [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
 
-Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)«Tabla»
+Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
+
+<table class="standard-table">
+    <thead>
+     <tr>
+      <th scope="col">Caracteres</th>
+      <th scope="col">Significado</th>
+     </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tbody>
+     <tr>
+      <td><code>.</code></td>
+      <td>
+       <p>Tiene uno de los siguientes significados:</p>
+       <ul>
+        <li>Encuentra cualquier caracter único <em>excepto</em> terminadores de línea: <code>\n</code>, <code>\r</code>, <code>\u2028</code> o <code>\u2029</code>. Por ejemplo, <code>/.y/</code> reconoce "my" y "ay", pero no "yes", en "yes make my day".</li>
+        <li>Dentro de un juego de caracteres, el punto pierde su significado especial y concuerda con un punto literal.</li>
+       </ul>
+       <p>Ten en cuenta que el indicador multilínea <code>m</code> no cambia el comportamiento del punto. Por lo tanto, para buscar en un patrón multilínea, puedes usar el juego de caracteres <code>[^]</code> — este encontrará con cualquier caracter, incluidas las nuevas líneas.</p>
+       <p>ES2018 agregó el indicador <code>s</code> "<em>dotAll</em>", que permite que el punto también concuerde con los terminadores de línea.</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\d</code></td>
+      <td>
+       <p>Busca cualquier dígito (número arábigo). Equivalente a <code>[0-9]</code>. Por ejemplo, <code>/\d/</code> o <code>/[0-9]/</code> encuentra el "2" en "B2 es el número de suite".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\D</code></td>
+      <td>
+       <p>Busca cualquier caracter que no sea un dígito (número arábigo). Equivalente a <code>[^0-9]</code>. Por ejemplo, <code>/\D/</code> o <code>/[^0-9]/</code> encuentra la "B" en "B2 es el número de suite".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\w</code></td>
+      <td>
+       <p>Busca cualquier caracter alfanumérico del alfabeto latino básico, incluido el caracter de subrayado. Equivalente a <code>[A-Za-z0-9_]</code>. Por ejemplo, <code>/\w/</code> encuentra la "m" en "manzana", el "5" en "$5.28" y el "3" en "3D".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\W</code></td>
+      <td>
+       <p>Busca cualquier caracter que no sea un caracter de palabra del alfabeto latino básico. Equivalente a <code>[^A-Za-z0-9_]</code>. Por ejemplo, <code>/\W/</code> o <code>/[^A-Za-z0-9_]/</code> encuentra el caracter "%" en "50%".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\s</code></td>
+      <td>
+       <p>Busca un solo caracter de espacio en blanco, incluido el espacio, tabulación, avance de página, avance de línea y otros espacios Unicode. Equivalente a <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. Por ejemplo, <code>/\s\w*/</code> reconoce " bar" en "foo bar".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\S</code></td>
+      <td>
+       <p>Busca un solo caracter que no sea un espacio en blanco. Equivalente a <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. Por ejemplo, <code>/\S\w*/</code> encuentra "foo" en "foo bar".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\t</code></td>
+      <td>Coincide con una tabulación horizontal.</td>
+     </tr>
+     <tr>
+      <td><code>\r</code></td>
+      <td>Coincide con un retorno de carro.</td>
+     </tr>
+     <tr>
+      <td><code>\n</code></td>
+      <td>Coincide con un salto de línea.</td>
+     </tr>
+     <tr>
+      <td><code>\v</code></td>
+      <td>Coincide con una tabulación vertical.</td>
+     </tr>
+     <tr>
+      <td><code>\f</code></td>
+      <td>Coincide con un caracter de avance de página.</td>
+     </tr>
+     <tr>
+      <td><code>[\b]</code></td>
+      <td>Coincide con un caracter de retroceso. Si estás buscando el caracter de límite de palabra (<code>\b</code>), consulta <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">Límites</a>.</td>
+     </tr>
+     <tr>
+      <td><code>\0</code></td>
+      <td>Coincide con un caracter <code>NUL</code>. No sigue a este con otro dígito.</td>
+     </tr>
+     <tr>
+      <td><code>\c<em>X</em></code></td>
+      <td>
+       <p>Coincide con un caracter de control usando <a href="https://en.wikipedia.org/wiki/Caret_notation">notación de acento circunflejo</a>, donde "X" es una letra de la A a la Z (correspondiente a los puntos de código <code>U+0001</code><em>-</em><code>U+001F</code>). Por ejemplo, <code>/\cM/</code> reconoce el caracter "\r" en "\r\n".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\x<em>hh</em></code></td>
+      <td>Busca el caracter con el código <code><em>hh</em></code> (dos dígitos hexadecimales).</td>
+     </tr>
+     <tr>
+      <td><code>\u<em>hhhh</em></code></td>
+      <td>Busca una unidad de código UTF-16 con el valor <code><em>hhhh</em></code> (cuatro dígitos hexadecimales).</td>
+     </tr>
+     <tr>
+      <td><code>\u<em>{hhhh}</em> o <em>\u{hhhhh}</em></code></td>
+      <td>(Solo cuando se establece el indicador <code>u</code>). Busca el caracter con el valor Unicode <code>U+<em>hhhh</em></code> o <code>U+<em>hhhhh</em></code> (dígitos hexadecimales).</td>
+     </tr>
+     <tr>
+      <td><code>\</code></td>
+      <td>
+       <p>Indica que el siguiente caracter se debe tratar de manera especial o "escaparse". Se comporta de dos formas.</p>
+       <ul>
+        <li>Para los caracteres que generalmente se tratan literalmente, indica que el siguiente caracter es especial y no se debe interpretar literalmente. Por ejemplo, <code>/b/</code> reconoce el caracter "b". Al colocar una barra invertida delante de "b", es decir, usando <code>/\b/</code>, el caracter se vuelve especial para significar que concuerda con el límite de una palabra.</li>
+        <li>Para los caracteres que generalmente se tratan de manera especial, indica que el siguiente caracter no es especial y se debe interpretar literalmente. Por ejemplo, "*" es un caracter especial que significa que deben reconocer 0 o más ocurrencias del caracter anterior; por ejemplo, <code>/a*/</code> significa reconocer 0 o más "a"s. Para emparejar el <code>*</code> literal, precédelo con una barra invertida; por ejemplo, <code>/a\*/</code> concuerda con "a*".</li>
+       </ul>
+       <p>Ten en cuenta que algunos caracteres como <code>:</code>, <code>-</code>, <code>@</code>, etc. no tienen un significado especial cuando se escapan ni cuando no se escapan. Las secuencias de escape como <code>\:</code>, <code>\-</code>, <code>\@</code> serán equivalentes a sus equivalentes de caracteres literales sin escapar en expresiones regulares. Sin embargo, en las expresiones regulares con <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">indicador Unicode</a>, esto provocará un error de <em>escape de identidad no válido</em>. Esto se hace para asegurar la compatibilidad con el código existente que usa nuevas secuencias de escape como <code>\p</code> o <code>\k</code>.</p>
+       <div class="blockIndicator note">
+       <p>Para reconocer este caracter literalmente, escápalo consigo mismo. En otras palabras, para buscar <code>\</code> usa <code>/\\/</code>.</p>
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
 
 ## [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
 
@@ -25,13 +146,91 @@ Si deseas contribuir a este documento, edita también [el artículo original](/e
 
 ### Aserciones de tipo límite
 
-«Tabla»
+   <table class="standard-table">
+    <thead>
+     <tr>
+      <th scope="col">Caracteres</th>
+      <th scope="col">Significado</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td><code>^</code></td>
+      <td>
+       <p>Coincide con el comienzo de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca inmediatamente después de un caracter de salto de línea. Por ejemplo, <code>/^A/</code> no reconoce la "A" en "an A", pero encuentra la primera "A" en "An A".</p>
+       <div class="blockIndicator note">
+       <p>Este caracter tiene un significado diferente cuando aparece al comienzo de un <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">grupo</a>.</p>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td><code>$</code></td>
+      <td>
+       <p>Coincide con el final de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca hasta inmediatamente antes de un caracter de salto de línea. Por ejemplo, <code>/a$/</code> no reconoce la "t" en "eater", pero sí en "eat".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\b</code></td>
+      <td>
+       <p>Marca el límite de una palabra. Esta es la posición en la que un caracter de palabra no va seguido o precedido por otro caracter de palabra, por ejemplo, entre una letra y un espacio. Ten en cuenta que el límite de una palabra encontrada no se incluye en el resultado. En otras palabras, la longitud de un límite de palabra encontrada es cero.</p>
+       <p>Ejemplos:</p>
+       <ul>
+        <li><code>/\bm/</code> reconoce la "m" en "moon".</li>
+        <li><code>/oo\b/</code> no reconoce "oo" en "moon", porque "oo" va seguido de "n", que es un caracter de palabra.</li>
+        <li><code>/oon\b/</code> encuentra "oon" en "moon", porque "oon" es el final de la cadena, por lo que no va seguido de un caracter de palabra.</li>
+        <li><code>/\w\b\w/</code> nunca encontrará nada, porque un caracter de palabra nunca puede ir seguido de un caracter que no sea de palabra y otro de palabra.</li>
+       </ul>
+       <p>Para encontrar un caracter de retroceso (<code>[\b]</code>), consulta <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">Clases de caracteres</a>.</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\B</code></td>
+      <td>
+       <p>Coincide con un límite sin palabra. Esta es una posición en la que el caracter anterior y siguiente son del mismo tipo: ambos deben ser palabras o ambos deben ser no palabras, por ejemplo, entre dos letras o entre dos espacios. El principio y el final de una cadena se consideran no palabras. Igual que el límite de palabras encontradas, el límite sin palabras reconocidas tampoco se incluye en el resultado. Por ejemplo, <code>/\Bon/</code> reconoce "on" en "at noon", y <code>/ye\B/</code> encuentra "ye" en "possibly yesterday".</p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
 
 ### Otras aserciones
 
 > **Nota:** El caracter `?` también se puede utilizar como cuantificador.
 
-«Tabla»
+   <table class="standard-table">
+    <thead>
+     <tr>
+      <th scope="col">Caracteres</th>
+      <th scope="col">Significado</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td><code>x(?=y)</code></td>
+      <td>
+       <p><strong>Aserción anticipada</strong>: Coincide con "x" solo si "x" va seguida de "y". Por ejemplo, /<code>Jack(?=Sprat)/</code> reconocerá a "Jack" solo si va seguida de "Sprat".<br>
+        <code>/Jack(?=Sprat|Frost)/</code> encontrará a "Jack" solo si va seguida de "Sprat" o "Frost". Sin embargo, ni "Sprat" ni "Frost" forman parte del resultado.</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>x(?!y)</code></td>
+      <td>
+       <p><strong>Aserción de búsqueda anticipada negativa</strong>: reconoce la "x" solo si la "x" <span>no va seguida de</span> "y"<span>.</span> Por ejemplo, <code>/\d+(?!\.)/</code> <span>reconoce un número solo si no va seguido de un punto decimal.</span> <code>/\d+(?!\.)/.exec('3.141')</code> halla el "141" pero no el "3".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>(?&lt;=y)x</code></td>
+      <td>
+       <p><strong>Aserción de búsqueda inversa</strong>: encontrará "x" solo si "x" está precedida por "y". Por ejemplo, <code>/(?&lt;=Jack)Sprat/</code><span> reconoce a "Sprat" solo si está precedido por "Jack".</span> <code>/(?&lt;=Jack|Tom)Sprat/</code> empareja "Sprat" solo si está precedido por "Jack" o "Tom". Sin embargo, ni "Jack" ni "Tom" forman parte del resultado.</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>(?&lt;!y)x</code></td>
+      <td>
+       <p><strong>Aserción de búsqueda inversa negativa</strong>: Reconoce la "x" solo si "x" no está precedida por "y". Por ejemplo, <code>/(?&lt;!-)\d+/</code> <span>encuentra un número solo si no está precedido por un signo menos</span>. <code>/(?&lt;!-)\d+/.exec('3')</code> encuentra el "3". <code>/(?&lt;!-)\d+/.exec('-3')</code> no lo reconoce porque el número está precedido por el signo menos.</p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
 
 ## [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
 
@@ -54,7 +253,70 @@ Si deseas contribuir a este documento, edita también [el artículo original](/e
 
 > **Nota:** A continuación, _elemento_ se refiere no solo a caracteres singulares, sino que también incluye [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [escapes de propiedad Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
 
-«Tabla»
+   <table class="standard-table">
+    <thead>
+     <tr>
+      <th scope="col">Caracteres</th>
+      <th scope="col">Significado</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td><code><em>x</em>*</code></td>
+      <td>
+       <p>Concuerda 0 o más veces con el elemento "x" anterior. Por ejemplo, <code>/bo*/</code> reconoce a "boooo" en "Un fantasma booooed" y "b" en "A bird warbled", pero nada en "Una cabra gruñó".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code><em>x</em>+</code></td>
+      <td>
+       <p>Encuentra 1 o más veces el elemento "x" anterior Equivalente a <code>{1,}</code>. Por ejemplo, <code>/a+/</code> encuentra la "a" en "candy" y todas las "a"es en "caaaaaaandy".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code><em>x</em>?</code></td>
+      <td>
+       <p>Halla 0 o 1 vez el elemento "x" anterior. Por ejemplo, <code>/e?Le?/</code> reconoce a "el" en "ángel" y a "le" en "angle".</p>
+       <p>Si se usa inmediatamente después de cualquiera de los cuantificadores <code>*</code>, <code>+</code>, <code>?</code>o <code>{}</code>, hace que el cuantificador no codicioso (que reconoce el número mínimo de veces), a diferencia del predeterminado, que es codicioso (que reconoce el número máximo de veces).</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code><em>x</em>{<em>n</em>}</code></td>
+      <td>
+       <p>Donde "n" es un número entero positivo, concuerda exactamente con "n" apariciones del elemento "x" anterior. Por ejemplo, <code>/a{2}/</code> no reconoce la "a" en "candy", pero reconoce todas las "a"s en "caandy" y las dos primeras "a"s en "caaandy ".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code><em>x</em>{<em>n</em>,}</code></td>
+      <td>
+       <p>Donde "n" es un número entero positivo, concuerda con al menos "n" apariciones del elemento "x". Por ejemplo, <code>/a{2,}/</code> no reconoce la "a" en "candy", pero reconoce todas las "a" en "caandy" y en "caaaaaaandy".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code><em>x</em>{<em>n</em>,<em>m</em>}</code></td>
+      <td>
+       <p>Donde "n" es 0 o un número entero positivo, "m" es un número entero positivo y <code><em>m</em> &gt; <em>n</em></code>, reconoce por lo menos "n" y como máximo "m" apariciones del elemento "x" anterior. Por ejemplo, <code>/a{1,3}/</code> no reconoce nada en "cndy", la "a" en "caramelo", las dos "a" en "caandy" y las tres primeras "a" está en "caaaaaaandy". Observa que al comparar "caaaaaaandy", las "aaa" encontradas, aunque la cadena original tenía más "a" s.</p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p><code><em>x</em>*?</code><br>
+        <code><em>x</em>+?</code><br>
+        <code><em>x</em>??</code><br>
+        <code><em>x</em>{n}?</code><br>
+        <code><em>x</em>{n,}?</code><br>
+        <code><em>x</em>{n,m}?</code></p>
+      </td>
+      <td>
+       <p>De manera predeterminada, los cuantificadores como <code>*</code> y <code>+</code> son "codiciosos", lo cual significa que intentan hacer coincidir la mayor cantidad de cadena posible. El carácter <code>?</code> después del cuantificador hace que este sea "no codicioso": lo cual significa que se detendrá tan pronto como encuentre una concordancia. Por ejemplo, dada una cadena "algo como &lt;foo&gt; &lt;bar&gt; new &lt;/bar&gt; &lt;/foo&gt;":</p>
+       <ul>
+        <li><code>/&lt;.*&gt;/</code> reconocerá "&lt;foo&gt; &lt;bar&gt; nuevo &lt;/bar&gt; &lt;/foo&gt;"</li>
+        <li><code>/&lt;.*?&gt;/</code> encajará "&lt;foo&gt;"</li>
+       </ul>
+      </td>
+     </tr>
+    </tbody>
+   </table>
 
 ## [Escapa la propiedad Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
 
