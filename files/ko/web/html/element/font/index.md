@@ -6,41 +6,35 @@ tags:
   - 폐기됨
 translation_of: Web/HTML/Element/font
 ---
-<h2 id="개요">개요</h2>
+## 개요
 
-<p><em>HTML에서의 Font 요소</em> (<code>&lt;font&gt;</code>) 는 본문의 글자 크기, 색상과 및면을 정의합니다.</p>
+_HTML에서의 Font 요소_ (`<font>`) 는 본문의 글자 크기, 색상과 및면을 정의합니다.
 
-<div class="note">
-<p><em>사용 참고: </em></p>
+> **참고:** _사용 참고:_
+>
+> **이 요소를 사용하지 마세요!** HTML 3.2에서 정규화되었지만, HTML 4.01에서는 사용되지 않는 요소로 지정되었으며, 동시에 스타일링과 관련된 모든 요소가 HTML5에서 폐기되었습니다.
+>
+> Starting with HTML 4, HTML does not convey styling information anymore (outside the {{HTMLElement("style")}} element or the **style** attribute of each element). For any new web development, styling should be written using [CSS](/ko/docs/CSS "CSS") only.
+>
+> The former behavior of the {{HTMLElement("font")}} element can be achieved, and even better controlled using the [CSS Fonts](/ko/docs/Web/CSS/CSS_Fonts) CSS properties.
 
-<p><strong>이 요소를 사용하지 마세요! </strong>HTML 3.2에서 정규화되었지만, HTML 4.01에서는 사용되지 않는 요소로 지정되었으며, 동시에 스타일링과 관련된 모든 요소가 HTML5에서 폐기되었습니다.</p>
+## 속성
 
-<p>Starting with HTML 4, HTML does not convey styling information anymore (outside the {{HTMLElement("style")}} element or the <strong>style</strong> attribute of each element). For any new web development, styling should be written using <a href="/en-US/docs/CSS" title="CSS">CSS</a> only.</p>
+다른 HTML 요소들과 같게, 이 요소도 [공용 속성](/ko/docs/HTML/Global_attributes "HTML/Global attributes")을 지원합니다.
 
-<p>The former behavior of the {{HTMLElement("font")}} element can be achieved, and even better controlled using the <a href="/en-US/docs/Web/CSS/CSS_Fonts">CSS Fonts</a> CSS properties.</p>
-</div>
+- {{htmlattrdef("color")}}
+  - : This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.
+- {{htmlattrdef("face")}}
+  - : This attribute contains a comma-separated list of one or more font names. The document text in the default style is rendered in the first font face that the client's browser supports. If no font listed is installed on the local system, the browser typically defaults to the proportional or fixed-width font for that system.
+- {{htmlattrdef("size")}}
+  - : This attribute specifies the font size as either a numeric or relative value. Numeric values range from `1` to `7` with `1` being the smallest and `3` the default. It can be defined using a relative value, like `+2` or `-3`, which set it relative to the value of the {{htmlattrxref("size", "basefont")}} attribute of the {{HTMLElement("basefont")}} element, or relative to `3`, the default value, if none does exist.
 
-<h2 id="속성">속성</h2>
+## DOM interface
 
-<p>다른 HTML 요소들과 같게, 이 요소도 <a href="/en-US/docs/HTML/Global_attributes" title="HTML/Global attributes">공용 속성</a>을 지원합니다.</p>
+This element implements the {{domxref("HTMLFontElement")}} interface.
 
-<dl>
- <dt>{{htmlattrdef("color")}}</dt>
- <dd>This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.</dd>
- <dt>{{htmlattrdef("face")}}</dt>
- <dd>This attribute contains a comma-separated list of one or more font names. The document text in the default style is rendered in the first font face that the client's browser supports. If no font listed is installed on the local system, the browser typically defaults to the proportional or fixed-width font for that system.</dd>
- <dt>{{htmlattrdef("size")}}</dt>
- <dd>This attribute specifies the font size as either a numeric or relative value. Numeric values range from <code>1</code> to <code>7</code> with <code>1</code> being the smallest and <code>3</code> the default. It can be defined using a relative value, like <code>+2</code> or <code>-3</code>, which set it relative to the value of the {{htmlattrxref("size", "basefont")}} attribute of the {{HTMLElement("basefont")}} element, or relative to <code>3</code>, the default value, if none does exist.</dd>
-</dl>
+## 브라우저 호환성
 
-<h2 id="DOM_interface">DOM interface</h2>
+{{Compat("html.elements.font")}}
 
-<p>This element implements the {{domxref("HTMLFontElement")}} interface.</p>
-
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
-
-<p>{{Compat("html.elements.font")}}</p>
-
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

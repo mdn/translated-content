@@ -10,258 +10,259 @@ tags:
   - 마이크로데이터
 translation_of: Web/HTML/Global_attributes/itemscope
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><code><strong>itemscope</strong></code> 전역 특성은 연관된 메타데이터의 범위를 지정하는 불리언 특성입니다. 요소에 <code>itemscope</code> 특성을 지정하면 새로운 아이템을 생성하고, 그 결과로 요소에 관련된 키-값 쌍 다수를 낳습니다. 관련 특성인 {{htmlattrxref("itemtype")}}은 어휘(<a href="https://schema.org/">schema.org</a> 등)의 유효한 {{glossary("URL")}}을 지정할 때 사용합니다. 아래 각각의 예제는 <a href="https://schema.org/">schema.org</a>의 어휘를 사용합니다.</p>
+**`itemscope`** 전역 특성은 연관된 메타데이터의 범위를 지정하는 불리언 특성입니다. 요소에 `itemscope` 특성을 지정하면 새로운 아이템을 생성하고, 그 결과로 요소에 관련된 키-값 쌍 다수를 낳습니다. 관련 특성인 {{htmlattrxref("itemtype")}}은 어휘([schema.org](https://schema.org/) 등)의 유효한 {{glossary("URL")}}을 지정할 때 사용합니다. 아래 각각의 예제는 [schema.org](https://schema.org/)의 어휘를 사용합니다.
 
-<p>모든 HTML 요소는 <code>itemscope</code> 특성을 가질 수 있습니다. <code>itemscope</code>를 가졌으나 연결된 <code>itemtype</code>이 없는 경우 반드시 연관된 <code>itemref</code>를 가져야 합니다.</p>
+모든 HTML 요소는 `itemscope` 특성을 가질 수 있습니다. `itemscope`를 가졌으나 연결된 `itemtype`이 없는 경우 반드시 연관된 `itemref`를 가져야 합니다.
 
-<div class="note">
-<p><strong>참고:</strong> <code>itemtype</code> 특성을 더 알아보려면 <a href="http://schema.org/Thing">http://schema.org/Thing</a>을 방문하세요.</p>
+> **참고:** `itemtype` 특성을 더 알아보려면 <http://schema.org/Thing>을 방문하세요.
+
+### 간단한 예제
+
+#### HTML
+
+다음의 예제는 `itemscope` 특성의 사용법을 보입니다. `itemtype`은 <http://schema.org/Movie>로 지정하고, 세 개의 관련 `itemprop` 특성을 가집니다.
+
+```html
+<div itemscope itemtype="http://schema.org/Movie">
+  <h1 itemprop="name">Avatar</h1>
+  <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
+  <span itemprop="genre>Science fiction</span>
+  <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
 </div>
+```
 
-<h3 id="간단한_예제">간단한 예제</h3>
+#### 구조화된 데이터
 
-<h4 id="HTML">HTML</h4>
-
-<p>다음의 예제는 <code>itemscope</code> 특성의 사용법을 보입니다. <code>itemtype</code>은 <a href="http://schema.org/Movie"> http://schema.org/Movie</a>로 지정하고, 세 개의 관련 <code>itemprop</code> 특성을 가집니다.</p>
-
-<pre class="brush:html">&lt;div itemscope itemtype="http://schema.org/Movie"&gt;
-  &lt;h1 itemprop="name"&gt;Avatar&lt;/h1&gt;
-  &lt;span&gt;Director: &lt;span itemprop="director"&gt;James Cameron&lt;/span&gt; (born August 16, 1954)&lt;/span&gt;
-  &lt;span itemprop="genre&gt;Science fiction&lt;/span&gt;
-  &lt;a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer"&gt;Trailer&lt;/a&gt;
-&lt;/div&gt;
-</pre>
-
-<h4 id="구조화된_데이터">구조화된 데이터</h4>
-
-<p>다음 표는 앞선 코드의 구조화된 데이터를 나타냅니다.</p>
+다음 표는 앞선 코드의 구조화된 데이터를 나타냅니다.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td rowspan="6">itemscope</td>
-   <td>Itemtype</td>
-   <td colspan="2">Movie</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>(itemprop name)</td>
-   <td>(itemprop value)</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>director</td>
-   <td>James Cameron</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>genre</td>
-   <td>Science Fiction</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>Avatar</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>https://youtu.be/0AY1XIkX7bY</td>
-   <td>Trailer</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td rowspan="6">itemscope</td>
+      <td>Itemtype</td>
+      <td colspan="2">Movie</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>(itemprop name)</td>
+      <td>(itemprop value)</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>director</td>
+      <td>James Cameron</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>genre</td>
+      <td>Science Fiction</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>Avatar</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>https://youtu.be/0AY1XIkX7bY</td>
+      <td>Trailer</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="itemscope_id_특성"><code>itemscope</code> id 특성</h3>
+### `itemscope` id 특성
 
-<p>요소에 <code>itemscope</code> 특성을 지정하면 새로운 아이템이 생성됩니다. 아이템은 이름-값 쌍 그룹으로 이루어집니다. <code>itemscope</code>와 <code>itemtype</code> 특성을 가진 요소의 경우, {{htmlattrxref("id")}} 특성도 지정할 수 있습니다. <code>id</code>를 사용하면 새로운 아이템에 대한 전역 식별자를 설정할 수 있으며, 전역 식별자를 사용하면 웹에서 찾을 수 있는 다른 아이템과 연결할 수 있습니다.</p>
+요소에 `itemscope` 특성을 지정하면 새로운 아이템이 생성됩니다. 아이템은 이름-값 쌍 그룹으로 이루어집니다. `itemscope`와 `itemtype` 특성을 가진 요소의 경우, {{htmlattrxref("id")}} 특성도 지정할 수 있습니다. `id`를 사용하면 새로운 아이템에 대한 전역 식별자를 설정할 수 있으며, 전역 식별자를 사용하면 웹에서 찾을 수 있는 다른 아이템과 연결할 수 있습니다.
 
-<h3 id="예제">예제</h3>
+### 예제
 
-<p>다음 예제는 네 개의 <code>itemscope</code> 특성을 가지고 있습니다. 각각의 <code>itemscope</code> 특성은 대응하는 <code>itemtype</code> 특성의 범위를 지정합니다. <code>itemtype</code>, <code>Recipe</code>, <code>AggregateRating</code>, <code>NutritionInformation</code>은 요리법에 관한 <a href="https://www.schema.org">schema.org</a> 구조화된 데이터로, 첫 번째 <code>itemtype</code>의 값인 http://schema.org/Recipe에 정의되어 있습니다.</p>
+다음 예제는 네 개의 `itemscope` 특성을 가지고 있습니다. 각각의 `itemscope` 특성은 대응하는 `itemtype` 특성의 범위를 지정합니다. `itemtype`, `Recipe`, `AggregateRating`, `NutritionInformation`은 요리법에 관한 [schema.org](https://www.schema.org) 구조화된 데이터로, 첫 번째 `itemtype`의 값인 http\://schema.org/Recipe에 정의되어 있습니다.
 
-<pre class="brush: html">&lt;div itemscope itemtype="http://schema.org/Recipe"&gt;
-  &lt;h2 itemprop="name"&gt;Grandma's Holiday Apple Pie&lt;/h2&gt;
-  &lt;img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50" /&gt;
-  &lt;p&gt;
-    By &lt;span itemprop="author" itemscope itemtype="http://schema.org/Person"&gt;
-      &lt;span itemprop="name"&gt;Carol Smith&lt;/span&gt;
-    &lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    Published: &lt;time datetime="2009-11-05" itemprop="datePublished"&gt;November 5, 2009&lt;/time&gt;
-  &lt;/p&gt;
-  &lt;span itemprop="description"&gt;This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.&lt;/span&gt;
-  &lt;br&gt;
-  &lt;span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"&gt;
-    &lt;span itemprop="ratingValue"&gt;4.0&lt;/span&gt; stars based on &lt;span itemprop="reviewCount"&gt;35&lt;/span&gt; reviews
-  &lt;/span&gt;
-  &lt;br&gt;
-  Prep time: &lt;time datetime="PT30M" itemprop="prepTime"&gt;30 min&lt;/time&gt;&lt;br&gt;
-  Cook time: &lt;time datetime="PT1H" itemprop="cookTime"&gt;1 hou&lt;/time&gt;r&lt;br&gt;
-  Total time: &lt;time datetime="PT1H30M" itemprop="totalTime"&gt;1 hour 30 min&lt;/time&gt;&lt;br&gt;
-  Yield: &lt;span itemprop="recipeYield"&gt;1 9" pie (8 servings)&lt;/span&gt;&lt;br&gt;
-  &lt;span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation"&gt;
-    Serving size: &lt;span itemprop="servingSize"&gt;1 medium slice&lt;/span&gt;&lt;br&gt;
-    Calories per serving: &lt;span itemprop="calories"&gt;250 cal&lt;/span&gt;&lt;br&gt;
-    Fat per serving: &lt;span itemprop="fatContent"&gt;12 g&lt;/span&gt;&lt;br&gt;
-  &lt;/span&gt;
-  &lt;p&gt;
-    Ingredients:&lt;br&gt;
-    &lt;span itemprop="recipeIngredient"&gt;Thinly-sliced apples: 6 cups&lt;br&gt;&lt;/span&gt;
-    &lt;span itemprop="recipeIngredient"&gt;White sugar: 3/4 cup&lt;br&gt;&lt;/span&gt;
+```html
+<div itemscope itemtype="http://schema.org/Recipe">
+  <h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
+  <img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50" />
+  <p>
+    By <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <span itemprop="name">Carol Smith</span>
+    </span>
+  </p>
+  <p>
+    Published: <time datetime="2009-11-05" itemprop="datePublished">November 5, 2009</time>
+  </p>
+  <span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.</span>
+  <br>
+  <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+    <span itemprop="ratingValue">4.0</span> stars based on <span itemprop="reviewCount">35</span> reviews
+  </span>
+  <br>
+  Prep time: <time datetime="PT30M" itemprop="prepTime">30 min</time><br>
+  Cook time: <time datetime="PT1H" itemprop="cookTime">1 hou</time>r<br>
+  Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min</time><br>
+  Yield: <span itemprop="recipeYield">1 9" pie (8 servings)</span><br>
+  <span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
+    Serving size: <span itemprop="servingSize">1 medium slice</span><br>
+    Calories per serving: <span itemprop="calories">250 cal</span><br>
+    Fat per serving: <span itemprop="fatContent">12 g</span><br>
+  </span>
+  <p>
+    Ingredients:<br>
+    <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
+    <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
     ...
-  &lt;/p&gt;
-  Directions: &lt;br&gt;
-  &lt;div itemprop="recipeInstructions"&gt;
-    1. Cut and peel apples&lt;br&gt;
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. &lt;br&gt;
+  </p>
+  Directions: <br>
+  <div itemprop="recipeInstructions">
+    1. Cut and peel apples<br>
+    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
     ...
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+</div>
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<p>다음은 위의 코드를 렌더링한 예제입니다.</p>
+다음은 위의 코드를 렌더링한 예제입니다.
 
-<p>{{EmbedLiveSample("예제")}}</p>
+{{EmbedLiveSample("예제")}}
 
-<h4 id="구조화된_데이터_2">구조화된 데이터</h4>
+#### 구조화된 데이터
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="14">itemscope</td>
-   <td>itemtype</td>
-   <td colspan="2" rowspan="1">Recipe</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>Grandma's Holiday Apple Pie</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>image</td>
-   <td>https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>datePublished</td>
-   <td>2009-11-05</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>description</td>
-   <td>This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>prepTime</td>
-   <td>PT30M</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>cookTime</td>
-   <td>PT1H</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>totalTime</td>
-   <td>PT1H30M</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>recipeYield</td>
-   <td>1 9" pie (8 servings)</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>recipeIngredient</td>
-   <td>Thinly-sliced apples: 6 cups</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>recipeIngredient</td>
-   <td>White sugar: 3/4 cup</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>recipeInstructions</td>
-   <td>1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar for tart apples .</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td colspan="2" rowspan="1">author [Person]</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>Carol Smith</td>
-  </tr>
-  <tr>
-   <td colspan="1" rowspan="3">itemscope</td>
-   <td>itemprop[itemtype]</td>
-   <td colspan="2" rowspan="1">aggregateRating [AggregateRating]</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>ratingValue</td>
-   <td>4.0</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>reviewCount</td>
-   <td>35</td>
-  </tr>
-  <tr>
-   <td colspan="1" rowspan="4">itemscope</td>
-   <td>itemprop[itemtype]</td>
-   <td colspan="2" rowspan="1">nutrition [NutritionInformation]</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>servingSize</td>
-   <td>1 medium slice</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>calories</td>
-   <td>250 cal</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>fatContent</td>
-   <td>12 g</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="14">itemscope</td>
+      <td>itemtype</td>
+      <td colspan="2" rowspan="1">Recipe</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>Grandma's Holiday Apple Pie</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>image</td>
+      <td>https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>datePublished</td>
+      <td>2009-11-05</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>description</td>
+      <td>
+        This is my grandmother's apple pie recipe. I like to add a dash of
+        nutmeg.
+      </td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>prepTime</td>
+      <td>PT30M</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>cookTime</td>
+      <td>PT1H</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>totalTime</td>
+      <td>PT1H30M</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>recipeYield</td>
+      <td>1 9" pie (8 servings)</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>recipeIngredient</td>
+      <td>Thinly-sliced apples: 6 cups</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>recipeIngredient</td>
+      <td>White sugar: 3/4 cup</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>recipeInstructions</td>
+      <td>
+        1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar
+        for tart apples .
+      </td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td colspan="2" rowspan="1">author [Person]</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>Carol Smith</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="3">itemscope</td>
+      <td>itemprop[itemtype]</td>
+      <td colspan="2" rowspan="1">aggregateRating [AggregateRating]</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>ratingValue</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>reviewCount</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="4">itemscope</td>
+      <td>itemprop[itemtype]</td>
+      <td colspan="2" rowspan="1">nutrition [NutritionInformation]</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>servingSize</td>
+      <td>1 medium slice</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>calories</td>
+      <td>250 cal</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>fatContent</td>
+      <td>12 g</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>참고</strong>: HTML에서 마이크로데이터를 추출할 때 유용하게 사용할 수 있는 Google의 <a href="https://search.google.com/structured-data/testing-tool">구조화된 데이터 테스트 도구</a>가 있습니다. 위의 HTML 예제 코드를 넣어보세요.</p>
-</div>
+> **참고:** HTML에서 마이크로데이터를 추출할 때 유용하게 사용할 수 있는 Google의 [구조화된 데이터 테스트 도구](https://search.google.com/structured-data/testing-tool)가 있습니다. 위의 HTML 예제 코드를 넣어보세요.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("html.global_attributes.itemscope")}}</p>
+{{Compat("html.global_attributes.itemscope")}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>다른 <a href="/ko/docs/Web/HTML/Global_attributes">전역 특성</a>.</li>
- <li>마이크로데이터 관련 다른 전역 특성
-  <ul>
-   <li>{{htmlattrxref("itemid")}}</li>
-   <li>{{htmlattrxref("itemprop")}}</li>
-   <li>{{htmlattrxref("itemref")}}</li>
-   <li>{{htmlattrxref("itemtype")}}</li>
-  </ul>
- </li>
-</ul>
+- 다른 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 마이크로데이터 관련 다른 전역 특성
+
+  - {{htmlattrxref("itemid")}}
+  - {{htmlattrxref("itemprop")}}
+  - {{htmlattrxref("itemref")}}
+  - {{htmlattrxref("itemtype")}}

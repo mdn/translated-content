@@ -10,160 +10,147 @@ tags:
   - Web
 translation_of: Web/HTML/Inline_elements
 ---
-<p>HTML(<strong>Hypertext Markup Language</strong>)의 요소는 역사적으로 <a href="/ko/docs/Web/HTML/Block-level_elements">"블록 레벨" 요소</a>와 "인라인" 요소로 분류됐습니다. 인라인 요소는 콘텐츠의 흐름을 끊지 않고, 요소를 구성하는 태그에 할당된 공간만 차지합니다. 이 글은 인라인 요소란 무엇인지와 블록 레벨 요소와의 차이점을 살펴봅니다.</p>
+HTML(**Hypertext Markup Language**)의 요소는 역사적으로 ["블록 레벨" 요소](/ko/docs/Web/HTML/Block-level_elements)와 "인라인" 요소로 분류됐습니다. 인라인 요소는 콘텐츠의 흐름을 끊지 않고, 요소를 구성하는 태그에 할당된 공간만 차지합니다. 이 글은 인라인 요소란 무엇인지와 블록 레벨 요소와의 차이점을 살펴봅니다.
 
-<div class="blockIndicator note">
-<p>인라인 요소는 새로운 줄을 만들지 않으며 필요한 너비만 차지합니다.</p>
-</div>
+> **참고:** 인라인 요소는 새로운 줄을 만들지 않으며 필요한 너비만 차지합니다.
 
-<h2 id="인라인_vs._블록_레벨_요소">인라인 vs. 블록 레벨 요소</h2>
+## 인라인 vs. 블록 레벨 요소
 
-<p>간단한 예제만으로 쉽게 설명할 수 있습니다. 우선 다음 CSS를 사용하겠습니다.</p>
+간단한 예제만으로 쉽게 설명할 수 있습니다. 우선 다음 CSS를 사용하겠습니다.
 
-<pre class="brush: css">.highlight {
+```css
+.highlight {
   background-color: #ee3;
 }
-</pre>
+```
 
-<h3 id="인라인">인라인</h3>
+### 인라인
 
-<p>인라인 요소를 보이는 다음 예제를 확인해주세요.</p>
+인라인 요소를 보이는 다음 예제를 확인해주세요.
 
-<pre class="brush: html">&lt;div&gt;다음 span은 &lt;span class="highlight"&gt;인라인 요소&lt;/span&gt;로,
-영향 범위의 시작과 끝을 알 수 있도록 배경색을 지정했습니다.&lt;/div&gt;</pre>
+```html
+<div>다음 span은 <span class="highlight">인라인 요소</span>로,
+영향 범위의 시작과 끝을 알 수 있도록 배경색을 지정했습니다.</div>
+```
 
-<p>이 예제에서 {{HTMLElement("div")}}는 텍스트를 가진 블록 레벨 요소입니다. 그 텍스트 안에는 인라인 요소인 {{HTMLElement("span")}}이 존재합니다. <code>&lt;span&gt;</code>은 인라인이기 때문에 전체 문단이 끊기지 않고 하나로 그려집니다. 결과도 확인해보세요.</p>
+이 예제에서 {{HTMLElement("div")}}는 텍스트를 가진 블록 레벨 요소입니다. 그 텍스트 안에는 인라인 요소인 {{HTMLElement("span")}}이 존재합니다. `<span>`은 인라인이기 때문에 전체 문단이 끊기지 않고 하나로 그려집니다. 결과도 확인해보세요.
 
-<p>{{EmbedLiveSample("인라인", 600, 80)}}</p>
+{{EmbedLiveSample("인라인", 600, 80)}}
 
-<div class="hidden">
-<p>For looks, this CSS (not displayed in standard reading mode) is also used:</p>
-
-<pre class="brush: css">body {
+<div class="hidden"><p>For looks, this CSS (not displayed in standard reading mode) is also used:</p><pre class="brush: css">body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
 }
 
 .highlight {
-  background-color:#ee3;
-}</pre>
-</div>
+background-color:#ee3;
+}</pre></div>
 
-<h3 id="블록_레벨">블록 레벨</h3>
+### 블록 레벨
 
-<p>이제 아까 만든 <code>&lt;span&gt;</code>을 마치 {{htmlelement("p")}}처럼 블록 레벨인 요소로 바꿔보겠습니다.</p>
+이제 아까 만든 `<span>`을 마치 {{htmlelement("p")}}처럼 블록 레벨인 요소로 바꿔보겠습니다.
 
-<pre class="brush: html">&lt;div&gt;다음 p는 &lt;p class="highlight"&gt;블록 레벨 요소&lt;/p&gt;로,
-영향 범위의 시작과 끝을 알 수 있도록 배경색을 지정했습니다.</pre>
+```html
+<div>다음 p는 <p class="highlight">블록 레벨 요소</p>로,
+영향 범위의 시작과 끝을 알 수 있도록 배경색을 지정했습니다.
+```
 
-<div class="hidden">
-<p>The CSS (not displayed in standard reading mode) is also used:</p>
-
-<pre class="brush: css">body {
+<div class="hidden"><p>The CSS (not displayed in standard reading mode) is also used:</p><pre class="brush: css">body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
 }
 
 .highlight {
-  background-color:#ee3;
-}</pre>
-</div>
+background-color:#ee3;
+}</pre></div>
 
-<p>아까와 같은 CSS를 사용했을 때, 결과는 다음과 같습니다.</p>
+아까와 같은 CSS를 사용했을 때, 결과는 다음과 같습니다.
 
-<p>{{EmbedLiveSample("블록_레벨", 600, 150)}}</p>
+{{EmbedLiveSample("블록_레벨", 600, 150)}}
 
-<p>차이가 보이나요? <code>&lt;p&gt;</code> 요소는 텍스트의 레이아웃을 완전히 바꿔, <code>&lt;p&gt;</code> 이전과 자기 자신의 텍스트, 그리고 <code>&lt;p&gt;</code> 이후의 세 부분으로 나눠버렸습니다.</p>
+차이가 보이나요? `<p>` 요소는 텍스트의 레이아웃을 완전히 바꿔, `<p>` 이전과 자기 자신의 텍스트, 그리고 `<p>` 이후의 세 부분으로 나눠버렸습니다.
 
-<h3 id="요소_레벨_변경">요소 레벨 변경</h3>
+### 요소 레벨 변경
 
-<p>CSS {{cssxref("display")}} 속성을 사용해 요소의 시각적 표현 레벨을 바꿀 수 있습니다. 예컨대 <code>display</code>의 값을 <code>inline</code>에서 <code>block</code>으로 바꾸면, 브라우저에게 이 인라인 요소를 인라인 박스 대신 블록 박스를 사용해 그리라고 알리는 것입니다. 그러나 이 방법을 사용해도 요소의 카테고리와 콘텐츠 모델은 바뀌지 않습니다. 즉 <code>&lt;span&gt;</code> 요소의 <code>display</code>를 <code>block</code>으로 지정한다 해도, 그 안에 <code>&lt;div&gt;</code>를 넣을 수는 없습니다.</p>
+CSS {{cssxref("display")}} 속성을 사용해 요소의 시각적 표현 레벨을 바꿀 수 있습니다. 예컨대 `display`의 값을 `inline`에서 `block`으로 바꾸면, 브라우저에게 이 인라인 요소를 인라인 박스 대신 블록 박스를 사용해 그리라고 알리는 것입니다. 그러나 이 방법을 사용해도 요소의 카테고리와 콘텐츠 모델은 바뀌지 않습니다. 즉 `<span>` 요소의 `display`를 `block`으로 지정한다 해도, 그 안에 `<div>`를 넣을 수는 없습니다.
 
-<h2 id="개념적_차이">개념적 차이</h2>
+## 개념적 차이
 
-<p>다음은 인라인과 블록 레벨 요소의 간략한 개념적 차이입니다.</p>
+다음은 인라인과 블록 레벨 요소의 간략한 개념적 차이입니다.
 
-<dl>
- <dt>콘텐츠 모델</dt>
- <dd>보통 인라인 요소는 데이터와 다른 인라인 요소만 포함할 수 있으며, 블록 요소는 포함할 수 없습니다.</dd>
- <dt>서식</dt>
- <dd>기본적으로, 인라인 요소는 문서 흐름에서 줄바꿈을 강제하지 않습니다. 반면 블록 요소는 줄바꿈을 유발합니다. (물론 언제나처럼 CSS로 바꿀 수 있습니다)</dd>
-</dl>
+- 콘텐츠 모델
+  - : 보통 인라인 요소는 데이터와 다른 인라인 요소만 포함할 수 있으며, 블록 요소는 포함할 수 없습니다.
+- 서식
+  - : 기본적으로, 인라인 요소는 문서 흐름에서 줄바꿈을 강제하지 않습니다. 반면 블록 요소는 줄바꿈을 유발합니다. (물론 언제나처럼 CSS로 바꿀 수 있습니다)
 
-<h2 id="요소_목록">요소 목록</h2>
+## 요소 목록
 
-<p>다음은 기본값이 인라인인 요소의 목록입니다. (사실 HTML5는 블록과 인라인 요소를 정의하지 않습니다. <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>를 사용하세요)</p>
+다음은 기본값이 인라인인 요소의 목록입니다. (사실 HTML5는 블록과 인라인 요소를 정의하지 않습니다. [콘텐츠 카테고리](/ko/docs/Web/Guide/HTML/Content_categories)를 사용하세요)
 
-<div class="threecolumns">
-<dl>
- <dt>{{ HTMLElement("a") }}</dt>
- <dt>{{ HTMLElement("abbr") }}</dt>
- <dt>{{ HTMLElement("acronym") }}</dt>
- <dt>{{ HTMLElement("audio") }} (컨트롤이 보이면)</dt>
- <dt>{{ HTMLElement("b") }}</dt>
- <dt>{{ HTMLElement("bdi") }}</dt>
- <dt>{{ HTMLElement("bdo") }}</dt>
- <dt>{{ HTMLElement("big") }}</dt>
- <dt>{{ HTMLElement("br") }}</dt>
- <dt>{{ HTMLElement("button") }}</dt>
- <dt>{{ HTMLElement("canvas") }}</dt>
- <dt>{{ HTMLElement("cite") }}</dt>
- <dt>{{ HTMLElement("code") }}</dt>
- <dt>{{ HTMLElement("data") }}</dt>
- <dt>{{ HTMLElement("datalist") }}</dt>
- <dt>{{ HTMLElement("del") }}</dt>
- <dt>{{ HTMLElement("dfn") }}</dt>
- <dt>{{ HTMLElement("em") }}</dt>
- <dt>{{ HTMLElement("embed") }}</dt>
- <dt>{{ HTMLElement("i") }}</dt>
- <dt>{{ HTMLElement("iframe") }}</dt>
- <dt>{{ HTMLElement("img") }}</dt>
- <dt>{{ HTMLElement("input") }}</dt>
- <dt>{{ HTMLElement("ins") }}</dt>
- <dt>{{ HTMLElement("kbd") }}</dt>
- <dt>{{ HTMLElement("label") }}</dt>
- <dt>{{ HTMLElement("map") }}</dt>
- <dt>{{ HTMLElement("mark") }}</dt>
- <dt>{{ HTMLElement("meter") }}</dt>
- <dt>{{ HTMLElement("noscript") }}</dt>
- <dt>{{ HTMLElement("object") }}</dt>
- <dt>{{ HTMLElement("output") }}</dt>
- <dt>{{ HTMLElement("picture") }}</dt>
- <dt>{{ HTMLElement("progress") }}</dt>
- <dt>{{ HTMLElement("q") }}</dt>
- <dt>{{ HTMLElement("ruby") }}</dt>
- <dt>{{ HTMLElement("s") }}</dt>
- <dt>{{ HTMLElement("samp") }}</dt>
- <dt>{{ HTMLElement("script") }}</dt>
- <dt>{{ HTMLElement("select") }}</dt>
- <dt>{{ HTMLElement("slot") }}</dt>
- <dt>{{ HTMLElement("small") }}</dt>
- <dt>{{ HTMLElement("span") }}</dt>
- <dt>{{ HTMLElement("strong") }}</dt>
- <dt>{{ HTMLElement("sub") }}</dt>
- <dt>{{ HTMLElement("sup") }}</dt>
- <dt>{{ HTMLElement("svg") }}</dt>
- <dt>{{ HTMLElement("template") }}</dt>
- <dt>{{ HTMLElement("textarea") }}</dt>
- <dt>{{ HTMLElement("time") }}</dt>
- <dt>{{ HTMLElement("u") }}</dt>
- <dt>{{ HTMLElement("tt") }}</dt>
- <dt>{{ HTMLElement("var") }}</dt>
- <dt>{{ HTMLElement("video") }}</dt>
- <dt>{{ HTMLElement("wbr") }}</dt>
-</dl>
-</div>
+- {{ HTMLElement("a") }}
+- {{ HTMLElement("abbr") }}
+- {{ HTMLElement("acronym") }}
+- {{ HTMLElement("audio") }} (컨트롤이 보이면)
+- {{ HTMLElement("b") }}
+- {{ HTMLElement("bdi") }}
+- {{ HTMLElement("bdo") }}
+- {{ HTMLElement("big") }}
+- {{ HTMLElement("br") }}
+- {{ HTMLElement("button") }}
+- {{ HTMLElement("canvas") }}
+- {{ HTMLElement("cite") }}
+- {{ HTMLElement("code") }}
+- {{ HTMLElement("data") }}
+- {{ HTMLElement("datalist") }}
+- {{ HTMLElement("del") }}
+- {{ HTMLElement("dfn") }}
+- {{ HTMLElement("em") }}
+- {{ HTMLElement("embed") }}
+- {{ HTMLElement("i") }}
+- {{ HTMLElement("iframe") }}
+- {{ HTMLElement("img") }}
+- {{ HTMLElement("input") }}
+- {{ HTMLElement("ins") }}
+- {{ HTMLElement("kbd") }}
+- {{ HTMLElement("label") }}
+- {{ HTMLElement("map") }}
+- {{ HTMLElement("mark") }}
+- {{ HTMLElement("meter") }}
+- {{ HTMLElement("noscript") }}
+- {{ HTMLElement("object") }}
+- {{ HTMLElement("output") }}
+- {{ HTMLElement("picture") }}
+- {{ HTMLElement("progress") }}
+- {{ HTMLElement("q") }}
+- {{ HTMLElement("ruby") }}
+- {{ HTMLElement("s") }}
+- {{ HTMLElement("samp") }}
+- {{ HTMLElement("script") }}
+- {{ HTMLElement("select") }}
+- {{ HTMLElement("slot") }}
+- {{ HTMLElement("small") }}
+- {{ HTMLElement("span") }}
+- {{ HTMLElement("strong") }}
+- {{ HTMLElement("sub") }}
+- {{ HTMLElement("sup") }}
+- {{ HTMLElement("svg") }}
+- {{ HTMLElement("template") }}
+- {{ HTMLElement("textarea") }}
+- {{ HTMLElement("time") }}
+- {{ HTMLElement("u") }}
+- {{ HTMLElement("tt") }}
+- {{ HTMLElement("var") }}
+- {{ HTMLElement("video") }}
+- {{ HTMLElement("wbr") }}
 
-<h2 id="See_also" name="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/HTML/Block-level_elements">블록 레벨 요소</a></li>
- <li><a href="/ko/docs/Web/HTML/Element">HTML 요소 참고서</a></li>
- <li>{{cssxref("display")}}</li>
- <li><a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a></li>
- <li><a href="/ko/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">일반 플로우에서의 블록과 인라인 레이아웃</a></li>
-</ul>
+- [블록 레벨 요소](/ko/docs/Web/HTML/Block-level_elements)
+- [HTML 요소 참고서](/ko/docs/Web/HTML/Element)
+- {{cssxref("display")}}
+- [콘텐츠 카테고리](/ko/docs/Web/Guide/HTML/Content_categories)
+- [일반 플로우에서의 블록과 인라인 레이아웃](/ko/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
 
-<p>{{QuickLinksWithSubpages("/ko/docs/Web/HTML/")}}</p>
+{{QuickLinksWithSubpages("/ko/docs/Web/HTML/")}}

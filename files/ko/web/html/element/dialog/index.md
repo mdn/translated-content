@@ -11,116 +11,132 @@ tags:
   - 대화 상자
 translation_of: Web/HTML/Element/dialog
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;dialog&gt;</code> 요소</strong>는 닫을 수 있는 경고, 검사기, 창 등 대화 상자 및 기타 다른 상호작용 가능한 컴포넌트를 나타냅니다.</p>
+**HTML `<dialog>` 요소**는 닫을 수 있는 경고, 검사기, 창 등 대화 상자 및 기타 다른 상호작용 가능한 컴포넌트를 나타냅니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a></th>
-   <td><a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠">플로우 콘텐츠</a>, 구획 루트.</td>
-  </tr>
-  <tr>
-   <th scope="row">가능한 콘텐츠</th>
-   <td><a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠">플로우 콘텐츠</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">태그 생략</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">가능한 부모 요소</th>
-   <td><a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠">플로우 콘텐츠</a>를 허용하는 모든 요소.</td>
-  </tr>
-  <tr>
-   <th scope="row">암시적 ARIA 역할</th>
-   <td><a href="/ko/docs/Web/Accessibility/ARIA/Roles/dialog_role"><code>dialog</code> </a></td>
-  </tr>
-  <tr>
-   <th scope="row">가능한 ARIA 역할</th>
-   <td>{{ARIARole("alertdialog")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 인터페이스</th>
-   <td>{{domxref("HTMLDialogElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+      </th>
+      <td>
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+          >플로우 콘텐츠</a
+        >, 구획 루트.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 콘텐츠</th>
+      <td>
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+          >플로우 콘텐츠</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">태그 생략</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 부모 요소</th>
+      <td>
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+          >플로우 콘텐츠</a
+        >를 허용하는 모든 요소.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">암시적 ARIA 역할</th>
+      <td>
+        <a href="/ko/docs/Web/Accessibility/ARIA/Roles/dialog_role"
+          ><code>dialog</code></a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 ARIA 역할</th>
+      <td>{{ARIARole("alertdialog")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 인터페이스</th>
+      <td>{{domxref("HTMLDialogElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="특성">특성</h2>
+## 특성
 
-<p>이 요소는 <a href="/ko/docs/Web/HTML/Global_attributes">전역 특성</a>을 포함합니다.</p>
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-<div class="blockIndicator warning">
-<p><code>tabindex</code> 특성을 <code>&lt;dialog&gt;</code> 요소에 사용해서는 안됩니다.</p>
-</div>
+> **경고:** `tabindex` 특성을 `<dialog>` 요소에 사용해서는 안됩니다.
 
-<dl>
- <dt>{{htmlattrdef("open")}}</dt>
- <dd>대화 상자가 활성 상태이며 상호작용할 수 있음을 나타냅니다. <code>open</code> 특성이 없을 때 대화 상자가 사용자에게 보여서는 안됩니다.</dd>
-</dl>
+- {{htmlattrdef("open")}}
+  - : 대화 상자가 활성 상태이며 상호작용할 수 있음을 나타냅니다. `open` 특성이 없을 때 대화 상자가 사용자에게 보여서는 안됩니다.
 
-<h2 id="사용_일람">사용 일람</h2>
+## 사용 일람
 
-<ul>
- <li><code>method="dialog"</code> 특성을 사용한 {{htmlelement("form")}} 요소는 제출 시 대화 상자를 닫습니다. 이 때, 대화 상자의 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} 속성은 양식을 제출할 때 사용한 버튼의 {{htmlattrxref("value", "button")}}으로 설정됩니다.</li>
- <li>CSS {{cssxref('::backdrop')}} <a href="/ko/docs/Web/CSS/Pseudo-elements">의사 요소</a>를 사용하면, {{domxref("HTMLDialogElement.showModal()")}} 메서드를 사용해 활성화한 <code>&lt;dialog&gt;</code> 요소의 뒤에 스타일을 적용할 수 있습니다. 예를 들면, 모달 대화 상자가 활성화되어 있는 동안 접근할 수 없는 뒤쪽 요소를 어둡게 만들 때 사용합니다.</li>
-</ul>
+- `method="dialog"` 특성을 사용한 {{htmlelement("form")}} 요소는 제출 시 대화 상자를 닫습니다. 이 때, 대화 상자의 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} 속성은 양식을 제출할 때 사용한 버튼의 {{htmlattrxref("value", "button")}}으로 설정됩니다.
+- CSS {{cssxref('::backdrop')}} [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 사용하면, {{domxref("HTMLDialogElement.showModal()")}} 메서드를 사용해 활성화한 `<dialog>` 요소의 뒤에 스타일을 적용할 수 있습니다. 예를 들면, 모달 대화 상자가 활성화되어 있는 동안 접근할 수 없는 뒤쪽 요소를 어둡게 만들 때 사용합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="간단한_예제">간단한 예제</h3>
+### 간단한 예제
 
-<pre class="brush: html">&lt;dialog open&gt;
-  &lt;p&gt;여러분 안녕하세요!&lt;/p&gt;
-&lt;/dialog&gt;
-</pre>
+```html
+<dialog open>
+  <p>여러분 안녕하세요!</p>
+</dialog>
+```
 
-<h3 id="고급_예제">고급 예제</h3>
+### 고급 예제
 
-<p>다음 예제는 "상세정보 업데이트" 버튼을 클릭할 경우 양식을 포함한 팝업 대화 상자를 엽니다.</p>
+다음 예제는 "상세정보 업데이트" 버튼을 클릭할 경우 양식을 포함한 팝업 대화 상자를 엽니다.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;!-- 간단한 양식을 포함한 팝업 대화 상자 --&gt;
-&lt;dialog id="favDialog"&gt;
-  &lt;form method="dialog"&gt;
-    &lt;p&gt;&lt;label&gt;좋아하는 동물:
-      &lt;select&gt;
-        &lt;option&gt;&lt;/option&gt;
-        &lt;option&gt;아르테미아&lt;/option&gt;
-        &lt;option&gt;레서판다&lt;/option&gt;
-        &lt;option&gt;거미원숭이&lt;/option&gt;
-      &lt;/select&gt;
-    &lt;/label&gt;&lt;/p&gt;
-    &lt;menu&gt;
-      &lt;button value="cancel"&gt;취소&lt;/button&gt;
-      &lt;button id="confirmBtn" value="default"&gt;확인&lt;/button&gt;
-    &lt;/menu&gt;
-  &lt;/form&gt;
-&lt;/dialog&gt;
+```html
+<!-- 간단한 양식을 포함한 팝업 대화 상자 -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <p><label>좋아하는 동물:
+      <select>
+        <option></option>
+        <option>아르테미아</option>
+        <option>레서판다</option>
+        <option>거미원숭이</option>
+      </select>
+    </label></p>
+    <menu>
+      <button value="cancel">취소</button>
+      <button id="confirmBtn" value="default">확인</button>
+    </menu>
+  </form>
+</dialog>
 
-&lt;menu&gt;
-  &lt;button id="updateDetails"&gt;상세정보 업데이트&lt;/button&gt;
-&lt;/menu&gt;
+<menu>
+  <button id="updateDetails">상세정보 업데이트</button>
+</menu>
 
-&lt;output aria-live="polite"&gt;&lt;/output&gt;</pre>
+<output aria-live="polite"></output>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var updateButton = document.getElementById('updateDetails');
+```js
+var updateButton = document.getElementById('updateDetails');
 var favDialog = document.getElementById('favDialog');
 var outputBox = document.getElementsByTagName('output')[0];
 var selectEl = document.getElementsByTagName('select')[0];
 var confirmBtn = document.getElementById('confirmBtn');
 
-// “Update details” button opens the &lt;dialog&gt; modally
+// “Update details” button opens the <dialog> modally
 updateButton.addEventListener('click', function onOpen() {
   if (typeof favDialog.showModal === "function") {
     favDialog.showModal();
   } else {
-    alert("The &lt;dialog&gt; API is not supported by this browser");
+    alert("The <dialog> API is not supported by this browser");
   }
 });
 // "Favorite animal" input sets the value of the submit button
@@ -130,29 +146,28 @@ selectEl.addEventListener('change', function onSelect(e) {
 // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
 favDialog.addEventListener('close', function onClose() {
   outputBox.value = favDialog.returnValue + " button clicked - " + (new Date()).toString();
-});</pre>
+});
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample("고급_예제", "100%", 300)}}</p>
+{{EmbedLiveSample("고급_예제", "100%", 300)}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("html.elements.dialog")}}</p>
+{{Compat("html.elements.dialog")}}
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<p>지원하지 않는 브라우저에서 <code>&lt;dialog&gt;</code>를 사용하려면 <a href="https://github.com/GoogleChrome/dialog-polyfill">dialog-polyfill</a>을 추가하세요.</p>
+지원하지 않는 브라우저에서 `<dialog>`를 사용하려면 [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)을 추가하세요.
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{event("close")}} 이벤트</li>
- <li>{{event("cancel")}} 이벤트</li>
- <li>{{cssxref("::backdrop")}} 의사 요소</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML 양식</a> 안내서</li>
-</ul>
+- {{event("close")}} 이벤트
+- {{event("cancel")}} 이벤트
+- {{cssxref("::backdrop")}} 의사 요소
+- [HTML 양식](/ko/docs/Web/Guide/HTML/Forms) 안내서

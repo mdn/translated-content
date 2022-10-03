@@ -5,86 +5,107 @@ tags:
   - Element
   - HTML
   - HTML Web Components
-  - 'HTML:Flow content'
-  - 'HTML:Metadata content'
-  - 'HTML:Phrasing content'
-  - 'HTML:Script-supporting element'
+  - HTML:Flow content
+  - HTML:Metadata content
+  - HTML:Phrasing content
+  - HTML:Script-supporting element
   - Reference
   - Web
   - Web Components
   - 웹 컴포넌트
 translation_of: Web/HTML/Element/template
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;template&gt;</code> 요소</strong>는 페이지를 불러온 순간 즉시 그려지지는 않지만, 이후 JavaScript를 사용해 인스턴스를 생성할 수 있는 {{glossary("HTML")}} 코드를 담을 방법을 제공합니다.</p>
+**HTML `<template>` 요소**는 페이지를 불러온 순간 즉시 그려지지는 않지만, 이후 JavaScript를 사용해 인스턴스를 생성할 수 있는 {{glossary("HTML")}} 코드를 담을 방법을 제공합니다.
 
-<p>템플릿은 콘텐츠 조각을 나중에 사용하기 위해 담아놓는 컨테이너로 생각하세요. 페이지를 불러오는 동안 구문 분석기가 <code>&lt;template&gt;</code> 요소의 콘텐츠도 읽기는 하지만, 이는 유효성을 검증하기 위함이며 렌더링 하기 위함은 아닙니다.</p>
+템플릿은 콘텐츠 조각을 나중에 사용하기 위해 담아놓는 컨테이너로 생각하세요. 페이지를 불러오는 동안 구문 분석기가 `<template>` 요소의 콘텐츠도 읽기는 하지만, 이는 유효성을 검증하기 위함이며 렌더링 하기 위함은 아닙니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a></th>
-   <td><a href="/ko/docs/Web/Guide/HTML/Content_categories#메타데이터_콘텐츠">메타데이터 콘텐츠</a>, <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠">플로우 콘텐츠</a>, <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠">구문 콘텐츠</a>, <a href="/ko/docs/Web/Guide/HTML/Content_categories#스크립트_지원_요소">스크립트 지원 요소</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">가능한 콘텐츠</th>
-   <td>제한 없음.</td>
-  </tr>
-  <tr>
-   <th scope="row">태그 생략</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">가능한 부모 요소</th>
-   <td>메타데이터 콘텐츠, 구문 콘텐츠, 또는 스크립트 지원 요소를 허용하는 모든 요소. 또한, {{htmlattrxref("span", "colgroup")}} 특성이 없는 {{htmlelement("colgroup")}} 요소도 가능.</td>
-  </tr>
-  <tr>
-   <th scope="row">가능한 ARIA 역할</th>
-   <td>없음</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 인터페이스</th>
-   <td>{{domxref("HTMLTemplateElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+      </th>
+      <td>
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#메타데이터_콘텐츠"
+          >메타데이터 콘텐츠</a
+        >,
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+          >플로우 콘텐츠</a
+        >,
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+          >구문 콘텐츠</a
+        >,
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#스크립트_지원_요소"
+          >스크립트 지원 요소</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 콘텐츠</th>
+      <td>제한 없음.</td>
+    </tr>
+    <tr>
+      <th scope="row">태그 생략</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 부모 요소</th>
+      <td>
+        메타데이터 콘텐츠, 구문 콘텐츠, 또는 스크립트 지원 요소를 허용하는 모든
+        요소. 또한, {{htmlattrxref("span", "colgroup")}} 특성이 없는
+        {{htmlelement("colgroup")}} 요소도 가능.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 ARIA 역할</th>
+      <td>없음</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 인터페이스</th>
+      <td>{{domxref("HTMLTemplateElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="특성">특성</h2>
+## 특성
 
-<p>이 요소는 <a href="/ko/docs/Web/HTML/Global_attributes">전역 특성</a>만 포함합니다.</p>
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
-<p>다만, {{domxref("HTMLTemplateElement")}}는 읽기 전용 {{domxref("HTMLTemplateElement.content", "content")}} 속성을 가집니다. <code>content</code>는 템플릿이 담고 있는 DOM 하위 트리를 나타내는 {{domxref("DocumentFragment")}}입니다.</p>
+다만, {{domxref("HTMLTemplateElement")}}는 읽기 전용 {{domxref("HTMLTemplateElement.content", "content")}} 속성을 가집니다. `content`는 템플릿이 담고 있는 DOM 하위 트리를 나타내는 {{domxref("DocumentFragment")}}입니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>우선 예제의 HTML부터 보겠습니다.</p>
+우선 예제의 HTML부터 보겠습니다.
 
-<pre class="brush: html">&lt;table id="producttable"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;td&gt;UPC_Code&lt;/td&gt;
-      &lt;td&gt;Product_Name&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;!-- 존재하는 데이터는 선택적으로 여기에 포함됩니다 --&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+```html
+<table id="producttable">
+  <thead>
+    <tr>
+      <td>UPC_Code</td>
+      <td>Product_Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 존재하는 데이터는 선택적으로 여기에 포함됩니다 -->
+  </tbody>
+</table>
 
-&lt;template id="productrow"&gt;
-  &lt;tr&gt;
-    &lt;td class="record"&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/template&gt;
-</pre>
+<template id="productrow">
+  <tr>
+    <td class="record"></td>
+    <td></td>
+  </tr>
+</template>
+```
 
-<p>먼저, 나중에 JavaScript 코드를 사용해 컨텐츠를 삽입할 테이블이 있습니다. 그 다음 테이블의 열을 표현하는 HTML 조각의 구조를 설명하는 템플릿이 옵니다.</p>
+먼저, 나중에 JavaScript 코드를 사용해 컨텐츠를 삽입할 테이블이 있습니다. 그 다음 테이블의 열을 표현하는 HTML 조각의 구조를 설명하는 템플릿이 옵니다.
 
-<p>이제 테이블이 생성되었고 템플릿이 정의되었으므로, JavaScript 를 사용해 템플릿을 사용해 구성된 열을 기반으로 각 열을 테이블로 삽입합니다.</p>
+이제 테이블이 생성되었고 템플릿이 정의되었으므로, JavaScript 를 사용해 템플릿을 사용해 구성된 열을 기반으로 각 열을 테이블로 삽입합니다.
 
-<pre class="brush: js">// 템플릿 엘리먼트의 컨텐츠 존재 유무를 통해
+```js
+// 템플릿 엘리먼트의 컨텐츠 존재 유무를 통해
 // 브라우저가 HTML 템플릿 엘리먼트를 지원하는지 확인합니다
 if ('content' in document.createElement('template')) {
 
@@ -111,31 +132,30 @@ if ('content' in document.createElement('template')) {
 } else {
   // HTML 템플릿 엘리먼트를 지원하지 않으므로
   // 테이블에 열을 추가하는 다른 방법을 찾습니다.
-}</pre>
+}
+```
 
-<p>결과는 JavaScript 를 통해 추가된 두 개의 새로운 열을 포함하는 기존 HTML 테이블입니다.</p>
+결과는 JavaScript 를 통해 추가된 두 개의 새로운 열을 포함하는 기존 HTML 테이블입니다.
 
-<div class="hidden">
-<pre class="brush: css">table {
+```css hidden
+table {
   background: #000;
 }
 table td {
   background: #fff;
-}</pre>
-</div>
+}
+```
 
-<p>{{EmbedLiveSample("예제", 500, 120)}}</p>
+{{EmbedLiveSample("예제", 500, 120)}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("html.elements.template")}}</p>
+{{Compat("html.elements.template")}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="https://developer.mozilla.org/ko/docs/Web/Web_Components/Using_templates_and_slots">템플릿과 슬롯 사용하기</a></li>
-</ul>
+- [템플릿과 슬롯 사용하기](/ko/docs/Web/Web_Components/Using_templates_and_slots)

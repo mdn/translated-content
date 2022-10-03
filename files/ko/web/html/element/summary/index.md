@@ -8,122 +8,134 @@ tags:
   - Web
 translation_of: Web/HTML/Element/summary
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML 공개 요약 요소</strong> (<strong><code>&lt;요약&gt;</code></strong>) 요소는 ("상세") 요소의 공개 상자에 대한 요약, 캡션 또는 범례를 지정한다. </span> <code>&lt;요약&gt;</code> 요소를 클릭하면 부모 <code>&lt;상세&gt;</code> 요소의 상태가 열리거나 닫힌다.</p>
+**HTML 공개 요약 요소** (**`<요약>`**) 요소는 ("상세") 요소의 공개 상자에 대한 요약, 캡션 또는 범례를 지정한다. `<요약>` 요소를 클릭하면 부모 `<상세>` 요소의 상태가 열리거나 닫힌다.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
+<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a> or one element of <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Heading_content">Heading content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>None, both the start tag and the end tag are mandatory.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>The {{HTMLElement("details")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("button")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
+          >Phrasing content</a
+        >
+        or one element of
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Heading_content"
+          >Heading content</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None, both the start tag and the end tag are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>The {{HTMLElement("details")}} element.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>{{ARIARole("button")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/ko/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The <code>&lt;summary&gt;</code> element's contents can be any heading content, plain text, or HTML that can be used within a paragraph.</p>
+The `<summary>` element's contents can be any heading content, plain text, or HTML that can be used within a paragraph.
 
-<p>A <code>&lt;summary&gt;</code> element may <em>only</em> be used as the first child of a <code>&lt;details&gt;</code> element. When the user clicks on the summary, the parent <code>&lt;details&gt;</code> element is toggled open or closed, and then a {{event("toggle")}} event is sent to the <code>&lt;details&gt;</code> element, which can be used to let you know when this state change occurs.</p>
+A `<summary>` element may _only_ be used as the first child of a `<details>` element. When the user clicks on the summary, the parent `<details>` element is toggled open or closed, and then a {{event("toggle")}} event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
 
-<h3 id="Default_label_text">Default label text</h3>
+### Default label text
 
-<p>If a <code>&lt;details&gt;</code> element's first child is not a <code>&lt;summary&gt;</code> element, the {{Glossary("user agent")}} will use a default string (typically "Details") as the label for the disclosure box.</p>
+If a `<details>` element's first child is not a `<summary>` element, the {{Glossary("user agent")}} will use a default string (typically "Details") as the label for the disclosure box.
 
-<h3 id="Default_style">Default style</h3>
+### Default style
 
-<p>Per the HTML specification, the default style for <code>&lt;summary&gt;</code> elements includes <code>display: list-item</code>. This makes it possible to change or remove the icon displayed as the disclosure widget next to the label from the default, which is typically a triangle.</p>
+Per the HTML specification, the default style for `<summary>` elements includes `display: list-item`. This makes it possible to change or remove the icon displayed as the disclosure widget next to the label from the default, which is typically a triangle.
 
-<p>You can also change the style to <code>display: block</code> to remove the disclosure triangle.</p>
+You can also change the style to `display: block` to remove the disclosure triangle.
 
-<p>See the <a href="#browser_compatibility">Browser compatibility</a> section for details, as not all browsers support full functionality of this element yet.</p>
+See the [Browser compatibility](#browser_compatibility) section for details, as not all browsers support full functionality of this element yet.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Below are some examples showing <code>&lt;summary&gt;</code> in use. You can find more examples in the documentation for the {{HTMLElement("details")}} element.</p>
+Below are some examples showing `<summary>` in use. You can find more examples in the documentation for the {{HTMLElement("details")}} element.
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>A simple example showing the use of <code>&lt;summary&gt;</code> in a {{HTMLElement("details")}} element:</p>
+A simple example showing the use of `<summary>` in a {{HTMLElement("details")}} element:
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;Overview&lt;/summary&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Cash on hand: $500.00&lt;/li&gt;
-    &lt;li&gt;Current invoice: $75.30&lt;/li&gt;
-    &lt;li&gt;Due date: 5/6/19&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/details&gt;</pre>
+```html
+<details open>
+  <summary>Overview</summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+```
 
-<p>{{EmbedLiveSample("Basic_example", 650, 120)}}</p>
+{{EmbedLiveSample("Basic_example", 650, 120)}}
 
-<h3 id="Summaries_as_headings">Summaries as headings</h3>
+### Summaries as headings
 
-<p>You can use heading elements in <code>&lt;summary&gt;</code>, like this:</p>
+You can use heading elements in `<summary>`, like this:
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;&lt;h4&gt;Overview&lt;/h4&gt;&lt;/summary&gt;
-    &lt;ol&gt;
-    &lt;li&gt;Cash on hand: $500.00&lt;/li&gt;
-    &lt;li&gt;Current invoice: $75.30&lt;/li&gt;
-    &lt;li&gt;Due date: 5/6/19&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/details&gt;</pre>
+```html
+<details open>
+  <summary><h4>Overview</h4></summary>
+    <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+```
 
-<p>{{EmbedLiveSample("Summaries_as_headings", 650, 120)}}</p>
+{{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
 
-<p>This currently has some spacing issues that could be addressed using CSS.</p>
+This currently has some spacing issues that could be addressed using CSS.
 
-<h3 id="HTML_in_summaries">HTML in summaries</h3>
+### HTML in summaries
 
-<p>This example adds some semantics to the <code>&lt;summary&gt;</code> element to indicate the label as important:</p>
+This example adds some semantics to the `<summary>` element to indicate the label as important:
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/summary&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Cash on hand: $500.00&lt;/li&gt;
-    &lt;li&gt;Current invoice: $75.30&lt;/li&gt;
-    &lt;li&gt;Due date: 5/6/19&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/details&gt;</pre>
+```html
+<details open>
+  <summary><strong>Overview</strong></summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+```
 
-<p>{{EmbedLiveSample("HTML_in_summaries", 650, 120)}}</p>
+{{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("html.elements.summary")}}</p>
+{{Compat("html.elements.summary")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("details")}}</li>
-</ul>
+- {{HTMLElement("details")}}

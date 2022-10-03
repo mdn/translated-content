@@ -5,90 +5,102 @@ tags:
   - Element
   - HTML
   - HTML text-level semantics
-  - 'HTML:Flow content'
-  - 'HTML:Palpable Content'
-  - 'HTML:Phrasing content'
+  - HTML:Flow content
+  - HTML:Palpable Content
+  - HTML:Phrasing content
   - Reference
   - Web
 translation_of: Web/HTML/Element/var
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTM <code>&lt;var&gt;</code> 요소</strong>는 수학 표현 또는 프로그래밍에서 변수의 이름을 나타냅니다.</span> 보통 현재 글씨체의 기울임꼴로 표시하지만, 브라우저마다 다를 수 있습니다.</p>
+**HTM `<var>` 요소**는 수학 표현 또는 프로그래밍에서 변수의 이름을 나타냅니다. 보통 현재 글씨체의 기울임꼴로 표시하지만, 브라우저마다 다를 수 있습니다.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}</div>
-
-
+{{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a></th>
-   <td><a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠">플로우 콘텐츠</a>, <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠">구문 콘텐츠</a>, 뚜렷한 콘텐츠.</td>
-  </tr>
-  <tr>
-   <th scope="row">가능한 콘텐츠</th>
-   <td><a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠">구문 콘텐츠</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">태그 생략</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">가능한 부모 요소</th>
-   <td><a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠">구문 콘텐츠</a>를 허용하는 모든 요소.</td>
-  </tr>
-  <tr>
-   <th scope="row">가능한 ARIA 역할</th>
-   <td>모두</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 인터페이스</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+      </th>
+      <td>
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+          >플로우 콘텐츠</a
+        >,
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+          >구문 콘텐츠</a
+        >, 뚜렷한 콘텐츠.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 콘텐츠</th>
+      <td>
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+          >구문 콘텐츠</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">태그 생략</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 부모 요소</th>
+      <td>
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+          >구문 콘텐츠</a
+        >를 허용하는 모든 요소.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 ARIA 역할</th>
+      <td>모두</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 인터페이스</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="특성">특성</h2>
+## 특성
 
-<p>이 요소는 <a href="/ko/docs/Web/HTML/Global_attributes">전역 특성</a>만 포함합니다.</p>
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
-<h2 id="사용_일람">사용 일람</h2>
+## 사용 일람
 
-<h3 id="관련_요소">관련 요소</h3>
+### 관련 요소
 
-<p><code>&lt;var&gt;</code>와 함께 자주 사용하는 요소는 다음과 같습니다.</p>
+`<var>`와 함께 자주 사용하는 요소는 다음과 같습니다.
 
-<ul>
- <li>{{htmlelement("code")}}: HTML 코드 요소</li>
- <li>{{htmlelement("kbd")}}: HTML 키보드 입력 요소</li>
- <li>{{htmlelement("smap")}}: HTML 출력 예시 요소</li>
-</ul>
+- {{htmlelement("code")}}: HTML 코드 요소
+- {{htmlelement("kbd")}}: HTML 키보드 입력 요소
+- {{htmlelement("smap")}}: HTML 출력 예시 요소
 
-<p><code>&lt;var&gt;</code>의 의미에 맞춰 사용하지 않고, 기울임꼴을 적용하기 위해 잘못 사용한 경우, 적절한 CSS와 {{htmlelement("span")}}를 사용해야 합니다. 혹은, 의미에 맞는 요소를 다음 목록에서 골라 사용하세요.</p>
+`<var>`의 의미에 맞춰 사용하지 않고, 기울임꼴을 적용하기 위해 잘못 사용한 경우, 적절한 CSS와 {{htmlelement("span")}}를 사용해야 합니다. 혹은, 의미에 맞는 요소를 다음 목록에서 골라 사용하세요.
 
-<ul>
- <li>{{htmlelement("em")}}</li>
- <li>{{htmlelement("i")}}</li>
- <li>{{htmlelement("q")}}</li>
-</ul>
+- {{htmlelement("em")}}
+- {{htmlelement("i")}}
+- {{htmlelement("q")}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="기본_예제">기본 예제</h3>
+### 기본 예제
 
-<p><code>&lt;var&gt;</code>를 사용해 수학 등식의 변수명을 나타내는 간단한 예제입니다.</p>
+`<var>`를 사용해 수학 등식의 변수명을 나타내는 간단한 예제입니다.
 
-<pre class="brush: html"><p>A simple equation:
-  <var>x</var> = <var>y</var> + 2 </p>
-</pre>
+```html
+A simple equation:
+  x = y + 2
+```
 
-<p>{{EmbedLiveSample("기본_예제", 650, 80)}}</p>
+{{EmbedLiveSample("기본_예제", 650, 80)}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("html.elements.var")}}</p>
+{{Compat("html.elements.var")}}
