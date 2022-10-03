@@ -85,8 +85,8 @@ async function startCapture(displayMediaOptions) {
 
 ## 関連情報
 
-- [画面キャプチャ API](/en-US/docs/Web/API/Screen_Capture_API)
-- [画面キャプチャ API の使用](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [メディアキャプチャとストリーム API](/en-US/docs/Web/API/Media_Streams_API)
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [画面キャプチャ API](/ja/docs/Web/API/Screen_Capture_API)
+- [画面キャプチャ API の使用](/ja/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- [WebRTC API](/ja/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: カメラやマイクからメディアをキャプチャ
