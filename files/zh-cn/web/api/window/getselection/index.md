@@ -13,7 +13,7 @@ slug: Web/API/Window/getSelection
 const selection = window.getSelection() ;
 ```
 
-- `selection` 是一个 {{domxref("Selection")}} 对象。 如果想要将 `selection` 转换为字符串，可通过连接一个空字符串（""）或使用 {{jsxref("String.toString()")}} 方法。
+- `selection` 是一个 {{domxref("Selection")}} 对象。如果想要将 `selection` 转换为字符串，可通过连接一个空字符串（""）或使用 {{jsxref("String.toString()")}} 方法。
 
 ## 示例
 

@@ -28,7 +28,7 @@ mqList = window.matchMedia(mediaQueryString)
 
 要执行一次瞬时检查以查看文档是否与媒体查询匹配，请查看{{domxref("MediaQueryList.matches", "matches")}}属性的值，当 document 满足媒体查询条件的时候将会返回`true`。
 
-如果您需要始终了解 document 是否与媒体查询匹配，则可以查看将要传递给对象的{{domxref("MediaQueryList.change_event", "change")}} 事件 。{{domxref("Window.devicePixelRatio")}}上的文章中有一个很好的例子。
+如果您需要始终了解 document 是否与媒体查询匹配，则可以查看将要传递给对象的{{domxref("MediaQueryList.change_event", "change")}} 事件。{{domxref("Window.devicePixelRatio")}}上的文章中有一个很好的例子。
 
 ## 举例
 

@@ -10,7 +10,7 @@ original_slug: Web/HTML/Element/Input/月份
 
 {{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
 
-这个控件在各个浏览器支持都不同，目前是支持部分浏览器。在桌面上支持情况为 Chrome/Opera 和 Edge 。在移动端支持大部分现代浏览器。在其他浏览器中，这个控件会被优雅的降级到[`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text).
+这个控件在各个浏览器支持都不同，目前是支持部分浏览器。在桌面上支持情况为 Chrome/Opera 和 Edge。在移动端支持大部分现代浏览器。在其他浏览器中，这个控件会被优雅的降级到[`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text).
 
 对于那些使用不支持的浏览器的用户，Chrome / Opera 月份控制如下图所示。单击右侧的向下箭头会显示日期选择器，以便您选择日期;你必须手动输入时间。
 
@@ -62,7 +62,7 @@ Edge 的 `month` 看起来像这样的：
 
 在向服务器提交上述值的时候他们看起来像这样：`bday-month=1978-06`.
 
-你也可以使用 JavaScript 的 {{domxref("HTMLInputElement.value")}} 来设置日期的值 。例如：
+你也可以使用 JavaScript 的 {{domxref("HTMLInputElement.value")}} 来设置日期的值。例如：
 
 ```js
 var monthControl = document.querySelector('input[type="month"]');
