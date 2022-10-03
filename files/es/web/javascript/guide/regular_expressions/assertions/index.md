@@ -23,7 +23,51 @@ La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Exp
 
 ### Aserciones de tipo límite
 
-«Tabla»
+<table class="standard-table">
+    <thead>
+     <tr>
+      <th scope="col">Caracteres</th>
+      <th scope="col">Significado</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td><code>^</code></td>
+      <td>
+       <p>Coincide con el comienzo de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca inmediatamente después de un caracter de salto de línea. Por ejemplo, <code>/^A/</code> no coincide con la "A" en "alias A", pero coincide con la primera "A" en "Alias A".</p>   
+       <div class="blockIndicator note">
+       <p>Este caracter tiene un significado diferente cuando aparece al comienzo de un {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupo")}}.</p>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td><code>$</code></td>
+      <td>
+       <p>Coincide con el final de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca hasta inmediatamente antes de un caracter de salto de línea. Por ejemplo, <code>/r$/</code> no coincide con la "r" en "espera", pero sí en "esperar".</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\b</code></td>
+      <td>
+       <p>Marca el límite de una palabra. Esta es la posición en la que un caracter de palabra no va seguido o precedido por otro caracter de palabra, por ejemplo, entre una letra y un espacio. Ten en cuenta que el límite de una palabra encontrada no se incluye en el resultado. En otras palabras, la longitud de un límite de palabra encontrada es cero.</p>
+       <p>Ejemplos:</p>
+       <ul>
+        <li><code>/\bl/</code> encuentra la "l" en "luna".</li>
+        <li><code>/un\b/</code> no concuerda con "un" en "luna", porque "un" va seguido de "a", que es un carácter de palabra.</li>
+        <li><code>/una\b/</code> coincide con "una" en "luna", porque "una" es el final de la cadena, por lo tanto no va seguido de un carácter de palabra.</li>
+        <li><code>/\w\b\w/</code> nunca encontrará con nada, porque un caracter de palabra nunca puede ir seguido de un caracter que no sea de palabra y otro de palabra.</li>
+       </ul>
+       <p>Para hacer coincidir un carácter de retroceso (<code>[\b]</code>), consulta {{JSxRef("../Guide/Regular_Expressions/Clases_de_caracteres", "Clases de caracteres")}}.</p>
+      </td>
+     </tr>
+     <tr>
+      <td><code>\B</code></td>
+      <td>
+       <p>Coincide con un límite sin palabra. Esta es una posición en la que el caracter anterior y siguiente son del mismo tipo: ambos deben ser palabras o ambos deben ser no palabras, por ejemplo, entre dos letras o entre dos espacios. El principio y el final de una cadena se consideran no palabras. Igual que el límite de palabras encontradas, el límite sin palabras reconocidas tampoco se incluye en el resultado. Por ejemplo, <code>/\Bme/</code> coincide con "me" en "al mediodía", y <code>/ay\B/</code> coincide con "ay" en "posiblemente ayer".</p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
 
 ### Otras aserciones
 
