@@ -7,7 +7,7 @@ slug: Web/API/Element/createShadowRoot
 
 `Element.createShadowRoot` は[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のインスタンスを作成するために使用し案す。シャドウ DOM が作成されると、常に既存の要素に割り当てられます。シャドウ DOM が作成された後、それが割り当てられている要素を{{glossary("shadow root", "シャドウルート")}}と呼びます。
 
-> **Note:** このメソッドは非推奨となり、 {{DOMxRef("Element.attachShadow()","attachShadow()")}} に置き換えられました。
+> **メモ:** このメソッドは非推奨となり、 {{DOMxRef("Element.attachShadow()","attachShadow()")}} に置き換えられました。
 
 ## 構文
 

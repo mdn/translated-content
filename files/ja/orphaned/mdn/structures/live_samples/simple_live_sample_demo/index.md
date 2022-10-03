@@ -35,4 +35,4 @@ f.addEventListener('submit', function(ev) {
 
 {{ EmbedLiveSample('The_example', '', '', '') }}
 
-> **Note:** ローカライズしたページでは、最初の引数の値は、サンプルを含む見出しの ID と同じにしてください．
+> **メモ:** ローカライズしたページでは、最初の引数の値は、サンプルを含む見出しの ID と同じにしてください．

@@ -18,7 +18,7 @@ slug: Web/HTML/Microdata
 
 > **备注：** 有关 itemtype 属性的更多信息，请访问<http://schema.org/Thing>。
 
-微数据词汇表提供了项目的语义或含义。 Web 开发人员可以设计自定义词汇表或使用 Web 上可用的词汇表，例如广泛使用的[schema.org](http://schema.org) 词汇表。 [schema.org](http://schema.org) 提供了一组常用的标记词汇表。
+微数据词汇表提供了项目的语义或含义。Web 开发人员可以设计自定义词汇表或使用 Web 上可用的词汇表，例如广泛使用的[schema.org](http://schema.org) 词汇表。 [schema.org](http://schema.org) 提供了一组常用的标记词汇表。
 
 常用词汇：
 
@@ -47,9 +47,9 @@ slug: Web/HTML/Microdata
 
 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) – 用于向项添加属性。每个 HTML 元素都可以指定一个 itemprop 属性，其中 itemprop 由一个名称和值对组成。
 
-[itemref](/zh-CN/docs/Web/HTML/Global_attributes/itemref) – 不具有`itemscope`属性的元素的后代的属性可以使用**itemref**与项目相关联。 Itemref 提供了元素 id 列表（而不是`itemids`）以及文档中其他位置的其他属性。
+[itemref](/zh-CN/docs/Web/HTML/Global_attributes/itemref) – 不具有`itemscope`属性的元素的后代的属性可以使用**itemref**与项目相关联。Itemref 提供了元素 id 列表（而不是`itemids`）以及文档中其他位置的其他属性。
 
-[itemscope](/zh-CN/docs/Web/HTML/Global_attributes/itemscope) – Itemscope（通常）与[itemtype](/zh-CN/docs/Web/HTML/Global_attributes/itemtype)一起使用，以指定块中包含的关于特定项目的 HTML。 itemscope 创建 Item 并定义与之关联的 itemtype 的范围。 itemtype 是描述项及其属性上下文的词汇表（例如[schema.org](http://schema.org/)）的有效 URL。
+[itemscope](/zh-CN/docs/Web/HTML/Global_attributes/itemscope) – Itemscope（通常）与[itemtype](/zh-CN/docs/Web/HTML/Global_attributes/itemtype)一起使用，以指定块中包含的关于特定项目的 HTML。itemscope 创建 Item 并定义与之关联的 itemtype 的范围。itemtype 是描述项及其属性上下文的词汇表（例如[schema.org](http://schema.org/)）的有效 URL。
 
 [itemtype](/zh-CN/docs/Web/HTML/Global_attributes/itemtype) – 指定将用于在数据结构中定义 itemprop（项属性）的词汇表的 URL。 [Itemscope](/zh-CN/docs/Web/HTML/Global_attributes/itemscope) 用于设置数据结构中按 itemtype 设置的词汇表的有效范围。
 

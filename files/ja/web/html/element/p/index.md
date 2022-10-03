@@ -75,7 +75,7 @@ slug: Web/HTML/Element/p
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-> **Note:** **メモ:** `<p>` の `align` 属性は廃止済みであり、使用するべきではありません。
+> **メモ:** `<p>` の `align` 属性は廃止済みであり、使用するべきではありません。
 
 ## 例
 

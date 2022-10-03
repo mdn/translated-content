@@ -24,7 +24,7 @@ const importedNode = document.adoptNode(externalNode);
 
 このメソッドを呼び出した後、 `importedNode` および `externalNode` は同じオブジェクトになります。
 
-> **Note:** `importedNode` の {{domxref("Node.parentNode")}} は、まだ文書ツリーに挿入されていないので `null` です。
+> **メモ:** `importedNode` の {{domxref("Node.parentNode")}} は、まだ文書ツリーに挿入されていないので `null` です。
 
 ## 例
 
@@ -45,7 +45,7 @@ iframeImages.forEach(function(imgEl) {
 - {{domXref("document.importNode()")}} を使用して複製する
 - {{domXref("document.adoptNode()")}} を使用して取り込む
 
-> **Note:** **ベストプラクティス:** Firefox は現在はこの規則を強制しませんが、将来の互換性を向上するためにこの規則に従うことを強くお勧めします。
+> **メモ:** **ベストプラクティス:** Firefox は現在はこの規則を強制しませんが、将来の互換性を向上するためにこの規則に従うことを強くお勧めします。
 
 {{domXref("Node.ownerDocument")}} の問題についての詳細は、 W3C DOM FAQ を参照してください。
 
