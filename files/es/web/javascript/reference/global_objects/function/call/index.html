@@ -16,16 +16,15 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/call
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code><em>function</em>.call(<em>thisArg</em>[, <em>arg1</em>[, <em>arg2</em>[, ...]]])</code></pre>
+<pre><code><em>function</em>.call(<em>thisArg</em>[, <em>arg1</em>[, <em>arg2</em>[, ...]]])</code></pre>
 
 <h3 id="Parametros">Parametros</h3>
 
 <dl>
  <dt><code><em>thisArg</em></code> {{optional_inline}}</dt>
- <dd>El valor a usar como <code>this</code> cuando se llama a <em><code>function</code></em>.</dd>
- <dd>
+ <dd>El valor a usar como <code>this</code> cuando se llama a <em><code>function</code></em>.
  <div class="blockIndicator note">
- <p><strong>Cuidado:</strong> En ciertos casos, <code><em>thisArg</em></code> puede no ser el valor actual visto por el método.</p>
+ <p><strong>Advertencia:</strong> En ciertos casos, <code><em>thisArg</em></code> puede no ser el valor actual visto por el método.</p>
 
  <p>Si el método es una función en {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} y {{jsxref("Global_Objects/undefined", "undefined")}} serán reemplazados con el objeto global, y valores primitivos serán convertidos a objetos.</p>
  </div>

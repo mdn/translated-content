@@ -27,9 +27,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/splice
  <dt><code>start</code></dt>
  <dd>Índice donde se comenzará a cambiar el array (con 0 como origen). Si es mayor que la longitud del array, el punto inicial será la longitud del array. Si es negativo, empezará esa cantidad de elementos contando desde el final.</dd>
  <dt><code>deleteCount</code> {{optional_inline}}</dt>
- <dd>Un entero indicando el número de elementos a eliminar del array antiguo.</dd>
- <dd>Si <code>deleteCount</code> se omite, o si su valor es mayor que <code>arr.length - start</code> (esto significa, si es mayor que el número de elementos restantes del array, comenzando desde <code>start</code>), entonces todos los elementos desde <code>start</code> hasta el final del array serán eliminados.</dd>
- <dd>Si <code>deleteCount</code> es igual a 0 o negativo, no se eliminará ningún elemento. En este caso, se debe especificar al menos un nuevo elemento (ver más abajo).</dd>
+ <dd>Un entero indicando el número de elementos a eliminar del array antiguo.<br>
+ Si <code>deleteCount</code> se omite, o si su valor es mayor que <code>arr.length - start</code> (esto significa, si es mayor que el número de elementos restantes del array, comenzando desde <code>start</code>), entonces todos los elementos desde <code>start</code> hasta el final del array serán eliminados.<br>
+ Si <code>deleteCount</code> es igual a 0 o negativo, no se eliminará ningún elemento. En este caso, se debe especificar al menos un nuevo elemento (ver más abajo).</dd>
  <dt><code>item1, item2, <em>...</em></code>  {{optional_inline}}</dt>
  <dd>Los elementos que se agregarán al array, empezando en el índice <code>start</code>. Si no se especifica ningún elemento, <code>splice()</code> solamente eliminará elementos del array.</dd>
 </dl>

@@ -27,20 +27,12 @@ original_slug: Web/JavaScript/Referencia/Iteration_protocols
 
 <p>Para ser iterable, un objeto debe implementar el método <strong>@@iterator</strong>, lo cual significa que el objeto (o uno de los objetos dentro de su <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">cadena de prototipos</a>) debe tener una propiedad con un identificador {{jsxref("Symbol")}}<code style="font-style: normal;">.iterator</code>:</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Propiedad</th>
-   <th scope="col">Valor</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>[Symbol.iterator]</code></td>
-   <td>Una función sin argumentos que retorna un objeto, de acuerdo al <a href="#The_.22iterator.22_protocol">protocolo iterador</a>.</td>
-  </tr>
- </tbody>
-</table>
+<dl>
+  <dt>Propiedad</dt>
+  <dd><code>[Symbol.iterator]</code></dd>
+  <dt>Valor</dt>
+  <dd>Una función sin argumentos que retorna un objeto, de acuerdo al <a href="#The_.22iterator.22_protocol">protocolo iterador</a>.</dd>
+</dl>
 
 <p>Siempre que un objeto necesite ser iterado (como al comienzo de un <code>for..of</code> loop), su método <code>@@iterator</code> es llamado sin argumentos, y el <strong>iterador</strong> retornado es usado para obtener los valores a ser iterados.</p>
 
@@ -50,15 +42,11 @@ original_slug: Web/JavaScript/Referencia/Iteration_protocols
 
 <p>Un objeto es un iterador cuando este implementa un método <code><strong>next()</strong></code> con la siguiente semántica:</p>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Propiedad</th>
-   <th scope="col">Valor</th>
-  </tr>
-  <tr>
-   <td><code>next</code></td>
-   <td>
+<dl>
+  <dt>Propiedad</dt>
+  <dd><code>next</code></dd>
+  <dt>Valor</dt>
+  <dd>
     <p>Una función sin argumentos que retorna un objeto con dos propiedades:</p>
 
     <ul>
@@ -71,10 +59,8 @@ original_slug: Web/JavaScript/Referencia/Iteration_protocols
      </li>
      <li><code>value</code> - cualquier valor de JavaScript retornado por el iterador. Puede ser omitido cuando el valor de <code>done</code> es <code>true</code>.</li>
     </ul>
-   </td>
-  </tr>
- </tbody>
-</table>
+  </dd>
+</dl>
 
 <p>Algunos iteradores son a su vez iterables:</p>
 

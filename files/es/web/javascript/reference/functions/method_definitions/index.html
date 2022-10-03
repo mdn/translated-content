@@ -50,7 +50,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/Method_definitions
 
 <p>Los <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">métodos generadores</a> también pueden definirse usando la sintaxis abreviada. Note que el asterisco (*) en la sintaxis abreviada debe estar antes del nombre de propiedad del generador. Esto es, <code>* g(){}</code> funcionará, pero <code>g *(){}</code> no.</p>
 
-<pre class="brush: js;highlight[12]">// Usando una propiedad con nombre (pre-ES6)
+<pre>// Usando una propiedad con nombre (pre-ES6)
 var obj2 = {
   g: function*() {
     var index = 0;
@@ -91,7 +91,7 @@ new obj.g; // TypeError: obj.g no es un constructor (cambiado en ES2016)
 
 <h3 id="Caso_de_prueba_simple">Caso de prueba simple</h3>
 
-<pre class="brush: js;highlight[3]">var obj = {
+<pre>var obj = {
   a : "foo",
   b(){ return this.a; }
 };
@@ -102,7 +102,7 @@ console.log(obj.b()); // "foo"
 
 <p>La sintaxis abreviada también soporta nombres de propiedades computados.</p>
 
-<pre class="brush: js;highlight[4]">var bar = {
+<pre>var bar = {
   foo0 : function (){return 0;},
   foo1(){return 1;},
   ["foo" + 2](){return 2;},

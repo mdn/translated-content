@@ -109,22 +109,22 @@ let bob = a =&gt; a + 100;</pre>
 
 <h3 id="Sintaxis_básica">Sintaxis básica</h3>
 
-<p class="syntaxbox notranslate">Un parámetro. Con una expresión simple no se necesita <code>return</code>:</p>
+<p>Un parámetro. Con una expresión simple no se necesita <code>return</code>:</p>
 
 <pre class="brush: js notranslate">param =&gt; expression</pre>
 
-<p class="syntaxbox notranslate">Varios parámetros requieren paréntesis. Con una expresión simple no se necesita <code>return</code>:</p>
+<p>Varios parámetros requieren paréntesis. Con una expresión simple no se necesita <code>return</code>:</p>
 
 <pre class="brush: js notranslate">(param1, paramN) =&gt; expression</pre>
 
-<p class="syntaxbox notranslate">Las declaraciones de varias líneas requieren corchetes y <code>return</code>:</p>
+<p>Las declaraciones de varias líneas requieren corchetes y <code>return</code>:</p>
 
 <pre class="brush: js notranslate">param =&gt; {
   let a = 1;
   return a + b;
 }</pre>
 
-<p class="syntaxbox notranslate">Varios parámetros requieren paréntesis. Las declaraciones de varias líneas requieren corchetes y <code>return</code>:</p>
+<p>Varios parámetros requieren paréntesis. Las declaraciones de varias líneas requieren corchetes y <code>return</code>:</p>
 
 <pre class="brush: js notranslate">(param1, paramN) =&gt; {
    let a = 1;
@@ -133,15 +133,15 @@ let bob = a =&gt; a + 100;</pre>
 
 <h3 id="Sintaxis_avanzada">Sintaxis avanzada</h3>
 
-<p class="syntaxbox notranslate">Para devolver una expresión de objeto literal, se requieren paréntesis alrededor de la expresión:</p>
+<p>Para devolver una expresión de objeto literal, se requieren paréntesis alrededor de la expresión:</p>
 
 <pre class="brush: js notranslate">params =&gt; ({foo: "a"}) // devuelve el objeto {foo: "a"}</pre>
 
-<p class="syntaxbox notranslate">Los {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} son compatibles:</p>
+<p>Los {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} son compatibles:</p>
 
 <pre class="brush: js notranslate">(a, b, ...r) =&gt; expression</pre>
 
-<p class="syntaxbox notranslate">Se admiten los {{JSxRef("Funciones/Parametros_por_defecto", "parámetros predeterminados")}}:</p>
+<p>Se admiten los {{JSxRef("Funciones/Parametros_por_defecto", "parámetros predeterminados")}}:</p>
 
 <pre class="brush: js notranslate">(a=400, b=20, c) =&gt; expression</pre>
 
