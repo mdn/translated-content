@@ -8,91 +8,88 @@ tags:
   - Request method
 translation_of: Web/HTTP/Methods/PATCH
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>El <strong>método HTTP PATCH</strong> aplica modificaciones parciales a un recurso.</p>
+El **método HTTP PATCH** aplica modificaciones parciales a un recurso.
 
-<p>El método HTTP PUT únicamente permite reemplazar completamente un documento. A diferencia de <code>PUT</code>, el método <code>PATCH</code> no es idempotente, esto quiere decir que peticiones identicas sucesivas <em>pueden </em>tener efectos diferentes. Sin embargo,  es posible emitir peticiones <code>PATCH</code> de tal forma que sean idempotentes.</p>
+El método HTTP PUT únicamente permite reemplazar completamente un documento. A diferencia de `PUT`, el método `PATCH` no es idempotente, esto quiere decir que peticiones identicas sucesivas _pueden_ tener efectos diferentes. Sin embargo, es posible emitir peticiones `PATCH` de tal forma que sean idempotentes.
 
-<p><code>PATCH</code> (al igual que <code>POST</code>) <em>puede </em>provocar efectos secundarios a otros recursos.</p>
+`PATCH` (al igual que `POST`) _puede_ provocar efectos secundarios a otros recursos.
 
-<p>Para averiguar si un servidor soporta <code>PATCH</code>, el servidor puede notificar su compatibilidad al añadirlo a la lista en el header: {{HTTPHeader("Allow")}} o {{HTTPHeader("Access-Control-Allow-Methods")}} (para CORS).</p>
+Para averiguar si un servidor soporta `PATCH`, el servidor puede notificar su compatibilidad al añadirlo a la lista en el header: {{HTTPHeader("Allow")}} o {{HTTPHeader("Access-Control-Allow-Methods")}} (para CORS).
 
-<p>Otra indicación (implícita) de que las peticiones PATCH son permitidas, es la presencia del header: {{HTTPHeader("Accept-Patch")}}, el cual especifica los formatos de documento patch aceptados por el servidor. </p>
+Otra indicación (implícita) de que las peticiones PATCH son permitidas, es la presencia del header: {{HTTPHeader("Accept-Patch")}}, el cual especifica los formatos de documento patch aceptados por el servidor.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Petición con cuerpo</th>
-   <td>Sí</td>
-  </tr>
-  <tr>
-   <th scope="row">Respuesta exitosa con cuerto</th>
-   <td>Sí</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Seguro")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotente")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitido en <a href="/en-US/docs/Web/Guide/HTML/Forms">formularios HTML</a></th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Petición con cuerpo</th>
+      <td>Sí</td>
+    </tr>
+    <tr>
+      <th scope="row">Respuesta exitosa con cuerto</th>
+      <td>Sí</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Seguro")}}</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotente")}}</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Cacheable")}}</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Permitido en
+        <a href="/en-US/docs/Web/Guide/HTML/Forms">formularios HTML</a>
+      </th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate">PATCH /file.txt HTTP/1.1
-</pre>
+```
+PATCH /file.txt HTTP/1.1
+```
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Petición">Petición</h3>
+### Petición
 
-<pre class="line-numbers  language-html notranslate">PATCH /file.txt HTTP/1.1
+```html
+PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
 If-Match: "e0023aa4e"
 Content-Length: 100
 
-[description of changes]</pre>
+[description of changes]
+```
 
-<h3 id="Respuesta">Respuesta</h3>
+### Respuesta
 
-<p>Una respuesta exitosa es indicada con un código de respuesta {{HTTPStatus("204")}}, porque la respuesta no tiene mensaje en el body. (el cual tendría una respuesta con el código 200). Tenga en cuenta que también se pueden utilizar otros códigos.</p>
+Una respuesta exitosa es indicada con un código de respuesta {{HTTPStatus("204")}}, porque la respuesta no tiene mensaje en el body. (el cual tendría una respuesta con el código 200). Tenga en cuenta que también se pueden utilizar otros códigos.
 
-<pre>HTTP/1.1 204 No Content
+```
+HTTP/1.1 204 No Content
 Content-Location: /file.txt
-ETag: "e0023aa4f"</pre>
+ETag: "e0023aa4f"
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("5789", "PATCH")}}</td>
-   <td>PATCH Method for HTTP</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                   | Título                |
+| -------------------------------- | --------------------- |
+| {{RFC("5789", "PATCH")}} | PATCH Method for HTTP |
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{HTTPStatus("204")}}</li>
- <li>{{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}</li>
- <li>{{HTTPHeader("Accept-Patch")}} – specifies the patch document formats accepted by the server.</li>
-</ul>
+- {{HTTPStatus("204")}}
+- {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}
+- {{HTTPHeader("Accept-Patch")}} – specifies the patch document formats accepted by the server.

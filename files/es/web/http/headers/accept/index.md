@@ -8,92 +8,82 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/Accept
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><font face="Open Sans, arial, sans-serif">La cabecera de pedido </font><strong>Accept</strong></code> anuncia que tipo de contenido el cliente puede procesar, expresado como un tipo <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a>. Usando <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociación de contenido</a>, el servidor selecciona una de las propuestas , la utiliza e informa al cliente de la elección a través de  la cabecera de respuesta {{HTTPHeader("Content-Type")}} .</p>
+`La cabecera de pedido Accept` anuncia que tipo de contenido el cliente puede procesar, expresado como un tipo [MIME](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types). Usando [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation), el servidor selecciona una de las propuestas , la utiliza e informa al cliente de la elección a través de la cabecera de respuesta {{HTTPHeader("Content-Type")}} .
 
-<p>Los navegadores configuran los valores adecuados en dependencia del contexto donde se ha hecho el pedido, por ejemplo: al solicitar una hoja de estilos CSS es configurado un valor diferente que cuando se solicita una imagen, un video o un script.</p>
+Los navegadores configuran los valores adecuados en dependencia del contexto donde se ha hecho el pedido, por ejemplo: al solicitar una hoja de estilos CSS es configurado un valor diferente que cuando se solicita una imagen, un video o un script.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de Cabecera</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple header", "CORS-safelisted request-header")}}</th>
-   <td>si</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Tipo de Cabecera</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Simple header", "CORS-safelisted request-header")}}
+      </th>
+      <td>si</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">Accept: &lt;MIME_type&gt;/&lt;MIME_subtype&gt;
-Accept: &lt;MIME_type&gt;/*
+```
+Accept: <MIME_type>/<MIME_subtype>
+Accept: <MIME_type>/*
 Accept: */*
 
 // Multiples tipos, priorizados con {{glossary("quality values", "quality value")}} sintaxis:
-Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8</pre>
+Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+```
 
-<h2 id="Directivas">Directivas</h2>
+## Directivas
 
-<dl>
- <dt><code>&lt;MIME_type&gt;/&lt;MIME_subtype&gt;</code></dt>
- <dd>Un único y preciso tipo <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a>, como <code>text/html</code>.</dd>
- <dt><code>&lt;MIME_type&gt;/*</code></dt>
- <dd>Un tipo MIME, pero con cualquier subtipo.
- Por ejmplo, image/* comincide con:
- <ul>
-  <li>image/png</li>
-  <li>image/svg</li>
-  <li>image/gif<span> </span></li>
- </ul>
- </dd>
- <dt><code>*/*</code></dt>
- <dd>Culaquier tipo MIME</dd>
- <dt><code>;q=</code> (donde <em>q</em> es la importancia o peso)</dt>
- <dd>Culaquier valor es colocado en orden de preferencia, expresada usando un <a href="/en-US/docs/Glossary/Quality_values">valor de calidad</a> llamado <em>weight</em> (<em>peso</em> en español).</dd>
-</dl>
+- `<MIME_type>/<MIME_subtype>`
+  - : Un único y preciso tipo [MIME](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types), como `text/html`.
+- `<MIME_type>/*`
 
-<h2 id="Ejemplos">Ejemplos</h2>
+  - : Un tipo MIME, pero con cualquier subtipo.
+    Por ejmplo, image/\* comincide con:
 
-<pre>Accept: text/html
+    - image/png
+    - image/svg
+    - image/gif
+
+- `*/*`
+  - : Culaquier tipo MIME
+- `;q=` (donde _q_ es la importancia o peso)
+  - : Culaquier valor es colocado en orden de preferencia, expresada usando un [valor de calidad](/es/docs/Glossary/Quality_values) llamado _weight_ (_peso_ en español).
+
+## Ejemplos
+
+```
+Accept: text/html
 
 Accept: image/*
 
 Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Titulo</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Accept", "5.3.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                               | Titulo                                                        |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "Accept", "5.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
 
-<h2 id="Compatibilidad_con_Navegadores">Compatibilidad con Navegadores</h2>
+## Compatibilidad con Navegadores
 
+{{Compat("http.headers.Accept")}}
 
+## Tambien Ver
 
-<p>{{Compat("http.headers.Accept")}}</p>
-
-<h2 id="Tambien_Ver">Tambien Ver</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Content_negotiation">Negociación de Contenido HTTP</a></li>
- <li>Cabecera con el resultado de la negociación de contenido: {{HTTPHeader("Content-Type")}}</li>
- <li>Otras cabeceras similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}</li>
-</ul>
+- [Negociación de Contenido HTTP](/es/docs/Web/HTTP/Content_negotiation)
+- Cabecera con el resultado de la negociación de contenido: {{HTTPHeader("Content-Type")}}
+- Otras cabeceras similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}

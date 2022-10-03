@@ -14,35 +14,31 @@ tags:
   - solución de problemas
 translation_of: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="Razón">Razón</h2>
+## Razón
 
-<pre class="syntaxbox">Razón: La solicitud CORS no resultó exitosa
-</pre>
+```
+Razón: La solicitud CORS no resultó exitosa
+```
 
-<h2 id="¿Qué_salió_mal">¿Qué salió mal?</h2>
+## ¿Qué salió mal?
 
-<p>El pedido {{Glossary("HTTP")}} que hace uso de CORS falló porque la conexión HTTP falló a nivel red o protocolo. El error no está relacionado directamente con CORS, pero es un error de red fundamental de algún tipo</p>
+El pedido {{Glossary("HTTP")}} que hace uso de CORS falló porque la conexión HTTP falló a nivel red o protocolo. El error no está relacionado directamente con CORS, pero es un error de red fundamental de algún tipo
 
-<p>En muchos casos, es causado por un complemento del navegador (Ej, un bloqueador de anuncios o un protector de privacidad) que bloquea la solicitud.</p>
+En muchos casos, es causado por un complemento del navegador (Ej, un bloqueador de anuncios o un protector de privacidad) que bloquea la solicitud.
 
-<p>Otras causas posibles:</p>
+Otras causas posibles:
 
-<ul>
- <li><span> </span>Intentar acceder a un recurso <code>https</code> que tenga un certificado no válido, causará este error.</li>
- <li>Intentar acceder a un recurso <code>http</code> desde una página con un origen <code>https</code> también causará este error.</li>
- <li>A partir de Firefox 68, las páginas <code>https</code> no pueden acceder a <code>http://localhost</code>, aunque esto puede ser modificado por el <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1488740">Error 1488740</a>.</li>
- <li>El servidor no respondió a la solicitud actual (incluso si respondió la <a href="/es/docs/Glossary/Preflight_peticion">solicitud Preflight</a>. Un escenario podría ser un servicio HTTP en desarrollo que "entró en pánico" sin devolver ningún dato.<span> </span></li>
-</ul>
+- Intentar acceder a un recurso `https` que tenga un certificado no válido, causará este error.
+- Intentar acceder a un recurso `http` desde una página con un origen `https` también causará este error.
+- A partir de Firefox 68, las páginas `https` no pueden acceder a `http://localhost`, aunque esto puede ser modificado por el [Error 1488740](https://bugzilla.mozilla.org/show_bug.cgi?id=1488740).
+- El servidor no respondió a la solicitud actual (incluso si respondió la [solicitud Preflight](/es/docs/Glossary/Preflight_peticion). Un escenario podría ser un servicio HTTP en desarrollo que "entró en pánico" sin devolver ningún dato.
 
-<dl>
-</dl>
+<!---->
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">Errores CORS</a></li>
- <li>Glosario: {{Glossary("CORS")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">Introducción a CORS</a></li>
-</ul>
+- [Errores CORS](/es/docs/Web/HTTP/CORS/Errors)
+- Glosario: {{Glossary("CORS")}}
+- [Introducción a CORS](/es/docs/Web/HTTP/CORS)

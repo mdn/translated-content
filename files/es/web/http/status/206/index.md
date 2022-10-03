@@ -3,34 +3,39 @@ title: 206 Partial Content
 slug: Web/HTTP/Status/206
 translation_of: Web/HTTP/Status/206
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>El  codigo de respuesta con estado exitoso HTTP <strong><code>206 Partial Content</code></strong> indica que la solicitud se ha realizado con exito y el cuerpo contiene los rangos solicitados de la data, como esta descrito en la cabecera  {{HTTPHeader("Range")}} de la solicitud.</p>
+El codigo de respuesta con estado exitoso HTTP **`206 Partial Content`** indica que la solicitud se ha realizado con exito y el cuerpo contiene los rangos solicitados de la data, como esta descrito en la cabecera {{HTTPHeader("Range")}} de la solicitud.
 
-<p>Si solo hay un rango, el {{HTTPHeader("Content-Type")}} de toda la respuesta es asignada a un tipo de documento, y un {{HTTPHeader("Content-Range")}} es provisto.</p>
+Si solo hay un rango, el {{HTTPHeader("Content-Type")}} de toda la respuesta es asignada a un tipo de documento, y un {{HTTPHeader("Content-Range")}} es provisto.
 
-<p>Si muchos rangos son retornados, el {{HTTPHeader("Content-Type")}}  es asignado a <code>multipart/byteranges</code> y cada fragmento cubre un rango, con {{HTTPHeader("Content-Range")}} y  {{HTTPHeader("Content-Type")}} describiendolo .</p>
+Si muchos rangos son retornados, el {{HTTPHeader("Content-Type")}} es asignado a `multipart/byteranges` y cada fragmento cubre un rango, con {{HTTPHeader("Content-Range")}} y {{HTTPHeader("Content-Type")}} describiendolo .
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">206 Partial Content</pre>
+```
+206 Partial Content
+```
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Una respuesta conteniendo un solo rango:</p>
+Una respuesta conteniendo un solo rango:
 
-<pre>HTTP/1.1 206 Partial Content
+```
+HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
 Content-Range: bytes 21010-47021/47022
 Content-Length: 26012
 Content-Type: image/gif
 
-... 26012 bytes of partial image data ...</pre>
+... 26012 bytes of partial image data ...
+```
 
-<p>Una respuesta conteniendo varios rangos:</p>
+Una respuesta conteniendo varios rangos:
 
-<pre>HTTP/1.1 206 Partial Content
+```
+HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
 Content-Length: 1741
@@ -46,32 +51,22 @@ Content-Type: application/pdf
 Content-Range: bytes 4590-7999/8000
 
 ...the second range
---String_separator--</pre>
+--String_separator--
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7233", "206 Partial Content" , "4.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                | Title                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------ |
+| {{RFC("7233", "206 Partial Content" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<p>{{Compat("http.status.206")}}</p>
+{{Compat("http.status.206")}}
 
-<h2 id="Mira_también">Mira también</h2>
+## Mira también
 
-<ul>
- <li>{{HTTPHeader("If-Range")}}</li>
- <li>{{HTTPHeader("Range")}}</li>
- <li>{{HTTPHeader("Content-Range")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Range")}}
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Content-Type")}}

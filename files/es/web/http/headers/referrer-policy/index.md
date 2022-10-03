@@ -8,28 +8,29 @@ tags:
   - privacidad
 translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La cabecera <strong><code>Referrer-Policy</code></strong> de HTTP determina qué datos de referente, de entre los que se envían con la cabecera {{HTTPHeader("Referer")}}, deben incluirse con las solicitudes realizadas.</p>
+La cabecera **`Referrer-Policy`** de HTTP determina qué datos de referente, de entre los que se envían con la cabecera {{HTTPHeader("Referer")}}, deben incluirse con las solicitudes realizadas.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabecera</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Tipo de cabecera</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p>Observe que {{HTTPHeader("Referer")}} es una falta de ortografía; en inglés, la palabra correcta es <em>referrer</em>. La cabecera <code>Referrer-Policy</code> no contiene esta falta.</p>
+Observe que {{HTTPHeader("Referer")}} es una falta de ortografía; en inglés, la palabra correcta es _referrer_. La cabecera `Referrer-Policy` no contiene esta falta.
 
-<pre class="syntaxbox">Referrer-Policy: no-referrer
+```
+Referrer-Policy: no-referrer
 Referrer-Policy: no-referrer-when-downgrade
 Referrer-Policy: origin
 Referrer-Policy: origin-when-cross-origin
@@ -37,199 +38,83 @@ Referrer-Policy: same-origin
 Referrer-Policy: strict-origin
 Referrer-Policy: strict-origin-when-cross-origin
 Referrer-Policy: unsafe-url
-</pre>
+```
 
-<h2 id="Directivas">Directivas</h2>
+## Directivas
 
-<dl>
- <dt>no-referrer</dt>
- <dd>La cabecera {{HTTPHeader("Referer")}} se omitirá en su totalidad. No se enviará ningún dato de referente junto con las solicitudes.</dd>
- <dt>no-referrer-when-downgrade (predeterminado)</dt>
- <dd>Este es el comportamiento predeterminado del agente de usuario si no se especifica ninguna directiva. El origen se enviará como referente cuando el nivel de seguridad del protocolo permanece igual (HTTPS → HTTPS), pero no se enviará a destinos menos seguros (HTTPS → HTTP).</dd>
- <dt>origin</dt>
- <dd>Se enviará únicamente el origen del documento como referente en todos los casos. El documento <code>https://ejemplo.com/pagina.html</code> enviará el referente <code>https://ejemplo.com/</code>.</dd>
- <dt>origin-when-cross-origin</dt>
- <dd>Se enviará un URL completo al realizarse una solicitud de origen equivalente, pero únicamente el origen para otros casos.</dd>
- <dt>same-origin</dt>
- <dd>Se enviará un referente para <a href="/en-US/docs/Web/Security/Same-origin_policy">orígenes de sitio equivalente</a>, pero las solicitudes de origen transversal no contendrán ningún dato de referente.</dd>
- <dt>strict-origin</dt>
- <dd>Solo se enviará el origen del documento como referente a destinos que <em>a priori</em> son igual de seguros (HTTPS → HTTPS), pero no lo recibirán destinos menos seguros (HTTPS → HTTP).</dd>
- <dt>strict-origin-when-cross-origin</dt>
- <dd>Se enviará un URL completo al realizarse una solicitud de origen equivalente, se enviará únicamente el origen del documento a destinos igual de seguros <em>a priori</em> (HTTPS → HTTPS) y no se enviará ninguna cabecera a destinos menos seguros (HTTPS → HTTP).</dd>
- <dt>unsafe-url</dt>
- <dd>Se enviará un URL completo al realizarse una solicitud de origen equivalente o de origen transversal.
- <div class="note">Esta directiva filtrará los orígenes y las rutas de acceso de recursos protegidos por TLS a orígenes inseguros. Estudie atentamente el impacto resultante de esta configuración.</div>
- </dd>
-</dl>
+- no-referrer
+  - : La cabecera {{HTTPHeader("Referer")}} se omitirá en su totalidad. No se enviará ningún dato de referente junto con las solicitudes.
+- no-referrer-when-downgrade (predeterminado)
+  - : Este es el comportamiento predeterminado del agente de usuario si no se especifica ninguna directiva. El origen se enviará como referente cuando el nivel de seguridad del protocolo permanece igual (HTTPS → HTTPS), pero no se enviará a destinos menos seguros (HTTPS → HTTP).
+- origin
+  - : Se enviará únicamente el origen del documento como referente en todos los casos. El documento `https://ejemplo.com/pagina.html` enviará el referente `https://ejemplo.com/`.
+- origin-when-cross-origin
+  - : Se enviará un URL completo al realizarse una solicitud de origen equivalente, pero únicamente el origen para otros casos.
+- same-origin
+  - : Se enviará un referente para [orígenes de sitio equivalente](/es/docs/Web/Security/Same-origin_policy), pero las solicitudes de origen transversal no contendrán ningún dato de referente.
+- strict-origin
+  - : Solo se enviará el origen del documento como referente a destinos que _a priori_ son igual de seguros (HTTPS → HTTPS), pero no lo recibirán destinos menos seguros (HTTPS → HTTP).
+- strict-origin-when-cross-origin
+  - : Se enviará un URL completo al realizarse una solicitud de origen equivalente, se enviará únicamente el origen del documento a destinos igual de seguros _a priori_ (HTTPS → HTTPS) y no se enviará ninguna cabecera a destinos menos seguros (HTTPS → HTTP).
+- unsafe-url
 
-<h2 id="Ejemplos">Ejemplos</h2>
+  - : Se enviará un URL completo al realizarse una solicitud de origen equivalente o de origen transversal.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Directiva</th>
-   <th scope="col">Documento</th>
-   <th scope="col">Navegación a</th>
-   <th scope="col">Referente</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><strong>no-referrer</strong></code></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td>cualquier dominio o ruta de acceso</td>
-   <td>ningún referente</td>
-  </tr>
-  <tr>
-   <td><strong><code>no-referrer-when-downgrade</code></strong></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td>https://ejemplo.com/otrapagina.html</td>
-   <td>https://ejemplo.com/pagina.html</td>
-  </tr>
-  <tr>
-   <td><strong><code>no-referrer-when-downgrade</code></strong></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td>https://mozilla.org</td>
-   <td>https://ejemplo.com/pagina.html</td>
-  </tr>
-  <tr>
-   <td><strong><code>no-referrer-when-downgrade</code></strong></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td><strong>http</strong>://ejemplo.org</td>
-   <td>ningún referente</td>
-  </tr>
-  <tr>
-   <td><strong><code>origin</code></strong></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td>cualquier dominio o ruta de acceso</td>
-   <td>https://ejemplo.com/</td>
-  </tr>
-  <tr>
-   <td><code><strong>origin-when-cross-origin</strong></code></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td>https://ejemplo.com/otrapagina.html</td>
-   <td>https://ejemplo.com/pagina.html</td>
-  </tr>
-  <tr>
-   <td><code><strong>origin-when-cross-origin</strong></code></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td>https://mozilla.org</td>
-   <td>https://ejemplo.com/</td>
-  </tr>
-  <tr>
-   <td><code><strong>origin-when-cross-origin</strong></code></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td><strong>http</strong>://ejemplo.com/pagina.html</td>
-   <td>https://ejemplo.com/</td>
-  </tr>
-  <tr>
-   <td><strong><code>same-origin</code></strong></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td>https://ejemplo.com/otrapagina.html</td>
-   <td>https://ejemplo.com/pagina.html</td>
-  </tr>
-  <tr>
-   <td><strong><code>same-origin</code></strong></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td>https://mozilla.org</td>
-   <td>ningún referente</td>
-  </tr>
-  <tr>
-   <td><strong><code>strict-origin</code></strong></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td>https://mozilla.org</td>
-   <td>https://ejemplo.com/</td>
-  </tr>
-  <tr>
-   <td><strong><code>strict-origin</code></strong></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td><strong>http</strong>://ejemplo.org</td>
-   <td>ningún referente</td>
-  </tr>
-  <tr>
-   <td><strong><code>strict-origin</code></strong></td>
-   <td><strong>http</strong>://ejemplo.com/pagina.html</td>
-   <td>cualquier dominio o ruta de acceso</td>
-   <td>http://ejemplo.com/</td>
-  </tr>
-  <tr>
-   <td><strong><code>strict-origin-when-cross-origin</code></strong></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td>https://ejemplo.com/otrapagina.html</td>
-   <td>https://ejemplo.com/pagina.html</td>
-  </tr>
-  <tr>
-   <td><strong><code>strict-origin-when-cross-origin</code></strong></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td>https://mozilla.org</td>
-   <td>https://ejemplo.com/</td>
-  </tr>
-  <tr>
-   <td><strong><code>strict-origin-when-cross-origin</code></strong></td>
-   <td>https://ejemplo.com/pagina.html</td>
-   <td><strong>http</strong>://example.org</td>
-   <td>ningún referente</td>
-  </tr>
-  <tr>
-   <td><strong><code>unsafe-url</code></strong></td>
-   <td>https://ejemplo.com/pagina.html?q=123</td>
-   <td>cualquier dominio o ruta de acceso</td>
-   <td>https://ejemplo.com/pagina.html?q=123</td>
-  </tr>
- </tbody>
-</table>
+    > **Nota:** Esta directiva filtrará los orígenes y las rutas de acceso de recursos protegidos por TLS a orígenes inseguros. Estudie atentamente el impacto resultante de esta configuración.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Ejemplos
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-header">Directiva de referentes</a></td>
-   <td>Anteproyecto de editores</td>
-  </tr>
- </tbody>
-</table>
+| Directiva                             | Documento                              | Navegación a                         | Referente                              |
+| ------------------------------------- | -------------------------------------- | ------------------------------------ | -------------------------------------- |
+| **`no-referrer`**                     | https\://ejemplo.com/pagina.html       | cualquier dominio o ruta de acceso   | ningún referente                       |
+| **`no-referrer-when-downgrade`**      | https\://ejemplo.com/pagina.html       | https\://ejemplo.com/otrapagina.html | https\://ejemplo.com/pagina.html       |
+| **`no-referrer-when-downgrade`**      | https\://ejemplo.com/pagina.html       | https\://mozilla.org                 | https\://ejemplo.com/pagina.html       |
+| **`no-referrer-when-downgrade`**      | https\://ejemplo.com/pagina.html       | **http**://ejemplo.org               | ningún referente                       |
+| **`origin`**                          | https\://ejemplo.com/pagina.html       | cualquier dominio o ruta de acceso   | https\://ejemplo.com/                  |
+| **`origin-when-cross-origin`**        | https\://ejemplo.com/pagina.html       | https\://ejemplo.com/otrapagina.html | https\://ejemplo.com/pagina.html       |
+| **`origin-when-cross-origin`**        | https\://ejemplo.com/pagina.html       | https\://mozilla.org                 | https\://ejemplo.com/                  |
+| **`origin-when-cross-origin`**        | https\://ejemplo.com/pagina.html       | **http**://ejemplo.com/pagina.html   | https\://ejemplo.com/                  |
+| **`same-origin`**                     | https\://ejemplo.com/pagina.html       | https\://ejemplo.com/otrapagina.html | https\://ejemplo.com/pagina.html       |
+| **`same-origin`**                     | https\://ejemplo.com/pagina.html       | https\://mozilla.org                 | ningún referente                       |
+| **`strict-origin`**                   | https\://ejemplo.com/pagina.html       | https\://mozilla.org                 | https\://ejemplo.com/                  |
+| **`strict-origin`**                   | https\://ejemplo.com/pagina.html       | **http**://ejemplo.org               | ningún referente                       |
+| **`strict-origin`**                   | **http**://ejemplo.com/pagina.html     | cualquier dominio o ruta de acceso   | http\://ejemplo.com/                   |
+| **`strict-origin-when-cross-origin`** | https\://ejemplo.com/pagina.html       | https\://ejemplo.com/otrapagina.html | https\://ejemplo.com/pagina.html       |
+| **`strict-origin-when-cross-origin`** | https\://ejemplo.com/pagina.html       | https\://mozilla.org                 | https\://ejemplo.com/                  |
+| **`strict-origin-when-cross-origin`** | https\://ejemplo.com/pagina.html       | **http**://example.org               | ningún referente                       |
+| **`unsafe-url`**                      | https\://ejemplo.com/pagina.html?q=123 | cualquier dominio o ruta de acceso   | https\://ejemplo.com/pagina.html?q=123 |
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Especificaciones
 
-<p>{{Compat("http.headers.Referrer-Policy")}}</p>
+| Especificación                                                                                     | Estado                   |
+| -------------------------------------------------------------------------------------------------- | ------------------------ |
+| [Directiva de referentes](https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-header) | Anteproyecto de editores |
 
-<div class="note">
-<p><strong>Notas</strong>:</p>
+## Compatibilidad entre navegadores
 
-<ul>
- <li>A partir de la versión 53 en adelante, Gecko incluye una preferencia de <code>about:config</code> para permitir a los usuarios definir su directiva <code>Referrer-Policy</code> predeterminada: <span> <code>network.http.referer.userControlPolicy</code>.</span></li>
- <li>A partir de la versión 59 (consulte el informe n.º <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=587523">587523</a>), esta preferencia ha cambiado de nombre: ahora son <code>network.http.referer.defaultPolicy</code> y <code>network.http.referer.defaultPolicy.pbmode</code>.</li>
-</ul>
+{{Compat("http.headers.Referrer-Policy")}}
 
-<p>Los valores posibles son:</p>
+> **Nota:** **Notas**:
+>
+> - A partir de la versión 53 en adelante, Gecko incluye una preferencia de `about:config` para permitir a los usuarios definir su directiva `Referrer-Policy` predeterminada: `network.http.referer.userControlPolicy`.
+> - A partir de la versión 59 (consulte el informe n.º [587523](https://bugzilla.mozilla.org/show_bug.cgi?id=587523)), esta preferencia ha cambiado de nombre: ahora son `network.http.referer.defaultPolicy` y `network.http.referer.defaultPolicy.pbmode`.
+>
+> Los valores posibles son:
+>
+> - 0: `no-referrer`
+> - 1: `same-origin`
+> - 2: `strict-origin-when-cross-origin`
+> - 3: `no-referrer-when-downgrade` (la predeterminada)
 
-<ul>
- <li>0: <code>no-referrer</code></li>
- <li>1: <code>same-origin</code></li>
- <li>2: <code>strict-origin-when-cross-origin</code></li>
- <li>3: <code>no-referrer-when-downgrade</code> (la predeterminada)</li>
-</ul>
-</div>
+## Véase también
 
-<h2 id="Véase_también">Véase también</h2>
+- {{interwiki("wikipedia", "HTTP_referer", "Referente HTTP en Wikipedia")}}
+- Otras maneras de definir una directiva de referentes:
 
-<ul>
- <li>{{interwiki("wikipedia", "HTTP_referer", "Referente HTTP en Wikipedia")}}</li>
- <li>Otras maneras de definir una directiva de referentes:
-  <ul>
-   <li>Un elemento {{HTMLElement("meta")}} con un <a href="/en-US/docs/Web/HTML/Element/meta#attr-name">nombre de <code>referrer</code></a>.</li>
-   <li>Un atributo <code>referrerpolicy</code> en un elemento {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} o {{HTMLElement("link")}}.</li>
-   <li>La <a href="/en-US/docs/Web/HTML/Link_types">relación de enlace</a> <code>noreferrer</code> en un elemento a, area o link  (<code>rel="noreferrer"</code>).</li>
-   <li>Al utilizar <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>: {{domxref("Request.referrerPolicy")}}</li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Directiva de origen equivalente</a></li>
- <li>
-  <p><a href="https://blog.mozilla.org/security/2015/01/21/meta-referrer/">«Un mayor control sobre sus referentes» en el blog de seguridad de Mozilla</a></p>
- </li>
-</ul>
+  - Un elemento {{HTMLElement("meta")}} con un [nombre de `referrer`](/es/docs/Web/HTML/Element/meta#attr-name).
+  - Un atributo `referrerpolicy` en un elemento {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} o {{HTMLElement("link")}}.
+  - La [relación de enlace](/es/docs/Web/HTML/Link_types) `noreferrer` en un elemento a, area o link (`rel="noreferrer"`).
+  - Al utilizar [Fetch](/es/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
+
+- [Directiva de origen equivalente](/es/docs/Web/Security/Same-origin_policy)
+- [«Un mayor control sobre sus referentes» en el blog de seguridad de Mozilla](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

@@ -4,85 +4,78 @@ slug: Web/HTTP/CORS
 translation_of: Web/HTTP/CORS
 original_slug: Web/HTTP/Access_control_CORS
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p><span class="seoSummary">El Intercambio de Recursos de Origen Cruzado ({{Glossary("CORS")}})</span> es un mecanismo que utiliza cabeceras <span class="seoSummary">{{Glossary("HTTP")}}</span> adicionales para permitir que un <span class="seoSummary">{{Glossary("user agent")}}</span> obtenga permiso para acceder a recursos seleccionados desde un servidor, en un origen distinto (dominio) al que pertenece. Un agente crea una petición HTTP de origen cruzado cuando solicita un recurso desde un dominio distinto, un protocolo o un puerto diferente al del documento que lo generó.</p>
+El Intercambio de Recursos de Origen Cruzado ({{Glossary("CORS")}}) es un mecanismo que utiliza cabeceras {{Glossary("HTTP")}} adicionales para permitir que un {{Glossary("user agent")}} obtenga permiso para acceder a recursos seleccionados desde un servidor, en un origen distinto (dominio) al que pertenece. Un agente crea una petición HTTP de origen cruzado cuando solicita un recurso desde un dominio distinto, un protocolo o un puerto diferente al del documento que lo generó.
 
-<p>Un ejemplo de solicitud de origen cruzado: el código JavaScript frontend de una aplicación web que es localizada en <code>http://domain-a.com</code> utiliza {{domxref("XMLHttpRequest")}} para cargar el recurso <code>http://api.domain-b.com/data.json</code>.</p>
+Un ejemplo de solicitud de origen cruzado: el código JavaScript frontend de una aplicación web que es localizada en `http://domain-a.com` utiliza {{domxref("XMLHttpRequest")}} para cargar el recurso `http://api.domain-b.com/data.json`.
 
-<p>Por razones de seguridad, los exploradores restringen las solicitudes HTTP de origen cruzado iniciadas dentro de un script. Por ejemplo, <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> y la API <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a> siguen la <a href="/en-US/docs/Web/Security/Same-origin_policy">política de mismo-origen</a>. Ésto significa que una aplicación que utilice esas APIs <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> sólo puede hacer solicitudes HTTP a su propio dominio, a menos que se utilicen cabeceras CORS.</p>
+Por razones de seguridad, los exploradores restringen las solicitudes HTTP de origen cruzado iniciadas dentro de un script. Por ejemplo, [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) y la API [Fetch](/es/docs/Web/API/Fetch_API) siguen la [política de mismo-origen](/es/docs/Web/Security/Same-origin_policy). Ésto significa que una aplicación que utilice esas APIs [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) sólo puede hacer solicitudes HTTP a su propio dominio, a menos que se utilicen cabeceras CORS.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14295/CORS_principle.png" style="height: 305px; width: 439px;"></p>
+![](https://mdn.mozillademos.org/files/14295/CORS_principle.png)
 
-<p>El <a href="http://www.w3.org/">W3C</a> <a href="http://www.w3.org/2008/webapps/">Grupo de Trabajo de Aplicaciones Web</a> recomienda el nuevo mecanismo de <a href="http://www.w3.org/TR/cors/">Intercambio de Recursos de Origen Cruzado</a> (CORS, por sus siglas en inglés). CORS da controles de acceso a dominios cruzados para servidores web y transferencia segura de datos en dominios cruzados entre navegadores y servidores Web. Los exploradores modernos utilizan CORS en un  <strong>contenedor API</strong> (como <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> o <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a>) para ayudar a mitigar los riesgos de solicitudes HTTP de origen cruzado.</p>
+El [W3C](http://www.w3.org/) [Grupo de Trabajo de Aplicaciones Web](http://www.w3.org/2008/webapps/) recomienda el nuevo mecanismo de [Intercambio de Recursos de Origen Cruzado](http://www.w3.org/TR/cors/) (CORS, por sus siglas en inglés). CORS da controles de acceso a dominios cruzados para servidores web y transferencia segura de datos en dominios cruzados entre navegadores y servidores Web. Los exploradores modernos utilizan CORS en un **contenedor API** (como [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) o [Fetch](/es/docs/Web/API/Fetch_API)) para ayudar a mitigar los riesgos de solicitudes HTTP de origen cruzado.
 
-<h2 id="¿Quién_debería_leer_este_artículo">¿Quién debería leer este artículo?</h2>
+## ¿Quién debería leer este artículo?
 
-<p>Todo el mundo, de verdad.</p>
+Todo el mundo, de verdad.
 
-<p>Más específicamente, este artículo está dirigido a administradores web, desarrolladores de servidores y desarrolladores de interfaz. Los exploradores modernos manejan los componentes sobre el intercambio de origen cruzado del lado del cliente. Incluyendo cabeceras y políticas de ejecución. Pero, este nuevo estándar determina que los servidores tienen que manejar las nuevas solicitudes y las cabeceras de las respuestas. Se recomienda, como lectura suplementaria, otro artículo para desarrolladores de servidor que discute el <a href="/en-US/docs/Web/HTTP/Server-Side_Access_Control">intercambio de origen cruzado desde una perspectiva de servidor (con fragmentos de código PHP)</a>.</p>
+Más específicamente, este artículo está dirigido a administradores web, desarrolladores de servidores y desarrolladores de interfaz. Los exploradores modernos manejan los componentes sobre el intercambio de origen cruzado del lado del cliente. Incluyendo cabeceras y políticas de ejecución. Pero, este nuevo estándar determina que los servidores tienen que manejar las nuevas solicitudes y las cabeceras de las respuestas. Se recomienda, como lectura suplementaria, otro artículo para desarrolladores de servidor que discute el [intercambio de origen cruzado desde una perspectiva de servidor (con fragmentos de código PHP)](/es/docs/Web/HTTP/Server-Side_Access_Control).
 
-<h2 id="¿Qué_peticiones_utiliza_CORS">¿Qué peticiones utiliza CORS?</h2>
+## ¿Qué peticiones utiliza CORS?
 
-<p>Este <a class="external" href="http://www.w3.org/TR/cors/">estándar de intercambio de origen cruzado</a> es utilizado para habilitar solicitudes HTTP de sitios cruzados para:</p>
+Este [estándar de intercambio de origen cruzado](http://www.w3.org/TR/cors/) es utilizado para habilitar solicitudes HTTP de sitios cruzados para:
 
-<ul>
- <li>Invocaciones de las APIs <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> o  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a> en una manera de sitio cruzado, como se discutió arriba.</li>
- <li>Fuentes Web (para usos de fuente en dominios cruzados <code>@font-face</code> dentro de CSS), <a class="external" href="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements">para que los servidores puedan mostrar fuentes TrueType que sólo puedan ser cargadas por sitios cruzados y usadas por sitios web que lo tengan permitido.</a></li>
- <li>Texturas WebGL.</li>
- <li>Imágenes dibujadas en patrones usando <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">drawImage</a></code>.</li>
- <li>Hojas de estilo (para acceso <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_View">CSSOM</a>).</li>
- <li>Scripts (para excepciones inmutadas).</li>
-</ul>
+- Invocaciones de las APIs [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") o [Fetch](/es/docs/Web/API/Fetch_API) en una manera de sitio cruzado, como se discutió arriba.
+- Fuentes Web (para usos de fuente en dominios cruzados `@font-face` dentro de CSS), [para que los servidores puedan mostrar fuentes TrueType que sólo puedan ser cargadas por sitios cruzados y usadas por sitios web que lo tengan permitido.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
+- Texturas WebGL.
+- Imágenes dibujadas en patrones usando [`drawImage`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage).
+- Hojas de estilo (para acceso [CSSOM](/es/docs/Web/CSS/CSSOM_View)).
+- Scripts (para excepciones inmutadas).
 
-<p>Este artículo es una discusión general sobre Intercambio de Recursos de Origin Cruzado e incluye una discusión sobre las cabeceras HTTP.</p>
+Este artículo es una discusión general sobre Intercambio de Recursos de Origin Cruzado e incluye una discusión sobre las cabeceras HTTP.
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El estándar de Intercambio de Recursos de Origen Cruzado trabaja añadiendo nuevas cabeceras HTTP que permiten a los servidores describir el conjunto de orígenes que tienen permiso para leer la información usando un explorador web.  Adicionalmente, para métodos de solicitud HTTP que causan efectos secundarios en datos del usuario (y en particular, para otros métodos HTTP distintos a <code>GET</code>, o para la utilización de <code>POST</code> con algunos tipos MIME), la especificación sugiere que los exploradores "verifiquen" la solicitud, solicitando métodos soportados desde el servidor con un método de solicitud HTTP <code>OPTIONS</code>, y luego, con la "aprobación" del servidor, enviar la verdadera solicitud con el método de solicitud HTTP verdadero. Los servidores pueden también notificar a los clientes cuando sus "credenciales" (incluyendo Cookies y datos de autenticación HTTP) deben ser enviados con solicitudes.</p>
+El estándar de Intercambio de Recursos de Origen Cruzado trabaja añadiendo nuevas cabeceras HTTP que permiten a los servidores describir el conjunto de orígenes que tienen permiso para leer la información usando un explorador web. Adicionalmente, para métodos de solicitud HTTP que causan efectos secundarios en datos del usuario (y en particular, para otros métodos HTTP distintos a `GET`, o para la utilización de `POST` con algunos tipos MIME), la especificación sugiere que los exploradores "verifiquen" la solicitud, solicitando métodos soportados desde el servidor con un método de solicitud HTTP `OPTIONS`, y luego, con la "aprobación" del servidor, enviar la verdadera solicitud con el método de solicitud HTTP verdadero. Los servidores pueden también notificar a los clientes cuando sus "credenciales" (incluyendo Cookies y datos de autenticación HTTP) deben ser enviados con solicitudes.
 
-<p>Las secciones siguientes discuten escenarios, así como el análisis de las cabeceras HTTP usados.</p>
+Las secciones siguientes discuten escenarios, así como el análisis de las cabeceras HTTP usados.
 
-<h2 id="Ejemplos_de_escenarios_de_control_de_accesos">Ejemplos de escenarios de control de accesos</h2>
+## Ejemplos de escenarios de control de accesos
 
-<p>Aquí, presentamos tres escenarios que ilustran cómo funciona el Intercambio de Recursos de Origen Cruzado. Todos estos ejemplos utilizan el objeto <code><a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest">XMLHttpRequest</a></code>, que puede ser utilizado para hacer invocaciones de sitios cruzados en cualquier explorador soportado.</p>
+Aquí, presentamos tres escenarios que ilustran cómo funciona el Intercambio de Recursos de Origen Cruzado. Todos estos ejemplos utilizan el objeto [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest"), que puede ser utilizado para hacer invocaciones de sitios cruzados en cualquier explorador soportado.
 
-<p>Los fragmentos de JavaScript incluidos en estas secciones (y las instancias ejecutadas del código servidor que correctamente maneja las solicitudes de sitios cruzados) <a class="external" href="http://arunranga.com/examples/access-control/">pueden ser encontrados "en acción" aquí</a>, y pueden ser trabajados en exploradores que soportan <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> de sitios cruzados. Una discusión de Intercambio de Recursos de Origen Cruzado desde una <a class="internal" href="/en-US/docs/Web/HTTP/Server-Side_Access_Control" title="En/Server-Side Access Control">perspectiva de servidor (incluyendo fragmentos de código PHP) puede ser encontrada aquí</a>.</p>
+Los fragmentos de JavaScript incluidos en estas secciones (y las instancias ejecutadas del código servidor que correctamente maneja las solicitudes de sitios cruzados) [pueden ser encontrados "en acción" aquí](http://arunranga.com/examples/access-control/), y pueden ser trabajados en exploradores que soportan [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") de sitios cruzados. Una discusión de Intercambio de Recursos de Origen Cruzado desde una [perspectiva de servidor (incluyendo fragmentos de código PHP) puede ser encontrada aquí](/es/docs/Web/HTTP/Server-Side_Access_Control "En/Server-Side Access Control").
 
-<h3 id="Solicitudes_simples">Solicitudes simples</h3>
+### Solicitudes simples
 
-<p>Una solicitud de sitio cruzado es aquella que cumple las siguientes condiciones:</p>
+Una solicitud de sitio cruzado es aquella que cumple las siguientes condiciones:
 
-<ul>
- <li>Los únicos métodos aceptados son:
-  <ul>
-   <li>GET</li>
-   <li>HEAD</li>
-   <li>POST.</li>
-  </ul>
- </li>
- <li>Aparte de las cabeceras establecidas automáticamente por el agente usuario (ej. <code>Connection, User-Agent,</code>etc.), las únicas cabeceras que están permitidas para establecer manualmente son:
-  <ul>
-   <li><code>Accept</code></li>
-   <li><code>Accept-Language</code></li>
-   <li><code>Content-Language</code></li>
-   <li><code>Content-Type</code></li>
-  </ul>
- </li>
- <li>Los únicos valores permitidos de la cabecera <code>Content-Type</code> son:
-  <ul>
-   <li><code>application/x-www-form-urlencoded</code></li>
-   <li><code>multipart/form-data</code></li>
-   <li><code>text/plain</code></li>
-  </ul>
- </li>
-</ul>
+- Los únicos métodos aceptados son:
 
-<div class="note"><strong>Nota:</strong> Estos son los mismos tipos de solicitud de sitios cruzados que un contenido web ya puede emitir, y ninguna respuesta de datos es liberada a menos que el servidor envíe la cabecera apropiada. Por lo tanto, los sitios que prevengan solicitudes falsas de sitios cruzados no tienen nada nuevo que temer sobre el control de acceso HTTP.</div>
+  - GET
+  - HEAD
+  - POST.
 
-<p>Por ejemplo, suponga que el contenido web en el dominio <code>http://foo.example</code> desea invocar contenido en el dominio <code>http://bar.other</code>. Código de este tipo puede ser utilizado dentro de JavaScript desplegado en foo.example:</p>
+- Aparte de las cabeceras establecidas automáticamente por el agente usuario (ej. `Connection, User-Agent,`etc.), las únicas cabeceras que están permitidas para establecer manualmente son:
 
-<pre class="brush: js notranslate" id="line1">var invocation = new XMLHttpRequest();
+  - `Accept`
+  - `Accept-Language`
+  - `Content-Language`
+  - `Content-Type`
+
+- Los únicos valores permitidos de la cabecera `Content-Type` son:
+
+  - `application/x-www-form-urlencoded`
+  - `multipart/form-data`
+  - `text/plain`
+
+> **Nota:** Estos son los mismos tipos de solicitud de sitios cruzados que un contenido web ya puede emitir, y ninguna respuesta de datos es liberada a menos que el servidor envíe la cabecera apropiada. Por lo tanto, los sitios que prevengan solicitudes falsas de sitios cruzados no tienen nada nuevo que temer sobre el control de acceso HTTP.
+
+Por ejemplo, suponga que el contenido web en el dominio `http://foo.example` desea invocar contenido en el dominio `http://bar.other`. Código de este tipo puede ser utilizado dentro de JavaScript desplegado en foo.example:
+
+```js
+var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/public-data/';
 
 function callOtherDomain() {
@@ -92,11 +85,12 @@ function callOtherDomain() {
     invocation.send();
   }
 }
-</pre>
+```
 
-<p>Dejándonos ver lo que el explorador enviará al servidor en este caso, y veamos como responde el servidor:</p>
+Dejándonos ver lo que el explorador enviará al servidor en este caso, y veamos como responde el servidor:
 
-<pre class="brush: shell notranslate">GET /resources/public-data/ HTTP/1.1
+```shell
+GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -118,34 +112,31 @@ Transfer-Encoding: chunked
 Content-Type: application/xml
 
 [XML Data]
-</pre>
+```
 
-<p>Las líneas 1 - 10 son las cabeceras enviadas por Firefox 3.5.  Observe que la cabecera de solicitud HTTP principal aquí es la cabecera <code>Origin:</code>  en la línea 10 de arriba, lo que muestra que la invocación proviene del contenido en el dominio <code>http://foo.example</code>.</p>
+Las líneas 1 - 10 son las cabeceras enviadas por Firefox 3.5. Observe que la cabecera de solicitud HTTP principal aquí es la cabecera `Origin:` en la línea 10 de arriba, lo que muestra que la invocación proviene del contenido en el dominio `http://foo.example`.
 
-<p>Las líneas 13 - 22  muestran la respuesta HTTP del servidor en el dominio <code>http://bar.other</code>.  En respuesta, el servidor envía de vuelta una cabecera <code>Access-Control-Allow-Origin:</code>, mostrado arriba en la línea 16.  El uso de la cabecera <code>Origin:</code> y <code>Access-Control-Allow-Origin:</code> muestran el protocolo de control de acceso en su uso más simple.  En este caso, el servidor responde con un <code>Access-Control-Allow-Origin: *</code> lo que significa que el recurso puede ser accedido por <strong>cualquier</strong> dominio en una forma de sitio cruzado. Si el dueño del recurso en <code>http://bar.other</code> deseara restringir el acceso al recurso solamente para <code>http://foo.example</code>, debería devolver lo siguiente:</p>
+Las líneas 13 - 22 muestran la respuesta HTTP del servidor en el dominio `http://bar.other`. En respuesta, el servidor envía de vuelta una cabecera `Access-Control-Allow-Origin:`, mostrado arriba en la línea 16. El uso de la cabecera `Origin:` y `Access-Control-Allow-Origin:` muestran el protocolo de control de acceso en su uso más simple. En este caso, el servidor responde con un `Access-Control-Allow-Origin: *` lo que significa que el recurso puede ser accedido por **cualquier** dominio en una forma de sitio cruzado. Si el dueño del recurso en `http://bar.other` deseara restringir el acceso al recurso solamente para `http://foo.example`, debería devolver lo siguiente:
 
-<p><code>Access-Control-Allow-Origin: http://foo.example</code></p>
+`Access-Control-Allow-Origin: http://foo.example`
 
-<p>Note que ahora, ningún otro dominio aparte de <code>http://foo.example</code> (identificado por la cabecera ORIGIN: en la solicitud, como en la línea 10 arriba) puede acceder al recurso en una forma de sitio cruzado. La cabecera Access-Control-Allow-Origin debe contener el valor que fue enviado en la solicitud del encabezado <code>Origin.</code></p>
+Note que ahora, ningún otro dominio aparte de `http://foo.example` (identificado por la cabecera ORIGIN: en la solicitud, como en la línea 10 arriba) puede acceder al recurso en una forma de sitio cruzado. La cabecera Access-Control-Allow-Origin debe contener el valor que fue enviado en la solicitud del encabezado `Origin.`
 
-<h3 id="Solicitudes_Verificadas">Solicitudes Verificadas</h3>
+### Solicitudes Verificadas
 
-<p>A diferencia de las solicitudes simples (discutidas arriba), las solicitudes "verificadas" envían primero una solicitud HTTP por el método <code>OPTIONS</code> al recurso en el otro dominio, para determinar si es seguro enviar la verdadera solicitud. Las solicitudes de sitios cruzados son verificadas así ya que pueden tener implicaciones en la información de usuario.  En particular, una solicitud es verificada sí:</p>
+A diferencia de las solicitudes simples (discutidas arriba), las solicitudes "verificadas" envían primero una solicitud HTTP por el método `OPTIONS` al recurso en el otro dominio, para determinar si es seguro enviar la verdadera solicitud. Las solicitudes de sitios cruzados son verificadas así ya que pueden tener implicaciones en la información de usuario. En particular, una solicitud es verificada sí:
 
-<ul>
- <li>Usa métodos <strong>distintos</strong> a <code>GET, HEAD</code> <code>o POST</code>.  También, si <code>POST</code> es utilizado para enviar solicitudes de información con Content-Type <strong>distinto</strong> a<code> application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, o <code>text/plain</code>, ej. si la solicitud <code>POST</code> envía una carga XML al servidor utilizando <code>application/xml</code> or <code>text/xml</code>, entonces la solicitud <strong>es</strong> verificada.</li>
- <li>Se establecen encabezados personalizados (ej. la solicitud usa un encabezado como <code>X-PINGOTHER</code>)</li>
-</ul>
+- Usa métodos **distintos** a `GET, HEAD` `o POST`. También, si `POST` es utilizado para enviar solicitudes de información con Content-Type **distinto** a` application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`, ej. si la solicitud `POST` envía una carga XML al servidor utilizando `application/xml` or `text/xml`, entonces la solicitud **es** verificada.
+- Se establecen encabezados personalizados (ej. la solicitud usa un encabezado como `X-PINGOTHER`)
 
-<div class="note">
-<p><strong>Nota:</strong> Empezando en {{Gecko("2.0")}}, las codificaciones de datos <code>text/plain</code>, <code>application/x-www-form-urlencoded</code>, y <code>multipart/form-data</code> pueden ser enviadas en sitios cruzados sin verificación. Anteriormente, solo<code> text/plain</code> podía ser enviado sin verificación.</p>
-</div>
+> **Nota:** Empezando en {{Gecko("2.0")}}, las codificaciones de datos `text/plain`, `application/x-www-form-urlencoded`, y `multipart/form-data` pueden ser enviadas en sitios cruzados sin verificación. Anteriormente, solo` text/plain` podía ser enviado sin verificación.
 
-<p>Un ejemplo de este tipo de invocación puede ser:</p>
+Un ejemplo de este tipo de invocación puede ser:
 
-<pre class="brush: js notranslate" id="line1">var invocation = new XMLHttpRequest();
+```js
+var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/post-here/';
-var body = '&lt;?xml version="1.0"?&gt;&lt;person&gt;&lt;name&gt;Arun&lt;/name&gt;&lt;/person&gt;';
+var body = '<?xml version="1.0"?><person><name>Arun</name></person>';
 
 function callOtherDomain(){
   if(invocation)
@@ -159,13 +150,14 @@ function callOtherDomain(){
 }
 
 ......
-</pre>
+```
 
-<p>En el ejemplo de arriba, la línea 3 crea un cuerpo XML para enviar con la solicitud <code>POST</code> en la línea 8.  También, en la línea 9, se establece una cabecera HTTP de solicitud "personalizado" (no estándar <code>X-PINGOTHER: pingpong</code>).  Dichas cabeceras no son parte del protocolo HTTP/1.1, pero son útiles generalmente en aplicaciones web. Dado que la solicitud (<code>POST</code>) usa un Content-Type <code>application/xml</code>, y dado que se establece una cabecera personalizada, la solicitud es verificada.</p>
+En el ejemplo de arriba, la línea 3 crea un cuerpo XML para enviar con la solicitud `POST` en la línea 8. También, en la línea 9, se establece una cabecera HTTP de solicitud "personalizado" (no estándar `X-PINGOTHER: pingpong`). Dichas cabeceras no son parte del protocolo HTTP/1.1, pero son útiles generalmente en aplicaciones web. Dado que la solicitud (`POST`) usa un Content-Type `application/xml`, y dado que se establece una cabecera personalizada, la solicitud es verificada.
 
-<p>Veamos este intercambio completo entre un cliente y un servidor:</p>
+Veamos este intercambio completo entre un cliente y un servidor:
 
-<pre class="brush: shell notranslate">OPTIONS /resources/post-here/ HTTP/1.1
+```shell
+OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -208,7 +200,7 @@ Origin: http://foo.example
 Pragma: no-cache
 Cache-Control: no-cache
 
-&lt;?xml version="1.0"?&gt;&lt;person&gt;&lt;name&gt;Arun&lt;/name&gt;&lt;/person&gt;
+<?xml version="1.0"?><person><name>Arun</name></person>
 
 
 HTTP/1.1 200 OK
@@ -223,32 +215,36 @@ Connection: Keep-Alive
 Content-Type: text/plain
 
 [Some GZIP'd payload]
-</pre>
+```
 
-<p>Las líneas 1 - 12 arriba representan la solicitud verificada con los métodos <code>OPTIONS</code>. Firefox 3.1 determina lo que se necesita para enviar esto basándose en los parámetros de la solicitud que los fragmentos de JavaScript que se usaron arriba, para que el servidor pueda responder si es aceptable enviar la solicitud con los parámetros de la solicitud real. OPTIONS es un método HTTP/1.1 que se utiliza para determinar información adicional de los servidores, y es un método <strong>idempotente</strong>, esto significa que no puede ser utilizado para cambiar el recurso. Observe que, junto con la solicitud OPTIONS, se envían otras dos cabeceras de solicitud (líneas 11 y 12 respectivamente):</p>
+Las líneas 1 - 12 arriba representan la solicitud verificada con los métodos `OPTIONS`. Firefox 3.1 determina lo que se necesita para enviar esto basándose en los parámetros de la solicitud que los fragmentos de JavaScript que se usaron arriba, para que el servidor pueda responder si es aceptable enviar la solicitud con los parámetros de la solicitud real. OPTIONS es un método HTTP/1.1 que se utiliza para determinar información adicional de los servidores, y es un método **idempotente**, esto significa que no puede ser utilizado para cambiar el recurso. Observe que, junto con la solicitud OPTIONS, se envían otras dos cabeceras de solicitud (líneas 11 y 12 respectivamente):
 
-<pre class="notranslate">Access-Control-Request-Method: POST
+```
+Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER
-</pre>
+```
 
-<p>La cabecera <code>Access-Control-Request-Method</code> notifica al servidor como parte de una solicitud verificada que cuándo se envíe la solicitud real, esta será enviada con un método de solicitud <code>POST</code>. La cabecera <code>Access-Control-Request-Headers</code> notifica al servidor que cuando la solicitud real sea enviada, será enviada con un encabezado <code>X-PINGOTHER</code> personalizado.  Ahora, el servidor tiene la oportunidad para determinar si desea aceptar la solicitud bajo estas circunstancias.</p>
+La cabecera `Access-Control-Request-Method` notifica al servidor como parte de una solicitud verificada que cuándo se envíe la solicitud real, esta será enviada con un método de solicitud `POST`. La cabecera `Access-Control-Request-Headers` notifica al servidor que cuando la solicitud real sea enviada, será enviada con un encabezado `X-PINGOTHER` personalizado. Ahora, el servidor tiene la oportunidad para determinar si desea aceptar la solicitud bajo estas circunstancias.
 
-<p>Las líneas 15 - 27 de arriba corresponden con la respuesta que devuelve el servidor indicando que el método de la petición (POST) y la cabecera <code>X-PINGOTHER</code> son aceptadas. En particular, echemos un vistazo a las líneas 18-21:</p>
+Las líneas 15 - 27 de arriba corresponden con la respuesta que devuelve el servidor indicando que el método de la petición (POST) y la cabecera `X-PINGOTHER` son aceptadas. En particular, echemos un vistazo a las líneas 18-21:
 
-<pre class="notranslate">Access-Control-Allow-Origin: http://foo.example
+```
+Access-Control-Allow-Origin: http://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER
-Access-Control-Max-Age: 1728000</pre>
+Access-Control-Max-Age: 1728000
+```
 
-<p>El servidor responde con <code>Access-Control-Allow-Methods</code> y dice que <code>POST</code>, <code>GET</code>, y <code>OPTIONS</code> son métodos viables para consultar el recurso en cuestión.  Observe que esta cabecera es similar al <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.7">HTTP/1.1 Allow: encabezado de respuesta</a>, pero usado estrictamente dentro del contexto del control de acceso.  El servidor también envía <code>Access-Control-Allow-Headers</code> con un valor de <code>X-PINGOTHER</code>, confirmando que es una cabecera permitida para ser usado en la solicitud real.  Como <code>Access-Control-Allow-Methods</code>, <code>Access-Control-Allow-Headers</code> es una lista separada por comas de cabeceras aceptables.  Finalmente, <code>Access-Control-Max-Age</code> da el valor en segundos de cuánto tarda la respuesta de la solicitud verificada en ser capturada sin enviar otra solicitud verificada. En este caso, 1728000 segundos son 20 días.</p>
+El servidor responde con `Access-Control-Allow-Methods` y dice que `POST`, `GET`, y `OPTIONS` son métodos viables para consultar el recurso en cuestión. Observe que esta cabecera es similar al [HTTP/1.1 Allow: encabezado de respuesta](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.7), pero usado estrictamente dentro del contexto del control de acceso. El servidor también envía `Access-Control-Allow-Headers` con un valor de `X-PINGOTHER`, confirmando que es una cabecera permitida para ser usado en la solicitud real. Como `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers` es una lista separada por comas de cabeceras aceptables. Finalmente, `Access-Control-Max-Age` da el valor en segundos de cuánto tarda la respuesta de la solicitud verificada en ser capturada sin enviar otra solicitud verificada. En este caso, 1728000 segundos son 20 días.
 
-<h3 id="Solicitudes_con_credenciales">Solicitudes con credenciales</h3>
+### Solicitudes con credenciales
 
-<p>La capacidad más interesante expuesta tanto por <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> y Access Control es la habilidad para hacer solicitudes "con credenciales" que estén al tanto de Cookies HTTP e información de Autenticación HTTP.  Por defecto, en las invocaciones <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> de un sitio curzado, los exploradores no enviarán credenciales. Una bandera específica tiene que ser establecida en el objeto <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> cuando este es invocado.</p>
+La capacidad más interesante expuesta tanto por [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") y Access Control es la habilidad para hacer solicitudes "con credenciales" que estén al tanto de Cookies HTTP e información de Autenticación HTTP. Por defecto, en las invocaciones [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") de un sitio curzado, los exploradores no enviarán credenciales. Una bandera específica tiene que ser establecida en el objeto [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") cuando este es invocado.
 
-<p>En este ejemplo, el contenido cargado originalmente desde <code>http://foo.example</code> hace una solicitud GET simple a un recurso en <code>http://bar.other</code> que establece Cookies. El contenido en foo.example puede contener un JavaScript como este:</p>
+En este ejemplo, el contenido cargado originalmente desde `http://foo.example` hace una solicitud GET simple a un recurso en `http://bar.other` que establece Cookies. El contenido en foo.example puede contener un JavaScript como este:
 
-<pre class="brush: js notranslate" id="line1">var invocation = new XMLHttpRequest();
+```js
+var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/credentialed-content/';
 
 function callOtherDomain(){
@@ -258,13 +254,15 @@ function callOtherDomain(){
     invocation.onreadystatechange = handler;
     invocation.send();
   }
-}</pre>
+}
+```
 
-<p>La línea 7 muestra la bandera en <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> que tiene que ser establecida para poder hacer la invocación con Cookies, es decir, el valor booleano <code>withCredentials</code>.  Por defecto, la invocación es hecha sin Cookies. Dado que esta es una simple solicitud <code>GET</code>, no es verificada, pero el explorador <strong>rechazará </strong>cualquier respuesta que no tiene el encabezado <code>Access-Control-Allow-Credentials: true</code>,y <strong>no</strong> hará disponible la respuesta para invocar contenido web.</p>
+La línea 7 muestra la bandera en [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") que tiene que ser establecida para poder hacer la invocación con Cookies, es decir, el valor booleano `withCredentials`. Por defecto, la invocación es hecha sin Cookies. Dado que esta es una simple solicitud `GET`, no es verificada, pero el explorador **rechazará** cualquier respuesta que no tiene el encabezado `Access-Control-Allow-Credentials: true`,y **no** hará disponible la respuesta para invocar contenido web.
 
-<p>A continuación se proporciona una muestra de intercambio entre un cliente y un servidor:</p>
+A continuación se proporciona una muestra de intercambio entre un cliente y un servidor:
 
-<pre class="brush: shell notranslate">GET /resources/access-control-with-credentials/ HTTP/1.1
+```shell
+GET /resources/access-control-with-credentials/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -295,145 +293,139 @@ Content-Type: text/plain
 
 
 [text/plain payload]
-</pre>
+```
 
-<p>Pese a que la línea 11 contiene la Cookie destinada para el contenido en <code>http://bar.other</code>, si bar.other no responde con <code>Access-Control-Allow-Credentials: true</code> (línea 19) la respuesta será ignorada y no puesta a disposición para el contenido web. <strong>Nota Importante:</strong> cuando se responde a una solicitud con credeciales, el servidor <strong>debe</strong><strong> </strong>especificar un dominio, y no puede usar comodines. El ejemplo de arriba fallará si la cabecera fuera un comodín como: <code>Access-Control-Allow-Origin: *</code>.  Dado que <code>Access-Control-Allow-Origin</code> menciona explícitamente <code>http://foo.example</code>, el contenido de credenciales competente es devuelto al contenido web invocador. Observe que, en la línea 22, se establece una cookie adicional.</p>
+Pese a que la línea 11 contiene la Cookie destinada para el contenido en `http://bar.other`, si bar.other no responde con `Access-Control-Allow-Credentials: true` (línea 19) la respuesta será ignorada y no puesta a disposición para el contenido web. **Nota Importante:** cuando se responde a una solicitud con credeciales, el servidor **debe\*\*** \*_especificar un dominio, y no puede usar comodines. El ejemplo de arriba fallará si la cabecera fuera un comodín como: `Access-Control-Allow-Origin: _`. Dado que `Access-Control-Allow-Origin`menciona explícitamente`http://foo.example`, el contenido de credenciales competente es devuelto al contenido web invocador. Observe que, en la línea 22, se establece una cookie adicional.
 
-<p>Todos estos ejemplos pueden <a class="external" href="http://arunranga.com/examples/access-control/">verse funcionando aquí</a>.  La siguiente sección se refiere a las verdaderas cabeceras HTTP.</p>
+Todos estos ejemplos pueden [verse funcionando aquí](http://arunranga.com/examples/access-control/). La siguiente sección se refiere a las verdaderas cabeceras HTTP.
 
-<h2 id="Las_cabeceras_HTTP_de_respuesta">Las cabeceras HTTP de respuesta</h2>
+## Las cabeceras HTTP de respuesta
 
-<p>Esta sección lista las cabeceras HTTP de respuesta que los servidores envían de vuelta para las solicitudes de acceso de control definidas por la especificación del Intercambio de Recursos de Origen Cruzado. La sección anterior da un resumen de estos en acción.</p>
+Esta sección lista las cabeceras HTTP de respuesta que los servidores envían de vuelta para las solicitudes de acceso de control definidas por la especificación del Intercambio de Recursos de Origen Cruzado. La sección anterior da un resumen de estos en acción.
 
-<h3 id="Access-Control-Allow-Origin">Access-Control-Allow-Origin</h3>
+### Access-Control-Allow-Origin
 
-<p>Un recurso devuelto puede tener una cabecera <code>Access-Control-Allow-Origin</code>, con la siguiente sintaxis:</p>
+Un recurso devuelto puede tener una cabecera `Access-Control-Allow-Origin`, con la siguiente sintaxis:
 
-<pre class="notranslate">Access-Control-Allow-Origin: &lt;origin&gt; | *
-</pre>
+```
+Access-Control-Allow-Origin: <origin> | *
+```
 
-<p>El parámetro <code>origin</code> específica una URI que puede tener acceso al recurso.  El explorador debe asegurar esto. Para solicitudes <strong>sin</strong> credenciales, el servidor debe especificar "*" como un comodín permitiendo, de este modo, el acceso al recurso a cualquier origen.</p>
+El parámetro `origin` específica una URI que puede tener acceso al recurso. El explorador debe asegurar esto. Para solicitudes **sin** credenciales, el servidor debe especificar "\*" como un comodín permitiendo, de este modo, el acceso al recurso a cualquier origen.
 
-<p>Por ejemplo, para permitir a <span class="nowiki">http://mozilla.com</span> acceder al recurso, usted puede especificar:</p>
+Por ejemplo, para permitir a http\://mozilla.com acceder al recurso, usted puede especificar:
 
-<pre class="notranslate">Access-Control-Allow-Origin: <span>http://mozilla.com</span></pre>
+```
+Access-Control-Allow-Origin: http://mozilla.com
+```
 
-<p>Si el servidor especifica un host de origen en vez de "*", entonces se debe incluir <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">Origin</span><span style="line-height: 1.5;"> en el encabezado de respuesta </span><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">Vary </span><span style="line-height: 1.5;">para indicar a los clientes que las respuestas del servidor difieren basándose en el valor del encabezado de respuesta</span><span style="line-height: 1.5;"> </span><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">Origin.</span></p>
+Si el servidor especifica un host de origen en vez de "\*", entonces se debe incluir Origin en el encabezado de respuesta Vary para indicar a los clientes que las respuestas del servidor difieren basándose en el valor del encabezado de respuesta Origin.
 
-<h3>Access-Control-Expose-Headers</h3>
+### Access-Control-Expose-Headers
 
-<p>Esta cabecera permite una <em>whitelist</em> de cabeceras del servidor que los exploradores tienen permitido acceder. Por ejemplo:</p>
+Esta cabecera permite una _whitelist_ de cabeceras del servidor que los exploradores tienen permitido acceder. Por ejemplo:
 
-<pre class="notranslate">Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
-</pre>
+```
+Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
+```
 
-<p>Esto permite a las cabeceras <code>X-My-Custom-Header</code> y<code> X-Another-Custom-Header</code> ser expuestos al explorador.</p>
+Esto permite a las cabeceras `X-My-Custom-Header` y` X-Another-Custom-Header` ser expuestos al explorador.
 
-<h3 id="Access-Control-Max-Age">Access-Control-Max-Age</h3>
+### Access-Control-Max-Age
 
-<p>Esta cabecera indica durante cuánto tiempo los resultados de la solicitud verificada pueden ser capturados. Para un ejemplo de solicitudes verificadas, vea los ejemplos de arriba.</p>
+Esta cabecera indica durante cuánto tiempo los resultados de la solicitud verificada pueden ser capturados. Para un ejemplo de solicitudes verificadas, vea los ejemplos de arriba.
 
-<pre class="notranslate">Access-Control-Max-Age: &lt;delta-seconds&gt;
-</pre>
+```
+Access-Control-Max-Age: <delta-seconds>
+```
 
-<p>El parámetro <code>delta-seconds</code> indica el número de segundos en que los resultados pueden ser capturados.</p>
+El parámetro `delta-seconds` indica el número de segundos en que los resultados pueden ser capturados.
 
-<h3 id="Access-Control-Allow-Credentials">Access-Control-Allow-Credentials</h3>
+### Access-Control-Allow-Credentials
 
-<p>Indica si la respuesta puede ser expuesta cuando la bandera <code>credentials</code> es verdadera. Cuando se usa como parte de una respuesta para una solicitud verficada, este indica si la solicitud verdadera puede realizarse usando credenciales. Note que las solicitudes <code>GET</code> simples no son verificadas, y por lo que si una solicitud es hecha para un recurso con credenciales, si la cabecera no es devuelta con el recurso, la respuesta es ignorada por el explorador y no devuelta al contenido web.</p>
+Indica si la respuesta puede ser expuesta cuando la bandera `credentials` es verdadera. Cuando se usa como parte de una respuesta para una solicitud verficada, este indica si la solicitud verdadera puede realizarse usando credenciales. Note que las solicitudes `GET` simples no son verificadas, y por lo que si una solicitud es hecha para un recurso con credenciales, si la cabecera no es devuelta con el recurso, la respuesta es ignorada por el explorador y no devuelta al contenido web.
 
-<pre class="notranslate">Access-Control-Allow-Credentials: true | false
-</pre>
+```
+Access-Control-Allow-Credentials: true | false
+```
 
-<p><a class="internal" href="/En/HTTP_access_control#Requests_with_credentials" title="En/HTTP access control#Requests with credentials">Las Solicitudes con credenciales</a> son discutidas arriba.</p>
+[Las Solicitudes con credenciales](/En/HTTP_access_control#Requests_with_credentials "En/HTTP access control#Requests with credentials") son discutidas arriba.
 
-<h3 id="Access-Control-Allow-Methods">Access-Control-Allow-Methods</h3>
+### Access-Control-Allow-Methods
 
-<p>Específica el método o los métodos permitidos cuando se asigna un recurso. Es usado en respuesta a la solicitud verificada. Las condiciones sobre cuándo una solicitud es verificada se discuten arriba.</p>
+Específica el método o los métodos permitidos cuando se asigna un recurso. Es usado en respuesta a la solicitud verificada. Las condiciones sobre cuándo una solicitud es verificada se discuten arriba.
 
-<pre class="notranslate">Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]*
-</pre>
+```
+Access-Control-Allow-Methods: <method>[, <method>]*
+```
 
-<p>Un ejemplo de una <a class="internal" href="#Preflighted_requests" title="#Preflight Request">solicitud verificada se muestra arriba</a>, incluyendo un ejemplo donde se envía este encabezado al explorador.</p>
+Un ejemplo de una [solicitud verificada se muestra arriba](#Preflighted_requests "#Preflight Request"), incluyendo un ejemplo donde se envía este encabezado al explorador.
 
-<h3 id="Access-Control-Allow-Headers">Access-Control-Allow-Headers</h3>
+### Access-Control-Allow-Headers
 
-<p>Usado en respuesta a una <a class="internal" href="#Preflighted_requests" title="#Preflighted Request">solicitud verificada</a> para indicar qué encabezado HTTP puede ser usado cuando se realiza la solicitud real.</p>
+Usado en respuesta a una [solicitud verificada](#Preflighted_requests "#Preflighted Request") para indicar qué encabezado HTTP puede ser usado cuando se realiza la solicitud real.
 
-<pre class="notranslate">Access-Control-Allow-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
-</pre>
+```
+Access-Control-Allow-Headers: <field-name>[, <field-name>]*
+```
 
-<h2 id="Los_encabezados_HTTP_de_solicitud">Los encabezados HTTP de solicitud</h2>
+## Los encabezados HTTP de solicitud
 
-<p>Esta sección lista las cabeceras que los clietnes deben utilizar cuando realizan solicitudes HTTP para usar la característica de intercambio de origen cruzado. Note que estas cabeceras son establecidas cuando se realizan realizan invocaciones a los servidores. Los desarrolladores usan la capacidad de sitios cruzados <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> para no tener que establecer ninguna solicitud de intercambio de origen cruzado programada.</p>
+Esta sección lista las cabeceras que los clietnes deben utilizar cuando realizan solicitudes HTTP para usar la característica de intercambio de origen cruzado. Note que estas cabeceras son establecidas cuando se realizan realizan invocaciones a los servidores. Los desarrolladores usan la capacidad de sitios cruzados [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") para no tener que establecer ninguna solicitud de intercambio de origen cruzado programada.
 
-<h3 id="Origin">Origin</h3>
+### Origin
 
-<p>Indica el origen de las solicitudes de acceso a sitios cruzados o solicitudes verificadas.</p>
+Indica el origen de las solicitudes de acceso a sitios cruzados o solicitudes verificadas.
 
-<pre class="notranslate">Origin: &lt;origin&gt;
-</pre>
+```
+Origin: <origin>
+```
 
-<p>El origen es una URI indicando al servidor dónde se ha iniciado la solicitud. Este no incluye ninguna información de recorrido, sólo el nombre del servidor. </p>
+El origen es una URI indicando al servidor dónde se ha iniciado la solicitud. Este no incluye ninguna información de recorrido, sólo el nombre del servidor.
 
-<div class="note"><strong>Nota:</strong> El <code>origin</code> puede ser un string vacío; esto es útil, por ejemplo, si el recurso es un <code>data</code> URL.</div>
+> **Nota:** El `origin` puede ser un string vacío; esto es útil, por ejemplo, si el recurso es un `data` URL.
 
-<p>Observe que en cualquier solicitud de acceso de control, la cabecera <code>ORIGIN</code> <strong>siempre </strong>se envía.</p>
+Observe que en cualquier solicitud de acceso de control, la cabecera `ORIGIN` **siempre** se envía.
 
-<h3 id="Access-Control-Request-Method">Access-Control-Request-Method</h3>
+### Access-Control-Request-Method
 
-<p>Se usa cuando se emite una solicitud verificada, para indicarle al servidor qué método HTTP será usado cuando se haga la solicitud real.</p>
+Se usa cuando se emite una solicitud verificada, para indicarle al servidor qué método HTTP será usado cuando se haga la solicitud real.
 
-<pre class="notranslate">Access-Control-Request-Method: &lt;method&gt;
-</pre>
+```
+Access-Control-Request-Method: <method>
+```
 
-<p>Ejemplos de esta utilización pueden ser encontrados <a class="internal" href="#Preflighted_requests" title="Preflighted requests">arriba.</a></p>
+Ejemplos de esta utilización pueden ser encontrados [arriba.](#Preflighted_requests "Preflighted requests")
 
-<h3 id="Access-Control-Request-Headers">Access-Control-Request-Headers</h3>
+### Access-Control-Request-Headers
 
-<p>Usada cuando se emite una solicitud verificada para indicarle al servidor qué cabecera HTTP será usada cuando se haga la solicitud real.</p>
+Usada cuando se emite una solicitud verificada para indicarle al servidor qué cabecera HTTP será usada cuando se haga la solicitud real.
 
-<pre class="notranslate">Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
-</pre>
+```
+Access-Control-Request-Headers: <field-name>[, <field-name>]*
+```
 
-<p>Ejemplos de esta utilización pueden ser encontrados <a class="internal" href="/En/HTTP_access_control#Preflighted_requests" title="En/HTTP access control#Preflighted requests">arriba</a>.</p>
+Ejemplos de esta utilización pueden ser encontrados [arriba](/En/HTTP_access_control#Preflighted_requests "En/HTTP access control#Preflighted requests").
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch', '#cors-protocol', 'CORS')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Nueva definición; tiene como objetivo suplantar la especificación CORS.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CORS')}}</td>
-   <td>{{Spec2('CORS')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                   | Estado                   | Comentario                                                              |
+| ---------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------- |
+| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | Nueva definición; tiene como objetivo suplantar la especificación CORS. |
+| {{SpecName('CORS')}}                                     | {{Spec2('CORS')}} | Definición inicial.                                                     |
 
-<h2 id="Compatibilidad_con_Exploradores">Compatibilidad con Exploradores</h2>
+## Compatibilidad con Exploradores
 
 {{Compat("http.headers.Access-Control-Allow-Origin")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li><a class="external" href="http://arunranga.com/examples/access-control/">Muestras de Código mostrando <code>XMLHttpRequest</code> e Intercambio de Recursos de Origen Cruzado</a></li>
- <li><a class="external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Server-Side_Access_Control" title="https://developer.mozilla.org/en-US/docs/Web/HTTP/Server-Side_Access_Control">Intercambio de Recursos de Origen Cruzado desde una perspectiva de Servidor (PHP, etc.)</a></li>
- <li><a class="external" href="http://www.w3.org/TR/cors/">Especificación del Intercambio de Recursos de Origen Cruzado</a></li>
- <li><a class="internal" href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a></li>
- <li><a class="external" href="http://crypto.stanford.edu/websec/specs/origin-header/">Discusión adicional sobre el encabezado Origin</a></li>
- <li><a class="external" href="http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx">Usando CORS con todos los exploradores (modernos).</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/cors/">Usando CORS - HTML5 Rocks</a></li>
-</ul>
+- [Muestras de Código mostrando `XMLHttpRequest` e Intercambio de Recursos de Origen Cruzado](http://arunranga.com/examples/access-control/)
+- [Intercambio de Recursos de Origen Cruzado desde una perspectiva de Servidor (PHP, etc.)](/es/docs/Web/HTTP/Server-Side_Access_Control)
+- [Especificación del Intercambio de Recursos de Origen Cruzado](http://www.w3.org/TR/cors/)
+- [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "en/XMLHttpRequest")
+- [Discusión adicional sobre el encabezado Origin](http://crypto.stanford.edu/websec/specs/origin-header/)
+- [Usando CORS con todos los exploradores (modernos).](http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx)
+- [Usando CORS - HTML5 Rocks](http://www.html5rocks.com/en/tutorials/cors/)
 
-<p>{{ languages( { "ja": "ja/HTTP_access_control" } ) }}</p>
+{{ languages( { "ja": "ja/HTTP\_access\_control" } ) }}

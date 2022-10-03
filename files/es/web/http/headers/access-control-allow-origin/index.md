@@ -14,85 +14,79 @@ tags:
   - error cross-origin
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>El encabezado de respuesta <code><strong>Access-Control-Allow-Origin</strong></code> indica si los recursos de la respuesta pueden ser compartidos con el {{glossary("origin", "origen")}} dado.</p>
+El encabezado de respuesta **`Access-Control-Allow-Origin`** indica si los recursos de la respuesta pueden ser compartidos con el {{glossary("origin", "origen")}} dado.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de encabezado</th>
-   <td>{{Glossary("Response header", "Encabezado de respuesta")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "Nombre de encabezado prohibido")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Tipo de encabezado</th>
+      <td>
+        {{Glossary("Response header", "Encabezado de respuesta")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Forbidden header name", "Nombre de encabezado prohibido")}}
+      </th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate">Access-Control-Allow-Origin: *
-Access-Control-Allow-Origin: &lt;origen&gt;
+```
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: <origen>
 Access-Control-Allow-Origin: null
-</pre>
+```
 
-<h2 id="Directivas">Directivas</h2>
+## Directivas
 
-<dl>
- <dt><code>*</code></dt>
- <dd>Para las peticiones <em>sin credenciales</em>, el servidor puede especificar el caracter "*" como un comodín, permitiendo a cualquier origen acceder al recurso. El acceso será permitido solamente para las peticiones hechas con el atributo {{htmlattrxref("crossorigin")}} definido como <code>"anonymous"</code>. Intentar usar el comodín con credenciales <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials">resultará en un error</a>.</dd>
- <dt><code>&lt;origen&gt;</code></dt>
- <dd>Especifica que origen puede acceder al recurso. Sólo se puede especificar un origen.</dd>
-</dl>
+- `*`
+  - : Para las peticiones _sin credenciales_, el servidor puede especificar el caracter "\*" como un comodín, permitiendo a cualquier origen acceder al recurso. El acceso será permitido solamente para las peticiones hechas con el atributo {{htmlattrxref("crossorigin")}} definido como `"anonymous"`. Intentar usar el comodín con credenciales [resultará en un error](/es/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials).
+- `<origen>`
+  - : Especifica que origen puede acceder al recurso. Sólo se puede especificar un origen.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Para permitir a cualquier origen el acceso a tus recursos, puedes especificar:</p>
+Para permitir a cualquier origen el acceso a tus recursos, puedes especificar:
 
-<pre class="notranslate">Access-Control-Allow-Origin: *</pre>
+```
+Access-Control-Allow-Origin: *
+```
 
-<p>Una respuesta que le dice al navegador que permita la petición de código del origen <code>https://developer.mozilla.org</code> para acceder a los recursos que incluyan lo siguiente:</p>
+Una respuesta que le dice al navegador que permita la petición de código del origen `https://developer.mozilla.org` para acceder a los recursos que incluyan lo siguiente:
 
-<pre class="notranslate">Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
+```
+Access-Control-Allow-Origin: https://developer.mozilla.org
+```
 
-<p>Limitando los posibles valores <code>Access-Control-Allow-Origin</code> de un conjunto de orígenes permitidos requiere código del lado del servidor para revisar el valor de la encabezado de petición {{HTTPHeader("Origin")}}, comparan con la lista de valores permitidos, y entonces si el valor {{HTTPHeader("Origin")}} se encuentra en la lista, para definir el valor de <code>Access-Control-Allow-Origin</code> al mismo valor que {{HTTPHeader("Origin")}}.</p>
+Limitando los posibles valores `Access-Control-Allow-Origin` de un conjunto de orígenes permitidos requiere código del lado del servidor para revisar el valor de la encabezado de petición {{HTTPHeader("Origin")}}, comparan con la lista de valores permitidos, y entonces si el valor {{HTTPHeader("Origin")}} se encuentra en la lista, para definir el valor de `Access-Control-Allow-Origin` al mismo valor que {{HTTPHeader("Origin")}}.
 
-<h3 id="CORS_y_caché">CORS y caché</h3>
+### CORS y caché
 
-<p>Si el servidor envía una respuesta con un valor <code>Access-Control-Allow-Origin</code> que es un origen explícito (en lugar del comodín "<code>*</code>"), entonces a respuesta debería incluir también el encabezado de respuesta {{HTTPHeader("Vary")}} con el valor <code>origin</code> - para indicar a los navegadores que las respuestas del servidor pueden diferir basadas en el valor del encabezado de respueta <code>Origin</code>.</p>
+Si el servidor envía una respuesta con un valor `Access-Control-Allow-Origin` que es un origen explícito (en lugar del comodín "`*`"), entonces a respuesta debería incluir también el encabezado de respuesta {{HTTPHeader("Vary")}} con el valor `origin` - para indicar a los navegadores que las respuestas del servidor pueden diferir basadas en el valor del encabezado de respueta `Origin`.
 
-<pre class="notranslate">Access-Control-Allow-Origin: https://developer.mozilla.org
-Vary: Origin</pre>
+```
+Access-Control-Allow-Origin: https://developer.mozilla.org
+Vary: Origin
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Definición Inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                       | Estado                   | Comentario          |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | Definición Inicial. |
 
-<h2 id="Compatibilidad_del_Navegador">Compatibilidad del Navegador</h2>
+## Compatibilidad del Navegador
 
+{{Compat("http.headers.Access-Control-Allow-Origin")}}
 
+## Veáse también
 
-<p>{{Compat("http.headers.Access-Control-Allow-Origin")}}</p>
-
-<h2 id="Veáse_también">Veáse también</h2>
-
-<ul>
- <li>{{HTTPHeader("Origin")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
-</ul>
+- {{HTTPHeader("Origin")}}
+- {{HTTPHeader("Vary")}}
+- [Cross-Origin Resource Sharing (CORS)](/es/docs/Web/HTTP/CORS)

@@ -7,92 +7,89 @@ tags:
   - Petición
 translation_of: Web/HTTP/Methods/PUT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La <strong>petición HTTP PUT</strong> crea un nuevo elemento o reemplaza una representación del elemento de destino con los datos de la petición.</p>
+La **petición HTTP PUT** crea un nuevo elemento o reemplaza una representación del elemento de destino con los datos de la petición.
 
-<p>La diferencia entre el método <code>PUT</code> y el método {{HTTPMethod("POST")}} es que <code>PUT</code> es un método idempotente: llamarlo una o más veces de forma sucesiva tiene el mismo efecto (sin efectos secundarios), mientras que una sucesión de peticiones <code>POST</code> idénticas pueden tener efectos adicionales, como envíar una orden varias veces.</p>
+La diferencia entre el método `PUT` y el método {{HTTPMethod("POST")}} es que `PUT` es un método idempotente: llamarlo una o más veces de forma sucesiva tiene el mismo efecto (sin efectos secundarios), mientras que una sucesión de peticiones `POST` idénticas pueden tener efectos adicionales, como envíar una orden varias veces.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Petición con cuerpo</th>
-   <td>Sí</td>
-  </tr>
-  <tr>
-   <th scope="row">Respuesta (correcta) con cuerpo</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Seguro")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotente")}}</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitido en <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a></th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Petición con cuerpo</th>
+      <td>Sí</td>
+    </tr>
+    <tr>
+      <th scope="row">Respuesta (correcta) con cuerpo</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Seguro")}}</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotente")}}</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Cacheable")}}</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Permitido en <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a>
+      </th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">PUT /nuevo.html HTTP/1.1
-</pre>
+```
+PUT /nuevo.html HTTP/1.1
+```
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Petición">Petición</h3>
+### Petición
 
-<pre>PUT /nuevo.html HTTP/1.1
+```
+PUT /nuevo.html HTTP/1.1
 Host: ejemplo.com
 Content-type: text/html
 Content-length: 16
 
-&lt;p&gt;Nuevo Archivo&lt;/p&gt;</pre>
+<p>Nuevo Archivo</p>
+```
 
-<h3 id="Respuestas">Respuestas</h3>
+### Respuestas
 
-<p>Si el elemento de destino no existe y la petición <code>PUT</code> lo crea de forma satisfactoria, entonces el servidor debe informar al usuario enviando una respuesta {{HTTPStatus("201")}} (<code>Created</code>) .</p>
+Si el elemento de destino no existe y la petición `PUT` lo crea de forma satisfactoria, entonces el servidor debe informar al usuario enviando una respuesta {{HTTPStatus("201")}} (`Created`) .
 
-<pre>HTTP/1.1 201 Created
-Content-Location: /nuevo.html</pre>
+```
+HTTP/1.1 201 Created
+Content-Location: /nuevo.html
+```
 
-<p>Si el elemento existe actualmente y es modificado de forma satisfactoria, entonces el servidor de origen debe enviar una respuesta {{HTTPStatus("200")}} (<code>OK</code>) o una respuesta {{HTTPStatus("204")}} (<code>No Content</code>) para indicar que la modificación del elemento se ha realizado sin problemas.</p>
+Si el elemento existe actualmente y es modificado de forma satisfactoria, entonces el servidor de origen debe enviar una respuesta {{HTTPStatus("200")}} (`OK`) o una respuesta {{HTTPStatus("204")}} (`No Content`) para indicar que la modificación del elemento se ha realizado sin problemas.
 
-<pre>HTTP/1.1 204 No Content
+```
+HTTP/1.1 204 No Content
 Content-Location: /existente.html
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "PUT", "4.3.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Title                                                         |
+| ---------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "PUT", "4.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Navegadores_compatibles">Navegadores compatibles</h2>
+## Navegadores compatibles
 
-<p>{{Compat("http.methods.PUT")}}</p>
+{{Compat("http.methods.PUT")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{HTTPStatus("201")}}</li>
- <li>{{HTTPStatus("204")}}</li>
-</ul>
+- {{HTTPStatus("201")}}
+- {{HTTPStatus("204")}}

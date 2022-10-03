@@ -3,73 +3,65 @@ title: Pragma
 slug: Web/HTTP/Headers/Pragma
 translation_of: Web/HTTP/Headers/Pragma
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><font><font>El </font></font><code><strong>Pragma</strong></code><font><font>encabezado general HTTP / 1.0 es un encabezado específico de la implementación que puede tener varios efectos a lo largo de la cadena de solicitud-respuesta. </font><font>Se utiliza para la compatibilidad con versiones anteriores de las memorias caché HTTP / 1.0 en las que el </font></font><code>Cache-Control</code><font><font>encabezado HTTP / 1.1 aún no está presente.</font></font></p>
+El **`Pragma`**encabezado general HTTP / 1.0 es un encabezado específico de la implementación que puede tener varios efectos a lo largo de la cadena de solicitud-respuesta. Se utiliza para la compatibilidad con versiones anteriores de las memorias caché HTTP / 1.0 en las que el `Cache-Control`encabezado HTTP / 1.1 aún no está presente.
 
-<div>
-<p><strong><font><font>Nota</font></font></strong><font><font> : </font></font><code>Pragma</code><font><font>no se especifica para las respuestas HTTP y, por lo tanto, no es un reemplazo confiable para el </font></font><code>Cache-Control</code><font><font>encabezado </font><font>HTTP / 1.1 general </font><font>, aunque se comporta de la misma manera que </font></font><code>Cache-Control: no-cache</code><font><font>, si el </font></font><code>Cache-Control</code><font><font>campo </font><font>del </font><font>encabezado se omite en una solicitud. </font><font>Utilice </font></font><code>Pragma</code><font><font>solo para compatibilidad con versiones anteriores con clientes HTTP / 1.0.</font></font></p>
-</div>
+**Nota** : `Pragma`no se especifica para las respuestas HTTP y, por lo tanto, no es un reemplazo confiable para el `Cache-Control`encabezado HTTP / 1.1 general , aunque se comporta de la misma manera que `Cache-Control: no-cache`, si el `Cache-Control`campo del encabezado se omite en una solicitud. Utilice `Pragma`solo para compatibilidad con versiones anteriores con clientes HTTP / 1.0.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de encabezado</th>
-   <td>{{Glossary("General header")}}, pero el comportamiento de respuesta no se especifica y, por lo tanto, es específico de la implementación.</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple response header", "CORS-safelisted response-header")}}</th>
-   <td>si</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Tipo de encabezado</th>
+      <td>
+        {{Glossary("General header")}}, pero el comportamiento de
+        respuesta no se especifica y, por lo tanto, es específico de la
+        implementación.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+      </th>
+      <td>si</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Sintaxis"><font><font>Sintaxis</font></font></h2>
+## Sintaxis
 
-<pre class="syntaxbox">Pragma: no-cache
-</pre>
+```
+Pragma: no-cache
+```
 
-<h2 id="Directiva">Directiva</h2>
+## Directiva
 
-<dl>
- <dt>no-cache</dt>
- <dd>
- <p><font><font>Igual que </font></font><code>Cache-Control: no-cache</code><font><font>. </font><font>Hace que las cachés envíen la solicitud al servidor de origen para su validación antes de liberar una copia en caché.</font></font></p>
- </dd>
-</dl>
+- no-cache
+  - : Igual que `Cache-Control: no-cache`. Hace que las cachés envíen la solicitud al servidor de origen para su validación antes de liberar una copia en caché.
 
-<h2 id="Ejemplos"><font><font>Ejemplos </font></font></h2>
+## Ejemplos
 
-<pre>Pragma: no-cache</pre>
+```
+Pragma: no-cache
+```
 
-<h2 id="Especificación"><font><font>Especificación </font></font></h2>
+## Especificación
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7234", "Pragma", "5.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): almacenamiento en caché</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                               | Título                                                          |
+| -------------------------------------------- | --------------------------------------------------------------- |
+| {{RFC("7234", "Pragma", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): almacenamiento en caché |
 
-<h2 id="Compatibilidad_de_navegadores"><font><font>Compatibilidad de navegadores</font></font></h2>
+## Compatibilidad de navegadores
 
-<p>{{Compat("http.headers.Pragma")}}</p>
+{{Compat("http.headers.Pragma")}}
 
-<h2 id="Véase_también"><font><font>Véase también</font></font></h2>
+## Véase también
 
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Expires")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Expires")}}
 
-<p>Traducción realizada por Ervin A. Santos R.</p>
+Traducción realizada por Ervin A. Santos R.
