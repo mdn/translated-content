@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.connectEnd
 slug: Web/API/PerformanceResourceTiming/connectEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`connectEnd`** 読み取り専用プロパティは、ブラウザーがリソースを取得するためにサーバーへの接続を確立し終わった直後に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。タイムスタンプ値には、トランスポート接続を確立するための時間間隔、および SSL ハンドシェイクや SOCKS 認証などの他の時間間隔が含まれます。

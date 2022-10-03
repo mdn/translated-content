@@ -39,9 +39,13 @@ Cette propriété est définie grâce à l'un des mots-clés définis ci-après.
 - `balance-all`
   - : Un mot-clé indiquant que le contenu doit être équitablement réparti entre les colonnes. Pour les média paginés, toutes les pages sont équilibrées.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -78,12 +82,8 @@ Cette propriété est définie grâce à l'un des mots-clés définis ci-après.
 
 ## Spécifications
 
-| Spécification                                                        | État                                 | Commentaires         |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Multicol', '#cf', 'column-fill')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.column-fill")}}
+{{Compat}}

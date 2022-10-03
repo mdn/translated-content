@@ -13,7 +13,7 @@ slug: Web/CSS/text-emphasis
 
 圏点の大きさは、ルビと同様にフォントの大きさの約 50% であり、 `text-emphasis` は現在の行間隔が圏点を表示するのに十分でない場合、行の高さに影響を与えることがあります。
 
-> **Note:** `text-emphasis` は、 {{cssxref("text-emphasis-position")}} の値をリセットしません。これは、圏点のスタイルと色がテキストで異なる場合に、圏点の位置を要求することがほとんど見込まれないためです。珍しくもこれを必要とするような場合は、プロパティ {{cssxref("text-emphasis-position")}} を使用してください。
+> **メモ:** `text-emphasis` は、 {{cssxref("text-emphasis-position")}} の値をリセットしません。これは、圏点のスタイルと色がテキストで異なる場合に、圏点の位置を要求することがほとんど見込まれないためです。珍しくもこれを必要とするような場合は、プロパティ {{cssxref("text-emphasis-position")}} を使用してください。
 
 ## 構成要素のプロパティ
 

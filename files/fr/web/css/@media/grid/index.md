@@ -64,10 +64,8 @@ La caractéristique `grid` est une valeur booléenne (`0` ou `1`) (type {{cssxre
 
 ## Spécifications
 
-| Spécification                                                        | État                                     | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Media Queries', '#grid', 'grid')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.grid")}}
+{{Compat}}

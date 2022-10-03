@@ -4,6 +4,7 @@ slug: Glossary/XLink
 l10n:
   sourceCommit: 4a9f9d2e9c1811ce3519a7061e906db9200a5e97
 ---
+
 XLink は W3C の標準規格で、 XML と、 XML または他の文書との間のリンクを記述するために使用されます。その動作の一部は、どのように処理するかが実装に委ねられています。
 
 単純な XLinks は Firefox で（少なくとも SVG と MathML では）「対応」されていますが、プレーンな XML 文書を XLinks で読み込んで、XML ツリーの関連ポイントをクリックしようとしても、リンクとしては機能しません。

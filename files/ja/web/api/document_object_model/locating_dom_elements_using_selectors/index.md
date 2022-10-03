@@ -2,6 +2,7 @@
 title: セレクターを使用した DOM 要素の特定
 slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 セレクター API により提供されるメソッドを用いると、一連の[セレクター](/ja/docs/Web/CSS/CSS_Selectors)に一致する要素 ({{domxref("Element")}}) ノードを DOM から簡単かつ素早く取り出すことができます。これは過去の技術よりもはるかに速く、必要な場所で、例えば、 JavaScript コードでループを使用して検索する必要があるアイテムを特定するために使います。

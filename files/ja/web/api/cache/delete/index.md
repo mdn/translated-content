@@ -2,6 +2,7 @@
 title: Cache.delete()
 slug: Web/API/Cache/delete
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Cache")}} インターフェイスの **`delete()`** メソッドは、キーがリクエストである {{domxref("Cache")}} エントリを探し、見つかった場合は {{domxref("Cache")}} エントリを削除して、`true` に解決される {{jsxref("Promise")}} を返します。 {{domxref("Cache")}} エントリが見つからない場合は、`false` に解決されます。

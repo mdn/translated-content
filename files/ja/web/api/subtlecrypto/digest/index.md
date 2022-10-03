@@ -38,7 +38,7 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 このアルゴリズムは [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.1 で定義されており、160 bit 長の出力を生成します。
 
-> **Warning:** このアルゴリズムは現在脆弱であると見なされているため、暗号化アプリケーションには使用しないでください。
+> **警告:** このアルゴリズムは現在脆弱であると見なされているため、暗号化アプリケーションには使用しないでください。
 
 ### SHA-256
 
@@ -52,7 +52,7 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 このアルゴリズムは [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.4 で定義されており、512 bit 長の出力を生成します。
 
-> **Note:** ヒント: キー付きハッシュメッセージ認証コード ([HMAC](/ja/docs/Glossary/HMAC)), の作成方法をここで探している場合は、代わりに [SubtleCrypto.sign()](/ja/docs/Web/API/SubtleCrypto/sign#HMAC) を使用する必要があります。
+> **メモ:** キー付きハッシュメッセージ認証コード ([HMAC](/ja/docs/Glossary/HMAC)), の作成方法をここで探している場合は、代わりに [SubtleCrypto.sign()](/ja/docs/Web/API/SubtleCrypto/sign#HMAC) を使用する必要があります。
 
 ## 例
 
@@ -103,7 +103,7 @@ console.log(digestHex);
 
 {{Compat("api.SubtleCrypto.digest")}}
 
-> **Note:** Chrome 60 では、 TLS 接続出ない場合に crypto.subtle を無効化する機能が追加されました。
+> **メモ:** Chrome 60 では、 TLS 接続出ない場合に crypto.subtle を無効化する機能が追加されました。
 
 ## 関連情報
 

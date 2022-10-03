@@ -25,10 +25,7 @@ Le principal intérêt de la valeur calculée (en dehors de la gestion du passag
 
 ## Spécifications
 
-| Spécification                                                                                    | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName("CSS2.2", "cascade.html#computed-value", "computed-value")}} | {{Spec2("CSS2.2")}} |                      |
-| {{SpecName("CSS2.1", "cascade.html#computed-value", "computed value")}} | {{Spec2("CSS2.1")}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

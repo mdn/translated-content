@@ -9,7 +9,7 @@ slug: Web/API/Pointer_events
 
 指针事件 - Pointer events 是一类可以为定点设备所触发的 DOM 事件。它们被用来创建一个可以有效掌握各类输入设备（鼠标、触控笔和单点或多点的手指触摸）的统一的 DOM 事件模型。所谓 _[指针](#term_pointer)_ 是指一个可以明确指向屏幕上某一组坐标的硬件设备。建立这样一个单独的事件模型可以有效的简化 Web 站点与应用所需的工作，同时也便于提供更加一致与良好的用户体验，无需关心不同用户和场景在输入硬件上的差异。另外，对于某些需要处理特定设备的场景，指针事件也定义了一个 {{domxref("PointerEvent.pointerType","pointerType")}} 属性用以查看触发事件的设备类型。
 
-这些事件需要能够处理 {{domxref("MouseEvent","mouse events")}} 之类较为通用的指针输入（`mousedown/pointerdown`, `mousemove/pointermove`, 等）。 因此，指针事件的类型，很大程度上类似于当前的鼠标事件类型。
+这些事件需要能够处理 {{domxref("MouseEvent","mouse events")}} 之类较为通用的指针输入（`mousedown/pointerdown`, `mousemove/pointermove`, 等）。因此，指针事件的类型，很大程度上类似于当前的鼠标事件类型。
 
 此外，一个指针事件，也同时包含了鼠标事件中所常见的属性（client coordinates, target element, button states，等）以及适用于其他输入设备的新属性：pressure, contact geometry, tilt，等等。实际上，{{domxref("PointerEvent")}} 接口继承了所有 {{domxref("MouseEvent","MouseEvent")}} 中的属性，以保障原有为鼠标事件所开发的内容能更加有效的迁移到指针事件。
 
@@ -63,7 +63,7 @@ slug: Web/API/Pointer_events
 | {{event('pointermove')}}         | {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}                     | 当某指针改变其坐标时触发。                                                                                                                                                                                                                               |
 | {{event('pointerup')}}             | {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}                         | 当某指针不再活跃时触发。                                                                                                                                                                                                                                 |
 | {{event('pointercancel')}}     | {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}             | 当浏览器认为某指针不会再生成新的后续事件时触发（例如某设备不再活跃）                                                                                                                                                                                     |
-| {{event('pointerout')}}         | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}                     | 可能由若干原因触发该事件，包括：定位设备移出了某[命中检测](term_hit_test)的边界；不支持悬浮状态的设备发生 pointerup 事件（见 pointerup 事件）； 作为 pointercancel event 事件的后续事件（见 pointercancel 事件）；当数位板检测到数位笔离开了悬浮区域时。 |
+| {{event('pointerout')}}         | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}                     | 可能由若干原因触发该事件，包括：定位设备移出了某[命中检测](term_hit_test)的边界；不支持悬浮状态的设备发生 pointerup 事件（见 pointerup 事件）；作为 pointercancel event 事件的后续事件（见 pointercancel 事件）；当数位板检测到数位笔离开了悬浮区域时。 |
 | {{event('pointerleave')}}         | {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}                 | 当定点设备移出某元素的[命中检测](term_hit_test)边界时触发。对于笔形设备来说，当数位板检测到笔移出了悬浮范围时触发。                                                                                                                                      |
 | {{event('gotpointercapture')}} | {{domxref('GlobalEventHandlers.ongotpointercapture','ongotpointercapture')}}     | 当某元素接受到一个指针捕捉时触发。                                                                                                                                                                                                                       |
 | {{event('lostpointercapture')}} | {{domxref('GlobalEventHandlers.onlostpointercapture','onlostpointercapture')}} | 当针对某个指针的指针捕捉得到释放时触发。                                                                                                                                                                                                                 |
@@ -280,7 +280,7 @@ slug: Web/API/Pointer_events
 
 CSS 属性{{cssxref("touch-action")}}被用来指明浏览器是否应当对某一区域的触摸事件应用其默认行为（例如放大或旋转等）。这一属性可以被用在所有元素上，除了：不可替换的行内元素（inline elements）、表格行（table rows）、行组（row groups）、表格列（table columns）、列组（column groups）。
 
-属性值`auto`意味着浏览器可以自由应用其默认的触摸行为（对于特定区域），属性值`none`则会禁止某一区域的浏览器默认触摸行为。 属性值`pan-x`和`pan-y`表示由某区域开始的触摸操作仅分别产生水平的或垂直的滚动。属性值`manipulation`表示希望浏览器认为某元素上的触摸行为仅用于滚动或放大。
+属性值`auto`意味着浏览器可以自由应用其默认的触摸行为（对于特定区域），属性值`none`则会禁止某一区域的浏览器默认触摸行为。属性值`pan-x`和`pan-y`表示由某区域开始的触摸操作仅分别产生水平的或垂直的滚动。属性值`manipulation`表示希望浏览器认为某元素上的触摸行为仅用于滚动或放大。
 
 在下面的示例中，浏览器对于`div`元素的默认触摸响应行为将被禁止。
 
@@ -312,7 +312,7 @@ button#tiny {
 
 尽管指针事件接口允许应用程序去为各种指针输入设备创建更佳的用户体验，但事实上，目前的大多数 web 内容仍然是仅为支持鼠标输入而设计的。因此，即使一个浏览器支持了指针事件，它也仍然需要在这些仅支持鼠标设置网页在不做任何修改的情况下继续对其提供支持。理想情况下，通用的指针模型将使得应用不再需要专门为鼠标输入设计相应。然而，因为浏览器仍必须处理鼠标事件，所以可能仍留存一些需要加以处理的兼容性问题。这一部分包含了一些对于开发者可能有用的关于鼠标事件和指针事件的异同点。
 
-出于对基于鼠标的内容的兼容性考虑，浏览器会将通用的指针事件映射成相应的鼠标事件。 这一事件映射被乘坐兼容性鼠标事件。开发者可以通过取消 pointerdown 事件相应来阻止某一特定的兼容性鼠标事件的产生，但需要注意以下情况：
+出于对基于鼠标的内容的兼容性考虑，浏览器会将通用的指针事件映射成相应的鼠标事件。这一事件映射被乘坐兼容性鼠标事件。开发者可以通过取消 pointerdown 事件相应来阻止某一特定的兼容性鼠标事件的产生，但需要注意以下情况：
 
 - 鼠标事件仅在指针失效（when the pointer is down）的情况下可以被阻止。
 - 悬浮的指针（比如没有按键按下时的鼠标指针）的事件不能被阻止。

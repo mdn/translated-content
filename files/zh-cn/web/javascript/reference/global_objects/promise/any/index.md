@@ -69,7 +69,7 @@ Promise.any([pErr, pSlow, pFast]).then((value) => {
   console.log(value);
   // pFast fulfils first
 })
-// 期望输出: "很快完成"
+// 期望输出："很快完成"
 ```
 
 ### Rejections with AggregateError
@@ -84,7 +84,7 @@ const pErr = new Promise((resolve, reject) => {
 Promise.any([pErr]).catch((err) => {
   console.log(err);
 })
-// 期望输出: "AggregateError: No Promise in Promise.any was resolved"
+// 期望输出："AggregateError: No Promise in Promise.any was resolved"
 ```
 
 ### 显示第一张已加载的图片

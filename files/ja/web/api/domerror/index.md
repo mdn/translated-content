@@ -2,6 +2,7 @@
 title: DOMError
 slug: Web/API/DOMError
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 **`DOMError`** インターフェイスは、エラー名を含んでいるエラーオブジェクトを表します。

@@ -59,9 +59,13 @@ border-right: medium dashed green;
 - `<color>`
   - : Voir {{cssxref("border-right-color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -89,14 +93,8 @@ border-right: medium dashed green;
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires                                                                                                                  |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#border-right', 'border-right')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification directe bien que la modification de valeurs pour {{cssxref("border-right-color")}} s'applique. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-right', 'border-right')}} | {{Spec2('CSS2.1')}}                 | Aucune modification significative.                                                                                            |
-| {{SpecName('CSS1', '#border-right', 'border-right')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                          |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-right")}}
+{{Compat}}

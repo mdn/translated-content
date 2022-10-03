@@ -13,7 +13,7 @@ slug: Web/API/XRInputSource
 
   - : XR 入力ソースのボタンと軸の状態を説明する {{domxref("Gamepad")}} オブジェクト（ゲームパッドまたは同等のデバイスの場合）。 デバイスがゲームパッドのようなデバイスでない場合、このプロパティの値は `NULL` です。
 
-    > **Note:** `XRInputSource` は [Gamepad API](/ja/docs/Web/API/Gamepad_API) の {{domxref("Gamepad")}} インターフェイスを使用しますが、この入力デバイスは WebXR ハードウェアに厳密に関連付けられており、汎用のゲームデバイスではありません。
+    > **メモ:** `XRInputSource` は [Gamepad API](/ja/docs/Web/API/Gamepad_API) の {{domxref("Gamepad")}} インターフェイスを使用しますが、この入力デバイスは WebXR ハードウェアに厳密に関連付けられており、汎用のゲームデバイスではありません。
 
 - {{domxref('XRInputSource.gripSpace', 'gripSpace')}}{{readonlyInline}}
   - : `handedness` で示された手に持っているように見えるオブジェクトをレンダリングするために使用するポーズを原点が追跡する {{domxref("XRSpace")}}。この空間の向きは、手がオブジェクトをつかんでいる角度を示します。 この空間の使用方法の詳細については、{{domxref("XRInputSource.gripSpace", "gripSpace")}} のメイン記事をお読みください。

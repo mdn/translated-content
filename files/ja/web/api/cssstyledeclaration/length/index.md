@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.length
 slug: Web/API/CSSStyleDeclaration/length
 ---
+
 {{ APIRef("CSSOM") }}
 
 読み取り専用のプロパティで、この CSS 宣言ブロックにあるスタイル宣言の数を整数で表します。

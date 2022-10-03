@@ -2,6 +2,7 @@
 title: 疑似クラスと疑似要素
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
 
 次に取り上げるセレクターのセットは、**疑似クラス**と**疑似要素**と呼ばれます。これらは多数あり、多くの場合、それらは非常に特定の目的に役立ちます。それらの使用方法がわかったら、リストを見て、達成しようとしているタスクに有効なものがあるかどうかを確認できます。ここでも、各セレクターに関連する MDN ページは、ブラウザーサポートの説明に役立ちます。
@@ -53,7 +54,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ::疑似要素名
 ```
 
-> **Note:** 一部の初期の疑似要素では、単一のコロン構文が使用されていたため、コードまたは例でこれを見ることがあるでしょう。最新のブラウザーは、後方互換性のためにシングルまたはダブルコロン構文で初期の疑似要素をサポートしています。
+> **メモ:** 一部の初期の疑似要素では、単一のコロン構文が使用されていたため、コードまたは例でこれを見ることがあるでしょう。最新のブラウザーは、後方互換性のためにシングルまたはダブルコロン構文で初期の疑似要素をサポートしています。
 
 たとえば、段落の最初の行を選択する場合は、それを `<span>` 要素にラップして要素セレクターを使用できます。ただし、ラップした単語の数が親要素の幅よりも長いまたは短い場合は、失敗します。1 行にいくつの単語が収まるかわからない傾向があるため（画面の幅やフォントサイズが変わると、単語数が変わるため）、HTML を追加してこれを確実に行うことは不可能です。
 

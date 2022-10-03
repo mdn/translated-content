@@ -7,7 +7,7 @@ slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 
 SVG をスタイルで指定するには、同一文書内または外部のスタイルシートで指定することができます。使用できるプロパティは [`mask`](/ja/docs/Web/CSS/mask), [`clip-path`](/ja/docs/Web/CSS/clip-path), [`filter`](/ja/docs/Web/CSS/filter) の 3 つです。
 
-> **Note:** 外部ファイル内の SVG を参照する場合、参照側の文書と[同じオリジン](/ja/docs/Web/Security/Same-origin_policy)でなければなければなりません。
+> **メモ:** 外部ファイル内の SVG を参照する場合、参照側の文書と[同じオリジン](/ja/docs/Web/Security/Same-origin_policy)でなければなければなりません。
 
 ## 埋め込み SVG の使用
 

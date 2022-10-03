@@ -42,8 +42,4 @@ translation_of: Web/CSS/CSS_Basic_User_Interface
 
 ## Spécifications
 
-| Spécification                                | État                                 | Commentaires         |
-| -------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Basic UI")}}     | {{Spec2("CSS4 Basic UI")}} |                      |
-| {{SpecName("CSS3 Basic UI")}}     | {{Spec2("CSS3 Basic UI")}} |                      |
-| {{SpecName("CSS2.1", "ui.html")}} | {{Spec2("CSS2.1")}}             | Définition initiale. |
+{{Specifications}}

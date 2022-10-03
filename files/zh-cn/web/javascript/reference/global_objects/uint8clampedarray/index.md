@@ -27,7 +27,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
   - : 返回构造函数名的字符串值。对 `Uint8ClampedArray` 类型而言："Uint8ClampedArray"。
 - {{jsxref("TypedArray.prototype", "Uint8ClampedArray.prototype")}}
-  - : 原型是 _TypedArray_ （类型化数组）对象。
+  - : 原型是 _TypedArray_（类型化数组）对象。
 
 ## 方法
 

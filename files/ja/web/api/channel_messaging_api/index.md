@@ -2,6 +2,7 @@
 title: チャンネルメッセージング API
 slug: Web/API/Channel_Messaging_API
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 **チャンネルメッセージング API** (Channel Messaging API) を使用すると、同じ文書に添付された異なる閲覧コンテキストで実行される 2 つの別々のスクリプト（2 つの IFrame、メイン文書と IFrame、{{domxref("SharedWorker")}} を介した 2 つの文書、 2 つのワーカーなど）で直接通信し、両端にポートを持つ双方向チャンネル（またはパイプ）を介して相互にメッセージをやり取りできます。

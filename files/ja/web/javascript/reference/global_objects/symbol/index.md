@@ -23,7 +23,7 @@ console.log(Sym1 === Sym2) // "false" を返す
 // 異なる値を持ちます。
 ```
 
-> **Note:** Ruby (または他の言語) の _"symbols"_ と呼ばれる機能をよくご存知であれば、間違えないでください。 JavaScript のシンボルは異なります。
+> **メモ:** Ruby (または他の言語) の _"symbols"_ と呼ばれる機能をよくご存知であれば、間違えないでください。 JavaScript のシンボルは異なります。
 
 _Symbol_ 型は ECMAScript 2015 の新機能であり、 ECMAScript 5 にはシンボルに相当するものはありません。
 

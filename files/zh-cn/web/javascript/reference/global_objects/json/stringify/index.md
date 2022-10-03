@@ -140,7 +140,7 @@ JSON 序列化结果为 `{"week":45,"month":7}`.
 
 ```plain
 JSON.stringify(foo, ['week', 'month']);
-// '{"week":45,"month":7}', 只保留 “week” 和 “month” 属性值。
+// '{"week":45,"month":7}', 只保留“week”和“month”属性值。
 ```
 
 ### `space` 参数
