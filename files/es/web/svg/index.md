@@ -14,7 +14,7 @@ Este tutorial te ayudará a comenzar a usar SVG.
 
 **Gráficos vectoriales escalables** **(SVG)** es un lenguaje de marcado [XML](/es/docs/XML_Introduction) para describir [gráficos vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)en dos dimensiones. Básicamente, es a los gráficos lo que [HTML](/es/docs/web/HTML) es al texto.
 
-SVG es un estándar Web abierto basado en texto. Está expresamente diseñado para trabajar con otros estándares web como [CSS](/es/docs/CSS "es/docs/CSS"), [DOM](/es/docs/DOM "es/docs/DOM"), y [SMIL](/es/docs/Web/SVG/SVG_animation_with_SMIL "es/docs/Web/SVG/SVG_animation_with_SMIL").
+SVG es un estándar Web abierto basado en texto. Está expresamente diseñado para trabajar con otros estándares web como [CSS](/es/docs/CSS), [DOM](/es/docs/DOM), y [SMIL](/es/docs/Web/SVG/SVG_animation_with_SMIL).
 
 ## Documentación
 
@@ -65,7 +65,7 @@ Al igual que HTML, SVG tiene un modelo de objetos de documento (DOM) y eventos, 
 Aunque un poco de SVG puede dar mucho recorrido a la hora de mejorar contenidos web, aquí tienes algunos ejemplos de uso de gran cantidad de SVG.
 
 - [Tetris](http://www.codedread.com/yastframe.php)
-- [Connect 4](https://web.archive.org/web/20131019072450/http://www.treebuilder.de/svg/connect4.svg "Archive link provided because source now requires authentication.")
+- [Connect 4](https://web.archive.org/web/20131019072450/http://www.treebuilder.de/svg/connect4.svg)
 - [Mapa de población de los Estados Unidos de América](http://www.carto.net/papers/svg/us_population/index.html)
 - [Caja 3D box](http://www.treebuilder.de/default.asp?file=441875.xml) y [Cajas 3D](http://www.treebuilder.de/default.asp?file=206524.xml)
 - [jVectorMap](http://jvectormap.com/) (mapas interactivos para visualización de datos)

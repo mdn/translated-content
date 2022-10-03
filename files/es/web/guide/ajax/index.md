@@ -8,7 +8,7 @@ Una introducción a AJAX.
 
 **JavaScript Asíncrono + XML (AJAX)** no es una tecnología por sí misma, es un término que describe un nuevo modo de utilizar conjuntamente varias tecnologías existentes. Esto incluye: [HTML](es/HTML) o [XHTML](es/XHTML), [CSS](es/CSS), [JavaScript](es/JavaScript), [DOM](es/DOM), [XML](es/XML), [XSLT](es/XSLT), y lo más importante, el objeto [XMLHttpRequest](es/XMLHttpRequest). Cuando estas tecnologías se combinan en un modelo AJAX, es posible lograr aplicaciones web capaces de actualizarse continuamente sin tener que volver a cargar la página completa. Esto crea aplicaciones más rápidas y con mejor respuesta a las acciones del usuario.
 
-#### [Documentación](/Special:Tags?tag=AJAX&language=es "Special:Tags?tag=AJAX&language=es")
+#### [Documentación](/Special:Tags?tag=AJAX&language=es)
 
 - [Primeros pasos con AJAX](/es/docs/Web/Guide/AJAX/Getting_Started)
   - : Este artículo te guiará por los conceptos básicos de AJAX y te proporcionará dos ejemplos prácticos para que empieces.

@@ -8,7 +8,7 @@ original_slug: WebRTC/Peer-to-peer_communications_with_WebRTC
 
 Las **WebRTC APIs** están diseñadas para permitir a las aplicaciones JS la creación de conexiones de tiempo real con canales de Audio, Video, y/o Datos (Data), directamente entre usuarios y a través de sus browsers, o hacia servers que soporten los protocolos WebRTC. También potencia navigator.mozGetUserMedia() para acceder a los datos de cámara y micrófono (getUserMedia() está siendo estandarizado por la Media Capture Task Force, así como las Recording APIs).
 
-Las fuentes primarias de las especificaciones para WebRTC (en constante **evolución**), son las especificaciones [WebRTC](http://dev.w3.org/2011/webrtc/editor/webrtc.html) y [getUserMedia](http://dev.w3.org/2011/webrtc/editor/getusermedia.html "http://dev.w3.org/2009/dap/camera/"), y varios de los borradores del IETF, en mayor medida en el [rtcweb working group](http://tools.ietf.org/wg/rtcweb/), pero también [mmusic](http://tools.ietf.org/wg/mmusic/), [rmcat](http://tools.ietf.org/wg/rmcat/) y algunos otros.
+Las fuentes primarias de las especificaciones para WebRTC (en constante **evolución**), son las especificaciones [WebRTC](http://dev.w3.org/2011/webrtc/editor/webrtc.html) y [getUserMedia](http://dev.w3.org/2011/webrtc/editor/getusermedia.html), y varios de los borradores del IETF, en mayor medida en el [rtcweb working group](http://tools.ietf.org/wg/rtcweb/), pero también [mmusic](http://tools.ietf.org/wg/mmusic/), [rmcat](http://tools.ietf.org/wg/rmcat/) y algunos otros.
 
 Gran parte de la implementación en Chrome y Firefox está basada en código que fue abierto por Google en [webrtc.org](http://www.webrtc.org/reference).
 

@@ -147,8 +147,8 @@ El SVG se importa desde un archivo llamado `resources.svg`, utilizando la ruta d
 
 ## Véa también
 
-- [SVG](/en/SVG "En/SVG")
-- [SVG Effects for HTML Content](/web-tech/2008/09/15/svg-effects-for-html-content "https://developer.mozilla.org/editor/fckeditor/core/editor/web-tech/2008/09/15/svg-effects-for-html-content/") (blog post)
-- [SVG External Document References](/web-tech/2008/10/10/svg-external-document-references "https://developer.mozilla.org/editor/fckeditor/core/editor/web-tech/2008/10/10/svg-external-document-references/") (blog post)
+- [SVG](/en/SVG)
+- [SVG Effects for HTML Content](/web-tech/2008/09/15/svg-effects-for-html-content) (blog post)
+- [SVG External Document References](/web-tech/2008/10/10/svg-external-document-references) (blog post)
 
 CESAR ORTIZ GUTIERREZ - ELPATOX - wWw\.Patito.Tk

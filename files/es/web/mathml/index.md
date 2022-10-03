@@ -31,7 +31,7 @@ Aquí encontrarás enlaces a documentación, ejemplos y herramientas que te ayud
 
 - Ver los foros de Mozilla...
   {{ DiscussionList("dev-tech-mathml", "mozilla.dev.tech.mathml") }}
-- [Canal IRC](irc://irc.mozilla.org/%23mathml "#mathml")
+- [Canal IRC](irc://irc.mozilla.org/%23mathml)
 - [Wiki usada por contribuyentes de Mozilla](https://wiki.mozilla.org/MathML:Home_Page)
 - [W3C Math Home](https://www.w3.org/Math/)
 - [www-math w3.org mail archive](https://lists.w3.org/Archives/Public/www-math/)
