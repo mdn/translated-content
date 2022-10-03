@@ -30,7 +30,7 @@ El valor de la expresion `yield*` es el valor retornado por el iterador en si mi
 
 ### Delegando a otro generator
 
-En el siguiente código, los valores declarados con yield en `g1()` son devueltos por las llamadas a `next() al igual que en` `g2()`.
+En el siguiente código, los valores declarados con yield en `g1()` son devueltos por las llamadas a `next()` al igual que en `g2()`.
 
 ```js
 function* g1() {

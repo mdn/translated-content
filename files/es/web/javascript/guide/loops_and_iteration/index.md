@@ -192,7 +192,7 @@ break [label];
 1. La primera forma de la sintaxis termina el bucle envolvente más interno o el `switch.`
 2. La segunda forma de la sintaxis termina la instrucción etiquetada específica.
 
-### **Ejemplo** **1**
+### Ejemplo 1
 
 El siguiente ejemplo recorre en iteración los elementos de un arreglo hasta que encuentra el índice de un elemento cuyo valor es `theValue`:
 
@@ -204,7 +204,7 @@ for (let i = 0; i < a.length; i++) {
 }
 ```
 
-### **Ejemplo 2:** romper una etiqueta
+### Ejemplo 2: romper una etiqueta
 
 ```js
 let x = 0;

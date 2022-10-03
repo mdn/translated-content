@@ -7,7 +7,7 @@ slug: Web/API/Element/animate
 
 {{domxref("Element")}} インターフェイスの **`animate()`** メソッドは、新しい {{domxref("Animation")}} の生成、この要素への適用、そしてアニメーションの再生を行うショートカットメソッドです。生成した {{domxref("Animation")}} オブジェクトのインスタンスを返します。
 
-> **Note:** 要素には複数のアニメーションを適用することができます。 {{domxref("Element.getAnimations()")}} を呼び出すと、要素に作用するアニメーションのリストを取得することができます。
+> **メモ:** 要素には複数のアニメーションを適用することができます。 {{domxref("Element.getAnimations()")}} を呼び出すと、要素に作用するアニメーションのリストを取得することができます。
 
 ## 構文
 

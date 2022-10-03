@@ -14,7 +14,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`connect-src`** �
 - {{domxref("EventSource")}}
 - {{domxref("Navigator.sendBeacon()")}}
 
-> **Note:** `connect-src 'self'` はすべてのブラウザーで websocket スキーマを解決するわけではありません。この[問題](https://github.com/w3c/webappsec-csp/issues/7)に詳細情報があります。
+> **メモ:** `connect-src 'self'` はすべてのブラウザーで websocket スキーマを解決するわけではありません。この[問題](https://github.com/w3c/webappsec-csp/issues/7)に詳細情報があります。
 
 <table class="properties">
   <tbody>
