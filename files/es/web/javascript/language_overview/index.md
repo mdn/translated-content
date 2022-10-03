@@ -252,7 +252,7 @@ x = x + 5;
 
 Puedes usar `++` y `--` para incrementar y disminuir respectivamente. Estos se pueden utilizar como operadores prefijos o sufijos.
 
-El [operador `+`](/es/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition "/es/JavaScript/Reference/Operators/String_Operators") también hace concatenación de cadenas:
+El [operador `+`](/es/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition) también hace concatenación de cadenas:
 
 ```js
 'hello' + ' world'; // "hello world"
@@ -267,7 +267,7 @@ Si agregas una cadena a un número (u otro valor), todo se convierte primero en 
 
 Agregar una cadena vacía a algo es una forma útil de convertirla en cadena.
 
-[Se pueden realizar comparaciones](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators "/es/JavaScript/Reference/Operators/Comparison_Operators") en JavaScript utilizando `<`, `>`, `<=` y `>=`. Estas funcionan tanto para cadenas como para números. La igualdad es un poco menos sencilla. El operador doble-igual realiza la coerción de tipos si le das diferentes tipos, con resultados a veces interesantes:
+[Se pueden realizar comparaciones](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) en JavaScript utilizando `<`, `>`, `<=` y `>=`. Estas funcionan tanto para cadenas como para números. La igualdad es un poco menos sencilla. El operador doble-igual realiza la coerción de tipos si le das diferentes tipos, con resultados a veces interesantes:
 
 ```js
 123 == '123'; // true
@@ -283,7 +283,7 @@ Para evitar la coerción de tipos, usa el operador triple-igual:
 
 También hay operadores `!=` y `!==`.
 
-JavaScript también tiene [operaciones bit a bit](/es/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators "/es/JavaScript/Reference/Operators/Bitwise_Operators"). Si quieres usarlas, ahí están.
+JavaScript también tiene [operaciones bit a bit](/es/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators). Si quieres usarlas, ahí están.
 
 ## Estructuras de control
 
@@ -476,7 +476,7 @@ var user = prompt('¿cuál es su clave?')
 obj[user] = prompt('¿cuál es su valor?')
 ```
 
-Estas también son semánticamente equivalentes. El segundo método tiene la ventaja de que el nombre de la propiedad se proporciona como una cadena, lo cual significa que se puede calcular en tiempo de ejecución. Sin embargo, el uso de este método evita que se apliquen algunas optimizaciones de minificación y del motor de JavaScript. También se puede utilizar para establecer y obtener propiedades con nombres [palabras reservadas](/es/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords "/es/JavaScript/Reference/Reserved_Words"):
+Estas también son semánticamente equivalentes. El segundo método tiene la ventaja de que el nombre de la propiedad se proporciona como una cadena, lo cual significa que se puede calcular en tiempo de ejecución. Sin embargo, el uso de este método evita que se apliquen algunas optimizaciones de minificación y del motor de JavaScript. También se puede utilizar para establecer y obtener propiedades con nombres [palabras reservadas](/es/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords):
 
 ```js
 obj.for = 'Simon'; // Error de sintaxis, porque 'for' es una palabra reservada
@@ -542,7 +542,7 @@ for (const currentValue of a) {
 }
 ```
 
-También puedes iterar sobre un arreglo utilizando el bucle [`for`...`in`](/es/docs/Web/JavaScript/Reference/Statements/for...in "/es/JavaScript/Reference/Statements/for...in"), sin embargo, este no itera sobre los elementos del arreglo, sino los índices del arreglo. Además, si alguien agrega nuevas propiedades a `Array.prototype`, también serán iteradas por dicho bucle. Por lo tanto, este tipo de bucle no se recomienda para arreglos.
+También puedes iterar sobre un arreglo utilizando el bucle [`for`...`in`](/es/docs/Web/JavaScript/Reference/Statements/for...in), sin embargo, este no itera sobre los elementos del arreglo, sino los índices del arreglo. Además, si alguien agrega nuevas propiedades a `Array.prototype`, también serán iteradas por dicho bucle. Por lo tanto, este tipo de bucle no se recomienda para arreglos.
 
 Otra forma de iterar sobre un arreglo que se agregó con ECMAScript 5 es {{jsxref("Objetos_Globales/Array/forEach", "arr.forEach()")}}:
 
@@ -602,7 +602,7 @@ add(2, 3, 4); // 5
 // sumó los dos primeros; el 4 fue ignorado
 ```
 
-Eso puede parecer un poco tonto, pero las funciones tienen acceso a una variable adicional dentro de su cuerpo llamada [`argumentos`](/es/docs/Web/JavaScript/Reference/Functions/argument "/es/JavaScript/Reference/Functions_and_function_scope/arguments"), que es un objeto tipo arreglo que contiene todos los valores pasados a la función. Reescribamos la función de suma para tomar tantos valores como queramos:
+Eso puede parecer un poco tonto, pero las funciones tienen acceso a una variable adicional dentro de su cuerpo llamada [`argumentos`](/es/docs/Web/JavaScript/Reference/Functions/argument), que es un objeto tipo arreglo que contiene todos los valores pasados a la función. Reescribamos la función de suma para tomar tantos valores como queramos:
 
 ```js
 function add() {
@@ -779,7 +779,7 @@ s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // "Willison, Simon"
 ```
 
-Nota sobre la palabra clave [`this`](/es/docs/Web/JavaScript/Reference/Operators/this "/es/JavaScript/Reference/Operators/this"). Usada dentro de una función, `this` se refiere al objeto actual. Lo que realmente significa está especificado por la forma en que llamaste a esa función. Si lo llamaste usando [notación de puntos o notación de corchetes](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer#Accessing_properties "/es/JavaScript/Reference/Operators/Member_Operators") en un objeto, ese objeto se convierte en `this`. Si la notación de puntos no se usó para la llamada, `this` se refiere al objeto global.
+Nota sobre la palabra clave [`this`](/es/docs/Web/JavaScript/Reference/Operators/this). Usada dentro de una función, `this` se refiere al objeto actual. Lo que realmente significa está especificado por la forma en que llamaste a esa función. Si lo llamaste usando [notación de puntos o notación de corchetes](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer#Accessing_properties) en un objeto, ese objeto se convierte en `this`. Si la notación de puntos no se usó para la llamada, `this` se refiere al objeto global.
 
 Ten en cuenta que `this` es una frecuente causa de errores. Por ejemplo:
 
@@ -807,7 +807,7 @@ function Person(first, last) {
 var s = new Person('Simon', 'Willison');
 ```
 
-Hemos introducido otra palabra clave: [`new`](/es/docs/Web/JavaScript/Reference/Operators/new "/es/JavaScript/Reference/Operators/new"). `new` está fuertemente relacionado con `this`. Crea un nuevo objeto vacío y luego llama a la función especificada, con `this` configurado para ese nuevo objeto. Sin embargo, ten en cuenta que la función especificada con `this` no devuelve un valor, sino que simplemente modifica el objeto `this`. Es `new` que devuelve el objeto `this` al sitio que realiza la llamada. Las funciones que están diseñadas para ser llamadas por `new` se denominan funciones constructoras. La práctica común es poner en mayúscula estas funciones como recordatorio para llamarlas con `new`.
+Hemos introducido otra palabra clave: [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). `new` está fuertemente relacionado con `this`. Crea un nuevo objeto vacío y luego llama a la función especificada, con `this` configurado para ese nuevo objeto. Sin embargo, ten en cuenta que la función especificada con `this` no devuelve un valor, sino que simplemente modifica el objeto `this`. Es `new` que devuelve el objeto `this` al sitio que realiza la llamada. Las funciones que están diseñadas para ser llamadas por `new` se denominan funciones constructoras. La práctica común es poner en mayúscula estas funciones como recordatorio para llamarlas con `new`.
 
 La función mejorada todavía tiene el mismo error al llamar a `fullName()` sola.
 

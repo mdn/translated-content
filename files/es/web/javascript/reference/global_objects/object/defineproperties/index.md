@@ -133,4 +133,4 @@ Basado en [Kangax's compat tables](http://kangax.github.com/es5-compat-table/).
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties "Enumerability_and_ownership_of_properties")
+- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)

@@ -217,7 +217,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ### Spread con muchos valores
 
-Cuando se usa la sintaxis spread para llamados de funciones, tenga en cuenta la posibilidad de exceder el límite de longitud de argumentos del motor de JavaScript. Vea [`apply()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).") para más detalles.
+Cuando se usa la sintaxis spread para llamados de funciones, tenga en cuenta la posibilidad de exceder el límite de longitud de argumentos del motor de JavaScript. Vea [`apply()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) para más detalles.
 
 ## Sintaxis Rest (parámetros)
 

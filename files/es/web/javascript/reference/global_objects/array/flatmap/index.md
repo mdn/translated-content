@@ -89,7 +89,7 @@ arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 
 ## Polyfill
 
-Este polyfill necesita [Array.prototype.flat polyfill](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flat "Array.prototype.flat()")
+Este polyfill necesita [Array.prototype.flat polyfill](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
 
 ```js
 if (!Array.prototype.flatMap) {

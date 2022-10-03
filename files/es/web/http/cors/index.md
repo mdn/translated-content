@@ -26,7 +26,7 @@ Más específicamente, este artículo está dirigido a administradores web, desa
 
 Este [estándar de intercambio de origen cruzado](http://www.w3.org/TR/cors/) es utilizado para habilitar solicitudes HTTP de sitios cruzados para:
 
-- Invocaciones de las APIs [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") o [Fetch](/es/docs/Web/API/Fetch_API) en una manera de sitio cruzado, como se discutió arriba.
+- Invocaciones de las APIs [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) o [Fetch](/es/docs/Web/API/Fetch_API) en una manera de sitio cruzado, como se discutió arriba.
 - Fuentes Web (para usos de fuente en dominios cruzados `@font-face` dentro de CSS), [para que los servidores puedan mostrar fuentes TrueType que sólo puedan ser cargadas por sitios cruzados y usadas por sitios web que lo tengan permitido.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - Texturas WebGL.
 - Imágenes dibujadas en patrones usando [`drawImage`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage).
@@ -43,9 +43,9 @@ Las secciones siguientes discuten escenarios, así como el análisis de las cabe
 
 ## Ejemplos de escenarios de control de accesos
 
-Aquí, presentamos tres escenarios que ilustran cómo funciona el Intercambio de Recursos de Origen Cruzado. Todos estos ejemplos utilizan el objeto [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest"), que puede ser utilizado para hacer invocaciones de sitios cruzados en cualquier explorador soportado.
+Aquí, presentamos tres escenarios que ilustran cómo funciona el Intercambio de Recursos de Origen Cruzado. Todos estos ejemplos utilizan el objeto [`XMLHttpRequest`](/en/DOM/XMLHttpRequest), que puede ser utilizado para hacer invocaciones de sitios cruzados en cualquier explorador soportado.
 
-Los fragmentos de JavaScript incluidos en estas secciones (y las instancias ejecutadas del código servidor que correctamente maneja las solicitudes de sitios cruzados) [pueden ser encontrados "en acción" aquí](http://arunranga.com/examples/access-control/), y pueden ser trabajados en exploradores que soportan [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") de sitios cruzados. Una discusión de Intercambio de Recursos de Origen Cruzado desde una [perspectiva de servidor (incluyendo fragmentos de código PHP) puede ser encontrada aquí](/es/docs/Web/HTTP/Server-Side_Access_Control "En/Server-Side Access Control").
+Los fragmentos de JavaScript incluidos en estas secciones (y las instancias ejecutadas del código servidor que correctamente maneja las solicitudes de sitios cruzados) [pueden ser encontrados "en acción" aquí](http://arunranga.com/examples/access-control/), y pueden ser trabajados en exploradores que soportan [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) de sitios cruzados. Una discusión de Intercambio de Recursos de Origen Cruzado desde una [perspectiva de servidor (incluyendo fragmentos de código PHP) puede ser encontrada aquí](/es/docs/Web/HTTP/Server-Side_Access_Control).
 
 ### Solicitudes simples
 
@@ -239,7 +239,7 @@ El servidor responde con `Access-Control-Allow-Methods` y dice que `POST`, `GET`
 
 ### Solicitudes con credenciales
 
-La capacidad más interesante expuesta tanto por [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") y Access Control es la habilidad para hacer solicitudes "con credenciales" que estén al tanto de Cookies HTTP e información de Autenticación HTTP. Por defecto, en las invocaciones [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") de un sitio curzado, los exploradores no enviarán credenciales. Una bandera específica tiene que ser establecida en el objeto [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") cuando este es invocado.
+La capacidad más interesante expuesta tanto por [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) y Access Control es la habilidad para hacer solicitudes "con credenciales" que estén al tanto de Cookies HTTP e información de Autenticación HTTP. Por defecto, en las invocaciones [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) de un sitio curzado, los exploradores no enviarán credenciales. Una bandera específica tiene que ser establecida en el objeto [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) cuando este es invocado.
 
 En este ejemplo, el contenido cargado originalmente desde `http://foo.example` hace una solicitud GET simple a un recurso en `http://bar.other` que establece Cookies. El contenido en foo.example puede contener un JavaScript como este:
 
@@ -257,7 +257,7 @@ function callOtherDomain(){
 }
 ```
 
-La línea 7 muestra la bandera en [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") que tiene que ser establecida para poder hacer la invocación con Cookies, es decir, el valor booleano `withCredentials`. Por defecto, la invocación es hecha sin Cookies. Dado que esta es una simple solicitud `GET`, no es verificada, pero el explorador **rechazará** cualquier respuesta que no tiene el encabezado `Access-Control-Allow-Credentials: true`,y **no** hará disponible la respuesta para invocar contenido web.
+La línea 7 muestra la bandera en [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) que tiene que ser establecida para poder hacer la invocación con Cookies, es decir, el valor booleano `withCredentials`. Por defecto, la invocación es hecha sin Cookies. Dado que esta es una simple solicitud `GET`, no es verificada, pero el explorador **rechazará** cualquier respuesta que no tiene el encabezado `Access-Control-Allow-Credentials: true`,y **no** hará disponible la respuesta para invocar contenido web.
 
 A continuación se proporciona una muestra de intercambio entre un cliente y un servidor:
 
@@ -349,7 +349,7 @@ Indica si la respuesta puede ser expuesta cuando la bandera `credentials` es ver
 Access-Control-Allow-Credentials: true | false
 ```
 
-[Las Solicitudes con credenciales](/En/HTTP_access_control#Requests_with_credentials "En/HTTP access control#Requests with credentials") son discutidas arriba.
+[Las Solicitudes con credenciales](/En/HTTP_access_control#Requests_with_credentials) son discutidas arriba.
 
 ### Access-Control-Allow-Methods
 
@@ -359,11 +359,11 @@ Específica el método o los métodos permitidos cuando se asigna un recurso. Es
 Access-Control-Allow-Methods: <method>[, <method>]*
 ```
 
-Un ejemplo de una [solicitud verificada se muestra arriba](#Preflighted_requests "#Preflight Request"), incluyendo un ejemplo donde se envía este encabezado al explorador.
+Un ejemplo de una [solicitud verificada se muestra arriba](#Preflighted_requests), incluyendo un ejemplo donde se envía este encabezado al explorador.
 
 ### Access-Control-Allow-Headers
 
-Usado en respuesta a una [solicitud verificada](#Preflighted_requests "#Preflighted Request") para indicar qué encabezado HTTP puede ser usado cuando se realiza la solicitud real.
+Usado en respuesta a una [solicitud verificada](#Preflighted_requests) para indicar qué encabezado HTTP puede ser usado cuando se realiza la solicitud real.
 
 ```
 Access-Control-Allow-Headers: <field-name>[, <field-name>]*
@@ -371,7 +371,7 @@ Access-Control-Allow-Headers: <field-name>[, <field-name>]*
 
 ## Los encabezados HTTP de solicitud
 
-Esta sección lista las cabeceras que los clietnes deben utilizar cuando realizan solicitudes HTTP para usar la característica de intercambio de origen cruzado. Note que estas cabeceras son establecidas cuando se realizan realizan invocaciones a los servidores. Los desarrolladores usan la capacidad de sitios cruzados [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") para no tener que establecer ninguna solicitud de intercambio de origen cruzado programada.
+Esta sección lista las cabeceras que los clietnes deben utilizar cuando realizan solicitudes HTTP para usar la característica de intercambio de origen cruzado. Note que estas cabeceras son establecidas cuando se realizan realizan invocaciones a los servidores. Los desarrolladores usan la capacidad de sitios cruzados [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) para no tener que establecer ninguna solicitud de intercambio de origen cruzado programada.
 
 ### Origin
 
@@ -395,7 +395,7 @@ Se usa cuando se emite una solicitud verificada, para indicarle al servidor qué
 Access-Control-Request-Method: <method>
 ```
 
-Ejemplos de esta utilización pueden ser encontrados [arriba.](#Preflighted_requests "Preflighted requests")
+Ejemplos de esta utilización pueden ser encontrados [arriba.](#Preflighted_requests)
 
 ### Access-Control-Request-Headers
 
@@ -405,7 +405,7 @@ Usada cuando se emite una solicitud verificada para indicarle al servidor qué c
 Access-Control-Request-Headers: <field-name>[, <field-name>]*
 ```
 
-Ejemplos de esta utilización pueden ser encontrados [arriba](/En/HTTP_access_control#Preflighted_requests "En/HTTP access control#Preflighted requests").
+Ejemplos de esta utilización pueden ser encontrados [arriba](/En/HTTP_access_control#Preflighted_requests).
 
 ## Especificaciones
 
@@ -423,7 +423,7 @@ Ejemplos de esta utilización pueden ser encontrados [arriba](/En/HTTP_access_co
 - [Muestras de Código mostrando `XMLHttpRequest` e Intercambio de Recursos de Origen Cruzado](http://arunranga.com/examples/access-control/)
 - [Intercambio de Recursos de Origen Cruzado desde una perspectiva de Servidor (PHP, etc.)](/es/docs/Web/HTTP/Server-Side_Access_Control)
 - [Especificación del Intercambio de Recursos de Origen Cruzado](http://www.w3.org/TR/cors/)
-- [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "en/XMLHttpRequest")
+- [`XMLHttpRequest`](/en/DOM/XMLHttpRequest)
 - [Discusión adicional sobre el encabezado Origin](http://crypto.stanford.edu/websec/specs/origin-header/)
 - [Usando CORS con todos los exploradores (modernos).](http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx)
 - [Usando CORS - HTML5 Rocks](http://www.html5rocks.com/en/tutorials/cors/)

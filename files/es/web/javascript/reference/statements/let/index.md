@@ -49,7 +49,7 @@ if (x > y) {
 }
 ```
 
-Es posible usar definiciones `let` para asociar código en extensiones con un pseudo-espacio-de-nombre (pseudo-namespace). (Ver [Mejores prácticas de seguridad en extensiones](/es/docs/Security_best_practices_in_extensions "en-US/docs/Security_best_practices_in_extensions").)
+Es posible usar definiciones `let` para asociar código en extensiones con un pseudo-espacio-de-nombre (pseudo-namespace). (Ver [Mejores prácticas de seguridad en extensiones](/es/docs/Security_best_practices_in_extensions).)
 
 ```js
 let Cc = Components.classes, Ci = Components.interfaces;
@@ -114,7 +114,7 @@ La salida de este código desplegaría "global" una vez.
 
 ### Zona muerta temporal y errores con `let`
 
-La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError "SyntaxError"). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
+La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
 
 ```js
 if (x) {
@@ -138,7 +138,7 @@ function do_something() {
 }
 ```
 
-Es posible encontrar errores en bloques de control [`switch`](/es/docs/JavaScript/Reference/Statements/switch "switch") debido a que solamente existe un block subyacente.
+Es posible encontrar errores en bloques de control [`switch`](/es/docs/JavaScript/Reference/Statements/switch) debido a que solamente existe un block subyacente.
 
 ```js
 switch (x) {
@@ -207,7 +207,7 @@ console.log(i); // ReferenceError: i is not defined
 
 ### Bloques`let`
 
-> **Advertencia:** La **sintaxis del bloque y expresion** `let` es no-estandar y sera deshechado en un futuro. ¡No deben ser usados! ver [error 1023609](https://bugzilla.mozilla.org/show_bug.cgi?id=1023609 "FIXED: Remove SpiderMonkey support for let expressions") y [error 1167029](https://bugzilla.mozilla.org/show_bug.cgi?id=1167029 "FIXED: Remove SpiderMonkey support for let blocks") para mas detalles.
+> **Advertencia:** La **sintaxis del bloque y expresion** `let` es no-estandar y sera deshechado en un futuro. ¡No deben ser usados! ver [error 1023609](https://bugzilla.mozilla.org/show_bug.cgi?id=1023609) y [error 1167029](https://bugzilla.mozilla.org/show_bug.cgi?id=1167029) para mas detalles.
 
 Un **bloque `let`** provee una manera de asociar valores con variables dentro del alcance de un bloque sin afectar el valor de variables con nombre similar fuera del bloque.
 

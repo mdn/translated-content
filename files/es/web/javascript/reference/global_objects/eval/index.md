@@ -94,7 +94,7 @@ var nombreProp = obtenerNombreProp();  // devuelve "a" o "b"
 eval( "var resultado = obj." + nombreProp );
 ```
 
-Y con el uso de los [accesores de propiedades](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors "JavaScript/Reference/Operators/Member_Operators") (artículo en inglés), el cual es mucho más rápido y seguro, sería así:
+Y con el uso de los [accesores de propiedades](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) (artículo en inglés), el cual es mucho más rápido y seguro, sería así:
 
 ```js
 var obj = { a: 20, b: 30 };
@@ -155,21 +155,21 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-Las [clausuras o cierres](/es/docs/Web/JavaScript/Closures "JavaScript/Guide/Closures")(art. en inglés) son muy útiles como forma de crear funciones parametrizadas sin la concatenación de cadenas de caracteres o strings.
+Las [clausuras o cierres](/es/docs/Web/JavaScript/Closures)(art. en inglés) son muy útiles como forma de crear funciones parametrizadas sin la concatenación de cadenas de caracteres o strings.
 
 ### Analizando JSON (convirtiendo cadenas de caracteres (strings) hacia objetos de JavaScript)
 
-Si la cadena de caracteres que usted esta llamando `eval()` contiene datos (por ejemplo, un array: `"[1, 2, 3]"`), en contraposición al código, debería considerar un cambio a [JSON](/es/docs/Glossary/JSON "JSON") (art. en inglés), el cual permite a la cadena de caracteres utilizar un subconjunto de sintaxis de JavaScript para representar los datos. Vea también [Descargando JSON y JavaScript en extensiones](/es/docs/Downloading_JSON_and_JavaScript_in_extensions "Downloading_JSON_and_JavaScript_in_extensions") (art. en inglés).
+Si la cadena de caracteres que usted esta llamando `eval()` contiene datos (por ejemplo, un array: `"[1, 2, 3]"`), en contraposición al código, debería considerar un cambio a [JSON](/es/docs/Glossary/JSON) (art. en inglés), el cual permite a la cadena de caracteres utilizar un subconjunto de sintaxis de JavaScript para representar los datos. Vea también [Descargando JSON y JavaScript en extensiones](/es/docs/Downloading_JSON_and_JavaScript_in_extensions) (art. en inglés).
 
 Observe, que ya que la sintaxis de JSON es limitada en comparación con la sintaxis de JavaScript, muchas literales válidas de JavaScript no serán analizadas como JSON. Por ejemplo, seguir comas no está permitido en JSON, y los nombres de propiedades (keys) en literales de objeto deben ser entrecomilladas. Asegúrese de utilizar un serializados de JSON para generar cadenas de caracteres que posteriormente sean analizadas como JSON.
 
 ### Pasar datos en lugar de código
 
-Por ejemplo, una extensión diseñada para arrastar contenido de páginas web podría tener reglas de arrastre definidas en [XPath](/es/docs/XPath "XPath") (art. en inglés) en lugar de código JavaScript.
+Por ejemplo, una extensión diseñada para arrastar contenido de páginas web podría tener reglas de arrastre definidas en [XPath](/es/docs/XPath) (art. en inglés) en lugar de código JavaScript.
 
 ### Ejecutar código sin privilegos limitados
 
-Si usted debe ejecutar código, considere ejecutarlo con privilegios reducidos. Este consejo aplica principalmente para las extensiones y las aplicaciones XUL, para lo cual puede utilizar [Components.utils.evalInSandbox](/es/docs/Components.utils.evalInSandbox "Components.utils.evalInSandbox") (art. en inglés).
+Si usted debe ejecutar código, considere ejecutarlo con privilegios reducidos. Este consejo aplica principalmente para las extensiones y las aplicaciones XUL, para lo cual puede utilizar [Components.utils.evalInSandbox](/es/docs/Components.utils.evalInSandbox) (art. en inglés).
 
 ## Ejemplos
 

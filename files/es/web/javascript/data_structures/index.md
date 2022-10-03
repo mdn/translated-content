@@ -124,7 +124,7 @@ Puede resultar tentador utilizar cadenas para representar datos complejos. Hacer
 
 - Es fácil construir cadenas complejas con concatenación.
 - Las cadenas son fáciles de depurar (lo que ves impreso siempre es lo que está en la cadena).
-- Las cadenas son el denominador común de muchas APIs ([campos de entrada —`input`s—](/es/docs/Web/API/HTMLInputElement), [valores de almacenamiento local](/es/docs/Storage), respuestas [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest "Usa objetos XMLHttpRequest (XHR) para interactuar con servidores. Puedes recuperar datos de una URL sin tener que actualizar la página completa. Esto permite que una página web actualice solo parte de su contenido sin interrumpir lo que el usuario está haciendo.") cuando se usa `responseText`, etc.) y puede resultar tentador trabajar solo con cadenas.
+- Las cadenas son el denominador común de muchas APIs ([campos de entrada —`input`s—](/es/docs/Web/API/HTMLInputElement), [valores de almacenamiento local](/es/docs/Storage), respuestas [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest) cuando se usa `responseText`, etc.) y puede resultar tentador trabajar solo con cadenas.
 
 Con las convenciones, es posible representar cualquier estructura de datos en una cadena. Esto no la convierte en una buena idea. Por ejemplo, con un separador, se podría emular una lista (mientras que un arreglo de JavaScript sería más adecuado). Desafortunadamente, cuando el separador se usa en uno de los elementos de la "lista", la lista se rompe. Se puede elegir un caracter de escape, etc. Todo esto requiere convenciones y crea una innecesaria carga de mantenimiento.
 
