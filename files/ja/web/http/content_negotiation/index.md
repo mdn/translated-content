@@ -7,7 +7,7 @@ slug: Web/HTTP/Content_negotiation
 
 [HTTP](/ja/docs/Glossary/HTTP) において**コンテンツ交渉** (content negotiation) は、同じ URI におけるさまざまな{{Glossary("Representation header","表現")}}のリソースを提供するために使用する仕組みであり、ユーザーエージェントはどのリソースがユーザーにもっとも適しているか (例えば文書の言語はどれか、画像形式はどれか、コンテンツエンコード方式はどれか) を指定することができます。
 
-> **Note:** [WHATWG のウィキページ](https://wiki.whatwg.org/wiki/Why_not_conneg)には、 HTTP コンテンツ交渉の短所がいくつか書かれています。 HTML5 では、コンテンツ交渉の代替として、例えば [`<source>` 要素](/ja/docs/Web/HTML/Element/source)を提供しています。
+> **メモ:** [WHATWG のウィキページ](https://wiki.whatwg.org/wiki/Why_not_conneg)には、 HTTP コンテンツ交渉の短所がいくつか書かれています。 HTML5 では、コンテンツ交渉の代替として、例えば [`<source>` 要素](/ja/docs/Web/HTML/Element/source)を提供しています。
 
 ### コンテンツ交渉の原理
 
@@ -46,7 +46,7 @@ HTTP/1.1 標準では、サーバー駆動型交渉を開始する標準ヘッ�
 
 ### `Accept-CH` ヘッダー {{experimental_inline}}
 
-> **Note:** これは**クライアントヒント (Client Hints)** と呼ばれる**実験的**な技術の一部であり、現在は Chrome 46 以降が実装しています。 Device-Memory の値は Chrome 61 以降が実装しています。
+> **メモ:** これは**クライアントヒント (Client Hints)** と呼ばれる**実験的**な技術の一部であり、現在は Chrome 46 以降が実装しています。 Device-Memory の値は Chrome 61 以降が実装しています。
 
 {{HTTPHeader("Accept-CH")}} は実験的なもので、サーバーが適切なリソースを選択するために使用できる設定データを羅列します。有効な値は以下のとおりです。
 
@@ -58,7 +58,7 @@ HTTP/1.1 標準では、サーバー駆動型交渉を開始する標準ヘッ�
 
 ### `Accept-CH-Lifetime` ヘッダー
 
-> **Note:** これは、**実験的**な**クライアントヒント**と呼ばれる技術の一部であり、 Chrome 61 以降のみで利用できます。
+> **メモ:** これは、**実験的**な**クライアントヒント**と呼ばれる技術の一部であり、 Chrome 61 以降のみで利用できます。
 
 {{HTTPHeader("Accept-CH-Lifetime")}} ヘッダーは、 `Accept-CH` ヘッダーの `Device-Memory` 値と共に使用され、端末がメモリーの量をサーバーと共有することを許可すべき時間を示します。値はミリ秒単位で与えられ、使用は任意です。
 
@@ -79,7 +79,7 @@ HTTP メッセージの圧縮はウェブサイトのパフォーマンスを向
 
 ### `User-Agent` ヘッダー
 
-> **Note:** コンテンツの選択にこのヘッダーを使用することは、正当な使用方法ですが、ユーザーエージェントがどの機能に対応しているかを判断するためにこのヘッダーを頼ることは[悪い習慣であると考えられています](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)。
+> **メモ:** コンテンツの選択にこのヘッダーを使用することは、正当な使用方法ですが、ユーザーエージェントがどの機能に対応しているかを判断するためにこのヘッダーを頼ることは[悪い習慣であると考えられています](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)。
 
 {{HTTPHeader("User-Agent")}} ヘッダーは、リクエストを送信するブラウザーを識別します。この文字列には、空白区切りで**製品トークン**や**コメント**のリストが含まれることがあります。
 

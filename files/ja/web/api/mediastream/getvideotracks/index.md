@@ -2,6 +2,7 @@
 title: MediaStream.getVideoTracks()
 slug: Web/API/MediaStream/getVideoTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`getVideoTracks()`** は {{domxref("MediaStream")}} インタフェースのメソッドで、このストリームに含まれる動画トラックを表す {{domxref("MediaStreamTrack")}} オブジェクトの配列を返します。

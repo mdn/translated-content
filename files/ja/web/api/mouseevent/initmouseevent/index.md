@@ -2,6 +2,7 @@
 title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 ---
+
 {{APIRef("DOM Events")}}{{deprecated_header}}
 
 **`MouseEvent.initMouseEvent()`** メソッドは、いったん（通常は {{domxref("Document.createEvent()")}} メソッドで）生成されたマウスイベントの値を初期化します。

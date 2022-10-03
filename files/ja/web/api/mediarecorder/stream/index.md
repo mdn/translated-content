@@ -2,6 +2,7 @@
 title: MediaRecorder.stream
 slug: Web/API/MediaRecorder/stream
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.stream`** 読み取り専用プロパティは、`MediaRecorder` を作成したときに `MediaRecorder()` コンストラクタに渡したストリームを返します。

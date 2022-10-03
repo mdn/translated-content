@@ -2,6 +2,7 @@
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB は、ファイルや blob を含む大量の構造化データをクライアント側で保存するための低レベル API です。この API はインデックスを使用して、高パフォーマンスなデータの検索を行うことができます。[Web Storage](/ja/docs/Web/API/Web_Storage_API) は比較的少量のデータを保存するのに有用ではありますが、構造化された非常に多くのデータを扱うには不十分です。IndexedDB が解決策を提供します。ここでは、完全な API リファレンスと使用ガイド、ブラウザーの対応の詳細、および重要な概念の説明へのリンクを提供します。

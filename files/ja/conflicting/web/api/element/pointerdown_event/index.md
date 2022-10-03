@@ -3,6 +3,7 @@ title: 'Document: pointerdown イベント'
 slug: conflicting/Web/API/Element/pointerdown_event
 original_slug: Web/API/Document/pointerdown_event
 ---
+
 {{APIRef}}
 
 `pointerdown` イベントは、ポインターがアクティブになったときに発生します。マウスでは、端末がボタンが押されていない状態から一つ以上のボタンが押されている状態に遷移したときに発生します。タッチ操作では、デジタイザーに物理的な接触が行われたときに発生します。ペンでは、スタイラスがデジタイザーに物理的に接触したときに発生します。

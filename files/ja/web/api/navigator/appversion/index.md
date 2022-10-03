@@ -3,6 +3,7 @@ title: Navigator.appVersion
 slug: Web/API/Navigator/appVersion
 original_slug: Web/API/NavigatorID/appVersion
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 "`4.0`" またはそのブラウザーのバージョン情報を表す文字列のどちらかを返します。

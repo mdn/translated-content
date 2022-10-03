@@ -2,6 +2,7 @@
 title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent()`** コンストラクターは、新しい {{domxref("MouseEvent")}} を生成します。

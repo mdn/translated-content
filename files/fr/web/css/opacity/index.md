@@ -49,9 +49,13 @@ opacity: unset;
     | Toute valeur de type {{cssxref("&lt;number&gt;")}} strictement comprise entre `0` et `1` | L'élément est partiellement transparent, on peut voir l'arrière-plan. |
     | `1` (la valeur par défaut)                                                                          | L'élément est complètement opaque.                                    |
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -134,16 +138,11 @@ Le ratio de contraste est déterminé en comparant la luminosité de la couleur 
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                                   | Commentaires                          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'opacity')}} | {{Spec2('CSS3 Transitions')}} | `opacity` peut désormais être animée. |
-| {{SpecName('CSS3 Colors', '#opacity', 'opacity')}}                 | {{Spec2('CSS3 Colors')}}         | Définition initiale.                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Voir aussi
 

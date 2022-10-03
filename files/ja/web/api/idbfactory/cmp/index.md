@@ -2,6 +2,7 @@
 title: IDBFactory.cmp
 slug: Web/API/IDBFactory/cmp
 ---
+
 {{ APIRef("IDBFactory") }}
 
 {{domxref("IDBFactory")}}インターフェイスの`cmp()`メソッドは、2 つのキーが等価か決定するために比較し、そして、IndexedDB で保存や統合のような操作を命令します。

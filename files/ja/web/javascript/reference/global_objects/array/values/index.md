@@ -62,7 +62,7 @@ console.log(iterator.next().value); // undefined
 
 ### 反復可能オブジェクトの再利用
 
-> **Warning:** 配列反復子オブジェクトは、一回のみ使用可能なオブジェクトになります。再利用しないでください。
+> **警告:** 配列反復子オブジェクトは、一回のみ使用可能なオブジェクトになります。再利用しないでください。
 
 `values()` で返される反復可能オブジェクトは再利用できません。 `next().done = true` または `currentIndex > length` になった場合、 [`for...of` ループは終了](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols)し、それ以降の反復処理は効果がありません。
 

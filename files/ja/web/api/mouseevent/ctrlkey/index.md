@@ -2,6 +2,7 @@
 title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.ctrlKey`** は読み取り専用のプロパティで、このマウスイベントが発生した際に <kbd>ctrl</kbd> キーが押されていたかどうかを示す論理値です。

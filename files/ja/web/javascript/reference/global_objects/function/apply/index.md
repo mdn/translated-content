@@ -35,9 +35,9 @@ func.apply(thisArg, [ argsArray])
 
 ## 解説
 
-> **Note:** 関数の構文は {{jsxref("Function.call", "call()")}} メソッドとほぼ同じですが、根本的な違いは `call()` メソッドは**連続した引数のリスト**を受け取るのに対して、 `apply()` メソッドが**引数の配列を 1 つだけ**受け取るという点です。
+> **メモ:** 関数の構文は {{jsxref("Function.call", "call()")}} メソッドとほぼ同じですが、根本的な違いは `call()` メソッドは**連続した引数のリスト**を受け取るのに対して、 `apply()` メソッドが**引数の配列を 1 つだけ**受け取るという点です。
 
-> **Note:** 最初の引数が undefined または null の場合、配列の[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用して同様の結果を得ることができます。
+> **メモ:** 最初の引数が undefined または null の場合、配列の[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用して同様の結果を得ることができます。
 
 存在する関数を呼び出す時は通常と異なる `this` オブジェクトを渡すことができます。`this` はカレントオブジェクト、呼び出したオブジェクトを参照します。`apply` を用いることで、新たなオブジェクトのためにそのメソッドを書き直すことなく継承させることができます。
 
@@ -47,7 +47,7 @@ func.apply(thisArg, [ argsArray])
 
 ECMAScript 第 5 版以降では、配列風のオブジェクトも使えます。具体的には、`length` プロパティとその範囲 (0 から length-1 まで) の整数の名称のプロパティを持った、あらゆる種類のオブジェクトの利用を認めています。例えば、{{domxref("NodeList")}} や `{ 'length': 2, '0': 'eat', '1': 'bananas' }` のような独自のオブジェクトを利用できます。
 
-> **Note:** Chrome 14 や Internet Explorer 9 などのブラウザーでは、配列風オブジェクトを扱えずに例外が発生します。
+> **メモ:** Chrome 14 や Internet Explorer 9 などのブラウザーでは、配列風オブジェクトを扱えずに例外が発生します。
 
 ## 例
 
@@ -137,7 +137,7 @@ Function.prototype.construct = function(aArgs) {
 };
 ```
 
-> **Note:** 上記で使用している `Object.create()` メソッドは比較的新しいです。代わりの方法として、以下の例を検討してください。
+> **メモ:** 上記で使用している `Object.create()` メソッドは比較的新しいです。代わりの方法として、以下の例を検討してください。
 >
 > {{jsxref("Object/__proto__", "Object.__proto__")}} を利用:
 >
@@ -191,7 +191,7 @@ console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor);              // logs 'MyConstructor'
 ```
 
-> **Note:** この非ネイティブな `Function.construct` メソッドはいくつかのネイティブ実装されたコンストラクタ (例えば {{jsxref("Date")}} のような物) と併用できません。このようなケースにおいては {{jsxref("Function.bind")}} メソッドを利用する必要があります。
+> **メモ:** この非ネイティブな `Function.construct` メソッドはいくつかのネイティブ実装されたコンストラクタ (例えば {{jsxref("Date")}} のような物) と併用できません。このようなケースにおいては {{jsxref("Function.bind")}} メソッドを利用する必要があります。
 >
 > 例えば `[2012, 11, 4]` のような配列を {{jsxref("Global_Objects/Date", "Date")}} コンストラクターに利用する事を考えてみてください。この場合では `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` のように書く必要があります。
 >

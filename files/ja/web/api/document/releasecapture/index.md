@@ -2,6 +2,7 @@
 title: Document.releaseCapture()
 slug: Web/API/Document/releaseCapture
 ---
+
 {{ApiRef("DOM")}}
 
 **`releaseCapture()`** メソッドは、この文書内の要素でマウスキャプチャが有効になっている場合、それを解除します。

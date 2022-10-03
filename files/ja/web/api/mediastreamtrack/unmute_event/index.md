@@ -2,6 +2,7 @@
 title: 'MediaStreamTrack: unmute イベント'
 slug: Web/API/MediaStreamTrack/unmute_event
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`unmute`** イベントは、トラックのソースが休止時間の後、再びメディアデータを提供するようになると {{domxref("MediaStreamTrack")}} に送られます。

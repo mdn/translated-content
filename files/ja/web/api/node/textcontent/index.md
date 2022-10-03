@@ -2,6 +2,7 @@
 title: Node.textContent
 slug: Web/API/Node/textContent
 ---
+
 {{APIRef("DOM")}}
 
 **`textContent`** は {{domxref ("Node")}} のプロパティで、ノードおよびその子孫のテキストの内容を表します。

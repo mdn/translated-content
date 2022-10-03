@@ -2,6 +2,7 @@
 title: MediaQueryList
 slug: Web/API/MediaQueryList
 ---
+
 {{APIRef("CSSOM")}}
 
 **`MediaQueryList`** オブジェクトは文書に適用されている[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)の情報を格納し、文書の状態に対する即時かつイベントドリブンのマッチングに対応します。

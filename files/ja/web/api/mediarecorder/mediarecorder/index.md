@@ -2,6 +2,7 @@
 title: MediaRecorder()
 slug: Web/API/MediaRecorder/MediaRecorder
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder()`** コンストラクタは、指定された {{domxref("MediaStream")}} を記録する新しい {{domxref("MediaRecorder")}} オブジェクトを作成します。

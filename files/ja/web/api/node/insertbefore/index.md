@@ -2,6 +2,7 @@
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
 ---
+
 {{APIRef("DOM")}}
 
 **`insertBefore()`** は {{domxref("Node")}} インターフェイスのメソッドで、*参照先ノード*の前にこの*親ノード*の子としてノードを挿入します。

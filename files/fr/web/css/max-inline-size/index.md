@@ -44,9 +44,13 @@ max-inline-size: unset;
 
 La propriété `max-inline-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("max-width")}} ou {{cssxref("max-height")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemple
 
@@ -73,15 +77,11 @@ La propriété `max-inline-size` peut prendre les mêmes valeurs que les propri�
 
 ## Spécifications
 
-| Spécifications                                                                                                   | État                                             | Commentaires        |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-max-inline-size", "max-inline-size")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.max-inline-size")}}
+{{Compat}}
 
 ## Voir aussi
 

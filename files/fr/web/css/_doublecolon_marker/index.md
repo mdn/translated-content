@@ -60,14 +60,11 @@ li::marker {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                         | Commentaires                       |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#marker-pseudo', '::marker')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Aucune modification significative. |
-| {{SpecName('CSS3 Lists', '#marker-pseudo', '::marker')}}             | {{Spec2('CSS3 Lists')}}             | Définition initiale.               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.marker")}}
+{{Compat}}
 
 ## Voir aussi
 

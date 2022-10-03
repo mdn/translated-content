@@ -3,6 +3,7 @@ title: Navigator.userAgent
 slug: Web/API/Navigator/userAgent
 original_slug: Web/API/NavigatorID/userAgent
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`NavigatorID.userAgent`** は読み取り専用のプロパティで、現在のブラウザーのユーザーエージェント文字列を返します。

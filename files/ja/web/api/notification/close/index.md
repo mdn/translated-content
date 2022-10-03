@@ -2,6 +2,7 @@
 title: Notification.close()
 slug: Web/API/Notification/close
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `close()` は {{domxref("Notification")}} インターフェイスのメソッドで、表示された通知を閉じたり削除したりするために使用されます。

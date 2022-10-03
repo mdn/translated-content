@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 
 {{HTTPSidebar}}
 
-HTTP 协议头部{{HTTPHeader("Content-Security-Policy")}} (CSP) 的**`connect-src`** 指令用于控制允许通过脚本接口加载的链接地址。其中受到影响的 API 如下:
+HTTP 协议头部{{HTTPHeader("Content-Security-Policy")}} (CSP) 的**`connect-src`** 指令用于控制允许通过脚本接口加载的链接地址。其中受到影响的 API 如下：
 
 - {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},
 - {{domxref("Fetch")}},
@@ -20,7 +20,7 @@ HTTP 协议头部{{HTTPHeader("Content-Security-Policy")}} (CSP) 的**`connect-s
 
 ## Syntax
 
-connect-src 可以设置一个或者多个源地址:
+connect-src 可以设置一个或者多个源地址：
 
 ```plain
 Content-Security-Policy: connect-src <source>;
@@ -35,13 +35,13 @@ Content-Security-Policy: connect-src <source> <source>;
 
 ### Violation cases
 
-给定如下 CSP 头部:
+给定如下 CSP 头部：
 
 ```bash
 Content-Security-Policy: connect-src https://example.com/
 ```
 
-如下的连接请求会被阻塞且不会加载:
+如下的连接请求会被阻塞且不会加载：
 
 ```html
 <a ping="https://not-example.com">

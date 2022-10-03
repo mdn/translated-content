@@ -1,15 +1,17 @@
 ---
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
+l10n:
+  sourceCommit: 03f91ed2e2c6123fbf711f1759c7e99a2dc63de6
 ---
 
-{{ApiRef()}}
+{{APIRef("HTML DOM")}}
 
-## 概要
+{{domxref("HTMLFormElement")}} の **`elements`** プロパティは、 {{domxref("HTMLFormControlsCollection")}} で {{HTMLElement("form")}} 要素に含まれているすべてのフォームコントロールを列挙して返します。
 
-**elements** は、form 要素に含まれるすべてのフォームコントロールを含む [`HTMLCollection`](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506) を返します。
+これとは別に、 {{domxref("HTMLFormElement.length", "length")}} プロパティを使用してフォームコントロールの数だけを取得することができます。
 
-index 、または要素の [name](/ja/docs/DOM/element.name) か [id](/ja/docs/DOM/element.id) の何れかを使って個々の要素にアクセスすることができます。
+返された集合の中の特定のフォームコントロールにアクセスするには、添字か要素の `name` または `id` 属性のいずれかを使用します。
 
 HTML 5 より前のバージョンでは、返されるオブジェクトは {{domxref("HTMLCollection")}} でした。 `HTMLFormControlsCollection` これに基づいています。
 
@@ -35,13 +37,56 @@ HTML 5 より前のバージョンでは、返されるオブジェクトは {{d
 
 ## 例
 
+### 構文の例
+
+この例では、フォームコントロールの一覧を取得する方法と、添字と名前または ID でそのメンバーにアクセスする方法について説明します。
+
+```html
+<form id="my-form">
+  <input type="text" name="username" />
+  <input type="text" name="full-name" />
+  <input type="password" name="password" />
+</form>
+```
+
 ```js
-var inputs = document.getElementById("form1").elements;
-var inputByIndex = inputs[2];
-var inputByName = inputs["login"];
+const inputs = document.getElementById("my-form").elements;
+const inputByIndex = inputs[0];
+const inputByName = inputs["username"];
+```
+
+### フォームコントロールへのアクセス
+
+この例では、フォームの要素リストを取得し、そのリストを反復処理して、何らかの処理を行えるように [`"text"`](/ja/docs/Web/HTML/Element/input/text) 型の {{HTMLElement("input")}} 要素を探すものです。
+
+```js
+const inputs = document.getElementById("my-form").elements;
+
+// Iterate over the form controls
+for (let i = 0; i < inputs.length; i++) {
+  if (inputs[i].nodeName === "INPUT" && inputs[i].type === "text") {
+    // Update text input
+    inputs[i].value.toLocaleUpperCase();
+  }
+}
+```
+
+### フォームの無効化
+
+```js
+const inputs = document.getElementById("my-form").elements;
+
+// Iterate over the form controls
+for (let i = 0; i < inputs.length; i++) {
+  // Disable all form controls
+  inputs[i].setAttribute("disabled", "");
+}
 ```
 
 ## 仕様書
 
-- [HTML5, Section 4.10.3, The form Element](http://www.w3.org/TR/html5/forms.html#dom-form-elements)
-- [DOM Level 2 HTML: elements](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76728479)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

@@ -2,6 +2,7 @@
 title: Document.createRange()
 slug: Web/API/Document/createRange
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.createRange()`** メソッドは、新しい {{domxref("Range")}} オブジェクトを返します。

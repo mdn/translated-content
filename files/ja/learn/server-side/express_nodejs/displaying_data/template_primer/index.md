@@ -2,6 +2,7 @@
 title: テンプレートプライマー
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 ---
+
 A template is a text file defining the _structure_ or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in _Express_, templates are referred to as _views_).
 
 ## Express template choices
@@ -10,7 +11,7 @@ Express can be used with many different [template rendering engines](https://exp
 
 Different template languages use different approaches for defining the layout and marking placeholders for data—some use HTML to define the layout while others use different markup formats that can be compiled to HTML. Pug is of the second type; it uses a _representation_ of HTML where the first word in any line usually represents an HTML element, and indentation on subsequent lines is used to represent any content nested within those elements. The result is a page definition that translates directly to HTML, but is arguably more concise and easier to read.
 
-> **Note:** The downside of using _Pug_ is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.
+> **メモ:** The downside of using _Pug_ is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.
 
 ## Template configuration
 
@@ -97,7 +98,7 @@ p This is a line with #[em some emphasis] and #[strong strong text] markup.
 p This line has an un-escaped string: !{'<em> is emphasised</em>'}, an escaped string: #{'<em> is not emphasised</em>'}, and escaped variables: #{title}.
 ```
 
-> **Note:** **Tip:** You will almost always want to escape data from users (via the **`#{}`** syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.
+> **メモ:** **Tip:** You will almost always want to escape data from users (via the **`#{}`** syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.
 
 You can use the pipe ('**|**') character at the beginning of a line to indicate "[plain text](https://pugjs.org/language/plain-text.html)". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.
 

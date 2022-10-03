@@ -2,6 +2,7 @@
 title: InputEvent.inputType
 slug: Web/API/InputEvent/inputType
 ---
+
 {{APIRef("DOM Events")}}
 
 **`inputType`** は {{domxref("InputEvent")}} インターフェイスの読取専用プロパティで、編集可能なコンテンツの変更が行われた種別を返します。変更は例えば挿入、削除、テキスト整形などがあります。

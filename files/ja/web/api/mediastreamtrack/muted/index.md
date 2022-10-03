@@ -2,6 +2,7 @@
 title: MediaStreamTrack.muted
 slug: Web/API/MediaStreamTrack/muted
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`muted`** は {{domxref("MediaStreamTrack")}} 読み取り専用のプロパティであり、トラックが現在メディア出力を提供できない状態であるかどうかを示します。

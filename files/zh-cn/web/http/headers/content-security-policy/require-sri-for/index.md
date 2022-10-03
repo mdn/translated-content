@@ -24,7 +24,7 @@ Content-Security-Policy: require-sri-for script style;
 
 ## Examples
 
-如果你通过如下指令将站点设置为要求脚本和资源满足 SRI 策略:
+如果你通过如下指令将站点设置为要求脚本和资源满足 SRI 策略：
 
 ```plain
 Content-Security-Policy: require-sri-for script style

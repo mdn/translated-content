@@ -2,6 +2,7 @@
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
 ---
+
 {{APIRef("DOM")}}
 
 **`previousSibling`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、指定されたノードの親ノードの {{domxref("Node.childNodes", "childNodes")}} リスト内で、直前にある ノードを返します。指定されたノードがリストの先頭にあった倍は `null` を返します。

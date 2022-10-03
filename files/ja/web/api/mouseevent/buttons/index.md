@@ -2,6 +2,7 @@
 title: MouseEvent.buttons
 slug: Web/API/MouseEvent/buttons
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.buttons`** は読み取り専用のプロパティで、マウスイベントが発行されたときにマウス（またはその他の入力機器）のどのボタンが押されていたかを示します。
