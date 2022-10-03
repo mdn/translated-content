@@ -9,7 +9,7 @@ slug: Web/API/GamepadButton
 
 `GamepadButton`オブジェクトは、{{domxref("Gamepad")}}インタフェースの`buttons` プロパティから取得できます。
 
-> **Note:** これは Firefox Gecko 28 以降の場合の説明であり、Chrome と以前の Firefox のバージョンでは、浮動小数点数の配列が返されます。
+> **メモ:** これは Firefox Gecko 28 以降の場合の説明であり、Chrome と以前の Firefox のバージョンでは、浮動小数点数の配列が返されます。
 
 ## プロパティ
 

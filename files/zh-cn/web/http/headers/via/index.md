@@ -24,7 +24,7 @@ Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
 - \<protocol-name>
   - : 可选。所使用的协议名称，如 "HTTP"。
 - \<protocol-version>
-  - : 所使用的协议版本号， 例如 "1.1"。
+  - : 所使用的协议版本号，例如 "1.1"。
 - \<host> and \<port>
   - : 公共代理的 URL 及端口号。
 - \<pseudonym>

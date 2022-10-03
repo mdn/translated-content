@@ -2,6 +2,7 @@
 title: Document.documentURI
 slug: Web/API/Document/documentURI
 ---
+
 {{ApiRef("DOM")}}
 
 {{domxref("Document")}} インターフェイスの **`documentURI`** プロパティは、文書の位置を文字列で返します。

@@ -49,15 +49,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires                                  |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('CSS4 Cascade', '#inherit', 'inherit')}}                     | {{Spec2('CSS4 Cascade')}} | Aucun changement.                             |
-| {{SpecName('CSS3 Values', "#common-keywords", "inherit")}}             | {{Spec2('CSS3 Values')}} | Aucun changement {{SpecName('CSS2.1')}} |
-| {{SpecName('CSS2.1', "cascade.html#value-def-inherit", "inherit")}} | {{Spec2('CSS2.1')}}         | Définition initiale.                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.global_keywords.inherit")}}
+{{Compat}}
 
 ## Voir aussi
 

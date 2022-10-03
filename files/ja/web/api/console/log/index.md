@@ -4,6 +4,7 @@ slug: Web/API/console/log
 l10n:
   sourceCommit: 
 ---
+
 {{APIRef("Console API")}}
 
 **`console.log()`** メソッドは、メッセージをウェブコンソールに出力します。

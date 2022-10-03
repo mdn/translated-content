@@ -2,6 +2,7 @@
 title: AudioNode
 slug: Web/API/AudioNode
 ---
+
 {{APIRef()}}
 
 The AudioNode interface is a generic interface for representing an audio processing module like an audio source (e.g. an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), audio destination, intermediate processing module (e.g. a filter like {{domxref("BiquadFilterNode")}} or {{domxref("ConvolverNode")}}), or volume control (like {{domxref("GainNode")}}).
@@ -18,7 +19,7 @@ Different nodes can be linked together to build a _processing graph_. Such a gra
 
 ノードは音声処理のグラフを構築するため、互いに関連付けることができます。そのようなグラフは一つの{{domxref("AudioContext")}}に含まれます。それぞれの AudioNode は必ず一つの context に含まれます。一般に、ノードは AudioNode のプロパティやメソッドを継承し、独自の機能が定義されています。個々のノードについての詳細を知りたい場合は、「Web Audio API」ホームページを御覧ください。
 
-> **Note:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
+> **メモ:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
 ## 属性
 

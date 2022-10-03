@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 
 **`Promise`** é um objeto usado para processamento assíncrono. Uma `Promise` (_de "promessa"_) representa um valor que pode estar disponível agora, no futuro ou nunca.
 
-> **Nota:** Esse artigo descreve o construtor `Promise,`os métodos e propriedades de tais objetos. Para aprender sobre como promises funcionam e como utilizá-los, é aconselhavel a leitura de [utilizando promises](/pt-BR/docs/Web/JavaScript/Guide/Usando_promises). O construtor é utilizado para embrulhar funções sem suporte ao conceito "promise".
+> **Nota:** Esse artigo descreve o construtor `Promise`,os métodos e propriedades de tais objetos. Para aprender sobre como promises funcionam e como utilizá-los, é aconselhavel a leitura de [utilizando promises](/pt-BR/docs/Web/JavaScript/Guide/Usando_promises). O construtor é utilizado para embrulhar funções sem suporte ao conceito "promise".
 
 ## Descrição
 

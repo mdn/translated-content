@@ -2,6 +2,7 @@
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 **`Document.lastStyleSheetSet`** プロパティは、最後に有効化されたスタイルシートセットを返します。このプロパティの値は {{domxref("document.selectedStyleSheetSet")}} プロパティが変化するたびに変化します。
@@ -10,7 +11,7 @@ slug: Web/API/Document/lastStyleSheetSet
 
 最も新しく設定されたスタイルシートセットを示します。現在のスタイルシートセットが {{domxref("document.selectedStyleSheetSet")}} を設定することで変更されたものでない場合、返値は `null` になります。
 
-> **Note:** この値は {{domxref("document.enableStyleSheetsForSet()")}} が呼び出された時に変化しません。
+> **メモ:** この値は {{domxref("document.enableStyleSheetsForSet()")}} が呼び出された時に変化しません。
 
 ## 例
 

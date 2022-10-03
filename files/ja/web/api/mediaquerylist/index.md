@@ -2,6 +2,7 @@
 title: MediaQueryList
 slug: Web/API/MediaQueryList
 ---
+
 {{APIRef("CSSOM")}}
 
 **`MediaQueryList`** オブジェクトは文書に適用されている[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)の情報を格納し、文書の状態に対する即時かつイベントドリブンのマッチングに対応します。
@@ -58,7 +59,7 @@ function screenTest(e) {
 mql.addEventListener('change', screenTest);
 ```
 
-> **Note:** この例は GitHub にあります ([ソースコード](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html)を参照、および[ライブで実行](https://mdn.github.io/dom-examples/mediaquerylist/index.html))。
+> **メモ:** この例は GitHub にあります ([ソースコード](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html)を参照、および[ライブで実行](https://mdn.github.io/dom-examples/mediaquerylist/index.html))。
 
 他の例は個別のプロパティやメソッドのページにあります。
 

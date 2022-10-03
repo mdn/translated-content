@@ -4,6 +4,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
 l10n:
   sourceCommit: 9b1f7aa6cb8d0479b4df91a3e2249003a8a863f1
 ---
+
 {{learnsidebar}}
 
 以下の実装状況一覧表で、 HTML フォーム向けの CSS の対応状況を要約しています。 HTML フォームや CSS の複雑さにより、これらの表は完全なリファレンスであるとはいえません。それでも、何ができて何ができないかの見識を得られるでしょう。また、どうすればよいかを知る助けにもなるでしょう。

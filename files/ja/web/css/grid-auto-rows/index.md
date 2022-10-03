@@ -76,7 +76,7 @@ grid-auto-rows: unset;
 
   - : 最大値であれば最小コンテンツと同一のキーワードです。最小値の場合は、グリッドトラックを占めるグリッドアイテムの最大の最小サイズ（{{cssxref("min-width")}}/{{cssxref("min-height")}}で指定されたサイズ）を表します。
 
-    > **Note:** トラックの寸法が `auto` の場合は（かつ `auto` の場合のみ）、{{cssxref("align-content")}}と{{cssxref("justify-content")}}のプロパティによって引き伸ばすことができます。
+    > **メモ:** トラックの寸法が `auto` の場合は（かつ `auto` の場合のみ）、{{cssxref("align-content")}}と{{cssxref("justify-content")}}のプロパティによって引き伸ばすことができます。
 
 ## 公式定義
 

@@ -34,7 +34,7 @@ slug: Web/API/ShadowRoot
 ### イベントハンドラー
 
 - {{domxref("ShadowRoot.onslotchange")}}
-  - : [イベントハンドラー](/en-US/docs/Web/Events/Event_handlers)で、 {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} イベントが発行されたときに呼び出されるコードを表します。
+  - : [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、 {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} イベントが発行されたときに呼び出されるコードを表します。
 
 ## メソッド
 

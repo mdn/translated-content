@@ -30,7 +30,7 @@ dateObj.setYear(yearValue)
 
 ### 使用 `setYear()`
 
-例子前两行（除去声明）将年份设置为 1996。 第三行将年份设置为 2000.
+例子前两行（除去声明）将年份设置为 1996。第三行将年份设置为 2000.
 
 ```js
 var theBigDay = new Date();

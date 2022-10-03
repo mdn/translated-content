@@ -10,7 +10,7 @@ original_slug: Web/CSS/filter-function/opacity()
 
 {{EmbedInteractiveExample("pages/css/function-opacity.html")}}
 
-> **Note:** この関数はもっと一般的な {{Cssxref("opacity")}} プロパティと似ています。違いはフィルターの場合、ブラウザーによってはハードウェアアクセラレーションにより性能が上がることです。
+> **メモ:** この関数はもっと一般的な {{Cssxref("opacity")}} プロパティと似ています。違いはフィルターの場合、ブラウザーによってはハードウェアアクセラレーションにより性能が上がることです。
 
 ## 構文
 

@@ -9,7 +9,7 @@ slug: Web/CSS/border-top-style
 
 {{EmbedInteractiveExample("pages/css/border-top-style.html")}}
 
-> **Note:** 仕様書では、異なる形状の境界線を角でどのように接続するかを定義していません。
+> **メモ:** 仕様書では、異なる形状の境界線を角でどのように接続するかを定義していません。
 
 ## 構文
 

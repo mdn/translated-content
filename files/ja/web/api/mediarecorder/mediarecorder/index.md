@@ -2,6 +2,7 @@
 title: MediaRecorder()
 slug: Web/API/MediaRecorder/MediaRecorder
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder()`** コンストラクタは、指定された {{domxref("MediaStream")}} を記録する新しい {{domxref("MediaRecorder")}} オブジェクトを作成します。
@@ -25,7 +26,7 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
     - `videoBitsPerSecond`: メディアの動画コンポーネントに選択したビットレート。
     - `bitsPerSecond`: メディアの音声コンポーネントおよび動画コンポーネントに選択したビットレート。 上記の 2 つのプロパティの代わりにこれを指定できます。 これを上記のプロパティのいずれかと一緒に指定している場合、これは指定していないものに使用されます。
 
-    > **Note:** 動画や音声にビット/秒の値を指定していない場合、動画が採用しているデフォルトは 2.5Mbps ですが、音声のデフォルトはサンプルレートとチャネル数に応じてアダプティブです。
+    > **メモ:** 動画や音声にビット/秒の値を指定していない場合、動画が採用しているデフォルトは 2.5Mbps ですが、音声のデフォルトはサンプルレートとチャネル数に応じてアダプティブです。
 
 ## 例
 

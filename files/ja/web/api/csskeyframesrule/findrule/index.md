@@ -2,6 +2,7 @@
 title: CSSKeyframesRule.findRule()
 slug: Web/API/CSSKeyframesRule/findRule
 ---
+
 {{APIRef("CSSOM") }}
 
 **`findRule()`** は {{domxref("CSSKeyframeRule")}} インターフェイスのメソッドで、して市荒れたキーフレームセレクターに一致する {{domxref("CSSKeyFrameRule")}} を検索します。

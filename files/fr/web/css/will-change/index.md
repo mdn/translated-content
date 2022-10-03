@@ -53,9 +53,13 @@ Un valeur de type `<animateable-feature>` peut être :
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : Ce type permet d'indiquer que la propriété donnée va prochainement être modifiée ou animée. Si la propriété fournie est un raccourci, on s'attendra à ce que toutes les propriétés détaillées correspondantes soient animées ou changées. Une valeur de ce type ne peut pas être `unset`, `initial`, `inherit`, `will-change`, `auto`, `scroll-position`, ou `contents`. La spécification ne définit pas le comportement d'une valeur spécifique mais généralement, lorsqu'on utilise `transform`, cela indique que les couches qui composent la page vont évoluer. [Chrome prend deux mesures](https://github.com/operasoftware/devopera/pull/330) selon les propriétés utilisées ici : il établit une nouvelle composition des couches de rendu ou crée un nouveau contexte d'empilement.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -96,12 +100,8 @@ Cela peut toutefois être pertinent d'inclure `will-change` dans la feuille de s
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('CSS Will Change', '#will-change', 'will-change')}} | {{Spec2('CSS Will Change')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.will-change")}}
+{{Compat}}

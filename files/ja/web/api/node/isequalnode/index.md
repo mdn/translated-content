@@ -2,6 +2,7 @@
 title: Node.isEqualNode()
 slug: Web/API/Node/isEqualNode
 ---
+
 {{APIRef("DOM")}}
 
 **`isEqualNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、 2 つのノードが等しいかどうかを検査します。
@@ -17,7 +18,7 @@ isEqualNode(otherNode);
 
 - `otherNode`
   - : 比較対象となる {{domxref("Node")}} です。
-    > **Note:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
+    > **メモ:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 

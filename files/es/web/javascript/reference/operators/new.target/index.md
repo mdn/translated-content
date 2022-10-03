@@ -73,5 +73,5 @@ var b = new B(); // escribe en el log "B"
 
 - [Funciones](/es/docs/Web/JavaScript/Guide/Funciones)
 - [Clases](/es/docs/Web/JavaScript/Referencia/Classes)
-- [`new`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/new)
+- [`new`](/es/docs/Web/JavaScript/Referencia/Operadores/new)
 - [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)

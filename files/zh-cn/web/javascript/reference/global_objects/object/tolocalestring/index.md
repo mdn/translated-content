@@ -21,7 +21,7 @@ obj.toLocaleString();
 
 {{jsxref("Object")}} `toLocaleString` 返回调用 {{jsxref("Object.toString", "toString()")}} 的结果。
 
-该函数提供给对象一个通用的`toLocaleString` 方法，即使不是全部都可以使用它。 见下面的列表。
+该函数提供给对象一个通用的`toLocaleString` 方法，即使不是全部都可以使用它。见下面的列表。
 
 ### 覆盖 `toLocaleString` 的对象
 

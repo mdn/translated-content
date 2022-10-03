@@ -11,7 +11,7 @@ slug: Web/HTML/Element/iframe
 
 それぞれの閲覧コンテキストは、[セッション履歴](/ja/docs/Web/API/History)と[文書](/ja/docs/Web/API/Document)を持ちます。他の閲覧コンテキストを埋め込んでいる閲覧コンテキストは、\_*親*閲覧コンテキスト*と呼ばれます。*最上位\_の閲覧コンテキストは (親を持たないもの) は、通常はブラウザーのウィンドウで、 {{domxref("Window")}} オブジェクトで表されます。
 
-> **Warning:** それぞれの閲覧コンテキストは完全な文書環境であるため、ページの中で `<iframe>` を使用するごとに、必要となるメモリやその他の計算リソースが増加します。理論的には好きなだけ `<iframe>` を使用することができますが、パフォーマンスの問題を確認してください。
+> **警告:** それぞれの閲覧コンテキストは完全な文書環境であるため、ページの中で `<iframe>` を使用するごとに、必要となるメモリやその他の計算リソースが増加します。理論的には好きなだけ `<iframe>` を使用することができますが、パフォーマンスの問題を確認してください。
 
 <table class="properties">
   <tbody>
@@ -74,13 +74,13 @@ slug: Web/HTML/Element/iframe
 
   - : この `<iframe>` が {{domxref("Element.requestFullscreen", "requestFullscreen()")}} を呼び出して全画面モードにすることができる場合は、 `true` に設定します。
 
-    > **Note:** この属性は古い属性とみなされており、 `allow="fullscreen"` に更新されました。
+    > **メモ:** この属性は古い属性とみなされており、 `allow="fullscreen"` に更新されました。
 
 - {{htmlattrdef("allowpaymentrequest")}}
 
   - : 異なるオリジンの `<iframe>` で [Payment Request API](/ja/docs/Web/API/Payment_Request_API) の実行を許可する場合は `true` に設定します。
 
-    > **Note:** この属性は古い属性とみなされており、 `allow="payment"` に更新されました。
+    > **メモ:** この属性は古い属性とみなされており、 `allow="payment"` に更新されました。
 
 - {{htmlattrdef("csp")}} {{experimental_inline}}
   - : 埋め込みリソースを制限する[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)です。詳しくは {{domxref("HTMLIFrameElement.csp")}} をご覧ください。
@@ -127,7 +127,7 @@ slug: Web/HTML/Element/iframe
     - `allow-top-navigation`: リソースが最上位の閲覧コンテキスト (`_top` という名前のもの) に移動できるようにします。
     - `allow-top-navigation-by-user-activation`: リソースが最上位の閲覧コンテキストに移動できるようにしますが、ユーザーの操作によって開始されたものに限ります。
 
-    > **Note:** **サンドボックスのメモ:**- 埋め込まれた文書のオリジンが埋め込み先のページと同じである場合、 `allow-scripts` と `allow-same-origin` を同時に使用すると、埋め込まれた文書から `sandbox` 属性を削除することができるようになるため、**絶対に避けるべき**です。 — `sandbox` 属性をまったく使用しないよりも安全ではなくなります。
+    > **メモ:** **サンドボックスのメモ:**- 埋め込まれた文書のオリジンが埋め込み先のページと同じである場合、 `allow-scripts` と `allow-same-origin` を同時に使用すると、埋め込まれた文書から `sandbox` 属性を削除することができるようになるため、**絶対に避けるべき**です。 — `sandbox` 属性をまったく使用しないよりも安全ではなくなります。
     >
     > - 攻撃者がサンドボックス化した `iframe` の外側にコンテンツを表示することができる場合、サンドボックス化は無意味です。例えば、閲覧者がフレームを新しいタブで開く場合などです。潜在的なダメージを抑えるため、そうしたコンテンツは*別のオリジン*から提供するようにもしてください。
     > - `sandbox` 属性は Internet Explorer 9 以前では対応していません。
@@ -167,7 +167,7 @@ slug: Web/HTML/Element/iframe
 
   - :&#x20;
 
-    > **Note:** これを Firefox のウェブ拡張機能に公開するには {{bug(1318532)}} を参照してください。
+    > **メモ:** これを Firefox のウェブ拡張機能に公開するには {{bug(1318532)}} を参照してください。
 
     この `<iframe>` を最上位のブラウザーウィンドウのように動作させます。詳しくは [Browser API](/ja/docs/Mozilla/Gecko/Chrome/API/Browser_API) を参照してください。
     **[ウェブ拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions)でのみ使用可能です。**

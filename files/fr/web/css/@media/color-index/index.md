@@ -61,11 +61,8 @@ Ce fragment HTML permet d'appliquer une feuille de style spécifique pour les ap
 
 ## Spécifications
 
-| Spécification                                                                            | Etat                                     | Commentaires                                                                  |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#color-index', 'color-index')}} | {{Spec2('CSS4 Media Queries')}} | La valeur peut désormais être négative (ce qui correspond à un booléen faux). |
-| {{SpecName('CSS3 Media Queries', '#color-index', 'color-index')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale, la valeur ne peut pas être négative.                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.color-index")}}
+{{Compat}}

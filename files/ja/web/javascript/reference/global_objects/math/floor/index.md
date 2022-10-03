@@ -28,7 +28,7 @@ Math.floor(x)
 
 `floor()` は `Math` オブジェクトの静的なメソッドなので、自ら生成した `Math` オブジェクトのメソッドとしてではなく、常に、`Math.floor()` として使用するようにしてください (`Math` のコンストラクターはありません)。
 
-> **Note:** `Math.floor(null)` は {{jsxref("NaN")}} ではなく 0 を返します。
+> **メモ:** `Math.floor(null)` は {{jsxref("NaN")}} ではなく 0 を返します。
 
 ## 例
 

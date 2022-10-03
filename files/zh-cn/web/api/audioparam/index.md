@@ -5,16 +5,16 @@ slug: Web/API/AudioParam
 
 {{APIRef("Web Audio API")}}
 
-`AudioParam` 接口代表音频相关的参数， 通常是一个 {{domxref("AudioNode")}} (例如 {{ domxref("GainNode.gain") }}) 的参数。一个 `AudioParam` 可以被设置为一个具体的值或者数值的改变 ，可以被安排在在一个具体的时刻并且遵循一个特定的模式发生。
+`AudioParam` 接口代表音频相关的参数，通常是一个 {{domxref("AudioNode")}} (例如 {{ domxref("GainNode.gain") }}) 的参数。一个 `AudioParam` 可以被设置为一个具体的值或者数值的改变，可以被安排在在一个具体的时刻并且遵循一个特定的模式发生。
 
 下面有两种类型的 `AudioParam`, _a-rate_ 和 _k-rate_ 参数：
 
 - 一个 _a-rate_ `AudioParam` 获取音频信号的每个[采样帧](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_buffers.3A_frames.2C_samples_and_channels)的当前音频参数值。
 - 一个 _k-rate_ `AudioParam` 对于待处理的整个块使用相同的初始音频参数值，即 128 个采样帧。
 
-每个 {{domxref("AudioNode")}} 定义了其规格中哪一个参数是 _a-rate_ 或 _k-rate_ 。
+每个 {{domxref("AudioNode")}} 定义了其规格中哪一个参数是 _a-rate_ 或 _k-rate_。
 
-每个 `AudioParam` 有一个事件的列表，初始化时列表为空。该列表定义了什么时候数值怎么改变。当这个列表不是空的时候，使用 `AudioParam.value` 属性的改变会被忽略 。事件的列表允许我们去有计划地进行必须在非常精确的时间发生的更改，使用任意的基于时间轴的自动化曲线。被使用的时间在{{domxref("AudioContext.currentTime")}} 中被定义。
+每个 `AudioParam` 有一个事件的列表，初始化时列表为空。该列表定义了什么时候数值怎么改变。当这个列表不是空的时候，使用 `AudioParam.value` 属性的改变会被忽略。事件的列表允许我们去有计划地进行必须在非常精确的时间发生的更改，使用任意的基于时间轴的自动化曲线。被使用的时间在{{domxref("AudioContext.currentTime")}} 中被定义。
 
 ## 属性
 
@@ -27,7 +27,7 @@ slug: Web/API/AudioParam
 - {{domxref("AudioParam.minValue")}} {{readonlyinline}}
   - : 代表参数有效范围的最小可能值。
 - {{domxref("AudioParam.value")}}
-  - : 代表参数的浮点数音量值；初始化设定为 `AudioParam.defaultValue 的值。虽然它可以被设置，但是任何发生在自动化事件（事件被计划用于 AudioParam ）的修改会被忽略，`没有任何例外。
+  - : 代表参数的浮点数音量值；初始化设定为 `AudioParam.defaultValue 的值。虽然它可以被设置，但是任何发生在自动化事件（事件被计划用于 AudioParam）的修改会被忽略，`没有任何例外。
 
 ## 方法
 

@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Statements/Empty
 
 ## 描述
 
-空语句是一个分号（;），表示不会执行任何语句，即使 JavaScript 语法需要一个语句。 相反，当你需要多行语句，但 JavaScript 只允许一个时，可以使用[语句块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)；语句块可以将多条语句合并为一个。
+空语句是一个分号（;），表示不会执行任何语句，即使 JavaScript 语法需要一个语句。相反，当你需要多行语句，但 JavaScript 只允许一个时，可以使用[语句块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)；语句块可以将多条语句合并为一个。
 
 ## 示例
 

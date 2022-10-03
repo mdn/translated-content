@@ -26,7 +26,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 
 ### 从一个对象上删除一个属性
 
-Object 自身没有提供方法删除其自身属性（Map 中的 `{{jsxref("Map.prototype.delete()")}}` 可以删除自身属性 ）为了删除对象上的属性，必须使用 [delete 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
+Object 自身没有提供方法删除其自身属性（Map 中的 `{{jsxref("Map.prototype.delete()")}}` 可以删除自身属性）为了删除对象上的属性，必须使用 [delete 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
 
 ## 构造函数
 

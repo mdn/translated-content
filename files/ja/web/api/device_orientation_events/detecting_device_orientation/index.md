@@ -3,6 +3,7 @@ title: 端末の方向の検出
 slug: Web/API/Device_orientation_events/Detecting_device_orientation
 original_slug: Web/Events/Detecting_device_orientation
 ---
+
 {{SeeCompatTable}}
 
 ウェブを利用可能な端末は、自身の**方向**を特定できるようになってきました。つまり端末は、重力との関係による自身の向きの変化を示すデータを報告できます。特に携帯電話のようなハンドヘルド端末は、表示内容が直立し続けるよう自動的に回転させるためにこの情報を使用でき、画面の幅が高さより大きくなるように端末を回転させたときは、ウェブコンテンツをワイドスクリーン表示にします。
@@ -15,7 +16,7 @@ original_slug: Web/Events/Detecting_device_orientation
 
 方向の変化を受け取り始めるには、{{event("deviceorientation")}} イベントをリッスンします:
 
-> **Note:** [parallax](https://github.com/wagerfield/parallax) は、モバイル端末の加速度センサーやジャイロスコープのデータを正規化するためのポリフィルです。これは、端末の方向の対応状況の違いを克服するのに役立ちます。
+> **メモ:** [parallax](https://github.com/wagerfield/parallax) は、モバイル端末の加速度センサーやジャイロスコープのデータを正規化するためのポリフィルです。これは、端末の方向の対応状況の違いを克服するのに役立ちます。
 
 ```js
 window.addEventListener("deviceorientation", handleOrientation, true);
