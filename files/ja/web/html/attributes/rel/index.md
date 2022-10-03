@@ -73,7 +73,7 @@ slug: Web/HTML/Attributes/rel
       <link rel=alternate href="/fr/pdf" hreflang=fr type=application/pdf title="French PDF">
       ```
 
-    > **Note:** 廃止された `rev="made"` は `rel="alternate"` として扱われます。
+    > **メモ:** 廃止された `rev="made"` は `rel="alternate"` として扱われます。
 
 - {{htmlattrdef("author")}}
   - : 現在の文書や記事の著者を示します。 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}} 要素で使用された場合、 `author` キーワードはハイパーリンクを生成します。 {{htmlelement('a')}} と {{htmlelement('area')}} では、リンクされた文書 (または`mailto:`) が、最も近い祖先の {{htmlelement('article')}} があればその祖先の著者に関する情報を提供することを示し、そうでなければ文書全体を示します。 {{htmlelement('link')}} の場合は、文書全体の著者を表します。
@@ -99,11 +99,11 @@ slug: Web/HTML/Attributes/rel
 
     複数の `<link rel="icon">` があった場合、ブラウザーはそれぞれの [`media`](media) 属性、[`type`](type) 属性、 [`sizes`](sizes) 属性を使って、最も適切なアイコンを選択します。複数のアイコンが同じように適切である場合は、最後のアイコンが使用されます。最も適切なアイコンが、対応していないファイル形式を使用しているなどの理由で不適切であることが後に判明した場合、ブラウザーは次に適切なアイコンを選択します。
 
-    > **Note:** Firefox 83 以前は [crossorigin](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が `rel="icon"` で対応していませんでしたが、 [Chrome でも未解決の問題があります](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
+    > **メモ:** Firefox 83 以前は [crossorigin](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が `rel="icon"` で対応していませんでしたが、 [Chrome でも未解決の問題があります](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
 
-    > **Note:** Apple の iOS では、他のモバイルブラウザーのように、ウェブクリップやスタートアップのプレースホルダー用のウェブページのアイコンを選択するために、このリンク種別や [`sizes`](sizes) 属性を使用していません。代わりに、標準外の [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) および [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) をそれぞれ使用しています。
+    > **メモ:** Apple の iOS では、他のモバイルブラウザーのように、ウェブクリップやスタートアップのプレースホルダー用のウェブページのアイコンを選択するために、このリンク種別や [`sizes`](sizes) 属性を使用していません。代わりに、標準外の [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) および [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) をそれぞれ使用しています。
 
-    > **Note:** `shortcut` リンク種別が `icon` の前に見られることが良くありますが、このリンク種別は適合するものではなく、無視されるので**使用しないでください**。
+    > **メモ:** `shortcut` リンク種別が `icon` の前に見られることが良くありますが、このリンク種別は適合するものではなく、無視されるので**使用しないでください**。
 
 - {{htmlattrdef("license")}}
 
@@ -113,7 +113,7 @@ slug: Web/HTML/Attributes/rel
     <link rel="license" href="#license">
     ```
 
-    > **Note:** 認識はされているものの、同義語の `copyright` は正しくないため使用しないでください。
+    > **メモ:** 認識はされているものの、同義語の `copyright` は正しくないため使用しないでください。
 
 - {{htmlattrdef("manifest")}}
   - : [ウェブアプリマニフェスト](/ja/docs/Web/Manifest)です。オリジンをまたいだ読み取りのための CORS プロトコルの使用に必要です。
