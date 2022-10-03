@@ -503,7 +503,7 @@ HTML の {{HTMLElement("sup")}} および {{HTMLElement("sub")}} 要素を必要
 文章のコンテンツに、 KumaScript のマクロ呼び出しを含めることができます。
 
 ```plain
-**`margin`** は [CSS](/en-US/docs/Web/CSS) のプロパティで、要素の全 4 辺のマージン領域を設定します。
+**`margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全 4 辺のマージン領域を設定します。
 これは \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}}, \{{cssxref("margin-left")}} の一括指定です。
 
 \{{EmbedInteractiveExample("pages/css/margin.html")}}

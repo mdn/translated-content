@@ -14,7 +14,7 @@ slug: Web/Web_Components/Using_custom_elements
 ページにカスタム要素を登録するには、 {{domxref("CustomElementRegistry.define()")}} メソッドを使います。引数に次のものを取ります。
 
 - 要素に与える名前を表す {{domxref("DOMString")}}。カスタム要素の名前は、[ダッシュが使われている名前](https://html.spec.whatwg.org/#valid-custom-element-name) (kebab-case) である必要があります。単一の単語にすることはできません。
-- 要素の振る舞いを定義した[クラス](/en-US/docs/Web/JavaScript/Reference/Classes)のオブジェクト。
+- 要素の振る舞いを定義した[クラス](/ja/docs/Web/JavaScript/Reference/Classes)のオブジェクト。
 - {{optional_inline}} `extends` プロパティを含むオプションオブジェクトです。このプロパティは、もしあれば、要素が継承する組み込み要素を指定します（カスタマイズされた組み込み要素にのみ関係します）。
 
 例えば、カスタムの [word-count 要素](https://mdn.github.io/web-components-examples/word-count-web-component/)を定義するには次のようにします。
@@ -72,7 +72,7 @@ class PopUpInfo extends HTMLElement {
 }
 ```
 
-前述のコードスニペットはクラスのコンストラクター ([`constructor()`](/ja/docs/Web/JavaScript/Reference/Classes/constructor)) の定義を含んでいます。ここでは常に [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) を最初に呼び出し、正しいプロタイプチェーンが確立されるようにします。
+前述のコードスニペットはクラスのコンストラクター ([`constructor()`](/ja/docs/Web/JavaScript/Reference/Classes/constructor)) の定義を含んでいます。ここでは常に [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を最初に呼び出し、正しいプロタイプチェーンが確立されるようにします。
 
 コンストラクターの内部では、その要素のインスタンスが生成されたときに持つすべての機能を定義します。この場合、カスタム要素にシャドウルートを添付し、いくつかの DOM 操作を使用して要素の内部シャドウ DOM 構造を作成します。それをシャドウルートに添付します。そして最後に、いくつかの CSS をシャドウルートに添付してスタイル付けを行います。
 

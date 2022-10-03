@@ -104,7 +104,7 @@ s.opacity = 1;
 
 #### 関数呼び出しにおける `this`
 
-`f()` のような関数呼び出しでは、 `this` の値はグローバルオブジェクトでした。厳格モードでは `undefined` になりました。関数が [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) または [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) で呼び出されたとき、この値がプリミティブ値であった場合は、オブジェクト (または `undefined` や `null` に対してはグローバルオブジェクト) にボックス化されていました。厳格モードでは、値は変換または置換せずに直接渡されます。
+`f()` のような関数呼び出しでは、 `this` の値はグローバルオブジェクトでした。厳格モードでは `undefined` になりました。関数が [`call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call) または [`apply`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) で呼び出されたとき、この値がプリミティブ値であった場合は、オブジェクト (または `undefined` や `null` に対してはグローバルオブジェクト) にボックス化されていました。厳格モードでは、値は変換または置換せずに直接渡されます。
 
 #### `arguments` は関数の名前付き引数の別名ではない
 
