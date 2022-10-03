@@ -13,6 +13,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 O método **`slice()`** retorna uma cópia de parte de um array a partir de um subarray criado entre as posições `início` e `fim` (fim não é incluído) de um array original. O Array original não é modificado.
 
+{{EmbedInteractiveExample("pages/js/array-slice.html")}}
+
 ## Syntaxe
 
 ```
