@@ -259,7 +259,7 @@ Finally, we set up an interval which triggers once a second to handle any necess
 
 ### ドキュメントの可視性の変更の処理
 
-Let's take a look at the handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) to detect these tab switches and disable our timers for the duration.
+Let's take a look at the handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the [Page Visibility API](/ja/docs/Web/API/Page_Visibility_API) to detect these tab switches and disable our timers for the duration.
 
 ```js
 function handleVisibilityChange() {
@@ -579,5 +579,5 @@ The new ad's element object is returned to the caller in case it's needed.
 
 ## あわせて参照
 
-- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)
-- [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)
+- [Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API)
+- [Page Visibility API](/ja/docs/Web/API/Page_Visibility_API)

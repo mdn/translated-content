@@ -19,4 +19,4 @@ HTTP を通じてログインフォームを提供することは、ユーザー
 
 - [No More Passwords over HTTP, Please!](https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/) — detailed blog post with more information, and FAQ.
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}

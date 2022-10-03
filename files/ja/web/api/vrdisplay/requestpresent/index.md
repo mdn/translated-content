@@ -28,7 +28,7 @@ requestPresent(layers)
 - {{domxref("VRDisplayCapabilities.canPresent")}} が false の場合、または VRLayer 配列に {{domxref("VRDisplayCapabilities.maxLayers")}} を超えるレイヤーがある場合、プロミスは拒否されます。
 - `requestPresent()` が呼び出された時、 {{domxref("VRDisplay")}} が既に表示していた場合、 `VRDisplay` は表示している `VRLayer` 配列を更新します。
 - もし `requestPresent()` の呼び出しが `VRDisplay` が既に表示されている状態で拒否された場合は、その表示を終了します。
-- もし `requestPresent()` がエンゲージメントジェスチャーの外で呼び出された場合、`VRDisplay` が既に表示されていない限り、そのプロミスは拒否されます。このエンゲージメントジェスチャーは、プレゼンテーションが終了するまで [`requestPointerLock()`](/en-US/docs/Web/API/Element/requestPointerLock) の呼び出しを許可することにも使えます。
+- もし `requestPresent()` がエンゲージメントジェスチャーの外で呼び出された場合、`VRDisplay` が既に表示されていない限り、そのプロミスは拒否されます。このエンゲージメントジェスチャーは、プレゼンテーションが終了するまで [`requestPointerLock()`](/ja/docs/Web/API/Element/requestPointerLock) の呼び出しを許可することにも使えます。
 
 ## 例
 
