@@ -3,60 +3,59 @@ title: Expires
 slug: Web/HTTP/Headers/Expires
 translation_of: Web/HTTP/Headers/Expires
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>Expires</strong></code> 헤더는 응답이 더 이상 신선하지 않다고 판단할 날짜/시간을 포함합니다.</p>
+**`Expires`** 헤더는 응답이 더 이상 신선하지 않다고 판단할 날짜/시간을 포함합니다.
 
-<p>0과 같은, 유효하지 않은 날짜는 과거의 시간을 나타내어 리소스가 이미 만료되었음을 의미합니다.</p>
+0과 같은, 유효하지 않은 날짜는 과거의 시간을 나타내어 리소스가 이미 만료되었음을 의미합니다.
 
-<p>응답 내에 "max-age" 혹은 "s-max-age" 디렉티브를 지닌 {{HTTPHeader("Cache-Control")}} 헤더가 존재할 경우, <code>Expires</code> 헤더는 무시됩니다.</p>
+응답 내에 "max-age" 혹은 "s-max-age" 디렉티브를 지닌 {{HTTPHeader("Cache-Control")}} 헤더가 존재할 경우, `Expires` 헤더는 무시됩니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple response header", "CORS-safelisted response-header")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+      </th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">Expires: &lt;http-date&gt;
-</pre>
+```
+Expires: <http-date>
+```
 
-<h2 id="디렉티브">디렉티브</h2>
+## 디렉티브
 
-<dl>
- <dt>&lt;http-date&gt;</dt>
- <dd>
- <p>HTTP-date timestamp.</p>
- </dd>
-</dl>
+- \<http-date>
+  - : HTTP-date timestamp.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre>Expires: Wed, 21 Oct 2015 07:28:00 GMT</pre>
+```
+Expires: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="함께_참고할_내용">함께 참고할 내용</h2>
+## 함께 참고할 내용
 
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Age")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Age")}}

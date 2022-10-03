@@ -3,51 +3,50 @@ title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
 translation_of: Web/HTTP/Headers/Content-Location
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>Content-Location</code></strong> 헤더는 반환된 데이터에 대한 대체 위치을 가르킵니다. 주된 유스케이스는 <a href="/en-US/docs/Web/HTTP/Content_negotiation">컨텐츠 협상</a>의 결과로써 전달되는 리소스의 URL을 가르키는 것입니다.</p>
+**`Content-Location`** 헤더는 반환된 데이터에 대한 대체 위치을 가르킵니다. 주된 유스케이스는 [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)의 결과로써 전달되는 리소스의 URL을 가르키는 것입니다.
 
-<p>{{HTTPHeader("Location")}}과 <code>Content-Location</code>는 다릅니다: {{HTTPHeader("Location")}}가 리다이렉션의 대상(혹은 새롭게 만들어진 문서의 URL)을 가르키는데 반해, <code>Content-Location</code>은 더 이상의 컨텐츠 협상없이, 리소스 접근에 필요한 직접적인 URL을 가르킵니다. <code>Location</code>은 응답과 연관된 헤더인데 반해, <code>Content-Location</code> 은 반환된 개체와 연관이 있습니다.</p>
+{{HTTPHeader("Location")}}과 `Content-Location`는 다릅니다: {{HTTPHeader("Location")}}가 리다이렉션의 대상(혹은 새롭게 만들어진 문서의 URL)을 가르키는데 반해, `Content-Location`은 더 이상의 컨텐츠 협상없이, 리소스 접근에 필요한 직접적인 URL을 가르킵니다. `Location`은 응답과 연관된 헤더인데 반해, `Content-Location` 은 반환된 개체와 연관이 있습니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Entity header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Entity header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">Content-Location: &lt;url&gt;
-</pre>
+```
+Content-Location: <url>
+```
 
-<h2 id="디렉티브">디렉티브</h2>
+## 디렉티브
 
-<dl>
- <dt>&lt;url&gt;</dt>
- <dd>(요청 URL에 대해) 상대적이거나 혹은 절대적인 URL.</dd>
-</dl>
+- \<url>
+  - : (요청 URL에 대해) 상대적이거나 혹은 절대적인 URL.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre>Content-Location: /index.html</pre>
+```
+Content-Location: /index.html
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="함께_참고할_내용">함께 참고할 내용</h2>
+## 함께 참고할 내용
 
-<ul>
- <li>{{HTTPHeader("Location")}}</li>
-</ul>
+- {{HTTPHeader("Location")}}

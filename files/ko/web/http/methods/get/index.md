@@ -7,61 +7,59 @@ tags:
   - Request method
 translation_of: Web/HTTP/Methods/GET
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><span class="seoSummary"><strong>HTTP <code>GET</code> 메서드</strong>는 특정한 리소스를 가져오도록 요청합니다.</span> <code>GET</code> 요청은 데이터를 가져올 때만 사용해야 합니다.</p>
-<div class="notecard note">
-  <strong>참고:</strong>
+**HTTP `GET` 메서드**는 특정한 리소스를 가져오도록 요청합니다. `GET` 요청은 데이터를 가져올 때만 사용해야 합니다.
 
-  <code>GET</code> 요청에 본문이나 페이로드가 담겨있으면 명세에는 금지되어있지 않지만, 의미가 정의되지 않아 기존에 존재하는 구현체에게 요청을 거부당할수 있습니다. 이러한 이유로 <code>GET</code> 요청에는 본문이나 페이로드를 담지 않는 것이 바람직합니다. 
-</div>
+> **참고:** > `GET` 요청에 본문이나 페이로드가 담겨있으면 명세에는 금지되어있지 않지만, 의미가 정의되지 않아 기존에 존재하는 구현체에게 요청을 거부당할수 있습니다. 이러한 이유로 `GET` 요청에는 본문이나 페이로드를 담지 않는 것이 바람직합니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">요청에 본문 존재</th>
-   <td>아니오</td>
-  </tr>
-  <tr>
-   <th scope="row">성공 응답에 본문 존재</th>
-   <td>예</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe", "안전함")}}</th>
-   <td>예</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent", "멱등성")}}</th>
-   <td>예</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable", "캐시 가능")}}</th>
-   <td>예</td>
-  </tr>
-  <tr>
-   <th scope="row">HTML 양식에서 사용 가능</th>
-   <td>예</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">요청에 본문 존재</th>
+      <td>아니오</td>
+    </tr>
+    <tr>
+      <th scope="row">성공 응답에 본문 존재</th>
+      <td>예</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Safe", "안전함")}}</th>
+      <td>예</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotent", "멱등성")}}</th>
+      <td>예</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Cacheable", "캐시 가능")}}
+      </th>
+      <td>예</td>
+    </tr>
+    <tr>
+      <th scope="row">HTML 양식에서 사용 가능</th>
+      <td>예</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">GET /index.html
-</pre>
+```
+GET /index.html
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("http.methods.GET")}}</p>
+{{Compat("http.methods.GET")}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/HTTP/Headers">HTTP 헤더</a></li>
- <li>{{HTTPHeader("Range")}}</li>
- <li>{{httpmethod("POST")}}</li>
-</ul>
+- [HTTP 헤더](/ko/docs/Web/HTTP/Headers)
+- {{HTTPHeader("Range")}}
+- {{httpmethod("POST")}}

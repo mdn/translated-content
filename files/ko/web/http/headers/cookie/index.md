@@ -3,51 +3,51 @@ title: Cookie
 slug: Web/HTTP/Headers/Cookie
 translation_of: Web/HTTP/Headers/Cookie
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>Cookie</code></strong> HTTP 요청 헤더는 {{HTTPHeader("Set-Cookie")}} 헤더와 함께 서버에 의해 이전에 전송되어 저장된 <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a>를 포함합니다.</p>
+**`Cookie`** HTTP 요청 헤더는 {{HTTPHeader("Set-Cookie")}} 헤더와 함께 서버에 의해 이전에 전송되어 저장된 [HTTP cookies](/ko/docs/Web/HTTP/Cookies)를 포함합니다.
 
-<p><code>Cookie</code> 헤더는 선택적(optional)이고, 만약 브라우저의 사생활 보호 설정(privacy settings)이 쿠키를 block할 경우 생략될 수도 있습니다.</p>
+`Cookie` 헤더는 선택적(optional)이고, 만약 브라우저의 사생활 보호 설정(privacy settings)이 쿠키를 block할 경우 생략될 수도 있습니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">Cookie: &lt;cookie-list&gt;
+```
+Cookie: <cookie-list>
 Cookie: name=value
-Cookie: name=value; name2=value2; name3=value3</pre>
+Cookie: name=value; name2=value2; name3=value3
+```
 
-<dl>
- <dt>&lt;cookie-list&gt;</dt>
- <dd><code>&lt;cookie-name&gt;=&lt;cookie-value&gt;</code> 형태를 띄는 이름-값 쌍의 목록입니다. 목록 내 쌍들은 세미콜록과 공백(<code>'; '</code>)으로 구분됩니다.</dd>
-</dl>
+- \<cookie-list>
+  - : `<cookie-name>=<cookie-value>` 형태를 띄는 이름-값 쌍의 목록입니다. 목록 내 쌍들은 세미콜록과 공백(`'; '`)으로 구분됩니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre>Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;</pre>
+```
+Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("http.headers.Cookie")}}</p>
+{{Compat("http.headers.Cookie")}}
 
-<h2 id="함께_참고할_내용들">함께 참고할 내용들</h2>
+## 함께 참고할 내용들
 
-<ul>
- <li>{{HTTPHeader("Set-Cookie")}}</li>
- <li>{{domxref("Document.cookie")}}</li>
-</ul>
+- {{HTTPHeader("Set-Cookie")}}
+- {{domxref("Document.cookie")}}

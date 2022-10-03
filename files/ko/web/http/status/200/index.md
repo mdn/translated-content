@@ -7,35 +7,33 @@ tags:
   - Success
 translation_of: Web/HTTP/Status/200
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><span class="seoSummary">HTTP <strong><code>200 OK</code></strong>는 요청이 성공했음을 나타내는 성공 응답 상태 코드입니다.</span> 기본값에서 200 응답은 캐시에 저장할 수 있습니다.</p>
+HTTP **`200 OK`**는 요청이 성공했음을 나타내는 성공 응답 상태 코드입니다. 기본값에서 200 응답은 캐시에 저장할 수 있습니다.
 
-<p>성공의 정의는 다음과 같이 HTTP 요청 메서드에 따라 나뉩니다.</p>
+성공의 정의는 다음과 같이 HTTP 요청 메서드에 따라 나뉩니다.
 
-<ul>
- <li>{{HTTPMethod("GET")}}: 리소스를 가져왔고 메시지 바디에 전송되었다.</li>
- <li>{{HTTPMethod("HEAD")}}: 개체 헤더가 메시지 바디에 있다.</li>
- <li>{{HTTPMethod("POST")}}: 리소스가 명시하는 행동의 결과가 메시지 바디에 전송되었다.</li>
- <li>{{HTTPMethod("TRACE")}}: 서버가 요청받은 메시지가 메시지 바디에 포함되어있다.</li>
-</ul>
+- {{HTTPMethod("GET")}}: 리소스를 가져왔고 메시지 바디에 전송되었다.
+- {{HTTPMethod("HEAD")}}: 개체 헤더가 메시지 바디에 있다.
+- {{HTTPMethod("POST")}}: 리소스가 명시하는 행동의 결과가 메시지 바디에 전송되었다.
+- {{HTTPMethod("TRACE")}}: 서버가 요청받은 메시지가 메시지 바디에 포함되어있다.
 
-<p>{{HTTPMethod("PUT")}} 또는 {{HTTPMethod("DELETE")}}의 성공 결과는 종종 <code>200 OK</code>가 아니라 {{HTTPStatus("204", "204 No Content")}} (리소스를 새로 생성한 경우 {{HTTPStatus("201", "201 Created")}}) 입니다.</p>
+{{HTTPMethod("PUT")}} 또는 {{HTTPMethod("DELETE")}}의 성공 결과는 종종 `200 OK`가 아니라 {{HTTPStatus("204", "204 No Content")}} (리소스를 새로 생성한 경우 {{HTTPStatus("201", "201 Created")}}) 입니다.
 
-<h2 id="상태">상태</h2>
+## 상태
 
-<pre class="syntaxbox">200 OK</pre>
+```
+200 OK
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("http.status.200")}}</p>
+{{Compat("http.status.200")}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/HTTP/Methods">HTTP 요청 메서드</a></li>
-</ul>
+- [HTTP 요청 메서드](/ko/docs/Web/HTTP/Methods)

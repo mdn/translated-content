@@ -3,64 +3,70 @@ title: 'CSP: img-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/img-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}}<code>:</code> <code><strong>img</strong></code><strong><code>-src</code></strong> 지시어는 이미지 및 파비콘에 대하여 유효한 출처를 지정합니다.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}}`:` **`img`\*\***`-src`\*\* 지시어는 이미지 및 파비콘에 대하여 유효한 출처를 지정합니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP version</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">Directive type</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} fallback</th>
-   <td>Yes. If this directive is absent, the user agent will look for the <code>default-src</code> directive.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">CSP version</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Directive type</th>
+      <td>{{Glossary("Fetch directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} fallback</th>
+      <td>
+        Yes. If this directive is absent, the user agent will look for the
+        <code>default-src</code> directive.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p><code>img-src</code> 정책에 대해 하나 이상의 출처를 허용 할 수 있습니다.</p>
+`img-src` 정책에 대해 하나 이상의 출처를 허용 할 수 있습니다.
 
-<pre class="syntaxbox">Content-Security-Policy: img-src &lt;source&gt;;
-Content-Security-Policy: img-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```
+Content-Security-Policy: img-src <source>;
+Content-Security-Policy: img-src <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p><code>&lt;source&gt;</code> can be any one of the values listed in <a href="/ko/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources">CSP Source Values</a>.</p>
+`<source>` can be any one of the values listed in [CSP Source Values](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
 
-<p>Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a <a href="/ko/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives">number of other directives</a>).</p>
+Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Violation_cases">Violation cases</h3>
+### Violation cases
 
-<p>CSP 헤더가 주어질 때:</p>
+CSP 헤더가 주어질 때:
 
-<pre class="brush: bash">Content-Security-Policy: img-src https://example.com/</pre>
+```bash
+Content-Security-Policy: img-src https://example.com/
+```
 
-<p>아래의 {{HTMLElement("img")}} 태그가 차단되어 불러오지 않습니다:</p>
+아래의 {{HTMLElement("img")}} 태그가 차단되어 불러오지 않습니다:
 
-<pre class="brush: html">&lt;img src="https://not-example.com/foo.jpg" alt="example picture"&gt;</pre>
+```html
+<img src="https://not-example.com/foo.jpg" alt="example picture">
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("http.headers.csp.img-src")}}</p>
+{{Compat("http.headers.csp.img-src")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("img")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("img")}}

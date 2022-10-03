@@ -3,20 +3,20 @@ title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Status/505
 translation_of: Web/HTTP/Status/505
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>505 HTTP Version Not Supported</strong></code> 응답 코드는 요청에 사용된 HTTP 버전이 서버가 지원하지 않음을 알립니다.</p>
+**`505 HTTP Version Not Supported`** 응답 코드는 요청에 사용된 HTTP 버전이 서버가 지원하지 않음을 알립니다.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox notranslate">505 HTTP Version Not Supported</pre>
+```
+505 HTTP Version Not Supported
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Upgrade")}}</li>
-</ul>
+- {{HTTPHeader("Upgrade")}}

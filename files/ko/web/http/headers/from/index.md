@@ -3,55 +3,52 @@ title: From
 slug: Web/HTTP/Headers/From
 translation_of: Web/HTTP/Headers/From
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>From</strong></code> 요청 헤더는 요청한 사용자 에이전트를 제어하는 인간 사용자의 인터넷 이메일을 포함합니다.</p>
+**`From`** 요청 헤더는 요청한 사용자 에이전트를 제어하는 인간 사용자의 인터넷 이메일을 포함합니다.
 
-<p>만약 당신이 (예를 들어 크롤러와 같은) 로보틱 사용자 에이전트를 실행하고 있다면,  <code>From</code> 헤더를 반드시 전송해야 하며, 로봇이 한도를 초과하거나 원하지 않으며, 유효하지 않은 요청을 전송하고 있는 경우처럼 서버 상에 문제를 일으키고 있다면 당신에게 해당 이메일로 연락이 가능해야 합니다.</p>
+만약 당신이 (예를 들어 크롤러와 같은) 로보틱 사용자 에이전트를 실행하고 있다면, `From` 헤더를 반드시 전송해야 하며, 로봇이 한도를 초과하거나 원하지 않으며, 유효하지 않은 요청을 전송하고 있는 경우처럼 서버 상에 문제를 일으키고 있다면 당신에게 해당 이메일로 연락이 가능해야 합니다.
 
-<div class="warning">
-<p>접근 제어 혹은 인증을 위해 <code>From</code> 헤더를 사용해서는 안됩니다.</p>
-</div>
+> **경고:** 접근 제어 혹은 인증을 위해 `From` 헤더를 사용해서는 안됩니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">From: &lt;email&gt;
-</pre>
+```
+From: <email>
+```
 
-<h2 id="디렉티브">디렉티브</h2>
+## 디렉티브
 
-<dl>
- <dt>&lt;email&gt;</dt>
- <dd>기계가 사용 가능한 이메일 주소.</dd>
-</dl>
+- \<email>
+  - : 기계가 사용 가능한 이메일 주소.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre>From: webmaster@example.org</pre>
+```
+From: webmaster@example.org
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="함께_참고할_내용">함께 참고할 내용</h2>
+## 함께 참고할 내용
 
-<ul>
- <li>{{HTTPHeader("Host")}}</li>
-</ul>
+- {{HTTPHeader("Host")}}

@@ -6,18 +6,18 @@ tags:
   - 상태 코드
 translation_of: Web/HTTP/Status/400
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HyperText Transfer Protocol (HTTP) <code><strong>400 Bad Request</strong></code> 응답 상태 코드는 서버가 클라이언트 오류(예: 잘못된 요청 구문, 유효하지 않은 요청 메시지 프레이밍, 또는 변조된 요청 라우팅) 를 감지해 요청을 처리할 수 없거나, 하지 않는다는 것을 의미합니다.</p>
+HyperText Transfer Protocol (HTTP) **`400 Bad Request`** 응답 상태 코드는 서버가 클라이언트 오류(예: 잘못된 요청 구문, 유효하지 않은 요청 메시지 프레이밍, 또는 변조된 요청 라우팅) 를 감지해 요청을 처리할 수 없거나, 하지 않는다는 것을 의미합니다.
 
-<div class="warning">
-<p>클라이언트는 요청을 수정하지 않고 동일한 형태로 다시 보내서는 안됩니다.</p>
-</div>
+> **경고:** 클라이언트는 요청을 수정하지 않고 동일한 형태로 다시 보내서는 안됩니다.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">400 Bad Request </pre>
+```
+400 Bad Request
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
