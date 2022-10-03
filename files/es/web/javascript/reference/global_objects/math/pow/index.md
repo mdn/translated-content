@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/pow
 
 ## Resumen
 
-La función **`Math.pow()`** devuelve la `base elevada al` `exponente` , esto es, `baseexponente`.
+La función **`Math.pow()`** devuelve la `base` elevada al `exponente` , esto es, `baseexponente`.
 
 ## Sintaxis
 

@@ -9,7 +9,7 @@ slug: Web/HTML/Element/input/checkbox
 
 {{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
 
-> **Note:** [ラジオボタン](/ja/docs/Web/HTML/Element/input/radio)はチェックボックスと似ていますが、重要な違いがあります。ラジオボタンはグループ化されており、同時に 1 つしか選択できないのに対し、チェックボックスは単一の値をオンにしたりオフにしたり切り替えることができます。複数のコントロールがある場所では、ラジオボタンはその中で一つしか選択できませんが、チェックボックスは複数の値が選択できます。
+> **メモ:** [ラジオボタン](/ja/docs/Web/HTML/Element/input/radio)はチェックボックスと似ていますが、重要な違いがあります。ラジオボタンはグループ化されており、同時に 1 つしか選択できないのに対し、チェックボックスは単一の値をオンにしたりオフにしたり切り替えることができます。複数のコントロールがある場所では、ラジオボタンはその中で一つしか選択できませんが、チェックボックスは複数の値が選択できます。
 
 <table class="properties">
   <tbody>
@@ -65,7 +65,7 @@ slug: Web/HTML/Element/input/checkbox
 
 `value` 属性が省略された場合は、チェックボックスの既定値は `on` ですので、その場合の送信されるデータは `subscribe=on` となります。
 
-> **Note:** フォームが送信されたときにチェックボックスがチェックされていなかった場合、チェックされていない状態を表す値 (`value=unchecked` など) が送信されることはなく、値はサーバーに全く送信されません。チェックボックスがチェックされていないときに既定値を送信したい場合は、フォーム内に {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を、同じ `name` と `value` で、おそらく JavaScript で含めることで実現できます。
+> **メモ:** フォームが送信されたときにチェックボックスがチェックされていなかった場合、チェックされていない状態を表す値 (`value=unchecked` など) が送信されることはなく、値はサーバーに全く送信されません。チェックボックスがチェックされていないときに既定値を送信したい場合は、フォーム内に {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を、同じ `name` と `value` で、おそらく JavaScript で含めることで実現できます。
 
 ## 追加の属性
 
@@ -80,7 +80,7 @@ slug: Web/HTML/Element/input/checkbox
 
 論理属性で、チェックボックスが既定で (ページが読み込まれたときに) チェックされているかどうかを示します。チェックボックスが現在チェックされているかどうかを示すものでは*ありません*。チェックボックスの状態が変化した場合、このコンテンツ属性は変化を反映しません。 ({{domxref("HTMLInputElement")}} の `checked` IDL 属性のみが更新されます。)
 
-> **Note:** **メモ:** 他の入力コントロールとは異なり、チェックボックスの値は現在 `checked` の状態にある場合のみ、送信データに含まれます。その場合、チェックボックスの `value` 属性の値が入力欄の値として報告されます。
+> **メモ:** 他の入力コントロールとは異なり、チェックボックスの値は現在 `checked` の状態にある場合のみ、送信データに含まれます。その場合、チェックボックスの `value` 属性の値が入力欄の値として報告されます。
 
 他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには {{htmlattrxref("autocomplete","input")}} 属性を使用してください。
 
@@ -197,7 +197,7 @@ inputInstance.indeterminate = true;
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-> **Note:** 未決定状態のチェックボックスを持つフォームを送信すると、チェックボックスがチェックされていない場合と同じ結果になります。 — チェックボックスを表すデータは送られません。
+> **メモ:** 未決定状態のチェックボックスを持つフォームを送信すると、チェックボックスがチェックされていない場合と同じ結果になります。 — チェックボックスを表すデータは送られません。
 
 ## 検証
 

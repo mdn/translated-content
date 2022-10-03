@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 コンテンツスクリプトは、[WebExtension API](/ja/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs) の小さなサブセット にしかアクセスできませんが、メッセージングシステムを使用して [バックグラウンドスクリプトと通信](/ja/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts)し、WebExtension API に間接的にアクセスすることができます。
 
-> **Note:** コンテンツスクリプトは次のドメインでブロックされるのに注意してください:
+> **メモ:** コンテンツスクリプトは次のドメインでブロックされるのに注意してください:
 >
 > - accounts-static.cdn.mozilla.net
 > - accounts.firefox.com
@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 >
 > addons.mozilla.org を含む制限のために、ユーザーはインストール後すぐに拡張機能を試して、動かないのに気付くだけでしょう! 適切な警告を追加するか、`addons.mozilla.org` から動かす [onboarding page](/ja/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices) を追加したくなるでしょう。
 
-> **Note:** `letfoo` や `window.foo = "bar"` にて、コンテンツスクリプトのグローバルスコープで追加された値は、[1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996) のバグによって消えることがあります。
+> **メモ:** `letfoo` や `window.foo = "bar"` にて、コンテンツスクリプトのグローバルスコープで追加された値は、[1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996) のバグによって消えることがあります。
 
 ## コンテンツスクリプトの読み込み
 
@@ -135,7 +135,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()
 ]
 ```
 
-> **Note:** **記:** Firefox ではコンテンツスクリプトからページスクリプトによって生成された JavaScript オブジェクトにアクセスしたり、ページスクリプトにコンテンツスクリプトの JavaScript オブジェクトを公開できるようにする API が提供されます。
+> **メモ:** Firefox ではコンテンツスクリプトからページスクリプトによって生成された JavaScript オブジェクトにアクセスしたり、ページスクリプトにコンテンツスクリプトの JavaScript オブジェクトを公開できるようにする API が提供されます。
 >
 > 詳しくは[ページスクリプトとオブジェクトを共有する](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)のページを見てください。
 
@@ -172,7 +172,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()
 
 コンテンツスクリプトは通常の [`window.XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) と [`window.fetch()`](/ja/docs/Web/API/Fetch_API) API を使ってリクエストを作成できます。
 
-> **Note:** Firefox では、コンテンツスクリプトの (例えば、[`fetch()`](/ja/docs/Web/API/Fetch_API/Using_Fetch) を使った) リクエストは、拡張機能のコンテキストで起こるので、ページコンテンツを参照する URL を絶対 URL で提供せねばなりません。
+> **メモ:** Firefox では、コンテンツスクリプトの (例えば、[`fetch()`](/ja/docs/Web/API/Fetch_API/Using_Fetch) を使った) リクエストは、拡張機能のコンテキストで起こるので、ページコンテンツを参照する URL を絶対 URL で提供せねばなりません。
 >
 > Chrome では、リクエストはページのコンテキストで起こるので、相対 URL で行われます。例えば、`/api` は `https://[現在のページの URL]/api` に送られます。
 
@@ -180,7 +180,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()
 
 これはより多く権限付けられた XHR に晒して、コンテンツスクリプトでインスタンスを取得することで達成し、その副作用としてページ自体からのリクエストがそうであるように [`Origin`](/ja/docs/Web/HTTP/Headers/Origin) と [`Referer`](/ja/docs/Web/HTTP/Headers/Referer) ヘッダーがセットされず、リクエストからクロスオリジンな性質を隠すことが好ましいことがよくあります。
 
-> **Note:** バージョン 58 以降、コンテンツ自体から送られたかのようなリクエストを必要とする拡張機能は `content.XMLHttpRequest` と `content.fetch()` を代わりに使うことができます。
+> **メモ:** バージョン 58 以降、コンテンツ自体から送られたかのようなリクエストを必要とする拡張機能は `content.XMLHttpRequest` と `content.fetch()` を代わりに使うことができます。
 >
 > クロスブラウザー拡張機能にとってこれらの存在は機能検出となります。
 
@@ -384,7 +384,7 @@ window.addEventListener("message", function(event) {
 
 これの完全な動作サンプルは、[GitHub のデモページを訪れて](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html)指示に従ってください。
 
-> **Warning:** **この方法で信頼できないウェブコンテンツと相互作用するには細心の注意が必要です**！
+> **警告:** **この方法で信頼できないウェブコンテンツと相互作用するには細心の注意が必要です**！
 > 拡張機能は強力な力を持つコードの権限があり、敵意のあるウェブページは簡単にこの力にアクセスします。
 >
 > 細かい例を作るには、メッセージを受け取ったコンテンツスクリプトがこのようなことを行うと仮定してください:
@@ -459,7 +459,7 @@ In page script, window.y: undefined
 
 同じことは [`setTimeout()`](/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)、[`setInterval()`](/ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)、[`Function()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) にも言えます。
 
-> **Warning:** **ページのコンテキストでコードを実行するときは特に注意してください！**
+> **警告:** **ページのコンテキストでコードを実行するときは特に注意してください！**
 >
 > ページの環境が悪意をはらんだウェブページにコントロールされ、期待しない方法であなたが操作するオブジェクトを再定義するかもしれません。
 >

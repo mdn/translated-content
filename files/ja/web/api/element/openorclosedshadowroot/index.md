@@ -5,7 +5,7 @@ slug: Web/API/Element/openOrClosedShadowRoot
 
 {{APIRef("Shadow DOM")}}{{non-standard_header}}
 
-> **Note:** この API は [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) でのみ使用できます。
+> **メモ:** この API は [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) でのみ使用できます。
 
 `Element.openOrClosedShadowRoot` は読み取り専用プロパティで、この要素が保持しているシャドウルートを、 {{DOMxRef("ShadowRoot.mode", "mode")}} が `open` であるか `closed` であるかに関わらず表します。
 

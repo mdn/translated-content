@@ -10,7 +10,7 @@ slug: Web/API/MouseEvent/altKey
 オペレーティングシステムによっては、ブラウザーがいつでも <kbd>alt</kbd> キーを検出できるとは限りらないことに注意してください。
 例えば、一部の Linux では、 <kbd>alt</kbd> キーを押しながらマウスの左クリックが、ウィンドウの移動またはリサイズに使われています。
 
-> **Note:** Macintosh のキーボードでは、このキーは <kbd>option</kbd> キーとも呼ばれています。
+> **メモ:** Macintosh のキーボードでは、このキーは <kbd>option</kbd> キーとも呼ばれています。
 
 ## 値
 

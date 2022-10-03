@@ -25,7 +25,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 これは {{domxref("XMLHttpRequest")}} や、最近では [Fetch API](/ja/docs/Web/API/Fetch_API) の利用によって実現されます。これらの技術は、Web ページがサーバにある特定のリソースを直接 [HTTP](/ja/docs/Web/HTTP) リクエストし、必要があれば結果のデータを表示する前に整形する事を可能にしました。
 
-> **Note:** これらのテクニック一般はかつて Ajax (Asynchronous JavaScript and XML)と呼ばれていましたが、これは {{domxref("XMLHttpRequest")}} を使って XML データを要求するものが多かったためです。今日ではそういうものばかりではありませんが (`XMLHttpRequest` や Fetch を使って JSON を要求する場合の方が多いでしょう)、結果としては同じであり、"Ajax" という用語はしばしば今でもこのテクニックを説明するのに使われます。
+> **メモ:** これらのテクニック一般はかつて Ajax (Asynchronous JavaScript and XML)と呼ばれていましたが、これは {{domxref("XMLHttpRequest")}} を使って XML データを要求するものが多かったためです。今日ではそういうものばかりではありませんが (`XMLHttpRequest` や Fetch を使って JSON を要求する場合の方が多いでしょう)、結果としては同じであり、"Ajax" という用語はしばしば今でもこのテクニックを説明するのに使われます。
 
 ![A simple modern architecture for web sites](moderne-web-site-architechture@2x.png)
 
@@ -328,7 +328,7 @@ blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
   - XHR において、Fetch の `response.ok` に相当する一番良いやり方は、{{domxref("XMLHttpRequest.status","request.status")}} が 200 であるか、{{domxref("XMLHttpRequest.readyState","request.readyState")}} が 4 である事をチェックする事です。
   - ステータスとステータスメッセージを取得するためのプロパティは一緒ですが、これは `response` オブジェクトの中ではなく `request`(XHR)オブジェクトの中にあります。
 
-> **Note:** 上手くいかないときは、我々の GitHub にある完成版のコード ([ソースコードはこちらから](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js)、[ライブ実行版](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/)もどうぞ) と比べてみて下さい。
+> **メモ:** 上手くいかないときは、我々の GitHub にある完成版のコード ([ソースコードはこちらから](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js)、[ライブ実行版](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/)もどうぞ) と比べてみて下さい。
 
 ## まとめ
 

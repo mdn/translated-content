@@ -28,7 +28,7 @@ const o = new Object();
 o.toString(); // [object Object] を返す
 ```
 
-> **Note:** JavaScript 1.8.5 から、 `toString()` を {{jsxref("null")}} に対して呼び出した場合には `[object Null]` を、 {{jsxref("undefined")}} に対して呼び出した場合には `[object Undefined]` を返すようになり、これは ECMAScript 5th Edition とその後のエラッタによって定義されました。
+> **メモ:** JavaScript 1.8.5 から、 `toString()` を {{jsxref("null")}} に対して呼び出した場合には `[object Null]` を、 {{jsxref("undefined")}} に対して呼び出した場合には `[object Undefined]` を返すようになり、これは ECMAScript 5th Edition とその後のエラッタによって定義されました。
 >
 > [toString() を使用したオブジェクトクラスの検出](#Using_toString_to_detect_object_class)を参照してください。
 
