@@ -13,7 +13,7 @@ Web サイトやアプリケーション用にクライアント側の JavaScrip
 
 [HTML](/ja/docs/Learn/HTML) と [CSS](/ja/docs/Learn/CSS) に関する基礎知識も役に立つでしょう。
 
-> **Note:** もし自分のファイルを作成できないようなデバイス上で作業しているなら、大半のコード例を [JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなオンラインプログラム作成・実行環境で試してみることもできます。
+> **メモ:** もし自分のファイルを作成できないようなデバイス上で作業しているなら、大半のコード例を [JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなオンラインプログラム作成・実行環境で試してみることもできます。
 
 ## ガイド
 

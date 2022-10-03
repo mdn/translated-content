@@ -303,7 +303,7 @@ const allbooks = friends.reduce(
 
 ### 配列内の重複要素を除去する
 
-> **Note:** {{jsxref("Set")}} と {{jsxref("Array.from()")}} に対応している環境を使っている場合は、`const arrayWithNoDuplicates = Array.from(new Set(myArray))` を使うことで重複要素を除去された配列を取得することができます。
+> **メモ:** {{jsxref("Set")}} と {{jsxref("Array.from()")}} に対応している環境を使っている場合は、`const arrayWithNoDuplicates = Array.from(new Set(myArray))` を使うことで重複要素を除去された配列を取得することができます。
 
 ```js
 const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];

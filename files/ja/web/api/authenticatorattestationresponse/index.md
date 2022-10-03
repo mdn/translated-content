@@ -9,7 +9,7 @@ slug: Web/API/AuthenticatorAttestationResponse
 
 このインターフェイスは {{domxref("AuthenticatorResponse")}} を継承しています。
 
-> **Note:** **メモ:** このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
+> **メモ:** このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
 
 ## プロパティ
 

@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 
 {{AddonSidebar}}
 
-> **Note:** Note that you can't yet submit static WebExtension-based themes to addons.mozilla.org. The work to support this is tracked in <https://github.com/mozilla/addons/issues/501>. If you want to share a theme with other users, you'll need to make it either a [lightweight theme](/ja/docs/Mozilla/Add-ons/Themes/Lightweight_themes) or a [dynamic theme](/ja/Add-ons/WebExtensions/API/theme).
+> **メモ:** Note that you can't yet submit static WebExtension-based themes to addons.mozilla.org. The work to support this is tracked in <https://github.com/mozilla/addons/issues/501>. If you want to share a theme with other users, you'll need to make it either a [lightweight theme](/ja/docs/Mozilla/Add-ons/Themes/Lightweight_themes) or a [dynamic theme](/ja/Add-ons/WebExtensions/API/theme).
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -38,7 +38,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 
 theme キーを使って Firefox に適用する静的なテーマを定義します。
 
-> **Note:** If your manifest.json file includes the theme key, the extension is assumed to be a theme and any other WebExtension keys are ignored. If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
+> **メモ:** If your manifest.json file includes the theme key, the extension is assumed to be a theme and any other WebExtension keys are ignored. If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
 
 ## 画像フォーマット
 

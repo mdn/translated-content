@@ -8,7 +8,7 @@ original_slug: Web/API/ReadableStreamDefaultController/ReadableStreamDefaultCont
 
 **`ReadableStreamDefaultController()`** コンストラクターは、`ReadableStreamDefaultController` オブジェクトのインスタンスを作成して返します。
 
-> **Note:** このコンストラクターを手動で使用することはありません — これは、{{domxref("ReadableStream")}} オブジェクトの構築中に使用されます。
+> **メモ:** このコンストラクターを手動で使用することはありません — これは、{{domxref("ReadableStream")}} オブジェクトの構築中に使用されます。
 
 ## 構文
 

@@ -13,7 +13,7 @@ slug: Web/API/AudioListener
 
 ## プロパティ
 
-> **Note:** position、forward、up の値の設定と取得は異なる構文で行われます。取得は例えば `AudioListener.positionX` にアクセスすることで行われ、同じプロパティを設定するには `AudioListener.positionX.value` を使用することで行われます。仕様書の IDL でこれらの値は読み取り専用とマークされていないのはこのためです。
+> **メモ:** position、forward、up の値の設定と取得は異なる構文で行われます。取得は例えば `AudioListener.positionX` にアクセスすることで行われ、同じプロパティを設定するには `AudioListener.positionX.value` を使用することで行われます。仕様書の IDL でこれらの値は読み取り専用とマークされていないのはこのためです。
 
 - {{domxref("AudioListener.positionX")}}
   - : 右直交座標系におけるリスナーの水平位置を表します。既定値は 0 です。
@@ -41,7 +41,7 @@ slug: Web/API/AudioListener
 - {{domxref("AudioListener.setPosition()")}} {{deprecated_inline}}
   - : リスナーの位置を設定します。
 
-> **Note:** これらのメソッドは非推奨ですが、現在、 Firefox、Internet Explorer、Safari で方向と位置を設定するための唯一の方法となっています。
+> **メモ:** これらのメソッドは非推奨ですが、現在、 Firefox、Internet Explorer、Safari で方向と位置を設定するための唯一の方法となっています。
 
 ## 非推奨の機能
 

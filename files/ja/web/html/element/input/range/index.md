@@ -100,7 +100,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
-> **Note:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
+> **メモ:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
 `range` 入力欄の既定の刻み値は 1 であり、刻みの基準値が整数ではない場合を*除いて*、整数の入力のみを許可します。例えば、 `min` に -10 を、 `value` に 1.5 を設定した場合、 `step` が 1 の場合は正の方向に 1.5, 2.5, 3.5,... など、負の方向に -0.5, -1.5, -2.5,... などのみが許可されます。 [HTML の `step` 属性](/ja/docs/Web/HTML/Attributes/step)を参照してください。</p>
 
@@ -110,7 +110,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、 `vertical` が範囲を垂直に描画することを意味します。
 
-> **Note:** input 型の属性のうち、 `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, `width` は範囲入力には適用されません。これらの属性が含まれた場合は無視されます。
+> **メモ:** input 型の属性のうち、 `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, `width` は範囲入力には適用されません。これらの属性が含まれた場合は無視されます。
 
 ## 例
 
@@ -304,7 +304,7 @@ HTML の仕様では、範囲コントロールの表示方法について、ブ
   </tbody>
 </table>
 
-> **Note:** 現在、これらの機能に完全に対応しているブラウザーはありません。例えば、 Firefox は目盛りとラベルに全く対応していませんし、 Chrome は目盛りに対応していますが、ラベルには対応していません。 Chrome のバージョン66 (66.0.3359.181) ではラベルには対応していますが、 {{htmlelement("datalist")}} タグの {{cssxref("display")}} プロパティが既定で `none` に設定されておりラベルが非表示なので CSS を使ってスタイル付けする必要があります。
+> **メモ:** 現在、これらの機能に完全に対応しているブラウザーはありません。例えば、 Firefox は目盛りとラベルに全く対応していませんし、 Chrome は目盛りに対応していますが、ラベルには対応していません。 Chrome のバージョン66 (66.0.3359.181) ではラベルには対応していますが、 {{htmlelement("datalist")}} タグの {{cssxref("display")}} プロパティが既定で `none` に設定されておりラベルが非表示なので CSS を使ってスタイル付けする必要があります。
 
 ### 方向の変更
 

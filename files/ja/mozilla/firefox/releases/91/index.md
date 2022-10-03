@@ -7,7 +7,7 @@ slug: Mozilla/Firefox/Releases/91
 
 このページでは、開発者に影響する Firefox 91 の変更点をまとめています。Firefox 91 は 2021 年 8 月 10 日にリリースされました。
 
-> **Note:** Mozilla Hacks の [Hopping on Firefox 91](https://hacks.mozilla.org/2021/08/hopping-on-firefox-91/) もご覧ください。
+> **メモ:** Mozilla Hacks の [Hopping on Firefox 91](https://hacks.mozilla.org/2021/08/hopping-on-firefox-91/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 

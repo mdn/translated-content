@@ -34,7 +34,7 @@ slug: Web/HTML/Element/style
 
   - : この属性が指定された場合、スタイルは、その親要素および親要素の子要素にのみ適用されます。
 
-    > **Note:** この属性は、 <https://github.com/w3c/csswg-drafts/issues/3547> により、将来再導入されるかもしれません。今この属性を使用したい場合は、[ポリフィル](https://github.com/samthor/scoped)を利用することができます。
+    > **メモ:** この属性は、 <https://github.com/w3c/csswg-drafts/issues/3547> により、将来再導入されるかもしれません。今この属性を使用したい場合は、[ポリフィル](https://github.com/samthor/scoped)を利用することができます。
 
 ## 例
 

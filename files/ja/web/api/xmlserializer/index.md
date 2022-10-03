@@ -34,7 +34,7 @@ original_slug: XMLSerializer
 
 この例は、{{domxref("Element.insertAdjacentHTML()")}} メソッドを使用して新しい DOM {{domxref("Node")}} を {{domxref("Document")}} の body に挿入します。これは、{{domxref("Element")}} オブジェクトをシリアライズすることにより作成された XML を基にしています。
 
-> **Note:** 実際は、{{domxref("Document.importNode", "importNode()")}} メソッドを呼び出して新しいノードを DOM に挿入する代わりに、以下のいずれかのメソッドを呼び出して DOM ツリーに追加することになるでしょう:
+> **メモ:** 実際は、{{domxref("Document.importNode", "importNode()")}} メソッドを呼び出して新しいノードを DOM に挿入する代わりに、以下のいずれかのメソッドを呼び出して DOM ツリーに追加することになるでしょう:
 >
 > - {{domxref("Document")}} および {{domxref("Element")}} メソッド {{domxref("ParentNode.append", "append()")}} および {{domxref("ParentNode.prepend", "prepend()")}}
 > - {{domxref("ChildNode.replaceWith", "Node.replaceWith()")}} メソッド (既存のノードを新しいノードと置き換えるため)
