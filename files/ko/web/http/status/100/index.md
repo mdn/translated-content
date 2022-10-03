@@ -7,27 +7,27 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/100
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>100 Continue</code></strong> 정보 상태 응답 코드는 클라이언트가 서버로 보낸 요청에 문제가 없으니 다음 요청을 이어서 보내도 된다는 것을 의미합니다. 만약 클라이언트의 작업이 완료되었다면 이 응답은 무시해도 됩니다.</p>
+HTTP **`100 Continue`** 정보 상태 응답 코드는 클라이언트가 서버로 보낸 요청에 문제가 없으니 다음 요청을 이어서 보내도 된다는 것을 의미합니다. 만약 클라이언트의 작업이 완료되었다면 이 응답은 무시해도 됩니다.
 
-<p>클라이언트가 서버로 하여금 이를 검토하게 하려면 첫 번째 요청에서 {{HTTPHeader("Expect")}}<code>: 100-continue</code>를 헤더로 보내야 합니다. 이후, 클라이언트는 본문을 보내기 전에 서버가 <code>100 Continue</code> 상태 코드로 응답하길 기다려야 합니다.</p>
+클라이언트가 서버로 하여금 이를 검토하게 하려면 첫 번째 요청에서 {{HTTPHeader("Expect")}}`: 100-continue`를 헤더로 보내야 합니다. 이후, 클라이언트는 본문을 보내기 전에 서버가 `100 Continue` 상태 코드로 응답하길 기다려야 합니다.
 
-<h2 id="상태">상태</h2>
+## 상태
 
-<pre class="syntaxbox">100 Continue</pre>
+```
+100 Continue
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("http.status.100")}}</p>
+{{Compat("http.status.100")}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{HTTPHeader("Expect")}}</li>
- <li>{{HTTPStatus(417)}}</li>
-</ul>
+- {{HTTPHeader("Expect")}}
+- {{HTTPStatus(417)}}

@@ -7,43 +7,34 @@ tags:
   - 클라이언트 에러
 translation_of: Web/HTTP/Status/416
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>하이퍼텍스트 트랜스퍼 프로토콜(HTTP) <code><strong>416 Range Not Satisfiable</strong></code> 에러 응답 코드는 서버가 요청받은 범위에 대해서 서비스 할 수 없음을 알려줍니다. 아마도 이유는 그 문서가 그러한 범위를 지니고 있지 않거나, 또는 {{HTTPHeader("Range")}} 헤더 값이 문법적으로는 옳지만, 이해가 되지 않을 경우 그럴 수 있습니다.</p>
+하이퍼텍스트 트랜스퍼 프로토콜(HTTP) **`416 Range Not Satisfiable`** 에러 응답 코드는 서버가 요청받은 범위에 대해서 서비스 할 수 없음을 알려줍니다. 아마도 이유는 그 문서가 그러한 범위를 지니고 있지 않거나, 또는 {{HTTPHeader("Range")}} 헤더 값이 문법적으로는 옳지만, 이해가 되지 않을 경우 그럴 수 있습니다.
 
-<p>416 응답 메시지는 {{HTTPHeader("Content-Range")}} 를 포함하여 만족할 수 없는 범위(그 경우 <code>'*'</code>) 뒤에 <code>'/'</code>와 현재 리소스를 알려줍니다. 예: <code>Content-Range: */12777</code></p>
+416 응답 메시지는 {{HTTPHeader("Content-Range")}} 를 포함하여 만족할 수 없는 범위(그 경우 `'*'`) 뒤에 `'/'`와 현재 리소스를 알려줍니다. 예: `Content-Range: */12777`
 
-<p>이 에러를 마주하면, 브라우저는 보통 명령을 취소하거나 전체 문서를 다시 요청합니다.</p>
+이 에러를 마주하면, 브라우저는 보통 명령을 취소하거나 전체 문서를 다시 요청합니다.
 
-<h2 id="상태">상태</h2>
+## 상태
 
-<pre class="syntaxbox">416 Range Not Satisfiable</pre>
+```
+416 Range Not Satisfiable
+```
 
-<h2 id="기술_사양">기술 사양</h2>
+## 기술 사양
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">기술 사양</th>
-   <th scope="col">제목</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7233", "416 Request Not Satisfiable" , "4.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
-  </tr>
- </tbody>
-</table>
+| 기술 사양                                                                | 제목                                                   |
+| ------------------------------------------------------------------------ | ------------------------------------------------------ |
+| {{RFC("7233", "416 Request Not Satisfiable" , "4.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>The information shown below has been pulled from MDN's GitHub (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>). </p>
+The information shown below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-<p>{{Compat("http.status.416")}}</p>
+{{Compat("http.status.416")}}
 
-<h2 id="함께_참고할_내용">함께 참고할 내용</h2>
+## 함께 참고할 내용
 
-<ul>
- <li>{{HTTPStatus(206)}} <code>Partial Content</code></li>
- <li>{{HTTPHeader("Content-Range")}}</li>
- <li>{{HTTPHeader("Range")}}</li>
-</ul>
+- {{HTTPStatus(206)}} `Partial Content`
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Range")}}

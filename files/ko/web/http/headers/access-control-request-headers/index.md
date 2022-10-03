@@ -8,49 +8,48 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Access-Control-Request-Headers
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>요청 헤더 <strong><code>Access-Control-Request-Headers</code></strong>는 실제 요청이 만들어질 때 클라이언트가 보낼 수도 있는 <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a>를 서버에게 알리기 위해 브라우저가 {{glossary("preflight request")}}를 발급(issue)할 때 사용됩니다.</p>
+요청 헤더 **`Access-Control-Request-Headers`**는 실제 요청이 만들어질 때 클라이언트가 보낼 수도 있는 [HTTP headers](/ko/docs/Web/HTTP/Headers)를 서버에게 알리기 위해 브라우저가 {{glossary("preflight request")}}를 발급(issue)할 때 사용됩니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">Access-Control-Request-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
-</pre>
+```
+Access-Control-Request-Headers: <header-name>, <header-name>, ...
+```
 
-<h2 id="지시어">지시어</h2>
+## 지시어
 
-<dl>
- <dt>&lt;header-name&gt;</dt>
- <dd>요청에 포함 된 <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a>의 쉼표로 구분 한 목록.</dd>
-</dl>
+- `<header-name>`
+  - : 요청에 포함 된 [HTTP headers](/ko/docs/Web/HTTP/Headers)의 쉼표로 구분 한 목록.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre>Access-Control-Request-Headers: X-PINGOTHER, Content-Type</pre>
+```
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("http.headers.Access-Control-Request-Headers")}}</p>
+{{Compat("http.headers.Access-Control-Request-Headers")}}
 
-<h2 id="더보기">더보기</h2>
+## 더보기
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Request-Method")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Request-Method")}}

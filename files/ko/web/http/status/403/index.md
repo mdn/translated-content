@@ -5,32 +5,31 @@ tags:
   - 상태 코드
 translation_of: Web/HTTP/Status/403
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}HTTP **`403 Forbidden`** 클라이언트 오류 상태 응답 코드는 서버에 요청이 전달되었지만, 권한 때문에 거절되었다는 것을 의미합니다.
 
-<div>HTTP <code><strong>403 Forbidden</strong></code> 클라이언트 오류 상태 응답 코드는 서버에 요청이 전달되었지만, 권한 때문에 거절되었다는 것을 의미합니다.<br>
-<br>
-이 상태는 {{HTTPStatus("401")}}과 비슷하지만, 로그인 로직(틀린 비밀번호로 로그인 행위)처럼 반응하여 재인증(re-authenticating)을 하더라도 지속적으로 접속을 거절합니다.</div>
+이 상태는 {{HTTPStatus("401")}}과 비슷하지만, 로그인 로직(틀린 비밀번호로 로그인 행위)처럼 반응하여 재인증(re-authenticating)을 하더라도 지속적으로 접속을 거절합니다.
 
-<h2 id="상태">상태</h2>
+## 상태
 
-<pre class="syntaxbox notranslate">403 Forbidden</pre>
+```
+403 Forbidden
+```
 
-<h2 id="응답_예시">응답 예시</h2>
+## 응답 예시
 
-<pre class="notranslate">HTTP/1.1 403 Forbidden
+```
+HTTP/1.1 403 Forbidden
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("http/status", "403")}}</p>
+{{Compat("http/status", "403")}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{HTTPStatus("401")}}</li>
-</ul>
+- {{HTTPStatus("401")}}

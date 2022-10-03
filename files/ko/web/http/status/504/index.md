@@ -3,33 +3,31 @@ title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
 translation_of: Web/HTTP/Status/504
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>하이퍼텍스트 전송 프로토콜 (HTTP) <code><strong>504 Gateway Timeout</strong></code> 서버 에러 응답 코드는 서버가<br>
- 게이트웨이(gateway) 혹은 프록시(proxy)의 역할을 하는 동안 시간 안에 업스트림 서버(upstream server)로부터 요청을 마치기 위해 필요한 응답를 받지 못 했음을 나타냅니다.</p>
+하이퍼텍스트 전송 프로토콜 (HTTP) **`504 Gateway Timeout`** 서버 에러 응답 코드는 서버가
+게이트웨이(gateway) 혹은 프록시(proxy)의 역할을 하는 동안 시간 안에 업스트림 서버(upstream server)로부터 요청을 마치기 위해 필요한 응답를 받지 못 했음을 나타냅니다.
 
-<div class="note">
-<p><strong>Note</strong>: <a href="https://ko.wikipedia.org/wiki/%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4">Gateway</a> 는 네트워킹에서 다른 것을 가르킬 수 있고 504 에러는 주로 수정할 수 있는 것이 아니지만, 당신이 접근하려고 하는 웹 서버 혹은 프록시의 수정이 필요합니다.</p>
-</div>
+> **참고:** [Gateway](https://ko.wikipedia.org/wiki/%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4) 는 네트워킹에서 다른 것을 가르킬 수 있고 504 에러는 주로 수정할 수 있는 것이 아니지만, 당신이 접근하려고 하는 웹 서버 혹은 프록시의 수정이 필요합니다.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox notranslate">504 Gateway Timeout</pre>
+```
+504 Gateway Timeout
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>아래 보이는 정보는 MDN 의 Github 로부터 가져왔습니다.<br>
- (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
+아래 보이는 정보는 MDN 의 Github 로부터 가져왔습니다.
+(<https://github.com/mdn/browser-compat-data>).
 
-<p>{{Compat("http.status.504")}}</p>
+{{Compat("http.status.504")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" rel="noopener">HTTP/1.1: Status Code Definitions</a></li>
- <li>{{HTTPStatus(502)}}</li>
-</ul>
+- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- {{HTTPStatus(502)}}

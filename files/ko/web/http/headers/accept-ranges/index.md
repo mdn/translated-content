@@ -3,57 +3,54 @@ title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
 translation_of: Web/HTTP/Headers/Accept-Ranges
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>Accept-Ranges</strong></code> 응답 HTTP 헤더는 부분 요청의 지원을 알리기 위해 서버에 의해 사용되는 표식입니다. 이 필드의 값은 범위를 정의하기 위해 사용될 수 있는 단위를 가리킵니다.</p>
+**`Accept-Ranges`** 응답 HTTP 헤더는 부분 요청의 지원을 알리기 위해 서버에 의해 사용되는 표식입니다. 이 필드의 값은 범위를 정의하기 위해 사용될 수 있는 단위를 가리킵니다.
 
-<p><code>Accept-Ranges</code> 헤더가 존재하면, 브라우저는 처음부터 다시 다운로드를 시작하지 않고, 중단된 다운로드를 <em>재개</em>하려고 할 것입니다.</p>
+`Accept-Ranges` 헤더가 존재하면, 브라우저는 처음부터 다시 다운로드를 시작하지 않고, 중단된 다운로드를 *재개*하려고 할 것입니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">Accept-Ranges: bytes
-Accept-Ranges: none</pre>
+```
+Accept-Ranges: bytes
+Accept-Ranges: none
+```
 
-<h2 id="디렉티브">디렉티브</h2>
+## 디렉티브
 
-<dl>
- <dt><code>none</code></dt>
- <dd>지원되는 범위의 단위가 없음을 나타내는데, 이는 헤더가 존재하지 않는 경우와 동일하므로 거의 사용되지 않습니다. 그렇지만 IE9같은 브라우저의 경우 다운로드 매니저의 일시중지 버튼을 비활성화(disable) 혹은 제거(remove)할 때 쓰이곤 합니다.</dd>
- <dt><code>bytes</code></dt>
- <dd>
- <p>범위는 바이트로 표현될 수 있습니다.</p>
- </dd>
-</dl>
+- `none`
+  - : 지원되는 범위의 단위가 없음을 나타내는데, 이는 헤더가 존재하지 않는 경우와 동일하므로 거의 사용되지 않습니다. 그렇지만 IE9같은 브라우저의 경우 다운로드 매니저의 일시중지 버튼을 비활성화(disable) 혹은 제거(remove)할 때 쓰이곤 합니다.
+- `bytes`
+  - : 범위는 바이트로 표현될 수 있습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre>Accept-Ranges: bytes
-</pre>
+```
+Accept-Ranges: bytes
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="함께_참고할_내용">함께 참고할 내용</h2>
+## 함께 참고할 내용
 
-<ul>
- <li>{{HTTPHeader("If-Range")}}</li>
- <li>{{HTTPHeader("Ranges")}}</li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Ranges")}}

@@ -3,79 +3,80 @@ title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
 translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-
-
-<p>HTTP <strong><code>X-XSS-Protection</code></strong>헤더는 Internet Explorer, Chrome 및 Safari에서 제공하는 기능으로서, ({{Glossary("XSS")}}) 공격을 감지 할 때 페이지 로드를 중지시킬 수 있습니다. 최신 브라우저에서는 Inline Javascript(<code>'unsafe-inline')</code>사용을 못하게 하는 CSP(Content-Security-Policy) 보호기능이 있으나, 해당 기능을 지원하지 않는 구형 웹브라우저에서 사용자를 보호 할수 있는 기능을 제공할 수 있습니다.</p>
+HTTP **`X-XSS-Protection`**헤더는 Internet Explorer, Chrome 및 Safari에서 제공하는 기능으로서, ({{Glossary("XSS")}}) 공격을 감지 할 때 페이지 로드를 중지시킬 수 있습니다. 최신 브라우저에서는 Inline Javascript(`'unsafe-inline')`사용을 못하게 하는 CSP(Content-Security-Policy) 보호기능이 있으나, 해당 기능을 지원하지 않는 구형 웹브라우저에서 사용자를 보호 할수 있는 기능을 제공할 수 있습니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox notranslate">X-XSS-Protection: 0
+```
+X-XSS-Protection: 0
 X-XSS-Protection: 1
 X-XSS-Protection: 1; mode=block
-X-XSS-Protection: 1; report=&lt;reporting-uri&gt;
-</pre>
+X-XSS-Protection: 1; report=<reporting-uri>
+```
 
-<dl>
- <dt>0</dt>
- <dd>XSS 필터링을 비활성화합니다.</dd>
- <dt>1</dt>
- <dd>XSS 필터링을 사용합니다 (일반적으로 브라우저의 기본값입니다). 사이트 내에서 스크립팅 공격이 감지되면 브라우저는 안전하지 않은 영역을 제거 후에 렌더링을 하게 됩니다.</dd>
- <dt>1; mode=block</dt>
- <dd>XSS 필터링을 사용합니다. 공격이 탐지되면 안전하지 않는 영역을 제거하는게 아니라, 페이지 렌더링을 중단합니다.</dd>
- <dt>1; report=&lt;reporting-URI&gt;  (Chromium에서만 사용 가능)</dt>
- <dd>XSS 필터링을 사용합니다. XSS 공격을 탐지하면 브라우저는 페이지 렌더링을 차단하고 위반 사항을 보고합니다. 이것은 CSP {{CSP ( "report-uri")}} 지시문의 기능을 사용하여 보고서를 보냅니다.</dd>
-</dl>
+- 0
+  - : XSS 필터링을 비활성화합니다.
+- 1
+  - : XSS 필터링을 사용합니다 (일반적으로 브라우저의 기본값입니다). 사이트 내에서 스크립팅 공격이 감지되면 브라우저는 안전하지 않은 영역을 제거 후에 렌더링을 하게 됩니다.
+- 1; mode=block
+  - : XSS 필터링을 사용합니다. 공격이 탐지되면 안전하지 않는 영역을 제거하는게 아니라, 페이지 렌더링을 중단합니다.
+- 1; report=\<reporting-URI> (Chromium에서만 사용 가능)
+  - : XSS 필터링을 사용합니다. XSS 공격을 탐지하면 브라우저는 페이지 렌더링을 차단하고 위반 사항을 보고합니다. 이것은 CSP {{CSP ( "report-uri")}} 지시문의 기능을 사용하여 보고서를 보냅니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>XSS 공격을 감지하면 페이지로드를 차단합니다.</p>
+XSS 공격을 감지하면 페이지로드를 차단합니다.
 
-<pre class="brush: bash notranslate">X-XSS-Protection: 1; mode=block</pre>
+```bash
+X-XSS-Protection: 1; mode=block
+```
 
-<p>PHP</p>
+PHP
 
-<pre class="brush: php notranslate">header("X-XSS-Protection: 1; mode=block");</pre>
+```php
+header("X-XSS-Protection: 1; mode=block");
+```
 
-<p>Apache (.htaccess)</p>
+Apache (.htaccess)
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+```bash
+<IfModule mod_headers.c>
   Header set X-XSS-Protection "1; mode=block"
-&lt;/IfModule&gt;</pre>
+</IfModule>
+```
 
-<p>Nginx</p>
+Nginx
 
-<pre class="brush: bash notranslate">add_header "X-XSS-Protection" "1; mode=block";</pre>
+```bash
+add_header "X-XSS-Protection" "1; mode=block";
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specifications or drafts.</p>
+Not part of any specifications or drafts.
 
-<h2 id="지원_브라우저">지원 브라우저</h2>
+## 지원 브라우저
 
-<p>{{Compat("http.headers.X-XSS-Protection")}}</p>
+{{Compat("http.headers.X-XSS-Protection")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li><a href="https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/">Controlling the XSS Filter – Microsoft</a></li>
- <li><a href="https://www.virtuesecurity.com/blog/understanding-xss-auditor/">Understanding XSS Auditor – Virtue Security</a></li>
- <li>
-  <p><a href="http://blog.innerht.ml/the-misunderstood-x-xss-protection/">The misunderstood X-XSS-Protection – blog.innerht.ml</a></p>
- </li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [Controlling the XSS Filter – Microsoft](https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/)
+- [Understanding XSS Auditor – Virtue Security](https://www.virtuesecurity.com/blog/understanding-xss-auditor/)
+- [The misunderstood X-XSS-Protection – blog.innerht.ml](http://blog.innerht.ml/the-misunderstood-x-xss-protection/)

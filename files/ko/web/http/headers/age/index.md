@@ -3,54 +3,51 @@ title: Age
 slug: Web/HTTP/Headers/Age
 translation_of: Web/HTTP/Headers/Age
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>Age</strong></code> 헤더는 객체가 프록시 캐시 내에 머무는 초단위의 시간을 가집니다.</p>
+**`Age`** 헤더는 객체가 프록시 캐시 내에 머무는 초단위의 시간을 가집니다.
 
-<p><code>Age</code> 헤더는 보통 0에 가깝습니다. 만약 <code>Age: 0라면</code>, 그것은 아마도 원 서버로부터 막 내려받은 것일 겁니다; 그게 아니라면 프록시의 현재 시간과 HTTP 응답 내에 포함된 {{HTTPHeader("Date")}} 일반 헤더의 차로 계산됩니다.</p>
+`Age` 헤더는 보통 0에 가깝습니다. 만약 `Age: 0라면`, 그것은 아마도 원 서버로부터 막 내려받은 것일 겁니다; 그게 아니라면 프록시의 현재 시간과 HTTP 응답 내에 포함된 {{HTTPHeader("Date")}} 일반 헤더의 차로 계산됩니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">Age: &lt;delta-seconds&gt;
-</pre>
+```
+Age: <delta-seconds>
+```
 
-<h2 id="디렉티브">디렉티브</h2>
+## 디렉티브
 
-<dl>
- <dt>&lt;delta-seconds&gt;</dt>
- <dd>
- <p>음수가 아닌 정수형으로, 객체가 프록시 캐시 내에 머문 초단위 시간을 나타냅니다.</p>
- </dd>
-</dl>
+- `<delta-seconds>`
+  - : 음수가 아닌 정수형으로, 객체가 프록시 캐시 내에 머문 초단위 시간을 나타냅니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre>Age: 24</pre>
+```
+Age: 24
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("http.headers.Age")}}</p>
+{{Compat("http.headers.Age")}}
 
-<h2 id="함께_참고할_내용">함께 참고할 내용</h2>
+## 함께 참고할 내용
 
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Expires")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Expires")}}

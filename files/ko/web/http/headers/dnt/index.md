@@ -3,66 +3,63 @@ title: DNT
 slug: Web/HTTP/Headers/DNT
 translation_of: Web/HTTP/Headers/DNT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>DNT</code></strong> (<strong>D</strong>o <strong>N</strong>ot <strong>T</strong>rack) 요청 헤더는 사용자의 트래킹 선호 설정을 가르킵니다. 이는 개인화 컨텐츠가 아닌 사생활 정보를 더 It lets users indicate whether would prefer privacy rather than personalized content.</p>
+**`DNT`** (**D**o **N**ot **T**rack) 요청 헤더는 사용자의 트래킹 선호 설정을 가르킵니다. 이는 개인화 컨텐츠가 아닌 사생활 정보를 더 It lets users indicate whether would prefer privacy rather than personalized content.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">DNT: 0
+```
+DNT: 0
 DNT: 1
-</pre>
+```
 
-<h2 id="디렉티브">디렉티브</h2>
+## 디렉티브
 
-<dl>
- <dt>0</dt>
- <dd>사용자가 대상 사이트에 대해 트래킹을 허용하는 것을 말합니다.</dd>
- <dt>1</dt>
- <dd>사용자가 대상 사이트에 대해 트래킹을 원하지 않는 것을 말합니다.</dd>
-</dl>
+- 0
+  - : 사용자가 대상 사이트에 대해 트래킹을 허용하는 것을 말합니다.
+- 1
+  - : 사용자가 대상 사이트에 대해 트래킹을 원하지 않는 것을 말합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="JavaScript를_통해_Do_Not_Track_상태_읽기">JavaScript를 통해 Do Not Track 상태 읽기</h3>
+### JavaScript를 통해 Do Not Track 상태 읽기
 
-<p>사용자의 DNT 선호 설정은 {{domxref("Navigator.doNotTrack")}} 프로퍼티를 사용해 JavaScript로도 읽을 수 있씁니다:</p>
+사용자의 DNT 선호 설정은 {{domxref("Navigator.doNotTrack")}} 프로퍼티를 사용해 JavaScript로도 읽을 수 있씁니다:
 
-<pre class="brush: js">navigator.doNotTrack; // "0" or "1"</pre>
+```js
+navigator.doNotTrack; // "0" or "1"
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="함께_참고할_내용">함께 참고할 내용</h2>
+## 함께 참고할 내용
 
-<ul>
- <li>{{domxref("Navigator.doNotTrack")}}</li>
- <li>{{HTTPHeader("Tk")}} header</li>
- <li><a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track on Wikipedia</a></li>
- <li><a href="https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean">What Does the "Track" in "Do Not Track" Mean? – EFF</a></li>
- <li><a href="http://donottrack.us/">donottrack.us</a></li>
- <li>DNT browser settings help:
-  <ul>
-   <li><a href="https://www.mozilla.org/en-US/firefox/dnt/">Firefox</a></li>
-   <li><a href="https://support.google.com/chrome/answer/2790761">Chrome</a></li>
-  </ul>
- </li>
-</ul>
+- {{domxref("Navigator.doNotTrack")}}
+- {{HTTPHeader("Tk")}} header
+- [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)
+- [What Does the "Track" in "Do Not Track" Mean? – EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
+- [donottrack.us](http://donottrack.us/)
+- DNT browser settings help:
+
+  - [Firefox](https://www.mozilla.org/en-US/firefox/dnt/)
+  - [Chrome](https://support.google.com/chrome/answer/2790761)

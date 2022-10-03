@@ -3,45 +3,42 @@ title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
 translation_of: Web/HTTP/Headers/Content-Length
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>Content-Length</code></strong> 개체 헤더는 수신자에게 보내지는, 바이트 단위를 가지는 개체 본문의 크기를 나타냅니다.</p>
+**`Content-Length`** 개체 헤더는 수신자에게 보내지는, 바이트 단위를 가지는 개체 본문의 크기를 나타냅니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Entity header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Entity header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">Content-Length: &lt;length&gt;
-</pre>
+```
+Content-Length: <length>
+```
 
-<h2 id="디렉티브">디렉티브</h2>
+## 디렉티브
 
-<dl>
- <dt>&lt;length&gt;</dt>
- <dd>octets에 대한 십진수 단위의 길이.</dd>
-</dl>
+- \<length>
+  - : octets에 대한 십진수 단위의 길이.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("http.headers.Content-Length")}}</p>
+{{Compat("http.headers.Content-Length")}}
 
-<h2 id="함께_참고할_내용">함께 참고할 내용</h2>
+## 함께 참고할 내용
 
-<ul>
- <li>{{HTTPHeader("Transfer-Encoding")}}</li>
-</ul>
+- {{HTTPHeader("Transfer-Encoding")}}

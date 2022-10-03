@@ -9,39 +9,39 @@ tags:
   - 클라이언트 오류
 translation_of: Web/HTTP/Status/401
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}**`401 Unauthorized`** 클라이언트 오류 상태 응답 코드는 해당 리소스에 유효한 인증 자격 증명이 없기 때문에 요청이 적용되지 않았음을 나타냅니다.
 
-<div><strong><code>401 Unauthorized</code></strong> 클라이언트 오류 상태 응답 코드는 해당 리소스에 유효한 인증 자격 증명이 없기 때문에 요청이 적용되지 않았음을 나타냅니다.<br>
-<br>
-이 상태는 {{HTTPHeader("WWW-Authenticate")}} 헤더와 함께 전송되며, 이 헤더는 올바르게 인증하는 방법에 대한 정보를 포함하고 있습니다.<br>
-<br>
-이 상태는 {{HTTPStatus("403")}}과 비슷하지만, <code>401 Unauthorized</code>의 경우에는 인증이 가능합니다.</div>
+이 상태는 {{HTTPHeader("WWW-Authenticate")}} 헤더와 함께 전송되며, 이 헤더는 올바르게 인증하는 방법에 대한 정보를 포함하고 있습니다.
 
-<h2 id="상태">상태</h2>
+이 상태는 {{HTTPStatus("403")}}과 비슷하지만, `401 Unauthorized`의 경우에는 인증이 가능합니다.
 
-<pre class="syntaxbox">401 Unauthorized</pre>
+## 상태
 
-<h2 id="응답_예시">응답 예시</h2>
+```
+401 Unauthorized
+```
 
-<pre>HTTP/1.1 401 Unauthorized
+## 응답 예시
+
+```
+HTTP/1.1 401 Unauthorized
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-WWW-Authenticate: Basic realm="Access to staging site"</pre>
+WWW-Authenticate: Basic realm="Access to staging site"
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("http.status.401")}}</p>
+{{Compat("http.status.401")}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/HTTP/Authentication">HTTP 인증</a></li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [HTTP 인증](/ko/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

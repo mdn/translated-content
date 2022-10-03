@@ -9,34 +9,39 @@ tags:
   - 성공
 translation_of: Web/HTTP/Status/206
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>206 Partial Content</code></strong>는 {{HTTPHeader("Range")}} 헤더에 기술된 데이터 범위에 대한 요청이 성공적으로 응답되어 바디에 해당되는 데이터를 담고 있다는 것을 알려줍니다.</p>
+HTTP **`206 Partial Content`**는 {{HTTPHeader("Range")}} 헤더에 기술된 데이터 범위에 대한 요청이 성공적으로 응답되어 바디에 해당되는 데이터를 담고 있다는 것을 알려줍니다.
 
-<p>만약 단일 범위 요청을 한 경우에는 응답에 포함된 데이터의 타입은 {{HTTPHeader("Content-Type")}}이며, {{HTTPHeader("Content-Range")}}가 제공될 것입니다.</p>
+만약 단일 범위 요청을 한 경우에는 응답에 포함된 데이터의 타입은 {{HTTPHeader("Content-Type")}}이며, {{HTTPHeader("Content-Range")}}가 제공될 것입니다.
 
-<p>만약 다중 범위 요청에 대한 응답이라면, {{HTTPHeader("Content-Type")}}는 <code>multipart/byteranges</code>로 되며 분할된 데이터의 응답은 {{HTTPHeader("Content-Range")}} 와 {{HTTPHeader("Content-Type")}}로 각각의 범위를 기술합니다.</p>
+만약 다중 범위 요청에 대한 응답이라면, {{HTTPHeader("Content-Type")}}는 `multipart/byteranges`로 되며 분할된 데이터의 응답은 {{HTTPHeader("Content-Range")}} 와 {{HTTPHeader("Content-Type")}}로 각각의 범위를 기술합니다.
 
-<h2 id="상태">상태</h2>
+## 상태
 
-<pre class="syntaxbox">206 Partial Content</pre>
+```
+206 Partial Content
+```
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>응답이 단일 범위를 가지고 있는 경우:</p>
+응답이 단일 범위를 가지고 있는 경우:
 
-<pre class="newpage">HTTP/1.1 206 Partial Content
+```
+HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
 Content-Range: bytes 21010-47021/47022
 Content-Length: 26012
 Content-Type: image/gif
 
-... 26012 bytes of partial image data ...</pre>
+... 26012 bytes of partial image data ...
+```
 
-<p>응답이 여러 범위를 가지고 있는 경우:</p>
+응답이 여러 범위를 가지고 있는 경우:
 
-<pre class="newpage">HTTP/1.1 206 Partial Content
+```
+HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
 Content-Length: 1741
@@ -52,21 +57,20 @@ Content-Type: application/pdf
 Content-Range: bytes 4590-7999/8000
 
 ...the second range
---String_separator--</pre>
+--String_separator--
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("http.status.206")}}</p>
+{{Compat("http.status.206")}}
 
-<h2 id="함께_참고할_내용">함께 참고할 내용</h2>
+## 함께 참고할 내용
 
-<ul>
- <li>{{HTTPHeader("If-Range")}}</li>
- <li>{{HTTPHeader("Range")}}</li>
- <li>{{HTTPHeader("Content-Range")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Range")}}
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Content-Type")}}

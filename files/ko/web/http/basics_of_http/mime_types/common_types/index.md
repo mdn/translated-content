@@ -3,308 +3,70 @@ title: MIME 타입의 전체 목록
 slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 translation_of: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>다음은 일반적인 확장자로 정렬된, 문서 타입과 관련된 MIME 타입의 포괄적인 목록입니다.</p>
+다음은 일반적인 확장자로 정렬된, 문서 타입과 관련된 MIME 타입의 포괄적인 목록입니다.
 
-<p>두 개의 주요 MIME 타입은 기본 타입에 있어 중요한 역할을 합니다:</p>
+두 개의 주요 MIME 타입은 기본 타입에 있어 중요한 역할을 합니다:
 
-<ul>
- <li><code>text/plain</code>는 텍스트 파일을 위한 기본값입니다. 텍스트 파일은 인간이 읽을 수 있어야 하며 이진 데이터를 포함해서는 안됩니다.</li>
- <li><code>application/octet-stream</code>는 다른 모든 경우를 위한 기본값입니다. 알려지지 않은 파일 타입은 이 타입을 사용해야 합니다. 브라우저들은 이런 파일들을 다룰 때, 사용자를 위험한 동작으로부터 보호하도록 개별적인 주의를 기울여야 합니다.</li>
-</ul>
+- `text/plain`는 텍스트 파일을 위한 기본값입니다. 텍스트 파일은 인간이 읽을 수 있어야 하며 이진 데이터를 포함해서는 안됩니다.
+- `application/octet-stream`는 다른 모든 경우를 위한 기본값입니다. 알려지지 않은 파일 타입은 이 타입을 사용해야 합니다. 브라우저들은 이런 파일들을 다룰 때, 사용자를 위험한 동작으로부터 보호하도록 개별적인 주의를 기울여야 합니다.
 
-<p>IANA는 MIME 미디어 타입의 공식적인 레지스트리로 <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">list공식적인 MIME 타입의 전체 목록</a>을 관리합니다. 다음 표에 웹에 대한 몇 가지 중요한 MIME 타입들이 나와 있습니다:</p>
+IANA는 MIME 미디어 타입의 공식적인 레지스트리로 [list공식적인 MIME 타입의 전체 목록](http://www.iana.org/assignments/media-types/media-types.xhtml)을 관리합니다. 다음 표에 웹에 대한 몇 가지 중요한 MIME 타입들이 나와 있습니다:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">확장자</th>
-   <th scope="col">문서 종류</th>
-   <th scope="col">MIME 타입</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>.aac</code></td>
-   <td>AAC 오디오 파일</td>
-   <td><code>audio/aac</code></td>
-  </tr>
-  <tr>
-   <td><code>.abw</code></td>
-   <td><a href="https://en.wikipedia.org/wiki/AbiWord">AbiWord</a> 문서</td>
-   <td><code>application/x-abiword</code></td>
-  </tr>
-  <tr>
-   <td><code>.arc</code></td>
-   <td>아카이브 문서 (인코딩된 다중 파일)</td>
-   <td><code>application/octet-stream</code></td>
-  </tr>
-  <tr>
-   <td><code>.avi</code></td>
-   <td>AVI: Audio Video Interleave</td>
-   <td><code>video/x-msvideo</code></td>
-  </tr>
-  <tr>
-   <td><code>.azw</code></td>
-   <td>아마존 킨들 전자책 포맷</td>
-   <td><code>application/vnd.amazon.ebook</code></td>
-  </tr>
-  <tr>
-   <td><code>.bin</code></td>
-   <td>모든 종류의 이진 데이터</td>
-   <td><code>application/octet-stream</code></td>
-  </tr>
-  <tr>
-   <td><code>.bz</code></td>
-   <td>BZip 아카이브</td>
-   <td><code>application/x-bzip</code></td>
-  </tr>
-  <tr>
-   <td><code>.bz2</code></td>
-   <td>BZip2 아카이브</td>
-   <td><code>application/x-bzip2</code></td>
-  </tr>
-  <tr>
-   <td><code>.csh</code></td>
-   <td>C-Shell 스크립트</td>
-   <td><code>application/x-csh</code></td>
-  </tr>
-  <tr>
-   <td><code>.css</code></td>
-   <td>Cascading Style Sheets (CSS)</td>
-   <td><code>text/css</code></td>
-  </tr>
-  <tr>
-   <td><code>.csv</code></td>
-   <td>Comma-separated values (CSV)</td>
-   <td><code>text/csv</code></td>
-  </tr>
-  <tr>
-   <td><code>.doc</code></td>
-   <td>Microsoft Word</td>
-   <td><code>application/msword</code></td>
-  </tr>
-  <tr>
-   <td><code>.epub</code></td>
-   <td>Electronic publication (EPUB)</td>
-   <td><code>application/epub+zip</code></td>
-  </tr>
-  <tr>
-   <td><code>.gif</code></td>
-   <td>Graphics Interchange Format (GIF)</td>
-   <td><code>image/gif</code></td>
-  </tr>
-  <tr>
-   <td><code>.htm<br>
-    .html</code></td>
-   <td>HyperText Markup Language (HTML)</td>
-   <td><code>text/html</code></td>
-  </tr>
-  <tr>
-   <td><code>.ico</code></td>
-   <td>Icon 포맷</td>
-   <td><code>image/x-icon</code></td>
-  </tr>
-  <tr>
-   <td><code>.ics</code></td>
-   <td>iCalendar 포맷</td>
-   <td><code>text/calendar</code></td>
-  </tr>
-  <tr>
-   <td><code>.jar</code></td>
-   <td>Java 아카이브 (JAR)</td>
-   <td><code>application/java-archive</code></td>
-  </tr>
-  <tr>
-   <td><code>.jpeg</code><br>
-    <code>.jpg</code></td>
-   <td>JPEG 이미지</td>
-   <td><code>image/jpeg</code></td>
-  </tr>
-  <tr>
-   <td><code>.js</code></td>
-   <td>JavaScript (ECMAScript)</td>
-   <td>
-      <code>text/javascript</code>
-      (Specifications:
-      <a href="https://html.spec.whatwg.org/multipage/#scriptingLanguages">HTML</a>
-      and
-      <a href="https://www.rfc-editor.org/rfc/rfc9239">RFC 9239</a>)
-  </td>
-  <tr>
-   <td><code>.json</code></td>
-   <td>JSON 포맷</td>
-   <td><code>application/json</code></td>
-  </tr>
-  <tr>
-   <td><code>.mid</code><br>
-    <code>.midi</code></td>
-   <td>Musical Instrument Digital Interface (MIDI)</td>
-   <td><code>audio/midi</code></td>
-  </tr>
-  <tr>
-   <td><code>.mpeg</code></td>
-   <td>MPEG 비디오</td>
-   <td><code>video/mpeg</code></td>
-  </tr>
-  <tr>
-   <td><code>.mpkg</code></td>
-   <td>Apple Installer Package</td>
-   <td><code>application/vnd.apple.installer+xml</code></td>
-  </tr>
-  <tr>
-   <td><code>.odp</code></td>
-   <td>OpenDocuemnt 프리젠테이션 문서</td>
-   <td><code>application/vnd.oasis.opendocument.presentation</code></td>
-  </tr>
-  <tr>
-   <td><code>.ods</code></td>
-   <td>OpenDocuemnt 스프레드시트 문서</td>
-   <td><code>application/vnd.oasis.opendocument.spreadsheet</code></td>
-  </tr>
-  <tr>
-   <td><code>.odt</code></td>
-   <td>OpenDocument 텍스트 문서</td>
-   <td><code>application/vnd.oasis.opendocument.text</code></td>
-  </tr>
-  <tr>
-   <td><code>.oga</code></td>
-   <td>OGG 오디오</td>
-   <td><code>audio/ogg</code></td>
-  </tr>
-  <tr>
-   <td><code>.ogv</code></td>
-   <td>OGG 비디오</td>
-   <td><code>video/ogg</code></td>
-  </tr>
-  <tr>
-   <td><code>.ogx</code></td>
-   <td>OGG</td>
-   <td><code>application/ogg</code></td>
-  </tr>
-  <tr>
-   <td><code>.pdf</code></td>
-   <td>Adobe <a href="https://acrobat.adobe.com/us/en/why-adobe/about-adobe-pdf.html">Portable Document Format</a> (PDF)</td>
-   <td><code>application/pdf</code></td>
-  </tr>
-  <tr>
-   <td><code>.ppt</code></td>
-   <td>Microsoft PowerPoint</td>
-   <td><code>application/vnd.ms-powerpoint</code></td>
-  </tr>
-  <tr>
-   <td><code>.rar</code></td>
-   <td>RAR 아카이브</td>
-   <td><code>application/x-rar-compressed</code></td>
-  </tr>
-  <tr>
-   <td><code>.rtf</code></td>
-   <td>Rich Text Format (RTF)</td>
-   <td><code>application/rtf</code></td>
-  </tr>
-  <tr>
-   <td><code>.sh</code></td>
-   <td>Bourne 쉘 스크립트</td>
-   <td><code>application/x-sh</code></td>
-  </tr>
-  <tr>
-   <td><code>.svg</code></td>
-   <td>Scalable Vector Graphics (SVG)</td>
-   <td><code>image/svg+xml</code></td>
-  </tr>
-  <tr>
-   <td><code>.swf</code></td>
-   <td><a href="https://en.wikipedia.org/wiki/SWF">Small web format</a> (SWF) 혹은 Adobe Flash document</td>
-   <td><code>application/x-shockwave-flash</code></td>
-  </tr>
-  <tr>
-   <td><code>.tar</code></td>
-   <td>Tape Archive (TAR)</td>
-   <td><code>application/x-tar</code></td>
-  </tr>
-  <tr>
-   <td><code>.tif<br>
-    .tiff</code></td>
-   <td>Tagged Image File Format (TIFF)</td>
-   <td><code>image/tiff</code></td>
-  </tr>
-  <tr>
-   <td><code>.ttf</code></td>
-   <td>TrueType Font</td>
-   <td><code>application/x-font-ttf</code></td>
-  </tr>
-  <tr>
-   <td><code>.vsd</code></td>
-   <td>Microsft Visio</td>
-   <td><code>application/vnd.visio</code></td>
-  </tr>
-  <tr>
-   <td><code>.wav</code></td>
-   <td>Waveform Audio Format</td>
-   <td><code>audio/x-wav</code></td>
-  </tr>
-  <tr>
-   <td><code>.weba</code></td>
-   <td>WEBM 오디오</td>
-   <td><code>audio/webm</code></td>
-  </tr>
-  <tr>
-   <td><code>.webm</code></td>
-   <td>WEBM 비디오</td>
-   <td><code>video/webm</code></td>
-  </tr>
-  <tr>
-   <td><code>.webp</code></td>
-   <td>WEBP 이미지</td>
-   <td><code>image/webp</code></td>
-  </tr>
-  <tr>
-   <td><code>.woff</code></td>
-   <td>Web Open Font Format (WOFF)</td>
-   <td><code>application/x-font-woff</code></td>
-  </tr>
-  <tr>
-   <td><code>.xhtml</code></td>
-   <td>XHTML</td>
-   <td><code>application/xhtml+xml</code></td>
-  </tr>
-  <tr>
-   <td><code>.xls</code></td>
-   <td>Microsoft Excel</td>
-   <td><code>application/vnd.ms-excel</code></td>
-  </tr>
-  <tr>
-   <td><code>.xml</code></td>
-   <td><code>XML</code></td>
-   <td><code>application/xml</code></td>
-  </tr>
-  <tr>
-   <td><code>.xul</code></td>
-   <td>XUL</td>
-   <td><code>application/vnd.mozilla.xul+xml</code></td>
-  </tr>
-  <tr>
-   <td><code>.zip</code></td>
-   <td>ZIP archive</td>
-   <td><code>application/zip</code></td>
-  </tr>
-  <tr>
-   <td><code>.3gp</code></td>
-   <td><a href="https://en.wikipedia.org/wiki/3GP_and_3G2">3GPP</a> 오디오/비디오 컨테이너</td>
-   <td><code>video/3gpp</code><br>
-    <code>audio/3gpp</code> if it doesn't contain video</td>
-  </tr>
-  <tr>
-   <td><code>.3g2</code></td>
-   <td><a href="https://en.wikipedia.org/wiki/3GP_and_3G2">3GPP2</a> 오디오/비디오 컨테이너</td>
-   <td><code>video/3gpp2</code><br>
-    <code>audio/3gpp2</code> if it doesn't contain video</td>
-  </tr>
-  <tr>
-   <td><code>.7z</code></td>
-   <td><a href="https://en.wikipedia.org/wiki/7-Zip">7-zip</a> 아카이브</td>
-   <td><code>application/x-7z-compressed</code></td>
-  </tr>
- </tbody>
-</table>
+| 확장자         | 문서 종류                                                                                              | MIME 타입                                                                                                                                                     |
+| -------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.aac`         | AAC 오디오 파일                                                                                        | `audio/aac`                                                                                                                                                   |
+| `.abw`         | [AbiWord](https://en.wikipedia.org/wiki/AbiWord) 문서                                                  | `application/x-abiword`                                                                                                                                       |
+| `.arc`         | 아카이브 문서 (인코딩된 다중 파일)                                                                     | `application/octet-stream`                                                                                                                                    |
+| `.avi`         | AVI: Audio Video Interleave                                                                            | `video/x-msvideo`                                                                                                                                             |
+| `.azw`         | 아마존 킨들 전자책 포맷                                                                                | `application/vnd.amazon.ebook`                                                                                                                                |
+| `.bin`         | 모든 종류의 이진 데이터                                                                                | `application/octet-stream`                                                                                                                                    |
+| `.bz`          | BZip 아카이브                                                                                          | `application/x-bzip`                                                                                                                                          |
+| `.bz2`         | BZip2 아카이브                                                                                         | `application/x-bzip2`                                                                                                                                         |
+| `.csh`         | C-Shell 스크립트                                                                                       | `application/x-csh`                                                                                                                                           |
+| `.css`         | Cascading Style Sheets (CSS)                                                                           | `text/css`                                                                                                                                                    |
+| `.csv`         | Comma-separated values (CSV)                                                                           | `text/csv`                                                                                                                                                    |
+| `.doc`         | Microsoft Word                                                                                         | `application/msword`                                                                                                                                          |
+| `.epub`        | Electronic publication (EPUB)                                                                          | `application/epub+zip`                                                                                                                                        |
+| `.gif`         | Graphics Interchange Format (GIF)                                                                      | `image/gif`                                                                                                                                                   |
+| `.htm .html`   | HyperText Markup Language (HTML)                                                                       | `text/html`                                                                                                                                                   |
+| `.ico`         | Icon 포맷                                                                                              | `image/x-icon`                                                                                                                                                |
+| `.ics`         | iCalendar 포맷                                                                                         | `text/calendar`                                                                                                                                               |
+| `.jar`         | Java 아카이브 (JAR)                                                                                    | `application/java-archive`                                                                                                                                    |
+| `.jpeg` `.jpg` | JPEG 이미지                                                                                            | `image/jpeg`                                                                                                                                                  |
+| `.js`          | JavaScript (ECMAScript)                                                                                | `text/javascript` (Specifications: [HTML](https://html.spec.whatwg.org/multipage/#scriptingLanguages) and [RFC 9239](https://www.rfc-editor.org/rfc/rfc9239)) |
+| `.json`        | JSON 포맷                                                                                              | `application/json`                                                                                                                                            |
+| `.mid` `.midi` | Musical Instrument Digital Interface (MIDI)                                                            | `audio/midi`                                                                                                                                                  |
+| `.mpeg`        | MPEG 비디오                                                                                            | `video/mpeg`                                                                                                                                                  |
+| `.mpkg`        | Apple Installer Package                                                                                | `application/vnd.apple.installer+xml`                                                                                                                         |
+| `.odp`         | OpenDocuemnt 프리젠테이션 문서                                                                         | `application/vnd.oasis.opendocument.presentation`                                                                                                             |
+| `.ods`         | OpenDocuemnt 스프레드시트 문서                                                                         | `application/vnd.oasis.opendocument.spreadsheet`                                                                                                              |
+| `.odt`         | OpenDocument 텍스트 문서                                                                               | `application/vnd.oasis.opendocument.text`                                                                                                                     |
+| `.oga`         | OGG 오디오                                                                                             | `audio/ogg`                                                                                                                                                   |
+| `.ogv`         | OGG 비디오                                                                                             | `video/ogg`                                                                                                                                                   |
+| `.ogx`         | OGG                                                                                                    | `application/ogg`                                                                                                                                             |
+| `.pdf`         | Adobe [Portable Document Format](https://acrobat.adobe.com/us/en/why-adobe/about-adobe-pdf.html) (PDF) | `application/pdf`                                                                                                                                             |
+| `.ppt`         | Microsoft PowerPoint                                                                                   | `application/vnd.ms-powerpoint`                                                                                                                               |
+| `.rar`         | RAR 아카이브                                                                                           | `application/x-rar-compressed`                                                                                                                                |
+| `.rtf`         | Rich Text Format (RTF)                                                                                 | `application/rtf`                                                                                                                                             |
+| `.sh`          | Bourne 쉘 스크립트                                                                                     | `application/x-sh`                                                                                                                                            |
+| `.svg`         | Scalable Vector Graphics (SVG)                                                                         | `image/svg+xml`                                                                                                                                               |
+| `.swf`         | [Small web format](https://en.wikipedia.org/wiki/SWF) (SWF) 혹은 Adobe Flash document                  | `application/x-shockwave-flash`                                                                                                                               |
+| `.tar`         | Tape Archive (TAR)                                                                                     | `application/x-tar`                                                                                                                                           |
+| `.tif .tiff`   | Tagged Image File Format (TIFF)                                                                        | `image/tiff`                                                                                                                                                  |
+| `.ttf`         | TrueType Font                                                                                          | `application/x-font-ttf`                                                                                                                                      |
+| `.vsd`         | Microsft Visio                                                                                         | `application/vnd.visio`                                                                                                                                       |
+| `.wav`         | Waveform Audio Format                                                                                  | `audio/x-wav`                                                                                                                                                 |
+| `.weba`        | WEBM 오디오                                                                                            | `audio/webm`                                                                                                                                                  |
+| `.webm`        | WEBM 비디오                                                                                            | `video/webm`                                                                                                                                                  |
+| `.webp`        | WEBP 이미지                                                                                            | `image/webp`                                                                                                                                                  |
+| `.woff`        | Web Open Font Format (WOFF)                                                                            | `application/x-font-woff`                                                                                                                                     |
+| `.xhtml`       | XHTML                                                                                                  | `application/xhtml+xml`                                                                                                                                       |
+| `.xls`         | Microsoft Excel                                                                                        | `application/vnd.ms-excel`                                                                                                                                    |
+| `.xml`         | `XML`                                                                                                  | `application/xml`                                                                                                                                             |
+| `.xul`         | XUL                                                                                                    | `application/vnd.mozilla.xul+xml`                                                                                                                             |
+| `.zip`         | ZIP archive                                                                                            | `application/zip`                                                                                                                                             |
+| `.3gp`         | [3GPP](https://en.wikipedia.org/wiki/3GP_and_3G2) 오디오/비디오 컨테이너                               | `video/3gpp` `audio/3gpp` if it doesn't contain video                                                                                                         |
+| `.3g2`         | [3GPP2](https://en.wikipedia.org/wiki/3GP_and_3G2) 오디오/비디오 컨테이너                              | `video/3gpp2` `audio/3gpp2` if it doesn't contain video                                                                                                       |
+| `.7z`          | [7-zip](https://en.wikipedia.org/wiki/7-Zip) 아카이브                                                  | `application/x-7z-compressed`                                                                                                                                 |
