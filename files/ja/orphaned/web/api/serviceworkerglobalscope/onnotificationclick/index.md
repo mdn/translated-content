@@ -10,7 +10,7 @@ original_slug: Web/API/ServiceWorkerGlobalScope/onnotificationclick
 
 メインスレッド、または {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して Service Worker ではない Worker で生成された通知は、`Notification` オブジェクト自体で {{Event("click")}} イベントを代わりに受け取ります。
 
-> **Note:** {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して {{domxref("ServiceWorkerGlobalScope")}} 内で通知を生成しようとすると、エラーがスローされます。
+> **メモ:** {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して {{domxref("ServiceWorkerGlobalScope")}} 内で通知を生成しようとすると、エラーがスローされます。
 
 ## 構文
 

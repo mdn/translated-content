@@ -7,7 +7,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned
 
 開発者が [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) オブジェクトを再び作成できるように、標準化作業が進行中ですが、スレッドをまたがってこれらを使用するために変更が必要です (例えば、 `postMessage()` で `SharedArrayBuffer` オブジェクトを使用すると、既定で例外が発生します）。これらの変更により、サイト間の分離がさらに進み、共有メモリーで作成できる高解像度タイマーを使った攻撃の影響を軽減するのに役立ちます。
 
-> **Note:** Firefox 79 以降では、この記事で説明している機能は既定で有効になります。
+> **メモ:** Firefox 79 以降では、この記事で説明している機能は既定で有効になります。
 >
 > Chrome はこれらの制約をデスクトップ版の Chrome 92 と Android 版の Chrome 88 から始めました。
 
