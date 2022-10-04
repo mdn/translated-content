@@ -56,8 +56,14 @@ Una introducción a AJAX.
 - [Kit de Integración Flash/AJAX](http://www.osflash.org/doku.php?id=flashjs)
 - [Una Simple Librería de Interfaz XMLHTTP](http://xkr.us/code/javascript/XHConn/)
 
-<!---->
+#### Temas relacionados
 
-- #### Temas relacionados
-
-  - : [HTML](es/HTML) · [XHTML](es/XHTML) · [CSS](es/CSS) · [DOM](es/DOM) · [JavaScript](es/JavaScript) · [XML](es/XML) · [XMLHttpRequest](es/XMLHttpRequest) · [XSLT](es/XSLT) · [DHTML](es/DHTML)
+- [HTML](es/HTML)
+- [XHTML](es/XHTML)
+- [CSS](es/CSS)
+- [DOM](es/DOM)
+- [JavaScript](es/JavaScript)
+- [XML](es/XML)
+- [XMLHttpRequest](es/XMLHttpRequest)
+- [XSLT](es/XSLT)
+- [DHTML](es/DHTML)

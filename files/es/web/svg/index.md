@@ -27,9 +27,9 @@ SVG es un estándar Web abierto basado en texto. Está expresamente diseñado pa
 - [Aplicando efectos SVG a contenido HTML](/es/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
   - : SVG trabaja con with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}. Usa SVG para [mejorar una página HTML normal o aplicación web](/es/docs/SVG_In_HTML_Introduction).
 
-- ## Comunidad
+## Comunidad
 
-  - : Ver foros de Mozilla... {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}
+- Ver foros de Mozilla... {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}
 
 ## Herramientas
 
