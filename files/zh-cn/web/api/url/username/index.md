@@ -33,7 +33,7 @@ var user = url.username; // 返回：“anonymous”
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.username")}}
+{{Compat}}
 
 ## 参考
 
