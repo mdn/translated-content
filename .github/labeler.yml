@@ -8,6 +8,7 @@ l10n-de:
 
 l10n-es:
   - files/es/**/*
+  - docs/es/**/*
 
 l10n-fr:
   - files/fr/**/*
