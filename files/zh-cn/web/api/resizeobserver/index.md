@@ -23,7 +23,7 @@ slug: Web/API/ResizeObserver
 ## 方法
 
 - {{domxref('ResizeObserver.disconnect()')}}
-  - : 取消对特定观察者上所有对 {{domxref('Element')}} 目标的监听。
+  - : 取消特定观察者目标上所有对 {{domxref('Element')}} 的监听。
 - {{domxref('ResizeObserver.observe()')}}
   - : 开始对指定 {{domxref('Element')}} 的监听。
 - {{domxref('ResizeObserver.unobserve()')}}
