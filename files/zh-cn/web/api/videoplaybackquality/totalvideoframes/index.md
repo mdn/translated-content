@@ -40,7 +40,7 @@ if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVid
 
 ## Browser compatibility
 
-{{Compat("api.VideoPlaybackQuality.totalVideoFrames")}}
+{{Compat}}
 
 ## See also
 
