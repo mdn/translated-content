@@ -692,10 +692,6 @@
       "pluwen"
     ]
   },
-  "Glossary/Empty_element": {
-    "modified": "2020-05-27T05:46:24.967Z",
-    "contributors": ["changjingli", "Ende93"]
-  },
   "Glossary/Encapsulation": {
     "modified": "2019-04-01T07:13:58.853Z",
     "contributors": ["fuckupc", "zilong-thu"]
@@ -1464,6 +1460,10 @@
   "Glossary/Viewport": {
     "modified": "2019-04-21T20:36:22.185Z",
     "contributors": ["bangbangde", "zeromike"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2020-05-27T05:46:24.967Z",
+    "contributors": ["changjingli", "Ende93"]
   },
   "Glossary/WHATWG": {
     "modified": "2020-05-10T09:31:46.817Z",
