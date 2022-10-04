@@ -18,7 +18,9 @@ Causa que una cadena se muestre como subíndice, como si estuviese dentro de una
 
 ## Sintaxis
 
-    cadena.sub()
+```
+cadena.sub()
+```
 
 ## Descripción
 

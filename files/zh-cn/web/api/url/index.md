@@ -35,7 +35,7 @@ slug: Web/API/URL
 - {{domxref("URL.port", "port")}}
   - : 包含 URL 端口号的 {{domxref("USVString")}}。
 - {{domxref("URL.protocol", "protocol")}}
-  - : 包含 URL 协议名的 {{domxref("USVString")}}，末尾带 `':'。`
+  - : 包含 URL 协议名的 {{domxref("USVString")}}，末尾带 `':'`。
 - {{domxref("URL.search", "search")}}
   - : 一个{{domxref("USVString")}} ，指示 URL 的参数字符串；如果提供了任何参数，则此字符串包括所有参数，并以开头的“？”开头 字符。
 - {{domxref("URL.searchParams", "searchParams")}} {{readonlyInline}}

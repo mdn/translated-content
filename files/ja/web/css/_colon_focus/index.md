@@ -2,6 +2,7 @@
 title: ':focus'
 slug: Web/CSS/:focus
 ---
+
 {{CSSRef}}
 
 **`:focus`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、フォーカスを持っている (フォームの input のような) 要素を表します。普通はユーザーが要素をクリックやタップをしたり、キーボードの <kbd>Tab</kbd> キーで選択したりしたときです。

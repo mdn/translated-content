@@ -2,6 +2,7 @@
 title: <menu>
 slug: Web/HTML/Element/menu
 ---
+
 {{HTMLRef}}{{SeeCompatTable}}
 
 **HTML の `<menu>` 要素**は、ユーザーが実行またはアクティブ化できるコマンドのグループを表します。これは画面の上部に現れるリストメニューと、ボタンを押したときにその下部付近に現れるような[コンテキストメニュー](/ja/docs/Web/HTML/Element/menu#context_menu)の両方を含みます。

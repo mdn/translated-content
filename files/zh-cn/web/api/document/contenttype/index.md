@@ -15,7 +15,7 @@ slug: Web/API/Document/contentType
 contentType = document.contentType;
 ```
 
-`该属性为只读。`
+该属性为只读。
 
 ### 备注
 

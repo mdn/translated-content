@@ -2,6 +2,7 @@
 title: column-fill
 slug: Web/CSS/column-fill
 ---
+
 {{CSSRef}}
 
 **`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素の内容物が複数の段に分割されるとき、どのようにバランスを取るのかを制御します。

@@ -17,7 +17,9 @@ El método **`JSON.stringify()`** convierte un objeto o valor de JavaScript en u
 
 ## Sintaxis
 
-    JSON.stringify(value[, replacer[, space]])
+```
+JSON.stringify(value[, replacer[, space]])
+```
 
 ### Parámetros
 

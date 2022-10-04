@@ -18,7 +18,9 @@ El método **`JSON.parse()`** analiza una cadena de texto como JSON, transforman
 
 ## Sintaxis
 
-    JSON.parse(text[, reviver])
+```
+JSON.parse(text[, reviver])
+```
 
 ### Parámetros
 

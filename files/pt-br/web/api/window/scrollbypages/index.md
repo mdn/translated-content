@@ -17,7 +17,7 @@ window.scrollByPages(pages)
 
 ### Parâmetros
 
-- **`pages` **é o número de páginas a serem roladas.
+- **`pages`** é o número de páginas a serem roladas.
 - **`pages`** pode ser um número inteiro positivo ou negativo.
 
 ### Exemplo

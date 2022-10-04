@@ -84,7 +84,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 
 - 请求类型（GET）。
 - 目标资源的 URL（`/en-US/search`）。
-- URL 参数（`q=client%2Bserver%2Boverview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev）。`
+- URL 参数（`q=client%2Bserver%2Boverview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev`）。
 - 目标网站（developer.mozilla.org）。
 - 第一行的末尾也包含了一个简短的包含了标识协议版本的字符串（`HTTP/1.1`）。
 

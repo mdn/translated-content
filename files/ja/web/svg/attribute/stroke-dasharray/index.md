@@ -2,6 +2,7 @@
 title: stroke-dasharray
 slug: Web/SVG/Attribute/stroke-dasharray
 ---
+
 {{SVGRef}}
 
 **`stroke-dasharray`** 属性は、 輪郭を描くために使用される、破線や間隔のある線のパターンを定義するプレゼンテーション属性です。

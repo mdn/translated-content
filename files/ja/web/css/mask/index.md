@@ -2,6 +2,7 @@
 title: mask
 slug: Web/CSS/mask
 ---
+
 {{CSSRef}}
 
 **`mask`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、指定された位置での画像のマスクまたは切り取りによって要素を (部分的または全体的に) 隠します。

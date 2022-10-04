@@ -18,7 +18,9 @@ El método **`anchor()`** crea un ancla HTML, {{HTMLElement("a")}}, que se usa c
 
 ## Sintaxis
 
-    cadena.anchor(nombreAtributo)
+```
+cadena.anchor(nombreAtributo)
+```
 
 ### Parámetros
 

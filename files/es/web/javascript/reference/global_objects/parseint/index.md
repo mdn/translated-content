@@ -12,7 +12,9 @@ Convierte (parsea) un argumento de tipo cadena y devuelve un entero de la base e
 
 ## Sintaxis
 
-    parseInt(string, base);
+```
+parseInt(string, base);
+```
 
 ### Parámetros
 

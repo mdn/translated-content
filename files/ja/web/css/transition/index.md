@@ -2,6 +2,7 @@
 title: transition
 slug: Web/CSS/transition
 ---
+
 {{CSSRef}}
 
 **`transition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("transition-property")}}、 {{cssxref("transition-duration")}}、 {{cssxref("transition-timing-function")}}、 {{cssxref("transition-delay")}} の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。

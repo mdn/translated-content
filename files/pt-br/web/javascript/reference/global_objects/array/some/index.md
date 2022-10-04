@@ -27,7 +27,7 @@ arr.some(callback[, thisArg])
       - : O array onde o método `some()` foi chamado.
 
 - `thisArg`
-  - : Opcional. Valor para usar como \_`this` \_durante a execução do `callback`.
+  - : Opcional. Valor para usar como _`this`_ durante a execução do `callback`.
 
 ### Valor de retorno
 

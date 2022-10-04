@@ -2,6 +2,7 @@
 title: filter
 slug: Web/CSS/filter
 ---
+
 {{CSSRef}}
 
 **`filter`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ぼかしや色変化などのグラフィック効果を要素に適用します。フィルターは画像、背景、境界の描画を調整するためによく使われます。

@@ -2,6 +2,7 @@
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`scroll-snap-destination`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールコンテナーの視覚{{Glossary("viewport", "ビューポート")}}内の要素のスナップ点が配置される X および Y 座標の位置を定義します。

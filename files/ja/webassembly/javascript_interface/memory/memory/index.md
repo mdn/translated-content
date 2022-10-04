@@ -3,6 +3,7 @@ title: WebAssembly.Memory() コンストラクター
 slug: WebAssembly/JavaScript_interface/Memory/Memory
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
 ---
+
 {{JSRef}}
 
 **`WebAssembly.Memory()`** コンストラクターは新しい `Memory` オブジェクトを生成します。これは {{jsxref("WebAssembly/Memory/buffer","buffer")}} プロパティがサイズ変更可能な [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) または `SharedArrayBuffer` であり、 WebAssembly の `Instance` からアクセスする生のバイト列のメモリーであるものです。

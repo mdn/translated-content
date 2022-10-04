@@ -2,6 +2,7 @@
 title: scroll-snap-coordinate
 slug: Web/CSS/scroll-snap-coordinate
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`scroll-snap-coordinate`** は [CSS](/ja/docs/Web/CSS)のプロパティで、このプロパティは、最も近い祖先のスクロールコンテナーの {{cssxref("scroll-snap-destination")}} に配置される要素内の X 座標と Y 座標の位置をそれぞれの軸で定義します。

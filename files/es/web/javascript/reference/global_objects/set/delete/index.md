@@ -8,9 +8,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/delete
 
 El método **`delete()`** remueve el elemento especificado del objeto `Set`.
 
-## Syntaxis
+## Sintaxis
 
-    mySet.delete(value);
+```
+mySet.delete(value);
+```
 
 ### Parametros
 

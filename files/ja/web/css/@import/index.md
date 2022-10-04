@@ -2,6 +2,7 @@
 title: '@import'
 slug: Web/CSS/@import
 ---
+
 {{CSSRef}}
 
 **`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、他のスタイルシートから {{CSSxRef("@charset")}} を除いたスタイルルールをインポートするために使用します。

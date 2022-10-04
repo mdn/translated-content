@@ -18,7 +18,7 @@ Pode ter um número ilimitado de cursores ao mesmo tempo. Você sempre consegue 
 - {{domxref("IDBCursor.advance()")}}
   - : Define o número de vezes um cursor deve mover a sua posição para a frente.
 - {{domxref("IDBCursor.continue()")}}
-  - : Avança o cursor para a próxima posição ao longo de sua direção, para o item cuja chave corresponde ao parâmetro ` chave``  `opcional.
+  - : Avança o cursor para a próxima posição ao longo de sua direção, para o item cuja chave corresponde ao parâmetro `chave` opcional.
 - {{domxref("IDBCursor.delete()")}}
   - : Retorna um {{domxref("IDBRequest")}} objeto, e, em um segmento separado, exclui o registro na posição do cursor, sem alterar a posição do cursor. Isso pode ser usado para excluir registros específicos.
 - {{domxref("IDBCursor.update()")}}
