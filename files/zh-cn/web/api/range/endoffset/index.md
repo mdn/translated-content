@@ -31,7 +31,7 @@ endRangeOffset = range.endOffset;
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.endOffset")}}
+{{Compat}}
 
 ## 参见
 

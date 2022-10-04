@@ -58,7 +58,7 @@ function getData(pageId) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.text")}}
+{{Compat}}
 
 ## See also
 

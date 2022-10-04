@@ -118,7 +118,7 @@ For a more thorough example showing how the connection and channel are establish
 
 ## Browser compatibility
 
-{{Compat("api.RTCPeerConnection.createDataChannel")}}
+{{Compat}}
 
 ## See also
 

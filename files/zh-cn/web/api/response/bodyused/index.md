@@ -52,7 +52,7 @@ fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').the
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.bodyUsed")}}
+{{Compat}}
 
 ## See also
 
