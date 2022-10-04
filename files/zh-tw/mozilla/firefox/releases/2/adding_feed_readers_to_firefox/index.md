@@ -24,7 +24,7 @@ slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 - `browser.contentHandlers.types.5.type`: `application/vnd.mozilla.maybe.feed`
 - `browser.contentHandlers.types.5.uri`: `http://www.theeasyreaderurl.com?feed=%s`
 
-你可以用 \<tt>about:config\</tt> 手動加入這些設定，如果擴充套件要新增閱讀工具則亦可寫程式修改之。
+你可以用 `about:config` 手動加入這些設定，如果擴充套件要新增閱讀工具則亦可寫程式修改之。
 
 ### 從 Web 應用程式新增閱讀工具
 

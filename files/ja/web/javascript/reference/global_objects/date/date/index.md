@@ -18,7 +18,7 @@ new Date(dateString)
 new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]]]]])
 ```
 
-> **Note:** 新しい `Date` オブジェクトをインスタンス化する唯一の正しい方法は、 {{jsxref("new")}} 演算子を使用することです。単純に直接 `Date` オブジェクトを `now = Date()` のように呼び出すと、返値は `Date` オブジェクトではなく文字列になります。
+> **メモ:** 新しい `Date` オブジェクトをインスタンス化する唯一の正しい方法は、 {{jsxref("new")}} 演算子を使用することです。単純に直接 `Date` オブジェクトを `now = Date()` のように呼び出すと、返値は `Date` オブジェクトではなく文字列になります。
 
 ### 引数
 
@@ -39,7 +39,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
   - : 日付を表す文字列値で、 {{jsxref("Date.parse()")}} メソッドによって認識される形式で指定されます。 (これらの形式は [IETF 準拠の RFC 2822 タイムスタンプ](http://tools.ietf.org/html/rfc2822#page-14)であり、 [ISO8601 のバージョン](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse)の文字列でもあります。)
 
-    > **Note:** `Date` コンストラクター (および同じように動作する `Date.parse()`) を使用した日付文字列の解析は、ブラウザーによって違いや矛盾があるため、_使用を避けることを強くお勧めします。_。
+    > **メモ:** `Date` コンストラクター (および同じように動作する `Date.parse()`) を使用した日付文字列の解析は、ブラウザーによって違いや矛盾があるため、_使用を避けることを強くお勧めします。_。
     >
     > - [RFC 2822](https://tools.ietf.org/html/rfc2822) 書式の文字列の対応は慣習的に行われているだけです。
     > - ISO 8601 形式の対応は、日付のみの文字列 (例えば `1970-01-01`) が地方時ではなく UTC として扱われる点が異なります。
@@ -73,7 +73,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 以下の例で、JavaScript の Date を生成するいくつかの方法を示します。
 
-> **Note:** 日付文字列を `Date` コンストラクター (または同等の `Date.parse`) で解釈する方法は、ブラウザーごとに動作が異なり一貫性がないため、避けることを強くおすすめします。
+> **メモ:** 日付文字列を `Date` コンストラクター (または同等の `Date.parse`) で解釈する方法は、ブラウザーごとに動作が異なり一貫性がないため、避けることを強くおすすめします。
 
 ```js
 let today = new Date()

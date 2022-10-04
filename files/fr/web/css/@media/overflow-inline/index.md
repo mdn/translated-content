@@ -56,10 +56,8 @@ La caractéristique `overflow-inline` est définit avec un mot-clé parmi ceux d
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Media Queries', '#mf-overflow-inline', 'overflow-inline')}} | {{Spec2('CSS4 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.overflow-inline")}}
+{{Compat}}

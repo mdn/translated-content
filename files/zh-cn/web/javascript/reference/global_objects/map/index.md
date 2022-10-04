@@ -73,7 +73,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
     <tr>
       <th scope="row">Size</th>
       <td><code>Map</code> 的键值对个数可以轻易地通过 {{jsxref("Map.prototype.size", "size")}} 属性获取。</td>
-      <td><code>Object</code> 的键值对个数只能手动计算.</td>
+      <td><code>Object</code> 的键值对个数只能手动计算。</td>
     </tr>
     <tr>
     <th scope="row">迭代</th>

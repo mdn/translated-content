@@ -183,7 +183,7 @@ Promise.reject()
   .then( respuesta => console.log( 'Resuelta con ' + respuesta ) ); // Resuelta con 42
 ```
 
-En la práctica, suele ser preferible capturar promesas rechazadas en lugar de utilizar la sintaxis de dos casos de `then,` como demostramos abajo.
+En la práctica, suele ser preferible capturar promesas rechazadas en lugar de utilizar la sintaxis de dos casos de `then`, como demostramos abajo.
 
 ```js
 Promise.resolve()

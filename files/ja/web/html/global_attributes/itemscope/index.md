@@ -11,7 +11,7 @@ slug: Web/HTML/Global_attributes/itemscope
 
 あらゆる HTML 要素に `itemscope` 属性を設定することができます。 `itemscope` 要素が `itemtype` を持たない場合は、関連付けられた `itemref` を持つ必要があります。
 
-> **Note:** `itemtype` 属性についての詳細は、 <https://schema.org/Thing> をご覧ください
+> **メモ:** `itemtype` 属性についての詳細は、 <https://schema.org/Thing> をご覧ください
 
 ### itemscope の id 属性
 
@@ -186,7 +186,7 @@ slug: Web/HTML/Global_attributes/itemscope
   </tbody>
 </table>
 
-> **Note:** 手軽に HTML からマイクロデータを抽出するには、 Google の[リッチリザルトテストツール](https://search.google.com/test/rich-results)が便利です。上の HTML で試してみてください。
+> **メモ:** 手軽に HTML からマイクロデータを抽出するには、 Google の[リッチリザルトテストツール](https://search.google.com/test/rich-results)が便利です。上の HTML で試してみてください。
 </div>
 
 #### HTML

@@ -53,7 +53,7 @@ YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
 
 ### 在网页上使用 JavaScript
 
-Web APIs 已经有对 base64 进行编码解码的方法: [Base64 encoding and decoding](/zh-CN/docs/Web/JavaScript/Base64_encoding_and_decoding).
+Web APIs 已经有对 base64 进行编码解码的方法：[Base64 encoding and decoding](/zh-CN/docs/Web/JavaScript/Base64_encoding_and_decoding).
 
 ## 常见问题
 

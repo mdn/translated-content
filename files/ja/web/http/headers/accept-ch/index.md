@@ -24,7 +24,7 @@ slug: Web/HTTP/Headers/Accept-CH
   </tbody>
 </table>
 
-> **Note:** クライアントヒントには、安全なオリジン (TLS 経由) でのみアクセスできます。 Accept-CH ヘッダーと Accept-CH-Lifetime ヘッダーは、クライアントヒントが確実に送信されるように、すべての安全なリクエストに対して保持する必要があります。
+> **メモ:** クライアントヒントには、安全なオリジン (TLS 経由) でのみアクセスできます。 Accept-CH ヘッダーと Accept-CH-Lifetime ヘッダーは、クライアントヒントが確実に送信されるように、すべての安全なリクエストに対して保持する必要があります。
 
 ## 構文
 
@@ -41,7 +41,7 @@ Accept-CH-Lifetime: 86400
 Vary: DPR, Viewport-Width, Width
 ```
 
-> **Note:** 受け入れられたクライアントのヒントに基づいて、[レスポンスを変更](/ja/docs/Glossary/Client_hints#Varying_Client_Hints)することを忘れないでください。
+> **メモ:** 受け入れられたクライアントのヒントに基づいて、[レスポンスを変更](/ja/docs/Glossary/Client_hints#Varying_Client_Hints)することを忘れないでください。
 
 ## ブラウザーの互換性
 

@@ -29,7 +29,7 @@ var handle = window.requestIdleCallback(callback[, options])
 
   - : 包括可选的配置参数。具有如下属性：
 
-    - `timeout`： 如果指定了 timeout，并且有一个正值，而回调在 timeout 毫秒过后还没有被调用，那么回调任务将放入事件循环中排队，即使这样做有可能对性能产生负面影响。
+    - `timeout`：如果指定了 timeout，并且有一个正值，而回调在 timeout 毫秒过后还没有被调用，那么回调任务将放入事件循环中排队，即使这样做有可能对性能产生负面影响。
 
 ## Example
 

@@ -2,6 +2,7 @@
 title: Permissions API の使用
 slug: Web/API/Permissions_API/Using_the_Permissions_API
 ---
+
 {{DefaultAPISidebar("Permissions API")}}{{SeeCompatTable}}
 
 この記事では、W3C の Permissions API を使用するための基本的なガイドを提供します。 これは、現在のコンテキストに起因する API のパーミッションの状態を照会するためのプログラムによる方法を提供します。
@@ -98,7 +99,7 @@ function revokePermission() {
 }
 ```
 
-> **Note:** Firefox 51 以降、[Web Applications Security Working Group](https://www.w3.org/2011/webappsec/) で設計が問題になっているため、`revoke()` 関数はデフォルトで無効になっています。 設定 `dom.permissions.revoke.enable` を `true` に設定することで再度有効にすることができます。
+> **メモ:** Firefox 51 以降、[Web Applications Security Working Group](https://www.w3.org/2011/webappsec/) で設計が問題になっているため、`revoke()` 関数はデフォルトで無効になっています。 設定 `dom.permissions.revoke.enable` を `true` に設定することで再度有効にすることができます。
 
 ### パーミッションの状態の変更への対応
 

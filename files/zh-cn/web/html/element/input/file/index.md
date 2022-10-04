@@ -54,7 +54,7 @@ slug: Web/HTML/Element/Input/file
 
 ## 值
 
-文件 input 的 {{htmlattrxref("value", "input")}} 属性包括了一个 {{domxref("DOMString")}}，表示已选择文件的路径。如果用户选择了多个文件，则 `value` 表示他们选择的文件列表中的第一个文件。 可以使用 input 的 `HTMLInputElement.files` 属性标识其他文件。
+文件 input 的 {{htmlattrxref("value", "input")}} 属性包括了一个 {{domxref("DOMString")}}，表示已选择文件的路径。如果用户选择了多个文件，则 `value` 表示他们选择的文件列表中的第一个文件。可以使用 input 的 `HTMLInputElement.files` 属性标识其他文件。
 
 > **备注：**
 >
@@ -118,11 +118,11 @@ slug: Web/HTML/Element/Input/file
 
 - 一个以英文句号（"."）开头的合法的不区分大小写的文件名扩展名。例如： `.jpg`，`.pdf` 或 `.doc`。
 - 一个不带扩展名的 MIME 类型字符串。
-- 字符串 `audio/*`， 表示 “任何音频文件”。
-- 字符串 `video/*`，表示 “任何视频文件”。
-- 字符串 `image/*`，表示 “任何图片文件”。
+- 字符串 `audio/*`，表示“任何音频文件”。
+- 字符串 `video/*`，表示“任何视频文件”。
+- 字符串 `image/*`，表示“任何图片文件”。
 
-`accept` 属性的值是一个包含一个或多个（用逗号分隔）这种唯一文件类型说明符的字符串。 例如，一个文件选择器需要能被表示成一张图片的内容，包括标准的图片格式和 PDF 文件，大概是这样的：
+`accept` 属性的值是一个包含一个或多个（用逗号分隔）这种唯一文件类型说明符的字符串。例如，一个文件选择器需要能被表示成一张图片的内容，包括标准的图片格式和 PDF 文件，大概是这样的：
 
 ```html
 <input type="file" accept="image/*,.pdf">
@@ -158,7 +158,7 @@ div {
 
 无论用户的设备或操作系统是什么，文件输入都提供一个按钮，打开一个允许用户选择文件的文件选择对话框。
 
-包含上述的 {{htmlattrxref("multiple", "input/file")}} 属性，指定可以一次选择多个文件。 用户可以用他们选择的平台允许的任何方式从文件选择器中选择多个文件（如，按住 <kbd>Shift</kbd> or <kbd>Control</kbd>，然后单击）。如果您只想让用户为每个 `<input>` 选择一个文件，那么省略 `multiple` 属性。
+包含上述的 {{htmlattrxref("multiple", "input/file")}} 属性，指定可以一次选择多个文件。用户可以用他们选择的平台允许的任何方式从文件选择器中选择多个文件（如，按住 <kbd>Shift</kbd> or <kbd>Control</kbd>，然后单击）。如果您只想让用户为每个 `<input>` 选择一个文件，那么省略 `multiple` 属性。
 
 ### 获取已选择文件的信息
 
@@ -177,7 +177,7 @@ div {
 - `type`
   - : 文件的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。
 - `webkitRelativePath` {{non-standard_inline}}
-  - : 一个字符串，指定了相对于在目录选择器中选择的基本目录的文件路径（即，一个设置了 {{htmlattrxref("webkitdirectory", "input/file")}} 属性的 `file` 选择器）。 _这是非标准的，应该谨慎使用。_
+  - : 一个字符串，指定了相对于在目录选择器中选择的基本目录的文件路径（即，一个设置了 {{htmlattrxref("webkitdirectory", "input/file")}} 属性的 `file` 选择器）。_这是非标准的，应该谨慎使用。_
 
 > **备注：** 你可以在所有现代浏览器中读写 `HTMLInputElement.files` 的值；最近这被添加到 Firefox 57 中（见 {{bug(1384030)}}）。
 

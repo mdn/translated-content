@@ -3,6 +3,7 @@ title: self.crypto
 slug: Web/API/crypto_property
 original_slug: Web/API/Window/crypto
 ---
+
 {{APIRef}}
 
 グローバルの **`crypto`** プロパティは読み取り専用で、グローバルオブジェクトに関連付けられた {{domxref("Crypto")}} オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。

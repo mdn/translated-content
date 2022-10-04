@@ -2,6 +2,7 @@
 title: 'Django チュートリアル Part 3: モデルの使用'
 slug: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 この記事では、LocalLibrary Web サイトのモデルを定義する方法を説明します。モデルとは何か、その宣言方法、および主要なフィールドタイプについて説明します。また、モデルデータにアクセスするための主な方法のいくつかについても簡単に説明します。
@@ -36,7 +37,7 @@ We've created models for the book (the generic details of the book), book instan
 
 The diagram also shows the relationships between the models, including their _multiplicities_. The multiplicities are the numbers on the diagram showing the numbers (maximum and minimum) of each model that may be present in the relationship. For example, the connecting line between the boxes shows that Book and a Genre are related. The numbers close to the Genre model show that a book must have one or more Genres (as many as you like), while the numbers on the other end of the line next to the Book model show that a Genre can have zero or many associated books.
 
-> **Note:** The next section provides a basic primer explaining how models are defined and used. As you read it, consider how we will construct each of the models in the diagram above.
+> **メモ:** The next section provides a basic primer explaining how models are defined and used. As you read it, consider how we will construct each of the models in the diagram above.
 
 ## Model primer
 
@@ -169,7 +170,7 @@ def get_absolute_url(self):
     return reverse('model-detail-view', args=[str(self.id)])
 ```
 
-> **Note:** Assuming you will use URLs like `/myapplication/mymodelname/2` to display individual records for your model (where "2" is the `id` for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The `reverse()` function above is able to "reverse" your url mapper (in the above case named _'model-detail-view'_) in order to create a URL of the right format.
+> **メモ:** Assuming you will use URLs like `/myapplication/mymodelname/2` to display individual records for your model (where "2" is the `id` for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The `reverse()` function above is able to "reverse" your url mapper (in the above case named _'model-detail-view'_) in order to create a URL of the right format.
 >
 > Of course to make this work you still have to write the URL mapping, view, and template!
 
@@ -191,7 +192,7 @@ record = MyModelName(my_field_name="Instance #1")
 record.save()
 ```
 
-> **Note:** If you haven't declared any field as a `primary_key`, the new record will be given one automatically, with the field name `id`. You could query this field after saving the above record, and it would have a value of 1.
+> **メモ:** If you haven't declared any field as a `primary_key`, the new record will be given one automatically, with the field name `id`. You could query this field after saving the above record, and it would have a value of 1.
 
 You can access the fields in this new record using the dot syntax, and change the values. You have to call `save()` to store modified values to the database.
 
@@ -209,7 +210,7 @@ record.save()
 
 You can search for records that match certain criteria using the model's `objects` attribute (provided by the base class).
 
-> **Note:** Explaining how to search for records using "abstract" model and field names can be a little confusing. In the discussion below we'll refer to a `Book` model with `title` and `genre` fields, where genre is also a model with a single field `name`.
+> **メモ:** Explaining how to search for records using "abstract" model and field names can be a little confusing. In the discussion below we'll refer to a `Book` model with `title` and `genre` fields, where genre is also a model with a single field `name`.
 
 We can get all records for a model as a `QuerySet`, using `objects.all()`. The `QuerySet` is an iterable object, meaning that it contains a number of objects that we can iterate/loop through.
 
@@ -233,7 +234,7 @@ In some cases you'll need to filter on a field that defines a one-to-many relati
 books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
 ```
 
-> **Note:** You can use underscores (\_\_) to navigate as many levels of relationships (`ForeignKey`/`ManyToManyField`) as you like. For example, a `Book` that had different types, defined using a further "cover" relationship might have a parameter name: `type__cover__name__exact='hard'.`
+> **メモ:** You can use underscores (\_\_) to navigate as many levels of relationships (`ForeignKey`/`ManyToManyField`) as you like. For example, a `Book` that had different types, defined using a further "cover" relationship might have a parameter name: `type__cover__name__exact='hard'.`
 
 There is a lot more you can do with queries, including backwards searches from related models, chaining filters, returning a smaller set of values etc. For more information see [Making queries](https://docs.djangoproject.com/en/2.1/topics/db/queries/) (Django Docs).
 
@@ -350,7 +351,7 @@ We additionally declare a few new types of field:
 
 The model `__str__()` represents the `BookInstance` object using a combination of its unique id and the associated `Book`'s title.
 
-> **Note:** A little Python:
+> **メモ:** A little Python:
 >
 > - Starting with Python 3.6, you can use the string interpolation syntax (also known as f-strings): `f'{self.id} ({self.book.title})'`.
 > - In older versions of this tutorial, we were using a [formatted string](https://www.python.org/dev/peps/pep-3101/) syntax, which is also a valid way of formatting strings in Python (e.g. `'{0} ({1})'.format(self.id,self.book.title)`).

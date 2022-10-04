@@ -30,7 +30,7 @@ Promise<> customElements.whenDefined(name);
 
 ## 例子
 
-`这个例子使用whenDefined()` 来检测生成菜单的自定义元素何时被定义。这个菜单显示占位符内容一直到菜单内容已经准备好显示。
+这个例子使用 `whenDefined()` 来检测生成菜单的自定义元素何时被定义。这个菜单显示占位符内容一直到菜单内容已经准备好显示。
 
 ```html
 <nav id="menu-container">

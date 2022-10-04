@@ -333,7 +333,7 @@ function mostreCarro() {
 
 onde `pretty_print` é uma função que mostra uma linha horizontal e uma string. Observe o uso de `this` para referenciar o objeto ao qual o método pertence.
 
-Você pode fazer desta função um método de `carro,` adicionando seu estado à definição do objeto.
+Você pode fazer desta função um método de `carro`, adicionando seu estado à definição do objeto.
 
 ```js
 this.mostreCarro = mostreCarro;

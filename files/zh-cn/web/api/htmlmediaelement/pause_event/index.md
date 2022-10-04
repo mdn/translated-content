@@ -5,7 +5,7 @@ slug: Web/API/HTMLMediaElement/pause_event
 
 {{APIRef("HTMLMediaElement")}}
 
-当暂停媒体播放时 `pause` 事件触发， 并且媒体进入暂停状态，最常见的是通过`pause()`方法来触发。 当`pause()` 触发时`pause`状态只改变 1 次，并且媒体的`pause`变成 `true`。
+当暂停媒体播放时 `pause` 事件触发，并且媒体进入暂停状态，最常见的是通过`pause()`方法来触发。当`pause()` 触发时`pause`状态只改变 1 次，并且媒体的`pause`变成 `true`。
 
 ## General info
 

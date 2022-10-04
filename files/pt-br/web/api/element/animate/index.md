@@ -20,12 +20,12 @@ var animation = element.animate(keyframes, options);
 - `keyframes`
   - : An [Object formatted to represent a set of keyframes](/pt-BR/docs/Web/API/Web_Animations_API/Keyframe_Formats).
 - `opções`
-  - : `Ou um inteiro representando a duração da animação (em milisegundos), ou um objeto contendo uma ou mais propriedades de tempo:`
-- `id {{optional_inline}}`
+  - : Ou um inteiro representando a duração da animação (em milisegundos), ou um objeto contendo uma ou mais propriedades de tempo:
+    - `id {{optional_inline}}`
 
-  - : Um propriedade única á animate(): uma `DOMString com a qual a animação é referenciada.`
+      - : Um propriedade única á animate(): uma `DOMString` com a qual a animação é referenciada.
 
-    {{Page("/en-US/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties")}}
+        {{Page("/en-US/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties")}}
 
 #### Opções Futuras
 

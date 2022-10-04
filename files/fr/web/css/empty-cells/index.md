@@ -38,9 +38,13 @@ Cette propriété se définit avec l'un des mots-clés suivants.
 - `hide`
   - : Un mot-clé indiquant qu'aucune bordure ou arrière-plan ne doit être dessiné.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -91,12 +95,8 @@ td, th {
 
 ## Spécifications
 
-| Spécification                                                                        | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('CSS2.1', 'tables.html#empty-cells', 'empty-cells')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.empty-cells")}}
+{{Compat}}

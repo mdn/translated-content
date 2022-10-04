@@ -2,6 +2,7 @@
 title: DataTransferItem
 slug: Web/API/DataTransferItem
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransferItem`** オブジェクトは、1 つのドラッグデータ項目を表します。*ドラッグ操作*中、各 {{domxref("DragEvent", "drag event")}}は {{domxref("DragEvent.dataTransfer", "dataTransfer")}} プロパティを持ち、このプロパティにはドラッグデータ項目の {{domxref("DataTransferItemList", "list")}} を含みます。リスト内の各項目は `DataTransferItem` オブジェクトです。

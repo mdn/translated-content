@@ -3,6 +3,7 @@ title: 'Document: pointerleave イベント'
 slug: conflicting/Web/API/Element/pointerleave_event
 original_slug: Web/API/Document/pointerleave_event
 ---
+
 {{APIRef}}
 
 `pointerleave` イベントは、ポインティングデバイスが要素のヒットテスト領域を出たときに発生します。ペンデバイスでは、このイベントはデジタイザーが検出可能なホバー範囲をスタイラスが離れたときに発生します。

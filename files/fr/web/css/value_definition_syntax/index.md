@@ -383,8 +383,4 @@ Mais pas à :
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Comment                                |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------- |
-| {{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}                 | {{Spec2('CSS3 Values')}} | Ajout du multiplicateur avec le dièse. |
-| {{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}         | {{Spec2('CSS2.1')}}         | Ajout de la double esperluette.        |
-| {{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}} | {{Spec2('CSS1')}}         | Définition initiale.                   |
+{{Specifications}}

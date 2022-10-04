@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API/WebGL_model_view_projection
 
 この記事では、[WebGL](/ja/docs/Web/API/WebGL_API) プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3D シーンを構成するときに通常使用される中心的な 3 つの行列である、モデル、ビュー、射影行列について説明します。
 
-> **Note:** This article is also available as an [MDN content kit](https://github.com/TatumCreative/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/TatumCreative/mdn-webgl) available under the `MDN` global object.
+> **メモ:** This article is also available as an [MDN content kit](https://github.com/TatumCreative/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/TatumCreative/mdn-webgl) available under the `MDN` global object.
 
 ## モデル、ビュー、射影行列
 
@@ -31,7 +31,7 @@ WebGL プログラムでは、通常、データは自分の座標系で GPU に
 
 この例では、画面上に 2D ボックスを描画するカスタム `WebGLBox` オブジェクトを作成します。
 
-> **Note:** The code for each WebGLBox example is available in this [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
+> **メモ:** The code for each WebGLBox example is available in this [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
 
 #### WebGLBox コンストラクタ
 
@@ -375,7 +375,7 @@ In the shader, each position vertex is first transformed into a homogeneous coor
 gl_Position = model * vec4(position, 1.0);
 ```
 
-> **Note:** In JavaScript, matrix multiplication requires a custom function, while in the shader it is built into the language with the simple \* operator.
+> **メモ:** In JavaScript, matrix multiplication requires a custom function, while in the shader it is built into the language with the simple \* operator.
 
 ### The results
 

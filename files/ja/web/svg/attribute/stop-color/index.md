@@ -7,9 +7,9 @@ slug: Web/SVG/Attribute/stop-color
 
 **`stop-color`** 属性は、グラデーションの色停止点で使用する色を示します。
 
-> **Note:** グラデーションに関して、SVG は `transparent` キーワードを CSS とは異なる方法で扱います。SVG はグラデーションを事前に乗算された空間で計算しないので、`transparent` は実際には透明な黒を意味します。そのため、`stop-color` に `transparent` という値を指定することは、`stop-color` に `black` という値を指定し、{{SVGAttr("stop-opacity")}} に `0` という値を指定することと同じです。
+> **メモ:** グラデーションに関して、SVG は `transparent` キーワードを CSS とは異なる方法で扱います。SVG はグラデーションを事前に乗算された空間で計算しないので、`transparent` は実際には透明な黒を意味します。そのため、`stop-color` に `transparent` という値を指定することは、`stop-color` に `black` という値を指定し、{{SVGAttr("stop-opacity")}} に `0` という値を指定することと同じです。
 
-> **Note:** プレゼンテーション属性である `stop-color` は、CSS プロパティとして使用することができます。
+> **メモ:** プレゼンテーション属性である `stop-color` は、CSS プロパティとして使用することができます。
 
 この属性は以下の SVG 要素で使用することができます。
 
@@ -25,7 +25,7 @@ slug: Web/SVG/Attribute/stop-color
         <code>currentcolor</code> |
         {{cssxref("color_value", "&lt;color&gt;")}}
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#icccolor"
+          ><a href="/ja/docs/Web/SVG/Content_type#icccolor"
             >&#x3C;icccolor></a
           ></code
         >
@@ -43,7 +43,7 @@ slug: Web/SVG/Attribute/stop-color
 </table>
 
 - `currentcolor`
-  - : このキーワードは、現在の塗りつぶしの色を表し、 [`<paint>`](/en-US/docs/Web/SVG/Content_type#paint) の指定の中で、{{SVGAttr("fill")}} および {{SVGAttr("stroke")}} 属性と同じ方法で指定することができます。
+  - : このキーワードは、現在の塗りつぶしの色を表し、 [`<paint>`](/ja/docs/Web/SVG/Content_type#paint) の指定の中で、{{SVGAttr("fill")}} および {{SVGAttr("stroke")}} 属性と同じ方法で指定することができます。
 - `<color>`
   - : この値は色の値を示します。
 - `<icccolor>`

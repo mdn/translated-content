@@ -2,6 +2,7 @@
 title: Node.normalize()
 slug: Web/API/Node/normalize
 ---
+
 {{APIRef("DOM")}}
 
 **`normalize()`** は {{domxref("Node")}} インターフェイスのメソッドで、指定されたノードとその下のツリーを*正規化された*形にします。

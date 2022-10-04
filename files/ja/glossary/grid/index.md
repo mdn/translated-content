@@ -4,6 +4,7 @@ slug: Glossary/Grid
 l10n:
   sourceCommit: 4a9f9d2e9c1811ce3519a7061e906db9200a5e97
 ---
+
 **CSS グリッド** は {{cssxref("display")}} プロパティの値に `grid` を指定して定義します。グリッドの列や行は {{cssxref("grid-template-rows")}} や {{cssxref("grid-template-columns")}} プロパティで定義します。
 
 これらのプロパティを使って定義したグリッドのことを **明示的グリッド** _(explicit grid)_ と呼びます。

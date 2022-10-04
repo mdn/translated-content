@@ -22,7 +22,7 @@ evtSource.onerror = function() {
 };
 ```
 
-> **Note:**  完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
+> **メモ:** 完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
 
 ## 仕様
 
@@ -40,6 +40,6 @@ evtSource.onerror = function() {
 
 ## See also
 
-- [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
-- [`open`](/en-US/docs/Web/API/EventSource/open_event)
-- [`message`](/en-US/docs/Web/API/EventSource/message_event)
+- [Using server-sent events](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [`open`](/ja/docs/Web/API/EventSource/open_event)
+- [`message`](/ja/docs/Web/API/EventSource/message_event)

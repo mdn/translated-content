@@ -14909,22 +14909,6 @@
     "modified": "2019-03-23T22:33:37.092Z",
     "contributors": ["stRavens"]
   },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly": {
-    "modified": "2019-03-23T22:09:24.539Z",
-    "contributors": ["warsan", "Fingasss", "curdwithraisins"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table": {
-    "modified": "2020-10-15T22:28:03.728Z",
-    "contributors": ["amuzalevskiy"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compile": {
-    "modified": "2020-10-15T22:05:22.747Z",
-    "contributors": ["warsan"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming": {
-    "modified": "2020-10-15T22:05:24.687Z",
-    "contributors": ["warsan"]
-  },
   "Web/JavaScript/Reference/Global_Objects/decodeURI": {
     "modified": "2020-10-15T21:36:41.028Z",
     "contributors": ["boxa6", "KTatyana", "dimon.durak"]
@@ -16475,6 +16459,22 @@
   "WebAssembly/Exported_functions": {
     "modified": "2020-03-04T19:06:28.386Z",
     "contributors": ["amuzalevskiy", "thatlldo"]
+  },
+  "WebAssembly/JavaScript_interface": {
+    "modified": "2019-03-23T22:09:24.539Z",
+    "contributors": ["warsan", "Fingasss", "curdwithraisins"]
+  },
+  "WebAssembly/JavaScript_interface/Table": {
+    "modified": "2020-10-15T22:28:03.728Z",
+    "contributors": ["amuzalevskiy"]
+  },
+  "WebAssembly/JavaScript_interface/compile": {
+    "modified": "2020-10-15T22:05:22.747Z",
+    "contributors": ["warsan"]
+  },
+  "WebAssembly/JavaScript_interface/compileStreaming": {
+    "modified": "2020-10-15T22:05:24.687Z",
+    "contributors": ["warsan"]
   },
   "WebAssembly/Loading_and_running": {
     "modified": "2019-06-12T11:14:54.085Z",

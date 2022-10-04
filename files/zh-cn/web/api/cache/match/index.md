@@ -19,7 +19,7 @@ cache.match(request,{options}).then(function(response) {
 
 一个 {{jsxref("Promise")}} 对象，该对象解析为第一个匹配请求的 {{domxref("Response")}} 对象，如果没有匹配到，则解析到 {{jsxref("undefined")}} 。
 
-> **备注：** `Cache.match()` 基本上和 {{domxref("Cache.matchAll()")}} 一样，只不过 `Cache.match()` 只解析为 `response[0]` （第一个匹配的响应 (response) 对象） 而不是 `response[]` （所有响应对象组成的数组）。
+> **备注：** `Cache.match()` 基本上和 {{domxref("Cache.matchAll()")}} 一样，只不过 `Cache.match()` 只解析为 `response[0]` （第一个匹配的响应 (response) 对象）而不是 `response[]` （所有响应对象组成的数组）。
 
 ### 参数
 
@@ -40,7 +40,7 @@ cache.match(request,{options}).then(function(response) {
 
 下面的例子在请求失败时提供特定的数据。 `catch()` 在 `fetch()` 的调用抛出异常时触发。在 `catch()` 语句中， `match()`用来返回正确的响应。
 
-在这个例子中，我们决定只缓存通过 GET 取得的 HTML 文档. 如果 `if()` 条件是 false，那么这个 fetch 处理器就不会处理这个请求。如果还有其他的 fetch 处理器被注册，它们将有机会调用 `event.respondWith()` 如果没有 fetch 处理器调用 `event.respondWith()` ，该请求就会像没有 service worker 介入一样由浏览器处理。如果 `fetch()` 返回了有效的 HTTP 响应，相应码是 4xx 或 5xx，那么`catch()` 就**不会**被调用。
+在这个例子中，我们决定只缓存通过 GET 取得的 HTML 文档。如果 `if()` 条件是 false，那么这个 fetch 处理器就不会处理这个请求。如果还有其他的 fetch 处理器被注册，它们将有机会调用 `event.respondWith()` 如果没有 fetch 处理器调用 `event.respondWith()` ，该请求就会像没有 service worker 介入一样由浏览器处理。如果 `fetch()` 返回了有效的 HTTP 响应，相应码是 4xx 或 5xx，那么`catch()` 就**不会**被调用。
 
 ```js
 self.addEventListener('fetch', function(event) {

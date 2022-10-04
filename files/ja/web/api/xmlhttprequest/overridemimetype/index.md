@@ -28,7 +28,7 @@ XMLHttpRequest.overrideMimeType(mimeType)
 
 この例では、 MIME タイプとして `"text/plain"` を指定し、受信するデータに対してサーバーが指定するタイプを上書きしています。
 
-> **Note:** サーバーが [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダを提供ていない場合、 {{domxref("XMLHttpRequest")}} は MIME タイプが `"text/xml"` であると見なします。もし、内容が妥当な XML でなければ、"XML Parsing Error: not well-formed" というエラーが発生します。これを避けるには、 `overrideMimeType()` を呼び出して別のタイプを指定してください。
+> **メモ:** サーバーが [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダを提供ていない場合、 {{domxref("XMLHttpRequest")}} は MIME タイプが `"text/xml"` であると見なします。もし、内容が妥当な XML でなければ、"XML Parsing Error: not well-formed" というエラーが発生します。これを避けるには、 `overrideMimeType()` を呼び出して別のタイプを指定してください。
 
 ```js
 // 受信したデータをプレーンテキストとして解釈

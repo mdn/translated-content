@@ -2,6 +2,7 @@
 title: MediaRecorder.state
 slug: Web/API/MediaRecorder/state
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.state`** 読み取り専用プロパティは、現在の `MediaRecorder` オブジェクトの現在の状態を返します。

@@ -251,7 +251,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
 
 - `exclusion`
 
-  - : The final color is similar to `difference,` but with less contrast.
+  - : The final color is similar to `difference`, but with less contrast.
     As with `difference`, a black layer has no effect, while a white layer inverts the other layer's color.
 
     ```html hidden

@@ -3,9 +3,10 @@ title: animateColor
 slug: conflicting/Web/SVG/Element/animate
 original_slug: Web/SVG/Element/animateColor
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
-> **Warning:** この要素は SVG1.1 仕様（第 2 版）で廃止され、将来の SVG のバージョンで削除される可能性があります。 この要素は {{ SVGElement("animate") }} 要素に置き換えられ、Firefox や Internet Explorer では実装されておりません。SVG ファイル製作者はこの要素の代わりに{{ SVGElement("animate") }}要素を使うべきです。
+> **警告:** この要素は SVG1.1 仕様（第 2 版）で廃止され、将来の SVG のバージョンで削除される可能性があります。 この要素は {{ SVGElement("animate") }} 要素に置き換えられ、Firefox や Internet Explorer では実装されておりません。SVG ファイル製作者はこの要素の代わりに{{ SVGElement("animate") }}要素を使うべきです。
 
 ## 概要
 

@@ -2,13 +2,14 @@
 title: Clipboard.write()
 slug: Web/API/Clipboard/write
 ---
+
 {{APIRef("Clipboard API")}}
 
 {{domxref("Clipboard")}} の **`write()`** メソッドは、画像などの任意のデータをクリップボードに書き込みます。切り取りやコピーの機能を実装するのに利用することができます。
 
 [権限 API](/ja/docs/Web/API/Permissions_API) の `"clipboard-write"` 権限は、ページがアクティブなタブにあるときに自動的に付与されます。
 
-> **Note:** 非同期クリップボード API に対するブラウザーの対応は、まだ実装の途上にあります。詳しくは、[互換性一覧表](#ブラウザーの互換性)と[クリップボードの可用性](/ja/docs/Web/API/Clipboard#クリップボードの可用性) を必ずチェックしてください。
+> **メモ:** 非同期クリップボード API に対するブラウザーの対応は、まだ実装の途上にあります。詳しくは、[互換性一覧表](#ブラウザーの互換性)と[クリップボードの可用性](/ja/docs/Web/API/Clipboard#クリップボードの可用性) を必ずチェックしてください。
 
 ## 構文
 
@@ -67,7 +68,7 @@ function copyCanvasContentsToClipboard(canvas, onDone, onError) {
 }
 ```
 
-> **Note:** 一度に渡すことができるクリップボードの項目は 1 つだけです。
+> **メモ:** 一度に渡すことができるクリップボードの項目は 1 つだけです。
 
 ## 仕様書
 

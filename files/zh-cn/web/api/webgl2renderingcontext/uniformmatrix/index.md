@@ -28,7 +28,7 @@ void gl.uniformMatrix4fv(location, transpose, data, optional srcOffset, optional
 - location
   - : 一个包含想要修改的 uniform 变量的{{domxref("WebGLUniformLocation")}} 对象
 - transpose
-  - : 一个决定是否转置矩阵的布尔值（ {{domxref("GLboolean")}}。 在 webgl 中必须为`false`。
+  - : 一个决定是否转置矩阵的布尔值（ {{domxref("GLboolean")}}。在 webgl 中必须为`false`。
 - data
   - : 一个包含方阵中浮点数的类数组对象 (TypeArray) {{jsxref("Float32Array")}}。
 

@@ -2,11 +2,12 @@
 title: PerformanceObserverEntryList
 slug: Web/API/PerformanceObserverEntryList
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`PerformanceObserverEntryList`** インターフェイスは、{{domxref("PerformanceObserver.observe","observe()")}} メソッドを介して明示的に*監視された* {{domxref("PerformanceEntry","パフォーマンスイベント", '', 'true')}} のリストです。
 
-> **Note:** このインターフェイスは {{domxref("Window")}} と {{domxref("Worker")}} に公開されています。
+> **メモ:** このインターフェイスは {{domxref("Window")}} と {{domxref("Worker")}} に公開されています。
 
 ## メソッド
 

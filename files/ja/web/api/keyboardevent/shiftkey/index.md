@@ -2,6 +2,7 @@
 title: KeyboardEvent.shiftKey
 slug: Web/API/KeyboardEvent/shiftKey
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.shiftKey`** は読み取り専用プロパティで、このイベントが発生したときに <kbd>shift</kbd> キーが押されていたか (`true`) いなかったか (`false`) を示す論理値を返します。

@@ -41,9 +41,13 @@ La propriété `flex-grow` se définit avec une valeur de type [`<number>`](#num
 - `<number>`
   - : Un nombre (type {{cssxref("&lt;number&gt;")}} qui correspond au facteur de grossissement utilisé. Plus la valeur est élevée, plus l'élément sera étendu si nécessaire. Les valeurs négatives sont invalides. La valeur par défaut est 0.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -89,15 +93,11 @@ La propriété `flex-grow` se définit avec une valeur de type [`<number>`](#num
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox','#flex-grow-property','flex-grow')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex-grow")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: DOMRectReadOnly.left
 slug: Web/API/DOMRectReadOnly/left
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`left`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の左端の座標を返します。（`x` と同じ、または `width` が負の数であれば `x + width` と同じです。）

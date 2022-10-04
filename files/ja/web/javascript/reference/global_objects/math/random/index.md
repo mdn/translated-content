@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/random
 
 {{EmbedInteractiveExample("pages/js/math-random.html")}}
 
-> **Note:** `Math.random()` の提供する乱数は、暗号に使用可能な安全性を備えて*いません*。セキュリティに関連する目的では使用しないでください。代わりに Web Crypto API (より具体的には {{domxref("Crypto.getRandomValues", "window.crypto.getRandomValues()")}} メソッド) を使用してください。
+> **メモ:** `Math.random()` の提供する乱数は、暗号に使用可能な安全性を備えて*いません*。セキュリティに関連する目的では使用しないでください。代わりに Web Crypto API (より具体的には {{domxref("Crypto.getRandomValues", "window.crypto.getRandomValues()")}} メソッド) を使用してください。
 
 ## 構文
 
@@ -55,7 +55,7 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **Note:** `Math.round()` を使う方が魅力的かもしれませんが、その場合は乱数が不均一な分布に従うことになるので、ユーザーのニーズに合わないかもしれません。
+> **メモ:** `Math.round()` を使う方が魅力的かもしれませんが、その場合は乱数が不均一な分布に従うことになるので、ユーザーのニーズに合わないかもしれません。
 
 ### 包括的に 2 つの値の間のランダムな整数を得る
 

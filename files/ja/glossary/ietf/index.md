@@ -2,6 +2,7 @@
 title: IETF
 slug: Glossary/IETF
 ---
+
 Internet Engineering Task Force (IETF) は、{{glossary("Internet","インターネット")}}の背後にあるメカニズム (特に {{glossary("TCP")}}/{{glossary("IPv6","IP")}} やインターネット{{glossary("Protocol","プロトコル")}}スイート) を規定する{{glossary('specification','仕様書')}}を作成する世界的な組織です。IETF はオープンで、ボランティアが運営し、インターネットソサエティが後援します。
 
 ## より詳しく知る

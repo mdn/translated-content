@@ -107,7 +107,7 @@ xhr.send(myArray);
 
 これは 8 ビット整数の 512 バイトの配列を構築して送信します。勿論、好きな任意のバイナリデータで使えます。
 
-> **Note:** **メモ:** XMLHttpRequest を使った [`ArrayBuffer`](/ja/docs/JavaScript_typed_arrays/ArrayBuffer) オブジェクトの送信サポートは Gecko 9.0 {{geckoRelease("9.0")}}で追加されました。**他のブラウザーのサポート情報をここに追記して下さい。**
+> **メモ:** XMLHttpRequest を使った [`ArrayBuffer`](/ja/docs/JavaScript_typed_arrays/ArrayBuffer) オブジェクトの送信サポートは Gecko 9.0 {{geckoRelease("9.0")}}で追加されました。**他のブラウザーのサポート情報をここに追記して下さい。**
 
 ## フォーム送信とファイルアップロード
 
@@ -129,7 +129,7 @@ req.sendAsBinary(aBody);
 
 ５行目では `sendAsBinary()` メソッドを使ってリクエストをはじめます。
 
-> **Note:** **メモ:** この `sendAsBinary` メソッドは標準外であり、 Gecko 31 {{ geckoRelease(31) }} で非推奨扱いになって、まもなく削除されるでしょう。上で説明したように、標準の `send(Blob data)` メソッドを使用することができます。
+> **メモ:** この `sendAsBinary` メソッドは標準外であり、 Gecko 31 {{ geckoRelease(31) }} で非推奨扱いになって、まもなく削除されるでしょう。上で説明したように、標準の `send(Blob data)` メソッドを使用することができます。
 
 また、`nsIFileInputStream` のインスタンスの [`send()`](</ja/docs/DOM/XMLHttpRequest#send()> "XMLHttpRequest#send()") を通す事でバイナリコンテンツを送信できます。この場合は、あなた自身が `Content-Length` ヘッダセットしてはならず、この情報はストリームから自動的に取得されます。
 

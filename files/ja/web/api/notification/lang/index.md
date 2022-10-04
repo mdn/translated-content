@@ -2,6 +2,7 @@
 title: Notification.lang
 slug: Web/API/Notification/lang
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`lang`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `lang` オプションで指定された通知の言語を示します。

@@ -2,11 +2,12 @@
 title: NodeList
 slug: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeList`** オブジェクトは{{Glossary("Node/DOM", "ノード")}}の集合であり、 {{domxref("Node.childNodes")}} などのプロパティや {{domxref("document.querySelectorAll()")}} などのメソッドの返値として用いられます。
 
-> **Note:** `NodeList` は `Array` とは異なりますが、 `forEach()` メソッドで処理を反復適用することは可能です。 {{jsxref("Array.from()")}} を使うことで `Array` に変換することができます。
+> **メモ:** `NodeList` は `Array` とは異なりますが、 `forEach()` メソッドで処理を反復適用することは可能です。 {{jsxref("Array.from()")}} を使うことで `Array` に変換することができます。
 >
 > ただし、古いブラウザーでは `NodeList.forEach()` も `Array.from()` も実装されていない場合があります。これらの制限は {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} を使うことで回避することが可能です (この文書に詳しく書かれています)。
 
