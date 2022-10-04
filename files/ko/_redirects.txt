@@ -199,6 +199,7 @@
 /ko/docs/Glossary/Bootstrap	/ko/docs/orphaned/Glossary/Bootstrap
 /ko/docs/Glossary/Client_hints	/ko/docs/Web/HTTP/Client_hints
 /ko/docs/Glossary/Dynamic_programming_language	/ko/docs/orphaned/Glossary/Dynamic_programming_language
+/ko/docs/Glossary/Empty_element	/ko/docs/Glossary/Void_element
 /ko/docs/Glossary/Header	/ko/docs/Glossary/HTTP_header
 /ko/docs/Glossary/Index	/ko/docs/Glossary
 /ko/docs/Glossary/Symbol	/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol
