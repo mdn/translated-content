@@ -16,84 +16,84 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 ## 型
 
 - {{WebExtAPIRef("runtime.Port")}}
-  - : 2つのコンテキスト間の接続の一方を表します。メッセージを交換するために使います。
+  - : 2 つのコンテキスト間の接続の一方を表します。メッセージを交換するために使います。
 - {{WebExtAPIRef("runtime.MessageSender")}}
   - : 接続リクエストやメッセージの送信者の情報です。
 - {{WebExtAPIRef("runtime.PlatformOs")}}
-  - : ブラウザのOSの識別です。
+  - : ブラウザーの OS の識別です。
 - {{WebExtAPIRef("runtime.PlatformArch")}}
-  - : ブラウザのプロセッサーアーキテクチャの識別です。
+  - : ブラウザーのプロセッサーアーキテクチャの識別です。
 - {{WebExtAPIRef("runtime.PlatformInfo")}}
-  - : ブラウザが動作しているプラットフォームの情報です。
+  - : ブラウザーが動作しているプラットフォームの情報です。
 - {{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}
-  - : {{WebExtAPIRef("runtime.requestUpdateCheck()")}}を呼び出した結果です。
+  - : {{WebExtAPIRef("runtime.requestUpdateCheck()")}} を呼び出した結果です。
 - {{WebExtAPIRef("runtime.OnInstalledReason")}}
-  - : {{WebExtAPIRef("runtime.onInstalled")}}イベントをディスパッチした理由です。
+  - : {{WebExtAPIRef("runtime.onInstalled")}} イベントをディスパッチした理由です。
 - {{WebExtAPIRef("runtime.OnRestartRequiredReason")}}
-  - : {{WebExtAPIRef("runtime.onRestartRequired")}}イベントをディスパッチした理由です。
+  - : {{WebExtAPIRef("runtime.onRestartRequired")}} イベントをディスパッチした理由です。
 
 ## プロパティ
 
 - {{WebExtAPIRef("runtime.lastError")}}
   - : 呼び出し元に伝える必要があるエラーが非同期の関数で起こった時に、この値が設定されます。
 - {{WebExtAPIRef("runtime.id")}}
-  - : 拡張機能のIDです。
+  - : 拡張機能の ID です。
 
 ## 関数
 
 - {{WebExtAPIRef("runtime.getBackgroundPage()")}}
-  - : 拡張機能が動作しているバックグラウンドページの[Window](/ja/docs/Web/API/Window)オブジェクトを取得します。
+  - : 拡張機能が動作しているバックグラウンドページの [Window](/ja/docs/Web/API/Window) オブジェクトを取得します。
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
   - : 拡張機能の[オプションページ](/ja/Add-ons/WebExtensions/user_interface/Options_pages)を開きます。
 - {{WebExtAPIRef("runtime.getFrameId()")}}
-  - : グローバルまたはフレーム要素のウィンドウのフレームIDを取得します。
+  - : グローバルまたはフレーム要素のウィンドウのフレーム ID を取得します。
 - {{WebExtAPIRef("runtime.getManifest()")}}
-  - : 完全な[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)ファイルを取得し、オブジェクトとしてシリアライズします。
+  - : 完全な [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルを取得し、オブジェクトとしてシリアライズします。
 - {{WebExtAPIRef("runtime.getURL()")}}
-  - : [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)からの相対パスを指定し、拡張機能に含まれるリソースの完全修飾のURLを返します。
+  - : [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) からの相対パスを指定し、拡張機能に含まれるリソースの完全修飾の URL を返します。
 - {{WebExtAPIRef("runtime.setUninstallURL()")}}
-  - : 拡張機能がアンインストールされた時にアクセスさせるURLを設定します。
+  - : 拡張機能がアンインストールされた時にアクセスさせる URL を設定します。
 - {{WebExtAPIRef("runtime.reload()")}}
   - : 拡張機能をリロードします。
 - {{WebExtAPIRef("runtime.requestUpdateCheck()")}}
   - : 拡張機能のアップデートを確認します。
 - {{WebExtAPIRef("runtime.connect()")}}
-  - : コンテンツスクリプト から同じ拡張機能の別の処理、または別の拡張機能への接続します。
+  - : コンテンツスクリプトから同じ拡張機能の別の処理、または別の拡張機能への接続します。
 - {{WebExtAPIRef("runtime.connectNative()")}}
-  - : ユーザーのコンピュータに入っているネイティブアプリケーションと拡張機能を接続します。
+  - : ユーザーのコンピューターに入っているネイティブアプリケーションと拡張機能を接続します。
 - {{WebExtAPIRef("runtime.sendMessage()")}}
-  - : 拡張機能自身や別の拡張機能のイベントリスナーに1つのメッセージを送信します。{{WebExtAPIRef('runtime.connect')}}と似ていますが、{{WebExtAPIRef("runtime.sendMessage()")}}では1つのメッセージを送るだけで、オプションで応答可能です。
+  - : 拡張機能自身や別の拡張機能のイベントリスナーに 1 つのメッセージを送信します。 {{WebExtAPIRef('runtime.connect')}} と似ていますが、 {{WebExtAPIRef("runtime.sendMessage()")}} では 1 つのメッセージを送るだけで、オプションで応答可能です。
 - {{WebExtAPIRef("runtime.sendNativeMessage()")}}
-  - : 拡張機能からネイティプアプリケーションに1つのメッセージを送信します。
+  - : 拡張機能からネイティプアプリケーションに 1 つのメッセージを送信します。
 - {{WebExtAPIRef("runtime.getPlatformInfo()")}}
   - : 現在のプラットフォーム情報を返します。
 - {{WebExtAPIRef("runtime.getBrowserInfo()")}}
-  - : 拡張機能がインストールされたブラウザの情報を返します。
+  - : 拡張機能がインストールされたブラウザーの情報を返します。
 - {{WebExtAPIRef("runtime.getPackageDirectoryEntry()")}}
-  - : 拡張機能のディレクトリの[DirectoryEntry](/ja/docs/Web/API/FileSystemDirectoryEntry)オブジェクトを返します。
+  - : 拡張機能のディレクトリの [DirectoryEntry](/ja/docs/Web/API/FileSystemDirectoryEntry) オブジェクトを返します。
 
 ## イベント
 
 - {{WebExtAPIRef("runtime.onStartup")}}
   - : 拡張機能がインストールされたプロフィールが最初に起動された時に発火します。このイベントは、プライベートプロフィールの起動では発火しません。
 - {{WebExtAPIRef("runtime.onInstalled")}}
-  - : 拡張機能が最初にインストールされた時、拡張機能やブラウザが新しいバージョンに更新された時に発火します。
+  - : 拡張機能が最初にインストールされた時、拡張機能やブラウザーが新しいバージョンに更新された時に発火します。
 - {{WebExtAPIRef("runtime.onSuspend")}}
   - : 拡張機能がアンロードされる直前にイベントページに送信します。拡張機能をクリーンアップできます。
 - {{WebExtAPIRef("runtime.onSuspendCanceled")}}
-  - : 拡張機能が結果的にアンロードされなかったことを示すため、{{WebExtAPIRef("runtime.onSuspend")}}の後に送信します。
+  - : 拡張機能が結果的にアンロードされなかったことを示すため、 {{WebExtAPIRef("runtime.onSuspend")}} の後に送信します。
 - {{WebExtAPIRef("runtime.onUpdateAvailable")}}
   - : 拡張機能が更新可能ですが現在実行中のため、すぐにインストールされない時に発火します。
 - {{WebExtAPIRef("runtime.onBrowserUpdateAvailable")}}
-  - : ブラウザが更新可能ですが再起動が必要であるため、すぐにインストールされない時に発火します。
+  - : ブラウザーが更新可能ですが再起動が必要であるため、すぐにインストールされない時に発火します。
 - {{WebExtAPIRef("runtime.onConnect")}}
-  - : 拡張機能の処理や コンテンツスクリプト と接続した時に発火します。
+  - : 拡張機能の処理や コンテンツスクリプトと接続した時に発火します。
 - {{WebExtAPIRef("runtime.onConnectExternal")}}
   - : 別の拡張機能と接続した時に発火します。
 - {{WebExtAPIRef("runtime.onMessage")}}
-  - : 拡張機能の処理や コンテンツスクリプト からメッセージが送信された時に発火します。
+  - : 拡張機能の処理や コンテンツスクリプトからメッセージが送信された時に発火します。
 - {{WebExtAPIRef("runtime.onMessageExternal")}}
-  - : 別の拡張機能からメッセージが送信された時に発火します。コンテンツスクリプト では使えません。
+  - : 別の拡張機能からメッセージが送信された時に発火します。コンテンツスクリプトでは使えません。
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
   - : デバイスの再起動が必要な時に発火します。
 
@@ -103,7 +103,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 
 {{WebExtExamples("h2")}}
 
-> **Note:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **メモ:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
