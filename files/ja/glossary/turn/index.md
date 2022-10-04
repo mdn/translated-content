@@ -9,7 +9,7 @@ l10n:
 
 ## 関連情報
 
-- Wikipedia 上の記事「{{interwiki('wikipedia', 'TURN')}}」
+- [TURN](https://ja.wikipedia.org/wiki/TURN) （ウィキペディア）
 - [WebRTC プロトコル](/ja/docs/Web/API/WebRTC_API/Protocols)
 - [仕様](https://www.ietf.org/rfc/rfc5766.txt)
 - [IPv6 に関する仕様の更新](https://www.ietf.org/rfc/rfc6156.txt)
