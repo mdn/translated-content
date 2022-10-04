@@ -23,4 +23,4 @@ var keyboard = navigator.keyboard
 
 ## 浏览器兼容性
 
-{{Compat("api.navigator.keyboard")}}
+{{Compat}}

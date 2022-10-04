@@ -36,4 +36,4 @@ if ('credentials' in navigator) {
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.credentials")}}
+{{Compat}}

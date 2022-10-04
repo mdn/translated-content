@@ -41,4 +41,4 @@ function prodsub() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.productSub")}}
+{{Compat}}
