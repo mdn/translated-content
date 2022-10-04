@@ -1,7 +1,8 @@
 ---
 title: Elemento vacío
-slug: Glossary/Empty_element
+slug: Glossary/Void_element
 translation_of: Glossary/Empty_element
+original_slug: Glossary/Empty_element
 ---
 Un **elemento vacío** es un {{Glossary("elemento")}} de HTML, SVG, o MathML que **no puede** tener nodos secundarios (es decir, elementos anidados o nodos de texto).
 
