@@ -15,25 +15,17 @@ Actualmente, XSLT es muy usado en la edición web, generando páginas HTML o XHT
 
 #### Documentación
 
-- [Transformando XML con XSLT](es/Transformando_XML_con_XSLT)
+- [Transformando XML con XSLT](/es/Transformando_XML_con_XSLT)
   - : XSLT permite que un autor de hojas de estilo transformar un documento XML inicial de dos modos distintos: manipulando y clasificando el contenido, y transformando del contenido a un formato diferente.
 
-<!---->
-
-- [Elementos XSLT](es/XSLT/Elementos)
+- [Elementos XSLT](/es/XSLT/Elementos)
   - : Referencia de los elementos de XSLT.
-
-<!---->
 
 - [Introducción a XSL - XSLT](http://www.daniel.prado.name/Programacion-XSL-XSLT.asp?art=133)
   - : Cuando un buen ejemplo vale más que mil palabras.
 
-<!---->
-
 - [Utilizando la interfaz JavaScript de Mozilla para Transformaciones XSLT (en)](http://www.mozilla.org/projects/xslt/js-interface.html)
   - : Este documento describe la interfaz JavaScript de Mozilla 1.2 y el motor de procesado de XSLT. Notese que esto no es aplicable a las publicaciones previas de Mozilla o de otros navegadores basados el.
-
-<!---->
 
 - [Tutorial XSLT y XPath (en)](http://www.topxml.com/xsl/tutorials/intro/)
   - : El tutorial TopXML XSLT hace una introducción a los conceptos básicos, la sintaxis, y la programación en XSLT. Las hojas de trabajos descargadas y el software proporcionan ejemplos de código y herramientas de programación en XSLT.
@@ -50,7 +42,7 @@ Actualmente, XSLT es muy usado en la edición web, generando páginas HTML o XHT
 #### Herramientas
 
 - Temas relacionados
-  - : [XML](es/XML), [XPath](es/XPath), [XSL](es/XSL).
+  - : [XML](/es/XML), [XPath](/es/XPath), [XSL](/es/XSL).
 
 > **Nota:** Esta descripción de XSLT ha sido obtenida del [Artículo sobre XSLT en la Wikipedia (es)](http://es.wikipedia.org/wiki/XSLT).
 
