@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 
 有三個標準情況會形成邊界重疊：
 
-- 同一層的相鄰</dt><dd>
+- 同一層的相鄰
   -: 兩個相鄰的元素邊界就會發生重疊，除非後者有加上clear-fix。例如
 
     ```html
