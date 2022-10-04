@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
 
 {{jsSidebar("Operators")}}
 
-小于等于运算符（`<=`）如果左操作数小于等于右操作数，则返回 `true`，否则返回 `false`。
+小于等于运算符（`<=`）在左操作数小于等于右操作数时返回 `true`，否则返回 `false`。
 
 {{EmbedInteractiveExample("pages/js/expressions-less-than-or-equal.html")}}
 
