@@ -60,7 +60,7 @@ offlineAudioCtx.oncomplete = function() {
 
 ## Browser compatibility
 
-{{Compat("api.OfflineAudioContext.complete_event")}}
+{{Compat}}
 
 ## See also
 

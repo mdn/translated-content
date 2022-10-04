@@ -50,7 +50,7 @@ oes_vao_ext.bindVertexArrayOES(vao);
 
 ## Browser compatibility
 
-{{Compat("api.OES_vertex_array_object")}}
+{{Compat}}
 
 ## 参见
 
