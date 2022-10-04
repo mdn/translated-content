@@ -143,10 +143,10 @@ navigator.serviceWorker.ready
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## Ve también
+## Véase también
 
 - [Acelera el *Service Worker*&nbsp;con precargas de navegación](https://developer.chrome.com/blog/navigation-preload/) (developer.chrome.com)
