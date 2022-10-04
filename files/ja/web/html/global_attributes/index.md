@@ -71,7 +71,7 @@ slug: Web/HTML/Global_attributes
 - [{{HTMLAttrDef("is")}}](/ja/docs/Web/HTML/Global_attributes/is)
   - : 標準の HTML 要素が、登録したカスタム組み込み要素のようにふるまうように指定することができます（詳しくは[カスタム要素の使用](/ja/docs/Web/Web_Components/Using_custom_elements)を参照）。
 
-> **Note:** `item*` 属性は、 [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata) の一部です。
+> **メモ:** `item*` 属性は、 [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata) の一部です。
 
 - [{{HTMLAttrDef("itemid")}}](/ja/docs/Web/HTML/Global_attributes/itemid)
   - : 項目の一意でグローバルな識別子です。
