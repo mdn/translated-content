@@ -53,9 +53,9 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 - `gzip`
   - : [Lempel-Ziv coding](https://ja.wikipedia.org/wiki/LZ77) (LZ77) と 32 ビット CRC を用いた圧縮形式です。
 - `compress`
-  - : [Lempel-Ziv-Welch](http://ja.wikipedia.org/wiki/LZW) (LZW) アルゴリズムを用いた圧縮形式です。
+  - : [Lempel-Ziv-Welch](https://ja.wikipedia.org/wiki/LZW) (LZW) アルゴリズムを用いた圧縮形式です。
 - `deflate`
-  - : [zlib](http://ja.wikipedia.org/wiki/Zlib) 構造体と [_deflate_](http://ja.wikipedia.org/wiki/DEFLATE) 圧縮アルゴリズムを用いた圧縮形式です。
+  - : [zlib](https://ja.wikipedia.org/wiki/Zlib) 構造体と [_deflate_](https://ja.wikipedia.org/wiki/DEFLATE) 圧縮アルゴリズムを用いた圧縮形式です。
 - `br`
   - : [Brotli](https://ja.wikipedia.org/wiki/Brotli) アルゴリズムを用いた圧縮形式です。
 - `identity`
