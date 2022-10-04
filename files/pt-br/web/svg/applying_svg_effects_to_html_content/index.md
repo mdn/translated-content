@@ -63,7 +63,7 @@ p {
 
 Preste atenção na linha 1, a máscara é especificada usando um URL para o ID "#m1", que é um ID para a máscara SVG específicada abaixo. Todo o que foi especificado detalha mais sobre a máscara de gradiente.
 
-Na realidade aplicar o efeito SVG para XHTML ou HTML é simplesmente feito atribuindo um estilo `target `definido abaixo do elemento, como esse:
+Na realidade aplicar o efeito SVG para XHTML ou HTML é simplesmente feito atribuindo um estilo `target` definido abaixo do elemento, como esse:
 
 ```html
 <p class="target" style="background:lime;">
