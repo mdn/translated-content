@@ -665,5 +665,3 @@ Puede determinar si existe una función utilizando el operador `typeof`. En el e
 ### Ver también
 
 [Function](es/Referencia_de_JavaScript_1.5/Objetos_globales/Function), [sentencia function](es/Referencia_de_JavaScript_1.5/Sentencias/function), [operador function](es/Referencia_de_JavaScript_1.5/Operadores/Operadores_globales/function)
-
-{{ languages( { "en": "en/Core\_JavaScript\_1.5\_Reference/Functions", "ru": "ru/\u042f\u0434\u0440\u043e\_JavaScript\_1.5\_\u0421\u043f\u0440\u043e\u0432\u0447\u043d\u0438\u043a/Functions", "fr": "fr/R\u00e9f\u00e9rence\_de\_JavaScript\_1.5\_Core/Fonctions", "ja": "ja/Core\_JavaScript\_1.5\_Reference/Functions" } ) }}
