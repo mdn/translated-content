@@ -457,10 +457,6 @@
     "modified": "2019-03-18T21:31:18.857Z",
     "contributors": ["eddieurbina", "carllewisc"]
   },
-  "Glossary/Empty_element": {
-    "modified": "2019-03-23T22:10:52.378Z",
-    "contributors": ["juanmmendez", "DaniNz"]
-  },
   "Glossary/Encapsulation": {
     "modified": "2019-03-18T21:19:13.092Z",
     "contributors": ["PabloDeTorre"]
@@ -964,6 +960,10 @@
   "Glossary/Viewport": {
     "modified": "2019-07-22T14:35:59.639Z",
     "contributors": ["EBregains", "ffcc"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2019-03-23T22:10:52.378Z",
+    "contributors": ["juanmmendez", "DaniNz"]
   },
   "Glossary/WCAG": {
     "modified": "2019-03-18T21:19:06.839Z",
