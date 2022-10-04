@@ -38,7 +38,7 @@ var newRequest = myRequest.clone(); // a copy of the request is now stored in ne
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.clone")}}
+{{Compat}}
 
 ## 了解更多
 

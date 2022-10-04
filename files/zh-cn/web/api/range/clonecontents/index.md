@@ -32,7 +32,7 @@ document.body.appendChild(documentFragment);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.cloneContents")}}
+{{Compat}}
 
 ## 参考
 

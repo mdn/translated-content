@@ -56,7 +56,7 @@ fetch(myRequest)
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.json")}}
+{{Compat}}
 
 ## 相关链接
 

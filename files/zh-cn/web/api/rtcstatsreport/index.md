@@ -35,7 +35,7 @@ _... 即将到来 ..._
 
 ## 浏览器兼容性
 
-{{Compat("api.RTCStatsReport")}}
+{{Compat}}
 
 ## 参见
 

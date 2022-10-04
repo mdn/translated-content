@@ -54,7 +54,7 @@ fetch(myRequest).then(function(response) {
 
 ## Browser compatibility
 
-{{Compat("api.Response.clone")}}
+{{Compat}}
 
 ## See also
 
