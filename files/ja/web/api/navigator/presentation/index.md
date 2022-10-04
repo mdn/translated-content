@@ -1,8 +1,8 @@
 ---
 title: Navigator.presentation
 slug: Web/API/Navigator/presentation
-translation_of: Web/API/Navigator/presentation
 ---
+
 {{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}
 
 `presentation` は {{DOMxRef("Navigator")}} のプロパティで、 [Presentation API](/ja/docs/Web/API/Presentation_API) のエントリーポイントを提供し、 {{DOMxRef("Presentation")}} オブジェクトへの参照を返します。

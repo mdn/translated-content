@@ -1,15 +1,8 @@
 ---
 title: window.length
 slug: Web/API/Window/length
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/length
 ---
+
 {{ApiRef}}
 
 ## 概要

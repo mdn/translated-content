@@ -11,6 +11,7 @@ tags:
   - 'y'
 translation_of: Web/API/DOMRectReadOnly/y
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`y`** de l'interface **`DOMRectReadOnly`** représente la coordonnée y de l'origine du `DOMRect`.

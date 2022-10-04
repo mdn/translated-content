@@ -1,16 +1,8 @@
 ---
 title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browsingData
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
+
 {{AddonSidebar}}拡張機能がユーザーの閲覧中に蓄積したデータをクリアできるようにします。
 
 `browsingData` API では、閲覧データは下記の型に分けられます。
@@ -71,7 +63,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 
 {{WebExtExamples("h2")}}
 
-> **Note:** この API は Chromium の [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **メモ:** この API は Chromium の [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

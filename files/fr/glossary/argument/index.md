@@ -8,9 +8,10 @@ tags:
 translation_of: Glossary/Argument
 original_slug: Glossaire/Argument
 ---
+
 Un **argument** est une {{Glossary("Value","valeur")}}  ({{Glossary("Primitive", "primitive")}} ou {{Glossary("Object", "objet")}}) passée en tant qu'entrée à une {{Glossary("Function", "fonction")}}.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

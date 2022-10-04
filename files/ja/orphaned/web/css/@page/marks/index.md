@@ -1,18 +1,9 @@
 ---
 title: marks
 slug: orphaned/Web/CSS/@page/marks
-tags:
-  - '@page'
-  - CSS
-  - CSS ページ化メディア
-  - CSS 記述子
-  - Experimental
-  - Reference
-  - ウェブ
-  - レイアウト
-translation_of: Web/CSS/@page/marks
 original_slug: Web/CSS/@page/marks
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 [CSS](/ja/docs/Web/CSS) の **`marks`** [@-規則](/ja/docs/Web/CSS/At-rule)記述子は、 {{cssxref("@page")}} @-規則で使用し、文書の表現に対して裁ち落とし記号や十字記号を追加します。*裁ち落とし記号*はページを切断するべき場所を示します。*十字記号*はシートの配置のために使用します。

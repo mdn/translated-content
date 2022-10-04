@@ -1,7 +1,6 @@
 ---
 title: 'Express Tutorial Part 4: Routes and controllers'
 slug: Learn/Server-side/Express_Nodejs/routes
-translation_of: Learn/Server-side/Express_Nodejs/routes
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
@@ -71,7 +70,7 @@ The code below provides a concrete example of how we can create a route module a
 
 First we create routes for a wiki in a module named **wiki.js**. The code first imports the Express application object, uses it to get a `Router` object and then adds a couple of routes to it using the `get()` method. Last of all the module exports the `Router` object.
 
-첫번재 우리는 wiki.js 를 이름을 가진 모듈에서 위키를 위한 라우트를 만든다. 첫번째 코드에서 Express 어플리케이션 객체가 중요하고, 이 객체를 라우트 오브젝트를 얻기 위해서 사용하고, get()메서드를 사용하여 라우트는 2개를 추가한다. 모듈에서 마지막에는 라우트 객체를 Export한다.
+첫 번째 우리는 wiki.js 를 이름을 가진 모듈에서 위키를 위한 라우트를 만든다. 첫번째 코드에서 Express 어플리케이션 객체가 중요하고, 이 객체를 라우트 오브젝트를 얻기 위해서 사용하고, get()메서드를 사용하여 라우트는 2개를 추가한다. 모듈에서 마지막에는 라우트 객체를 Export한다.
 
 ```js
 // wiki.js - Wiki route module
@@ -147,7 +146,7 @@ Route paths can also be string patterns. String patterns use a subset of regular
 - \* : The endpoint may have an arbitrary string where the \* character is placed. E.g. a route path of `'ab*cd'` will match endpoints `abcd`, `abXcd`, `abSOMErandomTEXTcd`, and so on.
 - () : Grouping match on a set of characters to perform another operation on. E.g. `'/ab(cd)?e'` will peform a ? match on (cd) —it will match `abe`, `abcde`, `abcdcde`, and so on.
 
-The route paths can also be JavaScript [regular expressions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions). For example, the route path below will match match `catfish `and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
+The route paths can also be JavaScript [regular expressions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions). For example, the route path below will match match `catfish` and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
 
 ```js
 app.get(/.*fish$/, function (req, res) {

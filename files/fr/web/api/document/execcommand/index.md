@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/execCommand
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 Lorsqu'un document HTML passe en [`designMode`](/fr/docs/Web/API/Document/designMode), l'objet `document` correspondant expose une méthode **`execCommand()`** permettant d'exécuter des commandes manipulant la région éditable courante tels que [les champs de formulaire](/fr/docs/Web/HTML/Element/input) ou les éléments [`contentEditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable).

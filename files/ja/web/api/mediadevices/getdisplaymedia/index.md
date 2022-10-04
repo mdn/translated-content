@@ -1,24 +1,8 @@
 ---
 title: MediaDevices.getDisplayMedia()
 slug: Web/API/MediaDevices/getDisplayMedia
-tags:
-  - API
-  - キャプチャ
-  - 会議
-  - メディア
-  - MediaDevices
-  - メソッド
-  - リファレンス
-  - 画面キャプチャ
-  - 画面キャプチャ API
-  - Sharing
-  - Video
-  - display
-  - getDisplayMedia
-  - screen
-browser-compat: api.MediaDevices.getDisplayMedia
-translationof: Web/API/MediaDevices/getDisplayMedia
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 {{domxref("MediaDevices")}} インターフェイスの **`getDisplayMedia()`** メソッドは、ディスプレイまたはその一部（ウィンドウなど）の内容を {{domxref("MediaStream")}} としてキャプチャする許可を選択し、許可するようユーザーに促します。
@@ -42,7 +26,7 @@ getDisplayMedia(constraints)
 
 {{jsxref("Promise")}} で、ユーザーが選択した画面領域から来る動画トラックと、オプションの音声トラックを含む {{domxref("MediaStream")}} に解決します。
 
-> **Note:** 音声トラックに対するブラウザーの対応は、メディアレコーダーが全く対応していないかどうかという点でも、対応している音声ソースという点でも、さまざまです。各ブラウザーの詳細については、[互換性一覧表](#ブラウザーの互換性)を確認してください。
+> **メモ:** 音声トラックに対するブラウザーの対応は、メディアレコーダーが全く対応していないかどうかという点でも、対応している音声ソースという点でも、さまざまです。各ブラウザーの詳細については、[互換性一覧表](#ブラウザーの互換性)を確認してください。
 
 ### 例外
 
@@ -101,8 +85,8 @@ async function startCapture(displayMediaOptions) {
 
 ## 関連情報
 
-- [画面キャプチャ API](/en-US/docs/Web/API/Screen_Capture_API)
-- [画面キャプチャ API の使用](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [メディアキャプチャとストリーム API](/en-US/docs/Web/API/Media_Streams_API)
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [画面キャプチャ API](/ja/docs/Web/API/Screen_Capture_API)
+- [画面キャプチャ API の使用](/ja/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- [WebRTC API](/ja/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: カメラやマイクからメディアをキャプチャ

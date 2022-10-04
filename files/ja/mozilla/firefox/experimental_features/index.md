@@ -1,13 +1,8 @@
 ---
 title: Firefox における実験的機能
 slug: Mozilla/Firefox/Experimental_features
-tags:
-  - 実験的
-  - Firefox
-  - 設定
-  - 機能
-translation_of: Mozilla/Firefox/Experimental_features
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、提案されているまたは最先端のウェブプラットフォーム標準を含む、 Firefox の実験的かつ部分的に実装された機能を一覧にしています。また、それらの機能が搭載されているビルドの情報、「既定で」有効になっているかどうか、有効または無効にするためにどの*環境設定*を使用すべきかについても説明しています。
@@ -19,7 +14,7 @@ translation_of: Mozilla/Firefox/Experimental_features
 
 実験的な機能は、 [Firefox 設定エディター](https://support.mozilla.org/ja/kb/about-config-editor-firefox) (Firefox のアドレスバーに `about:config` と入力) を使って、以下に示す関連する*設定*を変更することで、有効または無効にすることができます。
 
-> **Note:** 編集者の方へ - これらの表に機能を追加する際には、 [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) マクロ `\{{bug(<em>バグ番号</em>)}}` を使って関連するバグへのリンクを含めるようにしてください。
+> **メモ:** 編集者の方へ - これらの表に機能を追加する際には、 [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) マクロ `\{{bug(<em>バグ番号</em>)}}` を使って関連するバグへのリンクを含めるようにしてください。
 
 ## HTML
 
@@ -1666,7 +1661,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)は、ウェブ開発者がブラウザーの特定の機能や API の動作を選択的に有効化、無効化、変更することを可能にします。 CSP と似ていますが、セキュリティの動作ではなく機能を制御します。
 
-> **Note:** `Feature-Policy` ヘッダーは、仕様書では `Permissions-Policy` に名称が変更されており、本記事もいずれその変更を反映して更新される予定です。
+> **メモ:** `Feature-Policy` ヘッダーは、仕様書では `Permissions-Policy` に名称が変更されており、本記事もいずれその変更を反映して更新される予定です。
 
 <table>
   <thead>
@@ -1710,7 +1705,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 [`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP レスポンスヘッダーの `cache` ディレクティブは、リクエストしているウェブサイトのブラウザーキャッシュをクリアします。
 
-> **Note:** これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ({{bug(1729291)}})。
+> **メモ:** これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ({{bug(1729291)}})。
 
 <table>
   <thead>

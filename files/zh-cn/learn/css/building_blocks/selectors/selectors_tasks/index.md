@@ -2,6 +2,7 @@
 title: 'Test your skills: Selectors'
 slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
 ---
+
 {{LearnSidebar}}
 
 这个任务的目的是帮助你理解 CSS 里的选择器。
@@ -97,7 +98,7 @@ Try updating the live code below to recreate the finished example:
 如果你想得到任务评价，或者遇到了问题需要帮助，请按如下操作进行：
 
 1. 将你的作业上传到可共享的在线编辑器上，比如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。你可以自己编写代码，也可以使用上面给出的初始文件。
-2. 在 [MDN 论坛的学习板块](https://discourse.mozilla.org/c/mdn/learn)上发帖以寻求打分或帮助。你的帖子中应包含:
+2. 在 [MDN 论坛的学习板块](https://discourse.mozilla.org/c/mdn/learn)上发帖以寻求打分或帮助。你的帖子中应包含：
 
     - 一个简述问题的标题。如“Assessment wanted for Selectors skill test 1”（请使用英文发帖）。
     - 详细描述你的尝试和你预期的网页效果。比如你在哪个位置需要帮助，或者你需要打分评估。

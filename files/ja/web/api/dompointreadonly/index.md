@@ -1,21 +1,8 @@
 ---
 title: DOMPointReadOnly
 slug: Web/API/DOMPointReadOnly
-page-type: web-api-interface
-tags:
-  - API
-  - Coordinate
-  - DOM
-  - DOM Reference
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Interface
-  - Point
-  - Reference
-browser-compat: api.DOMPointReadOnly
-translation_of: Web/API/DOMPointReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMPointReadOnly`** インターフェイスは、 {{domxref("DOMPoint")}} が座標系で二次元または三次元の点を定義するために使用する座標フィールドと透視図フィールドを指定するものです。

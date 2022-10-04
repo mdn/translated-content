@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/meta
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<meta>`** représente toute information de métadonnées qui ne peut pas être représentée par un des éléments ({{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} ou {{HTMLElement("title")}})
@@ -531,16 +532,11 @@ Désactiver la possibilité de zoom avec `user-scalable: no` empêche les person
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                                 | Commentaires                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-meta', '&lt;meta name="referrer"&gt;')}} | {{Spec2('Referrer Policy')}} | Définition des valeurs et de la sémantique associée pour `<meta name="referrer">`. |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-meta-element', '&lt;meta&gt;')}}                         | {{Spec2('HTML WHATWG')}}     | Ajout de l'attribut `itemprop`                                                     |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-meta-element', '&lt;meta&gt;')}}                 | {{Spec2('HTML5 W3C')}}         | Ajout de l'attribut `charset`                                                      |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.4.2', '&lt;meta&gt;')}}                                 | {{Spec2('HTML4.01')}}         |                                                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.meta")}}
+{{Compat}}
 
 ## Voir aussi
 

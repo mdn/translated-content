@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setUint32
 ---
+
 {{JSRef}}
 
 La méthode **`setUint32()`** permet d'enregister un entier non-signé sur 32 bits (type _unsigned long_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/negative
 ---
+
 {{CSSRef}}
 
 Le descripteur **`negative`**, associé à la règle @ {{cssxref("@counter-style")}}, permet de définir la représentation du compteur lorsque la valeur est négative.
@@ -28,9 +29,13 @@ Si la valeur du compteur est négative, le symbole fourni par le descripteur ser
 - Deuxième symbole {{optional_inline}}
   - : Si cette valeur (type {{cssxref("&lt;symbol&gt;")}}) est présente, le symbole sera ajouté après la représentation du compteur lorsque sa valeur est négative.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -65,15 +70,11 @@ Si la valeur du compteur est négative, le symbole fourni par le descripteur ser
 
 ## Spécifications
 
-| Spécification                                                                                | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-system', 'system')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.negative")}}
+{{Compat}}
 
 ## Voir aussi
 

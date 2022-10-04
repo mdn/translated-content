@@ -1,16 +1,6 @@
 ---
 title: HTML 属性リファレンス
 slug: Web/HTML/Attributes
-tags:
-  - 属性
-  - 初心者
-  - 要素の属性
-  - 要素
-  - HTML
-  - リファレンス
-  - 設定
-  - ウェブ
-translation_of: Web/HTML/Attributes
 ---
 
 {{HTMLSidebar}}

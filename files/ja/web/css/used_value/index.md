@@ -1,20 +1,15 @@
 ---
 title: 使用値
 slug: Web/CSS/used_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/cascade.html#used-value
-translation_of: Web/CSS/used_value
 ---
+
 {{CSSRef}}
 
 **使用値** (used value) は [CSS](/ja/docs/Web/CSS) プロパティにおいて、[計算値](/ja/docs/Web/CSS/computed_value)で行われたすべての計算が実行された後の値です。
 
 {{glossary("user agent", "ユーザーエージェント")}}が計算を終了した後、すべての CSS プロパティは使用値を持ちます。長さ ({{cssxref("width")}} や {{cssxref("line-height")}} など) の使用値はピクセル数です。一括指定プロパティ ({{cssxref("background")}} など) の使用値は、各成分 ({{cssxref("background-color")}} や {{cssxref("background-size")}} など) のプロパティに、 {{cssxref("position")}} や {{cssxref("float")}} が加味されたものと一致します。
 
-> **Note:** DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API が返すのは[解決値](/ja/docs/Web/CSS/resolved_value)であり、これはプロパティによって[計算値](/ja/docs/Web/CSS/computed_value)または[使用値](/ja/docs/Web/CSS/used_value)のどちらかになります。
+> **メモ:** DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API が返すのは[解決値](/ja/docs/Web/CSS/resolved_value)であり、これはプロパティによって[計算値](/ja/docs/Web/CSS/computed_value)または[使用値](/ja/docs/Web/CSS/used_value)のどちらかになります。
 
 ## 例
 

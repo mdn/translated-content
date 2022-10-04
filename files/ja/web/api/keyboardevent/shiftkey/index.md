@@ -1,17 +1,8 @@
 ---
 title: KeyboardEvent.shiftKey
 slug: Web/API/KeyboardEvent/shiftKey
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.KeyboardEvent.shiftKey
-translation_of: Web/API/KeyboardEvent/shiftKey
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.shiftKey`** は読み取り専用プロパティで、このイベントが発生したときに <kbd>shift</kbd> キーが押されていたか (`true`) いなかったか (`false`) を示す論理値を返します。

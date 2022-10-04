@@ -9,9 +9,10 @@ tags:
 translation_of: Glossary/Character
 original_slug: Glossaire/Character
 ---
+
 Un **caractère** peut être un symbole (lettre, chiffre, ponctuation) ou un caractère de contrôle (par exemple un retour chariot ou un trait d'union conditionnel). {{glossary("UTF-8")}} est le jeu de caractères le plus courant. Il comprend les graphèmes des langues les plus répandues.
 
-## Pour approfondir
+## Voir aussi
 
 ### Connaissances générales
 

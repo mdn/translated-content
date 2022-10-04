@@ -1,12 +1,8 @@
 ---
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
-tags:
-  - Error
-  - JavaScript
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Not_defined
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "_variable_ is not defined" は、どこかで参照している変数が存在しない場合に発生します。
@@ -25,7 +21,7 @@ ReferenceError: "x" is not defined
 
 どこかで存在しない変数を参照しています。この変数を宣言しておくか、現在のスクリプトまたは[スコープ](/ja/docs/Glossary/Scope)で利用可能であることを確認する必要があります。
 
-> **Note:** **注:** ライブラリ (jQuery など) を読み込むとき、ライブラリの変数、例えば "$" にアクセスする前に読み込みが行われるかを確認してください。ライブラリを読み込む {{HTMLElement("script")}} 要素は、それを使用するコードよりも前に置いてください。
+> **メモ:** ライブラリ (jQuery など) を読み込むとき、ライブラリの変数、例えば "$" にアクセスする前に読み込みが行われるかを確認してください。ライブラリを読み込む {{HTMLElement("script")}} 要素は、それを使用するコードよりも前に置いてください。
 
 ## 例
 

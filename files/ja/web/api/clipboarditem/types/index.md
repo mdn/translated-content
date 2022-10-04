@@ -1,22 +1,8 @@
 ---
 title: ClipboardItem.types
 slug: Web/API/ClipboardItem/types
-page-type: web-api-instance-property
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Cut
-  - Property
-  - Read-only
-  - Reference
-  - Types
-  - copy
-  - paste
-browser-compat: api.ClipboardItem.types
-translation_of: Web/API/ClipboardItem/types
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 **`types`** は {{domxref("ClipboardItem")}} インターフェイスの読み取り専用プロパティで、この {{domxref("ClipboardItem")}} の内容で利用できる{{Glossary("MIME type", 'MIME タイプ')}}の配列 ({{jsxref("Array")}}) を返します。

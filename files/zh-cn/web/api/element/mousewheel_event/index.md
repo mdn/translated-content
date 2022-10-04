@@ -2,6 +2,7 @@
 title: mousewheel
 slug: Web/API/Element/mousewheel_event
 ---
+
 {{ Non-standard_header() }}
 
 The `mousewheel` event is fired asynchronously when a mouse wheel or similar device is operated. It's represented by the {{ domxref("MouseWheelEvent") }} interface.
@@ -23,7 +24,7 @@ The document in MSDN: [onmousewheel event](http://msdn.microsoft.com/en-us/libra
 
 ## Browser compatibility
 
-{{Compat("api.Element.mousewheel_event")}}
+{{Compat}}
 
 ## detail value
 

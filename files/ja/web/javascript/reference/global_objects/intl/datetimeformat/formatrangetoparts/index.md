@@ -1,18 +1,8 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** メソッドは、 {{jsxref("Intl.DateTimeFormat")}} フォーマッターで生成される期間の各部品を表すロケール特有のトークンを提供します。
@@ -31,7 +21,7 @@ formatRangeToParts(startDate, endDate)
 
 このメソッドは2つの {{jsxref("Date")}} を受け取り、期間を書式化する際の各部品を表す*ロケール特有*のトークンを含む {{jsxref("Array")}} オブジェクトを返します。
 
-> **Note:** 返値は現在のロケールで表示されるので、以下のものとは異なる可能性があります。
+> **メモ:** 返値は現在のロケールで表示されるので、以下のものとは異なる可能性があります。
 
 ```js
 let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));

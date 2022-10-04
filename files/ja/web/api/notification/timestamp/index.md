@@ -1,18 +1,8 @@
 ---
 title: Notification.timestamp
 slug: Web/API/Notification/timestamp
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - timeStamp
-browser-compat: api.Notification.timestamp
-translation_of: Web/API/Notification/timestamp
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`timestamp`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `timestamp` オプションで指定された {{domxref("DOMTimeStamp")}} を返します。

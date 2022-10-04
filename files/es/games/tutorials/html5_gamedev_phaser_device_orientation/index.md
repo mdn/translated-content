@@ -85,7 +85,7 @@ Hasta ahora tenemos una simple página web `HTML` con el contenido básico en la
 
 ```js
 var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');
-````
+```
 
 La linea de arriba inicializará la intancia de Phaser — los argumentos son el ancho del `<canvas>`, su altura, el método de renderizado (estamos utilizando `CANVAS` pero también existen disponibles las opciones `WEBGL` y `AUTO`) y el ID opcional del contenedor DOM en el que queremos poner el `<canvas>`. Si no hay nada especificado en el último argumento o el elemento no es encontrado, el `<canvas>` será añadido a la etiqueta `<body>`. Sin el _framework_ para añadir el elemento canvas hubieses tenido que escribir algo como esto dentro de la etiqueta `<body>`:
 
@@ -131,7 +131,7 @@ Ball.Boot.prototype = {
         this.game.state.start('Preloader');
     }
 };
-````
+```
 
 El objeto principal `Ball` es definido y estamos añadiendo dos variables llamadas `_WIDTH` y `_HEIGHT` esos seran el ancho y la altura del canvas de nuestro juego, respectivamente — nos ayudarán a posicionar los elementos en la pantalla. Estamos cargando dos imagenes primero que serán usadas después en el estado `Preload` para mostrar el progreso de la carga de los demás elementos. La función `create` contiene algunas de las configuraciones básicas: estamos configurando la escala y la alineación del canvas, y avanzando al estado `Preload` cuando todo este listo.
 
@@ -187,7 +187,7 @@ Ball.Howto.prototype = {
         this.game.state.start('Game');
     }
 };
-````
+```
 
 El estado `Howto` muesta las intrucciones de juego en la pantalla antes de comenzar el juego. Luego de clickear la pantalla el juego es lanzado.
 
@@ -303,7 +303,7 @@ this.hole.body.setSize(2, 2);
 
 La diferencia está en que el cuerpo del agujero se configura como inamovible por lo que no se moverá cuando acertamos con la pelota y tendrá calculada la detección de colisión (esto se tratará más adelante en este artículo).
 
-#### **Construyendo el laberinto de bloques**
+#### Construyendo el laberinto de bloques
 
 Para hacer más difícil el juego, y más interesante, añadiremos algunos obstaculos entre la pelota y la sálida. Podríamos usar un editor de niveles pero por motivo de este tutorial, vamos a crear algo nosotros mismos.
 
@@ -356,7 +356,7 @@ showLevel: function(level) {
 
 Gracias a eso el juego da al jugador un reto: ahora tiene que rodar la pelota a través del área de juego y guiarla por el laberinto construido por bloques. Es solo un ejemplo de cargar los niveles, y solo hay 5 puramente para mostrar la idea, pero podés trabajar en expandirlo por tu cuenta.
 
-#### **Detección de colisión**
+#### Detección de colisión
 
 Hasta este punto tenemos la pelota, que puede ser controlada por el jugador, el agujero que se tiene que alcanzar y los obstáculos que bloquean el camino. Sin embargo, hay un problema: nuestro juego todavía no tiene ninguna detección de colisiones, así que no sucede nada cuando la pelota golpea los bloques, sólo los atraviesa. Vamos a arreglarlo! La buena noticia es que el _framework_ se ocupará de calcular la detección de colisones, nosotros sólo debemos especificar los objetos con los que colisionará en la función `update()`:
 

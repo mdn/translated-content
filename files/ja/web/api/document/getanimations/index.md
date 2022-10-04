@@ -1,24 +1,9 @@
 ---
 title: Document.getAnimations()
 slug: Web/API/Document/getAnimations
-tags:
-  - API
-  - Animation
-  - CSS
-  - CSS Animations
-  - CSS Transitions
-  - Document
-  - Experimental
-  - Method
-  - Reference
-  - Transitions
-  - Web Animations
-  - getAnimations
-  - waapi
-  - web animations api
-translation_of: Web/API/DocumentOrShadowRoot/getAnimations
 original_slug: Web/API/DocumentOrShadowRoot/getAnimations
 ---
+
 {{ SeeCompatTable() }}{{APIRef("Web Animations")}}
 
 `getAnimations()` メソッドは {{domxref("Document")}} インターフェイスのメソッドで、この文書の配下にあるターゲット要素にあるすべての {{domxref("Animation")}} オブジェクトの配列を返します。この配列には [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations), [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions), [ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API) が含まれます。

@@ -1,33 +1,13 @@
 ---
 title: HTMLMediaElement.canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
-page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Capability
-  - Compatibility
-  - Format
-  - HTML DOM
-  - HTMLMediaElement
-  - MIME Types
-  - Media
-  - Media Types
-  - Method
-  - Reference
-  - Type
-  - Video
-  - Web
-  - canPlayType
-  - support
-browser-compat: api.HTMLMediaElement.canPlayType
-translation_of: Web/API/HTMLMediaElement/canPlayType
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLMediaElement")}} の **`canPlayType()`** メソッドは、現在のブラウザーが指定された MIME タイプのメディアを再生できるかどうかを報告します。
 
-> **Note:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では利用できません。</div>
+> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では利用できません。</div>
 
 ## 構文
 

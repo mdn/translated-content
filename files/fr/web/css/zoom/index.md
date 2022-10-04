@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/zoom
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété non-standard **`zoom`** permet de manipuler l'effet d'agrandissement d'un élément. Plutôt que cette propriété non-standard, mieux vaudra utiliser [les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms), si possible. Cependant, contrairement aux transformations CSS, **`zoom`** affecte la taille de l'élément.

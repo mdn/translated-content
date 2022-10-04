@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: contentinfo ロール'
 slug: Web/Accessibility/ARIA/Roles/Contentinfo_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Contentinfo_role
 ---
+
 コンテンツ情報 (`contentinfo`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、著作権情報、ナビゲーションリンク、プライバシーステートメントなど、ウェブサイトの各ページの最後に繰り返される情報を識別するために使用します。 このセクションは一般的にフッターと呼ばれます。
 
 ```html
@@ -31,7 +27,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Contentinfo_role
 
 各ページには、{{htmlelement("footer")}} 要素を使用するか、または `role="contentinfo"` を宣言することによって作成されたコンテンツ情報 (`contentinfo`) ランドマークが 1 つだけ含まれているべきです。 {{htmlelement("iframe")}} 要素を介して埋め込まれたコンテンツに存在するコンテンツ情報 (`contentinfo`) ランドマークは、この制限に含まれません。
 
-> **Note:** {{htmlelement("footer")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (`contentinfo`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきで、念のため VoiceOver の[既知の問題をテスト](/ja/docs/Web/HTML/Element/footer#accessibility_concerns)してください。
+> **メモ:** {{htmlelement("footer")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (`contentinfo`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきで、念のため VoiceOver の[既知の問題をテスト](/ja/docs/Web/HTML/Element/footer#accessibility_concerns)してください。
 
 ## 例
 
@@ -131,4 +127,4 @@ translation_of: Web/Accessibility/ARIA/Roles/Contentinfo_role
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The Footer Element Update | HTML5 Doctor](http://html5doctor.com/the-footer-element-update/)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

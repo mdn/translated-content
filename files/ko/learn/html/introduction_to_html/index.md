@@ -1,11 +1,6 @@
 ---
 title: HTML 소개
 slug: Learn/HTML/Introduction_to_HTML
-tags:
-  - CodingScripting
-  - HTML
-  - Landing
-translation_of: Learn/HTML/Introduction_to_HTML
 ---
 {{LearnSidebar}}
 

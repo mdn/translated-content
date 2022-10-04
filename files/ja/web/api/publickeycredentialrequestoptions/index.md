@@ -1,16 +1,8 @@
 ---
 title: PublicKeyCredentialRequestOptions
 slug: Web/API/PublicKeyCredentialRequestOptions
-tags:
-  - API
-  - Dictionary
-  - PublicKeyCredentialRequestOptions
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-  - 辞書
-translation_of: Web/API/PublicKeyCredentialRequestOptions
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`PublicKeyCredentialRequestOptions`** は [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) の辞書で、 {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} で指定された {{domxref("PublicKeyCredential")}} を読み取るために渡されるオプションを保持します。

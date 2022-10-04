@@ -14,15 +14,21 @@ Es responsabilidad de la aplicación en el servidor implementar la semántica se
 
 Una petición de un método seguro, no cambia ningún estado en el servidor:
 
-    GET /pageX.html HTTP/1.1
+```
+GET /pageX.html HTTP/1.1
+```
 
 Una petición de un método inseguro, puede cambiar el estado en el servidor:
 
-    POST /pageX.html HTTP/1.1
+```
+POST /pageX.html HTTP/1.1
+```
 
 Una petición de un método idempotente pero no seguro:
 
-    DELETE /idX/delete HTTP/1.1
+```
+DELETE /idX/delete HTTP/1.1
+```
 
 ## Vea también
 

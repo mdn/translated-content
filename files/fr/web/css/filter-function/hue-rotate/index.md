@@ -5,6 +5,7 @@ translation_of: Web/CSS/filter-function/hue-rotate()
 original_slug: Web/CSS/filter-function/hue-rotate()
 browser-compat: css.types.filter-function.hue-rotate
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`hue-rotate()`** permet d'appliquer une rotation de teinte sur une image. Le résultat de cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).

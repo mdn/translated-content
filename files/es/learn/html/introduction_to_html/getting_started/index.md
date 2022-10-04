@@ -275,9 +275,9 @@ Otro ejemplo de un elemento es {{htmlelement("a")}}. Esto significa _ancla_. Una
 
 Edita la línea de abajo en el área de _Entrada_ para convertirlo en un enlace a tu sitio web favorito.
 
-1.  Añade el elemento `<a>`.
-2.  Añade el atributo `href` y el atributo `title`.
-3.  Especifica el atributo `target` para abrir el enlace en una nueva pestaña.
+1. Añade el elemento `<a>`.
+2. Añade el atributo `href` y el atributo `title`.
+3. Especifica el atributo `target` para abrir el enlace en una nueva pestaña.
 
 Los cambios se actualizarán inmediatamente en la zona de _Salida_. Deberías ver un enlace que mostrará el contenido del atributo `title` cuando pases el ratón encima, y que te llevará a la dirección web indicada por el atributo `href` cuando hagas clic. Recuerda que debes incluir un espacio entre el nombre del elemento y cada atributo.
 
@@ -501,7 +501,7 @@ Los elementos HTML no son muy útiles por sí mismos. Ahora veremos cómo combin
 
 Aquí tenemos:
 
-1.  `<!DOCTYPE html>`: El elemento _doctype_. En sus inicios, cuando el HTML llevaba poco tiempo (alrededor de 1991-1992), los _doctypes_ servían como enlaces al conjunto de reglas que la página HTML debía seguir para que fuera considerado buen HTML. Un elemento _doctype_ de aquella época podía parecerse a esto:
+1. `<!DOCTYPE html>`: El elemento _doctype_. En sus inicios, cuando el HTML llevaba poco tiempo (alrededor de 1991-1992), los _doctypes_ servían como enlaces al conjunto de reglas que la página HTML debía seguir para que fuera considerado buen HTML. Un elemento _doctype_ de aquella época podía parecerse a esto:
 
     ```html
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -510,20 +510,20 @@ Aquí tenemos:
 
     En la actualidad se ignora y se considera un legado histórico que hay que incluir para que todo funcione correctamente. `<!DOCTYPE html>` es la secuencia de caracteres más corta que se acepta como elemento _doctype_ válido. Eso es lo único que realmente necesitas saber.
 
-2.  `<html></html>`: El elemento `<html>`. Este elemento envuelve todo el contenido de la página. A veces se lo conoce como el elemento raíz.
-3.  `<head></head>`: El elemento `<{{htmlelement("head")}}>` (cabecera). Este elemento actúa como contenedor para todos los parámetros que quieras incluir en el documento HTML que _no serán_ visibles a los visitantes de la página. Incluye cosas como palabras clave y la descripción de la página que quieras mostrar en los resultados de búsqueda, así como la hoja de estilo para formatear nuestro contenido, declaraciones de codificación de caracteres y más. Aprenderás más acerca de esto en el siguiente artículo de la serie.
-4.  `<meta charset="utf-8">`: Este elemento establece que tu documento HTML usará la codificación UTF-8, que incluye la gran mayoría de caracteres de todos los idiomas humanos escritos. En resumen: puede gestionar cualquier contenido textual que pongas en tu documento. No hay razón para no configurar este valor y te puede ayudar a evitar problemas más adelante.
-5.  `<title></title>`: El elemento {{htmlelement("title")}}. Este establece el título de la página, que es el título que aparece en la pestaña del navegador en la que se carga la página. El título de la página también se utiliza para describir la página cuando se marca como favorita.
-6.  `<body></body>`: El elemento `<body>`. Contiene todo el contenido que quieres mostrar a los usuarios cuando visitan tu página, ya sea texto, imágenes, vídeos, juegos, pistas de audio reproducibles o cualquier otra cosa.
+2. `<html></html>`: El elemento `<html>`. Este elemento envuelve todo el contenido de la página. A veces se lo conoce como el elemento raíz.
+3. `<head></head>`: El elemento `<{{htmlelement("head")}}>` (cabecera). Este elemento actúa como contenedor para todos los parámetros que quieras incluir en el documento HTML que _no serán_ visibles a los visitantes de la página. Incluye cosas como palabras clave y la descripción de la página que quieras mostrar en los resultados de búsqueda, así como la hoja de estilo para formatear nuestro contenido, declaraciones de codificación de caracteres y más. Aprenderás más acerca de esto en el siguiente artículo de la serie.
+4. `<meta charset="utf-8">`: Este elemento establece que tu documento HTML usará la codificación UTF-8, que incluye la gran mayoría de caracteres de todos los idiomas humanos escritos. En resumen: puede gestionar cualquier contenido textual que pongas en tu documento. No hay razón para no configurar este valor y te puede ayudar a evitar problemas más adelante.
+5. `<title></title>`: El elemento {{htmlelement("title")}}. Este establece el título de la página, que es el título que aparece en la pestaña del navegador en la que se carga la página. El título de la página también se utiliza para describir la página cuando se marca como favorita.
+6. `<body></body>`: El elemento `<body>`. Contiene todo el contenido que quieres mostrar a los usuarios cuando visitan tu página, ya sea texto, imágenes, vídeos, juegos, pistas de audio reproducibles o cualquier otra cosa.
 
 ### Aprendizaje activo: Añadir algunas características a un documento HTML
 
 Si quieres escribir algo de HTML en tu ordenador local para experimentar, puedes:
 
-1.  Copiar el ejemplo de la página HTML del punto anterior.
-2.  Crear un archivo nuevo en un editor de texto.
-3.  Pegar el código en el nuevo archivo de texto.
-4.  Guardar el archivo como `index.html`.
+1. Copiar el ejemplo de la página HTML del punto anterior.
+2. Crear un archivo nuevo en un editor de texto.
+3. Pegar el código en el nuevo archivo de texto.
+4. Guardar el archivo como `index.html`.
 
 > **Nota:** También puedes encontrar esta plantilla básica de HTML en el [repositorio GitHub del Área MDN Learning](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html).
 

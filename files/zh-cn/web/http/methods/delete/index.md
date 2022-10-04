@@ -2,6 +2,7 @@
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
 ---
+
 {{HTTPSidebar}}
 
 **HTTP DELETE** 请求方法用于删除指定的资源。

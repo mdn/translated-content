@@ -1,14 +1,8 @@
 ---
 title: DataView.prototype.setFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
 ---
+
 {{JSRef}}
 
 **`setFloat64()`** メソッドは、符号付き 64 ビット浮動小数点数 (double) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。

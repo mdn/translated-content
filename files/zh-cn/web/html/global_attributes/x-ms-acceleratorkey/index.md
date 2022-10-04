@@ -3,6 +3,7 @@ title: x-ms-加速装置键
 slug: Web/HTML/Global_attributes/x-ms-acceleratorkey
 original_slug: Web/HTML/Global_attributes/x-ms-加速装置键
 ---
+
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
 **`x-ms-acceleratorkey`** 属性声明 [accelerator key](https://docs.microsoft.com/en-us/windows/uwp/design/input/keyboard-accelerators) 已经分配给一个元素：当按下键盘上的键时，通过 JavaScript 激活该元素。

@@ -2,6 +2,7 @@
 title: MediaElementAudioSourceNode
 slug: Web/API/MediaElementAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `MediaElementAudioSourceNode` 接口代表着某个由 HTML5 {{ htmlelement("audio") }} 或 {{ htmlelement("video") }} 元素所组成的音频源。该接口作为扮演音源的 {{domxref("AudioNode")}} 节点。
@@ -50,7 +51,7 @@ _集成其父类方法，{{domxref("AudioNode")}}。_
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaElementAudioSourceNode")}}
+{{Compat}}
 
 ## 相关页面
 

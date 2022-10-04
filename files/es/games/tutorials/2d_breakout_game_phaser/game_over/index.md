@@ -16,7 +16,7 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Game_over
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls", "Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field")}}
 
-Este es el paso numero **ocho** de los 16 del tutorial de [Gamedev Phaser](https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser). Puedes encontrar el código fuente de como debería verse, después de haber completado esta lección en [Gamedev-Phaser-Content-Kit/demos/lesson08.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson08.html).
+Este es el paso numero **ocho** de los 16 del tutorial de [Gamedev Phaser](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser). Puedes encontrar el código fuente de como debería verse, después de haber completado esta lección en [Gamedev-Phaser-Content-Kit/demos/lesson08.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson08.html).
 
 Para hacer el juego más interesante podemos introducir la habilidad de perder --- si no golpeas la pelota antes de que alcance el borde inferior de la pantalla, se acabará el juego.
 
@@ -48,6 +48,6 @@ Puedes comprobar el código final para esta lección en la demo de abajo, y juga
 
 ## Siguientes pasos
 
-Ahora el juego básico está hecho, hagamos mas interesante el caso introduciendo ladrillos para romper --- es hora de [construir el campo de ladrillos](https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field).
+Ahora el juego básico está hecho, hagamos mas interesante el caso introduciendo ladrillos para romper --- es hora de [construir el campo de ladrillos](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls", "Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field")}}

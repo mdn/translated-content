@@ -19,7 +19,9 @@ translation_of: Web/API/Node/appendChild
 
 ## Syntax
 
-    var aChild = element.appendChild(aChild);
+```js
+var aChild = element.appendChild(aChild);
+```
 
 이동한 자식 노드를 반환합니다.
 

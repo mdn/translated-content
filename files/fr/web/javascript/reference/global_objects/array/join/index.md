@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/join
 ---
+
 {{JSRef}}
 
 La méthode **`join()`** crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau (ou d'[un objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Collections_indexées#Manipuler_des_objets_semblables_à_des_tableaux)). La concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.

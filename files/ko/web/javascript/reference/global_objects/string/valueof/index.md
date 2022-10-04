@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 
 ## 구문
 
-    str.valueOf()
+```js
+str.valueOf()
+```
 
 ### 반환 값
 

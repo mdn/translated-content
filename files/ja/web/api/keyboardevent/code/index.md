@@ -1,20 +1,8 @@
 ---
 title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
-page-type: web-api-instance-property
-tags:
-  - API
-  - Code
-  - DOM
-  - DOM Events
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
-browser-compat: api.KeyboardEvent.code
-translation_of: Web/API/KeyboardEvent/code
 ---
+
 {{APIRef("UI Events")}}
 
 `KeyboardEvent.code` プロパティは、（キー入力によって入力された文字ではなく）キーボード上の物理的なキーを表します。つまり、このプロパティはキーボードレイアウトや修飾キーの状態によって変更される前の値を返します。

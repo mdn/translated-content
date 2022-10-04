@@ -21,8 +21,7 @@ No confundas JavaScript con el [lenguaje de programación Java](https://es.wikip
 >
 > Hemos reunido un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
 >
-> [Empieza aquí](es/docs/Learn/Front-end_web_developer)
->
+> [Empieza aquí](/es/docs/Learn/Front-end_web_developer)
 
 ## Tutoriales
 

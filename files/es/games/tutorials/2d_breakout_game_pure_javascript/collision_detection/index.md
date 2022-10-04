@@ -127,6 +127,6 @@ Ahora se comprueban las colisiones cada vez que se dibuja un fotograma. Concreta
 
 ## Pasos siguientes
 
-Definitivamente, lo estamos consiguiendo. ¡Adelanteeee! En el capítulo octavo nos ocuparemos de la [Puntuación y fin del juego ganando](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win).
+Definitivamente, lo estamos consiguiendo. ¡Adelanteeee! En el capítulo octavo nos ocuparemos de la [Puntuación y fin del juego ganando](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win")}}

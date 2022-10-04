@@ -1,22 +1,11 @@
 ---
 title: Feature-Policy
 slug: Web/HTTP/Headers/Feature-Policy
-tags:
-  - 認証
-  - 実験的
-  - Feature-Policy
-  - HTTP
-  - 権限
-  - リファレンス
-  - セキュリティ
-  - ウェブ
-  - ヘッダー
-browser-compat: http.headers.Feature-Policy
-translation_of: Web/HTTP/Headers/Feature-Policy
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-> **Warning:** このヘッダーは仕様書では `Permissions-Policy` に改名されており、この記事は最終的にその変更を反映して更新される予定です。
+> **警告:** このヘッダーは仕様書では `Permissions-Policy` に改名されており、この記事は最終的にその変更を反映して更新される予定です。
 
 HTTP の **`Feature-Policy`** ヘッダーは、自身のフレームおよび文書内の {{HTMLElement("iframe")}} 要素で、ブラウザーの機能を使用することを許可または拒否する仕組みを提供します。</span>
 
@@ -51,10 +40,10 @@ Feature-Policy: <directive> <allowlist>
     - `'self'`: この機能は、この文書と、含まれるすべての閲覧コンテキスト (iframe) のうち、同じオリジンのものに許可されます。
     - `'src'`: (iframe の `allow` 属性のみ) この iframe に読み込まれた文書が iframe の {{HTMLElement('iframe','src','#Attributes')}} 属性の URL と同じオリジンから来ている限り、この機能はこの iframe で許可されます。
 
-      > **Note:** `'src'` のオリジンは iframe の `allow` 属性の中でのみ使用され、これが*既定の* `allowlist` の値です。
+      > **メモ:** `'src'` のオリジンは iframe の `allow` 属性の中でのみ使用され、これが*既定の* `allowlist` の値です。
 
     - `'none'`: この機能は最上位および含まれる閲覧コンテキストで無効になります。
-    - \<origin(s)>: この機能は特定のオリジン (例えば、 https\://example.com) で許可されます。オリジンは空白で区切ってください。
+    - \<origin(s)>: この機能は特定のオリジン (例えば、 `https://example.com`) で許可されます。オリジンは空白で区切ってください。
 
     `*` の値 (すべてのオリジンで有効) または `'none'` (すべてのオリジンで無効) は単独でのみ使用できますが、 `'self'` と `'src'` は一つ以上のオリジンと一緒に使用することができます。
 

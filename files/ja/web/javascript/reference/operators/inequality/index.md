@@ -1,14 +1,8 @@
 ---
 title: 不等価 (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.inequality
-translation_of: Web/JavaScript/Reference/Operators/Inequality
 ---
+
 {{jsSidebar("Operators")}}
 
 不等価演算子 (`!=`) は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。[厳密不等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_inequality)演算子とは異なり、異なる型のオペランドを変換して比較を行おうとします。

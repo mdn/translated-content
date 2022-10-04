@@ -1,15 +1,8 @@
 ---
 title: 字句文法
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - ガイド
-  - JavaScript
-  - キーワード
-  - 字句文法
-  - リテラル
-browser-compat: javascript.grammar
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
+
 {{JsSidebar("More")}}
 
 このページでは、 JavaScript の字句文法について説明します。 ECMAScript スクリプトのソーステキストは、左から右へスキャンされ、入力要素、すなわちトークン、制御文字、行末、コメント、[ホワイトスペース](/ja/docs/Glossary/Whitespace)の並びに変換されます。 ECMAScript も、特定のキーワードとリテラルを定義しており、文を終了するにはセミコロンを自動挿入するためのルールがあります。
@@ -123,9 +116,9 @@ comment();
 console.log("Hello world");
 ```
 
-> **Note:** JavaScript のハッシュバンコメントは、ファイルを正しいインタープリターで実行するために使用される [UNIX のシバン](https://en.wikipedia.org/wiki/Shebang_(Unix))を模倣したものです。
+> **メモ:** JavaScript のハッシュバンコメントは、ファイルを正しいインタープリターで実行するために使用される [UNIX のシバン](https://en.wikipedia.org/wiki/Shebang_(Unix))を模倣したものです。
 
-> **Warning:** スクリプトをシェル環境で直接実行できるようにしたい場合は、 [BOM](https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%83%9E%E3%83%BC%E3%82%AF) のない UTF-8 でエンコードしてください。ハッシュバンコメントの前に BOM があってもブラウザーでは動作しますが、ハッシュバンのあるスクリプトで BOM を使用することは推奨されていません。 BOM は Unix/Linux のシェル環境でスクリプトを実行しようとすると動作しません。したがって、シェル環境から直接スクリプトを実行したい場合は BOM のない UTF-8 を使用してください。
+> **警告:** スクリプトをシェル環境で直接実行できるようにしたい場合は、 [BOM](https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%83%9E%E3%83%BC%E3%82%AF) のない UTF-8 でエンコードしてください。ハッシュバンコメントの前に BOM があってもブラウザーでは動作しますが、ハッシュバンのあるスクリプトで BOM を使用することは推奨されていません。 BOM は Unix/Linux のシェル環境でスクリプトを実行しようとすると動作しません。したがって、シェル環境から直接スクリプトを実行したい場合は BOM のない UTF-8 を使用してください。
 
 `#!` の形のコメントは JavaScript インタープリターを指定するためにだけ使用してください。他の用途ではすべて `//` のコメント (または複数行コメント) を使用してください。
 

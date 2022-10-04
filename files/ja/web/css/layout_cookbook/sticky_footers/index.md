@@ -1,16 +1,8 @@
 ---
 title: 張りつくフッター
 slug: Web/CSS/Layout_cookbook/Sticky_footers
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - 料理帳
-  - フレックスボックス
-  - グリッド
-  - 張りつくフッター
-translation_of: Web/CSS/Layout_cookbook/Sticky_footers
 ---
+
 {{CSSRef}}
 
 張りつくフッターのパターンは、コンテンツがビューポートの高さより短い場合に、ページのフッターがビューポートの下部に「張りつく」パターンです。 このレシピでこれを作成するためのいくつかのテクニックを見ていきます。
@@ -28,11 +20,11 @@ translation_of: Web/CSS/Layout_cookbook/Sticky_footers
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
 
-> **Note:** この例と以下の例では、ライブ例がうまくいくように、 wrapper に `min-height: 100%` に設定して使用しています。 また、{{htmlelement("body")}} の {{cssxref("min-height")}} を `100vh` に設定し、それをグリッドコンテナーとして使用することで、ページ全体でこれを実現することもできます。
+> **メモ:** この例と以下の例では、ライブ例がうまくいくように、 wrapper に `min-height: 100%` に設定して使用しています。 また、{{htmlelement("body")}} の {{cssxref("min-height")}} を `100vh` に設定し、それをグリッドコンテナーとして使用することで、ページ全体でこれを実現することもできます。
 
 ## 行った選択
 

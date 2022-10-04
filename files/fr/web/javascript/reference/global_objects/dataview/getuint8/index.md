@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getUint8
 ---
+
 {{JSRef}}
 
 La méthode **`getUint8()`** permet de lire un entier non-signé sur 8 bits à l'octet donné par rapport au début de la {{jsxref("DataView")}}.

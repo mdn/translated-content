@@ -1,14 +1,8 @@
 ---
 title: HTMLSelectElement.disabled
 slug: Web/API/HTMLSelectElement/disabled
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - プロパティ
-browser-compat: api.HTMLSelectElement.disabled
-translation_of: Web/API/HTMLSelectElement/disabled
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.disabled`** は論理値で、HTML の [`disabled`](/ja/docs/Web/HTML/Element/select#attr-disabled) 属性を反映し、このコントロールが無効であるかどうかを示します。無効であった場合、クリックを受け付けません。無効な要素は使用できず、クリックできません。

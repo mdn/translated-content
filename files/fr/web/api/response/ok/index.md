@@ -11,6 +11,7 @@ tags:
   - ok
 translation_of: Web/API/Response/ok
 ---
+
 {{APIRef("Fetch")}}
 
 La propriété en lecture seule **`ok`** de l'interface {{domxref("Response")}} contient un booléen correspondant au succès (codes de statut compris entre 200 et 299) ou à l'échec de la réponse.
@@ -47,13 +48,11 @@ fetch(myRequest).then(function(response) {
 
 ## Spécifications
 
-| Spécification                                                | Statut                   | Commentaire         |
-| ------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#dom-response-ok','ok')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Response.ok")}}
+{{Compat}}
 
 ## Voir aussi
 

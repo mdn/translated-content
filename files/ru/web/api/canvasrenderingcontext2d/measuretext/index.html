@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
 <div>{{APIRef}}</div>
 
-<p><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Метод </span></font><code><strong>CanvasRenderingContext2D</strong></code><strong><code><span>.measureText(),</span></code></strong> предоставляемый Canvas 2D API, возвращает объект {{domxref("TextMetrics")}}, содержащий информацию об измеренном тексте (например, ширину).</p>
+<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.measureText(),</code></strong> предоставляемый Canvas 2D API, возвращает объект {{domxref("TextMetrics")}}, содержащий информацию об измеренном тексте (например, ширину).</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -31,7 +31,7 @@ translation_of: Web/API/CanvasRenderingContext2D/measureText
 
 <p>... вы можете получить объект {{domxref("TextMetrics")}}, используя следующий код:</p>
 
-<pre class="brush: js; highlight:[4]">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let text = ctx.measureText('Hello world');

@@ -101,6 +101,7 @@ ES2015에서 중첩된(nested) 템플릿 리터럴을 사용한 경우:
     const classes = `header ${ isLargeScreen() ? '' :
      `icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;
 ```
+
 ### Tagged templates
 
 template literals 의 더욱 발전된 한 형태는 _tagged_ templates 입니다. 태그를 사용하면 템플릿 리터럴을 함수로 파싱 할 수 있습니다. 태그 함수의 첫 번째 인수는 문자열 값의 배열을 포함합니다. 나머지 인수는 표현식과 관련됩니다. 결국 함수는 조작 된 문자열을 반환 할 수 있습니다 (또는 다음 예제에서 설명하는 것과 완전히 다른 결과를 반환 할 수 있습니다). function 이름은 원하는 어떤 것이든 가능합니다.

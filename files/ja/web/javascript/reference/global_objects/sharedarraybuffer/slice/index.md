@@ -1,16 +1,8 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
-tags:
-  - JavaScript
-  - メソッド
-  - Prototype
-  - 共有メモリー
-  - SharedArrayBuffer
-  - 型付き配列
-browser-compat: javascript.builtins.SharedArrayBuffer.slice
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 ---
+
 {{JSRef}}
 
 **`SharedArrayBuffer.prototype.slice()`** メソッドは、新しい {{jsxref("SharedArrayBuffer")}} を生成し、その内容にこの `SharedArrayBuffer` のバイトを先頭位置 (含む) から末尾位置 (含まない) までをコピーして返します。先頭または末尾が負の値であった場合は、配列の先頭からではなく、末尾からの位置になります。このメソッドは {{jsxref("Array.prototype.slice()")}} と同じアルゴリズムです。

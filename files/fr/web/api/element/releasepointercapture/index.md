@@ -9,6 +9,7 @@ tags:
   - Pointeur
 translation_of: Web/API/Element/releasePointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 Relâche (arrête) la capture de pointeur précédemment définie pour un _pointer_ ({{domxref("PointerEvent")}}) spécifique.

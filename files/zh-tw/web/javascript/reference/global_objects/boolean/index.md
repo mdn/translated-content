@@ -2,6 +2,7 @@
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
+
 {{JSRef}}
 
 **`Boolean`** 是布林值的包覆器。
@@ -111,7 +112,7 @@ var bObjProto = new Boolean({});
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Boolean")}}
+{{Compat}}
 
 ## 參見
 

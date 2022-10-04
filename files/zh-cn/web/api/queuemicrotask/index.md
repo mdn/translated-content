@@ -2,11 +2,12 @@
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
 ---
+
 {{APIRef("HTML DOM")}}{{domxref("Window")}} 或 {{domxref("Worker")}} 接口的 **`queueMicrotask()`** 方法，queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.microtask 是一个简短的函数，它将在当前任务（task）完成其工作之后运行，并且在执行上下文的控制返回到浏览器的事件循环之前，没有其他代码等待运行。The microtask is a short function which will run after the current task has completed its work and when there is no other code waiting to be run before control of the execution context is returned to the browser's event loop.
 
-This lets your code run without interfering with any other, potentially higher priority, code that is pending, but before the browser regains control over the execution context, potentially depending on work you need to complete. You can learn more about how to use microtasks and why you might choose to do so in our [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide).
+This lets your code run without interfering with any other, potentially higher priority, code that is pending, but before the browser regains control over the execution context, potentially depending on work you need to complete. You can learn more about how to use microtasks and why you might choose to do so in our [microtask guide](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide).
 
-The importance of microtasks comes in its ability to perform tasks asynchronously but in a specific order. See [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
+The importance of microtasks comes in its ability to perform tasks asynchronously but in a specific order. See [Using microtasks in JavaScript with queueMicrotask()](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
 
 Microtasks are especially useful for libraries and frameworks that need to perform final cleanup or other just-before-rendering tasks.
 
@@ -78,7 +79,7 @@ if (typeof window.queueMicrotask !== "function") {
 
 ## 参见
 
-- [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
+- [Using microtasks in JavaScript with queueMicrotask()](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)
+- [Asynchronous JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
 - [queueMicrotask explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
 - [Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) by Jake Archibald

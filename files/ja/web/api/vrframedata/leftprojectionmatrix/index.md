@@ -1,29 +1,17 @@
 ---
 title: VRFrameData.leftProjectionMatrix
 slug: Web/API/VRFrameData/leftProjectionMatrix
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - leftProjectionMatrix
-browser-compat: api.VRFrameData.leftProjectionMatrix
-translation_of: Web/API/VRFrameData/leftProjectionMatrix
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`leftProjectionMatrix`** は {{domxref("VRFrameData")}} インタフェースの読み取り専用プロパティで、 4 行 4 列の行列を表す {{jsxref("Float32Array")}} を返します。この行列は、左目の描画に利用される射影を表します。
 
-> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 この値は、 WebGL の {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}} 関数へ直接渡されるでしょう。
 
-> **Warning:** アプリケーションは、この行列を改変せずに使用することを強く薦めます。描画時にこの射影行列の使用に失敗すると、表現されたフレームは歪んだり、正しく揃わなかったりし、その結果として、様々な度合いのユーザの不快感を生みます。
+> **警告:** アプリケーションは、この行列を改変せずに使用することを強く薦めます。描画時にこの射影行列の使用に失敗すると、表現されたフレームは歪んだり、正しく揃わなかったりし、その結果として、様々な度合いのユーザの不快感を生みます。
 
 ## 値
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 original_slug: Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres
 ---
+
 {{jsSidebar("Operators")}}
 
 Les **accesseurs de propriété** permettent de fournir un accès aux propriétés d'un objet en utilisant une notation avec un point ou une notation avec des crochets

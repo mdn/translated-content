@@ -3,11 +3,12 @@ title: Page Visibility API
 slug: Web/API/Page_Visibility_API
 translation_of: Web/API/Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 **L’API _Page Visibility_** («&nbsp;visibilité de la page&nbsp;») permet de savoir quand une page web est visible ou a le focus.
 
-Avec la navigation par onglets, il y a une probabilité raisonnable qu’une page web donnée soit en arrière-plan, donc masquée pour l’utilisateur. Quand celui-ci minimise la page ou bascule vers un autre onglet, l’API émet un évènement {{event("visibilitychange")}} correspondant à la visibilité de la page. Vous pouvez détecter cet évènement et réaliser différentes actions ou modifier un comportement. Par exemple, si votre application web est en train de lire une vidéo, elle peut mettre cette dernière en pause au moment où l’utilisateur regarde un autre onglet, et reprendre la lecture quand la personne revient à l’onglet. L’utilisateur ne perd pas le fil de la vidéo et peut continuer à la regarder.
+Avec la navigation par onglets, il y a une probabilité raisonnable qu’une page web donnée soit en arrière-plan, donc masquée pour l’utilisateur. Quand celui-ci minimise la page ou bascule vers un autre onglet, l’API émet un évènement [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event) correspondant à la visibilité de la page. Vous pouvez détecter cet évènement et réaliser différentes actions ou modifier un comportement. Par exemple, si votre application web est en train de lire une vidéo, elle peut mettre cette dernière en pause au moment où l’utilisateur regarde un autre onglet, et reprendre la lecture quand la personne revient à l’onglet. L’utilisateur ne perd pas le fil de la vidéo et peut continuer à la regarder.
 
 L’état de visibilité d’une {{HTMLElement("iframe")}} est le même que celui du document parent. Masquer l’iframe via une propriété CSS ne déclenche pas d’évènement de visibilité, ni ne change l’état du document contenu.
 
@@ -125,17 +126,15 @@ if (typeof document.addEventListener === "undefined" || typeof document.hidden =
     ```
 
 - {{domxref("document.onvisibilitychange")}}
-  - : Un {{event("Event_handlers", "event handler")}} représentant le code à appeler quand l’évènement {{event("visibilitychange")}} est émis.
+  - : Un {{event("Event_handlers", "event handler")}} représentant le code à appeler quand l’évènement [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event) est émis.
 
 ## Spécifications
 
-| Spécification                                    | Statut                                       | Commentaire          |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Page Visibility API')}} | {{Spec2('Page Visibility API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,22 +1,13 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-tags:
-  - クラス
-  - Date
-  - 元期
-  - JavaScript
-  - Time
-  - Unix 元期
-  - timeStamp
-browser-compat: javascript.builtins.Date
-translation_of: Web/JavaScript/Reference/Global_Objects/Date
 ---
+
 {{JSRef}}
 
 JavaScript の **`Date`** オブジェクトは、単一の瞬間の時刻をプラットフォームに依存しない形式で表します。 `Date` オブジェクトは協定世界時 (UTC) の 1970 年 1 月 1 日からの経過ミリ秒数を表す `Number` の値を含んでいます。
 
-> **Note:** TC39 は [Temporal](https://tc39.es/proposal-temporal/docs/index.html) という、新しい日付/時刻の API を開発しています。これについて詳しくは [Igalia のブログ](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/)を参照してください。まだ正式利用の準備はできていません。
+> **メモ:** TC39 は [Temporal](https://tc39.es/proposal-temporal/docs/index.html) という、新しい日付/時刻の API を開発しています。これについて詳しくは [Igalia のブログ](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/)を参照してください。まだ正式利用の準備はできていません。
 
 ## 解説
 
@@ -24,7 +15,7 @@ JavaScript の **`Date`** オブジェクトは、単一の瞬間の時刻をプ
 
 JavaScript の日時は、基本的に協定世界時 (UTC) の 1970 年 1 月 1 日深夜 0 時からの経過ミリ秒数で指定されます。この日付と時刻は、コンピューターに記録される日付と時刻の値の主な基準値である **UNIX 元期** (UTC の 1970 年 1 月 1 日深夜 0 時からの経過秒数) とは異なります。
 
-> **Note:** Date オブジェクトの中心となる時間値は UTC ですが、日付と時刻、またはその一部を取得する基本的なメソッドは、すべて地方時 (ホストシステムなど) のタイムゾーンとオフセットで動作することを覚えておくことが重要です。
+> **メモ:** Date オブジェクトの中心となる時間値は UTC ですが、日付と時刻、またはその一部を取得する基本的なメソッドは、すべて地方時 (ホストシステムなど) のタイムゾーンとオフセットで動作することを覚えておくことが重要です。
 
 `Date` の最大値は、確実な整数の最大値 (`Number.MAX_SAFE_INTEGER`、9,007,199,254,740,991) と同じ値ではないことに注意が必要です。代わりに ECMA-262 では、 UTC の 1970 年 1 月 1 日から前後 ±100,000,000 (1 億) 日 (つまり、紀元前 271821 年 4 月 20 日 - 紀元 275760 年 9 月 13 日) を標準の `Date` オブジェクトで表すことができると定義しています。
 
@@ -49,7 +40,7 @@ JavaScript の日時は、基本的に協定世界時 (UTC) の 1970 年 1 月 1
 
   - : 日付を表す文字列を解釈して、地方時で 1970 年 1 月 1 日 00:00:00 から経過したミリ秒数を表す数値を返します。うるう秒は無視します。
 
-    > **Note:** ブラウザーごとに動作が異なり一貫性がないため、 `Date.parse` で文字列を解釈しないことを強く推奨します。
+    > **メモ:** ブラウザーごとに動作が異なり一貫性がないため、 `Date.parse` で文字列を解釈しないことを強く推奨します。
 
 - {{jsxref("Date.UTC()")}}
   - : 最も長い形式のコンストラクターと同じ引数（すなわち 2 〜 7）を受け取り、 1970 年 1 月 1 日 00:00:00 （UTC）から経過したミリ秒数を返します。うるう秒は無視します。
@@ -155,7 +146,7 @@ JavaScript の日時は、基本的に協定世界時 (UTC) の 1970 年 1 月 1
 
 以下の例で、 JavaScript の日時を生成するいくつかの方法を示します。
 
-> **Note:** `Date` コンストラクター (または同等の `Date.parse`) で日付文字列を解釈することは、ブラウザーごとに動作が異なり一貫性がないため、避けるように強くすすめます。
+> **メモ:** `Date` コンストラクター (または同等の `Date.parse`) で日付文字列を解釈することは、ブラウザーごとに動作が異なり一貫性がないため、避けるように強くすすめます。
 
 ```js
 let today = new Date()
@@ -237,7 +228,7 @@ function printElapsedTime(fTest) {
 let yourFunctionReturn = printElapsedTime(yourFunction)
 ```
 
-> **Note:** {{domxref("performance_property", "Web Performance API", "", 1)}} の高精度時刻機能に対応しているブラウザーでは、 {{domxref("Performance.now()")}} で、 {{jsxref("Date.now()")}} よりも高信頼かつ高精度な経過時間の測定が可能です。
+> **メモ:** {{domxref("performance_property", "Web Performance API", "", 1)}} の高精度時刻機能に対応しているブラウザーでは、 {{domxref("Performance.now()")}} で、 {{jsxref("Date.now()")}} よりも高信頼かつ高精度な経過時間の測定が可能です。
 
 ### ECMAScript 元期からの経過秒数を取得する
 

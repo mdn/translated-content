@@ -1,14 +1,8 @@
 ---
 title: CSS アニメーションの使用
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
-tags:
-  - 上級者
-  - CSS
-  - CSS アニメーション
-  - 例
-  - ガイド
-translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 ---
+
 {{CSSRef}}
 
 **CSS アニメーション**により、ある CSS のスタイル設定を別の設定へと遷移させることができます。アニメーションは、2 種類の要素で構成されています。 それは、アニメーションについて記述するスタイルと、アニメーションの先頭と末尾の CSS スタイルを示すキーフレームです。 同様に、アニメーション途中の通過点となるスタイルを示すこともできます。
@@ -52,7 +46,7 @@ CSS スタイルでアニメーションのタイミングを定義するため�
 
 ## 例
 
-> **Note:** (2017年以前の) 古いブラウザーでは、接頭辞が必要かもしれません。 クリックして参照できるライブサンプルには、`-webkit` 接頭辞を付加したプロパティも含まれています。
+> **メモ:** (2017年以前の) 古いブラウザーでは、接頭辞が必要かもしれません。 クリックして参照できるライブサンプルには、`-webkit` 接頭辞を付加したプロパティも含まれています。
 
 ### 文字列がブラウザーのウィンドウを横切る
 
@@ -93,7 +87,7 @@ at last the Caterpillar took the hookah out of its mouth, and addressed
 her in a languid, sleepy voice.</p>
 ```
 
-> **Note:** アニメーションを見るにはページを再読み込みしてください。
+> **メモ:** アニメーションを見るにはページを再読み込みしてください。
 
 {{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}
 
@@ -144,7 +138,7 @@ her in a languid, sleepy voice.</p>
 
 これはブラウザーに、アニメーションの流れの 75% 経過時点で見出しの左マージンを 25% に、また幅を 150% にするよう設定します。
 
-> **Note:** アニメーションを見るにはページを再読み込みしてください。
+> **メモ:** アニメーションを見るにはページを再読み込みしてください。
 
 {{EmbedLiveSample("Adding_another_keyframe","100%","250")}}
 
@@ -242,7 +236,7 @@ p {
 }
 ```
 
-> **Note:** 詳しくは、 {{cssxref("animation")}} のリファレンスページをご覧ください。
+> **メモ:** 詳しくは、 {{cssxref("animation")}} のリファレンスページをご覧ください。
 
 ### 複数のアニメーションプロパティ値の設定
 
@@ -373,7 +367,7 @@ function listener(event) {
 
 そしてこちらはライブ出力です。
 
-> **Note:** アニメーションを見るにはページを再読み込みしてください。
+> **メモ:** アニメーションを見るにはページを再読み込みしてください。
 
 {{EmbedLiveSample('Using_animation_events', '600', '300')}}
 

@@ -1,15 +1,9 @@
 ---
 title: AsyncFunction.prototype
 slug: orphaned/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype
-tags:
-  - Experimental
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype
 original_slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype
 ---
+
 {{JSRef}}
 
 **`AsyncFunction.prototype`** プロパティは、{{jsxref("AsyncFunction")}} プロトタイプオブジェクトを表します。

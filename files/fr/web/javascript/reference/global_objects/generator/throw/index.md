@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 original_slug: Web/JavaScript/Reference/Objets_globaux/Generator/throw
 ---
+
 {{JSRef}}
 
 La méthode **`throw()`** lève une erreur dans un générateur.

@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.getProgramParameter()
 slug: Web/API/WebGLRenderingContext/getProgramParameter
 ---
+
 {{APIRef("WebGL")}}
 
-**`WebGLRenderingContext.getProgramParameter()`** 方法返回`WebGLProgram的信息。`
+**`WebGLRenderingContext.getProgramParameter()`** 方法返回 `WebGLProgram` 的信息。
 
 ## 语法
 
@@ -48,7 +49,7 @@ gl.getProgramParameter(program, gl.DELETE_STATUS);
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.getProgramParameter")}}
+{{Compat}}
 
 ## See also
 

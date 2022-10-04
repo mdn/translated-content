@@ -1,8 +1,8 @@
 ---
 title: <mtable>
 slug: Web/MathML/Element/mtable
-translation_of: Web/MathML/Element/mtable
 ---
+
 {{MathMLRef()}}
 
 MathML の `<mtable>` 要素は表や行列を作るのに使えます。`<mtable>` の中には {{ MathMLElement("mtr") }} と {{ MathMLElement("mtd") }} のみが書けます。これらの要素の関係は，[HTML](/ja/docs/HTML) の{{ HTMLElement("table") }}，{{ HTMLElement("tr") }} と {{ HTMLElement("td") }} の関係に似ています。
@@ -97,8 +97,6 @@ Rendering: ![](mtable-1.png)
 
 </math>
 ```
-
-##
 
 ## 仕様
 

@@ -1,21 +1,11 @@
 ---
 title: WebVR API
 slug: Web/API/WebVR_API
-tags:
-  - API
-  - Deprecated
-  - Experimental
-  - Landing
-  - Obsolete
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/WebVR_API
 ---
+
 {{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}
 
-> **Note:** **注:** WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
+> **メモ:** WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
 
 WebVR は，バーチャルリアリティデバイス — 例えば Oculus Rift のようなヘッドマウントディスプレイ — をウェブアプリへ公開し，ヘッドマウントディスプレイの位置や動きを 3D 空間上の動きへと変換する手助けを行います．これによって，バーチャルな製品紹介やインタラクティブな訓練アプリといったものから超臨場感のファーストパーソン・シューティングゲームといったものまで，非常に面白い様々なアプリケーションをつくることができます．
 
@@ -33,14 +23,14 @@ WebVR は，バーチャルリアリティデバイス — 例えば Oculus Rift
 
 典型的な (シンプルな) WebVR アプリは次のように動作します。
 
-1.  {{DOMxRef("Navigator.getVRDisplays()")}} を使用して VR ディスプレイの参照を取得します。
-2.  {{DOMxRef("VRDisplay.requestPresent()")}} を使用して VR ディスプレイの表示を開始します。
-3.  WebVR 専用の {{DOMxRef("VRDisplay.requestAnimationFrame()")}} メソッドを使用して、ディスプレイの正しいリフレッシュレートでアプリのレンダリングループを実行します。
-4.  レンダリングループ内では、現在のフレームを表示するために必要なデータを取得し ({{DOMxRef("VRDisplay.getFrameData()")}})、表示されたシーンを 2 回 — それぞれの目の画像を 1 回ずつ描画し、レンダリングされたビューをディスプレイに送信してユーザーに表示します ({{DOMxRef("VRDisplay.submitFrame()")}})。
+1. {{DOMxRef("Navigator.getVRDisplays()")}} を使用して VR ディスプレイの参照を取得します。
+2. {{DOMxRef("VRDisplay.requestPresent()")}} を使用して VR ディスプレイの表示を開始します。
+3. WebVR 専用の {{DOMxRef("VRDisplay.requestAnimationFrame()")}} メソッドを使用して、ディスプレイの正しいリフレッシュレートでアプリのレンダリングループを実行します。
+4. レンダリングループ内では、現在のフレームを表示するために必要なデータを取得し ({{DOMxRef("VRDisplay.getFrameData()")}})、表示されたシーンを 2 回 — それぞれの目の画像を 1 回ずつ描画し、レンダリングされたビューをディスプレイに送信してユーザーに表示します ({{DOMxRef("VRDisplay.submitFrame()")}})。
 
 また WebVR 1.1 では、 {{DOMxRef("Window")}} オブジェクトに多数のイベントが追加され、 JavaScript が表示状態の変化に対応できるようになっています。
 
-> **Note:** [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)と [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts)の記事で、この API の使用方法がもっとわかります。
+> **メモ:** [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)と [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts)の記事で、この API の使用方法がもっとわかります。
 
 ### API の可用性
 
@@ -60,7 +50,7 @@ if (!navigator.getVRDisplays) {
 
 多くの WebVR ハードウェアは、ヘッドセットと一緒に使用するコントローラーをセットアップします。これらは [Gamepad API](/ja/docs/Web/API/Gamepad_API) を介して WebVR アプリで使用することができ、特に [Gamepad Extensions API](/ja/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions) は、コントローラーの[コントローラーのポーズ](/ja/docs/Web/API/GamepadPose)や[触覚アクチュエーター](/ja/docs/Web/API/GamepadHapticActuator)などにアクセスするための API 機能を追加します。
 
-> **Note:** [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)の記事では、 WebVR アプリでの VR コントローラーの使い方の基本を解説しています。
+> **メモ:** [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)の記事では、 WebVR アプリでの VR コントローラーの使い方の基本を解説しています。
 
 ## WebVR インターフェイス
 

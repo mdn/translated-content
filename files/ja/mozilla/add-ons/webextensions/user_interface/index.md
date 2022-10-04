@@ -1,17 +1,13 @@
 ---
 title: ユーザーインターフェイス
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-tags:
-  - Landing
-  - ユーザーインターフェイス
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface
 ---
+
 {{AddonSidebar}}
 
 WebExtension API を使った機能拡張には、いくつかのユーザーインターフェイスオプションが提供されていて、ユーザーがこれによって機能を利用できます。この節では、下記にこのオプションの要約と、それぞれのユーザーインターフェイスオプションの詳細な導入とがあります。
 
-> **Note:** 機能拡張でこれらの UI コンポーネントを使って優れた使い勝手を実現するためのアドバイスとして、[ユーザーエクスペリエンスのベストプラクティス](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/) （英語）の記事を見てください。
+> **メモ:** 機能拡張でこれらの UI コンポーネントを使って優れた使い勝手を実現するためのアドバイスとして、[ユーザーエクスペリエンスのベストプラクティス](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/) （英語）の記事を見てください。
 
 <table class="standard-table">
   <thead>

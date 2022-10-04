@@ -1,13 +1,6 @@
 ---
 title: アクセシビリティを推進する HTML の機能とは？
 slug: Learn/Common_questions/HTML_features_for_accessibility
-tags:
-  - Accessibility
-  - Beginner
-  - HTML
-  - Learn
-  - NeedsContent
-translation_of: Learn/Common_questions/HTML_features_for_accessibility
 ---
 
 

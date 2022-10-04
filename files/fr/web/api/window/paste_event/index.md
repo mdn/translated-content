@@ -8,6 +8,7 @@ tags:
   - paste
 translation_of: Web/API/Window/paste_event
 ---
+
 {{APIRef}}
 
 L'événement **`paste`** est déclenché lorsque l'utilisateur a lancé une action de "paste" via l'interface utilisateur du navigateur.
@@ -45,15 +46,13 @@ window.addEventListener('paste', (event) => {
 
 ## Spécifications
 
-| Specification                                                            | Statut                               |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-paste')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.paste_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - Événements liés: {{domxref("Window/cut_event", "cut")}}, {{domxref("Window/copy_event", "copy")}}
 - Cet événement sur {{domxref("Element")}} cible: {{domxref("Element/paste_event", "paste")}}

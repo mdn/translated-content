@@ -1,28 +1,8 @@
 ---
 title: XRBoundedReferenceSpace.boundsGeometry
 slug: Web/API/XRBoundedReferenceSpace/boundsGeometry
-tags:
-  - API
-  - AR
-  - Boundary
-  - Edges
-  - Geometry
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRBoundedReferenceSpace
-  - augmented
-  - boundsGeometry
-  - space
-translation_of: Web/API/XRBoundedReferenceSpace/boundsGeometry
 ---
+
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
 {{domxref("XRBoundedReferenceSpace")}} の **`boundsGeometry`** 読み取り専用プロパティは、ビューアーが移動できる多角形の内部を構成する点を指定する {{domxref("DOMPointReadOnly")}} オブジェクトの配列です。 各点は 2 次元の点として扱われ、地面レベルに配置する必要があります（つまり、その `y` 座標は 0 である必要があります）。

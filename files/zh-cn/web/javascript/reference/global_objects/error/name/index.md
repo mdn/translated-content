@@ -2,6 +2,7 @@
 title: Error.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
 ---
+
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
 ## 概述

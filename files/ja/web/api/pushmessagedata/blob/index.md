@@ -1,17 +1,8 @@
 ---
 title: PushMessageData.blob()
 slug: Web/API/PushMessageData/blob
-tags:
-  - API
-  - Blob
-  - Experimental
-  - Method
-  - Push
-  - PushMessageData
-  - Reference
-  - Service Workers
-translation_of: Web/API/PushMessageData/blob
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 {{domxref("PushMessageData")}} インターフェースの **`blob()`** メソッドは、プッシュメッセージデータを {{domxref("Blob")}} オブジェクトとして抽出します。

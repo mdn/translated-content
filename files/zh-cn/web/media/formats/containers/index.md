@@ -2,6 +2,7 @@
 title: Media container formats (file types)
 slug: Web/Media/Formats/Containers
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 一个音频/视频文件包含两部分：编码器（codec）和媒体容器（container）。本文讨论通用的多媒体容器的优点、局限性以及用法。

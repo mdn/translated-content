@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/POSITIVE_INFINITY
 ---
+
 {{JSRef}}
 
 La propriéte **`Number.POSITIVE_INFINITY`** représente l'infini (positif).

@@ -1,16 +1,8 @@
 ---
 title: '@supports'
 slug: Web/CSS/@supports
-tags:
-  - アットルール
-  - CSS
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - supports
-browser-compat: css.at-rules.supports
-translation_of: Web/CSS/@supports
 ---
+
 {{CSSRef}}
 
 **`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、宣言をブラウザーが 1 つまたは複数の特定の CSS 機能に対応しているかによって、宣言を指定することができます。これは*機能クエリー*と呼ばれます。規則はコードの最上位または他の[条件付きグループアットルール](/ja/docs/Web/CSS/At-rule#条件付きグループルール)の中に配置することができます。
@@ -72,7 +64,7 @@ JavaScript では `@supports` は CSS オブジェクトモデルインターフ
 @supports (display: grid) and (not (display: inline-grid)) {}
 ```
 
-> **Note:** `not` 演算子が最上位にある場合は、括弧でくくる必要はありません。 `and` や `or` といった他の演算子と組み合わせるときは、括弧が必須です。
+> **メモ:** `not` 演算子が最上位にある場合は、括弧でくくる必要はありません。 `and` や `or` といった他の演算子と組み合わせるときは、括弧が必須です。
 
 ### and 演算子
 
@@ -107,7 +99,7 @@ JavaScript では `@supports` は CSS オブジェクトモデルインターフ
           ((-o-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
 ```
 
-> **Note:** `and` 演算子と `or` 演算子を両方とも使用するときは、これらを適用する順序を定義するために括弧を使用しなければなりません。そうしなければ、アットルール全体を無視させる無効な条件になります。
+> **メモ:** `and` 演算子と `or` 演算子を両方とも使用するときは、これらを適用する順序を定義するために括弧を使用しなければなりません。そうしなければ、アットルール全体を無視させる無効な条件になります。
 
 ## 形式文法
 

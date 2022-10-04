@@ -1,10 +1,8 @@
 ---
 title: ツールバーボタン
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
-tags:
-  - WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 ---
+
 {{AddonSidebar}}
 
 このユーザーインターフェイスオプションは、よく[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)と呼ばれており、 ブラウザーのツールバーに追加されるボタンです。 ユーザーはボタンをクリックして拡張機能とやりとりします。

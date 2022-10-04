@@ -1,20 +1,13 @@
 ---
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - Web API
-  - WebSocket
-browser-compat: api.WebSocket.close
-translation_of: Web/API/WebSocket/close
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket.close()`** メソッドは、 {{domxref("WebSocket")}} の接続、もしくは接続試行（存在した場合）を閉じます。接続がすでに `CLOSED` だった場合、このメソッドは何もしません。
 
-> **Note:** 接続を閉じるプロセスは[クロージングハンドシェイク](https://www.rfc-editor.org/rfc/rfc6455.html#section-1.4)で始まり、 `close()` メソッドはそのクロージングハンドシェイクを開始する前に以前に送信したメッセージを破棄しません。たとえユーザーエージェントがまだそれらのメッセージを送信するのに忙しい場合でも、ハンドシェイクはメッセージが送信されてから開始されます。
+> **メモ:** 接続を閉じるプロセスは[クロージングハンドシェイク](https://www.rfc-editor.org/rfc/rfc6455.html#section-1.4)で始まり、 `close()` メソッドはそのクロージングハンドシェイクを開始する前に以前に送信したメッセージを破棄しません。たとえユーザーエージェントがまだそれらのメッセージを送信するのに忙しい場合でも、ハンドシェイクはメッセージが送信されてから開始されます。
 
 ## 構文
 
@@ -41,7 +34,7 @@ WebSocket.close(code, reason);
 - `reason` {{optional_inline}}
   - : 独自の [WebSocket 接続が閉じた理由](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.6)を提供する文字列（閉じたことについて簡潔で人間が読める散文的な説明）。この値は 123 バイト以下でなければなりません（UTF-8 でエンコードされます）。
 
-    > **Note:** [UTF-8 は 2 から 4 バイトを使用する](/ja/docs/Glossary/UTF-8)ため、 [ASCII](/ja/docs/Glossary/ASCII) 以外の文字をエンコードすると、 123 文字の `reason` 値に ASCII 以外の文字が入っていると、 123 バイトの制限を超える可能性があります。
+    > **メモ:** [UTF-8 は 2 から 4 バイトを使用する](/ja/docs/Glossary/UTF-8)ため、 [ASCII](/ja/docs/Glossary/ASCII) 以外の文字をエンコードすると、 123 文字の `reason` 値に ASCII 以外の文字が入っていると、 123 バイトの制限を超える可能性があります。
 
     `reason` の値を指定する場合は、 [`code`](#code) の値も指定してください。
 

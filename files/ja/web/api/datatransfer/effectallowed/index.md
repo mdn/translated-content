@@ -1,16 +1,8 @@
 ---
 title: DataTransfer.effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.effectAllowed
-translation_of: Web/API/DataTransfer/effectAllowed
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.effectAllowed`** プロパティは、ドラッグ操作で許可される効果を指定します。**コピー**操作は、ドラッグされるデータを現在の位置からドロップ位置にコピーすることを示すために使用されます。**移動**操作は、ドラッグされるデータを移動することを示すために使用され、**リンク**操作は、ソース位置とドロップ位置の間に何らかの形の関係または接続を作成することを示すために使用されます。

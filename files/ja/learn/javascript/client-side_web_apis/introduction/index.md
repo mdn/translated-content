@@ -1,19 +1,8 @@
 ---
 title: Web API の紹介
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
-tags:
-  - 3rd party
-  - API
-  - Article
-  - Beginner
-  - Browser
-  - CodingScripting
-  - Learn
-  - Object
-  - WebAPI
-  - client-side
-translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
 まずは API を高い視点から見ていきます — これは何なのか、どう働くのか、あなたのコードでどう使うのか、どういう風に作られているのか? また様々なクラスの API は何なのか、どのような使い方があるのかも見ていきます。
@@ -34,7 +23,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 それと同じことで、そうですね、例えば 3 次元グラフィックのプログラムを JavaScript や Python のような高レベル言語で書かれた API を使ってやる方が、C や C++ のような低レベル言語から直接コンピューターの GPU やグラフィック機能を叩いてやるよりも、ずっと簡単です。
 
-> **Note:** API という語についてもっと詳しいことは [API の用語解説](/ja/docs/Glossary/API) を参照して下さい。
+> **メモ:** API という語についてもっと詳しいことは [API の用語解説](/ja/docs/Glossary/API) を参照して下さい。
 
 ### クライアントサイド JavaScript での API
 
@@ -64,8 +53,8 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 特に、あなたが使うであろう最も一般的なブラウザー API のカテゴリ (このモジュールでとても詳しい所まで網羅していきます) は:
 
 - ブラウザーで読み込んだ**文書を操作するための API**。一番目にする例は [DOM (Document Object Model) API](/ja/docs/Web/API/Document_Object_Model) で、 HTML と CSS を操作できます — HTML を作成したり削除したり書き換えたり、動的に新しいスタイルをページに適用したり、などなど。例えばページにポップアップウィンドウが表われたり、何か新しい中身が表示されたりする時、DOM が使われています。この種の API については[ドキュメントの操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model)でもっといろいろ見られます。
-- **サーバからデータ取得をする API** で Web ページの一部を書き換える事はとてもよく行なわれます。この一見ちょっとした事が、サイトのパフォーマンスや振舞いに巨大なインパクトを与えました — 在庫一覧や新しいお話一覧を書き換えたい時に、サーバからページ全体をリロードする事なしにさくっとできたら、サイトやアプリはずっと反応よく素早く感じられます。これを可能にした API には [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest "XMLHttpRequest is an API that provides client functionality for transferring data between a client and a server. It provides an easy way to retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just a part of the page without disrupting what the user is doing.") と [Fetch API](/ja/docs/Web/API/Fetch_API) が含まれています。**Ajax** という言葉を聞いた事があるかもしれませんが、これがこのテクニックの呼び名です。これらの API について [サーバからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)でもっといろいろ見られます。
-- **グラフィックスを描画したり操作する API** は多くのブラウザーがサポートしています — 最も知られているものには[ Canvas](/ja/docs/Web/API/Canvas_API) と [WebGL](/ja/docs/Web/API/WebGL_API) があり、HTML の {{htmlelement("canvas")}} 要素上にあるピクセルデータを書き換えて 2 次元や 3 次元のシーンを作成するのに使えます。例えばキャンバス API を使って長方形や円のような形を描いたり、キャンバスに画像を読み込んだり、セピアやグレイスケールといったフィルターを適用したり、あるいは WebGL を使ってライティングやテクスチャを使った 3D シーンを作成したりできます。これらの API はよくアニメーションループを作成する API ({{domxref("window.requestAnimationFrame()")}} など)や他のものと組み合わせて使われ、アニメやゲームのようなものの表示を定期的に書き換えるようにします。
+- **サーバからデータ取得をする API** で Web ページの一部を書き換える事はとてもよく行なわれます。この一見ちょっとした事が、サイトのパフォーマンスや振舞いに巨大なインパクトを与えました — 在庫一覧や新しいお話一覧を書き換えたい時に、サーバからページ全体をリロードする事なしにさくっとできたら、サイトやアプリはずっと反応よく素早く感じられます。これを可能にした API には [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) と [Fetch API](/ja/docs/Web/API/Fetch_API) が含まれています。**Ajax** という言葉を聞いた事があるかもしれませんが、これがこのテクニックの呼び名です。これらの API について [サーバからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)でもっといろいろ見られます。
+- **グラフィックスを描画したり操作する API** は多くのブラウザーがサポートしています — 最も知られているものには[Canvas](/ja/docs/Web/API/Canvas_API) と [WebGL](/ja/docs/Web/API/WebGL_API) があり、HTML の {{htmlelement("canvas")}} 要素上にあるピクセルデータを書き換えて 2 次元や 3 次元のシーンを作成するのに使えます。例えばキャンバス API を使って長方形や円のような形を描いたり、キャンバスに画像を読み込んだり、セピアやグレイスケールといったフィルターを適用したり、あるいは WebGL を使ってライティングやテクスチャを使った 3D シーンを作成したりできます。これらの API はよくアニメーションループを作成する API ({{domxref("window.requestAnimationFrame()")}} など)や他のものと組み合わせて使われ、アニメやゲームのようなものの表示を定期的に書き換えるようにします。
 - **[動画と音声の API](/ja/docs/Web/Guide/Audio_and_video_delivery)** {{domxref("HTMLMediaElement")}} や [Web Audio API](/ja/docs/Web/API/Web_Audio_API) や [WebRTC](/ja/docs/Web/API/WebRTC_API) のような API を使うと、 マルチメディアを使ってとても面白い事ができます。音声や動画再生のための独自のコントロール UI の作成、字幕やサブタイトルのような音声トラックをビデオと一緒に表示したり、Web カメラの画像を取り込んで操作し、上述のキャンバスに表示したり Web カンファレンスに参加している他の誰かのコンピューター上に表示したり、音声トラックにイフェクト(ゲイン、ディストーション、音場効果など)をかけたりできます。
 - **デバイス API** は基本的に Web アプリで使えるような形で、今時のハードウェアデバイスのデータを操作したり取得する API です。デバイスの位置データにアクセスして地図上にあなたの居場所を書くような位置情報 API についてはすでにお話しました。他の例にはシステム通知を使って Web アプリに役に立つアップデートがあるのを知らせたり([Notifications API](/ja/docs/Web/API/Notifications_API) を参照)、ハードウェアを振動させたり([Vibration API](/ja/docs/Web/API/Vibration_API) を参照)などがあります。
 - **クライアント側でのデータ保持 API** は今多くのブラウザーに普及しつつあります。— クライアント側にデータを保存できると、ページを移動しても状態を保存したり、たとえデバイスがオフラインでも動作するようなアプリを作成したいような場合、とても役に立ちます。いくつもの選択肢があり、例えば [Web Storage API](/ja/docs/Web/API/Web_Storage_API) を使ったキーバリューストアや、 [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) を使ったもっと複雑なテーブル型データ保存などです。
@@ -83,7 +72,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 - [Twilio API](https://www.twilio.com/)はあなたのアプリで音声・ビデオ電話の機能を作成したり、SMS/MMS を送信したりなどするためのフレームワークを提供します。
 - [Mastodon API](https://docs.joinmastodon.org/api/) を使用すると、Mastodon ソーシャルネットワークの機能をプログラムで操作できます。
 
-> **Note:** サードパーティ API については [Programmable Web API directory](http://www.programmableweb.com/category/all/apis) でもっと多くの情報を見られます。
+> **メモ:** サードパーティ API については [Programmable Web API directory](http://www.programmableweb.com/category/all/apis) でもっと多くの情報を見られます。
 
 ## API はどのように動作する?
 
@@ -93,7 +82,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 あなたのコードは一つ以上の [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects)を通じて API とやりとりし、オブジェクトは API が使用するデータ (オブジェクトのプロパティとして持つ) や API が提供する機能(オブジェクトメソッドとして持つ) の容れ物として使われます。
 
-> **Note:** もしまだオブジェクトがどのように動作するかについて理解があやふやなら、先に進む前に [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects) モジュールを読みなおし、練習するのをおすすめします。
+> **メモ:** もしまだオブジェクトがどのように動作するかについて理解があやふやなら、先に進む前に [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects) モジュールを読みなおし、練習するのをおすすめします。
 
 Web Audio API の例に戻ってみましょう。Web Audio API はとても複雑な API で、たくさんのオブジェクトから成り立っています。わかりやすいものでいうと下記が挙げられます：
 
@@ -162,7 +151,7 @@ audioElement.addEventListener('ended', function() {
 });
 ```
 
-> **Note:** 気づいた方もいるかも知れませんが、音声を再生・停止する `play()` と `pause()` メソッドは Web Audio API の一部ではなく、 {{domxref("HTMLMediaElement")}} API の一部です。これらは異なりますが密接に関連しています。
+> **メモ:** 気づいた方もいるかも知れませんが、音声を再生・停止する `play()` と `pause()` メソッドは Web Audio API の一部ではなく、 {{domxref("HTMLMediaElement")}} API の一部です。これらは異なりますが密接に関連しています。
 
 次に、 {{domxref("BaseAudioContext.createGain")}} を使用して {{domxref("GainNode")}} オブジェクトを作成します。このオブジェクトを使用して音声全体の音量を調整し、スライダーの値が変更される度にオーディオグラフのゲイン（音量）の値を変更する別のイベントハンドラーを作成します。
 
@@ -213,7 +202,7 @@ Ball.prototype.draw = function() {
 };
 ```
 
-> **Note:** この実例を[弾むボールのデモ](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) ([ライブ実行](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) も見てね)で見られます。
+> **メモ:** この実例を[弾むボールのデモ](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) ([ライブ実行](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) も見てね)で見られます。
 
 ### 状態の変化を捉えるのにイベントを使います
 
@@ -241,7 +230,7 @@ request.onload = function() {
 }
 ```
 
-> **Note:** [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) でこの例の動作を見られます([ライブ実行版](https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html)もどうぞ)。
+> **メモ:** [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) でこの例の動作を見られます([ライブ実行版](https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html)もどうぞ)。
 
 最初の 5 行で取得したいリソースを指定し、`XMLHttpRequest()` コンストラクタを使って新しいリクエストオブジェクトを生成し、指定のリソースを取得するために `GET` リクエストを作り、レスポンスを JSON 形式として吐き出すよう指定、そしてリクエストを送信します。
 
@@ -257,7 +246,7 @@ WebAPI 機能は JavaScript や他の Web 技術と同等のセキュリティ�
 
 Web Audio および {{domxref("HTMLMediaElement")}} API には、[自動再生 (autoplay) ポリシー](/ja/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy) と呼ばれるセキュリティ機構が適用されます。これは、基本的に、ページの読み込み時に音声を自動的に再生できないことを意味します。ユーザーに次のことを許可する必要があります。ボタンのようなコントロールを介して音声再生を開始します。これは、音声の自動再生は通常非常に煩わしいものであり、ユーザーにそれを課すべきではないためです。
 
-> **Note:** ブラウザーの厳格さによっては、このようなセキュリティ機構により、例がローカルで機能しなくなる場合があります。つまり、ローカルの例のファイルをウェブサーバーから実行するのではなく、ブラウザーに読み込んだ場合です。執筆時点では、Web Audio API の例はローカルでは Google Chrome で動作しません。動作する前に、GitHub にアップロードする必要がありました。
+> **メモ:** ブラウザーの厳格さによっては、このようなセキュリティ機構により、例がローカルで機能しなくなる場合があります。つまり、ローカルの例のファイルをウェブサーバーから実行するのではなく、ブラウザーに読み込んだ場合です。執筆時点では、Web Audio API の例はローカルでは Google Chrome で動作しません。動作する前に、GitHub にアップロードする必要がありました。
 
 ## まとめ
 

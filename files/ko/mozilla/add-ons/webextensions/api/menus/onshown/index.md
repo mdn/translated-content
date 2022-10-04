@@ -1,7 +1,6 @@
 ---
 title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/onShown
 ---
 {{AddonSidebar()}}

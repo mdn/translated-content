@@ -1,15 +1,8 @@
 ---
 title: PointerEvent.pointerId
 slug: Web/API/PointerEvent/pointerId
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/PointerEvent/pointerId
 ---
+
 {{ APIRef("Pointer Events") }}
 
 {{domxref("PointerEvent")}} インターフェイスの **`pointerId`** 読み取り専用プロパティは、特定のポインタのイベントに割り当てられた識別子です。 識別子は一意であり、他のすべてのアクティブポインタのイベントの識別子とは異なります。 値はランダムに生成される可能性があるため、特定の意味を伝えることは保証されません。

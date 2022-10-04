@@ -1,18 +1,8 @@
 ---
 title: Document.preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Document
-  - プロパティ
-  - リファレンス
-  - Stylesheets
-  - 非推奨
-translation_of: Web/API/Document/preferredStyleSheetSet
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 **`preferredStyleSheetSet`** プロパティは、ページ作者によって設定された推奨スタイルシートセットを返します。

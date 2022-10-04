@@ -1,13 +1,8 @@
 ---
 title: 計算値
 slug: Web/CSS/computed_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/cascade.html#computed-value
-translation_of: Web/CSS/computed_value
 ---
+
 {{CSSRef}}
 
 **計算値** (computed value) は [CSS](/ja/docs/Web/CSS) プロパティにおいて、継承の過程で親から子へと伝えられる値です。これは[指定値](/ja/docs/Web/CSS/specified_value)から計算されます。
@@ -19,7 +14,7 @@ translation_of: Web/CSS/computed_value
 
 しかしながら、いくつかのプロパティ (`width`, `margin-right`, `text-indent`, `top` など、レイアウトの定義に必要ものに対する割合が相対的なもの) でパーセント値で指定された値はパーセント値で計算された値に変わります。さらに、 `line-height` に指定された単位なしの値は、指定された計算値になります。これらの計算値に残った相対的な値は、[使用値](/ja/docs/Web/CSS/used_value)が定義された場合、絶対値になります。
 
-> **Note:** DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API は[解決値](/ja/docs/Web/CSS/resolved_value)を返しますが、これはプロパティによって[計算値](/ja/docs/Web/CSS/computed_value)であるか[使用値](/ja/docs/Web/CSS/used_value)であるかが変わります。
+> **メモ:** DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API は[解決値](/ja/docs/Web/CSS/resolved_value)を返しますが、これはプロパティによって[計算値](/ja/docs/Web/CSS/computed_value)であるか[使用値](/ja/docs/Web/CSS/used_value)であるかが変わります。
 
 ## 仕様書
 

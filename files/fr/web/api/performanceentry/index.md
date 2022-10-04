@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceEntry
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 L'objet **`PerformanceEntry`** encapsule une seule mesure de performance qui fait partie de la _chronologie de performance_. Une _entrée de performance_ peut être créée directement en faisant _[une marque](/fr/docs/Web/API/PerformanceMark)_ ou _[une mesure](/fr/docs/Web/API/PerformanceMeasure)_ (par exemple en appelant la méthode [`mark()`](/fr/docs/Web/API/Performance/mark)) à un point explicite d'une application. Les entrées de performance sont également créées de manière indirecte, par exemple en chargeant une ressource (telle qu'une image).
@@ -75,19 +76,8 @@ function print_PerformanceEntry(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                                   | Commentaire                                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Resource Timing 3')}}                                                                             | {{Spec2('Resource Timing 3')}}                 |                                                                                                                                                                                                        |
-| {{SpecName('Resource Timing 2')}}                                                                             | {{Spec2('Resource Timing 2')}}                 |                                                                                                                                                                                                        |
-| {{SpecName('Resource Timing')}}                                                                                 | {{Spec2('Resource Timing')}}                     | Ajoute l'interface [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming) et la valeur `resource` pour `entryType`.                                                                 |
-| {{SpecName('Navigation Timing Level 2')}}                                                                 | {{Spec2('Navigation Timing Level 2')}}     |                                                                                                                                                                                                        |
-| {{SpecName('Navigation Timing')}}                                                                             | {{Spec2('Navigation Timing')}}                 | Ajoute l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) et la valeur `navigation` pour `entryType`.                                                           |
-| {{SpecName('User Timing Level 2')}}                                                                         | {{Spec2('User Timing Level 2')}}             |                                                                                                                                                                                                        |
-| {{SpecName('User Timing')}}                                                                                     | {{Spec2('User Timing')}}                         | Ajoute les interfaces [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark) et [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure) ainsi que les valeurs `mark` et `measure` pour `entryType`. |
-| {{SpecName('Frame Timing')}}                                                                                     | {{Spec2('Frame Timing')}}                         | Ajoute l'interface [`PerformanceFrameTiming`](/fr/docs/Web/API/PerformanceFrameTiming) et la valeur `frame` pour `entryType`.                                                                          |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry', 'PerformanceEntry')}} | {{Spec2('Performance Timeline Level 2')}} | Ajout de la méthode de sérialisation `toJSON()`.                                                                                                                                                       |
-| {{SpecName('Performance Timeline', '#dom-performanceentry', 'PerformanceEntry')}}             | {{Spec2('Performance Timeline')}}             | Définition initiale.                                                                                                                                                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceEntry")}}
+{{Compat}}

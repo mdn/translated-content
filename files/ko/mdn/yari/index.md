@@ -1,11 +1,6 @@
 ---
 title: '쿠마(Kuma): MDN 위키 플랫폼'
 slug: MDN/Yari
-tags:
-  - MDN 메타
-  - 시작하기
-  - 쿠마
-translation_of: MDN/Kuma
 original_slug: MDN/Kuma
 ---
 {{MDNSidebar}}

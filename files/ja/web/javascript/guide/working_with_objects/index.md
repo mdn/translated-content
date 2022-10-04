@@ -1,17 +1,8 @@
 ---
 title: オブジェクトでの作業
 slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - Beginner
-  - Document
-  - Guide
-  - JavaScript
-  - Object
-  - l10n:priority
-  - オブジェクトの比較
-  - コンストラクター
-translation_of: Web/JavaScript/Guide/Working_with_Objects
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript は、シンプルなオブジェクトベースの枠組みを持つ言語として設計されています。JavaScript におけるオブジェクトはプロパティの集まりであり、プロパティは名前 (あるいは*キー*) と値との関連付けから成り立っています。プロパティの値を関数にすることもでき、これはいわゆるオブジェクトのメソッドとなります。ブラウザーにあらかじめ定義されているオブジェクトに加え、独自のオブジェクトを定義することもできます。この節ではオブジェクト、プロパティ、関数、メソッドの使い方と、独自のオブジェクトを作成する方法を説明します。
@@ -133,17 +124,17 @@ ECMAScript 5 よりも前では、オブジェクトの全プロパティを列�
 
 ```js
 function listAllProperties(o) {
-	var objectToInspect;
-	var result = [];
+    var objectToInspect;
+    var result = [];
 
-	for(objectToInspect = o; objectToInspect !== null;
+    for(objectToInspect = o; objectToInspect !== null;
            objectToInspect = Object.getPrototypeOf(objectToInspect)) {
         result = result.concat(
             Object.getOwnPropertyNames(objectToInspect)
         );
     }
 
-	return result;
+ return result;
 }
 ```
 
@@ -188,8 +179,8 @@ var myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
 
 別の方法として、次の 2 つの手順でオブジェクトを作ることができます。
 
-1.  コンストラクター関数を記述してオブジェクトの型を定義します。この時、便宜上の理由から慣習的に、1 文字目は大文字とします。
-2.  `new` でオブジェクトのインスタンスを作成します。
+1. コンストラクター関数を記述してオブジェクトの型を定義します。この時、便宜上の理由から慣習的に、1 文字目は大文字とします。
+2. `new` でオブジェクトのインスタンスを作成します。
 
 オブジェクトの型を定義するには、名前、プロパティ、メソッドを指定するオブジェクト型用の関数を作ります。例えば、車についてのオブジェクト型を作りたいとしましょう。このオブジェクト型は `car` と呼ばれ、make、model、year のプロパティを持たせたいとします。これを行うには、以下のような関数を書きます。
 
@@ -300,7 +291,7 @@ JavaScript のすべてのオブジェクトは、1 つ以上の他のオブジ�
 
 この制限は、(以前に `Car` オブジェクト型に対して行ったように) コンストラクター関数でオブジェクトとプロパティを作るときや、個々のプロパティを明示的に定義した場合 (例えば `myCar.color = "red"`) に適用されます。初めにオブジェクトプロパティをインデックスで、たとえば `myCar[5] = "25 mpg"` のように定義した場合、以降そのプロパティは `myCar[5]` としてしか参照できません。
 
-このルールの例外は、`forms` 配列型オブジェクトのような HTML から反映された配列型オブジェクトです。この配列型オブジェクトにあるオブジェクトは、いつでもインデックス (文書中に現れる位置を基準としたもの) と名前 (定義されていれば) のどちらからも参照できます。例えば、文書内の 2 つ目の `<FORM>` タグが `NAME` 属性として "myForm" という値を持つとき、フォームは ` document.forms[1]、``document.forms["myForm"] ` 、`document.forms.myForm` のいずれかで参照できます。
+このルールの例外は、`forms` 配列型オブジェクトのような HTML から反映された配列型オブジェクトです。この配列型オブジェクトにあるオブジェクトは、いつでもインデックス (文書中に現れる位置を基準としたもの) と名前 (定義されていれば) のどちらからも参照できます。例えば、文書内の 2 つ目の `<FORM>` タグが `NAME` 属性として "myForm" という値を持つとき、フォームは `document.forms[1]`、`document.forms["myForm"]` 、`document.forms.myForm` のいずれかで参照できます。
 
 ## オブジェクト型に対するプロパティの定義
 

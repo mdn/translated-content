@@ -1,14 +1,8 @@
 ---
 title: PerformanceResourceTiming.nextHopProtocol
 slug: Web/API/PerformanceResourceTiming/nextHopProtocol
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リソースタイミング API
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/nextHopProtocol
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`nextHopProtocol`** 読み取り専用プロパティは、[ALPN プロトコル ID (RFC7301)](https://tools.ietf.org/html/rfc7301) で識別されるように、リソースを取得するために使用される*ネットワークプロトコル*を表す{{domxref("DOMString","文字列")}} です。

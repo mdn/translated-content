@@ -1,11 +1,6 @@
 ---
 title: IIFE
 slug: Glossary/IIFE
-tags:
-  - 디자인패턴
-  - 자바스크립트
-  - 즉시실행함수
-translation_of: Glossary/IIFE
 ---
 **즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)**은 정의되자마자 즉시 실행되는 {{glossary("Javascript")}} {{glossary("Function")}} 를 말한다.
 

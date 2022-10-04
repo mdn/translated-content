@@ -1,14 +1,6 @@
 ---
 title: <font>
 slug: Web/HTML/Element/font
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.font
-translation_of: Web/HTML/Element/font
 ---
 
 {{deprecated_header}}
@@ -17,7 +9,7 @@ translation_of: Web/HTML/Element/font
 
 **`<font>`** は [HTML](/ja/docs/Web/HTML) の要素で、その内容のフォントサイズ、文字色、使用フォントを定義します。
 
-> **Warning:** この要素を使用しないでください。 CSS の[フォント](/ja/docs/Web/CSS/CSS_Fonts)プロパティを使用してテキストにスタイル付けしてください。
+> **警告:** この要素を使用しないでください。 CSS の[フォント](/ja/docs/Web/CSS/CSS_Fonts)プロパティを使用してテキストにスタイル付けしてください。
 
 ## 属性
 

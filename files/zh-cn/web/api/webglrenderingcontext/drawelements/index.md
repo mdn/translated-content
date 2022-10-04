@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.drawElements()
 slug: Web/API/WebGLRenderingContext/drawElements
 ---
+
 {{APIRef("WebGL")}}
 
-该 **`WebGLRenderingContext.drawElements()`** 方法 在 [WebGL API](/en-US/docs/Web/API/WebGL_API) 从数组数据渲染图元。
+该 **`WebGLRenderingContext.drawElements()`** 方法 在 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 从数组数据渲染图元。
 
 ## 语法
 

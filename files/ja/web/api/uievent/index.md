@@ -1,17 +1,8 @@
 ---
 title: UIEvent
 slug: Web/API/UIEvent
-tags:
-  - API
-  - DOM
-  - Event
-  - インターフェイス
-  - リファレンス
-  - UIEvent
-  - イベント
-browser-compat: api.UIEvent
-translation_of: Web/API/UIEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`UIEvent`** インターフェイスは、シンプルなユーザーインターフェイスのイベントを表します。

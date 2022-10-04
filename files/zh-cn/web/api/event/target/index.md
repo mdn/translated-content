@@ -2,6 +2,7 @@
 title: Event.target
 slug: Web/API/Event/target
 ---
+
 {{ ApiRef("DOM") }}
 
 触发事件的对象 (某个 DOM 元素) 的引用。当事件处理程序在事件的冒泡或捕获阶段被调用时，它与{{domxref("event.currentTarget")}}不同。
@@ -42,7 +43,7 @@ ul.addEventListener('click', hide, false);
 
 ## 浏览器兼容性
 
-{{Compat("api.Event.target")}}
+{{Compat}}
 
 在 IE6-8 中，事件模型与标准不同。使用非标准的 [`element.attachEvent()`](http://msdn.microsoft.com/en-us/library/ie/ms536343%28v=vs.85%29.aspx) 方法绑定事件监听器。在该模型中，事件对象有一个 `srcElement` 属性，等价于`target` 属性。
 
@@ -56,5 +57,5 @@ function hide(e) {
 
 ## 相关链接
 
-- [Comparison of Event Targets](/en/DOM/event/Comparison_of_Event_Targets)
+- [Comparison of Event Targets](/zh-CN/DOM/event/Comparison_of_Event_Targets)
 - {{domxref("Event.currentTarget")}}

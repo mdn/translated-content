@@ -2,6 +2,7 @@
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
 ---
+
 {{APIRef("DOM Events")}}
 
 **`Event.cancelBubble`** 属性是 {{domxref("Event.stopPropagation()")}}的一个曾用名。在从事件处理程序返回之前将其值设置为 true 可阻止事件的传播。
@@ -28,7 +29,7 @@ _这个属性的规范并未统一。_ 因为他还有其他标准 W3C 版： [a
 
 ## 浏览器兼容
 
-{{Compat("api.Event.cancelBubble")}}
+{{Compat}}
 
 ## 参考
 

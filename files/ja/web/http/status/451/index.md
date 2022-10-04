@@ -1,13 +1,8 @@
 ---
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
-tags:
-  - Client error
-  - HTTP
-  - Reference
-  - Status code
-translation_of: Web/HTTP/Status/451
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`451 Unavailable For Legal Reasons`** はユーザーの要求したリソースが法的理由で使用できない場合のクライアントエラーのレスポンスコードです。

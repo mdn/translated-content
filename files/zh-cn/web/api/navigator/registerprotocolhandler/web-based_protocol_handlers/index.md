@@ -2,6 +2,7 @@
 title: Web-based protocol handlers
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
+
 ## 背景
 
 利用非 HTTP 协议，从网页链接到一些别的资源，这种做法是相当普遍的。比如 `mailto:` 协议：
@@ -34,7 +35,7 @@ navigator.registerProtocolHandler("mailto",
 
 ![Image:wph-notification.png](/@api/deki/files/972/=Wph-notification.png)
 
-> **备注：** 试图执行登记或注册时，当前网页必须与提供的 URL 模板在相同的域，否则将会失败。例如，http\://example.com/homepage.html 可以为 `http://example.com/handle_mailto/%s` 注册一个协议处理程序，但 `http://example.org/handle_mailto/%s` 不可以。
+> **备注：** 试图执行登记或注册时，当前网页必须与提供的 URL 模板在相同的域，否则将会失败。例如，`http://example.com/homepage.html` 可以为 `http://example.com/handle_mailto/%s` 注册一个协议处理程序，但 `http://example.org/handle_mailto/%s` 不可以。
 
 多次注册相同的协议处理程序会弹出不同的通知，表明协议处理器已经注册。因此，发起一个注册协议处理程序的请求，之后检查是否注册是一个很好的方法。比如下面的例子：
 

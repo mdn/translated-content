@@ -2,6 +2,7 @@
 title: Range.endContainer
 slug: Web/API/Range/endContainer
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.endContainer`** は読み取り専用プロパティで、 {{domxref("Range")}} の終了位置にあるノード ({{domxref("Node")}}) を返します。ノードの終了位置を変更するために {{domxref("Range.setEnd()")}} または同様のメソッドを利用します。

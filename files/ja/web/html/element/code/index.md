@@ -1,16 +1,8 @@
 ---
 title: '<code>: 行内コード要素'
 slug: Web/HTML/Element/code
-tags:
-  - Code
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Inline Code
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/code
 ---
+
 {{HTMLRef}}
 
 **HTML の `<code>` 要素**は、コンピューターコードの短い断片の文字列であると識別できるような外見のコンテンツを表示します。既定では、中の文字列が{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントを使用して表示されます。

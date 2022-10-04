@@ -1,17 +1,8 @@
 ---
 title: MouseEvent.button
 slug: Web/API/MouseEvent/button
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.button
-translation_of: Web/API/MouseEvent/button
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.button`** は読み取り専用のプロパティで、イベントを引き起こすのにどのボタンが押されたのかを表します。
@@ -21,7 +12,7 @@ translation_of: Web/API/MouseEvent/button
 
 ユーザーはポインティングデバイスの設定を変更できるため、例えばイベントのボタンプロパティがゼロだった場合、必ずしも物理的な左ボタンによるものとは限りません。ただし、そのような場合でも標準設定における左ボタンと同じ動作をするべきです。
 
-> **Note:** {{domxref("MouseEvent.buttons")}} プロパティと混同しないように注意してください。こちらはすべての種類のマウスイベントで、ボタンの押下状態を示します。
+> **メモ:** {{domxref("MouseEvent.buttons")}} プロパティと混同しないように注意してください。こちらはすべての種類のマウスイベントで、ボタンの押下状態を示します。
 
 ## 値
 

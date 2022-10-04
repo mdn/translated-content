@@ -8,6 +8,7 @@ tags:
   - HTML
 translation_of: Web/HTML/Attributes/multiple
 ---
+
 {{HTMLSidebar}}
 
 L'attribut booléen **`multiple`**, s'il est défini, signifie que le contrôle de formulaire accepte une ou plusieurs valeurs. Valable pour les types de saisie [`email`](/fr/docs/Web/HTML/Element/Input/email) et [`file`](/fr/docs/Web/HTML/Element/Input/file) et l'élément [`<select>`](/fr/docs/Web/HTML/Element/select), la manière dont l'utilisateur opte pour plusieurs valeurs dépend du contrôle de formulaire.
@@ -168,10 +169,7 @@ Définir `size="1"` sur une sélection multiple peut la faire apparaître comme 
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-multiple', 'l\'attribut multiple')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'input.html#attr-input-multiple', 'l\'attribut multiple')}} | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Voir aussi
 

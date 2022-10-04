@@ -1,15 +1,8 @@
 ---
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
-tags:
-  - JavaScript
-  - メソッド
-  - Number
-  - Prototype
-  - リファレンス
-browser-compat: javascript.builtins.Number.valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは {{jsxref("Number")}} オブジェクトがラップしているプリミティブ値を返します。

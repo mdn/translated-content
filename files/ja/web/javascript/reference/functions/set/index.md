@@ -1,15 +1,8 @@
 ---
 title: セッター
 slug: Web/JavaScript/Reference/Functions/set
-tags:
-  - ECMAScript 5
-  - 関数
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.functions.set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
+
 {{jsSidebar("Functions")}}
 
 **`set`** 構文は、あるオブジェクトプロパティを、プロパティに設定しようとしたときに呼び出される関数に結びつけます。

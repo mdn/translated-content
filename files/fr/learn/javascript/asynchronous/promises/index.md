@@ -3,6 +3,7 @@ title: Comment utiliser les promesses
 slug: Learn/JavaScript/Asynchronous/Promises
 translation_of: Learn/JavaScript/Asynchronous/Promises
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
 **Les promesses (ou <i lang="en">promises</i> en anglais)** sont une brique fondamentale pour la programmation asynchrone en JavaScript. Une promesse est un objet renvoyé par une fonction asynchrone et qui représente l'état courant de l'opération. Au moment où la promesse est renvoyée à l'appelant, l'opération n'est généralement pas terminée, mais la promesse fournit des méthodes pour gérer la réussite ou l'échec de l'opération.

@@ -1,14 +1,8 @@
 ---
 title: If-Modified-Since
 slug: Web/HTTP/Headers/If-Modified-Since
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - リクエストヘッダー
-  - 条件付きリクエスト
-translation_of: Web/HTTP/Headers/If-Modified-Since
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`If-Modified-Since`** リクエストヘッダーは、リクエストを条件付にします。サーバーは最後にリソースが変更された時刻が、リクエストにより与えられた時刻より後の場合にのみ、リクエストされたリソースを {{HTTPStatus("200")}} ステータスと共に返却します。もしリクエストにより与えられた時刻以降にリソースが変更されていなければ、レスポンスは本文を持たない {{HTTPStatus("304")}} になります。前回のリクエストの {{HTTPHeader("Last-Modified")}} レスポンスヘッダーは、最後にリソースが変更された時刻を含みます。 {{HTTPHeader("If-Unmodified-Since")}} とは異なり、 `If-Modified-Since` は {{HTTPMethod("GET")}} もしくは {{HTTPMethod("HEAD")}} でのみ使用できます。
@@ -81,4 +75,4 @@ If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 - {{HTTPHeader("If-Unmodified-since")}}
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
+- {{HTTPStatus("304")}} `Not Modified`

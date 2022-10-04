@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-device-pixel-ratio`** est une caractéristique média non-standard, alternative à la caractéristique média standard {{cssxref("@media/resolution","resolution")}}.
@@ -78,14 +79,11 @@ Sa valeur correspond au nombre de pixels physiques utilisés par l'appareil pour
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                                  | État                                        | Commentaires                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- | ------------------------------------- |
-| {{SpecName('Compat', '#css-media-queries-webkit-device-pixel-ratio', '-webkit-device-pixel-ratio')}}                                                                                           | {{Spec2('Compat')}}                    | Définition initiale dans un standard. |
-| [Safari CSS Reference 'media query extensions'.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3) | Documentation non-officielle, non-standard. | Documentation initiale.               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.-webkit-device-pixel-ratio")}}
+{{Compat}}
 
 ## Voir aussi
 

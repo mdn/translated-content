@@ -1,17 +1,8 @@
 ---
 title: '-moz-outline-radius-bottomleft'
 slug: Web/CSS/-moz-outline-radius-bottomleft
-tags:
-  - CSS
-  - CSS プロパティ
-  - NeedsCompatTable
-  - NeedsContent
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-outline-radius-bottomleft
-translation_of: Web/CSS/-moz-outline-radius-bottomleft
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 Mozilla アプリケーションにおいて、 **`-moz-outline-radius-bottomleft`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線 ({{cssxref("outline")}}) の左下の角を丸くするために使用することができます。

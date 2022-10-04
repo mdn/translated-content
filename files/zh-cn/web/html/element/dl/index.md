@@ -2,6 +2,7 @@
 title: <dl>
 slug: Web/HTML/Element/dl
 ---
+
 ## 简介
 
 **HTML `<dl>` 元素** （或 _HTML_ _描述列表元素_）是一个包含术语定义以及描述的列表，通常用于展示词汇表或者元数据 (键 - 值对列表)。
@@ -96,7 +97,7 @@ slug: Web/HTML/Element/dl
 </dl>
 ```
 
-小技巧：通过 CSS3 ，我们可以很容易的在术语后面添加一个与内容无关的分隔符号，比如：
+小技巧：通过 CSS3，我们可以很容易的在术语后面添加一个与内容无关的分隔符号，比如：
 
 ```plain
 dt:after {
@@ -141,7 +142,7 @@ WHATWG HTML 允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.dl")}}
+{{Compat}}
 
 ## 相关内容
 

@@ -1,17 +1,8 @@
 ---
 title: '<rp>: ルビのフォールバック用括弧要素'
 slug: Web/HTML/Element/rp
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Text
-  - Web
-browser-compat: html.elements.rp
-translation_of: Web/HTML/Element/rp
 ---
+
 {{HTMLRef}}
 
 **HTML のルビ代替表示用括弧 (`<rp>`) 要素**は、 {{HTMLElement("ruby")}} 要素によるルビの表示に対応していないブラウザー向けの代替表示用括弧を提供するために使用します。 `<rp>` 要素は、注釈の文字列を {{HTMLElement("rt")}} 要素を囲む開き括弧と閉じ括弧をそれぞれ囲む必要があります。

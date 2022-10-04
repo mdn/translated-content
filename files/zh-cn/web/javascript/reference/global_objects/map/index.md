@@ -2,6 +2,7 @@
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 ---
+
 {{JSRef}}
 
 **`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "基本类型")}}）都可以作为一个键或一个值。
@@ -72,7 +73,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
     <tr>
       <th scope="row">Size</th>
       <td><code>Map</code> 的键值对个数可以轻易地通过 {{jsxref("Map.prototype.size", "size")}} 属性获取。</td>
-      <td><code>Object</code> 的键值对个数只能手动计算.</td>
+      <td><code>Object</code> 的键值对个数只能手动计算。</td>
     </tr>
     <tr>
     <th scope="row">迭代</th>

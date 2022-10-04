@@ -16,7 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 
 ## 구문
 
-    undefined
+```js
+undefined
+```
 
 ## 설명
 

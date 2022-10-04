@@ -1,26 +1,14 @@
 ---
 title: VRDisplay.submitFrame()
 slug: Web/API/VRDisplay/submitFrame
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - submitFrame()
-browser-compat: api.VRDisplay.submitFrame
-translation_of: Web/API/VRDisplay/submitFrame
 original_slug: Web/API/VRDevice/submitFrame
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`submitFrame()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 `VRDisplay` 内に現在表示中の {{domxref("VRLayerInit")}} の現在の状態をキャプチャします。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 その後、 {{domxref("VRPose")}} と {{domxref("getFrameData()")}} の最後の呼び出しによって提供された行列を使用してフレームがレンダリングされる必要があります。
 
@@ -101,7 +89,7 @@ function drawVRScene() {
 }
 ```
 
-> **Note:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
+> **メモ:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
 
 ## 仕様書
 

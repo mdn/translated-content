@@ -1,19 +1,8 @@
 ---
 title: '::part()'
 slug: Web/CSS/::part
-tags:
-  - '::part'
-  - CSS
-  - Draft
-  - 実験的
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.part
-translation_of: Web/CSS/::part
 ---
+
 {{CSSRef}}
 
 **`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する {{HTMLAttrxRef("part")}} 属性を持つ[シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)内の要素を表します。

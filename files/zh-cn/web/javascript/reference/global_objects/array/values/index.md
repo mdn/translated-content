@@ -2,6 +2,7 @@
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
+
 {{JSRef}}
 
 **`values()`** 方法返回一个新的 **`Array Iterator`** 对象，该对象包含数组每个索引的值。
@@ -89,10 +90,12 @@ iterator.next().value;        // "n"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

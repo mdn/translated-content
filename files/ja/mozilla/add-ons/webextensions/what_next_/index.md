@@ -1,12 +1,8 @@
 ---
 title: 次にどうするのか？
 slug: Mozilla/Add-ons/WebExtensions/What_next_
-tags:
-  - Beginner
-  - Extensions
-  - WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/What_next_
 ---
+
 {{AddonSidebar}}
 
 ブラウザー拡張機能のアイデアを実現化していく準備ができているでしょう。開発の旅に出る前に、いくつかの注意点を意識することはスムーズに旅をする上で価値があります。

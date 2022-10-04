@@ -19,7 +19,9 @@ original_slug: Web/API/WindowEventHandlers/onstorage
 
 ## 구문
 
-     window.onstorage = functionRef;
+```js
+window.onstorage = functionRef;
+```
 
 ### 값
 

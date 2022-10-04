@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: missing ; before statement'
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing ; before statement" は、どこかでセミコロンが欠けており、 [自動セミコロン挿入 (ASI)](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) によって追加できない場合に発生します。 JavaScript がソースコードを正しく解釈するためには、セミコロンを置く必要があります。

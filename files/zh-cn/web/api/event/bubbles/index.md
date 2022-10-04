@@ -2,6 +2,7 @@
 title: event.bubbles
 slug: Web/API/Event/bubbles
 ---
+
 {{ ApiRef() }}
 
 ### 概述

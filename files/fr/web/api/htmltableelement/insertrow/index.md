@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLTableElement/insertRow
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode **`HTMLTableElement.insertRow()`** insère une nouvelle ligne dans la table et retourne une référence à la nouvelle ligne.

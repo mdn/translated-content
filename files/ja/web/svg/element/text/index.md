@@ -1,13 +1,8 @@
 ---
 title: <text>
 slug: Web/SVG/Element/text
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
-translation_of: Web/SVG/Element/text
 ---
+
 {{SVGRef}}
 
 SVG **`<text>`** 要素は、テキストからなるグラフィクス要素を定義します。`<text>` には、他の SVG グラフィクス要素と同じように、グラデーション、パターン、クリッピングパス、マスク、またはフィルターを適用することができます。

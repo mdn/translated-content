@@ -1,16 +1,8 @@
 ---
 title: フレックスボックスの基本概念
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-tags:
-  - CSS
-  - Flex
-  - ガイド
-  - axes
-  - 概念
-  - コンテナー
-  - フレックスボックス
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 ---
+
 {{CSSRef}}
 
 通常フレックスボックスと呼ばれている Flexible Box Module は一次元のレイアウトモデルとして、またインターフェイス中のアイテム間で余白の分配をする機能と強力な位置合わせをする機能を提供するものとして設計されました。この記事ではフレックスボックスの主な特徴の概要を示します。詳細については、このガイドのほかのページで説明します。
@@ -151,7 +143,7 @@ flex-grow プロパティは割合で余白を分配するために使うこと�
 
 実際の収縮幅の計算にはアイテムの最小寸法が考慮されるため、`flex-shrink` の動作は `flex-grow` に比べて一貫性がないように見えるかもしれません。そのため、そのアルゴリズムがどのように動くかについての詳細は、[主軸に沿ったフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)の記事に書かれています。
 
-> **Note:** `flex-grow` や `flex-shrink` に指定する値は割合です。一般的には、たとえばあるアイテムを他の `flex: 1 1 200px` に設定したアイテムより２倍速く拡大させたいときには、`flex: 2 1 200px` を設定します。しかし、望むならば `flex: 10 1 200px` と `flex: 20 1 200px` という書き方もできます。
+> **メモ:** `flex-grow` や `flex-shrink` に指定する値は割合です。一般的には、たとえばあるアイテムを他の `flex: 1 1 200px` に設定したアイテムより２倍速く拡大させたいときには、`flex: 2 1 200px` を設定します。しかし、望むならば `flex: 10 1 200px` と `flex: 20 1 200px` という書き方もできます。
 
 ### flex プロパティの一括指定の値
 

@@ -1,18 +1,8 @@
 ---
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
-page-type: web-api-instance-method
-tags:
-  - API
-  - DataTransfer
-  - HTML DOM
-  - Method
-  - Reference
-  - clearData
-  - drag and drop
-browser-compat: api.DataTransfer.clearData
-translation_of: Web/API/DataTransfer/clearData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.clearData()`** メソッドは、ドラッグ操作の {{domxref("DataTransfer", "ドラッグデータ")}}の中で指定された型のものを削除します。指定された型のデータが存在しない場合、このメソッドは何もしません。
@@ -21,7 +11,7 @@ translation_of: Web/API/DataTransfer/clearData
 
 このメソッドはドラッグ操作からファイルを削除*しない*ので、ドラッグに含まれるファイルがある場合、 `"Files"` 型の項目がオブジェクトの {{domxref("DataTransfer.types")}} の一覧に残る可能性があります。
 
-> **Note:** このメソッドは、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントのハンドラーでのみ使用できます。ドラッグ操作のデータストアが書き込み可能なのはその時だけだからです。
+> **メモ:** このメソッドは、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントのハンドラーでのみ使用できます。ドラッグ操作のデータストアが書き込み可能なのはその時だけだからです。
 
 ## 構文
 

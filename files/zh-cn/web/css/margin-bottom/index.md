@@ -2,6 +2,7 @@
 title: margin-bottom
 slug: Web/CSS/margin-bottom
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -98,4 +99,4 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.margin-bottom")}}
+{{Compat}}

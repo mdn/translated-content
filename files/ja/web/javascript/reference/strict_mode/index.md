@@ -1,18 +1,13 @@
 ---
 title: 厳格モード
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript 5
-  - ガイド
-  - JavaScript
-  - 厳格モード
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
+
 {{JsSidebar("More")}}
 
 ## 厳格モードの概要
 
-> **Note:** 既定の厳格でないモードを「**[Sloppy モード](/ja/docs/Glossary/Sloppy_mode)**」と呼ぶのを目にすることがあるかもしれません。これは公式な用語ではありません、念のため注意してください。
+> **メモ:** 既定の厳格でないモードを「**[Sloppy モード](/ja/docs/Glossary/Sloppy_mode)**」と呼ぶのを目にすることがあるかもしれません。これは公式な用語ではありません、念のため注意してください。
 
 JavaScript の厳格モード (Strict mode) は　ECMAScript 5 で導入され、 JavaScript の自由度を制限することに**オプトイン**することによって、暗黙のうちに「Sloppy モード」からオプトアウトする方法です。厳格モードは単なるサブセットではなく、通常のコードとは**意図的に**異なる意味を持っています。厳格モードに対応していないブラウザーは、厳格モードに対応しているブラウザーとは異なる動作をする可能性がありますので、厳格モードに関する側面に対応しているかどうかの機能テストを行わずに厳格モードを頼らないでください。厳格モードのコードと非厳格モードのコードは共存できますので、スクリプトを順次厳格モードにオプトインすることができます。
 

@@ -1,13 +1,8 @@
 ---
 title: VTTCue()
 slug: Web/API/VTTCue/VTTCue
-tags:
-  - API
-  - Constructor
-  - VTTCue
-  - WebVTT
-translation_of: Web/API/VTTCue/VTTCue
 ---
+
 {{APIRef("WebVTT")}}
 
 **`VTTCue()`** コンストラクタは新しい {{domxref("VTTCue")}} オブジェクトを返します。

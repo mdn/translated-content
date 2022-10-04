@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Element/data
 browser-compat: html.elements.data
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<data>`** relie un contenu à une version de ce contenu interprétable par un ordinateur. Si le contenu possède une composante temporelle, l'élément [`<time>`](/fr/docs/Web/HTML/Element/time) doit être utilisé.

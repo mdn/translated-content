@@ -4,6 +4,7 @@ slug: Web/API/Navigator/mozIsLocallyAvailable
 translation_of: Web/API/Navigator/mozIsLocallyAvailable
 browser-compat: api.Navigator.mozIsLocallyAvailable
 ---
+
 {{APIRef("HTML DOM")}} {{non-standard_header}}{{deprecated_header}}
 
 La méthode **`Navigator.mozIsLocallyAvailable()`** permet aux modules complémentaires de déterminer si une ressource donnée est disponible.

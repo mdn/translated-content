@@ -3,6 +3,7 @@ title: skewX()
 slug: Web/CSS/transform-function/skewX
 original_slug: Web/CSS/transform-function/skewX()
 ---
+
 {{CSSRef}}
 
 **`skewX()`** 函数定义了一个转换，该转换将元素倾斜到二维平面上的水平方向。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。

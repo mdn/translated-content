@@ -1,23 +1,8 @@
 ---
 title: caret-color
 slug: Web/CSS/caret-color
-tags:
-  - CSS
-  - CSS Property
-  - CSS User Interface
-  - Editing
-  - HTML Colors
-  - Input
-  - Reference
-  - Styling HTML
-  - Text Editing
-  - caret
-  - caret-color
-  - contenteditable
-  - recipe:css-property
-translation_of: Web/CSS/caret-color
-browser-compat: css.properties.caret-color
 ---
+
 {{CSSRef}}
 
 **`caret-color`** は CSS のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。キャレットは {{HTMLElement("input")}} または {{htmlattrxref("contenteditable")}} 属性のついた要素などの中に現れます。ふつうキャレットは細い垂直線で、気づきやすくなるように点滅します。既定では黒ですが、このプロパティで色を変更することができます。
@@ -53,7 +38,7 @@ caret-color: unset;
 
   - : ユーザーエージェントはキャレットの適切な色を選択します。これは一般的に {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} ですが、視認性や周囲のコンテンツとのコントラストを高めるために、ユーザーエージェントが `currentcolor`、背景色、影の色、その他の要因を考慮して、別な色を選択することがあります。
 
-    > **Note:** **メモ:** ユーザーエージェントは `auto` の値に `currentcolor` (通常はアニメーション可能) を使用することがありますが、 `auto` はトランジションやアニメーションでは補完されません。
+    > **メモ:** ユーザーエージェントは `auto` の値に `currentcolor` (通常はアニメーション可能) を使用することがありますが、 `auto` はトランジションやアニメーションでは補完されません。
 
 - {{cssxref("&lt;color&gt;")}}
   - : キャレットの色です。

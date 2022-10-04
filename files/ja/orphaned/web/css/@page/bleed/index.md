@@ -1,18 +1,9 @@
 ---
 title: bleed
 slug: orphaned/Web/CSS/@page/bleed
-tags:
-  - '@page'
-  - CSS
-  - CSS ページ化メディア
-  - CSS 記述子
-  - Experimental
-  - Reference
-  - bleed
-  - ウェブ
-translation_of: Web/CSS/@page/bleed
 original_slug: Web/CSS/@page/bleed
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 [CSS](/ja/docs/Web/CSS) の **`bleed`** [@-規則](/ja/docs/Web/CSS/At-rule)記述子は、 {{cssxref("@page")}} @-規則で使用し、ページボックスの外にあるページの裁ち落とし領域の大きさを指定します。このプロパティは、 {{cssxref("@page/marks", "marks")}} プロパティを使用して裁ち落とし記号を有効にしている場合のみ効果があります。

@@ -3,6 +3,7 @@ title: complete
 slug: Web/API/IDBTransaction/complete_event
 translation_of: Web/API/IDBTransaction/complete_event
 ---
+
 Le gestionnaire **complete** est exécuté lorsqu'une transaction est complétée avec succès.
 
 ## Informations générales

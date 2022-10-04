@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-right-color
 ---
+
 {{CSSRef}}
 
 La propriété **`border-right-color`** définit la couleur utilisée pour la bordure droite d'un élément. Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-right")}}.
@@ -35,9 +36,13 @@ border-right-color: unset;
 - <`color>`
   - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté droit.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -71,16 +76,11 @@ border-right-color: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-right-color', 'border-right-color')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative, la valeur `transparent` a été supprimée car elle fait désormais partie du type {{cssxref("&lt;color&gt;")}} qui a été étendu. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-right-color', 'border-right-color')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                                                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-right-color")}}
+{{Compat}}
 
 ## Voir aussi
 

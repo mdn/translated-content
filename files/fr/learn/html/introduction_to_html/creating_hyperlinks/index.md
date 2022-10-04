@@ -16,6 +16,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 original_slug: Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML")}}
 

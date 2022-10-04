@@ -1,19 +1,8 @@
 ---
 title: '<dialog>: ダイアログ要素'
 slug: Web/HTML/Element/dialog
-tags:
-  - Dialog
-  - Experimental
-  - HTML
-  - HTML 対話操作
-  - HTML:フローコンテンツ
-  - HTML:区分化ルート
-  - Reference
-  - ウェブ
-  - ダイアログ
-  - 要素
-translation_of: Web/HTML/Element/dialog
 ---
+
 {{HTMLRef}}
 
 **HTML の `<dialog>` 要素**は、ダイアログボックスや、消すことができるアラート、インスペクター、サブウィンドウ等のような対話的コンポーネントを表します。
@@ -75,7 +64,7 @@ translation_of: Web/HTML/Element/dialog
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-> **Warning:** `tabindex` 属性を `<dialog>` 要素で使用してはいけません。
+> **警告:** `tabindex` 属性を `<dialog>` 要素で使用してはいけません。
 
 - {{htmlattrdef("open")}}
   - : ダイアログがアクティブで操作で使用できることを示します。 `open` 属性が設定されていないときは、ダイアログはユーザーに表示する*べきではありません*。

@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.depthFunc()
 slug: Web/API/WebGLRenderingContext/depthFunc
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.depthFunc()`** 方法，指定将输入像素深度与当前深度缓冲区值进行比较的函数。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.depthFunc()`** 方法，指定将输入像素深度与当前深度缓冲区值进行比较的函数。
 
 ## 语法
 
@@ -33,7 +34,7 @@ void gl.depthFunc(func);
 
 ## 示例
 
-深度测试默认是禁用的。 要启用或禁用深度测试，请使用带有参数 `gl.DEPTH_TEST` 的 {{domxref("WebGLRenderingContext.enable", "enable()")}} 和 {{domxref("WebGLRenderingContext.disable", "disable()")}} 方法。
+深度测试默认是禁用的。要启用或禁用深度测试，请使用带有参数 `gl.DEPTH_TEST` 的 {{domxref("WebGLRenderingContext.enable", "enable()")}} 和 {{domxref("WebGLRenderingContext.disable", "disable()")}} 方法。
 
 ```js
 gl.enable(gl.DEPTH_TEST);
@@ -53,7 +54,7 @@ gl.getParameter(gl.DEPTH_FUNC) === gl.NEVER;
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.depthFunc")}}
+{{Compat}}
 
 ## 另请参阅
 

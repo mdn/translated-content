@@ -1,22 +1,9 @@
 ---
-title: >-
-  Reason: Credential is not supported if the CORS header
-  ‘Access-Control-Allow-Origin’ is ‘*’
+title: 'Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’
+  is ‘*’'
 slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
-tags:
-  - CORS
-  - CORSNotSupportingCredentials
-  - HTTP
-  - HTTPS
-  - エラー
-  - オリジン間
-  - コンソール
-  - セキュリティ
-  - トラブルシューティング
-  - メッセージ
-  - 理由
-translation_of: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ---
+
 {{HTTPSidebar}}
 
 ## 理由

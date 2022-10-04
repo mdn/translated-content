@@ -1,23 +1,8 @@
 ---
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
-tags:
-  - API
-  - HTTP
-  - HTTP ヘッダー
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - リクエストヘッダー
-  - XHR
-  - XHR リクエスト
-  - XMLHttpRequest
-  - ヘッダー
-  - request
-  - setRequestHeader
-browser-compat: api.XMLHttpRequest.setRequestHeader
-translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の **`setRequestHeader()`** メソッドは、 HTTP リクエストヘッダーの値を設定します。 `setRequestHeader()` は、 {{domxref("XMLHttpRequest.open", "open()")}} の呼び出しの後、 {{domxref("XMLHttpRequest.send", "send()")}} の呼び出しの前に呼び出さなければなりません。同じヘッダーについてこのメソッドを複数回呼び出された場合は、複数の値が単一のリクエストヘッダーにマージされます。
@@ -28,7 +13,7 @@ translation_of: Web/API/XMLHttpRequest/setRequestHeader
 
 セキュリティ上の理由で、いくつかのヘッダは、ユーザエージェントからしか制御できません。これらのヘッダーには、 {{Glossary("Forbidden_header_name", "禁止ヘッダー名", 1)}} および {{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名", 1)}} を含みます。
 
-> **Note:** カスタムフィールドについては、ドメインをまたがってリクエストを行うと、 "**not
+> **メモ:** カスタムフィールドについては、ドメインをまたがってリクエストを行うと、 "**not
 > allowed by Access-Control-Allow-Headers in preflight response**" の例外に遭遇することがあります。この場合、サーバー側でレスポンスヘッダーに {{HTTPHeader("Access-Control-Allow-Headers")}} を設定する必要があります。
 
 ## 構文

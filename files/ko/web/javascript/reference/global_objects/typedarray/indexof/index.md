@@ -11,7 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 
 ## 구문
 
-    typedarray.indexOf(searchElement[, fromIndex = 0])
+```js
+typedarray.indexOf(searchElement[, fromIndex = 0])
+```
 
 ### 매개변수
 

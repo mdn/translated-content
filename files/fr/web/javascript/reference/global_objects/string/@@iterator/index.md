@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/@@iterator
 ---
+
 {{JSRef}}
 
 La méthode **`[@@iterator]()`** renvoie un nouvel objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/Le_protocole_iterator) qui itère sur les points de code (codets) d'une chaîne de caractères, en renvoyant chaque point de code sous forme d'une chaîne de caractères.

@@ -1,14 +1,8 @@
 ---
 title: PerformanceMeasure
 slug: Web/API/PerformanceMeasure
-tags:
-  - API
-  - Web パフォーマンス
-  - インターフェイス
-  - パフォーマンスタイムライン API
-  - リファレンス
-translation_of: Web/API/PerformanceMeasure
 ---
+
 {{APIRef("User Timing API")}}
 
 **`PerformanceMeasure`** は、"`measure`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ{{domxref("PerformanceEntry")}} オブジェクトの抽象インターフェイスです。このタイプのエントリは、{{domxref("Performance.measure","performance.measure()")}} を呼び出して、ブラウザーのパフォーマンスタイムラインの 2 つのマークの間に*名前付き* {{domxref("DOMHighResTimeStamp")}} (_measure_) を追加することによって作成されます。

@@ -3,6 +3,7 @@ title: URLSearchParams.entries()
 slug: Web/API/URLSearchParams/entries
 translation_of: Web/API/URLSearchParams/entries
 ---
+
 {{APIRef("URL API")}}{{SeeCompatTable}}
 
 La méthode **`URLSearchParams.entries()`** retourne un itérateur( {{jsxref("Iteration_protocols",'iterator')}}) permettant de parcourir les paires de clé/valeur contenues dans cet objet. La clé et la valeur de chaque paire est un objet  {{domxref("USVString")}} .
@@ -38,16 +39,14 @@ key1, value1
 key2, value2
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                    | Status               | Comment            |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('URL', '#urlsearchparams','entries() (as iterator&lt;&gt;)')}} | {{Spec2('URL')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.URLSearchParams.entries")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - Other URL-related interfaces: {{domxref("URL")}}, {{domxref("URLUtils")}}.

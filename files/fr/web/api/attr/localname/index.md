@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Attr/localName
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Attr.localName`**, en lecture seule, renvoie la partie locale du nom qualifié d'un élément.

@@ -1,19 +1,8 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - CSS カスケード
-  - CSS 値
-  - カスケード
-  - キーワード
-  - レイアウト
-  - リファレンス
-  - スタイル
-  - revert
-browser-compat: css.types.global_keywords.revert
-translation_of: Web/CSS/revert
 ---
+
 {{CSSRef}}
 
 **`revert`** は CSS のキーワードで、現在の要素にカスケードされたプロパティの値を、現在の**{{Glossary("style origin", "スタイルオリジン")}}**が変更を行わなければそのプロパティが持っていたであろう値に戻します。したがって、そのプロパティが親から継承されている場合にはその継承された値に、またはユーザーエージェントのスタイルシート（またはユーザーのスタイルが存在する場合にはユーザーのスタイル）によって確立された既定値にリセットされます。これは、 CSS の一括指定 {{cssxref("all")}} を含む、あらゆる CSS プロパティに適用することができます。
@@ -28,9 +17,9 @@ translation_of: Web/CSS/revert
 
 revert は、リセットした要素の子に適用されているルールには影響しません（ただし、子に対する親のルールの効果は除去されます）。つまり、すべてのセクションに `color: green` を設定し、特定のセクションに `all: revert` を設定した場合、そのセクションの色は黒になります。しかし、すべての段落を赤にするルールがある場合、すべての段落はすべてのセクションで赤のままです。
 
-> **Note:** revert は単なる値です。 `revert` の値は[詳細度](/ja/docs/Web/CSS/Specificity)を使用して上書きすることができます。
+> **メモ:** revert は単なる値です。 `revert` の値は[詳細度](/ja/docs/Web/CSS/Specificity)を使用して上書きすることができます。
 
-> **Note:** `revert` キーワードは {{cssxref("initial")}} とは異なりますし、混同しないでください。これは CSS の仕様書でプロパティごとに定義された[初期値](/ja/docs/Web/CSS/initial_value)です。それに対して、既定値はユーザーエージェントのスタイルシートが CSS セレクターに基づいて定義しています。
+> **メモ:** `revert` キーワードは {{cssxref("initial")}} とは異なりますし、混同しないでください。これは CSS の仕様書でプロパティごとに定義された[初期値](/ja/docs/Web/CSS/initial_value)です。それに対して、既定値はユーザーエージェントのスタイルシートが CSS セレクターに基づいて定義しています。
 >
 > 例えば、 {{cssxref("display")}} プロパティの[初期値](/ja/docs/Web/CSS/initial_value)は `inline` ですが、普通のユーザーエージェントスタイルシートは、 {{cssxref("display")}} の既定値を {{HTMLElement("div")}} では `block`、 {{HTMLElement("table")}} では `table` というように設定します。
 

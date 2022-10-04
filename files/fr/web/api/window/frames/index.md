@@ -13,6 +13,7 @@ tags:
   - Reference
 translation_of: Web/API/Window/frames
 ---
+
 {{ApiRef("Window")}}
 
 Renvoie la fenêtre elle-même, qui est semblable à un objet de type Array, listant les frames présentes dans la fenêtre courante.
@@ -40,4 +41,4 @@ for (var i = 0; i < frames.length; i++) {
 
 ## Spécifications
 
-{{SpecName('HTML WHATWG','browsers.html#dom-frames','Window.frames')}}
+{{Specifications}}

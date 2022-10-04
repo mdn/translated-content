@@ -3,6 +3,7 @@ title: Web audio spatialization basics
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 translation_of: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 ---
+
 En plus de sa grande variété de fonctionnalités et d'options, la Web Audio API permet aussi d'émuler la différence dans l'écoute d'un son lorsqu'un auditeur se déplace par rapport à une source, par exemple un panoramique lorsqu'il se déplace de gauche à droite de la source. On parle alors de spatialisation. Cet article expose les notions de base pour implémenter ce type de système.
 
 Le cas d'utilisation le plus simple est la simulation des altérations d'un son de façon réaliste pour imaginer comment une source se comportera pour un personnage qui se déplace dans un environnement 3D.

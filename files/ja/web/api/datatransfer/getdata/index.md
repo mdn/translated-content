@@ -1,16 +1,8 @@
 ---
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.getData
-translation_of: Web/API/DataTransfer/getData
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`DataTransfer.getData()`** メソッドは、指定した型のドラッグデータを（文字列として）受け取ります。ドラッグ操作がデータを含んでいない場合、このメソッドは空文字列を返します。

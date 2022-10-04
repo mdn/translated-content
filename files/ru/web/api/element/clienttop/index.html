@@ -9,11 +9,11 @@ translation_of: Web/API/Element/clientTop
 
 <p>Всё, что лежит между двумя местами (<code>offsetTop</code> и верх клиентской области) является границей элемента, потому что <code>offsetTop</code> показывает местоположение верха border элемента (не margin), в то время как верх клиентской области начинается сразу под border (клиентская область включает padding). Поэтому значение <strong>clientTop</strong> всегда будет равно значению <code>.getComputedStyle()</code> для "border-top-width". Например, если значение "border-top-width" равно нулю, то и <strong>clientTop</strong> тоже равно нулю.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание:</strong> Это свойство округляет значение до целого. Если вам нужно дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.</p>
 </div>
 
-<p>Основанные на <a href="en/Gecko">Gecko</a> приложения поддерживают <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;">clientTop начиная с </span>Gecko 1.9 (<a href="en/Firefox_3">Firefox 3</a>, реализовано в  {{ Bug(111207) }}). Это свойство не поддерживается в  Firefox 2 и более ранних.</p>
+<p>Основанные на <a href="en/Gecko">Gecko</a> приложения поддерживают clientTop начиная с Gecko 1.9 (<a href="en/Firefox_3">Firefox 3</a>, реализовано в  {{ Bug(111207) }}). Это свойство не поддерживается в  Firefox 2 и более ранних.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 

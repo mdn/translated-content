@@ -8,6 +8,7 @@ tags:
   - entête
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
+
 {{HTTPSidebar}}
 
 L'entête de réponse **`Access-Control-Allow-Methods`** spécifie les méthodes autorisées quand on accède à la ressource en réponse à une requête de pré-vérification ({{glossary("preflight request")}}).

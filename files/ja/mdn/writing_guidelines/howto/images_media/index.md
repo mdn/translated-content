@@ -1,13 +1,9 @@
 ---
 title: MDN の動画コンテンツ
 slug: MDN/Writing_guidelines/Howto/Images_media
-tags:
-  - ガイドライン
-  - メタ
-  - 動画
-translation_of: MDN/Guidelines/Video
 original_slug: MDN/Guidelines/Video
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs は動画が多いサイトではありませんが、動画コンテンツを記事の一部として使用することに意味がある場所がいくつかあります。この記事では、 MDN の記事に動画を含めることが適切な場合について説明し、シンプルだが効果的な動画を予算内で作成するためのヒントを提供します。
@@ -26,7 +22,7 @@ MDN Web Docs は動画が多いサイトではありませんが、動画コン�
 - 動画にはアクセシビリティの問題があります。一般にテキストよりも制作費がかかりますが、特にローカライズや画面リーダーの利用者が使えるようにするのが大変です。
 - 最後の点に加えて、動画は、テキストコンテンツよりも編集・更新・保守がはるかに困難です。
 
-> **Note:** 動画を作るときにも、これらの問題を念頭に置いて、少しでも軽減できるように工夫するとよいでしょう。
+> **メモ:** 動画を作るときにも、これらの問題を念頭に置いて、少しでも軽減できるように工夫するとよいでしょう。
 
 多くの人気の動画サイトがあり、多くの動画チュートリアルを提供しています。
 MDN は動画主体のサイトではありませんが、動画は特定の文脈で MDN に登場することがあります。
@@ -126,7 +122,7 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
   すべての人が高解像度で動画を見ることができるわけではありません。
   後処理で特定の部分をズームすることができますが、事前にアプリをズームするのも良い考えです。
 
-> **Note:** あまりにズームしすぎて、見せている UI が見慣れなくなったり、醜く見えたりならないようにしてください。
+> **メモ:** あまりにズームしすぎて、見せている UI が見慣れなくなったり、醜く見えたりならないようにしてください。
 
 ### 録画
 
@@ -136,7 +132,7 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 
 最後に 1 ～ 2 秒の間を置いて、流れの結果を示すことを忘れないでください。
 
-> **Note:** QuickTime Player のような本当にシンプルなツールを使っていて、何らかの理由で後処理ができない場合、見せたい領域を表示するために正しいサイズのウィンドウをセットアップしておく必要があります。 Firefox DevTools の [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) を使うと、ビューポートが録画に適したアスペクト比になっていることを確認することができます。
+> **メモ:** QuickTime Player のような本当にシンプルなツールを使っていて、何らかの理由で後処理ができない場合、見せたい領域を表示するために正しいサイズのウィンドウをセットアップしておく必要があります。 Firefox DevTools の [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) を使うと、ビューポートが録画に適したアスペクト比になっていることを確認することができます。
 
 ### 後処理
 
@@ -159,7 +155,7 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 現在 MDN で動画を表示するには YouTube にアップロードする必要があります。例えば [mozhacks](https://www.youtube.com/user/mozhacks/videos) チャンネルなどです。
 もし適切な場所がなければ、 MDN スタッフにアップロードを依頼してください。
 
-> **Note:** 動画がページの文脈から意味をなさない場合は "unlisted" としてマークしてください（短い動画であれば、おそらく意味をなさないでしょう）。
+> **メモ:** 動画がページの文脈から意味をなさない場合は "unlisted" としてマークしてください（短い動画であれば、おそらく意味をなさないでしょう）。
 
 ### 埋め込み
 
@@ -171,7 +167,7 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 ```
 
 マクロ呼び出しで取得されるプロパティは、URL全体ではなく、動画のURLの末尾にある文字列の1つです。
-例えば、[ページインスペクター 3 ペインモード](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/3-pane_mode/index.html)の記事に埋め込まれている動画は、 https\://www\.youtube.com/watch?v=ELS2OOUvxIw で公開されているので、必要なマクロ呼び出しは次のようになります。
+例えば、[ページインスペクター 3 ペインモード](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/3-pane_mode/index.html)の記事に埋め込まれている動画は、 <https://www.youtube.com/watch?v=ELS2OOUvxIw> で公開されているので、必要なマクロ呼び出しは次のようになります。
 
 ```
 \{{EmbedYouTube("ELS2OOUvxIw")}}

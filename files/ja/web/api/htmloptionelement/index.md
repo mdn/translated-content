@@ -1,14 +1,8 @@
 ---
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
-translation_of: Web/API/HTMLOptionElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLOptionElement`** インターフェイスは {{HTMLElement("option")}} 要素を表し、 {{domxref("HTMLElement")}} インターフェイスのすべてのクラスとメソッドを継承しています。

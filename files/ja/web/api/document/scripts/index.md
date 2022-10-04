@@ -1,16 +1,8 @@
 ---
 title: Document.scripts
 slug: Web/API/Document/scripts
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - Script
-  - プロパティ
-translation_of: Web/API/Document/scripts
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} インターフェイスの **`scripts`** プロパティは、文書中の {{HTMLElement("script")}} 要素のリストを返します。返されるオブジェクトは単一の {{domxref("HTMLCollection")}} オブジェクトです。

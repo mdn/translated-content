@@ -1,18 +1,9 @@
 ---
 title: BaseAudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
-tags:
-  - API
-  - 音声
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - decodeAudioData
-translation_of: Web/API/BaseAudioContext/decodeAudioData
 original_slug: Web/API/AudioContext/decodeAudioData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `decodeAudioData()` は {{ domxref("BaseAudioContext") }} のメソッドで、 {{jsxref("ArrayBuffer")}} に書き込まれた音声ファイルデータを非同期にデコードするために使用されます。この場合、 `ArrayBuffer` は {{domxref("XMLHttpRequest")}} と {{domxref("FileReader")}} から読み込まれます。デコードされた {{domxref("AudioBuffer")}} は {{domxref("AudioContext")}} のサンプリングレートにリサンプリングされ、コールバックやプロミスに渡されます。
@@ -53,7 +44,7 @@ decodeAudioData(arrayBuffer)
 
 ボタンは単に `getData()` を実行して、それぞれトラックの読み込みと再生、停止を行うだけです。ソースの `stop()` メソッドが呼ばれると、ソースは消滅します。
 
-> **Note:** [例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/) （または[ソースを閲覧](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)することができます。）
+> **メモ:** [例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/) （または[ソースを閲覧](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)することができます。）
 
 ```js
 // 変数の定義

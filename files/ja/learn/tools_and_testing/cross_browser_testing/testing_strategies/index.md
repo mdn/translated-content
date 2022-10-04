@@ -1,20 +1,8 @@
 ---
 title: テスト実行のための戦略
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
-tags:
-  - Article
-  - Automation
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Testing
-  - concepts
-  - cross browser
-  - device lab
-  - user testing
-  - virtual machine
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 この記事では「(クロス)ブラウザーテストとは何？」「最もよくある問題は何？」「問題をテスト、特定、修正する主な手法は何？」といった質問に答えることで、(クロス)ブラウザーテストの概観を与えることから始めます。
@@ -33,13 +21,13 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 このねらいは、テスト時に参照できるブラウザー/デバイスの図を作ることです。できるだけ簡単にすることも、できるだけ複雑にすることも、お好みに合わせてできます — 例えば、よくある手法はサポートレベルを次のように複数のグレードに分けることです:
 
-1.  A グレード: よくある/モダンなブラウザー — 能力のあると知られている。徹底的にテストしてフルサポートを提供する。
-2.  B グレード: 古い/機能が多くないブラウザー — 能力がないと知られている。基本的な体験をテスト/提供するが、主要な情報やサービスにはするアクセスできるようにする。
-3.  C グレード: まれな/未知のブラウザー — テストしないが、アクセスを想定する。フルサイトを提供し、少なくとも守備的なコーディングによるフォールバックは動作するようにする。
+1. A グレード: よくある/モダンなブラウザー — 能力のあると知られている。徹底的にテストしてフルサポートを提供する。
+2. B グレード: 古い/機能が多くないブラウザー — 能力がないと知られている。基本的な体験をテスト/提供するが、主要な情報やサービスにはするアクセスできるようにする。
+3. C グレード: まれな/未知のブラウザー — テストしないが、アクセスを想定する。フルサイトを提供し、少なくとも守備的なコーディングによるフォールバックは動作するようにする。
 
 下記のセクションを通じて、このフォーマットでサポート図を作ります。
 
-> **Note:** Yahoo は最初にこの手法を、[Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) アプローチとして広めました。
+> **メモ:** Yahoo は最初にこの手法を、[Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) アプローチとして広めました。
 
 ### 経験則
 
@@ -47,7 +35,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 例えば、西ヨーロッパや北アメリカに住んでいる場合、多くが Windows と Mac のデスクトップ/ノート PC を使っていて、主なブラウザーは Chrome, Firefox, Safari, IE, Edge です。このブラウザーは定期的な更新があるため、おそらく最初の 3 つの最新版だけをテストしたいでしょう。Edge と IE では、いくつかの最新バージョンをテストしたくなるでしょう; これらはすべて A グレード区分にすべきでしょう.
 
-> **Note:** You can only have one version of IE or Edge installed on a machine at once, so you will probably have to use virtual machine, or other strategy to do the testing you need. See [Virtual machines](#virtual_machines) later on.
+> **メモ:** You can only have one version of IE or Edge installed on a machine at once, so you will probably have to use virtual machine, or other strategy to do the testing you need. See [Virtual machines](#virtual_machines) later on.
 
 多くの人が iOS と Android を使っているので、iOS Safari の最新版、古い Android 内蔵ブラウザーの最新版いくつか、iOS と Android 用の Chrome と Firefox もテストしたくなるでしょう。これらをスマフォとタブレットの両方でテストし、レスポンシブデザインの動作が問題ないのを確認するのが理想でしょう。
 
@@ -55,13 +43,13 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 ここまでで以下のサポート図ができました:
 
-1.  A グレード: Windows/Mac 用の Chrome と Firefox、Mac 用の Safari、Windows 用の Edge と IE (それぞれ最新の 2 バージョン)、iPhone/iPad 用の iOS Safari、スマフォ/タブレット用の Android 内蔵ブラウザー (最新 2 バージョン)、スマフォ/タブレット用の Chrome と Firefox(最新 2 バージョン)。
-2.  B グレード: Windows 用 IE 9
-3.  C グレード: n/a
+1. A グレード: Windows/Mac 用の Chrome と Firefox、Mac 用の Safari、Windows 用の Edge と IE (それぞれ最新の 2 バージョン)、iPhone/iPad 用の iOS Safari、スマフォ/タブレット用の Android 内蔵ブラウザー (最新 2 バージョン)、スマフォ/タブレット用の Chrome と Firefox(最新 2 バージョン)。
+2. B グレード: Windows 用 IE 9
+3. C グレード: n/a
 
 どこか別の場所に住んでいる場合や、どこか別の場所向けの (例 ある国やロケール)サイトを制作している場合、テストする主なブラウザーはたぶん別のものでしょう。
 
-> **Note:** "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be a persuasive argument.
+> **メモ:** "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be a persuasive argument.
 
 ### ブラウザーサポートステータス
 
@@ -86,12 +74,12 @@ You may also consider using open source and privacy focussed analytics platforms
 
 #### Setting up Google analytics
 
-1.  First of all, you'll need a Google account. Use this account to sign into [Google Analytics](https://www.google.com/analytics/).
-2.  Choose the [Google Analytics](https://analytics.google.com/analytics/web/) (web) option, and click the _Sign Up_ button.
-3.  Enter your web site/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the Website URL. This needs to be your site/app's root URL.
-4.  Once you've finished filling in everything, press the _Get Tracking ID_ button, then accept the terms of service that appear.
-5.  The next page provides you with some code snippets and other instructions. For a basic website, what you need to do is copy the _Website tracking_ code block and paste it into all the different pages you want to track using Google Analytics on your site. You could below your closing `</body>` tag, or somewhere else appropriate that keeps it from getting muddled up with your application code.
-6.  Upload the changes to the development server, or wherever else you need your code.
+1. First of all, you'll need a Google account. Use this account to sign into [Google Analytics](https://www.google.com/analytics/).
+2. Choose the [Google Analytics](https://analytics.google.com/analytics/web/) (web) option, and click the _Sign Up_ button.
+3. Enter your web site/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the Website URL. This needs to be your site/app's root URL.
+4. Once you've finished filling in everything, press the _Get Tracking ID_ button, then accept the terms of service that appear.
+5. The next page provides you with some code snippets and other instructions. For a basic website, what you need to do is copy the _Website tracking_ code block and paste it into all the different pages you want to track using Google Analytics on your site. You could below your closing `</body>` tag, or somewhere else appropriate that keeps it from getting muddled up with your application code.
+6. Upload the changes to the development server, or wherever else you need your code.
 
 That's it! Your site should now be ready to start reporting analytics data.
 
@@ -107,7 +95,7 @@ There is a huge amount of data you could look at using Google Analytics — cust
 
 You should also be encouraged to look at the different options on the left hand side, and see what kinds of data you can find out. 例えば、you can find out what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left hand menu.
 
-> **Note:** When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
+> **メモ:** When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
 
 ### その他の考慮
 
@@ -119,9 +107,9 @@ Plus you might have other considerations. If you are creating some kind of compa
 
 So, our final support chart will end up looking like so:
 
-1.  A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
-2.  B grade: IE 8 and 9 for Windows, Opera Mini.
-3.  C grade: Opera, other niche modern browsers.
+1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
+2. B grade: IE 8 and 9 for Windows, Opera Mini.
+3. C grade: Opera, other niche modern browsers.
 
 ## これから何をテストしていくのか？
 
@@ -179,9 +167,9 @@ Some larger companies have device labs that stock a very large selection of diff
 
 We will cover each of the other options below.
 
-> **Note:** Some efforts have been made to create publically accessible device labs — see [Open Device Labs](https://opendevicelab.com/).
+> **メモ:** Some efforts have been made to create publically accessible device labs — see [Open Device Labs](https://opendevicelab.com/).
 
-> **Note:** We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.
+> **メモ:** We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.
 
 ### エミュレーター
 
@@ -200,33 +188,33 @@ You can often find simulators for other mobile device environments too, 例え�
 - You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
 - There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/en-us/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
 
-> **Note:** Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.
+> **メモ:** Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.
 
 ### 仮想マシン
 
 Virtual machines are applications that run on your desktop computer and allow you to run emulations of entire operating systems, each compartmentalized in its own virtual hard drive (often represented by a single large file existing on the host machine's hard drive). There are a number of popular virtual machine apps available, such as [Parallels](www.parallels.com/), [VMWare](http://www.vmware.com/), and [Virtual Box](https://www.virtualbox.org/wiki/Downloads); we personally like the latter, because it is free.
 
-> **Note:** You need a lot of hard disk space available to run virtual machine emulations; each operating system you emulate can take up a lot of memory. You tend to choose the hard drive space you want for each install; you could get away with probably 10GB, but some sources recommend up to 50GB or more, so the operating system will run reliably. A good option provided by most virtual machine apps is to create a **dynamically allocated** hard drive that grows and shrinks as the need arises.
+> **メモ:** You need a lot of hard disk space available to run virtual machine emulations; each operating system you emulate can take up a lot of memory. You tend to choose the hard drive space you want for each install; you could get away with probably 10GB, but some sources recommend up to 50GB or more, so the operating system will run reliably. A good option provided by most virtual machine apps is to create a **dynamically allocated** hard drive that grows and shrinks as the need arises.
 
 To use a Virtual Box, you need to:
 
-1.  Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
-2.  [Download the appropriate installer](https://www.virtualbox.org/wiki/Downloads) for your operating system and install it.
-3.  Open the app; you'll be presented with a view like the following: ![](virtualbox.png)
-4.  To create a new virtual machine, press the _New_ button in the top left hand corner.
-5.  Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
+1. Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
+2. [Download the appropriate installer](https://www.virtualbox.org/wiki/Downloads) for your operating system and install it.
+3. Open the app; you'll be presented with a view like the following: ![](virtualbox.png)
+4. To create a new virtual machine, press the _New_ button in the top left hand corner.
+5. Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
 
-    1.  Provide a name for the new virtual machine
-    2.  Choose with operating system and version you are installing on it
-    3.  Set how much RAM should be allocated (we'd recommend something like 2048MB, or 2GB)
-    4.  Create a virtual hard disk (choose the default options across the three dialog boxes containing _Create a virtual hard disk now_, _VDI (virtual disk image)_, and _Dynamically allocated_).
-    5.  Choose the file location and size for the virtual hard disk (choose a sensible name and location to keep it, and for the size specify around 50GB, or as much as you are comfortable with specifying).
+    1. Provide a name for the new virtual machine
+    2. Choose with operating system and version you are installing on it
+    3. Set how much RAM should be allocated (we'd recommend something like 2048MB, or 2GB)
+    4. Create a virtual hard disk (choose the default options across the three dialog boxes containing _Create a virtual hard disk now_, _VDI (virtual disk image)_, and _Dynamically allocated_).
+    5. Choose the file location and size for the virtual hard disk (choose a sensible name and location to keep it, and for the size specify around 50GB, or as much as you are comfortable with specifying).
 
 Now the new virtual box should appear in the left hand menu of the main Virtual Box UI window. At this point, you can double-click to open it — it will start to boot up the virtual machine, but it won't yet have the operating system (OS) installed. At this point you need to point the dialog box at the installer image/disk, and it will run through the steps to install the OS just like on a physical machine.
 
 ![](virtualbox-installer.png)
 
-> **Warning:** **Important**: You need to make sure you have the operating system image you want to install on the virtual machine available at this point, and install it right away. If you cancel the process at this point, it can render the virtual machine unusable, and make it so you need to delete it and create it again. This is not fatal, but it is annoying.
+> **警告:** You need to make sure you have the operating system image you want to install on the virtual machine available at this point, and install it right away. If you cancel the process at this point, it can render the virtual machine unusable, and make it so you need to delete it and create it again. This is not fatal, but it is annoying.
 
 After the process has completed, you should have a virtual machine running an operating system inside a window on your host computer.
 
@@ -245,7 +233,7 @@ Having multiple virtual machines is very useful, particularly for Windows IE/Edg
 - Windows XP with IE7
 - Windows XP with IE6
 
-> **Note:** Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running, if it is a licensed product.
+> **メモ:** Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running, if it is a licensed product.
 
 ### 自動化と商用アプリ
 
@@ -275,9 +263,9 @@ When running tests, it can also be a good idea to:
 
 These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e. there is nothing installed that could affect the results of the tests.
 
-> **Note:** Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.
+> **メモ:** Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.
 
-> **Note:** Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/jsocol/django-waffle).
+> **メモ:** Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/jsocol/django-waffle).
 
 ## まとめ
 

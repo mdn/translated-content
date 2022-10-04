@@ -111,7 +111,7 @@ A veces, durante el desarrollo de una nueva especificación, o en el transcurso 
 
 - Si el elemento se implementó en cualquier versión de lanzamiento de uno o más navegadores, pero _solo_ detrás de una preferencia o marca, no elimines el elemento de la documentación inmediatamente. En su lugar, marca el artículo como obsoleto de la siguiente manera:
 
-  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro {{TemplateLink("deprecated_header")}} en la parte superior de la página y agrega la etiqueta {{tag("Deprecated")}} a la lista de etiquetas de la página.
+  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro {{TemplateLink("deprecated_header")}} en la parte superior de la página y agrega la etiqueta `Deprecated` a la lista de etiquetas de la página.
   - En la página de descripción general del elemento, la interfaz o la API, busca la lista de elementos que incluyan el elemento que se ha eliminado de la especificación y agrega la macro {{TemplateLink("deprecated_inline")}} después del nombre del elemento en esa lista.
   - Busca en el texto informativo de la página de descripción general de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Agrega cuadros de advertencia en los lugares apropiados con texto del tipo "\[lo que sea] se ha eliminado de la especificación y pronto se eliminará de los navegadores. Consulta \[enlace a la página] para conocer una nueva forma de hacer esto."
   - Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Agrega advertencias similares.
@@ -121,7 +121,7 @@ A veces, durante el desarrollo de una nueva especificación, o en el transcurso 
 
 - Si el elemento se implementó en una o más versiones de publicaciones de navegadores, sin que sea necesario cambiar una preferencia o una marca, marca el elemento como obsoleto, de la siguiente manera:
 
-  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro {{TemplateLink("deprecated_header")}} en la parte superior de la página y agrega la etiqueta {{tag("Deprecated")}} a la lista de etiquetas de la página.
+  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro {{TemplateLink("deprecated_header")}} en la parte superior de la página y agrega la etiqueta `Deprecated` a la lista de etiquetas de la página.
   - En la página de descripción general del elemento, la interfaz o la API, busca la lista de elementos que incluyan el elemento que se ha eliminado de la especificación y agrega la macro {{TemplateLink("deprecated_inline")}} después del nombre del elemento en esa lista.
   - Busca en el texto informativo de la página de descripción general de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Agrega recuadros de advertencia en los lugares apropiados con texto del tipo "\[lo que sea] se ha eliminado de la especificación y está obsoleto. Es posible que se elimine de los navegadores en el futuro, por lo que no debes usarlo. Consulta \[enlace a la página] para conocer una nueva forma de hacer esto."
   - Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Agrega advertencias similares.
@@ -137,17 +137,17 @@ A veces, necesitas reutilizar el mismo texto en varias páginas (o deseas usar e
 
 - Si deseas copiar una página completa:
 
-  1.  Mientras visualizas la página que deseas copiar, en el menú **Avanzado** (engrane), elige [**Clona esta página**](/es/docs/MDN/Contribute/Creating_and_editing_pages#Clone_of_an_existing_page). Esto abre la interfaz de usuario del editor para una nueva página, con el contenido de la página clonada ya poblada.
-  2.  Introduce un **título** y un **`slug`** nuevo para la página clonada.
-  3.  Edita el contenido de la página según sea necesario y guárdalo como usualmente lo haces.
+  1. Mientras visualizas la página que deseas copiar, en el menú **Avanzado** (engrane), elige [**Clona esta página**](/es/docs/MDN/Contribute/Creating_and_editing_pages#Clone_of_an_existing_page). Esto abre la interfaz de usuario del editor para una nueva página, con el contenido de la página clonada ya poblada.
+  2. Introduce un **título** y un **`slug`** nuevo para la página clonada.
+  3. Edita el contenido de la página según sea necesario y guárdalo como usualmente lo haces.
 
 - Si deseas copiar solo una parte de una página, **no solo visites la página y la copies**. Esto introduce bits adicionales de HTML no deseados en la página destino, y alguien tendrá que limpiar eso, tú u otro editor. Nadie quiere eso. Para copiar parte de una página MDN a otra página:
 
-  1.  En la página fuente, haz clic en el botón **Editar** en la página de fuente.
-  2.  **Copia el contenido que deseas reutilizar desde la interfaz de usuario del editor.**
-  3.  Haz clic en **Descartar** para salir de la interfaz de usuario del editor de esa página.
-  4.  Abre la interfaz de usuario del editor de la página donde deseas pegar.
-  5.  Pega el contenido del portapapeles.
+  1. En la página fuente, haz clic en el botón **Editar** en la página de fuente.
+  2. **Copia el contenido que deseas reutilizar desde la interfaz de usuario del editor.**
+  3. Haz clic en **Descartar** para salir de la interfaz de usuario del editor de esa página.
+  4. Abre la interfaz de usuario del editor de la página donde deseas pegar.
+  5. Pega el contenido del portapapeles.
 
   > **Nota:** **Usuarios de Chrome:** Chrome generalmente no incluye las clases aplicadas al contenido al copiar y pegar documentos en nuestro editor. Debes revisar el contenido después de hacer esto y volver a aplicar los estilos perdidos. Checa las tablas, cuadros de sintaxis, resaltado de sintaxis y secciones ocultas de contenido en particular.
 

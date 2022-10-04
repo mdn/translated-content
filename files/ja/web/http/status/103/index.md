@@ -1,15 +1,8 @@
 ---
 title: 103 Early Hints
 slug: Web/HTTP/Status/103
-tags:
-  - Draft
-  - HTTP
-  - Informational
-  - NeedsCompatTable
-  - NeedsContent
-  - Status code
-translation_of: Web/HTTP/Status/103
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`103 Early Hints`** インフォメーションレスポンスステータスコードは、主に {{HTTPHeader("Link")}} ヘッダーと共に使用され、サーバーがまだレスポンスを準備している間にユーザーエージェントがリソースのプリロードを開始できるようにすることを目的としています。

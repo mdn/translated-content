@@ -15,7 +15,9 @@ translation_of: Web/API/Window/getComputedStyle
 
 ## 구문
 
-    var style = window.getComputedStyle(element[, pseudoElt]);
+```js
+var style = window.getComputedStyle(element[, pseudoElt]);
+```
 
 - element
   - : 속성값을 얻으려하는 {{domxref("Element")}}.
@@ -60,7 +62,7 @@ para.textContent = 'My computed font-size is ' + compStyles.getPropertyValue('fo
 
 ## 설명
 
-메소드의 호출에서 반환되는 객체의 자료형은 요소의 {{domxref("HTMLElement.style", "style")}} 속성에서 반환되는 객체와 동일한 {{domxref("CSSStyleDeclaration")}}형입니다. 그러나 두 객체는 다른 목적을 가지고 있습니다. `getComputedStyle`에서 반환된 객체는 읽기 전용이며 요소의 (\<style> 또는 외부 stylesheet로 설정되는 것도 포함해서) 스타일을 검사하는 데 사용할 수 있습니다. `elt.style `객체는 특정한 요소에 스타일을 설정하는 데 사용해야 합니다.
+메소드의 호출에서 반환되는 객체의 자료형은 요소의 {{domxref("HTMLElement.style", "style")}} 속성에서 반환되는 객체와 동일한 {{domxref("CSSStyleDeclaration")}}형입니다. 그러나 두 객체는 다른 목적을 가지고 있습니다. `getComputedStyle` 에서 반환된 객체는 읽기 전용이며 요소의 (\<style> 또는 외부 stylesheet로 설정되는 것도 포함해서) 스타일을 검사하는 데 사용할 수 있습니다. `elt.style` 객체는 특정한 요소에 스타일을 설정하는 데 사용해야 합니다.
 
 첫 번째 인수는 요소여야합니다. #text 노드같은 비-요소 노드를 전달하면 오류가 발생합니다. Gecko 1.9.2 {{geckoRelease("1.9.2")}}부터는, 반환되는 URL 값에는 `url("http://foo.com/bar.jpg")`과 같이 URL 문자열 주위에 따옴표가 있습니다.
 

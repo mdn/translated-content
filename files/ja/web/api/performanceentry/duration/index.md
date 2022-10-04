@@ -1,13 +1,8 @@
 ---
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceEntry/duration
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`duration`** プロパティは、{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の期間である{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
@@ -34,7 +29,7 @@ entry.duration;
 
 {{domxref("PerformanceEntry","パフォーマンスエントリ")}}の長さを表す {{domxref("DOMHighResTimeStamp")}}。期間の概念が特定のパフォーマンスメトリックに適用されない場合、ブラウザーは期間 0 を返すように選択することがあります。
 
-> **Note:** パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが {{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは {{domxref("PerformanceEntry.responseEnd")}} と {{domxref("PerformanceEntry.startTime")}} の差の{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
+> **メモ:** パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが {{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは {{domxref("PerformanceEntry.responseEnd")}} と {{domxref("PerformanceEntry.startTime")}} の差の{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
 
 ## 例
 

@@ -12,6 +12,7 @@ tags:
   - contentScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
 ---
+
 {{AddonSidebar()}}
 
 Un `RegisteredContentScript` est renvoyé par un appel à  {{WebExtAPIRef("contentScripts.register()")}} et représente les scripts de contenu enregistrés dans cet appel.

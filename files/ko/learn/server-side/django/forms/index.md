@@ -1,7 +1,6 @@
 ---
 title: 'Django 튜토리얼 파트 9: 폼(form)으로 작업하기'
 slug: Learn/Server-side/Django/Forms
-translation_of: Learn/Server-side/Django/Forms
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
@@ -82,23 +81,23 @@ Django의 폼 처리 과정은 (모델에 대한 정보를 보여주는데 있�
 
 위의 다이어그램에 기반하여, Django 폼이 주요하게 다루는 것은 다음과 같다. :
 
-1.  사용자가 처음으로 폼을 요청할 때 기본 폼을 보여준다.
+1. 사용자가 처음으로 폼을 요청할 때 기본 폼을 보여준다.
 
     - 폼은 비어있는 필드가 있을 수 있다 (예를 들면, 새로운 책을 등록할 경우) 아니면 초기값으로 채워진 필드가 있을 수도 있다. ( 예를 들면, 기존의 책을 수정하거나, 흔히 사용하는 초기값이 있을경우)
     - 이 시점의 폼은 (초기값이 있긴해도) 유저가 입력한 값에 연관되지 않았기에 unbound 상태라고 불린다.
 
-2.  제출 요청으로 부터 데이타를 수집하고 그것을 폼에 결합한다.
+2. 제출 요청으로 부터 데이타를 수집하고 그것을 폼에 결합한다.
 
     - 데이타를 폼에 결합(binding) 한다는 것은 사용자 입력 데이타와 유효성을 위반한 경우의 에러메시지가 폼을 재표시할 필요가 있을 때 준비되었다는 의미이다.
 
-3.  데이타를 다듬어서 유효성을 검증한다.
+3. 데이타를 다듬어서 유효성을 검증한다.
 
     - 데이타를 다듬는다는 것은 사용자 입력을 정화(sanitisation) 하고 (예를 들면, 잠재적으로 악의적인 콘덴츠를 서버로 보낼수도 있는 유효하지 않은 문자를 제거하는 것) python에서 사용하는 타입의 데이타로 변환하는 것이다.
     - 유효성검증은 입력된 값이 해당 필드에 적절한 값인지 검사한다. (예를 들면, 데이타가 허용된 범위에 있는 값인지, 너무 짧거나 길지 않은지 등등)
 
-4.  입력된 어떤 데이타가 유효하지 않다면, 폼을 다시 표시하는데 이번에는 초기값이 아니라 유저가 입력한 데이타와 문제가 있는 필드의 에러 메시지와 함께 표시한다.
-5.  입력된 모든 데이타가 유효하다면, 요청된 동작을 수행한다. (예를 들면, 데이타를 저장하거나, 이메일을 보내거나, 검색결과를 반환하거나, 파일을 업로딩하는 작업 등등)
-6.  일단 모든 작업이 완료되었다면, 사용자를 새로운 페이지로 보낸다.
+4. 입력된 어떤 데이타가 유효하지 않다면, 폼을 다시 표시하는데 이번에는 초기값이 아니라 유저가 입력한 데이타와 문제가 있는 필드의 에러 메시지와 함께 표시한다.
+5. 입력된 모든 데이타가 유효하다면, 요청된 동작을 수행한다. (예를 들면, 데이타를 저장하거나, 이메일을 보내거나, 검색결과를 반환하거나, 파일을 업로딩하는 작업 등등)
+6. 일단 모든 작업이 완료되었다면, 사용자를 새로운 페이지로 보낸다.
 
 Django는 위에 설명된 작업을 도와줄 수많은 도구와 접근법을 제공한다. 가장 기초적인 것은 `Form` 클래스 인데 form HTML의 생성과 데이터 정화와 유효성검증을 간단하게 만든다. 다음 단계에서는, 도서관 사서가 책의 대여갱신을 할수 있도록 해주는 페이지의 실제적인 예제를 이용해 폼이 어떻게 동작하는지 살펴보도록 한다.
 
@@ -619,11 +618,11 @@ Then navigate to the author create page: <http://127.0.0.1:8000/catalog/author/c
 
 ![Form Example: Create Author](https://mdn.mozillademos.org/files/14223/forms_example_create_author.png)
 
-Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like _http\://127.0.0.1:8000/catalog/author/10_.
+Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
 
-You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/update/_) — we don't show a screenshot, because it looks just like the "create" page!
+You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/update/`) — we don't show a screenshot, because it looks just like the "create" page!
 
-Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django should display the delete page shown below. Press **Yes, delete.** to remove the record and be taken to the list of all authors.
+Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press **Yes, delete.** to remove the record and be taken to the list of all authors.
 
 ![](https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png)
 

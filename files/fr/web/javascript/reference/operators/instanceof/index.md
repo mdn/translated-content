@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/instanceof
 original_slug: Web/JavaScript/Reference/Opérateurs/instanceof
 ---
+
 {{jsSidebar("Operators")}}
 
 L'**opérateur `instanceof`** permet de tester si un objet possède, dans sa chaîne de prototype, la propriété `prototype` d'un certain constructeur.

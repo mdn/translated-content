@@ -6,13 +6,13 @@ tags:
   - Glosario
 translation_of: Glossary/event
 ---
-Los eventos son sucesos generados por elementos del [DOM](https://developer.mozilla.org/en-US/docs/Glossary/DOM), que pueden ser manipulados por un código Javascript
+Los eventos son sucesos generados por elementos del [DOM](/en-US/docs/Glossary/DOM), que pueden ser manipulados por un código Javascript
 
 ## Saber más
 
 ### Referencias técnicas
 
-- [Documentoación de eventos en MDN](https://developer.mozilla.org/es/docs/Web/API/Event)
+- [Documentoación de eventos en MDN](/es/docs/Web/API/Event)
 
 ### Conocimientos generales
 

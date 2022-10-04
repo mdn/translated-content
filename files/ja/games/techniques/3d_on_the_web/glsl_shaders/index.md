@@ -1,16 +1,8 @@
 ---
 title: GLSL シェーダー
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
-tags:
-  - Beginner
-  - GLSL
-  - OpenGL
-  - Shader
-  - texture shader
-  - three.js
-  - vertex shader
-translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
+
 {{GamesSidebar}}
 
 シェーダーは、 C と同様の構文を持つ特別な OpenGL シェーディング言語である GLSL (OpenGL Shading Language) を使用します。 GLSL はグラフィックスパイプラインによって直接実行されます。[様々な種類のシェーダー](https://www.khronos.org/opengl/wiki/Shader)がありますが、ウェブ上のグラフィックを作成するのに良く使用されるのは、頂点 (バーテックス) シェーダーとフラグメント (ピクセル) シェーダーの 2 種類です。 頂点シェーダーは、形状の位置を 3D 描画座標に変換します。 フラグメントシェーダーは、形状の色やその他の属性のレンダリングを計算します。
@@ -39,7 +31,7 @@ GLSL は JavaScript ほど直感的ではありません。 GLSL は強く型付
 
 これらのシェーダーの動作を説明する簡単なデモを作成しましょう。 最初に [Three.js のチュートリアル](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)を読んで、シーンの概念、そのオブジェクト、およびマテリアルを把握してください。
 
-> **Note:** シェーダーを作成するために Three.js やその他のライブラリーを使用する必要はなく、純粋な [WebGL](/ja/docs/Web/API/WebGL_API) (Web Graphics Library) で十分です。 ここでは Three.js を使用して、背景となるコードを非常に単純でわかりやすくしているため、シェーダーのコードに集中することができます。 Three.js やその他の 3D ライブラリーは、多くのことを抽象化します。 このような例を生の WebGL で作成する場合は、実際に機能させるために多くの追加コードを作成する必要があります。
+> **メモ:** シェーダーを作成するために Three.js やその他のライブラリーを使用する必要はなく、純粋な [WebGL](/ja/docs/Web/API/WebGL_API) (Web Graphics Library) で十分です。 ここでは Three.js を使用して、背景となるコードを非常に単純でわかりやすくしているため、シェーダーのコードに集中することができます。 Three.js やその他の 3D ライブラリーは、多くのことを抽象化します。 このような例を生の WebGL で作成する場合は、実際に機能させるために多くの追加コードを作成する必要があります。
 
 ### 環境設定
 
@@ -105,7 +97,7 @@ void main() {
 
 結果の `gl_Position` は、モデルビュー行列と射影行列に各ベクトルを乗算して、いずれの場合も最終的な頂点位置を取得することによって計算されます。
 
-> **Note:** [頂点処理の段落](/ja/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing)から、*モデル変換*、*ビュー変換*、および*投影変換*について詳しく知ることができます。 また、この記事の最後にあるリンクからも、詳細を学ぶことができます。
+> **メモ:** [頂点処理の段落](/ja/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing)から、*モデル変換*、*ビュー変換*、および*投影変換*について詳しく知ることができます。 また、この記事の最後にあるリンクからも、詳細を学ぶことができます。
 
 `projectionMatrix` と `modelViewMatrix` はどちらも Three.js によって提供され、ベクトルは新しい 3D 位置を渡します。 これにより、元の立方体がシェーダーを介して平行移動され `x` 軸に沿って 10 単位、`z` 軸に沿って 5 単位移動します。 4番目のパラメーターは無視して、デフォルトの `1.0` 値のままにしておくことができます。 これは、3D 空間の頂点位置のクリッピングを操作するために使用されますが、今回のケースでは必要ありません。
 

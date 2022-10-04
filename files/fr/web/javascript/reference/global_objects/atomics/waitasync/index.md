@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
 browser-compat: javascript.builtins.Atomics.waitAsync
 ---
+
 {{JSRef}}
 
 La méthode statique **`Atomics.waitAsync()`** permet d'attendre de façon asynchrone à un emplacement de mémoire partagée et renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

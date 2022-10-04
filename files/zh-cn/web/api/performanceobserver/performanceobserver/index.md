@@ -2,9 +2,10 @@
 title: PerformanceObserver()
 slug: Web/API/PerformanceObserver/PerformanceObserver
 ---
+
 {{APIRef("Performance Timeline API")}}
 
-**`PerformanceObserver()`** 构造函数使用给定的观察者 `callback` 生成一个新的 {{domxref("PerformanceObserver")}} 对象。当通过 {{domxref("PerformanceObserver.observe","observe()")}} 方法注册的 {{domxref("PerformanceEntry.entryType","条目类型",'','true')}} 的 {{domxref("PerformanceEntry","性能条目事件", '', 'true')}} 被记录下来时，调用该观察者回调.
+**`PerformanceObserver()`** 构造函数使用给定的观察者 `callback` 生成一个新的 {{domxref("PerformanceObserver")}} 对象。当通过 {{domxref("PerformanceObserver.observe","observe()")}} 方法注册的 {{domxref("PerformanceEntry.entryType","条目类型",'','true')}} 的 {{domxref("PerformanceEntry","性能条目事件", '', 'true')}} 被记录下来时，调用该观察者回调。
 
 ## 语法
 

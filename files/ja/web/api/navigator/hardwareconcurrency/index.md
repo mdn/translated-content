@@ -1,16 +1,9 @@
 ---
 title: Navigator.hardwareConcurrency
 slug: Web/API/Navigator/hardwareConcurrency
-tags:
-  - API
-  - HTML DOM
-  - Navigator
-  - Property
-  - hardwareConcurrency
-translation_of: Web/API/Navigator/hardwareConcurrency
 original_slug: Web/API/NavigatorConcurrentHardware/hardwareConcurrency
-browser-compat: api.Navigator.hardwareConcurrency
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`navigator.hardwareConcurrency`** は読み取り専用のプロパティで、ユーザーのコンピューター上でスレッドを実行するために使用可能な論理プロセッサー数を返します。

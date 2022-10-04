@@ -1,13 +1,9 @@
 ---
 title: ウェブのエラーの記事を作成するには
 slug: MDN/Writing_guidelines/Howto/Document_web_errors
-tags:
-  - Howto
-  - MDN
-  - Meta
-translation_of: MDN/Contribute/Howto/Document_web_errors
 original_slug: MDN/Contribute/Howto/Document_web_errors
 ---
+
 {{MDNSidebar}}
 
 MDN の [JavaScript エラーリファレンス](/ja/docs/Web/JavaScript/Reference/Errors) は [開発者コンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)で発生するエラーについて、ウェブ開発者を手助けすることを目的とした新しいプロジェクトです。この機能は、Firefox をお使いの場合に有効です。 JavaScript エラーに含まれる "Learn more" が問題の修正に役立つ追加のアドバイスを含む JavaScript エラーリファレンスにリンクしています。

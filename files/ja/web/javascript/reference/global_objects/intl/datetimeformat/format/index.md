@@ -1,18 +1,8 @@
 ---
 title: Intl.DateTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.format
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.format()`** メソッドは、この {{jsxref("Intl.DateTimeFormat")}} オブジェクトのロケールと整形オプションに従って日付や時刻を整形します。
@@ -82,7 +72,7 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 // false in IE and Edge
 ```
 
-> **Note:** この [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)に詳細や例があります。
+> **メモ:** この [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)に詳細や例があります。
 
 ## 仕様書
 

@@ -4,6 +4,7 @@ slug: Web/API/Document/anchors
 translation_of: Web/API/Document/anchors
 original_slug: Web/API/Document/Document.anchors
 ---
+
 {{APIRef("DOM")}} {{deprecated_header()}}
 
 `anchors` retourne une liste de toutes les ancres du document.

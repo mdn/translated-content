@@ -1,16 +1,8 @@
 ---
 title: HTMLLIElement
 slug: Web/API/HTMLLIElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTML DOM インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLLIElement
-translation_of: Web/API/HTMLLIElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLLIElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて）リスト要素を操作するための特別なプロパティを提供します。

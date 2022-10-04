@@ -1,14 +1,8 @@
 ---
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
-tags:
-  - JavaScript
-  - メソッド
-  - リファレンス
-  - parseInt
-browser-compat: javascript.builtins.parseInt
-translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 **`parseInt()`** 関数は、文字列の引数を解析し、指定された[基数](https://ja.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0) (数学的記数法の底) の整数値を返します。
@@ -30,7 +24,7 @@ parseInt(string, radix)
 
   - : `2` から `36` までの整数で、`string` の*基数* (数学的記数法の底) を表します。既定値が `10` では**ない**ので注意してください。基数の値が `Number` 型でなかった場合は、 `Number` に型変換されます。
 
-    > **Warning:** [下記の解説](#description)では、`radix` が提供されなかった場合に何が起こるかをもっと詳細に説明しています。
+    > **警告:** [下記の解説](#description)では、`radix` が提供されなかった場合に何が起こるかをもっと詳細に説明しています。
 
 ### 返値
 
@@ -68,7 +62,7 @@ parseInt(string, radix)
 
 数値を特定の基数で文字列リテラルに変換したいときは、`thatNumber.toString(radix)` を使用してください。
 
-> **Warning:** `parseInt` は {{jsxref("BigInt")}} を {{jsxref("Number")}} へ変換するので、その処理中に精度が落ちます。これは後に付く数値ではない値が、"`n`" を含めて、切り落とされるからです。
+> **警告:** `parseInt` は {{jsxref("BigInt")}} を {{jsxref("Number")}} へ変換するので、その処理中に精度が落ちます。これは後に付く数値ではない値が、"`n`" を含めて、切り落とされるからです。
 
 ### 基数を指定しない 8 進数の解釈
 

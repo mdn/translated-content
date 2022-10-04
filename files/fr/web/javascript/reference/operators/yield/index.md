@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/yield
 original_slug: Web/JavaScript/Reference/Opérateurs/yield
 ---
+
 {{jsSidebar("Operators")}}
 
 Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction génératrice ({{jsxref("Statements/function*", "function*")}} ou [une fonction génératrice historique](/fr/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)).

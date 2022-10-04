@@ -1,21 +1,8 @@
 ---
 title: border-block-start
 slug: Web/CSS/border-block-start
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-block
-  - border-block-start
-  - border-block-start-color
-  - border-block-start-style
-  - border-block-start-width
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-block-start
-translation_of: Web/CSS/border-block-start
 ---
+
 {{CSSRef}}
 
 **`border-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なブロック方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。

@@ -1,13 +1,8 @@
 ---
 title: NDEFRecord()
 slug: Web/API/NDEFRecord/NDEFRecord
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFRecord.NDEFRecord
-translation_of: Web/API/NDEFRecord/NDEFRecord
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`NDEFRecord()`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API) のコンストラクターで、新しく構築された {{DOMxRef("NDEFRecord")}} オブジェクトを返します。これは互換性のある NFC 機器（例えば、NDEF に対応している NFC タグ）から読み書きできるデータを表すものです。

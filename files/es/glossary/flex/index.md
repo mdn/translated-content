@@ -28,7 +28,6 @@ Además, \<flex> puede referirse a una longitud flexible en CSS Grid Layout.
 - {{cssxref("justify-content")}}
 - {{cssxref("order")}}
 
-
 ### Para más información
 
 - _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_

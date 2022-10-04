@@ -23,9 +23,9 @@ translation_of: Web/API/Navigator
  <dt>{{domxref("NavigatorID.appCodeName")}} {{readonlyInline}}{{experimental_inline}}</dt>
  <dd>Возвращает внутренний "код" текущего браузера. Не полагайтесь на это свойство для получения правильного значения.</dd>
  <dt>{{domxref("NavigatorID.appName")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Возвращает {{domxref("DOMString")}} с официальным названием браузера. <span id="result_box" lang="ru"><span class="hps">Не полагайтесь</span> <span class="alt-edited hps">на это свойство</span><span> для получения</span> <span class="hps">правильного значения.</span></span></dd>
+ <dd>Возвращает {{domxref("DOMString")}} с официальным названием браузера. Не полагайтесь на это свойство для получения правильного значения.</dd>
  <dt>{{domxref("NavigatorID.appVersion")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Возвращает версию браузера как {{domxref("DOMString")}}. <span id="result_box" lang="ru"><span class="hps">Не полагайтесь</span> <span class="alt-edited hps">на это свойство</span><span> для получения</span> <span class="hps">правильного значения.</span></span></dd>
+ <dd>Возвращает версию браузера как {{domxref("DOMString")}}. Не полагайтесь на это свойство для получения правильного значения.</dd>
  <dt>{{domxref("Navigator.battery")}} {{readonlyInline}}</dt>
  <dd>Возвращает {{domxref ("BatteryManager")}} объект, который вы можете использовать для получения информации о статусе заряда аккумулятора.</dd>
  <dt>{{domxref("NetworkInformation.connection")}} {{readonlyInline}}{{experimental_inline}}</dt>
@@ -49,7 +49,7 @@ translation_of: Web/API/Navigator
  <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{experimental_inline}}</dt>
  <dd>Возвращает {{domxref("PluginArray")}} листинг плагинов, установленных в браузере.</dd>
  <dt>{{domxref("NavigatorID.product")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Всегда возвращает <code>'Gecko'</code>, в любом браузере. <span id="result_box" lang="ru"><span class="hps">Это свойство</span> <span class="hps">сохраняется</span> <span class="hps">только для</span> <span class="hps">целей</span> <span class="hps">совместимости</span></span>.</dd>
+ <dd>Всегда возвращает <code>'Gecko'</code>, в любом браузере. Это свойство сохраняется только для целей совместимости.</dd>
  <dt>{{domxref("NavigatorID.userAgent")}} {{readonlyInline}}</dt>
  <dd>Возвращает строку агента пользователя для данного браузера.</dd>
  <dt>{{domxref("Navigator.serviceWorker")}} {{readonlyInline}}</dt>
@@ -81,11 +81,11 @@ translation_of: Web/API/Navigator
  <dt>{{domxref("window.navigator.securitypolicy", "navigator.securitypolicy")}} {{non-standard_inline}}</dt>
  <dd>Возвращает пустую строку. В Netscape 4.7x, возвращает "US &amp; CA domestic policy" или "Export policy".</dd>
  <dt>{{domxref("window.navigator.standalone", "navigator.standalone")}} {{non-standard_inline}}</dt>
- <dd>Возвращает логическое значение (boolean), показывающее работает ли браузер в автономном режиме. Доступно только в <span class="short_text" id="result_box" lang="ru"><span class="hps">IOS</span> <span class="hps">Safari от Apple</span></span>.</dd>
+ <dd>Возвращает логическое значение (boolean), показывающее работает ли браузер в автономном режиме. Доступно только в IOS Safari от Apple.</dd>
  <dt>{{domxref("window.navigator.vendor", "navigator.vendor")}} {{non-standard_inline}}</dt>
- <dd><span id="result_box" lang="ru"><span class="hps">Возвращает</span> <span class="hps">имя поставщика</span> <span class="hps">текущего</span> <span class="atn hps">браузера (</span><span>например</span><span>,</span> <span class="atn hps">"</span><span>Netscape6</span><span>"</span><span>)</span><span>.</span></span></dd>
+ <dd>Возвращает имя поставщика текущего браузера (например, "Netscape6").</dd>
  <dt>{{domxref("window.navigator.vendorSub", "navigator.vendorSub")}} {{non-standard_inline}}</dt>
- <dd><span id="result_box" lang="ru"><span class="hps">Возвращает</span> <span class="hps">номер версии</span> <span class="hps">поставщика</span> <span class="atn hps">(например, "</span><span>6.1</span><span>")</span><span>.</span></span></dd>
+ <dd>Возвращает номер версии поставщика (например, "6.1").</dd>
  <dt><a href="/en-US/docs/API/Pointer_Lock_API" title="Mouse Lock API"><code>navigator.webkitPointer</code></a> {{non-standard_inline}}</dt>
  <dd>Возвращает объект PointerLock для <a href="/en-US/docs/API/Pointer_Lock_API" title="Mouse Lock API">Mouse Lock API</a>.</dd>
 </dl>
@@ -117,7 +117,7 @@ translation_of: Web/API/Navigator
  <dt>{{domxref("window.navigator.mozPay", "navigator.mozPay")}} {{non-standard_inline}}</dt>
  <dd>Разрешает оплату в приложении.</dd>
  <dt>{{domxref("window.navigator.preference", "navigator.preference")}} {{obsolete_inline("2.0")}} {{non-standard_inline}}</dt>
- <dd><span class="short_text" id="result_box" lang="ru"><span class="hps">Устанавливает</span> <span class="hps">предпочтение</span> <span class="hps">пользователя</span><span>.</span></span> <span id="result_box" lang="ru"><span class="hps">Этот метод доступен</span> <a href="http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en">только для привилегированного кода</a> <span class="hps">и</span> <span class="hps">является устаревшим</span><span>;</span></span> вы должны использовать вместо него XPCOM <a href="/en-US/docs/Preferences_API" title="Preferences_API">Preferences API</a>.</dd>
+ <dd>Устанавливает предпочтение пользователя. Этот метод доступен <a href="http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en">только для привилегированного кода</a> и является устаревшим; вы должны использовать вместо него XPCOM <a href="/en-US/docs/Preferences_API" title="Preferences_API">Preferences API</a>.</dd>
  <dt>{{domxref("window.navigator.requestWakeLock", "navigator.requestWakeLock")}} {{non-standard_inline}}</dt>
  <dd>Запрос установки блокировки пробуждения для ресурса. Блокировка пробуждения препятствует определённой части устройства включится автоматически.</dd>
 </dl>

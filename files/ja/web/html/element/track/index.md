@@ -1,21 +1,6 @@
 ---
 title: '<track>: 埋め込みテキストトラック要素'
 slug: Web/HTML/Element/track
-tags:
-  - Accessibility
-  - Cues
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Multimedia
-  - Reference
-  - TextTrack
-  - Web
-  - a11y
-  - track
-browser-compat: html.elements.track
-translation_of: Web/HTML/Element/track
 ---
 
 {{HTMLRef}}

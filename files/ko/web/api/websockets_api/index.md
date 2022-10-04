@@ -9,11 +9,11 @@ original_slug: WebSockets
 ## 인터페이스
 
 - [`WebSocket`](/ko/docs/Web/API/WebSocket)
-    - : 웹 소켓 서버로 연결하고 연결을 통해 데이터를 보내고 받는 기본 인터페이스<
+  - : 웹 소켓 서버로 연결하고 연결을 통해 데이터를 보내고 받는 기본 인터페이스<
 - [`CloseEvent`](/ko/docs/Web/API/CloseEvent)
-    - : 연결이 종료 되었을 때 웹 소켓 객체에 의해 전달된 이벤트
+  - : 연결이 종료 되었을 때 웹 소켓 객체에 의해 전달된 이벤트
 - [`MessageEvent`](/ko/docs/Web/API/MessageEvent)
-    - : 서버로 부터 메시지가 수신 되었을 때 웹 소켓 객체에 의해 전달된 이벤트
+  - : 서버로 부터 메시지가 수신 되었을 때 웹 소켓 객체에 의해 전달된 이벤트
 
 ## 도구
 
@@ -23,13 +23,13 @@ original_slug: WebSockets
 
 ## 관련 주제
 
-- [AJAX](/ko/docs/AJAX "AJAX"), [JavaScript](/ko/docs/JavaScript "JavaScript")
+- [AJAX](/ko/docs/AJAX), [JavaScript](/ko/docs/JavaScript)
 
 ## `같이 보기`
 
 - [RFC 6455 - 웹 소켓 프로토콜](http://tools.ietf.org/html/rfc6455)
 - [웹 소켓 API 규격](http://www.w3.org/TR/websockets/)
-- [서버로부터의 이벤트](/ko/docs/Server-sent_events "Server-sent_events")
+- [서버로부터의 이벤트](/ko/docs/Server-sent_events)
 - [WebSocket.us](http://websocket.us/) - 웹 소켓에 대한 비영리 커뮤니티
 
 ## `브라우저 호환성`

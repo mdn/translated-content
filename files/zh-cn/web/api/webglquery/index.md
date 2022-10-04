@@ -2,9 +2,10 @@
 title: WebGLQuery
 slug: Web/API/WebGLQuery
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
-**`WebGLQuery`** 接口是 [WebGL 2](/en-US/docs/Web/API/WebGL_API) API 的一部分，并且提供几种异步查询信息的方法。缺省情况下，遮蔽查询和图元查询是可用的。
+**`WebGLQuery`** 接口是 [WebGL 2](/zh-CN/docs/Web/API/WebGL_API) API 的一部分，并且提供几种异步查询信息的方法。缺省情况下，遮蔽查询和图元查询是可用的。
 
 另一种查询是分离定时器查询，它可以允许你测量 GPU 的性能和能力。仅当存在 {{domxref("EXT_disjoint_timer_query")}} 扩展时分离定时器查询才是可用的。
 
@@ -34,7 +35,7 @@ var query = gl.createQuery();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLQuery")}}
+{{Compat}}
 
 ## 参见
 

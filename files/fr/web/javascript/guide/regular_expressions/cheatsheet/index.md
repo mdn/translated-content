@@ -3,6 +3,7 @@ title: Antisèche sur la syntaxe des expressions rationnelles
 slug: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnalités offertes par la syntaxe des objets `RegExp` en agrégeant le contenu des articles contenus dans le guide sur les expressions rationnelles. Si vous avez besoin de plus d'informations sur un sujet donné, vous pouvez suivre le lien donné en début de chaque section pour accéder à l'article correspondant. Vous pouvez également aller consulter [le guide en question](/fr/docs/Web/JavaScript/Guide/Regular_Expressions).

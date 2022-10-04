@@ -2,6 +2,7 @@
 title: AudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }} 的`createBiquadFilter()` 方法创建了一个 {{ domxref("BiquadFilterNode") }}, 它提供了一个可以指定多个不同的一般滤波器类型的双二阶滤波器。
@@ -54,8 +55,8 @@ biquadFilter.gain.value = 25;
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.createBiquadFilter")}}
+{{Compat}}
 
 ## 相关
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

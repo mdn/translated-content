@@ -1,17 +1,9 @@
 ---
 title: UIEvent.layerY
 slug: Web/API/MouseEvent/layerY
-tags:
-  - API
-  - DOM
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - UIEvent
-translation_of: Web/API/UIEvent/layerY
 original_slug: Web/API/UIEvent/layerY
-browser-compat: api.UIEvent.layerY
 ---
+
 {{APIRef("DOM Events")}}{{Non-standard_header}}
 
 **`UIEvent.layerY`** は読み取り専用のプロパティで、現在のレイヤーに関連するイベントの垂直座標を返します。

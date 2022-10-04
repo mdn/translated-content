@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTTP/Methods/DELETE
 original_slug: Web/HTTP/Méthode/DELETE
 ---
+
 {{HTTPSidebar}}
 
 La **méthode HTTP DELETE** supprime la ressource indiquée.

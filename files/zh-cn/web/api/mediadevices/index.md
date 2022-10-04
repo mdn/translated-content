@@ -2,6 +2,7 @@
 title: MediaDevices
 slug: Web/API/MediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaDevices`** 接口提供访问连接媒体输入的设备，如照相机和麦克风，以及屏幕共享等。它可以使你取得任何硬件资源的媒体数据。
@@ -79,7 +80,7 @@ function errorMsg(msg, error) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices")}}
+{{Compat}}
 
 ## 参见
 

@@ -1,14 +1,8 @@
 ---
 title: Access-Control-Allow-Methods
 slug: Web/HTTP/Headers/Access-Control-Allow-Methods
-tags:
-  - CORS
-  - HTTP
-  - header
-  - ヘッダー
-  - リファレンス
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Allow-Methods`** レスポンスヘッダーは、{{glossary("preflight request", "プリフライトリクエスト")}}のレスポンスの中で、リソースにアクセスするときに利用できる 1 つまたは複数のメソッドを指定します。

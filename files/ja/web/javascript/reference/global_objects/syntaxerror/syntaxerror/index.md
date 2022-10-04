@@ -1,13 +1,8 @@
 ---
 title: SyntaxError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
 ---
+
 {{JSRef}}
 
 **`SyntaxError`** オブジェクトは、文法的に無効なコードを解釈しようとしたときのエラーを表します。

@@ -1,18 +1,8 @@
 ---
 title: PushEvent
 slug: Web/API/PushEvent
-tags:
-  - API
-  - ExtendableEvent
-  - Interface
-  - Offline
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
-  - Workers
-translation_of: Web/API/PushEvent
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 [Push API](/ja/docs/Web/API/Push_API) の **`PushEvent`** インターフェースは、受け取ったプッシュメッセージを表します。このイベントは、{{domxref("ServiceWorker")}} の [グローバルスコープ](/ja/docs/Web/API/ServiceWorkerGlobalScope)に送信されます。これは、アプリケーションサーバーから {{domxref("PushSubscription")}} に送信された情報を含みます。

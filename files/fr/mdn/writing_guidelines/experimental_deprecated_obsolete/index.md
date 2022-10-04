@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 translation_of: MDN/Guidelines/Conventions_definitions
 original_slug: MDN/Guidelines/Conventions_definitions
 ---
+
 {{MDNSidebar}}
 
 Cet article définit certaines conventions et définitions couramment utilisées sur MDN et qui pourraient ne pas être évidentes au sein de la documentation.

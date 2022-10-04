@@ -1,13 +1,8 @@
 ---
 title: <mroot>
 slug: Web/MathML/Element/mroot
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
-translation_of: Web/MathML/Element/mroot
 ---
+
 {{MathMLRef}}
 
 MathML の `<mroot>` 要素は根指数の付いた累乗根を表示するのに用いられます。引数は二つあり，構文は `<mroot> 基数 根指数 </mroot>` となります。

@@ -2,6 +2,7 @@
 title: File()
 slug: Web/API/File/File
 ---
+
 {{APIRef("File")}}
 
 **`File()`** コンストラクターは、新しい {{domxref("File")}} オブジェクトのインスタンスを生成します。

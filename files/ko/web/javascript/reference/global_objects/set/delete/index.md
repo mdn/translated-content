@@ -18,7 +18,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 
 ## 구문
 
-    mySet.delete(value);
+```js
+mySet.delete(value);
+```
 
 ### 매개변수
 

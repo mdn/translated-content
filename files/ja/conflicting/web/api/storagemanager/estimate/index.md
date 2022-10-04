@@ -1,20 +1,9 @@
 ---
 title: StorageEstimate
 slug: conflicting/Web/API/StorageManager/estimate
-tags:
-  - API
-  - Dictionary
-  - Interface
-  - Quotas
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageEstimate
-  - Usage
-translation_of: Web/API/StorageEstimate
 original_slug: Web/API/StorageEstimate
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 **`StorageEstimate`** ディクショナリは、サイトまたはアプリのデータストアのサイズとその使用量の概算値を提供するために {{domxref("StorageManager")}} によって使用されます。{{domxref("StorageManager.estimate", "estimate()")}} メソッドは、その {{jsxref("Promise")}} が解決されたときにこのディクショナリに適合するオブジェクトを返します。

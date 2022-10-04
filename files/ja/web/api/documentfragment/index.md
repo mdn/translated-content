@@ -1,16 +1,8 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Reference
-  - インターフェイス
-  - ウェブコンポーネント
-  - 文書
-translation_of: Web/API/DocumentFragment
 ---
+
 {{ APIRef("DOM") }}
 
 **`DocumentFragment`** インターフェイスは、親ノードを持たない最小限の文書オブジェクト (文書の断片) を表します。これは {{domxref("Document")}} の軽量版として使用され、標準の文書のようにノードで構成される文書構造の区間を格納します。重要な違いは、文書の断片はアクティブな文書ツリー構造の一部ではないため、断片に対して変更を行っても、文書に影響したり、{{Glossary("reflow", "再フロー")}}を起こしたり、変更が行われたときに性能上の影響を及ぼしたりすることがないことです。

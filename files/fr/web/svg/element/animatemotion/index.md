@@ -7,6 +7,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/animateMotion
 ---
+
 {{SVGRef}}
 
 L'élément **`<animateMotion>`** permet d'animer un élément le long d'un chemin donné.
@@ -74,14 +75,11 @@ Cet élément implémente l'interface [`SVGAnimateMotionElement`](/fr/docs/DOM/S
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                                   | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName("SVG Animations 2", "#AnimateMotionElement", "&lt;animateMotion&gt;")}}     | {{Spec2("SVG Animations 2")}} | Aucun changement    |
-| {{SpecName('SVG1.1', 'animate.html#AnimateMotionElement', '&lt;animateMotion&gt;')}} | {{Spec2('SVG1.1')}}                 | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.animateMotion")}}
+{{Compat}}
 
 ## Voir aussi
 

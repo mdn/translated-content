@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Operators/function
 
 ### 유명(named) 함수 표현식
 
-함수 몸통 안 쪽에서 현재 함수를 참고하고 싶다면, 유명 함수를 생성해야 합니다. <u><strong>이 함수 이름은 함수의 몸통(범위) 안에서만 사용할 수 있습니다</strong></u>. 이로써 비표준 [`arguments.callee`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) 속성을 사용하는 것을 피할 수도 있습니다.
+함수 몸통 안 쪽에서 현재 함수를 참고하고 싶다면, 유명 함수를 생성해야 합니다. ***이 함수 이름은 함수의 몸통(범위) 안에서만 사용할 수 있습니다***. 이로써 비표준 [`arguments.callee`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) 속성을 사용하는 것을 피할 수도 있습니다.
 
 ```js
     var math = {

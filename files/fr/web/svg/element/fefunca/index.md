@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feFuncA
 ---
+
 {{SVGRef}}
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feFuncA>`** doit être placée dans une balise {{SVGElement("feComponentTransfer")}} et elle définit la fonction de transfert pour le canal alpha (opacité) de l'image en entrée.
@@ -32,14 +33,11 @@ Cet élément implémente l'interface {{domxref("SVGFEFuncAElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Filters 1.0", "#feFuncAElement", "&lt;feFuncA&gt;")}}         | {{Spec2("Filters 1.0")}} | Aucun changement    |
-| {{SpecName("SVG1.1", "filters.html#feFuncAElement", "&lt;feFuncA&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feFuncA")}}
+{{Compat}}
 
 ## Voir aussi
 

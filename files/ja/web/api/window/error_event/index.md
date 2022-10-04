@@ -1,13 +1,8 @@
 ---
 title: 'Window: error イベント'
 slug: Web/API/Window/error_event
-tags:
-  - API
-  - Event
-  - UI Events
-  - Window
-translation_of: Web/API/Window/error_event
 ---
+
 {{APIRef}}
 
 `error` イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合 — 例えば、スクリプトに実行エラーがあった場合に {{domxref("Window")}} オブジェクトに発生します。

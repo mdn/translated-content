@@ -1,16 +1,8 @@
 ---
 title: Document.fonts
 slug: Web/API/Document/fonts
-tags:
-  - API
-  - DOM
-  - Font Loading API
-  - FontFace
-  - FontFaceSet
-  - Fonts
-  - フォント
-translation_of: Web/API/Document/fonts
 ---
+
 {{APIRef("DOM")}}
 
 **`fonts`** は {{domxref("Document")}} インターフェイスのプロパティで、文書の {{domxref("FontFaceSet")}} インターフェイスを返します。

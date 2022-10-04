@@ -1,18 +1,8 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - メソッド
-  - Navigator
-  - リファレンス
-  - ウェブベースプロトコルハンドラー
-  - registerProtocolHandler
-browser-compat: api.Navigator.registerProtocolHandler
-translation_of: Web/API/Navigator/registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 **{{domxref("Navigator")}}** の **`registerProtocolHandler()`** メソッドで、ウェブサイトが特定の URL スキーム（別名プロトコル）を開いたり処理したりする機能を登録することを可能にします。
@@ -26,7 +16,7 @@ registerProtocolHandler(scheme, url)
 registerProtocolHandler(scheme, url, title)
 ```
 
-> **Note:** 非推奨の `title` 引数が付いたものは、互換性のために推奨されます（下記の引数情報を参照してください）。
+> **メモ:** 非推奨の `title` 引数が付いたものは、互換性のために推奨されます（下記の引数情報を参照してください）。
 
 ### 引数
 
@@ -40,14 +30,14 @@ registerProtocolHandler(scheme, url, title)
   - : ハンドラーの URL を指定する文字列。
     **この URL には `%s` を含める必要があり**、これは取り扱う URL を[エスケープした](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)もので置き換得られるプレイスホルダーとして扱われます。
 
-    > **Note:** ハンドラーの URL は `https` スキームを使用する必要があります。古いブラウザーは `http` にも対応しています。
+    > **メモ:** ハンドラーの URL は `https` スキームを使用する必要があります。古いブラウザーは `http` にも対応しています。
 
 - `title` {{deprecated_inline}}
 
   - : ハンドラーを表す人間が読めるタイトル文字列です。
     **これはユーザーに表示されます**。例えば、「このサイトで [スキーム] のリンクを扱うことを許可しますか？」と尋ねたり、ブラウザーの設定で登録されたハンドラーの一覧に表示されたりします。
 
-    > **Note:** タイトルはなりすましの懸念から仕様から削除されました。
+    > **メモ:** タイトルはなりすましの懸念から仕様から削除されました。
     > しかし `title` は一部のブラウザーが**まだ必要としている**ため、設定する必要があります（[下記の互換性一覧表](#ブラウザーの互換性)をご覧ください）。
     > 更新された仕様に対応しているブラウザーはほとんどの場合、タイトルを受け付けますが、無視します。
 

@@ -1,15 +1,8 @@
 ---
 title: Window.scrollByLines()
 slug: Web/API/Window/scrollByLines
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Reference
-  - Window
-translation_of: Web/API/Window/scrollByLines
 ---
+
 {{ ApiRef() }} {{Non-standard_header}}
 
 **`Window.scrollByLines()`** メソッドは、指定された行数だけ文書をスクロールさせます。

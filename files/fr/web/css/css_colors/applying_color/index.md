@@ -15,6 +15,7 @@ tags:
 translation_of: Web/HTML/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
+
 {{HTMLRef}}
 
 La couleur fait partie intégrante des moyens d'expressions. Lorsqu'on écrit un site web, il est naturel d'y ajouter des couleurs dans la mise en forme. Avec [CSS](/fr/docs/Web/CSS), il existe de nombreuses façons d'ajouter de la couleur aux [éléments](/fr/docs/Web/HTML/Element) [HTML](/fr/docs/Web/HTML) afin d'obtenir le résultat souhaité. Cet article est une introduction détaillée aux différentes méthodes permettant d'appliquer des couleurs CSS en HTML.

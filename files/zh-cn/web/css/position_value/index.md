@@ -2,11 +2,12 @@
 title: <position>
 slug: Web/CSS/position_value
 ---
+
 {{ CSSRef() }}
 
 ## 概要
 
-`<position>` [CSS](/en/CSS) 数据类型表示用于设置相对于框的位置的 2D 空间中的坐标。
+`<position>` [CSS](/zh-CN/CSS) 数据类型表示用于设置相对于框的位置的 2D 空间中的坐标。
 
 ![](/files/3797/position_type.png)特定坐标可以由具有特定偏移的两个关键字给出。关键字表示元素框的一条边或两条边之间的中心线：左，右，上，下或中心 (其表示左边缘和右边缘之间的中心，或者顶部边缘或底部边缘之间的中心，这取决于上下文).
 

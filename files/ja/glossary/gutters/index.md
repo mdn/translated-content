@@ -1,12 +1,10 @@
 ---
 title: Gutter (ガター)
 slug: Glossary/Gutters
-tags:
-  - CSS Grids
-translation_of: Glossary/Gutters
 l10n:
   sourceCommit: 21bed6549ed179757c999336ef4637d16f663137
 ---
+
 **ガター** もしくはアレーはコンテンツトラック間のスペースです。[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)で {{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティを使うとガターが作成されます。
 
 ## 例

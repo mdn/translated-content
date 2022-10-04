@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:optional
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:optional`** permet de cibler les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}  pour lesquels l'attribut {{htmlattrxref("required","input")}} n'est pas activé. Cela permet ainsi d'indiquer et de mettre en forme les champs facultatifs d'un formulaire.
@@ -69,16 +70,11 @@ Les champs obligatoires devraient également être indiqués visuellement et cet
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires                                                                  |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-optional', ':optional')}}         | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                          |
-| {{SpecName('HTML5 W3C', '#selector-optional', ':optional')}}             | {{Spec2('HTML5 W3C')}}         | Définition de la sémantique relative à HTML et aux contraintes de validation. |
-| {{SpecName('CSS4 Selectors', '#opt-pseudos', ':optional')}}             | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                          |
-| {{SpecName('CSS3 Basic UI', '#pseudo-required-value', ':optional')}} | {{Spec2('CSS3 Basic UI')}} | Définition de la pseudo-classe mais sans la sémantique associée.              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.optional")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -19,7 +19,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 
 ## 구문
 
-    str.normalize([form])
+```js
+str.normalize([form])
+```
 
 ### 매개변수
 

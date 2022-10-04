@@ -1,17 +1,8 @@
 ---
 title: 'HTMLDialogElement: cancel イベント'
 slug: Web/API/HTMLDialogElement/cancel_event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - HTMLDialogElement
-  - NeedsExample
-  - cancel
-  - events
-  - イベント
-translation_of: Web/API/HTMLDialogElement/cancel_event
 ---
+
 {{APIRef}}
 
 **`cancel`** イベントは、ユーザーが現在開いているダイアログを閉じたいと操作したときに {{HTMLElement("dialog")}} に発生します。例えば、ユーザーがブラウザーの UI の中で <kbd>Esc</kbd> キーを押したり、「ダイアログを閉じる」ボタンをクリックしたりしたときにブラウザーがこのイベントを発生させることがあります。

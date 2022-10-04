@@ -1,14 +1,8 @@
 ---
 title: HTMLTableCaptionElement
 slug: Web/API/HTMLTableCaptionElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLTableCaptionElement
-translation_of: Web/API/HTMLTableCaptionElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTableCaptionElement`** インターフェイスは（継承元でもある通常の {{domxref("HTMLElement")}} インターフェイスに加えて）表のキャプション要素を操作する特別なプロパティを提供します。

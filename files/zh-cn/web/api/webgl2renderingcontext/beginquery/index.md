@@ -2,9 +2,10 @@
 title: WebGL2RenderingContext.beginQuery()
 slug: Web/API/WebGL2RenderingContext/beginQuery
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
-[WebGL 2 API](/en-US/docs/Web/API/WebGL_API) 的**`WebGL2RenderingContext.beginQuery()`** 方法启动一个异步查询，`target` 参数表明是哪种类型的查询。
+[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGL2RenderingContext.beginQuery()`** 方法启动一个异步查询，`target` 参数表明是哪种类型的查询。
 
 ## 语法
 
@@ -16,10 +17,10 @@ void gl.beginQuery(target, query);
 
 - target
 
-  - : {{domxref("GLenum")}} 指定查询个的 target， 可能的值有：
+  - : {{domxref("GLenum")}} 指定查询个的 target，可能的值有：
 
     - `gl.ANY_SAMPLES_PASSED`: Specifies an occlusion query: these queries detect whether an object is visible (whether the scoped drawing commands pass the depth test and if so, how many samples pass).
-    - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`: 和以上一样， 但是是一个不精确和更快的版本。
+    - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`: 和以上一样，但是是一个不精确和更快的版本。
     - `gl.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN`: Number of primitives that are written to transform feedback buffers.
 
 - `query`
@@ -44,7 +45,7 @@ gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.beginQuery")}}
+{{Compat}}
 
 ## 参考
 

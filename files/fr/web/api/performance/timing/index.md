@@ -1,43 +1,30 @@
 ---
-title: performance.timing
+title: Performance.timing
 slug: Web/API/Performance/timing
-tags:
-  - API
-  - Rétrocompatibilité
-  - Déprécié
-  - Navigation Timing
-  - Performance
-  - Property
-  - Propriété
-  - Read-only
-  - Lecture seule
-  - Reference
-translation_of: Web/API/Performance/timing
+l10n:
+  sourceCommit: cadd198e75b25e939938c414e46e95aa7f14318b
 ---
-{{deprecated_header}}{{APIRef("Navigation Timing")}}
 
-> **Attention :** Cette propriété est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface {{domxref("PerformanceNavigationTiming")}} à la place.
+{{APIRef("Navigation Timing")}}{{deprecated_header}}
 
-L'ancienne propriété **`Performance.timing`** renvoie un objet {{domxref("PerformanceTiming")}} en lecture seule contenant des informations de performance liées à la latence.
+L'ancienne propriété **`Performance.timing`** en lecture seule renvoie un objet [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) contenant des informations de performance liées à la latence.
 
-{{warning("Cette propriété n'est pas disponible dans les Web Workers.")}}
+Cette propriété n'est pas disponible pour les <i lang="en">workers</i>.
 
-## Syntaxe
+> **Attention :** Cette propriété est dépréciée dans la [spécification de mesure des durées de navigation (<i lang="en">Navigation Timing</i>)](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
 
-```js
-  timingInfo = performance.timing;
-```
+## Valeur
+
+Un objet [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming).
 
 ## Spécifications
 
-| Spécification                                                            | Statut                                               | Commentaire          |
-| ------------------------------------------------------------------------ | ---------------------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing Level 2', '#obsolete')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
+Cette fonctionnalité n'est plus en voie de standardisation, car elle est indiquée comme dépréciée dans la [spécification de mesure des durées de navigation (<i lang="en">Navigation Timing</i>)](https://w3c.github.io/navigation-timing/#obsolete). Utilisez à la place l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming).
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.timing")}}
+{{Compat}}
 
 ## Voir aussi
 
-- L'interface {{domxref("Performance")}} à laquelle il appartient.
+- L'interface qui porte cette propriété, [`Performance`](/fr/docs/Web/API/Performance).

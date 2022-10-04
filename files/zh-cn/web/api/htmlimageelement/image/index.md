@@ -2,6 +2,7 @@
 title: Image()
 slug: Web/API/HTMLImageElement/Image
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`Image()`**函数将会创建一个新的{{domxref("HTMLImageElement")}}实例。
@@ -43,4 +44,4 @@ document.body.appendChild(myImage);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement.Image")}}
+{{Compat}}

@@ -4,6 +4,7 @@ slug: Web/CSS/padding-inline-start
 translation_of: Web/CSS/padding-inline-start
 browser-compat: css.properties.padding-inline-start
 ---
+
 {{CSSRef}}
 
 La propriété **`padding-inline-start`** définit le décalage avec le début de la zone de remplissage d'un élément selon le mode d'écriture, la direction et l'orientation du texte.

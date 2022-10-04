@@ -7,9 +7,10 @@ tags:
 translation_of: Glossary/Closure
 original_slug: Glossaire/Fermeture
 ---
+
 La contrainte qui définit la **{{glossary("scope","portée")}}** d'exécution. En {{glossary("JavaScript")}}, les **{{glossary("function","fonctions")}}** créent un contexte de fermeture.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/fromCodePoint
 ---
+
 {{JSRef}}
 
 La méthode statique **`String.fromCodePoint()`** renvoie une chaîne de caractères créée à partir d'un suite de codets.

@@ -115,7 +115,7 @@ La posición paddleX que estamos utilizando variará entre 0 para la lado izquie
 
 Añade el código anterior dentro de la función `draw(), al final`, justo antes de la llave que cierra.
 
-Lo único que nos falta por hacer es llamar a la función `drawPaddle()` desde dentro de la función `draw()` para que dibuje la paleta dentro en la pantalla. Añade la línea siguiente dentro de `draw(), justo antes de la línea que llama a la función` `drawBall()`:
+Lo único que nos falta por hacer es llamar a la función `drawPaddle()` desde dentro de la función `draw()` para que dibuje la paleta dentro en la pantalla. Añade la línea siguiente dentro de `draw()`, justo antes de la línea que llama a la función `drawBall()`:
 
 ```js
 drawPaddle();
@@ -131,6 +131,6 @@ Aquí está el código que funciona, para que lo compares con el tuyo:
 
 ## Pasos siguientes
 
-Ahora mismo tenemos algo que parece un juego. El único problema es que todo lo que puedes hacer es golpear la bola con la paleta toda la vida (en realidad, ni siquiera la golpeas). Todo esto cambiará en el quinto capítulo, [Fin del juego](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego), cuando añadiremos un estado de "Game Over".
+Ahora mismo tenemos algo que parece un juego. El único problema es que todo lo que puedes hacer es golpear la bola con la paleta toda la vida (en realidad, ni siquiera la golpeas). Todo esto cambiará en el quinto capítulo, [Fin del juego](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego), cuando añadiremos un estado de "Game Over".
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego")}}

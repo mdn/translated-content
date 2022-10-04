@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/CSS/CSS_layout/Responsive_Design
 original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Apprendre/CSS/CSS_layout/Multiple-column_Layout", "Apprendre/CSS/CSS_layout/Media_queries", "Apprendre/CSS/CSS_layout")}}
 
 Aux débuts de la conception Web, les pages étaient construites pour cibler une taille d'écran particulière. Si l'utilisateur avait un écran plus grand ou plus petit que celui du concepteur, les résultats attendus pouvaient aller de barres de défilement indésirables, à des longueurs de lignes trop longues, et à une mauvaise utilisation de l'espace. À mesure que des tailles d'écran plus variées devenaient disponibles, le concept de _responsive web design_ (RWD) est apparu, un ensemble de pratiques qui permet aux pages Web de modifier leur disposition et leur apparence pour s'adapter à différentes largeurs d'écran, résolutions, etc. C'est une idée qui a changé notre façon de concevoir pour un web multi-périphériques, et dans cet article nous vous aiderons à comprendre les principales techniques que vous devez connaître pour la maîtriser.
@@ -109,7 +110,7 @@ Les sites responsives ne se contentent pas de changer leur mise en page entre le
 
 En utilisant une grille flexible, vous n'avez qu'à ajouter un point d'arrêt et à modifier le design au moment où le contenu commence à avoir une piètre apparence. Par exemple, si la longueur des lignes devient illisible à mesure que la taille de l'écran augmente, ou si une boîte se retrouve écrasée avec deux mots sur chaque ligne lorsqu'elle se rétrécit.
 
-Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser [floats](/fr/docs/Apprendre/CSS/CSS_layout/Floats). Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser des flotteurs. Des mises en page flottantes flexibles ont été réalisées en donnant à chaque élément un pourcentage de largeur et en s'assurant que les totaux ne dépassent pas 100 % dans toute la mise en page. Dans sa publication originale sur les grilles fluides, Marcotte a détaillé une formule pour convertir en pourcentages une mise en page conçue à l'aide de pixels.
+Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser [des flotteurs](/fr/docs/Apprendre/CSS/CSS_layout/Floats). Des mises en page flottantes flexibles ont été réalisées en donnant à chaque élément un pourcentage de largeur et en s'assurant que les totaux ne dépassent pas 100 % dans toute la mise en page. Dans sa publication originale sur les grilles fluides, Marcotte a détaillé une formule pour convertir en pourcentages une mise en page conçue à l'aide de pixels.
 
 ```
 target / context = result

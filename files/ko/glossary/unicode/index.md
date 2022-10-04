@@ -1,10 +1,6 @@
 ---
 title: 유니코드
 slug: Glossary/Unicode
-tags:
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/Unicode
 ---
 **유니코드**는 세계 각국의 서로 다른 언어와 쓰기 방식, 기호 등을 모아 번호를 할당하고 {{glossary("character", "문자")}}를 정의하는 표준 {{Glossary("character set","문자 집합")}}입니다. 각각의 문자에 번호를 매김으로써 프로그래머는 {{Glossary("character encoding", "문자 인코딩")}}을 제작할 수 있고, 컴퓨터는 그 인코딩을 사용해 같은 파일 또는 프로그램 내에서 어떠한 언어 조합을 사용하더라도 저장, 처리, 전송할 수 있습니다.
 

@@ -1,20 +1,8 @@
 ---
 title: x
 slug: Web/SVG/Attribute/x
-tags:
-  - SVG
-  - SVG Attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-x
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-x
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-x
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-x
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-x
-  - https://svgwg.org/svg2-draft/geometry.html#X
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementXAttribute
-  - https://svgwg.org/svg2-draft/text.html#TextElementXAttribute
-translation_of: Web/SVG/Attribute/x
 ---
+
 {{SVGRef}}
 
 **`x`** 属性はユーザー座標系の X 軸の座標を定義します。
@@ -79,7 +67,7 @@ html,body,svg { height:100% }
 
 ## altGlyph
 
-> **Warning:** SVG2 では {{SVGElement('altGlyph')}} は非推奨であるため、使用しないでください。
+> **警告:** SVG2 では {{SVGElement('altGlyph')}} は非推奨であるため、使用しないでください。
 
 {{SVGElement('altGlyph')}} の場合、 `x` は代替文字の X 軸の座標を定義します。
 
@@ -953,11 +941,11 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は `<foreignObject>` の CSS プロパティとして使用することもできます。
+> **メモ:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は `<foreignObject>` の CSS プロパティとして使用することもできます。
 
 ## glyphRef
 
-> **Warning:** SVG2 では {{SVGElement('glyphRef')}} は非推奨であり、使用すべきではありません。
+> **警告:** SVG2 では {{SVGElement('glyphRef')}} は非推奨であり、使用すべきではありません。
 
 {{SVGElement('glyphRef')}} の場合、 `x` が文字の x 軸の座標を定義します。
 
@@ -1019,7 +1007,7 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は画像用の CSS プロパティとしても使用できます。
+> **メモ:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は画像用の CSS プロパティとしても使用できます。
 
 ## mask
 
@@ -1114,7 +1102,7 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は矩形の CSS プロパティとして使用することもできる。
+> **メモ:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は矩形の CSS プロパティとして使用することもできる。
 
 ## svg
 
@@ -1149,7 +1137,7 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は `<svg>` の CSS プロパティとして使用することもできます。
+> **メモ:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は `<svg>` の CSS プロパティとして使用することもできます。
 
 ## text
 
@@ -1226,7 +1214,7 @@ line {
 
 ## tref
 
-> **Warning:** SVG2 では {{SVGElement('tref')}} は非推奨であり、使用すべきではありません。
+> **警告:** SVG2 では {{SVGElement('tref')}} は非推奨であり、使用すべきではありません。
 
 {{SVGElement('tref')}} にある値が  1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
 
@@ -1369,7 +1357,7 @@ line {
   </tbody>
 </table>
 
-> **Note:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は使用される要素の CSS プロパティとしても使用できます。
+> **メモ:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は使用される要素の CSS プロパティとしても使用できます。
 
 ## 仕様書
 

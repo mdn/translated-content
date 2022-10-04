@@ -1,10 +1,6 @@
 ---
 title: Address bar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-tags:
-  - 사용자 인터페이스
-  - 웹확장
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
 {{AddonSidebar}}
 

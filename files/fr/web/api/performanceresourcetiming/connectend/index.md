@@ -11,6 +11,7 @@ tags:
   - connectEnd
 translation_of: Web/API/PerformanceResourceTiming/connectEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`connectEnd`** renvoie le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) de l'instant suivant immédiatement la fin d'établissement de la connexion du navigateur au serveur pour récupérer la ressource. La valeur de l'horodatage comprend l'intervalle de temps pour établir la connexion de transport, ainsi que d'autres intervalles de temps tels que la poignée de main TLS/SSL et l'authentification SOCKS.
@@ -64,10 +65,8 @@ function print_start_and_end_properties(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-connectend', 'connectEnd')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.connectEnd")}}
+{{Compat}}

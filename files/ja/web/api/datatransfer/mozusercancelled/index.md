@@ -1,23 +1,15 @@
 ---
 title: DataTransfer.mozUserCancelled
 slug: Web/API/DataTransfer/mozUserCancelled
-page-type: web-api-instance-property
-tags:
-  - API
-  - Non-standard
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.mozUserCancelled
-translation_of: Web/API/DataTransfer/mozUserCancelled
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{ Non-standard_header() }}
 
 **`DataTransfer.mozUserCancelled`** プロパティは {{domxref("HTMLElement/dragend_event", "dragend")}} イベントハンドラーで用いられ、ユーザーがドラッグをキャンセルしたかどうかを判断するために使用されます。ユーザーがイベントをキャンセルした場合、このプロパティは `true` を返し、そうでない場合は `false` を返します。このプロパティは {{domxref("HTMLElement/dragend_event", "dragend")}} イベントに対してのみ適用されます。
 
-> **Note:** この特性は Firefox に固有のものです。
+> **メモ:** この特性は Firefox に固有のものです。
 
 このプロパティは {{readonlyInline}} です。
 

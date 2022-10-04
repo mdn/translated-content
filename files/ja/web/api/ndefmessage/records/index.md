@@ -1,14 +1,8 @@
 ---
 title: NDEFMessage.records
 slug: Web/API/NDEFMessage/records
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-  - プロパティ
-browser-compat: api.NDEFMessage.records
-translation_of: Web/API/NDEFMessage/records
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 `records` は {{DOMxRef("NDEFMessage")}} インターフェイスのプロパティで、 NDEF メッセージに現れる {{DOMxRef("NDEFRecord")}} のリストを表します。

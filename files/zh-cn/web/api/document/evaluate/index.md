@@ -2,6 +2,7 @@
 title: Document.evaluate()
 slug: Web/API/Document/evaluate
 ---
+
 {{ ApiRef("DOM") }}
 
 根据传入的 [XPath](/zh-CN/docs/XPath) 表达式以及其他参数，返回一个 {{domxref("XPathResult")}} 对象。
@@ -39,7 +40,7 @@ while (thisHeading) {
 alert(alertText); // 显示所有 h2 节点的文本
 ```
 
-注意，在上述例子中，最好写更冗长的 XPath，而不是常用的简写，比如 `//h2`。 通常，像上述例子所示，更具体的 XPath 选择器会得到显著的性能提升，特别是在非常大的文档中。这是因为查询计算不会将时间浪费在查看不需要的节点上。使用 // 通常很慢，这是因为它要从根节点和所有子节点中查找所有可能匹配的节点。
+注意，在上述例子中，最好写更冗长的 XPath，而不是常用的简写，比如 `//h2`。通常，像上述例子所示，更具体的 XPath 选择器会得到显著的性能提升，特别是在非常大的文档中。这是因为查询计算不会将时间浪费在查看不需要的节点上。使用 // 通常很慢，这是因为它要从根节点和所有子节点中查找所有可能匹配的节点。
 
 通过谨慎使用上下文参数能得到进一步的优化。比如，如果你知道你要查找的内容在 `body` 标签的某处，你可以这样做：
 
@@ -85,7 +86,7 @@ Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of m
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.evaluate")}}
+{{Compat}}
 
 ## 参见
 

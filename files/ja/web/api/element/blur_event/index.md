@@ -2,6 +2,7 @@
 title: 'Element: blur イベント'
 slug: Web/API/Element/blur_event
 ---
+
 {{APIRef}}
 
 **`blur`** イベントは、要素がフォーカスを失ったときに発生します。このイベントと {{domxref("Element/focusout_event", "focusout")}} との違いは、 `focusout` が[バブリング](/ja/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture)するのに対し、 `blur` はしないことです。

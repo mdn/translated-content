@@ -152,7 +152,7 @@ The MDN [Web Performance Learning Area](/fr/docs/Learn/Performance) contains mod
 - [CSS and JavaScript animation performance](/fr/Apps/Build/Performance/CSS_JavaScript_animation_performance)
   - : Animations are critical for a pleasurable user experience. This article discusses the performance differences between CSS- and JavaScript-based animations.
 
-## See also
+## Voir aussi
 
 HTML
 

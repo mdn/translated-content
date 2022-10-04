@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Performance
 ---
+
 {{APIRef("High Resolution Time")}}
 
 L'interface **`Performance`** donne accès à des informations liées aux performances pour la page actuelle. Elle fait partie de l'API « High Resolution Time », mais est complétée par les APIs [Performance Timeline](/fr/docs/Web/API/Performance_Timeline), [Navigation Timing](/fr/docs/Web/API/Navigation_timing_API), [User Timing](/fr/docs/Web/API/User_Timing_API), et [Resource Timing](/fr/docs/Web/API/Resource_Timing_API).
@@ -74,19 +75,11 @@ On pourra écouter ces événements en utilisant `addEventListener()` ou en assi
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                                   | Commentaires                                                                                                                         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Highres Time Level 2', '#sec-performance', 'Performance')}}                                                         | {{Spec2('Highres Time Level 2')}}             | Définition de la méthode `toJson()`.                                                                                                 |
-| {{SpecName('Highres Time', '#performance', 'Performance')}}                                                                         | {{Spec2('Highres Time')}}                         | Définition de la méthode `now()`.                                                                                                    |
-| {{SpecName('Performance Timeline Level 2', '#extensions-to-the-performance-interface',  'Performance extensions')}} | {{Spec2('Performance Timeline Level 2')}} | Changements sur l'interface `getEntries()`.                                                                                          |
-| {{SpecName('Performance Timeline', '#extensions-to-the-performance-interface', 'Performance extensions')}}             | {{Spec2('Performance Timeline')}}             | Définition des méthodes `getEntries()`, `getEntriesByType()` et `getEntriesByName()`.                                                |
-| {{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}                             | {{Spec2('Resource Timing')}}                     | Définition des méthodes `clearResourceTimings()` et `setResourceTimingBufferSize()` et de la propriété `onresourcetimingbufferfull`. |
-| {{SpecName('User Timing Level 2', '#extensions-performance-interface', 'Performance extensions')}}                     | {{Spec2('User Timing Level 2')}}             | Clarifications des méthodes `mark()`, `clearMark()`, `measure()` et `clearMeasure()`.                                                |
-| {{SpecName('User Timing', '#extensions-performance-interface', 'Performance extensions')}}                                 | {{Spec2('User Timing')}}                         | Définition des méthodes `mark()`, `clearMark()`, `measure()` et `clearMeasure()`.                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance")}}
+{{Compat}}
 
 ## Voir aussi
 

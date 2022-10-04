@@ -1,21 +1,13 @@
 ---
 title: ウェブ開発入門
 slug: Web/Guide/Introduction_to_Web_development
-tags:
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Web
-  - 初心者
-  - 開発
-translation_of: Web/Guide/Introduction_to_Web_development
 ---
+
 ウェブ開発を始めたばかりであるか、単に視野を新しいウェブの世界に広げているかに関わらず、ここにあるリンクはあなたが始めるのを助けてくれるはずです。
 
 学習リソースへの別の (重複する) リンクセットについては、[MDN の学習ページ](/ja/docs/Learn)を参照してください。
 
-> **Note:** このページの推奨リソースは変更されることがあります。
+> **メモ:** このページの推奨リソースは変更されることがあります。
 
 ## ドキュメントのトピック
 
@@ -25,30 +17,30 @@ translation_of: Web/Guide/Introduction_to_Web_development
 - [Basic structure of a web page](http://reference.sitepoint.com/html/page-structure) — doctype とドキュメント'ツリー'
 - [Fundamental HTML elements](http://reference.sitepoint.com/html/elements) — 構造化、見出し、リスト、フォーム要素などなど、カテゴリーごとの説明。
 - [HTML beginners tutorial](http://htmldog.com/guides/htmlbeginner/) — 上記で学んだ基礎を一通りまとめるチュートリアルと演習。
-- [HTML elements reference guide](/ja/HTML/Element "en/HTML/Element") — HTML 要素の包括的なガイドとブラウザーサポートの詳細
+- [HTML elements reference guide](/ja/HTML/Element) — HTML 要素の包括的なガイドとブラウザーサポートの詳細
 
 ### CSS
 
-- [Getting started with CSS](/ja/CSS/Getting_Started "Getting Started") — 基本コンセプトや基礎をカバーした、CSS の完全初心者のガイド。
-- [CSS reference guide](/ja/CSS/CSS_Reference "CSS Reference") — Gecko/Firefox それぞれのサポートに詳しい CSS の完全ガイド。
+- [Getting started with CSS](/ja/CSS/Getting_Started) — 基本コンセプトや基礎をカバーした、CSS の完全初心者のガイド。
+- [CSS reference guide](/ja/CSS/CSS_Reference) — Gecko/Firefox それぞれのサポートに詳しい CSS の完全ガイド。
 - [The W3C introduction to styling with CSS](http://www.w3.org/MarkUp/Guide/Style) — 初心者向けウェブページのスタイル設定の簡単なガイド。
-- [Common CSS questions](/ja/Common_CSS_Questions "Common CSS Questions") — 初心者向けのよくある質問と回答。
+- [Common CSS questions](/ja/Common_CSS_Questions) — 初心者向けのよくある質問と回答。
 - [Intermediate CSS concepts](http://www.html.net/tutorials/css/) — グルーピング、疑似クラスなど。
 
 ### JavaScript
 
 #### 初級
 
-- [Getting started with JavaScript](/ja/JavaScript/Getting_Started "en/JavaScript/Getting_Started") — JavaScript とは何かと、どう役立つのか?
-- [JavaScript reference guide](/ja/JavaScript/Guide "en/JavaScript/Guide") — 初心者から上級者まですべてのレベルのための、包括的でよく更新される JavaScript ガイド。
+- [Getting started with JavaScript](/ja/JavaScript/Getting_Started) — JavaScript とは何かと、どう役立つのか?
+- [JavaScript reference guide](/ja/JavaScript/Guide) — 初心者から上級者まですべてのレベルのための、包括的でよく更新される JavaScript ガイド。
 - [Crockford on JavaScript](https://www.youtube.com/playlist?list=PL7664379246A246CB) — JavaScript 言語の詳細な動画シリーズ。
-- [Eloquent JavaScript ](http://eloquentjavascript.net/contents.html)— 中級と上級の JavaScript 解決策の包括的なガイド。
+- [Eloquent JavaScript](http://eloquentjavascript.net/contents.html) — 中級と上級の JavaScript 解決策の包括的なガイド。
 
 #### 中級
 
-- [A re-introduction to JavaScript](/ja/JavaScript/A_re-introduction_to_JavaScript "en/JavaScript/A_re-introduction_to_JavaScript") — 中級レベル開発者を対象とした JavaScript プログラミング言語の復習。
+- [A re-introduction to JavaScript](/ja/JavaScript/A_re-introduction_to_JavaScript) — 中級レベル開発者を対象とした JavaScript プログラミング言語の復習。
 - [Essential JavaScript design patterns](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/) — エッセンシャル JavaScript デザインパターンの入門。
-- [Introduction to object-oriented JavaScript](/ja/Introduction_to_Object-Oriented_JavaScript "en/Introduction_to_Object-Oriented_JavaScript") — JavaScript オブジェクトモデルの学習。
+- [Introduction to object-oriented JavaScript](/ja/Introduction_to_Object-Oriented_JavaScript) — JavaScript オブジェクトモデルの学習。
 - [Christian Heilmann's JavaScript best practices](http://dev.opera.com/articles/view/javascript-best-practices/) — JavaScript 記述するときの明白/明白でないベストプラクティスの学習。
 
 #### 上級

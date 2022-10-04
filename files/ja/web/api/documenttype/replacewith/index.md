@@ -1,16 +1,8 @@
 ---
 title: DocumentType.replaceWith()
 slug: Web/API/DocumentType/replaceWith
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - メソッド
-  - DocumentType
-  - リファレンス
-browser-compat: api.DocumentType.replaceWith
-translation_of: Web/API/DocumentType/replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 **`DocumentType.replaceWith()`** メソッドは、文書型宣言を指定されたノードで置き換えます。

@@ -19,14 +19,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 ## 구문
 
-    str.indexOf(searchValue[, fromIndex])
+```js
+str.indexOf(searchValue[, fromIndex])
+```
 
 ### 매개변수
 
 - `searchValue`
   - : 찾으려는 문자열. 아무 값도 주어지지 않으면 [문자열 `"undefined"`를 찾으려는 문자열로 사용](https://tc39.github.io/ecma262/#sec-tostring)합니다.
 - `fromIndex` {{optional_inline}}
-  - : 문자열에서 찾기 시작하는 위치를 나타내는 인덱스 값입니다. 어떤 정수값이라도 가능합니다. 기본값은 0이며, 문자열 전체를 대상으로 찾게 됩니다. 만약 `fromIndex `값이 음의 정수이면 전체 문자열을 찾게 됩니다. 만약 `fromIndex >= str.length `이면, 검색하지 않고 바로 -1을 반환합니다. `searchValue`가 공백 문자열이 아니라면, `str.length`를 반환합니다.
+  - : 문자열에서 찾기 시작하는 위치를 나타내는 인덱스 값입니다. 어떤 정수값이라도 가능합니다. 기본값은 0이며, 문자열 전체를 대상으로 찾게 됩니다. 만약 `fromIndex` 값이 음의 정수이면 전체 문자열을 찾게 됩니다. 만약 `fromIndex >= str.length` 이면, 검색하지 않고 바로 -1을 반환합니다. `searchValue`가 공백 문자열이 아니라면, `str.length`를 반환합니다.
 
 ### 반환 값
 
@@ -34,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 ## 설명
 
-문자열 내에 있는 문자들은 왼쪽에서 오른쪽 방향으로 순번이 매겨집니다. 제일 처음 문자는 0번째 순번(index)이며, `stringName `문자열의 마지막 문자의 순번 `stringName.length -1` 입니다.
+문자열 내에 있는 문자들은 왼쪽에서 오른쪽 방향으로 순번이 매겨집니다. 제일 처음 문자는 0번째 순번(index)이며, `stringName` 문자열의 마지막 문자의 순번 `stringName.length -1` 입니다.
 
 ```js
 'Blue Whale'.indexOf('Blue');     // returns  0
@@ -99,7 +101,7 @@ console.log('myCapString.indexOf("cheddar") is ' + myCapString.indexOf('cheddar'
 
 ### `indexOf()`를 사용하여 문자열 내의 특정 문자 숫자 세기
 
-아래 예제는 `str `문자열에서 `e `문자의 총 숫자를 확인하는 프로그램입니다:
+아래 예제는 `str` 문자열에서 `e` 문자의 총 숫자를 확인하는 프로그램입니다:
 
 ```js
 var str = 'To be, or not to be, that is the question.';

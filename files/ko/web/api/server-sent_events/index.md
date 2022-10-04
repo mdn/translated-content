@@ -37,13 +37,13 @@ Server-Sent Events를 배우려면 다음 글을 읽어보세요: [Server-Sent E
 - Remy Sharp의 [EventSource 폴리필](https://github.com/remy/polyfills/blob/master/EventSource.js)
 - Yaffle의 [EventSource 폴리필](https://github.com/Yaffle/EventSource)
 - Rick Waldron [jquery 플러그인](https://github.com/rwldrn/jquery.eventsource)
-- [선언적인 SSE를 지원하는 ](http://intercoolerjs.org/docs.html#sse)intercooler.js
+- [선언적인 SSE를 지원하는](http://intercoolerjs.org/docs.html#sse) intercooler.js
 
 ### 관련 주제
 
-- [AJAX](/ko/docs/AJAX "AJAX")
-- [JavaScript](/ko/docs/JavaScript "JavaScript")
-- [WebSockets](/ko/docs/WebSockets "WebSockets")
+- [AJAX](/ko/docs/AJAX)
+- [JavaScript](/ko/docs/JavaScript)
+- [WebSockets](/ko/docs/WebSockets)
 
 ### 그 외 자료
 

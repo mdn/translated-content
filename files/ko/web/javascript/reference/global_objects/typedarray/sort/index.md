@@ -16,7 +16,9 @@ browser-compat: javascript.builtins.TypedArray.sort
 
 ## 구문
 
-    typedarray.sort([compareFunction])
+```js
+typedarray.sort([compareFunction])
+```
 
 ### 매개변수
 

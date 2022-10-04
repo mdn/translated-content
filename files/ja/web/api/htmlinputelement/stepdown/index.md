@@ -1,16 +1,8 @@
 ---
 title: HTMLInputElement.stepDown()
 slug: Web/API/HTMLInputElement/stepDown
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - リファレンス
-  - テキスト欄選択 API
-browser-compat: api.HTMLInputElement.stepDown
-translation_of: Web/API/HTMLInputElement/stepDown
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.stepDown([n])`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を

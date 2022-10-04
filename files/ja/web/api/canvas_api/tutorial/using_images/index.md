@@ -1,15 +1,9 @@
 ---
 title: 画像の使用
 slug: Web/API/Canvas_API/Tutorial/Using_images
-tags:
-  - 上級者
-  - キャンバス
-  - グラフィック
-  - HTML
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Using_images
 original_slug: Web/Guide/HTML/Canvas_tutorial/Using_images
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 これまで、[図形](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)を作成して[スタイルを適用する](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)方法を見てきました。 {{HTMLElement("canvas")}} のより面白い機能のひとつが、画像を扱えることです。これは動的な画像合成を行う、グラフの背景として使用する、ゲームのスプライトとして使用するなどといったことが可能です。 PNG、GIF、JPEG といった、ブラウザーが対応しているどの形式でも外部画像が使用できます。同じページ上の別のキャンバス要素によって生成された画像も、ソースとして使用できます。
@@ -116,7 +110,7 @@ function getMyVideo() {
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y)")}}
   - : 引数 `image` で指定した `CanvasImageSource` を、座標 (`x`, `y`) に描画します。
 
-> **Note:** SVG 画像は、ルート \<svg> 要素で幅と高さを指定しなければなりません。
+> **メモ:** SVG 画像は、ルート \<svg> 要素で幅と高さを指定しなければなりません。
 
 ### 例: シンプルな折れ線グラフ
 
@@ -162,7 +156,7 @@ function draw() {
 
 以下の例は画像を壁紙として使用して、キャンバス上で数回繰り返して貼り付けています。ループ処理によって、さまざまな場所に縮小した画像を貼り付けました。以下のコードでは、最初の `for` ループで行の繰り返し処理を行います。2 番目の `for` ループで列の繰り返し処理を行います。画像は元のサイズの 3 分の 1 である、 50x38 ピクセルに縮小しています。
 
-> **Note:** 画像を拡大しすぎると不鮮明に、あるいは縮小しすぎると荒くなります。読みやすくしておかなければならない文字列が画像内にある場合は、サイズを変更しないほうがよいでしょう。
+> **メモ:** 画像を拡大しすぎると不鮮明に、あるいは縮小しすぎると荒くなります。読みやすくしておかなければならない文字列が画像内にある場合は、サイズを変更しないほうがよいでしょう。
 
 ```html hidden
 <html>

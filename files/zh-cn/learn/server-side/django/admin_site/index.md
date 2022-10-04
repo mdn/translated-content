@@ -3,17 +3,18 @@ title: 'Django Tutorial Part 4: Django 管理员站点'
 slug: Learn/Server-side/Django/Admin_site
 original_slug: learn/Server-side/Django/管理站点
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
-好了，我们已经为本地图书馆网站 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 创建了模型，我们接下来使用 Django 管理站点去添加 一些“真“书数据。首先我们展示如何用管理站点注册模型，然后展示如何登录和创建一些数据。本文最后，我们介绍你可以进一步改进管理站点的建议。
+好了，我们已经为本地图书馆网站 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 创建了模型，我们接下来使用 Django 管理站点去添加 一些“真“书数据。首先我们展示如何用管理站点注册模型，然后展示如何登录和创建一些数据。本文最后，我们介绍你可以进一步改进管理站点的建议。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        完成:
-        <a href="/en-US/docs/Learn/Server-side/Django/Models"
+        完成：
+        <a href="/zh-CN/docs/Learn/Server-side/Django/Models"
           >Django Tutorial Part 3: 使用模型</a
         >。
       </td>
@@ -33,7 +34,7 @@ original_slug: learn/Server-side/Django/管理站点
 
 Django 管理应用程序可以使用您的模型自动构建可用于创建，查看，更新和删除记录的站点区域。这可以在开发过程中节省大量的时间，从而很容易测试您的模型，并了解您是否拥有正确的数据。根据网站的类型，管理应用程序也可用于管理生产中的数据。Django 项目建议仅用于内部数据管理（即仅供管理员或组织内部人员使用），因为以模型为中心的方法不一定是所有用户最好的界面，并且暴露了大量不必要的细节关于模型。
 
-[创建基础项目时，](/en-US/docs/Learn/Server-side/Django/skeleton_website)自动完成所有将您的网站中的管理应用程序包含在内的配置文件（有关所需实际依赖关系的信息 (如有需要请看 [Django docs here](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/)). 其结果是，你必须做你的模型添加到管理应用程序是 注册 他们。在本文末尾，我们将简要介绍如何进一步配置管理区域以更好地显示我们的模型数据。
+[创建基础项目时，](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)自动完成所有将您的网站中的管理应用程序包含在内的配置文件（有关所需实际依赖关系的信息 (如有需要请看 [Django docs here](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/)). 其结果是，你必须做你的模型添加到管理应用程序是 注册 他们。在本文末尾，我们将简要介绍如何进一步配置管理区域以更好地显示我们的模型数据。
 
 注册模型后，我们将展示如何创建一个新的“超级用户”，登录到该网站，并创建一些书籍，作者，书籍实例和流派。这些将有助于测试我们将在下一个教程中开始创建的视图和模板。
 
@@ -58,7 +59,7 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 ```
 
-> **备注：** 如果你接受创建模型以表示书籍的自然语言的挑战 ([see the models tutorial article](/en-US/docs/Learn/Server-side/Django/Models)), 导入并注册。
+> **备注：** 如果你接受创建模型以表示书籍的自然语言的挑战 ([see the models tutorial article](/zh-CN/docs/Learn/Server-side/Django/Models)), 导入并注册。
 
 这是在网站上注册模型或多模型的简单方法，管理站点是高度可定制的，我们将进一步讨论注册模型的其他方式。
 
@@ -66,7 +67,7 @@ admin.site.register(BookInstance)
 
 为了登录管理员站点，我们需要启动工作人员状态的用户账户。为了查看和创建记录，我们还需要该用户具有所有对象的记录。你可以创建一个“超级用户”账号，该账号具有完全访问该站点和所有必需的权限可以使用`manage.py`
 
-调用接下来的命令，在同样的目录下，`manage.py 创建超级用户。你将被提示输入用户名，电子邮件地址，和强密码。`
+调用接下来的命令，在同样的目录下，`manage.py` 创建超级用户。你将被提示输入用户名，电子邮件地址，和强密码。
 
 ```bash
 python3 manage.py createsuperuser
@@ -99,7 +100,7 @@ python3 manage.py runserver
 
 ![Admin Site - List of book objects](admin_book_list.png)
 
-从该列表中，您可以通过选中不需要的图书旁边的复选框来删除图书，从“操作”下拉列表中选择“删除”操作 ，然后按 Go 按钮。您也可以通过按下 ADD BOOK 按钮添加新书。
+从该列表中，您可以通过选中不需要的图书旁边的复选框来删除图书，从“操作”下拉列表中选择“删除”操作，然后按 Go 按钮。您也可以通过按下 ADD BOOK 按钮添加新书。
 
 您可以通过在链接中选择其名称来编辑书籍。一本书的编辑页面如下所示，与“添加”页面几乎相同。主要的区别是页面标题（更改书）和添加 删除，历史和`VIEW ON SITE`按钮（最后一个按钮出现，因为我们定义了`get_absolute_url()`我们的模型中的 方法）。
 
@@ -272,7 +273,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 你可以使用 [fieldsets](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets) 属性添加“部分”以在详细信息表单中对相关的模型信息进行分组。
 
-在 `BookInstance`模型中，我们有相关的书是什么（即信息 `name，imprint和id`），并且当将可用（`status，due_back`）。我们可以通过将粗体文本添加到我们的`BookInstanceAdmin`类中来将其添加到不同的部分 。
+在 `BookInstance`模型中，我们有相关的书是什么（即信息 `name`、`imprint` 和 `id`），并且当将可用（`status`、`due_back`）。我们可以通过将粗体文本添加到我们的`BookInstanceAdmin`类中来将其添加到不同的部分。
 
 ```python
 @admin.register(BookInstance)
@@ -323,8 +324,8 @@ class BookAdmin(admin.ModelAdmin):
 
 我们在本节学到了很多东西，所以现在是时候尝试一些事情了。
 
-1\. 对于 `BookInstance`列表视图，添加代码以显示书籍，状态，到期日期和 ID（而不是默认`__str__()`文本）。
-2\. 添加的在线上市 Book 项目的 Author 使用，因为我们做了同样的做法详细视图`Book/ BookInstance。`
+1. 对于 `BookInstance`列表视图，添加代码以显示书籍，状态，到期日期和 ID（而不是默认`__str__()`文本）。
+2. 添加的在线上市 Book 项目的 Author 使用，因为我们做了同样的做法详细视图`Book/ BookInstance`。
 
 ## 概要
 

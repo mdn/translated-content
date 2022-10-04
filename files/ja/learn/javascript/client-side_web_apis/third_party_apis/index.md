@@ -1,18 +1,8 @@
 ---
 title: サードパーティ API
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
-tags:
-  - 3rd party
-  - API
-  - Beginner
-  - CodingScripting
-  - Google Maps
-  - Learn
-  - NYTimes
-  - Third party
-  - youtube
-translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
 
 これまで説明してきた API はブラウザーに組み込まれていましたが、すべての API がそうというわけではありません。Google Maps・Twitter・Facebook・PayPal などの大規模なサイトやサービスの多くは開発者がそれらのデータ (ブログに Twitter のストリームを表示するなど) やサービス (ユーザーのログインに Facebook ログインを利用するなど) を利用できるように API を提供しています。この記事ではブラウザー API とサードパーティ API の違いを見て、後者の典型的な使い方について説明します。
@@ -27,7 +17,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 [Simple Mapquest API の例](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/)を参考に、サードパーティ API とブラウザー API の違いを説明します。
 
-> **Note:** 一度に[すべてのコード例を取得](/ja/docs/Learn#Getting_our_code_examples)したい場合があります。その場合は、各セクションで必要なサンプルファイルをレポジトリーで検索するだけで済みます。
+> **メモ:** 一度に[すべてのコード例を取得](/ja/docs/Learn#Getting_our_code_examples)したい場合があります。その場合は、各セクションで必要なサンプルファイルをレポジトリーで検索するだけで済みます。
 
 ### それらはサードパーティのサーバーにあります
 
@@ -63,7 +53,7 @@ let map = L.mapquest.map('map', {
 
 これが、Mapquest API が単純な地図を描くために必要なすべての情報です。接続しているサーバーは、表示されている地域の正しい地図タイルを表示するなど、複雑なものをすべて処理します。
 
-> **Note:** API の中には、機能へのアクセスをわずかに異なる方法で処理するものがあり、開発者はデータを取得するために特定の URL パターンに対して HTTP リクエストを行う必要があります。これらは [RESTful API と呼ばれ、後で例が出てきます](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs#A_RESTful_API_—_NYTimes)。
+> **メモ:** API の中には、機能へのアクセスをわずかに異なる方法で処理するものがあり、開発者はデータを取得するために特定の URL パターンに対して HTTP リクエストを行う必要があります。これらは [RESTful API と呼ばれ、後で例が出てきます](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs#A_RESTful_API_—_NYTimes)。
 
 ### 通常は API キーが必要です
 
@@ -79,7 +69,7 @@ L.mapquest.key = 'YOUR-API-KEY-HERE';
 
 この行では、アプリケーションで使用する API キーまたは開発者キーを指定します。アプリケーションの開発者は、キーを取得して API の機能へのアクセス許可を得るためにコードに含める必要があります。この例では、プレースホルダーを用意しました。
 
-> **Note:** 独自の例を作成するときは、プレースホルダーの代わりに独自の API キーを使用します。
+> **メモ:** 独自の例を作成するときは、プレースホルダーの代わりに独自の API キーを使用します。
 
 他の API では、少し異なる方法でキーを含める必要があるかもしれませんが、ほとんどのパターンは比較的似ています。
 
@@ -89,9 +79,9 @@ L.mapquest.key = 'YOUR-API-KEY-HERE';
 
 API の他の機能の使用方法を示すために、Mapquest の例にさらに機能を追加しましょう。
 
-1.  この章を始めるにあたり、新しいディレクトリーに[mapquest starter file](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/starter-file.html)をコピーしましょう。もしもすでに[examples repository](/ja/docs/Learn#Getting_our_code_examples) をクローンしているようなら、必要な _javascript/apis/third-party-apis/mapquest_ を見つけてコピーしてください。
-2.  次に [Mapquest developer site](https://developer.mapquest.com/)に行ってください。アカウントを作り、デベロッパーキーを使用してあなたのサンプルに利用してください。(アカウント作成時、デベロッパーキーは "consumer key" と呼ばれています。そして、"callback URL" を尋ねられると思いますが、その入力欄は空欄でかまいません)
-3.  starting file を開き、API キーのプレスホルダーにあなたのキーを入力してください。
+1. この章を始めるにあたり、新しいディレクトリーに[mapquest starter file](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/starter-file.html)をコピーしましょう。もしもすでに[examples repository](/ja/docs/Learn#Getting_our_code_examples) をクローンしているようなら、必要な _javascript/apis/third-party-apis/mapquest_ を見つけてコピーしてください。
+2. 次に [Mapquest developer site](https://developer.mapquest.com/)に行ってください。アカウントを作り、デベロッパーキーを使用してあなたのサンプルに利用してください。(アカウント作成時、デベロッパーキーは "consumer key" と呼ばれています。そして、"callback URL" を尋ねられると思いますが、その入力欄は空欄でかまいません)
+3. starting file を開き、API キーのプレスホルダーにあなたのキーを入力してください。
 
 ### 地図の種類を変更する
 
@@ -147,7 +137,7 @@ L.marker([53.480759, -2.242631], {
 
 ドキュメントに記載されているその他のオプションを試してみて、何ができるか見てみましょう。Mapquest には、道案内や検索など、かなり高度な機能があります。
 
-> **Note:** サンプルがうまく動作しない場合は、完成版のコードをチェックしてみてください。[expanded-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/expanded-example.html) を参照してください ([ここでライブで実行しているのも見てください](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/expanded-example.html))。
+> **メモ:** サンプルがうまく動作しない場合は、完成版のコードをチェックしてみてください。[expanded-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/expanded-example.html) を参照してください ([ここでライブで実行しているのも見てください](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/expanded-example.html))。
 
 ## Google マップはどうですか？
 
@@ -172,9 +162,9 @@ Google Maps は間違いなく最も人気のある地図 API です。使用方
 
 ほとんどの API では、セキュリティと説明責任のために、何らかの開発者キー使用する必要があります。NYTimes API キーの登録には、<https://developer.nytimes.com/get-started> の指示に従ってください。
 
-1.  記事検索 API のキーを要求してみよう — 新規アプリを作成し、これを利用したい API として選択します (名前と説明を記入し、「記事検索 API 」の下のスイッチをオンに切り替えて「作成」をクリックします)。
-2.  結果のページから API キーを取得します。
-3.  さて、例題を始めるために、[nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) と [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) のコピーをコンピュータ上の新しいディレクトリーに作成してください。すでに [examples リポジトリをクローン](/ja/docs/Learn#Getting_our_code_examples)している場合は、_javascript/apis/third-party-apis/nytimes_ ディレクトリーにあるこれらのファイルのコピーをすでに持っているでしょう。最初に `<script>` 要素には、例のセットアップに必要な変数がいくつか含まれています。
+1. 記事検索 API のキーを要求してみよう — 新規アプリを作成し、これを利用したい API として選択します (名前と説明を記入し、「記事検索 API 」の下のスイッチをオンに切り替えて「作成」をクリックします)。
+2. 結果のページから API キーを取得します。
+3. さて、例題を始めるために、[nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) と [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) のコピーをコンピュータ上の新しいディレクトリーに作成してください。すでに [examples リポジトリをクローン](/ja/docs/Learn#Getting_our_code_examples)している場合は、_javascript/apis/third-party-apis/nytimes_ ディレクトリーにあるこれらのファイルのコピーをすでに持っているでしょう。最初に `<script>` 要素には、例のセットアップに必要な変数がいくつか含まれています。
 
 このアプリは、検索用語とオプションの開始日と終了日を入力することを可能にし、Article Search API をクエリして検索結果を表示するために使用します。
 
@@ -184,7 +174,7 @@ Google Maps は間違いなく最も人気のある地図 API です。使用方
 
 まず、API とアプリ間の接続を行う必要があります。この API の場合、サービスから正しい URL でデータを要求するたびに、API キーを[取得](/ja/docs/Web/HTTP/Methods/GET)パラメーターとして含める必要があります。
 
-1.  次の行を探します。
+1. 次の行を探します。
 
     ```js
     let key = ' ... ';
@@ -198,7 +188,7 @@ Google Maps は間違いなく最も人気のある地図 API です。使用方
     searchForm.addEventListener('submit', submitSearch);
     ```
 
-2.  前の行の下に submitSearch() と fetchResults() 関数の定義を追加します。
+2. 前の行の下に submitSearch() と fetchResults() 関数の定義を追加します。
 
     ```js
     function submitSearch(e) {
@@ -241,9 +231,9 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HE
 &fq=document_type:("article")&begin_date=20170301&end_date=20170312
 ```
 
-> **Note:** どのような URL パラメーターを含めることができるかについての詳細は、[NYTimes developer docs](https://developer.nytimes.com/) を参照してください。
+> **メモ:** どのような URL パラメーターを含めることができるかについての詳細は、[NYTimes developer docs](https://developer.nytimes.com/) を参照してください。
 
-> **Note:** この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (`required` 属性を使用して達成されます)。日付フィールドには `pattern` 属性が指定されており、値が 8 個の数字 (`pattern="[0-9]{8}"`) で構成されていないと送信されません。これらがどのように機能するかについての詳細は [Form data validation](/ja/docs/Learn/HTML/Forms/Form_validation) を参照してください。
+> **メモ:** この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (`required` 属性を使用して達成されます)。日付フィールドには `pattern` 属性が指定されており、値が 8 個の数字 (`pattern="[0-9]{8}"`) で構成されていないと送信されません。これらがどのように機能するかについての詳細は [Form data validation](/ja/docs/Learn/HTML/Forms/Form_validation) を参照してください。
 
 ### API からデータを要求する
 
@@ -344,14 +334,14 @@ function displayResults(json) {
 
 これにより、単純なページネーション関数を簡単に書くことができるようになりました。
 
-1.  既存の [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) コールの下に、関連するボタンがクリックされたときに `nextPage()` および `previousPage()` 関数が呼び出されるように、これら 2 つの新しいものを追加します：
+1. 既存の [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) コールの下に、関連するボタンがクリックされたときに `nextPage()` および `previousPage()` 関数が呼び出されるように、これら 2 つの新しいものを追加します：
 
     ```js
     nextBtn.addEventListener('click', nextPage);
     previousBtn.addEventListener('click', previousPage);
     ```
 
-2.  前回の追加の下に、2 つの関数を定義してみましょう — 今すぐこのコードを追加します：
+2. 前回の追加の下に、2 つの関数を定義してみましょう — 今すぐこのコードを追加します：
 
     ```js
     function nextPage(e) {
@@ -373,7 +363,7 @@ function displayResults(json) {
 
     2 番目の関数は逆の方法でほぼ正確に同じように動作しますが、`pageNumber` がすでに 0 ではないことを確認するという余分なステップを踏まなければなりません — もしフェッチリクエストがマイナスの `page` パラメーターで実行された場合、エラーを引き起こす可能性があります。もし `pageNumber` がすでに 0 であれば、処理能力を無駄にしないように、単に関数から [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) します (すでに最初のページにいるのであれば、同じ結果を再び読み込む必要はありません)。
 
-> **Note:** 完成した [nytimes API のサンプルコードは GitHub で見ることができます](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html) ([ここでもライブで動作しています](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)) 。
+> **メモ:** 完成した [nytimes API のサンプルコードは GitHub で見ることができます](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html) ([ここでもライブで動作しています](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)) 。
 
 ## YouTube の例
 

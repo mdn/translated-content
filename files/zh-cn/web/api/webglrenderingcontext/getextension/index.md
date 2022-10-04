@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.getExtension()
 slug: Web/API/WebGLRenderingContext/getExtension
 ---
+
 {{APIRef("WebGL")}}
 
-**`WebGLRenderingContext.getExtension()`** 方法可以启用一个 [WebGL](/en-US/docs/Web/API/WebGL_API) 扩展。
+**`WebGLRenderingContext.getExtension()`** 方法可以启用一个 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 扩展。
 
 ## 语法
 

@@ -1,12 +1,9 @@
 ---
 title: 外部コンテンツを MDN Web Docs に移行するには
 slug: MDN/Community/Issues/Content_suggestions_feature_proposals
-tags:
-  - Content migration
-  - MDN Meta
-translation_of: MDN/Contribute/Howto/Migrate_external_content_to_MDN
 original_slug: MDN/Contribute/Howto/Migrate_external_content_to_MDN
 ---
+
 {{MDNSidebar}}
 
 他の場所から MDN Web Docs に移行することに意味のある既存のコンテンツが見つかることがあります。この記事では、どのような種類のコンテンツを移行することが意味のあることなのか、コンテンツを移行すべきかどうか、移行を行うためにどのようなワークフローを使用すべきかについて説明します。

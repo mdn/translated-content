@@ -1,19 +1,8 @@
 ---
 title: DataTransfer
 slug: Web/API/DataTransfer
-page-type: web-api-interface
-tags:
-  - API
-  - DataTransfer
-  - HTML Drag and Drop API
-  - Interface
-  - NeedsMarkupWork
-  - Reference
-  - Web Development
-  - drag and drop
-browser-compat: api.DataTransfer
-translation_of: Web/API/DataTransfer
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer`** オブジェクトは、ドラッグ＆ドロップ操作中にドラッグされているデータを保持するために使用されます。これは、1 つ以上のデータ項目を保持することができ、それぞれが 1 つ以上のデータ型を持ちます。ドラッグ＆ドロップの詳細については、[HTML ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) を参照してください。
@@ -45,7 +34,7 @@ translation_of: Web/API/DataTransfer
 
 {{SeeCompatTable}}
 
-> **Note:** この節のすべてのプロパティは Gecko 固有のものです。
+> **メモ:** この節のすべてのプロパティは Gecko 固有のものです。
 
 - {{domxref("DataTransfer.mozCursor")}}
   - : ドラッグカーソルの状態を返します。主にタブドラッグの際のカーソルを制御するのに使います。
@@ -76,7 +65,7 @@ translation_of: Web/API/DataTransfer
 
 {{Non-standard_header()}}
 
-> **Note:** この節のすべてのメソッドは Gecko 固有のものです。
+> **メモ:** この節のすべてのメソッドは Gecko 固有のものです。
 
 - {{domxref("DataTransfer.addElement()")}}
   - : ドラッグ元の要素を指定します。

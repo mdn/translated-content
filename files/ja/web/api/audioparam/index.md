@@ -1,8 +1,8 @@
 ---
 title: AudioParam
 slug: Web/API/AudioParam
-translation_of: Web/API/AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 Web Audio API の`AudioParam`インタフェースは、オーディオ関連のパラメーターを表します、通常は{{domxref("AudioNode")}}のパラメーター（{{ domxref("GainNode.gain") }}など）です。`AudioParam`は特定の値または値の変化に設定でき、特定の時間に特定のパターンに従って発生するようにスケジュールできます。
@@ -18,7 +18,7 @@ Web Audio API の`AudioParam`インタフェースは、オーディオ関連の
 
 ## Properties
 
-親である[`AudioNode`](/ja/docs/Web/API/AudioNode "The AudioNode interface is a generic interface for representing an audio processing module like an audio source (e.g. an HTML <audio> or <video> element), audio destination, intermediate processing module (e.g. a filter like BiquadFilterNode or ConvolverNode), or volume control (like GainNode).AudioNodeインターフェースは、オーディオソース（例：、, OscillatorNode、音声出力、中間処理モジュール（BiquadFilterNodeやConvolverNodeのようなフィルター）、GainNodeのような音量コントロール）などの音声処理モジュールを表現するための、一般的なインターフェースです。")の属性を継承します。
+親である[`AudioNode`](/ja/docs/Web/API/AudioNode)の属性を継承します。
 
 - {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
   - : AudioParam を作成する特定の{{domxref("AudioNode")}}によって定義された属性の初期ボリュームを表します。
@@ -31,7 +31,7 @@ Web Audio API の`AudioParam`インタフェースは、オーディオ関連の
 
 ## Methods
 
-親である[`AudioNode`](/ja/docs/Web/API/AudioNode "The AudioNode interface is a generic interface for representing an audio processing module like an audio source (e.g. an HTML <audio> or <video> element), audio destination, intermediate processing module (e.g. a filter like BiquadFilterNode or ConvolverNode), or volume control (like GainNode).AudioNodeインターフェースは、オーディオソース（例：、, OscillatorNode、音声出力、中間処理モジュール（BiquadFilterNodeやConvolverNodeのようなフィルター）、GainNodeのような音量コントロール）などの音声処理モジュールを表現するための、一般的なインターフェースです。")のメソッドを継承します。
+親である[`AudioNode`](/ja/docs/Web/API/AudioNode)のメソッドを継承します。
 
 - {{domxref("AudioParam.setValueAtTime()")}}
   - : {{domxref("AudioContext.currentTime")}}に対して正確な時間に`AudioParam`の値の変更をスケジュールします。 新しい値は`value`パラメータによって与えられます。

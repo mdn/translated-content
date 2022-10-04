@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCDate
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCDate()`** définit le jour du mois pour la date, selon UTC.

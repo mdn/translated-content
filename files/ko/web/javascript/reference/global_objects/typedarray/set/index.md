@@ -17,8 +17,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 
 ## 구문
 
-    typedarr.set(array[, offset])
-    typedarr.set(typedarray[, offset])
+```js
+typedarr.set(array[, offset])
+typedarr.set(typedarray[, offset])
+```
 
 ### 매개변수
 

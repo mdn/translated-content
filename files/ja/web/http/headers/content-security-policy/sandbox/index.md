@@ -1,16 +1,8 @@
 ---
 title: 'CSP: sandbox'
 slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Sandbox
-  - Security
-browser-compat: http.headers.Content-Security-Policy.sandbox
-translation_of: Web/HTTP/Headers/Content-Security-Policy/sandbox
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`sandbox`** ディレクティブは、 {{HTMLElement("iframe")}} の {{htmlattrxref("sandbox", "iframe")}} 属性と同様に、要求されたリソースに対してサンドボックスを有効にします。これは、ポップアップの防止、プラグインやスクリプトの実行の防止、同一オリジンポリシーの強制などを含むページ操作の制限を適用します。

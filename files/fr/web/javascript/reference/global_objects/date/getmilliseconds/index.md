@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getMilliseconds
 ---
+
 {{JSRef}}
 
 La méthode **`getMilliseconds()`** renvoie les millièmes de secondes de la date renseignée d'après l'heure locale.

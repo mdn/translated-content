@@ -55,12 +55,13 @@ translation_of: Web/API/Notification
   - : 생성자의 첫번째 파라메터에 명시된 알림의 제목입니다.
 - {{domxref("Notification.vibrate")}} {{readonlyinline}}
   - : 진동기가 있는 기기가 나타내야할 진동 패턴을 나타냅니다.
-- #### Unsupported properties아래의 속성은 최신 명세에는 등록되어 있지만 아직 구현한 브라우저가 없는 속성입니다. 현재의 상태에서 변경된 사항은 없는지 계속 확인해보아야 하는 내용이고 오래된 내용이 있으면 알려주시기 바랍니다.
 
-  {{domxref("Notification.noscreen")}} {{readonlyinline}}
+#### Unsupported properties
 
+아래의 속성은 최신 명세에는 등록되어 있지만 아직 구현한 브라우저가 없는 속성입니다. 현재의 상태에서 변경된 사항은 없는지 계속 확인해보아야 하는 내용이고 오래된 내용이 있으면 알려주시기 바랍니다.
+
+- {{domxref("Notification.noscreen")}} {{readonlyinline}}
   - : 알림이 기기의 화면을 활성화해야 하는지를 나타냅니다.
-
 - {{domxref("Notification.renotify")}} {{readonlyinline}}
   - : 새 알림이 오래된 알림을 교체할 때 사용자에게 알려야 하는지를 나타냅니다.
 - {{domxref("Notification.sound")}} {{readonlyinline}}

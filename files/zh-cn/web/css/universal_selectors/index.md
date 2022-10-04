@@ -2,6 +2,7 @@
 title: 通配选择器
 slug: Web/CSS/Universal_selectors
 ---
+
 {{ CSSRef() }}
 
 ## 概述
@@ -47,6 +48,6 @@ A red span in a green paragraph (with a border.)
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.universal")}}
+{{Compat}}
 
 ## 相关链接

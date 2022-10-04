@@ -1,28 +1,8 @@
 ---
 title: XRReferenceSpace.getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
-tags:
-  - API
-  - AR
-  - Mixed
-  - Orientation
-  - Position
-  - Reality
-  - Reference
-  - Rotate
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - getOffsetReferenceSpace
-  - move
-  - movement
-translation_of: Web/API/XRReferenceSpace/getOffsetReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
 {{domxref("XRReferenceSpace")}} インターフェイスの **`getOffsetReferenceSpace()`** メソッドは、メソッドが呼び出されたオブジェクトと 3D 空間内の特定の点との間の位置の相対的な違いを表す新しい参照空間オブジェクトを返します。 `getOffsetReferenceSpace()` によって返されるオブジェクトは、{{domxref("XRReferenceSpace")}} で呼び出された場合は `XRReferenceSpace` であり、{{domxref("XRBoundedReferenceSpace")}} で呼び出された場合は `XRBoundedReferenceSpace` です。

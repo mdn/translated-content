@@ -12,7 +12,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 
 ## 구문
 
-    str.search(regexp)
+```js
+str.search(regexp)
+```
 
 ### 매개변수
 

@@ -1,15 +1,8 @@
 ---
 title: color-gamut
 slug: Web/CSS/@media/color-gamut
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - メディア特性
-  - リファレンス
-browser-compat: css.at-rules.media.color-gamut
-translation_of: Web/CSS/@media/color-gamut
 ---
+
 {{CSSRef}}
 
 **`color-gamut`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}および出力機器が対応している色のおよその範囲を調べるために使用することができます。

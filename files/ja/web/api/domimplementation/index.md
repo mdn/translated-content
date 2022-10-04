@@ -1,13 +1,8 @@
 ---
 title: DOMImplementation
 slug: Web/API/DOMImplementation
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-translation_of: Web/API/DOMImplementation
 ---
+
 {{ ApiRef("DOM") }}
 
 **`DOMImplementation`** インターフェイスは特定の文書に依存しないメソッドを提供するオブジェクトを表します。こうしたオブジェクトは{{domxref("Document.implementation")}} プロパティを返します。

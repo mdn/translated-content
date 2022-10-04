@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/values
 ---
+
 {{JSRef}}
 
 La méthode **`values()`** renvoie un nouvel objet {{jsxref("Iterator")}} qui contient les valeurs de chaque élément de l'objet `Set`, dans leur ordre d'insertion.

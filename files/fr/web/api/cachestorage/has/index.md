@@ -12,6 +12,7 @@ tags:
   - has
 translation_of: Web/API/CacheStorage/has
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La méthode **`has()`** de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie `true` si un objet {{domxref("Cache")}} est égal au `cacheName`.

@@ -15,9 +15,11 @@ translation_of: Web/API/HTMLMediaElement/autoplay
 
 ## 문법
 
-    HTMLMediaElement.autoplay = true | false;
+```js
+HTMLMediaElement.autoplay = true | false;
 
-    var autoplay = HTMLMediaElement.autoplay;
+var autoplay = HTMLMediaElement.autoplay;
+```
 
 ### 값
 
@@ -35,9 +37,11 @@ translation_of: Web/API/HTMLMediaElement/autoplay
 </video>
 ```
 
-    *** Disable autoplay (recommended) ***
-          false is the default value
-            document.querySelector('#video').autoplay = false;
+```js
+// Disable autoplay (recommended)
+// false is the default value
+document.querySelector('#video').autoplay = false;
+```
 
 ## Specifications
 

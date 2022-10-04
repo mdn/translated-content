@@ -1,12 +1,8 @@
 ---
 title: DOMTokenList.entries()
 slug: Web/API/DOMTokenList/entries
-tags:
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.entries
-translation_of: Web/API/DOMTokenList/entries
 ---
+
 {{APIRef("DOM")}}
 
 **`entries()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキー/値の組を処理することができる{{jsxref("Iteration_protocols","反復子","",1)}}を返します。値は [キー, 値] の組を持つ配列 ({{jsxref("Array")}}) であり、それぞれが単一のトークンを表します。</span>

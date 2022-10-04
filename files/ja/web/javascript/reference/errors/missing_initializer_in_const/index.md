@@ -1,12 +1,8 @@
 ---
 title: 'SyntaxError: missing = in const declaration'
 slug: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
-tags:
-  - Error
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing = in const declaration" は、 const 宣言が同じ文内で値を与えられなかった場合 (`const RED_FLAG;` など) に発生します。値を設定する必要があります (`const RED_FLAG = '#ff0'`)。

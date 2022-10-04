@@ -1,13 +1,8 @@
 ---
 title: Symbol.search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
 ---
+
 {{JSRef}}
 
 **`Symbol.search`** はウェルノウンシンボルで、正規表現に一致する文字列内の位置を返すメソッドを指定します。この関数は {{jsxref("String.prototype.search()")}} メソッドによって呼び出されます。

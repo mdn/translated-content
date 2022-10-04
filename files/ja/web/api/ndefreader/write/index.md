@@ -1,14 +1,8 @@
 ---
 title: NDEFReader.write()
 slug: Web/API/NDEFReader/write
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-  - メソッド
-browser-compat: api.NDEFReader.write
-translation_of: Web/API/NDEFReader/write
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 `write()` は {{DOMxRef("NDEFReader")}} インターフェイスのプロパティで、タグに NDEF メッセージを書き込むことを試みます。 {{jsxref("Promise")}} を返し、これはタグにメッセージが書き込まれると解決し、ハードウェアや権限のエラーが発生すると拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。

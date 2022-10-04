@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/Document/onafterscriptexecute
 original_slug: Web/API/Document/onafterscriptexecute
 ---
+
 {{ ApiRef("DOM") }} {{non-standard_header}}
 
 ## Résumé

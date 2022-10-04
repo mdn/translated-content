@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.cloneNode()`** renvoie une copie du nœud sur lequel elle a été appelée.

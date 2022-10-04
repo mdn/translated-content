@@ -2,7 +2,10 @@
 title: MouseEvent.buttons
 slug: Web/API/MouseEvent/buttons
 ---
-{{APIRef("DOM Events")}}只读属性**`MouseEvent.buttons`**`指示事件触发时哪些鼠标按键被按下。`
+
+{{APIRef("DOM Events")}}
+
+只读属性 **`MouseEvent.buttons`** 指示事件触发时哪些鼠标按键被按下。
 
 每一个按键都用一个给定的数（见下文）表示。如果同时多个按键被按下，buttons 的值为各键对应值做与计算（+）后的值。例如，如果右键（2）和滚轮键（4）被同时按下，buttons 的值为 2 + 4 = 6。
 
@@ -31,7 +34,7 @@ var buttonPressed = instanceOfMouseEvent.buttons
 
 ## Browser compatibility
 
-{{Compat("api.MouseEvent.buttons")}}
+{{Compat}}
 
 ## See also
 

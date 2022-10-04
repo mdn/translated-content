@@ -2,6 +2,7 @@
 title: 色彩选择工具
 slug: Web/CSS/CSS_Colors/Color_picker_tool
 ---
+
 ```html hidden
     <div id="container">
         <div id="palette" class="block">

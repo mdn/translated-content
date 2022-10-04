@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/substring
 ---
+
 {{JSRef}}
 
 La méthode **`substring()`** retourne une sous-chaîne de la chaîne courante, entre un indice de début et un indice de fin.

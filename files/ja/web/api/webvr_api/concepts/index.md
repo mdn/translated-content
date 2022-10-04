@@ -1,8 +1,8 @@
 ---
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
-translation_of: Web/API/WebVR_API/Concepts
 ---
+
 {{APIRef("WebVR API")}}
 
 この文書は，バーチャルリアリティ(VR)の背景にある概念と理論について述べています．もしあなたがこの分野の初学者なら，コードを書き始める前に，これらのトピックを理解すると役に立つでしょう．
@@ -40,7 +40,7 @@ VR アプリケーションの入力を扱うことは興味深いトピック�
 - モバイル: Google Cardboard のように VR マウントにスマートフォン — スマートフォンは VR ディスプレイとして機能する — をマウントして作られるヘッドマウントディスプレイ (HMD) で，モバイルスクリーンをステレオビジョンへ投影するのに必要なレンズが含まれています．![Mobile based VR setup](https://mdn.mozillademos.org/files/11085/mobileBasedVRSetup.png)
 - コンピュータ接続: コンピュータに接続する VR セットアップです — 右目と左目の両方に表示される映像を映す高解像度の横向きスクリーンを持つ HMD で構成されています．HMD は右目と左目のシーン（ステレオビジョン）を分割するためのレンズも備えています．セットアップは分離型の位置センサも含まれています．位置センサは頭の位置/向き/速度/加速度を取得して，コンピュータへ絶えずその情報を渡します．![Computer based VR Setup](https://mdn.mozillademos.org/files/11089/computerBasedVRSetup.png)
 
-> **Note:** コンピュータ接続システムは位置センサーを含んでいない場合もありますが，通常は含まれています．
+> **メモ:** コンピュータ接続システムは位置センサーを含んでいない場合もありますが，通常は含まれています．
 
 その他の VR 体験を補うハードウェア:
 
@@ -58,15 +58,15 @@ VR アプリケーションの入力を扱うことは興味深いトピック�
 
 出力情報は，4 つのカテゴリに分類できます:
 
-1.  位置 — 3D 空間の 3 つの座標軸に沿った HMD の位置です．位置センサから見て，x は左右，y は上下，z は前後となります．WebVR では、x, y, z 座標は {{domxref("VRPose.position")}} 内の配列として表現されます．
-2.  向き — 3D 空間の 3 つの座標軸周りの HMD の回転です．ピッチは x 軸周り，ヨーは y 軸周り，ロールは z 軸周りの回転を意味します．WebVR では ピッチ、ヨー、ロールは
+1. 位置 — 3D 空間の 3 つの座標軸に沿った HMD の位置です．位置センサから見て，x は左右，y は上下，z は前後となります．WebVR では、x, y, z 座標は {{domxref("VRPose.position")}} 内の配列として表現されます．
+2. 向き — 3D 空間の 3 つの座標軸周りの HMD の回転です．ピッチは x 軸周り，ヨーは y 軸周り，ロールは z 軸周りの回転を意味します．WebVR では ピッチ、ヨー、ロールは
     {{domxref("VRPose.orientation")}} 内の配列の最初の 3 要素で表されます．
-3.  速度 — VR で考慮する速度は 2 種類あります:
+3. 速度 — VR で考慮する速度は 2 種類あります:
 
     - 速度（線速度） — 任意の 1 つの軸に沿った HMD の移動速度です．この情報は {{domxref("VRPose.linearVelocity")}} を用いて取得できます．
     - 角速度 — 任意の 1 つの軸周りの HMD の回転速度です．この情報は {{domxref("VRPose.angularVelocity")}} を用いて取得できます．
 
-4.  加速度 — VR で考慮する加速度は 2 種類あります:
+4. 加速度 — VR で考慮する加速度は 2 種類あります:
 
     - 加速度（線加速度） — 任意の 1 つの軸に沿った HMD の移動の加速度です．この情報には {{domxref("VRPose.linearAcceleration")}} を用いてアクセスできます．
     - 角加速度 — 任意の 1 つの軸周りの HMD の回転加速度です．この情報には {{domxref("VRPose.angularAcceleration")}} を用いてアクセスできます．
@@ -86,11 +86,11 @@ FOV は次の値で定義されています:
 - zNear {{domxref("VRDisplay.depthNear")}}: ユーザの頭の中央から FOV の可視範囲開始まで距離．
 - zFar {{domxref("VRDisplay.depthFar")}}: ユーザの頭の中央から FOV の可視範囲末端までの距離．
 
-> **Note:** The user can potentially see all the way around them, which is a brand new concept for apps and games. Try to give people a reason to look around and see what's behind them — make them reach out and find things that are not visible at the very beginning. Describe what's behind their backs.
+> **メモ:** The user can potentially see all the way around them, which is a brand new concept for apps and games. Try to give people a reason to look around and see what's behind them — make them reach out and find things that are not visible at the very beginning. Describe what's behind their backs.
 
 これらのプロパティのデフォルト値は，VR ハードウェアによって微妙に異なりますが，上下方向は 53°，左右方向は 47°，zNear と zFar はそれぞれ 0.1m から 10000m くらいになっています．
 
-> **Note:** ユーザは潜在的に周囲全体を見渡すことができます．それはまったく新しいアプリやゲームのコンセプトです．人々が見回したり背後にある何かを見たりする理由を与えることにトライしてみましょう — 最初は見えていないものを見つける手助けをしてあげてください．背後になにがあるか説明しましょう．
+> **メモ:** ユーザは潜在的に周囲全体を見渡すことができます．それはまったく新しいアプリやゲームのコンセプトです．人々が見回したり背後にある何かを見たりする理由を与えることにトライしてみましょう — 最初は見えていないものを見つける手助けをしてあげてください．背後になにがあるか説明しましょう．
 
 ## VR アプリのための概念
 

@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.useProgram()
 slug: Web/API/WebGLRenderingContext/useProgram
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.useProgram()`** 方法将定义好的{{domxref("WebGLProgram")}} 对象添加到当前的渲染状态中。

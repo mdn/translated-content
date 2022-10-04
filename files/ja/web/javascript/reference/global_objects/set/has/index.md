@@ -1,15 +1,8 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - set
-browser-compat: javascript.builtins.Set.has
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
+
 {{JSRef}}
 
 **`has()`** メソッドは、特定の値をもつ要素が `Set` オブジェクト内に存在するかどうかを示す論理値を返します。
@@ -31,7 +24,7 @@ has(value)
 
 `Set` オブジェクト内に特定の値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
 
-> **Note:** 技術的に言えば、`has()` は [Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) アルゴリズムを使用して、指定された要素が見つかったかどうかを判断します。
+> **メモ:** 技術的に言えば、`has()` は [Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) アルゴリズムを使用して、指定された要素が見つかったかどうかを判断します。
 
 ## 例
 

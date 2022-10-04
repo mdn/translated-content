@@ -15,8 +15,10 @@ translation_of: Web/API/Window/status
 
 ## 문법
 
-    window.status = string;
-    var value = window.status;
+```js
+window.status = string;
+var value = window.status;
+```
 
 ## Specification
 

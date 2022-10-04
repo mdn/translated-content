@@ -1,17 +1,8 @@
 ---
 title: ':has()'
 slug: Web/CSS/:has
-tags:
-  - ':has'
-  - CSS
-  - 実験的
-  - リファレンス
-  - セレクター
-  - リファレンス
-  - 擬似クラス
-browser-compat: css.selectors.has
-translation_of: Web/CSS/:has
 ---
+
 {{CSSRef}}
 
 **`:has()`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、引数として渡されたセレクターに (指定された要素の {{cssxref(":scope")}} の相対で) 該当する要素が一つ以上の要素に一致することを表します。

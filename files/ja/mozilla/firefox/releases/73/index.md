@@ -1,13 +1,8 @@
 ---
 title: Firefox 73 for developers
 slug: Mozilla/Firefox/Releases/73
-tags:
-  - '73'
-  - Firefox
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases/73
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 73 は、米国時間 2020 年 2 月 11 日にリリースされました。このページでは、開発者に影響する Firefox 73 の変更点をまとめています。
@@ -73,7 +68,7 @@ _変更なし。_
 
 ### API の変更点
 
-- {{WebExtAPIRef("sidebarAction.toggle()")}} 関数を実装しました ([bug 1453355](https://bugzilla.mozilla.org/show_bug.cgi?id=1453355 "FIXED: Expose ftp protocol enabled/disabled via browserSettings"))。
+- {{WebExtAPIRef("sidebarAction.toggle()")}} 関数を実装しました ([bug 1453355](https://bugzilla.mozilla.org/show_bug.cgi?id=1453355))。
 
 ### マニフェストの変更点
 

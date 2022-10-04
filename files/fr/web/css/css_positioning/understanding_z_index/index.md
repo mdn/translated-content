@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index
 original_slug: Web/CSS/Comprendre_z-index
 ---
+
 {{CSSRef}}{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_sans_z-index", "Web/CSS/Comprendre_z-index")}}
 
 Généralement, les pages HTML sont vues comme des objets en deux dimensions et le texte, les images et les autres éléments sont disposés sans se chevaucher. Il y a un seul flux de rendu, et tous les éléments connaissent la place occupée par les autres.

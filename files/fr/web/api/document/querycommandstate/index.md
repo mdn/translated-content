@@ -7,6 +7,7 @@ tags:
   - Document
 translation_of: Web/API/Document/queryCommandState
 ---
+
 {{ApiRef("DOM")}}
 
 ## Syntaxe

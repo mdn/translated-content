@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/locationbar
 ---
+
 {{APIRef}}
 
 Renvoie l'objet `locationbar`, dont la visibilité peut être vérifiée.
@@ -43,15 +44,12 @@ var visible = window.locationbar.visible;
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-locationbar', 'Window.locationbar')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-locationbar', 'Window.locationbar')}}     | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.locationbar")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("window.locationbar")}}, {{domxref("window.menubar")}}, {{domxref("window.personalbar")}}, {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}

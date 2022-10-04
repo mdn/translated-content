@@ -1,13 +1,8 @@
 ---
 title: Error.prototype.message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
-tags:
-  - Error
-  - JavaScript
-  - Property
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/message
 ---
+
 {{JSRef}}
 
 **`message`** プロパティは、人間が読めるエラーの説明です。

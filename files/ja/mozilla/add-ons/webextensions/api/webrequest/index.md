@@ -1,17 +1,8 @@
 ---
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
+
 {{AddonSidebar}}
 
 websocket が ws\:// and wss\:// としてリクエストするものも含めた、HTTP リクエスト作成のいろいろなステージでイベントリスナーを追加します。イベントリスナーはリクエストの詳細情報を受け取ったり、リクエストを編集、修正したりします。
@@ -63,7 +54,7 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 
 これを行うには、イベント `addListener()` の `extraInfoSpec` の引数に"blocking"の値のオプションを渡す必要があります。これによりリスナーが同期します。このリスナーでは {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} オブジェクトを返すことができ、このオブジェクトは加えた修正を指し示します: 例えば、送信したい修正後のリクエストヘッダーなど。
 
-> **Warning:** Non-HTTP(S) protocols do not currently support `"blocking"` functionality, so modifying these requests is not available at this time. See {{bug(1475832)}} for more details.
+> **警告:** Non-HTTP(S) protocols do not currently support `"blocking"` functionality, so modifying these requests is not available at this time. See {{bug(1475832)}} for more details.
 
 ## セキュリティ情報へのアクセス
 
@@ -75,7 +66,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 
 {{WebExtAPIRef("webRequest.filterResponseData")}} にリクエスト ID を渡すことで得られる {{WebExtAPIRef("webRequest.StreamFilter")}} を使うと、ブラウザーが受け取った HTTP リクエストのレスポンス本文を検査したり修正したりすることができます。
 
-そのためには、"webRequestBlocking" パーミッションと "webRequest" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 、さらに修正したい対象のリクエスト URL にあてはまる [host permission ](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)権限を得ている必要があります。
+そのためには、"webRequestBlocking" パーミッションと "webRequest" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 、さらに修正したい対象のリクエスト URL にあてはまる [host permission](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 権限を得ている必要があります。
 
 ## 型
 
@@ -99,7 +90,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 ## プロパティ
 
 - {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
-  - : 10 分間に [`handlerBehaviorChanged()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged "Suppose an add-on's job is to block web requests against a pattern, and the following scenario happens:") を最大限呼べる回数。
+  - : 10 分間に [`handlerBehaviorChanged()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged) を最大限呼べる回数。
 
 ## メソッド
 
@@ -139,7 +130,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

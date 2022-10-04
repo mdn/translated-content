@@ -1,9 +1,6 @@
 ---
 title: Django 소개
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - 장고
-translation_of: Learn/Server-side/Django/Introduction
 ---
 {{LearnSidebar}}
 

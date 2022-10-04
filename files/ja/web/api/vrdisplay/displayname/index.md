@@ -1,25 +1,13 @@
 ---
 title: VRDisplay.displayName
 slug: Web/API/VRDisplay/displayName
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - displayName
-browser-compat: api.VRDisplay.displayName
-translation_of: Web/API/VRDisplay/displayName
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`displayName`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` を識別する人間が読める名前を返します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 これは通常、 "Oculus VR HMD (HMD)" や "Oculus VR HMD (Sensor)" のようなものになります。
 

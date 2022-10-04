@@ -9,6 +9,7 @@ tags:
   - hors-ligne
 translation_of: Web/API/Service_Worker_API
 ---
+
 {{ServiceWorkerSidebar}}
 
 {{ SeeCompatTable() }}
@@ -127,9 +128,7 @@ Les service workers sont aussi destinés à être utilisés pour des choses tell
 
 ## Spécifications
 
-| Spécification                                    | Statut                               | Commentaire          |
-| ------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

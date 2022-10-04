@@ -2,6 +2,7 @@
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
 ---
+
 {{APIRef("DOM")}}
 
 创建一个新的{{domxref("Text", "文本")}}节点。这个方法可以用来转义 HTML 字符。
@@ -57,4 +58,4 @@ var text = document.createTextNode(data);
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.createTextNode")}}
+{{Compat}}

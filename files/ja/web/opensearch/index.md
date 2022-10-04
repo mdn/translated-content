@@ -1,17 +1,9 @@
 ---
 title: OpenSearch 記述形式
 slug: Web/OpenSearch
-tags:
-  - Add-ons
-  - Guide
-  - OpenSearch
-  - Search
-  - Search plugins
-  - Web
-  - Web Standards
-translation_of: Web/OpenSearch
 original_slug: Creating_OpenSearch_plugins_for_Firefox
 ---
+
 {{AddonSidebar}}
 
 **[OpenSearch 記述形式](https://github.com/dewitt/opensearch)** は、ウェブサイトが自分自身のために検索エンジンを記述し、ブラウザーやその他のクライアントアプリケーションがその検索エンジンを使用できるようにするものです。 OpenSearch は、(少なくとも) Firefox、Edge、Internet Explorer、Safari、Chrome が対応しています。(他のブラウザーのドキュメントへのリンクは[参考資料](#reference_material)をご覧ください。)
@@ -57,7 +49,7 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 
     Firefox はアイコンを [base64](https://ja.wikipedia.org/wiki/Base64) `data:` URI としてキャッシュします (検索プラグインは[プロファイル](/ja/docs/Mozilla/Profile_Manager)の `searchplugins/` フォルダーに格納されます)。これを行う際に、 `http:` および `https:` URL は `data:` URI に変換されます。
 
-    > **Note:** リモートからアイコンを読み込む際 (すなわち、 `data:` URI とは対照的に `https://` URI からの場合)、 Firefox は**10 KB**より大きなアイコンを拒否します。
+    > **メモ:** リモートからアイコンを読み込む際 (すなわち、 `data:` URI とは対照的に `https://` URI からの場合)、 Firefox は**10 KB**より大きなアイコンを拒否します。
 
     ![Firefox の検索ボックスに表示される Google の検索候補](searchsuggestionsample.png)
 
@@ -80,7 +72,7 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 
   - : プラグインのサイトの検索ページを開くための URL。これは Firefox にユーザーが直接ウェブサイトを訪れる方法を提供します。
 
-    > **Note:** この要素は Firefox 特有で OpenSearch 仕様の一部ではないため、この要素に対応していない他のユーザーエージェントが安全に無視できるようにするために、上の例では "`moz:`" XML 名前空間接頭辞を使っています。
+    > **メモ:** この要素は Firefox 特有で OpenSearch 仕様の一部ではないため、この要素に対応していない他のユーザーエージェントが安全に無視できるようにするために、上の例では "`moz:`" XML 名前空間接頭辞を使っています。
 
 ## 検索プラグインの自動検出
 
@@ -114,7 +106,7 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 
 この方法で、著者とタイトルによる検索を行うプラグインをサイトで提供することができます。
 
-> **Note:** Firefox では、検索プラグインで提供されたアイコンがある場合は、検索ボックスのアイコンが変化して示します。 (画像を参照。緑のプラスの記号です。) そのため、ユーザーのインターフェイスで検索ボックスが非表示になっている場合、これを示すことは*ありません*。_一般に、この動作はブラウザーによって異なります_。
+> **メモ:** Firefox では、検索プラグインで提供されたアイコンがある場合は、検索ボックスのアイコンが変化して示します。 (画像を参照。緑のプラスの記号です。) そのため、ユーザーのインターフェイスで検索ボックスが非表示になっている場合、これを示すことは*ありません*。_一般に、この動作はブラウザーによって異なります_。
 
 ## OpenSearch プラグインの自動更新の対応
 
@@ -128,7 +120,7 @@ OpenSearch プラグインは自動的に更新することができます。 `U
      template="https://example.com/mysearchdescription.xml" />
 ```
 
-> **Note:** 現時点で、 [addons.mozilla.org](https://addons.mozilla.org) (AMO) は OpenSearch プラグインの自動更新に対応していません。自分の検索プラグインを AMO に登録したい場合は、送信前に自動更新機能を削除してください。
+> **メモ:** 現時点で、 [addons.mozilla.org](https://addons.mozilla.org) (AMO) は OpenSearch プラグインの自動更新に対応していません。自分の検索プラグインを AMO に登録したい場合は、送信前に自動更新機能を削除してください。
 
 ## トラブルシューティングのヒント
 

@@ -1,24 +1,15 @@
 ---
 title: DataTransfer.mozItemCount
 slug: Web/API/DataTransfer/mozItemCount
-page-type: web-api-instance-property
-tags:
-  - API
-  - Non-standard
-  - Property
-  - Reference
-  - drag and drop
-  - Deprecated
-browser-compat: api.DataTransfer.mozItemCount
-translation_of: Web/API/DataTransfer/mozItemCount
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{ Non-standard_header() }}{{deprecated_header}}
 
 **`DataTransfer.mozItemCount`** プロパティは、ドラッグされている項目の数を返します。これは、例えば、ドラッグされているファイルの数を取得するために使用することができます。
 
-> **Note:** このプロパティは、Gecko 固有のものです。
+> **メモ:** このプロパティは、Gecko 固有のものです。
 
 このプロパティは {{readonlyInline}} です。
 

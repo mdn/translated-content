@@ -1,15 +1,8 @@
 ---
 title: PWA をインストール可能にするには
 slug: Web/Progressive_web_apps/Installable_PWAs
-tags:
-  - PWA
-  - a2hs
-  - js13kGames
-  - インストール可能
-  - ホーム画面に追加
-  - 進歩的ウェブアプリ
-translation_of: Web/Progressive_web_apps/Installable_PWAs
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 前回の記事では、サンプルアプリケーション [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) が[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)によってオフラインで動作する方法を見てきましたが、さらに、対応しているモバイルブラウザーやデスクトップブラウザーでは、ウェブアプリをユーザーがインストールできるようにすることができます。インストールされたウェブアプリは、ネイティブアプリと同様にユーザーが起動することができます。 この記事では、ウェブアプリマニフェストと「ホーム画面に追加」と呼ばれる機能を使用して、これを実現する方法を説明します。
@@ -20,12 +13,12 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 
 ウェブサイトをインストール可能にするには、以下のものが必要になります。
 
-- [正しくフィールドが入力された](/ja/docs/Web/Progressive_web_apps/Add_to_home_screen#Manifest)ウェブマニフェスト
+- [正しくフィールドが入力された](/ja/docs/Web/Progressive_web_apps/Add_to_home_screen#マニフェスト)ウェブマニフェスト
 - 安全な (HTTPS) ドメインから提供されるウェブサイト
 - 端末上のアプリを表すアイコン
 - アプリをオフラインで動作させるために登録された[service worker](/ja/docs/Web/API/Service_Worker_API) (現時点では Android の Chrome にのみ必要です)
 
-> **Note:** 現在、サービスワーカーが必要なのは、 Chrome, Edge, Samsung Internet などの Chromium ベースのブラウザーのみです。Firefox を使ってアプリを開発する場合は、 Chromium ベースのブラウザーと互換性を持たせるためにサービスワーカーが必要になるので注意が必要です。
+> **メモ:** 現在、サービスワーカーが必要なのは、 Chrome, Edge, Samsung Internet などの Chromium ベースのブラウザーのみです。Firefox を使ってアプリを開発する場合は、 Chromium ベースのブラウザーと互換性を持たせるためにサービスワーカーが必要になるので注意が必要です。
 
 ### マニフェストファイル
 
@@ -39,7 +32,7 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 <link rel="manifest" href="js13kpwa.webmanifest">
 ```
 
-> **Note:** 過去にマニフェストに使用されてきた一般的な拡張機能がいくつかあります。 `manifest.webapp` は Firefox OS アプリのマニフェストで一般的でしたが、多くの場合、コンテンツは JSON 構造で編成されているためウェブマニフェストには `manifest.json` を使用します。 しかし、`.webmanifest` ファイル形式は [W3C マニフェスト仕様書](https://w3c.github.io/manifest/) (英語) で明示的に言及されており、ここでは使用するのはこれです。
+> **メモ:** 過去にマニフェストに使用されてきた一般的な拡張機能がいくつかあります。 `manifest.webapp` は Firefox OS アプリのマニフェストで一般的でしたが、多くの場合、コンテンツは JSON 構造で編成されているためウェブマニフェストには `manifest.json` を使用します。 しかし、`.webmanifest` ファイル形式は [W3C マニフェスト仕様書](https://w3c.github.io/manifest/) (英語) で明示的に言及されており、ここでは使用するのはこれです。
 
 ファイルの内容は次のようになります。
 

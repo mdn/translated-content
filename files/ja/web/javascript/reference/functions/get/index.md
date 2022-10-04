@@ -1,16 +1,8 @@
 ---
 title: ゲッター
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - 関数
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.functions.get
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
+
 {{jsSidebar("Functions")}}
 
 **`get`** 構文は、オブジェクトのプロパティを関数に結びつけ、プロパティが参照された時に関数が呼び出されるようにします。
@@ -132,7 +124,7 @@ console.log(MyConstants.foo); // 'foo' です。静的ゲッターの値は変�
 - 値がすぐに必要ではない場合。値を後で使用する、あるいはまったく使用しない場合がある状況。
 - 何度もアクセスされる値で、値が変更されないため再計算の必要がない、あるいは再計算すべきではない場合。
 
-> **Note:** 値が変わると見込まれるプロパティで、遅延ゲッターを使用してはいけません。ゲッターが遅延である場合、値を再計算しないためです。
+> **メモ:** 値が変わると見込まれるプロパティで、遅延ゲッターを使用してはいけません。ゲッターが遅延である場合、値を再計算しないためです。
 >
 > なお、ゲッターの本質は「遅延」や「メモ化」ではありません。この動作を望む場合、この技術を実装する必要があります。
 

@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/values
 ---
+
 {{JSRef}}
 
 La méthode **`values()`** renvoie un nouvel objet `Array Iterator` qui contient les valeurs pour chaque indice du tableau.

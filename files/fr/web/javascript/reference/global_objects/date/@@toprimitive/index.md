@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/@@toPrimitive
 ---
+
 {{JSRef}}
 
 La méthode **`[@@toPrimitive]()`** permet de convertir un objet `Date` en une valeur primitive.

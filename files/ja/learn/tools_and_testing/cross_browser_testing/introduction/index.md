@@ -1,16 +1,8 @@
 ---
 title: はじめてのクロスブラウザーテスト
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Testing
-  - concepts
-  - cross browser
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 この記事では (クロス) ブラウザーテストのトピックの概要を説明し、「クロスブラウザーテストとは何ですか？」、「発生する最も一般的な問題の種類は何ですか？」、「問題のテスト、特定、および修正のための主なアプローチは？」などの質問に答えながらモジュールを始めます。
@@ -29,7 +21,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 ユーザーの状況は一人ひとり異なってきます — 自分の Macbook Pro やハイエンドな Galaxy Nexus で動いても、すべてのユーザーにとって動作するとは限りません 。それを確認するには膨大な数のテストが必要になってきます。
 
-> **Note:** [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) では、人々が使っているさまざまなブラウザーの種類やそれぞれのマーケットシェア、それに伴うクロスブラウザーの懸念点などが説明されています。
+> **メモ:** [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) では、人々が使っているさまざまなブラウザーの種類やそれぞれのマーケットシェア、それに伴うクロスブラウザーの懸念点などが説明されています。
 
 ここでいくつかの用語を説明します。最初に、「クロスブラウザーでの動作」と言う時、様々なブラウザー間で受け入れられるユーザー体験が提供されることを言います。サイトがすべてのブラウザーでまったく同一の体験が提供していなくても、コア機能がいくつかの方法で受け入れられる限りは、潜在的に OK です。モダンブラウザーではアニメーションや 3D や目立つものがあり、いっぽう古いブラウザーでは平坦なグラフィックで同じ情報を表すだけのこともあるでしょう。サイト所有者が満足している限り、あなたの仕事は完了です。
 
@@ -37,7 +29,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 2 つ目に、「受け入れられる数のウェブブラウザー間で」と言った時、世界中のブラウザーの 100% の意味ではありません — これは不可能です。ユーザーが使うブラウザーや端末の情報を呼び出すことができます (このシリーズの 2 つ目の記事で見ていきましょう — [Gotta test 'em all?](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)を見てください)が、すべてを保証することはできません。ウェブ開発者としては、ある範囲のブラウザーと端末にてコードが完全に動作することをサイトオーナーと同意しておく必要があります。しかしそれを超えて、その他のブラウザーでコンテンツを使う機会をできるだけ与えられるよう防衛的なコードを書いておく必要があります。
 
-> **Note:** このモジュールの後の方でも、防衛的なコードをカバーします。
+> **メモ:** このモジュールの後の方でも、防衛的なコードをカバーします。
 
 ## なぜクロスブラウザー問題が起きるのか？
 
@@ -77,7 +69,7 @@ Now you know your target testing platforms, you should go back and review the re
 
 You should compile a list of the potential problem areas.
 
-> **Note:** You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](http://caniuse.com/), for some further useful details.
+> **メモ:** You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](https://caniuse.com/), for some further useful details.
 
 Once you've agreed on these details, you can go ahead and start developing the site.
 
@@ -97,9 +89,9 @@ Normally your development will involve a combination of the above three approach
 
 After each implementation phase, you will need to test the new functionality. To start with, you should make sure there are no general issues with your code that are stopping your feature from working:
 
-1.  Test it in a couple of stable browsers on your system, like Firefox, Safari, Chrome, or IE/Edge.
-2.  Do some low fi accessibility testing, such as trying to use your site with only the keyboard, or using your site via a screen reader to see if it is navigable.
-3.  Test on a mobile platform, such as Android or iOS.
+1. Test it in a couple of stable browsers on your system, like Firefox, Safari, Chrome, or IE/Edge.
+2. Do some low fi accessibility testing, such as trying to use your site with only the keyboard, or using your site via a screen reader to see if it is navigable.
+3. Test on a mobile platform, such as Android or iOS.
 
 At this point, fix any problems you find with your new code.
 

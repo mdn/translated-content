@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 original_slug: Web/JavaScript/Reference/Objets_globaux/GeneratorFunction
 browser-compat: javascript.builtins.GeneratorFunction
 ---
+
 {{JSRef}}
 
 En JavaScript, chaque fonction génératrice est en réalité un objet `GeneratorFunction`. Il n'existe pas d'objet global avec le nom `GeneratorFunction`, mais il est possible de créer un constructeur `GeneratorFunction()` avec le code suivant&nbsp;:

@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/Constructor
 original_slug: Glossaire/Constructeur
 ---
+
 Un **constructeur** est associé à un {{glossary("object","objet")}} d'une classe particulière qui a été instanciée. Le constructeur initialise cet objet et peut fournir un accès à ses informations privées. Le concept de constructeur peut s'appliquer à la plupart des langages de {{glossary("OOP","programmation orientée objet")}}. Dans l'essentiel, un constructeur en {{glossary("JavaScript")}} est en général déclaré lors de l'instance d'une {{glossary("Class","classe")}}.
 
 ## Syntaxe
@@ -33,7 +34,7 @@ function Default() {
 var defaultReference = new Default();
 ```
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

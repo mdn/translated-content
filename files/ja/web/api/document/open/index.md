@@ -1,16 +1,8 @@
 ---
 title: Document.open()
 slug: Web/API/Document/open
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - open
-  - メソッド
-translation_of: Web/API/Document/open
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.open()`** メソッドは、{{domxref("Document.write", "書き込み", "", "1")}}のために文書を開きます。

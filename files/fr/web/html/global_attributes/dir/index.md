@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/dir
 original_slug: Web/HTML/Attributs_universels/dir
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`dir`** est un attribut à valeur contrainte qui indique la direction du texte contenu dans l'élément.
@@ -30,16 +31,11 @@ Les valeurs autorisées pour cet attribut sont :
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-dir-attribute", "dir")}} | {{Spec2('HTML WHATWG')}} | Aucun changement depuis la dernière dérivation, {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName('HTML5.1', "dom.html#the-dir-attribute", "dir")}}     | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, aucun changement de {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                                                                                               |
-| {{SpecName('HTML5 W3C', "dom.html#the-dir-attribute", "dir")}} | {{Spec2('HTML5 W3C')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, à partir de {{SpecName('HTML4.01')}} la valeur `auto` a été ajoutée et l'attribut est un attribut global à part entière.                                                                                                                                                                                                                                   |
-| {{SpecName('HTML4.01', "dirlang.html#h-8.2", "dir")}}             | {{Spec2('HTML4.01')}}     | Attribut pris en charge pour tous les éléments à l'exception {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, et {{HTMLElement("script")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.dir")}}
+{{Compat}}
 
 ## Voir aussi
 

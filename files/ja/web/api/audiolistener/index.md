@@ -1,16 +1,8 @@
 ---
 title: AudioListener
 slug: Web/API/AudioListener
-page-type: web-api-interface
-tags:
-  - API
-  - AudioListener
-  - インターフェイス
-  - リファレンス
-  - ウェブ音声 API
-browser-compat: api.AudioListener
-translation_of: Web/API/AudioListener
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `AudioListener` インターフェースは、特定の人物が聞いている音場の位置と方向を表し、それが[音声空間処理](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)に使用されます。すべての {{domxref("PannerNode")}} は、 {{domxref("BaseAudioContext.listener")}} 属性に格納されている `AudioListener` に関連して空間化されます。
@@ -21,7 +13,7 @@ translation_of: Web/API/AudioListener
 
 ## プロパティ
 
-> **Note:** position、forward、up の値の設定と取得は異なる構文で行われます。取得は例えば `AudioListener.positionX` にアクセスすることで行われ、同じプロパティを設定するには `AudioListener.positionX.value` を使用することで行われます。仕様書の IDL でこれらの値は読み取り専用とマークされていないのはこのためです。
+> **メモ:** position、forward、up の値の設定と取得は異なる構文で行われます。取得は例えば `AudioListener.positionX` にアクセスすることで行われ、同じプロパティを設定するには `AudioListener.positionX.value` を使用することで行われます。仕様書の IDL でこれらの値は読み取り専用とマークされていないのはこのためです。
 
 - {{domxref("AudioListener.positionX")}}
   - : 右直交座標系におけるリスナーの水平位置を表します。既定値は 0 です。
@@ -49,7 +41,7 @@ translation_of: Web/API/AudioListener
 - {{domxref("AudioListener.setPosition()")}} {{deprecated_inline}}
   - : リスナーの位置を設定します。
 
-> **Note:** これらのメソッドは非推奨ですが、現在、 Firefox、Internet Explorer、Safari で方向と位置を設定するための唯一の方法となっています。
+> **メモ:** これらのメソッドは非推奨ですが、現在、 Firefox、Internet Explorer、Safari で方向と位置を設定するための唯一の方法となっています。
 
 ## 非推奨の機能
 

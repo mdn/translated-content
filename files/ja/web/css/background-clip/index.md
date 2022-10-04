@@ -1,15 +1,8 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-clip
-translation_of: Web/CSS/background-clip
 ---
+
 {{CSSRef}}
 
 **`background-clip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景を境界ボックス、パディングボックス、コンテンツボックスのどれまで拡張するかを設定します。
@@ -18,9 +11,9 @@ translation_of: Web/CSS/background-clip
 
 要素に {{cssxref("background-image")}} または {{cssxref("background-color")}} がない場合、このプロパティは ({{cssxref("border-style")}} または {{cssxref("border-image")}} によって) 境界に透明な領域や部分的に不透明な領域がある場合のみ視覚効果があります。そうでなければ、境界は異なるマスク方法になります。
 
-> **Note:** [ルート要素](/ja/docs/Web/HTML/Element/html)は異なる背景の描画領域を持っているため、その要素に `background-clip` プロパティが指定されても効果はありません。「[特殊要素の背景](https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds)」を参照してください。
+> **メモ:** [ルート要素](/ja/docs/Web/HTML/Element/html)は異なる背景の描画領域を持っているため、その要素に `background-clip` プロパティが指定されても効果はありません。「[特殊要素の背景](https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds)」を参照してください。
 
-> **Note:** [ルート要素](/ja/docs/Web/HTML/Element/html)が HTML 要素である文書の場合、ルート要素上の {{cssxref("background-image")}} の計算値が `none` であり、その {{cssxref("background-color")}} が `transparent` であると、ユーザーエージェントは代わりに、 `background` プロパティの計算値をその要素の HTML の {{HTMLElement("body")}} の子要素から伝搬させなければなりません。その `<body>` 要素の `background` プロパティの使用値はその初期値であり、伝搬された値は、それらがルート要素上で指定されたかのように扱われます。 HTML 文書を作成するときは、 HTML 要素ではなく、 `<body>` 要素にキャンバスの背景を指定することを推奨します。
+> **メモ:** [ルート要素](/ja/docs/Web/HTML/Element/html)が HTML 要素である文書の場合、ルート要素上の {{cssxref("background-image")}} の計算値が `none` であり、その {{cssxref("background-color")}} が `transparent` であると、ユーザーエージェントは代わりに、 `background` プロパティの計算値をその要素の HTML の {{HTMLElement("body")}} の子要素から伝搬させなければなりません。その `<body>` 要素の `background` プロパティの使用値はその初期値であり、伝搬された値は、それらがルート要素上で指定されたかのように扱われます。 HTML 文書を作成するときは、 HTML 要素ではなく、 `<body>` 要素にキャンバスの背景を指定することを推奨します。
 
 ## 構文
 

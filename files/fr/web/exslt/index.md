@@ -7,6 +7,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT
 ---
+
 {{ XsltRef() }}
 EXSLT est un ensemble d'extensions à [XSLT](fr/XSLT). Un certain nombre de modules existent&nbsp;; ceux qui sont supportés par Firefox sont listés ci-dessous&nbsp;:
 
@@ -94,6 +95,6 @@ Le package EXSLT Strings fournit des fonctions permettant la manipulation de cha
 - [str:split](fr/EXSLT/str/split)
 - [str:tokenize](fr/EXSLT/str/tokenize)
 
-### Voir également
+### Voir aussi
 
 - [Site Web d'EXSLT](http://www.exslt.org/)

@@ -1,13 +1,8 @@
 ---
 title: SVG のツール
 slug: Web/SVG/Tutorial/Tools_for_SVG
-tags:
-  - Intermediate
-  - NeedsUpdate
-  - SVG
-  - Tools
-translation_of: Web/SVG/Tutorial/Tools_for_SVG
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
 
 SVG の内部の基礎を説明しましたので、ここでは SVG ファイルで作業を行うためのツールをいくつか見ていきましょう。

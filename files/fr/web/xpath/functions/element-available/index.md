@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/element-available
 original_slug: Web/XPath/Fonctions/element-available
 ---
+
 {{ XsltRef() }}
 
 La fonction `element-available` détermine si un élément est disponible et retourne la valeur booléenne `true` ou `false`.

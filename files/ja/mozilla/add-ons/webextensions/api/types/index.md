@@ -1,15 +1,8 @@
 ---
 title: types
 slug: Mozilla/Add-ons/WebExtensions/API/types
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Types
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/types
 ---
+
 {{AddonSidebar}}
 
 ブラウザー設定を表すのに使われる `BrowserSetting` 型を定義します。
@@ -23,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/types
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

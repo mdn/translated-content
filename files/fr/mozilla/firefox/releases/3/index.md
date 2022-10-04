@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3
 original_slug: Mozilla/Firefox/Versions/3
 ---
+
 {{FirefoxSidebar}}
 
 Pour les développeurs qui désirent prendre connaissance de toutes les nouvelles fonctionnalités de Firefox 3, c'est ici qu'il convient de commencer. Cet article fournit la liste des nouveaux articles couvrant les fonctionnalités qui ont été ajoutées à Firefox 3. Même s'il ne couvre pas nécessairement chaque petite modification, il vous aidera à découvrir les améliorations majeures.
@@ -256,6 +257,6 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 - **Vitesse.** Firefox 3 dispose d'une amélioration des performances grâce au remplacement de la partie s'occupant de l'affichage à l'écran, ainsi que la gestion de la disposition du contenu.
 - **Utilisation mémoire.** Firefox 3 utilise la mémoire de manière plus efficiente avec plus de 300 bugs concernant des fuites mémoire corrigées et de nouvelles fonctionnalités aidant à identifier et libérer automatiquement les blocs mémoire qui ne sont plus utilisés.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('2')}}

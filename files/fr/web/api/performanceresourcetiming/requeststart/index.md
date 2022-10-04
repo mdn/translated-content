@@ -11,6 +11,7 @@ tags:
   - requestStart
 translation_of: Web/API/PerformanceResourceTiming/requestStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`requestStart`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) du moment immédiatement avant que le navigateur ne commence à demander la ressource au serveur, au cache ou à la ressource locale. Si la connexion de transport échoue et que le navigateur retire la demande, la valeur renvoyée sera le début de la nouvelle demande.
@@ -66,10 +67,8 @@ function print_start_and_end_properties(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-requeststart', 'requestStart')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.requestStart")}}
+{{Compat}}

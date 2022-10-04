@@ -2,6 +2,7 @@
 title: border-right
 slug: Web/CSS/border-right
 ---
+
 {{CSSRef}}
 
 CSS 属性 **border-`right`** 是属性{{ Cssxref("border-right-color") }}, {{ Cssxref("border-right-style") }}, 和{{ Cssxref("border-right-width") }}的三者的缩写。这些属性都是在描述一个元素的右边的边框[`border`](/zh-CN/docs/Web/CSS/border)。
@@ -74,4 +75,4 @@ div {
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-right")}}
+{{Compat}}

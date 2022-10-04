@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 original_slug: Apprendre/CSS/Building_blocks/Cascade_et_heritage
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 Le but de cette leçon est de développer votre compréhension des concepts les plus fondamentaux du CSS — la cascade, la spécificité et l'héritage — qui contrôlent la manière dont le CSS est appliqué au HTML et la manière dont les conflits sont résolus.

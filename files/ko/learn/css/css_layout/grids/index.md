@@ -1,17 +1,6 @@
 ---
 title: 그리드
 slug: Learn/CSS/CSS_layout/Grids
-tags:
-  - 그리드
-  - 그리드 레이아웃
-  - 씨에스에스
-  - 아티클
-  - 안내서
-  - 자습서
-  - 초보자
-  - 코딩스크립팅
-  - 학습
-translation_of: Learn/CSS/CSS_layout/Grids
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 

@@ -1,17 +1,8 @@
 ---
 title: MediaDevices.selectAudioOutput()
 slug: Web/API/MediaDevices/selectAudioOutput
-tags:
-  - API
-  - MediaDevices
-  - メソッド
-  - リファレンス
-  - WebRTC
-  - selectAudioOutput
-  - 実験的
-browser-compat: api.MediaDevices.selectAudioOutput
-translation_of: Web/API/MediaDevices/selectAudioOutput
 ---
+
 {{APIRef("WebRTC")}} {{SeeCompatTable}}
 
 {{domxref("MediaDevices")}} の **`selectAudioOutput()`** は、ユーザーに特定の音声出力機器、例えばスピーカーやヘッドフォンを選択するよう尋ねます。
@@ -39,7 +30,7 @@ selectAudioOutput(options)
 
       - : プロンプトに表示する（唯一の）機器の ID を表す文字列（既定値は ""）。
 
-        > **Note:** ユーザーエージェントは、指定された NULL ではない ID が以前のセッションで `selectAudioOutput()` によってユーザーに公開されていた場合、ユーザーへのプロンプトをスキップすることを選択することができます。
+        > **メモ:** ユーザーエージェントは、指定された NULL ではない ID が以前のセッションで `selectAudioOutput()` によってユーザーに公開されていた場合、ユーザーへのプロンプトをスキップすることを選択することができます。
         > この場合、ユーザーエージェントは単にこの機器 ID で解決するか、同じ機器の新しい ID が変更されている場合は、それを使用することができます。
         >
         > これは、永続化された機器 ID を使用したいアプリケーションのためのものです。

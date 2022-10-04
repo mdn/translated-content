@@ -2,6 +2,7 @@
 title: JavaScript 基础
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
@@ -10,7 +11,7 @@ JavaScript 是一门编程语言，可为网站添加交互功能（例如：游
 
 ## JavaScript 到底是什么？
 
-{{Glossary("JavaScript")}}（缩写：JS）是一门完备的 {{Glossary("Dynamic programming language", "动态编程语言")}}。当应用于 {{Glossary("HTML")}} 文档时，可为网站提供动态交互特性。由布兰登·艾克（Brendan Eich，Mozilla 项目、Mozilla 基金会和 Mozilla 公司的联合创始人）发明。
+{{Glossary("JavaScript")}}（缩写：JS）是一门完备的动态编程语言。当应用于 {{Glossary("HTML")}} 文档时，可为网站提供动态交互特性。由布兰登·艾克（Brendan Eich，Mozilla 项目、Mozilla 基金会和 Mozilla 公司的联合创始人）发明。
 
 JavaScript 的应用场合极其广泛，简单到幻灯片、照片库、浮动布局和响应按钮点击，复杂到游戏、2D/3D 动画、大型数据库驱动程序等等。
 
@@ -207,7 +208,7 @@ myVariable = '韩梅梅';
       <td>这些运算符操作与基础算术一致。只是乘法写作星号，除法写作斜杠。</td>
       <td><code>-</code>, <code>*</code>, <code>/</code></td>
       <td>
-        <code>9 - 3;<br />8 * 2; //乘法在JS中是一个星号<br />9 / 3;</code>
+        <code>9 - 3;<br />8 * 2; //乘法在 JS 中是一个星号<br />9 / 3;</code>
       </td>
     </tr>
     <tr>

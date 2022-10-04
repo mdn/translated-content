@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 ---
+
 {{JSRef}}
 
 **`getMinutes()`** メソッドは、地方時に基づき、指定された日時の「分」を返します。

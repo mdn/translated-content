@@ -1,14 +1,8 @@
 ---
 title: Window.captureEvents()
 slug: Web/API/Window/captureEvents
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Method
-  - Non-standard
-translation_of: Web/API/Window/captureEvents
 ---
+
 {{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}
 
 **`Window.captureEvents()`** メソッドは、指定した種類のすべてのイベントをキャプチャするように、そのウィンドウを登録します。

@@ -1,14 +1,8 @@
 ---
 title: path()
 slug: Web/CSS/path
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Reference
-browser-compat: css.types.basic-shape.path
-translation_of: Web/CSS/path
 ---
+
 {{CSSRef}}
 
 **`path()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 SVG のパス文字列を受け取り、 [CSS シェイプ](/ja/docs/Web/CSS/CSS_Shapes)や CSS モーションパスで描画される形状を有効にするために使用します。

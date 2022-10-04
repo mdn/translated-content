@@ -2,6 +2,7 @@
 title: document.implementation
 slug: Web/API/Document/implementation
 ---
+
 {{ApiRef}}
 
 ## 概要

@@ -1,12 +1,8 @@
 ---
 title: 厳格モードへの移行
 slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
-tags:
-  - 上級者
-  - ガイド
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 ---
+
 {{jsSidebar("More")}}
 
 ECMAScript 第 5 版では[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) (strict mode) を導入し、主要なブラウザーすべて（IE10 を含む）に実装されました。ウェブブラウザーにコードを厳格モードとして解釈させるのは簡単ですが（ソースコードの先頭に `'use strict';` を追加するだけです）、既存のコードベースを厳格モードに移行するには、もう少し作業が必要です。
@@ -108,7 +104,7 @@ s.opacity = 1;
 
 #### 関数呼び出しにおける `this`
 
-`f()` のような関数呼び出しでは、 `this` の値はグローバルオブジェクトでした。厳格モードでは `undefined` になりました。関数が [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) または [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) で呼び出されたとき、この値がプリミティブ値であった場合は、オブジェクト (または `undefined` や `null` に対してはグローバルオブジェクト) にボックス化されていました。厳格モードでは、値は変換または置換せずに直接渡されます。
+`f()` のような関数呼び出しでは、 `this` の値はグローバルオブジェクトでした。厳格モードでは `undefined` になりました。関数が [`call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call) または [`apply`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) で呼び出されたとき、この値がプリミティブ値であった場合は、オブジェクト (または `undefined` や `null` に対してはグローバルオブジェクト) にボックス化されていました。厳格モードでは、値は変換または置換せずに直接渡されます。
 
 #### `arguments` は関数の名前付き引数の別名ではない
 

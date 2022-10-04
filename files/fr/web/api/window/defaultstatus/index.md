@@ -14,6 +14,7 @@ tags:
   - Window
 translation_of: Web/API/Window/defaultStatus
 ---
+
 {{ APIRef() }}{{deprecated_header}}
 
 Obtient / définit le texte de la barre d'état pour la fenêtre donnée.

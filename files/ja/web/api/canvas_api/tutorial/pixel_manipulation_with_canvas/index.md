@@ -1,14 +1,9 @@
 ---
 title: キャンバスとピクセル操作
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
-tags:
-  - キャンバス
-  - グラフィック
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 original_slug: Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 これまで、キャンバスの実際のピクセルは見てきませんでした。 `ImageData` オブジェクトを使用して、ピクセルデータを操作するためにデータ配列へ直接読み取りや書き込みを行うことが可能です。また、画像のスムージング（アンチエイリアシング）の制御方法やキャンバスの画像を保存する方法も見ていきます。
@@ -108,7 +103,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 このメソッドは (`left`,`top`)、(`left+width`, `top`)、(`left`, `top+height`)、(`left+width`, `top+height`) の点で四隅を表したキャンバスの領域のピクセルデータを表す `ImageData` オブジェクトを返します。点の座標は、キャンバスの座標空間の単位で指定します。
 
-> **Note:** 返される `ImageData` オブジェクトで、キャンバスの外部にあるピクセルはすべて透明な黒色になります。
+> **メモ:** 返される `ImageData` オブジェクトで、キャンバスの外部にあるピクセルはすべて透明な黒色になります。
 
 このメソッドは、[キャンバスを使用した動画の操作](/ja/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)の記事でも説明しています。
 
@@ -306,7 +301,7 @@ function draw(img) {
 
 {{domxref("HTMLCanvasElement")}} は、画像を保存する際に役に立つ `toDataURL()` メソッドを提供します。これは、 [data URI](/ja/docs/Web/HTTP/data_URIs) として引数 `type` で指定した形式（既定値は [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)）で表した画像を返します。返される画像の解像度は 96 dpi です。
 
-> **Note:** CORS を使用せずに他の {{Glossary("origin")}} から取得したピクセルがキャンバスに含まれている場合、キャンバスは**汚染**され、その内容を読み取ったり保存したりできなくなることに注意してください。
+> **メモ:** CORS を使用せずに他の {{Glossary("origin")}} から取得したピクセルがキャンバスに含まれている場合、キャンバスは**汚染**され、その内容を読み取ったり保存したりできなくなることに注意してください。
 > [セキュリティと汚染されたキャンバス](/ja/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases)を参照してください。
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}

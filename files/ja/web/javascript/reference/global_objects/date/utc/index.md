@@ -1,14 +1,8 @@
 ---
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
+
 {{JSRef}}
 
 **`Date.UTC()`** メソッドは、コンストラクターと同じ最も長い書式の引数を受け入れ、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間を表す {{jsxref("Date")}} オブジェクトのミリ秒単位の数値を返します。
@@ -58,8 +52,8 @@ Date.UTC(year, month[, day[, hour[, minute[, second[, millisecond]]]]])
 
 この `UTC()` メソッドは {{jsxref("Date")}} コンストラクターと 2 つの点で異なります。
 
-1.  `Date.UTC()` は地方時ではなく、協定世界時を用います。
-2.  `Date.UTC()` は `Date` オブジェクトを生成せず、時刻値を整数で返します。
+1. `Date.UTC()` は地方時ではなく、協定世界時を用います。
+2. `Date.UTC()` は `Date` オブジェクトを生成せず、時刻値を整数で返します。
 
 引数が日時に期待される範囲を超えている場合、 `UTC()` メソッドは指定した値を受け入れるよう他の引数を更新します。例えば `15` が `month` に使用された場合、年が 1 つ増加し `(year + 1)`、月には `3` が使われます。
 

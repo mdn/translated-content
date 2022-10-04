@@ -30,7 +30,9 @@ translation_of: Web/API/window/requestAnimationFrame
 
 ## 구문
 
-    window.requestAnimationFrame(callback);
+```js
+window.requestAnimationFrame(callback);
+```
 
 ### 파라미터
 

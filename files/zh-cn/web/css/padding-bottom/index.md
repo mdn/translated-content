@@ -2,6 +2,7 @@
 title: padding-bottom
 slug: Web/CSS/padding-bottom
 ---
+
 {{CSSRef}}
 
 CSS 属性 **padding-bottom** 是指一个元素在内边距区域（padding area）中下方的高度。内边距（padding）是指一个元素的内容和边框之间的区域。和外边距（margin）不同，内边距（padding）是不允许有负值的。内边距（padding）可以用四个值声明一个元素的四个方向的内边距（paddings），这是一种 CSS 缩写属性。
@@ -52,9 +53,9 @@ padding-bottom: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.padding-bottom")}}
+{{Compat}}
 
 ## See also
 
-- [CSS Box Model](/en/CSS/box_model)
+- [CSS Box Model](/zh-CN/CSS/box_model)
 - The {{cssxref("padding")}} shorthand property can be used to set paddings on all four sides of an element with a single declaration: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, `padding-bottom`, and {{cssxref("padding-left")}}.

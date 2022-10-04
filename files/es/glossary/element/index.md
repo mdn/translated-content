@@ -11,5 +11,5 @@ Los elementos y las etiquetas no son las mismas cosas. Las etiquetas comienzan o
 ## Ver también
 
 - La interfaz {{domxref("Element")}} , representa un elemento en el DOM.
-- [Más detalles acerca de los elementos.](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/iniciar)
-- [Componentes_Web/Elementos_Personalizados](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements).
+- [Más detalles acerca de los elementos.](/es/docs/Learn/HTML/Introduccion_a_HTML/iniciar)
+- [Componentes_Web/Elementos_Personalizados](/en-US/docs/Web/Web_Components/Custom_Elements).

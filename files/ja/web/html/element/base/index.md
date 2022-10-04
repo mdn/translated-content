@@ -1,14 +1,6 @@
 ---
 title: '<base>: 文書の基底 URL 要素'
 slug: Web/HTML/Element/base
-tags:
-  - 要素
-  - HTML
-  - HTML 文書メタデータ
-  - HTML:メタデータコンテンツ
-  - リファレンス
-browser-compat: html.elements.base
-translation_of: Web/HTML/Element/base
 ---
 
 {{HTMLRef}}
@@ -60,7 +52,7 @@ translation_of: Web/HTML/Element/base
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-> **Warning:** 以下の属性のいずれかが指定されている場合、この要素は URL の属性値を持つ他の要素、例えば {{HTMLElement("link")}} の `href` 属性などの前に置く**必要があります**。
+> **警告:** 以下の属性のいずれかが指定されている場合、この要素は URL の属性値を持つ他の要素、例えば {{HTMLElement("link")}} の `href` 属性などの前に置く**必要があります**。
 
 - {{htmlattrdef("href")}}
   - : 文書全体を通して相対 URL に使用される基底 URL です。絶対 URL と相対 URL が使用できます。

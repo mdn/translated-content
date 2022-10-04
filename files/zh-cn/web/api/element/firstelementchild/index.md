@@ -2,6 +2,7 @@
 title: Element.firstElementChild
 slug: Web/API/Element/firstElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.firstElementChild`** 只读属性，返回对象的第一个子 {{domxref("元素")}}, 如果没有子元素，则为 null。
@@ -61,7 +62,7 @@ console.log(foo.firstElementChild.textContent);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.firstElementChild")}}
+{{Compat}}
 
 ## 参见
 

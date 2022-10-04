@@ -12,7 +12,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 
 <h2 id="Сетка">Сетка</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">Перед тем, как мы начнём рисовать, нам нужно поговорить о сетке canvas или <strong>координатной плоскости</strong>. Наш HTML каркас из предыдущей страницы включал в себя элемент canvas 150 пикселей в ширину и 150 пикселей в высоту. Справа можно увидеть этот canvas <span class="short_text" id="result_box" lang="ru"><span class="hps">с сеткой</span><span>, накладываемой по умолчанию</span></span>. <span id="result_box" lang="ru"><span class="hps">Обычно 1 единица</span> <span class="hps">на сетке соответствует</span> <span class="hps">1 пикселю на</span></span> canvas. <span id="result_box" lang="ru"><span>Начало координат этой сетки</span> <span class="hps">расположено</span> <em><span class="hps">в верхнем левом</span> <span class="hps">углу</span></em> <span class="hps">в</span> <span class="atn hps">координате <code><em>(</em></code></span><span><code><em>0,0 )</em></code>.</span></span> <span id="result_box" lang="ru"><span class="hps">Все</span> <span class="hps">элементы размещены</span> <span class="hps">относительно</span> <span class="hps">этого</span> <span class="hps">начала</span><span>. </span><span class="hps">Так</span>им образом, <span class="hps">положение верхнего</span> <span class="hps">левого угла</span> <span class="hps">синего квадрата составляет</span> <code><em><span class="hps">х</span></em></code> <span class="hps">пикселей слева</span><span class="hps"> и</span> <code><em><span class="hps">у</span></em></code> <span class="hps">пикселей</span> <span class="hps">сверху,</span> <span class="hps">на</span> <span class="hps">координате <code><em>(х</em></code></span><span><code><em>, у)</em></code>.</span></span> <span id="result_box" lang="ru"><span class="hps">Позже в</span> <span class="hps">этом уроке мы</span> <span class="hps">увидим, как</span> <span class="hps">можно</span> <span class="hps">перевести</span> <span class="hps">начало координат</span> <span class="hps">в другое место</span><span>,</span> <span class="hps">вращать сетку</span> <span class="hps">и даже</span> <span class="hps">масштабировать её</span><span>, но сейчас</span> <span class="hps">мы будем придерживаться</span> <span class="hps">настроек сетки по умолчанию.</span></span></p>
+<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">Перед тем, как мы начнём рисовать, нам нужно поговорить о сетке canvas или <strong>координатной плоскости</strong>. Наш HTML каркас из предыдущей страницы включал в себя элемент canvas 150 пикселей в ширину и 150 пикселей в высоту. Справа можно увидеть этот canvas с сеткой, накладываемой по умолчанию. Обычно 1 единица на сетке соответствует 1 пикселю на canvas. Начало координат этой сетки расположено <em>в верхнем левом углу</em> в координате <code><em>(</em></code><code><em>0,0 )</em></code>. Все элементы размещены относительно этого начала. Таким образом, положение верхнего левого угла синего квадрата составляет <code><em>х</em></code> пикселей слева и <code><em>у</em></code> пикселей сверху, на координате <code><em>(х</em></code><code><em>, у)</em></code>. Позже в этом уроке мы увидим, как можно перевести начало координат в другое место, вращать сетку и даже масштабировать её, но сейчас мы будем придерживаться настроек сетки по умолчанию.</p>
 
 <h2 id="Рисование_прямоугольников">Рисование прямоугольников</h2>
 
@@ -32,7 +32,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 <p>Каждая из приведённых функций принимает несколько параметров: </p>
 
 <ul>
- <li><em>x</em>, <font face="Consolas, Liberation Mono, Courier, monospace"><em>y</em></font> устанавливают положение верхнего левого угла прямоугольника в canvas (относительно начала координат);</li>
+ <li><em>x</em>, <em>y</em> устанавливают положение верхнего левого угла прямоугольника в canvas (относительно начала координат);</li>
  <li><code><em>width</em></code>(ширина) и <code><em><em>height</em></em></code>(высота) определяют размеры прямоугольника.</li>
 </ul>
 
@@ -91,7 +91,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
  <dt><a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">Path методы</a></dt>
  <dd>Методы для установки различных контуров объекта.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}</dt>
- <dd><span id="result_box" lang="ru"><span class="hps">Закрывает контур</span><span>, так что</span> <span class="hps">будущие</span> <span class="hps">команды рисования</span> <span class="hps">вновь</span> <span class="hps">направлены</span> <span class="hps">контекст</span><span>.</span></span></dd>
+ <dd>Закрывает контур, так что будущие команды рисования вновь направлены контекст.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}</dt>
  <dd>Рисует фигуру с внешней обводкой.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.fill", "fill()")}}</dt>
@@ -161,7 +161,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js;highlight:[8,10,12]">function draw() {
+<pre class="brush: js;">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
      var ctx = canvas.getContext('2d');
@@ -198,7 +198,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
  <dd>Рисует линию с текущей позиции до позиции, определённой <code>x и y</code>.</dd>
 </dl>
 
-<p><span id="result_box" lang="ru"><span class="hps">Этот метод принимает</span> <span class="hps">два аргумента</span> </span><code><em>x</em><span lang="ru"><span class="hps"> и </span></span><em>y</em></code><span lang="ru"><span>, которые являются</span> <span class="hps">координатами конечной</span> <span class="hps">точки линии</span><span>.</span></span> <span id="result_box" lang="ru"><span>Начальная точка зависит</span> <span class="hps">от</span> <span class="hps">ранее</span> <span class="hps">нарисованных путей, причём</span> <span class="hps">конечная точка</span> <span class="hps">предыдущего пути является</span> начальной <span class="hps">точкой следующего</span> <span class="hps">и т. д.</span> <span class="hps">Начальная точка также</span> <span class="hps">может быть изменена</span> <span class="hps">с помощью метода</span></span> <code>moveTo()</code>.</p>
+<p>Этот метод принимает два аргумента <code><em>x</em> и <em>y</em></code>, которые являются координатами конечной точки линии. Начальная точка зависит от ранее нарисованных путей, причём конечная точка предыдущего пути является начальной точкой следующего и т. д. Начальная точка также может быть изменена с помощью метода <code>moveTo()</code>.</p>
 
 <p>Пример ниже рисует два треугольника, один закрашенный и другой обведён контуром.</p>
 
@@ -211,7 +211,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js;highlight[9,10,16,17]">function draw() {
+<pre class="brush: js;">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -234,11 +234,11 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 }
 </pre>
 
-<p><span id="result_box" lang="ru"><span class="hps">Отрисовка начинается с вызова</span> </span><code>beginPath()</code><span lang="ru"><span>, чтобы начать</span> <span class="hps">рисовать путь новой фигуры</span><span>.</span></span> <span id="result_box" lang="ru"><span class="hps">Затем мы используем</span> <span class="hps">метод</span> </span><code>moveTo()</code><span lang="ru"><span>, чтобы переместить</span> <span class="hps">начальную точку</span> <span class="hps">в нужное положение</span><span>.</span> <span class="hps">Ниже</span> <span class="hps">рисуются две линии</span><span>, которые образуют две</span> <span class="hps">стороны треугольника</span><span>.</span></span></p>
+<p>Отрисовка начинается с вызова <code>beginPath()</code>, чтобы начать рисовать путь новой фигуры. Затем мы используем метод <code>moveTo()</code>, чтобы переместить начальную точку в нужное положение. Ниже рисуются две линии, которые образуют две стороны треугольника.</p>
 
 <p>{{EmbedLiveSample("Линии", 160, 160, "https://mdn.mozillademos.org/files/238/Canvas_lineTo.png")}}</p>
 
-<p><span id="result_box" lang="ru"><span class="hps">Вы заметите</span> <span class="hps">разницу между</span> <span class="hps">закрашенным</span> <span class="hps">и обведённым контуром</span> <span class="hps">треугольниками.</span> <span class="hps">Это, </span><span class="hps">как упоминалось выше</span><span>,</span> <span class="hps">из-за</span> того, что <span class="hps">фигуры</span> <span class="hps">автоматически закрываются</span><span>, когда</span> <span class="hps">путь</span> <span class="hps">заполнен (т. е. закрашен)</span><span>, но</span> <span class="hps">не тогда, когда</span> <span class="hps">он очерчен (т. е. обведён контуром)</span><span>.</span></span> <span id="result_box" lang="ru"><span class="hps">Если бы мы</span> <span class="hps">не учли</span> </span><code>closePath()</code><span lang="ru"> <span class="hps">для</span> очерченного <span class="hps">треугольника</span><span>,</span> тогда <span class="hps">только две линии</span> <span class="hps">были бы</span> <span class="hps">нарисованы,</span> <span class="hps">а не</span> <span class="hps">весь треугольник</span><span>.</span></span></p>
+<p>Вы заметите разницу между закрашенным и обведённым контуром треугольниками. Это, как упоминалось выше, из-за того, что фигуры автоматически закрываются, когда путь заполнен (т. е. закрашен), но не тогда, когда он очерчен (т. е. обведён контуром). Если бы мы не учли <code>closePath()</code> для очерченного треугольника, тогда только две линии были бы нарисованы, а не весь треугольник.</p>
 
 <h3 id="Дуги">Дуги</h3>
 
@@ -278,7 +278,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js;highlight[16]">function draw() {
+<pre class="brush: js;">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -340,7 +340,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js;highlight[9,10,11,12,13,14]">function draw() {
+<pre class="brush: js;">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -374,7 +374,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js;highlight[9,10,11,12,13,14]">function draw() {
+<pre class="brush: js;">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -401,9 +401,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.rect", "rect(x, y, width, height)")}}</dt>
- <dd><br>
- Добавляет в path прямоугольник, верхний левый угол которого указан с помощью (x, y) с вашими width и height</dd>
- <dt></dt>
+ <dd>Добавляет в path прямоугольник, верхний левый угол которого указан с помощью (x, y) с вашими width и height</dd>
 </dl>
 
 <p>Когда этот метод вызван, автоматически вызывается метод moveTo() с параметрами (x, y). Другими словами, позиция курсора устанавливается в начало добавленного прямоугольника.</p>
@@ -547,7 +545,7 @@ new Path2D(d);    // path из SVG</pre>
 </pre>
 </div>
 
-<pre class="brush: js;highlight[6,9]">function draw() {
+<pre class="brush: js;">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');

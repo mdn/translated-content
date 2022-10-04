@@ -1,11 +1,8 @@
 ---
 title: Firefox 48 for developers
 slug: Mozilla/Firefox/Releases/48
-tags:
-  - Firefox
-  - Release Notes
-translation_of: Mozilla/Firefox/Releases/48
 ---
+
 Firefox 48 は、米国時間 2016 年 8 月 2 日にリリースされました。このページでは、開発者に影響する Firefox 48 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

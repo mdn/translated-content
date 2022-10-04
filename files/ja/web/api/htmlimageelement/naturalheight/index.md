@@ -1,26 +1,15 @@
 ---
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLImageElement
-  - Intrinsic Height
-  - リファレンス
-  - プロパティ
-  - Vertical
-  - naturalHeight
-  - size
-browser-compat: api.HTMLImageElement.naturalHeight
-translation_of: Web/API/HTMLImageElement/naturalHeight
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} インターフェイスの **`naturalHeight`** プロパティは読み取り専用で、画像の本来の（自然な）密度補正された高さを{{Glossary("CSS pixel", "CSS ピクセル数")}}で返します。
 
 画像の高さを制限するものがない状態で描画された場合の高さです。画像の高さを指定しない場合、または画像の高さを制限するか明示的に指定するコンテナー内に画像を配置する場合は、この高さでレンダリングされます。
 
-> **Note:** ほとんどの場合、自然な高さとは、サーバーから送信された画像の実際の高さです。とはいえ、ブラウザーは画像をレンダラーにプッシュする前に画像を修正することができます。たとえば、 Chrome は[ローエンド端末で画像の解像度を低下させる](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7)などです。このような場合、 `naturalHeight` はそのようなブラウザーの介入によって修正された画像の高さを自然な高さとみなして、この値を返します。
+> **メモ:** ほとんどの場合、自然な高さとは、サーバーから送信された画像の実際の高さです。とはいえ、ブラウザーは画像をレンダラーにプッシュする前に画像を修正することができます。たとえば、 Chrome は[ローエンド端末で画像の解像度を低下させる](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7)などです。このような場合、 `naturalHeight` はそのようなブラウザーの介入によって修正された画像の高さを自然な高さとみなして、この値を返します。
 
 ## 値
 

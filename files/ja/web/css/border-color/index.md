@@ -1,21 +1,8 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - CSS スタイル
-  - HTML 色
-  - リファレンス
-  - Styling HTML
-  - border-color
-  - 境界
-  - 色
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-color
-translation_of: Web/CSS/border-color
 ---
+
 {{CSSRef}}
 
 **`border-color`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の色を設定します。

@@ -47,7 +47,7 @@ translation_of: Learn/Server-side/Django/Models
 <p><span lang="pt">Como acima, criamos modelos para <code>Book </code>(que contém os detalhes genéricos do livro),<br>
  <code>BookInstance</code> (contém os status das cópias físicas e específicas dos livros disponíveis no sistema) e <code>Author.</code> Também decidimos ter um modelo para o gênero (<code>Genre</code>), para que os valores possam ser criados/selecionados através da interface administrativa. Decidimos não ter um modelo para o <code>BookInstance: status</code> - pois, codificamos os valores em (<code>LOAN_STATUS</code>) porque não esperamos que isso mude. Dentro de cada uma das caixas você pode ver o nome do modelo, os campos nomes e tipos e também os métodos e seus tipos de retorno.</span></p>
 
-<p><span lang="pt">O diagrama também mostra as relações entre os modelos, incluindo suas multiplicidades. As multiplicidades são os números no diagrama que mostram as quantidades (máxima e mínima) que cada modelo pode estar presente nos relacionamentos. Por exemplo, a linha que conecta as caixas mostra que <code>Book</code> e um <code>Genre</code> estão relacionados. Os números próximos ao modelo <code>Genre</code> mostram que um livro deve ter um ou mais gêneros (ou quantos você quiser), enquanto os números do outro lado da linha, ao lado do modelo <code>Book</code> mostram que um gênero pode ter zero ou muitos livros associados.</span></p>
+<p>O diagrama também mostra as relações entre os modelos, incluindo suas multiplicidades. As multiplicidades são os números no diagrama que mostram as quantidades (máxima e mínima) que cada modelo pode estar presente nos relacionamentos. Por exemplo, a linha que conecta as caixas mostra que <code>Book</code> e um <code>Genre</code> estão relacionados. Os números próximos ao modelo <code>Genre</code> mostram que um livro deve ter um ou mais gêneros (ou quantos você quiser), enquanto os números do outro lado da linha, ao lado do modelo <code>Book</code> mostram que um gênero pode ter zero ou muitos livros associados.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: A próxima seção fornece uma explicação básica sobre como os modelos são definidos e usados. Ao ler sobre isso, considere como vamos construir cada um dos modelos conforme o diagrama acima.</p>
@@ -91,36 +91,32 @@ class MyModelName(models.Model):
 
 <pre class="brush: js notranslate">my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')</pre>
 
-<div class="tw-swapa">
-<div class="DHcWmd"><span lang="pt">Nosso exemplo acima tem um único campo chamado <code>my_field_name</code>, do tipo <code>models.CharField</code> - o que significa que este campo conterá strings de caracteres alfanuméricos. Os tipos de cada campo são atribuídos usando classes específicas, que determinam o tipo de registro usado para armazenar os dados no banco de dados, juntamente com os critérios de validação a serem usados ​​quando os valores são recebidos de um formulário HTML (ou seja, o que constitui um valor válido). Os tipos de cada campo também podem receber argumentos que especifiquem como o campo é armazenado ou pode ser usado. Neste caso, estamos dando ao nosso campo dois argumentos:</span></div>
-
-<div class="DHcWmd"></div>
-</div>
+<div>Nosso exemplo acima tem um único campo chamado <code>my_field_name</code>, do tipo <code>models.CharField</code> - o que significa que este campo conterá strings de caracteres alfanuméricos. Os tipos de cada campo são atribuídos usando classes específicas, que determinam o tipo de registro usado para armazenar os dados no banco de dados, juntamente com os critérios de validação a serem usados ​​quando os valores são recebidos de um formulário HTML (ou seja, o que constitui um valor válido). Os tipos de cada campo também podem receber argumentos que especifiquem como o campo é armazenado ou pode ser usado. Neste caso, estamos dando ao nosso campo dois argumentos:</div>
 
 <ul>
  <li><code>max_length=20</code> — Afima que o valor máximo do comprimento desse campo é de 20 caracteres.</li>
- <li><code>help_text='Enter field documentation'</code> — <span class="tlid-translation translation" lang="pt"><span title="">fornece um rótulo de texto para exibir uma ajuda para os usuários saberem qual valor fornecer, quando esse valor é inserido por um usuário por meio de um formulário HTML.</span></span></li>
+ <li><code>help_text='Enter field documentation'</code> — fornece um rótulo de texto para exibir uma ajuda para os usuários saberem qual valor fornecer, quando esse valor é inserido por um usuário por meio de um formulário HTML.</li>
 </ul>
 
-<p><span class="tlid-translation translation" lang="pt"><span title="">O nome do campo é usado para se referir a ele em consultas e modelos.</span> <span title="">Os campos também têm um rótulo, que é especificado como um argumento <code>(verbose_name)</code> ou inferido ao capitalizar a primeira letra do nome da variável do campo e substituindo quaisquer sublinhados por um espaço (por exemplo,<code> my_field_name</code> teria um rótulo padrão de <code>My field name</code>).</span></span></p>
+<p>O nome do campo é usado para se referir a ele em consultas e modelos. Os campos também têm um rótulo, que é especificado como um argumento <code>(verbose_name)</code> ou inferido ao capitalizar a primeira letra do nome da variável do campo e substituindo quaisquer sublinhados por um espaço (por exemplo,<code> my_field_name</code> teria um rótulo padrão de <code>My field name</code>).</p>
 
-<p><span class="tlid-translation translation" lang="pt"><span title="">A ordem em que os campos são declarados afetará sua ordem padrão, se um modelo for representado em um formulário (por exemplo, no site Admin), embora isso possa ser substituído.</span></span></p>
+<p>A ordem em que os campos são declarados afetará sua ordem padrão, se um modelo for representado em um formulário (por exemplo, no site Admin), embora isso possa ser substituído.</p>
 
 <h5 id="Argumentos_comuns_de_um_campo">Argumentos comuns de um campo</h5>
 
 <p>Os seguintes argumentos são comuns e podem ser usados quando declaramos muitos ou a maioria dos diferentes tipos de campos:</p>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#help-text">help_text</a>: <span class="tlid-translation translation" lang="pt"><span title="">Fornece um rótulo de texto para formulários HTML (por exemplo, no site admin), conforme descrito acima.</span></span></li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#verbose-name">verbose_name</a>: <span class="tlid-translation translation" lang="pt"><span title="">Um nome legível para o campo usado nos rótulos de campo.</span> <span title="">Se não for especificado, o Django irá inferir o nome detalhado do campo <code>name</code>.</span></span></li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#default">default</a>: <span class="tlid-translation translation" lang="pt"><span title="">O valor padrão para o campo.</span> <span title="">Isso pode ser um valor ou um objeto que pode ser chamado. Cada vez que o objeto for chamado será criado um novo registro.</span></span></li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#null">null</a>: <span class="tlid-translation translation" lang="pt"><span title="">Se for <code>True</code>, o Django armazenará valores em branco como <code>NULL</code> no banco de dados, para campos onde isso é apropriado (um <code>CharField </code>irá armazenar uma string vazia).</span> <span title="">O padrão é <code>False</code></span></span>.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#blank">blank</a>:<span class="tlid-translation translation" lang="pt"><span title="">Se for <code>True</code>, o campo poderá ficar em branco nos seus formulários.</span> <span title="">O padrão é <code>False</code>, o que significa que a validação de formulário do Django forçará você a inserir um valor.</span> <span title="">Isso é frequentemente usado com <code>null = True</code>, porque se você permitir valores em branco, também desejará que o banco de dados possa representá-los adequadamente.</span></span></li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#choices">choices</a>: <span class="tlid-translation translation" lang="pt"><span title="">Um grupo de escolhas para este campo.</span> <span title="">Se isso for fornecido, o padrão widget de formulário correspondente será uma caixa de seleção com essas opções, em vez do campo de texto padrão.</span></span></li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#primary-key">primary_key</a>:<span class="tlid-translation translation" lang="pt"><span title="">Se <code>True,</code> define o campo atual como a chave primária do modelo (uma chave primária é uma coluna especial do banco de dados, designada para identificar exclusivamente as diferentes tabelas) .</span> <span title="">Se nenhum campo for especificado como a chave primária, o Django adicionará automaticamente um campo para essa finalidade.</span></span></li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#help-text">help_text</a>: Fornece um rótulo de texto para formulários HTML (por exemplo, no site admin), conforme descrito acima.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#verbose-name">verbose_name</a>: Um nome legível para o campo usado nos rótulos de campo. Se não for especificado, o Django irá inferir o nome detalhado do campo <code>name</code>.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#default">default</a>: O valor padrão para o campo. Isso pode ser um valor ou um objeto que pode ser chamado. Cada vez que o objeto for chamado será criado um novo registro.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#null">null</a>: Se for <code>True</code>, o Django armazenará valores em branco como <code>NULL</code> no banco de dados, para campos onde isso é apropriado (um <code>CharField </code>irá armazenar uma string vazia). O padrão é <code>False</code>.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#blank">blank</a>:Se for <code>True</code>, o campo poderá ficar em branco nos seus formulários. O padrão é <code>False</code>, o que significa que a validação de formulário do Django forçará você a inserir um valor. Isso é frequentemente usado com <code>null = True</code>, porque se você permitir valores em branco, também desejará que o banco de dados possa representá-los adequadamente.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#choices">choices</a>: Um grupo de escolhas para este campo. Se isso for fornecido, o padrão widget de formulário correspondente será uma caixa de seleção com essas opções, em vez do campo de texto padrão.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#primary-key">primary_key</a>:Se <code>True,</code> define o campo atual como a chave primária do modelo (uma chave primária é uma coluna especial do banco de dados, designada para identificar exclusivamente as diferentes tabelas) . Se nenhum campo for especificado como a chave primária, o Django adicionará automaticamente um campo para essa finalidade.</li>
 </ul>
 
-<p><span class="tlid-translation translation" lang="pt"><span title="">Existem muitas outras opções - você pode ver</span></span> <a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#field-options">a lista completa de opções aqui</a>.</p>
+<p>Existem muitas outras opções - você pode ver <a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#field-options">a lista completa de opções aqui</a>.</p>
 
 <h5 id="Tipos_comuns_de_um_campo">Tipos comuns de um campo</h5>
 
@@ -272,7 +268,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
         """String for representing the Model object."""
         return self.name</pre>
 
-<p class="syntaxbox">O model tem apenas um campo do tipo <code>CharField</code> (<code>name</code>), que é usado para descrever o genero (esse campo é limitado a 200 caracteres e tem um <code>help_text</code>). No final da classe Genre declaramos o metodo  <code>__str__()</code> que retorna o nome do genero definido por um registro especifico. Não foi definido um argumento <code>verbose_name</code> , assim o campo será referenciado como  <code>Name</code> nos forms.</p>
+<p>O model tem apenas um campo do tipo <code>CharField</code> (<code>name</code>), que é usado para descrever o genero (esse campo é limitado a 200 caracteres e tem um <code>help_text</code>). No final da classe Genre declaramos o metodo  <code>__str__()</code> que retorna o nome do genero definido por um registro especifico. Não foi definido um argumento <code>verbose_name</code> , assim o campo será referenciado como  <code>Name</code> nos forms.</p>
 
 <h3 id="Book_model">Book model</h3>
 

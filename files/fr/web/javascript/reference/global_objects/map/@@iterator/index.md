@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 ---
+
 {{JSRef}}
 
 La valeur initiale de la propriété **`@@iterator`** est la même fonction que la valeur initiale de la propriété {{jsxref("Map.prototype.entries()", "entries")}}.

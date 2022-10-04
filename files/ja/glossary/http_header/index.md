@@ -1,12 +1,8 @@
 ---
 title: HTTP header (HTTP ヘッダー)
 slug: Glossary/HTTP_header
-tags:
-  - HTTP ヘッダー
-  - WebMechanics
-  - 用語集
-translation_of: Glossary/HTTP_header
 ---
+
 **HTTP ヘッダー**は、 HTTP リクエストおよび HTTP レスポンスのフィールドで、メッセージや本文のセマンティクスを変更したり、より詳細に説明したりするための追加情報を渡します。ヘッダーは大文字と小文字を区別せず、行の先頭から始まり、直後に `':'` とヘッダー自体に依存する値が続きます。値は、次の CRLF またはメッセージの最後で終了します。
 
 従来より、ヘッダーはカテゴリ分けされてきましたが、この分類は仕様書では定義されていません。
@@ -48,22 +44,22 @@ X-Cache: Hit from cloudfront
 X-Cache-Info: cached
 ```
 
-1.  仕様書
+1. 仕様書
 
-    1.  HTTP 仕様書における[ヘッダー](https://tools.ietf.org/html/rfc7230#section-3.2)の構文。
+    1. HTTP 仕様書における[ヘッダー](https://tools.ietf.org/html/rfc7230#section-3.2)の構文。
 
-2.  技術リファレンス
+2. 技術リファレンス
 
-    1.  [全ての HTTP ヘッダー一覧](/ja/docs/Web/HTTP/Headers)
+    1. [全ての HTTP ヘッダー一覧](/ja/docs/Web/HTTP/Headers)
 
-3.  [用語集](/ja/docs/Glossary)
+3. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("HTTP header", "HTTP ヘッダー")}}
-    2.  {{Glossary("General header", "一般ヘッダー")}}
-    3.  {{Glossary("Request header", "リクエストヘッダー")}}
-    4.  {{Glossary("Response header", "レスポンスヘッダー")}}
-    5.  {{Glossary("Entity header", "エンティティヘッダー")}}
-    6.  {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
-    7.  {{Glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}}
-    8.  {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}
-    9.  {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}
+    1. {{Glossary("HTTP header", "HTTP ヘッダー")}}
+    2. {{Glossary("General header", "一般ヘッダー")}}
+    3. {{Glossary("Request header", "リクエストヘッダー")}}
+    4. {{Glossary("Response header", "レスポンスヘッダー")}}
+    5. {{Glossary("Entity header", "エンティティヘッダー")}}
+    6. {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    7. {{Glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}}
+    8. {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}
+    9. {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}

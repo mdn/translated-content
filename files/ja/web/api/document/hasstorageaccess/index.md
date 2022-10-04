@@ -1,16 +1,8 @@
 ---
 title: Document.hasStorageAccess()
 slug: Web/API/Document/hasStorageAccess
-tags:
-  - API
-  - DOM
-  - Document
-  - Reference
-  - Storage Access API
-  - hasStorageAccess
-  - メソッド
-translation_of: Web/API/Document/hasStorageAccess
 ---
+
 {{APIRef}}{{seecompattable}}
 
 {{domxref("Document")}} インターフェイスの **`hasStorageAccess()`** メソッドは、文書がファーストパーティのストレージへのアクセス権を持っているかどうかを真偽値で解決する {{jsxref("Promise")}} を返します。

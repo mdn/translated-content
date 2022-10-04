@@ -22,7 +22,7 @@ node = document.adoptNode(externalNode);
 ```
 
 - `node`
-  - : 는 현재 문서에 삽입될 노드를 의미. 아직 해당 문서에 삽입되기 전이기 때문에 새로운 노드의 [`parentNode`](/ko/docs/DOM/Node.parentNode)는 `null이다.`<span class="hidden"></span><span class="hidden"></span><span class="hidden"></span>
+  - : 는 현재 문서에 삽입될 노드를 의미. 아직 해당 문서에 삽입되기 전이기 때문에 새로운 노드의 [`parentNode`](/ko/docs/DOM/Node.parentNode)는 `null` 이다.
 - `externalNode`
   - : 는 노드를 가져오기 위한 외부 문서에 있는 노드를 의미.
 

@@ -1,16 +1,8 @@
 ---
 title: 'Feature-Policy: display-capture'
 slug: Web/HTTP/Headers/Feature-Policy/display-capture
-tags:
-  - ディレクティブ
-  - 機能ポリシー
-  - HTTP
-  - リファレンス
-  - display-capture
-  - 実験的
-browser-compat: http.headers.Feature-Policy.display-capture
-translation_of: Web/HTTP/Headers/Feature-Policy/display-capture
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `display-capture` ディレクティブは、現在の文書が [Screen Capture API](/ja/docs/Web/API/Screen_Capture_API)、すなわち {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} を使用して画面の内容をキャプチャすることを許可するかどうかを制御します。

@@ -1,16 +1,8 @@
 ---
 title: Navigator.credentials
 slug: Web/API/Navigator/credentials
-tags:
-  - API
-  - CredentialsContainer
-  - Property
-  - Reference
-  - credentials
-  - プロパティ
-  - 資格情報
-translation_of: Web/API/Navigator/credentials
 ---
+
 {{securecontext_header}}{{APIRef("")}}
 
 **`credentials`** は {{domxref("Navigator")}} インターフェイスのプロパティで、リクエストの資格情報のメソッドを公開する {{domxref("CredentialsContainer")}} インターフェイスを返します。 {{domxref("CredentialsContainer")}} インターフェイスはサインインやサインアウトに成功した場合など、興味深いイベントが発生したことをユーザーエージェントに通知したりもします。このインターフェイスは機能検出に使用することができます。

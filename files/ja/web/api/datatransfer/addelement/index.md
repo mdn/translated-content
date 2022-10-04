@@ -1,23 +1,15 @@
 ---
 title: DataTransfer.addElement()
 slug: Web/API/DataTransfer/addElement
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Non-standard
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.addElement
-translation_of: Web/API/DataTransfer/addElement
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{Non-standard_header()}}
 
 **`DataTransfer.addElement()`** メソッドは、与えられた要素にドラッグソースを設定します。この要素は {{domxref("HTMLElement/drag_event", "drag")}} と {{domxref("HTMLElement/dragend_event", "dragend")}} イベントが発生する要素となり、既定のターゲット（ドラッグされたノード）とはなりません。
 
-> **Note:** このメソッドは Firefox 固有です。
+> **メモ:** このメソッドは Firefox 固有です。
 
 ## 構文
 

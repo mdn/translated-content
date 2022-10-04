@@ -1,14 +1,8 @@
 ---
 title: Navigator.productSub
 slug: Web/API/Navigator/productSub
-tags:
-  - API
-  - DOM
-  - Navigator
-  - Property
-  - Read-only
-translation_of: Web/API/Navigator/productSub
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 **`Navigator.productSub`** プロパティは読み取り専用で、現在のブラウザーのビルド番号を返します。

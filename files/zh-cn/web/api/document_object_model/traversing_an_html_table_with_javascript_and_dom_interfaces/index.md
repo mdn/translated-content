@@ -3,6 +3,7 @@ title: 使用 Javascript 和 DOM Interfaces 来处理 HTML
 slug: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 ---
+
 ### 简介
 
 本文概述了一些强大的，基本的 DOM 1 级别中的方法以及如何在 JavaScript 中使用它们。你将会如何动态地创建，访问，控制以及移除 HTML 元素。这里提到的 DOM 方法，并非是 HTML 专有的；它们在 XML 中同样适用。这里所有的示例，在任何全面支持 DOM level1 的浏览器里都能正常工作；例如 Mozilla 浏览器或者其他基于 Mozilla 的浏览器，像网景公司的下一代导航者（Navigatior）浏览器等。这里的示例代码在 IE5 中也能正常工作。
@@ -120,7 +121,7 @@ slug: >-
 
 `getElementByTagName`是文档接口（Document interface）和元素接口（Element interface）的中的方法，所以不管是根文档对象还是所有的元素对象都含有方法`getElementByTagName`。用来通过它们的标签名称（tag name）来获得某些元素的一系列子元素。你可以使用的方法是：`element.getElementsByTagName(tagname)`。
 
-`getElementsByTagName`返回一个有特定标签名称（tagname）的子元素列表。从这个子元素列表中，你可以通过调用`item`和你想得到的元素的下标，来获得单个元素。列表中第一个元素的下标是 0。上面的方法很简单，但是当你操作一个巨大的数据结构时还是应该小心一些。 OK，我们下一个话题中要继续对我们的表格例子进行修改。下面的示例更加简单，它意图展示一些基础的方法：
+`getElementsByTagName`返回一个有特定标签名称（tagname）的子元素列表。从这个子元素列表中，你可以通过调用`item`和你想得到的元素的下标，来获得单个元素。列表中第一个元素的下标是 0。上面的方法很简单，但是当你操作一个巨大的数据结构时还是应该小心一些。OK，我们下一个话题中要继续对我们的表格例子进行修改。下面的示例更加简单，它意图展示一些基础的方法：
 
 ```
 <html>
@@ -193,9 +194,9 @@ myTextNode=document.createTextNode("world");
 
 #### 使用 appendChild(..) 插入元素
 
-那么，通过调用 myP.appendChild({{ mediawiki.external('node_element') }}) 你可以将这个元素设置成为第二个 P 的一个新的子元素。
+那么，通过调用 `myP.appendChild(node_element)` 你可以将这个元素设置成为第二个 P 的一个新的子元素。
 
-```
+```js
 myP.appendChild(myTextNode);
 ```
 

@@ -1,18 +1,9 @@
 ---
 title: Navigator.languages
 slug: Web/API/Navigator/languages
-tags:
-  - API
-  - Experimental
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - languages
-translation_of: Web/API/Navigator/languages
 original_slug: Web/API/NavigatorLanguage/languages
-browser-compat: api.Navigator.languages
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 **`navigator.languages`** は読み取り専用プロパティで、ユーザーの推奨される言語を表す {{domxref("DOMString")}} の配列を返します。この言語は [BCP 47](http://tools.ietf.org/html/bcp47) 言語タグを使用して記述されています。返された配列の中では、設定で最も推奨される言語が最初に来るように並べられています。

@@ -2,9 +2,10 @@
 title: HTMLMediaElement.currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.currentSrc`** 属性包含所选媒体源的绝对 URL 路径。例如当程序会根据用户显示器分辨率选择不同媒体文件时会用到这个属性，显然它是只读的。当**`networkState`**值为**`EMPTY`**时，本属性值为空字符串（empty string）.
+**`HTMLMediaElement.currentSrc`** 属性包含所选媒体源的绝对 URL 路径。例如当程序会根据用户显示器分辨率选择不同媒体文件时会用到这个属性，显然它是只读的。当 **`networkState`** 值为 **`EMPTY`** 时，本属性值为空字符串（empty string）.
 
 ## 语法
 
@@ -29,7 +30,7 @@ console.log(obj.currentSrc); // ""
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.currentSrc")}}
+{{Compat}}
 
 ## 参考
 

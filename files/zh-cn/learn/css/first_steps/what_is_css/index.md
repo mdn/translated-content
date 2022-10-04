@@ -2,9 +2,10 @@
 title: 什么是 CSS?
 slug: Learn/CSS/First_steps/What_is_CSS
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
-**{{Glossary("CSS")}}** (层叠样式表) 让你可以创建好看的网页，但是它具体是怎么工作的呢？ 这篇文章通过一些很简单的例子，告诉我们什么是 CSS，同时还会涉及一些和 CSS 相关的专业术语。
+**{{Glossary("CSS")}}** (层叠样式表) 让你可以创建好看的网页，但是它具体是怎么工作的呢？这篇文章通过一些很简单的例子，告诉我们什么是 CSS，同时还会涉及一些和 CSS 相关的专业术语。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -30,7 +31,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
   </tbody>
 </table>
 
-在 [HTML 概述](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块我们学习了 HTML 是什么，以及如何使用它来组成页面。 浏览器能够解析这些页面。标题部分看起来会比正常文本更大，段落则会另起一行，并且相互之间会有一定间隔。链接通过下划线和不同的颜色与其他文本区分开来。这些都是浏览器的默认样式——当开发者没有指定样式时，浏览器通过这些最简单的样式使页面具有基本可读性。
+在 [HTML 概述](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块我们学习了 HTML 是什么，以及如何使用它来组成页面。浏览器能够解析这些页面。标题部分看起来会比正常文本更大，段落则会另起一行，并且相互之间会有一定间隔。链接通过下划线和不同的颜色与其他文本区分开来。这些都是浏览器的默认样式——当开发者没有指定样式时，浏览器通过这些最简单的样式使页面具有基本可读性。
 
 ![这是浏览器默认样式](html-example.png)
 
@@ -40,7 +41,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 前文提到过，CSS 是用来指定文档如何展示给用户的一门语言——如网页的样式、布局、等等。
 
-一份**文档**是由标记语言组织起来的文本文件 —— {{Glossary("HTML")}} 是最常见的标记语言， 但你可能也听说过其他可标记语言，如 {{Glossary("SVG")}} 或 {{Glossary("XML")}}。
+一份**文档**是由标记语言组织起来的文本文件 —— {{Glossary("HTML")}} 是最常见的标记语言，但你可能也听说过其他可标记语言，如 {{Glossary("SVG")}} 或 {{Glossary("XML")}}。
 
 **展示**一份文档给用户实际上是将文档变成用户可用的文件。{{Glossary("browser","Browsers")}}：如 {{Glossary("Mozilla Firefox","Firefox")}}，{{Glossary("Google Chrome","Chrome")}}, 或 {{Glossary("Microsoft Edge","Edge")}}，都可以将文档在电脑屏幕、投影仪或打印机等设备上进行可视化。
 
@@ -50,7 +51,7 @@ CSS 可以用于给文档添加样式 —— 比如改变标题和链接的[颜�
 
 ## CSS 语法
 
-CSS 是一门基于规则的语言 —— 你能定义用于你的网页中特定元素样式的一组规则. 比如“我希望页面中的主标题是红色的大字”
+CSS 是一门基于规则的语言 —— 你能定义用于你的网页中特定元素样式的一组规则。比如“我希望页面中的主标题是红色的大字”
 
 下面这段代码使用非常简单的 CSS 规则实现了之前提到的效果：
 
@@ -108,7 +109,7 @@ CSS 也不例外——它是由 W3C(万维网联盟) 中的一个名叫 [CSS Wor
 
 以下是 CSS [`font-family`](/zh-CN/docs/Web/CSS/font-family) 属性的兼容数据表。
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## 下一步
 

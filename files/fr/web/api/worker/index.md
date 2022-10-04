@@ -11,6 +11,7 @@ tags:
   - Workers
 translation_of: Web/API/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 L'interface **Worker** de l'[API Web Workers](/fr/docs/Web/API/Web_Workers_API) représente une tâche de fond qui peut facilement être créée et peut envoyer des messages en retour à son créateur. Créer un Worker est aussi simple que d'appeler le constructeur `Worker()`, en spécifiant un script qui définira le comportement du thread du worker.
@@ -84,15 +85,11 @@ Pour un exemple complet, voir [Exemple basique de worker dédié](https://github
 
 ## Spécifications
 
-| Spécification                                                    | Statuts                          | Commentaire |
-| ---------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#worker", "Worker")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-Voici le support des différents type de worker. Voir les pages de chaque worker pour avoir les particularités.
-
-{{Compat("api.Worker")}}
+{{Compat}}
 
 ### Comportement des erreur Cross-origin sur les worker
 

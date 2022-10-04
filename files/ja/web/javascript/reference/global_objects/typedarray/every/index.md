@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 ---
+
 {{JSRef}}
 
 **`every()`** メソッドは、型付き配列内のすべての要素が提供された関数で実装されたテストに合格するかどうかをテストします。このメソッドのアルゴリズムは {{jsxref("Array.prototype.every()")}} と同じです。ここで _TypedArray_ は、[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの 1 つです。

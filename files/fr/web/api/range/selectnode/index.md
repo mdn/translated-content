@@ -8,6 +8,7 @@ tags:
   - Range
 translation_of: Web/API/Range/selectNode
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode `Range.selectNode()` définit le {{domxref ("Range")}} destiné à contenir le {{domxref("Node")}} et son contenu. Le {{domxref ("Node")}} parent du début et de la fin du {{domxref("Range")}} sera le même que le parent du _noeudDeReference_.
@@ -34,14 +35,11 @@ range.selectNode(noeudDeReference);
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                                       | Commentaire             |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-selectnode', 'Range.selectNode()')}}                                             | {{Spec2('DOM WHATWG')}}             | Aucun changement.       |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-selectNode', 'Range.selectNode()')}} | {{Spec2('DOM2 Traversal_Range')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Range.selectNode")}}
+{{Compat}}
 
 ## Voir aussi
 

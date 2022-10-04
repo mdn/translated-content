@@ -2,6 +2,7 @@
 title: Element.setAttributeNS()
 slug: Web/API/Element/setAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNS` 添加一个新属性或更改具有给定命名空间和名称的一个属性的值。

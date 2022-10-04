@@ -3,6 +3,7 @@ title: 製作 WebSocket 客戶端應用程式
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 original_slug: WebSockets/Writing_WebSocket_client_applications
 ---
+
 WebSocket 是一種讓瀏覽器與伺服器進行一段互動通訊的技術。使用這項技術的 Webapp 可以直接進行即時通訊而不需要不斷對資料更改進行輪詢（polling）。
 
 > **備註：** 當我們的系統架構可以寄存 WebSocket 範例之後，我們會提供聊天／伺服器系統實例的幾個範例。
@@ -73,13 +74,13 @@ var mySocket = new WebSocket("ws://www.example.com/socketserver", ["protocol1", 
 mySocket.send("這是伺服器正迫切需要的文字！");
 ```
 
-可以被傳送的內容包括字串、[`Blob`](/en/DOM/Blob) 或是 [`ArrayBuffer`](/zh_tw/JavaScript_typed_arrays/ArrayBuffer)。
+可以被傳送的內容包括字串、[`Blob`](/zh-TW/DOM/Blob) 或是 [`ArrayBuffer`](/zh_tw/JavaScript_typed_arrays/ArrayBuffer)。
 
 > **備註：** Firefox 目前只支援字串傳送。
 
 ### 用 JSON 傳輸物件
 
-有一個很方便的方法是用 [JSON](/en/JSON) 傳送複雜的資料給伺服器，舉例來說，聊天程式可以設計一種協定，這個協定傳送以 JSON 封裝的資料封包：
+有一個很方便的方法是用 [JSON](/zh-TW/JSON) 傳送複雜的資料給伺服器，舉例來說，聊天程式可以設計一種協定，這個協定傳送以 JSON 封裝的資料封包：
 
 ```js
 // 透過伺服器傳送文字給所有使用者
@@ -97,7 +98,7 @@ function sendText() {
 }
 ```
 
-這份代碼先建立一個物件：`msg`，它包含伺服器處理訊息所需的種種資訊，然後呼叫 [`JSON.stringify()`](/en/JavaScript/Reference/Global_Objects/JSON/stringify) 使該物件轉換成 JSON 格式並呼叫 WebSocket 的 [`send()`](</zh_tw/WebSockets/WebSockets_reference/WebSocket#send()>) 方法來傳輸資料至伺服器。
+這份代碼先建立一個物件：`msg`，它包含伺服器處理訊息所需的種種資訊，然後呼叫 [`JSON.stringify()`](/zh-TW/JavaScript/Reference/Global_Objects/JSON/stringify) 使該物件轉換成 JSON 格式並呼叫 WebSocket 的 [`send()`](</zh_tw/WebSockets/WebSockets_reference/WebSocket#send()>) 方法來傳輸資料至伺服器。
 
 ## 從伺服器接收訊息
 
@@ -157,7 +158,7 @@ connection.onmessage = function(evt) {
 };
 ```
 
-這裡我們使用 [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) 使 JSON 物件轉換成原來的物件，檢驗並根據內容採取行動。
+這裡我們使用 [`JSON.parse()`](/zh-TW/JavaScript/Reference/Global_Objects/JSON/parse) 使 JSON 物件轉換成原來的物件，檢驗並根據內容採取行動。
 
 ## 關閉連線
 

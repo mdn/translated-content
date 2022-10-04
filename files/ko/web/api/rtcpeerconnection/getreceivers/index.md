@@ -9,7 +9,9 @@ translation_of: Web/API/RTCPeerConnection/getReceivers
 
 ## Syntax
 
-    var receivers[] = RTCPeerConnection.getReceivers();
+```js
+var receivers[] = RTCPeerConnection.getReceivers();
+```
 
 ### 반환 값
 

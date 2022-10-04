@@ -1,13 +1,8 @@
 ---
 title: HTMLMapElement
 slug: Web/API/HTMLMapElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-translation_of: Web/API/HTMLMapElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLMapElement`** インターフェイスは、map 要素のレイアウトと表示を操作するための特別なプロパティとメソッド (継承によっても利用可能な通常のオブジェクト {{domxref("HTMLElement")}} インターフェイスを超えるもの) を提供します。

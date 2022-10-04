@@ -1,10 +1,8 @@
 ---
 title: 'BroadcastChannel: messageerror イベント'
 slug: Web/API/BroadcastChannel/messageerror_event
-tags:
-  - Event
-translation_of: Web/API/BroadcastChannel/messageerror_event
 ---
+
 {{APIRef}}
 
 `messageerror` イベントは、逆シリアル化できないメッセージがチャネルに到着したときに {{domxref('BroadcastChannel')}} オブジェクトに対して発生します。

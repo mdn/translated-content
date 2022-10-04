@@ -1,18 +1,9 @@
 ---
 title: NavigatorStorage.storage
 slug: orphaned/Web/API/NavigatorStorage/storage
-tags:
-  - API
-  - Navigator
-  - NavigatorStorage
-  - Property
-  - Reference
-  - Secure context
-  - Storage
-  - WorkerNavigator
-translation_of: Web/API/NavigatorStorage/storage
 original_slug: Web/API/NavigatorStorage/storage
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 **`NavigatorStorage.storage`** 読み取り専用プロパティは、現在のサイトまたはアプリのブラウザーの全体的なストレージ機能にアクセスするために使用するシングルトンの {{domxref("StorageManager")}} オブジェクトを返します。 返されたオブジェクトを使用すると、データストアの永続性を調べて設定し、ブラウザーがローカルストレージで使用するためのスペースがどれだけあるかを概算できます。

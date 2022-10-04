@@ -1,16 +1,8 @@
 ---
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - lastIndexOf
-translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
-browser-compat: javascript.builtins.String.lastIndexOf
 ---
+
 {{JSRef}}
 
 **`lastIndexOf()`** メソッドは、呼び出した {{jsxref("String")}} オブジェクトの中で、 `fromIndex` から前方向に検索を始め、指定された値が最後に現れたインデックスを返します。値が見つからない場合は `-1` を返します。
@@ -50,7 +42,7 @@ lastIndexOf(searchValue, fromIndex)
 'canal'.lastIndexOf('', 2);   // 2 を返す
 ```
 
-> **Note:** **注:** `'abab'.lastIndexOf('ab', 2)` は `2` を返し、 `0` にはなりません。 `fromIndex` は検索の開始位置を制約するものだからです。
+> **メモ:** `'abab'.lastIndexOf('ab', 2)` は `2` を返し、 `0` にはなりません。 `fromIndex` は検索の開始位置を制約するものだからです。
 
 ### 大文字と小文字の区別
 

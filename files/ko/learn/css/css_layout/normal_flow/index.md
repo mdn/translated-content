@@ -1,15 +1,6 @@
 ---
 title: 일반 대열
 slug: Learn/CSS/CSS_layout/Normal_Flow
-tags:
-  - 격자형
-  - 부동
-  - 씨에스에스
-  - 일반 대열
-  - 조판
-  - 초보자
-  - 학습
-translation_of: Learn/CSS/CSS_layout/Normal_Flow
 original_slug: Learn/CSS/CSS_layout/일반_흐름
 ---
 {{LearnSidebar}}

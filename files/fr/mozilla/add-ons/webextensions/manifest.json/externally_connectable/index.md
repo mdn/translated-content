@@ -7,6 +7,7 @@ tags:
   - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable
 ---
+
 {{AddonSidebar}}{{SeeCompatTable}}
 
 <table class="standard-table">

@@ -2,6 +2,7 @@
 title: block
 slug: Web/JavaScript/Reference/Statements/block
 ---
+
 {{jsSidebar("Statements")}}
 
 **块语句**（或其他语言的**复合语句**）用于组合零个或多个语句。该块由一对大括号界定，可以是{{jsxref("Statements/label", "labelled")}}：
@@ -33,7 +34,7 @@ LabelIdentifier: { StatementList }
 
 #### 在非严格模式 (non-strict mode) 下的`var` 或者函数声明时
 
-通过`var`声明的变量或者非严格模式下 (non-strict mode) 创建的函数声明**没有**块级作用域。在语句块里声明的变量的作用域不仅是其所在的函数或者 script 标签内，所设置变量的影响会在超出语句块本身之外持续存在。 换句话说，这种语句块不会引入一个作用域。尽管单独的语句块是合法的语句，但在 JavaScript 中你不会想使用单独的语句块，因为它们不像你想象的 C 或 Java 中的语句块那样处理事物。例如：
+通过`var`声明的变量或者非严格模式下 (non-strict mode) 创建的函数声明**没有**块级作用域。在语句块里声明的变量的作用域不仅是其所在的函数或者 script 标签内，所设置变量的影响会在超出语句块本身之外持续存在。换句话说，这种语句块不会引入一个作用域。尽管单独的语句块是合法的语句，但在 JavaScript 中你不会想使用单独的语句块，因为它们不像你想象的 C 或 Java 中的语句块那样处理事物。例如：
 
 ```js example-bad
 var x = 1;
@@ -95,7 +96,7 @@ a[6]();                // 6
 
 #### 使用`function`
 
-[函数声明](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)同样被限制在声明他的语句块内：
+[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)同样被限制在声明他的语句块内：
 
 ```plain
 foo('outside');  // TypeError: foo is not a function

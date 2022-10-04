@@ -1,13 +1,8 @@
 ---
 title: DOMStringList
 slug: Web/API/DOMStringList
-tags:
-  - API
-  - DOM
-  - DOMStringList
-  - Reference
-translation_of: Web/API/DOMStringList
 ---
+
 {{APIRef("DOM")}}
 
 [DOMString](/ja/DOM/DOMString) (strings) のリストを含むいくつかの API が返す型です。

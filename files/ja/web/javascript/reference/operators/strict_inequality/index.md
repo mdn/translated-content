@@ -1,14 +1,8 @@
 ---
 title: 厳密不等価 (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.strict_inequality
-translation_of: Web/JavaScript/Reference/Operators/Strict_inequality
 ---
+
 {{jsSidebar("Operators")}}
 
 厳密不等価演算子 (`!==`) は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。[不等価](/ja/docs/Web/JavaScript/Reference/Operators/Inequality)演算子とは異なり、厳密不等価演算子はオペランドの型が異なる場合、常に異なると判断します。

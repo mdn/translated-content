@@ -1,14 +1,8 @@
 ---
 title: CSS リファレンス
 slug: Web/CSS/Reference
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
-  - l10n:priority
-translation_of: Web/CSS/Reference
 ---
+
 {{CSSRef}}
 
 この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_Types)、[関数記法](/ja/docs/Web/CSS/CSS_Functions)、[アット規則](/ja/docs/Web/CSS/At-rule) の [アルファベット順の索引](#Keyword_index) として利用できます。また、すべての CSS [種類別セレクター](#Selectors) の一覧および [重要な CSS の概念](#Concepts) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#DOM-CSS_CSSOM) も含まれています。
@@ -57,7 +51,7 @@ div.menu-bar li:hover > ul {
 
 ## 索引
 
-> **Note:** **注:** この索引のプロパティ名には、CSS 標準の名前と異なる [JavaScript 名](/ja/docs/Web/CSS/CSS_Properties_Reference) は含まれて**いません**。
+> **メモ:** この索引のプロパティ名には、CSS 標準の名前と異なる [JavaScript 名](/ja/docs/Web/CSS/CSS_Properties_Reference) は含まれて**いません**。
 
 {{CSS_Ref}}
 
@@ -102,7 +96,7 @@ div.menu-bar li:hover > ul {
 - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`
   - : HTML に含まれていないエンティティを表します。
 
-> **Note:** **関連情報:** [Selectors Level 4 仕様書におけるセレクター](https://www.w3.org/TR/selectors/#overview)。
+> **メモ:** **関連情報:** [Selectors Level 4 仕様書におけるセレクター](https://www.w3.org/TR/selectors/#overview)。
 
 ## 概念
 

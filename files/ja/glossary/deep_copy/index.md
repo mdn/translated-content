@@ -1,11 +1,8 @@
 ---
 title: Deep copy (ディープコピー)
 slug: Glossary/Deep_copy
-tags:
-  - 用語集
-  - Deep copy
-translation_of: Glossary/Deep_copy
 ---
+
 {{MDNSidebar}}
 
 オブジェクトの **ディープコピー** とは、コピー先のオブジェクトのプロパティがコピー元のオブジェクトのプロパティと同一の参照（同じ値を指す）を共有しないコピーのことです。

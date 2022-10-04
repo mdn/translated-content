@@ -1,17 +1,8 @@
 ---
 title: 'Window: copy イベント'
 slug: Web/API/Window/copy_event
-tags:
-  - API
-  - Clippboard API
-  - Event
-  - Reference
-  - Web
-  - Window
-  - copy
-  - イベント
-translation_of: Web/API/Window/copy_event
 ---
+
 {{APIRef}}
 
 **`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を実行したときに発生します。

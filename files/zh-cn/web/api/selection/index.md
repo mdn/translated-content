@@ -2,6 +2,7 @@
 title: Selection
 slug: Web/API/Selection
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 `Selection` 对象表示用户选择的文本范围或插入符号的当前位置。它代表页面中的文本选区，可能横跨多个元素。文本选区由用户拖拽鼠标经过文字而产生。要获取用于检查或修改的 Selection 对象，请调用 {{domxref("window.getSelection()")}}。

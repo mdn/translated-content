@@ -26,8 +26,8 @@ La estructura del documento HTML es muy simple, porque todo el juego se visualiz
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+      * { padding: 0; margin: 0; }
+      canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -35,18 +35,18 @@ La estructura del documento HTML es muy simple, porque todo el juego se visualiz
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-	// JavaScript code goes here
+  // JavaScript code goes here
 </script>
 
 </body>
 </html>
 ```
 
-En la cabecera (head) tenemos un `charset`, el título de la página {{htmlelement("title")}} y un poco de CSS básico. El {{htmlelement("body")}} contiene los elementos{{htmlelement("canvas")}} y {{htmlelement("script")}}. Representaremos el juego en el primero y escribiremos el código JavaScript que lo controla en el segundo. El elemento {{htmlelement("canvas")}} tiene el `id` `myCanvas` para que podamos hacer referencia a él con facilidad, y mide 480 píxeles de ancho por 320 de alto. Todo el código JavaScript que vamos a escribir en este tutorial lo pondremos entre las etiquetas `<script> y` `</script>`.
+En la cabecera (head) tenemos un `charset`, el título de la página {{htmlelement("title")}} y un poco de CSS básico. El {{htmlelement("body")}} contiene los elementos{{htmlelement("canvas")}} y {{htmlelement("script")}}. Representaremos el juego en el primero y escribiremos el código JavaScript que lo controla en el segundo. El elemento {{htmlelement("canvas")}} tiene el `id` `myCanvas` para que podamos hacer referencia a él con facilidad, y mide 480 píxeles de ancho por 320 de alto. Todo el código JavaScript que vamos a escribir en este tutorial lo pondremos entre las etiquetas `<script>` y `</script>`.
 
 ## El lienzo (canvas)
 
-Para que podamos visualizar los gráficos en el elemento {{htmlelement("canvas")}}, primero tenemos que preparar una referencia a él en JavaScript. Añade lo siguiente después de la etiqueta `<script>:`
+Para que podamos visualizar los gráficos en el elemento {{htmlelement("canvas")}}, primero tenemos que preparar una referencia a él en JavaScript. Añade lo siguiente después de la etiqueta `<script>`:
 
 ```js
 var canvas = document.getElementById("myCanvas");
@@ -108,6 +108,6 @@ Aquí está el código fuente completo de la primera lección, ejecutándose en 
 
 ## Pasos siguientes
 
-Hemos preparado la estructura HTML básica y hemos aprendido un poquito a manejar el canvas. Para continuar, en el segundo capítulo averiguaremos cómo mover la bola en nuestro juego ([Mueve la bola](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola)).
+Hemos preparado la estructura HTML básica y hemos aprendido un poquito a manejar el canvas. Para continuar, en el segundo capítulo averiguaremos cómo mover la bola en nuestro juego ([Mueve la bola](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola)).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola")}}

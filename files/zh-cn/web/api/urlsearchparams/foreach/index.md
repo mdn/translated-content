@@ -2,6 +2,7 @@
 title: URLSearchParams.forEach()
 slug: Web/API/URLSearchParams/forEach
 ---
+
 {{APIRef("URL API")}}
 
 URLSearchParams 的实例对象上的方法 forEach 允许通过回调函数来遍历 URLSearchParams 实例对象上的键值对
@@ -18,11 +19,11 @@ searchParams.forEach(callback(value,key,searchParams));
 
 - 回调函数
   - : 该回调函数可以接收到 3 个参数 value,key,searchParams，我们可以在回调函数中对接收到的参数进行处理。而三个参数的含义如下：
-- 1\. value
+- `value`
   - : 当前遍历到的键值
-- 2\. key
+- `key`
   - : 当前遍历到的键名
-- 3\. searchParams
+- `searchParams`
   - : 当前调用 forEach 方法的实例对象
 
 ### 返回值
@@ -58,7 +59,7 @@ undefined  // 即没有返回值
 
 ## Browser compatibility
 
-{{Compat("api.URLSearchParams.forEach")}}
+{{Compat}}
 
 ## See also
 

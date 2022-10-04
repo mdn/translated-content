@@ -2,6 +2,7 @@
 title: Navigator.getGamepads()
 slug: Web/API/Navigator/getGamepads
 ---
+
 {{APIRef("Gamepad API")}}{{SeeCompatTable}}
 
 调用 **`Navigator.getGamepads()`** 方法会返回一个数组：第一个值为 `null` ，其他的值均为 {{ domxref("Gamepad") }} 对象，表示每一个与设备连接的游戏手柄。所以如果没有连接任何游戏手柄，这个方法将只会返回 `null`。
@@ -29,9 +30,9 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.getGamepads")}}
+{{Compat}}
 
 ## 另请参阅
 
-- [Using the Gamepad API](/en-US/docs/Web/Guide/API/Gamepad)
-- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)
+- [Using the Gamepad API](/zh-CN/docs/Web/Guide/API/Gamepad)
+- [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API)

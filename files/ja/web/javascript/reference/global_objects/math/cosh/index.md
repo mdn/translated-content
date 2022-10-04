@@ -1,13 +1,8 @@
 ---
 title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 ---
+
 {{JSRef}}
 
 **`Math.cosh()`** 関数は、引数として与えた数の双曲線余弦 (ハイパーボリックコサイン) を返します。これは{{jsxref("Math.E", "定数 e", "", 1)}} を使用して次のように表すことができます。

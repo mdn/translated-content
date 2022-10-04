@@ -1,13 +1,8 @@
 ---
 title: <mtext>
 slug: Web/MathML/Element/mtext
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
-translation_of: Web/MathML/Element/mtext
 ---
+
 {{MathMLRef}}
 
 MathML \<mtext> 要素は、コメントや注釈などの表記の意味を*もたない*任意のテキストをレンダリングするために使用されます。

@@ -1,13 +1,8 @@
 ---
 title: 'Document: readystatechange イベント'
 slug: Web/API/Document/readystatechange_event
-tags:
-  - Event
-  - Reference
-  - XMLHttpRequest
-  - interactive
-translation_of: Web/API/Document/readystatechange_event
 ---
+
 {{APIRef}}
 
 **`readystatechange`** event は、文書の {{domxref("Document.readyState", "readyState")}} 属性が変化したときに発生します。

@@ -2,6 +2,7 @@
 title: Range.insertNode()
 slug: Web/API/Range/insertNode
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.insertNode()`** 是在{{domxref("Range")}}的起始位置插入节点的方法。
@@ -37,8 +38,8 @@ range.insertNode(newNode);
 
 ## Browser compatibility
 
-{{Compat("api.Range.insertNode")}}
+{{Compat}}
 
 ## See also
 
-- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)
+- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model)

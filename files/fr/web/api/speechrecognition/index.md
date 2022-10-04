@@ -3,6 +3,7 @@ title: SpeechRecognition
 slug: Web/API/SpeechRecognition
 translation_of: Web/API/SpeechRecognition
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 **`SpeechRecognition`** est l'interface contrôleur du service de reconnaissance de la [Web Speech API](/fr/docs/Web/API/Web_Speech_API); elle gère également les {{domxref("SpeechRecognitionEvent")}} envoyés par le service de reconnaissance.
@@ -99,13 +100,11 @@ recognition.onresult = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Speech API', '#speechreco-section', 'SpeechRecognition')}} | {{Spec2('Web Speech API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SpeechRecognition")}}
+{{Compat}}
 
 ## Voir aussi
 

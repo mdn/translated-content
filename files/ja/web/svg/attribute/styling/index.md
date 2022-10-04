@@ -1,14 +1,8 @@
 ---
 title: SVG スタイル付け属性
 slug: Web/SVG/Attribute/Styling
-tags:
-  - 属性
-  - 初心者
-  - NeedsExample
-  - リファレンス
-  - SVG
-browser-compat: svg.attributes.style
 ---
+
 SVG のスタイル付け属性は、CSS スタイリング効果を適用するために任意の SVG 要素に指定できるすべての属性です。
 
 - [`class`](#attr-class)

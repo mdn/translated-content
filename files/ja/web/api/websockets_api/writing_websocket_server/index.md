@@ -1,13 +1,8 @@
 ---
 title: C# で WebSocket サーバーを記述する
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
-tags:
-  - HTML5
-  - NeedsMarkupWork
-  - チュートリアル
-  - WebSockets
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 ---
+
 ## はじめに
 
 WebSocket API を使用したい場合は、サーバーを所有していると便利です。この記事では、C# で記述する方法を説明します。どんなサーバーサイドの言語でも行うことができますが、わかりやすく理解しやすいように、 Microsoft の言語を選択しました。
@@ -18,7 +13,7 @@ WebSocket API を使用したい場合は、サーバーを所有していると
 
 WebSocket は [TCP (伝送制御プロトコル)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 接続を介して通信します。幸いにも、C# には [TcpListener](https://msdn.microsoft.com/library/system.net.sockets.tcplistener.aspx) クラスがあり、その名前が示すようにします。これは System.Net.Sockets 名前空間にあります。
 
-> **Note:** 書く量を減らすために名前空間を `using` キーワードに含めることをお勧めします。毎回完全な名前空間を入力することなく、名前空間のクラスを使用できます。
+> **メモ:** 書く量を減らすために名前空間を `using` キーワードに含めることをお勧めします。毎回完全な名前空間を入力することなく、名前空間のクラスを使用できます。
 
 ### TcpListener
 
@@ -30,7 +25,7 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 `localaddr` はリスナーの IP を指定し、`port` はポートを指定します。
 
-> **Note:** `string` から `IPAddress` オブジェクトを作成するには、 `IPAddress` の静的メソッド `Parse` を使用してください。
+> **メモ:** `string` から `IPAddress` オブジェクトを作成するには、 `IPAddress` の静的メソッド `Parse` を使用してください。
 
 メソッド:
 
@@ -196,7 +191,7 @@ if (Regex.IsMatch(data, "^GET")) {
 - MASK ビット: "ペイロードデータ" がマスクされているかどうかを定義します。1 に設定すると、マスキングキーが Masking-Key にあり、これは "ペイロードデータ" のマスクを解除するために使用されます。クライアントからサーバーへのすべてのメッセージはこのビットが設定されています。
 - ペイロードの長さ: この値が 0〜125 の場合、メッセージの長さになります。 126 の場合、次の 2 バイト (16 ビットの符号なし整数) が長さになります。127 の場合、次の 8 バイト (64ビットの符号なし整数) が長さになります。
 
-> **Note:** 最初のビットはクライアントからサーバーへのメッセージでは常に 1 なので、このバイトから 128 を引いて MASK ビットを取り除くことができます。
+> **メモ:** 最初のビットはクライアントからサーバーへのメッセージでは常に 1 なので、このバイトから 128 を引いて MASK ビットを取り除くことができます。
 
 メッセージに MASK ビットが設定されていることに注意してください。これは次の 4 バイト (61、84、35、6) がメッセージのデコードに使用されるマスクバイトであることを意味します。これらのバイトはすべてのメッセージとともに変化します。
 

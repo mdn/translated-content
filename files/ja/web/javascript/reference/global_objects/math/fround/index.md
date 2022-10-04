@@ -1,15 +1,8 @@
 ---
 title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
-tags:
-  - ES6
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - fround
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
 ---
+
 {{JSRef}}
 
 **`Math.fround()`** 関数は、ある {{jsxref("Number")}} を表す最も近い{{interwiki("wikipedia", "単精度浮動小数点数", "32ビット単精度")}}浮動小数点数を返します。

@@ -2,6 +2,7 @@
 title: Document.createRange()
 slug: Web/API/Document/createRange
 ---
+
 {{APIRef("DOM")}}
 
 回傳一 {{domxref("Range")}} 物件。

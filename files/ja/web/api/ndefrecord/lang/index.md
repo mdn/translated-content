@@ -1,13 +1,8 @@
 ---
 title: NDEFRecord.lang
 slug: Web/API/NDEFRecord/lang
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFRecord.lang
-translation_of: Web/API/NDEFRecord/lang
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`lang`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、テキストのペイロードの言語を返します。提供されていない場合は `null` を返します。

@@ -2,6 +2,7 @@
 title: If-Unmodified-Since
 slug: Web/HTTP/Headers/If-Unmodified-Since
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议中的 **`If-Unmodified-Since`** 消息头用于请求之中，使得当前请求成为条件式请求：只有当资源在指定的时间之后没有进行过修改的情况下，服务器才会返回请求的资源，或是接受 {{HTTPMethod("POST")}} 或其他 non-{{Glossary("safe")}} 方法的请求。如果所请求的资源在指定的时间之后发生了修改，那么会返回 {{HTTPStatus("412")}} (Precondition Failed) 错误。

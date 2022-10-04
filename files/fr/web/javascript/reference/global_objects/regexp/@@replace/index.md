@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@replace
 ---
+
 {{JSRef}}
 
 La méthode **`[@@replace]()`** remplace toutes ou certaines correspondances d'un motif `this` dans une chaîne de caractère avec un outil de remplacement. La valeur renvoyée est la nouvelle chaîne ainsi créée. Cet outil de remplacement peut être une chaîne de caractère ou une fonction appelée pour chacune des correspondances.

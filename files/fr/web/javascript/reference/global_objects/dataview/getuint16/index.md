@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint16
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getUint16
 ---
+
 {{JSRef}}
 
 La méthode **`getUint16()`** permet de lire un entier non-signé sur 16 bits (type _unsigned short_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.

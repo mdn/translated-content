@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/Window/deviceorientation_event
 original_slug: FUEL/Window/deviceorientation
 ---
+
 {{APIRef}}
 
 L'événement `deviceorientation` est déclenché lorsque des données sont disponibles, à partir d'un capteur d'orientation, sur l'orientation actuelle de l'appareil par rapport au cadre de coordonnées de la Terre. Ces données sont recueillies à partir d'un magnétomètre à l'intérieur de l'appareil. Voir [Données d'orientation et de mouvement expliquées](/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained) pour plus de détails.
@@ -65,13 +66,11 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                   |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{SpecName("Device Orientation", "#deviceorientation", "l'événement DeviceOrientation")}} | {{Spec2("Device Orientation")}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.deviceorientation_event")}}
+{{Compat}}
 
 ## Voir aussi
 

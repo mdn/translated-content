@@ -1,8 +1,8 @@
 ---
 title: Resources
 slug: Web/API/XSLTProcessor/Resources
-translation_of: Web/API/XSLTProcessor/Resources
 ---
+
 ## 参考
 
 - [Transforming XML: Netscape and XSLT](http://devedge.netscape.com/library/manuals/2001/xslt/1.0/)

@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/cacheable
 original_slug: Glossaire/cacheable
 ---
+
 Une réponse apte à être mise en cache (_cacheable_) est une réponse HTTP qui peut être mise en cache, qui est stockée pour être récupérée et utilisée plus tard, en enregistrant une nouvelle requête sur le serveur. Toutes les réponses HTTP ne peuvent pas être mises en cache, les contraintes suivantes sont requises pour qu'une réponse HTTP soit mise en cache :
 
 - La méthode utilisée dans la requête peut elle-même être mise en cache, c'est une méthode {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}. Une réponse de la méthode {{HTTPMethod("POST")}} peut aussi être mise en cache si le rafraîchissement est indiqué, mais c'est rarement implémenté. D'autres méthodes comme {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} ne peuvent pas être mises en cache et leur résultat pas davantage.
@@ -47,7 +48,7 @@ Cache-Control: no-cache
 (…)
 ```
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

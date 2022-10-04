@@ -1,17 +1,8 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-tags:
-  - クラス
-  - ECMAScript 2015
-  - JavaScript
-  - Promise
-  - リファレンス
-  - promise.all
-  - ポリフィル
-browser-compat: javascript.builtins.Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** オブジェクトは、非同期処理の完了 (もしくは失敗) の結果およびその結果の値を表します。
@@ -36,9 +27,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 
 ![](promises.png)
 
-> **Note:** Scheme に代表される一部の言語では、遅延評価や計算を延期する機構を持っており、これらも「プロミス」と呼ばれます。 JavaScript におけるプロミスは、すでに起きつつある処理を表し、この処理はコールバック関数を使うことで連鎖させることができます。式を遅延評価する方法を探しているのであれば、引数なしの関数を使用するを検討してください。 `f = () => expression` で遅延評価される式が作成でき、 `f()` でその式を直ちに評価することができます。
+> **メモ:** Scheme に代表される一部の言語では、遅延評価や計算を延期する機構を持っており、これらも「プロミス」と呼ばれます。 JavaScript におけるプロミスは、すでに起きつつある処理を表し、この処理はコールバック関数を使うことで連鎖させることができます。式を遅延評価する方法を探しているのであれば、引数なしの関数を使用するを検討してください。 `f = () => expression` で遅延評価される式が作成でき、 `f()` でその式を直ちに評価することができます。
 
-> **Note:** プロミスは履行状態または拒否状態になった場合は、待機ではなく決定 (_settled_) と呼ばれます。また解決 (_resolved_) という用語も見かけるでしょう。これはプロミスが決定したか、他のプロミスの状態に一致させるために「ロックイン」したことを表します。 [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) には、プロミスの用語についての詳細な説明があります。
+> **メモ:** プロミスは履行状態または拒否状態になった場合は、待機ではなく決定 (_settled_) と呼ばれます。また解決 (_resolved_) という用語も見かけるでしょう。これはプロミスが決定したか、他のプロミスの状態に一致させるために「ロックイン」したことを表します。 [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) には、プロミスの用語についての詳細な説明があります。
 
 ### 複数のプロミスの連鎖
 
@@ -184,7 +175,7 @@ window.addEventListener("message", (event) => {
 
 上記の例では、現行の設定オブジェクトが追跡されたときのみ `<iframe>` の内部のテキストが更新されます。これは、現行のものを追跡しないと、メッセージを送る環境を間違えてしまう可能性があるからです。
 
-> **Note:** 現在のところ、現行の領域の追跡は Firefox では完全に実装されており、 Chrome と Safari では部分的に実装されています。
+> **メモ:** 現在のところ、現行の領域の追跡は Firefox では完全に実装されており、 Chrome と Safari では部分的に実装されています。
 
 ## コンストラクター
 

@@ -254,10 +254,10 @@ function startOscillators() {
 
 세 개의 각 오실레이터는 같은 방식으로 설정됩니다.
 
-1.  {{domxref("BaseAudioContext.createOscillator")}}를 호출함으로써 {{domxref("OscillatorNode")}}를 생성합니다.
-2.  오디오 파형으로써 사인파를 사용하기 위해 오실레이터의 type을 `"sine"`으로 설정합니다.
-3.  오실레이터의 주파수를 원하는 값으로 설정합니다. 이 경우, `oscNode1`는 중앙 C로, `oscNode2`와 `oscNode3`는 E와 G음을 재생함으로써 화음을 완성합니다.
-4.  새로운 오실레이터를 해당하는 gain 노드에 연결합니다.
+1. {{domxref("BaseAudioContext.createOscillator")}}를 호출함으로써 {{domxref("OscillatorNode")}}를 생성합니다.
+2. 오디오 파형으로써 사인파를 사용하기 위해 오실레이터의 type을 `"sine"`으로 설정합니다.
+3. 오실레이터의 주파수를 원하는 값으로 설정합니다. 이 경우, `oscNode1`는 중앙 C로, `oscNode2`와 `oscNode3`는 E와 G음을 재생함으로써 화음을 완성합니다.
+4. 새로운 오실레이터를 해당하는 gain 노드에 연결합니다.
 
 세 개의 모든 오실레이터가 완성되고 나면, 이것들은 각각의 {{domxref("AudioScheduledSourceNode.start", "ConstantSourceNode.start()")}} 메서드를 차례로 호출함으로써 시작되고, `playing`은 음이 재생되는 것을 추적하기 위해 `true`로 설정됩니다.
 

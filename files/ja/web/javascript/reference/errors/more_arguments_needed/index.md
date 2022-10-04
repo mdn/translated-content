@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: More arguments needed'
 slug: Web/JavaScript/Reference/Errors/More_arguments_needed
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/More_arguments_needed
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "more arguments needed" は、関数の呼び出し方にエラーがあった場合に発生します。もっと多くの引数が必要です。

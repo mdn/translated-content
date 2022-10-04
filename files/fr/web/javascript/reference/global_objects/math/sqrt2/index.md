@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/SQRT2
 ---
+
 {{JSRef}}
 
 La propriété **`Math.SQRT2`** représente la racine carrée de 2 et vaut environ 1.414 :

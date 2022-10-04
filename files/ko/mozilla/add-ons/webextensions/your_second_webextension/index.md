@@ -1,7 +1,6 @@
 ---
 title: Your second extension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 {{AddonSidebar}}
 

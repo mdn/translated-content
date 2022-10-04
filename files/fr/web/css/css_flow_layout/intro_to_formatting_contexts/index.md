@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 original_slug: Web/CSS/CSS_Flow_Layout/Explications_contextes_formatage
 ---
+
 {{CSSRef}}
 
 Dans cet article, nous aborderons le concept des contextes de formatage. Ceux-ci peuvent être de dfiférents types : contextes de formatage de bloc, contextes de formatage en ligne, contextes de formatage flexibles. Nous verrons les bases de leur comportement et comment les utiliser.

@@ -1,16 +1,8 @@
 ---
 title: URL.origin
 slug: Web/API/URL/origin
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - URL
-  - URL API
-  - origin
-translation_of: Web/API/URL/origin
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`origin`** 読み取り専用プロパティは、表現された URL のオリジンの Unicode シリアル化を含む {{domxref("USVString")}} を返します。 正確な構造は、次のように URL のタイプによって異なります。

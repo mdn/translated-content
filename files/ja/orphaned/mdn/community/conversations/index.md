@@ -1,13 +1,9 @@
 ---
 title: MDN コミュニティでの対話
 slug: orphaned/MDN/Community/Conversations
-tags:
-  - Community
-  - Guide
-  - MDN Meta
-translation_of: MDN/Community/Conversations
 original_slug: MDN/Community/Conversations
 ---
+
 {{MDNSidebar}}
 
 MDN での"作業"は MDN のサイトで行われますが、"コミュニティ" はまた、(非同期の) ディスカッションと(同期的な) オンラインチャット、ミーティングも行っています。

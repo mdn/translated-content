@@ -10,6 +10,7 @@ tags:
   - Remplacement
 translation_of: Web/API/Node/replaceChild
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.replaceChild()`** remplace un nœud enfant du noeud spécifié par un autre nœud.

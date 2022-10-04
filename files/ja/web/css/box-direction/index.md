@@ -1,17 +1,11 @@
 ---
 title: box-direction
 slug: Web/CSS/box-direction
-tags:
-  - CSS
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.box-direction
-translation_of: Web/CSS/box-direction
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
-> **Warning:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。以前の標準であった `box-direction` は `flex-direction` に置き換えられたので、 `-moz-box-direction` は XUL でのみ使用されます。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
+> **警告:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。以前の標準であった `box-direction` は `flex-direction` に置き換えられたので、 `-moz-box-direction` は XUL でのみ使用されます。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
 
 **`box-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスが内容を通常通りに (上または左から) 配置するか、逆方向に (下または右から) 配置するかを指定します。
 

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 original_slug: Web/CSS/CSS_Columns/Gestion_dépassement_multi-colonnes
 ---
+
 {{CSSRef}}
 
 Dans ce guide, nous verrons comment gérer le dépassement avec une disposition multi-colonnes. Le dépassement peut avoir lieu pour chaque boîte de colonne ou lorsqu'il y a plus de contenu que de place dans le conteneur.

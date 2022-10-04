@@ -1,14 +1,8 @@
 ---
 title: CSS ボックスモデル
 slug: Web/CSS/CSS_Box_Model
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Box_Model
 ---
+
 {{CSSRef}}
 
 **CSS ボックスモデル**は CSS のモジュールの一つで、要素に対して作成され、パディングやマージンを含む長方形のボックス定義します。[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)によって配置されます。
@@ -38,7 +32,7 @@ CSS のボックスは、テキスト、画像、その他の HTML 要素が表�
 
 ### プロパティ
 
-> **Note:** 本仕様では、物理的なパディングとマージンのプロパティを定義しています。テキストの方向に関係するフローに関連したプロパティは、[論理的プロパティと値](/ja/docs/Web/CSS/CSS_Logical_Properties)で定義されています。
+> **メモ:** 本仕様では、物理的なパディングとマージンのプロパティを定義しています。テキストの方向に関係するフローに関連したプロパティは、[論理的プロパティと値](/ja/docs/Web/CSS/CSS_Logical_Properties)で定義されています。
 
 #### ボックスのマージンを制御するプロパティ
 

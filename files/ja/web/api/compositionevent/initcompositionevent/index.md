@@ -1,15 +1,8 @@
 ---
 title: CompositionEvent.initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
-tags:
-  - API
-  - CompositionEvent
-  - Deprecated
-  - Method
-  - Reference
-  - initCompositionEvent
-translation_of: Web/API/CompositionEvent/initCompositionEvent
 ---
+
 {{deprecated_header}}{{APIRef("DOM Events")}}
 
 {{domxref("CompositionEvent")}} インターフェイスの **`initCompositionEvent()`** メソッドは、`CompositionEvent` オブジェクトインスタンスの属性を初期化します。

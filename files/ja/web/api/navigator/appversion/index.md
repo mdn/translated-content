@@ -1,22 +1,14 @@
 ---
 title: Navigator.appVersion
 slug: Web/API/Navigator/appVersion
-tags:
-  - API
-  - Deprecated
-  - Navigator
-  - Property
-  - Reference
-  - appVersion
-translation_of: Web/API/NavigatorID/appVersion
 original_slug: Web/API/NavigatorID/appVersion
-browser-compat: api.Navigator.appVersion
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 "`4.0`" またはそのブラウザーのバージョン情報を表す文字列のどちらかを返します。
 
-> **Note:** #### メモこのプロパティがブラウザーの正しいバージョンを返すことを期待しないでください。
+> **メモ:** このプロパティがブラウザーの正しいバージョンを返すことを期待しないでください。
 
 ## 構文
 

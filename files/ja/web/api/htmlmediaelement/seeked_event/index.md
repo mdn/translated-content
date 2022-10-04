@@ -1,17 +1,8 @@
 ---
 title: 'HTMLMediaElement: seeked イベント'
 slug: Web/API/HTMLMediaElement/seeked_event
-page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
-browser-compat: api.HTMLMediaElement.seeked_event
-translation_of: Web/API/HTMLMediaElement/seeked_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `seeked` イベントは、シーク操作が完了したことで、現在の再生位置が変更され、論理属性の `seeking` が `false` に変更されたときに発生します。

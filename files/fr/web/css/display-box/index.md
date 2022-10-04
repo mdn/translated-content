@@ -3,6 +3,7 @@ title: <display-box>
 slug: Web/CSS/display-box
 translation_of: Web/CSS/display-box
 ---
+
 {{CSSRef}}
 
 Ces mots-clés définissent si un élément génère des boîtes d'affichage ou aucune.

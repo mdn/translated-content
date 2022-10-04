@@ -1,14 +1,8 @@
 ---
 title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.exchange
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 ---
+
 {{JSRef}}
 
 静的な **`Atomics.exchange()`** メソッドは、指定された値を配列内の指定した位置に格納し、その値を返します。これは不可分操作で、古い値を読み取ってから新しい値を書き込むまでの間に他の物が書き込まないことを保証します。

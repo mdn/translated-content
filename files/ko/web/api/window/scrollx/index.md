@@ -15,7 +15,9 @@ translation_of: Web/API/Window/scrollX
 
 ## 구문
 
-    var x = window.scrollX
+```js
+var x = window.scrollX
+```
 
 ### 값
 

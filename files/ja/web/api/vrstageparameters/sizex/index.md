@@ -1,8 +1,8 @@
 ---
 title: VRStageParameters.sizeX
 slug: Web/API/VRStageParameters/sizeX
-translation_of: Web/API/VRStageParameters/sizeX
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VRStageParameters")}} インターフェイスの **`sizeX`** 読取専用プロパティは，プレイエリア境界の幅をメートル単位で返します．

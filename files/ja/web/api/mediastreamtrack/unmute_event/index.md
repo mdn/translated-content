@@ -1,27 +1,15 @@
 ---
 title: 'MediaStreamTrack: unmute イベント'
 slug: Web/API/MediaStreamTrack/unmute_event
-page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - Media
-  - Media Capture and Streams
-  - Media Streams
-  - MediaStreamTrack
-  - Reference
-  - Video
-  - unmute
-browser-compat: api.MediaStreamTrack.unmute_event
-translation_of: Web/API/MediaStreamTrack/unmute_event
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`unmute`** イベントは、トラックのソースが休止時間の後、再びメディアデータを提供するようになると {{domxref("MediaStreamTrack")}} に送られます。
 
 これは {{domxref("MediaStreamTrack/mute_event", "mute")}} で始まった {{domxref("MediaStreamTrack.muted", "muted")}} の状態を終了します。
 
-> **Note:** 多くの人が「ミュート」と考える状態（すなわち、トラックを無音にすることをユーザーが制御できる方法）は実際には {{domxref("MediaStreamTrack.enabled")}} プロパティを使用して管理され、こちらではイベントが発生しません。
+> **メモ:** 多くの人が「ミュート」と考える状態（すなわち、トラックを無音にすることをユーザーが制御できる方法）は実際には {{domxref("MediaStreamTrack.enabled")}} プロパティを使用して管理され、こちらではイベントが発生しません。
 
 このイベントはキャンセル不可で、バブリングしません。
 

@@ -2,6 +2,7 @@
 title: Element.lastElementChild
 slug: Web/API/Element/lastElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.lastElementChild`** は読み取り専用のプロパティで、要素の最後の子を {{domxref("Element")}} で返します。子要素がない場合は `null` を返します。

@@ -1,13 +1,8 @@
 ---
 title: 'ReferenceError: invalid assignment left-hand side'
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "invalid assignment left-hand side" は、どこかで予想外の代入が行われたときに発生します。例えば、単一の "`=`" の記号が "`==`" や "`===`" の代わりに使用された場合です。

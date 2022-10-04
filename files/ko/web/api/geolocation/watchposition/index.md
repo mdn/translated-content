@@ -16,7 +16,9 @@ translation_of: Web/API/Geolocation/watchPosition
 
 ## 구문
 
-    navigator.geolocation.watchPosition(success[, error[, options]])
+```js
+navigator.geolocation.watchPosition(success[, error[, options]])
+```
 
 ### 매개변수
 

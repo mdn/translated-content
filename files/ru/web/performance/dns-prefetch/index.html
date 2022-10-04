@@ -7,7 +7,7 @@ tags:
   - preconnect
 translation_of: Web/Performance/dns-prefetch
 ---
-<p><span class="seoSummary"><code><strong>DNS-prefetch</strong></code> (предзагрузка DNS) - это попытка определить IP адрес по имени домена до того, как ресурс с этого домена будет фактически запрошен. Это может быть загрузчик файлов, который используется позже или ссылка, по которой, вероятно, перейдёт пользователь. </span></p>
+<p><code><strong>DNS-prefetch</strong></code> (предзагрузка DNS) - это попытка определить IP адрес по имени домена до того, как ресурс с этого домена будет фактически запрошен. Это может быть загрузчик файлов, который используется позже или ссылка, по которой, вероятно, перейдёт пользователь. </p>
 
 <h2 id="Зачем_использовать_dns-prefetch">Зачем использовать dns-prefetch?</h2>
 
@@ -42,7 +42,7 @@ translation_of: Web/Performance/dns-prefetch
 
 <p><strong>Во-вторых,</strong> существует возможность добавить <code>dns-prefetch</code> (и другие подсказки) как <a href="/en-US/docs/Web/HTTP/Headers">HTTP заголовок</a> с помощью <a href="/en-US/docs/Web/HTTP/Headers/Link">HTTP Link field</a>:</p>
 
-<pre class="brush: unix">Link: &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</pre>
+<pre>Link: &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</pre>
 
 <p><strong>В третьих, </strong> хорошей практикой считается использование <code>dns-prefetch</code> в паре с  <code>preconnect</code>. В то время, как <code>dns-prefetch</code> срабатывает только при DNS поиске, <code>preconnect</code> устанавливает соединение к нужному серверу. Этот процесс включает в себя DNS resolution, установку TCP соединения и установление безопасного соединения (<a href="/en-US/docs/Glossary/TLS">TLS</a> рукопожатие), если оно доступно. Комбинирование этих двух инструкций даёт возможность ещё больше сократить время ожидания для кросс-доменных запросов. Вы можете использовать их вместе таким образом:</p>
 

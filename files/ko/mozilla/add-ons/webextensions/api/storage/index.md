@@ -1,14 +1,6 @@
 ---
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
-tags:
-  - 비표준
-  - 웹확장
-  - 인터페이스
-  - 저장소
-  - 참조
-  - 확장
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 ---
 {{AddonSidebar}}
 

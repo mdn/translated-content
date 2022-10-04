@@ -149,4 +149,3 @@ input[type=file]::file-selector-button:hover {
 - [API de entradas de archivos y directorios](/es/docs/Web/API/File_and_Directory_Entries_API)
 - [Compatibilidad con la API de entradas de archivos y directorios en Firefox](/es/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
 - [`<input type="file">`](/es/docs/Web/HTML/Element/input/file)
-

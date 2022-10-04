@@ -1,15 +1,8 @@
 ---
 title: URLSearchParams.forEach()
 slug: Web/API/URLSearchParams/forEach
-tags:
-  - API
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
-  - forEach
-translation_of: Web/API/URLSearchParams/forEach
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`forEach()`** メソッドを使用すると、コールバック関数を介してこのオブジェクトに含まれるすべての値を反復処理できます。

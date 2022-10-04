@@ -8,6 +8,7 @@ tags:
   - Security
 translation_of: Glossary/Public-key_cryptography
 ---
+
 Le chiffrage avec clé publique — ou _chiffrage asymétrique_ — est un système de chiffrage dans lequel les clés fonctionnent par paires. La transformation réalisée par l'une des clés ne peut être inversée que par l'autre clé. L'une des clés (la _clé privée_) est gardée secrète, tandis que l'autre est rendue publique.
 
 Lorsqu'elles sont utilisées pour signer numériquement, la clé privée sert à signer et la clé publique sert à vérifier. En clair, n'importe qui peut vérifier une signature, mais seul le propriétaire de la clé privée correspondante peut l'avoir générée.

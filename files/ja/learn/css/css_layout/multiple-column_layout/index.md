@@ -1,17 +1,8 @@
 ---
 title: 段組みレイアウト
 slug: Learn/CSS/CSS_layout/Multiple-column_Layout
-tags:
-  - Beginner
-  - CSS
-  - Guide
-  - Layout
-  - Learn
-  - Learning
-  - Multi-col
-  - Multiple columns
-translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
 
 段組みレイアウトの仕様では、新聞に見られるような、コンテンツを段にレイアウトする方法が提供されています。 この記事では、この機能の使い方について説明します。

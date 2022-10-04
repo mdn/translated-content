@@ -1,14 +1,8 @@
 ---
 title: 'Document: selectionchange イベント'
 slug: Web/API/Document/selectionchange_event
-tags:
-  - Event
-  - Reference
-  - Selection
-  - Selection API
-  - selectionchange
-translation_of: Web/API/Document/selectionchange_event
 ---
+
 {{APIRef}}
 
 **`selectionchange`** イベントは [Selection API](/ja/docs/Web/API/Selection_API) の一部で、文書における現在のテキストの選択が変更された際に発生します。

@@ -1,15 +1,8 @@
 ---
 title: PointerEvent.height
 slug: Web/API/PointerEvent/height
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/PointerEvent/height
 ---
+
 {{ APIRef("Pointer Events") }}
 
 {{domxref("PointerEvent")}} インターフェイスの **`height`** 読み取り専用プロパティは、y 軸に沿ったポインタの接触ジオメトリの高さを表します（CSS ピクセル単位）。 ポインタデバイスのソース（指など）によっては、特定のポインタに対して、各イベントが異なる値を生成することがあります。

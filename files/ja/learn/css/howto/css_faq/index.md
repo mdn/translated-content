@@ -1,16 +1,9 @@
 ---
 title: CSS の一般的な質問
 slug: Learn/CSS/Howto/CSS_FAQ
-tags:
-  - CSS
-  - FAQ
-  - Web
-  - questions
-  - ガイド
-  - 例
-translation_of: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Common_CSS_Questions
 ---
+
 この記事には、 CSS に関するいくつかのよくある質問（FAQ）とその解答が見つかり、ウェブ開発者になるための道で役に立つでしょう。
 
 ## なぜ CSS が妥当なのに正しくレンダリングされないのか？
@@ -65,7 +58,7 @@ HTML の要素は、 `id` 属性と `class` 属性の片方または両方を持
 - class を使用すると、複数の要素のスタイルを設定できるため、id セレクタを使用する複数のルールで同じスタイル設定情報を書き出す必要がなくなり、より短いスタイルシートを作成できます。より短いスタイルシートはより高性能です
 - class セレクタは id セレクタよりも特異性が低いため、必要に応じてオーバーライドする方が簡単です
 
-> **Note:** 詳しくは [Selectors](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors) もご覧ください。
+> **メモ:** 詳しくは [Selectors](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors) もご覧ください。
 
 ## プロパティの既定値に戻すにはどうすればよいのか?
 
@@ -77,7 +70,7 @@ h1 { color: red; }
 h1 { color: black; }
 ```
 
-これは CSS 2 で変わり、[initial](/ja/docs/CSS/initial "initial") キーワードが CSS プロパティの正当な値になりました。これはプロパティを既定値にリセットします。この既定値は、当該プロパティの CSS 仕様で定義されています。
+これは CSS 2 で変わり、[initial](/ja/docs/CSS/initial) キーワードが CSS プロパティの正当な値になりました。これはプロパティを既定値にリセットします。この既定値は、当該プロパティの CSS 仕様で定義されています。
 
 ```css
 /* 見出しの既定の色は黒 */
@@ -108,7 +101,7 @@ HTML の要素は `class` 属性に空白区切りでクラスを並べること
 
 ## なぜ私のスタイル規則は正しく動作しないのか?
 
-構文が正しいスタイル規則が、ある状況下で適用されないことがあります。この種類の問題をデバッグするために [DOM Inspector](/ja/docs/DOM_Inspector "DOM_Inspector") の _CSS Style Rules_ ビューを活用できますが、スタイルが無視される事例でもっとも頻発するものは以下のとおりです。
+構文が正しいスタイル規則が、ある状況下で適用されないことがあります。この種類の問題をデバッグするために [DOM Inspector](/ja/docs/DOM_Inspector) の _CSS Style Rules_ ビューを活用できますが、スタイルが無視される事例でもっとも頻発するものは以下のとおりです。
 
 ### HTML 要素の階層
 
@@ -189,7 +182,7 @@ body * { font-weight: normal; }
 
 ### CSS の詳細度
 
-ある要素に複数の規則を適用すると、スタイルの[詳細さ](/ja/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity "Specificity")に従って規則が選ばれます。インラインスタイル（HTML の `style` 属性）が最上位の詳細さで他のあらゆるセレクタを上書きし、次に ID セレクタ、それからクラスセレクタ、要素名セレクタの順となります。よって、以下の {{htmlelement("div")}} の文字色は赤になります。
+ある要素に複数の規則を適用すると、スタイルの[詳細さ](/ja/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity)に従って規則が選ばれます。インラインスタイル（HTML の `style` 属性）が最上位の詳細さで他のあらゆるセレクタを上書きし、次に ID セレクタ、それからクラスセレクタ、要素名セレクタの順となります。よって、以下の {{htmlelement("div")}} の文字色は赤になります。
 
 ```
 div { color: black; }
@@ -217,9 +210,9 @@ div { color: black; }
 transform: rotate(90deg);
 ```
 
-> **Note:** 接頭辞付きプロパティの処理の詳細については、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)モジュールの[一般的な HTML および CSS の問題の処理 - CSS プレフィックスの処理](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes)を参照してください。
+> **メモ:** 接頭辞付きプロパティの処理の詳細については、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)モジュールの[一般的な HTML および CSS の問題の処理 - CSS プレフィックスの処理](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes)を参照してください。
 
-> **Note:** Mozilla をプレフィックスとする CSS プロパティの詳細については、[CSS の Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)ページを参照してください。
+> **メモ:** Mozilla をプレフィックスとする CSS プロパティの詳細については、[CSS の Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)ページを参照してください。
 
 ## z-index は位置指定へどのように関係するのか?
 
@@ -227,4 +220,4 @@ z-index プロパティは、要素を積み重ねる順序を指定します。
 
 z-index/stack の順序が高い要素は、常に z-index/stack の順序が低い要素の前に表示されます。z-index は指定された位置 (`position:absolute`、`position:relative`、または `position:fixed`) を持つ要素に対してのみ機能します。
 
-> **Note:** 詳細については、[ポジショニング](/ja/docs/Learn/CSS/CSS_layout/Positioning)学習の記事、特に [z-index の紹介](/ja/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index)セクションを参照してください。
+> **メモ:** 詳細については、[ポジショニング](/ja/docs/Learn/CSS/CSS_layout/Positioning)学習の記事、特に [z-index の紹介](/ja/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index)セクションを参照してください。

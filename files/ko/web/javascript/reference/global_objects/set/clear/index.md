@@ -18,7 +18,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 
 ## 구문
 
-    mySet.clear();
+```js
+mySet.clear();
+```
 
 ## 예제
 

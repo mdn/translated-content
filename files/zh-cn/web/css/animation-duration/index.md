@@ -2,6 +2,7 @@
 title: animation-duration
 slug: Web/CSS/animation-duration
 ---
+
 {{ CSSRef() }}{{ SeeCompatTable() }}
 
 ## 概述
@@ -36,7 +37,7 @@ animation-duration: 10s, 30s, 230ms
 
 ## 示例
 
-See [CSS animations](/en/CSS/CSS_animations) for examples.
+See [CSS animations](/zh-CN/CSS/CSS_animations) for examples.
 
 ## 规范
 
@@ -44,7 +45,7 @@ See [CSS animations](/en/CSS/CSS_animations) for examples.
 
 ## 浏览器兼容
 
-{{Compat("css.properties.animation-duration")}}
+{{Compat}}
 
 ## See also
 

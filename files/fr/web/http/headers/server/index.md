@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Headers/Server
 original_slug: Web/HTTP/Headers/Serveur
 ---
+
 {{ HTTPSidebar }}
 
 Le paramètre d'entête **`Server`** contient des informations à propos du système (ou sous-système) en place sur le serveur qui s'occupe de la requête.
@@ -54,6 +55,6 @@ Server: Apache/2.4.1 (Unix)
 
 {{Compat("http.headers.Server")}}
 
-## Voir également
+## Voir aussi
 
 - {{HTTPHeader("Allow")}}

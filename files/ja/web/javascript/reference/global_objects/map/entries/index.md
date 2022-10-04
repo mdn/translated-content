@@ -1,15 +1,8 @@
 ---
 title: Map.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/entries
 ---
+
 {{JSRef}}
 
 **`entries()`** メソッドは、挿入順で `Map` オブジェクトの要素に対する `[key, value]` ペアを含む新しい [Iterator](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators) オブジェクトを返します。

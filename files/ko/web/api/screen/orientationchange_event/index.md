@@ -14,7 +14,9 @@ original_slug: Web/API/Screen/onorientationchange
 
 ## Syntax
 
-    screen.onorientationchange = funcRef;
+```js
+screen.onorientationchange = funcRef;
+```
 
 `funcRef` 는 함수로의 참조 이다.
 

@@ -1,15 +1,8 @@
 ---
 title: WebGLRenderingContext.drawElements()
 slug: Web/API/WebGLRenderingContext/drawElements
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - WebGL
-  - WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext.drawElements
-translation_of: Web/API/WebGLRenderingContext/drawElements
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.drawElements()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、配列データのプリミティブを描画します。

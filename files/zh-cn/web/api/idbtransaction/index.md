@@ -2,6 +2,7 @@
 title: IDBTransaction
 slug: Web/API/IDBTransaction
 ---
+
 {{APIRef("IndexedDB")}}
 
 `IDBTransacation`接口由[IndexedDB API](/zh-CN/docs/IndexedDB)提供，异步事务使用数据库中的事件对象属性。所有的读取和写入数据均在事务中完成。由{{domxref("IDBDatabase")}}发起事务，通过{{domxref("IDBTransaction")}} 来设置事务的模式（例如：是否只读`readonly`或读写`readwrite`），以及通过{{domxref("IDBObjectStore")}}来发起一个请求。同时你也可以使用它来中止事务。
@@ -77,7 +78,7 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 
 {{deprecated_header}}
 
-> **警告：** 这些常量将不再可用——它们在 Gecko 25 中被移除。 你应该直接使用字符串常量来作为替代。 ({{ bug(888598) }})
+> **警告：** 这些常量将不再可用——它们在 Gecko 25 中被移除。你应该直接使用字符串常量来作为替代。 ({{ bug(888598) }})
 
 Transactions 可使用以下三种模式中的一种：
 
@@ -85,7 +86,7 @@ Transactions 可使用以下三种模式中的一种：
 | -------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `READ_ONLY`      | "readonly"(0 in Chrome)      | 允许读取数据，不改变。                                                                                                                                                                                                                                                                |
 | `READ_WRITE`     | "readwrite"(1 in Chrome)     | 允许读取和写入现有数据存储，数据被改变。                                                                                                                                                                                                                                              |
-| `VERSION_CHANGE` | "versionchange"(2 in Chrome) | 允许执行任何操作，包括删除和创建对象存储和索引。 此模式是用于开始使用[IDBDatabase](/zh-CN/docs/IndexedDB/IDBDatabase) 的 [`setVersion()`](/en-US/docs/IndexedDB/IDBDatabase#setVersion)方法更新版本号事务。 这种模式的事务无法与其它事务并发运行。 这种模式下的事务被称为“升级事务”。 |
+| `VERSION_CHANGE` | "versionchange"(2 in Chrome) | 允许执行任何操作，包括删除和创建对象存储和索引。此模式是用于开始使用[IDBDatabase](/zh-CN/docs/IndexedDB/IDBDatabase) 的 [`setVersion()`](/zh-CN/docs/IndexedDB/IDBDatabase#setVersion)方法更新版本号事务。这种模式的事务无法与其它事务并发运行。这种模式下的事务被称为“升级事务”。 |
 
 即使目前这些常量已经被废弃，但如果你需要使用它，则需要提供向下兼容方案 (in Chrome [the change was made in version 21](http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/))。你应当防止出现对象不存在的情况：
 
@@ -147,7 +148,7 @@ function addData() {
 
 ## Browser compatibility
 
-{{Compat("api.IDBTransaction")}}
+{{Compat}}
 
 ## See also
 

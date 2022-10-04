@@ -1,12 +1,8 @@
 ---
 title: JavaScriptのコードのよくある問題を解決する
 slug: Learn/JavaScript/Howto
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-translation_of: Learn/JavaScript/Howto
 ---
+
 {{LearnSidebar}}
 
 JavaScript のコードが正しく動作しないので修正したい、というような場合にみられる、よくある問題の解決方法へのリンクを以下に示します。

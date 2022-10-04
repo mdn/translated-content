@@ -3,6 +3,7 @@ title: SpeechSynthesisUtterance
 slug: Web/API/SpeechSynthesisUtterance
 translation_of: Web/API/SpeechSynthesisUtterance
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 L'interface **`SpeechSynthesisUtterance`** de l'[API Web Speech](/fr/docs/Web/API/Web_Speech_API) représente une requète de synthèse vocale. Elle contient le contenu du service permettant de définir la façon dont elle sera lu (langue, hauteur et volume).
@@ -93,13 +94,11 @@ inputForm.onsubmit = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Speech API', '#utterance-attributes', 'SpeechSynthesisUtterance')}} | {{Spec2('Web Speech API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SpeechSynthesisUtterance")}}
+{{Compat}}
 
 ## Voir aussi
 

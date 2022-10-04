@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.transform()
 slug: Web/API/CanvasRenderingContext2D/transform
 translation_of: Web/API/CanvasRenderingContext2D/transform
 ---
+
 {{APIRef}}
 
 La méthode **CanvasRenderingContext2D.transform ()** de l'API Canvas 2D multiplie la matrice de transformation courante par la matrice décrite par les arguments de cette méthode. Vous pouvez mettre à l'échelle, faire pivoter, déplacer et incliner le contexte.

@@ -18,7 +18,9 @@ translation_of: Web/API/URL/revokeObjectURL
 
 ## 구문
 
-    URL.revokeObjectURL(objectURL)
+```js
+URL.revokeObjectURL(objectURL)
+```
 
 ### 매개변수
 
@@ -39,5 +41,5 @@ translation_of: Web/API/URL/revokeObjectURL
 
 ## 같이 보기
 
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications "Using files from web applications")
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
 - {{domxref("URL.createObjectURL()")}}

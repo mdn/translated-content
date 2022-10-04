@@ -6,9 +6,10 @@ original_slug: Plantillas_en_Firefox_3
 l10n:
   sourceCommit: 2aaa075dd310f0de930bab617bb6fe1033970da3
 ---
+
 {{FirefoxSidebar}}
 
-Las plantillas se han mejorado enormemente en Firefox 3. La mejora más importante permite el uso de [procesador de consultas personalizado](/es/How_to_implement_a_custom_XUL_query_processor_component) para manejar otro tipo de fuentes de datos además de RDF. Esto es posible gracias a la nueva sintaxis de consultas. También se incluyen soporte para SQL ([mozStorage](/es/docs/Storage)) y fuentes de datos XML. Ya {{ interwiki('wikimo', 'XUL:Template_Features_in_1.9', 'está disponible') }} una descripción completa de las nuevas características para plantillas. ({{ Bug(285631) }})
+Las plantillas se han mejorado enormemente en Firefox 3. La mejora más importante permite el uso de [procesador de consultas personalizado](/es/How_to_implement_a_custom_XUL_query_processor_component) para manejar otro tipo de fuentes de datos además de RDF. Esto es posible gracias a la nueva sintaxis de consultas. También se incluyen soporte para SQL ([mozStorage](/es/docs/Storage)) y fuentes de datos XML. Ya [está disponible](https://wiki.mozilla.org/XUL:Template_Features_in_1.9) una descripción completa de las nuevas características para plantillas. ({{ Bug(285631) }})
 
 ### Otras mejoras
 
@@ -20,4 +21,3 @@ Las plantillas se han mejorado enormemente en Firefox 3. La mejora más importan
 ### Véase también
 
 - [Firefox 3 para desarrolladores](/es/docs/Mozilla/Firefox/Releases/3)
-

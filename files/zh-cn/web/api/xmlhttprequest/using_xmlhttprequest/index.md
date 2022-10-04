@@ -2,6 +2,7 @@
 title: 使用 XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 在该教程中，我们将使用{{domxref("XMLHttpRequest")}} 来发送 [HTTP](/zh-CN/docs/Web/HTTP) 请求以实现网站和服务器之间的数据交换。`XMLHttpRequest`常见和晦涩的使用情况都将包含在例子中。
@@ -50,7 +51,7 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 
 1. 使用 `XMLHttpRequest.responseXML` 属性。
 2. 将内容通过 `fragment.body.innerHTML` 注入到一个 [文档片段](/zh-CN/docs/Web/API/DocumentFragment) 中，并遍历 DOM 中的片段。
-3. 如果你预先知道 HTML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 RegExp 扫描时受到换行符的影响，你也许想要删除所有的换行符。 然而，这种方法是"最后手段"，因为如果 HTML 代码发生轻微变化，该方法将可能失败。
+3. 如果你预先知道 HTML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 RegExp 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 HTML 代码发生轻微变化，该方法将可能失败。
 
 ## 处理二进制数据
 
@@ -72,7 +73,7 @@ oReq.overrideMimeType("text/plain; charset=x-user-defined");
 var oReq = new XMLHttpRequest();
 
 oReq.onload = function(e) {
-  var arraybuffer = oReq.response; // 不是 responseText ！
+  var arraybuffer = oReq.response; // 不是 responseText！
   /* ... */
 }
 oReq.open("GET", url);
@@ -84,7 +85,7 @@ oReq.send();
 
 ## 监测进度
 
-`XMLHttpRequest` 提供了各种在请求被处理期间发生的事件以供监听。这包括定期进度通知、 错误通知，等等。
+`XMLHttpRequest` 提供了各种在请求被处理期间发生的事件以供监听。这包括定期进度通知、错误通知，等等。
 
 支持 DOM 的 progress 事件监测之于 `XMLHttpRequest` 传输，遵循 Web API [进度事件规范](http://dev.w3.org/2006/webapi/progress/Progress.html)：这些事件实现了 {{domxref("ProgressEvent")}} 接口。
 
@@ -717,7 +718,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 
 ## 跨站的 XMLHttpRequest
 
-现代浏览器可以通过执行 WebApps 工作小组通过的 [Access Control for Cross-Site Requests](/zh-CN/docs/Web/HTTP/Access_control_CORS) 标注来支持跨站请求。只要服务器端的配置允许您从您的 Web 应用发送请求，就可以使用 `XMLHttpRequest` 。 否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
+现代浏览器可以通过执行 WebApps 工作小组通过的 [Access Control for Cross-Site Requests](/zh-CN/docs/Web/HTTP/Access_control_CORS) 标注来支持跨站请求。只要服务器端的配置允许您从您的 Web 应用发送请求，就可以使用 `XMLHttpRequest` 。否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
 
 ## 绕过缓存
 
@@ -760,7 +761,7 @@ oReq.send(null);
 
 ### XMLHttpRequests 被停止
 
-如果你的 XMLHttpRequest 收到 `status=0` 和 `statusText=null` 的返回，这意味着请求无法执行。 就是[无法发送](http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). 一个可能导致的原因是当 [`XMLHttpRequest` origin](http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (创建的 XMLHttpRequest) 改变时，XMLHttpRequest 执行 `open()`.。这种情况是可能发生的，举个例子，我们在一个窗口的`onunload`事件中关闭 XMLHttpRequest，但实际上在即将关闭窗口时，之前创建的 XMLHttpRequest 仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是`open()`）。最有效的避免这个问题的方法是为新窗口的{{event("activate")}}事件设置一个监听器，一旦窗口关闭，它的{{event("unload")}}事件便触发。
+如果你的 XMLHttpRequest 收到 `status=0` 和 `statusText=null` 的返回，这意味着请求无法执行。就是[无法发送](http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). 一个可能导致的原因是当 [`XMLHttpRequest` origin](http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (创建的 XMLHttpRequest) 改变时，XMLHttpRequest 执行 `open()`.。这种情况是可能发生的，举个例子，我们在一个窗口的`onunload`事件中关闭 XMLHttpRequest，但实际上在即将关闭窗口时，之前创建的 XMLHttpRequest 仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是`open()`）。最有效的避免这个问题的方法是为新窗口的{{event("activate")}}事件设置一个监听器，一旦窗口关闭，它的{{event("unload")}}事件便触发。
 
 ## Worker
 
@@ -772,7 +773,7 @@ oReq.send(null);
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## 参考资料
 

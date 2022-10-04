@@ -12,6 +12,7 @@ tags:
   - textarea
 translation_of: Web/HTML/Attributes/minlength
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`minlength`** définit le nombre minimal de caractères (sous forme d'unités de code UTF-16) que l'utilisateur peut saisir dans un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) ou [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea). Il doit s'agir d'une valeur entière égale ou supérieure à 0. Si aucune longueur minimale n'est spécifiée, ou si une valeur invalide est spécifiée, l'entrée n'a pas de longueur minimale. Cette valeur doit être inférieure ou égale à la valeur de [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength), sinon la valeur ne sera jamais valide, car il est impossible de satisfaire aux deux critères.
@@ -45,14 +46,11 @@ input:invalid:focus {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-minlength', 'l\'attribut minlength')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-minlength-accept', 'l\'attribut minlength')}}     | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.minlength")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,8 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Primary Expressions
-  - リファレンス
-  - this
-browser-compat: javascript.operators.this
-translation_of: Web/JavaScript/Reference/Operators/this
 ---
+
 {{jsSidebar("Operators")}}
 
 **関数の `this` キーワード** は、JavaScript ではほかの言語と少々異なる動作をします。また、[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)であるかどうかでも違いがあります。
@@ -47,7 +39,7 @@ console.log(window.b)  // "MDN"
 console.log(b)         // "MDN"
 ```
 
-> **Note:** コードが実行されている現在のコンテキストに関係なく、グローバルの {{jsxref("globalThis")}} プロパティを使用していつでも簡単にグローバルオブジェクトを取得できます。
+> **メモ:** コードが実行されている現在のコンテキストに関係なく、グローバルの {{jsxref("globalThis")}} プロパティを使用していつでも簡単にグローバルオブジェクトを取得できます。
 
 ### 関数コンテキスト
 
@@ -78,7 +70,7 @@ function f2() {
 f2() === undefined; // true
 ```
 
-> **Note:** 二番目の例において、`this` が {{jsxref("undefined")}} となるのは `f2` が直接呼び出されており、オブジェクトのメソッドやプロパティ (例えば `window.f2()`) ではないためです。この機能は初めて [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)への対応が始まったとき、一部のブラウザーが実装していませんでした。結果的に、これらのブラウザーは不正確に `window` オブジェクトを返していました。
+> **メモ:** 二番目の例において、`this` が {{jsxref("undefined")}} となるのは `f2` が直接呼び出されており、オブジェクトのメソッドやプロパティ (例えば `window.f2()`) ではないためです。この機能は初めて [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)への対応が始まったとき、一部のブラウザーが実装していませんでした。結果的に、これらのブラウザーは不正確に `window` オブジェクトを返していました。
 
 関数の呼び出し時に `this` の値を特定の値に設定するには、以下の例のように {{jsxref("Function.prototype.call()", "call()")}} または {{jsxref("Function.prototype.apply()", "apply()")}} を使用します。
 
@@ -102,7 +94,7 @@ class Example {
 new Example(); // ['constructor', 'first', 'second']
 ```
 
-> **Note:** 静的メソッドは `this` のプロパティではありません。クラス自身のプロパティです。
+> **メモ:** 静的メソッドは `this` のプロパティではありません。クラス自身のプロパティです。
 
 ### 派生クラス
 
@@ -112,7 +104,7 @@ new Example(); // ['constructor', 'first', 'second']
 this = new Base();
 ```
 
-> **Warning:** `this` を `super()` の呼び出しの前に参照すると、エラーが発生します。
+> **警告:** `this` を `super()` の呼び出しの前に参照すると、エラーが発生します。
 
 派生クラスはでは `super()` を呼び出す前に return をしてはいけません。ただし、 `Object` を返す場合やコンストラクターがない場合を除きます。
 
@@ -214,7 +206,7 @@ var foo = (() => this);
 console.log(foo() === globalObject); // true
 ```
 
-> **Note:** アロー関数の呼び出し時に `this` 引数が `call`, `bind`, `apply` に渡されても無視されます。呼び出しに引数を加えることはできますが、最初の引数 (`thisArg`) は `null` を設定してください。
+> **メモ:** アロー関数の呼び出し時に `this` 引数が `call`, `bind`, `apply` に渡されても無視されます。呼び出しに引数を加えることはできますが、最初の引数 (`thisArg`) は `null` を設定してください。
 
 ```js
 // オブジェクトのメソッドとして呼び出す。
@@ -345,7 +337,7 @@ console.log(o.average, o.sum); // 2, 6
 
 関数がコンストラクターとして ({{jsxref("Operators/new", "new")}} キーワードとともに) 使用されたとき、その `this` は生成された新しいオブジェクトに関連付けられます。
 
-> **Note:** コンストラクターの既定では、`this` で参照されるオブジェクトを返しますが、代わりにほかのオブジェクトを返すことができます (返値がオブジェクトではない場合、`this` オブジェクトが返されます)。
+> **メモ:** コンストラクターの既定では、`this` で参照されるオブジェクトを返しますが、代わりにほかのオブジェクトを返すことができます (返値がオブジェクトではない場合、`this` オブジェクトが返されます)。
 
 ```js
 /*
@@ -468,7 +460,7 @@ bird.sayBye = car.sayBye;
 bird.sayBye();  // Bye from Ferrari
 ```
 
-> **Note:** クラスは常に strict モードのコードです。これを定義せずに `this` でメソッドを呼び出すとエラーが発生します。
+> **メモ:** クラスは常に strict モードのコードです。これを定義せずに `this` でメソッドを呼び出すとエラーが発生します。
 
 ## 仕様書
 

@@ -1,14 +1,8 @@
 ---
 title: Boolean() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
-tags:
-  - Boolean
-  - コンストラクター
-  - JavaScript
-  - リファレンス
-browser-compat: javascript.builtins.Boolean.Boolean
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 ---
+
 {{JSRef}}
 
 **`Boolean()`** コンストラクターは {{jsxref("Boolean")}} オブジェクトを生成するために使用します。

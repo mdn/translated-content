@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Flexbox
 translation_of: Learn/CSS/CSS_layout/Flexbox
 original_slug: Apprendre/CSS/CSS_layout/Flexbox
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
 [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) est une méthode de mise en page selon un axe principal, permettant de disposer des éléments en ligne ou en colonne. Les éléments se dilatent ou se rétractent pour occuper l'espace disponible. Cet article en explique tous les fondamentaux.

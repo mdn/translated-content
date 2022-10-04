@@ -1,16 +1,8 @@
 ---
 title: 'HTMLMediaElement: emptied イベント'
 slug: Web/API/HTMLMediaElement/emptied_event
-page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
-browser-compat: api.HTMLMediaElement.emptied_event
-translation_of: Web/API/HTMLMediaElement/emptied_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `emptied` イベントは、メディアが空になると発生します。 例えば、このイベントは、メディアがすでに読み込まれている（または部分的に読み込まれている）状態で、それを再読み込みするために `load()` メソッドを呼び出した場合に送信されます。

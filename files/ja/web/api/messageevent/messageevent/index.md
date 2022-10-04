@@ -1,16 +1,8 @@
 ---
 title: MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
-tags:
-  - API
-  - コンストラクター
-  - DOM
-  - MessageEvent
-  - リファレンス
-  - messaging
-browser-compat: api.MessageEvent.MessageEvent
-translation_of: Web/API/MessageEvent/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`MessageEvent()`** コンストラクターは新しい {{domxref("MessageEvent")}} オブジェクトのインスタンスを作成します。

@@ -97,9 +97,9 @@ Vamos a echarle un vistzo a nuestras dos cajas de nuevo, una con el modo escritu
 
 Lo que nosotros realmente queremos en este escenario, es esencialmente intercambiar altura y anchura junto con el modo de escritura. Cuando estamos en el modo de escritura vertical, queremos que la caja se expanda en la dimensión del bloque así como lo hace en el modo horizontal.
 
-Para hacerlo más fácil, CSS ha desarrollado recientemente un conjunto de propiedades asignadas. Estas esencialmente reemplazan las propiedades físicas como `width `and `height`, con versiones **lógicas** o **relativas al flujo**.
+Para hacerlo más fácil, CSS ha desarrollado recientemente un conjunto de propiedades asignadas. Estas esencialmente reemplazan las propiedades físicas como `width` and `height`, con versiones **lógicas** o **relativas al flujo**.
 
-La propiedad asignada a `width` cuando está en el modo de escritura horizontal se llama {{cssxref("inline-size")}}, se refiere al tamaño en la dimensión inline. La propiedad para `height `se llama {{cssxref("block-size")}} y es el tamaño en la dimensión de bloque. Puedes ver como funciona en el ejemplo de abajo, donde reemplazamos `width` con `inline-size`.
+La propiedad asignada a `width` cuando está en el modo de escritura horizontal se llama {{cssxref("inline-size")}}, se refiere al tamaño en la dimensión inline. La propiedad para `height` se llama {{cssxref("block-size")}} y es el tamaño en la dimensión de bloque. Puedes ver como funciona en el ejemplo de abajo, donde reemplazamos `width` con `inline-size`.
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 1200)}}
 
@@ -153,21 +153,21 @@ En el módulo siguiente, vamos a echar un buen vistazo al desbordamiento en CSS
 
 ## En este módulo
 
-1.  [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Selectores de tipo, clase e ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Selectores de atributo](/es/docs/Web/CSS/Attribute_selectors)
     - [Pseudoclases y pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinadores](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/es/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/es/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/es/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)

@@ -1,16 +1,9 @@
 ---
 title: invert()
 slug: Web/CSS/filter-function/invert
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/invert()
 original_slug: Web/CSS/filter-function/invert()
-browser-compat: css.types.filter-function.invert
 ---
+
 {{CSSRef}}
 
 **`invert()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像の色サンプルを反転します。結果は {{cssxref("&lt;filter-function&gt;")}} です。

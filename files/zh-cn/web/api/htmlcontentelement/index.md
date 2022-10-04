@@ -2,6 +2,7 @@
 title: HTMLContentElement
 slug: Web/API/HTMLContentElement
 ---
+
 {{ APIRef("Web Components") }}
 
 {{Deprecated_header}}
@@ -28,7 +29,7 @@ _此接口继承 {{domxref("HTMLElement")}} 接口的方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLContentElement")}}
+{{Compat}}
 
 ## 参见
 

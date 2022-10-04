@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/padding-block
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`padding-block`** définit l'espace de remplissage (_padding_) pour le début et la fin de l'axe de bloc de l'élément. Cette propriété logique peut correspondre à différentes propriétés physiques selon le mode d'écriture de l'élément, sa direction et l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("padding-top")}} et  {{cssxref("padding-bottom")}} ou à {{cssxref("padding-right")}} et {{cssxref("padding-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
@@ -38,9 +39,13 @@ Ces valeurs peuvent être définies individuellement grâce aux propriétés dé
 
 La propriété `padding-block` peut prendre les mêmes valeurs que la propriété {{cssxref("padding-left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -74,15 +79,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-padding-block", "padding-block")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.padding-block")}}
+{{Compat}}
 
 ## Voir aussi
 

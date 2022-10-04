@@ -1,17 +1,8 @@
 ---
 title: scroll-snap-type-x
 slug: Web/CSS/scroll-snap-type-x
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スクロールスナップ
-  - NeedsExample
-  - Non-standard
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.scroll-snap-type-x
-translation_of: Web/CSS/scroll-snap-type-x
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`scroll-snap-type-x`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールコンテナーの水平軸にスナップ点がある場合に、どの程度厳密に実行されるかを定義します。

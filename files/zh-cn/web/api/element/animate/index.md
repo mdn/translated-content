@@ -2,6 +2,7 @@
 title: Element.animate()
 slug: Web/API/Element/animate
 ---
+
 {{APIRef('Web Animations')}} {{SeeCompatTable}}
 
 {{domxref("Element")}} 接口的**`animate()`** 方法是一个创建新{{domxref("Animation")}}的便捷方法，将它应用于元素，然后运行动画。它将返回一个新建的 {{domxref("Animation")}} 对象实例
@@ -33,17 +34,17 @@ var animation = element.animate(keyframes, options);
 
 - `composite {{optional_inline}} 合成`
 
-  - : 决定动画彼此之间的值如何结合起来，单独的动画不指定自己的特定复合操作。 默认为 `replace`.
+  - : 决定动画彼此之间的值如何结合起来，单独的动画不指定自己的特定复合操作。默认为 `replace`.
 
-    - `add` 表示追加影响，每一次连续的迭代建立在前一个的基础上。 比如`transform`, `translateX(-200px)` 将不会覆盖 `rotate(20deg)` 的值，最终结果是 `translateX(-200px) rotate(20deg)`
+    - `add` 表示追加影响，每一次连续的迭代建立在前一个的基础上。比如`transform`, `translateX(-200px)` 将不会覆盖 `rotate(20deg)` 的值，最终结果是 `translateX(-200px) rotate(20deg)`
     - `accumulate` 效果类似但是更智能一些：`blur(2)` 和`blur(5)` 的结果为`blur(7)`, 而不是 `blur(2) blur(5)`
     - `replace` 新的值将会覆盖掉旧的
 
 - `iterationComposite {{optional_inline}} 迭代合成`
-  - : 决定动画迭代之间的值如何结合起来， 可以被设置为 `accumulate` 或者 `replace` （同上）。默认值为 `replace`.
+  - : 决定动画迭代之间的值如何结合起来，可以被设置为 `accumulate` 或者 `replace` （同上）。默认值为 `replace`.
 - `spacing {{optional_inline}}`
 
-  - : 决定在动画持续时间内如何分配没有时间偏移的关键帧. 默认值为`distribute`.
+  - : 决定在动画持续时间内如何分配没有时间偏移的关键帧。默认值为`distribute`.
 
     - `distribute` 分配的关键帧位置，使连续关键帧之间的距离相等。也就是说，没有任何偏移时，将会使关键帧均匀分到整个运行时间内
     - `paced` 分配的关键帧位置，使连续关键帧之间的距离让某个步增的属性值的增长速度相同，也就是说，属性值差异越大，关键帧之间的距离越远
@@ -56,7 +57,7 @@ var animation = element.animate(keyframes, options);
 
 ## 示例
 
-在示例 [Down the Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010) 中， 我们用 `animate()` 来快速创建并运行使 `#tunnel` 元素无限循环缓慢升起的动画。注意关键帧的对象数组和时间可选项
+在示例 [Down the Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010) 中，我们用 `animate()` 来快速创建并运行使 `#tunnel` 元素无限循环缓慢升起的动画。注意关键帧的对象数组和时间可选项
 
 ```js
 document.getElementById("tunnel").animate([
@@ -76,7 +77,7 @@ document.getElementById("tunnel").animate([
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.animate")}}
+{{Compat}}
 
 ## 更多
 

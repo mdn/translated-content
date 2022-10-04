@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty
 ---
+
 {{JSRef}}
 
 La méthode **`hasOwnProperty()`** retourne un booléen indiquant si l'objet possède la propriété spécifiée "en propre", sans que celle-ci provienne de la chaîne de prototypes de l'objet.

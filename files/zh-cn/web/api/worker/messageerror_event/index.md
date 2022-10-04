@@ -2,6 +2,7 @@
 title: 'Worker: messageerror event'
 slug: Web/API/Worker/messageerror_event
 ---
+
 {{APIRef}}
 
 当 {{domxref('Worker')}} 对象接收到一条无法被反序列化的消息时， `messageerror` 事件将在该对象上被触发。
@@ -24,7 +25,7 @@ slug: Web/API/Worker/messageerror_event
       <th scope="row">对应事件处理属性</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/Worker/onmessageerror"
+          ><a href="/zh-CN/docs/Web/API/Worker/onmessageerror"
             >onmessageerror</a
           ></code
         >
@@ -35,7 +36,7 @@ slug: Web/API/Worker/messageerror_event
 
 ## 例子
 
-创建一个 worker ，使用 [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 监听 `message` 和 `messageerror` 事件：
+创建一个 worker，使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 监听 `message` 和 `messageerror` 事件：
 
 ```js
 // inside main.js
@@ -73,9 +74,9 @@ worker.onmessageerror = (event) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Worker.messageerror_event")}}
+{{Compat}}
 
 ## 另请参阅
 
-- [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
+- [`Worker.postMessage()`](/zh-CN/docs/Web/API/Worker/postMessage)
 - 相关事件：[`message`](/zh-CN/docs/Web/API/Worker/message_event).

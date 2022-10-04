@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/pre
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<pre>`** représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.
@@ -127,15 +128,11 @@ Pour légender un tel diagramme, on pourra utiliser une combinaison d'éléments
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires                                                         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-pre-element', '&lt;pre&gt;')}}         | {{Spec2('HTML WHATWG')}} | Aucune modification majure depuis {{SpecName("HTML5 W3C")}}   |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}} | {{Spec2('HTML5 W3C')}}     | Aucune modification majeure depuis {{SpecName("HTML4.01")}}. |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;pre&gt;')}}                     | {{Spec2('HTML4.01')}}     | Dépréciation de l'attribut  `cols`.                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.pre")}}
+{{Compat}}
 
 ## Voir aussi
 

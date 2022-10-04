@@ -1,16 +1,8 @@
 ---
 title: メディアクエリーの使用
 slug: Web/CSS/Media_Queries/Using_media_queries
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - ウェブ
-  - メディア
-  - メディアクエリー
-  - レスポンシブデザイン
-translation_of: Web/CSS/Media_Queries/Using_media_queries
 ---
+
 {{CSSRef}}
 
 **メディアクエリー**は、一般的な端末の種類 (プリンタと画面など)や特定の特性 (画面の解像度やブラウザーの{{glossary("viewport", "ビューポート")}}の幅など) に応じてサイトやアプリを変更したいときに便利です。
@@ -21,7 +13,7 @@ translation_of: Web/CSS/Media_Queries/Using_media_queries
 - {{HTMLElement("link")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, などの [HTML](/ja/docs/Web/HTML) 要素で `media=` 属性を付けて特定のメディアを対象とする。
 - [メディアの状態の検査と監視](/ja/docs/Web/CSS/Media_Queries/Testing_media_queries)をするために、[JavaScript](/ja/docs/Web/JavaScript) で {{domxref("Window.matchMedia()")}} および {{domxref("MediaQueryList.addListener()")}} メソッドを使用する
 
-> **Note:** このページの例では説明のために CSS の `@media` を使用していますが、基本構文はすべての種類のメディアクエリーで共通です。
+> **メモ:** このページの例では説明のために CSS の `@media` を使用していますが、基本構文はすべての種類のメディアクエリーで共通です。
 
 ## 構文
 
@@ -42,7 +34,7 @@ translation_of: Web/CSS/Media_Queries/Using_media_queries
 メディア種別（指定されている場合）が文書を表示する端末と照合され、かつ、すべてのメディア機能式が `true` と計算されると、メディアクエリーは true と計算されます。
 未知のメディア種別を含むクエリは常に false となります。
 
-> **Note:** {{HTMLElement("link")}} タグにメディアクエリーがついていた場合、スタイルシートはクエリーが `false` を返したとしても[ダウンロードされます](https://scottjehl.github.io/CSS-Download-Tests/)が、ダウンロードの優先度ははるかに低くなります。
+> **メモ:** {{HTMLElement("link")}} タグにメディアクエリーがついていた場合、スタイルシートはクエリーが `false` を返したとしても[ダウンロードされます](https://scottjehl.github.io/CSS-Download-Tests/)が、ダウンロードの優先度ははるかに低くなります。
 > ただし、その内容は、クエリーの結果が `true` にならない限り適用されません。
 > なぜこのようになるかは、 Tomayac 氏のブログ [Why Browser Download Stylesheet with Non-Matching Media Queries](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-queries-eb61b91b85a2) に書かれています。
 
@@ -100,7 +92,7 @@ translation_of: Web/CSS/Media_Queries/Using_media_queries
 `and` 演算子は、複数のメディア特性を 1 つのメディアクエリーに結合することもできます。一方で `not` 演算子は、メディアクエリーを反転し、基本的に普通の意味とは逆になります。
 `only` 演算子は古いブラウザーでスタイルが適用されるのを防止します。
 
-> **Note:** 多くの場合、 `all` メディア種別が他のタイプが指定されない場合に既定で使用されます。
+> **メモ:** 多くの場合、 `all` メディア種別が他のタイプが指定されない場合に既定で使用されます。
 しかし、 `not` または `only` 演算子を使用する場合は、メディア種別を明示的に指定する必要があります。
 
 ### 複数の種別または特性の組み合わせ
@@ -174,7 +166,7 @@ translation_of: Web/CSS/Media_Queries/Using_media_queries
 Media Queries Level 4 仕様書では、例えば幅や高さについて、よりすっきりとした "range" 型を持つ特性を使ってメディアクエリーを作れるよう構文が拡張されました。
 Level 4 はこのようなクエリーを書くために*範囲コンテキスト*を追加しています。例えば、幅について `max-` の特性を使用する場合は、以下のように書くことができます。
 
-> **Note:** Media Queries Level 4 仕様は、最新のブラウザーはそれなりに対応していますが、一部のメディア機能には十分に対応していません。詳細は [`@media` ブラウザー互換性一覧表](/ja/docs/Web/CSS/@media#ブラウザーの互換性)を参照してください。
+> **メモ:** Media Queries Level 4 仕様は、最新のブラウザーはそれなりに対応していますが、一部のメディア機能には十分に対応していません。詳細は [`@media` ブラウザー互換性一覧表](/ja/docs/Web/CSS/@media#ブラウザーの互換性)を参照してください。
 
 ```css
 @media (max-width: 30em) { ... }

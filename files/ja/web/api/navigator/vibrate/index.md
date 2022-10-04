@@ -1,14 +1,8 @@
 ---
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
-tags:
-  - API
-  - Method
-  - Navigator
-  - Reference
-  - Vibration API
-translation_of: Web/API/Navigator/vibrate
 ---
+
 {{APIRef("Vibration API")}}
 
 **`Navigator.vibrate()`** メソッドは、端末のバイブレーションハードウェアがあればパルスを送ります。端末がバイブレーションに対応していない場合は、このメソッドは効果はありません。このメソッドが呼び出されたときに、すでにバイブレーションパターンが進行中であった場合は、前のパターンが停止され、代わりに新しいパターンが始まります。

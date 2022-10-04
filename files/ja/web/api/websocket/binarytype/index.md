@@ -1,15 +1,8 @@
 ---
 title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - Web API
-  - WebSocket
-browser-compat: api.WebSocket.binaryType
-translation_of: Web/API/WebSocket/binaryType
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket.binaryType`** プロパティは、この WebSocke 接続によって受信されているバイナリーデータの型を制御します。

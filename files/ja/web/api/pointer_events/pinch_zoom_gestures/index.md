@@ -1,12 +1,8 @@
 ---
 title: ピンチズームのジェスチャー
 slug: Web/API/Pointer_events/Pinch_zoom_gestures
-tags:
-  - ガイド
-  - PointerEvent
-  - タッチ
-translation_of: Web/API/Pointer_events/Pinch_zoom_gestures
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 アプリに*ジェスチャー*を追加すると、使い勝手が大幅に向上します。単純なシングルタッチの*スワイプ*ジェスチャーから、タッチポイント（別名*ポインター*）が異なる方向に移動する、より複雑なマルチタッチの*ツイスト*ジェスチャーまで、さまざまな種類のジェスチャーがあります。

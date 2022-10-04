@@ -1,22 +1,9 @@
 ---
 title: 'MediaStreamTrack: ended イベント'
 slug: Web/API/MediaStreamTrack/ended_event
-page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Media Streams API
-  - Reference
-  - Video
-  - Web Audio API
-  - ended
-browser-compat: api.MediaStreamTrack.ended_event
-translation_of: Web/API/MediaStreamTrack/ended_event
 original_slug: Web/API/MediaStreamTrack/onended
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 **`ended`** は {{domxref("MediaStreamTrack")}} インターフェイスのイベントで、メディアの終端に到達したため、あるいはそれ以上のデータが利用できないために再生やストリーミングが停止したときに発行さ れます。

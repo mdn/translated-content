@@ -1,11 +1,8 @@
 ---
 title: JavaScript の型付き配列
 slug: Web/JavaScript/Typed_arrays
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Typed_arrays
 ---
+
 {{JsSidebar("Advanced")}}
 
 **JavaScript の型付き配列**は配列状のオブジェクトであり、生のバイナリーデータにアクセスする手段を提供します。
@@ -146,7 +143,7 @@ const amountDueView = new Float32Array(buffer, 20, 1);
 
 例えば、合計金額には `amountDueView[0]` でアクセスできます。
 
-> **Note:** C 構造体における[データ構造の配置](http://ja.wikipedia.org/wiki/データ構造アライメント)は機種依存です。これらのデータ埋め込みの違いに注意および配慮してください。
+> **メモ:** C 構造体における[データ構造の配置](http://ja.wikipedia.org/wiki/データ構造アライメント)は機種依存です。これらのデータ埋め込みの違いに注意および配慮してください。
 
 ### 通常の配列への変換
 

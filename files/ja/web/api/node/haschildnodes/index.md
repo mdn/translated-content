@@ -1,13 +1,8 @@
 ---
 title: Node.hasChildNodes()
 slug: Web/API/Node/hasChildNodes
-tags:
-  - メソッド
-
-  - リファレンス
-browser-compat: api.Node.hasChildNodes
-translation_of: Web/API/Node/hasChildNodes
 ---
+
 {{APIRef("DOM")}}
 
 **`hasChildNodes()`** は {{domxref("Node")}} インターフェイスのメソッドで、この {{domxref("Node")}} に[子ノード](/ja/docs/Web/API/Node/childNodes)があるかどうかを示す論理値を返します。

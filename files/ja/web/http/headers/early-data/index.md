@@ -1,13 +1,8 @@
 ---
 title: Early-Data
 slug: Web/HTTP/Headers/Early-Data
-tags:
-  - HTTP
-  - クライアントヒント
-  - ヘッダー
-  - リクエスト
-translation_of: Web/HTTP/Headers/Early-Data
 ---
+
 {{SeeCompatTable}}{{HTTPSidebar}}
 
 **`Early-Data`** ヘッダーは中間者により設定され、リクエストが [TLS 早期データ](/ja/docs/Web/Security/Transport_Layer_Security#TLS_1.3)で伝えられたこと、そして中間者が {{HTTPStatus("425", "425 (Too Early)")}} ステータスコードを理解していることを示します。

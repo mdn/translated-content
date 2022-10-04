@@ -9,7 +9,9 @@ translation_of: Web/API/RTCDataChannelEvent/channel
 
 ## Syntax
 
-     var channel = RTCDataChannelEvent.channel;
+```js
+ var channel = RTCDataChannelEvent.channel;
+```
 
 ### 값
 

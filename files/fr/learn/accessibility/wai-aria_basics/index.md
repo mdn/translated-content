@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/Accessibility/WAI-ARIA_basics
 original_slug: Apprendre/a11y/WAI-ARIA_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
 
 Après l'article précédent, il peut être difficile de créer des contrôles UI complexes impliquant du code HTML non sémantique et du contenu dynamique mis à jour par JavaScript. WAI-ARIA est une technologie qui peut aider à résoudre de tels problèmes en ajoutant une sémantique supplémentaire que les navigateurs et les technologies d'assistance peuvent reconnaître et utiliser pour informer les utilisateurs de ce qui se passe. Nous montrerons ici comment l'utiliser au niveau de base pour améliorer l'accessibilité.
@@ -401,7 +402,7 @@ In our tests, this new structure did serve to improve things overall. The tabs a
 
 This article has by no means covered all that's available in WAI-ARIA, but it should have given you enough information to understand how to use it, and know some of the most common patterns you will encounter that require it.
 
-## See also
+## Voir aussi
 
 - [Definition of Roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) — ARIA roles reference.
 - [Definitions of States and Properties (all aria-\* attributes)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) — properties and states reference.

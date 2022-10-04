@@ -67,4 +67,3 @@ se puede usar el elemento {{HTMLElement("dialog")}} para mostrar alertas.
 - Elemento {{HTMLElement("dialog")}}
 - {{domxref("window.confirm","confirm")}}
 - {{domxref("window.prompt","prompt")}}
-

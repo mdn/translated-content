@@ -1,15 +1,8 @@
 ---
 title: チャンネルメッセージングの使用
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
-tags:
-  - API
-  - チャンネルメッセージング
-  - HTML5
-  - MessageChannel
-  - MessagePort
-  - チュートリアル
-translation_of: Web/API/Channel_Messaging_API/Using_channel_messaging
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 [チャンネルメッセージング API](/ja/docs/Web/API/Channel_Messaging_API) (Channel Messaging API) を使用すると、同じ文書に添付された異なる閲覧コンテキストで実行される 2 つの別々のスクリプト（2 つの IFrame、メイン文書と IFrame、{{domxref("SharedWorker")}} を介した 2 つの文書など）で直接通信し、両端にポートを持つ双方向チャンネル（またはパイプ）を介して相互にメッセージをやり取りすることができます。
@@ -24,7 +17,7 @@ translation_of: Web/API/Channel_Messaging_API/Using_channel_messaging
 
 一方、メッセージチャンネルは、異なる閲覧コンテキスト間でデータを受け渡すことを可能にする安全なチャンネルを提供することができます。
 
-> **Note:** 詳細情報とアイデアについては、仕様の[ウェブ上のオブジェクト機能モデルの基礎としてのポート](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web)（英語）のセクションが役に立つでしょう。
+> **メモ:** 詳細情報とアイデアについては、仕様の[ウェブ上のオブジェクト機能モデルの基礎としてのポート](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web)（英語）のセクションが役に立つでしょう。
 
 ## 簡単な例
 

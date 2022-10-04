@@ -1,23 +1,15 @@
 ---
 title: DataTransfer.files
 slug: Web/API/DataTransfer/files
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.files
-translation_of: Web/API/DataTransfer/files
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`files`** は [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトのプロパティで、ドラッグ操作中の{{domxref("FileList", "ファイルのリスト", "", 1)}}です。操作にファイルが含まれていない場合、リストは空になります。
 
 この機能を利用して、ユーザーのデスクトップからブラウザーにファイルをドラッグすることができます。
 
-> **Note:** [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトの `files` プロパティは、 `drop` イベントの中からのみアクセスできます。それ以外のどのイベントでも、 `files` プロパティは空になります。その基礎となるデータストアが[保護モード](<https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store>)になるからです。
+> **メモ:** [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトの `files` プロパティは、 `drop` イベントの中からのみアクセスできます。それ以外のどのイベントでも、 `files` プロパティは空になります。その基礎となるデータストアが[保護モード](<https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store>)になるからです。
 
 ## 返値
 

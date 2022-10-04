@@ -1,15 +1,8 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-tags:
-  - Class
-  - Internationalization
-  - Intl
-  - JavaScript
-  - NumberFormat
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
+
 {{JSRef}}
 
 **`Intl.NumberFormat`** オブジェクトは、言語に依存した数値書式を可能にするオブジェクトのコンストラクターです。

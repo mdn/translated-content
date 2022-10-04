@@ -1,18 +1,8 @@
 ---
 title: TrackEvent()
 slug: Web/API/TrackEvent/TrackEvent
-tags:
-  - API
-  - Audio
-  - Constructor
-  - HTML DOM
-  - Media
-  - Reference
-  - TrackEvent
-  - Tracks
-  - Video
-translation_of: Web/API/TrackEvent/TrackEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 `TrackEvent()` コンストラクタは、トラックのリスト（{{domxref("AudioTrackList")}}、{{domxref("VideoTrackList")}}、または {{domxref("TextTrackList")}}）で発生したイベントを記述する新しい {{domxref("TrackEvent")}} オブジェクトを作成して返します。

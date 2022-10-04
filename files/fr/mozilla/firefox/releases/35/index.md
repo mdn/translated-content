@@ -8,6 +8,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/35
 original_slug: Mozilla/Firefox/Versions/35
 ---
+
 1. Notes de versions pour développeurs
 
     1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)

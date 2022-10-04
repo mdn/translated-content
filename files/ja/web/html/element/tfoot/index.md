@@ -1,14 +1,6 @@
 ---
 title: '<tfoot>: 表フッター要素'
 slug: Web/HTML/Element/tfoot
-tags:
-  - Element
-  - HTML
-  - HTML 表形式データ
-  - リファレンス
-  - 表
-  - ウェブ
-translation_of: Web/HTML/Element/tfoot
 ---
 
 {{HTMLRef}}
@@ -103,7 +95,7 @@ translation_of: Web/HTML/Element/tfoot
     - `middle`: テキストをセル内の中央に置きます。
     - `top`: テキストを可能な限りセルの上端に近づけて配置します。
 
-    > **Note:** この属性は最新の標準仕様で廃止された（対応していない）ため、使用しないでください。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
+    > **メモ:** この属性は最新の標準仕様で廃止された（対応していない）ため、使用しないでください。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
 
 ## 例
 

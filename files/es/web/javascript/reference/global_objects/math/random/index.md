@@ -48,7 +48,7 @@ function getRandomArbitrary(min, max) {
 
 ### Obtener un número entero entre dos valores determinados
 
-Este ejemplo devuelve un número aleatorio situado entre los valores especificados. El valor devuelto no será más bajo que `min` (o el siguiente entero más alto, en caso de que _min_ no sea un número entero), y será menor (pero no igual) que `max` . 
+Este ejemplo devuelve un número aleatorio situado entre los valores especificados. El valor devuelto no será más bajo que `min` (o el siguiente entero más alto, en caso de que _min_ no sea un número entero), y será menor (pero no igual) que `max` .
 
 ```js
 // Notesé que también en este caso `min` será incluido y `max` excluido

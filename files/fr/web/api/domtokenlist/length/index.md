@@ -3,6 +3,7 @@ title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
 translation_of: Web/API/DOMTokenList/length
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`length`** (_longueur_) de l'interface {{domxref("DOMTokenList")}} est un `integer` (_entier_) représentant le nombre d'objets stockés dans la liste.

@@ -1,21 +1,14 @@
 ---
 title: aural
 slug: Web/CSS/@media/aural
-tags:
-  - CSS
-  - 非推奨
-  - リファレンス
-  - aural
-  - メディア特性
-  - speech
-translation_of: Web/CSS/@media/aural
 original_slug: Web/CSS/aural
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 `aural` は [CSS](/ja/docs/Web/CSS) の[メディア種別](/ja/docs/Web/CSS/@media#メディア種別)で、音声出力の能力を持った機器に使用されます。
 
-> **Note:** このメディア種別は [`speech`](/ja/docs/Web/CSS/@media#speech) に置き換えられ、非推奨になりました。
+> **メモ:** このメディア種別は [`speech`](/ja/docs/Web/CSS/@media#speech) に置き換えられ、非推奨になりました。
 
 ## 構文
 

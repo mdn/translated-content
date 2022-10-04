@@ -1,14 +1,8 @@
 ---
 title: Window.screen
 slug: Web/API/Window/screen
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - Property
-  - Window
-translation_of: Web/API/Window/screen
 ---
+
 {{APIRef("CSSOM")}}
 
 {{DOMxRef("Window")}} の **`screen`** プロパティは、ウィンドウに関連付けられた画面オブジェクトへの参照を返します。 `screen` オブジェクトは {{DOMxRef("Screen")}} インターフェースを実装しており、現在のウィンドウがレンダリングされている画面のプロパティを検査するための特別なオブジェクトです。

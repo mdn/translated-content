@@ -11,6 +11,7 @@ tags:
 translation_of: Glossary/Search_engine
 original_slug: Glossaire/Moteur_de_recherche
 ---
+
 Un moteur de recherche est un système logiciel qui collecte des informations à partir du {{Glossary("World Wide Web")}} et qui les présente aux utilisateurs qui recherchent des informations spécifiques.
 
 Un moteur de recherche dirige les processus suivants :
@@ -21,7 +22,7 @@ Un moteur de recherche dirige les processus suivants :
 
 Le moteur de recherche le plus populaire est Google. Parmi d'autres moteurs de recherche populaires figurent Yahoo!, Bing, Baidu et AOL.
 
-## Pour approfondir
+## Voir aussi
 
 - [Moteur de recherche](https://fr.wikipedia.org/wiki/Moteur_de_recherche) sur Wikipédia
 - [Moteur de recherche](http://www.webopedia.com/TERM/S/search_engine.html) sur Webopedia (en anglais)

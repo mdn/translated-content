@@ -9,6 +9,7 @@ tags:
   - postMessage
 translation_of: Web/API/Window/postMessage
 ---
+
 {{ ApiRef() }}
 
 La méthode **`window.postMessage`** permet une communication inter-domaine en toute sécurité. Normalement, les scripts de différentes pages sont autorisés à accéder les uns aux autres si et seulement si les pages depuis lesquelles ils sont exécutés ont des URL de même [origine](/fr/docs/Glossary/Origin), c'est-à-dire avec le même protocole (généralement `http` ou `https`), le même numéro de port (`80` étant le port par défaut pour  `http`), et le même nom d'hôte (à condition que [document.domain](/fr/docs/DOM/document.domain) soit initialisé à la même valeur par les deux pages). `window.postMessage` fournit un mécanisme contrôlé pour contourner cette restriction d'une manière sécurisée si bien utilisée.
@@ -146,14 +147,11 @@ Enfin, poster un message à une page à une URL `file:` requiert actuellement qu
 
 ## Spécifications
 
-| **Spécification**                                                                                                | **Status**                                   | **Comment**aire                                                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#dom-window-postmessage", "window.postMessage")}}             | {{Spec2('HTML WHATWG')}}             | Pas de changement depuis {{SpecName('HTML5 Web Messaging')}} |
-| {{SpecName('HTML5 Web Messaging', '#dom-window-postmessage', 'window.postMessage')}} | {{Spec2('HTML5 Web Messaging')}} | Définition initiale.                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.postMessage")}}
+{{Compat}}
 
 ## Voir aussi
 

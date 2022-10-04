@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
 
 HTML5 fournit des éléments pour intégrer du multimédia dans les documents — {{htmlelement("video")}} et {{htmlelement("audio")}} — et qui viennent avec leurs propres APIs pour contrôler la lecture, se déplacer dans le flux, etc*.* Cet article montre comment réaliser les tâches les plus communes, comme créer des contrôles de lectures personnalisés.
@@ -286,7 +287,7 @@ Imlémentons le contrôle le plus important — le bouton play/pause.
     media.addEventListener('ended', stopMedia);
     ```
 
-    L'événement {{event("click")}} est explicite — nous voulons stopper la vidéo en appelant la fonction `stopMedia()` quand le bouton stop est cliqué. Cependant, nous voulons également stopper la vidéo quand elle a fini de jouer — signalé par l'événement {{event("ended")}}, nous pouvons donc mettre en place un gestionnaire d'événement pour exécuter la fonction quand cet évènement se produit.
+    L'événement [`click`](/fr//docs/Web/API/Element/click_event) est explicite — nous voulons stopper la vidéo en appelant la fonction `stopMedia()` quand le bouton stop est cliqué. Cependant, nous voulons également stopper la vidéo quand elle a fini de jouer — signalé par l'événement [`ended`](/fr//docs/Web/API/HTMLMediaElement/ended_event), nous pouvons donc mettre en place un gestionnaire d'événement pour exécuter la fonction quand cet évènement se produit.
 
 2. Ensuite, définissons `stopMedia()` — ajoutez ce qui suit après la fonction `playPauseMedia()` :
 
@@ -390,7 +391,7 @@ Il y a différentes manières d'implémenter le retour arrière et l'avance rapi
 
 #### Mettre à jour le temps écoulé
 
-La dernière chose à implémenter pour notre lecteur multimédia est l'affichage du temps écoulé. Pour ce faire, nous allons exécuter une fonction pour mettre à jour le temps affiché à chaque fois que l'événement {{event("timeupdate")}} est déclenché sur l'élément `<video>`. La fréquence à laquelle cet événement se déclenche dépend de votre navigateur, de la puissance de votre CPU, etc ([voir post stackoverflow](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
+La dernière chose à implémenter pour notre lecteur multimédia est l'affichage du temps écoulé. Pour ce faire, nous allons exécuter une fonction pour mettre à jour le temps affiché à chaque fois que l'événement [`timeupdate`](/fr//docs/Web/API/HTMLMediaElement/timeupdate_event) est déclenché sur l'élément `<video>`. La fréquence à laquelle cet événement se déclenche dépend de votre navigateur, de la puissance de votre CPU, etc ([voir post stackoverflow](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
 
 Ajoutez la ligne `addEventListener()` suivante à la suite des autres :
 

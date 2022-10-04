@@ -10,6 +10,7 @@ tags:
   - XML
 translation_of: Web/API/XMLDocument/async
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}} {{Non-standard_header}}
 
 `document.async` peut être défini pour indiquer si un appel {{domxref("document.load")}} doit être une requête asynchrone ou synchrone. `true` (_vrai_) est la valeur par défaut, indiquant que les documents doivent être chargés de façon asynchrone.

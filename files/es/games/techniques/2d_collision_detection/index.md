@@ -143,4 +143,3 @@ La fase amplia debería proporcionarle una lista de entidades que \*podrían\* e
 ### Fase estrecha
 
 Cuando tenga una pequeña lista de entidades para verificar, querrá usar un algoritmo de fase estrecha (como los enumerados anteriormente) para proporcionar una respuesta determinada sobre si hay una colisión o no.
-

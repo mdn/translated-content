@@ -2,9 +2,10 @@
 title: AudioContext.suspend()
 slug: Web/API/AudioContext/suspend
 ---
+
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioContext") }} 接口的`suspend()` 方法暂停音频上下文对象中的进度，并暂时剥离进程对音频设备硬件的访问权限，减少 CPU 和电池的使用。 当程序在一段时间内不会使用音频上下文对象时，这个方法对减少硬件资源占用是非常有用的。
+{{ domxref("AudioContext") }} 接口的`suspend()` 方法暂停音频上下文对象中的进度，并暂时剥离进程对音频设备硬件的访问权限，减少 CPU 和电池的使用。当程序在一段时间内不会使用音频上下文对象时，这个方法对减少硬件资源占用是非常有用的。
 
 若对{{domxref("OfflineAudioContext")}} 调用此方法，将会抛出 `INVALID_STATE_ERR` 错误。
 
@@ -43,9 +44,9 @@ susresBtn.onclick = function() {
 
 ## Browser compatibility
 
-{{Compat("api.AudioContext.suspend")}}
+{{Compat}}
 
 ## See also
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)

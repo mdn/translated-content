@@ -1,12 +1,8 @@
 ---
 title: Firefox の ICC カラーコレクション
 slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
-tags:
-  - Firefox
-  - Firefox 3
-  - Firefox 3.5
-translation_of: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 ---
+
 {{FirefoxSidebar}}
 
 色補正のサポートは Firefox 3 で導入されましたが、デフォルトでは無効になっています。これを有効にするには、about:config ウィンドウを少し修正する必要があります。 Firefox 3.5 では、以前のバージョンではデフォルトで無効になっていた問題が解決されました。現在 [International Color Consortium](http://www.color.org/) (ICC) タグの画像は、デフォルトで色補正されています。
@@ -49,7 +45,7 @@ translation_of: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 | 2   | 飽和。 これは、色相の精度を保つことを犠牲にして、色の鮮やかさを維持する。 これは、チャートやダイアグラム、色調の正確な複製がそれほど重要ではないうちに、色が「ポップ」するその他のメディアに特に便利です。                                   |
 | 3   | ICC-絶対比色分析。 これは、スポットカラーや、色域内の色を変更しないので、あるメディアを別のものでシミュレートする場合に最も便利です。                                                                                                        |
 
-> **Note:** Firefox 3.5 では、perceptual、media-relative、および saturation のインテントがすべて同じようにレンダリングされます。
+> **メモ:** Firefox 3.5 では、perceptual、media-relative、および saturation のインテントがすべて同じようにレンダリングされます。
 
 ### 警告
 

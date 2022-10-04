@@ -1,17 +1,8 @@
 ---
 title: Symmetric-key cryptography (共通鍵暗号)
 slug: Glossary/Symmetric-key_cryptography
-tags:
-  - Cryptography
-  - Glossary
-  - Security
-  - Symmetric-key cryptography
-  - セキュリティ
-  - 共通鍵暗号
-  - 暗号
-  - 用語集
-translation_of: Glossary/Symmetric-key_cryptography
 ---
+
 共通鍵暗号は、暗号化と復号で同じ鍵を使用する暗号化アルゴリズムに使用される用語です。鍵はふつう、「共通鍵」または「秘密鍵」と呼ばれます。
 
 これは通常、{{Glossary("public-key cryptography", "公開鍵暗号")}}では鍵が一組で生成され、一方の鍵で変換が行われたものが、もう一方の鍵でしか解読できないのと対照されます。

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Element/colgroup
 browser-compat: html.elements.colgroup
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<colgroup>`** définit un groupe de colonnes au sein d'un tableau.

@@ -1,13 +1,8 @@
 ---
 title: '@document'
 slug: Web/CSS/@document
-tags:
-  - アットルール
-  - CSS
-  - リファレンス
-browser-compat: css.at-rules.document
-translation_of: Web/CSS/@document
 ---
+
 {{CSSRef}}{{Deprecated_header}}
 
 **`@document`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、文書の URL に基づいて、その中に含まれるスタイルルールを制約します。これは主にユーザー定義スタイルシート用に設計されていますが、独自定義のスタイルシートにも使うことができます。
@@ -36,7 +31,7 @@ translation_of: Web/CSS/@document
 
 `@document` は現在のところ Firefox のみが対応しています。 Firefox 以外のブラウザーでこの機能を再現したい場合は、[このポリフィル](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill) (@An-Error94 氏作) を使ってみてください。これは、ユーザースクリプトと [data-* 属性](/ja/docs/Web/HTML/Global_attributes/data-*)と[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を組み合わせて使用するものです。
 
-> **Note:** このプロパティの -moz 接頭辞がついたバージョン `@-moz-document` があります。これは Firefox 59 の Nightly および Beta で、潜在的な CSS インジェクション攻撃を緩和するための実験として、ユーザー定義スタイルシートとユーザーエージェントスタイルシートでしか使用できないように制限されました ({{bug(1035091)}} を参照)。
+> **メモ:** このプロパティの -moz 接頭辞がついたバージョン `@-moz-document` があります。これは Firefox 59 の Nightly および Beta で、潜在的な CSS インジェクション攻撃を緩和するための実験として、ユーザー定義スタイルシートとユーザーエージェントスタイルシートでしか使用できないように制限されました ({{bug(1035091)}} を参照)。
 
 ## 形式文法
 

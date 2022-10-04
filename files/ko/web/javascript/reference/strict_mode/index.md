@@ -15,9 +15,9 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 엄격 모드는 평범한 JavaScript 시멘틱스에 몇가지 변경이 일어나게 합니다.
 
-1.  기존에는 조용히 무시되던 에러들을 throwing합니다.
-2.  JavaScript 엔진의 최적화 작업을 어렵게 만드는 실수들을 바로잡습니다. 가끔씩 엄격 모드의 코드는 비-엄격 모드의 동일한 코드보다 더 빨리 작동하도록 만들어집니다.
-3.  엄격 모드는 ECMAScript의 차기 버전들에서 정의 될 문법을 금지합니다.
+1. 기존에는 조용히 무시되던 에러들을 throwing합니다.
+2. JavaScript 엔진의 최적화 작업을 어렵게 만드는 실수들을 바로잡습니다. 가끔씩 엄격 모드의 코드는 비-엄격 모드의 동일한 코드보다 더 빨리 작동하도록 만들어집니다.
+3. 엄격 모드는 ECMAScript의 차기 버전들에서 정의 될 문법을 금지합니다.
 
 코드를 JavaScript의 변형이 제한된 환경에서 동작하도록 하고 싶다면, 엄격 모드로의 변환([transitioning to strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode))을 참고하세요.
 

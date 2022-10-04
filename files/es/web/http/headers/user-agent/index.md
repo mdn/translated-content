@@ -160,4 +160,3 @@ PostmanRuntime/7.26.5
 - [Cadenas del agente de usuario de Firefox](/es/docs/Web/HTTP/Headers/User-Agent/Firefox)
 - [Detección de navegador utilizando el agente de usuario](/es/docs/Web/HTTP/Browser_detection_using_the_user_agent)
 - [Sugerencias del cliente](/es/docs/Web/HTTP/Client_hints)
-

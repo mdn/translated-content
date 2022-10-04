@@ -2,6 +2,7 @@
 title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ---
+
 {{JSRef}}
 
 **`toLowerCase()`** 会将调用该方法的字符串值转为小写形式，并返回。

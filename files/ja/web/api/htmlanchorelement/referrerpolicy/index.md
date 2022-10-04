@@ -1,16 +1,8 @@
 ---
 title: HTMLAnchorElement.referrerPolicy
 slug: Web/API/HTMLAnchorElement/referrerPolicy
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-  - Referrer Policy
-browser-compat: api.HTMLAnchorElement.referrerPolicy
-translation_of: Web/API/HTMLAnchorElement/referrerPolicy
 ---
+
 {{APIRef}}
 
 **`HTMLAnchorElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("a")}} 要素の HTML {{htmlattrxref("referrerpolicy","a")}} 属性を反映します。

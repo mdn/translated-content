@@ -2,6 +2,7 @@
 title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerContainer")}} インターフェイスの **`register()`** メソッドは、所与の `scriptURL` の {{domxref("ServiceWorkerRegistration")}} を作成または更新します。

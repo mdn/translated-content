@@ -2,6 +2,7 @@
 title: text-underline-position
 slug: Web/CSS/text-underline-position
 ---
+
 {{CSSRef}}
 
 当 {{cssxref("text-decoration")}}属性的值设置为 `underline` 之后，可以用 **`text-underline-position`** 属性为其设置下划线的位置。
@@ -38,7 +39,7 @@ text-underline-position: unset;
 - `right`
   - : 在垂直排版模式下，使下划线的位置在文字的右侧，在水平排版模式下，和 `under` 相同。
 - `auto-pos` {{non-standard_inline}}
-  - : `auto`的同义词 ，应使用 `auto`。
+  - : `auto`的同义词，应使用 `auto`。
 - `above` {{non-standard_inline}}
   - : 强制下划线放置于文本上面。当使用东亚文字时，此效果和使用 `auto` 相同。
 - `below` {{non-standard_inline}}
@@ -64,9 +65,9 @@ text-underline-position: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-underline-position")}}
+{{Compat}}
 
 ## 参阅
 
-- {{cssxref("text-decoration")}} 属性是大多数作为设置 text-decoration 属性的简写形式，包括 {{cssxref("text-decoration-line")}}， {{cssxref("text-decoration-color")}}， 和{{cssxref("text-decoration-style")}}。但是，text-decoration 不会设置 `text-underline-position`。
+- {{cssxref("text-decoration")}} 属性是大多数作为设置 text-decoration 属性的简写形式，包括 {{cssxref("text-decoration-line")}}， {{cssxref("text-decoration-color")}}，和{{cssxref("text-decoration-style")}}。但是，text-decoration 不会设置 `text-underline-position`。
 - Microsoft [non-standard values documentation](http://msdn.microsoft.com/en-us/library/ie/ms531176%28v=vs.85%29.aspx)

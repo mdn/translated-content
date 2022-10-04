@@ -1,22 +1,15 @@
 ---
 title: fit-content
 slug: Web/CSS/fit-content
-tags:
-  - CSS
-  - キーワード
-  - リファレンス
-  - ウェブ
-  - fit-content
-browser-compat: css.properties.width.fit-content
-translation_of: Web/CSS/fit-content
 ---
+
 {{CSSRef}}
 
 **`fit-content`** は `fit-content(stretch)` として動作します。実際には、ボックスは利用可能な空間を使用しますが、{{cssxref("max-content")}} 以上にはならないことを意味します。
 
 {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, {{cssxref("max-height")}} のレイアウトされたボックスの大きさとして使用される場合、最大寸法と最小寸法は、コンテンツの寸法を参照します。
 
-> **Note:** CSS Sizing の仕様では、{{cssxref("fit-content()", "fit-content()")}} という関数も定義されています。このページではキーワード版について詳しく説明します。
+> **メモ:** CSS Sizing の仕様では、{{cssxref("fit-content()", "fit-content()")}} という関数も定義されています。このページではキーワード版について詳しく説明します。
 
 ## 構文
 

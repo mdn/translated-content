@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet {{jsxref("Date")}}.

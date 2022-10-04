@@ -2,6 +2,7 @@
 title: import
 slug: Web/JavaScript/Reference/Statements/import
 ---
+
 {{jsSidebar("Statements")}}
 
 静态的 **`import`** 语句用于导入由另一个模块导出的绑定。无论是否声明了 {{jsxref("Strict_mode","strict mode")}}，导入的模块都运行在严格模式下。在浏览器中，`import` 语句只能在声明了 `type="module"` 的 `script` 的标签中使用。
@@ -95,7 +96,7 @@ import {
 
 ### 仅为副作用而导入一个模块
 
-整个模块仅为副作用（中性词，无贬义含义）而导入，而不导入模块中的任何内容（接口）。 这将运行模块中的全局代码，但实际上不导入任何值。
+整个模块仅为副作用（中性词，无贬义含义）而导入，而不导入模块中的任何内容（接口）。这将运行模块中的全局代码，但实际上不导入任何值。
 
 ```js
 import '/modules/my-module.js';
@@ -111,7 +112,7 @@ import '/modules/my-module.js';
 import myDefault from '/modules/my-module.js';
 ```
 
-也可以同时将 `default` 语法与上述用法（命名空间导入或命名导入）一起使用。在这种情况下，`default` 导入必须首先声明。 例如：
+也可以同时将 `default` 语法与上述用法（命名空间导入或命名导入）一起使用。在这种情况下，`default` 导入必须首先声明。例如：
 
 ```js
 import myDefault, * as myModule from '/modules/my-module.js';

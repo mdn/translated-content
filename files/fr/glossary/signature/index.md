@@ -7,10 +7,11 @@ tags:
 translation_of: Glossary/Signature
 original_slug: Glossaire/Signature
 ---
+
 Le terme **signature** peut avoir plusieurs significations selon le contexte. Il peut s'agir de :
 
 {{GlossaryDisambiguation}}
 
-## Pour approfondir
+## Voir aussi
 
 - [Signature](https://fr.wikipedia.org/wiki/Signature_(homonymie)) sur Wikipédia

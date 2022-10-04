@@ -1,13 +1,8 @@
 ---
 title: PerformanceResourceTiming.initiatorType
 slug: Web/API/PerformanceResourceTiming/initiatorType
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/initiatorType
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`initiatorType`** 読み取り専用プロパティは、パフォーマンスイベントを開始したリソースの種類を表す {{domxref("DOMString","文字列")}} です。

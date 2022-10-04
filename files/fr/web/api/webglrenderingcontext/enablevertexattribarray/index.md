@@ -17,6 +17,7 @@ tags:
   - sommet
 translation_of: Web/API/WebGLRenderingContext/enableVertexAttribArray
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode {{domxref ("WebGLRenderingContext")}} **`enableVertexAttribArray()` -** qui fait partie de l'API WebGL - active le tableau générique des attributs de sommet à l'indice spécifié dans la liste des tableaux d'attributs.
@@ -78,33 +79,11 @@ Avec l'association définie entre le tampon des sommets de notre forme et l'attr
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebGL', "#5.14.10", "enableVertexAttribArray")}}
-      </td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glEnableVertexAttribArray.xml", "glEnableVertexAttribArray")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL.</p></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.enableVertexAttribArray")}}
+{{Compat}}
 
 ## Voir aussi
 

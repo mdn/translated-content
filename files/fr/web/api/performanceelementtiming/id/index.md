@@ -10,6 +10,7 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/id
 ---
+
 {{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}
 
 La propriété en lecture seule **`id`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie l'[`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) de l'élément associé.
@@ -47,10 +48,8 @@ observer.observe({ entryTypes: ["element"] });
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Element Timing API','#dom-performanceelementtiming-id','PerformanceElementTiming.id')}} | {{Spec2('Element Timing API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceElementTiming.id")}}
+{{Compat}}

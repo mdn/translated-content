@@ -1,26 +1,18 @@
 ---
 title: MediaRecorder.resume()
 slug: Web/API/MediaRecorder/resume
-tags:
-  - API
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Method
-  - Reference
-  - resume
-translation_of: Web/API/MediaRecorder/resume
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.resume()`** メソッド（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、以前に一時停止していたメディアの記録を再開するために使用します。
 
 `resume()` メソッドを呼び出すと、ブラウザーは次の手順を実行するタスクをキューに入れます。
 
-1.  {{domxref("MediaRecorder.state")}} が `"inactive"` の場合は、DOM の `InvalidState` エラーを発生させてこれらの手順を終了します。 {{domxref("MediaRecorder.state")}} が `"inactive"` でない場合は、次の手順に進みます。
-2.  {{domxref("MediaRecorder.state")}} を `"recording"` に設定します。
-3.  現在の {{domxref("Blob")}} へのデータ収集を続けます。
-4.  `resume` イベントを発生させます。
+1. {{domxref("MediaRecorder.state")}} が `"inactive"` の場合は、DOM の `InvalidState` エラーを発生させてこれらの手順を終了します。 {{domxref("MediaRecorder.state")}} が `"inactive"` でない場合は、次の手順に進みます。
+2. {{domxref("MediaRecorder.state")}} を `"recording"` に設定します。
+3. 現在の {{domxref("Blob")}} へのデータ収集を続けます。
+4. `resume` イベントを発生させます。
 
 ## 構文
 

@@ -1,7 +1,6 @@
 ---
 title: 本の詳細ページ
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 ---
 The _Book detail page_ needs to display the information for a specific `Book`, identified using its (automatically generated) `_id` field value, along with information about each associated copy in the libary (`BookInstance`). Wherever we display an author, genre, or book instance, these should be linked to the associated detail page for that item.
 
@@ -40,7 +39,7 @@ exports.book_detail = function(req, res, next) {
 };
 ```
 
-> **Note:** We don't need to require _async_ and _BookInstance_, as we already imported those modules when we implemented the home page controller.
+> **メモ:** We don't need to require _async_ and _BookInstance_, as we already imported those modules when we implemented the home page controller.
 
 The method uses `async.parallel()` to find the `Book` and its associated copies (`BookInstances`) in parallel. The approach is exactly the same as described for the _Genre detail page_ above.
 
@@ -87,7 +86,7 @@ block content
 
 Almost everything in this template has been demonstrated in previous sections.
 
-> **Note:** The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.
+> **メモ:** The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.
 >
 > ```
 >   p #[strong Genre:]

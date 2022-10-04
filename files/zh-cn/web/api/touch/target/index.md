@@ -2,6 +2,7 @@
 title: Touch.target
 slug: Web/API/Touch/target
 ---
+
 {{ APIRef("Touch Events") }}
 
 ## 概述
@@ -43,4 +44,4 @@ src.addEventListener('touchstart', function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Touch.target")}}
+{{Compat}}

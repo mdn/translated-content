@@ -1,18 +1,8 @@
 ---
 title: Notification.image
 slug: Web/API/Notification/image
-page-type: web-api-instance-property
-tags:
-  - API
-  - Image
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-browser-compat: api.Notification.image
-translation_of: Web/API/Notification/image
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `image` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `image` オプションで指定された、通知の一部として表示される画像の URL を含みます。

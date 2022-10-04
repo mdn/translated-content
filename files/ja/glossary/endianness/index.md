@@ -1,13 +1,8 @@
 ---
 title: Endianness (エンディアン)
 slug: Glossary/Endianness
-tags:
-  - Coding
-  - CodingScripting
-  - Glossary
-  - 用語集
-translation_of: Glossary/Endianness
 ---
+
 **エンディアン** (もしくは**バイト順**) は、コンピューターが数字を表現するために各バイトを構成する方法を説明するものです。
 
 メモリの個々の領域にはインデックス、もしくはアドレスが付与されています。各バイトには 8 ビット (つまり `0x00` から `0xff` まで) の数値しか保存できないため、それ以上大きな値を保存するには 1 バイトよりも大きな領域を予約しなければなりません。1 つの数値における複数のバイトの*順序*で断然最もよく使われているものは**リトルエンディアン**で、インテルのすべてのプロセッサーで使用されています。リトルエンディアンは小さいバイトから大きいバイトの順で (つまり、もっとも小さなバイトを最初または最下位のアドレスに) 格納するので、ちょうどヨーロッパの日付の書き方 (例えば 31 December 2050) と同様です。
@@ -20,16 +15,16 @@ translation_of: Glossary/Endianness
 - _ビッグエンディアン_: `0x12 0x34 0x56 0x78`
 - _ミックスドエンディアン_ (古く非常に稀): `0x34 0x12 0x78 0x56`
 
-1.  関連情報
+1. 関連情報
 
-    1.  {{jsxref("ArrayBuffer")}}
-    2.  {{jsxref("DataView")}}
-    3.  [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+    1. {{jsxref("ArrayBuffer")}}
+    2. {{jsxref("DataView")}}
+    3. [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
 
-2.  Wikipedia 記事
+2. Wikipedia 記事
 
-    1.  {{Interwiki("wikipedia", "エンディアン")}}
+    1. {{Interwiki("wikipedia", "エンディアン")}}
 
-3.  [用語集](/ja/docs/Glossary)
+3. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("Data structure", "データ構造")}}
+    1. {{Glossary("Data structure", "データ構造")}}

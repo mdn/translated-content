@@ -1,17 +1,9 @@
 ---
 title: Navigator.onLine
 slug: Web/API/Navigator/onLine
-tags:
-  - API
-  - DOM Reference
-  - Navigator
-  - Online
-  - Property
-  - Reference
-translation_of: Web/API/Navigator/onLine
 original_slug: Web/API/NavigatorOnLine/onLine
-browser-compat: api.Navigator.onLine
 ---
+
 {{ApiRef("HTML DOM")}}
 
 ブラウザーのオンライン状態を返します。このプロパティは、オンラインを意味する `true` とオフラインを意味する `false` の論理値を返します。このプロパティは、ブラウザーのネットワークへの接続状態が変化するたびに更新を送信します。更新は、ユーザーがリンクをたどったときや、スクリプトがリモートページを要求したときに発生します。例えば、ユーザーがインターネット接続を失った直後にリンクをクリックした場合、このプロパティは `false` を返します。

@@ -1,15 +1,8 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - プロパティ
-  - ポリフィル
-browser-compat: javascript.builtins.Number.EPSILON
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
+
 {{JSRef}}
 
 **`Number.EPSILON`** プロパティは、1 から 1 より大きな浮動小数点の最小値の差を表します。

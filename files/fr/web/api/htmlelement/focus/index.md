@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/focus
 translation_of: Web/API/HTMLElement/focus
 browser-compat: api.HTMLElement.focus
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode **`HTMLElement.focus()`** place le focus sur l'élément indiqué, s'il peut recevoir le focus. L'élément qui a le focus sera celui qui recevra par défaut les évènements du clavier et les autres évènements analogues.

@@ -1,19 +1,8 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS プロパティ
-  - クリッピング
-  - レイアウト
-  - リファレンス
-  - overflow
-  - recipe:css-shorthand-property
-  - スクロール
-browser-compat: css.properties.overflow
-translation_of: Web/CSS/overflow
 ---
+
 {{CSSRef}}
 
 `overflow` は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のオーバーフロー時、すなわち、要素の内容が多すぎて[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)に収まらない場合の望ましい動作を両方向について設定します。

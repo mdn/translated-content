@@ -1,13 +1,8 @@
 ---
 title: document.images
 slug: Web/API/Document/images
-tags:
-  - DOM
-  - Document
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/Document/images
 ---
+
 {{ApiRef}}
 
 ## 概要

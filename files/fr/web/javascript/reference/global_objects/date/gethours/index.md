@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getHours
 ---
+
 {{JSRef}}
 
 La méthode **`getHours()`** renvoie l'heure pour la date renseignée, d'après l'heure locale.

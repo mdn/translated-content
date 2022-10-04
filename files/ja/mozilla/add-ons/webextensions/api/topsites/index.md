@@ -1,17 +1,8 @@
 ---
 title: topSites
 slug: Mozilla/Add-ons/WebExtensions/API/topSites
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - topSites
-translation_of: Mozilla/Add-ons/WebExtensions/API/topSites
 ---
+
 {{AddonSidebar}}
 
 topSites API を使うと、ユーザーがよく訪れるページをを含む配列を取得できます。
@@ -36,7 +27,7 @@ topSites API を使うには "topSites" の [API パーミッション](/ja/Add-
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/extensions/topSites) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/extensions/topSites) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

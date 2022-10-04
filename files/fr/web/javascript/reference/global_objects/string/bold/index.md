@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/bold
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/bold
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`bold()`** crée un élément HTML {{HTMLElement("b")}} qui affiche la chaine de caractères en gras.

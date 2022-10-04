@@ -1,20 +1,8 @@
 ---
 title: KeyboardEvent.keyCode
 slug: Web/API/KeyboardEvent/keyCode
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Deprecated
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - keyCode
-browser-compat: api.KeyboardEvent.keyCode
-translation_of: Web/API/KeyboardEvent/keyCode
 ---
+
 {{APIRef("UI Events")}}{{Deprecated_Header}}
 
 非推奨の **`KeyboardEvent.keyCode`** 読み取り専用プロパティは、押されたキーの変更されていない値を識別するシステムおよび実装に依存する数値コードを表します。
@@ -23,7 +11,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
 
 これはしばらく非推奨となっていますので、できれば使用しないようにしてください。代わりに、もし実装されていれば {{domxref("KeyboardEvent.code")}} を使用してください。残念ながら、まだ実装されていないブラウザーもありますので、対象となるすべてのブラウザーで対応するものを使用するように注意する必要があります。
 
-> **Note:** ウェブ開発者は `keydown` と `keyup` イベントを処理する際に、表示可能な文字に対して `keyCode` 属性を使用するべきではありません。前述のように、`keyCode` 属性は表示可能な文字、特に <kbd>Shift</kbd> や <kbd>Alt</kbd> キーが押された状態での文字に対しては有用ではありません。ショートカットキーハンドラーを実装する場合、通常は {{domxref("Element/keypress_event", "keypress")}} イベントの方がよいでしょう（少なくとも Gecko を使用するランタイムではそうでしょう）。
+> **メモ:** ウェブ開発者は `keydown` と `keyup` イベントを処理する際に、表示可能な文字に対して `keyCode` 属性を使用するべきではありません。前述のように、`keyCode` 属性は表示可能な文字、特に <kbd>Shift</kbd> や <kbd>Alt</kbd> キーが押された状態での文字に対しては有用ではありません。ショートカットキーハンドラーを実装する場合、通常は {{domxref("Element/keypress_event", "keypress")}} イベントの方がよいでしょう（少なくとも Gecko を使用するランタイムではそうでしょう）。
 
 ## 例
 
@@ -85,7 +73,7 @@ Firefox 15 {{geckoRelease("15.0")}} からは、 Gecko はキーによって入�
 
 Firefox 60 {{geckoRelease("60.0")}} からは、 Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規則で設定します（上記のリストのポイント 7.1 または 7.2 に到達したとき）。
 
-> **Warning:** これらの新しい追加ルールの目的は、米国式キーボードレイアウトの区切り記号キーに unicode 文字をマッピングしているユーザーが、 Firefox に対応したウェブアプリケーションを ASCII に対応したキーボードレイアウトのみ、または米国式キーボードレイアウトのみで使用できるようにするためです。そうでなければ、新しく割り当てられた `keyCode` 値が他のキーと衝突する可能性があります。例えば、アクティブなキーボードレイアウトがロシア語の場合、 `"Period"` キーと `"Slash"` キーの `keyCode` 値は**どちらも** `190` (`KeyEvent.DOM_VK_PERIOD`) になります。もし、これらのキーを区別する必要があるが、世界中の全てのキーボードレイアウトに自分で対応したくない場合は、おそらく {{domxref("KeyboardEvent.code")}} を使用した方が良いでしょう。
+> **警告:** これらの新しい追加ルールの目的は、米国式キーボードレイアウトの区切り記号キーに unicode 文字をマッピングしているユーザーが、 Firefox に対応したウェブアプリケーションを ASCII に対応したキーボードレイアウトのみ、または米国式キーボードレイアウトのみで使用できるようにするためです。そうでなければ、新しく割り当てられた `keyCode` 値が他のキーと衝突する可能性があります。例えば、アクティブなキーボードレイアウトがロシア語の場合、 `"Period"` キーと `"Slash"` キーの `keyCode` 値は**どちらも** `190` (`KeyEvent.DOM_VK_PERIOD`) になります。もし、これらのキーを区別する必要があるが、世界中の全てのキーボードレイアウトに自分で対応したくない場合は、おそらく {{domxref("KeyboardEvent.code")}} を使用した方が良いでしょう。
 
 1. macOS または Linux を使用している場合
 
@@ -2257,7 +2245,7 @@ Firefox 60 {{geckoRelease("60.0")}} からは、 Gecko は区切り記号キー�
   </tfoot>
 </table>
 
-> **Note:** 最近の Mac には <kbd>NumLock</kbd> キーがないので、状態が分かりません。そのため、ロック解除の状態が利用できません。
+> **メモ:** 最近の Mac には <kbd>NumLock</kbd> キーがないので、状態が分かりません。そのため、ロック解除の状態が利用できません。
 
 ## keyCode 値の定数
 

@@ -4,6 +4,7 @@ slug: Web/API/Window/DOMContentLoaded_event
 translation_of: Web/API/Window/DOMContentLoaded_event
 original_slug: Web/Events/DOMContentLoaded
 ---
+
 {{APIRef}}
 
 L’évènement **`DOMContentLoaded`** est émis lorsque le document HTML initial a été complètement chargé et analysé, sans attendre que les feuilles de style, images et sous-documents aient terminé de charger.
@@ -53,15 +54,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-domcontentloaded')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.DOMContentLoaded_event")}}
+{{Compat}}
 
 ## Voir aussi
 
-- Évènements associés&nbsp;: {{event("load")}}, {{event("readystatechange")}}, {{event("beforeunload")}}, {{event("unload")}}
+- Évènements associés&nbsp;: [`load`](/fr//docs/Web/API/Window/load_event), [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event), [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event), [`unload`](/fr/docs/Web/API/Window/unload_event)
 - Cet évènement sur les cibles {{domxref("Document")}}&nbsp;: {{domxref("Document/DOMContentLoaded_event", "Document: DOMContentLoaded event")}}

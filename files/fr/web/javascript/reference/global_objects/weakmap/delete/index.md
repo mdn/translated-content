@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/delete
 ---
+
 {{JSRef}}
 
 La méthode **`delete()`** retire un élément donné de l'objet {{jsxref("WeakMap")}}.

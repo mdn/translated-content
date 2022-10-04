@@ -1,16 +1,8 @@
 ---
 title: 'HTMLMediaElement: loadeddata イベント'
 slug: Web/API/HTMLMediaElement/loadeddata_event
-page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
-browser-compat: api.HTMLMediaElement.loadeddata_event
-translation_of: Web/API/HTMLMediaElement/loadeddata_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 **`loadeddata`** イベントは、メディアの現在の再生位置のフレームの読み込みが完了したときに発生します。ふつうは最初のフレームです。
@@ -44,7 +36,7 @@ translation_of: Web/API/HTMLMediaElement/loadeddata_event
   </tbody>
 </table>
 
-> **Note:** なお、このイベントはモバイルやタブレットにおいて、ブラウザーの設定でデータセーバーがオンになっていると発生しません。
+> **メモ:** なお、このイベントはモバイルやタブレットにおいて、ブラウザーの設定でデータセーバーがオンになっていると発生しません。
 
 ## 例
 

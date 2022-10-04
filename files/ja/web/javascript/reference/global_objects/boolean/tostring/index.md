@@ -1,15 +1,8 @@
 ---
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
-tags:
-  - Boolean
-  - JavaScript
-  - メソッド
-  - Prototype
-  - リファレンス
-browser-compat: javascript.builtins.Boolean.toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、指定された Boolean オブジェクトを表す文字列を返します。

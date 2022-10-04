@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 original_slug: JavaScript/Reference/Annexes/Fonctionnalités_dépréciées
 ---
+
 {{JsSidebar("More")}}
 
 Cette page liste les fonctionnalités de JavaScript qui sont dépréciées (_deprecated_) (c'est-à-dire que ces fonctionnalités sont toujours disponibles mais qu'il est prévu de les retirer) et les fonctionnalités obsolètes (celles qui ne sont plus utilisables).

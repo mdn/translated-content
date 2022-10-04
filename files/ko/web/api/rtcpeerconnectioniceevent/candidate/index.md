@@ -9,7 +9,9 @@ translation_of: Web/API/RTCPeerConnectionIceEvent/candidate
 
 ## Syntax
 
-     var candidate = event.candidate;
+```js
+ var candidate = event.candidate;
+```
 
 ### 값
 

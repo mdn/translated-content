@@ -2,6 +2,7 @@
 title: DOMImplementation.createHTMLDocument
 slug: Web/API/DOMImplementation/createHTMLDocument
 ---
+
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
 ### 概述
@@ -58,7 +59,7 @@ function makeDocument() {
 }
 ```
 
-代码 4-12 行创建了一个新的 HTML 文档，并在里面插入一些内容。第 4 行 `createHTMLDocument()`构造了一个标题为"New Document"的 HTML 文档. 5-6 行创建了一个段落元素并在里面插入了一些内容，8-12 行将新建的段落元素插入到 HTML 文档中。
+代码 4-12 行创建了一个新的 HTML 文档，并在里面插入一些内容。第 4 行 `createHTMLDocument()`构造了一个标题为"New Document"的 HTML 文档。5-6 行创建了一个段落元素并在里面插入了一些内容，8-12 行将新建的段落元素插入到 HTML 文档中。
 
 16 行获取了 iframe 的`contentDocument` 属性。这是我们将要插入新建的 HTML 文档的地方。下面的两行将新建的 HTML 文档插入到了 iframe 的根元素中。这样，我们用 20 行代码实现了用一个新建的 HTML 文档替换 iframe 中原有文档的目的。
 

@@ -1,17 +1,6 @@
 ---
 title: item コンポーネントの作成
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - Angular
-  - Components
-  - Events
-  - Data
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -182,7 +171,7 @@ remove(item) {
 
 `remove()` メソッドは JavaScript の `Array.splice()` メソッドを使用して、関連するアイテムの `indexOf` にある 1 つのアイテムを削除します。
 平易な英語では、これは `splice()` メソッドが配列からアイテムを削除することを意味します。
-`splice()` メソッドの詳細については、[`Array.prototype.splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) に関する MDN Web Docs の記事を参照してください。 。
+`splice()` メソッドの詳細については、[`Array.prototype.splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) に関する MDN Web Docs の記事を参照してください。 。
 
 ## ItemComponent にロジックを追加
 

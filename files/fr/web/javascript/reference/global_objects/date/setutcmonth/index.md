@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCMonth
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCMonth()`** définit le mois de la date, selon UTC.

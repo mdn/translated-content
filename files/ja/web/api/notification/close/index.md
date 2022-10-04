@@ -1,23 +1,13 @@
 ---
 title: Notification.close()
 slug: Web/API/Notification/close
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Notification
-  - Notifications
-  - Notifications API
-  - Reference
-  - close
-browser-compat: api.Notification.close
-translation_of: Web/API/Notification/close
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `close()` は {{domxref("Notification")}} インターフェイスのメソッドで、表示された通知を閉じたり削除したりするために使用されます。
 
-> **Note:** この API は、一定時間経過後に通知を画面から消去するだけのために使用すべきではありません。通知が最初に表示された後にユーザーがそれとやりとりすることを防ぐため、このメソッドは通知トレイからも通知を削除するためです。この API の正しい使用方法は、ユーザーに関係がなくなった通知を除去することです（例えば、メッセージアプリなどで、ユーザーが既にウェブページ上の通知を読んだ場合や、音楽アプリですでに次の曲が始まっているため、曲の変更を行うための通知を閉じるなど）。
+> **メモ:** この API は、一定時間経過後に通知を画面から消去するだけのために使用すべきではありません。通知が最初に表示された後にユーザーがそれとやりとりすることを防ぐため、このメソッドは通知トレイからも通知を削除するためです。この API の正しい使用方法は、ユーザーに関係がなくなった通知を除去することです（例えば、メッセージアプリなどで、ユーザーが既にウェブページ上の通知を読んだ場合や、音楽アプリですでに次の曲が始まっているため、曲の変更を行うための通知を閉じるなど）。
 
 ## 構文
 

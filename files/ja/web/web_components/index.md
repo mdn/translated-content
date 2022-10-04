@@ -1,21 +1,8 @@
 ---
 title: ウェブコンポーネント
 slug: Web/Web_Components
-tags:
-  - コンポーネント
-  - HTML インポート
-  - JavaScript
-  - ランディング
-  - 概要
-  - Template
-  - ウェブ記事
-  - ウェブコンポーネント
-  - ウェブ開発
-  - カスタム要素
-  - シャドウ DOM
-  - slot
-translation_of: Web/Web_Components
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 ウェブコンポーネントは、再利用可能なカスタム要素を作成し、ウェブアプリの中で利用するための、一連のテクノロジーです。コードの他の部分から独立した、カプセル化された機能を使って実現します。

@@ -2,6 +2,7 @@
 title: 全屏 API
 slug: Web/API/Fullscreen_API
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 **`全屏 API`** 为使用用户的整个屏幕展现网络内容提供了一种简单的方式，并且在不需要时退出全屏模式。这种 API 让你可以简单地控制浏览器，使得一个元素与其子元素，如果存在的话，可以占据整个屏幕，并在此期间，从屏幕上隐藏所有的浏览器用户界面以及其他应用。
@@ -88,7 +89,7 @@ Fullscreen API 定义了两个事件，可用于检测全屏模式的打开和�
 
 ## 使用说明
 
-用户通过按 <kbd>ESC</kbd> 键（或 <kbd>F11）</kbd>即可退出全屏模式，而不是等着站点或应用的代码来做这件事。确定你在你的用户界面里提供合适的界面元素来告知用户这个可选项。
+用户通过按 <kbd>ESC</kbd> 键（或 <kbd>F11</kbd>）即可退出全屏模式，而不是等着站点或应用的代码来做这件事。确定你在你的用户界面里提供合适的界面元素来告知用户这个可选项。
 
 > **备注：** 当处在全屏模式中，浏览其他页面，切换标签页，或者切换到其他应用（例如使用 <kbd>Alt</kbd>-<kbd>Tab</kbd>）也会导致退出全屏模式。
 
@@ -114,7 +115,7 @@ document.addEventListener("keydown", function(e) {
 
 当用户按下 <kbd>Enter</kbd> 键时，这段代码会被调用，像上面看到的那样。
 
-```
+```js
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
@@ -126,7 +127,7 @@ function toggleFullScreen() {
 }
 ```
 
-这段代码首先检查 [`document`](/zh-CN/docs/Web/API/Document) 的 `fullscreenElement` 属性的值（亦要检查带有前缀 `moz`、` ms、``webkit `）。如果其为 `null`，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用 [`element.requestFullscreen()`](/zh-CN/docs/Web/API/Element/requestFullscreen)，可以切换到全屏模式。
+这段代码首先检查 [`document`](/zh-CN/docs/Web/API/Document) 的 `fullscreenElement` 属性的值（亦要检查带有前缀 `moz`、`ms`、`webkit`）。如果其为 `null`，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用 [`element.requestFullscreen()`](/zh-CN/docs/Web/API/Element/requestFullscreen)，可以切换到全屏模式。
 
 如果全屏模式已经激活（`fullscreenElement` 不为 `null`），我们可以调用 [`document.exitFullscreen()`](/zh-CN/docs/Web/API/Document/exitFullscreen)（或其前缀化的版本，这取决于你使用的浏览器）。
 

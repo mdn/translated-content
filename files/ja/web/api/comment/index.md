@@ -1,11 +1,8 @@
 ---
 title: Comment
 slug: Web/API/Comment
-tags:
-  - API
-  - DOM
-translation_of: Web/API/Comment
 ---
+
 {{ApiRef("DOM")}}
 
 **`Comment`** インターフェイスは、マークアップ内にある注意書きのテキストを表します。これらは通常の閲覧時には表示されず、このようなコメントはブラウザのソースビュー表示時に閲覧可能です。HTML や XML でコメントは、「`<!--`」と「`-->`」で囲んだコンテンツとして記述します。XML 構文においては、「`--`」をコメント内に記述することはできません。
@@ -40,4 +37,4 @@ _このインターフェイスに固有のメソッドはありませんが、�
 
 ## 関連情報
 
-- [DOM インターフェイスの索引](/ja/docs/DOM/DOM_Reference "DOM/DOM_Reference")
+- [DOM インターフェイスの索引](/ja/docs/DOM/DOM_Reference)

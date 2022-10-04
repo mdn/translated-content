@@ -17,7 +17,7 @@ translation_of: Web/API/Node/hasChildNodes
 
 <p>Следующий пример удаляет первый дочерний узел внутри элемента с id <code>"foo"</code>, если foo имеет дочерние узлы.</p>
 
-<pre class="brush:js;highlight:[3];">var foo = document.getElementById("foo");
+<pre class="brush:js;">var foo = document.getElementById("foo");
 
 if ( foo.hasChildNodes() ) {
   foo.removeChild( foo.childNodes[0] );

@@ -1,19 +1,11 @@
 ---
 title: Window.sidebar
 slug: Web/API/Window/sidebar
-page-type: web-api-instance-property
-tags:
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-  - Non-standard
-  - Deprecated
-translation_of: Web/API/Window/sidebar
 ---
+
 {{APIRef}} {{Deprecated_Header}}
 
-> **Warning:** この [`window.external`](/ja/docs/Web/API/Window/external) プロパティの Firefox だけの標準外のエイリアスは[削除](#ブラウザーの互換性)されました。
+> **警告:** この [`window.external`](/ja/docs/Web/API/Window/external) プロパティの Firefox だけの標準外のエイリアスは[削除](#ブラウザーの互換性)されました。
 
 ブラウザーにアドオンを登録するためのいくつかのメソッドを含むサイドバーオブジェクトを返します。
 

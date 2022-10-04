@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/endsWith
 ---
+
 {{JSRef}}
 
 La méthode **`endsWith()`** renvoie un booléen indiquant si la chaine de caractères se termine par la chaine de caractères fournie en argument.

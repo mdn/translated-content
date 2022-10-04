@@ -1,16 +1,11 @@
 ---
 title: async を使用した非同期フロー制御
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
-tags:
-  - Express
-  - Node
-  - displaying data
-  - part 5
-  - server-side
 ---
+
 _LocalLibrary_ 中のいくつかのコントローラーのコードは、複数の非同期リクエストの結果に依存しています。そのため、操作を特定の順序もしくは並列して実行することが必要になる場合があります。フロー制御を管理して、必要となるすべての情報を取得した後でページをレンダリングするために、ここでは人気のある node [async](https://www.npmjs.com/package/async) を使うことにします。
 
-> **Note:** JavaScript で非同期動作やフロー制御を管理する手法には [Promises](/ja/docs/Web/JavaScript/Guide/Using_promises) のような比較的最近 JavaScript に導入された言語機能を含め、他にもあります。
+> **メモ:** JavaScript で非同期動作やフロー制御を管理する手法には [Promises](/ja/docs/Web/JavaScript/Guide/Using_promises) のような比較的最近 JavaScript に導入された言語機能を含め、他にもあります。
 
 async には多くの便利なメソッドがあります（詳しくは[ドキュメント (en-US)](https://caolan.github.io/async/v3/docs.html) を参照してください）。ここでは重要ないくつかの関数を紹介します。
 
@@ -84,7 +79,7 @@ async.series({
 );
 ```
 
-> **Note:** ECMAScript (JavaScript) の言語仕様ではオブジェクトの列挙順序は未定義であると規定されているため、すべてのプラットフォームで指定したのと同じ順序で関数の呼び出しが行われない可能性があります。もし順序が本当に重要な場合、以下のようにオブジェクトではなく配列を渡す必要があります。
+> **メモ:** ECMAScript (JavaScript) の言語仕様ではオブジェクトの列挙順序は未定義であると規定されているため、すべてのプラットフォームで指定したのと同じ順序で関数の呼び出しが行われない可能性があります。もし順序が本当に重要な場合、以下のようにオブジェクトではなく配列を渡す必要があります。
 
 ```js
 async.series([

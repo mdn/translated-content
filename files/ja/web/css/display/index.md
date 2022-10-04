@@ -1,16 +1,8 @@
 ---
 title: display
 slug: Web/CSS/display
-tags:
-  - CSS
-  - CSS 表示方法
-  - CSS プロパティ
-  - リファレンス
-  - display
-  - recipe:css-property
-browser-compat: css.properties.display
-translation_of: Web/CSS/display
 ---
+
 {{CSSRef}}
 
 **`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロック要素とインライン要素](/ja/docs/Web/CSS/CSS_Flow_Layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)、[フレックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などを設定します。
@@ -72,7 +64,7 @@ display: unset;
     - `inline`
       - : この要素は、自身の前後に改行を生成しない 1 つ以上のインライン要素ボックスを生成します。通常のフローでは、次の要素は、空間があれば同じ行になります。
 
-> **Note:** 2 値構文に対応しているブラウザーでは、`display: block` や `display: inline` が指定されている場合など、外側の値のみを見つけると、内側の値を `flow` に設定します。
+> **メモ:** 2 値構文に対応しているブラウザーでは、`display: block` や `display: inline` が指定されている場合など、外側の値のみを見つけると、内側の値を `flow` に設定します。
 > これは期待通りに動作します。例えば、ある要素を block に指定した場合、その要素の子要素は block と inline の通常フローレイアウトに参加することが期待されます。
 
 ### 内側
@@ -99,7 +91,7 @@ display: unset;
     - `ruby` {{Experimental_Inline}}
       - : 要素は、インライン要素のように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
-> **Note:** 2 値の構文に対応しているブラウザーは、 `display: flex` や `display: grid` などの内側の表示種別のみが指定されていると、外側の表示種別を `block` に設定します。これで期待通りに動作します。例えば、ある要素を `display: grid` に指定した場合、そのボックスはブロックレベルボックスのグリッドコンテナーとして生成されることが期待されるでしょう。
+> **メモ:** 2 値の構文に対応しているブラウザーは、 `display: flex` や `display: grid` などの内側の表示種別のみが指定されていると、外側の表示種別を `block` に設定します。これで期待通りに動作します。例えば、ある要素を `display: grid` に指定した場合、そのボックスはブロックレベルボックスのグリッドコンテナーとして生成されることが期待されるでしょう。
 
 ### リスト項目
 
@@ -110,7 +102,7 @@ display: unset;
 
 `list-item` は {{CSSxRef("&lt;display-outside&gt;")}} キーワードのいずれかと、 {{CSSxRef("&lt;display-inside&gt;")}} の `flow` または `flow-root` キーワードと組み合わせることもできます。
 
-> **Note:** 2 値の構文に対応しているブラウザーでは、内側の表示種別がないと既定で `flow` になります。外側の表示種別が指定されないと、基本ボックスは外側の表示種別が `block` になります。
+> **メモ:** 2 値の構文に対応しているブラウザーでは、内側の表示種別がないと既定で `flow` になります。外側の表示種別が指定されないと、基本ボックスは外側の表示種別が `block` になります。
 
 ### 内部
 
@@ -295,7 +287,7 @@ display: unset;
 
 コンテナーとその子要素には {{CSSxRef("padding")}} と {{CSSxRef("background-color")}} が含まれているので、表示値の効果がわかりやすくなっています。
 
-> **Note:** 新しい2つの値の構文は、対応がまだかなり限られているため、ここでは一切含めていません。
+> **メモ:** 新しい2つの値の構文は、対応がまだかなり限られているため、ここでは一切含めていません。
 
 #### HTML
 
@@ -379,7 +371,7 @@ updateDisplay();
 
 {{EmbedLiveSample('display_value_comparison','100%', 440)}}
 
-> **Note:** 上記にリンクされている各個別の表示データ型のページには、より多くの例があります。
+> **メモ:** 上記にリンクされている各個別の表示データ型のページには、より多くの例があります。
 
 ## 仕様書
 

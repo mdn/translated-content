@@ -1,20 +1,10 @@
 ---
-title: フォームウィジェット向けプロパティ実装状況一覧
+title: フォームコントロール向けの CSS プロパティの互換性一覧表
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-tags:
-  - Advanced
-  - CSS
-  - Forms
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Web
-  - ウェブ
-  - ガイド
-  - フォーム
-  - 高度
-translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
+l10n:
+  sourceCommit: 9b1f7aa6cb8d0479b4df91a3e2249003a8a863f1
 ---
+
 {{learnsidebar}}
 
 以下の実装状況一覧表で、 HTML フォーム向けの CSS の対応状況を要約しています。 HTML フォームや CSS の複雑さにより、これらの表は完全なリファレンスであるとはいえません。それでも、何ができて何ができないかの見識を得られるでしょう。また、どうすればよいかを知る助けにもなるでしょう。
@@ -25,11 +15,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
 
 それぞれのプロパティで取り得る値は 4 種類あります。
 
-- Yes
+- ✅ Yes
   - : プロパティは各ブラウザー間で、一貫してほどよく対応されています。もっとも、特殊なケースでは奇妙な副作用に直面するかもしれません。
-- Partial
+- ⚠️ Partial
   - : プロパティは動作しますが、たびたび奇妙な副作用や一貫性のなさに直面するかもしれません。まず副作用について熟知しているのでなければ、これらのプロパティは避けるべきでしょう。
-- No
+- ❌ No
   - : プロパティは動作しない、または頼りにできるほどの一貫性がありません。
 - n.a.
   - : 当該ウィジェットに対して、そのプロパティは意味がありません。
@@ -46,19 +36,18 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
 ```css
 * {
 /* これは、WebKit ベースのブラウザーでネイティブのルックアンドフィールを無効にします */
-  -webkit-appearance: none;
   appearance: none;
 
-/* Internet Explorer用 */
+/* Internet Explorer 用 */
   background: none;
 }
 ```
 
-## 実装状況一覧表
+## 互換性一覧表
 
 ### 全体的な動作
 
-全体的なレベルで多くのブラウザーに共通する動作があります:
+全体的なレベルで多くのブラウザーに共通する動作があります。
 
 - {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("border-radius")}}, {{cssxref("height")}}
   - : これらのプロパティのいずれかを使用すると、一部のブラウザーでネイティブのルックアンドフィールが部分的に、あるいは全面的に無効になることがあります。これらを使用する際は注意してください。
@@ -73,7 +62,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
 
 ### テキストフィールド
 
-`{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", "search")}}`, and `{{htmlelement("input/password", "password")}}` の入力タイプを見てください。
+`{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", "search")}}`, `{{htmlelement("input/password", "password")}}` の入力型を見てください。
 
 <table>
   <thead>
@@ -93,22 +82,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
         {{cssxref("width")}}
       </th>
       <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+        style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -116,23 +94,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1][2]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -154,23 +120,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1][2]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -192,23 +146,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -216,23 +158,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1][2]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -259,23 +189,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}<sup>[1]</sup>
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -293,23 +211,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>{{cssxref("line-height")}} の注意事項をご覧ください。</td>
     </tr>
@@ -317,23 +223,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -341,23 +235,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -365,23 +247,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td>Opera に関する注意事項をご覧ください。</td>
     </tr>
@@ -389,23 +259,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -421,23 +279,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td></td>
     </tr>
@@ -445,23 +291,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td></td>
     </tr>
@@ -469,23 +303,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -498,23 +320,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -535,23 +345,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1][2]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -576,23 +374,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -624,23 +410,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -648,23 +422,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -679,23 +441,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -703,23 +453,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -727,23 +465,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -763,23 +489,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -787,23 +501,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>{{cssxref("line-height")}} の注意事項をご覧ください。</td>
     </tr>
@@ -811,23 +513,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -835,23 +525,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -859,23 +537,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -883,23 +549,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -907,23 +561,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -931,23 +573,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td></td>
     </tr>
@@ -955,23 +585,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -984,23 +602,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1008,23 +614,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1039,23 +633,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1087,23 +669,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1111,23 +681,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1142,23 +700,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1166,23 +712,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1190,23 +724,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1226,23 +748,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1250,23 +760,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>{{cssxref("line-height")}} の注意事項をご覧ください。</td>
     </tr>
@@ -1274,23 +772,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1298,23 +784,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1322,23 +796,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td></td>
     </tr>
@@ -1346,23 +808,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1370,23 +820,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1394,23 +832,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td></td>
     </tr>
@@ -1431,23 +857,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td colspan="1" rowspan="3">
         <p>
@@ -1459,46 +873,22 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
     </tr>
   </tbody>
@@ -1525,23 +915,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1555,23 +933,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1585,23 +951,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1609,23 +963,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1634,22 +976,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
         {{cssxref("padding")}}
       </th>
       <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+       style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1739,23 +1070,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1763,23 +1082,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1787,23 +1094,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1831,23 +1126,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1866,23 +1149,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1890,23 +1161,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1914,23 +1173,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1938,23 +1185,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[2]</sup>
       </td>
       <td>
         <ol>
@@ -1982,23 +1217,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2016,23 +1239,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2050,23 +1261,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2087,23 +1286,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2118,23 +1305,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2151,23 +1326,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1][2]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1][2]</sup>
       </td>
       <td>
         <ol>
@@ -2183,23 +1346,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2207,23 +1358,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1][2]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1][2]</sup>
       </td>
       <td>
         <ol>
@@ -2239,23 +1378,11 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2274,25 +1401,13 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td colspan="1" rowspan="3">
+      <td rowspan="3">
         <ol>
           <li>
             ほとんどのブラウザーは、<code>{{htmlelement("select")}}</code>要素のみでこのプロパティに対応しています。
@@ -2304,46 +1419,22 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
     </tr>
   </tbody>
@@ -2352,6 +1443,8 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
 Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方法はありません。.
 
 ### セレクトボックス (複数行)
+
+`{{htmlelement("select")}}`、`{{htmlelement("optgroup")}}`、`{{htmlelement("option")}}` の各要素と[`size` 属性](/ja/docs/Web/HTML/Attributes/size)を参照してください。
 
 <table>
   <thead>
@@ -2370,23 +1463,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2394,23 +1475,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2418,23 +1487,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2442,23 +1499,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2466,23 +1511,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2504,23 +1537,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2528,23 +1549,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>{{cssxref("line-height")}} の注意事項をご覧ください。</td>
     </tr>
@@ -2552,23 +1561,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2589,23 +1586,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2620,23 +1605,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2648,23 +1621,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2672,23 +1633,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2696,23 +1645,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2720,23 +1657,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2757,23 +1682,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2781,23 +1694,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2812,23 +1713,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2860,23 +1749,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2884,23 +1761,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2908,23 +1773,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2932,23 +1785,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2956,23 +1797,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2985,23 +1814,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3009,23 +1826,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3033,23 +1838,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3057,23 +1850,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3081,23 +1862,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3105,23 +1874,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3129,23 +1886,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3153,23 +1898,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3177,23 +1910,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3206,23 +1927,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3230,23 +1939,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3254,23 +1951,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3298,23 +1983,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3322,23 +1995,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3346,23 +2007,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3370,23 +2019,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -3394,23 +2031,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3423,23 +2048,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -3447,23 +2060,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -3477,23 +2078,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -3507,23 +2096,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3531,23 +2108,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3555,23 +2120,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -3583,23 +2136,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3607,23 +2148,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3631,23 +2160,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3660,23 +2177,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -3690,23 +2195,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3714,23 +2207,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -3762,23 +2243,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3786,23 +2255,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3810,23 +2267,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3834,23 +2279,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -3858,23 +2291,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3887,23 +2308,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3911,23 +2320,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3935,23 +2332,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3959,23 +2344,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3983,23 +2356,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4007,23 +2368,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4031,23 +2380,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4055,23 +2392,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4079,23 +2404,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4108,23 +2421,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4132,23 +2433,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4156,23 +2445,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4200,23 +2477,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4224,23 +2489,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -4255,23 +2508,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4279,23 +2520,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4303,23 +2532,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -4416,23 +2633,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td colspan="1" rowspan="3">
         <ol>
@@ -4446,46 +2651,22 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
   </tbody>
@@ -4512,23 +2693,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4536,23 +2705,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4560,23 +2717,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4584,23 +2729,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4608,23 +2741,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -4723,23 +2844,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td colspan="1" rowspan="3">
         <ol>
@@ -4753,46 +2862,22 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
   </tbody>
@@ -4819,23 +2904,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4843,23 +2916,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -4874,23 +2935,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4898,23 +2947,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4922,23 +2959,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -5035,25 +3060,13 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td colspan="1" rowspan="3">
+      <td rowspan="3">
         <ol>
           <li>
             対応されていますが、ブラウザー間で頼りにできるほどの一貫性はありません。
@@ -5065,46 +3078,22 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
   </tbody>
@@ -5131,23 +3120,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5155,23 +3132,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5179,23 +3144,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5203,23 +3156,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5227,23 +3168,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5333,23 +3262,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5357,23 +3274,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -5385,23 +3290,11 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -5412,28 +3305,24 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
   </tbody>
 </table>
 
-{{PreviousMenu("Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
+## 関連情報
 
-## このモジュール
+### 学習経路
 
-### 学習コース
+- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
+- [ウェブフォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
+- [ネイティブのフォームウィジェット](/ja/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
+- [高度なフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
+- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
+- [ウェブフォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
+- [クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)
+- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
-- [初めての HTML フォーム](/ja/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [HTML フォームの構築方法](/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [ネイティブフォームウィジェット](/ja/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [フォームデータの送信](/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [フォームデータの検証](/ja/docs/Learn/HTML/Forms/Data_form_validation)
-- [カスタムフォームウィジェットの作成方法](/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [古いブラウザーでの HTML フォーム](/ja/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [HTML フォームへのスタイル設定](/ja/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [HTML フォームへの高度なスタイル設定](/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Property_compatibility_table_for_form_widgets)
+### 高度なトピック
 
-### 上級トピック
-
-- [Sending forms through JavaScript](/ja/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [How to build custom form widgets](/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [HTML forms in legacy browsers](/ja/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Advanced styling for HTML forms](/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/ja/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [古いブラウザーでの HTML フォーム](/ja/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
+- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

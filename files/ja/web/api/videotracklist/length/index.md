@@ -1,20 +1,8 @@
 ---
 title: VideoTrackList.length
 slug: Web/API/VideoTrackList/length
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - VideoTrackList
-  - length
-  - list
-  - track
-translation_of: Web/API/VideoTrackList/length
 ---
+
 {{APIRef("HTML DOM")}}
 
 読み取り専用の **{{domxref("VideoTrackList")}}** の **`length`** プロパティは、`VideoTrackList` 内のエントリ数を返します。 各エントリは、メディア要素内の 1 つの動画トラックを表す {{domxref("VideoTrack")}} です。 値 0 は、メディアに動画トラックがないことを示します。

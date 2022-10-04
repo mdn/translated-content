@@ -10,6 +10,7 @@ tags:
   - TopicStub
 translation_of: Web/SVG/Attribute
 ---
+
 {{SVGRef}}
 
 Les éléments SVG peuvent être modifiés en utilisant des attributs qui spécifient comment les éléments doivent être traités ou présentés.

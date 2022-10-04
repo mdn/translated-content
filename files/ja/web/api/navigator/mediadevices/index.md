@@ -1,18 +1,8 @@
 ---
 title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
-tags:
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - Web
-translation_of: Web/API/Navigator/mediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`Navigator.mediaDevices`** 読み取り専用プロパティは、カメラやマイク、画面共有のような接続されたメディア入力装置へのアクセスを提供する {{domxref("MediaDevices")}} オブジェクトを返します。

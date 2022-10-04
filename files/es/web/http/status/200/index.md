@@ -1,0 +1,41 @@
+---
+title: 200 OK
+slug: Web/HTTP/Status/200
+tags:
+  - Codigo de Estado
+  - HTTP
+  - Éxito
+translation_of: Web/HTTP/Status/200
+---
+{{HTTPSidebar}}
+
+El código de respuesta de estado satisfactorio HTTP **`200 OK`** indica que la solicitud ha tenido éxito. Una respuesta 200 es almacenable de forma predeterminada.
+
+El significado de un éxito depende del método de solicitud HTTP:
+
+- {{HTTPMethod("GET")}}: El recurso ha sido recuperado y se transmite el mensaje al body.
+- {{HTTPMethod("HEAD")}}: Los encabezados de entidad estan en el body del mensaje.
+- {{HTTPMethod("POST")}}: El recurso que describe el resultado de la acción se transmite en el body del mensaje.
+- {{HTTPMethod("TRACE")}}: El body del mensaje contiene el mensaje de solicitud tal como lo recibió el servidor.
+
+El resultado exitoso de un método {{HTTPMethod("PUT")}} o uno {{HTTPMethod("DELETE")}} no es a menudo un `200 OK` sino un {{HTTPStatus("204")}} `No Content` (o un {{HTTPStatus("201")}} `Created` cuando el recurso es subido por primera vez).
+
+## Estado
+
+```
+200 OK
+```
+
+## Especificaciones
+
+| Especificaciones                                 | Titulo                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "200 OK" , "6.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+
+## Compatibilidad del navegador
+
+{{Compat("http.status.200")}}
+
+## Ver también
+
+- [HTTP request methods](/es/docs/Web/HTTP/Methods)

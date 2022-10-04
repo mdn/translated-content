@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 original_slug: Apprendre/CSS/Introduction_à_CSS/Fundamental_CSS_comprehension
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Apprendre/CSS/Introduction_à_CSS")}}
 
 Beaucoup de choses ont été passées en revue dans ce module, donc il est bon d'avoir atteint la fin ! La dernière étape avant de passer à la suite est de tenter une évaluation sur les thèmes de ce module — elle comprend un certain nombre d'exercices connexes à compléter pour créer la composition finale — une carte de visite / carte de joueur / un profil de média social.

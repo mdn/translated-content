@@ -1,22 +1,17 @@
 ---
 title: 'あなたのスキルをテストしよう: 配列'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
-tags:
-  - Arrays
-  - Beginner
-  - JavaScript
-  - Learn
-  - test your skills
 ---
+
 {{learnsidebar}}
 
 このスキルテストの目的は、[配列](/ja/docs/Learn/JavaScript/First_steps/Arrays) の記事を理解しているかどうかを評価することです。
 
-> **Note:** 下記のインタラクティブエディターで回答を試すことができますが、コードをダウンロードし、 [CodePen](https://codepen.io/)、 [jsFiddle](https://jsfiddle.net/)、 [Glitch](https://glitch.com/) などのオンラインツールを利用すると、タスクに取り組むのに役立つかもしれません。
+> **メモ:** 下記のインタラクティブエディターで回答を試すことができますが、コードをダウンロードし、 [CodePen](https://codepen.io/)、 [jsFiddle](https://jsfiddle.net/)、 [Glitch](https://glitch.com/) などのオンラインツールを利用すると、タスクに取り組むのに役立つかもしれません。
 >
 > 行き詰まったなら、私たちに助けを求めてください。 — このページの下部の [評価またはさらなる支援](#評価またはさらなる支援) セクションを参照
 
-> **Note:** 下記の作成では、あなたのコードにエラーがあれば、このページの結果パネル（または、ダウンロード可能なバージョンでは、ブラウザーの JavaScript コンソール）に出力され、答えにたどり着くための助けとなります。
+> **メモ:** 下記の作成では、あなたのコードにエラーがあれば、このページの結果パネル（または、ダウンロード可能なバージョンでは、ブラウザーの JavaScript コンソール）に出力され、答えにたどり着くための助けとなります。
 
 ## 配列 1
 
@@ -28,7 +23,7 @@ tags:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays1.html", '100%', 400)}}
 
-> **Callout:**
+> **注目:**
 >
 > [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays1-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしましょう。
 
@@ -44,7 +39,7 @@ tags:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays2.html", '100%', 400)}}
 
-> **Callout:**
+> **注目:**
 >
 > [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays2-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしましょう。
 
@@ -61,7 +56,7 @@ tags:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays3.html", '100%', 400)}}
 
-> **Callout:**
+> **注目:**
 >
 > [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays3-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしましょう。
 
@@ -76,7 +71,7 @@ tags:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays4.html", '100%', 400)}}
 
-> **Callout:**
+> **注目:**
 >
 > [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays4-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしましょう。
 

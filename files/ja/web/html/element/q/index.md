@@ -1,20 +1,8 @@
 ---
 title: '<q>: 行内引用要素'
 slug: Web/HTML/Element/q
-tags:
-  - Citation
-  - Cite
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Q
-  - Quotation
-  - Quotation Marks
-  - Reference
-  - Web
-  - quote
-translation_of: Web/HTML/Element/q
 ---
+
 {{HTMLRef}}
 
 **HTML の `<q>` 要素** は、その内容が行内の引用であることを表します。最近の多くのブラウザーでは、文字列を引用符で囲むように実装しています。この要素は、段落区切りをまたがない短い引用のためのものです。長文の引用には、 {{HTMLElement("blockquote")}} 要素を使用してください。
@@ -77,7 +65,7 @@ translation_of: Web/HTML/Element/q
   </tbody>
 </table>
 
-> **Note:** 最近の多くのブラウザーは、`<q>` 要素内の文字列の周りに自動的に引用符を追加します。古いブラウザーでは引用符を追加するためにスタイル規則が必要な場合があります。
+> **メモ:** 最近の多くのブラウザーは、`<q>` 要素内の文字列の周りに自動的に引用符を追加します。古いブラウザーでは引用符を追加するためにスタイル規則が必要な場合があります。
 
 ## 属性
 

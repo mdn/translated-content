@@ -13,7 +13,7 @@ Transport Layer Security (TLS), comme son prédécesseur Secure Sockets Layer (S
 
 Tous les navigateurs modernes supportent le protocole TLS, nécessitant l'envoi par le serveur d'un {{Glossary("Digital certificate", "certificat numérique")}} valide pour confirmer son identité afin de pouvoir établir une connexion sécurisée. Il est possible pour le client et le serveur de s'authentifier mutuellement, si chacune des deux parties fournit son propre certificat numérique individuel.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

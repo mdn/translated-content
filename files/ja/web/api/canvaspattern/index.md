@@ -1,13 +1,8 @@
 ---
 title: CanvasPattern
 slug: Web/API/CanvasPattern
-tags:
-  - API
-  - Canvas
-  - Interface
-  - Reference
-translation_of: Web/API/CanvasPattern
 ---
+
 {{APIRef("Canvas API")}}
 
 **`CanvasPattern`** インターフェースは、{{domxref("CanvasRenderingContext2D.createPattern()")}} メソッドによって（画像、 canvas 要素、video 要素をもとに）生成される不透明なオブジェクトです。

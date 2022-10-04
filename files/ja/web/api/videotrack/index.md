@@ -1,17 +1,8 @@
 ---
 title: VideoTrack
 slug: Web/API/VideoTrack
-tags:
-  - HTML
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Video
-  - VideoTrack
-  - track
-translation_of: Web/API/VideoTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 `VideoTrack` インターフェイスは、{{HTMLElement("video")}} 要素からの単一の動画トラックを表します。 `VideoTrack` オブジェクトにアクセスするための最も一般的な用途は、その {{HTMLElement("video")}} 要素のアクティブ動画トラックにするために、その {{domxref("VideoTrack.selected", "selected")}} プロパティを切り替えることです。

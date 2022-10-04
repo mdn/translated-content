@@ -1,15 +1,8 @@
 ---
 title: CountQueuingStrategy
 slug: Web/API/CountQueuingStrategy
-tags:
-  - API
-  - CountQueuingStrategy
-  - Experimental
-  - Interface
-  - Reference
-  - Streams
-translation_of: Web/API/CountQueuingStrategy
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`CountQueuingStrategy`** インターフェイスは、ストリームの構築時に使用できる組み込みのチャンクカウントキューイング戦略を提供します。

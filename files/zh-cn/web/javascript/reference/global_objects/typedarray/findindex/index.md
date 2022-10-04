@@ -2,9 +2,10 @@
 title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 ---
+
 {{JSRef}}
 
-如果某个元素满足所提供的测试函数，**`findIndex()`**方法返回类型化数组中的 **下标**。否则返回 -1。 _TypedArray_ 是这里的 [类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+如果某个元素满足所提供的测试函数，**`findIndex()`**方法返回类型化数组中的 **下标**。否则返回 -1。_TypedArray_ 是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
 同时请参见{{jsxref("TypedArray.findIndex", "find()")}}方法，它返回了类型化数组中所发现元素的 **值** ，而不是它的下标。
 
@@ -44,7 +45,7 @@ typedarray.findIndex(callback[, thisArg])
 
 `findIndex` 不修改在其上调用的类型化数组。
 
-由 `findIndex`处理的元素范围在`callback`调用之前就确定了。 在 `findIndex`调用之后添加到数组的元素不会由 `callback`访问。 如果类型化数组的现有元素被改变，或被删除，它们传给`callback`的值是`findIndex` 访问它们时候的值。已删除的元素不会被访问。
+由 `findIndex`处理的元素范围在`callback`调用之前就确定了。在 `findIndex`调用之后添加到数组的元素不会由 `callback`访问。如果类型化数组的现有元素被改变，或被删除，它们传给`callback`的值是`findIndex` 访问它们时候的值。已删除的元素不会被访问。
 
 ## 示例
 

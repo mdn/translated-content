@@ -1715,13 +1715,13 @@ Safari 지원이 빠져있지만 WebM 컨테이너를 쓸 수 있고 Safari 사�
 
 우선 블로그나 정보형 사이트, 소규모 기업 웹사이트 등 상품을 설명하기 위한 비디오(비디오 자체가 상품은 아닌)를 위한 옵션을 알아봅시다.
 
-1.  **[WebM](/ko/docs/Web/Media/Formats/Containers#WebM)** 컨테이너에 비디오는 **[VP8](#vp8), 오디오는** **[Opus](/ko/docs/Web/Media/Formats/Audio_codecs#Opus)** 코덱을 사용합니다. 이들은 로열티-프리 오픈 포맷이지만 최근 브라우저에서만 폭넓게 지원하는 경향이 있어 폴백 지원이 필수적입니다.
+1. **[WebM](/ko/docs/Web/Media/Formats/Containers#WebM)** 컨테이너에 비디오는 **[VP8](#vp8), 오디오는** **[Opus](/ko/docs/Web/Media/Formats/Audio_codecs#Opus)** 코덱을 사용합니다. 이들은 로열티-프리 오픈 포맷이지만 최근 브라우저에서만 폭넓게 지원하는 경향이 있어 폴백 지원이 필수적입니다.
 
     ```js
     <video controls src="filename.webm"></video>
     ```
 
-2.  **[MP4](/ko/docs/Web/Media/Formats/Containers#MP4)** 컨테이너에 비디오 코덱은 **[AVC](#avc)** (**H.264**) 오디오 코덱은 **[AAC](/ko/docs/Web/Media/Formats/Audio_codecs#AAC)** 를 사용합니다. MP4 컨테이너에 AVC, AAC 조합은 모든 주요 브라우저에서 폭넓게 지원하는 조합이며 대부분의 유즈케이스에서 좋은 품질을 보여주기 때문입니다. 하지만 라이선스 요구사항에 대해 컴플라이언스 이슈는 없는 지 확인이 필요하죠.
+2. **[MP4](/ko/docs/Web/Media/Formats/Containers#MP4)** 컨테이너에 비디오 코덱은 **[AVC](#avc)** (**H.264**) 오디오 코덱은 **[AAC](/ko/docs/Web/Media/Formats/Audio_codecs#AAC)** 를 사용합니다. MP4 컨테이너에 AVC, AAC 조합은 모든 주요 브라우저에서 폭넓게 지원하는 조합이며 대부분의 유즈케이스에서 좋은 품질을 보여주기 때문입니다. 하지만 라이선스 요구사항에 대해 컴플라이언스 이슈는 없는 지 확인이 필요하죠.
 
     ```html
     <video controls>
@@ -1738,13 +1738,13 @@ Safari 지원이 빠져있지만 WebM 컨테이너를 쓸 수 있고 Safari 사�
 
 여러분의 목표가 최대한 높은 품질의 비디오를 재생하는 것이라면 가능한한 다양한 포맷으로 제공할 수 있는 방법을 모색해야합니다. 최신의 코덱일수록 고품질 비디오를 지원하지만 반대로 브라우저 호환성은 떨어집니다.
 
-1.  WebM 컨테이너에 비디오 코덱은 AV1, 오디오 코덱은 Opus. AV1 인코딩 시 6.3 High level 같은 높은 전문 프로파일을 사용할 수 있다면 훌륭한 품질의 비디오를 4K/8K 해상도로 제공할 수 있습니다. 오디오 인코딩 시 Opus Fullband 프로파일로 48 kHz 샘플링 레이트를 사용한다면 사람이 들을 수 있는 거의 모든 주파수를 캡쳐할 수 있죠.
+1. WebM 컨테이너에 비디오 코덱은 AV1, 오디오 코덱은 Opus. AV1 인코딩 시 6.3 High level 같은 높은 전문 프로파일을 사용할 수 있다면 훌륭한 품질의 비디오를 4K/8K 해상도로 제공할 수 있습니다. 오디오 인코딩 시 Opus Fullband 프로파일로 48 kHz 샘플링 레이트를 사용한다면 사람이 들을 수 있는 거의 모든 주파수를 캡쳐할 수 있죠.
 
     ```js
     <video controls src="filename.webm"></video>
     ```
 
-2.  MP4 컨테이너에 비디오 코덱으로 [HEVC](#hevc) 를 쓰되 프로파일은 Main 4:2:2 10/12 bit 색 깊이, 최대 Main 4:4:4 16 bit 색 깊이 수준의 고급 Main 프로파일을 사용합니다. 비트레이트를 높이면 놀라운 색 재현과 훌륭한 그래픽 퀄리티를 보여줄 것입니다. 또한 하이 다이나믹 레인지 비디오를 위한 HDR 메타데이터도 추가할 수 있습니다. 오디오는 ACC 인코딩 시 높은 샘플링 레이트(최소 48 kHz, 96 kHz 권장)에 fast-encoding이 아닌 complex-encoding을 사용합니다.
+2. MP4 컨테이너에 비디오 코덱으로 [HEVC](#hevc) 를 쓰되 프로파일은 Main 4:2:2 10/12 bit 색 깊이, 최대 Main 4:4:4 16 bit 색 깊이 수준의 고급 Main 프로파일을 사용합니다. 비트레이트를 높이면 놀라운 색 재현과 훌륭한 그래픽 퀄리티를 보여줄 것입니다. 또한 하이 다이나믹 레인지 비디오를 위한 HDR 메타데이터도 추가할 수 있습니다. 오디오는 ACC 인코딩 시 높은 샘플링 레이트(최소 48 kHz, 96 kHz 권장)에 fast-encoding이 아닌 complex-encoding을 사용합니다.
 
     ```html
     <video controls>

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTTP/Link_prefetching_FAQ
 original_slug: Web/HTTP/FAQ_sur_le_préchargement_des_liens
 ---
+
 ### Qu’est ce que le préchargement de liens&nbsp;?
 
 Le préchargement de liens est un mécanisme du navigateur qui utilise le temps disponible du navigateur pour télécharger ou _précharger_ les documents que les utilisateurs pourraient visiter juste après. Une page web fournit un ensemble de cibles à précharger au navigateur. Une fois que le navigateur a fini de charger la page, il commence, de façon transparente, à précharger les documents spécifiés et les emmagasine dans son cache. Quand l’utilisateur visite un de ces documents préchargés, il peut être ressorti rapidement du cache du navigateur.
@@ -121,7 +122,7 @@ Les navigateurs basés sur Mozilla 1.2 (ou +) aussi bien que ceux basés sur Moz
 
 Si vous avez des questions ou des commentaires sur le préchargement de liens, n'hésitez pas à me les envoyer&nbsp;:-)
 
-#### Voir également
+#### Voir aussi
 
 - [Prefetching Hints (en)](http://www.edochan.com/programming/pf.htm)
 

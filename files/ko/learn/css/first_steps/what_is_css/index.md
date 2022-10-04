@@ -1,7 +1,6 @@
 ---
 title: CSS 란 무엇인가?
 slug: Learn/CSS/First_steps/What_is_CSS
-translation_of: Learn/CSS/First_steps/What_is_CSS
 ---
 {{LearnSidebar}}
 

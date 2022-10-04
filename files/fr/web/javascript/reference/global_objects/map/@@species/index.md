@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@species
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
+
 {{JSRef}}
 
 **`Map[@@species]`** renvoie le constructeur `Map`.

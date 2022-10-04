@@ -1,17 +1,13 @@
 ---
 title: color
 slug: Web/SVG/Attribute/color
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.color
-translation_of: Web/SVG/Attribute/color
 ---
+
 {{SVGRef}}
 
 **`color`** 属性は、間接的な値の候補である `currentcolor` を {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("lighting-color")}} の各属性に与えるために使用します。
 
-> **Note:** プレゼンテーション属性として、`color` は CSS プロパティとして使用できます。詳しい情報は [CSS 色](/ja/docs/Web/CSS/color) を参照してください。
+> **メモ:** プレゼンテーション属性として、`color` は CSS プロパティとして使用できます。詳しい情報は [CSS 色](/ja/docs/Web/CSS/color) を参照してください。
 
 プレゼンテーション属性として、任意の要素に適用することができますが、上記のように SVG 要素には直接影響を与えません。
 

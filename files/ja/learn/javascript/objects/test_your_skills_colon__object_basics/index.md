@@ -1,17 +1,17 @@
 ---
 title: 'スキルテスト: オブジェクトの基本'
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
-translation_of: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 ---
+
 {{learnsidebar}}
 
 このスキルテストの目的は、[JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の理解度をテストすることです。
 
-> **Note:** 以下のインタラクティブなエディターでソリューションを試すこともできますが、コードをダウンロードし、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/)や[Glitch](https://glitch.com/)のようなオンラインツールを使用してタスクを実行すると役立つ場合があります。
+> **メモ:** 以下のインタラクティブなエディターでソリューションを試すこともできますが、コードをダウンロードし、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/)や[Glitch](https://glitch.com/)のようなオンラインツールを使用してタスクを実行すると役立つ場合があります。
 >
 > 行き詰まった場合は、助けを求めてください — このページの下部にある評価またはさらなる支援セクションを参照してください。
 
-> **Note:** 以下の例では、コードにエラーがある場合、ページの結果パネルに出力され、答えを見つけ出すのに役立ちます（ダウンロード可能なバージョンの場合は、ブラウザーの JavaScript コンソールに）
+> **メモ:** 以下の例では、コードにエラーがある場合、ページの結果パネルに出力され、答えを見つけ出すのに役立ちます（ダウンロード可能なバージョンの場合は、ブラウザーの JavaScript コンソールに）
 
 ## オブジェクトの基本 1
 
@@ -25,7 +25,7 @@ translation_of: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics1.html", '100%', 400)}}
 
-> **Note:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
+> **メモ:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
 
 ## オブジェクトの基本 2
 
@@ -50,7 +50,7 @@ translation_of: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics2.html", '100%', 400)}}
 
-> **Note:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
+> **メモ:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
 
 ## オブジェクトの基本 3
 
@@ -66,14 +66,14 @@ translation_of: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics3.html", '100%', 400)}}
 
-> **Note:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
+> **メモ:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
 
 ## まとめとヘルプ
 
 自分のコードの評価が欲しい、または行き詰まって助けを求めたい場合：
 
-1.  CodePen、jsFiddle、Glitch などのオンライン共有可能なエディターで作業をします。コードを自分で作成することも、上記のセクションでリンクされているスターティングポイントファイルを使用することもできます。
-2.  [MDNDiscourse フォーラムの学習カテゴリ](https://discourse.mozilla.org/c/mdn/learn/250)で評価や支援を求める投稿を書いてください。投稿には次のものを含める必要があります。
+1. CodePen、jsFiddle、Glitch などのオンライン共有可能なエディターで作業をします。コードを自分で作成することも、上記のセクションでリンクされているスターティングポイントファイルを使用することもできます。
+2. [MDNDiscourse フォーラムの学習カテゴリ](https://discourse.mozilla.org/c/mdn/learn/250)で評価や支援を求める投稿を書いてください。投稿には次のものを含める必要があります。
 
 - 「オブジェクトの基本 1 の スキルテスト を行ったので評価して欲しい」などの説明的なタイトル。
 - あなたがすでに試したことの詳細、そしてあなたが私たちに何をしてほしいか、例えば行き詰まって助けが必要な場合、または評価が必要な場合。

@@ -1,14 +1,8 @@
 ---
 title: Attr.name
 slug: Web/API/Attr/name
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Attr.name
-translation_of: Web/API/Attr/name
 ---
+
 {{APIRef("DOM")}}
 
 **`name`** は {{domxref("Attr")}} インターフェイスの読み取り専用プロパティで、属性の*修飾名*、すなわち属性名に、名前空間接頭辞があればそれが前に付いたものが返されます。例えば、ローカル名が `lang` で名前空間接頭辞が `xml` であった場合、返される修飾名は `xml:lang` になります。

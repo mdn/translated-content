@@ -1,15 +1,8 @@
 ---
 title: キャンバス API
 slug: Web/API/Canvas_API
-tags:
-  - API
-  - キャンバス
-  - グラフィック
-  - JavaScript
-  - 概要
-  - リファレンス
-translation_of: Web/API/Canvas_API
 ---
+
 {{CanvasSidebar}}
 
 **キャンバス API** (Canvas API) は [JavaScript](/ja/docs/Web/JavaScript) と [HTML](/ja/docs/Web/HTML) の {{HtmlElement("canvas")}} 要素によってグラフィックを描く方法を提供します。他にも、アニメーション、ゲームのグラフィック、データの可視化、写真加工、リアルタイム動画処理などに使用することができます。
@@ -58,9 +51,9 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **Note:** `WebGLRenderingContext` に関するインターフェイスは、[WebGL](/ja/docs/Web/API/WebGL_API) に掲載しています。
+> **メモ:** `WebGLRenderingContext` に関するインターフェイスは、[WebGL](/ja/docs/Web/API/WebGL_API) に掲載しています。
 
-> **Note:** {{domxref("OffscreenCanvas")}} はウェブワーカーでも利用できます。
+> **メモ:** {{domxref("OffscreenCanvas")}} はウェブワーカーでも利用できます。
 
 {{domxref("CanvasCaptureMediaStreamTrack")}} は関連するインターフェイスです。
 
@@ -94,7 +87,7 @@ ctx.fillRect(10, 10, 150, 100);
 - [Scrawl-canvas](https://scrawl.rikweb.org.uk/): 2D キャンバス要素を作成したり操作したりするためのオープンソースの JavaScript ライブラリーです。
 - [ZIM](https://zimjs.com): 便利でキャンバス上のコンポーネントとコーディングの創造性の制御を提供し、アクセシビリティと数百のカラフルなチュートリアルがあります。
 
-> **Note:** WebGL を使用する 2D および 3D のライブラリーについては [WebGL API](/ja/docs/Web/API/WebGL_API) を参照してください。
+> **メモ:** WebGL を使用する 2D および 3D のライブラリーについては [WebGL API](/ja/docs/Web/API/WebGL_API) を参照してください。
 
 ## 仕様書
 

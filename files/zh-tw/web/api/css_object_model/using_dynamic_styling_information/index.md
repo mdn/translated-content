@@ -86,11 +86,11 @@ function resetStyle(elemId) {
 
 {{ EmbedLiveSample('Modify_an_element_style') }}
 
-The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the `document.defaultView` object returns all styles that have actually been computed for an element. See [Example 6: getComputedStyle](/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle) in the examples chapter for more information on how to use this method.
+The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the `document.defaultView` object returns all styles that have actually been computed for an element. See [Example 6: getComputedStyle](/zh-TW/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle) in the examples chapter for more information on how to use this method.
 
 ## DOM Style Object
 
-The `style` object represents an individual style statement. Unlike the individual rules available from the [`document.styleSheets`](/en/DOM/document.styleSheets) collection, the style object is accessed from the `document` or from the elements to which that style is applied. It represents the _in-line_ styles on a particular element.
+The `style` object represents an individual style statement. Unlike the individual rules available from the [`document.styleSheets`](/zh-TW/DOM/document.styleSheets) collection, the style object is accessed from the `document` or from the elements to which that style is applied. It represents the _in-line_ styles on a particular element.
 
 More important than the two properties noted here is the use of the `style` object to set individual style properties on an element:
 
@@ -124,7 +124,7 @@ The **media** and **type** of the style may or may not be given.
 
 ### 使用 setAttribute 方法
 
-Note that you can also change style of an element by getting a reference to it and then use its [`setAttribute`](/en/DOM/element.setAttribute) method to specify the CSS property and its value.
+Note that you can also change style of an element by getting a reference to it and then use its [`setAttribute`](/zh-TW/DOM/element.setAttribute) method to specify the CSS property and its value.
 
 ```js
 var el = document.getElementById('some-element');

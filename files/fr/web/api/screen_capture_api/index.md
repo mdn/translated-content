@@ -17,6 +17,7 @@ tags:
   - screen
 translation_of: Web/API/Screen_Capture_API
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.
@@ -96,15 +97,13 @@ La liste d’autorisations par défaut est `self`, ce qui permet à tout contenu
 
 Voir [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour une explication plus en détail sur comment est utilisé Feature Policy.
 
-## Caracteristiques
+## Spécifications
 
-| Caracteristiques                         | Statut                               | Commentaire         |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Screen Capture')}} | {{Spec2('Screen Capture')}} | Définition Initiale |
+{{Specifications}}
 
-## Compatibilité des Navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## Voir aussi
 

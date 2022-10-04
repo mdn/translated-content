@@ -26,7 +26,9 @@ translation_of: Web/API/Window/sessionStorage
 
 ## 구문
 
-    myStorage = window.sessionStorage;
+```js
+myStorage = window.sessionStorage;
+```
 
 ### 값
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/valueOF
 ---
+
 {{JSRef}}
 
 La méthode **`valueOf()`** renvoie la valeur primitive d'un objet {{jsxref("Date")}}.

@@ -1,23 +1,8 @@
 ---
 title: HTMLImageElement.useMap
 slug: Web/API/HTMLImageElement/useMap
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - HTML
-  - HTML DOM
-  - HTML WHATWG
-  - HTMLImageElement
-  - 画像 maps
-  - Links
-  - プロパティ
-  - リファレンス
-  - interactive
-  - useMap
-browser-compat: api.HTMLImageElement.useMap
-translation_of: Web/API/HTMLImageElement/useMap
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`useMap`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、 {{Glossary("HTML")}} の {{htmlattrxref("usemap", "img")}} 属性を反映し、この画像に適用されるクライアントサイドイメージマップの名前を提供する文字列です。

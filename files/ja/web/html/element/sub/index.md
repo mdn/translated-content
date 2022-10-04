@@ -1,21 +1,8 @@
 ---
 title: '<sub>: 下付き文字要素'
 slug: Web/HTML/Element/sub
-tags:
-  - Baseline
-  - Element
-  - Footnotes
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Subscript
-  - Web
-  - sub
-translation_of: Web/HTML/Element/sub
 ---
+
 {{HTMLRef}}
 
 HTML の **下付き文字要素** (**`<sub>`**) は、表記上の理由で下付き文字として表示するべき行内文字列を指定します。下付き文字は普通、小さめのテキストを使用してベースラインよりも低く表示されます。

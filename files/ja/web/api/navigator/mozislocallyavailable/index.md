@@ -1,20 +1,13 @@
 ---
 title: Navigator.mozIsLocallyAvailable()
 slug: Web/API/Navigator/mozIsLocallyAvailable
-tags:
-  - API
-  - メソッド
-  - Navigator
-  - Non-standard
-  - 非推奨
-browser-compat: api.Navigator.mozIsLocallyAvailable
-translation_of: Web/API/Navigator/mozIsLocallyAvailable
 ---
+
 {{APIRef("HTML DOM")}} {{non-standard_header}}{{deprecated_header}}
 
 **`Navigator.mozIsLocallyAvailable()`** メソッドは、アドオンが指定されたリソースが両可能かどうかを判断できるようにします。
 
-> **Note:** リクエストされた URI が同じオリジンでないと、セキュリティ例外が発生することがあります。
+> **メモ:** リクエストされた URI が同じオリジンでないと、セキュリティ例外が発生することがあります。
 
 ## 構文
 

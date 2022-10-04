@@ -10,6 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window/top
 ---
+
 {{APIRef}}
 
 Renvoie une référence à la fenêtre la plus haute dans la hiérarchie des fenêtres
@@ -28,11 +29,8 @@ Cette propriété est particulièrement utile lorsque vous avez affaire à une f
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-top', 'window.top')}} | {{Spec2('HTML WHATWG')}} |                        |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-top', 'window.top')}}     | {{Spec2('HTML5 W3C')}}     | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.top")}}
+{{Compat}}

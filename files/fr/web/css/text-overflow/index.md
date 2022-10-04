@@ -3,6 +3,7 @@ title: text-overflow
 slug: Web/CSS/text-overflow
 translation_of: Web/CSS/text-overflow
 ---
+
 {{CSSRef}}
 
 La propriété **`text-overflow`** définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs. Le texte peut être rogné (_clipping_), afficher une ellipse ('`…`', `U+2026 Horizontal Ellipsis`) ou afficher une chaîne de caractères choisie.
@@ -45,7 +46,7 @@ text-overflow: unset;
 
 La propriété `text-overflow` peut être définie grâce à une ou deux valeurs.
 
-Si une valeur est fournie, celle-ci indique le comportement du dépassement en fin de ligne (c'est-à-dire l'extrêmité droite pour les textes écrits de gauche à droite et l'extrêmité gauche pour les textes écrits de droite à gauche). Si deux valeurs sont fournies, la première précisera la comportement pour le dépassement à l'extrêmité gauche de la ligne et la seconde indiquera le comportement du dépassement pour l'extrêmité droite de la ligne.
+Si une valeur est fournie, celle-ci indique le comportement du dépassement en fin de ligne (c'est-à-dire l'extrêmité droite pour les textes écrits de gauche à droite et l'extrêmité gauche pour les textes écrits de droite à gauche). Si deux valeurs sont fournies, la première précisera le comportement pour le dépassement à l'extrêmité gauche de la ligne et la seconde indiquera le comportement du dépassement pour l'extrêmité droite de la ligne.
 
 Chacune des valeurs se compose :
 
@@ -67,9 +68,13 @@ Chacune des valeurs se compose :
 - `<string>` {{experimental_inline}}
   - : Une chaîne de caractères (type {{cssxref("&lt;string&gt;")}}) utilisée pour représentée le texte rogné. La chaîne est affichée à l'intérieur de [la boîte de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher la chaîne choisie, celle-ci est rognée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -209,18 +214,11 @@ for (let para of paras) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires                                                       |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('CSS4 UI', '#text-overflow', 'text-overflow')}}         | {{Spec2('CSS4 UI')}}         | Ajout des valeurs `<string>` et `fade` et de la fonction `fade()`. |
-| {{SpecName('CSS3 Overflow', '#text-overflow', 'text-overflow')}} | {{Spec2('CSS3 Overflow')}} | Définition initiale.                                               |
-
-Une version précédente de cette interface avait atteint le statut de _Candidate Recommendation_. Certaines fonctionnalités devaient être retirées et n'étaient pas listées parmi les fonctionnalités à risque, la spécification a donc été déchue au niveau _Working Draft_. Cela explique pourquoi les navigateurs ont implémenté cette propriété sans préfixe bien qu'elle ne soit pas une CR.
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-overflow")}}
+{{Compat}}
 
 ## Voir aussi
 

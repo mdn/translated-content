@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.clearStencil()
 slug: Web/API/WebGLRenderingContext/clearStencil
-translation_of: Web/API/WebGLRenderingContext/clearStencil
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.clearStencil()`** メソッドは、ステンシルバッファーを消去する値を指定します。

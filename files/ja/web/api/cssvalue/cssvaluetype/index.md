@@ -1,15 +1,8 @@
 ---
 title: CSSValue.cssValueType
 slug: Web/API/CSSValue/cssValueType
-tags:
-  - API
-  - CSSValue
-  - Property
-  - Read-only
-  - Reference
-  - cssValueType
-translation_of: Web/API/CSSValue/cssValueType
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("CSSValue")}} インターフェイスの **`cssValueType`** 読み取り専用プロパティは、現在計算されている CSS プロパティ値の型を表します。

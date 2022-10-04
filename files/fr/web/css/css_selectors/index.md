@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Selectors
 original_slug: Web/CSS/Sélecteurs_CSS
 ---
+
 {{CSSRef}}
 
 **Les sélecteurs** définissent les éléments sur lesquelles s'applique un ensemble de règles CSS.
@@ -71,52 +72,4 @@ original_slug: Web/CSS/Sélecteurs_CSS
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSS4 Selectors')}}</td>
-      <td>{{Spec2('CSS4 Selectors')}}</td>
-      <td>
-        Ajout du combinateur de colonne (<code>||</code>), des sélecteurs
-        structurels pour la grille, des combinateurs logiques, des
-        pseudo-classes pour la localisation, la temporisation, les états de
-        ressources, les éléments linguistiques et les éléments relatifs à
-        l'interface utilisateur. Ajout du modificateur de sensibilité à la casse
-        pour les caractèes ASCII et du ciblage des attributs insensible à la
-        casse.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS3 Selectors')}}</td>
-      <td>{{Spec2('CSS3 Selectors')}}</td>
-      <td>
-        Ajout du combinateur de voisin <code>~</code>. Les pseudo-éléments
-        utilisent désormais un préfixe avec deux fois deux-points
-        (<code>::</code>)
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS2.1', 'selector.html')}}</td>
-      <td>{{Spec2('CSS2.1')}}</td>
-      <td>
-        <p>
-          Ajout des combinateurs pour les enfants (<code>></code>) et voisins
-          adjacents (<code>+</code>).<br />Ajout du sélecteur universel et du
-          sélecteur d'attribut.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS1')}}</td>
-      <td>{{Spec2('CSS1')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

@@ -1,19 +1,6 @@
 ---
 title: '<dd>: 詳細説明要素'
 slug: Web/HTML/Element/dd
-tags:
-  - 定義
-  - 詳細説明
-  - 説明リスト
-  - 要素
-  - HTML
-  - HTML コンテンツグループ化
-  - リファレンス
-  - ウェブ
-  - dd
-  - details
-browser-compat: html.elements.dd
-translation_of: Web/HTML/Element/dd
 ---
 
 {{HTMLRef}}

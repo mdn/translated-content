@@ -1,17 +1,8 @@
 ---
 title: function* 式
 slug: Web/JavaScript/Reference/Operators/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expression
-browser-compat: javascript.operators.generator_function
-translation_of: Web/JavaScript/Reference/Operators/function*
 ---
+
 {{jsSidebar("Operators")}}</div>
 
 **`function*`** キーワードは、式の中でジェネレーター関数を定義するために使用することができます。

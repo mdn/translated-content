@@ -15,6 +15,7 @@ tags:
   - Timing
 translation_of: Web/API/PerformanceNavigation
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
@@ -52,13 +53,11 @@ _L'interface `Performance` n'hérite d'aucune méthode._
 
 ## Spécifications
 
-| Spécifications                                                                                                   | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#performancenavigation', 'PerformanceNavigation')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceNavigation")}}
+{{Compat}}
 
 ## Voir aussi
 

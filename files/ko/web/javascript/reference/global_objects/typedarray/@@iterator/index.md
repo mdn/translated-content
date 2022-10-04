@@ -16,7 +16,9 @@ browser-compat: javascript.builtins.TypedArray.@@iterator
 
 ## 구문
 
-    arr[Symbol.iterator]()
+```js
+arr[Symbol.iterator]()
+```
 
 ## 예
 

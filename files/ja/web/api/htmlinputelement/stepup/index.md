@@ -1,16 +1,8 @@
 ---
 title: HTMLInputElement.stepUp()
 slug: Web/API/HTMLInputElement/stepUp
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - リファレンス
-  - テキスト欄選択 API
-browser-compat: api.HTMLInputElement.stepUp
-translation_of: Web/API/HTMLInputElement/stepUp
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.stepUp()`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を

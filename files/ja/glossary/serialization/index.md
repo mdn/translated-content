@@ -1,13 +1,8 @@
 ---
 title: Serialization (シリアライズ)
 slug: Glossary/Serialization
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - Serialization
-translation_of: Glossary/Serialization
 ---
+
 オブジェクトまたはデータ構造が、ネットワークまたはストレージ（例えば、[アレイバッファ](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)またはファイルフォーマット）上の転送に適したフォーマットに変換されるプロセス。
 
 たとえば {{Glossary("JavaScript")}} では、{{jsxref("JSON.stringify()")}} {{Glossary("function","関数")}}を呼び出して、オブジェクトを {{Glossary("JSON")}} {{Glossary("string","文字列")}}にシリアライズできます。

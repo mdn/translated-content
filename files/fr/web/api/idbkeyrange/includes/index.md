@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/includes
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`includes()`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie un booléen si la clé est contenue dans un intervalle de clé.

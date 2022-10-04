@@ -19,7 +19,7 @@ original_slug: Web/JavaScript/Guide/Ispolzovanie_promisov
 
 <p>Например, вместо старомодной функции, которая принимает два колбэка и вызывает один из них в зависимости от успешного или неудачного завершения операции:</p>
 
-<pre class="brush: js line-numbers  language-js">function doSomethingOldStyle(successCallback, failureCallback) {
+<pre class="brush: js">function doSomethingOldStyle(successCallback, failureCallback) {
   console.log("Готово.");
   // Успех в половине случаев.
   if (Math.random() &gt; .5) {
@@ -42,7 +42,7 @@ doSomethingOldStyle(successCallback, failureCallback);
 
 <p>…современные функции возвращают промис, в который вы записываете ваши колбэки:</p>
 
-<pre class="brush: js line-numbers  language-js">function doSomething() {
+<pre class="brush: js">function doSomething() {
   return new Promise((resolve, reject) =&gt; {
     console.log("Готово.");
     // Успех в половине случаев.
@@ -59,7 +59,7 @@ promise.then(successCallback, failureCallback);</pre>
 
 <p>…или просто:</p>
 
-<pre class="brush: js line-numbers  language-js">doSomething().then(successCallback, failureCallback);</pre>
+<pre class="brush: js">doSomething().then(successCallback, failureCallback);</pre>
 
 <p>Мы называем это <em>асинхронным вызовом функции</em>. У этого соглашения есть несколько преимуществ. Давайте рассмотрим их.</p>
 
@@ -136,9 +136,9 @@ let promise2 = promise.then(successCallback, failureCallback);
 
 <p>Можно продолжить цепочку вызовов <em>после </em>ошибки, т. е. после <code>catch</code>, что полезно для выполнения новых действий даже после того, как действие вернёт ошибку в цепочке вызовов. Ниже приведён пример:</p>
 
-<pre class="syntaxbox"><code class="language-js"><span class="keyword token">new</span> <span class="class-name token">Promise</span><span class="punctuation token">(</span><span class="punctuation token">(</span>resolve<span class="punctuation token">,</span> reject<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'</span></code>Начало<code class="language-js"><span class="string token">'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-</code>
+<pre class="syntaxbox">new Promise((resolve, reject) =&gt; {
+    console.log('Начало');
+
     resolve();
 })
 .then(() =&gt; {
@@ -165,36 +165,36 @@ let promise2 = promise.then(successCallback, failureCallback);
 
 <p>Вы могли ранее заметить, что <code>failureCallback</code>  повторяется три раза  в <strong>"pyramid of doom", </strong>а в цепочке промисов всего лишь один раз:</p>
 
-<pre><code>doSomething()
+<pre>doSomething()
 .then(result =&gt; doSomethingElse(result))
 .then(newResult =&gt; doThirdThing(newResult))
-.then(finalResult =&gt; console.log(`</code>Итоговый результат<code>: ${finalResult}`))
-.catch(failureCallback);</code></pre>
+.then(finalResult =&gt; console.log(`Итоговый результат: ${finalResult}`))
+.catch(failureCallback);</pre>
 
 <p>В основном, цепочка промисов останавливает выполнение кода, если где-либо произошла ошибка, и вместо этого ищет далее по цепочке обработчики ошибок. Это очень похоже на то, как работает синхронный код:</p>
 
-<pre><code>try {
+<pre>try {
   let result = syncDoSomething();
   let newResult = syncDoSomethingElse(result);
   let finalResult = syncDoThirdThing(newResult);
-  console.log(`</code>Итоговый результат<code>: ${finalResult}`);
+  console.log(`Итоговый результат: ${finalResult}`);
 } catch(error) {
   failureCallback(error);
-}</code>
+}
 </pre>
 
 <p>Эта симметрия с синхронным кодом лучше всего показывает себя в синтаксическом сахаре <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a> в ECMAScript 2017:</p>
 
-<pre><code>async function foo() {
+<pre>async function foo() {
   try {
     let result = await doSomething();
     let newResult = await doSomethingElse(result);
     let finalResult = await doThirdThing(newResult);
-    console.log(`</code>Итоговый результат<code>: ${finalResult}`);
+    console.log(`Итоговый результат: ${finalResult}`);
   } catch(error) {
     failureCallback(error);
   }
-}</code>
+}
 </pre>
 
 <p>Работа данного кода основана на промисах. Для примера здесь используется функция <code>doSomething()</code>, которая встречалась ранее. Вы можете прочитать больше о синтаксисе <a href="https://developers.google.com/web/fundamentals/getting-started/primers/async-functions">здесь</a></p>
@@ -207,15 +207,15 @@ let promise2 = promise.then(successCallback, failureCallback);
 
 <p>В идеале, все асинхронные функции уже должны возвращать промис. Но увы, некоторые APIs до сих пор ожидают успешного или неудачного колбэка переданных по старинке. Типичный пример: {{domxref("WindowTimers.setTimeout", "setTimeout()")}} функция:</p>
 
-<pre><code>setTimeout(() =&gt; saySomething("10 seconds passed"), 10000);</code></pre>
+<pre>setTimeout(() =&gt; saySomething("10 seconds passed"), 10000);</pre>
 
 <p>Смешивание старого колбэк-стиля и промисов проблематично. В случае неудачного завершения <code>saySomething</code> или программной ошибки, нельзя обработать ошибку.</p>
 
 <p>К счастью мы можем обернуть функцию в промис. Хороший тон оборачивать проблематичные функции на самом низком возможном уровне, и больше никогда их не вызывать напрямую:</p>
 
-<pre><code>const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+<pre>const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 
-wait(10000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);</code></pre>
+wait(10000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);</pre>
 
 <p>В сущности, конструктор промиса становится исполнителем функции, который позволяет нам резолвить или режектить промис вручную. Так как <code>setTimeout</code> всегда успешен, мы опустили reject в этом случае.</p>
 
@@ -227,40 +227,40 @@ wait(10000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);</c
 
 <p>Последовательное выполнение композиции возможно при помощи хитрости JavaScript:</p>
 
-<pre><code>[func1, func2].reduce((p, f) =&gt; p.then(f), Promise.resolve());</code></pre>
+<pre>[func1, func2].reduce((p, f) =&gt; p.then(f), Promise.resolve());</pre>
 
 <p>Фактически, мы превращаем массив асинхронных функций в цепочку промисов равносильно: <code>Promise.resolve().then(func1).then(func2);</code></p>
 
 <p>Это также можно сделать, объединив композицию в функцию, в функциональном стиле программирования:</p>
 
-<pre><code>const applyAsync = (acc,val) =&gt; acc.then(val);
-const composeAsync = (...funcs) =&gt; x =&gt; funcs.reduce(applyAsync, Promise.resolve(x));</code></pre>
+<pre>const applyAsync = (acc,val) =&gt; acc.then(val);
+const composeAsync = (...funcs) =&gt; x =&gt; funcs.reduce(applyAsync, Promise.resolve(x));</pre>
 
 <p><code>composeAsync</code> функция примет любое количество функций в качестве аргументов и вернёт новую функцию которая примет в параметрах начальное значение, переданное по цепочке. Это удобно, потому что некоторые или все функции могут быть либо асинхронными, либо синхронными, и они гарантированно выполнятся в правильной последовательности:</p>
 
-<pre><code>const transformData = composeAsync(func1, asyncFunc1, asyncFunc2, func2);
-transformData(data);</code></pre>
+<pre>const transformData = composeAsync(func1, asyncFunc1, asyncFunc2, func2);
+transformData(data);</pre>
 
 <p>В ECMAScript 2017, последовательные композиции могут быть выполнены более простым способом с помощью async/await:</p>
 
-<pre><code>for (const f of [func1, func2]) {
+<pre>for (const f of [func1, func2]) {
   await f();
-}</code></pre>
+}</pre>
 
 <h2 id="Порядок_выполнения">Порядок выполнения</h2>
 
 <p>Чтобы избежать сюрпризов, функции, переданные в <code>then</code> никогда не будут вызваны синхронно, даже с уже разрешённым промисом:</p>
 
-<pre><code>Promise.resolve().then(() =&gt; console.log(2));
-console.log(1); // 1, 2</code></pre>
+<pre>Promise.resolve().then(() =&gt; console.log(2));
+console.log(1); // 1, 2</pre>
 
 <p>Вместо немедленного выполнения, переданная функция встанет в очередь микрозадач, а значит выполнится, когда очередь будет пустой  в конце текущего вызова JavaScript цикла событий (event loop), т.е. очень скоро:</p>
 
-<pre><code>const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+<pre>const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 
 wait().then(() =&gt; console.log(4));
 Promise.resolve().then(() =&gt; console.log(2)).then(() =&gt; console.log(3));
-console.log(1); // 1, 2, 3, 4</code></pre>
+console.log(1); // 1, 2, 3, 4</pre>
 
 <h2 id="Вложенность">Вложенность</h2>
 
@@ -268,12 +268,12 @@ console.log(1); // 1, 2, 3, 4</code></pre>
 
 <p>Вложенность - это управляющая структура, ограничивающая область действия операторов catch. В частности, вложенный catch только перехватывает сбои в своей области и ниже, а не ошибки выше в цепочке за пределами вложенной области. При правильном использовании это даёт большую точность в извлечение ошибок:</p>
 
-<pre><code>doSomethingCritical()
+<pre>doSomethingCritical()
 .then(result =&gt; doSomethingOptional()
   .then(optionalResult =&gt; doSomethingExtraNice(optionalResult))
   .catch(e =&gt; {})) // Игнорируется если необязательные параметр не выкинул исключение
 .then(() =&gt; moreCriticalStuff())
-.catch(e =&gt; console.log("Критическая ошибка: " + e.message));</code></pre>
+.catch(e =&gt; console.log("Критическая ошибка: " + e.message));</pre>
 
 <p>Обратите внимание, что необязательный шаги здесь выделены отступом.</p>
 
@@ -283,13 +283,13 @@ console.log(1); // 1, 2, 3, 4</code></pre>
 
 <p>В этом разделе собраны частые ошибки, возникающие при создании цепочек промисов. Несколько таких ошибок можно увидеть в следующем примере:</p>
 
-<pre><code>// Плохой пример! Три ошибки!
+<pre>// Плохой пример! Три ошибки!
 
 doSomething().then(function(result) {
   doSomethingElse(result) // Забыл вернуть промис из внутренней цепочки + неуместное влаживание
   .then(newResult =&gt; doThirdThing(newResult));
 }).then(() =&gt; doFourthThing());
-// Забыл закончить цепочку методом catch</code></pre>
+// Забыл закончить цепочку методом catch</pre>
 
 <p>Первая ошибка это неправильно сцепить вещи между собой. Такое происходит когда мы создаём промис но забываем вернуть его. Как следствие, цепочка сломана, но правильнее было бы сказать что теперь у нас есть две независимые цепочки, соревнующиеся за право разрешится первой. Это означает, что <code>doFourthThing()</code> не будет ждать <code>doSomethingElse()</code> или <code>doThirdThing()</code> пока тот закончится, и будет исполнятся параллельно с ними, это, вероятно, не то что хотел разработчик. Отдельные цепочки также имеют отдельную обработку ошибок, что приводит к необработанным ошибкам.</p>
 
@@ -299,13 +299,13 @@ doSomething().then(function(result) {
 
 <p>Хорошим примером является всегда либо возвращать либо заканчивать цепочки промисов, и как только вы получаете новый промис, возвращайте его сразу же, чтобы не усложнять код излишней вложенностью:</p>
 
-<pre><code>doSomething()
+<pre>doSomething()
 .then(function(result) {
   return doSomethingElse(result);
 })
 .then(newResult =&gt; doThirdThing(newResult))
 .then(() =&gt; doFourthThing())
-.catch(error =&gt; console.log(error));</code></pre>
+.catch(error =&gt; console.log(error));</pre>
 
 <p>Обратите внимание что <code>() =&gt; x</code>  это сокращённая форма <code>() =&gt; { return x; }</code>.</p>
 

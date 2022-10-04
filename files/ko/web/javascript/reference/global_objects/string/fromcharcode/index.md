@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 ## 구문
 
-    String.fromCharCode(num1[, ...[, numN]])
+```js
+String.fromCharCode(num1[, ...[, numN]])
+```
 
 ### 매개변수
 

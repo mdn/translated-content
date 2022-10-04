@@ -2,6 +2,7 @@
 title: writing-mode
 slug: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}
 
 **`writing-mode`** 属性定义了文本水平或垂直排布以及在块级元素中文本的行进方向。为整个文档设置书时，应在根元素上设置它（对于 HTML 文档应该在 `html` 元素上设置）
@@ -71,31 +72,31 @@ writing-mode: unset;
     <td>horizontal-tb</td>
     <td class="example Text1"><span>我家没有电脑。</span></td>
     <td class="example Text1"><span>Example text</span></td>
-    <td class="example Text1"><span>1994年に至っては</span></td>
+    <td class="example Text1"><span>1994 年に至っては</span></td>
   </tr>
   <tr>
     <td>vertical-lr</td>
     <td class="example Text2"><span>我家没有电脑。</span></td>
     <td class="example Text2"><span>Example text</span></td>
-    <td class="example Text2"><span>1994年に至っては</span></td>
+    <td class="example Text2"><span>1994 年に至っては</span></td>
   </tr>
   <tr>
     <td>vertical-rl</td>
     <td class="example Text3"><span>我家没有电脑。</span></td>
     <td class="example Text3"><span>Example text</span></td>
-    <td class="example Text3"><span>1994年に至っては</span></td>
+    <td class="example Text3"><span>1994 年に至っては</span></td>
   </tr>
   <tr>
     <td>sideways-lr</td>
     <td class="example Text4"><span>我家没有电脑。</span></td>
     <td class="example Text4"><span>Example text</span></td>
-    <td class="example Text4"><span>1994年に至っては</span></td>
+    <td class="example Text4"><span>1994 年に至っては</span></td>
   </tr>
   <tr>
     <td>sideways-rl</td>
     <td class="example Text5"><span>我家没有电脑。</span></td>
     <td class="example Text5"><span>Example text</span></td>
-    <td class="example Text5"><span>1994年に至っては</span></td>
+    <td class="example Text5"><span>1994 年に至っては</span></td>
   </tr>
 </table>
 ```
@@ -168,7 +169,7 @@ The CSS that adjusts the directionality of the content looks like this:
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.writing-mode")}}
+{{Compat}}
 
 ## 请参阅
 

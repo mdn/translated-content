@@ -1,19 +1,13 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-tags:
-  - HTTP
-  - HTTP Header
-  - HTTP ヘッダー
-  - Reference
-  - User-agent
-translation_of: Web/HTTP/Headers/User-Agent
 ---
+
 {{HTTPSidebar}}
 
 **User-Agent** {{Glossary("request header", "リクエストヘッダー")}}は、サーバーやネットワークピアがアプリケーション、オペレーティングシステム、ベンダーや、リクエストしている{{Glossary("user agent", "ユーザーエージェント")}}のバージョン等を識別できるようにする特性文字列です。
 
-> **Warning:** ブラウザーによって異なるウェブページやサービスを提供することが、通常は悪い考えである理由については、[ユーザーエージェント文字列を用いたブラウザーの判定](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)をお読みください。
+> **警告:** ブラウザーによって異なるウェブページやサービスを提供することが、通常は悪い考えである理由については、[ユーザーエージェント文字列を用いたブラウザーの判定](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)をお読みください。
 
 <table class="properties">
   <tbody>
@@ -61,11 +55,11 @@ Firefox や Gecko ベースのユーザエージェント文字列の詳細に�
 Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
 ```
 
-1.  `Mozilla/5.0` は、 Mozilla と互換性があるブラウザーであるということを示す一般的なトークンで、現在はほぼすべてのブラウザーで共通です。
-2.  **_platform_** は、ブラウザーが動作しているプラットフォーム (Windows, Mac, Linux, Android など)、およびモバイル端末かどうかを示します。 {{Glossary("Firefox OS")}} のスマートフォンはウェブプラットフォームなので、 `Mobile` だけです。 **_platform_** が複数の "`; `" という区切りから成っていることに留意してください。後述の詳細と例も併せてご覧ください。
-3.  **rv:_geckoversion_** は Gecko のリリースバージョンです ("_17.0_" など)。最近のブラウザーの **_geckoversion_** は **_firefoxversion_** と同じです。
-4.  **_Gecko/geckotrail_** は、ブラウザーが [Gecko](/ja/docs/Mozilla/Gecko) を基にしていることを示します。 (デスクトップでは、 _**geckotrail**_ は常に `20100101` の固定文字列です。)
-5.  _**Firefox/firefoxversion**_ は、ブラウザーが Firefox であること、またそのバージョン ("_17.0_" など) を示しています。
+1. `Mozilla/5.0` は、 Mozilla と互換性があるブラウザーであるということを示す一般的なトークンで、現在はほぼすべてのブラウザーで共通です。
+2. **_platform_** は、ブラウザーが動作しているプラットフォーム (Windows, Mac, Linux, Android など)、およびモバイル端末かどうかを示します。 {{Glossary("Firefox OS")}} のスマートフォンはウェブプラットフォームなので、 `Mobile` だけです。 **_platform_** が複数の "; " という区切りから成っていることに留意してください。後述の詳細と例も併せてご覧ください。
+3. **rv:_geckoversion_** は Gecko のリリースバージョンです ("_17.0_" など)。最近のブラウザーの **_geckoversion_** は **_firefoxversion_** と同じです。
+4. **_Gecko/geckotrail_** は、ブラウザーが [Gecko](/ja/docs/Mozilla/Gecko) を基にしていることを示します。 (デスクトップでは、 _**geckotrail**_ は常に `20100101` の固定文字列です。)
+5. _**Firefox/firefoxversion**_ は、ブラウザーが Firefox であること、またそのバージョン ("_17.0_" など) を示しています。
 
 ### 例
 

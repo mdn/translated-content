@@ -9,6 +9,7 @@ tags:
   - Obsolete
 translation_of: Web/MathML/Element/mfenced
 ---
+
 {{MathMLRef}}
 
 {{deprecated_header}} L'élément MathML `<mfenced>` offre la possibilité d'ajouter des parenthèses ouvrantes et fermantes personnalisées ainsi que des séparateurs (comme les virgules ou points-virgules) à une expression.

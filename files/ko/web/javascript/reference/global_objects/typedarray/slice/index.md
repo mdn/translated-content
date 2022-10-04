@@ -16,7 +16,9 @@ browser-compat: javascript.builtins.TypedArray.slice
 
 ## 구문
 
-    typedarray.slice([begin[, end]])
+```js
+typedarray.slice([begin[, end]])
+```
 
 ## 매개변수
 

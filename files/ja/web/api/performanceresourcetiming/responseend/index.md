@@ -1,13 +1,8 @@
 ---
 title: PerformanceResourceTiming.responseEnd
 slug: Web/API/PerformanceResourceTiming/responseEnd
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/responseEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`responseEnd`** 読み取り専用プロパティは、ブラウザーがリソースの最後のバイトを受信した直後、または転送接続が閉じられる直前のどちらか早い方で {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。

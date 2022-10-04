@@ -1,13 +1,8 @@
 ---
 title: プライベートクラス機能
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-tags:
-  - Classes
-  - Private
-  - JavaScript
-  - Language feature
-translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 クラスのフィールドは既定で{{ jsxref('Classes/Public_class_fields','公開', '', 1) }}ですが、ハッシュ `#` 接頭辞を使ってプライベートクラスメンバーを生成することができます。これらのクラス機能のプライバシーのカプセル化は、JavaScript 自身によって行われます。
@@ -40,7 +35,7 @@ class ClassWithPrivateStaticMethod {
 
 ### プライベートインスタンスフィールド
 
-プライベートインスタンスフィールドは **# 名** (*ハッシュ名*と読む) で宣言され、これは `#` の接頭辞が付いた識別子です。この `#` は名前の一部で、宣言やアクセスにも使われます。プライベートフィールドはクラスのコンストラクターー上でクラス定義自身の中から参照できます。フィールド名の宣言や、フィールドの値へのアクセスに使用されます。
+プライベートインスタンスフィールドは **# 名** (*ハッシュ名*と読む) で宣言され、これは `#` の接頭辞が付いた識別子です。この `#` は名前の一部で、宣言やアクセスにも使われます。プライベートフィールドはクラスのコンストラクター上でクラス定義自身の中から参照できます。フィールド名の宣言や、フィールドの値へのアクセスに使用されます。
 
 スコープ外から `#` 名を参照すると構文エラーになります。また、呼び出される前に宣言されていないプライベートフィールドを参照したり、宣言されているフィールドを `delete` で削除しようとしても構文エラーになります。
 
@@ -59,7 +54,7 @@ const instance = new ClassWithPrivateField()
 instance.#privateField === 42;   // Syntax error
 ```
 
-> **Note:** [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用すると、プライベートフィールド (またはプライベートメソッド) が欠けているかどうかをチェックできます。そのプライベートフィールドが存在すれば `true` を返し、そうでなければ `false` を返します。
+> **メモ:** [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用すると、プライベートフィールド (またはプライベートメソッド) が欠けているかどうかをチェックできます。そのプライベートフィールドが存在すれば `true` を返し、そうでなければ `false` を返します。
 
 パブリックフィールドのように、プライベートフィールドは基底クラスの構築辞典、またはサブクラス内で `super()` が呼び出される場面で追加されます。
 

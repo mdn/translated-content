@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-underline-offset
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`text-underline-offset`** définit le décalage de la ligne de décoration du texte par rapport à sa position originale.

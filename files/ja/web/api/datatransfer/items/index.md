@@ -1,16 +1,8 @@
 ---
 title: DataTransfer.items
 slug: Web/API/DataTransfer/items
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.items
-translation_of: Web/API/DataTransfer/items
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{domxref("DataTransfer")}} インターフェイスの `items` プロパティは読み取り専用で、ドラッグ操作での{{domxref("DataTransferItem", "データ転送項目", "", 1)}}の{{domxref("DataTransferItemList", "リスト", "", 1)}}です。リストには操作中の項目ごとに 1 つの項目が含まれており、操作に項目がなかった場合はリストは空になります。

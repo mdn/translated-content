@@ -1,8 +1,8 @@
 ---
 title: VRStageParameters
 slug: Web/API/VRStageParameters
-translation_of: Web/API/VRStageParameters
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) の **`VRStageParameters`** インターフェイスは，ルームスケール体験に対応しているデバイス用にステージエリアを記述する値を表現しています．

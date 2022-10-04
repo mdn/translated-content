@@ -5,6 +5,7 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/Document/images
 ---
+
 {{ ApiRef() }}
 
 `document.images` renvoie une collection des images du document HTML courant.

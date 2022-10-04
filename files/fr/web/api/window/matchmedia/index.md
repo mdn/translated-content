@@ -3,6 +3,7 @@ title: window.matchMedia
 slug: Web/API/Window/matchMedia
 translation_of: Web/API/Window/matchMedia
 ---
+
 {{ApiRef}}
 
 Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats de la chaîne de caractères [media query](/fr/docs/CSS/Media_queries) spécifiée.
@@ -31,13 +32,11 @@ Voir [Utiliser les media queries avec du code](/fr/docs/DOM/Using_media_queries_
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}} | {{Spec2("CSSOM View")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.matchMedia")}}
+{{Compat}}
 
 ## Voir aussi
 

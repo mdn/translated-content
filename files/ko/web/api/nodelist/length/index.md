@@ -15,21 +15,25 @@ translation_of: Web/API/NodeList/length
 
 ### 구문
 
-    numItems =nodeList.length
+```js
+numItems =nodeList.length
+```
 
 - `numItems`은 `NodeList`의 항목수를 나타내는 정수값입니다.
 
 ### 예
 
-    // 문서의 모든 paragraph
-    var items = document.getElementsByTagName("p");
-    // 목록의 각 항목에,
-    // HTML의 문자열로 전체 요소를 추가
-    var gross = "";
-    for (var i = 0; i < items.length; i++) {
-      gross += items[i].innerHTML;
-    }
-    // gross는 이제 모두 paragraph을 위한 HTML
+```js
+// 문서의 모든 paragraph
+var items = document.getElementsByTagName("p");
+// 목록의 각 항목에,
+// HTML의 문자열로 전체 요소를 추가
+var gross = "";
+for (var i = 0; i < items.length; i++) {
+  gross += items[i].innerHTML;
+}
+// gross는 이제 모두 paragraph을 위한 HTML
+```
 
 ### 주의
 

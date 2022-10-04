@@ -15,7 +15,9 @@ translation_of: Web/API/Window/confirm
 
 ## 구문
 
-    result = window.confirm(message);
+```js
+result = window.confirm(message);
+```
 
 ### Parameters
 

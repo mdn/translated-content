@@ -3,6 +3,7 @@ title: 'Testez vos compétences : les contrôles de base'
 slug: Learn/Forms/Test_your_skills:_Basic_controls
 translation_of: Learn/Forms/Test_your_skills:_Basic_controls
 ---
+
 {{LearnSidebar}}
 
 Le but de cette évaluation est de vérifier que vous avez compris [l'article sur les contrôles de formulaire natifs de base](/fr/docs/Learn/Forms/Basic_native_form_controls).

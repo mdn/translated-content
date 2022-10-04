@@ -7,6 +7,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/response
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle peut être de type ArrayBuffer, Blob, Document, un objet JavaScript ou une DOMString en fonction de la valeur de la propriété `XMLHttpRequest.responseType`. La réponse ( `Value of response` ) est nulle si la requête est incomplète ou n'as pas été effectué avec succès. Cependant, si `responseType` est "text" ou une chaine vide et tant que la requête est en cours ( dans l'état _loading_ ), `response` peut contenir la réponse partielle.
@@ -127,15 +128,13 @@ function load(url, callback) {
 }
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                | Status                               | Comment                |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-response-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## Voir aussi
 

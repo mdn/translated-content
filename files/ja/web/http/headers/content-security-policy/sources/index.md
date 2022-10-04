@@ -1,16 +1,8 @@
 ---
-title: 'CSP ソース値'
+title: CSP ソース値
 slug: Web/HTTP/Headers/Content-Security-Policy/Sources
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - source
-translation_of: Web/HTTP/Headers/Content-Security-Policy/Sources
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) ヘッダーディレクティブで、リソースを読み込むための `<source>` を指定する場合、以下の一覧のいずれかを使用することができます。
@@ -65,7 +57,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) ヘッダーディレ�
     例えば[安全でないインラインスクリプト](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script)を参照してください。
     ノンスを指定すると、最近のブラウザーは、ノンスの対応がない古いブラウザーのために設定されている可能性がある `'unsafe-inline'` を無視するようになります。
 
-    > **Note:** CSP の `nonce` ソースは _ノンス指定可能_ な要素にのみ適用できます（例えば {{HTMLElement("img")}} 要素には `nonce` 属性がないので、この CSP ソースに関連付ける方法はありません）。
+    > **メモ:** CSP の `nonce` ソースは _ノンス指定可能_ な要素にのみ適用できます（例えば {{HTMLElement("img")}} 要素には `nonce` 属性がないので、この CSP ソースに関連付ける方法はありません）。
 
 - `'<hash-algorithm>-<base64-value>'`
   - : スクリプトまたはスタイルの sha256, sha384, sha512 の何れかのハッシュです。このソースは、ハッシュを生成するために使用する暗号化アルゴリズムと、スクリプトまたはスタイルのハッシュを base64 でエンコードしたものの二つの部分をダッシュで区切ったもので構成されます。ハッシュを生成するときは、 \<script> または \<style> タグを含めないようにし、大文字・小文字の区別と、ホワイトスペースの扱い（先頭や末尾のホワイトスペースを含む）に注意してください。

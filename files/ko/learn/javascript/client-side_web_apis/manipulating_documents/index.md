@@ -1,10 +1,6 @@
 ---
 title: JavaScript
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-tags:
-  - CSS:Getting_Started
-translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-translation_of_original: Web/Guide/CSS/Getting_started/JavaScript
 original_slug: Web/CSS/Getting_Started/JavaScript
 ---
 이 페이지는 입문서의 II 부입니다. II 부는 모질라에서의 CSS의 범위(scope)를 보여주는 예제들을 포함하고 있습니다.
@@ -34,7 +30,7 @@ _프로그래밍 언어_
 
 새로은 HTML 문서 `doc5.html`를 만드세요. 아래의 내용물을 복사해서 붙여넣되 스크롤해서 전체를 다 넣을 수 있도록 하세요:
 
-```
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
 <HTML>
 
@@ -57,7 +53,7 @@ _프로그래밍 언어_
 
 새로운 CSS 파일 `style5.css`을 만드세요. 아래의 내용물을 복사해서 붙여넣으세요:
 
-```
+```css
 /*** JavaScript demonstration ***/
 #square {
   width: 20em;
@@ -73,7 +69,7 @@ button {
 
 새로운 텍스트 파일 `script5.js`을 만드세요. 아래의 내용물을 복사해서 붙여넣으세요:
 
-```
+```js
 // JavaScript demonstration
 function doDemo (button) {
   var square = document.getElementById("square")
@@ -101,7 +97,7 @@ function clearDemo (button) {
           <tbody>
             <tr>
               <td>
-                <p><b>JavaScript demonstration</b></p>
+                <p><strong>JavaScript demonstration</strong></p>
                 <div
                   style="
                     width: 5em;
@@ -130,7 +126,7 @@ function clearDemo (button) {
           <tbody>
             <tr>
               <td>
-                <p><b>JavaScript demonstration</b></p>
+                <p><strong>JavaScript demonstration</strong></p>
                 <div
                   style="
                     width: 5em;

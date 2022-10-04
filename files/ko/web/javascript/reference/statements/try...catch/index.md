@@ -36,9 +36,9 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
 
 try 선언의 구성은 하나 혹은 그 이상의 선언을 포함한 try 블록 및 catch 항목이나 finally 항목 중 최소한 하나 혹은 둘 다 포함하여 이루어진다. 즉, try 선언에는 세 가지 형식이 존재한다.
 
-1.  `try...catch`
-2.  `try...finally`
-3.  `try...catch...finally`
+1. `try...catch`
+2. `try...finally`
+3. `try...catch...finally`
 
 `catch` 블록은 `try` 블록 안에서 예외가 발생(throw)하는 경우 무엇을 할지 명시하는 코드를 포함합니다. `try` 블록 (또는 `try` 블록 내에서 호출된 함수) 내의 명령문이 예외를 throw 하면 제어가 `catch` 블록으로 이동합니다. `try` 블록에 예외가 발생하지 않으면 `catch` 블록을 건너뜁니다.
 

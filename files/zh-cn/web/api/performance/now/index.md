@@ -2,6 +2,7 @@
 title: Performance.now()
 slug: Web/API/Performance/now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 **`performance.now()`**方法返回一个精确到毫秒的 {{domxref("DOMHighResTimeStamp")}} 。
@@ -29,7 +30,7 @@ const t = window.performance.now();
 const t0 = window.performance.now();
 doSomething();
 const t1 = window.performance.now();
-console.log("doSomething 函数执行了" + (t1 - t0) + "毫秒.")
+console.log("doSomething 函数执行了" + (t1 - t0) + "毫秒。")
 ```
 
 和 JavaScript 中其他可用的时间类函数（比如[`Date.now`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now)）不同的是，`window.performance.now()`返回的时间戳没有被限制在一毫秒的精确度内，相反，它们以浮点数的形式表示时间，精度最高可达微秒级。
@@ -75,7 +76,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.now")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -6,6 +6,7 @@ browser-compat: css.at-rules.scroll-timeline
 l10n:
   sourceCommit: cfeaf30adb94aef219b0f8ec793739607b9db291
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/At-rule) CSS **`@scroll-timeline`** définit une chronologie [`AnimationTimeline`](/fr/docs/Web/API/AnimationTimeline) dont les valeurs temporelles sont déterminées par le défilement dans un conteneur de défilement plutôt que par des minutes ou des secondes. Une fois définie, une chronologie de défilement (<i lang="en">scroll timeline</i> en anglais) est associée à une [animation CSS](/fr/docs/Web/CSS/CSS_Animations) grâce à la propriété `animation-timeline`.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/concat
 ---
+
 {{JSRef}}
 
 La méthode **`concat()`** combine le texte de plusieurs chaînes avec la chaîne appelante et renvoie la nouvelle chaîne ainsi formée.

@@ -1,21 +1,8 @@
 ---
 title: '<aside>: 余談要素'
 slug: Web/HTML/Element/aside
-tags:
-  - Element
-  - HTML
-  - HTML セクション
-  - HTML5
-  - HTML:フローコンテンツ
-  - HTML:区分コンテンツ
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - Web
-  - ウェブ
-  - リファレンス
-  - 要素
-translation_of: Web/HTML/Element/aside
 ---
+
 {{HTMLRef}}
 
 **HTML の `<aside>` 要素**は、文書のメインコンテンツと間接的な関係しか持っていない文書の部分を表現します。サイドバーやコールアウトボックスなどを表現するためによく使われます。

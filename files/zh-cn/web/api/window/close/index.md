@@ -2,6 +2,7 @@
 title: Window.close()
 slug: Web/API/Window/close
 ---
+
 {{APIRef}}
 
 **`Window.close()`** 方法关闭当前窗口或某个指定的窗口。
@@ -51,4 +52,4 @@ function closeCurrentWindow() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.close")}}
+{{Compat}}

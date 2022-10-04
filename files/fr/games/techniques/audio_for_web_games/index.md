@@ -9,6 +9,7 @@ tags:
   - audio sprites
 translation_of: Games/Techniques/Audio_for_Web_Games
 ---
+
 {{GamesSidebar}}
 
 L'audio représente une chose essentielle dans n'importe quel jeu vidéo; il apporte de l'information et contribue à l'atmosphère du jeu. La prise en charge de l'audio a évolué de manière rapide mais il reste encore beaucoup de différences de prise en charge entre les navigateurs. Nous avons souvent besoin de décider quelles parties de notre contenu audio est intéressant et laquelle ne l'est pas, et mettre en place une stratégie en conséquence. Cet article fournit un guide détaillé sur l'implémentation de l'audio dans les jeux HTML5, détaillant quels choix technologiques fonctionneront sur le plus grand nombre de navigateurs.
@@ -349,7 +350,7 @@ Ceci est particulièrement utile dans un environnement tridimensionnel rendu en 
 
 > **Note :** Voir [Web Audio API Spatialization Basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) _(Bases de la spacialisation de l'API Web Audio)_ pour plus de détails.
 
-## See Also
+## Voir aussi
 
 - [Web Audio API sur MDN](/fr/docs/Web/API/Web_Audio_API)
 - [`<audio>` sur MDN](/fr/docs/Web/HTML/Element/audio)

@@ -1,16 +1,8 @@
 ---
 title: PannerNode
 slug: Web/API/PannerNode
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PannerNode
-  - Reference
-  - Web Audio API
-browser-compat: api.PannerNode
-translation_of: Web/API/PannerNode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `PannerNode` は音源の空間上の位置と振る舞いを表現したインターフェイスで、{{domxref("AudioNode")}} の一種です。右手直交座標系に従って位置を表し、音源の動きは速度ベクトルと、向きを表すサウンドコーンを利用して表現します。
@@ -55,7 +47,7 @@ translation_of: Web/API/PannerNode
 
 _親である {{domxref("AudioNode")}} からプロパティを継承しています。_
 
-> **Note:** 向きと位置の設定と取得は異なる方法で行います。これは、これらの値が {{domxref("AudioParam")}} として保存されてるためです。値の取得は  `PannerNode.positionX` のように行えますが、同じ属性に対して値を設定するには `PannerNode.positionX.value` のように行います。そのため、これらの値は、WebIDL にあるように、読み取り専用とは定義されていません。
+> **メモ:** 向きと位置の設定と取得は異なる方法で行います。これは、これらの値が {{domxref("AudioParam")}} として保存されてるためです。値の取得は  `PannerNode.positionX` のように行えますが、同じ属性に対して値を設定するには `PannerNode.positionX.value` のように行います。そのため、これらの値は、WebIDL にあるように、読み取り専用とは定義されていません。
 
 - {{domxref("PannerNode.coneInnerAngle")}}
   - : 倍精度実数値で、円錐の角度を度単位で記述し、その内側では容量が減少しません。

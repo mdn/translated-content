@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.clearColor()
 slug: Web/API/WebGLRenderingContext/clearColor
-translation_of: Web/API/WebGLRenderingContext/clearColor
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.clearColor()`** メソッドは、カラーバッファーの消去に使われる色の値を指定します。

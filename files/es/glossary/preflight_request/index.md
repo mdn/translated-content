@@ -12,19 +12,23 @@ Las peticiones preflight se lanzan automáticamente desde el navegador cuando so
 
 Por ejemplo, un cliente puede preguntar si el servidor permite una petición {{HTTPMethod("DELETE")}} antes de enviar la petición `DELETE` usando una petición preflight:
 
-    OPTIONS /resource/foo
-    Access-Control-Request-Method: DELETE
-    Access-Control-Request-Headers: origin, x-requested-with
-    Origin: https://foo.bar.org
+```
+OPTIONS /resource/foo
+Access-Control-Request-Method: DELETE
+Access-Control-Request-Headers: origin, x-requested-with
+Origin: https://foo.bar.org
+```
 
 Si el servidor lo permite responderá a la petición preflight con una cabecera de respuesta {{HTTPHeader("Access-Control-Allow-Methods")}} que incluirá el método `DELETE`:
 
-    HTTP/1.1 200 OK
-    Content-Length: 0
-    Connection: keep-alive
-    Access-Control-Allow-Origin: https://foo.bar.org
-    Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
-    Access-Control-Max-Age: 86400
+```
+HTTP/1.1 200 OK
+Content-Length: 0
+Connection: keep-alive
+Access-Control-Allow-Origin: https://foo.bar.org
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Max-Age: 86400
+```
 
 ## See also
 

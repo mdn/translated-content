@@ -1,16 +1,8 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-tags:
-  - クラス
-  - ECMAScript 2015
-  - JavaScript
-  - 言語機能
-  - 左辺式
-  - 演算子
-browser-compat: javascript.operators.super
-translation_of: Web/JavaScript/Reference/Operators/super
 ---
+
 {{jsSidebar("Operators")}}
 
 **super** キーワードは、オブジェクトの親の関数を呼び出すために使用できます。

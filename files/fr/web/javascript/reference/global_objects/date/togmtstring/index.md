@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toGMTString
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 La méthode **`toGMTString()`** convertit une date en une chaîne de caractères, en utilisant les conventions Internet pour GMT. Le format exact de la valeur renvoyée par `toGMTString()` varie en fonction de la plateforme et du navigateur web. En général, le texte produit est formaté pour être lisible par un humain.

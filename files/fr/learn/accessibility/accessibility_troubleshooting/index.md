@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Accessibility/Accessibility_troubleshooting
 original_slug: Apprendre/a11y/Accessibility_troubleshooting
 ---
+
 {{LearnSidebar}}
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 

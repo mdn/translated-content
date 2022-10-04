@@ -1,13 +1,8 @@
 ---
 title: Node.nodeType
 slug: Web/API/Node/nodeType
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.nodeType
-translation_of: Web/API/Node/nodeType
 ---
+
 {{APIRef("DOM")}}
 
 **`nodeType`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティであり、整数値でこのノードがなんであるかを識別します。これは様々なノードの種類、例えば {{domxref("Element", "elements")}}, {{domxref("Text", "text")}}, {{domxref("Comment", "comments")}} を見分けます。
@@ -33,7 +28,7 @@ translation_of: Web/API/Node/nodeType
 - `Node.DOCUMENT_TYPE_NODE` (`10`)
   - : `<!DOCTYPE html>` のような {{domxref("DocumentType")}} ノードです。
 - `Node.DOCUMENT_FRAGMENT_NODE` (`11`)
-  - : A {{domxref("DocumentFragment")}} node.
+  - : {{domxref("DocumentFragment")}} ノードです。
 
 `Node.ENTITY_REFERENCE_NODE` (`5`), `Node.ENTITY_NODE` (`6`), `Node.NOTATION_NODE` (`12`) は非推奨になっており、使用されなくなっています。
 

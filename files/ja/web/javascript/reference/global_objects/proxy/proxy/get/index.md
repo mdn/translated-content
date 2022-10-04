@@ -1,13 +1,8 @@
 ---
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
+
 {{JSRef}}
 
 **`handler.get()`** はプロパティの値を取得することに対するトラップです。

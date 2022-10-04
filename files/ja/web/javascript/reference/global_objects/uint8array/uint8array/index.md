@@ -1,13 +1,8 @@
 ---
 title: Uint8Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
 ---
+
 {{JSRef}}
 
 **`Uint8Array()`** は型付き配列のコンストラクターで、 8 ビット符号なし整数値の配列を生成します。中身は `0` で初期化されます。生成されると、配列の中の要素はオブジェクトのメソッドを使用するか、配列の標準的な添字の構文を使用するか (すなわち、ブラケット構文を使用するか) して参照することができます。

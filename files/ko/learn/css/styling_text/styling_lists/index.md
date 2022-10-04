@@ -1,7 +1,6 @@
 ---
 title: 목록 스타일링
 slug: Learn/CSS/Styling_text/Styling_lists
-translation_of: Learn/CSS/Styling_text/Styling_lists
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
@@ -133,8 +132,6 @@ dd {
 - Rules 2 and 3 set relative font sizes for the headings, different list types (the children of the list elements inherit these), and paragraphs. This means that each paragraph and list will have the same font size and top and bottom spacing, helping to keep the vertical rhythm consistent.
 - Rule 4 sets the same {{cssxref("line-height")}} on the paragraphs and list items — so the paragraphs and each individual list item will have the same spacing between lines. This will also help to keep the vertical rhythm consistent.
 - Rules 5 and 6 apply to the description list — we set the same `line-height` on the description list terms and descriptions as we did with the paragraphs and list items. Again, consistency is good! We also make the description terms have bold font, so they visually stand out easier.
-
-  <span id="cke_bm_126E" class="hidden"></span>
 
 ## List-specific styles
 
@@ -304,10 +301,10 @@ Gives you this output:
 
 In this active learning session, we want you to take what you've learned above and have a go at styling a nested list. We've provided you with the HTML, and we want you to:
 
-1.  Give the unordered list square bullets.
-2.  Give the unordered list items and the ordered list items a line height of 1.5 of their font-size.
-3.  Give the ordered list lower alphabetical bullets.
-4.  Feel free to play with the list example as much as you like, experimenting with bullet types, spacing, or whatever else you can find.
+1. Give the unordered list square bullets.
+2. Give the unordered list items and the ordered list items a line height of 1.5 of their font-size.
+3. Give the ordered list lower alphabetical bullets.
+4. Feel free to play with the list example as much as you like, experimenting with bullet types, spacing, or whatever else you can find.
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see a potential answer.
 

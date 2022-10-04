@@ -1,19 +1,8 @@
 ---
 title: AudioTrack
 slug: Web/API/AudioTrack
-page-type: web-api-interface
-tags:
-  - Audio
-  - AudioTrack
-  - HTML
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - track
-browser-compat: api.AudioTrack
-translation_of: Web/API/AudioTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`AudioTrack`** インターフェイスは、 HTML のメディア要素（{{HTMLElement("audio")}} または {{HTMLElement("video")}}）のいずれかにある単一の音声トラックを表します。

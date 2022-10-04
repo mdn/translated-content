@@ -7,9 +7,9 @@ translation_of: Glossary/MVC
 
 Las tres partes del patrón de diseño de software MVC se pueden describir de la siguiente manera:
 
-1.  Modelo: Maneja datos y lógica de negocios.
-2.  Vista: Se encarga del diseño y presentación.
-3.  Controlador: Enruta comandos a los modelos y vistas.
+1. Modelo: Maneja datos y lógica de negocios.
+2. Vista: Se encarga del diseño y presentación.
+3. Controlador: Enruta comandos a los modelos y vistas.
 
 ## Modelo Vista Controlador ejemplo
 

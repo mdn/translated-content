@@ -8,6 +8,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/isBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.isBuffer()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) renvoie `true` si le {{domxref ("WebGLBuffer")}} passé est valide et `false` dans le cas contraire.
@@ -41,31 +42,11 @@ gl.isBuffer(tampon);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.5", "isBuffer")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glIsBuffer.xml", "glIsBuffer")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL.</p></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.isBuffer")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/User_actions
 ---
+
 {{AddonSidebar}}
 
 Certaines API WebExtension exécutent des fonctions qui sont généralement exécutées à la suite d'une action utilisateur. Par exemple:

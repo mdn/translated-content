@@ -18,7 +18,9 @@ translation_of: Web/API/Window/pageYOffset
 
 ## 구문
 
-    yOffset = window.pageYOffset;
+```js
+yOffset = window.pageYOffset;
+```
 
 ### 값
 

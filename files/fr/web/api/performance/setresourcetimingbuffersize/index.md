@@ -9,6 +9,7 @@ tags:
   - Performance web
 translation_of: Web/API/Performance/setResourceTimingBufferSize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La méthode **`setResourceTimingBufferSize()`** définit la taille du tampon mémoire du navigateur dans lequel sont stockés les objets de mesures de performance de type `"resource"` (voir {{domxref("PerformanceEntry.entryType", "entryType")}}).
@@ -52,10 +53,8 @@ function setResourceTimingBufferSize(maxSize) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performance-setresourcetimingbuffersize', 'setResourceTimingBufferSize()')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.setResourceTimingBufferSize")}}
+{{Compat}}

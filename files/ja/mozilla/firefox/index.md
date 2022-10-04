@@ -1,12 +1,8 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-tags:
-  - Firefox
-  - Landing
-  - Mozilla
-translation_of: Mozilla/Firefox
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox](https://www.mozilla.org/ja/firefox/) は Mozilla のポピュラーな Web ブラウザで、デスクトップ上の Windows、OS X、Linux、そしてすべての Android および iOS モバイルデバイスを含む複数のプラットフォームで利用できます。幅広い互換性、最新の Web 技術、強力な開発ツールにより、Firefox は Web 開発者とエンドユーザーの両方にとって最適な選択肢です。

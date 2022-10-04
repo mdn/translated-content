@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/CSS
 original_slug: Glossaire/CSS
 ---
+
 **CSS** (_Cascading Style Sheets_ ou _Feuilles de style en cascade_ en français) est un langage déclaratif utilisé pour décrire la présentation de pages web dans le {{glossary("Browser","navigateur")}}. Le navigateur applique les déclarations de style CSS aux éléments concernés pour les mettre en forme. Une déclaration de style contient des propriétés et leurs valeurs et détermine l'apparence d'un ou plusieurs éléments de la page.
 
 CSS est l'une des trois technologies qui constituent le noyau du web, avec {{Glossary("HTML")}} et {{Glossary("JavaScript")}}. Ce langage est principalement utilisé pour appliquer un style aux {{Glossary("Element","éléments HTML")}}, mais peut aussi être utilisé avec d'autres langages de balisage tels que {{Glossary("SVG")}} ou encore {{Glossary("XML")}}.
@@ -31,7 +32,7 @@ p {
 
 Le principe de « cascade » fait référence aux règles de préséance dans l'application des divers {{Glossary("CSS Selector","sélecteurs")}} pointant le même élément de la page. C'est une fonctionnalité particulièrement importante dans la mesure où un site web complexe peut contenir des milliers de règles CSS.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
@@ -43,6 +44,6 @@ Le principe de « cascade » fait référence aux règles de préséance dans l'
 - [Documentation CSS sur MDN](/fr/docs/Web/CSS)
 - [Les travaux en cours du Groupe de travail CSS](http://www.w3.org/Style/CSS/current-work) (en)
 
-### En apprendre plus sur CSS
+### Voir aussi
 
 - [Cours en ligne sur codecademy.com](http://www.codecademy.com/fr/tracks/web)

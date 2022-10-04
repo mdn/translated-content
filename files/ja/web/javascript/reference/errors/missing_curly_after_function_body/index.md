@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: missing } after function body'
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing } after function body" は、どこかで関数を作成するときに構文の間違いがある場合に発生します。閉じる中括弧や括弧が正しい順序で並んでいるか確認してください。

@@ -1,11 +1,8 @@
 ---
 title: EXSLT
 slug: Web/EXSLT
-tags:
-  - EXSLT
-  - Landing
-translation_of: Web/EXSLT
 ---
+
 EXSLT は [XSLT](/ja/docs/Web/XSLT) に対する一連の拡張機能です。いくつものモジュールがあります。 Firefox が対応しているものは以下の通りです。
 
 {{SubpagesWithSummaries}}

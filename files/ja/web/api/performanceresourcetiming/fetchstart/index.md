@@ -1,13 +1,8 @@
 ---
 title: PerformanceResourceTiming.fetchStart
 slug: Web/API/PerformanceResourceTiming/fetchStart
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/fetchStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`fetchStart`** 読み取り専用プロパティは、ブラウザーがリソースの取得を開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を表します。

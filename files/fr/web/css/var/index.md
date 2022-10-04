@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/var()
 original_slug: Web/CSS/var()
 ---
+
 {{CSSRef}}
 
 La fonction **`var()`** peut être utilisée à la place d'une valeur pour n'importe quelle propriété d'un élément. Elle permet d'insérer la valeur d'[une propriété personnalisée (custom property)](/fr/docs/Web/CSS/--*).
@@ -63,13 +64,11 @@ body {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Variables', '#using-variables', 'var()')}} | {{Spec2('CSS3 Variables')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.custom-property.var")}}
+{{Compat}}
 
 ## Voir aussi
 

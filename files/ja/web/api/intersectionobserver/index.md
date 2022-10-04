@@ -1,17 +1,8 @@
 ---
 title: IntersectionObserver
 slug: Web/API/IntersectionObserver
-tags:
-  - API
-  - Experimental
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - インターフェイス
-  - リファレンス
-  - 実験的
-translation_of: Web/API/IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 [Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API) の **`IntersectionObserver`** インターフェイスは、対象の要素と祖先要素または文書の最上位の{{Glossary('viewport', 'ビューポート')}}との交差状態の変化を非同期に監視する方法を提供します。祖先要素またはビューポートがルートとして参照されます。

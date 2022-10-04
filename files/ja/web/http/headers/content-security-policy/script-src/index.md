@@ -1,23 +1,11 @@
 ---
 title: 'CSP: script-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src
-tags:
-  - CSP
-  - Content
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Script
-  - Security
-  - script-src
-  - source
-browser-compat: http.headers.Content-Security-Policy.script-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src
 ---
+
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`script-src`** ディレクティブは、 JavaScript の情報なソースを指定します。これは {{HTMLElement("script")}} 要素の中に直接読み込まれる URL だけでなく、インラインのスクリプトイベントハンドラー (`onclick`) やスクリプト実行のトリガーとなりうる [XSLT スタイルシート](/en-US/docs/Web/XSLT)のようなものも含まれます。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`script-src`** ディレクティブは、 JavaScript の情報なソースを指定します。これは {{HTMLElement("script")}} 要素の中に直接読み込まれる URL だけでなく、インラインのスクリプトイベントハンドラー (`onclick`) やスクリプト実行のトリガーとなりうる [XSLT スタイルシート](/ja/docs/Web/XSLT)のようなものも含まれます。
 
 <table class="properties">
   <tbody>
@@ -83,7 +71,7 @@ document.getElementById("btn").addEventListener('click', doSomething);
 
 ### 安全ではないインラインのスクリプト
 
-> **Note:** インラインスタイルとインラインスクリプトを禁止することは、 CSP が提供する最大のセキュリティ上の利点の一つです。しかし、どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。
+> **メモ:** インラインスタイルとインラインスクリプトを禁止することは、 CSP が提供する最大のセキュリティ上の利点の一つです。しかし、どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。
 
 インラインスクリプトとインラインのイベントハンドラーを許可するために `'unsafe-inline'` や、インラインブロックに一致するノンスソースまたはハッシュソースを指定することができます。
 

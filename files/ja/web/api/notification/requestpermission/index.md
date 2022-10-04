@@ -1,20 +1,11 @@
 ---
 title: Notification.requestPermission()
 slug: Web/API/Notification/requestPermission
-page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - Notification
-  - Notifications
-  - Notifications API
-  - Reference
-browser-compat: api.Notification.requestPermission
-translation_of: Web/API/Notification/requestPermission
 ---
+
 {{APIRef("Web Notifications")}}{{securecontext_header}}
 
-> **Note:** Safari はまだ、許可を得るのにコールバック構文を使用します。適切に機能を検出してコードを実行する方法の良い例として、[通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)をご覧ください。
+> **メモ:** Safari はまだ、許可を得るのにコールバック構文を使用します。適切に機能を検出してコードを実行する方法の良い例として、[通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)をご覧ください。
 
 **`requestPermission()`** は {{domxref("Notification")}} インターフェイスのメソッドで、ユーザーに現在のオリジンが通知を表示することを許可するよう要求します。
 
@@ -81,7 +72,7 @@ function notifyMe() {
 
 このページでライブ例を公開するのはやめました。 Chrome や Firefox が別オリジンの {{htmlelement("iframe")}} から要求された通知の許可をしないようになり、その他のブラウザーも従っているからです。動作する例を見る場合は、 [To-do リストの例](https://github.com/mdn/to-do-notifications/tree/gh-pages) (また、[ライブで動作するアプリ](https://mdn.github.io/to-do-notifications/)) を参照してください。
 
-> **Note:** 上記の例では、通知をユーザーの操作（ボタンのクリック）から起動しました。ユーザーが同意していない通知でユーザーに迷惑をかけるべきではないので、これはベストプラクティスであるだけでなく、今後ブラウザーはユーザーの操作によって起動されたものではない通知の許可の要求を明示的に拒否するようになるでしょう。例えば、 Firefox はバージョン 72 からすでにこれを行っており、 Safari もしばらく前からこれを行っています。
+> **メモ:** 上記の例では、通知をユーザーの操作（ボタンのクリック）から起動しました。ユーザーが同意していない通知でユーザーに迷惑をかけるべきではないので、これはベストプラクティスであるだけでなく、今後ブラウザーはユーザーの操作によって起動されたものではない通知の許可の要求を明示的に拒否するようになるでしょう。例えば、 Firefox はバージョン 72 からすでにこれを行っており、 Safari もしばらく前からこれを行っています。
 
 ## 仕様書
 

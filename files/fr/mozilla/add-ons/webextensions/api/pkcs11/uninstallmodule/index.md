@@ -12,6 +12,7 @@ tags:
   - uninstallModule
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/uninstallModule
 ---
+
 {{AddonSidebar()}}
 
 Désinstalle le module PKCS #11 nommé de Firefox.

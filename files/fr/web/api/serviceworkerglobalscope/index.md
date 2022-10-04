@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/ServiceWorkerGlobalScope
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/fr/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.
@@ -111,17 +112,15 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                        | Status                               | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Service Workers', '#serviceworkerglobalscope-interface', 'ServiceWorkerGlobalScope')}} | {{Spec2('Service Workers')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerGlobalScope")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - [Using Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)

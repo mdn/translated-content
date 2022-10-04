@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/loadEventEnd
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`loadEventEnd`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) qui est égal à l'heure à laquelle l'événement de chargement du document actuel est terminé.
@@ -54,10 +55,8 @@ function print_nav_timing_data() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing Level 2', '#dom-performancenavigationtiming-loadeventend', 'loadEventEnd')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceNavigationTiming.loadEventEnd")}}
+{{Compat}}

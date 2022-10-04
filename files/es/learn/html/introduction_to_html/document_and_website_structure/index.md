@@ -241,7 +241,7 @@ Sin el elemento {{HTMLElement("br")}}, todo el párrafo se habría presentado co
 
 {{EmbedLiveSample('line-break-live-sample', '100%', '125px', '', '', 'hide-codepen-jsfiddle')}}
 
-##
+## Ejemplo
 
 Los elementos {{HTMLElement("hr")}} generan una regla horizontal en el documento que denota un cambio en la temática del texto (como un cambio de tema o de escena). Visualmente tiene el aspecto de una línea horizontal. Por ejemplo:
 
@@ -259,11 +259,25 @@ Quedará así:
 
 Una vez has planificado el contenido de una página web sencilla, el paso lógico siguiente es intentar trabajar en el contenido para todo el sitio web, las páginas que necesitas y la forma de disponer las conexiones entre ellas para producir la mejor experiencia de usuario a los visitantes. Esto se conoce con el nombre de ({{Glossary("Arquitectura de la información")}}). Una web grande y compleja necesitará mucha planificación, pero para una web sencilla compuesta por unas cuantas páginas, el proceso puede ser sencillo, ¡y divertido!.
 
-1.  Ten en cuenta que habrá varios elementos comunes en muchas (si no en todas las) páginas, tal como el menú de navegación y el contenido del pie de página. Si la web está dedicada a un negocio, por ejemplo, sería una buena idea disponer de la información de contacto en el pie de página en todas las páginas. Anota lo que deseas tener en común en cada página. ![las características comunes del sitio de viajes para ir en cada página: título y logotipo, contacto, derechos de autor, términos y condiciones, selección de idioma, política de accesibilidad](https://mdn.mozillademos.org/files/12423/common-features.png)
-2.  A continuación, esboza un esquema sencillo de cuál podría ser la estructura deseada de la apariencia de cada página (podría ser algo tan sencillo como el siguiente dibujo). Anota los bloques principales. ![Un diagrama simple de una estructura de sitio de ejemplo, con un encabezado, un área de contenido principal, dos barras laterales opcionales y un pie de página](https://mdn.mozillademos.org/files/12429/site-structure.png)
-3.  Ahora, elabora una lista completa con todo el resto del contenido de tu sitio web que no sea común a todas las páginas. ![Una larga lista de todas las funciones que podrías incluir en tu sitio de viajes, desde buscar, hasta ofertas especiales e información específica del país](https://mdn.mozillademos.org/files/12425/feature-list.png)
-4.  A continuación, trata de ordenar todo este contenido por grupos, para hacerte una idea de las partes que podrían ir juntas en las diferentes páginas. Esto es muy similar a una técnica llamada {{Glossary("Clasificación de tarjetas")}}. ![Los elementos que deberían aparecer en un sitio de vacaciones ordenados en 5 categorías: Búsqueda, Especiales, Información específica del país, Resultados de búsqueda y Compra cosas](https://mdn.mozillademos.org/files/12421/card-sorting.png)
-5.  Ahora trata de esquematizar un mapa de tu sitio — dibuja un globo para cada página de tu sitio web y dibuja líneas que identifiquen el flujo de datos entre las distintas páginas. La página de inicio normalmente estará ubicada en el centro y enlazará con el resto de páginas; la mayoría de las páginas de una web sencilla estarán enlazadas desde el menú de navegación principal, aunque puede haber excepciones. También puedes incluir notas sobre cómo se pueden presentar las cosas. ![Un mapa del sitio que muestra la página de inicio, la página del país, los resultados de búsqueda, la página de ofertas especiales, la página de pago y la página de compra](https://mdn.mozillademos.org/files/12427/site-map.png)
+1. Ten en cuenta que habrá varios elementos comunes en muchas (si no en todas las) páginas, tal como el menú de navegación y el contenido del pie de página. Si la web está dedicada a un negocio, por ejemplo, sería una buena idea disponer de la información de contacto en el pie de página en todas las páginas. Anota lo que deseas tener en común en cada página.
+
+   ![las características comunes del sitio de viajes para ir en cada página: título y logotipo, contacto, derechos de autor, términos y condiciones, selección de idioma, política de accesibilidad](https://mdn.mozillademos.org/files/12423/common-features.png)
+
+2. A continuación, esboza un esquema sencillo de cuál podría ser la estructura deseada de la apariencia de cada página (podría ser algo tan sencillo como el siguiente dibujo). Anota los bloques principales.
+
+    ![Un diagrama simple de una estructura de sitio de ejemplo, con un encabezado, un área de contenido principal, dos barras laterales opcionales y un pie de página](https://mdn.mozillademos.org/files/12429/site-structure.png)
+
+3. Ahora, elabora una lista completa con todo el resto del contenido de tu sitio web que no sea común a todas las páginas.
+
+    ![Una larga lista de todas las funciones que podrías incluir en tu sitio de viajes, desde buscar, hasta ofertas especiales e información específica del país](https://mdn.mozillademos.org/files/12425/feature-list.png)
+
+4. A continuación, trata de ordenar todo este contenido por grupos, para hacerte una idea de las partes que podrían ir juntas en las diferentes páginas. Esto es muy similar a una técnica llamada {{Glossary("Clasificación de tarjetas")}}.
+
+    ![Los elementos que deberían aparecer en un sitio de vacaciones ordenados en 5 categorías: Búsqueda, Especiales, Información específica del país, Resultados de búsqueda y Compra cosas](https://mdn.mozillademos.org/files/12421/card-sorting.png)
+
+5. Ahora trata de esquematizar un mapa de tu sitio — dibuja un globo para cada página de tu sitio web y dibuja líneas que identifiquen el flujo de datos entre las distintas páginas. La página de inicio normalmente estará ubicada en el centro y enlazará con el resto de páginas; la mayoría de las páginas de una web sencilla estarán enlazadas desde el menú de navegación principal, aunque puede haber excepciones. También puedes incluir notas sobre cómo se pueden presentar las cosas.
+
+    ![Un mapa del sitio que muestra la página de inicio, la página del país, los resultados de búsqueda, la página de ofertas especiales, la página de pago y la página de compra](https://mdn.mozillademos.org/files/12427/site-map.png)
 
 ### Aprendizaje activo: Creación de un mapa del sitio web
 

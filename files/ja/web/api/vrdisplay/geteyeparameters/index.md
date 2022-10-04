@@ -1,27 +1,14 @@
 ---
 title: VRDisplay.getEyeParameters()
 slug: Web/API/VRDisplay/getEyeParameters
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getEyeParameters()
-browser-compat: api.VRDisplay.getEyeParameters
-translation_of: Web/API/VRDisplay/getEyeParameters
 original_slug: Web/API/VRDevice/getEyeParameters
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`getEyeParameters()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、指定された目の視線パラメーターを持つ {{domxref("VREyeParameters")}} オブジェクトを返します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 構文
 

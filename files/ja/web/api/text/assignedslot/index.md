@@ -1,12 +1,8 @@
 ---
 title: Text.assignedSlot
 slug: Web/API/Text/assignedSlot
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Text.assignedSlot
 ---
+
 {{APIRef("DOM")}}
 
 **`assignedSlot`** は {{domxref("Text")}} インターフェイスの読み取り専用プロパティで、要素に関連付けられた {{domxref("HTMLSlotElement")}} オブジェクトを返します。

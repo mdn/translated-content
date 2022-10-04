@@ -2,9 +2,10 @@
 title: History.replaceState()
 slug: Web/API/History/replaceState
 ---
+
 {{APIRef("DOM")}}
 
-`replaceState()`方法使用`state objects`, `title`,和 `URL` 作为参数， 修改当前历史记录实体，如果你想更新当前的 state 对象或者当前历史实体的 URL 来响应用户的的动作的话这个方法将会非常有用。
+`replaceState()`方法使用`state objects`, `title`,和 `URL` 作为参数，修改当前历史记录实体，如果你想更新当前的 state 对象或者当前历史实体的 URL 来响应用户的的动作的话这个方法将会非常有用。
 
 ## 语法
 
@@ -23,22 +24,22 @@ history.replaceState(stateObj, title[, url]);
 
 ## 例子
 
-假设 http\://mozilla.org/foo.html 执行下面的 JavaScript 代码：
+假设 `http://mozilla.org/foo.html` 执行下面的 JavaScript 代码：
 
 ```js
 var stateObj = { foo: "bar" };
 history.pushState(stateObj, "", "bar.html");
 ```
 
-上面这两行的解释可以在 "Example of pushState() method"这个章节找到。然后假设 http\://mozilla.org/bar.html 执行下面的 JavaScript 代码：
+上面这两行的解释可以在 "Example of pushState() method"这个章节找到。然后假设 `http://mozilla.org/bar.html` 执行下面的 JavaScript 代码：
 
 ```js
 history.replaceState(stateObj, "", "bar2.html");
 ```
 
-这会让 URL 栏显示 http\://mozilla.org/bar2.html，但是不会加载 `bar2.html` 页面，甚至不会检查 bar2.html 是否存在
+这会让 URL 栏显示 `http://mozilla.org/bar2.html`，但是不会加载 `bar2.html` 页面，甚至不会检查 bar2.html 是否存在
 
-假设用户跳转到 http\://www\.microsoft.com，然后点击返回按钮。这时，URL 栏将会显示 http\://mozilla.org/bar2.html 页面。如果用户此时点击返回按钮，URL 栏将会显示 http\://mozilla.org/foo.html 页面，最终绕过了 bar.html 页面。
+假设用户跳转到 `http://www.microsoft.com`，然后点击返回按钮。这时，URL 栏将会显示 `http://mozilla.org/bar2.html` 页面。如果用户此时点击返回按钮，URL 栏将会显示 `http://mozilla.org/foo.html` 页面，最终绕过了 bar.html 页面。
 
 ## 规范
 
@@ -46,4 +47,4 @@ history.replaceState(stateObj, "", "bar2.html");
 
 ## 浏览器兼容性
 
-{{Compat("api.History.replaceState")}}
+{{Compat}}

@@ -1,20 +1,8 @@
 ---
 title: TrackEvent.track
 slug: Web/API/TrackEvent/track
-tags:
-  - API
-  - Audio
-  - Event
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - TrackEvent
-  - Video
-  - track
-translation_of: Web/API/TrackEvent/track
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("TrackEvent")}} インターフェイスの読み取り専用の **`track`** プロパティは、イベントが適用されるメディアトラックオブジェクトを指定します。 これは {{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、または {{domxref("TextTrack")}} のオブジェクトになります。

@@ -3,6 +3,7 @@ title: Updating extensions for Firefox 3.1
 slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
 original_slug: Updating_extensions_for_Firefox_3.1
 ---
+
 この記事は、自分の拡張機能を Firefox 3.1 で正しく動作するよう更新しようとしている拡張機能開発者のために役立つ情報を提供します。
 
 ## 更新の基本
@@ -89,7 +90,7 @@ Firefox 3.1 では、これを以下のように書き換える必要があり�
 
 ## JSON
 
-JSON.jsm JavaScript モジュールは Firefox 3.1 では削除され、ネイティブの JSON オブジェクトサポートに置き換えられました。 詳しくは、[Firefox で JSON を使用する](/ja/Using_JSON_in_Firefox "/ja/Using JSON in Firefox") をご覧ください。JSON のより一般的な概要と、各種バージョンの Firefox で JSON を使う方法については、[JSON](/ja/JSON) のページからリンクされている記事を参照してください。
+JSON.jsm JavaScript モジュールは Firefox 3.1 では削除され、ネイティブの JSON オブジェクトサポートに置き換えられました。 詳しくは、[Firefox で JSON を使用する](/ja/Using_JSON_in_Firefox) をご覧ください。JSON のより一般的な概要と、各種バージョンの Firefox で JSON を使う方法については、[JSON](/ja/JSON) のページからリンクされている記事を参照してください。
 
 Firefox 3 と Firefox 3.1 の両方について互換性を確保するには、以下のように記述します。
 

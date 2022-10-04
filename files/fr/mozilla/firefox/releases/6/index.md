@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/6
 original_slug: Mozilla/Firefox/Versions/6
 ---
+
 1. Notes de versions pour développeurs
 
     1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
@@ -228,7 +229,7 @@ Les interfaces suivantes ont été supprimées car elles n'étaient plus indispe
 - [Utilisation des préférences à partir du code d'application](/fr/docs/Mozilla/Preferences/Using_preferences_from_application_code)
   - : Une nouvelle API statique est disponible pour accéder facilement aux préférences, ce n'est disponible que pour le code d'application et ne peut pas être utilisé par les modules complémentaires.
 
-## Voir également
+## Voir aussi
 
 - [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/5)
 - [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/4)

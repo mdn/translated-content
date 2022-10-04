@@ -1,18 +1,13 @@
 ---
 title: Node.childNodes
 slug: Web/API/Node/childNodes
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.childNodes
-translation_of: Web/API/Node/childNodes
 ---
+
 {{APIRef("DOM")}}
 
 **`childNodes`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティであり、{{domxref("NodeList")}} で指定された要素の子{{domxref("Node", "ノード", "", 1)}}の生きたリストを返し、最初の子ノードは位置 `0` に割り当てられます。子ノードには要素、テキスト、コメントが含まれます。
 
-> **Note:** {{domxref("NodeList")}} が生きたリストであるというのは、新しい子が追加されたり取り除かれたりするたびに、内容が変化するという意味です。
+> **メモ:** {{domxref("NodeList")}} が生きたリストであるというのは、新しい子が追加されたり取り除かれたりするたびに、内容が変化するという意味です。
 
 ノードのコレクションの項目はオブジェクトであり、文字列ではありません。ノードオブジェクトからデータを取得するには、そのプロパティを使用してください。例えば、最初の子ノードの名前を取得するには、 `elementNodeReference.childNodes[0].nodeName` を使うことで実現できます。
 
@@ -25,7 +20,7 @@ translation_of: Web/API/Node/childNodes
 
 このノードの子を含む生きた {{domxref("NodeList")}} です。
 
-> **Note:** `childNodes` を複数回呼び出しても、*同じ* {{domxref("NodeList")}} が返されます。
+> **メモ:** `childNodes` を複数回呼び出しても、*同じ* {{domxref("NodeList")}} が返されます。
 
 ## 例
 

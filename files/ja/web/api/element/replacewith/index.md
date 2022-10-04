@@ -3,6 +3,7 @@ title: Element.replaceWith()
 slug: Web/API/Element/replaceWith
 original_slug: Web/API/ChildNode/replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.replaceWith()`** メソッドは、この `Element` を親の子リストの中で一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトに置換します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。

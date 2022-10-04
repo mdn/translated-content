@@ -2,6 +2,7 @@
 title: Request()
 slug: Web/API/Request/Request
 ---
+
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
 **`Request()`** 构造器创建一个新的{{domxref("Request")}} 对象。
@@ -28,21 +29,21 @@ var myRequest = new Request(input[, init]);
 
   - : 一个可选对象，包含希望被包括到请求中的各种自定义选项。可用的选项如下：
 
-    - `method`: 请求的方法，例如：`GET`, `POST。`
+    - `method`: 请求的方法，例如：`GET`, `POST`。
     - `headers`: 任何你想加到请求中的头，其被放在{{domxref("Headers")}}对象或内部值为{{domxref("ByteString")}} 的对象字面量中。
     - `body`: 任何你想加到请求中的 body，可以是{{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}，或{{domxref("ReadableStream")}}对象。注意`GET` 和 `HEAD` 请求没有 body。
     - `mode`: 请求的模式，比如 `cors`, `no-cors`, `same-origin`, 或 `navigate`。默认值为 `cors`。
-    - `credentials`: 想要在请求中使用的 credentials：: `omit`, `same-origin`, 或 `include`。默认值应该为`omit`。但在 Chrome 中，Chrome 47 之前的版本默认值为 `same-origin` ，自 Chrome 47 起，默认值为`include。`
+    - `credentials`: 想要在请求中使用的 credentials：: `omit`, `same-origin`, 或 `include`。默认值应该为`omit`。但在 Chrome 中，Chrome 47 之前的版本默认值为 `same-origin` ，自 Chrome 47 起，默认值为 `include`。
     - `cache`: 请求中想要使用的 [cache mode](/zh-CN/docs/Web/API/Request/cache)
-    - `redirect`: 对重定向处理的模式： `follow`, `error`, or `manual`。在 Chrome 中，Chrome 47 之前的版本默认值为 `manual` ，自 Chrome 47 起，默认值为`follow。`
+    - `redirect`: 对重定向处理的模式： `follow`, `error`, or `manual`。在 Chrome 中，Chrome 47 之前的版本默认值为 `manual`，自 Chrome 47 起，默认值为 `follow`。
     - `referrer`: 一个指定了`no-referrer`, `client`, 或一个 URL 的 {{domxref("USVString")}} 。默认值是`about:client`。
     - `integrity`: 包括请求的 [subresource integrity](/zh-CN/docs/Web/Security/Subresource_Integrity) 值 (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 
 ## Errors
 
-| **Type**  | **Description**                                                                                                                                             |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TypeError | 自 [Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)后，若 URL 有 credentials，`Request()` 会抛出 TypeError , 例如 http\://user:password\@example.com。 |
+| **Type**  | **Description**                                                                                                                                              |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| TypeError | 自 [Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)后，若 URL 有 credentials，`Request()` 会抛出 TypeError , 例如 `http://user:password\@example.com`。 |
 
 ## Example
 
@@ -112,7 +113,7 @@ var myRequest = new Request('flowers.jpg', myInit);
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.Request")}}
+{{Compat}}
 
 ## 参见
 

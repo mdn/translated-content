@@ -1,14 +1,8 @@
 ---
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
-tags:
-  - Conditional Requests
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-translation_of: Web/HTTP/Headers/If-None-Match
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`If-None-Match`** リクエストヘッダーは、リクエストを条件付きにします。 {{HTTPMethod("GET")}} および {{HTTPMethod("HEAD")}} メソッドの場合、指定されたものの中に要求されたリソースの {{HTTPHeader("ETag")}} に一致するものがない場合のみ、サーバーはリソースを {{HTTPStatus("200")}} ステータスで返します。その他のメソッドの場合、最終的に存在するリソースの {{HTTPHeader("ETag")}} が列挙されたいずれの値とも一致しない場合にのみ処理します。
@@ -82,5 +76,5 @@ If-None-Match: *
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("304")}} `Not Modified`
+- {{HTTPStatus("412")}} `Precondition Failed`

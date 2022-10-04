@@ -1,14 +1,8 @@
 ---
 title: CookieStore.delete()
 slug: Web/API/CookieStore/delete
-tags:
-  - API
-  - Method
-  - Reference
-  - delete()
-  - CookieStore
-browser-compat: api.CookieStore.delete
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
 {{domxref("CookieStore")}} インターフェイスの **`delete()`** メソッドは、与えられた名前またはオプションオブジェクトを持つ Cookie を削除します（下記参照）。`delete()` メソッドは日付を過去のものに変更することで Cookie を失効させます。
@@ -37,7 +31,7 @@ var promise = cookieStore.delete(options);
     - `path`{{Optional_Inline}}
       - : パスを含む {{domxref("USVString")}} です。
 
-> **Note:** `url` オプションは、特定の URL をスコープとした Cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の URL に送信される Cookie を取得できます。ドキュメントからは現在の URL の Cookie しか取得できないので、ドキュメントコンテキストで有効な URL はドキュメントの URL のみとなります。
+> **メモ:** `url` オプションは、特定の URL をスコープとした Cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の URL に送信される Cookie を取得できます。ドキュメントからは現在の URL の Cookie しか取得できないので、ドキュメントコンテキストで有効な URL はドキュメントの URL のみとなります。
 
 ### 返値
 

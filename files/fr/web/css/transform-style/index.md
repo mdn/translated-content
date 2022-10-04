@@ -9,6 +9,7 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform-style
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`transform-style`** définit si les éléments-fils d'un éléments sont positionnés dans l'espace tridimensionnel ou s'ils sont aplatis dans le plan de l'élément.
@@ -39,21 +40,21 @@ transform-style: unset;
 - `preserve-3d`
   - : Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS Transforms 2', '#transform-style-property', 'transform-style')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transform-style")}}
+{{Compat}}
 
 ## Voir aussi
 

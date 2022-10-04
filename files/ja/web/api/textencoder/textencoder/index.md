@@ -1,15 +1,8 @@
 ---
 title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
-tags:
-  - API
-  - コンストラクター
-  - エンコーディング
-  - リファレンス
-  - TextEncoder
-browser-compat: api.TextEncoder.TextEncoder
-translation_of: Web/API/TextEncoder/TextEncoder
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextEncoder()`** コンストラクターは、新しく生成された {{DOMxRef("TextEncoder")}} オブジェクトを返します。これは UTF-8 エンコーディングのバイトストリームを生成します。

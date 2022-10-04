@@ -2,6 +2,7 @@
 title: CSS 動畫
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 CSS animations 使 CSS style configuration 的轉變變得可行。在這種動畫的運作上，你只需要定義兩個部份：1. 動畫的最初及結尾 2. 動畫轉變的方式。
@@ -330,4 +331,4 @@ function listener(e) {
 ## 更多資訊
 
 - {{ domxref("Event/AnimationEvent", "AnimationEvent") }}
-- [Detecting CSS animation support](/en/CSS/CSS_animations/Detecting_CSS_animation_support)
+- [Detecting CSS animation support](/zh-TW/CSS/CSS_animations/Detecting_CSS_animation_support)

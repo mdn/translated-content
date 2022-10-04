@@ -2,6 +2,7 @@
 title: MediaQueryList
 slug: Web/API/MediaQueryList
 ---
+
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
 一个`MediaQueryList`对象在一个{{ domxref("document") }}上维持着一系列的[媒体查询](/zh-CN/docs/CSS/Media_queries)，并负责处理当媒体查询在其 document 上发生变化时向监听器进行通知的发送。

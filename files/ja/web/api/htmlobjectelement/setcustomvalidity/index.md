@@ -1,18 +1,8 @@
 ---
 title: HTMLObjectElement.setCustomValidity()
 slug: Web/API/HTMLObjectElement/setCustomValidity
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - Method
-  - NeedsExample
-  - Reference
-  - setCustomValidity()
-browser-compat: api.HTMLObjectElement.setCustomValidity
-translation_of: Web/API/HTMLObjectElement/setCustomValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`setCustomValidity()`** は {{domxref("HTMLObjectElement")}} インターフェイスのメソッドで、この要素に独自の検証メッセージを設定します。

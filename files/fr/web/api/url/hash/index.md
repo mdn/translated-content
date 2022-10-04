@@ -9,6 +9,7 @@ tags:
   - URL
 translation_of: Web/API/URL/hash
 ---
+
 {{ APIRef("URL API") }}
 
 La propriété **`hash`** de l'interface {{domxref("URL")}} retourne un {{domxref("USVString")}} contenant le caractère `'#'` suivi par l'identificateur de fragment de URL.
@@ -37,14 +38,12 @@ url.hash // Returns '#Examples'
 
 ## Spécifications
 
-| Spécification                                                    | Statut               | Commentaire         |
-| ---------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('URL', '#dom-url-hash', 'URL.hash')}} | {{Spec2('URL')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.hash")}}
+{{Compat}}
 
-## A voir également
+## Voir aussi
 
 - L'interface {{domxref("URL")}} dont il est contenu.

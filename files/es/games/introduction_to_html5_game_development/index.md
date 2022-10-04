@@ -14,13 +14,13 @@ original_slug: Games/Introducción_al_desarrollo_de_juegos_HTML5_(resumen)
 
 ## Ventajas
 
-1.  Los juegos hechos con HTML5 funcionan en smartphones, tabletas, PCs y Smart TVs.
-2.  Anuncia y promociona tu juego en toda la web, así como en otros medios.
-3.  Pagos. Carga lo que quieras y usa el servicio de procesamiento de pagos que desees.
-4.  Actualiza tu juego cuando quieras.
-5.  ¡Colecciona tus propios análisis!
-6.  Conécta con tus clientes más de cerca.
-7.  Los jugadores pueden jugar el juego en cualquier lugar, en cualquier momento.
+1. Los juegos hechos con HTML5 funcionan en smartphones, tabletas, PCs y Smart TVs.
+2. Anuncia y promociona tu juego en toda la web, así como en otros medios.
+3. Pagos. Carga lo que quieras y usa el servicio de procesamiento de pagos que desees.
+4. Actualiza tu juego cuando quieras.
+5. ¡Colecciona tus propios análisis!
+6. Conécta con tus clientes más de cerca.
+7. Los jugadores pueden jugar el juego en cualquier lugar, en cualquier momento.
 
 ## Tecnologías Web
 
@@ -33,7 +33,6 @@ original_slug: Games/Introducción_al_desarrollo_de_juegos_HTML5_(resumen)
 | Networking    | [WebRTC](/es/docs/WebRTC) y/o [WebSockets](/es/docs/WebSockets) |
 | Storage       | [IndexedDB](/es/docs/IndexedDB) o la "nube" |
 | Web           | [HTML](/es/docs/HTML), [CSS](/es/docs/CSS), [SVG](/es/docs/SVG), [Social API](/es/docs/Social_API) (¡y muchos más!) |
-
 
 - [Full Screen API](/es/docs/DOM/Using_fullscreen_mode)
   - : Juego de pantalla completa.

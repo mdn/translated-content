@@ -2,6 +2,7 @@
 title: AbortSignal.timeout()
 slug: Web/API/AbortSignal/timeout
 ---
+
 {{APIRef("DOM")}}
 
 静态方法 **`AbortSignal.timeout()`** 返回一个指定时间后将自动中止的 {{domxref("AbortSignal")}}。

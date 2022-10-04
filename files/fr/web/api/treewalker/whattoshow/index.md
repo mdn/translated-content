@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/TreeWalker/whatToShow
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`TreeWalker.whatToShow`** renvoie un `unsigned long` (_non signé long_) qui est un masque constitué de constantes décrivant les types de {{domxref("Node")}} à présenter. Les noeuds ne correspondant pas sont ignorés, mais leurs enfants peuvent être inclus s'ils sont pertinents. Les valeurs possibles sont :
@@ -51,14 +52,11 @@ if( (treeWalker.whatToShow == NodeFilter.SHOW_ALL) ||
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | État                                         | Commentaires                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-whattoshow', 'TreeWalker.whatToShow')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-whatToShow', 'TreeWalker.whatToShow')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.whatToShow")}}
+{{Compat}}
 
 ## Voir aussi
 

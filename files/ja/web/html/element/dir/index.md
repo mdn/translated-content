@@ -1,25 +1,13 @@
 ---
 title: '<dir>: ディレクトリー要素'
 slug: Web/HTML/Element/dir
-tags:
-  - Directory
-  - 要素
-  - HTML
-  - HTML Lists
-  - 非推奨
-  - リファレンス
-  - ウェブ
-  - dir
-  - lists
-browser-compat: html.elements.dir
-translation_of: Web/HTML/Element/dir
 ---
 
 {{HTMLRef}}{{deprecated_header}}
 
 **`<dir>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("user agent","ユーザーエージェント")}}が適用するスタイルやアイコンを用いて表示する、ファイルやフォルダーのディレクトリーのコンテナとして使われます。この要素は廃止されたので使わないで下さい。代わりに、ファイル一覧を含め、一覧には {{HTMLElement("ul")}} 要素を使用してください。
 
-> **Warning:** この要素は使用しないでください。この要素は HTML の初期の仕様で定義されていましたが、 HTML 4 で非推奨要素に指定され、完全に廃止されました。**この要素に対応している主要なブラウザーはありません。**
+> **警告:** この要素は使用しないでください。この要素は HTML の初期の仕様で定義されていましたが、 HTML 4 で非推奨要素に指定され、完全に廃止されました。**この要素に対応している主要なブラウザーはありません。**
 
 ## DOM インターフェイス
 

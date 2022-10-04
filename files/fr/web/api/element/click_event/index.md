@@ -9,6 +9,7 @@ tags:
   - click
 translation_of: Web/API/Element/click_event
 ---
+
 {{APIRef}}
 
 L'évènement **`click`** est déclenché à partir d'un élément lorsqu'un bouton d'un dispositif de pointage (comme celui d'une souris par exemple) est pressé puis relaché lorsque le pointeur est sur l'élément.
@@ -38,7 +39,7 @@ L'évènement **`click`** est déclenché à partir d'un élément lorsqu'un bou
 
 Si le bouton est pressé sur un élément et que le pointeur est déplacé sur un autre élément, l'évènement sera déclenché sur l'ancêtre le plus près qui contient les deux éléments.
 
-`click` est déclenché après que les évènements {{event("mousedown")}} et {{event("mouseup")}} aient été déclenchés.
+`click` est déclenché après que les évènements [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event) aient été déclenchés.
 
 ## Notes d'utilisation
 

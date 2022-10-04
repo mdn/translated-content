@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/type
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`type`** renvoie une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) représentant le type de navigation. La valeur doit être l'une des suivantes :
@@ -63,10 +64,8 @@ function print_nav_timing_data() {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing Level 2', '#dom-performancenavigationtiming-type', 'type')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceNavigationTiming.type")}}
+{{Compat}}

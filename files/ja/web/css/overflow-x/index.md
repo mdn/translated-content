@@ -1,15 +1,8 @@
 ---
 title: overflow-x
 slug: Web/CSS/overflow-x
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.overflow-x
-translation_of: Web/CSS/overflow-x
 ---
+
 {{CSSRef}}
 
 **`overflow-x`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックレベル要素の内容が左右の境界からあふれた場合、どのように表示するのかを設定します。表示しないか、スクロールバーを表示するか、あふれさせるかを設定できます。

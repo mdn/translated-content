@@ -1,15 +1,8 @@
 ---
 title: Document.documentURI
 slug: Web/API/Document/documentURI
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Read-only
-  - Reference - Web - プロパティ
-translation_of: Web/API/Document/documentURI
 ---
+
 {{ApiRef("DOM")}}
 
 {{domxref("Document")}} インターフェイスの **`documentURI`** プロパティは、文書の位置を文字列で返します。

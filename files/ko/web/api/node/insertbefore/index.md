@@ -15,7 +15,9 @@ translation_of: Web/API/Node/insertBefore
 
 ## Syntax
 
-    var insertedNode = parentNode.insertBefore(newNode, referenceNode);
+```js
+var insertedNode = parentNode.insertBefore(newNode, referenceNode);
+```
 
 `referenceNode` 가 `null` 이라면, `newNode` 가 자식 노드의 리스트의 끝에 삽입됩니다.
 
@@ -82,7 +84,7 @@ parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
-There is no `insertAfter` method. It can be emulated by combining the `insertBefore` method with [`nextSibling`](/en-US/docs/DOM/Node.nextSibling "DOM/Node.nextSibling").
+There is no `insertAfter` method. It can be emulated by combining the `insertBefore` method with [`nextSibling`](/en-US/docs/DOM/Node.nextSibling).
 
 In the previous example, `sp1` could be inserted after `sp2` using:
 
@@ -94,7 +96,7 @@ If `sp2` does not have a next sibling, then it must be the last child — `sp2.n
 
 ## Example 3
 
-Insert an element before the first child element, using the [firstChild](/ko/docs/DOM/Node.firstChild "Node.firstChild") property.
+Insert an element before the first child element, using the [firstChild](/ko/docs/DOM/Node.firstChild) property.
 
 ```js
 // Get a reference to the element in which we want to insert a new node

@@ -8,7 +8,7 @@ original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando
 
 {{Previous("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton")}}
 
-Este es el último de los 10 pasos del [Gamedev Canvas tutorial](https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch). Puedes encontrar el código fuente tal y como quedará al terminar esta lección en [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
+Este es el último de los 10 pasos del [Gamedev Canvas tutorial](/en-US/docs/Games/Workflows/Breakout_game_from_scratch). Puedes encontrar el código fuente tal y como quedará al terminar esta lección en [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
 
 Siempre es posible mejorar cualquier juego que hagamos. Por ejemplo, podemos dar vidas al jugador. Así, aunque pierda la bola una o dos veces, todavía puede intentar derribar todo el muro. También podemos mejorar los aspectos gráficos.
 
@@ -58,7 +58,7 @@ Ahora, cuando la bola toca el fondo, restamos una vida. Si no queda ninguna, el 
 
 ### Sacar por pantalla el contador de vidas
 
-Tienes que añadir una llamada a `drawLives()` dentro de `draw()` debajo de la llamada a `drawScore():`
+Tienes que añadir una llamada a `drawLives()` dentro de `draw()` debajo de la llamada a `drawScore()`:
 
 ```js
 drawLives();
@@ -100,8 +100,8 @@ Ya hemos terminado. ¡La versión final del juego está lista para publicar!
 
 Enhorabuena, has terminado todas las lecciones. Ya has aprendido las técnicas básicas de manipulación del \<canvas> y la lógica que hay detrás de los juegos 2D sencillos.
 
-Ahora sería un buen momento para aprender a utilizar entornos de desarrollo (frameworks) y de continuar con el desarrollo de juegos. Puedes echar un vistazo a estas otra forma de realizar el mismo juego que has visto en [2D breakout game using Phaser](https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_breakout_game_Phaser), o de echar un vistazo al tutorial [Cyber Orb built in Phaser](https://developer.mozilla.org/en-US/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation). También puedes leer el contenido de [Games section on MDN](https://developer.mozilla.org/en/docs/Games) para inspirarte y seguir aprendiendo.
+Ahora sería un buen momento para aprender a utilizar entornos de desarrollo (frameworks) y de continuar con el desarrollo de juegos. Puedes echar un vistazo a estas otra forma de realizar el mismo juego que has visto en [2D breakout game using Phaser](/en-US/docs/Games/Workflows/2D_breakout_game_Phaser), o de echar un vistazo al tutorial [Cyber Orb built in Phaser](/en-US/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation). También puedes leer el contenido de [Games section on MDN](/en/docs/Games) para inspirarte y seguir aprendiendo.
 
-También puedes volve al [índice de este tutorial](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro). ¡Diviértete programando!
+También puedes volve al [índice de este tutorial](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro). ¡Diviértete programando!
 
 {{Previous("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton")}}

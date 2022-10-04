@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/FileReader/readAsText
 ---
+
 {{APIRef("File API")}}
 
 La méthode `readAsText` est utilisée pour lire le contenu du {{domxref("Blob")}} ou {{domxref("File")}} spécifié en paramètre. Lorsque la lecture est terminée, l'état {{domxref("FileReader.readyState","readyState")}} passe à `DONE`, l'événement {{event("loadend")}} est lancé, et l'attribut {{domxref("FileReader.result","result")}} contient le contenu du fichier sous forme de chaîne de caractères.

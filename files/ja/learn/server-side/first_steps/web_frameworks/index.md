@@ -1,17 +1,8 @@
 ---
 title: サーバーサイドウェブフレームワーク
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Server
-  - Server-side programming
-  - Web frameworks
-translation_of: Learn/Server-side/First_steps/Web_frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 前の記事では、ウェブクライアントとサーバー間の通信、HTTP リクエストとレスポンスの性質、およびウェブブラウザーからのリクエストにレスポンスするためにサーバーサイドウェブアプリケーションが実行する必要があることについて説明しました。この知識をもとに、ウェブフレームワークがどのようにこれらのタスクを単純化できるかを探り、最初のサーバーサイドウェブアプリケーションのためのフレームワークをどのように選択するかを考えてみましょう。
@@ -104,7 +95,7 @@ class Team(models.Model):
     TEAM_LEVELS = (
         ('U09', 'Under 09s'),
         ('U10', 'Under 10s'),
-        ('U11, 'Under 11s'),
+        ('U11', 'Under 11s'),
         ...  #list our other teams
     )
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
@@ -132,9 +123,9 @@ def youngest(request):
 
 ウェブフレームワークは多くの場合、{{glossary("JSON")}} や {{glossary("XML")}} など、格納されているデータから他のフォーマットを簡単に生成するためのメカニズムを提供します。
 
-たとえば、Django テンプレートシステムでは、"double-handlebars" 構文 (例えば ` {``{ variable_name ``}``} `) を使って変数を指定することができます。これは、ページがレンダリングされるときにビュー関数から渡された値に置き換えられます。テンプレートシステムは式のサポート (構文: `{% expression %}`) も提供します。これによりテンプレートは、渡されたリスト値を繰り返すような単純な操作を実行できます。
+たとえば、Django テンプレートシステムでは、"double-handlebars" 構文 (例えば `\{{ variable_name }}`) を使って変数を指定することができます。これは、ページがレンダリングされるときにビュー関数から渡された値に置き換えられます。テンプレートシステムは式のサポート (構文: `{% expression %}`) も提供します。これによりテンプレートは、渡されたリスト値を繰り返すような単純な操作を実行できます。
 
-> **Note:** Jinja2 (Python)、handlebars (JavaScript)、moustache (JavaScript) など、他の多くのテンプレートシステムでも同様の構文が使用されています。
+> **メモ:** Jinja2 (Python)、handlebars (JavaScript)、moustache (JavaScript) など、他の多くのテンプレートシステムでも同様の構文が使用されています。
 
 以下のコードスニペットはこれがどのように機能するかを示しています。前のセクションの「最年少チーム」の例を続けると、HTML テンプレートにはビューによって `youngest_teams` というリスト変数が渡されます。HTML スケルトンの内部には、最初に `youngest_teams` 変数が存在するかどうかを確認し、次に for ループ内でそれを繰り返す式があります。各イテレーションで、テンプレートはチームの `team_name` 値をリストアイテムに表示します。
 
@@ -183,15 +174,15 @@ def youngest(request):
 
 プログラミングの完全な初心者であるならば、おそらく「学びやすさ」に基づいてフレームワークを選ぶでしょう。言語自体の「使いやすさ」に加えて、高品質のドキュメント/チュートリアル、および新しいユーザーを支援する活発なコミュニティが最も貴重なリソースです。コースの後半で例を書くために [Django](https://www.djangoproject.com/) (Python) と [Express](http://expressjs.com/) (Node/JavaScript) を選択しました。これは主にそれらが習得が容易で優れたサポートがあるためです。
 
-> **Note:** [Django](https://www.djangoproject.com/) (Python) と [Express](http://expressjs.com/) (Node/JavaScript) のメインウェブサイトに行き、それらのドキュメントとコミュニティを調べてみましょう。
+> **メモ:** [Django](https://www.djangoproject.com/) (Python) と [Express](http://expressjs.com/) (Node/JavaScript) のメインウェブサイトに行き、それらのドキュメントとコミュニティを調べてみましょう。
 >
-> 1.  メインサイトに移動する (上記のリンク先)
+> 1. メインサイトに移動する (上記のリンク先)
 >
 >     - Documentation メニューのリンク (Documentation、Guide、API Reference、Getting Started など) をクリックします。
 >     - URL ルーティング、テンプレート、データベース/モデルの設定方法を説明したトピックはありますか？
 >     - ドキュメントは明確ですか？
 >
-> 2.  各サイトのメーリングリストに移動します (コミュニティリンクからアクセス可能)。
+> 2. 各サイトのメーリングリストに移動します (コミュニティリンクからアクセス可能)。
 >
 >     - 過去数日間に投稿された質問の数
 >     - 回答はいくつありますか？
@@ -203,7 +194,7 @@ def youngest(request):
 
 以下のサーバーサイドフレームワークは、執筆時点で入手可能な最も人気のあるものの一部を表しています。オープンソースで、活発に開発されており、熱心なコミュニティがドキュメントを作成し、ディスカッション掲示板でユーザーを支援しています。また、多数の有名ウェブサイトで使用されています。他にも基本的なインターネット検索を使用して見つけられる多くの素晴らしいサーバーサイドフレームワークがあります。
 
-> **Note:** 説明は (一部) フレームワークウェブサイトから引用しています。
+> **メモ:** 説明は (一部) フレームワークウェブサイトから引用しています。
 
 ### Django (Python)
 

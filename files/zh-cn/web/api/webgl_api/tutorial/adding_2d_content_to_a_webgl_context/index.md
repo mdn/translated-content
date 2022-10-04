@@ -2,6 +2,7 @@
 title: 使用 WebGL 创建 2D 内容
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 一旦创建 WebGL 上下文创建成功，你就可以在这个上下文里渲染画图了。而对我们而言最简单的事，莫过于绘制一个没有纹理的 2D 图形了。那就让我们从画出一个正方形开始吧。
@@ -14,17 +15,17 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 **着色器是**使用 [OpenGL ES 着色语言](http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf)(**GLSL**) 编写的程序，它携带着绘制形状的顶点信息以及构造绘制在屏幕上像素的所需数据，换句话说，它负责记录着像素点的位置和颜色。
 
-绘制 WebGL 时候有两种不同的着色器函数，**顶点着色器和片段着色器。**你需要通过用 GLSL 编写这些着色器，并将代码文本传递给 WebGL ， 使之在 GPU 执行时编译。顺便一提，顶点着色器和片段着色器的集合我们通常称之为**着色器程序。**
+绘制 WebGL 时候有两种不同的着色器函数，**顶点着色器和片段着色器。**你需要通过用 GLSL 编写这些着色器，并将代码文本传递给 WebGL，使之在 GPU 执行时编译。顺便一提，顶点着色器和片段着色器的集合我们通常称之为**着色器程序。**
 
 下面我们通过在 WebGL 环境绘制一个 2D 图像的例子快速介绍这两种着色器。
 
 #### 顶点着色器
 
-每次渲染一个形状时，顶点着色器会在形状中的每个顶点运行。 它的工作是将输入顶点从原始坐标系转换到 WebGL 使用的缩放空间 (**clipspace**) 坐标系，其中每个轴的坐标范围从-1.0 到 1.0，并且不考虑纵横比，实际尺寸或任何其他因素。
+每次渲染一个形状时，顶点着色器会在形状中的每个顶点运行。它的工作是将输入顶点从原始坐标系转换到 WebGL 使用的缩放空间 (**clipspace**) 坐标系，其中每个轴的坐标范围从-1.0 到 1.0，并且不考虑纵横比，实际尺寸或任何其他因素。
 
 顶点着色器需要对顶点坐标进行必要的转换，在每个顶点基础上进行其他调整或计算，然后通过将其保存在由 GLSL 提供的特殊变量（我们称为 gl_Position）中来返回变换后的顶点
 
-顶点着色器根据需要， 也可以完成其他工作。例如，决定哪个包含 [texel](<https://zh.wikipedia.org/wiki/texel_(graphics)>)面部纹理的坐标，可以应用于顶点；通过法线来确定应用到顶点的光照因子等。然后将这些信息存储在[变量（varyings)](/zh-CN/docs/XUL_%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85)或[属性 (attributes)](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)属性中，以便与片段着色器共享
+顶点着色器根据需要，也可以完成其他工作。例如，决定哪个包含 [texel](<https://zh.wikipedia.org/wiki/texel_(graphics)>) 面部纹理的坐标，可以应用于顶点；通过法线来确定应用到顶点的光照因子等。然后将这些信息存储在[变量（varyings)](/zh-CN/docs/XUL_%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85)或[属性 (attributes)](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)属性中，以便与片段着色器共享
 
 以下的顶点着色器接收一个我们定义的属性（aVertexPosition）的顶点位置值。之后这个值与两个 4x4 的矩阵（uProjectionMatrix 和 uModelMatrix）相乘; 乘积赋值给 gl_Position。有关投影和其他矩阵的更多信息，[在这里您可能可以找到有帮助的文章](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).。
 
@@ -75,7 +76,7 @@ function initShaderProgram(gl, vsSource, fsSource) {
   gl.attachShader(shaderProgram, fragmentShader);
   gl.linkProgram(shaderProgram);
 
-  // 创建失败， alert
+  // 创建失败，alert
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
     alert('Unable to initialize the shader program: ' + gl.getProgramInfoLog(shaderProgram));
     return null;
@@ -112,15 +113,15 @@ function loadShader(gl, type, source) {
 
 loadShader 函数将 WebGL 上下文，着色器类型和`源码`作为参数输入，然后按如下步骤创建和编译着色器：
 
-1\. 调用{{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.创建一个新的着色器。
+1. 调用{{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.创建一个新的着色器。
 
-2\. 调用{{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}.将源代码发送到着色器。
+2. 调用{{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}.将源代码发送到着色器。
 
-3\. 一旦着色器获取到源代码，就使用{{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}.进行编译。
+3. 一旦着色器获取到源代码，就使用{{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}.进行编译。
 
-4\. 为了检查是否成功编译了着色器，将检查着色器参数 gl.COMPILE_STATUS 状态。通过调用{{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}获得它的值，并指定着色器和我们想要检查的参数的名字（gl.COMPILE_STATUS）。如果返回错误，则着色器无法编译，因此通过{{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}从编译器中获取日志信息并 alert，然后删除着色器返回 null，表明加载着色器失败。
+4. 为了检查是否成功编译了着色器，将检查着色器参数 gl.COMPILE_STATUS 状态。通过调用{{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}获得它的值，并指定着色器和我们想要检查的参数的名字（gl.COMPILE_STATUS）。如果返回错误，则着色器无法编译，因此通过{{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}从编译器中获取日志信息并 alert，然后删除着色器返回 null，表明加载着色器失败。
 
-5\. 如果着色器被加载并成功编译，则返回编译的着色器。
+5. 如果着色器被加载并成功编译，则返回编译的着色器。
 
 我们可以像这样调用这段代码
 
@@ -177,7 +178,7 @@ function initBuffers(gl) {
 
 当着色器和物体都创建好后，我们可以开始渲染这个场景了。因为我们这个例子不会产生动画，所以 drawScene() 方法非常简单。它还使用了几个工具函数，稍后我们会介绍。
 
-> **备注：** 你可能会得到这样一段错误报告：“ mat4 is not defined”，意思是说你缺少`glmatrix`库。该库的 js 文件[gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js)可以从[这里](https://github.com/mdn/webgl-examples/issues/20)获得。
+> **备注：** 你可能会得到这样一段错误报告：“mat4 is not defined”，意思是说你缺少`glmatrix`库。该库的 js 文件[gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js)可以从[这里](https://github.com/mdn/webgl-examples/issues/20)获得。
 
 ```js
 function drawScene(gl, programInfo, buffers) {
@@ -266,7 +267,7 @@ function drawScene(gl, programInfo, buffers) {
 }
 ```
 
-第一步，用背景色擦除画布，接着建立摄像机透视矩阵。设置 45 度的视图角度，并且设置一个适合实际图像的宽高比。 指定在摄像机距离 0.1 到 100 单位长度的范围内的物体可见。
+第一步，用背景色擦除画布，接着建立摄像机透视矩阵。设置 45 度的视图角度，并且设置一个适合实际图像的宽高比。指定在摄像机距离 0.1 到 100 单位长度的范围内的物体可见。
 
 接着加载特定位置，并把正方形放在距离摄像机 6 个单位的的位置。然后，我们绑定正方形的顶点缓冲到上下文，并配置好，再通过调用 {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} 方法来画出对象。
 
@@ -276,7 +277,7 @@ function drawScene(gl, programInfo, buffers) {
 
 ## 矩阵通用计算
 
-矩阵计算是一个很复杂的运算。 没人会想去自己写完所有代码来处理这些运算。通常人们使用一个矩阵运算库，而不会自己实现矩阵运算。在这个例子中我们使用的是[glMatrix library](http://glmatrix.net/).
+矩阵计算是一个很复杂的运算。没人会想去自己写完所有代码来处理这些运算。通常人们使用一个矩阵运算库，而不会自己实现矩阵运算。在这个例子中我们使用的是[glMatrix library](http://glmatrix.net/).
 
 ## 相关资料
 

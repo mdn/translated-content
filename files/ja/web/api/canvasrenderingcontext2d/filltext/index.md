@@ -1,23 +1,8 @@
 ---
 title: CanvasRenderingContext2D.fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Draw String
-  - Draw Text
-  - 文字列の描画
-  - テキストの描画
-  - Fill Text
-  - Filling Text
-  - メソッド
-  - リファレンス
-  - テキスト
-  - fillText
-browser-compat: api.CanvasRenderingContext2D.fillText
-translation_of: Web/API/CanvasRenderingContext2D/fillText
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("CanvasRenderingContext2D")}} の **`fillText()`** はキャンバス 2D API のメソッドで、指定した座標にテキスト文字列を描画し、その文字を現在の {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} で塗りつぶします。オプションの引数で、描画されるテキストの最大幅を指定すると、{{Glossary("user agent", "ユーザーエージェント")}}は、この幅に収まるようにテキストを圧縮したり、フォントサイズを縮小したりします。
@@ -26,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillText
 
 テキストのフォントやレイアウト構成は、 {{domxref("CanvasRenderingContext2D.font","font")}}、{{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}、{{domxref("CanvasRenderingContext2D.direction","direction")}} の各プロパティで定義されたものを使用して描画が行われます。
 
-> **Note:** 文字列の文字の輪郭を描画するには、そのコンテキストで {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} メソッドを呼び出してください。
+> **メモ:** 文字列の文字の輪郭を描画するには、そのコンテキストで {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} メソッドを呼び出してください。
 
 ## 構文
 

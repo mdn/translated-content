@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBRequest/readyState
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`readyState`**, rattachée à l'interface {{domxref("IDBRequest")}}, est une propriété en lecture seule qui indique l'état de la requête.

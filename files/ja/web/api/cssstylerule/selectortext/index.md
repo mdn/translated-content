@@ -1,13 +1,8 @@
 ---
 title: CSSStyleRule.selectorText
 slug: Web/API/CSSStyleRule/selectorText
-tags:
-  - API
-  - CSSOM
-  - CSSStyleRule
-  - Reference
-translation_of: Web/API/CSSStyleRule/selectorText
 ---
+
 {{APIRef("CSSOM") }}
 
 **`CSSRule.selectorText`** プロパティは、この規則集合のセレクターのテキスト表現を取得します。これは、一部のブラウザーで読み取り専用で実装されています。スタイルシート規則をクロスブラウザーで動的に設定するには、 [動的なスタイル情報の利用](/ja/docs/DOM/Using_dynamic_styling_information) を参照してください。

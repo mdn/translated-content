@@ -2,6 +2,7 @@
 title: 多个背景的应用
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 ---
+
 {{CSSRef}}
 
 你可以应用多个背景到元素，这些背景在你添加的第一个背景的上方和最后一个背景的下方分层叠加，只有最后的背景可以包含背景颜色。
@@ -54,4 +55,4 @@ slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 
 ## 另见
 
-- [Using CSS gradients](/en-US/docs/CSS/Using_CSS_gradients)
+- [Using CSS gradients](/zh-CN/docs/CSS/Using_CSS_gradients)

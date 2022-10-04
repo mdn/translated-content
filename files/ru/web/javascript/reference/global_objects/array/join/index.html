@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 <h3 id="Parameters">Параметры</h3>
 
 <dl>
- <dt><code>separator </code> <span class="diff_add">{{optional_inline}}</span></dt>
+ <dt><code>separator</code> {{optional_inline}}</dt>
  <dd>Определяет строку, разделяющую элементы массива. В случае необходимости тип разделителя приводится к типу Строка. Если он не задан, элементы массива разделяются запятой '<strong>,</strong>'. Если разделитель - пустая строка, элементы массива ничем не разделяются в возвращаемой строке.</dd>
 </dl>
 
@@ -55,11 +55,11 @@ var myVar4 = a.join('');    // присвоит 'ВетерДождьОгонь'
 
 <p>В следующем примере соединяется массивоподобный объект (в данном случае список <a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments">аргументов</a> функции) с использованием вызова {{jsxref("Function.prototype.call")}} <code>для Array.prototype.join</code>.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">f</span><span class="punctuation token">(</span>a<span class="punctuation token">,</span> b<span class="punctuation token">,</span> c<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> s <span class="operator token">=</span> Array<span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>join<span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span>arguments<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>s<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// '1,a,true'</span>
-<span class="punctuation token">}</span>
-<span class="function token">f</span><span class="punctuation token">(</span><span class="number token">1</span><span class="punctuation token">,</span> <span class="string token">'a'</span><span class="punctuation token">,</span> <span class="keyword token">true</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">function f(a, b, c) {
+  var s = Array.prototype.join.call(arguments);
+  console.log(s); // '1,a,true'
+}
+f(1, 'a', true);</pre>
 
 <h2 id="Specifications">Спецификации</h2>
 
@@ -67,11 +67,7 @@ var myVar4 = a.join('');    // присвоит 'ВетерДождьОгонь'
 
 <h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>
-
-
 <p>{{Compat}}</p>
-</div>
 
 <h2 id="See_also">Смотрите также</h2>
 

@@ -2,6 +2,7 @@
 title: LockedFile
 slug: Web/API/IDBFileHandle
 ---
+
 {{APIRef("File System API")}} {{non-standard_header}}
 
 ## 概要
@@ -13,7 +14,7 @@ slug: Web/API/IDBFileHandle
 - {{domxref("LockedFile.fileHandle")}} {{readonlyinline}}
   - : 从被打开的锁定文件返回一个 {{domxref("FileHandle")}} 对象。
 - {{domxref("LockedFile.mode")}} {{readonlyinline}}
-  - : 访问文件的方式; 返回`readonly` 或 `readwrite。`
+  - : 访问文件的方式; 返回 `readonly` 或 `readwrite`。
 - {{domxref("LockedFile.active")}} {{readonlyinline}}
   - : 指示文件是否可以访问，返回 true 或 false。
 - {{domxref("LockedFile.location")}}

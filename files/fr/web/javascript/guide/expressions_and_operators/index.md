@@ -4,6 +4,7 @@ slug: Web/JavaScript/Guide/Expressions_and_Operators
 l10n:
   sourceCommit: 1c355a0ba137e025b8b9039cdddd5225b4c72d9b
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
 Dans ce chapitre, nous décrirons les expressions et opérateurs en JavaScript, qui permettent notamment l'affectation, la comparaison, les opérations arithmétiques, binaires, logiques, la manipulation de chaîne de caractères, etc.
@@ -170,7 +171,7 @@ console.log([ 0, x = f(), 0 ]);
 console.log(f(0, x = f(), 0));
 ```
 
-Le résultat de l'évaluation correspond à l'expression à droite du signe `=` dans la colonne «&nbsp;Signification&nbsp;» du tableau ci-avant. Cela signifie que l'évaluation de `x = f()` aura comme résultat celui de `f()`, que l'évaluation de `x += f()` aura comme résultat la somme `x + f()`, que celle de 
+Le résultat de l'évaluation correspond à l'expression à droite du signe `=` dans la colonne «&nbsp;Signification&nbsp;» du tableau ci-avant. Cela signifie que l'évaluation de `x = f()` aura comme résultat celui de `f()`, que l'évaluation de `x += f()` aura comme résultat la somme `x + f()`, que celle de
 `x **= f()` aura comme résultat `x ** f()`, etc.
 
 Pour les affectations logiques, `x &&= f()`, `x ||= f()`, et `x ??= f()`, la valeur de retour est celle de l'opération logique sans affectation, soit `x && f()`, `x || f()`, et `x ?? f()`, respectivement.
@@ -853,7 +854,7 @@ typeof Option;   // renvoie "function"
 typeof String;   // renvoie "function"
 ```
 
-### `void` 
+### `void`
 
 [L'opérateur `void`](/fr/docs/Web/JavaScript/Reference/Operators/void) s'utilise d'une des deux façons suivantes&nbsp;:
 

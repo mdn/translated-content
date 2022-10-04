@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt16
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setInt16
 ---
+
 {{JSRef}}
 
 La méthode **`setInt16()`** permet d'enregister un entier signé sur 16 bits (type short par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.

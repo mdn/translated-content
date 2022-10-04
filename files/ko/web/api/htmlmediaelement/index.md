@@ -24,7 +24,7 @@ _이 인터페이스는 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{do
 - {{domxref("HTMLMediaElement.controls")}}
   - : 미디어 엘레먼트에 컨트롤를 표시할지 결정하는 {{htmlattrxref("controls", "video")}} HTML 속성 값을 {{jsxref('Boolean')}}으로 반환합니다.
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
-  - : 브라우저가 미디어 엘레먼트에 자체 컨트롤을 표시할 때 어떤 컨트롤을 보여주거나 숨길 지 결정하는 {{domxref("DOMTokenList")}}를 반환합니다. . ` DOMTokenList는 ``nodownload`, `nofullscreen`, `noremoteplayback` 값을 가질 수 있습니다.
+  - : 브라우저가 미디어 엘레먼트에 자체 컨트롤을 표시할 때 어떤 컨트롤을 보여주거나 숨길 지 결정하는 {{domxref("DOMTokenList")}}를 반환합니다. `DOMTokenList` 는 `nodownload`, `nofullscreen`, `noremoteplayback` 값을 가질 수 있습니다.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
   - : {{domxref("DOMString")}}미디어 엘레먼트의 [CORS 설정](/ko/docs/Web/HTML/CORS_settings_attributes)값을 반환합니다.
 - {{domxref("HTMLMediaElement.currentSrc")}} {{readonlyinline}}

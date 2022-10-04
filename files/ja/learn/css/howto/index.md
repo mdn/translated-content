@@ -1,12 +1,8 @@
 ---
 title: CSS を使ってよくある問題を解決する
 slug: Learn/CSS/Howto
-tags:
-  - Beginner
-  - CSS
-  - Learn
-translation_of: Learn/CSS/Howto
 ---
+
 {{LearnSidebar}}
 
 以下のリンクは CSS で解決できるよくある問題の解決法です。

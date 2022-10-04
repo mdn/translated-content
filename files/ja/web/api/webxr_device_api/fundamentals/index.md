@@ -1,23 +1,8 @@
 ---
 title: WebXR の基礎
 slug: Web/API/WebXR_Device_API/Fundamentals
-page-type: guide
-tags:
-  - API
-  - AR
-  - Getting Started
-  - Guide
-  - Reality
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - basics
-  - memory
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 WebXRは、 [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) を中核として、拡張現実と仮想現実（AR および VR）の両方をウェブ上で実現するために必要な機能を提供します。これらの技術を合わせて、**複合現実 (MR)** または**クロス現実 (XR)** と呼びます。複合現実は大規模で複雑なテーマであり、学ぶべきことが多く、また、ユーザーにとって魅力的な体験を生み出すために他の多くの API をまとめる必要があります。

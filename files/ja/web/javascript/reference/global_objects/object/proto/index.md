@@ -1,22 +1,13 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-tags:
-  - Deprecated
-  - ECMAScript 2015
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Object.proto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
+
 {{JSRef}}{{Deprecated_header}}
 
-> **Warning:** オブジェクトの `[[Prototype]]` を変更することは、最新の JavaScript エンジンがプロパティアクセスを最適化する仕組み上、***すべての***ブラウザーや JavaScript エンジンにおいて、とても低速な操作となります。プロトタイプの継承関係を変更することによる性能上の影響は微細で広範囲にわたり、単に `obj.__proto__ = ...` という文の実行時間に留まらず、 `[[Prototype]]` が変更された***いずれかの***オブジェクトへのアクセスを持つ***あらゆる***コードに及ぶ可能性があります。性能を気にしている場合、オブジェクトの `[[Prototype]]` の変更は避けるべきです。代わりに、 {{JSxRef("Object.create()")}} を使用して求める `[[Prototype]]` をもつオブジェクトを新たに生成してください。
+> **警告:** オブジェクトの `[[Prototype]]` を変更することは、最新の JavaScript エンジンがプロパティアクセスを最適化する仕組み上、***すべての***ブラウザーや JavaScript エンジンにおいて、とても低速な操作となります。プロトタイプの継承関係を変更することによる性能上の影響は微細で広範囲にわたり、単に `obj.__proto__ = ...` という文の実行時間に留まらず、 `[[Prototype]]` が変更された***いずれかの***オブジェクトへのアクセスを持つ***あらゆる***コードに及ぶ可能性があります。性能を気にしている場合、オブジェクトの `[[Prototype]]` の変更は避けるべきです。代わりに、 {{JSxRef("Object.create()")}} を使用して求める `[[Prototype]]` をもつオブジェクトを新たに生成してください。
 
-> **Warning:** `Object.prototype.__proto__` は現時点でほとんどのブラウザーが対応していますが、そのプロパティの存在と正確な動作は、ウェブブラウザーの互換性を確保するためのレガシー機能として、 ECMAScript 2015 で初めて標準化されました。より広く対応させるには、代わりに {{JSxRef("Object.getPrototypeOf()")}} を使用してください。
+> **警告:** `Object.prototype.__proto__` は現時点でほとんどのブラウザーが対応していますが、そのプロパティの存在と正確な動作は、ウェブブラウザーの互換性を確保するためのレガシー機能として、 ECMAScript 2015 で初めて標準化されました。より広く対応させるには、代わりに {{JSxRef("Object.getPrototypeOf()")}} を使用してください。
 
 `__proto__` は {{JSxRef("Object.prototype")}} のアクセサープロパティ (ゲッター関数およびセッター関数) で、アクセスされるオブジェクトの内部の `[[Prototype]]` (オブジェクトまたは {{JSxRef("Global_Objects/null", "null")}} のどちらか) を暴露します。
 

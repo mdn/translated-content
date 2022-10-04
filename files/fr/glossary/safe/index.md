@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/safe
 original_slug: Glossaire/sécurisée
 ---
+
 Une méthode HTTP est **sécurisée (_safe_)** si elle ne modifie pas l'état du serveur. En d'autres termes, une méthode est sécurisée si elle conduit à une opération en lecture seule. Plusieurs méthodes HTTP courantes sont sécurisées : {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}} ou {{HTTPMethod("OPTIONS")}}. Toutes les méthodes sécurisées sont aussi {{glossary("idempotent","idempotentes")}} ainsi que certaines méthodes non sécurisées comme {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}}.
 
 Même si les méthodes sécurisées ont une sémantique en lecture seule, les serveurs peuvent modifier leur état : par exemple, ils peuvent se connecter ou garder des statistiques. Ce qui est important ici, c'est qu'en appelant une méthode sécurisée, le client ne demande pas de changement du serveur lui-même et, par conséquent, ne créera pas de téléchargement ou de chargement inutile pour le serveur. Les navigateurs peuvent appeler des méthodes sécurisées sans craindre de causer des dommages au serveur : cela leur permet d'effectuer des activités comme la pré-extraction sans risque. Les robots d'exploration web s'appuient également sur l'appel de méthodes sécurisées.
@@ -34,7 +35,7 @@ Un appel à une méthode idempotente mais non sûre :
 DELETE /idX/delete HTTP/1.1
 ```
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

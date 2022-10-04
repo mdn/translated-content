@@ -1,18 +1,8 @@
 ---
 title: 通知 API の使用
 slug: Web/API/Notifications_API/Using_the_Notifications_API
-page-type: guide
-tags:
-  - API
-  - Advanced
-  - Guide
-  - Notifications
-  - Notifications API
-  - Push
-  - Tutorial
-browser-compat: api.Notification
-translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 [通知 API](/ja/docs/Web/API/Notifications_API) は、ウェブページやアプリからシステムレベルでページ外部に表示される通知を送ることを可能にします。これにより、アプリケーションがアイドルやバックグラウンドの状態であっても、アプリからユーザーに情報を送信することができます。この記事では、アプリで API を使用する方法の基本を見ていきます。
@@ -110,7 +100,7 @@ function askNotificationPermission() {
 
 コードの重複を避けるために、このスニペットの最初のメインブロックである `handlePermission()` 関数の中に、多少のハウスキーピングコードを格納しています。この内部では、 `Notification.permission` の値を明示的に設定し (古いバージョンの Chrome では自動的に設定できないものがありました)、ユーザーが許可ダイアログで選択した内容に応じてボタンを表示・非表示にしています。すでに許可されている場合は表示したくありませんが、ユーザーが許可を拒否することを選択した場合は、後で変更できるようにしたいと考えています。
 
-> **Note:** バージョン 37 より前の Chrome では、 {{domxref("Notification.requestPermission()")}} を `load` イベントのハンドラー内で呼び出すことを許可していませんでした ([issue 274284](https://bugs.chromium.org/p/chromium/issues/detail?id=274284) をご覧ください)。
+> **メモ:** バージョン 37 より前の Chrome では、 {{domxref("Notification.requestPermission()")}} を `load` イベントのハンドラー内で呼び出すことを許可していませんでした ([issue 274284](https://bugs.chromium.org/p/chromium/issues/detail?id=274284) をご覧ください)。
 
 ### requestPermission() プロミスの機能検出
 
@@ -156,9 +146,9 @@ document.addEventListener('visibilitychange', function() {
 });
 ```
 
-> **Note:** この API は、 (現代のブラウザーで) 一定時間経過後に通知を画面から消去するだけのために使用すべきではありません。通知が最初に表示された後にユーザーがそれとやりとりすることを防ぐため、このメソッドは通知トレイからも通知を削除するためです。
+> **メモ:** この API は、 (現代のブラウザーで) 一定時間経過後に通知を画面から消去するだけのために使用すべきではありません。通知が最初に表示された後にユーザーがそれとやりとりすることを防ぐため、このメソッドは通知トレイからも通知を削除するためです。
 
-> **Note:** "close" イベントを受け取ったとき、それが通知を閉じたユーザーであるという保証はありません。これは仕様書に準拠しており、以下のように記載されています。「通知が基礎となる通知プラットフォームによって、またはユーザーによって閉じられるとき、その通知のための閉じるステップを実行しなければなりません。」
+> **メモ:** "close" イベントを受け取ったとき、それが通知を閉じたユーザーであるという保証はありません。これは仕様書に準拠しており、以下のように記載されています。「通知が基礎となる通知プラットフォームによって、またはユーザーによって閉じられるとき、その通知のための閉じるステップを実行しなければなりません。」
 
 ## Notification イベント
 

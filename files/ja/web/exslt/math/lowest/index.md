@@ -1,12 +1,8 @@
 ---
 title: math:lowest()
 slug: Web/EXSLT/math/lowest
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - リファレンス
-translation_of: Web/EXSLT/math/lowest
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/EXSLT")}}
 
 `math:lowest()` は、指定されたノードセットの最小値（[`math:min()`](/ja/docs/Web/EXSLT/math/min) を使用して計算した最小値）を持つノードを返します。

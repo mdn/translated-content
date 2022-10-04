@@ -1,25 +1,8 @@
 ---
 title: Clipboard.readText()
 slug: Web/API/Clipboard/readText
-page-type: web-api-instance-method
-tags:
-  - API
-  - Async Clipboard API
-  - Clip
-  - Clipboard
-  - Clipboard API
-  - Cut
-  - Editing
-  - Method
-  - Pasteboard
-  - Reference
-  - Text
-  - copy
-  - paste
-  - readText
-browser-compat: api.Clipboard.readText
-translation_of: Web/API/Clipboard/readText
 ---
+
 {{APIRef("Clipboard API")}}
 
 **{{domxref("Clipboard")}}** インターフェイスの **`readText()`** メソッドは、システムクリップボードのテキストの内容のコピーに解決されるプロミス ({{jsxref("Promise")}}) を返します。

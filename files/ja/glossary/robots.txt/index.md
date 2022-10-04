@@ -1,10 +1,6 @@
 ---
 title: Robots.txt
 slug: Glossary/Robots.txt
-tags:
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/Robots.txt
 ---
 Robots.txt は通常、ウェブサイトのルートに配置されているファイルです。このファイルは、{{Glossary("crawler", "クローラー")}} からウェブサイトへのアクセスを許可するか、禁止するかを決定します。
 

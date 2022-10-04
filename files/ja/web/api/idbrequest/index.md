@@ -1,18 +1,8 @@
 ---
 title: IDBRequest
 slug: Web/API/IDBRequest
-tags:
-  - API
-  - Database
-  - IDBRequest
-  - IndexedDB
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Storage
-  - TopicStub
-translation_of: Web/API/IDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBRequest`** interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.

@@ -1,13 +1,8 @@
 ---
 title: 'RangeError: argument is not a valid code point'
 slug: Web/JavaScript/Reference/Errors/Not_a_codepoint
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
-translation_of: Web/JavaScript/Reference/Errors/Not_a_codepoint
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "Invalid code point" は、 {{jsxref("NaN")}} 値、負の整数 (-1)、 整数以外 (5.4)、 0x10FFFF より大きい数 (1114111) が {{jsxref("String.fromCodePoint()")}} で使用された場合に発生します。

@@ -1,8 +1,8 @@
 ---
 title: vrdisplaypresentchange
 slug: Web/API/Window/vrdisplaypresentchange_event
-translation_of: Web/API/Window/vrdisplaypresentchange_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) の **`vrdisplaypresentchange`** イベントは，VR デバイスの表示状態が変化したときに発火します — つまり，表示状態から非表示になったとき，あるいはその逆のケースです．

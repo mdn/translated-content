@@ -1,14 +1,8 @@
 ---
 title: 一般的なウェブレイアウトには何が含まれているのか？
 slug: Learn/Common_questions/Common_web_layouts
-tags:
-  - Beginner
-  - CSS
-  - Design
-  - HTML
-  - NeedsActiveLearning
-translation_of: Learn/Common_questions/Common_web_layouts
 ---
+
 ウェブサイトのページをデザインする際、最も一般的なレイアウトを把握しておくとよいでしょう。
 
 <table class="standard-table">

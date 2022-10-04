@@ -1,14 +1,8 @@
 ---
 title: PerformanceLongTaskTiming
 slug: Web/API/PerformanceLongTaskTiming
-tags:
-  - API
-  - Interface
-  - Long Tasks API
-  - PerformanceLongTaskTiming
-  - Reference
-translation_of: Web/API/PerformanceLongTaskTiming
 ---
+
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
 [Long Tasks API](/ja/docs/Web/API/Long_Tasks_API) の **`PerformanceLongTaskTiming`** インターフェイスは、長いタスクのインスタンスを報告します。

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/length
 ---
+
 {{JSRef}}
 
 La propriété **`length`** définit le nombre de paramètres attendus par la fonction.

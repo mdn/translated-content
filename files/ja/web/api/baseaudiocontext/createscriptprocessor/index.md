@@ -1,23 +1,14 @@
 ---
 title: BaseAudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createScriptProcessor
-browser-compat: api.BaseAudioContext.createScriptProcessor
-translation_of: Web/API/BaseAudioContext/createScriptProcessor
 original_slug: Web/API/AudioContext/createScriptProcessor
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 `createScriptProcessor()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、直接音声処理に用いられる {{domxref("ScriptProcessorNode")}} を生成します。
 
-> **Note:** この機能は [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
+> **メモ:** この機能は [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
 
 ## 構文
 
@@ -38,9 +29,9 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 - `numberOfOutputChannels`
   - : 整数で、このノードの出力のチャンネル数を指定します。既定値は 2 です。
 
-> **Warning:** Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
+> **警告:** Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
 
-> **Note:** numberOfInputChannels` と `numberOfOutputChannels` の両方が 0 にするのは無効です。
+> **メモ:** numberOfInputChannels` と `numberOfOutputChannels` の両方が 0 にするのは無効です。
 
 ### 返値
 
@@ -50,7 +41,7 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 
 次の例は、 {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} によって読み込んだトラックを、入力トラック（バッファー）のそれぞれの音声サンプルにホワイトノイズを加えて処理し {{domxref("AudioDestinationNode")}} によって再生する `ScriptProcessorNode` の基本的な使用方法を示しています。各チャンネルと各サンプルフレームに対して、`scriptNode.onaudioprocess`関数は関連する `audioProcessingEvent` を受け取り、それを使って入力バッファの各チャンネルと各チャンネルの各サンプルを通してループし、少量のホワイトノイズを追加してからその結果を各ケースで出力サンプルとしてセットします。
 
-> **Note:** 完全な動作する例については、 GitHub の [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) リポジトリを参照してください（[ソースコード](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html)も見てください）。
+> **メモ:** 完全な動作する例については、 GitHub の [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) リポジトリを参照してください（[ソースコード](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html)も見てください）。
 
 ```js
 var myScript = document.querySelector('script');

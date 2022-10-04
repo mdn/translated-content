@@ -1,14 +1,8 @@
 ---
 title: 論理的プロパティと値の基本概念
 slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - ガイド
-  - 概念
-  - 書字方向
-translation_of: Web/CSS/CSS_Logical_Properties/Basic_concepts
 ---
+
 {{CSSRef}}
 
 Logical Properties and Values (論理的プロパティと値) 仕様書では、 CSS のたくさんのプロパティや値のフローに関する対応付けを紹介しています。この記事はこの仕様書を紹介し、フローに関するプロパティと値を説明します。

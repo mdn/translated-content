@@ -1,20 +1,11 @@
 ---
 title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - KeyboardEvent
-  - Method
-  - Reference
-  - Non Standard
-translation_of: Web/API/KeyboardEvent/initKeyEvent
 ---
+
 {{APIRef("UI Events")}}
 
-> **Warning:** このメソッドを使わないでください。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
+> **警告:** このメソッドを使わないでください。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
 >
 > このメソッドは DOM 仕様から削除され、現在のどのブラウザーも対応していません。
 > Firefox はバージョン 93 からこのメソッドを環境設定 (`dom.keyboardevent.init_key_event.enabled`) に隠蔽しており、その後まもなく削除される予定になっています。

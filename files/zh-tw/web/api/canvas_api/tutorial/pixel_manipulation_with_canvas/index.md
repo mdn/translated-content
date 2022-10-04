@@ -2,6 +2,7 @@
 title: Pixel manipulation with canvas
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
 直到目前為止，我們還沒真正了解 pixels 在 canvas 上的運用。使用`ImageData`物件，可直接對 pixel 裡的陣列資料**讀(read)**和**寫(write)**。在接下的內容中，也可了解到如何使影像平滑化(反鋸齒)及如何將影像保存在 canvas 之中。

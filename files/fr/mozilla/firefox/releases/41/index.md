@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/41
 original_slug: Mozilla/Firefox/Versions/41
 ---
+
 {{FirefoxSidebar}}
 
 ## Changements pour les développeurs Web
@@ -151,7 +152,7 @@ _pas de changement._
 
 _pas de changement._
 
-## See also
+## Voir aussi
 
 - [Site Compatibility for Firefox 41](/fr/docs/Mozilla/Firefox/Releases/41/Site_Compatibility)
 

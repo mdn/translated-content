@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 original_slug: Web/JavaScript/Reference/Objets_globaux/SharedArrayBuffer
 browser-compat: javascript.builtins.SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 L'objet **`SharedArrayBuffer`** est utilisé afin de représenter un tampon de données binaires brutes générique de longueur fixe. Il est semblable à l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), mais peut ici être utilisé pour créer différentes vues sur une même mémoire partagée. À la différence d'un `ArrayBuffer`, un `SharedArrayBuffer` n'est pas [un objet transférable](/fr/docs/Glossary/Transferable_objects).

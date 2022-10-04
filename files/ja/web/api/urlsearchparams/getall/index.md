@@ -1,14 +1,8 @@
 ---
 title: URLSearchParams.getAll()
 slug: Web/API/URLSearchParams/getAll
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - getAll
-translation_of: Web/API/URLSearchParams/getAll
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`getAll()`** メソッドは、指定された検索パラメーターに関連付けられたすべての値を配列として返します。

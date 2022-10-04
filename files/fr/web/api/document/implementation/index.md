@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/implementation
 ---
+
 ## Résumé
 
 Retourne un objet {{domxref("DOMImplementation")}} associé avec le document courant.

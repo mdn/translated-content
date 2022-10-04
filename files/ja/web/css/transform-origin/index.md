@@ -1,17 +1,8 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 座標変換
-  - Reference
-  - 'default value: center'
-  - recipe:css-property
-  - transform-origin
-browser-compat: css.properties.transform-origin
-translation_of: Web/CSS/transform-origin
 ---
+
 {{ CSSRef }}
 
 **`transform-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の座標変換 (transform) における原点を設定します。
@@ -125,7 +116,7 @@ transform-origin: unset;
 
 {{CSSInfo}}
 
-> **Note:** `transform-origin` の初期値は、ルートの `<svg>` 要素と [foreignObject](/ja/docs/Web/SVG/Element/foreignObject) の直接の子である `<svg>` 要素を除いたすべての SVG 要素では `0 0` です。また、 `transform-origin` は他の CSS 要素と同様に `50% 50%` です。詳しくは [SVG transform-origin](/ja/docs/Web/SVG/Attribute/transform-origin) 属性を参照してください。
+> **メモ:** `transform-origin` の初期値は、ルートの `<svg>` 要素と [foreignObject](/ja/docs/Web/SVG/Element/foreignObject) の直接の子である `<svg>` 要素を除いたすべての SVG 要素では `0 0` です。また、 `transform-origin` は他の CSS 要素と同様に `50% 50%` です。詳しくは [SVG transform-origin](/ja/docs/Web/SVG/Attribute/transform-origin) 属性を参照してください。
 
 ## 形式文法
 

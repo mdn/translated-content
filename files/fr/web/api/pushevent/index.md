@@ -13,6 +13,7 @@ tags:
   - hors-ligne
 translation_of: Web/API/PushEvent
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 L'interface **`PushEvent`** de l'[API Push](/fr/docs/Web/API/Push_API) représente un message Push qui a été reçu. Cet événement est envoyé au [scope global](/fr/docs/Web/API/ServiceWorkerGlobalScope) d'un {{domxref("ServiceWorker")}}. Il contient les informations transmises de l'application serveur vers un {{domxref("PushSubscription")}}.
@@ -67,13 +68,11 @@ self.addEventListener('push', function(event) {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                       | Commentaire        |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('Push API','#the-push-event','PushEvent')}} | {{Spec2('Push API')}} | Définition intiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PushEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

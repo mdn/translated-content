@@ -1,15 +1,8 @@
 ---
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
-tags:
-  - JavaScript
-  - メソッド
-  - Number
-  - Prototype
-  - リファレンス
-browser-compat: javascript.builtins.Number.toFixed
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 ---
+
 {{JSRef}}
 
 **`toFixed()`** メソッドは、数を固定小数点表記を用いて整形します。
@@ -43,7 +36,7 @@ toFixed(digits)
 
 **`toFixed()`** は `numObj` の文字列表記を、指数表記を使用せず、小数点以下を正確に `digits` 桁として返します。必要に応じて数値は丸められ、小数部は指定された長さになるよう必要に応じて 0 で埋められます。 `numObj` の絶対値が `1e+21` 以上の場合は、このメソッドは単純に {{jsxref("Number.prototype.toString()")}} を呼び出し、指数表記での文字列を返します。
 
-> **Warning:** 浮動小数点数は、二進数で正確にすべての十進数値を表すことができるわけではありません。これは予想外の結果を導くことがあり、例えば `0.1 + 0.2 === 0.3` は `false` を返します。
+> **警告:** 浮動小数点数は、二進数で正確にすべての十進数値を表すことができるわけではありません。これは予想外の結果を導くことがあり、例えば `0.1 + 0.2 === 0.3` は `false` を返します。
 
 ## 例
 

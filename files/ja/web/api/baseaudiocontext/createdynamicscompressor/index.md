@@ -1,25 +1,16 @@
 ---
 title: BaseAudioContext.createDynamicsCompressor()
 slug: Web/API/BaseAudioContext/createDynamicsCompressor
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createDynamicsCompressor
-browser-compat: api.BaseAudioContext.createDynamicsCompressor
-translation_of: Web/API/BaseAudioContext/createDynamicsCompressor
 original_slug: Web/API/AudioContext/createDynamicsCompressor
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createDynamicsCompressor()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{domxref("DynamicsCompressorNode")}} を生成します。これで、音声信号に圧縮をかけることができます。
 
 圧縮は、信号の最も大きな部分の音量を下げ、最も小さな部分の音量を上げます。全体として、より大きく、より豊かで、充実したサウンドを実現することができます。特に、ゲームや音楽など、多数の音を同時に再生するアプリケーションでは、全体の信号レベルを制御し、音声出力のクリッピング（歪み）を回避するのに役立つので、重要です。
 
-> **Note:** {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}} コンストラクターは {{domxref("DynamicsCompressorNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}} コンストラクターは {{domxref("DynamicsCompressorNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 

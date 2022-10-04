@@ -7,6 +7,7 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/display-legacy
 ---
+
 {{CSSRef}}
 
 CSS 2 utilisant une syntaxe avec un seul mot-clé comme valeur pour la propriété `display`, il fallait plusieurs mots-clés pour les différentes variantes bloc/en ligne d'un même mode. Cette page décrit ces valeurs.

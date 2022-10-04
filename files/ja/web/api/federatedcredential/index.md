@@ -2,6 +2,7 @@
 title: FederatedCredential
 slug: Web/API/FederatedCredential
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 **`FederatedCredential`** は [Credential Management API](/ja/docs/Web/API/Credential_Management_API) のインターフェイスで、連合アイデンティティのプロバイダーからの認証情報についての情報を提供します。連合アイデンティティのプロバイダーは、ウェブサイトが正しくユーザーを認証し、そのための API を提供する主体です。連合アイデンティティプロバイダーの一例として、 [OpenID Connect](http://openid.net/developers/specs/) があります。

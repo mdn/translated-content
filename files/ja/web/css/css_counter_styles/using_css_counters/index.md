@@ -1,17 +1,9 @@
 ---
 title: CSS カウンターの使用
 slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-tags:
-  - 上級者
-  - CSS
-  - CSS カウンタースタイル
-  - ガイド
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
+
 {{CSSRef}}
 
 **CSS カウンター**では、文書内の位置に基づいてコンテンツの表示方法を調整することができます。
@@ -122,7 +114,7 @@ counter-reset: reversed(section);
 
 {{cssxref("counter-increment")}} に負の値を指定すると、カウンター値が減少します。
 
-> **Note:** 逆行ではないカウンターを減少させるには、 {{cssxref("counter-increment")}} を使うこともできます。
+> **メモ:** 逆行ではないカウンターを減少させるには、 {{cssxref("counter-increment")}} を使うこともできます。
 > 逆行カウンターを使用する主な利点は、既定の初期値と、 `list-item` カウンターが自動的に逆行カウンターを減少させてくれることです。
 
 ### list-item カウンター

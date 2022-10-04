@@ -2,6 +2,7 @@
 title: Storage.key()
 slug: Web/API/Storage/key
 ---
+
 {{APIRef()}}
 
 `key()` 作为 {{domxref("Storage")}} 接口的方法，接受一个数值 n 作为参数，返回存储对象第 n 个数据项的键名。键的存储顺序是由用户代理定义的，所以尽可能不要依赖这个方法。
@@ -43,7 +44,7 @@ function populateStorage() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Storage.key")}}
+{{Compat}}
 
 ## 相关链接
 

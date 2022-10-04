@@ -7,6 +7,7 @@ browser-compat: api.Window.requestAnimationFrame
 l10n:
   sourceCommit: 2665f98fa021d22f9b0678f836fba25590bd6aa4
 ---
+
 {{APIRef}}
 
 La méthode **`window.requestAnimationFrame()`** indique au navigateur qu'on souhaite exécuter une animation et demande que celui-ci exécute une fonction spécifique de mise à jour de l'animation, avant le prochain rafraîchissement à l'écran du navigateur. Cette méthode prend comme argument une fonction de rappel qui sera appelée avant le rafraîchissement du navigateur.

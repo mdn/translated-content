@@ -1,16 +1,8 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-tags:
-  - ECMAScript 2015
-  - ジェネレーター
-  - 反復子
-  - JavaScript
-  - 言語機能
-  - 演算子
-browser-compat: javascript.operators.yield
-translation_of: Web/JavaScript/Reference/Operators/yield
 ---
+
 {{jsSidebar("Operators")}}
 
 `yield` キーワードは、ジェネレーター関数 ({{jsxref("Statements/function*", "function*")}} または[古いジェネレーター関数](/ja/docs/Archive/Web/JavaScript/Legacy_generator_function_statement)) を一時停止したり再開したりするために使用します。
@@ -47,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Operators/yield
 
 ジェネレーターのコードパス、 `yield` 演算子、新しい開始値を {{jsxref("Generator.prototype.next()")}} に渡すことで指定することができる機能により、ジェネレーターは大きな力と制御を提供します。
 
-> **Warning:** 残念ながら `next()` は非対称ですが、仕方がありません。常に現在中断している `yield` に値を送りますが、次の `yield` のオペランドを返します。
+> **警告:** 残念ながら `next()` は非対称ですが、仕方がありません。常に現在中断している `yield` に値を送りますが、次の `yield` のオペランドを返します。
 
 ## 例
 

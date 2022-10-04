@@ -2,6 +2,7 @@
 title: SourceBuffer.audioTracks
 slug: Web/API/SourceBuffer/audioTracks
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`audioTracks`** 読み取り専用プロパティは、`SourceBuffer` 内に現在含まれている音声トラックのリストを返します。

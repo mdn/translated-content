@@ -3,6 +3,7 @@ title: Format Web Video Text Tracks (WebVTT)
 slug: Web/API/WebVTT_API
 translation_of: Web/API/WebVTT_API
 ---
+
 {{DefaultAPISidebar("WebVTT")}}
 
 Le **format Web Video Text Tracks** (**WebVTT**) est un format qui permet d'afficher des pistes de texte qui varient avec le temps (comme des sous-titres) et qui est utilisé par l'élément HTML [`<track>`](/fr/docs/Web/HTML/Element/track). L'objectif principal des fichiers WebVTT est d'ajouter un calque de texte à une vidéo (représentée en HTML par [`<video>`](/fr/docs/Web/HTML/Element/video)). WebVTT est un format texte et les données doivent être encodées en [UTF-8](/fr/docs/Glossary/UTF-8). Les espaces et les tabulations peuvent être utilisés sans distinction. Il existe également une API qui permet de représenter ces pistes et les données nécessaires à la lecture du texte au bon moment.
@@ -619,8 +620,6 @@ Il existe plusieurs balises, telles que `<bold>`, qui peuvent être utilisées. 
 
   - L'horodatage porté par cette balise doit être supérieur à celui du début de la réplique, supérieur aux horodatages des balises précédentes pour cette réplique, et inférieur à l'horodatage de fin. Le *texte actif* correspond au texte situé entre l'horodatage et le prochain horodatage (ou l'horodatage de fin de la réplique s'il n'y en a plus d'autres). Tout texte situé avant le *texte actif* correspondra à du *texte précédent*. Tout texte situé après le *texte actif* correspondra à du *texte futur*. Cela permet de représenter des sous-titres comme ceux utilisés au karaoké.
 
-  #### Exemple n°14 — texte de karaoké
-
   ```plain
   1
   00:16.500 --> 00:18.500
@@ -641,8 +640,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
   - Permet la mise en forme du texte contenu en ciblant la classe avec CSS.
 
-  #### Exemple n°15 — balise de classe
-
   ```html
   <c.nomclasse>texte</c>
   ```
@@ -650,8 +647,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 - **Balise d'italique** (`<i></i>`)
 
   - Met en italique le texte contenu.
-
-  #### Exemple n°16 — balise d'italique
 
   ```html
   <i>texte</i>
@@ -661,8 +656,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
   - Met en gras le texte contenu.
 
-  #### Exemple n°17 — balise de gras
-
   ```html
   <b>texte</b>
   ```
@@ -670,8 +663,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 - **Balise de soulignement** (`<u></u>`)
 
   - Souligne le texte contenu
-
-  #### Exemple n°18 — balise de soulignement
 
   ```html
   <u>texte</u>
@@ -681,8 +672,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
   - Utilisée avec les balises de texte ruby afin d'afficher les [annotations ruby](https://fr.wikipedia.org/wiki/Ruby_(linguistique)) (des caractères d'annotation situés au-dessus des autres caractères).
 
-  ##### Exemple n°19 — balise ruby
-
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
   ```
@@ -691,8 +680,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
   - Utilisée avec les balises ruby afin d'afficher les [annotations ruby](https://fr.wikipedia.org/wiki/Ruby_(linguistique)) (des caractères d'annotation situés au-dessus des autres caractères).
 
-  ##### Exemple n°20 — balise de texte ruby
-
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
   ```
@@ -700,8 +687,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 - **Balise de voix** (`<v></v>`)
 
   - Semblable à la balise de classe, permet également le ciblage à l'aide de CSS pour la mise en forme du texte.
-
-  ##### Exemple n°21 — balise de voix
 
   ```html
   <v Bob>texte</v>

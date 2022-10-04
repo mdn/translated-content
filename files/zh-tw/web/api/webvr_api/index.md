@@ -2,6 +2,7 @@
 title: WebVR API
 slug: Web/API/WebVR_API
 ---
+
 {{SeeCompatTable}}{{APIRef("WebVR API")}}
 
 WebVR 可以讓穿戴的 VR 裝置 (如頭戴裝置 Oculus Rift 或 HTC Vive) 與 web 應用程式結合。開發人員可以將 VR 裝置所提供的位置與動作資訊轉移到 3D 的場景中。利用 WebVR 可以創造出很多有趣的應用程式: 包含虛擬導覽、互動訓練軟體等等。

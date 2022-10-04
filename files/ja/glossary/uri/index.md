@@ -1,14 +1,8 @@
 ---
 title: URI
 slug: Glossary/URI
-tags:
-  - 用語集
-  - HTTP
-  - 検索
-  - URI
-  - URL
-translation_of: Glossary/URI
 ---
+
 **URI** _(Uniform Resource Identifier)_ は、リソースを示す文字列です。
 
 もっとも一般的なものは {{Glossary("URL","URL")}} であり、ウェブ上の場所を指定することで、リソースを識別します。対照的に {{Glossary("URN","URN")}} は、本の ISBN のような与えられた名前空間の中で名前によってリソースを参照します。

@@ -1,11 +1,6 @@
 ---
 title: 웹페이지, 웹사이트, 웹서버 그리고 검색엔진의 차이는 무엇일까요?
 slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
-tags:
-  - 웹동작
-  - 웹작동
-  - 초보자
-translation_of: Learn/Common_questions/Pages_sites_servers_and_search_engines
 ---
 이번 글에서는 다양한 웹 관련 개념들을 이야기합니다: 웹, 페이지, 웹사이트, 웹서버, 검색엔진. 이런 용어들은 흔히ㅣ웹을 처음 배우는 사람이나 잘못 배운 사람들에게 혼란스럽습니다. 이것들이 무엇을 의미하는 지 배워봅시다!
 
@@ -43,9 +38,9 @@ translation_of: Learn/Common_questions/Pages_sites_servers_and_search_engines
 
 도서관과 간단한 유사점을 보자. 아래는 도서관에 방문했을 때, 일반적으로 하는 일이다:
 
-1.  검색 색인을 발견하고 원하는 책의 제목을 찾는다.
-2.  책의 분류번호를 기록한다.
-3.  그 책이 있는 구역으로 간 뒤, 올바른 분류번호를 찾고, 책을 얻는다.
+1. 검색 색인을 발견하고 원하는 책의 제목을 찾는다.
+2. 책의 분류번호를 기록한다.
+3. 그 책이 있는 구역으로 간 뒤, 올바른 분류번호를 찾고, 책을 얻는다.
 
 웹 서버와 도서관을 비교해보자.
 

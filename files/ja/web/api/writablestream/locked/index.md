@@ -1,16 +1,8 @@
 ---
 title: WritableStream.locked
 slug: Web/API/WritableStream/locked
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Streams
-  - WritableStream
-  - locked
-translation_of: Web/API/WritableStream/locked
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("WritableStream")}} インターフェイスの **`locked`** 読み取り専用プロパティは、`WritableStream` がライターにロックされているかどうかを示すブール値を返します。

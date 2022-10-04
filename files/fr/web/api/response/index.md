@@ -11,6 +11,7 @@ tags:
   - Response
 translation_of: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
 L'interface **`Response`** de l'API de [fetch](/fr/docs/Web/API/Fetch_API) représente la réponse d'une requête initialisée.
@@ -94,13 +95,11 @@ var myResponse = new Response();
 
 ## Spécifications
 
-| Spécification                                                        | Statut                   | Commentaire         |
-| -------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#response-class','Response')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## Voir aussi
 

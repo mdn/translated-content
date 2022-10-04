@@ -1,22 +1,13 @@
 ---
 title: '<blink>: 点滅文字列要素'
 slug: Web/HTML/Element/blink
-tags:
-  - Blink
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.blink
-translation_of: Web/HTML/Element/blink
 ---
 
 {{HTMLRef}}{{Deprecated_header}}
 
 **`<blink>`** は [HTML](/ja/docs/Web/HTML) の要素で、標準外の要素であり、包含するテキストをゆっくり点滅させます。
 
-> **Warning:** この要素は**廃止されており**、また悪いデザインの実例ですので使用しないでください。文字の点滅は複数のアクセシビリティ標準において難色が示されており、 CSS 仕様書ではブラウザーが `<blink>` 要素を無視することを許可しています。
+> **警告:** この要素は**廃止されており**、また悪いデザインの実例ですので使用しないでください。文字の点滅は複数のアクセシビリティ標準において難色が示されており、 CSS 仕様書ではブラウザーが `<blink>` 要素を無視することを許可しています。
 
 ## DOM インターフェイス
 

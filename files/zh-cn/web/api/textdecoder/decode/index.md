@@ -2,6 +2,7 @@
 title: TextDecoder.decode()
 slug: Web/API/TextDecoder/decode
 ---
+
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
 **`TextDecode.decode()`** 方法使用 {{domxref("TextDecoder")}} 对象的指定方法对给定的参数进行解码后，返回一个字符串。

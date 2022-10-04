@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "_x_ is (not) _y_" は、予期しない型があったときに発生します。よくあるのは、予期せず {{jsxref("undefined")}} または {{jsxref("null")}} の値があった場合です。

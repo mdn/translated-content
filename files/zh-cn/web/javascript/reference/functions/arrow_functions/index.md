@@ -2,6 +2,7 @@
 title: 箭头函数
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
+
 {{jsSidebar("Functions")}}
 
 **箭头函数表达式**的语法比[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)更简洁，并且没有自己的[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)，[`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)或[`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target)。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
@@ -120,7 +121,7 @@ function Person() {
 }
 ```
 
-或者，可以创建[绑定函数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)，以便将预先分配的`this`值传递到绑定的目标函数（上述示例中的`growUp()`函数）。
+或者，可以创建[绑定函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)，以便将预先分配的`this`值传递到绑定的目标函数（上述示例中的`growUp()`函数）。
 
 箭头函数不会创建自己的`this，它只会从自己的作用域链的上一层继承 this`。因此，在下面的代码中，传递给`setInterval`的函数内的`this`与封闭函数中的`this`值相同：
 
@@ -185,7 +186,7 @@ var arr = () => arguments[0];
 arr(); // 1
 
 function foo(n) {
-  var f = () => arguments[0] + n; // 隐式绑定 foo 函数的 arguments 对象. arguments[0] 是 n，即传给 foo 函数的第一个参数
+  var f = () => arguments[0] + n; // 隐式绑定 foo 函数的 arguments 对象。arguments[0] 是 n，即传给 foo 函数的第一个参数
   return f();
 }
 
@@ -269,7 +270,7 @@ console.log(Foo.prototype); // undefined
 
 ### 使用 `yield` 关键字
 
-[`yield`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield) 关键字通常不能在箭头函数中使用（除非是嵌套在允许使用的函数内）。因此，箭头函数不能用作函数生成器。
+[`yield`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield) 关键字通常不能在箭头函数中使用（除非是嵌套在允许使用的函数内）。因此，箭头函数不能用作函数生成器。
 
 ## 函数体
 
@@ -315,7 +316,7 @@ var func = ()
 // SyntaxError: expected expression, got '=>'
 ```
 
-但是，可以通过在 ‘=>’ 之后换行，或者用 ‘( )’、'{ }'来实现换行，如下：
+但是，可以通过在‘=>’之后换行，或者用‘( )’、'{ }'来实现换行，如下：
 
 ```js
 var func = (a, b, c) =>
@@ -450,7 +451,7 @@ v();    //1
 v();    //2
 
 
-//箭头函数体的闭包（ i=0 是默认参数）
+//箭头函数体的闭包（i=0 是默认参数）
 var Add = (i=0) => {return (() => (++i) )};
 var v = Add();
 v();           //1

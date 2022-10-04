@@ -1,10 +1,6 @@
 ---
 title: 접근성
 slug: Glossary/Accessibility
-tags:
-  - Accessibility
-  - Glossary
-translation_of: Glossary/Accessibility
 ---
 **웹 접근성**(Accessibility, **A11Y**)은 신체적, 기술적 제약사항에도 불구하고 충분히 사용 가능한 웹사이트를 만드는 것을 말합니다. 웹 접근성은 {{Glossary("W3C")}}의 {{Glossary("WAI","Web Accessibility Initiative")}}(WAI)가 공식적으로 정의하고 논의합니다.
 

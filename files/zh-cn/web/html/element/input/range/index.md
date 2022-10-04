@@ -3,9 +3,10 @@ title: <input type="range">
 slug: Web/HTML/Element/input/range
 original_slug: Web/HTML/Element/Input/范围
 ---
+
 {{HTMLRef}}
 
-{{HTMLElement("input")}} **`range`** 类型的元素允许用户指定一个数值，该数值必须不小于给定值，并且不得大于另一个给定值。但是，精确值并不重要。通常使用滑块或拨号控件而不是像 {{HTMLElement('input/number', 'number')}} 输入类型这样的文本输入框来表示。 由于这种小部件不精确，因此除非控件的确切值不重要，否则通常不应使用它。
+{{HTMLElement("input")}} **`range`** 类型的元素允许用户指定一个数值，该数值必须不小于给定值，并且不得大于另一个给定值。但是，精确值并不重要。通常使用滑块或拨号控件而不是像 {{HTMLElement('input/number', 'number')}} 输入类型这样的文本输入框来表示。由于这种小部件不精确，因此除非控件的确切值不重要，否则通常不应使用它。
 
 {{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
 
@@ -38,7 +39,7 @@ original_slug: Web/HTML/Element/Input/范围
 
 ### 验证方式
 
-没有可用的模式验证。 但是，执行以下形式的自动验证：
+没有可用的模式验证。但是，执行以下形式的自动验证：
 
 - 如果将 {{htmlattrxref("value", "input")}} 设置为无法转换为有效浮点数的值，则验证将失败，因为输入正遭受错误的输入。
 - 该值不得小于 {{htmlattrxref("min", "input")}}. 默认值为 0。
@@ -47,14 +48,14 @@ original_slug: Web/HTML/Element/Input/范围
 
 ### 值
 
-{{htmlattrxref("value", "input")}} 属性包含一个 {{domxref("DOMString")}} 该属性包含所选数字的字符串表示形式。 该值绝不能为空字符串 (`""`). 默认值介于指定的最小值和最大值之间，除非最大值实际上小于最小值，在这种情况下，默认值设置 `min` 属性的值。确定默认值的算法是：
+{{htmlattrxref("value", "input")}} 属性包含一个 {{domxref("DOMString")}} 该属性包含所选数字的字符串表示形式。该值绝不能为空字符串 (`""`). 默认值介于指定的最小值和最大值之间，除非最大值实际上小于最小值，在这种情况下，默认值设置 `min` 属性的值。确定默认值的算法是：
 
 ```js
 defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
                : rangeElem.min + (rangeElem.max - rangeElem.min)/2;
 ```
 
-如果尝试将值设置为小于最小值，则将其设置为最小值。 类似地，尝试将值设置为大于最大值会导致将其设置为最大值。
+如果尝试将值设置为小于最小值，则将其设置为最小值。类似地，尝试将值设置为大于最大值会导致将其设置为最大值。
 
 ## 其他属性
 
@@ -73,21 +74,21 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ### max
 
-允许值范围内的最大值。 如果输入到元素中的{{htmlattrxref("value", "input")}}超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)。 如果 [`max`](/en-US/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
+允许值范围内的最大值。如果输入到元素中的{{htmlattrxref("value", "input")}}超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)。如果 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
 
-此值必须大于或等于 min 属性的值。 请参见 [HTML `max`](/zh-CN/docs/Web/HTML/Attributes/max)`属性。`
+此值必须大于或等于 `min` 属性的值。请参见 [HTML `max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性。
 
 ### min
 
-允许值范围内的最小值。 如果元素的{{htmlattrxref("value", "input")}} 小于此值，则该元素将无法通过 [约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)。如果为`min` 指定的值不是有效数字，则输入没有最小值。
+允许值范围内的最小值。如果元素的{{htmlattrxref("value", "input")}} 小于此值，则该元素将无法通过 [约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)。如果为`min` 指定的值不是有效数字，则输入没有最小值。
 
-该值必须小于或等于 max 属性的值。 请参见 [HTML `min`属性](/zh-CN/docs/Web/HTML/Attributes/min)。
+该值必须小于或等于 max 属性的值。请参见 [HTML `min`属性](/zh-CN/docs/Web/HTML/Attributes/min)。
 
 ### step
 
 {{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}
 
-`range` 输入的默认步进值为 1，除非步进基数不是整数，否则仅允许输入整数；否则，默认值为 1。 例如，如果将 `min` 设置为-10 并将 `value` 设置为 1.5，则 1 的 `step` 将只允许正方向上的值为 1.5、2.5、3.5，...，以及-0.5，-1.5，-2.5 等。 ..朝负面方向发展。 请参阅[HTML `step` 属性](/zh-CN/docs/Web/HTML/Attributes/step)。
+`range` 输入的默认步进值为 1，除非步进基数不是整数，否则仅允许输入整数；否则，默认值为 1。例如，如果将 `min` 设置为-10 并将 `value` 设置为 1.5，则 1 的 `step` 将只允许正方向上的值为 1.5、2.5、3.5，...，以及-0.5，-1.5，-2.5 等。 ..朝负面方向发展。请参阅[HTML `step` 属性](/zh-CN/docs/Web/HTML/Attributes/step)。
 
 ### 非标准属性
 
@@ -96,7 +97,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 | [`orient`](#attr-orient) | 设置范围滑块的方向。 **仅限 Firefox .** |
 
 - {{htmlattrdef("orient")}} {{non-standard_inline}}
-  - : 类似于-moz-orient 非标准 CSS 属性会影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素， `orient` 属性定义范围滑块的方向。 值包括 `horizontal`, 表示范围是水平呈现， 和 `vertical`, 其中范围是垂直呈现）。
+  - : 类似于-moz-orient 非标准 CSS 属性会影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素， `orient` 属性定义范围滑块的方向。值包括 `horizontal`, 表示范围是水平呈现，和 `vertical`, 其中范围是垂直呈现）。
 
 > **备注：** 以下输入属性不适用于输入范围：`accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`,高度，`maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, 和 `width`. 这些属性中的任何一个（如果包含）将被忽略。
 
@@ -111,11 +112,11 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 - 游戏配置控件，例如难度，可见性距离，世界范围等等。
 - 密码管理员生成的密码的密码长度。
 
-通常，如果用户对最小值和最大值之间的距离的百分比比实际数字本身更感兴趣，则范围输入是一个不错的选择。 例如，在家庭立体声音量控制的情况下，用户通常认为 “将音量设置为最大音量的一半” 而不是 “将音量设置为 0.5”。
+通常，如果用户对最小值和最大值之间的距离的百分比比实际数字本身更感兴趣，则范围输入是一个不错的选择。例如，在家庭立体声音量控制的情况下，用户通常认为“将音量设置为最大音量的一半”而不是“将音量设置为 0.5”。
 
 ### 指定最小和最大
 
-默认情况下，最小值为 0，最大值为 100。如果这不是您想要的值，则可以通过更改 {{htmlattrxref("min", "input")}} 和/或 {{htmlattrxref("max", "input")}} 属性。 这些可以是任何浮点值。
+默认情况下，最小值为 0，最大值为 100。如果这不是您想要的值，则可以通过更改 {{htmlattrxref("min", "input")}} 和/或 {{htmlattrxref("max", "input")}} 属性。这些可以是任何浮点值。
 
 例如，要要求用户输入介于-10 和 10 之间的值，可以使用：
 
@@ -127,7 +128,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ### 设置值的粒度
 
-默认情况下，粒度为 1，表示该值始终是整数。 您可以更改 {{htmlattrxref("step")}} 属性以控制粒度。 例如，如果您需要一个介于 5 到 10 之间的值（精确到两位小数），则应将 `step` 的值设置为 0.01:
+默认情况下，粒度为 1，表示该值始终是整数。您可以更改 {{htmlattrxref("step")}} 属性以控制粒度。例如，如果您需要一个介于 5 到 10 之间的值（精确到两位小数），则应将 `step` 的值设置为 0.01:
 
 ```html
 <input type="range" min="5" max="10" step="0.01">
@@ -147,7 +148,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ### 添加井号和标签
 
-HTML 规范使浏览器在如何显示范围控件方面具有一定的灵活性。 在散列标记和较小程度上的标签方面，这种灵活性最明显。 该规范描述了如何使用 {{htmlattrxref("list", "input")}} 属性和 {{HTMLElement("datalist")}} 元素将自定义点添加到范围控件，但没有任何要求或 甚至是沿控件长度的标准化哈希或刻度线的建议。
+HTML 规范使浏览器在如何显示范围控件方面具有一定的灵活性。在散列标记和较小程度上的标签方面，这种灵活性最明显。该规范描述了如何使用 {{htmlattrxref("list", "input")}} 属性和 {{HTMLElement("datalist")}} 元素将自定义点添加到范围控件，但没有任何要求或 甚至是沿控件长度的标准化哈希或刻度线的建议。
 
 #### 范围控制模型
 
@@ -190,7 +191,7 @@ HTML 规范使浏览器在如何显示范围控件方面具有一定的灵活性
 
 ##### 带散列标记的范围控件
 
-此范围控件使用的 `list` 属性指定{{HTMLElement("datalist")}} 的 ID，该 ID 定义了控件上的一系列带散列的标记。 其中有 11 个，因此在 0％和每个 10％标记处都有一个。 每个点均使用 {{HTMLElement("option")}} 元素表示，其元素 {{htmlattrxref("value", "option")}} 设置为应绘制标记的范围值。
+此范围控件使用的 `list` 属性指定{{HTMLElement("datalist")}} 的 ID，该 ID 定义了控件上的一系列带散列的标记。其中有 11 个，因此在 0％和每个 10％标记处都有一个。每个点均使用 {{HTMLElement("option")}} 元素表示，其元素 {{htmlattrxref("value", "option")}} 设置为应绘制标记的范围值。
 
 <table class="fullwidth standard-table">
   <tbody>
@@ -298,7 +299,7 @@ HTML 规范使浏览器在如何显示范围控件方面具有一定的灵活性
 
 ### 改变方向
 
-使旋钮向左和向右滑动。 如果支持，我们将能够声明垂直高度，并通过声明高度值大于宽度值来使用 CSS 上下滑动。 任何主要的浏览器实际上尚未实现此功能。（请参阅{{bug(981916)}}, [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071))。也许它仍在讨论中。
+使旋钮向左和向右滑动。如果支持，我们将能够声明垂直高度，并通过声明高度值大于宽度值来使用 CSS 上下滑动。任何主要的浏览器实际上尚未实现此功能。（请参阅{{bug(981916)}}, [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071))。也许它仍在讨论中。
 
 同时，我们可以通过使用 CSS 变换旋转范围来使范围垂直，或者通过使用各自的方法定位每个浏览器引擎，包括通过将 {{cssxref('appearance')}} 设置为 `slider-vertical`, 在 Firefox 中使用非标准的`orient` 属性，或通过更改 Internet Explorer 和 Edge 的文本方向。
 
@@ -339,7 +340,7 @@ HTML 规范使浏览器在如何显示范围控件方面具有一定的灵活性
 
 ### 变换：旋转（-90deg）
 
-但是，您可以通过在侧面绘制水平范围控件来创建垂直范围控件。 最简单的方法是使用 CSS：通过应用 {{cssxref("transform")}} 旋转元素，可以使其垂直。 让我们来看看。
+但是，您可以通过在侧面绘制水平范围控件来创建垂直范围控件。最简单的方法是使用 CSS：通过应用 {{cssxref("transform")}} 旋转元素，可以使其垂直。让我们来看看。
 
 #### HTML
 
@@ -353,7 +354,7 @@ HTML 规范使浏览器在如何显示范围控件方面具有一定的灵活性
 
 #### CSS
 
-现在我们需要一些 CSS。 首先是包装器本身的 CSS； 这指定了我们想要的显示模式和大小，以便页面正确布局； 本质上，它是为滑块保留页面的区域，以便旋转的滑块适合保留的空间而不会造成混乱。
+现在我们需要一些 CSS。首先是包装器本身的 CSS；这指定了我们想要的显示模式和大小，以便页面正确布局；本质上，它是为滑块保留页面的区域，以便旋转的滑块适合保留的空间而不会造成混乱。
 
 ```css
 .slider-wrapper {
@@ -376,7 +377,7 @@ HTML 规范使浏览器在如何显示范围控件方面具有一定的灵活性
 }
 ```
 
-控件的大小设置为 150 像素长 x 20 像素高。 边距设置为 0， {{cssxref("transform-origin")}} 移至滑块旋转通过的空间的中间； 由于滑块配置为 150 像素宽，因此它将旋转通过每边 150 像素的框。 在每个轴上将原点偏移 75 像素，这意味着我们将围绕该空间的中心旋转。 最后，我们将逆时针旋转 90°。 结果：旋转一个范围输入，因此最大值在顶部，最小值在底部。
+控件的大小设置为 150 像素长 x 20 像素高。边距设置为 0， {{cssxref("transform-origin")}} 移至滑块旋转通过的空间的中间；由于滑块配置为 150 像素宽，因此它将旋转通过每边 150 像素的框。在每个轴上将原点偏移 75 像素，这意味着我们将围绕该空间的中心旋转。最后，我们将逆时针旋转 90°。结果：旋转一个范围输入，因此最大值在顶部，最小值在底部。
 
 {{EmbedLiveSample("transform_rotate-90deg", 200, 200, "https://mdn.mozillademos.org/files/14987/Orientation_sample3.png")}}
 
@@ -479,7 +480,7 @@ input[type="range"] {
 
 - [HTML 表单](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
-- [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
+- [`<input type="number">`](/zh-CN/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}
 - [使用 ConstantSourceNode 控制多个参数](/zh-CN/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [设置范围元素的样式](https://css-tricks.com/sliding-nightmare-understanding-range-input)

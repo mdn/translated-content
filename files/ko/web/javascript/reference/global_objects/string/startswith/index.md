@@ -16,7 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 
 ## 구문
 
-    str.startsWith(searchString[, position])
+```js
+str.startsWith(searchString[, position])
+```
 
 ### 매개변수
 
@@ -50,11 +52,13 @@ console.log(str.startsWith('not to be', 10)); // true
 
 `startsWith` 메소드는 ECMAScript 2015 명세에 포함됐으며, 아직까지 모든 JavaScrpt 구현체가 지원하지 않을 수 있습니다. 그러나 아래 코드 조각을 사용해 폴리필 할 수 있습니다.
 
-    if (!String.prototype.startsWith) {
-    	String.prototype.startsWith = function(search, pos) {
-    		return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
-    	};
-    }
+```js
+if (!String.prototype.startsWith) {
+  String.prototype.startsWith = function(search, pos) {
+    return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
+  };
+}
+```
 
 ES2015 명세를 모두 만족하지만, 더 무거운 폴리필은 [Mathias Bynens의 GitHub](https://github.com/mathiasbynens/String.prototype.startsWith) 에서 확인할 수 있습니다.
 

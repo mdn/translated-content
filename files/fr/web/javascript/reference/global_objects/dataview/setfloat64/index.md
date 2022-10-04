@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setFloat64
 ---
+
 {{JSRef}}
 
 La méthode **`setFloat64()`** permet d'enregistrer un nombre flottant signé sur 64 bits (type _double_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.

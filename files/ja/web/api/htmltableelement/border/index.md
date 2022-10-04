@@ -1,16 +1,8 @@
 ---
 title: HTMLTableElement.border
 slug: Web/API/HTMLTableElement/border
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
-browser-compat: api.HTMLTableElement.border
-translation_of: Web/API/HTMLTableElement/border
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 **`HTMLTableElement.border`** プロパティは、 {{HtmlElement("table")}} 要素の境界の幅を表します。

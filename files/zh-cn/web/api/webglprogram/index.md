@@ -2,9 +2,10 @@
 title: WebGLProgram
 slug: Web/API/WebGLProgram
 ---
+
 {{APIRef("WebGL")}}
 
-**WebGLProgram** 是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的一部分，它由两个{{domxref("WebGLShader")}}s（webgl 着色器）组成，分别为顶点着色器和片元着色器（两种着色器都是采用 GLSL 语言编写的）。创建一个 **WebGLProgram** 需要调用 GL 上下文的{{domxref("WebGLRenderingContext.createProgram", "createProgram()")}} 方法，然后调用{{domxref("WebGLRenderingContext.attachShader", "attachShader()")}}方法附加上着色器，之后你才能将它们连接到一个可用的程序。
+**WebGLProgram** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，它由两个{{domxref("WebGLShader")}}s（webgl 着色器）组成，分别为顶点着色器和片元着色器（两种着色器都是采用 GLSL 语言编写的）。创建一个 **WebGLProgram** 需要调用 GL 上下文的{{domxref("WebGLRenderingContext.createProgram", "createProgram()")}} 方法，然后调用{{domxref("WebGLRenderingContext.attachShader", "attachShader()")}}方法附加上着色器，之后你才能将它们连接到一个可用的程序。
 
 WebGLProgram 的创建过程请参考下面的代码：
 
@@ -19,7 +20,7 @@ gl.linkProgram(program);
 
 if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
   var info = gl.getProgramInfoLog(program);
-  throw 'WebGL program 不能编译. \n\n' + info;
+  throw 'WebGL program 不能编译。\n\n' + info;
 }
 ```
 
@@ -58,7 +59,7 @@ gl.deleteProgram(program);
 
 ## 浏览器兼容
 
-{{Compat("api.WebGLProgram")}}
+{{Compat}}
 
 ## 相关链接
 

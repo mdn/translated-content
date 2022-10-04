@@ -14,6 +14,7 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** sert de valeur par défaut pour les autres directives CSP {{Glossary("fetch directive", "fetch directives")}}.

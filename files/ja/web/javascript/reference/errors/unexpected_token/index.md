@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: Unexpected token'
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "unexpected token" は、特定の言語構造が期待されているのに、それ以外のものが提供されている場合に発生します。単純なタイプミスかもしれません。

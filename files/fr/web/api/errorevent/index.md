@@ -7,6 +7,7 @@ tags:
   - Worker API
 translation_of: Web/API/ErrorEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`ErrorEvent`** représente un événement donnant des informations relatives aux erreurs dans les scripts ou dans les fichiers.

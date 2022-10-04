@@ -2,6 +2,7 @@
 title: Data in WebGL
 slug: Web/API/WebGL_API/Data
 ---
+
 {{WebGLSidebar}}
 
 GLSL 为 Shader 提供了三种不同作用的数据存储，每种都有一个特定的用例。每种数据依作用不同可以被一种或者全部 shader 访问（取决于数据存储类型），也可能通过站点的 Javascript 代码进行访问，这取决于变量的特定类型。
@@ -63,7 +64,7 @@ fColor = vColor;
 
 ### Uniforms
 
-**Uniform** 通常是由 JavaScript 代码设置并且在 vertex shader 和 fragment shader 中都能够访问。 使用 uniform 设定在一帧的所有绘制中相同的数据，例如光源颜色、亮度、全局变换以及透视数据等等。
+**Uniform** 通常是由 JavaScript 代码设置并且在 vertex shader 和 fragment shader 中都能够访问。使用 uniform 设定在一帧的所有绘制中相同的数据，例如光源颜色、亮度、全局变换以及透视数据等等。
 
 <<添加细节>>
 

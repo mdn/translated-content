@@ -1,8 +1,8 @@
 ---
 title: 序文
 slug: Web/API/XSLTProcessor/Introduction
-translation_of: Web/API/XSLTProcessor/Introduction
 ---
+
 ## 序文
 
 W3C 標準で気付かされる流行の一つは、スタイルからコンテンツを分ける努力がなされていることです。これにより、同じスタイルを複数のコンテンツで再利用することができ、簡単なメンテナンスでコンテンツの外観を (一つのファイルの修正のみで) すばやく変更することができます。

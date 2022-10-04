@@ -12,6 +12,7 @@ tags:
 translation_of: Web/HTML/Element/code
 browser-compat: html.elements.code
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<code>`** représente un court fragment de code machine. Par défaut, l'agent utilisateur utilise une police à chasse fixe (_monospace_) afin d'afficher le texte contenu dans cet élément.

@@ -76,12 +76,12 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 
 | 코드 포인트 | 이름                           | 축약형 | 설명                                                                                                     | 이스케이프 시퀀스 |
 | ----------- | ------------------------------ | ------ | -------------------------------------------------------------------------------------------------------- | ----------------- |
-| U+0009      | Character tabulation           | <HT>   | Horizontal tabulation                                                                                    | \t                |
-| U+000B      | Line tabulation                | <VT>   | Vertical tabulation                                                                                      | \v                |
-| U+000C      | Form feed                      | <FF>   | Page breaking control character ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)).        | \f                |
-| U+0020      | Space                          | <SP>   | Normal space                                                                                             |                   |
-| U+00A0      | No-break space                 | <NBSP> | Normal space, but no point at which a line may break                                                     |                   |
-| Others      | Other Unicode space characters | <USP>  | [Spaces in Unicode on Wikipedia](http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                   |
+| U+0009      | Character tabulation           | \<HT>   | Horizontal tabulation                                                                                    | \t                |
+| U+000B      | Line tabulation                | \<VT>   | Vertical tabulation                                                                                      | \v                |
+| U+000C      | Form feed                      | \<FF>   | Page breaking control character ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)).        | \f                |
+| U+0020      | Space                          | \<SP>   | Normal space                                                                                             |                   |
+| U+00A0      | No-break space                 | \<NBSP> | Normal space, but no point at which a line may break                                                     |                   |
+| Others      | Other Unicode space characters | \<USP>  | [Spaces in Unicode on Wikipedia](http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                   |
 
 ## 개행 문자
 
@@ -91,10 +91,10 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 
 | 코드 포인트 | 이름                | 축약형 | 설명                                                   | 이스케이프 시퀀스 |
 | ----------- | ------------------- | ------ | ------------------------------------------------------ | ----------------- |
-| U+000A      | Line Feed           | <LF>   | New line character in UNIX systems.                    | \n                |
-| U+000D      | Carriage Return     | <CR>   | New line character in Commodore and early Mac systems. | \r                |
-| U+2028      | Line Separator      | <LS>   | [Wikipedia](http://en.wikipedia.org/wiki/Newline)      |                   |
-| U+2029      | Paragraph Separator | <PS>   | [Wikipedia](http://en.wikipedia.org/wiki/Newline)      |                   |
+| U+000A      | Line Feed           | \<LF>   | New line character in UNIX systems.                    | \n                |
+| U+000D      | Carriage Return     | \<CR>   | New line character in Commodore and early Mac systems. | \r                |
+| U+2028      | Line Separator      | \<LS>   | [Wikipedia](http://en.wikipedia.org/wiki/Newline)      |                   |
+| U+2029      | Paragraph Separator | \<PS>   | [Wikipedia](http://en.wikipedia.org/wiki/Newline)      |                   |
 
 ## 주석
 
@@ -270,7 +270,7 @@ a['import']
 a = { import: 'test' }.
 ```
 
-On the other hand the following is illegal because it's an `Identifier`, which is an `IdentifierName` without the reserved words. Identifiers are used for `FunctionDeclaration, FunctionExpression, VariableDeclaration` and so on. `IdentifierNames `are used for` MemberExpression, CallExpression` and so on.
+On the other hand the following is illegal because it's an `Identifier`, which is an `IdentifierName` without the reserved words. Identifiers are used for `FunctionDeclaration, FunctionExpression, VariableDeclaration` and so on. `IdentifierNames` are used for `MemberExpression, CallExpression` and so on.
 
 ```js
 function import() {} // Illegal.
@@ -528,50 +528,50 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) mu
 - `continue`, `break`, `throw`
 - `return`
 
-The ECMAScript specification mentions[ three rules of semicolon insertion](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion).
+The ECMAScript specification mentions [three rules of semicolon insertion](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion).
 
 1. A semicolon is inserted before, when a [Line terminator](#Line_terminators) or "}" is encountered that is not allowed by the grammar.
 
-```js
-{ 1 2 } 3
+    ```js
+    { 1 2 } 3
 
-// is transformed by ASI into
+    // is transformed by ASI into
 
-{ 1 2 ;} 3;
-```
+    { 1 2 ;} 3;
+    ```
 
 2. A semicolon is inserted at the end, when the end of the input stream of tokens is detected and the parser is unable to parse the single input stream as a complete program.
 
-Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
+    Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
-```js
-a = b
-++c
+    ```js
+    a = b
+    ++c
 
-// is transformend by ASI into
+    // is transformend by ASI into
 
-a = b;
-++c;
-```
+    a = b;
+    ++c;
+    ```
 
 3. A semicolon is inserted at the end, when a statement with restricted productions in the grammar is followed by a line terminator. These statements with "no LineTerminator here" rules are:
 
-- PostfixExpressions (`++` and `--`)
-- `continue`
-- `break`
-- `return`
-- `yield`, `yield*`
-- `module`
+    - PostfixExpressions (`++` and `--`)
+    - `continue`
+    - `break`
+    - `return`
+    - `yield`, `yield*`
+    - `module`
 
-```js
-return
-a + b
+    ```js
+    return
+    a + b
 
-// is transformed by ASI into
+    // is transformed by ASI into
 
-return;
-a + b;
-```
+    return;
+    a + b;
+    ```
 
 ## 명세
 

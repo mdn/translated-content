@@ -1,13 +1,8 @@
 ---
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-browser-compat: http.methods.TRACE
-translation_of: Web/HTTP/Methods/TRACE
 ---
+
 {{HTTPSidebar}}
 
 **HTTP の `TRACE` メソッド**は、対象リソースまでのパスに沿ってメッセージのループバックテストを行い、便利なデバッグの仕組みを提供します。

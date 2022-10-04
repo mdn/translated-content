@@ -1,16 +1,8 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - NeedsContent
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.flex-grow
-translation_of: Web/CSS/flex-grow
 ---
+
 {{CSSRef}}
 
 **`flex-grow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムの[主軸方向の寸法](https://www.w3.org/TR/css-flexbox/#main-size)のフレックス伸長係数を設定します。

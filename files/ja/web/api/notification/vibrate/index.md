@@ -1,19 +1,8 @@
 ---
 title: Notification.vibrate
 slug: Web/API/Notification/vibrate
-page-type: web-api-instance-property
-tags:
-  - API
-  - Device
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - vibrate
-browser-compat: api.Notification.vibrate
-translation_of: Web/API/Notification/vibrate
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `vibrate` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、通知が発行されたときに端末のバイブレーションハードウェアが出力する[バイブレーションパターン](/ja/docs/Web/API/Vibration_API#vibration_patterns)を指定します。これは {{domxref("Notification.Notification","Notification()")}} コンストラクターの `vibrate` オプションで指定されます。

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/split
 ---
+
 {{JSRef}}
 
 Le symbole connu **`Symbol.split`** définit la méthode qui est utilisée pour découper une chaîne de caractères à l'emplacement où une correspondance a été trouvée grâce à une expression rationnelle. Cette fonction est appelée par la méthode {{jsxref("String.prototype.split()")}}.

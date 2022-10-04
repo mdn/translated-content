@@ -3,6 +3,7 @@ title: MediaSource.MediaSource()
 slug: Web/API/MediaSource/MediaSource
 translation_of: Web/API/MediaSource/MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 Le constructeur **`MediaSource()`** de l'interface {{domxref("MediaSource")}} construit et retourne un nouvel object `MediaSource` sans buffer associé

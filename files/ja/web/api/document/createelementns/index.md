@@ -1,13 +1,8 @@
 ---
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/createElementNS
 ---
+
 {{APIRef("DOM")}}
 
 指定された名前空間 URI と修飾名を持つ要素を生成します。
@@ -86,7 +81,7 @@ The new {{DOMxRef("Element")}}.
 </page>
 ```
 
-> **Note:** 上記の例は XHTML 文書では推奨されていないインラインスクリプトを使用しています。この部分的な例は実際には XUL 文書に埋め込んだ XHTML があるものですが、それでもこの推奨事項は適用されます。
+> **メモ:** 上記の例は XHTML 文書では推奨されていないインラインスクリプトを使用しています。この部分的な例は実際には XUL 文書に埋め込んだ XHTML があるものですが、それでもこの推奨事項は適用されます。
 
 ## 仕様書
 

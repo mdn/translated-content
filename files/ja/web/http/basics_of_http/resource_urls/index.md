@@ -1,13 +1,8 @@
 ---
 title: リソース URL
 slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
-tags:
-  - Guide
-  - HTTP
-  - Intermediate
-  - Resource
-translation_of: Web/HTTP/Basics_of_HTTP/Resource_URLs
 ---
+
 {{HTTPSidebar}}{{non-standard_header}}
 
 `resource:` というスキームのプレフィックスが付いたリソース URL は、Firefox と Firefox のブラウザー拡張機能によってリソースを内部的に読み込むために使用されますが、情報の一部はブラウザーが接続するサイトでも利用できます。
@@ -60,7 +55,7 @@ http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc
 
 しかし、特定の状況下で Firefox がウェブコンテンツにリソースを読み込む必要があります。 たとえば、ビュー・ソース・ページ (ビュー・ソースまたはビュー選択ソース) を開くと、 `resource:` URI を介して `viewsource.css` が必要です。ウェブコンテンツに公開する必要があるリソースは、 `resource://content-accessible/`という名前の新しい場所に移動されました。これは隔離されており、重要ではないリソースのみが含まれています。 このようにして、重要なリソースを公開し、ほとんどの脅威を排除できます。
 
-> **Note:** **メモ**: ウェブと拡張機能の開発者がリソース URL をもう使用しようとしないことをお勧めします。彼らの使い方はうまくいきませんでした。そしてほとんどの使用法はこれ以上動作しません。
+> **メモ:** ウェブと拡張機能の開発者がリソース URL をもう使用しようとしないことをお勧めします。彼らの使い方はうまくいきませんでした。そしてほとんどの使用法はこれ以上動作しません。
 
 ## 仕様
 

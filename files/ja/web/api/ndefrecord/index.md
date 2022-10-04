@@ -1,13 +1,8 @@
 ---
 title: NDEFRecord
 slug: Web/API/NDEFRecord
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFRecord
-translation_of: Web/API/NDEFRecord
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`NDEFRecord`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API) のインターフェイスで、 NDEF に対応する NFC タグなど、互換性のある NFC 機器から読み取ったり、書き込んだりできるデータを提供します。
@@ -25,7 +20,7 @@ translation_of: Web/API/NDEFRecord
   - : このレコードの {{Glossary("MIME type", "MIME タイプ")}}です。この値は `recordType` が `"mime"` と等しくない場合は `null` になります。
 - {{DOMxRef("NDEFRecord.id")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : レコード識別子、レコードを識別するために使用される絶対または相対 URL を返します。
-    > **Note:** 識別子の一意性は、レコードの生成者によってのみ強制されます。
+    > **メモ:** 識別子の一意性は、レコードの生成者によってのみ強制されます。
 - {{DOMxRef("NDEFRecord.data")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : このレコードのペイロードの生のバイト列が入った {{jsxref("DataView")}} を返します。
 - {{DOMxRef("NDEFRecord.encoding")}} {{Experimental_Inline}} {{ReadOnlyInline}}

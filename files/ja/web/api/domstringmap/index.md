@@ -1,17 +1,8 @@
 ---
 title: DOMStringMap
 slug: Web/API/DOMStringMap
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsMarkupWork
-  - NeedsNewLayout
-  - NeedsUpdate
-  - Reference
-  - インターフェイス
-translation_of: Web/API/DOMStringMap
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`DOMStringMap`** インターフェイスは、要素に追加されたカスタム属性のデータを表すために {{ domxref("HTMLElement.dataset") }} 属性で使用されます。

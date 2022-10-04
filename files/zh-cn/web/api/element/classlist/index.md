@@ -2,6 +2,7 @@
 title: Element.classList
 slug: Web/API/Element/classList
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.classList`** 是一个只读属性，返回一个元素 `class` 属性的动态 {{domxref("DOMTokenList")}} 集合。这可以用于操作 class 集合。

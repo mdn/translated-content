@@ -1,15 +1,8 @@
 ---
 title: 合成の例
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
-tags:
-  - キャンバス
-  - 例
-  - グラフィック
-  - HTML
-  - HTML5
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Compositing/Example
 ---
+
 {{CanvasSidebar}}
 
 このサンプルプログラムは、数々の[合成操作](/ja/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation)を紹介するものです。出力結果は次のようになります。

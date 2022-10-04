@@ -1,12 +1,8 @@
 ---
 title: キーボードでナビゲート可能な JavaScript ウィジェット
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
-tags:
-  - Accessibility
-  - DOM
-  - JavaScript
-translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 ---
+
 ### 概要
 
 ウェブアプリケーションは、メニュー、ツリービュー、リッチテキストフィールド、タブパネルなどのデスクトップウィジェットを模倣するために JavaScript を使用することがよくあります。 これらのウィジェットは通常、{{htmlelement("div")}} 要素と {{htmlelement("span")}} 要素で構成されています。これらの要素は本来、デスクトップのものと同じキーボード機能を提供しません。 このドキュメントは JavaScript ウィジェットをキーボードでアクセス可能にするためのテクニックを説明します。
@@ -17,7 +13,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 キーボードを使用したときに要素がフォーカスを得る順序は、デフォルトではソースの順序です。 例外的な状況では、作成者は順序を再定義したいと思うかもしれません。 これを行うために、作成者は `tabindex` を任意の正数に設定することができます。
 
-> **Warning:** `tabindex` に正の値を使わないでください。 `tabindex` に正の値を持つ要素は、ページ上のデフォルトのインタラクティブ要素の前に配置されます。 つまり、ページ作成者は、`tabindex` に 1 以上の正の値を使用する時は必ず、ページ上の全てのフォーカス可能要素に対して `tabindex` の値を設定（および維持）する必要があります。
+> **警告:** `tabindex` に正の値を使わないでください。 `tabindex` に正の値を持つ要素は、ページ上のデフォルトのインタラクティブ要素の前に配置されます。 つまり、ページ作成者は、`tabindex` に 1 以上の正の値を使用する時は必ず、ページ上の全てのフォーカス可能要素に対して `tabindex` の値を設定（および維持）する必要があります。
 
 次の表は、最新のブラウザーにおける `tabindex` の動作を説明しています。
 
@@ -78,8 +74,8 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 ユーザーがウィジェットからタブで離れてから戻ると、フォーカスはフォーカスを持っていた特定の要素、例えば、ツリーアイテムやグリッドセルに戻るべきです。 これを実現するには次の 2 つのテクニックがあります。
 
-1.  動き回る `tabindex`: プログラム的にフォーカスを移動
-2.  `aria-activedescendant`: 「仮想」フォーカスの管理
+1. 動き回る `tabindex`: プログラム的にフォーカスを移動
+2. `aria-activedescendant`: 「仮想」フォーカスの管理
 
 #### テクニック 1: 動き回る tabindex
 
@@ -87,9 +83,9 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 キーダウンハンドラをグループ内の各要素にバインドし、矢印キーを使用して別の要素に移動した場合、
 
-1.  プログラム的に新しい要素にフォーカスを適用します。
-2.  フォーカスされた要素の `tabindex` を `"0"` に更新します。
-3.  以前にフォーカスされた要素の `tabindex` を `"-1"` に更新します。
+1. プログラム的に新しい要素にフォーカスを適用します。
+2. フォーカスされた要素の `tabindex` を `"0"` に更新します。
+3. 以前にフォーカスされた要素の `tabindex` を `"-1"` に更新します。
 
 これはこのテクニックを使った [WAI-ARIA ツリービュー](https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html)の例です。
 

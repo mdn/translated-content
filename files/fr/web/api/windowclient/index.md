@@ -12,6 +12,7 @@ tags:
   - WindowClient
 translation_of: Web/API/WindowClient
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 L'interface `WindowClient` de l'[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API) représente la portée d'un client service worker lorsque celui-ci existe en tant que document dans un contexte navigateur, controlé par un worker actif. Le client sélectionne et utilise un service worker pour son propre chargement et celui de ses sous-ressources.
@@ -59,13 +60,11 @@ self.addEventListener('notificationclick', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowClient")}}
+{{Compat}}
 
 ## Voir aussi
 

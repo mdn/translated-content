@@ -1,15 +1,8 @@
 ---
 title: パンくずナビゲーション
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - ナビゲーション
-  - 料理帳
-  - フレックスボックス
-translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
+
 {{CSSRef}}
 
 パンくず (Breadcrumb) ナビゲーションは、来た道をたどって開始ページまで戻ることができるパンくずリストを提供することによって、ユーザーがウェブサイト内の自分の位置を理解するのに役立ちます。
@@ -24,11 +17,11 @@ translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロードする](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
 
-> **Note:** 上記の例では 2 つのセレクターを使用して、最初の物を除いてそれぞれの `li` の前にコンテンツを挿入しています。これは次のようにすると、 1 つのセレクターのみで実現することもできます。
+> **メモ:** 上記の例では 2 つのセレクターを使用して、最初の物を除いてそれぞれの `li` の前にコンテンツを挿入しています。これは次のようにすると、 1 つのセレクターのみで実現することもできます。
 >
 > ```css
 > .breadcrumb li:not(:first-child)::before {
@@ -44,7 +37,7 @@ translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 ## アクセシビリティの考慮
 
-[`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性および [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性を使用して、このナビゲーションが何であるか、そして現在のページが構造のどこにあるのかをユーザーが理解できるようにしています。 詳細については関連リンクを参照してください。
+[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性および [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性を使用して、このナビゲーションが何であるか、そして現在のページが構造のどこにあるのかをユーザーが理解できるようにしています。 詳細については関連リンクを参照してください。
 
 ## ブラウザーの互換性
 

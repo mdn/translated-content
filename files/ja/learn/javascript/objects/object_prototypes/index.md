@@ -1,26 +1,13 @@
 ---
 title: Object のプロトタイプ
 slug: Learn/JavaScript/Objects/Object_prototypes
-tags:
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - OOJS
-  - OOP
-  - Object
-  - Prototype
-  - create()
-  - l10n:priority
-  - コンストラクタ
-  - 記事
-translation_of: Learn/JavaScript/Objects/Object_prototypes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 
 プロトタイプは、JavaScript オブジェクトが互いに機能を継承するメカニズムです。この記事では、プロトタイプチェーンの仕組みを説明し、`prototype` プロパティを使って既存のコンストラクタにメソッドを追加する方法を見ていきます。
 
-> **Note:** この記事では、伝統的な JavaScript のコンストラクタとクラスを取り上げます。次の記事では、同じことを実現するためのより簡単な構文を提供する現代的な方法について話します - [ECMAScript 2015 のクラス](/ja/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes)を参照してください。
+> **メモ:** この記事では、伝統的な JavaScript のコンストラクタとクラスを取り上げます。次の記事では、同じことを実現するためのより簡単な構文を提供する現代的な方法について話します - [ECMAScript 2015 のクラス](/ja/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes)を参照してください。
 
 | 前提条件: | JavaScript 関数の理解、JavaScript の基礎知識 ([JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)と[JavaScript の構成要素](/ja/docs/Learn/JavaScript/Building_blocks)を参照)、OOJS の基礎 ([JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)を参照) |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -34,7 +21,7 @@ JavaScript はしばしば**プロトタイプベースの言語**として記�
 
 JavaScript では、あるオブジェクトのインスタンスとそのプロトタイプ (コンストラクタの `prototype` プロパティから派生した `__proto__` プロパティ) の間にリンクが張られており、そのプロパティとメソッドはプロトタイプの連鎖を辿って発見されます。
 
-> **Note:** **オブジェクトの `prototype`** ([`Object.getPrototypeOf(obj)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) または非推奨の [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) プロパティで取得可能) と**コンストラクタ関数の`prototype` プロパティ**の違いを理解することが重要です。
+> **メモ:** **オブジェクトの `prototype`** ([`Object.getPrototypeOf(obj)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) または非推奨の [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) プロパティで取得可能) と**コンストラクタ関数の`prototype` プロパティ**の違いを理解することが重要です。
 >
 > 前者は各インスタンス上のプロパティ、後者はコンストラクタ上のプロパティです。つまり、`Object.getPrototypeOf(new Foobar())` は`Foobar.prototype`と同じオブジェクトを参照しています。
 
@@ -85,11 +72,11 @@ person1.valueOf()
 - ブラウザーは最初に、`person1` オブジェクトのコンストラクタ `Person()` で定義されている `valueOf()` メソッドが利用可能かどうかをチェックしますが、利用できません
 - そこで、ブラウザーは `person1` のプロトタイプオブジェクトに `valueOf()` メソッドが利用可能かどうかをチェックします。メソッドがない場合、ブラウザーは `person1` のプロトタイプオブジェクトのプロトタイプオブジェクトをチェックします。メソッドが呼び出されて、すべてがうまくいきました
 
-> **Note:** プロトタイプチェーンの中では、メソッドやプロパティはあるオブジェクトから別のオブジェクトにコピー**されない**ことを再確認しておきましょう。これらのメソッドやプロパティは、上で説明したように*チェーンを上っていく*ことで*アクセス*されます。
+> **メモ:** プロトタイプチェーンの中では、メソッドやプロパティはあるオブジェクトから別のオブジェクトにコピー**されない**ことを再確認しておきましょう。これらのメソッドやプロパティは、上で説明したように*チェーンを上っていく*ことで*アクセス*されます。
 
-> **Note:** プロトタイプチェーンは、プロパティを取得している間のみ巡回されます。プロパティがオブジェクトに直接設定されたり[`削除されたり`](/ja/docs/Web/JavaScript/Reference/Operators/delete)した場合は、プロトタイプチェーンは走査されません。
+> **メモ:** プロトタイプチェーンは、プロパティを取得している間のみ巡回されます。プロパティがオブジェクトに直接設定されたり[`削除されたり`](/ja/docs/Web/JavaScript/Reference/Operators/delete)した場合は、プロトタイプチェーンは走査されません。
 
-> **Note:** ECMAScript 2015 以前は、オブジェクトの `prototype` に直接アクセスする方法は公式にはありませんでした - チェーン内のアイテム間の「リンク」は、JavaScript 言語の仕様で `[[prototype]]` と呼ばれる内部プロパティで定義されています ({{glossary("ECMAScript")}}}を参照してください)。
+> **メモ:** ECMAScript 2015 以前は、オブジェクトの `prototype` に直接アクセスする方法は公式にはありませんでした - チェーン内のアイテム間の「リンク」は、JavaScript 言語の仕様で `[[prototype]]` と呼ばれる内部プロパティで定義されています ({{glossary("ECMAScript")}}}を参照してください)。
 >
 > しかし、ほとんどの最新のブラウザーでは、オブジェクトのコンストラクタのプロトタイプオブジェクトを含む [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (アンダースコア 2 個分) というプロパティを提供しています。例えば、`person1.__proto__` と `person1.__proto__.__proto__` を試してみてください。
 >
@@ -105,17 +92,17 @@ person1.valueOf()
 
 [`Object.is()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/is)、[`Object.keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) など、`prototype` バケット内で定義されていないメンバは、`Object.prototype` を継承するオブジェクトインスタンスやオブジェクトタイプには継承されません。これらは、`Object()` コンストラクタ自身でのみ利用可能なメソッド/プロパティです。
 
-> **Note:** コンストラクタ上で定義されたメソッドが、それ自体が関数であるというのは不思議な感じがします。
+> **メモ:** コンストラクタ上で定義されたメソッドが、それ自体が関数であるというのは不思議な感じがします。
 >
 > まあ、関数はオブジェクトの型でもあります。信じられないかもしれませんが、[`Function()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) のコンストラクタリファレンスを参照してください。
 
-1.  既存のプロトタイプのプロパティを自分でチェックすることができます。先ほどの例に戻って、JavaScript コンソールに次のように入力してみてください
+1. 既存のプロトタイプのプロパティを自分でチェックすることができます。先ほどの例に戻って、JavaScript コンソールに次のように入力してみてください
 
     ```js
     Person.prototype
     ```
 
-2.  カスタムコンストラクタのプロトタイプに何も定義していないので、出力はあまり表示されません。デフォルトでは、コンストラクタの `prototype` は常に空から始まります。では、次のようにしてみてください
+2. カスタムコンストラクタのプロトタイプに何も定義していないので、出力はあまり表示されません。デフォルトでは、コンストラクタの `prototype` は常に空から始まります。では、次のようにしてみてください
 
     ```js
     Object.prototype
@@ -131,21 +118,21 @@ let myString = 'This is my string.';
 
 `myString`が最初から、[`split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split)、[`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)、[`replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace)などの便利なメソッドを多数持っている理由です。
 
-> **Note:** このセクションを理解して、もっと知りたいと思ったら、[JavaScript でのプロトタイプの使用](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Using_prototypes_in_JavaScript) についてのより詳細なガイドを読む価値があります。このセクションは、これらの概念に初めて出会ったときに少しでも理解しやすくするために、意図的に簡略化しています。
+> **メモ:** このセクションを理解して、もっと知りたいと思ったら、[JavaScript でのプロトタイプの使用](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Using_prototypes_in_JavaScript) についてのより詳細なガイドを読む価値があります。このセクションは、これらの概念に初めて出会ったときに少しでも理解しやすくするために、意図的に簡略化しています。
 
-> **Warning:** **重要**: `prototype` プロパティは JavaScript の中でも最も紛らわしい名前がついている部分の一つです (`this` は `__proto__` でアクセスできる内部オブジェクトです、覚えていますか？)。代わりに `prototype` は、継承したいメンバを定義したオブジェクトを含むプロパティです。
+> **警告:** `prototype` プロパティは JavaScript の中でも最も紛らわしい名前がついている部分の一つです (`this` は `__proto__` でアクセスできる内部オブジェクトです、覚えていますか？)。代わりに `prototype` は、継承したいメンバを定義したオブジェクトを含むプロパティです。
 
 ## create() の再訪
 
 先ほど、[`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) メソッドを使用して新しいオブジェクトのインスタンスを作成する方法を紹介しました。
 
-1.  例えば、先ほどの例の JavaScript コンソールでこれを試してみてください
+1. 例えば、先ほどの例の JavaScript コンソールでこれを試してみてください
 
     ```js
     let person2 = Object.create(person1);
     ```
 
-2.  `create()` が実際に行うことは、指定したプロトタイプオブジェクトから新しいオブジェクトを作成することです。ここでは、`person1` をプロトタイプオブジェクトとして使用して `person2` を作成しています。これはコンソールで以下のように入力することで確認できます
+2. `create()` が実際に行うことは、指定したプロトタイプオブジェクトから新しいオブジェクトを作成することです。ここでは、`person1` をプロトタイプオブジェクトとして使用して `person2` を作成しています。これはコンソールで以下のように入力することで確認できます
 
     ```js
     person2.__proto__
@@ -159,7 +146,7 @@ let myString = 'This is my string.';
 
 次のセクションでお分かりのように、`Person.prototype` プロパティ (あるいは上のセクションで述べたように、一般的にはコンストラクタ関数の `prototype` プロパティに定義されているオブジェクト) は、`Person()` コンストラクタを使用して作成されたすべてのインスタンスオブジェクトで利用可能になります。したがって、コンストラクタプロパティは `person1` と `person2` の両方のオブジェクトでも利用可能です。
 
-1.  例えば、コンソールで次のコマンドを試してみてください
+1. 例えば、コンソールで次のコマンドを試してみてください
 
     ```js
     person1.constructor
@@ -170,13 +157,13 @@ let myString = 'This is my string.';
 
     巧妙なトリックとしては、`constructor` プロパティの最後に括弧を付けて (必要なパラメータを含む)、そのコンストラクタから別のオブジェクトのインスタンスを作成することができます。コンストラクタは結局のところ関数なので、括弧を使用して呼び出すことができます。関数をコンストラクタとして使用したい場合は、`new` キーワードを含めて指定する必要があります。
 
-2.  これをコンソールで試してみてください
+2. これをコンソールで試してみてください
 
     ```js
     let person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
     ```
 
-3.  では、新しいオブジェクトの機能にアクセスしてみましょう
+3. では、新しいオブジェクトの機能にアクセスしてみましょう
 
     ```js
     person3.name.first
@@ -198,13 +185,13 @@ instanceName.constructor.name
 person1.constructor.name
 ```
 
-> **Note:** `constructor.name` の値は (プロトタイプの継承、バインディング、プリプロセッサ、トランスパイラなどによる) 変わる可能性があります。そのため、より複雑な例では、代わりに [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子を使用することになります。
+> **メモ:** `constructor.name` の値は (プロトタイプの継承、バインディング、プリプロセッサ、トランスパイラなどによる) 変わる可能性があります。そのため、より複雑な例では、代わりに [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子を使用することになります。
 
 ## プロトタイプの変更
 
 コンストラクタ関数の `prototype` プロパティを変更する例を見てみましょう - メソッドは、コンストラクタから作成されたすべてのオブジェクトインスタンスで利用可能になります。この時点で、最後に `Person()` コンストラクタのプロトタイプに何かを追加します。
 
-1.  [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) の例に戻り、[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)のローカルコピーを作成します。既存の JavaScript の下に、コンストラクタの `prototype` プロパティに新しいメソッドを追加する次のコードを追加します
+1. [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) の例に戻り、[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)のローカルコピーを作成します。既存の JavaScript の下に、コンストラクタの `prototype` プロパティに新しいメソッドを追加する次のコードを追加します
 
     ```js
     Person.prototype.farewell = function() {
@@ -212,7 +199,7 @@ person1.constructor.name
     };
     ```
 
-2.  コードを保存してブラウザーでページを読み込み、テキスト入力に以下のように入力してみてください
+2. コードを保存してブラウザーでページを読み込み、テキスト入力に以下のように入力してみてください
 
     ```js
     person1.farewell();
@@ -238,13 +225,13 @@ Person.prototype.farewell = function() {
 
 しかし、`farewell()` メソッドは `person1` オブジェクトのインスタンスで利用可能です。そのメンバーは、新たに定義された `farewell()` メソッドを含むように自動的に更新されます。
 
-> **Note:** 逆に、コンストラクタのプロトタイプに定義されたプロパティを [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子を使用して削除すると、他のすべてのクラスインスタンスからもそれぞれのプロパティが削除されます。
+> **メモ:** 逆に、コンストラクタのプロトタイプに定義されたプロパティを [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子を使用して削除すると、他のすべてのクラスインスタンスからもそれぞれのプロパティが削除されます。
 >
 > 上記の例では、`delete person1.__proto__.farewell` または `delete Person.prototype.farewell` を実行すると、すべての `Person` インスタンスから `farewell()` メソッドが削除されます。
 >
 > この問題を軽減するために、代わりに [`Object.defineProperty()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) を使用することができます。
 
-> **Note:** この例がうまく動作しない場合は、[oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) の例を見てください ([ライブ](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)でも参照してください) 。
+> **メモ:** この例がうまく動作しない場合は、[oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) の例を見てください ([ライブ](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)でも参照してください) 。
 
 このように定義されたプロパティは柔軟性に欠けるため、`prototype` プロパティで定義されることはほとんどありません。例えば、次のようなプロパティを追加することができます。
 

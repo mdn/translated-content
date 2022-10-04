@@ -1,10 +1,6 @@
 ---
 title: Semantics
 slug: Glossary/Semantics
-tags:
-  - 의미론
-  - 의미론적 요소
-translation_of: Glossary/Semantics
 ---
 프로그래밍에서,**시맨틱**은 코드 조각의 *의미*를 나타냅니다 — 예를 들어 ("이게 어떻게 시각적으로 보여질까?" 보다)"이 Javascript 라인을 실행하는 것은 어떤 효과가 있는가?", 혹은 "이 HTML 엘리먼트가 가진 목적이나 역할은 무엇인가?"
 
@@ -14,7 +10,7 @@ JavaScript의 경우입니다. `textContent` 문자열을 매개변수로 하고
 
 ## CSS 시맨틱
 
-CSS의 경우입니다. 다양한 종류의 과일을 나타내기 위해서는 리스트 태그 `li` 가 있다고 가정해봅시다. `div> ul> li` 와 `.fruits__item `둘 중 어떤 것이 어떤 DOM부분이 선택되었는지 잘 알려줄까요?
+CSS의 경우입니다. 다양한 종류의 과일을 나타내기 위해서는 리스트 태그 `li` 가 있다고 가정해봅시다. `div> ul> li` 와 `.fruits__item` 둘 중 어떤 것이 어떤 DOM부분이 선택되었는지 잘 알려줄까요?
 
 ## HTML 시맨틱
 

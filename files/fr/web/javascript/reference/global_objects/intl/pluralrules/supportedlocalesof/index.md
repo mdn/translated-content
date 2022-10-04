@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.PluralRules.supportedLocalesOf()`** renvoie un tableau contenant les locales prises en charge, parmi celles passées en argument, pour les règles de nombre (sans avoir à utiliser la locale par défaut du système d'exécution).

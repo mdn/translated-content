@@ -13,7 +13,9 @@ translation_of: Web/API/RTCPeerConnection/getIdentityAssertion
 
 ## Syntax
 
-    pc.getIdentityAssertion();
+```js
+pc.getIdentityAssertion();
+```
 
 _이 메소드에는 매개변수 혹은 반환 값이 없습니다._
 

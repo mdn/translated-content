@@ -8,6 +8,7 @@ tags:
   - Interface
 translation_of: Web/API/GestureEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 {{Non-standard_header()}}

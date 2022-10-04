@@ -2,9 +2,10 @@
 title: Response
 slug: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
-[Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 的 `Response` 接口呈现了对一次请求的响应数据。
+[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的 `Response` 接口呈现了对一次请求的响应数据。
 
 你可以使用 {{domxref("Response.Response()")}} 构造函数来创建一个 `Response` 对象，但通常更可能遇到的情况是，其他的 API 操作返回了一个 Response 对象。例如一个 service worker 的 {{domxref("Fetchevent.respondWith")}}，或者一个简单的 {{domxref("GlobalFetch.fetch()")}}。
 
@@ -87,10 +88,10 @@ const response = new Response();
 
 ## 浏览器兼容性
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## 相关链接
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: Reduce of empty array with no initial value'
 slug: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
-tags:
-  - Error
-  - JavaScript
-  - Reference
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "reduce of empty array with no initial value" は、 reduce 関数が使用されたときに発生します。

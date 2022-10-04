@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/input/hidden
 ---
+
 {{HTMLRef}}
 
 Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux développeurs web d'inclure des données qui ne peuvent pas être vues ou modifiées lorsque le formulaire est envoyé. Cela permet par exemple d'envoyer l'identifiant d'une commande ou un jeton de sécurité unique. Les champs de ce type sont invisibles sur la page.
@@ -182,14 +183,11 @@ Bien que le champ masqué soit invisible sur la page, il fait toujours partie de
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
-| {{SpecName('HTML5.2', 'sec-forms.html#hidden-state-typehidden', '&lt;input type="hidden"&gt;')}}     | {{Spec2('HTML5.2')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-hidden")}}
+{{Compat}}
 
 ## Voir aussi
 

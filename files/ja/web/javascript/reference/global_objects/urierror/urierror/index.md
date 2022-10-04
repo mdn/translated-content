@@ -1,13 +1,8 @@
 ---
 title: URIError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - URIError
-translation_of: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 ---
+
 {{JSRef}}
 
 **`URIError`** コンストラクターは、グローバルの URI 操作関数が間違った方法で使用された場合のエラーを生成します。

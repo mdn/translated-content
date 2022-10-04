@@ -2,6 +2,7 @@
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
 ---
+
 {{APIRef("File API")}}
 
 `readAsText` 方法可以将 [Blob](/zh-CN/docs/Web/API/Blob) 或者 [File](/zh-CN/docs/Web/API/File) 对象转根据特殊的编码格式转化为内容 (字符串形式)
@@ -10,7 +11,7 @@ slug: Web/API/FileReader/readAsText
 
 也就是说必须要挂载 实例下的 onload 或 onloadend 的方法处理转化后的结果
 
-当转化完成后， [readyState](/en-US/docs/Web/API/FileReader/readyState) 这个参数就会转换 为 done 即完成态， [event("loadend")](/en-US/docs/Web/Events/loadend) 挂载的事件会被触发，并可以通过事件返回的形参得到中的 [FileReader.result](/zh-CN/docs/Web/API/FileReader/result) 属性得到转化后的结果
+当转化完成后， [readyState](/zh-CN/docs/Web/API/FileReader/readyState) 这个参数就会转换 为 done 即完成态， [event("loadend")](/zh-CN/docs/Web/Events/loadend) 挂载的事件会被触发，并可以通过事件返回的形参得到中的 [FileReader.result](/zh-CN/docs/Web/API/FileReader/result) 属性得到转化后的结果
 
 ## 语法
 

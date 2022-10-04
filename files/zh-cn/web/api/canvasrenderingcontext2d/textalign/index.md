@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.textAlign`** 是 Canvas 2D API 描述绘制文本时，文本的对齐方式的属性。注意，该对齐是基于 CanvasRenderingContext2D.fillText 方法的 x 的值。所以如果 textAlign="center"，那么该文本将画在 x-50%\*width。
@@ -27,11 +28,11 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 - start
   - : 文本对齐界线开始的地方（左对齐指本地从左向右，右对齐指本地从右向左）。
 - end
-  - : 文本对齐界线结束的地方 （左对齐指本地从左向右，右对齐指本地从右向左）。
+  - : 文本对齐界线结束的地方（左对齐指本地从左向右，右对齐指本地从右向左）。
 
-默认值是 `start。`
+默认值是 `start`。
 
-> `译者注：direction 属性会对此属性产生影响。如果 direction 属性设置为 ltr，则 left 和 start 的效果相同，right 和 end 的效果相同；如果 direction 属性设置为 rtl，则 left 和 end 的效果相同，right 和 start 的效果相同。`
+> 译者注：`direction` 属性会对此属性产生影响。如果 `direction` 属性设置为 `ltr`，则 left 和 `start` 的效果相同，`right` 和 end 的效果相同；如果 direction 属性设置为 `rtl`，则 `left` 和 `end` 的效果相同，`right` 和 `start` 的效果相同。
 
 ## 示例
 
@@ -104,7 +105,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.textAlign")}}
+{{Compat}}
 
 ## 参见
 

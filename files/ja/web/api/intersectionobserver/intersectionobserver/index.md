@@ -1,16 +1,8 @@
 ---
 title: IntersectionObserver.IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
-tags:
-  - API
-  - Constructor
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - Visibility
-  - Visible
-translation_of: Web/API/IntersectionObserver/IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 **`IntersectionObserver()`** コンストラクターは、新しい {{domxref("IntersectionObserver")}} オブジェクトを生成します。 `rootMargin` は、指定されていた場合は構文が正しいかが確認され、閾値は、0.0 から 1.0 の間であるか確認され、閾値のリストは昇順に並べ替えられます。閾値のリストが空の場合、 \[0.0] の配列に設定されます。

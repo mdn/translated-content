@@ -1,19 +1,8 @@
 ---
 title: HTMLTrackElement.src
 slug: Web/API/HTMLTrackElement/src
-page-type: web-api-instance-property
-tags:
-  - HTML
-  - HTML DOM
-  - HTMLTrackElement
-  - Property
-  - Reference
-  - Web
-  - WebVTT
-  - src
-browser-compat: api.HTMLTrackElement.src
-translation_of: Web/API/HTMLTrackElement/src
 ---
+
 {{APIRef("HTML DOM")}}
 
 **HTMLTrackElement.src`**プロパティは、テキストトラックのデータの URL を示す {{HTMLElement("track")}} 要素の {{htmlattrxref("src", "track")}} 属性の値を反映したものです。

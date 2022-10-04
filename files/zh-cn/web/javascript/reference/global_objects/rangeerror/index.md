@@ -2,6 +2,7 @@
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
+
 {{JSRef}}
 
 **RangeError**对象标明一个错误，当一个值不在其所允许的范围或者集合中。
@@ -28,7 +29,7 @@ new RangeError([message[, fileName[, lineNumber]]])
 ## 属性
 
 - {{jsxref("RangeError.prototype")}}
-  - : `允许在RangeError对象上附加属性。`
+  - : 允许在 `RangeError` 对象上附加属性。
 
 ## 方法
 

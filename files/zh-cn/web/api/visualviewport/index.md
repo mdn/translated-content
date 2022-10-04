@@ -2,6 +2,7 @@
 title: VisualViewport
 slug: Web/API/VisualViewport
 ---
+
 {{SeeCompatTable}}{{APIRef("Visual Viewport")}}
 
 [Visual Viewport API](/zh-CN/docs/Web/API/Visual_Viewport_API) 提供了当前页面的视觉视口接口，即 **`VisualViewport`** 。对于每个页面容器来说（如 iframe），都存在有一个独立的 window 对象。每个页面容器的 window 对象都有一个独立的 `VisualViewport` 属性。
@@ -96,7 +97,7 @@ window.visualViewport.addEventListener('resize', viewportHandler);
 
 ## 浏览器兼容性
 
-{{Compat("api.VisualViewport")}}
+{{Compat}}
 
 ## 参照
 

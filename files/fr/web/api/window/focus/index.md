@@ -3,6 +3,7 @@ title: Window.focus()
 slug: Web/API/Window/focus
 translation_of: Web/API/Window/focus
 ---
+
 {{APIRef}}
 
 ## Résumé
@@ -21,8 +22,6 @@ window.focus()
 if (clicked) { window.focus(); }
 ```
 
-## Spécification
+## Spécifications
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','interaction.html#dom-window-focus','Window.focus()')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}

@@ -1,14 +1,6 @@
 ---
 title: '<ol>: 順序付きリスト要素'
 slug: Web/HTML/Element/ol
-tags:
-  - 要素
-  - HTML
-  - HTML コンテンツグループ化
-  - 'HTML:フローコンテンツ'
-  - リファレンス
-browser-compat: html.elements.ol
-translation_of: Web/HTML/Element/ol
 ---
 
 {{HTMLRef}}
@@ -87,7 +79,7 @@ translation_of: Web/HTML/Element/ol
 
     指定された種類は、異なる {{HTMLAttrxRef("type", "li")}} 属性が内部の {{HTMLElement("li")}} 要素で使用されない限り、リスト全体に使用されます。
 
-    > **Note:** （項目が番号や文字で参照される法律文書や技術文書のように）リスト番号の種類に重要性がない限り、代わりに CSS の {{CSSxRef("list-style-type")}} プロパティを使用してください。
+    > **メモ:** （項目が番号や文字で参照される法律文書や技術文書のように）リスト番号の種類に重要性がない限り、代わりに CSS の {{CSSxRef("list-style-type")}} プロパティを使用してください。
 
 ## 使用上の注意
 

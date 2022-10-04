@@ -10,6 +10,7 @@ tags:
   - Web Storage
 translation_of: Web/API/Storage/key
 ---
+
 {{APIRef()}}
 
 La méthode `key()` de l'interface {{domxref("Storage")}} prend un nombre n en argument et retourne la n-ième clé contenue dans storage. L'ordre des clés étant définie par le navigateur, il est recommandé de ne pas s'y référer .
@@ -53,15 +54,13 @@ for (var i = 0; i < localStorage.length; i++) {
 }
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                            | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-key', 'Storage.key')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage.key")}}
+{{Compat}}
 
 ## Voir aussi
 

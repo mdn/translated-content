@@ -11,7 +11,9 @@ translation_of: Web/API/RTCPeerConnection/removeTrack
 
 ## Syntax
 
-    pc.removeTrack(sender);
+```js
+pc.removeTrack(sender);
+```
 
 ### 매개변수
 

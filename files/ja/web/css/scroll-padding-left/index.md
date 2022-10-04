@@ -1,16 +1,8 @@
 ---
 title: scroll-padding-left
 slug: Web/CSS/scroll-padding-left
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - recipe:css-property
-  - scroll-padding
-  - scroll-padding-left
-browser-compat: css.properties.scroll-padding-left
-translation_of: Web/CSS/scroll-padding-left
 ---
+
 {{CSSRef}}
 
 `scroll-padding-left` プロパティは、スクロールポートの*最適表示領域*の左のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。

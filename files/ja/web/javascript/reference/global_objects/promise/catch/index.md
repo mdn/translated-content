@@ -1,15 +1,8 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Promise
-  - プロトタイプ
-browser-compat: javascript.builtins.Promise.catch
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
+
 {{JSRef}}
 
 **`catch()`** メソッドは {{jsxref("Promise")}} を返しますが、拒否された場合のみ扱います。 {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} の呼び出しと同じ動作をします（実際、 `obj.catch(onRejected)` の呼び出しは内部的に `obj.then(undefined, onRejected)` を呼び出しています）。つまり、返値を `undefined` に代替させたい場合でも、 `onRejected` 関数を提供する必要があります。 - 例えば、 `obj.catch(() => {})` のようにします。
@@ -41,7 +34,7 @@ p.catch(function(reason) {
 
 内部的には、呼び出されたオブジェクトの `Promise.prototype.then` を呼び出し、引数に `undefined` と、受け取った `onRejected` ハンドラーを渡します。返値はこの呼び出しの値であり、すなわち {{jsxref("Promise")}} です。
 
-> **Warning:** なお、以下の例は [Error](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error) のインスタンスを投げています。これは文字列を投げる場合と比較して、良い習慣と見なされています。そうでなければ、捕捉する部分で引数が文字列かエラーかをチェックする必要があり、スタックトレースなどの価値のある情報を失う可能性があります。
+> **警告:** なお、以下の例は [Error](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error) のインスタンスを投げています。これは文字列を投げる場合と比較して、良い習慣と見なされています。そうでなければ、捕捉する部分で引数が文字列かエラーかをチェックする必要があり、スタックトレースなどの価値のある情報を失う可能性があります。
 
 **内部呼び出しの例**
 

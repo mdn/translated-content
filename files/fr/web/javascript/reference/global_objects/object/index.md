@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object
 browser-compat: javascript.builtins.Object
 ---
+
 {{JSRef}}
 
 Le type **`Object`** est l'un [des types de données JavaScript](/fr/docs/Web/JavaScript/Data_structures). Il est utilisé pour stocker des ensembles de clés/valeurs et des entités plus complexes. Les objets peuvent être créés avec le constructeur [`Object()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) ou avec [la syntaxe d'initialisation d'objet littérale](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer).

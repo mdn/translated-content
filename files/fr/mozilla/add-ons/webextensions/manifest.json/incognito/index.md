@@ -8,6 +8,7 @@ tags:
   - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/incognito
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

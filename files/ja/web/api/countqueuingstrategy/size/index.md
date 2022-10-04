@@ -1,16 +1,8 @@
 ---
 title: CountQueuingStrategy.size()
 slug: Web/API/CountQueuingStrategy/size
-tags:
-  - API
-  - CountQueuingStrategy
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - size
-translation_of: Web/API/CountQueuingStrategy/size
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("CountQueuingStrategy")}} インターフェイスの **`size()`** メソッドは常に `1` を返すため、合計キューサイズはキュー内のチャンク数を数えたものになります。

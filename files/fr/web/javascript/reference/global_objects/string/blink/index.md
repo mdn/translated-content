@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/blink
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`blink()`** crée un élément HTML {{HTMLElement("blink")}} qui affiche la chaine de caractères en clignotant.

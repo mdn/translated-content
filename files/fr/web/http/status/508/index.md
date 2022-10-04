@@ -3,6 +3,7 @@ title: 508 Loop Detected
 slug: Web/HTTP/Status/508
 translation_of: Web/HTTP/Status/508
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse HTTP **`508 Loop Detected`** peut être donné dans le contexte du protocole WebDAV.

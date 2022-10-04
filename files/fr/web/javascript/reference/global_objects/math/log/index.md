@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/log
 ---
+
 {{JSRef}}
 
 La fonction **`Math.log()`** renvoie le logarithme naturel (aussi appelé logarithme népérien) d'un nombre, défini par :

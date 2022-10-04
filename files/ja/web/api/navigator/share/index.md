@@ -1,15 +1,8 @@
 ---
 title: Navigator.share()
 slug: Web/API/Navigator/share
-tags:
-  - Method
-  - Navigator
-  - Reference
-  - Share
-  - Web
-  - メソッド
-translation_of: Web/API/Navigator/share
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 **`Navigator.share()`** メソッドは、 Web Share API の一部としてのネイティブの共有メカニズムを呼び出します。

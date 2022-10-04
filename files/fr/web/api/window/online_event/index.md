@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/online_event
 ---
+
 {{APIRef}}
 
 L'événement **`online`** de l'interface {{domxref("Window")}} est déclenché lorsque le navigateur a obtenu l'accès au réseau et que la valeur de {{domxref("Navigator.onLine")}} passe à `true`.
@@ -54,14 +55,12 @@ window.ononline = (event) => {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', "indices.html#event-online", "online event")}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.online_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [`offline`](/fr/docs/Web/API/Window/offline_event)

@@ -7,7 +7,7 @@ translation_of: Web/API/TouchEvent/changedTouches
 
 <h2 id="Summary">Сводка</h2>
 
-<p>{{ domxref("TouchList") }} список точек касания (объекта {{domxref("Touch")}}), <span id="result_box" lang="ru"><span>смысл которых зависит от типа события</span></span>:</p>
+<p>{{ domxref("TouchList") }} список точек касания (объекта {{domxref("Touch")}}), смысл которых зависит от типа события:</p>
 
 <ul>
  <li>Для события <code>touchstart</code>, это список точек касания, в которых появилось взаимодействие с поверхностью экрана.</li>
@@ -33,7 +33,7 @@ translation_of: Web/API/TouchEvent/changedTouches
 
 <p>Этот пример демонстрирует свойство {{domxref("TouchEvent.changedTouches")}} объекта  {{domxref("TouchEvent")}}. Свойство {{domxref("TouchEvent.changedTouches")}} это — объект {{domxref("TouchList")}}, который содержит объект {{domxref("Touch")}} для каждой точки, где произошло событие.</p>
 
-<p>В этом фрагменте кода обработчик события {{event("touchmove")}} выполняет перебор списка  <code>changedTouches</code> и выводит в консоль <span id="result_box" lang="ru"><span>идентификатор каждой точки касания, где произошло изменение с последнего события.</span></span></p>
+<p>В этом фрагменте кода обработчик события {{event("touchmove")}} выполняет перебор списка  <code>changedTouches</code> и выводит в консоль идентификатор каждой точки касания, где произошло изменение с последнего события.</p>
 
 <pre class="brush: js">someElement.addEventListener('touchmove', function(e) {
    // Iterate through the list of touch points that changed

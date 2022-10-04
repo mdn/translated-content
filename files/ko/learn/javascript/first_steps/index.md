@@ -1,23 +1,6 @@
 ---
 title: JavaScript 첫걸음
 slug: Learn/JavaScript/First_steps
-tags:
-  - Arrays
-  - Article
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Landing
-  - Module
-  - Numbers
-  - Operators
-  - Variables
-  - l10n:priority
-  - maths
-  - strings
-translation_of: Learn/JavaScript/First_steps
 ---
 {{LearnSidebar}}
 

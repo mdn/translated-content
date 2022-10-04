@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 original_slug: Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML/Debugging_HTML","Apprendre/HTML/Introduction_à_HTML")}}
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Columns/Using_multi-column_layouts
 original_slug: Web/CSS/CSS_Columns/Utiliser_une_disposition_multi-colonnes
 ---
+
 {{CSSRef}}
 
 La **disposition multi-colonnes** étend _le mode de disposition en bloc_ et permet de définir simplement plusieurs colonnes de texte. Lorsqu'on lit un texte, si les lignes sont trop longues, il faudra trop de temps aux yeux pour revenir au début de la ligne et passer à la ligne suivante : on perdra alors la ligne sur laquelle on était. Ainsi, pour utiliser efficacement l'espace fourni par un grand écran, on préfèrera utiliser des colonnes de largeur fixe, disposée côte à côte, à la façon d'un journal.

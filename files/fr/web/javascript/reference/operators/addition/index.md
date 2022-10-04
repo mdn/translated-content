@@ -9,6 +9,7 @@ translation_of: Web/JavaScript/Reference/Operators/Addition
 original_slug: Web/JavaScript/Reference/Opérateurs/Addition
 browser-compat: javascript.operators.addition
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'addition (`+`) produit la somme de deux opérandes numériques ou la concaténation de deux chaînes de caractères.

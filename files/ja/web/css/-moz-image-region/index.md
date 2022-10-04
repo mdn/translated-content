@@ -1,15 +1,8 @@
 ---
 title: '-moz-image-region'
 slug: Web/CSS/-moz-image-region
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS:Mozilla 拡張
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-image-region
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 {{CSSxRef("list-style-image")}} プロパティの画像を使用している特定の XUL 要素や擬似要素では、このプロパティは画像全体の代わりに使用される画像の領域を指定します。これにより、要素は同じ画像の異なる部分を使用してパフォーマンスを向上させることができます。
@@ -29,7 +22,7 @@ browser-compat: css.properties.-moz-image-region
 
 構文は {{CSSxRef("clip")}} プロパティと似ています。4 つの値はすべて、画像の左上隅を基準にしています。
 
-> **Note:** 背景画像で動作する仕組みについては、 {{CSSxRef("-moz-image-rect")}} を参照してください。
+> **メモ:** 背景画像で動作する仕組みについては、 {{CSSxRef("-moz-image-rect")}} を参照してください。
 
 ## 構文
 

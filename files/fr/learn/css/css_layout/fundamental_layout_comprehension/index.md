@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 original_slug: Apprendre/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
+
 {{LearnSidebar}}
 
 Si vous avez travaillé sur ce module, vous aurez déjà couvert les bases de ce que vous devez savoir pour faire la mise en forme CSS aujourd'hui, et pour travailler avec les anciennes CSS également. Cette tâche testera certaines de vos connaissances en développant une mise en page simple en utilisant diverses techniques.

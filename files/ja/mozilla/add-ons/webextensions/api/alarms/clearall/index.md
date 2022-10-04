@@ -1,18 +1,8 @@
 ---
 title: alarms.clearAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - clearAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
 ---
+
 {{AddonSidebar()}}
 
 予約されたアラームすべてを解除します。
@@ -40,4 +30,4 @@ browser.alarms.clearAll(
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。
+> **メモ:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。

@@ -1,12 +1,8 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-tags:
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Content-Disposition
 ---
+
 {{HTTPSidebar}}
 
 通常の HTTP レスポンスにおける **`Content-Disposition`** レスポンスヘッダーは、コンテンツがブラウザーで*インライン*で表示されることを求められているか、つまり、ウェブページとして表示するか、ウェブページの一部として表示するか、ダウンロードしてローカルに保存する*添付ファイル*とするかを示します。

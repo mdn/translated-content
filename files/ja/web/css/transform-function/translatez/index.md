@@ -1,17 +1,9 @@
 ---
 title: translateZ()
 slug: Web/CSS/transform-function/translateZ
-tags:
-  - 3D
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/translateZ()
 original_slug: Web/CSS/transform-function/translateZ()
-browser-compat: css.types.transform-function.translateZ
 ---
+
 {{CSSRef}}
 
 **`translateZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、三次元空間の z 軸に沿って、すなわち閲覧者に近づいたり遠ざかったりするように要素を移動させます。その結果は {{cssxref("&lt;transform-function&gt;")}} データ型となります。
@@ -22,7 +14,7 @@ browser-compat: css.types.transform-function.translateZ
 
 上記のデモでは、[`perspective: 550px;`](/ja/docs/Web/CSS/perspective) (三次元空間を作るため) と [`transform-style: preserve-3d;`](/ja/docs/Web/CSS/transform-style) (立方体の 6 つの面である子を三次元空間に配置) を立方体に設定しました。
 
-> **Note:** `translateZ(tz)` は、`translate3d(0, 0, tz)` と等価です。
+> **メモ:** `translateZ(tz)` は、`translate3d(0, 0, tz)` と等価です。
 
 ## 構文
 

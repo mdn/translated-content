@@ -1,18 +1,8 @@
 ---
 title: offset-path
 slug: Web/CSS/offset-path
-tags:
-  - CSS
-  - CSS モーションパス
-  - 実験的
-  - モーションパス
-  - リファレンス
-  - motion-path
-  - offset-path
-  - recipe:css-property
-browser-compat: css.properties.offset-path
-translation_of: Web/CSS/offset-path
 ---
+
 {{CSSRef}}
 
 **`offset-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がたどる移動経路と、親コンテナーまたは SVG 座標系の中での要素の配置を指定します。

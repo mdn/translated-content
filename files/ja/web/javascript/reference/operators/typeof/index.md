@@ -1,15 +1,8 @@
 ---
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - リファレンス
-  - 単項
-browser-compat: javascript.operators.typeof
-translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
+
 {{JSSidebar("Operators")}}
 
 <strong>`typeof`</strong> 演算子は、未評価のオペランドの型を示す文字列を返します。
@@ -46,7 +39,7 @@ typeof(operand)
 | [関数](/ja/docs/Glossary/Function) オブジェクト (ECMA-262 の用語では [[Call]] を実装) | `"function"`                           |
 | その他のオブジェクト                                                                         | `"object"`                             |
 
-> **Note:** ECMAScript 2019 およびそれ以前の実装では、呼び出し可能な標準外のオブジェクトに対して、`typeof` が任意の実装定義の文字列値を返すことを許可していました。
+> **メモ:** ECMAScript 2019 およびそれ以前の実装では、呼び出し可能な標準外のオブジェクトに対して、`typeof` が任意の実装定義の文字列値を返すことを許可していました。
 >
 > 実際にこれを利用したブラウザーとして知られているのは、古い Internet Explorer だけです。（[下記参照](#ie-specific_notes)）
 
@@ -180,7 +173,7 @@ class newClass{};
 
 ### 例外
 
-現在のブラウザーではすべて、標準外のホストオブジェクト [`document.all`](/en-US/docs/Web/API/Document/all) は `undefined` 型になります。
+現在のブラウザーではすべて、標準外のホストオブジェクト [`document.all`](/ja/docs/Web/API/Document/all) は `undefined` 型になります。
 
 ```js
 typeof document.all === 'undefined';

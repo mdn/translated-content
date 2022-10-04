@@ -1,14 +1,8 @@
 ---
 title: ホワイトスペースは HTML、 CSS、そして DOM 内でどう扱われるか
 slug: Web/API/Document_Object_Model/Whitespace
-tags:
-  - CSS
-  - DOM
-  - HTML
-  - JavaScript
-  - ホワイトスペース
-translation_of: Web/API/Document_Object_Model/Whitespace
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 [DOM](/ja/docs/Web/API/Document_Object_Model) にホワイトスペースが存在すると、レイアウトの問題が発生したり、ホワイトスペースがある場所によっては、予期せぬ形でコンテンツツリーの操作が困難になることがあります。この記事では、どのような場合に問題が発生するかを探り、その結果生じる問題を軽減するために何ができるかを見ていきます。
@@ -135,7 +129,7 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 
 このため、ウェブページを訪れた人は、ひどく字下げされた "Hello" に続いてもっとひどく字下げされた "World!" をその下の行に見かけるのではなく、ページの先頭にきれいに書かれた "Hello World!" という文言を見ることになります。
 
-> **Note:** [Firefox DevTools](/ja/docs/Tools) ではバージョン 52 以降、テキストノードの強調表示に対応しており、どのノードにホワイトスペース文字が含まれているかを正確に確認できるようになりました。純粋なホワイトスペースノードには "whitespace" ラベルが付けられます。
+> **メモ:** [Firefox DevTools](/ja/docs/Tools) ではバージョン 52 以降、テキストノードの強調表示に対応しており、どのノードにホワイトスペース文字が含まれているかを正確に確認できるようになりました。純粋なホワイトスペースノードには "whitespace" ラベルが付けられます。
 </div>
 
 ### ブロック整形コンテキストでのホワイトスペース

@@ -4,6 +4,7 @@ slug: Web/CSS/font-weight
 translation_of: Web/CSS/font-weight
 browser-compat: css.properties.font-weight
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-weight`** permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. [`font-family`](/fr/docs/Web/CSS/font-family)). Certaines fontes n'existent qu'avec les niveaux de graisses `normal` et `bold`.

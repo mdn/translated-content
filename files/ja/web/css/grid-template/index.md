@@ -1,15 +1,8 @@
 ---
 title: grid-template
 slug: Web/CSS/grid-template
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.grid-template
-translation_of: Web/CSS/grid-template
 ---
+
 {{CSSRef}}
 
 **`grid-template`** は CSS のプロパティで、[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティとして {{glossary("grid column", "grid columns")}}、{{glossary("grid rows", "rows")}}、{{glossary("grid areas", "areas")}} を定義します。
@@ -62,9 +55,9 @@ grid-template: unset;
 
   - : {{cssxref("grid-template-areas")}} にリストの文字列を設定し、{{cssxref("grid-template-rows")}} にリストの各文字列に従ったトラックサイズを設定します (サイズ指定の足りない部分には `auto` が設定されます)。さらに、各サイズの前後で定義された名前付き線をつなぎ、{{cssxref("grid-template-columns")}} にトラックリストのスラッシュ記号の後で指定されたサイズを設定します (指定されていない場合は `none` が設定されます)。
 
-    > **Note:** これらのトラックリストに {{cssxref("repeat()")}} 関数を使うことはできません。トラックは “ASCII アート” 内の行列と一対一の関係で視覚的に並んでいるためです。
+    > **メモ:** これらのトラックリストに {{cssxref("repeat()")}} 関数を使うことはできません。トラックは “ASCII アート” 内の行列と一対一の関係で視覚的に並んでいるためです。
 
-> **Note:** {{cssxref("grid")}} 一括指定プロパティは同じ構文を受け入れますが、暗黙的なグリッドプロパティをその初期値にリセットしてしまいます。これらの値が別々にカスケードされないようにするには、(`grid-template` ではなく) `grid` を使用してください。
+> **メモ:** {{cssxref("grid")}} 一括指定プロパティは同じ構文を受け入れますが、暗黙的なグリッドプロパティをその初期値にリセットしてしまいます。これらの値が別々にカスケードされないようにするには、(`grid-template` ではなく) `grid` を使用してください。
 
 ## 公式定義
 

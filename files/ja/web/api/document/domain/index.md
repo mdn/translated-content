@@ -1,14 +1,8 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/domain
 ---
+
 {{ApiRef}}
 
 {{domxref("Document")}} インターフェイスの **`domain`** プロパティは、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)で使用される現在の文書の{{glossary("origin", "オリジン")}}のうち、ドメインの部分を取得または設定します。

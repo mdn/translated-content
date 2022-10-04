@@ -2,6 +2,7 @@
 title: 信令与视频通话
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
+
 {{WebRTCSidebar}}
 
 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)允许在两个设备之间进行实时的对等媒体交换。通过称为**信令**的发现和协商过程建立连接。本教程将指导你构建双向视频通话。
@@ -79,7 +80,7 @@ if (sendToClients) {
 
 #### 交换会话描述信息
 
-开始处理信号的时候，用户的初始化操作会创建一个**请求（offer）** ，根据 {{Glossary("SDP")}} 协议其中会包含一个 session 描述符，并且需要把这个发送到我们称之为**接收者（callee）**那里， 接受者需要返回一个包含描述符的**应答（answer）**信息。我们的服务器使用 WebSocket 来传递 `"video-offer"` `"video-answer"` 两种类型的消息数据。这些消息包含以下属性：
+开始处理信号的时候，用户的初始化操作会创建一个**请求（offer）** ，根据 {{Glossary("SDP")}} 协议其中会包含一个 session 描述符，并且需要把这个发送到我们称之为**接收者（callee）**那里，接受者需要返回一个包含描述符的**应答（answer）**信息。我们的服务器使用 WebSocket 来传递 `"video-offer"` `"video-answer"` 两种类型的消息数据。这些消息包含以下属性：
 
 - `type`
   - : 消息类型; `"video-offer"` 或 `"video-answer"`
@@ -113,7 +114,7 @@ if (sendToClients) {
 
 每个 ICE 消息都建议提供一个通信协议（TCP 或 UDP）、IP 地址、端口号、连接类型（例如，指定的 IP 是对等机本身还是中继服务器），以及将两台计算机连接在一起所需的其他信息。这包括 NAT 或其他网络问题。
 
-> **备注：** 最需要注意的是：你的代码在 ICE 协商期间唯一需要负责的是从 ICE 层接受外向候选并通过与另一端的信号连接发送他们，当你的 {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} 控制器已经执行后，同时从信令服务器接收 ICE 候选消息 (当接收到 `"new-ice-candidate"` 消息时) 然后通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}发送他们到你的 ICE 层。 嗯，就是这样。
+> **备注：** 最需要注意的是：你的代码在 ICE 协商期间唯一需要负责的是从 ICE 层接受外向候选并通过与另一端的信号连接发送他们，当你的 {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} 控制器已经执行后，同时从信令服务器接收 ICE 候选消息 (当接收到 `"new-ice-candidate"` 消息时) 然后通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}发送他们到你的 ICE 层。嗯，就是这样。
 >
 > SDP 的内容基本上在所有情况下都是与你不相关的。在你真正知道自己在做什么之前，不要试图让事情变得更复杂。否则情况会非常混乱。
 
@@ -146,7 +147,7 @@ if (sendToClients) {
 
 如果条件发生变化，例如网络连接恶化，一个或两个对等方可能建议切换到较低带宽的媒体分辨率，或其他编解码器。这将触发新的候选交换，之后可能会发生另一种媒体格式和/或编解码器更改。
 
-作为可选项， 查看 {{RFC(5245, "Interactive Connectivity Establishment")}}, [section 2.6 ("Concluding ICE")](https://tools.ietf.org/html/rfc5245#section-2.6)如果你想更深入地了解这一过程，就要在 ICE 层内部完成。你应该注意到，候选交换后，一旦 ICE 层满足要求，媒体数据就开始流动。所有这些都是在幕后处理端。我们的任务就是简单地通过信令服务器来回发送候选。
+作为可选项，查看 {{RFC(5245, "Interactive Connectivity Establishment")}}, [section 2.6 ("Concluding ICE")](https://tools.ietf.org/html/rfc5245#section-2.6)如果你想更深入地了解这一过程，就要在 ICE 层内部完成。你应该注意到，候选交换后，一旦 ICE 层满足要求，媒体数据就开始流动。所有这些都是在幕后处理端。我们的任务就是简单地通过信令服务器来回发送候选。
 
 ## 客户端应用
 
@@ -170,7 +171,7 @@ if (sendToClients) {
       </div>
 ```
 
-此处定义的页面结构使用了 {{HTMLElement("div")}} 元素，通过启用 CSS，我们可以完全控制页面布局。我们将跳过本指南中的布局细节，但你可以[看看 GitHub 上的 CSS](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chat.css)，了解如何处理它。 注意这两个 {{HTMLElement("video")}} 元素，一个用于观看自己，一个用于连接，还有 {{HTMLElement("button")}} 元素。
+此处定义的页面结构使用了 {{HTMLElement("div")}} 元素，通过启用 CSS，我们可以完全控制页面布局。我们将跳过本指南中的布局细节，但你可以[看看 GitHub 上的 CSS](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chat.css)，了解如何处理它。注意这两个 {{HTMLElement("video")}} 元素，一个用于观看自己，一个用于连接，还有 {{HTMLElement("button")}} 元素。
 
 `id` 为 "`received_video`" 的 `<video>` 元素将显示从连接的用户接收的视频。我们指定了`autoplay` 属性，确保一旦视频到达，它立即播放。这消除了在代码中显式处理回放的任何需要。"`local_video`" `<video>` 元素显示用户相机的预览；指定 `muted` 属性，因为我们不需要在此预览面板中听到本地音频。
 
@@ -264,7 +265,7 @@ function invite(evt) {
 
 创建 `RTCPeerConnection` 后，我们通过调用 {{domxref("MediaDevices.getUserMedia()")}}，请求访问用户的相机和麦克风，该命令通过 {{domxref("Navigator.mediaDevices.getUserMedia")}} 属性向我们公开。当成功完成返回的 promise 时，将执行我们的 `then` 处理程序。它接收一个 {{domxref("MediaStream")}} 对象作为输入，该对象表示来自用户麦克风的音频和来自网络摄像机的视频流。
 
-> **备注：** 我们可以通过调用 {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} **获取设备列表，根据所需条件筛选结果列表，然后使用所选设备**{{domxref("MediaTrackConstraints.deviceId", "deviceId")}} **传入**`getUserMedia()`**的** `mediaConstraints` **对象的**`deviceId` **字段中的值。事实上，除非必须要不然很少这样用，因为大部分工作都是由** `getUserMedia()`**为你完成的。**
+> **备注：** 我们可以通过调用 **{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}** 获取设备列表，根据所需条件筛选结果列表，然后使用所选设备 **{{domxref("MediaTrackConstraints.deviceId", "deviceId")}}** 传入 **`getUserMedia()`** 的 **`mediaConstraints`** 对象的 **`deviceId`** 字段中的值。事实上，除非必须要不然很少这样用，因为大部分工作都是由 **`getUserMedia()`** 为你完成的。
 
 我们通过设置元素的 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 属性，将传入流附加到本地预览 {{HTMLElement("video")}} 元素。由于元素被配置为自动播放传入的视频，因此流开始在本地预览框中播放。
 
@@ -505,7 +506,7 @@ function handleNewICECandidateMsg(msg) {
 
 ##### 接收新的流数据
 
-当新的磁道添加到 `RTCPeerConnection`时——通过调用其{{domxref("RTCPeerConnection.addTrack", "addTrack()")}} 方法，或者由于重新协商流的格式——对于添加到连接的每个磁道， 一个{{event("track")}}事件设置为 `RTCPeerConnection` 。使用新添加的媒体需要实现 `track` 事件的处理程序。常见的需要是将传入的媒体附加到适当的 HTML 元素。在我们的示例中，我们将磁道的流添加到显示传入视频的 {{HTMLElement("video")}} 元素：
+当新的磁道添加到 `RTCPeerConnection`时——通过调用其{{domxref("RTCPeerConnection.addTrack", "addTrack()")}} 方法，或者由于重新协商流的格式——对于添加到连接的每个磁道，一个{{event("track")}}事件设置为 `RTCPeerConnection` 。使用新添加的媒体需要实现 `track` 事件的处理程序。常见的需要是将传入的媒体附加到适当的 HTML 元素。在我们的示例中，我们将磁道的流添加到显示传入视频的 {{HTMLElement("video")}} 元素：
 
 ```js
 function handleAddStreamEvent(event) {

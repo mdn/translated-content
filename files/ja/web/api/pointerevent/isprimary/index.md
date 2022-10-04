@@ -1,15 +1,8 @@
 ---
 title: PointerEvent.isPrimary
 slug: Web/API/PointerEvent/isPrimary
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/PointerEvent/isPrimary
 ---
+
 {{ APIRef("Pointer Events") }}
 
 {{domxref("PointerEvent")}} インターフェイスの **`isPrimary`** 読み取り専用プロパティは、イベントを作成したポインタデバイスが*プライマリ*ポインタであるかどうかを示します。 イベントの発生原因となったポインタがプライマリデバイスの場合は `true` を返し、それ以外の場合は `false` を返します。

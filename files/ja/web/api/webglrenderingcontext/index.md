@@ -1,24 +1,8 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
-page-type: web-api-interface
-tags:
-  - 2D
-  - 3D
-  - API
-  - Canvas
-  - Context
-  - Drawing
-  - GL
-  - Graphics
-  - Interface
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - rendering
-browser-compat: api.WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext`** インターフェースは、 {{HTMLElement("canvas")}} 要素の描画サーフェスのための OpenGL ES 2.0 の描画コンテキストを提供します。

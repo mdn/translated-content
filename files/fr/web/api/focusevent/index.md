@@ -9,6 +9,7 @@ tags:
   - Interface
 translation_of: Web/API/FocusEvent
 ---
+
 {{APIRef("DOM Events")}}{{SeeCompatTable}}
 
 L'interface **`FocusEvent`** représente les événements liés au focus tels que {{event("focus")}}, {{event("blur")}}, {{event("focusin")}} ou {{event("focusout")}}.

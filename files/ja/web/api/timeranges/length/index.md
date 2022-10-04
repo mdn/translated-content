@@ -1,16 +1,8 @@
 ---
 title: TimeRanges.length
 slug: Web/API/TimeRanges/length
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - TimeRanges
-translation_of: Web/API/TimeRanges/length
 ---
+
 {{APIRef("DOM")}}
 
 **`TimeRanges.length`** 読み取り専用プロパティは、オブジェクト内の範囲の数を返します。

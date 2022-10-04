@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/resolvedOptions
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Collator.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet {{jsxref("Collator")}}.

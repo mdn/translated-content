@@ -1,14 +1,8 @@
 ---
 title: WakeLockSentinel.released
 slug: Web/API/WakeLockSentinel/released
-tags:
-  - プロパティ
-  - 読み取り専用
-  - 画面起動ロック API
-  - WakeLockSentinel
-browser-compat: api.WakeLockSentinel.released
-translation_of: Web/API/WakeLockSentinel/released
 ---
+
 {{DefaultAPISidebar("Screen Wake Lock API")}}
 
 **`released`** は {{domxref("WakeLockSentinel")}} インターフェイスのプロパティで、 {{domxref("WakeLockSentinel")}} がまだ解放されていないかどうかを示す論理値を返します。

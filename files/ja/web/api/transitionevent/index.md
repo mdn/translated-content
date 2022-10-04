@@ -1,15 +1,8 @@
 ---
 title: TransitionEvent
 slug: Web/API/TransitionEvent
-tags:
-  - API
-  - CSS
-  - CSS3 Transitions
-  - CSSOM
-  - Experimental
-  - Reference
-translation_of: Web/API/TransitionEvent
 ---
+
 {{APIRef("CSSOM")}} {{SeeCompatTable}}
 
 **`TransitionEvent`** インターフェイスは、[トランジション](/ja/docs/Web/Guide/CSS/Using_CSS_transitions)に関する情報を提供するイベントを表します。

@@ -1,13 +1,8 @@
 ---
 title: グローバル属性
 slug: Web/HTML/Global_attributes
-tags:
-  - Attribute
-  - HTML
-  - リファレンス
-  - ウェブ
-translation_of: Web/HTML/Global_attributes
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **グローバル属性**は、すべての HTML 要素で共通の属性です。すべての要素で使用できますが、要素によっては効果がないこともあります。

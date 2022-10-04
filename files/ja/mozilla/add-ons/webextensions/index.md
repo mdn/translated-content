@@ -1,13 +1,8 @@
 ---
 title: ブラウザー拡張機能
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Add-ons
-  - Extensions
-  - Landing
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
+
 {{AddonSidebar}}
 
 拡張機能はブラウザーの能力を拡張・修正するものです。Firefox の拡張機能は WebExtensions API を使ってビルドされ、この API は拡張機能をクロスブラウザーで開発するシステムです。このシステムの大半は Google Chrome と Opera と [W3C Draft Community Group](https://browserext.github.io/browserext/) でサポートされている [extension API](https://developer.chrome.com/extensions) と互換性があります。

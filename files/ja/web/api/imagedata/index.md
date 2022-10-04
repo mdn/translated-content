@@ -1,13 +1,8 @@
 ---
 title: ImageData
 slug: Web/API/ImageData
-tags:
-  - API
-  - Canvas
-  - ImageData
-  - Images
-translation_of: Web/API/ImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 **`ImageData`** インターフェイスは、{{HTMLElement("canvas")}} 要素の領域の基礎をなすピクセルデータを表します。{{domxref("ImageData.ImageData", "ImageData()")}} コンストラクターや、canvas に関連付けられた {{domxref("CanvasRenderingContext2D")}} オブジェクトの {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} メソッドおよび {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} メソッドによって生成されます。`ImageData` は {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}} メソッドの第 1 引数として利用可能です。

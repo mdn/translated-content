@@ -1,8 +1,8 @@
 ---
 title: Chrome (クローム)
 slug: Glossary/Chrome
-translation_of: Glossary/Chrome
 ---
+
 ブラウザーにおいては、クローム (chrome) はブラウザーの中で、ウェブページ自体を除いた見える部分すべて (ツールバー、メニューバー、タブなど) のことです。 {{glossary("Google Chrome")}} ブラウザーと混同しないようにしてください。
 
 ## 詳細

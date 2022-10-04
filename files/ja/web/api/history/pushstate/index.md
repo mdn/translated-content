@@ -1,21 +1,8 @@
 ---
 title: History.pushState()
 slug: Web/API/History/pushState
-tags:
-  - API
-  - HTML DOM
-  - History
-  - 履歴 API
-  - Location
-  - メソッド
-  - リファレンス
-  - セッション
-  - URL
-  - ウェブ
-  - pushState
-browser-compat: api.History.pushState
-translation_of: Web/API/History/pushState
 ---
+
 {{APIRef("History API")}}
 
 [HTML](/ja/docs/Web/HTML) 文書では、 **`history.pushState()`** メソッドはブラウザーのセッション履歴スタックに項目を追加します。

@@ -1,14 +1,8 @@
 ---
 title: Document.head
 slug: Web/API/Document/head
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Reference
-  - head
-translation_of: Web/API/Document/head
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} インターフェイスの **`head`** は読み取り専用のプロパティで、現在の文書の {{HTMLElement("head")}} 要素を返します。

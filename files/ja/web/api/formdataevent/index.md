@@ -2,6 +2,7 @@
 title: FormDataEvent
 slug: Web/API/FormDataEvent
 ---
+
 {{APIRef("DOM")}}
 
 **`FormDataEvent`** インターフェイスは [`formdata` イベント](/ja/docs/Web/API/HTMLFormElement/formdata_event)を表します。 — このようなイベントは {{domxref("HTMLFormElement")}} オブジェクトで、フォームデータを表すエントリーリストが構築された後に発行されます。これはフォームが送信されようとするときに発行されますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターの呼び出しでも発行させることができます。
@@ -46,7 +47,7 @@ formElem.addEventListener('submit', (e) => {
 formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
-  // イベントお武衛ジェクトからフォームデータを取得
+  // イベントオブジェクトからフォームデータを取得
   let data = e.formData;
   for (var value of data.values()) {
     console.log(value);

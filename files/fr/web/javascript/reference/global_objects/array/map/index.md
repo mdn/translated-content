@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/map
 ---
+
 {{JSRef}}
 
 La méthode **`map()`** crée un nouveau tableau avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.

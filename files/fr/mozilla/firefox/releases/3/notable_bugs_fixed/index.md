@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 translation_of: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 original_slug: Bugs_importants_corrigés_dans_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 Cet article fait la liste des corrections importantes faisant partie de Firefox 3 qui ne sont pas nécessairement évidentes à trouver dans la documentation.
@@ -23,6 +24,6 @@ Cet article fait la liste des corrections importantes faisant partie de Firefox 
 - `\d`, un des caractères spéciaux dans les expressions rationnelles, a été corrigé pour correspondre uniquement aux chiffres de base de l'alphabet latin (équivalent à `{{ mediawiki.external('0-9') }}`). ({{ Bug(378738) }})
 - La catégorie image-sniffing-services permet aux décodeurs d'images implémentés comme des extensions de décoder correctement des images envoyées avec des types MIME incorrects. ({{ Bug(391667) }})
 
-### Voir également
+### Voir aussi
 
 - [Firefox 3 pour les développeurs](fr/Firefox_3_pour_les_d%c3%a9veloppeurs)

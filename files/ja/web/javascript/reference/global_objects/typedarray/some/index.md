@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 ---
+
 {{JSRef}}
 
 **`some()`** メソッドは、与えられた関数によって実行されるテストに合格する要素が型付き配列の中にあるかどうかをテストします。このメソッドは、{{jsxref("Array.prototype.some()")}}と同じアルゴリズムを持ちます。ここで _TypedArray_ は[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。

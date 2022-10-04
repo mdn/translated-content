@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは、{{jsxref("Date")}} オブジェクトのプリミティブ値を返します。

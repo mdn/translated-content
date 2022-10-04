@@ -2,6 +2,7 @@
 title: blur (event)
 slug: Web/API/Element/blur_event
 ---
+
 当一个元素失去焦点的时候 blur 事件被触发。它和 [`focusout`](/zh-CN/docs/Mozilla_event_reference/focusout) 事件的主要区别是 focusout 支持冒泡。
 
 ## 常规信息
@@ -33,7 +34,7 @@ slug: Web/API/Element/blur_event
 
 ## 事件代理
 
-有两种方法来为这个事件实现事件代理：在支持 `focusout` 事件的浏览器中使用 focusout 事件（除了 FireFox 以外的浏览器都支持 focusout）或者通过设置 [`addEventListener`](/en-US/docs/DOM/element.addEventListener) 方法的第三个参数 "useCapture" 为 `true：`
+有两种方法来为这个事件实现事件代理：在支持 `focusout` 事件的浏览器中使用 focusout 事件（除了 FireFox 以外的浏览器都支持 focusout）或者通过设置 [`addEventListener`](/zh-CN/docs/DOM/element.addEventListener) 方法的第三个参数 "useCapture" 为 `true：`
 
 ### HTML Content
 
@@ -64,7 +65,7 @@ form.addEventListener("blur", function( event ) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.blur_event")}}
+{{Compat}}
 
 ## 相关的事件
 

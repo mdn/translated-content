@@ -1,15 +1,8 @@
 ---
 title: HTMLImageElement.referrerPolicy
 slug: Web/API/HTMLImageElement/referrerPolicy
-page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - HTMLImageElement
-  - プロパティ
-  - Referrer Policy
-browser-compat: api.HTMLImageElement.referrerPolicy
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLImageElement.referrerPolicy`** プロパティは、

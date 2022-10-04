@@ -1,15 +1,8 @@
 ---
 title: DataTransfer.mozCursor
 slug: Web/API/DataTransfer/mozCursor
-page-type: web-api-instance-property
-tags:
-  - API
-  - Non-standard
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.mozCursor
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{ Non-standard_header() }}
@@ -23,11 +16,11 @@ browser-compat: api.DataTransfer.mozCursor
 - default
   - : ドラッグ操作の間、カーソルを矢印に設定する Gecko の既定の動作を使用します。
 
-> **Note:** `default` 以外の値が設定されている場合は、 `auto` とみなされます。
+> **メモ:** `default` 以外の値が設定されている場合は、 `auto` とみなされます。
 
-> **Note:** このプロパティは、現在 Windows にのみ実装されています。
+> **メモ:** このプロパティは、現在 Windows にのみ実装されています。
 
-> **Note:** このプロパティは、Gecko 固有のものです。
+> **メモ:** このプロパティは、Gecko 固有のものです。
 
 ## 値
 

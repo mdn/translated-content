@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/padding-bottom
 ---
+
 {{CSSRef}}
 
 La propriété **`padding-bottom`** d'un élément ajuste la hauteur de la boîte de remplissage (_padding_) en haut de l'élément. La [zone de remplissage](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) correspond à l'espace entre le contenu et la bordure. Contrairement à {{cssxref("margin-bottom")}}, `padding-bottom` ne peut pas recevoir de valeurs négatives.
@@ -41,9 +42,13 @@ padding-bottom: unset;
 - `<percentage>`
   - : Un pourcentage en rapport avec la largeur du bloc englobant. Voir {{cssxref("&lt;percentage&gt;")}} pour plus de détails.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -73,18 +78,11 @@ padding-bottom: unset;
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires                                                                                                              |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-padding', 'padding-bottom')}}                     | {{Spec2('CSS3 Box')}}             | Aucun changement depuis {{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-bottom')}}. |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'padding-bottom')}}     | {{Spec2('CSS3 Transitions')}} | `padding-bottom` peut désormais être animée.                                                                              |
-| {{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-bottom')}} | {{Spec2('CSS2.1')}}                 | Aucun changement depuis {{Specname('CSS1', '#padding-bottom', 'padding-bottom')}}.                     |
-| {{Specname('CSS1', '#padding-bottom', 'padding-bottom')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                      |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.padding-bottom")}}
+{{Compat}}
 
 ## Voir aussi
 

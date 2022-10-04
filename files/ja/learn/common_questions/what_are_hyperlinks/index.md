@@ -1,13 +1,8 @@
 ---
 title: ハイパーリンクとは？
 slug: Learn/Common_questions/What_are_hyperlinks
-tags:
-  - Beginner
-  - Infrastructure
-  - Navigation
-  - NeedsActiveLearning
-translation_of: Learn/Common_questions/What_are_hyperlinks
 ---
+
 この記事では、ハイパーリンクとは何か、なぜ重要なのかを詳しく説明します。
 
 <table>

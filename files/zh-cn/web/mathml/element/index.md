@@ -2,6 +2,7 @@
 title: MathML 元素参考
 slug: Web/MathML/Element
 ---
+
 {{MathMLRef}}
 
 这是一份按字母排序的 MathML **呈现型**元素列表。

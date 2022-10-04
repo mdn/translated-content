@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/SQL_Injection
 original_slug: Glossaire/Injection_SQL
 ---
+
 L'injection SQL tire parti des applications web qui ne parviennent pas à valider les entrées utilisateur. Les pirates peuvent transmettre des commandes SQL via l'application web de manière malveillante pour exécution par une base de données principale.
 
 L'injection SQL peut obtenir un accès non autorisé à une base de données ou récupérer des informations directement à partir de la base de données. De nombreuses violations de données sont dues à l'injection SQL.
@@ -67,7 +68,7 @@ $id = $_GET['id']
 
 Ainsi, en raison de (1) chaque guillemet simple (') dans la chaîne d'entrée est remplacé par des guillemets ("), et en raison de (2) avant chaque (') est ajouté un (/). La chaîne magique contrôlée échoue à contourner l'authentification et votre base de données reste sécurisée.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

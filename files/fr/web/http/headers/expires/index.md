@@ -3,6 +3,7 @@ title: Expires
 slug: Web/HTTP/Headers/Expires
 translation_of: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 Le header **`Expires`** contient la date/heure après laquelle la réponse est considérée comme dépréciée.
@@ -57,7 +58,7 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Compat("http.headers.Expires")}}
 
-## See also
+## Voir aussi
 
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Age")}}

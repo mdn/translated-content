@@ -1,13 +1,8 @@
 ---
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceEntry/startTime
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`startTime`** プロパティは、{{domxref("PerformanceEntry","performance entry")}} のうち最初に記録された {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
@@ -34,7 +29,7 @@ entry.startTime;
 
 {{domxref("PerformanceEntry","パフォーマンスエントリ")}}が作成されたときの最初のタイムスタンプを表す {{domxref("DOMHighResTimeStamp")}}。
 
-> **Note:** パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが{{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは{{domxref("PerformanceEntry.fetchStart")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
+> **メモ:** パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが{{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは{{domxref("PerformanceEntry.fetchStart")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
 
 ## 例
 

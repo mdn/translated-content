@@ -2,6 +2,7 @@
 title: SpeechRecognition.lang
 slug: Web/API/SpeechRecognition/lang
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}} インターフェイスの **`lang`** プロパティは現在の `SpeechRecognition` の言語を返します。指定されていない場合、HTML タグの {{htmlattrxref("lang","html")}} アトリビュートを返し、またそれも指定されていない場合、ユーザーエージェントの言語の設定を返します。

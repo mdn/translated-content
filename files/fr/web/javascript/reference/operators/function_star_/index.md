@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/function*
 original_slug: Web/JavaScript/Reference/Opérateurs/function*
 ---
+
 {{jsSidebar("Operators")}}
 
 Le mot-clé **`function*`** peut être utilisé pour définir une fonction génératrice à l'intérieur d'une expression.

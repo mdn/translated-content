@@ -1,18 +1,6 @@
 ---
 title: 자바스크립트의 기본적인 연산 - 숫자와 연산자
 slug: Learn/JavaScript/First_steps/Math
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Join
-  - Quotes
-  - concatenation
-  - l10n:priority
-  - strings
-translation_of: Learn/JavaScript/First_steps/Math
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 

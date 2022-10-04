@@ -12,7 +12,9 @@ translation_of: Web/API/Window/innerWidth
 
 ## 구문
 
-    var intViewportWidth = window.innerWidth;
+```js
+var intViewportWidth = window.innerWidth;
+```
 
 ### Value
 

@@ -13,6 +13,7 @@ tags:
   - observers
 translation_of: Web/API/PerformanceObserver/disconnect
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La méthode **`disconnect()`** de l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) est utilisée pour empêcher l'observateur de performances de recevoir tout événement [d'entrée de performance](/fr/docs/Web/API/PerformanceEntry).
@@ -46,10 +47,8 @@ observer2.observe({entryTypes: ["measure"]});
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                                                   | Commentaire                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-disconnect', 'disconnect()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de la méthode `disconnect()`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceObserver.disconnect")}}
+{{Compat}}

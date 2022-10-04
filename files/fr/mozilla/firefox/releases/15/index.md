@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/15
 original_slug: Mozilla/Firefox/Versions/15
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume les principaux changements dans Firefox 15 qui sont utiles aux développeurs.
@@ -92,6 +93,6 @@ Les interfaces suivantes ont été supprimées.
 
 - `nsIGlobalHistory`
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('14')}}

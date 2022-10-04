@@ -2,6 +2,7 @@
 title: Key Values
 slug: Web/API/UI_Events/Keyboard_event_key_values
 ---
+
 下列表格列出了不同范畴的键的标准键值，以及这些键的一般作用。对应的，通用平台上可用的虚拟键码也包含其中。
 
 Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN/docs/Web/API/KeyboardEvent/key)
@@ -3074,7 +3075,7 @@ The values below are derived in part form a number of consumer electronics techn
 
 - [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (part of the [ATSC](https://zh.wikipedia.org/wiki/ATSC) specification)
 - [Open Cable Application Platform 1.1.3](http://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
-- [ANSI/CEA-2014-B](http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
+- [ANSI/CEA-2014-B](https://shop.cta.tech/products/web-based-protocol-and-framework-for-remote-user-interface-on-upnp-networks-and-the-internet): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
 
 > **备注：** Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.

@@ -1,14 +1,8 @@
 ---
 title: CSSStyleRule
 slug: Web/API/CSSStyleRule
-tags:
-  - API
-  - CSSOM
-  - CSSStyleRule
-  - Interface
-  - Reference
-translation_of: Web/API/CSSStyleRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSStyleRule`** は、単一の CSS スタイル規則を表します。これは、型定数の値が `1` (`CSSRule.STYLE_RULE`) の {{domxref("CSSRule")}} インターフェイスを実装します。

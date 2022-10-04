@@ -1,15 +1,8 @@
 ---
 title: URL.toString()
 slug: Web/API/URL/toString
-tags:
-  - API
-  - Method
-  - Reference
-  - Stringifier
-  - URL
-  - toString()
-translation_of: Web/API/URL/toString
 ---
+
 {{ApiRef("URL API")}}
 
 `URL.toString()` 文字列化メソッドは、URL 全体を含む {{domxref("USVString")}} を返します。 これは事実上、{{domxref("URL.href")}} の読み取り専用バージョンです。

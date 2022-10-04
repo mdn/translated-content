@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Proximity_Events
 original_slug: WebAPI/Proximity
 ---
+
 {{ SeeCompatTable }}
 
 ## Résumé
@@ -41,9 +42,7 @@ window.addEventListener('userproximity', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                | Statut                                   | Commentaire            |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | ---------------------- |
-| {{ SpecName('Proximity Events', '', 'Proximity Events') }} | {{ Spec2('Proximity Events') }} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

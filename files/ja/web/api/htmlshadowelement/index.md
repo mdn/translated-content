@@ -1,14 +1,8 @@
 ---
 title: HTMLShadowElement
 slug: Web/API/HTMLShadowElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - Web Components
-translation_of: Web/API/HTMLShadowElement
 ---
+
 {{ APIRef("Web Components") }}
 
 **`HTMLShadowElement`** インターフェースは、[Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM) で使用される {{HTMLElement("shadow")}} HTML 要素を表します。

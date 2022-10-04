@@ -1,13 +1,8 @@
 ---
 title: 'VideoTrackList: change イベント'
 slug: Web/API/VideoTrackList/change_event
-tags:
-  - API
-  - Change
-  - Reference
-  - events
-translation_of: Web/API/VideoTrackList/change_event
 ---
+
 {{APIRef}}
 
 `change` イベントは、動画トラックがアクティブまたは非アクティブになったとき（トラックの [`selected`](/ja/docs/Web/API/VideoTrack/selected) プロパティを変更したときなど）に発生します。

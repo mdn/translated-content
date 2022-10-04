@@ -1,7 +1,6 @@
 ---
 title: HTML_폼_구성_방법
 slug: Learn/Forms/How_to_structure_a_web_form
-translation_of: Learn/Forms/How_to_structure_a_web_form
 original_slug: Learn/HTML/Forms/HTML_폼_구성_방법
 ---
 HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두가지 이유로 중요하다. 폼이 사용 할수 있다는 것을 보장하고 접근성도 늘릴수 있기 떄문이다.(즉 장애인들도 쉽게 사용할 수 있다.) HTML 폼의 [접근성](/ko/docs/Web/Accessibility)은 중요한 점이고 어떻게 폼 접근성을 높일 수 있는지 볼것이다.

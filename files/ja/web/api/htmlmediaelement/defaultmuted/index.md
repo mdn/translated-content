@@ -1,16 +1,8 @@
 ---
 title: HTMLMediaElement.defaultMuted
 slug: Web/API/HTMLMediaElement/defaultMuted
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-browser-compat: api.HTMLMediaElement.defaultMuted
-translation_of: Web/API/HTMLMediaElement/defaultMuted
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.defaultMuted`** プロパティは、 HTML の {{htmlattrxref("muted", "video")}} 属性を反映し、メディア要素の音声出力を既定でミュートするかどうかを示します。このプロパティは動的な効果はありません。 音声出力をミュートおよびミュート解除するには、{{domxref("HTMLMediaElement.muted", "muted")}} プロパティを使用してください。

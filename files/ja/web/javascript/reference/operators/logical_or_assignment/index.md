@@ -1,15 +1,8 @@
 ---
 title: 論理和代入 (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
-tags:
-  - JavaScript
-  - 言語機能
-  - 論理代入
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.logical_or_assignment
-translation_of: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 論理和代入演算子 (`x ||= y`) は、`x` が{{Glossary("falsy", "偽値")}}である場合にのみ代入を行います。

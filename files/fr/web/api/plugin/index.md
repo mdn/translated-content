@@ -10,6 +10,7 @@ tags:
   - Plugins
 translation_of: Web/API/Plugin
 ---
+
 {{ApiRef("HTML DOM")}}
 
 L'interface `Plugin` fournit des informations à propos d'un [plugin](/fr/docs/Mozilla/Add-ons/Plugins) du navigateur.
@@ -34,12 +35,10 @@ L'interface `Plugin` fournit des informations à propos d'un [plugin](/fr/docs/M
 - {{domxref("Plugin.namedItem")}}
   - : Renvoie le type MIME d'un élément pris en charge.
 
-## Caractéristiques
+## Spécifications
 
-| Caractéristique                                                      | Statut                           | Commentaire          |
-| -------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG','#dom-plugin','Plugin')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités
+## Compatibilité des navigateurs
 
-{{Compat("api.Plugin")}}
+{{Compat}}

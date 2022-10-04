@@ -57,7 +57,7 @@ Pour commencer, cliquez-droit sur un élément HTML dans l'inspecteur du DOM et 
 - `:hover/:active/:focus` (parfois _Changer de pseudo-classe_)
   - : Force l'état d'un élément afin de pouvoir voir ce que la mise en forme donne pour cet état.
 - Copier/Copier comme HTML
-  -  : Permet de copier l'élément HTML actuellement sélectionné.
+  - : Permet de copier l'élément HTML actuellement sélectionné.
 
 Certains navigateurs disposent également d'options comme _Copier le chemin CSS_ et/ou _Copier le chemin XPath_ qui permettent de copier le sélecteur CSS ou l'expression XPath qui permettrait de sélectionner l'élément HTML courant.
 

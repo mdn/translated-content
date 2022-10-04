@@ -3,7 +3,7 @@ title: CSS 轉場
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 
-原文 : [https://developer.mozilla.org/en/CSS/CSS_transitions](/en/CSS/CSS_transitions)
+原文 : [https://developer.mozilla.org/en/CSS/CSS_transitions](/zh-TW/CSS/CSS_transitions)
 
 {{ SeeCompatTable() }}
 
@@ -274,8 +274,6 @@ p{
 ## 使用 transition events 來替 object 製作動畫
 
 這裡讓我們看個例子，一個內含文字的方塊左右來回移動，並且會在兩種顏色之間做轉變：
-
-<video controls src="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitiondemo1.ogv"></video>
 
 在我們仔細研究程式碼之前可以先看[範例](/samples/cssref/transitions/sample1)。同樣地，可以到[這](/samples/cssref/transitions/sample1/transitions.css)看其 CSS 的寫法。
 

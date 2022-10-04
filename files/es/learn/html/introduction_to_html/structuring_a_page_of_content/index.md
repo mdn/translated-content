@@ -85,7 +85,7 @@ También debería:
 
 ## Consejos
 
-- Utilize el [validador de HTML W3C ](https://validator.w3.org/)para validar su HTML; Obtendrá puntos de bonificación si valida tanto como sea posible (la línea "googleapis" es una línea utilizada para importar fuentes personalizadas en la página del servicio Google Fonts, no se valida, así que no te preocupes. )
+- Utilize el [validador de HTML W3C](https://validator.w3.org/) para validar su HTML; Obtendrá puntos de bonificación si valida tanto como sea posible (la línea "googleapis" es una línea utilizada para importar fuentes personalizadas en la página del servicio Google Fonts, no se valida, así que no te preocupes. )
 - No necesita saber CSS para hacer esta evaluación; Sólo tiene que poner el CSS proporcionado dentro de un elemento HTML.
 - El CSS proporcionado está diseñado para que cuando se agreguen los elementos estructurales correctos al marcado, aparezcan verdes en la página representada.
 - Si se está quedando atascado y no puede imaginar ni qué elementos poner ni donde ponerlos , a menudo ayuda a dibujar un diagrama de bloques simple del diseño de página, y escribir en los elementos que usted piensa que debe envolver cada bloque.
@@ -98,6 +98,6 @@ La siguiente captura de pantalla muestra un ejemplo de cómo podría verse la le
 
 ## Evaluación
 
-Si está siguiendo esta evaluación como parte de un curso organizado, debe ser capaz de dar su trabajo a su maestro / mentor para el marcado. Si usted está aprendiendo por si mismo, entonces puede obtener la guía de marcado con bastante facilidad preguntando sobre ello en la lista de correo[ dev-mdc](https://lists.mozilla.org/listinfo/dev-mdc) , o en el canal IRC [#mdn](irc://irc.mozilla.org/mdn) en [Mozilla IRC](https://wiki.mozilla.org/IRC). Pruebe a hacer el ejercicio primero - ¡No hay nada que ganar por hacer trampa!
+Si está siguiendo esta evaluación como parte de un curso organizado, debe ser capaz de dar su trabajo a su maestro / mentor para el marcado. Si usted está aprendiendo por si mismo, entonces puede obtener la guía de marcado con bastante facilidad preguntando sobre ello en la lista de correo [dev-mdc](https://lists.mozilla.org/listinfo/dev-mdc), o en el canal IRC [#mdn](irc://irc.mozilla.org/mdn) en [Mozilla IRC](https://wiki.mozilla.org/IRC). Pruebe a hacer el ejercicio primero - ¡No hay nada que ganar por hacer trampa!
 
 {{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}

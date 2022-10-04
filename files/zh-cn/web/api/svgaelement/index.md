@@ -2,6 +2,7 @@
 title: SVGAElement
 slug: Web/API/SVGAElement
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG a DOM 接口
@@ -64,11 +65,11 @@ See {{domxref("HTMLAnchorElement.href")}}
 
 **{{domxref("SVGAElement.hreflang")}}**
 
-是一个反映 `hreflang` 属性的字符串（ DOMString ），表示链接资源的语言种类。
+是一个反映 `hreflang` 属性的字符串（DOMString），表示链接资源的语言种类。
 
 **{{domxref("SVGAElement.ping")}}**
 
-是一个反映 ping 值的字符串（ DOMString ），包含以空格分隔开的 URL 列表，当超链接可以被跟踪时，浏览器会（在后台）发送有 PING 主体的 {{HTTPMethod("POST")}} 的请求，一般用于追踪。
+是一个反映 ping 值的字符串（DOMString），包含以空格分隔开的 URL 列表，当超链接可以被跟踪时，浏览器会（在后台）发送有 PING 主体的 {{HTTPMethod("POST")}} 的请求，一般用于追踪。
 
 **{{domxref("SVGAElement.referrerPolicy")}}**
 
@@ -88,15 +89,15 @@ See {{domxref("HTMLAnchorElement.href")}}
 
 **{{domxref("SVGAElement.text")}}**
 
-是一个字符串（ DOMString ），作为 {{domxref("Node.textContent")}} 属性的代名词。
+是一个字符串（DOMString），作为 {{domxref("Node.textContent")}} 属性的代名词。
 
 **{{domxref("SVGAElement.type")}}**
 
-是一个反映 `type` 属性的字符串（ DOMString ），表示链接资源的 MIME 种类。
+是一个反映 `type` 属性的字符串（DOMString），表示链接资源的 MIME 种类。
 
 ## 方法
 
-`该SVGAElement接口没有提供任何专有的方法。`
+该 `SVGAElement` 接口没有提供任何专有的方法。
 
 ## 示例
 
@@ -122,7 +123,7 @@ linkRef.onclick = function(){
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGAElement")}}
+{{Compat}}
 
 ## 参见
 

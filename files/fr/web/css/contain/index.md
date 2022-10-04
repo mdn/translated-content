@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/contain
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété CSS **`contain`** permet d'indiquer qu'un élément, ainsi que son contenu, sont, autant que possible, indépendants du reste de l'arbre du document. Cela permet au navigateur de recalculer la disposition, la mise en forme, la taille, les _peintures_ ou toute combinaison de ces éléments pour une zone donnée du DOM plutôt que pour la page complète.
@@ -55,21 +56,21 @@ Cette propriété s'avère utile pour les pages qui contiennent de nombreux comp
 - `paint`
   - : Cette valeur indique que les éléments descendants de l'élément ne sont pas affichés en dehors de ses limites. Si un élément est en dehors de l'écran ou n'est pas visible, cette valeur assure que les éléments descendants ne sont pas visibles non plus.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS Containment')}} | {{Spec2('CSS Containment')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.contain")}}
+{{Compat}}
 
 ## Voir aussi
 

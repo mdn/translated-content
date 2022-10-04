@@ -3,6 +3,7 @@ title: <stop>
 slug: Web/SVG/Element/stop
 translation_of: Web/SVG/Element/stop
 ---
+
 {{SVGRef}}
 
 L'élément [SVG](/fr/docs/Web/SVG) **`<stop>`** définit une couleur supplémentaire dans une palette à utiliser pour un dégradé, et est contenu dans un élément {{SVGElement("linearGradient")}} ou {{SVGElement("radialGradient")}}.
@@ -61,14 +62,11 @@ Cet élément implémenté l'interface {{domxref("SVGStopElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                   | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('SVG2', 'pservers.html#GradientStops', '&lt;stop&gt;')}}     | {{Spec2('SVG2')}} |                     |
-| {{SpecName('SVG1.1', 'pservers.html#GradientStops', '&lt;stop&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.stop")}}
+{{Compat}}
 
 ## Voir aussi
 

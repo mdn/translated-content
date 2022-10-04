@@ -14,6 +14,7 @@ tags:
   - diffusion
 translation_of: Web/API/WebRTC_API
 ---
+
 {{APIRef("WebRTC")}}
 
 **WebRTC** (Web Real-Time Communications) est une technologie qui permet aux applications et sites web de capturer et éventuellement de diffuser des médias audio et/ou vidéo, ainsi que d'échanger des données arbitraires entre les navigateurs sans passer par un intermédiaire.
@@ -153,11 +154,7 @@ Ces interfaces sont liées à l'interactivité avec les réseaux téléphoniques
 
 ## Spécifications
 
-| Spécification                                            | Statut                                               | Commentaire                                                                              |
-| -------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| {{SpecName('WebRTC 1.0')}}                     | {{Spec2('WebRTC 1.0')}}                     | La définition initiale de l'API de WebRTC.                                               |
-| {{SpecName('Media Capture')}}                 | {{Spec2('Media Capture')}}                 | La définition initiale de l'objet véhiculant le flux de contenu multimédia.              |
-| {{SpecName('Media Capture DOM Elements')}} | {{Spec2('Media Capture DOM Elements')}} | La définition initiale sur la façon d'obtenir un flux de contenu à partir d'éléments DOM |
+{{Specifications}}
 
 En plus de ces spécifications définissant l'API nécessaire pour utiliser WebRTC, il existe plusieurs protocoles, répertoriés sous [ressources](#Protocols).
 

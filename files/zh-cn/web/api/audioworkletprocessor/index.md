@@ -2,6 +2,7 @@
 title: AudioWorkletProcessor
 slug: Web/API/AudioWorkletProcessor
 ---
+
 {{APIRef("Web Audio API")}}
 
 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)的 **`AudioWorkletProcessor`** 接口代表了一个 自定义的音频处理代码 {{domxref("AudioWorkletNode")}}. 它身处于 {{domxref("AudioWorkletGlobalScope")}} 并运行在 Web Audio rendering 线程上。同时，一个建立在其基础上的 {{domxref("AudioWorkletNode")}} 运行在主线程上。
@@ -16,7 +17,7 @@ slug: Web/API/AudioWorkletProcessor
 ## 属性
 
 - {{domxref("AudioWorkletProcessor.port", "port")}} {{readonlyinline}}
-  - : 返回一个用于在处理程序和其所属的{{domxref("AudioWorkletNode")}}间双向通信的 {{domxref("MessagePort")}} 。 另一端 可通过该节点的{{domxref("AudioWorkletNode.port", "port")}} 属性使用。
+  - : 返回一个用于在处理程序和其所属的{{domxref("AudioWorkletNode")}}间双向通信的 {{domxref("MessagePort")}} 。另一端 可通过该节点的{{domxref("AudioWorkletNode.port", "port")}} 属性使用。
 
 ## 方法
 
@@ -30,11 +31,11 @@ _`AudioWorkletProcessor` 接口不响应任何事件。_
 
 ### Deriving classes
 
-要自定义音频处理代码， 你必须从`AudioWorkletProcessor` 接口派生一个类。这个派生类必须具有在该接口中不曾定义的{{domxref("AudioWorkletProcessor.process", "process")}} 方法。该方法将被每个含有 128 样本帧的块调用并且接受输入和输出数组以及自定义的{{domxref("AudioParam")}}s (如果它们刚被定义了) 的计算值作为参数。您可以使用输入和 音频参数值去填充输出数组，这是默认的用于使输出静音。
+要自定义音频处理代码，你必须从`AudioWorkletProcessor` 接口派生一个类。这个派生类必须具有在该接口中不曾定义的{{domxref("AudioWorkletProcessor.process", "process")}} 方法。该方法将被每个含有 128 样本帧的块调用并且接受输入和输出数组以及自定义的{{domxref("AudioParam")}}s (如果它们刚被定义了) 的计算值作为参数。您可以使用输入和 音频参数值去填充输出数组，这是默认的用于使输出静音。
 
 Optionally, if you want custom {{domxref("AudioParam")}}s on your node, you can supply a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property as a _static getter_ on the processor. The array of {{domxref("AudioParamDescriptor")}}-based objects returned is used internally to create the {{domxref("AudioParam")}}s during the instantiation of the `AudioWorkletNode`.
 
-The resulting `AudioParam`s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as [`linearRampToValueAtTime`](/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime). Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.
+The resulting `AudioParam`s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as [`linearRampToValueAtTime`](/zh-CN/docs/Web/API/AudioParam/linearRampToValueAtTime). Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.
 
 ### 处理音频
 
@@ -88,7 +89,7 @@ whiteNoiseNode.connect(audioContext.destination)
 
 ## Browser compatibility
 
-{{Compat("api.AudioWorkletProcessor")}}
+{{Compat}}
 
 ## See also
 

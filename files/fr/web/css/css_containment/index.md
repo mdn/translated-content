@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Containment
 original_slug: Web/CSS/Compartimentation_CSS
 ---
+
 {{CSSRef}}
 L'objectif du module de spécification _CSS Containment_ (pour Compartimentation CSS) consiste à améliorer les performances des pages web en permettant aux développeurs d'isoler un sous-ensemble de la page. Si le navigateur sait que cette partie est indépendante, le rendu peut être optimisé et les performances améliorées. Ce module de spécification définit une seule propriété CSS : {{cssxref("contain")}}. Dans cet article, nous verrons les objectifs principaux de cette spécification.
 

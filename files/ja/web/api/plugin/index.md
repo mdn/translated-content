@@ -1,22 +1,13 @@
 ---
 title: Plugin
 slug: Web/API/Plugin
-page-type: web-api-interface
-tags:
-  - API
-  - Add-ons
-  - DOM
-  - NeedsContent
-  - Plug-in
-  - Plugins
-browser-compat: api.Plugin
-translation_of: Web/API/Plugin
 ---
+
 {{ApiRef("HTML DOM")}}{{deprecated_header}}
 
 Plugin` インターフェイスは、 ブラウザーのプラグインに関する情報を提供します。
 
-> **Note:** 最新のブラウザーでは、 `Plugin` オブジェクトのプロパティを列挙することができなくなりました。
+> **メモ:** 最新のブラウザーでは、 `Plugin` オブジェクトのプロパティを列挙することができなくなりました。
 
 ## プロパティ
 

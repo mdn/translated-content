@@ -2,6 +2,7 @@
 title: AudioDestinationNode.maxChannelCount
 slug: Web/API/AudioDestinationNode/maxChannelCount
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioDestinationNode") }} 接口的 `maxchannelCount` 属性是一个表示物理设备能处理最大通道数的无符号长整型数。
@@ -40,8 +41,8 @@ gainNode.connect(audioCtx.destination);
 
 ## 浏览器兼容
 
-{{Compat("api.AudioDestinationNode.maxChannelCount")}}
+{{Compat}}
 
 ## 其他
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

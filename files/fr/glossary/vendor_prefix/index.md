@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Vendor_Prefix
 original_slug: Glossaire/Préfixe_Vendeur
 ---
+
 Les vendeurs de navigateurs ajoutent parfois des préfixes aux propriétés CSS expérimentales ou non standards. Les développeurs peuvent ainsi les expérimenter sans que les changements de comportement du navigateur ne cassent le code pendant le processus de standardisation. Les développeurs sont supposés attendre que le comportement du navigateur soit standardisé pour inclure la propriété non préfixée.
 
 > **Note :** Les fournisseurs de navigateurs s'efforcent d'arrêter l'utilisation des préfixes fournisseurs pour les fonctionnalités expérimentales. Les développeurs Web les utilisent sur des sites Web de production, malgré leur caractère expérimental. Cela a rendu plus difficile la compatibilité des fournisseurs de navigateurs et le travail sur de nouvelles fonctionnalités ; cela a également été nuisible aux petits navigateurs qui se sont retrouvés obligés d'ajouter des préfixes d'autres navigateurs afin de charger des sites web populaires.
@@ -46,7 +47,7 @@ Quant aux propriétés et aux méthodes, sont généralement utilisés :
 - `o` (anciennes versions d'Opera)
 - `ms` (Internet Explorer et Edge)
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

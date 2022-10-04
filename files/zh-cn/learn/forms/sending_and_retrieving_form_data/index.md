@@ -3,6 +3,7 @@ title: 发送表单数据
 slug: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
 
 本文将讨论当用户提交表单时发生了什么——数据去了哪，以及当它到达时该如何处理？我们还研究了与发送表单数据相关的一些安全问题。
@@ -14,10 +15,10 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
       <td>
         <p>
           基本计算机素养，对<a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+            href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
             >HTML 的理解</a
-          >，对<a href="/en-US/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> 和<a
-            href="/en-US/docs/Learn/Server-side/First_steps"
+          >，对<a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> 和<a
+            href="/zh-CN/docs/Learn/Server-side/First_steps"
             >服务器端编程</a
           >的基础知识。
         </p>
@@ -38,13 +39,13 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 
 ### 客户端/服务器体系结构
 
-web 基于非常基本的客户端/服务器体系结构，可以总结如下:客户端(通常是 web 浏览器)向服务器发送请求(大多数情况下是[Apache](https://httpd.apache.org/)、[Nginx](http://nginx.com/)、[IIS](http://www.iis.net/)、[Tomcat](http://tomcat.apache.org/)等 web 服务器)，使用[HTTP 协议](/en-US/docs/HTTP)。服务器使用相同的协议来回答请求。
+web 基于非常基本的客户端/服务器体系结构，可以总结如下:客户端(通常是 web 浏览器) 向服务器发送请求 (大多数情况下是[Apache](https://httpd.apache.org/)、[Nginx](http://nginx.com/)、[IIS](http://www.iis.net/)、[Tomcat](http://tomcat.apache.org/)等 web 服务器)，使用[HTTP 协议](/zh-CN/docs/HTTP)。服务器使用相同的协议来回答请求。
 
 ![A basic schema of the Web client/server architecture](client-server.png)
 
 在客户端，HTML 表单只不过是一种方便的用户友好的方式，可以配置 HTTP 请求将数据发送到服务器。这使用户能够提供在 HTTP 请求中传递的信息。
 
-> **备注：** 为了更好地了解客户端—服务器架构是如何工作的，请阅读我们的[服务器端网站编程的第一个步骤](/en-US/docs/Learn/Server-side/First_steps)模块。
+> **备注：** 为了更好地了解客户端—服务器架构是如何工作的，请阅读我们的[服务器端网站编程的第一个步骤](/zh-CN/docs/Learn/Server-side/First_steps)模块。
 
 ### 在客户端：定义如何发送数据
 
@@ -82,7 +83,7 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下:�
 
 #### {{htmlattrxref("method","form")}}属性
 
-该属性定义了如何发送数据。[HTTP 协议](/en-US/docs/HTTP)提供了几种执行请求的方法；HTML 表单数据可以通过许多不同的方法进行数据传输，其中最常见的是`GET`方法和`POST`方法。
+该属性定义了如何发送数据。[HTTP 协议](/zh-CN/docs/HTTP)提供了几种执行请求的方法；HTML 表单数据可以通过许多不同的方法进行数据传输，其中最常见的是`GET`方法和`POST`方法。
 
 为了理解这两种方法之间的区别，让我们回过头来看看 HTTP 是如何工作的。
 每当您想要访问 Web 上的资源时，浏览器都会向 URL 发送一个请求。
@@ -165,7 +166,7 @@ say=Hi&to=Mom
 
 #### 查看 HTTP 请求
 
-HTTP 请求永远不会显示给用户 (如果您想要看到它们，您需要使用诸如[Firefox Network Monitor](/en-US/docs/Tools/Network_Monitor)或[Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)之类的工具)。例如，您的表单数据将显示在 Chrome 网络选项卡中：
+HTTP 请求永远不会显示给用户 (如果您想要看到它们，您需要使用诸如[Firefox Network Monitor](/zh-CN/docs/Tools/Network_Monitor)或[Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)之类的工具)。例如，您的表单数据将显示在 Chrome 网络选项卡中：
 
 1. 按下 F12
 2. 选择 "Network"
@@ -234,14 +235,14 @@ if __name__ == "__main__":
 - [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html): 这个模板只包含一行，用于呈现渲染时传递给它的两个数据块。
   这是通过前面所见的`hello()`函数完成的，该函数在`/hello`URL 被导向时运行。
 
-> **备注：** 同样，如果您只是尝试将其直接加载到浏览器中，那么这段代码将无法工作。Python 的工作方式与 PHP 略有不同——要在本地运行此代码，您需要[安装 Python/pip](/en-US/docs/Learn/Server-side/Django/development_environment#Installing_Python_3)，然后使用`pip3 install flask`安装 Flask。此时，您应该能够使用`python3 python-example.py`来运行这个示例，然后在浏览器中导航到`localhost:5000`。
+> **备注：** 同样，如果您只是尝试将其直接加载到浏览器中，那么这段代码将无法工作。Python 的工作方式与 PHP 略有不同——要在本地运行此代码，您需要[安装 Python/pip](/zh-CN/docs/Learn/Server-side/Django/development_environment#Installing_Python_3)，然后使用`pip3 install flask`安装 Flask。此时，您应该能够使用`python3 python-example.py`来运行这个示例，然后在浏览器中导航到`localhost:5000`。
 
 #### 其他语言和框架
 
-还有许多其他的服务器端技术可以用于表单处理，包括[Perl](/en-US/docs/)、[Java](/en-US/docs/)、 [.Net](http://www.microsoft.com/net)、[Ruby](/en-US/docs/)等。只挑你最喜欢的用就好。话虽如此，但值得注意的是，直接使用这些技术并不常见，因为这可能很棘手。更常见的是使用许多优秀的框架，这些框架使处理表单变得更容易，例如：
+还有许多其他的服务器端技术可以用于表单处理，包括[Perl](/zh-CN/docs/)、[Java](/zh-CN/docs/)、 [.Net](http://www.microsoft.com/net)、[Ruby](/zh-CN/docs/)等。只挑你最喜欢的用就好。话虽如此，但值得注意的是，直接使用这些技术并不常见，因为这可能很棘手。更常见的是使用许多优秀的框架，这些框架使处理表单变得更容易，例如：
 
-- [Django](/en-US/docs/Learn/Server-side/Django) for Python（比[Flask](http://flask.pocoo.org/)要重量级一些，但是有更多的工具和选项。）
-- [Express](/en-US/docs/Learn/Server-side/Express_Nodejs) for Node.js
+- [Django](/zh-CN/docs/Learn/Server-side/Django) for Python（比[Flask](http://flask.pocoo.org/)要重量级一些，但是有更多的工具和选项。）
+- [Express](/zh-CN/docs/Learn/Server-side/Express_Nodejs) for Node.js
 - [Laravel](https://laravel.com/) for PHP
 - [Ruby On Rails](https://rubyonrails.org/) for Ruby
 - [Phoenix](https://phoenixframework.org/) for Elixir
@@ -262,7 +263,7 @@ if __name__ == "__main__":
 
 - 将{{htmlattrxref("method","form")}}属性设置为`POST`，因为文件内容不能放入 URL 参数中。
 - 将{{htmlattrxref("enctype","form")}}的值设置为`multipart/form-data`，因为数据将被分成多个部分，每个文件单独占用一个部分，表单正文中包含的文本数据（如果文本也输入到表单中）占用一个部分。
-- 包含一个或多个[File picker](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets#File_picker)小部件，允许用户选择将要上传的文件。
+- 包含一个或多个[File picker](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets#File_picker)小部件，允许用户选择将要上传的文件。
 
 例如：
 
@@ -292,7 +293,7 @@ if __name__ == "__main__":
 
 跨站脚本 (XSS) 和跨站点请求伪造 (CSRF) 是常见的攻击类型，它们发生在当您将用户发送的数据显示给这个用户或另一个用户时。
 
-XSS 允许攻击者将客户端脚本注入到其他用户查看的 Web 页面中。攻击者可以使用跨站点脚本攻击的漏洞来绕过诸如[同源策略](/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript)之类的访问控制。这些攻击的影响可能从一个小麻烦到一个重大的安全风险。
+XSS 允许攻击者将客户端脚本注入到其他用户查看的 Web 页面中。攻击者可以使用跨站点脚本攻击的漏洞来绕过诸如[同源策略](/zh-CN/docs/JavaScript/Same_origin_policy_for_JavaScript)之类的访问控制。这些攻击的影响可能从一个小麻烦到一个重大的安全风险。
 
 CSRF 攻击类似于 XSS 攻击，因为它们以相同的方式开始攻击——向 Web 页面中注入客户端脚本——但它们的目标是不同的。CSRF 攻击者试图将权限升级到特权用户 (比如站点管理员) 的级别，以执行他们不应该执行的操作 (例如，将数据发送给一个不受信任的用户)。
 
@@ -324,17 +325,17 @@ SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作�
 
 如果你遵循这三条规则，你应该避免很多问题，但是如果你想要得到一个有能力的第三方执行的安全检查，这是一个好主意。不要以为你已经看到了所有可能的问题。
 
-> **备注：** 我们的[服务器端](/en-US/docs/Learn/Server-side)学习主题的[网站安全性文章](/en-US/docs/Learn/Server-side/First_steps/Website_security)更详细地讨论了上述威胁和潜在的解决方案。
+> **备注：** 我们的[服务器端](/zh-CN/docs/Learn/Server-side)学习主题的[网站安全性文章](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)更详细地讨论了上述威胁和潜在的解决方案。
 
 ## 结论
 
-如您所见，发送表单数据很容易，但要确保应用程序的安全性是很棘手的。请记住，前端开发人员不是应该定义数据安全模型的人。是的，我们将看到，[执行客户端数据验证](/en-US/docs/HTML/Forms/Data_form_validation)是可能的，但是服务器不能信任这种验证，因为它无法真正知道客户端到底发生了什么。
+如您所见，发送表单数据很容易，但要确保应用程序的安全性是很棘手的。请记住，前端开发人员不是应该定义数据安全模型的人。是的，我们将看到，[执行客户端数据验证](/zh-CN/docs/HTML/Forms/Data_form_validation)是可能的，但是服务器不能信任这种验证，因为它无法真正知道客户端到底发生了什么。
 
 ## 相关链接
 
 如果您想了解更多关于保护 web 应用程序的信息，您可以深入了解这些资源：
 
-- [Server-side website programming first steps](/en-US/docs/Learn/Server-side/First_steps)
+- [Server-side website programming first steps](/zh-CN/docs/Learn/Server-side/First_steps)
 - [The Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page)
 - [Chris Shiflett's blog about PHP Security](http://shiflett.org/)
 
@@ -342,14 +343,14 @@ SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作�
 
 ## 在本单元中
 
-- [Your first HTML form](/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Your first HTML form](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form)
+- [How to structure an HTML form](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
+- [The native form widgets](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)
+- [Sending form data](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
+- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
+- [How to build custom form widgets](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
+- [Sending forms through JavaScript](/zh-CN/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
+- [HTML forms in legacy browsers](/zh-CN/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
+- [Styling HTML forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
+- [Advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
+- [Property compatibility table for form widgets](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

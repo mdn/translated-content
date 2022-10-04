@@ -1,18 +1,8 @@
 ---
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
-tags:
-  - API
-  - DOMRectReadOnly
-  - 位置
-  - 位置インターフェイス
-  - インターフェイス
-  - 読み取り専用
-  - 矩形
-  - リファレンス
-browser-compat: api.DOMRectReadOnly
-translation_of: Web/API/DOMRectReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMRectReadOnly`** インターフェイスは {{domxref("DOMRect")}} で使用される標準プロパティを設定し、すべてのプロパティが変更不可の矩形を定義します。

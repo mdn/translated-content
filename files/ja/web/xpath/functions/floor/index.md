@@ -1,11 +1,8 @@
 ---
 title: floor
 slug: Web/XPath/Functions/floor
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/floor
 ---
+
 {{ XsltRef() }}
 
 `floor` 関数は小数を評価し、その小数以下の最も大きい整数を返します。

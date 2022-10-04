@@ -2,6 +2,7 @@
 title: class
 slug: Web/JavaScript/Reference/Statements/class
 ---
+
 {{jsSidebar("Statements")}}
 
 **class 声明**创建一个基于原型继承的具有给定名称的新类。
@@ -77,6 +78,6 @@ class Square extends Polygon {
 
 ## See also
 
-- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [`function` declaration](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` expression](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
+- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)

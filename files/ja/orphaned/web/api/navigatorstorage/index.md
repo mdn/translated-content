@@ -1,20 +1,9 @@
 ---
 title: NavigatorStorage
 slug: orphaned/Web/API/NavigatorStorage
-tags:
-  - API
-  - Interface
-  - Mixin
-  - Navigator
-  - NavigatorStorage
-  - Reference
-  - Secure context
-  - Storage
-  - Storage Standard
-  - WorkerNavigator
-translation_of: Web/API/NavigatorStorage
 original_slug: Web/API/NavigatorStorage
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 **`NavigatorStorage`** {{Glossary("mixin","ミックスイン")}}は、{{domxref("Navigator")}} および {{domxref("WorkerNavigator")}} インターフェース に {{domxref("Navigator.storage")}} プロパティを追加します。 これにより、データストアの永続性の制御と情報の取得に使用する {{domxref("StorageManager")}} シングルトンへのアクセスが提供されます。

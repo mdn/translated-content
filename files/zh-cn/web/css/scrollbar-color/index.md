@@ -2,6 +2,7 @@
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`scrollbar-color`**该[CSS](/zh-CN/docs/Web/CSS)属性设置滚动条轨道和拇指的颜色

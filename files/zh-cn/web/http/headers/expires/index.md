@@ -2,7 +2,8 @@
 title: Expires
 slug: Web/HTTP/Headers/Expires
 ---
-{{HTTPSidebar}}**`Expires`** 响应头包含日期/时间， 即在此时候之后，响应过期。
+
+{{HTTPSidebar}}**`Expires`** 响应头包含日期/时间，即在此时候之后，响应过期。
 
 无效的日期，比如 0，代表着过去的日期，即该资源已经过期。
 

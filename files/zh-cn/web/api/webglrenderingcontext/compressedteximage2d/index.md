@@ -2,13 +2,14 @@
 title: WebGLRenderingContext.compressedTexImage[23]D()
 slug: Web/API/WebGLRenderingContext/compressedTexImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 下面这两个 function：
 
-**`WebGLRenderingContext.compressedTexImage2D()`** and **`WebGL2RenderingContext.compressedTexImage3D()`** 在[WebGL API](/en-US/docs/Web/API/WebGL_API) 中特指压缩二维或三维纹理图像的格式。
+**`WebGLRenderingContext.compressedTexImage2D()`** and **`WebGL2RenderingContext.compressedTexImage3D()`** 在[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中特指压缩二维或三维纹理图像的格式。
 
-在使用这些方法之前，必须通过 [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions)， 也就是 WebGL 扩展启用压缩图像格式。
+在使用这些方法之前，必须通过 [WebGL extensions](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions)，也就是 WebGL 扩展启用压缩图像格式。
 
 ## Syntax
 
@@ -51,7 +52,7 @@ void gl.compressedTexImage3D(target, level, internalformat, width, height, depth
   - : A {{domxref("GLint")}} specifying the level of detail. Level 0 is the base image level and level _n_ is the *n*th mipmap reduction level.
 - `internalformat`
 
-  - : A {{domxref("GLenum")}} specifying the compressed image format. Compressed image formats must be enabled by [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) before using this method. All values are possible for `compressedTexImage2D`. See [compressed texture formats](/en-US/docs/Web/API/WebGL_API/Compressed_texture_formats) for which are valid for `compressedTexImage3D`. Possible values:
+  - : A {{domxref("GLenum")}} specifying the compressed image format. Compressed image formats must be enabled by [WebGL extensions](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) before using this method. All values are possible for `compressedTexImage2D`. See [compressed texture formats](/zh-CN/docs/Web/API/WebGL_API/Compressed_texture_formats) for which are valid for `compressedTexImage3D`. Possible values:
 
     - When using the {{domxref("WEBGL_compressed_texture_s3tc")}} extension:
 
@@ -172,7 +173,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
 ## 参见
 
-- [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions)
+- [Using WebGL extensions](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions)
 - {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
 - {{domxref("WEBGL_compressed_texture_s3tc")}}
 - {{domxref("WEBGL_compressed_texture_s3tc_srgb")}}

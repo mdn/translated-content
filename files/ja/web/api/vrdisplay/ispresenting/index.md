@@ -1,26 +1,14 @@
 ---
 title: VRDisplay.isPresenting
 slug: Web/API/VRDisplay/isPresenting
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - isPresenting
-browser-compat: api.VRDisplay.isPresenting
-translation_of: Web/API/VRDisplay/isPresenting
 original_slug: Web/API/VRDevice/isPresenting
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`isPresenting`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` が現在コンテンツを表示中かどうかを示す論理値を返します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ### 値
 
@@ -47,7 +35,7 @@ function onVRExitPresent () {
 }
 ```
 
-> **Note:** このコードスニペットは [Google's VR Presentation demo](https://github.com/toji/webvr.info/blob/master/samples/03-vr-presentation.html) から取ったものです。
+> **メモ:** このコードスニペットは [Google's VR Presentation demo](https://github.com/toji/webvr.info/blob/master/samples/03-vr-presentation.html) から取ったものです。
 
 ## 仕様書
 

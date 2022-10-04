@@ -1,18 +1,8 @@
 ---
 title: bookmarks.BookmarkTreeNode
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
-tags:
-  - API
-  - Add-ons
-  - BookmarkTreeNode
-  - Bookmarks
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 ---
+
 {{AddonSidebar()}}
 
 `bookmarks.BookmarkTreeNode` 型のオブジェクトは、ブックマークツリー上のノード（ブックマーク / フォルダ）を表現するものです。子ノードは親フォルダの中で `index` に従って順序付けされます。
@@ -23,11 +13,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 
 - `id`
   - : そのノードを一意に識別する {{jsxref("string")}} です。この ID はユーザのプロファイル内で固有であり、ブラウザを再起動した後も有効です。
-- `parentId `{{optional_inline}}
+- `parentId` {{optional_inline}}
   - : 親フォルダの ID を表す {{jsxref("string")}} です。ルートノードの場合は省略されます。
-- `index `{{optional_inline}}
+- `index` {{optional_inline}}
   - : 親フォルダの中におけるノードの位置を表す 0 以上の {{jsxref("number")}} です。0 は先頭の要素を意味します。
-- `url `{{optional_inline}}
+- `url` {{optional_inline}}
   - : ブックマークの URL を表す {{jsxref("string")}} です。フォルダの場合は省略されます。
 - `title`
   - : ブックマークリストやメニューにノードが表示される際のテキストを表す {{jsxref("string")}} です。
@@ -40,7 +30,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 - `children` {{optional_inline}}
   - : 各要素がノードの子要素を表す、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} の {{jsxref("array")}} です。リストの要素は UI に表示されているのと同じ順序で並びます。フォルダ以外の場合は省略されます。
 
-> **Note:** 現在、ブックマークリストのセパレータをこのオブジェクトで表すことはできません。
+> **メモ:** 現在、ブックマークリストのセパレータをこのオブジェクトで表すことはできません。
 
 ## ブラウザーの互換性
 
@@ -48,7 +38,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

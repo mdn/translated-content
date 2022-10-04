@@ -1,15 +1,8 @@
 ---
 title: X-Forwarded-Proto
 slug: Web/HTTP/Headers/X-Forwarded-Proto
-tags:
-  - HTTP
-  - HTTPヘッダー
-  - Reference
-  - ヘッダー
-  - リクエストヘッダー
-  - 標準外
-translation_of: Web/HTTP/Headers/X-Forwarded-Proto
 ---
+
 {{HTTPSidebar}}
 
 **X-Forwarded-Proto** (XFP) ヘッダーは、プロキシーまたはロードバランサーへ接続するのに使っていたクライアントのプロトコル (HTTP または HTTPS) を特定するために事実上の標準となっているヘッダーです。サーバーのアクセスログにはサーバーとロードバランサーの間で使われたプロトコルが含まれていますが、クライアントとロードバランサーの間で使用されたプロトコルは含まれていません。クライアントとロードバランサーの間で使用されたプロトコルを特定するには、 `X-Forwarded-Proto` リクエストヘッダーを使用することができます。

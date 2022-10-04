@@ -2,6 +2,7 @@
 title: 'OfflineAudioContext: complete event'
 slug: Web/API/OfflineAudioContext/complete_event
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 `complete`当离线音频上下文的呈现完成时，将触发{{domxref("OfflineAudioContext")}}接口的事件。
@@ -59,7 +60,7 @@ offlineAudioCtx.oncomplete = function() {
 
 ## Browser compatibility
 
-{{Compat("api.OfflineAudioContext.complete_event")}}
+{{Compat}}
 
 ## See also
 

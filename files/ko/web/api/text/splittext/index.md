@@ -20,7 +20,9 @@ translation_of: Web/API/Text/splitText
 
 ## 문법
 
-    replacementNode = textnode.splitText(offset)
+```js
+replacementNode = textnode.splitText(offset)
+```
 
 ## 예제
 

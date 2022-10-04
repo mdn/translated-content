@@ -43,13 +43,17 @@ original_slug: WebAPI/Using_Web_Notifications
 
 아직 알림 표시 권한이 허용되지 않았다면 애플리케이션은 {{domxref("Notification.requestPermission()")}} 메서드를 사용하여 사용자에게 권한을 요청할 필요가 있습니다. 간단하게는 아래와 같이 넣습니다.
 
-    Notification.requestPermission().then(function(result) {
-      console.log(result);
-    });
+```js
+Notification.requestPermission().then(function(result) {
+  console.log(result);
+});
+```
 
 여기서는 프로미스 방식의 메서드 버전을 사용합니다. 과거 버전을 지원하려면 아래와 같이 과거의 콜백 버전을 사용해야 할 수 있습니다.
 
-    Notification.requestPermission();
+```js
+Notification.requestPermission();
+```
 
 콜백 버전은 콜백 함수를 옵셔널하게 받을 수 있으며 사용자가 표시 권한 요청에 응답한 후에 호출됩니다.
 
@@ -57,42 +61,46 @@ original_slug: WebAPI/Using_Web_Notifications
 
 우리가 만드는 할 일 데모에서는 "알림 허용" 단추를 둬서 누르면 앱의 알림 권한을 요청합니다.
 
-    <button id="enable">알림 허용</button>
+```html
+<button id="enable">알림 허용</button>
+```
 
 누르면 다음 `askNotificationPermission()` 함수를 호출합니다.
 
-    function askNotificationPermission() {
-      // 권한을 실제로 요구하는 함수
-      function handlePermission(permission) {
-        // 사용자의 응답에 관계 없이 크롬이 정보를 저장할 수 있도록 함
-        if(!('permission' in Notification)) {
-          Notification.permission = permission;
-        }
-
-        // 사용자 응답에 따라 단추를 보이거나 숨기도록 설정
-        if(Notification.permission === 'denied' || Notification.permission === 'default') {
-          notificationBtn.style.display = 'block';
-        } else {
-          notificationBtn.style.display = 'none';
-        }
-      }
-
-      // 브라우저가 알림을 지원하는지 확인
-      if (!('Notification' in window)) {
-        console.log("이 브라우저는 알림을 지원하지 않습니다.");
-      } else {
-        if(checkNotificationPromise()) {
-          Notification.requestPermission()
-          .then((permission) => {
-            handlePermission(permission);
-          })
-        } else {
-          Notification.requestPermission(function(permission) {
-            handlePermission(permission);
-          });
-        }
-      }
+```js
+function askNotificationPermission() {
+  // 권한을 실제로 요구하는 함수
+  function handlePermission(permission) {
+    // 사용자의 응답에 관계 없이 크롬이 정보를 저장할 수 있도록 함
+    if(!('permission' in Notification)) {
+      Notification.permission = permission;
     }
+
+    // 사용자 응답에 따라 단추를 보이거나 숨기도록 설정
+    if(Notification.permission === 'denied' || Notification.permission === 'default') {
+      notificationBtn.style.display = 'block';
+    } else {
+      notificationBtn.style.display = 'none';
+    }
+  }
+
+  // 브라우저가 알림을 지원하는지 확인
+  if (!('Notification' in window)) {
+    console.log("이 브라우저는 알림을 지원하지 않습니다.");
+  } else {
+    if(checkNotificationPromise()) {
+      Notification.requestPermission()
+      .then((permission) => {
+        handlePermission(permission);
+      })
+    } else {
+      Notification.requestPermission(function(permission) {
+        handlePermission(permission);
+      });
+    }
+  }
+}
+```
 
 두 번째 메인 블록을 먼저 보면 알림이 지원되는지 확인하는 것을 알 수 있습니다. 지원하는 경우 그에 따라 `Notification.requestPermission()`의 프로미스 기반 버전이 지원되는지 보는 확인을 실행합니다. 맞다면 프로미스 기반 버전을 실행하고(사파리 외에는 전부 지원됨) 아니라면 과거의 콜백 기반 버전을 실행합니다(사파리에서 지원).
 
@@ -104,15 +112,17 @@ original_slug: WebAPI/Using_Web_Notifications
 
 위에서 우리는 브라우저가 `Notification.requestPermission()`의 프로미스 버전을 지원하는지 확인해야 한다고 했습니다. 아래와 같이 했습니다.
 
-    function checkNotificationPromise() {
-        try {
-          Notification.requestPermission().then();
-        } catch(e) {
-          return false;
-        }
+```js
+function checkNotificationPromise() {
+    try {
+      Notification.requestPermission().then();
+    } catch(e) {
+      return false;
+    }
 
-        return true;
-      }
+    return true;
+  }
+```
 
 기본적으로 `requestPermission()`에 `.then()` 메서드가 있는지 알아보는 것입니다. 맞다면 계속 진행하고 `true`를 반환합니다. 실패라면 `catch() {}` 블록에서 `false`를 반환합니다.
 
@@ -122,15 +132,19 @@ original_slug: WebAPI/Using_Web_Notifications
 
 예를 들어 할일 목록 예시에서 아래 코드로 필요시 알림을 만듭니다(`createNotification()` 함수에서 찾을 수 있음).
 
-    var img = '/to-do-notifications/img/icon-128.png';
-    var text = '아! "' + title + '" 작업 기한이 만료됐습니다.';
-    var notification = new Notification('할 일 목록', { body: text, icon: img });
+```js
+var img = '/to-do-notifications/img/icon-128.png';
+var text = '아! "' + title + '" 작업 기한이 만료됐습니다.';
+var notification = new Notification('할 일 목록', { body: text, icon: img });
+```
 
 ## 알림 닫기
 
 파이어폭스와 사파리는 알림을 자동으로 금방(약 4초) 닫습니다. 이것은 운영 체계 수준에서도 발생합니다. 그런데 크롬 같은 다른 브라우저는 그렇지 않습니다. 모든 브라우저에서 알림이 닫히게 하려면 {{domxref("WindowTimers.setTimeout","setTimeout()")}} 함수에서 {{domxref("Notification.close")}} 함수를 호출하여 알림을 4초 후에 닫으면 됩니다. [`bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)를 사용하여 `close()` 호출이 알림에 연동되게 하는 것도 해줘야 합니다.
 
-    setTimeout(notification.close.bind(notification), 4000);
+```js
+setTimeout(notification.close.bind(notification), 4000);
+```
 
 > **참고:** "close" 이벤트를 받았을 때 알림을 닫은 것이 사용자인지는 보장할 수 없습니다. 이것은 규격과도 일치합니다. 규격에서는 "알림이 닫힐 때 그것이 기반 알림 플랫폼에 의한 것이든지 사용자에 의한 것이든지 닫기 절차가 실행돼야 한다."고 기술하고 있습니다.
 

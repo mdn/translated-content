@@ -1,17 +1,8 @@
 ---
 title: GlobalEventHandlers.onabort
 slug: Web/API/HTMLMediaElement/abort_event
-page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Web
-  - abort
-browser-compat: api.HTMLMediaElement.abort_event
-translation_of: Web/API/HTMLMediaElement/abort_event
 ---
+
 {{APIRef}}
 
 **`abort`** イベントは、リソースが完全に読み込まれなかったが、それがエラーの結果ではなかった場合に発生します。

@@ -1,16 +1,8 @@
 ---
 title: Notification
 slug: Web/API/Notification
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Notifications
-  - Notifications API
-  - Reference
-browser-compat: api.Notification
-translation_of: Web/API/Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `Notification` は[通知 API](/ja/docs/Web/API/Notifications_API) のインターフェイスで、ユーザーへのデスクトップ通知の設定と表示に使われます。
@@ -143,7 +135,7 @@ function notifyMe() {
 
 このページでライブ例を公開するのはやめました。 Chrome や Firefox が別オリジンの {{htmlelement("iframe")}} から要求された通知の許可をしないようになり、その他のブラウザーも従っているからです。動作する例を見る場合は、 [To-do リストの例](https://github.com/mdn/to-do-notifications/tree/gh-pages) (また、[ライブで動作するアプリ](https://mdn.github.io/to-do-notifications/)) を参照してください。
 
-> **Note:** 上記の例では、通知をユーザーの操作 (ボタンのクリック) から起動しました。ユーザーが同意していない通知でユーザーに迷惑をかけるべきではないので、これはベストプラクティスであるだけでなく、今後ブラウザーはユーザーの操作によって起動されたものではない通知の許可の要求を明示的に拒否するようになるでしょう。例えば、 Firefox はバージョン72からすでにこれを行っています。
+> **メモ:** 上記の例では、通知をユーザーの操作 (ボタンのクリック) から起動しました。ユーザーが同意していない通知でユーザーに迷惑をかけるべきではないので、これはベストプラクティスであるだけでなく、今後ブラウザーはユーザーの操作によって起動されたものではない通知の許可の要求を明示的に拒否するようになるでしょう。例えば、 Firefox はバージョン72からすでにこれを行っています。
 
 ## 仕様書
 

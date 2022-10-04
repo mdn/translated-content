@@ -1,15 +1,8 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-template-columns
-translation_of: Web/CSS/grid-template-columns
 ---
+
 {{CSSRef}}
 
 **`grid-template-columns`** は CSS のプロパティで、{{glossary("grid column", "グリッド列")}}の線名とトラックのサイズ変更機能を定義します。
@@ -80,7 +73,7 @@ grid-template-columns: unset;
 
     {{cssxref("minmax()", "minmax()")}} 表記以外で使われた場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、`minmax(min-content,max-content)` と同じように動作します。
 
-    > **Note:** トラックの寸法が `auto` の場合 (そして `auto` の場合だけ)、 {{cssxref("align-content")}} および{{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。
+    > **メモ:** トラックの寸法が `auto` の場合 (そして `auto` の場合だけ)、 {{cssxref("align-content")}} および{{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。
 
 - `{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
   - : `min(max-content, max(auto, _argument_))` の式を表し、 `auto` と同様に (すなわち `minmax(auto, max-content)` と) 計算されますが、トラックの寸法が `auto` の最小値よりも大きい場合は _argument_ でクランプされるところが異なります。
@@ -91,7 +84,7 @@ grid-template-columns: unset;
 - [subgrid](/ja/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
   - : `subgrid` の値は、グリッドがその軸に親グリッドのスパン部分を採用することを示します。グリッドの行や列のサイズは、明示的に指定されるのではなく、親グリッドの定義から取得されます。
 
-> **Warning:** `masonry`の値は、グリッド仕様のレベル 3 のもので、現在は Firefox のフラグに隠された実験的な実装があるだけです。
+> **警告:** `masonry`の値は、グリッド仕様のレベル 3 のもので、現在は Firefox のフラグに隠された実験的な実装があるだけです。
 >
 > サブグリッドの値はグリッド仕様書のレベル 2 にあり、現在のところ Firefox 71 以降でのみ実装されています。
 

@@ -1,17 +1,8 @@
 ---
 title: PushMessageData
 slug: Web/API/PushMessageData
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Push
-  - Push API
-  - PushMessageData
-  - Reference
-  - Service Workers
-translation_of: Web/API/PushMessageData
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 [Push API](/ja/docs/Web/API/Push_API) の **`PushMessageData`** インターフェースは、さまざまなフォーマットでサーバーから送信されるプッシュテータを取得する方法を提供します。

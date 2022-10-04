@@ -2,6 +2,7 @@
 title: 行内格式化上下文（Inline formatting context）
 slug: Web/CSS/Inline_formatting_context
 ---
+
 这篇文章将解释什么是行内格式化上下文（Inline formatting context）
 
 ## 核心概念
@@ -17,11 +18,11 @@ slug: Web/CSS/Inline_formatting_context
 
 各个框组成了一行，而该行位于一个称为“行框（line box）”的矩形区域之中。该行框的大小将足以包含该行中所有的行内框（inline boxes）；当行内方向上没有剩余空间时，将会创建新行。因此，一个段落实际上是一系列行框的集合，这些行框在块的方向上排列。
 
-一个行内框（inline box）被分割到多行中时， margins, borders, 以及 padding 的设定均不会在断裂处生效。 下例中有一个 ({{HTMLElement("span")}}) 元素，它包裹了一系列单词，占据了两行。可以看见在断裂处，`<span>` 的 border 同样发生了断裂。
+一个行内框（inline box）被分割到多行中时，margins, borders, 以及 padding 的设定均不会在断裂处生效。下例中有一个 ({{HTMLElement("span")}}) 元素，它包裹了一系列单词，占据了两行。可以看见在断裂处，`<span>` 的 border 同样发生了断裂。
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/break.html", '100%', 720)}}
 
-Margins, borders, 以及 padding 的设置，在行的方向上是生效的。在下例中，可以看见行内元素 `<span>` 的 margin， border 以及 padding 是被加上了的。
+Margins, borders, 以及 padding 的设置，在行的方向上是生效的。在下例中，可以看见行内元素 `<span>` 的 margin，border 以及 padding 是被加上了的。
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}
 
@@ -29,13 +30,13 @@ Margins, borders, 以及 padding 的设置，在行的方向上是生效的。�
 
 ## 在块的方向上对齐
 
-行内框（Inline boxes）可使用{{cssxref("vertical-align")}}属性，以不同的方式在块的方向上进行对齐（因此在垂直书写模式下，`vertical-align` 中的“vertical”根本是名不副实——此时行内框将在水平方向上进行对齐）。 下例中， 字号较大的文本使得第一个句子的行框变大，因此 `vertical-align` 能让行内框（inline boxes）分布于上侧或下侧。例子里用的值是 `top`, 可以试试 `middle`, `bottom`, 或 `baseline` 这些值。
+行内框（Inline boxes）可使用{{cssxref("vertical-align")}}属性，以不同的方式在块的方向上进行对齐（因此在垂直书写模式下，`vertical-align` 中的“vertical”根本是名不副实——此时行内框将在水平方向上进行对齐）。下例中，字号较大的文本使得第一个句子的行框变大，因此 `vertical-align` 能让行内框（inline boxes）分布于上侧或下侧。例子里用的值是 `top`, 可以试试 `middle`, `bottom`, 或 `baseline` 这些值。
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/align.html", '100%', 920)}}
 
 ## 在行内方向上对齐
 
-如果行内方向上还有额外空间，那么 {{cssxref("text-align")}} 可用于将各行内框（inline boxes）在行框（line box）内对齐。 可以试试把 `text-align` 的值改成 `end` 。
+如果行内方向上还有额外空间，那么 {{cssxref("text-align")}} 可用于将各行内框（inline boxes）在行框（line box）内对齐。可以试试把 `text-align` 的值改成 `end` 。
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/text-align.html", '100%', 920)}}
 

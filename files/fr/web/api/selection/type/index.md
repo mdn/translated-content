@@ -9,6 +9,7 @@ tags:
   - Type
 translation_of: Web/API/Selection/type
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 La propriété en lecture simple **`type`** de l'interface {{domxref("Selection")}} retourne un {{domxref("DOMString")}} décrivant le type de la sélection courante.
@@ -43,13 +44,11 @@ document.onselectionchange = function() {
 
 ## Spécifications
 
-| Specification                                                                                | Status                               | Comment |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Selection API', '#dom-selection-type', 'Selection.type')}} | {{Spec2('Selection API')}} | Courant |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Selection.type")}}
+{{Compat}}
 
 ## Voir aussi
 

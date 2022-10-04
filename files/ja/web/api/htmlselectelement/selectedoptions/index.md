@@ -1,19 +1,8 @@
 ---
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Options
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - Select
-  - ウェブ
-  - selectedOptions
-browser-compat: api.HTMLSelectElement.selectedOptions
 ---
+
 {{APIRef("HTML DOM")}}
 
 **読み取り専用**の {{domxref("HTMLSelectElement")}} の **`selectedOptions`** プロパティは、この {{HTMLElement("select")}} 要素にある現在選択中の　{{HTMLElement("option")}} のリストが入ります。選択中の選択肢のリストは {{domxref("HTMLCollection")}} オブジェクトで、現在選択中の選択肢ごとに 1 項目ずつ入ります。

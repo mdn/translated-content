@@ -11,6 +11,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceEntry/name
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La propriété **`name`** de l'interface [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) renvoie une valeur qui précise davantage la valeur renvoyée par la propriété [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType). Cette propriété est en lecture seule.
@@ -87,11 +88,8 @@ function check_PerformanceEntry(obj) {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-name', 'name')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
-| {{SpecName('Performance Timeline', '#dom-performanceentry-name', 'name')}}             | {{Spec2('Performance Timeline')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceEntry.name")}}
+{{Compat}}

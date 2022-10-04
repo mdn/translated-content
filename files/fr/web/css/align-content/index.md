@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/align-content
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`align-content`** définit la façon dont l'espace est réparti entre et autour des éléments le long de l'axe en bloc du conteneur (c'est-à-dire l'axe orthogonal à l'axe d'écriture) lorsque celui-ci est [un conteneur de boîte flexible](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) et le long de l'axe principal lorsque le conteneur est une grille.
@@ -91,9 +92,13 @@ align-content: unset;
 - `unsafe`
   - : Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Quelle que soit la taille et le dépassement éventuellement occasionné, l'élément est aligné avec la valeur indiquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -239,24 +244,11 @@ display.addEventListener('change', function (evt) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires                                                                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-align-content", "align-content")}} | {{Spec2("CSS3 Box Alignment")}} | Ajout des valeurs `[ first \| last ]? baseline`, `start`, `end`, `left`, `right` et `unsafe \| safe`. |
-| {{SpecName("CSS3 Flexbox", "#align-content", "align-content")}}                     | {{Spec2("CSS3 Flexbox")}}         | Définition initiale.                                                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.align-content")}}
-
-### Prise en charge pour les dispositions flexibles (_Flexbox_)
-
-{{Compat("css.properties.align-content.flex_context")}}
-
-### Prise en charge pour les dispositions avec les grilles CSS
-
-{{Compat("css.properties.align-content.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

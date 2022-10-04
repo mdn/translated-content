@@ -3,6 +3,7 @@ title: 'Multimédia : Images'
 slug: Learn/Performance/Multimedia
 translation_of: Learn/Performance/Multimedia
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
 
 Les fichiers média, et plus précisément les images et les vidéos, représentent plus de 70 % des octets téléchargés sur un site web classique. En termes de performance lors du téléchargement des ressources d'une page, la suppression des fichiers média et la réduction de la taille des fichiers est la solution de facilité pour produire des sites performants. Cet article s'intéresse à l'optimisation des images et des vidéos dans le but d'améliorer les performances.

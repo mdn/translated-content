@@ -2,11 +2,12 @@
 title: FormData()
 slug: Web/API/FormData/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData()`** コンストラクターは、新しい {{domxref("FormData")}} オブジェクトを生成します。
 
-> **Note:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
+> **メモ:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
 
 ## 構文
 
@@ -16,7 +17,7 @@ var formData = new FormData(form)
 
 ### 引数
 
-- `form `{{optional_inline}}
+- `form` {{optional_inline}}
   - : HTML の {{HTMLElement("form")}} 要素です。これが指定されたとき、{{domxref("FormData")}} オブジェクトは、その各要素の name プロパティをキーに、それらの送信される値を値として使い、フォームの現在のキーと値が設定されます。ファイルからの入力内容は、エンコードもされます。
 
 ## 例
@@ -53,7 +54,7 @@ formData.append('username', 'Chris');
 </form>
 ```
 
-> **Note:** 正しく選択されたフォーム コントロールだけが FormData に含まれます。つまり、name 属性を持ち、disabled ではなく、checked (ラジオボタンやチェックボックス) または selected (選択リストのひとつ以上のオプション) であるものです。
+> **メモ:** 正しく選択されたフォーム コントロールだけが FormData に含まれます。つまり、name 属性を持ち、disabled ではなく、checked (ラジオボタンやチェックボックス) または selected (選択リストのひとつ以上のオプション) であるものです。
 
 ```js
 let myForm = document.getElementById('myForm');
@@ -73,6 +74,6 @@ let formData = new FormData(myForm);
 ## 関連情報
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

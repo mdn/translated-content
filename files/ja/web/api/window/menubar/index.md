@@ -1,14 +1,8 @@
 ---
 title: Window.menubar
 slug: Web/API/Window/menubar
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/menubar
 ---
+
 {{ APIRef() }}
 
 **`Window.menubar`** プロパティは `menubar` オブジェクトを返します。これによって表示状態を確認することができます。
@@ -41,8 +35,7 @@ objRef = window.menubar
 
 | 仕様書                                                                                                                   | 状態                             | 備考 |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-menubar',
-        'Window.menubar')}} | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-menubar', 'Window.menubar')}} | {{Spec2('HTML WHATWG')}} |      |
 | {{SpecName('HTML5 W3C', 'browsers.html#dom-window-menubar', 'Window.menubar')}}                 | {{Spec2('HTML5 W3C')}}     |      |
 
 ## ブラウザーの互換性

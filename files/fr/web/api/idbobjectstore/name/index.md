@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/name
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`name`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, indique le nom du magasin d'objets courant.

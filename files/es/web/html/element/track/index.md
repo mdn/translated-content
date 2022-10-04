@@ -28,7 +28,7 @@ El elemento [HTML](/es/docs/Web/HTML) **`<track>`** se utiliza como elemento hij
     <tr>
       <th scope="row">Omisión de la etiqueta</th>
       <td>
-        Como es un elemento vacío, la etiqueta de inicio debe estar presente y 
+        Como es un elemento vacío, la etiqueta de inicio debe estar presente y
         no debe tener la etiqueta de cierre.
       </td>
     </tr>
@@ -36,7 +36,7 @@ El elemento [HTML](/es/docs/Web/HTML) **`<track>`** se utiliza como elemento hij
       <th scope="row">Padres permitidos</th>
       <td>
         <p>
-          Un elemento multimedia, {{HTMLElement("audio")}} o 
+          Un elemento multimedia, {{HTMLElement("audio")}} o
           {{HTMLElement("video")}}.
         </p>
       </td>

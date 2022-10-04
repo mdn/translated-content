@@ -1,14 +1,8 @@
 ---
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 ---
+
 {{JSRef}}
 
 **`Object.isSealed()`** メソッドは、オブジェクトが封印されているかどうかを判定します。

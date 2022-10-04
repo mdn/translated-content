@@ -172,10 +172,10 @@ Un caso de prueba reducido es un ejemplo de código que muestra el problema de l
 
 Para crear un caso de prueba reducido:
 
-1.  Si tu marcado se genera dinámicamente, por ejemplo desde un CMS, crea una versión estática de la salida que muestre el problema. Un sitio para compartir código como [CodePen](https://codepen.io/) es útil para alojar casos de prueba reducidos, porque son accesibles en línea y puedes compartirlos fácilmente con tus colegas. Puedes comenzar por hacer un View Source de la página y copiar el HTML en CodePen, luego toma cualquier CSS y JavaScript relevante e inclúyelo también. Después de eso, puedes verificar si el problema sigue ahí.
-2.  Si eliminar el JavaScript no soluciona el problema, no incluyas el JavaScript. Si eliminar el JavaScript hace desaparecer el problema, elimina la mayor cantidad de JavaScript que puedas; deja solo las causas del problema.
-3.  Elimina cualquier HTML que no contribuya al problema. Elimina componentes o incluso elementos principales del diseño. Nuevamente, intenta reducir al mínimo la cantidad de código que aún muestra el problema.
-4.  Elimina cualquier CSS que no afecte al problema.
+1. Si tu marcado se genera dinámicamente, por ejemplo desde un CMS, crea una versión estática de la salida que muestre el problema. Un sitio para compartir código como [CodePen](https://codepen.io/) es útil para alojar casos de prueba reducidos, porque son accesibles en línea y puedes compartirlos fácilmente con tus colegas. Puedes comenzar por hacer un View Source de la página y copiar el HTML en CodePen, luego toma cualquier CSS y JavaScript relevante e inclúyelo también. Después de eso, puedes verificar si el problema sigue ahí.
+2. Si eliminar el JavaScript no soluciona el problema, no incluyas el JavaScript. Si eliminar el JavaScript hace desaparecer el problema, elimina la mayor cantidad de JavaScript que puedas; deja solo las causas del problema.
+3. Elimina cualquier HTML que no contribuya al problema. Elimina componentes o incluso elementos principales del diseño. Nuevamente, intenta reducir al mínimo la cantidad de código que aún muestra el problema.
+4. Elimina cualquier CSS que no afecte al problema.
 
 En el proceso, puedes descubrir qué causa el problema, o al menos ser capaz de ponerlo o quitarlo al eliminar algo específico. Vale la pena añadir algunos comentarios a tu código a medida que vas descubriendo cosas. Si tienes que pedir ayuda, estos comentarios indicarán a la persona que te ayuda lo que ya has intentado. Esto puede proporcionarte bastante información para permitirte buscar posibles problemas por sondeo y soluciones alternativas.
 
@@ -189,21 +189,21 @@ A medida que adquieras más experiencia con CSS, descubrirás que vas adquiriend
 
 ## En este módulo
 
-1.  [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Selectores de tipo, de clase y de ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Las pseudoclases y los pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Selectores de combinación](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [El modelo de cajas](/es/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [El modelo de cajas](/es/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Depurar el CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizar el CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)

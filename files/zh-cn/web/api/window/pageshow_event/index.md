@@ -2,6 +2,7 @@
 title: pageshow
 slug: Web/API/Window/pageshow_event
 ---
+
 当一条会话历史记录被执行的时候将会触发页面显示 (pageshow) 事件。(这包括了后退/前进按钮操作，同时也会在 onload 事件触发后初始化页面时触发)
 
 ## 基本信息
@@ -9,7 +10,7 @@ slug: Web/API/Window/pageshow_event
 - 规范
   - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow)
 - 接口
-  - : [PageTransitionEvent](/en-US/docs/Web/API/PageTransitionEvent)
+  - : [PageTransitionEvent](/zh-CN/docs/Web/API/PageTransitionEvent)
 - 事件冒泡
   - : No
 - 事件取消
@@ -56,9 +57,9 @@ window.addEventListener('load', function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.pageshow_event")}}
+{{Compat}}
 
 ## 相关事件
 
-- [`pagehide`](/en-US/docs/Mozilla_event_reference/pagehide)
-- [Using Firefox 1.5 caching — pageshow event](/en-US/docs/Using_Firefox_1.5_caching#pageshow_event)
+- [`pagehide`](/zh-CN/docs/Mozilla_event_reference/pagehide)
+- [Using Firefox 1.5 caching — pageshow event](/zh-CN/docs/Using_Firefox_1.5_caching#pageshow_event)

@@ -1,13 +1,8 @@
 ---
 title: 303 See Other
 slug: Web/HTTP/Status/303
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - redirects
-translation_of: Web/HTTP/Status/303
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`303 See Other`** リダイレクトステータスレスポンスコードは、リダイレクトが新しくアップロードされたリソースではなく、 (確認ページやアップロード進捗ページのような) 別なページにリンクすることを示します。このレスポンスコードはふつう、 {{HTTPMethod("PUT")}} または {{HTTPMethod("POST")}} の結果として送り返されます。このリダイレクトページを表示するためには、常に {{HTTPMethod("GET")}} を使用してください。

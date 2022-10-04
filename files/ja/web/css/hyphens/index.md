@@ -1,26 +1,19 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.hyphens
-translation_of: Web/CSS/hyphens
 ---
+
 {{CSSRef}}
 
 **`hyphens`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文字列を複数行にわたって折り返す際に、単語のハイフネーションを行う方法を指定します。ハイフネーションをまったく行わなかったり、手動で指定された位置で文字列のハイフネーションを行ったり、ブラウザーに適切な位置にハイフンを挿入させたりすることができます。
 
 {{EmbedInteractiveExample("pages/css/hyphens.html")}}
 
-> **Note:** 上記のデモでは、 "An extra­ordinarily long English word!" に非表示の `&shy;` の文字が含まれており、 `An extra&shy;­ordinarily long English word!` のようになっています。この文字は `hyphens: manual;` が指定された場合にハイフンを挿入することができる位置を示しています。
+> **メモ:** 上記のデモでは、 "An extra­ordinarily long English word!" に非表示の `&shy;` の文字が含まれており、 `An extra&shy;­ordinarily long English word!` のようになっています。この文字は `hyphens: manual;` が指定された場合にハイフンを挿入することができる位置を示しています。
 
 ハイフネーションの規則は言語に依存します。 HTML では言語は [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性で特定され、ブラウザーはこの属性が存在し、適切なハイフネーション辞書が利用できる場合にのみハイフネーションを行います。 XML では、[`xml:lang`](/ja/docs/Web/SVG/Attribute/xml:lang) 属性を使用する必要があります。
 
-> **Note:** どのようにハイフネーションを行うかの規則は仕様書で明確に定義されていないため、厳密なハイフネーションの方式はブラウザーにより異なります。
+> **メモ:** どのようにハイフネーションを行うかの規則は仕様書で明確に定義されていないため、厳密なハイフネーションの方式はブラウザーにより異なります。
 
 ## 構文
 
@@ -48,7 +41,7 @@ hyphens: unset;
 - `auto`
   - : ブラウザーは自身が選択した規則に従って、ハイフネーションを行うのに適切な位置で自動的に単語を分割します。しかし、改行候補位置 ([改行候補位置の提案](#改行候補位置の提案)を参照) があれば、自動的な改行位置の選択を上書きします。
 
-> **Note:** `auto` を設定したときの動作は、正しくタグ付けされた言語に依存して、適切なハイフネーション規則が選択されます。選択した言語で自動的なハイフネーションが適用されるようにすることを保証するために、 HTML の `lang` 属性を必ず指定してください。
+> **メモ:** `auto` を設定したときの動作は、正しくタグ付けされた言語に依存して、適切なハイフネーション規則が選択されます。選択した言語で自動的なハイフネーションが適用されるようにすることを保証するために、 HTML の `lang` 属性を必ず指定してください。
 
 ## 改行候補位置の提案
 
@@ -59,7 +52,7 @@ hyphens: unset;
 - U+00AD (SHY)
   - : 不可視の「ソフト」ハイフン ("**s**oft" **hy**phen) です。この文字は表示されませんが、ブラウザーが必要に応じて単語を分割できる位置を示します。 HTML では、 `&shy;` を使用してソフトハイフンを挿入することができます。
 
-> **Note:** HTML の [`<wbr>`](/ja/docs/Web/HTML/Element/wbr) 要素によって改行が行われた場合、ハイフンは挿入されません。
+> **メモ:** HTML の [`<wbr>`](/ja/docs/Web/HTML/Element/wbr) 要素によって改行が行われた場合、ハイフンは挿入されません。
 
 ## 公式定義
 

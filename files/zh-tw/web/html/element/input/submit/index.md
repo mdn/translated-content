@@ -2,6 +2,7 @@
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} 元素的 **`"submit"`** 類型會被視為提交按鈕（submit button）——點選的話就能把表單提交到伺服器。

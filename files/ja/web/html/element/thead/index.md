@@ -1,15 +1,6 @@
 ---
 title: '<thead>: 表ヘッダー要素'
 slug: Web/HTML/Element/thead
-tags:
-  - 要素
-  - HTML
-  - HTML 表形式データ
-  - リファレンス
-  - 表
-  - ウェブ
-browser-compat: html.elements.thead
-translation_of: Web/HTML/Element/thead
 ---
 
 {{HTMLRef}}
@@ -77,7 +68,7 @@ translation_of: Web/HTML/Element/thead
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
-    > **Warning:** この属性は最新の標準仕様で廃止された (対応していない) ため、使用しないでください。
+    > **警告:** この属性は最新の標準仕様で廃止された (対応していない) ため、使用しないでください。
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
     > - CSS3 で `char` の値と同様の効果を得るには、 {{htmlattrxref("char", "thead")}} の値を {{cssxref("text-align")}} プロパティの値として使用することができます。
@@ -103,19 +94,19 @@ translation_of: Web/HTML/Element/thead
     - `fuchsia` = "#FF00FF"
     - `aqua` = "#00FFFF"
 
-    > **Note:** この属性は標準外であり Microsoft Internet Explorer の一部バージョンしか実装していませんので、使用しないでください。 {{HTMLElement("thead")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイル付けをしてください。 **bgcolor** 属性と同様の効果を与えるには、 [CSS](/ja/docs/Web/CSS) の {{cssxref("background-color")}} プロパティを適切な {{HTMLElement("td")}} または {{HTMLElement("th")}} 要素で使用してください。
+    > **メモ:** この属性は標準外であり Microsoft Internet Explorer の一部バージョンしか実装していませんので、使用しないでください。 {{HTMLElement("thead")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイル付けをしてください。 **bgcolor** 属性と同様の効果を与えるには、 [CSS](/ja/docs/Web/CSS) の {{cssxref("background-color")}} プロパティを適切な {{HTMLElement("td")}} または {{HTMLElement("th")}} 要素で使用してください。
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
 
   - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。{{htmlattrxref("align", "thead")}} 属性を `char` に設定していない場合は、この属性を無視します。
 
-    > **Note:** この属性は最新の標準仕様で廃止された（そして対応していない）ため、使用しないでください。CSS3 で {{htmlattrxref("char", "thead")}} と同じ効果を得るには、 {{htmlattrxref("char", "thead")}} 属性で使用する文字のセットを {{cssxref("text-align")}} プロパティの値として使用することができます。
+    > **メモ:** この属性は最新の標準仕様で廃止された（そして対応していない）ため、使用しないでください。CSS3 で {{htmlattrxref("char", "thead")}} と同じ効果を得るには、 {{htmlattrxref("char", "thead")}} 属性で使用する文字のセットを {{cssxref("text-align")}} プロパティの値として使用することができます。
 
 - {{htmlattrdef("charoff")}} {{deprecated_inline}}
 
   - : この属性は、 **char** 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
 
-    > **Note:** この属性は最新の標準仕様で廃止された (サポートされていない) ため、使用しないでください。
+    > **メモ:** この属性は最新の標準仕様で廃止された (サポートされていない) ため、使用しないでください。
 
 - {{htmlattrdef("valign")}} {{deprecated_inline}}
 
@@ -126,7 +117,7 @@ translation_of: Web/HTML/Element/thead
     - `middle`: テキストをセル内の中央に置きます。
     - `top`: テキストを可能な限りセルの上端に近づけて配置します。
 
-    > **Note:** この属性は最新の標準仕様で廃止された（そして対応していない）ため、使用しないでください。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
+    > **メモ:** この属性は最新の標準仕様で廃止された（そして対応していない）ため、使用しないでください。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
 
 ## 例
 

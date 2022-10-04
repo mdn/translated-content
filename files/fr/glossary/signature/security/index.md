@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Signature/Security
 original_slug: Glossaire/Signature/Sécurité
 ---
+
 Une **signature**, ou _signature numérique_, est un {{glossary("protocol","protocole")}} montrant l'authenticité d'un message.
 
 À partir du {{glossary("hash")}} d'un message donné, le **processus de signature** génère d'abord une signature numérique liée à l'entité qui effectue la signature, en utilisant la {{glossary("clé")}} privée de l'entité.
@@ -20,7 +21,7 @@ Une **signature**, ou _signature numérique_, est un {{glossary("protocol","prot
 
 Le système échoue si la clé privée est compromise ou si le destinataire donne trompeusement une fausse clé publique.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

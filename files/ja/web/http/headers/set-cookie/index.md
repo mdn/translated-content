@@ -1,22 +1,14 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-tags:
-  - Cookies
-  - HTTP
-  - リファレンス
-  - レスポンス
-  - ヘッダー
-  - samesite
-browser-compat: http.headers.Set-Cookie
-translation_of: Web/HTTP/Headers/Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 **`Set-Cookie`** は HTTP のレスポンスヘッダーで、サーバーからユーザーエージェントへクッキーを送信するために使用され、ユーザーエージェントはそれを後でサーバーに送り返すことができます。
 複数のクッキーを送信するには、複数の **`Set-Cookie`** ヘッダーを同じレスポンスで送信してください。
 
-> **Warning:** ブラウザーは、フロントエンドの JavaScript コードが `Set-Cookie` ヘッダーにアクセスするのをブロックします。これは、 Fetch 仕様が `Set-Cookie` を[禁止レスポンスヘッダー名](https://fetch.spec.whatwg.org/#forbidden-response-header-name)として定義しているためで、フロントエンドコードに公開されるすべてのレスポンスから[フィルタリング](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0)しなければなりません。
+> **警告:** ブラウザーは、フロントエンドの JavaScript コードが `Set-Cookie` ヘッダーにアクセスするのをブロックします。これは、 Fetch 仕様が `Set-Cookie` を[禁止レスポンスヘッダー名](https://fetch.spec.whatwg.org/#forbidden-response-header-name)として定義しているためで、フロントエンドコードに公開されるすべてのレスポンスから[フィルタリング](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0)しなければなりません。
 
 詳細については、<a href="/ja/docs/Web/HTTP/Cookies">HTTP クッキーのガイド</a>を参照してください。
 
@@ -72,7 +64,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     しかし、 RFC の仕様書で要求されているわけではありません。
     URL エンコーディングを使用すると、 `<cookie-value>` に許可される文字の要件を満たすのに役立ちます。
 
-    > **Note:** 一部の `<cookie-name>` は特殊な意味を持ちます。
+    > **メモ:** 一部の `<cookie-name>` は特殊な意味を持ちます。
     >
     > **`__Secure-` の接頭辞**: `__Secure-` (接頭辞にダッシュを含む) で始まるクッキー名は、 `secure` フラグを設定することが必要で、安全なページ (HTTPS) でなければなりません。
     >
@@ -86,7 +78,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     指定されなかった場合は、クッキーは**セッションクッキー**の寿命になります。
     セッションはクライアントが終了したときに終了するので、セッションクッキーはその時点で削除されます。
 
-    > **Warning:** 多くのウェブブラウザーはセッション復元と呼ばれる機能を持っており、これによってすべてのタブを保存し、次回ブラウザーを起動したときに復元することができます。ブラウザーを実際には閉じていないかのように、セッションクッキーも復元されます。
+    > **警告:** 多くのウェブブラウザーはセッション復元と呼ばれる機能を持っており、これによってすべてのタブを保存し、次回ブラウザーを起動したときに復元することができます。ブラウザーを実際には閉じていないかのように、セッションクッキーも復元されます。
 
     有効期限が設定されていた場合、期限はサーバーではなく、クッキーが設定されているクライアントからの相対時刻で設定されます。
 
@@ -114,7 +106,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
   - : クッキーが、リクエストが SSL と HTTPS プロトコルを使用して行われた場合にのみサーバーに送信されることを示します。ただし HTTP クッキーは、例えば情報が暗号化されないなど、安全ではない仕組みを継承しているので、機密な情報や敏感な情報を転送したり格納したりしないようにしてください。
 
-    > **Note:** Secure を設定すると、Cookie 内の機密情報 (セッションキー、ログイン情報など) へのアクセスがすべて防げると思わないでください。この属性を持つクッキーは、クライアントのハードディスクにアクセスしたり、 `HttpOnly` クッキー属性が設定されていない場合に JavaScript からアクセスしたりすることで、依然として読み取り/変更が可能です。
+    > **メモ:** Secure を設定すると、Cookie 内の機密情報 (セッションキー、ログイン情報など) へのアクセスがすべて防げると思わないでください。この属性を持つクッキーは、クライアントのハードディスクにアクセスしたり、 `HttpOnly` クッキー属性が設定されていない場合に JavaScript からアクセスしたりすることで、依然として読み取り/変更が可能です。
     >
     > 安全でないサイト (`http:`) では、 `Secure` 属性のクッキーを設定できません (Chrome 52、Firefox 52 以降)。Firefox では、`Secure` 属性が localhost で設定されている場合、https: の要件は無視されます (Firefox 75以降)。
 
@@ -140,7 +132,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
       - :  ブラウザーがクロスサイトと同一サイトの両方のリクエストでクッキーを送信することを意味します。
         この値を設定する際には、 `Secure` 属性も設定する必要があります。 `SameSite=None; Secure` のようにします。
 
-    > **Note:**  [SameSite クッキー](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite)に関する標準は、最近次のように改訂されました。
+    > **メモ:** [SameSite クッキー](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite)に関する標準は、最近次のように改訂されました。
     >
     > 1. `SameSite` が指定されなかった場合のクッキー送信の動作は `SameSite=Lax` になりました。以前は既定ではすべてのリクエストに対して送信されていました。
     > 2. `SameSite=None` が指定されたクッキーには `Secure` 属性も指定されるようになりました（すなわち、安全なコンテキストが必要になりました）。
@@ -194,7 +186,7 @@ Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
 
 加えて、 `__Host-` の接頭辞が付いたクッキーは、 `/` (ホストの任意のパスという意味) を持つ必要があり、 `Domain` ディレクティブを持つことができません。
 
-> **Warning:** クッキーの接頭辞を実装していないクライアントでは、これらの保証を受けることができず、クッキーは常に受け入れられます。
+> **警告:** クッキーの接頭辞を実装していないクライアントでは、これらの保証を受けることができず、クッキーは常に受け入れられます。
 
 ```
 // どちらも安全な (HTTPS の) オリジンから受け入れられます

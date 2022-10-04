@@ -2,9 +2,10 @@
 title: WebGL2RenderingContext.createVertexArray()
 slug: Web/API/WebGL2RenderingContext/createVertexArray
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
-[WebGL 2 API](/en-US/docs/Web/API/WebGL_API) 中的 **`WebGL2RenderingContext.createVertexArray()`**方法创建并初始化（creates and initializes）一个 {{domxref("WebGLVertexArrayObject")}} 的对象 (object) ，它代表一个指向顶点数组数据的顶点数组对象（vertex array object (VAO) ），并为不同的顶点数据集提供名称。
+[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 中的 **`WebGL2RenderingContext.createVertexArray()`**方法创建并初始化（creates and initializes）一个 {{domxref("WebGLVertexArrayObject")}} 的对象 (object) ，它代表一个指向顶点数组数据的顶点数组对象（vertex array object (VAO) ），并为不同的顶点数据集提供名称。
 
 ## **句法**
 
@@ -38,7 +39,7 @@ gl.bindVertexArray(vao);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.createVertexArray")}}
+{{Compat}}
 
 ## 另见
 

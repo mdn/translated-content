@@ -1,13 +1,8 @@
 ---
 title: Symbol.keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 ---
+
 {{JSRef}}
 
 **`Symbol.keyFor(sym)`** メソッドは、指定されたシンボルについて、共有シンボルキーをグローバルシンボルレジストリから受け取ります。

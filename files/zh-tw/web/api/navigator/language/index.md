@@ -3,6 +3,7 @@ title: Navigator.language
 slug: Web/API/Navigator/language
 original_slug: Web/API/NavigatorLanguage/language
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Navigator.language`** 是一個唯讀的屬性，回傳使用者偏好的語言字串，通常是瀏覽器UI的文字

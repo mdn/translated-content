@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/await
 original_slug: Web/JavaScript/Reference/Opérateurs/await
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur **`await`** permet d'attendre la résolution d'une promesse ({{jsxref("Promise")}}). Il ne peut être utilisé qu'au sein d'une fonction asynchrone (définie avec l'instruction {{jsxref("Instructions/async_function", "async function")}}).

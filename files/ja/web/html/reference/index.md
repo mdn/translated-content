@@ -1,14 +1,8 @@
 ---
 title: HTML リファレンス
 slug: Web/HTML/Reference
-tags:
-  - HTML
-  - Landing
-  - Reference
-  - Web
-  - ウェブ
-translation_of: Web/HTML/Reference
 ---
+
 {{HTMLSidebar}}
 
 この [HTML](/ja/docs/Web/HTML) リファレンスは、 HTML のすべての**要素**と**属性**、およびすべての要素に適用される**グローバル属性**について書かれています。

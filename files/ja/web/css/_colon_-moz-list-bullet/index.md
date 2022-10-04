@@ -1,16 +1,8 @@
 ---
 title: '::-moz-list-bullet'
 slug: Web/CSS/:-moz-list-bullet
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
-translation_of: Web/CSS/:-moz-list-bullet
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`::-moz-list-bullet`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、順序なしリスト ({{htmlelement("ul")}}) のリスト項目 ({{htmlelement("li")}}) のマーカー（通常は点）を表します。

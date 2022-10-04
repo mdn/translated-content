@@ -1,17 +1,8 @@
 ---
 title: リストの装飾
 slug: Learn/CSS/Styling_text/Styling_lists
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Guide
-  - Styling
-  - Text
-  - bullets
-  - lists
-translation_of: Learn/CSS/Styling_text/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [リスト](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)は他のテキストとほとんど同じようにふるまいますが、知っておくべきリスト固有の CSS プロパティと、考慮すべきベストプラクティスがいくつかあります。 この記事はすべてを説明しています。
@@ -261,7 +252,7 @@ ul {
 
 {{ EmbedLiveSample('reversed', '100%', 150) }}
 
-> **Note:** 逆方向のリストに `start` 属性の値より多くのリスト項目がある場合、カウントは引き続きゼロになり、その後負の値になります。
+> **メモ:** 逆方向のリストに `start` 属性の値より多くのリスト項目がある場合、カウントは引き続きゼロになり、その後負の値になります。
 
 ### value
 
@@ -280,16 +271,16 @@ ul {
 
 {{ EmbedLiveSample('value', '100%', 150) }}
 
-> **Note:** 数値以外の {{cssxref("list-style-type")}} を使用している場合でも、`value` 属性に同等の数値を使用する必要があります。
+> **メモ:** 数値以外の {{cssxref("list-style-type")}} を使用している場合でも、`value` 属性に同等の数値を使用する必要があります。
 
 ## アクティブラーニング: ネストしたリストの装飾
 
 このアクティブラーニングセッションでは、上で学んだことを取り入れて、ネストしたリストを装飾してください。 HTML を提供してあるので、次のことを行います。
 
-1.  順序なしリストに正方形の行頭記号を付けます。
-2.  順序なしリスト項目と順序付きリスト項目のフォントサイズの 1.5 のラインの高さを指定します。
-3.  順序付きリストに小文字のアルファベットの行頭記号を付けます。
-4.  行頭記号の種類、間隔、その他見つけられるものは何でも試して、好きなだけリストの例を試してみてください。
+1. 順序なしリストに正方形の行頭記号を付けます。
+2. 順序なしリスト項目と順序付きリスト項目のフォントサイズの 1.5 のラインの高さを指定します。
+3. 順序付きリストに小文字のアルファベットの行頭記号を付けます。
+4. 行頭記号の種類、間隔、その他見つけられるものは何でも試して、好きなだけリストの例を試してみてください。
 
 間違えた場合は、_Reset_ ボタンを使用していつでもリセットできます。 本当に立ち往生したら、答えを見るために _Show solution_ ボタンを押してください。
 

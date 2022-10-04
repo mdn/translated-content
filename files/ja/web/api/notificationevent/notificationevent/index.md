@@ -1,19 +1,8 @@
 ---
 title: NotificationEvent.NotificationEvent()
 slug: Web/API/NotificationEvent/NotificationEvent
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - NotificationEvent
-  - Notifications
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - コンストラクター
-  - 通知
-translation_of: Web/API/NotificationEvent/NotificationEvent
 ---
+
 {{APIRef("Web Notifications")}}
 
 **`NotificationEvent()`** コンストラクターは、新しい {{domxref("NotificationEvent")}} オブジェクトを生成します。

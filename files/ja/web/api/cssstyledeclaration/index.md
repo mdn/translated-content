@@ -1,15 +1,8 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
-tags:
-  - API
-  - CSSOM
-  - CSSRule
-  - Interface
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration
-browser-compat: api.CSSStyleDeclaration
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSStyleDeclaration`** インターフェースは CSS 宣言ブロックのオブジェクトを表し、スタイル情報や様々なスタイルに関するメソッドやプロパティを提供します。

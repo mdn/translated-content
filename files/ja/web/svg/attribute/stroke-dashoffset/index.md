@@ -1,13 +1,13 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
-translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
+
 {{SVGRef}}
 
 **`stroke-dashoffset`** 属性は、関連する破線をレンダリングするうえで、オフセットを定義するプレゼンテーション属性です。
 
-> **Note:** プレゼンテーション属性として、**`stroke-dashoffset`**は CSS プロパティとして使用することができます。
+> **メモ:** プレゼンテーション属性として、**`stroke-dashoffset`**は CSS プロパティとして使用することができます。
 
 プレゼンテーション属性として、それは、いくつかの要素に適用させることができますが、次の 12 個の要素にのみ効果があります。
 
@@ -63,12 +63,12 @@ html,body,svg { height:100% }
 
 ## Usage notes
 
-| Value         | **[\<percentage>](/ja/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage")** \| **[\<length>](/ja/SVG/Content_type#Length "en/SVG/Content_type#Length")** |
+| Value         | **[\<percentage>](/ja/SVG/Content_type#Percentage)** \| **[\<length>](/ja/SVG/Content_type#Length)** |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Default value | `0`                                                                                                                                                                |
 | Animatable    | Yes                                                                                                                                                                |
 
-The offset is usually expressed in user units resolved against the {{SVGAttr('pathLength')}} but if a [\<percentage>](/ja/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") is used, the value is resolved as a percentage of the current viewport.
+The offset is usually expressed in user units resolved against the {{SVGAttr('pathLength')}} but if a [\<percentage>](/ja/SVG/Content_type#Percentage) is used, the value is resolved as a percentage of the current viewport.
 
 ## Browser compatibility
 

@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/picture
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<picture>`** est un conteneur utilisé afin de définir zéro ou plusieurs éléments {{HTMLElement("source")}} destinés à un élément {{HTMLElement("img")}}. Le navigateur choisira la source la plus pertinente selon la disposition de la page (les contraintes qui s'appliquent à la boîte dans laquelle l'image devra être affichée), selon l'appareil utilisé (la densité de pixels de l'affichage par exemple avec les appareils hiDPI) et selon les formats pris en charge (ex. WebP pour les navigateurs Chromium ou PNG pour les autres). Si aucune correspondance n'est trouvée parmi les éléments `<source>`, c'est le fichier défini par l'attribut {{htmlattrxref("src", "img")}} de l'élément `<img>` qui sera utilisé.
@@ -116,13 +117,11 @@ L'attribut `type` d'un élément {{HTMLElement("source")}} permet d'indiquer le 
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element', '&lt;picture&gt;')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.picture")}}
+{{Compat}}
 
 ## Voir aussi
 

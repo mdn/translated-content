@@ -1,10 +1,8 @@
 ---
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
-tags:
-  - WebGL
-translation_of: Web/API/WebGL_API/WebGL_best_practices
 ---
+
 {{WebGLSidebar}}
 
 この文書は WebGL を使ったコンテンツの向上のための Tips について書きます。これらの提案に従うことで、多くの機器への互換性を高めたり、パフォーマンスを上げることにもなります。
@@ -32,4 +30,4 @@ translation_of: Web/API/WebGL_API/WebGL_best_practices
 
 ## 参照
 
-- [WebGL](/ja/WebGL "WebGL")
+- [WebGL](/ja/WebGL)

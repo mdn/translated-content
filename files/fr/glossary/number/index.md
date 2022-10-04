@@ -8,9 +8,10 @@ tags:
 translation_of: Glossary/Number
 original_slug: Glossaire/Number
 ---
+
 En {{Glossary("JavaScript")}}, **Number** est un type de donnée numérique dans le [format à virgule flottante double précision 64 bits (IEEE 754)](https://fr.wikipedia.org/wiki/IEEE_754). Dans d'autres langages de programmation, différents types numériques peuvent exister, par exemple : Integers, Floats, Doubles, ou Bignums.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

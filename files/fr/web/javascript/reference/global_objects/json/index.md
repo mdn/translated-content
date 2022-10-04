@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 original_slug: Web/JavaScript/Reference/Objets_globaux/JSON
 ---
+
 {{JSRef}}
 
 L’objet **`JSON`** contient des méthodes pour interpréter du [JSON](https://json.org/) (JavaScript Object Notation) (voir également la page du glossaire {{glossary("JSON")}}) et convertir des valeurs en JSON. Il ne peut être appelé ou construit, et, en dehors de ses deux méthodes, n’a pas de fonctionnalité propre.

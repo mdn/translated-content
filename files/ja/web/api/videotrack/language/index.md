@@ -1,20 +1,8 @@
 ---
 title: Videotrack.language
 slug: Web/API/VideoTrack/language
-tags:
-  - API
-  - HTML DOM
-  - Language
-  - Localization
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - VideoTrack
-  - track
-translation_of: Web/API/VideoTrack/language
 ---
+
 {{APIRef("HTML DOM")}}
 
 読み取り専用の **{{domxref("VideoTrack")}}** の **`language`** プロパティは、動画トラックで使用されている言語を識別する文字列を返します。 複数の言語を含むトラック（他の言語で数行が話されている英語の映画など）の場合は、これが動画の主要言語になります。

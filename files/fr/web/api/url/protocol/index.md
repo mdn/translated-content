@@ -9,6 +9,7 @@ tags:
   - protocole
 translation_of: Web/API/URL/protocol
 ---
+
 {{ApiRef("URL API")}}
 
 La propriété **`protocol`** de l'interface {{domxref("URL")}} est une {{domxref("USVString")}} représentant le schéma protocolaire de URL, incluant `':'` à la fin.
@@ -35,14 +36,12 @@ var result = url.protocol; // Retourne:"https:"
 
 ## Spécifications
 
-| Spécification                                                        | Statut               | Commentaire          |
-| -------------------------------------------------------------------- | -------------------- | -------------------- |
-| {{SpecName('URL', '#dom-url-protocol', 'protocol')}} | {{Spec2('URL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.protocol")}}
+{{Compat}}
 
-## A voir également
+## Voir aussi
 
 - L'interface {{domxref("URL")}} dont il est contenu.

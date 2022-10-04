@@ -1,16 +1,9 @@
 ---
 title: MDN 上のものはどこにあるのか - リポジトリーのガイド
 slug: MDN/Community/Contributing/Our_repositories
-tags:
-  - Best practices
-  - Community
-  - GitHub
-  - MDN
-  - Beginners
-  - Repos
-translation_of: MDN/Contribute/Where_is_everything
 original_slug: MDN/Contribute/Where_is_everything
 ---
+
 {{MDNSidebar}}
 
 MDN は、たくさんの変化する部分がある複雑なプロジェクトです。 GitHub の知識を少し持っていて、簡単なタイプミスの修正やコードスニペットの改良から始めるのであれば、サイトへの貢献は簡単です。しかし、新しいページ全体を追加するなど、もっと大きな貢献を行おうとすると、ページのソースには格納されていない、どこか別の場所から来たコンテンツがかなりあることに気づくでしょう。

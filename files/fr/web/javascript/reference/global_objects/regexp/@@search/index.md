@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@search
 ---
+
 {{JSRef}}
 
 La méthode **`[@@search]()`** recherche une correspondance entre une expression rationnelle décrite par `this` et une chaîne de caractères donnée.

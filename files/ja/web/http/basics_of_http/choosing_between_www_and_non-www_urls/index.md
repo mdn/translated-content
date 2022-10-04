@@ -1,12 +1,8 @@
 ---
 title: www 付きと www なしの URL の選択
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-tags:
-  - Guide
-  - HTTP
-  - URL
-translation_of: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 ---
+
 {{HTTPSidebar}}
 
 ウェブサイトの管理者の間で繰り返される質問が、www URL と非 www URL のどちらを選択するかです。このページでは、何が最良かについてアドバイスを提供します。
@@ -34,9 +30,9 @@ HTTP の URL では、先頭の `http://` または `https://` に続く部分�
 
 例:
 
-1.  サーバーが `http://www.example.org/whaddup` へのリクエストを受けます (正規のドメインが example.org であるとき)。
-2.  サーバーは `{{HTTPHeader("Location")}}: http://example.org/whaddup` ヘッダーを伴う {{HTTPStatus(301)}} コードのレスポンスを返します。
-3.  クライアントは正規ドメイン `http://example.org/whatddup` へのリクエストを発行します。
+1. サーバーが `http://www.example.org/whaddup` へのリクエストを受けます (正規のドメインが example.org であるとき)。
+2. サーバーは `{{HTTPHeader("Location")}}: http://example.org/whaddup` ヘッダーを伴う {{HTTPStatus(301)}} コードのレスポンスを返します。
+3. クライアントは正規ドメイン `http://example.org/whatddup` へのリクエストを発行します。
 
 [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) に、[あるドメインから別のドメインへリダイレクトするように Apache を設定する方法](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258) の例があります。
 

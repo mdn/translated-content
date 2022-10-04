@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/bindTexture
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.bindTexture()`** de l'API WebGL lie la {{domxref("WebGLTexture")}} donnée à une cible (point de liaison).
@@ -66,50 +67,13 @@ gl.getParameter(gl.TEXTURE_BINDING_2D);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.8", "bindTexture")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale pour WebGL.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glBindTexture.xml", "glBindTexture")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL ES 2.0 (similaire).</p></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL2', "#3.7.1", "bindTexture")}}</td>
-      <td>{{Spec2('WebGL2')}}</td>
-      <td>
-        Définition mise à jour pour WebGL 2.<br />Ajoute :
-        <code>gl.TEXTURE_3D</code> et <code>gl.TEXTURE_2D_ARRAY</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 3.0', "glBindTexture.xhtml", "glBindTexture")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>Page man de l’API OpenGL ES 3.0 (similaire).</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.bindTexture")}}
+{{Compat}}
 
 ## Voir aussi
-
-<!---->
 
 - {{domxref("WebGLRenderingContext.createTexture()")}}
 - {{domxref("WebGLRenderingContext.deleteTexture()")}}

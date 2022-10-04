@@ -2,6 +2,7 @@
 title: Blob.arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 **`arrayBuffer()`** 方法返回一个 {{jsxref("Promise")}} 对象，包含 blob 中的数据，并在 {{domxref("ArrayBuffer")}} 中以二进制数据的形式呈现。
@@ -38,10 +39,10 @@ var buffer = await blob.arrayBuffer();
 
 ## 浏览器兼容性
 
-{{Compat("api.Blob.arrayBuffer")}}
+{{Compat}}
 
 ## 另见
 
 - {{domxref("Body.arrayBuffer()")}}
-- [Streams API](/en-US/docs/Web/API/Streams_API)
+- [Streams API](/zh-CN/docs/Web/API/Streams_API)
 - {{domxref("FileReader.readAsArrayBuffer()")}}

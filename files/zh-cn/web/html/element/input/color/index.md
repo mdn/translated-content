@@ -2,6 +2,7 @@
 title: <input type="color">
 slug: Web/HTML/Element/Input/color
 ---
+
 **`<input type="color">`元素**是{{HTMLElement("input")}}元素中的一个特定种类，用来创建一个允许用户使用颜色选择器，或输入兼容 CSS 语法的颜色代码的区域。（不支持 Alpha 通道）
 
 此元素的外观会因浏览器不同而不同，可能是简单的验证颜色输入格式的文本框，也可能使用平台原生或自定义样式的颜色选择器。其 UI 除要能接收文本格式的颜色外，未要求其他特性。（[更多信息](https://www.w3.org/TR/html5/forms.html#color-state-%28type=color%29)）

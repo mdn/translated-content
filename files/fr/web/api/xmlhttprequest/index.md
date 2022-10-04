@@ -11,6 +11,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest
 ---
+
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
 Les objets `XMLHttpRequest` (XHR) permettent d'interagir avec des serveurs. On peut récupérer des données à partir d'une URL sans avoir à rafraîchir complètement la page. Cela permet à une page web d'être mise à jour sans perturber les actions de l'utilisateur.
@@ -137,13 +138,11 @@ La plupart des navigateurs récents gère également les évènements via la mé
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires                                |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------------- |
-| {{SpecName('XMLHttpRequest')}} | {{Spec2('XMLHttpRequest')}} | Standard évolutif, version la plus récente. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## Voir aussi
 

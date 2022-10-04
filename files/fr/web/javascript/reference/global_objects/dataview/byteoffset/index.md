@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/byteOffset
 ---
+
 {{JSRef}}
 
 La propriété **`byteOffset`** est un accesseur représentant le décalage, exprimé en octets, entre la vue et le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.

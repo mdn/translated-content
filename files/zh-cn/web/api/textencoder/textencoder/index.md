@@ -2,6 +2,7 @@
 title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
 ---
+
 {{apiref("TextEncoder")}}{{seeCompatTable}}
 
 The **`TextEncoder()`** 构造函数返回一个新创建的{{domxref("TextEncoder")}}对象。
@@ -16,9 +17,9 @@ encoder = new TextEncoder();
 
 - TextEncoder() 从 Firefox 48 and Chrome 53 开始不再需要参数
 
-**Note**: 在 Firefox 48 和 Chrome 53 之前，编码类型标签被接受为 TextEncoder 对象的参数，现在这两个浏览器已经删除了除 utf-8 之外的任何编码器类型的支持，以符合规范。 传入 TextEncoder 构造函数的任何类型标签现在都将被忽略，并且将创建一个 utf-8 TextEncoder。
+**Note**: 在 Firefox 48 和 Chrome 53 之前，编码类型标签被接受为 TextEncoder 对象的参数，现在这两个浏览器已经删除了除 utf-8 之外的任何编码器类型的支持，以符合规范。传入 TextEncoder 构造函数的任何类型标签现在都将被忽略，并且将创建一个 utf-8 TextEncoder。
 
-旧的参数:
+旧的参数：
 
 | Possible values of _utfLabel_                                                                                                                                                                                                                         | Encoding                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |

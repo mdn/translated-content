@@ -1,14 +1,8 @@
 ---
 title: UIEvent.sourceCapabilities
 slug: Web/API/UIEvent/sourceCapabilities
-tags:
-  - API
-  - DOM
-  - プロパティ
-  - リファレンス
-  - UIEvent
-browser-compat: api.UIEvent.sourceCapabilities
 ---
+
 {{SeeCompatTable}}{{APIRef()}}
 
 **`UIEvent.sourceCapabilities`** は読み取り専用のプロパティで、タッチイベントの生成を担当した物理的な機器に関する情報を提供する {{domxref('InputDeviceCapabilities')}} インターフェイスのインスタンスを返します。このイベントを担当した入力機器がない場合は、 `null` を返します。

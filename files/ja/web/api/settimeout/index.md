@@ -3,6 +3,7 @@ title: setTimeout()
 slug: Web/API/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 グローバルの **`setTimeout()`** メソッドは、時間切れになると関数または指定されたコードの断片を実行するタイマーを設定します。

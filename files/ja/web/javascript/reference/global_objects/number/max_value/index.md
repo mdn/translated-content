@@ -1,14 +1,8 @@
 ---
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-tags:
-  - JavaScript
-  - Number
-  - プロパティ
-  - リファレンス
-browser-compat: javascript.builtins.Number.MAX_VALUE
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
+
 {{JSRef}}
 
 **`Number.MAX_VALUE`** プロパティは、 JavaScript において表すことが可能な最大の数値です。

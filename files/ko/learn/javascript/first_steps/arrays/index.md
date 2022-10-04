@@ -1,14 +1,6 @@
 ---
 title: 배열(Arrays)
 slug: Learn/JavaScript/First_steps/Arrays
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/Arrays
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 

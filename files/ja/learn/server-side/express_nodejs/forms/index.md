@@ -1,8 +1,8 @@
 ---
 title: 'Express チュートリアル Part 6: フォームの操作'
 slug: Learn/Server-side/Express_Nodejs/forms
-translation_of: Learn/Server-side/Express_Nodejs/forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
 このチュートリアルでは、Pug を使用して Express で HTML フォームを操作する方法、特にデータベースからドキュメントを作成、更新、削除するためのフォームを作成する方法を説明します。
@@ -19,7 +19,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 このチュートリアルでは、上記の操作を Express で実行する方法を紹介します。途中で、サンプルとして地域図書館のウェブサイトを拡張して、ユーザーがライブラリからアイテムを作成、編集、削除できるようにします。
 
-> **Note:**サンプルとして準備されている地域図書館のウェブサイトは認証済みユーザのみに閲覧を制限する方法については書いてないので、現時点ではどのユーザでもデータベースに変更を加えることができます。
+> **メモ:**サンプルとして準備されている地域図書館のウェブサイトは認証済みユーザのみに閲覧を制限する方法については書いてないので、現時点ではどのユーザでもデータベースに変更を加えることができます。
 
 ### HTML フォーム
 
@@ -27,7 +27,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
-フォームは HTML で `<form>...</form>` タグ内の要素の集合として定義され、`type="submit" `の`input`要素を少なくとも 1 つ含みます。
+フォームは HTML で `<form>...</form>` タグ内の要素の集合として定義され、`type="submit"` の `input` 要素を少なくとも 1 つ含みます。
 
 ```html
 <form action="/team_name_url/" method="post">
@@ -55,19 +55,19 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 上の図のように、フォーム処理のコードが必要とする主なものは以下の通りです。
 
-1.  ユーザーが最初に要求したときにデフォルトのフォームを表示します。
+1. ユーザーが最初に要求したときにデフォルトのフォームを表示します。
 
     - フォームには空白のフィールドが含まれていたり (新しいレコードを作成している場合など)、初期値があらかじめ入力されていたり (レコードを変更している場合や、デフォルトの初期値がある場合など) します。
 
-2.  ユーザーから送信されたデータを、通常は HTTP `POST`リクエストで受信します。
-3.  データを検証し、ハッキング防止のために特殊文字を置換(サニタイズ)します。
-4.  データが無効な場合は、ユーザーが入力した値と問題のあるフィールドのエラーメッセージをフォームに再表示します。
-5.  すべてのデータが有効な場合、必要なアクションを実行します（例：データベースにデータを保存する、通知メールを送信する、検索結果を返す、ファイルをアップロードするなど）。
-6.  すべてのアクションが完了したら、ユーザーを別のページにリダイレクトします。
+2. ユーザーから送信されたデータを、通常は HTTP `POST`リクエストで受信します。
+3. データを検証し、ハッキング防止のために特殊文字を置換(サニタイズ)します。
+4. データが無効な場合は、ユーザーが入力した値と問題のあるフィールドのエラーメッセージをフォームに再表示します。
+5. すべてのデータが有効な場合、必要なアクションを実行します（例：データベースにデータを保存する、通知メールを送信する、検索結果を返す、ファイルをアップロードするなど）。
+6. すべてのアクションが完了したら、ユーザーを別のページにリダイレクトします。
 
 多くの場合、フォーム処理コードは、フォームの初期表示のための`GET`ルートと、フォームデータの検証と処理のための同じパスへの`POST`ルートを使用して実装されています。これがこのチュートリアルで使用されるアプローチです。
 
-Express 自体はフォーム操作のための特別なサポートを提供していませんが、ミドルウェアを使用してフォームからの `POST` や `GET `パラメータを処理したり、それらの値を検証/サニタイズしたりすることができます。
+Express 自体はフォーム操作のための特別なサポートを提供していませんが、ミドルウェアを使用してフォームからの `POST` や `GET`パラメータを処理したり、それらの値を検証/サニタイズしたりすることができます。
 
 ### 検証とサニタイズ
 
@@ -88,7 +88,7 @@ npm install express-validator
 
 #### express-validator の使用
 
-> **Note:** Github の[express-validator](https://github.com/ctavan/express-validator#express-validator)ガイドに API の概要が書かれています。(カスタムバリデータの作成を含む) すべての機能を知るには、これを読むことをお勧めします。以下では、サンプルの「地域図書館」にとって有用なサブセットだけを取り上げます。
+> **メモ:** Github の[express-validator](https://github.com/ctavan/express-validator#express-validator)ガイドに API の概要が書かれています。(カスタムバリデータの作成を含む) すべての機能を知るには、これを読むことをお勧めします。以下では、サンプルの「地域図書館」にとって有用なサブセットだけを取り上げます。
 
 コントローラでバリデータを使うには、以下のように **'express-validator/check'** と **'express-validator/filter'**モジュールから使いたい関数を要求(require)しなければなりません。
 
@@ -115,7 +115,7 @@ const { sanitizeBody } = require('express-validator/filter');
       .isAlpha().withMessage('Name must be alphabet letters.'),
   ```
 
-  > **Note:** また、上記のように `trim()` のようなインラインサニタイザーを追加することもできます。しかし、ここで適用されるサニタイザは検証ステップにのみ適用されます。最終的な出力をサニタイザ処理したい場合は、以下のように別のサニタイザメソッドを使用する必要があります。
+  > **メモ:** また、上記のように `trim()` のようなインラインサニタイザーを追加することもできます。しかし、ここで適用されるサニタイザは検証ステップにのみ適用されます。最終的な出力をサニタイザ処理したい場合は、以下のように別のサニタイザメソッドを使用する必要があります。
 
 - [`sanitizeBody(fields)`](https://github.com/ctavan/express-validator#sanitizebodyfields): サニタイズするフィールドを指定します。サニタイズ操作は、このメソッドにデイジーチェーン接続されます。例えば、以下の `escape()` サニタイズ操作は、JavaScript のクロスサイトスクリプティング攻撃で使用される可能性のある HTML 文字（例えば「'」、「"」、「&」など）を name 変数から削除します。
 
@@ -159,7 +159,7 @@ For this project we will simplify the implementation by stating that a form can 
 - Create an object using objects that already exist (so users will have to create any required `Author` and `Genre` instances before attempting to create any `Book` objects).
 - Delete an object if it is not referenced by other objects (so for example, you won't be able to delete a `Book` until all associated `BookInstance` objects have been deleted).
 
-> **Note:** A more "robust" implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).
+> **メモ:** A more "robust" implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).
 
 ### Routes
 
@@ -179,12 +179,12 @@ router.post('/genre/create', genre_controller.genre_create_post);
 
 The following sub articles will take us through the process of adding the required forms to our example application. You need to read and work through each one in turn, before moving on to the next one.
 
-1.  [Create Genre form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — Defining a page to create `Genre` objects.
-2.  [Create Author form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — Defining a page to create `Author` objects.
-3.  [Create Book form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — Defining a page/form to create `Book` objects.
-4.  [Create BookInstance form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — Defining a page/form to create `BookInstance` objects.
-5.  [Delete Author form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form) — Defining a page to delete `Author` objects.
-6.  [Update Book form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — Defining page to update `Book` objects.
+1. [Create Genre form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — Defining a page to create `Genre` objects.
+2. [Create Author form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — Defining a page to create `Author` objects.
+3. [Create Book form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — Defining a page/form to create `Book` objects.
+4. [Create BookInstance form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — Defining a page/form to create `BookInstance` objects.
+5. [Delete Author form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form) — Defining a page to delete `Author` objects.
+6. [Update Book form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — Defining page to update `Book` objects.
 
 ## Challenge yourself
 

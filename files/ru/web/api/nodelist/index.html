@@ -34,11 +34,10 @@ translation_of: Web/API/NodeList
  <dd>Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все пары ключ/значение, содержащиеся в объекте.</dd>
  <dt><code>forEach()</code></dt>
  <dd>Выполняет указанную функцию один раз для каждого элемента <code>NodeList</code></dd>
- <dt><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">keys()</span></font></dt>
+ <dt>keys()</dt>
  <dd>Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все ключи каждой пары ключ/значение, содержащейся в объекте.</dd>
  <dt><code>values()</code></dt>
  <dd>Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все значения каждой пары ключ/значение, содержащейся в объекте.</dd>
- <dt> </dt>
 </dl>
 
 <h2 id="Описание">Описание</h2>
@@ -64,7 +63,7 @@ console.log(child_nodes.length); // выведет "3"
 
 <p>В JavaScript существует механизм наследования, основанный на прототипах, применяемый как к встроенным («native») (таким как <code>Array</code>), так и «host»-объектам, предоставляемым средой исполнения (таким как <code>NodeList</code>) . Экземпляры класса <code>Array</code> получают свои методы (к примеру, <code>forEach </code>и <code>map</code>) из следующей цепочки наследования:</p>
 
-<p><code>myArray --&gt; Array.prototype --&gt; Object.prototype --&gt; null</code> (Цепочка прототипов объекта может быть получена рекурсивным вызовом <span style="font-family: consolas,monaco,andale mono,monospace;">Object.getPrototypeOf</span>)</p>
+<p><code>myArray --&gt; Array.prototype --&gt; Object.prototype --&gt; null</code> (Цепочка прототипов объекта может быть получена рекурсивным вызовом Object.getPrototypeOf)</p>
 
 <p><code>forEach</code>, <code>map</code>, ровно как и все остальные свойства принадлежат <code>Array.prototype</code>.</p>
 
@@ -76,7 +75,7 @@ console.log(child_nodes.length); // выведет "3"
 
 <h4 id="Обходные_пути">Обходные пути</h4>
 
-<p>Один из способов решения данной проблемы — это копирование методов из <code>Array.prototype<font face="Open Sans, sans-serif"> в </font></code><code>NodeList.prototype</code>. Однако необходимо отдавать себе отчёт в том, что <a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">расширение объектов DOM опасно, особенно в старых версиях Internet Explorer (6, 7, 8)</a>.</p>
+<p>Один из способов решения данной проблемы — это копирование методов из <code>Array.prototype в </code><code>NodeList.prototype</code>. Однако необходимо отдавать себе отчёт в том, что <a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">расширение объектов DOM опасно, особенно в старых версиях Internet Explorer (6, 7, 8)</a>.</p>
 
 <pre class="brush: js">var arrayMethods = Object.getOwnPropertyNames( Array.prototype );
 

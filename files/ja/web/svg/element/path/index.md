@@ -1,13 +1,8 @@
 ---
 title: <path>
 slug: Web/SVG/Element/path
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-translation_of: Web/SVG/Element/path
 ---
+
 {{SVGRef}}
 
 **`<path>`** [SVG](/ja/docs/Web/SVG)要素は図形を定義する汎用的な要素です。全ての基本図形は path 要素によって定義されます。

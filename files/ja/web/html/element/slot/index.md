@@ -1,15 +1,6 @@
 ---
 title: '<slot>: ウェブコンポーネントのスロット要素'
 slug: Web/HTML/Element/slot
-tags:
-  - Element
-  - HTML
-  - HTML ウェブコンポーネント
-  - リファレンス
-  - ウェブコンポーネント
-  - シャドウ DOM
-  - slot
-translation_of: Web/HTML/Element/slot
 ---
 
 {{HTMLRef}}
@@ -106,7 +97,7 @@ translation_of: Web/HTML/Element/slot
 </template>
 ```
 
-> **Note:** この完全な例は、 [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) で見ることができます（[ライブ実行](https://mdn.github.io/web-components-examples/element-details/)もご覧ください）。また、[テンプレートとスロットの利用](/ja/docs/Web/Web_Components/Using_templates_and_slots)にも説明があります。
+> **メモ:** この完全な例は、 [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) で見ることができます（[ライブ実行](https://mdn.github.io/web-components-examples/element-details/)もご覧ください）。また、[テンプレートとスロットの利用](/ja/docs/Web/Web_Components/Using_templates_and_slots)にも説明があります。
 
 ## 仕様書
 

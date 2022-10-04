@@ -1,18 +1,9 @@
 ---
 title: Navigator.platform
 slug: Web/API/Navigator/platform
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
-  - platform
-translation_of: Web/API/NavigatorID/platform
 original_slug: Web/API/NavigatorID/platform
-browser-compat: api.Navigator.platform
 ---
+
 {{ APIRef("HTML DOM") }} {{Deprecated_Header}}
 
 ブラウザーのプラットフォームを表す文字列を返します。仕様書ではブラウザーが常に空文字列を返すことを許可していますので、信頼できる答えを得るためにこのプロパティを頼らないようにしてください。

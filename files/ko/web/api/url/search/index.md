@@ -19,8 +19,10 @@ translation_of: Web/API/URL/search
 
 ## 구문
 
-    const searchParams = object.search
-    url.search = newSearchParams
+```js
+const searchParams = object.search
+url.search = newSearchParams
+```
 
 ### 값
 

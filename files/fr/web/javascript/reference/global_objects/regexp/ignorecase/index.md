@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/ignoreCase
 ---
+
 {{JSRef}}
 
 La propriété **`ignoreCase`** indique si le drapeau (_flag_) "`i`" est utilisé ou non pour cette expression rationnelle. `ignoreCase` est une propriété accessible en lecture seule d'une instance d'expression rationnelle donnée.

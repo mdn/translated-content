@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 original_slug: FAQ_sur_les_transformations_XSL_dans_Mozilla
 ---
+
 #### Pourquoi ma feuille de style ne s'applique pas&nbsp;?
 
 Vérifiez que le type MIME du document source et de la feuille de style est bien un type MIME XML, à savoir `text/xml` ou `application/xml`. L'espace de nommage XSLT est `http://www.w3.org/1999/XSL/Transform`. Utilisez l'instruction de traitement `<?xml-stylesheet ?>` plutôt que l'élément non standard `xml:stylesheet`. Le problème le plus courant est la gestion du type MIME. Pour savoir quel type MIME est envoyé par votre serveur, consultez les Informations sur la page, utilisez une extension telle que [LiveHTTPHeaders (en)](http://livehttpheaders.mozdev.org/) ou un gestionnaire de téléchargements comme wget. Mozilla ne chargera pas les feuilles de style XSLT depuis un domaine différent pour des raisons de sécurité.

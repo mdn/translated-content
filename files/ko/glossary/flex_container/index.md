@@ -1,11 +1,6 @@
 ---
 title: 플렉스 컨테이너
 slug: Glossary/Flex_Container
-tags:
-  - CSS
-  - Glossary
-  - flexbox
-translation_of: Glossary/Flex_Container
 ---
 {{glossary("flexbox", "플렉스박스")}} 레이아웃은 부모 요소의 `display` 속성에 `flex` 또는 `inline-flex` 값을 지정해 정의합니다. 이 때, 부모 요소는 **플렉스 컨테이너**, 각각의 자식 요소를 {{glossary("flex item", "플렉스 항목")}}이 됩니다.
 

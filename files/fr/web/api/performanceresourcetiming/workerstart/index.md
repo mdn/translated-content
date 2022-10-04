@@ -11,6 +11,7 @@ tags:
   - workerStart
 translation_of: Web/API/PerformanceResourceTiming/workerStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`workerStart`** de l'interface [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming) renvoie un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant l'envoi du [`FetchEvent`](/fr/docs/Web/API/FetchEvent) si un processus de _service worker_ est déjà en cours, ou immédiatement avant le démarrage du processus de _service worker_ s'il n'est pas déjà en cours. Si la ressource n'est pas interceptée par un _service worker_, la propriété renvoie toujours 0.
@@ -64,10 +65,8 @@ function print_start_and_end_properties(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-workerstart', 'workerStart')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.workerStart")}}
+{{Compat}}

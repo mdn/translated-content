@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Digest
 original_slug: Glossaire/Condensat
 ---
+
 Un **condensé _(digest)_** est une petite valeur générée par une {{glossary("hash","fonction de hachage")}} à partir d'un message complet. Dans l'idéal, un condensé est rapide à calculer, non réversible et imprédictible, et par conséquent indique si quelqu'un a falsifié un message donné.
 
 Un condensé peut être utilisé pour effectuer plusieurs tâches :
@@ -21,7 +22,7 @@ Un condensé peut être utilisé pour effectuer plusieurs tâches :
 
 Il est primordial de choisir la fonction de hachage appropriée à votre cas concret pour éviter les collisions et la prévisibilité.
 
-## Pour approfondir
+## Voir aussi
 
 - Voir {{glossary("hash","fonction de hachage")}}
 - [Fonction de hachage cryptographique](https://fr.wikipedia.org/wiki/Fonction_de_hachage_cryptographique) sur Wikipédia

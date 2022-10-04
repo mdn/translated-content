@@ -2,6 +2,7 @@
 title: URL.revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL
 ---
+
 {{ApiRef("URL")}}
 
 **`URL.revokeObjectURL()` **静态方法用来释放一个之前已经存在的、通过调用 {{domxref("URL.createObjectURL()")}} 创建的 URL 对象。当你结束使用某个 URL 对象之后，应该通过调用这个方法来让浏览器知道不用在内存中继续保留对这个文件的引用了。

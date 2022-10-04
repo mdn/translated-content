@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/format
 ---
+
 {{JSRef}}La méthode **`Intl.RelativeTimeFormat.prototype.format()`** permet de formater une valeur avec une unité selon des options de locale et de formatage stockées dans l'objet {{jsxref("RelativeTimeFormat")}}.{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-format.html")}}
 
 ## Syntaxe

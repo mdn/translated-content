@@ -1,13 +1,8 @@
 ---
 title: Math.LN2
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN2
 ---
+
 {{JSRef}}
 
 **`Math.LN2`** プロパティは 2 の自然対数、およそ 0.693 を表します。

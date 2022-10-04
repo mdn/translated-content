@@ -1,14 +1,8 @@
 ---
 title: URLSearchParams()
 slug: Web/API/URLSearchParams/URLSearchParams
-tags:
-  - API
-  - Constructor
-  - Reference
-  - URL API
-  - URLSearchParams
-translation_of: Web/API/URLSearchParams/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 **`URLSearchParams()`** コンストラクターは、新しい {{domxref("URLSearchParams")}} オブジェクトを作成して返します。 先頭の `'?'` 文字は無視されます。

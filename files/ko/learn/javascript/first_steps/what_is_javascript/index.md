@@ -1,16 +1,6 @@
 ---
 title: JavaScript가 뭔가요?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Core
-  - JavaScript
-  - Learn
-  - Script
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}

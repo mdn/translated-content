@@ -1,14 +1,8 @@
 ---
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Promise
-browser-compat: javascript.builtins.Promise.all
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
+
 {{JSRef}}
 
 **`Promise.all()`** メソッドは入力としてプロミスの集合の反復可能オブジェクトを取り、入力したプロミスの集合の結果の配列に解決される単一の {{jsxref("Promise")}} を返します。この返却されたプロミスは、入力したプロミスがすべて解決されるか、入力した反復可能オブジェクトにプロミスが含まれていない場合に解決されます。入力したプロミスのいずれかが拒否されるか、プロミス以外のものがエラーを発生させると直ちに拒否され、最初に拒否されたメッセージまたはエラーをもって拒否されます。
@@ -38,7 +32,7 @@ Promise.all(iterable);
 
 `Promise.all()` は、入力されたプロミスの**いずれか**が拒否されると直ちに拒否されます。それに対して、{{jsxref("Promise.allSettled()")}} が返すプロミスは、入力されたプロミスが拒否されたかどうかに関わらず、すべての入力されたプロミスが完了するのを待ちます。その結果、入力された反復可能オブジェクトのすべてのプロミスと関数の最終結果を常に返します。
 
-> **Note:** プロミスの配列の順序は、このメソッドが完了された時点で保持されます。
+> **メモ:** プロミスの配列の順序は、このメソッドが完了された時点で保持されます。
 
 ### 履行の場合
 

@@ -2,6 +2,7 @@
 title: Window.personalbar
 slug: Web/API/Window/personalbar
 ---
+
 {{APIRef}}
 
 ## 概要
@@ -18,7 +19,7 @@ objRef =window.personalbar
 
 {{todo('https://bugzilla.mozilla.org/show_bug.cgi?id=790023')}}
 
-{{deprecated_inline}} The following complete HTML example shows the way that the visible property of the various "bar" objects is used, and also the change to the privileges necessary to write to the visible property of any of the bars on an existing window. Due to [deprecation of enablePrivilege](https://developer.mozilla.org/en-US/docs/Bypassing_Security_Restrictions_and_Signing_Code) this functionality can not be used in web pages. EnablePrivilege is disabled in Firefox 15 and will be removed in Firefox 17.
+{{deprecated_inline}} The following complete HTML example shows the way that the visible property of the various "bar" objects is used, and also the change to the privileges necessary to write to the visible property of any of the bars on an existing window. Due to [deprecation of enablePrivilege](/zh-CN/docs/Bypassing_Security_Restrictions_and_Signing_Code) this functionality can not be used in web pages. EnablePrivilege is disabled in Firefox 15 and will be removed in Firefox 17.
 
 ```html
 <!DOCTYPE html>

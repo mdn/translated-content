@@ -3,6 +3,7 @@ title: document.createDocumentFragment
 slug: Web/API/Document/createDocumentFragment
 translation_of: Web/API/Document/createDocumentFragment
 ---
+
 {{ApiRef("DOM")}}
 
 Crée un nouvel objet vide de type {{domxref("DocumentFragment")}}.

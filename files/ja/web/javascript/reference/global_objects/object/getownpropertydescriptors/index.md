@@ -1,12 +1,8 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
-tags:
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyDescriptors()`** メソッドは、指定したオブジェクトのすべてのプロパティ記述子を返します。

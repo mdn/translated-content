@@ -1,16 +1,8 @@
 ---
 title: ブロック整形コンテキスト
 slug: Web/Guide/CSS/Block_formatting_context
-tags:
-  - CSS
-  - Guide
-  - NeedsBeginnerUpdate
-  - NeedsExample
-  - Reference
-  - Web
-spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
-translation_of: Web/Guide/CSS/Block_formatting_context
 ---
+
 {{ CSSRef }}
 
 **ブロック整形コンテキスト** (block formatting context, BFC) は、ウェブページにおける CSS の視覚的なレンダリングの一部です。ブロックボックスのレイアウトが行われ、浮動が他の要素と相互作用する領域です。
@@ -38,7 +30,7 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 - 外部の浮動要素を追いやります。
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)を抑止します。
 
-> **Note:** フレックス／グリッドコンテナー ({{ cssxref("display") }}: flex/grid/inline-flex/inline-grid) は新しいフレックス／グリッド整形コンテキストを確立します。これは、レイアウト以外はブロック整形コンテキストに類似しています。フレックス／グリッドコンテナーの中に利用できる浮動子要素はありませんが、外部の浮動要素を除外したり、マージンの折りたたみを抑制したりすることはできます。
+> **メモ:** フレックス／グリッドコンテナー ({{ cssxref("display") }}: flex/grid/inline-flex/inline-grid) は新しいフレックス／グリッド整形コンテキストを確立します。これは、レイアウト以外はブロック整形コンテキストに類似しています。フレックス／グリッドコンテナーの中に利用できる浮動子要素はありませんが、外部の浮動要素を除外したり、マージンの折りたたみを抑制したりすることはできます。
 
 ## 例
 

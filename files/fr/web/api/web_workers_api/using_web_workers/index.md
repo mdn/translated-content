@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/Web_Workers_API/Using_web_workers
 original_slug: Web/API/Web_Workers_API/Utilisation_des_web_workers
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 Les _Web Workers_ sont un outil permettant au contenu web d'exécuter des scripts dans des tâches (_threads_) d'arrière-plan. Le _thread_ associé au _worker_ peut réaliser des tâches sans qu'il y ait d'interférence avec l'interface utilisateur. De plus, les _web workers_ peuvent réaliser des opérations d'entrée/sortie grâce à [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) (bien que les attributs `responseXML` et `channel` soient nécessairement vides dans ces cas). Une fois créé, un _worker_ peut envoyer des messages au code JavaScript qui l'a créé. De même, le script initial peut envoyer des messages au _worker_. Cette communication s'effectue grâce à des gestionnaires d'évènements. Dans cet article, nous verrons une introduction à l'utilisation des _web workers_.
@@ -496,9 +497,7 @@ En revanche, un _worker_ ne pourra pas directement manipuler la page parente et 
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', '#workers', 'Web workers')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Voir aussi
 

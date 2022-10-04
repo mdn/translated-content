@@ -49,6 +49,6 @@ Aquí tienes el código para comparar:
 
 ## Pasos siguientes
 
-Ya tenemos el juego terminado, pero aún lo podemos mejorar con algunos trucos [Finalizando](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando).
+Ya tenemos el juego terminado, pero aún lo podemos mejorar con algunos trucos [Finalizando](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando")}}

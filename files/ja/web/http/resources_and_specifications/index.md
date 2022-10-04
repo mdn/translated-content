@@ -1,11 +1,8 @@
 ---
 title: HTTP のリソースと仕様書
 slug: Web/HTTP/Resources_and_specifications
-tags:
-  - Guide
-  - HTTP
-translation_of: Web/HTTP/Resources_and_specifications
 ---
+
 {{HTTPSidebar}}
 
 HTTP が最初に規定されたのは 1990 年代初頭のことです。拡張性を念頭に置いて設計されていますが、何年にもわたって何度も追加されてきました。このため、その仕様は多くの仕様書に散在しています (実験的に放棄された拡張の中に埋もれています)。このページでは、HTTP に関連するリソースをリストアップしています。

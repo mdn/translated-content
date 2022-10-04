@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 ## 구문
 
-    str.toUpperCase()
+```js
+str.toUpperCase()
+```
 
 ### 반환 값
 

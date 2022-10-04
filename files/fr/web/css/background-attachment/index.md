@@ -4,6 +4,7 @@ slug: Web/CSS/background-attachment
 browser-compat: css.properties.background-attachment
 translation_of: Web/CSS/background-attachment
 ---
+
 {{CSSRef}}
 
 La propriété **`background-attachment`** définit si la position de l'image d'arrière-plan est fixée dans la zone d'affichage (<i lang="en">viewport</i>) ou si celle-ci défile avec le bloc englobant.

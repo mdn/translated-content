@@ -2,6 +2,7 @@
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSStyleSheet.insertRule()` **方法用来给当前样式表插入新的样式规则（[CSS rule](/zh-CN/docs/Web/API/CSSRule)），并且包含一些[限制](/zh-CN/docs/Web/API/CSSStyleSheet/insertRule$edit#Restrictions)。
@@ -150,11 +151,11 @@ function addStylesheetRules (decls) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSStyleSheet.insertRule")}}
+{{Compat}}
 
 ### 传统浏览器支持
 
-为了支持 Internet Explorer 8 和更早版本，请使用: `addRule(selector, rule [, index]);`。例如：`addRule('pre', 'font: 14px verdana'); // add rule at end`
+为了支持 Internet Explorer 8 和更早版本，请使用：`addRule(selector, rule [, index]);`。例如：`addRule('pre', 'font: 14px verdana'); // add rule at end`
 
 另外注意非标准的 [`removeRule()`](http://www.quirksmode.org/dom/w3c_css.html#change) 和 [`.rules`](http://www.quirksmode.org/dom/w3c_css.html#access) 方法分别用 {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} 和{{domxref("CSSStyleSheet",".cssRules")}} 代替。
 

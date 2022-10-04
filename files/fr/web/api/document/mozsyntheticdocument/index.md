@@ -8,6 +8,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/mozSyntheticDocument
 ---
+
 {{ ApiRef("DOM") }}
 
 Indique si le document est synthétique ou non ; c'est-à-dire un document représentant une image autonome, une vidéo, un son ou analogue.

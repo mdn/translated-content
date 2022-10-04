@@ -1,16 +1,9 @@
 ---
 title: 基本的なアニメーション
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-tags:
-  - キャンバス
-  - グラフィック
-  - HTML
-  - HTML5
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 私たちが {{HTMLElement("canvas")}} 要素の操作に JavaScript を使うのは、とても簡単にインタラクティブなアニメーションを作成できるからです。本章では、いくつかの基本的なアニメーションで、その概要をつかんでいきます。
@@ -49,7 +42,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
 
 ユーザーの操作が必要ない場合は、提供されたコードを繰り返し実行する `setInterval()` 関数が利用できます。ゲームを作成したい場合、キーボードまたはマウスのイベントを使用したアニメーションを制御するためには `setTimeout()` が利用できます。イベントリスナー ({{domxref("EventListener")}}) を設定することで、ユーザーの操作を取得し、アニメーション関数を実行します。
 
-> **Note:** 以下の例では、{{domxref("window.requestAnimationFrame()")}} メソッドを使用してアニメーションを制御します。`requestAnimationFrame` メソッドは、フレームを描画する準備ができた時にシステムがアニメーションフレームを呼び出すことで、よりスムーズで効率的な方法でアニメーションを提供します。通常、コールバック回数は 1 秒あたり 60 回となり、バックグラウンドタブで実行している場合は、レートが低くなることがあります。特にゲームのアニメーションループの詳細については、[ゲーム開発](/ja/docs/Games)の[ビデオゲームの解剖学](/ja/docs/Games/Anatomy)を参照してください。
+> **メモ:** 以下の例では、{{domxref("window.requestAnimationFrame()")}} メソッドを使用してアニメーションを制御します。`requestAnimationFrame` メソッドは、フレームを描画する準備ができた時にシステムがアニメーションフレームを呼び出すことで、よりスムーズで効率的な方法でアニメーションを提供します。通常、コールバック回数は 1 秒あたり 60 回となり、バックグラウンドタブで実行している場合は、レートが低くなることがあります。特にゲームのアニメーションループの詳細については、[ゲーム開発](/ja/docs/Games)の[ビデオゲームの解剖学](/ja/docs/Games/Anatomy)を参照してください。
 
 ## アニメーションする太陽系
 

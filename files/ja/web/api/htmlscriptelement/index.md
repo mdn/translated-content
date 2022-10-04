@@ -1,15 +1,8 @@
 ---
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLScriptElement
-translation_of: Web/API/HTMLScriptElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTML の {{HTMLElement("script")}} 要素は **`HTMLScriptElement`** インターフェイスの公開しています。これは（通常の {{domxref("HTMLElement")}} から継承によって利用できるものに加えて） `<script>` 要素の動作や実行を操作するための特別なプロパティやメソッドを提供します。
@@ -42,7 +35,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 
     `defer` 属性は `async` 属性と共に指定することができます。 `defer` のみに対応している（そして `async` には対応していない）ブラウザーでは、既定のブロックが発生する動作の代わりに `defer` で代替することができます。
 
-    > **Note:** これらの属性における正確な処理の詳細は、 HTML の多くの異なる側面を含むため複雑であり、そのため仕様全体に散らばっています。[これらのアルゴリズム](https://html.spec.whatwg.org/multipage/scripting.html)は、核となる考えを記述していますが、 {{HTMLElement("script")}} の[開始](https://html.spec.whatwg.org/multipage/syntax.html)および[終了](https://html.spec.whatwg.org/multipage/syntax.html)タグのHTML、[外部コンテンツ](https://html.spec.whatwg.org/multipage/syntax.html)、[XML](https://html.spec.whatwg.org/multipage/xhtml.html)における解釈ルール、 [`document.write()`](/ja/docs/Web/API/Document/write) メソッドのルール、[スクリプティング](https://html.spec.whatwg.org/multipage/webappapis.html)の扱い、などによります。
+    > **メモ:** これらの属性における正確な処理の詳細は、 HTML の多くの異なる側面を含むため複雑であり、そのため仕様全体に散らばっています。[これらのアルゴリズム](https://html.spec.whatwg.org/multipage/scripting.html)は、核となる考えを記述していますが、 {{HTMLElement("script")}} の[開始](https://html.spec.whatwg.org/multipage/syntax.html)および[終了](https://html.spec.whatwg.org/multipage/syntax.html)タグのHTML、[外部コンテンツ](https://html.spec.whatwg.org/multipage/syntax.html)、[XML](https://html.spec.whatwg.org/multipage/xhtml.html)における解釈ルール、 [`document.write()`](/ja/docs/Web/API/Document/write) メソッドのルール、[スクリプティング](https://html.spec.whatwg.org/multipage/webappapis.html)の扱い、などによります。
 
 - {{domxref("HTMLScriptElement.crossOrigin")}} {{experimental_inline}}
   - : 文字列で、 script 要素の [CORS 設定](/ja/docs/Web/HTML/Attributes/crossorigin) を反映します。他の[オリジン](/ja/docs/Glossary/Origin)のスクリプトについては、エラー情報が公開されるかどうかを制御します。
@@ -50,7 +43,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 
   - : この {{HTMLElement("script")}} 要素の中にあるすべての [`Text` ノード](/ja/docs/Web/API/Text)（コメントなどの他のノードを除く）の内容をツリー順で連結した文字列です。設定すると、 [`textContent`](/ja/docs/Web/API/Node/textContent) IDL 属性と同様に動作します。
 
-    > **Note:** [`document.write()`](/ja/docs/Web/API/Document/write) メソッドで挿入された場合、 {{HTMLElement("script")}} 要素は（ふつう同期的に）実行されますが、 [`innerHTML`](/ja/docs/Web/API/Element/innerHTML) または [`outerHTML`](/ja/docs/Web/API/Element/outerHTML) を使用して挿入された場合は実行されません。
+    > **メモ:** [`document.write()`](/ja/docs/Web/API/Document/write) メソッドで挿入された場合、 {{HTMLElement("script")}} 要素は（ふつう同期的に）実行されますが、 [`innerHTML`](/ja/docs/Web/API/Element/innerHTML) または [`outerHTML`](/ja/docs/Web/API/Element/outerHTML) を使用して挿入された場合は実行されません。
 
 - {{domxref("HTMLScriptElement.fetchPriority")}}
   - : オプションの文字列で、ブラウザーが外部スクリプトの取得を他の外部スクリプトと比較してどのように優先させるべきかのヒントを表します。この値を指定する場合は、許可された値のいずれかでなければなりません。高い優先度で取得する場合は `high` 、低い優先度で取得する場合は `low` 、優先度がない場合は `auto` （既定値）となります。

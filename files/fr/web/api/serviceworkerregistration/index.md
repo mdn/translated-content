@@ -14,6 +14,7 @@ tags:
   - Workers
 translation_of: Web/API/ServiceWorkerRegistration
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `ServiceWorkerRegistration` interface of the [ServiceWorker API](/fr/docs/Web/API/ServiceWorker_API) represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
@@ -91,20 +92,15 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                    | Status                                   | Comment                                                                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Service Workers', '#service-worker-registration-obj', 'ServiceWorkerRegistration')}} | {{Spec2('Service Workers')}}     | Initial definition.                                                                                                                                                                                                                                       |
-| {{SpecName('Push API', '#widl-ServiceWorkerRegistration-pushManager', 'PushManager')}}             | {{Spec2('Push API')}}             | Adds the {{domxref("PushManager","pushManager")}} property.                                                                                                                                                                                   |
-| {{SpecName('Web Notifications')}}                                                                                     | {{Spec2('Web Notifications')}} | Adds the {{domxref("ServiceWorkerRegistration.showNotification()","showNotification()")}} method and the {{domxref("ServiceWorkerRegistration.getNotifications()","getNotifications()")}} method. |
-| {{SpecName('Background Sync')}}                                                                                         | {{Spec2('Background Sync')}}     | Adds the {{domxref("ServiceWorkerRegistration.sync","sync")}} property.                                                                                                                                                                   |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerRegistration")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - [Using Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)

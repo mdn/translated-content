@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/inset
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`inset`** définit les décalages physiques d'un élément. Bien qu'elle fasse partie de la spécification sur les propriétés logiques, sa valeur ne dépend pas du mode d'écriture de l'élément, de sa direction ou de l'orientation du texte. La syntaxe de cette propriété suit la même structure que {{cssxref("margin")}}, `inset` est une propriété raccourcie permettant de définir les propriétés {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} et/ou {{cssxref("left")}}.
@@ -39,9 +40,13 @@ inset: unset;
 
 La propriété `inset` prend les mêmes valeurs que la propriété {{cssxref("left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -77,15 +82,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-inset", "inset")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.inset")}}
+{{Compat}}
 
 ## Voir aussi
 

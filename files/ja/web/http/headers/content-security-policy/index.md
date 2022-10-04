@@ -1,16 +1,8 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - Content Security Policy
-  - HTTP
-  - Reference
-  - セキュリティ
-  - header
-browser-compat: http.headers.csp.Content-Security-Policy
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。これはクロスサイトスクリプティング攻撃 ({{Glossary("Cross-site_scripting", "クロスサイトスクリプティング")}}) を防ぐのに役立ちます。
@@ -68,7 +60,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
   - : {{HTMLElement("object")}}、 {{HTMLElement("embed")}}、{{HTMLElement("applet")}} 要素のための有効なソースを指定します。
 
-    > **Note:** `object-src` で制御される要素は、おそらく古い HTML 要素に該当すると見なされ、標準化された新しい機能が利用できません (セキュリティ属性の `sandbox` や `<iframe>` の `allow` など)。従って、このフェッチディレクティブで制限を掛けることが**推奨されます** (例えば、可能であれば `object-src 'none'` を設定するなど)。
+    > **メモ:** `object-src` で制御される要素は、おそらく古い HTML 要素に該当すると見なされ、標準化された新しい機能が利用できません (セキュリティ属性の `sandbox` や `<iframe>` の `allow` など)。従って、このフェッチディレクティブで制限を掛けることが**推奨されます** (例えば、可能であれば `object-src 'none'` を設定するなど)。
 
 - {{CSP("prefetch-src")}}{{experimental_inline}}
   - : 事前にフェッチされるか描画される有効なソースを指定します。
@@ -115,7 +107,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
   - : ユーザーエージェントにコンテンツセキュリティポリシーの違反を報告するよう指示します。これらの違反の報告は、 {{Glossary("JSON")}} 文書を HTTP の `POST` リクエストで指定された URI に送信することで行われます。
 
-     > **Warning:** {{CSP("report-to")}} ディレクティブは非推奨の **`report-uri`** ディレクティブを置き換えることを意図していますが、 {{CSP("report-to")}} はまだ多くのブラウザーが対応していません。そのため、ブラウザーで {{CSP("report-to")}} の対応が行われるまでは、現在のブラウザーとの互換性のため、 **`report-uri`** と {{CSP("report-to")}} の両方を指定することができます。
+     > **警告:** {{CSP("report-to")}} ディレクティブは非推奨の **`report-uri`** ディレクティブを置き換えることを意図していますが、 {{CSP("report-to")}} はまだ多くのブラウザーが対応していません。そのため、ブラウザーで {{CSP("report-to")}} の対応が行われるまでは、現在のブラウザーとの互換性のため、 **`report-uri`** と {{CSP("report-to")}} の両方を指定することができます。
     >
     > ```html
     > Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname

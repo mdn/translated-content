@@ -2,9 +2,10 @@
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
+
 {{JSRef}}
 
-**`Reflect.construct()`** 方法的行为有点像 [`new` 操作符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new) 构造函数 ， 相当于运行 `new target(...args)`.
+**`Reflect.construct()`** 方法的行为有点像 [`new` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造函数，相当于运行 `new target(...args)`.
 
 ## 语法
 
@@ -19,7 +20,7 @@ Reflect.construct(target, argumentsList[, newTarget])
 - `argumentsList`
   - : 类数组，目标构造函数调用时的参数。
 - `newTarget` {{optional_inline}}
-  - : 作为新创建对象的原型对象的`constructor`属性， 参考 [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) 操作符，默认值为`target。`
+  - : 作为新创建对象的原型对象的 `constructor` 属性，参考 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 操作符，默认值为 `target`。
 
 ### `返回值`
 
@@ -40,7 +41,7 @@ var obj = Reflect.construct(Foo, args);
 
 ### `Reflect.construct()` vs `Object.create()`
 
-`在新语法 Reflect`出现之前，是通过明确指定构造函数和原型对象（ 使用{{jsxref("Object.create()")}}）来创建一个对象的。
+`在新语法 Reflect`出现之前，是通过明确指定构造函数和原型对象（使用{{jsxref("Object.create()")}}）来创建一个对象的。
 
 ```js
 function OneClass() {
@@ -122,5 +123,5 @@ d.getFullYear(); // 1776
 ## 相关链接
 
 - {{jsxref("Reflect")}}
-- [`new`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
-- [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target)
+- [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
+- [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target)

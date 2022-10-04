@@ -1,23 +1,9 @@
 ---
 title: EventListener.handleEvent()
 slug: conflicting/Web/API/EventTarget/addEventListener
-tags:
-  - API
-  - Callback
-  - DOM
-  - DOM Events
-  - Event Callback
-  - Event Handler
-  - Event Processing
-  - EventListener
-  - Handling Events
-  - Method
-  - Reference
-  - events
-  - handleEvent
 original_slug: Web/API/EventListener/handleEvent
-browser-compat: api.EventListener.handleEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 {{domxref("EventListener")}} の **`handleEvent()`** メソッドは、

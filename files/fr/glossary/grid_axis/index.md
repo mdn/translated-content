@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Grid_Axis
 original_slug: Glossaire/Axe_de_grille
 ---
+
 La grille CSS est une méthode de mise en page bidimensionnelle permettant une présentation du contenu en lignes et colonnes. Par conséquent, dans toute grille, nous avons deux axes. L'axe du "bloc" ou de la colonne et l'axe "en ligne" ou de la ligne.
 
 C'est sur ces axes que les items peuvent être alignés et justifiés en utilisant les propriétés définies dans [les spécifications de l'alignement des boîtes](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_bo%C3%AEtes_avec_les_grilles_CSS).
@@ -22,7 +23,7 @@ L'axe de la ligne (ou en ligne) parcourt l'axe des blocs et représente la direc
 
 La direction physique de ces axes peut changer en fonction du [mode d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_%C3%A9criture) du document.
 
-## En apprendre plus
+## Voir aussi
 
 ### En lire plus
 

@@ -2,6 +2,7 @@
 title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
 ---
+
 {{APIRef}}
 
 **`Element.getElementsByClassName()`** 方法返回一个即时更新的（live）{{domxref("HTMLCollection")}}，包含了所有拥有指定 class 的子元素。当在 document 对象上调用此方法时，会检索整个文档，包括根元素。
@@ -53,4 +54,4 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.getElementsByClassName")}}
+{{Compat}}

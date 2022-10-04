@@ -4,6 +4,7 @@ slug: Web/API/IDBObjectStore/getAll
 translation_of: Web/API/IDBObjectStore/getAll
 browser-compat: api.IDBObjectStore.getAll
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`getAll()`**, rattachée à l'interface [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore), renvoie un objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest) contenant tous les objets du magasin d'objets qui correspondent au paramètre indiqué, ou tous les objets du magasin si aucun paramètre n'a été fourni.

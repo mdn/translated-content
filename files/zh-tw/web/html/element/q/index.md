@@ -2,6 +2,7 @@
 title: <q>
 slug: Web/HTML/Element/q
 ---
+
 {{HTMLRef}}
 
 _HTML 引文元素_ (**\<q>**) 指示一段元素內的文字，屬於行內引文。這個元素適用於不須換行的短引文，針對長引文，請使用 {{HTMLElement("blockquote")}} 元素。
@@ -42,7 +43,7 @@ _HTML 引文元素_ (**\<q>**) 指示一段元素內的文字，屬於行內引�
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.q")}}
+{{Compat}}
 
 ## 參閱
 

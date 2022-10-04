@@ -1,25 +1,8 @@
 ---
 title: HTMLImageElement.x
 slug: Web/API/HTMLImageElement/x
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSOM View
-  - Coordinate
-  - Edge
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Position
-  - リファレンス
-  - border
-  - left
-  - x
-  - プロパティ
-browser-compat: api.HTMLImageElement.x
-translation_of: Web/API/HTMLImageElement/x
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`x`** プロパティは読み取り専用で、ルート要素の原点からの相対座標で {{HTMLElement("img")}} 要素の左端の x 座標を示します。
@@ -35,7 +18,7 @@ translation_of: Web/API/HTMLImageElement/x
 
 ![要素に関連するさまざまなボックスの関係を示す図](boxmodel-3.png)
 
-> **Note:** `x` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
+> **メモ:** `x` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
 
 ## 例
 

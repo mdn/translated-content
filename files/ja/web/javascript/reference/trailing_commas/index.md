@@ -1,17 +1,8 @@
 ---
 title: 末尾のカンマ
 slug: Web/JavaScript/Reference/Trailing_commas
-tags:
-  - Comma
-  - ECMAScript2017
-  - ECMAScript5
-  - JavaScript
-  - Language feature
-  - Syntax
-  - Trailing comma
-browser-compat: javascript.grammar.trailing_commas
-translation_of: Web/JavaScript/Reference/Trailing_commas
 ---
+
 {{JsSidebar("More")}}
 
 **末尾のカンマ** (「最後のカンマ」と呼ばれることもあります) は、JavaScript のコードに新しい要素や引数、プロパティを追加するときに役立ちます。新しいプロパティを追加するとき、最終行ですでに末尾のカンマを使用していれば、最終行を修正することなく新しい行を追加できます。これによって、バージョン管理の差分がより洗練され、コード編集の煩雑さを軽減できます。

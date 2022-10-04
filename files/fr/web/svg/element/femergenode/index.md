@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feMergeNode
 ---
+
 {{SVGRef}}
 
 L'élément SVG `feMergeNode` se place à l'intérieur d'un élément {{ SVGElement("feMerge") }}. Il prend en entrée le résultat d'un filtre afin qu'il soit traité par son parent.
@@ -58,14 +59,11 @@ Cet élément implémente l'interface {{domxref("SVGFEMergeNodeElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Filters 1.0', '#elementdef-femergenode', '&lt;feMergeNode&gt;')}}     | {{Spec2('Filters 1.0')}} |                     |
-| {{SpecName('SVG1.1', 'filters.html#feMergeNodeElement', '&lt;feMergeNode&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feMergeNode")}}
+{{Compat}}
 
 ## Voir aussi
 

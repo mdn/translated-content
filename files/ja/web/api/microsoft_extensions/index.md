@@ -1,19 +1,13 @@
 ---
 title: Microsoft API extensions
 slug: Web/API/Microsoft_Extensions
-tags:
-  - API
-  - API:Microsoft Extensions
-  - Non-standard
-  - Overview
-  - Reference
-translation_of: Web/API/Microsoft_Extensions
 ---
+
 {{DefaultAPISidebar("Microsoft Extensions")}}
 
 Microsoft ブラウザー (Internet Explorer および、場合によっては Microsoft Edge) は、標準の [DOM API](/ja/docs/Web/API) に対するいくつかの特別な Microsoft 拡張機能をサポートしています。これらの拡張機能には `MS` または `ms`.のプレフィックスが付きます。
 
-> **Note:** これらの API は Microsoft アプリケーションでのみ機能し、標準化されていません。
+> **メモ:** これらの API は Microsoft アプリケーションでのみ機能し、標準化されていません。
 
 ## Touch APIs
 

@@ -2,6 +2,7 @@
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 ---
+
 {{APIRef()}}
 
 ## 概要
@@ -117,7 +118,7 @@ In Firefox, properties with the value `auto` return the used value, not the valu
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.getComputedStyle")}}
+{{Compat}}
 
 ## 規範
 

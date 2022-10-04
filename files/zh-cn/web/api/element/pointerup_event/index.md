@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onpointerup
 slug: Web/API/Element/pointerup_event
 ---
+
 {{ApiRef("HTML DOM")}}
 
 `pointerup`是一个全局的事件处理函数。
@@ -45,8 +46,8 @@ function init() {
 
 ## 浏览器兼容性
 
-{{Compat("api.GlobalEventHandlers.onpointerup")}}
+{{Compat}}
 
 ## 相关链接
 
-- [{{event("pointerup")}}](/en-US/docs/Web/Events/pointerup)
+- [{{event("pointerup")}}](/zh-CN/docs/Web/Events/pointerup)

@@ -1,17 +1,8 @@
 ---
 title: Path2D()
 slug: Web/API/Path2D/Path2D
-tags:
-  - API
-  - Canvas
-  - Constructor
-  - Drawing
-  - Graphics
-  - Path2D
-  - Paths
-  - Reference
-translation_of: Web/API/Path2D/Path2D
 ---
+
 {{APIRef("Canvas API")}}{{seeCompatTable}}
 
 **`Path2D()`** コンストラクターは、新たにインスタンス化した `Path2D` オブジェクトを返します。他のパスを引数に渡すこともできます(複製がつくられます)。また、[SVG パス](/ja/docs/Web/SVG/Tutorial/Paths) からなるデータを文字列で渡すこともできます。

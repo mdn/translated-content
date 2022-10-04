@@ -6,6 +6,7 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Basics_of_HTTP
 ---
+
 {{HTTPSidebar}}
 
 HTTP est un protocole extensible. Il s'appuie sur quelques concepts basiques comme la notion de ressources et d'URI, une structure de messages simple et une structure client-serveur pour le flux de communication. En plus de ces concepts basiques, de nombreuses extensions du protocole sont apparues au fil des ans, ajoutant de nouvelles fonctionnalités et de nouvelle syntaxes en créant de nouvelles méthodes ou en-têtes HTTP.

@@ -1,12 +1,8 @@
 ---
 title: metadata
 slug: Web/SVG/Element/metadata
-tags:
-  - Element
-  - SVG
-  - SVG Descriptive
-translation_of: Web/SVG/Element/metadata
 ---
+
 {{SVGRef}}
 
 メタデータはデータに関する構造化データです。SVG コンテンツに含まれているメタデータは、 `metadata` 要素で指定する必要があります。 `metadata` 要素の内容は RDF,FOAF などの他の XML 名前空間からの要素でなければなりません。
@@ -29,7 +25,7 @@ _この要素には専用属性はありません。_
 
 ## DOM インターフェース
 
-この要素は [`SVGMetadataElement`](/ja/DOM/SVGMetadataElement "en/DOM/SVGMetadataElement") インターフェースを提供します。
+この要素は [`SVGMetadataElement`](/ja/DOM/SVGMetadataElement) インターフェースを提供します。
 
 ## 仕様
 

@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/viewport
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.viewport()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définit le viewport, qui indique la transformation affine de x et de y, de coordonnées d'appareil normalisées en coordonnées de fenêtre.
@@ -62,14 +63,11 @@ gl.getParameter(gl.VIEWPORT);
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaire               |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.4", "viewport")}}                     | {{Spec2('WebGL')}}             | Définition initiale.      |
-| {{SpecName('OpenGL ES 2.0', "glViewport.xml", "glViewport")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.viewport")}}
+{{Compat}}
 
 ## Voir aussi
 

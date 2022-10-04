@@ -1,14 +1,8 @@
 ---
 title: NodeList.length
 slug: Web/API/NodeList/length
-tags:
-  - API
-  - DOM
-  - Gecko
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/NodeList/length
 ---
+
 {{APIRef("DOM")}}
 
 ## 概要

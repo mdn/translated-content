@@ -1,17 +1,8 @@
 ---
 title: IDBCursor.advance()
 slug: Web/API/IDBCursor/advance
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - advance
-translation_of: Web/API/IDBCursor/advance
 ---
+
 {{APIRef("IndexedDB")}}
 
 {{domxref("IDBCursor")}} インターフェイスの **`advance()`** メソッドはカーソルが位置を前進させる回数をセットします。

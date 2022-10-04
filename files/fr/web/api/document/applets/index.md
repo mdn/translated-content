@@ -3,6 +3,7 @@ title: Document.applets
 slug: Web/API/Document/applets
 translation_of: Web/API/Document/applets
 ---
+
 {{ ApiRef() }}
 
 `applets` retourne une liste ordonnée des applets contenus dans un document.

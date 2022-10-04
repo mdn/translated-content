@@ -3,6 +3,7 @@ title: Response.body
 slug: Web/API/Response/body
 original_slug: Web/API/Body/body
 ---
+
 {{APIRef("Fetch")}}
 
 **`body`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、本文コンテンツの {{domxref("ReadableStream")}} です。

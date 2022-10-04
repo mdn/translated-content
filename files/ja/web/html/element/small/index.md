@@ -1,15 +1,8 @@
 ---
 title: '<small>: 附随コメント要素'
 slug: Web/HTML/Element/small
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - font-size
-translation_of: Web/HTML/Element/small
 ---
+
 {{HTMLRef}}
 
 **HTML の `<small>` 要素**は、表示上のスタイルとは関係なく、著作権表示や法的表記のような、注釈や小さく表示される文を表します。既定では、 `small` から `x-small` のように、一段階小さいフォントでテキストが表示されます。

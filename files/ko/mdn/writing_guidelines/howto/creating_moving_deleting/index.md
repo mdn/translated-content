@@ -1,12 +1,6 @@
 ---
 title: 페이지 생성 및 수정
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-tags:
-  - 초보자
-  - 페이지생성
-  - 페이지수정
-  - 페이지편집
-translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
 {{MDNSidebar}}

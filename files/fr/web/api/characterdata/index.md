@@ -6,6 +6,7 @@ tags:
   - DOM
 translation_of: Web/API/CharacterData
 ---
+
 {{APIRef("DOM")}}
 
 L'interface abstraite **`CharacterData`** représente un objet {{domxref("Node")}} (_noeud_) qui contient des caractères. C'est une interface abstraite, ce qui signifie qu'il n'existe aucun objet de type `CharacterData` : elle est implémentée par d'autres interfaces comme {{domxref("Text")}}, {{domxref("Comment")}} ou {{domxref("ProcessingInstruction")}} qui ne sont pas abstraites.

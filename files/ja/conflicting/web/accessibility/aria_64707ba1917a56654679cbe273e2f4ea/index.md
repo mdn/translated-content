@@ -1,13 +1,9 @@
 ---
 title: 基本的なフォームのヒント
 slug: conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
-tags:
-  - ARIA
-  - アクセシビリティ
-  - Forms
-translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
 ---
+
 伝統的な HTML のフォーム関連要素を使用してフォームを実装する際は、コントロール向けのラベルを提供することと、ラベルとコントロールとを明示的に結びつけることが重要です。画面リーダーのユーザーがページを操作するとき、画面リーダーはフォームコントロールについて読み上げますが、コントロールトラベルとの間に直接的な結びつきがないと、どのラベルが適切かを画面リーダーが知る方法がなくなります。
 
 以下の例では、ラベルを持つシンプルなフォームを示しています。それぞれの {{ HTMLElement("input") }} 要素は `id` を持ち、またそれぞれの {{ HTMLElement("label") }} 要素は `for` 属性で関連する {{ HTMLElement("input") }} の `id` を示すことに注意してください。
@@ -65,11 +61,11 @@ HTML の {{ HTMLElement("label") }} 要素はフォーム関連の要素にふ�
 &lt;div id="descriptionRevert"&gt;Reverting will undo any changes that have been made
                             since the last save.&lt;/div&gt;</pre>
 
-> **Note:** `aria-describedby` 属性はフォームコントロールに加えて、他の用途にも使用されることに注意してください。
+> **メモ:** `aria-describedby` 属性はフォームコントロールに加えて、他の用途にも使用されることに注意してください。
 
 ## 必須のフィールドと正しくないフィールド
 
-> **Note:** `required` が全世界の 97% 以上のユーザーで利用できるようになったので、もはや `required` と `aria-required` の両方を使用することは推奨されません。
+> **メモ:** `required` が全世界の 97% 以上のユーザーで利用できるようになったので、もはや `required` と `aria-required` の両方を使用することは推奨されません。
 
 一般的にウェブ開発者は、必須のフィールドや正しくないフィールドを示すために視覚的な方法を使用します。しかし、支援技術 (AT) は必ずしもその表示から情報を推測できるわけではありません。 ARIA は、コントロールが必須あるいは正しくないことを示すための属性を用意しています。
 

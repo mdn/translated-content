@@ -15,7 +15,9 @@ translation_of: Web/API/Window/closed
 
 ## 구문
 
-    const isClosed = windowRef.closed;
+```js
+const isClosed = windowRef.closed;
+```
 
 ### 값
 

@@ -2,6 +2,7 @@
 title: '@font-face'
 slug: Web/CSS/@font-face
 ---
+
 {{CSSRef}}
 
 ## 摘要
@@ -93,7 +94,7 @@ You can specify a font on the user's local computer by name using the `local()` 
 
 ## 瀏覽器相容性
 
-{{Compat("css.at-rules.font-face")}}
+{{Compat}}
 
 ## 詳見
 

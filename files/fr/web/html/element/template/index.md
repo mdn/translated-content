@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/template
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<template>`** (ou **_Template Content_** ou modèle de contenu) est un mécanisme utilisé pour stocker du contenu HTML (côté client) qui ne doit pas être affiché lors du chargement de la page mais qui peut être instancié et affiché par la suite grâce à un script JavaScript.
@@ -164,14 +165,11 @@ table td {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG','scripting.html#the-template-element','template element')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## Voir aussi
 

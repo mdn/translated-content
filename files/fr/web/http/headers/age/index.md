@@ -3,6 +3,7 @@ title: Age
 slug: Web/HTTP/Headers/Age
 translation_of: Web/HTTP/Headers/Age
 ---
+
 {{HTTPSidebar}}
 
 L'entête HTTP {{HTTPHeader("Age")}} indique le temps en secondes pendant lequel la ressource a été stockée dans un cache proxy.

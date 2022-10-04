@@ -2,6 +2,7 @@
 title: document.releaseCapture
 slug: Web/API/Document/releaseCapture
 ---
+
 {{ ApiRef() }}
 
 ### 概述
@@ -18,7 +19,7 @@ document.releaseCapture()
 
 ### 示例
 
-请参见 {{ domxref("element.setCapture()") }} 的 [示例](/en/DOM/element.setCapture#Example)
+请参见 {{ domxref("element.setCapture()") }} 的 [示例](/zh-CN/DOM/element.setCapture#Example)
 
 ### 规范
 

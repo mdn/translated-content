@@ -1,24 +1,15 @@
 ---
 title: XMLHttpRequest.statusText
 slug: Web/API/XMLHttpRequest/statusText
-tags:
-  - AJAX
-  - API
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - XMLHttpRequest
-  - XMLHttpRequest Status
-browser-compat: api.XMLHttpRequest.statusText
-translation_of: Web/API/XMLHttpRequest/statusText
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest.statusText`** は読み取り専用のプロパティで、 [`DOMString`](/ja/docs/Web/API/DOMString) で HTTP サーバーから返されるステータスメッセージを示します。 [`XMLHTTPRequest.status`](/ja/docs/Web/API/XMLHTTPRequest/status) が数値のステータスコードを示すのとは異なり、このプロパティはレスポンスステータスの*テキスト*を、 "OK" や "Not Found" のように示します。リクエストの [`readyState`](/ja/docs/Web/API/XMLHttpRequest/readyState) が `UNSENT` または `OPENED` の状態であった場合、 `statusText` の値は空文字列になります。
 
 サーバーが明示的にステータスのテキストを指定しなかった場合、 `statusText` は既定値 "OK" と見なされます。
 
-> **Note:** HTTP/2 コネクションのレスポンスでは、常に空文字列になります。これは HTTP/2 がステータステキストに対応していないからです。
+> **メモ:** HTTP/2 コネクションのレスポンスでは、常に空文字列になります。これは HTTP/2 がステータステキストに対応していないからです。
 
 ## 例
 

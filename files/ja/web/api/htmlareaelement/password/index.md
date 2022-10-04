@@ -1,15 +1,9 @@
 ---
 title: HTMLAreaElement.password
 slug: Web/API/HTMLAreaElement/password
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-browser-compat: api.HTMLAreaElement.password
-translation_of: Web/API/HTMLAreaElement/password
 original_slug: Web/API/HTMLHyperlinkElementUtils/password
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.password`** プロパティは、ドメイン名の前で指定されたパスワードが入った文字列です。

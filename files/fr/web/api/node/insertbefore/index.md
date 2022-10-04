@@ -10,6 +10,7 @@ tags:
   - Noeud
 translation_of: Web/API/Node/insertBefore
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.insertBefore()`** insère un nœud avant un _nœud de référence_ en tant qu'enfant d'un _nœud parent_ spécifié.

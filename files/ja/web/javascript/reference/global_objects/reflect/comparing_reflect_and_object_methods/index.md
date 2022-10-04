@@ -1,17 +1,8 @@
 ---
 title: Reflect と Object のメソッドの比較
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
-tags:
-  - Guide
-  - JavaScript
-  - JavaScript Object Model
-  - Object
-  - Overview
-  - Reflect
-translation_of: >-
-  Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
+slug: Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
 ---
+
 {{jssidebar}}
 
 The {{jsxref("Reflect")}} object, introduced in ES2015, is a built-in object that provides methods to interface with JavaScript objects. Some of the static functions that exist on `Reflect` also correspond to methods available on {{jsxref("Object")}}, which predates ES2015. Although some of the methods appear to be similar in their behavior, there are often subtle differences between them.

@@ -1,15 +1,8 @@
 ---
 title: padding-bottom
 slug: Web/CSS/padding-bottom
-tags:
-  - CSS
-  - CSS パディング
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.padding-bottom
-translation_of: Web/CSS/padding-bottom
 ---
+
 {{CSSRef}}
 
 **`padding-bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#パディング領域)における下側の高さを設定します。
@@ -20,7 +13,7 @@ translation_of: Web/CSS/padding-bottom
 
 ![CSS の padding-bottom プロパティの要素ボックスへの影響](padding-bottom.svg)
 
-> **Note:** {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
+> **メモ:** {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
 
 ## 構文
 

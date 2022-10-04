@@ -1,13 +1,8 @@
 ---
 title: <xsl:preserve-space>
 slug: Web/XSLT/Element/preserve-space
-tags:
-  - XSLT
-  - preserve-space
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/preserve-space
 ---
+
 {{ XsltRef() }}
 
 `<xsl:preserve-space>` 要素は空白を保存する要素をソース文書内で定義します。複数の要素がある場合は、名前を空白文字で区切ります。空白を保持するのがデフォルト設定なので、この要素は `<xsl:strip-space>` 要素を打ち消すために使用する必要があります。

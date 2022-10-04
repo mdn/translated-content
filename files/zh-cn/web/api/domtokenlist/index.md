@@ -2,6 +2,7 @@
 title: DOMTokenList
 slug: Web/API/DOMTokenList
 ---
+
 {{APIRef}}
 
 **`DOMTokenList`** 接口表示一组空格分隔的标记（tokens）。如由 {{ domxref("Element.classList") }}、{{domxref("HTMLLinkElement.relList")}}、{{domxref("HTMLAnchorElement.relList")}} 或 {{domxref("HTMLAreaElement.relList")}} 返回的一组值。它和 JavaScript {{jsxref("Array")}} 对象一样，索引从 0 开始。`DOMTokenList` 总是区分大小写（case-sensitive）。
@@ -32,7 +33,7 @@ slug: Web/API/DOMTokenList
 - {{domxref("DOMTokenList.entries()")}}
   - : 返回一个迭代器（{{jsxref("Iteration_protocols","iterator")}}），以遍历这个对象中的所有键值对。
 - {{domxref("DOMTokenList.forEach()", "DOMTokenList.forEach(<var>callback</var> [, <var>thisArg</var>])")}}
-  - : 为每个 `DOMTokenList` 中的元素都调用一次传入的 `callback` 函数 。
+  - : 为每个 `DOMTokenList` 中的元素都调用一次传入的 `callback` 函数。
 - {{domxref("DOMTokenList.keys()")}}
   - : 返回一个迭代器（{{jsxref("Iteration_protocols","iterator")}}）以遍历这个对象中所有键值对的键。
 - {{domxref("DOMTokenList.values()")}}

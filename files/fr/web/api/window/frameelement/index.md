@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/frameElement
 ---
+
 {{ApiRef}}
 
 La propriété **`Window.frameElement`** renvoie l'élément (tel que {{HTMLElement("iframe")}} ou {{HTMLElement("object")}}) dans lequel la fenêtre est intégrée.
@@ -37,15 +38,13 @@ if (frameEl) {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-frameelement', 'Window.frameElement')}} | {{ Spec2('WebRTC 1.0') }} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.frameElement")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("window.frames")}} renvoie un objet de type tableau, listant les sous-cadres directs de la fenêtre courante.
 - {{domxref("window.parent")}} renvoie la fenêtre parente, qui est la fenêtre contenant le `frameElement` de la fenêtre enfant.

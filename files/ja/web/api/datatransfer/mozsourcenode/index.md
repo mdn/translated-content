@@ -1,23 +1,15 @@
 ---
 title: DataTransfer.mozSourceNode
 slug: Web/API/DataTransfer/mozSourceNode
-page-type: web-api-instance-property
-tags:
-  - API
-  - Non-standard
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.mozSourceNode
-translation_of: Web/API/DataTransfer/mozSourceNode
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{ Non-standard_header() }}
 
 **`DataTransfer.mozSourceNode`** プロパティは、ドラッグ操作が開始されたとき（例えば、 {{HTMLElement("button")}} がクリックされたとき）マウスカーソルが位置していた {{domxref("Node")}} を判別するために使用されます。外部からのドラッグの場合、または呼び出し側の関数がノードに到達できない場合は、 `null` が返されます。
 
-> **Note:** このプロパティは Firefox に固有のものです。
+> **メモ:** このプロパティは Firefox に固有のものです。
 
 このプロパティは {{readonlyInline}} です。
 

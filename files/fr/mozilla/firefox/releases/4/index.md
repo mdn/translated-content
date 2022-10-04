@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/4
 original_slug: Mozilla/Firefox/Versions/4
 ---
+
 1. Notes de versions pour développeurs
 
     1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
@@ -721,7 +722,7 @@ En plus des changements spécifiques référencés ci-dessous, il est important 
 - Changements dans les gestes
   - : Les gestes par défaut ont été changés, en faisant glisser trois doigts de haut en bas sur le trackpad cela ouvrira ou fermera Firefox Panorama. Pour modifier les éléments précédents, afin d'avoir les commandes de défilement haut et défilement bas, ouvrez about:config et mettez `cmd_scrollBottom` pour `browser.gesture.swipe.down` et `cmd_scrollTop` pour `browser.gesture.swipe.up`.
 
-## Voir également
+## Voir aussi
 
 - [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.6)
 - [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.5)

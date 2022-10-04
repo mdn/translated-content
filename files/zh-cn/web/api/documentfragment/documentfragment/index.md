@@ -2,6 +2,7 @@
 title: DocumentFragment()
 slug: Web/API/DocumentFragment/DocumentFragment
 ---
+
 {{ApiRef("DOM")}}{{seeCompatTable}}
 
 **`DocumentFragment()`** 构造函数返回一个新创建的 {{domxref("DocumentFragment")}} 对象。
@@ -24,8 +25,8 @@ fragment = new DocumentFragment();
 
 ## 浏览器兼容性
 
-{{Compat("api.DocumentFragment.DocumentFragment")}}
+{{Compat}}
 
 ## 参见
 
-- [DOM 接口索引](/en-US/docs/DOM/DOM_Reference)
+- [DOM 接口索引](/zh-CN/docs/DOM/DOM_Reference)

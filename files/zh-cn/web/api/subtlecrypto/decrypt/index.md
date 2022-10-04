@@ -2,6 +2,7 @@
 title: SubtleCrypto.decrypt()
 slug: Web/API/SubtleCrypto/decrypt
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`SubtleCrypto.decrypt()`** 以加密数据、算法和密钥为参数返回一个包含明文的 {{jsxref("Promise")}} 对象。
@@ -63,7 +64,7 @@ const decryptText = async (ctBuffer, iv, password) => {
 
 ## 浏览器支持
 
-{{Compat("api.SubtleCrypto.decrypt")}}
+{{Compat}}
 
 ## 另请参见
 

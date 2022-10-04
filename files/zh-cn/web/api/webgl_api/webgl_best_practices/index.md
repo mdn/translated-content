@@ -2,6 +2,7 @@
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
 ---
+
 {{WebGLSidebar}}
 
 WebGL 是一个复杂的 API，通常我们不能明显的知道它的推荐使用方式。该页面涵盖了各种专业知识的建议，不仅仅是列举出什么该做，什么不该做，还有详细的解释为什么要这样做。你可以将本文档作为指导你选择的方法，确保你无论在何种浏览器以及硬件上都使用了正确的技巧。
@@ -16,8 +17,8 @@ WebGL 是一个复杂的 API，通常我们不能明显的知道它的推荐使�
 
 - 在客户端/浏览器使用某些 WebGL 功能前，还是建议先使用 WebGL `getParameter()` 方法，获取此类参数的范围，这些数据反映了你的客户端能够支持的真实应用范围。例如，使用 `webgl.getParameter(webgl.MAX_TEXTURE_SIZE)`可以查询设备上支持的最大的 2D 纹理尺寸。从 Firefox 10 开始，WebGL 属性 `webgl.min_capability_mode` 则可以被用来测试最小性能模式下的实际表现，以测试可移植性。
 - 特别要注意的是，只有在 `webgl.getParameter(webgl.MAX_VERTEX_TEXTURE_IMAGE_UNITS)` 大于零时，才能使用 vertex shaders 中的纹理。然而，目前的移动硬件上是不支持的 (译者：待确认文档时效性)。
-- 大多数 WebGL 扩展的可用性取决于客户端。 在使用 WebGL 扩展时，如果可能的话，尝试通过优雅地适应不支持它们的情况，使它们成为可选的。从 Firefox 10 开始，属性 `webgl.disable-extensions` 允许模拟列出哪些扩展是不支持的，以测试可移植性。
-- 另外，即使支持 `OES_texture_float` 扩展，也可能不支持渲染浮点类型数据的纹理。 通常，这在当前的移动硬件上是不支持的 (译者：待确认文档时效性)。 要检查是否支持浮点类型数据，必须调用 `checkFramebufferStatus()` 来验证。
+- 大多数 WebGL 扩展的可用性取决于客户端。在使用 WebGL 扩展时，如果可能的话，尝试通过优雅地适应不支持它们的情况，使它们成为可选的。从 Firefox 10 开始，属性 `webgl.disable-extensions` 允许模拟列出哪些扩展是不支持的，以测试可移植性。
+- 另外，即使支持 `OES_texture_float` 扩展，也可能不支持渲染浮点类型数据的纹理。通常，这在当前的移动硬件上是不支持的 (译者：待确认文档时效性)。要检查是否支持浮点类型数据，必须调用 `checkFramebufferStatus()` 来验证。
 - 实际渲染到画布的分辨率可以不同于样式表最终强制画布显示的分辨率。如果考虑性能，你应该试着渲染到一个低分辨率 WebGL 上下文，并使用 CSS 来升级它的画布到你想要的尺寸。
 
 ## 一般性能提示

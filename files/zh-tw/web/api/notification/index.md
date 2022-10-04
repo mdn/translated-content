@@ -2,6 +2,7 @@
 title: Notification
 slug: Web/API/notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 [Notifications API](/zh-TW/docs/Web/API/Notifications_API) 的 `Notification` interface 是用來設置及顯示「桌面通知」給使用。
@@ -89,7 +90,7 @@ The following properties are listed in the most up-to-date spec, but are not sup
 
 ### 實例方法
 
-These properties are available only on an instance of the `Notification` object or through its [`prototype`](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
+These properties are available only on an instance of the `Notification` object or through its [`prototype`](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
 
 - {{domxref("Notification.close()")}}
   - : 透過這個方法關閉 Notification 。
@@ -158,8 +159,8 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## 瀏覽器支援度
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## 延伸閱讀
 
-- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/zh-TW/docs/Web/API/Notifications_API/Using_the_Notifications_API)

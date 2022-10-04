@@ -8,7 +8,7 @@ translation_of: Web/API/FormData/getAll
 <p><code><strong>getAll()</strong></code> - метод объекта {{domxref("FormData")}}, который возвращает все значения, связанные с ключом в объекте FormData.</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>Примечание</strong></span>: Этот метод доступен в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+<p><strong>Примечание</strong>: Этот метод доступен в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -37,7 +37,7 @@ translation_of: Web/API/FormData/getAll
 <pre class="brush: js">formData.append('username', 'Борис');
 formData.append('username', 'Кирилл');</pre>
 
-<p>Тогда метод <code>getAll()</code> вернёт оба значения <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">username</span></font> в виде массива:</p>
+<p>Тогда метод <code>getAll()</code> вернёт оба значения username в виде массива:</p>
 
 <pre class="brush: js">formData.getAll('username'); // Вернёт ["Борис", "Кирилл"]</pre>
 

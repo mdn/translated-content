@@ -2,11 +2,12 @@
 title: <input type="number">
 slug: Web/HTML/Element/Input/number
 ---
+
 {{HTMLRef}}
 
 **`"number"`**类型的 {{HTMLElement("input")}} 元素用于让用户输入一个数字。其包括内置验证以拒绝非数字输入。浏览器可能会选择提供步进箭头，让用户可以使用鼠标增加和减少输入的值，或者只需用指尖敲击即可。
 
-> **备注：** 不支持 `"number"` 类型的浏览器会改用标准的 [`"text"`](/en-US/docs/Web/HTML/Element/input/text) 输入框。
+> **备注：** 不支持 `"number"` 类型的浏览器会改用标准的 [`"text"`](/zh-CN/docs/Web/HTML/Element/input/text) 输入框。
 
 ```html
 <input id="number" type="number">
@@ -51,11 +52,11 @@ slug: Web/HTML/Element/Input/number
 
 ## 使用 number 输入框
 
-`<input type ="number">`元素可以帮助您在构建用户界面和将数字输入到表单中的逻辑时简化你的工作。 当你使用正确的 type 值 `"number"` 创建数字输入时，会自动验证你输入的文本是否为数字，通常是一组向上和向下按钮。
+`<input type ="number">`元素可以帮助您在构建用户界面和将数字输入到表单中的逻辑时简化你的工作。当你使用正确的 type 值 `"number"` 创建数字输入时，会自动验证你输入的文本是否为数字，通常是一组向上和向下按钮。
 
-> **备注：** 记住用户可以在幕后修改 HTML 是至关重要的，因此您的网站不得使用简单的客户端验证来实现任何安全目的。 您必须在服务器端验证所提供的值可能具有任何安全含义的任何事务。
+> **备注：** 记住用户可以在幕后修改 HTML 是至关重要的，因此您的网站不得使用简单的客户端验证来实现任何安全目的。您必须在服务器端验证所提供的值可能具有任何安全含义的任何事务。
 
-此外，移动浏览器通过在用户尝试输入值时显示更适合输入数字的特殊键盘，进一步帮助用户体验。 以下屏幕截图来自 Firefox for Android：
+此外，移动浏览器通过在用户尝试输入值时显示更适合输入数字的特殊键盘，进一步帮助用户体验。以下屏幕截图来自 Firefox for Android：
 
 ![](https://mdn.mozillademos.org/files/14963/number-keyboard-fxa.png)
 
@@ -70,13 +71,13 @@ slug: Web/HTML/Element/Input/number
 
 {{ EmbedLiveSample('一个简单的_number_输入框', 600, 40) }}
 
-数字输入在为空的时候以及输入单个数字时被认为是有效的，但是否则是无效的。 如果使用{{htmlattrxref("required","input")}}属性，则输入在空时不再被视为有效。
+数字输入在为空的时候以及输入单个数字时被认为是有效的，但是否则是无效的。如果使用{{htmlattrxref("required","input")}}属性，则输入在空时不再被视为有效。
 
 > **备注：** 任何数字都是可接受的值，只要它是[有效的浮点数](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number)（即不是 [NaN](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 或 [Infinity](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity)）。
 
 ### 占位符
 
-有时，提供一个如何输入表单数据的上下文提示是非常友好的。尤其当页面所有{{HTMLElement("input")}} 元素都没有说明标签时，会非常重要。这就是使用**占位符**的原因。占位符是一个通常用于说明一个输入框的 `value` 应该如何输入的提示值，当元素的 `value` 为 `""` 时，该提示将出现在编辑框里面。 一旦有数据输入到编辑框中，占位符就会消失；如果该框被清空，占位符将重新出现。
+有时，提供一个如何输入表单数据的上下文提示是非常友好的。尤其当页面所有{{HTMLElement("input")}} 元素都没有说明标签时，会非常重要。这就是使用**占位符**的原因。占位符是一个通常用于说明一个输入框的 `value` 应该如何输入的提示值，当元素的 `value` 为 `""` 时，该提示将出现在编辑框里面。一旦有数据输入到编辑框中，占位符就会消失；如果该框被清空，占位符将重新出现。
 
 这里，我们有一个占位符为"Multiple of 10"的`"number"` 输入框。请注意当你在编辑字段内容时占位符是如何消失的又是如何重现的。
 
@@ -88,7 +89,7 @@ slug: Web/HTML/Element/Input/number
 
 ### 控制步进大小
 
-默认情况下，向上和向下按钮可以将值增加或减小 1。您可以通过使用{{htmlattrxref("step","input")}} 属性来更改此步长值。 我们上面的例子中的占位符提示我们其值是 10 的倍数，所以设置 `step` 的值为 10 是合理的：
+默认情况下，向上和向下按钮可以将值增加或减小 1。您可以通过使用{{htmlattrxref("step","input")}} 属性来更改此步长值。我们上面的例子中的占位符提示我们其值是 10 的倍数，所以设置 `step` 的值为 10 是合理的：
 
 ```html
 <input type="number" placeholder="multiple of 10" step="10">
@@ -100,7 +101,7 @@ slug: Web/HTML/Element/Input/number
 
 ### 指定最小和最大值
 
-可以使用{{htmlattrxref("min","input")}} 和{{htmlattrxref("max","input")}} 属性指定该字段可以具有的最小值和最大值。 例如，给例子指定最小值为 0，最大值为 100：
+可以使用{{htmlattrxref("min","input")}} 和{{htmlattrxref("max","input")}} 属性指定该字段可以具有的最小值和最大值。例如，给例子指定最小值为 0，最大值为 100：
 
 ```html
 <input type="number" placeholder="multiple of 10" step="10" min="0" max="100">
@@ -112,7 +113,7 @@ slug: Web/HTML/Element/Input/number
 
 ### 允许小数值
 
-数字输入的一个问题是，步长默认为 1——如果你尝试输入带小数的数字，例如"1.0"，则它将被视为无效。 如果要输入一个需要小数的值，则需要修改 `step` 值（例如，`step="0.01"` 以允许 2 位小数）。 这里有一个简单的例子：
+数字输入的一个问题是，步长默认为 1——如果你尝试输入带小数的数字，例如"1.0"，则它将被视为无效。如果要输入一个需要小数的值，则需要修改 `step` 值（例如，`step="0.01"` 以允许 2 位小数）。这里有一个简单的例子：
 
 ```html
 <input type="number" placeholder="1.0" step="0.01" min="0" max="10">
@@ -334,10 +335,10 @@ After declaring a few variables, we add an event listener to the button to contr
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.input.input-number")}}
+{{Compat}}
 
 ## 相关链接
 
 - [HTML forms guide](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
+- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)

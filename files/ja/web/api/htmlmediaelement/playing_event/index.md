@@ -1,16 +1,8 @@
 ---
 title: 'HTMLMediaElement: playing イベント'
 slug: Web/API/HTMLMediaElement/playing_event
-page-type: web-api-event
-tags:
-  - API
-  - HTMLMediaElement
-  - Reference
-  - playing
-  - Event
-browser-compat: api.HTMLMediaElement.playing_event
-translation_of: Web/API/HTMLMediaElement/playing_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `playing` イベントは再生が最初に開始されたときと、再生が再開されたときに発行されます。例えば、データ不足で一時停止や遅延していた再生が再開されたときに発行されます。

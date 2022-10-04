@@ -1,19 +1,8 @@
 ---
 title: 'CSP: plugin-types'
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - Flash
-  - HTTP
-  - Java
-  - Plugin
-  - Plugins
-  - Security
-browser-compat: http.headers.Content-Security-Policy.plugin-types
-translation_of: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`plugin-types`** ディレクティブは、文書に埋め込むことができるプラグインのセットを、読み込むことができるリソースの種類を制限することによって制限します。

@@ -2,6 +2,7 @@
 title: Element.toggleAttribute()
 slug: Web/API/Element/toggleAttribute
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} 接口的 **`toggleAttribute()`** 方法切换给定元素的某个布尔值属性的状态（如果属性不存在则添加属性，属性存在则移除属性）。
@@ -86,4 +87,4 @@ if (!Element.prototype.toggleAttribute) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.toggleAttribute")}}
+{{Compat}}

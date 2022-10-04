@@ -2,9 +2,10 @@
 title: Game distribution
 slug: Games/Publishing_games/Game_distribution
 ---
+
 {{GamesSidebar}}
 
-你已经跟着一两个[教程](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript)做了一个 HTML5 游戏了——真棒 ! 这篇文章介绍了一些可以让你投放你的游戏的方式。 包括自己建立网站，在公开的应用市场上线，或是发布到 Google Play 或 IOS 的 App Store。
+你已经跟着一两个[教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript)做了一个 HTML5 游戏了——真棒 ! 这篇文章介绍了一些可以让你投放你的游戏的方式。包括自己建立网站，在公开的应用市场上线，或是发布到 Google Play 或 IOS 的 App Store。
 
 ## HTML5 相较于传统的好处
 
@@ -12,9 +13,9 @@ slug: Games/Publishing_games/Game_distribution
 
 ### 多平台兼容
 
-HTML5 本身是多平台的，所以你只需要写一种代码就可以适配不同的平台。 从小型的智能手机和平板电脑，到笔记本电脑和台式电脑，再到智能电视，智能手表甚至是智能冰箱（如果它内置现代化浏览器的话）。
+HTML5 本身是多平台的，所以你只需要写一种代码就可以适配不同的平台。从小型的智能手机和平板电脑，到笔记本电脑和台式电脑，再到智能电视，智能手表甚至是智能冰箱（如果它内置现代化浏览器的话）。
 
-你并不需要数个开发小组去编写不同平台的代码，你们只需要维护这一种基础代码。 你可以花更多时间去[推广游戏](/en-US/docs/Games/Techniques/Publishing_games/Game_promotion)和促进[游戏收益化](/en-US/docs/Games/Techniques/Publishing_games/Game_monetization)。
+你并不需要数个开发小组去编写不同平台的代码，你们只需要维护这一种基础代码。你可以花更多时间去[推广游戏](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion)和促进[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)。
 
 ### 即时更新
 
@@ -40,7 +41,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 - 发行商代理
 - 上架商店
 
-记住你的游戏名应该要足够独特，这样可以在发布之后迅速地[推广](/en-US/docs/Games/Techniques/Publishing_games/Game_promotion), 但也要同样朗朗上口，这样人们才不会忘记。
+记住你的游戏名应该要足够独特，这样可以在发布之后迅速地[推广](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion), 但也要同样朗朗上口，这样人们才不会忘记。
 
 ### 自运营
 
@@ -52,7 +53,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 
 ### 发行商和门户网站
 
-顾名思义，开发商可以帮助你发行游戏，是否交给开发商则取决于你的游戏开发计划：你想在全平台发行么？或你只向[购买了游戏](/en-US/docs/Games/Publishing_games/Game_monetization)的用户开放游戏？这都取决于你，考虑各个选项，试验和结论。你可以在[游戏收益化](/en-US/docs/Games/Techniques/Publishing_games/Game_monetization/)这篇文章中得到更详细的关于发行商的解释。
+顾名思义，开发商可以帮助你发行游戏，是否交给开发商则取决于你的游戏开发计划：你想在全平台发行么？或你只向[购买了游戏](/zh-CN/docs/Games/Publishing_games/Game_monetization)的用户开放游戏？这都取决于你，考虑各个选项，试验和结论。你可以在[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization/)这篇文章中得到更详细的关于发行商的解释。
 
 这里还有许多独立的门户网站收集 HTML5 游戏，例如 [HTML5Games.com](http://html5games.com/), [MarketJS.com](http://www.marketjs.com/), [Clay.io](http://clay.io/), or [Poki](https://developers.poki.com/) 你可以把你的游戏发布上去，它会得到一些自然的推广，因为这些网站吸引了大量的流量。一些网站会把你的文件放在他们的服务器上运营，而其他网站则只链接到你的网站或将你的游戏嵌入他们的网站，这样的曝光可能只是为你的游戏提供宣传，如果你的游戏旁边有广告 (或其他赚钱的选项)，它也可能为你的游戏提供收益化。
 
@@ -92,7 +93,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 
 ## 打包游戏
 
-网页是 HTML5 游戏的首选也是最好的选择，但如果你想接触到更广泛的受众并在封闭的生态系统中发行你的游戏，你仍然可以通过打包它来做到这一点。好在你不需要几个独立的团队在不同的平台上致力于同一款游戏——你可以一次性构建它，并使用像 [Phonegap](/en-US/docs/) 或 [CocoonIO](/en-US/docs/) 这样的工具为本地商店打包游戏。生成的包通常非常可靠，但是您仍然应该测试它们，并注意要修复的小问题或 bug。
+网页是 HTML5 游戏的首选也是最好的选择，但如果你想接触到更广泛的受众并在封闭的生态系统中发行你的游戏，你仍然可以通过打包它来做到这一点。好在你不需要几个独立的团队在不同的平台上致力于同一款游戏——你可以一次性构建它，并使用像 [Phonegap](/zh-CN/docs/) 或 [CocoonIO](/zh-CN/docs/) 这样的工具为本地商店打包游戏。生成的包通常非常可靠，但是您仍然应该测试它们，并注意要修复的小问题或 bug。
 
 ### 实用工具
 
@@ -111,4 +112,4 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 
 ## 总结
 
-发行游戏是让你的世界为世界所知的方式，选择很多，但没有上上策。当你发行了游戏之后，便是专注于[推广](/en-US/docs/Games/Techniques/Publishing_games/Game_promotion/)的时候了——让人们知道你的游戏的存在。没有推广，它们甚至都可能不知道有这个游戏，更别说玩了。
+发行游戏是让你的世界为世界所知的方式，选择很多，但没有上上策。当你发行了游戏之后，便是专注于[推广](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion/)的时候了——让人们知道你的游戏的存在。没有推广，它们甚至都可能不知道有这个游戏，更别说玩了。

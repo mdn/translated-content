@@ -7,6 +7,7 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
+
 {{JsSidebar("Classes")}}Les propriétés de classe sont publiques par défaut et peuvent être lues et modifiées à l'extérieur de la classe. Cependant, [une proposition expérimentale](https://github.com/tc39/proposal-class-fields), permettant de définir des variables privées dans une classe avec le préfixe `#`, est disponible.
 
 ## Syntaxe
