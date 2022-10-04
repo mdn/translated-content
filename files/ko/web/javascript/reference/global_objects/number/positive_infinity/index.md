@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
+
 {{JSRef}}
 
 **`Number.POSITIVE_INFINITY`** 속성은 양의 무한대를 나타냅니다.
@@ -20,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 
 `POSITIVE_INFINITY`는 수학에서의 무한대와 약간 다릅니다.
 
-- `POSITIVIE_INFINITY`를 포함한 아무 양의 수와 `POSITIVE_INFINITY`를 곱한 결과는 `POSITIVE_INFINITY`입니다.
+- `POSITIVE_INFINITY`를 포함한 아무 양의 수와 `POSITIVE_INFINITY`를 곱한 결과는 `POSITIVE_INFINITY`입니다.
 - {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}를 포함한 아무 음의 수와 `POSITIVE_INFINITY`를 곱한 결과는 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}입니다.
 - 아무 양의 수를 `POSITIVE_INFINITY`로 나눈 결과는 0입니다.
 - 아무 음의 수를 `POSITIVE_INFINITY`로 나눈 결과는 음의 부호를 가진 0입니다.
@@ -41,10 +42,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 다음 코드에서 `bigNumber`는 JavaScript의 최댓값보다 큰 값을 할당받습니다. {{jsxref("Statements/if...else", "if")}} 문이 실행되면, `bigNumber`의 값이 `Infinity`이므로 `bigNumber`는 계산에 좀 더 적합한 유한값을 다시 할당합니다.
 
 ```js
-var bigNumber = (Number.MAX_VALUE) * 2;
+var bigNumber = Number.MAX_VALUE * 2;
 
 if (bigNumber === Number.POSITIVE_INFINITY) {
-  bigNumber = returnFinite();
+	bigNumber = returnFinite();
 }
 ```
 
