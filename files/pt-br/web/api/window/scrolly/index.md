@@ -32,9 +32,9 @@ window.scrollByPages(1);
 
 Utilize esta propriedade para verificar se o documento já foi rolado quando funções de rolagem relativa, tais como {{domxref("window.scrollBy")}}, {{domxref("window.scrollByLines")}}, ou {{domxref("window.scrollByPages")}}, forem utilizadas.
 
-A propriedade `pageYOffset é um alias para scrollY:`
+A propriedade `pageYOffset` é um alias para `scrollY`:
 
-```
+```js
 window.pageYOffset == window.scrollY; // always true
 ```
 

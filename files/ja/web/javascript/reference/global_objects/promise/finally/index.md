@@ -42,7 +42,7 @@ p.finally(function() {
   - `Promise.resolve(2).then(() => {}, () => {})` (`undefined` で解決される) と異なり、`Promise.resolve(2).finally(() => {})` は `2` で解決されます。
   - 同様に、`Promise.reject(3).then(() => {}, () => {})` (`undefined` で解決される) と異なり、`Promise.reject(3).finally(() => {})` は `3` で拒否されます。
 
-> **Note:** `finally` コールバック内で `throw` が行われた場合 (または、拒否されたプロミスを返した場合)、 `throw` を呼び出すときに指定された拒否理由と共に新しいプロミスが拒否されます。
+> **メモ:** `finally` コールバック内で `throw` が行われた場合 (または、拒否されたプロミスを返した場合)、 `throw` を呼び出すときに指定された拒否理由と共に新しいプロミスが拒否されます。
 
 ## 例
 

@@ -28,7 +28,7 @@ isNaN(value)
 
 ### `isNaN` 函数的必要性
 
-与 JavaScript 中其他的值不同，{{jsxref("Global_Objects/NaN", "NaN")}}不能通过相等操作符（== 和 ===）来判断 ，因为 `NaN == NaN` 和 `NaN === NaN` 都会返回 `false`。 因此，`isNaN` 就很有必要了。
+与 JavaScript 中其他的值不同，{{jsxref("Global_Objects/NaN", "NaN")}}不能通过相等操作符（== 和 ===）来判断，因为 `NaN == NaN` 和 `NaN === NaN` 都会返回 `false`。因此，`isNaN` 就很有必要了。
 
 ### `NaN 值`的产生
 
@@ -42,7 +42,7 @@ isNaN(value)
 
 下一个版本的 ECMAScript (ES2015) 包含{{jsxref("Number.isNaN()")}}函数。通过`Number.isNaN(x)`来检测变量`x`是否是一个`NaN`将会是一种可靠的做法。然而，在缺少`Number.isNaN`函数的情况下，通过表达式`(x != x)` 来检测`变量 x`是否是`NaN`会更加可靠。
 
-一个`isNaN`的 polyfill 可以理解为（这个 polyfill 利用了`NaN`自身永不相等于自身这一特征 ）：
+一个`isNaN`的 polyfill 可以理解为（这个 polyfill 利用了`NaN`自身永不相等于自身这一特征）：
 
 ```js
 var isNaN = function(value) {
@@ -75,7 +75,7 @@ isNaN(new Date());                // false
 isNaN(new Date().toString());     // true
 
 isNaN("blabla")   // true: "blabla"不能转换成数值
-                  // 转换成数值失败， 返回 NaN
+                  // 转换成数值失败，返回 NaN
 ```
 
 ### 有用的特殊行为

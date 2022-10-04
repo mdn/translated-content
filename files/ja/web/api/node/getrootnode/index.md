@@ -2,6 +2,7 @@
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
 ---
+
 {{APIRef("DOM")}}
 
 **`getRootNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、そのコンテキストのオブジェクトのルート、利用できる場合はオプションでシャドウルートを含んだものを返します。

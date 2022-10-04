@@ -2,6 +2,7 @@
 title: Firefox OS
 slug: Glossary/Firefox_OS
 ---
+
 Firefox OS は、Linux と {{glossary("Mozilla Firefox","Firefox")}} の強力な {{glossary("Gecko")}} レンダリングエンジンをベースにした Mozilla のモバイル OS です。Firefox OS は主に、{{glossary("Gaia")}}、 {{glossary("Gecko")}}、{{glossary("Gonk")}} から構成されています。
 
 ## 関連項目

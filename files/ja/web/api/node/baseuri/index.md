@@ -2,6 +2,7 @@
 title: Node.baseURI
 slug: Web/API/Node/baseURI
 ---
+
 {{APIRef("DOM")}}
 
 **`baseURI`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、このノードを含む文書の絶対的なベース URL を返します。

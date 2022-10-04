@@ -2,6 +2,7 @@
 title: Navigator.getVRDisplays()
 slug: Web/API/Navigator/getVRDisplays
 ---
+
 {{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
 
 **`getVRDisplays()`** は {{domxref("Navigator")}} インターフェイスのメソッドで、コンピューターに接続されている利用可能な VR 機器を表す {{domxref("VRDisplay")}} オブジェクトの配列へ解決するためのプロミスを返します。

@@ -2,6 +2,7 @@
 title: KeyboardEvent.isComposing
 slug: Web/API/KeyboardEvent/isComposing
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.isComposing`** は読み取り専用プロパティで、イベントが変換セッションの途中、すなわち {{domxref("Element/compositionstart_event", "compositionstart")}} の後かつ {{domxref("Element/compositionend_event", "compositionend")}} の前に発行されたことを示す論理値を返します。

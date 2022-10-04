@@ -7,7 +7,7 @@ slug: Web/API/FormData/FormData
 
 **`FormData()`** コンストラクターは、新しい {{domxref("FormData")}} オブジェクトを生成します。
 
-> **Note:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
+> **メモ:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
 
 ## 構文
 
@@ -54,7 +54,7 @@ formData.append('username', 'Chris');
 </form>
 ```
 
-> **Note:** 正しく選択されたフォーム コントロールだけが FormData に含まれます。つまり、name 属性を持ち、disabled ではなく、checked (ラジオボタンやチェックボックス) または selected (選択リストのひとつ以上のオプション) であるものです。
+> **メモ:** 正しく選択されたフォーム コントロールだけが FormData に含まれます。つまり、name 属性を持ち、disabled ではなく、checked (ラジオボタンやチェックボックス) または selected (選択リストのひとつ以上のオプション) であるものです。
 
 ```js
 let myForm = document.getElementById('myForm');

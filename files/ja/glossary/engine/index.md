@@ -2,6 +2,7 @@
 title: Engine
 slug: Glossary/Engine
 ---
+
 {{glossary("JavaScript")}} エンジンは、 JavaScript のプログラムを構文解析して実行するインタープリターです。
 
 ## 詳細情報

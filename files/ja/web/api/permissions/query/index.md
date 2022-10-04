@@ -2,6 +2,7 @@
 title: Permissions.query()
 slug: Web/API/Permissions/query
 ---
+
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
 {{domxref("Permissions")}} インターフェイスの **`Permissions.query()`** メソッドは、グローバルスコープに対するユーザーのパーミッションの状態を返します。
@@ -22,9 +23,9 @@ navigator.permissions.query(PermissionDescriptor).then(function(permissionStatus
     - `userVisibleOnly`: （Push のみ。 Firefox はサポートしていません。 下記のブラウザーの互換性のセクションを参照してください）すべてのメッセージについて通知を表示するか、サイレントプッシュ通知を送信できるかを示します。 デフォルトは `false` です。
     - `sysex`: （Midi のみ）システムエクスクルーシブメッセージが必要か受信するかどうかを示します。 デフォルトは `false` です。
 
-> **Note:** Firefox 44 以降、[Notifications](/ja/docs/Web/API/Notifications_API) と [Push](/ja/docs/Web/API/Push_API) のパーミッションは統合されました。 （例えば、ユーザーによって、関連するパーミッションのダイアログにより）パーミッションが与えられた場合、`navigator.permissions.query()` は `notifications` と `push` の両方に対して `true` を返します。
+> **メモ:** Firefox 44 以降、[Notifications](/ja/docs/Web/API/Notifications_API) と [Push](/ja/docs/Web/API/Push_API) のパーミッションは統合されました。 （例えば、ユーザーによって、関連するパーミッションのダイアログにより）パーミッションが与えられた場合、`navigator.permissions.query()` は `notifications` と `push` の両方に対して `true` を返します。
 
-> **Note:** `persistent-storage` パーミッションは、[Storage API](https://storage.spec.whatwg.org/) のとおりに、オリジンがそのストレージとして永続的ボックス（すなわち永続的ストレージ（[persistent storage](https://storage.spec.whatwg.org/#persistence)））を使用することを許可します。
+> **メモ:** `persistent-storage` パーミッションは、[Storage API](https://storage.spec.whatwg.org/) のとおりに、オリジンがそのストレージとして永続的ボックス（すなわち永続的ストレージ（[persistent storage](https://storage.spec.whatwg.org/#persistence)））を使用することを許可します。
 
 ### 戻り値
 

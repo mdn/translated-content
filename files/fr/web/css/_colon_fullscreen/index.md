@@ -59,13 +59,11 @@ Dans ce fragment de code HTML, c'est l'élément {{HTMLElement("button")}} avec 
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('Fullscreen', '#:fullscreen-pseudo-class', ':fullscreen')}} | {{Spec2('Fullscreen')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.fullscreen")}}
+{{Compat}}
 
 ## Voir aussi
 

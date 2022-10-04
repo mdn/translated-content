@@ -65,9 +65,13 @@ float: unset;
 - `inline-end`
   - : Un mot-clé indiquant que l'élément doit flotter du côté de la fin du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord droit ; pour les scripts RTL, c'est le bord gauche.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -131,18 +135,11 @@ p.avecBoitesRouges { overflow: hidden; height: auto; }
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                             | Commentaires                                                       |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Les valeurs `inline-start` et `inline-end` sont ajoutées.          |
-| {{SpecName('CSS3 Box', '#float', 'float')}}                                         | {{Spec2('CSS3 Box')}}                     | Introduction de nouvelles valeurs, pas encore clairement définies. |
-| {{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}}             | {{Spec2('CSS2.1')}}                         | Aucune modification.                                               |
-| {{SpecName('CSS1', '#float', 'float')}}                                             | {{Spec2('CSS1')}}                         | Définition initiale.                                               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.float")}}
+{{Compat}}
 
 ## Voir aussi
 

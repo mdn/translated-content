@@ -2,6 +2,7 @@
 title: location.href
 slug: Web/API/Location/href
 ---
+
 {{ApiRef("Location")}}
 
 **`href`** は {{domxref("Location")}} インターフェイスのプロパティで、{{Glossary("stringifier", "文字列化")}}であり、 {{domxref("USVString")}} で URL 全体を表し、 href を更新することができます。

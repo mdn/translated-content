@@ -2,6 +2,7 @@
 title: CookieStore.set()
 slug: Web/API/CookieStore/set
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
 {{domxref("CookieStore")}} インターフェイスの **`getAll()`** メソッドは、渡された名前またはオプションに一致する Cookie のリストを返します。引数を何も渡さなければ、現在のコンテキストのすべての Cookie を返します。
@@ -46,7 +47,7 @@ var promise = cookieStore.set(options);
         - `"none"`
           - : Cookie は、すべてのコンテキストで送信されます。
 
-        > **Note:** SameSite cookies の詳細については、 [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) をご覧ください。
+        > **メモ:** SameSite cookies の詳細については、 [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) をご覧ください。
 
 ### 返値
 

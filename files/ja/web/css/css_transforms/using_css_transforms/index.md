@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
 
 CSS 座標変換は、アフィン線形変換を HTML 要素に対して適用する一連の CSS プロパティによって実現されます。座標変換には、二次元と三次元空間の両方について回転 (rotation)、傾斜 (skewing)、拡大縮小 (scaling)、平行移動 (translation) があります。
 
-> **Warning:** [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model)によって配置された要素に対してのみ `transform` を実行することができます。言うまでもなく、 `display: block` である要素がボックスモデルで配置されます。
+> **警告:** [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model)によって配置された要素に対してのみ `transform` を実行することができます。言うまでもなく、 `display: block` である要素がボックスモデルで配置されます。
 
 ## CSS 座標変換のプロパティ
 

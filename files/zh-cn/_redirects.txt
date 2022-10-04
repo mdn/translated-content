@@ -1154,7 +1154,7 @@
 /zh-CN/docs/MDN/JavaScript/Reference/Global_Objects	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 /zh-CN/docs/MDN/JavaScript/Reference/Global_Objects/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 /zh-CN/docs/MDN/Kuma	/zh-CN/docs/MDN/Yari
-/zh-CN/docs/MDN/MDN_Product_Advisory_Board/Members	/zh-CN/docs/conflicting/MDN/MDN_Product_Advisory_Board
+/zh-CN/docs/MDN/MDN_Product_Advisory_Board/Members	/zh-CN/docs/MDN/MDN_Product_Advisory_Board
 /zh-CN/docs/MDN/Structures	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Structures/Compatibility_tables	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Structures/Live_samples	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
@@ -1378,11 +1378,10 @@
 /zh-CN/docs/Web/API/Document/ononline	/zh-CN/docs/Web/API/Window/online_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
-/zh-CN/docs/Web/API/Document/rouchmove_event	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
 /zh-CN/docs/Web/API/Document/selectstart_event	/zh-CN/docs/Web/API/Node/selectstart_event
-/zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/conflicting/Web/API/Element/touchcancel_event
+/zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/API/Document/touchend_event	/zh-CN/docs/Web/API/Element/touchend_event
-/zh-CN/docs/Web/API/Document/touchmove_event	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
+/zh-CN/docs/Web/API/Document/touchmove_event	/zh-CN/docs/Web/API/Element/touchmove_event
 /zh-CN/docs/Web/API/Document/touchstart_event	/zh-CN/docs/Web/API/Element/touchstart_event
 /zh-CN/docs/Web/API/Document/width	/zh-CN/docs/Web/API/Element/clientWidth
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement
@@ -2155,7 +2154,7 @@
 /zh-CN/docs/Web/Events/toggle	/zh-CN/docs/Web/API/HTMLDetailsElement/toggle_event
 /zh-CN/docs/Web/Events/touchcancel	/zh-CN/docs/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/Events/touchend	/zh-CN/docs/Web/API/Element/touchend_event
-/zh-CN/docs/Web/Events/touchmove	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
+/zh-CN/docs/Web/Events/touchmove	/zh-CN/docs/Web/API/Element/touchmove_event
 /zh-CN/docs/Web/Events/touchstart	/zh-CN/docs/Web/API/Element/touchstart_event
 /zh-CN/docs/Web/Events/transitionend	/zh-CN/docs/Web/API/Element/transitionend_event
 /zh-CN/docs/Web/Events/unhandledrejection	/zh-CN/docs/Web/API/Window/unhandledrejection_event

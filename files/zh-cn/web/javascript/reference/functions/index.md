@@ -151,7 +151,7 @@ function* [name]([param] [, param] [..., param]) { statements }
 ```
 
 - `param`
-  - : 参数名称。零参数需要用 () 表示. 只有一个参数时不需要括号. (例如 `foo => 1`)
+  - : 参数名称。零参数需要用 () 表示。只有一个参数时不需要括号。(例如 `foo => 1`)
 - `statements or expression`
   - : 多个声明 statements 需要用大括号括起来，而单个表达式时则不需要。表达式 expression 也是该函数的隐式返回值。
 
@@ -195,11 +195,11 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 
 ### 默认参数
 
-如果没有值或传入了未定义的值，默认函数参数允许形式参数使用默认值初始化。 参见：[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)。
+如果没有值或传入了未定义的值，默认函数参数允许形式参数使用默认值初始化。参见：[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)。
 
 ### 剩余参数
 
-剩余参数语法允许将数量不限的参数描述成一个数组。 参见：[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)。
+剩余参数语法允许将数量不限的参数描述成一个数组。参见：[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)。
 
 ## `arguments`对象
 
@@ -308,7 +308,7 @@ function foo() {
 
 函数表达式定义的函数继承了当前的作用域。换言之，函数构成了闭包。另一方面，Function 构造函数定义的函数不继承任何全局作用域以外的作用域 (那些所有函数都继承的)。
 
-通过函数表达式定义的函数和通过函数声明定义的函数只会被解析一次，而 Function 构造函数定义的函数却不同。也就是说，每次构造函数被调用，传递给 Function 构造函数的函数体字符串都要被解析一次 。虽然函数表达式每次都创建了一个闭包，但函数体不会被重复解析，因此函数表达式仍然要快于"`new Function(...)`"。 所以 Function 构造函数应尽可能地避免使用。
+通过函数表达式定义的函数和通过函数声明定义的函数只会被解析一次，而 Function 构造函数定义的函数却不同。也就是说，每次构造函数被调用，传递给 Function 构造函数的函数体字符串都要被解析一次。虽然函数表达式每次都创建了一个闭包，但函数体不会被重复解析，因此函数表达式仍然要快于"`new Function(...)`"。所以 Function 构造函数应尽可能地避免使用。
 
 有一点应该要注意的，在通过解析 Function 构造函数字符串产生的函数里，内嵌的函数表达式和函数声明不会被重复解析。例如：
 

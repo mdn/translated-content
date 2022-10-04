@@ -2,13 +2,14 @@
 title: Push API
 slug: Web/API/Push_API
 ---
+
 {{ApiRef("Push API")}}
 
 **Push API** は、ウェブアプリケーションがサーバーからメッセージ (プッシュ通知) を受信できるようにします。ウェブアプリケーションがフォアグランド状態かどうか、読み込まれているかどうかに関わらず利用できます。開発者は、オプトインしたユーザーへ非同期の通知と更新を届けることができ、タイムリーな新着コンテンツによってユーザーの関心を得られるでしょう。
 
 ## プッシュ通知の概念と使い方
 
-> **Warning:** PushManager へのサブスクリプションを実装する場合、アプリで CSRF/XSRF 問題を起こさないように保護することが非常に重要です。詳しくは以下の記事を参照してください。
+> **警告:** PushManager へのサブスクリプションを実装する場合、アプリで CSRF/XSRF 問題を起こさないように保護することが非常に重要です。詳しくは以下の記事を参照してください。
 >
 > - [Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 > - [Preventing CSRF and XSRF Attacks](https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/)

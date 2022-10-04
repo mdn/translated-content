@@ -7,13 +7,13 @@ translation_of: Web/CSS/::first-letter
 
 ## Sumário
 
-O `::first-letter` [CSS](/en/CSS) [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elementos) que seleciona a primeira letra da primeira linha de um bloco, se nçao for procedido por qual outro conteúdo (como imagens ou tableas embutidas/inline table) na mesma linha.
+O [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements "pseudo-elemento") [CSS](/pt-BR/docs/Web/CSS "CSS") `::first-letter` seleciona a primeira letra da primeira linha de um bloco, desde que não seja precedida por outro conteúdo (como imagens ou tabelas embutidas/inline) na mesma linha.
 
 A primeira letra de um elemento não é necessariamente uma identificação trivial:
 
 - Pontuação, que é qualquer caractere definido em Unicode de abertura (Ps), de fechamento (Pe), aspa inicial (Pi), aspa final (Pf) e outras pontuações (Po), precedendo ou imediatamente após a primeira letra também é correspondida por esse pseudo-elemento.
-- Da mesma forma, alguns idiomas têm dígitos que são sempre escritos em maiúsculas, como o IJ em holandês. Nesses casos raros, as duas letras do dígrafo devem corresponder ao pseudo-elemento :: first-letter. (Isso é pouco suportado pelos navegadores, verifique [a tabela de compatibilidade](#Compatibilidade_de_Navegadores)).
-- Finalmente, uma combinação do pseudoelemento {{cssxref (":: before")}} e a propriedade {{cssxref ("content")}} podem injetar algum texto no início do elemento. Nesse caso, `::first-letter` corresponderá à primeira letra deste conteúdo gerado.
+- Da mesma forma, alguns idiomas têm dígitos que são sempre escritos em maiúsculas, como o IJ em holandês. Nesses casos raros, as duas letras do dígrafo devem corresponder ao pseudo-elemento `::first-letter`. (Isso é pouco suportado pelos navegadores, verifique [a tabela de compatibilidade](#Compatibilidade_de_Navegadores)).
+- Finalmente, uma combinação do pseudoelemento {{cssxref ("::before")}} e a propriedade {{cssxref ("content")}} podem injetar algum texto no início do elemento. Nesse caso, `::first-letter` corresponderá à primeira letra deste conteúdo gerado.
 
 Uma primeira linha tem apenas significado em uma caixa de contêiner de bloco; portanto, o pseudo-elemento `::first-letter` apenas afeta os elementos com um valor de {{cssxref ("display")}} de `block`, `inline-block`, `table-cell`, `list-item` ou `table-caption`. Em todos os outros casos, `::first-letter` não tem efeito.
 

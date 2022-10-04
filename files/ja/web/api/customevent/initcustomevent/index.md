@@ -2,6 +2,7 @@
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 **`CustomEvent.initCustomEvent()`** メソッドは {{domxref("CustomEvent")}} オブジェクトを初期化します。
@@ -11,7 +12,7 @@ slug: Web/API/CustomEvent/initCustomEvent
 このメソッドは、 {{ domxref("EventTarget.dispatchEvent()") }} を使ってイベントが配信される前に、イベントを設定するために呼び出す必要があります。
 配信された後は、何もしません。
 
-> **Note:** **このメソッドは非推奨なので、使用しないでください。**
+> **メモ:** **このメソッドは非推奨なので、使用しないでください。**
 >
 > この機能を使用するのではなく、代わりに {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}} のような特定のイベントのコンストラクターを使用してください。
 > [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、これらの使用方法についての詳細が記載されています。

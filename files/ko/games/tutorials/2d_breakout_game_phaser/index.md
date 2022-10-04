@@ -1,22 +1,6 @@
 ---
 title: 2D breakout game using Phaser
 slug: Games/Tutorials/2D_breakout_game_Phaser
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - NeedsTranslation
-  - Phaser
-  - TopicStub
-  - Tutorial
-  - 게임
-  - 자바스크립트
-  - 초급자
-  - 캔버스
-  - 튜토리얼
-translation_of: Games/Tutorials/2D_breakout_game_Phaser
 ---
 {{GamesSidebar}}
 

@@ -53,14 +53,12 @@ Dans cet exemple, les couleurs utilisées par défaut sont exotiques voire illis
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS5 Media Queries', '#forced-colors', 'forced-colors')}} | {{Spec2('CSS5 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.sort")}}
+{{Compat}}
 
 ## Voir aussi
 
-{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}

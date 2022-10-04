@@ -68,7 +68,7 @@ slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 - 同一のスクリプトで HTML と SVG の双方を操作できます。
 - 文書は、完全に標準準拠です。
 
-> **Note:** DOM メソッドでリンクした画像を組み込まれた SVG 要素に追加するには、`href` の設定に `setAttributeNS` を使用してください。次の例のようにします:
+> **メモ:** DOM メソッドでリンクした画像を組み込まれた SVG 要素に追加するには、`href` の設定に `setAttributeNS` を使用してください。次の例のようにします:
 >
 > ```js
 >  var img = document.createElementNS("http://www.w3.org/2000/svg", "image");

@@ -2,6 +2,7 @@
 title: Media​Stream Recording API の使用
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 ---
+
 {{DefaultAPISidebar("MediaStream Recording")}}
 
 [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) を使用すると、音声や動画のストリームを簡単に記録できます。 {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}} と一緒に使用すると、ユーザーの入力デバイスから記録して結果を即座にウェブアプリで使用するための簡単な方法が提供されます。 音声と動画の両方を別々にまたは一緒に記録することができます。 この記事では、この API を提供する `MediaRecorder` インターフェースの使用方法に関する基本的なガイドを提供することを目的としています。
@@ -46,7 +47,7 @@ header {
 }
 ```
 
-> **Note:** `calc()` は、最近のブラウザーでも、Internet Explorer 9 に戻っても十分にサポートされています。
+> **メモ:** `calc()` は、最近のブラウザーでも、Internet Explorer 9 に戻っても十分にサポートされています。
 
 ### 表示/非表示のチェックボックスのハック
 
@@ -143,7 +144,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 - **Success callback**: このコードは、`getUserMedia` の呼び出しが正常に完了した後に実行されます。
 - **Error callback**: 何らかの理由で `getUserMedia` の呼び出しが失敗した場合、このコードが実行されます。
 
-> **Note:** 以下のコードはすべて `getUserMedia` の Success callback 内にあります。
+> **メモ:** 以下のコードはすべて `getUserMedia` の Success callback 内にあります。
 
 ## メディアストリームのキャプチャ
 
@@ -177,7 +178,7 @@ mediaRecorder.ondataavailable = function(e) {
 }
 ```
 
-> **Note:** ブラウザーは必要に応じて `dataavailable` イベントを発生させますが、この間隔を制御するために `start()` メソッドを呼び出すときにタイムスライス（例えば `start(10000)` ）を含めることも、必要なときに {{domxref("MediaRecorder.requestData()")}} を呼び出してイベントを発生させることもできます。
+> **メモ:** ブラウザーは必要に応じて `dataavailable` イベントを発生させますが、この間隔を制御するために `start()` メソッドを呼び出すときにタイムスライス（例えば `start(10000)` ）を含めることも、必要なときに {{domxref("MediaRecorder.requestData()")}} を呼び出してイベントを発生させることもできます。
 
 最後に、停止ボタンが押されたときに {{domxref("MediaRecorder.stop()")}} メソッドを使用して録音を停止し、アプリの他の場所で使用できるように {{domxref("Blob")}} を完成させます。
 
