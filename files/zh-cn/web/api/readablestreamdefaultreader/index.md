@@ -68,4 +68,4 @@ fetch("https://www.example.org/").then((response) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.ReadableStreamDefaultReader")}}
+{{Compat}}

@@ -58,4 +58,4 @@ peerConnection.addEventListener("track", e => {
 
 ## Browser compatibility
 
-{{Compat("api.RTCTrackEvent")}}
+{{Compat}}

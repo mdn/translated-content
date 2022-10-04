@@ -38,4 +38,4 @@ var oscillatorNode = new OscillatorNode(context, options)
 
 ## 浏览器兼容性
 
-{{Compat("api.OscillatorNode.OscillatorNode")}}
+{{Compat}}

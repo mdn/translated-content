@@ -1,19 +1,21 @@
 ---
 title: 非同期 JavaScript
 slug: Learn/JavaScript/Asynchronous
+l10n:
+  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
 ---
 
 {{LearnSidebar}}
 
-このモジュールでは、{{Glossary("asynchronous")}} {{Glossary("JavaScript")}} に触れ、なぜそれが重要なのか、そして、潜在的なブロッキング処理（例えばサーバからリソースを取得する）に効果的に対処するためにどうやって使うのかを見ていきます。
+このモジュールでは{{Glossary("asynchronous", "非同期")}} {{Glossary("JavaScript")}} に触れ、なぜそれが重要なのか、そして、潜在的なブロッキング処理（例えばサーバからリソースを取得する）に効果的に対処するためにどうやって使うのかを見ていきます。
 
 > **注目:**
 >
-> #### フロントエンド Web 開発者を目指す方へ
+> #### フロントエンドウェブ開発者を目指す方へ
 >
 > 目標に向かって頑張るために必要な情報をまとめたコースをご用意しました。
 >
-> [**Get started**](/ja/docs/Learn/Front-end_web_developer)
+> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
 
 ## 前提条件
 
@@ -23,19 +25,19 @@ slug: Learn/JavaScript/Asynchronous
 
 ## ガイド
 
-- [非同期 JavaScript の導入](/ja/docs/Learn/JavaScript/Asynchronous/Introducing)
+- [非同期 JavaScript 入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing)
   - : この記事では**同期**プログラミングと**非同期**プログラミングとは何か、なぜ頻繁に非同期のテクニックを使う必要があるのか、歴史的に非同期関数は JavaScript でどのように実装されてきたのか、そしてその問題点が何だったのかを見ていきます。
-- [Promise の使い方](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
-  - : ここでは Promise を紹介し、Promise ベースの API の使い方をお見せします。`async` と `await` キーワードの紹介もここで行います。
-- [Promise ベースの API の実装](/ja/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-  - : この記事では独自の Promise ベースの API を実装する方法を概説します。
-- [Worker の導入](/ja/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-  - : Worker を使用すると、特定のタスクを別のスレッドで実行し、メインコードの応答性を維持することができます。この記事では、長時間実行される同期的な関数を Worker を使用して書き直します。
+- [プロミスの使い方](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
+  - : ここではプロミスを紹介し、プロミスベースの API の使い方をお見せします。`async` と `await` キーワードの紹介もここで行います。
+- [プロミスベースの API の実装](/ja/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+  - : この記事では独自のプロミスベースの API を実装する方法を概説します。
+- [ワーカー入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+  - : ワーカーを使用すると、特定のタスクを別のスレッドで実行し、メインコードの応答性を維持することができます。この記事では、長時間実行される同期的な関数をワーカーを使用して書き直します。
 
 ## 学習の評価
 
 - [アニメーションを順番に再生する](/ja/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
-  - : この評価では Promise を使用して一連のアニメーションを特定の順序で再生してください。
+  - : この評価ではプロミスを使用して一連のアニメーションを特定の順序で再生してください。
 
 ## 関連情報
 

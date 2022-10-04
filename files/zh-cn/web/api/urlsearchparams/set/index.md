@@ -40,4 +40,4 @@ params.set('baz', 3);
 
 ## Browser compatibility
 
-{{Compat("api.URLSearchParams.set")}}
+{{Compat}}

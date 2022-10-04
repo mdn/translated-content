@@ -33,4 +33,4 @@ void unobserve(target);
 
 ## 浏览器兼容性
 
-{{Compat("api.ResizeObserver.unobserve")}}
+{{Compat}}

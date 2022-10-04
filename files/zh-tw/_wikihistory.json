@@ -310,10 +310,6 @@
     "modified": "2019-08-12T15:14:24.188Z",
     "contributors": ["ayugioh2003"]
   },
-  "Glossary/Empty_element": {
-    "modified": "2019-03-18T21:41:26.001Z",
-    "contributors": ["Rocker"]
-  },
   "Glossary/Engine": {
     "modified": "2019-03-18T21:41:31.602Z",
     "contributors": ["Rocker"]
@@ -581,6 +577,10 @@
   "Glossary/Viewport": {
     "modified": "2019-10-05T05:58:15.650Z",
     "contributors": ["ayugioh2003"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2019-03-18T21:41:26.001Z",
+    "contributors": ["Rocker"]
   },
   "Glossary/W3C": {
     "modified": "2019-03-23T22:28:08.358Z",

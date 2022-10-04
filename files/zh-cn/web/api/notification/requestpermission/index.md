@@ -54,7 +54,7 @@ Notification.requestPermission().then(function(result) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification.requestPermission")}}
+{{Compat}}
 
 ## 参见
 

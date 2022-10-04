@@ -28,4 +28,4 @@ var result = anchor.hostname; // Returns:'developer.mozilla.org'
 
 ## Browser compatibility
 
-{{Compat("api.Location.hostname")}}
+{{Compat}}

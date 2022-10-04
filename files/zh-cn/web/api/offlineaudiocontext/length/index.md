@@ -23,4 +23,4 @@ var length = OfflineAudioContext.length;
 
 ## 浏览器兼容性
 
-{{Compat("api.OfflineAudioContext.length")}}
+{{Compat}}

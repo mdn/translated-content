@@ -36,7 +36,7 @@ url.toString() // 应当返回字符串形式的 URL
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.toString")}}
+{{Compat}}
 
 ## 参见
 
