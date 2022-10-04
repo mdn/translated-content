@@ -37,7 +37,7 @@ new ResizeObserver(callback)
 
 ## 示例
 
-以下片段取自 [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)（[参见源](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)）示例：
+以下片段取自 [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)（[见源码](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)）示例：
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
