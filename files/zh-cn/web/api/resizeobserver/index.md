@@ -31,7 +31,7 @@ slug: Web/API/ResizeObserver
 
 ## 示例
 
-在 [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)（[参见源](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)）示例中，我们使用 resize observer 去更改头和段落的 {{cssxref("font-size")}}，随着 slider 的值被改变，也引起了包含的 `<div>` 改变了宽度。这展示了你可以响应元素大小的变化，即使它们与视口无关。
+在 [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)（[见源码](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)）示例中，我们使用 resize observer 去更改头和段落的 {{cssxref("font-size")}}，随着 slider 的值被改变，也引起了包含的 `<div>` 的宽度改变。这展示了你可以响应元素大小的变化，即使它们与视口无关。
 
 我们也提供了一个 checkbox 来关闭和打开观察者。如果它是关闭的，文本将不会随着 `<div>` 的宽度改变而改变。
 
