@@ -1,6 +1,6 @@
 ---
-title: Resize Observer API
-slug: Web/API/Resize_Observer_API
+title: ResizeObserver
+slug: Web/API/ResizeObserver
 ---
 
 {{APIRef("Resize Observer API")}}
