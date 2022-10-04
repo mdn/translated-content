@@ -31,7 +31,7 @@ Actualmente, XSLT es muy usado en la edición web, generando páginas HTML o XHT
   - : El tutorial TopXML XSLT hace una introducción a los conceptos básicos, la sintaxis, y la programación en XSLT. Las hojas de trabajos descargadas y el software proporcionan ejemplos de código y herramientas de programación en XSLT.
 
 - [¿Qué tipo de lenguaje es XSLT?](http://www-128.ibm.com/developerworks/xml/library/x-xslt/?article=xr)
-  -: ¿Qué tipo de lenguaje es XSLT, para que sirve y porqué fue diseñado como lo está? Estas preguntas tienen distintas respuestas, y a menudo los principiantes se sienten confundidos porque el lenguaje es muy diferente de cualquier otro al que están acostumbrados. Este artículo intenta poner XSLT en contexto. Sin intentar enseñar a escribir hojas de estilo XSLT, explica de dónde viene el lenguaje, para qué es adecuado, y porqué debería ser usado.
+  - : ¿Qué tipo de lenguaje es XSLT, para que sirve y porqué fue diseñado como lo está? Estas preguntas tienen distintas respuestas, y a menudo los principiantes se sienten confundidos porque el lenguaje es muy diferente de cualquier otro al que están acostumbrados. Este artículo intenta poner XSLT en contexto. Sin intentar enseñar a escribir hojas de estilo XSLT, explica de dónde viene el lenguaje, para qué es adecuado, y porqué debería ser usado.
 
 #### Comunidad
 
