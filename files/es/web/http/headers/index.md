@@ -55,16 +55,10 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 
 - {{HTTPHeader("Accept-CH")}}
   - : ...
-
-<!---->
-
 - {{HTTPHeader("Accept-CH-Lifetime")}}
   - : ...
 - {{HTTPHeader("Early-Data")}}
   - : ...
-
-<!---->
-
 - {{HTTPHeader("Content-DPR")}}
   - : ...
 - {{HTTPHeader("DPR")}}
@@ -78,14 +72,10 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 - {{HTTPHeader("Width")}}
   - : ...
 
-<!---->
+## Condicionales
 
-- ## Condicionales
-
-  {{HTTPHeader("Last-Modified")}}
-
+- {{HTTPHeader("Last-Modified")}}
   - : Se trata de un validador, indicando la fecha de la última modificación del recurso, utilizado para comparar diferentes versiones del mismo recurso. No es tan preciso como {{HTTPHeader("ETag")}}, pero es más sencillo de calcular en algunos entornos. Las peticiones condicionales que usan {{HTTPHeader("If-Modified-Since")}} y {{HTTPHeader("If-Unmodified-Since")}}utilizan este valor para cambiar el comportamiento de la petición.
-
 - {{HTTPHeader("ETag")}}
   - : Se trata de un validador, un tipo de hilo único identificando la versión del recurso. Las peticiones condicionales que usan {{HTTPHeader("If-Match")}} y {{HTTPHeader("If-None-Match")}} utilizan este valor para cambiar el comportamiento de la petición.
 - {{HTTPHeader("If-Match")}}
@@ -114,9 +104,6 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
   - : Informa al servidor sobre el algoritmo de codificación, habitualmente un algoritmo de compresión, que puede utilizarse sobre el recurso que se envíe de vuelta en la respuesta.
 - {{HTTPHeader("Accept-Language")}}
   - : Informa al servidor sobre el lenguage que el servidor espera recibir de vuelta. Se trata de una indicación, y no estará necesariamente sometida al control del cliente: el servidor siempre deberá estar atento para no sobreescribir una selección específica del usuario (como, por ejemplo, una selección de idiomas en una lista desplegable).
-
-<!---->
-
 ## Controles
 
 - {{HTTPHeader("Expect")}}
@@ -135,12 +122,10 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 - {{HTTPHeader("Set-Cookie2")}} {{obsolete_inline}}
   - : Se utilizaba para enviar cookies desde el servidor al usuario, but has been obsoleted by the specification. pero ha quedado obsoleta por la especificación. Utiliza en su lugar {{HTTPHeader("Set-Cookie")}} .
 
-- ## CORS
+## CORS
 
-  {{HTTPHeader("Access-Control-Allow-Origin")}}
-
+-  {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : Indica si la respuesta puede ser compartida.
-
 - {{HTTPHeader("Access-Control-Allow-Credentials")}}
   - : Indica si la respuesta puede quedar expuesta o no cuando el marcador de la credencial retorna como 'true'.
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
@@ -185,11 +170,7 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 - {{HTTPHeader("Content-Location")}}
   - : Indica un punto de origen alternativo para un recurso.
 
-- ## Proxies
-
-  - : Empty
-
-<!---->
+## Proxies
 
 - {{HTTPHeader("Forwarded")}}
   - : Contiene información sobre el 'lado cliente' de un servidor proxy, que se alteraría o perdería si un proxy está involucrado en la ruta de la petición.
@@ -250,26 +231,14 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
   - : Asocia una clave criptográfica pública y específica con un determinado servidor web para reducir el riesgo de {{Glossary("MITM")}} ataques con certificados falsificados.
 - {{HTTPHeader("Public-Key-Pins-Report-Only")}}
   - : Envía reportes al report-uri especificado en la cabecera, sin bloquear la conexión entre cliente y servidor aún cuando el pinning ha sido violado.
-
-<!---->
-
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Fuerza la comunicación utilizando HTTPS en lugar de HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
   - : Envía una señal al servidor expresando la preferencia del cliente por una respuesta encriptada y autenticada, y esta puede manejar de forma satisfactoria la directiva {{CSP("upgrade-insecure-requests")}}.
-
-<!---->
-
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : Deshabilita el MIME sniffing y fuerza al navegador a utilizar el tipo establecido en {{HTTPHeader("Content-Type")}}.
-
-<!---->
-
 - {{HTTPHeader("X-Download-Options")}}
   - : ...
-
-<!---->
-
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Le indica al navegador que debe renderizar una página utilizando {{HTMLElement("frame")}}, {{HTMLElement("iframe")}} o {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}

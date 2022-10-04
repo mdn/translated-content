@@ -518,9 +518,9 @@ if (0)
 
 Si se cambia el script para que la condición se convierta en '`if (1)`', se define la función `zero`.
 
-> **Nota:** Nota: Aunque esto parece una declaración de función, ésta es en realidad una expresión de función ya que está anidada dentro de otra instrucción. Ver [las diferencias entre las funciones de declaración y de expresión](#constructor_versus_declaration_versus_expression).
+> **Nota:** Aunque esto parece una declaración de función, ésta es en realidad una expresión de función ya que está anidada dentro de otra instrucción. Ver [las diferencias entre las funciones de declaración y de expresión](#constructor_versus_declaration_versus_expression).
 
-> **Nota:** Nota: Algunos motores JavaScript, sin incluir [SpiderMonkey](/es/docs/Mozilla/Projetos/SpiderMonkey), tratan incorrectamente cualquier expresión de función con un nombre como una declaración de función. Esto llevaría a que se definiera `zero` incluso con el siempre-falso("_always-false_") condicional. Una manera más segura de definir funciones condicionalmente es definir la función anónimamente y asignarla a una variable:
+> **Nota:** Algunos motores JavaScript, sin incluir [SpiderMonkey](/es/docs/Mozilla/Projetos/SpiderMonkey), tratan incorrectamente cualquier expresión de función con un nombre como una declaración de función. Esto llevaría a que se definiera `zero` incluso con el siempre-falso("_always-false_") condicional. Una manera más segura de definir funciones condicionalmente es definir la función anónimamente y asignarla a una variable:
 
 ```js
 if (0)
@@ -535,7 +535,7 @@ En JavaScript, los controladores de eventos [DOM](es/DOM) son funciones (en opos
 
 Los posibles objetivos de eventos en un documento [HTML](es/HTML) incluyen: `window` (`Window` objects("objeto de ventana"), including frames("marcos")), `document` (`HTMLDocument` objects("objetos HTMLDocument")), y elementos (`Element` objects("objetos Elemento")). En el [HTML DOM](http://www.w3.org/TR/DOM-Level-2-HTML/), los destinos de evento tienen propiedades de controlador de eventos. Estas propiedades son nombres de eventos en minúsculas con prefijo "on", e.g. `onfocus`. Los eventos [DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/) proporcionan una forma alternativa y más sólida de agregar oyentes de eventos.
 
-> **Nota:** Nota: Los eventos son parte del DOM, no de JavaScript. (JavaScript simplemente proporciona un enlace al DOM.)
+> **Nota:** Los eventos son parte del DOM, no de JavaScript. (JavaScript simplemente proporciona un enlace al DOM.)
 
 El ejemplo siguiente asigna una función a un manejador de eventos de "foco"("focus") de ventana.
 
@@ -660,7 +660,7 @@ Puede determinar si existe una función utilizando el operador `typeof`. En el e
  }
 ```
 
-> **Nota:** Nota: Tenga en cuenta que en la prueba `if`, e utiliza una referencia a `noFunc` aquí no hay paréntesis "()" después del nombre de la función para que la función real no se llame.
+> **Nota:** Tenga en cuenta que en la prueba `if`, e utiliza una referencia a `noFunc` aquí no hay paréntesis "()" después del nombre de la función para que la función real no se llame.
 
 ### Ver también
 

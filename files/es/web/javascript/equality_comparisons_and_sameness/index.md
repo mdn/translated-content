@@ -246,7 +246,7 @@ Aquí podemos ver una lista exhaustiva de los método y operadores nativos que p
     let stoppingForce = obj.mass * -obj.velocity
     ```
 
-    Si o`bj.velocity` is `0` (o se calcula como `0`), se inserta`-0`en ese lugar y este valor se propaga a` ``stoppingForce`.
+    Si o`bj.velocity` is `0` (o se calcula como `0`), se inserta`-0`en ese lugar y este valor se propaga a `stoppingForce`.
 
 <!---->
 

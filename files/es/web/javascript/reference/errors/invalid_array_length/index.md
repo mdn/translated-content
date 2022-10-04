@@ -26,10 +26,10 @@ RangeError: Invalid array buffer length (Chrome)
 
 Una longitud de array inválida puede presentarse en éstas situaciones:
 
-- Cuando se crea un {{jsxref("Array")}} o un {{jsxref("ArrayBuffer")}} el cual tiene una longitud negativa o es igual o mayor a 232, o
-- cuando se define la propiedad {{jsxref("Array.length")}} a un valor el cual es negativo o es igual o mayor a 232.
+- Cuando se crea un {{jsxref("Array")}} o un {{jsxref("ArrayBuffer")}} el cual tiene una longitud negativa o es igual o mayor a 2^32, o
+- cuando se define la propiedad {{jsxref("Array.length")}} a un valor el cual es negativo o es igual o mayor a 2^32.
 
-¿Por qué el `Array` y `ArrayBuffer` tienen longitud limitada? La propiedad de longitud de un `Array` o un `ArrayBuffer` está representada con un entero sin signo de 32 bits, el cual sólo puede almacenar valores que estén en el rango de 0 a 232-1.
+¿Por qué el `Array` y `ArrayBuffer` tienen longitud limitada? La propiedad de longitud de un `Array` o un `ArrayBuffer` está representada con un entero sin signo de 32 bits, el cual sólo puede almacenar valores que estén en el rango de 0 a (2^32)-1.
 
 Si estás creando un `Array` usando el constructor, es mejor que utilices la notación literal, ya que el primer argumento es interpretado como la longitud del `Array`.
 

@@ -33,6 +33,7 @@ RegExp(patrón[, banderas])
 
 - `patrón`
   - : El texto de la expresión regular.
+  
     A partir de ES5, también puede ser otro objeto o `RegExp` literal (solo para las dos notaciones del constructor RegExp). Los patrones pueden incluir {{JSxRef("../Guide/Regular_Expressions", "caracteres especiales", "#Usar_caracteres_especiales")}} para que coincidan con un rango de valores más amplio que el de una cadena literal.
 - `banderas`
 

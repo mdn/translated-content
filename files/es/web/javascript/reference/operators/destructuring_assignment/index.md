@@ -228,7 +228,7 @@ let a, b;
 ({a, b} = {a: 1, b: 2});
 ```
 
-> **Nota:** **Notas**: los paréntesis `(...)` alrededor de la declaración de asignación son obligatorios cuando se usa la desestructuración de un objeto literal sin una declaración.
+> **Nota:** Los paréntesis `(...)` alrededor de la declaración de asignación son obligatorios cuando se usa la desestructuración de un objeto literal sin una declaración.
 >
 > `{a, b} = {a: 1, b: 2}` no es una sintaxis independiente válida, debido a que `{a, b}` en el lado izquierdo se considera un bloque y no un objeto literal.
 >

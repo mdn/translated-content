@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
 {{HTTPSidebar}}
 
-La cabecera HTTP **`Content-Security-Policy`**en la respuesta permite a los administradores de un sitio web controlar los recursos que el User-Agent puede cargar a una pagina. Con algunas (Poquísimas) excepciones, las políticas implican principalmente especificar el servidor de origen la protección de puntos finales del script. Esto ayuda a protegerse contra ataques Cross-site scripting ({{Glossary("XSS")}}).
+La cabecera HTTP **`Content-Security-Policy`** en la respuesta permite a los administradores de un sitio web controlar los recursos que el User-Agent puede cargar a una pagina. Con algunas (Poquísimas) excepciones, las políticas implican principalmente especificar el servidor de origen la protección de puntos finales del script. Esto ayuda a protegerse contra ataques Cross-site scripting ({{Glossary("XSS")}}).
 
 Para mas información, ve también este articulo en [Content Security Policy (CSP)](/es/docs/Web/HTTP/CSP).
 
@@ -63,6 +63,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
   - : Especifica origenes válidos para carga de archivos usando elementos como {{HTMLElement("audio")}} , {{HTMLElement("video")}} y {{HTMLElement("track")}}.
 - {{CSP("object-src")}}
   - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}} elements.
+  
     Elements controlled by `object-src` are perhaps coincidentally considered legacy HTML elements and aren't recieving new standardized features (such as the security attributes `sandbox` or `allow` for `<iframe>`). Therefore it is **recommended** to restrict this fetch-directive (e.g. explicitly set `object-src 'none'` if possible).
 - {{CSP("prefetch-src")}}
   - : Specifies valid sources to be prefetched or prerendered.

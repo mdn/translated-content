@@ -5,7 +5,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/lineNumber
 ---
 No es una norma
-Esta característica no es una norma y no está en la lista de normas. No la utilice en sitios de producción que enfrenta la Web: no va a funcionar para todos los usuarios. También puede haber grandes incompatibilidades entre implementaciones y el comportamiento puede cambiar en el futuro.La propiedad **lineNumber** contiene el número de linea en el archivo que arrojó el error.
+
+Esta característica no es una norma y no está en la lista de normas. No la utilice en sitios de producción que enfrenta la Web: no va a funcionar para todos los usuarios. También puede haber grandes incompatibilidades entre implementaciones y el comportamiento puede cambiar en el futuro.
+
+La propiedad **lineNumber** contiene el número de linea en el archivo que arrojó el error.
 
 ## Ejemplos
 

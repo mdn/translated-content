@@ -10,11 +10,6 @@ El método **`Promise.reject(reason)`** retorna un objeto `Promise` que es recha
 
 {{EmbedInteractiveExample("pages/js/promise-reject.html")}}
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone https\://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.
-
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone https\://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.
-
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone https\://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.
 
 ## Sintaxis
 

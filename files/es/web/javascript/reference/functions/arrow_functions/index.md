@@ -219,7 +219,7 @@ f() === window; // o el objeto global
 
 Todas las demás reglas del {{JSxRef("Modo_estricto", "modo estricto")}} se aplican normalmente.
 
-> **Advertencia:** **Nota**: Comprueba las notas sobre el {{JSxRef("Modo_estricto", "modo estricto")}}.
+> **Advertencia:** Comprueba las notas sobre el {{JSxRef("Modo_estricto", "modo estricto")}}.
 
 ### Funciones flecha utilizadas como métodos
 

@@ -17,7 +17,7 @@ browser-compat: javascript.statements.let
 
 La instrucción **`let`** declara una variable de alcance local con ámbito de bloque([block](/es/docs/Web/JavaScript/Referencia/Sentencias/block)scope), la cual, opcionalmente, puede ser inicializada con algún valor.
 
-> **Advertencia:** La palabra reservada **`let`**en Mozilla Firefox 44 y anteriores, está solo disponible para bloques de código en HTML que esten envueltos en una etiqueta `<script type="application/javascript;version=1.7">` (o de una version mayor). Las etiquetas [XUL](/es/docs/XUL) tienen acceso a esas características sin necesidad de dicho bloque. Es necesario tomar en cuenta que esta es una característica ~~no estándar~~ **que ya se ha hecho actualmente estándar**, ~~esto~~ **pero** puede crear conflictos con otros navegadores**, ya que fue una característica no estándar.**
+> **Advertencia:** La palabra reservada **`let`** en Mozilla Firefox 44 y anteriores, está solo disponible para bloques de código en HTML que esten envueltos en una etiqueta `<script type="application/javascript;version=1.7">` (o de una version mayor). Las etiquetas [XUL](/es/docs/XUL) tienen acceso a esas características sin necesidad de dicho bloque. Es necesario tomar en cuenta que esta es una característica ~~no estándar~~ **que ya se ha hecho actualmente estándar**, ~~esto~~ **pero** puede crear conflictos con otros navegadores, **ya que fue una característica no estándar.**
 
 ## Sintaxis
 
@@ -34,7 +34,7 @@ let var1 [= valor1] [, var2 [= valor2]] [, ..., varN [= valorN]];
 
 ## Descripción
 
-**`let` **te permite declarar variables limitando su alcance (_scope_) al bloque, declaración, o expresión donde se está usando.a diferencia de la palabra clave `var` la cual define una variable global o local en una función sin importar el ámbito del bloque. La otra diferencia entre `var` y `let` es que este último se inicializa a un valor sólo cuando un analizador lo evalúa (ver abajo).
+**`let`** te permite declarar variables limitando su alcance (_scope_) al bloque, declaración, o expresión donde se está usando.a diferencia de la palabra clave `var` la cual define una variable global o local en una función sin importar el ámbito del bloque. La otra diferencia entre `var` y `let` es que este último se inicializa a un valor sólo cuando un analizador lo evalúa (ver abajo).
 
 Al igual que `const`, `let`no crea propiedades del objeto se declara globalmente (en el alcance más alto).
 
@@ -274,7 +274,7 @@ Existe un bloque implícito creado alrededor de expr.
 
 ## Especificaciones
 
-{{Specification}}
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

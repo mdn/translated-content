@@ -7,7 +7,7 @@ translation_of: Web/HTTP/CSP
 ---
 {{HTTPSidebar}}
 
-**Política de Seguridad del Contenido** o\*\* **( {{Glossary("CSP")}} ) - del inglés \_**Content Security Policy\*\*\_ - es una capa de seguridad adicional que ayuda a prevenir y mitigar algunos tipos de ataque, incluyendo Cross Site Scripting ( {{Glossary("XSS")}} ) y ataques de inyección de datos. Estos ataques son usados con diversos propósitos, desde robar información hasta desfiguración de sitios o distribución de malware .
+**Política de Seguridad del Contenido** o ( {{Glossary("CSP")}} ) - del inglés ***Content Security Policy*** - es una capa de seguridad adicional que ayuda a prevenir y mitigar algunos tipos de ataque, incluyendo Cross Site Scripting ( {{Glossary("XSS")}} ) y ataques de inyección de datos. Estos ataques son usados con diversos propósitos, desde robar información hasta desfiguración de sitios o distribución de malware .
 
 CSP está diseñado para ser completamente retrocompatible (excepto la versión 2 de CSP, donde hay algunas menciones explícitas de inconsistencia en la retrocompatibilidad; más detalles [aquí](https://www.w3.org/TR/CSP2) sección 1.1). Los navegadores que no lo soportan siguen funcionando con los servidores que lo implementan y viceversa: los navegadores que no soportan CSP simplemente lo ignoran, funcionando como siempre y delegando a la política mismo-origen para contenido web. Si el sitio web no ofrece la cabecera CSP, los navegadores igualmente usan la política estándar [mismo-origen](/es/docs/Web/Security/Same-origin_policy).
 
@@ -151,7 +151,7 @@ El informe es un objeto JSON que contiene los datos siguientes:
 
 ## Ejemplo de informe de violación
 
-Consideremos una página ubicada en [`http://example.com/signup.html`](http://example.com/signup.html) que tiene las siguiente política: rechazar todo, excepto las hojas de estilo provenientes de `cdn.example.com`.
+Consideremos una página ubicada en <http://example.com/signup.html> que tiene las siguiente política: rechazar todo, excepto las hojas de estilo provenientes de <cdn.example.com>.
 
 ```
 Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
@@ -172,7 +172,7 @@ El código HTML de `signup.html` es el siguiente:
 </html>
 ```
 
-¿Puedes ver el error? Las hojas de estilo solo se pueden cargar desde `cdn.example.com`, pero el sitio web intenta cargar una desde su propio origen (`http://example.com`). Un navegador capaz de aplicar el CSP enviará el siguiente informe de violación mediante una solicitud POST a [`http://example.com/_/csp-reports`](http://example.com/_/csp-reports), cuando se visite el documento:
+¿Puedes ver el error? Las hojas de estilo solo se pueden cargar desde <cdn.example.com>, pero el sitio web intenta cargar una desde su propio origen (<http://example.com>). Un navegador capaz de aplicar el CSP enviará el siguiente informe de violación mediante una solicitud POST a <http://example.com/_/csp-reports>, cuando se visite el documento:
 
 ```
 {
@@ -186,7 +186,7 @@ El código HTML de `signup.html` es el siguiente:
 }
 ```
 
-Como se puede ver, el informe incluye la ruta completa al recurso infractor en `blocked-uri`. Este no es siempre el caso. Por ejemplo, cuando `signup.html` intente cargar el CSS desde [`http://anothercdn.example.com/stylesheet.css`](http://anothercdn.example.com/stylesheet.css), el navegador no incluiría la ruta completa, sino solo el origen (`http://anothercdn.example.com` ). La especificación CSP da una explicación de este extraño comportamiento. En resumen, esto se hace para evitar la pérdida de información confidencial sobre recursos de origen cruzado.
+Como se puede ver, el informe incluye la ruta completa al recurso infractor en `blocked-uri`. Este no es siempre el caso. Por ejemplo, cuando `signup.html` intente cargar el CSS desde <http://anothercdn.example.com/stylesheet.css>, el navegador no incluiría la ruta completa, sino solo el origen (<http://anothercdn.example.com>). La especificación CSP da una explicación de este extraño comportamiento. En resumen, esto se hace para evitar la pérdida de información confidencial sobre recursos de origen cruzado.
 
 ## Compatibilidad del navegador
 

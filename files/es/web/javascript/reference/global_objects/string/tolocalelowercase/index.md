@@ -10,7 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toLocaleLowerCase
 ---
-{{JSRef}}El método **`toLocaleLowerCase()` **retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
+{{JSRef}}El método **`toLocaleLowerCase()`** retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
 
 Los fuentes para este ejemplo interactivo están almacenados en un repositorio GitHub. Si quieres contribuir en el proyecto de ejemplos interactivos, por favor clona https\://github.com/mdn/interactive-examples y envíanos un pull request.
 
@@ -38,7 +38,7 @@ Una nueva cadena que representa la cadena desde la que se llama convertida a min
 
 ## Descripción
 
-El método `toLocaleLowerCase()`\*\* \*\*retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas. `toLocaleLowerCase()` no afecta el valor de la cadena desde la que se llama. En la mayoría de los casos, producirá el mismo resultado que {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}, pero para algunos locales, como el turco, cuyas correspondencias de mayúsculas y minúsculas no siguen las correpsondencias por defecto de Unicode, podría producir de un resultado diferente.
+El método `toLocaleLowerCase()` retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas. `toLocaleLowerCase()` no afecta el valor de la cadena desde la que se llama. En la mayoría de los casos, producirá el mismo resultado que {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}, pero para algunos locales, como el turco, cuyas correspondencias de mayúsculas y minúsculas no siguen las correpsondencias por defecto de Unicode, podría producir de un resultado diferente.
 
 ## Ejemplos
 

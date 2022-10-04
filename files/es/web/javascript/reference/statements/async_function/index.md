@@ -90,7 +90,7 @@ add2(10).then(v => {
 });
 ```
 
-> **Advertencia:** #### No se deben confundir `await` y `Promise.all`En `add1`, la ejecución se suspende durante dos segundos correspondientes al primer operador `await`, y luego durante otros dos segundos correspondientes al segundo `await`. El segundo temporizador no se crea hasta que el primero no se haya disparado ya. En `add2`, ambos temporizadores se crean y, acto seguido, ambos reciben `await`. Esto provoca la resolución en dos segundos y no cuatro, ya que los temporizadores se ejecutaron de manera simultánea. Sin embargo, ambas llamadas `await` aún pueden ejecutarse en series, no en paralelo: esto **no** constituye ninguna aplicación automática de `Promise.all`. Si se desea aplicar `await` a dos o más promesas en paralelo, es preciso utilizar `Promise.all`.
+> **Advertencia:** **No se deben confundir `await` y `Promise.all`** En `add1`, la ejecución se suspende durante dos segundos correspondientes al primer operador `await`, y luego durante otros dos segundos correspondientes al segundo `await`. El segundo temporizador no se crea hasta que el primero no se haya disparado ya. En `add2`, ambos temporizadores se crean y, acto seguido, ambos reciben `await`. Esto provoca la resolución en dos segundos y no cuatro, ya que los temporizadores se ejecutaron de manera simultánea. Sin embargo, ambas llamadas `await` aún pueden ejecutarse en series, no en paralelo: esto **no** constituye ninguna aplicación automática de `Promise.all`. Si se desea aplicar `await` a dos o más promesas en paralelo, es preciso utilizar `Promise.all`.
 
 ### Reescritura de una cadena de promesas con una función `async`
 

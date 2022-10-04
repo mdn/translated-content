@@ -16,7 +16,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
 
 El método **apply()** invoca una determinada función asignando explícitamente el objeto **this** y un array o similar ([array like object](/es/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects)) como parámetros (**argumentos)** para dicha función.
 
-> **Nota:** **NOTA:** Aunque la sintaxis de esta función es casi idéntica a {{jsxref("Function.call", "call()")}}, la diferencia fundamental es que `call()` acepta una lista de argumentos, mientras que `apply()` acepta un simple array con los argumentos.
+> **Nota:** Aunque la sintaxis de esta función es casi idéntica a {{jsxref("Function.call", "call()")}}, la diferencia fundamental es que `call()` acepta una lista de argumentos, mientras que `apply()` acepta un simple array con los argumentos.
 
 ## Sintaxis
 

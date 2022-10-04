@@ -64,25 +64,25 @@ Referrer-Policy: unsafe-url
 
 ## Ejemplos
 
-| Directiva                             | Documento                              | Navegación a                         | Referente                              |
-| ------------------------------------- | -------------------------------------- | ------------------------------------ | -------------------------------------- |
-| **`no-referrer`**                     | https\://ejemplo.com/pagina.html       | cualquier dominio o ruta de acceso   | ningún referente                       |
-| **`no-referrer-when-downgrade`**      | https\://ejemplo.com/pagina.html       | https\://ejemplo.com/otrapagina.html | https\://ejemplo.com/pagina.html       |
-| **`no-referrer-when-downgrade`**      | https\://ejemplo.com/pagina.html       | https\://mozilla.org                 | https\://ejemplo.com/pagina.html       |
-| **`no-referrer-when-downgrade`**      | https\://ejemplo.com/pagina.html       | **http**://ejemplo.org               | ningún referente                       |
-| **`origin`**                          | https\://ejemplo.com/pagina.html       | cualquier dominio o ruta de acceso   | https\://ejemplo.com/                  |
-| **`origin-when-cross-origin`**        | https\://ejemplo.com/pagina.html       | https\://ejemplo.com/otrapagina.html | https\://ejemplo.com/pagina.html       |
-| **`origin-when-cross-origin`**        | https\://ejemplo.com/pagina.html       | https\://mozilla.org                 | https\://ejemplo.com/                  |
-| **`origin-when-cross-origin`**        | https\://ejemplo.com/pagina.html       | **http**://ejemplo.com/pagina.html   | https\://ejemplo.com/                  |
-| **`same-origin`**                     | https\://ejemplo.com/pagina.html       | https\://ejemplo.com/otrapagina.html | https\://ejemplo.com/pagina.html       |
-| **`same-origin`**                     | https\://ejemplo.com/pagina.html       | https\://mozilla.org                 | ningún referente                       |
-| **`strict-origin`**                   | https\://ejemplo.com/pagina.html       | https\://mozilla.org                 | https\://ejemplo.com/                  |
-| **`strict-origin`**                   | https\://ejemplo.com/pagina.html       | **http**://ejemplo.org               | ningún referente                       |
-| **`strict-origin`**                   | **http**://ejemplo.com/pagina.html     | cualquier dominio o ruta de acceso   | http\://ejemplo.com/                   |
-| **`strict-origin-when-cross-origin`** | https\://ejemplo.com/pagina.html       | https\://ejemplo.com/otrapagina.html | https\://ejemplo.com/pagina.html       |
-| **`strict-origin-when-cross-origin`** | https\://ejemplo.com/pagina.html       | https\://mozilla.org                 | https\://ejemplo.com/                  |
-| **`strict-origin-when-cross-origin`** | https\://ejemplo.com/pagina.html       | **http**://example.org               | ningún referente                       |
-| **`unsafe-url`**                      | https\://ejemplo.com/pagina.html?q=123 | cualquier dominio o ruta de acceso   | https\://ejemplo.com/pagina.html?q=123 |
+| Directiva                             | Documento                               | Navegación a                          | Referente                               |
+| ------------------------------------- | --------------------------------------  | ------------------------------------  | --------------------------------------  |
+| **`no-referrer`**                     | <https://ejemplo.com/pagina.html>       | cualquier dominio o ruta de acceso    | ningún referente                        |
+| **`no-referrer-when-downgrade`**      | <https://ejemplo.com/pagina.html>       | <https://ejemplo.com/otrapagina.html> | <https://ejemplo.com/pagina.html>       |
+| **`no-referrer-when-downgrade`**      | <https://ejemplo.com/pagina.html>       | <https://mozilla.org>                 | <https://ejemplo.com/pagina.html>       |
+| **`no-referrer-when-downgrade`**      | <https://ejemplo.com/pagina.html>       | <http://ejemplo.org>                  | ningún referente                        |
+| **`origin`**                          | <https://ejemplo.com/pagina.html>       | cualquier dominio o ruta de acceso    | <https://ejemplo.com/>                  |
+| **`origin-when-cross-origin`**        | <https://ejemplo.com/pagina.html>       | <https://ejemplo.com/otrapagina.html> | <https://ejemplo.com/pagina.html>       |
+| **`origin-when-cross-origin`**        | <https://ejemplo.com/pagina.html>       | <https://mozilla.org>                 | <https://ejemplo.com/>                  |
+| **`origin-when-cross-origin`**        | <https://ejemplo.com/pagina.html>       | <http://ejemplo.com/pagina.html>      | <https://ejemplo.com/>                  |
+| **`same-origin`**                     | <https://ejemplo.com/pagina.html>       | <https://ejemplo.com/otrapagina.html> | <https://ejemplo.com/pagina.html>       |
+| **`same-origin`**                     | <https://ejemplo.com/pagina.html>       | <https://mozilla.org>                 | ningún referente                        |
+| **`strict-origin`**                   | <https://ejemplo.com/pagina.html>       | <https://mozilla.org>                 | <https://ejemplo.com/>                  |
+| **`strict-origin`**                   | <https://ejemplo.com/pagina.html>       | <http://ejemplo.org>                  | ningún referente                        |
+| **`strict-origin`**                   | <http://ejemplo.com/pagina.html>        | cualquier dominio o ruta de acceso    | <http://ejemplo.com/>                   |
+| **`strict-origin-when-cross-origin`** | <https://ejemplo.com/pagina.html>       | <https://ejemplo.com/otrapagina.html> | <https://ejemplo.com/pagina.html>       |
+| **`strict-origin-when-cross-origin`** | <https://ejemplo.com/pagina.html>       | <https://mozilla.org>                 | <https://ejemplo.com/>                  |
+| **`strict-origin-when-cross-origin`** | <https://ejemplo.com/pagina.html>       | <http://example.org>                  | ningún referente                        |
+| **`unsafe-url`**                      | <https://ejemplo.com/pagina.html?q=123> | cualquier dominio o ruta de acceso    | <https://ejemplo.com/pagina.html?q=123> |
 
 ## Especificaciones
 

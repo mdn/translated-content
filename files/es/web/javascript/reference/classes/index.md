@@ -37,7 +37,7 @@ class Rectangulo {
 
 #### Alojamiento
 
-Una importante diferencia entre las **declaraciones de funciones** _y_ las **declaraciones de clases** es que las **declaraciones de funciones**\_ _son alojadas y las **declaraciones de clases**_ \_no lo son. En primer lugar necesitas declarar tu clase y luego acceder a ella, de otro modo el ejemplo de código siguiente arrojará un {{jsxref("ReferenceError")}}:
+Una importante diferencia entre las **declaraciones de funciones** y las **declaraciones de clases** es que las **declaraciones de funciones** son alojadas y las **declaraciones de clases** no lo son. En primer lugar necesitas declarar tu clase y luego acceder a ella, de otro modo el ejemplo de código siguiente arrojará un {{jsxref("ReferenceError")}}:
 
 ```js example-bad
 const p = new Rectangle(); // ReferenceError
@@ -76,7 +76,7 @@ console.log(Rectangulo.name);
 
 ## Cuerpo de la clase y definición de métodos
 
-El contenido\_ \_de una **clase** es la parte que se encuentra entre las llaves `{}`. Este es el lugar se definen los **miembros de clase,** como los **métodos** o **constructores.**
+El contenido de una **clase** es la parte que se encuentra entre las llaves `{}`. Este es el lugar se definen los **miembros de clase,** como los **métodos** o **constructores.**
 
 ### Modo estricto
 
@@ -84,9 +84,9 @@ El cuerpo de las _declaraciones de clase_ y las _expresiones de clase_ son ejecu
 
 ### Constructor
 
-El método [`constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) es un método especial para crear e inicializar un objeto creado con una `clase`. Solo puede haber un método especial con el nombre "constructor" en una clase. Si esta contiene mas de una ocurrencia del método **`constructor,`**se arrojará un _Error_ {{jsxref("SyntaxError")}}
+El método [`constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) es un método especial para crear e inicializar un objeto creado con una `clase`. Solo puede haber un método especial con el nombre "constructor" en una clase. Si esta contiene mas de una ocurrencia del método **`constructor`**, se arrojará un _Error_ {{jsxref("SyntaxError")}}
 
-Un **constructor** puede usar la _palabra reservada_ **`super`**para llamar al **constructor** de una _superclase_
+Un **constructor** puede usar la _palabra reservada_ **`super`** para llamar al **constructor** de una _superclase_
 
 ### Métodos prototipo
 
