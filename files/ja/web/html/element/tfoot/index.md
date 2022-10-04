@@ -71,7 +71,7 @@ slug: Web/HTML/Element/tfoot
 
     この属性が設定されていない場合は、`left` 値であるものとします。
 
-    > **メモ:**
+    > **Note:**
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
     > - CSS3 で `char` の値と同様の効果を得るには、 {{htmlattrxref("char", "tfoot")}} の値を {{cssxref("text-align")}} プロパティの値として使用することができます。 {{unimplemented_inline}}

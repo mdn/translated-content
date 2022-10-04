@@ -9,7 +9,7 @@ slug: Web/HTTP/Headers/X-Frame-Options
 
 セキュリティが強化されるのは、ユーザーが `X-Frame-Options` に対応したブラウザーを使用して文書にアクセスした場合のみです。
 
-**メモ:** {{HTTPHeader("Content-Security-Policy")}} ヘッダーに {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブがあり、対応しているブラウザーにおいてこのヘッダーを<a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">置き換えて</a>います。
+**Note:** {{HTTPHeader("Content-Security-Policy")}} ヘッダーに {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブがあり、対応しているブラウザーにおいてこのヘッダーを<a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">置き換えて</a>います。
 
 <table class="properties">
   <tbody>

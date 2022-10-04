@@ -45,7 +45,7 @@ cat FILENAME.js | openssl dgst -sha384 -binary | openssl base64 -A
 shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 ```
 
-> **メモ:**
+> **Note:**
 >
 > - パイプで `xxd` を通る過程で、 `shasum` からの出力を取り、バイナリへ変換します。
 > - パイプで `awk` を通る過程は、 `shasum` がハッシュ化されたファイル名を `xxd` へ渡すために必要です。ファイル名が有効な 16 進数の文字を持っている場合に有害な影響を与える可能性があるからです。 `xxd` はそれを復号して、 `base64` に渡す可能性があるからです。

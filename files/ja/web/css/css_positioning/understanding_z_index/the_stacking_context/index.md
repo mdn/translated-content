@@ -61,7 +61,7 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 
 重要なのは、 DIV #4, DIV #5, DIV #6 は DIV #3 の子要素なので、DIV #3 の内側で重なり方が完全に決まることです。いったん DIV #3 内部の重ね合わせと描画が終われば、DIV #3 はルート要素に丸ごと渡され、兄弟要素との重ね合わせ処理が行われます。
 
-> **メモ:**
+> **Note:**
 >
 > - DIV #4 は DIV #1 の下に描画されます。これは、DIV #1 の z-index (5) はルート要素の重ね合わせコンテキストでだけ有効な値で、DIV #4 の z-index (6) は DIV #3 の重ね合わせコンテキストでだけ有効な値だからです。DIV #4 は DIV #3 の内部にあり、DIV #3 は DIV #1 よりも小さな z-index 値を持っているので、DIV #4 は DIV #1 の下になります。
 > - 同じ理由で DIV #2 (z-index 2) は DIV #5 (z-index 1) の下に描画されます。これは DIV #5 が DIV #3 に含まれていて、DIV #3は DIV #2 より高い z-index 値を持っているからです。

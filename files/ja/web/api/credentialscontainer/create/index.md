@@ -34,7 +34,7 @@ authenticatorSelection = publicKeyCredentialCreationOptions.authenticatorSelecti
 
 The authenticator used for the creation of the public key credential must comply with the requirements.
 
-> **メモ:** See {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} which resolves to `true` when a user-verifiying platform authenticator is available.
+> **Note:**See {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} which resolves to `true` when a user-verifiying platform authenticator is available.
 
 ## 例
 
