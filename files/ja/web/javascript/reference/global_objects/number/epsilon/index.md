@@ -2,6 +2,7 @@
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
+
 {{JSRef}}
 
 **`Number.EPSILON`** プロパティは、1 から 1 より大きな浮動小数点の最小値の差を表します。

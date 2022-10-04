@@ -2,6 +2,7 @@
 title: <frameset>
 slug: Web/HTML/Element/frameset
 ---
+
 {{Deprecated_header}}
 
 ## 概述
@@ -30,7 +31,7 @@ slug: Web/HTML/Element/frameset
 
 ## Browser compatibility
 
-{{Compat("html.elements.frameset")}}
+{{Compat}}
 
 ## 参见
 

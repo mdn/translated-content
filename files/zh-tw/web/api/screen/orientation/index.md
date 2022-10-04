@@ -37,7 +37,7 @@ if (orientation.type === "landscape-primary") {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Screen.orientation")}}
+{{Compat}}
 
 ## 參見
 

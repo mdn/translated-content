@@ -5,6 +5,7 @@ translation_of: Web/CSS/print-color-adjust
 original_slug: Web/CSS/-webkit-print-color-adjust
 browser-compat: css.properties.print-color-adjust
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`print-color-adjust`** définit ce que [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra éventuellement faire pour optimiser l'apparence de l'élément sur l'appareil de sortie. Par défaut, le navigateur peut réaliser des ajustements sur l'apparence de l'élément qu'il estime nécessaires et prudents selon le type et les capacités de l'appareil de sortie.

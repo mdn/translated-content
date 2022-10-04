@@ -2,6 +2,7 @@
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.readyState`** プロパティは、メディアの準備状態を示します。

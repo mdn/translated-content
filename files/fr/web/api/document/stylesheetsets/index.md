@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/styleSheetSets
 ---
+
 {{APIRef("DOM")}}
 
 Renvoie une liste active de tous les jeux de feuilles de styles actuellement disponibles.

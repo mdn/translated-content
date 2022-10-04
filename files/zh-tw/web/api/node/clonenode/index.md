@@ -51,4 +51,4 @@ To clone a node for appending to a different document, use {{domxref("Document.i
 
 ## 瀏覽器相容性
 
-{{Compat("api.Node.cloneNode")}}
+{{Compat}}

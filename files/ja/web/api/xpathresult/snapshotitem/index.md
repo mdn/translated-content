@@ -2,6 +2,7 @@
 title: XPathResult.snapshotItem()
 slug: Web/API/XPathResult/snapshotItem
 ---
+
 {{APIRef("DOM XPath")}}
 
 **`snapshotItem()`** は {{domxref("XPathResult")}} インターフェイスのメソッドで、アイテムのスナップショットのコレクション、または添字がノードの範囲を外れている場合は `null` を返します。イテレーターの返値とは異なり、スナップショットは無効になることはありませんが、変更したときに現在の文書に対応しない場合があります。

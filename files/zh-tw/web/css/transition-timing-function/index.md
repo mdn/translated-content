@@ -568,7 +568,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## 相容性
 
-{{Compat("css.properties.transition-timing-function")}}
+{{Compat}}
 
 ## 看更多
 

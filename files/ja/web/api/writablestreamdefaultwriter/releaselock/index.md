@@ -2,6 +2,7 @@
 title: WritableStreamDefaultWriter.releaseLock()
 slug: Web/API/WritableStreamDefaultWriter/releaseLock
 ---
+
 {{APIRef("Streams")}}{{SeeCompatTable}}
 
 {{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`releaseLock()`** メソッドは、対応するストリームのライターのロックを解除します。 ロックを解除すると、ライターはアクティブではなくなります。 ロックを解除したときに関連するストリームにエラーが発生した場合、ライターはこれ以降同じようにエラーが発生したように見えます。 そうでない場合、ライターは閉じられたように見えます。

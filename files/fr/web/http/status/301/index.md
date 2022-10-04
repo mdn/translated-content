@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/301
 translation_of: Web/HTTP/Status/301
 browser-compat: http.status.301
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse de redirection **`301 Moved Permanently`** indique que la ressource a définitivement été déplacée à l'URL contenue dans l'en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location). Un navigateur redirigera vers cette page et les moteurs de recherche mettront à jour leurs liens vers la ressource.

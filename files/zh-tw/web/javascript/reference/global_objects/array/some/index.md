@@ -177,7 +177,7 @@ if (!Array.prototype.some) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.some")}}
+{{Compat}}
 
 ## 參見
 

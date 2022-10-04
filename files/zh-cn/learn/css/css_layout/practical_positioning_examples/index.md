@@ -2,6 +2,7 @@
 title: 定位实例练习
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 
 掌握了上一篇文章中的定位的基础知识，我们将着眼于实现一些现实中的例子，来演示你能用定位来做什么。
@@ -231,7 +232,7 @@ function setTabHandler(tab, tabPos) {
 这些代码做了如下工作：
 
 - 首先我们保存所有的选项卡和所有的面板引用到两个变量中，名为 `tabs` 和 `panels`，这样此后我们可以容易地为它们做事。
-- 然后我们使用 `for` 循环遍历所有的选项卡，并且在每一个上运行叫做`setTabHandler()` 的函数，此函数建立当每个选项卡被点击时应该发生的功能。 运行时， 函数会被传递选项卡，和一个索引数`i` 指明选项卡在`tabs` 数组中的位置。
+- 然后我们使用 `for` 循环遍历所有的选项卡，并且在每一个上运行叫做`setTabHandler()` 的函数，此函数建立当每个选项卡被点击时应该发生的功能。运行时，函数会被传递选项卡，和一个索引数`i` 指明选项卡在`tabs` 数组中的位置。
 - 在 `setTabHandler()` 函数中，这个标签创建了一个 `onclick` 事件来处理点击，所以当标签被点击的时候，接下来会发生：
 
   - 用一个 `for` 循环清除所有标签当前存在的类。

@@ -45,7 +45,7 @@ slug: Web/HTML/Element/nav
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.nav")}}
+{{Compat}}
 
 ## 參見
 

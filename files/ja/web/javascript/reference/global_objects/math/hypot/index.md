@@ -2,6 +2,7 @@
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
 ---
+
 {{JSRef}}
 
 **`Math.hypot()`** 関数は、各引数の二乗の合計値の平方根を返します。

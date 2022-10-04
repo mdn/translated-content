@@ -2,6 +2,7 @@
 title: Element.hasAttributeNS()
 slug: Web/API/Element/hasAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 ## 概述

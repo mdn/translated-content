@@ -52,7 +52,7 @@ browser.cookies.onChanged.hasListener(listener)
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.cookies.onChanged")}}
+{{Compat}}
 
 ## 示例
 

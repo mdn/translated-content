@@ -2,6 +2,7 @@
 title: 'Window: hashchange event'
 slug: Web/API/Window/hashchange_event
 ---
+
 {{APIRef}}
 
 当 URL 的片段标识符更改时，将触发**hashchange**事件 (跟在＃符号后面的 URL 部分，包括＃符号)
@@ -57,7 +58,7 @@ window.onhashchange = locationHashChanged;
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.hashchange_event")}}
+{{Compat}}
 
 ## 参见
 

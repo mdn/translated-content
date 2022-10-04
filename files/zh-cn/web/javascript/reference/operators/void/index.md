@@ -2,6 +2,7 @@
 title: void 运算符
 slug: Web/JavaScript/Reference/Operators/void
 ---
+
 {{jsSidebar("Operators")}}
 
 **`void` 运算符**对给定的表达式进行求值，然后返回 {{jsxref("undefined")}}。

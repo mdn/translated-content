@@ -2,6 +2,7 @@
 title: WindowClient.navigate()
 slug: Web/API/WindowClient/navigate
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("WindowClient")}} インターフェイスの **`navigate()`** メソッドは、指定された URL を制御されたクライアントのページに読み込んでから、既存の {{domxref("WindowClient")}} に解決される {{jsxref("Promise")}} を返します。

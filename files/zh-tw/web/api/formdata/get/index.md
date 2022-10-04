@@ -51,7 +51,7 @@ formData.get('username'); // Returns "Chris"
 
 ## 瀏覽器相容性
 
-{{Compat("api.FormData.get")}}
+{{Compat}}
 
 ## 延伸閱讀
 

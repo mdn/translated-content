@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/set
 original_slug: Web/JavaScript/Reference/Fonctions/set
 ---
+
 {{jsSidebar("Functions")}}
 
 La syntaxe **`set`** permet de lier une propriété d'un objet à une fonction qui sera appelée à chaque tentative de modification de cette propriété.

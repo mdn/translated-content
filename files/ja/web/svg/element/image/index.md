@@ -2,6 +2,7 @@
 title: <image>
 slug: Web/SVG/Element/image
 ---
+
 {{SVGRef}}
 
 The **`<image>`** は SVG の要素で、 SVG 文書内に画像を含めます。これは{{glossary("raster image", "ラスター画像")}}ファイルや他の SVG ファイルを表示することができます。
@@ -10,7 +11,7 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
 
 `<image>` で表示される SVG ファイルは[画像として扱われます](/ja/docs/Web/SVG/SVG_as_an_Image)。外部リソースは読み込まれず、 {{cssxref(":visited")}} のスタイルは[適用されず](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)、ユーザーと対話することはできません。動的な SVG 要素を埋め込みたいのであれば、 {{SVGElement("use")}} を外部 URL で使用してください。 SVG ファイルを含めてその中でスクリプトを実行するのであれば、 {{HTMLElement("object")}} を {{SVGElement("foreignObject")}} の中で使用してください。
 
-> **Note:** HTML 仕様書は、解釈時に `<image>` を {{HTMLElement("img")}} の別名として定義しています。この仕様書の要素とその動作は SVG 文書または[インライン SVG](/ja/docs/SVG_In_HTML_Introduction) 内のみのものです。
+> **メモ:** HTML 仕様書は、解釈時に `<image>` を {{HTMLElement("img")}} の別名として定義しています。この仕様書の要素とその動作は SVG 文書または[インライン SVG](/ja/docs/SVG_In_HTML_Introduction) 内のみのものです。
 
 ## 使用場所
 

@@ -9,7 +9,9 @@ The HyperText Transfer Protocol (HTTP) **`505 HTTP Version Not Supported`** resp
 
 ## Status
 
-    505 HTTP Version Not Supported
+```
+505 HTTP Version Not Supported
+```
 
 ## Specifications
 

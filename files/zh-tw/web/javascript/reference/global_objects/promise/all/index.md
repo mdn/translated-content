@@ -181,7 +181,7 @@ Promise.all([p1, p2, p3, p4, p5]).then(values => {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise.all")}}
+{{Compat}}
 
 ## 參見
 

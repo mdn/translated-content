@@ -2,6 +2,7 @@
 title: Date.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 ---
+
 {{JSRef}}
 
 **`[@@toPrimitive]()`** メソッドは、`Date` オブジェクトをプリミティブ値に変換します。

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
 browser-compat: javascript.builtins.Float64Array.Float64Array
 ---
+
 {{JSRef}}
 
 Le **constructeur `Float64Array()`** permet de créer un nouveau tableau typé [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array) dont les éléments sont des nombres flottants représentés sur 64 bits (ce qui correspond au type de données `double` du langage C), utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.

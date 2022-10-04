@@ -2,6 +2,7 @@
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## 概述

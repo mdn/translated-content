@@ -11,7 +11,7 @@ Exibe o número de vezes em que a chamada `count()` em particular foi invocada. 
 
 Se `label` é fornecido, essa função exibe o número de vezes que a função `count()` foi chamada com a respectiva label.
 
-Se `label` for omitido, a função exibe o número de vezes que a função `count() `foi chamada na respectiva linha.
+Se `label` for omitido, a função exibe o número de vezes que a função `count()` foi chamada na respectiva linha.
 
 Por exemplo, no código abaixo:
 

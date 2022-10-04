@@ -2,6 +2,7 @@
 title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
+
 {{AddonSidebar()}}
 
 {{WebExtAPIRef("downloads")}} API の **`download()`** 関数では URL とそのほかのオプションの設定を行うことでファイルのダウンロードをすることができます。
@@ -80,7 +81,7 @@ downloading.then(onStartedDownload, onFailed);
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API を元にしています。
+> **メモ:** この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API を元にしています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

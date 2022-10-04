@@ -3,6 +3,7 @@ title: PageTransitionEvent
 slug: Web/API/PageTransitionEvent
 translation_of: Web/API/PageTransitionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 Les évènements de transition de page sont émis quand une page web est chargée ou déchargée.

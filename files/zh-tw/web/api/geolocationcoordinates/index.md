@@ -36,7 +36,7 @@ _`Coordinates` 這個介面沒有繼承任何屬性_。
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationCoordinates")}}
+{{Compat}}
 
 ## 請參考
 

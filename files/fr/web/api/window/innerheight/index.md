@@ -10,6 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window/innerHeight
 ---
+
 {{ ApiRef() }}
 
 Récupère la hauteur (en pixels) de la partie visible de la fenêtre de navigation en incluant, si elle est affichée, la barre de défilement horizontale.

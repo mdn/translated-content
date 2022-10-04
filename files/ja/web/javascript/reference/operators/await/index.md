@@ -2,6 +2,7 @@
 title: await
 slug: Web/JavaScript/Reference/Operators/await
 ---
+
 {{jsSidebar("Operators")}}
 
 `await` 演算子はプロミス ({{jsxref("Promise")}}) を待つために使用します。通常の JavaScript コードで、 {{jsxref("Statements/async_function", "async function")}} の内部でのみ使用することができます。によって {{jsxref("Promise")}} が返されるのを待機するために使用します。

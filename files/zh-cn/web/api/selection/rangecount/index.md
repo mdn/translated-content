@@ -2,13 +2,14 @@
 title: Selection.rangeCount
 slug: Web/API/Selection/rangeCount
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 The **`Selection.rangeCount`**是一个返回选区 (selection) 中 range 对象数量的只读属性。
 
 在网页使用者点击一个加载完毕的新打开的页面之前，**rangeCount**的值是 0。在使用者点击页面之后，rangeCount 的值变为 1，即使并没有可视的选区 (selection)。
 
-使用者一般情况下在一次只能选择一个 range ，所以通常情况下**rangeCount 属性**的值总为 1。脚本 (如 javascript) 可以使选区包含多个 range。
+使用者一般情况下在一次只能选择一个 range，所以通常情况下**rangeCount 属性**的值总为 1。脚本 (如 javascript) 可以使选区包含多个 range。
 
 Gecko 浏览器允许跨表格单元格获得多个选区 (此处可能翻译不准). Firefox allows to select multiple ranges in the document by using Ctrl+click (unless the click within an element with display: table-cell).
 
@@ -47,7 +48,7 @@ window.setInterval(function () {
 
 ## Browser compatibility
 
-{{Compat("api.Selection.rangeCount")}}
+{{Compat}}
 
 ## See also
 

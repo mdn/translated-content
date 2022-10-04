@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/shape-margin
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`shape-margin`** définit la marge autour d'une forme CSS créée avec {{cssxref("shape-outside")}}.
@@ -38,9 +39,13 @@ shape-margin: unset;
 - `<length-percentage>`
   - : Cette valeur définit la marge entre la forme et le texte alentour grâce à une longueur (cf. {{cssxref("&lt;length&gt;")}}) ou à un pourcentage ({{cssxref("&lt;percentage&gt;")}}) proportionnel à la largeur du bloc englobant de l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -83,15 +88,11 @@ section {
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS Shapes', '#shape-margin-property', 'shape-margin')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.shape-margin")}}
+{{Compat}}
 
 ## Voir aussi
 

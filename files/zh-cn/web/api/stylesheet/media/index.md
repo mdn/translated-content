@@ -2,6 +2,7 @@
 title: StyleSheet.media
 slug: Web/API/StyleSheet/media
 ---
+
 {{APIRef("CSSOM")}}
 
 ## 概述

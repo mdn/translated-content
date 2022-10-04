@@ -2,6 +2,7 @@
 title: WebSocket.readyState
 slug: Web/API/WebSocket/readyState
 ---
+
 {{APIRef("Web Sockets API")}}
 
 ## 概要

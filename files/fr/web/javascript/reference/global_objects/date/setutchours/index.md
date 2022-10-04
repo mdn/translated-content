@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCHours
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCHours()`** définit les heures pour la date, selon UTC, et renvoie le nombre de millièmes de secondes écoulées entre le 1er janvier 1970 00:00:00 UTC et cette nouvelle date.

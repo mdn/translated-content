@@ -2,6 +2,7 @@
 title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
 ---
+
 {{CSSRef}}
 
 `scroll-padding-inline` プロパティは、インライン方向の scroll-padding の個別指定を設定する一括指定プロパティです。

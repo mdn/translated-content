@@ -2,6 +2,7 @@
 title: 大于运算符 (>)
 slug: Web/JavaScript/Reference/Operators/Greater_than
 ---
+
 {{jsSidebar("Operators")}}
 
 当左边操作数大于右边的时候，大于 (`>`) 运算符返回`true`，否则返回`false`

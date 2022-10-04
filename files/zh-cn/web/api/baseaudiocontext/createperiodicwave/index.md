@@ -2,6 +2,7 @@
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("BaseAudioContext") }} 接口的 `createPeriodicWave()` 方法用于创建可对 {{ domxref("OscillatorNode") }} 输出进行整形的 {{domxref("PeriodicWave")}}（周期波）。
@@ -61,7 +62,7 @@ osc.stop(2);
 
 第二个值和后续值是正弦和余弦分量。你可以把它看做是傅里叶变换的结果，可以从时域值中获取频域值。这里，使用 `createPeriodicWave()`，你可以指定频率，浏览器会执行一个逆傅里叶变换，以获得振荡器的时域缓冲。这里，我们只在基础音上设置了一个全音量 (1.0) 的分量，所以我们得到一个正弦波。
 
-傅里叶变换系数应该按升序给出 (例如. <math><semantics><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mi>i</mi></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>c</mi><mo>+</mo><mi>d</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>i</mi></mrow></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>3</mn><mi>i</mi></mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} , \left(f+gi\right)e^{3i} </annotation></semantics></math>等.) 可以是正的或者是负的。一个简单的手动获取此类系数的方法是使用图形计算器，尽管这不是最好的。
+傅里叶变换系数应该按升序给出（例如：<math><semantics><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mi>i</mi></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>c</mi><mo>+</mo><mi>d</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>i</mi></mrow></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>3</mn><mi>i</mi></mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} , \left(f+gi\right)e^{3i} </annotation></semantics></math>等。）可以是正的或者是负的。一个简单的手动获取此类系数的方法是使用图形计算器，尽管这不是最好的。
 
 ## 规格
 
@@ -69,7 +70,7 @@ osc.stop(2);
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.createPeriodicWave")}}
+{{Compat}}
 
 ## 参见
 

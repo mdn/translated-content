@@ -9,6 +9,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/storage
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

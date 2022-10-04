@@ -2,6 +2,7 @@
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Length`** エンティティヘッダーは、受信者に送信されるエンティティ本文の長さをバイト単位で示します。

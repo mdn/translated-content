@@ -18,9 +18,9 @@ Você tem várias opções para oferecer suas idéias. Este artigo irá ajudá-l
 
 Primeiro de tudo, se você ver algum problema com a documentação, você deve sempre se sentir livre para corrigir por si mesmo.
 
-1.  Você pode efetuar o [login](/pt-BR/docs/MDN/Contribute/Howto/Create_an_MDN_account) com sua conta do [Github](https://github.com/) ou do [Persona](https://www.persona.org/).
-2.  Após efetuar o login, clique no botão **Editar** (em azul) em qualquer página para que o [editor](/pt-BR/docs/MDN/Contribute/Editor) seja aberto.
-3.  Clique no botão **Publicar** (em verde) quando você terminar suas correções.
+1. Você pode efetuar o [login](/pt-BR/docs/MDN/Contribute/Howto/Create_an_MDN_account) com sua conta do [Github](https://github.com/) ou do [Persona](https://www.persona.org/).
+2. Após efetuar o login, clique no botão **Editar** (em azul) em qualquer página para que o [editor](/pt-BR/docs/MDN/Contribute/Editor) seja aberto.
+3. Clique no botão **Publicar** (em verde) quando você terminar suas correções.
 
 A Documentação aqui é uma wiki, e é curada por uma equipe de voluntários e funcionários remunerados, então não seja tímido — sua gramática não precisa ser perfeita. Nós vamos arrumar se você cometer um erro; sem nenhum problema!
 

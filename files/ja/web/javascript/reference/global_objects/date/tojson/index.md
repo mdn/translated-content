@@ -2,6 +2,7 @@
 title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
+
 {{JSRef}}
 
 **`toJSON()`** メソッドは、{{jsxref("Date")}} オブジェクトの文字列表現を返します。

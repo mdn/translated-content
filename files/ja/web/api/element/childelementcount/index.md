@@ -3,6 +3,7 @@ title: Element.childElementCount
 slug: Web/API/Element/childElementCount
 original_slug: Web/API/ParentNode/childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.childElementCount`** は読み取り専用のプロパティで、この要素の子要素の数を返します。

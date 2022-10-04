@@ -9,6 +9,7 @@ tags:
   - Référence(2)
 translation_of: Web/API/IDBObjectStore/getAllKeys
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`getAllKeys()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet  {{domxref("IDBRequest")}} qui permet de récupérer l'ensemble des clés pour les objets qui correspondent au critère passé en argument (ou les clés de tous les objets du magasin si aucun paramètre n'est fourni).

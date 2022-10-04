@@ -2,6 +2,7 @@
 title: Client.frameType
 slug: Web/API/Client/frameType
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("Client")}} インターフェイスの **`frameType`** 読み取り専用プロパティは、現在の {{domxref("Client")}} の閲覧コンテキストの種類を示します。 この値は、`"auxiliary"`、`"top-level"`、`"nested"`、`"none"` のいずれかです。

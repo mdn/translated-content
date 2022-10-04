@@ -583,7 +583,7 @@ Veamos un ejemplo. Primero, un código de marcado sencillo que crea un formulari
 
 Ahora, el CSS para nuestro ejemplo. La mayor parte del CSS es bastante común, excepto por los usos de la propiedad {{cssxref ("display")}}. A los elementos {{htmlelement ("form")}}, {{htmlelement ("div")}}, {{htmlelement ("label")}} y {{htmlelement ("input")}} se les dice que se muestren como una tabla, filas de tabla y celdas de tabla, respectivamente; actuarán básicamente como marcas de tabla HTML, y lograrán por defecto la alineación perfecta de las etiquetas y las entradas. Todo lo que hay que hacer es añadir un poco de tamaños, márgenes, etc., para que todo se vea un poco mejor, ¡y listo!
 
-Observa que se la ha proporcionado al párrafo de encabezado `display: table-caption;,` lo que hace que actúe como una celda de encabezado ({{htmlelement ("caption")}}) de la tabla; y con `caption-side: bottom;` se le dice a la celda de encabezado que se asiente en la parte inferior de la tabla con fines de aplicación de estilo, aunque en el código fuente el marcado está antes que los elementos `<input>`. Esto permite un poco de flexibilidad.
+Observa que se la ha proporcionado al párrafo de encabezado `display: table-caption;`, lo que hace que actúe como una celda de encabezado ({{htmlelement ("caption")}}) de la tabla; y con `caption-side: bottom;` se le dice a la celda de encabezado que se asiente en la parte inferior de la tabla con fines de aplicación de estilo, aunque en el código fuente el marcado está antes que los elementos `<input>`. Esto permite un poco de flexibilidad.
 
 ```css
 html {

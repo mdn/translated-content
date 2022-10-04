@@ -49,7 +49,7 @@ console.log(eArr.next().value); // p
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.@@iterator")}}
+{{Compat}}
 
 ## 參見
 

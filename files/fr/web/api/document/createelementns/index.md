@@ -11,6 +11,7 @@ tags:
   - URI
 translation_of: Web/API/Document/createElementNS
 ---
+
 {{ApiRef("DOM")}}
 
 Crée un élément avec l'URI de l'espace de noms spécifié et un nom qualifié.

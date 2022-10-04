@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toLocaleDateString
 browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleDateString()`** renvoie une chaine de caractères correspondant à la date (le fragment de l'objet qui correspond à la date&nbsp;: jour, mois, année) exprimée selon une locale donnée et pour le fuseau horaire de l'agent utilisateur.

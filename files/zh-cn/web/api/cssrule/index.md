@@ -2,6 +2,7 @@
 title: CSSRule
 slug: Web/API/CSSRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSRule`** 接口表示一条 CSS 规则。有几种不同的规则类型，在下面的[类型常量](#类型常量)部分中有悉数列出。
@@ -83,7 +84,7 @@ interface CSSRule {
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSRule")}}
+{{Compat}}
 
 ## 相关
 

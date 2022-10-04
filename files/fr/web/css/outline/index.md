@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/outline
 ---
+
 {{CSSRef}}
 
 La propriété **`outline`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de définir, dans une seule déclaration, une ou plusieurs des propriétés parmi {{cssxref("outline-style")}}, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.
@@ -54,9 +55,13 @@ La propriété `outline` peut être définie avec une, deux ou trois valeurs par
 - `<'outline-color'>`
   - : Depuis Gecko 1.9 (Firefox 3), la valeur de la propriété {{cssxref("color")}} de l'élément est utilisée. Voir {{cssxref("outline-color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -121,13 +126,8 @@ Utiliser la propriété `outline` avec une valeur `0` ou `none` supprimera le st
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Basic UI', '#outline', 'outline')}}             | {{Spec2('CSS3 Basic UI')}} | Aucun changement.    |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline', 'outline')}} | {{Spec2('CSS2.1')}}             | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline")}}
+{{Compat}}

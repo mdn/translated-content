@@ -2,6 +2,7 @@
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
+
 {{JSRef}}
 
 **`String.fromCharCode()`** 静的メソッドは、指定された UTF-16 コードユニットの並びから生成された文字列を返します。

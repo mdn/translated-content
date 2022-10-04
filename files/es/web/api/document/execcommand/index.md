@@ -62,7 +62,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - formatBlock
   - : Añade una etiqueta HTML de estilo bloque alrededor de la línea que contiene la selección actual, reemplazando el elemento de bloque que contiene la línea si existe (en Firefox, BLOCKQUOTE es la excepción - que envolverá cualquier elemento de bloque que contiene). Requiere una cadena de etiqueta-nombre que se pasa como un argumento de valor. Prácticamente todas las etiquetas de estilo bloque se pueden utilizar (por ejemplo. "H1", "P", "DL", "BLOCKQUOTE"). (Internet Explorer sólo admite etiquetas de título H1 - H6, dirección y PRE, que también debe incluir los delimitadores de etiquetas <>, como "\<H1>".)
 - forwardDelete
-  - : Elimina el character delante de la posición del cursor [cursor](http://en.wikipedia.org/wiki/Cursor_%28computers%29 "Cursor (computers)"). Es lo mismo que pulsar la tecla suprimir.
+  - : Elimina el character delante de la posición del cursor [cursor](http://en.wikipedia.org/wiki/Cursor_%28computers%29). Es lo mismo que pulsar la tecla suprimir.
 - heading
   - : Añade una etiqueta de encabezado en torno a una selección, o la línea en el punto de inserción. Requiere la cadena de nombre de etiqueta que se pasa como un valor de argumento (es decir, "H1", "H6"). (No es compatible con Internet Explorer y Safari.)
 - hiliteColor
@@ -135,6 +135,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ## Compatibilidad del Navegador
 
 {{Compat}}
+
 ## Vea también
 
 - {{domxref("document.contentEditable")}}

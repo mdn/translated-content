@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getInt16
 ---
+
 {{JSRef}}
 
 La méthode **`getInt16()`** permet de lire un entier signé sur 16 bits (type _short_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.

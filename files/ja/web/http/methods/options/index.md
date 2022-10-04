@@ -2,6 +2,7 @@
 title: OPTIONS
 slug: Web/HTTP/Methods/OPTIONS
 ---
+
 {{HTTPSidebar}}
 
 **HTTP の `OPTIONS`メソッド**は、指定された URL またはサーバーの許可されている通信オプションをリクエストします。クライアントはこのメソッドで URL か、サーバー全体を表すアスタリスク (`*`) を指定することができます。

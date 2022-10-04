@@ -57,7 +57,7 @@ p:lang(en) {
 
 ## 瀏覽器兼容性 Browser compatibility
 
-{{Compat("css.selectors.lang")}}
+{{Compat}}
 
 ## 其他參考 See also
 

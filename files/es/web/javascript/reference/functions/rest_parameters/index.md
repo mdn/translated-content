@@ -47,10 +47,10 @@ myFun("one", "two", "three", "four", "five", "six");
 
 ### Diferencia entre los parámetros rest y el objeto `arguments`
 
-Hay tres principales diferencias entre los parámetros rest y el objeto [`arguments`](/es/docs/Web/JavaScript/Reference/Functions/arguments "arguments"):
+Hay tres principales diferencias entre los parámetros rest y el objeto [`arguments`](/es/docs/Web/JavaScript/Reference/Functions/arguments):
 
 - los parámetros rest son sólo aquellos a los que no se les ha asignado un nombre, mientras que el objeto `arguments` contiene todos los argumentos que se le han pasado a la función;
-- el objeto `arguments` no es un array real, mientras que los parámetros rest son instancias de [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array "Array") , lo que significa que lo los métodos como [`sort`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort "Array sort method"), [`map`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map "Array map method"), [`forEach`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach "Array forEach method") o [`pop`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/pop "Array pop method") pueden aplicarse directamente;
+- el objeto `arguments` no es un array real, mientras que los parámetros rest son instancias de [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) , lo que significa que lo los métodos como [`sort`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [`map`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`forEach`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) o [`pop`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) pueden aplicarse directamente;
 - el objeto `arguments` tiene una funcionalidad adicional específica para sí mismo (como la propiedad `callee`).
 
 ### De argumentos a array
@@ -84,13 +84,15 @@ function f(...args) {
 
 Los parámetros rest pueden ser desestructurados, eso significa que sus datos pueden ser desempaquetados dentro de distintas variables. Ver [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
-    function f(...[a, b, c]) {
-      return a + b + c;
-    }
+```js
+function f(...[a, b, c]) {
+  return a + b + c;
+}
 
-    f(1)          // NaN (b y c son indefinidos)
-    f(1, 2, 3)    // 6
-    f(1, 2, 3, 4) // 6 (el cuarto parámetro no está desestructurado)
+f(1)          // NaN (b y c son indefinidos)
+f(1, 2, 3)    // 6
+f(1, 2, 3, 4) // 6 (el cuarto parámetro no está desestructurado)
+```
 
 ## Ejemplos
 
@@ -200,10 +202,10 @@ Para poder usar los métodos de `Array` en el objeto `arguments`, se debe conver
 
 ## Ver también
 
-- [Spread Operator](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator "spread operator")
-- [Arguments object](/es/docs/Web/JavaScript/Reference/Functions/arguments "arguments")
-- [Array](/es/docs/Web/JavaScript/Reference/Global_Objects/Array "Arreglos")
-- [Functions](/es/docs/Web/JavaScript/Reference/Functions "Functions and function scope")
+- [Spread Operator](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+- [Arguments object](/es/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Array](/es/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [Functions](/es/docs/Web/JavaScript/Reference/Functions)
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
 - [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
 - [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

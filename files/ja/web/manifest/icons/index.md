@@ -2,6 +2,7 @@
 title: icons
 slug: Web/Manifest/icons
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

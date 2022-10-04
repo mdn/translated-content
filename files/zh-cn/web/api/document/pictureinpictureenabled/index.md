@@ -2,6 +2,7 @@
 title: Document.pictureInPictureEnabled
 slug: Web/API/Document/pictureInPictureEnabled
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 {{domxref("Document")}}  接口的只读属性 **`pictureInPictureEnabled`**，表示画中画模式是否可用。

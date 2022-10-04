@@ -18,6 +18,7 @@ tags:
 translation_of: Web/HTML/Element/abbr
 browser-compat: html.elements.abbr
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<abbr>`** (**abréviation** en français) représente une abréviation ou un acronyme ; l'attribut facultatif [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) peut fournir une explication ou une description de l'abréviation. S'il est présent, `title` doit contenir cette description complète et rien d'autre.

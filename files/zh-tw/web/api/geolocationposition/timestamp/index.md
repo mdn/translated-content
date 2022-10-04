@@ -19,7 +19,7 @@ coord = position.timestamp
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationPosition.timestamp")}}
+{{Compat}}
 
 ## 請參考
 

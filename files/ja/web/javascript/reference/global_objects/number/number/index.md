@@ -2,6 +2,7 @@
 title: Number() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
 ---
+
 {{JSRef}}
 
 **`Number()` コンストラクター**は、 {{jsxref("Number")}} オブジェクトを生成します。

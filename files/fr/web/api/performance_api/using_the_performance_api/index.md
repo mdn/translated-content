@@ -9,6 +9,7 @@ tags:
   - Performance Web
 translation_of: Web/API/Performance_API/Using_the_Performance_API
 ---
+
 {{DefaultAPISidebar("High Resolution Time")}}
 
 Une exigence fondamentale de la performance web est une définition précise et cohérente du _temps._ Le type [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) (un `double`) est utilisé par toutes les interfaces de performance pour contenir de telles valeurs de temps.

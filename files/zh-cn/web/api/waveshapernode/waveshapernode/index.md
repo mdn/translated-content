@@ -2,6 +2,7 @@
 title: WaveShaperNode.WaveShaperNode()
 slug: Web/API/WaveShaperNode/WaveShaperNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 的 **`WaveShaperNode()`** 构造方法创建一个新的 {{domxref("WaveShaperNode")}}对象，是一个可以用来表示非线性畸变的{{domxref("AudioNode")}} 。
@@ -35,4 +36,4 @@ _继承_ _{{domxref("AudioNodeOptions")}} 字典的参数。_
 
 ## 浏览器兼容性
 
-{{Compat("api.WaveShaperNode.WaveShaperNode")}}
+{{Compat}}

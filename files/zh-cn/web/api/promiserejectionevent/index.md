@@ -2,6 +2,7 @@
 title: PromiseRejectionEvent
 slug: Web/API/PromiseRejectionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`PromiseRejectionEvent`** 接口表示出现在 JavaScript {{jsxref("Promise")}}s 被 rejecte (拒绝) 时触发的事件。这些事件对遥测 (远程测试) 和调试特别的有用。
@@ -45,7 +46,7 @@ window.onunhandledrejection = function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.PromiseRejectionEvent")}}
+{{Compat}}
 
 ## 参见
 

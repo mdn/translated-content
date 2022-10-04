@@ -2,6 +2,7 @@
 title: Headers.delete()
 slug: Web/API/Headers/delete
 ---
+
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
 **`delete()`** 方法可以从 Headers 对象中删除指定 header.
@@ -56,7 +57,7 @@ myHeaders.get('Content-Type'); // Returns null, as it has been deleted
 
 ## Browser compatibility
 
-{{Compat("api.Headers.delete")}}
+{{Compat}}
 
 ## See also
 

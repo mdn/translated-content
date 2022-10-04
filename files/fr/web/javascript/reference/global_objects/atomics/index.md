@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics
 ---
+
 {{JSRef}}
 
 L'objet **`Atomics`** fournit des opérations atomiques sous la forme de méthodes statiques. Celles-ci sont utilisées avec les objets {{jsxref("SharedArrayBuffer")}}.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/Column_layouts
 original_slug: Web/CSS/Layout_cookbook/Disposition_en_colonnes
 ---
+
 {{CSSRef}}
 
 Vous aurez souvent à créer des dispositions organisées en colonnes. CSS fournit différentes méthodes pour parvenir à de telles dispositions. Les grilles CSS ou les boîtes flexibles ou encore les dispositions multi-colonnes peuvent être utilisées et choisir l'une de ces méthodes dépend de ce que l'on veut obtenir. Dans ce guide, nous verrons ces différentes options.

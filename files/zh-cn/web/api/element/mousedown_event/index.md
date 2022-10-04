@@ -2,6 +2,7 @@
 title: mousedown
 slug: Web/API/Element/mousedown_event
 ---
+
 {{APIRef}}
 
 `mousedown` 事件在指针设备按钮按下时触发。
@@ -32,7 +33,7 @@ slug: Web/API/Element/mousedown_event
 | `view` {{readonlyInline}}          | {{domxref("WindowProxy")}} | {{domxref("document.defaultView")}} (文档 `window`)                                                                                                                                                                                               |
 | `detail` {{readonlyInline}}        | `long` (`float`)                     | 短时间内通过连续点击每次加一自增的计数值                                                                                                                                                                                                                       |
 | `currentTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | 挂载监听器的节点                                                                                                                                                                                                                                               |
-| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | 对于 `mouseover`, `mouseout`, `mouseenter` 及 `mouseleave` 事件： 该事件及其互补事件（如 `mouseleave` 对应 `mouseenter` 事件)。不存在时为 `null`                                                                                                               |
+| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | 对于 `mouseover`, `mouseout`, `mouseenter` 及 `mouseleave` 事件：该事件及其互补事件（如 `mouseleave` 对应 `mouseenter` 事件)。不存在时为 `null`                                                                                                               |
 | `screenX` {{readonlyInline}}       | long                                 | 全局屏幕坐标系下鼠标指针的 X 轴坐标值                                                                                                                                                                                                                          |
 | `screenY` {{readonlyInline}}       | long                                 | 全局屏幕坐标系下鼠标指针的 Y 轴坐标值                                                                                                                                                                                                                          |
 | `clientX` {{readonlyInline}}       | long                                 | 当前（DOM 元素）坐标系下鼠标指针的 X 轴坐标值                                                                                                                                                                                                                  |
@@ -51,7 +52,7 @@ slug: Web/API/Element/mousedown_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.mousedown_event")}}
+{{Compat}}
 
 ## 参见
 

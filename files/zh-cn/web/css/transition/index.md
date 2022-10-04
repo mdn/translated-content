@@ -2,6 +2,7 @@
 title: transition
 slug: Web/CSS/transition
 ---
+
 {{CSSRef}}
 
 **`transition` **[CSS](/zh-CN/CSS) 属性是 {{ cssxref("transition-property") }}，{{ cssxref("transition-duration") }}，{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的一个[简写属性](/zh-CN/docs/CSS/Shorthand_properties)。
@@ -69,7 +70,7 @@ transition: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## 参见
 

@@ -15,7 +15,9 @@ La propiedad **`arguments.length`** contiene el número de argumentos pasados a 
 
 ## Sintaxis
 
-    arguments.length
+```
+arguments.length
+```
 
 ## Descripción
 

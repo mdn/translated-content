@@ -79,6 +79,7 @@ document.onreadystatechange = function () {
 ## Compatibilidad del Navegador
 
 {{Compat}}
+
 ## Ver también
 
 - Evento {{event("readystatechange")}}

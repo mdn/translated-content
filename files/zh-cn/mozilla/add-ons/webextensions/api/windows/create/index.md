@@ -2,6 +2,7 @@
 title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 ---
+
 {{AddonSidebar()}}
 
 创建一个新的窗口。
@@ -29,7 +30,7 @@ var creating = browser.windows.create(
 - `createData`{{optional_inline}}
   - : `object`.
     - `url`{{optional_inline}}
-      - : 字符串或字符串数组. 一个 URL 或都 URL 数组要在该窗口中打开成标签页的。完整的需要包括 scheme (像。`http://www.google.com`, not `www.google.com`). 相对路径将相对于该拓展中的当前页。默认为打开新标签页。
+      - : 字符串或字符串数组。一个 URL 或都 URL 数组要在该窗口中打开成标签页的。完整的需要包括 scheme (像。`http://www.google.com`, not `www.google.com`). 相对路径将相对于该拓展中的当前页。默认为打开新标签页。
     - `tabId`{{optional_inline}}
       - : `integer`. 如果设置了该值，将该 tab 从一个现有的窗口中移到新窗口中。
     - `left`{{optional_inline}}
@@ -43,7 +44,7 @@ var creating = browser.windows.create(
     - `focused`{{optional_inline}}
       - : `boolean`.如果 为`true`, 新窗口将获取焦点。否则新窗口当在后台打开并且当前焦点窗口继续保持焦点。默认为 true
     - `incognito`{{optional_inline}}
-      - : `boolean`. 是否打开为一个隐私窗口。`如果设定为隐私窗口并且引入了tabId`, 则 tabId 对应的标签必须是一个隐私标签— 即不能把一个不是隐私标签的标签页移动到隐私窗口中。
+      - : `boolean`。是否打开为一个隐私窗口。如果设定为隐私窗口并且引入了 `tabId`, 则 tabId 对应的标签必须是一个隐私标签— 即不能把一个不是隐私标签的标签页移动到隐私窗口中。
     - `type`{{optional_inline}}
       - : 一{{WebExtAPIRef('windows.CreateType')}} 值，表示创建窗口的类型。`panel` 或者`popup` 样式将打开一个没有默认浏览器样式的窗口 (地址栏，工具栏等）。
     - `state`{{optional_inline}}

@@ -12,6 +12,7 @@ tags:
   - vocale
 translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 ---
+
 L'API Web Speech fournit deux fonctionnalités différentes — la reconnaissance vocale, et la synthèse vocale (aussi appelée "text to speech", ou tts) — qui ouvrent de nouvelles possibiités d'accessibilité, et de mécanismes de contrôle. Cet article apporte une simple introduction à ces deux domaines, accompagnée de démonstrations.
 
 ## Reconnaissance vocale

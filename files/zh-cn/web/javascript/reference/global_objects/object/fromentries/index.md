@@ -2,6 +2,7 @@
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 ---
+
 {{JSRef}}
 
 **`Object.fromEntries()`** 方法把键值对列表转换为一个对象。
@@ -33,7 +34,7 @@ Object.fromEntries(iterable);
 
 ### `Map` 转化为 `Object`
 
-通过 `Object.fromEntries`， 可以将 {{jsxref("Map")}} 转换为 {{jsxref("Object")}}:
+通过 `Object.fromEntries`，可以将 {{jsxref("Map")}} 转换为 {{jsxref("Object")}}:
 
 ```js
 const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
@@ -43,7 +44,7 @@ console.log(obj); // { foo: "bar", baz: 42 }
 
 ### `Array` 转化为 `Object`
 
-通过 `Object.fromEntries`， 可以将 {{jsxref("Array")}} 转换为 {{jsxref("Object")}}:
+通过 `Object.fromEntries`，可以将 {{jsxref("Array")}} 转换为 {{jsxref("Object")}}:
 
 ```js
 const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];

@@ -6,6 +6,7 @@ slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 original_slug: Web/Progressive_web_apps/Relancer_Via_Notifications_Push
 ---
+
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
 
 Avoir la possibilité de mettre en cache le contenu d'une application pour travailler en mode déconnecté est une formidable fonctionnalité. Donner la possibilité à l'utilisateur d'installer l'application web sur son écran d'accueil est encore mieux. Mais plutôt que de s'en remettre seulement aux actions de l'utilisateur, nous pouvons faire plus, en utilisant des messages poussés et des notifications pour le relancer automatiquement et fournir des nouveaux contenus à chaque fois qu'ils sont disponibles.

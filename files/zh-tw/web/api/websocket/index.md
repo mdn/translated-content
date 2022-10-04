@@ -110,4 +110,4 @@ void send(
 
 ## 瀏覽器兼容
 
-{{Compat("api.WebSocket")}}
+{{Compat}}

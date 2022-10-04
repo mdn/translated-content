@@ -2,6 +2,7 @@
 title: return
 slug: Web/JavaScript/Reference/Statements/return
 ---
+
 {{jsSidebar("Statements")}}
 
 **`return` 文**は、関数の実行を終了して、関数の呼び出し元に返す値を指定します。
@@ -59,7 +60,7 @@ a + b;
 
 コンソールに "unreachable code after return statement" という警告が現れます。
 
-> **Note:** Firefox 40 以降では、 `return` 文の後に到達できないコードがある場合に、コンソールに警告が表示されます。
+> **メモ:** Firefox 40 以降では、 `return` 文の後に到達できないコードがある場合に、コンソールに警告が表示されます。
 
 括弧を使用すると、この問題を防ぐ (ASI を抑止する) ことができます。
 

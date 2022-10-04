@@ -3,6 +3,7 @@ title: WebAssembly.RuntimeError() コンストラクター
 slug: WebAssembly/JavaScript_interface/RuntimeError/RuntimeError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError
 ---
+
 {{JSRef}}
 
 **`WebAssembly.RuntimeError()`** コンストラクターは、新しい WebAssembly `RuntimeError` オブジェクトを生成します。これは、 WebAssembly が[トラップ](https://webassembly.org/docs/semantics/#traps)を指定するたびに例外として発生する型です。

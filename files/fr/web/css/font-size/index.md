@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-size
 ---
+
 {{CSSRef}}
 
 La propriété **`font-size`** définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type {{cssxref("&lt;length&gt;")}}) (par exemple exprimées avec les unités `em` ou `ex`).
@@ -62,9 +63,13 @@ La propriété `font-size` peut être définie de deux façons :
 
 > **Note :** Il est généralement préférable d'utiliser des valeurs relatives à la taille par défaut choisie par l'utilisateur.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Les différentes approches
 
@@ -206,15 +211,8 @@ Les unités `em` et `ex` pour la propriété {{Cssxref("font-size")}} sont relat
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}             | {{Spec2('CSS3 Fonts')}}         | Aucune modification.                    |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}     | {{Spec2('CSS3 Transitions')}} | `font-size` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}} | {{Spec2('CSS2.1')}}                 | Aucune modification.                    |
-| {{SpecName('CSS1', '#font-size', 'font-size')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                    |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-size")}}
+{{Compat}}

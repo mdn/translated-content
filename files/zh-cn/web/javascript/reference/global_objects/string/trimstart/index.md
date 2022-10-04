@@ -3,6 +3,7 @@ title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimLeft
 ---
+
 {{JSRef}}**`trimStart()` **方法从字符串的开头删除空格。`trimLeft()` 是此方法的别名。{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
 
 ## 语法
@@ -22,7 +23,7 @@ str.trimLeft();
 
 ### 别名
 
-为了与 {{jsxref("String.prototype.padStart")}} 等函数保持一致，标准方法名称为`trimStart`。 但是，出于 Web 兼容性原因，`trimLeft` 仍然是 `trimStart` 的别名。在某些引擎中，这意味着：
+为了与 {{jsxref("String.prototype.padStart")}} 等函数保持一致，标准方法名称为`trimStart`。但是，出于 Web 兼容性原因，`trimLeft` 仍然是 `trimStart` 的别名。在某些引擎中，这意味着：
 
 ```js
 String.prototype.trimLeft.name === "trimStart";
@@ -52,7 +53,7 @@ console.log(str);        // "foo  "
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.String.trimStart")}}
+{{Compat}}
 
 ## Polyfill
 

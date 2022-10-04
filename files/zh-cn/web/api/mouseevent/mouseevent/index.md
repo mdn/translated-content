@@ -2,6 +2,7 @@
 title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent()`** 构造器创建一个 {{domxref("MouseEvent")}}。
@@ -58,7 +59,7 @@ slug: Web/API/MouseEvent/MouseEvent
 
     - `"buttons"`，无符号 `short` 型可选，默认为 `0`，描述了当事件发生时哪些按键被按下：
 
-      | 位域值 （Bit-field value） | 含义                        |
+      | 位域值（Bit-field value） | 含义                        |
       | -------------------------- | --------------------------- |
       | `0`                        | 无按键被按下                |
       | `1`                        | 主按键被按下 (通常为左键)   |

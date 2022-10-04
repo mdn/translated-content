@@ -178,7 +178,7 @@ if (!Array.from) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.from")}}
+{{Compat}}
 
 ## 參見
 

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/x-ms-format-detection
 original_slug: Web/HTML/Attributs_universels/x-ms-format-detection
 ---
+
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
 L'attribut **`x-ms-format-detection`** détermine si le format de la donnée dans le contenu est détectée automatiquement et, lorsqu'elle est trouvée, est convertie en un lien sur lequel on peut cliquer.

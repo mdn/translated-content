@@ -2,6 +2,7 @@
 title: Firefox 64 for developers
 slug: Mozilla/Firefox/Releases/64
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 64 は、米国時間 2018 年 12 月 11 日 にリリースされました。このページでは、開発者に影響する Firefox 64 の変更点をまとめています。

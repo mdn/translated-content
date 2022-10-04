@@ -6,6 +6,7 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Resources_and_specifications
 ---
+
 {{HTTPSidebar}}
 
 HTTP a été spécifié pour la première fois au début des années 1990. Conçu dans un souci d'extensibilité, il a fait l'objet de nombreux ajouts au fil des ans, ce qui a entraîné la dispersion de sa spécification dans de nombreux documents de spécification (au milieu d'extensions expérimentales abandonnées). Cette page répertorie les ressources pertinentes sur HTTP.

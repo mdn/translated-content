@@ -40,7 +40,7 @@ _同時繼承其父{{domxref("事件")}}方法_。
 
 ## 瀏覽器兼容性
 
-{{Compat("api.AnimationEvent")}}
+{{Compat}}
 
 ## 另請參見
 

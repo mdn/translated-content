@@ -2,6 +2,7 @@
 title: CharacterData.appendData()
 slug: Web/API/CharacterData/appendData
 ---
+
 {{APIRef("DOM")}}
 
 **`appendData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、指定されたデータをこのノードの現在のデータの末尾に追加します。

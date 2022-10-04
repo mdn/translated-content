@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/reduceRight
 ---
+
 {{JSRef}}
 
 La méthode **`reduceRight()`** applique une fonction sur un accumulateur et chaque valeur d'un tableau (de la droite vers la gauche) de sorte à réduire le tableau en une seule valeur.

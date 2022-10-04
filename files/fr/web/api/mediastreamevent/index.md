@@ -11,6 +11,7 @@ tags:
   - WebRTC
 translation_of: Web/API/MediaStreamEvent
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
 L'interface **`MediaStreamEvent`** représente les événements qui se produisent en relation avec un {{domxref("MediaStream")}}. Deux événements de ce type peuvent être lancés: {{event("addstream")}} et {{event("removestream")}}.

@@ -2,6 +2,7 @@
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLVideoElement`** 接口提供了用于操作视频对象的特殊属性和方法。它同时还继承了{{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 的属性与方法。
@@ -32,7 +33,7 @@ _继承了其父对象 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElemen
 - {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{readonlyInline}}{{non-standard_inline}}
   - : 返回一个 `unsigned long` 值，给出已经从媒体资源中解析，并解码为图像的视频帧数。
 - {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{readonlyInline}}{{non-standard_inline}}
-  - : 返回一个 `unsigned long` 值，给出被置入绘制队列(pipeline)等待绘制的视频帧数。
+  - : 返回一个 `unsigned long` 值，给出被置入绘制队列 (pipeline) 等待绘制的视频帧数。
 - {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{readonlyInline}}{{non-standard_inline}}
   - : 返回一个 `unsigned long` 值，给出已经被绘制的视频帧数。
 - {{domxref("HTMLVideoElement.mozFrameDelay")}} {{readonlyInline}}{{non-standard_inline}}
@@ -53,7 +54,7 @@ _继承了其父对象_ _{{domxref("HTMLMediaElement")}}和_ _{{domxref("HTMLEle
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLVideoElement")}}
+{{Compat}}
 
 ## 另见
 

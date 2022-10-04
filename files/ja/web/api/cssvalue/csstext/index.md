@@ -2,6 +2,7 @@
 title: CSSValue.cssText
 slug: Web/API/CSSValue/cssText
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("CSSValue")}} インターフェイスの **`cssText`** プロパティは、現在計算されている CSS プロパティ値を表します。

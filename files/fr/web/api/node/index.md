@@ -13,6 +13,7 @@ tags:
   - hierarchy
 translation_of: Web/API/Node
 ---
+
 {{ApiRef("DOM")}}
 
 **`Node`** (_nœud)_ est une classe abstraite de laquelle de nombreux objets de type DOM API héritent, leur permettant d'être traités de manière similaire et souvent interchangeable. Étant une classe abstraire, il n'existe pas d'objet qui soit directement un `Node`. Tous les objets implantant les fonctionnalités de `Node` sont des instances d'une de ses sous-classes, dont les plus notables sont {{domxref("Document")}}, {{domxref("Element")}} et {{domxref("DocumentFragment")}}.

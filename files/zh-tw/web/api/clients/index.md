@@ -37,7 +37,7 @@ clients.matchAll(options).then(function(clients) {
 
 ## Browser compatibility
 
-{{Compat("api.Clients")}}
+{{Compat}}
 
 ## See also
 

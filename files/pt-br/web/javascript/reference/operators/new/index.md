@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Operators/new
 ---
 {{jsSidebar("Operators")}}
 
-O **operador `new`**` `cria uma instancia de um tipo de objeto definido pelo usuário ou de um dos tipos nativos (_built-in_) que possuem uma função construtora.
+O **operador `new`** cria uma instancia de um tipo de objeto definido pelo usuário ou de um dos tipos nativos (_built-in_) que possuem uma função construtora.
 
 {{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}} A fonte deste exemplo interativo é armazenada em um repositório do GitHub. Se você gostaria de contribuir para o projeto de exemplos interativos, clone <https://github.com/mdn/interactive-examples> e nos envie uma requisição de comando pull.
 
@@ -33,16 +33,16 @@ new construtor[([argumentos])]
 
 Criar um objeto definido pelo usuário requer dois passos:
 
-1.  Definir o tipo de objeto através da escrita de uma função.
-2.  Criar uma instancia do objeto utilizando `new`.
+1. Definir o tipo de objeto através da escrita de uma função.
+2. Criar uma instancia do objeto utilizando `new`.
 
 Para definir um tipo de objeto, crie uma função para o tipo de objetivo que especifica seu nome e propriedades. Um objeto pode ter uma propriedade que é um outro objeto. Veja os exemplos abaixo:
 
 Quando o código `new Foo(...)` é executado, acontece o seguinte::
 
-1.  Um novo objeto é criado, herdando de `Foo.prototype`.
-2.  A função construtora _F`oo`_ é chamado com os argumentos especificados, e com [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) vinculado ao novo objeto criado. `new Foo` é equivalente a `new `_F`oo`_`()`, ou seja, se nenhuma lista de argumentos for especificada, _F`oo`_ é chamado sem argumentos.
-3.  O objeto retornado pela função construtora é o resultado de toda expressão `new`. Se a função construtora não retornar um objeto explicitamente, o objeto criado no passo 1 é então usado. (Normalmente construtores não retornam um valor, mas eles podem escolher fazê-lo se eles quiserem sobrescrever o processo normal de criação de objeto.)
+1. Um novo objeto é criado, herdando de `Foo.prototype`.
+2. A função construtora _F`oo`_ é chamado com os argumentos especificados, e com [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) vinculado ao novo objeto criado. `new Foo` é equivalente a `new Foo()`, ou seja, se nenhuma lista de argumentos for especificada, _Foo_ é chamado sem argumentos.
+3. O objeto retornado pela função construtora é o resultado de toda expressão `new`. Se a função construtora não retornar um objeto explicitamente, o objeto criado no passo 1 é então usado. (Normalmente construtores não retornam um valor, mas eles podem escolher fazê-lo se eles quiserem sobrescrever o processo normal de criação de objeto.)
 
 Você sempre pode adicionar uma propriedade à um objeto definido previamente. Por exemplo, `carro1.cor = "preta"` adiciona a propriedade `cor` em `carro1`, e atribui a ela o valor de "`preta`". Entretanto, isso não afeta os outros objetos. Para adicionar a nova propriedade a todos objetos do mesmo tipo, você deve adicionar a propriedade à definição do tipo de objeto `Carro`.
 

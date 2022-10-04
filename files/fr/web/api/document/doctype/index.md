@@ -10,6 +10,7 @@ tags:
   - Type
 translation_of: Web/API/Document/doctype
 ---
+
 {{ApiRef("DOM")}}
 
 Renvoie la "Document Type Declaration (DTD)" (_déclaration de type de document_) associée avec le document actuel. L'objet renvoyé implémente l'interface {{domxref("DocumentType")}}. Utilisez {{domxref("DOMImplementation.createDocumentType()")}} pour créer un `DocumentType`.

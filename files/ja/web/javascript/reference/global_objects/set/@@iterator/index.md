@@ -2,6 +2,7 @@
 title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** プロパティの初期値は {{jsxref("Set.prototype.values()", "values")}} プロパティの初期値と同じ関数オブジェクトです。

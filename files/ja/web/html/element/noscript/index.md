@@ -2,6 +2,7 @@
 title: <noscript>
 slug: Web/HTML/Element/noscript
 ---
+
 {{HTMLRef}}
 
 **HTML の `<noscript>` 要素**は、このページ上のスクリプトの種類に対応していない場合や、スクリプトの実行がブラウザーで無効にされている場合に表示する HTML の部分を定義します。

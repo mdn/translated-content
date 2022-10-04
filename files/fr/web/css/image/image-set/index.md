@@ -4,6 +4,7 @@ slug: Web/CSS/image/image-set
 translation_of: Web/CSS/image/image-set
 browser-compat: css.types.image.image-set
 ---
+
 {{CSSRef}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`image-set()`** est une méthode permettant au navigateur de sélectionner l'image la plus appropriée parmi un ensemble d'images. Elle s'avère notamment utile pour les écrans à haute densité de pixels.

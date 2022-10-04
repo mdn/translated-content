@@ -2,6 +2,7 @@
 title: CSS Backgrounds and Borders
 slug: Web/CSS/CSS_Backgrounds_and_Borders
 ---
+
 {{CSSRef}}
 
 **CSS Backgrounds and Borders** 是 CSS 的一个模块，它可以让你为元素的背景和边框设置样式。背景可以用颜色或图像填充，剪裁或调整大小，以及以其他方式修改。边框可以用线条或图像装饰，并制成方形或圆形。此外，元素框可以用阴影装饰。

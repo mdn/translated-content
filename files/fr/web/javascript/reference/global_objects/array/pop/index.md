@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/pop
 ---
+
 {{JSRef}}
 
 La méthode **`pop()`** supprime le **dernier** élément d'un tableau et retourne cet élément. Cette méthode modifie la longueur du tableau.

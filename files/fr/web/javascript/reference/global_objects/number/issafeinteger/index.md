@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isSafeInteger
 ---
+
 {{JSRef}}
 
 La méthode **`Number.isSafeInteger()`** permet de déterminer si la valeur, passée en argument, est un entier représentable correctement en JavaScript (c'est-à-dire un nombre compris entre -(2^53-1) et 2^53-1).

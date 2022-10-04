@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-moz-orient`** définit l'orientation de l'élément sur lequel elle est appliquée.

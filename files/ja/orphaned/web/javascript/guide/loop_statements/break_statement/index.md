@@ -3,6 +3,7 @@ title: break 文
 slug: orphaned/Web/JavaScript/Guide/Loop_Statements/break_Statement
 original_slug: Web/JavaScript/Guide/Loop_Statements/break_Statement
 ---
+
 ### break 文
 
 `break` 文は `loop` 文や `switch` 文、`label` 文から抜け出すために使用します。

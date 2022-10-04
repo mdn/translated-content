@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/some
 ---
+
 {{JSRef}}
 
 La méthode **`some()`** teste si au moins un élément du tableau passe le test implémenté par la fonction fournie. Elle renvoie un booléen indiquant le résultat du test.

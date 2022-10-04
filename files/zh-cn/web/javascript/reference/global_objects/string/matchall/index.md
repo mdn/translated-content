@@ -2,6 +2,7 @@
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
+
 {{JSRef}}
 
 **`matchAll()`** 方法返回一个包含所有匹配正则表达式的结果及分组捕获组的迭代器。

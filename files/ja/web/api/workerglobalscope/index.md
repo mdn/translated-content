@@ -4,6 +4,7 @@ slug: Web/API/WorkerGlobalScope
 l10n:
   sourceCommit: 0aeeed7516b4f9955049b85653c451e146b1743d
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`WorkerGlobalScope`** は[ウェブワーカー API](/ja/docs/Web/API/Web_Workers_API) のインターフェイスで、あらゆるワーカーのスコープを表します。ワーカーには閲覧コンテキストがありません。このスコープには、通常 {{domxref("Window")}} オブジェクトによって伝えられる情報が含まれます。この場合では、イベントハンドラーやコンソール、関連する {{domxref("WorkerNavigator")}} オブジェクトのことです。ぞれぞれの `WorkerGlobalScope` は独自のイベントループを持ちます。
@@ -105,7 +106,7 @@ importScripts('foo.js');
 console.log(navigator);
 ```
 
-> **Note:** ワーカースクリプトのグローバルスコープは、実行しているワーカーのグローバルスコープ（{{domxref("DedicatedWorkerGlobalScope")}} やその他）と、 `WorkerGlobalScope` からメソッドやプロパティなどを継承しているすべてのワーカーのグローバルスコープで有効であるため、上記のように親オブジェクトを指定しなくとも実行できます。
+> **メモ:** ワーカースクリプトのグローバルスコープは、実行しているワーカーのグローバルスコープ（{{domxref("DedicatedWorkerGlobalScope")}} やその他）と、 `WorkerGlobalScope` からメソッドやプロパティなどを継承しているすべてのワーカーのグローバルスコープで有効であるため、上記のように親オブジェクトを指定しなくとも実行できます。
 
 ## 仕様書
 

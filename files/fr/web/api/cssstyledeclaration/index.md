@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/CSSStyleDeclaration
 ---
+
 {{ APIRef("CSSOM") }}
 
 `CSSStyleDeclaration` représente une collection de paires propriété/valeur CSS. Elle est utilisée dans quelques API&nbsp;:

@@ -2,6 +2,7 @@
 title: Safely inserting external content into a page
 slug: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
 ---
+
 {{AddonSidebar}}
 
 很多时候你需要从外部资源引入内容到你的插件。但是，源可能被嵌入了恶意的源代码，这些恶意的源代码可能由源的开发者或者恶意的第三方所编写。

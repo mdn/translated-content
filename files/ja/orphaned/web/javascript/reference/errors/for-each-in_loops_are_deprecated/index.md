@@ -3,6 +3,7 @@ title: 'Warning: JavaScript 1.6''s for-each-in loops are deprecated'
 slug: orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 original_slug: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の警告 "JavaScript 1.6's for-each-in loops are deprecated; consider using ES6 for-of instead" は、 {{jsxref("Statements/for_each...in", "for each (variable in obj)")}} 文が使用された時に発生します。

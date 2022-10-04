@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/translate
 original_slug: Web/XPath/Fonctions/translate
 ---
+
 {{ XsltRef() }}
 
 La fonction `translate` évalue une chaîne et un ensemble de caractères à traduire, et retourne la chaîne traduite.

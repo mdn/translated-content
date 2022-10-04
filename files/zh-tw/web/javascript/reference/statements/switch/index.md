@@ -247,7 +247,7 @@ This code will now output `hello` in the console as it should, without any error
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.switch")}}
+{{Compat}}
 
 ## 你也可以看看
 

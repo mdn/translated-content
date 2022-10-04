@@ -40,4 +40,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 
 ## 瀏覽器兼容性
 
-{{Compat("webextensions.manifest.homepage_url")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: WeakMap() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 ---
+
 {{JSRef}}
 
 **`WeakMap()` コンストラクター**は、キーが弱く参照されている、キーと値の組のコレクションである `WeakMap` オブジェクトを生成します。キーはオブジェクトでなければならず、値は任意の値を指定することができます。

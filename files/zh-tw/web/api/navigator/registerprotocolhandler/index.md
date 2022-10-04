@@ -85,7 +85,7 @@ The user will be notified that your code has asked to register the protocol hand
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.registerProtocolHandler")}}
+{{Compat}}
 
 ## See also
 

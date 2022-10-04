@@ -3,6 +3,7 @@ title: Page Visibility API
 slug: Web/API/Page_Visibility_API
 translation_of: Web/API/Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 **L’API _Page Visibility_** («&nbsp;visibilité de la page&nbsp;») permet de savoir quand une page web est visible ou a le focus.

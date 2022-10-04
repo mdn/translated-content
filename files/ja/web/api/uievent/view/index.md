@@ -2,6 +2,7 @@
 title: UIEvent.view
 slug: Web/API/UIEvent/view
 ---
+
 {{APIRef("DOM Events")}}
 
 **`UIEvent.view`** は読み取り専用のプロパティで、イベントを生成したものの {{domxref("WindowProxy")}} オブジェクトを返します。ブラウザーでは、これはイベントが発行された {{ domxref("Window") }} です。

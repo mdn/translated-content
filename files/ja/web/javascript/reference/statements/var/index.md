@@ -2,6 +2,7 @@
 title: var
 slug: Web/JavaScript/Reference/Statements/var
 ---
+
 {{jsSidebar("Statements")}}
 
 **`var` 文**は関数スコープまたはグローバルスコープの変数を宣言し、任意でそれをある値に初期化します。

@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: timeupdate'
 slug: Web/API/HTMLMediaElement/timeupdate_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 当`currentTime`更新时会触发`timeupdate`事件。
@@ -78,7 +79,7 @@ video.ontimeupdate = (event) => {
 
 ## 浏览器兼容
 
-{{Compat("api.HTMLMediaElement.timeupdate_event")}}
+{{Compat}}
 
 ## 相关事件
 

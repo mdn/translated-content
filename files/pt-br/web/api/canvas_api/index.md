@@ -85,7 +85,7 @@ A API Canvas é extremamente poderosa, mas nem sempre é simples de usar. As bib
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) é uma biblioteca de código aberto para criar mapas de calor (heatmaps) baseados em canvas.
 - [JavaScript InfoVis Toolkit](http://thejit.org/) cria visualizações de dados interativas.
 - [Konva.js](https://konvajs.github.io/) é uma biblioteca de canvas 2D para aplicações _desktop_ e móveis.
-- [p5.js ](https://p5js.org/)tem um conjunto completo de funcionalidades de desenho canvas para artistas, _designers_, educadores e iniciantes.
+- [p5.js](https://p5js.org/) tem um conjunto completo de funcionalidades de desenho canvas para artistas, _designers_, educadores e iniciantes.
 - [Paper.js](http://paperjs.org/) é um framework de código-aberto para scripting de vetores gŕaficos que funciona sobre o Canvas HTML5.
 - [Phaser](https://phaser.io/) é um framework de código-aberto rápido, grátis e divertido para jogos de navegador desenvolvidos com Canvas e WebGL.
 - [Processing.js](http://processingjs.org/) é um conversor da linguagem de visualização Processing.

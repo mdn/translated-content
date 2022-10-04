@@ -11,6 +11,7 @@ tags:
   - Web Workers
 translation_of: Web/API/SharedWorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`SharedWorkerGlobalScope`** object (the {{domxref("SharedWorker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the [JavaScript Reference](/fr/docs/Web/JavaScript/Reference). See the complete list of [functions available to workers](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).

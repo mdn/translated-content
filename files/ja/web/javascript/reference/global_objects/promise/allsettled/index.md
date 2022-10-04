@@ -2,6 +2,7 @@
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
+
 {{JSRef}}
 
 **`Promise.allSettled()`** メソッドは、与えられたすべてのプロミスが履行されたか拒否された後に、それぞれのプロミスの結果を記述した配列オブジェクトで解決されるプロミスを返します。

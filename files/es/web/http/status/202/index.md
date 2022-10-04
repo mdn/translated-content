@@ -14,7 +14,9 @@ El código de respueta de estado del Protocolo de Transferencia de Hipertexto (H
 
 ## Estado
 
-    202 Aceptado
+```
+202 Aceptado
+```
 
 ## Especificaciones
 

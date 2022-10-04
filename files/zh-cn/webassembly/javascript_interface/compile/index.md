@@ -3,6 +3,7 @@ title: WebAssembly.compile()
 slug: WebAssembly/JavaScript_interface/compile
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 **`WebAssembly.compile()`** 方法编译 WebAssembly 二进制代码到一个{{jsxref("WebAssembly.Module")}} 对象。如果在实例化之前有必要去编译一个模块，那么这个方法是有用的（否则，将会使用{{jsxref("WebAssembly.instantiate()")}} 方法）
@@ -27,7 +28,7 @@ Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 - 如果 `bufferSource` 不是一个 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays), 将抛出一个 {{jsxref("TypeError")}} 。
 - 如果编译失败 promise 将会 reject 一个 {{jsxref("WebAssembly.CompileError")}}。
 
-## 例子
+## 示例
 
 下面的例子 (查看 GitHub 上的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) 例子，并且也能 [查看运行效果](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)) 使用 `compile()` 方法编译加载进来的 simple.wasm 二进制代码并且使用 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 发送给一个 [worker](/zh-CN/docs/Web/API/Web_Workers_API)。
 

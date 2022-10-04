@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.right_shift_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur de décalage à droite et d'affectation (`>>=`) décale la séquence de bits indiquée par l'opérande gauche d'autant de bits qu'indiqués par l'opérande droit puis affecte le résultat obtenu à la variable représentée par l'opérande gauche.

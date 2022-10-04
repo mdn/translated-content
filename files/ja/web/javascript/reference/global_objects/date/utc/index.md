@@ -2,6 +2,7 @@
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
+
 {{JSRef}}
 
 **`Date.UTC()`** メソッドは、コンストラクターと同じ最も長い書式の引数を受け入れ、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間を表す {{jsxref("Date")}} オブジェクトのミリ秒単位の数値を返します。

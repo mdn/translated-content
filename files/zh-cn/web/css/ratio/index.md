@@ -2,6 +2,7 @@
 title: <ratio>
 slug: Web/CSS/ratio
 ---
+
 {{CSSRef}}
 
 \<ratio> CSS 数据类型，用于描述媒体查询中的宽高比，表示两个无单位值之间的比例。

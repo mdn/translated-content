@@ -2,6 +2,7 @@
 title: 操作文档
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
 
 在编写 web 页面或应用时，你最想做的事情之一就是以某种方式操作文档结构。这通常使用一套大量使用{{domxref("Document")}}对象来控制 HTML 和样式信息的文档对象模型（DOM）来实现，在本文中，我们可以更详细的看到怎样使用 DOM，连同一些其他有趣的 API 以有趣的方式改变你的环境

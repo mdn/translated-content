@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/scaleZ()
 original_slug: Web/CSS/transform-function/scaleZ()
 browser-compat: css.types.transform-function.scaleZ
 ---
+
 {{CSSRef}}
 
 La fonction **`scaleZ()`** modifie la coordonnée en Z de chaque point de l'élément avec un facteur multiplicateur donné. Si ce facteur vaut 1, l'opération appliquée sera l'identité. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).

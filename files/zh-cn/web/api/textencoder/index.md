@@ -2,6 +2,7 @@
 title: TextEncoder
 slug: Web/API/TextEncoder
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextEncoder`** 接受代码点流作为输入，并提供 UTF-8 字节流作为输出。
@@ -110,7 +111,7 @@ Source: <https://github.com/anonyco/FastestSmallestTextEncoderDecoder>
 
 ## 浏览器兼容性
 
-{{Compat("api.TextEncoder")}}
+{{Compat}}
 
 ## 参见
 

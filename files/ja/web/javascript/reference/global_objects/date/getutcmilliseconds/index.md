@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 ---
+
 {{JSRef}}
 
 **`getUTCMilliseconds()`** メソッドは、協定世界時に基づき、指定された日時の「ミリ秒」を返します。

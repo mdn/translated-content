@@ -28,4 +28,4 @@ xhr.send(null);
 
 ## 瀏覽器相容性
 
-{{Compat("api.XMLHttpRequest.withCredentials")}}
+{{Compat}}

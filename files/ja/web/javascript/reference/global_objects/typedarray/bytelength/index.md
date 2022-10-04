@@ -2,6 +2,7 @@
 title: TypedArray.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 ---
+
 {{JSRef}}
 
 **`byteLength`** アクセサープロパティは、型付き配列の長さを (バイト単位で) 表します。

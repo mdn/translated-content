@@ -2,6 +2,7 @@
 title: feBlend
 slug: Web/SVG/Element/feBlend
 ---
+
 {{SVGRef}}
 
 `feBlend`滤镜把两个对象组合在一起，使它们受特定的混合模式控制。这类似于图像编辑软件中混合两个图层。该模式由属性{{ SVGAttr("mode") }}定义。

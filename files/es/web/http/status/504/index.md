@@ -9,7 +9,9 @@ El código de respuesta de error del servidor de HTTP **`504 Gateway Timeout`** 
 
 ## Estado
 
-    504 Gateway Timeout
+```
+504 Gateway Timeout
+```
 
 ## Especificaciones
 

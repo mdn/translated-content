@@ -2,6 +2,7 @@
 title: 'ServiceWorkerGlobalScope: push イベント'
 slug: Web/API/ServiceWorkerGlobalScope/push_event
 ---
+
 {{APIRef("Push API")}}
 
 `push` イベントは、サービスワーカーがプッシュメッセージを受信したときにサービスワーカーのグローバルスコープ ({{domxref("ServiceWorkerGlobalScope")}} インターフェイスで表現されるもの) に送られます。

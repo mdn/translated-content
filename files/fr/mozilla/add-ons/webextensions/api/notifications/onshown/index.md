@@ -12,6 +12,7 @@ tags:
   - onShown
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
 ---
+
 {{AddonSidebar()}}
 
 Lancé immédiatement après l'affichage d'une notification.

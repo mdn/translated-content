@@ -3,6 +3,7 @@ title: GlobalEventHandlers.onlostpointercapture
 slug: Web/API/Element/lostpointercapture_event
 original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 ---
+
 {{ApiRef("HTML DOM")}}
 
 {{domxref("GlobalEventHandlers")}} ミックスインの **`onlostpointercapture`** プロパティは、{{event("lostpointercapture")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。

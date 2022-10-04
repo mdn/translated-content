@@ -2,6 +2,7 @@
 title: '<samp>: サンプル出力要素'
 slug: Web/HTML/Element/samp
 ---
+
 {{HTMLRef}}
 
 **HTML のサンプル要素** (**`<samp>`**) は、コンピュータープログラムからのサンプル出力を表す行内文字列を含めるために使用されます。内容は普通、ブラウザーの既定の等幅フォント（{{interwiki("wikipedia", "en:Courier (typeface)", "Courier")}} や Lucida Console など）を使用して表示されます。
@@ -78,7 +79,7 @@ samp {
 }
 ```
 
-> **Note:** ウェブサイトや JavaScript コードによって生成された出力を含めるコンテナーとして提供する要素が必要であれば、代わりに {{HTMLElement("output")}} 要素を使用してください。
+> **メモ:** ウェブサイトや JavaScript コードによって生成された出力を含めるコンテナーとして提供する要素が必要であれば、代わりに {{HTMLElement("output")}} 要素を使用してください。
 
 ## 例
 

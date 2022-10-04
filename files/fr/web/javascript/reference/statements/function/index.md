@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/function
 original_slug: Web/JavaScript/Reference/Instructions/function
 ---
+
 {{jsSidebar("Statements")}}
 
 La déclaration **`function`** (ou l'instruction `function`) permet de définir une fonction et les paramètres que celle-ci utilise.

@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/toJSON
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 La méthode **`toJSON()`** est un _sérialiseur_ - elle renvoie une représentation JSON de l'objet [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming).

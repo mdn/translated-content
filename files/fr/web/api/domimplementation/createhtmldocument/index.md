@@ -11,6 +11,7 @@ tags:
   - Référence(2)
 translation_of: Web/API/DOMImplementation/createHTMLDocument
 ---
+
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
 La méthode **`DOMImplementation.createHTMLDocument()`**  crée un nouveau {{domxref("Document")}} HTML.

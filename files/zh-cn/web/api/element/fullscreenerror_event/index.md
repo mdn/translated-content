@@ -2,6 +2,7 @@
 title: Element.onfullscreenerror
 slug: Web/API/Element/fullscreenerror_event
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 {{domxref("Element")}} 接口的 **`onfullscreenerror`** 属性是在{{domxref("Element")}} 过渡到或退出全屏模式发生错误后处理事件{{event("fullscreenerror")}}的事件处理程序。

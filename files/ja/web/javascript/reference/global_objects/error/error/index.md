@@ -2,6 +2,7 @@
 title: Error() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 ---
+
 {{JSRef}}
 
 **`Error`** コンストラクターは、エラーオブジェクトを生成します。

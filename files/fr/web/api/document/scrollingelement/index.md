@@ -4,6 +4,7 @@ slug: Web/API/Document/scrollingElement
 browser-compat: api.Document.scrollingElement
 translation_of: 'Web/API/Document/scrollingElement'
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`scrollingElement`** de l'interface [`Document`](/fr/docs/web/api/document) renvoie une référence à l'[élément](/fr/docs/web/api/element) qui fait défiler le document. En mode standard, il s'agit de l'élément racine du document, [`document.documentElement`](/fr/docs/web/api/document/documentelement).

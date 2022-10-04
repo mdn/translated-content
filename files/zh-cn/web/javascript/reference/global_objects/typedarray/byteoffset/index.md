@@ -2,6 +2,7 @@
 title: TypedArray.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 ---
+
 {{JSRef}}
 
 **`byteOffset`** 访问器属性表示类型化数组距离其{{jsxref("ArrayBuffer")}}起始位置的偏移（字节数）。

@@ -2,6 +2,7 @@
 title: WritableStreamDefaultWriter.close()
 slug: Web/API/WritableStreamDefaultWriter/close
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`close()`** メソッドは、関連する書き込み可能なストリームを閉じます。

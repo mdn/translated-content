@@ -2,9 +2,10 @@
 title: Rendering a list of Vue components
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-现在我们已经有了一个可以工作的组件。我们接下来添加更多的 `ToDoItem` 组件到 我们的 App。 本文我们会添加一系列待办事项到 App.vue 组件并使用`v-for`指令遍历这些它们，将它们的每一项展示在`ToDoItem`组件中。
+现在我们已经有了一个可以工作的组件。我们接下来添加更多的 `ToDoItem` 组件到 我们的 App。本文我们会添加一系列待办事项到 App.vue 组件并使用`v-for`指令遍历这些它们，将它们的每一项展示在`ToDoItem`组件中。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -46,7 +47,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_li
 
 ### 添加一些需要被渲染的数据
 
-首先我们需要准备一个待办事项数组。添加 `data` 属性到 `App.vue` 组件对象中， 它包含一个 `ToDoItems` 字段，其值是待办事项数组。在最终完成添加新的待办事项功能之前，我们可以先 mock 一些待办项目，每个待办项目可以用一个对象表示，这个对象含有 `name` 和 `done` 属性。
+首先我们需要准备一个待办事项数组。添加 `data` 属性到 `App.vue` 组件对象中，它包含一个 `ToDoItems` 字段，其值是待办事项数组。在最终完成添加新的待办事项功能之前，我们可以先 mock 一些待办项目，每个待办项目可以用一个对象表示，这个对象含有 `name` 和 `done` 属性。
 
 像下面这样添加一些待办项目让我们可以利用`v-for` 来对它们进行渲染。
 
@@ -87,7 +88,7 @@ export default {
      import uniqueId from 'lodash.uniqueid';
     ```
 
-2. 添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')。`
+2. 添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')`。
 
     `App.vue` `<script>` 元素内容如下：
 
@@ -139,7 +140,7 @@ export default {
 
 ## 让我们来一点小重构
 
-我们可以做一点代码重构。 因为我们已经要为每一个待办事项创建一个唯一 id，所以不妨把 id 作为 ToDoItem 的一个 prop，而不是在每个 checkbox 里生成它。
+我们可以做一点代码重构。因为我们已经要为每一个待办事项创建一个唯一 id，所以不妨把 id 作为 ToDoItem 的一个 prop，而不是在每个 checkbox 里生成它。
 
 添加一个新的 prop `id` 到 `ToDoItem` 组件。
 

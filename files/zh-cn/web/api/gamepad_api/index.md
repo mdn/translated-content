@@ -2,6 +2,7 @@
 title: Gamepad API
 slug: Web/API/Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
 
 **Gamepad API** 可以给予开发者一种简单、统一的方式来识别并响应游戏控制器（手柄）。其中包含了三个接口、两个事件、一个特殊函数，用来响应控制器的连接与断开、获取其他关于控制器的信息以及识别当前是哪个按键或是哪个控制器被按下了。
@@ -49,7 +50,7 @@ slug: Web/API/Gamepad_API
 
 ## 浏览器兼容性
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## 另请参阅
 

@@ -50,7 +50,7 @@ slug: Web/API/Element/touchcancel_event
 
 ## 瀏覽器相容性
 
-{{Compat("api.Element.touchcancel_event")}}
+{{Compat}}
 
 ## 相關事件
 

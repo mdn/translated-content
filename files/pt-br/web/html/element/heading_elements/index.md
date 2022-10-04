@@ -16,7 +16,7 @@ Elementos de **cabeçalho** são implementados em seis níveis, `<h1>` é o mais
 - _[Categorias do conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), conteúdos de cabeçalho, conteúdos palpáveis.
 - _Conteúdo permitido_ [Conteúdo com texto](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
 - _Omissão de tag_ Não há, porém, as tags de abertura e fechamento são obrigatórias.
-- \_Elementos pais permitidos_Qualquer elemento que aceite [conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content); ou como um elemento filho do grupo de elementos de cabeçalho {{HTMLElement("hgroup")}}
+- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content); ou como um elemento filho do grupo de elementos de cabeçalho {{HTMLElement("hgroup")}}
 - _Interface DOM_ {{domxref("HTMLHeadingElement")}}
 
 ## Atributos

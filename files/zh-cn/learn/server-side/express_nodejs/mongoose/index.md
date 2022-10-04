@@ -2,6 +2,7 @@
 title: Express 教程 3：使用数据库  (Mongoose)
 slug: Learn/Server-side/Express_Nodejs/mongoose
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
 本文简要介绍了数据库以及 Node/Express 应用的数据库集成。然后演示了 [Mongoose](http://mongoosejs.com/) 为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 提供数据库访问的方式。还讲解了对象模式（Schema）和模型（Model）的声明方式、主要域的类型、基础验证机制。同时还简短演示了访问模型数据的一些方法。
@@ -464,7 +465,7 @@ Story
 >   .exec(function (err, stories) {
 >     if (err) {
 >       return handleError(err);
->     } // 返回所有 author 字段的值为 司马迁id 的简介
+>     } // 返回所有 author 字段的值为 司马迁 id 的简介
 >   });
 > ```
 
@@ -735,7 +736,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 
     > **备注：** 无需深究 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，它只是为数据库添加一些示例数据。
     >
-    > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”， 请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
+    > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”，请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
 
 2. 在项目根目录运行以下命令，以安装脚本所需的异步模块（后续教程再展开讲）
 

@@ -2,9 +2,10 @@
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
 ---
+
 {{APIRef("Web Sockets API")}}
 
-**`WebSocket.close()`** 方法关闭 {{domxref("WebSocket")}} 连接或连接尝试（如果有的话）。 如果连接已经关闭，则此方法不执行任何操作。
+**`WebSocket.close()`** 方法关闭 {{domxref("WebSocket")}} 连接或连接尝试（如果有的话）。如果连接已经关闭，则此方法不执行任何操作。
 
 ## 语法
 
@@ -34,4 +35,4 @@ WebSocket.close();
 
 ## Browser compatibility
 
-{{Compat("api.WebSocket.close")}}
+{{Compat}}

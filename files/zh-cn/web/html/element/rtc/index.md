@@ -2,6 +2,7 @@
 title: <rtc>
 slug: Web/HTML/Element/rtc
 ---
+
 **HTML `<rtc>` 元素**包含文字的语义注解，它们在 {{HTMLElement("rb")}} 元素中展示。{{HTMLElement("rb")}} 元素可以拥有发音 ({{HTMLElement("rt")}}) 和语义 ({{HTMLElement("rtc")}}) 注解。
 
 <table class="properties">
@@ -57,7 +58,7 @@ slug: Web/HTML/Element/rtc
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.rtc")}}
+{{Compat}}
 
 ## 另见
 

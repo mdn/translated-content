@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/slice
 ---
+
 {{JSRef}}
 
 La méthode **`slice()`** renvoie un nouvel `ArrayBuffer` dont le contenu est une copie des octets du `ArrayBuffer` courant, contenus entre `début` (compris) et `fin` (non-compris).

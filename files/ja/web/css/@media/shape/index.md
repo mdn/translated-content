@@ -2,6 +2,7 @@
 title: shape
 slug: Web/CSS/@media/shape
 ---
+
 {{CSSRef}}
 
 `shape` は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、端末の形状が矩形であるか丸いディスプレイであるかを区別するために使用することができます。

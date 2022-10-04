@@ -2,6 +2,7 @@
 title: 'FileReader: progress イベント'
 slug: Web/API/FileReader/progress_event
 ---
+
 {{APIRef}}
 
 `progress` イベントは、 `FileReader` がデータを読むときに定期的に発生します。

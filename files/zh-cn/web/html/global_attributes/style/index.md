@@ -2,6 +2,7 @@
 title: style
 slug: Web/HTML/Global_attributes/style
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **style** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 包含应用到元素的 [CSS](/zh-CN/docs/Web/CSS) 样式声明。要注意样式最好定义在单独的文件中。这个属性以及 {{HTMLElement("style")}} 元素的主要目的是快速装饰。例如用于测试目的。

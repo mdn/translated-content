@@ -34,7 +34,7 @@ Os argumentos também podem ser definidos:
 arguments[1] = 'novo valor';
 ```
 
-O objeto `argumentos` não é um {{jsxref("Array")}}. É similar a um Array, mas não possui as propriedades de `Array`, exceto [`length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length"). Por exemplo, ele não possui o método [`pop`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop "JavaScript/Reference/Global_Objects/Array/pop"). Entretanto, ele pode ser convertido em um `Array` real:
+O objeto `argumentos` não é um {{jsxref("Array")}}. É similar a um Array, mas não possui as propriedades de `Array`, exceto [`length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length). Por exemplo, ele não possui o método [`pop`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop). Entretanto, ele pode ser convertido em um `Array` real:
 
 ```java
 var args = Array.prototype.slice.call(arguments);
@@ -50,7 +50,7 @@ var args = Array.from(arguments);
 > var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
 > ```
 
-Você pode usar o objeto `arguments` se você chamar uma função com mais argumentos do que ele é formalmente declarado para aceitar. Esta técnica é útil para funções que podem ser passada em um número de variáveis de argumentos. Você pode usar [`arguments.length`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length") para determinar o número de argumentos passado para a função, e então processar cada argumento usando o objeto `arguments`. Para determinar o número de parâmetros declarados na [assinatura](/pt-BR/docs/Glossary/Signature/Function) da função, use a propriedade[` Function.length`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/length "JavaScript/Reference/Global_Objects/Function/length").
+Você pode usar o objeto `arguments` se você chamar uma função com mais argumentos do que ele é formalmente declarado para aceitar. Esta técnica é útil para funções que podem ser passada em um número de variáveis de argumentos. Você pode usar [`arguments.length`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length) para determinar o número de argumentos passado para a função, e então processar cada argumento usando o objeto `arguments`. Para determinar o número de parâmetros declarados na [assinatura](/pt-BR/docs/Glossary/Signature/Function) da função, use a propriedade [`Function.length`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/length).
 
 ### Usando typeof com Arguments
 
@@ -77,13 +77,13 @@ var args = [...arguments];
 
 ## Propriedades
 
-- [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee "JavaScript/Reference/Functions_and_function_scope/arguments/callee")
+- [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
   - : Referência para a função atualmente em execução.
-- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller "JavaScript/Reference/Functions_and_function_scope/arguments/caller") {{ Obsolete_inline() }}
+- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller) {{ Obsolete_inline() }}
   - : Referência para a função que invocou a função atualmente em execução.
-- [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length")
+- [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : Referência para o número de argumentos passados para a função.
-- [`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator "JavaScript/Reference/Functions_and_function_scope/arguments/@@iterator")
+- [`arguments[@@iterator]`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
   - : Retorna um novo objeto Array Iterator que contém os valores para cada índice dos argumentos.
 
 ## Exemplos
@@ -152,7 +152,7 @@ foo(1, 2, 3); // [1,2,3]
 
 Enquanto a presença dos parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) não alteram o [comportamento do objeto `arguments` no código em strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler), existe uma sutil diferença para o código non-strict.
 
-Quando uma função não-strict \***\*não\*\*** contém parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), os valores no objeto `arguments` **modificam** os valores dos argumentos (e vice-versa). Veja o código:
+Quando uma função não-strict **não** contém parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), os valores no objeto `arguments` **modificam** os valores dos argumentos (e vice-versa). Veja o código:
 
 ```js
 function func(a) {

@@ -2,6 +2,7 @@
 title: 万维网是如何工作的
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}

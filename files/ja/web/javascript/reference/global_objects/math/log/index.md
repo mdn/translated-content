@@ -2,6 +2,7 @@
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
+
 {{JSRef}}
 
 **`Math.log()`** 関数は、 ({{jsxref("Math.E", "e")}} を底とした) 数値の自然対数を返します。

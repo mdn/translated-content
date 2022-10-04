@@ -2,6 +2,7 @@
 title: SharedArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
 ---
+
 {{JSRef}}
 
 **`byteLength`** アクセサープロパティは 、{{jsxref("SharedArrayBuffer")}} の長さをバイト単位で表します。

@@ -2,6 +2,7 @@
 title: 等価性の比較と同一性
 slug: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 ES2015 には、4 種類の等価性アルゴリズムがあります。

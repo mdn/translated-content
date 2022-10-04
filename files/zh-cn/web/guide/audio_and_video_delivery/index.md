@@ -2,7 +2,8 @@
 title: Audio and Video Delivery
 slug: Web/Guide/Audio_and_video_delivery
 ---
-我们可以通过多种方式在网络上交付音频和视频，从“静态”媒体文件到自适应实时流。 本文旨在作为探讨基于 Web 的媒体的各种传递机制以及与流行浏览器的兼容性的起点。
+
+我们可以通过多种方式在网络上交付音频和视频，从“静态”媒体文件到自适应实时流。本文旨在作为探讨基于 Web 的媒体的各种传递机制以及与流行浏览器的兼容性的起点。
 
 ## 音频和视频元素
 
@@ -56,9 +57,9 @@ To deliver video and audio, the general workflow is usually something like this:
 </video>
 ```
 
-上面的代码创建了一个尺寸为 640x480 像素的视频播放器，显示海报图像，直到播放视频为止。 我们指示视频自动播放，但默认情况下将其静音。
+上面的代码创建了一个尺寸为 640x480 像素的视频播放器，显示海报图像，直到播放视频为止。我们指示视频自动播放，但默认情况下将其静音。
 
-> **备注：** 某些移动浏览器可能会忽略自动播放属性。 同样，自动播放功能在滥用时也会引起争议。 强烈建议您阅读[媒体和 Web 音频 API 的自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)，以了解如何明智地使用自动播放。
+> **备注：** 某些移动浏览器可能会忽略自动播放属性。同样，自动播放功能在滥用时也会引起争议。强烈建议您阅读[媒体和 Web 音频 API 的自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)，以了解如何明智地使用自动播放。
 
 For further info see [\<video> element](/zh-CN/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](/zh-CN/Apps/Build/Manipulating_media/cross_browser_video_player).
 

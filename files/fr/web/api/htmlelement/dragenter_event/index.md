@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/dragenter_event
 translation_of: Web/API/Document/dragenter_event
 original_slug: Web/API/Document/dragenter_event
 ---
+
 {{APIRef}}
 
 L'événement **dragenter** est déclenché lorsqu'un élément glissé ou une sélection de texte entre dans une cible de drop valide.

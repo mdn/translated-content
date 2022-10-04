@@ -13,6 +13,7 @@ tags:
   - commands
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/Command
 ---
+
 {{AddonSidebar()}}
 
 Information sur une commande. Cela contient les informations spécifiées pour la commande dans la  [`commande` clef manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).

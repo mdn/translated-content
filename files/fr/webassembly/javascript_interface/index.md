@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
+
 {{JSRef}}
 
 L'objet JavaScript **`WebAssembly`** est un objet global qui agit comme un espace de noms (_namespace_) pour les différentes fonctionnalités JavaScript relatives à [WebAssembly](/fr/docs/WebAssembly).

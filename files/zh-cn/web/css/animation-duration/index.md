@@ -2,6 +2,7 @@
 title: animation-duration
 slug: Web/CSS/animation-duration
 ---
+
 {{ CSSRef() }}{{ SeeCompatTable() }}
 
 ## 概述
@@ -44,7 +45,7 @@ See [CSS animations](/zh-CN/CSS/CSS_animations) for examples.
 
 ## 浏览器兼容
 
-{{Compat("css.properties.animation-duration")}}
+{{Compat}}
 
 ## See also
 

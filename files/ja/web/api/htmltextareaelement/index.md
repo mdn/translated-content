@@ -2,6 +2,7 @@
 title: HTMLTextAreaElement
 slug: Web/API/HTMLTextAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTextAreaElement`** インターフェイスは、 {{HTMLElement("textarea")}} 要素のレイアウトや表示を操作するための特別なプロパティやメソッドを提供します。

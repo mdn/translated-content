@@ -2,6 +2,7 @@
 title: HTMLHeadElement
 slug: Web/API/HTMLHeadElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLHeadElement`** インターフェイスは、文書の説明的な情報やメタデータを持ちます。このオブジェクトはすべてのプロパティとメソッドを {{domxref("HTMLElement")}} インターフェイスから継承しています。

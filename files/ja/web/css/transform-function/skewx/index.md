@@ -3,6 +3,7 @@ title: skewX()
 slug: Web/CSS/transform-function/skewX
 original_slug: Web/CSS/transform-function/skewX()
 ---
+
 {{CSSRef}}
 
 **`skewX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上で水平方向にゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -11,7 +12,7 @@ original_slug: Web/CSS/transform-function/skewX()
 
 この変換はシアー変形 ({{interwiki('wikipedia', 'せん断写像')}}) で、要素内のそれぞれの点を水平方向に指定された角度でゆがませます。それぞれの点の横座標は、指定された角度と原点からの距離に比例した値によって変更されます。よって、原点から遠くなるにしたがって、加えられる値が大きくなります。
 
-> **Note:** `skewX(a)` は `skew(a)` と等価です。
+> **メモ:** `skewX(a)` は `skew(a)` と等価です。
 
 ## 構文
 

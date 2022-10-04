@@ -2,6 +2,7 @@
 title: ':picture-in-picture'
 slug: Web/CSS/:picture-in-picture
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 的[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:picture-in-picture`** 匹配当前处于画中画模式的元素。

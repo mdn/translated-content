@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/store
 ---
+
 {{JSRef}}
 
 La méthode statique **`Atomics.store()`** enregistre une valeur donnée à un emplacement donné du tableau partagé et renvoie cette valeur.

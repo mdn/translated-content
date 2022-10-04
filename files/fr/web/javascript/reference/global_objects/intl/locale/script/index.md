@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/script
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.script`** est fournie via un accesseur et renvoie le script utilisé pour l'écriture d'une langue donnée pour la locale courante.

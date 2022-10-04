@@ -2,6 +2,7 @@
 title: ':not()'
 slug: Web/CSS/:not
 ---
+
 {{CSSRef}}
 
 **`:not()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、列挙されたセレクターに一致しない要素を表します。特定の項目が選択されることを防ぐため、否定擬似クラス (_negation pseudo-class_) と呼ばれています。

@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: pause イベント'
 slug: Web/API/HTMLMediaElement/pause_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `pause` イベントは、動作の一時停止のリクエストが処理され、動作が一時状態に入ったときに送信されるものであり、メディアが要素の {{domxref("HTMLMediaElement.pause", "pause()")}} の呼び出しを通して一時停止した後が最も一般的です。

@@ -3,6 +3,7 @@ title: window.requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
 translation_of: Web/API/Window/requestIdleCallback
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 La méthode **`window.requestIdleCallback()`** mémorise une fonction qui sera appelée lorsque le navigateur n'aura plus aucune autre tâche en cours. Cela offre au développeur la possibilité de réaliser des tâches à basse priorité en arrière-plan sur la boucle d'évènements principale, sans impacter l'expérience utilisateur (ralentissement des animations, etc). L'ordre des appels aux fonctions est généralement premier entré, premier sorti, sauf si le `timeout` défini au moment de l'enregistrement est atteint avant que le navigateur n'ait eu le temps d'appeler la fonction en question.

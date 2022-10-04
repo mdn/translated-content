@@ -4,6 +4,7 @@ slug: Web/HTML/Element/input/search
 translation_of: Web/HTML/Element/input/search
 browser-compat: html.elements.input.input-search
 ---
+
 {{HTMLRef}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`search`** permettent de saisir des termes de recherche. Sur le plan fonctionnel, ils sont identiques aux champs de saisie textuels ([`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text)), c'est leur mise en forme qui peut être différente selon [les agents utilisateurs](/fr/docs/Glossary/User_agent).

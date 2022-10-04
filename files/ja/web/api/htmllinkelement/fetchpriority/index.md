@@ -2,6 +2,7 @@
 title: HTMLLinkElement.fetchPriority
 slug: Web/API/HTMLLinkElement/fetchPriority
 ---
+
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
 **`fetchPriority`** は {{domxref("HTMLLinkElement")}} インターフェイスのプロパティで、ブラウザーが同じ種類の他のリソースに対して、与えられたリソースの先読みをどのように優先させるべきかを示すヒントを表します。

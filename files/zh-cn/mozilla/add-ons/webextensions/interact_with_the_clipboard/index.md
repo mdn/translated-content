@@ -2,6 +2,7 @@
 title: Interact with the clipboard
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 ---
+
 {{AddonSidebar}}
 
 有两种方式可以让浏览器扩展与系统剪贴板交互：{{domxref("Document.execCommand()")}} 方法以及现代的异步的 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API).

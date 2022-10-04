@@ -10,6 +10,7 @@ tags:
   - blog
   - competitions
 ---
+
 {{GamesSidebar}}
 
 Développer un jeu et le mettre en ligne ne suffit pas. Vous devez faire connaître au monde que vous avez un jeu intéressant auquel les gens auront envie de jouer. Il y a bien des façons de promouvoir votre jeu ; la plupart sont gratuites, donc même si vous avez du mal à gagner votre vie en tant que développeur indépendant, vous pouvez malgré tout faire beaucoup de choses pour faire connaître votre super nouveau jeu aux autres, y compris sans budget. Faire la promotion d'un jeu sera également très utile lorsque vous voudrez le [monétiser](/fr/docs/Games/Publishing_games/Game_monetization), il est donc important de le faire correctement.

@@ -2,6 +2,7 @@
 title: <var>
 slug: Web/HTML/Element/var
 ---
+
 {{HTMLRef}}HTML Variable 元素（\<var>）表示数学表达式或编程上下文中的变量名称。尽管该行为取决于浏览器，但通常使用当前字体的斜体形式显示。
 
 ## 概述

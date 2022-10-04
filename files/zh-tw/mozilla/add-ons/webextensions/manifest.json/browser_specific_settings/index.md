@@ -83,4 +83,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 
 ## 瀏覽器兼容
 
-{{Compat("webextensions.manifest.browser_specific_settings")}}
+{{Compat}}

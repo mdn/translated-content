@@ -8,6 +8,7 @@ tags:
   - optional_permissions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

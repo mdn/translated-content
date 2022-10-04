@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/isView
 ---
+
 {{JSRef}}
 
 La méthode **`ArrayBuffer.isView()`** renvoie `true` si l'argument passé est une des vues `ArrayBuffer`, comme par exemple [un tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray) ou une {{jsxref("DataView")}} ; `false` sinon.

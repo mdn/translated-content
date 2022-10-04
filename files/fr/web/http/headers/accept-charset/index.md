@@ -3,6 +3,7 @@ title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
 translation_of: Web/HTTP/Headers/Accept-Charset
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête HTTP de la requête**`Accept-Charset`** indique le jeu de caractères que le client est capable de comprendre. À l'aide de la [content negotiation](/fr/docs/Web/HTTP/Content_negotiation), le serveur sélectionne l'une des propositions, l'utilise et informe le client de son choix dans l'en-tête de réponse {{HTTPHeader ("Content-Type")}}. Les navigateurs ne définissent généralement pas cet en-tête car la valeur par défaut de chaque type de contenu est généralement correcte et sa transmission permettrait une empreinte digitale plus facile.

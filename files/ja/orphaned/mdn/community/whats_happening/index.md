@@ -3,6 +3,7 @@ title: 何が起きているかを追跡する
 slug: orphaned/MDN/Community/Whats_happening
 original_slug: MDN/Community/Whats_happening
 ---
+
 {{MDNSidebar}}
 
 MDN は [MDN コミュニティ](https://wiki.mozilla.org/MDN)によって運営されています。私たちが何をしているのかについて、私たちが情報を共有する方法をいくつか紹介します。

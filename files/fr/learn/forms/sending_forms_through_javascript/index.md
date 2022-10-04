@@ -4,6 +4,7 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 translation_of: Learn/Forms/Sending_forms_through_JavaScript
 original_slug: Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript
 ---
+
 {{LearnSidebar}}
 
 Comme dans le [précédent article](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires), les formulaires HTML peuvent envoyer une requête HTTP par déclaration. Mais des formulaires peuvent aussi préparer une requête HTTP à adresser via JavaScript. Cet article explore comment faire cela.

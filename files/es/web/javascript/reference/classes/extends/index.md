@@ -10,7 +10,9 @@ La palabra clave **extends** es usada en la [declaración](/es/docs/Web/JavaScri
 
 ## Sintaxis
 
-    class ChildClass extends ParentClass { ... }
+```
+class ChildClass extends ParentClass { ... }
+```
 
 ## Descripción
 

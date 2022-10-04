@@ -40,7 +40,7 @@ document.dispatchEvent(ev);
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.Event")}}
+{{Compat}}
 
 ## 參見
 

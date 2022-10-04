@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Modul
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
 browser-compat: javascript.builtins.WebAssembly.Module.Module
 ---
+
 {{JSRef}}
 
 Le constructeur **`WebAssembly.Module()`** crée un nouvel objet `Module` contenant du code WebAssembly sans état qui a déjà été compilé par le navigateur et qui peut efficacement [être partagé avec des workers](/fr/docs/Web/API/Worker/postMessage) et être instancié plusieurs fois.

@@ -82,7 +82,7 @@ new nullExtends(); //ReferenceError: this is not defined
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.classes.extends")}}
+{{Compat}}
 
 ## 參見
 

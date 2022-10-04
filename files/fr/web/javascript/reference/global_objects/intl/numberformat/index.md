@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat
 browser-compat: javascript.builtins.Intl.NumberFormat
 ---
+
 {{JSRef}}
 
 L'objet **`Intl.NumberFormat`** permet de formater des nombres en fonction de la locale.

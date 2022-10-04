@@ -4,6 +4,7 @@ slug: Web/API/IDBRequest/error_event
 translation_of: Web/API/IDBRequest/onerror
 original_slug: Web/API/IDBRequest/onerror
 ---
+
 {{ APIRef("IndexedDB") }}
 
 le gestionnaire d'événement **`onerror`** de l'interface {{domxref("IDBRequest")}} capte l'événement [`error`](/fr/docs/Web/Events/error), déclenché quand une requête renvoie une erreur.

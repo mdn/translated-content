@@ -2,6 +2,7 @@
 title: HTMLSelectElement.add()
 slug: Web/API/HTMLSelectElement/add
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement.add()`** メソッドは、この `select` 要素が持つ `option` 要素の集合に要素を追加します。

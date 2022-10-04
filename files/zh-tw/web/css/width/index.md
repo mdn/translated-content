@@ -260,7 +260,7 @@ p.minblue {
 
 ## 瀏覽器相容性
 
-{{Compat("css.properties.width")}}
+{{Compat}}
 
 ## 參考
 

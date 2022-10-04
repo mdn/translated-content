@@ -18,7 +18,9 @@ En casos en los que quieras que el método usado para cambiar a {{HTTPMethod("GE
 
 ## Estado
 
-    302 Found
+```
+302 Found
+```
 
 ## Especificaciones
 

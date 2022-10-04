@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/delete
 ---
+
 {{JSRef}}
 
 La méthode **`delete()`** permet de retirer un élément donné d'un objet `Set`.

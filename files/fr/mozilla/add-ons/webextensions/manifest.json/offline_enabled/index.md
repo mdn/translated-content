@@ -11,6 +11,7 @@ tags:
   - google chrome
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

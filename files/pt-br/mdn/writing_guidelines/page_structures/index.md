@@ -40,25 +40,25 @@ git remote -v
 
 Agora, sempre que você quiser atualizar seu fork, você pode fazer isso:
 
-1.  Certificando-se de que você está no branch master:
+1. Certificando-se de que você está no branch master:
 
     ```bash
     git checkout master
     ```
 
-2.  buscando o conteúdo atualizado do repositório usando:
+2. buscando o conteúdo atualizado do repositório usando:
 
     ```bash
     git fetch upstream
     ```
 
-3.  faça o rebase do seu conteúdo master com o conteúdo do repositório principal:
+3. faça o rebase do seu conteúdo master com o conteúdo do repositório principal:
 
     ```bash
     git rebase upstream/master
     ```
 
-4.  faça o push dessas atualizações de volta ao seu fork remoto usando:
+4. faça o push dessas atualizações de volta ao seu fork remoto usando:
 
     ```bash
     git push -f
@@ -68,9 +68,9 @@ Agora, sempre que você quiser atualizar seu fork, você pode fazer isso:
 
 Em seguida, vá à sua bifurcação remota (será em `https://github.com/seu-nome-de-usuario/browser-compat-data`) e crie um novo ramo para guardar suas mudanças de adição de conteúdo. Isso pode ser feito em:
 
-1.  Clicando no botão "Branch: Master".
-2.  Colocando um novo nome de ramo dentro do campo de texto de "Encontre ou crie seu ramo...".
-3.  Clicando no botão "Criar ramo _nome-do-ramo_ a partir de Master".
+1. Clicando no botão "Branch: Master".
+2. Colocando um novo nome de ramo dentro do campo de texto de "Encontre ou crie seu ramo...".
+3. Clicando no botão "Criar ramo _nome-do-ramo_ a partir de Master".
 
 Por exemplo, se você quisesse adicionar informações sobre WebVR API, você criaria um ramno chamado algo como "webvr".
 
@@ -209,7 +209,7 @@ The feature data for [border-width](/pt-BR/docs/Web/CSS/border-width#Browser_com
 
 #### Adicionando uma descrição
 
-There is a fourth, optional, member that can go inside the \_\_compat member — `description`. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:
+There is a fourth, optional, member that can go inside the compat member — `description`. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:
 
 ```json
 {

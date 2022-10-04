@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/every
 ---
+
 {{JSRef}}
 
 La méthode **`every()`** teste si tous les éléments du tableau typé satisfont une condition implémentée par la fonction de test fournie. Cette méthode utilise le même algorithme {{jsxref("Array.prototype.every()")}}. Pour le reste de cet article, _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).

@@ -2,6 +2,7 @@
 title: SourceBuffer.appendBufferAsync()
 slug: Web/API/SourceBuffer/appendBufferAsync
 ---
+
 {{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`appendBufferAsync()`** メソッドは、{{jsxref("ArrayBuffer")}} または {{domxref("ArrayBufferView")}} オブジェクトから `SourceBuffer` にメディアセグメントデータを非同期的に追加するプロセスを開始します。 バッファが追加されると満たされる {{jsxref("Promise")}} を返します。

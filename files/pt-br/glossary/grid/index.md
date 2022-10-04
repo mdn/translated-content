@@ -53,11 +53,11 @@ No exemplo abaixo, criamos uma _grade explícita_ de três colunas e duas linhas
 
 {{ EmbedLiveSample('example', '500', '330') }}
 
-1.  CSS Grid Layout Guide:
+1. CSS Grid Layout Guide:
     _[Basic concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-2.  Property reference
+2. Property reference
 
-    1.  {{cssxref("grid-template-columns")}}
-    2.  {{cssxref("grid-template-rows")}}
-    3.  {{cssxref("grid")}}
-    4.  {{cssxref("grid-template")}}
+    1. {{cssxref("grid-template-columns")}}
+    2. {{cssxref("grid-template-rows")}}
+    3. {{cssxref("grid")}}
+    4. {{cssxref("grid-template")}}

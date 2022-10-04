@@ -25,12 +25,10 @@ slug: Web/API/MediaSource
 - {{domxref("MediaSource.duration")}}
   - : 取得或設置現在正被表示的媒體的時間長度。
 
-- ### 事件處理函數 (Event handlers)
+### 事件處理函數 (Event handlers)
 
-  {{domxref("MediaSource.onsourceclose")}}
-
+- {{domxref("MediaSource.onsourceclose")}}
   - : `sourceclose` 事件的事件處理函數。
-
 - {{domxref("MediaSource.onsourceended")}}
   - : `sourceended` 事件的事件處理函數。
 - {{domxref("MediaSource.onsourceopen")}}
@@ -109,7 +107,7 @@ function fetchAB (url, cb) {
 
 ## 相容性表格
 
-{{Compat("api.MediaSource")}}
+{{Compat}}
 
 ## 相關資料
 

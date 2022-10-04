@@ -3,6 +3,7 @@ title: 发送表单数据
 slug: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
 
 本文将讨论当用户提交表单时发生了什么——数据去了哪，以及当它到达时该如何处理？我们还研究了与发送表单数据相关的一些安全问题。
@@ -38,7 +39,7 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 
 ### 客户端/服务器体系结构
 
-web 基于非常基本的客户端/服务器体系结构，可以总结如下:客户端(通常是 web 浏览器)向服务器发送请求(大多数情况下是[Apache](https://httpd.apache.org/)、[Nginx](http://nginx.com/)、[IIS](http://www.iis.net/)、[Tomcat](http://tomcat.apache.org/)等 web 服务器)，使用[HTTP 协议](/zh-CN/docs/HTTP)。服务器使用相同的协议来回答请求。
+web 基于非常基本的客户端/服务器体系结构，可以总结如下:客户端(通常是 web 浏览器) 向服务器发送请求 (大多数情况下是[Apache](https://httpd.apache.org/)、[Nginx](http://nginx.com/)、[IIS](http://www.iis.net/)、[Tomcat](http://tomcat.apache.org/)等 web 服务器)，使用[HTTP 协议](/zh-CN/docs/HTTP)。服务器使用相同的协议来回答请求。
 
 ![A basic schema of the Web client/server architecture](client-server.png)
 

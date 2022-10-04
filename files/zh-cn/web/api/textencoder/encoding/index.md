@@ -2,6 +2,7 @@
 title: TextEncoder.encoding
 slug: Web/API/TextEncoder/encoding
 ---
+
 {{APIRef("DOM")}}
 
 {{ SeeCompatTable }}
@@ -22,7 +23,7 @@ b = encoder.encoding;
 
 ## 浏览器兼容性
 
-{{Compat("api.TextEncoder.encoding")}}
+{{Compat}}
 
 ## 另见
 

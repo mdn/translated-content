@@ -2,6 +2,7 @@
 title: GLSL 着色器
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
+
 {{GamesSidebar}}
 
 使用 GLSL 的着色器 (shader), GLSL 是一门特殊的有着类似于 C 语言的语法，在图形管道 (graphic pipeline) 中直接可执行的 OpenGL 着色语言。着色器有两种类型 -- 顶点着色器 (Vertex Shader) 和片段着色器 (Fragment Shader). 前者是将形状转换到真实的 3D 绘制坐标中，后者是计算最终渲染的颜色和其他属性用的。
@@ -24,7 +25,7 @@ void main() {
 }
 ```
 
-这个 `void main()` 函数是定义全局`gl_Position` 变量的标准方式。所有在这个函数里面的代码都会被着色器执行。 如果将 3D 空间中的位置投射到 2D 屏幕上这些信息都会保存在计算结果的变量中。
+这个 `void main()` 函数是定义全局`gl_Position` 变量的标准方式。所有在这个函数里面的代码都会被着色器执行。如果将 3D 空间中的位置投射到 2D 屏幕上这些信息都会保存在计算结果的变量中。
 
 ### 片段着色器
 
@@ -38,7 +39,7 @@ void main() {
 
 计算结果包含 RGBA 颜色信息。
 
-## 例子
+## 示例
 
 让我们构建一个简单的例子来解释这些着色器的动作。假设你已经看过[Three.js 教程](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)并掌握了场景，物体和材质的基本概念。
 
@@ -82,7 +83,7 @@ void main() {
 </html>
 ```
 
-他包含了一些基本信息比如 文档的 {{htmlelement("title")}}, 并且设置了{{htmlelement("canvas")}}元素 css 样式的宽高，Three.js 会插入到页面中占满整个可视区域。 {{htmlelement("script")}}元素在包含 Three.js 库的{{htmlelement("head")}}中。我们的代码将卸载{{htmlelement("body")}}标签中的 script 标签中：
+其包含了一些基本信息比如文档的 {{htmlelement("title")}}，并且设置了 {{htmlelement("canvas")}} 元素 css 样式的宽高，Three.js 会插入到页面中占满整个可视区域。{{htmlelement("script")}} 元素在包含 Three.js 库的 {{htmlelement("head")}} 中。我们的代码将写在 {{htmlelement("body")}} 标签中的 script 标签中：
 
 1. 首先将包含顶点着色器。
 2. 然后包含片段着色器。

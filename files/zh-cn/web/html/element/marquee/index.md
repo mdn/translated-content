@@ -2,6 +2,7 @@
 title: <marquee>
 slug: Web/HTML/Element/marquee
 ---
+
 {{HTMLRef}}{{deprecated_header}}
 
 HTML marquee 元素（`<marquee>）` 用来插入一段滚动的文字。你可以使用它的属性控制当文本到达容器边缘发生的事情。
@@ -25,7 +26,7 @@ HTML marquee 元素（`<marquee>）` 用来插入一段滚动的文字。你可�
 - {{htmlattrdef("scrollamount")}}
   - : 设置每次滚动时移动的长度（以像素为单位）。默认值为 6。
 - {{htmlattrdef("scrolldelay")}}
-  - : 设置每次滚动时的时间间隔（以毫秒为单位）。默认值为 85。请注意， 除非指定 truespeed 值，否则将忽略任何小于 60 的值，并改为使用 60。
+  - : 设置每次滚动时的时间间隔（以毫秒为单位）。默认值为 85。请注意，除非指定 truespeed 值，否则将忽略任何小于 60 的值，并改为使用 60。
 - {{htmlattrdef("truespeed")}}
   - : 默认情况下，会忽略小于 60 的 scrolldelay 值。如果存在 truespeed，那些值不会被忽略。
 - {{htmlattrdef("vspace")}}
@@ -71,4 +72,4 @@ HTML marquee 元素（`<marquee>）` 用来插入一段滚动的文字。你可�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.marquee")}}
+{{Compat}}

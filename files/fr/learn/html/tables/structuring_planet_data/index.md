@@ -4,6 +4,7 @@ slug: Learn/HTML/Tables/Structuring_planet_data
 translation_of: Learn/HTML/Tables/Structuring_planet_data
 original_slug: Apprendre/HTML/Tableaux/Structuring_planet_data
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 Dans notre évaluation, nous vous fournissons des données sur les planètes de notre système solaire pour vous permettre de les structurer dans un tableau HTML.

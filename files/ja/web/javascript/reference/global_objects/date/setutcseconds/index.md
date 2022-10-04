@@ -2,6 +2,7 @@
 title: Date.prototype.setUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 ---
+
 {{JSRef}}
 
 **`setUTCSeconds()`** メソッドは、協定世界時に基づき、指定された日時の「秒」を設定します。

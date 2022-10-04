@@ -57,7 +57,7 @@ Edge 低於 17 的版本和 Internet Explorer 無法保證在繪製循環前觸�
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.requestAnimationFrame")}}
+{{Compat}}
 
 ## 其他參考
 

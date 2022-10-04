@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/PI
 ---
+
 {{JSRef}}
 
 La propriété **`Math.PI`** représente le ratio entre le périmètre d'un cercle et son diamètre. Elle vaut environ 3.14159:

@@ -2,11 +2,12 @@
 title: 初始值
 slug: Web/CSS/@property/initial-value
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-**`initial-value`** [CSS](/zh-CN/docs/Web/CSS)描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}的时候是必需的，除非 syntax 属性接受了任何有效的 token 流。 它为属性设置初始值。
+**`initial-value`** [CSS](/zh-CN/docs/Web/CSS)描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}的时候是必需的，除非 syntax 属性接受了任何有效的 token 流。它为属性设置初始值。
 
-被选定为`initial-value`的参数，依照`syntax`描述符定义，必须可以正确地解析。 因此，如果`syntax`描述符为`<color>`，那么初始值必须是一个有效的{{cssxref("color")}}值。
+被选定为`initial-value`的参数，依照`syntax`描述符定义，必须可以正确地解析。因此，如果`syntax`描述符为`<color>`，那么初始值必须是一个有效的{{cssxref("color")}}值。
 
 ## 语法
 
@@ -75,7 +76,7 @@ window.CSS.registerProperty({
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.property")}}
+{{Compat}}
 
 ## 另见
 

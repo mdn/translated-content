@@ -31,27 +31,27 @@ saudacao();
 
 O código acima será executado desta forma pelo interpretador:
 
-1.  Todas as funções serão ignoradas, até chegar na chamada da função `saudacao()`.
-2.  Adiciona a função `saudacao()` para a pilha de chamadas.
+1. Todas as funções serão ignoradas, até chegar na chamada da função `saudacao()`.
+2. Adiciona a função `saudacao()` para a pilha de chamadas.
 
     > **Nota:** Pilha de chamadas:
     > \- saudacao
 
-3.  Executa todas as linhas de código da função `saudacao()`.
-4.  Chama a função `digaOi()`.
-5.  Adiciona a função `digaOi()` na pilha de chamadas.
+3. Executa todas as linhas de código da função `saudacao()`.
+4. Chama a função `digaOi()`.
+5. Adiciona a função `digaOi()` na pilha de chamadas.
 
     > **Nota:** Pilha de chamadas:
     > \- `saudacao` > \- digaOi
 
-6.  Executa todas as linhas de código da função `digaOi()` até o final.
-7.  Retorna a execução na linha onde foi chamada a função `digaOi()` e continua a execução do resto da função `saudacao()`.
-8.  Deleta a função `digaOi()` da pilha de chamadas.
+6. Executa todas as linhas de código da função `digaOi()` até o final.
+7. Retorna a execução na linha onde foi chamada a função `digaOi()` e continua a execução do resto da função `saudacao()`.
+8. Deleta a função `digaOi()` da pilha de chamadas.
 
     > **Nota:** Pilha de chamadas:
     > \- `saudacao`
 
-9.  Quando todas as linhas da função `saudacao()` forem executadas, retorna para a linha onde a função foi invocada, e continua a execução do resto do código.
+9. Quando todas as linhas da função `saudacao()` forem executadas, retorna para a linha onde a função foi invocada, e continua a execução do resto do código.
 10. Deleta a função `saudacao()` da Pilha de chamadas.
 
     > **Nota:** Pilha de chamadas:

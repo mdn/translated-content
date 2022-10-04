@@ -2,6 +2,7 @@
 title: URLSearchParams.delete()
 slug: Web/API/URLSearchParams/delete
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`delete()`** メソッドは、すべての検索パラメーターのリストから、指定された検索パラメーターとそれに関連するすべての値を削除します。

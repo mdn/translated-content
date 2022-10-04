@@ -2,6 +2,7 @@
 title: ':has()'
 slug: Web/CSS/:has
 ---
+
 {{CSSRef}}
 
 **`:has()`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)代表一个元素，其给定的选择器参数（相对于该元素的 {{cssxref(":scope")}}）至少匹配一个元素。

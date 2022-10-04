@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.getPropertyPriority()
 slug: Web/API/CSSStyleDeclaration/getPropertyPriority
 ---
+
 {{ APIRef("CSSOM") }}
 
 **CSSStyleDeclaration.getPropertyPriority()** メソッドインターフェイスは、 {{domxref('DOMString')}} でその CSS プロパティに明示的に設定されたすべての優先度を返します。

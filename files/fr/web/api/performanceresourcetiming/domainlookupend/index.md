@@ -11,6 +11,7 @@ tags:
   - domainLookupEnd
 translation_of: Web/API/PerformanceResourceTiming/domainLookupEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`domainLookupEnd`** retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur ait terminé la recherche du nom de domaine pour la ressource.

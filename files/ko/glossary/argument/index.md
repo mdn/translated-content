@@ -1,7 +1,6 @@
 ---
 title: Argument
 slug: Glossary/Argument
-translation_of: Glossary/Argument
 ---
 인수란 {{Glossary("function","함수")}}에 입력으로 간주되는 ({{Glossary("primitive","원시적")}}인 또는 {{Glossary("object","객체")}}의){{glossary("value","값")}} 이다.
 

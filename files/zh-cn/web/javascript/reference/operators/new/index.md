@@ -2,6 +2,7 @@
 title: new 运算符
 slug: Web/JavaScript/Reference/Operators/new
 ---
+
 {{jsSidebar("Operators")}}
 
 **`new` 运算符**创建一个用户定义的对象类型的实例或具有构造函数的内置对象的实例。
@@ -26,8 +27,8 @@ new constructor[([arguments])]
 **`new`** 关键字会进行如下的操作：
 
 1. 创建一个空的简单 JavaScript 对象（即**`{}`**）；
-2. 为步骤 1 新创建的对象添加属性**`__proto__`**，将该属性链接至构造函数的原型对象 ；
-3. 将步骤 1 新创建的对象作为 **`this`** 的上下文 ；
+2. 为步骤 1 新创建的对象添加属性**`__proto__`**，将该属性链接至构造函数的原型对象；
+3. 将步骤 1 新创建的对象作为 **`this`** 的上下文；
 4. 如果该函数没有返回对象，则返回**`this`**。
 
 （译注：关于对象的 **`constructor`**，参见 **`Object.prototype.constructor`**）

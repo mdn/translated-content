@@ -2,6 +2,7 @@
 title: ServiceWorker.state
 slug: Web/API/ServiceWorker/state
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}ServiceWorker 接口的这个只读的**state**属性返回一个代表 service worker 当前状态的字符串。值可以是以下这些：installing, installed, activating, activated，或者是 redundant.
 
 ## 语法
@@ -45,4 +46,4 @@ if (serviceWorker) {
 
 ## 浏览器兼容性
 
-{{Compat("api.ServiceWorker.state")}}
+{{Compat}}

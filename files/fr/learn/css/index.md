@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/CSS
 original_slug: Apprendre/CSS
 ---
+
 {{LearnSidebar}}
 
 > Les Cascading StyleSheets — ou {{glossary("CSS")}} — (Feuilles de style en cascade) sont la première technique à apprendre après le {{glossary("HTML")}}. Alors que {{glossary("HTML")}} s'utilise pour définir la structure et la sémantique du contenu, les {{Glossary('CSS')}} sont employées pour composer et déterminer l'apparence de ce contenu. Ainsi par exemple, vous utiliserez les CSS pour modifier les polices, la couleur, la taille et l'espacement de votre contenu, pour le répartir sur plusieurs colonnes ou bien pour ajouter des animations et autres fonctionnalités décoratives.

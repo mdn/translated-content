@@ -2,6 +2,7 @@
 title: Firefox 100 for developers
 slug: Mozilla/Firefox/Releases/100
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 100 の変更点をまとめています。Firefox 100 は、米国時間 2022 年 5 月 3 日にリリースされました。

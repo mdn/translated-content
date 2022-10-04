@@ -2,6 +2,7 @@
 title: PerformancePaintTiming
 slug: Web/API/PerformancePaintTiming
 ---
+
 {{SeeCompatTable}}{{APIRef("Performance Timeline API")}}
 
 [Paint Timing API](/zh-CN/docs/Web/API/Paint_Timing_API) 提供的 **`PerformancePaintTiming`** 是一个提供页面在构建过程中的“绘制”（也称“渲染”）时间点信息的接口。“绘制”是指将渲染树转换为页面上像素的过程。
@@ -56,4 +57,4 @@ The time to first-contentful-paint was 2787.460 milliseconds.
 
 ## 浏览器兼容性
 
-{{Compat("api.PerformancePaintTiming")}}
+{{Compat}}

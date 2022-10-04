@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/html
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML. Tout autre élément du document doit être un descendant de cet élément.

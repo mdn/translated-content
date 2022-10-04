@@ -235,7 +235,7 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.String.String")}}
+{{Compat}}
 
 ## 參見
 

@@ -13,17 +13,16 @@ tags:
   - Window.navigator
 translation_of: Web/API/Window/navigator
 ---
-{{ApiRef}}La propiedad de solo lectura `Window.navigator `es una referencia al objeto {{domxref("Navigator")}}, el cual puede ser utilizado para obtener información sobre la aplicación que está ejecutando el script.
 
-##
+{{ApiRef}}
+
+La propiedad de solo lectura `Window.navigator` es una referencia al objeto {{domxref("Navigator")}}, el cual puede ser utilizado para obtener información sobre la aplicación que está ejecutando el script.
 
 ## Sintaxis
 
 ```js
 navigatorObject = window.navigator
 ```
-
-##
 
 ## Ejemplos
 

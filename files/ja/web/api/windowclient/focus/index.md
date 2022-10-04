@@ -2,6 +2,7 @@
 title: WindowClient.focus()
 slug: Web/API/WindowClient/focus
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("WindowClient")}} インターフェイスの **`focus()`** メソッドは、現在のクライアントにユーザー入力フォーカスを与え、既存の {{domxref("WindowClient")}} に解決する {{jsxref("Promise")}} を返します。

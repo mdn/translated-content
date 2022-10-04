@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/get
 ---
+
 {{JSRef}}
 
 La méthode **`get()`** permet de renvoyer un élément donné d'un objet `WeakMap`.

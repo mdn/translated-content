@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Iteration_protocols
 original_slug: Web/JavaScript/Reference/Les_protocoles_iteration
 ---
+
 {{jsSidebar("More")}}
 
 Un des ajouts à ECMAScript 2015 (ES6) n'est ni une nouvelle syntaxe ni un nouvel objet natif mais des protocoles. Ces protocoles peuvent être implémentés par n'importe quel objet qui respecte certaines conventions.

@@ -6,6 +6,7 @@ tags:
   - Reference
 translation_of: Web/API/Worker/Worker
 ---
+
 {{APIRef("Worker")}}
 
 Le constructeur **`Worker()`** crée un objet {{domxref("Worker")}} qui exécute le script à l'URL spécifiée. Ce script doit obéir à la [same-origin policy](/en/Same_origin_policy_for_JavaScript).

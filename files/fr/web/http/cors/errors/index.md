@@ -14,6 +14,7 @@ tags:
   - troubleshooting
 translation_of: Web/HTTP/CORS/Errors
 ---
+
 {{HTTPSidebar}}
 
 [Cross-Origin Resource Sharing](/fr/docs/Web/HTTP/CORS) ({{Glossary("CORS")}}) est une norme qui permet à un serveur d'assouplir la [politique de même origine](/fr/docs/Web/Security/Same-origin_policy).

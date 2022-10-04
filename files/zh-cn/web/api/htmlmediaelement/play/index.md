@@ -2,6 +2,7 @@
 title: play()
 slug: Web/API/HTMLMediaElement/play
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.play()`** 方法会尝试播放媒体。这个方法返回一个 {{jsxref("Promise")}}，当媒体成功开始播放时被解决（resolved）。当播放因为任何原因失败时，这个 promise 被拒绝（rejected）。
@@ -87,7 +88,7 @@ function handlePlayButton() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.play")}}
+{{Compat}}
 
 ## 参见
 

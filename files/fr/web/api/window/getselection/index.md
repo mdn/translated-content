@@ -3,6 +3,7 @@ title: window.getSelection
 slug: Web/API/Window/getSelection
 translation_of: Web/API/Window/getSelection
 ---
+
 {{ ApiRef() }}
 
 Renvoie un objet selection représentant le ou les objets sélectionnés.

@@ -2,6 +2,7 @@
 title: Gamepad.buttons
 slug: Web/API/Gamepad/buttons
 ---
+
 {{APIRef("Gamepad API")}}
 
 {{domxref("Gamepad") }} インターフェイスの **`Gamepad.buttons`** プロパティはデバイス上に存在するボタンを表すオブジェクトの配列を返します。

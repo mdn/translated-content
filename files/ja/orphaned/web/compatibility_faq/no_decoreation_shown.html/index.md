@@ -3,6 +3,7 @@ title: 枠のシャドウや角丸が抜けている
 slug: orphaned/Web/Compatibility_FAQ/No_Decoreation_Shown.html
 original_slug: Web/Compatibility_FAQ/No_Decoreation_Shown.html
 ---
+
 ## 概要
 
 枠のシャドウ(影付け装飾)や角丸(アイコンやボタンの角の丸み)が表示されません。

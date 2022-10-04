@@ -275,8 +275,6 @@ p{
 
 這裡讓我們看個例子，一個內含文字的方塊左右來回移動，並且會在兩種顏色之間做轉變：
 
-<video controls src="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitiondemo1.ogv"></video>
-
 在我們仔細研究程式碼之前可以先看[範例](/samples/cssref/transitions/sample1)。同樣地，可以到[這](/samples/cssref/transitions/sample1/transitions.css)看其 CSS 的寫法。
 
 ### HTML 程式碼

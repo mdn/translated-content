@@ -26,7 +26,7 @@ _`Position` 介面沒有繼承任何屬性_
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationPosition")}}
+{{Compat}}
 
 ## 請參考
 

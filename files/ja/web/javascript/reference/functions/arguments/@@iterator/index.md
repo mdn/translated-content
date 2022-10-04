@@ -2,6 +2,7 @@
 title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ---
+
 {{jsSidebar("Functions")}}
 
 **`@@iterator`** プロパティの初期値は {{jsxref("Array.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。

@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/compare
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Collator.prototype.compare()`** compare deux chaînes de caractères en tenant compte des options spécifiées pour la locale et l'ordre de tri dans l'objet {{jsxref("Collator")}}.

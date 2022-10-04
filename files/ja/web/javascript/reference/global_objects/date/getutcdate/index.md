@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
+
 {{JSRef}}
 
 **`getUTCDate()`** メソッドは、協定世界時に基づき、指定された日時の月内の日 (1 ～ 31) を返します。

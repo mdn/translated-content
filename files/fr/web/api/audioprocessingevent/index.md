@@ -8,6 +8,7 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioProcessingEvent
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 AudioProcessingEvent représente l'évènement qui est passé lorsqu'un tampon {{domxref ("ScriptProcessorNode")}} est prêt à être traité.

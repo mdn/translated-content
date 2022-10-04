@@ -77,20 +77,20 @@ console.log(gen.next().value); // 20</pre>
 
 <h3 id="Передача_аргументов_в_генератор">Передача аргументов в генератор</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span><span class="operator token">*</span> <span class="function token">logGenerator</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="keyword token">yield</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="keyword token">yield</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="keyword token">yield</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js">function* logGenerator() {
+  console.log(yield);
+  console.log(yield);
+  console.log(yield);
+}
 
-<span class="keyword token">var</span> gen <span class="operator token">=</span> <span class="function token">logGenerator</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+var gen = logGenerator();
 
-<span class="comment token">// первый вызов next выполняется от начала функции</span>
-<span class="comment token">// и до первого оператора yield</span>
-gen<span class="punctuation token">.</span><span class="function token">next</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-gen<span class="punctuation token">.</span><span class="function token">next</span><span class="punctuation token">(</span><span class="string token">'pretzel'</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// pretzel</span>
-gen<span class="punctuation token">.</span><span class="function token">next</span><span class="punctuation token">(</span><span class="string token">'california'</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// california</span>
-gen<span class="punctuation token">.</span><span class="function token">next</span><span class="punctuation token">(</span><span class="string token">'mayonnaise'</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// mayonnaise</span></code></pre>
+// первый вызов next выполняется от начала функции
+// и до первого оператора yield
+gen.next();
+gen.next('pretzel'); // pretzel
+gen.next('california'); // california
+gen.next('mayonnaise'); // mayonnaise</pre>
 
 <h3 id="Инструкция_return_в_генераторе">Инструкция return в генераторе</h3>
 
@@ -107,8 +107,8 @@ console.log(gen.next()); // { value: undefined, done: true }</pre>
 
 <h3 id="Генераторы_не_могут_быть_инстанцированы_(not_constructable)">Генераторы не могут быть инстанцированы (not constructable)</h3>
 
-<pre class="brush: js example-bad line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span><span class="operator token">*</span> <span class="function token">f</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span><span class="punctuation token">}</span>
-<span class="keyword token">var</span> obj <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">f</span><span class="punctuation token">;</span> <span class="comment token">// throws "TypeError: f is not a constructor"</span></code></pre>
+<pre class="brush: js example-bad">function* f() {}
+var obj = new f; // throws "TypeError: f is not a constructor"</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 

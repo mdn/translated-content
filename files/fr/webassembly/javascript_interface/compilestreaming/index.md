@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
+
 {{JSRef}}
 
 La fonction **`WebAssembly.compileStreaming()`** permet de compiler un module WebAssembly (c'est-à-dire un objet {{jsxref("WebAssembly.Module")}}) depuis un flux source. Cette fonction est utile si on doit compiler un module avant de l'instancier séparement, sinon on utilisera plutôt {{jsxref("WebAssembly.instantiateStreaming()")}}.

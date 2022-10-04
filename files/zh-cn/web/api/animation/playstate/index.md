@@ -2,6 +2,7 @@
 title: Animation.playState
 slug: Web/API/Animation/playState
 ---
+
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 
 作为一个 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 的属性，**`Animation.playState`** 能够返回并设置一个可枚举值来描述一个动画的回放状态。
@@ -70,7 +71,7 @@ tears.forEach(function(el) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Animation.playState")}}
+{{Compat}}
 
 ## 参见
 

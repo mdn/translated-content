@@ -4,6 +4,7 @@ slug: WebAssembly/existing_C_to_wasm
 l10n:
   sourceCommit: 891c7c231987ebd17a7410b3c7aab82af15e4248
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly の主な用途は、既存の C ライブラリーのエコシステムを取得し、開発者がウェブ上でそれらを利用できるようにすることです。
@@ -39,7 +40,7 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
     libwebp/src/{dec,dsp,demux,enc,mux,utils}/*.c
 ```
 
-> **Note:** この方法はすべての C プロジェクトでうまくいく訳ではありません。多くのプロジェクトでは、コンパイルの前にシステム固有のコードを生成するため、 autoconf/automake に依存しています。 Emscripten は、これらのコマンドをラップして適切な引数を注入するための `emconfigure` と `emmake` を提供しています。詳細は [Emscripten のドキュメント](https://emscripten.org/docs/compiling/Building-Projects.html)を読んでください。
+> **メモ:** この方法はすべての C プロジェクトでうまくいく訳ではありません。多くのプロジェクトでは、コンパイルの前にシステム固有のコードを生成するため、 autoconf/automake に依存しています。 Emscripten は、これらのコマンドをラップして適切な引数を注入するための `emconfigure` と `emmake` を提供しています。詳細は [Emscripten のドキュメント](https://emscripten.org/docs/compiling/Building-Projects.html)を読んでください。
 
 これで、新しいモジュールを読み込むために必要なのは HTML と JavaScript だけになりました。
 
@@ -59,7 +60,7 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
 
 ![正しいバージョン番号を示すデベロッパーツールのコンソールのスクリーンショット](version.png)
 
-> **Note:** libwebp は現在のバージョン a.b.c を 16 進数の 0xabc で返します。例えば、v0.6.1 は 0x000601 = 1537 としてエンコードされています。
+> **メモ:** libwebp は現在のバージョン a.b.c を 16 進数の 0xabc で返します。例えば、v0.6.1 は 0x000601 = 1537 としてエンコードされています。
 
 ### JavaScript から Wasm に画像を取得する
 
@@ -165,7 +166,7 @@ const result = new Uint8Array(resultView);
 api.free_result(resultPointer);
 ```
 
-> **Note:** `new Uint8Array(someBuffer)` は同じメモリーチャンク上に新しいビューを作成し、 `new Uint8Array(someTypedArray)` はデータをコピーします。
+> **メモ:** `new Uint8Array(someBuffer)` は同じメモリーチャンク上に新しいビューを作成し、 `new Uint8Array(someTypedArray)` はデータをコピーします。
 
 画像のサイズによっては、 wasm が入力画像と出力画像を格納するためのメモリーを十分に大きくすることができないというエラーが発生する可能性があります。
 

@@ -2,6 +2,7 @@
 title: line
 slug: Web/SVG/Element/line
 ---
+
 {{SVGRef}}
 
 `line`元素是一个 SVG 基本形状，用来创建一条连接两个点的线。
@@ -44,11 +45,11 @@ slug: Web/SVG/Element/line
 
 ## DOM 接口
 
-该元素实现了`SVGLineElement接口`
+该元素实现了 `SVGLineElement` 接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.line")}}
+{{Compat}}
 
 ## 相关内容
 

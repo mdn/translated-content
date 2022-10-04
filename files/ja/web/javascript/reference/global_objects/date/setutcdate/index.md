@@ -2,6 +2,7 @@
 title: Date.prototype.setUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 ---
+
 {{JSRef}}
 
 **`setUTCDate()`** メソッドは、協定世界時に基づき、指定された日付の「日」を設定します。

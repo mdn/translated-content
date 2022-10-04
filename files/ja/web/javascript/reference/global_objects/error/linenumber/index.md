@@ -2,6 +2,7 @@
 title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`lineNumber`** プロパティは、このエラーを起こしたファイル内の行番号が入ります。

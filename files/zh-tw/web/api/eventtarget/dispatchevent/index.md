@@ -49,4 +49,4 @@ cancelled = !target.dispatchEvent(event)
 
 ## 瀏覽器支援度
 
-{{Compat("api.EventTarget.dispatchEvent")}}
+{{Compat}}

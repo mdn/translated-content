@@ -9,19 +9,19 @@ original_slug: Web/HTTP/Заголовки
 ---
 <p>{{ HTTPSidebar }}</p>
 
-<p><span class="seoSummary"><strong>Заголовки HTTP </strong>позволяют клиенту и серверу отправлять дополнительную информацию с HTTP запросом или ответом. В HTTP-заголовке содержится не чувствительное к регистру название, а затем после (<code>:</code>) непосредственно значение.</span> <a href="/en-US/docs/Glossary/Whitespace">Пробелы</a> перед значением игнорируются.</p>
+<p><strong>Заголовки HTTP </strong>позволяют клиенту и серверу отправлять дополнительную информацию с HTTP запросом или ответом. В HTTP-заголовке содержится не чувствительное к регистру название, а затем после (<code>:</code>) непосредственно значение. <a href="/en-US/docs/Glossary/Whitespace">Пробелы</a> перед значением игнорируются.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Пользовательские собственные заголовки исторически использовались с префиксом X, но это соглашение было объявлено устаревшим в июне 2012 года из-за неудобств, вызванных тем, что нестандартные поля стали стандартом в </span></span> <a href="https://tools.ietf.org/html/rfc6648">RFC 6648</a><span class="tlid-translation translation" lang="ru"><span title="">;</span> <span title="">другие перечислены в реестре <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">IANA</a>, исходное содержимое которого было определено в </span></span> <a class="external external-icon" href="http://tools.ietf.org/html/rfc4229">RFC 4229</a>.<span class="tlid-translation translation" lang="ru"><span title=""> IANA также поддерживает <a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml">реестр предлагаемых новых заголовков HTTP</a>.</span></span></p>
+<p>Пользовательские собственные заголовки исторически использовались с префиксом X, но это соглашение было объявлено устаревшим в июне 2012 года из-за неудобств, вызванных тем, что нестандартные поля стали стандартом в  <a href="https://tools.ietf.org/html/rfc6648">RFC 6648</a>; другие перечислены в реестре <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">IANA</a>, исходное содержимое которого было определено в  <a class="external external-icon" href="http://tools.ietf.org/html/rfc4229">RFC 4229</a>. IANA также поддерживает <a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml">реестр предлагаемых новых заголовков HTTP</a>.</p>
 
 <p>HTTP-заголовки сопровождают обмен данными по протоколу HTTP. Они могут содержать описание данных и информацию, необходимую для взаимодействия между клиентом и сервером. Заголовки и их статусы перечислены в <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">реестре IANA</a>, который постоянно обновляется.</p>
 
 <p>Заголовки могут быть сгруппированы по следующим контекстам:</p>
 
 <ul>
- <li>{{Glossary("General header", "Основные заголовки")}} <span class="tlid-translation translation" lang="ru"><span title="">применяется как к запросам, так и к ответам, но не имеет отношения к данным, передаваемым в теле.</span></span></li>
- <li>{{Glossary("Заголовок запроса", "Заголовки запроса")}} <span class="tlid-translation translation" lang="ru"><span title="">содержит больше информации о ресурсе, который нужно получить, или о клиенте, запрашивающем ресурс</span></span>.</li>
- <li>{{Glossary("Response header", "Заголовки ответа")}} <span class="tlid-translation translation" lang="ru"><span title="">содержат дополнительную информацию об ответе, например его местонахождение, или о сервере, предоставившем его.</span></span></li>
- <li>{{Glossary("Entity header", "Заголовки сущности")}} <span class="tlid-translation translation" lang="ru"><span title="">содержат информацию о теле ресурса, например его </span></span><a href="/en-US/docs/Web/HTTP/Headers/Content-Length">длину содержимого </a>или тип <a href="/en-US/docs/Web/SVG/Content_type">MIME</a>.</li>
+ <li>{{Glossary("General header", "Основные заголовки")}} применяется как к запросам, так и к ответам, но не имеет отношения к данным, передаваемым в теле.</li>
+ <li>{{Glossary("Заголовок запроса", "Заголовки запроса")}} содержит больше информации о ресурсе, который нужно получить, или о клиенте, запрашивающем ресурс.</li>
+ <li>{{Glossary("Response header", "Заголовки ответа")}} содержат дополнительную информацию об ответе, например его местонахождение, или о сервере, предоставившем его.</li>
+ <li>{{Glossary("Entity header", "Заголовки сущности")}} содержат информацию о теле ресурса, например его <a href="/en-US/docs/Web/HTTP/Headers/Content-Length">длину содержимого </a>или тип <a href="/en-US/docs/Web/SVG/Content_type">MIME</a>.</li>
 </ul>
 
 <p>Заголовки также могут быть сгруппированы согласно тому, как <a href="/en-US/docs/Glossary/Proxy_server">прокси (proxies)</a> обрабатывают их:</p>

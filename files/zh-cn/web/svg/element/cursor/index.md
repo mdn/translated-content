@@ -2,6 +2,7 @@
 title: cursor
 slug: Web/SVG/Element/cursor
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 > **备注：** 尽量使用 CSS 中的 {{cssxref("cursor")}} 属性来替换该属性。

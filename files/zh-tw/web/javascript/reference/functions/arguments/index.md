@@ -210,7 +210,7 @@ func(); // undefined
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.arguments")}}
+{{Compat}}
 
 ## 參見
 

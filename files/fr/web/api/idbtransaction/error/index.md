@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/error
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`IDBTransaction.error`** de l'interface {{domxref("IDBTransaction")}} renvoie un type d'erreur lorsque la {{domxref("IDBTransaction","transaction","",1)}} échoue.

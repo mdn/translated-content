@@ -2,6 +2,7 @@
 title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 ---
+
 {{JSRef}}**`Atomics.sub()`** 静态方法在数组中的给定位置减去给定值，并返回该位置的旧值。这个原子操作保证在修改后的值被写回之前不会发生其他写操作。{{EmbedInteractiveExample("pages/js/atomics-sub.html")}}
 
 ## 语法
@@ -13,7 +14,7 @@ Atomics.sub(typedArray, index, value)
 ### 参数
 
 - `typedArray`
-  - : 一个共享的整型 typed array。 例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.
+  - : 一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.
 - `index`
   - : 要被 `value` 值减去的 `typedArray` 索引位置。
 - `value`

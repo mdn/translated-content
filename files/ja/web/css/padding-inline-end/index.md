@@ -2,6 +2,7 @@
 title: padding-inline-end
 slug: Web/CSS/padding-inline-end
 ---
+
 {{CSSRef}}
 
 **`padding-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な末尾側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。

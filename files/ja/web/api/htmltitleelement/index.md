@@ -2,6 +2,7 @@
 title: HTMLTitleElement
 slug: Web/API/HTMLTitleElement
 ---
+
 {{ApiRef}}
 
 `title` オブジェクトは、文書のタイトルを含む [HTMLTitleElement](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-79243169) インタフェースを公開します。この要素は {{domxref("HTMLElement")}} インタフェースの全てのプロパティ及びメソッドを継承します。

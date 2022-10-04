@@ -26,11 +26,11 @@ str.charAt(index)
 
 ### Valor retornado
 
-Uma string representando o caractere no índice especificado. Uma string vazia se o **`index` **fornecido estiver fora do intervalo de índices da string `str`.
+Uma string representando o caractere no índice especificado. Uma string vazia se o **`index`** fornecido estiver fora do intervalo de índices da string `str`.
 
 ## Descrição
 
-Caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é `0`\*\* \*\*(zero), e o índice do último caractere em uma string declarada como `stringName` é `stringName.length - 1`. Se o índice que você fornecer estiver fora do intervalo de índices da string, JavaScript retornará uma string vazia.
+Caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é `0` (zero), e o índice do último caractere em uma string declarada como `stringName` é `stringName.length - 1`. Se o índice que você fornecer estiver fora do intervalo de índices da string, JavaScript retornará uma string vazia.
 
 Se nenhum índice for passado para `charAt()`, `0` será usado por padrão.
 

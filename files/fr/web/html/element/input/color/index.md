@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/input/color
 ---
+
 {{HTMLRef}}
 
 Les éléments {{HTMLElement("input")}} de type **`"color"`** permettent de sélectionner une couleur via une interface (un sélecteur de couleur) ou en saisissant le code hexadécimal de la couleur au format `"#rrggbb"`. Ce format de valeur peut être utilisé en CSS.

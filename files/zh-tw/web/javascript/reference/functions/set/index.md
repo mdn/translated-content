@@ -102,7 +102,7 @@ console.log(obj.baz); // "baz"
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.set")}}
+{{Compat}}
 
 ## 參見
 

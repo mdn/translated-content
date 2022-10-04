@@ -6,6 +6,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feFlood
 ---
+
 {{SVGRef}}
 
 La primitive de filtre SVG **`<feFlood>`** remplit la région du filtre avec la couleur et l'opacité définies par {{SVGAttr("flood-color")}} et {{SVGAttr("flood-opacity")}}.

@@ -2,6 +2,7 @@
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
 ---
+
 {{APIRef("IndexedDB")}}
 
 **`continue()`** は {{domxref("IDBCursor")}} インターフェースのメソッドで、カーソルを現在の方向に次の位置、任意のキーパラメーターに一致するキーを持つアイテムまで進めます。キーを指定しない場合、カーソルはその方向に基づいて、すぐ隣の位置へ進みます。

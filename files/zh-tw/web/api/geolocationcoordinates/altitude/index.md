@@ -19,7 +19,7 @@ alt = coordinates.altitude
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationCoordinates.altitude")}}
+{{Compat}}
 
 ## 請參考
 

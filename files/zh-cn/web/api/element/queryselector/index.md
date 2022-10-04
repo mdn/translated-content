@@ -2,6 +2,7 @@
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
 ---
+
 {{APIRef("DOM")}}返回与指定的选择器组匹配的元素的后代的第一个元素。
 
 ## 语法

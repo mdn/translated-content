@@ -9,6 +9,7 @@ tags:
   - évènements
 translation_of: Web/API/Event/bubbles
 ---
+
 {{ ApiRef("DOM") }}
 
 Indique si l'événement donné se propage à travers le DOM ou non.

@@ -2,6 +2,7 @@
 title: Date.prototype.getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 ---
+
 {{JSRef}}
 
 **`getHours()`** メソッドは、地方時に基づき、指定された日時の「時」を返します。

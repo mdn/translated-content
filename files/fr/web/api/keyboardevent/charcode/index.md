@@ -11,6 +11,7 @@ tags:
   - évènements
 translation_of: Web/API/KeyboardEvent/charCode
 ---
+
 {{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}
 
 La propriété en lecture seule {{domxref("KeyboardEvent.charCode")}} retourne la valeur Unicode d'une touche caractère pressée pendant un évènement {{ domxref("element.onkeypress", "keypress") }}.

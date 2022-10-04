@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/EPSILON
 ---
+
 {{JSRef}}
 
 La propriété **`Number.EPSILON`** représente la différence entre le chiffre 1 (un) et la plus petite valeur supérieure à 1 qui peut être représentée par un nombre en JavaScript.

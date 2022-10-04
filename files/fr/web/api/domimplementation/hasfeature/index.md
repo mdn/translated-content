@@ -7,6 +7,7 @@ tags:
   - Méthodes
 translation_of: Web/API/DOMImplementation/hasFeature
 ---
+
 {{ApiRef("DOM")}}
 
 {{deprecated_header()}}

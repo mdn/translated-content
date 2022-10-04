@@ -2,6 +2,7 @@
 title: SourceMap
 slug: Web/HTTP/Headers/SourceMap
 ---
+
 {{HTTPSidebar}}
 
 **`SourceMap`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーは、生成されたコードを[ソースマップ](/ja/docs/Tools/Debugger/How_to/Use_a_source_map)にリンクし、ブラウザーが元のソースを再構成し、再構成されたオリジナルをデバッガに提示できるようにします。

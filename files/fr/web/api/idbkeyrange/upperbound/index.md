@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/upperBound
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`upperBound()`**, rattachée à l'interface  {{domxref("IDBKeyRange")}}, crée un intervalle de clé avec une borne supérieure.

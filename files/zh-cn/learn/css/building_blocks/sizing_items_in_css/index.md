@@ -2,9 +2,10 @@
 title: 在 CSS 中调整大小
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
 
-在前面的课程中你已经看到了几种使用 CSS 为页面中元素设定尺寸的方法。 在我们设计网页的时候，需要理解这些不同方法之间的差异。在本课程中，我们将总结设定元素尺寸的方法，并定义几个术语，这些内容将会在未来对你有所帮助。
+在前面的课程中你已经看到了几种使用 CSS 为页面中元素设定尺寸的方法。在我们设计网页的时候，需要理解这些不同方法之间的差异。在本课程中，我们将总结设定元素尺寸的方法，并定义几个术语，这些内容将会在未来对你有所帮助。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -48,7 +49,7 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 ## 设置具体的尺寸
 
-我们当然可以给设计中的元素指定具体大小。当给元素指定尺寸（然后其内容需要适合该尺寸）时，我们将其称为**外部尺寸**。以上面例子中的 `<div>` 举例 — 我们可以给它一个具体的 {{cssxref("width")}} 和 {{cssxref("height")}} 值，然后不论我们放什么内容进去它都是该尺寸。 正如我们在[上一课](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)有关溢出的内容中所发现的，如果内容的数量超出了元素可容纳的空间，则设置的高度会导致内容溢出。
+我们当然可以给设计中的元素指定具体大小。当给元素指定尺寸（然后其内容需要适合该尺寸）时，我们将其称为**外部尺寸**。以上面例子中的 `<div>` 举例 — 我们可以给它一个具体的 {{cssxref("width")}} 和 {{cssxref("height")}} 值，然后不论我们放什么内容进去它都是该尺寸。正如我们在[上一课](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)有关溢出的内容中所发现的，如果内容的数量超出了元素可容纳的空间，则设置的高度会导致内容溢出。
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}
 

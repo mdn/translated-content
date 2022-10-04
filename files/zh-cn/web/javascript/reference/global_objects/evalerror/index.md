@@ -2,6 +2,7 @@
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
+
 {{JSRef}}
 
 本对象代表了一个关于 [eval](/zh-CN/Core_JavaScript_1.5_Reference/Global_Functions/eval) 函数的错误。此异常不再会被 JavaScript 抛出，但是 EvalError 对象仍然保持兼容性。

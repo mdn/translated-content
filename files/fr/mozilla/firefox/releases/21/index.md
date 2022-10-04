@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/21
 original_slug: Mozilla/Firefox/Versions/21
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changements dans Firefox 21 qui sont utiles aux développeurs, que vous soyez développeur web, développeur Firefox et Gecko, ou développeur d'add-ons.

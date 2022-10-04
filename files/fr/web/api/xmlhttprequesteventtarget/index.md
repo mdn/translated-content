@@ -11,6 +11,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequestEventTarget
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 `XMLHttpRequestEventTarget` est l'interface qui décrit les gestionnaires d'événements que vous pouvez implémenter dans un objet qui gérera les événements pour un {{ domxref("XMLHttpRequest") }}.

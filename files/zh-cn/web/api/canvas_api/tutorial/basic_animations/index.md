@@ -2,6 +2,7 @@
 title: 基本的动画
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 由于我们是用 JavaScript 去操控 {{HTMLElement("canvas")}} 对象，这样要实现一些交互动画也是相当容易的。在本章中，我们将看看如何做一些基本的动画。

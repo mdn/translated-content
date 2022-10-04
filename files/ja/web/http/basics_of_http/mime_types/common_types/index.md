@@ -2,6 +2,7 @@
 title: よくある MIME タイプ
 slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ---
+
 {{HTTPSidebar}}
 
 これは文書の種類に関連付けられている MIME タイプの一覧であり、一般的な拡張子の昇順に並べています。

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/sqrt
 ---
+
 {{JSRef}}
 
 La fonction **`Math.sqrt()`** renvoie la racine carrée d'un nombre. Cette fonction est définie par&nbsp;:

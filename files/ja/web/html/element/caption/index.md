@@ -2,6 +2,7 @@
 title: '<caption>: 表キャプション要素'
 slug: Web/HTML/Element/caption
 ---
+
 {{HTMLRef}}
 
 **HTML の `<caption>` 要素**は、表のキャプション (またはタイトル) を指定します。
@@ -78,7 +79,7 @@ slug: Web/HTML/Element/caption
     - `bottom`
       - : キャプションを表の下側に表示します。
 
-    > **Note:** **使用上の注意:** この属性は非推奨ですので使用しないでください。 {{HTMLElement("caption")}} 要素にスタイルを適用するには、 [CSS](/ja/docs/Web/CSS) プロパティの {{cssxref("caption-side")}} および {{cssxref("text-align")}} を使用してください。
+    > **メモ:** **使用上の注意:** この属性は非推奨ですので使用しないでください。 {{HTMLElement("caption")}} 要素にスタイルを適用するには、 [CSS](/ja/docs/Web/CSS) プロパティの {{cssxref("caption-side")}} および {{cssxref("text-align")}} を使用してください。
 
 ## 使用上の注意
 

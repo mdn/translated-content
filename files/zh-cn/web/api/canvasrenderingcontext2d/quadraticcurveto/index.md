@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.quadraticCurveTo()`** 是 Canvas 2D API 新增二次贝塞尔曲线路径的方法。它需要 2 个点。第一个点是控制点，第二个点是终点。起始点是当前路径最新的点，当创建二次贝赛尔曲线之前，可以使用 `moveTo()` 方法进行改变。
@@ -178,7 +179,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.quadraticCurveTo")}}
+{{Compat}}
 
 - 接口定义，{{domxref("CanvasRenderingContext2D")}}
 - [WikiPedia article on Bézier curves](http://en.wikipedia.org/wiki/B%C3%A9zier_curve).

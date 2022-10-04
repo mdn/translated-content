@@ -9,6 +9,7 @@ tags:
   - Rérérence
 translation_of: Web/API/Document/write
 ---
+
 {{ ApiRef("DOM") }}
 
 Écrit une chaîne de texte dans un document ouvert par [document.open()](/fr/docs/Web/API/Document/open).

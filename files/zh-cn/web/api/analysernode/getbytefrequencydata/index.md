@@ -2,6 +2,7 @@
 title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AnalyserNode") }}接口的 **`getByteFrequencyData()`** 方法将当前频率数据复制到传入的 Uint8Array（无符号字节数组）中。
@@ -76,7 +77,7 @@ draw();
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode.getByteFrequencyData")}}
+{{Compat}}
 
 ## 相关内容
 

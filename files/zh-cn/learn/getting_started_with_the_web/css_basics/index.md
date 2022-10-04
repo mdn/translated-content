@@ -2,6 +2,7 @@
 title: CSS 基础
 slug: Learn/Getting_started_with_the_web/CSS_basics
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
@@ -36,7 +37,7 @@ p {
 
 让我们来仔细看一看上述 CSS：
 
-![图解CSS声明](css-declaration-small.png)
+![图解 CSS 声明](css-declaration-small.png)
 
 整个结构称为 **规则集**（通常简称“规则”），各部分释义如下：
 

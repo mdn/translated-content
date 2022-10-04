@@ -129,7 +129,7 @@ Algumas anotações quando trabalhando com conversão de tipo de símbolos.
 - Quando estiver tentando converter um símbolo para um número, um {{jsxref("TypeError")}} será retornado.
   (e.g. `+sym` or `sym | 0`).
 - Quando usando operador de igualdade, `Object(sym) == sym` retorna `true`.
-- `Symbol("foo") + "bar" `lança um {{jsxref("TypeError")}} (não pode converter um símbolo para string). Isso previne você de silenciosamente criar um novo nome de propriedade string a partir de um símbolo, por exemplo.
+- `Symbol("foo") + "bar"` lança um {{jsxref("TypeError")}} (não pode converter um símbolo para string). Isso previne você de silenciosamente criar um novo nome de propriedade string a partir de um símbolo, por exemplo.
 - A ["safer" `String(sym)` conversion](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion) funciona como uma chamada para {{jsxref("Symbol.prototype.toString()")}} com símbolos, mas note que uma `new String(sym)` será lançada.
 
 ### Símbolos e `for...in` iteração

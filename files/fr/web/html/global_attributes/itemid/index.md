@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/itemid
 original_slug: Web/HTML/Attributs_universels/itemid
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemid`** permet d'identifier un objet, au sens des microdonnées, de façon unique et globale. L'attribut `itemid` peut uniquement être défini sur les éléments qui ont un attribut {{htmlattrxref("itemscope")}} et un attribut {{htmlattrxref("itemtype")}}. De plus, un `itemid` ne peut pas être défini sur des éléments dont l'attribut `itemscope` possède un attribut `itemtype` qui définit un vocabulaire qui ne prend pas en charge les identifiants globaux tels que défini dans la spécification du vocabulaire.

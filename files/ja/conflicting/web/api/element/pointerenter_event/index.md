@@ -3,6 +3,7 @@ title: 'Document: pointerenter イベント'
 slug: conflicting/Web/API/Element/pointerenter_event
 original_slug: Web/API/Document/pointerenter_event
 ---
+
 {{APIRef}}
 
 `pointerenter` イベントは、ポインティングデバイスが要素またはその子孫のヒットテスト領域に入ったときに発生します。ホバーに対応していない機器では {{domxref("Document/pointerdown_event", "pointerdown")}} イベントの結果として移動した場合も含みます ({{domxref("Document/pointerdown_event", "pointerdown")}} を参照)。

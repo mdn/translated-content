@@ -2,6 +2,7 @@
 title: 論理積 (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 ---
+
 {{jsSidebar("Operators")}}
 
 論理積 (`&&`) 演算子 (論理結合) を一組の論理型のオペランドに対して使用すると、すべてのオペランドが `true` である場合にのみ `true` になります。それ以外の場合は `false` になります。

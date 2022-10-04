@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toFixed
 ---
+
 {{JSRef}}
 
 La méthode **`toFixed()`** permet de formater un nombre en notation à point-fixe.

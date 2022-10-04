@@ -91,4 +91,3 @@ Por razones de retrocompatibilidad, el conjunto de anclas devuelto sólo contien
 ## Compatibilidad del Navegador
 
 {{Compat}}
-

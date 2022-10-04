@@ -15,19 +15,21 @@ Los campos públicos y estáticos son propieades editables, enumerables, y confi
 
 ## Sintaxis
 
-    class ClassWithInstanceField {
-      instanceField = 'instance field'
-    }
+```js
+class ClassWithInstanceField {
+  instanceField = 'instance field'
+}
 
-    class ClassWithStaticField {
-      static staticField = 'static field'
-    }
+class ClassWithStaticField {
+  static staticField = 'static field'
+}
 
-    class ClassWithPublicInstanceMethod {
-      publicMethod() {
-        return 'hello world'
-      }
-    }
+class ClassWithPublicInstanceMethod {
+  publicMethod() {
+    return 'hello world'
+  }
+}
+```
 
 ## Ejemplos
 

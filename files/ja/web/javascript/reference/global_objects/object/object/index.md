@@ -2,6 +2,7 @@
 title: Object() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 ---
+
 {{JSRef}}
 
 **`Object` コンストラクター**は、与えられた値のオブジェクトラッパーを生成します。

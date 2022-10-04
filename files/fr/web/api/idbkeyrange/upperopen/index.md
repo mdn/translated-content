@@ -3,6 +3,7 @@ title: IDBKeyRange.upperOpen
 slug: Web/API/IDBKeyRange/upperOpen
 translation_of: Web/API/IDBKeyRange/upperOpen
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La propriété **`upperOpen`** de l'interface {{domxref("IDBKeyRange")}} renvoie un booléen indiquant si la valeur de la limite supérieure est incluse dans l'{{domxref("IDBKeyRange","intervalle de clé")}}.

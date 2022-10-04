@@ -34,13 +34,13 @@ Você também precisa fornecer seu código via HTTPS — Service workers estão 
 
 Com service workers, os seguintes passos geralmente são observados como configuração básica:
 
-1.  A URL do service worker é buscada e registrada via {{domxref("serviceWorkerContainer.register()")}}.
-2.  Em caso de sucesso, o service worker é executado em um {{domxref("ServiceWorkerGlobalScope") }}; isto é basicamente um tipo especial de contexto do worker, que é executado fora da thread de execução do script principal, sem acesso ao DOM.
-3.  O service worker agora está pronto para processar eventos.
-4.  A tentativa de instalação do worker acontece quando as páginas controladas pelo service worker são acessadas. O evento de instalação é sempre o primeiro a ser enviado ao service worker (isto pode ser usado para iniciar o processode preencher um IndexedDB, e armazenar em cache os assets do site). Este é realmente o mesmo tipo de procedimento para instalação de um aplicativo nativo ou do Firefox OS — disponibilizando tudo offline.
-5.  Quando o manipulador `oninstall `estiver completo, considera-se que o service worker está instalado.
-6.  O próximo é a ativação. Quando um service worker é instalado, ele recebe um evento de ativação. O uso primário do `onactivate é` para limpeza de recursos usado em versões anterioires do script de um Service worker.
-7.  O Service worker agora vai controlar páginas, mas apenas aquelas abertas após o `register() `tiver sido bem-sucedido. Isto é, um documento inicia a vida com ou sem Service worker e mantém isso durante seu tempo de vida. Logo, documentos terão de ser recarregados para serem controlados.
+1. A URL do service worker é buscada e registrada via {{domxref("serviceWorkerContainer.register()")}}.
+2. Em caso de sucesso, o service worker é executado em um {{domxref("ServiceWorkerGlobalScope") }}; isto é basicamente um tipo especial de contexto do worker, que é executado fora da thread de execução do script principal, sem acesso ao DOM.
+3. O service worker agora está pronto para processar eventos.
+4. A tentativa de instalação do worker acontece quando as páginas controladas pelo service worker são acessadas. O evento de instalação é sempre o primeiro a ser enviado ao service worker (isto pode ser usado para iniciar o processode preencher um IndexedDB, e armazenar em cache os assets do site). Este é realmente o mesmo tipo de procedimento para instalação de um aplicativo nativo ou do Firefox OS — disponibilizando tudo offline.
+5. Quando o manipulador `oninstall` estiver completo, considera-se que o service worker está instalado.
+6. O próximo é a ativação. Quando um service worker é instalado, ele recebe um evento de ativação. O uso primário do `onactivate é` para limpeza de recursos usado em versões anterioires do script de um Service worker.
+7. O Service worker agora vai controlar páginas, mas apenas aquelas abertas após o `register()` tiver sido bem-sucedido. Isto é, um documento inicia a vida com ou sem Service worker e mantém isso durante seu tempo de vida. Logo, documentos terão de ser recarregados para serem controlados.
 
 ![](https://mdn.mozillademos.org/files/12636/sw-lifecycle.png)
 
@@ -52,7 +52,7 @@ O gráfico abaixo mostra um resumo dos eventos de service worker disponíveis:
 
 [Promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) são um ótimo mecanismo para executar operações assíncronas, onde o sucesso de uma depende do sucesso das outras. Isto é o fundamento para o modo como os service workers trabalham.
 
-Promises pode fazer uma variedade de coisas, mas tudo o que precisa saber agora é que, se algo retorna uma promise, você pode inserir `.then()` ao final e incluir dentro dela callback para casos de sucesso ou poder inserir `.catch() `ao final, se quiser incluir um callback para falha.
+Promises pode fazer uma variedade de coisas, mas tudo o que precisa saber agora é que, se algo retorna uma promise, você pode inserir `.then()` ao final e incluir dentro dela callback para casos de sucesso ou poder inserir `.catch()` ao final, se quiser incluir um callback para falha.
 
 Vamos comparar a estrutura de um callback tradicional síncrono para uma promise assíncrona equivalente.
 
@@ -143,9 +143,9 @@ Para demonstrar apenas o básico de registro e instalação de um service worker
 
 Você pode ver o [código-fonte no GitHub](https://github.com/mdn/sw-test/), e [ver um exemplo vivo](https://mdn.github.io/sw-test/). A parte que mencionaremos aqui é a promise (veja [app.js linhas 22-47](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47)), que é uma versão modificada do que você leu a respeito acima, em [Promises test demo](https://github.com/mdn/promises-test). É diferente das seguintes formas:
 
-1.  No original, passamos somente uma URL para uma image que queríamos carregar. Nesta versão, passamos um fragmento de um JSON contendo todos os dados de uma única imagem (veja como se parecem em [image-list.js](https://github.com/mdn/sw-test/blob/gh-pages/image-list.js)). Isto porque todos os dados para cada resolução de promise precisam ser transmitidos com a promise, pois é assíncrona. Se você passou apenas a url, e depois tentou acessar os outros itens no JSON separadamente, quando o laço de repetição `for()` estivesse sendo iterado posteriormente, não funcionaria, pois a promise não se resolveria ao mesmo tempo que as iterações estão sendo feitas (isso é um processo síncrono).
-2.  Na verdade, resolvemos a promise como uma matriz, pois queremos tornar o blob da imagem carregada disponível para a função de resolução mais adiante no código, além do nome da imagem, créditos e texto alternativo (veja [app.js linhas 31-34](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L31-L34)). Promises resolverão somente com um único argumento, então, se você quiser resolver múltiplos valores, precisará usar uma matriz/objeto..
-3.  Para acessar os valores da promise resolvida, acessamos esta função como esperado (veja [app.js linhas 60-64](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L60-L64)). Pode parecer um pouco estranho no começo, mas é assim que as promises funcionam.
+1. No original, passamos somente uma URL para uma image que queríamos carregar. Nesta versão, passamos um fragmento de um JSON contendo todos os dados de uma única imagem (veja como se parecem em [image-list.js](https://github.com/mdn/sw-test/blob/gh-pages/image-list.js)). Isto porque todos os dados para cada resolução de promise precisam ser transmitidos com a promise, pois é assíncrona. Se você passou apenas a url, e depois tentou acessar os outros itens no JSON separadamente, quando o laço de repetição `for()` estivesse sendo iterado posteriormente, não funcionaria, pois a promise não se resolveria ao mesmo tempo que as iterações estão sendo feitas (isso é um processo síncrono).
+2. Na verdade, resolvemos a promise como uma matriz, pois queremos tornar o blob da imagem carregada disponível para a função de resolução mais adiante no código, além do nome da imagem, créditos e texto alternativo (veja [app.js linhas 31-34](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L31-L34)). Promises resolverão somente com um único argumento, então, se você quiser resolver múltiplos valores, precisará usar uma matriz/objeto..
+3. Para acessar os valores da promise resolvida, acessamos esta função como esperado (veja [app.js linhas 60-64](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L60-L64)). Pode parecer um pouco estranho no começo, mas é assim que as promises funcionam.
 
 ## Inserir service workers
 
@@ -168,11 +168,11 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-1.  The outer block performs a feature detection test to make sure service workers are supported before trying to register one.
-2.  Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
-3.  The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`/sw-test/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
-4.  The `.then()` promise function is used to chain a success case onto our promise structure. When the promise resolves successfully, the code inside it executes.
-5.  Finally, we chain a `.catch()` function onto the end that will run if the promise is rejected.
+1. The outer block performs a feature detection test to make sure service workers are supported before trying to register one.
+2. Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
+3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`/sw-test/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
+4. The `.then()` promise function is used to chain a success case onto our promise structure. When the promise resolves successfully, the code inside it executes.
+5. Finally, we chain a `.catch()` function onto the end that will run if the promise is rejected.
 
 This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.
 
@@ -186,9 +186,9 @@ A single service worker can control many pages. Each time a page within your sco
 
 This could be for the following reasons:
 
-1.  You are not running your application through HTTPS.
-2.  The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app’s root directory. In our example, the worker is at `https://mdn.github.io/sw-test/sw.js`, and the app’s root is `https://mdn.github.io/sw-test/`. But the path needs to be written as `/sw-test/sw.js`, not `/sw.js`.
-3.  The service worker being pointed to is on a different origin to that of your app. This is also not allowed.
+1. You are not running your application through HTTPS.
+2. The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app’s root directory. In our example, the worker is at `https://mdn.github.io/sw-test/sw.js`, and the app’s root is `https://mdn.github.io/sw-test/`. But the path needs to be written as `/sw-test/sw.js`, not `/sw.js`.
+3. The service worker being pointed to is on a different origin to that of your app. This is also not allowed.
 
 ![](https://mdn.mozillademos.org/files/12630/important-notes.png)
 
@@ -230,10 +230,10 @@ this.addEventListener('install', function(event) {
 });
 ```
 
-1.  Here we add an `install` event listener to the service worker (hence `this`), and then chain a {{domxref("ExtendableEvent.waitUntil()") }} method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
-2.  Inside `waitUntil()` we use the [`caches.open()`](/pt-BR/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. This returns a promise for a created cache; once resolved, we then call a function that calls `addAll()` on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.
-3.  If the promise is rejected, the install fails, and the worker won’t do anything. This is ok, as you can fix your code and then try again the next time registration occurs.
-4.  After a successful installation, the service worker activates. This doesn’t have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the [Updating your service worker](#updating_your_service_worker) section later on.)
+1. Here we add an `install` event listener to the service worker (hence `this`), and then chain a {{domxref("ExtendableEvent.waitUntil()") }} method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
+2. Inside `waitUntil()` we use the [`caches.open()`](/pt-BR/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. This returns a promise for a created cache; once resolved, we then call a function that calls `addAll()` on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.
+3. If the promise is rejected, the install fails, and the worker won’t do anything. This is ok, as you can fix your code and then try again the next time registration occurs.
+4. After a successful installation, the service worker activates. This doesn’t have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the [Updating your service worker](#updating_your_service_worker) section later on.)
 
 > **Nota:** [localStorage](/pt-BR/docs/Web/Guide/API/DOM/Storage) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
 
@@ -271,13 +271,13 @@ this.addEventListener('fetch', function(event) {
 
 Let’s look at a few other options we have when defining our magic (see our [Fetch API documentation](/pt-BR/docs/Web/API/Fetch_API) for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)
 
-1.  The `{{domxref("Response.Response","Response()")}}` constructor allows you to create a custom response. In this case, we are just returning a simple text string:
+1. The `{{domxref("Response.Response","Response()")}}` constructor allows you to create a custom response. In this case, we are just returning a simple text string:
 
     ```js
     new Response('Hello from your friendly neighbourhood service worker!');
     ```
 
-2.  This more complex `Response` below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:
+2. This more complex `Response` below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:
 
     ```js
     new Response('<p>Hello from your friendly neighbourhood service worker!</p>', {
@@ -285,19 +285,19 @@ Let’s look at a few other options we have when defining our magic (see our [Fe
     });
     ```
 
-3.  If a match wasn’t found in the cache, you could tell the browser to simply {{domxref("GlobalFetch.fetch","fetch")}} the default network request for that resource, to get the new resource from the network if it is available:
+3. If a match wasn’t found in the cache, you could tell the browser to simply {{domxref("GlobalFetch.fetch","fetch")}} the default network request for that resource, to get the new resource from the network if it is available:
 
     ```js
     fetch(event.request);
     ```
 
-4.  If a match wasn’t found in the cache, and the network isn’t available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:
+4. If a match wasn’t found in the cache, and the network isn’t available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:
 
     ```js
     caches.match('/fallback.html');
     ```
 
-5.  You can retrieve a lot of information about each request by calling parameters of the {{domxref("Request")}} object returned by the {{domxref("FetchEvent")}}:
+5. You can retrieve a lot of information about each request by calling parameters of the {{domxref("Request")}} object returned by the {{domxref("FetchEvent")}}:
 
     ```js
     event.request.url

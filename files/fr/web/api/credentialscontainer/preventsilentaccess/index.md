@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/CredentialsContainer/preventSilentAccess
 ---
+
 {{APIRef("")}}{{SeeCompatTable}}
 
 La méthode **`preventSilentAccess()`**, rattachée à l'interface  {{domxref("CredentialsContainer")}}, permet de paramétrer une option pour indiquer si les connexions automatiques sont autorisées pour les futures visites à l'origine. Elle renvoie ensuite une promesse ({{jsxref("Promise")}}) vide.

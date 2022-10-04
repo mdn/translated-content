@@ -13,6 +13,7 @@ tags:
 translation_of: Web/HTML/Element/area
 browser-compat: html.elements.area
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<area>`** définit une zone particulière d'une image et peut lui associer un [lien hypertexte](/fr/docs/Glossary/Hyperlink). Cet élément n'est utilisé qu'au sein d'un élément [`<map>`](/fr/docs/Web/HTML/Element/map).

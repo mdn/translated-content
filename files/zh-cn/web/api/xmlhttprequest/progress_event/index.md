@@ -2,6 +2,7 @@
 title: progress event
 slug: Web/API/XMLHttpRequest/progress_event
 ---
+
 {{APIRef}}
 
 **`progress`**事件会在请求接收到数据的时候被周期性触发。
@@ -114,7 +115,7 @@ xhrButtonAbort.addEventListener('click', () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.progress_event")}}
+{{Compat}}
 
 ## 相关链接
 

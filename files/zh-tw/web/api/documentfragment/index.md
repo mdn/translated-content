@@ -52,7 +52,7 @@ _This interface inherits the methods of its parent, {{domxref("Node")}}, and imp
 
 ## 瀏覽器相容性
 
-{{Compat("api.DocumentFragment")}}
+{{Compat}}
 
 ## 參見
 

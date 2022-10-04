@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/@@species
 ---
+
 {{JSRef}}
 
 **`Set[@@species]`** renvoie le constructeur `Set`.

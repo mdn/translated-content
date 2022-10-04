@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet/has
 ---
+
 {{JSRef}}
 
 La méthode **`has()`** renvoie un booléen indiquant si un objet donné est contenu dans l'ensemble `WeakSet`.

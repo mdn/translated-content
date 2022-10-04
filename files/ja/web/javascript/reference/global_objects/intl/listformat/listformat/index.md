@@ -2,6 +2,7 @@
 title: Intl.ListFormat() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 ---
+
 {{JSRef}}
 
 **`Intl.ListFormat()`** コンストラクターは、言語を考慮したリストの書式化を可能にする

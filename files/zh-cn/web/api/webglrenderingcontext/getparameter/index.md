@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.getParameter()
 slug: Web/API/WebGLRenderingContext/getParameter
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.getParameter()`** 方法为传入的参数名称返回一个值。
@@ -699,7 +700,7 @@ gl.getParameter(gl.VIEWPORT);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.getParameter")}}
+{{Compat}}
 
 ## 另请参阅
 

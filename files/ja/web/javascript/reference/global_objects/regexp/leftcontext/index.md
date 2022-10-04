@@ -2,6 +2,7 @@
 title: RegExp.leftContext ($`)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 標準外の **`input`** プロパティは、正規表現の一致している文字列を含む静的プロパティです。 `` RegExp.$` `` はこのプロパティのエイリアスです。

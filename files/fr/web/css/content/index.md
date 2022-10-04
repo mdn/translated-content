@@ -4,9 +4,14 @@ slug: Web/CSS/content
 translation_of: Web/CSS/content
 browser-compat: css.properties.content
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace un élément avec une valeur générée. Les objets insérés via la propriété `content` sont des **[éléments remplacés anonymes](/fr/docs/Web/CSS/Replaced_element)**.
+
+{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+
+## Syntaxe
 
 ```css
 /* Des mots-clés qui ne peuvent pas être mélangés avec d'autres valeurs */
@@ -23,7 +28,7 @@ content: url("http://www.example.com/test.png") / "Le texte alternatif";
 
 /* Une valeur <string>, les caractères non-latin */
 /* doivent être échappées par ex. \000A9 for &copy; */
-content: 'prefix';
+content: "prefix";
 
 /* Valeurs utilisant un compteur, éventuellement
    avec <list-style-type> */
@@ -52,8 +57,6 @@ content: revert;
 content: unset;
 ```
 
-## Syntaxe
-
 ### Valeurs
 
 - `none`
@@ -63,13 +66,13 @@ content: unset;
 - [`<string>`](/fr/docs/Web/CSS/string)
   - : Contenu qui indique le texte alternatif de l'élément. Les caractères non-latins doivent être encodés avec leur séquence d'échappement Unicode (`\000A9` représentera par exemple le symbole ©).
 - [`<image>`](/fr/docs/Web/CSS/image)
-  - : Une image (valeur de type [`<image>`](/fr/docs/Web/CSS/image)) avec une [`url()`](/fr/docs/Web/CSS/url()) ou [`<gradient>`](/fr/docs/Web/CSS/gradient) ou une partie de la page web fournie par la fonction [`element()`](/fr/docs/Web/CSS/element()) et qui indique le contenu à afficher.
-- [`counter()`](/fr/docs/Web/CSS/counter())
-  - : Un [compteur CSS](/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), généralement un nombre, généralement produit via les propriétés [`<counter-reset>`](/fr/docs/Web/CSS/counter-reset) et [`<counter-increment>`](/fr/docs/Web/CSS/counter-increment) et qui peut être affiché grâce à la fonction [`counter()`](/fr/docs/Web/CSS/counter()) or [`counters()`](/fr/docs/Web/CSS/counters()).
+  - : Une image (valeur de type [`<image>`](/fr/docs/Web/CSS/image)) avec une [`url()`](/fr/docs/Web/CSS/url) ou [`<gradient>`](/fr/docs/Web/CSS/gradient) ou une partie de la page web fournie par la fonction [`element()`](/fr/docs/Web/CSS/element) et qui indique le contenu à afficher.
+- [`counter()`](/fr/docs/Web/CSS/counter)
+  - : Un [compteur CSS](/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), généralement un nombre, produit via les propriétés [`<counter-reset>`](/fr/docs/Web/CSS/counter-reset) et [`<counter-increment>`](/fr/docs/Web/CSS/counter-increment) et qui peut être affiché grâce à la fonction [`counter()`](/fr/docs/Web/CSS/counter) ou [`counters()`](/fr/docs/Web/CSS/counters).
 
-    [`counter()`](/fr/docs/Web/CSS/counter()) possède deux formes&nbsp;: `counter(_name_)` ou `counter(_name_, _style_)`. Le texte généré est la valeur du compteur le plus profond possédant un nom donné dans ce pseudo-élément&nbsp;; il est formaté selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
+    [`counter()`](/fr/docs/Web/CSS/counter) possède deux formes&nbsp;: `counter(_name_)` ou `counter(_name_, _style_)`. Le texte généré est la valeur du compteur le plus profond possédant un nom donné dans ce pseudo-élément&nbsp;; il est formaté selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
 
-    [`counters()`](/fr/docs/Web/CSS/counters()) a également deux formes&nbsp;: `counters(name, string)` ou `counters(name, string, style)`. Le texte généré est la valeur de tous les compteurs d'un nom donné dans ce pseudo-élément, depuis le moins profond jusqu'au plus profond, séparés par la chaîne définie. Les compteurs sont formatés selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
+    [`counters()`](/fr/docs/Web/CSS/counters) a également deux formes&nbsp;: `counters(name, string)` ou `counters(name, string, style)`. Le texte généré est la valeur de tous les compteurs d'un nom donné dans ce pseudo-élément, depuis le moins profond jusqu'au plus profond, séparés par la chaîne définie. Les compteurs sont formatés selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
 
 - `attr(X)`
   - : Renvoie la valeur de l'attribut X de l'élément comme une chaîne. S'il n'existe pas d'attribut X, une chaîne vide est renvoyée. La sensibilité à la casse du nom de l'attribut dépend du langage utilisé.
@@ -133,7 +136,7 @@ q::after {
 }
 
 h1::before  {
-  content: "Chapter ";  
+  content: "Chapitre ";  
   /* L'espace après la dernière lettre est 
      voulu afin de détacher le mot du reste
      du contenu */
@@ -149,14 +152,15 @@ h1::before  {
 #### HTML
 
 ```html
-<a href="http://www.mozilla.org/fr/">Accueil</a>
+<a href="https://www.mozilla.org/fr/">Accueil</a>
 ```
 
 #### CSS
 
 ```css
 a::before{
-  content: url("mdn-favicon16.png") " MOZILLA: ";
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
+    " MOZILLA: ";
   font: x-small Arial, freeSans, sans-serif;
   color: gray;
 }
@@ -201,7 +205,7 @@ Dans cet exemple, on insère une image avant chaque lien et on ajoute son identi
 
 ```html
 <ul>
-  <li><a id="moz" href="https://www.mozilla.org/">Page d'accueil Mozilla</a></li>
+  <li><a id="moz" href="https://www.mozilla.org/fr/">Page d'accueil Mozilla</a></li>
   <li><a id="mdn" href="https://developer.mozilla.org/">Mozilla Developer Network</a></li>
 </ul>
 ```
@@ -219,7 +223,7 @@ a::after {
 }
 
 #moz::before {
-  content: url("mdn-favicon16.png");
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico");
 }
 
 #mdn::before {
@@ -237,7 +241,7 @@ li {
 
 ### Remplacer un élément
 
-Dans cet exemple, on remplace le contenu d'un élément avec une image. Il est possible de remplacer le contenu d'un élément avec une [`url()`](/fr/docs/Web/CSS/url()) ou une valeur de type [`<image>`](/fr/docs/Web/CSS/image). Le contenu ajouté avec `::before` ou avec `::after` ne sera plus généré car l'élément sera devenu un élément remplacé.
+Dans cet exemple, on remplace le contenu d'un élément avec une image. Il est possible de remplacer le contenu d'un élément avec une [`url()`](/fr/docs/Web/CSS/url) ou une valeur de type [`<image>`](/fr/docs/Web/CSS/image). Le contenu ajouté avec `::before` ou avec `::after` ne sera plus généré car l'élément sera devenu un élément remplacé.
 
 #### HTML
 
@@ -276,5 +280,6 @@ Dans cet exemple, on remplace le contenu d'un élément avec une image. Il est p
 - [`::after`](/fr/docs/Web/CSS/::after)
 - [`::before`](/fr/docs/Web/CSS/::before)
 - [`::marker`](/fr/docs/Web/CSS/::marker)
+- [`contain`](/fr/docs/Web/CSS/contain)
 - [`quotes`](/fr/docs/Web/CSS/quotes)
-- La fonction [`url()`](/fr/docs/Web/CSS/url())
+- La fonction [`url()`](/fr/docs/Web/CSS/url)

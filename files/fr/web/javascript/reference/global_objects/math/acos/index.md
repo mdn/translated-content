@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/acos
 ---
+
 {{JSRef}}
 
 La fonction **`Math.acos()`** renvoie l'arc cosinus d'une valeur exprimée en radians. Cela est défini par :

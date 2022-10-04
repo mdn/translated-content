@@ -245,17 +245,17 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <ol>
  <li>Здесь мы добавляем обработчик события <code>install</code> к сервис-воркеру (отныне <code>self</code>), и затем вызываем метод {{domxref("ExtendableEvent.waitUntil()") }} объекта события. Такая конструкция гарантирует, что сервис-воркер не будет установлен, пока код, переданный внутри <code>waitUntil()</code>, не завершится с успехом.</li>
- <li><span style="line-height: 1.5;">Внутри <code>waitUntil()</code> мы используем метод </span><a href="/en-US/docs/Web/API/CacheStorage/open">caches.open()</a>, чтобы создать новый кеш, который назовём <code>v1</code>, это будет первая версия кеша ресурсов. Этот метод возвращает промис для созданного кеша; когда он выполнится, у объекта созданного кеша мы вызовем метод <code>addAll()</code>, который в качестве параметра ожидает получить массив origin-относительных URL всех ресурсов, которые мы хотим хранить в кеше.</li>
+ <li>Внутри <code>waitUntil()</code> мы используем метод <a href="/en-US/docs/Web/API/CacheStorage/open">caches.open()</a>, чтобы создать новый кеш, который назовём <code>v1</code>, это будет первая версия кеша ресурсов. Этот метод возвращает промис для созданного кеша; когда он выполнится, у объекта созданного кеша мы вызовем метод <code>addAll()</code>, который в качестве параметра ожидает получить массив origin-относительных URL всех ресурсов, которые мы хотим хранить в кеше.</li>
  <li>Если промис будет отклонён, то установка будет завершена неудачно, и воркер ничего не сделает. Это хорошо, потому как вы можете исправить свой код и затем попробовать провести регистрацию в следующий раз.</li>
  <li>После успешной установки сервис-воркер активируется. Этот момент не очень важен при первоначальной установке/активации сервис-воркера, в то же время он имеет большое значение, когда происходит обновление воркера (смотрите раздел <a href="#обновление_вашего_сервис-воркера">Обновление вашего сервис-воркера</a>, находящийся ниже).</li>
 </ol>
 
 <div class="note">
-<p><span style="font-size: 14px; line-height: 21px;"><strong>На заметку</strong></span>: <a href="/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a> работает схожим образом, но в синхронном режиме, поэтому запрещён в сервис-воркерах.</p>
+<p><strong>На заметку</strong>: <a href="/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a> работает схожим образом, но в синхронном режиме, поэтому запрещён в сервис-воркерах.</p>
 </div>
 
 <div class="note">
-<p><span style="font-size: 14px; line-height: 21px;"><strong>На заметку</strong></span>: При необходимости хранить данные в сервис-воркерах вы можете использовать <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
+<p><strong>На заметку</strong>: При необходимости хранить данные в сервис-воркерах вы можете использовать <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
 </div>
 
 <h3 id="Настраиваемые_ответы_на_запросы">Настраиваемые ответы на запросы</h3>
@@ -431,12 +431,12 @@ event.request.body</pre>
 <p>Firefox также начал реализовывать полезные инструменты для разработки сервис-воркеров:</p>
 
 <ul>
- <li><span style="line-height: 1.5;">Вы можете пройти в раздел </span><a style="line-height: 1.5;">about:debugging</a><span style="line-height: 1.5;">, чтобы посмотреть зарегистрированные сервис-воркеры и обновить или удалить их.</span></li>
+ <li>Вы можете пройти в раздел <a style="line-height: 1.5;">about:debugging</a>, чтобы посмотреть зарегистрированные сервис-воркеры и обновить или удалить их.</li>
  <li>Во время тестирования вы можете снять ограничение HTTPS, поставив флажок "Enable Service Workers over HTTP (when toolbox is open)" в <a href="/ru/docs/Tools/Settings">настройках Firefox Developer Tools</a>.</li>
  <li>Кнопка "Забыть", включаемая в настройках «Персонализация» в Firefox, позволяет удалить все сервис-воркеры и очистить их кеши.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>На заметку</strong>: вы можете держать своё приложение на <code>http://localhost</code> (например, используя <code>me@localhost:/my/app$ <strong>python -m SimpleHTTPServer</strong></code>) для локальной разработки. См. <a href="https://www.w3.org/TR/service-workers/#security-considerations">Security considerations</a></p>
 </div>
 

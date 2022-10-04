@@ -2,6 +2,7 @@
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
+
 {{JSRef}}
 
 **`getTime()`** メソッドは、 [UNIX 元期](https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93)からの経過ミリ秒数\*を返します。

@@ -4,6 +4,7 @@ slug: Web/API/HTMLDataListElement
 l10n:
   sourceCommit: d766739f2a7c02812a0a15a0383588c2ada4e6bd
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLDataListElement`** インターフェイスは、（継承元である {{domxref("HTMLElement")}} オブジェクトインターフェイスからの継承によって利用できるもの以外に） {{ HTMLElement("datalist") }} 要素およびその内容を操作するための特別なプロパティを提供します。

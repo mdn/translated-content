@@ -410,7 +410,7 @@ console.table(values)
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array")}}
+{{Compat}}
 
 ## 參見
 

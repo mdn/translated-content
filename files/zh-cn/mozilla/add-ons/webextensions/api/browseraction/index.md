@@ -2,6 +2,7 @@
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
+
 {{AddonSidebar}}
 
 添加按钮到浏览器的工具栏。
@@ -58,7 +59,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.browserAction")}}
+{{Compat}}
 
 > **备注：** "Chrome 兼容性"是从 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 包含，使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat)宏。
 >

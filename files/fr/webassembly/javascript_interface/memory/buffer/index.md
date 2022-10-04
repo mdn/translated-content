@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer
 ---
+
 {{JSRef}}
 
 La propriété **`buffer`**, rattachée au prototype de l'objet [`Memory`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/WebAssembly/Memory), renvoie le tampon (_buffer_) contenu dans l'espace mémoire.

@@ -24,8 +24,6 @@ Você não precisa criar um objeto {{jsxref("Number")}} para acessar esta propri
 
 {{Compat("javascript.builtins.Number.NaN")}}
 
-##
-
 ## Veja também
 
 - O objeto global {{jsxref("NaN")}}.

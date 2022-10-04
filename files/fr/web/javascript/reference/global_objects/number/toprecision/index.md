@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toPrecision
 ---
+
 {{JSRef}}
 
 La méthode **`toPrecision()`** renvoie une chaîne de caractères représentant un nombre avec la précision donnée.

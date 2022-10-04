@@ -2,6 +2,7 @@
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** 属性和 {{jsxref("Array.prototype.values()", "Array.prototype.values()")}} 属性的初始值是同一个函数对象。

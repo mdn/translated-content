@@ -2,6 +2,7 @@
 title: Performance.memory
 slug: Web/API/Performance/memory
 ---
+
 {{APIRef}}
 
 ## 语法
@@ -25,7 +26,7 @@ timingInfo = performance.memory
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.memory")}}
+{{Compat}}
 
 ## 查看更多
 

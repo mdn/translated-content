@@ -2,6 +2,7 @@
 title: element.onpaste
 slug: Web/API/HTMLElement/paste_event
 ---
+
 {{ ApiRef() }}
 
 ### 概述

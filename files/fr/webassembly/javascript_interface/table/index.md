@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
+
 {{JSRef}}
 
 Le constructeur **`WebAssembly.Table()`** permet de créer un nouvel objet `Table`.

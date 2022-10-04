@@ -357,7 +357,7 @@ for(var i=0 ; i<elements.length ; i++){
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.operators.this")}}
+{{Compat}}
 
 ## 參見
 

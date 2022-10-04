@@ -61,7 +61,7 @@ setObj.forEach(function(point){
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set.delete")}}
+{{Compat}}
 
 ## 另見
 

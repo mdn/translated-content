@@ -2,12 +2,13 @@
 title: 原因：CORS 请求不是 HTTP
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
+
 {{HTTPSidebar}}
 
 ## 原因
 
 ```plain
-原因: CORS 请求不是 HTTP
+原因：CORS 请求不是 HTTP
 ```
 
 ## 哪里出错了？
@@ -20,7 +21,7 @@ slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 
 当用户在 Firefox 67 或更早版本中使用 `file:///` URI 打开页面时，页面来源被定义为打开页面的目录。同一目录及其子目录中的资源均被视为具有相同的来源，符合 CORS 同源规则。
 
-为响应 [CVE-2019-11730](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730)，Firefox 68 及更高版本中定义，使用 `file:///` URL 打开页面的来源唯一。 因此，同一目录或其子目录中的其他资源不再满足 CORS 同源规则。这个新的表现通过 `privacy.file_unique_origin` 这一首选项控制，默认启用。
+为响应 [CVE-2019-11730](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730)，Firefox 68 及更高版本中定义，使用 `file:///` URL 打开页面的来源唯一。因此，同一目录或其子目录中的其他资源不再满足 CORS 同源规则。这个新的表现通过 `privacy.file_unique_origin` 这一首选项控制，默认启用。
 
 ## 参考
 

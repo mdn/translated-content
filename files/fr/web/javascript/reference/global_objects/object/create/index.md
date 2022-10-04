@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/create
 ---
+
 {{JSRef}}
 
 La méthode **`Object.create()`** crée un nouvel objet avec un prototype donné et des propriétés données.

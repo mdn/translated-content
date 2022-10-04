@@ -2,6 +2,7 @@
 title: Web Speech APIを使う
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 ---
+
 Web Speech API は、音声認識と音声合成（text to speech または tts としても知られています）という 2 つの異なる分野の機能を提供しており、アクセシビリティと制御メカニズムに興味深い新しい可能性をもたらします。この記事では、両方の分野の簡単な紹介とデモを提供します。
 
 ## 音声認識
@@ -10,15 +11,15 @@ Web Speech API は、音声認識と音声合成（text to speech または tts 
 
 Web Speech API には、このための主要なコントローラインターフェイスである {{domxref("SpeechRecognition")}} と、文法や結果などを表現するためのいくつかの密接に関連したインターフェースがあります。一般的には、デバイス上で利用可能なデフォルトの音声認識システムが音声認識に使用されます — 最近のほとんどの OS には音声コマンドを発行するための音声認識システムが搭載されています。macOS の Dictation、iOS の Siri、Windows 10 の Cortana、Android の Speech などを考えてみてください。
 
-> **Note:** **注釈**: Chrome などの一部のブラウザでは、Web ページで音声認識を使用するためにサーバーベースの認識エンジンが必要です。音声が認識処理のためにウェブサービスに送信されるため、オフラインでは機能しません。
+> **メモ:** **注釈**: Chrome などの一部のブラウザでは、Web ページで音声認識を使用するためにサーバーベースの認識エンジンが必要です。音声が認識処理のためにウェブサービスに送信されるため、オフラインでは機能しません。
 
 ### デモ
 
-Web 音声認識の簡単な使い方を示すために、[Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer)というデモを書いてみました。画面をタップ/クリックし、HTML の色のキーワードを言うと、アプリの背景色がその色に変わります。
+Web 音声認識の簡単な使い方を示すために、[Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer)というデモを書いてみました。画面をタップ/クリックし、HTML の色のキーワードを言うと、アプリの背景色がその色に変わります。
 
-![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](https://mdn.mozillademos.org/files/11975/speech-color-changer.png)
+![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](speech-color-changer.png)
 
-デモを実行するには、それが一部となっている Github リポジトリをクローン（または[直接ダウンロード](https://github.com/mdn/web-speech-api/archive/master.zip)）し、サポートされているデスクトップブラウザで HTML index ファイルを開くか、Chrome のようなサポートされているモバイルブラウザで[ライブデモの URL](https://mdn.github.io/web-speech-api/speech-color-changer/)に移動することができます。
+デモを実行するには、それが一部となっている Github リポジトリをクローン（または[直接ダウンロード](https://github.com/mdn/web-speech-api/archive/master.zip)）し、サポートされているデスクトップブラウザで HTML index ファイルを開くか、Chrome のようなサポートされているモバイルブラウザで[ライブデモの URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/)に移動することができます。
 
 ### ブラウザ対応
 
@@ -169,11 +170,11 @@ The Web Speech API has a main controller interface for this — {{domxref("Speec
 
 ### Demo
 
-To show simple usage of Web speech synthesis, we've provided a demo called [Speak easy synthesis](https://mdn.github.io/web-speech-api/speak-easy-synthesis/). This includes a set of form controls for entering text to be synthesised, and setting the pitch, rate, and voice to use when the text is uttered. After you have entered your text, you can press <kbd>Enter</kbd>/<kbd>Return</kbd> to hear it spoken.
+To show simple usage of Web speech synthesis, we've provided a demo called [Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis). This includes a set of form controls for entering text to be synthesised, and setting the pitch, rate, and voice to use when the text is uttered. After you have entered your text, you can press <kbd>Enter</kbd>/<kbd>Return</kbd> to hear it spoken.
 
-![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](https://mdn.mozillademos.org/files/11977/speak-easy-synthesis.png)
+![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
-To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
+To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
 
 ### Browser support
 

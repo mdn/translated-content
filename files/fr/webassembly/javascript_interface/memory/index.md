@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
+
 {{JSRef}}
 
 Le constructeur **`WebAssembly.Memory()`** crée un nouvel objet `Memory` dont la propriété {{jsxref("WebAssembly/Memory/buffer","buffer")}} est un {{jsxref("ArrayBuffer")}} redimensionnable qui contient les octets de mémoire bruts accessibles par une instance WebAssembly.

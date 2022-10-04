@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.vertexAttribPointer()`** method of the [WebGL API](/zh-CN/docs/Web/API/WebGL_API) binds the buffer currently bound to `gl.ARRAY_BUFFER` to a generic vertex attribute of the current vertex buffer object and specifies its layout.
@@ -221,7 +222,7 @@ gl.enableVertexAttribArray(locTexUV);
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.vertexAttribPointer")}}
+{{Compat}}
 
 ## See also
 

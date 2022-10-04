@@ -3,6 +3,7 @@ title: flex-wrap
 slug: Web/CSS/flex-wrap
 translation_of: Web/CSS/flex-wrap
 ---
+
 {{CSSRef}}
 
 La propriété **`flex-wrap`** indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. Si le retour à la ligne est autorisé, la propriété permet également de contrôler la direction dans laquelle les lignes sont empilées.
@@ -36,9 +37,13 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 - `wrap-reverse`
   - : Se comporte comme `wrap` mais **cross-start** et **cross-end** sont permutées.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -117,15 +122,11 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 
 ## Spécifications
 
-| Spécification                                    | État               | Commentaires |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap')}} | {{Spec2('CSS3 Flexbox')}} |        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex-wrap")}}
+{{Compat}}
 
 ## Voir aussi
 

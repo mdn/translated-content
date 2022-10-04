@@ -110,7 +110,7 @@ var removed = myFish.splice(2);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.splice")}}
+{{Compat}}
 
 ## 參見
 

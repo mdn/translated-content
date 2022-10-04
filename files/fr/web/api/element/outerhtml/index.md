@@ -8,6 +8,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Element/outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 L'attribut `outerHTML` de l'interface DOM {{domxref("element")}} récupère le fragment HTML sérialisé décrivant l'élément ainsi que ses descendants. Il peut aussi être utilisé pour remplacer l'élément avec les noeuds générés de la chaîne fournie.

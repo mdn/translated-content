@@ -2,6 +2,7 @@
 title: inputmode
 slug: Web/HTML/Global_attributes/inputmode
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`inputmode`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、ユーザーが要素やその内容を編集する際に入力されるデータの型のヒントとなる列挙型属性です。下記の値が存在します。

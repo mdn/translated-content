@@ -74,9 +74,9 @@ translation_of: Web/Guide/HTML/Content_categories
 - {{HTMLElement("area")}}, {{HTMLElement("map")}}의 자손인 경우.
 - {{HTMLElement("del")}}, 구문 콘텐츠만 포함하는 경우.
 - {{HTMLElement("ins")}}, 구문 콘텐츠만 포함하는 경우.
-- {{HTMLElement("link")}}, [`itemprop`](https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes#attr-itemprop "HTML/Global attributes#itemprop") 속성을 가지고 있는 경우.
+- {{HTMLElement("link")}}, [`itemprop`](https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes#attr-itemprop) 속성을 가지고 있는 경우.
 - {{HTMLElement("map")}}, 구문 콘텐츠만 포함하는 경우.
-- {{HTMLElement("meta")}}, [`itemprop`](https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes#attr-itemprop "HTML/Global attributes#itemprop") 속성을 가지고 있는 경우.
+- {{HTMLElement("meta")}}, [`itemprop`](https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes#attr-itemprop) 속성을 가지고 있는 경우.
 
 ### 내장 콘텐츠
 

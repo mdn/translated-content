@@ -2,6 +2,7 @@
 title: RTCRtpTransceiver
 slug: Web/API/RTCRtpTransceiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC interface **`RTCRtpTransceiver`** describes a permanent pairing of an {{domxref("RTCRtpSender")}} and an {{domxref("RTCRtpReceiver")}}, along with some shared state.
@@ -38,7 +39,7 @@ A transceiver is uniquely identified using its {{domxref("RTCRtpTransceiver.mid"
 
 ## Browser compatibility
 
-{{Compat("api.RTCRtpTransceiver")}}
+{{Compat}}
 
 ## See also
 

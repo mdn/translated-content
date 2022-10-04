@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/format
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.NumberFormat.prototype.format()`** formate un nombre en fonction des options de locales et de formats définis dans l'objet {{jsxref("NumberFormat", "Intl.NumberFormat")}} correspondant.

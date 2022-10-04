@@ -3,6 +3,7 @@ title: 为 Firefox 3 升级扩展
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
 original_slug: Updating_extensions_for_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 英文原文取自于 [http://developer.mozilla.org/en/docs/Extensions](/zh-CN/docs/Extensions) 这篇文章将对于那些想把他们的扩展在 Firefox 3 中正常运行的开发者提供一些有用的信息。

@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/format-number
 original_slug: Web/XPath/Fonctions/format-number
 ---
+
 {{ XsltRef() }}
 
 La fonction `format-number` évalue un nombre et retourne une chaîne représentant le nombre dans un format donné.

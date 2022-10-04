@@ -25,12 +25,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 
 <dl>
  <dt><em><code>beginIndex</code></em></dt>
- <dd>Индекс, с которого начинать извлечение (нумерация начинается с нуля). Если аргумент отрицателен, то трактуется как <code><em>str</em>.length + <em>beginIndex</em></code> (например, если <em><code>beginIndex</code></em> равен <code>-3</code>, то он трактуется как <code><em>str</em>.length - 3</code>). Если <em><code>beginIndex</code></em>  не является числом при проверке {{jsxref('Number', 'Number(<var>beginIndex</var>)')}}, он трактуется как <code>0</code>.</dd>
- <dd>Если <code><em>beginIndex</em></code> больше или равен <code><em>str</em>.length</code>, возвращается пустая строка.</dd>
+ <dd><p>Индекс, с которого начинать извлечение (нумерация начинается с нуля). Если аргумент отрицателен, то трактуется как <code><em>str</em>.length + <em>beginIndex</em></code> (например, если <em><code>beginIndex</code></em> равен <code>-3</code>, то он трактуется как <code><em>str</em>.length - 3</code>). Если <em><code>beginIndex</code></em>  не является числом при проверке {{jsxref('Number', 'Number(<var>beginIndex</var>)')}}, он трактуется как <code>0</code>.</p>
+ <p>Если <code><em>beginIndex</em></code> больше или равен <code><em>str</em>.length</code>, возвращается пустая строка.</p></dd>
  <dt><em><code>endIndex</code></em></dt>
- <dd>Индекс, <em>перед</em> которым заканчивать извлечение (нумерация начинается с нуля). Символ по этому индексу не будет включён.</dd>
- <dd>Если <em><code>endIndex</code> </em>опущен или является <code>undefined</code> или больше чем <code><em>str</em>.length</code>, <code>slice()</code> извлечёт всё до конца строки. Если аргумент отрицателен, то трактуется как <code><em>str</em>.length + <em>endIndex</em></code><em> </em>(например, если <em><code>endIndex</code></em> равен <code>-3</code>, то он трактуется как <code><em>str</em>.length - 3</code>). Если аргумент не <code>undefined</code> и не является числом при проверке {{jsxref('Number', 'Number(<var>endIndex</var>)')}}, возвращается пустая строка.</dd>
- <dd>Если <em><code>endIndex</code></em> указан и меньше <em><code>startIndex</code></em>, то возвращается пустая строка (например, <code>slice(-1, -3)</code> или <code>slice(3, 1)</code> вернут <code>""</code>).</dd>
+ <dd><p>Индекс, <em>перед</em> которым заканчивать извлечение (нумерация начинается с нуля). Символ по этому индексу не будет включён.</p>
+ <p>Если <em><code>endIndex</code> </em>опущен или является <code>undefined</code> или больше чем <code><em>str</em>.length</code>, <code>slice()</code> извлечёт всё до конца строки. Если аргумент отрицателен, то трактуется как <code><em>str</em>.length + <em>endIndex</em></code><em> </em>(например, если <em><code>endIndex</code></em> равен <code>-3</code>, то он трактуется как <code><em>str</em>.length - 3</code>). Если аргумент не <code>undefined</code> и не является числом при проверке {{jsxref('Number', 'Number(<var>endIndex</var>)')}}, возвращается пустая строка.</p>
+ <p>Если <em><code>endIndex</code></em> указан и меньше <em><code>startIndex</code></em>, то возвращается пустая строка (например, <code>slice(-1, -3)</code> или <code>slice(3, 1)</code> вернут <code>""</code>).</p></dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>

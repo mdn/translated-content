@@ -2,6 +2,7 @@
 title: UIEvent
 slug: Web/API/UIEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`UIEvent`** インターフェイスは、シンプルなユーザーインターフェイスのイベントを表します。

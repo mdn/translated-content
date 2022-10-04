@@ -11,6 +11,7 @@ tags:
   - connectStart
 translation_of: Web/API/PerformanceResourceTiming/connectStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`connectStart`** retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) de l'instant avant que l'agent utilisateur ne commence à établir la connexion au serveur pour récupérer la ressource.

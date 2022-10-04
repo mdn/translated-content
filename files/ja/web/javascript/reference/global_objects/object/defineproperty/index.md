@@ -2,6 +2,7 @@
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
+
 {{JSRef}}
 
 静的メソッドの **`Object.defineProperty()`** は、あるオブジェクトに新しいプロパティを直接定義したり、オブジェクトの既存のプロパティを変更したりして、そのオブジェクトを返します。

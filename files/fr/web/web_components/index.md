@@ -3,6 +3,7 @@ title: Web Components (composants web)
 slug: Web/Web_Components
 translation_of: Web/Web_Components
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Les composants web (<i lang="en">Web Components</i>) sont un ensemble de plusieurs technologies qui permettent de créer des éléments personnalisés réutilisables, dont les fonctionnalités sont encapsulées en dehors du reste du code et qui peuvent être utilisées au sein d'applications web.

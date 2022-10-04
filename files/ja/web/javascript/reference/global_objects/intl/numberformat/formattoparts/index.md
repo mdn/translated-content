@@ -2,6 +2,7 @@
 title: Intl.NumberFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
 ---
+
 {{JSRef}}
 
 **`Intl.Numberformat.prototype.formatToParts()`** メソッドは `NumberFormat` フォーマッターによって生成された文字列のロケールに応じた書式設定を可能にします。

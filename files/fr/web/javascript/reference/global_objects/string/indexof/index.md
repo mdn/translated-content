@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/indexOf
 ---
+
 {{JSRef}}
 
 La méthode **`indexOf()`** renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante (à partir de `indexDébut`). Elle renvoie -1 si la valeur cherchée n'est pas trouvée.

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/label
 original_slug: Web/JavaScript/Reference/Instructions/label
 ---
+
 {{jsSidebar("Statements")}}
 
 Une **instruction étiquetée (_labeled_ en anglais)** peut être utilisée avec les instructions {{jsxref("Instructions/break", "break")}} ou {{jsxref("Instructions/continue", "continue")}}. Un label permet d'identifier une instruction avec un identifiant pour y faire référence plus tard.

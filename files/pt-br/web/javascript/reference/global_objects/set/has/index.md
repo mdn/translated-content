@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 {{JSRef}}
 
-O método **`has()`\*\*** \*\*retorna um valor booleano indicando se um elemento com o valor especificado existe em um objecto `Set` ou não.
+O método **`has()`** retorna um valor booleano indicando se um elemento com o valor especificado existe em um objecto `Set` ou não.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 
@@ -24,7 +24,7 @@ mySet.has(valor);
 
 Retorna `true` se um elemento com o valor especificado existe no objeto `Set`; `false` caso contrário.
 
-> **Nota:**Tecnicamente falando, `has()` usa o algorítimo [`sameValueZero`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) para determinar quando o elemento dado é encontrado.
+> **Nota:**Tecnicamente falando, `has()` usa o algorítimo [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) para determinar quando o elemento dado é encontrado.
 
 ## Exemplos
 

@@ -2,6 +2,7 @@
 title: Cipher (サイファー)
 slug: Glossary/Cipher
 ---
+
 {{glossary("cryptography","暗号学")}}では、**サイファー**は{{glossary("plaintext","平文")}}を{{glossary("encryption", "暗号化")}}して読めなくし、それを{{glossary("decryption", "復号")}}するアルゴリズムです。
 
 サイファーは、情報化時代のかなり前から一般的でしたが（例えば、{{Interwiki("wikipedia", "換字式暗号")}}、{{Interwiki("wikipedia", "転置式暗号")}}）、それらは{{Interwiki("wikipedia", "ワンタイムパッド")}}を除いて、どれも暗号的に安全ではありませんでした。

@@ -54,4 +54,4 @@ xhr.send(null);
 
 ## 瀏覽器相容性
 
-{{Compat("api.XMLHttpRequest.readyState")}}
+{{Compat}}

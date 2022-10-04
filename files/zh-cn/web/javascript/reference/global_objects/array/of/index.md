@@ -2,6 +2,7 @@
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
+
 {{JSRef}}
 
 **`Array.of()`** 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。
@@ -33,7 +34,7 @@ Array.of(element0[, element1[, ...[, elementN]]])
 
 ## 描述
 
-此函数是 ECMAScript 2015 标准的一部分。详见 [`Array.of 和` `Array.from` proposal](https://gist.github.com/rwaldron/1074126) 和 [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576)。
+此函数是 ECMAScript 2015 标准的一部分。详见 [`Array.of` 和 `Array.from` proposal](https://gist.github.com/rwaldron/1074126) 和 [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576)。
 
 ## 示例
 

@@ -2,6 +2,7 @@
 title: <legend>
 slug: Web/HTML/Element/legend
 ---
+
 {{HTMLRef}}
 
 **HTML の `<legend>` 要素**は、その親要素である {{HTMLElement("fieldset")}} の内容のキャプションを表します。

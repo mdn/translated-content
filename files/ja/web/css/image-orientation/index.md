@@ -2,6 +2,7 @@
 title: image-orientation
 slug: Web/CSS/image-orientation
 ---
+
 **`image-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像の向きのレイアウトに依存しない修正を指定します。
 
 ```css

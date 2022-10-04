@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 L'interface Notification de l'[API Notifications](/fr/docs/Web/API/Notifications_API) est utilisée pour configurer et afficher les notifications de bureau à l'utilisateur. L'apparence et les fonctionnalités spécifiques de ces notifications varient selon les plates-formes, mais elles permettent généralement de fournir des informations de manière asynchrone à l'utilisateur.

@@ -2,6 +2,7 @@
 title: 'Element: fullscreenerror イベント'
 slug: Web/API/Element/fullscreenerror_event
 ---
+
 {{APIRef}}
 
 `fullscreenerror` イベントは、ブラウザーが全画面モードに切り替えることができなかったときに発生します。

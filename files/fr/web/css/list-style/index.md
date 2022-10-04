@@ -4,6 +4,7 @@ slug: Web/CSS/list-style
 translation_of: Web/CSS/list-style
 browser-compat: css.properties.list-style
 ---
+
 {{CSSRef}}
 
 La propriété **`list-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir [`list-style-type`](/fr/docs/Web/CSS/list-style-type), [`list-style-image`](/fr/docs/Web/CSS/list-style-image) et [`list-style-position`](/fr/docs/Web/CSS/list-style-position).

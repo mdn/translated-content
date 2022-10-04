@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/then
 ---
+
 {{JSRef}}
 
 La méthode **`then()`** renvoie un objet {{jsxref("Promise")}}. Elle peut prendre jusqu'à deux arguments qui sont deux fonctions _callback_ à utiliser en cas de complétion ou d'échec de la `Promise`.

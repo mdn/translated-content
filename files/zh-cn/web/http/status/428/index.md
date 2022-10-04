@@ -2,6 +2,7 @@
 title: 428 Precondition Required
 slug: Web/HTTP/Status/428
 ---
+
 {{HTTPSidebar}}
 
 在 HTTP 协议中，响应状态码 **`428 Precondition Required`** 表示服务器端要求发送[条件](/zh-CN/docs/Web/HTTP/Conditional_requests)请求。

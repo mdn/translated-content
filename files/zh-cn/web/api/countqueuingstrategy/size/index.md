@@ -2,6 +2,7 @@
 title: CountQueuingStrategy.size()
 slug: Web/API/CountQueuingStrategy/size
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("CountQueuingStrategy")}} 接口的 **`size()`** 方法始终返回 `1`，因此队列的总大小是队列中所有分块的数量。

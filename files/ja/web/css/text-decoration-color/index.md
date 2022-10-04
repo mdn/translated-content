@@ -2,6 +2,7 @@
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
 ---
+
 {{ CSSRef }}
 
 **`text-decoration-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{ cssxref("text-decoration-line") }} でテキストに追加された装飾の色を設定します。

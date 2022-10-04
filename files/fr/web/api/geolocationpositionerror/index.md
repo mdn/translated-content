@@ -3,6 +3,7 @@ title: GeolocationPositionError
 slug: Web/API/GeolocationPositionError
 translation_of: Web/API/GeolocationPositionError
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 L'interface **`GeolocationPositionError`** représente la raison de l'erreur apparue lorsque l'on utilise la géolocalisation de l'appareil.

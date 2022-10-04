@@ -1,10 +1,6 @@
 ---
 title: 방화벽
 slug: Glossary/firewall
-tags:
-  - Glossary
-  - Security
-translation_of: Glossary/firewall
 ---
 **방화벽**은 네트워크 트래픽을 필터링하는 시스템이다. 이것을 통해 트래픽을 특정 규칙에 따라 통과시키거나 차단할 수 있다. 예를 들어 특정한 포트를 겨냥한 수신 연결이나 특정 IP 주소에 대한 송신 연결을 차단할 수 있다.
 

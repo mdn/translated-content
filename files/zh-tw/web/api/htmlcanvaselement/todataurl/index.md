@@ -117,7 +117,7 @@ function removeColors() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLCanvasElement.toDataURL")}}
+{{Compat}}
 
 ## 參見
 

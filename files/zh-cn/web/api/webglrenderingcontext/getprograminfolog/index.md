@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.getProgramInfoLog()
 slug: Web/API/WebGLRenderingContext/getProgramInfoLog
 ---
+
 {{APIRef("WebGL")}}
 
 **WebGLRenderingContext.getProgramInfoLog** 返回参数中指定的{{domxref("WebGLProgram")}} object 的信息。这些信息包括在 linking 过程中的错误以及 `WebGLProgram` objects 合法性检查的错误。
@@ -19,7 +20,7 @@ gl.getProgramInfoLog(program);
 
 ### Return value
 
-返回 {{domxref("DOMString")}} 包含 diagnostic , warning ...等等关于上一次 linking 和 valiadation 操作的信息. 对于刚刚创建的{{domxref("WebGLProgram")}} object , 返回一个空字符串。
+返回 {{domxref("DOMString")}} 包含 diagnostic , warning ...等等关于上一次 linking 和 valiadation 操作的信息。对于刚刚创建的{{domxref("WebGLProgram")}} object , 返回一个空字符串。
 
 ## Examples
 
@@ -50,7 +51,7 @@ gl.getProgramInfoLog(program);
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.getProgramInfoLog")}}
+{{Compat}}
 
 ## See also
 

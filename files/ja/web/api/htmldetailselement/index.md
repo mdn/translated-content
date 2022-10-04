@@ -2,7 +2,8 @@
 title: HTMLDetailsElement
 slug: Web/API/HTMLDetailsElement
 ---
-> **Note:** translation in progress
+
+> **メモ:** translation in progress
 
 {{APIRef("HTML DOM")}}
 

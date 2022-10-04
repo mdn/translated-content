@@ -2,6 +2,7 @@
 title: fetch()
 slug: Web/API/fetch
 ---
+
 {{APIRef("Fetch")}}
 
 全局的 **`fetch()`** 方法用于发起获取资源的请求。它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 {{domxref("Response")}} 对象。

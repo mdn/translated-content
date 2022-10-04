@@ -2,6 +2,7 @@
 title: <easing-function>
 slug: Web/CSS/easing-function
 ---
+
 {{CSSRef}}
 
 The **`<easing-function>`** [CSS](/zh-CN/docs/Web/CSS) [data type](/zh-CN/docs/Web/CSS/CSS_Types) denotes a mathematical function that describes how fast one-dimensional values change during animations. This lets you vary the animation's speed over the course of its duration.
@@ -206,7 +207,7 @@ steps(0, jump-none)
 
 ## Browser compatibility
 
-{{Compat("css.types.easing-function", 2)}}
+{{Compat}}
 
 ## See also
 

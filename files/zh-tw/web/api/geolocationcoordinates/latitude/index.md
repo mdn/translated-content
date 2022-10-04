@@ -19,7 +19,7 @@ lat = coordinates.latitude
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationCoordinates.latitude")}}
+{{Compat}}
 
 ## 請參考
 

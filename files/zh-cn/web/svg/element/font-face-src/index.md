@@ -2,6 +2,7 @@
 title: font-face-src
 slug: Web/SVG/Element/font-face-src
 ---
+
 {{SVGRef}}
 
 `font-face-src`元素相当于 CSS 规范中的 @font-face 属性。它可以作为{{ SVGElement("font-face-name") }}元素的容器使用，指向本地安装的字体副本，{{ SVGElement("font-face-uri") }}元素则是利用远程定义字体。

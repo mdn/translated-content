@@ -38,7 +38,7 @@ Server: Apache/2.4.1 (Unix)
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.Server")}}
+{{Compat}}
 
 ## 參見
 

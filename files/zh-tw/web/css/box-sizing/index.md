@@ -62,7 +62,7 @@ box-sizing: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.box-sizing")}}
+{{Compat}}
 
 ## See also
 

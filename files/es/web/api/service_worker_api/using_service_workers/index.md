@@ -2,12 +2,6 @@
 title: Usar Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 page-type: guide
-tags:
-  - Guía
-  - Service
-  - ServiceWorker
-  - Workers
-  - basics
 translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 
@@ -21,9 +15,9 @@ Un problema primordial del que los usuarios de la web han adolecido durante año
 
 El intento anterior, *AppCache*, parecía ser una buena idea porque te permitía especificar activos para almacenar en caché con mucha facilidad. Sin embargo, hizo muchas suposiciones sobre lo que estabas tratando de hacer y luego se rompió horriblemente cuando tu aplicación no siguió exactamente esas suposiciones. Lee el documento de Jake Archibald (desafortunadamente mal titulado pero bien escrito) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag/) para obtener más detalles.
 
-> **Nota**: A partir de Firefox 84, se eliminó *AppCache* ({{bug("1619673")}}). También se ha [eliminado](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) de Chromium 95 y está obsoleto en Safari.
+> **Nota:** A partir de Firefox 84, se eliminó *AppCache* ({{bug("1619673")}}). También se ha [eliminado](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) de Chromium 95 y está obsoleto en Safari.
 
-El *service worker* finalmente deberían solucionar estos problemas. La sintaxis del *service worker* es más compleja que la de *AppCache*, pero la compensación es que puedes usar JavaScript para controlar su comportamiento implícito en *AppCache* con un buen grado de fina granularidad, lo que te permite manejar este problema y muchos más. Al usar un *service worker*, puedes configurar fácilmente una aplicación para usar activos almacenados en caché primero, proporcionando así una experiencia predeterminada incluso cuando estás desconectado, antes de obtener más datos de la red (comúnmente conocido como [Primero sin conexión](https://offlinefirst.org/)). Esto ya está disponible con las aplicaciones nativas, que es una de las principales razones por las que las aplicaciones nativas a menudo se eligen en lugar de las aplicaciones web.
+El *service worker* finalmente debería solucionar estos problemas. La sintaxis del *service worker* es más compleja que la de *AppCache*, pero la compensación es que puedes usar JavaScript para controlar su comportamiento implícito en *AppCache* con un buen grado de fina granularidad, lo que te permite manejar este problema y muchos más. Al usar un *service worker*, puedes configurar fácilmente una aplicación para usar activos almacenados en caché primero, proporcionando así una experiencia predeterminada incluso cuando estás desconectado, antes de obtener más datos de la red (comúnmente conocido como [Primero sin conexión](https://offlinefirst.org/)). Esto ya está disponible con las aplicaciones nativas, que es una de las principales razones por las que las aplicaciones nativas a menudo se eligen en lugar de las aplicaciones web.
 
 ## Configuración para jugar con el *service worker*
 
@@ -36,7 +30,7 @@ Con el *service worker*, generalmente se observan los siguientes pasos para la c
 1. La URL del *service worker* se obtiene y registra a través de {{domxref("serviceWorkerContainer.register()")}}.
 2. Si tiene éxito, el *service worker* se ejecuta en {{domxref("ServiceWorkerGlobalScope") }}; esto es básicamente un tipo especial de contexto de trabajo, que se ejecuta fuera del hilo principal de ejecución del script, sin acceso al DOM.
 3. El *service worker* ahora está listo para procesar eventos.
-4. Se intenta la instalación del trabajador cuando se accede posteriormente a las páginas controladas por el *service worker*. Un evento de instalación siempre es el primero que se envía a un *service worker* (esto se puede usar para iniciar el proceso de completar un IndexedDB y almacenar en caché los activos del sitio). Este es realmente el mismo tipo de procedimiento que instalar una aplicación nativa o Firefox OS: hace que todo esté disponible para usar sin conexión.
+4. Se intenta la instalación del _worker_ cuando se accede posteriormente a las páginas controladas por el *service worker*. Un evento de instalación siempre es el primero que se envía a un *service worker* (esto se puede usar para iniciar el proceso de completar una IndexedDB «base de datos indexada» y almacenar en caché los activos del sitio). Este es realmente el mismo tipo de procedimiento que instalar una aplicación nativa o Firefox OS: hace que todo esté disponible para usar sin conexión.
 5. Cuando se completa el controlador `oninstall`, se considera que el *service worker* está instalado.
 6. Lo siguiente es la activación. Cuando se instala el *service worker*, recibe un evento de activación. El uso principal de `onactivate` es para la limpieza de los recursos utilizados en versiones anteriores de un script del *service worker*.
 7. El *service worker* ahora controlará las páginas, pero solo aquellas que se abran después de que `register()` tenga éxito. En otras palabras, los documentos se deberán volver a cargar para controlarlos realmente, porque un documento comienza con o sin un *service worker* y lo mantiene durante toda su vida.
@@ -55,7 +49,7 @@ Para demostrar los conceptos básicos de registro e instalación de un *service 
 
 Puedes ver el [código fuente en GitHub](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) y el [Sencillo *service worker* ejecutándose en vivo](https://bncb2v.csb.app/).
 
-### Registra a tu trabajador
+### Registra a tu _worker_
 
 El primer bloque de código en el archivo JavaScript de nuestra aplicación, `app.js`, es el siguiente. Este es nuestro punto de entrada en el uso del *service worker*.
 
@@ -86,7 +80,7 @@ registerServiceWorker();
 
 1. El bloque if realiza una prueba de detección de características para asegurarse de que el *service worker* sea compatible antes de intentar registrar uno.
 2. A continuación, usamos la función {{domxref("ServiceWorkerContainer.register()") }} para registrar el *service worker* para este sitio, que solo es un archivo JavaScript que reside dentro de nuestra aplicación (ten en cuenta que esta es la URL del archivo relativa al origen , no el archivo JS que hace referencia a él).
-3. El parámetro `scope` es opcional y se puede usar para especificar el subconjunto de tu contenido que deseas controle el *service worker*. En este caso, hemos especificado '`'/'`, lo cual significa todo el contenido bajo el origen de la aplicación. Si lo omites, tendrá este valor predeterminado de todos modos, pero lo especificamos aquí con fines ilustrativos.
+3. El parámetro `scope` es opcional y se puede usar para especificar el subconjunto de tu contenido que deseas controle el *service worker*. En este caso, hemos especificado `'/'`, lo cual significa todo el contenido bajo el origen de la aplicación. Si lo omites, tendrá este valor predeterminado de todos modos, pero lo especificamos aquí con fines ilustrativos.
 
 Esto registra un *service worker*, que se ejecuta en un contexto de trabajador y, por lo tanto, no tiene acceso al DOM. Luego ejecuta el código en el *service worker* fuera de tus páginas normales para controlar su carga.
 
@@ -144,7 +138,7 @@ self.addEventListener("install", (event) => {
 });
 ```
 
-1. Aquí agregamos un escucha de eventos `install` al *service worker* (por lo tanto, `self`), y luego encadenamos un método {{domxref("ExtendableEvent.waitUntil()") }} al evento; esto garantiza que el *service worker* no se instale hasta que el código dentro de `waitUntil()` haya ocurrido con éxito.
+1. Aquí agregamos un detector de eventos `install` al *service worker* (por lo tanto, `self`), y luego encadenamos un método {{domxref("ExtendableEvent.waitUntil()") }} al evento; esto garantiza que el *service worker* no se instale hasta que el código dentro de `waitUntil()` haya ocurrido con éxito.
 2. Dentro de `addResourcesToCache` usamos el método [`caches.open()`](/es/docs/Web/API/CacheStorage/open) para crear un nuevo caché llamado `v1`, que será la versión 1 de nuestro caché de recursos del sitio. Luego llamamos a una función que llama a `addAll()` en el caché creado, que para su parámetro toma un arreglo de URLs relativas al origen de todos los recursos que deseas almacenar en caché.
 3. Si se rechaza la promesa, la instalación falla y el trabajador no hará nada. Esto está bien, ya que puedes corregir tu código y luego intentarlo de nuevo la próxima vez que se registre.
 4. Después de una instalación exitosa, el *service worker* se activa. Esto no tiene mucho de un uso distinto la primera vez que se instala/activa tu *service worker*, pero significa más cuando se actualiza el *service worker* (consulta la sección [Actualizar tu *service worker*](#actualizar_tu_service_worker) más adelante).
@@ -161,7 +155,7 @@ Ahora que tienes los activos de tu sitio almacenados en caché, debes decir al *
 
 Un evento `fetch` se activa cada vez que se recupera cualquier recurso controlado por un *service worker*, lo que incluye los documentos dentro del alcance especificado y cualquier recurso al que se haga referencia en esos documentos (por ejemplo, si `index.html` hace una solicitud de origen cruzado para incrustar una imagen, que todavía pasa por su *service worker*).
 
-Puedes adjuntar un escucha de eventos `fetch` al *service worker*, luego llamar al método `respondWith()` en el evento para capturar nuestras respuestas HTTP y actualizarlas con tu propia magia.
+Puedes adjuntar un detector de eventos `fetch` al *service worker*, luego llamar al método `respondWith()` en el evento para capturar nuestras respuestas HTTP y actualizarlas con tu propia magia.
 
 ```js
 self.addEventListener("fetch", (event) => {
@@ -187,14 +181,14 @@ Veamos algunas otras opciones que tenemos al definir nuestra magia (consulta nue
 1. El constructor {{domxref("Response.Response","Response()")}} te permite crear una respuesta personalizada. En este caso, solo estamos devolviendo una cadena de texto simple:
 
    ```js
-   new Response("¡Hola desde tu amigable vecindario del *service worker*!");
+   new Response("¡Hola desde tu amigable vecindario del service worker!");
    ```
 
 2. Esta `Response` más compleja a continuación muestra que, opcionalmente, puedes pasar un conjunto de encabezados con tu respuesta, emulando los encabezados de respuesta HTTP estándar. Aquí solo le estamos diciendo al navegador cuál es el tipo de contenido de nuestra respuesta sintética:
 
    ```js
    new Response(
-     "<p>¡Hola desde tu amigable vecindario del *service worker*!</p>",
+     "<p>¡Hola desde tu amigable vecindario del service worker!</p>",
      {
        headers: { "Content-Type": "text/html" },
      }
@@ -321,7 +315,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-Hemos optado por esta imagen alternativa porque las únicas actualizaciones que probablemente fallarán son las imágenes nuevas, ya que todo lo demás depende de la instalación en el escucha de eventos `install` que vimos anteriormente.
+Hemos optado por esta imagen alternativa porque las únicas actualizaciones que probablemente fallarán son las imágenes nuevas, ya que todo lo demás depende de la instalación en el detector de eventos `install` que vimos anteriormente.
 
 ## Precarga de navegación del *service worker*
 
@@ -445,7 +439,7 @@ self.addEventListener("fetch", (event) => {
 
 Ten en cuenta que en este ejemplo descargamos y almacenamos en caché los mismos datos para el recurso, ya sea que se descargue "normalmente" o se precargue.
 En su lugar, puedes optar por descargar y almacenar en caché un recurso diferente en la precarga.
-Para obtener más información, consulta [NavigationPreloadManager > Respuestas personalizadas](/es/docs/Web/API/NavigationPreloadManager#respuestas_personalizadas).
+Para obtener más información, consulta <a href="/en-US/docs/Web/API/NavigationPreloadManager#custom_responses" class="only-in-en-us" title="Actualmente solo disponible en inglés (US)">NavigationPreloadManager > Respuestas personalizadas (en-US)</a>.
 
 ## Actualizar tu *service worker*
 
@@ -515,10 +509,10 @@ Firefox también ha comenzado a implementar algunas herramientas útiles relacio
 
 > **Nota:** Puedes servir tu aplicación desde `http://localhost` (por ejemplo, usando `me@localhost:/my/app$ python -m SimpleHTTPServer`) para el desarrollo local. Ve [Consideraciones de seguridad](https://www.w3.org/TR/service-workers/#security-considerations)
 
-## Ve también
+## Véase también
 
 - [El manual del *service worker*](https://github.com/mdn/serviceworker-cookbook)
 - [¿Está listo ServiceWorker?](https://jakearchibald.github.io/isserviceworkerready/)
 - Descarga la [hoja de trucos de *service worker* 101](sw101.png).
 - [Promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Usar trabajadores web](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Usar _web workers_](/es/docs/Web/API/Web_Workers_API/Using_web_workers)

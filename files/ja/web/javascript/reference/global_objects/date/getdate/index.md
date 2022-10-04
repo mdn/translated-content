@@ -2,6 +2,7 @@
 title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 ---
+
 {{JSRef}}
 
 **`getDate()`** メソッドは、地方時に基づき、指定された日付の「日」を返します。

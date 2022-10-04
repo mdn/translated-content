@@ -2,6 +2,7 @@
 title: HTMLHtmlElement
 slug: Web/API/HTMLHtmlElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLHtmlElement`** インターフェイスはこの HTML 文書のルートノードとして機能します。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスで記述されたプロパティやメソッドを継承しています。

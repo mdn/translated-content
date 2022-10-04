@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Ex
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception
 browser-compat: javascript.builtins.WebAssembly.Exception.Exception
 ---
+
 {{JSRef}}
 
 Le constructeur **`WebAssembly.Exception()`** permet de créer des objets [`WebAssembly.Exception`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception).

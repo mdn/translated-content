@@ -3,6 +3,7 @@ title: points
 slug: Web/SVG/Attribute/points
 translation_of: Web/SVG/Attribute/points
 ---
+
 {{SVGRef}}
 
 L'attribut **`point`** défini une liste de points. Chaque point est défini par deux nombres représentant les coordonnées X et Y dans le système de coordonnées de l'utilisateur. Si une coordonnées est dépareillée elle sera ignorée.

@@ -9,6 +9,7 @@ tags:
   - débogage
 translation_of: Web/API/Console
 ---
+
 {{APIRef("Console API")}}
 
 L'objet **`console`** donne accès à la console de débogage du navigateur (par exemple, la [Console Web](/fr/docs/Tools/Web_Console) dans Firefox). Les spécificités de fonctionnement varient d'un navigateur à l'autre, mais il y a tout de même un ensemble de fonctionnalités qui sont fournies de base.

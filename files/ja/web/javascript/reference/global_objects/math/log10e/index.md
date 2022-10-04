@@ -2,6 +2,7 @@
 title: Math.LOG10E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 ---
+
 {{JSRef}}
 
 **`Math.LOG10E`** プロパティは 10 を底とした e の対数、約 0.434 を表します。

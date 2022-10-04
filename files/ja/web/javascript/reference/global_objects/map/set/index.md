@@ -2,6 +2,7 @@
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
 ---
+
 {{JSRef}}
 
 **`set()`** メソッドは、指定されたキーと値を持つ要素を `Map` オブジェクトに追加したり、更新したりします。

@@ -2,6 +2,7 @@
 title: HTMLMediaElement.currentTime
 slug: Web/API/HTMLMediaElement/currentTime
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLMediaElement")}} インターフェイスの **`currentTime`** プロパティは、現在の再生時間を秒単位で示します。

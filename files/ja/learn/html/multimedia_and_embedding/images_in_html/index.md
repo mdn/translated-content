@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 l10n:
   sourceCommit: 634b9ba6aeb5991b1c7bc9a1e44461f5be130faa
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 当初、ウェブは単なるテキストであり、とても退屈でした。幸運なことに、ウェブページ内に画像（および他のより面白い種類のコンテンツ）を埋め込む能力が追加されるまでにはあまり時間がかかりませんでした。考慮すべき他の種類のマルチメディアもありますが、単純な画像をウェブページに埋め込むために使用される、慎ましい {{htmlelement("img")}} 要素から始めるのが理にかなっています。この記事では、基本的な使い方を含め、 {{htmlelement("figure")}} を使ったキャプションの注釈付け、{{glossary("CSS")}} 背景画像との関連付けなど、詳細な使い方を見ていきます。
@@ -39,7 +40,7 @@ l10n:
 
 単純な画像をウェブページに配置するには、 {{htmlelement("img")}} 要素を使用します。これは{{glossary("empty element","空要素")}}であり（すなわちテキストコンテンツや終了タグがない）、役立つには少なくとも 1 つの属性 — `src` （フルタイトルやソースと呼ばれることもあります）を必要とします。 `src` 属性には、ページに埋め込む画像を指すパスが含まれ、 {{htmlelement("a")}} 要素の `href` 属性値と同じように、相対 URL または絶対 URL にすることができます。
 
-> **Note:** 続行する前に、[URL とパスに関する簡単な入門](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#url_とパスに関する簡単な入門)を読んで、相対 URL と絶対 URL の記憶を更新してください。
+> **メモ:** 続行する前に、[URL とパスに関する簡単な入門](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#url_とパスに関する簡単な入門)を読んで、相対 URL と絶対 URL の記憶を更新してください。
 
 例えば、画像が `dinosaur.jpg` というファイル名で、HTML ページと同じディレクトリーにある場合、画像を次のように埋め込むことができます。
 
@@ -55,7 +56,7 @@ l10n:
 
 このようにします。
 
-> **Note:** 検索エンジンは画像ファイル名も読み込み、 SEO に向けて数えます。したがって、画像にわかりやすいファイル名を付けてください。 `dinosaur.jpg` は `img835.png` よりも優れています。
+> **メモ:** 検索エンジンは画像ファイル名も読み込み、 SEO に向けて数えます。したがって、画像にわかりやすいファイル名を付けてください。 `dinosaur.jpg` は `img835.png` よりも優れています。
 
 たとえば、絶対 URL を使用して画像を埋め込むことができます。
 
@@ -65,7 +66,7 @@ l10n:
 
 しかし、これは無意味だけでなく、ブラウザーが DNS サーバーから IP アドレスを再度検索するなどより多くの作業をすることになります。ほとんどの場合、ウェブサイトの画像は HTML と同じサーバーに保存します。
 
-> **Warning:** ほとんどの画像は著作権で保護されています。次の場合を除き、ウェブページに画像を表示**しない**でください。
+> **警告:** ほとんどの画像は著作権で保護されています。次の場合を除き、ウェブページに画像を表示**しない**でください。
 >
 > - 画像を所有している
 > - 画像の所有者からの書面による明示的な許可を得ている、または
@@ -77,9 +78,9 @@ l10n:
 
 ![恐竜の基本的な画像が、ブラウザーに埋め込まれ、その上に "Images in HTML" が書かれています](basic-image.png)
 
-> **Note:** {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置換要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース（画像ファイルや動画ファイルなど）によって定義されているためです。詳しくは[置換要素](/ja/docs/Web/CSS/Replaced_element)を参照してください。
+> **メモ:** {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置換要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース（画像ファイルや動画ファイルなど）によって定義されているためです。詳しくは[置換要素](/ja/docs/Web/CSS/Replaced_element)を参照してください。
 
-> **Note:** この節で仕上げた例は、 [Github で実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)ことができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)も参照してください）。
+> **メモ:** この節で仕上げた例は、 [Github で実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)ことができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)も参照してください）。
 
 ### 代替テキスト
 
@@ -112,7 +113,7 @@ l10n:
 
 基本的には、画像が見えないときでも、実用的な使い勝手を提供することが鍵です。これにより、すべてのユーザーにコンテンツが欠落していないことが保証されます。ブラウザーの画像をオフにして、どのように見えるかを確認してください。画像が見えない場合に、すぐに役立つ代替テキストがどれほどあるかがすぐに理解できます。
 
-> **Note:** 詳細については、[代替テキストのガイド](/ja/docs/Learn/Accessibility/HTML#代替テキスト)を参照してください。
+> **メモ:** 詳細については、[代替テキストのガイド](/ja/docs/Learn/Accessibility/HTML#代替テキスト)を参照してください。
 
 ### 幅と高さ
 
@@ -134,7 +135,7 @@ l10n:
 
 ただし、 HTML 属性を使用して画像のサイズを変更しないでください。画像のサイズを大きくしすぎると、ざらついて、ぼやけた画像になり、小さくしすぎると、帯域幅を無駄にしてユーザーのニーズに合わない画像をダウンロードすることになります。正しい[アスペクト比](https://ja.wikipedia.org/wiki/アスペクト比)を維持しないと、画像が歪んで見えることもあります。画像エディターを使用して画像を正しいサイズにしてから、ウェブページに配置する必要があります。
 
-> **Note:** 画像のサイズを変更する必要がある場合は、代わりに [CSS](/ja/docs/Learn/CSS) を使用してください。
+> **メモ:** 画像のサイズを変更する必要がある場合は、代わりに [CSS](/ja/docs/Learn/CSS) を使用してください。
 
 ### 画像のタイトル
 
@@ -332,7 +333,7 @@ textarea.onkeyup = function(){
 
 {{htmlelement("figcaption")}} 要素は、キャプションが {{htmlelement("figure")}} 要素の他のコンテンツを説明していることをブラウザーと支援技術に伝えます。
 
-> **Note:** アクセシビリティの観点から、キャプションと {{htmlattrxref('alt','img')}} テキストには明確な役割があります。キャプションは画像を見ることができる人にも利益をもたらしますが、代替テキストは欠けている画像と同じ機能を提供します。したがって、キャプションと代替テキストは、画像がなくなったときに両方が表示されるため、同じことを言うべきではありません。ブラウザーで画像をオフにして見た目を確認してみてください。
+> **メモ:** アクセシビリティの観点から、キャプションと {{htmlattrxref('alt','img')}} テキストには明確な役割があります。キャプションは画像を見ることができる人にも利益をもたらしますが、代替テキストは欠けている画像と同じ機能を提供します。したがって、キャプションと代替テキストは、画像がなくなったときに両方が表示されるため、同じことを言うべきではありません。ブラウザーで画像をオフにして見た目を確認してみてください。
 
 図表は画像である必要はありません。それは次のようにコンテンツの独立した単位です。
 
@@ -487,7 +488,7 @@ p {
 
 要約: 画像に意味がある場合は、コンテンツに関して、 HTML 画像を使用してください。画像が純粋に装飾である場合は、 CSS 背景画像を使用してください。
 
-> **Note:** [CSS 背景画像](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)については、[CSS](/ja/docs/Learn/CSS) のトピックで詳しく説明します。
+> **メモ:** [CSS 背景画像](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)については、[CSS](/ja/docs/Learn/CSS) のトピックで詳しく説明します。
 
 ## スキルをテストしましょう
 

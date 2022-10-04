@@ -62,4 +62,4 @@ Web Audio API 亦可控制音訊的空間定位 (Spatialized) 作業：透過 so
 
 ## 瀏覽器相容性
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}

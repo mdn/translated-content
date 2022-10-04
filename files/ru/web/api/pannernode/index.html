@@ -5,15 +5,9 @@ translation_of: Web/API/PannerNode
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<div>
-<div class="note_trans">
-<div>Интерфейс <code>PannerNode</code> представляет положение источника звука и поведение его сигнала в пространстве. Это модуль {{domxref("AudioNode")}} для обработки звука, описывающий его положение (в правосторонней системе координат Декарта), его перемещение (с помощью вектора скорости распространения) и его направленности (при помощи конуса направления).</div>
-</div>
-</div>
+<p>Интерфейс <code>PannerNode</code> представляет положение источника звука и поведение его сигнала в пространстве. Это модуль {{domxref("AudioNode")}} для обработки звука, описывающий его положение (в правосторонней системе координат Декарта), его перемещение (с помощью вектора скорости распространения) и его направленности (при помощи конуса направления).</p>
 
-<div class="note_trans">
-<div><code>PannerNode</code> всегда имеет только один вход и один выход: вход может быть <em>моно</em> или <em>стерео</em>, но выход всегда <em>стерео</em> (2 канала); нельзя получить эффекты панорамирования при отсутствии, как минимум двух аудиоканалов!</div>
-</div>
+<p><code>PannerNode</code> всегда имеет только один вход и один выход: вход может быть <em>моно</em> или <em>стерео</em>, но выход всегда <em>стерео</em> (2 канала); нельзя получить эффекты панорамирования при отсутствии, как минимум двух аудиоканалов!</p>
 
 <p><img alt="PannerNode задаёт положение в пространстве, скорость распространения и направленность данного сигнала." src="https://mdn.mozillademos.org/files/15375/PannerNode.png" style="height: 263px; margin-left: 20px; margin-right: 20px; width: 720px;"></p>
 
@@ -46,26 +40,15 @@ translation_of: Web/API/PannerNode
 
 <dl>
  <dt>{{domxref("PannerNode.PannerNode")}}</dt>
- <dd>
- <div class="note_trans">
- <div>
- <dl>
-  <dd>Создаёт новый экземпляр <code>PannerNode.</code></dd>
- </dl>
- </div>
- </div>
- </dd>
+ <dd>Создаёт новый экземпляр <code>PannerNode.</code></dd>
 </dl>
 
 <h2 id="Свойства">Свойства</h2>
 
-<div class="note_trans">
-<div>Наследует свойства от своего родителя<em>, {{domxref("AudioNode")}}</em>. </div>
-</div>
+<p>Наследует свойства от своего родителя<em>, {{domxref("AudioNode")}}</em>. </p>
 
-<div class="note">
 <p>Значения направления и положения устанавливаются и получаются различными вариантами синтаксиса, поскольку они хранятся в виде значений {{domxref("AudioParam")}}. Получение значения осуществляется через обращение, например так,<code> PannerNode.positionX</code>. Установка того же свойства делается так,<code> PannerNode.positionX.value</code>. This is why these values are not marked read only, which is how they appear in the WebIDL.</p>
-</div>
+
 
 <dl>
  <dt>{{domxref("PannerNode.coneInnerAngle")}}</dt>
@@ -100,11 +83,7 @@ translation_of: Web/API/PannerNode
 
 <h2 id="Методы">Методы</h2>
 
-<div class="note_trans">
-<div>Наследует методы от своего родителя<em>, {{domxref("AudioNode")}}</em>.</div>
-
-<div> </div>
-</div>
+<p>Наследует методы от своего родителя<em>, {{domxref("AudioNode")}}</em>.</p>
 
 <dl>
  <dt>{{domxref("PannerNode.setPosition()")}}</dt>

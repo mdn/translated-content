@@ -2,6 +2,7 @@
 title: Range.surroundContents
 slug: Web/API/Range/surroundContents
 ---
+
 {{ ApiRef("Range") }}
 
 **`Range.surroundContents()` **方法将 {{ domxref("Range") }} 对象的内容移动到一个新的节点，并将新节点放到这个范围的起始处。
@@ -49,7 +50,7 @@ range.surroundContents(newParent);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.surroundContents")}}
+{{Compat}}
 
 ## 参见
 

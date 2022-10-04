@@ -2,6 +2,7 @@
 title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox 3.6](http://www.firefox.com/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
@@ -56,7 +57,7 @@ Gecko 1.9.2 引入了 JavaScript 1.8.2, 该版本的 JavaScript 添加了许多�
 ### DOM
 
 - Web workers 可以自行终止
-  - : [Workers](/zh-CN/DOM/Using_web_workers) 开始支持[`nsIWorkerScope.close()`](</zh-CN/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()>)方法，该方法允许它们终止自身的运行。
+  - : [Workers](/zh-CN/DOM/Using_web_workers) 开始支持[`nsIWorkerScope.close()`](</zh-CN/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()>) 方法，该方法允许它们终止自身的运行。
 - 支持文件的拖放
   - : [`DataTransfer`](/zh-CN/DragDrop/DataTransfer)对象提供的拖拽监听器现在可以包含一个被拖拽的文件列表。
 - Checking to see if an element matches a specified CSS selector

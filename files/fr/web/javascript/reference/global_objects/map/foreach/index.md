@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/forEach
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 ---
+
 {{JSRef}}
 
 La méthode **`forEach()`** exécute une fonction donnée sur chaque élément clé-valeur de l'objet `Map` dans l'ordre d'insertion.

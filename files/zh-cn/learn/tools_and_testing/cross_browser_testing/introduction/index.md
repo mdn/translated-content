@@ -2,6 +2,7 @@
 title: 跨浏览器测试介绍
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 本文是对跨浏览器测试的入门概述，帮助了解“什么是跨浏览器测试？”，“常见的问题都有哪些？”，以及“应该怎么测试，识别和修复问题？”

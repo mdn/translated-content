@@ -2,6 +2,7 @@
 title: Styling Vue components with CSS
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 现在终于到了使我们的应用程序看起来更好的时候了。在本文中，我们将探讨使用 CSS 样式 Vue 组件的不同方法。
@@ -143,9 +144,9 @@ import './assets/reset.css';
 
 之前：
 
-![已添加部分样式的todo应用程序； 该应用现在位于卡片中，但某些内部功能仍需要样式](todo-app-unstyled.png)
+![已添加部分样式的 todo 应用程序；该应用现在位于卡片中，但某些内部功能仍需要样式](todo-app-unstyled.png)
 
-后：![已添加部分样式的todo应用程序； 该应用现在位于卡片中，但某些内部功能仍需要样式](todo-app-reset-styles.png)
+后：![已添加部分样式的 todo 应用程序；该应用现在位于卡片中，但某些内部功能仍需要样式](todo-app-reset-styles.png)
 
 显着的更改包括删除列表项目符号，更改背景颜色以及更改基本按钮和输入样式。
 
@@ -272,7 +273,7 @@ import './assets/reset.css';
 
 If you check the app, you'll see that our todo list is now in a card, and we have some better formatting of our to-do items. Now we can go through and begin editing our components to use some of these styles.
 
-![已添加部分样式的todo应用程序； 该应用现在位于卡片中，但某些内部功能仍需要样式](todo-app-partial-styles.png)
+![已添加部分样式的 todo 应用程序；该应用现在位于卡片中，但某些内部功能仍需要样式](todo-app-partial-styles.png)
 
 ### Adding CSS classes in Vue
 
@@ -457,7 +458,7 @@ To the root `<div>`, add a `custom-checkbox` class. To the `<input>`, add a `che
 
 The app should now have custom checkboxes. Your app should look something like the screenshot below.
 
-![具有完整样式的待办事项应用程序。 现在可以正确设置输入表单的样式，并且待办事项现在具有间距和自定义复选框](todo-app-complete-styles.png)
+![具有完整样式的待办事项应用程序。现在可以正确设置输入表单的样式，并且待办事项现在具有间距和自定义复选框](todo-app-complete-styles.png)
 
 ## Summary
 

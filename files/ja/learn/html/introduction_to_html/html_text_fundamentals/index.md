@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 l10n:
   sourceCommit: be879d1d348cad4c917ecedb04aedabf57525ea9
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML の主要な仕事の一つは、ブラウザーが HTML 文書を開発者の意図通りに表示できるように、テキストに構造を与えることです。この記事では、 {{glossary("HTML")}} を使用して、見出しや段落を追加したり、単語を強調したり、リストを作成したりなど、ページのテキストを構造化する方法を説明します。
@@ -941,7 +942,7 @@ HTML5 では `<b>`、`<i>`、`<u>` が新しい、やや混乱しやすい意味
 - {{HTMLElement('b')}} は、伝統的に太字で伝えられている意味を伝えるために使用されます。キーワード、製品名、リードセンテンス...
 - {{HTMLElement('u')}} は、下線で伝統的に伝えられている意味を伝えるために使用されます。適切な名前、スペルミス...
 
-> **Note:** 人々は下線をハイパーリンクと強く関連付けています。したがって、ウェブ上では、リンクのみに下線を引くのが最善です。ウェブ上では、意味的に適切な場合は `<u>` 要素を使用しますが、 CSS を使用して既定の下線をより適切なものに変更することを検討してください。以下の例はその方法を示しています。
+> **メモ:** 人々は下線をハイパーリンクと強く関連付けています。したがって、ウェブ上では、リンクのみに下線を引くのが最善です。ウェブ上では、意味的に適切な場合は `<u>` 要素を使用しますが、 CSS を使用して既定の下線をより適切なものに変更することを検討してください。以下の例はその方法を示しています。
 
 ```html
 <!-- scientific names -->

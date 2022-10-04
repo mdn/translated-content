@@ -8,6 +8,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

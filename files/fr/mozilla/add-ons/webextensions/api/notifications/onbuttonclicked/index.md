@@ -13,6 +13,7 @@ tags:
   - onButtonClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque l'utilisateur clique sur l'un des boutons de la notification.

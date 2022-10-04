@@ -3,6 +3,7 @@ title: 理解 CSS 的 z-index 属性
 slug: Web/CSS/CSS_Positioning/Understanding_z_index
 original_slug: Web/Guide/CSS/Understanding_z_index
 ---
+
 {{cssref}}
 
 通常情况下，[HTML](/zh-CN/docs/Glossary/HTML)页面可以被认为是二维的，因为文本，图像和其他元素被排列在页面上而不重叠。在这种情况下，只有一个渲染进程，所有元素都知道其他元素所占用的空间。 {{cssxref("z-index")}}属性可让你在渲染内容时调整对象分层的顺序。
@@ -13,7 +14,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index
 
 这意味着其实 CSS 允许你在现有的渲染引擎上层叠的摆放盒模型元素。所有的层都可以用一个整数 ( z 轴顺序) 来表明当前层在 z 轴的位置。数字越大，元素越接近观察者。Z 轴顺序用 CSS 的 {{ cssxref("z-index") }} 属性来指定。
 
-使用 `z-index` 很简单：给它指定一个整数值即可。然而，在层叠比较复杂的 HTML 元素上使用 `z-index` 时，结果可能让人觉得困惑，甚至不可思议。这是由复杂的元素排布规则导致的。 更多细节请参见 [CSS-2.1 Appendix E](http://www.w3.org/TR/CSS21/zindex.html) 。
+使用 `z-index` 很简单：给它指定一个整数值即可。然而，在层叠比较复杂的 HTML 元素上使用 `z-index` 时，结果可能让人觉得困惑，甚至不可思议。这是由复杂的元素排布规则导致的。更多细节请参见 [CSS-2.1 Appendix E](http://www.w3.org/TR/CSS21/zindex.html) 。
 
 本文将通过一些简单的例子来解释这些规则。
 

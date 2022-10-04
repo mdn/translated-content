@@ -2,6 +2,7 @@
 title: getBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
 ---
+
 {{JSRef}}
 
 **`getBigInt64()`** 方法从 {{jsxref("DataView")}} 开始获取一个指定偏移量的有符号 64 位整数 (long long) 。
@@ -19,7 +20,7 @@ dataview.getBigInt64(byteOffset [, littleEndian])
 - byteOffset
   - : 偏移量，以字节为单位。指明视图开始读取数据的偏移量。
 - littleEndian
-  - : {{optional_inline}} 指明该 64 位整型数值的存储方式（ {{Glossary("Endianness", "大小端模式")}}）。 如果为 `false` 或 `undefined`, 则按大端方式读取数据。
+  - : {{optional_inline}} 指明该 64 位整型数值的存储方式（ {{Glossary("Endianness", "大小端模式")}}）。如果为 `false` 或 `undefined`, 则按大端方式读取数据。
 
 ### 返回值
 

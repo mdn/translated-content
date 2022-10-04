@@ -140,7 +140,7 @@ img {
 
 ## Browser compatibility
 
-{{Compat("css.properties.object-fit")}}
+{{Compat}}
 
 ## See also
 

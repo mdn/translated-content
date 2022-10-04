@@ -21,4 +21,4 @@ elt.click()
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLElement.click")}}
+{{Compat}}

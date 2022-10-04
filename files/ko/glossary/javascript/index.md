@@ -1,9 +1,6 @@
 ---
 title: JavaScript
 slug: Glossary/JavaScript
-tags:
-  - 자바스크립트
-translation_of: Glossary/JavaScript
 ---
 JavaScript는 프로그래밍 언어입니다. 대부분의 상황에서는 클라이언트 측에서 웹페이지를 동적으로 다룰때 사용되며, 종종 {{Glossary("Server","서버")}} 측에서 [Node.js](http://nodejs.org/)와 같은 패키지를 이용하여 사용되기도 합니다.
 

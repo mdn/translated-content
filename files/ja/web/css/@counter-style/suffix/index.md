@@ -2,6 +2,7 @@
 title: suffix
 slug: Web/CSS/@counter-style/suffix
 ---
+
 {{CSSRef}}
 
 **`suffix`** は {{cssxref("@counter-style")}} ルールの記述子で、マーカーの表現に追加されるものを指定します。

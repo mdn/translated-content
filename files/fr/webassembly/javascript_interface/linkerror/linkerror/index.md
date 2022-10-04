@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/Li
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError
 browser-compat: javascript.builtins.WebAssembly.LinkError.LinkError
 ---
+
 {{JSRef}}
 
 Le constructeur **`WebAssembly.LinkError()`** crée un nouvel objet `LinkError` WebAssembly qui indique une erreur lors de l'instanciation du module (en dehors des [trapoess](https://webassembly.org/docs/semantics/#traps) de la fonction de départ).

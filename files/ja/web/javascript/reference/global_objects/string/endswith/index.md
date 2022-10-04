@@ -2,6 +2,7 @@
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
+
 {{JSRef}}
 
 **`endsWith()`** メソッドは文字列が引数で指定された文字列で終わるかを判定して `true` か `false` を返します。

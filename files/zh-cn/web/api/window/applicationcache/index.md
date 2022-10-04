@@ -2,6 +2,7 @@
 title: window.applicationCache
 slug: Web/API/Window/applicationCache
 ---
+
 {{APIRef}}
 
 ## 概要

@@ -2,6 +2,7 @@
 title: Gamepad
 slug: Web/API/Gamepad
 ---
+
 {{APIRef("Gamepad API")}}
 
 [Gamepad API](/ja/docs/Web/API/Gamepad_API) の **`Gamepad`** インターフェイスはそれぞれのゲームパッドやその他のコントローラーを定義し、ボタンのプッシュや軸位置や ID といった情報にアクセスできるようにします。

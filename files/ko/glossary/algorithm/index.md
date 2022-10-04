@@ -1,9 +1,6 @@
 ---
 title: Algorithm
 slug: Glossary/Algorithm
-tags:
-  - 알고리즘
-translation_of: Glossary/Algorithm
 ---
 알고리즘(Algorithm)은 기능을 수행하기 위한 독립된 명령어들의 집합이다.
 

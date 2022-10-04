@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/summary
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<summary>`** représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément {{HTMLElement("details")}}. En cliquant sur l'élément `<summary>`, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément `<details>` parent.

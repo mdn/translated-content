@@ -3,6 +3,7 @@ title: ':nth-child'
 slug: Web/CSS/:nth-child
 translation_of: Web/CSS/:nth-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-child(an+b)`** permet de cibler un élément qui possède `an+b-1` éléments voisins (au même niveau) avant lui dans l'arbre du document pour des valeurs entières `n` et qui possède un élément parent. Autrement dit, un sélecteur utilisant cette pseudo-classe permettra de cibler les éléments fils d'un élément dont les positions correspondent au motif _an+b_.
@@ -162,14 +163,11 @@ span, div em {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires                                                                                 |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS4 Selectors')}} | Ajout de la syntaxe `<selector>`. Les éléments ciblés peuvent ne pas avoir d'élément parent. |
-| {{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.nth-child")}}
+{{Compat}}
 
 ## Voir aussi
 

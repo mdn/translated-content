@@ -63,7 +63,7 @@ _The `URL` interface implements methods defined in {{domxref("URLUtils")}}._
 
 ## 瀏覽器相容性
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## 參見
 

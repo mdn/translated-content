@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractère représentant l'objet Number.

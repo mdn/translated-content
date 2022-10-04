@@ -2,6 +2,7 @@
 title: Element.scrollBy()
 slug: Web/API/Element/scrollBy
 ---
+
 {{APIRef}}
 
 **`scrollBy()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された量だけ要素をスクロールします。

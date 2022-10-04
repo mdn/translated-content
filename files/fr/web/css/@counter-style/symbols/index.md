@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/symbols
 ---
+
 {{CSSRef}}
 
 Le descripteur **`symbols`**, rattaché à la règle @ {{cssxref("@counter-style")}}, est utilisé pour définir les symboles à utiliser pour construire les représentations du compteur. Un symbole peut être une chaîne de caractères, une image ou un identifiant.
@@ -34,9 +35,13 @@ Le descripteur `symbols` doit être défini lorsque la valeur du descripteur {{c
 - `<symbol>`
   - : Représente le symbole à utiliser pour le système de comptage. La valeur du descripteur `symbols` peut être :
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -71,15 +76,11 @@ Le descripteur `symbols` doit être défini lorsque la valeur du descripteur {{c
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-symbols', 'symbols')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.symbols")}}
+{{Compat}}
 
 ## Voir aussi
 

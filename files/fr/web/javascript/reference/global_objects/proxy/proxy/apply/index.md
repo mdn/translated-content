@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/apply
 ---
+
 {{JSRef}}
 
 La méthode **`handler.apply()`** représente une trappe pour un appel de fonctions.

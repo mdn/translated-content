@@ -8,6 +8,7 @@ tags:
   - paste
 translation_of: Web/API/Window/paste_event
 ---
+
 {{APIRef}}
 
 L'événement **`paste`** est déclenché lorsque l'utilisateur a lancé une action de "paste" via l'interface utilisateur du navigateur.

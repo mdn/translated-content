@@ -3,6 +3,7 @@ title: New in JavaScript 1.8
 slug: orphaned/New_in_JavaScript_1.8
 original_slug: New_in_JavaScript_1.8
 ---
+
 JavaScript 1.8 は（[Firefox 3](/ja/docs/Mozilla/Firefox/Releases/3) に組み込まれている） Gecko 1.9 の一部分です。これは [JavaScript 1.7](/ja/docs/Web/JavaScript/New_in_JavaScript/1.7) よりは大きな更新ではありませんが、ECMAScript 4/JavaScript 2 の進歩に追随するための更新がいくつか含まれています。このリリースは [JavaScript 1.6](/ja/docs/Web/JavaScript/New_in_JavaScript/1.6) および [JavaScript 1.7](/ja/docs/Web/JavaScript/New_in_JavaScript/1.7) で仕様化された新機能の全てを含んでいます。
 
 JavaScript 1.8 の開発状況を追うためには、{{Bug(380236)}} を参照してください。この文書の地位については {{Bug(421027)}} を参照してください。

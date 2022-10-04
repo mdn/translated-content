@@ -2,6 +2,7 @@
 title: Date.prototype.setUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 ---
+
 {{JSRef}}
 
 **`setUTCMonth()`** メソッドは、協定世界時に基づき、指定された日時の「月」を設定します。

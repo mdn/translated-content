@@ -5,7 +5,7 @@ translation_of: Web/API/XMLDocument/async
 ---
 {{APIRef("DOM")}}{{Deprecated_header}} {{Non-standard_header}}
 
-`document.async `pode ser configurado para indicar se uma chamada {{domxref ("document.load")}} deve ser uma solicitação assíncrona ou síncrona. True é o valor padrão, indicando que os documentos devem ser carregados de forma assíncrona.
+`document.async` pode ser configurado para indicar se uma chamada {{domxref ("document.load")}} deve ser uma solicitação assíncrona ou síncrona. True é o valor padrão, indicando que os documentos devem ser carregados de forma assíncrona.
 
 (Carregamento de documentos assicronos a partir da versão 1.4 alpha.)
 
@@ -29,5 +29,5 @@ xmlDoc.load('querydata.xml');
 
 ## Veja também
 
-- [XML in Mozilla](/pt-BR/docs/XML_in_Mozilla "XML_in_Mozilla")
+- [XML in Mozilla](/pt-BR/docs/XML_in_Mozilla)
 - {{domxref("document.load")}}

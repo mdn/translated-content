@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getFloat64
 ---
+
 {{JSRef}}
 
 La méthode **`getFloat64()`** permet de lire un entier signé sur 64 bits (type _double_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.

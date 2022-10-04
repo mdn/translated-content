@@ -2,6 +2,7 @@
 title: CountQueuingStrategy()
 slug: Web/API/CountQueuingStrategy/CountQueuingStrategy
 ---
+
 {{APIRef("Streams")}}
 
 **`CountQueuingStrategy()`** 构造函数创建并返回一个 `CountQueuingStrategy` 对象实例。

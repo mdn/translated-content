@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length
 ---
+
 {{JSRef}}
 
 La propriété **`length`**, rattachée au prototype de l'objet {{jsxref("WebAssembly.Table")}}, renvoie la longueur du tableau WebAssembly, c'est-à-dire le nombre d'éléments qui y sont stockées.

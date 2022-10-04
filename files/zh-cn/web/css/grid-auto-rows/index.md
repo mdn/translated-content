@@ -2,6 +2,7 @@
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 ---
+
 CSS 属性 **`grid-auto-rows`** 用于指定隐式创建的行轨道大小。
 
 {{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
@@ -114,12 +115,12 @@ grid-auto-rows: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.grid-auto-rows")}}
+{{Compat}}
 
 ## 相关链接
 
 - 相关的 CSS 属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- 网格布局指南： _[网格布局中的自动定位 - 隐式网格中的行尺寸](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid)_
+- 网格布局指南：_[网格布局中的自动定位 - 隐式网格中的行尺寸](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid)_
 - 视频教程：_[引入网格自动放置和排序](http://gridbyexample.com/video/series-auto-placement-order/)_
 
 1. [**CSS**](/zh-CN/docs/Web/CSS)

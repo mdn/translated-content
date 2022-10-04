@@ -8,6 +8,7 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform
 ---
+
 {{CSSRef}}
 
 La propriété **`transform`** modifie l'espace de coordonnées utilisé pour la mise en forme visuelle. Grâce à cette propriété, il est possible de translater les éléments, de les tourner, d'appliquer des homothéties, de les distordre pour en changer la perspective.
@@ -71,9 +72,13 @@ La propriété `transform` peut être définie avec le mot-clé [`none`](#none) 
 - `none`
   - : Aucune transformation ne sera appliquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 > **Note :** Si on utilise plusieurs fonctions dont [`perspective()`](</fr/docs/Web/CSS/transform-function/perspective()>), celle-ci devra apparaître en premier.
 
@@ -116,16 +121,11 @@ Pour en savoir plus :
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                 |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------- |
-| {{SpecName('CSS3 Transforms', '#transform-property', 'transform')}}     | {{Spec2('CSS3 Transforms')}}     | Définition initiale.                         |
-| {{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}} | {{Spec2('CSS Transforms 2')}} | Ajout des fonctions de transformation en 3D. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transform")}}
+{{Compat}}
 
 ## Voir aussi
 

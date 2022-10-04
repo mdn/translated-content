@@ -2,6 +2,7 @@
 title: '::part()'
 slug: Web/CSS/::part
 ---
+
 {{CSSRef}}
 
 该 **`::part`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 表示在 [阴影树](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 中任何匹配 {{HTMLAttrxRef("part")}} 属性的元素。
@@ -92,7 +93,7 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.part")}}
+{{Compat}}
 
 ## 相关阅读
 

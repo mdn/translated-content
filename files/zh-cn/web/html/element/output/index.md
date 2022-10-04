@@ -2,6 +2,7 @@
 title: <output>
 slug: Web/HTML/Element/output
 ---
+
 **HTML `<output>` 标签**表示计算或用户操作的结果。
 
 <table class="properties">

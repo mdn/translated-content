@@ -3,6 +3,7 @@ title: AnalyserNode.getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
 translation_of: Web/API/AnalyserNode/getByteTimeDomainData
 ---
+
 {{ APIRef("Mountain View APIRef Project") }}
 
 La méthode **`getByteTimeDomainData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de forme d'onde, ou du domaine temporel, dans un tableau {{domxref("Uint8Array")}} passé en paramètre.

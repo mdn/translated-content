@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/now
 ---
+
 {{JSRef}}
 
 La méthode **`Date.now()`** renvoie le nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00 UTC.

@@ -2,6 +2,7 @@
 title: ビット否定 (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
 ---
+
 {{jsSidebar("Operators")}}
 
 ビット否定演算子 (`~`) は、オペランドの各ビットを反転します。他のビット演算子と同様、オペランドを 32 ビット符号付き整数に変換します。

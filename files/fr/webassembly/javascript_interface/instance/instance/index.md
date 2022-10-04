@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Ins
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance
 browser-compat: javascript.builtins.WebAssembly.Instance.Instance
 ---
+
 {{JSRef}}
 
 Le constructeur **`WebAssembly.Instance()`** crée un nouvel objet `Instance` qui représente une instance sans état et exécutable d'un [`WebAssembly.Module`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module).

@@ -2,6 +2,7 @@
 title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 ---
+
 {{JSRef}}
 
 **`toUTCString()`** メソッドは、協定世界時 (UTC) のタイムゾーンに基づき、日付を文字列へ変換します。

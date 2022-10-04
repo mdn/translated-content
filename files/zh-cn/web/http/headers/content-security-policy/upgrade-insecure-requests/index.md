@@ -2,6 +2,7 @@
 title: 'CSP: upgrade-insecure-requests'
 slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 ---
+
 {{HTTPSidebar}}
 
 HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`upgrade-insecure-requests`**指令指示客户端将该站点的所有不安全 URL（通过 HTTP 提供的 URL）视为已被替换为安全 URL（通过 HTTPS 提供的 URL）。该指令适用于需要重写大量不安全的旧版 URL 的网站。

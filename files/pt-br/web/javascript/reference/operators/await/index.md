@@ -24,7 +24,7 @@ O operador `await` é utilizado para esperar por uma {{jsxref("Promise")}}. Ele 
 
 ## Descrição
 
-A expressão `await` faz a execução de uma função `async` pausar, para esperar pelo retorno da `Promise`, e resume a execução da função `async` quando o valor da Promise é resolvido. Ele então retorna o valor final da Promise. Se esse valor não for uma `Promise`, ele é convertido para uma `Promise `resolvida.
+A expressão `await` faz a execução de uma função `async` pausar, para esperar pelo retorno da `Promise`, e resume a execução da função `async` quando o valor da Promise é resolvido. Ele então retorna o valor final da Promise. Se esse valor não for uma `Promise`, ele é convertido para uma `Promise` resolvida.
 
 Se a `Promise` for rejeitada, a expressão `await` invoca uma Exception com o valor rejeitado.
 
@@ -48,7 +48,7 @@ async function f1() {
 f1();
 ```
 
-Se o valor não for uma `Promise`, ele converte o valor para uma `Promise `resolvida, e espera por ele.
+Se o valor não for uma `Promise`, ele converte o valor para uma `Promise` resolvida, e espera por ele.
 
 ```js
 async function f2() {

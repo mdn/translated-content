@@ -4,6 +4,7 @@ slug: Web/CSS/Media_Queries/Using_media_queries
 translation_of: Web/CSS/Media_Queries/Using_media_queries
 original_slug: Web/CSS/Requêtes_média/Utiliser_les_Media_queries
 ---
+
 {{CSSRef}}
 
 **Les requêtes média (_media queries_)** permettent de modifier l'apparence d'un site ou d'une application en fonction du type d'appareil (impression ou écran par exemple) et de ses caractéristiques (la résolution d'écran ou la largeur de la zone d'affichage (_viewport_) par exemple).

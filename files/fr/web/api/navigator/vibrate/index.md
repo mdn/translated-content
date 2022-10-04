@@ -3,6 +3,7 @@ title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
 translation_of: Web/API/Navigator/vibrate
 ---
+
 {{APIRef("Vibration API")}}
 
 La méthode **`Navigator.vibrate()`** active le module matériel de vibration de l'appareil, si ce dernier est présent. Si l'appareil ne supporte pas les vibrations, cette méthode n'a aucun effet. Si une série de vibration est déjà en cours, la précédente série est stopée et la nouvelle série est lancée.

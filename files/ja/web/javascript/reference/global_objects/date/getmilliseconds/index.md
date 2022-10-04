@@ -2,6 +2,7 @@
 title: Date.prototype.getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 ---
+
 {{JSRef}}
 
 **`getMilliseconds()`** メソッドは、ローカル時間に基づき、指定された日時の「ミリ秒」を返します。

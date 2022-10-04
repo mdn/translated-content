@@ -188,9 +188,9 @@ let oscList = [];
 let masterGainNode = null;
 ```
 
-1.  `audioContext` é colocado para referenciar o objeto global {{domxref("AudioContext")}} (ou `webkitAudioContext` se necessário).
-2.  `oscillators` está colocado para conter uma lista de todos os osciladores atualmente tocando. Ele começa nulo, afinal não há nenhum oscilador tocando ainda.
-3.  `masterGainNode` é colocado como nulo; durante o processo de setup, ele será configurado para contar um {{domxref("GainNode")}} no quall todos os osciladores irão se conectar para permitir o volume geral a ser controlado por apenas uma barra de rolagem.
+1. `audioContext` é colocado para referenciar o objeto global {{domxref("AudioContext")}} (ou `webkitAudioContext` se necessário).
+2. `oscillators` está colocado para conter uma lista de todos os osciladores atualmente tocando. Ele começa nulo, afinal não há nenhum oscilador tocando ainda.
+3. `masterGainNode` é colocado como nulo; durante o processo de setup, ele será configurado para contar um {{domxref("GainNode")}} no quall todos os osciladores irão se conectar para permitir o volume geral a ser controlado por apenas uma barra de rolagem.
 
 ```js
 let keyboard = document.querySelector(".keyboard");
@@ -441,15 +441,15 @@ function setup() {
 setup();
 ```
 
-1.  A tabela que mapeia o nome e oitavas das notas para suas respectivas frequências é criado ao chamar `createNoteTable()`.
-2.  Um manipulador de eventos é estabelecido ao chamar nosso velho amigo {{domxref("EventTarget.addEventListener", "addEventListener()")}} para cuidar dos eventos do {{event("change")}} no controle de ganho geral. Isso vai simplesmente atualizar o módulo de ganho de volume para o novo valor.
-3.  Em seguida, nós replicamos cada oitava na tabela de frequências das notas. Para cada oitava, usamos {{jsxref("Object.entries()")}} para conseguir uma lista de notas daquela oitava.
-4.  Criar um {{HTMLElement("div")}} para contar as notas daquela oitava (para ter um pouco de espaço entre as oitavas), e mudar o nome de classe para "octave".
-5.  Para cada tecla na oitava, checamos para ver se o nome daquela nota há mais de um caractere. Nós pulamos essas, pois estamos deixando notas sustenidas de fora deste exemplo. Do contrário, chamamos `createKey()`, especificando uma string, oitava, e frequência. O elemento retornado é anexado na elemento da oitava criada no passo 4.
-6.  Quando o elemento da oitava é construido, é então anexada ao teclado.
-7.  Uma vez que o teclado foi construido, nós rolamos para nota "B" na quinta oitava; isso tem o efeito de garantir que o C médio é visivel junto das notas ao redor.
-8.  Então uma forma de onda customizada é construida usando {{domxref("AudioContext.createPeriodicWave()")}}. Essa forma de onda será usada toda vez que o usuário selecionar "Custom" da seleção de formas de onda.
-9.  Enfim, a lista de osciladores é iniciada para garantir que está pronta para receber informação identificando quais osciladores estão associados com que teclas.
+1. A tabela que mapeia o nome e oitavas das notas para suas respectivas frequências é criado ao chamar `createNoteTable()`.
+2. Um manipulador de eventos é estabelecido ao chamar nosso velho amigo {{domxref("EventTarget.addEventListener", "addEventListener()")}} para cuidar dos eventos do {{event("change")}} no controle de ganho geral. Isso vai simplesmente atualizar o módulo de ganho de volume para o novo valor.
+3. Em seguida, nós replicamos cada oitava na tabela de frequências das notas. Para cada oitava, usamos {{jsxref("Object.entries()")}} para conseguir uma lista de notas daquela oitava.
+4. Criar um {{HTMLElement("div")}} para contar as notas daquela oitava (para ter um pouco de espaço entre as oitavas), e mudar o nome de classe para "octave".
+5. Para cada tecla na oitava, checamos para ver se o nome daquela nota há mais de um caractere. Nós pulamos essas, pois estamos deixando notas sustenidas de fora deste exemplo. Do contrário, chamamos `createKey()`, especificando uma string, oitava, e frequência. O elemento retornado é anexado na elemento da oitava criada no passo 4.
+6. Quando o elemento da oitava é construido, é então anexada ao teclado.
+7. Uma vez que o teclado foi construido, nós rolamos para nota "B" na quinta oitava; isso tem o efeito de garantir que o C médio é visivel junto das notas ao redor.
+8. Então uma forma de onda customizada é construida usando {{domxref("AudioContext.createPeriodicWave()")}}. Essa forma de onda será usada toda vez que o usuário selecionar "Custom" da seleção de formas de onda.
+9. Enfim, a lista de osciladores é iniciada para garantir que está pronta para receber informação identificando quais osciladores estão associados com que teclas.
 
 #### Criando uma tecla
 

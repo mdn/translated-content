@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/6
 original_slug: Mozilla/Firefox/Versions/6
 ---
+
 1. Notes de versions pour développeurs
 
     1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)

@@ -2,11 +2,12 @@
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
+
 {{JSRef}}
 
 **`values()`** メソッドは、新しい[反復子](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。これは  `Set` オブジェクトの各要素の値を挿入順に返します。
 
-> **Note:** **`keys()`** メソッドは（{{jsxref("Map")}} オブジェクトと似せるため）このメソッドに対するエイリアスになっています。まったく同じように動作し、 `Set` の各要素の**値**を返します。
+> **メモ:** **`keys()`** メソッドは（{{jsxref("Map")}} オブジェクトと似せるため）このメソッドに対するエイリアスになっています。まったく同じように動作し、 `Set` の各要素の**値**を返します。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 

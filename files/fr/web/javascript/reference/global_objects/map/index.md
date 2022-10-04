@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map
 original_slug: Web/JavaScript/Reference/Global_Objects/Map
 browser-compat: javascript.builtins.Map
 ---
+
 {{JSRef}}
 
 Un objet **`Map`** contient des paires de clé-valeur et mémorise l'ordre dans lequel les clés ont été insérées. N'importe quel type de valeur ([primitive](/fr/docs/Glossary/Primitive) ou objet) peut être utilisée comme clé ou comme valeur.

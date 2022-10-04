@@ -2,6 +2,7 @@
 title: DynamicsCompressorNode
 slug: Web/API/DynamicsCompressorNode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `DynamicsCompressorNode` 接口提供了一个压缩效果器，用以降低信号中最响部分的音量，来协助避免在多个声音同时播放并叠加在一起的时候产生的削波失真。通常用于音乐创作和游戏音效中。`DynamicsCompressorNode` 是一个 {{domxref("AudioNode")}} ，只有一路输入和一路输出，使用 {{domxref("AudioContext.createDynamicsCompressor()")}} 方法创建。

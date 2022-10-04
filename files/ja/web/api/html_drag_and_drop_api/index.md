@@ -2,6 +2,7 @@
 title: HTML ドラッグ＆ドロップ API
 slug: Web/API/HTML_Drag_and_Drop_API
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 **HTML ドラッグ & ドロップ**インターフェイスにより、アプリケーションはブラウザーでドラッグ＆ドロップ機能を使用することができます。ユーザーはマウスで*ドラッグ可能*な要素を選択し、その要素を*ドロップ可能*な要素へドラッグし、マウスボタンを離すことでドロップすることができます。ドラッグ操作の間、*ドラッグ可能な*要素の半透明の表示がマウスポインターに続きます。
@@ -29,7 +30,7 @@ HTML ドラッグ & ドロップ では {{domxref("Event","DOM イベントモ�
 | {{domxref('Document/dragstart_event', 'dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | …ユーザーが項目をドラッグ開始した場合([ドラッグ操作の開始](/ja/docs/DragDrop/Drag_Operations#dragstart) を見てください)                                                  |
 | {{domxref('Document/drop_event', 'drop')}}             | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}             | …項目が有効なドロップ対象にドロップされた場合([ドロップの実行](/ja/docs/DragDrop/Drag_Operations#drop) を見てください)                                                           |
 
-> **Note:** **メモ:** `dragstart` と `dragend` イベントは、どちらも OS からブラウザーにファイルをドラッグしたときには発生しません。
+> **メモ:** `dragstart` と `dragend` イベントは、どちらも OS からブラウザーにファイルをドラッグしたときには発生しません。
 
 ## インターフェイス
 
@@ -47,7 +48,7 @@ HTML ドラッグとドロップのインターフェイスは {{domxref("DragEv
 
 {{domxref("DataTransfer")}} と{{domxref("DataTransferItem")}} インターフェイスの主な違いは、前者が同期の {{domxref("DataTransfer.getData","getData()")}} メソッドを使ってドラッグ項目のデータにアクセスするのに対し、後者は代わりに非同期の{{domxref("DataTransferItem.getAsString","getAsString()")}} メソッドを使うことです。.
 
-> **Note:** **メモ:** {{domxref("DragEvent")}} と {{domxref("DataTransfer")}} はデスクトップブラウザーでは広く対応していますが、 {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスのブラウザーの対応は限られています。相互運用性について、より詳しくは[相互運用性](#interoperability)を見てください。
+> **メモ:** {{domxref("DragEvent")}} と {{domxref("DataTransfer")}} はデスクトップブラウザーでは広く対応していますが、 {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスのブラウザーの対応は限られています。相互運用性について、より詳しくは[相互運用性](#interoperability)を見てください。
 
 ### Gecko-特有のインターフェイス
 

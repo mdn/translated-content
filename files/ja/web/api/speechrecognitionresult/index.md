@@ -2,6 +2,7 @@
 title: SpeechRecognitionResult
 slug: Web/API/SpeechRecognitionResult
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`SpeechRecognitionResult`** interface of the [Web Speech API](/ja/docs/Web/API/Web_Speech_API) represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.

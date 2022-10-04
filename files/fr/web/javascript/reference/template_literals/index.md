@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Reference/Littéraux_gabarits
 ---
+
 {{JsSidebar("More")}}
 
 Les littéraux de gabarits sont des littéraux de chaînes de caractères permettant d'intégrer des expressions. Avec eux, on peut utiliser des chaînes de caractères multi-lignes et des fonctionnalités d'interpolation.

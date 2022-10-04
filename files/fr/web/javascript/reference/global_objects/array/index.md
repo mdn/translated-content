@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array
 ---
+
 {{JSRef}}
 
 L'objet global **`Array`** est utilisé pour créer des tableaux. Les tableaux sont des objets de haut-niveau (en termes de complexité homme-machine) semblables à des listes.

@@ -2,6 +2,7 @@
 title: 什么是超链接？
 slug: Learn/Common_questions/What_are_hyperlinks
 ---
+
 通过这篇文章，我们将了解什么是超链接以及超链接的重要性。
 
 <table class="learn-box standard-table">

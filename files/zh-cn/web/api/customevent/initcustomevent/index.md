@@ -2,6 +2,7 @@
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 **`CustomEvent.initCustomEvent()`** 方法初始化了一个 `CustomEvent` object. 如果该事件已经被分发出去，则不会在初始化过程中重复触发．
@@ -35,7 +36,7 @@ event.initCustomEvent(type, canBubble, cancelable, detail);
 
 ## Browser compatibility
 
-{{Compat("api.CustomEvent.initCustomEvent")}}
+{{Compat}}
 
 ## See also
 

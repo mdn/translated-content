@@ -2217,8 +2217,8 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /es/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
-/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/es/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/es/docs/WebAssembly/JavaScript_interface
+/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/es/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_a91664716c4f7753074ac042780999e0
+/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/es/docs/conflicting/WebAssembly/JavaScript_interface
 /es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
 /es/docs/Web/JavaScript/Reference/Statements/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference

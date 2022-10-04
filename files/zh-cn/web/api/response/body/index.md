@@ -2,6 +2,7 @@
 title: Response.body
 slug: Web/API/Response/body
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} mixin 的只读 getter 属性 **`body`** 用于暴露其 body 内容的{{domxref("ReadableStream")}}（流读取）。
@@ -63,7 +64,7 @@ fetch('./tortoise.png')
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.body")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -2,6 +2,7 @@
 title: SpeechGrammar.SpeechGrammar()
 slug: Web/API/SpeechGrammar/SpeechGrammar
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 **`SpeechGrammar`** 是 {{domxref("SpeechGrammar")}} 接口的构造函数，创建一个新的 `SpeechGrammar` 对象实例。

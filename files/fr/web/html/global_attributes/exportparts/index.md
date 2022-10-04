@@ -4,6 +4,7 @@ slug: Web/HTML/Global_attributes/exportparts
 translation_of: Web/HTML/Global_attributes/exportparts
 browser-compat: html.global_attributes.exportparts
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`exportparts`** permet de sélectionner et de mettre en forme des éléments qui existent dans des [<i lang="en">shadow trees</i>](/fr/docs/Glossary/Shadow_tree), en exportant leur nom `part`.

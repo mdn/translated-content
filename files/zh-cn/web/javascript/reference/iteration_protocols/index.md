@@ -2,6 +2,7 @@
 title: 迭代协议
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
+
 {{jsSidebar("More")}}
 
 作为 ECMAScript 2015 的一组补充规范，迭代协议并不是新的内置实现或语法，而是*协议*。这些协议可以被任何遵循某些约定的对象来实现。
@@ -12,7 +13,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 **可迭代协议**允许 JavaScript 对象定义或定制它们的迭代行为，例如，在一个 {{jsxref("Statements/for...of", "for..of")}} 结构中，哪些值可以被遍历到。一些内置类型同时是[内置可迭代对象](#内置可迭代对象)，并且有默认的迭代行为，比如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}，而其他内置类型则不是（比如 {{jsxref("Object")}})）。
 
-要成为**可迭代**对象， 一个对象必须实现 **`@@iterator`** 方法。这意味着对象（或者它[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)上的某个对象）必须有一个键为 `@@iterator` 的属性，可通过常量 {{jsxref("Symbol.iterator")}} 访问该属性：
+要成为**可迭代**对象，一个对象必须实现 **`@@iterator`** 方法。这意味着对象（或者它[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)上的某个对象）必须有一个键为 `@@iterator` 的属性，可通过常量 {{jsxref("Symbol.iterator")}} 访问该属性：
 
 | 属性                | 值                                                                    |
 | ------------------- | --------------------------------------------------------------------- |
@@ -20,9 +21,9 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 当一个对象需要被迭代的时候（比如被置入一个 {{jsxref("Statements/for...of", "for...of")}} 循环时），首先，会不带参数调用它的 `@@iterator` 方法，然后使用此方法返回的**迭代器**获得要迭代的值。
 
-值得注意的是调用此零个参数函数时，它将作为对可迭代对象的方法进行调用。 因此，在函数内部，`this`关键字可用于访问可迭代对象的属性，以决定在迭代过程中提供什么。
+值得注意的是调用此零个参数函数时，它将作为对可迭代对象的方法进行调用。因此，在函数内部，`this`关键字可用于访问可迭代对象的属性，以决定在迭代过程中提供什么。
 
-此函数可以是普通函数，也可以是生成器函数，以便在调用时返回迭代器对象。 在此生成器函数的内部，可以使用`yield`提供每个条目。
+此函数可以是普通函数，也可以是生成器函数，以便在调用时返回迭代器对象。在此生成器函数的内部，可以使用`yield`提供每个条目。
 
 ## 迭代器协议
 
@@ -219,7 +220,7 @@ a // "a"
 
 ### 格式不佳的可迭代对象
 
-如果一个可迭代对象的 `@@iterator` 方法不能返回迭代器对象，那么可以认为它是一个*格式不佳*的（_Non-well-formed_）可迭代对象 。
+如果一个可迭代对象的 `@@iterator` 方法不能返回迭代器对象，那么可以认为它是一个*格式不佳*的（_Non-well-formed_）可迭代对象。
 
 使用这样的可迭代对象很可能会导致如下的运行时（runtime）异常，或者不可预料的表现：
 

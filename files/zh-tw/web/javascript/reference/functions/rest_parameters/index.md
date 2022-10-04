@@ -124,7 +124,7 @@ console.log(sortArguments(5, 3, 7, 1)); // 顯示 1, 3, 5, 7
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.rest_parameters")}}
+{{Compat}}
 
 ## 參見
 

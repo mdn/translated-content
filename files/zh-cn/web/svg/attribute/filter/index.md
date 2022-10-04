@@ -2,6 +2,7 @@
 title: filter
 slug: Web/SVG/Attribute/filter
 ---
+
 « [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 属性`filter`定义了由{{ SVGElement("filter") }}元素定义滤镜效果，该滤镜效果将应用到该元素上。

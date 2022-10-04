@@ -2,6 +2,7 @@
 title: ':read-write'
 slug: Web/CSS/:read-write
 ---
+
 {{CSSRef}}
 
 **`:read-write`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが編集できる要素 (`input` や `textarea` など) を表します。

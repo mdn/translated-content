@@ -63,7 +63,7 @@ new Date().toUTCString()
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.Date")}}
+{{Compat}}
 
 ## 參閱
 

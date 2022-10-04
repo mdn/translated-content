@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/cx
 ---
+
 {{SVGRef}}
 
 L'attribut **`cx`** définit la coordonnée de l'axe x pour le point central d'un élément.

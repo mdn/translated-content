@@ -2,6 +2,7 @@
 title: Request.headers
 slug: Web/API/Request/headers
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 {{domxref("Request")}} のインターフェースの **`headers`** 読み取り専用プロパティは、リクエストに関連する {{domxref("Headers")}} オブジェクトを含みます。

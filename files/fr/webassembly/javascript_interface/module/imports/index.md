@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/imports
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/imports
 ---
+
 {{JSRef}}
 
 La méthode **`WebAssembly.imports()`** renvoie un tableau qui contient les références des fonctions importées qui sont disponibles dans un module WebAssembly donné.

@@ -48,7 +48,7 @@ function sourceOpen (_) {
 
 ## 相容性表格
 
-{{Compat("api.MediaSource.activeSourceBuffers")}}
+{{Compat}}
 
 ## 相關資料
 

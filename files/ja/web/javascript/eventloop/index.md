@@ -2,6 +2,7 @@
 title: 並行モデルとイベントループ
 slug: Web/JavaScript/EventLoop
 ---
+
 {{JsSidebar("Advanced")}}
 
 JavaScript は、"event loop"に基づく同時実行モデルを持ちます。このモデルは C 言語や Java のような他の言語のモデルとかなり異なっています。

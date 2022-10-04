@@ -2,6 +2,7 @@
 title: '@font-feature-values'
 slug: Web/CSS/@font-feature-values
 ---
+
 {{CSSRef}}
 
 ## 概要
@@ -55,7 +56,7 @@ The `@font-feature-values` at-rule may be used at the top level of a CSS, but al
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.font-feature-values")}}
+{{Compat}}
 
 ## See also
 

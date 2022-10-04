@@ -2,6 +2,7 @@
 title: form.submit
 slug: Web/API/HTMLFormElement/submit
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 **`HTMLFormElement.submit()`** 用来提交表单 {{HtmlElement("form")}}。

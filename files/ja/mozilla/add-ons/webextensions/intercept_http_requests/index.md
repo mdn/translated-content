@@ -2,6 +2,7 @@
 title: HTTP リクエストへの介入
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 ---
+
 {{AddonSidebar}}
 
 HTTP リクエストへ介入するには {{WebExtAPIRef("webRequest")}} API を用います。 この API を利用すると、HTTP リクエストの生成段階における様々なタイミングにリスナ関数を追加できます。追加したリスナの中では、以下の処理を行うことができます。

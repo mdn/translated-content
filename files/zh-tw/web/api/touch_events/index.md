@@ -304,4 +304,4 @@ One technique for preventing things like `pinchZoom` on a page is to call `preve
 
 ## 瀏覽器相容性
 
-{{Compat("api.Touch")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: <template>：内容模板元素
 slug: Web/HTML/Element/template
 ---
+
 {{HTMLRef}}
 
 [HTML](/zh-CN/docs/Web/HTML) **内容模板**（`<template>`）元素是一种用于保存客户端内容机制，该内容在加载页面时不会呈现，但随后可以 (原文为 may be) 在运行时使用 JavaScript 实例化。

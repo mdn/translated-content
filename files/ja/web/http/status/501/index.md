@@ -2,6 +2,7 @@
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`501 Not Implemented`** サーバーエラーレスポンスコードは、**サーバーがリクエストを満たすのに必要な機能に対応していないこと**を示します。
@@ -12,7 +13,7 @@ HyperText Transfer Protocol (HTTP) の **`501 Not Implemented`** サーバーエ
 
 サーバーがそのメソッドを理解して*いて*、意図的に対応していない場合は、適切なレスポンスは {{HTTPStatus(405, "405 Method Not Allowed")}} です。
 
-> **Note:** - 501 エラーは修正できるものではありませんが、アクセスしようとしているウェブサーバーで修正が必要です。
+> **メモ:** - 501 エラーは修正できるものではありませんが、アクセスしようとしているウェブサーバーで修正が必要です。
 >
 > - 501 レスポンスは、その他のヘッダーのキャッシュの指示がない限り、既定でキャッシュ可能です。
 

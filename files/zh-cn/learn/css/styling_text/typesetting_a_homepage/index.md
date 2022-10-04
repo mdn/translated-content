@@ -3,6 +3,7 @@ title: 作业：排版社区大学首页
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 在本测评中，通过对社区学校主页的文本样式化，我们会测试你对所有本模块涉及到的文本样式化技术的理解。你或许也会从中获得乐趣。

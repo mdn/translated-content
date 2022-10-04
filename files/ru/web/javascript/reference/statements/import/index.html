@@ -186,7 +186,7 @@ obj.b = 4;</pre>
 
 <h3 id="Модуль_file.js">Модуль: file.js</h3>
 
-<pre class="brush: js; highlight: [14]">function getJSON(url, callback) {
+<pre class="brush: js">function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
      callback(this.responseText)

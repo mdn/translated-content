@@ -2,6 +2,7 @@
 title: optional_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

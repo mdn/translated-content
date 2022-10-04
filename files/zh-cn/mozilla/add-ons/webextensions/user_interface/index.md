@@ -2,6 +2,7 @@
 title: User interface
 slug: Mozilla/Add-ons/WebExtensions/user_interface
 ---
+
 {{AddonSidebar}}
 
 为了能给用户提供在不同场景下都具有价值的功能，WebExtensions 提供了许多的用户界面选项。下面是这些选项的摘要，在本章中将会对每个选项做出更详细的说明。

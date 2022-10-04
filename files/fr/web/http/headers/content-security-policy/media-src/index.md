@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/media-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/media-src
 browser-compat: http.headers.csp.Content-Security-Policy.media-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`media-src`** spécifie les sources valides pour le chargement des médias avec les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video).

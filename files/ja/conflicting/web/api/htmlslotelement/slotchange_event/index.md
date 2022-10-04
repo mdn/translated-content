@@ -3,6 +3,7 @@ title: ShadowRoot.onslotchange
 slug: conflicting/Web/API/HTMLSlotElement/slotchange_event
 original_slug: Web/API/ShadowRoot/onslotchange
 ---
+
 {{ApiRef('DOM')}}{{SeeCompatTable}}
 
 **`onslotchange`** は {{domxref("ShadowRoot")}} の[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)プロパティで、 {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} イベントを処理します。

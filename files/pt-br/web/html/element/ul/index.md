@@ -73,8 +73,6 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
     > **Note:** **Nota de utilização:** Não aplique este atributo, que foi preterido - o elemento {{ HTMLElement("ul") }} deve ser definido utilizando-se a folha de estilos [CSS](/en/CSS). Para dar um efeito similar ao atributo compacto, a propriedade [line-height](/en/CSS/line-height) (espaçamento), da [CSS](/en/CSS), pode ser utilizada com um valor de 80%.
 
-<!---->
-
 - {{ htmlattrdef("type") }}{{ Deprecated_inline() }}
 
   - : Usados para estabelecer o tipo de marcador da lista. Os valores definidos durante a [HTML3.2](/en/HTML3.2) e a versão de transição de [HTML 4.0/4.01](/en/HTML4.01), são:

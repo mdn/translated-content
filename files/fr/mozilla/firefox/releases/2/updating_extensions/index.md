@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/2/Updating_extensions
 translation_of: Mozilla/Firefox/Releases/2/Updating_extensions
 original_slug: Mise_à_jour_des_extensions_pour_Firefox_2
 ---
+
 {{FirefoxSidebar}}
 
 Cet article s'adresse aux développeurs qui souhaitent mettre à jour leur extension pour qu'elle fonctionne correctement avec Firefox 2.

@@ -14,7 +14,7 @@ translation_of: Web/API/Document/getElementById
 ---
 {{ ApiRef("DOM") }}
 
-Devuelve una referencia al elemento por su [ID](/es/docs/DOM/element.id "en-US/docs/DOM/element.id").
+Devuelve una referencia al elemento por su [ID](/es/docs/DOM/element.id).
 
 ## Sintaxis
 
@@ -116,6 +116,6 @@ var el = document.getElementById('testqq'); // el será null!
 
 ## Ver también
 
-- La referencia [document](/es/docs/DOM/document "en-US/docs/DOM/document") para otros métodos y propiedades que se pueden usar para obtener referencias a elementos en el documento.
+- La referencia [document](/es/docs/DOM/document) para otros métodos y propiedades que se pueden usar para obtener referencias a elementos en el documento.
 - [document.querySelector()](/es/docs/Web/API/document.querySelector) para selectores via consultas como `'div.myclass'`
-- [xml:id](/es/docs/xml/xml:id "en-US/docs/xml/id") - tiene un método utilitario para permitir que `getElementById()` obtenga 'xml:id' en documentos XML documents (como los retornados por llamadas Ajax.
+- [xml:id](/es/docs/xml/xml:id) - tiene un método utilitario para permitir que `getElementById()` obtenga 'xml:id' en documentos XML documents (como los retornados por llamadas Ajax.

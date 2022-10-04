@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration.updateViaCache
 slug: Web/API/ServiceWorkerRegistration/updateViaCache
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`updateViaCache`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、 {{domxref('ServiceWorkerContainer.register')}} の呼び出しで指定されたモードを使用してキャッシュを更新します。

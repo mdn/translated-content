@@ -2,6 +2,7 @@
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("EventTarget")}} 的 **`removeEventListener()`** 方法可以删除使用 {{domxref("EventTarget.addEventListener()")}} 方法添加的事件。可以使用事件类型，事件侦听器函数本身，以及可能影响匹配过程的各种可选择的选项的组合来标识要删除的事件侦听器。参见下文的[匹配要删除的事件监听器](#匹配要删除的事件监听器)。

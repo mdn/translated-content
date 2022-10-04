@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/translateZ()
 original_slug: Web/CSS/transform-function/translateZ()
 browser-compat: css.types.transform-function.translateZ
 ---
+
 {{CSSRef}}
 
 La fonction **`translateZ()`** permet de déplacer un élément selon l'axe z de l'espace tridimensionnel. Cette transformation est caractérisée par une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/length)) qui définit l'amplitude du mouvement. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).

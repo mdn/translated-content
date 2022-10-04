@@ -2,6 +2,7 @@
 title: 'CSP: frame-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`frame-src`** ディレクティブは、 {{HTMLElement("frame")}} や {{HTMLElement("iframe")}} のような要素を使用した内部の閲覧コンテキストの読み込みに有効なソースを指定します。

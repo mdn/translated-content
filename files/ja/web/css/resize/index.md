@@ -2,6 +2,7 @@
 title: resize
 slug: Web/CSS/resize
 ---
+
 {{CSSRef}}
 
 **`resize`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します。

@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.mozOpaque
 slug: Web/API/HTMLCanvasElement/mozOpaque
 ---
+
 {{APIRef("Canvas API")}}{{non-standard_header}}
 
 非标准的 **`HTMLCanvasElement.mozOpaque`** 是一种 {{jsxref("Boolean")}} 的数据反映了{{HTMLElement("canvas")}}元素的{htmlattrxref("moz-opaque"， "canvas")} HTML 属性。它能够让画布（canvas）将半透明作为一个参考因素。如果画布知道没有半透明因素，作画的性能可以优化。
@@ -38,7 +39,7 @@ canvas.mozOpaque = false;
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.mozOpaque")}}
+{{Compat}}
 
 ## 参考
 

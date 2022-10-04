@@ -2,6 +2,7 @@
 title: letter-spacing
 slug: Web/CSS/letter-spacing
 ---
+
 {{CSSRef}}
 
 **`letter-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの水平方向の字間のスペースに関する挙動を設定します。この値はテキストを描画する際に文字間の自然な空間に追加されます。 `letter-spacing` が正の値であった場合は、文字と文字の間が開き、 `letter-spacing` が負の値であった場合は、文字と文字が互いに近づきます。

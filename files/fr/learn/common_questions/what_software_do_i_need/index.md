@@ -9,6 +9,7 @@ tags:
 translation_of: Learn/Common_questions/What_software_do_I_need
 original_slug: Apprendre/Quels_logiciels_sont_nécessaires_pour_construire_un_site_web
 ---
+
 Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre en ligne ou consulter un site web.
 
 <table class="standard-table">

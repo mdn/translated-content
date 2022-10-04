@@ -36,7 +36,7 @@ See our [complete example](/zh-TW/docs/Web/API/Background_Tasks_API#Example) in 
 
 ## Browser compatibility
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## See also
 

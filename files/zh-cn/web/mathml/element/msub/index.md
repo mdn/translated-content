@@ -2,6 +2,7 @@
 title: <msub>
 slug: Web/MathML/Element/msub
 ---
+
 {{MathMLRef}}
 
 MathML **`<msub>`** 元素用来为表达式加下标，语法如下：**`<msub> base subscript </msub>`**。

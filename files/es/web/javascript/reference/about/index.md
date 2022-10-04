@@ -14,7 +14,7 @@ JavaScript versión 1.5 provee las siguientes nuevas características y extensio
 
 **Errores en tiempo de ejecución**
 
-Los errores en tiempo de ejecución son ahora reportados como [excepciones](/es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones "es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones").
+Los errores en tiempo de ejecución son ahora reportados como [excepciones](/es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones).
 
 **Extensiones para el formato de números**
 
@@ -24,9 +24,9 @@ El formato de números ha sido extendido para incluir los métodos `Number.proto
 
 Las siguientes extensiones para expresiones regulares han sido añadidas:
 
-- Cuantificadores avaros: `— +, *, ? y {}`:ahora pueden seguirse por un `?` para forzarlos ha no ser avaros. Para la entrada **?** Véase la página [Escribir un patrón de expresiones regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales "es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales").
-- Paréntesis sin captura: `(?:x)`:pueden ser usados en vez de paréntesis con captura `(x)`. Cuando son utilizados, las sub expresiones de compatibilidad {{ mediawiki.external('match') }} no están disponibles como referencias de respaldo {{ mediawiki.external('back-references') }}. Para la entrada **(?:x)** Véase la página: [Escribir un patrón de expresiones regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales "es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales").
-- Aserciones predictivas {{ mediawiki.external('lookahead assertions') }} positivas y negativas son soportadas. Las dos aserguran una comparación dependiente de lo que sigue en la cadena de texto que está siendo cotejada. Ver las entradas para `x(?=y) y x(?!y)` en la página: [Escribir un patrón de expresiónes regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales "es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales").
+- Cuantificadores avaros: `— +, *, ? y {}`:ahora pueden seguirse por un `?` para forzarlos ha no ser avaros. Para la entrada **?** Véase la página [Escribir un patrón de expresiones regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales).
+- Paréntesis sin captura: `(?:x)`:pueden ser usados en vez de paréntesis con captura `(x)`. Cuando son utilizados, las sub expresiones de compatibilidad {{ mediawiki.external('match') }} no están disponibles como referencias de respaldo {{ mediawiki.external('back-references') }}. Para la entrada **(?:x)** Véase la página: [Escribir un patrón de expresiones regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales).
+- Aserciones predictivas {{ mediawiki.external('lookahead assertions') }} positivas y negativas son soportadas. Las dos aserguran una comparación dependiente de lo que sigue en la cadena de texto que está siendo cotejada. Ver las entradas para `x(?=y) y x(?!y)` en la página: [Escribir un patrón de expresiónes regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales).
 - La bandera m ha sido añadida para especificar que la expresión regular deberá cotejarse sobre múltiples líneas.
 
 **Declaraciones condicionales de funciones**
@@ -54,7 +54,7 @@ Los editores de JavaScript ahora pueden añadir obtenedores {{ mediawiki.externa
 Esta referencia asume que usted tiene a su respaldo el siguiente conocimiento básico:
 
 - Un entendimiento general de la Internet y de la World Wide Web (WWW).
-- Un conocimiento práctico del lenguaje de marcas para Hipertexto {{ mediawiki.external('HyperText Markup Language') }} ([HTML](/es/HTML "es/HTML")).
+- Un conocimiento práctico del lenguaje de marcas para Hipertexto {{ mediawiki.external('HyperText Markup Language') }} ([HTML](/es/HTML)).
 
 Es beneficioso alguna experiencia en programación en lenguajes como C o Visual Basic, pero no es requerido.
 
@@ -90,10 +90,10 @@ Cada versión del servidor Netscape Enterprise también soporta una versión dif
 
 La documentación de JavaScript incluye los siguientes libros:
 
-- [Guía de JavaScript 1.5](/es/Guía_JavaScript_1.5 "es/Guía_JavaScript_1.5") provee la información sobre el lenguaje JavaScript y sus objetos.
-- [Referencia de JavaScript 1.5](/es/Referencia_de_JavaScript_1.5 "es/Referencia_de_JavaScript_1.5") (éste manual) provee material de referencia para el lenguaje JavaScript.
+- [Guía de JavaScript 1.5](/es/Guía_JavaScript_1.5) provee la información sobre el lenguaje JavaScript y sus objetos.
+- [Referencia de JavaScript 1.5](/es/Referencia_de_JavaScript_1.5) (éste manual) provee material de referencia para el lenguaje JavaScript.
 
-Si usted es principiante con JavaScript, comience por la [Guía de JavaScript](/es/Guía_JavaScript_1.5 "es/Guía_JavaScript_1.5") y una vez que haya obtenido firmes entendimientos de sus fundamentos, debe seguir con la [Referencia de JavaScript 1.5](/es/Referencia_de_JavaScript_1.5 "es/Referencia_de_JavaScript_1.5") para conseguir más detalles individuales acerca de los objetos y las sentencias.
+Si usted es principiante con JavaScript, comience por la [Guía de JavaScript](/es/Guía_JavaScript_1.5) y una vez que haya obtenido firmes entendimientos de sus fundamentos, debe seguir con la [Referencia de JavaScript 1.5](/es/Referencia_de_JavaScript_1.5) para conseguir más detalles individuales acerca de los objetos y las sentencias.
 
 ### Convenciones en el documento
 

@@ -4,6 +4,7 @@ slug: Web/HTML/Global_attributes/nonce
 translation_of: Web/HTML/Global_attributes/nonce
 browser-compat: html.global_attributes.nonce
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`nonce`** est un attribut de contenu qui définit un nonce cryptographique pouvant être utilisé par une [règle de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/CSP) afin de déterminer si la récupération d'un élément sera autorisée ou non.

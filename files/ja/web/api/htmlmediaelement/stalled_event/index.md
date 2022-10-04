@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: stalled イベント'
 slug: Web/API/HTMLMediaElement/stalled_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `stalled` イベントは、ユーザーエージェントがメディアデータをフェッチしようとして、データが予期せずに来なかったときに発生します。

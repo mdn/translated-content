@@ -2,6 +2,7 @@
 title: Accelerometer
 slug: Web/API/Accelerometer
 ---
+
 {{APIRef("Generic Sensor API")}}
 
 The **`Accelerometer`** interface of the [Sensor APIs](/zh-CN/docs/Web/API/Sensor_APIs) provides on each reading the acceleration applied to the device along all three axes.
@@ -45,4 +46,4 @@ accelerometer.start();
 
 ## Browser compatibility
 
-{{Compat("api.Accelerometer")}}
+{{Compat}}

@@ -15,7 +15,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Se
 
 <p>В этом уроке мы рассмотрим некоторые из базисных селекторов, которые вы, вероятно, будете чаще всего использовать в вашей работе.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Необходимые условия:</th>
@@ -23,14 +23,14 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Se
   </tr>
   <tr>
    <th scope="row">Задача:</th>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Изучить различные селекторы CSS, которые мы можем использовать, чтобы применить CSS к документу.</span></span></td>
+   <td>Изучить различные селекторы CSS, которые мы можем использовать, чтобы применить CSS к документу.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Селекторы_типа">Селекторы типа</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title=""><strong>Селектор типа</strong> иногда называется <em>селектором имени тега</em> или <em>селектором элемента</em>, поскольку он выбирает тег/элемент HTML в вашем документе.</span></span> В примере ниже мы использовали селекторы span, em и strong.</p>
+<p><strong>Селектор типа</strong> иногда называется <em>селектором имени тега</em> или <em>селектором элемента</em>, поскольку он выбирает тег/элемент HTML в вашем документе. В примере ниже мы использовали селекторы span, em и strong.</p>
 
 <p><strong>Попробуйте добавить CSS-правило, чтобы выбрать элемент <code>&lt;h1&gt;</code> и изменить его цвет на синий.</strong></p>
 
@@ -42,19 +42,19 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Se
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/universal.html", '100%', 750)}}</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Такого рода поведение иногда можно увидеть в «таблицах сброса стилей», которые вычищают всю стилизацию браузера.</span></span> Так как <span class="tlid-translation translation" lang="ru"><span title="">универсальный селектор вызывает глобальные изменения, </span></span><span class="tlid-translation translation" lang="ru"><span title="">мы используем его в очень специфических ситуациях, таких как та, что описана ниже.</span></span></p>
+<p>Такого рода поведение иногда можно увидеть в «таблицах сброса стилей», которые вычищают всю стилизацию браузера. Так как универсальный селектор вызывает глобальные изменения, мы используем его в очень специфических ситуациях, таких как та, что описана ниже.</p>
 
-<h3 id="Использование_универсального_селектора_для_облегчения_чтения_ваших_селекторов"><span class="tlid-translation translation" lang="ru"><span title="">Использование универсального селектора для облегчения чтения ваших селекторов</span></span></h3>
+<h3 id="Использование_универсального_селектора_для_облегчения_чтения_ваших_селекторов">Использование универсального селектора для облегчения чтения ваших селекторов</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Одно из применений универсального селектора состоит в том, чтобы облегчить чтение селекторов и сделать их более удобопонятными с точки зрения того, что они делают.</span></span> Например, если мы хотим выбрать элементы-потомки элемента <code>&lt;article&gt;</code>, которые являются первыми дочерними элементами своего родителя, включая дочерние элементы самого <code>&lt;article&gt;</code>, и сделать их шрифт жирным, мы могли бы использовать псевдокласс {{cssxref(":first-child")}}, который мы будем изучать в уроке о <a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">псевдоклассах и псевдо-элементах</a>, как селектор-потомок вместе с селектором элемента <code>&lt;article&gt;</code>: </p>
+<p>Одно из применений универсального селектора состоит в том, чтобы облегчить чтение селекторов и сделать их более удобопонятными с точки зрения того, что они делают. Например, если мы хотим выбрать элементы-потомки элемента <code>&lt;article&gt;</code>, которые являются первыми дочерними элементами своего родителя, включая дочерние элементы самого <code>&lt;article&gt;</code>, и сделать их шрифт жирным, мы могли бы использовать псевдокласс {{cssxref(":first-child")}}, который мы будем изучать в уроке о <a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">псевдоклассах и псевдо-элементах</a>, как селектор-потомок вместе с селектором элемента <code>&lt;article&gt;</code>: </p>
 
 <pre class="brush: css">article :first-child {
   font-weight: bold;
 }</pre>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Однако этот селектор можно спутать с</span></span> <code>article:first-child</code>, <span class="tlid-translation translation" lang="ru"><span title="">который выберет любой элемент</span></span> <code>&lt;article&gt;</code><span class="tlid-translation translation" lang="ru"><span title="">, являющийся первым дочерним элементом другого элемента</span></span> .</p>
+<p>Однако этот селектор можно спутать с <code>article:first-child</code>, который выберет любой элемент <code>&lt;article&gt;</code>, являющийся первым дочерним элементом другого элемента .</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Чтобы избежать этой путаницы, мы можем добавить универсальный селектор в псевдокласс</span></span> <code>:first-child</code> <span class="tlid-translation translation" lang="ru"><span title="">, чтобы было очевидно, что делает селектор.</span> <span title="">Он выбирает <em>любой</em> элемент, который является первым дочерним элементом элемента</span></span> <code>&lt;article&gt;</code> или <span class="tlid-translation translation" lang="ru"><span title="">первым дочерним элементом любого потомка</span></span> <span class="tlid-translation translation" lang="ru"><span title="">элемента</span></span> <code>&lt;article&gt;</code>:</p>
+<p>Чтобы избежать этой путаницы, мы можем добавить универсальный селектор в псевдокласс <code>:first-child</code> , чтобы было очевидно, что делает селектор. Он выбирает <em>любой</em> элемент, который является первым дочерним элементом элемента <code>&lt;article&gt;</code> или первым дочерним элементом любого потомка элемента <code>&lt;article&gt;</code>:</p>
 
 <pre class="brush: css">article *:first-child {
   font-weight: bold;
@@ -64,25 +64,25 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Se
 
 <h2 id="Селекторы_класса">Селекторы класса</h2>
 
-<p>Селектор класса начинается с символа точки (<code>.</code>). Он выберет в документе всё, к чему применён этот класс. В живом примере ниже мы создали класс с именем <code>.highlight</code>, и применили его к нескольким местам в документе. <span class="tlid-translation translation" lang="ru"><span title="">Все элементы, к которым применён класс, подсвечиваются</span></span>.</p>
+<p>Селектор класса начинается с символа точки (<code>.</code>). Он выберет в документе всё, к чему применён этот класс. В живом примере ниже мы создали класс с именем <code>.highlight</code>, и применили его к нескольким местам в документе. Все элементы, к которым применён класс, подсвечиваются.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/class.html", '100%', 750)}}</p>
 
-<h3 id="Нацеливание_классов_на_отдельные_элементы"><span class="tlid-translation translation" lang="ru"><span title="">Нацеливание классов на отдельные элементы</span></span></h3>
+<h3 id="Нацеливание_классов_на_отдельные_элементы">Нацеливание классов на отдельные элементы</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете создать селектор, нацеленный на конкретные элементы, к которым применён класс</span></span>. В следующем примере мы подсветим <code>&lt;span&gt;</code> с классом <code>highlight</code> иначе, чем заголовок <code>&lt;h1&gt;</code> с классом <code>highlight</code>. <span class="tlid-translation translation" lang="ru"><span title="">Мы сделаем это, используя селектор типа для элемента, на который нацелены, с классом, добавленным с помощью точки, без пробела между ними</span></span>.</p>
+<p>Вы можете создать селектор, нацеленный на конкретные элементы, к которым применён класс. В следующем примере мы подсветим <code>&lt;span&gt;</code> с классом <code>highlight</code> иначе, чем заголовок <code>&lt;h1&gt;</code> с классом <code>highlight</code>. Мы сделаем это, используя селектор типа для элемента, на который нацелены, с классом, добавленным с помощью точки, без пробела между ними.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/class-type.html", '100%', 750)}}</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Этот подход сужает границы правила. Правило будет применяться только к этой конкретной комбинации элемента и класса. Вам нужно будет добавить другой селектор, если вы решили, что правило должно применяться и к другим элементам.</span></span></p>
+<p>Этот подход сужает границы правила. Правило будет применяться только к этой конкретной комбинации элемента и класса. Вам нужно будет добавить другой селектор, если вы решили, что правило должно применяться и к другим элементам.</p>
 
-<h3 id="Нацеливание_на_элемент_к_которому_применено_более_одного_класса"><span class="tlid-translation translation" lang="ru"><span title="">Нацеливание на элемент, к которому применено более одного класса</span></span></h3>
+<h3 id="Нацеливание_на_элемент_к_которому_применено_более_одного_класса">Нацеливание на элемент, к которому применено более одного класса</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете применить несколько классов к элементу и нацелиться на них по отдельности, или выбрать элемент только если присутствуют все классы селектора.</span> <span title="">Это может быть полезно при создании компонентов, которые могут сочетаться на вашем сайте разными способами.</span></span></p>
+<p>Вы можете применить несколько классов к элементу и нацелиться на них по отдельности, или выбрать элемент только если присутствуют все классы селектора. Это может быть полезно при создании компонентов, которые могут сочетаться на вашем сайте разными способами.</p>
 
 <p>В примере ниже у нас есть <code>&lt;div&gt;</code>, содержащий примечание. Серая граница применяется когда блок имеет класс <code>notebox</code>. Если у блока есть также класс <code>warning</code> или <code>danger</code>, мы меняем {{cssxref("border-color")}}.</p>
 
-<p>Мы можем указать браузеру, что мы хотим подобрать только такой элемент, <span class="tlid-translation translation" lang="ru"><span title="">к которому применены два класса, сцепив их вместе без пробелов между ними. </span></span> <span class="tlid-translation translation" lang="ru"><span title="">Вы увидите, что к последнему </span></span><code>&lt;div&gt;</code> <span class="tlid-translation translation" lang="ru"><span title=""> не применён ни один стиль, так как он имеет только класс</span></span> <code>danger</code>; <span class="tlid-translation translation" lang="ru"><span title="">ему нужен ещё и класс </span></span> <code>notebox</code><span class="tlid-translation translation" lang="ru"><span title="">, чтобы получить какую-нибудь стилизацию.</span></span></p>
+<p>Мы можем указать браузеру, что мы хотим подобрать только такой элемент, к которому применены два класса, сцепив их вместе без пробелов между ними.  Вы увидите, что к последнему <code>&lt;div&gt;</code>  не применён ни один стиль, так как он имеет только класс <code>danger</code>; ему нужен ещё и класс  <code>notebox</code>, чтобы получить какую-нибудь стилизацию.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/class-many.html", '100%', 900)}}</p>
 

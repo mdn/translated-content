@@ -2,6 +2,7 @@
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/GetPrototypeOf
 ---
+
 {{JSRef}}
 
 **`Object.getPrototypeOf()`** 方法返回指定对象的原型（内部`[[Prototype]]`属性的值）。

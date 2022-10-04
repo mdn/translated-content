@@ -2,6 +2,7 @@
 title: scroll-snap-points-y
 slug: Web/CSS/scroll-snap-points-y
 ---
+
 {{CSSRef}}{{SeeCompatTable}}{{deprecated_header}}
 
 ## 摘要
@@ -87,4 +88,4 @@ scroll-snap-points-y: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-snap-points-y")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: overscroll-behavior-y
 slug: Web/CSS/overscroll-behavior-y
 ---
+
 {{CSSRef}}
 
 **`overscroll-behavior-y`** は CSS のプロパティで、スクロール領域の垂直方向の境界に達したときのブラウザーの挙動を設定します。

@@ -2,6 +2,7 @@
 title: DOMPointReadOnly.fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint
 ---
+
 {{APIRef("DOM")}}
 
 静的な **{domxref("DOMPointReadOnly")}}** メソッド `fromPoint()` は、指定された元の点から新しい `DOMPointReadOnly` オブジェクトを作成し、それを返します。

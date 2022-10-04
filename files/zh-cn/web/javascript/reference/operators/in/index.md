@@ -2,6 +2,7 @@
 title: in
 slug: Web/JavaScript/Reference/Operators/in
 ---
+
 {{jsSidebar("Operators")}}
 
 如果指定的属性在指定的对象或其原型链中，则 **`in`** **运算符**返回 `true`。

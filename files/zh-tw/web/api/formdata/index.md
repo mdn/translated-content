@@ -43,7 +43,7 @@ slug: Web/API/FormData
 
 ## 瀏覽器相容性
 
-{{Compat("api.FormData")}}
+{{Compat}}
 
 ## 參見
 

@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.toDataURL()`** メソッドは、 `type` パラメータ（デフォルトは[PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)形式）で指定される画像フォーマット形式の [data URI](/ja/docs/Web/HTTP/data_URIs) を返すメソッドです。返り値となる画像の解像度は 96 dpi です。

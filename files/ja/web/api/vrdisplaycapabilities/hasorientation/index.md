@@ -2,6 +2,7 @@
 title: VRDisplayCapabilities.hasOrientation
 slug: Web/API/VRDisplayCapabilities/hasOrientation
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VRDisplayCapabilities")}} インターフェイスの **`hasOrientation`** 読取専用プロパティは， その VR ディスプレイがトラッキング機能を持っていて向き情報を取得できるかどうかを示す {{domxref("Boolean")}} を返します．

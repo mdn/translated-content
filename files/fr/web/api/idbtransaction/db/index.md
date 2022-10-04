@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/db
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`db`** de l'interface {{domxref("IDBTransaction")}} renvoie la {{domxref("IDBDatabase","connexion","",1)}} à la base de donnée associée à la {{domxref("IDBTransaction","transaction","",1)}}.

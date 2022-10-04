@@ -2,13 +2,14 @@
 title: <input type="button">
 slug: Web/HTML/Element/input/button
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} 要素の **`button`** 型は、単純なプッシュボタンとして描画され、イベントハンドラー関数 (ふつうは {{event("click")}} イベント) を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
-> **Note:** `<input>` 要素の `button` 型は完全に妥当な HTML ですが、より新しい {{HTMLElement("button")}} 要素が、ボタンの作成にはより好まれるようになりました。 {{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入され、ラベルに画像を含む HTML を含めることができます。
+> **メモ:** `<input>` 要素の `button` 型は完全に妥当な HTML ですが、より新しい {{HTMLElement("button")}} 要素が、ボタンの作成にはより好まれるようになりました。 {{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入され、ラベルに画像を含む HTML を含めることができます。
 
 <table class="properties">
   <tbody>
@@ -126,7 +127,7 @@ function updateButton() {
 
 {{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}
 
-> **Note:** 上記の例では、ユーザーがアクセスキーが何であるかを知ることができないという問題があります。実際のサイトでは、この情報を、サイトのデザインに干渉しない方法で提供する必要があります (たとえば、簡単にアクセスできるリンクを設置して、サイトのアクセスキーに関する情報を指すなど)。
+> **メモ:** 上記の例では、ユーザーがアクセスキーが何であるかを知ることができないという問題があります。実際のサイトでは、この情報を、サイトのデザインに干渉しない方法で提供する必要があります (たとえば、簡単にアクセスできるリンクを設置して、サイトのアクセスキーに関する情報を指すなど)。
 
 ### ボタンの無効化と有効化
 
@@ -188,7 +189,7 @@ function disableButton() {
 
 {{EmbedLiveSample("Hidden_code_2", 650, 60)}}
 
-> **Note:** Firefox は他のブラウザーとは異なり、ページのロード中は既定で {{HTMLElement("button")}} に[動的な無効状態を維持](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)します。この機能を制御するには {{htmlattrxref("autocomplete","button")}} 属性を使用してください。
+> **メモ:** Firefox は他のブラウザーとは異なり、ページのロード中は既定で {{HTMLElement("button")}} に[動的な無効状態を維持](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)します。この機能を制御するには {{htmlattrxref("autocomplete","button")}} 属性を使用してください。
 
 ## 検証
 

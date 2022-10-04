@@ -5,6 +5,7 @@ translation_of: Web/API/DeviceOrientationEvent/absolute
 original_slug: Web/API/DeviceOrientationEvent.absolute
 browser-compat: api.DeviceOrientationEvent.absolute
 ---
+
 {{APIRef("Device Orientation Events")}}
 
 Cette propriété indique si l'appareil fournit des données d'orientation dans un repère absolu (utilisant les coordonnées par rapport à la Terre) ou s'il utilise un repère arbitraire propre. Voir [le guide sur les données d'orientation et de déplacement](/fr/docs/Web/Events/Orientation_and_motion_data_explained) pour plus de détails.

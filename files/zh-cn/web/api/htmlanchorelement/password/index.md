@@ -2,6 +2,7 @@
 title: HTMLHyperlinkElementUtils.password
 slug: Web/API/HTMLAnchorElement/password
 ---
+
 {{ApiRef("URL API")}}
 
 HTMLHyperlinkElementUtils**`.password`** property 属性是一个{{domxref("USVString")}} ，包含域名前面指定的密码。
@@ -29,7 +30,7 @@ var result = anchor.password; // Returns:'flabada'
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement.password")}}
+{{Compat}}
 
 ## See also
 

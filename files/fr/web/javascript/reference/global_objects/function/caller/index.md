@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/caller
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propriété **`function.caller`** renvoie la fonction qui a appelé la fonction donnée. Cette propriété est interdite en mode strict.

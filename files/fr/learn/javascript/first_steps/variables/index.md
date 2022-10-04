@@ -3,6 +3,7 @@ title: Stocker les informations nécessaires — les variables
 slug: Learn/JavaScript/First_steps/Variables
 translation_of: Learn/JavaScript/First_steps/Variables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
 Après lecture des deux articles précédents, vous savez maintenant ce qu'est JavaScript, ce qu'il peut vous apporter, comment l'utiliser aux côtés d'autres technologies web et l'aspect de ses principales fonctionnalités vues de haut. Dans cet article, nous revenons aux fondements réels en examinant comment travailler avec le bloc de construction le plus basique du JavaScript — les variables.

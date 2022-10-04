@@ -49,4 +49,4 @@ slug: Web/API/PaymentRequest
 
 ## 瀏覽器相容性
 
-{{Compat("api.PaymentRequest")}}
+{{Compat}}

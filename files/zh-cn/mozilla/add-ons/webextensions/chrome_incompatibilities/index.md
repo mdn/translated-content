@@ -2,6 +2,7 @@
 title: Chrome 不兼容情况
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
+
 {{AddonSidebar}}
 
 使用 WebExtension API 构建的扩展旨在与 Chrome 和 Opera 扩展兼容：尽可能为这些浏览器编写的扩展应该在 Firefox 上运行，并且只需进行极少的更改。

@@ -6,7 +6,7 @@ The default rendering of dates from our models is very ugly: _Tue Dec 06 2016 15
 
 The approach we will use is to create a virtual property in our `BookInstance` model that returns the formatted date. We'll do the actual formatting using [moment](https://www.npmjs.com/package/moment), a lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
 
-> **Note:** It is possible to use _moment_ to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the `due_date` currently.
+> **メモ:** It is possible to use _moment_ to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the `due_date` currently.
 
 ## Install moment
 
@@ -35,7 +35,7 @@ BookInstanceSchema
 });
 ```
 
-> **Note:** The format method can display a date using almost any pattern. The syntax for representing different date components can be found in the [moment documentation](http://momentjs.com/docs/#/displaying/).
+> **メモ:** The format method can display a date using almost any pattern. The syntax for representing different date components can be found in the [moment documentation](http://momentjs.com/docs/#/displaying/).
 
 ## Update the view
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-type-y
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 La propriété **`scroll-snap-type-y`** définit la « force » avec laquelle les points d'accroche sont respectés lors d'un déroulement vertical.

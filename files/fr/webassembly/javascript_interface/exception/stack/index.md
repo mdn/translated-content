@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/st
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack
 browser-compat: javascript.builtins.WebAssembly.Exception.stack
 ---
+
 {{JSRef}}
 
 La propriété en lecture seule **`stack`**, rattachée à une instance d'[`Exception`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) _peut_ contenir une trace de pile d'appels pour une exception levée par du code WebAssembly.

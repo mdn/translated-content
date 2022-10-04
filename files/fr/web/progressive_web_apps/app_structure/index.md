@@ -3,6 +3,7 @@ title: Structure d'une Progressive web app
 slug: Web/Progressive_web_apps/App_structure
 translation_of: Web/Progressive_web_apps/App_structure
 ---
+
 {{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}
 
 Maintenant que nous avons pris connaissances des principes théoriques sur lesquelles sont bâties les PWAs, penchons nous sur la structure recommandée d'une vraie application. Nous commencerons par analyser l'application [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) et par examiner pourquoi elle est construite de cette façon et quels bénéfices elle en retire.

@@ -47,7 +47,7 @@ Este tema contiene los siguientes módulos en el orden recomendado de aprendizaj
 
 ## Resolución de problemas con CSS
 
-[Uso de CSS para resolver problemas comunes](https://developer.mozilla.org/es/docs/Learn/CSS/S%C3%A1bercomo) proporciona vínculos a secciones que explican cómo usar CSS para resolver problemas comunes cuando se está creando una página web.
+[Uso de CSS para resolver problemas comunes](/es/docs/Learn/CSS/S%C3%A1bercomo) proporciona vínculos a secciones que explican cómo usar CSS para resolver problemas comunes cuando se está creando una página web.
 
 ## Ver También
 

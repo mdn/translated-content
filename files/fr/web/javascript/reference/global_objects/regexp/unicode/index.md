@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/unicode
 ---
+
 {{JSRef}}
 
 La propriété **`unicode`** indique si le drapeau "`u`" a été utilisé avec l'expression rationnelle. `unicode` est une propriété en lecture seule et liée à une instance d'expression rationnelle.

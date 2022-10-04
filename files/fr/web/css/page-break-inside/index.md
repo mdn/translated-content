@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/page-break-inside
 ---
+
 {{CSSRef}}
 
 > **Attention :** Cette propriété a été remplacée par la propriété {{cssxref("break-inside")}}.
@@ -33,9 +34,13 @@ page-break-inside: unset;
 - `avoid`
   - : L'agent utilisateur évite d'insérer un saut de page au sein de l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Alias avec `break-inside`
 
@@ -108,16 +113,11 @@ p:first-child {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires                                            |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------- |
-| {{SpecName('CSS3 Paged Media', '#page-break-inside', 'page-break-inside')}}         | {{Spec2('CSS3 Paged Media')}} | Permet d'appliquer cette propriété sur plus d'éléments. |
-| {{SpecName('CSS2.1', 'page.html#propdef-page-break-inside', 'page-break-inside')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                    |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.page-break-inside")}}
+{{Compat}}
 
 ## Voir aussi
 

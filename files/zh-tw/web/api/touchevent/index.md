@@ -94,7 +94,7 @@ See the [example on the main Touch events article](/zh-TW/DOM/Touch_events#Examp
 
 ## 瀏覽器相容性
 
-{{Compat("api.TouchEvent")}}
+{{Compat}}
 
 ## 參見
 

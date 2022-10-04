@@ -2,6 +2,7 @@
 title: 网格布局
 slug: Web/CSS/CSS_Grid_Layout
 ---
+
 {{CSSRef}}
 
 **CSS 网格布局**擅长于将一个页面划分为几个主要区域，以及定义这些区域的大小、位置、层次等关系（前提是 HTML 生成了这些区域）。

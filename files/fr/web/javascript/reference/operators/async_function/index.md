@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/async_function
 original_slug: Web/JavaScript/Reference/Opérateurs/async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 Le mot-clé **`async function`** peut être utilisé pour définir une fonction asynchrone au sein d'une expression.

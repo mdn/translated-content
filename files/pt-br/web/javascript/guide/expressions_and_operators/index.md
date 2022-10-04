@@ -84,7 +84,7 @@ var var2 = 4;
 
 | Operador                       | Descrição                                                                                                                                                                                                                   | Exemplos que retornam verdadeiro     |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| Igual (`==`)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                                                                                                                          | ` 3 == var1``"3" == var1``3 == '3' ` |
+| Igual (`==`)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                                                                                                                          | `3 == var1` `"3" == var1` `3 == '3'` |
 | Não igual (`!=`)               | Retorna verdadeiro caso os operandos não sejam iguais.                                                                                                                                                                      | `var1 != 4 var2 != "3"`              |
 | Estritamente igual (`===`)     | Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo. Veja também [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) e [igualdade em JS](/pt-BR/docs/Web/JavaScript/Guide/Sameness). | `3 === var1`                         |
 | Estritamente não igual (`!==`) | Retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo.                                                                                                                                         | `var1 !== "3" 3 !== '3'`             |
@@ -147,13 +147,13 @@ Depois:            10100000000000000110000000000001
 
 Por exemplo, a representação binária de nove é 1001 e a representação binária de quinze é 1111. Desta forma, quando operadores bit a bit são aplicados a estes valores, os resultados são como se segue:
 
-| Expressão | Resultado | Descrição binária                                                |
-| --------- | --------- | ---------------------------------------------------------------- |
-| `15 & 9`  | `9`       | `1111 & 1001 = 1001`                                             |
-| `15 \| 9` | `15`      | `1111 \| 1001 = 1111`                                            |
-| `15 ^ 9`  | `6`       | `1111 ^ 1001 = 0110`                                             |
-| `~15`     | `-16`     | ` ~``00000000...``00001111 = ``1111``1111``...``11110000 `       |
-| `~9`      | `-10`     | ` ~``00000000``...``0000``1001 = ``1111``1111``...``1111``0110 ` |
+| Expressão | Resultado | Descrição binária                                 |
+| --------- | --------- | ------------------------------------------------- |
+| `15 & 9`  | `9`       | `1111 & 1001 = 1001`                              |
+| `15 \| 9` | `15`      | `1111 \| 1001 = 1111`                             |
+| `15 ^ 9`  | `6`       | `1111 ^ 1001 = 0110`                              |
+| `~15`     | `-16`     | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
+| `~9`      | `-10`     | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
 > **Nota:** No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
 
@@ -527,7 +527,7 @@ O JavaScript possui as seguintes categorias de expressão:
 
 - Aritmética: é avaliada como um número, por exemplo 3.14159. (Geralmente utiliza [operadores aritméticos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_aritmeticos)).
 - String: é avaliada como uma string de caracteres, por exemplo, "Fred" ou "234". (Geralmente utiliza [operadores de string](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_string)).
-- Lógica: é avaliada como verdadeira ou falsa. (Costuma envolver[ operadores lógicos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)).
+- Lógica: é avaliada como verdadeira ou falsa. (Costuma envolver[operadores lógicos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)).
 - Expressões primárias: Palavras reservadas e expressões gerais do JavaScript.
 - Expressão lado esquerdo: atribuição à esquerda de valores.
 
@@ -587,11 +587,11 @@ a * c + b * c // 9
 
 Comprehensions são uma característica experimental de JavaScript, marcada para ser inclusa em uma versão futura do ECMAScript. Existem duas versões de Comprehensions:
 
-{{experimental_inline}}**[`[for (x of y) x]`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Array_comprehensions "The array comprehension syntax is a JavaScript expression which allows you to quickly assemble a new array based on an existing one. Comprehensions exist in many programming languages.")**
+{{experimental_inline}}**[`[for (x of y) x]`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Array_comprehensions)**
 Comprehensions de array.
 
-{{experimental_inline}}**[`(for (x of y) y)`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions "The generator comprehension syntax is a JavaScript expression which allows you to quickly assemble a new generator function based on an existing iterable object. Comprehensions exist in many programming languages.")
-``**`gerador de `comprehensions
+{{experimental_inline}}**[`(for (x of y) y)`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions)
+** `gerador de` comprehensions
 
 Comprehensions existem em muitas linguagens de programação e permitem que você rapidamente monte um novo array com base em um existente, por exemplo:
 
@@ -610,7 +610,7 @@ Atribuição à esquerda de valores.
 
 #### `new`
 
-Você pode utilizar o [operador new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) para criar uma instância de um tipo de objeto definido pelo usuário ou de um dos tipos de objeto predefinidos: `Array`, `Boolean`, `Date`, `Function`, `Image`, `Number`, `Object`, `Option`, `RegExp `ou `String`. No servidor, você pode também utilizar `DbPool`, `Lock`, `File `ou `SendMail`. Utilize o operador `new` da seguinte forma:
+Você pode utilizar o [operador new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) para criar uma instância de um tipo de objeto definido pelo usuário ou de um dos tipos de objeto predefinidos: `Array`, `Boolean`, `Date`, `Function`, `Image`, `Number`, `Object`, `Option`, `RegExp` ou `String`. No servidor, você pode também utilizar `DbPool`, `Lock`, `File` ou `SendMail`. Utilize o operador `new` da seguinte forma:
 
 ```js
 var nomeObjeto = new tipoObjeto([parametro1, parametro2, ..., parametroN]);

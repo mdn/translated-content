@@ -2,6 +2,7 @@
 title: RTCPeerConnection.iceGatheringState
 slug: Web/API/RTCPeerConnection/iceGatheringState
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 只读属性 **`RTCPeerConnection.iceGatheringState`** 返回一个描述连接的 ICE 收集状态的枚举值 `RTCIceGatheringState`。比如当 ICE 候选收集完成的时候，你可以通过该属性的变化侦测到。

@@ -94,5 +94,5 @@ for (i = 0; items.length; i++)
 
 ## Veja também
 
-- [break](/pt-BR/docs/JavaScript/Reference/Statements/break "JavaScript/Reference/Statements/break")
-- [continue](/pt-BR/docs/JavaScript/Reference/Statements/continue "JavaScript/Reference/Statements/continue")
+- [break](/pt-BR/docs/JavaScript/Reference/Statements/break)
+- [continue](/pt-BR/docs/JavaScript/Reference/Statements/continue)

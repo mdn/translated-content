@@ -2,6 +2,7 @@
 title: setInterval()
 slug: Web/API/setInterval
 ---
+
 {{ApiRef("HTML DOM")}}
 
 {{domxref("Window")}} 和 {{domxref("Worker")}} 接口提供的 **`setInterval()`** 方法重复调用一个函数或执行一个代码片段，在每次调用之间具有固定的时间间隔。

@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Notification/requestPermission
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 > **Note :** Cette fonctionnalité n'est pas disponible dans {{domxref("SharedWorker")}}

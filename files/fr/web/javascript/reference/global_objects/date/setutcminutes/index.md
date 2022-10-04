@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCMinutes
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCMinutes()`** définit les minutes pour la date, selon UTC.

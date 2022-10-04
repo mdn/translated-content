@@ -156,7 +156,7 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.execCommand")}}
+{{Compat}}
 
 ## 相關資訊
 

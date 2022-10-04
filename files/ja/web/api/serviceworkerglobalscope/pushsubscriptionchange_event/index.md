@@ -2,6 +2,7 @@
 title: 'ServiceWorkerGlobalScope: pushsubscriptionchange イベント'
 slug: Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 ---
+
 {{APIRef("Push API")}}
 
 **`pushsubscriptionchange`** イベントは[グローバルスコープ](/ja/docs/Web/API/ServiceWorkerGlobalScope)としての {{domxref("ServiceWorker")}} へ送信され、アプリケーションの制御の外から起動されたプッシュ通知への加入状況が変化したことを示します。これはブラウザーが加入を更新した場合に発生しますが、加入が取り消されたり失われたりしたときにも発生する可能性があります。
@@ -35,7 +36,7 @@ slug: Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 
 サービスワーカーとアプリサーバー間で加入情報を同期するのに別の方法を使用することを検討するか、 `fetch()` を使用するコードが、データ交換の試行が失敗した場合を処理するのに十分堅牢であることを確認してください。
 
-> **Note:** この仕様書の早期の草稿では、このイベントは {{domxref("PushSubscription")}} が期限切れになった時に送信されるよう定義されていました。
+> **メモ:** この仕様書の早期の草稿では、このイベントは {{domxref("PushSubscription")}} が期限切れになった時に送信されるよう定義されていました。
 
 ## 例
 

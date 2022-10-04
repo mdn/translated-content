@@ -2,6 +2,7 @@
 title: '@charset'
 slug: Web/CSS/@charset
 ---
+
 {{ CSSRef }}
 
 ## 概述
@@ -32,7 +33,7 @@ slug: Web/CSS/@charset
 ```
 
 - _charset_
-  - : 它是一个 {{cssxref("&lt;string&gt;")}} 表示字符编码被使用。它必须是在被 [IANA-registry](http://www.iana.org/assignments/character-sets) 声明过的 web-safe 字符编码中的一个，还必须被双引号包围，遵循一个空格字符 (U+0020)，并且立即以分号结束。 如果有多个相关的编码名字，只有被标记为 *preferred* 的那个才会被使用。
+  - : 它是一个 {{cssxref("&lt;string&gt;")}} 表示字符编码被使用。它必须是在被 [IANA-registry](http://www.iana.org/assignments/character-sets) 声明过的 web-safe 字符编码中的一个，还必须被双引号包围，遵循一个空格字符 (U+0020)，并且立即以分号结束。如果有多个相关的编码名字，只有被标记为 *preferred* 的那个才会被使用。
 
 ## 例子
 

@@ -16,7 +16,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Advanced_text_formatting
 
 <p class="summary">В HTML для форматирования текста есть много других элементов, не рассмотренных  в статье <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals">Основы редактирования текста в HTML</a>. Элементы, описанные в этой статье, не так часто используются, но всё же полезны для понимания (и это всё ещё будет не полный список элементов). Здесь вы узнаете о цитатах, списках описания, компьютерном коде и другом виде текстовых элементов, подстрочном и надстрочном тексте, контактной информации и других типах текста.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Предварительные требования:</th>
@@ -73,8 +73,8 @@ original_slug: Learn/HTML/Введение_в_HTML/Advanced_text_formatting
 
 <dl>
  <dt>Ремарка</dt>
- <dd>В драме: речь персонажа, при которой делается замечание с юмористическим или драматическим эффектом; чаще всего это чувства, мысли или предпосылки к чему-либо.</dd>
- <dd>В письменности: отметка, примечание (<em>устар.</em>).</dd>
+ <dd><p>В драме: речь персонажа, при которой делается замечание с юмористическим или драматическим эффектом; чаще всего это чувства, мысли или предпосылки к чему-либо.</p>
+ <p>В письменности: отметка, примечание (<em>устар.</em>).</p></dd>
 </dl>
 
 <h3 id="Активное_обучение_разметка_набора_определений">Активное обучение: разметка набора определений</h3>
@@ -217,7 +217,7 @@ textarea.onkeyup = function(){
 
 <p>Если часть содержимого уровня блока (будь то абзац, несколько абзацев, список и т. д.) цитируется из другого источника, вы должны обернуть её внутри элемента {{htmlelement ("blockquote")}}, чтобы обозначить это, и указать URL-адрес, указывающий на источник цитаты, внутри атрибута {{htmlattrxref ("cite", "blockquote")}}.</p>
 
-<p class="syntaxbox">Например, следующая разметка берётся из страницы элемента MDN <code><strong>&lt;blockquote&gt;</strong></code>:</p>
+<p>Например, следующая разметка берётся из страницы элемента MDN <code><strong>&lt;blockquote&gt;</strong></code>:</p>
 
 <pre class="brush: html">&lt;p&gt;&lt;strong&gt;HTML-элемент&lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (от англ. &lt;em&gt;HTML Block
 Quotation Element&lt;/em&gt;) указывает на то, что заключённый в нём текст является развёрнутой цитатой.&lt;/p&gt;</pre>
@@ -622,7 +622,7 @@ para.onclick = function() {
 
 <p>HTML также содержит элемент {{htmlelement ("time")}} для отметки времени и дат в машиночитаемом формате. Например:</p>
 
-<pre class="brush: html">&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01-20<span class="pl-pds">"</span></span>&gt;20 Января 2020&lt;/<span class="pl-ent">time</span>&gt;</pre>
+<pre class="brush: html">&lt;time datetime="2020-01-20"&gt;20 Января 2020&lt;/time&gt;</pre>
 
 <p>Почему это полезно? Ну, есть много разных способов, которыми люди записывают даты. Вышеуказанная дата может быть записана как:</p>
 
@@ -632,8 +632,8 @@ para.onclick = function() {
  <li>Янв 20 2020</li>
  <li>20/01/20</li>
  <li>01/20/20</li>
- <li><span lang="fr">20e Janvier 2020</span></li>
- <li><span lang="ja">2020年1月20日</span></li>
+ <li>20e Janvier 2020</li>
+ <li>2020年1月20日</li>
  <li>и другое...</li>
 </ul>
 
@@ -642,21 +642,21 @@ para.onclick = function() {
 <p>В приведённом выше базовом примере приведена простая машиносчитываемая дата, но есть много других возможных вариантов, например:</p>
 
 <pre class="brush: html">&lt;!-- Стандартная дата --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01-20<span class="pl-pds">"</span></span>&gt;20 Января 2020&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2020-01-20"&gt;20 Января 2020&lt;/time&gt;
 &lt;!-- Только год и месяц --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01<span class="pl-pds">"</span></span>&gt;Январь 2020&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2020-01"&gt;Январь 2020&lt;/time&gt;
 &lt;!-- Только месяц и день --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>01-20<span class="pl-pds">"</span></span>&gt;20 Января&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="01-20"&gt;20 Января&lt;/time&gt;
 &lt;!-- Только время, часы и минуты --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>19:30<span class="pl-pds">"</span></span>&gt;19:30&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="19:30"&gt;19:30&lt;/time&gt;
 &lt;!-- Также вы можете отобразить секунды и миллисекунды! --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span></span>19:30:01.856<span class="pl-s"><span class="pl-pds">"</span></span>&gt;19:30:01.856&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="19:30:01.856"&gt;19:30:01.856&lt;/time&gt;
 &lt;!-- Дата и время --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01-20T19:30<span class="pl-pds">"</span></span>&gt;7.30pm, 20 Января 2020&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2020-01-20T19:30"&gt;7.30pm, 20 Января 2020&lt;/time&gt;
 &lt;!-- Дата и время со смещением по часовому поясу --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01-20T19:30<span class="pl-pds">+01:00"</span></span>&gt;7.30pm, 20 Января 2020, — это 8.30pm во Франции.&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2020-01-20T19:30+01:00"&gt;7.30pm, 20 Января 2020, — это 8.30pm во Франции.&lt;/time&gt;
 &lt;!-- Вызов номера недели --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-W04<span class="pl-pds">"</span></span>&gt;Четвёртая неделя 2020&lt;/<span class="pl-ent">time</span>&gt;</pre>
+&lt;time datetime="2020-W04"&gt;Четвёртая неделя 2020&lt;/time&gt;</pre>
 
 <h2 id="Заключение">Заключение</h2>
 

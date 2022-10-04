@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBFactory/cmp
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`cmp()`** de l'interface {{domxref("IDBFactory")}} compare deux valeurs de clé et détermine si celles-ci sont égales et sinon, laquelle est la plus grande. Cette opération est utilisée pour l'enregistrement et le parcours des données.

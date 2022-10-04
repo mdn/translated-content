@@ -97,7 +97,7 @@ table td {
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## 參閱
 

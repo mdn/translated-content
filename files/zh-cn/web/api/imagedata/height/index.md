@@ -2,6 +2,7 @@
 title: ImageData.height
 slug: Web/API/ImageData/height
 ---
+
 {{APIRef("Canvas API")}}
 
 只读的 **`ImageData.height`** 属性，返回在图像数据对象中的行的数量。
@@ -25,7 +26,7 @@ imagedata.height; // 100
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageData.height")}}
+{{Compat}}
 
 ## 参见
 

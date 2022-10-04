@@ -71,12 +71,12 @@ Especificando uma única box-shadow usando:
 
 - Dois, três ou quatro valores para [`<length>`](/en-US/docs/Web/CSS/length).
 
-  - Se apenas dois valores forem definidos, eles serão interpretados como valores de [`<offset-x><offset-y>`](<#\<offset-x\> \<offset-y\>>).
-  - Se o terceiro valor for dados, é interpretado como [`<blur-radius>`](#<blur-radius>).
-  - Se o quarto valor for dados, é interpretado como [`<spread-radius>`](#<spread-radius>).
+  - Se apenas dois valores forem definidos, eles serão interpretados como valores de [`<offset-x><offset-y>`](<#offset-x_<offset-y).
+  - Se o terceiro valor for dados, é interpretado como [`<blur-radius>`](#blur-radius).
+  - Se o quarto valor for dados, é interpretado como [`<spread-radius>`](#spread-radius).
 
 - Opcionalmente, o atributo [`inset`](#inset).
-- Opcionalmente, o valor [`<color>`](#<color>).
+- Opcionalmente, o valor [`<color>`](#color).
 
 Para especificar mais de uma sombra, separe-as com virgula.
 

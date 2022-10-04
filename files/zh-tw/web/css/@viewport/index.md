@@ -67,7 +67,7 @@ Browsers are supposed to ignore unrecognized descriptors.
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.viewport")}}
+{{Compat}}
 
 ## See also
 

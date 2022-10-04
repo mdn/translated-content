@@ -11,6 +11,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/video
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<video>`** intègre un contenu vidéo dans un document.

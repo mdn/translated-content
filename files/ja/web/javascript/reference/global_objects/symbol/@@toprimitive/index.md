@@ -2,6 +2,7 @@
 title: Symbol.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 ---
+
 {{JSRef}}
 
 **`[@@toPrimitive]()`** メソッドは、 Symbol オブジェクトをプリミティブ値に変換します。

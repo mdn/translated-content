@@ -60,7 +60,7 @@ function test() {
 
 ## Nunca use `eval`!
 
-`eval()` é uma função perigosa, que executa o código passado com os privilégios do caller. Se você executar o `eval() `com uma sequência de caracteres que podem ser afetados por uma parte maliciosa, você pode acabar executando código malicioso na máquina do usuário com as permissões da sua página/extensão. Mais importante ainda, o código de terceiros pode ver o escopo em que `eval()` foi chamado, o que pode levar a possíveis ataques como {{jsxref("Global_Objects/Function", "Function")}} não é suscetível.
+`eval()` é uma função perigosa, que executa o código passado com os privilégios do caller. Se você executar o `eval()` com uma sequência de caracteres que podem ser afetados por uma parte maliciosa, você pode acabar executando código malicioso na máquina do usuário com as permissões da sua página/extensão. Mais importante ainda, o código de terceiros pode ver o escopo em que `eval()` foi chamado, o que pode levar a possíveis ataques como {{jsxref("Global_Objects/Function", "Function")}} não é suscetível.
 
 `eval()` é geralmente mais lento do que as alternativas, uma vez que tem de invocar o interpretador JS, enquanto muitos outros construtores são otimizados por _engines_ de JS modernos.
 
@@ -77,7 +77,7 @@ var propname = getPropName();  //retorna "a" ou "b"
 eval( "var result = obj." + propname );
 ```
 
-No entanto, `eval()` não é necessário aqui. De fato, sua utilização não é recomendada. Ao invés disso, utilize os [operadores de acesso](/pt-BR/docs/Web/JavaScript/Reference/Operators/Member_Operators "JavaScript/Reference/Operators/Member_Operators"), que são mais rápidos e seguros:
+No entanto, `eval()` não é necessário aqui. De fato, sua utilização não é recomendada. Ao invés disso, utilize os [operadores de acesso](/pt-BR/docs/Web/JavaScript/Reference/Operators/Member_Operators), que são mais rápidos e seguros:
 
 ```js
 var obj = { a: 20, b: 30 };
@@ -97,21 +97,21 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-[Closures](/pt-BR/docs/Web/JavaScript/Guide/Closures "JavaScript/Guide/Closures") são úteis como forma de criar funcções parametrizáveis sem concatenar strings.
+[Closures](/pt-BR/docs/Web/JavaScript/Guide/Closures) são úteis como forma de criar funcções parametrizáveis sem concatenar strings.
 
 ### Analisando JSON (convertendo string para objetos JavaScript)
 
-Se a string para a qual você está chamando o `eval() contém dados `(por exemplo, um array: `"[1, 2, 3]"`), ao invés de código, você deve considerar mudar para [JSON](/pt-BR/docs/JSON "JSON"), que permite a string usar um subconjunto de sintaxe Javascript para representar dados. Veja também [Downloading JSON and JavaScript in extensions](/pt-BR/docs/Downloading_JSON_and_JavaScript_in_extensions "Downloading_JSON_and_JavaScript_in_extensions").
+Se a string para a qual você está chamando o `eval()` contém dados (por exemplo, um array: `"[1, 2, 3]"`), ao invés de código, você deve considerar mudar para [JSON](/pt-BR/docs/JSON), que permite a string usar um subconjunto de sintaxe Javascript para representar dados. Veja também [Downloading JSON and JavaScript in extensions](/pt-BR/docs/Downloading_JSON_and_JavaScript_in_extensions).
 
 Perceba que como a sintaxe JSON é limitada comparada com a sintaxe JavaScript, muitos literais JavaScript válidos não serão analisados como JSON. Por exemplo, trailing commas não são permitidas em JSON, e nomes de propriedades (keys) em literais de objetos devem ser colocados entre aspas. Certifique-se de usar um serializados JSON para gerar strings que serão analisadas como JSON mais tarde.
 
 ### Passar dados em vez de códigos
 
-Por exemplo, uma extensão concebida para raspar conteúdos de páginas web pode ter as regras de raspagem definidas no [XPath](/pt-BR/docs/XPath "XPath") em vez de código JavaScript.
+Por exemplo, uma extensão concebida para raspar conteúdos de páginas web pode ter as regras de raspagem definidas no [XPath](/pt-BR/docs/XPath) em vez de código JavaScript.
 
 ### Rodando o código com privilégios limitados
 
-Se você precisa executar o código, considere executá-lo com privilégios limitados. Esse conselho se aplica principalmente para extensões e aplicações XUL, que podem usar [Components.utils.evalInSandbox](/pt-BR/docs/Components.utils.evalInSandbox "Components.utils.evalInSandbox") para obter o resultado.
+Se você precisa executar o código, considere executá-lo com privilégios limitados. Esse conselho se aplica principalmente para extensões e aplicações XUL, que podem usar [Components.utils.evalInSandbox](/pt-BR/docs/Components.utils.evalInSandbox) para obter o resultado.
 
 ## Exemplos
 

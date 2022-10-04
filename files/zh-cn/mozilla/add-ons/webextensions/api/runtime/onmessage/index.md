@@ -2,6 +2,7 @@
 title: runtime.onMessage
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 ---
+
 {{AddonSidebar()}}利用此事件来监听来自你的扩展其他部分的消息。例如，使用：
 
 - in a [content script](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts), to listen for messages from a [background script.](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)
@@ -91,7 +92,7 @@ Events have three functions:
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.runtime.onMessage")}}
+{{Compat}}
 
 ## Examples
 

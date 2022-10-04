@@ -2,6 +2,7 @@
 title: パブリッククラスフィールド
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 パブリックフィールドは、静的なものもインスタンスのものも書き込み可能、列挙可能、構成可能です。そのため、プライベートなものとは異なり、プロトタイプの継承に参加します。

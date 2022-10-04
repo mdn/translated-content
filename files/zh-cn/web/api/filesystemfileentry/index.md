@@ -2,6 +2,7 @@
 title: FileSystemFileEntry
 slug: Web/API/FileSystemFileEntry
 ---
+
 {{APIRef("File System API")}}{{Non-standard_header}}
 
 [文件系统 API](/zh-CN/DOM/File_API/File_System_API) 的 **`FileSystemFileEntry`** 接口表示文件系统中的文件。它提供了属性，描述文件的属性，以及 {{domxref("FileSystemFileEntry.file", "file()")}} 方法，它创建了可以用于读取文件的 {{domxref("File")}} 对象。
@@ -66,7 +67,7 @@ window.requestFileSystem(window.TEMPORARY, 1024*1024, onInitFs, errorHandler);
 
 ## 浏览器兼容性
 
-{{Compat("api.FileSystemFileEntry")}}
+{{Compat}}
 
 ## 另见
 

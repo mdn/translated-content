@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/unique
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`unique`**, rattachée à l'interface `IDBIndex`, est un booléen qui indique si l'index utilisé permet d'avoir des clés dupliquées.

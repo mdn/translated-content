@@ -2,6 +2,7 @@
 title: <plaintext>
 slug: Web/HTML/Element/plaintext
 ---
+
 {{deprecated_header}}
 
 ## 概述

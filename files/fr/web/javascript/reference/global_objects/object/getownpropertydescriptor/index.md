@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 La méthode **`Object.getOwnPropertyDescriptor()`** renvoie un descripteur de la propriété propre d'un objet (c'est-à-dire une propriété directement présente et pas héritée via la chaîne de prototypes).

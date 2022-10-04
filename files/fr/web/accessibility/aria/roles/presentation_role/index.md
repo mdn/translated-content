@@ -8,6 +8,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role
 ---
+
 Cette page présente l'usage du rôle [`presentation`](https://www.w3.org/TR/wai-aria-practices-1.1/#presentation_role) et décrit l'effet qu'il a sur les navigateurs et les technologies d'assistance.
 
 ## Description

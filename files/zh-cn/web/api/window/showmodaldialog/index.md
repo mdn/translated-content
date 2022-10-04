@@ -2,6 +2,7 @@
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
 ---
+
 {{ deprecated_header() }}{{APIRef}}
 
 **`Window.showModalDialog()`** 用于创建和展示一个指向特定网页的模态对话框。

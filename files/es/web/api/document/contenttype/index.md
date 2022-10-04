@@ -19,7 +19,6 @@ contentType = document.contentType;
 
 Esta propiedad no es afectada por los tags meta.
 
-
 ## Especificaciones
 
 {{Specifications}}

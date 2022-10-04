@@ -34,7 +34,7 @@ var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
 
 ## 瀏覽器相容性
 
-{{Compat("api.Blob.Blob")}}
+{{Compat}}
 
 ## 參見
 

@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/function-available
 original_slug: Web/XPath/Fonctions/function-available
 ---
+
 {{ XsltRef() }}
 
 La fonction `function-available` détermine si une fonction donnée est disponible et retourne le booléen `true` ou `false`.

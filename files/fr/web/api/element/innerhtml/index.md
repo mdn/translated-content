@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/Element/innerHTML
 original_slug: Web/API/Element/innertHTML
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Element.innerHTML`** de {{domxref("Element")}} récupère ou définit la syntaxe HTML décrivant les descendants de l'élément.

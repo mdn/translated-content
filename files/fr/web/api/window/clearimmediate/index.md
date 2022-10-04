@@ -8,6 +8,7 @@ tags:
   - Window
 translation_of: Web/API/Window/clearImmediate
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}}.

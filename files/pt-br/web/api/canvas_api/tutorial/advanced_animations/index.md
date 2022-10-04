@@ -12,7 +12,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Advanced_animations
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
-No último capítulo nós fizemos algumas [animações básicas ](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_animations)e fomos conhecer caminhos para conseguir com que as coisas se movessem. Nesta parte prestaremos mais atenção nos movimentos e vamos adicionar algumas físicas para fazer nossas animações mais avançadas.
+No último capítulo nós fizemos algumas [animações básicas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_animations) e fomos conhecer caminhos para conseguir com que as coisas se movessem. Nesta parte prestaremos mais atenção nos movimentos e vamos adicionar algumas físicas para fazer nossas animações mais avançadas.
 
 ## Desenhe uma bola
 
@@ -305,7 +305,7 @@ ball.draw();
 
 ## Adicione um controle de mouse
 
-Para conseguir alguns controles sobre a bola, nós podemos fazer isto seguindo nosso mouse usando o evento [mouseover](/pt-BR/docs/Web/Reference/Events/mousemove), por exemplo. O [clique ](/pt-BR/docs/Web/Events/click)por exemplo. O evento `clique que` libera a bola e deixa seu limite de novo.
+Para conseguir alguns controles sobre a bola, nós podemos fazer isto seguindo nosso mouse usando o evento [mouseover](/pt-BR/docs/Web/Reference/Events/mousemove), por exemplo. O [clique](/pt-BR/docs/Web/Events/click) por exemplo. O evento `clique que` libera a bola e deixa seu limite de novo.
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>

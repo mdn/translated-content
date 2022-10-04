@@ -8,6 +8,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/hkern
 ---
+
 {{SVGRef}}
 
 La distance horizontale entre deux glyphes peut être ajustée minutieusement avec l'élément hkern. Ce proccessus est appelé [Crénage](https://fr.wikipedia.org/wiki/Cr%C3%A9nage).

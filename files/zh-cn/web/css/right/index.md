@@ -2,6 +2,7 @@
 title: right
 slug: Web/CSS/right
 ---
+
 {{CSSRef}}
 
 **`right`** [CSS](/zh-CN/docs/Web/CSS) 属性定义了定位元素的右外边距边界与其包含块右边界之间的偏移，非定位元素设置此属性无效。

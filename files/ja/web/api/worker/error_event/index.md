@@ -5,6 +5,7 @@ original_slug: Web/API/Worker/onerror
 l10n:
   sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`error`** は {{domxref("Worker")}} インターフェイスのイベントで、ワーカーでエラーが発生したときに発行されます。

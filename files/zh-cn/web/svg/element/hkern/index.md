@@ -2,6 +2,7 @@
 title: hkern
 slug: Web/SVG/Element/hkern
 ---
+
 {{SVGRef}}
 
 在自上而下的字体中，`hkern`元素可以精细调整两个雕刻文字的水平距离。这个处理就是”[字距处理](http://en.wikipedia.org/wiki/Kerning)“

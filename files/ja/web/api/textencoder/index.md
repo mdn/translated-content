@@ -2,6 +2,7 @@
 title: TextEncoder
 slug: Web/API/TextEncoder
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextEncoder`** はコードポイントのストリームを入力として受け取り、 UTF-8 のバイトストリームを出力します。

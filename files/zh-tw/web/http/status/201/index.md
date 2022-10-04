@@ -19,7 +19,7 @@ HTTP **`201 Created`** 成功狀態碼表示請求成功且有一個新的資源
 
 ## 瀏覽器相容性
 
-{{Compat("http.status.201")}}
+{{Compat}}
 
 ## 參見
 

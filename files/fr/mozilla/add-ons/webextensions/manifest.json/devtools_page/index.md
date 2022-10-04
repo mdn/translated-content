@@ -11,6 +11,7 @@ tags:
   - devtools_page
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

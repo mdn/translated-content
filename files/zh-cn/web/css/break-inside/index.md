@@ -2,6 +2,7 @@
 title: break-inside
 slug: Web/CSS/break-inside
 ---
+
 {{CSSRef}}
 
 **`break-inside`** [CSS](/zh-CN/docs/CSS) 属性描述了在多列布局页面下的内容盒子如何中断，如果多列布局没有内容盒子，这个属性会被忽略。
@@ -48,4 +49,4 @@ break-inside: avoid-region;
 
 ## Browser compatibility
 
-{{Compat("css.properties.break-inside", 4)}}
+{{Compat}}

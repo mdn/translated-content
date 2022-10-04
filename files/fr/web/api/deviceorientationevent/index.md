@@ -13,6 +13,7 @@ tags:
   - évènements
 translation_of: Web/API/DeviceOrientationEvent
 ---
+
 {{ApiRef}}{{SeeCompatTable}}
 
 ## Sommaire

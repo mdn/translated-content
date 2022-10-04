@@ -2,6 +2,7 @@
 title: Touch.identifier
 slug: Web/API/Touch/identifier
 ---
+
 {{ APIRef("Touch Events") }}{{SeeCompatTable}}
 
 **`Touch.identifier`** はタッチ面に接触した点を識別する固有の値を返します。この値は、タッチ面上でのこの指 (またはスタイラス) の動きに関わるすべてのイベントに対して、タッチ面から離れるまで一貫したものです。

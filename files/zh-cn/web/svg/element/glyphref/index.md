@@ -2,6 +2,7 @@
 title: glyphRef
 slug: Web/SVG/Element/glyphRef
 ---
+
 {{SVGRef}}
 
 `glyphRef`元素为引用的{{ SVGElement("altGlyph") }} 替代物提供了一个唯一可能的字形。
@@ -38,7 +39,7 @@ slug: Web/SVG/Element/glyphRef
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.glyphRef")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,6 +2,7 @@
 title: '<shadow>: 廃止されたシャドウルート要素'
 slug: Web/HTML/Element/Shadow
 ---
+
 {{deprecated_header}}
 
 **HTML `<shadow>`** 要素 ([Web Components](/ja/docs/Web/Web_Components) 技術スイートの廃止された部分) は shadow DOM の {{glossary("insertion point")}} として使用するものでした。 shadow ホスト配下に複数の shadow ルートを生成する場合に使用しました。これは通常の HTML としては役立ちません。
@@ -59,7 +60,7 @@ slug: Web/HTML/Element/Shadow
 
 これは `<shadow>` 要素を使用したシンプルな例です。必要な要素がすべて 1 つの HTML ファイルに含まれています。
 
-> **Note:** **メモ:** これは実験的な機能です。このコードを実行するには、これを表示するブラウザーが Web Components をサポートしている必要があります。[Enabling Web Components in Firefox](/ja/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox) を参照してください。
+> **メモ:** これは実験的な機能です。このコードを実行するには、これを表示するブラウザーが Web Components をサポートしている必要があります。[Enabling Web Components in Firefox](/ja/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox) を参照してください。
 
 ```html
 <html>

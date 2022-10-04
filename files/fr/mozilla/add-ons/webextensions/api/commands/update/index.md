@@ -12,6 +12,7 @@ tags:
   - commands
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/update
 ---
+
 {{AddonSidebar()}}
 
 Changez la description ou le raccourci clavier pour la commande donnée.

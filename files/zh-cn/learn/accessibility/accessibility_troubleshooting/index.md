@@ -2,6 +2,7 @@
 title: 'Assessment: Accessibility troubleshooting'
 slug: Learn/Accessibility/Accessibility_troubleshooting
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 In the assessment for this module, we present to you a simple site with a number of accessibility issues that you need to diagnose and fix.

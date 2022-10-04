@@ -85,4 +85,4 @@ p::before {
 
 ## 瀏覽器相容性
 
-{{Compat("css.types.attr")}}
+{{Compat}}

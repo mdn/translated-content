@@ -4,6 +4,7 @@ slug: Web/CSS/gradient/conic-gradient
 translation_of: Web/CSS/gradient/conic-gradient
 browser-compat: css.types.image.gradient.conic-gradient
 ---
+
 {{CSSRef}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`conic-gradient()`** permet de créer une image constituée d'un dégradé radial pour lequel les transitions entre les couleurs ont lieu autour d'un centre plutôt que depuis le centre. Un dégradé conique pourra par exemple de dessiner un graphique en camembert. Le résultat de la fonction `conic-gradient()` est un objet du type de données [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un type particulier d'[`<image>`](/fr/docs/Web/CSS/image).

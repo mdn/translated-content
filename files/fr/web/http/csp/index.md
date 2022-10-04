@@ -8,6 +8,7 @@ tags:
   - Security
 translation_of: Web/HTTP/CSP
 ---
+
 {{HTTPSidebar}}
 
 **Une _Content Security Policy ({{Glossary("CSP")}})_ ou stratégie de sécurité du contenu** permet d'améliorer la sécurité des sites web en permettant de détecter et réduire certains types d'attaques, dont les attaques {{Glossary("XSS")}} (_Cross Site Scripting_) et les injections de contenu. Ces attaques peuvent être utilisées dans divers buts, comme le vol de données, le défacement de site ou la diffusion de _malware_.

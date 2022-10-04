@@ -2,6 +2,7 @@
 title: HTMLSelectElement.type
 slug: Web/API/HTMLSelectElement/type
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.type`** は読み取り専用のプロパティで、フォームコントロールの `type` を返します。

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Maintenant que notre programme peut faire tourner un cube 3D, appliquons lui une texture, au lieu d'avoir des couleurs unies pour ses faces.

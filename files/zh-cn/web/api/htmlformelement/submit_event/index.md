@@ -2,6 +2,7 @@
 title: 'HTMLFormElement: submit event'
 slug: Web/API/HTMLFormElement/submit_event
 ---
+
 {{APIRef}}
 
 当表单 {{HtmlElement("form")}} 提交的时候触发 `submit` 事件。

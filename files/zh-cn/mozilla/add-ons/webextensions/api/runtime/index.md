@@ -2,6 +2,7 @@
 title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
 ---
+
 {{AddonSidebar}}
 
 该模块提供关于附加组件以及运行环境的信息。

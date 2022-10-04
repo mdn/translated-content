@@ -10,6 +10,7 @@ tags:
   - Noeuds
 translation_of: Web/API/DocumentFragment
 ---
+
 {{ ApiRef("DOM") }}
 
 L’interface **`DocumentFragment`** représente un objet document minimal qui n’a pas de parent. Il est utilisé comme une version légère de {{domxref("Document")}} pour stocker un segment de structure de document composé de nœuds, tout comme un document standard. La différence fondamentale est que, comme le fragment de document ne fait pas réellement partie de la structure du DOM, les changements faits au fragment n’affectent pas le document, ne causent pas de {{Glossary("Reflow")}} , et ne provoquent pas les éventuels impacts de performance qui peuvent avoir lieu quand des changements sont faits.

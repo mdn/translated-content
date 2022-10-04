@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toDateString
 ---
+
 {{JSRef}}
 
 La méthode **`toDateString()`** renvoie la date contenue dans un objet {{jsxref("Date")}} sous la forme d'une chaîne de caractères lisible par un humain, en anglais américain et au format suivant :

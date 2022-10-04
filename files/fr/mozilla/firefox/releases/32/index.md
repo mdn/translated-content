@@ -6,6 +6,7 @@ tags:
   - TopicStub
 translation_of: Mozilla/Firefox/Releases/32
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers

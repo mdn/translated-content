@@ -6,6 +6,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/transform
 ---
+
 {{SVGRef}}
 
 L'attribut **`transform`** définit une liste de définitions de transformation qui sont appliquées à l'élément ainsi qu'à ses éléments fils.

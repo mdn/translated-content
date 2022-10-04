@@ -2,6 +2,7 @@
 title: Node.nodeName
 slug: Web/API/Node/nodeName
 ---
+
 {{APIRef}}概述
 
 返回当前节点的节点名称
@@ -52,9 +53,9 @@ var text_field = document.getElementById("t");
 text_field.value = div1.nodeName;
 ```
 
-在 XHTML(以及属于 XML 类型的文档) 中，`变量 text_field`包含的值会是小写的"div".还在 HTML 中，`变量 text_field`包含的值会是大写的"DIV",`nodeName`和`tagName`属性都有这种表现。查看[details on nodeName case sensitivity in different browsers](http://ejohn.org/blog/nodename-case-sensitivity/)一文深入了解。
+在 XHTML(以及属于 XML 类型的文档) 中，变量 `text_field` 包含的值会是小写的"div".还在 HTML 中，变量 `text_field`包含的值会是大写的"DIV", `nodeName` 和 `tagName` 属性都有这种表现。查看[details on nodeName case sensitivity in different browsers](http://ejohn.org/blog/nodename-case-sensitivity/)一文深入了解。
 
-如果是元素节点，`nodeName` 属性和 `tagName` 属性返回相同的值，但如果是文本节点，`nodeName`属性会返回 `"#text"`，而 `tagName` 属性会返回 `undefined`。
+如果是元素节点，`nodeName` 属性和 `tagName` 属性返回相同的值，但如果是文本节点，`nodeName` 属性会返回 `"#text"`，而 `tagName` 属性会返回 `undefined`。
 
 ## 规范
 

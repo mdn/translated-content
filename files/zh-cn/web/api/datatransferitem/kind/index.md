@@ -2,6 +2,7 @@
 title: DataTransferItem.kind
 slug: Web/API/DataTransferItem/kind
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransferItem.kind`** 是一个只读属性，它返回一个 {{domxref("DataTransferItem")}} 用来表示拖拽项 (_drag data item) 的类型_: 一些文本或者一些文件。

@@ -3,6 +3,7 @@ title: HTMLButtonElement.labels
 slug: Web/API/HTMLButtonElement/labels
 translation_of: Web/API/HTMLButtonElement/labels
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`HTMLButtonElement.labels`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments {{HTMLElement("label")}} (_étiquette_) associés avec l'élément {{HTMLElement("button")}} (_bouton_).

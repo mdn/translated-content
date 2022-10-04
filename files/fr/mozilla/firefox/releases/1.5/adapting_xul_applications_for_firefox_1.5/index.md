@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
 original_slug: Adaptation_des_applications_XUL_pour_Firefox_1.5
 ---
+
 {{FirefoxSidebar}}
 
 Cette page contient une liste des modifications de [Firefox 1.5](fr/Firefox_1.5) qui concernent les développeurs XUL.

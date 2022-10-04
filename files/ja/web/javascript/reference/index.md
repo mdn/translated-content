@@ -2,6 +2,7 @@
 title: JavaScript リファレンス
 slug: Web/JavaScript/Reference
 ---
+
 {{JsSidebar}}
 
 MDN のこの JavaScript の章は、JavaScript 言語についての情報倉庫となっています。詳しくは[このリファレンスについて](/ja/docs/Web/JavaScript/Reference/About)を読んでください。

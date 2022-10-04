@@ -17,7 +17,9 @@ El código de respuesta `203` es similar al código [`214`](/en-US/docs/Web/HTTP
 
 ## Status
 
-    203 Non-Authoritative Information
+```
+203 Non-Authoritative Information
+```
 
 ## Specifications
 

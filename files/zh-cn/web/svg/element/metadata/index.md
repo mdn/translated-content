@@ -2,6 +2,7 @@
 title: metadata
 slug: Web/SVG/Element/metadata
 ---
+
 {{SVGRef}}
 
 `metadata`是数据的结构化数据。SVG 内容里面包含的元数据必须放在`metadata`元素里面。`medatata`的内容物必须是来自其它 XML 命名空间的元素，比如说 RDF、FOAT，等等。
@@ -28,4 +29,4 @@ _没有专有属性_
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.metadata")}}
+{{Compat}}

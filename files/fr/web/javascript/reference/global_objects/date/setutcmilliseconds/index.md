@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCMilliseconds
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCMilliseconds()`** définit les millièmes de secondes pour la date, selon UTC.

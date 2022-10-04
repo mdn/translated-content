@@ -4,6 +4,7 @@ slug: Web/CSS/clip-path
 translation_of: Web/CSS/clip-path
 browser-compat: css.properties.clip-path
 ---
+
 {{CSSRef}}
 
 La propriété **`clip-path`** empêche une portion d'un élément d'être affichée en définissant une région de rognage. Seule une zone spécifique de l'élément sera affichée.

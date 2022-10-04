@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/message
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/message
 ---
+
 {{JSRef}}
 
 La propriété **`message`** est une description de l'erreur, écrite pour être lue par un humain.

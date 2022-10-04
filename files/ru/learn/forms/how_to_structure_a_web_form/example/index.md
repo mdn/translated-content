@@ -47,21 +47,21 @@ This the example for a basic payment form for the article [How to structure an H
     </fieldset>
     <p>
       <label for="name">
-        <span>Name: </span>
+        Name: 
         <strong><abbr title="required">*</abbr></strong>
       </label>
       <input type="text" id="name" name="username">
     </p>
     <p>
       <label for="mail">
-        <span>E-mail: </span>
+        E-mail: 
         <strong><abbr title="required">*</abbr></strong>
       </label>
       <input type="email" id="mail" name="usermail">
     </p>
     <p>
       <label for="pwd">
-        <span>Password: </span>
+        Password: 
         <strong><abbr title="required">*</abbr></strong>
       </label>
       <input type="password" id="pwd" name="password">
@@ -71,7 +71,7 @@ This the example for a basic payment form for the article [How to structure an H
     <h2>Payment information</h2>
     <p>
       <label for="card">
-        <span>Card type:</span>
+        Card type:
       </label>
       <select id="card" name="usercard">
         <option value="visa">Visa</option>
@@ -81,14 +81,14 @@ This the example for a basic payment form for the article [How to structure an H
     </p>
     <p>
       <label for="number">
-        <span>Card number:</span>
+        Card number:
         <strong><abbr title="required">*</abbr></strong>
       </label>
       <input type="tel" id="number" name="cardnumber">
     </p>
     <p>
       <label for="date">
-        <span>Expiration date:</span>
+        Expiration date:
         <strong><abbr title="required">*</abbr></strong>
         <em>formatted as mm/dd/yyyy</em>
       </label>

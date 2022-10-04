@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getMonth
 ---
+
 {{JSRef}}
 
 La méthode **`getMonth()`** retourne le mois de la date renseignée d'après l'heure locale. La numérotation démarre à 0 (c'est-à-dire que 0 correspond au premier mois de l'année).

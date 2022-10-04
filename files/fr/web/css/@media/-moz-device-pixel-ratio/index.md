@@ -9,6 +9,7 @@ tags:
   - Non-standard
 translation_of: Web/CSS/@media/-moz-device-pixel-ratio
 ---
+
 {{cssref}} {{Non-standard_header}} {{Deprecated_header}}
 
 La [caractéristique média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#ciblfer_des_caract%c3%a9ristiques_m%c3%a9dia) **`-moz-device-pixel-ratio`**, associée à [`@media`](/fr/docs/Web/CSS/@media), est une caractéristique propre à Gecko et peut être utilisée pour appliquer certains styles en fonctions du nombres de pixels physiques par pixel CSS.

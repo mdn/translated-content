@@ -58,7 +58,7 @@ body  { text-rendering: optimizeLegibility; }
 
 ### Gecko Notes
 
-O valor padrão de 20px para `auto` pode ser alterado na propriedade `browser.display.auto_quality_min_font_size `do navegador.
+O valor padrão de 20px para `auto` pode ser alterado na propriedade `browser.display.auto_quality_min_font_size` do navegador.
 
 A opção optimizeSpeed não tem efeito na versão 2.0 do Gecko {{ geckoRelease("2.0") }}, devido ao código padrão de renderização de texto que já é muito rápido e não existe até o momento um código mais rápido para esse trabalho. Veja detalhes em {{ bug(595688) }}.
 

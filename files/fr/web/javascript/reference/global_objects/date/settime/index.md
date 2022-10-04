@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setTime
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setTime
 ---
+
 {{JSRef}}
 
 La méthode **`setTime()`** met l'objet {{jsxref("Date")}} à jour par rapport au nombre de millisecondes depuis le 1 janvier 1970, 00:00:00 UTC.

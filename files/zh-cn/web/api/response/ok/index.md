@@ -2,6 +2,7 @@
 title: Response.ok
 slug: Web/API/Response/ok
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 {{domxref("Response")}} 接口的只读属性 **`ok`** 包含一个布尔值，表明响应是否成功（状态码在 200-299 范围内）.
@@ -42,7 +43,7 @@ fetch(myRequest).then(function(response) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.ok")}}
+{{Compat}}
 
 ## 相关链接
 

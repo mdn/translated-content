@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
 ---
+
 {{APIRef}}
 
 Canvas 2D API 中的 **`CanvasRenderingContext2D.drawImage()`** 方法提供了多种在画布（Canvas）上绘制图像的方式。
