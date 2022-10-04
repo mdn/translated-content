@@ -5,7 +5,7 @@ slug: Web/API/ResizeObserver/ResizeObserver
 
 {{APIRef("Resize Observer API")}}
 
-**`ResizeObserver`** 构造函数创建一个新的{{domxref("ResizeObserver")}} 对象，它可以用于监听 {{domxref('Element')}} 内容盒或边框盒或者 {{domxref('SVGElement')}} 边界尺寸的大小。
+**`ResizeObserver`** 构造函数创建一个新的 {{domxref("ResizeObserver")}} 对象，它可以用于监听 {{domxref('Element')}} 内容盒或边框盒或者 {{domxref('SVGElement')}} 边界尺寸的大小。
 
 ## 语法
 
