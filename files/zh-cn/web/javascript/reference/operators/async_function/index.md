@@ -9,6 +9,7 @@ original_slug: Web/JavaScript/Reference/Operators/async
 **`async function`** 关键字用来在表达式中定义异步函数。当然，你也可以用[异步函数语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)来定义。
 
 ## 语法
+
 ```js-nolint
 async function (param0) {
   statements
