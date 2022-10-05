@@ -6167,10 +6167,6 @@
       "azunyan3"
     ]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2019-03-23T22:40:12.545Z",
-    "contributors": ["gblue1223"]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-05-30T06:59:50.297Z",
     "contributors": ["SDSkyKlouD", "Seia-Soto", "xfq"]
@@ -11210,6 +11206,10 @@
   "conflicting/Web/HTML": {
     "modified": "2020-01-19T02:45:39.384Z",
     "contributors": ["alattalatta"]
+  },
+  "conflicting/Web/HTML/Global_attributes/contenteditable": {
+    "modified": "2019-03-23T22:40:12.545Z",
+    "contributors": ["gblue1223"]
   },
   "conflicting/Web/HTTP": {
     "modified": "2020-02-05T12:28:02.372Z",
