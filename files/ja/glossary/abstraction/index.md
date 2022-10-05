@@ -39,4 +39,4 @@ obj.display();
 
 ### 基礎知識
 
-- Wikipedia 上の記事 「{{interwiki("wikipedia", "抽象化_(計算機科学)")}}」
+- Wikipedia 上の記事 「[抽象化_(計算機科学)](https://ja.wikipedia.org/wiki/抽象化_(計算機科学))」

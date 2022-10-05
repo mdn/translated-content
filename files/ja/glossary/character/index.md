@@ -9,8 +9,8 @@ slug: Glossary/Character
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "キャラクタ (コンピュータ)")}}
-- Wikipedia 上の {{Interwiki("wikipedia", "文字コード")}}
-- Wikipedia 上の {{Interwiki("wikipedia", "ASCII")}}
-- Wikipedia 上の {{Interwiki("wikipedia", "UTF-8")}}
-- Wikipedia 上の {{Interwiki("wikipedia", "Unicode")}}
+- Wikipedia 上の [キャラクタ (コンピュータ)](https://ja.wikipedia.org/wiki/キャラクタ_(コンピュータ))
+- Wikipedia 上の [文字コード](https://ja.wikipedia.org/wiki/文字コード)
+- Wikipedia 上の [ASCII](https://ja.wikipedia.org/wiki/ASCII)
+- Wikipedia 上の [UTF-8](https://ja.wikipedia.org/wiki/UTF-8)
+- Wikipedia 上の [Unicode](https://ja.wikipedia.org/wiki/Unicode)

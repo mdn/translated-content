@@ -9,5 +9,5 @@ slug: Glossary/Domain_name
 
 ### 基礎知識
 
-- Wikipedia 上の記事: {{interwiki("wikipedia", "ドメイン名")}}
+- Wikipedia 上の記事: [ドメイン名](https://ja.wikipedia.org/wiki/ドメイン名)
 - [ドメイン名を理解する](/ja/docs/Learn/Common_questions/What_is_a_domain_name)
