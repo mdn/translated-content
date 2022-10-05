@@ -9,7 +9,7 @@ slug: Glossary/Specification
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "Specification")}}
+- Wikipedia 上の [仕様](https://ja.wikipedia.org/wiki/仕様)
 
 ### 技術リファレンス
 

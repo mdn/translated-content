@@ -17,7 +17,7 @@ WCAG には 3 つの適合レベルが定義されています :
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "Web Content Accessibility Guidelines", "WCAG")}}
+- Wikipedia の [WCAG](https://ja.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines)
 
 ### Technical knowledge
 
