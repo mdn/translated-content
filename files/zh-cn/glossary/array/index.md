@@ -18,4 +18,4 @@ let catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 ## 参见
 
 - 维基百科的[数组](https://zh.wikipedia.org/wiki/数组)词条
-- MDN {{jsxref("Array")}} 参考
+- MDN JavaScript {{jsxref("Array")}} 参考
