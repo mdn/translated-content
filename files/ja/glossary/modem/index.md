@@ -11,4 +11,4 @@ slug: Glossary/Modem
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "モデム")}}
+- Wikipedia 上の [モデム](https://ja.wikipedia.org/wiki/モデム)
