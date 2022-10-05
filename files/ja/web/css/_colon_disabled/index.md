@@ -16,7 +16,9 @@ input:disabled {
 
 ## 構文
 
-{{csssyntax}}
+```
+:disabled
+```
 
 ## 例
 

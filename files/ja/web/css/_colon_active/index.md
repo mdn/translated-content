@@ -22,7 +22,9 @@ a:active {
 
 ## 構文
 
-{{csssyntax}}
+```
+:active
+```
 
 ## 例
 

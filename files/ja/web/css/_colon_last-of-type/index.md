@@ -18,7 +18,9 @@ p:last-of-type {
 
 ## 構文
 
-{{csssyntax}}
+```
+:last-of-type
+```
 
 ## 例
 

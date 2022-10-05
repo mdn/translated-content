@@ -20,7 +20,9 @@ slug: Web/CSS/:left
 
 ## 構文
 
-{{csssyntax}}
+```
+:left
+```
 
 ## 例
 
