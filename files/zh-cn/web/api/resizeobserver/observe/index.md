@@ -17,10 +17,10 @@ observe(target, options)
 ### 参数
 
 - `target`
-  - : 对要的监视 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 元素的引用。
+  - : 对要监视的 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 的引用。
 - `options` {{optional_inline}}
 
-  - : 一个可选的对象，允许你为监视的对象设置参数。目前，这只有一个参数可选：
+  - : 一个可选的对象，允许你为监视的对象设置参数。目前，这只有一个参数：
 
     - `box`
 
@@ -31,7 +31,7 @@ observe(target, options)
         - `border-box`
           - : CSS中定义的边框区域的大小。
         - `device-pixel-content-box`
-          - : 在对元素或其祖先应用任何 CSS 转换之前，CSS中定义的内容区域的大小，以设备像素为单位。
+          - : 在对元素或其祖先应用任何 CSS 转换之前，CSS 中定义的内容区域的大小，以设备像素为单位。
 
 ### 返回值
 
