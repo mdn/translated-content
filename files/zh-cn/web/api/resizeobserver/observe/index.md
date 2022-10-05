@@ -5,7 +5,7 @@ slug: Web/API/ResizeObserver/observe
 
 {{APIRef("Resize Observer API")}}
 
-{{domxref("ResizeObserver")}} 接口的 **`observe()`** 开始监听指定的 {{domxref('Element')}} 或 {{domxref('SVGElement')}}.
+{{domxref("ResizeObserver")}} 接口的 **`observe()`** 方法用于监听指定的 {{domxref('Element')}} 或 {{domxref('SVGElement')}}。
 
 ## 语法
 
