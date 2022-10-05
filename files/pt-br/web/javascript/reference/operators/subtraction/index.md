@@ -48,8 +48,8 @@ x - y
 
 - [Operador de adição](/pt-BR/docs/Web/JavaScript/Reference/Operators/Addition)
 - [Operador de  divisão](/pt-BR/docs/Web/JavaScript/Reference/Operators/Division)
-- [Operador de multiplicação ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [ Operador de restante ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Operador de multiplicação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Operador de restante](/pt-BR/docs/Web/JavaScript/Reference/Operators/Remainder)
 - [Operador de exponenciação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Exponentiation)
 - [Operador de incremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Inmrement)
 - [Operador de decremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Decrement)

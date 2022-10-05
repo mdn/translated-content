@@ -21,6 +21,10 @@ slug: Web/CSS/:nth-last-child
 
 `nth-last-child` 擬似クラスは、要素を選択する最後から数えるパターンを表す引数を 1 つ取ります。
 
+```
+:nth-last-child( <nth> [ of <complex-selector-list> ]? )
+```
+
 ### キーワード値
 
 - `odd`
@@ -32,10 +36,6 @@ slug: Web/CSS/:nth-last-child
 
 - `<An+B>`
   - : 一連の兄弟要素の中で、 `n` に正の整数か0が入るとき、 `An+B` のパターンに一致する位置の要素を表します。後ろから数えた最初の要素の番号は `1` です。 `A` と `B` の値は両方とも {{cssxref("&lt;integer&gt;")}} です。
-
-### 形式文法
-
-{{csssyntax}}
 
 ## 例
 
