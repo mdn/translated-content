@@ -21752,21 +21752,6 @@
       "FredWe"
     ]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2020-09-22T00:31:12.632Z",
-    "contributors": [
-      "imarco",
-      "YogurtQ",
-      "xianghui-ma",
-      "Hew007",
-      "zhuangyin",
-      "jamesxu",
-      "ziyunfei",
-      "teoli",
-      "sunnylost",
-      "ethertank"
-    ]
-  },
   "Web/Guide/Houdini": {
     "modified": "2020-11-21T05:08:58.458Z",
     "contributors": ["xusy", "bingoYB", "cutefcc", "sunfeel", "xgqfrms"]
@@ -33859,6 +33844,21 @@
       "kingysu",
       "skyfore",
       "xgqfrms-GitHub"
+    ]
+  },
+  "conflicting/Web/HTML/Global_attributes/contenteditable": {
+    "modified": "2020-09-22T00:31:12.632Z",
+    "contributors": [
+      "imarco",
+      "YogurtQ",
+      "xianghui-ma",
+      "Hew007",
+      "zhuangyin",
+      "jamesxu",
+      "ziyunfei",
+      "teoli",
+      "sunnylost",
+      "ethertank"
     ]
   }
 }
