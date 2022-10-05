@@ -59,7 +59,7 @@ Access-Control-Allow-Origin: https://developer.mozilla.org
 
 ### CORS 和缓存
 
-如果服务器未使用“`*`”，而是指定了一个域，那么为了向客户端表明服务器的返回会根据 `Origin` 请求头而有所不同，必须在{{HTTPHeader("Vary")}} 响应头中包含 `Origin`。
+如果服务器未使用“`*`”，而是指定了一个域，那么为了向客户端表明服务器的返回会根据 `Origin` 请求头而有所不同，必须在 {{HTTPHeader("Vary")}} 响应头中包含 `Origin`。
 
 ```http
 Access-Control-Allow-Origin: https://developer.mozilla.org
