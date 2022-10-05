@@ -178,4 +178,4 @@ console.log(typeof y); // indefinido já que y é uma variável local da funçã
 
 - [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)
 - [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const)
-- [How One Missing \`var\` Ruined our Launch](http://blog.safeshepherd.com/23/how-one-missing-var-ruined-our-launch/)
+- [How One Missing `var` Ruined our Launch](http://blog.safeshepherd.com/23/how-one-missing-var-ruined-our-launch/)

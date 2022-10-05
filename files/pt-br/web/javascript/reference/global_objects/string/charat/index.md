@@ -26,7 +26,7 @@ str.charAt(index)
 
 ### Valor retornado
 
-Uma string representando o caractere no índice especificado. Uma string vazia se o **`index` **fornecido estiver fora do intervalo de índices da string `str`.
+Uma string representando o caractere no índice especificado. Uma string vazia se o **`index`** fornecido estiver fora do intervalo de índices da string `str`.
 
 ## Descrição
 

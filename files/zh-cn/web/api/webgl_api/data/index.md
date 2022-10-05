@@ -64,7 +64,7 @@ fColor = vColor;
 
 ### Uniforms
 
-**Uniform** 通常是由 JavaScript 代码设置并且在 vertex shader 和 fragment shader 中都能够访问。 使用 uniform 设定在一帧的所有绘制中相同的数据，例如光源颜色、亮度、全局变换以及透视数据等等。
+**Uniform** 通常是由 JavaScript 代码设置并且在 vertex shader 和 fragment shader 中都能够访问。使用 uniform 设定在一帧的所有绘制中相同的数据，例如光源颜色、亮度、全局变换以及透视数据等等。
 
 <<添加细节>>
 

@@ -72,13 +72,11 @@ input[type="checkbox"]:checked {
 
 ## Spécifications
 
-| Spécification                                                                | État                                     | Commentaires                                                     |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#pointer', 'pointer')}} | {{Spec2('CSS4 Media Queries')}} | Ajout dans la spécification de niveau 4 pour les requêtes média. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.pointer")}}
+{{Compat}}
 
 ## Voir aussi
 

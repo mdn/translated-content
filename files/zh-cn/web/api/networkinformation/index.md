@@ -44,7 +44,7 @@ _这些属性接口同样继承自 {{domxref("EventTarget")}}._
 
 ## Browser compatibility
 
-{{Compat("api.NetworkInformation")}}
+{{Compat}}
 
 ## See also
 

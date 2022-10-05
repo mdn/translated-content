@@ -2,6 +2,7 @@
 title: Document.createComment()
 slug: Web/API/Document/createComment
 ---
+
 {{APIRef("DOM")}}
 
 **`createComment()`** は新たにコメントノードを作成し、返します。

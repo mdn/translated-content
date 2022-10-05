@@ -3,7 +3,7 @@ title: <tr>
 slug: Web/HTML/Element/tr
 ---
 
-**HTML `<tr>` 元素**定义表格中的行。 同一行可同时出现{{HTMLElement("td")}} 和{{HTMLElement("th")}} 元素。
+**HTML `<tr>` 元素**定义表格中的行。同一行可同时出现{{HTMLElement("td")}} 和{{HTMLElement("th")}} 元素。
 
 <table class="properties">
  <tbody>

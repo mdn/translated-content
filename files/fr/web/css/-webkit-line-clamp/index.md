@@ -41,6 +41,14 @@ Lorsqu'on applique ce style à une ancre, la troncature pourra intervenir au mil
 - {{cssxref("integer")}}
   - : Cette valeur indique le nombre de lignes après lequel tronquer le contenu. Cette valeur doit être supérieure à 0.
 
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
 
 ### HTML
@@ -70,15 +78,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName("CSS3 Overflow", "#propdef--webkit-line-clamp", "-webkit-line-clamp")}} | {{Spec2("CSS3 Overflow")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-line-clamp")}}
+{{Compat}}
 
 ## Voir aussi
 

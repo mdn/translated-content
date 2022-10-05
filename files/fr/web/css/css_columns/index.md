@@ -61,9 +61,7 @@ La disposition en colonnes est fortement liée aux [média paginés](/fr/docs/We
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Multicol')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

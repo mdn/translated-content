@@ -194,7 +194,7 @@ Once that's done, we create a JavaScript array containing the position for each 
 
 Once the shaders are established, the locations are looked up, and the square plane's vertex positions put in a buffer, we can actually render the scene. Since we're not animating anything in this example, our `drawScene()` function is very simple. It uses a few utility routines we'll cover shortly.
 
-> **Note:** You might get a JavaScript error saying " mat4 is not defined". This means there is a dependency on `glmatrix`. You can include [gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js) to resolve this issue, as suggested [here](https://github.com/mdn/webgl-examples/issues/20).
+> **メモ:** You might get a JavaScript error saying " mat4 is not defined". This means there is a dependency on `glmatrix`. You can include [gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js) to resolve this issue, as suggested [here](https://github.com/mdn/webgl-examples/issues/20).
 
 ```js
 function drawScene(gl, programInfo, buffers) {

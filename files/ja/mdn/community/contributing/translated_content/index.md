@@ -14,7 +14,7 @@ l10n:
 
 ## アクティブなロケール
 
-> **Note:** 既存のアクティブなロケールに協力したい場合や、現在凍結されているロケールの凍結解除について相談したい場合は、下記のアクティブなメンバーに連絡を取るか、[私たちに連絡する](/ja/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help)かしてください。
+> **メモ:** 既存のアクティブなロケールに協力したい場合や、現在凍結されているロケールの凍結解除について相談したい場合は、下記のアクティブなメンバーに連絡を取るか、[私たちに連絡する](/ja/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help)かしてください。
 
 ### ブラジルのポルトガル語 (pt-BR)
 
@@ -51,7 +51,7 @@ l10n:
 - ディスカッション: [Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
 - 現在の管理者: [JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
 
-> **Note:** 現在凍結されているロケールを解除するための議論をしたい場合は、[必要なガイドラインはこちらで得られます](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)。
+> **メモ:** 現在凍結されているロケールを解除するための議論をしたい場合は、[必要なガイドラインはこちらで得られます](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)。
 
 ## 関連情報
 

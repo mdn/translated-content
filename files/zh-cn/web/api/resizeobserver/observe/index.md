@@ -54,4 +54,4 @@ resizeObserver.observe(document.querySelector('.box:nth-child(2)'));
 
 ## 浏览器兼容性
 
-{{Compat("api.ResizeObserver.observe")}}
+{{Compat}}

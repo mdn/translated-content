@@ -84,7 +84,7 @@ var var2 = 4;
 
 | Operador                       | Descrição                                                                                                                                                                                                                   | Exemplos que retornam verdadeiro     |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| Igual (`==`)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                                                                                                                          | ` 3 == var1``"3" == var1``3 == '3' ` |
+| Igual (`==`)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                                                                                                                          | `3 == var1` `"3" == var1` `3 == '3'` |
 | Não igual (`!=`)               | Retorna verdadeiro caso os operandos não sejam iguais.                                                                                                                                                                      | `var1 != 4 var2 != "3"`              |
 | Estritamente igual (`===`)     | Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo. Veja também [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) e [igualdade em JS](/pt-BR/docs/Web/JavaScript/Guide/Sameness). | `3 === var1`                         |
 | Estritamente não igual (`!==`) | Retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo.                                                                                                                                         | `var1 !== "3" 3 !== '3'`             |
@@ -147,13 +147,13 @@ Depois:            10100000000000000110000000000001
 
 Por exemplo, a representação binária de nove é 1001 e a representação binária de quinze é 1111. Desta forma, quando operadores bit a bit são aplicados a estes valores, os resultados são como se segue:
 
-| Expressão | Resultado | Descrição binária                                                |
-| --------- | --------- | ---------------------------------------------------------------- |
-| `15 & 9`  | `9`       | `1111 & 1001 = 1001`                                             |
-| `15 \| 9` | `15`      | `1111 \| 1001 = 1111`                                            |
-| `15 ^ 9`  | `6`       | `1111 ^ 1001 = 0110`                                             |
-| `~15`     | `-16`     | ` ~``00000000...``00001111 = ``1111``1111``...``11110000 `       |
-| `~9`      | `-10`     | ` ~``00000000``...``0000``1001 = ``1111``1111``...``1111``0110 ` |
+| Expressão | Resultado | Descrição binária                                 |
+| --------- | --------- | ------------------------------------------------- |
+| `15 & 9`  | `9`       | `1111 & 1001 = 1001`                              |
+| `15 \| 9` | `15`      | `1111 \| 1001 = 1111`                             |
+| `15 ^ 9`  | `6`       | `1111 ^ 1001 = 0110`                              |
+| `~15`     | `-16`     | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
+| `~9`      | `-10`     | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
 > **Nota:** No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
 

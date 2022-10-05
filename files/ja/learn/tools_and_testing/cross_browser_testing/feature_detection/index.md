@@ -2,6 +2,7 @@
 title: 機能検出の実装
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 機能検出は、あるブラウザーがあるコードのブロックに対応しているかどうかを調べ、対応しているか (またはしていないか) に応じて異なるコードを実行することで、ブラウザーが常に動作し、ブラウザーによってクラッシュやエラーが発生しないようにします。この記事では、独自の単純な機能検出の書き方、実装をスピードアップするためのライブラリの使い方、 `@supports` などの機能検出のためのネイティブ機能について詳しく説明します。
@@ -66,11 +67,11 @@ Let's implement something that demonstrates this, although we'll keep it simple 
 
 Here we are grabbing a reference to the second `<link>` element, and creating a `<div>` element as part of our test. In our conditional statement, we test that the {{cssxref("flex")}} and {{cssxref("flex-flow")}} properties exist in the browser. Note how the JavaScript representations of those properties that are stored inside the {{domxref("HTMLElement.style")}} object use lower camel case, not hyphens, to separate the words.
 
-> **Note:** If you have trouble getting this to work, you can compare it to our [css-feature-detect-finished.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html) code (see also the [live version](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html)).
+> **メモ:** If you have trouble getting this to work, you can compare it to our [css-feature-detect-finished.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html) code (see also the [live version](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html)).
 
 When you save everything and try out your example, you should see the flexbox layout applied to the page if the browser supports modern flexbox, and the float layout if not.
 
-> **Note:** Often such an approach is overkill for a minor feature detection problem — you can often get away with using multiple vendor prefixes and fallback properties, as described in [CSS fallback behavior](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#CSS_fallback_behaviour) and [Handling CSS prefixes](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes).
+> **メモ:** Often such an approach is overkill for a minor feature detection problem — you can often get away with using multiple vendor prefixes and fallback properties, as described in [CSS fallback behavior](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#CSS_fallback_behaviour) and [Handling CSS prefixes](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes).
 
 #### @supports
 
@@ -122,7 +123,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
 | _Method on element return value_    | Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns.                                                       | See [Dive Into HTML5 Video Formats detection](http://diveinto.html5doctor.com/detect.html#video-formats) test.       |
 | _Property on element retains value_ | Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a certain value, then check to see if the value is retained.                                                         | See [Dive into HTML5 `<input>` types detection](http://diveinto.html5doctor.com/detect.html#input-types) test.       |
 
-> **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
+> **メモ:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
 
 The [Dive into HTML5 Detecting HTML5 Features](http://diveinto.html5doctor.com/detect.html) page has a lot more useful feature detection tests besides the ones listed above, and you can generally find a feature detection test for most things by searching for "detect support for YOUR-FEATURE-HERE" in your favorite search engine. Bear in mind though that some features, however, are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables).
 
@@ -200,7 +201,7 @@ It now contains a large number of classes that indicate the support status of di
 - `flexboxtweener` for 2011 in between syntax supported by IE10.
 - `flexwrap` for the {{cssxref("flex-wrap")}} property, which isn't present in some implementations.
 
-> **Note:** You can find a list of what all the class names mean — see [Features detected by Modernizr](https://modernizr.com/docs#features).
+> **メモ:** You can find a list of what all the class names mean — see [Features detected by Modernizr](https://modernizr.com/docs#features).
 
 Moving on, let's update our CSS to use Modernizr rather than `@supports`. Go into `modernizr-css.css`, and replace the two `@supports` blocks with the following:
 
@@ -239,9 +240,9 @@ Moving on, let's update our CSS to use Modernizr rather than `@supports`. Go int
 
 So how does this work? Because all those class names have been put on the `<html>` element, you can target browsers that do or don't support a feature using specific descendant selectors. So here we're applying the top set of rules only to browsers that do support flexbox, and the bottom set of rules only to browsers that don't (`no-flexbox`).
 
-> **Note:** Bear in mind that all of Modernizr's HTML and JavaScript feature tests are also reported in these class names, so you can quite happily apply CSS selectively based on whether the browser supports HTML or JavaScript features, if needed.
+> **メモ:** Bear in mind that all of Modernizr's HTML and JavaScript feature tests are also reported in these class names, so you can quite happily apply CSS selectively based on whether the browser supports HTML or JavaScript features, if needed.
 
-> **Note:** If you have trouble getting this to work, check your code against our [`modernizr-css.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html) and [`modernizr-css.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.css) files (see this running live also).
+> **メモ:** If you have trouble getting this to work, check your code against our [`modernizr-css.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html) and [`modernizr-css.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.css) files (see this running live also).
 
 ### JavaScript
 

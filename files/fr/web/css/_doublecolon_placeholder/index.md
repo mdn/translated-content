@@ -106,13 +106,11 @@ Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#placeholder-pseudo', '::placeholder')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Définitions initiales. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.placeholder")}}
+{{Compat}}
 
 ## Voir aussi
 

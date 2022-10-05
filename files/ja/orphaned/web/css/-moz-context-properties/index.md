@@ -70,7 +70,7 @@ original_slug: Web/CSS/-moz-context-properties
 
 ここで、画像の `src` に単純な SVG 画像を含む data URI を設定しました。内部の `<rect>` は、 `<img>` 要素の {{SVGAttr("fill")}} および {{SVGAttr("stroke")}} から `fill` および `stroke` の値を取り、これらの値の `context-fill`/`context-stroke` キーワードに設定して、 fill には SVG が最上位ウィンドウに単独で読み込まれた場合 (コンテンツの値を提供するコンテキストの要素がない場合) に使われる代替色 (red) を設定します。なお、色が SVG に直接設定され、コンテキストの色も設定された場合、コンテキストの色は直接設定された色を上書きします。
 
-> **Note:** [Github に動作するサンプル](https://mdn.github.io/css-examples/moz-context-properties/)があります。
+> **メモ:** [Github に動作するサンプル](https://mdn.github.io/css-examples/moz-context-properties/)があります。
 
 ## 仕様書
 

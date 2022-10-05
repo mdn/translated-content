@@ -56,7 +56,7 @@ onde
 
 Os novatos devem notar que a caixa de 'Id' no nome deste método _deve_ estar correta para o código da função - 'getElementByID _não funciona_, por mais natural que possa parecer.
 
-Se não existe um elemento com o id fornecido, esta função retorna `null`. Note que o parâmetro ID diferência maiúsculas e minúsculas. Assim document.getElementById("Main") retornará `null` ao invés do elemento `<div id="main">,` devido a "M" e "m" serem diferentes para o objetivo deste método.
+Se não existe um elemento com o id fornecido, esta função retorna `null`. Note que o parâmetro ID diferência maiúsculas e minúsculas. Assim document.getElementById("Main") retornará `null` ao invés do elemento `<div id="main">`, devido a "M" e "m" serem diferentes para o objetivo deste método.
 
 **Elementos que não estão no documento** não são procurados por `getElementById`. Quando criar um elemento e atribuir um ID ao mesmo, você deve inserir o elemento na árvore do documento com [`insertBefore`](/en-US/docs/DOM/Node.insertBefore) ou método similar antes que você possa acessá-lo com `getElementById`:
 

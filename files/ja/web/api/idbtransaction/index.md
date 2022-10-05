@@ -2,6 +2,7 @@
 title: IDBTransaction
 slug: Web/API/IDBTransaction
 ---
+
 {{APIRef("IndexedDB")}}
 
 **`IDBTransaction`** は [IndexedDB API](/ja/docs/IndexedDB) のインターフェイスで、イベントハンドラー属性を使用してデータベース上の静的で非同期のトランザクションを提供します。すべてのデータの読み書きはトランザクション内で行われます。 {{domxref("IDBDatabase")}} を使用してトランザクションを開始し、 {{domxref("IDBTransaction")}} を使用してトランザクションのモードを設定し (例 `readonly` または `readwrite`)、 {{domxref("IDBObjectStore")}} にアクセスしてリクエストを作成します。 `IDBTransaction` オブジェクトを使用してトランザクションを中止することもできます。
@@ -80,7 +81,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 {{ deprecated_header(13) }}
 
-> **Warning:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})
+> **警告:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})
 
 Transactions can have one of three modes:
 

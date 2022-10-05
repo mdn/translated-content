@@ -74,7 +74,7 @@ function startPeristentVibrate(duration, interval) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## 也可以参考
 

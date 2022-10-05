@@ -2,6 +2,7 @@
 title: アクセシビリティとは？
 slug: Learn/Common_questions/What_is_accessibility
 ---
+
 この記事はウェブアクセシビリティの背景にある基本的な概念を紹介します。
 
 <table class="standard-table">

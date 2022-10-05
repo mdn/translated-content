@@ -7,7 +7,7 @@ slug: Web/API/Response/redirect
 
 {{domxref("Response")}} インターフェイスの **`redirect()`** メソッドは、指定された URL へのレダイレクトをもたらす `Response` を返します。
 
-> **Note:** これは主に [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API) に関連しています。制御 service worker は、ページのリクエストを中断し、必要に応じてリダイレクトできます。もし Service worker が上流に送信を行うと、実際に本当のリダイレクトが発生します。
+> **メモ:** これは主に [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API) に関連しています。制御 service worker は、ページのリクエストを中断し、必要に応じてリダイレクトできます。もし Service worker が上流に送信を行うと、実際に本当のリダイレクトが発生します。
 
 ## 構文
 

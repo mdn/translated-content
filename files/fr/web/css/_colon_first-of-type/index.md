@@ -58,14 +58,11 @@ div :first-of-type {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                                       |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS4 Selectors')}} | Les éléments ciblés ne doivent pas nécessairement avoir de parent. |
-| {{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.first-of-type")}}
+{{Compat}}
 
 ## Voir aussi
 

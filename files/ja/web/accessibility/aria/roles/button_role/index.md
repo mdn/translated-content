@@ -2,6 +2,7 @@
 title: 'ARIA: button ロール'
 slug: Web/Accessibility/ARIA/Roles/button_role
 ---
+
 ボタン (**[button](https://www.w3.org/WAI/PF/aria/roles#button)**) ロールは、ユーザーによってアクティブ化されたときに反応を引き起こすクリック可能な要素に使用する必要があります。 `role="button"` を追加すると、要素がスクリーンリーダーにボタンコントロールとして表示されます。 このロールを `aria-pressed` 属性と組み合わせて使用することで、トグルボタンを作成できます。
 
 ```html
@@ -14,7 +15,7 @@ slug: Web/Accessibility/ARIA/Roles/button_role
 <button id="saveChanges">Save</button>
 ```
 
-> **Note:** 意味論的な `<button>` や `<input type="button">` 要素の代わりに role="button" を使用する場合は、要素をフォーカス可能にし、ユーザーの入力を処理するためにクリック ({{event("click")}}) イベントと <kbd>Enter</kbd> キーと <kbd>Space</kbd> キーを含むキーダウン ({{event("keydown")}}) イベントのイベントハンドラーを定義する必要があります。 [公式の WAI-ARIA サンプルコード](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)を参照してください。
+> **メモ:** 意味論的な `<button>` や `<input type="button">` 要素の代わりに role="button" を使用する場合は、要素をフォーカス可能にし、ユーザーの入力を処理するためにクリック ({{event("click")}}) イベントと <kbd>Enter</kbd> キーと <kbd>Space</kbd> キーを含むキーダウン ({{event("keydown")}}) イベントのイベントハンドラーを定義する必要があります。 [公式の WAI-ARIA サンプルコード](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)を参照してください。
 
 ## 説明
 
@@ -220,7 +221,7 @@ function toggleButton(element) {
 
 ボタンはインタラクティブなコントロールであるため、フォーカス可能です。 ボタン (`button`) ロールがそれ自体ではフォーカスできない要素 (`<span>`、`<div>`、`<p>` など) に追加された場合、ボタンをフォーカス可能にするには `tabindex` 属性を使用する必要があります。
 
-> **Warning:** ボタンロールでリンクをマークアップするときは注意してください。 ボタンは <kbd>Space</kbd> キーや <kbd>Enter</kbd> キーを使用してトリガーされることが期待されますが、リンクは <kbd>Enter</kbd> キーを使用してトリガーされることが期待されます。 つまり、リンクがボタンのように振る舞うために使用される場合、`role="button"` を追加するだけでは不十分です。 ネイティブなボタンとの一貫性を保つために、<kbd>Space</kbd> キーをリッスンするキーイベントハンドラーを追加する必要もあります。
+> **警告:** ボタンロールでリンクをマークアップするときは注意してください。 ボタンは <kbd>Space</kbd> キーや <kbd>Enter</kbd> キーを使用してトリガーされることが期待されますが、リンクは <kbd>Enter</kbd> キーを使用してトリガーされることが期待されます。 つまり、リンクがボタンのように振る舞うために使用される場合、`role="button"` を追加するだけでは不十分です。 ネイティブなボタンとの一貫性を保つために、<kbd>Space</kbd> キーをリッスンするキーイベントハンドラーを追加する必要もあります。
 
 ボタン (`button`) ロールを使用すると、スクリーンリーダーは要素をボタンとしてアナウンスします。 通常、「クリック」の後にボタンのアクセス可能な名前が続きます。 アクセス可能な名前は、要素のコンテンツ、または `aria-label` の値、または `aria-labelledby` 属性によって参照される要素、または含まれている場合は説明のいずれかです。
 

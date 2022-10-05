@@ -17,7 +17,7 @@ Aplicações cliente usam o [WebSocket API](/pt-BR/docs/Web/API/Websockets_API) 
 
 ## Criando um objeto WebSocket
 
-Para se comunicar utilizando o protocolo WebSocket, você precisa criar um objeto `WebSocket,` que automaticamente tentará abrir a conexão com o servidor.
+Para se comunicar utilizando o protocolo WebSocket, você precisa criar um objeto `WebSocket`, que automaticamente tentará abrir a conexão com o servidor.
 
 O construtor WebSocket aceita dois campos, um obrigatório e um opcional:
 

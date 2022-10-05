@@ -46,7 +46,7 @@ fetch('simple.wasm').then(response =>
 );
 ```
 
-> **Note:** おそらく多くの場合は {{jsxref("WebAssembly.compileStreaming()")}} を使用したほうが `compile()` よりも効率的なのでそちらの方がいいでしょう。
+> **メモ:** おそらく多くの場合は {{jsxref("WebAssembly.compileStreaming()")}} を使用したほうが `compile()` よりも効率的なのでそちらの方がいいでしょう。
 
 ## 仕様書
 

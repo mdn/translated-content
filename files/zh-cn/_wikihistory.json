@@ -692,10 +692,6 @@
       "pluwen"
     ]
   },
-  "Glossary/Empty_element": {
-    "modified": "2020-05-27T05:46:24.967Z",
-    "contributors": ["changjingli", "Ende93"]
-  },
   "Glossary/Encapsulation": {
     "modified": "2019-04-01T07:13:58.853Z",
     "contributors": ["fuckupc", "zilong-thu"]
@@ -1464,6 +1460,10 @@
   "Glossary/Viewport": {
     "modified": "2019-04-21T20:36:22.185Z",
     "contributors": ["bangbangde", "zeromike"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2020-05-27T05:46:24.967Z",
+    "contributors": ["changjingli", "Ende93"]
   },
   "Glossary/WHATWG": {
     "modified": "2020-05-10T09:31:46.817Z",
@@ -21752,21 +21752,6 @@
       "FredWe"
     ]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2020-09-22T00:31:12.632Z",
-    "contributors": [
-      "imarco",
-      "YogurtQ",
-      "xianghui-ma",
-      "Hew007",
-      "zhuangyin",
-      "jamesxu",
-      "ziyunfei",
-      "teoli",
-      "sunnylost",
-      "ethertank"
-    ]
-  },
   "Web/Guide/Houdini": {
     "modified": "2020-11-21T05:08:58.458Z",
     "contributors": ["xusy", "bingoYB", "cutefcc", "sunfeel", "xgqfrms"]
@@ -33860,17 +33845,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/MDN/MDN_Product_Advisory_Board": {
-    "modified": "2019-01-17T01:57:07.618Z",
-    "contributors": ["wbamberg", "liminjun"]
-  },
-  "conflicting/Web/API/Element/touchcancel_event": {
-    "modified": "2020-10-15T22:29:23.086Z",
-    "contributors": ["Carllllo", "anhaoan6"]
-  },
-  "conflicting/Web/API/Element/touchmove_event": {
-    "modified": "2019-04-30T14:14:32.752Z",
-    "contributors": ["wbamberg", "irenesmith", "fscholz", "zhaosource"]
   }
 }

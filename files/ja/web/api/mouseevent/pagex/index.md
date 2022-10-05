@@ -2,6 +2,7 @@
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
 ---
+
 {{APIRef("CSSOM View")}}
 
 **`pageX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、マウスがクリックされた位置の X（水平）座標を、文書全体の左端からの相対座標で返します。
@@ -10,7 +11,7 @@ slug: Web/API/MouseEvent/pageX
 文書の端をそのまま基準とするため、このプロパティは、ページの水平方向のスクロールを加味します。
 例えば、文書の左側 200 ピクセルが隠れるようにページがスクロールされ、ビューの左端から 100 ピクセル内側でマウスがクリックされた場合、 `pageX` が返す値は 300 となります。
 
-元々、このプロパティは `long` 型の整数として定義されていましたが、 [CSSOM View モジュール](/en-US/docs/Web/CSS/CSSOM_View) では、 `double` 型の浮動小数点値として再定義しています。
+元々、このプロパティは `long` 型の整数として定義されていましたが、 [CSSOM View モジュール](/ja/docs/Web/CSS/CSSOM_View) では、 `double` 型の浮動小数点値として再定義しています。
 詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
 この方法で指定された座標について詳しくは、[座標系](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems)の[ページ](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems#ページ)の節を参照してください。

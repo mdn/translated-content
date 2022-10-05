@@ -40,4 +40,4 @@ console.log(params.getAll('foo')) //输出 ["1","4"].
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.getAll")}}
+{{Compat}}

@@ -48,7 +48,7 @@ slug: Web/HTML/Element/ul
     > **备注：** 不要使用这个属性，因为它已经被废弃了：{{ HTMLElement("ul") }} 元素应当使用 [CSS](/zh-CN/docs/CSS) 来更改样式。（CSS）可以提供与 `compact` 属性相同的效果，将 [CSS](/zh-CN/docs/CSS) 属性 [line-height](/zh-CN/docs/CSS/line-height) 的值设为 `80%` 即可。
 
 - {{ htmlattrdef("type") }}{{ Deprecated_inline() }}
-  - : 用于设置列表的着重号样式 ，被定义在 [HTML3.2](/zh-CN/HTML3.2) 和过渡版本 [HTML 4.0/4.01](/zh-CN/HTML4.01) 中的可用值有：
+  - : 用于设置列表的着重号样式，被定义在 [HTML3.2](/zh-CN/HTML3.2) 和过渡版本 [HTML 4.0/4.01](/zh-CN/HTML4.01) 中的可用值有：
 
     - `circle`
     - `disc`
@@ -155,7 +155,7 @@ slug: Web/HTML/Element/ul
 
 ## 参见
 
-- 其他列表相关的 HTML 元素: {{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} 和绝对元素 {{ HTMLElement("dir") }};
+- 其他列表相关的 HTML 元素：{{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} 和绝对元素 {{ HTMLElement("dir") }};
 - 特别作用于 \<ul>元素的 CSS 属性：
 
   - [list-style](/zh-CN/CSS/list-style) 属性，作用于选择哪种序数的样式来显示，

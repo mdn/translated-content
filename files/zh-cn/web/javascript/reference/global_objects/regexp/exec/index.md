@@ -22,7 +22,7 @@ exec(str)
 
 ### 返回值
 
-如果匹配失败，`exec()` 方法返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)，并将正则表达式的 [`lastIndex`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) 重置为 0 。
+如果匹配失败，`exec()` 方法返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)，并将正则表达式的 [`lastIndex`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) 重置为 0。
 
 如果匹配成功，`exec()` 方法返回一个数组，并更新正则表达式对象的 [`lastIndex`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) 属性。完全匹配成功的文本将作为返回数组的第一项，从第二项起，后续每项都对应一个匹配的捕获组。数组还具有以下额外的属性：
 

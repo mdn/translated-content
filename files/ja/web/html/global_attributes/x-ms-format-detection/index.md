@@ -9,7 +9,7 @@ slug: Web/HTML/Global_attributes/x-ms-format-detection
 
 `tel:` スキームのリンクなど既存のリンクは影響を受けません。
 
-> **Note:** format detection によって作成されたリンクは DOM に表示されません。
+> **メモ:** format detection によって作成されたリンクは DOM に表示されません。
 
 {{Non-standard_inline}} この独自プロパティは Internet Explorer と Microsoft Edge に固有です。
 

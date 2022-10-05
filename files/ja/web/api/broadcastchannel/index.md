@@ -2,6 +2,7 @@
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
 ---
+
 {{APIRef("Broadcast Channel API")}}
 
 **`BroadcastChannel`** インターフェイスは、特定の{{glossary("origin","オリジン")}}の{{glossary("browsing context","閲覧コンテキスト")}}が購読できる名前付きチャネルを表します。 それは、同じオリジンの異なるドキュメント間（異なるウィンドウ、タブ、フレーム、iframe）の通信を可能にします。 メッセージは、チャンネルをリッスンしているすべての `BroadcastChannel` オブジェクトで発生する {{event("message")}} イベントを介して放送されます。

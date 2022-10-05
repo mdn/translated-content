@@ -51,9 +51,13 @@ block-size: unset;
 
 La propriété `block-size` peut prendre les mêmes valeurs que {{cssxref("width")}} et {{cssxref("height")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -77,17 +81,13 @@ La propriété `block-size` peut prendre les mêmes valeurs que {{cssxref("width
 
 {{EmbedLiveSample("Exemples")}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.block-size")}}
+{{Compat}}
 
 ## Voir aussi
 

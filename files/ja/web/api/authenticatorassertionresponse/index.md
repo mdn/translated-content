@@ -2,13 +2,14 @@
 title: AuthenticatorAssertionResponse
 slug: Web/API/AuthenticatorAssertionResponse
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`AuthenticatorAssertionResponse`** は [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) のインターフェイスで、 {{domxref('CredentialsContainer.get()')}} に {{domxref('PublicKeyCredential')}} を渡すと返されます。そして、キーペアを持ち、認証付きリクエストが有効で承認されていることをサービスに証明します。
 
 このインターフェイスは {{domxref("AuthenticatorResponse")}} を継承しています。
 
-> **Note:** **メモ:** このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
+> **メモ:** このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
 
 ## プロパティ
 

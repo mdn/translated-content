@@ -2,6 +2,7 @@
 title: Node.replaceChild
 slug: Web/API/Node/replaceChild
 ---
+
 {{APIRef("DOM")}}
 
 **`replaceChild()`** は {{domxref("Node")}} 要素のメソッドで、この（親）ノードの中の子ノードを置き換えます。
@@ -18,11 +19,11 @@ replaceChild(newChild, oldChild);
 
 - `newChild`
   - : `oldChild` を置き換える新しいノードです。
-    > **Warning:** 新しいノードが既に DOM のどこか別なところにある場合は、まずその位置から取り除かれます。
+    > **警告:** 新しいノードが既に DOM のどこか別なところにある場合は、まずその位置から取り除かれます。
 - `oldChild`
   - : 置き換えられる子ノードです。
 
-> **Note:** 引数の順序で、*新しい*ものの前に*古い*ものが来るのは異例です。
+> **メモ:** 引数の順序で、*新しい*ものの前に*古い*ものが来るのは異例です。
 [`Element.replaceWith()`](/ja/docs/Web/API/Element/replaceWith) は、要素であるノードのみに適用されるものですが、読んだり使用したりしやすいかもしれません。
 
 ### 返値

@@ -83,7 +83,7 @@ var args = [...arguments];
   - : Referência para a função que invocou a função atualmente em execução.
 - [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : Referência para o número de argumentos passados para a função.
-- [`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+- [`arguments[@@iterator]`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
   - : Retorna um novo objeto Array Iterator que contém os valores para cada índice dos argumentos.
 
 ## Exemplos

@@ -2,6 +2,7 @@
 title: Client.type
 slug: Web/API/Client/type
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Client")}} インターフェイスの **`type`** 読み取り専用プロパティは、サービスワーカーが制御しているクライアントの種類を示します。

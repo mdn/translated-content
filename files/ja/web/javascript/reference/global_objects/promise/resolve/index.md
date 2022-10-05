@@ -108,7 +108,7 @@ p3.then(function(v) {
 });
 ```
 
-> **Warning:** 自分自身に解決する thenable に対して `Promise.resolve()` を呼び出さないでください。これは無限にネストしたプロミスを平坦化しようとするため、無限の再帰を引き起こします。
+> **警告:** 自分自身に解決する thenable に対して `Promise.resolve()` を呼び出さないでください。これは無限にネストしたプロミスを平坦化しようとするため、無限の再帰を引き起こします。
 
 ```js example-bad
 let thenable = {

@@ -2,6 +2,7 @@
 title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
 ---
+
 {{ APIRef("Web Audio API") }}
 
 インターフェースの`start()`メソッドは、オーディオバッファの再生をスケジュールするために使われます。
@@ -27,7 +28,7 @@ source.start();
 source.start(audioCtx.currentTime + 1,3,10);
 ```
 
-> **Note:** start()の使い方の完全な例は{{domxref("AudioContext.decodeAudioData")}}を参照してください。[コードをすぐに実行する](http://mdn.github.io/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/decode-audio-data)こともできます。
+> **メモ:** start()の使い方の完全な例は{{domxref("AudioContext.decodeAudioData")}}を参照してください。[コードをすぐに実行する](http://mdn.github.io/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/decode-audio-data)こともできます。
 
 ### 戻り値
 

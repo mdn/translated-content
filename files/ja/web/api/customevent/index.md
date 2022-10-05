@@ -2,6 +2,7 @@
 title: CustomEvent
 slug: Web/API/CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 **`CustomEvent`** インターフェイスは、何らかの目的でアプリケーションから初期化されるイベントを表します。

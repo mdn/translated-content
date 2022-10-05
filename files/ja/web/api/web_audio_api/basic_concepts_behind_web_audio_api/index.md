@@ -57,7 +57,7 @@ slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 バッファが再生されると、最も左のサンプルフレームが聞こえ、次にそのサンプルフレームのすぐ隣のサンプルフレームが続いてゆきます。ステレオの場合、両方のチャンネルから同時に聴こえます。サンプルフレームは、チャンネルの数とは独立しているため非常に便利であり、正確に音声を取り扱う有効な手段として、時間を表現してくれます。
 
-> **Note:** フレーム数から秒数を得るためには、フレーム数をサンプルレートで単に除算するだけです。サンプル数からフレーム数を得るためには、チャンネル数で単に除算するだけです。
+> **メモ:** フレーム数から秒数を得るためには、フレーム数をサンプルレートで単に除算するだけです。サンプル数からフレーム数を得るためには、チャンネル数で単に除算するだけです。
 
 以下はいくつかの単純なサンプルです:
 
@@ -66,7 +66,7 @@ var context = new AudioContext();
 var buffer = context.createBuffer(2, 22050, 44100);
 ```
 
-> **Note:** [デジタルオーディオに](https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA)おいて、**44100**[Hz](https://ja.wikipedia.org/wiki/%E3%83%98%E3%83%AB%E3%83%84)(**44.1kHz** とも表記される)は一般的な[サンプリング周波数](https://ja.wikipedia.org/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96)です。なぜ 44.1kHz なのでしょう？
+> **メモ:** [デジタルオーディオに](https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA)おいて、**44100**[Hz](https://ja.wikipedia.org/wiki/%E3%83%98%E3%83%AB%E3%83%84)(**44.1kHz** とも表記される)は一般的な[サンプリング周波数](https://ja.wikipedia.org/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96)です。なぜ 44.1kHz なのでしょう？
 >
 > 第一に、人間の耳の[可聴範囲](https://en.wikipedia.org/wiki/Hearing_range)は、大雑把に 20 から 20000Hz の範囲です。[Nyquist-Shannon のサンプリング定理](https://ja.wikipedia.org/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96%E5%AE%9A%E7%90%86)により、サンプリング周波数は再現したい最大周波数の 2 倍以上でなくてはなりません。したがって、サンプリングレートは 40kHz 以上でなくてはなりません。
 >
@@ -81,7 +81,7 @@ var buffer = context.createBuffer(1, 22050, 22050);
 
 この呼び出しをする場合、モノラルバッファーをチャンネル数 1 で取得し、AudioContext 上で 44100Hz にて再生される際に自動で 44100Hz へ*再サンプリングされ*(したがって 44100 フレームとなり)、1 秒間続きます: 44100 フレーム/44100Hz = 1 秒。
 
-> **Note:** オーディオの再サンプリングは、画像のサイズ変更と非常に似たものです。例えば 16x16 の画像があり、32x32 のスペースを満たしたいとします。サイズ変更(あるいは再サンプリング)を行い、結果として(サイズ変更アルゴリズムの違いに依存して、ぼやけたりエッジができたりと)画質の低下を伴いますが、スペースを減らすサイズ変更済み画像が作れます。再サンプリングされたオーディオもまったく同じです。スペースを保てるものの、実際には高音域のコンテンツや高音を適切に再現することはできません。
+> **メモ:** オーディオの再サンプリングは、画像のサイズ変更と非常に似たものです。例えば 16x16 の画像があり、32x32 のスペースを満たしたいとします。サイズ変更(あるいは再サンプリング)を行い、結果として(サイズ変更アルゴリズムの違いに依存して、ぼやけたりエッジができたりと)画質の低下を伴いますが、スペースを減らすサイズ変更済み画像が作れます。再サンプリングされたオーディオもまったく同じです。スペースを保てるものの、実際には高音域のコンテンツや高音を適切に再現することはできません。
 
 ### バッファーセクションの平面性対交差性
 
@@ -363,7 +363,7 @@ Web Audio API は、音声処理に適することを理由に、平面的なバ
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
   - : 現在の波形データまたはタイムドメインデータを渡された{{domxref("Uint8Array")}}型配列(符号なしバイト配列)にコピーします。
 
-> **Note:** より詳しい情報は、Web Audio API 記事中の [Visualizations with Web Audio API](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) を参照してください。
+> **メモ:** より詳しい情報は、Web Audio API 記事中の [Visualizations with Web Audio API](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) を参照してください。
 
 ## 立体化
 
@@ -377,7 +377,7 @@ Web Audio API は、音声処理に適することを理由に、平面的なバ
 
 ![We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other.](WebAudioListenerReduced.png)
 
-> **Note:** より詳しい情報は、[Web audio spatialization basics](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) を参照してください。
+> **メモ:** より詳しい情報は、[Web audio spatialization basics](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) を参照してください。
 
 ## ファンインとファンアウト
 

@@ -40,7 +40,7 @@ DOM 接口 `ValidityState` 代表一个元素可有的有效性状态（_validit
 
 ## 浏览器兼容性
 
-{{Compat("api.ValidityState")}}
+{{Compat}}
 
 ## 参见
 

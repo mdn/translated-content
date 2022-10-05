@@ -4,6 +4,7 @@ slug: Learn/Forms/HTML5_input_types
 l10n:
   sourceCommit: fead53324d271aa05e93b369966a773bb328c64b
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
 [前の記事では](/ja/docs/Learn/Forms/Basic_native_form_controls) {{htmlelement("input")}} 要素を見てきて、 HTML の初期から利用できる `type` 属性の値をカバーしてきました。ここでは最近のフォームコントロールの機能、特定のデータを集めるのに HTML5 で追加された、新しい入力型を詳しく見ていきましょう。
@@ -28,7 +29,7 @@ l10n:
   </tbody>
 </table>
 
-> **Note:** この記事のたいていの機能はブラウザー間で広くを対応されています。例外は注記しておきます。ブラウザーサポートについての詳細は、[HTML フォーム要素のリファレンス](/ja/docs/Web/HTML/Element#フォーム)、特に [\<input> 型](/ja/docs/Web/HTML/Element/input)リファレンスを見てください。
+> **メモ:** この記事のたいていの機能はブラウザー間で広くを対応されています。例外は注記しておきます。ブラウザーサポートについての詳細は、[HTML フォーム要素のリファレンス](/ja/docs/Web/HTML/Element#フォーム)、特に [\<input> 型](/ja/docs/Web/HTML/Element/input)リファレンスを見てください。
 
 HTML フォームコントロールの見た目はデザイナーの仕様により全く異なるため、ウェブ開発者はときどき独自のフォームコントロールを作成します。これは上級のチュートリアル — [カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls) — で扱います。
 
@@ -54,7 +55,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 ![既定でアット記号が付いている、 Android 版 Firefox のメールアドレス入力キーボード](fx-android-email-type-keyboard.jpg)
 
-> **Note:** 基本的なテキスト入力型の例は [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) にあります（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html) も見てください）。
+> **メモ:** 基本的なテキスト入力型の例は [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) にあります（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html) も見てください）。
 
 これは新しい入力型を使う良い理由であり、こうした端末のユーザーの使い勝手を向上させます。
 
@@ -66,7 +67,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 既定の制約では `a@b` は有効なメールアドレスです。これは既定では `email` 入力型はイントラネットのメールアドレスを許可しているためです。異なる検証動作を実装するには、[`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性を用いたり、エラーメッセージをカスタムできます。この機能の使い方は後の [クライアントサイド検証](/ja/docs/Learn/Forms/Form_validation)の記事で話します。
 
-> **Note:** 入力データがメールアドレスでない場合、{{cssxref(':invalid')}} 擬似クラスがマッチして、{{domxref('validityState.typeMismatch')}} プロパティは `true` を返します。
+> **メモ:** 入力データがメールアドレスでない場合、{{cssxref(':invalid')}} 擬似クラスがマッチして、{{domxref('validityState.typeMismatch')}} プロパティは `true` を返します。
 
 ## 検索フィールド
 
@@ -116,7 +117,7 @@ URL を入力するための特殊な型のフィールドは、 `url` の値を
 
 ![Android 用 Firefox の URL キーボードの例で、既定でスラッシュが表示されています。](fx-android-url-type-keyboard.jpg)
 
-> **Note:** URL が正しい形式であっても、それが必ずしも実際存在する場所を参照しているとは限りません。
+> **メモ:** URL が正しい形式であっても、それが必ずしも実際存在する場所を参照しているとは限りません。
 
 ## 数値フィールド
 
@@ -183,7 +184,7 @@ price.addEventListener('input', () => {
 
 ここでは `range` 入力と `output` を 2 つの変数に保存しています。次に `output` の [`textContent`](/ja/docs/Web/API/Node/textContent) を入力の `value` ですぐにセットします。最後に、イベントリスナーをセットして、range スライダーが移動するといつも、`output` の `textContent` を新しい値に更新します。
 
-> **Note:** CSS Tricks に、このテーマに応じた素晴らしいチュートリアルがあります。 [The Output Element](https://css-tricks.com/the-output-element/) です。
+> **メモ:** CSS Tricks に、このテーマに応じた素晴らしいチュートリアルがあります。 [The Output Element](https://css-tricks.com/the-output-element/) です。
 
 ## 日付と時刻ピッカー
 

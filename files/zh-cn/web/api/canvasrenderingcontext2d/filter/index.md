@@ -16,16 +16,16 @@ ctx.filter = "none";
 
 ### Filter 函数
 
-filter 属性接受{{domxref("DOMString")}}字符串，可以包含一个或多个 filter 函数 。
+filter 属性接受{{domxref("DOMString")}}字符串，可以包含一个或多个 filter 函数。
 
 - `url(<url>)`
-  - : `url()` 函数接受一个描述 SVG 过滤器的 XML 文件的位置， 并且可以包含一个针对特殊过滤元素的锚点。
+  - : `url()` 函数接受一个描述 SVG 过滤器的 XML 文件的位置，并且可以包含一个针对特殊过滤元素的锚点。
 - `blur(<length>)`
   - : length：CSS 长度。给绘图提供一个高斯模糊。
 - `brightness(<percentage>)`
   - : Percentage：百分比。给绘图提供一个线性乘法，调节亮度的高低。
 - `contrast(<percentage>)`
-  - : Percentage：百分比。 调节图像的对比度。当数值为 `0%` 时，图像会完全变黑。当数值为 `100%` 时，图像没有任何变化。
+  - : Percentage：百分比。调节图像的对比度。当数值为 `0%` 时，图像会完全变黑。当数值为 `100%` 时，图像没有任何变化。
 - `drop-shadow(<offset-x>, <offset-y>, <blur-radius>, <spread-radius>, <color>)`
 
   - : 给绘图提供阴影。阴影事实上是在图像下面呈现出模糊的，通过对图像的透明遮罩进行偏移绘制出一种特殊的颜色，组合而成的效果。这个函数接受 5 个参数：
@@ -37,9 +37,9 @@ filter 属性接受{{domxref("DOMString")}}字符串，可以包含一个或多�
     - `<color>`: 查看 {{cssxref("&lt;color&gt;")}} 允许的关键字和标识符。
 
 - `grayscale(<percentage>)`
-  - : Percentage：百分比。将图像转换成灰色的图片。 当值为 100% 时，图像会完全变成灰色。 当值为 0% 时，图像没有任何变化。
+  - : Percentage：百分比。将图像转换成灰色的图片。当值为 100% 时，图像会完全变成灰色。当值为 0% 时，图像没有任何变化。
 - `hue-rotate(<degree>)`
-  - : Degree：度数。 对图像进行色彩旋转的处理。当值为 0 度时，图像没有任何变化。
+  - : Degree：度数。对图像进行色彩旋转的处理。当值为 0 度时，图像没有任何变化。
 - `invert(<percentage>)`
   - : Percentage：百分比。反色图像（呈现出照片底片的效果）。当值为 100% 时，图像会完全反色处理。当值为 0% 时，图像没有任何变化。
 - `opacity(<percentage>)`
@@ -118,7 +118,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 规范描述
 
-当前的规范或草案不包含此内容， 但是正考虑进行标准化。参考 [CSS Filter Effects](http://dev.w3.org/fxtf/filters/#FilterProperty) 规范。
+当前的规范或草案不包含此内容，但是正考虑进行标准化。参考 [CSS Filter Effects](http://dev.w3.org/fxtf/filters/#FilterProperty) 规范。
 
 ## 浏览器兼容性
 

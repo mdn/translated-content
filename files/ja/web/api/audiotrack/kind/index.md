@@ -2,6 +2,7 @@
 title: AudioTrack.kind
 slug: Web/API/AudioTrack/kind
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`kind`** プロパティは、文字列で **{{domxref("AudioTrack")}}** に含まれる音声のカテゴリーを示します。

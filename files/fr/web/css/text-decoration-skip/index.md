@@ -53,9 +53,13 @@ text-decoration-skip: unset;
 - `box-decoration`
   - : La propriété `text-decoration` n'est pas appliquée pour les marges, bordures et zones de remplissage (_padding_) des éléments fils.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -82,12 +86,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName("CSS4 Text Decoration", "#text-decoration-skip-property", "text-decoration-skip")}} | {{Spec2("CSS4 Text Decoration")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-decoration-skip")}}
+{{Compat}}

@@ -156,7 +156,4 @@ Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires                                                                                                  |
-| ------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS Grid 2')}} | {{Spec2("CSS Grid 2")}} | Ajout des [« sous-grilles » (_subgrids_)](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base#Sous-grille). |
-| {{SpecName('CSS3 Grid')}}     | {{Spec2('CSS3 Grid')}}     | Définition initiale.                                                                                          |
+{{Specifications}}

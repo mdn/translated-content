@@ -32,7 +32,7 @@ Exemplo:
 
 ## Uma nota para quem usa JAWS 8
 
-O JAWS 8.0 tem a sua própria lógica para encontrar os _labels_ e isso o faz, sempre, substituir a caixa de texto com o _accessibleName_ que uma página HTML recebe. Quanto ao JAWS 8, **eu** ainda não encontrei uma maneira de fazê-lo aceitar o _label_ do exemplo acima. Mas o NVDA e o Window-Eyes fazem isso muito bem e a Orca, no Linux, também não apresenta problemas. (Os **autores** do artigo, são: [bunnybooboo](https://developer.mozilla.org/en-US/profiles/bunnybooboo), [kscarfone](https://developer.mozilla.org/en-US/profiles/kscarfone), [StephenKelly](https://developer.mozilla.org/en-US/profiles/StephenKelly), [Kritz](https://developer.mozilla.org/en-US/profiles/Kritz), [Fredchat](https://developer.mozilla.org/en-US/profiles/Fredchat), [Sheppy](https://developer.mozilla.org/en-US/profiles/Sheppy), [Aaronlev](https://developer.mozilla.org/en-US/profiles/Aaronlev))
+O JAWS 8.0 tem a sua própria lógica para encontrar os _labels_ e isso o faz, sempre, substituir a caixa de texto com o _accessibleName_ que uma página HTML recebe. Quanto ao JAWS 8, **eu** ainda não encontrei uma maneira de fazê-lo aceitar o _label_ do exemplo acima. Mas o NVDA e o Window-Eyes fazem isso muito bem e a Orca, no Linux, também não apresenta problemas. (Os **autores** do artigo, são: [bunnybooboo](/en-US/profiles/bunnybooboo), [kscarfone](/en-US/profiles/kscarfone), [StephenKelly](/en-US/profiles/StephenKelly), [Kritz](/en-US/profiles/Kritz), [Fredchat](/en-US/profiles/Fredchat), [Sheppy](/en-US/profiles/Sheppy), [Aaronlev](/en-US/profiles/Aaronlev))
 
 > **Nota:** TBD: adicione mais informação de compatibilidade
 

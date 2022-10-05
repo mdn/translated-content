@@ -9,7 +9,7 @@ slug: Web/CSS/transition-property
 
 {{EmbedInteractiveExample("pages/css/transition-property.html")}}
 
-> **Note:** [アニメーション可能なプロパティのセット](/ja/docs/Web/CSS/CSS_animated_properties)は変更される可能性があります。これにより、将来意図しない結果を引き起こす可能性があるため、リストで現状アニメーションしないとしているプロパティを使用することは避けてください。
+> **メモ:** [アニメーション可能なプロパティのセット](/ja/docs/Web/CSS/CSS_animated_properties)は変更される可能性があります。これにより、将来意図しない結果を引き起こす可能性があるため、リストで現状アニメーションしないとしているプロパティを使用することは避けてください。
 
 一括指定プロパティ (例えば {{cssxref("background")}}) を指定すると、その個別指定のサブプロパティすべてをアニメーションさせることができます。
 

@@ -3,7 +3,10 @@ title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
 translation_of: Web/JavaScript/Reference/Statements/do...while
 ---
-{{jsSidebar("Statements")}}A declaração **` do...while``  `**cria um laço que executa uma declaração até que o teste da condição for falsa (false). A condição é avaliada depois que o bloco de código é executado, resultando que uma declaração seja executada pelo menos uma vez.
+
+{{jsSidebar("Statements")}}
+
+A declaração **`do...while`** cria um laço que executa uma declaração até que o teste da condição for falsa (false). A condição é avaliada depois que o bloco de código é executado, resultando que uma declaração seja executada pelo menos uma vez.
 
 ## Sintaxe
 

@@ -28,7 +28,7 @@ fun.apply(thisArg, [argsArray])
 
 ## Descrição
 
-Você pode atribuir um objeto `this`\_ _diferente quando chamar uma função existente. `this`_ _refere-se ao objeto atual, o objeto da chamada. Com `apply`_,\_ você pode escrever um método apenas uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.
+Você pode atribuir um objeto _`this`_ diferente quando chamar uma função existente. _`this`_ refere-se ao objeto atual, o objeto da chamada. Com _`apply`_, você pode escrever um método apenas uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.
 
 `apply` é muito parecido com {{jsxref("Function.call", "call()")}}, exceto pelo tipo de argumentos que ele suporta. Você pode usar um array de argumentos em vez de conjunto de parâmetros nomeados. Com `apply`, você pode usar um array literal, por exemplo, `fun.apply(this, ['comer', 'bananas'])`, ou um objeto {{jsxref("Array")}}, por exemplo `fun.apply(this, new Array('comer', 'bananas')).`
 

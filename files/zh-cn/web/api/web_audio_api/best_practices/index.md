@@ -5,7 +5,7 @@ slug: Web/API/Web_Audio_API/Best_practices
 
 {{apiref("Web Audio API")}}
 
-在创意编程中（creative coding）没有严格的对错之分。 只要你充分考虑安全性、性能和 accessibility，你可以用自己的办法来编写代码。在这篇文章中，我们会分享一些最佳实践——包含使用 Web Audio API 的指导、小知识和小技巧。
+在创意编程中（creative coding）没有严格的对错之分。只要你充分考虑安全性、性能和 accessibility，你可以用自己的办法来编写代码。在这篇文章中，我们会分享一些最佳实践——包含使用 Web Audio API 的指导、小知识和小技巧。
 
 ## 加载声音/声音文件
 

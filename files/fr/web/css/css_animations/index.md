@@ -41,15 +41,11 @@ Les **animations CSS** sont un module CSS qui définit la façon dont les valeur
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Animations')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Propriété `animation`
-
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -92,9 +92,4 @@ Vous pouvez trouver plusieurs exemples utilisant les polices variables sur [v-fo
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires                                                                                                        |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Fonts')}}                                     | {{Spec2('CSS4 Fonts')}} | Ajout de `font-variation-settings` (ainsi que des propriétés de haut niveau associées) et de `font-optical-sizing`. |
-| {{SpecName('CSS3 Fonts')}}                                     | {{Spec2('CSS3 Fonts')}} | Ajout de `font-feature-settings` (ainsi que des propriétés de haut niveau associées)                                |
-| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', '')}} | {{Spec2('CSS2.1')}}         |                                                                                                                     |
-| {{SpecName('CSS1', '#font', '')}}                             | {{Spec2('CSS1')}}         | Définition initiale.                                                                                                |
+{{Specifications}}

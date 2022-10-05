@@ -27,4 +27,4 @@ var result = anchor.toString(); // Returns: 'https://developer.mozilla.org/en-US
 
 ## 浏览器兼容性
 
-{{Compat("api.Location.toString")}}
+{{Compat}}

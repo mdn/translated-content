@@ -23,9 +23,13 @@ fallback: lower-alpha;
 fallback: custom-gangnam-style;
 ```
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -59,15 +63,11 @@ fallback: custom-gangnam-style;
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-fallback', 'fallback')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.fallback")}}
+{{Compat}}
 
 ## Voir aussi
 

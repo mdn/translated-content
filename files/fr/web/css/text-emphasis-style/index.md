@@ -58,9 +58,13 @@ text-emphasis-style: unset;
 - `<string>`
   - : Utilise la chaîne fournie comme marque. Attention, l'agent utilisateur peut tronquer la chaîne ou choisir d'ignorer les chaînes qui ont plus d'un graphème. Il est donc conseillé de n'utiliser qu'une seule lettre.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -84,15 +88,11 @@ em {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                                       | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-style-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-emphasis-style")}}
+{{Compat}}
 
 ## Voir aussi
 

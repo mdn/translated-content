@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 {{EmbedInteractiveExample("pages/js/promise-then.html")}}
 
-> **Note:** 片方または両方の引数が省略されたり、関数ではないものが渡されたりした場合、 `then` にはハンドラーが不足しますが、エラーは発生しません。 `Promise` が状態 (履行 (`fulfillment`) または拒否 (`rejection`)) を受け入れるに当たって `then` が呼び出された際に、 `then` がハンドラーを持たない場合は、 `then` が呼び出された元の `Promise` の最後の状態を受け入れた、追加のハンドラーのない新しい `Promise` が生成されます。
+> **メモ:** 片方または両方の引数が省略されたり、関数ではないものが渡されたりした場合、 `then` にはハンドラーが不足しますが、エラーは発生しません。 `Promise` が状態 (履行 (`fulfillment`) または拒否 (`rejection`)) を受け入れるに当たって `then` が呼び出された際に、 `then` がハンドラーを持たない場合は、 `then` が呼び出された元の `Promise` の最後の状態を受け入れた、追加のハンドラーのない新しい `Promise` が生成されます。
 
 ## 構文
 

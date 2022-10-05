@@ -62,14 +62,11 @@ span:nth-last-of-type(2) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                 | Commentaires                                                        |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-last-of-type-pseudo', ':nth-last-of-type')}} | {{Spec2('CSS4 Selectors')}} | L'élément ciblé ne doit pas nécessairement avoir un élément parent. |
-| {{SpecName('CSS3 Selectors', '#nth-last-of-type-pseudo', ':nth-last-of-type')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.nth-last-of-type")}}
+{{Compat}}
 
 ## Voir aussi
 
