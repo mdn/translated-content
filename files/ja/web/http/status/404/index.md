@@ -27,7 +27,7 @@ HTTP の **`404 Not Found`** レスポンスステータスコードは、サー
 ErrorDocument 404 /notfound.html
 ```
 
-独自の 404 ページの例については、この[404 ページ](https://konmari.com/404)を参照してください。
+独自の 404 ページの例については、この [404 ページ](https://konmari.com/404)を参照してください。
 
 > **メモ:** 適度なデザインのカスタマイズは良いことです。あなたの 404 ページをユーモアや思いやりのあるものにすることは自由ですが、ユーザーを混乱させないようにしてください。
 
@@ -42,4 +42,4 @@ ErrorDocument 404 /notfound.html
 ## 関連情報
 
 - {{HTTPStatus("410")}}
-- {{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}
+- [Wikipedia: HTTP 404](https://ja.wikipedia.org/wiki/HTTP_404)
