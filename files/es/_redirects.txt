@@ -1889,6 +1889,7 @@
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Dibujando_formas	/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
+/es/docs/Web/Guide/HTML/Editable_content	/es/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /es/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form	/es/docs/Learn/Forms/How_to_structure_a_web_form
 /es/docs/Web/Guide/HTML/Forms/My_first_HTML_form	/es/docs/Learn/Forms/Your_first_form
 /es/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/es/docs/Learn/Forms/Sending_and_retrieving_form_data
