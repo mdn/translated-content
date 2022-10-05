@@ -12,7 +12,7 @@ JavaScript 中的数组形式如下：
 ```js
 let myArray = [1, 2, 3, 4];
 let catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
-//Javascript 中的数据可以处理不同类型的数据，如上。
+//Javascript 数组可以包含不同类型的数据，如上所示。
 ```
 
 ## 参见
