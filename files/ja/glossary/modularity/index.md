@@ -8,4 +8,4 @@ slug: Glossary/modularity
 ## 関連項目
 
 - Wikipedia 上の [Modularity](https://en.wikipedia.org/wiki/Modularity) （英語）
-- Wikipedia 上の {{Interwiki("wikipedia", "モジュール")}}
+- Wikipedia 上の [モジュール](https://ja.wikipedia.org/wiki/モジュール)
