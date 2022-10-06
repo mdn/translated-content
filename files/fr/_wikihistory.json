@@ -28101,10 +28101,6 @@
       "dattaz"
     ]
   },
-  "conflicting/Web/HTML/Global_attributes/contenteditable": {
-    "modified": "2019-04-20T23:42:36.501Z",
-    "contributors": ["tregagnon", "SphinxKnight"]
-  },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2020-10-15T21:27:51.341Z",
     "contributors": [
