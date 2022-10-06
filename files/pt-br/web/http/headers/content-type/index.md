@@ -3,70 +3,63 @@ title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
 translation_of: Web/HTTP/Headers/Content-Type
 ---
-<div>{{HTTPSidebar}}</div>
-
-<div>O cabeçalho <strong>Content-Type</strong> é utilizado para indicar o {{Glossary("MIME type","tipo de arquivo")}} do recurso.</div>
-
-<div> </div>
-
-<div>Em respostas, o <code>Content-Type</code> diz para o client qual é o tipo de conteúdo que a resposta, de fato, tem. Alguns browsers vão realizar o chamado "MIME Sniffing" em alguns casos e não vão, necessariamente, seguir o valor declarado por este cabeçalho. Para previnir este comportamento é possível definir o cabeçalho {{HTTPHeader("X-Content-Type-Options")}} para o valor <code>nosniff</code>.</div>
-
-<div> </div>
-
-<div>Em requisições, como {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}, o client diz ao servidor qual o tipo de dado que está, de fato, sendo enviado.</div>
-
-<div> </div>
+{{HTTPSidebar}}O cabeçalho **Content-Type** é utilizado para indicar o {{Glossary("MIME type","tipo de arquivo")}} do recurso.Em respostas, o `Content-Type` diz para o client qual é o tipo de conteúdo que a resposta, de fato, tem. Alguns browsers vão realizar o chamado "MIME Sniffing" em alguns casos e não vão, necessariamente, seguir o valor declarado por este cabeçalho. Para previnir este comportamento é possível definir o cabeçalho {{HTTPHeader("X-Content-Type-Options")}} para o valor `nosniff`.Em requisições, como {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}, o client diz ao servidor qual o tipo de dado que está, de fato, sendo enviado.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">tipo de cabeçalho</th>
-   <td>{{Glossary("Cabeçalho de entidade")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Nome de cabeçalho proibido")}}</th>
-   <td>não</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cabeçalho de resposta simples", "Cabeçalho de resposta na lista segura do CORS")}}</th>
-   <td>sim</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">tipo de cabeçalho</th>
+      <td>{{Glossary("Cabeçalho de entidade")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Nome de cabeçalho proibido")}}
+      </th>
+      <td>não</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Cabeçalho de resposta simples", "Cabeçalho de resposta na lista segura do CORS")}}
+      </th>
+      <td>sim</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Content-Type: text/html; charset=utf-8
+```
+Content-Type: text/html; charset=utf-8
 Content-Type: multipart/form-data; boundary=something
-</pre>
+```
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>media-type</code></dt>
- <dd>O <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> do recurso ou dado.</dd>
- <dt>charset</dt>
- <dd>O encoding da string</dd>
- <dt>boundary</dt>
- <dd>Para entidades do tipo multipart, a diretiva <code>boundary</code> é obrigatória. Ela consiste em uma sequencia de 1 a 70 caracteres de um conjunto conhecido por sua robustez em gateways de e-mail, e não podem terminar com espaço em branco. É utilizado para encapsular as bordas das multiplas partes da mensagem.</dd>
-</dl>
+- `media-type`
+  - : O [MIME type](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types) do recurso ou dado.
+- charset
+  - : O encoding da string
+- boundary
+  - : Para entidades do tipo multipart, a diretiva `boundary` é obrigatória. Ela consiste em uma sequencia de 1 a 70 caracteres de um conjunto conhecido por sua robustez em gateways de e-mail, e não podem terminar com espaço em branco. É utilizado para encapsular as bordas das multiplas partes da mensagem.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Content-Type_em_formulários_HTML"><code>Content-Type</code> em formulários HTML</h3>
+### `Content-Type` em formulários HTML
 
-<p>Em uma requisição {{HTTPMethod("POST")}}, resultado de uma submissão de um formulário HTML, o <code>Content-Type</code> da requisição é especificado pelo atributo <code>enctype</code> do elemento {{HTMLElement("form")}} do HTML.</p>
+Em uma requisição {{HTTPMethod("POST")}}, resultado de uma submissão de um formulário HTML, o `Content-Type` da requisição é especificado pelo atributo `enctype` do elemento {{HTMLElement("form")}} do HTML.
 
-<pre class="brush: html">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
-  &lt;input type="text" name="description" value="some text"&gt;
-  &lt;input type="file" name="myFile"&gt;
-  &lt;button type="submit"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form action="/" method="post" enctype="multipart/form-data">
+  <input type="text" name="description" value="some text">
+  <input type="file" name="myFile">
+  <button type="submit">Submit</button>
+</form>
+```
 
-<p>A requisição vai parecer com isto (alguns headers não importantes foram omitidos):</p>
+A requisição vai parecer com isto (alguns headers não importantes foram omitidos):
 
-<pre>POST /foo HTTP/1.1
+```
+POST /foo HTTP/1.1
 Content-Length: 68137
 Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
 
@@ -80,36 +73,22 @@ Content-Type: text/plain
 
 (content of the uploaded file foo.txt)
 ---------------------------974767299852498929531610575
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7233", "Content-Type in multipart", "4.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Content-Type", "3.1.1.5")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                        | Título                                                        |
+| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
+| {{RFC("7231", "Content-Type", "3.1.1.5")}}             | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Content-Type")}}</p>
+{{Compat("http.headers.Content-Type")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{HTTPHeader("Accept")}} e {{HTTPHeader("Accept-Charset")}}</li>
- <li>{{HTTPHeader("Content-Disposition")}}</li>
- <li>{{HTTPStatus("206")}} Partial Content</li>
- <li>{{HTTPHeader("X-Content-Type-Options")}}</li>
-</ul>
+- {{HTTPHeader("Accept")}} e {{HTTPHeader("Accept-Charset")}}
+- {{HTTPHeader("Content-Disposition")}}
+- {{HTTPStatus("206")}} Partial Content
+- {{HTTPHeader("X-Content-Type-Options")}}

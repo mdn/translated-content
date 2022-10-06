@@ -10,79 +10,82 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Content-Disposition
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}Em uma resposta HTTP normal, o cabeçalho de resposta **`Content-Disposition`** indica se o conteúdo é esperado a ser exibido _inline_ no navegador, isso significa, como uma página Web ou parte de uma, ou como um anexo, que é baixado e salvo localmente.
 
-<div>Em uma resposta HTTP normal, o cabeçalho de resposta <code><strong>Content-Disposition</strong></code> indica se o conteúdo é esperado a ser exibido <em>inline</em> no navegador, isso significa, como uma página Web ou parte de uma, ou como um anexo, que é baixado e salvo localmente.</div>
+Em um corpo `multipart/form-data`, o cabeçalho geral HTTP **`Content-Disposition`** é um cabeçalho que pode ser utilizado em uma subparte de um corpo multipartes para dar informações sobre o campo a que ele se aplica. A subparte é delimitada pelo limite definido no cabeçalho {{HTTPHeader("Content-Type")}}. Usado no corpo em si, `Content-Disposition` não tem efeito.
 
-
-
-<p>Em um corpo <code>multipart/form-data</code>, o cabeçalho geral HTTP <strong><code>Content-Disposition</code></strong> é um cabeçalho que pode ser utilizado em uma subparte de um corpo multipartes para dar informações sobre o campo a que ele se aplica. A subparte é delimitada pelo limite definido no cabeçalho {{HTTPHeader("Content-Type")}}. Usado no corpo em si, <code>Content-Disposition</code> não tem efeito.</p>
-
-<p>O cabeçalho <code>Content-Disposition</code> é definido em um grande contexto de mensagens MIME para e-mail, mas somente um subconjunto dos possíveis parâmetros são aplicados à formulários HTTP e requisições {{HTTPMethod("POST")}} requests. Somente o valor <code>form-data</code>, assim como a diretiva opcional <code>name</code> e <code>filename</code>, podem ser usadas no contexto HTTP.</p>
+O cabeçalho `Content-Disposition` é definido em um grande contexto de mensagens MIME para e-mail, mas somente um subconjunto dos possíveis parâmetros são aplicados à formulários HTTP e requisições {{HTTPMethod("POST")}} requests. Somente o valor `form-data`, assim como a diretiva opcional `name` e `filename`, podem ser usadas no contexto HTTP.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}} (para o corpo principal)<br>
-    {{Glossary("General header")}} (para a subparte de um corpo multipartes)</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Tipo de cabeçalho</th>
+      <td>
+        {{Glossary("Response header")}} (para o corpo principal)<br />{{Glossary("General header")}}
+        (para a subparte de um corpo multipartes)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>não</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<h3 id="Como_cabeçalho_de_resposta_para_o_corpo_principal">Como cabeçalho de resposta para o corpo principal</h3>
+### Como cabeçalho de resposta para o corpo principal
 
-<p>O primeiro parâmetro no contexto HTTP ou é <code>inline</code> (valor padrão, indicando que ele pode ser mostrado dentro de uma página Web, ou como uma página Web) ou <code>attachment</code> (indicando que ele deve ser baixado; a maioria dos navegadores apresenta uma caixa de diálogo "Salvar como", pré-preenchido com o valor do parâmetro <code>filename</code> se presente).</p>
+O primeiro parâmetro no contexto HTTP ou é `inline` (valor padrão, indicando que ele pode ser mostrado dentro de uma página Web, ou como uma página Web) ou `attachment` (indicando que ele deve ser baixado; a maioria dos navegadores apresenta uma caixa de diálogo "Salvar como", pré-preenchido com o valor do parâmetro `filename` se presente).
 
-<pre class="syntaxbox">Content-Disposition: inline
+```
+Content-Disposition: inline
 Content-Disposition: attachment
-Content-Disposition: attachment; filename="filename.jpg"</pre>
+Content-Disposition: attachment; filename="filename.jpg"
+```
 
-<h3 id="Como_cabeçalho_para_um_corpo_multipartes">Como cabeçalho para um corpo multipartes</h3>
+### Como cabeçalho para um corpo multipartes
 
-<p>O primeiro parâmetro no contexto HTTP é sempre o <code>form-data</code>. Parâmetros adicionais são <em>case-insensitive </em>e possuem argumentos que usam a sintaxe de cadeia de caracteres delimitadas por aspas depois do sinal <code>'='</code>. Múltiplos parâmetros são separados por um ponto e vírgula (<code>';'</code>).</p>
+O primeiro parâmetro no contexto HTTP é sempre o `form-data`. Parâmetros adicionais são _case-insensitive_ e possuem argumentos que usam a sintaxe de cadeia de caracteres delimitadas por aspas depois do sinal `'='`. Múltiplos parâmetros são separados por um ponto e vírgula (`';'`).
 
-<pre class="syntaxbox">Content-Disposition: form-data
+```
+Content-Disposition: form-data
 Content-Disposition: form-data; name="fieldName"
-Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
+Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
+```
 
-<h3 id="Diretivas">Diretivas</h3>
+### Diretivas
 
-<dl>
- <dt><code>name</code></dt>
- <dd><p>O nome é seguido por uma cadeia de caracteres contendo o nome do campo HTML no formulário que o conteúdo dessa subparte se refere. Quando lidando com múltiplos arquivos no mesmo campo (por exemplo, o atributo {{htmlattrxref("multiple", "input")}} de um elemento <code>{HTMLElement("input","&lt;input type=\"file\"&gt;")}}</code>), podem haver diversas subpartes com o mesmo nome.</p>
- <p>Um <code>name</code> com o valor de <code>'_charset_'</code> indica que a parte não é um campo HTML, mas uma codificação para usar em partes sem explicitar a informação de codificação.</p></dd>
- <dt><code>filename</code></dt>
- <dd>É seguido por uma cadeia de caracteres contendo o nome original do arquivo transmitido. O nome do arquivo é sempre opcional e não deve ser usado cegamente pela aplicação: informação de caminho deve ser removida, e conversão para as regras do sistema de arquivo do servidor devem ser feitas. Este parâmetro provém a maior parte da informação indicativa. Quando usado em combinação com <code>Content-Disposition: attachment</code>, ele é usado como nome de arquivo padrão para uma eventual caixa de diálogo "Salvar como" apresentado ao usuário.</dd>
- <dt><code>filename*</code></dt>
- <dd>
- <p>Os parâmetros "filename" e "filename*" se diferenciam somente no fato de que "filename*" usa a codificação definida na <a href="https://tools.ietf.org/html/rfc5987">RFC 5987</a>. Quando ambos "filename" e "filename*" estão presentes em um único campo de valor do cabeçalho, "filename*" é preferido sobre "filename" quando ambos são entendidos.</p>
- </dd>
-</dl>
+- `name`
 
-<h2 id="Exemplos">Exemplos</h2>
+  - : O nome é seguido por uma cadeia de caracteres contendo o nome do campo HTML no formulário que o conteúdo dessa subparte se refere. Quando lidando com múltiplos arquivos no mesmo campo (por exemplo, o atributo {{htmlattrxref("multiple", "input")}} de um elemento `{HTMLElement("input","<input type=\"file\">")}}`), podem haver diversas subpartes com o mesmo nome.
 
-<p>Uma resposta ativando a caixa de diálogo "Salvar como":</p>
+    Um `name` com o valor de `'_charset_'` indica que a parte não é um campo HTML, mas uma codificação para usar em partes sem explicitar a informação de codificação.
 
-<pre>200 OK
+- `filename`
+  - : É seguido por uma cadeia de caracteres contendo o nome original do arquivo transmitido. O nome do arquivo é sempre opcional e não deve ser usado cegamente pela aplicação: informação de caminho deve ser removida, e conversão para as regras do sistema de arquivo do servidor devem ser feitas. Este parâmetro provém a maior parte da informação indicativa. Quando usado em combinação com `Content-Disposition: attachment`, ele é usado como nome de arquivo padrão para uma eventual caixa de diálogo "Salvar como" apresentado ao usuário.
+- `filename*`
+  - : Os parâmetros "filename" e "filename\*" se diferenciam somente no fato de que "filename\*" usa a codificação definida na [RFC 5987](https://tools.ietf.org/html/rfc5987). Quando ambos "filename" e "filename\*" estão presentes em um único campo de valor do cabeçalho, "filename\*" é preferido sobre "filename" quando ambos são entendidos.
+
+## Exemplos
+
+Uma resposta ativando a caixa de diálogo "Salvar como":
+
+```
+200 OK
 Content-Type: text/html; charset=utf-8
 Content-Disposition: attachment; filename="cool.html"
 Content-Length: 21
 
-&lt;HTML&gt;Me salve!&lt;/HTML&gt;
-</pre>
+<HTML>Me salve!</HTML>
+```
 
-<p>O simples arquivo HTML será salvo como um download regular ao invés de ser mostrado no navegador. A maioria dos navegadores irá propôr salvar o arquivo como nome de <code>cool.html</code> (por padrão).</p>
+O simples arquivo HTML será salvo como um download regular ao invés de ser mostrado no navegador. A maioria dos navegadores irá propôr salvar o arquivo como nome de `cool.html` (por padrão).
 
-<p>Um exemplo de um formulário de HTML postado usando o formato <code>multipart/form-data</code> que faz o uso do cabeçalho <code>Content-Disposition</code>:</p>
+Um exemplo de um formulário de HTML postado usando o formato `multipart/form-data` que faz o uso do cabeçalho `Content-Disposition`:
 
-<pre>POST /test.html HTTP/1.1
+```
+POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"
 
@@ -94,45 +97,27 @@ value1
 Content-Disposition: form-data; name="field2"; filename="example.txt"
 
 value2
---boundary--</pre>
+--boundary--
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7578")}}</td>
-   <td>Returning Values from Forms: multipart/form-data</td>
-  </tr>
-  <tr>
-   <td>{{RFC("6266")}}</td>
-   <td>Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)</td>
-  </tr>
-  <tr>
-   <td>{{RFC("2183")}}</td>
-   <td>Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field</td>
-  </tr>
- </tbody>
-</table>
+| Especificação        | Título                                                                                            |
+| -------------------- | ------------------------------------------------------------------------------------------------- |
+| {{RFC("7578")}} | Returning Values from Forms: multipart/form-data                                                  |
+| {{RFC("6266")}} | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)             |
+| {{RFC("2183")}} | Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Content-Disposition")}}</p>
+{{Compat("http.headers.Content-Disposition")}}
 
-<h2 id="Notas_de_compatibilidade">Notas de compatibilidade</h2>
+## Notas de compatibilidade
 
-<ul>
- <li>Firefox 5 lida com o cabeçalho de resposta HTTP <code>Content-Disposition</code> mais efetivamente se ambos parâmetros <code>filename</code> e <code>filename*</code> são providos; ele olha através de todos os nomes providenciados, usando o parâmetro <code>filename*</code> se um estiver disponível, mesmo se o parâmetro <code>filename</code> estiver incluído primeiro. Anteriormente, o primeiro parâmetro que combinasse seria utilizado, Previously, the first matching parameter would be used, desse modo prevenindo um nome mais apropriado de ser utilizado. Veja {{bug(588781)}}.</li>
-</ul>
+- Firefox 5 lida com o cabeçalho de resposta HTTP `Content-Disposition` mais efetivamente se ambos parâmetros `filename` e `filename*` são providos; ele olha através de todos os nomes providenciados, usando o parâmetro `filename*` se um estiver disponível, mesmo se o parâmetro `filename` estiver incluído primeiro. Anteriormente, o primeiro parâmetro que combinasse seria utilizado, Previously, the first matching parameter would be used, desse modo prevenindo um nome mais apropriado de ser utilizado. Veja {{bug(588781)}}.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms">Formulários HTML</a></li>
- <li>O cabeçalho {{HTTPHeader("Content-Type")}} definindo o limite do corpo multipartes.</li>
- <li>A interface {{domxref("FormData")}} usada para manipular dados de formulários para uso na API {{domxref("XMLHttpRequest")}}.</li>
-</ul>
+- [Formulários HTML](/pt-BR/docs/Web/Guide/HTML/Forms)
+- O cabeçalho {{HTTPHeader("Content-Type")}} definindo o limite do corpo multipartes.
+- A interface {{domxref("FormData")}} usada para manipular dados de formulários para uso na API {{domxref("XMLHttpRequest")}}.

@@ -9,91 +9,85 @@ tags:
 translation_of: Web/HTTP/CORS
 original_slug: Web/HTTP/Controle_Acesso_CORS
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>{{Glossary("CORS")}} - Cross-Origin Resource Sharing (Compartilhamento de recursos com origens diferentes) é um mecanismo que usa cabeçalhos adicionais {{Glossary("HTTP")}} para informar a um navegador que permita que um aplicativo Web seja executado em uma origem (domínio) com permissão para acessar recursos selecionados de um servidor em uma origem distinta. Um aplicativo Web executa uma <strong>requisição <em>cross-origin</em> HTTP </strong>ao solicitar um recurso que tenha uma origem diferente (domínio, protocolo e porta) da sua própria origem.</p>
+{{Glossary("CORS")}} - Cross-Origin Resource Sharing (Compartilhamento de recursos com origens diferentes) é um mecanismo que usa cabeçalhos adicionais {{Glossary("HTTP")}} para informar a um navegador que permita que um aplicativo Web seja executado em uma origem (domínio) com permissão para acessar recursos selecionados de um servidor em uma origem distinta. Um aplicativo Web executa uma **requisição _cross-origin_ HTTP** ao solicitar um recurso que tenha uma origem diferente (domínio, protocolo e porta) da sua própria origem.
 
-<p>Um exemplo de requisição <em>cross-origin</em>: o código JavaScript <em>frontend </em>de um aplicativo web disponível em <code>http://domain-a.com</code> usa {{domxref ("XMLHttpRequest")}} para fazer uma requisição para <code>http://api.domain-b.com/data.json</code>.</p>
+Um exemplo de requisição _cross-origin_: o código JavaScript _frontend_ de um aplicativo web disponível em `http://domain-a.com` usa {{domxref ("XMLHttpRequest")}} para fazer uma requisição para `http://api.domain-b.com/data.json`.
 
-<p>Por motivos de segurança, navegadores restringem requisições <em>cross-origin</em> HTTP iniciadas por scripts. Por exemplo, <code>XMLHttpRequest</code> e <a href="/pt-BR/docs/Web/API/Fetch_API">Fetch API</a> seguem a <a href="/en-US/docs/Web/Security/Same-origin_policy">política de mesma origem</a> (<em>same-origin policy</em>). Isso significa que um aplicativo web que faz uso dessas APIs só poderá fazer solicitações para recursos de mesma origem da qual o aplicativo foi carregado, a menos que a resposta da outra origem inclua os cabeçalhos CORS corretos.</p>
+Por motivos de segurança, navegadores restringem requisições _cross-origin_ HTTP iniciadas por scripts. Por exemplo, `XMLHttpRequest` e [Fetch API](/pt-BR/docs/Web/API/Fetch_API) seguem a [política de mesma origem](/pt-BR/docs/Web/Security/Same-origin_policy) (_same-origin policy_). Isso significa que um aplicativo web que faz uso dessas APIs só poderá fazer solicitações para recursos de mesma origem da qual o aplicativo foi carregado, a menos que a resposta da outra origem inclua os cabeçalhos CORS corretos.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14295/CORS_principle.png" style="height: 305px; width: 440px;"></p>
+![](https://mdn.mozillademos.org/files/14295/CORS_principle.png)
 
-<p>O mecânismo CORS suporta requisições seguras do tipo <em>cross-origin e </em>transferências de dados entre navegadores e servidores web. Navegadores modernos usam o CORS em uma API contêiner, como <code>XMLHttpRequest</code> ou <a href="/pt-BR/docs/Web/API/Fetch_API">Fetch</a>, para ajudar a reduzir os riscos de requisições <em>cross-origin</em> HTTP.</p>
+O mecânismo CORS suporta requisições seguras do tipo _cross-origin e_ transferências de dados entre navegadores e servidores web. Navegadores modernos usam o CORS em uma API contêiner, como `XMLHttpRequest` ou [Fetch](/pt-BR/docs/Web/API/Fetch_API), para ajudar a reduzir os riscos de requisições _cross-origin_ HTTP.
 
-<h2 id="Quem_deve_ler_este_artigo">Quem deve ler este artigo?</h2>
+## Quem deve ler este artigo?
 
-<p>Todos, realmente.</p>
+Todos, realmente.
 
-<p>Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem <a href="en-US/docs/Web/HTTP/Server-Side_Access_Control">compartilhamento <em>cross-origin</em> a partir de uma perspectiva de servidor (com fragmentos de código PHP)</a>, pode ser uma leitura complementar.</p>
+Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](en-US/docs/Web/HTTP/Server-Side_Access_Control), pode ser uma leitura complementar.
 
-<h2 id="Quais_solicitações_usam_o_CORS">Quais solicitações usam o CORS?</h2>
+## Quais solicitações usam o CORS?
 
-<p>Esse <a href="https://fetch.spec.whatwg.org/#http-cors-protocol">padrão de compartilhamento <em>cross-origin</em></a> é usado para habilitar solicitações HTTP entre sites para:</p>
+Esse [padrão de compartilhamento _cross-origin_](https://fetch.spec.whatwg.org/#http-cors-protocol) é usado para habilitar solicitações HTTP entre sites para:
 
-<ul>
- <li>Chamadas {{domxref("XMLHttpRequest")}} ou <a href="/pt-BR/docs/Web/API/Fetch_API">Fetch API</a> pela comunicação entre origens diferentes, tal como discutido acima.</li>
- <li>Web Fonts (para o uso de fontes pelo <em>cross-domain</em> em <code>@font</code> do CSS), <a href="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements">para que os servidores possam implantar fontes TrueType que só podem ser carregadas em origens diferentes e usadas por sites com autorização para isso</a>.</li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Texturas WebGL</a>.</li>
- <li><em>Frames </em>de Imagens/vídeos desenhados em uma tela usando {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.</li>
-</ul>
+- Chamadas {{domxref("XMLHttpRequest")}} ou [Fetch API](/pt-BR/docs/Web/API/Fetch_API) pela comunicação entre origens diferentes, tal como discutido acima.
+- Web Fonts (para o uso de fontes pelo _cross-domain_ em `@font` do CSS), [para que os servidores possam implantar fontes TrueType que só podem ser carregadas em origens diferentes e usadas por sites com autorização para isso](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements).
+- [Texturas WebGL](/pt-BR/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+- _Frames_ de Imagens/vídeos desenhados em uma tela usando {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.
 
-<p>Este artigo é uma discussão geral sobre <em>Cross-Origin Resource Sharing</em> (Compartilhamento de recursos com origens diferentes) e inclui uma discussão de cabeçalhos HTTP necessários.</p>
+Este artigo é uma discussão geral sobre _Cross-Origin Resource Sharing_ (Compartilhamento de recursos com origens diferentes) e inclui uma discussão de cabeçalhos HTTP necessários.
 
-<h2 id="Visão_Geral">Visão Geral</h2>
+## Visão Geral
 
-<p>O padrão <em>Cross-Origin Resource Sharing</em> trabalha adicionando novos <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">cabeçalhos HTTP</a> que permitem que os servidores descrevam um conjunto de origens que possuem permissão a ler uma informação usando o navegador. Além disso, para métodos de requisição HTTP que podem causar efeitos colaterais nos dados do servidor (em particular, para métodos HTTP diferentes de {{HTTPMethod("GET")}} ou para uso de {{HTTPMethod("POST")}} com certos <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a>), a especificação exige que navegadores "pré-enviem" a requisição, solicitando os métodos suportados pelo servidor com um método de requisição HTTP {{HTTPMethod("OPTIONS")}} e, após a "aprovação", o servidor envia a requisição verdadeira com o método de requisição HTTP correto. Servidores também podem notificar clientes se "credenciais" (incluindo <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">Cookies</a> e dados de autenticação HTTP) devem ser enviadas com as requisições.</p>
+O padrão _Cross-Origin Resource Sharing_ trabalha adicionando novos [cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) que permitem que os servidores descrevam um conjunto de origens que possuem permissão a ler uma informação usando o navegador. Além disso, para métodos de requisição HTTP que podem causar efeitos colaterais nos dados do servidor (em particular, para métodos HTTP diferentes de {{HTTPMethod("GET")}} ou para uso de {{HTTPMethod("POST")}} com certos [MIME types](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), a especificação exige que navegadores "pré-enviem" a requisição, solicitando os métodos suportados pelo servidor com um método de requisição HTTP {{HTTPMethod("OPTIONS")}} e, após a "aprovação", o servidor envia a requisição verdadeira com o método de requisição HTTP correto. Servidores também podem notificar clientes se "credenciais" (incluindo [Cookies](/pt-BR/docs/Web/HTTP/Cookies) e dados de autenticação HTTP) devem ser enviadas com as requisições.
 
-<p>Falhas no CORS resultam em erros, mas por questões de segurança, detalhes sobre erros não estão disponíveis no código JavaScript. O código tem apenas conhecimento de que ocorreu um erro. A única maneira para determinar especificamente o que ocorreu de errado é procurar no console do navegador por mais detalhes.</p>
+Falhas no CORS resultam em erros, mas por questões de segurança, detalhes sobre erros não estão disponíveis no código JavaScript. O código tem apenas conhecimento de que ocorreu um erro. A única maneira para determinar especificamente o que ocorreu de errado é procurar no console do navegador por mais detalhes.
 
-<p>Seções subsequentes discutem cenários, assim como fornecem um detalhamento dos cabeçalhos HTTP utilizados.</p>
+Seções subsequentes discutem cenários, assim como fornecem um detalhamento dos cabeçalhos HTTP utilizados.
 
-<h2 id="Exemplos_de_cenários_com_controle_de_acesso">Exemplos de cenários com controle de acesso</h2>
+## Exemplos de cenários com controle de acesso
 
-<p>Aqui, apresentamos três cenários que ilustram como <em>Cross-Origin Resource Sharing</em> funciona. Todos estes exemplos usam o objeto {{domxref("XMLHttpRequest")}}, que pode ser utilizado para fazer requisições entre origens em qualquer navegador compatível.</p>
+Aqui, apresentamos três cenários que ilustram como _Cross-Origin Resource Sharing_ funciona. Todos estes exemplos usam o objeto {{domxref("XMLHttpRequest")}}, que pode ser utilizado para fazer requisições entre origens em qualquer navegador compatível.
 
-<p>Os snippets JavaScript inclusos nessas seções (e instâncias executáveis de código do lado servidor que tratam corretamente essas requisições entre origens) podem ser encontrados "em ação" aqui: <a class="external" href="http://arunranga.com/examples/access-control/">http://arunranga.com/examples/access-control/</a>, e irão funcionar em navegadores que suportam <code>XMLHttpRequest</code> entre origens.</p>
+Os snippets JavaScript inclusos nessas seções (e instâncias executáveis de código do lado servidor que tratam corretamente essas requisições entre origens) podem ser encontrados "em ação" aqui: <http://arunranga.com/examples/access-control/>, e irão funcionar em navegadores que suportam `XMLHttpRequest` entre origens.
 
-<p>Uma discussão sobre <em>Cross-Origin Resource Sharing</em> a partir da perspectiva do servidor (incluindo snippets de código PHP) pode ser encontrada no artigo <a href="/en-US/docs/Web/HTTP/Server-Side_Access_Control">Server-Side Access Control (CORS)</a>.</p>
+Uma discussão sobre _Cross-Origin Resource Sharing_ a partir da perspectiva do servidor (incluindo snippets de código PHP) pode ser encontrada no artigo [Server-Side Access Control (CORS)](/pt-BR/docs/Web/HTTP/Server-Side_Access_Control).
 
-<h3 id="Requisições_simples">Requisições simples</h3>
+### Requisições simples
 
-<p>Algumas requisições não acionam um <a href="/en-US/docs/Web/HTTP/Access_control_CORS#Preflighted_requests">pré-envio CORS</a>. Essas são denominadas neste artigo como “requisições simples” (<em>simple request</em>), embora a especificação {{SpecName('Fetch')}} (que define CORS) não utilize esse termo. Uma requisição que não aciona um <a href="/en-US/docs/Web/HTTP/Access_control_CORS#Preflighted_requests">pré-envio CORS</a> — denominada “requisição simples” — é uma que <strong>atende todas as seguintes condições</strong>:</p>
+Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests). Essas são denominadas neste artigo como “requisições simples” (_simple request_), embora a especificação {{SpecName('Fetch')}} (que define CORS) não utilize esse termo. Uma requisição que não aciona um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) — denominada “requisição simples” — é uma que **atende todas as seguintes condições**:
 
-<ul>
- <li>Os únicos métodos permitidos são:
-  <ul>
-   <li>{{HTTPMethod("GET")}}</li>
-   <li>{{HTTPMethod("HEAD")}}</li>
-   <li>{{HTTPMethod("POST")}}</li>
-  </ul>
- </li>
- <li>Além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}} ou <a href="https://fetch.spec.whatwg.org/#forbidden-header-name">qualquer um dos outros cabeçalhos com nomes definidos na especificação Fetch como “<em>forbidden header name</em>”</a>), os únicos cabeçalhos que podem ser definidos manualmente são <a href="https://fetch.spec.whatwg.org/#cors-safelisted-request-header">aqueles cujo a especificação Fetch define como sendo um “<em>CORS-safelisted request-header</em>”</a>, que são:
-  <ul>
-   <li>{{HTTPHeader("Accept")}}</li>
-   <li>{{HTTPHeader("Accept-Language")}}</li>
-   <li>{{HTTPHeader("Content-Language")}}</li>
-   <li>{{HTTPHeader("Content-Type")}} (porém observe os requisitos adicionais abaixo)</li>
-  </ul>
- </li>
- <li>Os únicos valores permitidos para o {{HTTPHeader("Content-Type")}} do cabeçalho são:
-  <ul>
-   <li><code>application/x-www-form-urlencoded</code></li>
-   <li><code>multipart/form-data</code></li>
-   <li><code>text/plain</code></li>
-  </ul>
- </li>
- <li>Nenhum <em>event listener</em> é registrado em qualquer objeto {{domxref("XMLHttpRequestUpload")}} usado na requisição, estes são acessados usando a propriedade {{domxref("XMLHttpRequest.upload")}}.</li>
- <li>Nenhum objeto {{domxref("ReadableStream")}} é usado na requisição.</li>
-</ul>
+- Os únicos métodos permitidos são:
 
-<div class="note"><strong>Nota:</strong> Esses são os mesmos tipos de requisições entre origens distintas que o conteúdo da web já pode realizar e nenhum dado dado de resposta é liberado ao solicitante, a menos que o servidor envie um cabeçalho adequado. Portanto, sites que impedem a falsificação de requisições entre origens não tem nada a temer em relação ao controle de acesso HTTP.</div>
+  - {{HTTPMethod("GET")}}
+  - {{HTTPMethod("HEAD")}}
+  - {{HTTPMethod("POST")}}
 
-<div class="note"><strong>Nota:</strong> O WebKit Nightly e Safari Technology Preview impõem restrições adicionais nos valores permitidos nos cabeçalhos {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} e {{HTTPHeader("Content-Language")}}. Caso algum destes cabeçalhos tenham valores ”não-padronizados”, o WebKit/Safari não considera que a requisição atenda as condições para uma “requisição simples”. O que o WebKit/Safari considera valores “não-padronizados” para estes cabeçalhos não é documentado exceto nos seguintes bugs do WebKit: <em><a href="https://bugs.webkit.org/show_bug.cgi?id=165178" rel="nofollow noreferrer">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a>, <a href="https://bugs.webkit.org/show_bug.cgi?id=165566" rel="nofollow noreferrer">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a></em>  e <em><a href="https://bugs.webkit.org/show_bug.cgi?id=166363" rel="nofollow noreferrer">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a></em>. Nenhum outro navegador implementa estas restrições adicionais, pois elas não são parte da especificação.</div>
+- Além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}} ou [qualquer um dos outros cabeçalhos com nomes definidos na especificação Fetch como “_forbidden header name_”](https://fetch.spec.whatwg.org/#forbidden-header-name)), os únicos cabeçalhos que podem ser definidos manualmente são [aqueles cujo a especificação Fetch define como sendo um “_CORS-safelisted request-header_”](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), que são:
 
-<p>Por exemplo, suponha que o conteúdo web no domínio <code>http://foo.example</code> deseje chamar (<code>invocation</code> do exemplo abaixo) um outro conteúdo no domínio <code>http://bar.other</code>. Esse código Javascript pode estar hospedado em foo.example:</p>
+  - {{HTTPHeader("Accept")}}
+  - {{HTTPHeader("Accept-Language")}}
+  - {{HTTPHeader("Content-Language")}}
+  - {{HTTPHeader("Content-Type")}} (porém observe os requisitos adicionais abaixo)
 
-<pre class="brush: js notranslate" id="line1">var invocation = new XMLHttpRequest();
+- Os únicos valores permitidos para o {{HTTPHeader("Content-Type")}} do cabeçalho são:
+
+  - `application/x-www-form-urlencoded`
+  - `multipart/form-data`
+  - `text/plain`
+
+- Nenhum _event listener_ é registrado em qualquer objeto {{domxref("XMLHttpRequestUpload")}} usado na requisição, estes são acessados usando a propriedade {{domxref("XMLHttpRequest.upload")}}.
+- Nenhum objeto {{domxref("ReadableStream")}} é usado na requisição.
+
+> **Nota:** Esses são os mesmos tipos de requisições entre origens distintas que o conteúdo da web já pode realizar e nenhum dado dado de resposta é liberado ao solicitante, a menos que o servidor envie um cabeçalho adequado. Portanto, sites que impedem a falsificação de requisições entre origens não tem nada a temer em relação ao controle de acesso HTTP.
+
+> **Nota:** O WebKit Nightly e Safari Technology Preview impõem restrições adicionais nos valores permitidos nos cabeçalhos {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} e {{HTTPHeader("Content-Language")}}. Caso algum destes cabeçalhos tenham valores ”não-padronizados”, o WebKit/Safari não considera que a requisição atenda as condições para uma “requisição simples”. O que o WebKit/Safari considera valores “não-padronizados” para estes cabeçalhos não é documentado exceto nos seguintes bugs do WebKit: _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ e _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Nenhum outro navegador implementa estas restrições adicionais, pois elas não são parte da especificação.
+
+Por exemplo, suponha que o conteúdo web no domínio `http://foo.example` deseje chamar (`invocation` do exemplo abaixo) um outro conteúdo no domínio `http://bar.other`. Esse código Javascript pode estar hospedado em foo.example:
+
+```js
+var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/public-data/';
 
 function callOtherDomain() {
@@ -103,15 +97,16 @@ function callOtherDomain() {
     invocation.send();
   }
 }
-</pre>
+```
 
-<p>Isso fará uma troca simples entre cliente e servidor, utilizando o cabeçalho CORS para tratar os privilégios.</p>
+Isso fará uma troca simples entre cliente e servidor, utilizando o cabeçalho CORS para tratar os privilégios.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14293/simple_req.png" style="height: 224px; width: 521px;"></p>
+![](https://mdn.mozillademos.org/files/14293/simple_req.png)
 
-<p>Neste caso, vamos ver o que o navegador enviará ao servidor e vamos olhar como o servidor responde:</p>
+Neste caso, vamos ver o que o navegador enviará ao servidor e vamos olhar como o servidor responde:
 
-<pre class="brush: html notranslate">GET /resources/public-data/ HTTP/1.1
+```html
+GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -133,65 +128,60 @@ Transfer-Encoding: chunked
 Content-Type: application/xml
 
 [XML Data]
-</pre>
+```
 
-<p>As linhas de 1 a 10 são enviadas no header. Note que o cabeçalho principal da requisição HTTP aqui é {{HTTPHeader("Origin")}} na linha 10, o qual revela que a chamada é proveniente de um conteúdo no domínio <code>http://foo.example</code>.</p>
+As linhas de 1 a 10 são enviadas no header. Note que o cabeçalho principal da requisição HTTP aqui é {{HTTPHeader("Origin")}} na linha 10, o qual revela que a chamada é proveniente de um conteúdo no domínio `http://foo.example`.
 
-<p>As linhas de 13 a 22 mostram a resposta HTTP do servidor no domínio <code>http://bar.other</code>. Nesta resposta, o servidor envia de volta um cabeçalho {{HTTPHeader("Access-Control-Allow-Origin")}} exibido na linha 16. O uso dos cabeçalhos {{HTTPHeader("Origin")}} e {{HTTPHeader("Access-Control-Allow-Origin")}} mostram o protocolo de controle de acesso em seu uso mais simples. Neste caso, o servidor responde com <code>Access-Control-Allow-Origin: *</code>, o que significa que o recurso pode ser acessado por <strong>qualquer</strong> domínio pela comunicação entre origens. Se os proprietários dos recursos em <code>http://bar.other</code> desejarem restringir o acesso ao conteúdo para o mesmo ser apenas de <code>http://foo.example</code>, eles retornaram:</p>
+As linhas de 13 a 22 mostram a resposta HTTP do servidor no domínio `http://bar.other`. Nesta resposta, o servidor envia de volta um cabeçalho {{HTTPHeader("Access-Control-Allow-Origin")}} exibido na linha 16. O uso dos cabeçalhos {{HTTPHeader("Origin")}} e {{HTTPHeader("Access-Control-Allow-Origin")}} mostram o protocolo de controle de acesso em seu uso mais simples. Neste caso, o servidor responde com `Access-Control-Allow-Origin: *`, o que significa que o recurso pode ser acessado por **qualquer** domínio pela comunicação entre origens. Se os proprietários dos recursos em `http://bar.other` desejarem restringir o acesso ao conteúdo para o mesmo ser apenas de `http://foo.example`, eles retornaram:
 
-<p><code>Access-Control-Allow-Origin: http://foo.example</code></p>
+`Access-Control-Allow-Origin: http://foo.example`
 
-<p>Observe que, agora, nenhum dominio além de <code>http://foo.example</code> (identificado na requisição pelo cabeçalho ORIGIN: como na linha 10) pode acessar o recurso pela comunicação entre origens. O cabeçalho <code>Access-Control-Allow-Origin</code> deve conter o valor que foi enviado no cabeçalho <code>Origin</code> da requisição. </p>
+Observe que, agora, nenhum dominio além de `http://foo.example` (identificado na requisição pelo cabeçalho ORIGIN: como na linha 10) pode acessar o recurso pela comunicação entre origens. O cabeçalho `Access-Control-Allow-Origin` deve conter o valor que foi enviado no cabeçalho `Origin` da requisição.
 
-<h3 id="Requisições_com_pré-envio">Requisições com pré-envio</h3>
+### Requisições com pré-envio
 
-<p>Ao contrário de <a href="/en-US/docs/Web/HTTP/Access_control_CORS#Simple_requests">“requisições simples” (discutido acima)</a>, requisições com "pré-envio" (<em>Preflighted requests</em>) primeiramente enviam uma requisição HTTP através do método {{HTTPMethod("OPTIONS")}} para obter um recurso em outro domínio, a fim de determinar se de fato a requisição atual é segura para envio. Requisições entre sites possuem pré-envio, já que podem interferir em dados do usuário.</p>
+Ao contrário de [“requisições simples” (discutido acima)](/pt-BR/docs/Web/HTTP/Access_control_CORS#Simple_requests), requisições com "pré-envio" (_Preflighted requests_) primeiramente enviam uma requisição HTTP através do método {{HTTPMethod("OPTIONS")}} para obter um recurso em outro domínio, a fim de determinar se de fato a requisição atual é segura para envio. Requisições entre sites possuem pré-envio, já que podem interferir em dados do usuário.
 
-<p>Em particular, uma requisição tem um pré-envio <strong>se qualquer das seguintes condições</strong> for verdadeira:</p>
+Em particular, uma requisição tem um pré-envio **se qualquer das seguintes condições** for verdadeira:
 
-<ul>
- <li><strong>Se</strong> a requisição usa algum dos seguintes métodos:
+- **Se** a requisição usa algum dos seguintes métodos:
 
-  <ul>
-   <li>{{HTTPMethod("PUT")}}</li>
-   <li>{{HTTPMethod("DELETE")}}</li>
-   <li>{{HTTPMethod("CONNECT")}}</li>
-   <li>{{HTTPMethod("OPTIONS")}}</li>
-   <li>{{HTTPMethod("TRACE")}}</li>
-   <li>{{HTTPMethod("PATCH")}}</li>
-  </ul>
- </li>
- <li><strong>Ou se</strong>, além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {HTTPHeader("User-Agent")}} ou <a href="https://fetch.spec.whatwg.org/#forbidden-header-name">qualquer <strong>OUTRO</strong> cabeçalho com um nome definido na especificação Fetch como “<em>forbidden header name</em>”</a>), a requisição inclui quaisquer cabeçalhos <strong>além</strong> <a href="https://fetch.spec.whatwg.org/#cors-safelisted-request-header">daqueles que a especificação Fetch define como sendo um “<em>CORS-safelisted request-header</em>”</a>, que são:
-  <ul>
-   <li>{{HTTPHeader("Accept")}}</li>
-   <li>{{HTTPHeader("Accept-Language")}}</li>
-   <li>{{HTTPHeader("Content-Language")}}</li>
-   <li>{{HTTPHeader("Content-Type")}} (porém observe os requisitos adicionais abaixo)</li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#dpr">DPR</a></code></li>
-   <li>{{HTTPHeader("Downlink")}}</li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#save-data">Save-Data</a></code></li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#viewport-width">Viewport-Width</a></code></li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#width">Width</a></code></li>
-  </ul>
- </li>
- <li><strong>Ou se</strong> o {{HTTPHeader("Content-Type")}} do cabeçalho <strong>tem</strong> <strong>outro</strong> valor que:
-  <ul>
-   <li><code>application/x-www-form-urlencoded</code></li>
-   <li><code>multipart/form-data</code></li>
-   <li><code>text/plain</code></li>
-  </ul>
- </li>
- <li><strong>Ou se</strong> um ou mais <em>event listener</em> estiver registrado em um objeto {{domxref ("XMLHttpRequestUpload")}} usado nessa requisição.</li>
- <li><strong>Ou se</strong> um objeto {{domxref("ReadableStream")}} é usado nessa requisição.</li>
-</ul>
+  - {{HTTPMethod("PUT")}}
+  - {{HTTPMethod("DELETE")}}
+  - {{HTTPMethod("CONNECT")}}
+  - {{HTTPMethod("OPTIONS")}}
+  - {{HTTPMethod("TRACE")}}
+  - {{HTTPMethod("PATCH")}}
 
-<div class="note"><strong>Nota:</strong> WebKit Nightly e Safari Technology Preview colocam restrições adicionais nos valores permitidos dos cabeçalhos {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} e {{HTTPHeader("Content-Language")}}. Caso qualquer um desses cabeçalhos tenha algum valor fora do padrão (non-standard), o WebKit/Safari faz o pré-envio da requisição. O que o WebKit/Safari considera como valor “non-standard” para tais cabeçalhos não está documentado, exceto nos seguintes bugs do WebKit: <a href="https://bugs.webkit.org/show_bug.cgi?id=165178" rel="nofollow noreferrer">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a>, <a href="https://bugs.webkit.org/show_bug.cgi?id=165566" rel="nofollow noreferrer">Allow commas in Accept, Accept-Language, e Content-Language request headers for simple CORS</a> e <a href="https://bugs.webkit.org/show_bug.cgi?id=166363" rel="nofollow noreferrer">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a>. Nenhum outro navegador implementa estas restrições adicionais, pois elas não são parte da especificação.</div>
+- **Ou se**, além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {HTTPHeader("User-Agent")}} ou [qualquer **OUTRO** cabeçalho com um nome definido na especificação Fetch como “_forbidden header name_”](https://fetch.spec.whatwg.org/#forbidden-header-name)), a requisição inclui quaisquer cabeçalhos **além** [daqueles que a especificação Fetch define como sendo um “_CORS-safelisted request-header_”](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), que são:
 
-<p>O exemplo a seguir é de uma requisição com pré-envio.</p>
+  - {{HTTPHeader("Accept")}}
+  - {{HTTPHeader("Accept-Language")}}
+  - {{HTTPHeader("Content-Language")}}
+  - {{HTTPHeader("Content-Type")}} (porém observe os requisitos adicionais abaixo)
+  - [`DPR`](http://httpwg.org/http-extensions/client-hints.html#dpr)
+  - {{HTTPHeader("Downlink")}}
+  - [`Save-Data`](http://httpwg.org/http-extensions/client-hints.html#save-data)
+  - [`Viewport-Width`](http://httpwg.org/http-extensions/client-hints.html#viewport-width)
+  - [`Width`](http://httpwg.org/http-extensions/client-hints.html#width)
 
-<pre class="brush: js notranslate" id="line1">var invocation = new XMLHttpRequest();
+- **Ou se** o {{HTTPHeader("Content-Type")}} do cabeçalho **tem** **outro** valor que:
+
+  - `application/x-www-form-urlencoded`
+  - `multipart/form-data`
+  - `text/plain`
+
+- **Ou se** um ou mais _event listener_ estiver registrado em um objeto {{domxref ("XMLHttpRequestUpload")}} usado nessa requisição.
+- **Ou se** um objeto {{domxref("ReadableStream")}} é usado nessa requisição.
+
+> **Nota:** WebKit Nightly e Safari Technology Preview colocam restrições adicionais nos valores permitidos dos cabeçalhos {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} e {{HTTPHeader("Content-Language")}}. Caso qualquer um desses cabeçalhos tenha algum valor fora do padrão (non-standard), o WebKit/Safari faz o pré-envio da requisição. O que o WebKit/Safari considera como valor “non-standard” para tais cabeçalhos não está documentado, exceto nos seguintes bugs do WebKit: [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, e Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566) e [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363). Nenhum outro navegador implementa estas restrições adicionais, pois elas não são parte da especificação.
+
+O exemplo a seguir é de uma requisição com pré-envio.
+
+```js
+var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/post-here/';
-var body = '&lt;?xml version="1.0"?&gt;&lt;person&gt;&lt;name&gt;Arun&lt;/name&gt;&lt;/person&gt;';
+var body = '<?xml version="1.0"?><person><name>Arun</name></person>';
 
 function callOtherDomain(){
   if(invocation)
@@ -205,17 +195,18 @@ function callOtherDomain(){
 }
 
 ......
-</pre>
+```
 
-<p>No exemplo acima, a linha 3 cria um XML para enviar com a requisição <code>POST</code> da linha 8. Também, na linha 9, é definido um cabeçalho de uma requisição HTTP "personalizada" (non-standard) com (<code>X-PINGOTHER: pingpong</code>). Tais cabeçalhos não fazem parte do protocolo HTTP/1.1, mas podem ser usados para aplicações web. Já que a requisição usa um Content-Type do tipo <code>application/xml</code> e como é uma requisição personalizada, esta requisição faz um pré-envio.</p>
+No exemplo acima, a linha 3 cria um XML para enviar com a requisição `POST` da linha 8. Também, na linha 9, é definido um cabeçalho de uma requisição HTTP "personalizada" (non-standard) com (`X-PINGOTHER: pingpong`). Tais cabeçalhos não fazem parte do protocolo HTTP/1.1, mas podem ser usados para aplicações web. Já que a requisição usa um Content-Type do tipo `application/xml` e como é uma requisição personalizada, esta requisição faz um pré-envio.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14289/prelight.png"></p>
+![](https://mdn.mozillademos.org/files/14289/prelight.png)
 
-<p>(Observação: conforme descrito abaixo, a requisição POST real não inclui os cabeçalhos Access-Control-Request- *; eles são necessários apenas para a requisição OPTIONS.)</p>
+(Observação: conforme descrito abaixo, a requisição POST real não inclui os cabeçalhos Access-Control-Request- \*; eles são necessários apenas para a requisição OPTIONS.)
 
-<p>Vamos conferir a comunicação completa que ocorre entre cliente e servidor. A primeira comunicação é a <em>requisição com pré-envio/resposta</em>:</p>
+Vamos conferir a comunicação completa que ocorre entre cliente e servidor. A primeira comunicação é a _requisição com pré-envio/resposta_:
 
-<pre class="brush: shell">OPTIONS /resources/post-here/ HTTP/1.1
+```shell
+OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -241,11 +232,12 @@ Content-Length: 0
 Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 Content-Type: text/plain
-</pre>
+```
 
-<p>Uma vez que a requisição com pré-envio é completa, a requisição efetiva será enviada:</p>
+Uma vez que a requisição com pré-envio é completa, a requisição efetiva será enviada:
 
-<pre class="brush:shell">POST /resources/post-here/ HTTP/1.1
+```shell
+POST /resources/post-here/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -261,7 +253,7 @@ Origin: http://foo.example
 Pragma: no-cache
 Cache-Control: no-cache
 
-&lt;?xml version="1.0"?&gt;&lt;person&gt;&lt;name&gt;Arun&lt;/name&gt;&lt;/person&gt;
+<?xml version="1.0"?><person><name>Arun</name></person>
 
 
 HTTP/1.1 200 OK
@@ -276,66 +268,62 @@ Connection: Keep-Alive
 Content-Type: text/plain
 
 [Some GZIP'd payload]
-</pre>
+```
 
-<p>As linhas de 1 a 12 acima representam a requisição com pré-envio tendo o método {{HTTPMethod("OPTIONS")}}. O navegador determina que precisa fazer este envio baseado nos parâmetros da requisição do código JavaScript acima utilizado, para que o servidor possa responder caso seja aceitável o envio da requisição com os dados parâmetros da mesma. OPTIONS é um método HTTP/1.1 usado para determinar informações complementares dos servidores, sendo o mesmo um método {{Glossary("safe")}}, o que significa que não pode ser utilizado para troca de recurso. Note que junto da requisição OPTIONS, outros dois cabeçalhos são enviados (linhas 10 e 11, respectivamente):</p>
+As linhas de 1 a 12 acima representam a requisição com pré-envio tendo o método {{HTTPMethod("OPTIONS")}}. O navegador determina que precisa fazer este envio baseado nos parâmetros da requisição do código JavaScript acima utilizado, para que o servidor possa responder caso seja aceitável o envio da requisição com os dados parâmetros da mesma. OPTIONS é um método HTTP/1.1 usado para determinar informações complementares dos servidores, sendo o mesmo um método {{Glossary("safe")}}, o que significa que não pode ser utilizado para troca de recurso. Note que junto da requisição OPTIONS, outros dois cabeçalhos são enviados (linhas 10 e 11, respectivamente):
 
-<pre class="notranslate">Access-Control-Request-Method: POST
+```
+Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
-</pre>
+```
 
-<p>O cabeçalho {{HTTPHeader("Access-Control-Request-Method")}} notifica o servidor como sendo uma parte da requisição com pré-envio que, quando a requisição efetiva é enviada, será enviada com uma requisição de método <code>POST</code>. O cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}} notifica o servidor que quando a requisição efetiva fora enviada, será enviada com os seguintes cabeçalhos personalizados <code>X-PINGOTHER</code> e <code>Content-Type</code>. O servidor agora tem a oportunidade para definir se deseja aceitar uma requisição sob estas condições.</p>
+O cabeçalho {{HTTPHeader("Access-Control-Request-Method")}} notifica o servidor como sendo uma parte da requisição com pré-envio que, quando a requisição efetiva é enviada, será enviada com uma requisição de método `POST`. O cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}} notifica o servidor que quando a requisição efetiva fora enviada, será enviada com os seguintes cabeçalhos personalizados `X-PINGOTHER` e `Content-Type`. O servidor agora tem a oportunidade para definir se deseja aceitar uma requisição sob estas condições.
 
-<p>As linhas 14 a 26 acima são as respostas que o servidor devolve, indicando que o método (<code>POST</code>) e os cabeçalhos (<code>X-PINGOTHER</code>) da requisição são aceitáveis. Em particular, vejamos as linhas 17 a 20:</p>
+As linhas 14 a 26 acima são as respostas que o servidor devolve, indicando que o método (`POST`) e os cabeçalhos (`X-PINGOTHER`) da requisição são aceitáveis. Em particular, vejamos as linhas 17 a 20:
 
-<pre class="notranslate">Access-Control-Allow-Origin: http://foo.example
+```
+Access-Control-Allow-Origin: http://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
-Access-Control-Max-Age: 86400</pre>
+Access-Control-Max-Age: 86400
+```
 
-<p>O servidor responde com <code>Access-Control-Allow-Methods</code> e diz que <code>POST</code>, <code>GET</code>, e <code>OPTIONS</code> são métodos viáveis para requerir o recurso em questão. Perceba que este cabeçalho é similar ao cabeçalho da resposta {{HTTPHeader("Allow")}}, mas usado estritamente dentro do contexto do controle de acesso.</p>
+O servidor responde com `Access-Control-Allow-Methods` e diz que `POST`, `GET`, e `OPTIONS` são métodos viáveis para requerir o recurso em questão. Perceba que este cabeçalho é similar ao cabeçalho da resposta {{HTTPHeader("Allow")}}, mas usado estritamente dentro do contexto do controle de acesso.
 
-<p>O servidor envia também <code>Access-Control-Allow-Headers</code> com um valor de "<code>X-PINGOTHER, Content-Type</code>", confirmando estes são cabeçalhos permitidos a serem usados com a requisição efetiva. Assim como <code>Access-Control-Allow-Methods</code>, <code>Access-Control-Allow-Headers</code> é uma lista de cabeçalhos aceitáveis, separados por vírgula.</p>
+O servidor envia também `Access-Control-Allow-Headers` com um valor de "`X-PINGOTHER, Content-Type`", confirmando estes são cabeçalhos permitidos a serem usados com a requisição efetiva. Assim como `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers` é uma lista de cabeçalhos aceitáveis, separados por vírgula.
 
-<p>Por fim, {{HTTPHeader("Access-Control-Max-Age")}} traz o valor em segundos de quão longo pode ser mantida em cache a resposta da requisição pré-envio sem o envio de outra requisição pré-envio. Neste caso, 86400 segundos são 24 horas. Note que cada browser tem um<a href="/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age"> valor interno máximo</a> que toma precedência quado <code>Access-Control-Max-Age</code> for maior.</p>
+Por fim, {{HTTPHeader("Access-Control-Max-Age")}} traz o valor em segundos de quão longo pode ser mantida em cache a resposta da requisição pré-envio sem o envio de outra requisição pré-envio. Neste caso, 86400 segundos são 24 horas. Note que cada browser tem um[ valor interno máximo](/pt-BR/docs/Web/HTTP/Headers/Access-Control-Max-Age) que toma precedência quado `Access-Control-Max-Age` for maior.
 
-<h4 id="Requisições_com_pré-envio_e_redirecionamento">Requisições com pré-envio e redirecionamento</h4>
+#### Requisições com pré-envio e redirecionamento
 
-<p>Not all browsers currently support following redirects after a preflighted request. If a redirect occurs after a preflighted request, some browsers currently will report an error message such as the following.</p>
+Not all browsers currently support following redirects after a preflighted request. If a redirect occurs after a preflighted request, some browsers currently will report an error message such as the following.
 
-<blockquote>
-<p>The request was redirected to 'https://example.com/foo', which is disallowed for cross-origin requests that require preflight</p>
-</blockquote>
+> The request was redirected to 'https\://example.com/foo', which is disallowed for cross-origin requests that require preflight
 
-<blockquote>
-<p>Request requires preflight, which is disallowed to follow cross-origin redirect</p>
-</blockquote>
+> Request requires preflight, which is disallowed to follow cross-origin redirect
 
-<p>The CORS protocol originally required that behavior but <a href="https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2">was subsequently changed to no longer require it</a>. However, not all browsers have implemented the change, and so still exhibit the behavior that was originally required.</p>
+The CORS protocol originally required that behavior but [was subsequently changed to no longer require it](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). However, not all browsers have implemented the change, and so still exhibit the behavior that was originally required.
 
-<p>So until all browsers catch up with the spec, you may be able to work around this limitation by doing one or both of the following:</p>
+So until all browsers catch up with the spec, you may be able to work around this limitation by doing one or both of the following:
 
-<ul>
- <li>change the server-side behavior to avoid the preflight and/or to avoid the redirect—if you have control over the server the request is being made to</li>
- <li>change the request such that it is a <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS$edit#Simple_requests">simple request</a> that doesn’t cause a preflight</li>
-</ul>
+- change the server-side behavior to avoid the preflight and/or to avoid the redirect—if you have control over the server the request is being made to
+- change the request such that it is a [simple request](/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS$edit#Simple_requests) that doesn’t cause a preflight
 
-<p>But if it’s not possible to make those changes, then another way that may be possible is to this:</p>
+But if it’s not possible to make those changes, then another way that may be possible is to this:
 
-<ol>
- <li>Make a <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS$edit#Simple_requests">simple request</a> (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.</li>
- <li>Make another request (the “real” request) using the URL you obtained from <code>Response.url</code> or <code>XMLHttpRequest.responseURL</code> in the first step.</li>
-</ol>
+1.  Make a [simple request](/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS$edit#Simple_requests) (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.
+2.  Make another request (the “real” request) using the URL you obtained from `Response.url` or `XMLHttpRequest.responseURL` in the first step.
 
-<p>However, if the request is one that triggers a preflight due to the presence of the <code>Authorization</code> header in the request, you won’t be able to work around the limitation using the steps above. And you won’t be able to work around it at all unless you have control over the server the request is being made to.</p>
+However, if the request is one that triggers a preflight due to the presence of the `Authorization` header in the request, you won’t be able to work around the limitation using the steps above. And you won’t be able to work around it at all unless you have control over the server the request is being made to.
 
-<h3 id="Requisições_com_credenciais">Requisições com credenciais</h3>
+### Requisições com credenciais
 
-<p>The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> and CORS is the ability to make "credentialed" requests that are aware of <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> and HTTP Authentication information. By default, in cross-site {{domxref("XMLHttpRequest")}} or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> invocations, browsers will <strong>not</strong> send credentials. A specific flag has to be set on the {{domxref("XMLHttpRequest")}} object or the {{domxref("Request")}} constructor when it is invoked.</p>
+The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or [Fetch](/pt-BR/docs/Web/API/Fetch_API) and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/pt-BR/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-site {{domxref("XMLHttpRequest")}} or [Fetch](/pt-BR/docs/Web/API/Fetch_API) invocations, browsers will **not** send credentials. A specific flag has to be set on the {{domxref("XMLHttpRequest")}} object or the {{domxref("Request")}} constructor when it is invoked.
 
-<p>In this example, content originally loaded from <code>http://foo.example</code> makes a simple GET request to a resource on <code>http://bar.other</code> which sets Cookies. Content on foo.example might contain JavaScript like this:</p>
+In this example, content originally loaded from `http://foo.example` makes a simple GET request to a resource on `http://bar.other` which sets Cookies. Content on foo.example might contain JavaScript like this:
 
-<pre class="brush: js notranslate" id="line1">var invocation = new XMLHttpRequest();
+```js
+var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/credentialed-content/';
 
 function callOtherDomain(){
@@ -345,15 +333,17 @@ function callOtherDomain(){
     invocation.onreadystatechange = handler;
     invocation.send();
   }
-}</pre>
+}
+```
 
-<p>Line 7 shows the flag on {{domxref("XMLHttpRequest")}} that has to be set in order to make the invocation with Cookies, namely the <code>withCredentials</code> boolean value. By default, the invocation is made without Cookies. Since this is a simple <code>GET</code> request, it is not preflighted, but the browser will <strong>reject</strong> any response that does not have the {{HTTPHeader("Access-Control-Allow-Credentials")}}: <code>true</code> header, and <strong>not</strong> make the response available to the invoking web content.</p>
+Line 7 shows the flag on {{domxref("XMLHttpRequest")}} that has to be set in order to make the invocation with Cookies, namely the `withCredentials` boolean value. By default, the invocation is made without Cookies. Since this is a simple `GET` request, it is not preflighted, but the browser will **reject** any response that does not have the {{HTTPHeader("Access-Control-Allow-Credentials")}}: `true` header, and **not** make the response available to the invoking web content.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14291/cred-req.png" style="height: 223px; width: 521px;"></p>
+![](https://mdn.mozillademos.org/files/14291/cred-req.png)
 
-<p>Here is a sample exchange between client and server:</p>
+Here is a sample exchange between client and server:
 
-<pre class="brush: shell notranslate">GET /resources/access-control-with-credentials/ HTTP/1.1
+```shell
+GET /resources/access-control-with-credentials/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -384,162 +374,156 @@ Content-Type: text/plain
 
 
 [text/plain payload]
-</pre>
+```
 
-<p>Although line 11 contains the Cookie destined for the content on <code>http://bar.other</code>, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}<code>: true</code> (line 19) the response would be ignored and not made available to web content.</p>
+Although line 11 contains the Cookie destined for the content on `http://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` (line 19) the response would be ignored and not made available to web content.
 
-<h4 id="Solicitações_credenciadas_e_curingas_wildcards">Solicitações credenciadas e curingas (<em>wildcards</em>)</h4>
+#### Solicitações credenciadas e curingas (_wildcards_)
 
-<p>When responding to a credentialed request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</p>
+When responding to a credentialed request, the server **must** specify an origin in the value of the `Access-Control-Allow-Origin` header, instead of specifying the "`*`" wildcard.
 
-<p>Because the request headers in the above example include a <code>Cookie</code> header, the request would fail if the value of the <code>Access-Control-Allow-Origin</code> header were "*". But it does not fail: Because the value of the <code>Access-Control-Allow-Origin</code> header is "<code>http://foo.example</code>" (an actual origin) rather than the "<code>*</code>" wildcard, the credential-cognizant content is returned to the invoking web content.</p>
+Because the request headers in the above example include a `Cookie` header, the request would fail if the value of the `Access-Control-Allow-Origin` header were "\*". But it does not fail: Because the value of the `Access-Control-Allow-Origin` header is "`http://foo.example`" (an actual origin) rather than the "`*`" wildcard, the credential-cognizant content is returned to the invoking web content.
 
-<p>Note that the <code>Set-Cookie</code> response header in the example above also sets a further cookie. In case of failure, an exception—depending on the API used—is raised.</p>
+Note that the `Set-Cookie` response header in the example above also sets a further cookie. In case of failure, an exception—depending on the API used—is raised.
 
-<p>All of these examples can be <a class="external" href="http://arunranga.com/examples/access-control/">seen working here</a>. The next section deals with the actual HTTP headers.</p>
+All of these examples can be [seen working here](http://arunranga.com/examples/access-control/). The next section deals with the actual HTTP headers.
 
-<h2 id="Os_cabeçalhos_de_resposta_HTTP">Os cabeçalhos de resposta HTTP</h2>
+## Os cabeçalhos de resposta HTTP
 
-<p>This section lists the HTTP response headers that servers send back for access control requests as defined by the Cross-Origin Resource Sharing specification. The previous section gives an overview of these in action.</p>
+This section lists the HTTP response headers that servers send back for access control requests as defined by the Cross-Origin Resource Sharing specification. The previous section gives an overview of these in action.
 
-<h3 id="Access-Control-Allow-Origin">Access-Control-Allow-Origin</h3>
+### Access-Control-Allow-Origin
 
-<p>A returned resource may have one {{HTTPHeader("Access-Control-Allow-Origin")}} header, with the following syntax:</p>
+A returned resource may have one {{HTTPHeader("Access-Control-Allow-Origin")}} header, with the following syntax:
 
-<pre class="notranslate">Access-Control-Allow-Origin: &lt;origin&gt; | *
-</pre>
+```
+Access-Control-Allow-Origin: <origin> | *
+```
 
-<p>The <code>origin</code> parameter specifies a URI that may access the resource. The browser must enforce this. For requests <strong>without</strong> credentials, the server may specify "*" as a wildcard, thereby allowing any origin to access the resource.</p>
+The `origin` parameter specifies a URI that may access the resource. The browser must enforce this. For requests **without** credentials, the server may specify "\*" as a wildcard, thereby allowing any origin to access the resource.
 
-<p>For example, to allow http://mozilla.org to access the resource, you can specify:</p>
+For example, to allow http\://mozilla.org to access the resource, you can specify:
 
-<pre class="notranslate">Access-Control-Allow-Origin: http://mozilla.org</pre>
+```
+Access-Control-Allow-Origin: http://mozilla.org
+```
 
-<p>If the server specifies an origin host rather than "*", then it could also include Origin in the Vary response header to indicate to clients that server responses will differ based on the value of the Origin request header.</p>
+If the server specifies an origin host rather than "\*", then it could also include Origin in the Vary response header to indicate to clients that server responses will differ based on the value of the Origin request header.
 
-<h3 id="Access-Control-Expose-Headers">Access-Control-Expose-Headers</h3>
+### Access-Control-Expose-Headers
 
-<p>The {{HTTPHeader("Access-Control-Expose-Headers")}} header lets a server whitelist headers that browsers are allowed to access. For example:</p>
+The {{HTTPHeader("Access-Control-Expose-Headers")}} header lets a server whitelist headers that browsers are allowed to access. For example:
 
-<pre class="notranslate">Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
-</pre>
+```
+Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
+```
 
-<p>This allows the <code>X-My-Custom-Header</code> and <code>X-Another-Custom-Header</code> headers to be exposed to the browser.</p>
+This allows the `X-My-Custom-Header` and `X-Another-Custom-Header` headers to be exposed to the browser.
 
-<h3 id="Access-Control-Max-Age">Access-Control-Max-Age</h3>
+### Access-Control-Max-Age
 
-<p>The  {{HTTPHeader("Access-Control-Max-Age")}} header indicates how long the results of a preflight request can be cached. For an example of a preflight request, see the above examples.</p>
+The {{HTTPHeader("Access-Control-Max-Age")}} header indicates how long the results of a preflight request can be cached. For an example of a preflight request, see the above examples.
 
-<pre class="notranslate">Access-Control-Max-Age: &lt;delta-seconds&gt;
-</pre>
+```
+Access-Control-Max-Age: <delta-seconds>
+```
 
-<p>The <code>delta-seconds</code> parameter indicates the number of seconds the results can be cached.</p>
+The `delta-seconds` parameter indicates the number of seconds the results can be cached.
 
-<h3 id="Access-Control-Allow-Credentials">Access-Control-Allow-Credentials</h3>
+### Access-Control-Allow-Credentials
 
-<p>The {{HTTPHeader("Access-Control-Allow-Credentials")}} header Indicates whether or not the response to the request can be exposed when the <code>credentials</code> flag is true.  When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials. Note that simple <code>GET</code> requests are not preflighted, and so if a request is made for a resource with credentials, if this header is not returned with the resource, the response is ignored by the browser and not returned to web content.</p>
+The {{HTTPHeader("Access-Control-Allow-Credentials")}} header Indicates whether or not the response to the request can be exposed when the `credentials` flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials. Note that simple `GET` requests are not preflighted, and so if a request is made for a resource with credentials, if this header is not returned with the resource, the response is ignored by the browser and not returned to web content.
 
-<pre class="notranslate">Access-Control-Allow-Credentials: true
-</pre>
+```
+Access-Control-Allow-Credentials: true
+```
 
-<p><a class="internal" href="#Requisições_com_credenciais">Credentialed requests</a> are discussed above.</p>
+[Credentialed requests](#Requisições_com_credenciais) are discussed above.
 
-<h3 id="Access-Control-Allow-Methods">Access-Control-Allow-Methods</h3>
+### Access-Control-Allow-Methods
 
-<p>O {{HTTPHeader("Access-Control-Allow-Methods")}} cabeçalho especifica o método ou os métodos permitidos ao acessar o recurso. Isso é usado em resposta há uma requisição preflight. As condições na qual a requisição é preflight são discutidas à seguir.</p>
+O {{HTTPHeader("Access-Control-Allow-Methods")}} cabeçalho especifica o método ou os métodos permitidos ao acessar o recurso. Isso é usado em resposta há uma requisição preflight. As condições na qual a requisição é preflight são discutidas à seguir.
 
-<pre class="notranslate">Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]*
-</pre>
+```
+Access-Control-Allow-Methods: <method>[, <method>]*
+```
 
-<p>An example of a <a class="internal" href="#Preflighted_requests">preflight request is given above</a>, including an example which sends this header to the browser.</p>
+An example of a [preflight request is given above](#Preflighted_requests), including an example which sends this header to the browser.
 
-<h3 id="Access-Control-Allow-Headers">Access-Control-Allow-Headers</h3>
+### Access-Control-Allow-Headers
 
-<p>The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a <a class="internal" href="#Preflighted_requests">preflight request</a> to indicate which HTTP headers can be used when making the actual request.</p>
+The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a [preflight request](#Preflighted_requests) to indicate which HTTP headers can be used when making the actual request.
 
-<pre class="notranslate">Access-Control-Allow-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
-</pre>
+```
+Access-Control-Allow-Headers: <field-name>[, <field-name>]*
+```
 
-<h2 id="Os_cabeçalhos_de_solicitação_HTTP">Os cabeçalhos de solicitação HTTP</h2>
+## Os cabeçalhos de solicitação HTTP
 
-<p>This section lists headers that clients may use when issuing HTTP requests in order to make use of the cross-origin sharing feature. Note that these headers are set for you when making invocations to servers. Developers using cross-site {{domxref("XMLHttpRequest")}} capability do not have to set any cross-origin sharing request headers programmatically.</p>
+This section lists headers that clients may use when issuing HTTP requests in order to make use of the cross-origin sharing feature. Note that these headers are set for you when making invocations to servers. Developers using cross-site {{domxref("XMLHttpRequest")}} capability do not have to set any cross-origin sharing request headers programmatically.
 
-<h3 id="Origin">Origin</h3>
+### Origin
 
-<p>The {{HTTPHeader("Origin")}} header indicates the origin of the cross-site access request or preflight request.</p>
+The {{HTTPHeader("Origin")}} header indicates the origin of the cross-site access request or preflight request.
 
-<pre class="notranslate">Origin: &lt;origin&gt;
-</pre>
+```
+Origin: <origin>
+```
 
-<p>The origin is a URI indicating the server from which the request initiated.  It does not include any path information, but only the server name.</p>
+The origin is a URI indicating the server from which the request initiated. It does not include any path information, but only the server name.
 
-<div class="note"><strong>Note:</strong> The <code>origin</code> can be the empty string; this is useful, for example, if the source is a <code>data</code> URL.</div>
+> **Nota:** The `origin` can be the empty string; this is useful, for example, if the source is a `data` URL.
 
-<p>Note that in any access control request, the {{HTTPHeader("Origin")}} header is <strong>always</strong> sent.</p>
+Note that in any access control request, the {{HTTPHeader("Origin")}} header is **always** sent.
 
-<h3 id="Access-Control-Request-Method">Access-Control-Request-Method</h3>
+### Access-Control-Request-Method
 
-<p>The {{HTTPHeader("Access-Control-Request-Method")}} is used when issuing a preflight request to let the server know what HTTP method will be used when the actual request is made.</p>
+The {{HTTPHeader("Access-Control-Request-Method")}} is used when issuing a preflight request to let the server know what HTTP method will be used when the actual request is made.
 
-<pre class="notranslate">Access-Control-Request-Method: &lt;method&gt;
-</pre>
+```
+Access-Control-Request-Method: <method>
+```
 
-<p>Examples of this usage can be <a class="internal" href="#Preflighted_requests">found above.</a></p>
+Examples of this usage can be [found above.](#Preflighted_requests)
 
-<h3 id="Access-Control-Request-Headers">Access-Control-Request-Headers</h3>
+### Access-Control-Request-Headers
 
-<p>The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made.</p>
+The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made.
 
-<pre class="notranslate">Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
-</pre>
+```
+Access-Control-Request-Headers: <field-name>[, <field-name>]*
+```
 
-<p>Examples of this usage can be <a class="internal" href="#Preflighted_requests">found above</a>.</p>
+Examples of this usage can be [found above](#Preflighted_requests).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch', '#cors-protocol', 'CORS')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>New definition; supplants <a href="https://www.w3.org/TR/cors/">W3C CORS</a> specification.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                    | Status                   | Comment                                                                          |
+| ---------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------- |
+| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://www.w3.org/TR/cors/) specification. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Access-Control-Allow-Origin")}}</p>
+{{Compat("http.headers.Access-Control-Allow-Origin")}}
 
-<h3 id="Notas_de_compatibilidade">Notas de compatibilidade</h3>
+### Notas de compatibilidade
 
-<ul>
- <li>Internet Explorer 8 and 9 expose CORS via the <code>XDomainRequest</code> object, but have a full implementation in IE 10. </li>
- <li>While Firefox 3.5 introduced support for cross-site XMLHttpRequests and Web Fonts, certain requests were limited until later versions. Specifically, Firefox 7 introduced the ability for cross-site HTTP requests for WebGL Textures, and Firefox 9 added support for Images drawn on a canvas using <code>drawImage</code>.</li>
-</ul>
+- Internet Explorer 8 and 9 expose CORS via the `XDomainRequest` object, but have a full implementation in IE 10.
+- While Firefox 3.5 introduced support for cross-site XMLHttpRequests and Web Fonts, certain requests were limited until later versions. Specifically, Firefox 7 introduced the ability for cross-site HTTP requests for WebGL Textures, and Firefox 9 added support for Images drawn on a canvas using `drawImage`.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a></li>
- <li><a href="https://enable-cors.org/server.html">Enable CORS: I want to add CORS support to my server</a></li>
- <li>{{domxref("XMLHttpRequest")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a href="http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx">Using CORS with All (Modern) Browsers</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/cors/">Using CORS - HTML5 Rocks</a></li>
- <li><a href="https://arunranga.com/examples/access-control/">Code Samples Showing <code>XMLHttpRequest</code> and Cross-Origin Resource Sharing</a></li>
- <li><a href="https://github.com/jackblackevo/cors-jsonp-sample">Client-Side &amp; Server-Side (Java) sample for Cross-Origin Resource Sharing (CORS)</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Server-Side_Access_Control">Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)</a></li>
- <li><a href="https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141">Stack Overflow answer with “how to” info for dealing with common problems</a>:
-  <ul>
-   <li>How to avoid the CORS preflight</li>
-   <li>How to use a CORS proxy to get around <em>“No Access-Control-Allow-Origin header”</em></li>
-   <li>How to fix <em>“Access-Control-Allow-Origin header must not be the wildcard”</em></li>
-  </ul>
- </li>
-</ul>
+- [CORS errors](/pt-BR/docs/Web/HTTP/CORS/Errors)
+- [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
+- {{domxref("XMLHttpRequest")}}
+- [Fetch API](/pt-BR/docs/Web/API/Fetch_API)
+- [Using CORS with All (Modern) Browsers](http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx)
+- [Using CORS - HTML5 Rocks](http://www.html5rocks.com/en/tutorials/cors/)
+- [Code Samples Showing `XMLHttpRequest` and Cross-Origin Resource Sharing](https://arunranga.com/examples/access-control/)
+- [Client-Side & Server-Side (Java) sample for Cross-Origin Resource Sharing (CORS)](https://github.com/jackblackevo/cors-jsonp-sample)
+- [Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)](/pt-BR/docs/Web/HTTP/Server-Side_Access_Control)
+- [Stack Overflow answer with “how to” info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
+
+  - How to avoid the CORS preflight
+  - How to use a CORS proxy to get around _“No Access-Control-Allow-Origin header”_
+  - How to fix _“Access-Control-Allow-Origin header must not be the wildcard”_

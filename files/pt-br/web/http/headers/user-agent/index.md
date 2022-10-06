@@ -8,140 +8,133 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/User-Agent
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><span class="seoSummary">O cabeçalho de requisição <strong>User-Agent</strong> é uma cadeia de caracteres característica que permite servidores e pares de rede identificar a aplicação, sistema operacional, fornecedor, e/ou versão do agente de usuário requisitante.</span></p>
+O cabeçalho de requisição **User-Agent** é uma cadeia de caracteres característica que permite servidores e pares de rede identificar a aplicação, sistema operacional, fornecedor, e/ou versão do agente de usuário requisitante.
 
-<div class="blockIndicator warning">
-<p>Por favor leia <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">Detectando o navegador usando o agente de usuário (Browser detection using the user agent)</a> para por quê servir diferentes páginas Web ou serviços para diferentes navegadores é geralmente uma má ideia.</p>
-</div>
+> **Aviso:** Por favor leia [Detectando o navegador usando o agente de usuário (Browser detection using the user agent)](/pt-BR/docs/Web/HTTP/Browser_detection_using_the_user_agent) para por quê servir diferentes páginas Web ou serviços para diferentes navegadores é geralmente uma má ideia.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Tipo de cabeçalho</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>não</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">User-Agent: &lt;product&gt; / &lt;product-version&gt; &lt;comment&gt;</pre>
+```
+User-Agent: <product> / <product-version> <comment>
+```
 
-<p>Formato comum para navegadores web:</p>
+Formato comum para navegadores web:
 
-<pre class="syntaxbox notranslate">User-Agent: Mozilla/5.0 (&lt;system-information&gt;) &lt;platform&gt; (&lt;platform-details&gt;) &lt;extensions&gt;</pre>
+```
+User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <extensions>
+```
 
-<h3 id="Diretivas">Diretivas</h3>
+### Diretivas
 
-<dl>
- <dt><code>&lt;product&gt;</code></dt>
- <dd>Um identificador do produto - seu nome ou codinome de desenvolvimento.</dd>
- <dt><code>&lt;product-version&gt;</code></dt>
- <dd>Número da versão do produto.</dd>
- <dt><code>&lt;comment&gt;</code></dt>
- <dd>Zero ou mais comentários contendo mais detalhes; informação de subproduto, por exemplo.</dd>
-</dl>
+- `<product>`
+  - : Um identificador do produto - seu nome ou codinome de desenvolvimento.
+- `<product-version>`
+  - : Número da versão do produto.
+- `<comment>`
+  - : Zero ou mais comentários contendo mais detalhes; informação de subproduto, por exemplo.
 
-<h2 id="Firefox_UA_string">Firefox UA string</h2>
+## Firefox UA string
 
-<p>Para mais cadeias de caracteres de agente de usuário do Firefox e Gecko, veja a <a href="/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox">referência para cadeias de caracteres de agente de usuário do Firefox (Firefox user agent string reference)</a>. A cadeia de caracteres UA do Firefox é quebrada em 4 componentes:</p>
+Para mais cadeias de caracteres de agente de usuário do Firefox e Gecko, veja a [referência para cadeias de caracteres de agente de usuário do Firefox (Firefox user agent string reference)](/pt-BR/docs/Web/HTTP/Headers/User-Agent/Firefox). A cadeia de caracteres UA do Firefox é quebrada em 4 componentes:
 
-<pre class="notranslate">Mozilla/5.0 (<strong><em>platform</em></strong>; rv:<strong><em>geckoversion</em></strong>) Gecko/<strong><em>geckotrail</em></strong> Firefox/<strong><em>firefoxversion</em></strong></pre>
+```
+Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
+```
 
-<ol>
- <li><code>Mozilla/5.0</code> é o <em>token</em> geral que diz que o navegador é compatível com Mozilla. Por razões históricas, quase todo navegador envia isso hoje.</li>
- <li><strong><em>platform</em></strong> descreve a plataforma nativa que navegador está executando (Windows, Mac, Linux, Android, etc.), e se é um telefone celular. Telefones {{Glossary("Firefox OS")}} simplesmente dizem <code>Mobile</code> — a web é a plataforma. Note que <strong><em>platform</em></strong> pode consistir de múltiplos <em>tokens</em> separador por  "<code>; </code>"(ponto e vírgula). Veja abaixo para mais detalhes e exemplos.</li>
- <li><strong>rv:<em>geckoversion</em></strong> indica a versão de <em>release</em> do Gecko (como a "<em>17.0</em>"). Em navegadores recentes, <strong><em>geckoversion</em></strong> é o mesmo que <strong><em>firefoxversion</em></strong>.</li>
- <li><strong><em>Gecko/geckotrail</em></strong> indica que o navegador é baseado no <a href="/en-US/docs/Mozilla/Gecko">Gecko</a>. (No Desktop, <em><strong>geckotrail</strong></em> é sempre a cadeia de caracteres fixa <code>20100101</code>.)</li>
- <li><em><strong>Firefox/firefoxversion</strong></em> indica que o navegador é o Firefox, e provém a versão (como a "<em>17.0"</em>).</li>
-</ol>
+1.  `Mozilla/5.0` é o _token_ geral que diz que o navegador é compatível com Mozilla. Por razões históricas, quase todo navegador envia isso hoje.
+2.  **_platform_** descreve a plataforma nativa que navegador está executando (Windows, Mac, Linux, Android, etc.), e se é um telefone celular. Telefones {{Glossary("Firefox OS")}} simplesmente dizem `Mobile` — a web é a plataforma. Note que **_platform_** pode consistir de múltiplos _tokens_ separador por "`; `"(ponto e vírgula). Veja abaixo para mais detalhes e exemplos.
+3.  **rv:_geckoversion_** indica a versão de _release_ do Gecko (como a "_17.0_"). Em navegadores recentes, **_geckoversion_** é o mesmo que **_firefoxversion_**.
+4.  **_Gecko/geckotrail_** indica que o navegador é baseado no [Gecko](/pt-BR/docs/Mozilla/Gecko). (No Desktop, _**geckotrail**_ é sempre a cadeia de caracteres fixa `20100101`.)
+5.  _**Firefox/firefoxversion**_ indica que o navegador é o Firefox, e provém a versão (como a "_17.0"_).
 
-<h3 id="Exemplos">Exemplos</h3>
+### Exemplos
 
-<pre>Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
-Mozilla/5.0 (Macintosh; Intel Mac OS X <em>x.y</em>; rv:42.0) Gecko/20100101 Firefox/42.0
-</pre>
+```
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
+Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
+```
 
-<h2 id="Chrome_UA_string">Chrome UA string</h2>
+## Chrome UA string
 
-<p>A cadeia de caracteres do agente de usuário do Chrome (ou baseados em Chromium/Blink) é similar ao do Firefox. Para compatibilidade, ele adiciona cadeias de caracteres como <code>KHTML, like Gecko</code> e <code>Safari</code>.</p>
+A cadeia de caracteres do agente de usuário do Chrome (ou baseados em Chromium/Blink) é similar ao do Firefox. Para compatibilidade, ele adiciona cadeias de caracteres como `KHTML, like Gecko` e `Safari`.
 
-<h3 id="Exemplos_2">Exemplos</h3>
+### Exemplos
 
-<pre>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36</pre>
+```
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+```
 
-<h2 id="Opera_UA_string">Opera UA string</h2>
+## Opera UA string
 
-<p>O navegador Opera também é baseado no Blink, o motivo pelo qual se parecem muito, mas adiciona <code>"OPR/&lt;version&gt;"</code>.</p>
+O navegador Opera também é baseado no Blink, o motivo pelo qual se parecem muito, mas adiciona `"OPR/<version>"`.
 
-<h3 id="Exemplos_3">Exemplos</h3>
+### Exemplos
 
-<pre>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41</pre>
+```
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41
+```
 
-<p>Mais antigo, versões do Opera baseados no Presto usavam:</p>
+Mais antigo, versões do Opera baseados no Presto usavam:
 
-<pre>Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
-Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1</pre>
+```
+Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
+Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
+```
 
-<h2 id="Safari_UA_string">Safari UA string</h2>
+## Safari UA string
 
-<p>Neste exemplo, a cadeia de caracteres de agente de usuários é a versão de móvel do Safari. Ela contém a palavra <code>"Mobile"</code>.</p>
+Neste exemplo, a cadeia de caracteres de agente de usuários é a versão de móvel do Safari. Ela contém a palavra `"Mobile"`.
 
-<h3 id="Exemplos_4">Exemplos</h3>
+### Exemplos
 
-<pre>Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1</pre>
+```
+Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1
+```
 
-<h2 id="Internet_Explorer_UA_string">Internet Explorer UA string</h2>
+## Internet Explorer UA string
 
-<h3 id="Exemplos_5">Exemplos</h3>
+### Exemplos
 
-<pre>Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)</pre>
+```
+Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)
+```
 
-<h2 id="Crawler_e_bot_UA_strings">Crawler e bot UA strings</h2>
+## Crawler e bot UA strings
 
-<p>Exemplos</p>
+Exemplos
 
-<pre>Googlebot/2.1 (+http://www.google.com/bot.html)</pre>
+```
+Googlebot/2.1 (+http://www.google.com/bot.html)
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC(7231, "User-Agent", "5.5.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
-  <tr>
-   <td>{{RFC(2616, "User-Agent", "14.43")}}</td>
-   <td>Hypertext Transfer Protocol -- HTTP/1.1</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                    | Título                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC(7231, "User-Agent", "5.5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{RFC(2616, "User-Agent", "14.43")}} | Hypertext Transfer Protocol -- HTTP/1.1                       |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("http.headers.User-Agent")}}
 
+## Veja também
 
-<p>{{Compat("http.headers.User-Agent")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/">Detecção, histórico e checklist de User-Agent</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox">Referência para cadeias de caracteres de agente de usuário do Firefox (Firefox user agent string reference)</a></li>
- <li>
-  <p><a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">Detectando o navegador usando o agente de usuário (Browser detection using the user agent)</a></p>
- </li>
-</ul>
+- [Detecção, histórico e checklist de User-Agent](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
+- [Referência para cadeias de caracteres de agente de usuário do Firefox (Firefox user agent string reference)](/pt-BR/docs/Web/HTTP/Headers/User-Agent/Firefox)
+- [Detectando o navegador usando o agente de usuário (Browser detection using the user agent)](/pt-BR/docs/Web/HTTP/Browser_detection_using_the_user_agent)

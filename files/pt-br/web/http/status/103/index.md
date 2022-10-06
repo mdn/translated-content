@@ -10,41 +10,26 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/103
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>O código de informação de status de resposta HTTP <strong><code>103 Early Hints</code></strong> é destinado principalmente a ser usado com o cabeçalho {{HTTPHeader("Link")}} para permitir ao agente do usuário começar pré-carregamento de recursos enquanto o servidor ainda está preparando uma resposta.</p>
+O código de informação de status de resposta HTTP **`103 Early Hints`** é destinado principalmente a ser usado com o cabeçalho {{HTTPHeader("Link")}} para permitir ao agente do usuário começar pré-carregamento de recursos enquanto o servidor ainda está preparando uma resposta.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">103 Early Hints</pre>
+```
+103 Early Hints
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC(8297, "103 Early Hints")}}</td>
-   <td>IETF RFC</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                | Status   | Comentários       |
+| -------------------------------------------- | -------- | ----------------- |
+| {{RFC(8297, "103 Early Hints")}} | IETF RFC | Definição inicial |
 
-<h2 id="Comptabilidade_de_navegador">Comptabilidade de navegador</h2>
+## Comptabilidade de navegador
 
+{{Compat("http.status.103")}}
 
+## Veja também
 
-<p>{{Compat("http.status.103")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{HTTPHeader("Link")}}</li>
-</ul>
+- {{HTTPHeader("Link")}}

@@ -9,69 +9,54 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/Link
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de entidade <strong><code>Link</code></strong> provém maneiras para serializar um ou mais links em cabeçalhos HTTP. Ele é semanticamente equivalente ao elemento HTML {{HTMLElement("link")}}.</p>
+O cabeçalho de entidade **`Link`** provém maneiras para serializar um ou mais links em cabeçalhos HTTP. Ele é semanticamente equivalente ao elemento HTML {{HTMLElement("link")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">Link: &lt; <var>uri-reference</var> &gt;; <var>param1</var>=<var>value1</var>; <var>param2</var>="<var>value2</var>"</pre>
+```
+Link: < uri-reference >; param1=value1; param2="value2"
+```
 
-<dl>
- <dt><code>&lt;uri-reference&gt;</code></dt>
- <dd>A referência da URI, precisa ser encapsulado entre <code>&lt;</code> e <code>&gt;</code>.</dd>
-</dl>
+- `<uri-reference>`
+  - : A referência da URI, precisa ser encapsulado entre `<` e `>`.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<p>O cabeçalho <em>link</em> contém parâmetros, os quais são separados com <code>;</code> e são equivalentes aos atributos do elemento {{HTMLElement("link")}}.</p>
+O cabeçalho _link_ contém parâmetros, os quais são separados com `;` e são equivalentes aos atributos do elemento {{HTMLElement("link")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>A URI precisa ser encapsulado entre <code>&lt;</code> e <code>&gt;</code>:</p>
+A URI precisa ser encapsulado entre `<` e `>`:
 
-<pre class="brush: http; example-good">Link: &lt;https://example.com&gt;; rel="preconnect"</pre>
+```http example-good
+Link: <https://example.com>; rel="preconnect"
+```
 
-<pre class="brush: http; example-bad">Link: https://bad.example; rel="preconnect"</pre>
+```http example-bad
+Link: https://bad.example; rel="preconnect"
+```
 
-<h3 id="Especificando_múltiplos_links">Especificando múltiplos <em>links</em></h3>
+### Especificando múltiplos _links_
 
-<p>Você pode especificar múltiplos <em>links</em> separados por vírgulas, por exemplo:</p>
+Você pode especificar múltiplos _links_ separados por vírgulas, por exemplo:
 
-<pre class="notranslate">Link: &lt;https://one.example.com&gt;; rel="preconnect", &lt;https://two.example.com&gt;; rel="preconnect", &lt;https://three.example.com&gt;; rel="preconnect"</pre>
+```
+Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC(8288, "Link Serialisation in HTTP Headers", 3)}}</td>
-   <td>IETF RFC</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{RFC(5988, "The Link Header Field", 5)}}</td>
-   <td>IETF RFC</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                            | Status   | Comentários       |
+| ------------------------------------------------------------------------ | -------- | ----------------- |
+| {{RFC(8288, "Link Serialisation in HTTP Headers", 3)}} | IETF RFC |                   |
+| {{RFC(5988, "The Link Header Field", 5)}}                 | IETF RFC | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("http.headers.Link")}}
 
+## Veja também
 
-<p>{{Compat("http.headers.Link")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{HTTPStatus(103, "103 Early Hints")}}</li>
-</ul>
+- {{HTTPStatus(103, "103 Early Hints")}}

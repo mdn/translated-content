@@ -3,81 +3,71 @@ title: Sec-Fetch-Site
 slug: Web/HTTP/Headers/Sec-Fetch-Site
 translation_of: Web/HTTP/Headers/Sec-Fetch-Site
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de busca de metadados <strong><code>Sec-Fetch-Site</code></strong> indica a relação entre a origem do iniciador da requisição e a origem do recurso.</p>
+O cabeçalho de busca de metadados **`Sec-Fetch-Site`** indica a relação entre a origem do iniciador da requisição e a origem do recurso.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Fetch Metadata Request Header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes, since it has prefix <code>Sec-</code></td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
-   <td></td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Fetch Metadata Request Header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes, since it has prefix <code>Sec-</code></td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("CORS-safelisted response header")}}
+      </th>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("CORS-safelisted request header")}}
+      </th>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">Sec-Fetch-Site: cross-site
+```
+Sec-Fetch-Site: cross-site
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Site: same-site
 Sec-Fetch-Site: none
-</pre>
+```
 
-<h2 id="Values">Values</h2>
+## Values
 
-<dl>
- <dt><code>cross-site</code></dt>
- <dd>…</dd>
- <dt><code>same-origin</code></dt>
- <dd>…</dd>
- <dt><code>same-site</code></dt>
- <dd>…</dd>
- <dt><code>none</code></dt>
- <dd>This request does not relate to any context like site, origin, or frame. This can happen when user had initiated this request by, e.g. directly entering a URL in the address bar, opening a bookmark, or draging-and-dropping a file into the browser window.</dd>
-</dl>
+- `cross-site`
+  - : …
+- `same-origin`
+  - : …
+- `same-site`
+  - : …
+- `none`
+  - : This request does not relate to any context like site, origin, or frame. This can happen when user had initiated this request by, e.g. directly entering a URL in the address bar, opening a bookmark, or draging-and-dropping a file into the browser window.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TODO</p>
+TODO
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-site-header">Fetch Metadata Request Headers</a></td>
-   <td>The Sec-Fetch-Site HTTP Request Header</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                           | Title                                  |
+| ------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| [Fetch Metadata Request Headers](https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-site-header) | The Sec-Fetch-Site HTTP Request Header |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Sec-Fetch-Site")}}</p>
+{{Compat("http.headers.Sec-Fetch-Site")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
- <li>{{HTTPHeader("Sec-Fetch-User")}}</li>
- <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
-</ul>
+- {{HTTPHeader("Sec-Fetch-Mode")}}
+- {{HTTPHeader("Sec-Fetch-User")}}
+- {{HTTPHeader("Sec-Fetch-Dest")}}

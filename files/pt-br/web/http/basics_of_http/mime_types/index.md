@@ -4,34 +4,35 @@ slug: Web/HTTP/Basics_of_HTTP/MIME_types
 translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 original_slug: Web/HTTP/Basico_sobre_HTTP/MIME_types
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O <strong>MIME type </strong>é o mecanismo para dizer ao cliente a variedade de documentos transmitidos: a extensão de um nome de arquivo não tem significado na web. Portanto, é importante que o servidor esteja configurado corretamente, de modo que o <em>MIME-type</em> correto seja transmitido com cada documento. Os navegadores costumam usar o <em>MIME-type</em> para determinar qual ação usar como padrão para fazer quando um recurso é obtido.</p>
+O **MIME type** é o mecanismo para dizer ao cliente a variedade de documentos transmitidos: a extensão de um nome de arquivo não tem significado na web. Portanto, é importante que o servidor esteja configurado corretamente, de modo que o _MIME-type_ correto seja transmitido com cada documento. Os navegadores costumam usar o _MIME-type_ para determinar qual ação usar como padrão para fazer quando um recurso é obtido.
 
-<p>Existem muitos tipos de documentos, por isso há muitos <em>MIME-types</em>. Neste artigo, listaremos os mais importantes para o desenvolvimento da Web, mas você pode encontrá-los para os tipos de documento aplicáveis ​​neste artigo dedicado: <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types">Lista completa de <em>MIME types</em></a><em>.</em></p>
+Existem muitos tipos de documentos, por isso há muitos _MIME-types_. Neste artigo, listaremos os mais importantes para o desenvolvimento da Web, mas você pode encontrá-los para os tipos de documento aplicáveis ​​neste artigo dedicado: [Lista completa de _MIME types_](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)_._
 
-<p><em>MIME types</em> não são a única maneira de transmitir as informações do tipo de documento:</p>
+_MIME types_ não são a única maneira de transmitir as informações do tipo de documento:
 
-<ul>
- <li>Os sufixos de nome são usados ​​às vezes, especialmente em sistemas Microsoft Windows. Nem todos os sistemas operacionais consideram esses sufixos significativos (especialmente Linux e Mac OS), e como um tipo MIME externo, não há garantia de que eles estejam corretos.</li>
- <li>Números mágicos. A sintaxe dos diferentes tipos de arquivos permite a inferência de tipo de arquivo, olhando para a estrutura. Por exemplo. Cada arquivo GIF começa com o valor hexadecimal 47 49 46 38 [GIF89] ou arquivos PNG com 89 50 4E 47 [.PNG]. Nem todos os tipos de arquivos têm números mágicos, portanto este não é um sistema 100% confiável.</li>
-</ul>
+- Os sufixos de nome são usados ​​às vezes, especialmente em sistemas Microsoft Windows. Nem todos os sistemas operacionais consideram esses sufixos significativos (especialmente Linux e Mac OS), e como um tipo MIME externo, não há garantia de que eles estejam corretos.
+- Números mágicos. A sintaxe dos diferentes tipos de arquivos permite a inferência de tipo de arquivo, olhando para a estrutura. Por exemplo. Cada arquivo GIF começa com o valor hexadecimal 47 49 46 38 \[GIF89] ou arquivos PNG com 89 50 4E 47 \[.PNG]. Nem todos os tipos de arquivos têm números mágicos, portanto este não é um sistema 100% confiável.
 
-<p>Na Web, apenas o <em>MIME type</em> é relevante e deve ser definido com cuidado. Navegadores e servidores usavam frequentemente heurísticas baseadas em sufixos ou números mágicos para definir o tipo MIME, verificar a coerência ou encontrar o tipo MIME correto quando apenas um tipo genérico foi fornecido.</p>
+Na Web, apenas o _MIME type_ é relevante e deve ser definido com cuidado. Navegadores e servidores usavam frequentemente heurísticas baseadas em sufixos ou números mágicos para definir o tipo MIME, verificar a coerência ou encontrar o tipo MIME correto quando apenas um tipo genérico foi fornecido.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<h3 id="Estrutura_geral">Estrutura geral</h3>
+### Estrutura geral
 
-<pre class="syntaxbox">tipo/subtipo</pre>
+```
+tipo/subtipo
+```
 
-<p>A estrutura de um <em>MIME type</em> é muito simples; Consiste de um tipo e um subtipo, duas strings, separados por um '/'. Nenhum espaço é permitido. O tipo representa a categoria e pode ser um tipo <em>discreto </em>ou <em>multipart</em>. O subtipo é específico para cada tipo.</p>
+A estrutura de um _MIME type_ é muito simples; Consiste de um tipo e um subtipo, duas strings, separados por um '/'. Nenhum espaço é permitido. O tipo representa a categoria e pode ser um tipo _discreto_ ou _multipart_. O subtipo é específico para cada tipo.
 
-<p>Um <em>MIME type</em> é case-insensitive mas tradicionalmente é escrito tudo em minúsculas.</p>
+Um _MIME type_ é case-insensitive mas tradicionalmente é escrito tudo em minúsculas.
 
-<h3 id="Tipos_discretos">Tipos discretos</h3>
+### Tipos discretos
 
-<pre class="syntaxbox">text/plain
+```
+text/plain
 text/html
 image/jpeg
 image/png
@@ -40,165 +41,89 @@ audio/ogg
 audio/*
 video/mp4
 application/octet-stream
-…</pre>
+…
+```
 
-<p>Tipos <em>discretos </em>indicam a categoria do documento, ele pode ser um dos seguintes:</p>
+Tipos _discretos_ indicam a categoria do documento, ele pode ser um dos seguintes:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Tipo</th>
-   <th scope="col">Descrição</th>
-   <th scope="col">Exemplos de subtipos típicos</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>text</code></td>
-   <td>Representa qualquer documento que contenha texto e é teoricamente legivel para o ser humano.</td>
-   <td><code>text/plain</code>, <code>text/html</code>, <code>text/css, text/javascript</code></td>
-  </tr>
-  <tr>
-   <td><code>image</code></td>
-   <td>Representa qualquer tipo de imagens. Os vídeos não estão incluídos, embora imagens animadas (como gif animado) sejam descritas com um tipo de imagem.</td>
-   <td><code>image/gif</code>, <code>image/png</code>, <code>image/jpeg</code>, <code>image/bmp</code>, <code>image/webp</code></td>
-  </tr>
-  <tr>
-   <td><code>audio</code></td>
-   <td>Representa qualquer tipo de arquivo de audio</td>
-   <td><code>audio/midi</code>, <code>audio/mpeg, audio/webm, audio/ogg, audio/wav</code></td>
-  </tr>
-  <tr>
-   <td><code>video</code></td>
-   <td>Representa qualquer tipo de arquivo de video</td>
-   <td><code>video/webm</code>, <code>video/ogg</code></td>
-  </tr>
-  <tr>
-   <td><code>application</code></td>
-   <td>Representa qualquer tipo de dados binários.</td>
-   <td><code>application/octet-stream</code>, <code>application/pkcs12</code>, <code>application/vnd.mspowerpoint</code>, <code>application/xhtml+xml</code>, <code>application/xml</code>,  <code>application/pdf</code></td>
-  </tr>
- </tbody>
-</table>
+| Tipo          | Descrição                                                                                                                                             | Exemplos de subtipos típicos                                                                                                                    |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `text`        | Representa qualquer documento que contenha texto e é teoricamente legivel para o ser humano.                                                          | `text/plain`, `text/html`, `text/css, text/javascript`                                                                                          |
+| `image`       | Representa qualquer tipo de imagens. Os vídeos não estão incluídos, embora imagens animadas (como gif animado) sejam descritas com um tipo de imagem. | `image/gif`, `image/png`, `image/jpeg`, `image/bmp`, `image/webp`                                                                               |
+| `audio`       | Representa qualquer tipo de arquivo de audio                                                                                                          | `audio/midi`, `audio/mpeg, audio/webm, audio/ogg, audio/wav`                                                                                    |
+| `video`       | Representa qualquer tipo de arquivo de video                                                                                                          | `video/webm`, `video/ogg`                                                                                                                       |
+| `application` | Representa qualquer tipo de dados binários.                                                                                                           | `application/octet-stream`, `application/pkcs12`, `application/vnd.mspowerpoint`, `application/xhtml+xml`, `application/xml`, `application/pdf` |
 
-<p>Para documentos de texto sem um subtipo especifico, <strong><code>text/plain</code></strong> deverá ser usado. Assim como, para documentos binários sem subtipo especifico ou conhecido, <strong><code>application/octet-stream</code></strong> deverá ser usado.</p>
+Para documentos de texto sem um subtipo especifico, **`text/plain`** deverá ser usado. Assim como, para documentos binários sem subtipo especifico ou conhecido, **`application/octet-stream`** deverá ser usado.
 
-<h3 id="Tipos_de_multipart">Tipos de multipart</h3>
+### Tipos de multipart
 
-<pre class="syntaxbox">multipart/form-data
-multipart/byteranges</pre>
+```
+multipart/form-data
+multipart/byteranges
+```
 
-<p id="sect1"><em>Multipart types </em>indicam uma categoria de documento que são quebrados em partes distintas, muitas vezes com diferentes tipos MIME. É uma maneira de representar um documento composto. Com exceção de <code>multipart/form-data</code>, que são usados ​​em relação de <a href="/en-US/docs/Web/Guide/HTML/Forms">formularios HTML</a> e metodo {{HTTPMethod("POST")}}, e <code>multipart/byteranges</code> que são usados em conjunto com {{HTTPStatus("206")}} <code>Mensagem de status de conteúdo parcial para enviar apenas um subconjunto de um documento inteiro, o HTTP não manipula documentos de várias partes de uma maneira específica: a mensagem é simplesmente transmitida ao navegador (o que provavelmente irá propor uma janela Salvar como, sem saber como exibir o documento).</code></p>
+_Multipart types_ indicam uma categoria de documento que são quebrados em partes distintas, muitas vezes com diferentes tipos MIME. É uma maneira de representar um documento composto. Com exceção de `multipart/form-data`, que são usados ​​em relação de [formularios HTML](/pt-BR/docs/Web/Guide/HTML/Forms) e metodo {{HTTPMethod("POST")}}, e `multipart/byteranges` que são usados em conjunto com {{HTTPStatus("206")}} `Mensagem de status de conteúdo parcial para enviar apenas um subconjunto de um documento inteiro, o HTTP não manipula documentos de várias partes de uma maneira específica: a mensagem é simplesmente transmitida ao navegador (o que provavelmente irá propor uma janela Salvar como, sem saber como exibir o documento).`
 
-<h2 id="Importantes_MIME_types_para_desenvolvedores_Web">Importantes <em>MIME types</em> para desenvolvedores Web</h2>
+## Importantes _MIME types_ para desenvolvedores Web
 
-<h3 id="applicationoctet-stream"><code>application/octet-stream</code></h3>
+### `application/octet-stream`
 
-<p>Este é o valor padrão para um arquivo binario. Como é um arquivo binário desconhecido, os navegadores geralmente não irá executá-lo automaticamente, ou irá perguntar se ele deve ser executado. Eles tratam-na como se o cabeçalho {{HTTPHeader("Content-Disposition")}} fosse definido com o anexo de valor e propusessem um "Salvar como".</p>
+Este é o valor padrão para um arquivo binario. Como é um arquivo binário desconhecido, os navegadores geralmente não irá executá-lo automaticamente, ou irá perguntar se ele deve ser executado. Eles tratam-na como se o cabeçalho {{HTTPHeader("Content-Disposition")}} fosse definido com o anexo de valor e propusessem um "Salvar como".
 
-<h3 id="textplain"><code>text/plain</code></h3>
+### `text/plain`
 
-<p>Este é o valor padrão para arquivos de texto. Mesmo se realmente significa arquivo textual desconhecido, os navegadores assumem que eles podem exibi-lo.</p>
+Este é o valor padrão para arquivos de texto. Mesmo se realmente significa arquivo textual desconhecido, os navegadores assumem que eles podem exibi-lo.
 
-<div class="note">
-<p>Note que <code>text/plain</code> não significa qualquer tipo de dados textuais. Se eles esperam um tipo específico de dados textuais, eles provavelmente não consideram uma correspondência. Especificamente se eles baixarem um arquivo <code>text/plain</code> de um elemento {{HTMLElement ("link")}} declarando arquivos CSS, eles não o reconhecerão como arquivos CSS válidos se forem apresentados com <code>text/plain</code>.<br>
- O CSS mime tipo <code>text/css</code> deve ser usado.</p>
-</div>
+> **Nota:** Note que `text/plain` não significa qualquer tipo de dados textuais. Se eles esperam um tipo específico de dados textuais, eles provavelmente não consideram uma correspondência. Especificamente se eles baixarem um arquivo `text/plain` de um elemento {{HTMLElement ("link")}} declarando arquivos CSS, eles não o reconhecerão como arquivos CSS válidos se forem apresentados com `text/plain`.
+> O CSS mime tipo `text/css` deve ser usado.
 
-<h3 id="textcss"><code>text/css</code></h3>
+### `text/css`
 
-<p>Quaisquer arquivos CSS que têm de ser interpretados como tal em uma página da Web devem ser dos arquivos de <code>text/css</code>. Muitas vezes os servidores não reconhecem arquivos com o sufixo .css como arquivos CSS, em vez disso, enviam-nos com o tipo MIME de <code>text/plain</code> ou <code>application/octet-stream</code>: nesses casos, eles não serão reconhecidos como arquivos CSS pela maioria dos navegadores e serão silenciosamente ignorados.<br>
- Atenção especial tem de ser paga para servir arquivos CSS com o tipo correto.</p>
+Quaisquer arquivos CSS que têm de ser interpretados como tal em uma página da Web devem ser dos arquivos de `text/css`. Muitas vezes os servidores não reconhecem arquivos com o sufixo .css como arquivos CSS, em vez disso, enviam-nos com o tipo MIME de `text/plain` ou `application/octet-stream`: nesses casos, eles não serão reconhecidos como arquivos CSS pela maioria dos navegadores e serão silenciosamente ignorados.
+Atenção especial tem de ser paga para servir arquivos CSS com o tipo correto.
 
-<h3 id="texthtml"><code>text/html</code></h3>
+### `text/html`
 
-<p>Todo o conteúdo HTML deve ser exibido com este tipo. Tipos MIME alternativos para XHTML (como <code>application/xml+html)</code> são em sua maioria inúteis hoje em dia (HTML5 unificou esses formatos).</p>
+Todo o conteúdo HTML deve ser exibido com este tipo. Tipos MIME alternativos para XHTML (como `application/xml+html)` são em sua maioria inúteis hoje em dia (HTML5 unificou esses formatos).
 
-<h3 id="Images_types">Images types</h3>
+### Images types
 
-<p>Apenas um punhado de tipos de imagem são amplamente reconhecidos e são considerados seguros na Web, prontos para uso em uma página da Web:</p>
+Apenas um punhado de tipos de imagem são amplamente reconhecidos e são considerados seguros na Web, prontos para uso em uma página da Web:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">MIME type</th>
-   <th scope="col">Image type</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>image/gif</code></td>
-   <td>GIF images (Compressão sem perdas, substituído por PNG)</td>
-  </tr>
-  <tr>
-   <td><code>image/jpeg</code></td>
-   <td>JPEG images</td>
-  </tr>
-  <tr>
-   <td><code>image/png</code></td>
-   <td>PNG images</td>
-  </tr>
-  <tr>
-   <td><code>image/svg+xml</code></td>
-   <td>SVG images (vector images)</td>
-  </tr>
- </tbody>
-</table>
+| MIME type       | Image type                                              |
+| --------------- | ------------------------------------------------------- |
+| `image/gif`     | GIF images (Compressão sem perdas, substituído por PNG) |
+| `image/jpeg`    | JPEG images                                             |
+| `image/png`     | PNG images                                              |
+| `image/svg+xml` | SVG images (vector images)                              |
 
-<p>Há uma discussão para adicionar WebP (image / webp) a esta lista, mas como cada novo tipo de imagem irá aumentar o tamanho de um codebase, isso pode introduzir novos problemas de segurança, então os fornecedores de navegador são cautelosos em aceitá-lo.</p>
+Há uma discussão para adicionar WebP (image / webp) a esta lista, mas como cada novo tipo de imagem irá aumentar o tamanho de um codebase, isso pode introduzir novos problemas de segurança, então os fornecedores de navegador são cautelosos em aceitá-lo.
 
-<p>Outros tipos de imagens podem ser encontrados em documentos da Web. Por exemplo, muitos navegadores suportam tipos de imagem de ícones para favicons ou similares.<br>
- Em particular, as imagens do ICO são suportadas neste contexto com o tipo MIME <code>image/x-icon</code>.</p>
+Outros tipos de imagens podem ser encontrados em documentos da Web. Por exemplo, muitos navegadores suportam tipos de imagem de ícones para favicons ou similares.
+Em particular, as imagens do ICO são suportadas neste contexto com o tipo MIME `image/x-icon`.
 
-<h3 id="Audio_and_video_types">Audio and video types</h3>
+### Audio and video types
 
-<p>Como as imagens, o HTML não define um conjunto de tipos suportados para usar com os elementos {{HTMLElement("audio")}} e {{HTMLElement("video")}} , de modo que apenas um grupo relativamente pequeno deles pode ser Usado na Web. Os <a href="/en-US/docs/Web/HTML/Supported_media_formats">formatos de mídia suportados pelos elementos de áudio e vídeo em HTML</a> explicam os codecs e formatos de contêiner que podem ser usados.<br>
- <br>
- O tipo MIME de tais arquivos principalmente representam os formatos de contêiner e os mais comuns em um contexto da Web são:</p>
+Como as imagens, o HTML não define um conjunto de tipos suportados para usar com os elementos {{HTMLElement("audio")}} e {{HTMLElement("video")}} , de modo que apenas um grupo relativamente pequeno deles pode ser Usado na Web. Os [formatos de mídia suportados pelos elementos de áudio e vídeo em HTML](/pt-BR/docs/Web/HTML/Supported_media_formats) explicam os codecs e formatos de contêiner que podem ser usados.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">MIME type</th>
-   <th scope="col">Audio or video type</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>audio/wave</code><br>
-    <code>audio/wav</code><br>
-    <code>audio/x-wav</code><br>
-    <code>audio/x-pn-wav</code></td>
-   <td>Um arquivo de áudio no formato de recipiente WAVE. O codec de áudio PCM (WAVE codec "1") é freqüentemente suportado, mas outros codecs têm suporte mais limitado (se houver).</td>
-  </tr>
-  <tr>
-   <td><code>audio/webm</code></td>
-   <td>Um arquivo de áudio no formato de contêiner WebM. Vorbis e Opus são os codecs de áudio mais comuns.</td>
-  </tr>
-  <tr>
-   <td><code>video/webm</code></td>
-   <td>Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner WebM. VP8 e VP9 são os codecs video os mais comuns usados ​​dentro dele; Vorbis e Opus os codecs de áudio mais comuns.</td>
-  </tr>
-  <tr>
-   <td><code>audio/ogg</code></td>
-   <td>Um arquivo de áudio no formato de contêiner OGG. Vorbis é o codec de áudio mais comum usado em tal recipiente.</td>
-  </tr>
-  <tr>
-   <td><code>video/ogg</code></td>
-   <td>Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.</td>
-  </tr>
-  <tr>
-   <td><code>application/ogg</code></td>
-   <td>Um arquivo de áudio ou vídeo usando o formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.</td>
-  </tr>
- </tbody>
-</table>
+O tipo MIME de tais arquivos principalmente representam os formatos de contêiner e os mais comuns em um contexto da Web são:
 
-<h3 id="multipartform-data"><code>multipart/form-data</code></h3>
+| MIME type                                               | Audio or video type                                                                                                                                                                          |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | Um arquivo de áudio no formato de recipiente WAVE. O codec de áudio PCM (WAVE codec "1") é freqüentemente suportado, mas outros codecs têm suporte mais limitado (se houver).                |
+| `audio/webm`                                            | Um arquivo de áudio no formato de contêiner WebM. Vorbis e Opus são os codecs de áudio mais comuns.                                                                                          |
+| `video/webm`                                            | Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner WebM. VP8 e VP9 são os codecs video os mais comuns usados ​​dentro dele; Vorbis e Opus os codecs de áudio mais comuns. |
+| `audio/ogg`                                             | Um arquivo de áudio no formato de contêiner OGG. Vorbis é o codec de áudio mais comum usado em tal recipiente.                                                                               |
+| `video/ogg`                                             | Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.                                  |
+| `application/ogg`                                       | Um arquivo de áudio ou vídeo usando o formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.                                             |
 
-<p>O tipo <code>multipart/form-data</code> pode ser usado ao enviar o conteúdo de um  <a href="/en-US/docs/Web/Guide/HTML/Forms">formulario HTML</a> preenchido do navegador para o servidor. Como um documento multipart formal, consiste em partes diferentes, delimitado por um limite (uma seqüência de caracteres começando com um traço duplo '--'). Cada parte é uma entidade por si só, com seus próprios cabeçalhos HTTP, {{HTTPHeader("Content-Disposition")}}, e {{HTTPHeader("Content-Type")}} Para os campos de upload de arquivos, e os mais comuns ({{HTTPHeader("Content-Length")}} É ignorada como a linha de limite é usada como o delimitador).</p>
+### `multipart/form-data`
 
-<pre class="syntaxbox">Content-Type: multipart/form-data; boundary=aBoundaryString
+O tipo `multipart/form-data` pode ser usado ao enviar o conteúdo de um [formulario HTML](/pt-BR/docs/Web/Guide/HTML/Forms) preenchido do navegador para o servidor. Como um documento multipart formal, consiste em partes diferentes, delimitado por um limite (uma seqüência de caracteres começando com um traço duplo '--'). Cada parte é uma entidade por si só, com seus próprios cabeçalhos HTTP, {{HTTPHeader("Content-Disposition")}}, e {{HTTPHeader("Content-Type")}} Para os campos de upload de arquivos, e os mais comuns ({{HTTPHeader("Content-Length")}} É ignorada como a linha de limite é usada como o delimitador).
+
+```
+Content-Type: multipart/form-data; boundary=aBoundaryString
 (Outros cabeçalhos associados ao documento em várias partes como um todo)
 
 --aBoundaryString
@@ -213,21 +138,23 @@ Content-Disposition: form-data; name="myField"
 --aBoundaryString
 (mais subpartes)
 --aBoundaryString--
+```
 
-</pre>
+O seguinte formulario:
 
-<p>O seguinte formulario:</p>
+```html
+<form action="http://localhost:8000/" method="post" enctype="multipart/form-data">
+  <input type="text" name="myTextField">
+  <input type="checkbox" name="myCheckBox">Check</input>
+  <input type="file" name="myFile">
+  <button>Send the file</button>
+</form>
+```
 
-<pre class="brush: html">&lt;form action="http://localhost:8000/" method="post" enctype="multipart/form-data"&gt;
-  &lt;input type="text" name="myTextField"&gt;
-  &lt;input type="checkbox" name="myCheckBox"&gt;Check&lt;/input&gt;
-  &lt;input type="file" name="myFile"&gt;
-  &lt;button&gt;Send the file&lt;/button&gt;
-&lt;/form&gt;</pre>
+Enviará esta mensagem:
 
-<p>Enviará esta mensagem:</p>
-
-<pre>POST / HTTP/1.1
+```
+POST / HTTP/1.1
 Host: localhost:8000
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -252,14 +179,14 @@ Content-Type: text/plain
 
 Simple file.
 -----------------------------8721656041911415653955004498--
+```
 
-</pre>
+### `multipart/byteranges`
 
-<h3 id="multipartbyteranges"><code>multipart/byteranges</code></h3>
+O tipo MIME `multipart/byteranges `é usado no contexto de enviar respostas parciais para o navegador. Quando o código de status de conteúdo parcial {{HTTPStatus("206")}}` `é enviado, este tipo MIME é usado para indicar que o documento é composto de várias partes, uma para cada um do intervalo solicitado. Como outros tipos de multipart, o {{HTTPHeader("Content-Type")}} usa a diretiva de limite para definir a seqüência de limites. Cada uma das diferentes partes tem um cabeçalho {{HTTPHeader("Content-Type")}} com o tipo real do documento e um {{HTTPHeader("Content-Range")}} com o intervalo que representam.
 
-<p>O tipo MIME <code>multipart/byteranges </code>é usado no contexto de enviar respostas parciais para o navegador. Quando o código de status de conteúdo parcial {{HTTPStatus("206")}}<code> </code>é enviado, este tipo MIME é usado para indicar que o documento é composto de várias partes, uma para cada um do intervalo solicitado. Como outros tipos de multipart, o {{HTTPHeader("Content-Type")}} usa a diretiva de limite para definir a seqüência de limites. Cada uma das diferentes partes tem um cabeçalho {{HTTPHeader("Content-Type")}} com o tipo real do documento e um {{HTTPHeader("Content-Range")}} com o intervalo que representam.</p>
-
-<pre><code>HTTP/1.1 206 Partial Content
+```
+HTTP/1.1 206 Partial Content
 Accept-Ranges: bytes
 Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
 Content-Length: 385
@@ -268,8 +195,8 @@ Content-Length: 385
 Content-Type: text/html
 Content-Range: bytes 100-200/1270
 
-eta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;
-    &lt;meta name="vieport" content
+eta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="vieport" content
 --3d6b6a416f9b5
 Content-Type: text/html
 Content-Range: bytes 300-400/1270
@@ -278,32 +205,23 @@ Content-Range: bytes 300-400/1270
         margin: 0;
         padding: 0;
         font-family: "Open Sans", "Helvetica
---3d6b6a416f9b5--</code></pre>
+--3d6b6a416f9b5--
+```
 
-<h2 id="Importância_de_definir_o_MIME_type_correto">Importância de definir o <code>MIME type</code> correto</h2>
+## Importância de definir o `MIME type` correto
 
-<p>A maioria dos servidores web envia recursos de tipo desconhecido usando o tipo MIME de application/octet-stream padrão. Por razões de segurança, a maioria dos navegadores não permite definir uma ação padrão personalizada para esses recursos, forçando o usuário a armazená-lo no disco para usá-lo. Algumas configurações de servidor incorretamente exibidas ocorrem com os seguintes tipos de arquivo:</p>
+A maioria dos servidores web envia recursos de tipo desconhecido usando o tipo MIME de application/octet-stream padrão. Por razões de segurança, a maioria dos navegadores não permite definir uma ação padrão personalizada para esses recursos, forçando o usuário a armazená-lo no disco para usá-lo. Algumas configurações de servidor incorretamente exibidas ocorrem com os seguintes tipos de arquivo:
 
-<ul>
- <li>
-  <p>Arquivos RAR-codificados. Neste caso, o ideal seria definir o verdadeiro tipo de arquivos codificados; Isso muitas vezes não é possível (como pode não ser conhecido para o servidor e esses arquivos podem conter vários recursos de tipos diferentes). Nesse caso, configure o servidor para enviar o tipo MIME <code>application/x-rar-compressed</code>.</p>
- </li>
- <li>
-  <p>Arquivos de áudio e vídeo. Somente recursos com o Tipo MIME correto serão reconhecidos e reproduzidos em elementos {{HTMLElement("video")}} ou {{HTMLElement("áudio")}}. Certifique-se <a href="/En/Media_formats_supported_by_the_audio_and_video_elements">de usar o tipo correto para áudio e vídeo</a>.</p>
- </li>
- <li>
-  <p>Tipos de arquivos proprietários. Preste especial atenção ao servir um tipo de arquivo proprietário. Evite usar o <code>application/octet-stream</code> como manipulação especial não será possível: a maioria dos navegadores não permitem definir um comportamento padrão (como "Abertura no Word") para este tipo MIME genérico.</p>
- </li>
-</ul>
+- Arquivos RAR-codificados. Neste caso, o ideal seria definir o verdadeiro tipo de arquivos codificados; Isso muitas vezes não é possível (como pode não ser conhecido para o servidor e esses arquivos podem conter vários recursos de tipos diferentes). Nesse caso, configure o servidor para enviar o tipo MIME `application/x-rar-compressed`.
+- Arquivos de áudio e vídeo. Somente recursos com o Tipo MIME correto serão reconhecidos e reproduzidos em elementos {{HTMLElement("video")}} ou {{HTMLElement("áudio")}}. Certifique-se [de usar o tipo correto para áudio e vídeo](/En/Media_formats_supported_by_the_audio_and_video_elements).
+- Tipos de arquivos proprietários. Preste especial atenção ao servir um tipo de arquivo proprietário. Evite usar o `application/octet-stream` como manipulação especial não será possível: a maioria dos navegadores não permitem definir um comportamento padrão (como "Abertura no Word") para este tipo MIME genérico.
 
-<h2 id="MIME_sniffing">MIME sniffing</h2>
+## MIME sniffing
 
-<p>Na ausência de um tipo MIME, ou em alguns outros casos em que um cliente acredita que estão incorrectamente definidos, os navegadores podem conduzir MIME sniffing, que está adivinhando o tipo MIME correto, olhando para o recurso. Cada navegador executa isso de forma diferente e em circunstâncias diferentes. Existem algumas preocupações de segurança com esta prática,<br>
- Como alguns tipos MIME representam conteúdo executável e outros não. Os servidores podem bloquear MIME sniffing enviando o {{HTTPHeader("X-Content-Type-Options")}} ao longo do {{HTTPHeader("Content-Type")}}.</p>
+Na ausência de um tipo MIME, ou em alguns outros casos em que um cliente acredita que estão incorrectamente definidos, os navegadores podem conduzir MIME sniffing, que está adivinhando o tipo MIME correto, olhando para o recurso. Cada navegador executa isso de forma diferente e em circunstâncias diferentes. Existem algumas preocupações de segurança com esta prática,
+Como alguns tipos MIME representam conteúdo executável e outros não. Os servidores podem bloquear MIME sniffing enviando o {{HTTPHeader("X-Content-Type-Options")}} ao longo do {{HTTPHeader("Content-Type")}}.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types">Properly configuring server MIME types</a></li>
- <li><a href="/en-US/docs/Web/HTML/Supported_media_formats">Media formats supported by the HTML audio and video elements</a></li>
-</ul>
+- [Properly configuring server MIME types](/pt-BR/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types)
+- [Media formats supported by the HTML audio and video elements](/pt-BR/docs/Web/HTML/Supported_media_formats)
