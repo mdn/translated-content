@@ -6,60 +6,61 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Headers/Want-Digest
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho HTTP <code><strong>Want-Digest</strong></code> é primordialmente usado em uma requisição HTTP, para pedir ao respondedor para prover uma digestão ({{Glossary("digest")}}) do recurso requisitado usando o cabeçalho de resposta <code><a href="/en-US/docs/Web/HTTP/Headers/Digest">Digest</a></code>.</p>
+O cabeçalho HTTP **`Want-Digest`** é primordialmente usado em uma requisição HTTP, para pedir ao respondedor para prover uma digestão ({{Glossary("digest")}}) do recurso requisitado usando o cabeçalho de resposta [`Digest`](/en-US/docs/Web/HTTP/Headers/Digest).
 
-<p>O cabeçalho contém identificadores para um ou mais algoritmos de digestão que o remetente deseja que o respondedor use para criar a digestão. O remetente pode usar <a href="/en-US/docs/Glossary/Quality_values">valores de qualidade</a> para indicar sua preferência ordenando dentre as escolhas que ele oferece.</p>
+O cabeçalho contém identificadores para um ou mais algoritmos de digestão que o remetente deseja que o respondedor use para criar a digestão. O remetente pode usar [valores de qualidade](/pt-BR/docs/Glossary/Quality_values) para indicar sua preferência ordenando dentre as escolhas que ele oferece.
 
-<p>Se <code>Want-Digest</code> não inclui nenhum algoritmo de digestão que aquele servidor suporta, o servidor pode responder com:</p>
+Se `Want-Digest` não inclui nenhum algoritmo de digestão que aquele servidor suporta, o servidor pode responder com:
 
-<ul>
- <li>uma digestão calculada usando outro algoritmo de digestão, ou</li>
- <li>um erro <code><a href="/en-US/docs/Web/HTTP/Status/400">400 Bad Request</a></code>, e inclui outro cabeçalho <code>Want-Digest</code> com a resposta, listando os algoritmos que ele suporta.</li>
-</ul>
+- uma digestão calculada usando outro algoritmo de digestão, ou
+- um erro [`400 Bad Request`](/en-US/docs/Web/HTTP/Status/400), e inclui outro cabeçalho `Want-Digest` com a resposta, listando os algoritmos que ele suporta.
 
-<p>Veja a página do cabeçalho <code><a href="/en-US/docs/Web/HTTP/Headers/Digest">Digest</a></code> para mais informações.</p>
+Veja a página do cabeçalho [`Digest`](/en-US/docs/Web/HTTP/Headers/Digest) para mais informações.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("General header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Tipo de cabeçalho</th>
+      <td>{{Glossary("General header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>não</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">Want-Digest: &lt;digest-algorithm&gt;
+```
+Want-Digest: <digest-algorithm>
 
 // Múltiplos algoritmos, pesados com a sintaxe de qualidade de valor:
-Want-Digest: &lt;digest-algorithm&gt;&lt;q-value&gt;,&lt;digest-algorithm&gt;&lt;q-value&gt;</pre>
+Want-Digest: <digest-algorithm><q-value>,<digest-algorithm><q-value>
+```
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>&lt;digest-algorithm&gt;</code></dt>
- <dd>Algoritmos de digestão suportados são definidos na <a href="https://tools.ietf.org/html/rfc3230">RFC 3230</a> e <a href="https://tools.ietf.org/html/rfc5843">RFC 5843</a>, e inclui <code>SHA-256</code> e <code>SHA-512</code>. Alguns algoritmos suportados, incluindo <code>unixsum</code> e <code>MD5</code> são sujeitos a colisões e não são apropriados para aplicações em que resistência à colisão é importante.</dd>
- <dt><code>&lt;q-value&gt;</code></dt>
- <dd>O <a href="/en-US/docs/Glossary/Quality_values">valor de qualidade</a> para aplicar aquela opção.</dd>
-</dl>
+- `<digest-algorithm>`
+  - : Algoritmos de digestão suportados são definidos na [RFC 3230](https://tools.ietf.org/html/rfc3230) e [RFC 5843](https://tools.ietf.org/html/rfc5843), e inclui `SHA-256` e `SHA-512`. Alguns algoritmos suportados, incluindo `unixsum` e `MD5` são sujeitos a colisões e não são apropriados para aplicações em que resistência à colisão é importante.
+- `<q-value>`
+  - : O [valor de qualidade](/pt-BR/docs/Glossary/Quality_values) para aplicar aquela opção.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="syntaxbox notranslate">Want-Digest: sha-256
-Want-Digest: SHA-512;q=0.3, sha-256;q=1, md5;q=0</pre>
+```
+Want-Digest: sha-256
+Want-Digest: SHA-512;q=0.3, sha-256;q=1, md5;q=0
+```
 
-<h3 id="Operação_básica">Operação básica</h3>
+### Operação básica
 
-<p>O remetente provém a lista de digestões que ele está preparado para aceitar, e o servidor usa um deles:</p>
+O remetente provém a lista de digestões que ele está preparado para aceitar, e o servidor usa um deles:
 
-<pre class="notranslate">Request:
+```
+Request:
 
   GET /item
   Want-Digest: sha-256;q=0.3, sha;q=1
@@ -67,13 +68,15 @@ Want-Digest: SHA-512;q=0.3, sha-256;q=1, md5;q=0</pre>
 Response:
 
   HTTP/1.1 200 Ok
-  Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=</pre>
+  Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
+```
 
-<h3 id="Digestões_não_suportadas">Digestões não suportadas</h3>
+### Digestões não suportadas
 
-<p>O servidor não suporta nenhum do algoritmos de digestão requisitados, então ele usa um algoritmo diferente:</p>
+O servidor não suporta nenhum do algoritmos de digestão requisitados, então ele usa um algoritmo diferente:
 
-<pre class="notranslate">Request:
+```
+Request:
 
   GET /item
   Want-Digest: sha;q=1
@@ -81,11 +84,13 @@ Response:
 Response:
 
   HTTP/1.1 200 Ok
-  Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=</pre>
+  Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
+```
 
-<p>O servidor não suporta nenhuma dos algoritmos de digestão requisitados, então responde com um erro 400 e inclui outro cabeçalho <code>Want-Digest</code>, listando os algoritmos que ele suporta:</p>
+O servidor não suporta nenhuma dos algoritmos de digestão requisitados, então responde com um erro 400 e inclui outro cabeçalho `Want-Digest`, listando os algoritmos que ele suporta:
 
-<pre class="notranslate">Request:
+```
+Request:
 
   GET /item
   Want-Digest: sha;q=1
@@ -93,35 +98,21 @@ Response:
 Response:
 
   HTTP/1.1 400 Bad Request
-  Want-Digest: sha-256, sha-512</pre>
+  Want-Digest: sha-256, sha-512
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p><a href="https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers">draft-ietf-httpbis-digest-headers-latest</a></p>
-   </td>
-   <td>Resource Digests for HTTP</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                  | Título                    |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| [draft-ietf-httpbis-digest-headers-latest](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers) | Resource Digests for HTTP |
 
-<p>Este cabeçalho foi originalmente definido na <a href="https://tools.ietf.org/html/rfc3230">RFC 3230</a>, mas a definição de "representação selecionada" na <a href="https://www.rfc-editor.org/info/rfc7231">RFC 7231</a> fez a definição original ficar inconsistente com as atuais especificações HTTP. Quando lançado, o rascunho "Digestões de Recursos para HTTP" tornará a RFC 3230 obsoleta e vai atualizar o padrão para ficar consistente.</p>
+Este cabeçalho foi originalmente definido na [RFC 3230](https://tools.ietf.org/html/rfc3230), mas a definição de "representação selecionada" na [RFC 7231](https://www.rfc-editor.org/info/rfc7231) fez a definição original ficar inconsistente com as atuais especificações HTTP. Quando lançado, o rascunho "Digestões de Recursos para HTTP" tornará a RFC 3230 obsoleta e vai atualizar o padrão para ficar consistente.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Want-Digest")}}</p>
+{{Compat("http.headers.Want-Digest")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Digest")}}</li>
-</ul>
+- {{HTTPHeader("Digest")}}

@@ -6,83 +6,67 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Headers/Digest
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta HTTP <code><strong>Digest</strong></code> provém uma {{Glossary("digest")}} do recurso requisitado.</p>
+O cabeçalho de resposta HTTP **`Digest`** provém uma {{Glossary("digest")}} do recurso requisitado.
 
-<p>Nos termos da <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a> esta é a <em>representação selecionada</em> de um recurso. A representação selecionada depende dos valores dos cabeçalhos <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> e <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Encoding">Content-Encoding</a></code>: então um único recurso pode ter diversos valores de "digestão".</p>
+Nos termos da [RFC 7231](https://tools.ietf.org/html/rfc7231) esta é a _representação selecionada_ de um recurso. A representação selecionada depende dos valores dos cabeçalhos [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type) e [`Content-Encoding`](/en-US/docs/Web/HTTP/Headers/Content-Encoding): então um único recurso pode ter diversos valores de "digestão".
 
-<p>A "digestão" é calculada através da representação inteira. A representação em si pode ser:</p>
+A "digestão" é calculada através da representação inteira. A representação em si pode ser:
 
-<ul>
- <li>totalmente contida no corpo da mensagem de resposta</li>
- <li>não contida no corpo da mensagem (por exemplo, na resposta para uma requisição <code><a href="/en-US/docs/Web/HTTP/Methods/HEAD">HEAD</a></code>)</li>
- <li>parcialmente contido no corpo da mensagem (por exemplo, em uma resposta para uma <a href="/en-US/docs/Web/HTTP/Range_requests">requisição de intervalo</a>).</li>
-</ul>
+- totalmente contida no corpo da mensagem de resposta
+- não contida no corpo da mensagem (por exemplo, na resposta para uma requisição [`HEAD`](/en-US/docs/Web/HTTP/Methods/HEAD))
+- parcialmente contido no corpo da mensagem (por exemplo, em uma resposta para uma [requisição de intervalo](/pt-BR/docs/Web/HTTP/Range_requests)).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo do cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Tipo do cabeçalho</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>não</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">Digest: &lt;digest-algorithm&gt;=&lt;digest-value&gt;
+```
+Digest: <digest-algorithm>=<digest-value>
 
-Digest: &lt;digest-algorithm&gt;=&lt;digest-value&gt;,&lt;digest-algorithm&gt;=&lt;digest-value&gt;
-</pre>
+Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
+```
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>&lt;digest-algorithm&gt;</code></dt>
- <dd>Algoritmos de digestão suportados são definidos na <a href="https://tools.ietf.org/html/rfc3230">RFC 3230</a> e <a href="https://tools.ietf.org/html/rfc5843">RFC 5843</a>, e incluem <code>SHA-256</code> e <code>SHA-512</code>. Alguns dos algoritmos suportados, incluindo <code>unixsum</code> e <code>MD5</code> são sujeitos a colisões e não são recomendados para aplicações onde resistência à colisções é importante.</dd>
- <dt><code>&lt;digest-value&gt;</code></dt>
- <dd>O resultado de aplicação do algoritmo de digestão na representação do recurso e codificando o resultado. A escolha do algoritmo de digestão também determina a codificação a ser usada: por exemplo <code>SHA-256</code> usa codificação <em>base64</em>.</dd>
-</dl>
+- `<digest-algorithm>`
+  - : Algoritmos de digestão suportados são definidos na [RFC 3230](https://tools.ietf.org/html/rfc3230) e [RFC 5843](https://tools.ietf.org/html/rfc5843), e incluem `SHA-256` e `SHA-512`. Alguns dos algoritmos suportados, incluindo `unixsum` e `MD5` são sujeitos a colisões e não são recomendados para aplicações onde resistência à colisções é importante.
+- `<digest-value>`
+  - : O resultado de aplicação do algoritmo de digestão na representação do recurso e codificando o resultado. A escolha do algoritmo de digestão também determina a codificação a ser usada: por exemplo `SHA-256` usa codificação _base64_.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="syntaxbox notranslate">Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
-Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637</pre>
+```
+Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
+Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p><a href="https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers">draft-ietf-httpbis-digest-headers-latest</a></p>
-   </td>
-   <td>Resource Digests for HTTP</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                  | Título                    |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| [draft-ietf-httpbis-digest-headers-latest](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers) | Resource Digests for HTTP |
 
-<p>Este cabeçalho foi originalmente definido na <a href="https://tools.ietf.org/html/rfc3230">RFC 3230</a>, mas a definição de "representação selecionada" na <a href="https://www.rfc-editor.org/info/rfc7231">RFC 7231</a> fez com que a definição original ficasse inconsistente com as especificações atuais do HTTP. Quando lançado, o rascunho de "Digestão de recursos para HTTP" tornará a RFC 3230 obsoleta e atualizará o padrão para ser consistente.</p>
+Este cabeçalho foi originalmente definido na [RFC 3230](https://tools.ietf.org/html/rfc3230), mas a definição de "representação selecionada" na [RFC 7231](https://www.rfc-editor.org/info/rfc7231) fez com que a definição original ficasse inconsistente com as especificações atuais do HTTP. Quando lançado, o rascunho de "Digestão de recursos para HTTP" tornará a RFC 3230 obsoleta e atualizará o padrão para ser consistente.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Digest")}}</p>
+{{Compat("http.headers.Digest")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Want-Digest")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests">Requisições de intervalo HTTP</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/206" title="The HTTP 206 Partial Content success status response code indicates that the request has succeeded and has the body contains the requested ranges of data, as described in the Range header of the request."><code>206 Partial Content</code></a></li>
-</ul>
+- {{HTTPHeader("Want-Digest")}}
+- [Requisições de intervalo HTTP](/pt-BR/docs/Web/HTTP/Range_requests)
+- [`206 Partial Content`](/pt-BR/docs/Web/HTTP/Status/206 "The HTTP 206 Partial Content success status response code indicates that the request has succeeded and has the body contains the requested ranges of data, as described in the Range header of the request.")
