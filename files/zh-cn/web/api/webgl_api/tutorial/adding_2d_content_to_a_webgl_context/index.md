@@ -286,7 +286,7 @@ function drawScene(gl, programInfo, buffers) {
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-如果你的浏览器支持 WebGL 的话，[可以点击这里看看 DEMO](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)。完整的源代码从[这里](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2)获得
+如果你的浏览器支持 WebGL 的话，[可以点击这里看看 DEMO](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)。完整的源代码从[这里](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2)获得
 
 ## 矩阵通用计算
 
