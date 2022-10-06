@@ -74,7 +74,7 @@ let keyPair = await window.crypto.subtle.generateKey(
 
 ### 生成 ECDSA 密钥对
 
-以下为生成 ECDSA 密钥对的代码，完整的示例[在这里](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ecdsa.js)
+以下代码生成 ECDSA 签名密钥对。[在 GitHub 上查看完整代码示例](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ecdsa.js)。
 
 ```js
 let keyPair = await window.crypto.subtle.generateKey(
