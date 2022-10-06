@@ -39,7 +39,7 @@ observe(target, options)
 
 ### 异常
 
-None.
+无。
 
 ## 示例
 
