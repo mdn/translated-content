@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/MAX_SAFE_INTEGE
 ---
 {{JSRef}}
 
-La constante **`Number.MAX_SAFE_INTEGER`** es el número mas grande 'seguro' en JavaScript (`253 - 1`).
+La constante **`Number.MAX_SAFE_INTEGER`** es el número mas grande 'seguro' en JavaScript (`2^53 - 1`).
 
 {{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}
 
@@ -21,7 +21,7 @@ La fuente de este ejemplo interactivo está almacenada en GitHub. Si quieres con
 
 ## Descripción
 
-La constante `MAX_SAFE_INTEGER` tiene un valor de `9007199254740991` (9,007,199,254,740,991 o \~9 mil billones). El razonamiento detrás de ese número es que JavaScript usa [números flotantes de doble precisión](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) tal como está especfificado en [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point) por lo que puedes representar números de forma segura entre `-(253 - 1)` y `253 - 1`.
+La constante `MAX_SAFE_INTEGER` tiene un valor de `9007199254740991` (9,007,199,254,740,991 o \~9 mil billones). El razonamiento detrás de ese número es que JavaScript usa [números flotantes de doble precisión](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) tal como está especfificado en [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point) por lo que puedes representar números de forma segura entre `-(2^53 - 1)` y `2^53 - 1`.
 
 Seguro, en este contexto, se refiere a la habilidad de representar enteros de forma exacta y compararlos de forma correcta. Por ejemplo, `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2` evaluará como 'verdadero', lo cual es matemáticamente incorrecto. Ver {{jsxref("Number.isSafeInteger()")}} para más información.
 
