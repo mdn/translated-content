@@ -132,32 +132,32 @@ original_slug: Aprender/HTML/Introducao_ao_HTML/Debugging_HTML
 
 <h4 id="Interpretando_as_mensagens_de_erros">Interpretando as mensagens de erros</h4>
 
-<p>As mensagens de erros geralmente são úteis, mas algumas vezes elas não ajudam tanto; com um pouco de prática você pode descobrir como interpretar-lás para arrumar o seu código. Vamos dar uma olhada nas mensagens de erros e ver o que elas significam. Você verá que cada mensagem vem com um numero para a linha e um para a coluna afim de ajudar você a localizar o erro facilmente.</p>
+<p>As mensagens de erros geralmente são úteis, mas algumas vezes elas não ajudam tanto; com um pouco de prática você pode descobrir como interpretar-lás para arrumar o seu código. Vamos dar uma olhada nas mensagens de erros e ver o que elas significam. Você verá que cada mensagem vem com um número para a linha e um para a coluna afim de ajudar você a localizar o erro facilmente.</p>
 
 <ul>
- <li>"End tag <code>li</code> implied, but there were open elements" (2 instances): Estas mensagens indicam que um elemento que esta aberto deveria estar fechado. O final da tag esta implicito, mas não esta realmente lá. A informação de linha/coluna indica para a primeira linha depois de onde a tag de fechamento realmente deveria estar, mas isto é uma pista boa o suficiente para ver o que há de errado.</li>
+ <li>"Fechamento da tag <code>li</code> implied, but there were open elements" (2 instances): Estas mensagens indicam que um elemento que esta aberto deveria estar fechado. O final da tag esta implicito, mas não esta realmente lá. A informação de linha/coluna indica para a primeira linha depois de onde a tag de fechamento realmente deveria estar, mas isto é uma pista boa o suficiente para ver o que há de errado.</li>
  <li>"Unclosed element <code>strong</code>": Este é muito fácil de entender — um {{htmlelement("strong")}} elemento esta aberto, e uma informação de linha/coluna indica diretamente para onde esta.</li>
  <li>"End tag <code>strong</code> violates nesting rules": Este aponta os elementos incorretamente aninhados, e a informação de linha/coluna aponta onde o erro está.</li>
- <li>"End of file reached when inside an attribute value. Ignoring tag": This one is rather cryptic; it refers to the fact that there is an attribute value not properly formed somewhere, possibly near the end of the file because the end of the file appears inside the attribute value. The fact that the browser doesn't render the link should give us a good clue as to what element is at fault.</li>
- <li>"End of file seen and there were open elements": This is a bit ambiguous, but basically refers to the fact there are open elements that need to be properly closed. The lines numbers point to the last few lines of the file, and this error message comes with a line of code that points out an example of an open element:
-  <pre class="notranslate">example: &lt;a href="https://www.mozilla.org/&gt;link to Mozilla homepage&lt;/a&gt; ↩ &lt;/ul&gt;↩ &lt;/body&gt;↩&lt;/html&gt;</pre>
+ <li>"End of file reached when inside an attribute value. Ignoring tag": Essa é mais enigmática; se refere ao fato de que há um valor do atributo formado indevidamente em algum lugar, possivelmente próximo ao fim do arquivo porquê o fim do arquivo aparece dentro do valor do atributo. O fato de o navegador não renderizar o link deveria nos dar uma boa pista de qual elemento está em falta.</li>
+ <li>"End of file seen and there were open elements": Essa é um pouco ambígua, mas basicamente se refere ao fato de que há elementos em aberto que devem ser fechados devidamente. A linha de números aponta para as últimas linhas do arquivo, e esta mensagem de erro vem com uma linha do código que aponta um exemplo de um elemento em aberto:
+  <pre class="notranslate">Exemplo: &lt;a href="https://www.mozilla.org/&gt;link to Mozilla homepage&lt;/a&gt; ↩ &lt;/ul&gt;↩ &lt;/body&gt;↩&lt;/html&gt;</pre>
 
   <div class="note">
-  <p><strong>Note</strong>: An attribute missing a closing quote can result in an open element because the rest of the document is interpreted as the attribute's content.</p>
+  <p><strong>Note</strong>: Um atributo faltando uma aspas pode resultar em um elemento aberto porque o resto do documento é interpretado como conteúdo do atributo.</p>
   </div>
  </li>
- <li>"Unclosed element <code>ul</code>": This is not very helpful, as the {{htmlelement("ul")}} element <em>is</em> closed correctly. This error comes up because the {{htmlelement("a")}} element is not closed, due to the missing closing quote mark.</li>
+ <li>"Unclosed element <code>ul</code>": Esta não ajuda em nada, já que o elemento {{htmlelement("ul")}} <em>is</em> foi fechado corretamente. Este erro aparece porque o elemento {{htmlelement("a")}} não foi fechado, devido a falta de aspas de fechamento.</li>
 </ul>
 
-<p><span>If you can't work out what every error message means, don't worry about it — a good idea is to try fixing a few errors at a time. Then try revalidating your HTML to show what errors are left. Sometimes fixing an earlier error will also get rid of other error messages — several errors can often be caused by a single problem, in a domino effect.</span></p>
+<p><span>Se você não descobrir o significado de todas mensagens de erro, não se preocupe — uma boa ideia é tentar resolver alguns erros por vez. Então tente revalidar seu HTML para ver o que restou. Às vezes resolver erros anteriores pode te livrar de outras mensagens de erro — vários erros podem ser causados na maioria das vezes por um só, tipo um efeito dominó.</span></p>
 
-<p><span>You will know when all your errors are fixed when you see the following banner in your output: </span></p>
+<p><span>Você vai saber quando todos os seus erros forem resolvidos quando ver a seguinte bandeira no output: </span></p>
 
 <p><img alt='Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."' src="https://mdn.mozillademos.org/files/12445/valid-html-banner.png" style="display: block; margin: 0 auto;"></p>
 
-<h2 id="Summary">Summary</h2>
+<h2 id="Summary">Sumário</h2>
 
-<p>So there we have it, an introduction to debugging HTML, which should give you some useful skills to count on when you start to debug CSS, JavaScript, and other types of code later on in your career. This also marks the end of the Introduction to HTML module learning articles — now you can go on to testing yourself with our assessments: the first one is linked below.</p>
+<p>Então é isso, uma introdução a debugação de HTML, na qual deve te dar dicas úteis quando você começar a debugar CSS, JavaScript, e outros tipos de códigos mais tarde na sua carreira. Isso também significa o fim dos artigos de aprendizado do Módulo de Introdução ao HTML — agora você pode testar a si mesmo com nossa avaliação: a primeira está no link abaixo.</p>
 
 <p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}</p>
 
