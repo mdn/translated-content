@@ -1,10 +1,9 @@
 ---
 title: Rendre le contenu éditable
-slug: Web/Guide/HTML/Editable_content
+slug: conflicting/Web/HTML/Global_attributes/contenteditable
 translation_of: Web/Guide/HTML/Editable_content
-original_slug: Web/HTML/Contenu_editable
+original_slug: Web/Guide/HTML/Editable_content
 ---
-
 > **Attention :**  Comme indiqué par l'avertissement de la spécification pour [`execCommand()`](https://w3c.github.io/editing/docs/execCommand/), les fonctionnalités correspondantes ne sont pas implémentées complètement ou de façon cohérente entre les différents agents utilisateurs. De plus, cette fonction est indiquée comme dépréciée sur la page de référence pour [`Document.execCommand()`](/fr/docs/Web/API/Document/execCommand). Aussi, ce qui suit sur cette page ne devrait pas être utilisé pour du code en production.
 
 En HTML, tout élément peut être éditable. En utilisant des gestionnaires d'évènements JavaScript, on peut transformer une page web en un éditeur de texte riche. Cet article fournit des informations à propos de cette fonctionnalité.

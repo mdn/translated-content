@@ -19727,10 +19727,6 @@
       "xaky"
     ]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2019-04-20T23:42:36.501Z",
-    "contributors": ["tregagnon", "SphinxKnight"]
-  },
   "Web/Guide/Introduction_to_Web_development": {
     "modified": "2019-03-24T00:03:04.501Z",
     "contributors": ["Jeremie", "fscholz", "BenoitL"]
@@ -28104,6 +28100,10 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "conflicting/Web/HTML/Global_attributes/contenteditable": {
+    "modified": "2019-04-20T23:42:36.501Z",
+    "contributors": ["tregagnon", "SphinxKnight"]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2020-10-15T21:27:51.341Z",

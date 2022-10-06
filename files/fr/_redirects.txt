@@ -1825,7 +1825,7 @@
 /fr/docs/HTML/Attributs	/fr/docs/Web/HTML/Attributes
 /fr/docs/HTML/Canvas	/fr/docs/Web/API/Canvas_API
 /fr/docs/HTML/Catégorie_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
-/fr/docs/HTML/Contenu_editable	/fr/docs/Web/Guide/HTML/Editable_content
+/fr/docs/HTML/Contenu_editable	/fr/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /fr/docs/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/HTML/Element	/fr/docs/Web/HTML/Element
 /fr/docs/HTML/Element-redirection-1	/fr/docs/Web/HTML/Element
@@ -4610,6 +4610,7 @@
 /fr/docs/Web/Guide/HTML	/fr/docs/Learn/HTML
 /fr/docs/Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /fr/docs/Web/Guide/HTML/Catégories_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
+/fr/docs/Web/Guide/HTML/Editable_content	/fr/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/Guide/HTML/Formulaires	/fr/docs/Learn/Forms
 /fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms	/fr/docs/Learn/Forms/Advanced_form_styling
 /fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML	/fr/docs/Learn/Forms/Styling_web_forms
@@ -4692,7 +4693,7 @@
 /fr/docs/Web/HTML/Attributs_universels/x-ms-format-detection	/fr/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /fr/docs/Web/HTML/Canvas	/fr/docs/Web/API/Canvas_API
 /fr/docs/Web/HTML/Catégorie_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
-/fr/docs/Web/HTML/Contenu_editable	/fr/docs/Web/Guide/HTML/Editable_content
+/fr/docs/Web/HTML/Contenu_editable	/fr/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /fr/docs/Web/HTML/Element/Input/datetime	/fr/docs/Web/HTML/Element/input/datetime-local
