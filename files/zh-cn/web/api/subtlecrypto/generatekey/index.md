@@ -49,7 +49,7 @@ generateKey(algorithm, extractable, keyUsages)
 - `SyntaxError` {{domxref("DOMException")}}
   - : 当结果是类型为 `secret` 或 `private` 但 `keyUsages` 为空的{{domxref("CryptoKey", "加密密钥")}}时触发。
 - `SyntaxError` {{domxref("DOMException")}}
-  - : 当结果是{{domxref("CryptoKeyPair")}}，但私钥的keyUsages为空时触发
+  - : 当结果是{{domxref("CryptoKeyPair", "加密密钥对")}}，但它的 `privateKey.usages` 属性为空时触发。
 
 ## 示例
 
