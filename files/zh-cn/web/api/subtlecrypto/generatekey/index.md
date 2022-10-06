@@ -117,7 +117,7 @@ let key = await window.crypto.subtle.generateKey(
 );
 ```
 
-## 规格
+## 规范
 
 {{Specifications}}
 
