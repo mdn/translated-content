@@ -284,7 +284,7 @@ function drawScene(gl, programInfo, buffers) {
 
 接着加载特定位置，并把正方形放在距离摄像机 6 个单位的的位置。然后，我们绑定正方形的顶点缓冲到上下文，并配置好，再通过调用 {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} 方法来画出对象。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
 如果你的浏览器支持 WebGL 的话，[可以点击这里看看 DEMO](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)。完整的源代码从[这里](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2)获得
 
