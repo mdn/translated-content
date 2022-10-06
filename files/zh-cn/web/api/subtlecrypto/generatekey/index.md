@@ -127,5 +127,5 @@ let key = await window.crypto.subtle.generateKey(
 
 ## 参见
 
-- [Cryptographic key length recommendations](https://www.keylength.com/).
+- [加密密钥长度的建议](https://www.keylength.com/).
 - [NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths](https://csrc.nist.gov/publications/detail/sp/800-131a/rev-1/archive/2015-11-06).
