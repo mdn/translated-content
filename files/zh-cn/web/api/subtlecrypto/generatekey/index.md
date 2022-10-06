@@ -104,7 +104,7 @@ let key = await window.crypto.subtle.generateKey(
 
 ### 生成 AES 密钥
 
-以下为生成 AES 密钥的代码，完整的示例[在这里](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
+以下代码生成 AES-GCM 加密密钥。[在 GitHub 上查看完整代码示例](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)。
 
 ```js
 let key = await window.crypto.subtle.generateKey(
