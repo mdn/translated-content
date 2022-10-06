@@ -44,7 +44,7 @@ generateKey(algorithm, extractable, keyUsages)
 
 ### 异常
 
-当遇到以下异常时，返回的promise会进入rejected状态
+当遇到以下异常时，promise 会被拒绝：
 
 - `SyntaxError` {{domxref("DOMException")}}
   - : 当结果是{{domxref("CryptoKey")}}，但keyUsages为空时触发
