@@ -47,7 +47,7 @@ generateKey(algorithm, extractable, keyUsages)
 当遇到以下异常时，promise 会被拒绝：
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : 当结果是{{domxref("CryptoKey")}}，但keyUsages为空时触发
+  - : 当结果是类型为 `secret` 或 `private` 但 `keyUsages` 为空的{{domxref("CryptoKey", "加密密钥")}}时触发。
 - `SyntaxError` {{domxref("DOMException")}}
   - : 当结果是{{domxref("CryptoKeyPair")}}，但私钥的keyUsages为空时触发
 
