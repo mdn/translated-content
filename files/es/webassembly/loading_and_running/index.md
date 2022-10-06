@@ -1,111 +1,113 @@
 ---
-title: Loading and running WebAssembly code
+title: Cargar y ejecutar código WebAssembly
 slug: WebAssembly/Loading_and_running
 tags:
+  - Fetch
   - JavaScript
-  - Traer
   - WebAssembly
   - XMLHttpRequest
   - bytecode
-translation_of: WebAssembly/Loading_and_running
 ---
+
 {{WebAssemblySidebar}}
 
-Para utilizar WebAssembly en JavaScript, necesita primero jalar su módulo dentro de la memoria antes dela compilación/instanciación. Este artículo ofrece una referencia para mecanismos distintos que pueden traer el bytecode de WebAssembly, así como tener la forma de compilar/instanciarlo una vez que ya funciona.
+Para usar WebAssembly en JavaScript, primero debes extraer tu módulo en la memoria antes de la compilación/instanciación. Este artículo proporciona una referencia para los diferentes mecanismos que se pueden usar para obtener el código de bytes de WebAssembly, además de cómo compilarlo/crear una instancia y luego ejecutarla.
 
-## ¿Cuáles son las opciones?
+## ¿Cuales son las opciones?
 
-WebAssembly no está integradon aún con la etiqueta `<script type='module'>` o con la directiva ES2015 `import`, así, no existe una forma para que el navegador busque sus módulos a partir de importaciones.
+WebAssembly aún no está integrado con declaraciones `<script type='module'>` o `import`, por lo tanto, no hay una ruta para que el navegador busque módulos para ti usando importaciones.
 
-Los métodos anteriores {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} requieren que se creen un {{domxref("ArrayBuffer")}} que contenga su módulo binario WebAssembly después de buscar los bytes sin procesar, y luego los compila/instancia. Estos es análogo a la `new Function(string)`, excepto que estamos sustituyendo una cadena de caracteres (código fuente JavaScript) con una memoria intermedia (arreglo) de bytes (código fuente de WebAssembly).
+Los métodos más antiguos [`WebAssembly.compile`](/en-US/docs/WebAssembly/JavaScript_interface/compile)/[`WebAssembly.instantiate`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) requieren que crees un {{jsxref("ArrayBuffer")}} que contiene el binario de tu módulo WebAssembly después de obtener los bytes sin procesar y luego compilarlo/crearlo. Esto es análogo a `new function(string)`, excepto que estamos sustituyendo una cadena de caracteres (código fuente de JavaScript) con un búfer de arreglo de bytes (código fuente de WebAssembly).
 
-Lo actual en métodos {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}} es que son mucho más eficientes — desempeñan sus acciones directamente sobre flujos de bytes sin procesar (raw streams) originados en la red, suprimiendo la necesidad de tenerl el paso de {{domxref("ArrayBuffer")}}.
+Los nuevos métodos [`WebAssembly.compileStreaming`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming)/[`WebAssembly.instantiateStreaming`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) son mucho más eficiente: realizan sus acciones directamente en el flujo sin procesar de bytes que provienen de la red, eliminando la necesidad del paso {{jsxref("ArrayBuffer")}}.
 
-La pregunta ¿cómo hacemos para tener esos bytes dentro de la memoria intermedia (arreglo) y compilarlos? En la siguiente sección lo explicamos.
+Entonces, ¿cómo metemos esos bytes en un búfer de arreglo y los compilamos? Las siguientes secciones lo explican.
 
-## Utilización de Fetch (Traer a)
+## Usar Fetch
 
-[Fetch](/es/docs/Web/API/Fetch_API) es una API moderna y conveniente para traer recursos de la red.
+[Fetch](/es/docs/Web/API/Fetch_API) es una API moderna y conveniente para obtener recursos de red.
 
-La manera más eficiente y rápida de traer un módulo wasm (WebAssembly Module) es utilizando el método actualizado {{jsxref("WebAssembly.instantiateStreaming()")}}, que puede generar una llamada al método `fetch()` como primer argumento y manejará la búsqueda, compilación e instanciación del módulo paso a paso, teniendo acceso a los bytes sin procesar mientras se transmiten (stream) del servidor:
+La forma más rápida y eficiente de obtener un módulo `wasm` es usar el método más nuevo [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming), que puede tomar una llamada `fetch()` como su primer argumento, y se encargará de obtener, compilar e instanciar el módulo en un solo paso, accediendo al código de bytes sin formato a medida que se transmite desde el servidor:
 
 ```js
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(results => {
-  // Hacemos algo con el resultado aquí!
-});
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (results) => {
+    // ¡Haz algo con el resultado!
+  }
+);
 ```
 
-Si usamos el método anterior {{jsxref("WebAssembly.instantiate()")}} , que no trabaja sobre una transmisión (stream) directa, necesitaremos un paso adicional para convertir el byte code buscado a un {{domxref("ArrayBuffer")}}, como se muestra a continuación:
+Si usáramos el método anterior [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate), que no funciona en la transmisión directa, necesitaríamos un paso adicional para convertir el código de bytes obtenido en un {{jsxref("ArrayBuffer")}}, así:
 
 ```js
-fetch('module.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(results => {
-  // Hacemos algo con el resultado aquí!
-});
+fetch("module.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((results) => {
+    // ¡Haz algo con el resultado!
+  });
 ```
 
-### Más allá de las sobrecargas de instantiate()
+### Aparte en la sobrecarga de `instantiate()`
 
-La función {{jsxref("WebAssembly.instantiate()")}} tiene dos formas de sobrecargar — la primera se muestra arriba, toma el byte code como argumento para compilar y regresa un compromiso de que resolverá un objeto que contenga tanto un módulo objeto compilado, como una instancia desarrollada de ello. El objeto se ve como lo siguiente:
+La función [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) tiene dos formas de sobrecarga: la que se muestra arriba toma el código de bytes para compilar como argumento y devuelve una Promesa que se resuelve en un objeto que contiene tanto el objeto del módulo compilado como una instancia del mismo. El objeto se ve así:
 
-```js
+```
 {
-  module : Module // El recién compilado objeto WebAssembly.Module,
-  instance : Instance // Una instancia nueva de WebAssembly.Instance del módulo}
+  module : Module // El objeto WebAssembly.Module recién compilado,
+  instance : Instance // Una nueva WebAssembly.Instance del objeto mudule
+}
 ```
 
-> **Nota:** Generalmente solo nos preocupamos de la instancia, pero resulta útil tener el módulo en caso de que querramos almacenarlo temporalmente (cache), compartirlo con otro proceso o ventana vía [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), o simplemente crear mas instancias.
+> **Nota:** Por lo general, solo nos preocupamos por la instancia, pero es útil tener el módulo en caso de que queramos almacenarlo en caché, compartirlo con otro *worker* o `window` a través de [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), o crear más instancias.
 
-> **Nota:** La segunda forma de sobrecarga utiliza un objeto del tipo {{jsxref("WebAssembly.Module")}} como argumento y regresa un compromiso directo conteniendo la instancia del objeto como resultado. Vea el [Segundo ejemplo de sobrecarga](/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example).
+> **Nota:** El segunda forma de sobrecarga toma un objeto [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) como argumento y devuelve una promesa que contiene directamente el objeto `instance` como resultado. Consulta el [Ejemplo de segunda sobrecarga](/en-US/docs/WebAssembly/JavaScript_interface/instantiate#second_overload_example).
 
-### Ejecutando su código WebAssembly
+### Ejecutar tu código WebAssembly
 
-Una vez que se tiene disponible la instancia WebAssembly en su código JavaScript, puede entonces comenzar a utilizar las funcionalidades de éste, que han sido exportadas vía la propiedad {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}}. Su código podría verse como lo que a continuación mostramos:
+Una vez que tengas tu instancia de WebAssembly disponible en tu JavaScript, puedes comenzar a usar funciones que se han exportado a través de la propiedad [`WebAssembly.Instance.exports`](/en-US/docs/WebAssembly/JavaScript_interface/Instance/exports). Tu código podría ser algo como esto:
 
 ```js
-WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
-.then(obj => {
-  // Llamada a una función exportada:
-  obj.instance.exports.exported_func();
+WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
+  (obj) => {
+    // Llama a una función exportada:
+    obj.instance.exports.exported_func();
 
-  // o acceso al contenido de la memoria exportada:
-  var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+    // o accede al contenido del búfer de una memoria exportada:
+    const i32 = new Uint32Array(obj.instance.exports.memory.buffer);
 
-  // o acceso a los elementos de una tabla exportada:
-  var table = obj.instance.exports.table;
-  console.log(table.get(0)());
-})
+    // o accede a los elementos de una tabla exportada:
+    const table = obj.instance.exports.table;
+    console.log(table.get(0)());
+  }
+);
 ```
 
-> **Nota:** Para mayor información sobre como funciona la exportación de módulos WebAssembly, debes leer [Utilización de la Interfaz (API) de WebAssembly JavaScript](/es/docs/WebAssembly/Using_the_JavaScript_API), y [Entendiendo el formato de texto en WebAssembly](/es/docs/WebAssembly/Understanding_the_text_format).
+> **Nota:** Para obtener más información sobre cómo funciona la exportación desde un módulo WebAssembly, lee [Usar la API JavaScript de WebAssembly](/en-US/docs/WebAssembly/Using_the_JavaScript_API) y [Comprender el formato de texto de WebAssembly](/en-US/docs/WebAssembly/Understanding_the_text_format).
 
-## Utilizando XMLHttpRequest
+## Usar XMLHttpRequest
 
-[`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) es de alguna forma más viejo que Fetch, pero se puede utilizar aún para obtener un arreglo de tipos. De nuevo, los pasos para utilizarlo, asumiendo que nuestro módulo se llama `simple.wasm`:
+[`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) es un poco más antiguo que Fetch, pero, felizmente, aún se puede usar para obtener un arreglo tipado. Nuevamente, asumiendo que nuestro módulo se llama `simple.wasm`:
 
-1. Crear una instancia nueva de {{domxref("XMLHttpRequest()")}} y utilizar su método {{domxref("XMLHttpRequest.open","open()")}} para abrir una petición, dejando el método de petición en `GET`, y declarando la ruta al alrchivo que queremos traer.
-2. La parte clave de esto es poner el tipo de respuesta al uso de `'arraybuffer'` por medio de la propiedad {{domxref("XMLHttpRequest.responseType","responseType")}}.
-3. Luego, enviar la petición utilizando {{domxref("XMLHttpRequest.send()")}}.
-4. Cuando luego se utilice el manejador de evento {{domxref("XMLHttpRequest.onload", "onload")}} para invocar una función cuando la respuesta haya terminado de descargar — en esta función tomamos el arreglo de la propiedad {{domxref("XMLHttpRequest.response", "response")}} y luego lo mandamos a nuestro método {{jsxref("WebAssembly.instantiate()")}} como hicimos con Fetch.
+1. Crea una nueva instancia de {{domxref("XMLHttpRequest()")}} y usa su método {{domxref("XMLHttpRequest.open","open()")}} para abrir una solicitud, configurando el método de solicitud a `GET`, y declarando la ruta al archivo que queremos obtener.
+2. La parte clave de esto es establecer el tipo de respuesta en `'arraybuffer'` usando la propiedad {{domxref("XMLHttpRequest.responseType","responseType")}}.
+3. A continuación, envía la solicitud mediante {{domxref("XMLHttpRequest.send()")}}.
+4. Luego usamos el controlador de eventos {{domxref("XMLHttpRequest.load_event", "load")}} para invocar una función cuando la respuesta se ha terminado de descargar; en esta función, obtenemos el arreglo del búfer desde {{domxref("XMLHttpRequest.response", "response")}} y luego lo introducimos en nuestro método [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) como hicimos con Fetch.
 
-El código final queda:
+El código final se ve así:
 
 ```js
-request = new XMLHttpRequest();
-request.open('GET', 'simple.wasm');
-request.responseType = 'arraybuffer';
+const request = new XMLHttpRequest();
+request.open("GET", "simple.wasm");
+request.responseType = "arraybuffer";
 request.send();
 
-request.onload = function() {
-  var bytes = request.response;
-  WebAssembly.instantiate(bytes, importObject).then(results => {
+request.onload = () => {
+  const bytes = request.response;
+  WebAssembly.instantiate(bytes, importObject).then((results) => {
     results.instance.exports.exported_func();
   });
 };
 ```
 
-> **Nota:** Puede ver un ejemplo de esta acción en [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html).
+> **Nota:** Puedes ver un ejemplo de esto en acción en [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html).
