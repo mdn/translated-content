@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
-**TURN** (Traversal Using Relays around NAT) は、{{glossary("NAT", "Network Address Translator")}} (NAT) やファイアウォールの内側からコンピューターがデータを受信および送信できるようにする {{Glossary('protocol')}} です。TURN は WebRTC で使用され、インターネット上の任意の 2 つのデバイスがピアツーピア接続できるようにします。
+**TURN** (Traversal Using Relays around NAT) は、{{glossary("NAT", "Network Address Translator")}} (NAT) やファイアウォールの内側からコンピューターがデータを受信および送信できるようにする {{Glossary('protocol', 'プロトコル')}} です。TURN は WebRTC で使用され、インターネット上の任意の 2 つのデバイスがピアツーピア接続できるようにします。
 
 ## 関連情報
 
