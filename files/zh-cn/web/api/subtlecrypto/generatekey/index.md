@@ -57,7 +57,7 @@ generateKey(algorithm, extractable, keyUsages)
 
 ### 生成 RSA 密钥对
 
-以下为生成 RSA 密钥对的代码。完整的示例[在这里](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/rsa-oaep.js)
+以下代码生成 RSA-OAEP 加密密钥对。[在 GitHub 上查看完整代码示例](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/rsa-oaep.js)。
 
 ```js
 let keyPair = await window.crypto.subtle.generateKey(
