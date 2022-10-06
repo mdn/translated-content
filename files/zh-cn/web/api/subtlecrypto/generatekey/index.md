@@ -5,7 +5,7 @@ slug: Web/API/SubtleCrypto/generateKey
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-使用 {{domxref("SubtleCrypto")}} 接口的 **`generateKey()`** 方法用于生成新的密钥（用于对称算法）或密钥对（用于非对称算法）。
+{{domxref("SubtleCrypto")}} 接口的 **`generateKey()`** 方法用于生成新的密钥（用于对称算法）或密钥对（用于非对称算法）。
 
 ## 语法
 
