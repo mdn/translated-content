@@ -8,7 +8,7 @@ slug: Web/API/Element/setPointerCapture
 **`setPointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、特定の要素をこれ以降のポインターイベントの*キャプチャターゲット*として指定するために使用します。 ({{domxref("Element.releasePointerCapture()")}} を介して) キャプチャが解放されるまで、それ以降のポインターのイベントはキャプチャ要素をターゲットにします。
 
 >**メモ：** ポインタキャプチャ設定後、それ以降のポインタイベントはキャプチャ対象の要素内で発生したとみなされます。よって、{{domxref("HTMLElement/pointerover_event", "pointerover")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}}, {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}}は**発生しません**。
->タッチスクリーンデバイスなどの[直接操作メタファー](https://w3c.github.io/pointerevents/#dfn-direct-manipulation)を実装するブラウザでは、`pointerdown`イベント発生時にイベント発生要素に対してポインタキャプチャが[自動的に適応](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture)されます。{{domxref('element.releasePointerCapture')}}メソッドを手動で呼び出すか、`pointerup`か`pointercancel`イベント発生時に自動的にポインタキャプチャは解放されます。
+>タッチスクリーンデバイスなどの[直接操作メタファー](https://w3c.github.io/pointerevents/#dfn-direct-manipulation)を実装するブラウザでは、`pointerdown`イベント発生時に要素に対してポインタキャプチャが[自動的に適応](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture)されます。{{domxref('element.releasePointerCapture')}}メソッドを手動で呼び出すか、`pointerup`か`pointercancel`イベント発生時に自動的にポインタキャプチャは解放されます。
 
 ### ポインターキャプチャの概要
 
