@@ -11,8 +11,8 @@ original_slug: Learn/Common_questions/实用文本编辑器
     <tr>
       <th scope="row">前提条件：</th>
       <td>
-        你应该已经知晓了<a href="/zh-CN/docs/Learn/Common_questions/What_software_do_I_need">
-          为了建立一个网站所需的各种软件</a
+        你应该已经知晓了<a
+          href="/zh-CN/docs/Learn/Common_questions/What_software_do_I_need">为了建立一个网站所需的各种软件</a
         >。
       </td>
     </tr>
@@ -284,8 +284,7 @@ original_slug: Learn/Common_questions/实用文本编辑器
         >和<a href="mailto:tm-support@macromates.com">电子邮件</a>
       </td>
       <td>
-        <a href="https://manual.macromates.com/en/">在线指南</a>、
-        <a href="https://wiki.macromates.com/Main/HomePage" rel="external"
+        <a href="https://manual.macromates.com/en/">在线指南</a>、<a href="https://wiki.macromates.com/Main/HomePage" rel="external"
           >Wiki</a
         >
       </td>
@@ -469,4 +468,4 @@ original_slug: Learn/Common_questions/实用文本编辑器
 
 ## 下一步
 
-现在你已经选择了一个合适的文本编辑器，可以花一些时间来搭建[你的基本工作环境](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)，或者，如果你想立即使用它，你可以写下[你的第一个网页](/zh-CN/docs/Learn/Getting_started_with_the_web)。
+现在你已经选择了一个合适的文本编辑器，可以花一些时间来搭建[基本工作环境](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)，或者，如果想立即使用它，可以写下[你的第一个网页](/zh-CN/docs/Learn/Getting_started_with_the_web)。
