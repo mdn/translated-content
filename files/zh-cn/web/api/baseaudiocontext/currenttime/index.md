@@ -9,7 +9,7 @@ slug: Web/API/BaseAudioContext/currentTime
 
 ## 值
 
-一个浮点数。
+一个双精度浮点数。
 
 ## 示例
 

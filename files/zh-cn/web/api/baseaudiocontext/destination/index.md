@@ -9,7 +9,7 @@ slug: Web/API/BaseAudioContext/destination
 
 ## 值
 
-一个 {{ domxref("AudioDestinationNode") }} 节点。
+{{ domxref("AudioDestinationNode") }} 节点。
 
 ## 示例
 
