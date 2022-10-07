@@ -25,7 +25,7 @@ arr.push(élément1, ..., élémentN)
 
 ### Paramètres
 
-- `élément1, ...,élémentN`
+- `élément1, ..., élémentN`
   - : Les éléments à ajouter à la fin du tableau.
 
 ### Valeur de retour
@@ -72,6 +72,19 @@ console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
 ```
 
 > **Note :** Attention à ne pas utiliser cette méthode lorsque les tableaux sont très grands car une fonction n'accepte qu'un nombre limité d'arguments. Voir {{jsxref("Function.apply","apply()")}} pour plus d'informations sur ces limites.
+
+Il est aussi possible de fusionner deux tableaux en utilisant le destructuring:
+
+```js
+var legumes = ['navet', 'pomme de terre'];
+var autresLegumes = ['céleri', 'radis'];
+
+// On fusionne les deux tableaux
+// Équivalent à legumes.push('céleri', 'radis');
+legumes.push(...autresLegumes);
+
+console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
+```
 
 ### Utiliser un objet comme on utiliserait un tableau
 
