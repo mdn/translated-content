@@ -49,16 +49,13 @@ console.log(memory.buffer.byteLength / bytesPerPage);  // "2"
 ```
 
 On voit ici que la valeur de `grow()` indique l'espace utilisé avant l'agrandissement de la mémoire.
-
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires                                       |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblymemoryprototypegrow', 'grow()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Memory.grow")}}
+{{Compat}}
 
 ## Voir aussi
 

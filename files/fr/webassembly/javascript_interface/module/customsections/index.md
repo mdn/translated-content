@@ -70,13 +70,11 @@ WebAssembly.compileStreaming(fetch('simple-name-section.wasm'))
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                 | Commentaires                                       |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblymodulecustomsections', 'customSections()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Module.customSections")}}
+{{Compat}}
 
 ## Voir aussi
 
