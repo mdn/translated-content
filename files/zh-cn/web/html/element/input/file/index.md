@@ -95,7 +95,7 @@ slug: Web/HTML/Element/Input/file
 
 **唯一文件类型说明符**是一个字符串，表示在 `file` 类型的 {{HTMLElement("input")}} 元素中用户可以选择的文件类型。每个唯一文件类型说明符可以采用下列形式之一：
 
-- 一个以英文句号（“.”）开头的合法的不区分大小写的文件名扩展名。例如：`.jpg`，`.pdf` 或 `.doc`。
+- 一个以英文句号（“.”）开头的合法的不区分大小写的文件名扩展名。例如：`.jpg`、`.pdf` 或 `.doc`。
 - 一个不带扩展名的 MIME 类型字符串。
 - 字符串 `audio/*`，表示“任何音频文件”。
 - 字符串 `video/*`，表示“任何视频文件”。
@@ -222,7 +222,7 @@ div {
 
 在本例中，我们将展示一个稍微高级一点的文件选择器，它利用了在 `HTMLInputElement.files` 属性中可用的文件信息，并且展示了一些聪明的技巧。
 
-> **备注：** 你可以在 GitHub 中查看本示例的完整源代码——[file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) （[也看看现场运行的实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)）。我们不会解释 CSS；JavaScript 是主要的关注点。
+> **备注：** 你可以在 GitHub 中查看本示例的完整源代码——[file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html)（[也看看现场运行的实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)）。我们不会解释 CSS；JavaScript 是主要的关注点。
 
 首先，让我们看看 HTML：
 
