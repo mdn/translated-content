@@ -188,31 +188,31 @@ Temos cada seção desacoplada da funcionalidade contida nos elementos de {{html
 
 Let's put these ideas into practice and build a slightly more involved form structure — a payment form. This form will contain a number of widget types that you may not yet understand — don't worry about this for now; you'll find out how they work in the next article ([The native form widgets](/pt-BR/docs/Learn/HTML/Forms/The_native_form_widgets)). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
 
-1.  To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
-2.  First of all, apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
+1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
+2. First of all, apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
 
-    ```
+    ```html
     <link href="payment-form.css" rel="stylesheet">
     ```
 
-3.  Next, start your form off by adding the outer {{htmlelement("form")}} element:
+3. Next, start your form off by adding the outer {{htmlelement("form")}} element:
 
-    ```
+    ```html
     <form>
 
     </form>
     ```
 
-4.  Inside the `<form>` tags, start by adding a heading and paragraph to inform users how required fields are marked:
+4. Inside the `<form>` tags, start by adding a heading and paragraph to inform users how required fields are marked:
 
-    ```
+    ```html
     <h1>Payment form</h1>
     <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
     ```
 
-5.  Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of two radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. Last, we have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, plus a password input for entering a password. Add this code to your form now:
+5. Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of two radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. Last, we have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, plus a password input for entering a password. Add this code to your form now:
 
-    ```
+    ```html
     <section>
         <h2>Contact information</h2>
         <fieldset>
@@ -256,9 +256,9 @@ Let's put these ideas into practice and build a slightly more involved form stru
     </section>
     ```
 
-6.  Now we'll turn to the second `<section>` of our form — the payment information. Here we have three distinct widgets along with their labels, each contained inside a `<p>`. The first is a drop down menu ({{htmlelement("select")}}) for selecting credit card type. the second is an `<input>` element of type number, for entering a credit card number. The last one is an `<input>` element of type `date`, for entering the expiration date of the card (this one will come up with a date picker widget in supporting browsers, and fall back to a normal text input in non-supporting browsers). Again, enter the following below the previous section:
+6. Now we'll turn to the second `<section>` of our form — the payment information. Here we have three distinct widgets along with their labels, each contained inside a `<p>`. The first is a drop down menu ({{htmlelement("select")}}) for selecting credit card type. the second is an `<input>` element of type number, for entering a credit card number. The last one is an `<input>` element of type `date`, for entering the expiration date of the card (this one will come up with a date picker widget in supporting browsers, and fall back to a normal text input in non-supporting browsers). Again, enter the following below the previous section:
 
-    ```
+    ```html
     <section>
         <h2>Payment information</h2>
         <p>
@@ -289,9 +289,9 @@ Let's put these ideas into practice and build a slightly more involved form stru
     </section>
     ```
 
-7.  The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
+7. The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
 
-    ```
+    ```html
     <p> <button type="submit">Validate the payment</button> </p>
     ```
 

@@ -85,7 +85,7 @@ Outro atributo que você pode querer adicionar aos seus links é o `title`; pret
 
 Isto nos dá o seguinte resultado (o título aparecerá como uma dica de ferramenta quando o link estiver suspenso):
 
-Estou criando um link para [a página inicial da Mozilla](https://www.mozilla.org/pt-BR/ "O melhor lugar para encontrar mais informações sobre a missão da Mozilla e como contribuir").
+Estou criando um link para [a página inicial da Mozilla](https://www.mozilla.org/pt-BR/).
 
 > **Nota:** Um título de link só é revelado ao passar o mouse sobre ele, o que significa que as pessoas que dependem do teclado ou _touchscreen_ para navegar em páginas web terão dificuldade em acessar a informação do título. Se a informação de um título é realmente importante para a usabilidade da página, então você deve apresentá-la de uma maneira que será acessível a todos os usuários, por exemplo, colocando-o no texto normal.
 
@@ -268,10 +268,10 @@ Você precisará fazer cópias locais das quatro páginas a seguir, tudo no mesm
 
 Você deve:
 
-1.  Adicionar uma lista não ordenada no local indicado em uma página, contendo os nomes das páginas a serem vinculadas. Um menu de navegação geralmente é apenas uma lista de _links_, então está semanticamente correto.
-2.  Transformar o nome de cada página em um _link_ para essa página.
-3.  Copiar o menu de navegação para cada uma.
-4.  Em cada página, remova apenas o _link_ para a mesma página - é confuso e inútil que uma página inclua um link para si mesma, e a falta de um _link_ é um bom lembrete visual de qual página você está atualmente.
+1. Adicionar uma lista não ordenada no local indicado em uma página, contendo os nomes das páginas a serem vinculadas. Um menu de navegação geralmente é apenas uma lista de _links_, então está semanticamente correto.
+2. Transformar o nome de cada página em um _link_ para essa página.
+3. Copiar o menu de navegação para cada uma.
+4. Em cada página, remova apenas o _link_ para a mesma página - é confuso e inútil que uma página inclua um link para si mesma, e a falta de um _link_ é um bom lembrete visual de qual página você está atualmente.
 
 O exemplo final acabaria por parecer algo assim:
 
