@@ -228,13 +228,11 @@ Dans ce cas, on renvoie un entier et c'est pour ça qu'on utilise {{jsxref("Math
 
 ## Spécifications
 
-| Spécification                                                        |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date-objects', 'Date')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date", 3)}}
+{{Compat}}
 
 ## Voir aussi
 

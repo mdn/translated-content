@@ -50,16 +50,11 @@ console.log("fonction terminée : " + g.arguments);
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaires                                                                                                                                                         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. Dépréciée pour être remplacée par {{jsxref("Fonctions/arguments", "arguments")}} décrit par ES3. |
-| {{SpecName('ES5.1', '#sec-10.6', 'arguments object')}}                     | {{Spec2('ES5.1')}}     | Objet {{jsxref("Fonctions/arguments", "arguments")}}                                                                                                   |
-| {{SpecName('ES6', '#sec-arguments-object', 'arguments object')}}         | {{Spec2('ES6')}}         | Objet {{jsxref("Fonctions/arguments", "arguments")}}                                                                                                   |
-| {{SpecName('ESDraft', '#sec-arguments-object', 'arguments object')}} | {{Spec2('ESDraft')}} | Objet {{jsxref("Fonctions/arguments", "arguments")}}                                                                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.arguments")}}
+{{Compat}}
 
 ## Voir aussi
 

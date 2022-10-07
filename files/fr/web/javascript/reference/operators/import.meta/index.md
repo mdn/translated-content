@@ -43,14 +43,11 @@ Cet objet contient une propriété `url` qui indique l'URL de base du module. Da
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires                                     |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
-| [Proposition pour `import.meta`](https://github.com/tc39/proposal-import-meta/#importmeta)                           | Niveau 3                         | Définition initiale.                             |
-| {{SpecName("HTML WHATWG","webappapis.html#hostgetimportmetaproperties","import.meta")}} | {{Spec2("HTML WHATWG")}} | Définition des propriétés `import.meta` en HTML. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.import_meta")}}
+{{Compat}}
 
 ## Voir aussi
 

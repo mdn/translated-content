@@ -150,18 +150,31 @@ const programInfo = {
 
 ```js
 function initBuffers(gl) {
+
+  // Create a buffer for the square's positions.
+
   const positionBuffer = gl.createBuffer();
+
+  // Select the positionBuffer as the one to apply buffer
+  // operations to from here out.
+
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 
-  var vertices = [
-    1.0,  1.0,  0.0,
-    -1.0, 1.0,  0.0,
-    1.0,  -1.0, 0.0,
-    -1.0, -1.0, 0.0
+  // Now create an array of positions for the square.
+
+  const positions = [
+     1.0,  1.0,
+    -1.0,  1.0,
+     1.0, -1.0,
+    -1.0, -1.0,
   ];
 
+  // Now pass the list of positions into WebGL to build the
+  // shape. We do this by creating a Float32Array from the
+  // JavaScript array, then use it to fill the current buffer.
+
   gl.bufferData(gl.ARRAY_BUFFER,
-                new Float32Array(vertices),
+                new Float32Array(positions),
                 gl.STATIC_DRAW);
 
   return {
@@ -271,9 +284,9 @@ function drawScene(gl, programInfo, buffers) {
 
 接着加载特定位置，并把正方形放在距离摄像机 6 个单位的的位置。然后，我们绑定正方形的顶点缓冲到上下文，并配置好，再通过调用 {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} 方法来画出对象。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-如果你的浏览器支持 WebGL 的话，[可以点击这里看看 DEMO](/samples/webgl/sample2)。完整的源代码从[这里](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2)获得
+如果你的浏览器支持 WebGL 的话，[可以点击这里看看 DEMO](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)。完整的源代码从[这里](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2)获得
 
 ## 矩阵通用计算
 
