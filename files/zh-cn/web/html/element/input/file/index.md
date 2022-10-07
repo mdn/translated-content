@@ -5,7 +5,7 @@ slug: Web/HTML/Element/Input/file
 
 {{HTMLRef("Input_types")}}
 
-使用 **`type="file"`** 的 {{HTMLElement("input")}} 元素使得用户可以从他们的设备中选择一个或多个文件。这些文件可以使用[提交表单](/zh-CN/docs/Learn/Forms)的方式上传到服务器上，或者通过 Javascript 代码和[文件操作 API](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications) 对文件进行操作。
+带有 **`type="file"`** 的 {{HTMLElement("input")}} 元素允许用户可以从他们的设备中选择一个或多个文件。选择后，这些文件可以使用[提交表单](/zh-CN/docs/Learn/Forms)的方式上传到服务器上，或者通过 Javascript 代码和[文件操作 API](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications) 对文件进行操作。
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
@@ -50,7 +50,7 @@ slug: Web/HTML/Element/Input/file
 
 ## 值
 
-文件 input 的 {{htmlattrxref("value", "input")}} 属性包括了表示已选择文件的路径的字符串。如果用户没有选择任何文件，则该值为空字符串（`""`）。如果用户选择了多个文件，则 `value` 表示他们选择的文件列表中的第一个文件。可以使用 [input 的 `HTMLInputElement.files` 属性](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#获取被选择文件的信息)标识其他文件。
+文件 input 的 {{htmlattrxref("value", "input")}} 属性包含了一个字符串，表示已选择文件的路径。如果用户没有选择任何文件，则该值为空字符串（`""`）。如果用户选择了多个文件，则 `value` 表示他们选择的文件列表中的第一个文件。可以使用 [input 的 `HTMLInputElement.files` 属性](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#获取被选择文件的信息)标识其他文件。
 
 > **备注：** 为了阻止恶意软件猜测文件路径，该值的字符串表示[总是以 `C:\fakepath\` 为前缀的文件名](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)，而并不是文件的真实路径。
 
@@ -62,7 +62,7 @@ slug: Web/HTML/Element/Input/file
 
 [`accept`](/zh-CN/docs/Web/HTML/Attributes/accept) 属性是一个字符串，它定义了文件 input 应该接受的文件类型。这个字符串是一个以逗号为分隔的[**唯一文件类型说明符**](#唯一文件类型说明符)列表。由于给定的文件类型可以用多种方式指定，因此当你需要给定格式的文件时，提供一组完整的类型指定符是非常有用的。
 
-例如，有许多方法可以识别 Microsoft Word 文件，所以接受 Word 文件的站点可以使用一个 `<input>`：
+例如，可以通过多种方式识别 Microsoft Word 文件，因此接受 Word 文件的网站可能使用像这样的 `<input>`：
 
 ```html
 <input
