@@ -27,7 +27,7 @@ slug: Web/HTML/Element/Input/file
    <td>
     <strong>附加属性</strong>
    </td>
-   <td> 
+   <td>
         <a href="#accept" aria-current="page"><code>accept</code></a>、<a href="#capture" aria-current="page"><code>capture</code></a> 和 <a href="#multiple" aria-current="page"><code>multiple</code></a>
    </td>
   </tr>
@@ -333,13 +333,13 @@ input.addEventListener('change', updateImageDisplay);
 - 获取包含所有已选择文件信息的 {{domxref("FileList")}} 对象，并将其用一个变量 `curFiles` 保存。
 - 通过检查 `curFiles.length` 是否等于 0 来检查是否没有文件被选择。如果是，则向预览区 `<div>` 输出一条消息，表示没有选择文件。
 - 如果*选择*了文件，我们将循环遍历每个文件，并将关于它的信息输出到预览区 `<div>`。注意事项：
-  - 我们使用定制的 `validFileType()` 函数来检查文件的类型是否正确（例如，用 `accept` 属性指定的图片类型）。
-  - 如果是，我们：
+- 我们使用定制的 `validFileType()` 函数来检查文件的类型是否正确（例如，用 `accept` 属性指定的图片类型）。
+- 如果是，我们：
 
-    - 将其名称和文件大小输出到预览区 `<div>` 的一个列表项中（从 `file.name` 和 `file.size` 获取这些信息）。定制的 `returnFileSize()` 函数返回一个用 bytes/KB/MB 表示的可读性良好的文件大小（默认情况下，浏览器以绝对字节数报告大小）。
-    - 通过调用 {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} 来生成图片的一张缩略预览图。然后，通过创建一个新的 {{htmlelement("img")}} 来将这张图片也插入到列表项，并且将它的 {{htmlattrxref("src", "img")}} 设置为缩略图。
+  - 将其名称和文件大小输出到预览区 `<div>` 的一个列表项中（从 `file.name` 和 `file.size` 获取这些信息）。定制的 `returnFileSize()` 函数返回一个用 bytes/KB/MB 表示的可读性良好的文件大小（默认情况下，浏览器以绝对字节数报告大小）。
+  - 通过调用 {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} 来生成图片的一张缩略预览图。然后，通过创建一个新的 {{htmlelement("img")}} 来将这张图片也插入到列表项，并且将它的 {{htmlattrxref("src", "img")}} 设置为缩略图。
 
-   - 如果文件类型无效，则在列表项中显示一条消息，告诉用户需要选择一个其它的文件类型。
+- 如果文件类型无效，则在列表项中显示一条消息，告诉用户需要选择一个其它的文件类型。
 
 ```js
 function updateImageDisplay() {
