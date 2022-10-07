@@ -222,7 +222,7 @@ div {
 
 在本例中，我们将展示一个稍微高级一点的文件选择器，它利用了在 `HTMLInputElement.files` 属性中可用的文件信息，并且展示了一些聪明的技巧。
 
-> **备注：** 你可以在 GitHub 中查看本示例的完整源代码——[file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html)（[也看看现场运行的实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)）。我们不会解释 CSS；JavaScript 是主要的关注点。
+> **备注：** 你可以在 GitHub 中查看本示例的完整源代码——[file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html)（[参见在线的运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)）。我们不会解释 CSS；JavaScript 是主要的关注点。
 
 首先，让我们看看 HTML：
 
