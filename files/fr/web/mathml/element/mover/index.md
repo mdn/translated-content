@@ -49,14 +49,11 @@ Rendu dans votre navigateur&nbsp;: <math><mover accent="true"><mrow><mi>x </mi><
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mover', 'mover') }} | {{ Spec2('MathML3') }} | Spécification courante |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mover', 'mover') }} | {{ Spec2('MathML2') }} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.mover")}}
+{{Compat}}
 
 ## Voir aussi
 

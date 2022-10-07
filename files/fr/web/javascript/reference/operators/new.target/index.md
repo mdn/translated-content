@@ -77,14 +77,11 @@ var d = new D(); // function D()
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.new_target")}}
+{{Compat}}
 
 ## Voir aussi
 
