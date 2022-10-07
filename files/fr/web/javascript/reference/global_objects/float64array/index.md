@@ -152,15 +152,11 @@ var float64 = new Float64Array(iterable);
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires                                                                                                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                                                                                                       |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Première définition au sein d'un standard ECMAScript. `new` est nécessaire pour utiliser le constructeur.                             |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 a modifié le constructeur afin qu'il utilise l'opération interne `ToIndex` ce qui permet de l'utiliser sans argument. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Float64Array")}}
+{{Compat}}
 
 ## Notes de compatibilité
 

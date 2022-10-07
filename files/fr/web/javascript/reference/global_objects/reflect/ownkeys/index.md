@@ -59,14 +59,11 @@ Reflect.ownKeys(obj);
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.ownkeys', 'Reflect.ownKeys')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.ownkeys', 'Reflect.ownKeys')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.ownKeys")}}
+{{Compat}}
 
 ## Voir aussi
 

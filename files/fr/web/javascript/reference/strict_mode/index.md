@@ -357,14 +357,6 @@ Cette interdiction n'est pas, à proprement parler, liée au mode strict. En eff
 
 Désormais, l'ensemble des navigateurs majeurs implémentent le mode strict. Cependant, il existe toujours un certain nombre de disparités et certains navigateurs actuels ou avec leurs anciennes versions ne supportent pas le mode strict. Le mode strict modifie des éléments de sémantique de JavaScript ; faire appel au mode strict pour des navigateurs qui ne le supportent pas peut donc entraîner des erreurs indésirables. Pour cette raison, il faut faire attention à la façon dont on exécute du code strict et bien tester ce code sur l'ensemble des navigateurs : ceux qui supportent le mode strict comme ceux qui ne supportent pas ce mode.
 
-## Spécifications
-
-| Spécification                                                                                                                                                                                                                 | État                         | Commentaires                                                                                                                                  |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-10.1.1', 'Strict Mode Code')}} {{SpecName('ES5.1', '#sec-C', 'Strict mode restriction and exceptions')}}                                                 | {{Spec2('ES5.1')}}     | Définition initiale. Voir aussi : [les restrictions du mode strict et les exceptions](https://www.ecma-international.org/ecma-262/5.1/#sec-C) |
-| {{SpecName('ES2015', '#sec-strict-mode-code', 'Strict Mode Code')}} {{SpecName('ES2015', '#sec-strict-mode-of-ecmascript', 'Strict mode restriction and exceptions')}} | {{Spec2('ES2015')}}     | [Les restrictions du mode strict et les exceptions](https://www.ecma-international.org/ecma-262/6.0/#sec-strict-mode-of-ecmascript)           |
-| {{SpecName('ESDraft', '#sec-strict-mode-code', 'Strict Mode Code')}}                                                                                                                                  | {{Spec2('ESDraft')}} | [Les restrictions du mode strict et les exceptions](https://tc39.github.io/ecma262/#sec-strict-mode-of-ecmascript)                            |
-
 ## Voir aussi
 
 - [Where's Walden? » New ES5 strict mode support: now with poison pills!](https://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/) (billet en anglais)

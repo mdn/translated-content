@@ -76,14 +76,11 @@ x.concat(fauxTableau); // [1, 2, 3, "coucou", "monde"]
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.isconcatspreadable', 'Symbol.isconcatspreadable')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.isconcatspreadable', 'Symbol.isconcatspreadable')}} | {{Spec2('ESDraft')}} | Aucune modification. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.isConcatSpreadable")}}
+{{Compat}}
 
 ## Voir aussi
 

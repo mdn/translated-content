@@ -56,16 +56,11 @@ isFinite("0");       // true ce qui aurait été false
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2')}}                                                         | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.isFinite")}}
+{{Compat}}
 
 ## Voir aussi
 
