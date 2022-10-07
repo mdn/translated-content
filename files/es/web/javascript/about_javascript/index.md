@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/About_JavaScript
 original_slug: Web/JavaScript/Acerca_de_JavaScript
 ---
+
 {{JsSidebar}}
 
 ## ¿Qué es JavaScript?
@@ -24,7 +25,7 @@ Para una explicación más profunda de la programación de JavaScript, sigue los
 
 ## ¿Qué implementaciones de JavaScript están disponibles?
 
-El proyecto Mozilla proporciona dos implementaciones de JavaScript. El primer JavaScript **fue creado** por Brendan Eich en Netscape, y a partir de entonces se ha actualizado para cumplir con ECMA-262 Edición 5 y versiones posteriores. Este motor, cuyo nombre en código es {{web.link("/es/docs/Mozilla/Projects/SpiderMonkey", "SpiderMonkey")}}, está implementado en C/C++. El motor {{web.link("/es/docs/Rhino", "Rhino")}}, creado principalmente por Norris Boyd (también en Netscape) es una implementación de JavaScript escrita en Java. Al igual que SpiderMonkey, Rhino también es compatible con ECMA-262 Edition 5.
+El proyecto Mozilla proporciona dos implementaciones de JavaScript. El primer JavaScript **fue creado** por Brendan Eich en Netscape, y a partir de entonces se ha actualizado para cumplir con ECMA-262 Edición 5 y versiones posteriores. Este motor, cuyo nombre en código es [SpiderMonkey](/es/docs/Mozilla/Projects/SpiderMonkey), está implementado en C/C++. El motor [Rhino](/es/docs/Rhino), creado principalmente por Norris Boyd (también en Netscape) es una implementación de JavaScript escrita en Java. Al igual que SpiderMonkey, Rhino también es compatible con ECMA-262 Edition 5.
 
 Con el transcurso del tiempo, y tras varias importantes optimizaciones del entorno de ejecución como TraceMonkey (Firefox 3.5), JägerMonkey (Firefox 4) e IonMonkey se agregaron al motor de JavaScript SpiderMonkey. El trabajo siempre está en curso para mejorar el rendimiento de ejecución de JavaScript.
 
@@ -41,10 +42,11 @@ Otra aplicación común para JavaScript es como lenguaje de programación de lad
 
 ## Recursos de JavaScript
 
-- {{web.link("/es/docs/Mozilla/Projects/SpiderMonkey", "SpiderMonkey")}}
+- [SpiderMonkey](/es/docs/Mozilla/Projects/SpiderMonkey)
+
   - : Información específica sobre la implementación de JavaScript de Mozilla en el motor C/C++ (también conocido como SpiderMonkey), incluye cómo integrarlo en aplicaciones.
 
-- {{web.link("/es/docs/Rhino", "Rhino")}}
+- [Rhino](/es/docs/Rhino)
   - : Información específica para la implementación de JavaScript escrita en Java (también conocido como Rhino).
 - {{JSxRef("../Language_Resources", "Recursos del lenguaje")}}
   - : Punteros a estándares JavaScript publicados.
