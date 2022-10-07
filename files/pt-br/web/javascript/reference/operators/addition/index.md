@@ -70,12 +70,12 @@ false + false // 0
 
 ## Veja também
 
-- [ Operador de subtração ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [ Operador de divisão ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Division)
-- [ Operador de multiplicação ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [ Operador restante ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [ Operador de exponenciação ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [ Operador de incremento ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Increment)
-- [ Operador de decremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [ Operador de negação unário ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [ Operador unário plus ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Operador de subtração](/pt-BR/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Operador de divisão](/pt-BR/docs/Web/JavaScript/Reference/Operators/Division)
+- [Operador de multiplicação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Operador restante](/pt-BR/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Operador de exponenciação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Operador de incremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Operador de decremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Operador de negação unário](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Operador unário plus](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_plus)
