@@ -6,40 +6,36 @@ tags:
   - Web
 translation_of: Web
 ---
-<p>A Web aberta apresenta oportunidades incríveis para os desenvolvedores. Para tirar o máximo proveito dessas tecnologias, você precisa saber como usá-las. Abaixo, você encontrará links para nossa documentação de tecnologias Web.</p>
+A Web aberta apresenta oportunidades incríveis para os desenvolvedores. Para tirar o máximo proveito dessas tecnologias, você precisa saber como usá-las. Abaixo, você encontrará links para nossa documentação de tecnologias Web.
 
-<h2 id="documentation_for_web_developers">Documentação para desenvolvedores Web</h2>
+## Documentação para desenvolvedores Web
 
-<dl>
- <dt><a href="/pt-BR/docs/Web/Reference">Referências para Desenvolvedores Web</a></dt>
- <dd>Uma lista de todas as referências para tecnologias Web, incluindo HTML, CSS e assim por diante.</dd>
- <dt><a href="/pt-BR/docs/Web/Guide">Guia para Desenvolvedores Web</a></dt>
- <dd>O Guia para Desenvolvedores Web provê um conteúdo útil de informações, para realmente ajudá-lo a usar as tecnologias Web para fazer o que deseja ou precisa.</dd>
- <dt><a href="/pt-BR/docs/Web/Tutorials">Tutoriais para Desenvolvedores Web</a></dt>
- <dd>Uma lista de tutoriais para orientá-lo passo a passo no aprendizado de APIs, tecnologias ou áreas abrangentes dos tópicos.</dd>
- <dt><a href="/pt-BR/docs/Web/Progressive_web_apps">Desenvolvendo Aplicações Web</a></dt>
- <dd>Aplicações Web Progressivas (em inglês: <em><span lang="en">Progressive Web Apps</span></em>) são aplicações web que usam APIs emergentes de navegadores assim como estratégias de melhoria progressiva tradicionais para trazer uma experiência de usuário parecida com apps nativos nas aplicações web.</dd>
-</dl>
+- [Referências para Desenvolvedores Web](/pt-BR/docs/Web/Reference)
+  - : Uma lista de todas as referências para tecnologias Web, incluindo HTML, CSS e assim por diante.
+- [Guia para Desenvolvedores Web](/pt-BR/docs/Web/Guide)
+  - : O Guia para Desenvolvedores Web provê um conteúdo útil de informações, para realmente ajudá-lo a usar as tecnologias Web para fazer o que deseja ou precisa.
+- [Tutoriais para Desenvolvedores Web](/pt-BR/docs/Web/Tutorials)
+  - : Uma lista de tutoriais para orientá-lo passo a passo no aprendizado de APIs, tecnologias ou áreas abrangentes dos tópicos.
+- [Desenvolvendo Aplicações Web](/pt-BR/docs/Web/Progressive_web_apps)
+  - : Aplicações Web Progressivas (em inglês: _Progressive Web Apps_) são aplicações web que usam APIs emergentes de navegadores assim como estratégias de melhoria progressiva tradicionais para trazer uma experiência de usuário parecida com apps nativos nas aplicações web.
 
-<h2 class="Documentation" id="web_technology_references" >Referências para Tecnologias Web</h2>
+## Referências para Tecnologias Web
 
-<dl>
- <dt><a href="/pt-BR/docs/Web/Reference/API">APIs Web</a></dt>
- <dd>Material de referência para cada uma das APIs individuais que compõem a poderosa capacidade de script da Web, incluindo o DOM e todas as APIs relacionadas e interfaces que você pode usar para criar aplicativos e conteúdo Web.</dd>
- <dt><a href="/pt-BR/docs/Web/HTML"><abbr title="HyperText Markup Language">HTML</abbr></a></dt>
- <dd>Linguagem de Marcação de Hipertexto (em inglês: <em><span lang="en">HyperText Markup Language</span></em>) é a linguagem usado para descrever e definir o conteúdo de uma página Web.</dd>
- <dt><a href="/pt-BR/docs/Web/CSS"><abbr title="Cascading Style Sheets">CSS</abbr></a></dt>
- <dd>As Folhas de Estilo em Cascata (em inglês: <em><span lang="en">Cascading Style Sheets</span></em>) são usadas para descrever a aparência do conteúdo Web.</dd>
- <dt><a href="/pt-BR/docs/Web/JavaScript">JavaScript</a></dt>
- <dd>JavaScript é uma linguagem de programação utilizada para adicionar interatividade ao website.</dd>
- <dt><a href="/pt-BR/docs/Web/SVG"><abbr title="Scalable Vector Graphics">SVG</abbr></a></dt>
- <dd>Os Gráficos Vetoriais Escaláveis (em inglês: <em><span lang="en">Scalable Vector Graphics</span></em>) ​​permitem que você descreva as imagens como conjuntos de vetores e formas, a fim de permitir uma escala suave, independentemente do tamanho em que eles são desenhados.</dd>
- <dt><a href="/pt-BR/docs/Web/MathML"><abbr title="Mathematical Markup Language">MathML</abbr></a></dt>
- <dd>A Linguagem de Marcação Matemática (em inglês: <em><span lang="en">Mathematical Markup Language</span></em>) torna possível exibir equações e sintaxes matemáticas complexas.</dd>
-</dl>
+- [APIs Web](/pt-BR/docs/Web/Reference/API)
+  - : Material de referência para cada uma das APIs individuais que compõem a poderosa capacidade de script da Web, incluindo o DOM e todas as APIs relacionadas e interfaces que você pode usar para criar aplicativos e conteúdo Web.
+- [HTML](/pt-BR/docs/Web/HTML)
+  - : Linguagem de Marcação de Hipertexto (em inglês: _HyperText Markup Language_) é a linguagem usado para descrever e definir o conteúdo de uma página Web.
+- [CSS](/pt-BR/docs/Web/CSS)
+  - : As Folhas de Estilo em Cascata (em inglês: _Cascading Style Sheets_) são usadas para descrever a aparência do conteúdo Web.
+- [JavaScript](/pt-BR/docs/Web/JavaScript)
+  - : JavaScript é uma linguagem de programação utilizada para adicionar interatividade ao website.
+- [SVG](/pt-BR/docs/Web/SVG)
+  - : Os Gráficos Vetoriais Escaláveis (em inglês: _Scalable Vector Graphics_) ​​permitem que você descreva as imagens como conjuntos de vetores e formas, a fim de permitir uma escala suave, independentemente do tamanho em que eles são desenhados.
+- [MathML](/pt-BR/docs/Web/MathML)
+  - : A Linguagem de Marcação Matemática (em inglês: _Mathematical Markup Language_) torna possível exibir equações e sintaxes matemáticas complexas.
 
-<h3 id="temporary">Temporário</h3>
+### Temporário
 
-<p>O material abaixo é temporário, e é para te ajudar a acompanhar as coisas enquanto o trabalho de organização está em andamento. Tenha isso em mente.</p>
+O material abaixo é temporário, e é para te ajudar a acompanhar as coisas enquanto o trabalho de organização está em andamento. Tenha isso em mente.
 
-<div>{{ListSubpages}}</div>
+{{ListSubpages}}
