@@ -49,6 +49,7 @@ console.log(memory.buffer.byteLength / bytesPerPage);  // "2"
 ```
 
 On voit ici que la valeur de `grow()` indique l'espace utilisé avant l'agrandissement de la mémoire.
+
 ## Spécifications
 
 {{Specifications}}
