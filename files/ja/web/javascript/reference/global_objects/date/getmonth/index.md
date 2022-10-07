@@ -34,7 +34,7 @@ const month = xmas95.getMonth();
 console.log(month); // 11
 ```
 
-> **メモ:** 必要に応じて、月の完全な名前（例えば `January` ）は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat#Using_options) に `options` 引数を付けることで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
+> **メモ:** 必要に応じて、月の完全な名前（例えば `January` ）は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#options_の使用) に `options` 引数を付けることで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
 >
 > ```js
 > const options = { month: 'long'};
