@@ -14,7 +14,7 @@ original_slug: Web/XSLT/comment
 
 ```
 <xsl:comment>
-	TEMPLATE
+  TEMPLATE
 </xsl:comment>
 ```
 
