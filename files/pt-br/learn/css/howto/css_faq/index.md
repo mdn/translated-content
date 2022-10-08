@@ -81,7 +81,7 @@ h1 { color: red; }
 h1 { color: black; }
 ```
 
-Isso mudou com CSS 2; a diretiva [initial](/es/CSS/initial "initial") agora é um valor válido para uma propriedade CSS. Ela redefine tal propriedade para seu valor padrão, o qual é definido nas especificações CSS para tal propriedade.
+Isso mudou com CSS 2; a diretiva [initial](/es/CSS/initial) agora é um valor válido para uma propriedade CSS. Ela redefine tal propriedade para seu valor padrão, o qual é definido nas especificações CSS para tal propriedade.
 
 ```css
 /* A cor padrão do cabeçalho é preta */
@@ -112,7 +112,7 @@ Caso a mesma propriedade seja declara em mais de uma regra, o conflito é resolv
 
 ## Por que minhas regras de estilização não funcionam corretamente?
 
-Regras de estilização, mesmo que sejam semanticamente corretas, podem não ser aplicadas em determinadas situações. Você pode utilizar o visualizador de regras CSS do [Inspetor de DOM](/pt-BR/docs/DOM_Inspector "DOM_Inspector") para resolver problemas deste tipo, mas as ocasiões mais frequentes onde regras de estilização são ignoradas estão listadas abaixo.
+Regras de estilização, mesmo que sejam semanticamente corretas, podem não ser aplicadas em determinadas situações. Você pode utilizar o visualizador de regras CSS do [Inspetor de DOM](/pt-BR/docs/DOM_Inspector) para resolver problemas deste tipo, mas as ocasiões mais frequentes onde regras de estilização são ignoradas estão listadas abaixo.
 
 ### Hierarquia dos elementos HTML
 
@@ -201,7 +201,7 @@ O uso do seletor \* também deve ser minimizado por ser um seletor lento, especi
 
 ### Especificidade em CSS
 
-Quando multiplas regras são aplicadas a um elemento, a regra a ser renderizada depende de sua [especificidade](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity "Specificity"). O estilo _inline_ (regras de estilo definidas no atributo `style` de um elemento HTML) tem a mais alta especificidade e irá sobrepor qualquer seletor. Seletores de ID tem a segunda mais alta especificidade, com seletores de classes vindo logo após e, eventualmente, seletores de elementos (tags). Tendo isso em mente, a cor do texto da {{htmlelement("div")}} abaixo terá a cor vermelha.
+Quando multiplas regras são aplicadas a um elemento, a regra a ser renderizada depende de sua [especificidade](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity). O estilo _inline_ (regras de estilo definidas no atributo `style` de um elemento HTML) tem a mais alta especificidade e irá sobrepor qualquer seletor. Seletores de ID tem a segunda mais alta especificidade, com seletores de classes vindo logo após e, eventualmente, seletores de elementos (tags). Tendo isso em mente, a cor do texto da {{htmlelement("div")}} abaixo terá a cor vermelha.
 
 ```html
 <style>
@@ -233,7 +233,7 @@ transform: rotate(90deg);
 
 > **Nota:** Para mais informações em como lhe dar com propriedades prefixadas, veja [Lidando com problemas comuns em HTML e CSS — Lidando com prefixos CSS](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes) do nosso módulo [Teste Cross-browsing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing).
 
-> **Nota:** Veja a página [Extenções CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Extensions "CSS Reference/Mozilla Extensions") para mais informações sobre propriedades CSS prefixadas da Mozilla.
+> **Nota:** Veja a página [Extenções CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Extensions) para mais informações sobre propriedades CSS prefixadas da Mozilla.
 
 ## Como `z-index` está relacionado a posicionamento?
 

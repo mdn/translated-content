@@ -58,7 +58,6 @@ O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do ev
       <td>
         <a
           href="/en-US/docs/Web/API/Document/defaultView"
-          title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."
           ><code>document.defaultView</code></a
         >
         (<code>window</code> do documento)

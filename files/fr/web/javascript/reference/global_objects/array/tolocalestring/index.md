@@ -147,6 +147,7 @@ if (!Array.prototype.toLocaleString) {
 ```
 
 S'il faut absolument prendre en charge les moteurs JavaScript qui ne supportent pas {{jsxref("Object.defineProperty()")}}, mieux vaut ne pas ajouter de prothèse pour les méthodes `Array.prototype` car elles ne peuvent pas être rendues non-énumérables.
+
 ## Spécifications
 
 {{Specifications}}

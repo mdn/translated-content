@@ -67,10 +67,10 @@ Vamos explorar nosso elemento parágrafo um pouco mais:
 
 As partes principais do elemento são:
 
-1.  **Tag de abertura:** Consiste no nome do elemento ( neste caso: p ), envolvido entre **parênteses angulares** de abertura e fechamento. Isso indica onde o elemento começa, ou inicia a produzir efeito — neste caso, onde o parágrafo se inicia.
-2.  **Tag de fechamento:** É o mesmo que a tag de abertura, exceto que este inclui uma barra diagonal antes do nome do elemento. Indica onde o elemento termina — neste caso, onde fica o fim do parágrafo. Falhar em incluir o fechamento de uma tag é um erro comum para iniciantes e pode levar a resultados estranhos.
-3.  **O conteúdo:** Este é o conteúdo do elemento, que neste caso é somente texto.
-4.  **O elemento:** A tag de abertura, mais a tag de fechamento, mais o conteúdo, é igual ao elemento.
+1. **Tag de abertura:** Consiste no nome do elemento ( neste caso: p ), envolvido entre **parênteses angulares** de abertura e fechamento. Isso indica onde o elemento começa, ou inicia a produzir efeito — neste caso, onde o parágrafo se inicia.
+2. **Tag de fechamento:** É o mesmo que a tag de abertura, exceto que este inclui uma barra diagonal antes do nome do elemento. Indica onde o elemento termina — neste caso, onde fica o fim do parágrafo. Falhar em incluir o fechamento de uma tag é um erro comum para iniciantes e pode levar a resultados estranhos.
+3. **O conteúdo:** Este é o conteúdo do elemento, que neste caso é somente texto.
+4. **O elemento:** A tag de abertura, mais a tag de fechamento, mais o conteúdo, é igual ao elemento.
 
 ### Aprendizado ativo: criando seu primeiro elemento HTML
 
@@ -265,9 +265,9 @@ Atributos contém informação extra sobre o elemento, mas que você não deseja
 
 Um atributo deve conter:
 
-1.  Um espaço entre ele e o nome do elemento (ou o atributo anterior, caso o elemento já contenha um ou mais atributos.)
-2.  O nome do atributo, seguido por um sinal de igual.
-3.  Um valor de atributo, com aspas de abertura e fechamento em volta dele.
+1. Um espaço entre ele e o nome do elemento (ou o atributo anterior, caso o elemento já contenha um ou mais atributos.)
+2. O nome do atributo, seguido por um sinal de igual.
+3. Um valor de atributo, com aspas de abertura e fechamento em volta dele.
 
 ### Aprendizado ativo: Adicionando atributos a um elemento
 
@@ -278,9 +278,9 @@ Outro exemplo de um elemento é {{htmlelement("a")}} — isso significa "âncora
 
 Edite a linha abaixo na área de Entrada para transformá-la em um link para o seu site favorito.
 
-1.  Primeiro, adicione o elemento `<a>`.
-2.  Segundo, adicione o atributo `href` e o atributo `title`.
-3.  Por último, especifique o atributo `target` para abrir o link em uma nova aba.
+1. Primeiro, adicione o elemento `<a>`.
+2. Segundo, adicione o atributo `href` e o atributo `title`.
+3. Por último, especifique o atributo `target` para abrir o link em uma nova aba.
 
 Você poderá ver as atualizações das alterações ao vivo na área Saída. Você deve ver um link que, quando passa o mouse sobre ele, exibe o valor do atributo `title` e, quando clicado, navega para o endereço da web no atributo `href`. Lembre-se de que você precisa incluir um espaço entre o nome do elemento e cada atributo.
 
@@ -504,7 +504,7 @@ Já vimos os conceitos básicos dos elementos individuais do HTML, mas eles não
 
 Neste código nós temos:
 
-1.  `<!DOCTYPE html>`: O doctype. Nas névoas do tempo, quando o HTML era recente (por volta de 1991/2), doctypes funcionavam como links para uma série de regras as quais uma página HTML tinha que seguir para ser considerada uma página com um bom HTML, o que poderia significar a verificação automática de erros e outras coisas úteis. Ele costumava ser assim:
+1. `<!DOCTYPE html>`: O doctype. Nas névoas do tempo, quando o HTML era recente (por volta de 1991/2), doctypes funcionavam como links para uma série de regras as quais uma página HTML tinha que seguir para ser considerada uma página com um bom HTML, o que poderia significar a verificação automática de erros e outras coisas úteis. Ele costumava ser assim:
 
     ```
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -513,20 +513,20 @@ Neste código nós temos:
 
     No entanto, atualmente, ninguém se importa com eles, e eles são realmente apenas um artefato histórico que precisa ser incluído para que tudo funcione corretamente. \<! DOCTYPE html> é a menor cadeia de caracteres que conta como um doctype válido; é tudo o que você realmente precisa saber.
 
-2.  `<html></html>`: O elemento [`<html>`](/pt-BR/docs/Web/HTML/Element/html "The HTML <html> element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element.") envolve o conteúdo da página inteira e é conhecido como o "elemento raiz" da página HTML.
-3.  `<head></head>`: O elemento [`<head>`](/pt-BR/docs/Web/HTML/Element/head "The HTML <head> element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets.") atua como um container para todo o conteúdo da página HTML que não é visível para os visitantes do site. Isso inclui palavras-chave e a descrição da página que você quer que apareça nos resultados de busca, o CSS para estilizar o conteúdo da página (apesar de ser recomendado faze-lo num aquivo separado), declaração de conjunto de caracteres, e etc. Você aprenderá mais sobre isso no próximo artigo da série.
-4.  `<meta charset="utf-8">`: Este elemento define o tipo da codificação dos caracteres que o seu documento deve usar, neste caso, para o tipo UTF-8, que inclui a maioria dos caracteres das linguas humanas escritas. Essencialmente, ele consegue lidar com qualquer tipo de conteúdo textual que você puder colocar no documento. Não há motivos para não indicar essa informação e esse elemento ajuda a evitar vários problemas na sua página.
-5.  `<title></title>`: O elemento [`<title>`](/pt-BR/docs/Web/HTML/Element/title "The HTML Title element (<title>) defines the document's title that is shown in a browser's title bar or a page's tab."). Isto define o título de sua página, que aparecerá na guia do navegador na qual a página está carregada e é usado para descrevê-la quando for salva nos favoritos.
-6.  `<body></body>`: O elemento [`<body>`](/pt-BR/docs/Web/HTML/Element/body "The HTML <body> Element represents the content of an HTML document. There can be only one <body> element in a document.") contém _todo_ o conteúdo que você quer mostrar aos usuários quando eles visitarem sua página, como texto, imagens, vídeos, jogos, faixas de áudio reproduzíveis, ou qualquer outra coisa.
+2. `<html></html>`: O elemento [`<html>`](/pt-BR/docs/Web/HTML/Element/html) envolve o conteúdo da página inteira e é conhecido como o "elemento raiz" da página HTML.
+3. `<head></head>`: O elemento [`<head>`](/pt-BR/docs/Web/HTML/Element/head) atua como um container para todo o conteúdo da página HTML que não é visível para os visitantes do site. Isso inclui palavras-chave e a descrição da página que você quer que apareça nos resultados de busca, o CSS para estilizar o conteúdo da página (apesar de ser recomendado faze-lo num aquivo separado), declaração de conjunto de caracteres, e etc. Você aprenderá mais sobre isso no próximo artigo da série.
+4. `<meta charset="utf-8">`: Este elemento define o tipo da codificação dos caracteres que o seu documento deve usar, neste caso, para o tipo UTF-8, que inclui a maioria dos caracteres das linguas humanas escritas. Essencialmente, ele consegue lidar com qualquer tipo de conteúdo textual que você puder colocar no documento. Não há motivos para não indicar essa informação e esse elemento ajuda a evitar vários problemas na sua página.
+5. `<title></title>`: O elemento [`<title>`](/pt-BR/docs/Web/HTML/Element/title). Isto define o título de sua página, que aparecerá na guia do navegador na qual a página está carregada e é usado para descrevê-la quando for salva nos favoritos.
+6. `<body></body>`: O elemento [`<body>`](/pt-BR/docs/Web/HTML/Element/body) contém _todo_ o conteúdo que você quer mostrar aos usuários quando eles visitarem sua página, como texto, imagens, vídeos, jogos, faixas de áudio reproduzíveis, ou qualquer outra coisa.
 
 ### Aprendizado ativo: Adicionando alguns recursos ao documento HTML
 
 Se você quiser experimentar como funciona um documento HTML no seu computador, você pode:
 
-1.  Copiar o exemplo de página HTML mostrada acima.
-2.  Criar um novo documento em seu editor de texto.
-3.  Colar o código no novo arquivo de texto.
-4.  Salvar o arquivo com o nome `index.html`.
+1. Copiar o exemplo de página HTML mostrada acima.
+2. Criar um novo documento em seu editor de texto.
+3. Colar o código no novo arquivo de texto.
+4. Salvar o arquivo com o nome `index.html`.
 
 > **Nota:** Você também pode encontrar o template básico de HTML no [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html).
 
@@ -534,7 +534,7 @@ Você pode abrir este arquivo no navegador para ver como o código renderizado s
 
 ![A simple HTML page that says This is my page](https://mdn.mozillademos.org/files/12279/template-screenshot.png)Neste exercício, você pode editar o código localmente em seu computador, com descrito acima, ou você pode editá-lo na janela de exemplo editável abaixo (esta janela editável representa apenas o conteúdo do elemento `<body>` , neste caso). Nós gostaríamos que você seguisse as seguintes etapas:
 
-- Logo abaixo da tag de abertura [`<body>`](/pt-BR/docs/Web/HTML/Element/body "The HTML <body> Element represents the content of an HTML document. There can be only one <body> element in a document."), adicione um título principal para o documento. Isso deve estar dentro da tag de abertura `<h1>`e da tag de fechamento `</h1>` .
+- Logo abaixo da tag de abertura [`<body>`](/pt-BR/docs/Web/HTML/Element/body), adicione um título principal para o documento. Isso deve estar dentro da tag de abertura `<h1>`e da tag de fechamento `</h1>` .
 - Edite o conteúdo do parágrafo para incluir algum texto sobre algo de seu interesse.
 - Faça com que todas as palavras importantes sejam destacadas em negrito, colocando-as dentro da tag de abertura `<strong>` e da tag de fechamento `</strong>` .
 - Adicione um link ao seu parágrafo, conforme [explicado anteriormente neste artigo](/pt-BR/Aprender/HTML/Introducao_ao_HTML/Getting_started#Aprendizado_ativo_Adicionando_atributos_a_um_elemento).

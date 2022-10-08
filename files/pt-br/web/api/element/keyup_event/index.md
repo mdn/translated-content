@@ -60,7 +60,6 @@ O evento keyup é acionado quando uma tecla é liberada.
       <td>
         <a
           href="/en-US/docs/Web/API/Document/defaultView"
-          title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."
           ><code>document.defaultView</code></a
         >
         (<code>window</code> of the document)

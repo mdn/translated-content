@@ -56,11 +56,11 @@ Para mais cadeias de caracteres de agente de usuário do Firefox e Gecko, veja a
 Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
 ```
 
-1.  `Mozilla/5.0` é o _token_ geral que diz que o navegador é compatível com Mozilla. Por razões históricas, quase todo navegador envia isso hoje.
-2.  **_platform_** descreve a plataforma nativa que navegador está executando (Windows, Mac, Linux, Android, etc.), e se é um telefone celular. Telefones {{Glossary("Firefox OS")}} simplesmente dizem `Mobile` — a web é a plataforma. Note que **_platform_** pode consistir de múltiplos _tokens_ separador por "`; `"(ponto e vírgula). Veja abaixo para mais detalhes e exemplos.
-3.  **rv:_geckoversion_** indica a versão de _release_ do Gecko (como a "_17.0_"). Em navegadores recentes, **_geckoversion_** é o mesmo que **_firefoxversion_**.
-4.  **_Gecko/geckotrail_** indica que o navegador é baseado no [Gecko](/pt-BR/docs/Mozilla/Gecko). (No Desktop, _**geckotrail**_ é sempre a cadeia de caracteres fixa `20100101`.)
-5.  _**Firefox/firefoxversion**_ indica que o navegador é o Firefox, e provém a versão (como a "_17.0"_).
+1. `Mozilla/5.0` é o _token_ geral que diz que o navegador é compatível com Mozilla. Por razões históricas, quase todo navegador envia isso hoje.
+2. **_platform_** descreve a plataforma nativa que navegador está executando (Windows, Mac, Linux, Android, etc.), e se é um telefone celular. Telefones {{Glossary("Firefox OS")}} simplesmente dizem `Mobile` — a web é a plataforma. Note que **_platform_** pode consistir de múltiplos _tokens_ separador por "`;`" (ponto e vírgula). Veja abaixo para mais detalhes e exemplos.
+3. **rv:_geckoversion_** indica a versão de _release_ do Gecko (como a "_17.0_"). Em navegadores recentes, **_geckoversion_** é o mesmo que **_firefoxversion_**.
+4. **_Gecko/geckotrail_** indica que o navegador é baseado no [Gecko](/pt-BR/docs/Mozilla/Gecko). (No Desktop, _**geckotrail**_ é sempre a cadeia de caracteres fixa `20100101`.)
+5. _**Firefox/firefoxversion**_ indica que o navegador é o Firefox, e provém a versão (como a "_17.0"_).
 
 ### Exemplos
 

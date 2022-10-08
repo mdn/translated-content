@@ -171,7 +171,9 @@ Os títulos das imagens não são essenciais para incluir. Geralmente, é melhor
 
 Agora é sua vez de jogar! Esta seção de aprendizado ativo o ajudará a executar com um simples exercício de incorporação. Você é fornecido com um básico {{htmlelement("img")}} tag; gostaríamos que você incorporasse a imagem localizada no seguinte URL:
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 Anteriormente, dissemos para nunca vincular as imagens a outros servidores, mas isso é apenas para fins de aprendizado; portanto, deixaremos você de fora dessa vez.
 
