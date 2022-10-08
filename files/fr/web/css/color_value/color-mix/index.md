@@ -71,7 +71,7 @@ li:nth-child(3) {
 
 ### Résultat
 
-Dans un navigateur qui prend en charge cette fonctionnalité, les trois carrés sont de plus en plus bleu, car la proportion de `#34c9eb` dans le mélange augmente.
+Dans un navigateur qui prend en charge cette fonctionnalité, les trois carrés sont de plus en plus bleus, car la proportion de `#34c9eb` dans le mélange augmente.
 
 {{EmbedLiveSample('','100%', 200)}}
 

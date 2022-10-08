@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-La notation fonctionnelle **`rgb()`** exprime une couleur selon ses composantes rouge, verte et bleue. Une composante alpha optionelle représente l'opacité de la couleur.
+La notation fonctionnelle **`rgb()`** exprime une couleur selon ses composantes rouge, verte et bleue. Une composante alpha optionnelle représente l'opacité de la couleur.
 
 {{EmbedInteractiveExample("pages/css/function-rgb.html")}}
 

@@ -82,7 +82,7 @@ Similaire au modèle de couleurs HSL, le modèle de couleurs HWB définit une co
 
 Comme avec le modèle HSL, il peut être plus intuitif de travailler avec le modèle HWB qu'avec le modèle RGB. La teinte est indiquée de la même façon, mais est ici suivie de la quantité de blancheur et de noirceur respectives, exprimées en pourcentages. Cette fonction permet également d'indiquer une valeur pour la composante alpha.
 
-> **Note :** Il **n'existe pas** de fonction séparée `hwba()` (à la différence donc de HSL avec `hsl()` et `hsla()`), la valeur alpha est un paramètre optionel. Si elle n'est pas fournie, la composante alpha vaudra `1` (soit `100%`). Pour fournir cette valeur, on ajoutera une barre oblique (`/`) après la valeur de noirceur et avant la composante alpha.
+> **Note :** Il **n'existe pas** de fonction séparée `hwba()` (à la différence donc de HSL avec `hsl()` et `hsla()`), la valeur alpha est un paramètre optionnel. Si elle n'est pas fournie, la composante alpha vaudra `1` (soit `100%`). Pour fournir cette valeur, on ajoutera une barre oblique (`/`) après la valeur de noirceur et avant la composante alpha.
 
 Les couleurs du modèle HWB sont exprimées à l'aide de la notation fonctionnelle `hwb()`.
 
