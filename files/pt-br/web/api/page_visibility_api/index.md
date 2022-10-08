@@ -28,7 +28,7 @@ Desenvolvedores têm historicamente usado alternativas de se detectar isto. Por 
 
 ## Exemplo
 
-Veja [exemplo em caso real](http://daniemon.com/tech/webapps/page-visibility/) (video com som).
+Veja [exemplo em caso real](https://daniemon.com/tech/webapps/page-visibility/) (video com som).
 
 O exemplo, que pausa o video quando você troca para outra aba e volta a reproduzir quando você retorna, foi criado com o seguinte código:
 
@@ -137,5 +137,5 @@ Os estados de visibilidade de {{HTMLElement("iframe")}} são os mesmos do docume
 
 ## Veja também
 
-- Descrição da [API de Visibilidade de Página](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) do IEBlog.
-- Descrição da [API de visibilidade de Página](http://code.google.com/chrome/whitepapers/pagevisibility.html) do Google
+- Descrição da [API de Visibilidade de Página](https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) do IEBlog.
+- Descrição da [API de visibilidade de Página](https://code.google.com/chrome/whitepapers/pagevisibility.html) do Google

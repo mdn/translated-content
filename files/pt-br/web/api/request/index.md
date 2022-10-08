@@ -78,9 +78,9 @@ Você pode criar um novo objeto `Request` usando o construtor {{domxref("Request
 No exemplo a seguir, nós criamos uma nova requisição utilizando o construtor `Request()` (para um arquivo de imagem no mesmo diretório do código) e, em seguida, nos retorna alguns valores das propriedades da requisição:
 
 ```js
-const myRequest = new Request('http://localhost/flowers.jpg');
+const myRequest = new Request('https://localhost/flowers.jpg');
 
-const myURL = myRequest.url; // http://localhost/flowers.jpg
+const myURL = myRequest.url; // https://localhost/flowers.jpg
 const myMethod = myRequest.method; // GET
 const myCred = myRequest.credentials; // omit
 ```
@@ -98,9 +98,9 @@ fetch(myRequest)
 No exemplo a seguir, nós criamos uma nova requisição utilizando o construtor `Request()` com alguns valores iniciais e contendo o corpo para APIs que precisam processar essas informações:
 
 ```js
-const myRequest = new Request('http://localhost/api', {method: 'POST', body: '{"foo":"bar"}'});
+const myRequest = new Request('https://localhost/api', {method: 'POST', body: '{"foo":"bar"}'});
 
-const myURL = myRequest.url; // http://localhost/api
+const myURL = myRequest.url; // https://localhost/api
 const myMethod = myRequest.method; // POST
 const myCred = myRequest.credentials; // omit
 const bodyUsed = myRequest.bodyUsed; // true

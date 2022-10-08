@@ -35,9 +35,9 @@ Os links nesta página levam a uma variedade de tutoriais e materiais de treinam
   - : Uma referência abrangente para elementos HTML e como são suportados pelos diferentes navegadores.
 - **[Criando uma Página Web simples com HTML](https://www.theblogstarter.com/html-for-beginners)** (The Blog Starter)
   - : Um guia HTML para iniciantes que inclui explicações de _tags_ comums, incluindo tags HTML5. Também inclui um guia passo a passo sobre como criar uma página da web com exemplos de códigos já usados.
-- **[Guia do Iniciante em HTML](http://bit.ly/2z9xSS2) (Website Setup)**
+- **[Guia do Iniciante em HTML](https://bit.ly/2z9xSS2) (Website Setup)**
   - : Este guia para iniciantes em HTML ensina você como configurar um website básico usando HTML e as novas tags HTML5. Um tutorial passo a passo com imagens e recursos que você pode usar para melhorar suas habilidades de codificação.
-- **[Desafio HTML](http://wikiversity.org/wiki/Web_Design/HTML_Challenges) (Wikiversity)**
+- **[Desafio HTML](https://wikiversity.org/wiki/Web_Design/HTML_Challenges) (Wikiversity)**
   - : Use esses desafios para aprimorar suas habilidades em HTML (como por exemplo, _Eu devo usar um elemento \<h2> ou um elemento \<strong>?_), focando numa melhor produtividade.
 
 ### Nível Intermediário
@@ -75,9 +75,9 @@ Os links nesta página levam a uma variedade de tutoriais e materiais de treinam
   - : Até este ponto nós vimos CSS básico, como estilizar texto e como formatar e manipular caixas dentro do seu conteúdo. Agora veremos como colocar suas caixas no lugar certo em relação à _viewport_ e vice-versa. Nós já cobrimos os pré-requisitos, então agora podemos mergulhar profundamente no _layout_ CSS, olhando para diferentes configurações de tela, métodos de _layout_ tradicionais envolvendo flutuação e posicionamento e novas ferramentas de _layout_ como o _flexbox_.
 - **[Referência CSS](/pt-BR/docs/CSS/CSS_Reference)**
   - : Referência completa de CSS, com detalhes e suporte pelo Firefox e outros navegadores.
-- **[Grades Fluídas](http://www.alistapart.com/articles/fluidgrids/) (Uma lista a parte)**
+- **[Grades Fluídas](https://www.alistapart.com/articles/fluidgrids/) (Uma lista a parte)**
   - : _Layouts_ de _design_ que redimensionam fluidamente com a janela do navegador, enquanto ainda estiver usando uma grade tipográfica.
-- **[Desafios CSS](http://en.wikiversity.org/wiki/Web_Design/CSS_challenges) (Wikiversity)**
+- **[Desafios CSS](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges) (Wikiversity)**
   - : Dar uma maior flexibilidade nas suas habilidades de utilização do CSS e ver onde você precisa de mais prática.
 
 ### Nível avançado
@@ -86,13 +86,13 @@ Os links nesta página levam a uma variedade de tutoriais e materiais de treinam
   - : Aplique rotação, inclinação, escala e translação utilizando CSS.
 - **[CSS Transições](/pt-BR/docs/CSS/CSS_transitions)**
   - : Transições CSS, parte do projecto de especificação CSS3, fornecem uma maneira de animar as alterações nas propriedades CSS, ao invés de executar as alterações imediatamente.
-- **[Guia Rápido para implementar Fontes da Web com @font-face](http://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)**
+- **[Guia Rápido para implementar Fontes da Web com @font-face](https://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)**
   - : O recurso @font-face do CSS3 permite que você use fontes personalizadas na web de uma forma acessível, manipulável e escalável.
-- **[Começando a escrever CSS](http://davidwalsh.name/starting-css) (David Walsh)**
+- **[Começando a escrever CSS](https://davidwalsh.name/starting-css) (David Walsh)**
   - : Uma introdução às ferramentas e metodologias para escrever CSS mais sucinto, sustentável e escalável.
 - [Tutorial Canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial)
   - : Aprenda a desenhar gráficos usando _scripts_ e usando o elemento `canvas`.
-- **[HTML5 Doctor](http://html5doctor.com/)**
+- **[HTML5 Doctor](https://html5doctor.com/)**
   - : Artigos sobre o uso de HTML5.
 
 ## Tutoriais Javascript
@@ -105,7 +105,7 @@ Os links nesta página levam a uma variedade de tutoriais e materiais de treinam
   - : Neste módulo, continuamos a nossa cobertura de todos os recursos fundamentais do JavaScript, voltando a nossa atenção para os tipos de códigos comumente encontrados, como declarações condicionais, laços, funções e eventos. Você já viu esses tópicos no curso, mas apenas de passagem - aqui vamos discutir tudo de forma explícita.
 - [Começando com JavaScript](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
   - : O que é JavaScript e como pode lhe ajudar?
-- **[Codecademy](http://www.codecademy.com/) (Codecademy)**
+- **[Codecademy](https://www.codecademy.com/) (Codecademy)**
   - : Codecademy é uma maneira fácil de aprender como codificar em JavaScript. É interativo e você pode aprender junto dos seus amigos.
 
 ### Nível intermediário
@@ -116,11 +116,11 @@ Os links nesta página levam a uma variedade de tutoriais e materiais de treinam
   - : Quando se programa em JavaScript do lado do cliente (_client-side_) para sites ou aplicações web, voce não vai muito longe antes de precisar usar APIs - interfaces para manipular diferentes aspectos do navegador e do sistema operacional onde o site está executando, ou mesmo dados de outro serviço da web ou site. Neste módulo nós vamos explorar o que são APIs e como usar algumas das APIs mais comuns que você encontrará frequentemente eu seu trabalho.
 - **[Uma Reintrodução ao JavaScript](/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript)**
   - : Uma recapitulação da linguagem de programação JavaScript destinada a desenvolvedores de nível intermediário.
-- **[JavaScript Eloquente](http://eloquentjavascript.net/)**
+- **[JavaScript Eloquente](https://eloquentjavascript.net/)**
   - : Um guia compreensivo para metodologias intermediárias e avançadas em JavaScript.
-- **[Falando JavaScript](http://speakingjs.com/es5/) (Dr. Axel Rauschmayer)**
+- **[Falando JavaScript](https://speakingjs.com/es5/) (Dr. Axel Rauschmayer)**
   - : Para programadores que querem aprender JavaScript de uma maneira focada e rápida e para os desenvolvedores que buscam aprimorar suas habilidades ou procuram se aprofundar em um tópico.
-- **[Padrões de Design Essenciais em JavaScript](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/) (Addy Osmani)**
+- **[Padrões de Design Essenciais em JavaScript](https://www.addyosmani.com/resources/essentialjsdesignpatterns/book/) (Addy Osmani)**
   - : Uma introdução para padrões de design essenciais em JavaScript.
 
 ### Nível avançado
@@ -129,13 +129,13 @@ Os links nesta página levam a uma variedade de tutoriais e materiais de treinam
   - : Um guia completo, atualizado regularmente, de JavaScript para todos os níveis de ensino, do básico ao avançado.
 - **[Você não conhece JS](https://github.com/getify/You-Dont-Know-JS) (Kyle Simpson)**
   - : Uma série de livros que mergulham profundamente nos principais mecanismos da linguagem JavaScript.
-- **[JavaScript Garden](http://bonsaiden.github.com/JavaScript-Garden/)**
+- **[JavaScript Garden](https://bonsaiden.github.com/JavaScript-Garden/)**
   - : Documentação de partes mais peculiares do JavaScript.
-- **[Explorando ES6](http://exploringjs.com/es6/) (Dr. Axel Rauschmayer)**
+- **[Explorando ES6](https://exploringjs.com/es6/) (Dr. Axel Rauschmayer)**
   - : Informações profundas e confiáveis sobre ECMAScript 2015.
-- **[Padrões JavaScipt](http://shichuan.github.io/javascript-patterns)**
+- **[Padrões JavaScipt](https://shichuan.github.io/javascript-patterns)**
   - : Uma coleção de padrões e antipadrões que cobre padrões de funções, padrões jQuery, padrões de plugins jQuery, padrões de design, padões em geral, padrões de literais e construtores, padrões de criação de objetos, padrões de reuso de código e DOM.
-- **[Como navegadores trabalham](http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)**
+- **[Como navegadores trabalham](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)**
   - : Um artigo detalhado descrevendo diferentes navegadores modernos, seus motores, renderização de páginas, etc.
 - [Vídeos sobre JavaScript](https://github.com/bolshchikov/js-must-watch) (GitHub)
   - : Uma coleção de vídeos sobre JavaScript para se aprofundar no assunto.

@@ -55,7 +55,7 @@ A maioria das documentações assume que você está desenvolvendo para o Firefo
 - [Firefox para Android](/en-US/Add-ons/Firefox_for_Android)
   - : Desenvolvendo extensões para Firefox para Android.
 - [SeaMonkey](/en-US/Add-ons/SeaMonkey_2)
-  - : Desenvolvendo extensões para [SeaMonkey](http://www.seamonkey-project.org/) suíte de software.
+  - : Desenvolvendo extensões para [SeaMonkey](https://www.seamonkey-project.org/) suíte de software.
 
 ## Temas
 

@@ -82,7 +82,7 @@ let minhaVariavel;
 
 > **Nota:** Ponto-e-vírgula no fim de uma linha indica onde uma instrução termina; só é absolutamente necessário quando você precisa separar instruções em uma única linha. No entanto, algumas pessoas acreditam que é uma boa prática colocá-las no final de cada instrução. Existem outras regras para quando você deve ou não usá-las — consulte [Seu Guia para Ponto-e-Vírgula em Javascript](https://news.codecademy.com/your-guide-to-semicolons-in-javascript/) para mais detalhes.
 
-> **Nota:** Você pode dar quase qualquer nome a uma variável, mas há algumas restrições (veja [esse artigo sobre regras de nomes de variáveis](http://www.codelifter.com/main/tips/tip_020.shtml)). Se você não tem certeza, você pode [conferir se sua variável tem um nome válido](https://mothereff.in/js-variables).
+> **Nota:** Você pode dar quase qualquer nome a uma variável, mas há algumas restrições (veja [esse artigo sobre regras de nomes de variáveis](https://www.codelifter.com/main/tips/tip_020.shtml)). Se você não tem certeza, você pode [conferir se sua variável tem um nome válido](https://mothereff.in/js-variables).
 
 > **Nota:** JavaScript é case sensitive — `minhaVariavel` é diferente de `minhavariavel`. Se você estiver tendo problemas no seu código, cheque seu casing!
 

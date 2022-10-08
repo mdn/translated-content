@@ -15,7 +15,7 @@ Se você quer que o DOM seja analisado o mais rápido possível após uma requis
 ## Informações gerais
 
 - Especificação
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end)
 - Interface
   - : Event
 - Propaga

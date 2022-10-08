@@ -22,11 +22,11 @@ One of HTML5's main advantages as a game development platform is the ability to 
 
 ## Case study
 
-We'll be using the [Captain Rogers: Battle at Andromeda demo](http://rogers2.enclavegames.com/demo/) as an example.
+We'll be using the [Captain Rogers: Battle at Andromeda demo](https://rogers2.enclavegames.com/demo/) as an example.
 
 ![Captain Rogers: Battle at Andromeda - cover of the game containing Enclave Games and Blackmoon Design logos, Roger's space ship and title of the game.](https://mdn.mozillademos.org/files/13849/captainrogers2-cover.png)
 
-Captain Rogers was created using the [Phaser](http://phaser.io/) framework, the most popular tool for simple 2D game development in JavaScript right now, but it should be fairly easy to reuse the knowledge contained within these articles when building games in pure JavaScript or any other framework. If you're looking for a good introduction to Phaser, then check the [2D breakout game using Phaser](/pt-BR/docs/Games/Tutorials/2D_breakout_game_Phaser) tutorial.
+Captain Rogers was created using the [Phaser](https://phaser.io/) framework, the most popular tool for simple 2D game development in JavaScript right now, but it should be fairly easy to reuse the knowledge contained within these articles when building games in pure JavaScript or any other framework. If you're looking for a good introduction to Phaser, then check the [2D breakout game using Phaser](/pt-BR/docs/Games/Tutorials/2D_breakout_game_Phaser) tutorial.
 
 In the following articles we will show how to implement various different control mechanisms for Captain Rogers to support different platforms — from touch on mobile, through keyboard/mouse/gamepad on desktop, to more unconventional ones like TV remote, shouting to or waving your hand in front of the laptop, or squeezing bananas.
 

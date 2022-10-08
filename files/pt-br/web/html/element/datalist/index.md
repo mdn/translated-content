@@ -13,7 +13,7 @@ O elemento HTML _Datalist_ (\<datalist>) contém um conjunto de elementos {{ HTM
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tags           | Nenhuma, ambas as tags inicial e final são obrigatórias                                                                                                                                             |
 | Elementos pais permitidos | Qualquer elemento que aceite [phrasing content](/en/HTML/Content_categories#phrasing_content)                                                         |
-| Documento normativo       | [HTML5, section 4.10.10](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element)                                                                  |
+| Documento normativo       | [HTML5, section 4.10.10](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element)                                                                  |
 
 ## Atributos
 

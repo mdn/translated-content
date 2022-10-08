@@ -32,7 +32,7 @@ Há 5 tipos de _targets_ a se considerar:
       <td>
         <a
           class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
           >DOM Event Interface</a
         >
       </td>
@@ -62,13 +62,13 @@ Há 5 tipos de _targets_ a se considerar:
         O
         <a
           class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"
           ><code>EventTarget</code></a
         >
         do qual o
         <a
           class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"
           ><code>EventListeners</code></a
         >
         está sendo atualmente processado. Logo que a captura e a subida do
@@ -84,7 +84,7 @@ Há 5 tipos de _targets_ a se considerar:
       <td>
         <a
           class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent"
           >DOM MouseEvent Interface</a
         >
       </td>

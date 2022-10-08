@@ -130,15 +130,15 @@ border-bottom-left-radius:  3px 4px;
 
 ## Live Samples
 
-Sample 1 : <http://jsfiddle.net/Tripad/qnGKj/2/>
+Sample 1 : <https://jsfiddle.net/Tripad/qnGKj/2/>
 
-Sample 2 : <http://jsfiddle.net/Tripad/qnGKj/3/>
+Sample 2 : <https://jsfiddle.net/Tripad/qnGKj/3/>
 
-Sample 3 : <http://jsfiddle.net/Tripad/qnGKj/4/>
+Sample 3 : <https://jsfiddle.net/Tripad/qnGKj/4/>
 
-Sample 4 : <http://jsfiddle.net/Tripad/qnGKj/5/>
+Sample 4 : <https://jsfiddle.net/Tripad/qnGKj/5/>
 
-Sample 5 : <http://jsfiddle.net/Tripad/qnGKj/6/>
+Sample 5 : <https://jsfiddle.net/Tripad/qnGKj/6/>
 
 ## Notas
 

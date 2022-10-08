@@ -43,8 +43,8 @@ Usar o elemento `<canvas>`não é muito difícil, mas você precisa de um conhec
 ## Veja também
 
 - [Canvas](/pt-BR/docs/Web/HTML/Canvas)
-- [Plug-in Canvas para Adobe Illustrator](http://visitmix.com/labs/ai2canvas/)
-- [HTML5CanvasTutorials](http://www.html5canvastutorials.com/)[](http://davidwalsh.name/convert-canvas-image)
+- [Plug-in Canvas para Adobe Illustrator](https://visitmix.com/labs/ai2canvas/)
+- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)[](https://davidwalsh.name/convert-canvas-image)
 
 ## Nota dos contribuidores
 

@@ -112,7 +112,7 @@ Uma das melhores formas de ajudar um leitor de tela a interpretar sua página é
 <p>Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais interessante que a última.</p>
 ```
 
-Nós preparamos uma versão com o texto mais longo para que você tente utilizar um leitor de tela (veja [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Se você tentar navegar dentro do documento, vai perceber que é bem fácil:
+Nós preparamos uma versão com o texto mais longo para que você tente utilizar um leitor de tela (veja [good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Se você tentar navegar dentro do documento, vai perceber que é bem fácil:
 
 1. O leitor de tela lê cada título a medida que você progride pelo conteúdo, notificando ao usuário o que é um título, o que é um parágrafo, etc.
 2. Ele para depois de cada elemento, deixando você ir na velocidade em que é mais confortável.
@@ -143,7 +143,7 @@ Essa é a primeira sub sessão do meu documento. Eu adoro quando as pessoas cons
 Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais interessante que a última.
 ```
 
-Se você tentar utilizar um leitor de tela na nossa versão mais longa (ver [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), você não terá uma boa experiência — o leitor de tela não encontrará nenhuma sinalização, então você não terá acesso ao conteúdo. A página inteira vai parecer como um único bloco gigante, então será lida de uma vez só, ao mesmo tempo.
+Se você tentar utilizar um leitor de tela na nossa versão mais longa (ver [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), você não terá uma boa experiência — o leitor de tela não encontrará nenhuma sinalização, então você não terá acesso ao conteúdo. A página inteira vai parecer como um único bloco gigante, então será lida de uma vez só, ao mesmo tempo.
 
 Existem também outros problemas além da acessibilidade — é mais difícil estilizar o seu conteúdo com CSS, ou manipulá-lo com JavaScript porque não há elementos para serem utilizados como seletores.
 
@@ -159,7 +159,7 @@ A linguagem que você usa também pode afetar a acessibilidade. No geral, você 
 
 Antigamente, nos dias velhos e ruins, as pessoas costumavam criar layouts para páginas utilizando tabelas HTML — usando as células da tabela para se comportarem como cabeçalho, rodapé, barra lateral, coluna de conteúdo, etc. Essa não é uma boa ideia porque um leitor de tela provavelmente irá retornar umas leituras um pouco confusas, especialmente se o layout é complexo e possui várias tabelas aninhadas dentro das células.
 
-Tente ler o nosso exemplo [table-layout.html](http://mdn.github.io/learning-area/accessibility/html/table-layout.html), que se parece com algo assim:
+Tente ler o nosso exemplo [table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html), que se parece com algo assim:
 
 ```html
 <table width="1200">
@@ -232,7 +232,7 @@ Se você tentar navegar por esse código utilizando um leitor de texto, provavel
 
 Layouts feitos com tabela são uma relíquia do passado — fazia sentido utilizá-las lá atrás quando o suporte do CSS não era difundido pelos navegadores, mas esses layouts de tabela criam confusão para os usuários de leitor de tela, além de serem ruins por outros motivos (abuso de tabelas indiscutivelmente precisa de mais marcação e torna o design menos flexível). Não faça dessa forma!
 
-Você pode verificar essas reivindicações ao comparar a última experiência com um [exemplo de estrutura de website mais moderna](http://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), o que pode se parecer com algo assim:
+Você pode verificar essas reivindicações ao comparar a última experiência com um [exemplo de estrutura de website mais moderna](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), o que pode se parecer com algo assim:
 
 ```html
 <header>
@@ -270,7 +270,7 @@ Você pode verificar essas reivindicações ao comparar a última experiência c
 
 Se você experimentar ler esse exemplo de estrutura mais moderna com um leitor de tela, você vai perceber que o layout feito por marcação não atrapalha na hora de retornar o conteúdo do site. Também é muito mais limpo e pequeno em termos de tamanho de código, o que significa um código mais fácil de se dar manutenção e menos uso de banda para o usuário fazer o download (particularmente prevalente para as pessoas com conexão lenta).
 
-Outra consideração que pode ser feita é criar layouts utilizando a semântica HTML5 nos elementos, como visto no exemplo (veja [content sectioning](/pt-BR/docs/Web/HTML/Element#Content_sectioning)) — você pode criar um layout utilizando apenas elementos aninhados {{htmlelement("div")}}, mas é melhor e mais apropriado seccionar elementos de uma forma que eles envelopem a navegação principal ({{htmlelement("nav")}}), rodapé({{htmlelement("footer")}}), unidades de conteúdo repetidas({{htmlelement("article")}}), etc. Eles trazem semânticas extras para os leitores de tela(e outras ferramentas) para dar aos usuários mais dicas sobre o conteúdo no qual eles estão navegando (veja [Screen Reader Support for new HTML5 Section Elements](http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/) para uma ideia do que é suporte de leitor de tela).
+Outra consideração que pode ser feita é criar layouts utilizando a semântica HTML5 nos elementos, como visto no exemplo (veja [content sectioning](/pt-BR/docs/Web/HTML/Element#Content_sectioning)) — você pode criar um layout utilizando apenas elementos aninhados {{htmlelement("div")}}, mas é melhor e mais apropriado seccionar elementos de uma forma que eles envelopem a navegação principal ({{htmlelement("nav")}}), rodapé({{htmlelement("footer")}}), unidades de conteúdo repetidas({{htmlelement("article")}}), etc. Eles trazem semânticas extras para os leitores de tela(e outras ferramentas) para dar aos usuários mais dicas sobre o conteúdo no qual eles estão navegando (veja [Screen Reader Support for new HTML5 Section Elements](https://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/) para uma ideia do que é suporte de leitor de tela).
 
 > **Nota:** Ao mesmo tempo que seu conteúdo deve ter boa semântica e um layout bonito, deve-se fazer sentido que em sua ordem de fonte — você poderá sempre movimentá-la utilizando CSS depois, mas você deve colocar a ordem de fonte de forma correta desde o começo, para que os usuários que utilizam de leitores de tela possam receber uma leitura que faz sentido.
 
@@ -278,7 +278,7 @@ Outra consideração que pode ser feita é criar layouts utilizando a semântica
 
 Por controles de UI, o que nós queremos dizer é as partes dos documentos web que os usuários interagem com — mais comumente botões, links, e formulários. Nessa seção nós daremos uma olhada em princípios da acessibilidade que deverão ser analisados com cuidado ao criar esses controles de UI. Os artigos mais recentes do WAI-ARIA e multimedia irão olhar para outros aspectos da acessibilidade de UIs.
 
-Um aspecto chave da acessibilidade de controles Ui é que, por padrão, os navegadores premitem que esses controles sejam acessados pelo teclado. Você pode experimentar isso utilizando o nosso exemplo [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (ver o [código-fonte](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — abra em uma nova aba e experimente apertar a tecla tab; depois de algumas tecladas, você irá ver o foco da aba se mover entre diferentes elementos que podem ser focados; os elementos focados são dados um estilo de destaque em todos os navegadores (muda levemente entre diferentes navegadores) dessa forma você pode dizer qual elemento está em foco.
+Um aspecto chave da acessibilidade de controles Ui é que, por padrão, os navegadores premitem que esses controles sejam acessados pelo teclado. Você pode experimentar isso utilizando o nosso exemplo [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (ver o [código-fonte](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — abra em uma nova aba e experimente apertar a tecla tab; depois de algumas tecladas, você irá ver o foco da aba se mover entre diferentes elementos que podem ser focados; os elementos focados são dados um estilo de destaque em todos os navegadores (muda levemente entre diferentes navegadores) dessa forma você pode dizer qual elemento está em foco.
 
 ![](https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png)
 
@@ -340,7 +340,7 @@ Mas usar esse código não é recomendado - você perde imediatamente a acessibi
 
 #### Aplicando de volta a acessibilidade do teclado
 
-Adicionar tais vantagens de volta leva um pouco de trabalho (você pode ver um exemplo de código no nosso exemplo [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) - e também pode ver o [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Aqui nós acrescentamos aos nossos falsos botões `<div>` a capacidade de serem focados (inclusive via tab) dando a cada um o atributo `tabindex="0"`:
+Adicionar tais vantagens de volta leva um pouco de trabalho (você pode ver um exemplo de código no nosso exemplo [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) - e também pode ver o [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Aqui nós acrescentamos aos nossos falsos botões `<div>` a capacidade de serem focados (inclusive via tab) dando a cada um o atributo `tabindex="0"`:
 
 ```html
 <div data-message="Esse é do primeiro botão" tabindex="0">Clique em mim!</div>
@@ -387,7 +387,7 @@ Porém este, é um exemplo ruim para link:
 <p>As baleias são criaturas realmente incríveis. Para saber mais sobre baleias, <a href="whales.html">clique aqui</a>.</p>
 ```
 
-> **Nota:** Você pode encontrar muito mais sobre implementação de link e melhores práticas no artigo [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). Você também pode ver alguns bons e maus exemplos em [good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html) e [bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> **Nota:** Você pode encontrar muito mais sobre implementação de link e melhores práticas no artigo [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). Você também pode ver alguns bons e maus exemplos em [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) e [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Os rótulos de formulário (labels) também são importantes para dar a você uma ideia sobre o que precisa ser preenchido em cada entrada de formulário. O seguinte exemplo aparentemente é bem razoável:
 
@@ -412,7 +412,7 @@ Com o código assim, o rótulo será claramente associado à entrada; a descriç
 
 Como um bônus adicional, na maioria dos navegadores a associação de um rótulo a uma entrada de formulário significa que você pode clicar no rótulo para selecionar/ativar o elemento de formulário. Isso consequentemente aumenta o tamanho da área clicável dos elementos, facilitando assim a seleção.
 
-> **Nota:** Você pode ver alguns bons e maus exemplos de formulários em [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html) e [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html).
+> **Nota:** Você pode ver alguns bons e maus exemplos de formulários em [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) e [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
 
 ## Tabelas de dados acessíveis
 
@@ -443,7 +443,7 @@ Uma tabela básica de dados pode ser escrita com uma marcação muito simples, c
 </table>
 ```
 
-Mas essa tabela possui alguns problemas - não há como um usuário de leitor de telas associar linhas ou colunas como agrupamentos de dados. Para fazer isso, você precisa saber quais são as linhas de cabeçalho e se elas estão direcionando linhas, colunas etc. Isso só pode ser feito visualmente para a tabela acima (veja o exemplo [bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html) e tente navegar pela tabela você mesmo).
+Mas essa tabela possui alguns problemas - não há como um usuário de leitor de telas associar linhas ou colunas como agrupamentos de dados. Para fazer isso, você precisa saber quais são as linhas de cabeçalho e se elas estão direcionando linhas, colunas etc. Isso só pode ser feito visualmente para a tabela acima (veja o exemplo [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) e tente navegar pela tabela você mesmo).
 
 Agora dê uma olhada no exemplo da nossa [tabela de bandas punk](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html) - você pode ver alguns recursos de acessibilidade aqui:
 
@@ -456,7 +456,7 @@ Agora dê uma olhada no exemplo da nossa [tabela de bandas punk](https://github.
 
 Considerando que o conteúdo textual é inerentemente acessível, o mesmo não pode necessariamente ser dito para conteúdo multimídia - conteúdo de imagem / vídeo não pode ser visto por pessoas com deficiência visual, e conteúdo de áudio não pode ser ouvido por pessoas com deficiência auditiva. Abordaremos o conteúdo de vídeo e áudio em detalhes no artigo sobre multimídia acessível mais adiante, mas para este artigo veremos a acessibilidade para o elemento {{htmlelement("img")}}.
 
-Temos um exemplo simples escrito, [accessible-image.html](http://mdn.github.io/learning-area/accessibility/html/accessible-image.html), que apresenta quatro cópias da mesma imagem:
+Temos um exemplo simples escrito, [accessible-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html), que apresenta quatro cópias da mesma imagem:
 
 ```
 <img src="dinosaur.png">

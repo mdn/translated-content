@@ -30,7 +30,7 @@ Em JavaScript, um _setter_ pode ser usado para executar uma função sempre que 
 Observe os seguintes itens ao trabalhar com a sintaxe _set_:
 
 - Ele pode ter um identificador que é um número ou uma string;
-- Deve ter exatamente um parâmetro (para mais informações, acesse: [Mudança do ES5 incompatível: funções getter e setter literais tem exatamemente zero ou um parâmetros](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/));
+- Deve ter exatamente um parâmetro (para mais informações, acesse: [Mudança do ES5 incompatível: funções getter e setter literais tem exatamemente zero ou um parâmetros](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/));
 - Não deve ter a mesma nomenclatura seja ela para propriedades ou função.
   (`{ set x(v) { }, set x(v) { } }` e `{ x: ..., set x(v) { } }` é proibido.)
 

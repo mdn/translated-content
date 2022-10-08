@@ -56,7 +56,7 @@ Math.asinh = Math.asinh || function(x) {
 };
 ```
 
-Apesar de formalmente correta, ela sofre de algumas problemas relacionadas à computação de ponto flutuante. Resultados precisos precisam de tratamento especial de positivos/negativos e argumentos pequenos/grandes como feitos por exemplo em em [glibc](https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/ieee754/dbl-64/s_asinh.c) ou[GNU Scientific Library](http://git.savannah.gnu.org/cgit/gsl.git/tree/sys/invhyp.c).
+Apesar de formalmente correta, ela sofre de algumas problemas relacionadas à computação de ponto flutuante. Resultados precisos precisam de tratamento especial de positivos/negativos e argumentos pequenos/grandes como feitos por exemplo em em [glibc](https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/ieee754/dbl-64/s_asinh.c) ou[GNU Scientific Library](https://git.savannah.gnu.org/cgit/gsl.git/tree/sys/invhyp.c).
 
 ## Especificações
 

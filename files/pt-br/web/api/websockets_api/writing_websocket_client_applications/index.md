@@ -39,7 +39,7 @@ O construtor lançará a exceção **`SECURITY_ERR`** se o destino não permitir
 
 Se um erro ocorrer durante a tentativa de conexão, primeiro um simpes evento com o nome "error" é enviado ao objeto [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) (invocando, assim, seu manipulador `onerror`), e então o [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) é enviado ao objeto [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) (invocando o manipulador `onclose`) para indicar a razão pela qual a conexão foi fechada.
 
-O browser pode exibir uma descrição de erro mais detalhada na saída do console, ou mesmo um código de encerramento conforme definido na [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) através do [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent). Está implementado a partir do Firefox 11.
+O browser pode exibir uma descrição de erro mais detalhada na saída do console, ou mesmo um código de encerramento conforme definido na [RFC 6455, Section 7.4](https://tools.ietf.org/html/rfc6455#section-7.4) através do [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent). Está implementado a partir do Firefox 11.
 
 ### Exemplos
 

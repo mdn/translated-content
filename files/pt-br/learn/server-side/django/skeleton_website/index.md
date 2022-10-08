@@ -330,7 +330,7 @@ O comando `migrate` aplica as migrações em seu banco de dados (Django rastreia
 
 Durante o desenvolvimento você pode testar o website usando o _webserver de desenvolvimento_, e vê-lo em seu navegador local.
 
-> **Nota:** O web server de desenvolvimento não tem performance ou desempenho suficiente para uso em produção, mas é uma maneira bem fácil de atualizar seu website Django e utilizá-lo durante o desenvolvimento para conseguir um teste rápido e conveniente. Por padrão, o site é "hospedado" em seu computador local (`http://127.0.0.1:8000/)`, mas você também pode especificar que outros computadores da rede acessem-o. Para mais informações acesse [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (Documentação Django).
+> **Nota:** O web server de desenvolvimento não tem performance ou desempenho suficiente para uso em produção, mas é uma maneira bem fácil de atualizar seu website Django e utilizá-lo durante o desenvolvimento para conseguir um teste rápido e conveniente. Por padrão, o site é "hospedado" em seu computador local (`https://127.0.0.1:8000/)`, mas você também pode especificar que outros computadores da rede acessem-o. Para mais informações acesse [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (Documentação Django).
 
 Execute o _web server de desenvolvimento_ com o comando `runserver` (no mesmo diretório de **manage.py**):
 
@@ -342,11 +342,11 @@ python3 manage.py runserver
  System check identified no issues (0 silenced).
  August 15, 2018 - 16:11:26
  Django version 2.1, using settings 'locallibrary.settings'
- Starting development server at http://127.0.0.1:8000/
+ Starting development server at https://127.0.0.1:8000/
  Quit the server with CTRL-BREAK.
 ```
 
-Com o servidor funcionando, você pode ver seu site colocando o endereço `http://127.0.0.1:8000/` em seu navegador local. Você deve ver uma página de erro como essa:
+Com o servidor funcionando, você pode ver seu site colocando o endereço `https://127.0.0.1:8000/` em seu navegador local. Você deve ver uma página de erro como essa:
 
 ![Django Debug page for Django 2.0](https://mdn.mozillademos.org/files/15729/django_404_debug_page.png)
 

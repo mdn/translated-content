@@ -13,7 +13,7 @@ original_slug: Web/HTTP/Controle_Acesso_CORS
 
 {{Glossary("CORS")}} - Cross-Origin Resource Sharing (Compartilhamento de recursos com origens diferentes) é um mecanismo que usa cabeçalhos adicionais {{Glossary("HTTP")}} para informar a um navegador que permita que um aplicativo Web seja executado em uma origem (domínio) com permissão para acessar recursos selecionados de um servidor em uma origem distinta. Um aplicativo Web executa uma **requisição _cross-origin_ HTTP** ao solicitar um recurso que tenha uma origem diferente (domínio, protocolo e porta) da sua própria origem.
 
-Um exemplo de requisição _cross-origin_: o código JavaScript _frontend_ de um aplicativo web disponível em `http://domain-a.com` usa {{domxref ("XMLHttpRequest")}} para fazer uma requisição para `http://api.domain-b.com/data.json`.
+Um exemplo de requisição _cross-origin_: o código JavaScript _frontend_ de um aplicativo web disponível em `https://domain-a.com` usa {{domxref ("XMLHttpRequest")}} para fazer uma requisição para `https://api.domain-b.com/data.json`.
 
 Por motivos de segurança, navegadores restringem requisições _cross-origin_ HTTP iniciadas por scripts. Por exemplo, `XMLHttpRequest` e [Fetch API](/pt-BR/docs/Web/API/Fetch_API) seguem a [política de mesma origem](/pt-BR/docs/Web/Security/Same-origin_policy) (_same-origin policy_). Isso significa que um aplicativo web que faz uso dessas APIs só poderá fazer solicitações para recursos de mesma origem da qual o aplicativo foi carregado, a menos que a resposta da outra origem inclua os cabeçalhos CORS corretos.
 
@@ -50,7 +50,7 @@ Seções subsequentes discutem cenários, assim como fornecem um detalhamento do
 
 Aqui, apresentamos três cenários que ilustram como _Cross-Origin Resource Sharing_ funciona. Todos estes exemplos usam o objeto {{domxref("XMLHttpRequest")}}, que pode ser utilizado para fazer requisições entre origens em qualquer navegador compatível.
 
-Os snippets JavaScript inclusos nessas seções (e instâncias executáveis de código do lado servidor que tratam corretamente essas requisições entre origens) podem ser encontrados "em ação" aqui: <http://arunranga.com/examples/access-control/>, e irão funcionar em navegadores que suportam `XMLHttpRequest` entre origens.
+Os snippets JavaScript inclusos nessas seções (e instâncias executáveis de código do lado servidor que tratam corretamente essas requisições entre origens) podem ser encontrados "em ação" aqui: <https://arunranga.com/examples/access-control/>, e irão funcionar em navegadores que suportam `XMLHttpRequest` entre origens.
 
 Uma discussão sobre _Cross-Origin Resource Sharing_ a partir da perspectiva do servidor (incluindo snippets de código PHP) pode ser encontrada no artigo [Server-Side Access Control (CORS)](/pt-BR/docs/Web/HTTP/Server-Side_Access_Control).
 
@@ -84,11 +84,11 @@ Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Acc
 
 > **Nota:** O WebKit Nightly e Safari Technology Preview impõem restrições adicionais nos valores permitidos nos cabeçalhos {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} e {{HTTPHeader("Content-Language")}}. Caso algum destes cabeçalhos tenham valores ”não-padronizados”, o WebKit/Safari não considera que a requisição atenda as condições para uma “requisição simples”. O que o WebKit/Safari considera valores “não-padronizados” para estes cabeçalhos não é documentado exceto nos seguintes bugs do WebKit: _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ e _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Nenhum outro navegador implementa estas restrições adicionais, pois elas não são parte da especificação.
 
-Por exemplo, suponha que o conteúdo web no domínio `http://foo.example` deseje chamar (`invocation` do exemplo abaixo) um outro conteúdo no domínio `http://bar.other`. Esse código Javascript pode estar hospedado em foo.example:
+Por exemplo, suponha que o conteúdo web no domínio `https://foo.example` deseje chamar (`invocation` do exemplo abaixo) um outro conteúdo no domínio `https://bar.other`. Esse código Javascript pode estar hospedado em foo.example:
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/public-data/';
+var url = 'https://bar.other/resources/public-data/';
 
 function callOtherDomain() {
   if(invocation) {
@@ -114,8 +114,8 @@ Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
 Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
-Referer: http://foo.example/examples/access-control/simpleXSInvocation.html
-Origin: http://foo.example
+Referer: https://foo.example/examples/access-control/simpleXSInvocation.html
+Origin: https://foo.example
 
 
 HTTP/1.1 200 OK
@@ -130,13 +130,13 @@ Content-Type: application/xml
 [XML Data]
 ```
 
-As linhas de 1 a 10 são enviadas no header. Note que o cabeçalho principal da requisição HTTP aqui é {{HTTPHeader("Origin")}} na linha 10, o qual revela que a chamada é proveniente de um conteúdo no domínio `http://foo.example`.
+As linhas de 1 a 10 são enviadas no header. Note que o cabeçalho principal da requisição HTTP aqui é {{HTTPHeader("Origin")}} na linha 10, o qual revela que a chamada é proveniente de um conteúdo no domínio `https://foo.example`.
 
-As linhas de 13 a 22 mostram a resposta HTTP do servidor no domínio `http://bar.other`. Nesta resposta, o servidor envia de volta um cabeçalho {{HTTPHeader("Access-Control-Allow-Origin")}} exibido na linha 16. O uso dos cabeçalhos {{HTTPHeader("Origin")}} e {{HTTPHeader("Access-Control-Allow-Origin")}} mostram o protocolo de controle de acesso em seu uso mais simples. Neste caso, o servidor responde com `Access-Control-Allow-Origin: *`, o que significa que o recurso pode ser acessado por **qualquer** domínio pela comunicação entre origens. Se os proprietários dos recursos em `http://bar.other` desejarem restringir o acesso ao conteúdo para o mesmo ser apenas de `http://foo.example`, eles retornaram:
+As linhas de 13 a 22 mostram a resposta HTTP do servidor no domínio `https://bar.other`. Nesta resposta, o servidor envia de volta um cabeçalho {{HTTPHeader("Access-Control-Allow-Origin")}} exibido na linha 16. O uso dos cabeçalhos {{HTTPHeader("Origin")}} e {{HTTPHeader("Access-Control-Allow-Origin")}} mostram o protocolo de controle de acesso em seu uso mais simples. Neste caso, o servidor responde com `Access-Control-Allow-Origin: *`, o que significa que o recurso pode ser acessado por **qualquer** domínio pela comunicação entre origens. Se os proprietários dos recursos em `https://bar.other` desejarem restringir o acesso ao conteúdo para o mesmo ser apenas de `https://foo.example`, eles retornaram:
 
-`Access-Control-Allow-Origin: http://foo.example`
+`Access-Control-Allow-Origin: https://foo.example`
 
-Observe que, agora, nenhum dominio além de `http://foo.example` (identificado na requisição pelo cabeçalho ORIGIN: como na linha 10) pode acessar o recurso pela comunicação entre origens. O cabeçalho `Access-Control-Allow-Origin` deve conter o valor que foi enviado no cabeçalho `Origin` da requisição.
+Observe que, agora, nenhum dominio além de `https://foo.example` (identificado na requisição pelo cabeçalho ORIGIN: como na linha 10) pode acessar o recurso pela comunicação entre origens. O cabeçalho `Access-Control-Allow-Origin` deve conter o valor que foi enviado no cabeçalho `Origin` da requisição.
 
 ### Requisições com pré-envio
 
@@ -159,11 +159,11 @@ Em particular, uma requisição tem um pré-envio **se qualquer das seguintes co
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (porém observe os requisitos adicionais abaixo)
-  - [`DPR`](http://httpwg.org/http-extensions/client-hints.html#dpr)
+  - [`DPR`](https://httpwg.org/http-extensions/client-hints.html#dpr)
   - {{HTTPHeader("Downlink")}}
-  - [`Save-Data`](http://httpwg.org/http-extensions/client-hints.html#save-data)
-  - [`Viewport-Width`](http://httpwg.org/http-extensions/client-hints.html#viewport-width)
-  - [`Width`](http://httpwg.org/http-extensions/client-hints.html#width)
+  - [`Save-Data`](https://httpwg.org/http-extensions/client-hints.html#save-data)
+  - [`Viewport-Width`](https://httpwg.org/http-extensions/client-hints.html#viewport-width)
+  - [`Width`](https://httpwg.org/http-extensions/client-hints.html#width)
 
 - **Ou se** o {{HTTPHeader("Content-Type")}} do cabeçalho **tem** **outro** valor que:
 
@@ -180,7 +180,7 @@ O exemplo a seguir é de uma requisição com pré-envio.
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/post-here/';
+var url = 'https://bar.other/resources/post-here/';
 var body = '<?xml version="1.0"?><person><name>Arun</name></person>';
 
 function callOtherDomain(){
@@ -214,7 +214,7 @@ Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
 Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
-Origin: http://foo.example
+Origin: https://foo.example
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
@@ -222,7 +222,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT
 Server: Apache/2.0.61 (Unix)
-Access-Control-Allow-Origin: http://foo.example
+Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400
@@ -247,9 +247,9 @@ Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
 X-PINGOTHER: pingpong
 Content-Type: text/xml; charset=UTF-8
-Referer: http://foo.example/examples/preflightInvocation.html
+Referer: https://foo.example/examples/preflightInvocation.html
 Content-Length: 55
-Origin: http://foo.example
+Origin: https://foo.example
 Pragma: no-cache
 Cache-Control: no-cache
 
@@ -259,7 +259,7 @@ Cache-Control: no-cache
 HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:40 GMT
 Server: Apache/2.0.61 (Unix)
-Access-Control-Allow-Origin: http://foo.example
+Access-Control-Allow-Origin: https://foo.example
 Vary: Accept-Encoding, Origin
 Content-Encoding: gzip
 Content-Length: 235
@@ -282,7 +282,7 @@ O cabeçalho {{HTTPHeader("Access-Control-Request-Method")}} notifica o servidor
 As linhas 14 a 26 acima são as respostas que o servidor devolve, indicando que o método (`POST`) e os cabeçalhos (`X-PINGOTHER`) da requisição são aceitáveis. Em particular, vejamos as linhas 17 a 20:
 
 ```
-Access-Control-Allow-Origin: http://foo.example
+Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400
@@ -320,11 +320,11 @@ However, if the request is one that triggers a preflight due to the presence of 
 
 The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or [Fetch](/pt-BR/docs/Web/API/Fetch_API) and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/pt-BR/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-site {{domxref("XMLHttpRequest")}} or [Fetch](/pt-BR/docs/Web/API/Fetch_API) invocations, browsers will **not** send credentials. A specific flag has to be set on the {{domxref("XMLHttpRequest")}} object or the {{domxref("Request")}} constructor when it is invoked.
 
-In this example, content originally loaded from `http://foo.example` makes a simple GET request to a resource on `http://bar.other` which sets Cookies. Content on foo.example might contain JavaScript like this:
+In this example, content originally loaded from `https://foo.example` makes a simple GET request to a resource on `https://bar.other` which sets Cookies. Content on foo.example might contain JavaScript like this:
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/credentialed-content/';
+var url = 'https://bar.other/resources/credentialed-content/';
 
 function callOtherDomain(){
   if(invocation) {
@@ -351,8 +351,8 @@ Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
 Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
-Referer: http://foo.example/examples/credential.html
-Origin: http://foo.example
+Referer: https://foo.example/examples/credential.html
+Origin: https://foo.example
 Cookie: pageAccess=2
 
 
@@ -360,7 +360,7 @@ HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:34:52 GMT
 Server: Apache/2.0.61 (Unix) PHP/4.4.7 mod_ssl/2.0.61 OpenSSL/0.9.7e mod_fastcgi/2.4.2 DAV/2 SVN/1.4.2
 X-Powered-By: PHP/5.2.6
-Access-Control-Allow-Origin: http://foo.example
+Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
 Pragma: no-cache
@@ -376,17 +376,17 @@ Content-Type: text/plain
 [text/plain payload]
 ```
 
-Although line 11 contains the Cookie destined for the content on `http://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` (line 19) the response would be ignored and not made available to web content.
+Although line 11 contains the Cookie destined for the content on `https://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` (line 19) the response would be ignored and not made available to web content.
 
 #### Solicitações credenciadas e curingas (_wildcards_)
 
 When responding to a credentialed request, the server **must** specify an origin in the value of the `Access-Control-Allow-Origin` header, instead of specifying the "`*`" wildcard.
 
-Because the request headers in the above example include a `Cookie` header, the request would fail if the value of the `Access-Control-Allow-Origin` header were "\*". But it does not fail: Because the value of the `Access-Control-Allow-Origin` header is "`http://foo.example`" (an actual origin) rather than the "`*`" wildcard, the credential-cognizant content is returned to the invoking web content.
+Because the request headers in the above example include a `Cookie` header, the request would fail if the value of the `Access-Control-Allow-Origin` header were "\*". But it does not fail: Because the value of the `Access-Control-Allow-Origin` header is "`https://foo.example`" (an actual origin) rather than the "`*`" wildcard, the credential-cognizant content is returned to the invoking web content.
 
 Note that the `Set-Cookie` response header in the example above also sets a further cookie. In case of failure, an exception—depending on the API used—is raised.
 
-All of these examples can be [seen working here](http://arunranga.com/examples/access-control/). The next section deals with the actual HTTP headers.
+All of these examples can be [seen working here](https://arunranga.com/examples/access-control/). The next section deals with the actual HTTP headers.
 
 ## Os cabeçalhos de resposta HTTP
 
@@ -402,10 +402,10 @@ Access-Control-Allow-Origin: <origin> | *
 
 The `origin` parameter specifies a URI that may access the resource. The browser must enforce this. For requests **without** credentials, the server may specify "\*" as a wildcard, thereby allowing any origin to access the resource.
 
-For example, to allow `http://mozilla.org` to access the resource, you can specify:
+For example, to allow `https://mozilla.org` to access the resource, you can specify:
 
 ```
-Access-Control-Allow-Origin: http://mozilla.org
+Access-Control-Allow-Origin: https://mozilla.org
 ```
 
 If the server specifies an origin host rather than "\*", then it could also include Origin in the Vary response header to indicate to clients that server responses will differ based on the value of the Origin request header.
@@ -517,8 +517,8 @@ Examples of this usage can be [found above](#Preflighted_requests).
 - [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
 - {{domxref("XMLHttpRequest")}}
 - [Fetch API](/pt-BR/docs/Web/API/Fetch_API)
-- [Using CORS with All (Modern) Browsers](http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx)
-- [Using CORS - HTML5 Rocks](http://www.html5rocks.com/en/tutorials/cors/)
+- [Using CORS with All (Modern) Browsers](https://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx)
+- [Using CORS - HTML5 Rocks](https://www.html5rocks.com/en/tutorials/cors/)
 - [Code Samples Showing `XMLHttpRequest` and Cross-Origin Resource Sharing](https://arunranga.com/examples/access-control/)
 - [Client-Side & Server-Side (Java) sample for Cross-Origin Resource Sharing (CORS)](https://github.com/jackblackevo/cors-jsonp-sample)
 - [Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)](/pt-BR/docs/Web/HTTP/Server-Side_Access_Control)

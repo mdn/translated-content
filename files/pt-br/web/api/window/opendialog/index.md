@@ -33,7 +33,7 @@ newWindow = openDialog(url, name, features, arg1, arg2, ...)
 ### Exemplo
 
 ```js
-var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+var win = openDialog("https://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
 ```
 
 ### Observações
@@ -51,7 +51,7 @@ The `chrome` and `dialog` features are always assumed on, unless explicitly turn
 Para passar parâmento extra para a janela de diálogo, você pode simplesmente pode fornece=lo depois do parâmetro `windowFeatures`:
 
 ```js
-openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+openDialog("https://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
 ```
 
 Os parâmetros serão empacotados em uma propriedade chamada `arguments` do tipo [Array](/en/Core_JavaScript_1.5_Reference/Global_Objects/Array), e essa propriedade será adicionada para a nova janela de diálogo.
@@ -73,7 +73,7 @@ Para ser possível passar valores de volta para a janela que chamou, você deve 
 
 ```js
 var retVals = { address: null, delivery: null };
-openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98, retVals);
+openDialog("https://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98, retVals);
 ```
 
 Se você definir as propriedades do objeto `retVals` no código de diálogo, conforme descrito abaixo, agora você pode acessá-los via array `retVals` depois do retorno da chamada de `openDialog()`.

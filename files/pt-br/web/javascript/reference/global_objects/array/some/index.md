@@ -74,7 +74,7 @@ function isBiggerThan10(element, index, array) {
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.17
-// Reference: http://es5.github.io/#x15.4.4.17
+// Reference: https://es5.github.io/#x15.4.4.17
 if (!Array.prototype.some) {
   Array.prototype.some = function(fun/*, thisArg*/) {
     'use strict';

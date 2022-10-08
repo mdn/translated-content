@@ -13,7 +13,7 @@ O elemento HTML _details_ (`<details>`) é usado como uma ferramenta de onde o u
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tag            | Nenhuma, tanto as tas iniciais quanto as finais são obrigatórias.                                                                                               |
 | Elementos pais permitidos | Qualquer elemento que aceite flow content.                                                                                                                      |
-| Documento normativo       | [HTML5, section 4.11.1](http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-details-element)                              |
+| Documento normativo       | [HTML5, section 4.11.1](https://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-details-element)                              |
 
 ## Atributos
 
@@ -37,7 +37,7 @@ Esse elemento implemena a interface[`HTMLDetailsElement`](/en/DOM/HTMLDetailsEle
 
 ### Demonstração
 
-[Demo](http://html5-demos.appspot.com/static/html5-whats-new/template/index.html#5)
+[Demo](https://html5-demos.appspot.com/static/html5-whats-new/template/index.html#5)
 
 ## Compatibilidade com navegadores
 

@@ -85,7 +85,7 @@ Neste exemplo, o externo {{htmlelement("div")}} possui uma borda vermelha de 2 p
 As implementações atuais na maioria dos navegadores removerão da árvore de acessibilidade qualquer elemento com um `display` valor de `contents`. Isso fará com que o elemento - e em algumas versões do navegador, seus elementos descendentes - não sejam mais anunciados pela tecnologia de leitura de tela. Esse é um comportamento incorreto de acordo com a especificação CSSWG.
 
 - [Marcação mais acessível com display: conteúdo | Hidde de Vries](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
-- [Exibição: conteúdo não é uma redefinição de CSS | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [Exibição: conteúdo não é uma redefinição de CSS | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
 ## Compatibilidade com navegadores
 
@@ -103,5 +103,5 @@ As implementações atuais na maioria dos navegadores removerão da árvore de a
   - {{CSSxRef("&lt;display-internal&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Exibição: conteúdo não é uma redefinição de CSS | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [Exibição: conteúdo não é uma redefinição de CSS | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 - [Marcação mais acessível com display: contents - hiddedevries.nl](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)

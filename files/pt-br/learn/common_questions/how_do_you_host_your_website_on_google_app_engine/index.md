@@ -24,7 +24,7 @@ Para usar as ferramentas do Google em seu próprio site ou aplicativo, você pre
 
 Cada projeto do Cloud Platform pode conter um aplicativo do App Engine. Vamos preparar um aplicativo para o nosso projeto.
 
-1. Precisamos de um aplicativo de amostra para publicar. Se você não tiver um para usar, faça o download e descompacte este [aplicativo de exemplo](http://gaesamplesite.appspot.com/downloads.html).
+1. Precisamos de um aplicativo de amostra para publicar. Se você não tiver um para usar, faça o download e descompacte este [aplicativo de exemplo](https://gaesamplesite.appspot.com/downloads.html).
 2. Dê uma olhada na estrutura da aplicação padrão — A pasta `website` contem o conteúdo do seu website e `app.yaml` é o seu arquivo de configuração da aplicação.
 
     - O conteúdo do seu website deve ser posto dentro da pasta `website`, e sua página de destino deve ser denominada `index.html`, mas fora isso ela pode conter qualquer coisa que você desejar.
@@ -56,7 +56,7 @@ Agora que nós temos o nosso projeto pronto e arquivos padrões de aplicativo co
 
 6. Digite um número para escolher a região onde você quer que sua aplicação se localize.
 7. Digite `Y` para confirmar.
-8. Agora navegue no seu navegador para _your-project-id_.appspot.com to para ver seu website online. Por exemplo, para a ID do projeto _gaesamplesite_, vá para [_gaesamplesite_.appspot.com](http://gaesamplesite.appspot.com/).
+8. Agora navegue no seu navegador para _your-project-id_.appspot.com to para ver seu website online. Por exemplo, para a ID do projeto _gaesamplesite_, vá para [_gaesamplesite_.appspot.com](https://gaesamplesite.appspot.com/).
 
 ## Veja também
 

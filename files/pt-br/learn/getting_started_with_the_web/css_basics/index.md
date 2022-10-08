@@ -104,7 +104,7 @@ Agora que exploramos algumas noções básicas de CSS, vamos começar a adiciona
 1. Primeiro de tudo, volte e encontre a [fonte do Google Fonts](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer#Fonte) que você armazenou em algum lugar seguro. Adicione o elemento {{htmlelement ("link")}} em algum lugar dentro do cabeçalho no `index.html` (novamente, em qualquer lugar entre as tags {{HTMLElement ("head")}} e `</ head>`). Será algo parecido com isto:
 
     ```html
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     ```
 
     Esse código vincula sua página a uma folha de estilo que baixa a família de fontes Open Sans junto com sua página web e permite que você a defina em seus elementos HTML usando sua própria folha de estilos.
@@ -232,7 +232,7 @@ Finalmente, centralizaremos a imagem para melhorar a aparência. Nós poderiamos
 
 ## Conclusão
 
-Se você seguiu todas as instruções desse artigo, você deve terminar com uma página parecida com essa (você também pode [ver nossa versão aqui](http://mdn.github.io/beginner-html-site-styled/)):
+Se você seguiu todas as instruções desse artigo, você deve terminar com uma página parecida com essa (você também pode [ver nossa versão aqui](https://mdn.github.io/beginner-html-site-styled/)):
 
 ![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-final.png)
 

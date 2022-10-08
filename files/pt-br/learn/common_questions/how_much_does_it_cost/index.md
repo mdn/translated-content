@@ -40,7 +40,7 @@ When launching a website, you may spend nothing, or your costs may go through th
 
 You likely have a text editor: such as, Notepad on Windows, Gedit on Linux, TextEdit on Mac. You'll have an easier time writing code if you choose an editor that color-codes, checks your syntax, and assists you with code structure.
 
-Many editors are free, for example [Atom](https://atom.io/), [Brackets](http://brackets.io/), [Bluefish](http://bluefish.openoffice.nl/), [TextWrangler](http://www.barebones.com/products/textwrangler/), [Eclipse](http://eclipse.org/), [Netbeans](https://netbeans.org/), and [Visual Studio Code](https://code.visualstudio.com/). Some, like [Sublime Text](http://www.sublimetext.com/), you can test as long as you like, but you're encouraged to pay. Some, like [PhpStorm](https://www.jetbrains.com/phpstorm/), can cost between a few dozen and 200 dollars, depending on the plan you purchase. Some of them, like [Microsoft Visual Studio](http://www.visualstudio.com/), can cost hundreds, or thousands of dollars; though Visual Studio Express is free for individual developers or open source projects. Often, for-pay editors will have a trial version.
+Many editors are free, for example [Atom](https://atom.io/), [Brackets](https://brackets.io/), [Bluefish](https://bluefish.openoffice.nl/), [TextWrangler](https://www.barebones.com/products/textwrangler/), [Eclipse](https://eclipse.org/), [Netbeans](https://netbeans.org/), and [Visual Studio Code](https://code.visualstudio.com/). Some, like [Sublime Text](https://www.sublimetext.com/), you can test as long as you like, but you're encouraged to pay. Some, like [PhpStorm](https://www.jetbrains.com/phpstorm/), can cost between a few dozen and 200 dollars, depending on the plan you purchase. Some of them, like [Microsoft Visual Studio](https://www.visualstudio.com/), can cost hundreds, or thousands of dollars; though Visual Studio Express is free for individual developers or open source projects. Often, for-pay editors will have a trial version.
 
 To start, we suggest trying out several editors, to get a sense of which works best for you. If you're only writing simple {{Glossary("HTML")}}, {{Glossary("CSS")}}, and {{Glossary("Javascript")}}, go with a simple editor.
 
@@ -50,7 +50,7 @@ Price does not reliably reflect a text editor's quality or usefulness. You have 
 
 Your system likely includes a simple image editor, or viewer: Paint on Windows, Eye of Gnome on Ubuntu, Preview on Mac. Those programs are relatively limited, you'll soon want a more robust editor to add layers, effects, and grouping.
 
-Editors can be free ([GIMP](http://www.gimp.org/), [Paint.NET](https://www.getpaint.net/)), moderately expensive ([PaintShop Pro](http://www.paintshoppro.com/), less than $100), or several hundred dollars ([Adobe Photoshop](https://www.adobe.com/products/photoshop.html)).
+Editors can be free ([GIMP](https://www.gimp.org/), [Paint.NET](https://www.getpaint.net/)), moderately expensive ([PaintShop Pro](https://www.paintshoppro.com/), less than $100), or several hundred dollars ([Adobe Photoshop](https://www.adobe.com/products/photoshop.html)).
 
 You can use any of them, as they will have similar functionality, though some are so comprehensive you'll never use every feature. If at some point you need to exchange projects with other designers, you should find out what tools they're using. Editors can all export finished projects to standard file formats, but each editor saves ongoing projects in its own specialized format. Most of the images on the internet are copyrighted, so it is better to check the license of the file before you use it. Sites like [Pixabay](https://pixabay.com/) provide images under CC0 license, so you can use, edit and publish them even with modification for commercial use.
 
@@ -58,7 +58,7 @@ You can use any of them, as they will have similar functionality, though some ar
 
 If you want to include video or audio into your website, you can either embed online services (for example YouTube, Vimeo, or Dailymotion), or include your own videos (see below for bandwidth costs).
 
-For audio files, you can find free software ([Audacity](http://audacity.sourceforge.net/?lang=en), [Wavosaur](http://www.wavosaur.com/)), or paying up to a few hundred dollars ([Sony Sound Forge](http://www.sonycreativesoftware.com/soundforge), [Adobe Audition](http://www.adobe.com/products/audition.html)). Likewise, video-editing software can be free ([PiTiVi](http://www.pitivi.org/), [OpenShot](http://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/mac/imovie/) for Mac), less than $100 ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)), or several hundred dollars ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](http://www.avid.com/US/products/family/Media-Composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). The software you received with your digital camera may cover all your needs.
+For audio files, you can find free software ([Audacity](https://audacity.sourceforge.net/?lang=en), [Wavosaur](https://www.wavosaur.com/)), or paying up to a few hundred dollars ([Sony Sound Forge](https://www.sonycreativesoftware.com/soundforge), [Adobe Audition](https://www.adobe.com/products/audition.html)). Likewise, video-editing software can be free ([PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/mac/imovie/) for Mac), less than $100 ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)), or several hundred dollars ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/US/products/family/Media-Composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). The software you received with your digital camera may cover all your needs.
 
 ### Publishing tools
 
@@ -66,7 +66,7 @@ You also need a way to upload files: from your hard drive to a distant web serve
 
 Each operating system includes an (S)FTP client, as part of its file manager. Windows Explorer, Nautilus (a common Linux file manager), and the Mac Finder all include this functionality. However, people often choose dedicated (S)FTP clients to display local or remote directories side-by-side and store server passwords.
 
-If you want to install an (S)FTP client, there are several reliable and free options: for example, [FileZilla](https://filezilla-project.org/) for all platforms, [WinSCP](http://winscp.net/) for Windows, [Cyberduck](https://cyberduck.io/) for Mac or Windows, [and more](https://en.wikipedia.org/wiki/List_of_FTP_server_software).
+If you want to install an (S)FTP client, there are several reliable and free options: for example, [FileZilla](https://filezilla-project.org/) for all platforms, [WinSCP](https://winscp.net/) for Windows, [Cyberduck](https://cyberduck.io/) for Mac or Windows, [and more](https://en.wikipedia.org/wiki/List_of_FTP_server_software).
 
 Because FTP is inherently insecure, you should make sure to use SFTP — the secure, encrypted version of FTP that most hosting sites you'll deal with these days will offer by default — or another secure solution like Rsync over SSH.
 
@@ -108,9 +108,9 @@ Your domain name has to be purchased through a domain name provider (a registrar
 
 ### Do-it-yourself hosting vs. “packaged” hosting
 
-When you want to publish a website, you could do everything by yourself: set up a database (if needed), Content Management System, or {{Glossary("CMS")}} (like [Wordpress](http://wordpress.org/), [Dotclear](http://dotclear.org/), [spip](http://www.spip.net/en_rubrique25.html), etc.), upload pre-made or your own templates.
+When you want to publish a website, you could do everything by yourself: set up a database (if needed), Content Management System, or {{Glossary("CMS")}} (like [Wordpress](https://wordpress.org/), [Dotclear](https://dotclear.org/), [spip](https://www.spip.net/en_rubrique25.html), etc.), upload pre-made or your own templates.
 
-You could use your hosting provider's environment, for roughly ten to fifteen dollars per month, or subscribe directly to a dedicated hosting service with pre-packaged CMSs (e.g., [Wordpress](http://wordpress.com/), [Tumblr](https://www.tumblr.com/), [Blogger](https://www.blogger.com/)). For the latter, you won't have to pay anything, but you may have less control over templating and other options.
+You could use your hosting provider's environment, for roughly ten to fifteen dollars per month, or subscribe directly to a dedicated hosting service with pre-packaged CMSs (e.g., [Wordpress](https://wordpress.com/), [Tumblr](https://www.tumblr.com/), [Blogger](https://www.blogger.com/)). For the latter, you won't have to pay anything, but you may have less control over templating and other options.
 
 ### Free hosting vs. paid hosting
 

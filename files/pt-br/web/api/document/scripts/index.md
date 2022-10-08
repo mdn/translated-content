@@ -33,4 +33,4 @@ if (scripts.length) {
 
 ## Especificação
 
-- {{spec("http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-scripts", "DOM: document scripts")}}
+- {{spec("https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-scripts", "DOM: document scripts")}}

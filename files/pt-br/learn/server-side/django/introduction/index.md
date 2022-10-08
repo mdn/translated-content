@@ -84,7 +84,7 @@ Django é um projeto de código aberto, colaborativo e próspero, com milhares d
 
 ## Quão popular é o Django?
 
-Não há nenhum método disponível e definitivo para medir a popularidade dos framework server-side (lado do servidor) (apesar de sites como [Hot Frameworks](http://hotframeworks.com/) tentam acessar a popularidade usando mecanismos como contar o numero de projetos no GitHub e perguntas no StackOverflow para cada cada platafroma). Uma questão melhor é se o Django é "popular o suficiente" para evitar problemas de plataformas não populares. Ele continua a evoluir? Você consegue ajuda se precisar? Existem oportunidades para você ganhar dinheiro se voce aprender Django?
+Não há nenhum método disponível e definitivo para medir a popularidade dos framework server-side (lado do servidor) (apesar de sites como [Hot Frameworks](https://hotframeworks.com/) tentam acessar a popularidade usando mecanismos como contar o numero de projetos no GitHub e perguntas no StackOverflow para cada cada platafroma). Uma questão melhor é se o Django é "popular o suficiente" para evitar problemas de plataformas não populares. Ele continua a evoluir? Você consegue ajuda se precisar? Existem oportunidades para você ganhar dinheiro se voce aprender Django?
 
 Baseado no número de sites com alto perfil que usam Django, o número de pessoas contribuindo para a base de código, e o número de pessoas provendo ambos suporte gratuito e pago, então sim, Django é um framework popular!
 

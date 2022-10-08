@@ -24,11 +24,11 @@ Este artigo apresenta os protocolos sobre os quais a API WebRTC é construída.
 
 ## ICE
 
-[Interactive Connectivity Establishment (ICE)](http://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment) é a estrutura que permite seu navegador web se conectar com outras pessoas. Existem muitas razões pelas quais uma conexão direta do Ponto A para o Ponto B simplesmente não funciona. Ele precisa ignorar firewalls que impediriam a abertura de conexões, fornecer um endereço exclusivo, como na maioria das situações, caso seu dispositivo não tiver um endereço IP público e retransmitir dados por meio de um servidor ou se seu roteador não permitir a conexão direta com seus pares . O ICE usa servidores STUN e / ou TURN para fazer isso, conforme descrito abaixo.
+[Interactive Connectivity Establishment (ICE)](https://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment) é a estrutura que permite seu navegador web se conectar com outras pessoas. Existem muitas razões pelas quais uma conexão direta do Ponto A para o Ponto B simplesmente não funciona. Ele precisa ignorar firewalls que impediriam a abertura de conexões, fornecer um endereço exclusivo, como na maioria das situações, caso seu dispositivo não tiver um endereço IP público e retransmitir dados por meio de um servidor ou se seu roteador não permitir a conexão direta com seus pares . O ICE usa servidores STUN e / ou TURN para fazer isso, conforme descrito abaixo.
 
 ## STUN
 
-[Session Traversal Utilities for **NAT** (STU**N**)](http://en.wikipedia.org/wiki/STUN) (sigla dentro de uma sigla) é um protocolo para descobrir seu endereço público e determinar quaisquer restrições em seu roteador que poderiam impedir uma conexão direta com um par.
+[Session Traversal Utilities for **NAT** (STU**N**)](https://en.wikipedia.org/wiki/STUN) (sigla dentro de uma sigla) é um protocolo para descobrir seu endereço público e determinar quaisquer restrições em seu roteador que poderiam impedir uma conexão direta com um par.
 
 O cliente enviará uma solicitação a um servidor STUN na Internet que responderá com o endereço público do cliente e se o cliente está ou não acessível por meio do NAT do roteador.
 
@@ -44,13 +44,13 @@ Alguns roteadores terão restrições sobre quem pode se conectar a dispositivos
 
 Alguns roteadores que usam NAT empregam uma restrição chamada ‘Symmetric NAT’ (_NAT simétrico_). Isso significa que o roteador só aceitará conexões de pares aos quais você já se conectou.
 
-[Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) destina-se a contornar a restrição de NAT simétrico abrindo uma conexão com um servidor TURN para que ele re-transmita toda informação. Você criaria uma conexão com um servidor TURN e avisaria a todos os pares (_peers_) para enviar pacotes para este servidor, que lhe encaminharia. Isso obviamente vem com alguma sobrecarga, então só é usado se não houver outras alternativas.
+[Traversal Using Relays around NAT (TURN)](https://en.wikipedia.org/wiki/TURN) destina-se a contornar a restrição de NAT simétrico abrindo uma conexão com um servidor TURN para que ele re-transmita toda informação. Você criaria uma conexão com um servidor TURN e avisaria a todos os pares (_peers_) para enviar pacotes para este servidor, que lhe encaminharia. Isso obviamente vem com alguma sobrecarga, então só é usado se não houver outras alternativas.
 
 ![An interaction between two users of a WebRTC application involving STUN and TURN servers.](https://mdn.mozillademos.org/files/6117/webrtc-turn.png)
 
 ## SDP
 
-[Session Description Protocol (SDP)](http://en.wikipedia.org/wiki/Session_Description_Protocol) é um padrão para descrever o conteúdo multimídia da conexão, como resolução, formatos, codecs, criptografia, etc., para que os dois pontos possam se entender uma vez que os dados estejam sendo transferidos. Em essência, são os metadados que descrevem o conteúdo e não o conteúdo da mídia em si.
+[Session Description Protocol (SDP)](https://en.wikipedia.org/wiki/Session_Description_Protocol) é um padrão para descrever o conteúdo multimídia da conexão, como resolução, formatos, codecs, criptografia, etc., para que os dois pontos possam se entender uma vez que os dados estejam sendo transferidos. Em essência, são os metadados que descrevem o conteúdo e não o conteúdo da mídia em si.
 
 Tecnicamente, então, SDP não é realmente um protocolo, mas um formato de dados usado para descrever a conexão que compartilha mídia entre dispositivos.
 

@@ -540,10 +540,10 @@ To validate a form, you have to ask yourself a few questions:
 
   - : In order to reduce the user's frustration, it's very important to provide as much helpful information as possible in order to guide them in correcting their inputs. You should offer up-front suggestions so they know what's expected, as well as clear error messages. If you want to dig into form validation UI requirements, there are some useful articles you should read:
 
-    - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
-    - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
-    - Six Revision: [Best Practices for Hints and Validation in Web Forms](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
-    - A List Apart: [Inline Validation in Web Forms](http://www.alistapart.com/articles/inline-validation-in-web-forms/)
+    - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](https://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
+    - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](https://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
+    - Six Revision: [Best Practices for Hints and Validation in Web Forms](https://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
+    - A List Apart: [Inline Validation in Web Forms](https://www.alistapart.com/articles/inline-validation-in-web-forms/)
 
 #### An example that doesn't use the constraint validation API
 
@@ -715,11 +715,11 @@ As you can see, it's not that hard to build a validation system on your own. The
 
 - Standalone library
 
-  - [Validate.js](http://rickharrison.github.com/validate.js/)
+  - [Validate.js](https://rickharrison.github.com/validate.js/)
 
 - jQuery plug-in:
 
-  - [Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation/)
+  - [Validation](https://bassistance.de/jquery-plugins/jquery-plugin-validation/)
 
 #### Remote validation
 

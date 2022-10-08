@@ -13,7 +13,7 @@ translation_of: Web/API/Element/touchstart_event
 ## Info Geral
 
 - Especificações
-  - : [Touch Events](http://w3c.github.io/touch-events/#event-touchstart)
+  - : [Touch Events](https://w3c.github.io/touch-events/#event-touchstart)
 - Interface
   - : {{domxref("TouchEvent")}}
 - Bubbles

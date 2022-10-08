@@ -61,7 +61,7 @@ div.removeEventListener('click', listener, false);
 
 ### Notas para Opera
 
-- Opera 12.00 fez com que o uso de `useCapture` seja opcional ([source](http://my.opera.com/ODIN/blog/2011/09/29/what-s-new-in-opera-development-snapshots-28-september-2011-edition)).
+- Opera 12.00 fez com que o uso de `useCapture` seja opcional ([source](https://my.opera.com/ODIN/blog/2011/09/29/what-s-new-in-opera-development-snapshots-28-september-2011-edition)).
 
 ### Notas para WebKit
 
@@ -73,7 +73,7 @@ div.removeEventListener('click', listener, false);
 
 ### Especificação
 
-- [removeEventListener](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener)
+- [removeEventListener](https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener)
 
 ## Polyfill para oferecer suporte aos navegadores antigos
 

@@ -168,13 +168,13 @@ Você pode até usar apenas referência de fragmento do documento por si só par
 
 Dois termos que você encontrará na Web são URL **absoluto** e URL **relativo**:
 
-**URL absoluto:** aponta para um local definido por sua localização absoluta na web, incluindo "protocolo" e "nome de domínio". Então, por exemplo, se uma página `index.html` for carregada para um diretório chamado `projeto` que fica dentro da raiz de um servidor web, e o domínio do site é `http://www.exemplo.com`, a página estará disponível em `http://www.exemplo.com/projeto/index.html` (ou mesmo apenas `http://www.exemplo.com/projeto/`, pois a maioria dos servidores web apenas procura uma página de destino como index.html para carregar, se não está especificado no URL.)
+**URL absoluto:** aponta para um local definido por sua localização absoluta na web, incluindo "protocolo" e "nome de domínio". Então, por exemplo, se uma página `index.html` for carregada para um diretório chamado `projeto` que fica dentro da raiz de um servidor web, e o domínio do site é `https://www.exemplo.com`, a página estará disponível em `https://www.exemplo.com/projeto/index.html` (ou mesmo apenas `https://www.exemplo.com/projeto/`, pois a maioria dos servidores web apenas procura uma página de destino como index.html para carregar, se não está especificado no URL.)
 
 Um URL absoluto sempre aponta para o mesmo local, não importa onde seja usado.
 
-**URL relativa:** aponta para um local _relativo_ ao arquivo do qual você está vinculando, mais como o que vimos na seção anterior. Por exemplo, se desejássemos vincular nosso arquivo de exemplo em `http://www.exemplo.com/projeto/index.html` para um arquivo PDF no mesmo diretório, o URL seria apenas o nome do arquivo — por exemplo, `project-brief.pdf` — nenhuma informação extra é necessária. Se o PDF estava disponível em um subdiretório dentro de `projects` chamado `pdfs`, o link relativo seria `pdfs/projeto-brief.pdf` (o URL absoluto equivalente seria `http://www.example.com/projects/pdfs/project-brief.pdf`).
+**URL relativa:** aponta para um local _relativo_ ao arquivo do qual você está vinculando, mais como o que vimos na seção anterior. Por exemplo, se desejássemos vincular nosso arquivo de exemplo em `https://www.exemplo.com/projeto/index.html` para um arquivo PDF no mesmo diretório, o URL seria apenas o nome do arquivo — por exemplo, `project-brief.pdf` — nenhuma informação extra é necessária. Se o PDF estava disponível em um subdiretório dentro de `projects` chamado `pdfs`, o link relativo seria `pdfs/projeto-brief.pdf` (o URL absoluto equivalente seria `https://www.example.com/projects/pdfs/project-brief.pdf`).
 
-Um URL relativo apontará para lugares diferentes, dependendo da localização real do arquivo ao qual você se refere — por exemplo, se tivermos movido nosso arquivo `index.html` para fora do diretório de projetos e para a raiz do site (no nível superior, não em qualquer diretório), o link relativo à URL referente a `pdfs/project-brief.pdf` agora apontaria para um arquivo localizado em `http://www.example.com/pdfs/project-brief.pdf`, não para um arquivo localizado em `http://www.example.com/projects/pdfs/project-brief.pdf`.
+Um URL relativo apontará para lugares diferentes, dependendo da localização real do arquivo ao qual você se refere — por exemplo, se tivermos movido nosso arquivo `index.html` para fora do diretório de projetos e para a raiz do site (no nível superior, não em qualquer diretório), o link relativo à URL referente a `pdfs/project-brief.pdf` agora apontaria para um arquivo localizado em `https://www.example.com/pdfs/project-brief.pdf`, não para um arquivo localizado em `https://www.example.com/projects/pdfs/project-brief.pdf`.
 
 ## Práticas recomendadas
 
@@ -231,15 +231,15 @@ Ao vincular a um arquivo que será baixado (como um documento PDF ou Word) ou tr
 Vejamos alguns exemplos, para ver que tipo de texto pode ser usado aqui:
 
 ```html
-<p><a href="http://www.example.com/large-report.pdf">
+<p><a href="https://www.example.com/large-report.pdf">
   Baixe o relatório de vendas (PDF, 10MB)
 </a></p>
 
-<p><a href="http://www.example.com/video-stream/">
+<p><a href="https://www.example.com/video-stream/">
   Assista ao vídeo (o fluxo abre em separado, qualidade HD)
 </a></p>
 
-<p><a href="http://www.example.com/car-game">
+<p><a href="https://www.example.com/car-game">
   Jogue o jogo de carro (requer Flash Player)
 </a></p>
 ```
@@ -305,7 +305,7 @@ Aqui está um exemplo que inclui um cc, bcc, assunto e corpo de texto:
 </a>
 ```
 
-> **Nota:** Os valores de cada campo devem ser codificados por URL, ou seja, com caracteres não imprimíveis (caracteres invisíveis, como guias, carriage returns e quebras de página) e espaços com [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding). Observe também o uso do ponto de interrogação (`?`) Para separar o URL principal dos valores do campo e do _e_ comercial (&) para separar cada campo no `mailto:` URL. Essa é a notação de consulta padrão do URL. Leia [O método GET](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method) para entender para que esta notação de consulta é mais comum.
+> **Nota:** Os valores de cada campo devem ser codificados por URL, ou seja, com caracteres não imprimíveis (caracteres invisíveis, como guias, carriage returns e quebras de página) e espaços com [percent-escaped](https://en.wikipedia.org/wiki/Percent-encoding). Observe também o uso do ponto de interrogação (`?`) Para separar o URL principal dos valores do campo e do _e_ comercial (&) para separar cada campo no `mailto:` URL. Essa é a notação de consulta padrão do URL. Leia [O método GET](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method) para entender para que esta notação de consulta é mais comum.
 
 Aqui estão alguns outros exemplos de URLs de `mailto:`
 

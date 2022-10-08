@@ -18,16 +18,16 @@ Algumas operações são restritas para conteúdos de mesma origem, e essa restr
 
 ## Exemplos de mesma origem
 
-| `http://example.com/app1/index.html` `http://example.com/app2/index.html` | Mesma origem pois possuem o mesmo esquema (`http`) e mesmo host (`example.com`)    |
+| `https://example.com/app1/index.html` `https://example.com/app2/index.html` | Mesma origem pois possuem o mesmo esquema (`http`) e mesmo host (`example.com`)    |
 | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `http://Example.com:80` `http://example.com`                              | Mesma origem pois o servidor entrega conteúdo HTTP através da porta 80 por padrão. |
+| `https://Example.com:80` `https://example.com`                              | Mesma origem pois o servidor entrega conteúdo HTTP através da porta 80 por padrão. |
 
 ## Exemplos de origens diferentes
 
-| `http://example.com/app1` `https://example.com/app2`                     | Esquemas diferentes |
+| `https://example.com/app1` `https://example.com/app2`                     | Esquemas diferentes |
 | ------------------------------------------------------------------------ | ------------------- |
-| `http://example.com` `http://www.example.com` `http://myapp.example.com` | Hosts diferentes    |
-| `http://example.com` `http://example.com:8080`                           | Portas diferentes   |
+| `https://example.com` `https://www.example.com` `https://myapp.example.com` | Hosts diferentes    |
+| `https://example.com` `https://example.com:8080`                           | Portas diferentes   |
 
 ## Especificações
 

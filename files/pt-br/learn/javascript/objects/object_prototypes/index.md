@@ -50,7 +50,7 @@ Vejamos um exemplo para tornar isso um pouco mais claro.
 
 ## Noções básicas sobre objetos de protótipo
 
-Aqui voltaremos ao exemplo em que terminamos de escrever nosso construtor `Person()` — carregamos o exemplo em seu navegador. Se você ainda não o conseguiu trabalhar no último artigo, use nosso exemplo [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)).
+Aqui voltaremos ao exemplo em que terminamos de escrever nosso construtor `Person()` — carregamos o exemplo em seu navegador. Se você ainda não o conseguiu trabalhar no último artigo, use nosso exemplo [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)).
 
 Neste exemplo, definimos uma função construtora, assim:
 
@@ -200,7 +200,7 @@ person1.constructor.name
 
 Vamos dar uma olhada em um exemplo de modificação da propriedade `prototype` de uma função construtora — os métodos adicionados ao protótipo estão então disponíveis em todas as instâncias de objeto criadas a partir do construtor. Neste ponto, finalmente adicionaremos algo ao protótipo do nosso construtor `Person()`.
 
-1. Volte para o nosso exemplo de [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) e faça uma cópia local do [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Abaixo do JavaScript existente, adicione o seguinte código, que adiciona um novo método à propriedade `prototype` do construtor:
+1. Volte para o nosso exemplo de [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) e faça uma cópia local do [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Abaixo do JavaScript existente, adicione o seguinte código, que adiciona um novo método à propriedade `prototype` do construtor:
 
     ```js
     Person.prototype.farewell = function() {
@@ -234,7 +234,7 @@ Person.prototype.farewell = function() {
 
 Mas o método `farewell()` ainda está disponível na instância do objeto `person1` — seus membros foram atualizados automaticamente para incluir o método `farewell()`.
 
-> **Nota:** Se você está tendo problemas para fazer este exemplo funcionar, dê uma olhada no nosso exemplo [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) (veja também [running live](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)).
+> **Nota:** Se você está tendo problemas para fazer este exemplo funcionar, dê uma olhada no nosso exemplo [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) (veja também [running live](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)).
 
 Você raramente verá propriedades definidas na propriedade `prototype`, porque elas não são muito flexíveis quando definidas dessa forma. Por exemplo, você poderia adicionar uma propriedade assim:
 

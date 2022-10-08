@@ -32,7 +32,7 @@ In terms of behavior, we want our widget to be usable with a mouse as well as wi
     - the widget was active and the user clicks anywhere outside the widget
     - the widget was active and the user moves the focus to another widget using the keyboard
 
-    > **Nota:** Moving the focus around the page is usually done through hitting the tab key, but this is not standard everywhere. For example cycling through links on a page is done in Safari by default using the [Option+Tab combination](http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/).
+    > **Nota:** Moving the focus around the page is usually done through hitting the tab key, but this is not standard everywhere. For example cycling through links on a page is done in Safari by default using the [Option+Tab combination](https://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/).
 
 - The widget is in its active state when:
 
@@ -66,11 +66,11 @@ For the purposes of our example, we'll stop with that; however, if you're a care
 
 Another fun example: what will happen if the user hits the up or down arrow keys while the widget is in the open state? This one is a little bit trickier. If you consider that the active state and the open state are completely different, the answer is again "nothing will happen" because we did not define any keyboard interactions for the opened state. On the other hand, if you consider that the active state and the open state overlap a bit, the value may change but the option will definitely not be highlighted accordingly, once again because we did not define any keyboard interactions over options when the widget is in its opened state (we have only defined what should happen when the widget is opened, but nothing after that).
 
-In our example, the missing specifications are obvious so we will handle them, but it can be a real problem on exotic new widgets, for which nobody has the slightest idea of what the right behavior is. So it's always good to spend time in this design stage, because if you define a behavior poorly, or forget to define one, it will be very hard to redefine it once the users have gotten used to it. If you have doubts, ask for the opinions of others, and if you have the budget for it, do not hesitate to [perform user tests](http://en.wikipedia.org/wiki/Usability_testing). This process is called UX Design. If you want to learn more about this topic, you should check out the following helpful resources:
+In our example, the missing specifications are obvious so we will handle them, but it can be a real problem on exotic new widgets, for which nobody has the slightest idea of what the right behavior is. So it's always good to spend time in this design stage, because if you define a behavior poorly, or forget to define one, it will be very hard to redefine it once the users have gotten used to it. If you have doubts, ask for the opinions of others, and if you have the budget for it, do not hesitate to [perform user tests](https://en.wikipedia.org/wiki/Usability_testing). This process is called UX Design. If you want to learn more about this topic, you should check out the following helpful resources:
 
-- [UXMatters.com](http://www.uxmatters.com/)
-- [UXDesign.com](http://uxdesign.com/)
-- [The UX Design section of SmashingMagazine](http://uxdesign.smashingmagazine.com/)
+- [UXMatters.com](https://www.uxmatters.com/)
+- [UXDesign.com](https://uxdesign.com/)
+- [The UX Design section of SmashingMagazine](https://uxdesign.smashingmagazine.com/)
 
 > **Nota:**Also, in most systems there is a way to open the {{HTMLElement("select")}} element to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with Alt+Down arrow under Windows and was not implemented in our example —but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
 
@@ -170,7 +170,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
      (to make sure the widget remains resizable if the user uses the
      browser's zoom in a text-only mode). The computations are made
      assuming 1em == 16px which is the default value in most browsers.
-     If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
+     If you are lost with px to em conversion, try https://riddle.pl/emcalc/ */
   font-size   : 0.625em; /* this (10px) is the new font size context for em value in this context */
   font-family : Verdana, Arial, sans-serif;
 
@@ -187,7 +187,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 
   /* The first declaration is for browsers that do not support linear gradients.
      The second declaration is because WebKit based browsers haven't unprefixed it yet.
-     If you want to support legacy browsers, try http://www.colorzilla.com/gradient-editor/ */
+     If you want to support legacy browsers, try https://www.colorzilla.com/gradient-editor/ */
   background : #F0F0F0;
   background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
   background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
@@ -212,7 +212,7 @@ We don't need an extra element to design the down arrow; instead, we're using th
 
 ```css
 .select:after {
-  content : "▼"; /* We use the unicode caracter U+25BC; see http://www.utf8-chartable.de */
+  content : "▼"; /* We use the unicode caracter U+25BC; see https://www.utf8-chartable.de */
   position: absolute;
   z-index : 1; /* This will be important to keep the arrow from overlapping the list of options */
   top     : 0;
@@ -321,7 +321,7 @@ Now that our design and structure are ready, we can write the JavaScript code to
 
 > **Aviso:** The following code is educational and should not be used as-is. Among many things, as we'll see, it is not future-proof and it will not work on legacy browsers. It also has redundant parts that should be optimized in production code.
 
-> **Nota:** Creating reusable widgets is something that can be a bit tricky. The [W3C Web Component draft](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) is one of the answers to this specific issue. [The X-Tag project](http://x-tags.org/) is a test implementation of this specification; we encourage you to take a look at it.
+> **Nota:** Creating reusable widgets is something that can be a bit tricky. The [W3C Web Component draft](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) is one of the answers to this specific issue. [The X-Tag project](https://x-tags.org/) is a test implementation of this specification; we encourage you to take a look at it.
 
 ### Why isn't it working?
 
@@ -424,7 +424,7 @@ window.addEventListener("load", function () {
 
 In the code we are about to build, we will use the standard DOM API to do all the work we need. However, although DOM API support has gotten much better in browsers, there are always issues with legacy browsers (especially with good old Internet Explorer).
 
-If you want to avoid trouble with legacy browsers, there are two ways to do so: using a dedicated framework such as [jQuery](http://jquery.com/), [$dom](https://github.com/julienw/dollardom), [prototype](http://prototypejs.org/), [Dojo](http://dojotoolkit.org/), [YUI](http://yuilibrary.com/), or the like, or by polyfilling the missing feature you want to use (which can easily be done through conditional loading, with the [yepnope](http://yepnopejs.com/) library for example).
+If you want to avoid trouble with legacy browsers, there are two ways to do so: using a dedicated framework such as [jQuery](https://jquery.com/), [$dom](https://github.com/julienw/dollardom), [prototype](https://prototypejs.org/), [Dojo](https://dojotoolkit.org/), [YUI](https://yuilibrary.com/), or the like, or by polyfilling the missing feature you want to use (which can easily be done through conditional loading, with the [yepnope](https://yepnopejs.com/) library for example).
 
 The features we plan to use are the following (ordered from the riskiest to the safest):
 
@@ -685,7 +685,7 @@ But wait a second, are we really done?
 
 We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!
 
-Fortunately, there is a solution and it's called [ARIA](/pt-BR/docs/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](http://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom widgets accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes is dead simple, so let's do it.
+Fortunately, there is a solution and it's called [ARIA](/pt-BR/docs/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom widgets accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes is dead simple, so let's do it.
 
 ### The `role` attribute
 
@@ -739,7 +739,7 @@ function updateValue(select, index) {
 };
 ```
 
-Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](http://www.nvda-project.org/) or [VoiceOver](http://www.apple.com/accessibility/voiceover/)):
+Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvda-project.org/) or [VoiceOver](https://www.apple.com/accessibility/voiceover/)):
 
 | Live example                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -752,9 +752,9 @@ We have seen all the basics of building a custom form widget, but as you can see
 
 Here are a few libraries you should consider before coding your own:
 
-- [jQuery UI](http://jqueryui.com/)
+- [jQuery UI](https://jqueryui.com/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
-- [Nice Forms](http://www.emblematiq.com/lab/niceforms/)
+- [Nice Forms](https://www.emblematiq.com/lab/niceforms/)
 - [And many more…](https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a)
 
 If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise. Also, you need to make it feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!

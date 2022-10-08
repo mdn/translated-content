@@ -11,7 +11,7 @@ o elemento HTML progress (\<progress>) é usado para visualizar o progresso de u
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de Tag         | Nenhum, ambas as tags (abertura e encerramento) são obrigatórias                                                                 |
 | Elemento pai permitido | Conteúdo fraseado (phrasing content), mas não deve haver descendentes do elemento progress                                       |
-| Documento normativo    | [HTML5, seção 4.10.16](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-progress-element) |
+| Documento normativo    | [HTML5, seção 4.10.16](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-progress-element) |
 
 ## Atributos
 

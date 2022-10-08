@@ -16,4 +16,4 @@ Flash é uma tecnologia obsolescente desenvolvida pela Adobe que possibilita apl
 
 - [Official web site](https://www.adobe.com/products/flashruntimes.html)
 - [Shumway, a free implementation by Mozilla](https://mozilla.github.io/shumway/)
-- [Gnash, a free implementation by GNU](http://gnashdev.org/)
+- [Gnash, a free implementation by GNU](https://gnashdev.org/)

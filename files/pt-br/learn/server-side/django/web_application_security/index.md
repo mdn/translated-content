@@ -63,7 +63,7 @@ O sistema de _templates_ do Django protege você da maioria dos ataques XSS [esc
 
 1. Inicie o website usando o servidor de desenvolvimento (`python3 manage.py runserver`).
 2. Abra o site em seu navegador local e faça login em sua conta de superusuário.
-3. Navegue até a página de criação do autor (que deve estar na URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
+3. Navegue até a página de criação do autor (que deve estar na URL: [`https://127.0.0.1:8000/catalog/author/create/`](https://127.0.0.1:8000/catalog/author/create/)).
 4. Digite os nomes e os detalhes de data para um novo usuário, e então acrescente o seguinte texto no campo Last Name :
     `<script>alert('Test alert');</script>`.
     ![Author Form XSS test](https://mdn.mozillademos.org/files/14305/author_create_form_alert_xss.png)
@@ -95,7 +95,7 @@ Para fazer isso, eles podem criar um arquivo HTML como o abaixo, que contém um 
 <html>
 <body onload='document.EvilForm.submit()'>
 
-<form action="http://127.0.0.1:8000/catalog/author/create/" method="post" name='EvilForm'>
+<form action="https://127.0.0.1:8000/catalog/author/create/" method="post" name='EvilForm'>
   <table>
     <tr><th><label for="id_first_name">First name:</label></th><td><input id="id_first_name" maxlength="100" name="first_name" type="text" value="Mad" required /></td></tr>
     <tr><th><label for="id_last_name">Last name:</label></th><td><input id="id_last_name" maxlength="100" name="last_name" type="text" value="Man" required /></td></tr>

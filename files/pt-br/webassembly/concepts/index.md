@@ -22,12 +22,12 @@ Além disso, você não precisa saber como criar código WebAssembly para tirar 
 
 WebAssembly está sendo criado em código aberto dentro do [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/) com os seguintes objetivos:
 
-- Ser rápido, eficiente e móvel — o código WebAssembly pode ser executado a velocidades próximas de nativas entre diferentes plataformas, tirando vantagem das [capacidades comuns de hardware](http://webassembly.org/docs/portability/#assumptions-for-efficient-execution).
+- Ser rápido, eficiente e móvel — o código WebAssembly pode ser executado a velocidades próximas de nativas entre diferentes plataformas, tirando vantagem das [capacidades comuns de hardware](https://webassembly.org/docs/portability/#assumptions-for-efficient-execution).
 - Ser compreensível e debuggable — WebAssembly é uma linguagem assembly de baixo nível, mas ela tem um formato de texto compreensível para os humanos (especificação pela qual ainda está sendo finalizado) que permite que o código seja escrito, visto e debugado à mão.
 - Manter a segurança — WebAssembly é especificado para ser executado num ambiente seguro e controlado. Como outros códigos web, ele reforçará as mesmas políticas de origem e permissões dos browsers.
 - Não quebrar a web — WebAssembly foi pensado de maneira que ele seja executado em harmonia com outras tecnologias web, mantendo a compatibilidade retroativa.
 
-> **Nota:** WebAssembly também terá usos fora dos ambientes web e JavaScript (veja [Non-web embeddings](http://webassembly.org/docs/non-web/)).
+> **Nota:** WebAssembly também terá usos fora dos ambientes web e JavaScript (veja [Non-web embeddings](https://webassembly.org/docs/non-web/)).
 
 ## Como o WebAssembly se encaixa na plataforma web?
 
@@ -36,14 +36,14 @@ A plataforma web pode ser dividida em duas partes:
 - Uma máquina virtual (VM) que executa o código de uma aplicação Web, por exemplo códigos JavaScript que enriquecem suas aplicações.
 - Um conjunto de [Web APIs](/pt-BR/docs/Web/API) que um Web app pode invocar para controlar funcionalidades web browser/device (dispositivo) e fazer as coisas acontecerem ([DOM](/pt-BR/docs/Web/API/Document_Object_Model), [CSSOM](/pt-BR/docs/Web/API/CSS_Object_Model), [WebGL](/pt-BR/docs/Web/API/WebGL_API), [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API), [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API), etc.).
 
-Historicamente, a VM tem tido permissão para carregar apenas JavaScript. Isto tem funcionado bem para nós, já que o JavaScript é poderoso o suficiente para resolver a maioria dos problemas da Web atualmente. No entanto, temos enfrentado problemas de performance, quando tentamos usar o JavaScript para tarefas mais intensivas como games em 3D, realidades virtual e aumentada, visão de computador, edição de imagens ou videos e um sem número de outros domínios que demandam performance nativa (veja [Casos de uso WebAssembly](http://webassembly.org/docs/use-cases/) para mais ideias).
+Historicamente, a VM tem tido permissão para carregar apenas JavaScript. Isto tem funcionado bem para nós, já que o JavaScript é poderoso o suficiente para resolver a maioria dos problemas da Web atualmente. No entanto, temos enfrentado problemas de performance, quando tentamos usar o JavaScript para tarefas mais intensivas como games em 3D, realidades virtual e aumentada, visão de computador, edição de imagens ou videos e um sem número de outros domínios que demandam performance nativa (veja [Casos de uso WebAssembly](https://webassembly.org/docs/use-cases/) para mais ideias).
 
 Adicionalmente, o custo de baixar, parsear e compilar aplicações JavaScript muito grandes, é proibitivo. Plataformas mobile e outras de recursos restritos, podem ampliar ainda mais estes gargalos de performance.
 
 WebAssembly é uma linguagem diferente do JavaScript, mas não foi pensada para ser sua substituta. Ao contrário, foi pensada para complementar e trabalhar lado a lado com o JavaScript, permitindo aos desenvolvedores web tirarem vantagem dos pontos fortes das duas linguagens:
 
 - JavaScript é uma linguagem de alto nível, flexível e expressiva o suficiente para escrever aplicações web. Ela tem muitas vantagens — é dinamicamente tipada, não ncessita ser compilada e tem um enorme ecossistema que disponibiliza poderosos frameworks, bibliotecas (libs) e outros recursos.
-- WebAssembly é uma linguagem de baixo nível do tipo assembly com um formato binário compacto, que é executado com performance próximo à nativa, que disponibiliza linguagens com modelos de memória de baixo nível como C++ e Rust, com uma compilação-alvo, assim podendo ser executados na web. (Note que o WebAssembly tem uma [meta futura de suporte de alto nível](http://webassembly.org/docs/high-level-goals/) para linguagens com modelos de memória garbage-collected.)
+- WebAssembly é uma linguagem de baixo nível do tipo assembly com um formato binário compacto, que é executado com performance próximo à nativa, que disponibiliza linguagens com modelos de memória de baixo nível como C++ e Rust, com uma compilação-alvo, assim podendo ser executados na web. (Note que o WebAssembly tem uma [meta futura de suporte de alto nível](https://webassembly.org/docs/high-level-goals/) para linguagens com modelos de memória garbage-collected.)
 
 Com o advento do WebAssembly nos browsers, a máquina virtual a que nos referimos antes, vai carregar e executar dois tipos de código — JavaScript E WebAssembly.
 
@@ -105,13 +105,13 @@ Portanto, parte do código está implementando a funcionalidade de cada bibliote
 
 O documento HTML gerado carrega o arquivo JavaScript e grava stdout em um {{htmlelement("textarea")}}. Se o aplicativo usar OpenGL, o HTML também conterá um elemento {{htmlelement("canvas")}} usado como destino de renderização. É muito fácil modificar a saída do Emscripten e transformá-la em qualquer aplicativo da web que você precisar.
 
-Você pode encontrar a documentação completa em Emscripten em [emscripten.org](http://emscripten.org), e um guia para implementar a cadeia de ferramentas e compilar seu próprio aplicativo C/C ++ no wasm em [Compiling from C/C++ to WebAssembly](/pt-BR/docs/WebAssembly/C_to_wasm).
+Você pode encontrar a documentação completa em Emscripten em [emscripten.org](https://emscripten.org), e um guia para implementar a cadeia de ferramentas e compilar seu próprio aplicativo C/C ++ no wasm em [Compiling from C/C++ to WebAssembly](/pt-BR/docs/WebAssembly/C_to_wasm).
 
 ### Escrevendo WebAssembly diretamente
 
 Deseja criar seu próprio compilador, ou suas próprias ferramentas, ou criar uma biblioteca JavaScript que gere o WebAssembly em tempo de execução?
 
-Da mesma maneira que as linguagens assembly físicas, o formato binário do WebAssembly tem uma representação de texto — os dois têm uma correspondência 1:1. Você pode escrever ou gerar esse formato manualmente e depois convertê-lo no formato binário com qualquer uma das várias [WebAssemby text-to-binary tools](http://webassembly.org/getting-started/advanced-tools/).
+Da mesma maneira que as linguagens assembly físicas, o formato binário do WebAssembly tem uma representação de texto — os dois têm uma correspondência 1:1. Você pode escrever ou gerar esse formato manualmente e depois convertê-lo no formato binário com qualquer uma das várias [WebAssemby text-to-binary tools](https://webassembly.org/getting-started/advanced-tools/).
 
 Para um guia simples de como fazer isso, consulte o artigo [Converting WebAssembly text format to wasm](/pt-BR/docs/WebAssembly/Text_format_to_wasm).
 

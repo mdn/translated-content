@@ -127,7 +127,7 @@ Por exemplo, um vermelho vivo que é 50% opaco pode ser representado como `rgb(2
 Designers e artistas frequentemente preferem trabalhar usando o método de cor {{interwiki("wikipedia", "HSL and HSV", "HSL")}} (Hue/Saturation/Luminosity, tradução: "Matiz/Saturação/Luminosidade"). Na web, cores HSL são representadas usando notação funcional HSL. O uso da função CSS `hsl()` é muito similar ao da função `rgb().`
 
 ![HSL color cylinder](https://mdn.mozillademos.org/files/15445/1200px-HSL_color_solid_cylinder_alpha_lowgamma.png)
-_**Um cilindro de cor HSL.** Hue (matiz) define a cor em si, com base na sua posição ao longo de um círculo que representa as cores do espectro visível. Saturation (saturação) é uma porcentagem que representa sua posição no caminho entre ser um tom de cinza ou ter a maior quantidade possível da matiz dada. Conforme o valor de Luminance ou Lightness (luminosidade) aumenta, a cor transiciona do mais escura possível até o mais clara possível (do preto ao branco). Imagem cortesia do usuário [SharkD](http://commons.wikimedia.org/wiki/User:SharkD) na [Wikipedia](https://www.wikipedia.org/), distribuída sob a licença [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0)._
+_**Um cilindro de cor HSL.** Hue (matiz) define a cor em si, com base na sua posição ao longo de um círculo que representa as cores do espectro visível. Saturation (saturação) é uma porcentagem que representa sua posição no caminho entre ser um tom de cinza ou ter a maior quantidade possível da matiz dada. Conforme o valor de Luminance ou Lightness (luminosidade) aumenta, a cor transiciona do mais escura possível até o mais clara possível (do preto ao branco). Imagem cortesia do usuário [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) na [Wikipedia](https://www.wikipedia.org/), distribuída sob a licença [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)._
 
 O valor do componente hue/matriz (H) de uma cor HSL é um ângulo partindo do vermelho e passando em círculo pelo amarelo, verde, ciano, azul e magenta (terminando de volta no vermelho em 360°) que identifica qual é a cor base. O valor pode ser especificado em qualquer unidade de {{cssxref("&lt;angle&gt;")}} (ângulo) suportada por CSS, incluindo graus (`deg`, de "degrees"), radianos (`rad`, de "radians"), grados (`grad`, de "gradians") ou revoluções (`turn`, de "turns"). Mas isso não controla quão vívida ou apagada, ou quão clara ou escura a cor é.
 
@@ -386,7 +386,7 @@ O primeiro passo é escolher sua **cor de base**. Essa é a cor que de certa for
 - A color that comes from imagery associated with what your content is about. If you're creating a web site about a given item or product, choose a color that's physically present on that item.
 - Browse web sites that let you look at lots of existing color palettes and imags to find inspiration.
 
-When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the web site [ColorZilla](http://www.colorzilla.com/) offers an extension ([Chrome](http://www.colorzilla.com/chrome) / [Firefox](http://www.colorzilla.com/firefox)) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.
+When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the web site [ColorZilla](https://www.colorzilla.com/) offers an extension ([Chrome](https://www.colorzilla.com/chrome) / [Firefox](https://www.colorzilla.com/firefox)) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.
 
 > **Note:** The advantage to averaging colors can be that often what looks like a solid color is actually a surprisingly varied number of related colors all used in concert, blending to create a desired effect. Picking just one of these pixels can result in getting a color that on its own looks very out of place.
 
@@ -397,7 +397,7 @@ Once you have decided on your base color, there are plenty of online tools that 
 A few examples (all free to use as of the time this list was last revised):
 
 - [MDN's color picker tool](/pt-BR/docs/Web/CSS/CSS_Colors/Color_picker_tool)
-- [Paletton](http://paletton.com)
+- [Paletton](https://paletton.com)
 - [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
 
 When designing your palette, be sure to keep in mind that in addition to the colors these tools typically generate, you'll probably also need to add some core neutral colors such as white (or nearly white), black (or nearly black), and some number of shades of gray.
@@ -433,7 +433,7 @@ Let's consider a quick example of selecting an appropriate color palette for a s
 
 Using an eyedropper tool, we identify a color we like and determine that the color in question is `#D79C7A`, which is an appropriate rusty orange-red color that's so stereotypical of the Martian surface.
 
-Having selected our base color, we need to build out our palette. We decide to use [Paletteon](http://www.paletteon.com/) to come up with the other colors we need. Upon opening Paletton, we see:
+Having selected our base color, we need to build out our palette. We decide to use [Paletteon](https://www.paletteon.com/) to come up with the other colors we need. Upon opening Paletton, we see:
 
 ![Right after loading Paletton.](https://mdn.mozillademos.org/files/15451/paletton1.png)
 

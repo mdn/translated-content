@@ -16,4 +16,4 @@ _Web Design Responsivo_ (**RWD em Inglês**) é um conceito de desenvolvimento W
 ### Conhecimento geral
 
 - [Progressive Web Apps](/pt-BR/docs/Web_Development/Mobile/Responsive_design)
-- [Responsive Web Design](http://msdn.microsoft.com/en-us/magazine/hh653584.aspx)
+- [Responsive Web Design](https://msdn.microsoft.com/en-us/magazine/hh653584.aspx)

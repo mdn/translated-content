@@ -18,7 +18,7 @@ Então qual o problema nós estamos tentando resolver com imagens responsivas? V
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)
 
-Isto funciona bem em um dispositivo de tela grande, como um laptop ou desktop (você pode [ver o exemplo ao vivo](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) e encontrar o [código-fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) no Github.) Nós não vamos discutir muito o CSS, exceto para dizer que:
+Isto funciona bem em um dispositivo de tela grande, como um laptop ou desktop (você pode [ver o exemplo ao vivo](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) e encontrar o [código-fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) no Github.) Nós não vamos discutir muito o CSS, exceto para dizer que:
 
 - O conteúdo do \<body> foi colocado para o máximo de 1200 pixels de largura (width) —em viewports acima, o body continua a 1200 pixels e centrado no espaço disponível. Em viewports abaixo, o body vai usar 100% da largura disponível.
 - A imagem de cabeçalho foi colocada para estar sempre no centro, não importando a largura do título. Então, se a página está sendo vista em uma tela mais estreita, o detalhe importante no centro da imagem (as pessoas) continuam sendo visto, e o excesso é perdido nos lados. E tem 200 pixels de altura.
@@ -42,7 +42,7 @@ Este tipo de problema não existe quando a web começou a existir, no começo do
 
 ## Como você faz para criar imagens responsivas?
 
-Nesta seção, nós iremos ver os dois problemas ilustrados acima e mostrar como resolvê-los usando fucionalidades de imagens responsivas do HTML. Você deve notar que nós iremos focar no elemento HTML {{htmlelement("img")}} para esta seção, como visto na área de conteúdo do exemplo acima - a imagem no cabeçalho da página é somente para decoração, e assim implementada usando imagens de background CSS. [CSS indiscutivelmente tem ferramentas melhores para design responsivo](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/) do que HTML, e nós iremos falar sobre estas ferramentas em um módulo futuro de CSS.
+Nesta seção, nós iremos ver os dois problemas ilustrados acima e mostrar como resolvê-los usando fucionalidades de imagens responsivas do HTML. Você deve notar que nós iremos focar no elemento HTML {{htmlelement("img")}} para esta seção, como visto na área de conteúdo do exemplo acima - a imagem no cabeçalho da página é somente para decoração, e assim implementada usando imagens de background CSS. [CSS indiscutivelmente tem ferramentas melhores para design responsivo](https://blog.cloudfour.com/responsive-images-101-part-8-css-images/) do que HTML, e nós iremos falar sobre estas ferramentas em um módulo futuro de CSS.
 
 ### Mudança de resolução: Diferentes tamanhos
 
@@ -52,7 +52,7 @@ Então, qual é o problema que nós queremos resolver com mudança de resoluçã
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
 ```
 
-Nós podemos, entretanto, usar dois novos atributos — {{htmlattrxref("srcset", "img")}} e {{htmlattrxref("sizes", "img")}} —para fornecer várias fontes adicionais juntamente com sugestões para ajudar o navegador a pegar a correta. Você pode ver um exemplo disso no nosso exemplo [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) no Github (ver também [o código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)):
+Nós podemos, entretanto, usar dois novos atributos — {{htmlattrxref("srcset", "img")}} e {{htmlattrxref("sizes", "img")}} —para fornecer várias fontes adicionais juntamente com sugestões para ajudar o navegador a pegar a correta. Você pode ver um exemplo disso no nosso exemplo [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) no Github (ver também [o código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)):
 
 ```html
 <img srcset="elva-fairy-320w.jpg 320w,
@@ -117,7 +117,7 @@ Próximo, você pode checar se o `srcset` está funcionando configurando a largu
 
 ### Mudança de Resolução: Mesmo tamanho, diferente resoluções
 
-Se você está dando suporte a múltiplas resoluções de vídeo, mas todas veem sua imagem no tamanho real na tela, você pode permitir ao navegador escolher uma resolução apropriada para a imagem usando `srcset` com x indentificadores e sem `sizes` - uma sintaxe um pouco mais fácil! Você pode encontrar um exemplo de como isto parece em [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (ver também [o código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
+Se você está dando suporte a múltiplas resoluções de vídeo, mas todas veem sua imagem no tamanho real na tela, você pode permitir ao navegador escolher uma resolução apropriada para a imagem usando `srcset` com x indentificadores e sem `sizes` - uma sintaxe um pouco mais fácil! Você pode encontrar um exemplo de como isto parece em [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (ver também [o código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
 
 ```html
 <img srcset="elva-fairy-320w.jpg,
@@ -140,13 +140,13 @@ Neste caso, `sizes` não é preciso - o navegador simplesmente encontra qual res
 
 Recapitulando, o problema de direção de arte involve querer mudar a imagem mostrada para se adequar a diferentes tamanhos de tela. Por exemplo, se uma foto de um grande panorama com uma pessoa no centro é mostrada em uma página quando visualizada em um navegador de desktop, então é encolhido quando a página é vista em um navegador de celular, ficará ruim pois a pessoa no centro aparecerá bem pequena e difícil de ver. Provavelmente seria melhor mostrar uma imagem menor e em formato retrato (em pé) no celular, que mostrará a pessoa ampliada. O elemento {{htmlelement("picture")}} permite a nós implementar justamente este tipo de solução.
 
-Voltando para o nosso exemplo [not-responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), nós temos uma imagem que precisa de uma direção de arte:
+Voltando para o nosso exemplo [not-responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), nós temos uma imagem que precisa de uma direção de arte:
 
 ```html
 <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
 ```
 
-Vamos consertar isso, com {{htmlelement("picture")}}! Como [`<video>` e `<audio>`](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), O elemento `<picture>` é um invólocro contendo muitos elementos {{htmlelement("source")}} que fornecem muitas fontes diferentes para o navegador escolher, seguido pelo elemento mais importante {{htmlelement("img")}}. O código em [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ficará assim então:
+Vamos consertar isso, com {{htmlelement("picture")}}! Como [`<video>` e `<audio>`](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), O elemento `<picture>` é um invólocro contendo muitos elementos {{htmlelement("source")}} que fornecem muitas fontes diferentes para o navegador escolher, seguido pelo elemento mais importante {{htmlelement("img")}}. O código em [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ficará assim então:
 
 ```html
 <picture>
@@ -211,7 +211,7 @@ Isto também encerra o módulo [Multimedia and embedding](/pt-BR/docs/Learn/HTML
 
 ## Veja também
 
-- [Jason Grigsby's excelente introdução a imagens responsivas](http://blog.cloudfour.com/responsive-images-101-definitions)
+- [Jason Grigsby's excelente introdução a imagens responsivas](https://blog.cloudfour.com/responsive-images-101-definitions)
 - [Imagens respondivas: Se você está mudando de resolução, use srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — Inclui mais explicação sobre como o navegador resolve qual imagem usar
 - {{htmlelement("img")}}
 - {{htmlelement("picture")}}

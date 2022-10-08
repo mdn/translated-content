@@ -14,11 +14,11 @@ Normalmente páginas HTML podem ser consideradas bi-dimensionais, pois texto, im
 
 > _Em CSS 2.1, cada caixa tem uma posição nas três dimensões. Em adição às suas posições na horizontal e vertical, caixas ficam no "eixo-z" e são formatadas uma em cima da outra. Posições no Eixo-Z são particularmente relevantes quando caixas se sobrepõem visualmente._
 
-(from [CSS 2.1 Section 9.9.1 - Layered presentation](http://www.w3.org/TR/CSS21/visuren.html#z-index))
+(from [CSS 2.1 Section 9.9.1 - Layered presentation](https://www.w3.org/TR/CSS21/visuren.html#z-index))
 
 Isso significa que as regras de CSS te permitem posicionar caixas em camadas em adição ao _render_ normal da camada (level 0). A posição Z de cada camada é expressa como um inteiro representando a ordem da pilha para renderização. Números maiores significam que são mais próximos do observador. A posição Z pode ser controlada pela propriedade CSS {{ cssxref("z-index")}}.
 
-Usar z-index aparenta ser extremamente fácil: uma única propriedade, endereçada a um único número inteiro, com um comportamento fácil-de-entender. No entanto, quando o z-index é aplicado para a hierarquia complexa dos elementos de HTML, seu comportamento pode ser difícil de entender ou até imprevisível. Isso é devido às complexas regras de _stacking_. Uma sessão dedicada foi reservada na especificação do CSS [CSS-2.1 Appendix E](http://www.w3.org/TR/CSS21/zindex.html) para explicar melhor essas regras.
+Usar z-index aparenta ser extremamente fácil: uma única propriedade, endereçada a um único número inteiro, com um comportamento fácil-de-entender. No entanto, quando o z-index é aplicado para a hierarquia complexa dos elementos de HTML, seu comportamento pode ser difícil de entender ou até imprevisível. Isso é devido às complexas regras de _stacking_. Uma sessão dedicada foi reservada na especificação do CSS [CSS-2.1 Appendix E](https://www.w3.org/TR/CSS21/zindex.html) para explicar melhor essas regras.
 
 Esse artigo tentará explicar essas regras, com algumas simplificações e vários exemplos.
 
@@ -35,5 +35,5 @@ _Note of the author: Thanks to Wladimir Palant and Rod Whiteley for the review\.
 ### Original Document Information
 
 - Author(s): Paolo Lombardi
-- This article is the English translation of an article I wrote in Italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- This article is the English translation of an article I wrote in Italian for [YappY](https://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
 - Last Updated Date: July 9th, 2005

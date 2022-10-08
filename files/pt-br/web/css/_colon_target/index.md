@@ -17,7 +17,7 @@ A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:target`** represen
 Por exemplo, a seguinte URL tem um fragmento (denotado pelo sinal de _#_) que aponta para o elemento chamado `section2`:
 
 ```
-http://www.example.com/index.html#section2
+https://www.example.com/index.html#section2
 ```
 
 O seguinte elemento será selecionado pelo seletor `:target` quando a URL for igual acima:

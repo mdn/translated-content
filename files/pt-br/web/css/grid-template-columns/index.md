@@ -123,7 +123,7 @@ grid-template-columns: unset;
 
 - Propriedades CSS relacionadas: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
 - Guia do _layout_ em grade: _[Basic concepts of grid layout - Grid Tracks](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Grid_Tracks)_
-- Tutorial em vídeo: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
+- Tutorial em vídeo: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
 
 1. [**CSS**](/pt-BR/docs/Web/CSS)
 2. **[Referência do CSS](/pt-BR/docs/Web/CSS/Reference)**

@@ -162,10 +162,10 @@ CSP permite múltiplas políticas sendo especificadas para um recurso, através 
 Você pode usar o cabeçalho `Content-Security-Policy` mais de uma vez como no exemplo abaixo. Preste atenção a diretiva {{CSP("connect-src")}} aqui. Mesmo que a segunda política permitiria a conexão, a primeira política contém `connect-src 'none'`. Adicionando políticas adicionais _podem somente restringir_ as capacidades do recurso protegido, o que significa que não haverá conexão permitida e, como política mais restrita, `connect-src 'none'` é imposto.
 
 ```
-Content-Security-Policy: default-src 'self' http://example.com;
+Content-Security-Policy: default-src 'self' https://example.com;
                          connect-src 'none';
-Content-Security-Policy: connect-src http://example.com/;
-                         script-src http://example.com/
+Content-Security-Policy: connect-src https://example.com/;
+                         script-src https://example.com/
 ```
 
 ## Exemplos

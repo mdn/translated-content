@@ -24,48 +24,48 @@ Também incluímos uma seção de referências para que você possa, facilmente,
 
 ## Leve jogos nativos para a Web
 
-Se você é programador nativo (codifica jogos em C++ por exemplo) e tem interesse em levar os seus jogos para a Web, você deve aprender mais sobre a nossa ferramenta [Emscripten](http://kripken.github.io/emscripten-site/index.html) — é uma LLVM para o compilador JavaScript que carrega bytecode LLVM (exemplo: código gerado do C/C++ usando Clang, ou de qualquer outra linguagem de programação) e compila esses bytecodes para [asm.js](/pt-BR/docs/Games/Tools/asm.js), que pode rodar na Web.
+Se você é programador nativo (codifica jogos em C++ por exemplo) e tem interesse em levar os seus jogos para a Web, você deve aprender mais sobre a nossa ferramenta [Emscripten](https://kripken.github.io/emscripten-site/index.html) — é uma LLVM para o compilador JavaScript que carrega bytecode LLVM (exemplo: código gerado do C/C++ usando Clang, ou de qualquer outra linguagem de programação) e compila esses bytecodes para [asm.js](/pt-BR/docs/Games/Tools/asm.js), que pode rodar na Web.
 
 Para começar, veja:
 
-- [Sobre Emscripten](http://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html) - introdução que inclui detalhes de alto nível.
-- [Baixar e instalar](http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html) - para instalar o conjunto de ferramentas.
-- [Emscripten Tutorial](http://kripken.github.io/emscripten-site/docs/getting_started/Tutorial.html) - um tutorial que vai te mostrar como começar.
+- [Sobre Emscripten](https://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html) - introdução que inclui detalhes de alto nível.
+- [Baixar e instalar](https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html) - para instalar o conjunto de ferramentas.
+- [Emscripten Tutorial](https://kripken.github.io/emscripten-site/docs/getting_started/Tutorial.html) - um tutorial que vai te mostrar como começar.
 
 ## Exemplos
 
-Para uma lista de exemplos de jogos web, veja a nossa [página de exemplos](/pt-BR/docs/Games/Examples). Também dê uma olhada em [openwebgames.com](http://www.openwebgames.com/) para mais exemplos e recursos úteis!
+Para uma lista de exemplos de jogos web, veja a nossa [página de exemplos](/pt-BR/docs/Games/Examples). Também dê uma olhada em [openwebgames.com](https://www.openwebgames.com/) para mais exemplos e recursos úteis!
 
-[![](https://mdn.mozillademos.org/files/12790/owg-logo-dark.svg)](http://www.openwebgames.com)
+[![](https://mdn.mozillademos.org/files/12790/owg-logo-dark.svg)](https://www.openwebgames.com)
 
 ## Veja também
 
-- [Desenvolva Novos Jogos](http://buildnewgames.com/)
+- [Desenvolva Novos Jogos](https://buildnewgames.com/)
   - : Um portal colaborativo com um grande número de tutoriais de desenvolvimento de jogos web. Não tem estado muito ativo ultimamente, mas ainda possui algumas dicas boas.
-- [Creative JS](http://creativejs.com/)
+- [Creative JS](https://creativejs.com/)
   - : Uma coletânea de impressivas técnicas e experimentos Javascript, não específicas para jogos mas, ainda assim, úteis. Não tem estado muito ativo ultimamente, mas também possui algumas dicas boas.
-- [Padrões de desenvolvimento de jogos](http://gameprogrammingpatterns.com/)
+- [Padrões de desenvolvimento de jogos](https://gameprogrammingpatterns.com/)
   - : Um e-book, escrito por Bob Nystrom, que discute padrões de programação no contexto de desenvolvimento de jogos com o objetivo de ajudar desenvolvedores a produzir códigos mais efetivos e eficientes.
-- ~~[Blog Artillery](http://blog.artillery.com/)~~ - Inativo
+- ~~[Blog Artillery](https://blog.artillery.com/)~~ - Inativo
   - : A empresa de jogos HTML5 Artillery possui alguns artigos interessantes no seu blogue.
 - [Desenvolvendo jogos para o Firefox OS](https://leanpub.com/buildinggamesforfirefoxos/)
   - : Um guia rápido para criar jogos 2D com HTML5, para a sua distribuição no Firefox OS e outras plataformas móveis.
-- [Gamedev.js Weekly](http://gamedevjsweekly.com/)
+- [Gamedev.js Weekly](https://gamedevjsweekly.com/)
   - : Boletim de notícias semanal sobre desenvolvimento de jogos HTML5, lançado toda Sexta-Feira. Contém os últimos artigos, tutoriais, ferramentas e recursos.
-- [HTML5 Game Devs Forum](http://www.html5gamedevs.com/)
+- [HTML5 Game Devs Forum](https://www.html5gamedevs.com/)
   - : Fóruns para desenvolvedores, criadores de framework e publicadores. Faça perguntas, obtenha retorno, ajude outras pessoas.
 
-- [HTML5 Game Engine](http://html5gameengine.com/)
+- [HTML5 Game Engine](https://html5gameengine.com/)
   - : Lista dos frameworks HTML5 mais populares para jogos, juntamente com a sua classificação, benefícios e exemplos.
-- [JSBreakouts](http://www.jsbreakouts.org/)
+- [JSBreakouts](https://www.jsbreakouts.org/)
   - : Compare JavaScript clonando em diferentes frameworks para te ajudar a escolher o melhor para você.
-- [Tuts+ Desenvolvimento de Jogos](http://gamedevelopment.tutsplus.com/)
+- [Tuts+ Desenvolvimento de Jogos](https://gamedevelopment.tutsplus.com/)
   - : Tutoriais e artigos sobre desenvolvimento de jogos em geral.
-- [#BBG IRC chat](http://webchat.freenode.net/?channels=bbg)
+- [#BBG IRC chat](https://webchat.freenode.net/?channels=bbg)
   - : Fale, diretamente, com desenvolvedores, em tempo real.
-- [HTML5 Gamedev Starter](http://html5devstarter.enclavegames.com/)
+- [HTML5 Gamedev Starter](https://html5devstarter.enclavegames.com/)
   - : Partida para novos desenvolvedores de jogos, uma lista organizada de links para vários recursos úteis na web.
-- [js13kGames](http://js13kgames.com/)
+- [js13kGames](https://js13kgames.com/)
   - : Competição de codificação JavaScript para desenvolvedores de jogos HTML5 com tamanho de arquivo limitado a 13 kilobytes. Todos os jogos submetidos estão disponíveis no Github para leitura.
 - [Mozilla Hacks blog](https://hacks.mozilla.org/category/games/)
   - : Categoria de Jogos no Mozilla Hacks blog, contém artigos interessantes relacionados a gamedev.

@@ -104,7 +104,7 @@ switch (foo) {
 
 Referência para esta técnica abaixo:
 
-[- Switch statement multiple cases in JavaScript (Stack Overflow)](http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
+[- Switch statement multiple cases in JavaScript (Stack Overflow)](https://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
 
 #### Multi-Caso - Operação Simples
 

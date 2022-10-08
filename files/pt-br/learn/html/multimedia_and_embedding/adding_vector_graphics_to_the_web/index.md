@@ -59,7 +59,7 @@ As a simple example, the following code creates a circle and a rectangle:
 <svg version="1.1"
      baseProfile="full"
      width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="https://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="black" />
   <circle cx="150" cy="100" r="90" fill="blue" />
 </svg>
@@ -84,7 +84,7 @@ So why would anyone want to use raster graphics over SVG? Well, SVG does have so
 
 Raster graphics are arguably better for complex precision images such as photos, for the reasons described above.
 
-> **Nota:** In Inkscape, save your files as Plain SVG to save space. Also, please refer to this [article describing how to prepare SVGs for the Web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
+> **Nota:** In Inkscape, save your files as Plain SVG to save space. Also, please refer to this [article describing how to prepare SVGs for the Web](https://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
 
 ## Adding SVG to your pages
 
@@ -323,7 +323,7 @@ In the last article of this module we will explore responsive images in detail, 
 ## See also
 
 - [SVG tutorial](/pt-BR/docs/Web/SVG/Tutorial/Getting_Started) on MDN
-- [Quick tips for responsive SVGs](http://thenewcode.com/744/Making-SVG-Responsive)
+- [Quick tips for responsive SVGs](https://thenewcode.com/744/Making-SVG-Responsive)
 - [Sara Soueidan's tutorial on responsive SVG images](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
 - [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)

@@ -86,7 +86,7 @@ O objeto de relatório JSON contém os seguintes dados:
 
 ## Exemplo de relatório de violação
 
-Vamos considerar a página localizada em `http://example.com/signup.html`. Ele usa a seguinte política, desabilitando tudo menos arquivos de estilo de `cdn.example.com`.
+Vamos considerar a página localizada em `https://example.com/signup.html`. Ele usa a seguinte política, desabilitando tudo menos arquivos de estilo de `cdn.example.com`.
 
 ```
 Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
@@ -107,14 +107,14 @@ O HTML de `signup.html` se parece com isto:
 </html>
 ```
 
-Você consegue observar a violação? Arquivos de estilos são permitidos serem carregados somente de `cdn.example.com`, entretanto o site tenta carregar um de sua origem (`http://example.com`). O navegador capaz de executar CSP irá mandar o seguinte relatório de violação como requisição POST para `http://example.com/_/csp-reports`, quando o documento é visitado:
+Você consegue observar a violação? Arquivos de estilos são permitidos serem carregados somente de `cdn.example.com`, entretanto o site tenta carregar um de sua origem (`https://example.com`). O navegador capaz de executar CSP irá mandar o seguinte relatório de violação como requisição POST para `https://example.com/_/csp-reports`, quando o documento é visitado:
 
 ```js
 {
   "csp-report": {
-    "document-uri": "http://example.com/signup.html",
+    "document-uri": "https://example.com/signup.html",
     "referrer": "",
-    "blocked-uri": "http://example.com/css/style.css",
+    "blocked-uri": "https://example.com/css/style.css",
     "violated-directive": "style-src cdn.example.com",
     "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports",
     "disposition": "report"
@@ -122,7 +122,7 @@ Você consegue observar a violação? Arquivos de estilos são permitidos serem 
 }
 ```
 
-Como você pode ver, o relatório inclui o caminho completo para o recurso violado em `blocked-uri`. Isso não é sempre o caso. Por exemplo, quando o `signup.html` irá tentar carregar o CSS de `http://anothercdn.example.com/stylesheet.css`, o navegador não irá incluir o caminho completo, somente a origem será inclusa (`http://anothercdn.example.com`). Isso é feito para prevenir o vazamento de informações sensíveis sobre recursos entre origens.
+Como você pode ver, o relatório inclui o caminho completo para o recurso violado em `blocked-uri`. Isso não é sempre o caso. Por exemplo, quando o `signup.html` irá tentar carregar o CSS de `https://anothercdn.example.com/stylesheet.css`, o navegador não irá incluir o caminho completo, somente a origem será inclusa (`https://anothercdn.example.com`). Isso é feito para prevenir o vazamento de informações sensíveis sobre recursos entre origens.
 
 ## Especificações
 

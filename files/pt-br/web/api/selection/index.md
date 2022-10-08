@@ -94,7 +94,7 @@ var range  = selObj.getRangeAt(0);
 - `selObj` é um objeto selection
 - `range` é um objeto {{DOMxRef("Range")}}
 
-Como consta nas [Especificações da API de seleção](http://www.w3.org/TR/selection-api/#h_note_15), a API foi inicialmente criada pela Netscape e usados multiplos intervalos, por instância, para permitir ao usuário selecionar uma coluna de uma {{HTMLElement("table")}}. Outros navegadores como Gecko não implementaram multiplos intervalos, e a especificação exige que a seleção sempre tenha um único intervalo.
+Como consta nas [Especificações da API de seleção](https://www.w3.org/TR/selection-api/#h_note_15), a API foi inicialmente criada pela Netscape e usados multiplos intervalos, por instância, para permitir ao usuário selecionar uma coluna de uma {{HTMLElement("table")}}. Outros navegadores como Gecko não implementaram multiplos intervalos, e a especificação exige que a seleção sempre tenha um único intervalo.
 
 ### Seleção e foco de input
 

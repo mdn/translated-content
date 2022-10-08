@@ -20,7 +20,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - type
   - : Este atributo define a linguagem de estilo como um tipo MIME (charset não deve ser especificado). ' text/css' presume se este atributo estiver ausente.
 - media
-  - : Qual mídia deve aplicar-se a este estilo. Deve ser uma consulta de mídia, consulte <http://dev.w3.org/csswg/css3-mediaqueries>.
+  - : Qual mídia deve aplicar-se a este estilo. Deve ser uma consulta de mídia, consulte <https://dev.w3.org/csswg/css3-mediaqueries>.
 - scoped
   - : Se este atributo está presente, então o estilo aplica-se apenas ao seu elemento pai. Se está ausente, o estilo aplica-se ao documento inteiro.
 - title

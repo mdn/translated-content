@@ -28,7 +28,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - {{Htmlattrdef ("href")}}
   - : A meta de hyperlink para a área. Seu valor é uma URL válida. Em HTML4, quer este atributo ou o **nohref** atributo deve estar presente no elemento. Em HTML5, este atributo pode ser omitido; em caso afirmativo, o elemento de área não representa um hiperlink.
 - {{Htmlattrdef ("hreflang")}} {{HTMLVersionInline ("5")}}
-  - : Indica o idioma do recurso ligado. Os valores permitidos são determinados por [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt) . Utilize este atributo somente se a **href** atributo está presente.
+  - : Indica o idioma do recurso ligado. Os valores permitidos são determinados por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) . Utilize este atributo somente se a **href** atributo está presente.
 - {{Htmlattrdef ("name")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}
   - : Defina um nome para a área clicável de modo que possa ser programado por navegadores mais antigos.
 - {{Htmlattrdef ("media")}} {{HTMLVersionInline ("5")}}
@@ -58,7 +58,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     Utilize este atributo somente se a **href** atributo está presente.
 
 - {{Htmlattrdef ("type")}}
-  - : Este atributo especifica o tipo de mídia na forma de um tipo MIME para o destino do link. Geralmente, este é fornecido informações estritamente como consultivo; no entanto, no futuro, um navegador pode adicionar um pequeno ícone para os tipos de multimédia. Por exemplo, um navegador pode adicionar um pequeno ícone de alto-falante quando o tipo está definido para áudio / wav. Para obter uma lista completa de tipos MIME reconhecidos, consulte [http://www.w3.org/TR/html4/references.html # REF-MIMETYPES](http://www.w3.org/TR/html4/references.html#ref-MIMETYPES) . Utilize este atributo somente se a **href** atributo está presente.
+  - : Este atributo especifica o tipo de mídia na forma de um tipo MIME para o destino do link. Geralmente, este é fornecido informações estritamente como consultivo; no entanto, no futuro, um navegador pode adicionar um pequeno ícone para os tipos de multimédia. Por exemplo, um navegador pode adicionar um pequeno ícone de alto-falante quando o tipo está definido para áudio / wav. Para obter uma lista completa de tipos MIME reconhecidos, consulte [https://www.w3.org/TR/html4/references.html # REF-MIMETYPES](https://www.w3.org/TR/html4/references.html#ref-MIMETYPES) . Utilize este atributo somente se a **href** atributo está presente.
 
 ## Exemplo
 

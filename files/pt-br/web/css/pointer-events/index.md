@@ -70,17 +70,17 @@ img {
 
 ### Exemplo 2
 
-Makes the link to `http://example.com` non-reactive.
+Makes the link to `https://example.com` non-reactive.
 
 ```html
 <ul>
   <li><a href="https://developer.mozilla.org">MDN</a></li>
-  <li><a href="http://example.com">example.com</a></li>
+  <li><a href="https://example.com">example.com</a></li>
 </ul>
 ```
 
 ```css
-a[href="http://example.com"] {
+a[href="https://example.com"] {
   pointer-events: none;
 }
 ```
@@ -101,7 +101,7 @@ Esta propriedade pode também ser usada para alcançar melhores taxas de quadros
 | -------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('SVG1.1', 'interact.html#PointerEventsProperty', 'pointer-events')}} | {{Spec2('SVG1.1')}} |            |
 
-Se extende para elementos HTML, embora presente nos primeiros rascunhos do Módulo Básico de Interface do Usuário do CSS nivel 3, foi empurrado para o [nível 4](http://wiki.csswg.org/spec/css4-ui#pointer-events).
+Se extende para elementos HTML, embora presente nos primeiros rascunhos do Módulo Básico de Interface do Usuário do CSS nivel 3, foi empurrado para o [nível 4](https://wiki.csswg.org/spec/css4-ui#pointer-events).
 
 ## Compatibilidade do navegador
 
@@ -110,5 +110,5 @@ Se extende para elementos HTML, embora presente nos primeiros rascunhos do Módu
 ## Veja também
 
 - The SVG attribute {{SVGAttr("pointer-events")}}
-- [WebKit Specs PointerEventsProperty](http://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
-- [60fps scrolling using pointer-events: none](http://www.thecssninja.com/javascript/pointer-events-60fps)
+- [WebKit Specs PointerEventsProperty](https://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
+- [60fps scrolling using pointer-events: none](https://www.thecssninja.com/javascript/pointer-events-60fps)

@@ -58,4 +58,4 @@ Veja também as [extensões para a interface de Gamepad](/pt-BR/docs/Web/API/Gam
 ## Veja também
 
 - [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) por Ted Mielczarek and Robert Nyman
-- [Simple API demo page](http://luser.github.io/gamepadtest/) ([source](https://github.com/luser/gamepadtest))
+- [Simple API demo page](https://luser.github.io/gamepadtest/) ([source](https://github.com/luser/gamepadtest))

@@ -136,8 +136,8 @@ Outro simples exemplo usando `Promise` e [`XMLHTTPRequest`](/en-US/docs/Web/API/
 
 Veja também
 
-- [Promises/A+ specification](http://promisesaplus.com/)
-- [Jake Archibald: JavaScript Promises: There and Back Again](http://www.html5rocks.com/en/tutorials/es6/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patter in JavaScript](http://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
-- [Matt Greer: JavaScript Promises ... In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
+- [Promises/A+ specification](https://promisesaplus.com/)
+- [Jake Archibald: JavaScript Promises: There and Back Again](https://www.html5rocks.com/en/tutorials/es6/promises/)
+- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patter in JavaScript](https://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
+- [Matt Greer: JavaScript Promises ... In Wicked Detail](https://www.mattgreer.org/articles/promises-in-wicked-detail/)
 - [Forbes Lindesay: promisejs.org](https://www.promisejs.org/)

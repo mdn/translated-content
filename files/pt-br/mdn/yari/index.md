@@ -8,7 +8,7 @@ original_slug: MDN/Kuma
 ---
 {{MDNSidebar}}
 
-Kuma é a plataforma wiki que auxilia o Mozilla Developer Network. É uma plataforma open source escrita em [Python](http://www.python.org/) utilizando o framework [Django](https://www.djangoproject.com/).
+Kuma é a plataforma wiki que auxilia o Mozilla Developer Network. É uma plataforma open source escrita em [Python](https://www.python.org/) utilizando o framework [Django](https://www.djangoproject.com/).
 
 ## Documentação do Kuma
 
@@ -42,7 +42,7 @@ Classificação de arquivos mais antigos:
   - : Se você teve algum problema com o Kuma, ou possui uma ideia para o torna-lo melhor, você pode arquivar um bug!
 - [Log de mudanças](/pt-BR/docs/Project:MDN/Kuma/Changelog)
   - : Uma lista das últimas mundaças enviadas; um ótimo lugar para visualizar o que aconteceu recentemente.
-- [O que é implantado?](http://mzl.la/deployed-mdn)
+- [O que é implantado?](https://mzl.la/deployed-mdn)
   - : Um quadro de status que mostra o que foi implantado ao server de produção.
 - [Roteiro de Engenhria](https://trello.com/b/SyPJAeST/engineering-roadmap)
   - : Quadro do Trello usado para gerenciamento do trabalho regular no projeto do Kuma.

@@ -27,7 +27,7 @@ nodeList = document.anchors;
 ```js
 if ( document.anchors.length >= 5 ) {
   dump("dump found too many anchors");
-  window.location = "http://www.google.com";
+  window.location = "https://www.google.com";
 }
 ```
 

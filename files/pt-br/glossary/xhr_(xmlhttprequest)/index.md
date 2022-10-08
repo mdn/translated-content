@@ -11,7 +11,7 @@ original_slug: Glossario/XHR_(XMLHttpRequest)
 ### Geral
 
 - {{interwiki("wikipedia", "XMLHttpRequest")}} on Wikipedia
-- [Synchronous vs. Asynchronous Communications](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
+- [Synchronous vs. Asynchronous Communications](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
 
 ### Informações técnicas
 

@@ -12,4 +12,4 @@ A **Organização Internacional de Padronização,** popularmente conhecida como
 
 ## Veja mais
 
-- [Site oficial](http://www.iso.org/iso/home.html)
+- [Site oficial](https://www.iso.org/iso/home.html)

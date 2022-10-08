@@ -23,9 +23,9 @@ WebSockets é uma tecnologia avançada que torna possível abrir uma sessão de 
 
 ## Ferramentas
 
-- [Socket.IO](http://socket.io): Uma poderosa plataforma cruzada para API WebSocket [Node.js](http://nodejs.org).
-- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): Uma implementação para servidor da API WebSocket[Node.js](http://nodejs.org).
-- [Uma lista mais ampla de frameworks e bibliotecas aqui](http://ajf.me/websocket/#libs)
+- [Socket.IO](https://socket.io): Uma poderosa plataforma cruzada para API WebSocket [Node.js](https://nodejs.org).
+- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): Uma implementação para servidor da API WebSocket[Node.js](https://nodejs.org).
+- [Uma lista mais ampla de frameworks e bibliotecas aqui](https://ajf.me/websocket/#libs)
 
 ## Tópicos Relacionados
 
@@ -33,10 +33,10 @@ WebSockets é uma tecnologia avançada que torna possível abrir uma sessão de 
 
 ## Veja Também
 
-- [RFC 6455 - O Protocolo WebSocket](http://tools.ietf.org/html/rfc6455)
-- [Especificação da API WebSocket](http://www.w3.org/TR/websockets/)
+- [RFC 6455 - O Protocolo WebSocket](https://tools.ietf.org/html/rfc6455)
+- [Especificação da API WebSocket](https://www.w3.org/TR/websockets/)
 - [Eventos enviados para servidor](/pt-BR/docs/Server-sent_events)
-- [WebSocket.us](http://websocket.us/) - Uma comunidade sem fins lucrativos baseada no site WebSocket
+- [WebSocket.us](https://websocket.us/) - Uma comunidade sem fins lucrativos baseada no site WebSocket
 
 ## Navegadores Compatíveis
 

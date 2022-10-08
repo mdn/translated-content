@@ -420,7 +420,7 @@ Este método é necessário porque você declara um campo `ForeignKey` (um-para-
 
 ## Com o que se parece agora?
 
-Nesse ponto, deveríamos ter criado tudo o necessário para exibir a lista de livros e as páginas de detalhes do livro. Execute o servidor (`python3 manage.py runserver`) e abra no seu navegador `http://127.0.0.1:8000/`.
+Nesse ponto, deveríamos ter criado tudo o necessário para exibir a lista de livros e as páginas de detalhes do livro. Execute o servidor (`python3 manage.py runserver`) e abra no seu navegador `https://127.0.0.1:8000/`.
 
 > **Aviso:** Não clique em nenhum autor ou link de detalhes do autor ainda - você os criará no desafio!
 

@@ -124,7 +124,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 Então você pode acessar, por exemplo, o devido valor com `amountDueView[0]`.
 
-> **Nota:** O [alinhamento da estrutura de dados](http://en.wikipedia.org/wiki/Data_structure_alignment) em uma estrutura em C depende da plataforma. Tome precauções e considerações para essas diferenças de preenchumento.
+> **Nota:** O [alinhamento da estrutura de dados](https://en.wikipedia.org/wiki/Data_structure_alignment) em uma estrutura em C depende da plataforma. Tome precauções e considerações para essas diferenças de preenchumento.
 
 ### Conversão para arrays normais
 
@@ -150,5 +150,5 @@ normalArray.constructor === Array;
 - [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/pt-BR/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
 - [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Code_snippets/StringView)
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
-- [Typed Arrays: Binary Data in the Browser](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
+- [Typed Arrays: Binary Data in the Browser](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

@@ -50,7 +50,7 @@ OPTIONS * HTTP/1.1
 Para descobrir quais tipos de requisição um servidor suporta, é possível utilizar o curl e enviar uma requisição OPTIONS:
 
 ```
-curl -X OPTIONS http://example.org -i
+curl -X OPTIONS https://example.org -i
 ```
 
 A resposta terá um cabeçalho {{HTTPHeader("Allow")}} com os métodos permitidos:
@@ -78,7 +78,7 @@ Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
 Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
-Origin: http://foo.example
+Origin: https://foo.example
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 ```
@@ -89,7 +89,7 @@ Em nosso exemplo, o servidor responde com {{HTTPHeader("Access-Control-Allow-Met
 HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT
 Server: Apache/2.0.61 (Unix)
-Access-Control-Allow-Origin: http://foo.example
+Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400

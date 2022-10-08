@@ -106,6 +106,6 @@ _Doesn't inherit any method, but implements those defined in {{domxref("Navigato
 - {{domxref("window.navigator.mozPay", "navigator.mozPay")}} {{non-standard_inline}}
   - : Allows in-app payment.
 - {{domxref("window.navigator.preference", "navigator.preference")}} {{obsolete_inline("2.0")}} {{non-standard_inline}}
-  - : Sets a user preference. This method is [only available to privileged code](http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en) and is obsolete; you should use the XPCOM [Preferences API](/pt-BR/docs/Preferences_API) instead.
+  - : Sets a user preference. This method is [only available to privileged code](https://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en) and is obsolete; you should use the XPCOM [Preferences API](/pt-BR/docs/Preferences_API) instead.
 - {{domxref("window.navigator.requestWakeLock", "navigator.requestWakeLock")}} {{non-standard_inline}}
   - : Request a wake lock for a resource. A wake lock prevents a specific part of a device from being turned off automatically.

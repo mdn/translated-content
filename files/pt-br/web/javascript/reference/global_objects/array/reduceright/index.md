@@ -112,7 +112,7 @@ var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.22
-// Reference: http://es5.github.io/#x15.4.4.22
+// Reference: https://es5.github.io/#x15.4.4.22
 if ('function' !== typeof Array.prototype.reduceRight) {
   Array.prototype.reduceRight = function(callback /*, initialValue*/) {
     'use strict';

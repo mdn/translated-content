@@ -79,5 +79,5 @@ Desde o Firefox 31, os últimos 2 argumentos (`colno` and `error`) foram adicion
 
 ## Veja também
 
-- [Capture e reporte erros JavaScript com window.onerror (blog.getsentry.com, 2016)](http://blog.getsentry.com/2016/01/04/client-javascript-reporting-window-onerror.html)
+- [Capture e reporte erros JavaScript com window.onerror (blog.getsentry.com, 2016)](https://blog.getsentry.com/2016/01/04/client-javascript-reporting-window-onerror.html)
 - [Como capturar erros JavaScript com window.onerror (mesmo no Chrome ou Firefox) (danlimerick.wordpress.com, 2014)](https://danlimerick.wordpress.com/2014/01/18/how-to-catch-javascript-errors-with-window-onerror-even-on-chrome-and-firefox/)

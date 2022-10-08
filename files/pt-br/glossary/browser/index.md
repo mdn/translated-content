@@ -14,11 +14,11 @@ Um navegador _Web_ é um programa que obtém e exibe páginas da {{Glossary("Wor
 ### Conhecimento geral
 
 - {{Interwiki("wikipedia", "Navegador web")}} na Wikipedia
-- [The evolution of the web](http://www.evolutionoftheweb.com/)
+- [The evolution of the web](https://www.evolutionoftheweb.com/)
 
 ### Baixar um navegador
 
-- [Mozilla Firefox](http://www.mozilla.org/en-US/firefox/features/)
-- [Google Chrome](http://www.google.com/chrome/)
-- [Microsoft Internet Explorer](http://windows.microsoft.com/en-US/internet-explorer/browser-ie)
-- [Opera Browser](http://www.opera.com/)
+- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/features/)
+- [Google Chrome](https://www.google.com/chrome/)
+- [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/browser-ie)
+- [Opera Browser](https://www.opera.com/)

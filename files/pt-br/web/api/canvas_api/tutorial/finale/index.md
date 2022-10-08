@@ -12,11 +12,11 @@ Parabéns! Você terminou o [Canvas tutorial](/pt-BR/docs/Web/API/Canvas_API/Tut
 
 Há uma variedade de demonstrações e mais explicações sobre canvas nesses sites:
 
-- [Codepen.io](http://codepen.io/search?q=canvas)
+- [Codepen.io](https://codepen.io/search?q=canvas)
   - : Front End Developer Playground & Code Editor no navegador.
-- [HTML5CanvasTutorials](http://www.html5canvastutorials.com/)
+- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
   - : Exemplos para a maioria das APIs canvas.
-- [31 days of Canvas tutorials](http://creativejs.com/2011/08/31-days-of-canvas-tutorials/)
+- [31 days of Canvas tutorials](https://creativejs.com/2011/08/31-days-of-canvas-tutorials/)
   - : Uma ótima fundação para codificação visual em JavaScript .
 - [Game development](/pt-BR/docs/Games)
   - : O jogo é uma das atividades de computador mais populares. Novas tecnologias estão chegando constantemente para possibilitar o desenvolvimento de jogos melhores e mais poderosos que podem ser executados em qualquer navegador da Web compatível com os padrões.
@@ -34,7 +34,7 @@ Essas APIs podem ser úteis, quando trabalhando mais com canvas e gráficos:
 
 ## Questions
 
-- [Stackoverflow](http://stackoverflow.com/questions/tagged/canvas)
+- [Stackoverflow](https://stackoverflow.com/questions/tagged/canvas)
   - : Perguntas marcadas como "canvas".
 - [Comentários sobre esse tutorial – A comunidade MDN de documentação](/pt-BR/docs/MDN)
   - : Se você tiver algum comentário sobre este tutorial ou quiser nos agradecer, fique à vontade para entrar em contato conosco!

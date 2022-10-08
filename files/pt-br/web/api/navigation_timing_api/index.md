@@ -73,9 +73,9 @@ var connectTime = perfData.responseEnd - perfData.requestStart;
 
 ### Links
 
-- [Test Page](http://webtimingdemo.appspot.com/)
-- <http://w3c-test.org/webperf/specs/NavigationTiming/>
-- <http://www.w3.org/TR/navigation-timing/>
+- [Test Page](https://webtimingdemo.appspot.com/)
+- <https://w3c-test.org/webperf/specs/NavigationTiming/>
+- <https://www.w3.org/TR/navigation-timing/>
 
 ## Compatibillidade de Navegadores
 

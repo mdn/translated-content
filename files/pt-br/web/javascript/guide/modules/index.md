@@ -497,6 +497,6 @@ Aqui estão algumas dicas que podem ajudá-lo se você estiver com problemas par
 - [Using JavaScript modules on the web](https://developers.google.com/web/fundamentals/primers/modules#mjs), por Addy Osmani e Mathias Bynens
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Postagem no blog Hacks por Lin Clark
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Publicação de blog de Hacks por Jason Orendorff
-- Livro de Axel Rauschmayer [Exploring JS: Modules](http://exploringjs.com/es6/ch_modules.html)
+- Livro de Axel Rauschmayer [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

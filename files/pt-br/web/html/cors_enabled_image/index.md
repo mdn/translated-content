@@ -40,7 +40,7 @@ Dado que está tudo classificado, você permiti salvar àquelas imagens no [Arma
 var img = new Image,
     canvas = document.createElement("canvas"),
     ctx = canvas.getContext("2d"),
-    src = "http://example.com/image"; // insert image url here
+    src = "https://example.com/image"; // insert image url here
 
 img.crossOrigin = "Anonymous";
 
@@ -60,5 +60,5 @@ if ( img.complete || img.complete === undefined ) {
 
 ## Veja também
 
-- [Usando imagens de Cross-domínio em WebGL e Chrome 13](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
-- [Especificações HTML - o atributo crossorigin](http://whatwg.org/html#attr-img-crossorigin)
+- [Usando imagens de Cross-domínio em WebGL e Chrome 13](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+- [Especificações HTML - o atributo crossorigin](https://whatwg.org/html#attr-img-crossorigin)

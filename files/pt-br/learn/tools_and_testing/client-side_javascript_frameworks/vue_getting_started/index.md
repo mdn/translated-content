@@ -220,14 +220,14 @@ INFO  Starting development server...
  DONE  Compiled successfully in 18121ms
 
   App running at:
-  - Local:   <http://localhost:8080/>
-  - Network: <http://192.168.1.9:8080/>
+  - Local:   <https://localhost:8080/>
+  - Network: <https://192.168.1.9:8080/>
 
   Note that the development build is not optimized.
   To create a production build, run npm run build.
 ```
 
-If you navigate to the “local” address in a new browser tab (this should be something like `http://localhost:8080` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
+If you navigate to the “local” address in a new browser tab (this should be something like `https://localhost:8080` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
 
 ![default vue app render, with vue logo, welcome message, and some documentation links](https://mdn.mozillademos.org/files/17240/vue-default-app.png)
 

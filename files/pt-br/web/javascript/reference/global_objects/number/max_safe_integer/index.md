@@ -20,7 +20,7 @@ Para inteiros maiores, considere usar {{jsxref("BigInt")}}.
 
 ## Descrição
 
-A constante `MAX_SAFE_INTEGER` tem o valor de `9007199254740991` (9,007,199,254,740,991 ou \~9 quadrilhões). A razão por trás deste número é que o JavaScript usa o [formato de número de ponto-flutuante de precisão-dupla](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) como especificado na [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point) e pode seguramente representar número entre `-(253 - 1)` e `253 - 1`.
+A constante `MAX_SAFE_INTEGER` tem o valor de `9007199254740991` (9,007,199,254,740,991 ou \~9 quadrilhões). A razão por trás deste número é que o JavaScript usa o [formato de número de ponto-flutuante de precisão-dupla](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) como especificado na [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point) e pode seguramente representar número entre `-(253 - 1)` e `253 - 1`.
 
 Seguro neste contexto se refere a habilidade de representar inteiros exatamente e corretamente compará-los. Por exemplo, `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2` será avaliado para verdadeiro, que é matematicamente incorreto. Veja {{jsxref("Number.isSafeInteger()")}} para mais informação.
 

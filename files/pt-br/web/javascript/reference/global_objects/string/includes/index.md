@@ -85,7 +85,7 @@ No Firefox 18 - 39, o nome deste método era `contains()`. Ele foi renomeado par
 
 Foi [reportado](https://bugzilla.mozilla.org/show_bug.cgi?id=789036) que alguns websites que utilizam MooTools 1.2 não funcionavam no Firefox 17. Esta versão do MooTools verifica se `String.prototype.contains()` existe e, se não existir, MooTools adiciona sua própria função. Com a implementação desta função no Firefox 17, o comportamento desta validação mudou de uma forma que códigos baseados na implementação da função `String.prototype.contains()` do MooTools parassem de funcionar. Como resultado, esta mudança foi [desabilitada](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8) no Firefox 17 e `String.prototype.contains()` foi disponibilizada na versão seguinte, no Firefox 18.
 
-MooTools 1.3 força sua própria versão do `String.prototype.contains()`, portanto websites baseados nela não devem parar de funcionar. No entanto, você deve notar que [a assinatura do MooTools 1.3](http://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains) e a assinatura ECMAScript 6 diferem (no segundo argumento). Posteriormente, [MooTools 1.5+ mudou sua assinatura para o padrão ES6.](https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note)
+MooTools 1.3 força sua própria versão do `String.prototype.contains()`, portanto websites baseados nela não devem parar de funcionar. No entanto, você deve notar que [a assinatura do MooTools 1.3](https://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains) e a assinatura ECMAScript 6 diferem (no segundo argumento). Posteriormente, [MooTools 1.5+ mudou sua assinatura para o padrão ES6.](https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note)
 
 ## Veja também
 

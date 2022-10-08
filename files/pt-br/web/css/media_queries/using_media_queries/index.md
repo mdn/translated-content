@@ -30,7 +30,7 @@ _Media queries_ consistem de um _[media type](en-US/docs/Web/CSS/@media)_ e pode
 }
 ```
 
-Quando uma _media query_ é verdadeira, a camada de estilo ou as regras de estilos correspondentes são aplicadas, seguindo o padrão de regras de cascatas. Camadas de estilos com _media queries_ ligadas a tag \<link> [vão fazer download](http://scottjehl.github.com/CSS-Download-Tests/) mesmo se suas _medias queries_ retornarem falso (eles não se aplicam, no entanto).
+Quando uma _media query_ é verdadeira, a camada de estilo ou as regras de estilos correspondentes são aplicadas, seguindo o padrão de regras de cascatas. Camadas de estilos com _media queries_ ligadas a tag \<link> [vão fazer download](https://scottjehl.github.com/CSS-Download-Tests/) mesmo se suas _medias queries_ retornarem falso (eles não se aplicam, no entanto).
 
 A menos que você use os operadores `not` ou `only`, o _media type_ é opcional e o tipo `all` será implícito.
 
@@ -189,7 +189,7 @@ Para indicar que uma folha de estilo deve ser aplicada para todos os dispositivo
 Para aplicar uma folha de estilo em um dispositivo com cores indexadas menor que 256 cores:
 
 ```html
-<link rel="stylesheet" media="all and (min-color-index: 256)" href="http://foo.bar.com/stylesheet.css" />
+<link rel="stylesheet" media="all and (min-color-index: 256)" href="https://foo.bar.com/stylesheet.css" />
 ```
 
 ### aspect-ratio
@@ -389,7 +389,7 @@ Essa _media query_ especifica uma folha de estilo que aplica-se para mídias imp
 
 ```html
 <link rel="stylesheet" media="print and (min-width: 8.5in)"
-    href="http://foo.com/mystyle.css" />
+    href="https://foo.com/mystyle.css" />
 ```
 
 Essa _query_ especifica uma folha de estilo que é usada quano o viewport está entre 500 e 800 pixels de largura:
@@ -453,7 +453,7 @@ Exemplo:
        (min-resolution: 192dpi)             /* dppx fallback */
 ```
 
-Veja este artigo [CSSWG](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) para ccompatibilidade de boas práticas em relação a _`resolution`_ e _`dppx`_.
+Veja este artigo [CSSWG](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) para ccompatibilidade de boas práticas em relação a _`resolution`_ e _`dppx`_.
 
 > **Note:** **Nota**: Esta _media feature_ é também implementada pelo Webkit e pelo [IE 11 para Windows Phone 8.1](<https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx>)como -webkit-device-pixel-ratio. Os prefixos min e max implementados pelo Gecko são nomeados min--moz-device-pixel-ratio e max--moz-device-pixel-ratio; mas os mesmos prefixos implementados pelo Webkit são chamados -webkit-min-device-pixel-ratio e -webkit-max-device-pixel-ratio.
 
@@ -594,8 +594,8 @@ Isto é previsto para _skins_ de aplicativo e outro código de aplicações de c
 
 ## See also
 
-- [CSS 3 media query specification](http://www.w3.org/TR/css3-mediaqueries/)
+- [CSS 3 media query specification](https://www.w3.org/TR/css3-mediaqueries/)
 - [Media types](/pt-BR/docs/CSS/@media)
 - [Using media queries from code](/pt-BR/docs/CSS/Using_media_queries_from_code)
-- [List of mobile and tablet viewport sizes with pixel ratios and physical sizes](http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/)
-- [CSS Animations Between Media Queries](http://davidwalsh.name/animate-media-queries) by David Walsh
+- [List of mobile and tablet viewport sizes with pixel ratios and physical sizes](https://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/)
+- [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries) by David Walsh

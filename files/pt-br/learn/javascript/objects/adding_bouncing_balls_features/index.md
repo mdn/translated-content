@@ -31,7 +31,7 @@ Nesta avaliação, espera-se que você use a demonstração de bolas saltantes d
 
 Para iniciar essa avaliação, faça uma cópia local de [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), e [main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) do nosso último artigo em um novo diretório em seu computador local.
 
-> **Nota:** Alternatively, you could use a site like [JSBin](http://jsbin.com/) or [Thimble](https://thimble.mozilla.org/) to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>`/`<style>` elements inside the HTML page.
+> **Nota:** Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Thimble](https://thimble.mozilla.org/) to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>`/`<style>` elements inside the HTML page.
 
 ## Resumo do projeto
 
@@ -41,7 +41,7 @@ A imagem seguinte dá-lhe uma ideia do que deve ser o programa final:
 
 ![](https://mdn.mozillademos.org/files/13875/bouncing-evil-circle.png)
 
-Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (não espreitar o código-fonte!)
+Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (não espreitar o código-fonte!)
 
 ## Passos para concluir
 

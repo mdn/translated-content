@@ -12,7 +12,7 @@ O Document Object Model (**DOM**) é uma interface de programação para os docu
 
 Uma página da Web é um documento. Este documento pode ser exibido na janela do navegador ou como a fonte HTML. Mas é o mesmo documento nos dois casos. O DOM (Document Object Model) representa o mesmo documento para que possa ser manipulado. O DOM é uma representação orientada a objetos da página da web, que pode ser modificada com uma linguagem de script como JavaScript.
 
-Os padrões [W3C DOM](http://www.w3.org/DOM/) e [WHATWG DOM](https://dom.spec.whatwg.org) são implementados na maioria dos navegadores modernos. Muitos navegadores estendem o padrão; portanto, é necessário ter cuidado ao usá-los na Web, onde os documentos podem ser acessados por vários navegadores com diferentes DOMs.
+Os padrões [W3C DOM](https://www.w3.org/DOM/) e [WHATWG DOM](https://dom.spec.whatwg.org) são implementados na maioria dos navegadores modernos. Muitos navegadores estendem o padrão; portanto, é necessário ter cuidado ao usá-los na Web, onde os documentos podem ser acessados por vários navegadores com diferentes DOMs.
 
 Por exemplo, o DOM padrão especifica que o método `getElementsByTagName` no código abaixo deve retornar uma lista de todos os elementos `<p>` no documento:
 
@@ -277,7 +277,7 @@ Você pode usar essa página teste ou criar uma similar para testar as interface
           <option value="blue">azul
           <option value="green">verde
         </select>  <small>
-        <a href="http://algum.website.tld/pagina.html" id="amostra">
+        <a href="https://algum.website.tld/pagina.html" id="amostra">
         (link)</a></small><br>
       </form>
       <form>

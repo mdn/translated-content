@@ -152,7 +152,7 @@ Vamos escrever nossas próprias funções com valores de retorno.
 
 4. Salve seu código, carregue-o em um navegador e experimente.
 
-> **Nota:** Se você tiver problemas para fazer o exemplo funcionar, sinta-se à vontade para verificar seu código na [versão finalizada no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html) ([consulte também sua execução](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)), ou peça ajuda.
+> **Nota:** Se você tiver problemas para fazer o exemplo funcionar, sinta-se à vontade para verificar seu código na [versão finalizada no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html) ([consulte também sua execução](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)), ou peça ajuda.
 
 Neste ponto, gostaríamos que você escrevesse algumas funções e as adicionasse à biblioteca. Como sobre o quadrado ou raiz cúbica do número, ou a circunferência de um círculo com um raio de comprimento `num`?
 

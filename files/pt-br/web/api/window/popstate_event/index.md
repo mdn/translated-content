@@ -12,7 +12,7 @@ Navegadores tendem a lidar com o evento `popstate` diferentemente no carregament
 ## Informação geral
 
 - Especificação
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
 - Interface
   - : PopStateEvent
 - Bubbles
@@ -40,7 +40,7 @@ Navegadores tendem a lidar com o evento `popstate` diferentemente no carregament
 
 ## Exemplo
 
-Um página no `http://example.com/example.html roda o código abaixo e irá gerar os logs indicados`
+Um página no `https://example.com/example.html roda o código abaixo e irá gerar os logs indicados`
 
 ```js
 window.onpopstate = function(event) {
@@ -49,12 +49,12 @@ window.onpopstate = function(event) {
 history.pushState({page: 1}, "title 1", "?page=1");
 history.pushState({page: 2}, "title 2", "?page=2");
 history.replaceState({page: 3}, "title 3", "?page=3");
-history.back(); // Logs "location: http://example.com/example.html?page=1, state: {"page":1}"
-history.back(); // Logs "location: http://example.com/example.html, state: null
-history.go(2);  // Logs "location: http://example.com/example.html?page=3, state: {"page":3}
+history.back(); // Logs "location: https://example.com/example.html?page=1, state: {"page":1}"
+history.back(); // Logs "location: https://example.com/example.html, state: null
+history.go(2);  // Logs "location: https://example.com/example.html?page=3, state: {"page":3}
 ```
 
-Observe que mesmo que a entrada do histórico inicial(para `http://example.com/example.html`) não tem nenhum estado associado a ele, um evento `popstate`é ainda disparado quando nós ativamos essa entrada após a segunda chamada para `history.back()`.
+Observe que mesmo que a entrada do histórico inicial(para `https://example.com/example.html`) não tem nenhum estado associado a ele, um evento `popstate`é ainda disparado quando nós ativamos essa entrada após a segunda chamada para `history.back()`.
 
 ## Eventos relacionados
 

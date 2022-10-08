@@ -31,8 +31,8 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 ## Exemplos
 
 ```html
-<base href="http://www.example.com/">
-<base target="_blank" href="http://www.example.com/">
+<base href="https://www.example.com/">
+<base target="_blank" href="https://www.example.com/">
 ```
 
 ## Especificações

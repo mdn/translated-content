@@ -32,7 +32,7 @@ Let's start with the simplest, shortest possible wasm module.
 
 This module is totally empty, but is still a valid module.
 
-If we convert our module to binary now (see [Converting WebAssembly text format to wasm](/pt-BR/docs/WebAssembly/Text_format_to_wasm)), we’ll see just the 8 byte module header described in the [binary format](http://webassembly.org/docs/binary-encoding/#high-level-structure):
+If we convert our module to binary now (see [Converting WebAssembly text format to wasm](/pt-BR/docs/WebAssembly/Text_format_to_wasm)), we’ll see just the 8 byte module header described in the [binary format](https://webassembly.org/docs/binary-encoding/#high-level-structure):
 
 ```
 0000000: 0061 736d              ; WASM_BINARY_MAGIC
@@ -135,7 +135,7 @@ As mentioned before, the function body is simply a list of instructions that are
 
 This function gets two parameters, adds them together, and returns the result.
 
-There are a lot more things that can be put inside function bodies, but we will start off simple for now, and you’ll see a lot more examples as you go along. For a full list of the available opcodes, consult the [webassembly.org Semantics reference](http://webassembly.org/docs/semantics/).
+There are a lot more things that can be put inside function bodies, but we will start off simple for now, and you’ll see a lot more examples as you go along. For a full list of the available opcodes, consult the [webassembly.org Semantics reference](https://webassembly.org/docs/semantics/).
 
 ### Calling the function
 
@@ -268,9 +268,9 @@ fetchAndInstantiate('logger.wasm', importObject).then(function(instance) {
 
 ### WebAssembly Memory
 
-The above example is a pretty terrible logging function: it only prints a single integer! What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory**. According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing from [linear memory](http://webassembly.org/docs/semantics/#linear-memory).
+The above example is a pretty terrible logging function: it only prints a single integer! What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory**. According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing from [linear memory](https://webassembly.org/docs/semantics/#linear-memory).
 
-From JavaScript’s point of view, it’s is as though memory is all inside one big (resizable) {{domxref("ArrayBuffer")}}. That’s literally all that asm.js has to play with (except that it isn't resizable; see the asm.js [Programming model](http://asmjs.org/spec/latest/#programming-model)).
+From JavaScript’s point of view, it’s is as though memory is all inside one big (resizable) {{domxref("ArrayBuffer")}}. That’s literally all that asm.js has to play with (except that it isn't resizable; see the asm.js [Programming model](https://asmjs.org/spec/latest/#programming-model)).
 
 So a string is just a sequence of bytes somewhere inside this linear memory. Let's assume that we’ve written a suitable string of bytes to memory; how do we pass that string out to JavaScript?
 
@@ -457,9 +457,9 @@ fetchAndInstantiate('wasm-table.wasm').then(function(instance) {
 
 ### Mutating tables and dynamic linking
 
-Because JavaScript has full access to function references, the Table object can be mutated from JavaScript by the [`grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) and [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) methods. When WebAssembly gets [reference types](http://webassembly.org/docs/gc/), WebAssembly code will be able to mutate tables itself with `get_elem`/`set_elem` instructions.
+Because JavaScript has full access to function references, the Table object can be mutated from JavaScript by the [`grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) and [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) methods. When WebAssembly gets [reference types](https://webassembly.org/docs/gc/), WebAssembly code will be able to mutate tables itself with `get_elem`/`set_elem` instructions.
 
-Because tables are mutable, they can be used to implement sophisticated load-time and run-time [dynamic linking schemes](http://webassembly.org/docs/dynamic-linking). When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled `.dll`s share a single process’s address space.
+Because tables are mutable, they can be used to implement sophisticated load-time and run-time [dynamic linking schemes](https://webassembly.org/docs/dynamic-linking). When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled `.dll`s share a single process’s address space.
 
 To see this in action, we’ll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple [`instantiate()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) calls.
 
@@ -537,5 +537,5 @@ This finishes our high-level tour of the major components of the WebAssembly tex
 
 ## See also
 
-- The main thing that wasn’t included is a comprehensive list of all the instructions that can occur in function bodies. See the [WebAssembly semantics](http://webassembly.org/docs/semantics) for a treatment of each instruction.
+- The main thing that wasn’t included is a comprehensive list of all the instructions that can occur in function bodies. See the [WebAssembly semantics](https://webassembly.org/docs/semantics) for a treatment of each instruction.
 - See also the [grammar of the text format](https://github.com/WebAssembly/spec/blob/master/interpreter/README.md#s-expression-syntax) that is implemented by the spec interpreter.

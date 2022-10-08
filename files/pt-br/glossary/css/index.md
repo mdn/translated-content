@@ -37,9 +37,9 @@ p {
 ### Referências técnicas
 
 - [A documentação sobre CSS na MDN](/pt-BR/docs/Web/CSS)
-- [O trabalho atual do CSS Working Group](http://www.w3.org/Style/CSS/current-work) (Em inglês)
+- [O trabalho atual do CSS Working Group](https://www.w3.org/Style/CSS/current-work) (Em inglês)
 
 ### Aprenda CSS
 
 - [Curso de web no Codecademy.com](https://www.codecademy.com/learn/web) (Em inglês)
-- ~~[Three Types of CSS](http://www.expression-web-tutorial.com/Types_CSS_Styles.html)~~ (Em inglês)
+- ~~[Three Types of CSS](https://www.expression-web-tutorial.com/Types_CSS_Styles.html)~~ (Em inglês)

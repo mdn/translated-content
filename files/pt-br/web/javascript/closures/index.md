@@ -32,7 +32,7 @@ init();
 
 A função `init()` cria uma variável local chamada `name`, e depois define uma função chamada `displayName()`. `displayName()` é uma função aninhada (uma _closure_) — ela é definida dentro da função `init()`, e está disponivel apenas dentro do corpo daquela função. Diferente de init(), `displayName()` não tem variáveis locais próprias, e ao invés disso reusa a variável `name` declarada na função pai.
 
-[Rode](http://jsfiddle.net/xAFs9/3/) o código e veja que isso funciona. Este é um exemplo de _escopo léxico:_ em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente _léxico_) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.
+[Rode](https://jsfiddle.net/xAFs9/3/) o código e veja que isso funciona. Este é um exemplo de _escopo léxico:_ em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente _léxico_) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.
 
 ## Closure
 
@@ -141,7 +141,7 @@ Linguagens como Java oferecem a habilidade de declarar métodos privados, o que 
 
 O JavaScript não oferece uma maneira nativa de fazer isso, mas é possível emular métodos privados usando closures. Métodos privados não são somente úteis para restringir acesso ao código: eles também oferecem uma maneira eficaz de gerenciar seu namespace global, evitando que métodos não essenciais baguncem a interface pública do seu código.
 
-Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como [module pattern](http://www.google.com/search?q=javascript+module+pattern):
+Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como [module pattern](https://www.google.com/search?q=javascript+module+pattern):
 
 ```js
 var Counter = (function() {

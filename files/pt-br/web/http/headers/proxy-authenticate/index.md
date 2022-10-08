@@ -37,7 +37,7 @@ Proxy-Authenticate: <type> realm=<realm>
 ## Diretivas
 
 - \<type>
-  - : [Tipo de autenticação](/pt-BR/docs/Web/HTTP/Authentication#Authentication_schemes). Um tipo comum é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#Basic_authentication_scheme). A IANA mantém uma [lista de esquemas de autenticação](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Tipo de autenticação](/pt-BR/docs/Web/HTTP/Authentication#Authentication_schemes). Um tipo comum é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#Basic_authentication_scheme). A IANA mantém uma [lista de esquemas de autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - realm=\<realm>
   - : A descrição da área protegida, o reino. Se um reino não foi especificado, clientes geralmente mostram um nome de _host_ formatado.
 

@@ -170,7 +170,7 @@ O primeiro argumento para a função é o nome da propriedade customizada para s
 
 Ao construir sites de grande porte, geralmente os autores têm problemas relacionados à manutenção do CSS. Nestes sites o tamanho do CSS costuma ser consideravel e muitas informações podem ser repetidas em vários lugares. Por exemplo, manter um esquema de cor coerente em um documento requer a reutilização de algumas cores em inúmeras posições nos arquivos CSS. Destas forma modificar o esquema de cores se torna uma tarefa complexa pois nem sempre um simples "Buscar e substituir" é o suficiente.
 
-A situação se agrava com [Frameworks CSS](http://pt.wikipedia.org/wiki/Frameworks_CSS), onde uma pequena mudança de cores requer a edição do framework em si. Pré-processadores como LESS e SASS são muito úteis nestas situações, mas podem aumentar a complexidade do projeto, pois adiciona um passo extra de processamento. Variáveis CSS ajudam ao agregar alguns benefícios de um pré-processador, sem a necessidade de compilação.
+A situação se agrava com [Frameworks CSS](https://pt.wikipedia.org/wiki/Frameworks_CSS), onde uma pequena mudança de cores requer a edição do framework em si. Pré-processadores como LESS e SASS são muito úteis nestas situações, mas podem aumentar a complexidade do projeto, pois adiciona um passo extra de processamento. Variáveis CSS ajudam ao agregar alguns benefícios de um pré-processador, sem a necessidade de compilação.
 
 Uma segunda vantagem destas variáveis é a informação semântica que elas carregam em seu nome. Os arquivos CSS se tornam mais fáceis de serem lidos e compreendidos: `cor-principal-texto` é de mais fácil entendimento e re-uso que #00ff00, especialmente se a mesma cor for usada em outro contexto.
 

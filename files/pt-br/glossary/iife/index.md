@@ -41,7 +41,7 @@ result; // "Felipe"
 
 ### Aprenda mais sobre IFFE
 
-- [Ben Alman's blog post defining IIFEs](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
+- [Ben Alman's blog post defining IIFEs](https://benalman.com/news/2010/11/immediately-invoked-function-expression/)
 - [Quick example](/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (at the end of the "Functions" section, right before "Custom objects")
 
 ### Conhecimentos Gerais

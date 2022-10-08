@@ -76,7 +76,7 @@ Above all you should follow the progressive enhancement rule — use the technol
 
 ## An example application
 
-In this series of articles we will examine the source code of a super simple website that lists information about games submitted to the [A-Frame category](http://js13kgames.com/aframe) in the [js13kGames 2017](http://2017.js13kgames.com/) competition. You don't have to think about what the actual content on the website is — the main point is to learn how to use PWA features in your own projects.
+In this series of articles we will examine the source code of a super simple website that lists information about games submitted to the [A-Frame category](https://js13kgames.com/aframe) in the [js13kGames 2017](https://2017.js13kgames.com/) competition. You don't have to think about what the actual content on the website is — the main point is to learn how to use PWA features in your own projects.
 
 You can find the online version at [mdn.github.io/pwa-examples/js13kpwa](https://mdn.github.io/pwa-examples/js13kpwa/) (also [see the source code](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)), which we will be carefully explaining in the next few articles.
 

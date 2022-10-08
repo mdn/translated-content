@@ -40,7 +40,7 @@ Intl.NumberFormat.call(this[, locales[, options]])
     - `style`
       - : O estilo do formato a ser utilizado. Os valores permitidos são `"decimal"` para formato de número simples, `"currency"` para formato monetário e `"percent"` para formato percentual; o padrão é `"decimal"`.
     - `currency`
-      - : A moeda para usar na formatação monetária. Os valores permitidos são os códigos de moedas da ISO 4217, como `"USD"` para dólar estadunidense, `"EUR"` para euro, ou `"CNY"` para RMB chinês — veja a [Lista de códigos de moedas e fundos atuais](http://www.currency-iso.org/en/home/tables/table-a1.html). Não há valor padrão; se o `style` for `"currency"`, a propriedade `currency` deverá ser informada.
+      - : A moeda para usar na formatação monetária. Os valores permitidos são os códigos de moedas da ISO 4217, como `"USD"` para dólar estadunidense, `"EUR"` para euro, ou `"CNY"` para RMB chinês — veja a [Lista de códigos de moedas e fundos atuais](https://www.currency-iso.org/en/home/tables/table-a1.html). Não há valor padrão; se o `style` for `"currency"`, a propriedade `currency` deverá ser informada.
     - `currencyDisplay`
       - : Como será mostrada a moeda na formatação monetária. Os valores permitidos são `"symbol"` para usar um símbolo de moeda localizado como €, `"code"` para usar o código de moeda ISO, `"name"` para usar o nome da moeda localizado como `"dollar"`; o padrão é `"symbol"`.
     - `useGrouping`
@@ -51,9 +51,9 @@ Intl.NumberFormat.call(this[, locales[, options]])
     - `minimumIntegerDigits`
       - : A quantidade mínima de dígitos inteiros para utilizar. É possível usar valores de 1 a 21; o padrão é 1.
     - `minimumFractionDigits`
-      - : A quantidade mínima de dígitos fracionados para utilizar. É possível usar valores de 0 a 20; o padrão para formatos de números simples e percentuais é 0; o padrão para formatos monetários é a menor unidade de dígitos fornecidos pela [lista de códigos de moedas ISO 4217](http://www.currency-iso.org/en/home/tables/table-a1.html) (2 se a lista não fornecer a informação).
+      - : A quantidade mínima de dígitos fracionados para utilizar. É possível usar valores de 0 a 20; o padrão para formatos de números simples e percentuais é 0; o padrão para formatos monetários é a menor unidade de dígitos fornecidos pela [lista de códigos de moedas ISO 4217](https://www.currency-iso.org/en/home/tables/table-a1.html) (2 se a lista não fornecer a informação).
     - `maximumFractionDigits`
-      - : O número máximo de dígitos fracionados para utilizar. É possível usar valores de 0 a 20; o padrão para a formatação de número simples é o maior entre `minimumFractionDigits` e 3; o padrão para formatos monetários é o maior número de dígitos entre `minimumFractionDigits` e o fornecido pela [lista de códigos de moedas ISO 4217](http://www.currency-iso.org/en/home/tables/table-a1.html) (2 se a lista não fornecer a informação); o padrão para a formatação percentual é o maior número entre `minimumFractionDigits` e 0.
+      - : O número máximo de dígitos fracionados para utilizar. É possível usar valores de 0 a 20; o padrão para a formatação de número simples é o maior entre `minimumFractionDigits` e 3; o padrão para formatos monetários é o maior número de dígitos entre `minimumFractionDigits` e o fornecido pela [lista de códigos de moedas ISO 4217](https://www.currency-iso.org/en/home/tables/table-a1.html) (2 se a lista não fornecer a informação); o padrão para a formatação percentual é o maior número entre `minimumFractionDigits` e 0.
     - `minimumSignificantDigits`
       - : A quantidade mínima de dígitos significantes para usar. Os valores permitidos são de 1 a 21; o padrão é 1.
     - `maximumSignificantDigits`

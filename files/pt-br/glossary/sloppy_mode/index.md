@@ -17,4 +17,4 @@ O modo normal e non-strict (não estrito) do JavaScript é às vezes chamado de 
 
 ### Conecimentos Gerais
 
-- "[Strict Mode](http://speakingjs.com/es5/ch07.html#strict_mode)" no capítulo 7 ("JavaScript Syntax") do livro Speaking _JavaScript_.
+- "[Strict Mode](https://speakingjs.com/es5/ch07.html#strict_mode)" no capítulo 7 ("JavaScript Syntax") do livro Speaking _JavaScript_.

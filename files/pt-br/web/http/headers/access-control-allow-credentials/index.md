@@ -60,7 +60,7 @@ Usando [XHR](/pt-BR/docs/Web/API/XMLHttpRequest) com credenciais:
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open('GET', 'https://example.com/', true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```

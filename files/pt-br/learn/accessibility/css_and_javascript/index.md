@@ -173,7 +173,7 @@ Elements to allow users to input data into websites:
 </div>
 ```
 
-You can see some good example CSS in our [form-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-css.html) example ([see it live](http://mdn.github.io/learning-area/accessibility/css/form-css.html) also).
+You can see some good example CSS in our [form-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-css.html) example ([see it live](https://mdn.github.io/learning-area/accessibility/css/form-css.html) also).
 
 Most of the CSS you'll write for forms will be for sizing the elements, lining up labels and inputs, and getting them looking neat and tidy.
 
@@ -183,7 +183,7 @@ You shouldn't however deviate too much from the expected visual feedback form el
 
 Tables for presenting tabular data.
 
-You can see a good, simple example of table HTML and CSS in our [table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) example ([see it live also](http://mdn.github.io/learning-area/accessibility/css/table-css.html)).
+You can see a good, simple example of table HTML and CSS in our [table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) example ([see it live also](https://mdn.github.io/learning-area/accessibility/css/table-css.html)).
 
 Table CSS generally serves to make the table fit better into your design and look less ugly. It is a good idea to make sure the table headers stand out (normally using bold), and use zebra striping to make different rows easier to parse.
 
@@ -191,7 +191,7 @@ Table CSS generally serves to make the table fit better into your design and loo
 
 When choosing a color scheme for your website, make sure that the text (foreground) color contrasts well with the background color. Your design might look cool, but it is no good if people with visual impairments like color blindness can't read your content.
 
-There is an easy way to check whether your contrast is large enough to not cause problems. There are a number of contrast checking tools online that you can enter your foreground and background colors into, to check them. For example WebAIM's [Color Contrast Checker](http://webaim.org/resources/contrastchecker/) is simple to use, and provides an explanation of what you need to conform to the WCAG criteria around color contrast.
+There is an easy way to check whether your contrast is large enough to not cause problems. There are a number of contrast checking tools online that you can enter your foreground and background colors into, to check them. For example WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) is simple to use, and provides an explanation of what you need to conform to the WCAG criteria around color contrast.
 
 > **Nota:** A high contrast ratio will also allow anyone using a smartphone or tablet with a glossy screen to better read pages when in a bright environment, such as sunlight.
 
@@ -199,7 +199,7 @@ Another tip is to not rely on color alone for signposts/information, as this wil
 
 ### Hiding things
 
-There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) we have three panels of information, but we are [positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
+There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) we have three panels of information, but we are [positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
 
 ![](https://mdn.mozillademos.org/files/13368/tabbed-info-box.png)
 
@@ -207,7 +207,7 @@ Screen reader users don't care about any of this — they are happy with the con
 
 On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{cssxref("display")}}`:none`, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.
 
-> **Nota:** [Invisible Content Just for Screen Reader Users](http://webaim.org/techniques/css/invisiblecontent/) has a lot more useful detail surrounding this topic.
+> **Nota:** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) has a lot more useful detail surrounding this topic.
 
 ### Accept that users can override styles
 
@@ -250,7 +250,7 @@ Good example uses of unobtrusive JavaScript include:
 - Providing client-side form validation, which alerts users to problems with their form entries quickly, without having to wait for the server to check the data. If it isn't available, the form will still work, but validation might be slower.
 - Providing custom controls for HTML5 `<video>`s that are accessible to keyboard-only users, along with a direct link to the video that can be used to access it if JavaScript is not available (the default `<video>` browser controls aren't keyboard accessible in most browsers).
 
-As an example, we've written a quick and dirty client-side form validation example — see [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) (also [see the demo live](http://mdn.github.io/learning-area/accessibility/css/form-validation.html)). Here you'll see a simple form; when you try to submit the form with one or both fields left empty, the submit fails, and an error message box appears to tell you what is wrong.
+As an example, we've written a quick and dirty client-side form validation example — see [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) (also [see the demo live](https://mdn.github.io/learning-area/accessibility/css/form-validation.html)). Here you'll see a simple form; when you try to submit the form with one or both fields left empty, the submit fails, and an error message box appears to tell you what is wrong.
 
 This kind of form validation is unobtrusive — you can still use the form absolutely fine without the JavaScript being available, and any sensible form implementation will have server-side validation active as well, because it is too easy for malicious users to bypass client-side validation (for example, by turning JavaScript off in the browser). The client-side validation is still really useful for reporting errors — users can know about mistakes they make instantly, rather than having to wait for a round trip to the server and a page reload. This is a definite usability advantage.
 
@@ -325,7 +325,7 @@ We will explain these attributes in our next article, which covers [WAI-ARIA](/p
 
 > **Nota:** Some of you will probably be thinking about that fact that HTML5 forms have built-in validation mechanisms like the `required`, `min`/`minlength`, and `max`/`maxlength` attributes (see the {{htmlelement("input")}} element reference for more information). We didn't end up using these in the demo because cross-browser support for them is patchy (for example IE10 and above only).
 
-> **Nota:** WebAIM's [Usable and Accessible Form Validation and Error Recovery](http://webaim.org/techniques/formvalidation/) provides some further useful information about accessible form validation.
+> **Nota:** WebAIM's [Usable and Accessible Form Validation and Error Recovery](https://webaim.org/techniques/formvalidation/) provides some further useful information about accessible form validation.
 
 ### Other JavaScript accessibility concerns
 
@@ -339,7 +339,7 @@ To mitigate such problems, you should double up these events with similar events
 
 Let's look at an example that highlights when this could be useful. Maybe we want to provide a thumbnail image that shows a larger version of the image when it is moused over or focused (like you'd see on an e-commerce product catalog.)
 
-We've made a very simple example, which you can find at [mouse-and-keyboard-events.html](http://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/accessibility/css/mouse-and-keyboard-events.html)). The code features two functions that show and hide the zoomed-in image; these are run by the following lines that set them as event handlers:
+We've made a very simple example, which you can find at [mouse-and-keyboard-events.html](https://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/accessibility/css/mouse-and-keyboard-events.html)). The code features two functions that show and hide the zoomed-in image; these are run by the following lines that set them as event handlers:
 
 ```js
 imgThumb.onmouseover = showImg;

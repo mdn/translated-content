@@ -52,4 +52,4 @@ doc = window.document
 
 ## Especificação
 
-- [HTML](http://www.whatwg.org/html/#the-window-object)
+- [HTML](https://www.whatwg.org/html/#the-window-object)

@@ -51,7 +51,7 @@ Todos os sistemas operacionais _desktop_ possuem um editor de texto básico. Tod
         <ul>
           <li>
             <a
-              href="http://en.wikipedia.org/wiki/Notepad_%28software%29"
+              href="https://en.wikipedia.org/wiki/Notepad_%28software%29"
               rel="external"
               >Notepad</a
             >
@@ -60,12 +60,12 @@ Todos os sistemas operacionais _desktop_ possuem um editor de texto básico. Tod
       </td>
       <td>
         <ul>
-          <li><a href="http://notepad-plus-plus.org/">Notepad++</a></li>
+          <li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
           <li>
             <a href="https://www.visualstudio.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://www.jetbrains.com/webstorm/">Web Storm</a></li>
-          <li><a href="http://brackets.io/">Brackets</a></li>
+          <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
           <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
         </ul>
@@ -76,7 +76,7 @@ Todos os sistemas operacionais _desktop_ possuem um editor de texto básico. Tod
       <td>
         <ul>
           <li>
-            <a href="http://en.wikipedia.org/wiki/TextEdit" rel="external"
+            <a href="https://en.wikipedia.org/wiki/TextEdit" rel="external"
               >TextEdit</a
             >
           </li>
@@ -85,14 +85,14 @@ Todos os sistemas operacionais _desktop_ possuem um editor de texto básico. Tod
       <td>
         <ul>
           <li>
-            <a href="http://www.barebones.com/products/textwrangler/"
+            <a href="https://www.barebones.com/products/textwrangler/"
               >TextWrangler</a
             >
           </li>
           <li>
             <a href="https://www.visualstudio.com/">Visual Studio Code</a>
           </li>
-          <li><a href="http://brackets.io/">Brackets</a></li>
+          <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
           <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
         </ul>
@@ -103,25 +103,25 @@ Todos os sistemas operacionais _desktop_ possuem um editor de texto básico. Tod
       <td>
         <ul>
           <li>
-            <a href="http://en.wikipedia.org/wiki/Vi" rel="external">Vi</a> (All
+            <a href="https://en.wikipedia.org/wiki/Vi" rel="external">Vi</a> (All
             UNIX)
           </li>
           <li>
-            <a href="http://en.wikipedia.org/wiki/Gedit" rel="external"
+            <a href="https://en.wikipedia.org/wiki/Gedit" rel="external"
               >GEdit</a
             >
             (Gnome)
           </li>
           <li>
             <a
-              href="http://en.wikipedia.org/wiki/Kate_%28text_editor%29"
+              href="https://en.wikipedia.org/wiki/Kate_%28text_editor%29"
               rel="external"
               >Kate</a
             >
             (KDE)
           </li>
           <li>
-            <a href="http://en.wikipedia.org/wiki/Leafpad" rel="external"
+            <a href="https://en.wikipedia.org/wiki/Leafpad" rel="external"
               >LeafPad</a
             >
             (Xfce)
@@ -130,12 +130,12 @@ Todos os sistemas operacionais _desktop_ possuem um editor de texto básico. Tod
       </td>
       <td>
         <ul>
-          <li><a href="http://www.gnu.org/software/emacs/">Emacs</a></li>
-          <li><a href="http://www.vim.org/" rel="external">Vim</a></li>
+          <li><a href="https://www.gnu.org/software/emacs/">Emacs</a></li>
+          <li><a href="https://www.vim.org/" rel="external">Vim</a></li>
           <li>
             <a href="https://www.visualstudio.com/">Visual Studio Code</a>
           </li>
-          <li><a href="http://brackets.io/">Brackets</a></li>
+          <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
           <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
         </ul>
@@ -183,8 +183,8 @@ Fazer _upload_ de arquivos para um servidor _web_ é um importante passo durante
       <td>Windows</td>
       <td>
         <ul>
-          <li><a href="http://winscp.net" rel="external">WinSCP</a></li>
-          <li><a href="http://mobaxterm.mobatek.net/">Moba Xterm</a></li>
+          <li><a href="https://winscp.net" rel="external">WinSCP</a></li>
+          <li><a href="https://mobaxterm.mobatek.net/">Moba Xterm</a></li>
         </ul>
       </td>
       <td colspan="1" rowspan="3">
@@ -209,7 +209,7 @@ Fazer _upload_ de arquivos para um servidor _web_ é um importante passo durante
             (Gnome)
           </li>
           <li>
-            <a href="http://dolphin.com/" rel="external">Dolphin</a> (KDE)
+            <a href="https://dolphin.com/" rel="external">Dolphin</a> (KDE)
           </li>
         </ul>
       </td>
@@ -218,7 +218,7 @@ Fazer _upload_ de arquivos para um servidor _web_ é um importante passo durante
       <td>Mac OS</td>
       <td>
         <ul>
-          <li><a href="http://cyberduck.de/">Cyberduck</a></li>
+          <li><a href="https://cyberduck.de/">Cyberduck</a></li>
         </ul>
       </td>
     </tr>
@@ -243,14 +243,14 @@ Como você já sabe, é necessário um navegador _web_ para visualizar _sites_. 
 
 - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Google Chrome](https://www.google.com/chrome/)
-- [Microsoft Internet Explorer](http://windows.microsoft.com/en-US/internet-explorer/download-ie)
-- [Apple Safari](http://www.apple.com/safari/)
+- [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/download-ie)
+- [Apple Safari](https://www.apple.com/safari/)
 
-Se você estiver buscando um grupo espécífico (como usuários de uma plataforma ou de algum país), deve testar seu _site_ em navegadores adicionais, como [Opera](http://www.opera.com/), [Konqueror](http://www.konqueror.org/), ou [UC Browser](http://www.ucweb.com/ucbrowser/).
+Se você estiver buscando um grupo espécífico (como usuários de uma plataforma ou de algum país), deve testar seu _site_ em navegadores adicionais, como [Opera](https://www.opera.com/), [Konqueror](https://www.konqueror.org/), ou [UC Browser](https://www.ucweb.com/ucbrowser/).
 
-Mas testar é complicado, pois alguns navegadores apenas funcionam em determinados sistemas operacionais. O _Apple Safari_ funciona no _iOS_ e no _Mac OS_, enquanto o _Internet Explorer_ funciona apenas no _Windows_. É melhor se valer dos benefícios de serviços como o [Browsershots](http://browsershots.org/) ou [Browserstack](http://www.browserstack.com/). O _Browsershots_ fornece capturas de tela de como seu _site_ é visto por vários navegadores. O _Browserstack_ atualmente concede a você total acesso remoto à máquinas virtuais de forma que você pode testar seu site nos ambientes mais comuns. Alternativamente você pode configurar sua própria máquina virtual, mas isso demanda certos conhecimentos específicos. (Se você quiser seguir esse caminho, a _Microsoft_ possui algumas ferramentas para desenvoledores, incluíndo uma máquina virtual pronta para o uso, chamada [modern.ie](https://modern.ie).).
+Mas testar é complicado, pois alguns navegadores apenas funcionam em determinados sistemas operacionais. O _Apple Safari_ funciona no _iOS_ e no _Mac OS_, enquanto o _Internet Explorer_ funciona apenas no _Windows_. É melhor se valer dos benefícios de serviços como o [Browsershots](https://browsershots.org/) ou [Browserstack](https://www.browserstack.com/). O _Browsershots_ fornece capturas de tela de como seu _site_ é visto por vários navegadores. O _Browserstack_ atualmente concede a você total acesso remoto à máquinas virtuais de forma que você pode testar seu site nos ambientes mais comuns. Alternativamente você pode configurar sua própria máquina virtual, mas isso demanda certos conhecimentos específicos. (Se você quiser seguir esse caminho, a _Microsoft_ possui algumas ferramentas para desenvoledores, incluíndo uma máquina virtual pronta para o uso, chamada [modern.ie](https://modern.ie).).
 
-Por todos os meios possíveis, execute testes em dispositivos reais, especialmente em dispositivos móveis reais. Simulação de dispositivos móveis é uma nova tecnologia, está em evolução e é menos confiável que a simulação de computadores. Dispositivos móveis custam dinheiro, é claro, portanto sugerimos que se veja a [Open Device Lab initiative](http://opendevicelab.com/). Você também pode compartilhar dispositivos se quiser testar em várias plataformas sem gastar muito.
+Por todos os meios possíveis, execute testes em dispositivos reais, especialmente em dispositivos móveis reais. Simulação de dispositivos móveis é uma nova tecnologia, está em evolução e é menos confiável que a simulação de computadores. Dispositivos móveis custam dinheiro, é claro, portanto sugerimos que se veja a [Open Device Lab initiative](https://opendevicelab.com/). Você também pode compartilhar dispositivos se quiser testar em várias plataformas sem gastar muito.
 
 ## Próximos passos
 

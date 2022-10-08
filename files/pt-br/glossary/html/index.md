@@ -41,4 +41,4 @@ Um arquivo HTML normalmente é salvo com uma extensão .htm ou .html, é disponi
 ### Referência Técnica
 
 - [A documentação HTML no MDN](/pt-BR/docs/Web/HTML)
-- [A especificação HTML (W3C)](http://www.w3.org/TR/html5/)
+- [A especificação HTML (W3C)](https://www.w3.org/TR/html5/)

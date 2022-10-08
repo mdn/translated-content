@@ -67,7 +67,7 @@ Um {{jsxref('Boolean')}} que tem valor `false` se o comando não é válido ou e
 - `formatBlock`
   - : Adiciona um elemento de nível de bloco HTML ao redor da linha que contém a seleção atual, substituindo o elemento de bloco que contém a linha, se houver (no Firefox, {{HTMLElement("blockquote")}} é a exceção - envolverá qualquer elemento de bloco que contenha). Requer uma sequência de nome de tag como argumento de valor. Praticamente todos os elementos em nível de bloco podem ser usados. (Internet Explorer e Edge suportam apenas tags de cabeçalho `H1`–`H6`, `ADDRESS`, e `PRE`, que devem estar entre colchetes angulares, como `"<H1>"`.)
 - `forwardDelete`
-  - : Exclui o caractere depois da posição do [cursor](http://en.wikipedia.org/wiki/Cursor_%28computers%29), idêntico a pressionar a tecla Delete em um teclado do Windows.
+  - : Exclui o caractere depois da posição do [cursor](https://en.wikipedia.org/wiki/Cursor_%28computers%29), idêntico a pressionar a tecla Delete em um teclado do Windows.
 - `heading`
   - : Adiciona um elemento de cabeçalho ao redor de uma linha de seleção ou ponto de inserção. Requer uma string com o nome da tag como argumento (ex. `"H1"`, `"H6"`). (Não suportado pelo Internet Explorer e Safari.)
 - `hiliteColor`

@@ -80,7 +80,7 @@ Acabamos de abrir uma conta e receber estas informações :
 > - Porta: `5548`
 > - Para publicar na web, coloque seus arquivos no diretório `Public/htdocs` .
 
-Primeiramente, olhe em `http://demozilla.examplehostingprovider.net/` — como você pode ver até o momento, não há nada lá :
+Primeiramente, olhe em `https://demozilla.examplehostingprovider.net/` — como você pode ver até o momento, não há nada lá :
 
 ![Our demozilla personal website, seen in a browser: it's empty](https://mdn.mozillademos.org/files/9615/demozilla-empty.png)
 
@@ -122,7 +122,7 @@ Depois de encontrar o diretório remoto correto para colocar seus arquivos, para
 
 ### Eles estão realmente online ?
 
-Até agora, tudo bem , mas os arquivos estão realmente online ? Você pode verificar novamente voltando ao seu site (e.g. `http://demozilla.examplehostingprovider.net/`) no seu navegador:
+Até agora, tudo bem , mas os arquivos estão realmente online ? Você pode verificar novamente voltando ao seu site (e.g. `https://demozilla.examplehostingprovider.net/`) no seu navegador:
 
 ![Here we go: our website is live!](https://mdn.mozillademos.org/files/9627/here-we-go.png)
 

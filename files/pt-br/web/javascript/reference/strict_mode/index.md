@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 {{JsSidebar("More")}}
 
-O **strict mode** do [ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm) é uma forma de _optar_ por uma variante restrita do JavaScript. O strict mode não é apenas um subconjunto: ele _intencionalmente_ tem semânticas diferentes do código normal. Navegadores que não suportam strict mode executarão código strict mode com um comportamento diferente dos navegadores que suportam, então não confie no strict mode sem testar o suporte a funcionalidades dos aspectos relevantes do strict mode. Código strict mode e código não-strict mode podem coexistir, então scripts podem optar pelo strict mode incrementalmente.
+O **strict mode** do [ECMAScript 5](https://www.ecma-international.org/publications/standards/Ecma-262.htm) é uma forma de _optar_ por uma variante restrita do JavaScript. O strict mode não é apenas um subconjunto: ele _intencionalmente_ tem semânticas diferentes do código normal. Navegadores que não suportam strict mode executarão código strict mode com um comportamento diferente dos navegadores que suportam, então não confie no strict mode sem testar o suporte a funcionalidades dos aspectos relevantes do strict mode. Código strict mode e código não-strict mode podem coexistir, então scripts podem optar pelo strict mode incrementalmente.
 
 O strict mode faz várias mudanças nas semânticas normais do JavaScript. Primeiro, o strict mode elimina alguns erros silenciosos do JavaScript fazendo-os lançar exceções. Segundo, o strict mode evita equívocos que dificultam que motores JavaScript realizem otimizações: código strict mode pode às vezes ser feito para executar mais rápido que código idêntico não-strict mode. Terceiro, strict mode proíbe algumas sintaxes que provavelmente serão definidas em versões futuras do ECMAScript.
 
@@ -153,7 +153,7 @@ with (obj) // !!! erro de sintaxe
 
 A alternativa simples de atribuir o objeto a uma variável de nome curto, e então acessar a propriedade correspondente naquela variável, está pronta para substituir `with`.
 
-Segundo, [eval de código strict mode não introduz novas variáves no escopo envolvente](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/). Em código normal, `eval("var x;")` introduz uma variável `x` na função envolvente ou no escopo global. Isto significa que, no geral, em uma função que contém uma chamada para `eval`, todo nome que não se refere a um argumento ou variável local deve ser mapeado para uma definição particular em tempo de execução (porque aquele `eval` pode ter introduzido uma nova variável que esconderia a variável externa). No strict mode, `eval` cria variáveis apenas para o código sendo avaliado, portanto `eval` não pode afetar se um nome se refere a uma variável externa ou alguma variável local:
+Segundo, [eval de código strict mode não introduz novas variáves no escopo envolvente](https://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/). Em código normal, `eval("var x;")` introduz uma variável `x` na função envolvente ou no escopo global. Isto significa que, no geral, em uma função que contém uma chamada para `eval`, todo nome que não se refere a um argumento ou variável local deve ser mapeado para uma definição particular em tempo de execução (porque aquele `eval` pode ter introduzido uma nova variável que esconderia a variável externa). No strict mode, `eval` cria variáveis apenas para o código sendo avaliado, portanto `eval` não pode afetar se um nome se refere a uma variável externa ou alguma variável local:
 
 ```js
 var x = 17;
@@ -275,7 +275,7 @@ function invocadorPrivilegiado()
 invocadorPrivilegiado();
 ```
 
-Terceiro, `arguments` para funções strict mode não oferecem mais acesso às variáveis da chamada de função correspondente. Em algumas implementações antigas do ECMAScript, `arguments.caller` era um objeto cujas propriedades faziam _alias_ de variáveis naquela função. Isso é um [risco de segurança](http://stuff.mit.edu/iap/2008/facebook/) porque quebra a habilidade de esconder valores privilegiados via abstração de função; isso também exclui a maioria das otimizações. Por essas razões, nenhum navegador moderno implementa isso. Ainda assim, por causa de sua funcionalidade histórica, `arguments.caller` para uma função strict mode também é uma propriedade não-deletável que lança exceção quando definida ou recuperada:
+Terceiro, `arguments` para funções strict mode não oferecem mais acesso às variáveis da chamada de função correspondente. Em algumas implementações antigas do ECMAScript, `arguments.caller` era um objeto cujas propriedades faziam _alias_ de variáveis naquela função. Isso é um [risco de segurança](https://stuff.mit.edu/iap/2008/facebook/) porque quebra a habilidade de esconder valores privilegiados via abstração de função; isso também exclui a maioria das otimizações. Por essas razões, nenhum navegador moderno implementa isso. Ainda assim, por causa de sua funcionalidade histórica, `arguments.caller` para uma função strict mode também é uma propriedade não-deletável que lança exceção quando definida ou recuperada:
 
 ```js
 "use strict";
@@ -311,7 +311,7 @@ function fun(static) { 'use strict'; } // !!!
 
 Duas ressalvas específicas à Mozilla: primeiro, se seu código for JavaScript 1.7 ou superior (por exemplo em código chrome ou usando o `<script type="">` correto) e for strict mode, `let` e `yield` têm a funcionaldade que eles tiveram desde que essas palavras-chave foram introduzidas pela primeira vez. Mas código strict mode na web, carregado com `<script src="">` ou `<script>...</script>`, não serão capazes de usar `let`/`yield` como identificadores. Segundo, enquanto o ES5 reserva incondicionalmente as palavras `class`, `enum`, `export`, `extends`, `import` e `super`, a Mozilla reservava-as apenas em strict mode antes do Firefox 5.
 
-Segundo, [strict mode proíbe declaração de funções fora do nível superior de um script ou função](http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/). Em código normal em navegadores, declarações de funções são permitidas "em todo lugar". _Isso não é parte do ES5 (nem do ES3)!_ É uma extensão com semânticas incompatíveis em diferentes navegadores. Edições futuras do ECMAScript promissoramente especificarão novas semânticas para declarações de funções fora do nível superior de um script ou função. [Proibir tais declarações de funções em strict mode](http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls) "limpa a mesa" para especificação em uma _release_ futura do ECMAScript:
+Segundo, [strict mode proíbe declaração de funções fora do nível superior de um script ou função](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/). Em código normal em navegadores, declarações de funções são permitidas "em todo lugar". _Isso não é parte do ES5 (nem do ES3)!_ É uma extensão com semânticas incompatíveis em diferentes navegadores. Edições futuras do ECMAScript promissoramente especificarão novas semânticas para declarações de funções fora do nível superior de um script ou função. [Proibir tais declarações de funções em strict mode](https://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls) "limpa a mesa" para especificação em uma _release_ futura do ECMAScript:
 
 ```js
 "use strict";
@@ -334,23 +334,23 @@ Essa proibição não é adequada ao strict mode porque tais declarações de fu
 
 ## Strict mode em navegadores
 
-Os principais navegadores agora implementam strict mode. Entretanto, não dependa deles cegamente já que ainda há [várias versões de navegadores utilizadas por aí que têm apenas suporte parcial ao strict mode](http://caniuse.com/use-strict) ou que não suportam de forma alguma (ex.: Internet Explorer abaixo da versão 10!). _Strict mode muda semântica_. Depender dessas mudanças causará equívocos e erros em navegadores que não implementam strict mode. Tenha cautela ao usar strict mode e gere confiança no strict mode com testes de funcionalidades que verificam se partes relevantes do strict mode estão implementadas. Finalmente, certifique-se de _testar seu código em navegadores que suportam e não suportam strict mode._ Se você testar apenas em navegadores que não suportam strict mode, você provavelmente terá problemas em navegadores que suportam e vice-versa.
+Os principais navegadores agora implementam strict mode. Entretanto, não dependa deles cegamente já que ainda há [várias versões de navegadores utilizadas por aí que têm apenas suporte parcial ao strict mode](https://caniuse.com/use-strict) ou que não suportam de forma alguma (ex.: Internet Explorer abaixo da versão 10!). _Strict mode muda semântica_. Depender dessas mudanças causará equívocos e erros em navegadores que não implementam strict mode. Tenha cautela ao usar strict mode e gere confiança no strict mode com testes de funcionalidades que verificam se partes relevantes do strict mode estão implementadas. Finalmente, certifique-se de _testar seu código em navegadores que suportam e não suportam strict mode._ Se você testar apenas em navegadores que não suportam strict mode, você provavelmente terá problemas em navegadores que suportam e vice-versa.
 
 ## Especificações
 
 | Especificação                                                                                | Status                       | Comentário                                                                                                                      |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-10.1.1', 'Strict Mode Code')}}                 | {{Spec2('ES5.1')}}     | Definição inicial. Veja também: [Strict mode restriction and exceptions](http://www.ecma-international.org/ecma-262/5.1/#sec-C) |
-| {{SpecName('ES6', '#sec-strict-mode-code', 'Strict Mode Code')}}         | {{Spec2('ES6')}}         | [Strict mode restriction and exceptions](http://www.ecma-international.org/ecma-262/6.0/#sec-strict-mode-of-ecmascript)         |
+| {{SpecName('ES5.1', '#sec-10.1.1', 'Strict Mode Code')}}                 | {{Spec2('ES5.1')}}     | Definição inicial. Veja também: [Strict mode restriction and exceptions](https://www.ecma-international.org/ecma-262/5.1/#sec-C) |
+| {{SpecName('ES6', '#sec-strict-mode-code', 'Strict Mode Code')}}         | {{Spec2('ES6')}}         | [Strict mode restriction and exceptions](https://www.ecma-international.org/ecma-262/6.0/#sec-strict-mode-of-ecmascript)         |
 | {{SpecName('ESDraft', '#sec-strict-mode-code', 'Strict Mode Code')}} | {{Spec2('ESDraft')}} | [Strict mode restriction and exceptions](https://tc39.github.io/ecma262/#sec-strict-mode-of-ecmascript)                         |
 
 ## Veja também
 
-- [Where's Walden? » New ES5 strict mode support: now with poison pills!](http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/)
-- [Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited](http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)
-- [Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)
-- [JavaScript "use strict" tutorial for beginners.](http://qnimate.com/javascript-strict-mode-in-nutshell/)
-- [John Resig - ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
-- [ECMA-262-5 in detail. Chapter 2. Strict Mode.](http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
-- [Strict mode compatibility table](http://kangax.github.io/compat-table/es5/#Strict_mode)
+- [Where's Walden? » New ES5 strict mode support: now with poison pills!](https://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/)
+- [Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)
+- [Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only](https://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)
+- [JavaScript "use strict" tutorial for beginners.](https://qnimate.com/javascript-strict-mode-in-nutshell/)
+- [John Resig - ECMAScript 5 Strict Mode, JSON, and More](https://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
+- [ECMA-262-5 in detail. Chapter 2. Strict Mode.](https://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
+- [Strict mode compatibility table](https://kangax.github.io/compat-table/es5/#Strict_mode)
 - [Transitioning to strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)

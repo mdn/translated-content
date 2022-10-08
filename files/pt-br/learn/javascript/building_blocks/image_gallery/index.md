@@ -31,7 +31,7 @@ Agora que analisamos os blocos de construção fundamentais do JavaScript, testa
 
 Para começar esta avaliação, você deve [pegar o arquivo ZIP](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) para o exemplo e descompactá-lo em algum lugar no seu computador.
 
-> **Nota:** Como alternativa, você pode usar um site como o [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) para fazer sua avaliação. Você pode colar o HTML, CSS e JavaScript em um desses editores on-line. Se o editor on-line que você está usando não tiver painéis JavaScript / CSS separados, sinta-se à vontade para colocar os elementos in-line `<script>` e `<style>` dentro da página HTML.
+> **Nota:** Como alternativa, você pode usar um site como o [JSBin](https://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) para fazer sua avaliação. Você pode colar o HTML, CSS e JavaScript em um desses editores on-line. Se o editor on-line que você está usando não tiver painéis JavaScript / CSS separados, sinta-se à vontade para colocar os elementos in-line `<script>` e `<style>` dentro da página HTML.
 
 ## Resumo do projeto
 
@@ -66,7 +66,7 @@ Seu JavaScript precisa:
 - Anexe um manipulador `onclick` para cada `<img>` dentro do `thumb-bar <div>` para que, quando clicados, a imagem correspondente seja exibida no elemento `displayed-img <img>`.
 - Anexe um manipulador `onclick` ao `<button>` para que, ao ser clicado, um efeito de escurecimento seja aplicado à imagem em tamanho normal. Quando é clicado novamente, o efeito de escurecimento é removido novamente.
 
-Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](http://mdn.github.io/learning-area/javascript/building-blocks/gallery/) (não espreite o código-fonte!)
+Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](https://mdn.github.io/learning-area/javascript/building-blocks/gallery/) (não espreite o código-fonte!)
 
 ## Passos para concluir
 

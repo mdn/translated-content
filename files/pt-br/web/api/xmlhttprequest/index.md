@@ -452,7 +452,7 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
 
 O construtor inicia um XMLHttpRequest. Ele deve ser chamado antes de quaisquer outras chamadas de método.
 
-Gecko/Firefox 16 acrescenta um parâmetro não-padrão para o construtor que pode ativar o modo anônimo (veja [Bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677)). Definir o mozAnon bandeira de true eficácia se assemelha a [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) construtor descrito na especificação XMLHttpRequest que não tenha sido implementado em qualquer navegador ainda (em setembro de 2012).
+Gecko/Firefox 16 acrescenta um parâmetro não-padrão para o construtor que pode ativar o modo anônimo (veja [Bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677)). Definir o mozAnon bandeira de true eficácia se assemelha a [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) construtor descrito na especificação XMLHttpRequest que não tenha sido implementado em qualquer navegador ainda (em setembro de 2012).
 
 ```
 XMLHttpRequest (
@@ -467,7 +467,7 @@ XMLHttpRequest (
   - : Há dois sinalizadores que você pode definir:
 
     - `mozAnon`
-      - : Boolean: Definir esse sinalizador de true fará com que o navegador para não expor a origem e as [credenciais do usuário](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) ao buscar recursos. Mais importante, isto significa que os cookies não será enviado a menos que explicitamente adicionado usando setRequestHeader.
+      - : Boolean: Definir esse sinalizador de true fará com que o navegador para não expor a origem e as [credenciais do usuário](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) ao buscar recursos. Mais importante, isto significa que os cookies não será enviado a menos que explicitamente adicionado usando setRequestHeader.
     - `mozSystem`
       - : Boolean: Definir esse sinalizador de true . permite fazer conexões entre sites sem a necessidade de o servidor para opt-in usando CORS requer a configuração mozAnon: true . Ou seja, este não pode ser combinada com o envio de cookies ou outras credenciais do usuário. Isso* [só funciona em privilegiados (revisto) Apps](https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68);ele não funciona em páginas da web arbitrários carregados no Firefox.*
 
@@ -674,11 +674,11 @@ avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpR
 
 - XMLHttpRequest referencias da W3C e navegador fornecedores:
 
-  - [W3C: XMLHttpRequest](http://www.w3.org/TR/XMLHttpRequest1/) (base features)
-  - [W3C: XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
-  - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-  - [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
+  - [W3C: XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest1/) (base features)
+  - [W3C: XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
+  - [Microsoft documentation](https://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
+  - [Apple developers' reference](https://developer.apple.com/internet/webcontent/xmlhttpreq.html)
 
-- ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-- [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-- [HTML5 Rocks - New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+- [HTML5 Rocks - New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)

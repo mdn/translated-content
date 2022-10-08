@@ -158,7 +158,7 @@ Exemplo de uma requisição HTTP:
 As requisições consistem dos seguintes elementos:
 
 - Um [método](/pt-BR/docs/Web/HTTP/Methods) HTTP, geralmente é um verbo como {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("PUT")}}, etc, ou um substantivo como {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} que define qual operação o cliente quer fazer. Tipicamente, um cliente quer pegar um recurso (usando {{HTTPMethod("GET")}}) ou publicar dados de um [formulário HTML](/pt-BR/docs/Web/Guide/HTML/Forms) (usando {{HTTPMethod("POST")}}), embora mais operações podem ser necessárias em outros casos.
-- O caminho do recurso a ser buscado; a URL do recurso sem os elementos que são de contexto, por exemplo sem o protocolo {{glossary("protocol")}} (`http://`), o domínio {{glossary("domain")}} (aqui como `developer.mozilla.org`), ou a porta {{glossary("port")}} TCP (aqui indicada pelo `80` que é ocultado por ser o número da porta padrão)
+- O caminho do recurso a ser buscado; a URL do recurso sem os elementos que são de contexto, por exemplo sem o protocolo {{glossary("protocol")}} (`https://`), o domínio {{glossary("domain")}} (aqui como `developer.mozilla.org`), ou a porta {{glossary("port")}} TCP (aqui indicada pelo `80` que é ocultado por ser o número da porta padrão)
 - A versão do protocolo HTTP.
 - [Cabeçalhos](/pt-BR/docs/Web/HTTP/Headers) opcionais que contém informações adicionais para os servidores.
 - Ou um corpo de dados, para alguns métodos como `POST`, similares aos corpos das respostas, que contém o recurso requisitado.

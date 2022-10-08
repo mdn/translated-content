@@ -900,7 +900,7 @@ O framework de teste do Django pode ajudar você a escrever eficazes testes unit
 
 Embora existam inúmeras outras ferramentas de teste que você pode utilizar, destacaremos apenas duas:
 
-- [Coverage](http://coverage.readthedocs.io/en/latest/): Essa ferramenta Python reporta quando do seu código é realmente executado pelos seus testes. É particularmente útil quando você começando e está tentando descobrir o que exatamente deve testar.
+- [Coverage](https://coverage.readthedocs.io/en/latest/): Essa ferramenta Python reporta quando do seu código é realmente executado pelos seus testes. É particularmente útil quando você começando e está tentando descobrir o que exatamente deve testar.
 - [Selenium](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) é um framework para automatizar testes em um navegador real. Ele permite simular um usuário real interagindo com o site e fornece uma excelente estrutura para o sistema testar seu site (a próxima etapa do teste de integração).
 
 ## Desafie-se
@@ -931,8 +931,8 @@ O próximo e último tutorial mostra como você pode implantar seu maravilhoso (
 - [Escrevendo seu primeiro app Django, parte 5 > Introduzindo testes automatizados](https://docs.djangoproject.com/en/2.1/intro/tutorial05/) (Django docs)
 - [Refererências de ferramentas de teste](https://docs.djangoproject.com/en/2.1/topics/testing/tools/) (Django docs)
 - [Tópicos avançados de testes](https://docs.djangoproject.com/en/2.1/topics/testing/advanced/) (Django docs)
-- [Um Guia para testes no Django](http://toastdriven.com/blog/2011/apr/10/guide-to-testing-in-django/) (Toast Driven Blog, 2011)
-- [Workshop: Desenvolvimento web Orientado a Testes com Django](http://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
+- [Um Guia para testes no Django](https://toastdriven.com/blog/2011/apr/10/guide-to-testing-in-django/) (Toast Driven Blog, 2011)
+- [Workshop: Desenvolvimento web Orientado a Testes com Django](https://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
 - [Testando no Django (Parte 1) - Melhores práticas e Exemplos](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}

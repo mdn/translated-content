@@ -266,7 +266,7 @@ Once a data list is affiliated with a form widget, its options are used to auto-
 </datalist>
 ```
 
-> **Nota:** According to [the HTML specification](http://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields.
+> **Nota:** According to [the HTML specification](https://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields.
 
 ![Screenshots of datalist on several platforms.](/files/4593/all-datalist.png)
 
@@ -582,7 +582,7 @@ If the image button is used to submit the form, this widget doesn't submit its v
 So for example when you click on the image of this widget, you are sent to a URL like the following:
 
 ```
-http://foo.com?pos.x=123&pos.y=456
+https://foo.com?pos.x=123&pos.y=456
 ```
 
 This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the [Sending and retrieving form data](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data) article.
@@ -643,8 +643,8 @@ As you'll have seen above, there are a lot of different types of available form 
 
 To dig into the different form widgets, there are some useful external resources you should check out:
 
-- [The Current State of HTML5 Forms](http://wufoo.com/html5/) by Wufoo
-- [HTML5 Tests - inputs](http://www.quirksmode.org/html5/inputs.html) on Quirksmode (also [available for mobile](http://www.quirksmode.org/html5/inputs_mobile.html) browsers)
+- [The Current State of HTML5 Forms](https://wufoo.com/html5/) by Wufoo
+- [HTML5 Tests - inputs](https://www.quirksmode.org/html5/inputs.html) on Quirksmode (also [available for mobile](https://www.quirksmode.org/html5/inputs_mobile.html) browsers)
 
 {{PreviousMenuNext("Learn/HTML/Forms/How_to_structure_an_HTML_form", "Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 

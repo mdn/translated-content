@@ -182,7 +182,7 @@ All of the Headers methods throw a TypeError if a header name is used that is no
 ```js
 var myResponse = Response.error();
 try {
-  myResponse.headers.set("Origin", "http://mybank.com");
+  myResponse.headers.set("Origin", "https://mybank.com");
 } catch(e) {
   console.log("Cannot pretend to be a bank!");
 }

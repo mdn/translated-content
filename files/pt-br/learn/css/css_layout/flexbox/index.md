@@ -56,7 +56,7 @@ Como você verá nas seções subsequentes, _flexbox_ faz muitas tarefas de layo
 
 ## Introduzindo um exemplo simples
 
-Neste artigo nós vamos trabalhar uma série de exercícios para ajudá-lo a entender como o flexbox funciona. Para começar, você deve fazer uma cópia local do arquivo inicial — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) do nosso repositório no github — carregue-o em um navegador moderno (como Firefox ou Chrome), e abra o arquivo no seu editor de código. Você pode [ver a página aqui](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html) também.
+Neste artigo nós vamos trabalhar uma série de exercícios para ajudá-lo a entender como o flexbox funciona. Para começar, você deve fazer uma cópia local do arquivo inicial — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) do nosso repositório no github — carregue-o em um navegador moderno (como Firefox ou Chrome), e abra o arquivo no seu editor de código. Você pode [ver a página aqui](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html) também.
 
 Você verá que temos um elemento {{HTMLElement("header")}} com um cabeçalho no nível superior dentro dele, e um elemento {{HTMLElement("section")}} contendo três {{HTMLElement("article")}}s. Nós vamos usá-los para criar um layout padrão de três colunas.
 
@@ -109,7 +109,7 @@ Você verá que isso organiza os elementos no layout de coluna, assim como eles 
 
 ## Embrulhamento
 
-Um problema que aparece quando você tem uma quantidade fixa de elementos com a mesma largura e altura no seu esquema é que eventualmente seus elementos filhos _flexbox_ irão sobrepor seu elemento pai (_container_), quebrando o layout. Dê uma olhada no nosso exemplo [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html), e experimente [visualizá-lo online](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (tenha uma cópia local desse arquivo no seu computador se você quiser continuar acompanhando os exemplos):
+Um problema que aparece quando você tem uma quantidade fixa de elementos com a mesma largura e altura no seu esquema é que eventualmente seus elementos filhos _flexbox_ irão sobrepor seu elemento pai (_container_), quebrando o layout. Dê uma olhada no nosso exemplo [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html), e experimente [visualizá-lo online](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (tenha uma cópia local desse arquivo no seu computador se você quiser continuar acompanhando os exemplos):
 
 ![](flexbox-example3.png)
 
@@ -142,7 +142,7 @@ flex-flow: row wrap;
 
 ## Dimensionamento flexível de elementos _flex_
 
-Vamos agora voltar ao nosso primeiro exemplo, e ver como podemos controlar qual a proporção de espaço os elementos _flex_ pode tomar. Localize sua cópia local do arquivo [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html), ou tenha uma cópia de [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) como um novo ponto de partida ([veja online](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
+Vamos agora voltar ao nosso primeiro exemplo, e ver como podemos controlar qual a proporção de espaço os elementos _flex_ pode tomar. Localize sua cópia local do arquivo [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html), ou tenha uma cópia de [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) como um novo ponto de partida ([veja online](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
 
 Primeiro adicione a seguinte regra no final do seu CSS:
 
@@ -194,7 +194,7 @@ Aconselhamos usar sempre a forma abreviada a menos que você precise usar a regr
 
 ## Alinhamento Horizontal e Vertical
 
-Você também pode usar as funcionalidade do _flexbox_ para alinhar elementos no eixo principal ou no eixo transversal (relembre esse assunto na seção [Um aparte no modelo flex](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#Um_aparte_no_modelo_flex)). Vamos explorar isso olhando para um outro exemplo — [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) ([veja online](http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)) — o qual vamos transformá-lo num botão/barra de ferramentas bem feito e flexível. Neste momento você verá uma barra de menu horizontal, com alguns botões expremidos no canto superior esquerdo:
+Você também pode usar as funcionalidade do _flexbox_ para alinhar elementos no eixo principal ou no eixo transversal (relembre esse assunto na seção [Um aparte no modelo flex](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#Um_aparte_no_modelo_flex)). Vamos explorar isso olhando para um outro exemplo — [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) ([veja online](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)) — o qual vamos transformá-lo num botão/barra de ferramentas bem feito e flexível. Neste momento você verá uma barra de menu horizontal, com alguns botões expremidos no canto superior esquerdo:
 
 ![](flexbox-example5.png)
 
@@ -269,7 +269,7 @@ button:last-child {
 
 ## Elementos _flex_ aninhados
 
-É possível criar layouts bem complexos com _flexbox_. É perfeitamente aceitável configurar um elemento _flex_ para também ser um _container_, para que seus filhos também se comportem como caixas _flex_. Dê uma olhada em [complex-flexbox.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html) ([veja também online](http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
+É possível criar layouts bem complexos com _flexbox_. É perfeitamente aceitável configurar um elemento _flex_ para também ser um _container_, para que seus filhos também se comportem como caixas _flex_. Dê uma olhada em [complex-flexbox.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html) ([veja também online](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
 
 ![](flexbox-example7.png)
 

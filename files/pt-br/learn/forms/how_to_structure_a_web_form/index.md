@@ -59,7 +59,7 @@ Note que, sempre é possível usar um widget de formulário fora de um elemento 
 
 O elemento {{HTMLElement ("fieldset")}} é uma maneira conveniente de criar grupos de widgets que compartilham o mesmo propósito. Um elemento {{HTMLElement ("fieldset")}} pode ser rotulado com um elemento {{HTMLElement ("legend")}}. O elemento {{HTMLElement ("legend")}} descreve formalmente a finalidade do elemento {{HTMLElement ("fieldset")}} ao qual está incluído.
 
-Muitas tecnologias assistivas usarão o elemento {{HTMLElement ("legend")}} como se fosse parte da etiqueta de cada widget dentro do elemento {{HTMLElement ("fieldset")}} correspondente. Por exemplo, alguns leitores de tela, como [Jaws](http://www.freedomscientific.com/products/fs/jaws-product-page.asp) ou [NVDA](http://www.nvda-project.org/), pronunciarão o conteúdo da legenda antes de pronunciar o rótulo de cada widget.
+Muitas tecnologias assistivas usarão o elemento {{HTMLElement ("legend")}} como se fosse parte da etiqueta de cada widget dentro do elemento {{HTMLElement ("fieldset")}} correspondente. Por exemplo, alguns leitores de tela, como [Jaws](https://www.freedomscientific.com/products/fs/jaws-product-page.asp) ou [NVDA](https://www.nvda-project.org/), pronunciarão o conteúdo da legenda antes de pronunciar o rótulo de cada widget.
 
 Aqui está um pequeno exemplo:
 
@@ -305,7 +305,7 @@ You now have all the knowledge you'll need to properly structure your HTML forms
 
 ## See Also
 
-- [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
+- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
 
 {{PreviousMenuNext("Learn/HTML/Forms/Your_first_HTML_form", "Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms")}}
 

@@ -33,14 +33,14 @@ Muitas optimizações significantes no tempo de execução, como TraceMonkey (Fi
 
 Além das implementações citadas anteriormente, existem ainda outras _engines_ populares de JavaScript como:-
 
-- A [V8](https://code.google.com/p/v8/) da Google, que é utilizada pelo navegador Google Chrome e as versões mais recentes do navegador Opera. Ela também é usada como a _engine_ do [Node.js](http://nodejs.org).
+- A [V8](https://code.google.com/p/v8/) da Google, que é utilizada pelo navegador Google Chrome e as versões mais recentes do navegador Opera. Ela também é usada como a _engine_ do [Node.js](https://nodejs.org).
 - O [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro) utilizado em alguns navegadores WebKit como Apple Safari.
-- [Carakan](http://my.opera.com/ODIN/blog/carakan-faq), usado em versões antigas do navegador Opera.
-- A _engine_ [Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) utilizada pelo Internet Explorer (apesar de que a linguagem implementada é formalmente chamada de "JScript" para evitar problemas de _trademark_).
+- [Carakan](https://my.opera.com/ODIN/blog/carakan-faq), usado em versões antigas do navegador Opera.
+- A _engine_ [Chakra](https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) utilizada pelo Internet Explorer (apesar de que a linguagem implementada é formalmente chamada de "JScript" para evitar problemas de _trademark_).
 
-Cada engine de JavaScript da Mozilla expõe uma API pública que os desenvolvedores de aplicativos podem utilizar para integrar JavaScript em seus softwares. O ambiente _host_ mais utilizado para JavaScript é o navegador web. Navegadores web tipicamente usam a API pública para criar **objetos de _host_** responsáveis pelo trabalho de refletir o [DOM](http://www.w3.org/DOM/) no JavaScript.
+Cada engine de JavaScript da Mozilla expõe uma API pública que os desenvolvedores de aplicativos podem utilizar para integrar JavaScript em seus softwares. O ambiente _host_ mais utilizado para JavaScript é o navegador web. Navegadores web tipicamente usam a API pública para criar **objetos de _host_** responsáveis pelo trabalho de refletir o [DOM](https://www.w3.org/DOM/) no JavaScript.
 
-Outra aplicação comum para JavaScript é usa-lo como uma linguagem de scripting para o _server side_ (da Web). Um servidor web de JavaScript expõe objetos de _host_ que representam uma solicitação HTTP e objetos de resposta, que são então manipulados por um programa em JavaScript que gera páginas web dinamicamente. [Node.js](http://nodejs.org) é um exemplo popular deste tipo de uso.
+Outra aplicação comum para JavaScript é usa-lo como uma linguagem de scripting para o _server side_ (da Web). Um servidor web de JavaScript expõe objetos de _host_ que representam uma solicitação HTTP e objetos de resposta, que são então manipulados por um programa em JavaScript que gera páginas web dinamicamente. [Node.js](https://nodejs.org) é um exemplo popular deste tipo de uso.
 
 ## Recursos para JavaScript
 

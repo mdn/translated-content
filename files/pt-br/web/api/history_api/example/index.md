@@ -313,7 +313,7 @@ const ajaxRequest = new (function () {
         oPageInfo = {
             title: null,
             url: location.href
-        }, oHTTPStatus = /* http://www.iana.org/assignments/http-status-codes/http-status-codes.xml */ {
+        }, oHTTPStatus = /* https://www.iana.org/assignments/http-status-codes/http-status-codes.xml */ {
             100: "Continue",
             101: "Switching Protocols",
             102: "Processing",

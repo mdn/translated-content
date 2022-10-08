@@ -45,8 +45,8 @@ Além dos workers dedicados, existem outros tipos de workers:
 
 Criamos algumas demonstrações simples para mostrar o uso básico:
 
-- [Exemplo básico de dedicated worker](https://github.com/mdn/simple-web-worker) ([executar dedicated worker](http://mdn.github.io/simple-web-worker/)).
-- [Exemplo básico de shared worker](https://github.com/mdn/simple-shared-worker) ([executar shared worker](http://mdn.github.io/simple-shared-worker/)).
+- [Exemplo básico de dedicated worker](https://github.com/mdn/simple-web-worker) ([executar dedicated worker](https://mdn.github.io/simple-web-worker/)).
+- [Exemplo básico de shared worker](https://github.com/mdn/simple-shared-worker) ([executar shared worker](https://mdn.github.io/simple-shared-worker/)).
 
 Você pode descobrir mais informações sobre como essas demonstrações funcionam em [Usando web workers](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers).
 

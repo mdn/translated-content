@@ -39,7 +39,7 @@ Para citações curtas, use o elemento {{HTMLElement("q")}}.
 ## Exemplo
 
 ```html
-<blockquote cite="http://developer.mozilla.org">
+<blockquote cite="https://developer.mozilla.org">
   <p>Esta é uma citação tirada da
   Mozilla Developer Center.</p>
 </blockquote>

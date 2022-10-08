@@ -113,7 +113,7 @@ O `PositionError` tem a seguinte estrutura de campos:
 
 ## Compatibilidade com navegadores
 
-| Navegador                  | Suporte Básico  | [Geolocation Level 2](http://dev.w3.org/geo/api/spec-source-v2.html) |
+| Navegador                  | Suporte Básico  | [Geolocation Level 2](https://dev.w3.org/geo/api/spec-source-v2.html) |
 | -------------------------- | --------------- | -------------------------------------------------------------------- |
 | Internet Explorer          | IE9 RC          | ---                                                                  |
 | Firefox (Gecko)            | **3.5** (1.9.1) | ---                                                                  |
@@ -199,5 +199,5 @@ prompt(window,
 - `nsIDOMGeoPositionErrorCallback`
 - `nsIDOMGeoPositionOptions`
 - `nsIDOMNavigatorGeolocation`
-- [Geolocation API on w3.org](http://dev.w3.org/geo/api/spec-source.html)
+- [Geolocation API on w3.org](https://dev.w3.org/geo/api/spec-source.html)
 - [Demos about the Geolocation API](/en-US/demos/tag/tech:geolocation)

@@ -273,7 +273,7 @@ Agora, para um pouco de diversão, vamos adicionar alguma detecção de colisão
     - Para cada bola, precisamos checar todas as outras bolas para ver se ela colidiu com a bola atual. Para fazer isso, abrimos outro loop `for` para percorrer todas as bolas no array `balls[]`.
     - Imediatamente dentro de nosso loop for, usamos uma instrução `if` para verificar se a bola atual em loop é a mesma bola que estamos verificando no momento. Não queremos verificar se uma bola colidiu consigo mesma! Para fazer isso, verificamos se a bola atual (ou seja, a bola cujo método collisionDetect está sendo invocado) é a mesma que a bola de loop (ou seja, a bola que está sendo referenciada pela iteração atual do loop for no collisionDetect método). Nós então usamos `!` para negar a verificação, para que o código dentro da instrução if seja executado apenas se eles não forem iguais.
     - Em seguida, usamos um algoritmo comum para verificar a colisão de dois círculos. Estamos basicamente verificando se alguma das áreas dos dois círculos se sobrepõe. Isso é explicado ainda mais na [2D collision detection](/pt-BR/docs/Games/Techniques/2D_collision_detection).
-    - Se uma colisão for detectada, o código dentro da instrução `if` interna será executado. Neste caso, estamos apenas definindo a propriedade `color` de ambos os círculos para uma nova cor aleatória. Poderíamos ter feito algo muito mais complexo, como fazer com que as bolas saltassem umas das outras de forma realista, mas isso teria sido muito mais complexo de implementar. Para essas simulações físicas, os desenvolvedores tendem a usar jogos ou bibliotecas físicas, como [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
+    - Se uma colisão for detectada, o código dentro da instrução `if` interna será executado. Neste caso, estamos apenas definindo a propriedade `color` de ambos os círculos para uma nova cor aleatória. Poderíamos ter feito algo muito mais complexo, como fazer com que as bolas saltassem umas das outras de forma realista, mas isso teria sido muito mais complexo de implementar. Para essas simulações físicas, os desenvolvedores tendem a usar jogos ou bibliotecas físicas, como [PhysicsJS](https://wellcaffeinated.net/PhysicsJS/), [matter.js](https://brm.io/matter-js/), [Phaser](https://phaser.io/), etc.
 
 2. Você também precisa chamar esse método em cada quadro da animação. Adicione o seguinte abaixo do `balls[i].update();`:
 
@@ -283,7 +283,7 @@ Agora, para um pouco de diversão, vamos adicionar alguma detecção de colisão
 
 3. Salve e atualize a demonstração novamente, e você verá suas bolas mudando de cor quando colidirem!
 
-> **Nota:** If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> **Nota:** If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
 ## Sumário
 

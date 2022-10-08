@@ -72,7 +72,7 @@ Interfaces para definição de efeitos que você deseja aplicar em suas fontes d
 - {{domxref("ConvolverNode")}}
   - : The **`ConvolverNode`** interface is an {{domxref("AudioNode")}} that performs a Linear Convolution on a given AudioBuffer, often used to achieve a reverb effect.
 - {{domxref("DelayNode")}}
-  - : The **`DelayNode`** interface represents a [delay-line](http://en.wikipedia.org/wiki/Digital_delay_line); an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.
+  - : The **`DelayNode`** interface represents a [delay-line](https://en.wikipedia.org/wiki/Digital_delay_line); an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.
 - {{domxref("DynamicsCompressorNode")}}
   - : The **`DynamicsCompressorNode`** interface provides a compression effect, which lowers the volume of the loudest parts of the signal in order to help prevent clipping and distortion that can occur when multiple sounds are played and multiplexed together at once.
 - {{domxref("GainNode")}}
@@ -149,7 +149,7 @@ As interfaces a seguir foram definidas em versões antigas das especificações 
 
 ## Exemplo
 
-Este exemplo mostra uma grande variedade de funções da API de Web Audio que podem ser utilizadas. Você pode ver este código em ação na demo [Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) (também verificar o [código-fonte completo no Github](https://github.com/mdn/voice-change-o-matic)) - esta é uma demonstração de um modificador de voz de brinquedo experimental; aconselhamos manter seus alto-falantes baixo ao utilizá-lo, pelo menos para começar!
+Este exemplo mostra uma grande variedade de funções da API de Web Audio que podem ser utilizadas. Você pode ver este código em ação na demo [Voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (também verificar o [código-fonte completo no Github](https://github.com/mdn/voice-change-o-matic)) - esta é uma demonstração de um modificador de voz de brinquedo experimental; aconselhamos manter seus alto-falantes baixo ao utilizá-lo, pelo menos para começar!
 
 As linhas API de Web Audio estão destacadas; se você quiser encontrar mais informações sobre os diferentes métodos, faça uma busca através das páginas de referência.
 
@@ -325,11 +325,11 @@ function voiceMute() { // toggle to mute and unmute sound
 
 - [Using the Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Visualizations with Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Voice-change-O-matic example](http://mdn.github.io/voice-change-o-matic/)
-- [Violent Theremin example](http://mdn.github.io/violent-theremin/)
+- [Voice-change-O-matic example](https://mdn.github.io/voice-change-o-matic/)
+- [Violent Theremin example](https://mdn.github.io/violent-theremin/)
 - [Web audio spatialisation basics](/pt-BR/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-- [Mixing Positional Audio and WebGL](http://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](http://www.html5rocks.com/tutorials/webaudio/games/)
+- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
+- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
 - [Porting webkitAudioContext code to standards based AudioContext](/pt-BR/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
 - [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
 
@@ -345,8 +345,8 @@ function voiceMute() { // toggle to mute and unmute sound
 
 2. **Examples**
 
-    1. [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)
-    2. [Violent Theremin](http://mdn.github.io/violent-theremin/)
+    1. [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)
+    2. [Violent Theremin](https://mdn.github.io/violent-theremin/)
 
 3. **Interfaces**
 

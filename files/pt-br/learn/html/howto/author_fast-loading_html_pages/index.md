@@ -20,7 +20,7 @@ O peso da página é, de longe, o fator mais importante na performance de seu ca
 
 Reduzir o peso da página através da eliminação de espaço em branco desnecessário e comentários, comumente conhecido como minimização, e mover scripts e CSS _inline_ para arquivos externos pode melhorar a performance de download sem muita necessidade de outras mudanças na estrutura da página.
 
-Ferramentas como [HTML Tidy](http://tidy.sourceforge.net/) podem automaticamente cortar espaços em branco desnecessários e linhas vazias de um código HTML validado. Outras ferramentas podem "comprimir" JavaScript ao reformatar o código-fonte ou o obfuscando e substituindo identificadores longos por versões mais curtas.
+Ferramentas como [HTML Tidy](https://tidy.sourceforge.net/) podem automaticamente cortar espaços em branco desnecessários e linhas vazias de um código HTML validado. Outras ferramentas podem "comprimir" JavaScript ao reformatar o código-fonte ou o obfuscando e substituindo identificadores longos por versões mais curtas.
 
 ### Minimize o número de arquivos
 
@@ -50,9 +50,9 @@ Então, para essas páginas que são geradas dinamicamente, alguma pesquisa adic
 
 Mais informações:
 
-1. [Get HTTP Condicional para Hackers RSS](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
-3. [Sobre o Last-Modified HTTP e ETag](http://www.cmlenz.net/archives/2005/05/on-http-last-modified-and-etag)
+1. [Get HTTP Condicional para Hackers RSS](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
+2. [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
+3. [Sobre o Last-Modified HTTP e ETag](https://www.cmlenz.net/archives/2005/05/on-http-last-modified-and-etag)
 
 ### Estabeleça a ordem dos componentes da página de forma otimizada
 
@@ -70,7 +70,7 @@ O uso de CSS moderno reduz a quantidade de marcação, pode reduzir a necessidad
 
 Usar marcações validadas tem outras vantagens. Primeiro, _browsers_ não precisarão realizar correção de erros durante o _parsing_ de HTML (isso é à parte da preocupação filosófica de permitir variação de formato na entrada do usuário, e então programaticamente "corrigir" ou normalizá-la; ou se, ao invés disso, forçar um formato de entrada rígido, sem tolerância a desvios).
 
-Além do mais, marcação válida permite o livre uso de outras ferramentas que podem pré-processar páginas web. Por exemplo, [HTML Tidy](http://tidy.sourceforge.net/) pode remover espaços em branco e tags finais opcionais; contudo, a ferramenta não será executada em uma página com erros graves de marcação.
+Além do mais, marcação válida permite o livre uso de outras ferramentas que podem pré-processar páginas web. Por exemplo, [HTML Tidy](https://tidy.sourceforge.net/) pode remover espaços em branco e tags finais opcionais; contudo, a ferramenta não será executada em uma página com erros graves de marcação.
 
 ### Divida seu conteúdo
 
@@ -98,7 +98,7 @@ use tabelas não-aninhadas ou divs, como em
 <TABLE>...</TABLE>
 ```
 
-Veja também: [Especificações do layout multi-colunas CSS3](http://www.w3.org/TR/css3-multicol/) e [layout de caixas flexíveis CSS3](http://www.w3.org/TR/css3-flexbox/)
+Veja também: [Especificações do layout multi-colunas CSS3](https://www.w3.org/TR/css3-multicol/) e [layout de caixas flexíveis CSS3](https://www.w3.org/TR/css3-flexbox/)
 
 ### Especifique tamanhos para imagens e tabelas
 
@@ -150,8 +150,8 @@ Nota: Apesar desses atributos ajudarem muito na primeira vez que a página for c
 
 ## Links Relacionados
 
-- Livro: ["Speed Up Your Site" por Andy King](http://www.websiteoptimization.com/)
-- O excelente e muito completo [Melhores Práticas para Acelerar Seu Web Site](http://developer.yahoo.com/performance/rules.html) (Yahoo!)
+- Livro: ["Speed Up Your Site" por Andy King](https://www.websiteoptimization.com/)
+- O excelente e muito completo [Melhores Práticas para Acelerar Seu Web Site](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
 - Ferramentas para analisar e otimizar a performance: [Google PageSpeed](https://developers.google.com/speed/pagespeed/)
 
 ## Informações do Documento Original

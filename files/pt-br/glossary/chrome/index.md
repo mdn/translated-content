@@ -12,4 +12,4 @@ Em um navegador, o chrome é qualquer aspecto visível do navegador aparte das p
 
 ## Aprenda mais
 
-- [Browser and GUI Chrome](http://www.nngroup.com/articles/browser-and-gui-chrome/)
+- [Browser and GUI Chrome](https://www.nngroup.com/articles/browser-and-gui-chrome/)

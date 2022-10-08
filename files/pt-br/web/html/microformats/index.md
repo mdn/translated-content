@@ -6,21 +6,21 @@ original_slug: Web/HTML/microformatos
 ---
 {{HTMLSidebar}}
 
-[_Microformatos_](http://microformats.org/) (ás vezes abreviado como **μF**) são convenções utilizadas para incorporar convenções semânticas em HTML e providenciar uma API a ser usada por mecanismos de pesquisa, agregadores e outras ferramentas. Esses padrões mínimos de HTML são usados para marcar entidades que variam de informações fundamentais a específicas de domínio, como pessoas, organizações, eventos e locais.
+[_Microformatos_](https://microformats.org/) (ás vezes abreviado como **μF**) são convenções utilizadas para incorporar convenções semânticas em HTML e providenciar uma API a ser usada por mecanismos de pesquisa, agregadores e outras ferramentas. Esses padrões mínimos de HTML são usados para marcar entidades que variam de informações fundamentais a específicas de domínio, como pessoas, organizações, eventos e locais.
 
 Os microformatos são suportados pelos principais mecanismos de pesquisa. Os dados são transportados na propriedade de classe que pode ser adicionada a qualquer elemento HTML. Além de legíveis por máquina, seu formato é projetado para ser facilmente lido por humanos.
 
-Existem [bibliotecas de análise para a maioria das linguagens](http://microformats.org/wiki/microformats2#Parsers) para microformatos2.
+Existem [bibliotecas de análise para a maioria das linguagens](https://microformats.org/wiki/microformats2#Parsers) para microformatos2.
 
 ### Como os Microformatos Funcionam?
 
-Um autor de uma página web pode adicionar microformatos no seu HTML. Por exemplo se ele quer se identificar ele podem utilizar um [h-card](http://microformats.org/wiki/h-card) como:
+Um autor de uma página web pode adicionar microformatos no seu HTML. Por exemplo se ele quer se identificar ele podem utilizar um [h-card](https://microformats.org/wiki/h-card) como:
 
 ```html
-<a class="h-card" href="http://example.com">Joe Bloggs</a>
+<a class="h-card" href="https://example.com">Joe Bloggs</a>
 ```
 
-Quando um analisador encontra esse dado, ele saberá que nessa página contém um "card" que descreve uma pessoa ou uma organização chamada `Joe Blogger` com uma URL de `http://example.com/`. O analisador disponibiliza esses dados por meio de APIs que podem ser usadas por diferentes aplicativos.
+Quando um analisador encontra esse dado, ele saberá que nessa página contém um "card" que descreve uma pessoa ou uma organização chamada `Joe Blogger` com uma URL de `https://example.com/`. O analisador disponibiliza esses dados por meio de APIs que podem ser usadas por diferentes aplicativos.
 
 Como neste exemplo, alguns padrões de marcação requerem apenas um único nome de classe raiz de microformato, que os analisadores usam para encontrar algumas propriedades genéricas, como: `name`, `url`, `photo`.
 
@@ -32,10 +32,10 @@ Todas os nomes de classes de microformatos utilizam prefixos. Os prefixos são O
 
 - **"h-\*" para nome de classes raíz**, p.ex "h-card", "h-entry", "h-feed", e várias outras. Essas classes de alto nível normalmente indicam um tipo e o vocabulário esperado de propriedades correspondente. Por exemplo:
 
-  - [h-card](http://microformats.org/wiki/h-card) descreve uma pessoa ou uma organização.
-  - [h-entry](http://microformats.org/wiki/h-entry) descreve conteúdo on-line em série ou com data marcada como uma postagem de blog.
-  - [h-feed](http://microformats.org/wiki/h-feed) descreve um fluxo de dados ou um feed de postagens.
-  - Você pode encontrar vários outros You can find many more [vocabulários na wiki de microformatos2.](http://microformats.org/wiki/microformats2#v2_vocabularies)
+  - [h-card](https://microformats.org/wiki/h-card) descreve uma pessoa ou uma organização.
+  - [h-entry](https://microformats.org/wiki/h-entry) descreve conteúdo on-line em série ou com data marcada como uma postagem de blog.
+  - [h-feed](https://microformats.org/wiki/h-feed) descreve um fluxo de dados ou um feed de postagens.
+  - Você pode encontrar vários outros You can find many more [vocabulários na wiki de microformatos2.](https://microformats.org/wiki/microformats2#v2_vocabularies)
 
 - **"p-\*" para propriedades de texto simples,** p.ex "p-name", "p-summary"
 
@@ -47,7 +47,7 @@ Todas os nomes de classes de microformatos utilizam prefixos. Os prefixos são O
 
 - **"dt-\*" para propriedades de data e hora**, p.ex "dt-start", "dt-end", "dt-bday"
 
-  - Análise especial necessária: [value-class-pattern](http://microformats.org/wiki/value-class-pattern) and separate date time value parsing for readability.
+  - Análise especial necessária: [value-class-pattern](https://microformats.org/wiki/value-class-pattern) and separate date time value parsing for readability.
 
 - **"e-\*" para propriedades da árvore de elementos** em que toda a hierarquia de elementos contidos é o valor, p.ex "e-content". O prefixo "e-" também pode ser lembrado mnemonicamente como "árvore de elementos", "marcação incorporada", ou "marcação encapsulada".
 
@@ -55,7 +55,7 @@ Todas os nomes de classes de microformatos utilizam prefixos. Os prefixos são O
 
 ### h-card
 
-O microformato [h-card](http://microformats.org/wiki/h-card) representa uma pessoa ou uma organização.
+O microformato [h-card](https://microformats.org/wiki/h-card) representa uma pessoa ou uma organização.
 
 O valor de cada propriedade é definido no HTML utilizando a propriedade class, qualquer elemento pode receber.
 
@@ -63,8 +63,8 @@ O valor de cada propriedade é definido no HTML utilizando a propriedade class, 
 
 ```html
 <p class="h-card">
-  <img class="u-photo" src="http://example.org/photo.png" alt="" />
-  <a class="p-name u-url" href="http://example.org">Joe Bloggs</a>
+  <img class="u-photo" src="https://example.org/photo.png" alt="" />
+  <a class="p-name u-url" href="https://example.org">Joe Bloggs</a>
   <a class="u-email" href="mailto:joebloggs@example.com">joebloggs@example.com</a>,
   <span class="p-street-address">17 Austerstræti</span>
   <span class="p-locality">Reykjavík</span>
@@ -88,10 +88,10 @@ O valor de cada propriedade é definido no HTML utilizando a propriedade class, 
 ```html
 <div class="h-card">
   <a class="p-name u-url"
-   href="http://blog.lizardwrangler.com/"
+   href="https://blog.lizardwrangler.com/"
   >Mitchell Baker</a>
   (<a class="p-org h-card"
-    href="http://mozilla.org/"
+    href="https://mozilla.org/"
    >Mozilla Foundation</a>)
 </div>
 ```
@@ -104,13 +104,13 @@ JSON analisado:
   "type": ["h-card"],
   "properties": {
     "name": ["Mitchell Baker"],
-    "url": ["http://blog.lizardwrangler.com/"],
+    "url": ["https://blog.lizardwrangler.com/"],
     "org": [{
     "value": "Mozilla Foundation",
     "type": ["h-card"],
     "properties": {
       "name": ["Mozilla Foundation"],
-      "url": ["http://mozilla.org/"]
+      "url": ["https://mozilla.org/"]
     }
     }]
   }
@@ -122,14 +122,14 @@ Nota: o h-card aninhado implica nas propriedades 'name' e 'url', assim como qual
 
 ### h-entry
 
-O microformato [h-entry](http://microformats.org/wiki/h-entry) representa um conteúdo em série ou um conteúdo com data marcada na web. h-entry é frequentemente usado com conteúdo destinado a ser distribuído, p.ex postagens em blog.
+O microformato [h-entry](https://microformats.org/wiki/h-entry) representa um conteúdo em série ou um conteúdo com data marcada na web. h-entry é frequentemente usado com conteúdo destinado a ser distribuído, p.ex postagens em blog.
 
 Exemplo de h-entry como uma postagem em blog:
 
 ```html
 <article class="h-entry">
   <h1 class="p-name">Microformats are amazing</h1>
-  <p>Published by <a class="p-author h-card" href="http://example.com">W. Developer</a>
+  <p>Published by <a class="p-author h-card" href="https://example.com">W. Developer</a>
    on <time class="dt-published" datetime="2013-06-13 12:00:00">13<sup>th</sup> June 2013</time></p>
 
   <p class="p-summary">In which I extoll the virtues of using microformats.</p>
@@ -203,7 +203,7 @@ Exemplo de h-entry como uma postagem em blog:
 
 ### h-feed
 
-O [h-feed](http://microformats.org/wiki/h-feed) é um fluxo de dados ou um feed de posts de [h-entry](http://microformats.org/wiki/h-entry), como postagens completas em uma página inicial ou em páginas de arquivo, sumários ou outras listagens de postagens
+O [h-feed](https://microformats.org/wiki/h-feed) é um fluxo de dados ou um feed de posts de [h-entry](https://microformats.org/wiki/h-entry), como postagens completas em uma página inicial ou em páginas de arquivo, sumários ou outras listagens de postagens
 
 #### Exemplo h-feed
 
@@ -212,7 +212,7 @@ O [h-feed](http://microformats.org/wiki/h-feed) é um fluxo de dados ou um feed 
   <h1 class="p-name">Microformats Blogs</h1>
   <article class="h-entry">
   <h2 class="p-name">Microformats are amazing</h2>
-  <p>Published by <a class="p-author h-card" href="http://example.com">W. Developer</a>
+  <p>Published by <a class="p-author h-card" href="https://example.com">W. Developer</a>
      on <time class="dt-published" datetime="2013-06-13 12:00:00">13<sup>th</sup> June 2013</time>
   </p>
   <p class="p-summary">In which I extoll the virtues of using microformats.</p>
@@ -340,6 +340,6 @@ O `h-event` é para evento na web. O h-event é frequentemente usado com listage
 See also
 
 - {{Interwiki("wikipedia", "Microformat")}} na Wikipedia
-- [Site oficial dos Microformatos](http://microformats.org/)
-- [Motores de busca suportados](http://microformats.org/wiki/search_engines) no site oficial do Microformats
+- [Site oficial dos Microformatos](https://microformats.org/)
+- [Motores de busca suportados](https://microformats.org/wiki/search_engines) no site oficial do Microformats
 - [Microformatos no IndieWebCamp](https://indiewebcamp.com/microformats)

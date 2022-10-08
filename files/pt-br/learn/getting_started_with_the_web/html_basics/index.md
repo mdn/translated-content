@@ -214,7 +214,7 @@ Links são muito importantes — eles são o que faz da web ser de fato uma REDE
     <a href="https://www.mozilla.org/pt-BR/about/manifesto/">Mozilla Manifesto</a>
     ```
 
-Você pode obter resultados inesperados se omitir a parte `https://` ou o `http://`, o chamado _protocolo_, no começo do endereço web. Então depois de criar um link, clique nele para ter certeza de que ele está indo para onde você deseja.
+Você pode obter resultados inesperados se omitir a parte `https://` ou o `https://`, o chamado _protocolo_, no começo do endereço web. Então depois de criar um link, clique nele para ter certeza de que ele está indo para onde você deseja.
 
 > **Nota:** `href` pode parecer, numa primeira impressão, uma escolha obscura para um nome de atributo. Se você está tendo problemas para lembrar do nome, lembre que significa _**h**ypertext **ref**erence_. (referência em hipertexto)
 
@@ -222,7 +222,7 @@ Adicione um link em sua página agora, se ainda não tiver feito isso.
 
 ## Conclusão
 
-Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode [vê-la aqui](http://mdn.github.io/beginner-html-site/)):
+Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode [vê-la aqui](https://mdn.github.io/beginner-html-site/)):
 
 ![A web page screenshot showing a firefox logo, a heading saying mozilla is cool, and two paragraphs of filler text](https://mdn.mozillademos.org/files/9351/finished-test-page-small.png)
 

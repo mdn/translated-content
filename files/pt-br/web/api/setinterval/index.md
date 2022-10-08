@@ -408,7 +408,7 @@ In pages requiring many timers, it can often be difficult to keep track of all o
 |*|  https://github.com/madmurphy/minidaemon.js
 |*|
 |*|  This framework is released under the GNU Lesser General Public License, version 3 or later.
-|*|  http://www.gnu.org/licenses/lgpl-3.0.html
+|*|  https://www.gnu.org/licenses/lgpl-3.0.html
 |*|
 \*/
 

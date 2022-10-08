@@ -189,7 +189,7 @@ In order to execute your application Heroku needs to be able to set up the appro
 - **runtime.txt**:\*\* \*\*the programming language and version to use.
 - **requirements.txt**: the Python component dependencies, including Django.
 - **Procfile**: A list of processes to be executed to start the web application. For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
-- **wsgi.py**: [WSGI](http://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Heroku environment.
+- **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Heroku environment.
 
 Developers interact with Heroku using a special client app/terminal, which is much like a Unix Bash shell. This allows you to upload code that is stored in a git repository, inspect the running processes, see logs, set configuration variables and much more!
 
@@ -311,7 +311,7 @@ The "`web:`" tells Heroku that this is a web dyno and can be sent HTTP traffic. 
 
 #### Gunicorn
 
-[Gunicorn](http://gunicorn.org/) is the recommended HTTP server for use with Django on Heroku (as referenced in the Procfile above). It is a pure-Python HTTP server for WSGI applications that can run multiple Python concurrent processes within a single dyno (see [Deploying Python applications with Gunicorn](https://devcenter.heroku.com/articles/python-gunicorn) for more information).
+[Gunicorn](https://gunicorn.org/) is the recommended HTTP server for use with Django on Heroku (as referenced in the Procfile above). It is a pure-Python HTTP server for WSGI applications that can run multiple Python concurrent processes within a single dyno (see [Deploying Python applications with Gunicorn](https://devcenter.heroku.com/articles/python-gunicorn) for more information).
 
 While we won't need _Gunicorn_ to serve our LocalLibrary application during development, we'll install it so that it becomes part of our [requirements](#requirements) for Heroku to set up on the remote server.
 
@@ -329,7 +329,7 @@ We can't use the default SQLite database on Heroku because it is file-based, and
 
 The Heroku mechanism for handling this situation is to use a [database add-on](https://elements.heroku.com/addons#data-stores) and configure the web application using information from an environment [configuration variable](https://devcenter.heroku.com/articles/config-vars), set by the add-on. There are quite a lot of database options, but we'll use the [hobby tier](https://devcenter.heroku.com/articles/heroku-postgres-plans#plan-tiers) of the _Heroku postgres_ database as this is free, supported by Django, and automatically added to our new Heroku apps when using the free hobby dyno plan tier.
 
-The database connection information is supplied to the web dyno using a configuration variable named `DATABASE_URL`. Rather than hard-coding this information into Django, Heroku recommends that developers use the [dj-database-url](https://warehouse.python.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django’s desired configuration format. In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](http://initd.org/psycopg/), as Django needs this to interact with Postgres databases.
+The database connection information is supplied to the web dyno using a configuration variable named `DATABASE_URL`. Rather than hard-coding this information into Django, Heroku recommends that developers use the [dj-database-url](https://warehouse.python.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django’s desired configuration format. In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](https://initd.org/psycopg/), as Django needs this to interact with Postgres databases.
 
 ##### dj-database-url (Django database configuration from environment variable)
 
@@ -366,7 +366,7 @@ sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contr
 pip3 install psycopg2-binary
 ```
 
-Installation instructions for the other platforms can be found on the [psycopg2 website here](http://initd.org/psycopg/docs/install.html).
+Installation instructions for the other platforms can be found on the [psycopg2 website here](https://initd.org/psycopg/docs/install.html).
 
 However, you don't need to do this — you don't need PostgreSQL active on the local computer, as long as you give it to Heroku as a requirement, in `requirements.txt` (see below).
 
@@ -409,7 +409,7 @@ There are many ways to serve static files in production (we saw the relevant Dja
 
 > **Nota:**Heroku automatically calls _collectstatic_ and prepares your static files for use by WhiteNoise after it uploads your application. Check out [WhiteNoise](https://warehouse.python.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
 
-The steps to set up _WhiteNoise_ to use with the project are [given here](http://whitenoise.evans.io/en/stable/django.html) (and reproduced below):
+The steps to set up _WhiteNoise_ to use with the project are [given here](https://whitenoise.evans.io/en/stable/django.html) (and reproduced below):
 
 ##### WhiteNoise
 

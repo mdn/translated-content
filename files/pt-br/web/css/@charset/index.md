@@ -13,7 +13,7 @@ Esta regra at ([at-rule](/pt-BR/CSS/At-rule)) é útil quando se usa caracteres 
 
 Como existem várias maneiras de definir a codificação de caracteres em uma folha de estilo, o navegador vai tentar os seguintes métodos na seguinte ordem (e parar assim que um produzir um resultado):
 
-1. O valor do carácter de ordem de [byte Unicode](http://pt.wikipedia.org/wiki/Marca_de_ordem_de_byte) colocado no início do arquivo.
+1. O valor do carácter de ordem de [byte Unicode](https://pt.wikipedia.org/wiki/Marca_de_ordem_de_byte) colocado no início do arquivo.
 2. O valor dado pelo atributo `charset` do `Content-Type:` cabeçalho HTTP ou o equivalente no protocolo usado para servir a folha de estilo.
 3. O `@charset` CSS.
 4. Use a codificação de caracteres definidos pelo documento referente: o atributo charset do elemento {{ HTMLElement("link") }}. Este método é obsoleto em HTML5 e não deve ser utilizado.
@@ -28,7 +28,7 @@ Como existem várias maneiras de definir a codificação de caracteres em uma fo
 onde :
 
 - _charset_
-  - : É uma {{cssxref("&lt;string&gt;")}} denotando a codificação de caracteres a ser usado. Ele deve ser o nome de uma codificação de caracteres segura para a Web definido no [registro IANA](http://www.iana.org/assignments/character-sets). Se vários nomes estão associados com uma codificação, apenas um é marcado como _preferido_ e assim ser utilizado.
+  - : É uma {{cssxref("&lt;string&gt;")}} denotando a codificação de caracteres a ser usado. Ele deve ser o nome de uma codificação de caracteres segura para a Web definido no [registro IANA](https://www.iana.org/assignments/character-sets). Se vários nomes estão associados com uma codificação, apenas um é marcado como _preferido_ e assim ser utilizado.
 
 ## Exemplos
 

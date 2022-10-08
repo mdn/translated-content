@@ -172,5 +172,5 @@ Os status abaixo são definidos pela [seção 10 da RFC 2616](https://tools.ietf
 ## Veja também
 
 - [Lista de códigos de status na Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-- [Registro oficial IANA de códigos de status HTTP](http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [Registro oficial IANA de códigos de status HTTP](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
 - [HTTP status codes](https://www.exai.com/blog/http-status-codes-cheat-sheet)

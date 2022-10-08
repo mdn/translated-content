@@ -49,7 +49,7 @@ The `@media` at-rule is composed of one or more media queries, each of which con
 
 Corresponding styles are applied only if a media query computes to true, i.e., when the specified media type matches the type of device the document is being displayed on _and_ all media feature expressions compute as true. Queries involving unknown media types are always false.
 
-> **Note:** A style sheet with a media query attached to its {{HTMLElement("link")}} tag [will still download](http://scottjehl.github.com/CSS-Download-Tests/) even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.
+> **Note:** A style sheet with a media query attached to its {{HTMLElement("link")}} tag [will still download](https://scottjehl.github.com/CSS-Download-Tests/) even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.
 
 ### Media types
 
@@ -64,7 +64,7 @@ _Media types_ describe the general category of a device. Unless you use the `not
 - `speech`
   - : Intended for speech synthesizers.
 
-> **Note:** **Deprecated media types:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](http://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used. The `aural` type has been replaced by `speech`, which is similar.
+> **Note:** **Deprecated media types:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used. The `aural` type has been replaced by `speech`, which is similar.
 
 ### Media features
 
@@ -85,7 +85,7 @@ _Media feature expressions_ test for specific characteristics of the {{glossary(
 | [`color`](/pt-BR/docs/Web/CSS/@media/color)                                                                            | Number of bits per color component of the output device, or zero if the device isn't color                                       |                                                                                                                                       |
 | [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut)                                                                | Approximate range of colors that are supported by the user agent and output device                                               | Added in Media Queries Level 4.                                                                                                       |
 | [`color-index`](/pt-BR/docs/Web/CSS/@media/color-index)                                                                | Number of entries in the output device's color lookup table, or zero if the device does not use such a table                     |                                                                                                                                       |
-| [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode)                                                              | The display mode of the application, as specified in the web app manifest's [`display`](/pt-BR/docs/Web/Manifest#display) member | Defined in the [Web App Manifest spec](http://w3c.github.io/manifest/#the-display-mode-media-feature).                                |
+| [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode)                                                              | The display mode of the application, as specified in the web app manifest's [`display`](/pt-BR/docs/Web/Manifest#display) member | Defined in the [Web App Manifest spec](https://w3c.github.io/manifest/#the-display-mode-media-feature).                                |
 | [`monochrome`](/pt-BR/docs/Web/CSS/@media/monochrome)                                                                  | Bits per pixel in the output device's monochrome frame buffer, or zero if the device isn't monochrome                            |                                                                                                                                       |
 | [`inverted-colors`](/pt-BR/docs/Web/CSS/@media/inverted-colors)                                                        | Is the user agent or underlying OS inverting colors?                                                                             | Deferred to Media Queries Level 5.                                                                                                    |
 | [`pointer`](/pt-BR/docs/Web/CSS/@media/pointer)                                                                        | Is the primary input mechanism a pointing device, and if so, how accurate is it?                                                 | Added in Media Queries Level 4.                                                                                                       |

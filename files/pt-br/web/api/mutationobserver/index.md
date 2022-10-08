@@ -105,7 +105,7 @@ Retorna um Array de [`MutationRecord`s](#MutationRecord).
 
 ## Exemplo de uso
 
-O exemplo a seguir foi retirado [deste post](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
+O exemplo a seguir foi retirado [deste post](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
 
 ```js
 // seleciona o nó alvo
@@ -130,11 +130,11 @@ observer.disconnect();
 
 ## Leitura adicional
 
-- [A brief overview](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
-- [A more in-depth discussion](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
-- [A screencast by Chromium developer Rafael Weinstein](http://www.youtube.com/watch?v=eRZ4pO0gVWw)
-- [The mutation summary library](http://code.google.com/p/mutation-summary/)
-- [The DOM standard](http://dom.spec.whatwg.org/#mutation-observers) que define a interface do `MutationObserver`
+- [A brief overview](https://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
+- [A more in-depth discussion](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
+- [A screencast by Chromium developer Rafael Weinstein](https://www.youtube.com/watch?v=eRZ4pO0gVWw)
+- [The mutation summary library](https://code.google.com/p/mutation-summary/)
+- [The DOM standard](https://dom.spec.whatwg.org/#mutation-observers) que define a interface do `MutationObserver`
 
 ## Compatibilidade com navegadores
 

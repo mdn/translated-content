@@ -47,7 +47,7 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 
 ## Descrição
 
-Se um site aceitar uma conexão por meio de HTTP e redirecionar para HTTPS, os visitantes poderão se comunicar inicialmente com a versão não criptografada do site antes de serem redirecionados, se, por exemplo, o visitante digitar `http://www.foo.com/` ou até mesmo apenas foo.com Isso cria uma oportunidade para um ataque man-in-the-middle. O redirecionamento pode ser explorado para direcionar os visitantes a um site mal-intencionado em vez da versão segura do site original.
+Se um site aceitar uma conexão por meio de HTTP e redirecionar para HTTPS, os visitantes poderão se comunicar inicialmente com a versão não criptografada do site antes de serem redirecionados, se, por exemplo, o visitante digitar `https://www.foo.com/` ou até mesmo apenas foo.com Isso cria uma oportunidade para um ataque man-in-the-middle. O redirecionamento pode ser explorado para direcionar os visitantes a um site mal-intencionado em vez da versão segura do site original.
 
 O cabeçalho HTTP Strict Transport Security informa ao navegador que ele nunca deve carregar um site usando HTTP e deve converter automaticamente todas as tentativas de acessar o site usando HTTP para solicitações HTTPS.
 
@@ -94,7 +94,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 ## Veja também
 
-- Postagem no blog: [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
-- Postagem no blog: [HTTP Strict Transport Security (force HTTPS)](http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
+- Postagem no blog: [HTTP Strict Transport Security has landed!](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
+- Postagem no blog: [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - Artigo OWASP: [HTTP Strict Transport Security](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
-- Wikipedia: [HTTP Strict Transport Security](http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
+- Wikipedia: [HTTP Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)

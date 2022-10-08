@@ -164,7 +164,7 @@ Alguns desenvolvedores consideram que nunca é uma boa idéia, praticamente, usa
 
 ## Igualdade de mesmo valor
 
-Igualdade de mesmo valor aborda um caso de uso final: determinar se dois valores são _funcionalmente idêntico_ em todos os contextos. (Este caso de uso demonstra uma instância de [Liskove substitution principle](http://en.wikipedia.org/wiki/Liskov_substitution_principle). Princípio de substituição de Liskove.) Uma instância ocorre quando é feita uma tentativa de transformar uma propriedade imutável:
+Igualdade de mesmo valor aborda um caso de uso final: determinar se dois valores são _funcionalmente idêntico_ em todos os contextos. (Este caso de uso demonstra uma instância de [Liskove substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle). Princípio de substituição de Liskove.) Uma instância ocorre quando é feita uma tentativa de transformar uma propriedade imutável:
 
 ```js
 
@@ -184,7 +184,7 @@ Igualdade de mesmo valor é fornecida pelo método `Object.is.`
 
 ## Igualdade abstrata, igualdade estrita, e de mesmo valor na especificação
 
-No ES5, a comparação efetuada por `==` é descrita em [Seção 11.9.3, O Algoritmo da Igualdade Abstrata](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). A comparação `===` está em [11.9.6, O Algoritmo de Igualdade Estrita](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Veja estes. Eles são breve e legível. Dica: leia o algoritmo de igualdade estrita primeiro.) ES5 também descreve, em [Seção 9.12, o Algoritmo de Mesmo Valor](http://ecma-international.org/ecma-262/5.1/#sec-9.12) para uso internamente pelo motor de JS. É em grande parte o mesmo que o Algoritmo de Igualdade Estrita, exceto que 11.9.6.4 e 9.12.4 diferem em manipulação do [`Number`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number). ES6 simplesmente se propõe a expor este algoritmo através de [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
+No ES5, a comparação efetuada por `==` é descrita em [Seção 11.9.3, O Algoritmo da Igualdade Abstrata](https://ecma-international.org/ecma-262/5.1/#sec-11.9.3). A comparação `===` está em [11.9.6, O Algoritmo de Igualdade Estrita](https://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Veja estes. Eles são breve e legível. Dica: leia o algoritmo de igualdade estrita primeiro.) ES5 também descreve, em [Seção 9.12, o Algoritmo de Mesmo Valor](https://ecma-international.org/ecma-262/5.1/#sec-9.12) para uso internamente pelo motor de JS. É em grande parte o mesmo que o Algoritmo de Igualdade Estrita, exceto que 11.9.6.4 e 9.12.4 diferem em manipulação do [`Number`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number). ES6 simplesmente se propõe a expor este algoritmo através de [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
 
 Podemos ver que com iguais duplos e triplos, com exceção de fazer uma verificação de tipo inicial 11.9.6.1, o Algoritmo de Igualdade Estrita é um subconjunto do Algoritmo Igualdade Abstrata, porque 11.9.6.2-7 correspondem a 11.9.3.1.a -f.
 
@@ -273,4 +273,4 @@ Baseando-se em [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects
 
 ## Veja também
 
-- [Tabela de Comparação JS](http://dorey.github.io/JavaScript-Equality-Table/)
+- [Tabela de Comparação JS](https://dorey.github.io/JavaScript-Equality-Table/)

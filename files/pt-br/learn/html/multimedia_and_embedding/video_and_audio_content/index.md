@@ -60,7 +60,7 @@ Uma solução nativa resolveria muito disso, se bem feita. Felizmente, alguns an
 
 Não ensinaremos como produzir arquivos de áudio e vídeo - isso requer um conjunto de habilidades completamente diferente. Nós fornecemos a você [amostras de arquivos de áudio e vídeo e exemplos de códigos](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) para sua própria experimentação, caso você não consiga se apossar.
 
-> **Nota:** Antes de começar aqui, você também deve saber que existem algumas {{glossary("OVP","OVPs")}} (fornecedores de vídeo online) como [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com), e [Vimeo](https://vimeo.com/), e provedores de áudio on-line como [Soundcloud](https://soundcloud.com/). Essas empresas oferecem uma maneira conveniente e fácil de hospedar e consumir vídeos, para que você não precise se preocupar com o enorme consumo de largura de banda. Os OVPs geralmente oferecem código pronto para incorporar vídeo / áudio em suas páginas da web. Se você seguir esse caminho, poderá evitar algumas das dificuldades que discutimos neste artigo. Discutiremos esse tipo de serviço um pouco mais no próximo artigo.
+> **Nota:** Antes de começar aqui, você também deve saber que existem algumas {{glossary("OVP","OVPs")}} (fornecedores de vídeo online) como [YouTube](https://www.youtube.com/), [Dailymotion](https://www.dailymotion.com), e [Vimeo](https://vimeo.com/), e provedores de áudio on-line como [Soundcloud](https://soundcloud.com/). Essas empresas oferecem uma maneira conveniente e fácil de hospedar e consumir vídeos, para que você não precise se preocupar com o enorme consumo de largura de banda. Os OVPs geralmente oferecem código pronto para incorporar vídeo / áudio em suas páginas da web. Se você seguir esse caminho, poderá evitar algumas das dificuldades que discutimos neste artigo. Discutiremos esse tipo de serviço um pouco mais no próximo artigo.
 
 ### O elemento \<video>
 
@@ -191,7 +191,7 @@ Isso produz algo como o seguinte em um navegador:
 
 ![A simple audio player with a play button, timer, volume control, and progress bar](https://mdn.mozillademos.org/files/12798/audio-player.png)
 
-> **Nota:** You can [run the audio demo live](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on Github (also see the [audio player source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
+> **Nota:** You can [run the audio demo live](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on Github (also see the [audio player source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
 Isso ocupa menos espaço do que um reprodutor de vídeo, pois não há componente visual - você só precisa exibir controles para reproduzir o áudio. Outras diferenças do vídeo HTML5 são as seguintes:
 
@@ -279,13 +279,13 @@ Isso resultará em um vídeo com legendas exibidas, mais ou menos assim:
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
 
-Para mais detalhes, leia [Adicionando legendas e legendas ao vídeo HTML5](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Você pode [encontrar o exemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompanha este artigo no Github, escrito por Ian Devlin (consulte o [código-fonte](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) também.) Este exemplo usa algum JavaScript para permitir que os usuários escolham entre diferentes legendas. Observe que, para ativar as legendas, você precisa pressionar o botão "CC" e selecionar uma opção - inglês, alemão ou espanhol.
+Para mais detalhes, leia [Adicionando legendas e legendas ao vídeo HTML5](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Você pode [encontrar o exemplo](https://iandevlin.github.io/mdn/video-player-with-captions/) que acompanha este artigo no Github, escrito por Ian Devlin (consulte o [código-fonte](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) também.) Este exemplo usa algum JavaScript para permitir que os usuários escolham entre diferentes legendas. Observe que, para ativar as legendas, você precisa pressionar o botão "CC" e selecionar uma opção - inglês, alemão ou espanhol.
 
 > **Nota:** As faixas de texto também ajudam você com o {{glossary ("SEO")}}, pois os mecanismos de pesquisa prosperam especialmente no texto. As trilhas de texto permitem até que os mecanismos de pesquisa sejam vinculados diretamente a um ponto no meio do vídeo.
 
 ### Aprendizado ativo: incorporando seu próprio áudio e vídeo
 
-Para esse aprendizado ativo, gostaríamos (idealmente) de você sair para o mundo e gravar alguns de seus próprios vídeos e áudio - a maioria dos telefones hoje em dia permite gravar áudio e vídeo com muita facilidade, e desde que você possa transferi-lo para o seu computador, você pode usá-lo. Talvez você precise fazer algumas conversões para obter um WebM e MP4 no caso de vídeo e um MP3 e Ogg no caso de áudio, mas existem programas suficientes disponíveis para permitir isso sem problemas, como o [Miro Video Converter](http://www.mirovideoconverter.com/) e o [Audacity](https://sourceforge.net/projects/audacity/). Gostaríamos que você experimentasse!
+Para esse aprendizado ativo, gostaríamos (idealmente) de você sair para o mundo e gravar alguns de seus próprios vídeos e áudio - a maioria dos telefones hoje em dia permite gravar áudio e vídeo com muita facilidade, e desde que você possa transferi-lo para o seu computador, você pode usá-lo. Talvez você precise fazer algumas conversões para obter um WebM e MP4 no caso de vídeo e um MP3 e Ogg no caso de áudio, mas existem programas suficientes disponíveis para permitir isso sem problemas, como o [Miro Video Converter](https://www.mirovideoconverter.com/) e o [Audacity](https://sourceforge.net/projects/audacity/). Gostaríamos que você experimentasse!
 
 Se você não conseguir obter nenhum vídeo ou áudio, pode usar nossos [exemplos de arquivos de áudio e vídeo](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) para realizar este exercício. Você também pode usar nosso código de exemplo para referência.
 
@@ -311,6 +311,6 @@ E isso é um tudo; esperamos que você tenha se divertido brincando com vídeo e
 - [Adicionando legendas e legendas ao vídeo HTML5](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).
 - [Entrega de áudio e vídeo:](/pt-BR/docs/Web/Apps/Fundamentals/Audio_and_video_delivery) muitos detalhes sobre como colocar áudio e vídeo em páginas da Web usando HTML e JavaScript.
 - [Manipulação de áudio e vídeo:](/pt-BR/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation) muitos detalhes sobre a manipulação de áudio e vídeo usando JavaScript (por exemplo, adicionando filtros).
-- Opções automatizadas para [traduzir multimídia.](http://www.inwhatlanguage.com/blog/translate-video-audio/)
+- Opções automatizadas para [traduzir multimídia.](https://www.inwhatlanguage.com/blog/translate-video-audio/)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}

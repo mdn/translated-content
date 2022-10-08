@@ -17,4 +17,4 @@ three.js é um motor {{Glossary("WebGL")}} baseado em {{Glossary("JavaScript")}}
 ### Conhecimento Geral
 
 - {{interwiki("wikipedia", "Three.js")}} na Wikipédia
-- [Site oficial do three.js](http://threejs.org/)
+- [Site oficial do three.js](https://threejs.org/)

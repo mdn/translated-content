@@ -120,13 +120,13 @@ These interfaces are related to interactivity with public-switched telephone net
 
 #### WebRTC-proper protocols
 
-- [Application Layer Protocol Negotiation for Web Real-Time Communications](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/)
-- [WebRTC Audio Codec and Processing Requirements](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/)
-- [RTCWeb Data Channels](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/)
-- [RTCWeb Data Channel Protocol](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/)
-- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/)
-- [WebRTC Security Architecture](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/)
-- [Transports for RTCWEB](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/)
+- [Application Layer Protocol Negotiation for Web Real-Time Communications](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/)
+- [WebRTC Audio Codec and Processing Requirements](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/)
+- [RTCWeb Data Channels](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/)
+- [RTCWeb Data Channel Protocol](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/)
+- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/)
+- [WebRTC Security Architecture](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/)
+- [Transports for RTCWEB](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/)
 
 #### Related supporting protocols
 

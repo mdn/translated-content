@@ -145,5 +145,5 @@ Ok, conversamos muito sobre processos e arquitetura. Hora de seguir em frente.
 
 - Se você quer se envolver, é um bom momento para começar a investigar o design e explorar a [anatomia de uma página da web.](/en-US/Learn/Anatomy_of_a_web_page)
 - É importante notar também que alguns aspectos da construção de um site custam dinheiro. Por favor, [consulte quanto custa construir um site](/pt-BR/docs/Learn/How_much_does_it_cost).
-- Ou leia mais sobre o [nome de domínio](http://en.wikipedia.org/wiki/Domain_name) na Wikipedia.
+- Ou leia mais sobre o [nome de domínio](https://en.wikipedia.org/wiki/Domain_name) na Wikipedia.
 - Você também pode encontrar [aqui](https://howdns.works/) uma explicação divertida e colorida de como o DNS funciona.

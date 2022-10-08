@@ -13,11 +13,11 @@ Esse artigo contém informações de como começar com service workers, incluind
 
 O principal problema que os usuários da web sofreram durante anos foi a perda de conexão. Até mesmo melhor web app do mundo terá uma péssima experiência de usuário se você não conseguir baixa-lá. Houveram várias tentativas de criar tecnologias para resolver esse problema, como mostra nossa página [Offline](/en-US/Apps/Build/Offline), e algumas questões foram resolvidas. Mas o maior problema é que, no geral, ainda não há um bom mecanismo de controle para caching de assets e requisições de rede personalizadas.
 
-A tentativa anterior — [AppCache](/pt-BR/docs/Web/HTML/Using_the_application_cache) — parecia uma boa ideia, pois permitia especificar facilmente os assets para cache. Porém, fazia várias suposições sobre o que você estava tentando fazer e depois quebrava horrivelmente quando seu app não seguia exatamente tais suposições. Leia [Application Cache is a Douchebag](http://alistapart.com/article/application-cache-is-a-douchebag) de Jake Archibald para mais detalhes.
+A tentativa anterior — [AppCache](/pt-BR/docs/Web/HTML/Using_the_application_cache) — parecia uma boa ideia, pois permitia especificar facilmente os assets para cache. Porém, fazia várias suposições sobre o que você estava tentando fazer e depois quebrava horrivelmente quando seu app não seguia exatamente tais suposições. Leia [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag) de Jake Archibald para mais detalhes.
 
 > **Nota:** A partir do Firefox 44, quando [AppCache](/pt-BR/docs/Web/HTML/Using_the_application_cache) é usado para fornecer suporte offline uma página, um aviso é exibido no console para que os desenvolvedores usem [Service workers](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers) ({{bug("1204581")}}.)
 
-Service workers devem finalmente corrigir esses problemas. A sintaxe do service worker é mais complexa do que a do AppCache, mas a vantagem é que você pode usar Javascript para controlar os comportamentos implícitos do AppCache com um bom grau de granularidade, permitindo que você lide com esse problema e muitos outros. Usando Service Worker você pode facilmente configurar um app para usar primeiro assets em cache, provendo uma experiência padronizada mesmo que esteja offline, antes de obter mais dados da rede (mais conhecido como [Offline First](http://offlinefirst.org/)). Isso já está disponível em apps nativos, que é uma das principais razões pelas quais apps nativos são frequentemente mais escolhidos do que web apps.
+Service workers devem finalmente corrigir esses problemas. A sintaxe do service worker é mais complexa do que a do AppCache, mas a vantagem é que você pode usar Javascript para controlar os comportamentos implícitos do AppCache com um bom grau de granularidade, permitindo que você lide com esse problema e muitos outros. Usando Service Worker você pode facilmente configurar um app para usar primeiro assets em cache, provendo uma experiência padronizada mesmo que esteja offline, antes de obter mais dados da rede (mais conhecido como [Offline First](https://offlinefirst.org/)). Isso já está disponível em apps nativos, que é uma das principais razões pelas quais apps nativos são frequentemente mais escolhidos do que web apps.
 
 ## Configuração para usar service workers
 
@@ -133,7 +133,7 @@ Tudo isto acontece assincronamente.
 > **Nota:** Você também pode encadear chamadas de promises, por exemplo:
 > `myPromise().then(success, failure).then(success).catch(failure);`
 
-> **Nota:** Você pode encontrar muito mais informações sobre promises lendo o excelente [JavaScript Promises: there and back again](http://www.html5rocks.com/en/tutorials/es6/promises/) de Jake Archibald.
+> **Nota:** Você pode encontrar muito mais informações sobre promises lendo o excelente [JavaScript Promises: there and back again](https://www.html5rocks.com/en/tutorials/es6/promises/) de Jake Archibald.
 
 ## Demonstração de Service workers
 
@@ -427,7 +427,7 @@ Firefox has also started to implement some useful tools related to service worke
 - You can navigate to [`about:debugging`](/en-US/docs/Tools/about:debugging) to see what SWs are registered and update/remove them.
 - When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](/pt-BR/docs/Tools/Settings).
 
-> **Nota:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
+> **Nota:** You may serve your app from `https://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
 
 ## Specifications
 

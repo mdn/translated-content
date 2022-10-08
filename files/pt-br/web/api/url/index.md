@@ -83,7 +83,7 @@ Se o seu navegador não tem suporte ao construtor {{domxref("URL.URL", "URL()")}
 O construtor recebe o parâmetro `url`, e o parâmetro opcional `base` para usar como base do parâmetro `url` é uma URL relativa:
 
 ```js
-const url = new URL("../cats", "http://www.example.com/dogs");
+const url = new URL("../cats", "https://www.example.com/dogs");
 console.log(url.hostname); // "www.example.com"
 console.log(url.pathname); // "/cats"
 ```
@@ -92,14 +92,14 @@ Propriedades da URL podem ser definidas para construir a URL:
 
 ```js
 url.hash = "tabby";
-console.log(url.href); // "http://www.example.com/cats#tabby"
+console.log(url.href); // "https://www.example.com/cats#tabby"
 ```
 
 As Urls são codificadas de acordo com as regras encontradas em {{RFC(3986)}}. Para instância:
 
 ```js
 url.pathname = "démonstration.html";
-console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
+console.log(url.href); // "https://www.example.com/d%C3%A9monstration.html"
 ```
 
 A interface {{domxref("URLSearchParams")}} é usada pra criar e manipular a query string da URL.
@@ -116,7 +116,7 @@ O método {{domxref("URL.toString", "toString()")}} de `URL` apenas retorna o va
 
 ```js
 const response = await fetch(
-  new URL("http://www.example.com/démonstration.html")
+  new URL("https://www.example.com/démonstration.html")
 );
 ```
 

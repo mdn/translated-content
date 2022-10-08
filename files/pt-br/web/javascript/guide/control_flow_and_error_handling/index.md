@@ -422,7 +422,7 @@ Uma Promise assume um destes estados:
 
 ### Carregando uma imagem com XHR
 
-Um exemplo simples usando Promise e `XMLHttpRequest` para carregar uma imagem disponível no repositório MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html). Você também pode [vê-lo executando](http://mdn.github.io/promises-test/). Cada etapa está comentada o que lhe permite seguir de perto a arquitetura Promise e arquitetura XHR. Aqui está a versão não comentada, mostrando o fluxo `Promise` para que você possa ter uma ideia:
+Um exemplo simples usando Promise e `XMLHttpRequest` para carregar uma imagem disponível no repositório MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html). Você também pode [vê-lo executando](https://mdn.github.io/promises-test/). Cada etapa está comentada o que lhe permite seguir de perto a arquitetura Promise e arquitetura XHR. Aqui está a versão não comentada, mostrando o fluxo `Promise` para que você possa ter uma ideia:
 
 ```js
 function imgLoad(url) {

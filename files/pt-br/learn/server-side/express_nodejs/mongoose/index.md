@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
-Este artigo introduz brevemente bancos de dados e como usá-los com aplicativos Node/Express. Depois demonstra como podemos usar o [Mongoose](http://mongoosejs.com/) para prover acesso ao banco de dados para o website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website). Explica como object schema e modelos são declarados, os principais tipos de campos e validações básicas. Também demonstra brevemente algumas das muitas maneiras em que se pode acessar os dados do modelo.
+Este artigo introduz brevemente bancos de dados e como usá-los com aplicativos Node/Express. Depois demonstra como podemos usar o [Mongoose](https://mongoosejs.com/) para prover acesso ao banco de dados para o website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website). Explica como object schema e modelos são declarados, os principais tipos de campos e validações básicas. Também demonstra brevemente algumas das muitas maneiras em que se pode acessar os dados do modelo.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -60,12 +60,12 @@ There are many ODM/ORM solutions available on the NPM package manager site (chec
 A few solutions that were popular at the time of writing are:
 
 - [Mongoose](https://www.npmjs.com/package/mongoose): Mongoose is a [MongoDB](https://www.mongodb.org/) object modeling tool designed to work in an asynchronous environment.
-- [Waterline](https://www.npmjs.com/package/waterline): An ORM extracted from the Express-based [Sails](http://sailsjs.com/) web framework. It provides a uniform API for accessing numerous different databases, including Redis, MySQL, LDAP, MongoDB, and Postgres.
+- [Waterline](https://www.npmjs.com/package/waterline): An ORM extracted from the Express-based [Sails](https://sailsjs.com/) web framework. It provides a uniform API for accessing numerous different databases, including Redis, MySQL, LDAP, MongoDB, and Postgres.
 - [Bookshelf](https://www.npmjs.com/package/bookshelf): Features both promise-based and traditional callback interfaces, providing transaction support, eager/nested-eager relation loading, polymorphic associations, and support for one-to-one, one-to-many, and many-to-many relations. Works with PostgreSQL, MySQL, and SQLite3.
 - [Objection](https://www.npmjs.com/package/objection): Makes it as easy as possible to use the full power of SQL and the underlying database engine (supports SQLite3, Postgres, and MySQL).
 - [Sequelize](https://www.npmjs.com/package/sequelize) is a promise-based ORM for Node.js and io.js. It supports the dialects PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL and features solid transaction support, relations, read replication and more.
 - [Node ORM2](https://node-orm.readthedocs.io/en/latest/) is an Object Relationship Manager for NodeJS. It supports MySQL, SQLite, and Progress, helping to work with the database using an object-oriented approach.
-- [JugglingDB](http://1602.github.io/jugglingdb/) is cross-DB ORM for NodeJS, providing a common interface to access most popular database formats. Currently supporting MySQL, SQLite3, Postgres, MongoDB, Redis and js-memory-storage (self-written engine for test-usage only).
+- [JugglingDB](https://1602.github.io/jugglingdb/) is cross-DB ORM for NodeJS, providing a common interface to access most popular database formats. Currently supporting MySQL, SQLite3, Postgres, MongoDB, Redis and js-memory-storage (self-written engine for test-usage only).
 
 As a general rule, you should consider both the features provided and the "community activity" (downloads, contributions, bug reports, quality of documentation, etc.) when selecting a solution. At the time of writing Mongoose is by far the most popular ODM, and is a reasonable choice if you're using MongoDB for your database.
 
@@ -75,7 +75,7 @@ Para o exemplo da _Local Library_ (e para o resto do tópico) nós iremos usar o
 
 Esse ODM (Object Data Model) e banco de dados combinados são extremamente populares na comunidade do Node, particularmente porque os documentos armazenados e os métodos de consultas se parecem muito com JSON, que consequentemente são muito familiares aos desenvolvedores JavaScript.
 
-> **Nota:** **Dica:** Você não precisa conhecer o MongoDB antes de usar o Mongoose, apesar de que partes da [documentação do Mongoose](http://mongoosejs.com/docs/guide.html) _são mais fáceis_ de entender se você já está familiarizado com o MongoDB.
+> **Nota:** **Dica:** Você não precisa conhecer o MongoDB antes de usar o Mongoose, apesar de que partes da [documentação do Mongoose](https://mongoosejs.com/docs/guide.html) _são mais fáceis_ de entender se você já está familiarizado com o MongoDB.
 
 O resto desse tutorial mostra como definir e acessar os modelos e schemas no Mongoose para o nosso website da [LocalLibrary](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website).
 
@@ -105,7 +105,7 @@ O diagrama também mostra o relacionamento entre modelos, incluindo sua cardinal
 
 Esta seção fornece uma visão geral de como conectar o Mongoose a um banco de dados do MongoDB, como definir um schema e um modelo, e como fazer consultas básicas.
 
-> **Nota:** Esse guia é "bastante influenciado" pelo conteúdo encontrado no [Mongoose quick start](https://www.npmjs.com/package/mongoose) do _npm_ e pela [documentação oficial](http://mongoosejs.com/docs/guide.html).
+> **Nota:** Esse guia é "bastante influenciado" pelo conteúdo encontrado no [Mongoose quick start](https://www.npmjs.com/package/mongoose) do _npm_ e pela [documentação oficial](https://mongoosejs.com/docs/guide.html).
 
 ### Instalando Mongoose e MongoDB
 
@@ -210,10 +210,10 @@ var schema = new Schema(
 })
 ```
 
-Most of the [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) (the descriptors after “type:” or after field names) are self-explanatory. The exceptions are:
+Most of the [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (the descriptors after “type:” or after field names) are self-explanatory. The exceptions are:
 
 - `ObjectId`: Represents specific instances of a model in the database. For example, a book might use this to represent its author object. This will actually contain the unique ID (`_id`) for the specified object. We can use the `populate()` method to pull in the associated information when needed.
-- [Mixed](http://mongoosejs.com/docs/schematypes.html#mixed): An arbitrary schema type.
+- [Mixed](https://mongoosejs.com/docs/schematypes.html#mixed): An arbitrary schema type.
 - \[]: An array of items. You can perform JavaScript array operations on these models (push, pop, unshift, etc.). The examples above show an array of objects without a specified type and an array of `String` objects, but you can have an array of any type of object.
 
 The code also shows both ways of declaring a field:
@@ -226,7 +226,7 @@ The code also shows both ways of declaring a field:
   - Whether the field is required
   - Whether `String` fields should automatically be set to lowercase, uppercase, or trimmed (e.g. `{ type: String, lowercase: true, trim: true }`)
 
-For more information about options see [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) (Mongoose docs).
+For more information about options see [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (Mongoose docs).
 
 #### Validação
 
@@ -234,13 +234,13 @@ Mongoose provides built-in and custom validators, and synchronous and asynchrono
 
 The built-in validators include:
 
-- All [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) have the built-in [required](http://mongoosejs.com/docs/api.html#schematype_SchemaType-required) validator. This is used to specify whether the field must be supplied in order to save a document.
-- [Numbers](http://mongoosejs.com/docs/api.html#schema-number-js) have [min](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min) and [max](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max) validators.
-- [Strings](http://mongoosejs.com/docs/api.html#schema-string-js) have:
+- All [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) have the built-in [required](https://mongoosejs.com/docs/api.html#schematype_SchemaType-required) validator. This is used to specify whether the field must be supplied in order to save a document.
+- [Numbers](https://mongoosejs.com/docs/api.html#schema-number-js) have [min](https://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min) and [max](https://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max) validators.
+- [Strings](https://mongoosejs.com/docs/api.html#schema-string-js) have:
 
-  - [enum](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum): specifies the set of allowed values for the field.
-  - [match](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-match): specifies a regular expression that the string must match.
-  - [maxlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength) and [minlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength) for the string.
+  - [enum](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum): specifies the set of allowed values for the field.
+  - [match](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-match): specifies a regular expression that the string must match.
+  - [maxlength](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength) and [minlength](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength) for the string.
 
 The example below (slightly modified from the Mongoose documents) shows how you can specify some of the validator types and error messages:
 
@@ -259,7 +259,7 @@ var breakfastSchema = new Schema({
 });
 ```
 
-For complete information on field validation see [Validation](http://mongoosejs.com/docs/validation.html) (Mongoose docs).
+For complete information on field validation see [Validation](https://mongoosejs.com/docs/validation.html) (Mongoose docs).
 
 #### Propriedades virtuais
 
@@ -267,17 +267,17 @@ Virtual properties are document properties that you can get and set but that do 
 
 > **Nota:** We will use a virtual property in the library to define a unique URL for each model record using a path and the record's `_id` value.
 
-For more information see [Virtuals](http://mongoosejs.com/docs/guide.html#virtuals) (Mongoose documentation).
+For more information see [Virtuals](https://mongoosejs.com/docs/guide.html#virtuals) (Mongoose documentation).
 
 #### Methods and query helpers
 
-A schema can also have [instance methods](http://mongoosejs.com/docs/guide.html#methods), [static methods](http://mongoosejs.com/docs/guide.html#statics), and [query helpers](http://mongoosejs.com/docs/guide.html#query-helpers). The instance and static methods are similar, but with the obvious difference that an instance method is associated with a particular record and has access to the current object. Query helpers allow you to extend mongoose's [chainable query builder API](http://mongoosejs.com/docs/queries.html) (for example, allowing you to add a query "byName" in addition to the `find()`, `findOne()` and `findById()` methods).
+A schema can also have [instance methods](https://mongoosejs.com/docs/guide.html#methods), [static methods](https://mongoosejs.com/docs/guide.html#statics), and [query helpers](https://mongoosejs.com/docs/guide.html#query-helpers). The instance and static methods are similar, but with the obvious difference that an instance method is associated with a particular record and has access to the current object. Query helpers allow you to extend mongoose's [chainable query builder API](https://mongoosejs.com/docs/queries.html) (for example, allowing you to add a query "byName" in addition to the `find()`, `findOne()` and `findById()` methods).
 
 ### Usando modelos
 
 Once you've created a schema you can use it to create models. The model represents a collection of documents in the database that you can search, while the model's instances represent individual documents that you can save and retrieve.
 
-We provide a brief overview below. For more information see: [Models](http://mongoosejs.com/docs/models.html) (Mongoose docs).
+We provide a brief overview below. For more information see: [Models](https://mongoosejs.com/docs/models.html) (Mongoose docs).
 
 #### Criando e modificando documentos
 
@@ -340,7 +340,7 @@ If you specify a callback, as shown above, the query will execute immediately. T
 
 > **Nota:** It is important to remember that not finding any results is **not an error** for a search —but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (`results==null`) or daisy chain the method [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) on the query.
 
-If you don't specify a callback then the API will return a variable of type [Query](http://mongoosejs.com/docs/api.html#query-js). You can use this query object to build up your query and then execute it (with a callback) later using the `exec()` method.
+If you don't specify a callback then the API will return a variable of type [Query](https://mongoosejs.com/docs/api.html#query-js). You can use this query object to build up your query and then execute it (with a callback) later using the `exec()` method.
 
 ```js
 // find all athletes that play tennis
@@ -375,19 +375,19 @@ Athlete.
   exec(callback); // where callback is the name of our callback function.
 ```
 
-The [find()](http://mongoosejs.com/docs/api.html#query_Query-find) method gets all matching records, but often you just want to get one match. The following methods query for a single record:
+The [find()](https://mongoosejs.com/docs/api.html#query_Query-find) method gets all matching records, but often you just want to get one match. The following methods query for a single record:
 
-- [`findById()`](http://mongoosejs.com/docs/api.html#model_Model.findById): Finds the document with the specified `id` (every document has a unique `id`).
-- [`findOne()`](http://mongoosejs.com/docs/api.html#query_Query-findOne): Finds a single document that matches the specified criteria.
-- [`findByIdAndRemove()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove), [`findByIdAndUpdate()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate), [`findOneAndRemove()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove), [`findOneAndUpdate()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate): Finds a single document by `id` or criteria and either update or remove it. These are useful convenience functions for updating and removing records.
+- [`findById()`](https://mongoosejs.com/docs/api.html#model_Model.findById): Finds the document with the specified `id` (every document has a unique `id`).
+- [`findOne()`](https://mongoosejs.com/docs/api.html#query_Query-findOne): Finds a single document that matches the specified criteria.
+- [`findByIdAndRemove()`](https://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove), [`findByIdAndUpdate()`](https://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate), [`findOneAndRemove()`](https://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove), [`findOneAndUpdate()`](https://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate): Finds a single document by `id` or criteria and either update or remove it. These are useful convenience functions for updating and removing records.
 
-> **Nota:** There is also a [`count()`](http://mongoosejs.com/docs/api.html#model_Model.count) method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.
+> **Nota:** There is also a [`count()`](https://mongoosejs.com/docs/api.html#model_Model.count) method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.
 
-There is a lot more you can do with queries. For more information see: [Queries](http://mongoosejs.com/docs/queries.html) (Mongoose docs).
+There is a lot more you can do with queries. For more information see: [Queries](https://mongoosejs.com/docs/queries.html) (Mongoose docs).
 
 #### Working with related documents — population
 
-You can create references from one document/model instance to another using the `ObjectId` schema field, or from one document to many using an array of `ObjectIds`. The field stores the id of the related model. If you need the actual content of the associated document, you can use the [`populate()`](http://mongoosejs.com/docs/api.html#query_Query-populate) method in a query to replace the id with the actual data.
+You can create references from one document/model instance to another using the `ObjectId` schema field, or from one document to many using an array of `ObjectIds`. The field stores the id of the related model. If you need the actual content of the associated document, you can use the [`populate()`](https://mongoosejs.com/docs/api.html#query_Query-populate) method in a query to replace the id with the actual data.
 
 For example, the following schema defines authors and stories. Each author can have multiple stories, which we represent as an array of `ObjectId`. Each story can have a single author. The "ref" (highlighted in bold below) tells the schema which model can be assigned to this field.
 
@@ -456,7 +456,7 @@ Story
 > });
 > ```
 
-This is almost everything you need to know about working with related items _for this tutorial_. For more detailed information see [Population](http://mongoosejs.com/docs/populate.html) (Mongoose docs).
+This is almost everything you need to know about working with related items _for this tutorial_. For more detailed information see [Population](https://mongoosejs.com/docs/populate.html) (Mongoose docs).
 
 ### One schema/model per file
 
@@ -774,13 +774,13 @@ Last of all we tested our models by creating a number of instances (using a stan
 ## Veja também
 
 - [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
-- [Mongoose website](http://mongoosejs.com/) (Mongoose docs)
-- [Mongoose Guide](http://mongoosejs.com/docs/guide.html) (Mongoose docs)
-- [Validation](http://mongoosejs.com/docs/validation.html) (Mongoose docs)
-- [Schema Types](http://mongoosejs.com/docs/schematypes.html) (Mongoose docs)
-- [Models](http://mongoosejs.com/docs/models.html) (Mongoose docs)
-- [Queries](http://mongoosejs.com/docs/queries.html) (Mongoose docs)
-- [Population](http://mongoosejs.com/docs/populate.html) (Mongoose docs)
+- [Mongoose website](https://mongoosejs.com/) (Mongoose docs)
+- [Mongoose Guide](https://mongoosejs.com/docs/guide.html) (Mongoose docs)
+- [Validation](https://mongoosejs.com/docs/validation.html) (Mongoose docs)
+- [Schema Types](https://mongoosejs.com/docs/schematypes.html) (Mongoose docs)
+- [Models](https://mongoosejs.com/docs/models.html) (Mongoose docs)
+- [Queries](https://mongoosejs.com/docs/queries.html) (Mongoose docs)
+- [Population](https://mongoosejs.com/docs/populate.html) (Mongoose docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 

@@ -108,20 +108,20 @@ console.log(searchParams.getAll('foo'));              // ["bar", "baz"]
 O construtor `URLSearchParams` _não_ analisa URLs completas. No entanto, ele retirará um `?` inicial inicial de uma string, se presente.
 
 ```js
-const paramsString1 = 'http://example.com/search?query=%40';
+const paramsString1 = 'https://example.com/search?query=%40';
 const searchParams1 = new URLSearchParams(paramsString1);
 
 console.log(searchParams1.has('query')); // false
-console.log(searchParams1.has('http://example.com/search?query')); // true
+console.log(searchParams1.has('https://example.com/search?query')); // true
 
 console.log(searchParams1.get('query')); // null
-console.log(searchParams1.get('http://example.com/search?query')); // "@" (equivalente a decodeURIComponent('%40'))
+console.log(searchParams1.get('https://example.com/search?query')); // "@" (equivalente a decodeURIComponent('%40'))
 
 const paramsString2 = '?query=value';
 const searchParams2 = new URLSearchParams(paramsString2);
 console.log(searchParams2.has('query')); // true
 
-const url = new URL('http://example.com/search?query=%40');
+const url = new URL('https://example.com/search?query=%40');
 const searchParams3 = new URLSearchParams(url.search);
 console.log(searchParams3.has('query')); // true
 ```

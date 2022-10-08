@@ -36,4 +36,4 @@ Há várias coisas que você pode fazer para ajudar na segurança do seu site. E
 
 ## Veja também
 
-- [Projeto Open Web Application Security (OWASP)](http://www.owasp.org/)
+- [Projeto Open Web Application Security (OWASP)](https://www.owasp.org/)

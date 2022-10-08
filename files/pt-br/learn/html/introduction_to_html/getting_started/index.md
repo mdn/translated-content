@@ -235,7 +235,7 @@ O elemento {{htmlelement("em")}} é inline, então como você pode ver abaixo, o
 
 {{ EmbedLiveSample('Elementos_em_bloco_versus_elementos_inline', 700, 200, "", "") }}
 
-> **Nota:** o HTML5 redefiniu as categorias de elemento em HTML5: veja [Categorias de conteúdo de elementos](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories). Enquanto essas definições são mais precisas e menos ambíguas que as anteriores, elas são muito mais complicadas de entender do que "em bloco" e "inline", então usaremos estas ao longo deste tópico.
+> **Nota:** o HTML5 redefiniu as categorias de elemento em HTML5: veja [Categorias de conteúdo de elementos](https://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories). Enquanto essas definições são mais precisas e menos ambíguas que as anteriores, elas são muito mais complicadas de entender do que "em bloco" e "inline", então usaremos estas ao longo deste tópico.
 
 > **Nota:** Os termos "bloco" e "inline", conforme usados neste tópico, não devem ser confundidos com os [tipos de caixas CSS](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes) com os mesmos nomes. Embora eles se correlacionem por padrão, alterar o tipo de exibição CSS não altera a categoria do elemento e não afeta em quais elementos ele pode conter e em quais elementos ele pode estar contido. Um dos motivos pelos quais o HTML5 abandonou esses termos foi evitar essa confusão bastante comum.
 
@@ -456,33 +456,33 @@ Nossa recomendação é _sempre incluir as aspas nos valores dos atributos_ — 
 Você pode perceber que os valores dos atributos exemplificados neste artigo estão todos com aspas duplas, mas você poderá ver aspas simples no HTML de algumas pessoas. Esta é puramente uma questão de estilo e você pode se sentir livre para escolher qual prefere. As duas linhas de código a seguir são equivalentes:
 
 ```html
-<a href="http://www.example.com">Um link para o exemplo.</a>
+<a href="https://www.example.com">Um link para o exemplo.</a>
 
-<a href='http://www.example.com'>Um link para o exemplo.</a>
+<a href='https://www.example.com'>Um link para o exemplo.</a>
 ```
 
 Entretanto, você deve se certificar de não misturar os dois tipos de aspas juntos. O exemplo a seguir está errado!
 
 ```html example-bad
-<a href="http://www.exemplo.com'>Um link para o exemplo.</a>
+<a href="https://www.exemplo.com'>Um link para o exemplo.</a>
 ```
 
 Se utilizar um tipo de aspas no seu HTML, você pode inserir o outro tipo de aspas no texto, por exemplo, que não ocorrerá erro, desta forma:
 
 ```html
-<a href="http://www.example.com" title="Isn't this fun?">A link to my example.</a>
+<a href="https://www.example.com" title="Isn't this fun?">A link to my example.</a>
 ```
 
 No entanto, se você quiser incluir aspas, dentro de aspas onde ambas as aspas são do mesmo tipo (aspas simples ou aspas duplas), será necessário usar entidades HTML para as aspas. Por exemplo, isso irá quebrar:
 
 ```html example-bad
-<a href='http://www.example.com' title='Isn't this fun?'>A link to my example.</a>
+<a href='https://www.example.com' title='Isn't this fun?'>A link to my example.</a>
 ```
 
 Então você precisa fazer isso:
 
 ```html
-<a href='http://www.example.com' title='Isn&#39;t this fun?'>A link to my example.</a>
+<a href='https://www.example.com' title='Isn&#39;t this fun?'>A link to my example.</a>
 ```
 
 ## Anatomia de um documento HTML
@@ -508,7 +508,7 @@ Neste código nós temos:
 
     ```
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     ```
 
     No entanto, atualmente, ninguém se importa com eles, e eles são realmente apenas um artefato histórico que precisa ser incluído para que tudo funcione corretamente. \<! DOCTYPE html> é a menor cadeia de caracteres que conta como um doctype válido; é tudo o que você realmente precisa saber.
@@ -622,7 +622,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<h1>Algumas músicas</h1><p>Gosto muito de <strong> tocar bateria </strong>. Um dos meus bateristas favoritos é Neal Peart, que toca na banda <a href="https://pt.wikipedia.org/wiki/Rush" title="Artigo da Rush na Wikipedia">Rush</a>. Meu álbum favorito do Rush atualmente é <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p><img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
+var htmlSolution = '<h1>Algumas músicas</h1><p>Gosto muito de <strong> tocar bateria </strong>. Um dos meus bateristas favoritos é Neal Peart, que toca na banda <a href="https://pt.wikipedia.org/wiki/Rush" title="Artigo da Rush na Wikipedia">Rush</a>. Meu álbum favorito do Rush atualmente é <a href="https://www.deezer.com/album/942295">Moving Pictures</a>.</p><img src="https://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -712,7 +712,7 @@ Na saída ao vivo abaixo, você pode ver que o primeiro parágrafo deu errado, p
 
 {{EmbedLiveSample('Referências_de_entidades_incluindo_caracteres_especiais_no_HTML', 7700, 200, "", "", "hide-codepen-jsfiddle")}}
 
-> **Nota:** A tabela com todas as referências de caracteres disponíveis em HTML pode ser encontrada na Wikipédia: [List of XML and HTML character entity references](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references). Observe que você não precisa usar referências de entidade para outros símbolos, pois os navegadores modernos manipularão os símbolos reais muito bem, desde que a codificação de caracteres do HTML esteja definida como UTF-8.
+> **Nota:** A tabela com todas as referências de caracteres disponíveis em HTML pode ser encontrada na Wikipédia: [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references). Observe que você não precisa usar referências de entidade para outros símbolos, pois os navegadores modernos manipularão os símbolos reais muito bem, desde que a codificação de caracteres do HTML esteja definida como UTF-8.
 
 ## Comentários no HTML
 

@@ -33,7 +33,7 @@ O valor `null` é um literal, e não uma propriedade do objeto global (como o [`
 ### Diferenças entre `null` e `undefined`
 
 ```js
-typeof null        // object (bug no ECMAScript, deveria ser null - http://2ality.com/2013/10/typeof-null.html)
+typeof null        // object (bug no ECMAScript, deveria ser null - https://2ality.com/2013/10/typeof-null.html)
 typeof undefined   // undefined
 null === undefined // falso
 null  == undefined // verdadeiro
