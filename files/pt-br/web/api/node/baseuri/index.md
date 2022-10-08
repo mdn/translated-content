@@ -40,7 +40,7 @@ Você pode usar `{{domxref("document")}}.baseURI` para obter a URL base de um do
 
 A URL base de um elemento em HTML é, normalmente, igual a URL base do documento onde o nó está.
 
-Se o documento contém atributos [`xml:base`](/en-US/docs/XML/xml:base) ( que você não deve fazer em documento HTML), o `element.baseURI` recebe os atributos `xml:base` dos elementos pai into account when computing the base URL. Veja [xml:base](/pt-BR/docs/XML/xml:base) para mais detalhes.
+Se o documento contém atributos [`xml:base`](/pt-BR/docs/XML/xml:base) ( que você não deve fazer em documento HTML), o `element.baseURI` recebe os atributos `xml:base` dos elementos pai into account when computing the base URL. Veja [xml:base](/pt-BR/docs/XML/xml:base) para mais detalhes.
 
 Você pode usar `{{domxref("element")}}.baseURI` para obter a URL base de um elemento.
 
