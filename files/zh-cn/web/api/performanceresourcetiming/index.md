@@ -68,7 +68,7 @@ slug: Web/API/PerformanceResourceTiming
 
 ## 示例
 
-在[Using the Resource Timing API](/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)中查看相关示例。
+在[使用 Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API) 中查看相关示例。
 
 ## 规范
 
