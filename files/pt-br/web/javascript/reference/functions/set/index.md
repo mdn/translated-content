@@ -18,9 +18,6 @@ A sintaxe **`set`** liga a propriedade da função para ser chamada quando exist
 
 - `prop`
   - : Nome da propriedade ligada a função.
-
-<!---->
-
 - `val`
   - : `Um apelido para variável que será atribuidada a prop.`
 - expression
