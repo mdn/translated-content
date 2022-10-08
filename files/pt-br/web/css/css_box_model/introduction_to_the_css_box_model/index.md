@@ -10,7 +10,7 @@ Em uma página WEB, cada elemento é representado como um _box_ retangular. Dete
 
 No CSS, cada um desses _boxes_ retangulares é descrita usando o _box model_ padrão. Este modelo descreve o conteúdo do espaço ocupado por um elemento. Cada box possui 4 edges: **margin edge**, **border edge**, **padding edge** e **content edge**.
 
-![CSS Box model](</en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model/boxmodel-(3).png>)
+![CSS Box model](</pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model/boxmodel-(3).png>)
 
 A **área de conteúdo** (content area) é a área ocupada pelo conteúdo real do elemento. Ele frequentamente possui um fundo, uma cor de fonte ou uma imagem (nessa ordem, uma imagem opaca esconde a cor de fundo) e é localizada dentro do _content edge_; suas dimensões são a largura do conteúdo, ou largura do box de conteúdo, e altura do conteúdo, ou altura do box de conteúdo.
 
