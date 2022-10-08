@@ -75,7 +75,7 @@ Os corpos das Declarações de Classes e das Expressões de Classes são executa
 
 ### Construtor
 
-O método [`constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) é um tipo especial de método para criar e iniciar um objeto criado pela classe. Só pode existir um método especial com o nome "constructor" dentro da classe. Um erro de sintaxe {{jsxref("SyntaxError")}} será lançado se a classe possui mais do que uma ocorrência do método `constructor`.
+O método [`constructor`](/pt-BR/docs/Web/JavaScript/Reference/Classes/constructor) é um tipo especial de método para criar e iniciar um objeto criado pela classe. Só pode existir um método especial com o nome "constructor" dentro da classe. Um erro de sintaxe {{jsxref("SyntaxError")}} será lançado se a classe possui mais do que uma ocorrência do método `constructor`.
 
 Um construtor pode usar a palavra-chave `super` para chamar o construtor de uma classe pai.
 
@@ -105,7 +105,7 @@ console.log(quadrado.area);
 
 ### Métodos estáticos
 
-A palavra-chave [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) define um método estático de uma classe. Métodos estáticos são chamados sem a instanciação da sua classe e não podem ser chamados quando a classe é instanciada. Métodos estáticos são geralmente usados para criar funções de utilidades por uma aplicação.
+A palavra-chave [`static`](/pt-BR/docs/Web/JavaScript/Reference/Classes/static) define um método estático de uma classe. Métodos estáticos são chamados sem a instanciação da sua classe e não podem ser chamados quando a classe é instanciada. Métodos estáticos são geralmente usados para criar funções de utilidades por uma aplicação.
 
 ```js
 class Ponto {
@@ -198,7 +198,7 @@ Retangulo.prototype.larguraPrototipagem = 25;
 
 ## Sub classes com o `extends`
 
-A palavra-chave [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) é usada em uma _declaração de classe_, ou em uma _expressão de classe_ para criar uma classe como filha de uma outra classe.
+A palavra-chave [`extends`](/pt-BR/docs/Web/JavaScript/Reference/Classes/extends) é usada em uma _declaração de classe_, ou em uma _expressão de classe_ para criar uma classe como filha de uma outra classe.
 
 ```js
 class Animal {

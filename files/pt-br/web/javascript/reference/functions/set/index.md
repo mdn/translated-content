@@ -55,7 +55,7 @@ Observe que _current_ não está definido e qualquer tentativa de acesso irá re
 
 ### Removendo um setter com o operador `delete`
 
-Se você deseja remover o _setter_, poderá usar somente o [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete):
+Se você deseja remover o _setter_, poderá usar somente o [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete):
 
 ```js
 delete o.current;

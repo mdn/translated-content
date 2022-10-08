@@ -27,7 +27,7 @@ const re = /ab+c/;
 
 As expressões regulares na forma literal são compiladas quando o script é carregado. Esta forma de construção possui melhor performace quando a expressão regular utilizada é uma constante, ou seja, não muda durante a execução.
 
-Ou chamando o construtor do objeto [`RegExp`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp):
+Ou chamando o construtor do objeto [`RegExp`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp):
 
 ```js
 let re = new RegExp("ab+c");
@@ -797,12 +797,12 @@ Expressões Regulares são usadas com os metodos `test` e `exec` do objeto `RegE
 
 | Metodo                                                                                                                                      | Descrição                                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`exec`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec)          | Um método `RegExp` que execute uma pesquisa por uma correspondência em uma string. Retorna um array de informações.                                            |
-| [`test`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test)          | Um método `RegExp` que testa uma correspondência em uma string. Retorna true ou false.                                                                         |
-| [`match`](/en-US/docs/JavaScript/Reference/Global_Objects/String/match)       | Um método `String` que executa uma pesquisa por uma correspondência em uma string. Retorna uma array de informações ou null caso não haja uma correspondência. |
-| [`search`](/en-US/docs/JavaScript/Reference/Global_Objects/String/search)    | Um método `String` que testa uma correspondência em uma string. Retorna o indice da correspondência ou -1 se o teste falhar.                                   |
-| [`replace`](/en-US/docs/JavaScript/Reference/Global_Objects/String/replace) | Um método `String` que executa uma pesquisa por uma correspondência em uma string, e substitui a substring correspondênte por uma substring de substituição.   |
-| [`split`](/en-US/docs/JavaScript/Reference/Global_Objects/String/split)       | Um método `String` que usa uma expressão regular ou uma string fixa para quebrar uma string dentro de um array de substrings.                                  |
+| [`exec`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/exec)          | Um método `RegExp` que execute uma pesquisa por uma correspondência em uma string. Retorna um array de informações.                                            |
+| [`test`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/test)          | Um método `RegExp` que testa uma correspondência em uma string. Retorna true ou false.                                                                         |
+| [`match`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/match)       | Um método `String` que executa uma pesquisa por uma correspondência em uma string. Retorna uma array de informações ou null caso não haja uma correspondência. |
+| [`search`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/search)    | Um método `String` que testa uma correspondência em uma string. Retorna o indice da correspondência ou -1 se o teste falhar.                                   |
+| [`replace`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/replace) | Um método `String` que executa uma pesquisa por uma correspondência em uma string, e substitui a substring correspondênte por uma substring de substituição.   |
+| [`split`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/split)       | Um método `String` que usa uma expressão regular ou uma string fixa para quebrar uma string dentro de um array de substrings.                                  |
 
 Quando você quer saber se um padrão é encontrado em uma string, use o método `test` ou `search`; para mais informações (mas execução mais lenta) use o método `exec` ou `match`. Se você usar `exec` ou `match` e se houver correspondência, estes métodos retornam um array e atualizam as propriedades do objeto da expressão regular associada e também do objeto da expressão regular predfinada `RegExp`. Se não houver corespondência, o método `exec` retorna `null` (convertido para `false`).
 

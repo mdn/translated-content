@@ -120,4 +120,4 @@ var b = mycar instanceof Object; // retorna true
 
 ## Veja também
 
-- [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+- [`typeof`](/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof)
