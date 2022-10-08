@@ -30,7 +30,7 @@ SyntaxError: Unexpected token '??'. Coalescing and logical operators used togeth
 |   >   ??   >   =
 ```
 
-Toutefois, la précédence _entre_ `??` et `&&`/`||` est intentionnellement indéfinie, car le comportement en court-circuit des opérateurs logiques peut rendre l'évaluation d'une expression contre-intuitive. Ansi, toutes les combinaisons qui suivent entraînent des erreurs de syntaxe, car le langage ne permet pas de savoir quelle opération a la priorité&nbsp;:
+Toutefois, la précédence _entre_ `??` et `&&`/`||` est intentionnellement indéfinie, car le comportement en court-circuit des opérateurs logiques peut rendre l'évaluation d'une expression contre-intuitive. Ainsi, toutes les combinaisons qui suivent entraînent des erreurs de syntaxe, car le langage ne permet pas de savoir quelle opération a la priorité&nbsp;:
 
 ```js example-bad
 a ?? b || c
