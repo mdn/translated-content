@@ -20,7 +20,6 @@ O **Elemento** **HTML `<caption>` (**ou _Elemento HTML Subtitulo de Tabela_) rep
       <th scope="row">
         <a
           href="/en-US/docs/HTML/Content_categories"
-          title="HTML/Content_categories"
           >Categoria de conteúdo</a
         >
       </th>
@@ -31,7 +30,6 @@ O **Elemento** **HTML `<caption>` (**ou _Elemento HTML Subtitulo de Tabela_) rep
       <td>
         <a
           href="/en-US/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
           >Flow content</a
         >.
       </td>
