@@ -51,7 +51,7 @@ Referer: <url>
 ## Exemplos
 
 ```
-Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
 ```
 
 ## Especificações
