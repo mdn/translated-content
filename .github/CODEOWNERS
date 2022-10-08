@@ -57,7 +57,10 @@
 # ----------------------------------------------------------------------------
 /docs/        @mdn/core-yari-content
 /docs/es/     @mdn/yari-content-es
+/docs/fr/     @mdn/yari-content-fr
+/docs/ja/     @mdn/yari-content-ja
 /docs/ko/     @mdn/yari-content-ko
+/docs/pt-br/  @mdn/yari-content-pt-br
 /docs/ru/     @mdn/yari-content-ru
 /docs/zh-cn/  @mdn/yari-content-zh
 /docs/zh-tw/  @mdn/yari-content-zh
