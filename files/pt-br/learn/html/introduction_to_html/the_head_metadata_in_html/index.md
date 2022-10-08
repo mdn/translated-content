@@ -102,7 +102,7 @@ Os conteúdos `<title>` também são usados nos resultados de pesquisa, conforme
 
 ## Metadados: o elemento \<meta>
 
-Metadados é dado descreve dados, e HTML possui uma maneira "oficial" de adicionar metadados a um documento — o elemento {{htmlelement("meta")}}. Claro, as outras coisas em que estamos falando neste artigo também podem ser pensadas como metadados. Existem muitos tipos diferentes de elementos `<meta>` que podem ser incluídos no \<head>\*\* \*\*da sua página, mas não tentaremos explicar todos eles nesta fase, pois seria muito confuso. Em vez disso, explicaremos algumas coisas que você pode ver comumente, apenas para lhe dar uma idéia.
+Metadados é dado descreve dados, e HTML possui uma maneira "oficial" de adicionar metadados a um documento — o elemento {{htmlelement("meta")}}. Claro, as outras coisas em que estamos falando neste artigo também podem ser pensadas como metadados. Existem muitos tipos diferentes de elementos `<meta>` que podem ser incluídos no \<head> da sua página, mas não tentaremos explicar todos eles nesta fase, pois seria muito confuso. Em vez disso, explicaremos algumas coisas que você pode ver comumente, apenas para lhe dar uma idéia.
 
 ### Especificando a codificação de caracteres do seu documento
 
@@ -157,7 +157,7 @@ A descrição também é usada nas páginas de resultados do mecanismo de pesqui
 
     <kbd>Ctrl</kbd>
 
-    &#x20;\+ clique na página, escolha _Ver código-fonte da página_ no menu de contexto).
+    \+ clique na página, escolha _Ver código-fonte da página_ no menu de contexto).
 
 3. Encontre a meta tag de descrição. Isso parecerá assim:
 

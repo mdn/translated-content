@@ -268,7 +268,7 @@ We can control the padding on each side of an element individually using the {{c
 
 **If you change the values for padding on the class `.box` in the example below you can see that this changes where the text begins in relation to the box.**
 
-**You can also change the padding on the class `.container,` which will make space between the container and the box. Padding can be changed on any element, and will make space between its border and whatever is inside the element.**
+**You can also change the padding on the class `.container`, which will make space between the container and the box. Padding can be changed on any element, and will make space between its border and whatever is inside the element.**
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 800)}}
 
