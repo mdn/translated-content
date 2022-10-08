@@ -45,7 +45,7 @@ After:              10100000000000000110000000000001
 
 请注意，由于数字 `~-1` 和 `~4294967295`（2<sup>32</sup> - 1）均使用 32 位表示形式，它们的运算结果均为 `0`。
 
-## 例子
+## 示例
 
 ### 使用按位取反
 
@@ -65,4 +65,4 @@ After:              10100000000000000110000000000001
 
 ## 参见
 
-- [JavaScript 教程的按位操作符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [JavaScript 指南：位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#位运算符)
