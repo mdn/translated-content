@@ -48,7 +48,7 @@ console.log(3 >= 3);         // true
 console.log(3 >= 5);         // false
 ```
 
-### 数值与大整形比较
+### 数值与大整型比较
 
 ```js
 console.log(5n >= 3);        // true
