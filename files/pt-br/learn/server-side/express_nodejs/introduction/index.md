@@ -63,8 +63,8 @@ Você pode utilizar o Node.js para criar um simples servidor web, utilizando o p
 
 O exemplo a seguir cria um servidor web que escuta qualquer tipo de requisição HTTP na URL `http://127.0.0.1:8000/` -- quando uma requisição é recebida, o script vai responder com a string (texto) "Olá Mundo". Se você já instalou o Node, você pode seguir os passos seguintes deste exemplo.
 
-1.  Abre o Terminal (no Windows, abra o prompt da linha de comando)
-2.  Crie uma pasta onde você quer salvar o programa, por exemplo, `test-node`. Então, entre na pasta com o seguinte comando no terminal:
+1. Abre o Terminal (no Windows, abra o prompt da linha de comando)
+2. Crie uma pasta onde você quer salvar o programa, por exemplo, `test-node`. Então, entre na pasta com o seguinte comando no terminal:
 
 ```
 cd test-node
@@ -261,7 +261,7 @@ A função de retorno de chamada requer uma solicitação e um objeto de respost
 
 > **Nota:** **Dica JavaScript:** Você pode usar qualquer argumento que você gosta nas funções de retorno de chamada. Quando o retorno de chamada é invocado, o primeiro argumento sempre será o pedido e o segundo sempre será a resposta. Faz sentido nomeá-los de tal forma que você possa identificar o objeto que você está trabalhando no corpo do retorno de chamada.
 
-O Express também fornece métodos para definir manipuladores de rotas para todas as outras requisições HTTP, que são usadas exatamente da mesma maneira: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, ` m-``search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, e `connect()`.
+O Express também fornece métodos para definir manipuladores de rotas para todas as outras requisições HTTP, que são usadas exatamente da mesma maneira: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, e `connect()`.
 
 Há um método de roteamento especial, `app.all()`, que será chamado em resposta a qualquer método HTTP. É usado para carregar funções de middleware em um caminho específico para todos os métodos de solicitação. O exemplo a seguir (da documentação Express) mostra um manipulador que será executado para solicitações `/secret`, independentemente do verbo HTTP usado (desde que seja suportado pelo módulo http).
 
@@ -313,12 +313,12 @@ O Middleware é usado extensivamente em aplicativos Express para que as tarefas 
 
 > **Nota:** O middleware pode executar qualquer operação, executar qualquer código, fazer alterações no objeto de solicitação e resposta, e também pode encerrar o ciclo de solicitação-resposta. Se não terminar o ciclo, ele deve chamar o `next()` para passar o controle para a próxima função de middleware (ou a solicitação ficará pendurada).
 
-A maioria dos aplicativos usará middleware de terceiros para simplificar tarefas comuns de desenvolvimento web, como trabalhar com cookies, sessões, autenticação de usuários, acessar dados `POST` e JSON, log, etc. Você pode encontrar uma[ lista de pacotes de middleware](http://expressjs.com/en/resources/middleware.html) mantidos pela equipe Express (que também inclui outros pacotes populares de terceiros). Outros pacotes Express estão disponíveis no gerenciador de pacotes do NPM.
+A maioria dos aplicativos usará middleware de terceiros para simplificar tarefas comuns de desenvolvimento web, como trabalhar com cookies, sessões, autenticação de usuários, acessar dados `POST` e JSON, log, etc. Você pode encontrar uma [lista de pacotes de middleware](http://expressjs.com/en/resources/middleware.html) mantidos pela equipe Express (que também inclui outros pacotes populares de terceiros). Outros pacotes Express estão disponíveis no gerenciador de pacotes do NPM.
 
 Para usar middleware de terceiros, primeiro você precisa instalá-lo em seu aplicativo usando NPM. Por exemplo, para instalar o logger [morgan](http://expressjs.com/en/resources/middleware/morgan.html) HTTP, você faria isso:
 
 ```bash
-$ npm install morgan
+npm install morgan
 ```
 
 Você pode então chamar `use()` no objeto do aplicativo Express para adicionar o middleware à pilha:
@@ -433,7 +433,7 @@ Aplicativos Express podem usar qualquer mecanismo de banco de dados suportado pe
 Para usá-los, você deve primeiro instalar o driver do banco de dados usando NPM. Por exemplo, para instalar o driver para o popular NoSQL MongoDB você usaria o comando:
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 O próprio banco de dados pode ser instalado localmente ou em um servidor em nuvem. No seu código Express, você precisa do driver, conecte-se ao banco de dados e execute as operações criar, ler, atualizar e excluir (CRUD). O exemplo abaixo (da documentação Express) mostra como você pode encontrar registros de "mamíferos" usando MongoDB.
@@ -454,7 +454,7 @@ MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
 
 Outra abordagem popular é acessar seu banco de dados indiretamente, através de um Object Relational Mapper ("ORM"). Nesta abordagem, você define seus dados como "objetos" ou "modelos" e o ORM mapeia estes para o formato de banco de dados subjacente. Esta abordagem tem o benefício de que, como desenvolvedor, você pode continuar a pensar em termos de objetos JavaScript, em vez de semântica de banco de dados, e que existe um local óbvio para realizar a validação e verificação de dados recebidos. Falaremos mais sobre bancos de dados em um artigo posterior.
 
-Para obter mais informações, consulte [integração com banco de dados ](https://expressjs.com/en/guide/database-integration.html)(documentos express).
+Para obter mais informações, consulte [integração com banco de dados](https://expressjs.com/en/guide/database-integration.html) (documentos express).
 
 ### Renderizando dados (views)
 
@@ -513,7 +513,7 @@ Claro que Express é deliberadamente uma estrutura de aplicativos web muito leve
 
 ## Próximos módulos
 
-- [Introdução Express/Node ](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction)- Módulo Atual
+- [Introdução Express/Node](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction) - Módulo Atual
 - [Configurando um ambiente de desenvolvimento Node (Express)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment)
 - [Express Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
 - [Express Tutorial Part 2: Criando um esqueleto de website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website)

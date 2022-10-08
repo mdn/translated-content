@@ -49,11 +49,15 @@ Set-Cookie: <nome-cookie>=<valor-cookie>; Domain=<domain-value>; Secure; HttpOnl
     - Um `<nome-cookie>` pode ser qualquer caractere US-ASCII exeto caracteres de controle (CTLs), espaços, ou tabulações (TAB). Também não deve conter um separador de caractere como os seguintes: ( ) < > @ , ; : \ " / \[ ] ? = { }.
     - Um `<valor-cookie>` pode opcionalmente ser atribuido entre aspas duplas e qualquer caractere US-ASCII são permitidos, exceto caracteres de controle (CTLs), espaços em branco, aspas duplas, vírgula, barra invertida e ponto e vírgula. **Codificação**: Muitas implementações realizam codificação URL nos valores de cookie, contudo não é obrigatório pela especificação do RFC. Isso ajuda a satisfazer os requisitos sobre quais caracteres são permitidos para \<valor-cookie>.
     - **`Prefixo __Secure-`**: Cookies com o nome começando com `__Secure-` (hífen faz parte do prefixo) precisam ser atribuidos com a flag de segurança e precisam ser de uma página segura (HTTPS).
-    - **`Prefixo __Host-`**: Cookies com o nome começando com `__Host- `(hífen faz parte do prefixoprecisam ser atribuidos com a flag de segurança, precisam ser de uma página segura (HTTPS), não precisam ter um domínio especificado (portanto não são enviados para subdomínios) e o caminho (path) precisa ser "/".
+    - **`Prefixo __Host-`**: Cookies com o nome começando com `__Host-` (hífen faz parte do prefixoprecisam ser atribuidos com a flag de segurança, precisam ser de uma página segura (HTTPS), não precisam ter um domínio especificado (portanto não são enviados para subdomínios) e o caminho (path) precisa ser "/".
 
 - Expires=\<data> {{optional_inline}}
-  - : O tempo de vida máximo do cookie como uma marcação de tempo (timestamp) HTTP. Veja {{HTTPHeader("Date")}} para a formatação detalhada. Se não especificado, o cookie terá o tempo de vida de uma **sessão de cookie.** Uma sessão é finalizada quando o cliente é desligado, significando que as sessões de cookies serão removidos nesse momento. Contudo, muitos navegadores web têm uma característica denominada de "restaurar sessão" que salvará todas suas abas e as trará de volta na próxima vez em que você utilizar o navegador. Os cookies estarão também presentes e será como se o navegador nunca tivesse sido fechado.
-- - : Quando uma data de expiração é atribuída, o tempo e a data são relativos ao cliente em que os cookies estão sendo configurados e não ao servidor.
+  - : O tempo de vida máximo do cookie como uma marcação de tempo (timestamp) HTTP. Veja {{HTTPHeader("Date")}} para a formatação detalhada.
+
+    Se não especificado, o cookie terá o tempo de vida de uma **sessão de cookie.** Uma sessão é finalizada quando o cliente é desligado, significando que as sessões de cookies serão removidos nesse momento. Contudo, muitos navegadores web têm uma característica denominada de "restaurar sessão" que salvará todas suas abas e as trará de volta na próxima vez em que você utilizar o navegador. Os cookies estarão também presentes e será como se o navegador nunca tivesse sido fechado.
+
+    Quando uma data de expiração é atribuída, o tempo e a data são relativos ao cliente em que os cookies estão sendo configurados e não ao servidor.
+
 - Max-Age=\<digito-diferente-de-0> {{optional_inline}}
   - : Número de segundos até o cookie expirar. Um ou mais digitos de 1 a 9. Navegadores antigos (ie6, ie7 e ie8) não suportam Max-Age. Para cada navegador, se ambos (Expires e Max-Age) forem atribuídos, Max-Age terá precedência.
 - Domain=\<valor-domínio> {{optional_inline}}

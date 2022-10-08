@@ -66,8 +66,8 @@ Person.prototype.greeting = function() {
 
 Digamos que quiséssemos criar uma classe `Teacher`, como a que descrevemos em nossa definição inicial orientada a objetos, que herda todos os membros de `Person`, mas também inclui:
 
-1.  Uma nova propriedade, `subject` — isso irá conter o assunto que o professor ensina.
-2.  Um método `greeting()` atualizado, que soa um pouco mais formal do que o método padrão `greeting()` — mais adequado para um professor que se dirige a alguns alunos da escola.
+1. Uma nova propriedade, `subject` — isso irá conter o assunto que o professor ensina.
+2. Um método `greeting()` atualizado, que soa um pouco mais formal do que o método padrão `greeting()` — mais adequado para um professor que se dirige a alguns alunos da escola.
 
 ## Definindo uma função construtora Teacher()
 
@@ -132,7 +132,7 @@ Observe que apenas especificamos `this` dentro de `call()` — nenhum outro par�
 
 Tudo está bem até agora, mas nós temos um problema. Nós definimos um novo construtor, e ele tem uma propriedade `prototype`, que por padrão apenas contém uma referência à própria função construtora. Ele não contém os métodos da propriedade `prototype` do construtor Person. Para ver isso, insira `Object.getOwnPropertyNames(Teacher.prototype)` no campo de entrada de texto ou no seu console JavaScript. Em seguida, insira-o novamente, substituindo `Teacher` por `Person`. O novo construtor também não herda esses métodos. Para ver isso, compare as saídas de `Person.prototype.greeting` e `Teacher.prototype.greeting`. Precisamos obter `Teacher()` para herdar os métodos definidos no protótipo `Person()`. Então, como fazemos isso?
 
-1.  Adicione a seguinte linha abaixo da sua adição anterior:
+1. Adicione a seguinte linha abaixo da sua adição anterior:
 
     ```js
     Teacher.prototype = Object.create(Person.prototype);
@@ -140,8 +140,8 @@ Tudo está bem até agora, mas nós temos um problema. Nós definimos um novo co
 
     Aqui nosso amigo [`create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) vem para o resgate novamente. Nesse caso, estamos usando para criar um novo objeto e torná-lo o valor de `Teacher.prototype`. O novo objeto tem `Person.prototype` como seu protótipo e, portanto, herdará, se e quando necessário, todos os métodos disponíveis no `Person.prototype`.
 
-2.  Precisamos fazer mais uma coisa antes de prosseguirmos. Depois de adicionar a última linha, a propriedade `constructor` de ` Teacher.``prototype ` agora é igual a `Person()`, porque apenas definimos `Teacher.prototype` para fazer referência a um objeto que herda suas propriedades de `Person.prototype`! Tente salvar seu código, carregar a página em um navegador e inserir `Teacher.prototype.constructor` no console para verificar.
-3.  Isso pode se tornar um problema, então precisamos definir isso corretamente. Você pode fazer isso voltando ao seu código-fonte e adicionando a seguinte linha na parte inferior:
+2. Precisamos fazer mais uma coisa antes de prosseguirmos. Depois de adicionar a última linha, a propriedade `constructor` de `Teacher.prototype` agora é igual a `Person()`, porque apenas definimos `Teacher.prototype` para fazer referência a um objeto que herda suas propriedades de `Person.prototype`! Tente salvar seu código, carregar a página em um navegador e inserir `Teacher.prototype.constructor` no console para verificar.
+3. Isso pode se tornar um problema, então precisamos definir isso corretamente. Você pode fazer isso voltando ao seu código-fonte e adicionando a seguinte linha na parte inferior:
 
     ```js
     Object.defineProperty(Teacher.prototype, 'constructor', {
@@ -150,7 +150,7 @@ Tudo está bem até agora, mas nós temos um problema. Nós definimos um novo co
         writable: true });
     ```
 
-4.  Agora, se você salvar e atualizar, entrar em `Teacher.prototype.constructor` deve retornar `Teacher()`, conforme desejado, além de estarmos herdando de `Person()`!
+4. Agora, se você salvar e atualizar, entrar em `Teacher.prototype.constructor` deve retornar `Teacher()`, conforme desejado, além de estarmos herdando de `Person()`!
 
 ## Dar a Teacher() uma nova função greeting()
 
@@ -215,9 +215,9 @@ Em nossa [seção de teoria OOP](/pt-BR/docs/Learn/JavaScript/Objects/Object-ori
 
 Resumindo, você basicamente tem três tipos de propriedade / método para se preocupar:
 
-1.  Aqueles definidos dentro de uma função construtora que são dadas a instâncias de objetos. Estes são bastante fáceis de detectar — em seu próprio código personalizado, eles são os membros definidos dentro de um construtor usando as linhas `this.x = x` ; no código do navegador, eles são os membros disponíveis apenas para instâncias de objetos (geralmente criados chamando um construtor usando a palavra-chave `new`, por exemplo, `var myInstance = new myConstructor()`).
-2.  Aqueles definidos diretamente no próprio construtor, que estão disponíveis apenas no construtor. Geralmente, eles estão disponíveis apenas em objetos de navegador internos e são reconhecidos por serem encadeados diretamente em um construtor, não em uma instância. Por exemplo, [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
-3.  Aqueles definidos no protótipo de um construtor, que são herdados por todas as instâncias e herdam as classes de objetos. Estes incluem qualquer membro definido na propriedade de protótipo de um Construtor, por ex. `myConstructor.prototype.x()`.
+1. Aqueles definidos dentro de uma função construtora que são dadas a instâncias de objetos. Estes são bastante fáceis de detectar — em seu próprio código personalizado, eles são os membros definidos dentro de um construtor usando as linhas `this.x = x` ; no código do navegador, eles são os membros disponíveis apenas para instâncias de objetos (geralmente criados chamando um construtor usando a palavra-chave `new`, por exemplo, `var myInstance = new myConstructor()`).
+2. Aqueles definidos diretamente no próprio construtor, que estão disponíveis apenas no construtor. Geralmente, eles estão disponíveis apenas em objetos de navegador internos e são reconhecidos por serem encadeados diretamente em um construtor, não em uma instância. Por exemplo, [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
+3. Aqueles definidos no protótipo de um construtor, que são herdados por todas as instâncias e herdam as classes de objetos. Estes incluem qualquer membro definido na propriedade de protótipo de um Construtor, por ex. `myConstructor.prototype.x()`.
 
 Se você não tem certeza de qual é qual, não se preocupe com isso ainda — você ainda está aprendendo e a familiaridade virá com a prática.
 
@@ -294,7 +294,7 @@ class Teacher extends Person {
 }
 ```
 
-Podemos tornar o código mais legível definindo o operador [`super()` ](/pt-BR/docs/Web/JavaScript/Reference/Operators/super)como o primeiro item dentro do `constructor()`. Isso chamará o construtor da classe pai e herdará os membros que especificarmos como parâmetros de `super()`, desde que sejam definidos lá:
+Podemos tornar o código mais legível definindo o operador [`super()`](/pt-BR/docs/Web/JavaScript/Reference/Operators/super) como o primeiro item dentro do `constructor()`. Isso chamará o construtor da classe pai e herdará os membros que especificarmos como parâmetros de `super()`, desde que sejam definidos lá:
 
 ```js
 class Teacher extends Person {

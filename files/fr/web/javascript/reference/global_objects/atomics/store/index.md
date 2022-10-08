@@ -58,13 +58,11 @@ console.log(float32[0]);
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.store', 'Atomics.store')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.store")}}
+{{Compat}}
 
 ## Voir aussi
 

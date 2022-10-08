@@ -44,5 +44,3 @@ _A interface do `Coordinates` não herda nenhuma propiedade_.
 
 - [Usando geolocalização](/pt-BR/docs/Web/API/Geolocation)
 - O {{domxref("Geolocation")}} e a interface que o usa.
-
-<!---->

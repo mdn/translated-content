@@ -18,7 +18,7 @@ Os requerimentos do CT podem ser satisfeitos utilizando qualquer um dos seguinte
 - A extensão TLS do tipo `signed_certificate_timestamp` enviada durante um _handshake_.
 - Dando suporte a OCSP (que é, a extensão TLS `status_request`) e provendo uma `SignedCertificateTimestampList`
 
-> **Nota:** Quando um site habilita o cabeçalho `Expect-CT`, ele está requisitando que o navegador verifique se qualquer certificado para aquele site aparece em **[_logs_ CT públicos ](https://www.certificate-transparency.org/known-logs)**.
+> **Nota:** Quando um site habilita o cabeçalho `Expect-CT`, ele está requisitando que o navegador verifique se qualquer certificado para aquele site aparece em **[_logs_ CT públicos](https://www.certificate-transparency.org/known-logs)**.
 
 > **Nota:** **Navegadores ignoram** o cabeçalho `Expect-CT` através do HTTP; o cabeçalho só tem efeito em conexões HTTPS.
 
@@ -57,13 +57,13 @@ Expect-CT: report-uri="<uri>",
 
   - : A URI onde o agente de usuário deve reportar falhas `Expect-CT`.
 
-    Quando presente com a diretiva `enforce`, a configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário\_ _que ambos o \_compliance_ da política do Certificado de Transparência deve ser executado _e_ que as violações devem ser reportadas.
+    Quando presente com a diretiva `enforce`, a configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário que ambos o _compliance_ da política do Certificado de Transparência deve ser executado _e_ que as violações devem ser reportadas.
 
 - `enforce` {{optional_inline}}
 
   - : Sinais ao agente do usuário que conforme a política do Certificado de Transparência deve ser executada (ao invés de somente ser reportada) e o agente de usuário deve recusar futuras conexões que violem a política do Certificado de Transparência.
 
-    Quando ambas as diretivas `enforce` e `report-uri` estiverem presentes, configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário\_ _que ambos o \_compliance_ da política do Certificado de Transparência deve ser executado _e_ que as violações devem ser reportadas.
+    Quando ambas as diretivas `enforce` e `report-uri` estiverem presentes, configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário que ambos o _compliance_ da política do Certificado de Transparência deve ser executado _e_ que as violações devem ser reportadas.
 
 ## Exemplo
 

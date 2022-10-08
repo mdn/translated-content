@@ -391,9 +391,9 @@ Este método é necessário porque você declara um campo `ForeignKey` (um-para-
 >
 > Este tutorial não atingiu a **Paginação** (ainda, mas em breve), mas como você não pode usar `sort_by()` e passar um parâmetro (o mesmo com `filter()` descrito acima), você terá que escolher entre três opções:
 >
-> 1.  Adicione um `ordering` dentro de uma declaração `class Meta` no seu model.
-> 2.  Adicione um atributo `queryset` na sua class-based view, especificando um `order_by()`.
-> 3.  Adicione um método `get_queryset` à sua class-based view personalisada e também especifique o `order_by()`.
+> 1. Adicione um `ordering` dentro de uma declaração `class Meta` no seu model.
+> 2. Adicione um atributo `queryset` na sua class-based view, especificando um `order_by()`.
+> 3. Adicione um método `get_queryset` à sua class-based view personalisada e também especifique o `order_by()`.
 >
 > Se você decidir ir com uma `class Meta` no model `Author` (provavelmente não tão flexível quanto personalizar o class-based view, mas fácil o suficiente), você terminará com algo assim:
 >
@@ -420,7 +420,7 @@ Este método é necessário porque você declara um campo `ForeignKey` (um-para-
 
 ## Com o que se parece agora?
 
-Nesse ponto, deveríamos ter criado tudo o necessário para exibir a lista de livros e as páginas de detalhes do livro. Execute o servidor (`python3 manage.py runserver`) e abra no seu navegador <http://127.0.0.1:8000/>.
+Nesse ponto, deveríamos ter criado tudo o necessário para exibir a lista de livros e as páginas de detalhes do livro. Execute o servidor (`python3 manage.py runserver`) e abra no seu navegador `http://127.0.0.1:8000/`.
 
 > **Aviso:** Não clique em nenhum autor ou link de detalhes do autor ainda - você os criará no desafio!
 
@@ -497,7 +497,7 @@ Os links de paginação são exibidos na parte inferior, com os links seguinte/a
 The challenge in this article is to create the author detail and list views required to complete the project. These should be made available at the following URLs:
 
 - `catalog/authors/` — The list of all authors.
-- `catalog/author/<id>`\_ _— The detail view for the specific author with a primary key field named _`<id>`\_
+- `catalog/author/<id>` — The detail view for the specific author with a primary key field named _`<id>`_
 
 The code required for the URL mappers and the views should be virtually identical to the `Book` list and detail views we created above. The templates will be different but will share similar behaviour.
 
