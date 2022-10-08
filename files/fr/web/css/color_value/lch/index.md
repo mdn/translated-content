@@ -27,7 +27,7 @@ lch(52.2345% 72.2 56.2 / .5)
 
     Le troisième argument, `H` correspond à l'angle pour la teinte (<i lang="en">hue</i> en anglais). `0deg` pointe  selon l'axe positif "a" (un rouge pourpre), `90deg` pointe selon l'axe positif "b" (jaune moutarde), `180deg` pointe selon l'axe négatif "a" (un cyan vert), et `270deg` pointe selon l'axe négatif "b" (bleu ciel).
 
-    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/<number>)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
+    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
 
 ## Spécifications
 

@@ -74,7 +74,7 @@ Les couleurs HSL sont exprimées à l'aide des notations fonctionnelles `hsl()` 
 
     `S` (saturation) et `L` (luminosité) sont exprimées en pourcentages. Une **saturation** à `100%` indique une couleur complètement saturée, tandis qu'une saturation à `0%` fournira un niveau de gris (une couleur complètement désaturée). Une **luminosité** à `100%` fournira du blanc, tandis qu'une luminosité à `0%` fournira du noir et `50%` une luminosité «&nbsp;normale&nbsp;».
 
-    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/<number>)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
+    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
 
 ### Modèle de couleurs HWB
 

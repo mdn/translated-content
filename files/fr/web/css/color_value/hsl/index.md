@@ -41,7 +41,7 @@ hsl(teinte, saturation, luminosite, alpha)
 
 - `alpha` {{optional_inline}}
 
-  - : `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/<number>)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète) et `0` à `0%` (transparence complète).
+  - : `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète) et `0` à `0%` (transparence complète).
 
 ## Exemples
 

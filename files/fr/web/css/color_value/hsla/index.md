@@ -29,7 +29,7 @@ hsla(235 100% 50% / 1) /* CSS Color 4 space-separated values */
 
     `S` (saturation) et `L` (lightness) sont des pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)). Une **saturation** à `100%` indique une couleur complètement saturée, tandis qu'une saturation à `0%` fournira un niveau de gris (une couleur complètement désaturée). Une **luminosité** à `100%` fournira du blanc, tandis qu'une luminosité à `0%` fournira du noir.
 
-    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/<number>)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
+    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
 
 - `hsla(H S L[ / A])`
   - : Cette forme de la notation fonctionnelle, avec la séparation des paramètres par des espaces, est ajoutée avec le module de spécification <i lang="en">CSS Color</i> de niveau 4.

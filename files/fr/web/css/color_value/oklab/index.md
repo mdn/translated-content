@@ -27,7 +27,7 @@ oklab(59.69% 0.1007 0.1191 / .5)
 
     Le troisième argument, `b`, indique la distance sur l'axe `b` de l'espace de couleur OKLab.
 
-    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/<number>)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
+    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
 
 ## Spécifications
 

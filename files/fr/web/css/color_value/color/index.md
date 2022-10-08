@@ -28,7 +28,7 @@ color(display-p3 1 0.5 0 / .5)
 
     `[ <number-percentage>+ | <string> ]` indique un ou plusieurs nombres (type [`<number>`](/fr/docs/Web/CSS/number)) ou pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) fournissant les valeurs que prend l'espace de couleur en entrée, ou une chaîne de caractères (type [`<string>`](/fr/docs/Web/CSS/string)) indiquant le nom d'une couleur définie dans l'espace de couleur.
 
-    `/ <alpha>` peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/<number>)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
+    `/ <alpha>` peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
 
 ## Spécifications
 

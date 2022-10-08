@@ -30,7 +30,7 @@ hwb(194 0% 0% / .5) /* #00c3ff avec 50% d'opacité */
 
     `B` (noirceur, <i lang="en">blackness</i>) indique la quantié de noir dans la couleur , indiquée comme un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `0%` indique aucune noirceur et où `100%` indique une noirceur complète.
 
-    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/<number>)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
+    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
 
 ## Spécifications
 
