@@ -21,7 +21,7 @@ Navegadores modernos possuem dois principais modos de renderização:
 - _Modo de peculiaridades (Quirks Mode)_: Também chamado de modo retrocompatível, permite que páginas antigas sejam renderizadas como seus autores pretendiam, seguindo regras de renderização não-padronizadas geralmente encontradas em navegadores antigos. Documentos com uma declaração `DOCTYPE` incompleta, incorreta, que não tenham uma declaração `DOCTYPE` ou não tenham uma declaração comumente utilizada antes de 2001 serão renderizados deste modo.
 - _Modo de padrões (Standards Mode)_: Neste modo o navegador tenta seguir os padrões W3C estritamente, ignorando peculiaridades encontradas em documentos designados a navegadores antigos. Espera-se que novas páginas HTML sejam desenvolvidas para navegadores que seguem os padrões da W3C, e como resultado disso, páginas com uma declaração de `DOCTYPE` moderna serão renderizadas deste modo.
 
-Navegadores baseados na engine Gecko possuem um terceiro modo de renderização; _[Modo de "quase padrões" (Almost Standards Mode](/pt-BR/docs/Gecko's_"Almost*Standards"\_Mode "Gecko's*\"Almost*Standards\"\_Mode"))*, que renderiza as páginas seguindo regras do _Modo de padrões_, porém considerando algumas poucas peculiaridades encontradas em páginas para navegadores antigos.
+Navegadores baseados na engine Gecko possuem um terceiro modo de renderização; _[Modo de "quase padrões" (Almost Standards Mode)](/pt-BR/docs/Gecko's)_, que renderiza as páginas seguindo regras do _Modo de padrões_, porém considerando algumas poucas peculiaridades encontradas em páginas para navegadores antigos.
 
 Esta é uma lista das declarações de `DOCTYPE` mais usadas e que acionarão o modo de padrões ou de "quase padrões":
 
@@ -50,11 +50,11 @@ Sempre que possível, use a declaração de `DOCTYPE` HTML5.
 Abaixo temos algumas das possíveis causas:
 
 - O caminho para o arquivo CSS está incorreto.
-- Para ser aplicado, uma folha de estilos CSS deve ser servido ao navegador com o tipo MIME `text/css. `Caso o servidor não sirva a folha de estilos com este tipo, as regras CSS não serão interpretadas e aplicadas aos elementos no documento.
+- Para ser aplicado, uma folha de estilos CSS deve ser servido ao navegador com o tipo MIME `text/css`. Caso o servidor não sirva a folha de estilos com este tipo, as regras CSS não serão interpretadas e aplicadas aos elementos no documento.
 
 ## Qual a diferença entre `id` e `class`?
 
-Elementos HTML podem ter um atributo `id` e/ou um atributo `class. `O atributo `id` designa um nome ao elemento ao qual este é aplicado, e para que a marcação seja válida, deverá haver no documento apenas um elemento com o nome designado (Por exemplo: Caso você designe o nome _janela_ a um elemento, nenhum outro elemento poderá ter o nome _janela_).
+Elementos HTML podem ter um atributo `id` e/ou um atributo `class`. O atributo `id` designa um nome ao elemento ao qual este é aplicado, e para que a marcação seja válida, deverá haver no documento apenas um elemento com o nome designado (Por exemplo: Caso você designe o nome _janela_ a um elemento, nenhum outro elemento poderá ter o nome _janela_).
 
 O atributo `class` designa um ou vários nomes de classes as quais um elemento pertence. Diferentemente do valor designado no atributo `id`, os nomes designados em `class` podem ser reutilizados em outros elementos no documento. De qualquer forma, CSS permite que você aplique estilos tanto para uma `id` particular quanto para `classes`.
 
@@ -91,7 +91,7 @@ h1 { color: initial; }
 
 ## Como eu derivo um estilo de outro?
 
-CSS não exatamente permite que um estilo seja definido com os termos de outro. (Veja [as notas de Eric Meyer sobre a posição do grupo de trabalho a respeito do assunto](http://archivist.incutio.com/viewlist/css-discuss/2685)). Entretanto, é possível atingir o mesmo efeito designando diversas classes a um elemento, e [Variáveis CSS ](/pt-BR/docs/Web/CSS/Using_CSS_variables)agora providenciam uma forma de definir informações sobre um estilo em um lugar e reutilizar estas informações em diversos outros lugares.
+CSS não exatamente permite que um estilo seja definido com os termos de outro. (Veja [as notas de Eric Meyer sobre a posição do grupo de trabalho a respeito do assunto](http://archivist.incutio.com/viewlist/css-discuss/2685)). Entretanto, é possível atingir o mesmo efeito designando diversas classes a um elemento, e [Variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_variables) agora providenciam uma forma de definir informações sobre um estilo em um lugar e reutilizar estas informações em diversos outros lugares.
 
 ## Como eu aplico diversas classes a um elemento?
 

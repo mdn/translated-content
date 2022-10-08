@@ -49,7 +49,7 @@ Com isso em mente, os diagramas UML de associação, mostram abaixo os modelos q
 
 ![LocalLibrary Model UML](https://mdn.mozillademos.org/files/15646/local_library_model_uml.png)
 
-Como acima, criamos modelos para `Book `(que contém os detalhes genéricos do livro),
+Como acima, criamos modelos para `Book` (que contém os detalhes genéricos do livro),
 `BookInstance` (contém os status das cópias físicas e específicas dos livros disponíveis no sistema) e `Author.` Também decidimos ter um modelo para o gênero (`Genre`), para que os valores possam ser criados/selecionados através da interface administrativa. Decidimos não ter um modelo para o `BookInstance: status` - pois, codificamos os valores em (`LOAN_STATUS`) porque não esperamos que isso mude. Dentro de cada uma das caixas você pode ver o nome do modelo, os campos nomes e tipos e também os métodos e seus tipos de retorno.
 
 O diagrama também mostra as relações entre os modelos, incluindo suas multiplicidades. As multiplicidades são os números no diagrama que mostram as quantidades (máxima e mínima) que cada modelo pode estar presente nos relacionamentos. Por exemplo, a linha que conecta as caixas mostra que `Book` e um `Genre` estão relacionados. Os números próximos ao modelo `Genre` mostram que um livro deve ter um ou mais gêneros (ou quantos você quiser), enquanto os números do outro lado da linha, ao lado do modelo `Book` mostram que um gênero pode ter zero ou muitos livros associados.
@@ -103,7 +103,7 @@ Nosso exemplo acima tem um único campo chamado `my_field_name`, do tipo `models
 - `max_length=20` — Afima que o valor máximo do comprimento desse campo é de 20 caracteres.
 - `help_text='Enter field documentation'` — fornece um rótulo de texto para exibir uma ajuda para os usuários saberem qual valor fornecer, quando esse valor é inserido por um usuário por meio de um formulário HTML.
 
-O nome do campo é usado para se referir a ele em consultas e modelos. Os campos também têm um rótulo, que é especificado como um argumento `(verbose_name)` ou inferido ao capitalizar a primeira letra do nome da variável do campo e substituindo quaisquer sublinhados por um espaço (por exemplo,` my_field_name` teria um rótulo padrão de `My field name`).
+O nome do campo é usado para se referir a ele em consultas e modelos. Os campos também têm um rótulo, que é especificado como um argumento `(verbose_name)` ou inferido ao capitalizar a primeira letra do nome da variável do campo e substituindo quaisquer sublinhados por um espaço (por exemplo, `my_field_name` teria um rótulo padrão de `My field name`).
 
 A ordem em que os campos são declarados afetará sua ordem padrão, se um modelo for representado em um formulário (por exemplo, no site Admin), embora isso possa ser substituído.
 
@@ -114,7 +114,7 @@ Os seguintes argumentos são comuns e podem ser usados quando declaramos muitos 
 - [help_text](https://docs.djangoproject.com/en/2.1/ref/models/fields/#help-text): Fornece um rótulo de texto para formulários HTML (por exemplo, no site admin), conforme descrito acima.
 - [verbose_name](https://docs.djangoproject.com/en/2.1/ref/models/fields/#verbose-name): Um nome legível para o campo usado nos rótulos de campo. Se não for especificado, o Django irá inferir o nome detalhado do campo `name`.
 - [default](https://docs.djangoproject.com/en/2.1/ref/models/fields/#default): O valor padrão para o campo. Isso pode ser um valor ou um objeto que pode ser chamado. Cada vez que o objeto for chamado será criado um novo registro.
-- [null](https://docs.djangoproject.com/en/2.1/ref/models/fields/#null): Se for `True`, o Django armazenará valores em branco como `NULL` no banco de dados, para campos onde isso é apropriado (um `CharField `irá armazenar uma string vazia). O padrão é `False`.
+- [null](https://docs.djangoproject.com/en/2.1/ref/models/fields/#null): Se for `True`, o Django armazenará valores em branco como `NULL` no banco de dados, para campos onde isso é apropriado (um `CharField` irá armazenar uma string vazia). O padrão é `False`.
 - [blank](https://docs.djangoproject.com/en/2.1/ref/models/fields/#blank):Se for `True`, o campo poderá ficar em branco nos seus formulários. O padrão é `False`, o que significa que a validação de formulário do Django forçará você a inserir um valor. Isso é frequentemente usado com `null = True`, porque se você permitir valores em branco, também desejará que o banco de dados possa representá-los adequadamente.
 - [choices](https://docs.djangoproject.com/en/2.1/ref/models/fields/#choices): Um grupo de escolhas para este campo. Se isso for fornecido, o padrão widget de formulário correspondente será uma caixa de seleção com essas opções, em vez do campo de texto padrão.
 - [primary_key](https://docs.djangoproject.com/en/2.1/ref/models/fields/#primary-key):Se `True,` define o campo atual como a chave primária do modelo (uma chave primária é uma coluna especial do banco de dados, designada para identificar exclusivamente as diferentes tabelas) . Se nenhum campo for especificado como a chave primária, o Django adicionará automaticamente um campo para essa finalidade.
@@ -127,7 +127,7 @@ A lista a seguir descreve alguns dos tipos de campos mais usados.
 
 - [CharField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.CharField) é usado para definir um tamanho fixo (médio a curto) para a string. Você deve especificar o `max_length (tamanho máximo) para o dado que será armazenado.`
 - [TextField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.TextField) é usado para grandes strings de comprimento variado. Você pode especificar um `max_length` (tamanho máximo) para o campo, mas isso é usado somente quando o campo é exibido em formulários (forms) (ele não é imposto no nível do banco de dados).
-- [IntegerField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.IntegerField "django.db.models.IntegerField") é um campo para armazenar números inteiros e para validar valores inseridos como números inteiros em formulários.
+- [IntegerField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.IntegerField) é um campo para armazenar números inteiros e para validar valores inseridos como números inteiros em formulários.
 - [DateField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#datefield) e [DateTimeField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#datetimefield) são usados para armazenar / representar datas e informações de data / hora (como os objetos Python `datetime.date` in e `datetime.datetime`, respectivamente). Esses campos também podem declarar os parâmetros (mutuamente exclusivos) `auto_now = True` (para definir o campo para a data atual toda vez que o modelo é salvo), `auto_now_add` (para definir a data em que o primeiro modelo foi criado) e `default` (para definir uma data padrão que pode ser substituída pelo usuário).
 - [EmailField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#emailfield) é usada para armazenara e validar em endereço de email.
 - [FileField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#filefield) e [ImageField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#imagefield) são usados para carregar arquivos e imagens respectivamente, (o `ImageField` simplesmente valida de forma adicional que o arquivo enviado é uma imagem). Eles têm parâmetros para definir como e onde os arquivos enviados são armazenados.
@@ -229,7 +229,7 @@ Você pode procurar registros que correspondam a um determinado critério usando
 
 > **Nota:**Explicar como procurar registros usando nomes de campos e modelos "abstratos" pode ser um pouco confuso. Na discussão abaixo, vamos nos referir a um modelo de livro com campos de título e gênero, onde o gênero também é um modelo com um único `nome` de campo.
 
-Podemos obter todos os registros para um modelo como um `QuerySet`, usando` objects.all ()`. O `QuerySet` é um objeto iterável, o que significa que ele contém um número de objetos que podemos iterar / percorrer.
+Podemos obter todos os registros para um modelo como um `QuerySet`, usando `objects.all()`. O `QuerySet` é um objeto iterável, o que significa que ele contém um número de objetos que podemos iterar / percorrer.
 
 ```python
 all_books = Book.objects.all()
@@ -242,7 +242,7 @@ wild_books = Book.objects.filter(title__contains='wild')
 number_wild_books = Book.objects.filter(title__contains='wild').count()
 ```
 
-Os campos a serem correspondidos e o tipo de correspondência são definidos no nome do parâmetro de filtro, usando o formato: field_name\_\_match_type (observe o sublinhado duplo entre título e contém acima). Acima, estamos filtrando o título com uma correspondência de maiúsculas e minúsculas. Existem muitos outros tipos de correspondência que você pode fazer: icontains (insensitivo a maiúsculas e minúsculas), iexact (correspondência exata que não diferencia maiúsculas e minúsculas), exata (correspondência exata diferencia maiúsculas de minúsculas), gt (maior que), startswith, etc. é [aqui](https://docs.djangoproject.com/en/2.1/ref/models/querysets/#field-lookups).
+Os campos a serem correspondidos e o tipo de correspondência são definidos no nome do parâmetro de filtro, usando o formato: `field_name_match_type` (observe o sublinhado duplo entre título e contém acima). Acima, estamos filtrando o título com uma correspondência de maiúsculas e minúsculas. Existem muitos outros tipos de correspondência que você pode fazer: icontains (insensitivo a maiúsculas e minúsculas), iexact (correspondência exata que não diferencia maiúsculas e minúsculas), exata (correspondência exata diferencia maiúsculas de minúsculas), gt (maior que), startswith, etc. é [aqui](https://docs.djangoproject.com/en/2.1/ref/models/querysets/#field-lookups).
 
 Em alguns casos, você precisará filtrar um campo que defina um relacionamento um-para-muitos com outro modelo (por exemplo, uma `ForeignKey`). Nesse caso, você pode "indexar" campos no modelo relacionado com sublinhados duplos adicionais. Por exemplo, para filtrar livros com um padrão de gênero específico, você terá que indexar o `nome` por meio do campo de `gênero`, conforme mostrado abaixo:
 
@@ -251,7 +251,7 @@ Em alguns casos, você precisará filtrar um campo que defina um relacionamento 
 books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
 ```
 
-> **Nota:** Você pode usar sublinhados (\_\_) para navegar quantos níveis de relacionamentos (`ForeignKey / ManyToManyField`) desejar. Por exemplo, um `Livro` que tinha tipos diferentes, definidos usando um relacionamento "cover" adicional, pode ter um nome de parâmetro: `type__cover__name__exact = 'hard'`.
+> **Nota:** Você pode usar sublinhados (`__`) para navegar quantos níveis de relacionamentos (`ForeignKey / ManyToManyField`) desejar. Por exemplo, um `Livro` que tinha tipos diferentes, definidos usando um relacionamento "cover" adicional, pode ter um nome de parâmetro: `type__cover__name__exact = 'hard'`.
 
 Há muito mais que você pode fazer com as consultas, incluindo pesquisas para trás de modelos relacionados, encadeando filtros, retornando um conjunto menor de valores, etc. Para obter mais informações, consulte [Fazendo consultas](https://docs.djangoproject.com/en/2.1/topics/db/queries/) (Django Docs).
 
@@ -419,8 +419,6 @@ Algumas coisas a considerar:
 
 Depois de decidido, adicione o campo. Pode ser visto o que decidimos no Github [aqui](https://github.com/mdn/django-locallibrary-tutorial/blob/master/catalog/models.py).
 
-<!---->
-
 ## Resumo
 
 Neste artículo vimos como os models são definidos, e, então, usamos esta informação para desenhar e implementar modelos apropriados para o website _LocalLibrary_.
@@ -439,16 +437,16 @@ Neste ponto faremos um rápido desvio da criação do site para ver o _Django Ad
 
 - [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introduction)
 - [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma biblioteca local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial Django Parte 2: Criando o escopo do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial ](/pt-BR/docs/Learn/Server-side/Django/Deployment)[Django Parte 3: Utilizando models](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Tutorial ](/pt-BR/docs/Learn/Server-side/Django/Deployment)[Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial ](/pt-BR/docs/Learn/Server-side/Django/Deployment)[Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial ](/pt-BR/docs/Learn/Server-side/Django/Deployment)[Django Parte 6: Lista genérica e detail views](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial ](/pt-BR/docs/Learn/Server-side/Django/Deployment)[Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial ](/pt-BR/docs/Learn/Server-side/Django/Deployment)[Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial ](/pt-BR/docs/Learn/Server-side/Django/Deployment)[Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Tutorial ](/pt-BR/docs/Learn/Server-side/Django/Deployment)[Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Tutorial Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Segurança de aplicações Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
+- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
+- [Django Parte 3: Usando _models_](/pt-BR/docs/Learn/Server-side/Django/Models)
+- [Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
+- [Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
+- [Django Parte 6: Lista genérica e _detail views_](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
+- [Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
+- [Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
+- [Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
+- [Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
+- [Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
+- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
 - [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

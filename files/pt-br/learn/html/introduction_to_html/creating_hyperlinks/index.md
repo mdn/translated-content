@@ -190,7 +190,7 @@ Existem algumas práticas recomendadas a seguir, ao escrever links. Vejamos.
 
 Vejamos um exemplo específico:
 
-_Texto de link_ **correto**:\_ \_[Baixe o Firefox](https://firefox.com/)
+_Texto de link_ **correto**: [Baixe o Firefox](https://firefox.com/)
 
 ```html
 <p><a href="https://firefox.com/">

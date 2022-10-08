@@ -47,7 +47,7 @@ Bem-vindo ao tutorial MDN "Express: Tutorial para criar o site de uma Biblioteca
 
 Neste passo a passo você vai:
 
-- Usar a ferramenta _Express Aplication Generator (Gerador de Aplicações Express)_ para\_ \_criar a estrutura do site e da aplicação.
+- Usar a ferramenta _Express Aplication Generator (Gerador de Aplicações Express)_ para criar a estrutura do site e da aplicação.
 - Iniciar e encerrar o Web Server do Node.
 - Usar um banco de dados para armazenar os dados de sua aplicação.
 - Criar caminhos para a requisição de diferentes informações e templates ("views") para renderizar os dados em arquivos HTML no browser.
@@ -73,7 +73,7 @@ Com o avanço nos tutoriais, forneceremos trechos de códigos para você copiar 
 
 Dica: Em vez de simplesmente copiar e colar todos os códigos, a sugestão é digitá-los. Isso ajuda você a se familiarizar com a sintaxe, melhorando o nível de aprendizado.
 
-Se ficar perdido no meio do caminho, fique calmo. Você pode acessar o código inteiro pelo[ Github](https://github.com/mdn/express-locallibrary-tutorial).
+Se ficar perdido no meio do caminho, fique calmo. Você pode acessar o código inteiro pelo [Github](https://github.com/mdn/express-locallibrary-tutorial).
 
 > **Nota:** As versões específicas do Node, Express e outros módulos que adotados no tutorial estão listados no arquivo [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json).
 

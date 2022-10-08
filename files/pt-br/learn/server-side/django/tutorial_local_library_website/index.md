@@ -74,7 +74,7 @@ Embora este seja um exemplo extenso, ele é chamado Biblioteca **Local** por uma
 
 Na medida em que você avança com o tutorial, nós forneceremos os fragmentos de código apropriados para que você possa copiá-los e colá-los em cada ponto. Também existirão outros códigos que você estenderá por conta própria (com alguma orientação).
 
-Se você travar, a versão completa do website pode ser encontrada[ aqui no Github](https://github.com/mdn/django-locallibrary-tutorial).
+Se você travar, a versão completa do website pode ser encontrada [aqui no Github](https://github.com/mdn/django-locallibrary-tutorial).
 
 ## Resumo
 

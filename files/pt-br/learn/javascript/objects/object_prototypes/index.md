@@ -107,13 +107,13 @@ Portanto, [`Object.prototype.watch()`](/en-US/docs/Web/JavaScript/Reference/Glob
 
 > **Nota:** Isso parece estranho — como você pode ter um método definido em um construtor, que é em si uma função? Bem, uma função também é um tipo de objeto — veja a referência do construtor [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) se você não acredita em nós.
 
-1.  Você pode conferir as propriedades de protótipo existentes para si mesmo — volte ao nosso exemplo anterior e tente inserir o seguinte no console JavaScript:
+1. Você pode conferir as propriedades de protótipo existentes para si mesmo — volte ao nosso exemplo anterior e tente inserir o seguinte no console JavaScript:
 
     ```js
     Person.prototype
     ```
 
-2.  A saída não mostrará muito porque não definimos nada no protótipo do nosso construtor personalizado! Por padrão, o `prototype` de um construtor sempre começa vazio. Agora tente o seguinte:
+2. A saída não mostrará muito porque não definimos nada no protótipo do nosso construtor personalizado! Por padrão, o `prototype` de um construtor sempre começa vazio. Agora tente o seguinte:
 
     ```js
     Object.prototype
@@ -137,13 +137,13 @@ var myString = 'This is my string.';
 
 Anteriormente mostramos como o método [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) pode ser usado para criar uma nova instância de objeto.
 
-1.  Por exemplo, tente isso no console JavaScript do seu exemplo anterior:
+1. Por exemplo, tente isso no console JavaScript do seu exemplo anterior:
 
     ```js
     var person2 = Object.create(person1);
     ```
 
-2.  O que `create()` realmente faz é criar um novo objeto a partir de um objeto de protótipo especificado. Aqui, `person2` está sendo criado usando `person1` como um objeto de protótipo. Você pode verificar isso inserindo o seguinte no console:
+2. O que `create()` realmente faz é criar um novo objeto a partir de um objeto de protótipo especificado. Aqui, `person2` está sendo criado usando `person1` como um objeto de protótipo. Você pode verificar isso inserindo o seguinte no console:
 
     ```js
     person2.__proto__
@@ -155,7 +155,7 @@ Isso retornará o person1.
 
 Toda função de construtor possui uma propriedade prototype cujo valor é um objeto que contém uma propriedade [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor). Esta propriedade construtora aponta para a função construtora original. Como você verá na próxima seção, as propriedades definidas na propriedade Person.prototype (ou, em geral, na propriedade prototype de uma função construtora, que é um objeto, conforme mencionado na seção acima) tornam-se disponíveis para todos os objetos de instância criados usando Construtor Person(). Portanto, a propriedade constructor também está disponível para os objetos person1 e person2.
 
-1.  Por exemplo, tente estes comandos no console:
+1. Por exemplo, tente estes comandos no console:
 
     ```js
     person1.constructor
@@ -166,13 +166,13 @@ Toda função de construtor possui uma propriedade prototype cujo valor é um ob
 
     Um truque inteligente é que você pode colocar parênteses no final da propriedade do `constructor` (contendo quaisquer parâmetros necessários) para criar outra instância de objeto daquele construtor. O construtor é uma função depois de tudo, então pode ser chamado usando parênteses; você só precisa incluir a palavra-chave `new` para especificar que deseja usar a função como um construtor.
 
-2.  Tente isso no console:
+2. Tente isso no console:
 
     ```js
     var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
     ```
 
-3.  Agora tente acessar os recursos do seu novo objeto, por exemplo:
+3. Agora tente acessar os recursos do seu novo objeto, por exemplo:
 
     ```js
     person3.name.first
@@ -200,7 +200,7 @@ person1.constructor.name
 
 Vamos dar uma olhada em um exemplo de modificação da propriedade `prototype` de uma função construtora — os métodos adicionados ao protótipo estão então disponíveis em todas as instâncias de objeto criadas a partir do construtor. Neste ponto, finalmente adicionaremos algo ao protótipo do nosso construtor `Person()`.
 
-1.  Volte para o nosso exemplo de [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) e faça uma cópia local do [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Abaixo do JavaScript existente, adicione o seguinte código, que adiciona um novo método à propriedade `prototype` do construtor:
+1. Volte para o nosso exemplo de [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) e faça uma cópia local do [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Abaixo do JavaScript existente, adicione o seguinte código, que adiciona um novo método à propriedade `prototype` do construtor:
 
     ```js
     Person.prototype.farewell = function() {
@@ -208,7 +208,7 @@ Vamos dar uma olhada em um exemplo de modificação da propriedade `prototype` d
     };
     ```
 
-2.  Salve o código e carregue a página no navegador e tente inserir o seguinte na entrada de texto:
+2. Salve o código e carregue a página no navegador e tente inserir o seguinte na entrada de texto:
 
     ```js
     person1.farewell();

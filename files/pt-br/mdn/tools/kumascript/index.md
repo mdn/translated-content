@@ -240,9 +240,6 @@ There's only one API built in at the moment, in the `kuma` namespace. You can se
 
 - `kuma.inspect(object)`
   - : Renders any JS object as a string, handy for use with `log.debug()`. See also: [node.js `util.inspect()`](http://nodejs.org/api/util.html#util_util_inspect_object_options).
-
-<!---->
-
 - `kuma.htmlEscape(string)`
   - : Escapes the characters `&, <, >, "` to `&amp, &lt;, &gt;, &quot;`, respectively.
 - `kuma.url`
