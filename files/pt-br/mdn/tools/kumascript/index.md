@@ -120,7 +120,7 @@ KumaScript templates are processed by an [embedded JavaScript template engine](h
 
 ### Tips
 
-You can see a list of macros and how they are used on MDN on the [macros dashboard](/en-US/dashboards/macros).
+You can see a list of macros and how they are used on MDN on the [macros dashboard](/pt-BR/dashboards/macros).
 
 ## Advanced Features
 
@@ -448,7 +448,7 @@ The KumaScript equivalent of this can be achieved with simple if/else blocks, li
 <% } else if ("de" == env.locale) { %>
 <%- template("CSSRef") %> « <a title="CSS_Referenz/Mozilla_CSS_Erweiterungen" href="/de/docs/CSS_Referenz/Mozilla_CSS_Erweiterungen">CSS Referenz: Mozilla Erweiterungen</a>
 <% } else { %>
-<%- template("CSSRef") %> « <a title="CSS_Reference/Mozilla_Extensions" href="/en-US/docs/CSS_Reference/Mozilla_Extensions">CSS Reference:Mozilla Extensions</a>
+<%- template("CSSRef") %> « <a title="CSS_Reference/Mozilla_Extensions" href="/pt-BR/docs/CSS_Reference/Mozilla_Extensions">CSS Reference:Mozilla Extensions</a>
 <% } %>
 ```
 
