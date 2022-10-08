@@ -246,9 +246,6 @@ As propriedades e elementos retornados desta comparação são os seguintes:
   - : Propriedade comprimento do construtor `Array`, cujo valor é 1.
 - {{jsxref("Array.@@species", "get Array[@@species]")}}
   - : A função de construtor que é utilizada para criar objetos derivados.
-
-<!---->
-
 - {{jsxref("Array.prototype")}}
   - : Permite a adição de propriedades para todos os objetos array.
 

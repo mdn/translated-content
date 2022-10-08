@@ -28,7 +28,7 @@ Este atributo define para onde os dados são enviados. Seu valor deve ser um URL
 
 ##### Exemplos
 
-Neste exemplo, os dados são enviados para http\://foo.com:
+Neste exemplo, os dados são enviados para `http://foo.com`:
 
 ```html
 <form action="http://foo.com">
@@ -114,8 +114,8 @@ O cabeçalho Content-Length indica o tamanho do corpo eo cabeçalho Content-Type
 
 Obviamente, as solicitações HTTP nunca são exibidas para o usuário (se você quiser vê-las, você precisa usar ferramentas como o Firefox [Web Console](/pt-BR/docs/Tools/Web_Console) ou o [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). A única coisa exibida para o usuário é o URL chamado. Assim, com uma solicitação GET, o usuário verá os dados em sua barra de URL, mas com uma solicitação POST, eles não. Isso pode ser muito importante por duas razões:
 
-1.  Se você precisar enviar uma senha (ou qualquer parte sensível de dados), nunca use o método GET ou corre o risco de exibi-lo na barra de URL.
-2.  Se você precisar enviar uma grande quantidade de dados, o método POST é preferido porque alguns navegadores limitam o tamanho dos URLs. Além disso, muitos servidores limitam o comprimento dos URLs que aceitam.
+1. Se você precisar enviar uma senha (ou qualquer parte sensível de dados), nunca use o método GET ou corre o risco de exibi-lo na barra de URL.
+2. Se você precisar enviar uma grande quantidade de dados, o método POST é preferido porque alguns navegadores limitam o tamanho dos URLs. Além disso, muitos servidores limitam o comprimento dos URLs que aceitam.
 
 ### No lado do servidor: recuperar os dados
 

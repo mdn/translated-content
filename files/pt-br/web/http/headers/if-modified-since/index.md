@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Headers/If-Modified-Since
 ---
 {{HTTPSidebar}}
 
-A requisição do cabeçalho HTTP **`If-Modified-Since`** torna a requisição condicional: o servidor enviará de volta o recurso solicitado, com um status {{HTTPStatus("200")}}, apenas se foi modificado pela ultima vez após a data fornecida. Se a requisição não foi modificada, a resposta será um {{HTTPStatus("304")}} sem qualquer corpo; o cabeçalho {{HTTPHeader("Last-Modified")}} irá conter a data da ultima modificação. Ao contrário {{HTTPHeader("If-Unmodified-Since")}}, `If-Modified-Since `pode ser apenas utilizado com um {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}.
+A requisição do cabeçalho HTTP **`If-Modified-Since`** torna a requisição condicional: o servidor enviará de volta o recurso solicitado, com um status {{HTTPStatus("200")}}, apenas se foi modificado pela ultima vez após a data fornecida. Se a requisição não foi modificada, a resposta será um {{HTTPStatus("304")}} sem qualquer corpo; o cabeçalho {{HTTPHeader("Last-Modified")}} irá conter a data da ultima modificação. Ao contrário {{HTTPHeader("If-Unmodified-Since")}}, `If-Modified-Since` pode ser apenas utilizado com um {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}.
 
 Quando utilizado em combinação com {{HTTPHeader("If-None-Match")}}, é ignorado, a menos que não suporte `If-None-Match`.
 
@@ -71,4 +71,4 @@ If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 - {{HTTPHeader("If-Unmodified-since")}}
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
+- {{HTTPStatus("304")}} `Not Modified`

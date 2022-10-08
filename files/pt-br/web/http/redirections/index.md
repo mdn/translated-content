@@ -86,9 +86,9 @@ Like HTML redirections, this can't work on all resources, and obviously, this wi
 
 With three possibilities for URL redirections, several methods can be specified at the same time, but which one is applied first? The order of precedence is the following:
 
-1.  HTTP redirects are always executed first when there is not even a page transmitted, and of course not even read.
-2.  HTML redirects ({{HTMLElement("meta")}}) are executed if there weren't any HTTP redirects.
-3.  JavaScript redirects are used as the last resort, and only if JavaScript is enabled on the client side.
+1. HTTP redirects are always executed first when there is not even a page transmitted, and of course not even read.
+2. HTML redirects ({{HTMLElement("meta")}}) are executed if there weren't any HTTP redirects.
+3. JavaScript redirects are used as the last resort, and only if JavaScript is enabled on the client side.
 
 When possible, always try to use HTTP redirects, and don't use a {{HTMLElement("meta")}} element. If a developer changes the HTTP redirects and forgets the HTML redirects, redirects are no more identical or end up in an infinite loop, or other nightmares happen.
 
@@ -132,8 +132,8 @@ The [mod_alias](https://httpd.apache.org/docs/current/mod/mod_alias.html) module
 
 ```
 <VirtualHost *:80>
-	ServerName example.com
-	Redirect / http://www.example.com
+  ServerName example.com
+  Redirect / http://www.example.com
 </VirtualHost>
 ```
 
@@ -162,9 +162,9 @@ In Nginx, you create a specific server block for the content you want to redirec
 
 ```
 server {
-	listen 80;
-	server_name example.com;
-	return 301 $scheme://www.example.com$request_uri;
+  listen 80;
+  server_name example.com;
+  return 301 $scheme://www.example.com$request_uri;
 }
 ```
 

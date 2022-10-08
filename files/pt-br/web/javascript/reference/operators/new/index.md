@@ -23,9 +23,6 @@ new construtor[([argumentos])]
 
 - `construtor`
   - : Uma função que especifica o tipo da instância do objeto.
-
-<!---->
-
 - `argumentos`
   - : Uma lista de valores com os quais o construtor será chamado.
 

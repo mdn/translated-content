@@ -53,8 +53,8 @@ Para começar, vamos montar uma função básica.
 
 > **Nota:** Para convenções de nomenclatura de função, você deve seguir as mesmas regras das [convenções de nomenclatura de variáveis](/en-US/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules). Algo bom é como você pode diferenciá-los — os nomes das funções aparecem com parênteses depois deles e as variáveis não.
 
-1.  Comece acessando o arquivo [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) e fazendo uma cópia local. Você verá que o HTML é simples — o corpo contém apenas um único botão. Também fornecemos algumas CSS básicas para estilizar a caixa de mensagem personalizada e um elemento {{htmlelement("script")}} vazio para colocar nosso JavaScript.
-2.  Em seguida, adicione o seguinte dentro do elemento `<script>` :
+1. Comece acessando o arquivo [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) e fazendo uma cópia local. Você verá que o HTML é simples — o corpo contém apenas um único botão. Também fornecemos algumas CSS básicas para estilizar a caixa de mensagem personalizada e um elemento {{htmlelement("script")}} vazio para colocar nosso JavaScript.
+2. Em seguida, adicione o seguinte dentro do elemento `<script>` :
 
     ```js
     function displayMessage() {
@@ -64,7 +64,7 @@ Para começar, vamos montar uma função básica.
 
     Começamos com a palavra-chave `function`, o que significa que estamos definindo uma função. Isto é seguido pelo nome que queremos dar à nossa função, um par de parênteses e um conjunto de chaves. Quaisquer parâmetros que queremos dar à nossa função vão dentro dos parênteses, e o código que é executado quando chamamos a função vai dentro das chaves.
 
-3.  Por fim, adicione o seguinte código dentro das chaves:
+3. Por fim, adicione o seguinte código dentro das chaves:
 
     ```js
     var html = document.querySelector('html');
@@ -143,7 +143,7 @@ Isso foi um monte de código para trabalhar — não se preocupe muito se você 
 
 Você tem sua própria definição de função escrita em seu elemento `<script>`, mas não fará nada do jeito que está.
 
-1.  Tente incluir a seguinte linha abaixo da sua função para chamá-lo:
+1. Tente incluir a seguinte linha abaixo da sua função para chamá-lo:
 
     ```js
     displayMessage();
@@ -151,20 +151,20 @@ Você tem sua própria definição de função escrita em seu elemento `<script>
 
     Esta linha chama a função, fazendo com que ela seja executada imediatamente. Quando você salvar seu código e recarregá-lo no navegador, verá a pequena caixa de mensagem aparecer imediatamente, apenas uma vez. Nós só estamos chamando uma vez, afinal.
 
-2.  Agora abra suas ferramentas de desenvolvedor do navegador na página de exemplo, vá para o console JavaScript e digite a linha novamente, você verá que ela aparece novamente! Então isso é divertido — agora temos uma função reutilizável que podemos chamar a qualquer momento que quisermos.
+2. Agora abra suas ferramentas de desenvolvedor do navegador na página de exemplo, vá para o console JavaScript e digite a linha novamente, você verá que ela aparece novamente! Então isso é divertido — agora temos uma função reutilizável que podemos chamar a qualquer momento que quisermos.
 
     Mas provavelmente queremos que apareça em resposta a ações do usuário e do sistema. Em um aplicativo real, essa caixa de mensagem provavelmente seria chamada em resposta a novos dados sendo disponibilizados, ou um erro ocorreria, ou o usuário tentando excluir seu perfil ("você tem certeza disso?") Ou o usuário adicionando um novo contato e a operação completando com sucesso ... etc.
 
     Nesta demonstração, faremos com que a caixa de mensagem apareça quando o usuário clicar no botão.
 
-3.  Exclua a linha anterior que você adicionou.
-4.  Em seguida, vamos selecionar o botão e armazenar uma referência a ele em uma variável. Adicione a seguinte linha ao seu código, acima da definição da função:
+3. Exclua a linha anterior que você adicionou.
+4. Em seguida, vamos selecionar o botão e armazenar uma referência a ele em uma variável. Adicione a seguinte linha ao seu código, acima da definição da função:
 
     ```js
     var btn = document.querySelector('button');
     ```
 
-5.  Por fim, adicione a seguinte linha abaixo da anterior:
+5. Por fim, adicione a seguinte linha abaixo da anterior:
 
     ```js
     btn.onclick = displayMessage;
@@ -172,7 +172,7 @@ Você tem sua própria definição de função escrita em seu elemento `<script>
 
     De maneira semelhante à nossa linha `closeBtn.onclick...` dentro da função, aqui estamos chamando algum código em resposta a um botão sendo clicado. Mas, neste caso, em vez de chamar uma função anônima contendo algum código, estamos chamando nosso nome de função diretamente.
 
-6.  Tente salvar e atualizar a página — agora você verá a caixa de mensagem quando clicar no botão.
+6. Tente salvar e atualizar a página — agora você verá a caixa de mensagem quando clicar no botão.
 
 Você pode estar se perguntando por que não incluímos os parênteses após o nome da função. Isso ocorre porque não queremos chamar a função imediatamente — somente depois que o botão foi clicado. Se você tentar mudar a linha para
 
@@ -188,7 +188,7 @@ Se você tentou o último experimento, certifique-se de desfazer a última alter
 
 Tal como está, a função ainda não é muito útil — nós não queremos apenas mostrar a mesma mensagem padrão todas as vezes. Vamos melhorar nossa função adicionando alguns parâmetros, permitindo-nos chamá-lo com algumas opções diferentes.
 
-1.  Primeiro de tudo, atualize a primeira linha da função:
+1. Primeiro de tudo, atualize a primeira linha da função:
 
     ```js
     function displayMessage() {
@@ -196,13 +196,13 @@ Tal como está, a função ainda não é muito útil — nós não queremos apen
 
     para isso:
 
-2.  ```js
+    ```js
     function displayMessage(msgText, msgType) {
     ```
 
     Agora, quando chamamos a função, podemos fornecer dois valores de variáveis dentro dos parênteses para especificar a mensagem a ser exibida na caixa de mensagem e o tipo de mensagem que ela é.
 
-3.  Para utilizar o primeiro parâmetro, atualize a seguinte linha dentro da sua função:
+2. Para utilizar o primeiro parâmetro, atualize a seguinte linha dentro da sua função:
 
     ```js
     msg.textContent = 'This is a message box';
@@ -214,7 +214,7 @@ Tal como está, a função ainda não é muito útil — nós não queremos apen
     msg.textContent = msgText;
     ```
 
-4.  Por último, mas não menos importante, você precisa atualizar sua chamada de função para incluir um texto de mensagem atualizado. Altere a seguinte linha:
+3. Por último, mas não menos importante, você precisa atualizar sua chamada de função para incluir um texto de mensagem atualizado. Altere a seguinte linha:
 
     ```js
     btn.onclick = displayMessage;
@@ -230,17 +230,17 @@ Tal como está, a função ainda não é muito útil — nós não queremos apen
 
     Se quisermos especificar parâmetros dentro de parênteses para a função que estamos chamando, então não podemos chamá-la diretamente — precisamos colocá-lo dentro de uma função anônima para que não fique no escopo imediato e, portanto, não seja chamado imediatamente. Agora ele não será chamado até que o botão seja clicado.
 
-5.  Recarregue e tente o código novamente e você verá que ele ainda funciona muito bem, exceto que agora você também pode variar a mensagem dentro do parâmetro para obter mensagens diferentes exibidas na caixa!
+4. Recarregue e tente o código novamente e você verá que ele ainda funciona muito bem, exceto que agora você também pode variar a mensagem dentro do parâmetro para obter mensagens diferentes exibidas na caixa!
 
 ### Um parâmetro mais complexo
 
 Para o próximo parâmetro. Este vai envolver um pouco mais de trabalho — vamos configurá-lo para que, dependendo do parâmetro `msgType`, a função mostre um ícone diferente e uma cor de fundo diferente.
 
-1.  Primeiro de tudo, baixe os ícones necessários para este exercício ([aviso](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) e [batepapo](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png)) do GitHub. Salve-os em uma nova pasta chamada `icons` no mesmo local que seu arquivo HTML.
+1. Primeiro de tudo, baixe os ícones necessários para este exercício ([aviso](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) e [batepapo](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png)) do GitHub. Salve-os em uma nova pasta chamada `icons` no mesmo local que seu arquivo HTML.
 
     > **Nota:** Os icones [aviso](https://www.iconfinder.com/icons/1031466/alarm_alert_error_warning_icon) e [batepapo](https://www.iconfinder.com/icons/1031441/chat_message_text_icon) são encontrado em iconfinder.com, e desenhados por [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr). Obrigado!
 
-2.  Em seguida, encontre o CSS dentro do seu arquivo HTML. Faremos algumas alterações para abrir caminho para os ícones. Primeiro, atualize a largura do `.msgBox` de:
+2. Em seguida, encontre o CSS dentro do seu arquivo HTML. Faremos algumas alterações para abrir caminho para os ícones. Primeiro, atualize a largura do `.msgBox` de:
 
     ```css
     width: 200px;
@@ -248,10 +248,11 @@ Para o próximo parâmetro. Este vai envolver um pouco mais de trabalho — vamo
 
     para:
 
-3.  ```css
+    ```css
     width: 242px;
     ```
-4.  Em seguida, adicione as seguintes linhas dentro da regra `.msgBox p { ... }`:
+
+3. Em seguida, adicione as seguintes linhas dentro da regra `.msgBox p { ... }`:
 
     ```css
     padding-left: 82px;
@@ -259,7 +260,7 @@ Para o próximo parâmetro. Este vai envolver um pouco mais de trabalho — vamo
     background-repeat: no-repeat;
     ```
 
-5.  Agora precisamos adicionar código à nossa função `displayMessage()` para manipular a exibição dos ícones. Adicione o seguinte bloco logo acima da chave de fechamento (`}`) da sua função:
+4. Agora precisamos adicionar código à nossa função `displayMessage()` para manipular a exibição dos ícones. Adicione o seguinte bloco logo acima da chave de fechamento (`}`) da sua função:
 
     ```js
     if (msgType === 'warning') {
@@ -275,7 +276,7 @@ Para o próximo parâmetro. Este vai envolver um pouco mais de trabalho — vamo
 
     Aqui, se o parâmetro `msgType` estiver definido como `'warning'`, o ícone de aviso será exibido e a cor de fundo do painel será definida como vermelha. Se estiver definido para `'chat'`, o ícone de bate-papo é exibido e a cor de fundo do painel é definida como azul aqua. Se o parâmetro `msgType` não estiver definido (ou para algo diferente), então a parte `else { ... }` do código entra em jogo, e o parágrafo é simplesmente fornecido padding padrão e nenhum ícone, sem conjunto de cores do painel de fundo também. Isso fornece um estado padrão se nenhum parâmetro `msgType` for fornecido, significando que é um parâmetro opcional!
 
-6.  Vamos testar nossa função atualizada, tente atualizar a chamada `displayMessage()` a partir disso:
+5. Vamos testar nossa função atualizada, tente atualizar a chamada `displayMessage()` a partir disso:
 
     ```js
     displayMessage('Woo, this is a different message!');
@@ -283,7 +284,7 @@ Para o próximo parâmetro. Este vai envolver um pouco mais de trabalho — vamo
 
     para um destes:
 
-7.  ```js
+    ```js
     displayMessage('Your inbox is almost full — delete some mails', 'warning');
     displayMessage('Brian: Hi there, how are you today?','chat');
     ```

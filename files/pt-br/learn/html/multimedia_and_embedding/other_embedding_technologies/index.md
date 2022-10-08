@@ -6,7 +6,7 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Other_embedding_technologi
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
-Até agora você já deve ter aprendido a incorporar coisas em suas páginas da web, incluindo imagens, vídeo e áudio. Neste ponto, gostaria de ter um pouco de um passo para o lado, olhando para alguns elementos que permitem incorporar uma ampla variedade de tipos de conteúdo em suas páginas: as [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe "O elemento HTML Inline Frame (<iframe>) representa um contexto de navegação aninhado, incorporando outra página HTML à atual."), [`<embed>`](/pt-BR/docs/Web/HTML/Element/embed "O elemento HTML <embed> incorpora conteúdo externo no ponto especificado no documento.  Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador.")e [`<object>`](/pt-BR/docs/Web/HTML/Element/object "O elemento HTML <object> representa um recurso externo, que pode ser tratado como uma imagem, um contexto de navegação aninhado ou um recurso a ser tratado por um plug-in.")elementos. `<iframe>`s são para incorporar outras páginas da Web, e as outras duas permitem incorporar PDFs, SVG e até Flash - uma tecnologia que está saindo, mas que você ainda verá semi-regularmente.
+Até agora você já deve ter aprendido a incorporar coisas em suas páginas da web, incluindo imagens, vídeo e áudio. Neste ponto, gostaria de ter um pouco de um passo para o lado, olhando para alguns elementos que permitem incorporar uma ampla variedade de tipos de conteúdo em suas páginas: as [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe), [`<embed>`](/pt-BR/docs/Web/HTML/Element/embed)e [`<object>`](/pt-BR/docs/Web/HTML/Element/object)elementos. `<iframe>`s são para incorporar outras páginas da Web, e as outras duas permitem incorporar PDFs, SVG e até Flash - uma tecnologia que está saindo, mas que você ainda verá semi-regularmente.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -39,17 +39,14 @@ Até agora você já deve ter aprendido a incorporar coisas em suas páginas da 
                 Para saber como itens incorporar em páginas da web que usam
                 <a
                   href="/en-US/docs/Web/HTML/Element/object"
-                  title="O elemento HTML <object> representa um recurso externo, que pode ser tratado como uma imagem, um contexto de navegação aninhado ou um recurso a ser tratado por um plug-in."
                   ><code>&#x3C;object></code></a
                 >,
                 <a
                   href="/en-US/docs/Web/HTML/Element/embed"
-                  title="O elemento HTML <embed> incorpora conteúdo externo no ponto especificado no documento.  Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador."
                   ><code>&#x3C;embed></code></a
                 >e
                 <a
                   href="/en-US/docs/Web/HTML/Element/iframe"
-                  title="O elemento HTML Inline Frame (<iframe>) representa um contexto de navegação aninhado, incorporando outra página HTML à atual."
                   ><code>&#x3C;iframe></code></a
                 >, como filmes em Flash e outras páginas da web.
               </td>
@@ -65,28 +62,28 @@ Até agora você já deve ter aprendido a incorporar coisas em suas páginas da 
 
 Há muito tempo, na Web, era popular o uso de **quadros** para criar sites - pequenas partes de um site armazenadas em páginas HTML individuais. Elas foram incorporadas em um documento mestre chamado **conjunto de quadros**, que permitiu especificar a área na tela que cada quadro preenchia, como dimensionar as colunas e linhas de uma tabela. Eles foram considerados o auge da frescura entre a metade e o final dos anos 90, e havia evidências de que ter uma página da Web dividida em partes menores como essa era melhor para as velocidades de download - especialmente perceptível pelas conexões de rede que eram tão lentas na época. No entanto, eles tinham muitos problemas, que superavam quaisquer positivos à medida que as velocidades da rede ficavam mais rápidas, para que você não as veja mais sendo usadas.
 
-Um pouco mais tarde (final dos anos 90, início dos anos 2000), as tecnologias de plug-in tornaram-se muito populares, como [Java Applets](/pt-BR/docs/Glossary/Java) e [Flash](/pt-BR/docs/Glossary/Adobe_Flash) - isso permitiu que os desenvolvedores da Web incorporassem conteúdo rico em páginas da Web, como vídeos e animações, que não estavam disponíveis apenas no HTML. A incorporação dessas tecnologias foi alcançada através de elementos como [`<object>`](/pt-BR/docs/Web/HTML/Element/object "O elemento HTML <object> representa um recurso externo, que pode ser tratado como uma imagem, um contexto de navegação aninhado ou um recurso a ser tratado por um plug-in."), e os menos utilizados [`<embed>`](/pt-BR/docs/Web/HTML/Element/embed "O elemento HTML <embed> incorpora conteúdo externo no ponto especificado no documento.  Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador."), e eles eram muito úteis na época. Desde então, ficaram fora de moda devido a muitos problemas, incluindo acessibilidade, segurança, tamanho do arquivo e muito mais; hoje em dia, a maioria dos dispositivos móveis não suporta mais esses plug-ins, e o suporte para desktop está saindo.
+Um pouco mais tarde (final dos anos 90, início dos anos 2000), as tecnologias de plug-in tornaram-se muito populares, como [Java Applets](/pt-BR/docs/Glossary/Java) e [Flash](/pt-BR/docs/Glossary/Adobe_Flash) - isso permitiu que os desenvolvedores da Web incorporassem conteúdo rico em páginas da Web, como vídeos e animações, que não estavam disponíveis apenas no HTML. A incorporação dessas tecnologias foi alcançada através de elementos como [`<object>`](/pt-BR/docs/Web/HTML/Element/object), e os menos utilizados [`<embed>`](/pt-BR/docs/Web/HTML/Element/embed), e eles eram muito úteis na época. Desde então, ficaram fora de moda devido a muitos problemas, incluindo acessibilidade, segurança, tamanho do arquivo e muito mais; hoje em dia, a maioria dos dispositivos móveis não suporta mais esses plug-ins, e o suporte para desktop está saindo.
 
-Finalmente, o elemento [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe "O elemento HTML Inline Frame (<iframe>) representa um contexto de navegação aninhado, incorporando outra página HTML à atual.") apareceu (juntamente com outras formas de incorporar conteúdo, como [`<canvas>`](/pt-BR/docs/Web/HTML/Element/canvas "Use o elemento <canvas> HTML com a API de script de tela ou a API WebGL para desenhar gráficos e animações."), `<video> `etc.). Isso fornece uma maneira de incorporar um documento da Web inteiro dentro de outro, como se fosse um [`<img>`](/pt-BR/docs/Web/HTML/Element/img "O elemento HTML <img> incorpora uma imagem no documento.")ou outro elemento, e é usado regularmente hoje .
+Finalmente, o elemento [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe) apareceu (juntamente com outras formas de incorporar conteúdo, como [`<canvas>`](/pt-BR/docs/Web/HTML/Element/canvas), `<video>` etc.). Isso fornece uma maneira de incorporar um documento da Web inteiro dentro de outro, como se fosse um [`<img>`](/pt-BR/docs/Web/HTML/Element/img)ou outro elemento, e é usado regularmente hoje .
 
 Com a lição de história fora do caminho, vamos seguir em frente e ver como usar algumas delas.
 
 ## Aprendizado ativo: usos clássicos de incorporação
 
-Neste artigo, vamos pular direto para uma seção de aprendizado ativo, para fornecer imediatamente uma idéia real de para que servem as tecnologias de incorporação. O mundo on-line está muito familiarizado com o [Youtube](https://www.youtube.com/) , mas muitas pessoas não conhecem alguns dos recursos de compartilhamento disponíveis. Vejamos como o YouTube nos permite incorporar um vídeo em qualquer página que gostamos de usar [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe "O elemento HTML Inline Frame (<iframe>) representa um contexto de navegação aninhado, incorporando outra página HTML à atual.").
+Neste artigo, vamos pular direto para uma seção de aprendizado ativo, para fornecer imediatamente uma idéia real de para que servem as tecnologias de incorporação. O mundo on-line está muito familiarizado com o [Youtube](https://www.youtube.com/) , mas muitas pessoas não conhecem alguns dos recursos de compartilhamento disponíveis. Vejamos como o YouTube nos permite incorporar um vídeo em qualquer página que gostamos de usar [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe).
 
-1.  Primeiro, vá ao Youtube e encontre o vídeo que você gosta.
-2.  Abaixo do vídeo, você encontrará um botão _Compartilhar_ - selecione para exibir as opções de compartilhamento.
-3.  Selecione o botão _Incorporar_ e você receberá um `<iframe>`código - copie isso.
-4.  Insira-o na caixa de _entrada_ abaixo e veja qual é o resultado na _saída_ .
+1. Primeiro, vá ao Youtube e encontre o vídeo que você gosta.
+2. Abaixo do vídeo, você encontrará um botão _Compartilhar_ - selecione para exibir as opções de compartilhamento.
+3. Selecione o botão _Incorporar_ e você receberá um `<iframe>`código - copie isso.
+4. Insira-o na caixa de _entrada_ abaixo e veja qual é o resultado na _saída_ .
 
 Para pontos de bônus, você também pode tentar incorporar um [mapa do Google](https://www.google.com/maps/) no exemplo:
 
-1.  Vá para o Google Maps e encontre um mapa que você gosta.
-2.  Clique no "Menu Hamburger" (três linhas horizontais) no canto superior esquerdo da interface do usuário.
-3.  Selecione a opção _Compartilhar ou incorporar mapa_ .
-4.  Selecione a opção Incorporar mapa, que fornecerá algum `<iframe>`código - copie isso.
-5.  Insira-o na caixa de _entrada_ abaixo e veja qual é o resultado na _saída_ .
+1. Vá para o Google Maps e encontre um mapa que você gosta.
+2. Clique no "Menu Hamburger" (três linhas horizontais) no canto superior esquerdo da interface do usuário.
+3. Selecione a opção _Compartilhar ou incorporar mapa_ .
+4. Selecione a opção Incorporar mapa, que fornecerá algum `<iframe>`código - copie isso.
+5. Insira-o na caixa de _entrada_ abaixo e veja qual é o resultado na _saída_ .
 
 Se você cometer um erro, sempre poderá redefini-lo usando o botão _Redefinir_ . Se você realmente ficar atolado, pressione o botão _Mostrar solução_ para ver uma resposta.
 
@@ -214,7 +211,7 @@ textarea.onkeyup = function(){
 
 ## Iframes em detalhes
 
-Então, isso foi fácil e divertido, certo? Os elementos [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe "O elemento HTML Inline Frame (<iframe>) representa um contexto de navegação aninhado, incorporando outra página HTML à atual.") foram projetados para permitir que você incorpore outros documentos da Web ao documento atual. Isso é ótimo para incorporar conteúdo de terceiros em seu site sobre o qual você pode não ter controle direto e não querer implementar sua própria versão - como vídeo de fornecedores de vídeo on-line, sistemas de comentários como [Disqus](https://disqus.com/) , mapas on-line fornecedores de mapas, banners publicitários etc. Os exemplos editáveis ​​ao vivo que você está usando neste curso são implementados usando `<iframe>`s.
+Então, isso foi fácil e divertido, certo? Os elementos [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe) foram projetados para permitir que você incorpore outros documentos da Web ao documento atual. Isso é ótimo para incorporar conteúdo de terceiros em seu site sobre o qual você pode não ter controle direto e não querer implementar sua própria versão - como vídeo de fornecedores de vídeo on-line, sistemas de comentários como [Disqus](https://disqus.com/) , mapas on-line fornecedores de mapas, banners publicitários etc. Os exemplos editáveis ​​ao vivo que você está usando neste curso são implementados usando `<iframe>`s.
 
 Existem algumas sérias [preocupações de segurança](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#Security_concerns) a serem consideradas com `<iframe>`s, como discutiremos abaixo, mas isso não significa que você não deve usá-las em seus sites - apenas requer algum conhecimento e pensamento cuidadoso. Vamos explorar o código um pouco mais detalhadamente. Digamos que você queira incluir o glossário MDN em uma de suas páginas da web - você pode tentar algo como isto:
 
@@ -235,17 +232,17 @@ Este exemplo inclui os fundamentos básicos necessários para usar um `<iframe>`
 - [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#attr-allowfullscreen)
   - : Se definido, ele `<iframe>`poderá ser colocado no modo de tela cheia usando a [API de tela cheia](/pt-BR/docs/Web/API/Fullscreen_API) (um pouco além do escopo deste artigo).
 - [`frameborder`](/en-US/docs/Web/HTML/Element/iframe#attr-frameborder)
-  - : Se definido como 1, isso indica ao navegador para desenhar uma borda entre esse quadro e outros quadros, que é o comportamento padrão. 0 remove a borda. Usar isso não é mais recomendado, pois o mesmo efeito pode ser melhor alcançado usando em seu [CSS](/pt-BR/docs/Glossary/CSS "CSS: CSS (Cascading Style Sheets) is a declarative language that controls how webpages look in the browser.") .[`border`](/pt-BR/docs/Web/CSS/border "A propriedade CSS abreviada da borda define a borda de um elemento.")`: none;`
+  - : Se definido como 1, isso indica ao navegador para desenhar uma borda entre esse quadro e outros quadros, que é o comportamento padrão. 0 remove a borda. Usar isso não é mais recomendado, pois o mesmo efeito pode ser melhor alcançado usando em seu [CSS](/pt-BR/docs/Glossary/CSS) .[`border`](/pt-BR/docs/Web/CSS/border)`: none;`
 - [`src`](/en-US/docs/Web/HTML/Element/iframe#attr-src)
-  - : Este atributo, como [`<video>`](/pt-BR/docs/Web/HTML/Element/video "O elemento HTML Video (<video>) incorpora um media player que suporta a reprodução de vídeo no documento.  Você também pode usar <video> para conteúdo de áudio, mas o elemento <audio> pode fornecer uma experiência de usuário mais apropriada.")/ [`<img>`](/pt-BR/docs/Web/HTML/Element/img "O elemento HTML <img> incorpora uma imagem no documento."), contém um caminho apontando para o URL do documento a ser incorporado.
+  - : Este atributo, como [`<video>`](/pt-BR/docs/Web/HTML/Element/video)/ [`<img>`](/pt-BR/docs/Web/HTML/Element/img), contém um caminho apontando para o URL do documento a ser incorporado.
 - [`width`](/en-US/docs/Web/HTML/Element/iframe#attr-width) e [`height`](/en-US/docs/Web/HTML/Element/iframe#attr-height)
   - : Esses atributos especificam a largura e a altura que você deseja que o iframe seja.
 - Conteúdo alternativo
-  - : Da mesma forma que outros elementos semelhantes [`<video>`](/pt-BR/docs/Web/HTML/Element/video "O elemento HTML Video (<video>) incorpora um media player que suporta a reprodução de vídeo no documento.  Você também pode usar <video> para conteúdo de áudio, mas o elemento <audio> pode fornecer uma experiência de usuário mais apropriada."), você pode incluir conteúdo de fallback entre as `<iframe></iframe>`tags de abertura e fechamento que aparecerão se o navegador não suportar `<iframe>`. Nesse caso, incluímos um link para a página. É improvável que você encontre qualquer navegador que não suporte `<iframe>`s atualmente.
+  - : Da mesma forma que outros elementos semelhantes [`<video>`](/pt-BR/docs/Web/HTML/Element/video), você pode incluir conteúdo de fallback entre as `<iframe></iframe>`tags de abertura e fechamento que aparecerão se o navegador não suportar `<iframe>`. Nesse caso, incluímos um link para a página. É improvável que você encontre qualquer navegador que não suporte `<iframe>`s atualmente.
 - [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#attr-sandbox)
   - : Esse atributo, que funciona em navegadores um pouco mais modernos que o restante dos `<iframe>`recursos (por exemplo, IE 10 e superior), requer configurações de segurança mais elevadas; falaremos mais sobre isso na próxima seção.
 
-> **Nota:** Para melhorar a velocidade, é uma boa ideia definir o `src`atributo do iframe com JavaScript após o carregamento do conteúdo principal. Isso torna sua página utilizável mais cedo e diminui o tempo de carregamento da página oficial (uma importante métrica de [SEO](/pt-BR/docs/Glossary/SEO "SEO: SEO (Search Engine Optimization) é o processo de tornar um site mais visível nos resultados de pesquisa, também denominado melhorar as classificações de pesquisa.") ).
+> **Nota:** Para melhorar a velocidade, é uma boa ideia definir o `src`atributo do iframe com JavaScript após o carregamento do conteúdo principal. Isso torna sua página utilizável mais cedo e diminui o tempo de carregamento da página oficial (uma importante métrica de [SEO](/pt-BR/docs/Glossary/SEO) ).
 
 ### Preocupações com segurança
 
@@ -269,8 +266,8 @@ Se o conteúdo for licenciado, você deverá obedecer aos termos da licença. Po
 
 {{Glossary("HTTPS")}} é a versão criptografada do {{Glossary("HTTP")}}. Você deve utilizar HTTPS em seus websites sempre que possível:
 
-1.  HTTPS reduz a chance de que conteúdo remoto tenha sido adulterado no caminho.
-2.  HTTPS previne que conteúdo que tenha incorporado ao site acesse conteúdo em seu documento de origem, e vice versa.
+1. HTTPS reduz a chance de que conteúdo remoto tenha sido adulterado no caminho.
+2. HTTPS previne que conteúdo que tenha incorporado ao site acesse conteúdo em seu documento de origem, e vice versa.
 
 Utilizar HTTPS requer um certificado de segurança, que pode ser bem caro (apesar que o [Let's Encrypt](https://letsencrypt.org/) deixe as coisas mais fáceis) — se você não puder obter um certificado, você deve fornecer seus documentos com HTTP. Contudo, por conta do segundo benefício do HTTPS descrito acima, _não importa o custo, você nunca deve incorporar conteúdo de terceiros em HTTP._ (No caso do melhor cenário, o navegador de seu usuário irá dá-lo um aviso assustador.) Todas as empresas com boa reputação irão fornecer conteúdo para ser incoporado por meio `<iframe>` irá fazê-lo disponível através de HTTPS — veja a URLs dentro do `<iframe>` `no`atributo src, quando você está incorporando conteúdo do Google Maps ou Youtube, por exemplo.
 
@@ -345,7 +342,7 @@ PDFs were a necessary stepping stone between paper and digital, but they pose ma
 Once upon a time, plugins were indispensable on the Web. Remember the days when you had to install Adobe Flash Player just to watch a movie online? And then you constantly got annoying alerts about updating Flash Player and your Java Runtime Environment. Web technologies have since grown much more robust, and those days are over. For virtually all applications, it's time to stop delivering content that depends on plugins and start taking advantage of Web technologies instead.
 
 - **Broaden your reach to everyone.** Everyone has a browser, but plugins are increasingly rare, especially among mobile users. Since the Web is easily used without any plugins, people would rather just go to your competitors' websites than install a plugin.
-- **Give yourself a break from the [extra accessibility headaches ](https://webaim.org/techniques/flash/)that come with Flash and other plugins.**
+- **Give yourself a break from the [extra accessibility headaches](https://webaim.org/techniques/flash/) that come with Flash and other plugins.**
 - **Stay clear of additional security hazards.** Adobe Flash is [notoriously insecure,](https://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) even after countless patches. In 2015, Alex Stamos, then-Chief Security Officer at Facebook, [requested that Adobe discontinue Flash.](https://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
 
 > **Nota:**Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020. As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completly removed all Flash functionality. Any existing Flash content will be inaccessable after that date.

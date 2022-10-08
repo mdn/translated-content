@@ -66,13 +66,13 @@ Suponha que você seja um músico. Você poderia desejar:
 
 Depois de ter essa lista, você precisa priorizar. Ordene os objetivos do mais importante para o menos importante:
 
-1.  Encontrar um(a) novo(a) namorado(a).
-2.  Deixar as pessoas ouvirem sua música.
-3.  Falar sobre sua música.
-4.  Conhecer outros músicos.
-5.  Vender guloseimas.
-6.  Ensinar música através de vídeos.
-7.  Publicar fotos de seus gatos.
+1. Encontrar um(a) novo(a) namorado(a).
+2. Deixar as pessoas ouvirem sua música.
+3. Falar sobre sua música.
+4. Conhecer outros músicos.
+5. Vender guloseimas.
+6. Ensinar música através de vídeos.
+7. Publicar fotos de seus gatos.
 
 Fazer esse exercício simples (escrever objetivos e classificá-los), ajudará você quando tiver decisões a tomar. (Devo implementar esses recursos, usar esses serviços, criar esses designs?)
 

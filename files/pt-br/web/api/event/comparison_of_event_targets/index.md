@@ -25,7 +25,7 @@ Há 5 tipos de _targets_ a se considerar:
     </tr>
     <tr>
       <td>
-        <a href="/en/DOM/event.target" title="en/DOM/event.target"
+        <a href="/en/DOM/event.target"
           >event.target</a
         >
       </td>
@@ -47,7 +47,7 @@ Há 5 tipos de _targets_ a se considerar:
     </tr>
     <tr>
       <td>
-        <a href="/en/DOM/event.currentTarget" title="en/DOM/event.currentTarget"
+        <a href="/en/DOM/event.currentTarget"
           >event.currentTarget</a
         >
       </td>
@@ -77,7 +77,7 @@ Há 5 tipos de _targets_ a se considerar:
     </tr>
     <tr>
       <td>
-        <a href="/en/DOM/event.relatedTarget" title="en/DOM/event.relatedTarget"
+        <a href="/en/DOM/event.relatedTarget"
           >event.relatedTarget</a
         >
       </td>
@@ -94,7 +94,6 @@ Há 5 tipos de _targets_ a se considerar:
       <td>
         <a
           href="/en/DOM/event.explicitOriginalTarget"
-          title="en/DOM/event.explicitOriginalTarget"
           >event.explicitOriginalTarget</a
         >
       </td>
@@ -117,7 +116,6 @@ Há 5 tipos de _targets_ a se considerar:
       <td>
         <a
           href="/en/DOM/event.originalTarget"
-          title="en/DOM/event.originalTarget"
           >event.originalTarget</a
         >
       </td>
@@ -129,7 +127,6 @@ Há 5 tipos de _targets_ a se considerar:
         qualquer redirecionamento. Veja
         <a
           href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
-          title="en/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
           >Anonymous Content#Event_Flow_and_Targeting</a
         >
         para mais detalhes.

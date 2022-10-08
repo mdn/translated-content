@@ -65,9 +65,9 @@ O próprio HTML não sofre de erros de sintaxe porque os navegadores o analisam 
 
 É hora de estudar a natureza permissiva do código HTML.
 
-1.  Primeiramente, faça o download do [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) e o salve localmente. Esse exemplo contém erros propositais para que possamos explorá-los (tal código HTML é dito _**badly-formed**_, em contraponto ao HTML _**well-formed**_).
-2.  Em seguida, abra o arquivo em um navegador. Você verá algo como:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](https://mdn.mozillademos.org/files/12437/badly-formed-html.png)
-3.  Isso claramente não parece bom; vamos dar uma olhada no código fonte para tentar achar os erros (somente o conteúdo de _body_ é mostrado):
+1. Primeiramente, faça o download do [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) e o salve localmente. Esse exemplo contém erros propositais para que possamos explorá-los (tal código HTML é dito _**badly-formed**_, em contraponto ao HTML _**well-formed**_).
+2. Em seguida, abra o arquivo em um navegador. Você verá algo como:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](https://mdn.mozillademos.org/files/12437/badly-formed-html.png)
+3. Isso claramente não parece bom; vamos dar uma olhada no código fonte para tentar achar os erros (somente o conteúdo de _body_ é mostrado):
 
     ```html
     <h1>HTML debugging examples</h1>
@@ -88,16 +88,16 @@ O próprio HTML não sofre de erros de sintaxe porque os navegadores o analisam 
     </ul>
     ```
 
-4.  Vamos analisar os erros:
+4. Vamos analisar os erros:
 
     - Os elementos {{htmlelement("p","parágrafo")}} e {{htmlelement("li","item da lista")}} não possuem _tags_ de fechamento. Olhando a imagem acima, isso não parece ter afetado muito a renderização do HTML já que é fácil deduzir onde um elemento deveria terminar e outro, começar.
     - O primeiro elemento {{htmlelement("strong")}} não possui _tag_ de fechamento. Isto é um pouco mais problemático porque não é necessariamente fácil determinar onde um elemento deveria terminar. Assim, todo o resto do texto foi fortemente enfatizado.
     - Essa seção foi aninhada incorretamente: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. Não é fácil dizer como esse trecho foi interpretado por causa do problema anterior.
     - O valor do atributo {{htmlattrxref("href","a")}} não tem as aspas de fechamento. Isso parece ter causado o maior problema — o _link_ não foi renderizado.
 
-5.  Agora vamos dar uma olhada no HTML que o navegador renderizou, comparando-o com o nosso código fonte. Para fazer isso, usaremos as ferramentas de desenvolvimento oferecidas pelo navegador. Se você não está familiarizado com estas ferramentas, dê uma olhadinha nesse tutorial: [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador).
-6.  No inspetor DOM, você pode ver como o HTML renderizado fica: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](https://mdn.mozillademos.org/files/12439/html-inspector.png)
-7.  Utilizando o inspetor DOM, vamos explorar nosso código detalhadamente para ver como o navegador tentou consertar os erros do código HTML (nós fizemos a análise com o Firefox, mas outros navegadores modernos _devem_ apresentar o mesmo resultado):
+5. Agora vamos dar uma olhada no HTML que o navegador renderizou, comparando-o com o nosso código fonte. Para fazer isso, usaremos as ferramentas de desenvolvimento oferecidas pelo navegador. Se você não está familiarizado com estas ferramentas, dê uma olhadinha nesse tutorial: [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador).
+6. No inspetor DOM, você pode ver como o HTML renderizado fica: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](https://mdn.mozillademos.org/files/12439/html-inspector.png)
+7. Utilizando o inspetor DOM, vamos explorar nosso código detalhadamente para ver como o navegador tentou consertar os erros do código HTML (nós fizemos a análise com o Firefox, mas outros navegadores modernos _devem_ apresentar o mesmo resultado):
 
     - As _tags_ de fechamento foram colocadas nos parágrafos e itens da lista.
     - Não está claro onde o primeiro elemento `<strong>` deveria terminar, portanto o navegador envolveu cada bloco subsequente em uma _tag_ _strong_ própria até o fim do documento!
@@ -133,10 +133,10 @@ Para especificar o HTML a ser validado, você pode dar um endereço web, fazer o
 
 Vamos tentar fazer isto com o nosso [sample document](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html).
 
-1.  Primero, carregue o [Markup Validation Service](https://validator.w3.org/) em uma aba no seu navegador, caso já não esteja carregada.
-2.  Troque para a aba [Validate by Direct Input](https://validator.w3.org/#validate_by_input).
-3.  Copie todo o código do documento de exemplo (não apenas o body) e cole dentro da grande área de texto mostrada no Markup Validation Service.
-4.  Pressione o botão _Check_.
+1. Primero, carregue o [Markup Validation Service](https://validator.w3.org/) em uma aba no seu navegador, caso já não esteja carregada.
+2. Troque para a aba [Validate by Direct Input](https://validator.w3.org/#validate_by_input).
+3. Copie todo o código do documento de exemplo (não apenas o body) e cole dentro da grande área de texto mostrada no Markup Validation Service.
+4. Pressione o botão _Check_.
 
 Você deverá receber uma lista de erros e outras informações.
 
