@@ -10,7 +10,7 @@ The **`version`** attribute is used to indicate what specification a SVG documen
 While it is specified to accept any number, the only two valid choices are currently `1.0` and `1.1`.
 
 ```html
-<svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <rect x="10" y="10" width="80" height="80"/>
 </svg>
 ```

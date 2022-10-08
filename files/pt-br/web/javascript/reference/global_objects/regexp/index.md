@@ -783,12 +783,12 @@ console.log(regex.lastIndex); // prints '15'
 // e assim vai
 ```
 
-Here's an external resource para getting o complete Unicode block range para different scripts: [Regexp-unicode-block](http://kourge.net/projects/regexp-unicode-block).
+Here's an external resource para getting o complete Unicode block range para different scripts: [Regexp-unicode-block](https://kourge.net/projects/regexp-unicode-block).
 
 ### Exemplo: Extracting subdomain name from URL
 
 ```js
-var url = 'http://xxx.domain.com';
+var url = 'https://xxx.domain.com';
 console.log(/[^.]+/.exec(url)[0].substr(7)); // prints 'xxx'
 ```
 

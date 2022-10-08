@@ -44,4 +44,4 @@ Also unlike `Date.now()`, the values returned by `Performance.now()` always incr
 
 ## Veja também
 
-- [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) from HTML5 Rocks.
+- [When milliseconds are not enough: performance.now()](https://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) from HTML5 Rocks.

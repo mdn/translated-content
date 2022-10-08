@@ -37,7 +37,7 @@ Qualquer um desses URLs podem ser digitado na barra de endereços do seu navegad
 Uma URL é composta por diferentes partes, algumas são estritamente necessárias e outras são opcionais. Um exemplo mais complexo seria algo como isso:
 
 ```
-http://www.exemplo.com:80/pasta/para/meu-arquivo.html?chave1=valor1&chave2=valor2#AlgumaCoisaNoDocumento
+https://www.exemplo.com:80/pasta/para/meu-arquivo.html?chave1=valor1&chave2=valor2#AlgumaCoisaNoDocumento
 ```
 
 ### URNs
@@ -59,7 +59,7 @@ As duas URNs correspondem
 ### Esquema ou protocolo
 
 - ![Protocol](https://mdn.mozillademos.org/files/8013/mdn-url-protocol@x2.png)
-  - : `http://` é o protocolo. Ele indica qual é o protocolo que o navegador irá usar. Usualmente o protocolo é o HTTP, ou sua versão segura, HTTPS. A Web requer um desses dois, mas os navegadores tambem sabem como lidar com outros protocolos como o `mailto:` (para abrir um cliente de email) ou o `ftp:` para fazer uma transferêcia de arquivo, então não fique surpreso se ver alguns desses protocolos. Esquemas comuns são:
+  - : `https://` é o protocolo. Ele indica qual é o protocolo que o navegador irá usar. Usualmente o protocolo é o HTTP, ou sua versão segura, HTTPS. A Web requer um desses dois, mas os navegadores tambem sabem como lidar com outros protocolos como o `mailto:` (para abrir um cliente de email) ou o `ftp:` para fazer uma transferêcia de arquivo, então não fique surpreso se ver alguns desses protocolos. Esquemas comuns são:
 
 | Esquema     | Descrição                                                                  |
 | ----------- | -------------------------------------------------------------------------- |
@@ -124,4 +124,4 @@ urn:isbn:9780141036144
 ## Veja também
 
 - [O que é uma URL?](/pt-BR/docs/Learn/Common_questions/What_is_a_URL)
-- [Lista de esquemas URI IANA](http://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [Lista de esquemas URI IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

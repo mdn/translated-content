@@ -15,7 +15,7 @@ translation_of: Web/API/Cache
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-A interface de **Cache** provê um mecanismo de pares de objeto [Request](http://fetch.spec.whatwg.org/#request) / [Response](http://fetch.spec.whatwg.org/#response) que estão cacheados, por exemplo, como parte do ciclo de vida de um {{domxref("ServiceWorker")}}. Note que a interface do `Cache` é exposta a escopos de janela como também aos workers. Você não precisa utiliza-la em conjunto com os service workers em si, mesmo que ela esteja definida na especificação dos mesmos.
+A interface de **Cache** provê um mecanismo de pares de objeto [Request](https://fetch.spec.whatwg.org/#request) / [Response](https://fetch.spec.whatwg.org/#response) que estão cacheados, por exemplo, como parte do ciclo de vida de um {{domxref("ServiceWorker")}}. Note que a interface do `Cache` é exposta a escopos de janela como também aos workers. Você não precisa utiliza-la em conjunto com os service workers em si, mesmo que ela esteja definida na especificação dos mesmos.
 
 Uma origem pode ter múltiplos objetos de `cache` nomeados. Você é o responsável por implementar como seu script (por exemplo, em um {{domxref("ServiceWorker")}}) trata uma atualização deste `Cache`. Itens em um `Cache` não são atualizados a não ser que explicitamente comandados para fazer tal coisa, também não expiram a não ser quando são deletados. Use {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} para abrir um `Cache` nomeado específico e depois chame qualquer um dos métodos presentes no `Cache` para manter os objetos cacheados.
 

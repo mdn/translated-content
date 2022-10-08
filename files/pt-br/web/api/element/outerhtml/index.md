@@ -83,4 +83,4 @@ console.log(p.nodeName); // ainda contém "P";
 ## Veja também
 
 - {{domxref("HTMLElement.outerText")}}
-- MSDN: [outerHTML Property](http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx)
+- MSDN: [outerHTML Property](https://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx)

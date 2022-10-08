@@ -64,4 +64,4 @@ The Web Animations API adds some new features to {{domxref("document")}} and {{d
 - [Web Animations demos](https://mozdevs.github.io/Animation-examples/)
 - [Polyfill](https://github.com/web-animations/web-animations-js)
 - Firefox's current implementation: [AreWeAnimatedYet](https://birtles.github.io/areweanimatedyet/)
-- [Browser support test](http://codepen.io/danwilson/pen/xGBKVq)
+- [Browser support test](https://codepen.io/danwilson/pen/xGBKVq)

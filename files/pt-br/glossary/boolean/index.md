@@ -32,7 +32,7 @@ for (var i=0; i < 4; i++) {
 
 ### Referências externas
 
-- [Boolean on Wikipedia](http://en.wikipedia.org/wiki/Boolean_data_type) (em inglês)
+- [Boolean on Wikipedia](https://en.wikipedia.org/wiki/Boolean_data_type) (em inglês)
 - [Booleano na Wikipedia](https://pt.wikipedia.org/wiki/Booliano)
 
 ### Referência

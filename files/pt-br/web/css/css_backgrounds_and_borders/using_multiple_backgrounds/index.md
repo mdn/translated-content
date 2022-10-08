@@ -31,9 +31,9 @@ Neste exemplo, três planos de fundos estão empilhados: o logo do Firefox, um d
 
 ```css
 .multi_bg_example {
-  background: url(http://demos.hacks.mozilla.org/openweb/resources/images/logos/firefox-48.png),
+  background: url(https://demos.hacks.mozilla.org/openweb/resources/images/logos/firefox-48.png),
         -moz-linear-gradient(left, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
-        url(http://demos.hacks.mozilla.org/openweb/resources/images/patterns/flowers-pattern.jpg);
+        url(https://demos.hacks.mozilla.org/openweb/resources/images/patterns/flowers-pattern.jpg);
   background-repeat: no-repeat, no-repeat, repeat;
   background-position: bottom right, left, right;
 }

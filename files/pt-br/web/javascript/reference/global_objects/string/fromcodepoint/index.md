@@ -67,7 +67,7 @@ console.log(String.fromCodePoint(0x2F804)); // or 194564 in decimal
 O método **String.fromCodePoint** foi adicionado ao padrão ECMAScript na versão 6 e pode não ser suportado em todos os navegadores da Web ou em todos os ambientes ainda. Use o código abaixo para um polyfill:
 
 ```js
-/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
+/*! https://mths.be/fromcodepoint v0.1.0 by @mathias */
 if (!String.fromCodePoint) {
   (function() {
     var defineProperty = (function() {
@@ -105,7 +105,7 @@ if (!String.fromCodePoint) {
         if (codePoint <= 0xFFFF) { // BMP code point
           codeUnits.push(codePoint);
         } else { // Astral code point; split in surrogate halves
-          // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
+          // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
           codePoint -= 0x10000;
           highSurrogate = (codePoint >> 10) + 0xD800;
           lowSurrogate = (codePoint % 0x400) + 0xDC00;

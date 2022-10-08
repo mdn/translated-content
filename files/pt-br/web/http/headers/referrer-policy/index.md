@@ -81,13 +81,13 @@ Você também pode colocar política de referência dentro do HTML. Por exemplo,
 Ou colocar ele para requisições individuais com o atributo `referrerpolicy` nos elementos {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, or {{HTMLElement("link")}}:
 
 ```html
-<a href="http://example.com" referrerpolicy="origin">
+<a href="https://example.com" referrerpolicy="origin">
 ```
 
 Alternativamente, uma [relação de link](/pt-BR/docs/Web/HTML/Link_types) `noreferrer` em um elemento `a`, `area`, ou `link` pode ser colocada:
 
 ```html
-<a href="http://example.com" rel="noreferrer">
+<a href="https://example.com" rel="noreferrer">
 ```
 
 ## Integração com CSS
@@ -172,7 +172,7 @@ CSS pode buscar recursos referênciados de suas folhas de estilo. Estes recursos
     <tr>
       <td><strong>http</strong>://example.com/page</td>
       <td><em>qualquer lugar</em></td>
-      <td>http://example.com/</td>
+      <td>https://example.com/</td>
     </tr>
     <tr>
       <th rowspan="3"><code>strict-origin-when-cross-origin</code></th>

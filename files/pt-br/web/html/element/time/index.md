@@ -11,7 +11,7 @@ Este elemento é destinado a apresentar datas e horas no dispositivo em um forma
 
 > **Note:** **Notas de uso:** Este elemento não é adequado por exemplo, quando uma data específica não pode ser calculada, e nem deveria ser utilizado em datas anteriores ao calendário Gregoriano (devido as complicações com os cálculos dessas datas).
 
-> **Note:** **Nota de estatus:** Este elemento foi concebido e está em discussão desde 2011 (<http://blog.whatwg.org/weekly-time-data>)
+> **Note:** **Nota de estatus:** Este elemento foi concebido e está em discussão desde 2011 (<https://blog.whatwg.org/weekly-time-data>)
 
 ## Contexto de uso
 
@@ -20,7 +20,7 @@ Este elemento é destinado a apresentar datas e horas no dispositivo em um forma
 | Permitted content                                                                       | [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), but no descendant `time` elements.                                                                      |
 | Tag omission                                                                            | None, both the start tag and the end tag are mandatory.                                                                                                                                                                      |
 | Permitted parent elements                                                               | Any element that accepts phrasing content.                                                                                                                                                                                   |
-| Normative document                                                                      | [HTML5, section 4.6.10](http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element)                                                                                              |
+| Normative document                                                                      | [HTML5, section 4.6.10](https://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element)                                                                                              |
 
 ## Atributos
 
@@ -75,4 +75,4 @@ The concert took place on May 15.
 
 ## Veja também
 
-- [The `time` element](http://www.whatwg.org/specs/web-apps/current-work/#the-time-element) (HTML5 specification)
+- [The `time` element](https://www.whatwg.org/specs/web-apps/current-work/#the-time-element) (HTML5 specification)

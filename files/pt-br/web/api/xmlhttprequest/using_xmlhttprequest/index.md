@@ -23,7 +23,7 @@ Uma requisição feita via XMLHttpRequest pode buscar dados de duas maneiras, s�
 
 ## Manipulando Respostas
 
-Existem vários tipos de [atributos de resposta](http://www.w3.org/TR/XMLHttpRequest2/#response) definidos pela especificação da W3C para o XMLHttpRequest. Eles informam ao cliente que efetuou a requisição XMLHttpRequest informações importantes sobre o status da resposta. Em alguns casos onde se lida com tipos de resposa de não-texto, os tipos de resposta podem envolver alguma manipulação e/ou análise conforme descrito nas seções seguintes.
+Existem vários tipos de [atributos de resposta](https://www.w3.org/TR/XMLHttpRequest2/#response) definidos pela especificação da W3C para o XMLHttpRequest. Eles informam ao cliente que efetuou a requisição XMLHttpRequest informações importantes sobre o status da resposta. Em alguns casos onde se lida com tipos de resposa de não-texto, os tipos de resposta podem envolver alguma manipulação e/ou análise conforme descrito nas seções seguintes.
 
 ### Analisando e manipulando a propriedade `responseXML`
 
@@ -39,7 +39,7 @@ As cinco formas mais utilizadas para análisar e manipular um arquivo XML são:
 
 ### Analisando e manipulando uma propriedade `responseText` contendo um documento HTML
 
-> **Nota:** A especificação W3C do [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) permite analisar HTML através da propriedade `XMLHttpRequest.responseXML` . Leia o artigo sobre [HTML in XMLHttpRequest](/pt-BR/docs/HTML_in_XMLHttpRequest) para maiores detalhes.
+> **Nota:** A especificação W3C do [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) permite analisar HTML através da propriedade `XMLHttpRequest.responseXML` . Leia o artigo sobre [HTML in XMLHttpRequest](/pt-BR/docs/HTML_in_XMLHttpRequest) para maiores detalhes.
 
 Se você usa o `XMLHttpRequest` para recuperar o conteúdo de uma página HTML remota, a propriedade `responseText` será uma string contendo um a "sopa" de todos as tags HTML, o que pode ser difícil de manipular e analizar. Existem três formas básicas para analizar esta sopa de string HTML:
 
@@ -59,7 +59,7 @@ oReq.overrideMimeType("text/plain; charset=x-user-defined");
 /* ... */
 ```
 
-A especificação XMLHttpRequest Level 2 adiciona novo [responseType attributes](http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute) que tornam o envio e recebimento de dados muito mais fácil.
+A especificação XMLHttpRequest Level 2 adiciona novo [responseType attributes](https://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute) que tornam o envio e recebimento de dados muito mais fácil.
 
 ```js
 var oReq = new XMLHttpRequest();
@@ -79,7 +79,7 @@ Para mais exemplos confira a página [Sending and Receiving Binary Data](/pt-BR/
 
 `XMLHttpRequest` fornece a capacidade de ouvir vários eventos que podem ocorrer enquanto o pedido está sendo processado. Isso inclui notificações periódicas de progresso, notificações de erro e assim por diante.
 
-Suporte para evento de progresso DOM monitorando a conexão `XMLHttpRequest` transfers siga a Web API [specification for progress events](http://dev.w3.org/2006/webapi/progress/Progress.html): estes eventos implementam a interface {{domxref("ProgressEvent")}} .
+Suporte para evento de progresso DOM monitorando a conexão `XMLHttpRequest` transfers siga a Web API [specification for progress events](https://dev.w3.org/2006/webapi/progress/Progress.html): estes eventos implementam a interface {{domxref("ProgressEvent")}} .
 
 ```js
 var oReq = new XMLHttpRequest();
@@ -262,7 +262,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 |*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
 |*|
 |*|  This framework is released under the GNU Public License, version 3 or later.
-|*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html
+|*|  https://www.gnu.org/licenses/gpl-3.0-standalone.html
 |*|
 |*|  Syntax:
 |*|
@@ -637,8 +637,8 @@ Modern browsers support cross-site requests by implementing the web applications
 A, cross-browser compatible approach to bypassing the cache is to append a timestamp to the URL, being sure to include a "?" or "&" as appropriate. For example:
 
 ```
-http://foo.com/bar.html -> http://foo.com/bar.html?12345
-http://foo.com/bar.html?foobar=baz -> http://foo.com/bar.html?foobar=baz&12345
+https://foo.com/bar.html -> https://foo.com/bar.html?12345
+https://foo.com/bar.html?foobar=baz -> https://foo.com/bar.html?foobar=baz&12345
 ```
 
 Since the local cache is indexed by URL, this causes every request to be unique, thereby bypassing the cache.
@@ -662,7 +662,7 @@ The recommended way to enable cross-site scripting is to use the `Access-Control
 
 ### XMLHttpRequests being stopped
 
-If you end up with an XMLHttpRequest having `status=0` and `statusText=null`, it means that the request was not allowed to be performed. It was [`UNSENT`](http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). A likely cause for this is when the [`XMLHttpRequest` origin](http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is then `open()`. This case can happen for example when one has an XMLHttpRequest that gets fired on an onunload event for a window: the XMLHttpRequest gets in fact created when the window to be closed is still there, and then the request is sent (ie `open()`) when this window has lost its focus and potentially different window has gained focus. The way to avoid this problem is to set a listener on the new window "activate" event that gets set when the old window has its "unload" event fired.
+If you end up with an XMLHttpRequest having `status=0` and `statusText=null`, it means that the request was not allowed to be performed. It was [`UNSENT`](https://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). A likely cause for this is when the [`XMLHttpRequest` origin](https://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is then `open()`. This case can happen for example when one has an XMLHttpRequest that gets fired on an onunload event for a window: the XMLHttpRequest gets in fact created when the window to be closed is still there, and then the request is sent (ie `open()`) when this window has lost its focus and potentially different window has gained focus. The way to avoid this problem is to set a listener on the new window "activate" event that gets set when the old window has its "unload" event fired.
 
 ## Using XMLHttpRequest from JavaScript modules / XPCOM components
 
@@ -687,9 +687,9 @@ var oReq = XMLHttpRequest();
 1. [MDC AJAX introduction](/pt-BR/docs/AJAX/Getting_Started)
 2. [HTTP access control](/pt-BR/docs/HTTP_access_control)
 3. [How to check the security state of an XMLHTTPRequest over SSL](/pt-BR/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-4. [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-5. [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-6. [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
-7. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-8. [The XMLHttpRequest Object: W3C Specification](http://www.w3.org/TR/XMLHttpRequest/)
-9. [Web Progress Events specification](http://dev.w3.org/2006/webapi/progress/Progress.html)
+4. [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+5. [Microsoft documentation](https://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
+6. [Apple developers' reference](https://developer.apple.com/internet/webcontent/xmlhttpreq.html)
+7. ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+8. [The XMLHttpRequest Object: W3C Specification](https://www.w3.org/TR/XMLHttpRequest/)
+9. [Web Progress Events specification](https://dev.w3.org/2006/webapi/progress/Progress.html)

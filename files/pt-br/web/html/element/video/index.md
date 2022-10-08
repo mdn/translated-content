@@ -15,7 +15,7 @@ Para uma lista de formatos suportados veja [Media formats supported by the audio
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tag              | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Permissão de elementos pais | Qualquer elemento que aceite [flow content](/en/HTML/Content_categories#flow_content), ou qualquer outro elemento que aceite [phrasing content](/en/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                     |
-| Documento normativo         | [HTML 5, section 4.8.6](http://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Documento normativo         | [HTML 5, section 4.8.6](https://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## Atributos
 
@@ -122,12 +122,12 @@ Esse elemento implementa a interface [`HTMLVideoElement`](/en/DOM/HTMLVideoEleme
 ## Veja também
 
 - [Media formats supported by the audio and video elements](/En/Media_formats_supported_by_the_audio_and_video_elements)
-- [`audio`](http://developer-new.mozilla.org/pt-BR/docs/HTML/Element/audio)
+- [`audio`](https://developer-new.mozilla.org/pt-BR/docs/HTML/Element/audio)
 - [Using HTML5 audio and video](/en/Using_HTML5_audio_and_video)
 - [Manipulating video using canvas](/En/Manipulating_video_using_canvas)
 - [`nsIDOMHTMLMediaElement`](/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
-- [TinyVid](http://tinyvid.tv/) - exemplos utilizando arquivos ogg em HTML5.
-- [The `video` element](http://www.whatwg.org/specs/web-apps/current-work/#video) (Especificação HTML 5)
+- [TinyVid](https://tinyvid.tv/) - exemplos utilizando arquivos ogg em HTML5.
+- [The `video` element](https://www.whatwg.org/specs/web-apps/current-work/#video) (Especificação HTML 5)
 - [Configuring servers for Ogg media](/en/Configuring_servers_for_Ogg_media)
 
 {{ languages( { "fr": "fr/HTML/Element/video","es": "es/HTML/Elemento/video" } ) }}

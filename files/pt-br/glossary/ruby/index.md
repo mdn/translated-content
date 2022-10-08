@@ -18,4 +18,4 @@ _Ruby_ é uma linguagem de programação de código aberto. Em um contexto {{glo
 ### Referência técnica
 
 - [Site oficial do Ruby](https://www.ruby-lang.org)
-- [Site oficial do Ruby On Rails](http://rubyonrails.org/)
+- [Site oficial do Ruby On Rails](https://rubyonrails.org/)

@@ -93,7 +93,7 @@ typeof null === 'object';
 
 Na primeira implementação do JavaScript, valores em JavaScript foram representados com uma tag (etiqueta) de tipo e um valor. A tag de tipo para objetos foi 0. `null` foi representada com o ponteiro NULL (0x00 na maioria das plataformas). Consequentemente, null teve 0 como sua tag de tipo, portanto o `typeof` retorna esse valor. (necessário referência)
 
-Está previsto [para ser corrigido na próxima versão do ECMAScript](http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null) (que estará disponível através de um opt-in). Isso resultará em um `typeof null === 'null'`.
+Está previsto [para ser corrigido na próxima versão do ECMAScript](https://wiki.ecmascript.org/doku.php?id=harmony:typeof_null) (que estará disponível através de um opt-in). Isso resultará em um `typeof null === 'null'`.
 
 ### Expressões regulares
 
@@ -112,7 +112,7 @@ No IE 6, 7 e 8, `typeof alert === 'object'`
 
 ## Especificação
 
-[ECMA-262 section 11.4.3](http://ecma-international.org/ecma-262/5.1/#sec-11.4.3)
+[ECMA-262 section 11.4.3](https://ecma-international.org/ecma-262/5.1/#sec-11.4.3)
 
 ## Veja também
 

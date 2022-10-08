@@ -38,7 +38,7 @@ Depois que a conexão é estabelecida, o _user-agent_ pode enviar a solicitaçã
 
 ### Exemplos de requisições
 
-Buscando a página raiz do developer.mozilla.org ([http://developer.mozilla.org/](/)), e dizendo ao servidor que o _user-agent_ preferiria a página em francês, se possível:
+Buscando a página raiz do developer.mozilla.org ([https://developer.mozilla.org/](/)), e dizendo ao servidor que o _user-agent_ preferiria a página em francês, se possível:
 
 ```
 GET / HTTP/1.1

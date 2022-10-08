@@ -36,19 +36,19 @@ Nossa comunidade é global! Nós temos contribuidores incríveis ao redor do mun
 
 ## Licenças e cópias de direito
 
-Os documentos wiki da MDN foram preparados com as contribuições de muitos autores, de dentro e de fora da Mozilla Foundation. A menos que seja indicado, o conteúdo está disponível sob os termos da [Creative Commons Attribution-ShareAlike license](http://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 ou qualquer versão mais recente. Por favor, atribua "Mozilla Contributors" e inclua um hyperlink (online) ou URL (impresso) para a página da wiki específica do conteúdo referenciado. Por exemplo, para atribuir a este artigo, você pode escrever:
+Os documentos wiki da MDN foram preparados com as contribuições de muitos autores, de dentro e de fora da Mozilla Foundation. A menos que seja indicado, o conteúdo está disponível sob os termos da [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 ou qualquer versão mais recente. Por favor, atribua "Mozilla Contributors" e inclua um hyperlink (online) ou URL (impresso) para a página da wiki específica do conteúdo referenciado. Por exemplo, para atribuir a este artigo, você pode escrever:
 
-> [About MDN](/pt-BR/docs/MDN/About) por [Mozilla Contributors](/pt-BR/docs/MDN/About$history) está licenciado sob [CC-BY-SA 2.5](http://creativecommons.org/licenses/by-sa/2.5/).
+> [About MDN](/pt-BR/docs/MDN/About) por [Mozilla Contributors](/pt-BR/docs/MDN/About$history) está licenciado sob [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
 
-Note que nesse exemplo, "Mozilla Contributors" leva para a história da página citada. Veja [Best practices for attribution](http://wiki.creativecommons.org/Marking/Users) para explicações mais detalhadas.
+Note que nesse exemplo, "Mozilla Contributors" leva para a história da página citada. Veja [Best practices for attribution](https://wiki.creativecommons.org/Marking/Users) para explicações mais detalhadas.
 
 > **Nota:** Veja [MDN content on WebPlatform.org](/pt-BR/docs/MDN_content_on_WebPlatform.org) para informações sobre como reutilizar e atribuir conteúdo da MDN naquele site.
 
-Amostras de código adicionadas a esta wiki antes de 20 de agosto de 2010 estão disponíveis sob a [MIT license](http://www.opensource.org/licenses/mit-license.php); você deveria inserir a seguinte informação de atribuição no template MIT: "© \<data da última revisão da página da wiki> \<nome da pessoa que a inseriu na wiki>".
+Amostras de código adicionadas a esta wiki antes de 20 de agosto de 2010 estão disponíveis sob a [MIT license](https://www.opensource.org/licenses/mit-license.php); você deveria inserir a seguinte informação de atribuição no template MIT: "© \<data da última revisão da página da wiki> \<nome da pessoa que a inseriu na wiki>".
 
-Amostras de código adicionadas no dia 20 de agosto de 2010 ou depois estão no [public domain](http://creativecommons.org/publicdomain/zero/1.0/). Não é necessário um aviso de licença, mas se você precisa de um, você pode utilizar: "Qualquer direito de cópia é dedicado ao Domínio Público. <http://creativecommons.org/publicdomain/zero/1.0/>".
+Amostras de código adicionadas no dia 20 de agosto de 2010 ou depois estão no [public domain](https://creativecommons.org/publicdomain/zero/1.0/). Não é necessário um aviso de licença, mas se você precisa de um, você pode utilizar: "Qualquer direito de cópia é dedicado ao Domínio Público. <https://creativecommons.org/publicdomain/zero/1.0/>".
 
-Se você deseja contribuir para esta wiki, você deve tornar sua documentação disponível pela licença Attribution-ShareAlike (ou ocasionalmente uma licença alternativa já especificada pela página que você está editando), e suas amostras de código disponívels sob a [Creative Commons CC-0](http://creativecommons.org/publicdomain/zero/1.0/) (uma dedicação de Domínio Público). Acrescentar a esta wiki significa que você concorda que suas contribuições serão feitas sob estas licenças.
+Se você deseja contribuir para esta wiki, você deve tornar sua documentação disponível pela licença Attribution-ShareAlike (ou ocasionalmente uma licença alternativa já especificada pela página que você está editando), e suas amostras de código disponívels sob a [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/) (uma dedicação de Domínio Público). Acrescentar a esta wiki significa que você concorda que suas contribuições serão feitas sob estas licenças.
 
 Alguns conteúdos mais antigos foram disponibilizados sob uma licença diferente das citadas acima; estas são indicadas no final de cada página em um [Alternate License Block](/Project:en/Examples/Alternate_License_Block).
 
@@ -81,7 +81,7 @@ Existem três arquivos que compreendem o dump mensal anonimizado da MDN:
 
 ### Ferramentas de terceiros
 
-Você também pode visualizar o conteúdo da MDN via ferramentas de terceiros como o [Dash](http://kapeli.com/dash) (para Mac OS) e [Zeal](http://zealdocs.org/) (para Linux e Windows).
+Você também pode visualizar o conteúdo da MDN via ferramentas de terceiros como o [Dash](https://kapeli.com/dash) (para Mac OS) e [Zeal](https://zealdocs.org/) (para Linux e Windows).
 
 ## Informando problemas com a MDN
 
@@ -101,10 +101,10 @@ Naturalmente, nossa comunidade de escrita é atarefada, então às vezes a forma
 
 ## História da MDN
 
-O projeto Mozilla Developer Network (a.k.a. Mozilla Developer Center (MDC), a.k.a. _Devmo_) começou no início de 2005, quando a [Mozilla Foundation](http://www.mozillafoundation.org) obteve uma licença da AOL para utilizar o conteúdo original [DevEdge](/Project:en/DevEdge). Os materiais ainda úteis foram extraídos do conteúdo DevEdge, e então migrados por voluntários para essa wiki, pra que a manutenção e atualização fossem mais fáceis.
+O projeto Mozilla Developer Network (a.k.a. Mozilla Developer Center (MDC), a.k.a. _Devmo_) começou no início de 2005, quando a [Mozilla Foundation](https://www.mozillafoundation.org) obteve uma licença da AOL para utilizar o conteúdo original [DevEdge](/Project:en/DevEdge). Os materiais ainda úteis foram extraídos do conteúdo DevEdge, e então migrados por voluntários para essa wiki, pra que a manutenção e atualização fossem mais fáceis.
 
-Desde então, o projeto continuou a crescer e agora forma um nexo central para toda a documentação para desenvolvedores relacionada ao Mozilla Project e tecnologias abertas da web. Em 2010, o nome mudou para Mozilla Developer Network; 2011 viu a adição do [Demo Studio](http://developer.mozilla.org/en-US/demos) para desenvolvedores web compartilharem e exibirem seu código, e páginas [Learning](http://developer.mozilla.org/en-US/learn) para fornecer links de tutoriais. (O nome MDC ainda vive como "MDN Doc Center" para a seção de documentação.) A tempo, espera-se que a Mozilla Developer Network se torne um recurso que web designers, desenvolvedores de aplicações, e escritores de extensões e temas visitam regularmente.
+Desde então, o projeto continuou a crescer e agora forma um nexo central para toda a documentação para desenvolvedores relacionada ao Mozilla Project e tecnologias abertas da web. Em 2010, o nome mudou para Mozilla Developer Network; 2011 viu a adição do [Demo Studio](https://developer.mozilla.org/en-US/demos) para desenvolvedores web compartilharem e exibirem seu código, e páginas [Learning](https://developer.mozilla.org/en-US/learn) para fornecer links de tutoriais. (O nome MDC ainda vive como "MDN Doc Center" para a seção de documentação.) A tempo, espera-se que a Mozilla Developer Network se torne um recurso que web designers, desenvolvedores de aplicações, e escritores de extensões e temas visitam regularmente.
 
 ## Sobre a Mozilla
 
-Se você quer saber mais sobre quem somos, como fazer parte da Mozilla ou apenas onde nos encontrar, você veio ao lugar certo. Para descobrir o que nos impulsiona e nos torna diferentes, visite nossa página de [missão](http://www.mozilla.org/en-US/mission/).
+Se você quer saber mais sobre quem somos, como fazer parte da Mozilla ou apenas onde nos encontrar, você veio ao lugar certo. Para descobrir o que nos impulsiona e nos torna diferentes, visite nossa página de [missão](https://www.mozilla.org/en-US/mission/).

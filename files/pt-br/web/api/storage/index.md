@@ -84,7 +84,7 @@ function setStyles() {
 
 \[1] Desde o iOS 5.1, o Safari Mobile armazena os dados localStorage na pasta de cache, que está sujeita a limpeza ocasional a pedido do sistema operacional, normalmente se o espaço for curto.
 
-Todos os navegadores têm diferentes níveis de capacidade para o localStorage e sessionStorage. [Aqui está um resumo detalhado de todas as capacidades de armazenamento para vários navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
+Todos os navegadores têm diferentes níveis de capacidade para o localStorage e sessionStorage. [Aqui está um resumo detalhado de todas as capacidades de armazenamento para vários navegadores](https://dev-test.nemikor.com/web-storage/support-test/).
 
 ## Veja também
 

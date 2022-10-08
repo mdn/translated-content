@@ -12,7 +12,7 @@ Aqui nós discutiremos o que acontece com os dadosquando um formulário é envia
 
 ### Sobre a arquitetura cliente / servidor
 
-A web é baseada em uma arquitetura cliente / servidor muito básica que pode ser resumida da seguinte forma: um cliente (normalmente um navegador da Web) envia um pedido a um servidor (na maioria das vezes um servidor web como [Apache](http://httpd.apache.org/), [Nginx](http://nginx.com/), [IIS](http://www.iis.net/), [Tomcat](http://tomcat.apache.org/), etc.), usando o [HTTP protocol](/pt-BR/docs/HTTP). O servidor responde a solicitação usando o mesmo protocolo.
+A web é baseada em uma arquitetura cliente / servidor muito básica que pode ser resumida da seguinte forma: um cliente (normalmente um navegador da Web) envia um pedido a um servidor (na maioria das vezes um servidor web como [Apache](https://httpd.apache.org/), [Nginx](https://nginx.com/), [IIS](https://www.iis.net/), [Tomcat](https://tomcat.apache.org/), etc.), usando o [HTTP protocol](/pt-BR/docs/HTTP). O servidor responde a solicitação usando o mesmo protocolo.
 
 ![A basic schema of the Web client/server architecture](/files/4291/client-server.png)
 
@@ -28,10 +28,10 @@ Este atributo define para onde os dados são enviados. Seu valor deve ser um URL
 
 ##### Exemplos
 
-Neste exemplo, os dados são enviados para `http://foo.com`:
+Neste exemplo, os dados são enviados para `https://foo.com`:
 
 ```html
-<form action="http://foo.com">
+<form action="https://foo.com">
 ```
 
 Aqui, os dados são enviados para o mesmo servidor que hospeda a página do formulário, mas para um URL diferente no servidor:
@@ -69,7 +69,7 @@ O método GET é o método usado pelo navegador para pedir ao servidor para envi
 ###### Exemplo<br>Considere o seguinte formulário:
 
 ```html
-<form action="http://foo.com" method="get">
+<form action="https://foo.com" method="get">
   <input name="say" value="Hi">
   <input name="to" value="Mom">
   <button>Envie meus cumprimentos</button>
@@ -92,7 +92,7 @@ O método POST é um pouco diferente. É o método que o navegador envia ao serv
 Considere esta forma (a mesma acima):
 
 ```html
-<form action="http://foo.com" method="post">
+<form action="https://foo.com" method="post">
   <input name="say" value="Hi">
   <input name="to" value="Mom">
   <button>Send my greetings</button>
@@ -143,7 +143,7 @@ Oi Mãe
 
 #### Example: Python Bruto
 
-This example uses Python to do the same thing--display the provided data on a web page. It uses the [CGI Python package](http://docs.python.org/3/library/cgi.html) to access the form data.
+This example uses Python to do the same thing--display the provided data on a web page. It uses the [CGI Python package](https://docs.python.org/3/library/cgi.html) to access the form data.
 
 ```python
 #!/usr/bin/env python
@@ -169,12 +169,12 @@ Oi Mãe
 
 #### Outros idiomas e frameworks
 
-Há muitas outras tecnologias do lado do servidor que você pode usar para o tratamento de formulários, incluindo [Perl](/pt-BR/docs/), [Java](/pt-BR/docs/), [.Net](http://www.microsoft.com/net), [Ruby](/pt-BR/docs/), etc. Basta escolher o que você mais gosta. Dito isto, é importante notar que é muito incomum usar essas tecnologias diretamente porque isso pode ser complicado. É mais comum usar um dos muitos frameworks agradáveis que facilitam o manuseio de formulários, como:
+Há muitas outras tecnologias do lado do servidor que você pode usar para o tratamento de formulários, incluindo [Perl](/pt-BR/docs/), [Java](/pt-BR/docs/), [.Net](https://www.microsoft.com/net), [Ruby](/pt-BR/docs/), etc. Basta escolher o que você mais gosta. Dito isto, é importante notar que é muito incomum usar essas tecnologias diretamente porque isso pode ser complicado. É mais comum usar um dos muitos frameworks agradáveis que facilitam o manuseio de formulários, como:
 
-- [Symfony](http://symfony.com/) Para PHP
+- [Symfony](https://symfony.com/) Para PHP
 - [Django](https://www.djangoproject.com/) Para Python
-- [Ruby On Rails](http://rubyonrails.org/) Para Ruby
-- [Grails](http://grails.org/) Para Java
+- [Ruby On Rails](https://rubyonrails.org/) Para Ruby
+- [Grails](https://grails.org/) Para Java
 - etc.
 
 Vale a pena notar que mesmo usando essas estruturas, trabalhar com formulários não é necessariamente fácil. Mas é muito melhor, e você vai economizar muito tempo.
@@ -229,13 +229,13 @@ To prevent these attacks, you should always check the data a user sends to your 
 
 SQL injection is a type of attack that tries to perform actions on a database used by the target web site. This typically involves sending an SQL request in the hope that the server will execute it (many times when the application server tries to store the data). This is actually [one of the main vector attacks against web sites](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project).
 
-The consequences can be terrible, ranging from data loss to access to a whole infrastructure by using privilege escalation. This is a very serious threat and you should never store data sent by a user without performing some sanitization (for example, by using [`mysql_real_escape_string()`](http://www.php.net/manual/en/function.mysql-real-escape-string.php) on a PHP/MySQL infrastructure).
+The consequences can be terrible, ranging from data loss to access to a whole infrastructure by using privilege escalation. This is a very serious threat and you should never store data sent by a user without performing some sanitization (for example, by using [`mysql_real_escape_string()`](https://www.php.net/manual/en/function.mysql-real-escape-string.php) on a PHP/MySQL infrastructure).
 
 #### HTTP header injection and email injection
 
 These kinds of attacks can occur when your application builds HTTP headers or emails based on the data input by a user on a form. These won't directly damage your server or affect your users, but they are an open door to deeper problems such as session hijacking or phishing attacks.
 
-These attacks are mostly silent, and can turn your server into a [zombie](<http://en.wikipedia.org/wiki/Zombie_(computer_science)>).
+These attacks are mostly silent, and can turn your server into a [zombie](<https://en.wikipedia.org/wiki/Zombie_(computer_science)>).
 
 ### Be paranoid: Never trust your users
 
@@ -258,4 +258,4 @@ As you can see, sending form data is easy, but securing an application can be tr
 If you want to learn more about securing a web application, you can dig into these resources:
 
 - [The Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page)
-- [Chris Shiflett's blog about PHP Security](http://shiflett.org/)
+- [Chris Shiflett's blog about PHP Security](https://shiflett.org/)

@@ -6,7 +6,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 ---
 ### Descrição
 
-Essa técnica demonstrará como usar o [slider](http://www.w3.org/TR/wai-aria/roles#slider) role.
+Essa técnica demonstrará como usar o [slider](https://www.w3.org/TR/wai-aria/roles#slider) role.
 
 The `slider` role is used for markup that allows a user to select a value from within a given range. The slider role is assigned to the "thumb," the control that is adjusted to change the value. Typically, another element is styled to visually represent the range of possible valued, and the thumb positioned visually to represent the value within that range. As the user interacts with the thumb, the application must programmatically adjust the slider's `aria-valuenow` (and possible `aria-valuetext`) attribute to reflect the current value. See the [Examples](#examples) section below for more information.
 
@@ -98,4 +98,4 @@ TBD: Add support information for common UA and AT product combinations
 
 ### Recursos Adicionais
 
-- [WAI-ARIA specification for the `slider` role](http://www.w3.org/TR/wai-aria/roles#slider)
+- [WAI-ARIA specification for the `slider` role](https://www.w3.org/TR/wai-aria/roles#slider)

@@ -81,7 +81,7 @@ pessoa.saudacao()
 
 Agora você tem alguns dados e funcionalidades dentro de seu objeto e é capaz de acessá-los com uma sintaxe simples e agradável!
 
-> **Nota:** Se você está tendo problemas para fazer isto funcionar, tente comparar seu código com a nossa versão — veja [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [veja um exemplo funcionando](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). O exemplo lhe dará uma tela em branco, mas tudo bem — novamente, abra seu devtools e tente digitar os comandos acima para ver a estrutura do objeto.
+> **Nota:** Se você está tendo problemas para fazer isto funcionar, tente comparar seu código com a nossa versão — veja [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [veja um exemplo funcionando](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). O exemplo lhe dará uma tela em branco, mas tudo bem — novamente, abra seu devtools e tente digitar os comandos acima para ver a estrutura do objeto.
 
 Então, o que está acontecendo? Bem, um objeto é composto de vários membros, cada um com um nome (ex.: `nome` e `idade` vistos acima), e um valor (ex.: `['Bob', 'Smith']` e `32`). Cada par nome/valor deve ser separado por uma vírgula e o nome e valor, em cada caso, separados por dois pontos. A sintaxe sempre segue esse padrão:
 

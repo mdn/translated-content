@@ -134,7 +134,7 @@ function notifyMe() {
 
 {{EmbedLiveSample('Exemplo', '100%', 30)}}
 
-Em muitos casos, você não precisa estar presente detalhado. Por exemplo, na nosso [Emogotchi demo](http://mdn.github.io/emogotchi/) ([veja o código fonte](https://github.com/mdn/emogotchi)), basta simlesmente executar {{domxref("Notification.requestPermission")}} independentemente de se certificar de que pode obter permissão para enviar notificações:
+Em muitos casos, você não precisa estar presente detalhado. Por exemplo, na nosso [Emogotchi demo](https://mdn.github.io/emogotchi/) ([veja o código fonte](https://github.com/mdn/emogotchi)), basta simlesmente executar {{domxref("Notification.requestPermission")}} independentemente de se certificar de que pode obter permissão para enviar notificações:
 
 ```js
 Notification.requestPermission();

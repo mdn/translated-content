@@ -57,9 +57,9 @@ article[data-columns='4'] {
 }
 ```
 
-Pode-se tudo isso em funcionamento neste [exemplo JSBin](http://jsbin.com/ujiday/2/edit).
+Pode-se tudo isso em funcionamento neste [exemplo JSBin](https://jsbin.com/ujiday/2/edit).
 
-Atributos data também podem ser utilizados para conter informações que mudam constantemente, como a pontuação em um jogo. Usando seletores CSS e acesso com JavaScript permite que se construa efeitos excelentes sem ter que escrever suas próprias rotinas de display. Veja [esta tela](http://www.youtube.com/watch?v=On_WyUB1gOk) para um exemplo utilizando conteúdo gerado e transições CSS ([exemplo JSBin](http://jsbin.com/atawaz/3/edit)).
+Atributos data também podem ser utilizados para conter informações que mudam constantemente, como a pontuação em um jogo. Usando seletores CSS e acesso com JavaScript permite que se construa efeitos excelentes sem ter que escrever suas próprias rotinas de display. Veja [esta tela](https://www.youtube.com/watch?v=On_WyUB1gOk) para um exemplo utilizando conteúdo gerado e transições CSS ([exemplo JSBin](https://jsbin.com/atawaz/3/edit)).
 
 Uma vez que valores data são strings, todos os valores devem estar entre aspas ou então a estilização não fará efeito.
 
@@ -67,7 +67,7 @@ Uma vez que valores data são strings, todos os valores devem estar entre aspas 
 
 Não armazene conteúdo que deve estar visível e acessível nos atributos data porque tecnologias assistivas podem não acessá-los. Além disso, motores de busca podem não indexar os valores dos atributos data.
 
-Os principais issues a serem considerados são com suporte e performance no Internet Explorer. O Internet Explorer 11+ provê suporte para o padrão, mas todas as versões anteriores [não suportam `dataset`](http://caniuse.com/#feat=dataset). Para suporte ao IE 10 e anteriores, deve-se acessar atributos data através de {{domxref("Element.getAttribute", "getAttribute()")}} . E ainda, a [performance de leitura dos atributos data](http://jsperf.com/data-dataset) é ruim, comparada com o armazenamento em um data warehouse JS. O uso de `dataset` é até pior que a leitura dos dados com `getAttribute()`.
+Os principais issues a serem considerados são com suporte e performance no Internet Explorer. O Internet Explorer 11+ provê suporte para o padrão, mas todas as versões anteriores [não suportam `dataset`](https://caniuse.com/#feat=dataset). Para suporte ao IE 10 e anteriores, deve-se acessar atributos data através de {{domxref("Element.getAttribute", "getAttribute()")}} . E ainda, a [performance de leitura dos atributos data](https://jsperf.com/data-dataset) é ruim, comparada com o armazenamento em um data warehouse JS. O uso de `dataset` é até pior que a leitura dos dados com `getAttribute()`.
 
 Apesar do que foi colocado, para metadados customizados associados a elementos, eles são uma ótima solução.
 
@@ -76,4 +76,4 @@ No Firefox 49.0.2 (e talvez em versões anteriores/posteriores), os atributos da
 ## Veja também
 
 - Este artigo é uma adaptação de [Usando atributos data em JavaScript e CSS no hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
-- [Como usar atributos data em HTML5](http://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)
+- [Como usar atributos data em HTML5](https://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)

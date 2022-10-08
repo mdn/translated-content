@@ -85,7 +85,7 @@ A utilização de valores basicamente significa leitura e escrita em memória al
 
 A maioria dos problemas relacionados ao gerenciamento de memória aparecem nesta fase. A tarefa mais complicada aqui é descobrir quando "a memória alocada não é mais necessária". Geralmente exige que o desenvolvedor determine a onde no programa tal pedaço da memória não é mais necessária e liberá-la.
 
-Linguagens de alto nível vêm com um pedaço de software chamado "garbage collector" (coletor de sujeira), cujo trabalho é monitorar a alocação de memória a fim de descobrir quando um pedaço de código não é mais necessário e neste caso, automaticamente liberá-lo. Este processo é algo aproximado já que, em geral, saber se um pedaço de memória é necessário é algo [indecidível](http://pt.wikipedia.org/wiki/Decidibilidade) (que não pode ser resolvido através de um algoritmo).
+Linguagens de alto nível vêm com um pedaço de software chamado "garbage collector" (coletor de sujeira), cujo trabalho é monitorar a alocação de memória a fim de descobrir quando um pedaço de código não é mais necessário e neste caso, automaticamente liberá-lo. Este processo é algo aproximado já que, em geral, saber se um pedaço de memória é necessário é algo [indecidível](https://pt.wikipedia.org/wiki/Decidibilidade) (que não pode ser resolvido através de um algoritmo).
 
 ## Garbage collection
 
@@ -194,6 +194,6 @@ Apesar disso ser marcado como uma limitação, isso é algo raro na prática e �
 
 ## Veja também
 
-- [IBM article on "Memory leak patterns in JavaScript" (2007)](http://www.ibm.com/developerworks/web/library/wa-memleak/)
-- [Kangax article on how to register event handler and avoid memory leaks (2010)](http://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
+- [IBM article on "Memory leak patterns in JavaScript" (2007)](https://www.ibm.com/developerworks/web/library/wa-memleak/)
+- [Kangax article on how to register event handler and avoid memory leaks (2010)](https://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
 - [Performance](/pt-BR/docs/Mozilla/Performance)

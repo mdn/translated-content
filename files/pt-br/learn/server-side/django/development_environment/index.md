@@ -193,7 +193,7 @@ As bibliotecas que nós iremos usar para criar nossos ambientes virtuais são [v
 
 #### Instalação do ambiente virtual no Ubuntu
 
-Após instalar Python e pip, você pode instalar _virtualenvwrapper_ (que inclui*virtualenv*). O guia oficial para a instalação pode ser encontrado [aqui](http://virtualenvwrapper.readthedocs.io/en/latest/install.html), ou siga as instruções abaixo.
+Após instalar Python e pip, você pode instalar _virtualenvwrapper_ (que inclui*virtualenv*). O guia oficial para a instalação pode ser encontrado [aqui](https://virtualenvwrapper.readthedocs.io/en/latest/install.html), ou siga as instruções abaixo.
 
 Instale a ferramenta usando _pip3_:
 
@@ -236,7 +236,7 @@ Agora você pode criar um novo ambiente virtual com o comando `mkvirtualenv`.
 
 #### Instalação do ambiente virtual no macOS
 
-Instalar _virtualenvwrapper_ no macOS é quase a mesma coisa que instalar no Ubuntu (novamente, você pode seguir as instruções do [guia oficial de instalação](http://virtualenvwrapper.readthedocs.io/en/latest/install.html) ou as instruções abaixo).
+Instalar _virtualenvwrapper_ no macOS é quase a mesma coisa que instalar no Ubuntu (novamente, você pode seguir as instruções do [guia oficial de instalação](https://virtualenvwrapper.readthedocs.io/en/latest/install.html) ou as instruções abaixo).
 
 Instale _virtualenvwrapper_ (e _virtualenv_) usando _pip_ como abaixo.
 
@@ -385,13 +385,13 @@ Run 'python manage.py migrate' to apply them.
 
 December 16, 2018 - 07:06:30
 Django version 2.1.5, using settings 'mytestsite.settings'
-Starting development server at http://127.0.0.1:8000/
+Starting development server at https://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
 > **Nota:** Acima foi mostrado o comando em Linux/macOS. Você já pode ignorar o aviso sobre "15 unapplied migration(s)"!
 
-Uma vez que o servidor está operando, você pode acessar o site colocando a seguinte URL no seu navegador local:`http://127.0.0.1:8000/`. Você deveria ver um site como esse:
+Uma vez que o servidor está operando, você pode acessar o site colocando a seguinte URL no seu navegador local:`https://127.0.0.1:8000/`. Você deveria ver um site como esse:
 ![Django Skeleton App Homepage - Django 2.0](https://mdn.mozillademos.org/files/16288/Django_Skeleton_Website_Homepage_2_1.png)
 
 ## Resumo

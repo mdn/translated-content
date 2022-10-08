@@ -74,7 +74,7 @@ Designing new interactions is generally only an option for very large industry p
 It is best not to invent new user interactions. For any interaction you do add, it is vital to spend time in the design stage; if you define a behavior poorly, or forget to define one, it will be very hard to redefine it once the users have gotten used to it. If you have doubts, ask for the opinions of others, and if you have the budget for it, do not hesitate to [perform user tests](https://en.wikipedia.org/wiki/Usability_testing). This process is called UX Design. If you want to learn more about this topic, you should check out the following helpful resources:
 
 - [UXMatters.com](https://www.uxmatters.com/)
-- [UXDesign.com](http://uxdesign.com/)
+- [UXDesign.com](https://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](https://www.smashingmagazine.com/)
 
 > **Note:** Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd> on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
@@ -176,7 +176,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 ```css
 .select {
   /* The computations are made assuming 1em equals 16px which is the default value in most browsers.
-     If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
+     If you are lost with px to em conversion, try https://riddle.pl/emcalc/ */
   font-size: 0.625em; /* this (10px) is the new font size context for em value in this context */
   font-family: Verdana, Arial, sans-serif;
 

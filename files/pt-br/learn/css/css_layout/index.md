@@ -31,7 +31,7 @@ Antes de iniciar esse modulo, você precisa:
 2. Estar confortável com os fundamentos do CSS, como discutido em [Introdução ao CSS](/pt-BR/docs/Learn/CSS/Introduction_to_CSS).
 3. Entender como [estilizar blocos](/pt-BR/docs/Learn/CSS/Styling_boxes).
 
-> **Nota:** Se você estiver trabalhando em um computador/tablete/outro dispositivo em que você não possa criar seus próprios arquivos, você pode testar (muitos dos) os códigos de exemplo em um programa de códigos online como o [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Se você estiver trabalhando em um computador/tablete/outro dispositivo em que você não possa criar seus próprios arquivos, você pode testar (muitos dos) os códigos de exemplo em um programa de códigos online como o [JSBin](https://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
 
 ## Guias
 

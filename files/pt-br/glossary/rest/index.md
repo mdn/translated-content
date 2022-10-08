@@ -18,8 +18,8 @@ Como o HTTP, protocolo padrão por trás da "World Wide Web", a "Web" também tr
 
 ### Saiba mais
 
-- [restapitutorial.com](http://www.restapitutorial.com/)
-- [restcookbook.com](http://restcookbook.com/)
+- [restapitutorial.com](https://www.restapitutorial.com/)
+- [restcookbook.com](https://restcookbook.com/)
 
 ### Conhecimento geral
 

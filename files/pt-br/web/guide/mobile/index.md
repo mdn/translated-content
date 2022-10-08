@@ -22,7 +22,7 @@ The [viewport meta tag](/en/Mobile/Viewport_meta_tag) instructs the browser to d
 
 ### Working with touch screens
 
-To use a touch screen you'll need to work with [DOM Touch events](/en/DOM/Touch_events). You won't be able to use the [CSS :hover](/En/CSS/:hover) pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on [designing for touch screens](https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/).
+To use a touch screen you'll need to work with [DOM Touch events](/en/DOM/Touch_events). You won't be able to use the [CSS :hover](/En/CSS/:hover) pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on [designing for touch screens](https://web.archive.org/web/20150520130912/https://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/).
 
 You can use the [-moz-touch-enabled](/en/CSS/Media_queries#-moz-touch-enabled) media query to load different CSS on a touch-enabled device.
 
@@ -48,9 +48,9 @@ To create web sites that will work acceptably across different mobile browsers:
 
 For example, if you set a gradient as a background for some text using a vendor-prefixed property like `-webkit-linear-gradient`, it's best to include the other vendor-prefixed versions of the [linear-gradient](/en/CSS/linear-gradient) property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your `linear-gradient` rule.
 
-See this [list of Gecko-specific properties](/en/CSS/CSS_Reference/Mozilla_Extensions), and this list of [WebKit-specific properties](/en/CSS/CSS_Reference/Webkit_Extensions), and Peter Beverloo's [table of vendor-specific properties](http://peter.sh/experiments/vendor-prefixed-css-property-overview/).
+See this [list of Gecko-specific properties](/en/CSS/CSS_Reference/Mozilla_Extensions), and this list of [WebKit-specific properties](/en/CSS/CSS_Reference/Webkit_Extensions), and Peter Beverloo's [table of vendor-specific properties](https://peter.sh/experiments/vendor-prefixed-css-property-overview/).
 
-Using tools like [CSS Lint](http://csslint.net/) can help find problems like this in code, and preprocessors like [SASS](http://sass-lang.com/) and [LESS](http://lesscss.org/) can help you to produce cross-browser code.
+Using tools like [CSS Lint](https://csslint.net/) can help find problems like this in code, and preprocessors like [SASS](https://sass-lang.com/) and [LESS](https://lesscss.org/) can help you to produce cross-browser code.
 
 ### Take care with user agent sniffing
 

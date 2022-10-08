@@ -28,7 +28,7 @@ Antes de iniciar este módulo, você precisará entender o que é programação 
   - : Este artigo mostra como você pode criar um projeto de "esqueleto" de website, no qual você pode popular com as rotas específicas do site, modelos/vizualizações e bancos de dados.
 
 - [Express Tutorial Part 3: Using a Database (with Mongoose)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose)
-  - : This article briefly introduces databases for Node/Express. It then goes on to show how we can use [Mongoose](http://mongoosejs.com/) to provide database access for the _LocalLibrary_ website. It explains how object schema and models are declared, the main field types, and basic validation. It also briefly shows a few of the main ways you can access model data.
+  - : This article briefly introduces databases for Node/Express. It then goes on to show how we can use [Mongoose](https://mongoosejs.com/) to provide database access for the _LocalLibrary_ website. It explains how object schema and models are declared, the main field types, and basic validation. It also briefly shows a few of the main ways you can access model data.
 - [Express Tutorial Part 4: Routes and controllers](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes)
   - : In this tutorial we'll set up routes (URL handling code) with "dummy" handler functions for all the resource endpoints that we'll eventually need in the _LocalLibrary_ website. On completion, we'll have a modular structure for our route handling code, that we can extend with real handler functions in the following articles. We'll also have a really good understanding of how to create modular routes using Express.
 - [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
@@ -41,7 +41,7 @@ Antes de iniciar este módulo, você precisará entender o que é programação 
 ## See also
 
 - [Installing LocalLibrary on PWS/Cloud Foundry](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry)
-  - : This article provides a practical demonstration of how to install _LocalLibrary_ on the [Pivotal Web Services PaaS cloud](http://run.pivotal.io) — this is a full-featured, open source alternative to Heroku, the PaaS cloud service used in Part 7 of the tutorial, listed above. PWS/Cloud Foundry is definitely worth checking out if you are looking for an alternative to Heroku (or another PaaS cloud service), or simply feel like trying something different.
+  - : This article provides a practical demonstration of how to install _LocalLibrary_ on the [Pivotal Web Services PaaS cloud](https://run.pivotal.io) — this is a full-featured, open source alternative to Heroku, the PaaS cloud service used in Part 7 of the tutorial, listed above. PWS/Cloud Foundry is definitely worth checking out if you are looking for an alternative to Heroku (or another PaaS cloud service), or simply feel like trying something different.
 
 ## Adding more tutorials
 

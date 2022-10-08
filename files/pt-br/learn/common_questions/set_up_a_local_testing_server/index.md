@@ -47,7 +47,7 @@ Este artigo explica como configurar um simples servidor de testes local em seu c
 
 Ao longo da maior parte da área de aprendizagem, nós lhe dissemos apenas para abrir seus exemplos diretamente no navegador — Isto pode ser feito atráves de um duplo clique no arquivo HTML, arrastando e soltando o arquivo na janela do navegador ou escolhendo Arquivo > Abrir*...* e navegando para o arquivo HTML. Existem muitas maneiras de realizar isso.
 
-Se o caminho do endereço web começa com `file://` seguido pelo caminho para o arquivo no seu disco rígido local, um arquivo local está sendo utilizado. No entanto, se você ver um dos nossos exemplos hospedado no GitHub (ou um exemplo em algum outro servidor remoto), o endereço web começará com `http://` ou `https://`, para mostrar que o arquivo foi recebido via HTTP.
+Se o caminho do endereço web começa com `file://` seguido pelo caminho para o arquivo no seu disco rígido local, um arquivo local está sendo utilizado. No entanto, se você ver um dos nossos exemplos hospedado no GitHub (ou um exemplo em algum outro servidor remoto), o endereço web começará com `https://` ou `https://`, para mostrar que o arquivo foi recebido via HTTP.
 
 ## O problema com o teste de arquivos locais
 
@@ -104,7 +104,7 @@ Para fazer isso:
 
 Os módulos `SimpleHTTPServer (python 2.0)` e `http.server (python 3.0)` do Python são úteis, mas não sabem como executar código escrito em linguagens como Python, PHP ou JavaScript. Para lidar com isso, você precisará de algo mais — exatamente o que você precisa depende da linguagem do lado do servidor que você está tentando executar. Aqui estão alguns exemplos:
 
-- Para executar o código Python no lado do servidor, você precisará usar um framework web em Python. Você pode descobrir como usar o framework Django lendo [Django Web Framework (Python)](/pt-BR/docs/Learn/Server-side/Django). O [Flask](http://flask.pocoo.org/) (em inglês) também é uma boa alternativa ao Django (um pouco menos pesada). Para executar isso, você precisará [instalar o Python/PIP](/pt-BR/docs/Learn/Server-side/Django/development_environment#Installing_Python_3) e em seguida, instalar o Flask usando `pip3 install flask`. Neste ponto, você deve ser capaz de executar os exemplos em Python com Flask usando, por exemplo `python3 python-example.py` e em seguida acessar `localhost:5000` no seu navegador.
+- Para executar o código Python no lado do servidor, você precisará usar um framework web em Python. Você pode descobrir como usar o framework Django lendo [Django Web Framework (Python)](/pt-BR/docs/Learn/Server-side/Django). O [Flask](https://flask.pocoo.org/) (em inglês) também é uma boa alternativa ao Django (um pouco menos pesada). Para executar isso, você precisará [instalar o Python/PIP](/pt-BR/docs/Learn/Server-side/Django/development_environment#Installing_Python_3) e em seguida, instalar o Flask usando `pip3 install flask`. Neste ponto, você deve ser capaz de executar os exemplos em Python com Flask usando, por exemplo `python3 python-example.py` e em seguida acessar `localhost:5000` no seu navegador.
 - Para executar o código Node.js (JavaScript) no lado do servidor, você precisará usar o nó bruto ou uma estrutura construída sobre ele. Express é uma boa escolha — veja [Express Web Framework (Node.js/JavaScript)](/pt-BR/docs/Learn/Server-side/Express_Nodejs).
 - Para executar o código PHP no lado do servidor, inicie o [servidor de desenvolvimento interno do PHP](https://www.php.net/manual/pt_BR/features.commandline.webserver.php):
 

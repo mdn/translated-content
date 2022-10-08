@@ -118,4 +118,4 @@ window.addEventListener("load", drawCanvas);
 ## Veja também
 
 - The interface defining it, {{domxref("CanvasRenderingContext2D")}}
-- [WikiPedia article on Bézier curves](http://en.wikipedia.org/wiki/B%C3%A9zier_curve).
+- [WikiPedia article on Bézier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve).

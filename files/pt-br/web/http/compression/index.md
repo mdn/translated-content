@@ -28,7 +28,7 @@ Cada tipo de dado tem alguma redundância, ou seja, espaço desperdiçado. Se um
 
 Alguns formatos podem ser usados para a compressão com ou sem perdas, como o `webp`. Geralmente, o algoritmo de compressão com perdas pode ser configurado para comprimir mais ou menos, resultando em uma qualidade menor ou maior.
 
-Para o melhor desempenho de um site, é ideal comprimir o máximo possível, mantendo um nível aceitável de qualidade. Para imagens, uma imagem gerada por uma ferramenta pode não ser otimizada o suficiente para a Web. Recomenda-se portanto o uso de ferramentas que comprimirão o máximo possível com uma certa qualidade exigida. Existem [inúmeras ferramentas](http://www.creativebloq.com/design/image-compression-tools-1132865) especializadas para isso.
+Para o melhor desempenho de um site, é ideal comprimir o máximo possível, mantendo um nível aceitável de qualidade. Para imagens, uma imagem gerada por uma ferramenta pode não ser otimizada o suficiente para a Web. Recomenda-se portanto o uso de ferramentas que comprimirão o máximo possível com uma certa qualidade exigida. Existem [inúmeras ferramentas](https://www.creativebloq.com/design/image-compression-tools-1132865) especializadas para isso.
 
 Algoritmos de compressão com perdas geralmente são mais eficientes que os sem perdas.
 
@@ -48,7 +48,7 @@ Para selecionar o algoritmo a ser usado, os navegadores e servidores usam a [neg
 
 Como a copressão de dados traz melhorias significativas no desempenho, recomenda-se ativá-la para todos os arquivos, com exceção daqueles já comprimidos, como imagens, arquivos de áudio e vídeos.
 
-Apache suporta compressão e usa [mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html); para nginx existe [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html); para IIS, o elemento [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression).
+Apache suporta compressão e usa [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); para nginx existe [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html); para IIS, o elemento [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression).
 
 ## Compressão de nó a nó (_Hop-by-hop_)
 

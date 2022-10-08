@@ -66,7 +66,7 @@ Note que devemos tratar o caso `idx == 0` separadamente aqui pois o elemento ser
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.15
-// Reference: http://es5.github.io/#x15.4.4.15
+// Reference: https://es5.github.io/#x15.4.4.15
 if (!Array.prototype.lastIndexOf) {
   Array.prototype.lastIndexOf = function(searchElement /*, fromIndex*/) {
     'use strict';

@@ -18,9 +18,9 @@ Caracteres de controle não possuem representação visual, mas são usados para
 
 | Código   | Nome                  | Abreviação | Descrição                                                                                                                                                                                                                        |
 | -------- | --------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `U+200C` | Zero width non-joiner | \<ZWNJ>    | Colocado entre caracteres para evitar que sejam visualmente ligados (fundidos) em algumas linguagens ([Wikipedia](http://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                          |
-| `U+200D` | Zero width joiner     | \<ZWJ>     | Colocado entre caracteres que podem não estar normalmente conectados, para que estes caracteres sejam renderizados com suas devidas ligações em certas linguagens ([Wikipedia](http://en.wikipedia.org/wiki/Zero-width_joiner)). |
-| `U+FEFF` | Byte order mark       | \<BOM>     | Usado no início do script para marcá-lo como Unicode e especificar a ordem de bytes do código ([Wikipedia](http://en.wikipedia.org/wiki/Byte_order_mark)).                                                                       |
+| `U+200C` | Zero width non-joiner | \<ZWNJ>    | Colocado entre caracteres para evitar que sejam visualmente ligados (fundidos) em algumas linguagens ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                          |
+| `U+200D` | Zero width joiner     | \<ZWJ>     | Colocado entre caracteres que podem não estar normalmente conectados, para que estes caracteres sejam renderizados com suas devidas ligações em certas linguagens ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
+| `U+FEFF` | Byte order mark       | \<BOM>     | Usado no início do script para marcá-lo como Unicode e especificar a ordem de bytes do código ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                                                       |
 
 ## Espaço em branco
 
@@ -30,7 +30,7 @@ Espaços em branco ajudam na legibilidade do código e separam os símbolos um d
 | ------ | ------------------------------ | ---------- | -------------------------------------------------------------------------------------------------------------------- | ------------------- |
 | U+0009 | Character tabulation           | \<HT>      | Tabulação horizontal                                                                                                 | \t                  |
 | U+000B | Line tabulation                | \<VT>      | Tabulação vertical                                                                                                   | \v                  |
-| U+000C | Form feed                      | \<FF>      | Pular para próxima página ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)).                          | \f                  |
+| U+000C | Form feed                      | \<FF>      | Pular para próxima página ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)).                          | \f                  |
 | U+0020 | Space                          | \<SP>      | Espaço normal                                                                                                        |                     |
 | U+00A0 | No-break space                 | \<NBSP>    | Espaço normal, sem marcar quebra de linha                                                                            |                     |
 | Others | Other Unicode space characters | \<USP>     | [Outros tipos de espaço. Veja na Wikipedia](https://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                     |
@@ -45,8 +45,8 @@ Apenas os seguintes códigos Unicode são tratados como finalizadores de linha n
 | ------ | ------------------- | ---------- | --------------------------------------------------------------------- | ------------------- |
 | U+000A | Line Feed           | \<LF>      | Caractere de nova linha em sistemas UNIX.                             | \n                  |
 | U+000D | Carriage Return     | \<CR>      | Caractere de nova linha nos sistemas Commodore e nos primeiros Mac's. | \r                  |
-| U+2028 | Line Separator      | \<LS>      | [Wikipedia](http://en.wikipedia.org/wiki/Newline)                     |                     |
-| U+2029 | Paragraph Separator | \<PS>      | [Wikipedia](http://en.wikipedia.org/wiki/Newline)                     |                     |
+| U+2028 | Line Separator      | \<LS>      | [Wikipedia](https://en.wikipedia.org/wiki/Newline)                     |                     |
+| U+2029 | Paragraph Separator | \<PS>      | [Wikipedia](https://en.wikipedia.org/wiki/Newline)                     |                     |
 
 ## Comentários
 
@@ -193,7 +193,7 @@ Além disso, os literais `null`, `true`, e `false` não podem ser usados como id
 
 ### Uso de palavras-chave reservadas
 
-Palavras reservadas atualmente só não podem ser usadas como identificadores . Como descrito em [es5.github.com/#A.1](http://es5.github.com/#A.1), não há problema em usar palavras reservadas desta forma.
+Palavras reservadas atualmente só não podem ser usadas como identificadores . Como descrito em [es5.github.com/#A.1](https://es5.github.com/#A.1), não há problema em usar palavras reservadas desta forma.
 
 ```js
 a.import
@@ -435,8 +435,8 @@ a + b;
 
 ## Veja também
 
-- [Jeff Walden: Binary and octal numbers](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)
+- [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean")}}
 - {{jsxref("Number")}}
 - {{jsxref("RegExp")}}

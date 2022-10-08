@@ -311,19 +311,19 @@ Abaixo é o {{HTMLElement("canvas")}} em que a imagem é rolada. Note que a larg
 
 ## Outros exemplos
 
-- [Gartic](http://www.gartic.net/)
+- [Gartic](https://www.gartic.net/)
   - : Jogo de desenho para multiplayers.
-- [Canvascape](http://www.abrahamjoffe.com.au/ben/canvascape/)
+- [Canvascape](https://www.abrahamjoffe.com.au/ben/canvascape/)
   - : Um jogo de aventura 3D (tiro em primeira pessoa).
 - [A basic ray-caster](/pt-BR/docs/Web/Guide/HTML/A_basic_ray-caster)
   - : Um bom exemplo de como fazer animações usando os controles do teclado.
-- [canvas adventure](http://andrewwooldridge.com/canvas/canvasgame001/canvasgame002.html)
+- [canvas adventure](https://andrewwooldridge.com/canvas/canvasgame001/canvasgame002.html)
   - : Outro bom exemplo que usa controles de teclado.
-- [An interactive Blob](http://www.blobsallad.se/)
+- [An interactive Blob](https://www.blobsallad.se/)
   - : Divirta-se com Blob.
-- [Flying through a starfield](http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html)
+- [Flying through a starfield](https://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html)
   - : Voe através de estrelas, círculos ou quadrados.
-- [iGrapher](http://igrapher.com/)
+- [iGrapher](https://igrapher.com/)
   - : Um exemplo que ilustra os dados do mercado de ações.
 
 ## Veja também

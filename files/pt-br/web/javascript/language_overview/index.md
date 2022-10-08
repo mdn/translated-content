@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 ## Introdução
 
-Por que uma reintrodução? Porque [JavaScript](/en/JavaScript) é conhecida como [a mais incompreendida linguagem de programação do mundo](http://javascript.crockford.com/javascript.html). Embora muitas vezes ridicularizada como um brinquedo, por baixo de sua simplicidade enganosa estão alguns recursos poderosos da linguagem, que agora é usado por um número incrível de aplicações de alto nível, mostrando que o conhecimento mais profundo desta tecnologia é uma habilidade importante para qualquer desenvolvedor web, mobile ou desktop.
+Por que uma reintrodução? Porque [JavaScript](/en/JavaScript) é conhecida como [a mais incompreendida linguagem de programação do mundo](https://javascript.crockford.com/javascript.html). Embora muitas vezes ridicularizada como um brinquedo, por baixo de sua simplicidade enganosa estão alguns recursos poderosos da linguagem, que agora é usado por um número incrível de aplicações de alto nível, mostrando que o conhecimento mais profundo desta tecnologia é uma habilidade importante para qualquer desenvolvedor web, mobile ou desktop.
 
 É sempre bom começar com a história da linguagem. A JavaScript foi criada em 1995 por Brendan Eich, um engenheiro da Netscape, e lançada pela primeira vez com o Netscape 2 no início de 1996. Foi inicialmente chamada de LiveScript, mas logo foi rebatizada, em uma decisão de marketing malfeita, para tentar crescer sobre a popularidade da linguagem Java da Sun Microsystem - apesar das duas terem muito pouco em comum. Esta tem sido uma fonte de confusão desde então.
 
@@ -53,7 +53,7 @@ Números em JavaScript são "valores de precisão dupla no formato IEEE 754", de
 0.1 + 0.2 == 0.30000000000000004
 ```
 
-Na prática, valores inteiros são tratados como inteiros de 32 bits (e são armazenados dessa forma em algumas implementações do navegador), que podem ser importantes para as operações bit a bit. Para mais detalhes, consulte [The Complete JavaScript Number Reference](http://www.hunlock.com/blogs/The_Complete_Javascript_Number_Reference).
+Na prática, valores inteiros são tratados como inteiros de 32 bits (e são armazenados dessa forma em algumas implementações do navegador), que podem ser importantes para as operações bit a bit. Para mais detalhes, consulte [The Complete JavaScript Number Reference](https://www.hunlock.com/blogs/The_Complete_Javascript_Number_Reference).
 
 Os [operadores numéricos](/en/JavaScript/Reference/Operators/Arithmetic_Operators) padrões são suportados, incluindo adição, subtração, módulo (ou resto) aritmético e assim por diante. Há também um objeto embutido que eu esqueci de mencionar mais cedo chamado [Math](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math) para manipular funções e constantes matemáticas mais avançadas:
 

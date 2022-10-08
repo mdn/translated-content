@@ -49,7 +49,7 @@ Tabelas possuem estrutura. As informações são facilmente interpretadas fazend
   <caption>
     Dados sobre os planetas do nosso sistema solar (fatos planetários retirados
     da
-    <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+    <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
       >Planilha Planetária da Nasa - Métrica</a
     >
     .
@@ -184,7 +184,7 @@ Tabelas possuem estrutura. As informações são facilmente interpretadas fazend
       <td>
         Desconsiderado como planeta desde 2006, mas isto
         <a
-          href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/"
+          href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/"
           >permanece controverso</a
         >.
       </td>
@@ -256,7 +256,7 @@ This should result in a table that looks something like the following:
 | ------------------------ | --------------------- | -------------------- | --------------------- |
 | Second row, first cell.  | Cell 2.               | Cell 3.              | Cell 4.               |
 
-> **Nota:** You can also find this on GitHub as [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> **Nota:** You can also find this on GitHub as [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## Adding headers with \<th> elements
 
@@ -321,7 +321,7 @@ Let's have a go at improving this table.
 2. To recognize the table headers as headers, both visually and semantically, you can use the **[`<th>`](/en-US/docs/Web/HTML/Element/th)** element ('th' stands for 'table header'). This works in exactly the same way as a `<td>`, except that it denotes a header, not a normal cell. Go into your HTML, and change all the `<td>` elements surrounding the table headers into `<th>` elements.
 3. Save your HTML and load it in a browser, and you should see that the headers now look like headers.
 
-> **Nota:** You can find our finished example at [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) on GitHub ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> **Nota:** You can find our finished example at [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
 ### Why are headers useful?
 
@@ -385,7 +385,7 @@ Let's use `colspan` and `rowspan` to improve this table.
 3. Finally, use `rowspan` to make "Horse" and "Chicken" span across two rows.
 4. Save and open your code in a browser to see the improvement.
 
-> **Nota:** You can find our finished example at [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) on GitHub ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> **Nota:** You can find our finished example at [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## Providing common styling to columns
 
@@ -473,7 +473,7 @@ Recreate the table by following the steps below.
 7. Adicione uma cor de fundo diferente mais uma borda à sexta coluna, para indicar que este é um dia especial e ela está dando uma nova aula. Os valores do seu `style`atributo são`background-color:#DCC48E; border:4px solid #C1437A;`
 8. Os últimos dois dias são dias livres, então apenas defina-os para nenhuma cor de fundo, mas uma largura definida; o valor do `style`atributo é`width: 42px;`
 
-Veja como você segue com o exemplo. Se você tiver dúvidas ou quiser verificar seu trabalho, pode encontrar nossa versão no GitHub como [schedule-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ( [veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) ).
+Veja como você segue com o exemplo. Se você tiver dúvidas ou quiser verificar seu trabalho, pode encontrar nossa versão no GitHub como [schedule-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ( [veja ao vivo também](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) ).
 
 ## Resumo
 

@@ -119,7 +119,7 @@ Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9
 Exemplos
 
 ```
-Googlebot/2.1 (+http://www.google.com/bot.html)
+Googlebot/2.1 (+https://www.google.com/bot.html)
 ```
 
 ## Especificações

@@ -15,7 +15,7 @@ Para mais artigos sobre canvas, veja [canvas topic page](/en/HTML/Canvas).
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tags            | Nenhuma, tanto a tag de início quanto a de fim devem ser incluídas.                                                                                                                                                                                |
 | Elementos "pai" permitidos | Qualquer elemento que aceite [phrasing content](/en/HTML/Content_categories#phrasing_content) ou [flow content](/en/HTML/Content_categories#flow_content). |
-| Documento normativo        | [HTML 5, section 4.8.10](http://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                                                                                                    |
+| Documento normativo        | [HTML 5, section 4.8.10](https://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                                                                                                    |
 
 ## Atributos
 
@@ -48,5 +48,5 @@ Como qualquer outro elemento HTML, este também tem [global attributes](/en/HTML
 
 - [MDN canvas portal](/en/HTML/Canvas)
 - Um [canvas tutorial](/en/Canvas_tutorial)
-- [Canvas cheat sheet](http://blog.nihilogic.dk/2009/02/html5-canvas-cheat-sheet.html)
+- [Canvas cheat sheet](https://blog.nihilogic.dk/2009/02/html5-canvas-cheat-sheet.html)
 - [Canvas-related demos](/en-US/demos/tag/tech:canvas)

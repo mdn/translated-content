@@ -20,7 +20,7 @@ The example below shows the source for a set of elements marked up with `itempro
 ### HTML
 
 ```html
-<div itemscope itemtype ="http://schema.org/Movie">
+<div itemscope itemtype ="https://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
   <span>Director:
     <span itemprop="director">James Cameron</span>
@@ -110,13 +110,13 @@ For numeric data, the meter element and its value attribute can be used.
 ### A meter element
 
 ```html
-<div itemscope itemtype="http://schema.org/Product">
+<div itemscope itemtype="https://schema.org/Product">
  <span itemprop="name">Panasonic White
    60L Refrigerator</span>
  <img src="panasonic-fridge-60l-white.jpg" alt="">
   <div itemprop="aggregateRating"
        itemscope
-       itemtype="http://schema.org/AggregateRating">
+       itemtype="https://schema.org/AggregateRating">
    <meter itemprop="ratingValue"
      min=0 value=3.5 max=5>Rated 3.5/5</meter>
    (based on <span
@@ -393,7 +393,7 @@ Names are unordered relative to each other, but if a particular name has multipl
 
 ```html
 <dl itemscope
-  itemtype="http://vocab.example.net/book"
+  itemtype="https://vocab.example.net/book"
   itemid="urn:isbn:0-330-34032-8">
  <dt>Title
    <dd
@@ -416,7 +416,7 @@ Names are unordered relative to each other, but if a particular name has multipl
       <td colspan="1" rowspan="14">itemscope</td>
       <td>itemtype: itemid</td>
       <td colspan="2" rowspan="1">
-        http://vocab.example.net/book: urn:isbn:0-330-34032-8
+        https://vocab.example.net/book: urn:isbn:0-330-34032-8
       </td>
     </tr>
     <tr>

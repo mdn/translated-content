@@ -491,7 +491,7 @@ while (i < cats.length) {
 }
 ```
 
-> **Nota:**Isso ainda funciona da mesma forma esperada — dê uma olhada no [código em execução](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (também veja o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
+> **Nota:**Isso ainda funciona da mesma forma esperada — dê uma olhada no [código em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (também veja o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
 
 O [do...while](/pt-BR/docs/Web/JavaScript/Reference/Statements/do...while) loop é muito semelhante, mas fornece uma variação na estrutura while:
 

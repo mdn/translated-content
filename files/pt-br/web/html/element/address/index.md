@@ -45,7 +45,7 @@ Este elemento inclui somente os [atributos globais](/pt-BR/docs/HTML/Global_attr
 
 ```html
   <address>
-    Voce pode contatar o autor em <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br>
+    Voce pode contatar o autor em <a href="https://www.somedomain.com/contact">www.somedomain.com</a>.<br>
     Se encontrar qualquer bug, por favor <a href="mailto:webmaster@somedomain.com">contate o administrador do site</a>.<br>
     Você tambem pode querer nos visitar:<br>
     Mozilla Foundation<br>

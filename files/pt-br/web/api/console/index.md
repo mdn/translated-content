@@ -200,7 +200,7 @@ The output in the console looks something like this:
 
 - At least in Firefox, if a page defines a console object, that object overrides the one built into Firefox.
 - Prior to {{Gecko("12.0")}}, the console object's methods only work when the Web Console is open. Starting with {{Gecko("12.0")}}, output is cached until the Web Console is opened, then displayed at that time.
-- It's worth noting that the Firefox's built-in `console` object is compatible with the one provided by [Firebug](http://getfirebug.com/).
+- It's worth noting that the Firefox's built-in `console` object is compatible with the one provided by [Firebug](https://getfirebug.com/).
 
 ## See also
 
@@ -213,6 +213,6 @@ The output in the console looks something like this:
 ### Other implementations
 
 - [Google Chrome DevTools](https://developers.google.com/chrome-developer-tools/docs/console-api);
-- [Firebug](http://getfirebug.com/wiki/index.php/Console_API);
-- [Internet Explorer](<http://msdn.microsoft.com/en-us/library/hh772173(v=vs.85).aspx>);
+- [Firebug](https://getfirebug.com/wiki/index.php/Console_API);
+- [Internet Explorer](<https://msdn.microsoft.com/en-us/library/hh772173(v=vs.85).aspx>);
 - [Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html).

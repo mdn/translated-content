@@ -75,7 +75,7 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 
 ## Veja também
 
-- [webassembly.org](http://webassembly.org/)
+- [webassembly.org](https://webassembly.org/)
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/)
 - [Large-Allocation HTTP header](/pt-BR/docs/Web/HTTP/Headers/Large-Allocation)

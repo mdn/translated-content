@@ -67,9 +67,9 @@ ctx.fillRect(10, 10, 150, 100);
 
   - : Um tutorial compreensivo abordando o uso básico da API de Canvas e suas funcionalidades avançadas.
 
-- [Mergulhando no Canvas HTML5](http://joshondesign.com/p/books/canvasdeepdive/title.html)
+- [Mergulhando no Canvas HTML5](https://joshondesign.com/p/books/canvasdeepdive/title.html)
   - : Uma introdução prática e extensa à API Canvas e WebGL.
-- [Guia Canvas](http://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
+- [Guia Canvas](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
   - : Uma referência acessível para a API Canvas.
 - [Demonstração: Um _ray-caster_ básico](/pt-BR/docs/Web/API/Canvas_API/A_basic_ray-caster)
   - : Uma demonstração de animação _ray-tracing_ usando canvas.
@@ -80,19 +80,19 @@ ctx.fillRect(10, 10, 150, 100);
 
 A API Canvas é extremamente poderosa, mas nem sempre é simples de usar. As bibliotecas listadas abaixo podem fazer a criação de projetos baseados em canvas mais rápida e fácil.
 
-- [EaselJS](http://www.createjs.com/easeljs) é uma biblioteca de código aberto que facilita criações de jogos, arte generativa e outras experiências altamente gráficas.
-- [Fabric.js](http://fabricjs.com/) é uma biblioteca código aberto em canvas com suporte à SVG.
+- [EaselJS](https://www.createjs.com/easeljs) é uma biblioteca de código aberto que facilita criações de jogos, arte generativa e outras experiências altamente gráficas.
+- [Fabric.js](https://fabricjs.com/) é uma biblioteca código aberto em canvas com suporte à SVG.
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) é uma biblioteca de código aberto para criar mapas de calor (heatmaps) baseados em canvas.
-- [JavaScript InfoVis Toolkit](http://thejit.org/) cria visualizações de dados interativas.
+- [JavaScript InfoVis Toolkit](https://thejit.org/) cria visualizações de dados interativas.
 - [Konva.js](https://konvajs.github.io/) é uma biblioteca de canvas 2D para aplicações _desktop_ e móveis.
 - [p5.js](https://p5js.org/) tem um conjunto completo de funcionalidades de desenho canvas para artistas, _designers_, educadores e iniciantes.
-- [Paper.js](http://paperjs.org/) é um framework de código-aberto para scripting de vetores gŕaficos que funciona sobre o Canvas HTML5.
+- [Paper.js](https://paperjs.org/) é um framework de código-aberto para scripting de vetores gŕaficos que funciona sobre o Canvas HTML5.
 - [Phaser](https://phaser.io/) é um framework de código-aberto rápido, grátis e divertido para jogos de navegador desenvolvidos com Canvas e WebGL.
-- [Processing.js](http://processingjs.org/) é um conversor da linguagem de visualização Processing.
+- [Processing.js](https://processingjs.org/) é um conversor da linguagem de visualização Processing.
 - [Pts.js](https://ptsjs.org/) é uma biblioteca para codificação criativa e visualização em canvas e SVG.
 - [Rekapi](https://github.com/jeremyckahn/rekapi) é uma API de animação _key-framing_ para Canvas.
-- [Scrawl-canvas](http://scrawl.rikweb.org.uk/) é uma biblioteca JavaScript de código aberto para criação e manipulação de elementos canvas 2D.
-- O framework [ZIM](http://zimjs.com/) provê conveniências, componentes e controles para programar criatividade no canvas - inclui acessibilidade e centenas de tutoriais cheios de cores.
+- [Scrawl-canvas](https://scrawl.rikweb.org.uk/) é uma biblioteca JavaScript de código aberto para criação e manipulação de elementos canvas 2D.
+- O framework [ZIM](https://zimjs.com/) provê conveniências, componentes e controles para programar criatividade no canvas - inclui acessibilidade e centenas de tutoriais cheios de cores.
 
 > **Nota:** Veja a [WebGL API](/pt-BR/docs/Web/WebGL) para bibliotecas 2D e 3D que usam WebGL.
 

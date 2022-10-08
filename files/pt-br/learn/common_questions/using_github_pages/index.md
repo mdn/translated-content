@@ -4,15 +4,15 @@ slug: Learn/Common_questions/Using_Github_pages
 translation_of: Learn/Common_questions/Using_Github_pages
 ---
 [GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for
-storage in thecelio [Git](http://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using Github's gh-pages feature.
+storage in thecelio [Git](https://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using Github's gh-pages feature.
 
 ## Publishing content
 
-GitHub is a very important and useful community to get involved in, and Git/GitHub is a very popular [version control system](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) — most tech companies now use it in their workflow. GitHub has a very useful feature called [GitHub Pages](https://pages.github.com/), which allows you to publish website code live on the Web.
+GitHub is a very important and useful community to get involved in, and Git/GitHub is a very popular [version control system](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) — most tech companies now use it in their workflow. GitHub has a very useful feature called [GitHub Pages](https://pages.github.com/), which allows you to publish website code live on the Web.
 
 ### Basic Github setup
 
-1. First of all, [install Git](http://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
+1. First of all, [install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
 2. Next, [sign up for a GitHub account](https://github.com/join). It's simple and easy.
 3. Once you've signed up, log in to [github.com](https://github.com) with your username and password.
 
@@ -40,7 +40,7 @@ The best way to upload your code to Github is via the command line — this is a
 
 ![](https://mdn.mozillademos.org/files/9483/command-line.png)
 
-> **Nota:** You could also consider using a [Git graphical user interface](http://git-scm.com/downloads/guis) to do the same work, if you feel uncomfortable with the command line.
+> **Nota:** You could also consider using a [Git graphical user interface](https://git-scm.com/downloads/guis) to do the same work, if you feel uncomfortable with the command line.
 
 Every operating system comes with a command line tool:
 

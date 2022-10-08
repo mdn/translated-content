@@ -93,7 +93,7 @@ Por exemplo, na demonstração a seguir, incluímos várias caixas de seleção 
 
 {{EmbedLiveSample ('Handling_multiple_checkboxes', 600, 100)}}
 
-Neste exemplo, você verá que atribuímos a cada caixa de seleção o mesmo `name`. Se ambas as opções são verificados e, em seguida, o formulário é enviado, você terá uma série de pares nome / valor apresentado assim: `interest=coding&interest=music`. Quando esses dados atingirem o lado do servidor, você poderá capturá-los como uma matriz de valores relacionados e tratá-los adequadamente - consulte [Lidar com várias caixas de seleção com uma única variável de servidor](http://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable) , por exemplo.
+Neste exemplo, você verá que atribuímos a cada caixa de seleção o mesmo `name`. Se ambas as opções são verificados e, em seguida, o formulário é enviado, você terá uma série de pares nome / valor apresentado assim: `interest=coding&interest=music`. Quando esses dados atingirem o lado do servidor, você poderá capturá-los como uma matriz de valores relacionados e tratá-los adequadamente - consulte [Lidar com várias caixas de seleção com uma única variável de servidor](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable) , por exemplo.
 
 ### Caixas de verificação por padrão
 

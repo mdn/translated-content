@@ -18,7 +18,7 @@ Você precisará saber como o HTTP funciona e ter uma experiência média com pr
 
 Dependendo do suporte da linguagem, pode ser necessário o conhecimento sobre soquetes TCP. O escopo deste guia é apresentar o conhecimento mínimo que você precisa para escrever um servidor WebSocket.
 
-> **Nota:** Leia a útlima especificação sobre WebSockets, a [RFC 6455](http://datatracker.ietf.org/doc/rfc6455/?include_text=1). As seções 1 e 4-7 são especialmente interessantes para implementadores de servidores. A seção 10 discute assuntos sobre segurança que você definitivamente deveria examinar antes de expor seu servidor.
+> **Nota:** Leia a útlima especificação sobre WebSockets, a [RFC 6455](https://datatracker.ietf.org/doc/rfc6455/?include_text=1). As seções 1 e 4-7 são especialmente interessantes para implementadores de servidores. A seção 10 discute assuntos sobre segurança que você definitivamente deveria examinar antes de expor seu servidor.
 
 Um servidor de WebSocket é explicado de maneira bem simples aqui. Servidores de WebSocket geralmente são servidores separados e especializados (para balanceamento de carga ou outras razões práticas), então, geralmente você irá usar um proxy reverso (como um servidor HTTP comum) para detectar a solicitação de handshakes do WebSocket, pré-processá-los e enviar esses clientes para um servidor WebSocket real. Isso significa que você não precisa encher seu código com cookies e manipuladores de autenticação (por exemplo).
 
@@ -78,7 +78,7 @@ Isso não está diretamente relacionado ao protocolo de WebSocket, mas vale apen
 
 ## Trocando Data Frames
 
-Tanto o cliente quanto o servidor podem enviar mensagens a qualquer momento — essa é a mágia do WebSocket. Entretanto, extrair informações desses chamados "frames" de dados não é um experiencia tão magica assim. Apesar de todos os _frames_ seguirem um mesmo formato, os dados do cliente são enviados criptografados para o servidor, usando [criptografia XOR](https://en.wikipedia.org/wiki/XOR_cipher) (com uma chave de 32 bits). A [seção 5 da especificação](http://tools.ietf.org/html/rfc6455#section-5) do [protocolo de WebSocket](https://datatracker.ietf.org/doc/rfc6455/) descreve isso em detalhes.
+Tanto o cliente quanto o servidor podem enviar mensagens a qualquer momento — essa é a mágia do WebSocket. Entretanto, extrair informações desses chamados "frames" de dados não é um experiencia tão magica assim. Apesar de todos os _frames_ seguirem um mesmo formato, os dados do cliente são enviados criptografados para o servidor, usando [criptografia XOR](https://en.wikipedia.org/wiki/XOR_cipher) (com uma chave de 32 bits). A [seção 5 da especificação](https://tools.ietf.org/html/rfc6455#section-5) do [protocolo de WebSocket](https://datatracker.ietf.org/doc/rfc6455/) descreve isso em detalhes.
 
 ### Formato
 
@@ -107,7 +107,7 @@ Frame format:
      +---------------------------------------------------------------+
 ```
 
-O bit de MASK simplesmente diz se a mensagem está codificada. Mensagens do cliente devem estar mascaradas, então seu servidor deve esperar que o valor de MASK seja 1. De fato, a [seção 5.1 da especificação](http://tools.ietf.org/html/rfc6455#section-5.1) diz que seu servidor deve se desconectar de um cliente se este cliente enviar mensagens que não estão mascaradas. Quando enviando um _frame_ para o cliente, não mascare a mensagem e não defina o bit MASK. Explicaremos o mascaramento mais tarde.
+O bit de MASK simplesmente diz se a mensagem está codificada. Mensagens do cliente devem estar mascaradas, então seu servidor deve esperar que o valor de MASK seja 1. De fato, a [seção 5.1 da especificação](https://tools.ietf.org/html/rfc6455#section-5.1) diz que seu servidor deve se desconectar de um cliente se este cliente enviar mensagens que não estão mascaradas. Quando enviando um _frame_ para o cliente, não mascare a mensagem e não defina o bit MASK. Explicaremos o mascaramento mais tarde.
 
 > **Nota:** Você tem que mascarar as mensagens mesmo quando usando secure socket (SSL).
 > Os campos RSV de 1 à 3 do cabeçalho podem ser ignorados, eles são para extenções.
@@ -163,7 +163,7 @@ Server: (process complete message) Happy new year to you too!
 ```
 
 Note que o primeiro _frame_ que contém a mensagem inteira tem o `FIN igual a 1` e o `opcode igual a 0x1`, entao o servidor pode processar ou responder como achar melhor.
-O segundo frame enviado pelo cliente é uma mensagem de texto com payload `opcode igual a 0x1`, mas a mensagem inteira ainda não chegou (`FIN=0`). Todos as partes restantes da mensagem são enviados em frames continuos (`opcode=0x0`), e o frame final da mensagem é marcado com `FIN=1`. [Seção 5.4 da especificação](http://tools.ietf.org/html/rfc6455#section-5.4) descreve a fragmentação de mensagens.
+O segundo frame enviado pelo cliente é uma mensagem de texto com payload `opcode igual a 0x1`, mas a mensagem inteira ainda não chegou (`FIN=0`). Todos as partes restantes da mensagem são enviados em frames continuos (`opcode=0x0`), e o frame final da mensagem é marcado com `FIN=1`. [Seção 5.4 da especificação](https://tools.ietf.org/html/rfc6455#section-5.4) descreve a fragmentação de mensagens.
 
 ## Pings e Pongs: O Heartbeat do WebSockets
 
@@ -179,7 +179,7 @@ Para fechar a conexão tanto cliente quanto servidor podem enviar um frame de co
 
 ## Diversos
 
-> **Nota:** Códigos WebSocket, extensões, subprotocols, etc. são registrados na [IANA WebSocket Protocol Registry](http://www.iana.org/assignments/websocket/websocket.xml).
+> **Nota:** Códigos WebSocket, extensões, subprotocols, etc. são registrados na [IANA WebSocket Protocol Registry](https://www.iana.org/assignments/websocket/websocket.xml).
 
 As extensões e subprotocolos do WebSocket são negociados via headers durante the handshake. Algumas vezes extensões e subprotocolos paracem muito similares para serem coisas diferentes, mas eles tem claras distinções. Extensões controlam os **frame** do WebSocket e **modificam** o payload, enquanto os subprotocolos estruturam o **payload** do WebSocket e **nunca modificam** nada. Extensões são opcionais e generalizadas (como comporessam); subprotocolos são mandatórios e localizados (como os usados para chat e para jogos MMORPG).
 

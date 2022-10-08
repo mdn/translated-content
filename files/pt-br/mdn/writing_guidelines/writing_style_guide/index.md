@@ -12,7 +12,7 @@ Se você esta procurando por coisas específicas sobre como determinado tipo de 
 
 Os aspetos relacionado a linguagem desta guia aplicam-se principalmente a documentação em Inglês. Outras idiomas devem ter (e são bem-vindos a criar) seu próprio guia de estilo. Estes devem ser publicados como sub-páginas da página do time de localização.
 
-Para os estilos padrão que se aplicam ao conteúdo escrito por outros sites que não sejam a MDN, referir-se a [guia de estilo Única Mozilla](http://www.mozilla.org/en-US/styleguide/).
+Para os estilos padrão que se aplicam ao conteúdo escrito por outros sites que não sejam a MDN, referir-se a [guia de estilo Única Mozilla](https://www.mozilla.org/en-US/styleguide/).
 
 ## Básico
 
@@ -234,7 +234,7 @@ Both versions in this case are gender-specific. This could be fixed by using gen
 
 > A confirmation dialog appears, asking the user if they allow the web page to make use of their web cam.
 
-> **Nota:** MDN allows the use of this very common syntax (which is controversial among usage authorities), in order to make up for the lack of a neutral gender in English. The use of the third-person plural as a neutral gender pronoun (that is, using "they," them", "their," and "theirs") is an accepted practice, commonly known as "[singular 'they.'](http://en.wikipedia.org/wiki/Singular_they)"
+> **Nota:** MDN allows the use of this very common syntax (which is controversial among usage authorities), in order to make up for the lack of a neutral gender in English. The use of the third-person plural as a neutral gender pronoun (that is, using "they," them", "their," and "theirs") is an accepted practice, commonly known as "[singular 'they.'](https://en.wikipedia.org/wiki/Singular_they)"
 
 You can use both genders:
 
@@ -296,11 +296,11 @@ In running text, use commas only in five-digit and larger numbers.
 - **Correct**: I will travel on trains, planes, and automobiles.
 - **Incorrect**: I will travel on trains, planes and automobiles.
 
-> **Nota:** This is in contrast to the [One Mozilla style guide](http://www.mozilla.org/en-US/styleguide/), which specifies that the serial comma is not to be used. MDN is an exception to this rule.
+> **Nota:** This is in contrast to the [One Mozilla style guide](https://www.mozilla.org/en-US/styleguide/), which specifies that the serial comma is not to be used. MDN is an exception to this rule.
 
 ### Spelling
 
-For words with variant spellings, always use the first entry at [Answers.com](http://www.answers.com/library/Dictionary). Do not use variant spellings.
+For words with variant spellings, always use the first entry at [Answers.com](https://www.answers.com/library/Dictionary). Do not use variant spellings.
 
 - **Correct**: localize, honor
 - **Incorrect**: localise, honour
@@ -437,11 +437,11 @@ It's sometimes helpful to provide an image in an article you create or modify, e
 
 ### Preferred style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Economist style guide](http://www.economist.com/research/StyleGuide/) or, failing that, the [Chicago Manual of Style](http://www.amazon.com/gp/product/0226104036/).
+If you have questions about usage and style not covered here, we recommend referring to the [Economist style guide](https://www.economist.com/research/StyleGuide/) or, failing that, the [Chicago Manual of Style](https://www.amazon.com/gp/product/0226104036/).
 
 ### Preferred dictionary
 
-For questions of spelling, please refer to [Answers.com](http://www.answers.com/library/Dictionary). The spell-checker for this site uses American English. Please do not use variant spellings (e.g., use _honor_ rather than _honour_).
+For questions of spelling, please refer to [Answers.com](https://www.answers.com/library/Dictionary). The spell-checker for this site uses American English. Please do not use variant spellings (e.g., use _honor_ rather than _honour_).
 
 We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, please send them to the [MDC mailing list](/pt-BR/docs/Project:Community) or [project lead](/User:Sheppy) so we know what should be added.
 
@@ -454,10 +454,10 @@ We will be expanding the guide over time, so if you have specific questions that
 
 If you're interested in improving your writing and editing skills, you may find the following resources to be helpful.
 
-- [On Writing Well](http://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548), by William Zinsser (Amazon link)
-- [Style: The Basics of Clarity and Grace](http://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/), by Joseph Williams and Gregory Colomb (Amazon link)
-- [American Heritage Book of English Usage](http://www.bartleby.com/64/)
-- [Common Errors in English](http://www.wsu.edu/~brians/errors/)
-- [English Grammar FAQ](http://www-personal.umich.edu/~jlawler/aue.html) (alt.usage.english)
-- [Bob's quick guide to the apostrophe, you idiots](http://www.angryflower.com/bobsqu.gif) (funny)
-- [Merriam-Webster's Concise Dictionary of English Usage](http://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2) (Amazon link): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage.
+- [On Writing Well](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548), by William Zinsser (Amazon link)
+- [Style: The Basics of Clarity and Grace](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/), by Joseph Williams and Gregory Colomb (Amazon link)
+- [American Heritage Book of English Usage](https://www.bartleby.com/64/)
+- [Common Errors in English](https://www.wsu.edu/~brians/errors/)
+- [English Grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) (alt.usage.english)
+- [Bob's quick guide to the apostrophe, you idiots](https://www.angryflower.com/bobsqu.gif) (funny)
+- [Merriam-Webster's Concise Dictionary of English Usage](https://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2) (Amazon link): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage.

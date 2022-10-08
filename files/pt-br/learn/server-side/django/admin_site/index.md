@@ -88,7 +88,7 @@ python3 manage.py runserver
 
 ## Fazendo o login e usando o site
 
-Para fazer login no site, abra o URL /_admin_ (e.g. [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin/)) e insira suas novas credenciais de usuário e senha de superusuário (você será redirecionado para a página de login e, em seguida, de volta para o URL /_admin_ depois de inserir seus detalhes).
+Para fazer login no site, abra o URL /_admin_ (e.g. [https://127.0.0.1:8000/admin](https://127.0.0.1:8000/admin/)) e insira suas novas credenciais de usuário e senha de superusuário (você será redirecionado para a página de login e, em seguida, de volta para o URL /_admin_ depois de inserir seus detalhes).
 
 Esta parte do site exibe todos os nossos modelos, agrupados por aplicativo instalado. Você pode clicar no nome de um modelo para ir a uma tela que lista todos os seus registros associados e clicar nos registros para editá-los. Você também pode clicar diretamente no link Adicionar ao lado de cada modelo para começar a criar um registro desse tipo.
 

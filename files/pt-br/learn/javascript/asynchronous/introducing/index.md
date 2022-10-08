@@ -180,7 +180,7 @@ As promises tem algumas semelhanças com as callbacks. Elas são basicamente um 
 
 Entretanto, as promises são feitas especificamente para lidarmos com operações async, e ter muitas vantagens sobre as velhas callbacks:
 
-- Você pode encadear múltiplas operações assíncronas usando múltiplos blocos `.then()`, passando o resultado de uma delas como o resultado como parâmetro da próxima operação. Isso é muito mais difícil de se fazer usando as callback, que normalmente termina em algo chamado de [callback hell](http://callbackhell.com/).
+- Você pode encadear múltiplas operações assíncronas usando múltiplos blocos `.then()`, passando o resultado de uma delas como o resultado como parâmetro da próxima operação. Isso é muito mais difícil de se fazer usando as callback, que normalmente termina em algo chamado de [callback hell](https://callbackhell.com/).
 - As callbacks das promises sempre são chamadas na ordem estrita em quesão colocadas na fila de eventos.
 - O tratamento de erros é muito melhor — todos os erros são tratados por um único bloco `.catch()` no final do encadeamento, ao invés de ser tratado individualmente em cada função callback.
 - Promessas evitam inversão de controle. Ao contrário das callbacks, que perdem totalmente o controle de como a função será executada quando passada para uma biblioteca de terceiros.

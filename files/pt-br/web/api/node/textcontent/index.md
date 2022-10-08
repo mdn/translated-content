@@ -111,4 +111,4 @@ if (Object.defineProperty
 
 - {{domxref("HTMLElement.innerText")}}
 - {{domxref("Element.innerHTML")}}
-- [More on differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/) (blog post)
+- [More on differences between `innerText` and `textContent`](https://perfectionkills.com/the-poor-misunderstood-innerText/) (blog post)

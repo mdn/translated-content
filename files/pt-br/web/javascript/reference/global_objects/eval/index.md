@@ -46,7 +46,7 @@ var expression = new String("2 + 2");
 eval(expression.toString()); // retorna 4
 ```
 
-Se você usar a função `eval` _indiretamente_, invocando-a por outra referência além de `eval`, [a partir do ECMAScript 5](http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) funciona no escopo global ao invés do escopo local. Significa que, por exemplo, aquelas declarações de funções criam funções globais e que o código que está sendo avaliado não tem acesso às variáveis locais dentro do escopo onde está sendo chamada.
+Se você usar a função `eval` _indiretamente_, invocando-a por outra referência além de `eval`, [a partir do ECMAScript 5](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) funciona no escopo global ao invés do escopo local. Significa que, por exemplo, aquelas declarações de funções criam funções globais e que o código que está sendo avaliado não tem acesso às variáveis locais dentro do escopo onde está sendo chamada.
 
 ```js
 function test() {
@@ -87,7 +87,7 @@ var result = obj[ propname ];  //  obj[ "a" ] é o mesmo como obj.a
 
 ### Utilize funções ao invés de avaliar snippets de código
 
-JavaScript possui [first-class functions](http://en.wikipedia.org/wiki/First-class_function), o que significa que você pode passar os argumentos para outras APIs, armazená-los em variáveis e propriedades de objeto, e assim por diante. Muitas APIs de DOM foram desenvolvidas com isso em mente, então você pode (e deve) escrever:
+JavaScript possui [first-class functions](https://en.wikipedia.org/wiki/First-class_function), o que significa que você pode passar os argumentos para outras APIs, armazená-los em variáveis e propriedades de objeto, e assim por diante. Muitas APIs de DOM foram desenvolvidas com isso em mente, então você pode (e deve) escrever:
 
 ```js
 // ao invés de setTimeout(" ... ", 1000) use:

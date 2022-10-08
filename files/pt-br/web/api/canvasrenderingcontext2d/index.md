@@ -267,7 +267,7 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 ### WebKit only
 
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitBackingStorePixelRatio`
-  - : The backing store size in relation to the canvas element. See [High DPI Canvas](http://www.html5rocks.com/en/tutorials/canvas/hidpi/).
+  - : The backing store size in relation to the canvas element. See [High DPI Canvas](https://www.html5rocks.com/en/tutorials/canvas/hidpi/).
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitGetImageDataHD`
   - : Intended for HD backing stores, but removed from canvas specifications.
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`
@@ -285,7 +285,7 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
   - : Sets or gets the current inversed transformation matrix. {{ gecko_minversion_inline("7.0") }}
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozFillRule`
-  - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
+  - : The [fill rule](https://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
   - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDash`
@@ -315,7 +315,7 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 ### Internet Explorer
 
 - {{non-standard_inline}} `CanvasRenderingContext2D.msFillRule`
-  - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
+  - : The [fill rule](https://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 
 ## Especificações
 

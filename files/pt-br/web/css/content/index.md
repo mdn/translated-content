@@ -20,7 +20,7 @@ content: none;
 content: "prefixo";
 
 /* Valores <url> */
-content: url("http://www.example.com/test.png");
+content: url("https://www.example.com/test.png");
 
 /* Valores <counter> */
 content: counter(contador_capitulo);
@@ -89,7 +89,7 @@ Este exemplo insere aspas ao redor de citações e adiciona a palavra "Capítulo
 ```html
 <h1>5</h1>
 <p>De acordo com o Sr. Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
+  <q cite="https://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
     lucky enough to invent the Web at the time when the Internet
     already existed - and had for a decade and a half.</q>
   Devemos entender que não há nada fundamentalmente errado em criar
@@ -195,7 +195,7 @@ Este exemplo insere uma imagem antes de cada _link_ e adiciona o conteúdo do se
 
 ```html
 <ul>
-  <li><a id="moz" href="http://www.mozilla.org/">
+  <li><a id="moz" href="https://www.mozilla.org/">
     Mozilla Home Page</a></li>
   <li><a id="mdn" href="https://developer.mozilla.org/">
     Mozilla Developer Network</a></li>

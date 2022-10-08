@@ -16,7 +16,7 @@ Um formulário HTML é feito de um ou mais widgets. Esses widgets podem ser camp
 
 ### O que você precisa para trabalhar com formulários?
 
-Você não precisa de nada mais do que o que é requisitado para trabalhar com HTML: Um editor de texto e um navegador. É claro, que se você esta acostumado a usá-los você pode ter vantagens de uma IDE completa como [Visual Studio](http://www.microsoft.com/visualstudio), [Eclipse](http://www.eclipse.org), [Aptana](http://www.aptana.com/), etc., mas cabe somente a você.
+Você não precisa de nada mais do que o que é requisitado para trabalhar com HTML: Um editor de texto e um navegador. É claro, que se você esta acostumado a usá-los você pode ter vantagens de uma IDE completa como [Visual Studio](https://www.microsoft.com/visualstudio), [Eclipse](https://www.eclipse.org), [Aptana](https://www.aptana.com/), etc., mas cabe somente a você.
 
 A principal diferença entre um formulário de HTML e um documento regular de HTML é que, maioria das vezes, o dado coletado é enviado ao servidor. Nesse caso, você precisa configurar um servidor web para receber e processar os dados. Como configurar um servidor está além do escopo deste artigo, mas se você quer saber mais, consulte o artigo dedicado a este tema: [Envio e recuperação de dados do formulário](/pt-BR/docs/HTML/Forms/Sending_and_Retrieving_form_data).
 
@@ -25,7 +25,7 @@ A principal diferença entre um formulário de HTML e um documento regular de HT
 Antes de começar a codificar, é sempre melhor dar um passo atrás e tomar o tempo para pensar sobre o seu formulário. Desenhando um rascunho rápido irá ajudar a definir o conjunto correto de dados que você quer perguntar ao usuário. De um ponto de vista da experiência do usuário (UX), é importante lembrar que quanto maior o seu formulário, maior o risco de perder os usuários. Mantenha o formuário simples e mantenha o foco: **peça apenas o que é absolutamente necessário**.
 A criação de formulários é um passo importante quando você está construindo um site ou um aplicativo. Está além do escopo deste artigo cobrir as formas, mas se você quiser se aprofundar neste tópico você deve ler os seguintes artigos:
 
-- A Smashing Magazine tem [ótimos artigos sobre UX](http://uxdesign.smashingmagazine.com/tag/forms/) nos formulários, mas talvez o mais importante é o [Extenso Guia para a usabilidade em formulários Web](https://www.smashingmagazine.com/2011/11/extensive-guide-web-form-usability/).
+- A Smashing Magazine tem [ótimos artigos sobre UX](https://uxdesign.smashingmagazine.com/tag/forms/) nos formulários, mas talvez o mais importante é o [Extenso Guia para a usabilidade em formulários Web](https://www.smashingmagazine.com/2011/11/extensive-guide-web-form-usability/).
 - UXMatters também é um recurso muito atencioso com bons conselhos de [melhores práticas básicas](https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php) para conceitos complexos, tais como [formulários de várias páginas](https://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php).
 
 Neste artigo vamos construir um formulário de contato simples. Vamos fazer um esboço.
@@ -51,7 +51,7 @@ Todos formulários HTML começam com um elemento {{HTMLElement("form")}} como es
 Este elemento define um formulário. É um elemento de container como um elemento {{HTMLElement ("div")}} ou {{HTMLElement ("p")}} , mas ele também suporta alguns atributos específicos para configurar a forma como o formulário se comporta. Todos os seus atributos são opcionais, mas é considerada a melhor prática sempre definir pelo menos o atributo `action` e o atributo `method`.
 
 - O atributo _**action**_ define o local (uma URL) em que os dados recolhidos do formulário devem ser enviados.
-- O atributo _**method**_ define qual o método HTTP para enviar os dados (ele pode ser "**GET**" ou "**POST**" (veja as diferenças [aqui](http://www.comocriarsites.com/html/como-funciona-os-metodos-get-e-post-diferencas/)).
+- O atributo _**method**_ define qual o método HTTP para enviar os dados (ele pode ser "**GET**" ou "**POST**" (veja as diferenças [aqui](https://www.comocriarsites.com/html/como-funciona-os-metodos-get-e-post-diferencas/)).
 
 Se você quiser se aprofundar em como esses atributos funcionam, está detalhado no artigo [Enviando e recebendo dados de um formulário](/pt-BR/docs/HTML/Forms/Sending_and_retrieving_form_data)
 

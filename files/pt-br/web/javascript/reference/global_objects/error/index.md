@@ -112,7 +112,7 @@ Você pode escolher definir seus próprios tipos de erro derivando de `Error` pa
 
 > **Aviso:** Note que as instâncias `MeuErro` lançadas vão reportar valores de `lineNumber` e `fileName` incorretos, ao menos no Firefox.
 
-Veja também ["esta discussão no Stackoverflow (em inglês): What's a good way to extend Error in JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
+Veja também ["esta discussão no Stackoverflow (em inglês): What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
 
 ```js
 // Cria um novo objeto que herda o construtor de Error através do prototype.

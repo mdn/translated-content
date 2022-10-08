@@ -252,7 +252,7 @@ var SimplePropertyRetriever = {
     _enumerableAndNotEnumerable : function (obj, prop) {
         return true;
     },
-    // Inspirado por http://stackoverflow.com/a/8024294/271577
+    // Inspirado por https://stackoverflow.com/a/8024294/271577
     _getPropertyNames : function getAllPropertyNames(obj, iterateSelfBool, iteratePrototypeBool, includePropCb) {
         var props = [];
 

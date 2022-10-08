@@ -456,7 +456,7 @@ Interactive elements, like links, should provide an area large enough that it is
 Text-only links in prose content are exempt from this requirement, but it’s still a good idea to make sure enough text is hyperlinked to be easily activated.
 
 - [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5](http://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
 - [Quick test: Large touch targets](https://a11yproject.com/posts/large-touch-targets/)
 
 #### Proximity

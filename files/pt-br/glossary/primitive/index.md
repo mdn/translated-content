@@ -40,5 +40,5 @@ O método [valueOf()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object
 
 ## Referências externas
 
-- [Primitive data types on Wikipedia](http://en.wikipedia.org/wiki/Primitive_data_type) (em inglês)
+- [Primitive data types on Wikipedia](https://en.wikipedia.org/wiki/Primitive_data_type) (em inglês)
 - [Tipo de dado](https://pt.wikipedia.org/wiki/Tipo_de_dado)

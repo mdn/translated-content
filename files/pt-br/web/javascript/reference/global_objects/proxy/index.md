@@ -371,12 +371,12 @@ console.log(docCookies.my_cookie1);
 
 ## Veja também
 
-- ["Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([slides](http://www.slideshare.net/BrendanEich/metaprog-5303821))
-- [ECMAScript Harmony Proxy proposal page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies) e [ECMAScript página de semântica de proxy Harmony](http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
-- [Tutorial em proxies](http://soft.vub.ac.be/~tvcutsem/proxies/)
+- ["Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([slides](https://www.slideshare.net/BrendanEich/metaprog-5303821))
+- [ECMAScript Harmony Proxy proposal page](https://wiki.ecmascript.org/doku.php?id=harmony:proxies) e [ECMAScript página de semântica de proxy Harmony](https://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
+- [Tutorial em proxies](https://soft.vub.ac.be/~tvcutsem/proxies/)
 - [SpiderMonkey specific Old Proxy API](/pt-BR/docs/JavaScript/Old_Proxy_API)
 - {{jsxref("Object.watch()")}} É um recurso não padrão, mas foi suportado no Gecko há muito tempo.
 
 ## `Nota de licença`
 
-Alguns conteúdos (texto, exemplos) nesta página foram copiados ou adaptados do [ECMAScript wiki](http://wiki.ecmascript.org/doku.php) que contém à licença de conteúdo [CC 2.0 BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/2.0/).
+Alguns conteúdos (texto, exemplos) nesta página foram copiados ou adaptados do [ECMAScript wiki](https://wiki.ecmascript.org/doku.php) que contém à licença de conteúdo [CC 2.0 BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/2.0/).

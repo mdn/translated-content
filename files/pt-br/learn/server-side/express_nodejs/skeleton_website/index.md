@@ -80,7 +80,7 @@ Também pode ser escolhido um "view" (_template)_ usando`--view` e/ou um gerador
 
 ### Qual _engine_ de "view" devo usar?
 
-The _Express Application Generator_ allows you to configure a number of popular view/templating engines, including [EJS](https://www.npmjs.com/package/ejs), [Hbs](http://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), and [Vash](https://www.npmjs.com/package/vash), although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages [out of the box](https://github.com/expressjs/express/wiki#template-engines).
+The _Express Application Generator_ allows you to configure a number of popular view/templating engines, including [EJS](https://www.npmjs.com/package/ejs), [Hbs](https://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), and [Vash](https://www.npmjs.com/package/vash), although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages [out of the box](https://github.com/expressjs/express/wiki#template-engines).
 
 > **Nota:** If you want to use a template engine that isn't supported by the generator then see [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) and the documentation for your target view engine.
 
@@ -106,7 +106,7 @@ For this project, we'll use the [Pug](https://pugjs.org/api/getting-started.html
 
 ### What CSS stylesheet engine should I use?
 
-The _Express Application Generator_ allows you to create a project that is configured to use the most common CSS stylesheet engines: [LESS](http://lesscss.org/), [SASS](http://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](http://stylus-lang.com/).
+The _Express Application Generator_ allows you to create a project that is configured to use the most common CSS stylesheet engines: [LESS](https://lesscss.org/), [SASS](https://sass-lang.com/), [Compass](https://compass-style.org/), [Stylus](https://stylus-lang.com/).
 
 > **Nota:**CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.
 
@@ -188,7 +188,7 @@ At this point, we have a complete skeleton project. The website doesn't actually
       DEBUG=express-locallibrary-tutorial:* npm start
       ```
 
-3. Then load `http://localhost:3000/` in your browser to access the app.
+3. Then load `https://localhost:3000/` in your browser to access the app.
 
 You should see a browser page that looks like this:
 
@@ -338,7 +338,7 @@ The scripts section defines a "_start_" script, which is what we are invoking wh
 
 ### www file
 
-The file **/bin/www** is the application entry point! The very first thing this does is `require()` the "real" application entry point (**app.js**, in the project root) that sets up and returns the [`express()`](http://expressjs.com/en/api.html) application object.
+The file **/bin/www** is the application entry point! The very first thing this does is `require()` the "real" application entry point (**app.js**, in the project root) that sets up and returns the [`express()`](https://expressjs.com/en/api.html) application object.
 
 ```js
 #!/usr/bin/env node
@@ -459,13 +459,13 @@ module.exports = router;
 
 The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported ('`/users`') plus whatever is defined in this file ('`/`'). In other words, this route will be used when an URL of `/users/` is received.
 
-> **Nota:** **Tip:** Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
+> **Nota:** **Tip:** Try this out by running the server with node and visiting the URL in your browser: `https://localhost:3000/users/`. You should see a message: 'respond with a resource'.
 
 One thing of interest above is that the callback function has the third argument '`next`', and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the `next` argument, it may be useful in the future if you want to add multiple route handlers to the `'/'` route path.
 
 ### Views (templates)
 
-The views (templates) are stored in the **/views** directory (as specified in **app.js**) and are given the file extension **.pug**. The method [`Response.render()`](http://expressjs.com/en/4x/api.html#res.render) is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In the code below from **/routes/index.js** you can see how that route renders a response using the template "index" passing the template variable "title".
+The views (templates) are stored in the **/views** directory (as specified in **app.js**) and are given the file extension **.pug**. The method [`Response.render()`](https://expressjs.com/en/4x/api.html#res.render) is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In the code below from **/routes/index.js** you can see how that route renders a response using the template "index" passing the template variable "title".
 
 ```js
 /* GET home page. */
@@ -486,7 +486,7 @@ block content
 
 ## Challenge yourself
 
-Create a new route in **/routes/users.js** that will display the text "_You're so cool"_ at URL `/users/cool/`. Test it by running the server and visiting `http://localhost:3000/users/cool/` in your browser
+Create a new route in **/routes/users.js** that will display the text "_You're so cool"_ at URL `/users/cool/`. Test it by running the server and visiting `https://localhost:3000/users/cool/` in your browser
 
 ## Summary
 

@@ -207,4 +207,4 @@ f(); // 6
 
 ## Veja também
 
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [Original proposal at ecmascript.org](https://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)

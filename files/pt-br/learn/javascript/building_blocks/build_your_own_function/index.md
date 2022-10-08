@@ -291,7 +291,7 @@ Para o próximo parâmetro. Este vai envolver um pouco mais de trabalho — vamo
 
     Você pode ver como a nossa pequena função (agora nem tanto) está se tornando útil.
 
-> **Nota:** Se você tiver problemas para fazer o exemplo funcionar, sinta-se à vontade para verificar seu código na [versão finalizada no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) ([veja-a também em execução](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)), ou peça nos ajuda.
+> **Nota:** Se você tiver problemas para fazer o exemplo funcionar, sinta-se à vontade para verificar seu código na [versão finalizada no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) ([veja-a também em execução](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)), ou peça nos ajuda.
 
 ## Conclusão
 

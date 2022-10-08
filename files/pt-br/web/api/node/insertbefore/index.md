@@ -88,4 +88,4 @@ Quando o elemento não possui o primeiro filho, então `firstChild` é `null`. O
 
 ## Especificação
 
-- [insertBefore](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-952280727)
+- [insertBefore](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-952280727)

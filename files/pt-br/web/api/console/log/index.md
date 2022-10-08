@@ -37,7 +37,7 @@ Não faz parte de nenhuma especificação.
 
 ## Ver também
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Firebug wiki: Console API](http://getfirebug.com/wiki/index.php/Console_API) - Firebug supports additional features in its console.log() implementation, such as [styled logging](http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/).
-- [NodeJS: Console API](http://nodejs.org/docs/latest/api/console.html#console_console_log_data)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
+- [Firebug wiki: Console API](https://getfirebug.com/wiki/index.php/Console_API) - Firebug supports additional features in its console.log() implementation, such as [styled logging](https://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/).
+- [NodeJS: Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)

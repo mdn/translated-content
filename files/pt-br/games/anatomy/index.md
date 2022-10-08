@@ -109,21 +109,21 @@ A chave para programar loop principal, no JavaScript, é anexá-lo a qualquer ev
 
 ## Construindo um loop principal mais _otimizado_ no JavaScript
 
-Finalmente, no JavaScript, o browser está rodando o seu loop principal e o seu código existe em algum de seus estágios. As seções acima descrevem loops principais que tentam não eliminar o controle do navegador. Esses métodos principais anexam eles mesmos ao `window.requestAnimationFrame()`, que pergunta ao browser por controle sobre o próximo frame. É responsabilidade do browser saber como relacionar esses requests ao loop principal. A [especificação da W3C para o requestAnimationFrame](http://www.w3.org/TR/animation-timing/) não define realmente quando os browsers tem que executar os callbacks do requestAnimationFrame. Isto pode ser uma vantagem por que os fornecedores de browsers podem ter a liberdade de experimentar com as soluções que sintam que seja melhor e podem modifica-la com o passar do tempo.
+Finalmente, no JavaScript, o browser está rodando o seu loop principal e o seu código existe em algum de seus estágios. As seções acima descrevem loops principais que tentam não eliminar o controle do navegador. Esses métodos principais anexam eles mesmos ao `window.requestAnimationFrame()`, que pergunta ao browser por controle sobre o próximo frame. É responsabilidade do browser saber como relacionar esses requests ao loop principal. A [especificação da W3C para o requestAnimationFrame](https://www.w3.org/TR/animation-timing/) não define realmente quando os browsers tem que executar os callbacks do requestAnimationFrame. Isto pode ser uma vantagem por que os fornecedores de browsers podem ter a liberdade de experimentar com as soluções que sintam que seja melhor e podem modifica-la com o passar do tempo.
 
 Versões modernas do Firefox e Google Chrome (e provavelmente outros) tentam conectar os callbacks do `requestAnimationFramea` a sua thread principal no primeiro intervalo de tempo de um frame. A thread principal portanto tenta fazer o seguinte:
 
 1. Começar uma nova frame (enquanto a anterior é tratada pela exibição).
 2. Go through the list of `requestAnimationFrame` callbacks and invoke them.
 3. Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
-4. Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
+4. Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](https://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
 
 Modern versions of Firefox and Google Chrome (and probably others) _attempt_ to connect `requestAnimationFrame` callbacks to their main thread at the very beginning of a frame's timeslice. The browser's main thread thus _tries_ to look like the following:
 
 1. Start a new frame (while the previous frame is handled by the display).
 2. Go through the list of `requestAnimationFrame` callbacks and invoke them.
 3. Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
-4. Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
+4. Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](https://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
 
 You can think about developing realtime applications as having a budget of time to do work. All of the above steps must take place every 16-and-a-half milliseconds to keep up with a 60 Hz display. Browsers invoke your code as early as possible to give it maximum computation time. Your main thread will often start workloads that are not even on the main thread (such as rasterization or shaders in WebGL). Long calculations can be performed on a Web Worker or a GPU at the same time as the browser uses its main thread to manage garbage collection, its other tasks, or handle asynchronous events.
 
@@ -299,7 +299,7 @@ _Note: This example, specifically, is in need of technical review\._
 })();
 ```
 
-Another alternative is to simply do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this is found over at The Artillery Blog for Artillery Games, where they [adjust their rate of garbage generation](http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html) to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).
+Another alternative is to simply do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this is found over at The Artillery Blog for Artillery Games, where they [adjust their rate of garbage generation](https://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html) to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).
 
 This may also apply to some of your own tasks. Those are good candidates to throttle when available resources become a concern.
 

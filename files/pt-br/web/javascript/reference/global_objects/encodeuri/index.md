@@ -37,7 +37,7 @@ Uma nova cadeia de caracteres representando a cadeia de caracteres provida, codi
 A função `encodeURI()` não codifica caracteres que possuem significado especial (caracteres reservados) para a URI. O exemplo seguinte mostra todas as partes que o "esquema" da URI pode possivelmente conter. Note como certos caracteres são usados para dar significado especial:
 
 ```
-http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
+https://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
 ```
 
 Consequentemente, `encodeURI()` **não** codifica caracteres que são necessários para formular uma URI completa. Também, `encodeURI()` **não** codifica alguns caracteres adicionais, conhecidos como "marcas não reservadas (unreserved marks)", que não tem propósito reservado mas são permitidos na URI "como são". (Veja [RFC2396)](https://www.ietf.org/rfc/rfc2396.txt)
@@ -89,7 +89,7 @@ console.log(encodeURI('\uDFFF'));
 
 ### Codificando para IPv6
 
-Se você deseja seguir a [RFC3986](http://tools.ietf.org/html/rfc3986) mais recente para URLs, que faz colchetes ser reservado (para [IPv6](/pt-BR/docs/Glossary/IPv6)) e então não será codificado quando formando algo que possa ser parte da URL (como o host), o seguinte código pode ajudar:
+Se você deseja seguir a [RFC3986](https://tools.ietf.org/html/rfc3986) mais recente para URLs, que faz colchetes ser reservado (para [IPv6](/pt-BR/docs/Glossary/IPv6)) e então não será codificado quando formando algo que possa ser parte da URL (como o host), o seguinte código pode ajudar:
 
 ```js
 function fixedEncodeURI(str) {

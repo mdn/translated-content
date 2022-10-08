@@ -96,7 +96,7 @@ Muito em breve no Firefox, além de visualizar o WebAssembly em seu formato text
 
 ## Memória
 
-No modelo de memória de baixo nível do WebAssembly, a memória é representada como uma faixa contínua de bytes não tipados chamados de [Memória Linear](http://webassembly.org/docs/semantics/#linear-memory) que são lidos e escritos por [instruções de carga e armazenamento](http://webassembly.org/docs/semantics/#linear-memory-accesses) dentro do módulo. Neste modelo de memória, qualquer carga ou armazenamento pode acessar qualquer byte na memória linear inteira, o que é necessário para representar fielmente conceitos de C/C++ como ponteiros.
+No modelo de memória de baixo nível do WebAssembly, a memória é representada como uma faixa contínua de bytes não tipados chamados de [Memória Linear](https://webassembly.org/docs/semantics/#linear-memory) que são lidos e escritos por [instruções de carga e armazenamento](https://webassembly.org/docs/semantics/#linear-memory-accesses) dentro do módulo. Neste modelo de memória, qualquer carga ou armazenamento pode acessar qualquer byte na memória linear inteira, o que é necessário para representar fielmente conceitos de C/C++ como ponteiros.
 
 Ao contrário de um programa C/C++ nativo, contudo, onde a coleção de memória disponível se estende por todo o processo, a memória que é acessível por uma instância de WebAssembly em particular se limita a uma única — e potencialmente muito pequena — coleção contida por um objeto do tipo WebAssembly Memory. Isto possibilita que uma única aplicação web utilize diversas bibliotecas independentes — cada uma das quais estiverem utilizando o WebAssembly internamente — para ter memórias separadas que são totalmente isoladas umas das outras.
 
@@ -192,7 +192,7 @@ Function references are necessary to compile languages like C/C++ that have func
 
 When the time comes to call a function pointer, the WebAssembly caller supplies the index, which can then be safety bounds checked against the table before indexing and calling the indexed function reference. Thus, tables are currently a rather low-level primitive used to compile low-level programming language features safely and portably.
 
-Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set), which updates one of the values in a table, and [`Table.prototype.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), which increases the number of values that can be stored in a table. This allows the indirectly-callable set of functions to change over time, which is necessary for [dynamic linking techniques](http://webassembly.org/docs/dynamic-linking/). The mutations are immediately accessible via [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) in JavaScript, and to wasm modules.
+Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set), which updates one of the values in a table, and [`Table.prototype.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), which increases the number of values that can be stored in a table. This allows the indirectly-callable set of functions to change over time, which is necessary for [dynamic linking techniques](https://webassembly.org/docs/dynamic-linking/). The mutations are immediately accessible via [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) in JavaScript, and to wasm modules.
 
 ### A table example
 
@@ -232,9 +232,9 @@ This code accesses each function reference stored in the table in turn, and inst
 Now we’ve demonstrated usage of the main key WebAssembly building blocks, this is a good place to mention the concept of multiplicity. This provides WebAssembly with a multitude of advances in terms of architectural efficiency:
 
 - One module can have N Instances, in the same way that one function literal can produce N closure values.
-- One module instance can use 0–1 memory instances, which provide the "address space" of the instance. Future versions of WebAssembly may allow 0–N memory instances per module instance (see [Multiple Tables and Memories](http://webassembly.org/docs/future-features/#multiple-tables-and-memories)).
+- One module instance can use 0–1 memory instances, which provide the "address space" of the instance. Future versions of WebAssembly may allow 0–N memory instances per module instance (see [Multiple Tables and Memories](https://webassembly.org/docs/future-features/#multiple-tables-and-memories)).
 - One module instance can use 0–1 table instances — this is the "function address space" of the instance, used to implement C function pointers. Future versions of WebAssembly may allow 0–N table instances per module instance in the future.
-- One memory or table instance can be used by 0–N module instances — these instances all share the same address space, allowing [dynamic linking](http://webassembly.org/docs/dynamic-linking).
+- One memory or table instance can be used by 0–N module instances — these instances all share the same address space, allowing [dynamic linking](https://webassembly.org/docs/dynamic-linking).
 
 You can see multiplicity in action in our Understanding text format article — see the Mutating tables and dynamic linking section (TBD).
 
@@ -244,5 +244,5 @@ This article has taken you through the basics of using the WebAssembly JavaScrip
 
 ## See also
 
-- [webassembly.org](http://webassembly.org/)
+- [webassembly.org](https://webassembly.org/)
 - [WebAssembly concepts](/pt-BR/docs/WebAssembly/Concepts)

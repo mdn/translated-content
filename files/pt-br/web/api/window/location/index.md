@@ -7,7 +7,7 @@ translation_of: Web/API/Window/location
 
 O **`Window.location`**é uma propriedade de leitura que retorna um objeto {{domxref("Location")}} com informações de localização do documento atual.
 
-Embora `Window.location` seja apenas um objeto de leitura de localização, você pode também atribuir uma {{domxref("DOMString")}} para ele. Isto significa que você pode trabalhar com `location` como se fosse uma string na maioria dos casos: `location = 'http://www.exemplo.com'` é um sinônimo de `location.href = 'http://www.exemplo.com'`.
+Embora `Window.location` seja apenas um objeto de leitura de localização, você pode também atribuir uma {{domxref("DOMString")}} para ele. Isto significa que você pode trabalhar com `location` como se fosse uma string na maioria dos casos: `location = 'https://www.exemplo.com'` é um sinônimo de `location.href = 'https://www.exemplo.com'`.
 
 ## Sintaxe
 
@@ -29,8 +29,8 @@ alert(location); // alerta "https://developer.mozilla.org/en-US/docs/Web/API/Win
 Sempre que um novo valor é atribuído a um objeto de localização, um documento será carregado usando a URL como se `location.assign()` tivesse sido chamado com a URL modificada. Observe que as configurações de segurança, como CORS, pode impedir que isso aconteça de forma eficaz.
 
 ```js
-location.assign("http://www.mozilla.org"); // ou
-location = "http://www.mozilla.org";
+location.assign("https://www.mozilla.org"); // ou
+location = "https://www.mozilla.org";
 ```
 
 ### Exemplo #2: Forçando recerregamento da página atual do servidor
@@ -46,7 +46,7 @@ Considere o exemplo a seguir, que vai recarregar a página usando o método [`re
 ```js
 function reloadPageWithHash() {
   var initialPage = location.pathname;
-  location.replace('http://example.com/#' + initialPage);
+  location.replace('https://example.com/#' + initialPage);
 }
 ```
 

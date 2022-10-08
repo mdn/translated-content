@@ -57,7 +57,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - [Templates in Firefox 3](/pt-BR/docs/Templates_in_Firefox_3)
   - : Templates have been significantly improved in Firefox 3. The key improvement allows the use of custom query processors to allow data sources other than RDF to be used.
 - [Securing updates](/pt-BR/docs/Extension_Versioning,_Update_and_Compatibility#Securing_Updates)
-  - : In order to provide a more secure add-on upgrade path for users, add-ons are now required to provide a secure method for obtaining updates before they can be installed. Add-ons hosted at [AMO](http://addons.mozilla.org) automatically provide this. Any add-ons installed that do not provide a secure update method when the user upgrades to Firefox 3 will be automatically disabled. Firefox will however continue to check for updates to the extension over the insecure path and attempt to install any update offered (installation will fail if the update also fails to provide a secure update method).
+  - : In order to provide a more secure add-on upgrade path for users, add-ons are now required to provide a secure method for obtaining updates before they can be installed. Add-ons hosted at [AMO](https://addons.mozilla.org) automatically provide this. Any add-ons installed that do not provide a secure update method when the user upgrades to Firefox 3 will be automatically disabled. Firefox will however continue to check for updates to the extension over the insecure path and attempt to install any update offered (installation will fail if the update also fails to provide a secure update method).
 - [Places migration guide](/pt-BR/docs/Places_Developer_Guide)
   - : An article about how to update an existing extension to use the Places API.
 - [Download Manager improvements in Firefox 3](/pt-BR/docs/Download_Manager_improvements_in_Firefox_3)
@@ -122,7 +122,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Find toolbar.** The Find toolbar now opens with the current selection.
 - **Plugin management.** Users can now disable individual plugins in the Add-on Manager.
 - **Integration with Windows Vista.** Firefox's menus now display using Vista's native theme.
-- **Integration with Mac OS X.** Firefox now supports [Growl](http://growl.info/) for notifications of completed downloads and available updates.
+- **Integration with Mac OS X.** Firefox now supports [Growl](https://growl.info/) for notifications of completed downloads and available updates.
 - **Star button.** The new star button in the location bar lets you quickly add a new bookmark with a single click. A second click lets you file and tag your new bookmark.
 - **Tags.** You can now associate keywords with your bookmarks to easily sort them by topic.
 - **Location bar and auto-complete.** Type the title or tag of a page in the location bar to quickly find the site you were looking for in your history and bookmarks. Favicons, bookmark, and tag indicators help you see where the results are coming from.

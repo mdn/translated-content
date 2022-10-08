@@ -7,7 +7,7 @@ translation_of: Web/API/HTMLElement/lang
 
 The **`HTMLElement.lang`** property gets or sets the base language of an element's attribute values and text content.
 
-The language code returned by this property is defined in [RFC 1766](http://tools.ietf.org/html/rfc1766). Common examples include "en" for English, "ja" for Japanese, "es" for Spanish and so on. The default value of this attribute is `unknown`. Note that this attribute, though valid at the individual element level described here, is most often specified for the root element of the document.
+The language code returned by this property is defined in [RFC 1766](https://tools.ietf.org/html/rfc1766). Common examples include "en" for English, "ja" for Japanese, "es" for Spanish and so on. The default value of this attribute is `unknown`. Note that this attribute, though valid at the individual element level described here, is most often specified for the root element of the document.
 
 This also only works with the `lang` attribute and not with `xml:lang`.
 

@@ -8,7 +8,7 @@ O evento `click` event é disparado quando o botão de um dispositivo apontador 
 ## Informações gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-click)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-click)
 - Interface
   - : {{domxref("MouseEvent")}}
 - Bubbles
@@ -61,7 +61,7 @@ O evento `click` event é disparado quando o botão de um dispositivo apontador 
 
 ### Internet Explorer
 
-O Internet Explorer 8 e 9 apresentam um bug onde o elemento com a propriedade {{cssxref("background-color")}} é definida como [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword) that are overlaid on top of other element(s) won't receive `click` events. Todos os eventos `click` serão disparados no elemento underlying instead. Veja uma demonstração [neste exemplo](http://jsfiddle.net/YUKma/show/).
+O Internet Explorer 8 e 9 apresentam um bug onde o elemento com a propriedade {{cssxref("background-color")}} é definida como [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword) that are overlaid on top of other element(s) won't receive `click` events. Todos os eventos `click` serão disparados no elemento underlying instead. Veja uma demonstração [neste exemplo](https://jsfiddle.net/YUKma/show/).
 
 Soluções de contorno para este bug:
 
@@ -74,14 +74,14 @@ Soluções de contorno para este bug:
 
 ### Safari Mobile
 
-Safari Mobile 7.0+ (and likely earlier versions too) [suffers from a bug](https://bugs.webkit.org/show_bug.cgi?id=153887) where `click` events aren't fired on elements that aren't typically interactive (e.g. {{HTMLElement("div")}}) and which also don't have event listeners directly attached to the elements themselves (i.e. [event delegation](http://davidwalsh.name/event-delegate) is being used). See [this live example](http://jsfiddle.net/cvrhulu/k9t0sdnf/show/) for a demonstration. See also [Safari's docs on making elements clickable](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6) and the [definition of "clickable element"](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7).
+Safari Mobile 7.0+ (and likely earlier versions too) [suffers from a bug](https://bugs.webkit.org/show_bug.cgi?id=153887) where `click` events aren't fired on elements that aren't typically interactive (e.g. {{HTMLElement("div")}}) and which also don't have event listeners directly attached to the elements themselves (i.e. [event delegation](https://davidwalsh.name/event-delegate) is being used). See [this live example](https://jsfiddle.net/cvrhulu/k9t0sdnf/show/) for a demonstration. See also [Safari's docs on making elements clickable](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6) and the [definition of "clickable element"](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7).
 
 Known workarounds for this bug:
 
 - Set {{cssxref("cursor")}}`: pointer;` on the element or any of its ancestors.
 - Add a dummy `onclick="void(0)"` attribute to the element or any of its ancestors up to but not including {{HTMLElement("body")}}.
 - Use a typically interactive element (e.g. {{HTMLElement("a")}}) instead of one that isn't typically interactive (e.g. {{HTMLElement("div")}}).
-- Stop using `click` [event delegation](http://davidwalsh.name/event-delegate).
+- Stop using `click` [event delegation](https://davidwalsh.name/event-delegate).
 
 Safari Mobile considers the following elements to be typically interactive (and thus they aren't affected by this bug):
 

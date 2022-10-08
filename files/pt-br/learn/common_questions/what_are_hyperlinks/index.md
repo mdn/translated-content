@@ -82,7 +82,7 @@ Os links influenciam a rapidez com que um mecanismo de pesquisa se vincula ao se
 - Quanto mais _links de entrada_ uma página da web pode mostrar, melhor ela se classifica nos resultados de pesquisa.
 - _Links externos_ influenciam a classificação de pesquisa das páginas da web de origem e de destino, mas não está claro quanto.
 
-[SEO](http://en.wikipedia.org/wiki/Search_engine_optimization) (search engine optimization) é o estudo de como fazer com que os sites tenham uma classificação elevada nos resultados de pesquisa. Melhorar o uso de links em um site é uma técnica de SEO útil.
+[SEO](https://en.wikipedia.org/wiki/Search_engine_optimization) (search engine optimization) é o estudo de como fazer com que os sites tenham uma classificação elevada nos resultados de pesquisa. Melhorar o uso de links em um site é uma técnica de SEO útil.
 
 ## Próximos Passos
 

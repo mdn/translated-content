@@ -15,7 +15,7 @@ Você pode utilizar recursos avançados da API de áudio — que são específic
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Omissão de tag           | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Elementos pai permitidos | Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#flow_content), ou qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                                                                                                                                                 |
-| Documento normativo      | [HTML5, section 4.8.7](http://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Documento normativo      | [HTML5, section 4.8.7](https://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 ## Atributos
 
@@ -53,7 +53,7 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
 
 - {{ htmlattrdef("src") }}
-  - : A URL do áudio a ser incorporado. Isso é sujeito a [HTTP access controls](/pt-BR/docs/HTTP_access_control). Isto é opcional; ao invés disso você pode usar o elemento [`<source>`](http://developer.mozilla.org/en-US/docs/pt-BR/HTML/Element/source) dentro do bloco do áudio para especificar o vídeo a ser incorporado .
+  - : A URL do áudio a ser incorporado. Isso é sujeito a [HTTP access controls](/pt-BR/docs/HTTP_access_control). Isto é opcional; ao invés disso você pode usar o elemento [`<source>`](https://developer.mozilla.org/en-US/docs/pt-BR/HTML/Element/source) dentro do bloco do áudio para especificar o vídeo a ser incorporado .
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.
 
@@ -90,6 +90,6 @@ Reproduz o arquivo de áudio anexado a esse artigo.
 - [Introducing the audio API extension](/pt-BR/docs/Introducing_the_Audio_API_Extension)
 - [`HTMLAudioElement`](/pt-BR/docs/DOM/HTMLAudioElement)
 - [`nsIDOMHTMLMediaElement`](/pt-BR/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
-- [`video`](http://developer-new.mozilla.org/pt-BR/docs/HTML/Element/Video)
+- [`video`](https://developer-new.mozilla.org/pt-BR/docs/HTML/Element/Video)
 - [Using audio and video](/pt-BR/docs/Using_HTML5_audio_and_video)
-- [The `audio` element](http://www.whatwg.org/specs/web-apps/current-work/#audio) (Especificação HTML5)
+- [The `audio` element](https://www.whatwg.org/specs/web-apps/current-work/#audio) (Especificação HTML5)

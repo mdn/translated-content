@@ -25,8 +25,8 @@ var result = crypto.subtle.importKey(format, keyData, algo, extractable, usages)
 - _`format`_ é um valor enumerado descrevendo o formato de informação da key exportada. Podendo ser um dos seguintes:
 
   - `"raw"`, a key como um conjunto de bytes, normalmente uma key secreta.
-  - `"pkcs8"` uma key privada, no [IETF Public Key-Cryptographic Standard Encryption #8](http://tools.ietf.org/html/rfc5208).
-  - `"spki"`, normalmente uma key pública, no [Simple public key infrastructure](http://en.wikipedia.org/wiki/Simple_public-key_infrastructure) padrão.
+  - `"pkcs8"` uma key privada, no [IETF Public Key-Cryptographic Standard Encryption #8](https://tools.ietf.org/html/rfc5208).
+  - `"spki"`, normalmente uma key pública, no [Simple public key infrastructure](https://en.wikipedia.org/wiki/Simple_public-key_infrastructure) padrão.
   - `"jwk"`, a key no formato [JSON Web Key](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-41).
 
 - `keyData` é uma {{domxref("ArrayBuffer")}} ou uma {{domxref("JSONWebKey")}} contendo uma key no formato dado.

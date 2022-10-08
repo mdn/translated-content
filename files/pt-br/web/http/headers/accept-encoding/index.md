@@ -24,7 +24,7 @@ Até mesmo se o cliente e o servidor suportarem os mesmos algoritmos de compress
 
 Enquanto o valor de `identity`, que significa sem codificação, não é explicitamente proibido, por um `identity;q=0` ou um `*;q=0` sem qualquer outra atribuição explícita para a identidade, o servidor nunca deve mandar como resposta um erro {{HTTPStatus("406")}} `Not Acceptable`.
 
-> **Nota:** **Notas:**- Um registro da IANA mantém [a lista completa das codificações de conteúdo](http://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
+> **Nota:** **Notas:**- Um registro da IANA mantém [a lista completa das codificações de conteúdo](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
 >
 > - Duas outras codificações de conteúdo, `bzip` e `bzip2`, são algumas vezes utilizadas, entretanto não são o padrão. Elas implementam o algoritmo usado por estes dois programas UNIX. Note que o primeiro foi descontinuado por problemas de patente.
 
@@ -58,11 +58,11 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 ## Diretivas
 
 - `gzip`
-  - : Formato de compressão usando o [Lempel-Ziv coding](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77), com CRC de 32-bits.
+  - : Formato de compressão usando o [Lempel-Ziv coding](https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77), com CRC de 32-bits.
 - `compress`
-  - : Formato de compressão usando o algoritmo [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW).
+  - : Formato de compressão usando o algoritmo [Lempel-Ziv-Welch](https://en.wikipedia.org/wiki/LZW) (LZW).
 - `deflate`
-  - : Formato de compressão usando a estrutura [zlib](http://en.wikipedia.org/wiki/Zlib), com o algoritmo de compressão [_deflate_](http://en.wikipedia.org/wiki/DEFLATE).
+  - : Formato de compressão usando a estrutura [zlib](https://en.wikipedia.org/wiki/Zlib), com o algoritmo de compressão [_deflate_](https://en.wikipedia.org/wiki/DEFLATE).
 - `br`
   - : Formato de compressão usando o algoritmo de [Brotli](https://en.wikipedia.org/wiki/Brotli).
 - `identity`

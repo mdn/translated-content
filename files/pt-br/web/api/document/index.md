@@ -18,7 +18,7 @@ Um objeto document pode ser obtido por meio de várias APIs:
 
 Dependendo do tipo do documento (e.g. [HTML](/pt-BR/docs/HTML) ou [XML](/pt-BR/docs/XML)), diferentes APIs estarão disponívels no objeto **`Document`**.
 
-Todo objeto **`Document`** implementa a interface [`Document`](http://dom.spec.whatwg.org/#interface-document) (e consequentemente as interfaces {{domxref("Node")}} e {{domxref("EventTarget")}}). Portanto, as principais propriedades e métodos documentados nesta página estarão disponíveis para todos os tipos de documents.
+Todo objeto **`Document`** implementa a interface [`Document`](https://dom.spec.whatwg.org/#interface-document) (e consequentemente as interfaces {{domxref("Node")}} e {{domxref("EventTarget")}}). Portanto, as principais propriedades e métodos documentados nesta página estarão disponíveis para todos os tipos de documents.
 
 - Em navegadores mais atuais, alguns documentos (ex: aqueles que são servidos com o Content-Type `text/html`) também implementam a interface {{domxref("HTMLDocument")}}.
 - Em navegadores mais atuais, documentos SVG implementam a interface {{domxref("SVGDocument")}}.
@@ -316,6 +316,6 @@ Mozilla also define some non-standard methods:
 Microsoft defines some non-standard properties:
 
 - {{domxref("document.fileSize")}}\* {{non-standard_inline}} {{obsolete_inline}}
-  - : Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See [MSDN](http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx).Internet Explorer does not support all methods from the `Node` interface in the `Document` interface
+  - : Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See [MSDN](https://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx).Internet Explorer does not support all methods from the `Node` interface in the `Document` interface
 - {{domxref("document.contains")}}
   - : As a work-around, `document.body.contains()` can be used.

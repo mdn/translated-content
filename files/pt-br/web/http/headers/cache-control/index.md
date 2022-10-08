@@ -108,7 +108,7 @@ Cache-Control: stale-if-error=<seconds>
 - `proxy-revalidate`
   - : Mesmo que `must-revalidate`, mas só se aplica a caches compartilhados (p.ex., proxies) e é ignorado por um cache privado.
 - `immutable`
-  - : Indica que o corpo da resposta não mudará ao longo do tempo. O recurso, se ainda hábil, está inalterado no servidor e portanto o cliente não deverá enviar uma revalidação condicional para ele (p.ex. `If-None-Match` ou `If-Modified-Since`) a fim de verificar atualiações, mesmo quando o usuário recarrega explicitamente a página. Clientes que não reconhecem esta extensão devem ignorá-la, segundo a especificação HTTP. No Firefox, `immutable` é honrado somente em transações `https://`. Para mais informações, veja também este [blog post](http://bitsup.blogspot.de/2016/05/cache-control-immutable.html).
+  - : Indica que o corpo da resposta não mudará ao longo do tempo. O recurso, se ainda hábil, está inalterado no servidor e portanto o cliente não deverá enviar uma revalidação condicional para ele (p.ex. `If-None-Match` ou `If-Modified-Since`) a fim de verificar atualiações, mesmo quando o usuário recarrega explicitamente a página. Clientes que não reconhecem esta extensão devem ignorá-la, segundo a especificação HTTP. No Firefox, `immutable` é honrado somente em transações `https://`. Para mais informações, veja também este [blog post](https://bitsup.blogspot.de/2016/05/cache-control-immutable.html).
 
 ### Outros
 

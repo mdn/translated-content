@@ -352,4 +352,4 @@ Neste caso, o this da função interior não está definido, portanto ele retorn
 ## Veja também
 
 - [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
-- [All this](http://bjorn.tipling.com/all-this), um artigo sobre this em diferentes contextos
+- [All this](https://bjorn.tipling.com/all-this), um artigo sobre this em diferentes contextos

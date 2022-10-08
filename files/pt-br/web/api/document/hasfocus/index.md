@@ -50,7 +50,7 @@ function checkPageFocus() {
 
 function openWindow() {
   window.open (
-    "http://developer.mozilla.org/",
+    "https://developer.mozilla.org/",
     "mozdev",
     "width=640,
     height=300,

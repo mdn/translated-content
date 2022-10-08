@@ -8,7 +8,7 @@ original_slug: Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegado
 
 Todo navegador web moderno inclui um poderoso conjunto de ferramentas para desenvolvedores. Essas ferramentas fazem muitas coisas, desde inspecionar o HTML, CSS e JavaScript recém carregado e quais recursos foram requeridos até mostrar quanto tempo a página precisou para carregar. Este artigo explica como usar as funções básicas das ferramentas para desenvolvedores do seu navegador.
 
-> **Nota:** Antes de você executar os exemplos abaixo, abra o [Beginner's example site](http://mdn.github.io/beginner-html-site-scripted/) (site de exemplos do iniciante) que nós criamos durante o início da série de artigos da Web ( [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) ). Você poderá abrir isso enquanto segue os passos abaixo.
+> **Nota:** Antes de você executar os exemplos abaixo, abra o [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) (site de exemplos do iniciante) que nós criamos durante o início da série de artigos da Web ( [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) ). Você poderá abrir isso enquanto segue os passos abaixo.
 
 ## Como abrir o devtools no seu navegador
 
@@ -95,7 +95,7 @@ Você notará várias guias clicáveis na parte superior do Visualizador de CSS:
 Descubra mais sobre o Inspetor em diferentes navegadores:
 
 - [Inspetor de páginas do Firefox](/pt-BR/docs/Tools/Page_Inspector)
-- [IE DOM Explorer](http://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx)
+- [IE DOM Explorer](https://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx)
 - [Chrome DOM inspector](https://developer.chrome.com/devtools/docs/dom-and-styles) (Inspetor da Opera funciona da mesma forma)
 - [Inspetor do Safari DOM e explorador de estilo](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
@@ -204,7 +204,7 @@ Você começará a ver o tipo de erro que o navegador retorna. Muitas vezes, ess
 Descubra mais sobre o console JavaScript em diferentes navegadores:
 
 - [Firefox Web Console](/pt-BR/docs/Tools/Web_Console)
-- [IE JavaScript console](http://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx)
+- [IE JavaScript console](https://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx)
 - [Chrome JavaScript Console](https://developer.chrome.com/devtools/docs/console) (O inspetor do Ópera funciona da mesma forma)
 - [Safari Console](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 

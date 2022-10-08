@@ -370,4 +370,4 @@ Changes between blends mode are not interpolated. Any change occurs immediately.
 ## See also
 
 - Properties that use this data type: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
-- [Blend modes](http://en.wikipedia.org/wiki/Blend_modes)
+- [Blend modes](https://en.wikipedia.org/wiki/Blend_modes)

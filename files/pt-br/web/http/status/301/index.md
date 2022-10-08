@@ -35,7 +35,7 @@ Host: www.example.org
 
 ```
 HTTP/1.1 301 Moved Permanently
-Location: http://www.example.org/index.asp
+Location: https://www.example.org/index.asp
 ```
 
 ## Especificações

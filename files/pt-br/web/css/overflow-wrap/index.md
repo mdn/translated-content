@@ -45,7 +45,7 @@ FStrPrivFinÄndG (Gesetz zur Änderung des Fernstraßenbauprivatfinanzierungsges
 
 | Especificação                                                        | Status                           | Comentário |
 | -------------------------------------------------------------------- | -------------------------------- | ---------- |
-| [CSS Text Level 3](http://dev.w3.org/csswg/css3-text/#overflow-wrap) | {{ Spec2('CSS3 Text') }} |            |
+| [CSS Text Level 3](https://dev.w3.org/csswg/css3-text/#overflow-wrap) | {{ Spec2('CSS3 Text') }} |            |
 
 ## Compatibilidade com navegadores
 
@@ -53,4 +53,4 @@ FStrPrivFinÄndG (Gesetz zur Änderung des Fernstraßenbauprivatfinanzierungsges
 
 ## Veja também
 
-- Microsoft's original documentation: [MSDN Microsoft library word-wrap](<http://msdn.microsoft.com/en-us/library/ms531186(VS.85,loband).aspx>)
+- Microsoft's original documentation: [MSDN Microsoft library word-wrap](<https://msdn.microsoft.com/en-us/library/ms531186(VS.85,loband).aspx>)

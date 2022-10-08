@@ -25,7 +25,7 @@ Este exemplo cria um iframe que permite que a página inicial do Google seja uti
 
 ```html
 <div style="transform: rotate(90deg); transform-origin: bottom left;">
-  <iframe src="http://www.google.com/" width="500" height="600"></iframe>
+  <iframe src="https://www.google.com/" width="500" height="600"></iframe>
 </div>
 ```
 
@@ -39,7 +39,7 @@ Este exemplo cria um iframe que permite que você use a página inicial do Googl
 ```html
 <div style="transform: skewx(10deg) translatex(150px);
             transform-origin: bottom left;">
-  <iframe src="http://www.google.com/" width="600" height="500"></iframe>
+  <iframe src="https://www.google.com/" width="600" height="500"></iframe>
 </div>
 ```
 

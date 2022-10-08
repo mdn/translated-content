@@ -85,7 +85,7 @@ Now you know your target testing platforms, you should go back and review the re
 
 You should compile a list of the potential problem areas.
 
-> **Nota:** You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](http://caniuse.com/), for some further useful details.
+> **Nota:** You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](https://caniuse.com/), for some further useful details.
 
 Once you've agreed on these details, you can go ahead and start developing the site.
 
@@ -123,7 +123,7 @@ If you haven't got the means to test all those different browser, operating syst
 
 Another option is user groups — using a group of people outside your development team to test your site. This could be a group of friends or family, a group of other employees, a class at a local university, or a professional user testing setup, where people are paid to test out your site and provide results.
 
-Finally, you can get smarter with your testing using auditing or automation tools; this is a sensible choice as your projects get bigger, as doing all this testing by hand can start to take a really long time. You can set up your own testing automation system ([Selenium](http://www.seleniumhq.org/) being the popular app of choice) that could for example load your site in a number of different browsers, and:
+Finally, you can get smarter with your testing using auditing or automation tools; this is a sensible choice as your projects get bigger, as doing all this testing by hand can start to take a really long time. You can set up your own testing automation system ([Selenium](https://www.seleniumhq.org/) being the popular app of choice) that could for example load your site in a number of different browsers, and:
 
 - see if a button click causes something to happen successfully (like for example, a map displaying), displaying the results once the tests are completed
 - take a screenshot of each, allowing you to see if a layout is consistent across the different browsers.
@@ -138,7 +138,7 @@ It is often a good idea to test on prerelease versions of browsers; see the foll
 - [Edge Insider Preview](https://insider.windows.com/)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
-- [Opera Developer](http://www.opera.com/computer/beta)
+- [Opera Developer](https://www.opera.com/computer/beta)
 
 This is especially prevalent if you are using very new technologies in your site, and you want to test against the latest implementations, or if you are coming across a bug in the latest release version of a browser, and you want to see if the browser's developers have fixed the bug in a newer version.
 

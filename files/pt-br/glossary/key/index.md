@@ -14,7 +14,7 @@ Em {{Glossary("symmetric-key cryptography")}}, a mesma chave é utilizada para c
 
 ## Aprenda mais
 
-- [Kerckhoffs's principle](http://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) na Wikipedia
+- [Kerckhoffs's principle](https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) na Wikipedia
 
 ### Dicionário:
 

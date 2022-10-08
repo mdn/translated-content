@@ -53,21 +53,21 @@ Uma versão anterior da especificação também define estas interfaces agora re
 
 Não há qualquer limite em um único elemento da database. Entretanto podem haver limites quanto ao tamanho de cada banco de dados. Este limite (e a maneira com qual o usuário chega a ele) pode variar de um navegador para outro:
 
-- Firefox: não há limite no tamanho do banco de dados. A interface do usuário irá apenas pedir a permissão para armazenar conjuntos com tamanho maior que 50mb. Este limite de tamanho pode ser customizado através da preferência dom.indexedDB.warningQuota (que é definida em <http://mxr.mozilla.org/mozilla-central/source/modules/libpref/src/init/all.js>).
+- Firefox: não há limite no tamanho do banco de dados. A interface do usuário irá apenas pedir a permissão para armazenar conjuntos com tamanho maior que 50mb. Este limite de tamanho pode ser customizado através da preferência dom.indexedDB.warningQuota (que é definida em <https://mxr.mozilla.org/mozilla-central/source/modules/libpref/src/init/all.js>).
 - Google Chrome: veja [https://developers.google.com/chrome...rage#temporary](https://developers.google.com/chrome/whitepapers/storage#temporary)
 
 ## Exemplos
 
 - Um grande exemplo de para o que o indexedDb pode ser utilizado na web é o exemplo do Marco Castelluccion, vencedor do IndexedDB Mozilla DevDerby. A demonstração vencedora foi o eLibri, uma aplicação biblioteca e leitora de Ebook.
-- Você deveria também checar a referência de aplicações exemplo neste documento de referências: [Notificações de A Fazer](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([veja ao vivo](http://chrisdavidmills.github.io/to-do-notifications/)). Nem todo fragmento de código aparece neste exemplo, mas todo exemplo usa a mesma estrutura de dados e sintaxe, e fará sentido no contexto da aplicação.
+- Você deveria também checar a referência de aplicações exemplo neste documento de referências: [Notificações de A Fazer](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([veja ao vivo](https://chrisdavidmills.github.io/to-do-notifications/)). Nem todo fragmento de código aparece neste exemplo, mas todo exemplo usa a mesma estrutura de dados e sintaxe, e fará sentido no contexto da aplicação.
 
 ## Veja Também
 
 - [Conceitos Básicos sobre IndexedDB](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB)
 - [Utilizando IndexedDB](/pt-BR/docs/IndexedDB/Using_IndexedDB)
-- [Armazenando Imagens e Arquivos com IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
-- [Especificação da API de Indexed Database](http://www.w3.org/TR/IndexedDB/)
-- [IndexedDB — O armazenamento em seu Navegador](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
-- [IndexedDB Exemplos](http://nparashuram.com/IndexedDB/trialtool/index.html)
+- [Armazenando Imagens e Arquivos com IndexedDB](https://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
+- [Especificação da API de Indexed Database](https://www.w3.org/TR/IndexedDB/)
+- [IndexedDB — O armazenamento em seu Navegador](https://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
+- [IndexedDB Exemplos](https://nparashuram.com/IndexedDB/trialtool/index.html)
 - [IndexedDB Polyfill/Shim](https://github.com/axemclion/IndexedDBShim) para navegadores que apenas suportam WebSQL (e.g. mobile WebKit)
-- [JQuery IndexedDB plugin](http://nparashuram.com/IndexedDBShim/)
+- [JQuery IndexedDB plugin](https://nparashuram.com/IndexedDBShim/)

@@ -160,7 +160,7 @@ O código acima é um JSON perfeitamente válido. Você teria que acessar itens 
 
 - O JSON é puramente um formato de dados — contém apenas propriedades, sem métodos.
 - JSON requer aspas duplas para serem usadas em torno de strings e nomes de propriedades. Aspas simples não são válidas.
-- Mesmo uma única vírgula ou cólon perdidos podem fazer com que um arquivo JSON dê errado e não funcione. Você deve ter o cuidado de validar quaisquer dados que você esteja tentando usar (embora o JSON gerado por computador seja menos provável de incluir erros, desde que o programa gerador esteja funcionando corretamente). Você pode validar o JSON usando um aplicativo como o [JSONLint](http://jsonlint.com/).
+- Mesmo uma única vírgula ou cólon perdidos podem fazer com que um arquivo JSON dê errado e não funcione. Você deve ter o cuidado de validar quaisquer dados que você esteja tentando usar (embora o JSON gerado por computador seja menos provável de incluir erros, desde que o programa gerador esteja funcionando corretamente). Você pode validar o JSON usando um aplicativo como o [JSONLint](https://jsonlint.com/).
 - O JSON pode realmente assumir a forma de qualquer tipo de dados que seja válido para inclusão dentro do JSON, não apenas matrizes ou objetos. Por exemplo, uma única string ou número seria um objeto JSON válido.
 - Ao contrário do código JavaScript no qual as propriedades do objeto podem estar sem aspas, em JSON, somente strings entre aspas podem ser usadas como propriedades.
 
@@ -309,9 +309,9 @@ Em seguida, usamos um [loop for](/pt-BR/docs/Learn/JavaScript/Building_blocks/Lo
 5. Usamos outro loop `for` para percorrer os superpoderes do herói atual — para cada um criamos um elemento `<li>` colocamos o super poder dentro dele e colocamos o `listItem` dentro do elemento `<ul>` (`myList`) usando `appendChild()`.
 6. A última coisa que fizemos foi acrescentar os `<h2>`, `<p>`s, e `<ul>` dentro do `<article>` (`myArticle`), depois acrescentar o `<article>` dentro do `<section>`. A ordem em que as coisas são anexadas é importante, pois essa é a ordem em que elas serão exibidas dentro do HTML.
 
-> **Nota:** Se você está com problemas pegue um exemplo para trabalhar, tente nosso código fonte [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (veja isso [ao vivo](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) também.)
+> **Nota:** Se você está com problemas pegue um exemplo para trabalhar, tente nosso código fonte [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (veja isso [ao vivo](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) também.)
 
-> **Nota:** Se você está tendo problemas para seguir a notação ponto / colchete que estamos usando para acessar o objeto JavaScript, pode ajudar a abrir o arquivo [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) em outra guia ou em seu editor de texto, e consultá-lo enquanto observa nosso JavaScript. Você também pode consultar o artigo sobre conceitos [O básico de objetos JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Basics) para obter mais informações sobre a notação de pontos e colchetes.
+> **Nota:** Se você está tendo problemas para seguir a notação ponto / colchete que estamos usando para acessar o objeto JavaScript, pode ajudar a abrir o arquivo [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) em outra guia ou em seu editor de texto, e consultá-lo enquanto observa nosso JavaScript. Você também pode consultar o artigo sobre conceitos [O básico de objetos JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Basics) para obter mais informações sobre a notação de pontos e colchetes.
 
 ## Conversão entre objetos e texto
 
@@ -326,7 +326,7 @@ Mas às vezes não temos muita sorte — às vezes recebemos uma string JSON bru
 - [`parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): Aceita uma string JSON como um parâmetro e retorna o objeto JavaScript correspondente.
 - [`stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): Aceita um objeto como um parâmetro e retorna o formato equivalente de string JSON.
 
-Você pode ver o primeiro em ação em nosso exemplo [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) (veja o [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) — isso faz exatamente a mesma coisa que o exemplo que construímos anteriormente, exceto pelo fato de configurarmos o XHR para retornar texto JSON bruto, em seguida, usado `parse()` para convertê-lo em um objeto JavaScript real. O trecho principal do código está aqui:
+Você pode ver o primeiro em ação em nosso exemplo [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) (veja o [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) — isso faz exatamente a mesma coisa que o exemplo que construímos anteriormente, exceto pelo fato de configurarmos o XHR para retornar texto JSON bruto, em seguida, usado `parse()` para convertê-lo em um objeto JavaScript real. O trecho principal do código está aqui:
 
 ```js
 request.open('GET', requestURL);
@@ -362,7 +362,7 @@ Neste artigo, fornecemos um guia simples para usar o JSON em seus programas, inc
 - [Objeto XMLHttpRequest página de refência](/pt-BR/docs/Web/API/XMLHttpRequest)
 - [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest)
 - [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods)
-- [Site oficial JSON com o link para o padrão ECMA](http://json.org)
+- [Site oficial JSON com o link para o padrão ECMA](https://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 

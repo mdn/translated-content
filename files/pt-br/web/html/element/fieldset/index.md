@@ -328,7 +328,7 @@ fieldset.elist:hover input[type="radio"]:checked ~ label {
 
 - {{Bug(504622)}} - Fieldsets nunca diminui abaixo de sua largura min-intrinsic
 - [WebKit bug 123507](https://bugs.webkit.org/show_bug.cgi?id=123507) - `min-width: {{cssxref("-webkit-min-content")}}` sobre fieldset
-- [StackOverflow discussão com soluções alternativas para os bugs acima](http://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content)
+- [StackOverflow discussão com soluções alternativas para os bugs acima](https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content)
 
 ## Veja também
 

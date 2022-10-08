@@ -29,7 +29,7 @@ original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 | **Function**      | **Tecnologias**                                                                                                                                                                                                                                                               |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Audio**         | [Web Audio API](/pt-BR/docs/Web_Audio_API)                                                                                                                                                                                                                                    |
-| **Gráficos**      | [WebGL](/pt-BR/docs/WebGL) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                |
+| **Gráficos**      | [WebGL](/pt-BR/docs/WebGL) ([OpenGL ES](https://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                |
 | **Entrada**       | [Touch events](/pt-BR/docs/DOM/Touch_events), [Gamepad API](/pt-BR/docs/API/Gamepad/Using_Gamepad_API), sensores de dispositivos, [WebRTC](/pt-BR/docs/WebRTC), [Full Screen API](/pt-BR/docs/DOM/Using_fullscreen_mode), [Pointer Lock API](/pt-BR/docs/WebAPI/Pointer_Lock) |
 | **Linguagens**    | [JavaScript](/pt-BR/docs/JavaScript) (ou C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar o JavaScript)                                                                                                                                    |
 | **Networking**    | [WebRTC](/pt-BR/docs/WebRTC) e/ou [WebSockets](/pt-BR/docs/WebSockets)                                                                                                                                                                                                        |
@@ -47,7 +47,7 @@ original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 - [IndexedDB](/pt-BR/docs/IndexedDB)
   - : Armazene os dados de usuário em seu próprio computador ou dispositivo.
 - [JavaScript](/pt-BR/docs/JavaScript)
-  - : Linguagem de programação web rápida para escrever o código do seu jogo, para portar facilmente seus jogos existentes [Emscripten](https://github.com/kripken/emscripten/wiki) ou [Asm.js](http://asmjs.org/spec/latest/).
+  - : Linguagem de programação web rápida para escrever o código do seu jogo, para portar facilmente seus jogos existentes [Emscripten](https://github.com/kripken/emscripten/wiki) ou [Asm.js](https://asmjs.org/spec/latest/).
 - [Pointer Lock API](/pt-BR/docs/WebAPI/Pointer_Lock)
   - : Bloquei o mouse ou outro dispositivo apontador na interface do seu jogo.
 - [SVG](/pt-BR/docs/SVG) (Gráficos Vetorias Escaláveis)
@@ -58,7 +58,7 @@ original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 - [Web Audio API](/pt-BR/docs/Web_Audio_API)
   - : Controle a reprodução, síntese e manipulação de aúdio em tempo real.
 - [WebGL](/pt-BR/docs/WebGL)
-  - : Crie gráficos 2D e 3D acelerados por hardware de alto desempenho. [OpenGL ES](http://www.khronos.org/opengles/) 2.0.
+  - : Crie gráficos 2D e 3D acelerados por hardware de alto desempenho. [OpenGL ES](https://www.khronos.org/opengles/) 2.0.
 - [WebRTC](/pt-BR/docs/WebRTC)
   - : Comunicações em tempo real para controlar dados de aúdio e vídeo, incluindo teleconferência e transmissão de outros dados de aplicativos entre dois usuários, como bate-papo.
 - [WebSockets](/pt-BR/docs/WebSockets)

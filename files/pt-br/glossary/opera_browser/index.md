@@ -17,4 +17,4 @@ original_slug: Glossario/Navegador_Opera
 ### Conhecimento geral
 
 - {{Interwiki("wikipedia", "Opera")}} na Wikipedia
-- [Opera browser web site](http://www.opera.com/)
+- [Opera browser web site](https://www.opera.com/)

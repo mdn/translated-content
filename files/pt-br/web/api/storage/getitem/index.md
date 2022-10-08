@@ -54,7 +54,7 @@ function setStyles() {
 
 {{Compat("api.Storage.getItem")}}
 
-Os níveis de compatibilidade podem variar em todos os navegadores, tanto para o localStorage quanto para o sessionStorage. Aqui temos [estatísticas detalhadas dos níveis de compatibilidade para vários navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
+Os níveis de compatibilidade podem variar em todos os navegadores, tanto para o localStorage quanto para o sessionStorage. Aqui temos [estatísticas detalhadas dos níveis de compatibilidade para vários navegadores](https://dev-test.nemikor.com/web-storage/support-test/).
 
 > **Nota:**A partir da versão 5.1 do iOS, o Safari Mobile armazena os dados do localStorage na pasta do cache, sujeito a ser apagado em caso de espaço insificiente.
 

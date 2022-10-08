@@ -55,7 +55,7 @@ Obviously you can style the new button for opening the file picker as you wish.
 
 ### Dynamically adding a change listener
 
-If your input field was created using a JavaScript library such as [jQuery](http://www.jquery.com/), you'll need to use {{ domxref("element.addEventListener()") }} to add the `change` event listener, like this:
+If your input field was created using a JavaScript library such as [jQuery](https://www.jquery.com/), you'll need to use {{ domxref("element.addEventListener()") }} to add the `change` event listener, like this:
 
 ```js
 var inputElement = document.getElementById("inputField");
@@ -349,7 +349,7 @@ function FileUpload(img, file) {
           var canvas = self.ctrl.ctx.canvas;
           canvas.parentNode.removeChild(canvas);
       }, false);
-  xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
+  xhr.open("POST", "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
   xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
   reader.onload = function(evt) {
     xhr.sendAsBinary(evt.target.result);

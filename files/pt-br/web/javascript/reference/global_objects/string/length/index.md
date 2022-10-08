@@ -74,4 +74,4 @@ console.log(myString.length);
 
 ## Veja também
 
-- [JavaScript `String.length` and Internationalizing Web Applications](http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications)
+- [JavaScript `String.length` and Internationalizing Web Applications](https://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications)

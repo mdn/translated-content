@@ -92,14 +92,14 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 
 O padrão HTML não fornece uma lista de formatos de imagem que devem ser suportados, portanto, cada agente de usuário oferece suporte a um conjunto diferente de formatos. [Gecko](/pt-BR/docs/Mozilla/Gecko) suporta:
 
-- [JPEG](http://en.wikipedia.org/wiki/JPEG)
-- [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format), incluindo GIFs animados
-- [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
+- [JPEG](https://en.wikipedia.org/wiki/JPEG)
+- [GIF](https://en.wikipedia.org/wiki/Graphics_Interchange_Format), incluindo GIFs animados
+- [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)
 - [APNG](/pt-BR/docs/Animated_PNG_graphics) {{gecko_minversion_inline("1.9.2")}}
 - [SVG](/pt-BR/docs/SVG) {{gecko_minversion_inline("2.0")}}
-- [BMP](http://en.wikipedia.org/wiki/BMP_file_format)
-- [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
-- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29) {{gecko_minversion_inline("9.0")}}
+- [BMP](https://en.wikipedia.org/wiki/BMP_file_format)
+- [BMP ICO](https://en.wikipedia.org/wiki/ICO_%28file_format%29)
+- [PNG ICO](https://en.wikipedia.org/wiki/ICO_%28file_format%29) {{gecko_minversion_inline("9.0")}}
 
 ## Interação com CSS
 

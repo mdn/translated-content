@@ -443,7 +443,7 @@ Se você aceitou o "desafio" em [Tutorial Django Parte 8: Autenticação de usu�
 
 > **Nota:** Lembre que seu login de teste precisará ter a permissão "`catalog.can_mark_returned`" para acessar a página de renovação de livro (talvez use sua conta de superusuário).
 
-Você pode, alternativamente, construir manualmente uma URL de teste como esta — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/`) (um id válido de _bookinstance_ pode ser obtido navegando para a página de detalhes de um livro em sua biblioteca, e copiando o campo`id`).
+Você pode, alternativamente, construir manualmente uma URL de teste como esta — `https://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/`) (um id válido de _bookinstance_ pode ser obtido navegando para a página de detalhes de um livro em sua biblioteca, e copiando o campo`id`).
 
 ### Com o que se parece?
 
@@ -622,15 +622,15 @@ As páginas de criação, atualização e remoção de autor agora estão pronta
 
 Primeiro, efetue login no site com uma conta que possua as permissões que você decidiu que são necessárias para acessar a página de edição de autor.
 
-Então navegue para a página de criação de autor: `http://127.0.0.1:8000/catalog/author/create/`, que deve parecer como a captura de tela abaixo.
+Então navegue para a página de criação de autor: `https://127.0.0.1:8000/catalog/author/create/`, que deve parecer como a captura de tela abaixo.
 
 ![Form Example: Create Author](https://mdn.mozillademos.org/files/14223/forms_example_create_author.png)
 
-Entre com valores para os campos e então pressione **Submit** para dalvar o registro de autor. Você agora deve ser direcionado para uma visualização detalhada para o seu novo autor, com uma URL de algo como `http://127.0.0.1:8000/catalog/author/10`.
+Entre com valores para os campos e então pressione **Submit** para dalvar o registro de autor. Você agora deve ser direcionado para uma visualização detalhada para o seu novo autor, com uma URL de algo como `https://127.0.0.1:8000/catalog/author/10`.
 
-Você pode testar edição de registros enexando _/update/_ ao final da URL da página de detalhe (ex. `http://127.0.0.1:8000/catalog/author/10/update/`) — não mostramos uma captura de tela, porque se parace com a página de criação
+Você pode testar edição de registros enexando _/update/_ ao final da URL da página de detalhe (ex. `https://127.0.0.1:8000/catalog/author/10/update/`) — não mostramos uma captura de tela, porque se parace com a página de criação
 
-Finalmente, podemos excluir a página anexando _delete_ ao final da URL da visualização detalhada do autor (ex. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django deve exibir a página de exclusão mostrada abaixo. Pressione **Yes, delete.** para remover o registro e ser levado para a lista de todos os autores.
+Finalmente, podemos excluir a página anexando _delete_ ao final da URL da visualização detalhada do autor (ex. `https://127.0.0.1:8000/catalog/author/10/delete/`). Django deve exibir a página de exclusão mostrada abaixo. Pressione **Yes, delete.** para remover o registro e ser levado para a lista de todos os autores.
 
 ![](https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png)
 

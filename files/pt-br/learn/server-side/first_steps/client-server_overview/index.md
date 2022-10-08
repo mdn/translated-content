@@ -53,7 +53,7 @@ A requisição inclui:
 
 - Informações adicionais podem ser codificadas com a solicitação(por exemplo, dados de formulário HTML). As informações podem ser codificadas como :
 
-  - Paramêtros de URL : Solicitações `GET` codificam dados na URL enviada ao servidor, adicionando pares de nome/valor ao final dela— por exemplo, `http://mysite.com?name=Fred&age=11`. Você sempre tem um ponto de interrogação (`?`) separando o resto da URL dos paramêtros de URL, um sinal de igual (`=`) separando cada nome de seu valor associado , e um "E" comercial (`&`) separando cada par. Os paramêtros URL são inerentemente inseguros, pois podem ser alterados pelos usuários e reenviados. Como resultado, os parâmetros de URL/ solicitações GET não são usados para solicitações que atualizam dados no servidor.
+  - Paramêtros de URL : Solicitações `GET` codificam dados na URL enviada ao servidor, adicionando pares de nome/valor ao final dela— por exemplo, `https://mysite.com?name=Fred&age=11`. Você sempre tem um ponto de interrogação (`?`) separando o resto da URL dos paramêtros de URL, um sinal de igual (`=`) separando cada nome de seu valor associado , e um "E" comercial (`&`) separando cada par. Os paramêtros URL são inerentemente inseguros, pois podem ser alterados pelos usuários e reenviados. Como resultado, os parâmetros de URL/ solicitações GET não são usados para solicitações que atualizam dados no servidor.
   - `POST` data(dados de postagem). As solicitações POST adicionam novos recursos, cujos dados são codificados no corpo da solicitação.
   - Cookies do lado do cliente. Os cookies contêm dados de sessão sobre o cliente, incluindo chaves que o servidor pode usar para determinar seu status de login e permissões aos recursos.
 
@@ -67,7 +67,7 @@ Os sites estáticos e dinâmicos (discutidos nas seções a seguir) usam exatame
 
 Você pode fazer uma simples requisição GET clicando em um link ou buscando em um site (como uma simples ferramenta de pesquisa). Por exemplo, a requisição HTTP enviada quando você realiza uma busa na MDN pelo termo "cliente servidor visão geral" será muito parecido com o texto mostrado abaixo (não será identico porque partes da mensagem depente de seu navegador/configuração.
 
-> **Nota:** O formato das mensagens HTTP é definido em um "padrão da web" ([RFC7230](http://www.rfc-editor.org/rfc/rfc7230.txt)). Você não precisa saber esse nível de detalhe, mas pelo menos agora você sabe de onde vem tudo isso.
+> **Nota:** O formato das mensagens HTTP é definido em um "padrão da web" ([RFC7230](https://www.rfc-editor.org/rfc/rfc7230.txt)). Você não precisa saber esse nível de detalhe, mas pelo menos agora você sabe de onde vem tudo isso.
 
 #### A requisição
 
@@ -137,7 +137,7 @@ Content-Length: 41823
 
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
-<head prefix="og: http://ogp.me/ns#">
+<head prefix="og: https://ogp.me/ns#">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
@@ -196,7 +196,7 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **Nota:** As respostas e solicitações HTTP mostradas nesse exemplo foram capturadas utilizando o aplicativo [Fiddler](https://www.telerik.com/download/fiddler) , mas você pode obter informações semelhantes utilizando web sniffers (e.g. [Websniffer](http://websniffer.cc/)) ou extensões de navegador como o [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Você pode tentar isso sozinho. Use qualquer uma das ferramentas vinculadas e navegue por um site e edite as informações de perfil para ver os diferentes tipos de solicitações e respostas. A maioria dos navegadores possuem ferramentas que monitoram solicitações de rede(por exemplo, a ferramenta [Network Monitor](/pt-BR/docs/Tools/Network_Monitor) no Firefox).
+> **Nota:** As respostas e solicitações HTTP mostradas nesse exemplo foram capturadas utilizando o aplicativo [Fiddler](https://www.telerik.com/download/fiddler) , mas você pode obter informações semelhantes utilizando web sniffers (e.g. [Websniffer](https://websniffer.cc/)) ou extensões de navegador como o [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Você pode tentar isso sozinho. Use qualquer uma das ferramentas vinculadas e navegue por um site e edite as informações de perfil para ver os diferentes tipos de solicitações e respostas. A maioria dos navegadores possuem ferramentas que monitoram solicitações de rede(por exemplo, a ferramenta [Network Monitor](/pt-BR/docs/Tools/Network_Monitor) no Firefox).
 
 ## Sites estáticos
 

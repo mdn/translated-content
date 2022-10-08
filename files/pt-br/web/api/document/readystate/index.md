@@ -94,7 +94,7 @@ document.addEventListener('readystatechange', event => {
 
 ## Especificação
 
-- <http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness>
+- <https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness>
 
 ## Veja também
 

@@ -177,7 +177,7 @@ Para borrar um texto há um webkit baseado dos navegadores com o (prefixo) filtr
 
 ```html
  <p class="blur">Time to clean my glasses</p>
- <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <svg xmlns="https://www.w3.org/2000/svg" version="1.1">
   <defs>
     <filter id="wherearemyglasses" x="0" y="0">
       <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
@@ -217,5 +217,5 @@ O SVG é importado do arquivo com nome `resources.svg`, usando o clip-path com o
 **Veja também**
 
 - [SVG](/pt-BR/docs/SVG)
-- [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
-- ([\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/))
+- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
+- ([\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](https://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/))

@@ -33,7 +33,7 @@ Este elemento não é suportado, e portanto implementa a interface {{domxref("HT
 
 ## Especificação
 
-Este elemento não é padrão e não faz parte de nenhuma especificação. Se você não acredita em nós, [veja por si mesmo na especificação HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features).
+Este elemento não é padrão e não faz parte de nenhuma especificação. Se você não acredita em nós, [veja por si mesmo na especificação HTML](https://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features).
 
 ## Compatibilidade com navegadores
 
@@ -41,7 +41,7 @@ Este elemento não é padrão e não faz parte de nenhuma especificação. Se vo
 
 ## Veja também
 
-- [History of the creation of the HTML `<blink>` element](http://www.montulli.org/theoriginofthe%3Cblink%3Etag).
+- [History of the creation of the HTML `<blink>` element](https://www.montulli.org/theoriginofthe%3Cblink%3Etag).
 - {{cssxref("text-decoration")}}, onde existe um valor "blink", embora os navegadores não sejam obrigados a fazê-lo piscar.
 - {{htmlelement("marquee")}}, outro elemento não-padrão semelhante.
 - [CSS animations](/pt-BR/docs/Web/Guide/CSS/Using_CSS_animations) são o caminho correto para obter este efeito.

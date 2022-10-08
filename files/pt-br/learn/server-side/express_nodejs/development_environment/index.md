@@ -134,7 +134,7 @@ Uma maneira um pouco mais divertida de testar é criar um servidor web em "puro 
     }).listen(8000);
 
     // Imprima URL para acessar o servidor
-    console.log('Server running at http://127.0.0.1:8000/')
+    console.log('Server running at https://127.0.0.1:8000/')
     ```
 
     O código importa o módulo "http" e o utiliza para criar um servidor (`createServer()`) que escuta as requisições HTTP na porta 8000. O script, então, imprime a mensagem no console. A função `createServer()` recebe como argumento uma função callback que é chamada quando recebe uma requisição HTTP - isso retorna uma resposta com um status 200 ("OK") do HTTP e o texto "Hello World".
@@ -145,10 +145,10 @@ Uma maneira um pouco mais divertida de testar é criar um servidor web em "puro 
 
     ```bash
     >node hellonode.js
-    Server running at http://127.0.0.1:8000/
+    Server running at https://127.0.0.1:8000/
     ```
 
-3. Navegue até a URL (`http://127.0.0.1:8000/`). Se tudo estiver funcionando bem, o browser vai apresentar a frase "Hello World".
+3. Navegue até a URL (`https://127.0.0.1:8000/`). Se tudo estiver funcionando bem, o browser vai apresentar a frase "Hello World".
 
 ## Usando o NPM
 
@@ -242,11 +242,11 @@ Os passos seguintes mostram como baixar pacotes via NPM, salvá-los nas dependê
     Example app listening on port 8000
     ```
 
-6. Vá para a seguinte URL (`http://127.0.0.1:8000/`). Se tudo estiver funcionando corretamente, o browser vai mostrar a mensagem "Hello World!".
+6. Vá para a seguinte URL (`https://127.0.0.1:8000/`). Se tudo estiver funcionando corretamente, o browser vai mostrar a mensagem "Hello World!".
 
 ### Desenvolvendo dependências
 
-Se você utilizar uma dependência apenas durante o desenvolvimento da aplicação, é recomendado que você a salve como uma "development dependency". Dessa forma, o pacote não será utilizado no ambiente de produção. Por exemplo: caso utilizar o pacote [esling](http://eslint.org/) (JavaScript Linting), você faria a instalação via NPM da seguinte forma.
+Se você utilizar uma dependência apenas durante o desenvolvimento da aplicação, é recomendado que você a salve como uma "development dependency". Dessa forma, o pacote não será utilizado no ambiente de produção. Por exemplo: caso utilizar o pacote [esling](https://eslint.org/) (JavaScript Linting), você faria a instalação via NPM da seguinte forma.
 
 ```bash
 npm install eslint --save-dev
@@ -266,7 +266,7 @@ Assim, a esling vai aparecer da seguinte forma na lista de dependências do **pa
 
 Além de definir e buscar dependências, você também pode nomear scripts dentro do seu arquivo **package.json** e chamar o NPM para executá-lo a partir de um [run-script](https://docs.npmjs.com/cli/run-script) command. Essa abordagem é comum para automatizar testes e tarefas ao longo do desenvolvimento (por exemplo: minificar o JavaScript, reduzir imagens, LINT/análise de códigos, etc).
 
-> **Nota:** Ferramentas de automação de tarefas como o [Gulp](http://gulpjs.com/) e o [Grunt](http://gruntjs.com/) também podem ser utilizados, além de outros pacotes externos.
+> **Nota:** Ferramentas de automação de tarefas como o [Gulp](https://gulpjs.com/) e o [Grunt](https://gruntjs.com/) também podem ser utilizados, além de outros pacotes externos.
 
 Para definir o script que roda o _esling_, citado na seção acima, nós precisamos adicionar o seguinte bloco no nosso **package.json** (importante: sua aplicação precisa ter como source está na pasta /src/js):
 
@@ -360,7 +360,7 @@ O comando DEBUG gera um loggin bem útil, apresentando resultados, como abaixo:
   helloworld:server Listening on port 3000 +0ms
 ```
 
-Abre um browser e navegue para `http://127.0.0.1:3000/` e veja a página default apresentada pelo aplicativo.
+Abre um browser e navegue para `https://127.0.0.1:3000/` e veja a página default apresentada pelo aplicativo.
 
 ![Express - Generated App Default Screen](https://mdn.mozillademos.org/files/14331/express_default_screen.png)
 
@@ -376,7 +376,7 @@ No próximo artigo, nós vamos iniciar um tutorial para construir uma aplicaçã
 
 - [Downloads](https://nodejs.org/en/download/) página (nodejs.org)
 - [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org)
-- [Installing Express](http://expressjs.com/en/starter/installing.html) (expressjs.com)
+- [Installing Express](https://expressjs.com/en/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}

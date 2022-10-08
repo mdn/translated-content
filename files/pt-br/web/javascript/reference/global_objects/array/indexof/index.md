@@ -87,7 +87,7 @@ atualizarColecaoVegetais(vegetais, 'espinafre');
 
 ```js
 // Passos para a produção do ECMA-262, Edition 5, 15.4.4.14
-// Referência: http://es5.github.io/#x15.4.4.14
+// Referência: https://es5.github.io/#x15.4.4.14
 if (!Array.prototype.indexOf) {
   Array.prototype.indexOf = function(elementoDePesquisa, pontoInicial) {
 

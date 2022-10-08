@@ -117,8 +117,8 @@ Each shadow in the list (treating `none` as a 0-length list) is interpolated via
 
 ## Live examples
 
-- [box-shadow test](http://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
-- [box-shadow tutorial and examples](http://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
+- [box-shadow test](https://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
+- [box-shadow tutorial and examples](https://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
 - [Box Shadow CSS Generator](https://cssgenerator.org/box-shadow-css-generator.html)
 
 ## Specifications

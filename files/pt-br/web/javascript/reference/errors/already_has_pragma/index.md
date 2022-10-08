@@ -30,7 +30,7 @@ As fontes JavaScript são frequentemente combinadas e minificadas para tornar a 
 Configurando um source map usando um comentário no arquivo:
 
 ```js example-good
-//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+//# sourceMappingURL=https://example.com/path/to/your/sourcemap.map
 ```
 
 Ou, alternativamente, você pode definir um cabeçalho para seu arquivo JavaScript:

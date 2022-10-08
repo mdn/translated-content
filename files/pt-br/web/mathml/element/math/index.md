@@ -80,14 +80,14 @@ In addition to the following attributes, the `<math>` element accepts any attrib
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "https://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
  <title>MathML in XHTML</title>
 </head>
 <body>
 
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <math xmlns="https://www.w3.org/1998/Math/MathML">
     <mrow>
       <mrow>
         <msup>
@@ -112,7 +112,7 @@ In addition to the following attributes, the `<math>` element accepts any attrib
 </html>
 ```
 
-**Notes**: XHTML documents with MathML must be served as `application/xhtml+xml`. You can achieve that easily by adding the `.xhtml` extension to your local files. For Apache servers you can [configure your `.htaccess` file](http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype) to map extensions to the correct Mime type. Since you notate your MathML in an XML document, also be sure you write a well-formed XML document.
+**Notes**: XHTML documents with MathML must be served as `application/xhtml+xml`. You can achieve that easily by adding the `.xhtml` extension to your local files. For Apache servers you can [configure your `.htaccess` file](https://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype) to map extensions to the correct Mime type. Since you notate your MathML in an XML document, also be sure you write a well-formed XML document.
 
 ## Compatibilidade com navegadores
 

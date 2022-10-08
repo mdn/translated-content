@@ -11,7 +11,7 @@ tags:
   - XML
 translation_of: Web/MathML
 ---
-**Mathematical Markup Language (MathML)** é uma linguagem de marcação baseada em [XML](/pt-BR/docs/XML) para descrever notações matemáticas e capturar tanto a sua estrutura quanto seu conteúdo. Aqui você encontrará links para a documentação e exemplos, bem como ferramentas para o seu trabalho com esta poderosa tecnologia. Para uma visão rápida, veja os [slides da feira de inovação do Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html).
+**Mathematical Markup Language (MathML)** é uma linguagem de marcação baseada em [XML](/pt-BR/docs/XML) para descrever notações matemáticas e capturar tanto a sua estrutura quanto seu conteúdo. Aqui você encontrará links para a documentação e exemplos, bem como ferramentas para o seu trabalho com esta poderosa tecnologia. Para uma visão rápida, veja os [slides da feira de inovação do Mozilla Summit 2013](https://fred-wang.github.io/MozSummitMathML/index.html).
 
 ## Referências de MathML
 
@@ -30,18 +30,18 @@ translation_of: Web/MathML
   {{ DiscussionList("dev-tech-mathml", "mozilla.dev.tech.mathml") }}
 - [Canal IRC](irc://irc.mozilla.org/%23mathml)
 - [Wiki usado pelos colaboradores da Mozilla](https://wiki.mozilla.org/MathML:Home_Page)
-- [Página inicial da W3C Math](http://www.w3.org/Math/)
-- [Arquivo de e-mails www-math w3.org](http://lists.w3.org/Archives/Public/www-math/)
+- [Página inicial da W3C Math](https://www.w3.org/Math/)
+- [Arquivo de e-mails www-math w3.org](https://lists.w3.org/Archives/Public/www-math/)
 
 ## Ferramentas
 
-- [Validador W3C](http://validator.w3.org)
+- [Validador W3C](https://validator.w3.org)
 - [Extensão do Firefox FireMath](https://addons.mozilla.org/de/firefox/addon/8969/)
 - [Coleção de extensões Firefox Mathzilla](https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/)
-- [TeXZilla](https://github.com/fred-wang/TeXZilla) - Conversor de Javascript LaTeX para MathML ([live demo](http://fred-wang.github.io/TeXZilla/), [Firefox OS webapp](http://r-gaia-cs.github.io/TeXZilla-webapp/), [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/), [using in a Web Page, JS program etc](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
-- [LaTeXML](http://dlmf.nist.gov/LaTeXML/) - Conversão de documentos LaTeX para páginas web HTML+MathML
+- [TeXZilla](https://github.com/fred-wang/TeXZilla) - Conversor de Javascript LaTeX para MathML ([live demo](https://fred-wang.github.io/TeXZilla/), [Firefox OS webapp](https://r-gaia-cs.github.io/TeXZilla-webapp/), [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/), [using in a Web Page, JS program etc](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
+- [LaTeXML](https://dlmf.nist.gov/LaTeXML/) - Conversão de documentos LaTeX para páginas web HTML+MathML
 - [Web Equation](https://webdemo.myscript.com/views/math/index.html) - Transforma equações escritas a mão em MathML ou LaTeX
-- [MathJax](http://www.mathjax.org/) - Motor de visualização JavaScript entre navegadores para matemática. Veja também a [Extensão MathML Nativa MathJax](https://addons.mozilla.org/en-US/firefox/addon/mathjax-native-mathml/).
+- [MathJax](https://www.mathjax.org/) - Motor de visualização JavaScript entre navegadores para matemática. Veja também a [Extensão MathML Nativa MathJax](https://addons.mozilla.org/en-US/firefox/addon/mathjax-native-mathml/).
 
 ## Tópicos Relacionados
 

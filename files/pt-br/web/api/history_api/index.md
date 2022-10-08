@@ -64,18 +64,18 @@ Usar `history.pushState()` modifica a referência que é utilizada no cabeçalho
 
 ### Exemplo do método pushState()
 
-Suponha que `http://mozilla.org/foo.html` executa o seguinte JavaScript:
+Suponha que `https://mozilla.org/foo.html` executa o seguinte JavaScript:
 
 ```js
 const stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-Isto fará com que a barra URL mostre `http://mozilla.org/bar.html`, porém não fará com que o navegador carregue `bar.html` ou verifique se `bar.html` existe.
+Isto fará com que a barra URL mostre `https://mozilla.org/bar.html`, porém não fará com que o navegador carregue `bar.html` ou verifique se `bar.html` existe.
 
-Agora suponha que o usuário navegue para `http://google.com` e logo em seguida clique no botão Voltar. Nesse momento, a barra de URL mostrará `http://mozilla.org/bar.html`, e se você ler o `history.state` você receberá o `stateObj`. O evento `popstate` não será disparado pois a página foi recarregada. A página carregada será `bar.html`.
+Agora suponha que o usuário navegue para `https://google.com` e logo em seguida clique no botão Voltar. Nesse momento, a barra de URL mostrará `https://mozilla.org/bar.html`, e se você ler o `history.state` você receberá o `stateObj`. O evento `popstate` não será disparado pois a página foi recarregada. A página carregada será `bar.html`.
 
-Se clicarmos no botão Voltar novamente, a URL modificará para `http://mozilla.org/foo.html`, e o documento receberá um evento `popstate`, dessa vez com objeto de estado sendo nulo. Nesse momento, o documento também não altera seu conteúdo em relação ao passo anterior, porém o documento pode atualizar seu conteúdo manualmente após o recebimento do evento `popstate`.
+Se clicarmos no botão Voltar novamente, a URL modificará para `https://mozilla.org/foo.html`, e o documento receberá um evento `popstate`, dessa vez com objeto de estado sendo nulo. Nesse momento, o documento também não altera seu conteúdo em relação ao passo anterior, porém o documento pode atualizar seu conteúdo manualmente após o recebimento do evento `popstate`.
 
 ### O método pushState()
 
@@ -111,22 +111,22 @@ Em outros documentos, é criado um elemento com um namespace `null` de URI.
 
 ### Exemplo do método replaceState()
 
-Suponha que `http://mozilla.org/foo.html` execute o seguinte JavaScript:
+Suponha que `https://mozilla.org/foo.html` execute o seguinte JavaScript:
 
 ```js
 const stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-A explicação destas duas linhas acima pode ser encontrada na seção "Exemplo do método pushState()". Suponha, então, que `http://mozilla.org/bar.html` execute o seguinte JavaScript:
+A explicação destas duas linhas acima pode ser encontrada na seção "Exemplo do método pushState()". Suponha, então, que `https://mozilla.org/bar.html` execute o seguinte JavaScript:
 
 ```js
 history.replaceState(stateObj, "page 3", "bar2.html");
 ```
 
-Isso fará com que a barra de URL do navegador exiba `http://mozilla.org/bar2.html`, mas não fará com que o navegador carregue `bar2.html` ou cheque se `bar2.html` existe.
+Isso fará com que a barra de URL do navegador exiba `https://mozilla.org/bar2.html`, mas não fará com que o navegador carregue `bar2.html` ou cheque se `bar2.html` existe.
 
-Suponha agora que o usuário navegue até `http://www.microsoft.com` e, em seguida, clique no botão voltar. Neste momento, a barra de URL mostrará `http://mozilla.org/bar2.html`. Caso o usuário clique novamente no botão voltar, a barra de URL mostrará `http://mozilla.org/foo.html` e ignorará completamente `bar.html`.
+Suponha agora que o usuário navegue até `https://www.microsoft.com` e, em seguida, clique no botão voltar. Neste momento, a barra de URL mostrará `https://mozilla.org/bar2.html`. Caso o usuário clique novamente no botão voltar, a barra de URL mostrará `https://mozilla.org/foo.html` e ignorará completamente `bar.html`.
 
 ### O evento popstate
 

@@ -38,7 +38,7 @@ Certifique-se de colocar o DOCTYPE logo no início de seu documento HTML. Qualqu
 
 Em HTML5, o único propósito do DOCTYPE é de ativar o _full standards mode_. Versões mais antigas do padrão HTML deram significado adicional ao DOCTYPE, mas nenhum navegador jamais usou o DOCTYPE para qualquer outra coisa além de alternar entre o _quirks mode_ e o _standards mode_.
 
-Veja também uma descrição detalhada de [quando diferentes navegadores escolhem diferentes modos](http://hsivonen.iki.fi/doctype/).
+Veja também uma descrição detalhada de [quando diferentes navegadores escolhem diferentes modos](https://hsivonen.iki.fi/doctype/).
 
 ### XHTML
 

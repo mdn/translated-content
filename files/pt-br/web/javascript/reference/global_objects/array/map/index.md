@@ -102,7 +102,7 @@ var str = '12345';
 
 ### Exemplo: Caso de uso mais complexo
 
-[(inspirado nesse post)](http://www.wirfs-brock.com/allen/posts/166) (em inglês)
+[(inspirado nesse post)](https://www.wirfs-brock.com/allen/posts/166) (em inglês)
 
 É uma prática comum utilizar o callback com apenas um argumento (o elemento atual do array original). Algumas funções também são comumente utilizadas com um argumento, mesmo tendo argumentos adicionais opcionais. Esses hábitos podem resultar em comportamentos indesejado:
 
@@ -137,7 +137,7 @@ O método `map` foi introduzido ao padrão ECMA-262 na sua 5ª edição, o que s
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.19
-// Reference: http://es5.github.io/#x15.4.4.19
+// Reference: https://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
 
   Array.prototype.map = function(callback, thisArg) {
@@ -158,7 +158,7 @@ if (!Array.prototype.map) {
     var len = O.length >>> 0;
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
-    // See: http://es5.github.com/#x9.11
+    // See: https://es5.github.com/#x9.11
     if (typeof callback !== 'function') {
       throw new TypeError(callback + ' is not a function');
     }

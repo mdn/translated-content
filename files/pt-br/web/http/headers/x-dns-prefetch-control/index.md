@@ -70,10 +70,10 @@ Você pode reverter essa configuração configurando o `content` como "`on`".
 Você pode forçar a pesquisa de nomes de host específicos sem fornecer âncoras específicas usando esse nome de host com o uso de {{htmlattrxref ("rel", "link")}} no elemento {{HTMLElement ("link")}} com um tipo de link de `dns-prefetch`:
 
 ```html
-<link rel="dns-prefetch" href="http://www.spreadfirefox.com/">
+<link rel="dns-prefetch" href="https://www.spreadfirefox.com/">
 ```
 
-Neste exemplo, o nome de domínio "[www.spreadfirefox.com](http://www.spreadfirefox.com/)" será pré-resolvido.
+Neste exemplo, o nome de domínio "[www.spreadfirefox.com](https://www.spreadfirefox.com/)" será pré-resolvido.
 
 Da mesma forma, o elemento de link pode ser usado para resolver nomes de host sem fornecer uma URL completa, mas apenas, precedendo o nome do host com duas barras:
 
@@ -89,5 +89,5 @@ Pré-busca forçada de nomes de host pode ser útil, por exemplo, na página ini
 
 ## Veja também
 
-- [DNS Prefetching for Firefox (blog post)](http://bitsup.blogspot.com/2008/11/dns-prefetching-for-firefox.html)
-- [Google Chrome handles DNS prefetching control](http://dev.chromium.org/developers/design-documents/dns-prefetching)
+- [DNS Prefetching for Firefox (blog post)](https://bitsup.blogspot.com/2008/11/dns-prefetching-for-firefox.html)
+- [Google Chrome handles DNS prefetching control](https://dev.chromium.org/developers/design-documents/dns-prefetching)

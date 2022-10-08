@@ -85,7 +85,7 @@ Você não precisa aprender sobre o funcionamento interno de objetos estruturado
 
 ## Funções personalizadas
 
-Nós vimos também várias funções personalizadas no curso até agora — funções definidas em seu código, não dentro do navegador. Sempre que você viu um nome personalizado com parênteses logo após ele, você estava usando funções personalizadas. em nosso exemplo [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) (veja também o [código fonte](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) completo) de nosso [loops article](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code), nós incluimos a função personalizada `draw()` que era semelhante a essa:
+Nós vimos também várias funções personalizadas no curso até agora — funções definidas em seu código, não dentro do navegador. Sempre que você viu um nome personalizado com parênteses logo após ele, você estava usando funções personalizadas. em nosso exemplo [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) (veja também o [código fonte](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) completo) de nosso [loops article](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code), nós incluimos a função personalizada `draw()` que era semelhante a essa:
 
 ```js
 function draw() {
@@ -275,7 +275,7 @@ function greeting() {
 
 Ambas as funções que você quer chamar são chamadas `greeting()`, mas você só pode acessar o arquivo `second.js` da função `greeting()` — Ele é aplicado no HTML depois no código fonte, então suas variáveis e funções sobrescrevem as de `first.js`.
 
-> **Nota:** Você pode ver este exemplo [rodando no GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (veja também [o código fonte](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
+> **Nota:** Você pode ver este exemplo [rodando no GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (veja também [o código fonte](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
 
 Manter parte de seus código trancada em funções evita tais problemas, e é considerado boa prática.
 

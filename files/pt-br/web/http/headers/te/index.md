@@ -43,11 +43,11 @@ TE: trailers, deflate;q=0.5
 ## Diretivas
 
 - `compress`
-  - : Um formato usando o algoritmo de [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW) é aceito como nome de codificação de transferência.
+  - : Um formato usando o algoritmo de [Lempel-Ziv-Welch](https://en.wikipedia.org/wiki/LZW) (LZW) é aceito como nome de codificação de transferência.
 - `deflate`
-  - : Usar a estrutura [zlib](http://en.wikipedia.org/wiki/Zlib) é aceito como nome da codificação de transferência.
+  - : Usar a estrutura [zlib](https://en.wikipedia.org/wiki/Zlib) é aceito como nome da codificação de transferência.
 - `gzip`
-  - : Um formato usando a [codificação Lempel-Ziv](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77), com um CRC 32-bit é aceito como nome da codificação de transferência.
+  - : Um formato usando a [codificação Lempel-Ziv](https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77), com um CRC 32-bit é aceito como nome da codificação de transferência.
 - `trailers`
   - : Indica que o cliente está sujeito a aceitar campos _trailer_ em uma codificação de transferência fragmentada.
 - `q`

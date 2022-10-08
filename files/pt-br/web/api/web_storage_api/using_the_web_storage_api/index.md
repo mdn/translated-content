@@ -28,7 +28,7 @@ localStorage['corDefinida'] = '#a4509b';
 localStorage.setItem('corDefinida', '#a4509b');
 ```
 
-> **Nota:** Recomendamos que você utilize a API Web Storage (`setItem`, `getItem`, `removeItem`, `key`, `length`) para evitar as [armadilhas](http://www.2ality.com/2012/01/objects-as-maps.html) associadas ao uso de objetos literais como mapas de chave-valor.
+> **Nota:** Recomendamos que você utilize a API Web Storage (`setItem`, `getItem`, `removeItem`, `key`, `length`) para evitar as [armadilhas](https://www.2ality.com/2012/01/objects-as-maps.html) associadas ao uso de objetos literais como mapas de chave-valor.
 
 Os dois mecanismos presentes na Web Storage são os seguintes:
 

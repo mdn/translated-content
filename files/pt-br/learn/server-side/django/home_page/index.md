@@ -255,7 +255,7 @@ Crie um novo arquivo **_base_generic.html_ **em **/locallibrary/catalog/template
 </html>
 ```
 
-O template inclui CSS de [Bootstrap](http://getbootstrap.com/) para melhorar o layout e a apresentação da página HTML. O uso do Bootstrap (ou outra estrutura da Web do lado do cliente) é uma maneira rápida de criar uma página atraente que é exibida bem em diferentes tamanhos de tela.
+O template inclui CSS de [Bootstrap](https://getbootstrap.com/) para melhorar o layout e a apresentação da página HTML. O uso do Bootstrap (ou outra estrutura da Web do lado do cliente) é uma maneira rápida de criar uma página atraente que é exibida bem em diferentes tamanhos de tela.
 
 O template base também faz referência a um arquivo css local (**styles.css**) que fornece estilo adicional. Criar um arquivo **styles.css** em** **/locallibrary/catalog/static/css/** e cole o seguinte código no arquivo:
 
@@ -364,7 +364,7 @@ TEMPLATES = [
 
 ## Com o que se parece?
 
-Neste ponto, criamos todos os recursos necessários para exibir a página index. Execute o servidor (`python3 manage.py runserver`) e abra `http://127.0.0.1:8000/` no seu navegador. Se tudo estiver configurado corretamente, seu site deverá ter a seguinte captura de tela.
+Neste ponto, criamos todos os recursos necessários para exibir a página index. Execute o servidor (`python3 manage.py runserver`) e abra `https://127.0.0.1:8000/` no seu navegador. Se tudo estiver configurado corretamente, seu site deverá ter a seguinte captura de tela.
 
 ![Index page for LocalLibrary website](https://mdn.mozillademos.org/files/14045/index_page_ok.png)
 

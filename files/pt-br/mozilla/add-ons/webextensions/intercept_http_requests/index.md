@@ -124,7 +124,7 @@ O "manifest.json" pode permanecer do mesmo jeito.
 Modifique o "background.js" com este código:
 
 ```js
-var targetPage = "http://useragentstring.com/*";
+var targetPage = "https://useragentstring.com/*";
 
 var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
@@ -150,7 +150,7 @@ O event listener será chamada somente para requisitar as URLs que batem com o [
 
 A função listener procura pelo cabeçalho "User-Agent" no array de cabeçalhos da requisição, substitui seu valor com o valor `ua` da variável, e retorna o array modificado. Este array modificado será agora enviado para o servidor.
 
-Teste abrindo [useragentstring.com](http://useragentstring.com/) e veja como ele identifica o navegador como sendo o Firefox. Então, recarregue a extensão, recarregue também o [useragentstring.com](http://useragentstring.com/) e veja que agora o Firefox é identificado como Opera:
+Teste abrindo [useragentstring.com](https://useragentstring.com/) e veja como ele identifica o navegador como sendo o Firefox. Então, recarregue a extensão, recarregue também o [useragentstring.com](https://useragentstring.com/) e veja que agora o Firefox é identificado como Opera:
 
 {{EmbedYouTube("SrSNS1-FIx0")}}
 

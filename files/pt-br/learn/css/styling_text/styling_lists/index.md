@@ -102,7 +102,7 @@ Browsers diferem na maneira de implementar os estilos para listas. Não espere q
 
 ### Contadores
 
-**Nota:** Alguns navegadores não suportam contadores. O [conteúdo CSS e compatibilidade do navegador](http://www.quirksmode.org/css/contents.html) página no [site de modo Quirks](http://www.quirksmode.org/) contém um gráfico detalhado de compatibilidade do navegador para este e outros recursos CSS. Páginas individuais na [referência CSS](/pt-BR/docs/Web/CSS/Reference) neste local também têm tabelas de compatibilidade do navegador.
+**Nota:** Alguns navegadores não suportam contadores. O [conteúdo CSS e compatibilidade do navegador](https://www.quirksmode.org/css/contents.html) página no [site de modo Quirks](https://www.quirksmode.org/) contém um gráfico detalhado de compatibilidade do navegador para este e outros recursos CSS. Páginas individuais na [referência CSS](/pt-BR/docs/Web/CSS/Reference) neste local também têm tabelas de compatibilidade do navegador.
 
 Você pode usar contadores para numerar quaisquer elementos, não somente itens da lista. Por exemplo, em alguns documentos você pode querer numerar cabeçalhos ou parágrafos.
 
@@ -156,7 +156,7 @@ Você não pode usar os contadores a menos que você sabe que todo mundo que lê
 
 Se você é capaz de usar contadores, eles têm a vantagem de que você pode estilizar os contadores separadamente dos itens da lista. No exemplo acima, os contadores estão em negrito mas os itens da lista não são.
 
-Você também pode usar contadores em formas mais complexas, por exemplo, para numerar seções, títulos, subtítulos e parágrafos em documentos formais. Para mais detalhes, consulte [contadores automáticos e numeração](http://www.w3.org/TR/CSS21/generate.html#counters) em CSS Specification.
+Você também pode usar contadores em formas mais complexas, por exemplo, para numerar seções, títulos, subtítulos e parágrafos em documentos formais. Para mais detalhes, consulte [contadores automáticos e numeração](https://www.w3.org/TR/CSS21/generate.html#counters) em CSS Specification.
 
 ## Listas denominadas: Ação
 

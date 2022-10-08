@@ -384,7 +384,7 @@ Mova a bola usando seu mouse e libere - o com um clique.
 
 ## Sair
 
-Este curto capítulo somente explica algumas técnicas para criar as mais avançadas animações. Há muito mais! Como adicionar um paddle, alguns bricks, e tornar este demo dentro de um jogo [Breakout](http://en.wikipedia.org/wiki/Breakout_%28video_game%29)? Cheque a nossa área de Desenvolvimento de jogos para mais artigos de jogos.
+Este curto capítulo somente explica algumas técnicas para criar as mais avançadas animações. Há muito mais! Como adicionar um paddle, alguns bricks, e tornar este demo dentro de um jogo [Breakout](https://en.wikipedia.org/wiki/Breakout_%28video_game%29)? Cheque a nossa área de Desenvolvimento de jogos para mais artigos de jogos.
 
 ## Veja também:
 

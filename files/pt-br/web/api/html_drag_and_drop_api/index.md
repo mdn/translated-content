@@ -92,7 +92,7 @@ function dragstart_handler(ev) {
   // Adiciona os dados do arraste (drag)
   ev.dataTransfer.setData("text/plain", ev.target.id);
   ev.dataTransfer.setData("text/html", "<p>Parágrafo de exemplo</p>");
-  ev.dataTransfer.setData("text/uri-list", "http://developer.mozilla.org");
+  ev.dataTransfer.setData("text/uri-list", "https://developer.mozilla.org");
 }
 ```
 
@@ -209,8 +209,8 @@ Como podem ser visto no [DataTransferItem interface's Browser Compatibility tabl
 ## Exemplos e demonstrações
 
 - [Copiando e movendo elementos com a interface `DataTransfer`](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
-- [Copiando e movendo elementos com a interface `DataTransferListItem`](http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- Arrastando e soltando arquivos; Apenas para o Firefox: <http://jsfiddle.net/9C2EF/>
+- [Copiando e movendo elementos com a interface `DataTransferListItem`](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
+- Arrastando e soltando arquivos; Apenas para o Firefox: <https://jsfiddle.net/9C2EF/>
 - Arrastando e soltando arquivos; Todos os navegadores: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 
 ## Veja também
@@ -219,4 +219,4 @@ Como podem ser visto no [DataTransferItem interface's Browser Compatibility tabl
 - [Arrastando e Soltando múltiplos elementos](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Tipos re arraste (Drag Types) recomendados](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
-- [Dados de unteroperabilidade Drag and Drop de acordo com o CanIUse](http://caniuse.com/#search=draganddrop)
+- [Dados de unteroperabilidade Drag and Drop de acordo com o CanIUse](https://caniuse.com/#search=draganddrop)

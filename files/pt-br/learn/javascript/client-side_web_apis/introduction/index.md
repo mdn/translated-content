@@ -97,7 +97,7 @@ APIs de terceiros são bastante variadas. Dentre as mais populares, que você ev
 - The [YouTube API](https://developers.google.com/youtube/), which allows you to embed YouTube videos on your site, search YouTube, build playlists, and more.
 - The [Twilio API](https://www.twilio.com/), which provides a framework for building voice and video call functionality into your app, sending SMS/MMS from your apps, and more.
 
-> **Nota:** Você pode encontrar informações sobre muitas outras APIs de terceiros no [Programmable Web API directory](http://www.programmableweb.com/category/all/apis).
+> **Nota:** Você pode encontrar informações sobre muitas outras APIs de terceiros no [Programmable Web API directory](https://www.programmableweb.com/category/all/apis).
 
 ## Como as APIs funcionam?
 
@@ -115,7 +115,7 @@ Let's return to the example of the Geolocation API — this is a very simple API
 - {{domxref("Position")}}, which represents the position of a device at a given time — this contains a {{domxref("Coordinates")}} object that contains the actual position information, plus a timestamp representing the given time.
 - {{domxref("Coordinates")}}, which contains a whole lot of useful data on the device position, including latitude and longitude, altitude, velocity and direction of movement, and more.
 
-So how do these objects interact? If you look at our [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) example ([see it live also](http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), you'll see the following code:
+So how do these objects interact? If you look at our [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) example ([see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), you'll see the following code:
 
 ```js
 navigator.geolocation.getCurrentPosition(function(position) {
@@ -222,7 +222,7 @@ Ball.prototype.draw = function() {
 };
 ```
 
-> **Nota:** You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (see it [running live](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
+> **Nota:** You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (see it [running live](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
 
 ### Usam eventos para lidar com mudanças de estado
 
@@ -246,7 +246,7 @@ request.onload = function() {
 }
 ```
 
-> **Nota:** You can see this code in action in our [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) example ([see it live](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
+> **Nota:** You can see this code in action in our [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) example ([see it live](https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
 
 The first five lines specify the location of resource we want to fetch, create a new instance of a request object using the `XMLHttpRequest()` constructor, open an HTTP `GET` request to retrieve the specified resource, specify that the response should be sent in JSON format, then send the request.
 

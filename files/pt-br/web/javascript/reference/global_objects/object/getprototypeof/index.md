@@ -57,5 +57,5 @@ Embora as versões mais antigas do Opera não suportem `Object.getPrototypeOf()`
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
 - {{jsxref("Object.prototype.__proto__")}}
-- John Resig's post on [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
+- John Resig's post on [getPrototypeOf](https://ejohn.org/blog/objectgetprototypeof/)
 - {{jsxref("Reflect.getPrototypeOf()")}}

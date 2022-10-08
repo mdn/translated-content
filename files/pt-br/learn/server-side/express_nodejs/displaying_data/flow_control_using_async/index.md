@@ -7,11 +7,11 @@ O código da _Controller_, para algumas de nossas páginas dependerá dos result
 
 > **Nota:** Há várias outras maneiras de gerenciar o comportamento assíncrono e o controle de fluxo em JavaScript, um dos recursos Javascript que pode ser utilizado, são as [Promises](/pt-BR/docs/Mozilla/Add-ons/Techniques/Promises).
 
-Async has a lot of useful methods (check out [the documentation](http://caolan.github.io/async/docs.html)). Some of the more important functions are:
+Async has a lot of useful methods (check out [the documentation](https://caolan.github.io/async/docs.html)). Some of the more important functions are:
 
-- [`async.parallel()`](http://caolan.github.io/async/docs.html#parallel) executa qualquer operação que deva ser processada em paralelo.
-- [`async.series()`](http://caolan.github.io/async/docs.html#series) garante que as operações assíncronas sejam executadas em série.
-- [`async.waterfall()`](http://caolan.github.io/async/docs.html#waterfall) operações que devem ser executadas em série, baseando-se no resultado de cada operação anterior.
+- [`async.parallel()`](https://caolan.github.io/async/docs.html#parallel) executa qualquer operação que deva ser processada em paralelo.
+- [`async.series()`](https://caolan.github.io/async/docs.html#series) garante que as operações assíncronas sejam executadas em série.
+- [`async.waterfall()`](https://caolan.github.io/async/docs.html#waterfall) operações que devem ser executadas em série, baseando-se no resultado de cada operação anterior.
 
 ## Por que isso é necessário ?
 
@@ -31,13 +31,13 @@ exports.example_model_count = function(req, res, next) {
 }
 ```
 
-However what if you need to make **multiple** asynchronous queries, and you can't render the page until all the operations have completed? A naive implementation could "daisy chain" the requests, kicking off subsequent requests in the callback of a previous request, and rendering the response in the final callback. The problem with this approach is that our requests would have to be run in series, even though it might be more efficient to run them in parallel. This could also result in complicated nested code, commonly referred to as [callback hell](http://callbackhell.com/).
+However what if you need to make **multiple** asynchronous queries, and you can't render the page until all the operations have completed? A naive implementation could "daisy chain" the requests, kicking off subsequent requests in the callback of a previous request, and rendering the response in the final callback. The problem with this approach is that our requests would have to be run in series, even though it might be more efficient to run them in parallel. This could also result in complicated nested code, commonly referred to as [callback hell](https://callbackhell.com/).
 
 A much better solution would be to execute all the requests in parallel and then have a single callback that executes when all of the queries have completed. This is the sort of flow operation that the _Async_ module makes easy!
 
 ## Operações assíncronas em paralelo
 
-The method [`async.parallel()`](http://caolan.github.io/async/docs.html#parallel) is used to run multiple asynchronous operations in parallel.
+The method [`async.parallel()`](https://caolan.github.io/async/docs.html#parallel) is used to run multiple asynchronous operations in parallel.
 
 The first argument to `async.parallel()` is a collection of the asynchronous functions to run (an array, object or other iterable). Each function is passed a `callback(err, result)` which it must call on completion with an error `err` (which can be `null`) and an optional `results` value.
 
@@ -63,7 +63,7 @@ If you instead pass an array of functions as the first argument, the results wil
 
 ## Operações assíncronas em série
 
-The method [`async.series()`](http://caolan.github.io/async/docs.html#series) is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as `async.parallel()`.
+The method [`async.series()`](https://caolan.github.io/async/docs.html#series) is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as `async.parallel()`.
 
 ```js
 async.series({
@@ -101,7 +101,7 @@ async.series([
 
 ## Operações assíncronas dependentes em série
 
-The method [`async.waterfall()`](http://caolan.github.io/async/docs.html#waterfall) is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.
+The method [`async.waterfall()`](https://caolan.github.io/async/docs.html#waterfall) is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.
 
 The callback invoked by each asynchronous function contains `null` for the first argument and results in subsequent arguments. Each function in the series takes the results arguments of the previous callback as the first parameters, and then a callback function. When all operations are complete, a final callback is invoked with the result of the last operation. The way this works is more clear when you consider the code fragment below (this example is from the _async_ documentation):
 

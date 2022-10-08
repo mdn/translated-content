@@ -211,5 +211,5 @@ img.middle { vertical-align: middle; }
 ## Veja também
 
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
-- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
-- [All You Need To Know About Vertical-Align](http://christopheraue.net/2014/03/05/vertical-align/)
+- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](https://phrogz.net/css/vertical-align/index.html)
+- [All You Need To Know About Vertical-Align](https://christopheraue.net/2014/03/05/vertical-align/)

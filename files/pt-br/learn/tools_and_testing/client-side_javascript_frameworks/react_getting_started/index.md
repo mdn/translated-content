@@ -273,7 +273,7 @@ A função `App` retrona uma expressão JSX. Essa expressão define o que, no fi
 
 Alguns elementos na expressão têm atributos, que são escritos assim como no HTML, seguindo o seguinte padrão de `atributo="valor"`. Na linha 3, a tag [`<div>`](/en-US/docs/Web/HTML/Element/div) de abertaura tem o atributo _`className`_. Isso é o mesmo que o atributo [`class`](/pt-BR/docs/Web/HTML/Global_attributes/class)no HTML, porém por conta do JSX ser Javascript, nós não podemos utilizar a palavra `class` — esta é reservada, isso quer dizer que o JavaScript já utiliza-a para um propósito específico e causaria problemas no nosso código inseri-lá aqui. Alguns outros atributos de HTML são escritos diferentes em JSX em comparação com o HTML, pela mesma razão. Nós falaremos sobre estes quando encontrarmos os mesmos.
 
-Tome um momento para mudar a _tag_ [`<p>`](/en-US/docs/Web/HTML/Element/p) na linha 6 para que esta diga "Hello, world!", e então salve o arquivo. Você irá notar que esta mudança é imediatamente refletida e renderiza no servidor de desenvolvimento executando em `http://localhost:3000` em seu navegador. Agora delete a _tag_ [`<a>`](/en-US/docs/Web/HTML/Element/a) e salve; o link _"Learn React"_ vai desaparecer.
+Tome um momento para mudar a _tag_ [`<p>`](/en-US/docs/Web/HTML/Element/p) na linha 6 para que esta diga "Hello, world!", e então salve o arquivo. Você irá notar que esta mudança é imediatamente refletida e renderiza no servidor de desenvolvimento executando em `https://localhost:3000` em seu navegador. Agora delete a _tag_ [`<a>`](/en-US/docs/Web/HTML/Element/a) e salve; o link _"Learn React"_ vai desaparecer.
 
 Seu componente `App` deve estar assim agora:
 

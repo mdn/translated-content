@@ -132,7 +132,7 @@ function changeGridAutoFlow() {
 
 - Propriedades CSS relacionadas: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
 - Guia de Grid Layout: _[Arrumação automática no grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
-- Video tutorial: _[Introduzindo arrumação automática no grid e ordem](http://gridbyexample.com/video/series-auto-placement-order/)_
+- Video tutorial: _[Introduzindo arrumação automática no grid e ordem](https://gridbyexample.com/video/series-auto-placement-order/)_
 
 1. [**CSS**](/pt-BR/docs/Web/CSS)
 2. [**CSS Reference**](/pt-BR/docs/Web/CSS/Reference)

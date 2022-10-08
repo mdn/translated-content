@@ -120,9 +120,9 @@ Specifies a 2D transformation matrix comprised of the specified six values. This
 
 #### <br>See also
 
-- [Examples of linear transformation matrices](http://en.wikipedia.org/wiki/Linear_transformation#Examples_of_linear_transformation_matrices) Wikipedia
-- [Coordinate transformation matrices](http://www.mathamazement.com/Lessons/Pre-Calculus/08_Matrices-and-Determinants/coordinate-transformation-matrices.html) mathamazement.com
-- [Microsoft's matrix filter](<http://msdn.microsoft.com/en-us/library/ms533014(VS.85,loband).aspx>) MSDN
+- [Examples of linear transformation matrices](https://en.wikipedia.org/wiki/Linear_transformation#Examples_of_linear_transformation_matrices) Wikipedia
+- [Coordinate transformation matrices](https://www.mathamazement.com/Lessons/Pre-Calculus/08_Matrices-and-Determinants/coordinate-transformation-matrices.html) mathamazement.com
+- [Microsoft's matrix filter](<https://msdn.microsoft.com/en-us/library/ms533014(VS.85,loband).aspx>) MSDN
 
 ### rotate
 
@@ -223,5 +223,5 @@ Translates the element by the given amount along the Y axis.
 ## See also
 
 - [Using CSS Transforms](/pt-BR/docs/CSS/Using_CSS_transforms)
-- [More info](http://paulirish.com/2010/introducing-css3please/#comment-36380) on CSS3 Rotation / Matrix Filter issues in the comments on Paul Irish's blog.
-- A cross-browser 2D [transform plugin for jQuery](http://plugins.jquery.com/project/jquery-transform)
+- [More info](https://paulirish.com/2010/introducing-css3please/#comment-36380) on CSS3 Rotation / Matrix Filter issues in the comments on Paul Irish's blog.
+- A cross-browser 2D [transform plugin for jQuery](https://plugins.jquery.com/project/jquery-transform)

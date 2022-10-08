@@ -73,7 +73,7 @@ Observe que a maioria das imagens na Web, inclusive no Imagens do Google, é pro
 
 Para escolher uma fonte:
 
-1. Vá no [Google Fontes](http://www.google.com/fonts) e role a lista até que você ache uma que você goste. Você também pode usar os controles à direita para filtrar os resultados.
+1. Vá no [Google Fontes](https://www.google.com/fonts) e role a lista até que você ache uma que você goste. Você também pode usar os controles à direita para filtrar os resultados.
 2. Clique no ícone "mais" (Adicionar a) ao lado da fonte desejada.
 3. Clique no botão "\* Família Selecionada" no painel na parte inferior da página ("\*" depende de quantas fontes você selecionou).
 4. Na caixa pop-up, você pode ver e copiar as linhas de código que o Google oferece em seu editor de texto para salvar posteriormente.

@@ -18,10 +18,10 @@ _Acessibilidade na Web (Web Accessibility)_ (**A11Y**) refere-se às melhores pr
 
 ### Aprenda sobre acessibilidade na web
 
-- [Web Accessibility In Mind](http://webaim.org/)
+- [Web Accessibility In Mind](https://webaim.org/)
 
 ### Referências Técnicas
 
 - [The ARIA documentation on MDN](/pt-BR/docs/Web/Accessibility/ARIA)
-- [The Web Accessibility Initiative homepage](http://www.w3.org/WAI/)
-- [The WAI-ARIA recommendation](http://www.w3.org/TR/wai-aria/)
+- [The Web Accessibility Initiative homepage](https://www.w3.org/WAI/)
+- [The WAI-ARIA recommendation](https://www.w3.org/TR/wai-aria/)

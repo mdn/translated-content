@@ -36,6 +36,6 @@ var battery = window.navigator.battery;
 
 - {{domxref("BatteryManager")}}
 - the [Battery Status API](/pt-BR/docs/WebAPI/Battery_Status) article
-- [Blog post - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
-- [David Walsh on the JavaScript Battery Api](http://davidwalsh.name/battery-api)
+- [Blog post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+- [David Walsh on the JavaScript Battery Api](https://davidwalsh.name/battery-api)
 - [battery.js - a tiny cross-browser wrapper](https://github.com/pstadler/battery.js)

@@ -49,7 +49,7 @@ Padrões simples são construídos utilizando os caracteres que você deseja enc
 
 Quando for necessário buscar algo além de uma correspondência direta, como encontrar uma ou mais ocorrências da letra 'b', ou encontrar espaços em branco, será necessário adicionar caracteres especiais ao padrão. Por exemplo, para encontrar uma única correspondência de 'a' seguido de nenhum ou mais 'b's seguido de 'c', o padrão a utilizar seria `/ab*c/`. O caractere `*` seleciona zero ou mais ocorrências do item que o precede. Se aplicada ao texto 'cbb**abbbbc**debc', essa expressão regular encontraria o subconjunto grifado no texto.
 
-A tabela abaixo fornece uma lista completa dos caracteres especiais que podem ser utilizados nas expressões regulares, com sua respectiva descrição. Para testar os exemplos de expressão regular você pode usar o [regExr](http://regexr.com/).
+A tabela abaixo fornece uma lista completa dos caracteres especiais que podem ser utilizados nas expressões regulares, com sua respectiva descrição. Para testar os exemplos de expressão regular você pode usar o [regExr](https://regexr.com/).
 
 <table class="fullwidth-table">
   <caption>

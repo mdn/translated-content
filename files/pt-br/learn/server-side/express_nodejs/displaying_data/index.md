@@ -63,10 +63,10 @@ In our next article we'll build on our knowledge, creating HTML forms and form h
 
 ## Veja mais
 
-- [Async module](http://caolan.github.io/async/docs.html) (Async docs)
+- [Async module](https://caolan.github.io/async/docs.html) (Async docs)
 - [Using Template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug docs)
-- [Moment](http://momentjs.com/docs/) (Moment docs)
+- [Moment](https://momentjs.com/docs/) (Moment docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 

@@ -21,7 +21,7 @@ A especificação do SVG permite que objetos gráficos sejam definidos para reus
 
 ```xml
 <svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="https://www.w3.org/2000/svg">
 
   <defs>
     <linearGradient id="Gradient01">

@@ -48,7 +48,7 @@ A técnica é obviamente crítica. Músicos devem dominar seu instrumento. Mas b
 
 Uma hora de discussão com amigos é um bom começo, mas inadequado. Você precisa se sentar e estruturar suas ideias para ter uma visão clara do caminho que deve seguir para tornar suas ideias realidade. Para fazer isso, você precisa apenas de caneta e papel e de algum tempo para responder pelo menos as seguintes perguntas.
 
-> **Nota:** Existem inúmeras maneiras de realizar a ideação do projeto. Não podemos colocá-las todas aqui (um livro inteiro não seria suficiente). O que vamos apresentar aqui é um método simples para lidar com o que os profissionais chamam de [Ideação do Projeto](<http://en.wikipedia.org/wiki/Ideation_(idea_generation)>), [Planejamento do Projeto](http://en.wikipedia.org/wiki/Project_planning), e [Gerenciamento do Projeto](http://en.wikipedia.org/wiki/Project_management).
+> **Nota:** Existem inúmeras maneiras de realizar a ideação do projeto. Não podemos colocá-las todas aqui (um livro inteiro não seria suficiente). O que vamos apresentar aqui é um método simples para lidar com o que os profissionais chamam de [Ideação do Projeto](<https://en.wikipedia.org/wiki/Ideation_(idea_generation)>), [Planejamento do Projeto](https://en.wikipedia.org/wiki/Project_planning), e [Gerenciamento do Projeto](https://en.wikipedia.org/wiki/Project_management).
 
 ### O que exatamente eu quero realizar?
 

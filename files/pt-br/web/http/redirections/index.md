@@ -62,7 +62,7 @@ HTTP redirects are the preferred way to create redirections, but sometimes the W
 
 ```html
 <head>
-  <meta http-equiv="refresh" content="0; URL=http://www.example.com/" />
+  <meta http-equiv="refresh" content="0; URL=https://www.example.com/" />
 </head>
 ```
 
@@ -77,7 +77,7 @@ Obviously, this method only works with HTML pages (or similar) and cannot be use
 Redirections in JavaScript are created by setting a value to the {{domxref("window.location")}} property and the new page is loaded.
 
 ```js
-window.location = "http://www.example.com/";
+window.location = "https://www.example.com/";
 ```
 
 Like HTML redirections, this can't work on all resources, and obviously, this will only work on clients that execute JavaScript. On the other side, there are more possibilities as you can trigger the redirection only if some conditions are met, for example.
@@ -133,16 +133,16 @@ The [mod_alias](https://httpd.apache.org/docs/current/mod/mod_alias.html) module
 ```
 <VirtualHost *:80>
   ServerName example.com
-  Redirect / http://www.example.com
+  Redirect / https://www.example.com
 </VirtualHost>
 ```
 
-The URL `http://example.com/` will be redirected to `http://www.example.com/` (but not `http://example.com/other.html` )
+The URL `https://example.com/` will be redirected to `https://www.example.com/` (but not `https://example.com/other.html` )
 
 `Redirect_Match` does the same but takes a regular expression to define a collection of URLs that are affected:
 
 ```
-RedirectMatch ^/images/(.*)$ http://images.example.com/$1
+RedirectMatch ^/images/(.*)$ https://images.example.com/$1
 ```
 
 All documents in the `images/` folder will be redirected to a different domain.
@@ -150,11 +150,11 @@ All documents in the `images/` folder will be redirected to a different domain.
 If you don't want to set up a temporary redirect, an extra parameter (either the HTTP status code to use or the `permanent` keyword) can be used to set up a different redirect:
 
 ```
-Redirect permanent / http://www.example.com
-Redirect 301 / http://www.example.com
+Redirect permanent / https://www.example.com
+Redirect 301 / https://www.example.com
 ```
 
-The [mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) module can also be used to create redirects. It is more flexible, but a bit more complex to use.
+The [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) module can also be used to create redirects. It is more flexible, but a bit more complex to use.
 
 ### Nginx
 
@@ -171,8 +171,8 @@ server {
 To apply a redirect to a folder or a subset of the pages only, use the `rewrite` directive:
 
 ```
-rewrite ^/images/(.*)$ http://images.example.com/$1 redirect;
-rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
+rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
+rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 ```
 
 ### IIS

@@ -32,7 +32,7 @@ Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attribut
 ```html
 <noscript>
   <!-- referência a arquivo externo -->
-  <a href="http://www.mozilla.com/">Link Externo</a>
+  <a href="https://www.mozilla.com/">Link Externo</a>
 </noscript>
 <p>Rocks!</p>
 ```
@@ -43,7 +43,7 @@ Rocks!
 
 ### Resultado com o script desativado
 
-[Link Externo](http://www.mozilla.com/)
+[Link Externo](https://www.mozilla.com/)
 
 Rocks!
 

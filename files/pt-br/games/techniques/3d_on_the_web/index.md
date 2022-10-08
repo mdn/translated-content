@@ -40,13 +40,13 @@ Você pode fazer muito mais com WebGL. Há alguns conceitos avançados que você
 
 O conceito de realidade virtual não é novo, mas está crescendo na web devido os avanços de hardware, tal como o [Oculus Rift](https://www.oculus.com/en-us/rift/), e a (atualmente experimental) [WebVR API](/pt-BR/docs/Web/API/WebVR_API) para capturar informações de hardware via Realidade Virtual (RV) e tonaná-la acessível para uso em aplicações JavaScript. Para mais informações, leia [WebVR — Realidade Virtual para a Web](/pt-BR/docs/Games/Techniques/3D_on_the_web/WebVR).
 
-Também há o artigo [Desenvolvendo uma demo básica com A-Frame](/pt-BR/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) que te mostra como é fácil construir ambientes 3D para realidade virtual usando o framework [A-Frame](http://aframe.io/).
+Também há o artigo [Desenvolvendo uma demo básica com A-Frame](/pt-BR/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) que te mostra como é fácil construir ambientes 3D para realidade virtual usando o framework [A-Frame](https://aframe.io/).
 
 ## O surgimentos de bibliotecas e frameworks
 
 Codificar WebGL diretamente é bem complexo, mas você vai querer se familiarizar com isso a longo prazo quando seus projetos avançarem (veja nossa [documentação WebGL](/pt-BR/docs/Web/API/WebGL_API) para começar). Para projetos do mundo real você provavelmente também usará um framework para acelerar o desenvolvimento e ajudar na administração do projeto em que estiver trabalhando. Usar um framework para jogos 3D também ajuda muito a otimizar o desempenho, assim você pode focar no desenvolvimento do jogo.
 
-A biblioteca JavaScript 3D mais popular é [Three.js](http://threejs.org/), uma ferramenta multiuso que deixa técnicas 3D comuns mais simples de serem implementadas. Há outras bibliotecas de desenvolvimento de jogos populares e alguns frameworks que valem a pena serem checados também; [A-Frame](https://aframe.io), [PlayCanvas](https://playcanvas.com/) e [Babylon.js](http://www.babylonjs.com/) estão entre os mais reconhecidos, com belas documentações, editores online e comunidades ativas.
+A biblioteca JavaScript 3D mais popular é [Three.js](https://threejs.org/), uma ferramenta multiuso que deixa técnicas 3D comuns mais simples de serem implementadas. Há outras bibliotecas de desenvolvimento de jogos populares e alguns frameworks que valem a pena serem checados também; [A-Frame](https://aframe.io), [PlayCanvas](https://playcanvas.com/) e [Babylon.js](https://www.babylonjs.com/) estão entre os mais reconhecidos, com belas documentações, editores online e comunidades ativas.
 
 ### Desenvolvendo uma demo básica com A-Frame
 
@@ -66,9 +66,9 @@ Three.js, assim como qualquer outra biblioteca, lhe fornece uma enorme vantagem:
 
 ### Outras ferramentas
 
-Tanto [Unity](http://unity3d.com/) quanto [Unreal](https://www.unrealengine.com/) podem exportar o seu jogo para [WebGL](/pt-BR/docs/Web/API/WebGL_API) com [asm.js](/pt-BR/docs/Games/Tools/asm.js), então você estará livre para usar suas ferramentas e técnicas para desenvolvimento de jogos que serão exportados para a web.
+Tanto [Unity](https://unity3d.com/) quanto [Unreal](https://www.unrealengine.com/) podem exportar o seu jogo para [WebGL](/pt-BR/docs/Web/API/WebGL_API) com [asm.js](/pt-BR/docs/Games/Tools/asm.js), então você estará livre para usar suas ferramentas e técnicas para desenvolvimento de jogos que serão exportados para a web.
 
-![](http://end3r.github.io/MDN-Games-3D/A-Frame/img/shapes.png)
+![](https://end3r.github.io/MDN-Games-3D/A-Frame/img/shapes.png)
 
 ## Para onde ir agora
 
@@ -76,7 +76,7 @@ Com esse artigo nós apenas arranhamos a superfície do que é possível fazer c
 
 ### Código-fonte
 
-Você pode encontrar todo o código fonte para esta série de [demos no GitHub](http://end3r.github.io/MDN-Games-3D/).
+Você pode encontrar todo o código fonte para esta série de [demos no GitHub](https://end3r.github.io/MDN-Games-3D/).
 
 ### APIs
 
@@ -86,11 +86,11 @@ Você pode encontrar todo o código fonte para esta série de [demos no GitHub](
 
 ### Frameworks
 
-- [Three.js](http://threejs.org/)
+- [Three.js](https://threejs.org/)
 - [Whitestorm.js](https://github.com/WhitestormJS/whs.js) (baseado em Three.js)
 - [PlayCanvas](https://playcanvas.com/)
-- [Babylon.js](http://www.babylonjs.com/)
-- [A-Frame](http://aframe.io/)
+- [Babylon.js](https://www.babylonjs.com/)
+- [A-Frame](https://aframe.io/)
 
 ### Tutoriais
 

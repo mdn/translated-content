@@ -14,4 +14,4 @@ IndexedDB é uma {{glossary("API")}} de web para armazenar volumosas estruturas 
 ## Aprenda mais
 
 - The {{domxref('IndexedDB_API','IndexedDB API','',1)}} no MDN
-- [A especificação W3C para o IndexedDB](http://w3c.github.io/IndexedDB/)
+- [A especificação W3C para o IndexedDB](https://w3c.github.io/IndexedDB/)

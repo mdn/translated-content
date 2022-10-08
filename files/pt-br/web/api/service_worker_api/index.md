@@ -15,7 +15,7 @@ Assim como outros tipos de _worker_, um _service worker_ é executado em um cont
 
 Por questões de segurança, _service workers_ funcionam apenas em sites servidos via HTTPS. A possibilidade de modificar requisições em um domínio desprotegido contra ataques do tipo [man-in-the-middle](/pt-BR/docs/Glossary/MitM) seria desastrosa. No Firefox, é vetado o acesso à API de _service workers_ para sites abertos no [Modo de navegação privativa](https://support.mozilla.org/pt-BR/kb/navegacao-privativa-use-firefox-sem-historico).
 
-> **Nota:** Os service workers superaram tentativas anteriores de resolver problemas semelhantes, como o [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag). Há uma explicação simples para eles terem sido bem-sucedidos: Service workers **não** tentam adivinhar o que você está tentando fazer e, muito menos, deixam de funcionar caso não tenham adivinhado corretamente. Pelo contrário, você tem o controle milimétrico de tudo.
+> **Nota:** Os service workers superaram tentativas anteriores de resolver problemas semelhantes, como o [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag). Há uma explicação simples para eles terem sido bem-sucedidos: Service workers **não** tentam adivinhar o que você está tentando fazer e, muito menos, deixam de funcionar caso não tenham adivinhado corretamente. Pelo contrário, você tem o controle milimétrico de tudo.
 
 > **Nota:** Service workers fazem uso intenso de [promessas](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), uma vez que eles têm de esperar por respostas assíncronas para, após retornadas, poderem executar a ação apropriada (de sucesso ou erro). A arquitetura de promessas é ideal para esse tipo de cenário.
 

@@ -21,7 +21,7 @@ translation_of: Web/SVG
 
 **Gráficos Vetoriais Escaláveis (SVG)** é uma linguagem de marcação [XML](/pt-BR/docs/XML) para descrever gráficos vetoriais bidimensionais. Essencialmente, SVG é para gráficos o que o XHTML é para texto.
 
-SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se distingue por ser uma [recomendação da W3C](http://www.w3.org/Graphics/SVG/), ou seja, um padrão, e por ser baseado em XML e não em um formato binário fechado. O SVG foi criado para funcionar com outros padrões da [W3C](http://www.w3.org/), tais como [CSS](/pt-BR/docs/CSS), [DOM](/pt-BR/docs/DOM) e [SMIL](http://www.w3.org/AudioVideo/).
+SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se distingue por ser uma [recomendação da W3C](https://www.w3.org/Graphics/SVG/), ou seja, um padrão, e por ser baseado em XML e não em um formato binário fechado. O SVG foi criado para funcionar com outros padrões da [W3C](https://www.w3.org/), tais como [CSS](/pt-BR/docs/CSS), [DOM](/pt-BR/docs/DOM) e [SMIL](https://www.w3.org/AudioVideo/).
 
 ## Documentação
 
@@ -47,41 +47,41 @@ SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se disti
 
 ## Ferramentas
 
-- [Suíte de Teste SVG](http://www.w3.org/Graphics/SVG/Test/)
-- [Validador SVG](http://jiggles.w3.org/svgvalidator/) (Descontinuado)
+- [Suíte de Teste SVG](https://www.w3.org/Graphics/SVG/Test/)
+- [Validador SVG](https://jiggles.w3.org/svgvalidator/) (Descontinuado)
 - [Mais Ferramentas...](/pt-BR/docs/tag/SVG:Tools)
 - Outros recursos: [XML](/pt-BR/docs/XML), [CSS](/pt-BR/docs/CSS), [DOM](/pt-BR/docs/DOM), [Canvas](/pt-BR/docs/HTML/Canvas)
 
 ## Exemplos
 
-- Google [Maps](http://maps.google.com) (route overlay) & [Docs](http://docs.google.com) (spreadsheet charting)
-- [Menus bubble SVG](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml)
-- [Orientações para autoria SVG](http://jwatt.org/svg/authoring/)
+- Google [Maps](https://maps.google.com) (route overlay) & [Docs](https://docs.google.com) (spreadsheet charting)
+- [Menus bubble SVG](https://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml)
+- [Orientações para autoria SVG](https://jwatt.org/svg/authoring/)
 - Uma visão geral do [Projeto SVG da Mozilla](/pt-BR/docs/Mozilla_SVG_Project)
 - [Perguntas frequentes](/pt-BR/docs/SVG/FAQ) sobre SVG e Mozilla
-- Slides e demos da palestra [SVG and Mozilla](http://jwatt.org/svg-open-US/docs/2009/slides.xhtml) no SVG Open 2009
+- Slides e demos da palestra [SVG and Mozilla](https://jwatt.org/svg-open-US/docs/2009/slides.xhtml) no SVG Open 2009
 - [SVG como uma imagem](/pt-BR/docs/SVG/SVG_as_an_Image)
 - [Animação SVG com SMIL](/pt-BR/docs/SVG/SVG_animation_with_SMIL)
-- [Leão](http://croczilla.com/bits_and_pieces/svg/samples/lion/lion.svg), [Borboleta](http://croczilla.com/bits_and_pieces/svg/samples/butterfly/butterfly.svg) & [Tigre](http://croczilla.com/bits_and_pieces/svg/samples/tiger/tiger.svg)
-- [Galeria de arte SVG](http://plurib.us/1shot/2007/svg_gallery/)
-- Mais exemplos ([SVG Samples croczilla.com](http://croczilla.com/bits_and_pieces/svg/samples), [carto.net](http://www.carto.net/papers/svg/samples/))
+- [Leão](https://croczilla.com/bits_and_pieces/svg/samples/lion/lion.svg), [Borboleta](https://croczilla.com/bits_and_pieces/svg/samples/butterfly/butterfly.svg) & [Tigre](https://croczilla.com/bits_and_pieces/svg/samples/tiger/tiger.svg)
+- [Galeria de arte SVG](https://plurib.us/1shot/2007/svg_gallery/)
+- Mais exemplos ([SVG Samples croczilla.com](https://croczilla.com/bits_and_pieces/svg/samples), [carto.net](https://www.carto.net/papers/svg/samples/))
 
 ### Animação e interações
 
 Assim como o HTML, o SVG tem um modelo de documento (DOM), eventos e é acessível por JavaScript. Isto permite aos desenvolvedores criar animações e imagens interativas.
 
-- Algumas imagens SVG impressionantes em [svg-wow.org](http://svg-wow.org/)
-- Extensão do Firefox ([Grafox](http://schepers.cc/grafox/)) para adicionar suporte a um subconjunto de animação SMIL
-- Manipulação interativa de [fotos](http://people.mozilla.com/~vladimir/demos/photos.svg)
-- [Transformações HTML](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/) usando `foreignObject` do SVG
-- [Arte](http://lab.vodafone.com/vienna/) animada
+- Algumas imagens SVG impressionantes em [svg-wow.org](https://svg-wow.org/)
+- Extensão do Firefox ([Grafox](https://schepers.cc/grafox/)) para adicionar suporte a um subconjunto de animação SMIL
+- Manipulação interativa de [fotos](https://people.mozilla.com/~vladimir/demos/photos.svg)
+- [Transformações HTML](https://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/) usando `foreignObject` do SVG
+- [Arte](https://lab.vodafone.com/vienna/) animada
 
 ### Mapeamentos, gráficos, jogos & experimentos 3D
 
 Embora o SVG ainda tenha de percorrer um longo caminho para prover conteúdo web avançado, aqui estão alguns exemplos de uso intensivo de SVG.
 
-- [Um Tetris SVG](http://www.codedread.com/yastframe.php) & [Connect 4](http://www.treebuilder.de/svg/connect4.svg)
-- [Find the State](http://files.myopera.com/orinoco/svg/USStates.svg)
-- [Mapa da população dos EUA](http://www.carto.net/papers/svg/us_population/index.html)
-- [3D box](http://www.treebuilder.de/default.asp?file=441875.xml) & [3D boxes](http://www.treebuilder.de/default.asp?file=206524.xml)
-- [jVectorMap](http://jvectormap.com/) (mapas interativos para visualização de dados)
+- [Um Tetris SVG](https://www.codedread.com/yastframe.php) & [Connect 4](https://www.treebuilder.de/svg/connect4.svg)
+- [Find the State](https://files.myopera.com/orinoco/svg/USStates.svg)
+- [Mapa da população dos EUA](https://www.carto.net/papers/svg/us_population/index.html)
+- [3D box](https://www.treebuilder.de/default.asp?file=441875.xml) & [3D boxes](https://www.treebuilder.de/default.asp?file=206524.xml)
+- [jVectorMap](https://jvectormap.com/) (mapas interativos para visualização de dados)
