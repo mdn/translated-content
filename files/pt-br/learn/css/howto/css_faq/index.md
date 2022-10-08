@@ -134,7 +134,7 @@ No caso de hierarquias HTML complexas, se uma regra parece ser ignorada, verifiq
 
 ### Regra de estilização explicitamente redefinida
 
-Em folhas de estilo CSS, a ordem \***\*é\*\*** importante. Se você definir uma propriedade e logo depois redefinir a mesma propriedade, a última regra definida será considerada.
+Em folhas de estilo CSS, a ordem **é** importante. Se você definir uma propriedade e logo depois redefinir a mesma propriedade, a última regra definida será considerada.
 
 ```html
 <style>
@@ -169,7 +169,7 @@ Utilizar propriedades reduzidas para definir regra de estilização é interessa
 </div>
 ```
 
-No exemplo anterior o problema ocorre em regras pertencentes a diferentes elementos. Mas também poderia acontecer para o mesmo elemento, pois a ordem das regras \***\*é\*\*** importante.
+No exemplo anterior o problema ocorre em regras pertencentes a diferentes elementos. Mas também poderia acontecer para o mesmo elemento, pois a ordem das regras **é** importante.
 
 ```css
 #stockTicker {

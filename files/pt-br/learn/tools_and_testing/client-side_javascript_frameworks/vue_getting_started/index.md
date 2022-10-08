@@ -98,41 +98,41 @@ We’ll look at using this below.
 To explore various features of Vue, we will be building up a sample todo list app. We'll begin by using the Vue CLI to create a new app framework to build our app into. Follow the steps below:
 
 1. In terminal, `cd` to where you'd like to create your sample app, then run `vue create moz-todo-vue`.
-2. Use the arrow keys and&#x20;
+2. Use the arrow keys and
 
     <kbd>Enter</kbd>
 
-    &#x20;to select the "Manually select features" option.
+    to select the "Manually select features" option.
 
-3. The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press&#x20;
-
-    <kbd>Enter</kbd>
-
-    &#x20;to proceed.
-
-4. Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit&#x20;
+3. The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press
 
     <kbd>Enter</kbd>
 
-    &#x20;again. This will help us catch common errors, but not be overly opinionated.
+    to proceed.
 
-5. Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit&#x20;
+4. Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit
 
     <kbd>Enter</kbd>
 
-    &#x20;to continue.
+    again. This will help us catch common errors, but not be overly opinionated.
 
-6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's `package.json` file. Select "In dedicated config files" and push&#x20;
+5. Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit
+
+    <kbd>Enter</kbd>
+
+    to continue.
+
+6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's `package.json` file. Select "In dedicated config files" and push
 
     <kbd>Enter</kbd>
 
     .
 
-7. Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type&#x20;
+7. Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type
 
     <kbd>y</kbd>
 
-    &#x20;, otherwise type&#x20;
+    , otherwise type
 
     <kbd>n</kbd>
 
