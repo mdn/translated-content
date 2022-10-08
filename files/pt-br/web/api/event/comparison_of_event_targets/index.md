@@ -99,7 +99,7 @@ Há 5 tipos de _targets_ a se considerar:
         >
       </td>
       <td>
-        {{ Source("/dom/public/idl/events/nsIDOMNSEvent.idl", "nsIDOMNSEvent.idl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} Se o evento foi redirecionado por
@@ -122,7 +122,7 @@ Há 5 tipos de _targets_ a se considerar:
         >
       </td>
       <td>
-        {{ Source("/dom/public/idl/events/nsIDOMNSEvent.idl", "nsIDOMNSEvent.idl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} O alvo original do evento, antes de
