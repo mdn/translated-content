@@ -38,7 +38,7 @@ slug: Learn/JavaScript/First_steps/Math
 
 - **二進位** —計算機的最底層語言；0 和 1。
 - **八進位** —以 8 為單位，每列使用 0–7。
-- **十六進位** —以 16 為單位，在每列中使用 0–9，然後使用 a–f。[在 CSS 中](/zh-TW/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values)設置[顏色](/zh-TW/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values)之前，您可能已經遇到過這些數字。
+- **十六進位** —以 16 為單位，在每列中使用 0–9，然後使用 a–f。你之前在 CSS 中設置[顏色](/zh-TW/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values)時，可能已經遇到過這些數字。
 
 **在開始擔心大腦融化之前，先等等！**首先，我們將在整個課程中完全使用十進位數；您很少會想到其他類型的需求，如果有的話。
 
