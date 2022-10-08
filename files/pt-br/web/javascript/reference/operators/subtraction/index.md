@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Operators/Subtraction
 
 O operador de subtração (`-`) é o operador aritmético de subtração usado para encontrar a diferença entre dois números
 
-{{EmbedInteractiveExample("pages/expressions-subtraction.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
 
 ## Sintaxe
 
