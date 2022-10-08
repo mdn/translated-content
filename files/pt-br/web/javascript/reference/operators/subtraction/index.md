@@ -28,7 +28,7 @@ x - y
 
 ### Subtração com strings
 
-> **Warning** Note que o JavaScript sempre tentará converter uma String em numero número
+> **Warning:** Note que o JavaScript sempre tentará converter uma String em numero número
 
 ```js
 'foo' - 3 // NaN
