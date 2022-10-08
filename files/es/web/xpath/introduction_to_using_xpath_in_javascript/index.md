@@ -33,7 +33,7 @@ La función [evaluate](/en/DOM/document.evaluate) toma un total de 5 parámetros
 
 ### Valor regresado
 
-Regresa `xpathResult`, que es un objeto `XPathResult` del tipo especificado en el parámetro `resultType`. La interfaz `XPathResult` está definida en [aquí](/es/docs/Web/API/XPathResult).
+Regresa `xpathResult`, que es un objeto `XPathResult` del tipo especificado en el parámetro `resultType`. La interfaz `XPathResult` está definida [aquí](/es/docs/Web/API/XPathResult).
 
 ### Implementando un Solucionador de Namespace predefinido
 
