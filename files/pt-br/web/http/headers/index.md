@@ -126,7 +126,7 @@ O recurso HTTP [Client hints](/pt-BR/docs/Glossary/Client_hints) ainda está em 
 ## Cookies
 
 - {{HTTPHeader("Cookie")}}
-  - : Contém [cookies ](/pt-BR/docs/Web/HTTP/Cookies)HTTP armazenados previamente enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
+  - : Contém [cookies](/pt-BR/docs/Web/HTTP/Cookies) HTTP armazenados previamente enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
 - {{HTTPHeader("Set-Cookie")}}
   - : Envia cookies do servidor para o agente de usuário.
 - {{HTTPHeader("Cookie2")}} {{obsolete_inline}}
@@ -241,21 +241,12 @@ O recurso HTTP [Client hints](/pt-BR/docs/Glossary/Client_hints) ainda está em 
   - : Associates a specific cryptographic public key with a certain web server to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates.
 - {{HTTPHeader("Public-Key-Pins-Report-Only")}}
   - : Sends reports to the report-uri specified in the header and does still allow clients to connect to the server even if the pinning is violated.
-
-<!---->
-
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
   - : Sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} directive.
-
-<!---->
-
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : Disables MIME sniffing and forces browser to use the type given in {{HTTPHeader("Content-Type")}}.
-
-<!---->
-
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether or not a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}} or {{HTMLElement("object")}}
 - {{HTTPHeader("X-XSS-Protection")}}

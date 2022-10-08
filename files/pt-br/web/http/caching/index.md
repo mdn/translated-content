@@ -26,7 +26,7 @@ Há muitos tipos de caches: estes podem ser agrupados em duas categorias princip
 
 ### Caches privados de browser
 
-Um cache privado é dedicado para um único usuário. Você já pode ter visto _"caching"_ nas configurações de seu navegador. Um cache de browser guarda todos os documentos que foram baixados via [HTTP](/pt-BR/docs/Web/HTTP "en/HTTP") pelo usuário. Este cache é usado para tornar disponíveis documentos visitados para navegação "para frente e para trás" (ou _back/forward_, em Inglês*)*, salvar, ver como fonte, etc. sem exigir uma viagem para o servidor. Também melhora a navegação offline de conteúdo em cache.
+Um cache privado é dedicado para um único usuário. Você já pode ter visto _"caching"_ nas configurações de seu navegador. Um cache de browser guarda todos os documentos que foram baixados via [HTTP](/pt-BR/docs/Web/HTTP) pelo usuário. Este cache é usado para tornar disponíveis documentos visitados para navegação "para frente e para trás" (ou _back/forward_, em Inglês*)*, salvar, ver como fonte, etc. sem exigir uma viagem para o servidor. Também melhora a navegação offline de conteúdo em cache.
 
 ### Caches de proxy compartilhada
 

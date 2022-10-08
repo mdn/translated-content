@@ -628,7 +628,6 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
         <code
           ><a
             href="/en/DOM/Input.mozGetFileNameArray"
-            title="en/DOM/Input.mozGetFileNameArray"
             >mozGetFileNameArray</a
           >(length, filenames)</code
         >{{non-standard_inline}}
@@ -641,7 +640,6 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
         <code
           ><a
             href="/en/DOM/Input.mozSetFileNameArray"
-            title="en/DOM/Input.mozSetFileNameArray"
             >mozSetFileNameArray</a
           >(filenames, length)</code
         >{{non-standard_inline}}
@@ -658,7 +656,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
     <tr>
       <td>
         <code
-          ><a href="/en/DOM/Input.select" title="en/DOM/Input.select">select</a
+          ><a href="/en/DOM/Input.select">select</a
           >()</code
         >
       </td>
@@ -682,7 +680,6 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
         <code
           ><a
             href="/en/DOM/Input.setSelectionRange"
-            title="en/DOM/Input.setSelectionRange"
             >setSelectionRange</a
           >(selectionStart, selectionEnd, [optional] selectionDirection)</code
         >
