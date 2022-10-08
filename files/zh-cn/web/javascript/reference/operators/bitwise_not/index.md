@@ -1,5 +1,5 @@
 ---
-title: 按位非 (~)
+title: 按位非（~）
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
 ---
 
