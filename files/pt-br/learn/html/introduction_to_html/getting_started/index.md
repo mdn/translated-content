@@ -284,7 +284,7 @@ Edite a linha abaixo na área de Entrada para transformá-la em um link para o s
 
 Você poderá ver as atualizações das alterações ao vivo na área Saída. Você deve ver um link que, quando passa o mouse sobre ele, exibe o valor do atributo `title` e, quando clicado, navega para o endereço da web no atributo `href`. Lembre-se de que você precisa incluir um espaço entre o nome do elemento e cada atributo.
 
-Caso você cometa um erro, você poderá desfazê-lo usando o botão _Reset_ar. Caso você realmente não saiba como fazer, pressione o botão \_Mostrar solução_ para ver a resposta.
+Caso você cometa um erro, você poderá desfazê-lo usando o botão _Reset_ar. Caso você realmente não saiba como fazer, pressione o botão _Mostrar solução_ para ver a resposta.
 
 ```html hidden
 <h2>Saída ao vivo</h2>

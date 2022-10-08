@@ -34,7 +34,7 @@ Aplicativos _Express_ podem usar muitos bancos de dados diferentes, e existem v�
 
 ### Quais bancos de dados eu posso usar?
 
-Aplicativos _Express_ podem usar qualquer banco de dados suportado pelo _Node_ (O _Express_ por si só não define nenhum requerimento ou comportamento adicional específico para gerenciamento de bancos de dados). Há [muitas\_ \_opções populares](https://expressjs.com/en/guide/database-integration.html), incluindo PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
+Aplicativos _Express_ podem usar qualquer banco de dados suportado pelo _Node_ (O _Express_ por si só não define nenhum requerimento ou comportamento adicional específico para gerenciamento de bancos de dados). Há [muitas opções populares](https://expressjs.com/en/guide/database-integration.html), incluindo PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
 
 Quando escolher um banco de dados, você deveria considerar coisas como o tempo-para-produtividade/curva de aprendizado, performance, facilidade de replicação/backup, custo, suporte da comunidade, etc. Enquanto não existe o "melhor" banco de dados, praticamente qualquer uma das soluções populares devem ser mais do que aceitáveis para um site de tamanho pequeno a médio como o da nossa Biblioteca Local.
 
@@ -91,11 +91,11 @@ Você pode usar também modelos para representar opções de listagens(por exemp
 
 Uma vez que nós decidimos nossos modelos e os seus atributos, nós precisamos pensar sobre o relacionamento entre eles.
 
-Com isso em mente, o diagrama UML a seguir mostra os modelos (as caixas) que iremos definir na nossa aplicação. Como discutido acima, criamos modelos para os livros ( com informações genéricas sobre o livro), pedidos de livros(status de cópias físicas de um livro específico disponíveis no sistema), e autor. E também decidimos ter um modelo para o gênero então esses valores poderão ser criados dinamicamente na aplicação. Outra decisão foi de não criarmos um modelo para `BookInstance:status `— nós deixaremos diretamente no código os valores aceitáveis para o status de pedidos porque nós não esperamos que eles mudem. Dentro de cada caixa, você pode ver o nome do modelo, o nome dos atributos e seus tipos, e também os métodos e seu tipo de retorno.
+Com isso em mente, o diagrama UML a seguir mostra os modelos (as caixas) que iremos definir na nossa aplicação. Como discutido acima, criamos modelos para os livros ( com informações genéricas sobre o livro), pedidos de livros(status de cópias físicas de um livro específico disponíveis no sistema), e autor. E também decidimos ter um modelo para o gênero então esses valores poderão ser criados dinamicamente na aplicação. Outra decisão foi de não criarmos um modelo para `BookInstance:status` — nós deixaremos diretamente no código os valores aceitáveis para o status de pedidos porque nós não esperamos que eles mudem. Dentro de cada caixa, você pode ver o nome do modelo, o nome dos atributos e seus tipos, e também os métodos e seu tipo de retorno.
 
-O diagrama também mostra o relacionamento entre modelos, incluindo sua cardinalidade. A cardinalidade são os números no diagrama próximos das linhas que conectam as caixas mostrando os números (máximo e mínimo) de cada modelo que pode estar presente no relacionamento. Por exemplo, as linhas que conectam as caixas `Book`e `Genre` mostram que as duas coleções têm uma relação. Os números próximos ao modelo `Book` mostra que Genre pode ter zero ou mais Book (quantos você quiser), enquanto no outro fim da linha de conexão próximo a `Genre `mostra que ele pode ter zero ou mais livros associados.
+O diagrama também mostra o relacionamento entre modelos, incluindo sua cardinalidade. A cardinalidade são os números no diagrama próximos das linhas que conectam as caixas mostrando os números (máximo e mínimo) de cada modelo que pode estar presente no relacionamento. Por exemplo, as linhas que conectam as caixas `Book`e `Genre` mostram que as duas coleções têm uma relação. Os números próximos ao modelo `Book` mostra que Genre pode ter zero ou mais Book (quantos você quiser), enquanto no outro fim da linha de conexão próximo a `Genre` mostra que ele pode ter zero ou mais livros associados.
 
-> **Nota:** Assim como discutido abaixo em [Iniciando com Mongoose ](#related_documents)muitas vezes é melhor ter o atributo que define a relação entre os documentos/modelos em apenas um dos modelos( você ainda pode encontrar o relacionamento reverso pesquisando o `_id` associado no outro modelo). Abaixo nós escolhemos definir o modelo Book Schema para armazenar o relacionamento entre Book/Genre e Book/Author, e definimos BookInstance Schema para armazenar o relacionamento entre Book/BookInstance. Esta escolha foi um tanto arbitrária — nós poderíamos igualmente ter declarado esses atributos em outro schema.
+> **Nota:** Assim como discutido abaixo em [Iniciando com Mongoose](#related_documents) muitas vezes é melhor ter o atributo que define a relação entre os documentos/modelos em apenas um dos modelos( você ainda pode encontrar o relacionamento reverso pesquisando o `_id` associado no outro modelo). Abaixo nós escolhemos definir o modelo Book Schema para armazenar o relacionamento entre Book/Genre e Book/Author, e definimos BookInstance Schema para armazenar o relacionamento entre Book/BookInstance. Esta escolha foi um tanto arbitrária — nós poderíamos igualmente ter declarado esses atributos em outro schema.
 
 ![Mongoose Library Model  with correct cardinality](https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png)
 
@@ -218,7 +218,7 @@ Most of the [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) (the desc
 
 The code also shows both ways of declaring a field:
 
-- Field _name_ and _type_ as a key-value pair (i.e. as done with fields `name`, `binary `and `living`).
+- Field _name_ and _type_ as a key-value pair (i.e. as done with fields `name`, `binary` and `living`).
 - Field _name_ followed by an object defining the `type`, and any other _options_ for the field. Options include things like:
 
   - default values.
@@ -502,40 +502,40 @@ You will first need to [create an account](https://www.mongodb.com/cloud/atlas/r
 
 After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
 
-1.  Click **Buid a Cluster** button in the Clusters Overview section.
+1. Click **Buid a Cluster** button in the Clusters Overview section.
     ![Create a cluster on MongoDB Atlas.](https://mdn.mozillademos.org/files/16516/MongoDB_Atlas_-_CreateCluster.jpg)
-2.  This will open the _Create New Cluster_ screen.
+2. This will open the _Create New Cluster_ screen.
     ![Choose a cloud provider when using MongoDB Atlas.](https://mdn.mozillademos.org/files/16511/MongoDB_Atlas_-_ChooseProviderRegion.jpg)
 
     - Select any provider from the _Cloud Provider & Region_ section. Different providers offer different regions.
     - Select any region marked "FREE TIER AVAILABLE".
     - Click the **Create Cluster** button (creation of the cluster will take some minutes).
 
-3.  You will return to the _Cluster Overview_ screen.
+3. You will return to the _Cluster Overview_ screen.
     ![Setup a collection on MongoDB Atlas.](https://mdn.mozillademos.org/files/16517/MongoDB_Atlas_-_CreateCollection.jpg)
 
     - Click the **Collections** button.
 
-4.  This will open the _Collections_ section.
+4. This will open the _Collections_ section.
     ![Create a database on MongoDB Atlas.](https://mdn.mozillademos.org/files/16518/MongoDB_Atlas_-_CreateDatabase.jpg)
 
     - Click the **Create Database** button.
 
-5.  This will open the _Create Database_ screen.
+5. This will open the _Create Database_ screen.
     ![Details during database creation on MongoDB Atlas.](https://mdn.mozillademos.org/files/16520/MongoDB_Atlas_-_DatabaseDetails.jpg)
 
     - Enter the name for the new database as `local_library`.
     - Enter the name of the collection as Collection0.
     - Click the **Create** button to create the database.
 
-6.  You will return to the Collection screen with your database created.
+6. You will return to the Collection screen with your database created.
     ![Database creation confirmation on MongoDB Atlas.](https://mdn.mozillademos.org/files/16519/MongoDB_Atlas_-_DatabaseCreated.jpg)
 
     - Click the _Overview_ tab to return the cluster overview.
 
-7.  From the Cluster0 Overview screen click the **Connect** button.
+7. From the Cluster0 Overview screen click the **Connect** button.
     ![Configure a connection when after setting up a cluster in MongoDB Atlas.](https://mdn.mozillademos.org/files/16512/MongoDB_Atlas_-_Connectbutton.jpg)
-8.  This will open the Connect to Cluster screen.
+8. This will open the Connect to Cluster screen.
     ![Setup a connection when using MongoDB Atlas.](https://mdn.mozillademos.org/files/16513/MongoDB_Atlas_-_ConnectCluster.jpg)
 
     - Click the **Add a Different IP Address** button, enter `0.0.0.0/0` for the IP Address and click **Add IP Address** button.
@@ -549,7 +549,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
     - If you have completed the 2 previous steps, the button **Choose a connection method** will turn green.
     - Click the **Choose a connection method** button.
 
-9.  This will access the _Choose a connection_ method tab.
+9. This will access the _Choose a connection_ method tab.
     ![Choose a connection type when connecting with MongoDB Atlas.](https://mdn.mozillademos.org/files/16510/MongoDB_Atlas_-_ChooseAConnectionMethod.jpg)
 
     - Click the **Connect Your Application** option.
@@ -743,17 +743,17 @@ That's it. We now have all models for the site set up!
 
 In order to test the models (and to create some example books and other items that we can use in our next articles) we'll now run an _independent_ script to create items of each type:
 
-1.  Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
+1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
     > **Nota:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
 
-2.  Enter the following commands in the project root to install the _async_ module that is required by the script (we'll discuss this in later tutorials, )
+2. Enter the following commands in the project root to install the _async_ module that is required by the script (we'll discuss this in later tutorials, )
 
     ```bash
     npm install async
     ```
 
-3.  Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
+3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
     ```bash
     node populatedb <your mongodb url>​​​​
@@ -761,7 +761,7 @@ In order to test the models (and to create some example books and other items th
 
     > **Nota:** **Note for Windows operating system users**: If the above command results in the error `DeprecationWarning: current URL string parser is deprecated`, change the `mongoose.connect(mongoDB);` line in `populatedb.js` file with `mongoose.connect(mongoDB, { useNewUrlParser:true });`
 
-4.  The script should run through to completion, displaying items as it creates them in the terminal.
+4. The script should run through to completion, displaying items as it creates them in the terminal.
 
 > **Nota:** **Tip:** Go to your database on mongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 

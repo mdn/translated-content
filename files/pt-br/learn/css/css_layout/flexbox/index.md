@@ -152,7 +152,7 @@ article {
 }
 ```
 
-Esse é um valor relativo sem unidade que define quanto de espaço disponível pelo eixo principal cada elemento _flex_ pode ter. Neste caso, estamos dando para cada elemento {{HTMLElement("article")}} o valor de 1, que significa que eles terão uma quantidade igual de espaço restante depois de coisas como preenchimento ({{cssxref("padding")}}) e margem ({{cssxref("margin")}})\_ _forem definidos. É uma proporção, o que significa que dado que mesmo que você coloque o valor de "400000", para cada elemento \_flex_, terá o mesmo efeito que o valor "1" previamente colocado.
+Esse é um valor relativo sem unidade que define quanto de espaço disponível pelo eixo principal cada elemento _flex_ pode ter. Neste caso, estamos dando para cada elemento {{HTMLElement("article")}} o valor de 1, que significa que eles terão uma quantidade igual de espaço restante depois de coisas como preenchimento ({{cssxref("padding")}}) e margem ({{cssxref("margin")}}) forem definidos. É uma proporção, o que significa que dado que mesmo que você coloque o valor de "400000", para cada elemento _flex_, terá o mesmo efeito que o valor "1" previamente colocado.
 
 Agora, adicione a seguinte regra abaixo da última:
 

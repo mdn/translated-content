@@ -21,7 +21,7 @@ Navegadores modernos possuem dois principais modos de renderização:
 - _Modo de peculiaridades (Quirks Mode)_: Também chamado de modo retrocompatível, permite que páginas antigas sejam renderizadas como seus autores pretendiam, seguindo regras de renderização não-padronizadas geralmente encontradas em navegadores antigos. Documentos com uma declaração `DOCTYPE` incompleta, incorreta, que não tenham uma declaração `DOCTYPE` ou não tenham uma declaração comumente utilizada antes de 2001 serão renderizados deste modo.
 - _Modo de padrões (Standards Mode)_: Neste modo o navegador tenta seguir os padrões W3C estritamente, ignorando peculiaridades encontradas em documentos designados a navegadores antigos. Espera-se que novas páginas HTML sejam desenvolvidas para navegadores que seguem os padrões da W3C, e como resultado disso, páginas com uma declaração de `DOCTYPE` moderna serão renderizadas deste modo.
 
-Navegadores baseados na engine Gecko possuem um terceiro modo de renderização; _[Modo de "quase padrões" (Almost Standards Mode](/pt-BR/docs/Gecko's_"Almost*Standards"\_Mode "Gecko's*\"Almost*Standards\"\_Mode"))*, que renderiza as páginas seguindo regras do _Modo de padrões_, porém considerando algumas poucas peculiaridades encontradas em páginas para navegadores antigos.
+Navegadores baseados na engine Gecko possuem um terceiro modo de renderização; _[Modo de "quase padrões" (Almost Standards Mode)](/pt-BR/docs/Gecko's)_, que renderiza as páginas seguindo regras do _Modo de padrões_, porém considerando algumas poucas peculiaridades encontradas em páginas para navegadores antigos.
 
 Esta é uma lista das declarações de `DOCTYPE` mais usadas e que acionarão o modo de padrões ou de "quase padrões":
 

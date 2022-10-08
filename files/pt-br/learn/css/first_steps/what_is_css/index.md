@@ -95,7 +95,7 @@ p {
 
 Você constatará que rapidamente aprende alguns valores, enquanto outros precisará pesquisar. As páginas de propriedades individuais no MDN dá a você uma maneira rápida de procurar propriedades e seus respectivos valores, quando você esquecer, ou desejar saber quais valores pode usar.
 
-> **Nota:** **Observação**: Você pode achar links para todas as páginas de propriedades CSS (junto com outros recursos CSS) listados no MDN [referência CSS](/pt-BR/docs/Web/CSS/Reference). Alternativamente, você deve se acostumar a pesquisar por "mdn _css-feature-name_" no seu motor de busca favorito sempre que precisar procurar mais informações sobre uma característica CSS. Por exemplo, experimente pesquisar por "mdn color" e "mdn\_ \_font-size"!
+> **Nota:** **Observação**: Você pode achar links para todas as páginas de propriedades CSS (junto com outros recursos CSS) listados no MDN [referência CSS](/pt-BR/docs/Web/CSS/Reference). Alternativamente, você deve se acostumar a pesquisar por "mdn _css-feature-name_" no seu motor de busca favorito sempre que precisar procurar mais informações sobre uma característica CSS. Por exemplo, experimente pesquisar por "mdn color" e "mdn font-size"!
 
 ## Módulos CSS
 

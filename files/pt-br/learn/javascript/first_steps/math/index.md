@@ -47,9 +47,9 @@ Este artigo discute apenas as partes básicas que você precisa saber agora.
 
 Em programação, até mesmo o humilde sistema de números decimais que todos nós conhecemos tão bem é mais complicado do que você possa pensar. Usamos diferentes termos para descrever diferentes tipos de números decimais, por exemplo:
 
-- _**Integers** _(inteiros) são números inteiros, ex. 10, 400 ou -5.
+- **Integers** (inteiros) são números inteiros, ex. 10, 400 ou -5.
 - **Números de ponto flutuante** _(floats)_ tem pontos e casas decimais, por exemplo 12.5 e 56.7786543.
-- _**Doubles** \_são tipos de \_floats_ que tem uma precisão maior do que os números de ponto flutuante padrões (significando que eles são mais precisos, possuindo uma grande quantidade de casas decimais).
+- **Doubles** são tipos de _floats_ que tem uma precisão maior do que os números de ponto flutuante padrões (significando que eles são mais precisos, possuindo uma grande quantidade de casas decimais).
 
 Temos até mesmo diferentes tipos de sistemas numéricos! O decimal tem por base 10 (o que significa que ele usa um número entre 0–9 em cada casa), mas temos também algo como:
 
@@ -69,7 +69,7 @@ Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sin
 
 **[Abra em uma nova janela](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
 
-1.  Primeiramente, vamos declarar duas variáveis e as inicializar com um _integer_ e um _float_, respectivamente, então digitaremos os nomes das variáveis para verificar se está tudo em ordem:
+1. Primeiramente, vamos declarar duas variáveis e as inicializar com um _integer_ e um _float_, respectivamente, então digitaremos os nomes das variáveis para verificar se está tudo em ordem:
 
     ```js
     var meuInt = 5;
@@ -78,8 +78,8 @@ Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sin
     meuFloat;
     ```
 
-2.  Valores numéricos são inseridos sem aspas — tente declarar e inicializar mais duas variáveis contendo números antes de seguir em frente.
-3.  Agora vamos checar se nossas duas variáveis originais são do mesmo tipo de dados. Há um operador chamado {{jsxref("Operators/typeof", "typeof")}} no JavaScript que faz isso. Insira as duas linhas conforme mostradas abaixo:
+2. Valores numéricos são inseridos sem aspas — tente declarar e inicializar mais duas variáveis contendo números antes de seguir em frente.
+3. Agora vamos checar se nossas duas variáveis originais são do mesmo tipo de dados. Há um operador chamado {{jsxref("Operators/typeof", "typeof")}} no JavaScript que faz isso. Insira as duas linhas conforme mostradas abaixo:
 
     ```js
     typeof meuInt;
@@ -104,7 +104,7 @@ São os operadores que utilizamos para fazer as operações aritiméticas básic
 
 Nós provavelmente não precisamos ensinar a você como fazer matemática básica, mas gostaríamos de testar seu entendimento da sintaxe envolvida. Tente inserir os exemplos abaixo no seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools), ou use o console incorporado visto anteriormente, se preferir, para familiarizar-se com a sintaxe.
 
-1.  Primeiro tente inserir alguns exemplos simples por sua conta, como
+1. Primeiro tente inserir alguns exemplos simples por sua conta, como
 
     ```js
     10 + 7
@@ -112,7 +112,7 @@ Nós provavelmente não precisamos ensinar a você como fazer matemática básic
     60 % 3
     ```
 
-2.  Você pode tentar declarar e inicializar alguns números dentro de variáveis, e tentar usá-los nas operações — as variáveis irão se comportar exatamente como os valores que elas armazenam para a finalidade das operações. Por exemplo:
+2. Você pode tentar declarar e inicializar alguns números dentro de variáveis, e tentar usá-los nas operações — as variáveis irão se comportar exatamente como os valores que elas armazenam para a finalidade das operações. Por exemplo:
 
     ```js
     var num1 = 10;
@@ -121,7 +121,7 @@ Nós provavelmente não precisamos ensinar a você como fazer matemática básic
     num2 / num1;
     ```
 
-3.  Por último, nesta seção, tente inserir algumas expressões mais complexas, como:
+3. Por último, nesta seção, tente inserir algumas expressões mais complexas, como:
 
     ```js
     5 + 10 * 3;

@@ -25,7 +25,7 @@ Como você acessa? Três modos:
 
 - _**Menu bar.**_
 
-  - **Firefox.** Menu ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ ![](https://mdn.mozillademos.org/files/9639/Screenshot%20from%202014-11-26%2014:24:56.png)\_\_➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
+  - **Firefox.** Menu ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ ![](https://mdn.mozillademos.org/files/9639/Screenshot%20from%202014-11-26%2014:24:56.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
   - **Chrome.** _View ➤ Developer ➤ Developer Tools_
   - **Safari.** _Develop ➤ Show Web Inspector._ Se você não consegue ver o _menu Desenvolvedor_ , vá para _Safari ➤ Preferências ➤ Avançado_ e confira o _Show Develop menu no menu bar_ checkbox.
   - **Opera**. _Developer ➤ Web Inspector_

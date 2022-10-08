@@ -24,15 +24,15 @@ The other thing you need to do before moving on is to initialise your code direc
 
 1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "\_c_hange \_d_irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
 
-    ```bash
-    cd Desktop/test-site
-    ```
+   ```bash
+   cd Desktop/test-site
+   ```
 
 2. When the command line is pointing inside your website directory, type the following command, which tells the `git` tool to turn the directory into a git repository:
 
-    ```bash
-    git init
-    ```
+   ```bash
+   git init
+   ```
 
 #### An aside on command line interfaces
 

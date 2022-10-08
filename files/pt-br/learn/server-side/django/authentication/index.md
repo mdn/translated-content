@@ -83,26 +83,26 @@ Você já criou seu primeiro usuário quando olhamos para o [site Django admin](
 
 Abaixo, primeiro criaremos um grupo e depois um usuário. Embora ainda não tenhamos permissões para adicionar aos membros da nossa biblioteca, se precisarmos mais tarde, será muito mais fácil adicioná-los uma vez ao grupo do que individualmente a cada membro.
 
-Inicie o servidor de desenvolvimento e navegue até o site de administração em seu navegador da web local (<http://127.0.0.1:8000/admin/>). Entre no site usando as credenciais da sua conta de superusuário. O nível superior do site Admin exibe todos os seus modelos, classificados por "aplicativo Django". Na seção **Autenticação e Autorização**, você pode clicar nos links **Usuários** ou **Grupos** para ver seus registros existentes.
+Inicie o servidor de desenvolvimento e navegue até o site de administração em seu navegador da web local (`http://127.0.0.1:8000/admin/`). Entre no site usando as credenciais da sua conta de superusuário. O nível superior do site Admin exibe todos os seus modelos, classificados por "aplicativo Django". Na seção **Autenticação e Autorização**, você pode clicar nos links **Usuários** ou **Grupos** para ver seus registros existentes.
 
 ![Admin site - add groups or users](https://mdn.mozillademos.org/files/14091/admin_authentication_add.png)
 
 Primeiro vamos criar um novo grupo para os membros da nossa biblioteca.
 
-1.  Clique no botão **Adicionar** (ao lado de Grupo) para criar um novo grupo; digite o **Nome** "Library Members" para o grupo.![Admin site - add group](https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png)
-2.  Não precisamos de permissões para o grupo, então pressione **SALVAR** (você será direcionado para uma lista de grupos).
+1. Clique no botão **Adicionar** (ao lado de Grupo) para criar um novo grupo; digite o **Nome** "Library Members" para o grupo.![Admin site - add group](https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png)
+2. Não precisamos de permissões para o grupo, então pressione **SALVAR** (você será direcionado para uma lista de grupos).
 
 Agora vamos criar um usuário:
 
-1.  Volte para a página inicial do site de administração
-2.  Clique no botão **Adicionar** ao lado de _Usuários_ para abrir a caixa de diálogo _Adicionar usuário_.![Admin site - add user pt1](https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png)
-3.  Digite um nome de **usuário** e uma **senha/confirmação de senha** adequados para o usuário de teste
-4.  Pressione **SALVAR** para criar o usuário.
+1. Volte para a página inicial do site de administração
+2. Clique no botão **Adicionar** ao lado de _Usuários_ para abrir a caixa de diálogo _Adicionar usuário_.![Admin site - add user pt1](https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png)
+3. Digite um nome de **usuário** e uma **senha/confirmação de senha** adequados para o usuário de teste
+4. Pressione **SALVAR** para criar o usuário.
 
     O site de administração criará o novo usuário e levará você imediatamente para uma tela Alterar usuário, na qual é possível alterar seu **nome de usuário** e adicionar informações aos campos opcionais do modelo de usuário. Esses campos incluem o nome, o sobrenome, o endereço de email e o status e as permissões do usuário (somente o sinalizador **Ativo** deve ser definido). Mais abaixo, você pode especificar os grupos e permissões do usuário e ver datas importantes relacionadas ao usuário (por exemplo, a data de ingresso e a última data de login).![Admin site - add user pt2](https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png)
 
-5.  Na seção _Grupos_, selecione grupo de **Library Members** na lista de _Grupos disponíveis_ e pressione a **seta para a direita** entre as caixas para movê-lo para a caixa _Grupos escolhidos_.![Admin site - add user to group](https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png)
-6.  Não precisamos fazer mais nada aqui; basta selecionar **SALVAR** novamente, para ir para a lista de usuários.
+5. Na seção _Grupos_, selecione grupo de **Library Members** na lista de _Grupos disponíveis_ e pressione a **seta para a direita** entre as caixas para movê-lo para a caixa _Grupos escolhidos_.![Admin site - add user to group](https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png)
+6. Não precisamos fazer mais nada aqui; basta selecionar **SALVAR** novamente, para ir para a lista de usuários.
 
 É isso aí! Agora você tem uma conta de "membro normal da biblioteca" que poderá usar nos testes (depois de implementarmos as páginas para permitir o login).
 
@@ -129,7 +129,7 @@ urlpatterns += [
 ]
 ```
 
-Navegue até URL <http://127.0.0.1:8000/accounts/> (observe a barra à direita!) e o Django mostrará um erro que não foi possível encontrar esse URL e listará todos os URLs que ele tentou. A partir disso, você pode ver os URLs que funcionarão, por exemplo:
+Navegue até URL `http://127.0.0.1:8000/accounts/` (observe a barra à direita!) e o Django mostrará um erro que não foi possível encontrar esse URL e listará todos os URLs que ele tentou. A partir disso, você pode ver os URLs que funcionarão, por exemplo:
 
 > **Nota:**O uso do método acima adiciona os seguintes URLs com nomes entre colchetes, que podem ser usados para reverter os mapeamentos de URL. Você não precisa implementar mais nada - o mapeamento de URL acima mapeia automaticamente os URLs mencionados abaixo.
 >
@@ -144,7 +144,7 @@ Navegue até URL <http://127.0.0.1:8000/accounts/> (observe a barra à direita!)
 > accounts/ reset/done/ [name='password_reset_complete']
 > ```
 
-Agora tente navegar para o URL de login (<http://127.0.0.1:8000/accounts/login/>). Isso falhará novamente, mas com um erro informando que estamos perdendo o modelo necessário (**registration/login.html**) no caminho de pesquisa do modelo. Você verá as seguintes linhas listadas na seção amarela na parte superior:
+Agora tente navegar para o URL de login (`http://127.0.0.1:8000/accounts/login/`). Isso falhará novamente, mas com um erro informando que estamos perdendo o modelo necessário (**registration/login.html**) no caminho de pesquisa do modelo. Você verá as seguintes linhas listadas na seção amarela na parte superior:
 
 ```python
 Exception Type:    TemplateDoesNotExist
@@ -225,11 +225,11 @@ Crie um novo arquivo HTML chamado **/locallibrary/templates/registration/login.h
 
 Este modelo compartilha algumas semelhanças com as que já vimos antes - estende nosso modelo base e substitui o bloco `content`. O restante do código é um código de manipulação de formulário bastante padrão, que discutiremos em um tutorial posterior. Por enquanto, tudo o que você precisa saber é que isso exibirá um formulário no qual é possível inserir seu nome de usuário e senha e que, se você inserir valores inválidos, será solicitado que você digite os valores corretos quando a página for atualizada.
 
-Navegue de volta para a página de login (<http://127.0.0.1:8000/accounts/login/>). Depois de salvar seu modelo, você verá algo assim:
+Navegue de volta para a página de login (`http://127.0.0.1:8000/accounts/login/`). Depois de salvar seu modelo, você verá algo assim:
 
 ![Library login page v1](https://mdn.mozillademos.org/files/14101/library_login.png)
 
-Se você fizer login usando credenciais válidas, será redirecionado para outra página (por padrão, isso será <http://127.0.0.1:8000/accounts/profile/>). O problema é que, por padrão, o Django espera que, ao fazer o login, você deseje ser levado para uma página de perfil, o que pode ou não ser o caso. Como você ainda não definiu esta página, receberá outro erro!
+Se você fizer login usando credenciais válidas, será redirecionado para outra página (por padrão, isso será `http://127.0.0.1:8000/accounts/profile/`). O problema é que, por padrão, o Django espera que, ao fazer o login, você deseje ser levado para uma página de perfil, o que pode ou não ser o caso. Como você ainda não definiu esta página, receberá outro erro!
 
 Abra as configurações do projeto (**/locallibrary/locallibrary/settings.py**) e adicione o texto abaixo na parte inferior. Agora, quando você faz login, deve ser redirecionado para a página inicial do site por padrão.
 
@@ -240,7 +240,7 @@ LOGIN_REDIRECT_URL = '/'
 
 ### Template de logout
 
-Se você navegar para o URL de logout (<http://127.0.0.1:8000/accounts/logout/>) você verá um comportamento estranho - seu usuário será desconectado com certeza, mas será direcionado para a pagina de logout do **Admin**. Não é isso que você deseja, apenas porque o link de login nessa página o leva para a tela de login do administrador (e está disponível apenas para usuários que têm a permissão `is_staff`).
+Se você navegar para o URL de logout (`http://127.0.0.1:8000/accounts/logout/`) você verá um comportamento estranho - seu usuário será desconectado com certeza, mas será direcionado para a pagina de logout do **Admin**. Não é isso que você deseja, apenas porque o link de login nessa página o leva para a tela de login do administrador (e está disponível apenas para usuários que têm a permissão `is_staff`).
 
 Crie e abra /**locallibrary/templates/registration/logged_out.html**. Copie o texto abaixo:
 
@@ -358,8 +358,8 @@ Agora que você adicionou a configuração da URL e criou todos esses modelos, a
 
 Você pode testar as novas páginas de autenticação tentando fazer login e sair da sua conta de superusuário usando estes URLs:
 
-- <http://127.0.0.1:8000/accounts/login/>
-- <http://127.0.0.1:8000/accounts/logout/>
+- `http://127.0.0.1:8000/accounts/login/`
+- `http://127.0.0.1:8000/accounts/logout/`
 
 Você poderá testar a funcionalidade de redefinição de senha no link na página de login. **Esteja ciente de que o Django enviará apenas emails de redefinição para endereços (usuários) que já estão armazenados em seu banco de dados!**
 
@@ -570,7 +570,7 @@ Agora, tudo o que precisamos fazer para esta página é adicionar um modelo. Pri
 
 Este modelo é muito semelhante ao que criamos anteriormente para os objetos `Book` e `Author`. A única coisa "nova" aqui é que verificamos o método que adicionamos no modelo `(bookinst.is_overdue`) e use-o para alterar a cor dos itens em atraso.
 
-Quando o servidor de desenvolvimento estiver em execução, agora você poderá visualizar a lista de um usuário conectado no seu navegador em <http://127.0.0.1:8000/catalog/mybooks/>. Experimente isso com o usuário conectado e desconectado (no segundo caso, você deve ser redirecionado para a página de login).
+Quando o servidor de desenvolvimento estiver em execução, agora você poderá visualizar a lista de um usuário conectado no seu navegador em `http://127.0.0.1:8000/catalog/mybooks/`. Experimente isso com o usuário conectado e desconectado (no segundo caso, você deve ser redirecionado para a página de login).
 
 ### Adicione a lista à barra lateral
 

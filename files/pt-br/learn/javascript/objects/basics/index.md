@@ -281,7 +281,7 @@ Você está usando métodos disponíveis na instância da class [`Document`](/en
 
 O mesmo pode ser dito de basicamente qualquer outro objeto/API embutido que esteja usando — [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math), etc.
 
-Note que Objetos/APIs embutidos nem sempre criam instâncias de objetos automaticamente. Por exemplo, a [API de Notificações ](/pt-BR/docs/Web/API/Notifications_API)— que permite que navegadores modernos disparem notificações de sistema — requerem que você inicialize uma nova instância de objeto usando o construtor para cada notificação que queira disparar. Tente entrar o seguinte no seu console Javascript:
+Note que Objetos/APIs embutidos nem sempre criam instâncias de objetos automaticamente. Por exemplo, a [API de Notificações](/pt-BR/docs/Web/API/Notifications_API) — que permite que navegadores modernos disparem notificações de sistema — requerem que você inicialize uma nova instância de objeto usando o construtor para cada notificação que queira disparar. Tente entrar o seguinte no seu console Javascript:
 
 ```js
 var minhaNotificacao = new Notification('Hello!');
