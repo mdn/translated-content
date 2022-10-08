@@ -22,19 +22,14 @@ Neste primeiro artigo do Django, respondemos a pergunta "O que é o Django?" e d
       <th scope="row">Pré-requisitos:</th>
       <td>
         <p>
-          <span id="result_box" lang="pt"
-            ><span>Conhecimentos básicos em computação.</span>
-            <span
-              >Um entendimento geral de
+          Conhecimentos básicos em computação. Um entendimento geral de
               <a
                 href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps"
                 >programação de websites do lado do servidor</a
               >
               e, em particular, a mecânica de
               <a href="/pt-BR/docs/">interações cliente-servidor em websites</a
-              >.</span
-            ></span
-          >
+              >.
         </p>
       </td>
     </tr>
@@ -237,7 +232,7 @@ class Time(models.Model):
 
 O modelo Django fornece uma query API simples para buscas no banco de dados. Isto pode combinar com um grande número de campos ao mesmo tempo utilizando diversos critérios (ex.: exato, maiúsculas e minúsculas (case-sensitive), maior que, etc.), e pode suportar definições complexas (por exemplo, você pode especificar a busca por times U11 que tem os nomes começando com 'Fr" ou terminando com "al").
 
-O trecho de código mostra uma função da View (manipulador de recursos) para exibir todos os nossos times U09. A linha em negrito mostra como podemos usar a API modelo de consulta para filtrar todos os registros em que o campo `team_level` possui exatamente o texto 'U09' (observe como esse critério é passado para a função `filter()` com o argumento no campo de nome e o tipo de busca de correspondência (**exact**) separado por um sublinhado duplo: **(team_level\_\_exact**).
+O trecho de código mostra uma função da View (manipulador de recursos) para exibir todos os nossos times U09. A linha em negrito mostra como podemos usar a API modelo de consulta para filtrar todos os registros em que o campo `team_level` possui exatamente o texto 'U09' (observe como esse critério é passado para a função `filter()` com o argumento no campo de nome e o tipo de busca de correspondência (**exact**) separado por um sublinhado duplo: **`team_level__exact`**).
 
 ```python
 ## filename: views.py
@@ -330,16 +325,16 @@ Você já viu algum código real do Django acima, mas, diferentemente do código
 
 - [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introdução)
 - [Configurando um ambiente de desenvolvimento](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: The Local Library website](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial Django](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)[ Parte 2: Criando um esqueleto de site](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial Django](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)[ Parte 3: Usando moldes](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Tutorial Django](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)[ Parte 4: Site administrador do Django](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial Django](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)[ Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial Django](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)[ Parte 6: Generic list and detail views](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial Django](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)[ Parte 7: Sessions framework](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial Django](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)[ Parte 8: Autenticação de usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial Django](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)[ Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Tutorial Django](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)[ Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Tutorial Django](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)[ Parte 11: Implantando o Django na produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Segurança da aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
+- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
+- [Django Parte 3: Usando _models_](/pt-BR/docs/Learn/Server-side/Django/Models)
+- [Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
+- [Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
+- [Django Parte 6: Lista genérica e _detail views_](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
+- [Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
+- [Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
+- [Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
+- [Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
+- [Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
+- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
 - [Criando um mini blog Django](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

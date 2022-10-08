@@ -95,7 +95,7 @@ p {
 
 Você constatará que rapidamente aprende alguns valores, enquanto outros precisará pesquisar. As páginas de propriedades individuais no MDN dá a você uma maneira rápida de procurar propriedades e seus respectivos valores, quando você esquecer, ou desejar saber quais valores pode usar.
 
-> **Nota:** **Observação**: Você pode achar links para todas as páginas de propriedades CSS (junto com outros recursos CSS) listados no MDN [referência CSS](/pt-BR/docs/Web/CSS/Reference). Alternativamente, você deve se acostumar a pesquisar por "mdn _css-feature-name_" no seu motor de busca favorito sempre que precisar procurar mais informações sobre uma característica CSS. Por exemplo, experimente pesquisar por "mdn color" e "mdn\_ \_font-size"!
+> **Nota:** **Observação**: Você pode achar links para todas as páginas de propriedades CSS (junto com outros recursos CSS) listados no MDN [referência CSS](/pt-BR/docs/Web/CSS/Reference). Alternativamente, você deve se acostumar a pesquisar por "mdn _css-feature-name_" no seu motor de busca favorito sempre que precisar procurar mais informações sobre uma característica CSS. Por exemplo, experimente pesquisar por "mdn color" e "mdn font-size"!
 
 ## Módulos CSS
 
@@ -131,8 +131,8 @@ Agora que você tem algum entendimento do que o CSS é, vamos ao [Iniciando com 
 
 ## Neste módulo
 
-1.  [O que é CSS?](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Começando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Como o CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Usando o seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [O que é CSS?](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Começando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
+3. [Como o CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Usando o seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

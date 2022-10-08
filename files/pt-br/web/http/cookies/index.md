@@ -9,7 +9,7 @@ translation_of: Web/HTTP/Cookies
 ---
 {{HTTPSidebar}}
 
-Um cookie HTTP (um cookie web ou cookie de navegador) é um pequeno fragmento de dados que um servidor envia para o navegador do usuário. O navegador pode armazenar estes dados e enviá-los de volta na próxima requisição para o mesmo servidor. Normalmente é utilizado para identificar se duas requisições vieram do mesmo navegador — ao manter um usuário logado, por exemplo. Ele guarda informações dinâmicas para o protocolo\_ \_HTTP sem estado.
+Um cookie HTTP (um cookie web ou cookie de navegador) é um pequeno fragmento de dados que um servidor envia para o navegador do usuário. O navegador pode armazenar estes dados e enviá-los de volta na próxima requisição para o mesmo servidor. Normalmente é utilizado para identificar se duas requisições vieram do mesmo navegador — ao manter um usuário logado, por exemplo. Ele guarda informações dinâmicas para o protocolo HTTP sem estado.
 
 Cookies são usados principalmente para três propósitos:
 
@@ -20,7 +20,7 @@ Cookies são usados principalmente para três propósitos:
 - Rastreamento
   - : Registro e análise do comportamento de um usuário.
 
-Os cookies eram usados para armazenamento geral no lado do cliente. Embora isso fosse aceitável quando eram a única forma de armazenar dados no cliente, atualmente é recomendável utilizar APIs de armazenamento mais modernas. Os cookies são enviados em todas as requisições, por isso podem prejudicar a performance (especialmente em conexões móveis). APIs modernas de armazenamento no cliente são [Web storage API](/pt-BR/docs/Web/API/Web_Storage_API "DOM Storage") (`localStorage` e `sessionStorage`) e [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API).
+Os cookies eram usados para armazenamento geral no lado do cliente. Embora isso fosse aceitável quando eram a única forma de armazenar dados no cliente, atualmente é recomendável utilizar APIs de armazenamento mais modernas. Os cookies são enviados em todas as requisições, por isso podem prejudicar a performance (especialmente em conexões móveis). APIs modernas de armazenamento no cliente são [Web storage API](/pt-BR/docs/Web/API/Web_Storage_API) (`localStorage` e `sessionStorage`) e [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API).
 
 > **Nota:** Para visualizar os cookies armazenados (e outros armazenamentos que uma página web pode usar), pode-se habilitar o [Storage Inspector](/pt-BR/docs/Tools/Storage_Inspector) nas Ferramentas de Desenvolvimento e selecionar o item **Cookies** na árvore de armazenamento.
 
@@ -117,9 +117,6 @@ O atributo SameSite pode receber um ou dois valores (case-insensitive):
 
 - `None`
   - : O navegador irá enviar os cookies tanto para as requisições _cross-site_ quanto _same-site_.
-
-<!---->
-
 - `Strict`
   - : Se o cookie same-site possuir este atributo, o navegador enviará cookies apenas se a requisição for enviada do website que configurou este cookie, Se a requisição tem origem em outra URL, nenhum cookie com o atributo`Strict` será incluído.
 - `Lax`
@@ -191,7 +188,7 @@ Para mais informações, consulte [esta seção da Wikipedia](https://en.wikiped
 
 ### Cookies zumbi e Evercookies
 
-Uma abordagem mais radical aos cookies são os cookies zumbi ou _Evercookies_, que são recriados quando apagados e intencionalmente difíceis de apagar por completo. Eles usam a [API Web storage](/pt-BR/docs/Web/API/Web_Storage_API "DOM Storage"), Objetos Flash Local Shared e outras técnicas para se recriarem sempre que a ausência do cookie é detectada.
+Uma abordagem mais radical aos cookies são os cookies zumbi ou _Evercookies_, que são recriados quando apagados e intencionalmente difíceis de apagar por completo. Eles usam a [API Web storage](/pt-BR/docs/Web/API/Web_Storage_API), Objetos Flash Local Shared e outras técnicas para se recriarem sempre que a ausência do cookie é detectada.
 
 - [Evercookie por Samy Kamkar](https://github.com/samyk/evercookie)
 - [Cookies zumbi na Wikipedia](https://en.wikipedia.org/wiki/Zombie_cookie)

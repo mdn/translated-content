@@ -1,5 +1,5 @@
 ---
-title: 小于或等于（<=）
+title: 小于等于（<=）
 slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
 ---
 

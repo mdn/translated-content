@@ -144,14 +144,8 @@ Diretivas de Relatório controlam o processo de reportar as violações CSP. Vej
   - : Obriga o uso de {{Glossary("SRI")}} para _scripts_ ou estilos na página.
 - {{CSP("require-trusted-types-for")}}{{experimental_inline}}
   - : Impõe [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) (Tipos confiáveis) em coletores de eventos (vide: [Sink (Computing)](<https://en.wikipedia.org/wiki/Sink_(computing)>)) para evitar injeção de DOM XSS.
-
-<!---->
-
 - {{CSP("trusted-types")}}{{experimental_inline}}
   - : Usado para especificar uma lista branca de políticas [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) (Tipos confiáveis) (Tipos confiáveis permitem aplicações travarem injeções DOM XSS em coletores de eventos (_sinks_) para aceitarem somente valores tipados não falsificáveis no lugar de _strings_.
-
-<!---->
-
 - {{CSP("upgrade-insecure-requests")}}
   - : Instrui o usuário de agente a tratar todas as URLs inseguras de um site (aquelas servidas através do HTTP) a serem trocadas por URLs seguras (aqueles servidas através de HTTPS). Essa diretiva tem como foco sites com grande número de URLs inseguras e legadas que precisam ser reescritas.
 

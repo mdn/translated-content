@@ -39,7 +39,7 @@ Usando o construtor, a compilação da expressão regular é realizada em tempo 
 
 ## Escrevendo um padrão de expressão regular
 
-Um padrão de expressão é composto por um conjunto de caracteres simples, como `/abc/`, ou uma combinação de caracteres simples e especiais, como `/ab*c/` ou `/Capitulo (\d+)\.\d*/`. O último exemplo contém parênteses, que são usados como um mecanismo de armazenamento. A correspondência feita por essa parte da expressão é armazenada para uso posterior, como descrito em: {{ web.link("#Using_Parenthesized_Substring_Matches", "Using Parenthesized Substring Matches") }}.
+Um padrão de expressão é composto por um conjunto de caracteres simples, como `/abc/`, ou uma combinação de caracteres simples e especiais, como `/ab*c/` ou `/Capitulo (\d+)\.\d*/`. O último exemplo contém parênteses, que são usados como um mecanismo de armazenamento. A correspondência feita por essa parte da expressão é armazenada para uso posterior, como descrito em: [Using Parenthesized Substring Matches](#Using_Parenthesized_Substring_Matches).
 
 ### Uso de Padrões Simples
 
@@ -81,7 +81,7 @@ A tabela abaixo fornece uma lista completa dos caracteres especiais que podem se
           'b' minúsculo, porém se precedido da barra invertida
           <code>'\b'</code> ele passará a significar a ocorrência do caractere
           especial
-          {{web.link('#special-word-boundary', 'fronteira do caractere')}}.
+          [fronteira do caractere](#special-word-boundary).
         </p>
         <p>
           Quando a barra invertida preceder um caractere especial isso
@@ -783,7 +783,7 @@ A tabela abaixo fornece uma lista completa dos caracteres especiais que podem se
 
 ### Usando Parênteses
 
-Usar parênteses em volta de qualquer parte de uma expressão regular faz com que essa parte seja lembrada para ser usada depois, como descrito em {{ web.link("#Using_Parenthesized_Substring_Matches", "Usando as Substrings entre Parênteses na Expressão Regular") }}.
+Usar parênteses em volta de qualquer parte de uma expressão regular faz com que essa parte seja lembrada para ser usada depois, como descrito em [Usando as Substrings entre Parênteses na Expressão Regular](#Using_Parenthesized_Substring_Matches).
 
 Por Exemplo, a expressão `/Capitulo (\d+)\.\d*/` ilustra caracteres adicionais escapados e especiais e indica que parte do padrão deve ser lembrado. Corresponde precisamente aos caracteres 'Capitulo ' seguidos por um ou mais caracteres numéricos (`\d` significa qualquer caracter numérico e `+` significa 1 ou mais vezes), seguidos por um ponto decimal (que é um caracter especial; preceder com um \ significa que a expressão regular deve buscar pelo caracter literal '.'), seguido por qualquer caracter numérico 0 ou mais vezes (`\d` significa caracter numérico, `*` significa 0 ou mais vezes). Além disso, os parenteses são usados para relembrar os primeiros caracteres numéricos correspondentes.
 
@@ -868,7 +868,7 @@ Com esses scripts, a correspondência é encontrada o array é retornado e são 
       <td>
         O índice no qual iniciar a próxima partida. (Esta propriedade é
         configurada apenas se a expressão regular usar a opção g, descrita em
-        {{web.link ("# Advanced_Searching_With_Flags", "Advanced Searching With Flags")}}.)
+        [Advanced Searching With Flags](#Advanced_Searching_With_Flags).)
       </td>
       <td><code>5</code></td>
     </tr>

@@ -34,7 +34,7 @@ Uma lista de permissão é a lista de origens que pega um ou mais dos seguintes 
 - `'self'`: A funcionalidade será permitida no contexto, e em todos os contextos de navegação aninhados (_iframes_) de mesma origem.
 - `'src'`: (Em um _iframe_ com atributo _allow_ somente) A funcionalidade será permitida neste enquadramento, enquanto o documento carregado nele venha da mesma origem da URL no atributo {{HTMLElement('iframe','src','#Attributes')}} do enquadramento .
 - `'none'`: A funcionalidade é desabilitada em alto nível e nos contextos de navegação aninhados.
-- \<origin(s)>: A funcionalidade é permitida em origens especificas (por exemplo, https\://example.com). Origens devem ser separadas por um espaço.
+- \<origin(s)>: A funcionalidade é permitida em origens especificas (por exemplo, `https://example.com`). Origens devem ser separadas por um espaço.
 
 Os valores `*` (permitido para todas as origens) ou `'none'` (desabilitado para todas as origens) podem ser usados sozinhos, enquanto `'self'` e `'src'` podem ser usados com uma ou mais origens.
 
