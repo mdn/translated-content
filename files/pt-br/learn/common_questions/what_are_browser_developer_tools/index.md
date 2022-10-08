@@ -161,31 +161,41 @@ Aparecerá uma janela como a seguinte:
 
 Para ver o que acontece, tente inserir os seguintes trechos de código no console, um por um (e, em seguida, pressione Enter):
 
-1.  ```js
-    alert('hello!');
-    ```
-2.  ```js
-    document.querySelector('html').style.backgroundColor = 'purple';
-    ```
-3.  ```js
-    var myImage = document.createElement('img');
-    myImage.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-    document.querySelector('h1').appendChild(myImage);
-    ```
+```js
+alert("hello!");
+```
+
+```js
+document.querySelector("html").style.backgroundColor = "purple";
+```
+
+```js
+const myWordmark = document.createElement("img");
+myWordmark.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+);
+document.querySelector("h1").appendChild(myWordmark);
+```
 
 Agora, tente inserir as seguintes versões incorretas do código e veja o que você obtém.
 
-1.  ```js
-    alert('hello!);
-    ```
-2.  ```js
-    document.cheeseSelector('html').style.backgroundColor = 'purple';
-    ```
-3.  ```js
-    var myImage = document.createElement('img');
-    myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-    document.querySelector('h1').appendChild(myImage);
-    ```
+```js example-bad
+alert('hello!);
+```
+
+```js example-bad
+document.cheeseSelector("html").style.backgroundColor = "purple";
+```
+
+```js example-bad
+const myWordmark = document.createElement("img");
+myBanana.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+);
+document.querySelector("h1").appendChild(myWordmark);
+```
 
 Você começará a ver o tipo de erro que o navegador retorna. Muitas vezes, esses erros são bastante críticos, mas deve ser bem simples descobrir esses problemas!
 

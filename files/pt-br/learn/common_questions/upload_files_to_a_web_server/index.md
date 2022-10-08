@@ -88,11 +88,11 @@ Primeiramente, olhe em `http://demozilla.examplehostingprovider.net/` — como v
 
 Para conectar seu cliente SFTP ao servidor, siga estas etapas:
 
-1.  Escolha o arquivo _> Site Manager(Gerenciador de sites)..._ no menu principal.
-2.  Na janela do gerenciador de site, vá em novo site e preencha o nome do site como **demozilla** no espaço fornecido.
-3.  Preencha o servidor SFTP que seu host forneceu no campo _Host:_ field.
-4.  Em _Logon Type(tipo de LogOn):_ Escolha normal e ,em seguida , preencha com o nome de usuário e a senha fornecida nos campos relevantes.
-5.  Preencha a porta correta e outras informações.
+1. Escolha o arquivo _> Site Manager(Gerenciador de sites)..._ no menu principal.
+2. Na janela do gerenciador de site, vá em novo site e preencha o nome do site como **demozilla** no espaço fornecido.
+3. Preencha o servidor SFTP que seu host forneceu no campo _Host:_ field.
+4. Em _Logon Type(tipo de LogOn):_ Escolha normal e ,em seguida , preencha com o nome de usuário e a senha fornecida nos campos relevantes.
+5. Preencha a porta correta e outras informações.
 
 Sua janela estará semelhante a esta:
 

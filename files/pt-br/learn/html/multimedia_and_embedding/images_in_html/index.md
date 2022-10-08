@@ -83,7 +83,7 @@ Mas isso é inútil, pois apenas faz o navegador trabalhar mais, pesquisando o e
 > 2\) você recebeu permissão explícita e por escrito do proprietário da imagem, ou
 > 3\) você tem ampla prova de que a imagem é, de fato, de domínio público.
 >
-> Violações de direitos autorais são ilegais e antiéticas. Além disso, **nunca** aponte seu atributo `src `para uma imagem hospedada no site de outra pessoa à qual você não tem permissão para vincular. Isso é chamado de "hotlinking". Mais uma vez, roubar a largura de banda de alguém é ilegal. Ele também torna a página mais lenta, deixando você sem controle sobre se a imagem é removida ou substituída por algo embaraçoso.
+> Violações de direitos autorais são ilegais e antiéticas. Além disso, **nunca** aponte seu atributo `src` para uma imagem hospedada no site de outra pessoa à qual você não tem permissão para vincular. Isso é chamado de "hotlinking". Mais uma vez, roubar a largura de banda de alguém é ilegal. Ele também torna a página mais lenta, deixando você sem controle sobre se a imagem é removida ou substituída por algo embaraçoso.
 
 Nosso código acima nos daria o seguinte resultado:
 
@@ -171,7 +171,9 @@ Os títulos das imagens não são essenciais para incluir. Geralmente, é melhor
 
 Agora é sua vez de jogar! Esta seção de aprendizado ativo o ajudará a executar com um simples exercício de incorporação. Você é fornecido com um básico {{htmlelement("img")}} tag; gostaríamos que você incorporasse a imagem localizada no seguinte URL:
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 Anteriormente, dissemos para nunca vincular as imagens a outros servidores, mas isso é apenas para fins de aprendizado; portanto, deixaremos você de fora dessa vez.
 

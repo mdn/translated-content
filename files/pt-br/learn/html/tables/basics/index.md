@@ -208,23 +208,23 @@ HTML tables should be used for tabular data — this is what they are designed f
 
 In short, using tables for layout rather than [CSS layout techniques](/pt-BR/docs/Learn/CSS/CSS_layout) is a bad idea. The main reasons are as follows:
 
-1.  **Layout tables reduce accessibility for visually impaired users**: [Screenreaders](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders), used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.
-2.  **Tables produce tag soup**: As mentioned above, table layouts generally involve more complex markup structures than proper layout techniques. This can result in the code being harder to write, maintain, and debug.
-3.  **Tables are not automatically responsive**: When you use proper layout containers (such as {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, or {{htmlelement("div")}}), their width defaults to 100% of their parent element. Tables on the other hand are sized according to their content by default, so extra measures are needed to get table layout styling to effectively work across a variety of devices.
+1. **Layout tables reduce accessibility for visually impaired users**: [Screenreaders](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders), used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.
+2. **Tables produce tag soup**: As mentioned above, table layouts generally involve more complex markup structures than proper layout techniques. This can result in the code being harder to write, maintain, and debug.
+3. **Tables are not automatically responsive**: When you use proper layout containers (such as {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, or {{htmlelement("div")}}), their width defaults to 100% of their parent element. Tables on the other hand are sized according to their content by default, so extra measures are needed to get table layout styling to effectively work across a variety of devices.
 
 ## Active learning: Creating your first table
 
 We've talked table theory enough, so, let's dive into a practical example and build up a simple table.
 
-1.  First of all, make a local copy of [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) in a new directory on your local machine.
-2.  The content of every table is enclosed by these two tags : **[`<table></table>`](/en-US/docs/Web/HTML/Element/table)**. Add these inside the body of your HTML.
-3.  The smallest container inside a table is a table cell, which is created by a **[`<td>`](/en-US/docs/Web/HTML/Element/td)** element ('td' stands for 'table data'). Add the following inside your table tags:
+1. First of all, make a local copy of [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) in a new directory on your local machine.
+2. The content of every table is enclosed by these two tags : **[`<table></table>`](/en-US/docs/Web/HTML/Element/table)**. Add these inside the body of your HTML.
+3. The smallest container inside a table is a table cell, which is created by a **[`<td>`](/en-US/docs/Web/HTML/Element/td)** element ('td' stands for 'table data'). Add the following inside your table tags:
 
     ```html
     <td>Hi, I'm your first cell.</td>
     ```
 
-4.  If we want a row of four cells, we need to copy these tags three times. Update the contents of your table to look like so:
+4. If we want a row of four cells, we need to copy these tags three times. Update the contents of your table to look like so:
 
     ```html
     <td>Hi, I'm your first cell.</td>
@@ -237,7 +237,7 @@ As you will see, the cells are not placed underneath each other, rather they are
 
 To stop this row from growing and start placing subsequent cells on a second row, we need to use the **[`<tr>`](/en-US/docs/Web/HTML/Element/tr)** element ('tr' stands for 'table row'). Let's investigate this now.
 
-1.  Place the four cells you've already created inside `<tr>` tags, like so:
+1. Place the four cells you've already created inside `<tr>` tags, like so:
 
     ```html
     <tr>
@@ -248,7 +248,7 @@ To stop this row from growing and start placing subsequent cells on a second row
     </tr>
     ```
 
-2.  Now you've made one row, have a go at making one or two more — each row needs to be wrapped in an additional `<tr>` element, with each cell contained in a `<td>`.
+2. Now you've made one row, have a go at making one or two more — each row needs to be wrapped in an additional `<tr>` element, with each cell contained in a `<td>`.
 
 This should result in a table that looks something like the following:
 
@@ -317,9 +317,9 @@ The problem here is that, while you can kind of make out what's going on, it is 
 
 Let's have a go at improving this table.
 
-1.  First, make a local copy of our [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) files in a new directory on your local machine. The HTML contains the same Dogs example as you saw above.
-2.  To recognize the table headers as headers, both visually and semantically, you can use the **[`<th>`](/en-US/docs/Web/HTML/Element/th)** element ('th' stands for 'table header'). This works in exactly the same way as a `<td>`, except that it denotes a header, not a normal cell. Go into your HTML, and change all the `<td>` elements surrounding the table headers into `<th>` elements.
-3.  Save your HTML and load it in a browser, and you should see that the headers now look like headers.
+1. First, make a local copy of our [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) files in a new directory on your local machine. The HTML contains the same Dogs example as you saw above.
+2. To recognize the table headers as headers, both visually and semantically, you can use the **[`<th>`](/en-US/docs/Web/HTML/Element/th)** element ('th' stands for 'table header'). This works in exactly the same way as a `<td>`, except that it denotes a header, not a normal cell. Go into your HTML, and change all the `<td>` elements surrounding the table headers into `<th>` elements.
+3. Save your HTML and load it in a browser, and you should see that the headers now look like headers.
 
 > **Nota:** You can find our finished example at [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) on GitHub ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
@@ -380,10 +380,10 @@ We need a way to get "Animals", "Hippopotamus", and "Crocodile" to span across t
 
 Let's use `colspan` and `rowspan` to improve this table.
 
-1.  First, make a local copy of our [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) files in a new directory on your local machine. The HTML contains the same animals example as you saw above.
-2.  Next, use `colspan` to make "Animals", "Hippopotamus", and "Crocodile" span across two columns.
-3.  Finally, use `rowspan` to make "Horse" and "Chicken" span across two rows.
-4.  Save and open your code in a browser to see the improvement.
+1. First, make a local copy of our [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) files in a new directory on your local machine. The HTML contains the same animals example as you saw above.
+2. Next, use `colspan` to make "Animals", "Hippopotamus", and "Crocodile" span across two columns.
+3. Finally, use `rowspan` to make "Horse" and "Chicken" span across two rows.
+4. Save and open your code in a browser to see the improvement.
 
 > **Nota:** You can find our finished example at [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) on GitHub ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
@@ -464,14 +464,14 @@ Below you can see the timetable of a languages teacher. On Friday she has a new 
 
 Recreate the table by following the steps below.
 
-1.  First, make a local copy of our [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) file in a new directory on your local machine. The HTML contains the same table you saw above, minus the column styling information.
-2.  Add a `<colgroup>` element at the top of the table, just underneath the `<table>` tag, in which you can add your `<col>` elements (see the remaining steps below).
-3.  The first two columns need to be left unstyled.
-4.  Add a background color to the third column. The value for your `style` attribute is `background-color:#97DB9A;`
-5.  Set a separate width on the fourth column. The value for your `style` attribute is `width: 42px;`
-6.  Add a background color to the fifth column. The value for your `style` attribute is `background-color: #97DB9A;`
-7.  Adicione uma cor de fundo diferente mais uma borda à sexta coluna, para indicar que este é um dia especial e ela está dando uma nova aula. Os valores do seu `style`atributo são`background-color:#DCC48E; border:4px solid #C1437A;`
-8.  Os últimos dois dias são dias livres, então apenas defina-os para nenhuma cor de fundo, mas uma largura definida; o valor do `style`atributo é`width: 42px;`
+1. First, make a local copy of our [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) file in a new directory on your local machine. The HTML contains the same table you saw above, minus the column styling information.
+2. Add a `<colgroup>` element at the top of the table, just underneath the `<table>` tag, in which you can add your `<col>` elements (see the remaining steps below).
+3. The first two columns need to be left unstyled.
+4. Add a background color to the third column. The value for your `style` attribute is `background-color:#97DB9A;`
+5. Set a separate width on the fourth column. The value for your `style` attribute is `width: 42px;`
+6. Add a background color to the fifth column. The value for your `style` attribute is `background-color: #97DB9A;`
+7. Adicione uma cor de fundo diferente mais uma borda à sexta coluna, para indicar que este é um dia especial e ela está dando uma nova aula. Os valores do seu `style`atributo são`background-color:#DCC48E; border:4px solid #C1437A;`
+8. Os últimos dois dias são dias livres, então apenas defina-os para nenhuma cor de fundo, mas uma largura definida; o valor do `style`atributo é`width: 42px;`
 
 Veja como você segue com o exemplo. Se você tiver dúvidas ou quiser verificar seu trabalho, pode encontrar nossa versão no GitHub como [schedule-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ( [veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) ).
 
