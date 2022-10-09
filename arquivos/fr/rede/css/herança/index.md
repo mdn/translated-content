@@ -11,7 +11,7 @@ original_slug: Web/CSS/Héritage
 
 {{CSSRef}}
 
-Pour [chaque propriété CSS](fr/R%c3%a9f%c3%a9rence_CSS), la spécification indique si, par défaut, cette propriété est héritée ou non. Cela permet de définir le comportement qu'on observera lorsqu'aucune valeur n'est spécifiée pour une propriété pour un élément donné.
+Pour [chaque propriété CSS](fr/Css/Reference), la spécification indique si, par défaut, cette propriété est héritée ou non. Cela permet de définir le comportement qu'on observera lorsqu'aucune valeur n'est spécifiée pour une propriété pour un élément donné.
 
 ## Propriétés héritées
 
