@@ -21,7 +21,7 @@ new Date(dataString);
 new Date(ano, mês, dia, hora, minuto, segundo, milissegundo);
 ```
 
-{{ note('Note que objetos JavaScript <code>Date</code> só podem ser instanciados chamando JavaScript <code>Date</code> como um construtor: chamá-lo como uma função regular (ou seja, sem o operador <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a>) irá retornar uma string ao invés de um objeto <code>Date</code>; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript <code>Date</code> não têm sintaxe literal.') }}
+> **Nota:** Note que objetos JavaScript `Date` só podem ser instanciados chamando JavaScript `Date` como um construtor: chamá-lo como uma função regular (ou seja, sem o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)) irá retornar uma string ao invés de um objeto `Date`; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript `Date` não têm sintaxe literal.
 
 ### Parâmetros para o constructor Date
 
