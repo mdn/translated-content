@@ -40,7 +40,7 @@ overflow: unset;
 ### 值
 
 - `visible`
-  - : 内容不能被裁减并且可能渲染到元素框的外部。
+  - : 内容不能被裁减并且可能渲染到边距盒（padding）的外部。
 - `hidden`
   - : 如果需要，内容将被裁减以适应边距（padding）盒。不提供滚动条，也不支持允许用户滚动（例如通过拖拽或者使用滚轮）。内容*可以*以编程的方式滚动（例如，通过设置 {{domxref("Element.scrollLeft", "scrollLeft")}} 等属性的值或 {{domxref("Element.scrollTo", "scrollTo()")}} 方法）, 因此该元素仍然是一个滚动的容器。
 - `clip`
