@@ -22,9 +22,9 @@ slug: Web/HTML/Element/Input/color
     </td>
   </tr>
     <tr>
-      <td><strong>事件s</strong></td>
+      <td><strong>事件</strong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/change_event", "change")}} 和
         {{domxref("HTMLElement/input_event", "input")}}
       </td>
     </tr>
