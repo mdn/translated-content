@@ -6,7 +6,7 @@ tags:
   - Оператор
 translation_of: Web/JavaScript/Reference/Operators/Addition
 ---
-{jsSidebar("Operators")}}
+{{jsSidebar("Operators")}}
 
 Оператор сложения (+) создаёт сумму числовых операндов или конкатенацию строк.
 
