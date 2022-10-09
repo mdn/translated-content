@@ -17,7 +17,7 @@ spec-urls:
 
 {{CSSRef}}
 
-[CSS](/en-US/docs/Web/CSS) **_伪类_** 是添加到选择器的关键字，用于指定所选元素的特殊状态。例如，伪类 {{CSSxRef(":hover")}} 可以用于选择一个按钮，当用户的指针悬停在按钮上时，设置此按钮的样式。
+[CSS](/zh-CN/docs/Web/CSS) **_伪类_** 是添加到选择器的关键字，用于指定所选元素的特殊状态。例如，伪类 {{CSSxRef(":hover")}} 可以用于选择一个按钮，当用户的指针悬停在按钮上时，设置此按钮的样式。
 
 ```css
 /* 用户的指针悬停在其上的任何按钮 */
@@ -30,7 +30,7 @@ button:hover {
 
 伪类让你可以将样式应用于元素——不仅仅是与文档树内容有关的，也可以是与外部因素有关的——像是与导航历史有关的（{{CSSxRef(":visited")}}，举例而言）、与其内容的状态有关的（像是某些表单元素上的 {{CSSxRef(":checked")}}）、或者与鼠标位置有关的（像是 {{CSSxRef(":hover")}}，它可以让你知道鼠标是否在一个元素上）。
 
-> **注意：**相较于伪类，[伪元素](/en-US/docs/Web/CSS/Pseudo-elements) 可用于设置元素 _特定部分_ 的样式。
+> **注意：**相较于伪类，[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 可用于设置元素 _特定部分_ 的样式。
 
 ## 元素显示状态伪类
 
@@ -121,7 +121,7 @@ button:hover {
 
 ## 时间维度式伪类
 
-These pseudo-classes apply when viewing something which has timing, such as a [WebVTT](/en-US/docs/Web/API/WebVTT_API) caption track.
+These pseudo-classes apply when viewing something which has timing, such as a [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) caption track.
 
 - {{CSSxRef(":current")}}
   - : Represents the element or ancestor of the element that is being displayed.
@@ -176,15 +176,15 @@ These pseudo-classes apply when viewing something which has timing, such as a [W
 
 ## 函数式伪类
 
-这些伪类接受 [宽容的选择器列表](/en-US/docs/Web/CSS/Selector_list) 作为参数。
+这些伪类接受 [宽容的选择器列表](/zh-CN/docs/Web/CSS/Selector_list) 作为参数。
 
-- [`:is()`](/en-US/docs/Web/CSS/:is)
+- [`:is()`](/zh-CN/docs/Web/CSS/:is)
   - : 匹配与提供的列表中的任何选择器匹配的任何元素。
-- [`:not()`](/en-US/docs/Web/CSS/:not)
+- [`:not()`](/zh-CN/docs/Web/CSS/:not)
   - : 表示其参数中未表示的任何元素。
-- [`:where()`](/en-US/docs/Web/CSS/:where)
+- [`:where()`](/zh-CN/docs/Web/CSS/:where)
   - : 特异性调整伪类匹配与提供的列表中的任何选择器匹配的任何元素，但不添加任何特异性权重。
-- [`:has()`](/en-US/docs/Web/CSS/:has)
+- [`:has()`](/zh-CN/docs/Web/CSS/:has)
   - : The relational pseudo-class represents an element if any of the relative selectors match when anchored against the attached element.
 
 ## 语法
@@ -329,4 +329,4 @@ W
 
 ## 参见
 
-- [伪元素](/en-US/docs/Web/CSS/Pseudo-elements)
+- [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)
