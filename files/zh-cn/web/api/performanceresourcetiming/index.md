@@ -81,4 +81,4 @@ slug: Web/API/PerformanceResourceTiming
 ## 参考
 
 - [Resource Timing (Overview)](/Web/API/Resource_Timing)
-- [Using the Resource Timing API](/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [使用 Resource Timing API](/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
