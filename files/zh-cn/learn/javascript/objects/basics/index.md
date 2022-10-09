@@ -43,7 +43,7 @@ slug: Learn/JavaScript/Objects/Basics
 var person = {};
 ```
 
-如果你在浏览器控制台输入 person，然后按下 Enter(确认) 键，你可能会得到以下结果中的其中一种：
+如果你在浏览器的 [JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools#javascript_控制台)输入 `person`，然后按下 Enter（确认）键，你可能会得到以下结果中的一种：
 
 ```js
 [object Object]
