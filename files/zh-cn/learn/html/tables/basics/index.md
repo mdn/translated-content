@@ -12,7 +12,7 @@ slug: Learn/HTML/Tables/Basics
     <tr>
       <th scope="row">前置知识：</th>
       <td>
-        HTML 基本概念(参见<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 介绍</a>)。
+        HTML 基本概念（参见<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 介绍</a>）。
       </td>
     </tr>
     <tr>
@@ -24,7 +24,7 @@ slug: Learn/HTML/Tables/Basics
 
 ## 什么是表格？
 
-表格是由行和列组成的结构化数据集 (表格数据)，它让你快速简单地查找某个表示不同类型数据之间的某种关系的值。比如说，某个人和他的年龄，一天或是一周，当地游泳池的时间表。
+表格是由行和列组成的结构化数据集（表格数据），它让你快速简单地查找某个表示不同类型数据之间的某种关系的值。比如说，某个人和他的年龄，一天或是一周，当地游泳池的时间表。
 
 ![A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47.](numbers-table.png)
 
@@ -123,7 +123,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 1. 首先，将 [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 文件拷贝到你的本地环境上。
 2. 每一个表格的内容都包含在这两个标签中：**[`<table></table>`](/zh-CN/docs/Web/HTML/Element/table)**。在你的 HTML 的 {{htmlelement("body")}} 中添加这些内容。
-3. 在表格中，最小的内容容器是单元格，是通过 **[`<td>`](/zh-CN/docs/Web/HTML/Element/td)** 元素创建的（其中 "td" 代表 "table data"）。把下面的内容添加到你的表格标签中：
+3. 在表格中，最小的内容容器是单元格，是通过 **[`<td>`](/zh-CN/docs/Web/HTML/Element/td)** 元素创建的（其中“td”代表“table data”）。把下面的内容添加到你的表格标签中：
 
     ```html
     <td>Hi, I'm your first cell.</td>
@@ -140,7 +140,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 你会看到，单元格不会放置在彼此的下方，而是自动与同一行上的其他单元格对齐。每个 `<td>` 元素 创建一个单独单元格，它们共同组成了第一行。我们添加的每个单元格都使行的长度变长。
 
-如果想让这一行停止增加，并让单元格从第二行开始，我们需要使用 **[`<tr>`](/zh-CN/docs/Web/HTML/Element/tr)** 元素（其中 "tr" 代表 "table row"）。让我们现在来证实一下。
+如果想让这一行停止增加，并让单元格从第二行开始，我们需要使用 **[`<tr>`](/zh-CN/docs/Web/HTML/Element/tr)** 元素（其中“tr”代表“table row”）。让我们现在来证实一下。
 
 1. 把你已经创建好的 4 个单元格放入 `<tr>` 标签，就像这样：
 
