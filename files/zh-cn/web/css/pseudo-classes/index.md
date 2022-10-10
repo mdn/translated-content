@@ -119,7 +119,7 @@ button:hover {
 - {{CSSxRef(":paused")}}
   - : Represents a media element that is capable of playing when that element is paused.
 
-## 时间维度式伪类
+## 时间方面的伪类
 
 These pseudo-classes apply when viewing something which has timing, such as a [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) caption track.
 
