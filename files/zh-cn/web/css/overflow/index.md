@@ -71,7 +71,7 @@ overflow 选项包括裁减、显示滚动条，或者显示从容器流向周�
 
 指定 `visible`（默认）或 `clip` 以外的值，会创建一个新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。由于技术原因，这是必要的——如果浮动包含滚动元素，它将在每个滚动步骤后强制重新包装内容，从而导致一个缓慢的滚动体验。
 
-为了 `overflow` 具有效果，块级水平的容器必须有一个设定的高度（`height` 或 `max-height`）或 `white-space` 设置为 `nowrap`。
+为使 `overflow` 具有效果，块级水平的容器必须有一个设定的高度（`height` 或 `max-height`）或 `white-space` 设置为 `nowrap`。
 
 设置一个轴为 `visible`（默认值），而设置另一个轴为*不同的*值时，`visible` 的行为会像 `auto` 一样。
 
