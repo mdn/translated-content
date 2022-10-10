@@ -5,11 +5,11 @@ slug: Web/API/ResizeObserverEntry/contentBoxSize
 
 {{APIRef("Resize Observer API")}}
 
-{{domxref("ResizeObserverEntry")}} 接口的只读属性 **`contentBoxSize`** 在回调运行时，返回一个包含被观查元素的边框盒大小的数组。
+{{domxref("ResizeObserverEntry")}} 接口的只读属性 **`contentBoxSize`** 在回调运行时，返回一个包含被观查元素的内容盒大小的数组。
 
 ## 值
 
-一个数组，包含观察元素的新边框盒大小的对象。该数组在支持多列的场景中出现多个部分的元素时是必要的。数组中的每个对象都包含以下两个属性：
+一个数组，包含观察元素的新内容盒大小的对象。该数组在支持多列的场景中出现多个部分的元素时是必要的。数组中的每个对象都包含以下两个属性：
 
 - `blockSize`
   - : 观察的元素在 block 方向上的长度。对于具有水平 {{cssxref("writing-mode")}} 的盒子，这是垂直尺寸或者高度；如果 writing-mode 是垂直的，这是水平的尺寸或者宽度。
