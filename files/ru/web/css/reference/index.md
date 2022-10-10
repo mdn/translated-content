@@ -20,12 +20,13 @@ translation_of: Web/CSS/Reference
 
 ### Стили
 
-    selectorlist { property: value; [more property:value; pairs] }
+```
+selectorlist { property: value; [more property:value; pairs] }
+```
 
-    ...где selectorlist: selector[:pseudo-class] [::pseudo-element] [, more selectorlists]
+...где selectorlist: selector[:pseudo-class] [::pseudo-element] [, more selectorlists]
 
-
-    Смотрите списки селекторов, псевдоэлементов и псевдоклассов ниже.
+Смотрите списки селекторов, псевдоэлементов и псевдоклассов ниже.
 
 #### Примеры
 
@@ -48,11 +49,11 @@ div.menu-bar li:hover > ul { display: block; }
 
 - Базовые селекторы
 
-  - [По тегу](/ru/docs/Web/CSS/Type_selectors)` elementname`
+  - [По тегу](/ru/docs/Web/CSS/Type_selectors) `elementname`
   - [По классу](/ru/docs/Web/CSS/Class_selectors) `.classname`
   - [По ID](/ru/docs/Web/CSS/ID_selectors) `#idname`
-  - [Универсальные](/ru/docs/Web/CSS/Universal_selectors)` * ns|* *|*`
-  - [По атрибутам](/ru/docs/Web/CSS/Attribute_selectors)` [attr=value]`
+  - [Универсальные](/ru/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
+  - [По атрибутам](/ru/docs/Web/CSS/Attribute_selectors) `[attr=value]`
 
 - Комбинационные
 
