@@ -77,7 +77,7 @@ overflow 选项包括裁减、显示滚动条，或者显示从容器流向周�
 
 JavaScript 的 {{domxref("Element.scrollTop")}} 属性可用于滚动 HTML 元素，即使当 `overflow` 设置为 `hidden` 时。
 
-## 形式化定义
+## 形式定义
 
 {{cssinfo}}
 
