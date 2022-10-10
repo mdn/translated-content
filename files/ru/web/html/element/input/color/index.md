@@ -96,7 +96,7 @@ colorWell.select();
 
 ### HTML
 
-HTML довольно прост — пара абзацев описательного материала с {{HTMLElement ("input")}} типа `color `с идентификатором `colorWell`, который мы будем использовать для изменения цвета текста абзацев.
+HTML довольно прост — пара абзацев описательного материала с {{HTMLElement ("input")}} типа `color` с идентификатором `colorWell`, который мы будем использовать для изменения цвета текста абзацев.
 
 ```html
 <p>An example demonstrating the use of the <code>&lt;input type="color"&gt;</code>
