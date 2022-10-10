@@ -81,7 +81,7 @@ JavaScript 的 {{domxref("Element.scrollTop")}} 属性可用于滚动 HTML 元�
 
 {{cssinfo}}
 
-## 形式化语法
+## 形式语法
 
 {{csssyntax}}
 
