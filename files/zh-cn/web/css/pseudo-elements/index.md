@@ -124,6 +124,6 @@ T
   </tbody>
 </table>
 
-## 相关链接
+## 参见
 
 - [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
