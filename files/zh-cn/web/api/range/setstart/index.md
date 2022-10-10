@@ -39,7 +39,7 @@ range.setStart(startNode,startOffset);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.setStart")}}
+{{Compat}}
 
 ## 参见
 

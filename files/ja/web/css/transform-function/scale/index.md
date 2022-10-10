@@ -14,7 +14,7 @@ original_slug: Web/CSS/transform-function/scale()
 
 座標の値が \[-1, 1] の範囲外の場合、変倍は、その座標の方向に要素を拡大します。この範囲内の場合、変倍は、要素をその座標の方向に縮小します。負の場合、変倍は [点対称化](https://ja.wikipedia.org/wiki/点対称) と大きさの変更を行います。1 と等しい場合、変倍は何もしません。
 
-> **Note:** `scale()` 関数は、二次元の変換のみに適用されます。三次元空間内での変倍を行うには、 [`scale3d()`](</ja/docs/Web/CSS/transform-function/scale3d()>) 関数を使用してください。
+> **メモ:** `scale()` 関数は、二次元の変換のみに適用されます。三次元空間内での変倍を行うには、 [`scale3d()`](</ja/docs/Web/CSS/transform-function/scale3d()>) 関数を使用してください。
 
 ## 構文
 

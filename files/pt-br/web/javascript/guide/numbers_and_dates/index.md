@@ -217,7 +217,7 @@ var diasRestantes = Math.round(diasRestantes); //retorna os dias restantes no an
 
 Este exemplo cria um objeto Date chamado `hoje` que contém a data de hoje. Ele, então, cria o objeto Date chamado `fimAno`e seta o ano para o ano vigente. Então, usando o número de milisegundos por dia, ele computa o número de dias entre hoje e `fimAno`, usando `getTime` e arredondando os números de dias.
 
-O método `parse` é útil para associar valores de strings de data para objetos Date existentes. Por exemplo, o código a seguir usa `parse` e `setTime` para associar um valor de data ao objeto `IPOdate:`
+O método `parse` é útil para associar valores de strings de data para objetos Date existentes. Por exemplo, o código a seguir usa `parse` e `setTime` para associar um valor de data ao objeto `IPOdate`:
 
 ```js
 var IPOdate = new Date();

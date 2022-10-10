@@ -33,7 +33,7 @@ indexOf(searchElement, fromIndex)
 
 `indexOf()` は `searchElement` と配列の要素を [厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality) （三重イコール演算子 `===` で使われるのと同じ方法）を使って比較します。
 
-> **Note:** String のメソッドについては、{{jsxref("String.prototype.indexOf()")}} を参照してください。
+> **メモ:** String のメソッドについては、{{jsxref("String.prototype.indexOf()")}} を参照してください。
 
 ## 例
 

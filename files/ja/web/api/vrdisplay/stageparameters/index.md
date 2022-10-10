@@ -8,7 +8,7 @@ original_slug: Web/API/VRDevice/stageParameters
 
 **`stageParameters`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` がルームスケール体験をサポートしている場合に、ルームスケールパラメーターを持つ {{domxref("VRStageParameters")}} オブジェクトを返します．
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ### 値
 

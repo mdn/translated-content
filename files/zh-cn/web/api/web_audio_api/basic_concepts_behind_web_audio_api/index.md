@@ -46,8 +46,8 @@ slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 现在让我们来看一下通道，一个单声道和一个立体声的音频片段，每个都是 1 秒钟，播放频率（采样率）为 44100 赫兹：
 
-- 单声道片段会有 44100 个样本点和 44100 个帧。长度属性为 44100 。
-- 立体声片段会有 88200 个样本点和 44100 个帧。长度属性依旧为 44100 ，因为长度总和帧的个数相同。
+- 单声道片段会有 44100 个样本点和 44100 个帧。长度属性为 44100。
+- 立体声片段会有 88200 个样本点和 44100 个帧。长度属性依旧为 44100，因为长度总和帧的个数相同。
 
 ![A diagram showing several frames in an audio buffer in a long line, each one containing two samples, as the buffer has two channels, it is stereo.](https://mdn.mozillademos.org/files/12519/sampleframe.svg)
 
@@ -64,7 +64,7 @@ var buffer = context.createBuffer(2, 22050, 44100);
 
 如果你使用上面的方法调用，你将会得到一个立体声（两个声道）的音频片段 (Buffer)，当它在一个频率为 44100 赫兹（这是目前大部分声卡处理声音的频率）的音频环境中播放的时候，会持续 0.5 秒：22050 帧 / 44100 赫兹 = 0.5 秒。
 
-> **备注：** 在 [数字音频](https://zh.wikipedia.org/zh-cn/數位音訊) 中，**44,100 [赫兹](https://wikipedia.org/wiki/Hertz)** （有时也写作 **44.1 kHz**）是一个常见的 [取样频率](https://wikipedia.org/wiki/Sampling_frequency)。 为什么选取 44.1kHz 呢？首先，因为 [人耳的接收频率](https://wikipedia.org/wiki/Hearing_range) 大约在 20 Hz 到 20,000 Hz 之间，根据 [采样定理](https://zh.wikipedia.org/wiki/采样定理)，采样频率一定要大于最终生成数据最大频率的二倍，因此就一定要大于 40,000 Hz（即 40kHz）。不仅如此，在采样之前信号还必须通过 [低通滤波器](https://zh.wikipedia.org/zh-cn/低通滤波器) ，否则 会发生[混叠](https://zh.wikipedia.org/zh-cn/混疊)现象，一个理想低通滤波器会完全留下低于 20kHz 的信号（且没有使它衰减）并完美阻拦一切高于 20kHz 的信号，而事实上 [过度频带（英文）](https://wikipedia.org/wiki/Transition_band)总是存在，在这个区域内信号会被部分衰减。这个频带越宽，建立一个 [抗混叠滤波器](https://zh.wikipedia.org/zh-cn/抗混疊濾波器) 才越容易。因此我们选取 44.1kHz 允许我们有 2.05kHz 的空间预留给过度频带。
+> **备注：** 在 [数字音频](https://zh.wikipedia.org/zh-cn/數位音訊) 中，**44,100 [赫兹](https://wikipedia.org/wiki/Hertz)** （有时也写作 **44.1 kHz**）是一个常见的 [取样频率](https://wikipedia.org/wiki/Sampling_frequency)。为什么选取 44.1kHz 呢？首先，因为 [人耳的接收频率](https://wikipedia.org/wiki/Hearing_range) 大约在 20 Hz 到 20,000 Hz 之间，根据 [采样定理](https://zh.wikipedia.org/wiki/采样定理)，采样频率一定要大于最终生成数据最大频率的二倍，因此就一定要大于 40,000 Hz（即 40kHz）。不仅如此，在采样之前信号还必须通过 [低通滤波器](https://zh.wikipedia.org/zh-cn/低通滤波器) ，否则 会发生[混叠](https://zh.wikipedia.org/zh-cn/混疊)现象，一个理想低通滤波器会完全留下低于 20kHz 的信号（且没有使它衰减）并完美阻拦一切高于 20kHz 的信号，而事实上 [过度频带（英文）](https://wikipedia.org/wiki/Transition_band)总是存在，在这个区域内信号会被部分衰减。这个频带越宽，建立一个 [抗混叠滤波器](https://zh.wikipedia.org/zh-cn/抗混疊濾波器) 才越容易。因此我们选取 44.1kHz 允许我们有 2.05kHz 的空间预留给过度频带。
 
 ```js
 var context = new AudioContext();
@@ -109,7 +109,7 @@ LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 
 ### 向上和向下混频
 
-当输入与输出的声道数不同时，我们就需要按照如下方法进行混频。这些封装好的方法可以通过设置声音节点的 {{domxref("AudioNode.channelInterpretation")}} 属性为 `"speakers"`（扬声器） 或 `"discrete"`（离散声道） 进行混频。
+当输入与输出的声道数不同时，我们就需要按照如下方法进行混频。这些封装好的方法可以通过设置声音节点的 {{domxref("AudioNode.channelInterpretation")}} 属性为 `"speakers"`（扬声器）或 `"discrete"`（离散声道）进行混频。
 
 <table class="no-markdown">
   <thead>

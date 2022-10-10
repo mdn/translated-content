@@ -21,7 +21,9 @@ simple-custom:defined {
 
 ## 構文
 
-{{csssyntax}}
+```
+:defined
+```
 
 ## 例
 

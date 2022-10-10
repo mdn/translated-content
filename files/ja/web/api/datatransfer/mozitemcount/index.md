@@ -9,7 +9,7 @@ slug: Web/API/DataTransfer/mozItemCount
 
 **`DataTransfer.mozItemCount`** プロパティは、ドラッグされている項目の数を返します。これは、例えば、ドラッグされているファイルの数を取得するために使用することができます。
 
-> **Note:** このプロパティは、Gecko 固有のものです。
+> **メモ:** このプロパティは、Gecko 固有のものです。
 
 このプロパティは {{readonlyInline}} です。
 

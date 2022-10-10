@@ -11,4 +11,4 @@ slug: Glossary/Port
 
 ### 一般知識
 
-- Wikipedia 上の{{Interwiki("wikipedia", "ポート番号")}}の記事
+- Wikipedia 上の[ポート番号](https://ja.wikipedia.org/wiki/ポート番号)の記事

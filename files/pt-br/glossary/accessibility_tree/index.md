@@ -23,7 +23,7 @@ Há quatro coisas em um objeto da árvore de acessibilidade:
 - **função**
   - : Que tipo de objeto é esse? Por exemplo, é um botão, uma barra de navegação ou uma lista de items?
 - **estado**
-  - : Tem um estado? Os exemplos incluem caixas de seleção marcadas ou desmarcadas, e recolhido ou expandido para o elemento [`<summary>`](/pt-BR/docs/Web/HTML/Element/summary)·
+  - : Tem um estado? Os exemplos incluem caixas de seleção marcadas ou desmarcadas, e recolhido ou expandido para o elemento [`<summary>`](/pt-BR/docs/Web/HTML/Element/summary).
 
 Adicionalmente, a árvore de acessibilidade frequentemente contém informação sobre o que pode ser feito com um elemento: um link pode ser seguido, uma entrada de texto pode ser digitada, entre outras coisas.
 

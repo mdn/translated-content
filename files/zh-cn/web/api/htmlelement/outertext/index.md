@@ -9,7 +9,7 @@ slug: Web/API/HTMLElement/outerText
 
 ## 概要
 
-**`HTMLElement.outerText`**是一个非标准的属性。作为一个获得器，它返回与{{domxref("HTMLElement.innerText")}}一致的值。 作为一个设置器，它将删除当前节点并将其替换为给定的文本。
+**`HTMLElement.outerText`**是一个非标准的属性。作为一个获得器，它返回与{{domxref("HTMLElement.innerText")}}一致的值。作为一个设置器，它将删除当前节点并将其替换为给定的文本。
 
 ## 范例
 

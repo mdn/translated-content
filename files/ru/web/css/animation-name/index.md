@@ -7,7 +7,7 @@ translation_of: Web/CSS/animation-name
 
 ## Описание
 
-[CSS](/ru/docs/CSS "CSS") свойство **`animation-name`** задаёт список анимаций, чтобы применить к элементу. Каждое имя является правилом {{cssxref("@keyframes")}}, которое задаёт значения свойств для последовательности анимации.
+[CSS](/ru/docs/CSS) свойство **`animation-name`** задаёт список анимаций, чтобы применить к элементу. Каждое имя является правилом {{cssxref("@keyframes")}}, которое задаёт значения свойств для последовательности анимации.
 
 {{EmbedInteractiveExample("pages/css/animation-name.html")}}
 
@@ -46,7 +46,7 @@ animation-name: unset
 
 ## Примеры
 
-См. [CSS animations](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS/CSS_animations").
+См. [CSS animations](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
 
 ## Спецификации
 
@@ -58,5 +58,5 @@ animation-name: unset
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

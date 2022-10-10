@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 
 O método **`Array.from()`** cria uma nova instância `de um Array` quando for passado um array-like ou um iterable object como argumento.
 
-No ES6, a sintaxe de classe permite a subclassificação de classes nativas e classes definidas pelo usuário; como resultado, os métodos estáticos pertencentes a classe, como **`Array.from,`** são "herdadas" por subclasses do **`Array`** e criam novas instâncias da subclasse, não do **`Array`**.
+No ES6, a sintaxe de classe permite a subclassificação de classes nativas e classes definidas pelo usuário; como resultado, os métodos estáticos pertencentes a classe, como **`Array.from`**, são "herdadas" por subclasses do **`Array`** e criam novas instâncias da subclasse, não do **`Array`**.
 
 ## Sintaxe
 

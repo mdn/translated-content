@@ -17,10 +17,7 @@ Com a finalidade de fornecer suporte de qualidade para interfaces baseadas em to
 
 - Surface
   - : A superfície sensível ao toque. Pode ser uma tela ou trackpad.
-
-<!---->
-
-- **T**ouch point
+- Touch point
   - : Um ponto de contato com a superfície. Pode ser um dedo (ou cotovelo, orelha, nariz, o que seja, mas provavelmente, um dedo) ou uma caneta.
 
 ## Interfaces

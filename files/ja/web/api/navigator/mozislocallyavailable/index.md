@@ -7,7 +7,7 @@ slug: Web/API/Navigator/mozIsLocallyAvailable
 
 **`Navigator.mozIsLocallyAvailable()`** メソッドは、アドオンが指定されたリソースが両可能かどうかを判断できるようにします。
 
-> **Note:** リクエストされた URI が同じオリジンでないと、セキュリティ例外が発生することがあります。
+> **メモ:** リクエストされた URI が同じオリジンでないと、セキュリティ例外が発生することがあります。
 
 ## 構文
 

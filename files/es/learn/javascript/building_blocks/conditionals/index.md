@@ -138,7 +138,7 @@ function establecerClima() {
 {{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
 1. Aquí tenemos un elemento HTML {{htmlelement("select")}} que nos permite realizar varias elecciones sobre el clima, y un parrafo simple.
-2. En el JavaScript, estamos almacenando una referencia para ambos elementos {{htmlelement("select")}} y {{htmlelement("p")}} , y añadiendo un Event Listener o en español un Detector de Eventos al elemento `<select>` así cuando su valor cambie se ejecuta la función ` establecerClima``(). `
+2. En el JavaScript, estamos almacenando una referencia para ambos elementos {{htmlelement("select")}} y {{htmlelement("p")}} , y añadiendo un Event Listener o en español un Detector de Eventos al elemento `<select>` así cuando su valor cambie se ejecuta la función `establecerClima()`.
 3. Cuando la función es ejecutada, primero establecemos la variable `eleccion` con el valor obtenido del elemento `<select>.` Luego usamos una declaración condicinal para mostrar distintos textos dentro del párrafo {{htmlelement("p")}} dependiendo del valor de la variable `eleccion`. Note como todas las condicinales son probadas en los bloques `else if() {...}` , a excepción del primero, el cual es probado en el primer bloque `if() {...}`.
 4. La ultima elección, dentro del bloque `else {...}`, es básicamente el "último recurso" como opción— El código dentro de este bloque se ejecutará si nunguna de las condiciones es `true`. En este caso, sirve para vaciar el contenido del párrafo si nada ha sido seleccionado, por ejemplo, si el usuario decide elegir de nuevo "--Haga una elección--" mostrado al inicio.
 

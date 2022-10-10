@@ -17,7 +17,7 @@ slug: Web/CSS/Layout_cookbook/Split_Navigation
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/split-navigation.html", '100%', 520)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/split-navigation--download.html)
 

@@ -9,7 +9,7 @@ slug: Web/API/PushManager
 
 このインターフェースは、{{domxref("ServiceWorkerRegistration.pushManager")}} プロパティを経由してアクセスできます。
 
-> **Note:** **ノート**：このインターフェースは、廃止された {{domxref("PushRegistrationManager")}}で以前に提案されていた機能をリプレースしています。
+> **メモ:** このインターフェースは、廃止された {{domxref("PushRegistrationManager")}}で以前に提案されていた機能をリプレースしています。
 
 ## プロパティ
 

@@ -15,7 +15,7 @@ p:nth-last-of-type(4n) {
 }
 ```
 
-> **Note:** この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-of-type")}} と同じです。
+> **メモ:** この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-of-type")}} と同じです。
 
 ## 構文
 
@@ -23,9 +23,9 @@ p:nth-last-of-type(4n) {
 
 構文の詳しい説明は {{Cssxref(":nth-last-child")}} を参照してください。
 
-### 形式文法
-
-{{csssyntax}}
+```
+:nth-last-of-type( <an-plus-b> | even | odd )
+```
 
 ## 例
 

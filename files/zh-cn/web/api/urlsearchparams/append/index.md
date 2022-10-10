@@ -41,7 +41,7 @@ params.append('foo', 4);
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.append")}}
+{{Compat}}
 
 ## 参见
 

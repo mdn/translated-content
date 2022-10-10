@@ -8,7 +8,7 @@ tags:
 translation_of: Web/EXSLT/math/lowest
 ---
 {{XsltRef}}
-`math:lowest()` devuelve el nodo del conjunto de nodos (node-set) especificado con el valor más bajo (donde el valor más bajo se calcula usando [`math:min()`](es/EXSLT/math/min)).
+`math:lowest()` devuelve el nodo del conjunto de nodos (node-set) especificado con el valor más bajo (donde el valor más bajo se calcula usando [`math:min()`](/es/docs/Web/EXSLT/math/min).
 
 Un nodo tiene este valor mínimo si convirtiendo su valor de cadena a número iguala el valor mínimo.
 
@@ -25,7 +25,7 @@ math:lowest(conjuntoNodos)
 
 ### Devuelve
 
-Un fragmento de árbol resultante que consiste en la copia de los nodos devueltos por [`math:min()`](es/EXSLT/math/min).
+Un fragmento de árbol resultante que consiste en la copia de los nodos devueltos por [`math:min()`](/es/docs/Web/EXSLT/math/min).
 
 ## Definido en
 

@@ -73,4 +73,4 @@ rootNode = node.rootNode;
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.getRootNode")}}
+{{Compat}}

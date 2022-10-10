@@ -54,13 +54,11 @@ console.log(Intl.PluralRules.supportedLocalesOf(locales, options).join(', '));
 
 ## Spécifications
 
-| Spécification                                                                                                         | État                             | Commentaires         |
-| --------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| [Brouillon pour les règles de nombre avec `Intl`](https://rawgit.com/caridy/intl-plural-rules-spec/master/index.html) | {{Spec2('ES Int Draft')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.PluralRules.supportedLocalesOf")}}
+{{Compat}}
 
 ## Voir aussi
 

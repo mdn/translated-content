@@ -21,14 +21,12 @@ O elemento HTML _Table_ (`<table>`) representa dados em duas dimensões ou mais.
       <td>
         <a
           href="/en-US/docs/HTML/Content_categories"
-          title="HTML/Content categories"
           >Categoria de conteúdo</a
         >
       </td>
       <td>
         <a
           href="/en-US/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
           >Fluxo de conteúdo</a
         >
       </td>

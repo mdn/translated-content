@@ -23,9 +23,6 @@ continue [rótulo];
 Diferentemente do {{jsxref("Statements/break", "break")}}, o `continue` não termina a execução do laço completamente, em vez disso ele:
 
 - Volta à condição, em um laço do tipo {{jsxref("Statements/while", "while")}}.
-
-<!---->
-
 - Volta à expressão, atualizando-a, em um laço do tipo {{jsxref("Statements/for", "for")}}.
 
 O `continue` pode incluir, opcionalmente, um rótulo que premite ao programa pular para a próxima iteração de um laço rotulado em vez de pular o loop em que ele se encontra. Neste caso, o `continue` necessita estar dentro deste laço rotulado.

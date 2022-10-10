@@ -9,7 +9,7 @@ slug: Glossary/CardDAV
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "CardDAV")}}
+- Wikipedia 上の [CardDAV](https://ja.wikipedia.org/wiki/CardDAV)
 
 ### 技術文書
 

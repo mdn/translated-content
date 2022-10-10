@@ -45,7 +45,7 @@ result; // "Barry"
 
 2. Wikipedia の記事
 
-    1. {{interwiki("wikipedia", "en:Immediately-invoked function expression", "IIFE")}} (英語)
+    1. [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (英語)
 
 3. [用語集](/ja/docs/Glossary)
 

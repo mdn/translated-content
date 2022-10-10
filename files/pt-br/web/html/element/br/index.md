@@ -15,19 +15,16 @@ Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a
       <th scope="row">
         <a
           href="/en-US/docs/HTML/Content_categories"
-          title="HTML/Content_categories"
           >Categorias de Conteúdo</a
         >
       </th>
       <td>
         <a
           href="/en-US/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
           >Conteúdo de Fluxo</a
         >,
         <a
           href="/en-US/docs/HTML/Content_categories#Phrasing_content"
-          title="HTML/Content categories#Phrasing content"
           >conteúdo fraseado</a
         >.
       </td>
@@ -49,7 +46,6 @@ Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a
         Qualquer elemento que aceita
         <a
           href="/en-US/docs/HTML/Content_categories#Phrasing_content"
-          title="HTML/Content_categories#Phrasing_content"
           >conteúdo fraseado</a
         >.
       </td>

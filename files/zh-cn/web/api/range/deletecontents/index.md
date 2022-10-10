@@ -29,7 +29,7 @@ range.deleteContents();
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.deleteContents")}}
+{{Compat}}
 
 ## 参考
 

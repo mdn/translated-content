@@ -88,47 +88,49 @@ translation_of: Web/HTML/Element/dialog
 </script>
 ```
 
-    <!-- Простой попап диалог с формой -->
-    <dialog id="favDialog">
-      <form method="dialog">
-        <section>
-          <p><label for="favAnimal">Favorite animal:</label>
-          <select id="favAnimal">
-            <option></option>
-            <option>Brine shrimp</option>
-            <option>Red panda</option>
-            <option>Spider monkey</option>
-          </select></p>
-        </section>
-        <menu>
-          <button id="cancel" type="reset">Cancel</button>
-          <button type="submit">Confirm</button>
-        </menu>
-      </form>
-    </dialog>
-
+```html
+<!-- Простой попап диалог с формой -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <section>
+      <p><label for="favAnimal">Favorite animal:</label>
+      <select id="favAnimal">
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select></p>
+    </section>
     <menu>
-      <button id="updateDetails">Update details</button>
+      <button id="cancel" type="reset">Cancel</button>
+      <button type="submit">Confirm</button>
     </menu>
+  </form>
+</dialog>
 
-    <script>
-      (function() {
-        var updateButton = document.getElementById('updateDetails');
-        var cancelButton = document.getElementById('cancel');
-        var favDialog = document.getElementById('favDialog');
+<menu>
+  <button id="updateDetails">Update details</button>
+</menu>
 
-        // Update button opens a modal dialog
-        updateButton.addEventListener('click', function() {
-          favDialog.showModal();
-        });
+<script>
+  (function() {
+    var updateButton = document.getElementById('updateDetails');
+    var cancelButton = document.getElementById('cancel');
+    var favDialog = document.getElementById('favDialog');
 
-        // Form cancel button closes the dialog box
-        cancelButton.addEventListener('click', function() {
-          favDialog.close();
-        });
+    // Update button opens a modal dialog
+    updateButton.addEventListener('click', function() {
+      favDialog.showModal();
+    });
 
-      })();
-    </script>
+    // Form cancel button closes the dialog box
+    cancelButton.addEventListener('click', function() {
+      favDialog.close();
+    });
+
+  })();
+</script>
+```
 
 ## Спецификации
 

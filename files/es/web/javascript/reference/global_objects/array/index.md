@@ -206,7 +206,7 @@ console.log(Object.keys(frutas)) // ['0', '1']
 console.log(frutas.length)       // 2
 ```
 
-Hay más información sobre este tema en la página sobre [`Array.length`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/length).
+Hay más información sobre este tema en la página sobre [`Array.length`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/length).
 
 ### Creación de un _array_ a partir de una expresión regular
 

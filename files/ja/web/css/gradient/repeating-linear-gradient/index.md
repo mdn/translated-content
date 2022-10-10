@@ -52,7 +52,7 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 - `<color-hint>`
   - : color-hint は、隣り合う色経由点の間でどのようにグラデーションが進むかを定義する補間のヒントです。長さによって、どの位置で二つの色経由点のグラデーション色が色の移行の中間点に達するかを定義します。省略された場合、色の移行の中間点は二つの色経由点の中点になります。
 
-> **Note:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じ規則に従います。
+> **メモ:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じ規則に従います。
 
 ### 形式文法
 
@@ -117,7 +117,7 @@ body {
 
 最後の色経由点が 10% であり、グラデーションが垂直なので、反復グラデーション内の各グラデーションは 10% の高さになり、 10 本の水平線に相当します。
 
-> **Note:** 他の例は [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)を参照してください。
+> **メモ:** 他の例は [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)を参照してください。
 
 ## 仕様書
 

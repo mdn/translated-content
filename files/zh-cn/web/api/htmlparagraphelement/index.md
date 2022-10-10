@@ -5,7 +5,7 @@ slug: Web/API/HTMLParagraphElement
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLParagraphElement`** 接口可以提供超过其继承的{{domxref("HTMLElement")}} 对象额外的属性 ，用以操作 {{HTMLElement("p")}} 元素.
+**`HTMLParagraphElement`** 接口可以提供超过其继承的{{domxref("HTMLElement")}} 对象额外的属性，用以操作 {{HTMLElement("p")}} 元素。
 
 {{InheritanceDiagram(600, 120)}}
 

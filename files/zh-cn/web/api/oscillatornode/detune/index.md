@@ -43,7 +43,7 @@ oscillator.start();
 
 ## 浏览器兼容性
 
-{{Compat("api.OscillatorNode.detune")}}
+{{Compat}}
 
 ## See also
 

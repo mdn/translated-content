@@ -11,7 +11,7 @@ slug: Web/API/CanvasRenderingContext2D/fillText
 
 テキストのフォントやレイアウト構成は、 {{domxref("CanvasRenderingContext2D.font","font")}}、{{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}、{{domxref("CanvasRenderingContext2D.direction","direction")}} の各プロパティで定義されたものを使用して描画が行われます。
 
-> **Note:** 文字列の文字の輪郭を描画するには、そのコンテキストで {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} メソッドを呼び出してください。
+> **メモ:** 文字列の文字の輪郭を描画するには、そのコンテキストで {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} メソッドを呼び出してください。
 
 ## 構文
 
@@ -62,7 +62,7 @@ ctx.fillText('Hello world', 50, 90);
 
 このコードでは、 {{HTMLElement("canvas")}} への参照を取得し、その 2D グラフィックコンテキストへの参照を取得します。
 
-そして、 {{domxref("CanvasRenderingContext2D", "font")}} を高さ 50 ピクセルの "serif" （ユーザーの既定の{{interwiki("wikipedia", "セリフ_(文字)", "セリフ付き")}}フォント）に設定し、 `fillText()` を呼び出して座標 (50, 90) からテキスト "Hello world" を描画しています。
+そして、 {{domxref("CanvasRenderingContext2D", "font")}} を高さ 50 ピクセルの "serif" （ユーザーの既定の[セリフ付き](https://ja.wikipedia.org/wiki/セリフ_(文字))フォント）に設定し、 `fillText()` を呼び出して座標 (50, 90) からテキスト "Hello world" を描画しています。
 
 #### 結果
 

@@ -34,7 +34,7 @@ slug: Web/API/DataTransfer
 
 {{SeeCompatTable}}
 
-> **Note:** この節のすべてのプロパティは Gecko 固有のものです。
+> **メモ:** この節のすべてのプロパティは Gecko 固有のものです。
 
 - {{domxref("DataTransfer.mozCursor")}}
   - : ドラッグカーソルの状態を返します。主にタブドラッグの際のカーソルを制御するのに使います。
@@ -65,7 +65,7 @@ slug: Web/API/DataTransfer
 
 {{Non-standard_header()}}
 
-> **Note:** この節のすべてのメソッドは Gecko 固有のものです。
+> **メモ:** この節のすべてのメソッドは Gecko 固有のものです。
 
 - {{domxref("DataTransfer.addElement()")}}
   - : ドラッグ元の要素を指定します。

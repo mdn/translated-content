@@ -55,5 +55,5 @@ _親インターフェイスである {{domxref("Node")}} および {{domxref("E
 
 ## 関連情報
 
-- [DOM 概要ページ](/en-US/docs/Web/API/Document_Object_Model).
+- [DOM 概要ページ](/ja/docs/Web/API/Document_Object_Model).
 - このインターフェイスを実装している具象インターフェイス: {{domxref("Text")}}, {{domxref("CDATASection")}}, {{domxref("ProcessingInstruction")}}, {{domxref("Comment")}}

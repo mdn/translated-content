@@ -123,4 +123,4 @@ h3{
 
 ## Смотрите также
 
-- [CSS Box Model](/en/CSS/box_model "en/CSS/box model")
+- [CSS Box Model](/en/CSS/box_model)

@@ -16,7 +16,9 @@ In 3D space, rotations have three degrees of liberty, which together describe a 
 
 The amount of rotation created by `rotate3d()` is specified by three {{cssxref("&lt;number&gt;")}}s and one {{cssxref("&lt;angle&gt;")}}. The `<number>`s represent the x-, y-, and z-coordinates of the vector denoting the axis of rotation. The `<angle>` represents the angle of rotation; if positive, the movement will be clockwise; if negative, it will be counter-clockwise.
 
-    rotate3d(x, y, z, a)
+```
+rotate3d(x, y, z, a)
+```
 
 ### Values
 

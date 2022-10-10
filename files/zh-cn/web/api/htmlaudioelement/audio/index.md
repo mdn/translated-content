@@ -30,7 +30,7 @@ audioObj = new Audio(url);
 
 提供三种方法给开发者，判断音频文件是否已经加载，允许开始回放：
 
-- 检测 {{domxref("HTMLMediaElement.readyState", "readyState")}} 属性的值. 如果值是 `HTMLMediaElement.HAVE_FUTURE_DATA`，说明有足够的数据开始回放并能至少播放一小段时间。如果值是 `HTMLMediaElement.HAVE_ENOUGH_DATA`，根据当前的下载速率，说明有足够的数据，你可以无干扰地播放至结束。
+- 检测 {{domxref("HTMLMediaElement.readyState", "readyState")}} 属性的值。如果值是 `HTMLMediaElement.HAVE_FUTURE_DATA`，说明有足够的数据开始回放并能至少播放一小段时间。如果值是 `HTMLMediaElement.HAVE_ENOUGH_DATA`，根据当前的下载速率，说明有足够的数据，你可以无干扰地播放至结束。
 - 监听 {{domxref("HTMLMediaElement.canplay_event", "canplay")}} 事件。当足够的音频数据被发送至 `<audio>` 元素，能开始回放，即使可能出现中断时，会触发该事件。
 - 监听 {{domxref("HTMLMediaElement.canplaythrough_event", "canplaythrough")}} 事件。当音频应该没有干扰能够顺利播放时将会触发该事件。
 

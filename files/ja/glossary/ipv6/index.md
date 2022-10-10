@@ -9,4 +9,4 @@ slug: Glossary/IPv6
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "IPv6", "IPv6")}} の記事
+- Wikipedia の [IPv6](https://ja.wikipedia.org/wiki/IPv6) の記事

@@ -653,10 +653,6 @@
     "modified": "2019-03-18T21:38:38.555Z",
     "contributors": ["AurelieBayre", "gnoyaze"]
   },
-  "Glossary/Empty_element": {
-    "modified": "2019-03-23T22:58:49.655Z",
-    "contributors": ["loella16", "cdr"]
-  },
   "Glossary/Encapsulation": {
     "modified": "2019-03-23T22:41:15.348Z",
     "contributors": ["loella16", "xdelatour"]
@@ -1862,6 +1858,10 @@
   "Glossary/VoIP": {
     "modified": "2019-03-23T22:39:39.990Z",
     "contributors": ["xdelatour"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2019-03-23T22:58:49.655Z",
+    "contributors": ["loella16", "cdr"]
   },
   "Glossary/W3C": {
     "modified": "2019-03-23T22:57:06.246Z",
@@ -6959,7 +6959,7 @@
     "modified": "2020-10-15T22:20:43.803Z",
     "contributors": ["thebrave"]
   },
-  "Web/API/Battery_status_API": {
+  "Web/API/Battery_Status_API": {
     "modified": "2020-10-15T21:24:14.232Z",
     "contributors": ["thebrave", "SphinxKnight", "DTSSE", "teoli"]
   },
@@ -7601,7 +7601,7 @@
     "modified": "2020-10-15T22:21:32.530Z",
     "contributors": ["thiag73"]
   },
-  "Web/API/Console/dir": {
+  "Web/API/console/dir": {
     "modified": "2020-10-15T21:43:00.216Z",
     "contributors": ["xavierartot", "loella16", "sylvaindethier", "Chevallm"]
   },
@@ -13731,7 +13731,7 @@
       "Mgjbot"
     ]
   },
-  "Web/API/window/location": {
+  "Web/API/Window/location": {
     "modified": "2019-03-23T23:59:30.762Z",
     "contributors": [
       "Mahabarata",
@@ -19727,10 +19727,6 @@
       "xaky"
     ]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2019-04-20T23:42:36.501Z",
-    "contributors": ["tregagnon", "SphinxKnight"]
-  },
   "Web/Guide/Introduction_to_Web_development": {
     "modified": "2019-03-24T00:03:04.501Z",
     "contributors": ["Jeremie", "fscholz", "BenoitL"]
@@ -19928,7 +19924,7 @@
       "Goofy"
     ]
   },
-  "Web/HTML/Element/Input": {
+  "Web/HTML/Element/input": {
     "modified": "2020-10-15T21:14:16.017Z",
     "contributors": [
       "SphinxKnight",
@@ -19948,11 +19944,11 @@
       "teoli"
     ]
   },
-  "Web/HTML/Element/Input/button": {
+  "Web/HTML/Element/input/button": {
     "modified": "2020-10-15T21:37:46.494Z",
     "contributors": ["SphinxKnight", "marie-ototoi", "dreizn", "Bat", "Goofy"]
   },
-  "Web/HTML/Element/Input/checkbox": {
+  "Web/HTML/Element/input/checkbox": {
     "modified": "2020-10-15T21:39:40.574Z",
     "contributors": [
       "Jamelkol",
@@ -19965,11 +19961,11 @@
       "AnthonyMaton"
     ]
   },
-  "Web/HTML/Element/Input/color": {
+  "Web/HTML/Element/input/color": {
     "modified": "2020-10-15T21:34:25.198Z",
     "contributors": ["Jamelkol", "SphinxKnight", "nicofrand", "josephcab"]
   },
-  "Web/HTML/Element/Input/date": {
+  "Web/HTML/Element/input/date": {
     "modified": "2020-10-15T21:39:48.210Z",
     "contributors": [
       "Flaburgan",
@@ -19982,15 +19978,15 @@
       "Bat"
     ]
   },
-  "Web/HTML/Element/Input/datetime-local": {
+  "Web/HTML/Element/input/datetime-local": {
     "modified": "2020-10-28T11:18:38.925Z",
     "contributors": ["nbtetreault", "SphinxKnight"]
   },
-  "Web/HTML/Element/Input/email": {
+  "Web/HTML/Element/input/email": {
     "modified": "2020-10-15T21:55:52.405Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/HTML/Element/Input/file": {
+  "Web/HTML/Element/input/file": {
     "modified": "2020-10-15T21:54:07.371Z",
     "contributors": [
       "brunostasse",
@@ -20001,63 +19997,63 @@
       "daufinsyd"
     ]
   },
-  "Web/HTML/Element/Input/hidden": {
+  "Web/HTML/Element/input/hidden": {
     "modified": "2020-10-15T21:55:51.697Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/HTML/Element/Input/image": {
+  "Web/HTML/Element/input/image": {
     "modified": "2020-10-15T21:43:35.571Z",
     "contributors": ["Jamelkol", "SphinxKnight"]
   },
-  "Web/HTML/Element/Input/month": {
+  "Web/HTML/Element/input/month": {
     "modified": "2020-10-15T21:56:34.329Z",
     "contributors": ["SphinxKnight", "loganblangenois"]
   },
-  "Web/HTML/Element/Input/number": {
+  "Web/HTML/Element/input/number": {
     "modified": "2020-10-15T21:55:45.586Z",
     "contributors": ["SphinxKnight", "nbrdx", "Louis-PhilippeTrempe"]
   },
-  "Web/HTML/Element/Input/password": {
+  "Web/HTML/Element/input/password": {
     "modified": "2020-10-15T21:43:36.452Z",
     "contributors": ["SphinxKnight", "CAILAC-Maxime"]
   },
-  "Web/HTML/Element/Input/radio": {
+  "Web/HTML/Element/input/radio": {
     "modified": "2020-10-15T21:55:43.403Z",
     "contributors": ["SphinxKnight", "FanJiyong"]
   },
-  "Web/HTML/Element/Input/range": {
+  "Web/HTML/Element/input/range": {
     "modified": "2020-10-15T21:55:44.797Z",
     "contributors": ["SphinxKnight", "jerominejournet"]
   },
-  "Web/HTML/Element/Input/reset": {
+  "Web/HTML/Element/input/reset": {
     "modified": "2020-10-15T21:55:53.083Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/HTML/Element/Input/search": {
+  "Web/HTML/Element/input/search": {
     "modified": "2020-10-15T21:55:52.204Z",
     "contributors": ["SphinxKnight", "lionralfs"]
   },
-  "Web/HTML/Element/Input/submit": {
+  "Web/HTML/Element/input/submit": {
     "modified": "2020-10-15T21:56:12.673Z",
     "contributors": ["SphinxKnight", "cabalpit"]
   },
-  "Web/HTML/Element/Input/tel": {
+  "Web/HTML/Element/input/tel": {
     "modified": "2020-11-24T06:34:33.505Z",
     "contributors": ["Superkooka", "SphinxKnight"]
   },
-  "Web/HTML/Element/Input/text": {
+  "Web/HTML/Element/input/text": {
     "modified": "2020-10-15T21:57:28.394Z",
     "contributors": ["SphinxKnight", "Keyhaku"]
   },
-  "Web/HTML/Element/Input/time": {
+  "Web/HTML/Element/input/time": {
     "modified": "2020-10-15T21:57:37.801Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/HTML/Element/Input/url": {
+  "Web/HTML/Element/input/url": {
     "modified": "2020-10-15T21:57:06.539Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/HTML/Element/Input/week": {
+  "Web/HTML/Element/input/week": {
     "modified": "2020-10-15T21:57:06.373Z",
     "contributors": ["SphinxKnight"]
   },
@@ -21125,23 +21121,6 @@
   "Web/HTML/Reference": {
     "modified": "2019-09-09T07:17:11.858Z",
     "contributors": ["SphinxKnight", "wbamberg", "ts-informatique_Grenoble"]
-  },
-  "Web/HTML/Using_the_application_cache": {
-    "modified": "2020-10-15T21:07:42.579Z",
-    "contributors": [
-      "Qouagga",
-      "SphinxKnight",
-      "Surfoo",
-      "personnel",
-      "cdromain",
-      "Gillespie59",
-      "Tioneb",
-      "bvauchelle",
-      "teoli",
-      "michaelch",
-      "rd6137",
-      "whoshallsucceed"
-    ]
   },
   "Web/HTML/microformats": {
     "modified": "2019-07-21T06:21:36.960Z",
@@ -28104,74 +28083,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:27:51.341Z",
-    "contributors": [
-      "innocenzi",
-      "SphinxKnight",
-      "ariasuni",
-      "HelloEdit",
-      "GodefroyClair",
-      "kdex",
-      "Pragmateek",
-      "lionel",
-      "Goofy",
-      "Ltrlg",
-      "Youle",
-      "teoli"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
-    "modified": "2020-10-15T21:32:15.453Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species": {
-    "modified": "2020-10-15T21:36:32.002Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T21:37:58.832Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2020-10-15T21:27:50.323Z",
-    "contributors": ["SphinxKnight", "teoli"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-10-15T21:27:49.784Z",
-    "contributors": ["SphinxKnight", "teoli"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2020-10-15T21:27:49.172Z",
-    "contributors": ["SphinxKnight", "teoli"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T21:27:50.745Z",
-    "contributors": ["SphinxKnight", "teoli"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T21:27:49.108Z",
-    "contributors": ["tomderudder", "SphinxKnight", "teoli"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-15T21:27:49.912Z",
-    "contributors": ["SphinxKnight", "teoli"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2020-10-15T21:27:50.316Z",
-    "contributors": ["SphinxKnight", "teoli"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2020-10-15T21:27:50.400Z",
-    "contributors": ["SphinxKnight", "teoli"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2020-10-15T21:27:52.803Z",
-    "contributors": ["SphinxKnight", "teoli"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2020-10-15T21:27:55.939Z",
-    "contributors": ["SphinxKnight", "teoli"]
   }
 }

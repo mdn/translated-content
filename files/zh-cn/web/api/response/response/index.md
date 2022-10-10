@@ -50,7 +50,7 @@ var myResponse = new Response(myBlob,init);
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.Response")}}
+{{Compat}}
 
 ## See also
 
