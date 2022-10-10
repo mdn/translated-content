@@ -95,7 +95,7 @@ p {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{cssxref("text-decoration")}}
 - {{cssxref("text-decoration-thickness")}}
