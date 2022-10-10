@@ -44,4 +44,4 @@ let address = params.get("address"); // null
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.get")}}
+{{Compat}}

@@ -121,13 +121,11 @@ nomsDevises.of('CNY'); // "人民幣"
 
 ## Spécifications
 
-| Spécification                                                                                            |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Intl.DisplayNames', '#intl-displaynames-objects', 'DisplayNames')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DisplayNames")}}
+{{Compat}}
 
 ## Voir aussi
 

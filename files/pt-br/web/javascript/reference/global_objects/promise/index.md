@@ -42,14 +42,8 @@ Como os métodos `Promise.prototype.then` e `Promise.prototype.catch` retornam p
   - : Retorna uma promise que é resolvida quando todas as promises no argumento _lista_ forem resolvidas ou rejeitada assim que uma das promises da lista for rejeitada. Se a promise retornada for resolvida, ela é resolvida com um array dos valores das promises resolvidas da lista. Se a promise for rejeitada, ela é rejeitada com o motivo da primeira promise que foi rejeitada na lista. Este método pode ser útil para agregar resultados de múltiplas promises.
 - {{jsxref("Promise.race", "Promise.race(lista)")}}
   - : Retorna uma promise que resolve ou rejeita assim que uma das promises do argumento lista resolve ou rejeita, com um valor ou o motivo daquela promise.
-
-<!---->
-
 - {{jsxref("Promise.reject", "Promise.reject(motivo)")}}
   - : Retorna um objeto `Promise` que foi rejeitado por um dado motivo.
-
-<!---->
-
 - {{jsxref("Promise.resolve", "Promise.resolve(valor)")}}
   - : Retorna um objeto `Promise` que foi resolvido com um dado valor. Se o valor é `thenable` (possui um método `then`), a promise retornada "seguirá" este método, adotando esse estado eventual; caso contrário a promise retornada será realizada com o valor. Geralmente, se você quer saber se um valor é uma promise ou não, utilize {{jsxref("Promise.resolve", "Promise.resolve(valor)")}} e trabalhe com a valor de retorno que é sempre uma promise.
 

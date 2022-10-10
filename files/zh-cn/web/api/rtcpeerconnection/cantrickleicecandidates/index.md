@@ -58,7 +58,7 @@ pc.addEventListener('icecandidate', e => {
 
 ## 浏览器兼容性
 
-{{Compat("api.RTCPeerConnection.canTrickleIceCandidates")}}
+{{Compat}}
 
 ## 相关阅读
 

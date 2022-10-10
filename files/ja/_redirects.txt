@@ -1872,6 +1872,7 @@
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
+/ja/docs/Glossary/Empty_element	/ja/docs/Glossary/Void_element
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/Index	/ja/docs/Glossary
@@ -4185,8 +4186,7 @@
 /ja/docs/Web/CSS/transform-function/scaleZ()	/ja/docs/Web/CSS/transform-function/scaleZ
 /ja/docs/Web/CSS/transform-function/skew()	/ja/docs/Web/CSS/transform-function/skew
 /ja/docs/Web/CSS/transform-function/skewX()	/ja/docs/Web/CSS/transform-function/skewX
-/ja/docs/Web/CSS/transform-function/skewY	/ja/docs/conflicting/Web/CSS/transform-function/skewX
-/ja/docs/Web/CSS/transform-function/skewY()	/ja/docs/conflicting/Web/CSS/transform-function/skewX
+/ja/docs/Web/CSS/transform-function/skewY()	/ja/docs/Web/CSS/transform-function/skewY
 /ja/docs/Web/CSS/transform-function/translate()	/ja/docs/Web/CSS/transform-function/translate
 /ja/docs/Web/CSS/transform-function/translate3d()	/ja/docs/Web/CSS/transform-function/translate3d
 /ja/docs/Web/CSS/transform-function/translateX()	/ja/docs/Web/CSS/transform-function/translateX

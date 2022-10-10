@@ -20,7 +20,9 @@ p:lang(en) {
 
 ### 形式文法
 
-{{csssyntax}}
+```
+:lang( <language-code> )
+```
 
 ### 引数
 

@@ -37,9 +37,9 @@ if (window.isSecureContext) {
 
 ## Quelles APIs requièrent un contexte sécurisé ?
 
-- {{SpecName('Service Workers')}}
-- {{SpecName('Web Bluetooth')}}
-- {{SpecName('EME')}}
+- <i lang="en">Service Workers</i>
+- <i lang="en">Web Bluetooth</i>
+- <i lang="en">EME</i>
 
 ### Prositions de brouillons
 
@@ -122,7 +122,7 @@ Certains navigateurs peuvent décider de demander à certaines APIs d'être dans
       <td></td>
     </tr>
     <tr>
-      <td><em>{{SpecName('Web Crypto API')}}</em></td>
+      <td><i lang="en">Web Crypto API</i></td>
       <td>
         <em
           >est réservé à HTTPS même is la vérification du Secure Context est
@@ -141,20 +141,7 @@ _Note: Safari et Chrome ne supportent pas complètement la spécification des Se
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>Spécification</td>
-      <td>État</td>
-      <td>Commentaire</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Secure Contexts')}}</td>
-      <td>{{Spec2('Secure Contexts')}}</td>
-      <td>Brouillon</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Voir aussi
 

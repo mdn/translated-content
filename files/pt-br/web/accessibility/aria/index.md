@@ -85,14 +85,8 @@ As informações ARIA nos blogues tendem a ficar desatualizadas rapidamente. Sem
   - : Um conjunto de exemplos de arquivos das bibliotecas base, com os quais fica muito fácil aprender.
 - Demonstração de Biblioteca para a Accessibilidade JS em _Widget_
   - : [Dojo](http://dojotoolkit.org/widgets), [jQuery](http://hanshillen.github.com/jqtest/), [Fluid](http://wiki.fluidproject.org/display/fluid/Components), [YUI](http://yuilibrary.com/gallery/)
-
-<!---->
-
 - [Correio Eletrônico Yahoo!](http://mail.yahoo.com)
   - : A Yahoo! colocou tudo reunido com o Yahoo! _e-mail_, uma aplicação para a _web_ que parece um aplicativo nativo. E funciona muito bem. Em uma [análise do _e-mail_ Yahoo!](http://www.marcozehe.de/2011/09/21/review-the-all-new-yahoo-mail-web-application/) pelo leitor de tela, Marco Zehe diz: "Que o bom trabalho permaneça!".
-
-<!---->
-
 - [Pesquisa Yahoo!](http://search.yahoo.com)
   - : A Yahoo! tem feito um trabalho incrível no avanço do ARIA, aplicando suas posibilidades de forma plena e [compartilhando suas técnicas](http://ycorpblog.com/2011/03/23/searchdirect/). A Pesquisa Yahoo! usa uma combinação de pontos de referência ARIA, regiões dinâmicas e _widgets_.
 

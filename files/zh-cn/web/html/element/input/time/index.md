@@ -58,7 +58,7 @@ Edge 的 `time` 选择控件有点复杂，打开一个小时和分钟的滚动�
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
-	<td>
+  <td>
       <code>value</code>、<code>valueAsDate</code>、<code>valueAsNumber</code> 和 <code>list</code>
     </td>
   </tr>

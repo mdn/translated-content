@@ -31,4 +31,4 @@ None.
 
 ## Browser compatibility
 
-{{Compat("api.USB")}}
+{{Compat}}

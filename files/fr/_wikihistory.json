@@ -653,10 +653,6 @@
     "modified": "2019-03-18T21:38:38.555Z",
     "contributors": ["AurelieBayre", "gnoyaze"]
   },
-  "Glossary/Empty_element": {
-    "modified": "2019-03-23T22:58:49.655Z",
-    "contributors": ["loella16", "cdr"]
-  },
   "Glossary/Encapsulation": {
     "modified": "2019-03-23T22:41:15.348Z",
     "contributors": ["loella16", "xdelatour"]
@@ -1862,6 +1858,10 @@
   "Glossary/VoIP": {
     "modified": "2019-03-23T22:39:39.990Z",
     "contributors": ["xdelatour"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2019-03-23T22:58:49.655Z",
+    "contributors": ["loella16", "cdr"]
   },
   "Glossary/W3C": {
     "modified": "2019-03-23T22:57:06.246Z",
@@ -19726,10 +19726,6 @@
       "tregagnon",
       "xaky"
     ]
-  },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2019-04-20T23:42:36.501Z",
-    "contributors": ["tregagnon", "SphinxKnight"]
   },
   "Web/Guide/Introduction_to_Web_development": {
     "modified": "2019-03-24T00:03:04.501Z",

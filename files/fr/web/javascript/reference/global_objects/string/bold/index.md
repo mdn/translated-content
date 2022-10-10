@@ -55,14 +55,11 @@ Cet exemple produit le même HTML que le code suivant :
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires                                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES6', '#sec-string.prototype.bold', 'String.prototype.bold')}}     | {{Spec2('ES6')}}         | Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web. |
-| {{SpecName('ESDraft', '#sec-string.prototype.bold', 'String.prototype.bold')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web.                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.bold")}}
+{{Compat}}
 
 ## Voir aussi
 

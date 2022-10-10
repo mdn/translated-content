@@ -10,7 +10,7 @@ translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 {{gecko_minversion_header("1.9.1")}}
 
-Firefox 3.5 introduziu suporte para uso do [SVG](/pt-BR/docs/SVG "SVG") como um componente do [CSS](/pt-BR/docs/Web/CSS "CSS") em ordem para introduzir efeitos SVG no conteúdo HTML.
+Firefox 3.5 introduziu suporte para uso do [SVG](/pt-BR/docs/SVG) como um componente do [CSS](/pt-BR/docs/Web/CSS) em ordem para introduzir efeitos SVG no conteúdo HTML.
 
 Você pode embutir o SVG nos estilos dentro do mesmo documento, ou com um _stylesheet_ externo.
 
@@ -63,7 +63,7 @@ p {
 
 Preste atenção na linha 1, a máscara é especificada usando um URL para o ID "#m1", que é um ID para a máscara SVG específicada abaixo. Todo o que foi especificado detalha mais sobre a máscara de gradiente.
 
-Na realidade aplicar o efeito SVG para XHTML ou HTML é simplesmente feito atribuindo um estilo `target `definido abaixo do elemento, como esse:
+Na realidade aplicar o efeito SVG para XHTML ou HTML é simplesmente feito atribuindo um estilo `target` definido abaixo do elemento, como esse:
 
 ```html
 <p class="target" style="background:lime;">
@@ -216,6 +216,6 @@ O SVG é importado do arquivo com nome `resources.svg`, usando o clip-path com o
 
 **Veja também**
 
-- [SVG](/pt-BR/docs/SVG "SVG")
+- [SVG](/pt-BR/docs/SVG)
 - [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
-- ([\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/ "Web Tech Blog » Blog Archive » SVG External Document References"))
+- ([\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/))

@@ -15,9 +15,6 @@ objeto instanceof construtor
 
 - `objeto`
   - : O objeto a ser testado
-
-<!---->
-
 - `construtor`
   - : Função construtora a ser verificada
 

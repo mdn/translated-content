@@ -105,7 +105,7 @@ getData();
 
 ## 浏览器兼容性
 
-{{Compat("api.OfflineAudioContext")}}
+{{Compat}}
 
 ## 参见
 

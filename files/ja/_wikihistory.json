@@ -626,10 +626,6 @@
     "modified": "2020-11-12T07:51:58.821Z",
     "contributors": ["mfuji09", "Uemmra3"]
   },
-  "Glossary/Empty_element": {
-    "modified": "2019-03-23T22:19:52.035Z",
-    "contributors": ["Uemmra3", "dskmori", "unarist"]
-  },
   "Glossary/Encapsulation": {
     "modified": "2019-03-18T21:35:31.431Z",
     "contributors": ["ysgk"]
@@ -1854,6 +1850,10 @@
   "Glossary/VoIP": {
     "modified": "2019-07-09T12:07:12.750Z",
     "contributors": ["Uemmra3", "dskmori", "fuekuma"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2019-03-23T22:19:52.035Z",
+    "contributors": ["Uemmra3", "dskmori", "unarist"]
   },
   "Glossary/W3C": {
     "modified": "2020-10-05T12:33:13.700Z",

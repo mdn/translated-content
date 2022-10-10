@@ -47,7 +47,7 @@ var myMode = myRequest.mode; // returns "cors" by default
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.mode")}}
+{{Compat}}
 
 ## 参见
 
