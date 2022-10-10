@@ -163,7 +163,7 @@ p.auto {
 
 #### 结果
 
-{{EmbedLiveSample("Setting_different_overflow_values_for_text", "600", "250")}}
+{{EmbedLiveSample("为文本设置不同的 overflow 值", "600", "250")}}
 
 ## 规范
 
