@@ -37,6 +37,7 @@ WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
   console.log(sum);
 });
 ```
+
 ## Spécifications
 
 {{Specifications}}

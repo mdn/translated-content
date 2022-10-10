@@ -19,9 +19,6 @@ var varname1 [= value1 [, varname2 [, varname3 ... [, varnameN]]]];
 
 - `varnameN`
   - : Nome da variável. Pode ser utilizado qualquer identificador legal.
-
-<!---->
-
 - `valueN`
   - : Valor inicial da variável. Pode ser qualquer expressão legal.
 

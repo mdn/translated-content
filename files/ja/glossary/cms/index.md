@@ -9,4 +9,4 @@ CMS (Content Management System, コンテンツ管理システム) とは、ユ�
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "Content management system")}}
+- Wikipedia の [コンテンツ管理システム](https://ja.wikipedia.org/wiki/コンテンツ管理システム)

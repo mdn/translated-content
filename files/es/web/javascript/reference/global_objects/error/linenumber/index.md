@@ -50,8 +50,6 @@ Tabla de compatibilidad
 | -------------- | ------------- | ------------------- | --------------------- | ------------- | ------------- | ------------- |
 | Soporte básico | No compatible | No compatible       | Compatible            | No compatible | No compatible | No compatible |
 
-##
-
 ## Vea también:
 
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}

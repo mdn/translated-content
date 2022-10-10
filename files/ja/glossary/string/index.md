@@ -11,5 +11,5 @@ slug: Glossary/String
 
 ### 基礎知識
 
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "文字列")}}」
+- Wikipedia 上の記事「[文字列](https://ja.wikipedia.org/wiki/文字列)」
 - [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures#string_type)

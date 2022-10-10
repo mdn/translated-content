@@ -43,10 +43,12 @@ slug: Learn/JavaScript/Objects/Basics
 var person = {};
 ```
 
-如果你在浏览器控制台输入 person，然后按下 Enter(确认) 键，你会得到如下结果：
+如果你在浏览器的 [JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools#javascript_控制台)输入 `person`，然后按下 Enter（确认）键，你可能会得到以下结果中的一种：
 
 ```js
 [object Object]
+Object { }
+{ }
 ```
 
 恭喜，你刚创建了你的第一个对象。干的漂亮！但这是一个空对象，所以我们做不了更多的事情。像下面一样更新下我们的对象：

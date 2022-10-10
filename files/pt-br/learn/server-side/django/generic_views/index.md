@@ -220,7 +220,7 @@ urlpatterns = [
 
 Para o path _book-detail_ o padrão de URL usa uma sintaxe especial para capturar o ID específico do livro que queremos ver. A sintaxe é muito simples: colchetes angulares definem a parte da URL a ser capturada, incluindo o nome da variável que a view pode usar para acessar os dados capturados. Por exemplo, **\<something>** , capturará o padrão marcado e passará o valor para a visualização como uma variável "alguma coisa". Opcionalmente, você pode preceder o nome da variável com um [converter specification](https://docs.djangoproject.com/pt-br/2.1/topics/http/urls/#path-converters) que define o tipo de dados (int, str, slug, uuid, path).
 
-Neste caso, usamos `'<int:pk>'`\*\* \*\*para capturar o ID do livro, que deve ser uma sequência especialmente formatada e passá-la para a view como um parâmetro chamado `pk` (abreviatura de primary key). Esta é a id que está sendo usado para armazenar o livro exclusivamente no banco de dados, conforme definido no Book Model.
+Neste caso, usamos `'<int:pk>'` para capturar o ID do livro, que deve ser uma sequência especialmente formatada e passá-la para a view como um parâmetro chamado `pk` (abreviatura de primary key). Esta é a id que está sendo usado para armazenar o livro exclusivamente no banco de dados, conforme definido no Book Model.
 
 > **Nota:** Como discutido anteriormente, nosso URL correspondente é realmente `catalog/book/<digits>` (porque estamos no aplicativo de **catalog**, `/catalog/` é assumido).
 
@@ -387,13 +387,13 @@ Este método é necessário porque você declara um campo `ForeignKey` (um-para-
 >   allow_empty_first_page=allow_empty_first_page, **kwargs)
 > ```
 >
-> Isso acontece porque o [objeto paginator](https://docs.djangoproject.com/pt-br/2.1/topics/pagination/#paginator-objects) espera ver algum ORDER BY sendo executado no seu banco de dados subjacente. Sem ele, não é possível garantir que os registros que estão sendo retornados estejam na ordem certa!\*\*\*\*
+> Isso acontece porque o [objeto paginator](https://docs.djangoproject.com/pt-br/2.1/topics/pagination/#paginator-objects) espera ver algum ORDER BY sendo executado no seu banco de dados subjacente. Sem ele, não é possível garantir que os registros que estão sendo retornados estejam na ordem certa!
 >
 > Este tutorial não atingiu a **Paginação** (ainda, mas em breve), mas como você não pode usar `sort_by()` e passar um parâmetro (o mesmo com `filter()` descrito acima), você terá que escolher entre três opções:
 >
-> 1.  Adicione um `ordering` dentro de uma declaração `class Meta` no seu model.
-> 2.  Adicione um atributo `queryset` na sua class-based view, especificando um `order_by()`.
-> 3.  Adicione um método `get_queryset` à sua class-based view personalisada e também especifique o `order_by()`.
+> 1. Adicione um `ordering` dentro de uma declaração `class Meta` no seu model.
+> 2. Adicione um atributo `queryset` na sua class-based view, especificando um `order_by()`.
+> 3. Adicione um método `get_queryset` à sua class-based view personalisada e também especifique o `order_by()`.
 >
 > Se você decidir ir com uma `class Meta` no model `Author` (provavelmente não tão flexível quanto personalizar o class-based view, mas fácil o suficiente), você terminará com algo assim:
 >
@@ -420,7 +420,7 @@ Este método é necessário porque você declara um campo `ForeignKey` (um-para-
 
 ## Com o que se parece agora?
 
-Nesse ponto, deveríamos ter criado tudo o necessário para exibir a lista de livros e as páginas de detalhes do livro. Execute o servidor (`python3 manage.py runserver`) e abra no seu navegador <http://127.0.0.1:8000/>.
+Nesse ponto, deveríamos ter criado tudo o necessário para exibir a lista de livros e as páginas de detalhes do livro. Execute o servidor (`python3 manage.py runserver`) e abra no seu navegador `http://127.0.0.1:8000/`.
 
 > **Aviso:** Não clique em nenhum autor ou link de detalhes do autor ainda - você os criará no desafio!
 
@@ -497,7 +497,7 @@ Os links de paginação são exibidos na parte inferior, com os links seguinte/a
 The challenge in this article is to create the author detail and list views required to complete the project. These should be made available at the following URLs:
 
 - `catalog/authors/` — The list of all authors.
-- `catalog/author/<id>`\_ _— The detail view for the specific author with a primary key field named _`<id>`\_
+- `catalog/author/<id>` — The detail view for the specific author with a primary key field named _`<id>`_
 
 The code required for the URL mappers and the views should be virtually identical to the `Book` list and detail views we created above. The templates will be different but will share similar behaviour.
 

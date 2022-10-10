@@ -26,7 +26,7 @@ Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console`
 - {{domxref("console.group()", "console.group(object[, object...])")}}
   - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior. Para voltar um nível, utilize `groupEnd()`. Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.groupCollapsed()", "console.groupCollapsed(object[, object...])")}}
-  - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de `group()`, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize `groupEnd().` Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
+  - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de `group()`, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize `groupEnd()`. Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.groupEnd()")}}
   - : Sai do grupo em linha atual. Veja [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.info()", "console.info(object[, object...])")}}

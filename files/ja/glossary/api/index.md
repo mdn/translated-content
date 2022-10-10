@@ -18,7 +18,7 @@ Web 開発においては、API と言えば一般的にはコーディング上
 
 ### 一般知識
 
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "Application_programming_interface", "API")}} 」
+- Wikipedia 上の記事「[API](https://ja.wikipedia.org/wiki/Application_programming_interface) 」
 
 ### 技術リファレンス
 

@@ -44,9 +44,9 @@ Este exemplo fará uso da [Canvas API](/pt-BR/docs/Learn/JavaScript/Client-side_
 
 Para começar, faça cópias locais de nossos arquivos [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), e [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Estes contêm o seguinte, respectivamente:
 
-1.  Um documento HTML muito simples com um elemento {{HTMLElement("h1")}}, um elemento {{HTMLElement("canvas")}} para desenhar nossas bolas e elementos para aplicar nosso CSS e JavaScript em nosso HTML.
-2.  Alguns estilos muito simples, que servem principalmente para estilizar e posicionar o `<h1>`, e se livrar de qualquer barra de rolagem ou margem ao redor da borda da página (para que fique bonito e arrumado).
-3.  Algum JavaScript que serve para configurar o elemento `<canvas>` e fornecer uma função geral que vamos usar.
+1. Um documento HTML muito simples com um elemento {{HTMLElement("h1")}}, um elemento {{HTMLElement("canvas")}} para desenhar nossas bolas e elementos para aplicar nosso CSS e JavaScript em nosso HTML.
+2. Alguns estilos muito simples, que servem principalmente para estilizar e posicionar o `<h1>`, e se livrar de qualquer barra de rolagem ou margem ao redor da borda da página (para que fique bonito e arrumado).
+3. Algum JavaScript que serve para configurar o elemento `<canvas>` e fornecer uma função geral que vamos usar.
 
 A primeira parte do script é assim:
 
@@ -127,15 +127,15 @@ Usando esta função, podemos dizer a nossa bola para desenhar-se na tela, chama
 
 Você pode começar a testar seu objeto já.
 
-1.  Salve o código até o momento e carregue o arquivo HTML em um navegador.
-2.  Abra o console JavaScript do navegador e, em seguida, atualize a página para que o tamanho da tela mude para a viewport menor visível deixada quando o console for aberto.
-3.  Digite o seguinte para criar uma nova instância de bola:
+1. Salve o código até o momento e carregue o arquivo HTML em um navegador.
+2. Abra o console JavaScript do navegador e, em seguida, atualize a página para que o tamanho da tela mude para a viewport menor visível deixada quando o console for aberto.
+3. Digite o seguinte para criar uma nova instância de bola:
 
     ```js
     let testBall = new Ball(50, 100, 4, 4, 'blue', 10);
     ```
 
-4.  Tente chamar seus membros:
+4. Tente chamar seus membros:
 
     ```js
     testBall.x
@@ -144,7 +144,7 @@ Você pode começar a testar seu objeto já.
     testBall.draw()
     ```
 
-5.  Quando você entra na última linha, você deve ver a bola se desenhando em algum lugar na sua tela.
+5. Quando você entra na última linha, você deve ver a bola se desenhando em algum lugar na sua tela.
 
 ### Atualizando os dados da bola
 
@@ -192,7 +192,7 @@ Isso é o que será feito por ora; vamos continuar com alguma animação!
 
 Agora vamos tornar isso divertido. Vamos começar a adicionar bolas à tela e a animá-las.
 
-1.  Primeiro, precisamos de criar um lugar para armazenar todas as nossas bolas e então preenche-lo. O código a seguir fará esse trabalho — adicione-o ao final do seu código agora:
+1. Primeiro, precisamos de criar um lugar para armazenar todas as nossas bolas e então preenche-lo. O código a seguir fará esse trabalho — adicione-o ao final do seu código agora:
 
     ```js
     let balls = [];
@@ -216,7 +216,7 @@ Agora vamos tornar isso divertido. Vamos começar a adicionar bolas à tela e a 
 
     O laço `while` cria uma nova instância da nossa `Ball()` usando valores aleatórios gerados com nossa função `random()`, então a função `push()` coloca ela no final do nosso array de bolas, mas somente enquanto o número de bolas no array é menor que 25. Então quando nos tivermos 25 bolas na tela mais nenhuma bola aparece. Você pode tentar variar o número em `balls.length < 25` para obter mais ou menos bolas na tela. Dependendo de quanto poder de processamento seu computador/navegador tiver, especificar várias milhares de bolas pode diminuir bastante a velocidade da animação!
 
-2.  Adicione o seguinte ao final do seu código agora:
+2. Adicione o seguinte ao final do seu código agora:
 
     ```js
     function loop() {
@@ -238,7 +238,7 @@ Agora vamos tornar isso divertido. Vamos começar a adicionar bolas à tela e a 
     - Percorre todas as bolas no array `balls` e executa a função `draw()` e `update()` de cada bola para desenhar cada uma delas na tela, depois faz as atualizações necessárias para a posição e a velocidade a tempo para o próximo quadro.
     - Executa a função novamente usando o método `requestAnimationFrame()` — quando esse método é executado constantemente e passa o mesmo nome de função, ele executará essa função um número definido de vezes por segundo para criar uma animação suave. Isso geralmente é feito de forma recursiva — o que significa que a função está chamando a si mesma toda vez que é executada, portanto, ela será executada repetidas vezes.
 
-3.  Por último mas não menos importante, adicione a seguinte linha à parte inferior do seu código — precisamos chamar a função uma vez para iniciar a animação.
+3. Por último mas não menos importante, adicione a seguinte linha à parte inferior do seu código — precisamos chamar a função uma vez para iniciar a animação.
 
     ```js
     loop();
@@ -250,7 +250,7 @@ Agora vamos tornar isso divertido. Vamos começar a adicionar bolas à tela e a 
 
 Agora, para um pouco de diversão, vamos adicionar alguma detecção de colisão ao nosso programa, para que nossas bolas saibam quando bateram em outra bola.
 
-1.  Primeiro de tudo, adicione a seguinte definição de método abaixo onde você definiu o método `update()` (ou seja, o bloco `Ball.prototype.update`).
+1. Primeiro de tudo, adicione a seguinte definição de método abaixo onde você definiu o método `update()` (ou seja, o bloco `Ball.prototype.update`).
 
     ```js
     Ball.prototype.collisionDetect = function() {
@@ -275,13 +275,13 @@ Agora, para um pouco de diversão, vamos adicionar alguma detecção de colisão
     - Em seguida, usamos um algoritmo comum para verificar a colisão de dois círculos. Estamos basicamente verificando se alguma das áreas dos dois círculos se sobrepõe. Isso é explicado ainda mais na [2D collision detection](/pt-BR/docs/Games/Techniques/2D_collision_detection).
     - Se uma colisão for detectada, o código dentro da instrução `if` interna será executado. Neste caso, estamos apenas definindo a propriedade `color` de ambos os círculos para uma nova cor aleatória. Poderíamos ter feito algo muito mais complexo, como fazer com que as bolas saltassem umas das outras de forma realista, mas isso teria sido muito mais complexo de implementar. Para essas simulações físicas, os desenvolvedores tendem a usar jogos ou bibliotecas físicas, como [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
 
-2.  Você também precisa chamar esse método em cada quadro da animação. Adicione o seguinte abaixo do `balls[i].update();`:
+2. Você também precisa chamar esse método em cada quadro da animação. Adicione o seguinte abaixo do `balls[i].update();`:
 
     ```js
     balls[i].collisionDetect();
     ```
 
-3.  Salve e atualize a demonstração novamente, e você verá suas bolas mudando de cor quando colidirem!
+3. Salve e atualize a demonstração novamente, e você verá suas bolas mudando de cor quando colidirem!
 
 > **Nota:** If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 

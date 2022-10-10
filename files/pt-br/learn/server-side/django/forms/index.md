@@ -86,23 +86,23 @@ Um fluxograma do processo de como o Django lida com solicitações de formulári
 
 Com base no diagrama acima, as principais coisas que o manuseio de formulários do Django faz são:
 
-1.  Exiba o formulário padrão na primeira vez em que for solicitado pelo usuário
+1. Exiba o formulário padrão na primeira vez em que for solicitado pelo usuário
 
     - O formulário pode conter campos em branco (por exemplo, se você estiver criando um novo registro) ou pode ser preenchido previamente com valores iniciais (por exemplo, se você estiver alterando um registro ou tiver valores iniciais padrão úteis).
     - O formulário é referido como _unbound_ neste momento, porque não está associado a nenhum dado inserido pelo usuário (embora possa ter valores iniciais).
 
-2.  Receba dados de uma solicitação de envio e vincule-os ao formulário.
+2. Receba dados de uma solicitação de envio e vincule-os ao formulário.
 
     - Vincular dados ao formulário significa que os dados inseridos pelo usuário e quaisquer erros estão disponíveis quando precisamos exibir novamente o formulário.
 
-3.  Limpe e valide os dados.
+3. Limpe e valide os dados.
 
     - A limpeza dos dados executa a higienização da entrada (por exemplo, removendo caracteres inválidos que podem ser usados para enviar conteúdo malicioso ao servidor) e os converte em tipos consistentes de Python.
     - A validação verifica se os valores são apropriados para o campo (por exemplo, estão no período certo, não são muito curtos ou muito longos etc.)
 
-4.  Se algum dado for inválido, exiba novamente o formulário, desta vez com valores preenchidos pelo usuário e mensagens de erro para os campos problemáticos.
-5.  Se todos os dados forem válidos, execute as ações necessárias (por exemplo, salve os dados, envie e envie por e-mail, retorne o resultado de uma pesquisa, faça o upload de um arquivo etc.)
-6.  Quando todas as ações estiverem concluídas, redirecione o usuário para outra página.
+4. Se algum dado for inválido, exiba novamente o formulário, desta vez com valores preenchidos pelo usuário e mensagens de erro para os campos problemáticos.
+5. Se todos os dados forem válidos, execute as ações necessárias (por exemplo, salve os dados, envie e envie por e-mail, retorne o resultado de uma pesquisa, faça o upload de um arquivo etc.)
+6. Quando todas as ações estiverem concluídas, redirecione o usuário para outra página.
 
 O Django fornece várias ferramentas e abordagens para ajudá-lo nas tarefas detalhadas acima. O mais fundamental é a classe `Form`, o que simplifica a geração de HTML de formulário e a limpeza/validação de dados. Na próxima seção, descreveremos como os formulários funcionam usando o exemplo prático de uma página para permitir que os bibliotecários renovem os livros.
 
@@ -205,7 +205,7 @@ A configuração da URL irá redirecionar as URLs com o formato **/catalog/book/
 
 ### View
 
-Como discutido no [processo de manipulação de formulários Django ](#django_form_handling_process)acima, a view renderizará o formulário padrão chamado pela primeira vez e então retorná-lo com mensagens de erro se os dados forem inválidos, ou processar os dados e redirecioná-lo para uma nova página se os dados forem válidos.A fim de executar essas ações diferentes, a view deve ser capas de saber se está sendo chamada pela primeira vez para renderizar o form padrão ou um subsequente para a validação dos dados.
+Como discutido no [processo de manipulação de formulários Django](#django_form_handling_process) acima, a view renderizará o formulário padrão chamado pela primeira vez e então retorná-lo com mensagens de erro se os dados forem inválidos, ou processar os dados e redirecioná-lo para uma nova página se os dados forem válidos.A fim de executar essas ações diferentes, a view deve ser capas de saber se está sendo chamada pela primeira vez para renderizar o form padrão ou um subsequente para a validação dos dados.
 
 Para forms que usam uma solicitação `POST` para enviar informações para o servidor, o padrão mais comum para a view é testar se o tipo de solicitação é `POST` (`if request.method == 'POST':`) para identificar requisições válidas de formulário e `GET` (usando uma condição `else`) para identificar a requisição de criação do form inicial. Se você deseja enviar seus dados usando uma reuquisição `GET` uma abordagem típica para identificar se é a primeira ou subsequente requisição é ler os dados do formulário (por exemplo, ler um valor oculto no form).
 
@@ -443,7 +443,7 @@ Se você aceitou o "desafio" em [Tutorial Django Parte 8: Autenticação de usu�
 
 > **Nota:** Lembre que seu login de teste precisará ter a permissão "`catalog.can_mark_returned`" para acessar a página de renovação de livro (talvez use sua conta de superusuário).
 
-Você pode, alternativamente, construir manualmente uma URL de teste como esta — [http://127.0.0.1:8000/catalog/book/_\<bookinstance\_id>_/renew/](<http://127.0.0.1:8000/catalog/book/\<bookinstance id\>/renew/>) (um id válido de _bookinstance_ pode ser obtido navegando para a página de detalhes de um livro em sua biblioteca, e copiando o campo`id`).
+Você pode, alternativamente, construir manualmente uma URL de teste como esta — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/`) (um id válido de _bookinstance_ pode ser obtido navegando para a página de detalhes de um livro em sua biblioteca, e copiando o campo`id`).
 
 ### Com o que se parece?
 
@@ -559,9 +559,9 @@ Para os casos "criar" e "atualizar" você também precisa especificar os campos 
 
 A classe `AuthorDelete` não precisa mostrar nenhum dos campos, então eles não precisam ser especificados. No entanto, você precisa especificar a `success_url`, porque não há um valor padrão óbvio para o Django usar. Nesse caso, usamos a função [`reverse_lazy()`](https://docs.djangoproject.com/en/2.1/ref/urlresolvers/#reverse-lazy) para redirecioanr para nossa lista de autores depois que um autor é excluido — `reverse_lazy()` é uma versão executada "preguiçosamente" de `reverse()`, usada aqui porque estamos fornecendo uma URL para um atributo baseado em classe de _view_.
 
-### _Templates_
+### Templates
 
-As _views_ "_create_" e "_update_" usam o mesmo _template_ por padrão, que serão nomeadas seguindo o modelo: _model_name_**\_form.html** (você pode mudar o sufixo para algo diferente de **\_form** usando o campo `template_name_suffix` em sua _view_, ex. `template_name_suffix = '_other_suffix'`)
+As views "create" e "update" usam o mesmo template por padrão, que serão nomeadas seguindo o modelo: `model_name_form.html` (você pode mudar o sufixo para algo diferente de **\_form** usando o campo `template_name_suffix` em sua view, ex. `template_name_suffix = '_other_suffix'`)
 
 Crie o arquivo de _template_ **locallibrary/catalog/templates/catalog/author_form.html** e copie o texto abaixo.
 
@@ -581,7 +581,7 @@ Crie o arquivo de _template_ **locallibrary/catalog/templates/catalog/author_for
 
 Isso é semelhante aos nossos formulários anteriores e renderiza os campos usando uma tabela. Note também como novamente declaramos o `{% csrf_token %}` para garantir que nossos formulários são resistentes a ataques CSRF.
 
-A _view_ "delete" espera encontrar um _template_ nomeado com o formato _model_name_**\_confirm_delete.html** (novamente, você pode mudar o sufixo usando `template_name_suffix` em sua _view_). Crie o arquivo de _template_ **locallibrary/catalog/templates/catalog/author_confirm_delete\*\***.html\*\* e copie o texto abaixo.
+A _view_ "delete" espera encontrar um _template_ nomeado com o formato `model_name_confirm_delete.html` (novamente, você pode mudar o sufixo usando `template_name_suffix` em sua _view_). Crie o arquivo de _template_ `locallibrary/catalog/templates/catalog/author_confirm_delete.html` e copie o texto abaixo.
 
 ```html
 {% extends "base_generic.html" %}
@@ -622,15 +622,15 @@ As páginas de criação, atualização e remoção de autor agora estão pronta
 
 Primeiro, efetue login no site com uma conta que possua as permissões que você decidiu que são necessárias para acessar a página de edição de autor.
 
-Então navegue para a página de criação de autor: <http://127.0.0.1:8000/catalog/author/create/>, que deve parecer como a captura de tela abaixo.
+Então navegue para a página de criação de autor: `http://127.0.0.1:8000/catalog/author/create/`, que deve parecer como a captura de tela abaixo.
 
 ![Form Example: Create Author](https://mdn.mozillademos.org/files/14223/forms_example_create_author.png)
 
-Entre com valores para os campos e então pressione **Submit** para dalvar o registro de autor. Você agora deve ser direcionado para uma visualização detalhada para o seu novo autor, com uma URL de algo como _http\://127.0.0.1:8000/catalog/author/10_.
+Entre com valores para os campos e então pressione **Submit** para dalvar o registro de autor. Você agora deve ser direcionado para uma visualização detalhada para o seu novo autor, com uma URL de algo como `http://127.0.0.1:8000/catalog/author/10`.
 
-Você pode testar edição de registros enexando _/update/_ ao final da URL da página de detalhe (ex. _http\://127.0.0.1:8000/catalog/author/10/update/_) — não mostramos uma captura de tela, porque se parace com a página de criação
+Você pode testar edição de registros enexando _/update/_ ao final da URL da página de detalhe (ex. `http://127.0.0.1:8000/catalog/author/10/update/`) — não mostramos uma captura de tela, porque se parace com a página de criação
 
-Finalmente, podemos excluir a página anexando _delete_ ao final da URL da visualização detalhada do autor (ex. _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django deve exibir a página de exclusão mostrada abaixo. Pressione **Yes, delete.** para remover o registro e ser levado para a lista de todos os autores.
+Finalmente, podemos excluir a página anexando _delete_ ao final da URL da visualização detalhada do autor (ex. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django deve exibir a página de exclusão mostrada abaixo. Pressione **Yes, delete.** para remover o registro e ser levado para a lista de todos os autores.
 
 ![](https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png)
 
@@ -663,28 +663,16 @@ Há muito mais que pode ser feito com formulários (confira abaixo nossa lista V
 
 - [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introduction)
 - [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: ](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-
-  Website de uma Biblioteca Local
-
-- [Tutorial](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) [Django Parte 2: ](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)[Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) [Django Parte 3: Usando _models_](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Tutorial](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) [Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) [Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) [Django Parte 6: ](/pt-BR/docs/Learn/Server-side/Django/Generic_views)[Lista genérica e _detail views_](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) [Django Parte 7: ](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-
-  Framework de Sessões
-
-- [Tutorial](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) [Django Parte 8: ](/pt-BR/docs/Learn/Server-side/Django/Authentication)[Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) [Django Parte 9: ](/pt-BR/docs/Learn/Server-side/Django/Forms)[Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Tutorial](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) [Django Parte 10: ](/pt-BR/docs/Learn/Server-side/Django/Testing)
-
-  Testando uma aplicação web Django
-
-- [Tutorial](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) [Django Parte 11: ](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-
-  Implantando Django em produção
-
-- Segurança de aplicações web Django
+- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
+- [Django Parte 3: Usando _models_](/pt-BR/docs/Learn/Server-side/Django/Models)
+- [Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
+- [Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
+- [Django Parte 6: Lista genérica e _detail views_](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
+- [Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
+- [Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
+- [Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
+- [Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
+- [Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
+- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
 - [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

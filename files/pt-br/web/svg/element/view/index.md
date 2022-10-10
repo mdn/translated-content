@@ -19,9 +19,9 @@ Uma **`view`** é uma maneira definida de visualizar a imagem, como um nível de
 
 ### Global attributes
 
-- [Aria attributes](/pt-BR/docs/Web/SVG/Attribute#Aria_attributes "en/SVG/Attribute#Core") »
-- [Core attributes](/pt-BR/docs/Web/SVG/Attribute#Core_attributes "en/SVG/Attribute#Core") »
-- [Global event attributes](/pt-BR/docs/Web/SVG/Attribute#Global_event_attributes "en/SVG/Attribute#Core") »
+- [Aria attributes](/pt-BR/docs/Web/SVG/Attribute#Aria_attributes) »
+- [Core attributes](/pt-BR/docs/Web/SVG/Attribute#Core_attributes) »
+- [Global event attributes](/pt-BR/docs/Web/SVG/Attribute#Global_event_attributes) »
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### Specific attributes

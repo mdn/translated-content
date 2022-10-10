@@ -100,8 +100,8 @@ console.log(p.m()); // 13
 ```js
 var o = {a: 1};
 
-// O recém-criado objecto 'o' tem Object.prototype como o seu [[Prototype]]
-// 'o' não tem não tem uma propriedade chamada 'hasOwnProperty'
+// O recém-criado objeto 'o' tem Object.prototype como o seu [[Prototype]]
+// 'o' não tem uma propriedade chamada 'hasOwnProperty'
 // hasOwnProperty é uma propriedade própria de Object.prototype. Então 'o' herda hasOwnProperty de Object.prototype
 
 // Object.prototype tem null como seu protótipo.

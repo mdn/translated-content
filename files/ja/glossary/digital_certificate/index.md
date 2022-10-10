@@ -7,4 +7,4 @@ slug: Glossary/Digital_certificate
 
 ## 関連項目
 
-- Wikipedia の{{interwiki("wikipedia", "%E5%85%AC%E9%96%8B%E9%8D%B5%E8%A8%BC%E6%98%8E%E6%9B%B8", "公開鍵証明書")}} の記事
+- Wikipedia の[公開鍵証明書](https://ja.wikipedia.org/wiki/%E5%85%AC%E9%96%8B%E9%8D%B5%E8%A8%BC%E6%98%8E%E6%9B%B8) の記事
