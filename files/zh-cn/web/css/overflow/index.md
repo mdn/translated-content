@@ -55,13 +55,13 @@ overflow: unset;
 #### Mozilla 扩展
 
 - `-moz-scrollbars-none` {{deprecated_inline}}
-  - : Use `overflow: hidden` instead.
+  - : 请使用 `overflow: hidden` 代替。
 - `-moz-scrollbars-horizontal` {{deprecated_inline}}
-  - : Use `{{Cssxref("overflow-x")}}: scroll` and `{{Cssxref("overflow-y")}}: hidden`, or `overflow: scroll hidden` instead.
+  - : 请使用 `{{Cssxref("overflow-x")}}: scroll` 和 `{{Cssxref("overflow-y")}}: hidden`，或使用 `overflow: scroll hidden` 代替。
 - `-moz-scrollbars-vertical` {{deprecated_inline}}
-  - : Use `{{Cssxref("overflow-x")}}: hidden` and `{{Cssxref("overflow-y")}}: scroll`, or `overflow: hidden scroll` instead.
+  - : 请使用 `{{Cssxref("overflow-x")}}: hidden` 和 `{{Cssxref("overflow-y")}}: scroll`，或使用 `overflow: hidden scroll` 代替。
 - `-moz-hidden-unscrollable` {{deprecated_inline}}
-  - : Use `overflow: clip` instead.
+  - : 请使用 `overflow: clip` 代替。
 
 As of Firefox 63, `-moz-scrollbars-none`, `-moz-scrollbars-horizontal`, and `-moz-scrollbars-vertical` are behind a feature preference setting. In about:config, set `layout.css.overflow.moz-scrollbars.enabled` to `true`.
 
