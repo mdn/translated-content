@@ -65,7 +65,7 @@ _Si tienes Google Chrome para Android disponible, la experiencia es ligeramente 
 
 _![Captura de pantalla de un pasquín de Chrome que solicita permiso para instalar la aplicación de muestra Foxes](https://mdn.mozillademos.org/files/17159/chrome-a2hs-banner.png)_
 
-> **Nota:** Puedes obtener más información sobre los mensajes de instalación de Chrome en el artículo [Mensajes de instalación de aplicaciones web](https://developers.google.com/web/fundamentals/app-install-banners/).\_
+> **Nota:** Puedes obtener más información sobre los mensajes de instalación de Chrome en el artículo [Mensajes de instalación de aplicaciones web](https://developers.google.com/web/fundamentals/app-install-banners/).
 
 _Si eliges no agregarlo a tu pantalla de inicio en este momento, los puedes hacer más tarde usando el ícono "Agregar a la pantalla de inicio" en el menú principal de Chrome._
 
