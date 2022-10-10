@@ -11,4 +11,4 @@ JPEG 圧縮は、連続したレイヤーで適用される色度サブサンプ
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "JPEG")}}
+- Wikipedia 上の [JPEG](https://ja.wikipedia.org/wiki/JPEG)

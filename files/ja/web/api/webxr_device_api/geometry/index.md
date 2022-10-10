@@ -31,7 +31,7 @@ WebGL の座標と長さは、レンダリング時にシーンがレンダリ�
 
 #### 角度
 
-角度は **{{interwiki("wikipedia", "ラジアン")}}** (radians) を使用して指定します。 度をラジアンに変換するには、度の値に `π/180` を掛けるだけです。 次のコードスニペットは、 2 つの単純な関数、`degreesToRadians()` と `radiansToDegrees()` を示しています。 これらは、角度を測定するために2つの単位間で相互に変換します。
+角度は **[ラジアン](https://ja.wikipedia.org/wiki/ラジアン)** (radians) を使用して指定します。 度をラジアンに変換するには、度の値に `π/180` を掛けるだけです。 次のコードスニペットは、 2 つの単純な関数、`degreesToRadians()` と `radiansToDegrees()` を示しています。 これらは、角度を測定するために2つの単位間で相互に変換します。
 
 ```js
 const RADIANS_PER_DEGREE = Math.PI / 180.0;

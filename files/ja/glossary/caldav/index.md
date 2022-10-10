@@ -9,7 +9,7 @@ CalDAV（Calendaring extensions to {{Glossary("WebDAV")}}）は、{{Glossary("IE
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "CalDAV")}}
+- Wikipedia 上の [CalDAV](https://ja.wikipedia.org/wiki/CalDAV)
 
 ### 技術文書
 

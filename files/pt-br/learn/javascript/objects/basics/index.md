@@ -256,7 +256,7 @@ var pessoa2 = {
 }
 ```
 
-Neste caso, `pessoa1.saudacao()`\*\* **gerará "Oi! Meu nome é Chris."; No entanto, `pessoa2.saudacao()`** \*\*retornará "Oi! Meu nome é Brian.", mesmo que os códigos dos métodos sejam idênticos. Como dissemos antes, o `this` é igual ao código do objeto dentro dele — não é exatamente útil quando estamos escrevendo objetos literais na mão, mas é realmente incrível quando adicionamos objetos gerados dinamicamente (por exemplo usando construtores). Tudo ficará mais claro mais para frente.
+Neste caso, `pessoa1.saudacao()` gerará "Oi! Meu nome é Chris."; No entanto, `pessoa2.saudacao()` retornará "Oi! Meu nome é Brian.", mesmo que os códigos dos métodos sejam idênticos. Como dissemos antes, o `this` é igual ao código do objeto dentro dele — não é exatamente útil quando estamos escrevendo objetos literais na mão, mas é realmente incrível quando adicionamos objetos gerados dinamicamente (por exemplo usando **construtores**). Tudo ficará mais claro mais para frente.
 
 ## Você vem usando objetos o tempo todo
 

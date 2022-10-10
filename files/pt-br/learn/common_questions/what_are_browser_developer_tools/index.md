@@ -43,11 +43,11 @@ O devtools usualmente abre por padrão o inspetor, que se parece com a imagem ab
 Se você não vê o inspector,
 
 - Clique a aba _Inspetor._
-- No Internet Explorer, Clique a aba _DOM Explorer,_ ou pressione&#x20;
+- No Internet Explorer, Clique a aba _DOM Explorer,_ ou pressione
 
   <kbd>Ctrl</kbd>
 
-  &#x20;\+
+  \+
 
   <kbd> 1</kbd>
 

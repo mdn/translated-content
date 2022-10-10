@@ -397,6 +397,7 @@ const fileTypes = [
 function validFileType(file) {
   return fileTypes.includes(file.type);
 }
+```
 
 `returnFileSize()` 函数接受一个数字（字节数，取自当前文件的 `size` 属性）作为参数，并且将其转化为用 bytes/KB/MB 表示的可读性良好的文件大小。
 

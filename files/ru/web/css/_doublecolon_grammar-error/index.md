@@ -27,7 +27,9 @@ translation_of: Web/CSS/::grammar-error
 
 ## Синтаксис
 
-    ::grammar-error
+```
+::grammar-error
+```
 
 ## Примеры
 

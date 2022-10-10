@@ -30,11 +30,11 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
 
 - **[`MouseEvent.altKey`](/pt-BR/docs/Web/API/MouseEvent/altKey)** Read only
 
-  - : Retorna `true`se a tecla&#x20;
+  - : Retorna `true`se a tecla
 
     <kbd>alt</kbd>
 
-    &#x20;estava pressionada quando o evento do mouse foi disparado.
+    estava pressionada quando o evento do mouse foi disparado.
 
 - [`MouseEvent.button`](/pt-BR/docs/Web/API/MouseEvent/altKey) Read only
   - : O número do botão que foi pressionado (se aplicável) quando o evento do mouse foi disparado.
@@ -46,19 +46,19 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
   - : A coordenada Y do ponteiro do mouse em coordenadas locais (conteúdo **DOM**).
 - [`MouseEvent.ctrlKey`](/pt-BR/docs/Web/API/MouseEvent/ctrlKey) Read only
 
-  - : Retorna `true` se a tecla&#x20;
+  - : Retorna `true` se a tecla
 
     <kbd>control</kbd>
 
-    &#x20;estava pressionada quando o evento do mouse foi disparado.
+    estava pressionada quando o evento do mouse foi disparado.
 
 - [`MouseEvent.metaKey`](/pt-BR/docs/Web/API/MouseEvent/metaKey) Read only
 
-  - : Retorna `true` se a tecla&#x20;
+  - : Retorna `true` se a tecla
 
     <kbd>meta</kbd>
 
-    &#x20;estava pressionada quando o evento do mouse foi disparado.
+    estava pressionada quando o evento do mouse foi disparado.
 
 - [MouseEvent.movementX](/pt-BR/docs/Web/API/MouseEvent/movementX)Read only
   - : A coordenada X do ponteiro do mouse em relação à posição do último evento [`mousemove`](/pt-BR/docs/Web/API/Element/mousemove_event) .
@@ -82,11 +82,11 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
   - : A coordenada Y do ponteiro do mouse em coordenadas globais (tela).
 - [MouseEvent.shiftKey](/pt-BR/docs/Web/API/MouseEvent/shiftKey) Read only
 
-  - : Retorna `true` se a tecla&#x20;
+  - : Retorna `true` se a tecla
 
     <kbd>shift</kbd>
 
-    &#x20;estava pressionada quando o evento do mouse foi disparado.
+    estava pressionada quando o evento do mouse foi disparado.
 
 - [MouseEvent.which](/pt-BR/docs/Web/API/MouseEvent/which) Read only
   - : O botão sendo pressionado quando o evento do mouse foi disparado.
