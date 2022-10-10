@@ -69,7 +69,7 @@ l10n:
 
 実際のアプリケーションでは、PHP、Python、Node などのサーバーサイドの言語を使用して、データベースからデータを要求したほうが良いでしょう。しかし、ここではシンプルに、クライアント側の部分に集中したいと思います。
 
-この例を始めるには、 [fetch-start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/fetch-start.html) と 4 つのテキストファイル（[verse1.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse3.txt), [verse4.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse4.txt)）のローカルコピーを、自分ののコンピューターの新しいディレクトリーに作ってください。この例では、ドロップダウンメニューで選択されたときに、詩の異なる連（よくご存じのもの）を取得することにしています。
+この例を始めるには、 [fetch-start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/fetch-start.html) と 4 つのテキストファイル（[verse1.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse3.txt), [verse4.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse4.txt)）のローカルコピーを、自分のコンピューターの新しいディレクトリーに作ってください。この例では、ドロップダウンメニューで選択されたときに、詩の異なる連（よくご存じのもの）を取得することにしています。
 
 {{htmlelement("script")}} 要素のすぐ内側に、以下のコードを追加してください。これは、 {{htmlelement("select")}} 要素と {{htmlelement("pre")}} 要素への参照を格納し、 `<select>` 要素にリスナーを追加して、ユーザーが新しい値を選択したときに、新しい値が引数として `updateDisplay()` という関数に渡されるようにするものです。
 
