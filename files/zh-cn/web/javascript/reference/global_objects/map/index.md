@@ -19,7 +19,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 
 键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法。（它曾经使用[同值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#同值相等)，将 `0` 和 `-0` 视为不同。检查[浏览器兼容性](#browser_compatibility)。）这意味着 {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其它的值是根据 `===` 运算符的结果判断是否相等。
 
-
 ### `Object` 和 `Map` 的比较
 
 {{jsxref("Object")}} 和 `Map` 类似的是，它们都允许你按键存取一个值、删除键、检测一个键是否绑定了值。因此（并且也没有其他内建的替代方式了）过去我们一直都把对象当成 `Map` 使用。

@@ -38,11 +38,11 @@ animation-play-state: unset;
 
 ### Формальный синтаксис
 
-    {{csssyntax}}
+{{csssyntax}}
 
 ## Примеры
 
-См. [CSS animations](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS/CSS_animations").
+См. [CSS animations](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
 
 ## Спецификации
 
@@ -54,5 +54,5 @@ animation-play-state: unset;
 
 ## Смотрите также
 
-- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}
