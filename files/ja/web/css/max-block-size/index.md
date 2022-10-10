@@ -81,8 +81,7 @@ max-block-size: unset;
 
 ### 横書きおよび縦書きでの max-block-size の設定
 
-この例では、同じテキスト ([Herman Melville](https://en.wikipedia.org/wiki/Herman_Melville) の小説 _[Moby-Dick](https://en.wikipedia.org/wiki
-/Moby-Dick)_ の冒頭部分) が `horizontal-tb` および `vertical-rl` の両方の書字方向で表示されます。
+この例では、同じテキスト ([Herman Melville](https://en.wikipedia.org/wiki/Herman_Melville) の小説 _[Moby-Dick](https://en.wikipedia.org/wiki/Moby-Dick)_ の冒頭部分) が `horizontal-tb` および `vertical-rl` の両方の書字方向で表示されます。
 
 二つのボックスついてそれ以外の部分はすべて、 {{cssxref("max-block-size")}} に使われている値を含めて同じです。
 

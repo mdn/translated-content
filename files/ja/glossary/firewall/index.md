@@ -12,4 +12,4 @@ original_slug: Glossary/ファイアウォール
 
 ### 基礎知識
 
-- Wikipedia の [ファイアウォール ](https://ja.wikipedia.org/wiki/ファイアウォール )
+- Wikipedia の [ファイアウォール](https://ja.wikipedia.org/wiki/ファイアウォール)
