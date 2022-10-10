@@ -126,7 +126,7 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 ## CORS
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
-- : Indica si la respuesta puede ser compartida.
+  - : Indica si la respuesta puede ser compartida.
 - {{HTTPHeader("Access-Control-Allow-Credentials")}}
   - : Indica si la respuesta puede quedar expuesta o no cuando el marcador de la credencial retorna como 'true'.
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
