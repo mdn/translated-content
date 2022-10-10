@@ -57,7 +57,7 @@ text-underline-offset: unset;
 
 {{CSSInfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
