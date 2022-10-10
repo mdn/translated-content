@@ -56,7 +56,7 @@ slug: Web/HTML/Element/Input/color
 
 `color` 类型的 {{HTMLElement("input")}} 元素的 {{htmlattrxref("value", "input")}} 总是包含一个 7 个字符的字符串，它以 16 进制格式指定 RGB 颜色。虽然你可以用大写字母或小写字母输入颜色，但它将以小写字母形式存储。该值从不以任何其他形式出现，也从不为空。
 
-> **备注：** 将该值设置为任何不是有效的、完全不透明的、RGB 颜色的*十六进制表示*，都将导致该值被设置为 `#000000`。特别是，你不能使用 CSS 的标准化颜色名称或任何 CSS 函数语法来设置该值。记住 HTML 和 CSS 是独立的语言和规范时总是有道理的。此外，不支持带有透明通道的颜色；用 9 个字符的十六进制表示（例如 `#009900aa`）指定颜色，也会导致颜色被设置为 `#000000`。
+> **备注：** 将该值设置为任何不是有效的、完全不透明的、RGB 颜色的*十六进制表示*，都将导致该值被设置为 `#000000`。特别是，你不能使用 CSS 的标准化颜色名称或任何 CSS 函数语法来设置该值（记住， HTML 和 CSS 是独立的语言和规范）。此外，不支持带有透明通道的颜色；用 9 个字符的十六进制表示（例如 `#009900aa`）指定颜色，也会导致颜色被设置为 `#000000`。
 
 ## 使用 color 输入
 
@@ -76,7 +76,7 @@ slug: Web/HTML/Element/Input/color
 
 ### 监听颜色变化
 
-正如其他类型的{{HTMLElement("input")}}元素，有两个和值的改变相关的事件，{{domxref("HTMLElement/input_event", "input")}} 和{{domxref("HTMLElement/change_event", "change")}}。每次颜色变更都会触发 `<input>` 元素上的 `input` 事件。用户关闭选色器之后会触发 `change` 事件。对于这两个事件，都可以通过 {{htmlattrxref("value", "input")}} 属性获取新值。
+正如其他类型的 {{HTMLElement("input")}} 元素，有两个和值的改变相关的事件，{{domxref("HTMLElement/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}}。每次颜色变更都会触发 `<input>` 元素上的 `input` 事件。用户关闭选色器之后会触发 `change` 事件。对于这两个事件，都可以通过 {{htmlattrxref("value", "input")}} 属性获取新值。
 
 以下代码为监听颜色值变化的示例：
 
@@ -95,7 +95,7 @@ function watchColorPicker(event) {
 
 当浏览器不支持颜色选择器接口时，它对颜色输入的实现将是一个自动验证内容以确保数值的格式正确的文本框。在这种情况下，你可以使用 {{domxref("HTMLInputElement.select", "select()")}} 方法来选择当前编辑栏中的文本。
 
-如果浏览器提供了选色器，`select()`方法将会什么也不做。因此，需要留心这两种情况下方法行为的差异。
+如果浏览器提供了选色器，`select()` 方法将会什么也不做。因此，需要留心这两种情况下方法行为的差异。
 
 ```js
 colorWell.select();
@@ -107,7 +107,7 @@ colorWell.select();
 
 ## 示例
 
-让我们创建一个例子，通过跟踪 {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}} 事件，对颜色输入做一些处理，将新颜色应用到文档中的每个{{HTMLElement("p")}} 元素。
+让我们创建一个例子，通过跟踪 {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}} 事件，对颜色输入做一些处理，将新颜色应用到文档中的每个 {{HTMLElement("p")}} 元素。
 
 ### HTML
 
@@ -160,7 +160,7 @@ function startup() {
 
 最后，如果控件被实现为文本字段，我们调用 {{domxref("HTMLInputElement.select", "select()")}} 来选择颜色输入的文本内容（如果提供的是颜色选择器接口，这就没有效果）。
 
-#### 对颜色变化作出反馈
+#### 对颜色变化作出反应
 
 我们提供了两个处理颜色变化的函数。`updateFirst()` 函数是为了响应 `input` 事件而调用的。它改变文档中第一个段落元素的颜色，以匹配颜色输入的新值。由于每次对数值进行调整时都会触发 `input` 事件（例如，如果增加了颜色的亮度），在使用颜色选择器时，这些事件会重复发生。
 
