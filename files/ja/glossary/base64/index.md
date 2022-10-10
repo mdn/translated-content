@@ -73,7 +73,7 @@ UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode
 
 ### 解決策その 2 - `atob()` と `btoa()` を `TypedArray` と UTF-8 を使用して書き直す
 
-> **Note:** 以下のコードは、 [ArrayBuffer](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) を Base64 文字列から取得する場合、またはその逆の場合にも有用です（[下記参照](#付録_base64_文字列を_uint8array_または_arraybuffer_へデコード)）。
+> **メモ:** 以下のコードは、 [ArrayBuffer](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) を Base64 文字列から取得する場合、またはその逆の場合にも有用です（[下記参照](#付録_base64_文字列を_uint8array_または_arraybuffer_へデコード)）。
 
 ```js
 "use strict";
