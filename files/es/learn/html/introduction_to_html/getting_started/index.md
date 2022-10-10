@@ -729,8 +729,7 @@ El equivalente de referencia de caracter podría recordarse fácilmente porque e
 Considera los dos siguientes párrafos:
 
 ```html
-<p>En HTML, defines un párrafo con el elemento</p>
-<p>.</p>
+<p>En HTML, defines un párrafo con el elemento <p>.</p>
 
 <p>En HTML, defines un párrafo con el elemento &lt;p&gt;.</p>
 ```
