@@ -19,7 +19,7 @@ original_slug: Glossary/Empty_element
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}}(HTML 5.2 草稿已移除)
+- {{HTMLElement("keygen")}}（HTML 5.2 草案已移除该元素）
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
 - {{HTMLElement("param")}}
