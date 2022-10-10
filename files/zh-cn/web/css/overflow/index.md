@@ -63,7 +63,7 @@ overflow: unset;
 - `-moz-hidden-unscrollable` {{deprecated_inline}}
   - : 请使用 `overflow: clip` 代替。
 
-As of Firefox 63, `-moz-scrollbars-none`, `-moz-scrollbars-horizontal`, and `-moz-scrollbars-vertical` are behind a feature preference setting. In about:config, set `layout.css.overflow.moz-scrollbars.enabled` to `true`.
+在 Firefox 63 中：`-moz-scrollbars-none`、`-moz-scrollbars-horizontal` 和 `-moz-scrollbars-vertical` 位于特性首选项中。即需要在 about:config 中，将 `layout.css.overflow.moz-scrollbars.enabled` 设置为 `true`。
 
 ## 描述
 
