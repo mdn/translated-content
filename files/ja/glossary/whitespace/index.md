@@ -25,7 +25,7 @@ slug: Glossary/Whitespace
 
 3. Wikipedia 記事
 
-    1. {{interwiki("wikipedia", "en:Whitespace character")}}
+    1. [Whitespace character](https://ja.wikipedia.org/wiki/Whitespace_character) (英語)
 
 4. [用語集](/ja/docs/Glossary)
 

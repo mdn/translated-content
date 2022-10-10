@@ -9,7 +9,7 @@ slug: Glossary/RSS
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "RSS")}}
+- Wikipedia の [RSS](https://ja.wikipedia.org/wiki/RSS)
 
 ### 技術リファレンス
 

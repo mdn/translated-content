@@ -10,4 +10,4 @@ slug: Glossary/FTP
 ### 一般知識
 
 - [FTP を介してファイルをアップロードする初心者向けのガイド](/ja/docs/Learn/Common_questions/Upload_files_to_a_web_server)
-- Wikipedia の {{interwiki("wikipedia", "File_Transfer_Protocol", "FTP")}} 記事
+- Wikipedia の [FTP](https://ja.wikipedia.org/wiki/File_Transfer_Protocol) 記事
