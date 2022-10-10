@@ -702,7 +702,8 @@ En los ejemplos anteriores se han incluido espacios en blanco y saltos de línea
 ```html
 <p>Los perros son tontos.</p>
 
-<p>Los perros son tontos.</p>
+<p>Los    perros        son
+         tontos.</p>
 ```
 
 No importa cuántos espacios en blanco se utilicen (incluye tanto caracteres de espacio como saltos de línea) el intérprete de HTML reduce cada secuencia de espacio en blanco a un único espacio al interpretar el código. Entonces, ¿por qué utilizar espacios en blanco? La respuesta está en la legibilidad.
