@@ -40,7 +40,7 @@ l10n:
 
 [Simple Mapquest API の例](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/mapquest)を参考に、サードパーティ API とブラウザー API の違いを説明します。
 
-> **メモ:** 一度に [すべてのコード例を取得](/ja/docs/Learn#コード例の入手)したいかもしれませんが、その場合は、それぞれの節で必要な例ファイルをリポジトリーから検索すればよいでしょう。
+> **メモ:** 一度に[すべてのコード例を取得](/ja/docs/Learn#コード例の入手)したいかもしれませんが、その場合は、それぞれの節で必要な例ファイルをリポジトリーから検索すればよいでしょう。
 
 ### サードパーティのサーバーにある
 
