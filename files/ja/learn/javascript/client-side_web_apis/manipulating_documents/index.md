@@ -270,7 +270,7 @@ linkPara.parentNode.removeChild(linkPara);
 4. 関数本体は、input 要素の現在の[値](/ja/docs/Web/API/HTMLInputElement#プロパティ)を変数に保存するところから始めます。
 5. 次に、input 要素の値に空文字列 (`''`) を代入して、 input 要素を空にします。
 6. 3 つの要素を作成します — リスト項目({{htmlelement('li')}}) と {{htmlelement('span')}} と {{htmlelement('button')}} で、これらを変数に保存します。
-7. span と button をリスト項目 li の子に追加します。
+7. span と button をリスト項目の子に追加します。
 8. span のテキストに、先ほど保存した input 要素の値を代入し、ボタンのテキストを「削除」にします。
 9. できたリスト項目をリストの子に追加します。
 10. 削除ボタンにイベントハンドラーを追加して、クリックされたらボタンが含まれているリスト項目全体を削除するようにします。
