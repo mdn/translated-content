@@ -117,7 +117,7 @@ input[type="file"]::file-selector-button:hover {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
 - [Microsoft CSS 扩展](/zh-CN/docs/Web/CSS/Microsoft_Extensions)
