@@ -9,7 +9,7 @@ slug: Glossary/Rendering_engine
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "HTMLレンダリングエンジン")}}
+- Wikipedia の [HTMLレンダリングエンジン](https://ja.wikipedia.org/wiki/HTMLレンダリングエンジン)
 
 ### 技術リファレンス
 

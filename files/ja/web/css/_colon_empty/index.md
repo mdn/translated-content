@@ -18,7 +18,9 @@ div:empty {
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:empty
+```
 
 ## 例
 

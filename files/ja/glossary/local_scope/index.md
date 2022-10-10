@@ -9,4 +9,4 @@ slug: Glossary/Local_scope
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "スコープ")}}
+- Wikipedia の [スコープ](https://ja.wikipedia.org/wiki/スコープ)

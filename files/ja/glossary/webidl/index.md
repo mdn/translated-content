@@ -14,4 +14,4 @@ WebIDL はウェブのほぼすべての API {{Glossary("specification", "仕様
 - [Specification](http://www.w3.org/TR/WebIDL/)
 - [Information contained in a WebIDL file](/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file)
 - [WebIDL bindings](/ja/docs/Mozilla/WebIDL_bindings)
-- {{interwiki("wikipedia", "WebIDL")}}
+- [WebIDL](https://en.wikipedia.org/wiki/WebIDL) (英語)

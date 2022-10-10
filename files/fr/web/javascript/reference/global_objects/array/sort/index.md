@@ -248,16 +248,11 @@ var result = mapped.map(function(e){
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.4.4.11', 'Array.prototype.sort')}}                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-array.prototype.sort', 'Array.prototype.sort')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-array.prototype.sort', 'Array.prototype.sort')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.sort")}}
+{{Compat}}
 
 ## Voir aussi
 

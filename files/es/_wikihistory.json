@@ -8866,10 +8866,6 @@
       "eliasrodeloso"
     ]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2019-03-23T22:09:49.599Z",
-    "contributors": ["vinyetcg", "JoaquinGiordano", "V.Morantes"]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-03-23T22:48:50.706Z",
     "contributors": ["miguelsp"]
@@ -14871,6 +14867,10 @@
   "conflicting/Web/HTML/Global_attributes": {
     "modified": "2019-03-18T21:19:21.658Z",
     "contributors": ["PabloDeTorre"]
+  },
+  "conflicting/Web/HTML/Global_attributes/contenteditable": {
+    "modified": "2019-03-23T22:09:49.599Z",
+    "contributors": ["vinyetcg", "JoaquinGiordano", "V.Morantes"]
   },
   "conflicting/Web/HTML/Global_attributes/spellcheck": {
     "modified": "2019-03-23T23:54:20.583Z",

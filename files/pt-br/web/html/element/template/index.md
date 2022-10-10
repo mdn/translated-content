@@ -22,7 +22,6 @@ Pense no template como um fragmento de conteúdo, que é armazenado para um poss
       <th scope="row">
         <a
           href="/en-US/docs/Web/HTML/Content_categories"
-          title="HTML/Content_categories"
           >Conteúdo de categorias</a
         >
       </th>

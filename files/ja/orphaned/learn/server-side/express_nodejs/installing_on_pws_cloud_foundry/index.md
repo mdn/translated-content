@@ -44,7 +44,7 @@ This post covers how to modify the LocalLibrary application from the tutorial fo
 - How to set environment variables for Node using the cf CLI.
 - How to look at logs, again using the cf CLI tool.
 
-So let's get started. You have two options, you can go through the tutorial from the [beginning](https://developer.mozilla.org/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) or you can just download the completed project and modify it from there for use on PWS. To do the latter, you can do the following from a terminal:
+So let's get started. You have two options, you can go through the tutorial from the [beginning](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) or you can just download the completed project and modify it from there for use on PWS. To do the latter, you can do the following from a terminal:
 
 ```bash
 git clone https://github.com/mdn/express-locallibrary-tutorial

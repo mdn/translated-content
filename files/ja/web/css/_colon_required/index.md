@@ -20,7 +20,9 @@ input:required {
 
 ## 構文
 
-{{csssyntax}}
+```
+:required
+```
 
 ## 例
 

@@ -11,7 +11,9 @@ slug: Web/CSS/:focus-visible
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:focus-visible
+```
 
 ## 例
 

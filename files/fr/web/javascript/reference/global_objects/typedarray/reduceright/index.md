@@ -71,14 +71,11 @@ var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-%typedarray%.prototype.reduceRight', '%TypedArray%.prototype.reduceRight')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reduceRight', '%TypedArray%.prototype.reduceRight')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.reduceRight")}}
+{{Compat}}
 
 ## Voir aussi
 

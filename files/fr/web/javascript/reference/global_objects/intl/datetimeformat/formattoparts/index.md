@@ -140,13 +140,11 @@ Une prothèse de cette fonctionnalité est disponible sur le dépôt décrivant 
 
 ## Spécifications
 
-| Spécification                                                                                                                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.prototype.formatToParts', 'Intl.DateTimeFormat.prototype.formatToParts')}} | {{Spec2('ES Int Draft')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DateTimeFormat.formatToParts")}}
+{{Compat}}
 
 ## Voir aussi
 

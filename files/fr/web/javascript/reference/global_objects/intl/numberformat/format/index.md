@@ -62,15 +62,11 @@ console.log(formatted.join("; "));
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                             | Commentaires        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('ES Int 1.0', '#sec-11.3.2', 'Intl.NumberFormat.prototype.format')}}                                         | {{Spec2('ES Int 1.0')}} | Définition initiale |
-| {{SpecName('ES Int 2.0', '#sec-11.3.2', 'Intl.NumberFormat.prototype.format')}}                                         | {{Spec2('ES Int 2.0')}} |                     |
-| {{SpecName('ES Int Draft', '#sec-Intl.NumberFormat.prototype.format', 'Intl.NumberFormat.prototype.format')}} | {{Spec2('ES Int Draft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.NumberFormat.format")}}
+{{Compat}}
 
 ## Voir aussi
 

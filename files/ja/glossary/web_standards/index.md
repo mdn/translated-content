@@ -20,4 +20,4 @@ slug: Glossary/Web_standards
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "ウェブ標準")}}
+- Wikipedia の [ウェブ標準](https://ja.wikipedia.org/wiki/ウェブ標準)

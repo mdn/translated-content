@@ -159,7 +159,6 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
               <td>
                 <a
                   href="/en/JavaScript_typed_arrays/ArrayBuffer"
-                  title="en/JavaScript typed arrays/ArrayBuffer"
                   ><code>ArrayBuffer</code></a
                 >
               </td>
@@ -246,7 +245,7 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
         <p>
           A resposta ao pedido como um DOM
           <code
-            ><a class="internal" href="/en/DOM/document" title="En/DOM/Document"
+            ><a class="internal" href="/en/DOM/document"
               >Document</a
             ></code
           >
@@ -398,7 +397,6 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
       <td>
         <a
           href="/en/JavaScript_typed_arrays/ArrayBuffer"
-          title="en/JavaScript typed arrays/ArrayBuffer"
           ><code>ArrayBuffer</code></a
         >
       </td>

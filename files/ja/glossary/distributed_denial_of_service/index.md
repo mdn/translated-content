@@ -26,4 +26,4 @@ US-CERT（米国コンピューター緊急時対応チーム、United States Co
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "DoS攻撃")}}
+- Wikipedia 上の [DoS攻撃](https://ja.wikipedia.org/wiki/DoS攻撃)

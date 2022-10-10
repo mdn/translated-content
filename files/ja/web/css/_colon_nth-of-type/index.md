@@ -21,9 +21,9 @@ p:nth-of-type(4n) {
 
 構文の詳しい説明は {{Cssxref(":nth-child")}} を参照してください。
 
-### 形式文法
-
-{{csssyntax}}
+```
+:nth-of-type( <an-plus-b> | even | odd )
+```
 
 ## 例
 
