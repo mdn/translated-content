@@ -67,7 +67,7 @@ As of Firefox 63, `-moz-scrollbars-none`, `-moz-scrollbars-horizontal`, and `-mo
 
 ## 描述
 
-overflow 选项包括裁减、显示滚动条、或者显示从容器流向周围区域的内容。
+overflow 选项包括裁减、显示滚动条，或者显示从容器流向周围区域的内容。
 
 指定 `visible`（默认）或 `clip` 以外的值，会创建一个新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。由于技术原因，这是必要的——如果浮动包含滚动元素，它将在每个滚动步骤后强制重新包装内容，从而导致一个缓慢的滚动体验。
 
