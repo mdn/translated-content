@@ -1895,7 +1895,7 @@
 /ja/docs/HTML/Canvas	/ja/docs/Web/API/Canvas_API
 /ja/docs/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/HTML/Canvas/Tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
-/ja/docs/HTML/Content_Editable	/ja/docs/Web/Guide/HTML/Editable_content
+/ja/docs/HTML/Content_Editable	/ja/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /ja/docs/HTML/Content_categories	/ja/docs/Web/Guide/HTML/Content_categories
 /ja/docs/HTML/Element	/ja/docs/Web/HTML/Element
 /ja/docs/HTML/Element/Audio	/ja/docs/Web/HTML/Element/audio
@@ -4335,6 +4335,7 @@
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/ja/docs/Web/API/Canvas_API/Tutorial/Transformations
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/ja/docs/Web/API/Canvas_API/Tutorial/Using_images
+/ja/docs/Web/Guide/HTML/Editable_content	/ja/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /ja/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla	/ja/docs/orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 /ja/docs/Web/Guide/HTML/Event_attributes	/ja/docs/Learn/JavaScript/Building_blocks/Events
 /ja/docs/Web/Guide/HTML/Forms	/ja/docs/Learn/Forms
@@ -4367,7 +4368,7 @@
 /ja/docs/Web/HTML/Canvas	/ja/docs/Web/API/Canvas_API
 /ja/docs/Web/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/HTML/Canvas/Tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
-/ja/docs/Web/HTML/Content_Editable	/ja/docs/Web/Guide/HTML/Editable_content
+/ja/docs/Web/HTML/Content_Editable	/ja/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /ja/docs/Web/HTML/Content_Editable/Rich-Text_Editing_in_Mozilla	/ja/docs/orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 /ja/docs/Web/HTML/Content_categories	/ja/docs/Web/Guide/HTML/Content_categories
 /ja/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/ja/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
