@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
 
 {{jsSidebar("Operators")}}
 
-按位与赋值运算符（`&=`）使用两个操作数的二进制表示，对它们进行位与操作并将结果赋值给变量。
+按位与赋值运算符（`&=`）使用两个操作数的二进制表示，对它们进行按位与运算并将结果赋值给变量。
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html", "shorter")}}
 

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Right_shift_assignment
 
 {{jsSidebar("Operators")}}
 
-右移赋值操作符（`>>=`）将指定数量的位向右移动，并将结果赋值给变量。
+右移赋值运算符（`>>=`）将变量向右移动指定的位数，并将结果赋值给变量。
 
 {{EmbedInteractiveExample("pages/js/expressions-right-shift-assignment.html")}}
 

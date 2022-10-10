@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Left_shift_assignment
 
 {{jsSidebar("Operators")}}
 
-左移赋值运算符（`<<=`）将指定的位数向左移动，并将结果赋值给变量。
+左移赋值运算符（`<<=`）将变量向左移动指定的位数，并将结果赋值给变量。
 
 {{EmbedInteractiveExample("pages/js/expressions-left-shift-assignment.html", "shorter")}}
 
