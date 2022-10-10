@@ -37,7 +37,7 @@ button:hover {
 这些伪类可以基于元素的显示状态来选择它们。
 
 - {{CSSxRef(":fullscreen")}}
-  - : Matches an element that is currently in fullscreen mode.
+  - : 匹配当前处于全屏模式的元素。
 - {{CSSxRef(":modal")}}
   - : Matches an element that is in a state in which it excludes all interaction with elements outside it until the interaction has been dismissed.
 - {{CSSxRef(":picture-in-picture")}}
