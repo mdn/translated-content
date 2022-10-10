@@ -216,7 +216,7 @@ Blob を正常に受信したら、それを `showProduct()` 関数に渡して�
 
 ## The XMLHttpRequest API
 
-時々、特に古いコードでは、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) (しばしば "XHR" と略されます) という別の API を使って、HTTP リクエストを行っているのを見かけることがあります。これは Fetch よりも前にあり、AJAX を実装するために実際に広く使用された最初の API でした。できれば Fetch を使用することをお勧めします。`XMLHttpRequest` よりもシンプルな API で、より多くの機能を有しています。ここでは、`XMLHttpRequest` を使用する例については紹介しませんが、最初の缶詰やのリクエストの `XMLHttpRequest` バージョンがどのようになるかを示します。
+時々、特に古いコードでは、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) (しばしば "XHR" と略されます) という別の API を使って、HTTP リクエストを行っているのを見かけることがあります。これは Fetch よりも前にあり、AJAX を実装するために実際に広く使用された最初の API でした。できれば Fetch を使用することをお勧めします。`XMLHttpRequest` よりもシンプルな API で、より多くの機能を有しています。ここでは、`XMLHttpRequest` を使用する例については紹介しませんが、最初の缶詰屋のリクエストの `XMLHttpRequest` バージョンがどのようになるかを示します。
 
 ```js
 const request = new XMLHttpRequest();
