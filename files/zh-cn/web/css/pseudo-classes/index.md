@@ -109,7 +109,7 @@ button:hover {
 
 ## 时间方面的伪类
 
-These pseudo-classes apply when viewing something which has timing, such as a [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) caption track.
+这些伪类适用于查看有计时功能的东西，如 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 字幕轨。
 
 - {{CSSxRef(":current")}}
   - : Represents the element or ancestor of the element that is being displayed.
