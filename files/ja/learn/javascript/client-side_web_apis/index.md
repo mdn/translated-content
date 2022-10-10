@@ -33,7 +33,7 @@ l10n:
   - : ウェブページやアプリケーションを書くとき、最も一般的なことのひとつは、何らかの方法でウェブ文書を操作することでしょう。これは通常、ドキュメントオブジェクトモデル (DOM) を使用することで行われます。これは HTML とスタイル設定情報をコントロールするための API のセットで、 {{domxref("Document")}} オブジェクトを多用します。この記事では、 DOM を使用する方法を詳しく見ていきます。また、他にも興味深い方法であなたの環境を変化させることができる API もいくつか紹介します。
 - [サーバーからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
   - : また、現代のウェブサイトやアプリケーションでは、新しいページ全体を読み込むことなくウェブページの節を更新するために、サーバーから個々のデータ項目を取得することも非常に一般的なタスクです。この一見小さなことが、サイトのパフォーマンスや動作に大きな影響を及ぼしています。この記事では、この概念を説明し、 {{domxref("XMLHttpRequest")}} や [Fetch API](/ja/docs/Web/API/Fetch_API) など、これを可能にする技術について見ていきます。
-  [サードパーティの API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- [サードパーティの API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
   - : これまで取り上げた API はブラウザーに内蔵されていますが、すべての API が内蔵されているわけではありません。 Google Maps、Twitter、Facebook、PayPal など、多くの大規模なウェブサイトやサービスが API を提供しており、開発者はそれらのデータ（例：ブログに Twitter のストリームを表示する）やサービス（例：サイトにカスタム Google マップを表示したり、 Facebook ログインを使ってユーザーにログインしてもらう）を使用することができます。この記事では、ブラウザー API とサードパーティ API の違いを見て、後者の典型的な使用方法をいくつか示します。
 - [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
   - : ブラウザーにはグラフィックを描くためのとても強力なツールがいくつか組み込まれています。[SVG](/ja/docs/Web/SVG) (Scalable Vector Graphics) 言語から、 HTML の {{htmlelement("canvas")}} キャンバス要素に描画するための API （[キャンバス API](/ja/docs/Web/API/Canvas_API) や [WebGL](/ja/docs/Web/API/WebGL_API)を参照）まで。 この記事ではキャンバス API への導入を説明し、もっと深く学習していくためのリソースをご紹介します。
