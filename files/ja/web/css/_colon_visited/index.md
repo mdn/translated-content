@@ -30,7 +30,9 @@ a:visited {
 
 ## 構文
 
-{{csssyntax}}
+```
+visited
+```
 
 ## 例
 

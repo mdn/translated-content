@@ -35,7 +35,7 @@ document.location.assign('https://developer.mozilla.org/zh-CN/docs/Web/API/Locat
 
 ## 浏览器兼容性
 
-{{Compat("api.Location.assign")}}
+{{Compat}}
 
 ## 相关内容
 

@@ -19,7 +19,9 @@ p:read-write {
 
 ## 構文
 
-{{csssyntax}}
+```
+:read-write
+```
 
 ## 例
 

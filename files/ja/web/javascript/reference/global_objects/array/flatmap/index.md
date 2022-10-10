@@ -38,7 +38,6 @@ flatMap(function(currentValue, index, array) { /* … */ }, thisArg)
 
     この関数は以下の引数と共に呼び出されます。
 
-
     - `currentValue`
       - : 配列で現在処理されている要素です。
     - `index`

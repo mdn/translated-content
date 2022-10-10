@@ -25,4 +25,4 @@ if (navigator.maxTouchPoints > 1) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.maxTouchPoints")}}
+{{Compat}}

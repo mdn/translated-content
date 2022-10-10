@@ -54,14 +54,11 @@ document.getElementById('IDélément').style.fontSize = '0.7em'
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.small', 'String.prototype.small')}}         | {{Spec2('ES6')}}         | Définition initiale. Implémentée dans JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web. |
-| {{SpecName('ESDraft', '#sec-string.prototype.small', 'String.prototype.small')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web.                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.small")}}
+{{Compat}}
 
 ## Voir aussi
 

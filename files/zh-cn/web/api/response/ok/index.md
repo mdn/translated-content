@@ -43,7 +43,7 @@ fetch(myRequest).then(function(response) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.ok")}}
+{{Compat}}
 
 ## 相关链接
 

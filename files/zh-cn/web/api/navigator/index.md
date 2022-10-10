@@ -140,4 +140,4 @@ _Doesn't inherit any method, but implements those defined in {{domxref("Navigato
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator")}}
+{{Compat}}

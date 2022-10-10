@@ -8,7 +8,7 @@ translation_of: Web/SVG/Attribute/stroke
 ---
 {{SVGRef}}
 
-O atributo **`stroke`** é um atributo de apresentação que define a cor _(ou qualquer SVG_ _paint servers, como gradientes ou_ _patterns\_\_)_ usado para pintar o contorno da forma;
+O atributo **`stroke`** é um atributo de apresentação que define a cor (_ou qualquer SVG_ _paint servers, como gradientes ou patterns_) usado para pintar o contorno da forma;
 
 > **Nota:** As a presentation attribute `stroke` can be used as a CSS property.
 

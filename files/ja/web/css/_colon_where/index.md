@@ -125,7 +125,9 @@ footer a {
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:where( <complex-selector-list> )
+```
 
 ## 仕様書
 

@@ -24,7 +24,7 @@ name = AnimationEvent.animationName
 
 | Especificação                                                                                                                          | Estado                                     | Comentário            |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------- |
-| `{{ SpecName('CSS3 Animations', '#AnimationEvent-animationName', 'AnimationEvent.animationName') }}` | `{{ Spec2('CSS3 Animations')}}` | `Initial definition.` |
+| `{{ SpecName('CSS3 Animations', '#AnimationEvent-animationName', 'AnimationEvent.animationName') }}` | `{{ Spec2('CSS3 Animations')}}` | `Initial definition`. |
 
 ## Compatibilidade com navegadores
 

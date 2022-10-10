@@ -84,15 +84,11 @@ Object.keys("toto");
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                           |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
-| {{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ES2015')}}     |                                                        |
-| {{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ESDraft')}} |                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.keys")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -59,7 +59,7 @@ undefined  // 即没有返回值
 
 ## Browser compatibility
 
-{{Compat("api.URLSearchParams.forEach")}}
+{{Compat}}
 
 ## See also
 

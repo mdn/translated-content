@@ -80,14 +80,11 @@ try {
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | État                                 | Commentaires                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#constructor-properties-of-the-webassembly-object', 'WebAssembly constructors')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard', 'NativeError')}}                                 | {{Spec2('ESDraft')}}         | Définition des types standards `NativeError`.      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.LinkError")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -20,7 +20,9 @@ slug: web/css/:user-valid
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:user-invalid
+```
 
 ## 例
 

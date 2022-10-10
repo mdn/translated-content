@@ -29,7 +29,7 @@ str.indexOf(searchValue[, fromIndex])
 - `searchValue`
   - : Uma string representando o valor a ser buscado. Se nenhuma string for fornecida explicitamente, `searchValue` terá o valor de `undefined`, e esse valor será buscado na string atual. Por exemplo, `'undefined'.indexOf()` retornará `0`, já que `undefined` é encontrado na posição `0`. Já `'undefine'.indexOf()` retornará `-1`, já que `undefined` não pôde ser encontrado.
 - `fromIndex`
-  - : Um número inteiro representando um índice da string original a partir da qual a busca deve começar. Por padrão é `0`. Se `fromIndex < 0`, a string toda é percorrida (equivale a passar 0). Se `fromIndex` `>=` `str.length`, o método retornará `-1`, já que a busca será iniciada após o final da string.
+  - : Um número inteiro representando um índice da string original a partir da qual a busca deve começar. Por padrão é `0`. Se `fromIndex < 0`, a string toda é percorrida (equivale a passar 0). Se `fromIndex >= str.length`, o método retornará `-1`, já que a busca será iniciada após o final da string.
 
 ### Valor retornado
 

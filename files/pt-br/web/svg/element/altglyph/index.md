@@ -22,11 +22,11 @@ O elemento `altGlyph` habilita a seleção sofisticada de símbolos utilizada pa
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/en/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Atributos principais](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos de eventos gráficos](/en/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Atributos de apresentação](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
-- [Atributos XLink](/en/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Atributos de processamento condicional](/en/SVG/Attribute#ConditionalProccessing) »
+- [Atributos principais](/en/SVG/Attribute#Core) »
+- [Atributos de eventos gráficos](/en/SVG/Attribute#GraphicalEvent) »
+- [Atributos de apresentação](/en/SVG/Attribute#Presentation) »
+- [Atributos XLink](/en/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -44,7 +44,7 @@ O elemento `altGlyph` habilita a seleção sofisticada de símbolos utilizada pa
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGAltGlyphElement`](/en-US/docs/Web/API/SVGAltGlyphElement "en/DOM/SVGAltGlyphElement").
+Este elemento implementa a interface do [`SVGAltGlyphElement`](/en-US/docs/Web/API/SVGAltGlyphElement).
 
 ## Compatibilidade com navegadores
 

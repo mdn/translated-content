@@ -63,7 +63,7 @@ parentDiv.replaceChild(sp1, sp2);
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.replaceChild")}}
+{{Compat}}
 
 ## 参见
 

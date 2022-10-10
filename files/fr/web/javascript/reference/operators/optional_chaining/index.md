@@ -181,13 +181,11 @@ console.log(villeDuClient); // Ville inconnue
 
 ## Spécifications
 
-| Specification                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#prod-OptionalExpression', 'optional expression')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.optional_chaining")}}
+{{Compat}}
 
 ## Voir aussi
 

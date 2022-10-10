@@ -20,7 +20,9 @@ a:link {
 
 ## 構文
 
-{{csssyntax}}
+```
+:link
+```
 
 ## 例
 

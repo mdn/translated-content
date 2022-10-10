@@ -43,7 +43,6 @@ getReader(options)
   - : リーダーを作成しようとしているストリームが {{domxref("ReadableStream")}} ではありません。
     これは、 BYOB リーダーが要求されたときに、ストリームコントローラーが {{domxref("ReadableByteStreamController")}} でない（ストリームが [`type="bytes"`](/ja/docs/Web/API/ReadableStream/ReadableStream) で基礎ソースとして構築されていない）場合にも発生します。
 
-
 ## 例
 
 次の簡単な例では、`getReader()` を使用して作成した {{domxref("ReadableStreamDefaultReader")}} を使用して、以前に作成した独自の `ReadableStream` を読み取ります（完全なコードについては、[単純なランダムストリームの例](https://mdn.github.io/dom-examples/streams/simple-random-stream/)を参照）。 各チャンクを順番に読み取り、ストリームの読み取りが完了するまで UI に出力します。 ストリームの読み取りが完了すると、再帰関数から戻り、ストリーム全体を UI の別の部分に出力します。

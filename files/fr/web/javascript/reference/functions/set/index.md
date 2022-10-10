@@ -100,15 +100,11 @@ console.log(obj.bidule); // "bidule"
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                          |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------- |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | Définition initiale                   |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Ajout des noms de propriétés calculés |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.set")}}
+{{Compat}}
 
 ## Voir aussi
 

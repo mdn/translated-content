@@ -40,6 +40,7 @@ où on a :
 ### Syntaxe formelle
 
 {{csssyntax}}
+
 ## Spécifications
 
 {{Specifications}}

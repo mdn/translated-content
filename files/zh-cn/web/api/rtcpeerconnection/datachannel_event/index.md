@@ -36,7 +36,7 @@ pc.ondatachannel = function(ev) {
 
 ## 浏览器支持
 
-{{Compat("api.RTCPeerConnection.ondatachannel")}}
+{{Compat}}
 
 ## 相关阅读
 
