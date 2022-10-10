@@ -327,6 +327,6 @@ W
 
 {{Specifications}}
 
-## 相关链接
+## 参见
 
 - [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)
