@@ -292,7 +292,10 @@ Cada lista desordenada comienza con un elemento {{HTMLElement("ul")}} («_unorde
 
 ```html
 <ul>
-  leche huevos pan hummus
+leche
+huevos
+pan
+hummus
 </ul>
 ```
 
