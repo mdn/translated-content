@@ -15,7 +15,7 @@ browser-compat: css.properties.text-underline-offset
 
 {{CSSRef}}
 
-**`text-underline-offset`** [CSS](/zh-CN/docs/Web/CSS) 属性设置下划线文本装饰线（使用 {{cssxref("text-decoration")}} 应用）与其原始位置的偏移距离。
+[CSS](/zh-CN/docs/Web/CSS) 的 **`text-underline-offset`** 属性设置下划线文本装饰线（使用 {{cssxref("text-decoration")}} 应用）与其原始位置的偏移距离。
 
 {{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}
 
