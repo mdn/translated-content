@@ -15,13 +15,11 @@ original_slug: Glossary/Empty_element
 - {{HTMLElement("base")}}
 - {{HTMLElement("br")}}
 - {{HTMLElement("col")}}
-- {{HTMLElement("colgroup")}} when the {{htmlattrxref("span", "colgroup")}} is present
-- {{HTMLElement("command")}}
 - {{HTMLElement("embed")}}
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}}
+- {{HTMLElement("keygen")}}(HTML 5.2 草稿已移除)
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
 - {{HTMLElement("param")}}
