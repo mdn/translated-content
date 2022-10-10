@@ -59,7 +59,7 @@ var testFunc = otherTable.get(0);
 typeof testFunc;
 ```
 
-результатом выполнения будет `function`. Вы можете сделать с ней все тоже самое что и с другими [функциями](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function) в JavaScript — [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), `bind() `и т.д. Вызов `testFunc.toString()` возвращает интересный результат:
+результатом выполнения будет `function`. Вы можете сделать с ней все тоже самое что и с другими [функциями](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function) в JavaScript — [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), `bind()` и т.д. Вызов `testFunc.toString()` возвращает интересный результат:
 
 ```js
 function 0() {
