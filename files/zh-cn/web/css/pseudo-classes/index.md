@@ -159,7 +159,7 @@ These pseudo-classes apply when viewing something which has timing, such as a [W
 - {{CSSxRef(":only-of-type")}}
   - : Matches an element that has no siblings of the chosen type selector.
 
-## 用户动作伪类
+## 用户行为伪类
 
 这些伪类需要用户进行一些交互才能够应用，例如将鼠标指针悬停在元素上。
 
