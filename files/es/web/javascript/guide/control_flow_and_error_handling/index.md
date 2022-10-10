@@ -122,7 +122,7 @@ Por ejemplo, _no_ escribas un código como este:
 
 ```js example-bad
 // Propenso a ser mal interpretado como "x == y"
-if ((x = y)) {
+if (x = y) {
   /* expresiones aquí */
 }
 ```
