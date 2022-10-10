@@ -3,19 +3,15 @@ title: TextEncoder.encoding
 slug: Web/API/TextEncoder/encoding
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Encoding API")}}
 
-{{ SeeCompatTable }}
+**`TextEncoder.encoding`** 只读属性返回一个{{domxref("DOMString")}}，其中包含特定编码器使用的编码算法的名称。
 
-**`TextEncoder.encoding`** 只读属性返回一个{{domxref("DOMString")}} ，其中包含特定编码器使用的编码算法的名称。
+它只能具有以下值 `utf-8`。
 
-现在只会返回“utf-8”。
+## 值
 
-## 语法
-
-```plain
-b = encoder.encoding;
-```
+值为 `utf-8` 的字符串。
 
 ## 规范
 
@@ -27,4 +23,4 @@ b = encoder.encoding;
 
 ## 另见
 
-- The {{domxref("TextEncoder")}} interface it belongs to.
+- 属于 {{domxref("TextEncoder")}} 接口。
