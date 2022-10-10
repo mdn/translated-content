@@ -181,7 +181,7 @@ slug: Web/CSS/@supports
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.supports")}}
+{{Compat}}
 
 ## 参见
 

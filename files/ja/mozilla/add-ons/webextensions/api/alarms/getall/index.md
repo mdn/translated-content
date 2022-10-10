@@ -2,6 +2,7 @@
 title: alarms.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 ---
+
 {{AddonSidebar()}}
 
 予約されたアラームすべてを取得します。取得されたアラームは {{WebExtAPIRef('alarms.Alarm')}} オブジェクトの配列としてコールバック関数に渡されます。
@@ -56,6 +57,6 @@ getAlarms.then(gotAll);
 
 {{WebExtExamples}}
 
-> **Note:**
+> **メモ:**
 >
 > この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。

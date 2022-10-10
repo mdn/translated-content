@@ -168,7 +168,7 @@ L: function* F() {}
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.label")}}
+{{Compat}}
 
 ## 相關連結
 

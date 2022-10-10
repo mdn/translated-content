@@ -312,7 +312,7 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 ## 瀏覽器相容性
 
-{{Compat("api.CanvasRenderingContext2D")}}
+{{Compat}}
 
 ## 相容性註記
 

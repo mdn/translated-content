@@ -23,7 +23,7 @@ As formas literais de declaração de _String_ são:
 "中文 español English हिन्दी العربية português বাংলা русский 日本語 ਪੰਜਾਬੀ 한국어"
 ```
 
-Além da forma regular, de caracteres\_ _de impressão, caracteres especiais podem ser codificados usando a \_escape notation_ (notação com barra invertida):
+Além da forma regular, de caracteres de impressão, caracteres especiais podem ser codificados usando a _escape notation_ (notação com barra invertida):
 
 | Codigo | Saida                 |
 | ------ | --------------------- |
@@ -54,7 +54,7 @@ new String(thing)
 
 ## Descrição
 
-Strings são úteis para guardar dados que podem ser representados em forma de texto. Uma das operações mais usadas nas **strings** é checar seu {{jsxref("String.length", "tamanho")}}, para construir e concatená-las usando [os operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators/String_Operators) [+ e +=, ](/pt-BR/docs/Web/JavaScript/Reference/Operators/String_Operators)checando pela existência ou posição de _substrings_ com o método {{jsxref("String.indexOf", "indexOf")}} , ou extrair _substrings_ com o método {{jsxref("String.substring", "substring")}}.
+Strings são úteis para guardar dados que podem ser representados em forma de texto. Uma das operações mais usadas nas **strings** é checar seu {{jsxref("String.length", "tamanho")}}, para construir e concatená-las usando [os operadores + e +=](/pt-BR/docs/Web/JavaScript/Reference/Operators/String_Operators), checando pela existência ou posição de _substrings_ com o método {{jsxref("String.indexOf", "indexOf")}} , ou extrair _substrings_ com o método {{jsxref("String.substring", "substring")}}.
 
 ### Acesso à caractere
 

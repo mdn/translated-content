@@ -47,12 +47,8 @@ Bien que la valeur nulle puisse être représentée avec le même littéral pour
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Values', '#frequency', '&lt;frequency&gt;')}} | {{Spec2('CSS3 Values')}} | Définition initiale. |
-
-Ce type de donnés fut initialement introduit avec la spécification [CSS Niveau 2](https://www.w3.org/TR/CSS2/) pour le [groupe de média aural](/fr/docs/Web/CSS/@media/aural) qui est désormais obsolète. Ce type de données a donc été déprécié puis réintroduit avec CSS3 bien qu'aucune propriété ne l'utilise à l'heure actuelle.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.frequency")}}
+{{Compat}}

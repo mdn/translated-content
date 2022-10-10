@@ -40,7 +40,7 @@ slug: Web/API/Element/cut_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.cut_event")}}
+{{Compat}}
 
 ## 相关
 

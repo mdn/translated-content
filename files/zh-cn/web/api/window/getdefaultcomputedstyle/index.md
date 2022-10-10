@@ -82,4 +82,4 @@ Proposed to the CSS working group.
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.getDefaultComputedStyle")}}
+{{Compat}}

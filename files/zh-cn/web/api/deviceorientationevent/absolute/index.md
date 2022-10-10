@@ -21,7 +21,7 @@ var absolute = instanceOfDeviceOrientationEvent.absolute;
 
 ## 浏览器兼容性
 
-{{Compat("api.DeviceOrientationEvent.absolute")}}
+{{Compat}}
 
 ## 参见
 

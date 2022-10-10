@@ -71,7 +71,7 @@ inline-size: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.inline-size")}}
+{{Compat}}
 
 ## 参阅
 

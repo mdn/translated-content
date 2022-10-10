@@ -24,7 +24,7 @@ void ctx.lineTo(x, y);
 
 ### 使用 `lineTo` 方法
 
-这是一段使用 `lineTo` 方法的简单的代码片段。 使用 {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 绘制路径的起始点，使用 {{domxref("CanvasRenderingContext.moveTo", "moveTo()")}}移动画笔，使用 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法真正地画线。
+这是一段使用 `lineTo` 方法的简单的代码片段。使用 {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 绘制路径的起始点，使用 {{domxref("CanvasRenderingContext.moveTo", "moveTo()")}}移动画笔，使用 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法真正地画线。
 
 #### HTML
 
@@ -93,7 +93,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.lineTo")}}
+{{Compat}}
 
 ## 参见
 

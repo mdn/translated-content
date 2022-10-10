@@ -45,7 +45,7 @@ progress {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.-webkit-progress-bar")}}
+{{Compat}}
 
 ## 参见
 

@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/template_strings
 ---
 {{JsSidebar("More")}}
 
-_Template_ Strings são _string_s que permitem expressões embutidas. Você pode \_utilizar string_ multi-linhas e interpolação de _string_ com elas.
+_Template_ Strings são _string_s que permitem expressões embutidas. Você pode _utilizar string_ multi-linhas e interpolação de _string_ com elas.
 
 Basicamente é uma nova forma de criar strings e tornar o seu código um pouco mais legível.
 

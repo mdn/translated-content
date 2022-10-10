@@ -15,24 +15,21 @@ translation_of: Web/API/Event/Event
 
 <dl>
  <dt><em>typeArg</em></dt>
- <dd>Строковое ({{domxref("DOMString")}}) значение,<span id="result_box" lang="ru"><span> представляющее имя события.</span></span></dd>
+ <dd>Строковое ({{domxref("DOMString")}}) значение, представляющее имя события.</dd>
  <dt><em>eventInit </em>{{optional_inline}}</dt>
-</dl>
-
-<dl>
  <dd>Is an <code>EventInit</code> dictionary, having the following fields:
 
  <ul>
-  <li><code>"bubbles"</code>: (<span class="short_text" id="result_box" lang="ru"><span>Необязательный</span></span>) логическое значение ({{jsxref("Boolean")}}) указывающее – будет ли событие всплывающим. По умолчанию <code>false</code>.</li>
-  <li><code>"cancelable"</code>: (<span class="short_text" id="result_box" lang="ru"><span>Необязательный</span></span>) логическое значение ({{jsxref("Boolean")}}) указывает, может ли событие быть отменено. По умолчанию <code>false</code>.</li>
-  <li><code>"composed"</code>: (<span class="short_text" id="result_box" lang="ru"><span>Необязательный</span></span>) логическое значение {{jsxref("Boolean")}} указывающее – будет ли событие всплывать наружу за пределы shadow root. По умолчанию <code>false</code>.<span class="hidden"> </span></li>
+  <li><code>"bubbles"</code>: (Необязательный) логическое значение ({{jsxref("Boolean")}}) указывающее – будет ли событие всплывающим. По умолчанию <code>false</code>.</li>
+  <li><code>"cancelable"</code>: (Необязательный) логическое значение ({{jsxref("Boolean")}}) указывает, может ли событие быть отменено. По умолчанию <code>false</code>.</li>
+  <li><code>"composed"</code>: (Необязательный) логическое значение {{jsxref("Boolean")}} указывающее – будет ли событие всплывать наружу за пределы shadow root. По умолчанию <code>false</code>. </li>
  </ul>
  </dd>
 </dl>
 
 <h2 id="Пример">Пример</h2>
 
-<pre class="brush: js">//  <span id="result_box" lang="ru"><span>создать событие "look", событие всплывающее и не может быть отменено</span></span>
+<pre class="brush: js">//  создать событие "look", событие всплывающее и не может быть отменено
 
 var evt = new Event("look", {"bubbles":true, "cancelable":false});
 document.dispatchEvent(evt);
@@ -66,7 +63,7 @@ myDiv.dispatchEvent(evt);
 
 <p>{{Compat}}</p>
 
-<h2 id="Смотрите_также"><span class="short_text" id="result_box" lang="ru"><span>Смотрите также</span></span></h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Event")}}</li>

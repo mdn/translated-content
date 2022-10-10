@@ -38,7 +38,7 @@ alert(myVid.audioTracks.length);
 
 ## 浏览器支持
 
-{{Compat("api.HTMLMediaElement.audioTracks")}}
+{{Compat}}
 
 ## 还可以看看
 

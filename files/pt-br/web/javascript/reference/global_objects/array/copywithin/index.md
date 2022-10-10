@@ -19,7 +19,7 @@ arr.copyWithin(target, start[, end = this.length])
   - : Posição para a qual os elementos serão copiados. Caso negativo, o `target` será contado a partir do final.
 - `start`
   - : Índice inicial de onde se copiará os elementos. Caso negativo, o `start` será contado a partir do final.
-- `end `{{optional_inline}}
+- `end` {{optional_inline}}
   - : Índice final de onde se copiará os elementos. Caso negativo, o `end` será contado a partir do final.
 
 ## Descrição

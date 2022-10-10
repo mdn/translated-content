@@ -23,7 +23,7 @@ window.scroll(x-coord, y-coord)
 ### Parâmetros
 
 - `x-coord` é o pixel que você deseja exibir ao longo do eixo horizontal do documento em relação à sua extremidade superior esquerda.
-- `y-coord `é o pixel que você deseja exibir ao longo do eixo vertical do documento em relação à sua extremidade superior esquerda.
+- `y-coord` é o pixel que você deseja exibir ao longo do eixo vertical do documento em relação à sua extremidade superior esquerda.
 
 ## Exemplo
 

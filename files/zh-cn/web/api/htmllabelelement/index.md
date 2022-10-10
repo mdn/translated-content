@@ -28,7 +28,7 @@ _No specific method; inherits properties from its parent, {{domxref("HTMLElement
 
 ## Browser compatibility
 
-{{Compat("api.HTMLLabelElement")}}
+{{Compat}}
 
 ## See also
 

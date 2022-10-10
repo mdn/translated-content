@@ -53,7 +53,7 @@ var testFunc = otherTable.get(0);
 typeof testFunc;
 ```
 
-你得到的返回结果是 function 。对于这个函数，你可以像对待其他 JavaScript[函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)那样做你想做的任何事——[call()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、 [bind()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)等等。testFunc.toString() 返回一个有趣的结果：
+你得到的返回结果是 function。对于这个函数，你可以像对待其他 JavaScript[函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)那样做你想做的任何事——[call()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、 [bind()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)等等。testFunc.toString() 返回一个有趣的结果：
 
 ```js
 function 0() {

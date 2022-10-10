@@ -26,7 +26,7 @@ imagedata.height; // 100
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageData.height")}}
+{{Compat}}
 
 ## 参见
 

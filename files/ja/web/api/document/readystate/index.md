@@ -2,6 +2,7 @@
 title: Document.readyState
 slug: Web/API/Document/readyState
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.readyState`** プロパティは {{domxref("document")}} の読み込み状態を記述します。

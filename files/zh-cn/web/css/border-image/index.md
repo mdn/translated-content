@@ -75,4 +75,4 @@ border-image: url("/images/border.png") 30 30 stretch;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-image")}}
+{{Compat}}

@@ -24,7 +24,7 @@ instanceOfFileReader.readAsArrayBuffer(blob);
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.readAsArrayBuffer")}}
+{{Compat}}
 
 ## 相关链接
 

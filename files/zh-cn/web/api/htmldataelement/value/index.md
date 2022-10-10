@@ -24,4 +24,4 @@ A {{domxref("DOMString")}}.
 
 ## Browser compatibility
 
-{{Compat("api.HTMLDataElement.value")}}
+{{Compat}}

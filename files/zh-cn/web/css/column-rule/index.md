@@ -54,4 +54,4 @@ padding:0.3em; background:gold; border:groove 2px gold; **column-rule: inset 2px
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.column-rule")}}
+{{Compat}}

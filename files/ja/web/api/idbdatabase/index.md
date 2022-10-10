@@ -2,11 +2,12 @@
 title: IDBDatabase
 slug: Web/API/IDBDatabase
 ---
+
 {{APIRef()}}
 
 IndexedDB API`のIDBDatabase`インターフェイスは、[データベースへの接続](/ja/docs/IndexedDB#database_connection)を提供します。 `IDBDatabase`オブジェクトで、データベースの[transaction](/ja/docs/IndexedDB#gloss_transaction)を開き、データベースのオブジェクト（データ）を生成したり、操作したり、削除したりできます。このインターフェイスはデータベースのバージョンを取得したり、統合したりする唯一の方法を提供します。
 
-> **Note:** Everything you do in IndexedDB always happens in the context of a [transaction](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction), representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.
+> **メモ:** Everything you do in IndexedDB always happens in the context of a [transaction](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction), representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.
 
 ## メソッド
 

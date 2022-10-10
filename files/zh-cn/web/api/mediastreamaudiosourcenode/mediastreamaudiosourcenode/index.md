@@ -61,4 +61,4 @@ if (navigator.mediaDevices.getUserMedia) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStreamAudioSourceNode.MediaStreamAudioSourceNode")}}
+{{Compat}}

@@ -118,7 +118,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
 
 ## 瀏覽器兼容性
 
-{{Compat("webextensions.manifest.options_ui")}}
+{{Compat}}
 
 ## See also
 

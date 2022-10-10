@@ -46,7 +46,7 @@ function init() {
 
 ## 浏览器兼容性
 
-{{Compat("api.GlobalEventHandlers.onpointerover")}}
+{{Compat}}
 
 ## 参见
 

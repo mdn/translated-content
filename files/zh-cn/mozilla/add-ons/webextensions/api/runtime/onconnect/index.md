@@ -37,7 +37,7 @@ browser.runtime.onConnect.hasListener(listener)
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.runtime.onConnect")}}
+{{Compat}}
 
 ## Examples
 

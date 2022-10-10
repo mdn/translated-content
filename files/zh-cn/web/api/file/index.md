@@ -48,7 +48,7 @@ _`File` 接口没有定义任何方法，但是它从 {{domxref("Blob")}} 接口
 
 ## 浏览器兼容性
 
-{{Compat("api.File")}}
+{{Compat}}
 
 ### 注意事项
 

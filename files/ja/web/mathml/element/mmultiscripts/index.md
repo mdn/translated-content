@@ -4,6 +4,7 @@ slug: Web/MathML/Element/mmultiscripts
 l10n:
   sourceCommit: d3a04bcdd16434b613b132fb488235ce44355891
 ---
+
 {{MathMLRef}}
 
 MathML の `<mmultiscripts>` 要素によって、テンソル的なものを作ることができます。見た目は、 [テンソル](https://ja.wikipedia.org/wiki/テンソル) は多次元の行列です（数学的には不正確だが喩えて言えば）。テンソルの階数は、それを表す配列の次元によって決まります。例えば、数は 0 次元の配列であり、0 階のテンソルです。1 次元配列（つまりベクトル）は 1 階のテンソルです。同様に、2 階のテンソルは四角い行列で表すことになります。テンソルの数学的背景についてもっと知りたければ、 [ウィキペディアの記事](https://ja.wikipedia.org/wiki/テンソル) を参照してください。

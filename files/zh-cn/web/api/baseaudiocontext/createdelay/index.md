@@ -131,7 +131,7 @@ synthDelay.delayTime.value = delay1;
 
 ## Browser compatibility
 
-{{Compat("api.BaseAudioContext.createDelay")}}
+{{Compat}}
 
 ## See also
 

@@ -48,4 +48,4 @@ The `<frequency>` data type consists of a {{cssxref("&lt;number&gt;")}} followed
 
 ## 浏览器兼容性
 
-{{Compat("css.types.frequency")}}
+{{Compat}}

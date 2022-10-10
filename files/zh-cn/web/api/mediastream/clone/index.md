@@ -27,4 +27,4 @@ A new {{domxref("MediaStream")}} instance which has a new unique ID and contains
 
 ## Browser compatibility
 
-{{Compat("api.MediaStream.clone")}}
+{{Compat}}

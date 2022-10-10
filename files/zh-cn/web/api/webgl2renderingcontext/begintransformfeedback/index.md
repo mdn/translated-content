@@ -42,7 +42,7 @@ gl.drawArrays(gl.TRIANGLES, 0, 3);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.beginTransformFeedback")}}
+{{Compat}}
 
 ## 相关链接
 

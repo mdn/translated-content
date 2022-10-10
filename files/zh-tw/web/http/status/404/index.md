@@ -33,7 +33,7 @@ ErrorDocument 404 /notfound.html
 
 ## 瀏覽器相容性
 
-{{Compat("http.status.404")}}
+{{Compat}}
 
 ## 參見
 

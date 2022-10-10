@@ -85,7 +85,7 @@ if (foo.childElementCount > 0) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.childElementCount")}}
+{{Compat}}
 
 ## 规范
 

@@ -53,4 +53,4 @@ editable.addEventListener('input', (e) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.InputEvent.dataTransfer")}}
+{{Compat}}

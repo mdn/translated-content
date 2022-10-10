@@ -7,9 +7,9 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 
 <p>Позволяет веб-сайтам зарегистрировать себя как возможный обработчик  для конкретных протоколов.</p>
 
-<p><span id="result_box" lang="ru"><span class="hps">По соображениям</span> <span class="hps">безопасности</span><span>,</span> <span class="hps">по умолчанию</span><span>,</span> <span class="hps">веб-сайты могут</span> <span class="hps">зарегистрировать только</span> <span class="hps">обработчики протокола</span> <span class="hps">для себя</span> <span class="hps">-</span> <span class="hps">домен</span> <span class="hps">и протокол</span> <span class="hps">обработчика</span> <span class="hps">должны совпадать с</span> текущим <span class="hps">сайтом.</span></span> Тем не менее, пользователи могут установить предпочтение в Firefox, разрешающее перекрёстную обработку веб-сайтов  в настройках <code>gecko.handlerService.allowRegisterFromDifferentHost</code> установив <code>true</code> в about:config.</p>
+<p>По соображениям безопасности, по умолчанию, веб-сайты могут зарегистрировать только обработчики протокола для себя - домен и протокол обработчика должны совпадать с текущим сайтом. Тем не менее, пользователи могут установить предпочтение в Firefox, разрешающее перекрёстную обработку веб-сайтов  в настройках <code>gecko.handlerService.allowRegisterFromDifferentHost</code> установив <code>true</code> в about:config.</p>
 
-<p><span id="result_box" lang="ru"><span class="hps">Расширения могут</span> <span class="hps">регистрировать обработчики</span> <span class="hps">протоколов</span><span>, направленные</span> <span class="hps">другие сайты</span><span>: </span></span>см. "Смотрите также" раздел как использовать их с XPCOM.</p>
+<p>Расширения могут регистрировать обработчики протоколов, направленные другие сайты: см. "Смотрите также" раздел как использовать их с XPCOM.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -30,7 +30,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 
 <h2 id="Example">Пример</h2>
 
-<p>Если ваше веб-приложение находится по адресу <code><span class="nowiki">http://www.google.co.uk</span></code>, вы можете зарегистрировать обработчик протокола и привязать  обращение к нему "burger", как это:</p>
+<p>Если ваше веб-приложение находится по адресу <code>http://www.google.co.uk</code>, вы можете зарегистрировать обработчик протокола и привязать  обращение к нему "burger", как это:</p>
 
 <pre class="eval">navigator.registerProtocolHandler("burger",
                                   "http://www.google.co.uk/?uri=%s",
@@ -38,9 +38,9 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 </pre>
 
 <p><br>
- Это создаст обработчик, который разрешает <code>burger://</code>ссылки, направляющие пользователя на ваше веб-приложение, вставляя burger информацию <span id="result_box" lang="ru"><span>указанную в ссылке</span> <span class="hps">на</span> <span class="hps">URL.</span></span> <span id="result_box" lang="ru"><span class="hps">Напомним, что</span> <span class="hps">этот скрипт</span> <span class="hps">должен быть запущен</span> <span class="hps">с того же домена </span></span>(так и любой странице расположенной в <code>google.co.uk</code>) и второе, переданный аргумент должен быть <code>http </code>или <code>https</code> схемы (в этом примере это <code>http</code>) .</p>
+ Это создаст обработчик, который разрешает <code>burger://</code>ссылки, направляющие пользователя на ваше веб-приложение, вставляя burger информацию указанную в ссылке на URL. Напомним, что этот скрипт должен быть запущен с того же домена (так и любой странице расположенной в <code>google.co.uk</code>) и второе, переданный аргумент должен быть <code>http </code>или <code>https</code> схемы (в этом примере это <code>http</code>) .</p>
 
-<p><span id="result_box" lang="ru"><span>Пользователь</span> <span class="hps">будет уведомлен</span> <span class="hps">о</span> <span class="hps">регистрации этого</span> <span class="hps">протокола</span></span>, для примера смотрите на изображение ниже.</p>
+<p>Пользователь будет уведомлен о регистрации этого протокола, для примера смотрите на изображение ниже.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/9683/protocolregister.png" style="display: block; height: 401px; margin: 0px auto; width: 700px;"></p>
 

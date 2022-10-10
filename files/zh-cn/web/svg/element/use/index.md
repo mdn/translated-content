@@ -63,4 +63,4 @@ slug: Web/SVG/Element/use
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.use")}}
+{{Compat}}

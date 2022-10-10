@@ -28,4 +28,4 @@ width: calc(100% - 200px);
 
 ## Browser compatibility
 
-{{Compat("css.types.length-percentage")}}
+{{Compat}}

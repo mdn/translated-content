@@ -10,7 +10,7 @@ tags:
   - font-style
 translation_of: Web/HTML/Element/em
 ---
-O **elemento** **HTML** **`<em>`\*\*** \*\*marca o texto que tem ênfase. O elemento \<em> pode ser aninhado, com cada nível de aninhamento indicando um grau maior de ênfase.
+O **elemento** **HTML** **`<em>`** marca o texto que tem ênfase. O elemento \<em> pode ser aninhado, com cada nível de aninhamento indicando um grau maior de ênfase.
 
 <table class="properties">
   <tbody>

@@ -2,6 +2,7 @@
 title: MouseEvent.clientY
 slug: Web/API/MouseEvent/clientY
 ---
+
 {{APIRef("DOM Events")}}
 
 **`clientY`** は {{domxref("MouseEvent")}} の読み取り専用のプロパティで、このイベントが発生した時点のアプリケーションの{{glossary("viewport", "ビューポート")}}における垂直座標を定義します（ページにおける座標ではありません）。

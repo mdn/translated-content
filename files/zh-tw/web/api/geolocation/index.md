@@ -32,7 +32,7 @@ _`Geolocation` 介面沒有繼承也沒有時做任何方法_。
 
 ## 瀏覽器相容性
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ## 請參考
 

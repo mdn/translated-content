@@ -2,6 +2,7 @@
 title: Window.resizeTo()
 slug: Web/API/Window/resizeTo
 ---
+
 {{APIRef}}
 
 **`Window.resizeTo()`** メソッドは、ウィンドウのサイズを動的に変更します。

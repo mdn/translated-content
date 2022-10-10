@@ -19,7 +19,7 @@ name = AnimationEvent.animationName
 
 ## Browser compatibility
 
-{{Compat("api.AnimationEvent.animationName")}}
+{{Compat}}
 
 ## See also
 

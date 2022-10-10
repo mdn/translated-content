@@ -43,7 +43,7 @@ ul.addEventListener('click', hide, false);
 
 ## 浏览器兼容性
 
-{{Compat("api.Event.target")}}
+{{Compat}}
 
 在 IE6-8 中，事件模型与标准不同。使用非标准的 [`element.attachEvent()`](http://msdn.microsoft.com/en-us/library/ie/ms536343%28v=vs.85%29.aspx) 方法绑定事件监听器。在该模型中，事件对象有一个 `srcElement` 属性，等价于`target` 属性。
 

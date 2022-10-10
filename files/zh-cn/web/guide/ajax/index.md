@@ -6,7 +6,7 @@ slug: Web/Guide/AJAX
 **[新手入门](/zh-CN/docs/Web/Guide/AJAX/Getting_Started)**
 Ajax 简介
 
-Asynchronous JavaScript + XML（异步 JavaScript 和 XML）, 其本身不是一种新技术，而是一个在 2005 年被 Jesse James Garrett 提出的新术语，用来描述一种使用现有技术集合的‘新’方法，包括：[HTML](/zh-CN/docs/HTML) 或 [XHTML](/zh-CN/docs/XHTML), [CSS](/zh-CN/docs/Web/CSS), [JavaScript](/zh-CN/docs/JavaScript), [DOM](/zh-CN/docs/Web/API/Document_Object_Model), [XML](/zh-CN/docs/XML), [XSLT](/zh-CN/docs/XSLT), 以及最重要的 {{domxref("XMLHttpRequest")}}。当使用结合了这些技术的 AJAX 模型以后， 网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面。这使得程序能够更快地回应用户的操作。
+Asynchronous JavaScript + XML（异步 JavaScript 和 XML）, 其本身不是一种新技术，而是一个在 2005 年被 Jesse James Garrett 提出的新术语，用来描述一种使用现有技术集合的‘新’方法，包括：[HTML](/zh-CN/docs/HTML) 或 [XHTML](/zh-CN/docs/XHTML), [CSS](/zh-CN/docs/Web/CSS), [JavaScript](/zh-CN/docs/JavaScript), [DOM](/zh-CN/docs/Web/API/Document_Object_Model), [XML](/zh-CN/docs/XML), [XSLT](/zh-CN/docs/XSLT), 以及最重要的 {{domxref("XMLHttpRequest")}}。当使用结合了这些技术的 AJAX 模型以后，网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面。这使得程序能够更快地回应用户的操作。
 
 尽管 X 在 Ajax 中代表 XML，但由于{{glossary("JSON")}}的许多优势，比如更加轻量以及作为 Javascript 的一部分，目前 JSON 的使用比 XML 更加普遍。JSON 和 XML 都被用于在 Ajax 模型中打包信息。
 
@@ -33,9 +33,9 @@ Asynchronous JavaScript + XML（异步 JavaScript 和 XML）, 其本身不是一
 - [发送和接收二进制数据](/zh-CN/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
   - : 可以设置 `XMLHttpRequest` 对象的 `responseType` 属性以改变从服务器端获取数据的类型。可接受的值为空字符串（默认）、`arraybuffer`、`blob`、`document`、`json` 以 及 `text`。 `response` 属性性根据 `responseType` 的值成为对应的数据对象，如 `ArrayBuffer`，`Blob`、 `Document`、 `JSON` 或者 `string` 。本文会展示一些 Ajax I/O 技术。
 - [XML](/zh-CN/docs/Glossary/XML)
-  - : The **Extensible Markup Language (XML)** 可扩展标记语言是 W3C 推荐的一种专用于创建专用标记语言的通用标记语言 。它是 SGML 的简化子集，能够描述许多不同类型的数据。其主要目的是促进在不同的系统，尤其是通过互联网连接的系统间的数据共享。
+  - : The **Extensible Markup Language (XML)** 可扩展标记语言是 W3C 推荐的一种专用于创建专用标记语言的通用标记语言。它是 SGML 的简化子集，能够描述许多不同类型的数据。其主要目的是促进在不同的系统，尤其是通过互联网连接的系统间的数据共享。
 - [解析和序列化 XML](/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML)
-  - : 如何从字符串，文件或者 Javascript 中解析 XML 文档，以及如何将 XML 文档序列转化为字符串，Javascript 对象树 (JSON) 或者文件 。
+  - : 如何从字符串，文件或者 Javascript 中解析 XML 文档，以及如何将 XML 文档序列转化为字符串，Javascript 对象树 (JSON) 或者文件。
 - [XPath](/zh-CN/docs/Web/XPath)
   - : XPath 代表**X**ML **Path** Language，它使用非 XML 语法，提供了一种灵活的方式来寻址（指向）XML 文档的不同部分。除此之外，它还可以用于测试文档中的寻址节点，以确定他们是否匹配模式。
 - {{domxref("FileReader")}} [API](/zh-CN/docs/WEB/API/FileReader)

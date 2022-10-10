@@ -91,7 +91,7 @@ request.onsuccess = function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.IDBIndex")}}
+{{Compat}}
 
 ## See also
 

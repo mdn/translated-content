@@ -88,7 +88,7 @@ Apesar de ser permitida certa flexibilidade, ao passo que novos assuntos são id
 - `Tools` ferramentas
 - `Web`
 
-No geral, se uma interface que possui várias páginas relacionadas a ela, como [Node](/pt-BR/docs/Web/API/Node "/en-US/docs/Web/API/Node") (que possui várias páginas sobre seus muitos métodos e propriedades), seu nome é uma boa etiqueta para identificar um tópico, assim como o nome de uma tecnologia abragente, ou seu tipo. Uma página sobre _WebGL_ pode ser marcada com as tags `Gráficos/Graphics` e `WebGL`, por exemplo, e uma página sobre elementos {{HTMLElement("canvas")}} pode ser marcada com as etiquetas `HTML`, `Elementos/Element`, `Tela/Canvas`, e `Gráficos/Graphics`.
+No geral, se uma interface que possui várias páginas relacionadas a ela, como [Node](/pt-BR/docs/Web/API/Node) (que possui várias páginas sobre seus muitos métodos e propriedades), seu nome é uma boa etiqueta para identificar um tópico, assim como o nome de uma tecnologia abragente, ou seu tipo. Uma página sobre _WebGL_ pode ser marcada com as tags `Gráficos/Graphics` e `WebGL`, por exemplo, e uma página sobre elementos {{HTMLElement("canvas")}} pode ser marcada com as etiquetas `HTML`, `Elementos/Element`, `Tela/Canvas`, e `Gráficos/Graphics`.
 
 ### Estado da tecnologia
 
@@ -98,9 +98,6 @@ Alguns valores possíveis para estas etiquetas:
 
 - `Read-only`
   - : Aplique esta etiqueta para páginas que descrevem atributos ou propriedades que são "somente leitura".
-
-<!---->
-
 - `Non-standard`
   - : Indica que a tecnologia ou API não pertence a qualquer padrão, mas é considerada estável no(s) navegador(es) que a tem implementada. Se você não usar esta etiqueta os leitores vão presumir que o artigo é padronizado. A tabela de compatibilidade da página deve esclarecer quais navegadores suportam essa tecnologia ou API.
 - `Deprecated`
@@ -219,7 +216,7 @@ Filtros de busca não vão funcionar apropriadamente, a não ser que marquemos a
 |                     | Firefox OS                 | `Firefox OS`                                                                                         |
 |                     | Dispositivos Móveis        | `Mobile`                                                                                             |
 |                     | Desenvolvimento _Web_      | `Web Development`                                                                                    |
-|                     | Complementos & Extensões   | `Add-ons `\|\| `Extensions` \|\| `Plugins` \|\| `Themes`                                             |
+|                     | Complementos & Extensões   | `Add-ons` \|\| `Extensions` \|\| `Plugins` \|\| `Themes`                                             |
 |                     | Jogos                      | `Games`                                                                                              |
 | Nível de habilidade | Sou Especialista           | `Advanced`                                                                                           |
 |                     | Nível Intermediário        | `Intermediate`                                                                                       |

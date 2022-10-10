@@ -19,4 +19,4 @@ var repeat = event.repeat;
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.repeat")}}
+{{Compat}}

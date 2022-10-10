@@ -77,4 +77,4 @@ WebSocket 是一種讓瀏覽器與伺服器進行一段互動通訊的技術。�
 
 ## 瀏覽器兼容
 
-{{Compat("api.WebSocket")}}
+{{Compat}}

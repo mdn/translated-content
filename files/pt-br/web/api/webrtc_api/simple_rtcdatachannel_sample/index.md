@@ -136,13 +136,13 @@ A última coisa que precisamos fazer para começar a conectar nossos pares é cr
 
 Vamos passar por isto linha por linha e decifrar o que significa.
 
-1.  Primeiro chamamos {{domxref("RTCPeerConnection.createOffer()")}} método para criar um resumo {{Glossary("SDP")}} (Session Description Protocol) descrevendo a conexão que queremos fazer. Este método aceita, opcionalmente, um objeto com restrições a serem suportadas pela conexão para atender às suas necessidades, como no caso da conexão precisar suportar áudio, vídeo ou ambos. Em nosso exemplo simples, não temos restrições.
-2.  Se a oferta for criada com sucesso, passamos o resumo junto ao método de conexões locais {{domxref("RTCPeerConnection.setLocalDescription()")}} . Isso configura o ponto local da conexão.
-3.  O próximo passo é conectar o ponto local ao remoto comunicando ao ponto remoto sobre ele. Isso é feito chamando `remoteConnection.`{{domxref("RTCPeerConnection.setRemoteDescription()")}}. Agora o `remoteConnection` conhece a conexão que está sendo construída.
-4.  Isso significa que é hora do ponto remoto responder. Ele faz isso chamando o método {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} . Isso gera um resumo de SDP que descreve a conexão que o ponto remoto está disposto e capaz de estabelecer. Essa configuração está em algum lugar na união das opções que ambos os pares podem suportar.
-5.  Uma vez que a resposta foi criada, ela é passada para o _remoteConnection_ chamando {{domxref("RTCPeerConnection.setLocalDescription()")}}. Isso estabelece o ponto remoto da conexão (que, para o ponto remoto, é o ponto local. Isso pode parecer confuso, mas você irá se acostumar com isso.
-6.  Finalmente, a descrição local das conexões remotas está configurada para se referir ao ponto remoto, chamando localConnection's {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
-7.  O `catch()` chama uma rotina que lida com os erros que ocorrem.
+1. Primeiro chamamos {{domxref("RTCPeerConnection.createOffer()")}} método para criar um resumo {{Glossary("SDP")}} (Session Description Protocol) descrevendo a conexão que queremos fazer. Este método aceita, opcionalmente, um objeto com restrições a serem suportadas pela conexão para atender às suas necessidades, como no caso da conexão precisar suportar áudio, vídeo ou ambos. Em nosso exemplo simples, não temos restrições.
+2. Se a oferta for criada com sucesso, passamos o resumo junto ao método de conexões locais {{domxref("RTCPeerConnection.setLocalDescription()")}} . Isso configura o ponto local da conexão.
+3. O próximo passo é conectar o ponto local ao remoto comunicando ao ponto remoto sobre ele. Isso é feito chamando `remoteConnection.`{{domxref("RTCPeerConnection.setRemoteDescription()")}}. Agora o `remoteConnection` conhece a conexão que está sendo construída.
+4. Isso significa que é hora do ponto remoto responder. Ele faz isso chamando o método {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} . Isso gera um resumo de SDP que descreve a conexão que o ponto remoto está disposto e capaz de estabelecer. Essa configuração está em algum lugar na união das opções que ambos os pares podem suportar.
+5. Uma vez que a resposta foi criada, ela é passada para o _remoteConnection_ chamando {{domxref("RTCPeerConnection.setLocalDescription()")}}. Isso estabelece o ponto remoto da conexão (que, para o ponto remoto, é o ponto local. Isso pode parecer confuso, mas você irá se acostumar com isso.
+6. Finalmente, a descrição local das conexões remotas está configurada para se referir ao ponto remoto, chamando localConnection's {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
+7. O `catch()` chama uma rotina que lida com os erros que ocorrem.
 
 > **Nota:** Mais uma vez, esse processo não é uma implementação do mundo real; No uso normal, há dois pedaços de código executados em duas máquinas, interagindo e negociando a conexão.
 

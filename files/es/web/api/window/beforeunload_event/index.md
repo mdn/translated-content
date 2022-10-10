@@ -73,7 +73,7 @@ A partir del 25 de Mayo del 2011, la especificion HTML5 establece que llamadas a
 
 Varios navegadores ignoran el resultado del evento y no le preguntan al usuario por confirmacion en absoluto. El documento siempre se descargara automaticamente. Firefox tiene un switch llamado dom.disable_beforeunload en about:config para habilitar este comportamiento.
 
-Usando este manejador de evento tu pagina previene que Firefox cambie el cache de la pagina a uno en memoria bfcache. Mire [Usando el almacenamiento en cache Firefox 1.5](en/Using_Firefox_1.5_caching) para detalles.
+Usando este manejador de evento tu pagina previene que Firefox cambie el cache de la pagina a uno en memoria bfcache. Mire [Usando el almacenamiento en cache Firefox 1.5](/en/Using_Firefox_1.5_caching) para detalles.
 
 ## Especificaciones
 

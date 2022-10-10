@@ -72,7 +72,7 @@ To use this API you need to have the "webNavigation" [permission](/zh-CN/docs/Mo
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.webNavigation")}}
+{{Compat}}
 
 ### Edge incompatibilities
 

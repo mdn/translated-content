@@ -59,7 +59,7 @@ myHeaders.get('Accept-Encoding'); // Returns 'gzip'
 
 ## Browser compatibility
 
-{{Compat("api.Headers.set")}}
+{{Compat}}
 
 ## See also
 

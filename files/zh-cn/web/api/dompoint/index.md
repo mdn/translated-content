@@ -69,7 +69,7 @@ function setView() {
 
 ## Browser compatibility
 
-{{Compat("api.DOMPoint")}}
+{{Compat}}
 
 ## See also
 

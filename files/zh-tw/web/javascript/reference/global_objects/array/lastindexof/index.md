@@ -118,7 +118,7 @@ Again, note that this implementation aims for absolute compatibility with `lastI
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.lastIndexOf")}}
+{{Compat}}
 
 ## 相容性備註
 

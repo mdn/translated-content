@@ -37,7 +37,7 @@ animation.oncancel = animation.effect.target.remove();
 
 ## 浏览器兼容性
 
-{{Compat("api.Animation.cancel_event")}}
+{{Compat}}
 
 ## 参见
 

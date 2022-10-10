@@ -8,7 +8,7 @@ original_slug: Web/Events/Orientation_and_motion_data_explained
 
 当我们要使用 orientation 和 motion 事件时，理解浏览器给我们的相关值是什么意思就显的相当重要了。这篇文章会详细介绍在用的坐标系统并会教你如何全用它们。
 
-> **警告：** 目前，Firefox 和 Chrome 处理坐标的方式不同。 在使用它们的时候要多加注意。
+> **警告：** 目前，Firefox 和 Chrome 处理坐标的方式不同。在使用它们的时候要多加注意。
 
 ## 坐标系
 

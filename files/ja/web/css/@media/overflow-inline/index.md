@@ -2,6 +2,7 @@
 title: overflow-inline
 slug: Web/CSS/@media/overflow-inline
 ---
+
 {{CSSRef}}
 
 **`overflow-inline`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、初期[包含ブロック](/ja/docs/Web/CSS/Containing_block)をインライン軸方向にあふれたコンテンツを端末がどのように扱うかを調べるために使用します。

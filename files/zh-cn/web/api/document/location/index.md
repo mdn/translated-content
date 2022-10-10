@@ -34,7 +34,7 @@ dump(document.location);
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.location")}}
+{{Compat}}
 
 ## 相关链接
 

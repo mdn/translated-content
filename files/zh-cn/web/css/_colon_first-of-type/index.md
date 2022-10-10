@@ -14,7 +14,7 @@ p:first-of-type {
 }
 ```
 
-> **备注：** 按原来定义，所选元素必须有一个父元素。 从 Selectors Level 4 开始，就不需要这样了。
+> **备注：** 按原来定义，所选元素必须有一个父元素。从 Selectors Level 4 开始，就不需要这样了。
 
 ## 语法
 
@@ -80,7 +80,7 @@ article :first-of-type {
 
 ## 浏览器兼容
 
-{{Compat("css.selectors.first-of-type")}}
+{{Compat}}
 
 ## 参见
 

@@ -21,7 +21,7 @@ editable = element.isContentEditable
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.isContentEditable")}}
+{{Compat}}
 
 ## 相关链接
 

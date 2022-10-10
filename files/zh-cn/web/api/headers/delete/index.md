@@ -57,7 +57,7 @@ myHeaders.get('Content-Type'); // Returns null, as it has been deleted
 
 ## Browser compatibility
 
-{{Compat("api.Headers.delete")}}
+{{Compat}}
 
 ## See also
 

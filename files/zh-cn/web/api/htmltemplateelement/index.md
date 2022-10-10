@@ -26,4 +26,4 @@ _这个接口继承了 {{domxref("HTMLElement")}}的方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLTemplateElement")}}
+{{Compat}}

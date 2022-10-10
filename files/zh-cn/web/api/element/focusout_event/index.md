@@ -36,7 +36,7 @@ slug: Web/API/Element/focusout_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.focusout_event")}}
+{{Compat}}
 
 ## 相关事件
 

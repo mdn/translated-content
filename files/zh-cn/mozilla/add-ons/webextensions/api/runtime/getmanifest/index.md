@@ -21,7 +21,7 @@ browser.runtime.getManifest()
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.runtime.getManifest")}}
+{{Compat}}
 
 ## 示例
 

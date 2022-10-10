@@ -32,7 +32,7 @@ rotationRates 属性是一个只读对象，用于描述设备围绕其每个轴
 
 ## 浏览器兼容性
 
-{{Compat("api.DeviceMotionEvent.rotationRate")}}
+{{Compat}}
 
 ## 推荐阅读
 

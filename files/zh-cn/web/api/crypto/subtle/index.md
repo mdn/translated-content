@@ -25,7 +25,7 @@ var crypto = crypto.subtle;
 
 ## 浏览器支持
 
-{{Compat("api.Crypto.subtle")}}
+{{Compat}}
 
 ## 另见
 

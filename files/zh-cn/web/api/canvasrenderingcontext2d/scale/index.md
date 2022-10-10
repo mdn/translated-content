@@ -97,7 +97,7 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.scale")}}
+{{Compat}}
 
 ## 参见
 

@@ -77,7 +77,7 @@ function addData() {
 
 ## Browser compatibility
 
-{{Compat("api.IDBTransaction.db")}}
+{{Compat}}
 
 ## See also
 

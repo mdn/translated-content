@@ -86,4 +86,4 @@ p::selection {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.selection")}}
+{{Compat}}

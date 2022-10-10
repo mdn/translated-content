@@ -91,7 +91,7 @@ ruby {
 
 ## 瀏覽器相容性
 
-{{Compat("css.properties.ruby-position")}}
+{{Compat}}
 
 ## 參見
 

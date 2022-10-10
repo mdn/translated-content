@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/rect
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.rect()`** 是 Canvas 2D API 创建矩形路径的方法，矩形的起点位置是 _(x, y)_ ，尺寸为 _width_ 和 _height_。矩形的 4 个点通过直线连接，子路径做为闭合的标记，所以你可以填充或者描边矩形。
+**`CanvasRenderingContext2D.rect()`** 是 Canvas 2D API 创建矩形路径的方法，矩形的起点位置是 _(x, y)_，尺寸为 _width_ 和 _height_。矩形的 4 个点通过直线连接，子路径做为闭合的标记，所以你可以填充或者描边矩形。
 
 ## 语法
 
@@ -28,7 +28,7 @@ void ctx.rect(x, y, width, height);
 
 ### 使用 `rect` 方法
 
-这是一段简单的代码片段，使用 `rect` 方法创建一条路径。 实际上，在 canvas 中绘制矩形路径， 你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或者 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。 参见 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 和{{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} 方法， 只需一步即可绘制。
+这是一段简单的代码片段，使用 `rect` 方法创建一条路径。实际上，在 canvas 中绘制矩形路径，你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或者 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。参见 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 和{{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} 方法，只需一步即可绘制。
 
 #### HTML
 
@@ -92,7 +92,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.rect")}}
+{{Compat}}
 
 ## 参见
 

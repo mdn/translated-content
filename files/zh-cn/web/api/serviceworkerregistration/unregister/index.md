@@ -49,7 +49,7 @@ if ('serviceWorker' in navigator) {
 
 ## 浏览器兼容性
 
-{{Compat("api.ServiceWorkerRegistration.unregister")}}
+{{Compat}}
 
 ## 参见
 

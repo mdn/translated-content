@@ -2,6 +2,7 @@
 title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessageChannel")}} インターフェースの `MessageChannel()` コンストラクタは、2 つの新しい {{domxref("MessagePort")}} オブジェクトを持つ新しい {{domxref("MessageChannel")}} オブジェクトを返します。

@@ -56,7 +56,7 @@ A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.tabs.create", 10)}}
+{{Compat}}
 
 ## 实例
 

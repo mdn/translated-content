@@ -3,6 +3,7 @@ title: ':host-context()'
 slug: orphaned/Web/CSS/:host-context()
 original_slug: Web/CSS/:host-context()
 ---
+
 <div>{{CSSRef}}</div>
 
 **`:host-context()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、内部で使用される CSS を含む[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウホストを選択します (そのため、シャドウ DOM の中のカスタム要素を選択することができます)。 — しかし、関数の引数として与えられたセレクターがシャドウホストの祖先に一致した場合のみです。
@@ -11,7 +12,7 @@ original_slug: Web/CSS/:host-context()
 
 典型的な使い方としては、子孫のセレクター式 (例えば `h1`) を使って、 `<h1>` の中にあるカスタム要素のインスタンスのみを選択することができます。もう一つの典型的な使用法は、内部要素が任意の子孫要素のクラスや属性に反応するようにすることです。例えば、 `.dark-theme` クラスが `<body>` に適用されたときに、異なるテキスト色を適用することができます。
 
-> **Note:** これはシャドウ DOM の外で使用した場合、効果がありません。
+> **メモ:** これはシャドウ DOM の外で使用した場合、効果がありません。
 
 ```css
 /* 与えられたセレクター引数の子孫である場合のみ、

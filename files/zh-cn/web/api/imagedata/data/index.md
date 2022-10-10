@@ -26,7 +26,7 @@ imagedata.data; // Uint8ClampedArray[40000]
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageData.data")}}
+{{Compat}}
 
 ## 参见
 

@@ -39,4 +39,4 @@ window.onload = function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.History.back")}}
+{{Compat}}

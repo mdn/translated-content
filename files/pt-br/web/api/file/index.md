@@ -59,6 +59,6 @@ A interface `File` herda as propriedades da interface {{domxref("Blob")}}.
 
 ## Veja também
 
-- [Using files from web applications](/pt-BR/docs/Using_files_from_web_applications "Using files from web applications")
-- [Using the DOM File API in chrome code](/pt-BR/docs/Extensions/Using_the_DOM_File_API_in_chrome_code "Extensions/Using the DOM File API in chrome code")
+- [Using files from web applications](/pt-BR/docs/Using_files_from_web_applications)
+- [Using the DOM File API in chrome code](/pt-BR/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)
 - {{domxref("FileReader")}}

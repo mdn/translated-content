@@ -27,7 +27,7 @@ document.dir = dirStr;
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.dir")}}
+{{Compat}}
 
 ## 参见
 

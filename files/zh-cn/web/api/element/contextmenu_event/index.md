@@ -63,7 +63,7 @@ noContext.addEventListener('contextmenu', e => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.contextmenu_event")}}
+{{Compat}}
 
 ## 参见
 

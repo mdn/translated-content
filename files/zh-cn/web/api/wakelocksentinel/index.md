@@ -42,7 +42,7 @@ tryKeepScreenAlive(10);
 
 ## 浏览器兼容性
 
-{{Compat("api.WakeLockSentinel")}}
+{{Compat}}
 
 ## 相关链接
 

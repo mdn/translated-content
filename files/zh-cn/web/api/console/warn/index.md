@@ -35,7 +35,7 @@ console.warn(msg [, subst1, ..., substN]);
 
 ## 浏览器兼容
 
-{{Compat("api.console.warn")}}
+{{Compat}}
 
 ## 相关链接
 

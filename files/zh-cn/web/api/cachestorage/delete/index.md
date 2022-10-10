@@ -50,7 +50,7 @@ this.addEventListener('activate', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CacheStorage.delete")}}
+{{Compat}}
 
 ## See also
 

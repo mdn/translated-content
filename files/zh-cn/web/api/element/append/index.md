@@ -106,7 +106,7 @@ with(parent) {
 
 ## 浏览器兼容
 
-{{Compat("api.Element.append")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -81,7 +81,7 @@ function draw() {
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.createAnalyser")}}
+{{Compat}}
 
 ## 另见
 

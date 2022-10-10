@@ -27,7 +27,7 @@ console.log(syntheticEvent.deltaZ);
 
 ## 浏览器兼容性
 
-{{Compat("api.WheelEvent.deltaZ")}}
+{{Compat}}
 
 ## 另见
 

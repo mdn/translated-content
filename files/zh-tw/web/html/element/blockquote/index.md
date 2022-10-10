@@ -39,7 +39,7 @@ slug: Web/HTML/Element/blockquote
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.blockquote")}}
+{{Compat}}
 
 ## 備註
 

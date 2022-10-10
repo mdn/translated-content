@@ -23,4 +23,4 @@ An instance of {{domxref("HTMLSlotElement")}}.
 
 ## Browser Compatibility
 
-{{Compat("api.Element.assignedSlot")}}
+{{Compat}}

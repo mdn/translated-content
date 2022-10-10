@@ -29,4 +29,4 @@ slug: Web/API/MIDIAccess
 
 ## 浏览器兼容性
 
-{{Compat("api.MIDIAccess")}}
+{{Compat}}

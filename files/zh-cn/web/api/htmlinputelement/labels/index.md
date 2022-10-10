@@ -15,7 +15,7 @@ var labelElements = input.labels;
 
 ### Return value
 
-{{domxref("NodeList")}} 包含 `<label>` 元素和 `<input>` 元素.
+{{domxref("NodeList")}} 包含 `<label>` 元素和 `<input>` 元素。
 
 ## 实例
 
@@ -46,4 +46,4 @@ window.addEventListener("DOMContentLoaded", function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLInputElement.labels")}}
+{{Compat}}

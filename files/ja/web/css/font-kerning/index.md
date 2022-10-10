@@ -2,6 +2,7 @@
 title: font-kerning
 slug: Web/CSS/font-kerning
 ---
+
 {{CSSRef}}
 
 **`font-kerning`** CSS プロパティはフォントに存在するカーニング情報の使用を制御します。

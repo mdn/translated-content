@@ -50,7 +50,7 @@ slug: Web/API/DOMRect
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMRect")}}
+{{Compat}}
 
 ## 更多
 

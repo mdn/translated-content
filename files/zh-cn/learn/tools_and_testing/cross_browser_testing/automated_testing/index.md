@@ -63,7 +63,7 @@ As we said above, you can drastically speed up common tasks such as linting and 
     npm -v
     ```
 
-4. 安装 Node/npm 后，还应将其更新到最新的版本。 更新 Node 最有效可靠的方式是从它的网站（链接见上）下载一个最新的安装包进行安装。而更新 npm，可以在你的命令行终端运行如下命令：
+4. 安装 Node/npm 后，还应将其更新到最新的版本。更新 Node 最有效可靠的方式是从它的网站（链接见上）下载一个最新的安装包进行安装。而更新 npm，可以在你的命令行终端运行如下命令：
 
     ```bash
     npm install npm@latest -g

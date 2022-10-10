@@ -29,4 +29,4 @@ var marginString = IntersectionObserver.rootMargin;
 
 ## 浏览器兼容
 
-{{Compat("api.IntersectionObserver.rootMargin")}}
+{{Compat}}

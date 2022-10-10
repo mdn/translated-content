@@ -112,7 +112,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 瀏覽器相容性
 
-{{Compat("api.CanvasRenderingContext2D.clearRect")}}
+{{Compat}}
 
 ## 參見
 

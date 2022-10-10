@@ -82,7 +82,7 @@ console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
 
 ## 浏览器兼容性
 
-{{Compat("api.CSS")}}
+{{Compat}}
 
 ## 另请参阅
 

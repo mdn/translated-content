@@ -46,7 +46,7 @@ window.onunhandledrejection = function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.PromiseRejectionEvent")}}
+{{Compat}}
 
 ## 参见
 

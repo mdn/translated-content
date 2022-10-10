@@ -37,4 +37,4 @@ console.log(audioCtx2.baseLatency);//0.02
 
 ## Browser Compatibility
 
-{{Compat("api.AudioContext.baseLatency")}}
+{{Compat}}

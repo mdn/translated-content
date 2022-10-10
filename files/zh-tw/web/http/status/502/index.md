@@ -23,7 +23,7 @@ slug: Web/HTTP/Status/502
 
 The information shown below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.502")}}
+{{Compat}}
 
 ## See also
 

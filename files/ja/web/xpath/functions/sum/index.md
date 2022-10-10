@@ -2,6 +2,7 @@
 title: sum
 slug: Web/XPath/Functions/sum
 ---
+
 {{ XsltRef() }}
 
 `sum` 関数は、与えられたノード集合内のそれぞれのノードの数値としての値を合計した数値を返します。

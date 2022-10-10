@@ -83,7 +83,7 @@ let elapsedTime = performance.now() - startTime;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMHighResTimestamp")}}
+{{Compat}}
 
 ## 相关内容
 

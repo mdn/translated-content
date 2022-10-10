@@ -2,6 +2,7 @@
 title: KumaScript エラーのトラブルシューティング
 slug: MDN/Tools/KumaScript/Troubleshooting
 ---
+
 {{MDNSidebar}}
 
 この記事では4種類の KumaScript エラーと、修正するための対策について詳しく見ます。

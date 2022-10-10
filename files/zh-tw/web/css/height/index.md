@@ -116,7 +116,7 @@ div {
 
 ## 瀏覽器兼容性
 
-{{Compat("css.properties.height")}}
+{{Compat}}
 
 ## See also
 

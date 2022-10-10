@@ -47,7 +47,7 @@ animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animatio
 
 ## Browser compatibility
 
-{{Compat("api.AnimationEvent.AnimationEvent")}}
+{{Compat}}
 
 ## See also
 

@@ -59,7 +59,7 @@ myHeaders.getAll('Accept-Encoding'); // Returns [ "deflate", "gzip" ]
 
 ## 浏览器兼容性
 
-{{Compat("api.Headers.append")}}
+{{Compat}}
 
 ## 参见
 

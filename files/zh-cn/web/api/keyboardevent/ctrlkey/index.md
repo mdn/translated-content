@@ -50,7 +50,7 @@ You can also use the SHIFT key together with the CTRL key.</p>
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.ctrlKey")}}
+{{Compat}}
 
 ## 参考
 

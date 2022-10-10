@@ -54,7 +54,7 @@ self.addEventListener('notificationclick', function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.WindowClient")}}
+{{Compat}}
 
 ## See also
 

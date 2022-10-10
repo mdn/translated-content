@@ -111,7 +111,7 @@ alert(document.images[0].src);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement")}}
+{{Compat}}
 
 ## 参见
 

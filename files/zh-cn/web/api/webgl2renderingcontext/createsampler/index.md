@@ -23,7 +23,7 @@ WebGLSampler gl.createSampler();
 
 ## 例子
 
-`gl` 必须是 {{domxref("WebGL2RenderingContext")}} 类型. WebGL 1 不支持 `WebGLSampler` 对象。
+`gl` 必须是 {{domxref("WebGL2RenderingContext")}} 类型。WebGL 1 不支持 `WebGLSampler` 对象。
 
 ```js
 var sampler = gl.createSampler();
@@ -35,7 +35,7 @@ var sampler = gl.createSampler();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.createSampler")}}
+{{Compat}}
 
 ## 另见
 

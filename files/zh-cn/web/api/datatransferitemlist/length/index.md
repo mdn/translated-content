@@ -113,6 +113,6 @@ div {
 
 ## Browser compatibility
 
-{{Compat("api.DataTransferItemList.length")}}
+{{Compat}}
 
 {{APIRef("HTML Drag and Drop API")}}

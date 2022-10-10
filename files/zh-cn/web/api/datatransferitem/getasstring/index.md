@@ -71,7 +71,7 @@ function drop_handler(ev) {
 
 ## Browser compatibility
 
-{{Compat("api.DataTransferItem.getAsString")}}
+{{Compat}}
 
 ## See also
 

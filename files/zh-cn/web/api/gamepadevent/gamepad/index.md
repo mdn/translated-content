@@ -35,7 +35,7 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.GamepadEvent.gamepad")}}
+{{Compat}}
 
 ## 另请参阅
 

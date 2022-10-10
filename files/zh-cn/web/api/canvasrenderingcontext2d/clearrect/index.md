@@ -86,7 +86,7 @@ ctx.clearRect(10, 10, 120, 100);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.clearRect")}}
+{{Compat}}
 
 ## 参见
 

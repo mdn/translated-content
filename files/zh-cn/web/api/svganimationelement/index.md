@@ -55,4 +55,4 @@ Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTar
 
 ## Browser compatibility
 
-{{Compat("api.SVGAnimationElement")}}
+{{Compat}}

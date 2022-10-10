@@ -36,7 +36,7 @@ var stream = blob.stream();
 
 ## 浏览器兼容性
 
-{{Compat("api.Blob.stream")}}
+{{Compat}}
 
 ## 另请参阅
 

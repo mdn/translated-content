@@ -77,7 +77,7 @@ var atts = para.attributes;
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.attributes")}}
+{{Compat}}
 
 在 Firefox 22 版本之前，这个属性是被用在 {{domxref("Node")}} 上（继承至 {{domxref("Element")}}）。它需要被使用在其他符合这个接口规范的浏览器上使用。
 

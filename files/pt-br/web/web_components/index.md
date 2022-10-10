@@ -19,11 +19,11 @@ Web Components buscam resolver esses problemas — são formados por três tecno
 
 A abordagem básica para se implementar um componente web geralmente se parece com isso:
 
-1.  Crie uma classe na qual você especifica a funcionalidade do seu componente web, usando a sintaxe de classe do ECMAScript 2015 (veja [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes) para mais informações).
-2.  Registre seus elemento customizado através do método {{domxref("CustomElementRegistry.define()")}}, passando o nome do elemento a ser definido, a classe ou função na qual sua funcionalidade foi especificada, e opcionalmente, de qual elemento ele herda suas propriedades.
-3.  Se necessário, incorpore um shadow DOM ao elemento customizado usando o método {{domxref("Element.attachShadow()")}}. Adicione elementos filhos, listeners, etc., ao shadow DOM usando métodos normais de DOM.
-4.  Se necessário, defina um template HTML usando {{htmlelement("template")}} e {{htmlelement("slot")}}. Novamente, use os métodos normais de DOM methods para clonar o template e inclui-la ao shadow DOM.
-5.  Use seu elemento customizado onde você preferir em sua página, da mesma forma que usaria qualquer outro elemento HTML.
+1. Crie uma classe na qual você especifica a funcionalidade do seu componente web, usando a sintaxe de classe do ECMAScript 2015 (veja [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes) para mais informações).
+2. Registre seus elemento customizado através do método {{domxref("CustomElementRegistry.define()")}}, passando o nome do elemento a ser definido, a classe ou função na qual sua funcionalidade foi especificada, e opcionalmente, de qual elemento ele herda suas propriedades.
+3. Se necessário, incorpore um shadow DOM ao elemento customizado usando o método {{domxref("Element.attachShadow()")}}. Adicione elementos filhos, listeners, etc., ao shadow DOM usando métodos normais de DOM.
+4. Se necessário, defina um template HTML usando {{htmlelement("template")}} e {{htmlelement("slot")}}. Novamente, use os métodos normais de DOM methods para clonar o template e inclui-la ao shadow DOM.
+5. Use seu elemento customizado onde você preferir em sua página, da mesma forma que usaria qualquer outro elemento HTML.
 
 ## Tutoriais
 
@@ -53,7 +53,7 @@ A abordagem básica para se implementar um componente web geralmente se parece c
 
 - Extensões para criação de elementos built-in customizados
 
-  - :&#x20;
+  - : The following extensions are defined:
 
     - O atributo HTML global {{htmlattrxref("is")}}: Permite especificar que um elemento HTML padrão deve se comportar como um elemento built-in customizado registrado.
     - A opção "is" do método {{domxref("Document.createElement()")}}: Permite criar uma instância de um elemento HTML standard que se comporta como um determinado elemento built-in customizado registrado.
@@ -111,9 +111,6 @@ A abordagem básica para se implementar um componente web geralmente se parece c
   - : Atribui um slot em uma árvore shadow DOM a um elemento.
 - {{domxref("Slotable")}}
   - : Um mixin implementado por ambos os nós {{domxref("Element")}} e{{domxref("Text")}} definindo funcionalidades que permitem tornar-se conteúdo de um elemento {{htmlelement("slot")}}. O mixin define um atributo, {{domxref("Slotable.assignedSlot")}}, o qual retorna uma referência do slot em que o nó está sendo inserido.
-
-<!---->
-
 - Extensões {{domxref("Element")}}
 
   - : Extensões para a interface de `Element` relacionado a slots:

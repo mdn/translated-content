@@ -41,7 +41,7 @@ _无_
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.modify")}}
+{{Compat}}
 
 ## 相关链接
 

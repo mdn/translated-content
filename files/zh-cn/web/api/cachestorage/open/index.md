@@ -56,7 +56,7 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.CacheStorage.open")}}
+{{Compat}}
 
 ## See also
 

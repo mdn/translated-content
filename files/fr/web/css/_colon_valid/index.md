@@ -81,15 +81,11 @@ La couleur rouge est généralement utilisée afin d'indiquer une valeur invalid
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires                                                                  |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-valid', ':valid')}}     | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                          |
-| {{SpecName('HTML5 W3C', '#selector-valid', ':valid')}}         | {{Spec2('HTML5 W3C')}}         | Définition de la sémantique relative à HTML et aux contraintes de validation. |
-| {{SpecName('CSS4 Selectors', '#validity-pseudos', ':valid')}} | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.valid")}}
+{{Compat}}
 
 ## Voir aussi
 

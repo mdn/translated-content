@@ -111,7 +111,7 @@ Source: <https://github.com/anonyco/FastestSmallestTextEncoderDecoder>
 
 ## 浏览器兼容性
 
-{{Compat("api.TextEncoder")}}
+{{Compat}}
 
 ## 参见
 

@@ -97,4 +97,4 @@ div:hover .scale {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scale")}}
+{{Compat}}

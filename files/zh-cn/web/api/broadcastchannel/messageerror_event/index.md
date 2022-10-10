@@ -70,7 +70,7 @@ channel.onmessageerror = (event) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel.messageerror_event")}}
+{{Compat}}
 
 ## 另见
 

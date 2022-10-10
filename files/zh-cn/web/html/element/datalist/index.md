@@ -42,7 +42,7 @@ slug: Web/HTML/Element/datalist
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.datalist")}}
+{{Compat}}
 
 ## Polyfill
 

@@ -38,7 +38,7 @@ slug: Web/API/Element/afterscriptexecute_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.afterscriptexecute_event")}}
+{{Compat}}
 
 ## 参见
 

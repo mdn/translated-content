@@ -71,7 +71,7 @@ Have a look at our [insertAdjacentText.html](https://mdn.github.io/dom-examples/
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.insertAdjacentText")}}
+{{Compat}}
 
 ## 也可以看看
 

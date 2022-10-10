@@ -71,7 +71,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.-webkit-line-clamp")}}
+{{Compat}}
 
 ## See also
 

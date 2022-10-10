@@ -54,4 +54,4 @@ slug: Web/CSS/percentage
 
 ## 浏览器兼容性
 
-{{Compat("css.types.percentage")}}
+{{Compat}}

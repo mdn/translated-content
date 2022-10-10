@@ -26,7 +26,7 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.devtools.inspectedWindow")}}{{WebExtExamples("h2")}}
+{{Compat}}
 
 > **备注：** This API is based on Chromium's [`chrome.devtools.inspectedWindow`](https://developer.chrome.com/extensions/devtools_inspectedWindow) API.
 >

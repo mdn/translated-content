@@ -76,7 +76,7 @@ console.log(result[1]); // [ "2019-03-07", "2019", "03", "07" ]
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.RegExp.@@matchAll")}}
+{{Compat}}
 
 ## 相关链接
 

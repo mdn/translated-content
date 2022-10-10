@@ -34,4 +34,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.default_locale")}}
+{{Compat}}

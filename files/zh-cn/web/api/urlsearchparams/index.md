@@ -99,7 +99,7 @@ searchParams3.has("query") // true
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams")}}
+{{Compat}}
 
 ## 参见
 

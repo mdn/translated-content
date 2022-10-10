@@ -54,7 +54,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.Accept")}}
+{{Compat}}
 
 ## 參見
 

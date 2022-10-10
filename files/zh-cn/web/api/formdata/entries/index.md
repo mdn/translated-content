@@ -46,7 +46,7 @@ key2, value2
 
 ## 浏览器兼容
 
-{{Compat("api.FormData.entries")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
 {{APIRef}}
 
-O método **`CanvasRenderingContext2D`\*\***`.fill()`\*\* da API Canvas 2D preenche um dado _path_ ou o _path_ atual com o estilo atual de preenchimento usando uma regra de controle diferente de zero, ou uma regra par-ímpar.
+O método **`CanvasRenderingContext2D.fill()`** da API Canvas 2D preenche um dado _path_ ou o _path_ atual com o estilo atual de preenchimento usando uma regra de controle diferente de zero, ou uma regra par-ímpar.
 
 ## Syntax
 
@@ -32,7 +32,7 @@ void ctx.fill(path, fillRule);
     - **`"evenodd"`**: A [regra de controle par-ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
-  - : Um _path_ de [`Path2D`](/pt-BR/docs/Web/API/Path2D "The documentation about this has not yet been written; please consider contributing!") para preenchimento.
+  - : Um _path_ de [`Path2D`](/pt-BR/docs/Web/API/Path2D) para preenchimento.
 
 ## Exemplos
 

@@ -105,7 +105,7 @@ background: no-repeat center/80% url("../img/image.png");
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background")}}
+{{Compat}}
 
 ## 参见
 

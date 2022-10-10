@@ -25,7 +25,7 @@ var result = window.history.length; // 返回当前 session 中的 history 个�
 
 ## 浏览器兼容性
 
-{{Compat("api.History.length")}}
+{{Compat}}
 
 ## 参考
 

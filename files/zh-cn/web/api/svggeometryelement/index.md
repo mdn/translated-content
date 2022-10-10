@@ -37,4 +37,4 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 
 ## Browser compatibility
 
-{{Compat("api.SVGGeometryElement")}}
+{{Compat}}

@@ -38,7 +38,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGUseElement")}}
+{{Compat}}
 
 ## 参见
 

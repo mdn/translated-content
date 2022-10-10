@@ -40,14 +40,14 @@ _`CompileError`构造函数没有一些它特有的属性，但是，它确实�
 - {{jsxref("Error.prototype.columnNumber", "WebAssembly.CompileError.prototype.columnNumber")}}
   - : 报出错误的代码所在文件中的列数。继承自 {{jsxref("Error")}}。
 - {{jsxref("Error.prototype.stack", "WebAssembly.CompileError.prototype.stack")}}
-  - : 堆栈跟踪。 继承自{{jsxref("Error")}}。
+  - : 堆栈跟踪。继承自{{jsxref("Error")}}。
 
 ## 方法
 
 _`CompileError`构造函数不包含自己的方法，但是，它确实通过原型链继承了一些方法。_
 
 - {{jsxref("Error.prototype.toSource", "WebAssembly.CompileError.prototype.toSource()")}}
-  - : 返回可能导致相同错误的代码。 继承自{{jsxref("Error")}}。
+  - : 返回可能导致相同错误的代码。继承自{{jsxref("Error")}}。
 - {{jsxref("Error.prototype.toString", "WebAssembly.CompileError.prototype.toString()")}}
   - : 返回表示代表指定的`Error`对象的字符串。从 {{jsxref("Error")}}继承。
 

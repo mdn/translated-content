@@ -2,6 +2,7 @@
 title: width
 slug: Web/CSS/@media/width
 ---
+
 {{CSSRef}}
 
 **`width`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の幅 (または[ページ付きメディア](/ja/docs/Web/CSS/Paged_media)のページボックスの幅) をテストするために使用することができます。

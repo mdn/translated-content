@@ -65,7 +65,7 @@ fetch(myRequest).then(function(response) {
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.Promise.finally")}}
+{{Compat}}
 
 ## See also
 

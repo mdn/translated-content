@@ -74,7 +74,7 @@ value2
 
 ## 瀏覽器相容性
 
-{{Compat("http.methods.POST")}}
+{{Compat}}
 
 ## 參見
 

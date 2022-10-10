@@ -37,7 +37,7 @@ CanvasGradient ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
 
 ### 使用 `createRadialGradient` 方法
 
-这是一段简单的代码片段，使用 `createRadialGradient` 方法创建一个指定了开始和结束圆的 {{domxref("CanvasGradient")}} 对象。 一旦创建，你可以使用 {{domxref("CanvasGradient.addColorStop()")}} 方法根据指定的偏移和颜色定义一个新的终止。你可以将当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}设置成此渐变，当使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在 canvas 上绘制出效果， 如示例所示。
+这是一段简单的代码片段，使用 `createRadialGradient` 方法创建一个指定了开始和结束圆的 {{domxref("CanvasGradient")}} 对象。一旦创建，你可以使用 {{domxref("CanvasGradient.addColorStop()")}} 方法根据指定的偏移和颜色定义一个新的终止。你可以将当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}设置成此渐变，当使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在 canvas 上绘制出效果，如示例所示。
 
 #### HTML
 
@@ -108,12 +108,12 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.createRadialGradient")}}
+{{Compat}}
 
 ### Gecko-specific 注解
 
-- 从 Gecko 2.0 {{geckoRelease("2.0")}}开始， 指定非限制的值会抛出 `NOT_SUPPORTED_ERR` ，用来替代 `SYNTAX_ERR。`
-- 从 Gecko 5.0 {{geckoRelease("5.0")}}开始，指定一个负的半径会抛出 `INDEX_SIZE_ERR。`
+- 从 Gecko 2.0 {{geckoRelease("2.0")}}开始，指定非限制的值会抛出 `NOT_SUPPORTED_ERR`，用来替代 `SYNTAX_ERR`。
+- 从 Gecko 5.0 {{geckoRelease("5.0")}}开始，指定一个负的半径会抛出 `INDEX_SIZE_ERR`。
 
 ## 参见
 

@@ -32,7 +32,7 @@ var buffer = gl.createFramebuffer();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLFramebuffer")}}
+{{Compat}}
 
 ## 参见
 
@@ -40,4 +40,4 @@ var buffer = gl.createFramebuffer();
 - {{domxref("WebGLRenderingContext.createFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-- 其他缓冲区: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- 其他缓冲区：{{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}

@@ -30,7 +30,7 @@ console.log(obj.currentSrc); // ""
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.currentSrc")}}
+{{Compat}}
 
 ## 参考
 

@@ -23,7 +23,7 @@ var file = instanceOfFileReader.result
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.result")}}
+{{Compat}}
 
 ## 参见
 

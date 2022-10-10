@@ -100,7 +100,7 @@ tr, td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-top-style")}}
+{{Compat}}
 
 ## 相关词条
 

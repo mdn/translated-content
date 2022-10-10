@@ -73,4 +73,4 @@ src: local(font), url(path/to/font.svg) format("svg"),
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.font-face.src")}}
+{{Compat}}

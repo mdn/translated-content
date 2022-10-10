@@ -67,7 +67,7 @@ font-display: optional;
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.font-face.font-display")}}
+{{Compat}}
 
 ## 参见
 

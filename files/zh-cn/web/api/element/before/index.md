@@ -114,7 +114,7 @@ with(node) {
 
 ## Browser compatibility
 
-{{Compat("api.Element.before")}}
+{{Compat}}
 
 ## See also
 

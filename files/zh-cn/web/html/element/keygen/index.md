@@ -104,4 +104,4 @@ Here is an example form submission as it would be delivered to a CGI program by 
 
 ## Browser compatibility
 
-{{Compat("html.elements.keygen")}}
+{{Compat}}

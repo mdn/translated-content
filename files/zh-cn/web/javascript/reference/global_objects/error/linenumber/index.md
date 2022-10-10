@@ -35,7 +35,7 @@ throw e;
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.Error.lineNumber")}}
+{{Compat}}
 
 ## 相关内容
 

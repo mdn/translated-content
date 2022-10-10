@@ -124,7 +124,7 @@ function changeGridAutoFlow() {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.grid-auto-flow")}}
+{{Compat}}
 
 ## 参见
 

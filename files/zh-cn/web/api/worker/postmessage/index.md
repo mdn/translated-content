@@ -132,7 +132,7 @@ from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2
 
 ## Browser compatibility
 
-{{Compat("api.Worker.postMessage")}}
+{{Compat}}
 
 ## See also
 

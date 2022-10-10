@@ -27,4 +27,4 @@ A {{jsxref("Boolean")}}.
 
 ## Browser compatibility
 
-{{Compat("api.PageTransitionEvent.persisted")}}
+{{Compat}}

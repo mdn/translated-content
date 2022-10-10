@@ -156,4 +156,4 @@ function displayWarning(msg) {
 
 ## 浏览器兼容
 
-{{Compat("api.Event.preventDefault")}}
+{{Compat}}

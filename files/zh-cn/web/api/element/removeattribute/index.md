@@ -44,4 +44,4 @@ document.getElementById("div1").removeAttribute("align");
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.removeAttribute")}}
+{{Compat}}

@@ -66,7 +66,7 @@ gainNode.connect(audioCtx.destination);
 
 ## 浏览器支持
 
-{{Compat("api.AudioDestinationNode")}}
+{{Compat}}
 
 ## 其他
 

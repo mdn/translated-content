@@ -42,7 +42,7 @@ gl.deleteBuffer(buffer);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.deleteBuffer")}}
+{{Compat}}
 
 ## 相关链接
 

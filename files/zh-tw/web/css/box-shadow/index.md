@@ -93,4 +93,4 @@ box-shadow: inset 0 0 1em gold, 0 0 1em red;
 
 ## 瀏覽相容性
 
-{{Compat("css.properties.box-shadow")}}
+{{Compat}}

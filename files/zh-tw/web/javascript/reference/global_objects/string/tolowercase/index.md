@@ -37,7 +37,7 @@ console.log('ALPHABET'.toLowerCase()); // 'alphabet'
 
 ## 浏览器相容性
 
-{{Compat("javascript.builtins.String.toLowerCase")}}
+{{Compat}}
 
 ## 参考
 

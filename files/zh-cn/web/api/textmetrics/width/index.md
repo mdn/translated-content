@@ -37,7 +37,7 @@ text.width; // 16;
 
 ## 浏览器兼容性
 
-{{Compat("api.TextMetrics.width")}}
+{{Compat}}
 
 ## 参见
 

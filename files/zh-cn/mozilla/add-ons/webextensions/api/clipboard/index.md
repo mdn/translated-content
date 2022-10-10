@@ -23,6 +23,6 @@ To use this API you need the `"clipboardWrite"` extension [permission](/zh-CN/do
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.clipboard")}} {{WebExtExamples("h2")}}
+{{Compat}}
 
 > **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.

@@ -69,7 +69,7 @@ Keywords are displayed with the default style of the \<b> element, likely in bol
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.b")}}
+{{Compat}}
 
 ## 相关链接
 

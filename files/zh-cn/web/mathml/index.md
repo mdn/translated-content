@@ -46,4 +46,4 @@ slug: Web/MathML
 
 ## 浏览器兼容性
 
-{{Compat("mathml.elements.math", 0)}}
+{{Compat}}

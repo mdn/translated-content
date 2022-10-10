@@ -33,7 +33,7 @@ _`ClipboardEvent()` 构造函数也从_ _{{domxref("Event.Event", "Event()")}}_ 
 
 ## 浏览器兼容性
 
-{{Compat("api.ClipboardEvent.ClipboardEvent")}}
+{{Compat}}
 
 ## 相关链接
 

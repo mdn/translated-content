@@ -11,7 +11,7 @@ translation_of: Web/API/Document/createRange
 
 ### Resumen
 
-Retorna un nuevo objeto [`Rango`](https://developer.mozilla.org/es/docs/Web/API/Range).
+Retorna un nuevo objeto [`Rango`](/es/docs/Web/API/Range).
 
 ### Sintáxis
 

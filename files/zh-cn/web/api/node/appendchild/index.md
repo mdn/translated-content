@@ -26,7 +26,7 @@ element.appendChild(aChild)
 
 ### 返回值
 
-返回追加后的子节点 （`aChild`），除非 `aChild` 是一个文档片段（{{domxref("DocumentFragment")}}），这种情况下将返回空文档片段（{{domxref("DocumentFragment")}}）。
+返回追加后的子节点（`aChild`），除非 `aChild` 是一个文档片段（{{domxref("DocumentFragment")}}），这种情况下将返回空文档片段（{{domxref("DocumentFragment")}}）。
 
 ## 附注
 
@@ -58,7 +58,7 @@ document.body.appendChild(p);
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.appendChild")}}
+{{Compat}}
 
 ## 参见
 

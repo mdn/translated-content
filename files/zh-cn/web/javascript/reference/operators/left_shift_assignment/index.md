@@ -33,7 +33,7 @@ a <<= 2; // 20
 
 ## 浏览器兼容性
 
-{{Compat("javascript.operators.left_shift_assignment")}}
+{{Compat}}
 
 ## 参考
 

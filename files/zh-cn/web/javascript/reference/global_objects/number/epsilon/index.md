@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 
 ## 描述
 
-`EPSILON` 属性的值接近于 `2.2204460492503130808472633361816E-16`，或者 `2^-52。`
+`EPSILON` 属性的值接近于 `2.2204460492503130808472633361816E-16`，或者 `2^-52`。
 
 ## 示例
 

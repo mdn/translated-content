@@ -49,7 +49,7 @@ addEventListener('install', event => {
 
 ## 浏览器兼容性
 
-{{Compat("api.ExtendableEvent.waitUntil")}}
+{{Compat}}
 
 ## 另参见
 

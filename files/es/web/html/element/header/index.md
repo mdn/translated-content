@@ -24,7 +24,7 @@ El _elemento de HTML Header_ (\<header>) representa un grupo de ayudas introduct
 
 ### Atributos
 
-Este elemento no tiene otros atributos que no sean los [atributos generales](../../../../en/HTML/global_attributes), comunes a todos los elementos.
+Este elemento no tiene otros atributos que no sean los [atributos generales](/en/HTML/global_attributes), comunes a todos los elementos.
 
 ### Interfaz DOM
 

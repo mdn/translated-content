@@ -42,7 +42,7 @@ gl.isShader(shader);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.isShader")}}
+{{Compat}}
 
 ## 参阅
 

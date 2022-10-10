@@ -39,4 +39,4 @@ var first_rule = document.styleSheets[0].cssRules[0];
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSRuleList")}}
+{{Compat}}

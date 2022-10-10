@@ -52,14 +52,11 @@ Exemple de rendu: ![integral-0-infinity](munderover.png)
 
 ## Spécifications
 
-| Specification                                                                                    | Status                       | Comment               |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.munderover', 'munderover') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.munderover', 'munderover') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.munderover")}}
+{{Compat}}
 
 ## Voir aussi
 

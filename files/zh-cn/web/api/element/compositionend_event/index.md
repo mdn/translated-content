@@ -45,7 +45,7 @@ slug: Web/API/Element/compositionend_event
 
 ## Browser compatibility
 
-{{Compat("api.Element.compositionend_event")}}
+{{Compat}}
 
 ## Related events
 

@@ -113,7 +113,7 @@ footer {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.grid-template")}}
+{{Compat}}
 
 ## 相关链接
 

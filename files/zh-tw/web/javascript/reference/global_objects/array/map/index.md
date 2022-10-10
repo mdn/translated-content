@@ -284,7 +284,7 @@ if (!Array.prototype.map) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.map")}}
+{{Compat}}
 
 ## 參見
 

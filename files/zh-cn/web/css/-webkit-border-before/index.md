@@ -83,7 +83,7 @@ div {
 
 ## 兼容性
 
-{{Compat("css.properties.-webkit-border-before")}}
+{{Compat}}
 
 ## 参考
 

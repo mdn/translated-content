@@ -116,7 +116,7 @@ if (!Array.prototype.fill) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.fill")}}
+{{Compat}}
 
 ## 參見
 

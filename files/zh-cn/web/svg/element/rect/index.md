@@ -57,7 +57,7 @@ html,body,svg { height:100% }
 
 ## 浏览器支持
 
-{{Compat("svg.elements.rect")}}
+{{Compat}}
 
 ## 参见
 

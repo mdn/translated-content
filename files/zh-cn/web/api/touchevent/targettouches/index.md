@@ -38,4 +38,4 @@ function touches_in_target(ev) {
 
 ## 浏览器兼容性
 
-{{Compat("api.TouchEvent.targetTouches")}}
+{{Compat}}

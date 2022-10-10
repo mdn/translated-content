@@ -2,6 +2,7 @@
 title: MessagePort.close()
 slug: Web/API/MessagePort/close
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessagePort")}} インターフェイスの **`close()`** メソッドは、ポートの接続を切断し、ポートがアクティブではなくなります。これは、そのポートへのメッセージの送信を停止します。

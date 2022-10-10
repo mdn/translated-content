@@ -140,4 +140,4 @@ observer.disconnect();
 
 ## Browser compatibility
 
-{{Compat("api.MutationObserver")}}
+{{Compat}}

@@ -36,7 +36,7 @@ DPR: 1.0
 
 ## 浏览器兼容
 
-{{Compat("http.headers.DPR")}}
+{{Compat}}
 
 ## 参见
 

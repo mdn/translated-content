@@ -40,4 +40,4 @@ customElements.define('element-details',
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.customElements")}}
+{{Compat}}

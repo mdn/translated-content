@@ -58,7 +58,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.history")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

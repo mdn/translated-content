@@ -23,4 +23,4 @@ _None._
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

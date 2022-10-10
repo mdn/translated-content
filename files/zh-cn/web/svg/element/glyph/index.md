@@ -67,7 +67,7 @@ slug: Web/SVG/Element/glyph
 
 ## DOM 接口
 
-该元素实现了`SVGGlyphElement接口。`
+该元素实现了 `SVGGlyphElement` 接口。
 
 ## 相关内容
 

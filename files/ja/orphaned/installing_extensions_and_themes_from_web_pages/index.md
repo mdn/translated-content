@@ -3,6 +3,7 @@ title: Web ページから拡張機能とテーマをインストールする
 slug: orphaned/Installing_Extensions_and_Themes_From_Web_Pages
 original_slug: Installing_Extensions_and_Themes_From_Web_Pages
 ---
+
 [拡張機能](ja/Extension) と [テーマ](ja/Themes) を Web ページからインストールするには、XPI ファイルに直接リンクしたり、[InstallTrigger](ja/XPInstall_API_Reference/InstallTrigger_Object) オブジェクトを使用するなど様々な方法があります。
 
 拡張機能と Web ページの作者はユーザに対して最高の経験を提供するように、以下にかかれた方法で XPI をインストールできるようにすることを奨励します。

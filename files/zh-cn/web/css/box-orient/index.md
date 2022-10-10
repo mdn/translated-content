@@ -87,7 +87,7 @@ div.example {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.box-orient")}}
+{{Compat}}
 
 ## 参见
 

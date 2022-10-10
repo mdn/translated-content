@@ -42,7 +42,7 @@ Accept-Language
 
 ## Browser compatibility
 
-{{Compat("api.Headers.values")}}
+{{Compat}}
 
 ## See also
 

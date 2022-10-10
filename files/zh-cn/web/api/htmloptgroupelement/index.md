@@ -28,7 +28,7 @@ _没有专有的方法；从 {{domxref("HTMLElement")}} 中继承方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLOptGroupElement")}}
+{{Compat}}
 
 ## 参见
 

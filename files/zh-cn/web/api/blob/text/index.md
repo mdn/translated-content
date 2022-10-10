@@ -38,7 +38,7 @@ var text = await blob.text();
 
 ## 浏览器兼容性
 
-{{Compat("api.Blob.text")}}
+{{Compat}}
 
 ## 另见
 

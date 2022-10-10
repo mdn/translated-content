@@ -51,7 +51,7 @@ formData.getAll('username'); // Returns ["Chris", "Bob"]
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.getAll")}}
+{{Compat}}
 
 ## 相关链接
 

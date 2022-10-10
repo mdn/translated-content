@@ -2,6 +2,7 @@
 title: web_accessible_resources
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -65,7 +66,7 @@ moz-extension://<extension-UUID>/images/my-image.png"
 
 `<extension-UUID>` は拡張機能の ID **ではありません。**これは各ブラウザーインスタンス用にランダムに生成されます。これはウェブサイトがインストールしている拡張機能を調べることで指紋を取ることを防止します。
 
-> **Note:** Chrome では、拡張機能の ID は固定です。リソースを `web_accessible_resouce` に指定すると、`chrome-extension://<your-extension-id>/<path/to/resouce>` でアクセス可能です。
+> **メモ:** Chrome では、拡張機能の ID は固定です。リソースを `web_accessible_resouce` に指定すると、`chrome-extension://<your-extension-id>/<path/to/resouce>` でアクセス可能です。
 
 この URL を取得する推奨される方法は、[`browser.runtime.getURL`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL) API を使用して、 manifest.json の相対パスとして渡すことです:
 

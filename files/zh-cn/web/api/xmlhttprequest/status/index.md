@@ -40,7 +40,7 @@ xhr.send(null);
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.status")}}
+{{Compat}}
 
 ## 其他相关资料
 

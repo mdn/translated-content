@@ -62,4 +62,4 @@ _`Performance` 接口没有继承任何属性。_
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance")}}
+{{Compat}}

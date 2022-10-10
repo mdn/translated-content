@@ -50,7 +50,7 @@ slug: Web/API/Gamepad_API
 
 ## 浏览器兼容性
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## 另请参阅
 

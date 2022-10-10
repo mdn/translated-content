@@ -32,8 +32,10 @@ Array.of(element0[, element1[, ...[, elementN]]])
 
 - `elementN`
   - : Elementos usados para criar o `array`.
-- ### Valor de retorno
-  - : Uma nova instância de {{jsxref("Array")}}.
+
+### Valor de retorno
+
+Uma nova instância de {{jsxref("Array")}}.
 
 ## Descrição
 

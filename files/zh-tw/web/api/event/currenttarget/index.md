@@ -32,7 +32,7 @@ for(var i = 0; i < ps.length; i++){
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.currentTarget")}}
+{{Compat}}
 
 ## 參見
 

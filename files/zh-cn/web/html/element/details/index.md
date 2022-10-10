@@ -245,7 +245,7 @@ details > p {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.details")}}
+{{Compat}}
 
 ## 参见
 

@@ -39,7 +39,7 @@ slug: Web/SVG/Element/glyphRef
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.glyphRef")}}
+{{Compat}}
 
 ## 参见
 

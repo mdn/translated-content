@@ -51,7 +51,7 @@ gl.canvas; // OffscreenCanvas
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.canvas")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -66,8 +66,6 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 {{Compat("api.Geolocation.watchPosition")}}
 
-##
-
 ## Veja também
 
 - [Usando geolocalização](/pt-BR/docs/WebAPI/Using_geolocation)

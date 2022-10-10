@@ -41,14 +41,8 @@ RegExp(padrão[, flags])
       - : ignorar maiúsc./minúsc.; Se a _flag <kbd>u</kbd>_ estiver ativa, deve ser utilizado o _Unicode case folding_
     - `m`
       - : multilinha; trata caracteres de início e fim (^ e $) ao operar sobre múltiplas linhas (ou seja, corresponder o início ou fim de _cada_ linha (delimitado por \n ou \r), e não apenas o começo ou fim de toda a string de entrada)
-
-    <!---->
-
-    - `u `{{experimental_inline}}
+    - `u` {{experimental_inline}}
       - : unicode; trata o padrão como uma sequência de código unicode
-
-    <!---->
-
     - `y` {{experimental_inline}}
       - : aderente; corresponde apenas pelo index indicado pela propriedade `lastIndex` dessa expressão regular na string alvo (e não tenta corresponder de qualquer indexes posteriores).
 
@@ -560,8 +554,8 @@ var re = new RegExp('\\w+');
           Entretanto, a primeira expressão tem preferência. Se uma string fosse
           corresponder às duas expressões, ela vai corresponder à que aparece do
           lado esquerdo do operador <code>|</code>. Por exemplo,
-          <code>/maçãs|maçã/</code> corresponde "maçãs" na frase "<u>maçãs</u>
-          vermelhas" e "maçã" na frase "<u>maçã</u> verde".
+          <code>/maçãs|maçã/</code> corresponde "maçãs" na frase "<em>maçãs</em>
+          vermelhas" e "maçã" na frase "<em>maçã</em> verde".
         </p>
       </td>
     </tr>
@@ -578,8 +572,8 @@ var re = new RegExp('\\w+');
         <p>
           Por exemplo, <code>/o{2}/</code> não corresponde o "o" em
           "brigadeiro", mas corresponde todos os dois "o"s em
-          "brigadeir<u>oo</u>", e o dois primeiros "o"s em
-          "brigadeir<u>oo</u>o".
+          "brigadeir<em>oo</em>", e o dois primeiros "o"s em
+          "brigadeir<em>oo</em>o".
         </p>
       </td>
     </tr>
@@ -595,8 +589,8 @@ var re = new RegExp('\\w+');
         </p>
         <p>
           Por exemplo, <code>/o{2,}/</code> não corresponde o "o" em
-          "brigadeiro", mas corresponde todos os "o"s em "brigadeir<u>oo</u>" e
-          em "brigadeir<u>ooooooooo</u>".
+          "brigadeiro", mas corresponde todos os "o"s em "brigadeir<em>oo</em>" e
+          em "brigadeir<em>ooooooooo</em>".
         </p>
       </td>
     </tr>
@@ -613,9 +607,9 @@ var re = new RegExp('\\w+');
         </p>
         <p>
           Por exemplo, <code>/o{2,4}/</code> corresponde nada em "brigadeiro",
-          os dois "o"s em "brigadeir<u>oo</u>", os três "o"s em
-          "brigadeir<u>ooo</u>", e os primeiros quatro "o"s em
-          "brigadeir<u>oooo</u>o".
+          os dois "o"s em "brigadeir<em>oo</em>", os três "o"s em
+          "brigadeir<em>ooo</em>", e os primeiros quatro "o"s em
+          "brigadeir<em>oooo</em>o".
         </p>
         <p>
           É importante perceber que no último caso a correspondência não inclui

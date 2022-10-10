@@ -87,7 +87,7 @@ reverb.connect(audioCtx.destination);
 
 ## 浏览器兼容性
 
-{{Compat("api.ConvolverNode")}}
+{{Compat}}
 
 ## 相关链接
 

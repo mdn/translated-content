@@ -40,4 +40,4 @@ script[nonce~=whatever] {
 
 ## 支持的浏览器
 
-{{Compat("api.HTMLElement.nonce")}}
+{{Compat}}

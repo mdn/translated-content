@@ -3,6 +3,7 @@ title: AJAX に関するその他の資料
 slug: orphaned/Web/Guide/AJAX/Other_Resources
 original_slug: Web/Guide/AJAX/Other_Resources
 ---
+
 - [AJAX Review](http://www.ajaxreview.com/)
 - [mHub : Ajax and rails examples & how-to's](http://www.maxkiesler.com/index.php/mhub/)
 - [AJAX Blog at maxkiesler.com](http://www.maxkiesler.com/)

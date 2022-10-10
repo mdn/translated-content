@@ -52,7 +52,7 @@ padding-top: unset;
 
 ## 浏览器的兼容性
 
-{{Compat("css.properties.padding-top")}}
+{{Compat}}
 
 ## 参见
 

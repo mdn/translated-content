@@ -83,7 +83,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-block")}}
+{{Compat}}
 
 ## 也可以看看
 

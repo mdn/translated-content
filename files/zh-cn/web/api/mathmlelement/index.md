@@ -39,7 +39,7 @@ document.querySelector('msqrt').constructor.name; // MathMLElement
 
 ## 浏览器兼容性
 
-{{Compat("api.MathMLElement")}}
+{{Compat}}
 
 ## 参见
 

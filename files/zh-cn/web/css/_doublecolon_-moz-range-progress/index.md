@@ -44,7 +44,7 @@ input[type=range]::-moz-range-progress {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.-moz-range-progress")}}
+{{Compat}}
 
 ## 相关阅读
 

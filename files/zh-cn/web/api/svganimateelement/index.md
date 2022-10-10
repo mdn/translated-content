@@ -27,4 +27,4 @@ _{{domxref("SVGAnimationElement")}}._
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGAnimateElement")}}
+{{Compat}}

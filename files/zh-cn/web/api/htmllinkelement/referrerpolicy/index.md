@@ -28,7 +28,7 @@ links[0].referrerPolicy; // "no-referrer"
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLLinkElement.referrerPolicy")}}
+{{Compat}}
 
 ## 相关
 

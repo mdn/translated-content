@@ -32,4 +32,4 @@ DOMQuad 是四 DOMPoints 的集合，用于定义任意四边形的角。返回 
 
 ## Browser compatibility
 
-{{Compat("api.DOMQuad")}}
+{{Compat}}

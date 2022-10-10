@@ -44,7 +44,7 @@ slug: Web/CSS/@media/hover
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.media.hover")}}
+{{Compat}}
 
 ## See also
 

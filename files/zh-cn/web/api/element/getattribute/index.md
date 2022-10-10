@@ -38,7 +38,7 @@ alert(align);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.getAttribute")}}
+{{Compat}}
 
 ## 规范
 

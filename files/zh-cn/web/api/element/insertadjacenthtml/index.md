@@ -64,7 +64,7 @@ d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.insertAdjacentHTML")}}
+{{Compat}}
 
 ## 相关链接
 

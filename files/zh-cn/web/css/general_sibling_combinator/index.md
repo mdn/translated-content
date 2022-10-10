@@ -46,7 +46,7 @@ Here is a paragraph.
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.general_sibling")}}
+{{Compat}}
 
 ## 相关
 

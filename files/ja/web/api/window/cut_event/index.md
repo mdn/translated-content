@@ -2,6 +2,7 @@
 title: 'Window: cut イベント'
 slug: Web/API/Window/cut_event
 ---
+
 {{APIRef}}
 
 **`cut`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから切り取り操作を実行したときに発生します。

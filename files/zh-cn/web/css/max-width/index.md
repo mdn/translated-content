@@ -50,7 +50,7 @@ max-width: unset;
 - `fill-available`{{experimental_inline()}}
   - : The containing block width minus horizontal margin, border, and padding. Some browsers implement an ancient name for this keyword, `available`.
 - `fit-content`{{experimental_inline()}}
-  - : 与`max-content等价.`
+  - : 与 `max-content` 等价。
 
 ### 形式语法
 
@@ -108,7 +108,7 @@ fit-content 值可以用来给元素设置基于其内容大小的宽度：
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.max-width")}}
+{{Compat}}
 
 ## 参考链接
 

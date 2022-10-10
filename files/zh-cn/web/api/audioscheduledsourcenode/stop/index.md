@@ -20,7 +20,7 @@ AudioScheduledSourceNode.stop([when]);
 ### 参数
 
 - `when` {{optional_inline}}
-  - : 声音停止播放的时间，单位为秒。 这个值在 {{domxref("AudioContext")}} 用于其 {{domxref("AudioContext.currentTime", "currentTime")}} 属性的同一时间坐标系统中指定。 省略这个参数，设置为 0 或者负值都会立即停止播放。
+  - : 声音停止播放的时间，单位为秒。这个值在 {{domxref("AudioContext")}} 用于其 {{domxref("AudioContext.currentTime", "currentTime")}} 属性的同一时间坐标系统中指定。省略这个参数，设置为 0 或者负值都会立即停止播放。
 
 ### Return value
 
@@ -54,7 +54,7 @@ osc.stop(context.currentTime + 1);
 
 ## Browser compatibility
 
-{{Compat("api.AudioScheduledSourceNode.stop")}}
+{{Compat}}
 
 ## See also
 

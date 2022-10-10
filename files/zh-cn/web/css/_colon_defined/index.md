@@ -90,7 +90,7 @@ simple-custom:defined {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.defined")}}
+{{Compat}}
 
 ## 参见
 

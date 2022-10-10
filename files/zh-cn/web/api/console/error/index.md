@@ -37,7 +37,7 @@ console.exception(msg [, subst1, ..., substN]);
 
 ## 浏览器兼容性
 
-{{Compat("api.console.error")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -99,7 +99,7 @@ A better way to track changes to the user's selection is to watch for the {{even
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLSelectElement")}}
+{{Compat}}
 
 ## 參見
 

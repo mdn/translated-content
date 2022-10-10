@@ -46,7 +46,7 @@ transform-box: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.transform-box")}}
+{{Compat}}
 
 ## See also
 

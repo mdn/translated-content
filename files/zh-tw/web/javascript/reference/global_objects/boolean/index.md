@@ -112,7 +112,7 @@ var bObjProto = new Boolean({});
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Boolean")}}
+{{Compat}}
 
 ## 參見
 

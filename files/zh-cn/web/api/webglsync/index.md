@@ -32,7 +32,7 @@ var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLSync.WebGLSync")}}
+{{Compat}}
 
 ## 相关链接
 

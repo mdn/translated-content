@@ -42,7 +42,7 @@ if (OH_NOES_WE_NEED_TO_CANCEL_RIGHT_NOW_OR_ELSE) {
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.abort")}}
+{{Compat}}
 
 ## 相关链接
 

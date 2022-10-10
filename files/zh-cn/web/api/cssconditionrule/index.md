@@ -36,7 +36,7 @@ The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupi
 
 ## Browser compatibility
 
-{{Compat("api.CSSConditionRule")}}
+{{Compat}}
 
 ## See also
 

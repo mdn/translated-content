@@ -44,4 +44,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/developer
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.developer")}}
+{{Compat}}

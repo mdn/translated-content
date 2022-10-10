@@ -132,7 +132,7 @@ function keyEvent(event) {
 
 ## Browser compatibility
 
-{{Compat("api.KeyboardEvent.location")}}
+{{Compat}}
 
 ## See also
 

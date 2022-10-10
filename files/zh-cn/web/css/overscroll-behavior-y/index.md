@@ -58,7 +58,7 @@ overflow: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.overscroll-behavior-y")}}
+{{Compat}}
 
 ## 参见
 

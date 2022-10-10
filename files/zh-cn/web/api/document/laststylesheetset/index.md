@@ -32,7 +32,7 @@ else {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.lastStyleSheetSet")}}
+{{Compat}}
 
 ## 相关链接
 

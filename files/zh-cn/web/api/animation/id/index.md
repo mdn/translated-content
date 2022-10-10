@@ -35,7 +35,7 @@ rabbitDownAnimation.effect.id = "rabbitGo";
 
 ## 浏览器支持
 
-{{Compat("api.Animation.id")}}
+{{Compat}}
 
 ## 相关文档
 

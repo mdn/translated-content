@@ -56,7 +56,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## 浏览器兼容性
 
-{{Compat("api.Geolocation.clearWatch")}}
+{{Compat}}
 
 ## 相关链接
 

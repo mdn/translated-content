@@ -13,7 +13,7 @@ This tutorial describes how to use the `<canvas>` element to draw WebGL graphics
 
 ## Before you start
 
-Using the `<canvas>` element is not very difficult, but you do need a basic understanding of [HTML](/pt-BR/docs/Web/HTML "HTML") and [JavaScript](/pt-BR/docs/Web/JavaScript "JavaScript"). The `<canvas>` element and WebGL are not supported in some older browsers, but are supported in recent versions of all major browsers. In order to draw graphics on the canvas we use a JavaScript context object, which creates graphics on the fly.
+Using the `<canvas>` element is not very difficult, but you do need a basic understanding of [HTML](/pt-BR/docs/Web/HTML) and [JavaScript](/pt-BR/docs/Web/JavaScript). The `<canvas>` element and WebGL are not supported in some older browsers, but are supported in recent versions of all major browsers. In order to draw graphics on the canvas we use a JavaScript context object, which creates graphics on the fly.
 
 ## In this tutorial
 

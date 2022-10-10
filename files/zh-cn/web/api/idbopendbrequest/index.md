@@ -85,7 +85,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.IDBOpenDBRequest")}}
+{{Compat}}
 
 ## See also
 

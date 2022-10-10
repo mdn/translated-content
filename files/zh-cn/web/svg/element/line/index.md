@@ -45,11 +45,11 @@ slug: Web/SVG/Element/line
 
 ## DOM 接口
 
-该元素实现了`SVGLineElement接口`
+该元素实现了 `SVGLineElement` 接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.line")}}
+{{Compat}}
 
 ## 相关内容
 

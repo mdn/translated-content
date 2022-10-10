@@ -68,4 +68,4 @@ outline: multiple offsets;
 
 ## Browser compatibility
 
-{{Compat("css.properties.outline-offset")}}
+{{Compat}}

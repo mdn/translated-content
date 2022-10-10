@@ -163,7 +163,7 @@ These methods are obsolete and should not be used, even if a browser still suppo
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## See also
 

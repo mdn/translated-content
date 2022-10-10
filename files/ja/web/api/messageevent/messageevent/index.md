@@ -2,6 +2,7 @@
 title: MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`MessageEvent()`** コンストラクターは新しい {{domxref("MessageEvent")}} オブジェクトのインスタンスを作成します。

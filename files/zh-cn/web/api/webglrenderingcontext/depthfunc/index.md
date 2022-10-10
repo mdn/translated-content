@@ -34,7 +34,7 @@ void gl.depthFunc(func);
 
 ## 示例
 
-深度测试默认是禁用的。 要启用或禁用深度测试，请使用带有参数 `gl.DEPTH_TEST` 的 {{domxref("WebGLRenderingContext.enable", "enable()")}} 和 {{domxref("WebGLRenderingContext.disable", "disable()")}} 方法。
+深度测试默认是禁用的。要启用或禁用深度测试，请使用带有参数 `gl.DEPTH_TEST` 的 {{domxref("WebGLRenderingContext.enable", "enable()")}} 和 {{domxref("WebGLRenderingContext.disable", "disable()")}} 方法。
 
 ```js
 gl.enable(gl.DEPTH_TEST);
@@ -54,7 +54,7 @@ gl.getParameter(gl.DEPTH_FUNC) === gl.NEVER;
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.depthFunc")}}
+{{Compat}}
 
 ## 另请参阅
 

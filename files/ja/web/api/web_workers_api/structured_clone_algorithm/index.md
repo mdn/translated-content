@@ -4,6 +4,7 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 l10n:
   sourceCommit: 0be2158a250dc07932891157dad8341d90a44930
 ---
+
 {{DefaultAPISidebar("Web Workers API") }}
 
 **構造化複製アルゴリズム** は複雑な JavaScript オブジェクトをコピーするためのアルゴリズムです。これは {{domxref("Worker.postMessage()", "postMessage()")}} を介して[ワーカー](/ja/docs/Web/API/Worker)と送受信するとき、 [IndexedDB](/ja/docs/Glossary/IndexedDB) にオブジェクトを格納するとき、[他の API](#関連情報) のためにオブジェクトをコピーするときなど、データ転送時に内部で用いられています。

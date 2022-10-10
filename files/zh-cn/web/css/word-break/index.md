@@ -109,7 +109,7 @@ word-break: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.word-break")}}
+{{Compat}}
 
 ## 相关链接
 

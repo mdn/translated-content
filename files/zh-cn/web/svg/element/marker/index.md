@@ -68,4 +68,4 @@ slug: Web/SVG/Element/marker
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.marker")}}
+{{Compat}}

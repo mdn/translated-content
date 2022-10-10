@@ -2,6 +2,7 @@
 title: '<figure>: キャプションが付けられる図要素'
 slug: Web/HTML/Element/figure
 ---
+
 {{HTMLRef}}
 
 **HTML の `<figure>` (キャプションが付けられる図) 要素**は、図表などの自己完結型のコンテンツを表し、任意で {{HTMLElement("figcaption")}} 要素を使用して表されるキャプションを付けることができます。図、すなわちキャプションとその中身は一つの単位として参照されます。

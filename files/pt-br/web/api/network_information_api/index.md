@@ -39,5 +39,5 @@ updateConnectionStatus();
 ## Veja também
 
 - {{ spec("http://dvcs.w3.org/hg/dap/raw-file/tip/network-api/Overview.html", "Network Information API Specification", "ED") }}
-- [Online and offline events](/en/Online_and_offline_events "en/Online_and_offline_events")
+- [Online and offline events](/en/Online_and_offline_events)
 - {{domxref("window.navigator.connection")}}

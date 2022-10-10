@@ -53,7 +53,7 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 ## 浏览器兼容性
 
-{{Compat("api.Geolocation.getCurrentPosition")}}
+{{Compat}}
 
 ## 请参考
 

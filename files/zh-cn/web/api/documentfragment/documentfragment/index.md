@@ -25,7 +25,7 @@ fragment = new DocumentFragment();
 
 ## 浏览器兼容性
 
-{{Compat("api.DocumentFragment.DocumentFragment")}}
+{{Compat}}
 
 ## 参见
 

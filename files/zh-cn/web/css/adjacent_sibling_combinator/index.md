@@ -42,9 +42,7 @@ li:first-of-type + li {
 
 ### 结果
 
-- One
-- Two!
-- Three
+{{EmbedLiveSample("示例", "100%", 100)}}
 
 ## 规范
 
@@ -52,7 +50,7 @@ li:first-of-type + li {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.adjacent_sibling")}}
+{{Compat}}
 
 ## 参阅
 

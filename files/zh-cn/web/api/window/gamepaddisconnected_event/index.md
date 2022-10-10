@@ -29,7 +29,7 @@ window.ongamepaddisconnected = function() {
 
 ## Browser compatibility
 
-{{Compat("api.Window.ongamepaddisconnected")}}
+{{Compat}}
 
 ## See also
 

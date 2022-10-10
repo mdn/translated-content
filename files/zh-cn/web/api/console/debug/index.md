@@ -13,7 +13,7 @@ slug: Web/API/Console/debug
 
 ```plain
 console.debug(对象 1 [, 对象 2, ..., 对象 N]);
-console.debug(消息[, 字符串1, ..., 字符串N]);
+console.debug(消息 [, 字符串 1, ..., 字符串 N]);
 ```
 
 ### 参数

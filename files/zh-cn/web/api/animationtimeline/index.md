@@ -18,7 +18,7 @@ slug: Web/API/AnimationTimeline
 
 ## 浏览器兼容性
 
-{{Compat("api.AnimationTimeline")}}
+{{Compat}}
 
 ## 参见
 

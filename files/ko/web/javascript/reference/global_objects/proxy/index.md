@@ -289,7 +289,7 @@ console.log(products.number); // 3
 
 ### A complete `traps` list example (완벽한 `traps` 리스트 예제)
 
-이제 완벽한 `traps` 리스트를 생성하기 위해서, 이러한 유형의 작업에 특히 적합한 _non native_ 객체를 프록시화 할 것이다. \[a simple cookie framework]\(https\://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework)에 의해 생성된 전역 객체 `docCookies`이다.
+이제 완벽한 `traps` 리스트를 생성하기 위해서, 이러한 유형의 작업에 특히 적합한 _non native_ 객체를 프록시화 할 것이다. [a simple cookie framework](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework) 에 의해 생성된 전역 객체 `docCookies`이다.
 
 ```js
 /*

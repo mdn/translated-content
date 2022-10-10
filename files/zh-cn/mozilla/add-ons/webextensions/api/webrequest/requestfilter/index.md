@@ -22,7 +22,7 @@ webRequest 事件参数
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.webRequest.RequestFilter")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

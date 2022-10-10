@@ -74,14 +74,8 @@ function nome([param[, param[, ... param]]]) {
 
 - `nome`
   - : O nome da função.
-
-<!---->
-
 - `param`
   - : O nome de um argumento a ser passado para a função.
-
-<!---->
-
 - `instruções`
   - : As instruções que formam o corpo da função.
 
@@ -97,14 +91,8 @@ function [nome]([param] [, param] [..., param]) {
 
 - `nome`
   - : O nome da função. Pode ser omitido, e neste caso a função é conhecida como função anônima.
-
-<!---->
-
 - `param`
   - : O nome de um argumento a ser passado para a função.
-
-<!---->
-
 - `instruções`
   - : As instruções que formam o corpo da função.
 
@@ -139,9 +127,6 @@ new Function (arg1, arg2, ... argN, corpoDaFuncao)
 
 - `arg1, arg2, ... argN`
   - : Nenhum ou mais nomes para serem usados pela função como nomes formais de argumentos. Cada um deve ser uma string em conformidade com as regras para um identificador JavaScript válido ou uma lista com tais strings separadas por vírgula; por exemplo "x", "oValor", ou "a, b".
-
-<!---->
-
 - _corpoDaFuncao_
   - : Uma string contento as instruções JavaScript correspondendo a definição da função.
 

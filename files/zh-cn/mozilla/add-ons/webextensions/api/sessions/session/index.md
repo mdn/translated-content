@@ -31,7 +31,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.sessions.Session")}}
+{{Compat}}
 
 > **备注：** 该 API 基于 Chromium 的[`chrome.sessions`](https://developer.chrome.com/extensions/sessions)API。
 >

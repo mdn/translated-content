@@ -131,7 +131,7 @@ margin: auto;               /* 上边和下边：无外边距 */
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.margin")}}
+{{Compat}}
 
 ## 参阅
 

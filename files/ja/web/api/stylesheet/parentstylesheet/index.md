@@ -2,6 +2,7 @@
 title: StyleSheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
 ---
+
 {{ApiRef}}
 
 ## 概要

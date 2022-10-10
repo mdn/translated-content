@@ -141,7 +141,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 
 ## Browser compatibility
 
-{{COMPAT("api.SVGSVGElement")}}
+{{Compat}}
 
 ## 也可以看看
 

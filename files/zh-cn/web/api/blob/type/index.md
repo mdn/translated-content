@@ -43,7 +43,7 @@ for (var i = 0; i < files.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Blob.type")}}
+{{Compat}}
 
 ## 参见
 

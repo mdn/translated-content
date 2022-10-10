@@ -95,7 +95,7 @@ MY_ARRAY = ['B'];
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.const")}}
+{{Compat}}
 
 ## 參閱
 

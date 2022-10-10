@@ -67,7 +67,7 @@ div {
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-inline-color")}}
+{{Compat}}
 
 ## See also
 

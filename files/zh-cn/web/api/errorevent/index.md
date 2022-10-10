@@ -37,7 +37,7 @@ slug: Web/API/ErrorEvent
 
 ## 浏览器兼容性
 
-{{Compat("api.ErrorEvent")}}
+{{Compat}}
 
 ## 相关链接
 

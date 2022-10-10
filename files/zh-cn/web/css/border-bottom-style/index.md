@@ -100,7 +100,7 @@ tr, td {
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-bottom-style")}}
+{{Compat}}
 
 ## See also
 

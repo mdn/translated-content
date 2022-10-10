@@ -29,4 +29,4 @@ slug: Web/API/AmbientLightSensor
 
 ## 浏览器兼容性
 
-{{Compat("api.AmbientLightSensor")}}
+{{Compat}}

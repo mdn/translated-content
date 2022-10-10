@@ -37,7 +37,7 @@ console.log(speechRecognitionList[0].weight); // 应该返回 1 - 与上面第�
 
 ## 浏览器兼容性
 
-{{Compat("api.SpeechGrammar.src")}}
+{{Compat}}
 
 ## 相关链接
 

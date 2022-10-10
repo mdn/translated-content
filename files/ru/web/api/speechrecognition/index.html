@@ -5,13 +5,13 @@ translation_of: Web/API/SpeechRecognition
 ---
 <p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
 
-<p><font face="consolas, Liberation Mono, courier, monospace">Интерфейс<strong> Распознавание голоса</strong></font> <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> является интерфейсом контроллера для сервиса распознавания; который так же перехватывает событие {{domxref("SpeechRecognitionEvent")}}, отправленное сервисом распознавания.</p>
+<p>Интерфейс<strong> Распознавание голоса</strong> <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> является интерфейсом контроллера для сервиса распознавания; который так же перехватывает событие {{domxref("SpeechRecognitionEvent")}}, отправленное сервисом распознавания.</p>
 
 <h2 id="Конструктор">Конструктор</h2>
 
 <dl>
  <dt>{{domxref("SpeechRecognition.SpeechRecognition()")}}</dt>
- <dd>Создаёт новый <font face="consolas, Liberation Mono, courier, monospace">объект </font><code>SpeechRecognition</code> .</dd>
+ <dd>Создаёт новый объект <code>SpeechRecognition</code> .</dd>
 </dl>
 
 <h2 id="Свойства">Свойства</h2>
@@ -26,7 +26,7 @@ translation_of: Web/API/SpeechRecognition
  <dt>{{domxref("SpeechRecognition.continuous")}}</dt>
  <dd>Проверяет возвращается ли непрерывные результаты или вернулся только один. По умолчанию для одиночного значение (<code>false</code>.)</dd>
  <dt>{{domxref("SpeechRecognition.interimResults")}}</dt>
- <dd>Контроллирует, следует ли возвращать промежуточные результаты (<code>true</code>) или нет (<code>false</code>.) Промежуточные результаты это результаты которые ещё не завершены ( например {{domxref("SpeechRecognitionResult.isFinal")}} свойство <font face="consolas, Liberation Mono, courier, monospace">ложно</font>.)</dd>
+ <dd>Контроллирует, следует ли возвращать промежуточные результаты (<code>true</code>) или нет (<code>false</code>.) Промежуточные результаты это результаты которые ещё не завершены ( например {{domxref("SpeechRecognitionResult.isFinal")}} свойство ложно.)</dd>
  <dt>{{domxref("SpeechRecognition.maxAlternatives")}}</dt>
  <dd>Устанавливает максимальное количество предоставленных результатов {{domxref("SpeechRecognitionAlternative")}}. По умолчанию значение 1.</dd>
  <dt>{{domxref("SpeechRecognition.serviceURI")}}</dt>
@@ -62,7 +62,7 @@ translation_of: Web/API/SpeechRecognition
 
 <h2 id="Методы">Методы</h2>
 
-<p><em><font face="consolas, Liberation Mono, courier, monospace">Распознавание речи также наследует методы от своего родительского интерфейса</font>, {{domxref("EventTarget")}}.</em></p>
+<p><em>Распознавание речи также наследует методы от своего родительского интерфейса, {{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("SpeechRecognition.abort()")}}</dt>
@@ -122,97 +122,7 @@ recognition.onresult = function(event) {
 
 <h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
 
-<div>Таблица совместимостей</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>CompatChrome(33)}}property_prefix("webkit")<sup>[1]</sup></td>
-   <td>Не совместима<sup>[2]</sup></td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-  </tr>
-  <tr>
-   <td><code>постоянная</code></td>
-   <td>CompatChrome(33) <sup>[1]</sup></td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>Неизвестно</td>
-   <td>Неизвестная совместимая версия [1]</td>
-   <td>Совместим с GeckoMobile(44)</td>
-   <td>2.5</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-  </tr>
-  <tr>
-   <td><code>continuous</code></td>
-   <td>Неизвестно</td>
-   <td>Неизвестная совместимая версия[1]</td>
-   <td>Совместимость неизвестна</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<ul>
- <li>[1] Интерфейсы распознавания речи в настоящее время префиксные в Chrome, поэтому вам нужно указать имена интерфейсов, например, префикс. WebkitSpeechRecognition; вы также должны будете обслуживать свой код через веб-сервер для распознавания работы</li>
- <li>[2] Может быть активирована через <code>media.webspeech.recognition.enable</code> флаг в <a>about:config</a> на телефоне. Не реализовано вообще на рабочем столе Firefox - см.{{bug(1248897)}}.</li>
-</ul>
-
-<h3 id="Firefox_OS_разрешения">Firefox OS разрешения</h3>
-
-<p>Чтобы использовать распознавание речи в приложении, вам необходимо указать следующие разрешения в своём <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
-
-<pre class="brush: json">"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}</pre>
-
-<p>Вам также нужно привилегированное приложение, поэтому вам необходимо также включить его:</p>
-
-<pre class="brush: json">  "type": "privileged"</pre>
+{{Compat}}
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

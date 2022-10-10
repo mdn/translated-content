@@ -17,7 +17,7 @@ slug: Web/SVG/Attribute/mask
 | 可变性 | Yes                                                              |
 
 - [\<funcIRI>](/zh-CN/SVG/Content_type#FuncIRI)
-  - : 对同一 SVG 文档片段内部别的图形对象的一个引用 ，这个图形对象将用作遮罩。这个引用的句法与{{ cssxref("uri","CSS URI") }}的句法相同。
+  - : 对同一 SVG 文档片段内部别的图形对象的一个引用，这个图形对象将用作遮罩。这个引用的句法与{{ cssxref("uri","CSS URI") }}的句法相同。
 
 ## 示例
 

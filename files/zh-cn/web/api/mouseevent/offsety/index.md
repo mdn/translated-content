@@ -23,7 +23,7 @@ var yOffset = instanceOfMouseEvent.offsetY;
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.offsetY")}}
+{{Compat}}
 
 ## 相关内容
 

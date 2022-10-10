@@ -62,7 +62,7 @@ console.log(fileWithoutDate.lastModified); //returns current time
 
 ## 浏览器兼容性
 
-{{Compat("api.File.lastModified")}}
+{{Compat}}
 
 ## 参见
 

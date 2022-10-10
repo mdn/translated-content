@@ -46,7 +46,7 @@ You can [see this example in action](https://fullscreen-requestfullscreen-demo.g
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.backdrop")}}
+{{Compat}}
 
 ## 参见
 

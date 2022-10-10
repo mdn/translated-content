@@ -86,7 +86,7 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
 
 ## Browser compatibility
 
-{{Compat("api.HTMLDialogElement.show")}}
+{{Compat}}
 
 ## See also
 

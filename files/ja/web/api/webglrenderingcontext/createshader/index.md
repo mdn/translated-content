@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.createShader()
 slug: Web/API/WebGLRenderingContext/createShader
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **WebGLRenderingContext.createShader()** メソッドは、{{domxref("WebGLShader")}} を作成します。それからさらに、 {{domxref("WebGLRenderingContext.shaderSource()")}} と {{domxref("WebGLRenderingContext.compileShader()")}} を用いて設定できます。

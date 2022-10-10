@@ -77,7 +77,7 @@ video.ondurationchange = (event) => {
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.durationchange_event")}}
+{{Compat}}
 
 ## Related Events
 

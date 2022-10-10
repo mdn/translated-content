@@ -37,7 +37,7 @@ console.log(denseKeys);  // [0, 1, 2]
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.keys")}}
+{{Compat}}
 
 ## 參見
 

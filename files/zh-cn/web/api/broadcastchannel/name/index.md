@@ -36,7 +36,7 @@ bc.close();
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel.name")}}
+{{Compat}}
 
 ## 参见
 

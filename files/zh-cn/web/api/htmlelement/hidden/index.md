@@ -115,7 +115,7 @@ h1 {
 
 ## 浏览器兼容
 
-{{Compat("api.HTMLElement.hidden")}}
+{{Compat}}
 
 ## 参见
 

@@ -75,4 +75,4 @@ div {
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-right")}}
+{{Compat}}

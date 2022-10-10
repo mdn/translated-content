@@ -25,4 +25,4 @@ var mode = shadowRoot.mode
 
 ## Browser compatibility
 
-{{Compat("api.ShadowRoot.mode")}}
+{{Compat}}

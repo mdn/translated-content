@@ -2,6 +2,7 @@
 title: linearGradient
 slug: Web/SVG/Element/linearGradient
 ---
+
 {{SVGRef}}
 
 ## 概要

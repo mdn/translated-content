@@ -52,4 +52,4 @@ function closeCurrentWindow() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.close")}}
+{{Compat}}

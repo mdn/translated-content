@@ -13,4 +13,4 @@ slug: Web/API/ImageBitmap/height
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageBitmap.height")}}
+{{Compat}}

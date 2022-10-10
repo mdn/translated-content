@@ -52,7 +52,7 @@ caches.open('v1').then(function(cache) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Cache.matchAll")}}
+{{Compat}}
 
 ## See also
 

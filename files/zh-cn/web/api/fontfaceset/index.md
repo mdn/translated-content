@@ -42,4 +42,4 @@ slug: Web/API/FontFaceSet
 
 ## Browser compatibility
 
-{{Compat("api.FontFaceSet")}}
+{{Compat}}

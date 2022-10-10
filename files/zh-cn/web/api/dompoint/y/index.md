@@ -23,7 +23,7 @@ var yPos = DOMPoint.y;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMPointReadOnly.y")}}
+{{Compat}}
 
 ## 相关链接
 

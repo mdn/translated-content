@@ -47,7 +47,7 @@ slug: Web/CSS/::cue
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.cue")}}
+{{Compat}}
 
 ## 参考
 

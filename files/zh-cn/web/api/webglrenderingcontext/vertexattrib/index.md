@@ -51,7 +51,7 @@ gl.vertexAttrib3fv(a_foobar, floatArray);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.vertexAttrib1f")}}
+{{Compat}}
 
 ## 相关链接
 

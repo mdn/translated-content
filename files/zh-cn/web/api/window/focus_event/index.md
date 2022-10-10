@@ -91,9 +91,9 @@ window.addEventListener('focus', play);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.focus_event")}}
+{{Compat}}
 
 ## 参考
 
 - 相关联事件： {{domxref("Window/blur_event", "blur")}}
-- `Element` 目标上的这个事件: {{domxref("Element/focus_event", "focus")}} 事件
+- `Element` 目标上的这个事件：{{domxref("Element/focus_event", "focus")}} 事件

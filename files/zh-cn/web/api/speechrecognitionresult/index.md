@@ -45,7 +45,7 @@ recognition.onresult = function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.SpeechRecognitionResult")}}
+{{Compat}}
 
 ## See also
 

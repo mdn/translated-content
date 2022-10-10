@@ -39,4 +39,4 @@ if (navigator.storage && navigator.storage.persist)
 
 ## 浏览器兼容性
 
-{{Compat("api.StorageManager.persist")}}
+{{Compat}}

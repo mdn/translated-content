@@ -73,7 +73,7 @@ field.addEventListener("change", function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 各浏览器支持的 localStorage 和 sessionStorage 容量上限不同。测试页面 [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/)。
 
 > **备注：** 从 iOS 5.1 之后，移动端的 Safari 将 localStorage 数据存储在 cache 文件中，在操作系统的要求下，会偶尔进行清除，特别是空间不足时。

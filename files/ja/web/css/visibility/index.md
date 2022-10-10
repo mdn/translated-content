@@ -2,6 +2,7 @@
 title: visibility
 slug: Web/CSS/visibility
 ---
+
 {{CSSRef}}
 
 **`visibility`** は CSS のプロパティで、文書のレイアウトを変更することなく要素を表示したり非表示にしたりします。このプロパティは {{HTMLElement("table")}} の行や列を隠すこともできます。

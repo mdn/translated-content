@@ -72,7 +72,7 @@ original_slug: Web/API/Document/dragover_event
 
 ## 浏览器支持
 
-{{Compat("api.Document.dragover_event")}}
+{{Compat}}
 
 ## 相关
 

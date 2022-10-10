@@ -143,7 +143,7 @@ More complex well-known [polyfills](http://remysharp.com/2010/10/08/what-is-a-po
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.JSON")}}
+{{Compat}}
 
 ## 參見
 

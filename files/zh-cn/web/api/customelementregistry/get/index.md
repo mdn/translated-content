@@ -47,4 +47,4 @@ let ctor = customElements.get('my-paragraph');
 
 ## 浏览器兼容性
 
-{{Compat("api.CustomElementRegistry.get")}}
+{{Compat}}

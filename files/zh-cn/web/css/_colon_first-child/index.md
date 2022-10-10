@@ -94,7 +94,7 @@ ul li:first-child {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.first-child")}}
+{{Compat}}
 
 ## 相关链接
 

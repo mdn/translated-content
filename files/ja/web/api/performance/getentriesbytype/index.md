@@ -2,6 +2,7 @@
 title: performance.getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`getEntriesByType()`** メソッドは、指定された型の {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。リストのメンバー（エントリー）は、明示的な時点でパフォーマンス*マーク*または*メジャー*を作成することで（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すことで）作成できます。

@@ -8,7 +8,7 @@ slug: Web/CSS/Layout_mode
 - **块布局**：用来布置文件。块布局包含以文档为中心的功能，例如 [浮动](/zh-CN/docs/Web/CSS/float)元素或将其放置在[多列](/zh-CN/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)上的功能。
 - **行内布局**：用来布置文本。
 - **表格布局**：用来布置表格。
-- **定位布局**：用来对那些与其他元素无交互的定位元素进行布置 。
+- **定位布局**：用来对那些与其他元素无交互的定位元素进行布置。
 - [**弹性盒子布局**](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)：用来布置那些可以顺利调整大小的复杂页面。{{experimental_inline}}
 - [**网格布局**](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)：用来布置那些与一个固定网格相关的元素。{{experimental_inline}}
 

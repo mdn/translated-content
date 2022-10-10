@@ -113,7 +113,7 @@ xhrButtonAbort.addEventListener('click', () => {
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest.abort_event")}}
+{{Compat}}
 
 ## See also
 

@@ -9,9 +9,9 @@ slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 
 `aria-labelledby 属性与`[aria-describedby](/zh-CN/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute)属性非常相似：用一个标签描述某一对象的本质，可能会提供一些用户需要了解的额外信息。
 
-`aria-labelledby 属性并不仅仅用于表单元素，也可以用来分配静态文本给控件、元素组、面板组以及包含标题和定义等内容的区域等。下方的示例将会展示如何针对这些情况运用这一属性的更多信息。`
+`aria-labelledby` 属性并不仅仅用于表单元素，也可以用来分配静态文本给控件、元素组、面板组以及包含标题和定义等内容的区域等。下方的示例将会展示如何针对这些情况运用这一属性的更多信息。
 
-`aria-labelledby 属性可以与 HTML 元素 label 联合使用，用于提高对于不支持 ARIA 技术的用户代理的兼容性。`
+`aria-labelledby` 属性可以与 HTML 元素 label 联合使用，用于提高对于不支持 ARIA 技术的用户代理的兼容性。
 
 这一属性可以用于任何典型的 HTML 表单元素，不仅限于已分配 ARIA role 的元素。
 
@@ -21,7 +21,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 
 ### 对于用户代理和辅助技术的可能影响
 
-当 `aria-labelledby` 和 `aria-label` 都被使用时, 用户代理在生成可访问的名称属性时将为 `aria-labelledby` 分配更高的优先级。
+当 `aria-labelledby` 和 `aria-label` 都被使用时，用户代理在生成可访问的名称属性时将为 `aria-labelledby` 分配更高的优先级。
 
 **注意：** 由于不同的辅助技术对于这一技术的处理可能不同，以上提供的信息尽是诸多可能的一种，而非一般情况。
 

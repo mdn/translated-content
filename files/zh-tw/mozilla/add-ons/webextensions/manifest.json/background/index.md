@@ -110,4 +110,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 ## 瀏覽器兼容
 
-{{Compat("webextensions.manifest.background", 10)}}
+{{Compat}}

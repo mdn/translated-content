@@ -12,7 +12,7 @@ slug: Web/API/ImageBitmap
 - {{domxref("ImageBitmap.height")}} {{readonlyInline}}
   - : 无符号长整型数值，表示 ImageData 的 CSS 像素单位的高度。
 - {{domxref("ImageBitmap.width")}} {{readonlyInline}}
-  - : 无符号长整型数值， 表示 ImageData 的 CSS 像素单位的宽度。
+  - : 无符号长整型数值，表示 ImageData 的 CSS 像素单位的宽度。
 
 ## 方法
 
@@ -25,7 +25,7 @@ slug: Web/API/ImageBitmap
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageBitmap")}}
+{{Compat}}
 
 ## 另见
 

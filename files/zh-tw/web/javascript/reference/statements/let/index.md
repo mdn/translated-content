@@ -232,7 +232,7 @@ console.log(b); // 2
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.let")}}
+{{Compat}}
 
 ## 參見
 

@@ -30,4 +30,4 @@ WindowClient.navigate(url).then(function(WindowClient) {
 
 ## 浏览器兼容性
 
-{{Compat("api.WindowClient.navigate")}}
+{{Compat}}

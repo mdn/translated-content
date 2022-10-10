@@ -29,7 +29,7 @@ console.groupCollapsed();
 
 ## 浏览器
 
-{{Compat("api.console.groupCollapsed")}}
+{{Compat}}
 
 ## 相关链接
 

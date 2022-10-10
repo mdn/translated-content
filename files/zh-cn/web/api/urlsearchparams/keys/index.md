@@ -40,8 +40,8 @@ key2
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.keys")}}
+{{Compat}}
 
 ## 另请参考
 
-- 其他 URL 相关接口: {{domxref("URL")}}, {{domxref("URLUtils")}}.
+- 其他 URL 相关接口：{{domxref("URL")}}, {{domxref("URLUtils")}}.

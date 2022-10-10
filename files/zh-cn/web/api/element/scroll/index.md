@@ -46,4 +46,4 @@ element.scroll({
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.scroll")}}
+{{Compat}}

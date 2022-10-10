@@ -100,7 +100,7 @@ tr, td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-right-style")}}
+{{Compat}}
 
 ## 参考
 

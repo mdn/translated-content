@@ -100,7 +100,7 @@ slug: Web/HTML/Element/article
 
 ## 浏览器兼容
 
-{{Compat("html.elements.article")}}
+{{Compat}}
 
 ## 相关文章
 

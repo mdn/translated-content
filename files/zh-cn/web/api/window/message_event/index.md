@@ -20,4 +20,4 @@ window.onmessage = function(event) { ... }
 
 ## 浏览器兼容性
 
-{{Compat("api.WindowEventHandlers.onmessage")}}
+{{Compat}}

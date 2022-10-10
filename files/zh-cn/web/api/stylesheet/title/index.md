@@ -21,4 +21,4 @@ The title is often specified in the {{domxref("StyleSheet/OwnerNode", "ownerNode
 
 ## 浏览器兼容性
 
-{{Compat("api.StyleSheet.title")}}
+{{Compat}}

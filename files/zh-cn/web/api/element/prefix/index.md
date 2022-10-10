@@ -33,7 +33,7 @@ This will only work when a namespace-aware parser is used, i.e. when a document 
 
 ## Browser compatibility
 
-{{Compat("api.Element.prefix")}}
+{{Compat}}
 
 ## See also
 

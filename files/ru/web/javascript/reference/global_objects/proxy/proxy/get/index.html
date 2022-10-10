@@ -9,8 +9,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 
 <div>{{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">const <var>p</var> = new Proxy(<var>target</var>, {
@@ -29,10 +27,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
  <dt><code><var>property</var></code></dt>
  <dd>Наименование или {{jsxref("Symbol")}} получаемого свойства. </dd>
  <dt><code><var>receiver</var></code></dt>
- <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Прокси или объект, наследуемый от прокси.</span></span></span>.</dd>
+ <dd>Прокси или объект, наследуемый от прокси..</dd>
 </dl>
 
-<h3 id="Возвращаемое_значение"><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Возвращаемое значение</span></span></span></h3>
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
 <p>Метод <code>get()</code> может возвращать значение.</p>
 
@@ -55,8 +53,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 <p>Если следующие инварианты нарушены, то прокси выбросит {{jsxref("TypeError")}}:</p>
 
 <ul>
- <li><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Значение, сообщаемое для свойства, должно быть таким же, как значение соответствующего свойства целевого объекта, если свойство целевого объекта является неперезаписываемым, не настраиваемым свойством собственных данных.</span></span></span></li>
- <li><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Значение, сообщаемое для свойства, должно быть </span></span></span>undefined, <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>если соответствующее свойство целевого объекта не является настраиваемым собственным свойством доступа, которое</span></span></span> <code>undefined</code> как и его атрибут <code>[[Get]]</code> attribute.</li>
+ <li>Значение, сообщаемое для свойства, должно быть таким же, как значение соответствующего свойства целевого объекта, если свойство целевого объекта является неперезаписываемым, не настраиваемым свойством собственных данных.</li>
+ <li>Значение, сообщаемое для свойства, должно быть undefined, если соответствующее свойство целевого объекта не является настраиваемым собственным свойством доступа, которое <code>undefined</code> как и его атрибут <code>[[Get]]</code> attribute.</li>
 </ul>
 
 <h2 id="Примеры">Примеры</h2>

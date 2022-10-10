@@ -142,7 +142,7 @@ fileInput.addEventListener('change', handleSelected);
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.load_event")}}
+{{Compat}}
 
 ## 请参阅
 

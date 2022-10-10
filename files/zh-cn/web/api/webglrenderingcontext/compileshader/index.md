@@ -14,7 +14,7 @@ void gl.compileShader(shader);
 ### 参数
 
 - shader
-  - : 一个片元或顶点着色器 （{{domxref("WebGLShader")}}）.
+  - : 一个片元或顶点着色器（{{domxref("WebGLShader")}}）.
 
 ## 示例
 
@@ -30,7 +30,7 @@ gl.compileShader(shader);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.compileShader")}}
+{{Compat}}
 
 ## 更多：
 

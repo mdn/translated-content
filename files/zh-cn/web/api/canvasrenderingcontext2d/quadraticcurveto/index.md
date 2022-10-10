@@ -179,7 +179,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.quadraticCurveTo")}}
+{{Compat}}
 
 - 接口定义，{{domxref("CanvasRenderingContext2D")}}
 - [WikiPedia article on Bézier curves](http://en.wikipedia.org/wiki/B%C3%A9zier_curve).

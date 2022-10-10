@@ -13,7 +13,7 @@ slug: Web/API/HTMLMediaElement/crossOrigin
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.crossOrigin")}}
+{{Compat}}
 
 ## 更多
 

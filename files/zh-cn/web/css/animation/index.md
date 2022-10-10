@@ -307,7 +307,7 @@ window.addEventListener('load', function () {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ### Quantum CSS notes
 

@@ -31,7 +31,7 @@ slug: Web/HTML/Element/frameset
 
 ## Browser compatibility
 
-{{Compat("html.elements.frameset")}}
+{{Compat}}
 
 ## 参见
 

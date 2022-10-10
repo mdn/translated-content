@@ -40,7 +40,7 @@ function init() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.onresourcetimingbufferfull")}}
+{{Compat}}
 
 ## 参见
 

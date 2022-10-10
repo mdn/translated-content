@@ -73,7 +73,7 @@ new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
 
 ## 浏览器支持
 
-{{Compat("javascript.statements.import_meta")}}
+{{Compat}}
 
 ## See also
 

@@ -154,7 +154,7 @@ Last, there are some utility methods, useful for apps that host a browser {{HTML
 
 ## Browser compatibility
 
-{{Compat("api.HTMLIFrameElement")}}
+{{Compat}}
 
 ## See also
 

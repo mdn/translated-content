@@ -37,4 +37,4 @@ TBD
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMException.DOMException")}}
+{{Compat}}

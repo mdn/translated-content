@@ -22,7 +22,7 @@ This API has no official W3C or WHATWG specification.
 
 ## Browser compatibility
 
-{{Compat("api.FileSystemDirectoryReader")}}
+{{Compat}}
 
 ## See also
 

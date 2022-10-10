@@ -37,7 +37,7 @@ self.addEventListener('push', function(event) {
 
 ## Browser Compatibility
 
-{{Compat("api.PushMessageData.json")}}
+{{Compat}}
 
 ## See also
 

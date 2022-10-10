@@ -144,7 +144,7 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## Browser compatibility
 
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 ## 参考
 

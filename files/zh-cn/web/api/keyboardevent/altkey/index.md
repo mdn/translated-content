@@ -53,7 +53,7 @@ You can also use the SHIFT key together with the ALT key.
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.altKey")}}
+{{Compat}}
 
 ## 参考
 

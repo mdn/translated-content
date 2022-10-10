@@ -91,7 +91,7 @@ window.addEventListener("load", drawCanvas);
 
 ### `fillStyle` 使用 `for` 循环的例子
 
-在这个例子中， 我们使用两个 `for` 循环绘制一个矩形表格，每个单元格都有不同的颜色。 最终的结果图像看起来像屏幕截图，其实没有令人惊叹的事情发生。我们使用两个变量 i 和 j 为每一个单元格生成唯一的 RGB 颜色，并且只改变红色和绿色的数值。蓝色通道的值是固定不变的。通过修改这些通道，你能生成各种各样的调色板。通过逐步地增加，你能实现类似 Photoshop 的调色板。
+在这个例子中，我们使用两个 `for` 循环绘制一个矩形表格，每个单元格都有不同的颜色。最终的结果图像看起来像屏幕截图，其实没有令人惊叹的事情发生。我们使用两个变量 i 和 j 为每一个单元格生成唯一的 RGB 颜色，并且只改变红色和绿色的数值。蓝色通道的值是固定不变的。通过修改这些通道，你能生成各种各样的调色板。通过逐步地增加，你能实现类似 Photoshop 的调色板。
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
@@ -118,11 +118,11 @@ for (var i=0;i<6;i++){
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.fillStyle")}}
+{{Compat}}
 
 ### WebKit/Blink-specific 注解
 
-- 支持 WebKit- 和 Blink-based 的浏览器中， 有一个不标准的、被反对的方法 `ctx.setFillColor()` 已经实现。
+- 支持 WebKit- 和 Blink-based 的浏览器中，有一个不标准的、被反对的方法 `ctx.setFillColor()` 已经实现。
 
   ```js
   setFillColor(color, optional alpha);

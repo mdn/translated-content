@@ -40,4 +40,4 @@ alert(new XMLSerializer().serializeToString(docu));
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.createCDATASection")}}
+{{Compat}}

@@ -19,7 +19,7 @@ number = sel.anchorOffset
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.anchorOffset")}}
+{{Compat}}
 
 ## 相关内容
 

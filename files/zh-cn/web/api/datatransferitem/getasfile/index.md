@@ -62,7 +62,7 @@ function drop_handler(ev) {
 
 ## 浏览器兼容
 
-{{Compat("api.DataTransferItem.getAsFile")}}
+{{Compat}}
 
 ## 查看更多
 

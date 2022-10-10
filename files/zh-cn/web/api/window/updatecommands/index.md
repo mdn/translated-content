@@ -29,4 +29,4 @@ DOM 0 级。不属于规范。
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.updateCommands")}}
+{{Compat}}

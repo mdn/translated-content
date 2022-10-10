@@ -170,7 +170,7 @@ pre {
 
 ## 浏览器兼容
 
-{{Compat("css.properties.left")}}
+{{Compat}}
 
 ## 参见
 

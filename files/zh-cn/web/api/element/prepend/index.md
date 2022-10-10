@@ -102,7 +102,7 @@ with(parent) {
 
 ## 兼容性
 
-{{Compat("api.Element.prepend")}}
+{{Compat}}
 
 ## See also
 

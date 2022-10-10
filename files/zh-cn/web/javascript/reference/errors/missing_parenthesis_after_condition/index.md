@@ -55,7 +55,7 @@ if (done is true) {
 // SyntaxError: missing ) after condition
 ```
 
-相反你需要使用正确的[比较操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)， 如下：
+相反你需要使用正确的[比较操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)，如下：
 
 ```js example-good
 if (done === true) {

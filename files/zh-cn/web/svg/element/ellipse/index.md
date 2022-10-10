@@ -43,7 +43,7 @@ slug: Web/SVG/Element/ellipse
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.ellipse")}}
+{{Compat}}
 
 ## 参见
 

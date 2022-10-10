@@ -25,14 +25,13 @@ Não há nenhuma limitação para a profundidade e a imbricação das listas def
   <tbody>
     <tr>
       <td>
-        <a href="/en/HTML/Content_categories" title="en/HTML/Content categories"
+        <a href="/en/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </td>
       <td>
         <a
           href="/en/HTML/Content_categories#flow_content"
-          title="en/HTML/Content categories#Flow content"
           >Flutuantes</a
         >
       </td>
@@ -72,8 +71,6 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
   - : Este atributo booleano sugere que a lista será processada em um modelo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.
 
     > **Note:** **Nota de utilização:** Não aplique este atributo, que foi preterido - o elemento {{ HTMLElement("ul") }} deve ser definido utilizando-se a folha de estilos [CSS](/en/CSS). Para dar um efeito similar ao atributo compacto, a propriedade [line-height](/en/CSS/line-height) (espaçamento), da [CSS](/en/CSS), pode ser utilizada com um valor de 80%.
-
-<!---->
 
 - {{ htmlattrdef("type") }}{{ Deprecated_inline() }}
 

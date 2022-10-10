@@ -24,4 +24,4 @@ CSS 字体加载 API 为您提供了动态加载字体资源时的 events 和 in
 
 ## 浏览器兼容性
 
-{{Compat("api.FontFace")}}
+{{Compat}}

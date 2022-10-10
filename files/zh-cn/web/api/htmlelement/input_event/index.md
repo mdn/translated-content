@@ -77,7 +77,7 @@ function updateValue(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.input_event")}}
+{{Compat}}
 
 \[1] 在 Gecko 12.0 {{geckoRelease("12.0")}} 之前，用户在输入法中输入时，或者 dead keys were used on Mac OS X 时，Gecko 不触发 input 事件。
 

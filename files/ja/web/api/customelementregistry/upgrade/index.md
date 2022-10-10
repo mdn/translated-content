@@ -2,6 +2,7 @@
 title: CustomElementRegistry.upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 **`upgrade()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、 {{domxref("Node")}} サブツリー内のすべてのシャドウを含むカスタム要素を、メイン文書に接続する前であってもアップグレードします。

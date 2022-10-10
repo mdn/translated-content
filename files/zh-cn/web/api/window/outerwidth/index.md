@@ -27,7 +27,7 @@ outWindowWidth = window.outerWidth;
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.outerWidth")}}
+{{Compat}}
 
 ## 规范
 

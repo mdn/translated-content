@@ -35,4 +35,4 @@ for(var i = 0; i < links.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.links")}}
+{{Compat}}

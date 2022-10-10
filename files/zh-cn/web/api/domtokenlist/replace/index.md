@@ -62,4 +62,4 @@ if (result) {
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMTokenList.replace")}}
+{{Compat}}

@@ -113,7 +113,7 @@ p {
 
 ## Browser compatibility
 
-{{Compat("css.properties.background-attachment")}}
+{{Compat}}
 
 ## See also
 

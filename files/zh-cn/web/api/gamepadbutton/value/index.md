@@ -36,7 +36,7 @@ if(gp.buttons[0].value > 0) {
 
 ## 浏览器兼容性
 
-{{Compat("api.GamepadButton.value")}}
+{{Compat}}
 
 ## 另请参阅
 

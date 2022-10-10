@@ -84,7 +84,7 @@ interface CSSRule {
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSRule")}}
+{{Compat}}
 
 ## 相关
 

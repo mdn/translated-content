@@ -33,7 +33,7 @@ None.
 
 ## Browser compatibility
 
-{{Compat("api.IntersectionObserver.takeRecords")}}
+{{Compat}}
 
 ## See also
 

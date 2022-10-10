@@ -54,7 +54,7 @@ document.addEventListener('copy', function(e){
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.copy_event")}}
+{{Compat}}
 
 ## 参见
 

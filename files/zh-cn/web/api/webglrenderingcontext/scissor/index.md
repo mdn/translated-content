@@ -63,7 +63,7 @@ gl.getParameter(gl.SCISSOR_BOX);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.scissor")}}
+{{Compat}}
 
 ## 参见
 

@@ -33,7 +33,7 @@ var result = url.pathname; // Returns:"/en-US/docs/Web/API/URL/pathname"
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.pathname")}}
+{{Compat}}
 
 ## 参考
 

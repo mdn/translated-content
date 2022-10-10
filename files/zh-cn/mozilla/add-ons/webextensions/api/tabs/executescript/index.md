@@ -73,7 +73,7 @@ If any error occurs the promise will be rejected with an error message.
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs.executeScript")}}
+{{Compat}}
 
 ## Examples
 

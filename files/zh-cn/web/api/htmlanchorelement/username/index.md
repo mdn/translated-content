@@ -28,7 +28,7 @@ var result = anchor.username; // Returns:'anonymous'
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement.username")}}
+{{Compat}}
 
 ## See also
 

@@ -76,7 +76,7 @@ mediaQueryList.removeListener(handleOrientationChange);
 
 ### `MediaQueryList` 接口
 
-{{Compat("api.MediaQueryList")}}
+{{Compat}}
 
 ## 另见
 

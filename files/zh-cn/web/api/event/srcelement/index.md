@@ -17,7 +17,7 @@ slug: Web/API/Event/srcElement
 
 ## 浏览器兼容性
 
-{{Compat("api.Event.srcElement")}}
+{{Compat}}
 
 ## 相关链接
 

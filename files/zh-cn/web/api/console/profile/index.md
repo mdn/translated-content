@@ -26,7 +26,7 @@ console.profile(profileName);
 
 ## 浏览器兼容性
 
-{{Compat("api.console.profile")}}
+{{Compat}}
 
 ## 参见
 

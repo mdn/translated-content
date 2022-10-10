@@ -54,7 +54,7 @@ document.querySelector('#foo\\:bar')   // 第二个 DIV
 
 ## 浏览器兼容性
 
-{{Compat("api.DocumentFragment.querySelector")}}
+{{Compat}}
 
 ## 参考
 

@@ -41,7 +41,7 @@ slug: Web/HTML/Element/hgroup
 ## 使用笔记
 
 > **备注：** 本元素已经从 HTML5（W3C）规范中删除，但是它仍旧在 WHATWG 的 HTML 版本里。大多数浏览器都部分地实现，所以它不太可能消失。
-> 然而，考虑到\<hgroup>元素的一个关键存在目标是明确 HTML 规范中如何显示标题的轮廓算法，但因为其轮廓算法 (outline algorithm) 未在任何浏览器中实现，因此 `<hgroup> 语义仍旧是理论上的建议。`
+> 然而，考虑到\<hgroup>元素的一个关键存在目标是明确 HTML 规范中如何显示标题的轮廓算法，但因为其轮廓算法 (outline algorithm) 未在任何浏览器中实现，因此 `<hgroup>` 语义仍旧是理论上的建议。
 > HTML5 (W3C) 规范提供了如何标记[副标题，小标题，可选标题和标语](http://www.w3.org/TR/html5/common-idioms.html#sub-head)（Subheadings, subtitles, alternative titles and taglines）的建议。
 
 The `<hgroup>` element allows the primary heading for a document section to be grouped with any secondary headings—such as subheadings or alternative titles—to form a _multi-level_ heading.
@@ -96,7 +96,7 @@ That is, the rendered outline might show the primary title, _HTML_, followed by 
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.hgroup")}}
+{{Compat}}
 
 ## 参阅
 

@@ -53,7 +53,7 @@ divPai.insertBefore(sp1, sp2);
 </script>
 ```
 
-Não existe um método `insertAfter`. Mas ele pode ser emulado combinando o método `insertBefore` com [`nextSibling`](/en-US/docs/DOM/Node.nextSibling "DOM/Node.nextSibling").
+Não existe um método `insertAfter`. Mas ele pode ser emulado combinando o método `insertBefore` com [`nextSibling`](/en-US/docs/DOM/Node.nextSibling).
 
 No exemplo anterior, `sp1` poderia ser inserido após `sp2` desta forma:
 
@@ -65,7 +65,7 @@ Se `sp2` não possuir um próximo nó, significa que ele deve ser o último filh
 
 ## Exemplo 2
 
-Inserir um elemento antes do primeiro nó filho, usando a propriedade [firstChild](/pt-BR/docs/DOM/Node.firstChild "Node.firstChild").
+Inserir um elemento antes do primeiro nó filho, usando a propriedade [firstChild](/pt-BR/docs/DOM/Node.firstChild).
 
 ```js
 // Guarda a referêncis do elemento no quela nóe queremos inserir o novo nó

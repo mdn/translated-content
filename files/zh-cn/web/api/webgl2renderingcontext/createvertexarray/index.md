@@ -39,7 +39,7 @@ gl.bindVertexArray(vao);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.createVertexArray")}}
+{{Compat}}
 
 ## 另见
 

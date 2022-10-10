@@ -45,7 +45,7 @@ animation-delay: 2s, 4ms;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.animation-delay")}}
+{{Compat}}
 
 ## 参见
 

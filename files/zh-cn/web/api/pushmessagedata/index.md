@@ -57,7 +57,7 @@ self.addEventListener('push', function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.PushMessageData")}}
+{{Compat}}
 
 ## See also
 

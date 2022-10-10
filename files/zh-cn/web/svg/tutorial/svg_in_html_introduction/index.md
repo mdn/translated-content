@@ -79,7 +79,7 @@ slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 
 viewBox 属性创建了一个与 SVG 图片坐标系相关联的逻辑坐标系，通过这种方式我们的图片被放置到了一个 100x100 的视觉系中。
 
-`preserveAspectRatio 属性指定了需要预设的数据，即指定了再有效大小内图片的居中、适配图片最大宽高，并裁切掉了多余部分。`
+`preserveAspectRatio` 属性指定了需要预设的数据，即指定了再有效大小内图片的居中、适配图片最大宽高，并裁切掉了多余部分。
 
 样式属性指定了 SVG 在 form 背景中的位置。
 

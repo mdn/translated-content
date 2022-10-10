@@ -120,7 +120,7 @@ padding: 1em 3px 30px 5px;  /* 上边：1em  的内边距*/
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.padding")}}
+{{Compat}}
 
 ## 参阅
 

@@ -39,7 +39,7 @@ offsetHeight 是一个 DOM 属性，由 MSIE 首次提出。它有时被称为�
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.offsetHeight")}}
+{{Compat}}
 
 ## 相关链接
 

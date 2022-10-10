@@ -184,4 +184,4 @@ font-family: Hawaii 5-0, sans-serif;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}

@@ -20,4 +20,4 @@ SVG 样式属性是所有可以在任何 SVG 元素上指定以应用 CSS 样式
 
 ## 浏览器支持
 
-{{Compat("svg.attributes.style")}}
+{{Compat}}

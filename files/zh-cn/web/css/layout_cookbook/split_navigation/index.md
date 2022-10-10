@@ -33,7 +33,7 @@ slug: Web/CSS/Layout_cookbook/Split_Navigation
 
 #### Flexbox
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## 参见
 

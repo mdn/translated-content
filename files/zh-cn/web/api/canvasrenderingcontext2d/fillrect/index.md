@@ -108,7 +108,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.fillRect")}}
+{{Compat}}
 
 ## 参见
 

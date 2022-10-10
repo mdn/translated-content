@@ -28,7 +28,7 @@ WebGLShader gl.createShader(type);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.createShader")}}
+{{Compat}}
 
 ## 其他相关
 

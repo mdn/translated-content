@@ -30,7 +30,7 @@ var result = anchor.password; // Returns:'flabada'
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement.password")}}
+{{Compat}}
 
 ## See also
 

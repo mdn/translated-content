@@ -2,6 +2,7 @@
 title: Window.speechSynthesis
 slug: Web/API/Window/speechSynthesis
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 Window オブジェクトの `speechSynthesis` 読み取り専用プロパティは、{{domxref("SpeechSynthesis")}} オブジェクトを返します。これは、[Web Speech API](/ja/docs/Web/API/Web_Speech_API) の音声合成機能を使用するためのエントリーポイントです。

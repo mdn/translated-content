@@ -29,7 +29,7 @@ console.group();
 
 ## 浏览器兼容性
 
-{{Compat("api.console.group")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -27,4 +27,4 @@ slug: Web/API/TimeRanges
 
 ## 浏览器兼容性
 
-{{Compat("api.TimeRanges")}}
+{{Compat}}

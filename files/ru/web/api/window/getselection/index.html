@@ -15,7 +15,7 @@ translation_of: Web/API/Window/getSelection
 
 <h3 id="Значение">Значение</h3>
 
-<p><font face="consolas, Liberation Mono, courier, monospace">Объект </font>{{domxref("Selection")}}.</p>
+<p>Объект {{domxref("Selection")}}.</p>
 
 <p>При добавлении в параметр пустую строку или воспользовавшись методом {{jsxref("Selection.toString()")}} вам вернут строку, которую выделил пользователь.</p>
 
@@ -36,7 +36,7 @@ translation_of: Web/API/Window/getSelection
 
 <p>В приведённом выше примере <code>selObj.toString() автоматически задействуется, когда мы передаём в </code>{{domxref("window.alert()")}} переменную selObj как параметр, который должен быть строкой. Однако мы не можем использовать свойства и метода объекта String, как на пример : <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="JS/String.length">length</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr" title="JS/String.substr">substr</a></code>. В следствии чего, вам необходимо будет применить вручную метод   <code>toString(), как тут:</code></p>
 
-<pre class="brush:js;gutter:false;">var selectedText = selObj.toString();</pre>
+<pre class="brush:js">var selectedText = selObj.toString();</pre>
 
 <ul>
  <li><code>selObj</code> это объект <code>Selection</code>.</li>

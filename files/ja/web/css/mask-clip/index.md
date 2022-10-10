@@ -2,6 +2,7 @@
 title: mask-clip
 slug: Web/CSS/mask-clip
 ---
+
 {{CSSRef}}
 
 **`mask-clip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスクが影響する領域を指定します。要素の描画されるコンテンツはこの領域に制限されます。

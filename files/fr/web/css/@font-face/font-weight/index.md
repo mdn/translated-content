@@ -93,14 +93,11 @@ Pour les personnes ayant une vision faible, il peut être extrêmement difficile
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSS4 Fonts', '#font-prop-desc', 'font-weight')}} | {{Spec2('CSS4 Fonts')}} |              |
-| {{SpecName('CSS3 Fonts', '#font-prop-desc', 'font-weight')}} | {{Spec2('CSS3 Fonts')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-weight")}}
+{{Compat}}
 
 ## Voir aussi
 

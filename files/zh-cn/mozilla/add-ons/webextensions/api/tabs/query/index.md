@@ -119,7 +119,7 @@ let querying = browser.tabs.query({currentWindow: true, active: true});
 querying.then(logTabs, onError);
 ```
 
-Get tabs for all HTTP and HTTPS URLs under or any of its subdomains:`"mozilla.org"`
+Get tabs for all HTTP and HTTPS URLs under or any of its subdomains: `"mozilla.org"`
 
 ```js
 function logTabs(tabs) {
@@ -141,7 +141,7 @@ querying.then(logTabs, onError);
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs.query")}}
+{{Compat}}
 
 > **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >

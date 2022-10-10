@@ -58,4 +58,4 @@ window.history.go(0);
 
 ## 浏览器兼容性
 
-{{Compat("api.History.go")}}
+{{Compat}}

@@ -32,7 +32,7 @@ var result = anchor.toString();
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLAnchorElement.toString")}}
+{{Compat}}
 
 ## 也可以看看
 

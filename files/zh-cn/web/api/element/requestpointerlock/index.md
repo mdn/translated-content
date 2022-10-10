@@ -21,7 +21,7 @@ instanceOfElement.requestPointerLock();
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -33,7 +33,7 @@ Fetch API は (ネットワーク越しの通信を含む) リソース取得の
   - [2018 年 4 月](https://github.com/whatwg/fetch/pull/585)、に仕様の既定の認証情報ポリシーが `'same-origin'` に変更され、古いネイティブの fetch が Firefox 61.0b13, Safari 12, Chrome 68 のバージョンのブラウザーで更新されました。
   - これらのブラウザーより古いバージョンをターゲットにしている場合は、 Cookie/ユーザーログイン状態の影響を受ける可能性のあるすべての API リクエストに `'same-origin'` を[初期化オプション](/ja/docs/Web/API/fetch#parameters) に設定した認証情報を必ず含めてください。
 
-> **Note:** Fetch API の詳しい利用方法は [Fetch の使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)を参照してください。また [Fetch の基本概念](/ja/docs/Web/API/Fetch_API/Basic_concepts)では、Fetch API の基本概念が解説されています。
+> **メモ:** Fetch API の詳しい利用方法は [Fetch の使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)を参照してください。また [Fetch の基本概念](/ja/docs/Web/API/Fetch_API/Basic_concepts)では、Fetch API の基本概念が解説されています。
 
 ### フェッチの中止
 

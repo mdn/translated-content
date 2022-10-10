@@ -52,7 +52,7 @@ slug: Web/SVG/Element/style
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.style")}}
+{{Compat}}
 
 ## 参见
 

@@ -55,7 +55,7 @@ document.onpointerlockchange = (event) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.pointerlockchange_event")}}
+{{Compat}}
 
 ## 参考
 

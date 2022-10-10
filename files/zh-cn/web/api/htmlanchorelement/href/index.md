@@ -28,7 +28,7 @@ var result = anchor.href; // Returns: 'https://developer.mozilla.org/en-US/HTMLH
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement.href")}}
+{{Compat}}
 
 ## See also
 

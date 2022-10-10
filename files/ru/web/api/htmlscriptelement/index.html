@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLScriptElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">HTML-элементы {{HTMLElement("script")}} предоставляют <strong><code>HTMLScriptElement</code></strong> интерфейс, который предоставляет специальные свойства и методы для манипулирования поведением и выполнением <code>&lt;script&gt;</code> элементов (за пределами унаследованного {{domxref("HTMLElement")}} интерфейса).</span></p>
+<p>HTML-элементы {{HTMLElement("script")}} предоставляют <strong><code>HTMLScriptElement</code></strong> интерфейс, который предоставляет специальные свойства и методы для манипулирования поведением и выполнением <code>&lt;script&gt;</code> элементов (за пределами унаследованного {{domxref("HTMLElement")}} интерфейса).</p>
 
 <p>JavaScript файлы должны обслуживаться с  <code>application/javascript</code> <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>, но браузеры снисходительны и блокируют их только, если скрипты обслуживаются с типом изображение (<code>image/*</code>), типом видео (<code>video/*</code>), типом аудио (<code>audio/*</code>), или <code>text/csv</code>. Если скрипт заблокирован, его элемент получает событие {{event("error")}}; в противном случае, он получает событие {{event("success")}}.</p>
 
@@ -152,6 +152,6 @@ affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js
  <li>HTML-элемент {{HTMLElement("script")}}</li>
  <li>HTML-элемент {{HTMLElement("noscript")}}</li>
  <li>{{domxref("document.currentScript")}}</li>
- <li><a href="/en-US/docs/DOM/Using_web_workers">Web Workers</a> (<span class="tlid-translation translation" lang="ru"><span title="">фрагменты кода, похожие на скрипты, но выполняемые в другом глобальном контексте)</span></span></li>
+ <li><a href="/en-US/docs/DOM/Using_web_workers">Web Workers</a> (фрагменты кода, похожие на скрипты, но выполняемые в другом глобальном контексте)</li>
  <li><a href="http://pieisgood.org/test/script-link-events/">Ryan Grove's &lt;script&gt; and &lt;link&gt; node event compatibility chart</a></li>
 </ul>

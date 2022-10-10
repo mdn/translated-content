@@ -32,7 +32,7 @@ _None; 而且，`PeriodicWave` 继承任何属性。_
 
 ## 浏览器兼容性
 
-{{Compat("api.PeriodicWave")}}
+{{Compat}}
 
 ## 参见
 

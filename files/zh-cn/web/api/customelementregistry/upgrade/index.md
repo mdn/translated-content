@@ -44,4 +44,4 @@ console.assert(el instanceof SpiderMan);    // upgraded!
 
 ## 浏览器支持
 
-{{Compat("api.CustomElementRegistry.upgrade")}}
+{{Compat}}

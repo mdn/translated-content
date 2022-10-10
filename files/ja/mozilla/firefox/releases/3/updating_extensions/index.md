@@ -3,6 +3,7 @@ title: Updating extensions for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
 original_slug: Updating_extensions_for_Firefox_3
 ---
+
 このドキュメントは、拡張機能を更新して Firefox 3 に対応させたいと考える開発者のために役立つ情報を提供します。
 
 読み進める前に、私たちからひとつだけ参考になるヒントをお教えしましょう。もしあなたの拡張機能に必要な変更がインストール定義ファイル内の `maxVersion` 項目の更新だけで、なおかつ [addons.mozilla.org](https://addons.mozilla.org) に拡張機能を登録している場合、新しいバージョンの拡張機能をアップロードする必要はありません！ AMO 上の「開発者用コントロールパネル」を使って `maxVersion` を更新するだけで作業は完了です。この方法なら、拡張機能が再度レビューに回ることもありません。
@@ -29,7 +30,7 @@ original_slug: Updating_extensions_for_Firefox_3
 
 これまでに、一部の拡張機能に影響すると思われる API の変更がいくつも行われています (まだ今後も変更は行われるでしょう)。私たちは現在、これらの変更の完全なリストを作成中です。
 
-> **Note:** もしあなたの拡張機能が、[インストール定義ファイル](../../../../ja/Install_Manifests) の代わりに、まだ [`Install.js`](../../../../ja/Install.js) スクリプトを使っている場合は、今回インストール定義ファイルに移行していただく必要があります。Firefox 3 は XPI ファイル内の `install.js` スクリプトをサポートしません。
+> **メモ:** もしあなたの拡張機能が、[インストール定義ファイル](../../../../ja/Install_Manifests) の代わりに、まだ [`Install.js`](../../../../ja/Install.js) スクリプトを使っている場合は、今回インストール定義ファイルに移行していただく必要があります。Firefox 3 は XPI ファイル内の `install.js` スクリプトをサポートしません。
 
 #### インストール定義ファイルに翻訳を追加する
 

@@ -79,7 +79,7 @@ For more examples, see [Using audio and video in Firefox](/zh-CN/docs/Using_HTML
 
 ## Browser compatibility
 
-{{Compat("html.elements.source")}}
+{{Compat}}
 
 ## See also
 

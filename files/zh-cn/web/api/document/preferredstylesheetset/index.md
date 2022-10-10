@@ -33,7 +33,7 @@ if (document.preferredStyleSheetSet) {
 
 ## 浏览器相容性
 
-{{Compat("api.Document.preferredStyleSheetSet")}}
+{{Compat}}
 
 ## 参见
 

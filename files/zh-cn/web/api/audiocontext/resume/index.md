@@ -44,7 +44,7 @@ susresBtn.onclick = function() {
 
 ## 兼容性
 
-{{Compat("api.AudioContext.resume")}}
+{{Compat}}
 
 ## 参见
 

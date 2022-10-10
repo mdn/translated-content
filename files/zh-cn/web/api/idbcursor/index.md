@@ -31,7 +31,7 @@ slug: Web/API/IDBCursor
 - {{domxref("IDBCursor.key")}} {{readonlyInline}}
   - : 返回记录中游标位置的有效主键。如果游标在区间之外，将会设置成 `undefined`。游标主键可以是任意的数据类型（data type）。
 - {{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}
-  - : 返回游标当前有效的主键。如果游标当前正在被迭代或者已经在迭代在区间范围外，将会被设置成 `undefined` 。 游标主键可以是任意的时间类型（data type）。
+  - : 返回游标当前有效的主键。如果游标当前正在被迭代或者已经在迭代在区间范围外，将会被设置成 `undefined` 。游标主键可以是任意的时间类型（data type）。
 
 ## 常量
 
@@ -46,7 +46,7 @@ slug: Web/API/IDBCursor
 
 ## 示例
 
-在这个简单的代码片段中，我们创建了一个事务和检索一个对象存储，之后使用一个游标遍历存储对象中所有的记录。游标不是必须使用主键来选则数据库，我们可以把它全部拿出来。同时需要注意在每次循环遍历中，你可以在当前记录下的游标对象中使用 `cursor.value.foo` 抓取数据。对于完整的工作示例，请查看我们的 [IDBCursor example](https://github.com/mdn/IDBcursor-example/) ([在线查看示例](http://mdn.github.io/IDBcursor-example/))。
+在这个简单的代码片段中，我们创建了一个事务和检索一个对象存储，之后使用一个游标遍历存储对象中所有的记录。游标不是必须使用主键来选则数据库，我们可以把它全部拿出来。同时需要注意在每次循环遍历中，你可以在当前记录下的游标对象中使用 `cursor.value.foo` 抓取数据。对于完整的工作示例，请查看我们的 [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([在线查看示例](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/))。
 
 ```js
 function displayData() {
@@ -74,7 +74,7 @@ function displayData() {
 
 ## Browser compatibility
 
-{{Compat("api.IDBCursor")}}
+{{Compat}}
 
 ## See also
 

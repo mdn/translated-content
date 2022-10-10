@@ -31,7 +31,7 @@ console.log(`temp 的值为：${temp}`)
 
 ## 浏览器兼容性
 
-{{Compat("api.console.log")}}
+{{Compat}}
 
 ## 规范
 

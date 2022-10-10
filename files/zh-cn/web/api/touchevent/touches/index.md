@@ -47,4 +47,4 @@ someElement.addEventListener('touchstart', function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.TouchEvent.touches")}}
+{{Compat}}

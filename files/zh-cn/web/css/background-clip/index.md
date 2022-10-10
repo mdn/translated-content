@@ -88,7 +88,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-clip")}}
+{{Compat}}
 
 ## 参见
 

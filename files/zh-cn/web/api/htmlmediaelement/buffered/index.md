@@ -40,7 +40,7 @@ console.log(obj.buffered.end(0));//第一个缓存结束的区域
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.buffered")}}
+{{Compat}}
 
 ## 也可以看看
 

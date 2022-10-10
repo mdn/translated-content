@@ -22,7 +22,7 @@ This event handler is not currently part of any specification.
 
 ## Browser compatibility
 
-{{Compat("api.Window.ondeviceorientationabsolute")}}
+{{Compat}}
 
 ## See also
 

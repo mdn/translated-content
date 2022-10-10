@@ -27,4 +27,4 @@ var ambientLightSensor = new AmbientLightSensor(options)
 
 ## 浏览器兼容性
 
-{{Compat("api.AmbientLightSensor.AmbientLightSensor")}}
+{{Compat}}

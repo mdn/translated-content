@@ -29,7 +29,7 @@ p.then(function(stream) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStream.id")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -57,7 +57,7 @@ To use the sessions API you must have the "sessions" [API permission](/zh-CN/Add
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.sessions")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

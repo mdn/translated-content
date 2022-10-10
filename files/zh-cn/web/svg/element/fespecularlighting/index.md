@@ -35,7 +35,7 @@ slug: Web/SVG/Element/feSpecularLighting
 
 ## DOM 接口
 
-该元素实现了`SVGFESpecularLightingElement接口。`
+该元素实现了 `SVGFESpecularLightingElement` 接口。
 
 ## 参见
 

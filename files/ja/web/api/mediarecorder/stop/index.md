@@ -2,6 +2,7 @@
 title: MediaRecorder.stop()
 slug: Web/API/MediaRecorder/stop
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.stop()`** メソッド（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、メディアキャプチャを停止するために使用します。

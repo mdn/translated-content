@@ -59,4 +59,4 @@ console.log(clientDataObj.origin);    // the window.origin
 
 ## 浏览器兼容性
 
-{{Compat("api.AuthenticatorResponse.clientDataJSON")}}
+{{Compat}}

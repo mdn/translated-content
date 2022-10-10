@@ -20,7 +20,7 @@ slug: Web/HTML/Element/noscript
 
    <p>当脚本被禁用并且它不是 {{HTMLElement("head")}} 元素的子元素时：任何 transparent content 都可以，但是在它的后代中必须没有 <code>&lt;noscript&gt;</code>元素。</p>
 
-   <p>否则：flow content 或 phrasing content 。</p>
+   <p>否则：flow content 或 phrasing content。</p>
    </td>
   </tr>
   <tr>
@@ -72,4 +72,4 @@ Rocks!
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.noscript")}}
+{{Compat}}

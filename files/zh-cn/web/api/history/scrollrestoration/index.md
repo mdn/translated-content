@@ -45,4 +45,4 @@ if (history.scrollRestoration) {
 
 ## 浏览器兼容性
 
-{{Compat("api.History.scrollRestoration")}}
+{{Compat}}

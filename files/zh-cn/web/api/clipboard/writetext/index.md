@@ -42,4 +42,4 @@ navigator.clipboard.writeText("<empty clipboard>").then(function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clipboard.writeText")}}
+{{Compat}}

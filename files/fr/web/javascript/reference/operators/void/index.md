@@ -83,17 +83,11 @@ Ainsi, la valeur de retour de la fonction `faireQQc` sera bloquée par `void` et
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaires                                         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-void-operator', 'Opérateur void')}} | {{Spec2('ESDraft')}} |                                                      |
-| {{SpecName('ES6', '#sec-void-operator', 'L\'opérateur void')}} | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ES5.1', '#sec-11.4.2', 'L\'opérateur void')}}         | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES3', '#sec-11.4.2', 'L\'opérateur void')}}         | {{Spec2('ES3')}}         |                                                      |
-| {{SpecName('ES1', '#sec-11.4.2', 'L\'opérateur void')}}         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.void")}}
+{{Compat}}
 
 ## Voir aussi
 

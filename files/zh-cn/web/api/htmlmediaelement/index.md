@@ -586,7 +586,7 @@ Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## See also
 

@@ -49,7 +49,7 @@ document.getElementById('my-checkbox').addEventListener(
 </html>
 ```
 
-Você pode ver o `preventDefault` em ação [aqui](/samples/domref/dispatchEvent.html "samples/domref/dispatchEvent.html").
+Você pode ver o `preventDefault` em ação [aqui](/samples/domref/dispatchEvent.html).
 
 O exemplo a seguir demonstra como um input com texto inválido pode ser parado ao chegar ao campo de entrada com o preventDefault().
 

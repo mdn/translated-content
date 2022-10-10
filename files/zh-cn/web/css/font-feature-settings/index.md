@@ -84,7 +84,7 @@ td.tabular { font-feature-settings: "tnum"; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-feature-settings")}}
+{{Compat}}
 
 ## 其他参考
 

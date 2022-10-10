@@ -42,7 +42,7 @@ If you want DOM to get parsed as fast as possible after the user had requested t
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.DOMContentLoaded_event")}}
+{{Compat}}
 
 ## Related Events
 

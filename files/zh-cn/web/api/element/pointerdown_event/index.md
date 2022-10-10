@@ -46,7 +46,7 @@ function init() {
 
 ## 浏览器支持
 
-{{Compat("api.GlobalEventHandlers.onpointerdown")}}
+{{Compat}}
 
 ## 参阅
 

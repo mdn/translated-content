@@ -43,4 +43,4 @@ column-rule-color: inherit;
 
 ## Browser compatibility
 
-{{Compat("css.properties.column-rule-color")}}
+{{Compat}}

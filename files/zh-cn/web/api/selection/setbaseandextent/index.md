@@ -104,7 +104,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.setBaseAndExtent")}}
+{{Compat}}
 
 ## 相关链接
 

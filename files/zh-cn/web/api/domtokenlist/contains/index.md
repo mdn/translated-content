@@ -24,7 +24,7 @@ tokenList.contains(token);
 
 ## 例子
 
-在下面的列子中，我们通过{{domxref("Element.classList")}}方法从 {{htmlelement("span")}} 元素中获取`DOMTokenList` 对象。 然后测试验证`"c"` 是否包含在列表中， 结果输出到 `<span>`标签的内容 {{domxref("Node.textContent")}}。
+在下面的列子中，我们通过{{domxref("Element.classList")}}方法从 {{htmlelement("span")}} 元素中获取`DOMTokenList` 对象。然后测试验证`"c"` 是否包含在列表中，结果输出到 `<span>`标签的内容 {{domxref("Node.textContent")}}。
 
 HTML:
 
@@ -55,4 +55,4 @@ if (result) {
 
 ## Browser compatibility
 
-{{Compat("api.DOMTokenList.contains")}}
+{{Compat}}

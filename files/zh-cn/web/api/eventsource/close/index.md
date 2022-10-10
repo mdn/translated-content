@@ -43,7 +43,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.EventSource.close")}}
+{{Compat}}
 
 ## 相关链接
 

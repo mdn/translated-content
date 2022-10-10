@@ -36,7 +36,7 @@ var pi = docu.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" ty
 docu.insertBefore(pi, docu.firstChild);
 
 alert(new XMLSerializer().serializeToString(docu));
-// 弹出框内容: <?xml-stylesheet href="mycss.css" type="text/css"?><xml/>
+// 弹出框内容：<?xml-stylesheet href="mycss.css" type="text/css"?><xml/>
 ```
 
 ## 规范

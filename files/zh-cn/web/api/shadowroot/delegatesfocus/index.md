@@ -37,4 +37,4 @@ let hostElem = shadow.delegatesFocus;
 
 ## 浏览器兼容性
 
-{{Compat("api.ShadowRoot.delegatesFocus")}}
+{{Compat}}

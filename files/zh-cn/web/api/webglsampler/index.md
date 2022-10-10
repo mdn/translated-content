@@ -31,4 +31,4 @@ var sampler = gl.createSampler();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLSampler")}}
+{{Compat}}

@@ -36,4 +36,4 @@ window.scrollTo(0, maxY);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.scrollMaxY")}}
+{{Compat}}

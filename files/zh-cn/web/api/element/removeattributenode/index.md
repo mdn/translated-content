@@ -21,10 +21,10 @@ removedAttr = element.removeAttributeNode(attributeNode)
 ```plain
 // <div id="top" align="center" />
 var d = document.getElementById("top");
-// getAttributeNode 返回指定元素的指定属性， 返回值是 Attr 节点类型
+// getAttributeNode 返回指定元素的指定属性，返回值是 Attr 节点类型
 var d_align = d.getAttributeNode("align");
 d.removeAttributeNode(d_align);
-//  现在 align 被删除了: <div id="top" />
+//  现在 align 被删除了：<div id="top" />
 ```
 
 ## 注意

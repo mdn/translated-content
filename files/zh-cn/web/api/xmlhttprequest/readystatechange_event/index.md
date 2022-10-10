@@ -45,4 +45,4 @@ xhr.send();
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.readystatechange_event")}}
+{{Compat}}

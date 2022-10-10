@@ -51,7 +51,7 @@ void gl.detachShader(program, shader);
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.detachShader")}}
+{{Compat}}
 
 ## See also
 

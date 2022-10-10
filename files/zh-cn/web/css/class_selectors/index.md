@@ -48,6 +48,6 @@ Here's another.
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.class")}}
+{{Compat}}
 
 ## See also

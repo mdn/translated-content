@@ -2,6 +2,7 @@
 title: <a>
 slug: Web/SVG/Element/a
 ---
+
 {{SVGRef}}
 
 **\<a>** は SVG の要素で、他のウェブページ、ファイル、同じページ内の場所、メールアドレス、その他の URL へのハイパーリンクを生成します。 HTML の {{htmlelement("a")}} 要素ととても良く似ています。
@@ -54,7 +55,7 @@ svg|a:hover, svg|a:active {
 
 {{EmbedLiveSample('Example', 100, 100)}}
 
-> **Warning:** この要素は [HTML の `<a>` 要素](/ja/docs/Web/HTML/Element/a)と同じタグ名なので、 `a` を CSS や {{domxref("Document.querySelector", "querySelector")}} で選択すると、誤った種類の要素に適用してしまう可能性があります。 [`@namespace` 規則](/ja/docs/Web/CSS/@namespace)で二つを区別してみてください。
+> **警告:** この要素は [HTML の `<a>` 要素](/ja/docs/Web/HTML/Element/a)と同じタグ名なので、 `a` を CSS や {{domxref("Document.querySelector", "querySelector")}} で選択すると、誤った種類の要素に適用してしまう可能性があります。 [`@namespace` 規則](/ja/docs/Web/CSS/@namespace)で二つを区別してみてください。
 
 ## 属性
 

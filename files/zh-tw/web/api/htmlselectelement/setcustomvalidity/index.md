@@ -23,7 +23,7 @@ selectElt.setCustomValidity(string);
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLSelectElement.setCustomValidity")}}
+{{Compat}}
 
 ## 參見
 

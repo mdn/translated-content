@@ -34,4 +34,4 @@ console.log("json = " + JSON.stringify(js));
 
 ## Browser compatibility
 
-{{Compat("api.Performance.toJSON")}}
+{{Compat}}

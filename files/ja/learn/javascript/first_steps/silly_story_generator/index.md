@@ -2,6 +2,7 @@
 title: バカ話ジェネレーター
 slug: Learn/JavaScript/First_steps/Silly_story_generator
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 この評価試験では、このモジュールを通して身に付けた知識を生かして、ランダムなバカ話を生成する楽しいアプリを作ります。楽しんでください！
@@ -17,7 +18,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 - GitHub からサンプル用の [HTML ファイルを取って](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html)きて自分のコンピュータの新しいディレクトリーに `index.html` という名前で保存します。ここには見た目をきれいにするため、CSS も含まれています。
 - [この生テキストを含むページ](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt)に移動してどこか別のブラウザータブで開いたままにしておきます。後で必要となります。
 
-> **Note:** 上記の手順に代わって、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価試験を実施できます。HTML、CSS、JavaScript をオンラインエディターにペーストできます。使っているオンラインエディターが独立した JavaScript パネルを持たない場合、HTML ページ内の `<script>` 要素内に書いても問題ありません。
+> **メモ:** 上記の手順に代わって、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価試験を実施できます。HTML、CSS、JavaScript をオンラインエディターにペーストできます。使っているオンラインエディターが独立した JavaScript パネルを持たない場合、HTML ページ内の `<script>` 要素内に書いても問題ありません。
 
 ## プロジェクトの要点
 

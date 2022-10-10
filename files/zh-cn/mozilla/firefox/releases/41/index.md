@@ -52,7 +52,7 @@ Highlights:
 - {{jsxref("Map.@@species", "Map[@@species]")}} 和{{jsxref("Set.@@species", "Set[@@species]")}} 获取已经被增加 ({{bug(1131043)}}).
 - 非标准 {{jsxref("Statements/let", "let expression", "#let_expressions", 1)}} 支持已经被废弃 ({{bug(1023609)}}).
 - {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment","#Destructured_parameter_with_default_value_assignment", 1)}} 现在已经被支持 ({{bug(1018628)}}).
-- Per ES2015, [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) 需要尖括号. 从现在开始语法没有尖括号将会失败 ({{bug(1150855)}}).
+- Per ES2015, [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) 需要尖括号。从现在开始语法没有尖括号将会失败 ({{bug(1150855)}}).
 - [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) (除了生成方法) 已经不再可构造 ({{bug(1059908)}} 和{{bug(1166950)}}).
 - As part of ES2015 specification compliance, parenthesized [destructuring](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](http://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
 - The [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) syntax has been added ({{bug(1141865)}}).

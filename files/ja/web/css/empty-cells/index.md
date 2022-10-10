@@ -2,6 +2,7 @@
 title: empty-cells
 slug: Web/CSS/empty-cells
 ---
+
 {{CSSRef}}
 
 **`empty-cells`** は CSS のプロパティで、{{htmlelement("table", "表")}}のセルが目に見える内容を持たない場合に、周囲の境界と背景を{{glossary("user agent", "ユーザーエージェント")}}がどのように描画するかを指定します。

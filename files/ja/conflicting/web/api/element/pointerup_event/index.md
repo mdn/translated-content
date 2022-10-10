@@ -3,6 +3,7 @@ title: 'Document: pointerup event'
 slug: conflicting/Web/API/Element/pointerup_event
 original_slug: Web/API/Document/pointerup_event
 ---
+
 {{APIRef}}
 
 `pointerup` イベントは、ポインターがアクティブではなくなったときに発生します。

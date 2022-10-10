@@ -198,4 +198,4 @@ document.body.removeAll();
 
 ## 瀏覽器相容性
 
-{{Compat("api.Node")}}
+{{Compat}}

@@ -73,7 +73,7 @@ block_2: {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.break")}}
+{{Compat}}
 
 ## 參見
 

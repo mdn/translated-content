@@ -18,7 +18,7 @@ browser-compat:
 
 A **API Push** torna possível que aplicações web recebam mensagens enviadas a elas de um servidor, indepententemente de aplicação estar ou não em primeiro plano, ou até mesmo carregada, em um agente de usuário. Isso permite que desenvolvedores entreguem notificações e atualizações assíncronas a usuários que optarem por elas, resultando num melhor engajamento com conteúdo novo oportuno.
 
-> **Nota:** Esta documentação cobre a especificação W3C da API Push; se você procura pela documentação do sistema de notificação proprietária do mecanismo push, veja[ Simple Push](/pt-BR/docs/Web/API/Simple_Push_API).
+> **Nota:** Esta documentação cobre a especificação W3C da API Push; se você procura pela documentação do sistema de notificação proprietária do mecanismo push, veja [Simple Push](/pt-BR/docs/Web/API/Simple_Push_API).
 
 ## Conceitos e uso de Push
 

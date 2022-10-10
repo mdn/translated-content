@@ -75,7 +75,7 @@ function addData() {
 
 ## 浏览器兼容性
 
-{{Compat("api.IDBObjectStore.indexNames")}}
+{{Compat}}
 
 ## 查看其它内容
 

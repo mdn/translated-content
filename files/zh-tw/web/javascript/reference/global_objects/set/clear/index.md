@@ -43,7 +43,7 @@ mySet.has('bar')  // false
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set.clear")}}
+{{Compat}}
 
 ## 另見
 

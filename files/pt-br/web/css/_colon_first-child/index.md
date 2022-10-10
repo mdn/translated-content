@@ -9,7 +9,7 @@ translation_of: Web/CSS/:first-child
 
 ## Sumário
 
-A [pseudo-classe](/en/CSS/Pseudo-classes "Pseudo-classes") de [CSS](/en/CSS "CSS") **`:first-child`** representa qualquer elemento que seja o primeiro filho de seus pais.
+A [pseudo-classe](/en/CSS/Pseudo-classes) de [CSS](/en/CSS) **`:first-child`** representa qualquer elemento que seja o primeiro filho de seus pais.
 
 ## Sintaxe
 

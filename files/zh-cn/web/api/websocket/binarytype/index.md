@@ -28,4 +28,4 @@ var binaryType = aWebSocket.binaryType;
 
 ## 浏览器兼容性
 
-{{Compat("api.WebSocket.binaryType")}}
+{{Compat}}

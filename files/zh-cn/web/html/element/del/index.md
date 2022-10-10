@@ -64,7 +64,7 @@ HTML 的 **`<del>`** 标签表示一些被从文档中删除的文字内容。�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.del")}}
+{{Compat}}
 
 ## 相关链接
 

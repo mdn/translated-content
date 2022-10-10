@@ -28,7 +28,7 @@ flag = document.implementation.hasFeature(feature, version);
 
 ## Browser compatibility
 
-{{Compat("api.DOMImplementation.hasFeature")}}
+{{Compat}}
 
 ## See also
 

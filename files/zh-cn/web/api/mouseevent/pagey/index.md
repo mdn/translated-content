@@ -25,7 +25,7 @@ var pageY = event.pageY;
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.pageY")}}
+{{Compat}}
 
 ## 更多请见
 

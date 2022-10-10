@@ -16,7 +16,7 @@ instanceOfFileReader.abort();
 ### 例外情况
 
 - `DOM_FILE_ABORT_ERR`
-  - : 对一个没有正在进行读取操作（{{domxref("FileReader.readyState","readyState")}} 不是`LOADING`）的 FileReader 进行 abort 操作，会抛出 `DOM_FILE_ABORT_ERR 错误。`
+  - : 对一个没有正在进行读取操作（{{domxref("FileReader.readyState","readyState")}} 不是 `LOADING`）的 `FileReader` 进行 `abort` 操作，会抛出 `DOM_FILE_ABORT_ERR` 错误。
 
 ## 规范
 
@@ -24,7 +24,7 @@ instanceOfFileReader.abort();
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.abort")}}
+{{Compat}}
 
 ## 相关链接
 

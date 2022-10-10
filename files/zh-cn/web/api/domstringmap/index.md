@@ -13,7 +13,7 @@ slug: Web/API/DOMStringMap
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMStringMap")}}
+{{Compat}}
 
 ## 参见
 

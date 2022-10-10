@@ -2,6 +2,7 @@
 title: 動的なスタイル情報の利用
 slug: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 ---
+
 {{DefaultAPISidebar("CSSOM")}}
 
 DOM の一部である CSS Object Model (CSSOM) では、 CSS に関する様々な情報を操作するインターフェイスを公開しています。これらは _DOM Level 2 Style_ 勧告で定義されたのち、現在ではそれを置き換える _CSS Object Model (CSSOM)_ で規格化されています。

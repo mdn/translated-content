@@ -53,7 +53,7 @@ element.addEventListener("click", function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Attr.localName")}}
+{{Compat}}
 
 ## 参考
 

@@ -19,7 +19,7 @@ altAcc = coordinates.altitudeAccuracy
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationCoordinates.altitudeAccuracy")}}
+{{Compat}}
 
 ## 請參考
 

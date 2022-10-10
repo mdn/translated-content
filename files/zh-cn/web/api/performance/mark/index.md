@@ -66,4 +66,4 @@ performance.clearMarks();
 
 ## 浏览器兼容
 
-{{Compat("api.Performance.mark")}}
+{{Compat}}

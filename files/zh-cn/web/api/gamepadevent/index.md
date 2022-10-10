@@ -44,7 +44,7 @@ window.addEventListener("gamepaddisconnected", function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.GamepadEvent")}}
+{{Compat}}
 
 ## 另请参阅
 

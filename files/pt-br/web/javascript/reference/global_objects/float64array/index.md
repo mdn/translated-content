@@ -135,6 +135,6 @@ var float64 = new Float64Array(iterable);
 
 ## See also
 
-- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays "en/JavaScript typed arrays")
+- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

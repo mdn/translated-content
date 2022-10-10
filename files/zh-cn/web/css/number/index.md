@@ -43,7 +43,7 @@ slug: Web/CSS/number
 
 ## 浏览器兼容性
 
-{{Compat("css.types.number")}}
+{{Compat}}
 
 ## 参见
 

@@ -102,7 +102,7 @@ IE11 不支持自动放置网格项目。除非用-ms-{{cssxref("grid-column")}}
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.grid-column")}}
+{{Compat}}
 
 ## 参见
 

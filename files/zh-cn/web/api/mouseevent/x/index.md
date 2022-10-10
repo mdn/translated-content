@@ -13,4 +13,4 @@ slug: Web/API/MouseEvent/x
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.x")}}
+{{Compat}}

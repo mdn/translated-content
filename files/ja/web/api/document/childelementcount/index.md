@@ -2,6 +2,7 @@
 title: Document.childElementCount
 slug: Web/API/Document/childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 **`Document.childElementCount`** は読み取り専用のプロパティで、文書の子要素の数を返します。

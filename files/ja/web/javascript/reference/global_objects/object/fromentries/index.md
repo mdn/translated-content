@@ -54,7 +54,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 ### オブジェクトの変形
 
-`Object.fromEntries`、逆のメソッド {{jsxref("Object.entries()")}}、[配列操作メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2)を使用して、以下のようにオブジェクトを変形することができます。
+`Object.fromEntries`、逆のメソッド {{jsxref("Object.entries()")}}、[配列操作メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#インスタンスメソッド)を使用して、以下のようにオブジェクトを変形することができます。
 
 ```js
 const object1 = { a: 1, b: 2, c: 3 };

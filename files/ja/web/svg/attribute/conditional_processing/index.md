@@ -2,6 +2,7 @@
 title: SVG 条件処理属性
 slug: Web/SVG/Attribute/Conditional_Processing
 ---
+
 SVG 条件処理属性は、ある SVG 要素に指定できる、その要素の外見をレンダリングするかどうかを制御するためのすべての属性です。
 
 - [requiredExtensions](#attr-requiredextensions)

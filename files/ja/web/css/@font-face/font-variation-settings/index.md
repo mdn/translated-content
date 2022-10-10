@@ -2,6 +2,7 @@
 title: font-variation-settings
 slug: Web/CSS/@font-face/font-variation-settings
 ---
+
 {{CSSRef}}
 
 **`font-variation-settings`** は CSS の記述子で、 {{cssxref("@font-face")}} ルールの中で OpenType または TrueType の低レベルのフォントバリエーションを指定することができます。

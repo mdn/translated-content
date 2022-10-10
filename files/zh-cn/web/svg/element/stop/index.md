@@ -59,7 +59,7 @@ slug: Web/SVG/Element/stop
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.stop")}}
+{{Compat}}
 
 ## 参见
 

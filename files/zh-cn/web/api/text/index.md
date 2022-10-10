@@ -32,7 +32,7 @@ New documents have a single `Text` node for each block of text. Over time, more 
 
 ## 浏览器兼容性
 
-{{Compat("api.Text")}}
+{{Compat}}
 
 ## 相关链接
 

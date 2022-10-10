@@ -51,7 +51,7 @@ name = element.localName
 
 ## 说明
 
-节点的本地名称是节点限定名的一部分出现在冒号之后。限定名通常当作特定 XML 文档命名空间的一部分。例如在限定名 `ecomm:partners 中 partners 是本地名，ecomm 是前缀。`
+节点的本地名称是节点限定名的一部分出现在冒号之后。限定名通常当作特定 XML 文档命名空间的一部分。例如在限定名 `ecomm:partners` 中 `partners` 是本地名，`ecomm` 是前缀。
 
 ```xml
 <ecomm:business id="soda_shop" type="brick_n_mortar" xmlns:ecomm="http://example.com/ecomm">
@@ -70,7 +70,7 @@ name = element.localName
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.localName")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -88,4 +88,4 @@ console.count([label]);
 
 ## 浏览器兼容性
 
-{{Compat("api.console.count")}}
+{{Compat}}

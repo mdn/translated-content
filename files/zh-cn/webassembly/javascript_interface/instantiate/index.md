@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 - 第一种主要重载方式使用 WebAssembly 二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays) 或{{jsxref("ArrayBuffer")}}形，一并进行编译和实例化。返回的 `Promise` 会携带已编译的 {{jsxref("WebAssembly.Module")}} 和它的第一个实例化对象 {{jsxref("WebAssembly.Instance")}}.
 - 第二种重载使用已编译的 {{jsxref("WebAssembly.Module")}} , 返回的 `Promise` 携带一个 `Module`的实例化对象 `Instance`. 如果这个 `Module` 已经被编译了或者是从缓存中获取的 ( [retrieved from cache](/zh-CN/docs/WebAssembly/Caching_modules)), 那么这种重载方式是非常有用的。
 
-> **警告：** 此方法不是获取 (fetch) 和实例化 wasm 模块的最具效率方法。 如果可能的话，您应该改用较新的{{jsxref("WebAssembly.instantiateStreaming()")}}方法，该方法直接从原始字节码中直接获取，编译和实例化模块，因此不需要转换为{{jsxref("ArrayBuffer")}}。
+> **警告：** 此方法不是获取 (fetch) 和实例化 wasm 模块的最具效率方法。如果可能的话，您应该改用较新的{{jsxref("WebAssembly.instantiateStreaming()")}}方法，该方法直接从原始字节码中直接获取，编译和实例化模块，因此不需要转换为{{jsxref("ArrayBuffer")}}。
 
 ## 语法
 
@@ -38,7 +38,7 @@ Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
 #### 异常
 
 - 如果参数的类型或结构不正确，将会抛出异常 {{jsxref("TypeError")}} .
-- 如果操作失败，promise 将会被 reject 掉， 根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。
+- 如果操作失败，promise 将会被 reject 掉，根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。
 
 ### 第二种重载 — 使用模块对象
 
@@ -60,15 +60,15 @@ Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
 #### 异常
 
 - 如果参数的类型或结构不正确，将抛出异常 {{jsxref("TypeError")}} 。
-- 如果操作失败，promise 将会被 reject 掉， 根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。
+- 如果操作失败，promise 将会被 reject 掉，根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。
 
-## 例子
+## 示例
 
 **提示**: 在大多数情况下，您可能需要使用{{jsxref("WebAssembly.instantiateStreaming()")}}，因为它比`instantiate()`更具效率。
 
 ### 第一种重载例子
 
-使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中， 接下来我们使用`Instance` 导出的[Exported WebAssembly](/zh-CN/docs/WebAssembly/Exported_functions) 方法。
+使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中，接下来我们使用`Instance` 导出的[Exported WebAssembly](/zh-CN/docs/WebAssembly/Exported_functions) 方法。
 
 ```js
 var importObject = {

@@ -79,7 +79,7 @@ video.ontimeupdate = (event) => {
 
 ## 浏览器兼容
 
-{{Compat("api.HTMLMediaElement.timeupdate_event")}}
+{{Compat}}
 
 ## 相关事件
 

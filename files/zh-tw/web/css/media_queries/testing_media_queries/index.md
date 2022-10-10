@@ -63,7 +63,7 @@ mql.removeListener(handleOrientationChange);
 
 ## 瀏覽器相容性
 
-{{Compat("api.MediaQueryList")}}
+{{Compat}}
 
 ## 延伸閱讀
 

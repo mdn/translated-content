@@ -98,4 +98,4 @@ scroll-page {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

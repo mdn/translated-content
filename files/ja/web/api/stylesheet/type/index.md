@@ -2,6 +2,7 @@
 title: StyleSheet.type
 slug: Web/API/StyleSheet/type
 ---
+
 {{ApiRef}}
 
 ## 概要

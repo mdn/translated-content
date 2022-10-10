@@ -45,7 +45,7 @@ See [CSS animations](/zh-CN/CSS/CSS_animations) for examples.
 
 ## 浏览器兼容
 
-{{Compat("css.properties.animation-duration")}}
+{{Compat}}
 
 ## See also
 

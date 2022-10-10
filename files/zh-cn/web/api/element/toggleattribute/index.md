@@ -87,4 +87,4 @@ if (!Element.prototype.toggleAttribute) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.toggleAttribute")}}
+{{Compat}}

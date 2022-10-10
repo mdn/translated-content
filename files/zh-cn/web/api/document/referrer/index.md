@@ -25,4 +25,4 @@ var referrer = document.referrer;
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.referrer")}}
+{{Compat}}

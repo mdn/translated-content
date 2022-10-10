@@ -2,6 +2,7 @@
 title: <feMorphology>
 slug: Web/SVG/Element/feMorphology
 ---
+
 {{SVGRef}}
 
 **`<feMorphology>`** は [SVG](/ja/docs/Web/SVG) のフィルタープリミティブで、入力画像の拡大・縮小に用いられます。このプリミティブの有用性は、特に太らせたり痩せさせたりする効果にあります。

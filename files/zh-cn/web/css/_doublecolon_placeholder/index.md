@@ -70,7 +70,7 @@ input::placeholder {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.placeholder")}}
+{{Compat}}
 
 ## 相似阅读
 

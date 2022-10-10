@@ -88,7 +88,7 @@ ctx.strokeRect(30, 30, 160, 90);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.strokeRect")}}
+{{Compat}}
 
 ## 参见
 

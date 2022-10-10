@@ -35,7 +35,7 @@ for (let count = 0; count < timeRangesObject.length; count ++) {
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.seekable")}}
+{{Compat}}
 
 ## See also
 

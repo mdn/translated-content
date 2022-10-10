@@ -11,7 +11,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 <p class="summary">Современные веб-браузеры поддерживают несколько способов хранения данных из веб-сайтов на компьютере пользователя - с разрешения пользователя - чтобы потом получать их, когда это необходимо. Это позволяет долгосрочно хранить данные, сохранять сайты или документы для использования без подключения к сети, сохранять пользовательские настройки для вашего сайта и многое другое. В этой статье объясняются основы того, как это все работает.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Что нужно знать:</th>
@@ -372,11 +372,11 @@ request.onupgradeneeded = function(e) {
 
 <p>So with this simple database schema set up, when we start adding records to the database each one will be represented as an object along these lines:</p>
 
-<pre class="brush: js"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-object"><span class="objectLeftBrace">{
-  </span><span class="nodeName">title</span><span class="objectEqual">: </span><span class="objectBox objectBox-string">"Buy milk"</span>,
-  <span class="nodeName">body</span><span class="objectEqual">: </span><span class="objectBox objectBox-string">"Need both cows milk and soya."</span>,
-  <span class="nodeName">id</span><span class="objectEqual">: </span><span class="objectBox objectBox-number">8</span></span></span></span></span><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-object"><span class="objectRightBrace">
-}</span></span></span></span></span></pre>
+<pre class="brush: js">{
+  title: "Buy milk",
+  body: "Need both cows milk and soya.",
+  id: 8
+}</pre>
 
 <h3 id="Добавляем_данные_в_базу_данных">Добавляем данные в базу данных</h3>
 

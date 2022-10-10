@@ -11,7 +11,7 @@ Extensões para Firefox são construídas usando _WebExtensions APIs_, um sistem
 
 No passado, você poderia desenvolver extensões para Firefox usando um dos três métodos diferentes: _[XUL/XPCOM overlays](/en-US/Add-ons/Overlay_Extensions), [bootstrapped extensions](/pt-BR/docs/Mozilla/Add-ons/Bootstrapped_extensions)_ ou o _[Add-on SDK](/pt-BR/docs/Mozilla/Add-ons/SDK)_. A partir do fim de Novembro de 2017, _WebExtensions APIs_ será o único meio de desenvolver extensões para Firefox, e os outros métodos serão descontinuados.
 
-Se você tem dúvidas ou sugestões, ou precisa de ajuda para migrar um _add-on_ antigo para o _WebExtensions APIs_, você pode entrar em contato conosco pela [_dev-addon mailing list_ ](https://mail.mozilla.org/listinfo/dev-addons)ou pelo canal _[#extdev](irc://irc.mozilla.org/extdev)_ no [IRC](https://wiki.mozilla.org/IRC).
+Se você tem dúvidas ou sugestões, ou precisa de ajuda para migrar um _add-on_ antigo para o _WebExtensions APIs_, você pode entrar em contato conosco pela [_dev-addon mailing list_](https://mail.mozilla.org/listinfo/dev-addons) ou pelo canal _[#extdev](irc://irc.mozilla.org/extdev)_ no [IRC](https://wiki.mozilla.org/IRC).
 
 ## Próximos passos
 

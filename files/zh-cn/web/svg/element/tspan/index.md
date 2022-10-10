@@ -43,7 +43,7 @@ slug: Web/SVG/Element/tspan
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.tspan")}}
+{{Compat}}
 
 ## 参见
 

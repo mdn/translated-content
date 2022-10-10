@@ -84,7 +84,7 @@ slider.onpointerup = stopSliding;
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.setPointerCapture")}}
+{{Compat}}
 
 ## 参见
 

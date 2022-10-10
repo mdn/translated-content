@@ -54,4 +54,4 @@ button.onauxclick = function() {
 
 ## Browser Compatibility
 
-{{Compat("api.GlobalEventHandlers.onauxclick")}}
+{{Compat}}

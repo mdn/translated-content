@@ -104,7 +104,7 @@ gl.renderbufferStorage(gl.RENDERBUFFER, gl.RGBA4, 256, 256);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.renderbufferStorage")}}
+{{Compat}}
 
 ## 另见
 

@@ -201,7 +201,7 @@ img.middle { vertical-align: middle; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.vertical-align")}}
+{{Compat}}
 
 ## 参见
 

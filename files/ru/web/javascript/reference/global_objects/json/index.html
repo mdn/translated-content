@@ -55,7 +55,7 @@ eval(code); // ошибка
 
 <p>Ниже представлен полный синтаксис JSON:</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">JSON = null
+<pre>JSON = null
     or true or false
     or JSONNumber
     or JSONString
@@ -101,7 +101,7 @@ Members = JSONString : JSON
 JSONArray = [ ]
          or [ ArrayElements ]
 ArrayElements = JSON
-             or ArrayElements , JSON</code></pre>
+             or ArrayElements , JSON</pre>
 
 <p>Во всех продукциях могут присутствовать незначащие пробельные символы, за исключением продукций <code><var>ЧислоJSON</var></code> (числа не должны содержать пробелов) и <code><var>СтрокаJSON</var></code> (где они интерпретируются как часть строки или возбуждают ошибку). Пробельными символами считаются символы табуляции (<a href="http://unicode-table.com/ru/0009/">U+0009</a>), возврата каретки (<a href="http://unicode-table.com/ru/000D/">U+000D</a>), перевода строки (<a href="http://unicode-table.com/ru/000A/">U+000A</a>) и, собственно, пробела (<a href="http://unicode-table.com/ru/0020/">U+0020</a>).</p>
 

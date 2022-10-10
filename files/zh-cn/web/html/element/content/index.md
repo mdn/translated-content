@@ -82,7 +82,7 @@ slug: Web/HTML/Element/content
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.content")}}
+{{Compat}}
 
 ## 另见
 

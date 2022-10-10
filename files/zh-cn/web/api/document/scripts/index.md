@@ -31,4 +31,4 @@ if (scripts.length) {
 
 ### 浏览器兼容性
 
-{{Compat("api.Document.scripts")}}
+{{Compat}}

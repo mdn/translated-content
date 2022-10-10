@@ -32,7 +32,7 @@ Vary: DPR, Viewport-Width, Width
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Accept-CH")}}
+{{Compat}}
 
 ## 相关内容
 

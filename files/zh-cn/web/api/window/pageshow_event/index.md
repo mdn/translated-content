@@ -57,7 +57,7 @@ window.addEventListener('load', function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.pageshow_event")}}
+{{Compat}}
 
 ## 相关事件
 

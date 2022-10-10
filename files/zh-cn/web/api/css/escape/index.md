@@ -50,7 +50,7 @@ var element = document.querySelector('a[href="#' + CSS.escape(fragment) + '"]');
 
 ## 浏览器兼容性
 
-{{Compat("api.CSS.escape")}}
+{{Compat}}
 
 ## 参见
 

@@ -19,7 +19,7 @@ var result = selectElt.checkValidity();
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLSelectElement.checkValidity")}}
+{{Compat}}
 
 ## 參見
 

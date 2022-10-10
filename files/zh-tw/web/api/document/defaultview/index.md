@@ -21,4 +21,4 @@ var win = document.defaultView;
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.defaultView")}}
+{{Compat}}

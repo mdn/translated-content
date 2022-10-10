@@ -28,20 +28,8 @@ translation_of: Web/CSS/Compositing_and_Blending
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires         |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("Compositing")}} | {{Spec2("Compositing")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `background-blend-mode`
-
-{{Compat("css.properties.background-blend-mode")}}
-
-### `isolation`
-
-{{Compat("css.properties.isolation")}}
-
-### `mix-blend-mode`
-
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}

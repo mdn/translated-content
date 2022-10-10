@@ -3,11 +3,12 @@ title: VRDisplay.depthNear
 slug: Web/API/VRDisplay/depthNear
 original_slug: Web/API/VRDevice/depthNear
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`depthNear`** は {{domxref("VRDisplay")}} インターフェイスのプロパティで、 [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の near 平面を定義している z-depth の取得と設定を行います。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 一般的には、この値をそのままにしておきますが、遅いコンピューターでパフォーマンスを向上させようとしている場合や、ニアバウンダリーをより遠くに作ることで UI が意味をなす場合などは、この値を大きくするとよいでしょう。
 

@@ -127,7 +127,7 @@ loadVideo.addEventListener('click', () => {
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.loadstart_event")}}
+{{Compat}}
 
 ## See also
 

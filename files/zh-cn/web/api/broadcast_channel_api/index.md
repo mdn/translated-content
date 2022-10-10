@@ -65,7 +65,7 @@ Broadcast Channel API 是一个非常简单的 API，内部包含了跨上下文
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel")}}
+{{Compat}}
 
 ## 另见
 

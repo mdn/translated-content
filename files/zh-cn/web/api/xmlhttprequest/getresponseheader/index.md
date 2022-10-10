@@ -46,7 +46,7 @@ client.onreadystatechange = function() { //设定侦听器 onreadystatechange。
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.getResponseHeader")}}
+{{Compat}}
 
 ## 参见
 
@@ -54,4 +54,4 @@ client.onreadystatechange = function() { //设定侦听器 onreadystatechange。
 - [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}
-- 设置请求头: {{DOMxRef("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}
+- 设置请求头：{{DOMxRef("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

@@ -60,7 +60,7 @@ var intOuterFramesetHeight = top.innerHeight;
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.innerHeight")}}
+{{Compat}}
 
 ## 标准相关信息
 

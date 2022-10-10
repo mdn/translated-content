@@ -65,4 +65,4 @@ navigator.serviceWorker.addEventListener('message', event => {
 
 ## Browser compatibility
 
-{{Compat("api.Client.postMessage")}}
+{{Compat}}

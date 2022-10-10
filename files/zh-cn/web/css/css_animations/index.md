@@ -40,7 +40,7 @@ slug: Web/CSS/CSS_Animations
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## 参考
 

@@ -76,7 +76,7 @@ The following example runs through the attribute nodes for the element in the do
 
 ## Browser compatibility
 
-{{Compat("api.Element.attributes")}}
+{{Compat}}
 
 ## See also
 

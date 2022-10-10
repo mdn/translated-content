@@ -36,7 +36,7 @@ gl.getAttribLocation(program, 'vColor');
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.getAttribLocation")}}
+{{Compat}}
 
 ## 相关资料
 

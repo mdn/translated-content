@@ -5,9 +5,9 @@ translation_of: Web/API/EventSource
 ---
 <p>{{APIRef("Websockets API")}}</p>
 
-<p><code><font face="Open Sans, Arial, sans-serif">Интерфейс </font>EventSource</code> используется для получения серверных событий (Server-sent events). Он устанавливает соединение с сервером по HTTP и получает события в формате text/event-stream без закрытия соединения.</p>
+<p><code>Интерфейс EventSource</code> используется для получения серверных событий (Server-sent events). Он устанавливает соединение с сервером по HTTP и получает события в формате text/event-stream без закрытия соединения.</p>
 
-<p><span style="line-height: 1.5;">Вы можете присвоить атрибуту <code>onmessage</code> JavaScript-функцию для получения нетипизированных сообщений (то есть сообщений без поля </span><code style="font-size: 14px;">event</code><span style="line-height: 1.5;">). Вы так же можете вызвать функцию </span><code style="font-size: 14px;">addEventListener()</code><span style="line-height: 1.5;"> для обработки событий так же, как для любого другого источника событий.</span></p>
+<p>Вы можете присвоить атрибуту <code>onmessage</code> JavaScript-функцию для получения нетипизированных сообщений (то есть сообщений без поля <code style="font-size: 14px;">event</code>). Вы так же можете вызвать функцию <code style="font-size: 14px;">addEventListener()</code> для обработки событий так же, как для любого другого источника событий.</p>
 
 <p>См. <a href="/en/Server-sent_events/Using_server-sent_events" title="en/Server-sent events/Using server-sent events">Using server-sent events</a> для более детальной информации </p>
 
@@ -98,7 +98,7 @@ translation_of: Web/API/EventSource
 
 <h3 id="close">close()</h3>
 
-<p>Закрывает соединение, если оно существует и устанавливает атрибут <code>readyState </code>в значение<font face="Consolas, Liberation Mono, Courier, monospace"> <code>CLOSED</code>.</font> Если соединение уже закрыто, этот метод ничего не делает.<font face="Consolas, Liberation Mono, Courier, monospace"> </font></p>
+<p>Закрывает соединение, если оно существует и устанавливает атрибут <code>readyState </code>в значение <code>CLOSED</code>. Если соединение уже закрыто, этот метод ничего не делает. </p>
 
 <pre class="eval">void close();
 </pre>

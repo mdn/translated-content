@@ -69,7 +69,7 @@ li:first-child{
 
 ## 瀏覽器相容性
 
-{{Compat("css.selectors.first-child")}}
+{{Compat}}
 
 ## 參見
 

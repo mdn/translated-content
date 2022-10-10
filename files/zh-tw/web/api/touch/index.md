@@ -62,7 +62,7 @@ _This interface has no method and no parent, and doesn't inherits or implements 
 
 ## 瀏覽器相容性
 
-{{Compat("api.Touch")}}
+{{Compat}}
 
 ## 參見
 

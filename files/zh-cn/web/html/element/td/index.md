@@ -116,7 +116,7 @@ slug: Web/HTML/Element/td
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.td")}}
+{{Compat}}
 
 ## 参见
 

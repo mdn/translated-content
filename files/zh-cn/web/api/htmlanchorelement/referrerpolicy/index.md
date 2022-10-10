@@ -39,7 +39,7 @@ div.appendChild(elt); // 点击该链接接时不会发送 Referer 请求头
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLAnchorElement.referrerPolicy")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -40,7 +40,7 @@ slug: Web/API/TextMetrics
 
 ## 浏览器兼容性
 
-{{Compat("api.TextMetrics")}}
+{{Compat}}
 
 ## 参见
 

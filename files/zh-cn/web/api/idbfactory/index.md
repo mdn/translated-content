@@ -58,7 +58,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.IDBFactory")}}
+{{Compat}}
 
 ## See also
 

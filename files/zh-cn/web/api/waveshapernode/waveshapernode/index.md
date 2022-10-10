@@ -36,4 +36,4 @@ _继承_ _{{domxref("AudioNodeOptions")}} 字典的参数。_
 
 ## 浏览器兼容性
 
-{{Compat("api.WaveShaperNode.WaveShaperNode")}}
+{{Compat}}

@@ -31,7 +31,7 @@ obj.controls = true;
 
 ## 浏览器兼容
 
-{{Compat("api.HTMLMediaElement.controls")}}
+{{Compat}}
 
 ## 产考文档
 

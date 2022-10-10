@@ -83,7 +83,7 @@ gl.getParameter(gl.BLEND_EQUATION_ALPHA) === gl.FUNC_ADD;
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.blendEquationSeparate")}}
+{{Compat}}
 
 ## See also
 

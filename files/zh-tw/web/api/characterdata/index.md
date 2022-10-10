@@ -45,7 +45,7 @@ _Inherits properties from its parent, {{domxref("Node")}}, and implements the {{
 
 ## 瀏覽器相容性
 
-{{Compat("api.CharacterData")}}
+{{Compat}}
 
 ## 參見
 

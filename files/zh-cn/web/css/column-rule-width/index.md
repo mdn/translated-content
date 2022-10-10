@@ -47,4 +47,4 @@ column-rule-width: inherit;
 
 ## Browser compatibility
 
-{{Compat("css.properties.column-rule-width")}}
+{{Compat}}

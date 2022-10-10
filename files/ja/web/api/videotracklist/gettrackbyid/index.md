@@ -2,6 +2,7 @@
 title: Video​Track​List​.get​Track​ById
 slug: Web/API/VideoTrackList/getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 **{{domxref("VideoTrackList")}}** の **`getTrackById()`** メソッドは、指定された文字列と {{domxref("VideoTrack.id", "id")}} が一致するトラックリストから最初の {{domxref("VideoTrack")}} オブジェクトを返します。 ID 文字列がわかっていれば、これで特定のトラックを見つけることができます。

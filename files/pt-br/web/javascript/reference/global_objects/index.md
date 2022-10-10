@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects
 
 Este capítulo documenta todos os objetos nativos do JavaScript padrão, assim como seus métodos e propriedades.
 
-O termo "objetos globais" (ou objetos nativos por padrão) aqui não deve ser confundido com o de **objeto global**. Aqui, objetos globais se referem aos **objetos no escopo global** (somente se o modo estrito/_strict mode_ do ECMAScript 5 não for usado; Nesse caso retorna {{jsxref("undefined")}}). O **objeto global** pode ser acessado usando o operador {{jsxref("Operators/this", "this")}} no escopo global. De fato, o escopo global **consiste em\_ \_**propriedades do objeto global, incluindo propriedades herdadas, se houver.
+O termo "objetos globais" (ou objetos nativos por padrão) aqui não deve ser confundido com o de **objeto global**. Aqui, objetos globais se referem aos **objetos no escopo global** (somente se o modo estrito/_strict mode_ do ECMAScript 5 não for usado; Nesse caso retorna {{jsxref("undefined")}}). O **objeto global** pode ser acessado usando o operador {{jsxref("Operators/this", "this")}} no escopo global. De fato, o escopo global **consiste em** propriedades do objeto global, incluindo propriedades herdadas, se houver.
 
 Outros objetos no escopo global também são [criados pelo desenvolvedor](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects) ou fornecido pela aplicação _host_. Os objetos disponíveis no _host_ no contexto do browser são documentados na [API reference](/pt-BR/docs/Web/API/Reference). Para maiores informações sobre as distinções entre [DOM](/pt-BR/docs/DOM/DOM_Reference) e core [JavaScript](/pt-BR/docs/Web/JavaScript), veja [visão geral das tecnologias JavaScript](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview).
 
@@ -83,15 +83,15 @@ Estes objetos representam strings e manipulam as mesmas.
 Estes objetos representam coleções de dados que são ordenados pelo valor de um índice. Isso inclui arrays (tipados) e arrays baseados em outros construtores, como `[]`.
 
 - {{jsxref("Global_Objects/Array", "Array")}}
-- [`Float32Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Float32Array "JavaScript_typed_arrays/Float32Array")
-- [`Float64Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Float64Array "JavaScript_typed_arrays/Float64Array")
-- [`Int16Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int16Array "JavaScript_typed_arrays/Int16Array")
-- [`Int32Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int32Array "JavaScript_typed_arrays/Int32Array")
-- [`Int8Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int8Array "JavaScript_typed_arrays/Int8Array")
-- [`Uint16Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint16Array "JavaScript_typed_arrays/int16Array")
-- [`Uint32Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint32Array "JavaScript_typed_arrays/Uint32Array")
-- [`Uint8Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint8Array "JavaScript_typed_arrays/int8Array")
-- [`Uint8ClampedArray`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint8ClampedArray "JavaScript_typed_arrays/Uint8ClampedArray")
+- [`Float32Array`](/en-US/docs/JavaScript_typed_arrays/Float32Array)
+- [`Float64Array`](/en-US/docs/JavaScript_typed_arrays/Float64Array)
+- [`Int16Array`](/en-US/docs/JavaScript_typed_arrays/Int16Array)
+- [`Int32Array`](/en-US/docs/JavaScript_typed_arrays/Int32Array)
+- [`Int8Array`](/en-US/docs/JavaScript_typed_arrays/Int8Array)
+- [`Uint16Array`](/en-US/docs/JavaScript_typed_arrays/Uint16Array)
+- [`Uint32Array`](/en-US/docs/JavaScript_typed_arrays/Uint32Array)
+- [`Uint8Array`](/en-US/docs/JavaScript_typed_arrays/Uint8Array)
+- [`Uint8ClampedArray`](/en-US/docs/JavaScript_typed_arrays/Uint8ClampedArray)
 - {{jsxref("Global_Objects/ParallelArray", "ParallelArray")}} {{non-standard_inline()}}
 
 ### Coleções chaveadas
@@ -139,4 +139,4 @@ Adições ao core do ECMAScript para funcionalidades sensíveis à linguagem.
 
 ### Outros
 
-- [`arguments`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)
+- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)

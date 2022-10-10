@@ -94,7 +94,7 @@ background-color: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-color")}}
+{{Compat}}
 
 ## 查看更多
 

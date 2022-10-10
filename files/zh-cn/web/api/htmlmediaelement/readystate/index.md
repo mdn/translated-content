@@ -53,7 +53,7 @@ obj.addEventListener('loadeddata', function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.readyState")}}
+{{Compat}}
 
 ## 你或许还可以看看
 

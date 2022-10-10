@@ -30,7 +30,7 @@ console.log(obj.src); // ""
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.src")}}
+{{Compat}}
 
 ## See also
 

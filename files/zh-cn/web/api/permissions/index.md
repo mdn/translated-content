@@ -37,4 +37,4 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## Browser Support
 
-{{Compat("api.Permissions")}}
+{{Compat}}

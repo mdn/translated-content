@@ -15,4 +15,4 @@ slug: Glossary/TLS
 
 ### 协议规范
 
-- [RFC 5246](https://tools.ietf.org/html/rfc5246) (传输层安全性协议， 版本：1.2)
+- [RFC 5246](https://tools.ietf.org/html/rfc5246) (传输层安全性协议，版本：1.2)

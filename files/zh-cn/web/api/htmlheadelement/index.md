@@ -16,7 +16,7 @@ _继承了父对象{{domxref("HTMLElement")}}的属性。_
 
 ## 方法
 
-_没有特殊的方法； 继承了父对象 {{domxref("HTMLElement")}} 的方法。_
+_没有特殊的方法；继承了父对象 {{domxref("HTMLElement")}} 的方法。_
 
 ## 规范
 
@@ -24,7 +24,7 @@ _没有特殊的方法； 继承了父对象 {{domxref("HTMLElement")}} 的方�
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLHeadElement")}}
+{{Compat}}
 
 ## 另见
 

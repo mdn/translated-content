@@ -146,7 +146,7 @@ Promise.race([p5, p6]).then(function(value) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise.race")}}
+{{Compat}}
 
 ## 參見
 

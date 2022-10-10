@@ -65,7 +65,7 @@ field.addEventListener("change", function() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## 相關內容
 

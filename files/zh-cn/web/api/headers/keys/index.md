@@ -42,7 +42,7 @@ vary
 
 ## 浏览器兼容
 
-{{Compat("api.Headers.keys")}}
+{{Compat}}
 
 ## 相关链接
 

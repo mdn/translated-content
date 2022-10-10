@@ -48,7 +48,7 @@ resultPara.textContent += encoded;
 
 ## 浏览器兼容性
 
-{{Compat("api.TextEncoder.encode")}}
+{{Compat}}
 
 ## 另见
 

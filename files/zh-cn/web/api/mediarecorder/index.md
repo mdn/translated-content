@@ -23,9 +23,9 @@ slug: Web/API/MediaRecorder
 - {{domxref("MediaRecorder.ignoreMutedMedia")}}
   - : 用以指定 `MediaRecorder`是否录制无声的输入源。如果这个属性是 false. 录制器对象`MediaRecorder` 会录制无声的音频或者黑屏的视频，默认值是 false
 - {{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}}
-  - : 返回视频采用的编码比率。它可能和构造函数的设置比率不同. (if it was provided).
+  - : 返回视频采用的编码比率。它可能和构造函数的设置比率不同。(if it was provided).
 - {{domxref("MediaRecorder.audioBitsPerSecond")}} {{readonlyInline}}
-  - : 返回音频采用的编码比率，它可能和构造函数中设置的比率不同. (if it was provided).
+  - : 返回音频采用的编码比率，它可能和构造函数中设置的比率不同。(if it was provided).
 
 ## 方法
 
@@ -34,7 +34,7 @@ slug: Web/API/MediaRecorder
 - {{domxref("MediaRecorder.pause()")}}
   - : 暂停媒体录制
 - {{domxref("MediaRecorder.requestData()")}}
-  - : 请求一个从开始到当前接收到的，存储为{{domxref("Blob")}}类型的录制内容. (或者是返回从上一次调用`requestData()` 方法之后到现在的内容). 调用这个方法后，录制将会继续进行，但是会创建一个新的`Blob`对象
+  - : 请求一个从开始到当前接收到的，存储为{{domxref("Blob")}}类型的录制内容。(或者是返回从上一次调用`requestData()` 方法之后到现在的内容). 调用这个方法后，录制将会继续进行，但是会创建一个新的`Blob`对象
 - {{domxref("MediaRecorder.resume()")}}
   - : 继续录制之前被暂停的录制动作。
 - {{domxref("MediaRecorder.start()")}}
@@ -153,7 +153,7 @@ if (navigator.mediaDevices) {
 
 ## Browser compatibility
 
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## See also
 

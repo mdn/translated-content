@@ -19,7 +19,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 
 ## 浏览器适配
 
-{{Compat("webextensions.api.windows.WindowState")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

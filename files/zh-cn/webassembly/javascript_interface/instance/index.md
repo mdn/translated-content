@@ -8,11 +8,11 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 
 **`WebAssembly.Instance`** 对象本身是有状态的，是 [WebAssembly.Module](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) 的一个可执行实例。`实例`包含所有的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Exported_functions)，允许从 JavaScript 调用 WebAssembly 代码。
 
-`WebAssembly.Instance()` 构造函数以同步方式实例化一个{{jsxref("WebAssembly.Module")}} 对象。 然而，通常获取实例的方法是通过异步函数{{jsxref("WebAssembly.instantiate()")}} .
+`WebAssembly.Instance()` 构造函数以同步方式实例化一个{{jsxref("WebAssembly.Module")}} 对象。然而，通常获取实例的方法是通过异步函数{{jsxref("WebAssembly.instantiate()")}} .
 
 ## 构造函数
 
-> **警告：** 由于大型模块的实例化代价极高， 开发人员应只在必须同步实例化的时候，才使用`Instance()`；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .
+> **警告：** 由于大型模块的实例化代价极高，开发人员应只在必须同步实例化的时候，才使用`Instance()`；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .
 
 ```plain
 var myInstance = new WebAssembly.Instance(module, importObject);
@@ -23,7 +23,7 @@ var myInstance = new WebAssembly.Instance(module, importObject);
 - _module_
   - : 要被实例化的 [`WebAssembly.Module`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) 对象。
 - _importObject_ {{optional_inline}}
-  - : 一个包含值的对象，导入到新创建的 `实例`, 比如函数或 [`WebAssembly.Memory`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) 对象. There must be one matching property for each declared import of `module` 否则抛出 [WebAssembly.LinkError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError) 异常。
+  - : 一个包含值的对象，导入到新创建的 `实例`, 比如函数或 [`WebAssembly.Memory`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) 对象。There must be one matching property for each declared import of `module` 否则抛出 [WebAssembly.LinkError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError) 异常。
 
 ## 实例化
 

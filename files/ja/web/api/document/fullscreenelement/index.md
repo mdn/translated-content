@@ -3,6 +3,7 @@ title: DocumentOrShadowRoot.fullscreenElement
 slug: Web/API/Document/fullscreenElement
 original_slug: Web/API/DocumentOrShadowRoot/fullscreenElement
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 **`DocumentOrShadowRoot.fullscreenElement`** プロパティは読み取り専用で、この文書内で現在全画面モードで表示されている {{ domxref("Element") }} を返し、全画面モードを使用していない場合は `null` を返します。

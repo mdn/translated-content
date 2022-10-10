@@ -64,7 +64,7 @@ arr4.flat();
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.Array.flat")}}
+{{Compat}}
 
 ## 参见
 

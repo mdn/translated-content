@@ -36,7 +36,7 @@ myArrayBuffer.copyFromChannel(anotherArray,1,0);
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBuffer.copyFromChannel")}}
+{{Compat}}
 
 ## See also
 

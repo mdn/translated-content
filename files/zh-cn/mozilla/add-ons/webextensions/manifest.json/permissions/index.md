@@ -103,7 +103,7 @@ API 权限有关键字指定，每个关键字标志着一类 WebExtension API �
 
 在大部分情况下这种权限仅仅允许你访问 API，除了以下情况：
 
-- `tabs`让你可以访问 [`一部分特权API`](/zh-CN/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`。在 Firefox 中你也需要`tabs`来将 queryInfo 中的 url 参数加入 [`tabs.query()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). 剩余的`tabs` API 能在不要求任何权限的情况被使用
+- `tabs` 让你可以访问[一部分特权 API](/zh-CN/Add-ons/WebExtensions/API/tabs)：`Tab.url`、`Tab.title` 和 `Tab.faviconUrl`。在 Firefox 中你也需要 `tabs` 来将 queryInfo 中的 url 参数加入 [`tabs.query()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。剩余的 `tabs` API 能在不要求任何权限的情况被使用
 - `webRequestBlocking` 允许你是用“blocking”参数，所以你可以 [修改或取消 requests](/zh-CN/Add-ons/WebExtensions/API/WebRequest).
 - `downloads.open` 让你使用 {{WebExtAPIRef("downloads.open()")}} API.
 
@@ -164,4 +164,4 @@ API 权限有关键字指定，每个关键字标志着一类 WebExtension API �
 
 本页的兼容列表是从结构化数据生成的。如果你想参与修改此数据，请参考 <https://github.com/mdn/browser-compat-data> 并发送 pull 请求。
 
-{{Compat("webextensions.manifest.permissions")}}
+{{Compat}}

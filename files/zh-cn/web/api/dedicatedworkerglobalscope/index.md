@@ -82,7 +82,7 @@ _该接口从 {{domxref("WorkerGlobalScope")}} 接口以及它的父接口 {{dom
 
 ## 浏览器兼容性
 
-{{Compat("api.DedicatedWorkerGlobalScope")}}
+{{Compat}}
 
 ## 参见
 

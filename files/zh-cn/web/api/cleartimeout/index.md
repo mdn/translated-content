@@ -57,7 +57,7 @@ window.onclick = function() { alarm.setup() };
 
 ## 浏览器兼容
 
-{{Compat("api.clearTimeout")}}
+{{Compat}}
 
 ## 更多
 

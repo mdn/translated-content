@@ -49,4 +49,4 @@ break-inside: avoid-region;
 
 ## Browser compatibility
 
-{{Compat("css.properties.break-inside", 4)}}
+{{Compat}}

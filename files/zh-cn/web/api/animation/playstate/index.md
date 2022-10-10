@@ -71,7 +71,7 @@ tears.forEach(function(el) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Animation.playState")}}
+{{Compat}}
 
 ## 参见
 

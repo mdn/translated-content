@@ -36,7 +36,7 @@ WebGLActiveInfo? getTransformFeedbackVarying(WebGLProgram? program, GLuint index
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLActiveInfo.WebGLActiveInfo")}}
+{{Compat}}
 
 ## 另请参见
 

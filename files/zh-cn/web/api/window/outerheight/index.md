@@ -33,7 +33,7 @@ outWindowHeight = window.outerHeight;
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.outerHeight")}}
+{{Compat}}
 
 ## 规范
 

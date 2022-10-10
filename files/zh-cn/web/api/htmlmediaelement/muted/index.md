@@ -31,7 +31,7 @@ console.log(obj.muted); // false
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.muted")}}
+{{Compat}}
 
 ## See also
 

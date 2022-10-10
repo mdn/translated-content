@@ -1375,7 +1375,7 @@
 /fr/docs/Glossaire/Détournement_de_session	/fr/docs/Glossary/Session_Hijacking
 /fr/docs/Glossaire/ECMA	/fr/docs/Glossary/ECMA
 /fr/docs/Glossaire/ECMAScript	/fr/docs/Glossary/ECMAScript
-/fr/docs/Glossaire/Element_vide	/fr/docs/Glossary/Empty_element
+/fr/docs/Glossaire/Element_vide	/fr/docs/Glossary/Void_element
 /fr/docs/Glossaire/En-tête	/fr/docs/Glossary/Head
 /fr/docs/Glossaire/En-tête_de_requête	/fr/docs/Glossary/Request_header
 /fr/docs/Glossaire/En-tête_de_réponse_simple	/fr/docs/Glossary/Simple_response_header
@@ -1731,6 +1731,7 @@
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
 /fr/docs/Glossary/Bézier_curve	/fr/docs/Glossary/Bezier_curve
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
+/fr/docs/Glossary/Empty_element	/fr/docs/Glossary/Void_element
 /fr/docs/Glossary/Index	/fr/docs/Glossary
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
@@ -1824,7 +1825,7 @@
 /fr/docs/HTML/Attributs	/fr/docs/Web/HTML/Attributes
 /fr/docs/HTML/Canvas	/fr/docs/Web/API/Canvas_API
 /fr/docs/HTML/Catégorie_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
-/fr/docs/HTML/Contenu_editable	/fr/docs/Web/Guide/HTML/Editable_content
+/fr/docs/HTML/Contenu_editable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/HTML/Element	/fr/docs/Web/HTML/Element
 /fr/docs/HTML/Element-redirection-1	/fr/docs/Web/HTML/Element
@@ -4609,6 +4610,7 @@
 /fr/docs/Web/Guide/HTML	/fr/docs/Learn/HTML
 /fr/docs/Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /fr/docs/Web/Guide/HTML/Catégories_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
+/fr/docs/Web/Guide/HTML/Editable_content	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/Guide/HTML/Formulaires	/fr/docs/Learn/Forms
 /fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms	/fr/docs/Learn/Forms/Advanced_form_styling
 /fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML	/fr/docs/Learn/Forms/Styling_web_forms
@@ -4691,7 +4693,7 @@
 /fr/docs/Web/HTML/Attributs_universels/x-ms-format-detection	/fr/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /fr/docs/Web/HTML/Canvas	/fr/docs/Web/API/Canvas_API
 /fr/docs/Web/HTML/Catégorie_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
-/fr/docs/Web/HTML/Contenu_editable	/fr/docs/Web/Guide/HTML/Editable_content
+/fr/docs/Web/HTML/Contenu_editable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /fr/docs/Web/HTML/Element/Input/datetime	/fr/docs/Web/HTML/Element/input/datetime-local
@@ -4753,6 +4755,7 @@
 /fr/docs/Web/HTTP/Cache	/fr/docs/Web/HTTP/Caching
 /fr/docs/Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent	/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /fr/docs/Web/HTTP/FAQ_sur_le_préchargement_des_liens	/fr/docs/Web/HTTP/Link_prefetching_FAQ
+/fr/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
 /fr/docs/Web/HTTP/Headers/Serveur	/fr/docs/Web/HTTP/Headers/Server
 /fr/docs/Web/HTTP/Index	/fr/docs/Web/HTTP
 /fr/docs/Web/HTTP/Méthode	/fr/docs/Web/HTTP/Methods
@@ -4936,6 +4939,7 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
+/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes	/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /fr/docs/Web/JavaScript/Reference/Global_Objects/String/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
@@ -6364,8 +6368,10 @@
 /fr/docs/conflicting/Web/HTML/Element	/fr/docs/Web/HTML/Element
 /fr/docs/conflicting/Web/HTML/Element/input/datetime-local	/fr/docs/Web/HTML/Element/input/datetime-local
 /fr/docs/conflicting/Web/HTML/Global_attributes	/fr/docs/Web/HTML/Global_attributes
+/fr/docs/conflicting/Web/HTML/Global_attributes/contenteditable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/conflicting/Web/HTTP	/fr/docs/Web/HTTP
 /fr/docs/conflicting/Web/HTTP/Basics_of_HTTP/MIME_types	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+/fr/docs/conflicting/Web/HTTP/Headers/Content-Security-Policy	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
 /fr/docs/conflicting/Web/HTTP/Status/404	/fr/docs/Web/HTTP/Status/404
 /fr/docs/conflicting/Web/HTTP/Status/502	/fr/docs/Web/HTTP/Status/502
 /fr/docs/conflicting/Web/JavaScript/Equality_comparisons_and_sameness	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness

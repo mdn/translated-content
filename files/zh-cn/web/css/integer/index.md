@@ -53,7 +53,7 @@ _5          Special characters are not allowed.
 
 ## 浏览器兼容性
 
-{{Compat("css.types.integer")}}
+{{Compat}}
 
 ## 参考
 

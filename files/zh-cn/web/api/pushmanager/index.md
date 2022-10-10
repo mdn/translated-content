@@ -64,7 +64,7 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 ## Browser compatibility
 
-{{Compat("api.PushManager")}}
+{{Compat}}
 
 ## See also
 

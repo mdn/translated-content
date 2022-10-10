@@ -54,4 +54,4 @@ function clear_all_measures() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.clearMeasures")}}
+{{Compat}}

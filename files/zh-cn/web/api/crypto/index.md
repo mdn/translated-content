@@ -29,7 +29,7 @@ _该接口实现的方法定义在 {{domxref("RandomSource")}} 中。_
 
 ## 浏览器兼容
 
-{{Compat("api.Crypto")}}
+{{Compat}}
 
 ## 参见
 

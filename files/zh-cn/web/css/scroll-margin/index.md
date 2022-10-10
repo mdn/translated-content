@@ -41,4 +41,4 @@ scroll-margin: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.scroll-margin")}}
+{{Compat}}

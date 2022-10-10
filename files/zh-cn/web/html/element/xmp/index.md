@@ -27,7 +27,7 @@ slug: Web/HTML/Element/xmp
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.xmp")}}
+{{Compat}}
 
 ## 参阅
 

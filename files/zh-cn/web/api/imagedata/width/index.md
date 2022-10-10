@@ -26,7 +26,7 @@ imagedata.width // 100
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageData.width")}}
+{{Compat}}
 
 ## 参见
 

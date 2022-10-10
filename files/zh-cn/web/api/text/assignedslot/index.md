@@ -15,7 +15,7 @@ var htmlSlotElement = text.assignedSlot
 
 ### Value
 
-一个 {{domxref("HTMLSlotElement")}} 对象.
+一个 {{domxref("HTMLSlotElement")}} 对象。
 
 ## Specifications
 
@@ -23,4 +23,4 @@ var htmlSlotElement = text.assignedSlot
 
 ## Browser Compatibility
 
-{{Compat("api.Text.assignedSlot")}}
+{{Compat}}

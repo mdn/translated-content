@@ -81,4 +81,4 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.paint-order")}}
+{{Compat}}

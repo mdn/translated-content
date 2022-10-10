@@ -24,7 +24,7 @@ console.dir(object);
 
 ## 浏览器兼容性
 
-{{Compat("api.console.dir")}}
+{{Compat}}
 
 ## 相关链接
 

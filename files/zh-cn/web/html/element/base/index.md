@@ -92,4 +92,4 @@ slug: Web/HTML/Element/base
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.base")}}
+{{Compat}}

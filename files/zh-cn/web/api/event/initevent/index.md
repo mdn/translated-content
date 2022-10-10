@@ -50,7 +50,7 @@ elem.dispatchEvent(event);
 
 ## 浏览器兼容
 
-{{Compat("api.Event.initEvent")}}
+{{Compat}}
 
 ## 另见
 

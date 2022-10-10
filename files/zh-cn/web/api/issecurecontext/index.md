@@ -23,7 +23,7 @@ var isItSecure = self.isSecureContext; // 或者直接使用 isSecureContext
 
 ## 浏览器兼容性
 
-{{Compat("api.isSecureContext")}}
+{{Compat}}
 
 ## 参考
 

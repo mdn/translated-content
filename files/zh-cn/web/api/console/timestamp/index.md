@@ -24,7 +24,7 @@ console.timeStamp(label);
 
 ## Browser compatibility
 
-{{Compat("api.console.timeStamp")}}
+{{Compat}}
 
 ## See also
 

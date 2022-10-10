@@ -23,4 +23,4 @@ var encodings[] = PushManager.supportedContentEncodings
 
 ## 浏览器兼容性
 
-{{Compat("api.PushManager.supportedContentEncodings")}}
+{{Compat}}

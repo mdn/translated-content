@@ -19,4 +19,4 @@ myAttr = attrs.getNamedItem(name)
 
 ## 浏览器兼容性
 
-{{Compat("api.NamedNodeMap.getNamedItem")}}
+{{Compat}}

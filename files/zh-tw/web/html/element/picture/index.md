@@ -97,7 +97,7 @@ The [{{htmlattrdef("srcset")}}](/zh-TW/docs/Web/HTML/Element/source#attr-srcset)
 
 ## 瀏覽器支援度
 
-{{Compat("html.elements.picture")}}
+{{Compat}}
 
 ## 相關資源
 

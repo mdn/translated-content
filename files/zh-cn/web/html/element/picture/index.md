@@ -89,7 +89,7 @@ slug: Web/HTML/Element/picture
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.picture")}}
+{{Compat}}
 
 ## 参考链接
 

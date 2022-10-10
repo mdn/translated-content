@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Statements/function
 ---
 {{jsSidebar("Statements")}}
 
-A **declaração function** define uma função com os especificados parâmetros.\*\*\*\*
+A **declaração function** define uma função com os especificados parâmetros.
 
 Você pode também definir funções usando o construtor {{jsxref("Function")}} e uma {{jsxref("Operators/function", "function expression")}}.
 
@@ -19,14 +19,8 @@ function name([param,[, param,[..., param]]]) {
 
 - `name`
   - : O nome da função.
-
-<!---->
-
 - `param`
   - : O nome de um argumento a ser passado para a função. Uma função pode ter atè 255 argumentos.
-
-<!---->
-
 - `statements`
   - : As instruções que compõem o corpo da função.
 

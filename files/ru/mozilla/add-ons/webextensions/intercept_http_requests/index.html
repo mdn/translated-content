@@ -84,7 +84,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 }</pre>
 
-<p class="result">Единственное изменение здесь заключается в добавлении <code>"webRequestBlocking"</code> в <code>permission</code>. Мы должны запрашивать это дополнительное разрешение каждый раз, когда мы изменяем запрос.</p>
+<p>Единственное изменение здесь заключается в добавлении <code>"webRequestBlocking"</code> в <code>permission</code>. Мы должны запрашивать это дополнительное разрешение каждый раз, когда мы изменяем запрос.</p>
 
 <p>Затем замените «background.js» следующим образом:</p>
 
@@ -103,9 +103,9 @@ browser.webRequest.onBeforeRequest.addListener(
   ["blocking"]
 );</pre>
 
-<p class="result">Опять же, мы используем {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} обработчик событий для запуска функции непосредственно перед каждым запросом. Эта функция заменит целевой URL на <code>redirectUrl</code> указанный в функции.</p>
+<p>Опять же, мы используем {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} обработчик событий для запуска функции непосредственно перед каждым запросом. Эта функция заменит целевой URL на <code>redirectUrl</code> указанный в функции.</p>
 
-<p class="result">На этот раз мы не перехватываем каждый запрос: опция <code>{urls: [pattern], types: ["image"]}</code> указывает, что мы должны перехватывать запросы (1) для URL-адресов, находящихся в разделе «https://mdn.mozillademos.org / "(2) для ресурсов изображения. Подробнее см. {{WebExtAPIRef ("webRequest.RequestFilter")}}.</p>
+<p>На этот раз мы не перехватываем каждый запрос: опция <code>{urls: [pattern], types: ["image"]}</code> указывает, что мы должны перехватывать запросы (1) для URL-адресов, находящихся в разделе «https://mdn.mozillademos.org / "(2) для ресурсов изображения. Подробнее см. {{WebExtAPIRef ("webRequest.RequestFilter")}}.</p>
 
 <p>Также обратите внимание, что мы передаём опцию <code>"blocking"</code>: нам нужно передать это, когда мы хотим изменить запрос. Это заставляет функцию обработчика блокировать сетевой запрос, поэтому браузер ждёт, пока обработчик вернётся, прежде чем продолжить. Дополнительную информацию о <code>"blocking"</code> смотрите в документации {{WebExtAPIRef ("webRequest.onBeforeRequest")}}.</p>
 

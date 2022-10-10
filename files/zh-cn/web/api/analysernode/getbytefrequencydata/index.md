@@ -77,7 +77,7 @@ draw();
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode.getByteFrequencyData")}}
+{{Compat}}
 
 ## 相关内容
 

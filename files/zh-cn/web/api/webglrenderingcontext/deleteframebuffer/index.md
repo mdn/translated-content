@@ -42,7 +42,7 @@ gl.deleteFramebuffer(framebuffer);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.deleteFramebuffer")}}
+{{Compat}}
 
 ## 另见
 

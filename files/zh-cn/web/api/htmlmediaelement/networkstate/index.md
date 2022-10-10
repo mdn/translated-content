@@ -52,7 +52,7 @@ obj.addEventListener('playing', function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.networkState")}}
+{{Compat}}
 
 ## 另见
 

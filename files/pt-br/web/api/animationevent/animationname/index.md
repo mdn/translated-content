@@ -12,7 +12,7 @@ translation_of: Web/API/AnimationEvent/animationName
 ---
 `{{SeeCompatTable}}{{ apiref("Web Animations API") }}`
 
-`O AnimationEvent.animationName `é uma propriedade só de leitura do{{domxref("DOMString")}} contendo o valor de {{cssxref("animation-name")}} propriedade CSS relacionada com a trasição.
+O `AnimationEvent.animationName` é uma propriedade só de leitura do{{domxref("DOMString")}} contendo o valor de {{cssxref("animation-name")}} propriedade CSS relacionada com a trasição.
 
 ## Síntaxe
 
@@ -24,7 +24,7 @@ name = AnimationEvent.animationName
 
 | Especificação                                                                                                                          | Estado                                     | Comentário            |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------- |
-| `{{ SpecName('CSS3 Animations', '#AnimationEvent-animationName', 'AnimationEvent.animationName') }}` | `{{ Spec2('CSS3 Animations')}}` | `Initial definition.` |
+| `{{ SpecName('CSS3 Animations', '#AnimationEvent-animationName', 'AnimationEvent.animationName') }}` | `{{ Spec2('CSS3 Animations')}}` | `Initial definition`. |
 
 ## Compatibilidade com navegadores
 

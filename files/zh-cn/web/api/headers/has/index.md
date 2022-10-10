@@ -46,7 +46,7 @@ myHeaders.has('Accept-Encoding'); // Returns false
 
 ## Browser compatibility
 
-{{Compat("api.Headers.has")}}
+{{Compat}}
 
 ## See also
 

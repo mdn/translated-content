@@ -93,7 +93,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.tab-size")}}
+{{Compat}}
 
 ## 参见
 

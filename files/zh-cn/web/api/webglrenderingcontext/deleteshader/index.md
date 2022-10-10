@@ -34,7 +34,7 @@ gl.deleteShader(shader);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.deleteShader")}}
+{{Compat}}
 
 ## 其他相关
 

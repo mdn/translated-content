@@ -31,4 +31,4 @@ bool = event.defaultPrevented
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.defaultPrevented")}}
+{{Compat}}

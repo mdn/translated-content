@@ -84,7 +84,7 @@ input.onkeydown = logKey;
 
 ## Browser compatibility
 
-{{Compat("api.Element.keydown_event")}}
+{{Compat}}
 
 ## See also
 

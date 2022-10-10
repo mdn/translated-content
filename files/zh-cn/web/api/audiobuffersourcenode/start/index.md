@@ -55,7 +55,7 @@ source.start(audioCtx.currentTime + 1,3,10);
 
 ## Browser compatibility
 
-{{Compat("api.AudioBufferSourceNode.start")}}
+{{Compat}}
 
 ## See also
 

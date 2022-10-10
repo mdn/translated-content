@@ -33,7 +33,7 @@ bc.close();
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel.close")}}
+{{Compat}}
 
 ## 另见
 

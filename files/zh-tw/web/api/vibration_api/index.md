@@ -44,7 +44,7 @@ window.navigator.vibrate([200, 100, 200]);
 
 ## 瀏覽器相容性
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## 另可參閱
 

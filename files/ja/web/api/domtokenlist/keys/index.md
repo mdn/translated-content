@@ -2,6 +2,7 @@
 title: DOMTokenList.keys()
 slug: Web/API/DOMTokenList/keys
 ---
+
 {{APIRef("DOM")}}
 
 **`keys()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを処理することができる{{jsxref("Iteration_protocols","反復子","",1)}}を返します。キーの型は符号なし整数です。

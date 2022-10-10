@@ -49,7 +49,7 @@ gl.getParameter(gl.COLOR_CLEAR_VALUE);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.clearColor")}}
+{{Compat}}
 
 ## 相关内容
 

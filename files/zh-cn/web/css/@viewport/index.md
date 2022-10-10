@@ -81,7 +81,7 @@ slug: Web/CSS/@viewport
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.viewport")}}
+{{Compat}}
 
 ## See also
 

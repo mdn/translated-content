@@ -9,7 +9,7 @@ slug: Web/API/ChannelMergerNode
 
 ![](webaudiomerger.png)
 
-如果 `ChannelMergerNode` 用于一个单一输出，但输入数量与用于合并的信道数量相同；输入的数量被定义为其构造函数的参数及对 {{domxref("AudioContext.createChannelMerger")}} 的调用。 如果没有给出值，则为默认值 `6`。
+如果 `ChannelMergerNode` 用于一个单一输出，但输入数量与用于合并的信道数量相同；输入的数量被定义为其构造函数的参数及对 {{domxref("AudioContext.createChannelMerger")}} 的调用。如果没有给出值，则为默认值 `6`。
 
 使用 `ChannelMergerNode`，可以创建比渲染硬件能处理的更多的通道输出。在这种情况下，当信号发送至 {{domxref("AudioContext.listener")}} 对象时，额外的信道将被忽略。
 
@@ -61,7 +61,7 @@ _没有具体方法；从其父级继承方法，{{domxref("AudioNode")}}。_
 
 ## 浏览器兼容性
 
-{{Compat("api.ChannelMergerNode")}}
+{{Compat}}
 
 ## 参见
 

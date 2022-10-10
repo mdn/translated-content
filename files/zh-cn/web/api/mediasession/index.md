@@ -66,4 +66,4 @@ function pause() {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaSession")}}
+{{Compat}}

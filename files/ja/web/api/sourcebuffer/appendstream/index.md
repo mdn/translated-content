@@ -2,6 +2,7 @@
 title: SourceBuffer.appendStream()
 slug: Web/API/SourceBuffer/appendStream
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`appendStream()`** メソッドは、`ReadableStream` オブジェクトから `SourceBuffer` にメディアセグメントデータを追加します。

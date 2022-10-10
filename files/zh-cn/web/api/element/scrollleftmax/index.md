@@ -19,7 +19,7 @@ _这个属性还没纳入规范。_
 
 ## 浏览器兼容
 
-{{Compat("api.Element.scrollLeftMax")}}
+{{Compat}}
 
 ## 更多
 

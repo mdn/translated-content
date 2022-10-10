@@ -36,7 +36,7 @@ document.onselectionchange = () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.selectionchange_event")}}
+{{Compat}}
 
 ## 参考
 

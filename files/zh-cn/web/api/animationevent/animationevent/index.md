@@ -32,7 +32,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 ## 浏览器兼容性
 
-{{Compat("api.AnimationEvent.AnimationEvent")}}
+{{Compat}}
 
 ## 参考
 

@@ -26,7 +26,7 @@ Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console`
 - {{domxref("console.group()", "console.group(object[, object...])")}}
   - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior. Para voltar um nível, utilize `groupEnd()`. Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.groupCollapsed()", "console.groupCollapsed(object[, object...])")}}
-  - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de `group()`, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize `groupEnd().` Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
+  - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de `group()`, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize `groupEnd()`. Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.groupEnd()")}}
   - : Sai do grupo em linha atual. Veja [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.info()", "console.info(object[, object...])")}}
@@ -159,7 +159,7 @@ The output looks like this:
 
 ### Temporizadores
 
-In order to calculate the duration of a specific operation, Gecko 10 introduced the support of timers in the `console` object. To start a timer, call the ` console.time``() ` method, giving it a name as only parameter. To stop the timer, and to get the elapsed time in miliseconds, just call the `console.timeEnd()` method, again passing the timer's name as the parameter. Up to 10,000 timers can run simultaneously on a given page.
+In order to calculate the duration of a specific operation, Gecko 10 introduced the support of timers in the `console` object. To start a timer, call the `console.time()` method, giving it a name as only parameter. To stop the timer, and to get the elapsed time in miliseconds, just call the `console.timeEnd()` method, again passing the timer's name as the parameter. Up to 10,000 timers can run simultaneously on a given page.
 
 For example, given this code:
 
@@ -204,8 +204,8 @@ The output in the console looks something like this:
 
 ## See also
 
-- [Tools](/pt-BR/docs/Tools "Tools")
-- [Web Console](/pt-BR/docs/Tools/Web_Console "Web Console") - how the Web Console in Firefox handles console API calls
+- [Tools](/pt-BR/docs/Tools)
+- [Web Console](/pt-BR/docs/Tools/Web_Console) - how the Web Console in Firefox handles console API calls
 - [Remote debugging](/pt-BR/docs/Tools/Remote_Debugging) - how to see console output when the debugging target is a mobile device
 - [Debugging apps on Firefox OS](/en-US/Firefox_OS/Using_the_App_Manager) - using the App Manager to debug apps running on Firefox OS
 - [On-device console logging](/pt-BR/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging) - how to do logging on Firefox OS devices

@@ -50,7 +50,7 @@ html,body,svg { height:100% }
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.circle")}}
+{{Compat}}
 
 ## 相关内容
 

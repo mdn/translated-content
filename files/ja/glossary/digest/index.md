@@ -2,6 +2,7 @@
 title: Digest
 slug: Glossary/Digest
 ---
+
 ダイジェストはメッセージ全体から{{glossary("hash function", "ハッシュ関数")}}によって生成された小さな値です。理想的にはダイジェストは即座に計算でき、不可逆であり、予測不可能なため、メッセージが改ざんされたかどうかの判定に利用することができます。
 
 ダイジェストを使用して、下記のようないくつかのタスクを実行できます:
@@ -17,4 +18,4 @@ slug: Glossary/Digest
 ## 関連項目
 
 - {{glossary("hash function", "ハッシュ関数")}}
-- Wikipedia の {{interwiki("wikipedia", "暗号学的ハッシュ関数", "ハッシュ関数")}}
+- Wikipedia の [ハッシュ関数](https://ja.wikipedia.org/wiki/暗号学的ハッシュ関数)

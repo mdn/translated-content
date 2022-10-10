@@ -24,7 +24,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.RegExp.dotAll")}}
+{{Compat}}
 
 ## 相关链接
 

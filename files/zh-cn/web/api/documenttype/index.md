@@ -39,7 +39,7 @@ _继承方法自父节点，{{domxref("Node")}}, 并实现了 {{domxref("ChildNo
 
 ## 浏览器兼容性
 
-{{Compat("api.DocumentType")}}
+{{Compat}}
 
 ## 参见
 

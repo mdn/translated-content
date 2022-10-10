@@ -19,7 +19,7 @@ heading = coordinates.heading
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationCoordinates.heading")}}
+{{Compat}}
 
 ## 請參考
 

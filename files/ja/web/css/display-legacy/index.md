@@ -2,6 +2,7 @@
 title: <display-legacy>
 slug: Web/CSS/display-legacy
 ---
+
 {{CSSRef}}
 
 CSS 2 では `display` プロパティで単一のキーワードによる構文を採用しており、同じレイアウトモードのブロックレベルとインラインレベルで別々のキーワードが必要でした。このページではこれらの値を詳しく紹介します。

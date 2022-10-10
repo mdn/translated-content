@@ -23,7 +23,7 @@ var xOffset = instanceOfMouseEvent.offsetX;
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.offsetX")}}
+{{Compat}}
 
 ## 相关内容
 

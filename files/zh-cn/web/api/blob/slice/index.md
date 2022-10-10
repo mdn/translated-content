@@ -34,7 +34,7 @@ var blob = instanceOfBlob.slice([start [, end [, contentType]]]};
 
 ## 浏览器兼容
 
-{{Compat("api.Blob.slice")}}
+{{Compat}}
 
 ## 参见
 

@@ -157,7 +157,7 @@ original_slug: Web/API/Document/dragstart_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.dragstart_event")}}
+{{Compat}}
 
 ## 相关事件
 

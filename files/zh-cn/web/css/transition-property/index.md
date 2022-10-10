@@ -59,7 +59,7 @@ transition-property: unset;
 
 ## 浏览器兼容
 
-{{Compat("css.properties.transition-property")}}
+{{Compat}}
 
 ## 参考
 

@@ -23,4 +23,4 @@ var timeOrigin = performance.timeOrigin
 
 ## Browser Compatibility
 
-{{Compat("api.Performance.timeOrigin")}}
+{{Compat}}

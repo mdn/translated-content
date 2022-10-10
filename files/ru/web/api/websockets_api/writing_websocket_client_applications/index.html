@@ -17,7 +17,7 @@ original_slug: WebSockets/Writing_WebSocket_client_applications
 
 <h2 id="Создание_объекта_WebSocket">Создание объекта WebSocket</h2>
 
-<p><code><font face="Lucida Grande, Lucida Sans Unicode, DejaVu Sans, Lucida, Arial, Helvetica, sans-serif">Чтобы общаться через протокол веб-сокетов необходимо создать объект </font><a href="/en/WebSockets/WebSockets_reference/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket">WebSocket</a></code>; при его создании автоматически происходит попытка открыть соединение с сервером.</p>
+<p><code>Чтобы общаться через протокол веб-сокетов необходимо создать объект <a href="/en/WebSockets/WebSockets_reference/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket">WebSocket</a></code>; при его создании автоматически происходит попытка открыть соединение с сервером.</p>
 
 <p>Конструктор WebSocket принимает один обязательный и один необязательный параметр:</p>
 
@@ -51,13 +51,13 @@ WebSocket WebSocket(
 
 <h3 id="Ошибки_подключения">Ошибки подключения</h3>
 
-<p><span style="line-height: 21px;">Если ошибка случается во время попытки подключения, то в объект </span><a href="https://developer.mozilla.org/en/WebSockets/WebSockets_reference/WebSocket" style="line-height: 21px;" title="WebSocket"><code style="font-style: inherit;">WebSocket</code></a><span style="line-height: 21px;"> сначала посылается простое событие с именем «error» (таким образом, задействуя обработчик </span><code style="font-size: 14px; line-height: 21px;">onerror</code><span style="line-height: 21px;">), потом - событие </span><a href="https://developer.mozilla.org/en/WebSockets/WebSockets_reference/CloseEvent" style="line-height: 21px;" title="CloseEvent"><code style="font-style: inherit;">CloseEvent</code></a><span style="line-height: 21px;"> </span><span style="line-height: 21px;"> (таким образом, задействуя обработчик </span><code style="font-size: 14px; line-height: 21px;">onclose</code><span style="line-height: 21px;">) чтобы обозначить причину закрытия соединения.</span></p>
+<p>Если ошибка случается во время попытки подключения, то в объект <a href="https://developer.mozilla.org/en/WebSockets/WebSockets_reference/WebSocket" style="line-height: 21px;" title="WebSocket"><code style="font-style: inherit;">WebSocket</code></a> сначала посылается простое событие с именем «error» (таким образом, задействуя обработчик <code style="font-size: 14px; line-height: 21px;">onerror</code>), потом - событие <a href="https://developer.mozilla.org/en/WebSockets/WebSockets_reference/CloseEvent" style="line-height: 21px;" title="CloseEvent"><code style="font-style: inherit;">CloseEvent</code></a>  (таким образом, задействуя обработчик <code style="font-size: 14px; line-height: 21px;">onclose</code>) чтобы обозначить причину закрытия соединения.</p>
 
 <p>Однако, начиная с версии Firefox 11, типичным является получение в консоль от платформы Mozilla расширенного сообщения об ошибке и кода завершения, как то определено в <a class="external" href="http://tools.ietf.org/html/rfc6455#section-7.4" title="RFC 6455 Section 7.4">RFC 6455, Section 7.4</a> посредством <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a>.</p>
 
 <h3 id="Примеры">Примеры</h3>
 
-<p>Этот простой пример создаёт новый WebSocket, подключаемый к серверу <code><span class="nowiki">ws://www.example.com/socketserver</span></code>. В данном примере в конструктор сокета в качестве дополнительного параметра передаётся пользовательский протокол "protocolOne", хотя эта часть может быть опущена.</p>
+<p>Этот простой пример создаёт новый WebSocket, подключаемый к серверу <code>ws://www.example.com/socketserver</code>. В данном примере в конструктор сокета в качестве дополнительного параметра передаётся пользовательский протокол "protocolOne", хотя эта часть может быть опущена.</p>
 
 <pre class="brush: js">var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
 </pre>
@@ -71,7 +71,7 @@ WebSocket WebSocket(
 
 <p>Когда соединение установлено (что соответствует, <code>readyState</code> <code>OPEN</code>), <code>exampleSocket.protocol</code> сообщит, какой протокол выбрал сервер.</p>
 
-<p>В приведенных выше примерах <code>ws</code> заменяет <code>http</code>, аналогично <code>wss</code> заменяет <code>https</code>. Установка соединения через WebSocket зависит от механизма обновления HTTP, таким образом запрос на обновление неявный, когда мы обращаемся к серверу HTTP с помощью <code><span class="nowiki">ws://www.example.com</span></code> или <code><span class="nowiki">wss://www.example.com</span></code>.</p>
+<p>В приведенных выше примерах <code>ws</code> заменяет <code>http</code>, аналогично <code>wss</code> заменяет <code>https</code>. Установка соединения через WebSocket зависит от механизма обновления HTTP, таким образом запрос на обновление неявный, когда мы обращаемся к серверу HTTP с помощью <code>ws://www.example.com</code> или <code>wss://www.example.com</code>.</p>
 
 <h2 id="Отправка_данных_на_сервер">Отправка данных на сервер</h2>
 

@@ -115,7 +115,7 @@ IE11 不支持网格单元的自动布置。除非显式地注释 `-ms-`{{cssxre
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.grid-row")}}
+{{Compat}}
 
 ## 参见
 

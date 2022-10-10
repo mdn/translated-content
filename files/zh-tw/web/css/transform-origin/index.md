@@ -284,7 +284,7 @@ transform-origin: 100% -30%;
 
 ## Browser compatibility
 
-{{Compat("css.properties.transform-origin")}}
+{{Compat}}
 
 ## See also
 

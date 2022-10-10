@@ -20,7 +20,7 @@ gl.linkProgram(program);
 
 if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
   var info = gl.getProgramInfoLog(program);
-  throw 'WebGL program 不能编译. \n\n' + info;
+  throw 'WebGL program 不能编译。\n\n' + info;
 }
 ```
 
@@ -59,7 +59,7 @@ gl.deleteProgram(program);
 
 ## 浏览器兼容
 
-{{Compat("api.WebGLProgram")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -416,7 +416,7 @@ a + b;
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## 參閱
 

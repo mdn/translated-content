@@ -22,4 +22,4 @@ slug: Web/API/Window/external
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.external")}}
+{{Compat}}

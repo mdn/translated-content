@@ -57,7 +57,7 @@ button.onclick = function() {
 
 ## Browser compatibility
 
-{{Compat("api.PictureInPictureWindow")}}
+{{Compat}}
 
 ## See also
 

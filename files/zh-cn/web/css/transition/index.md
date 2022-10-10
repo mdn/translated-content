@@ -70,7 +70,7 @@ transition: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## 参见
 

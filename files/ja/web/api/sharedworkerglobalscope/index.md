@@ -2,6 +2,7 @@
 title: SharedWorkerGlobalScope
 slug: Web/API/SharedWorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`SharedWorkerGlobalScope`** オブジェクト ( {{domxref("SharedWorker")}} グローバルスコープ) は、 {{domxref("window.self","self")}} キーワードでアクセスできます。一部の追加のグローバル関数、名前空間オブジェクト、コンストラクターは、通常はワーカーのグローバルスコープに関連付けられていませんが、利用することができ、 [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)に列挙されています。[ワーカーで利用できる機能](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)の完全なリストを参照してください。

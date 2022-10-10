@@ -10,16 +10,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 <div>{{jsSidebar("Objects")}}</div>
 
 <div class="blockIndicator warning">
-<p><strong>Warning:</strong> <font>Выполнение кода JavaScript с текстовой строки - это невероятный риск для безопасности. </font><font>Злоумышленнику слишком легко запустить какой угодно код, когда вы используете</font> <code>eval()</code>. Смотрите  <a href="#Не_используйте_eval_без_необходимости!">Никогда не используйте eval()!</a>, ниже.</p>
+<p><strong>Warning:</strong> Выполнение кода JavaScript с текстовой строки - это невероятный риск для безопасности. Злоумышленнику слишком легко запустить какой угодно код, когда вы используете <code>eval()</code>. Смотрите  <a href="#Не_используйте_eval_без_необходимости!">Никогда не используйте eval()!</a>, ниже.</p>
 </div>
 
 <p>Метод <code><strong>eval()</strong></code> выполняет JavaScript-код, представленный строкой.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}</p>
-
-<div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-</div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -66,7 +62,7 @@ eval(expression.toString());
 }
 </pre>
 
-<h2 id="Не_используйте_eval_без_необходимости!"><a><code><font face="Open Sans, Arial, sans-serif">Н</font>е используйте eval без необходимости!</code></a></h2>
+<h2 id="Не_используйте_eval_без_необходимости!"><a><code>Не используйте eval без необходимости!</code></a></h2>
 
 <p><code>eval()</code> - опасная функция, которая выполняет код, проходящий со всеми привилегиями вызывателя. Если вы запускаете <code>eval()</code> со строкой, на которую могут влиять злоумышленники, то вы можете запустить вредоносный код на устройство пользователя с правами вашей веб-страницы/расширения. Наиболее важно, код третьей стороны может видеть область видимости, в которой был вызван <code>eval()</code>, что может может привести к атакам, похожим на {{jsxref("Global_Objects/Function", "Function")}}.</p>
 

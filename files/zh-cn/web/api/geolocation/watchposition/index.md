@@ -18,9 +18,9 @@ id = navigator.geolocation.watchPosition(success[, error[, options]])
 ### 参数
 
 - _success_
-  - : 成功时候的回调函数， 同时传入一个 {{domxref("Position")}} 对象当作参数。
+  - : 成功时候的回调函数，同时传入一个 {{domxref("Position")}} 对象当作参数。
 - _error_ {{optional_inline}}
-  - : 失败时候的回调函数，可选， 会传入一个 {{domxref("PositionError")}} 对象当作参数。
+  - : 失败时候的回调函数，可选，会传入一个 {{domxref("PositionError")}} 对象当作参数。
 - _options_ {{optional_inline}}
   - : 一个可选的 {{domxref("PositionOptions")}} 对象。
 

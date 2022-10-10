@@ -67,7 +67,7 @@ window.requestFileSystem(window.TEMPORARY, 1024*1024, onInitFs, errorHandler);
 
 ## 浏览器兼容性
 
-{{Compat("api.FileSystemFileEntry")}}
+{{Compat}}
 
 ## 另见
 

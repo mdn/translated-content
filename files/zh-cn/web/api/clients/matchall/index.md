@@ -47,4 +47,4 @@ clients.matchAll(options).then(function(clientList) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clients.matchAll")}}
+{{Compat}}

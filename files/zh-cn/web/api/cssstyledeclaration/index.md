@@ -58,7 +58,7 @@ console.log(styleObj.cssText);
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSStyleDeclaration")}}
+{{Compat}}
 
 ## 参见
 

@@ -231,7 +231,7 @@ console.log(Derived.publicStaticMethod2());
 
 ## 浏览器兼容性
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## 参见
 

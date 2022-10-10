@@ -17,7 +17,7 @@ var isEqualNode = node.isEqualNode(otherNode);
 
 ## 示例
 
-在本例中，我们创建了三个 {{HTMLElement("div")}} 块。第一个和第三个 div 都拥有相同的内容和属性，第二个则不一样。然后我们运行 JavaScript ，使用 `isEqualNode()` 来比较这几个节点。
+在本例中，我们创建了三个 {{HTMLElement("div")}} 块。第一个和第三个 div 都拥有相同的内容和属性，第二个则不一样。然后我们运行 JavaScript，使用 `isEqualNode()` 来比较这几个节点。
 
 ### HTML
 
@@ -50,7 +50,7 @@ output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) 
 
 ## 浏览器支持
 
-{{Compat("api.Node.isEqualNode")}}
+{{Compat}}
 
 ## 相关链接
 

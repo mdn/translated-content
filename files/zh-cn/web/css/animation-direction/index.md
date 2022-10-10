@@ -47,7 +47,7 @@ See [CSS animations](/zh-CN/docs/CSS/CSS_animations) for examples.
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.animation-direction")}}
+{{Compat}}
 
 ## 更多
 

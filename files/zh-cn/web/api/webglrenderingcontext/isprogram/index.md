@@ -42,7 +42,7 @@ gl.isProgram(program);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.isProgram")}}
+{{Compat}}
 
 ## 另请参见
 

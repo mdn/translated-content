@@ -2,6 +2,7 @@
 title: border-left-color
 slug: Web/CSS/border-left-color
 ---
+
 {{CSSRef}}
 
 **`border-left-color`** は CSS のプロパティで、要素の左側の[境界線](/ja/docs/Web/CSS/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-left")}} でも設定することができます。

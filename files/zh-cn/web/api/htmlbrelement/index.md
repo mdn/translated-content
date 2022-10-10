@@ -26,7 +26,7 @@ _无具体方法；从父类 {{domxref("HTMLElement")}} 继承方法_。
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLBRElement")}}
+{{Compat}}
 
 ## 参见
 

@@ -39,7 +39,7 @@ function populateStorage() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Storage.length")}}
+{{Compat}}
 
 ## 相关链接
 

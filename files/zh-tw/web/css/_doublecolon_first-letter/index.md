@@ -78,7 +78,7 @@ p::first-letter { /* Use :first-letter if support for IE 8 or earlier is needed 
 
 ## 瀏覽器相容性
 
-{{Compat("css.selectors.first-letter")}}
+{{Compat}}
 
 ## 參見
 

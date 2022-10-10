@@ -54,7 +54,7 @@ This element includes the [global attributes](/zh-TW/docs/HTML/Global_attributes
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.optgroup")}}
+{{Compat}}
 
 ## 參見
 

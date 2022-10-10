@@ -71,7 +71,7 @@ You can polyfill the `remove()` method in Internet Explorer 9 and higher with th
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.remove")}}
+{{Compat}}
 
 ## 参见
 

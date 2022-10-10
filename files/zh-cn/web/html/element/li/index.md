@@ -23,7 +23,7 @@ slug: Web/HTML/Element/li
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>{{HTMLElement("ul")}}、 {{HTMLElement("ol")}}、 或者 {{HTMLElement("menu")}} 元素。过时的 {{HTMLElement("dir")}} 也可以作为父元素，但是并不提倡。</td>
+   <td>{{HTMLElement("ul")}}、 {{HTMLElement("ol")}}、或者 {{HTMLElement("menu")}} 元素。过时的 {{HTMLElement("dir")}} 也可以作为父元素，但是并不提倡。</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -93,7 +93,7 @@ slug: Web/HTML/Element/li
 
 ## 浏览兼容性
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## 另见
 

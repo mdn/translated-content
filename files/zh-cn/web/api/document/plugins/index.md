@@ -23,7 +23,7 @@ embedArrayObj = document.plugins
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.plugins")}}
+{{Compat}}
 
 ## 另请参见
 

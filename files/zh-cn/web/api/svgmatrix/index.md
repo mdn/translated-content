@@ -74,4 +74,4 @@ A {{domxref("DOMException")}} with the code `NO_MODIFICATION_ALLOWED_ERR` is rai
 
 ## Browser compatibility
 
-{{Compat("api.SVGMatrix")}}
+{{Compat}}

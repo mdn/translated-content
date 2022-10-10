@@ -38,7 +38,7 @@ alert(doc.getElementById('abc')); // [object HTMLBodyElement]
 
 ## 浏览器支持
 
-{{Compat("api.DOMImplementation.createDocument")}}
+{{Compat}}
 
 ## 另请参见
 

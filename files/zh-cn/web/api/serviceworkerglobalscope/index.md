@@ -7,9 +7,9 @@ slug: Web/API/ServiceWorkerGlobalScope
 
 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 的`ServiceWorkerGlobalScope` 接口，代表一个 service worker 的全局执行上下文。
 
-开发者应该知道， ServiceWorker 的状态在结束/重启的循环中不是一直保持不变的，所以每个事件处理器应该设定一个默认的全局状态。
+开发者应该知道，ServiceWorker 的状态在结束/重启的循环中不是一直保持不变的，所以每个事件处理器应该设定一个默认的全局状态。
 
-一旦成功地注册了 service worker，为了节省内存和处理器，它将在他的状态达到了空闲的时候被终止。 一个在激活状态的 service worker 为了响应事件是可以自动重启的，就像这两个方法， {{domxref("ServiceWorkerGlobalScope.onfetch")}} 或者{{domxref("ServiceWorkerGlobalScope.onmessage")}}.
+一旦成功地注册了 service worker，为了节省内存和处理器，它将在他的状态达到了空闲的时候被终止。一个在激活状态的 service worker 为了响应事件是可以自动重启的，就像这两个方法， {{domxref("ServiceWorkerGlobalScope.onfetch")}} 或者{{domxref("ServiceWorkerGlobalScope.onmessage")}}.
 
 此外，在 service worker 中，同步请求是被禁止的 - 只有异步请求，如方法{{domxref("GlobalFetch.fetch", "fetch()")}} 才被允许。
 
@@ -96,7 +96,7 @@ self.addEventListener('fetch', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.ServiceWorkerGlobalScope")}}
+{{Compat}}
 
 ## See also
 

@@ -102,13 +102,11 @@ Dans cet exemple, on voit comment créer et manipuler le tableau depuis du code 
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires                                      |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblytable-objects', 'Table')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initial pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Table")}}
+{{Compat}}
 
 ## Voir aussi
 

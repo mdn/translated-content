@@ -2,6 +2,7 @@
 title: Firefox 18 for developers
 slug: Mozilla/Firefox/Releases/18
 ---
+
 Gecko 18 を搭載した Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 18 の変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧

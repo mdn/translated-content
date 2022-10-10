@@ -24,10 +24,9 @@ _The `Performance` interface doesn't inherit any properties._
 - {{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Non-standard_inline}}
   - : Returns the high resolution timestamp of the start time of the performance measurement.
 
-- ### Event handlers
+### Event handlers
 
-  {{domxref("Performance.onresourcetimingbufferfull")}}
-
+- {{domxref("Performance.onresourcetimingbufferfull")}}
   - : An {{domxref("EventTarget")}} which is a callback that will be called when the {{event("resourcetimingbufferfull")}} event is fired.
 
 ## Methods
@@ -63,4 +62,4 @@ _The `Performance` interface doesn't inherit any methods_.
 
 ## Browser compatibility
 
-{{Compat("api.Performance")}}
+{{Compat}}

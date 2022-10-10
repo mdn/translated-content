@@ -42,7 +42,7 @@ var myRejectionEvent = new PromiseRejectionEvent('unhandledrejection', {
 
 ## 浏览器兼容性
 
-{{Compat("api.PromiseRejectionEvent.PromiseRejectionEvent")}}
+{{Compat}}
 
 ## 另请参阅
 

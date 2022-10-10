@@ -126,7 +126,7 @@ document.querySelector("#myfiles").onchange=pullfiles;
 
 ## 浏览器兼容性
 
-{{Compat("api.FileList")}}
+{{Compat}}
 
 ## 参见
 

@@ -28,7 +28,7 @@ var result = anchor.pathname; // Returns:'/en-US/docs/HTMLHyperlinkElementUtils.
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement.pathname")}}
+{{Compat}}
 
 ## See also
 

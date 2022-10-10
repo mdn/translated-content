@@ -38,4 +38,4 @@ self.clients.get(options).then(function(client) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clients.get")}}
+{{Compat}}

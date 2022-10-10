@@ -23,4 +23,4 @@ slug: Web/API/HTMLSlotElement
 
 ## 浏览器的兼容性
 
-{{Compat("api.HTMLSlotElement")}}
+{{Compat}}

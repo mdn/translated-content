@@ -27,4 +27,4 @@ var audioContext = new AudioContext(options)
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext.AudioContext")}}
+{{Compat}}

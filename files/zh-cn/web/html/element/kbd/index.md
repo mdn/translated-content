@@ -71,7 +71,7 @@ Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd>
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.kbd")}}
+{{Compat}}
 
 ## 参阅
 

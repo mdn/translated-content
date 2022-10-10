@@ -29,7 +29,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 - {{jsxref("WebAssembly.compileStreaming()")}}
   - : 直接从流式底层源代码编译{{jsxref("WebAssembly.Module")}} ，将实例化作为一个单独的步骤。
 - {{jsxref("WebAssembly.validate()")}}
-  - : 校验 WebAssembly 二进制代码的类型数组是否合法，合法则返回 true ，否则返回 false 。
+  - : 校验 WebAssembly 二进制代码的类型数组是否合法，合法则返回 true，否则返回 false。
 
 ## 构造器
 
@@ -52,7 +52,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 
 ## 示例
 
-下面的示例（请参见 GitHub 上的[Instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html)演示，并查看[在线演示](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)）直接从流式底层源传输.wasm 模块，然后对其进行编译和实例化，并通过`ResultObject`实现 promise。 由于`instantiateStreaming()`函数接受对 {{domxref("Response")}} 对象的 promise，因此您可以直接向其传递 {{domxref("fetch()")}} 调用，然后它将把返回的 response 传递给随后的函数。
+下面的示例（请参见 GitHub 上的[Instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html)演示，并查看[在线演示](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)）直接从流式底层源传输.wasm 模块，然后对其进行编译和实例化，并通过`ResultObject`实现 promise。由于`instantiateStreaming()`函数接受对 {{domxref("Response")}} 对象的 promise，因此您可以直接向其传递 {{domxref("fetch()")}} 调用，然后它将把返回的 response 传递给随后的函数。
 
 ```js
 var importObject = { imports: { imported_func: arg => console.log(arg) } };

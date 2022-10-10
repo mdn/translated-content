@@ -55,7 +55,7 @@ li span {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.span")}}
+{{Compat}}
 
 ## 参见
 

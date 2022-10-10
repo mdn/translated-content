@@ -49,7 +49,7 @@ genRandomNumbers = function getRandomNumbers() {
 
 ## 浏览器支持
 
-{{Compat("api.crypto")}}
+{{Compat}}
 
 ## 另见
 

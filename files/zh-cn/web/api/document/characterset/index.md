@@ -28,4 +28,4 @@ var string = document.characterSet
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.characterSet")}}
+{{Compat}}

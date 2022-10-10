@@ -1,5 +1,5 @@
 ---
-title: Handling different text directions
+title: Gérer la directionnalité du texte
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 original_slug: Apprendre/CSS/Building_blocks/Handling_different_text_directions

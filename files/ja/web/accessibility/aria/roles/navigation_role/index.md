@@ -2,6 +2,7 @@
 title: 'ARIA: navigation ロール'
 slug: Web/Accessibility/ARIA/Roles/Navigation_Role
 ---
+
 ナビゲーション (`navigation`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、ウェブサイトやページコンテンツをナビゲートするために使用される主要なリンクのグループを識別するために使用します。
 
 ```html
@@ -18,7 +19,7 @@ slug: Web/Accessibility/ARIA/Roles/Navigation_Role
 
 ナビゲーションランドマークを定義するには、HTML5 の [`<nav>` 要素](/ja/docs/Web/HTML/Element/nav)を使用することをお勧めします。 HTML5 の `<nav>` 要素の手法を使用しない場合は、`role="navigation"` 属性を使用してナビゲーションランドマークを定義してください。
 
-> **Note:** [`<nav>` 要素](/ja/docs/Web/HTML/Element/nav)を使用すると、自動的にセクションがナビゲーション (`navigation`) ロールを持つことを伝えることができます。 開発者は、ARIA を使用するよりも、正しい意味論の HTML 要素を使用することを常に好むべきです。
+> **メモ:** [`<nav>` 要素](/ja/docs/Web/HTML/Element/nav)を使用すると、自動的にセクションがナビゲーション (`navigation`) ロールを持つことを伝えることができます。 開発者は、ARIA を使用するよりも、正しい意味論の HTML 要素を使用することを常に好むべきです。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 

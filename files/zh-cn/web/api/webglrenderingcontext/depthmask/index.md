@@ -41,7 +41,7 @@ gl.getParameter(gl.DEPTH_WRITEMASK);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.depthMask")}}
+{{Compat}}
 
 ## 相关内容
 

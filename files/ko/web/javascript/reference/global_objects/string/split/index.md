@@ -173,6 +173,7 @@ console.log(splits);  //["c", "c,", "c", "c", "c"]
 
 > **경고:**
 > 이 방법은 문자열 뒤집기에 효과적인 방법이 아닙니다.
+>
 > ```js
 > var str = 'asdfghjkl';
 > var strReverse = str.split('').reverse().join('');

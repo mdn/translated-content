@@ -2,6 +2,7 @@
 title: TaskAttributionTiming.containerType
 slug: Web/API/TaskAttributionTiming/containerType
 ---
+
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
 {{domxref("TaskAttributionTiming")}} インターフェイスの **`containerType`** 読み取り専用プロパティは、フレームコンテナのタイプ（`iframe`、`embed`、`object` のいずれか）を返します。
