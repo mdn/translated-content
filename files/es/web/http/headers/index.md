@@ -104,6 +104,7 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
   - : Informa al servidor sobre el algoritmo de codificación, habitualmente un algoritmo de compresión, que puede utilizarse sobre el recurso que se envíe de vuelta en la respuesta.
 - {{HTTPHeader("Accept-Language")}}
   - : Informa al servidor sobre el lenguage que el servidor espera recibir de vuelta. Se trata de una indicación, y no estará necesariamente sometida al control del cliente: el servidor siempre deberá estar atento para no sobreescribir una selección específica del usuario (como, por ejemplo, una selección de idiomas en una lista desplegable).
+
 ## Controles
 
 - {{HTTPHeader("Expect")}}
@@ -124,7 +125,7 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 
 ## CORS
 
--  {{HTTPHeader("Access-Control-Allow-Origin")}}
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : Indica si la respuesta puede ser compartida.
 - {{HTTPHeader("Access-Control-Allow-Credentials")}}
   - : Indica si la respuesta puede quedar expuesta o no cuando el marcador de la credencial retorna como 'true'.
