@@ -9,5 +9,5 @@ LGPL (GNU Lesser General Public License) は、フリーソフトウェア財団
 
 ### 一般知識
 
-- [GNU LGPL](https://ja.wikipedia.org/wiki/GNU Lesser General Public License) on Wikipedia
+- [GNU LGPL](https://ja.wikipedia.org/wiki/GNU_Lesser_General_Public_License) on Wikipedia
 - gnu.org の [LGPL ライセンス](http://www.gnu.org/copyleft/lesser.html)のテキスト

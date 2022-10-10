@@ -208,7 +208,7 @@ L.marker([53.480759, -2.242631], {
    searchForm.addEventListener('submit', submitSearch);
    ```
 
-2. 前の行の下に `submitSearch()` と `fetchResults()` 関数の定義を追加します。
+3. 前の行の下に `submitSearch()` と `fetchResults()` 関数の定義を追加します。
 
    ```js
    function submitSearch(e) {

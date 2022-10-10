@@ -194,7 +194,6 @@ audioSource.connect(gainNode).connect(audioCtx.destination);
 
 音声は音源から開始され、音源はゲインノードに接続され、音声の音量を調整することができます。ゲインノードは次に出力先ノードに接続され、コンピューターで音を再生できるようになります（{{domxref("BaseAudioContext/destination", "AudioContext.destination")}}プロパティは、コンピューターのハードウェア、例えばスピーカーで利用できる既定の {{domxref("AudioDestinationNode")}} を表しています）。
 
-
 ### 認識可能なエントリーポイント
 
 API を使用する場合、その API のエントリーポイント（入口）がどこであるかを確認しておく必要があります。ウェブ音声 API では、これはとてもシンプルで、 {{domxref("AudioContext")}} オブジェクトであり、音声操作を行うにはこれを使用する必要があります。

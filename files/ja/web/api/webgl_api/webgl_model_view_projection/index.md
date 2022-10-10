@@ -544,7 +544,6 @@ The set of objects to be rendered for each frame is essentially created by start
 
 Once that's been done, we have the largest set of polygons which are entirely within the viewing frustum. This list is usually further reduced using processes like [back-face_culling](https://en.wikipedia.org/wiki/back-face_culling)}} (removing polygons whose back side is facing the camera) and occlusion culling using [hidden-surface determination](https://en.wikipedia.org/wiki/hidden-surface_determination)}} (removing polygons which can't be seen because they're entirely blocked by polygons that are closer to the lens).
 
-
 ## Perspective projection matrix
 
 Up to this point, we've built up our own 3D rendering setup, step by step. However the current code as we've built it has some issues. For one, it gets skewed whenever we resize our window. Another is that our simple projection doesn't handle a wide range of values for the scene data. Most scenes don't work in clip space. It would be helpful to define what distance is relevant to the scene so that precision isn't lost in converting the numbers. Finally it's very helpful to have a fine-tuned control over what points get placed inside and outside of clip space. In the previous examples the corners of the cube occasionally get clipped.
