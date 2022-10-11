@@ -75,7 +75,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Examples', '', '', '') }}
+{{ EmbedLiveSample('示例', '', '', '') }}
 
 ## 规范
 
