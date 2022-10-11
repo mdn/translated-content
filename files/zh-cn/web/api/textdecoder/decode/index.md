@@ -5,7 +5,7 @@ slug: Web/API/TextDecoder/decode
 
 {{APIRef("Encoding API")}}
 
-**`TextDecoder.decode()`** 方法返回一个字符串，其包含作为参数传递给缓冲区解码的文本。
+**`TextDecoder.decode()`** 方法返回一个字符串，其包含作为参数传递给缓冲区解码后的文本。
 
 解码方法在当前的 {{domxref("TextDecoder")}} 对象中定义。这包含了数据的预期编码，以及如何处理编码发生的错误。
 
