@@ -532,7 +532,7 @@ response = self.client.get(reverse('authors'))
 
 Uma vez que temos a resposta, consultamos o seu código de status, o _template_ usado, se a resposta é paginada ou não, o número de itens retonado e o número total de itens.
 
-> **Nota:** Nota: Se você definir a variável `paginate_by` em seu arquivo **/c\*\***atalog/views.py\*\* para um número diferente de 10, atualize as linhas que testam se o número correto de itens é exibido nos _templates_ paginados acima e nas seções seguintes. Por exemplo, se você definiu a variável para a lista de autor para 5, atualize a linha acima para:
+> **Nota:** Nota: Se você definir a variável `paginate_by` em seu arquivo **/catalog/views.py** para um número diferente de 10, atualize as linhas que testam se o número correto de itens é exibido nos _templates_ paginados acima e nas seções seguintes. Por exemplo, se você definiu a variável para a lista de autor para 5, atualize a linha acima para:
 >
 > ```python
 > self.assertTrue(len(response.context['author_list']) == 5)

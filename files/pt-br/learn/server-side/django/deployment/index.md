@@ -186,7 +186,7 @@ Because the file system is ephemeral you can't install services required by your
 
 In order to execute your application Heroku needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched. For Django apps we provide this information in a number of text files:
 
-- **runtime.txt**:\*\* \*\*the programming language and version to use.
+- **runtime.txt**: the programming language and version to use.
 - **requirements.txt**: the Python component dependencies, including Django.
 - **Procfile**: A list of processes to be executed to start the web application. For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
 - **wsgi.py**: [WSGI](http://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Heroku environment.

@@ -257,7 +257,7 @@ Crie um novo arquivo **_base_generic.html_ **em **/locallibrary/catalog/template
 
 O template inclui CSS de [Bootstrap](http://getbootstrap.com/) para melhorar o layout e a apresentação da página HTML. O uso do Bootstrap (ou outra estrutura da Web do lado do cliente) é uma maneira rápida de criar uma página atraente que é exibida bem em diferentes tamanhos de tela.
 
-O template base também faz referência a um arquivo css local (**styles.css**) que fornece estilo adicional. Criar um arquivo **styles.css** em** \*\***/locallibrary/catalog/static/css/\*\* e cole o seguinte código no arquivo:
+O template base também faz referência a um arquivo css local (**styles.css**) que fornece estilo adicional. Criar um arquivo **styles.css** em** **/locallibrary/catalog/static/css/** e cole o seguinte código no arquivo:
 
 ```css
 .sidebar-nav {
@@ -376,7 +376,7 @@ Temos duas tarefas para testar a sua familiaridade com as consultas de modelos, 
 
 1. O modelo de [base](/pt-BR/docs/Learn/Server-side/Django/Home_page#The_LocalLibrary_base_template) da BibliotecaLocal inclui um bloco de `título`. Substitua este bloco no modelo de índice e crie um novo título para a página.
 2. > **Nota:** **Dica:** A seção [Extendendo Templates](#Extending_templates) explica como criar blocos e extender um bloco em outro template.
-3. Modifique a [view](<#View_(function-based)>) para gerar contagens para gêneros e livros que contenham uma palavra específica (case insensitive), e passe o resultado para o `contexto.` Isso é feito de maneira semelhante à criação e uso de `num_books` e `num_instances_available`. Em seguida, atualize o template do index para incluir essas variáveis.
+3. Modifique a [view](<#View_(function-based)>) para gerar contagens para gêneros e livros que contenham uma palavra específica (case insensitive), e passe o resultado para o `contexto`. Isso é feito de maneira semelhante à criação e uso de `num_books` e `num_instances_available`. Em seguida, atualize o template do index para incluir essas variáveis.
 
 ## Resumo
 

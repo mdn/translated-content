@@ -70,15 +70,15 @@ Os atributos `srcset` e `sizes` parecem complicados, mas não são difíceis de 
 
 1. Um **nome do arquivo da imagem** (`elva-fairy-480w.jpg`).
 2. Um espaço.
-3. A **largura da imagem em pixels** (`480w`) — note que é usado a unidade `w`, e não `px` como você pode esperar. Este é o tamanho real da imagem, que pode ser encontrado no arquivo dela no seu computador (por exemplo no Mac você pode selecionar a imagem no Finder, e pressionar&#x20;
+3. A **largura da imagem em pixels** (`480w`) — note que é usado a unidade `w`, e não `px` como você pode esperar. Este é o tamanho real da imagem, que pode ser encontrado no arquivo dela no seu computador (por exemplo no Mac você pode selecionar a imagem no Finder, e pressionar
 
     <kbd>Cmd</kbd>
 
-    &#x20;\+&#x20;
+    \+
 
     <kbd>I</kbd>
 
-    &#x20;para mostrar as informações na tela).
+    para mostrar as informações na tela).
 
 **`sizes`** define um conjunto de condições de mídia (ex.: largura da tela) e indica qual tamanho da imagem deveria ser a melhor escolha, quando certas condições de tela são verdadeiras - Estas são as sugestões que nós falamos antes. Neste caso, antes de cada vírgula nós escrevemos:
 

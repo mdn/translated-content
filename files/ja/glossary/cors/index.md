@@ -12,7 +12,7 @@ slug: Glossary/CORS
 ### 一般知識
 
 - MDN 上の [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS)
-- Wikipedia 上の {{Interwiki("wikipedia", "Cross-origin resource sharing")}}
+- Wikipedia 上の [Cross-origin_resource_sharing](https://ja.wikipedia.org/wiki/Cross-origin_resource_sharing) （英語）
 
 ### CORS のヘッダー
 

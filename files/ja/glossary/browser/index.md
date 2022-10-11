@@ -20,7 +20,7 @@ slug: Glossary/Browser
 
 2. 一般知識
 
-    1. Wikipedia 上の記事: {{Interwiki("wikipedia", "ウェブブラウザー")}}
+    1. Wikipedia 上の記事: [ウェブブラウザー](https://ja.wikipedia.org/wiki/ウェブブラウザー)
     2. [ウェブの進化](http://www.evolutionoftheweb.com/)
 
 3. HTTP ヘッダー

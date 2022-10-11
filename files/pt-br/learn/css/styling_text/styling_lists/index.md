@@ -240,7 +240,7 @@ Adicione uma regra à sua folha de estilo, para numerar os oceanos usando numera
 
 Mude sua folha de estilo para identificar os títulos com letras maiúsculas em parênteses como este:
 
-| **(A) The oceans\*\***. . .\***\*(B) Numbered paragraphs\*\***. . .\*\* |
+| **(A) The oceans**. . .**(B) Numbered paragraphs**. . . |
 | ----------------------------------------------------------------------- |
 
 [Ver soluções para esses desafios.](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Challenge_solutions#Lists)

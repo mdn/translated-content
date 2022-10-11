@@ -9,7 +9,7 @@ slug: Glossary/Metadata
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "metadata", "metadata")}}
+- Wikipedia の [metadata](https://ja.wikipedia.org/wiki/metadata)
 
 ### HTML メタデータ
 

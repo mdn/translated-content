@@ -25,7 +25,7 @@ O **elemento** `<body>` do **HTML** representa o conteúdo de um documento HTML.
       </th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
+          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
           >Seção raiz</a
         >.
       </td>

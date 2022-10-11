@@ -46,4 +46,4 @@ public static void main(String[] args)
 
 ### `一般知識`
 
-- Wikipedia の {{Interwiki("wikipedia", "Type signature#Java", "Java internal type signatures")}}
+- Wikipedia の [Java internal type signatures](https://en.wikipedia.org/wiki/Type_signature#Java)

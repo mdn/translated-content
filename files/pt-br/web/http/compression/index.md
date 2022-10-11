@@ -10,7 +10,7 @@ original_slug: Web/HTTP/Compressão
 ---
 {{HTTPSidebar}}
 
-A **Compressão** é uma forma importante de aumentar o desempenho de um Web site.\*\* \*\*Para alguns documentos, a redução de tamanho de até 70% diminui a necessidade de capacidade de largura de banda. Com o passar dos anos, os algoritmos também ficaram mais eficientes e novos têm recebido suporte por clientes e servidores.
+A **Compressão** é uma forma importante de aumentar o desempenho de um Web site. Para alguns documentos, a redução de tamanho de até 70% diminui a necessidade de capacidade de largura de banda. Com o passar dos anos, os algoritmos também ficaram mais eficientes e novos têm recebido suporte por clientes e servidores.
 
 Na prática, os desenvolvedores web não precisam implementar mecanismos de compressão de dados, pois ambos os navegadores e servidores já possuem tais mecanismos implementados. Porém, é preciso ter certeza de que o servidor esteja configurado adequadamente. A compressão acontece em três níveis distintos:
 
