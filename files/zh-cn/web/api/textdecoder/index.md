@@ -5,7 +5,9 @@ slug: Web/API/TextDecoder
 
 {{APIRef("Encoding API")}}
 
-**`TextDecoder`** 接口表示一个文本解码器，一个解码器只支持一种特定文本编码，例如 `UTF-8`、 `ISO-8859-2`、`KOI8-R`、`GBK`, 等等。解码器将字节流作为输入，并提供代码点流作为输出。
+**`TextDecoder`** 接口表示一个文本解码器，一个解码器只支持一种特定文本编码，例如 `UTF-8`、`ISO-8859-2`、`KOI8-R`、`GBK`，等等。解码器将字节流作为输入，并提供码位流作为输出。
+
+{{AvailableInWorkers}}
 
 ## 构造函数
 
