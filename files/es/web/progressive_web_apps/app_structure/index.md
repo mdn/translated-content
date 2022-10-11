@@ -13,6 +13,7 @@ tags:
   - progresiva
 translation_of: Web/Progressive_web_apps/App_structure
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
 Ahora que conoces la teoría detrás de las PWAs, veamos la estructura recomendada de una aplicación real. Comenzaremos analizando la aplicación [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), veamos por qué está construida de esa manera y qué beneficios aporta.
@@ -26,7 +27,7 @@ Hay dos principales y diferentes enfoques para representar un sitio web — en e
 
 La combinación de SSR con CSR puede generar los mejores resultados: puedes representar un sitio web en el servidor, almacenar en caché su contenido y luego actualizar la representación en el lado del cliente cuando sea necesario. La carga de la primera página es rápida debido al SSR y la navegación entre páginas es fluida porque el cliente puede volver a renderizar la página solo con las partes que han cambiado.
 
-Las PWAs se pueden crear utilizando cualquier enfoque que desees, pero algunas funcionarán mejor que otras. El enfoque más popular es el concepto de "intérprete de la aplicación", que combina SSR y CSR exactamente de la manera descrita anteriormente, y además sigue la metodología "fuera de línea primero" que explicaremos en detalle en los próximos artículos y utilizaremos en nuestra aplicación de ejemplo. También hay un nuevo enfoque que involucra la {{web.link("/es/docs/Web/API/Streams_API", "API Streams")}}, que mencionaremos brevemente.
+Las PWAs se pueden crear utilizando cualquier enfoque que desees, pero algunas funcionarán mejor que otras. El enfoque más popular es el concepto de "intérprete de la aplicación", que combina SSR y CSR exactamente de la manera descrita anteriormente, y además sigue la metodología "fuera de línea primero" que explicaremos en detalle en los próximos artículos y utilizaremos en nuestra aplicación de ejemplo. También hay un nuevo enfoque que involucra la [API Streams](/es/docs/Web/API/Streams_API), que mencionaremos brevemente.
 
 ## Intérprete de la aplicación
 
@@ -34,11 +35,11 @@ El concepto de intérprete de la aplicación se ocupa de cargar una interfaz de 
 
 Esta estructura es rápida y también se siente rápida, ya que el usuario ve "algo" instantáneamente, en lugar de una ruleta de carga o una página en blanco. También permite que el sitio web sea accesible sin conexión si la conexión de red no está disponible.
 
-Podemos controlar lo que se solicita del servidor y lo que se recupera de la caché con un {{web.link("/es/docs/Web/API/Service_Worker_API", "servicio worker")}}, que se explicará en detalle en el próximo artículo, por ahora centrémonos en la estructura en sí misma.
+Podemos controlar lo que se solicita del servidor y lo que se recupera de la caché con un [servicio worker](/es/docs/Web/API/Service_Worker_API), que se explicará en detalle en el próximo artículo, por ahora centrémonos en la estructura en sí misma.
 
 ### ¿Por qué debería usarla?
 
-Esta arquitectura permite que un sitio web se beneficie al máximo de todas las funciones de PWA — almacena en caché el intérprete de la aplicación y administra el contenido dinámico de una manera que mejora enormemente el rendimiento. Además del intérprete básico, puedes agregar otras funciones como {{web.link("/es/docs/Web/Progressive_web_apps/Add_to_home_screen", "agregar a la pantalla de inicio")}} o {{web.link("/es/docs/Web/API/Push_API", "notificaciones push")}}, con la certeza de que la aplicación seguirá funcionando correctamente si no son compatibles con el navegador del usuario — esta es la belleza de la mejora progresiva.
+Esta arquitectura permite que un sitio web se beneficie al máximo de todas las funciones de PWA — almacena en caché el intérprete de la aplicación y administra el contenido dinámico de una manera que mejora enormemente el rendimiento. Además del intérprete básico, puedes agregar otras funciones como [agregar a la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Add_to_home_screen) o [notificaciones push](/es/docs/Web/API/Push_API), con la certeza de que la aplicación seguirá funcionando correctamente si no son compatibles con el navegador del usuario — esta es la belleza de la mejora progresiva.
 
 El sitio web se siente como una aplicación nativa con interacción instantánea y un rendimiento sólido, al tiempo que conserva todos los beneficios de la web.
 
@@ -48,11 +49,11 @@ Es importante recordar las ventajas de PWA y tenerlas en cuenta al diseñar la a
 
 - Enlazable: aunque se comporta como una aplicación nativa, sigue siendo un sitio web; puedes hacer clic en los enlaces dentro de la página y enviar una URL a alguien si deseas compartirla.
 - Progresiva: comienza con el "buen, antiguo sitio web básico" y agrega progresivamente nuevas funciones mientras recuerdas detectar si están disponibles en el navegador y manejas con elegancia cualquier error que surja si no hay soporte disponible. Por ejemplo, un modo fuera de línea con la ayuda del servicio _workers_ es solo un rasgo adicional que mejora la experiencia del sitio web, pero aún se puede usar perfectamente sin él.
-- Adaptable: El diseño web adaptable también se aplica a las aplicaciones web progresivas, ya que ambas son principalmente para dispositivos móviles. Hay una gran variedad de dispositivos con navegadores — es importante preparar tu sitio web para que funcione en diferentes tamaños de pantalla, ventanas gráficas o densidades de píxeles, utilizando tecnologías como {{web.link("/es/docs/Mozilla/Mobile/Viewport_meta_tag", "metaetiqueta de la ventana gráfica")}}, {{web.link("/es/docs/Web/CSS/Media_Queries/Using_media_queries", "consultas de medios CSS")}}, {{web.link("/es/docs/Web/CSS/CSS_Flexible_Box_Layout", "Flexbox")}} y {{web.link("/es/docs/Web/CSS/CSS_Grid_Layout", "Rejilla CSS")}}.
+- Adaptable: El diseño web adaptable también se aplica a las aplicaciones web progresivas, ya que ambas son principalmente para dispositivos móviles. Hay una gran variedad de dispositivos con navegadores — es importante preparar tu sitio web para que funcione en diferentes tamaños de pantalla, ventanas gráficas o densidades de píxeles, utilizando tecnologías como [metaetiqueta de la ventana gráfica](/es/docs/Mozilla/Mobile/Viewport_meta_tag), [consultas de medios CSS](/es/docs/Web/CSS/Media_Queries/Using_media_queries), [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) y [Rejilla CSS](/es/docs/Web/CSS/CSS_Grid_Layout).
 
 ## Concepto diferente: _streams_ o transmisiones
 
-Se puede lograr un enfoque completamente diferente para la representación del lado del servidor o del cliente con la {{web.link("/es/docs/Web/API/Streams_API", "API Streams")}}. Con un poco de ayuda del servicio _workers_, las transmisiones pueden mejorar en gran medida la forma en que analizamos el contenido.
+Se puede lograr un enfoque completamente diferente para la representación del lado del servidor o del cliente con la [API Streams](/es/docs/Web/API/Streams_API). Con un poco de ayuda del servicio _workers_, las transmisiones pueden mejorar en gran medida la forma en que analizamos el contenido.
 
 El modelo de intérprete de la aplicación requiere que todos los recursos estén disponibles antes de que el sitio web pueda comenzar a renderizarse. Es diferente con HTML, ya que el navegador ya está transmitiendo los datos y puede ver cuándo se cargan y procesan los elementos en el sitio web. Sin embargo, para que JavaScript esté "operativo", se debe descargar en su totalidad.
 
@@ -60,7 +61,7 @@ La API de _Streams_ permite a los desarrolladores tener acceso directo a la tran
 
 En teoría, la transmisión es un mejor modelo, pero también es más complejo, y en el momento de redactar este artículo (marzo de 2018), la API de _Streams_ todavía está en proceso y aún no está completamente disponible en ninguno de los principales navegadores. Cuando esté disponible, será la forma más rápida de servir el contenido — los beneficios serán enormes en términos de rendimiento.
 
-Para obtener ejemplos trabajando y más información, consulta la {{web.link("/es/docs/Web/API/Streams_API", "documentación de la API de Streams")}}.
+Para obtener ejemplos trabajando y más información, consulta la [documentación de la API de Streams](/es/docs/Web/API/Streams_API).
 
 ## Estructura de nuestra aplicación de ejemplo
 
@@ -75,36 +76,54 @@ Desde el punto de vista HTML, el intérprete de la aplicación es todo lo que es
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <meta charset="utf-8">
- <title>js13kGames — Entradas del marco A</title>
- <meta name="description" content="Una lista de las entradas del marco A enviadas a la competencia js13kGames 2017, que se utiliza como ejemplo para los artículos de MDN sobre Aplicaciones Web Progresivas">
- <meta name="author" content="end3r">
- <meta name="theme-color" content="#B12A34">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta property="og:image" content="icons/icon-512.png">
- <link rel="shortcut icon" href="favicon.ico">
- <link rel="stylesheet" href="style.css">
- <link rel="manifest" href="js13kpwa.webmanifest">
- <script src="data/games.js" defer></script>
- <script src="app.js" defer></script>
-</head>
-<body>
-<header>
- <p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
-</header>
-<main>
- <h1>js13kGames — Entradas del marco A</h1>
- <p class="description">Lista de juegos enviada a <a href="http://js13kgames.com/aframe">categoría Marco A</a> en la competencia de <a href="http://2017.js13kgames.com">js13kGames 2017</a>. Puedes <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">bifurcar js13kPWA en GitHub</a> para revisar su código fuente.</p>
- <button id="notifications">Solicitar notificaciones ficticias</button>
- <section id="content">
-  // Contenido insertado aquí
- </section>
-</main>
-<footer>
- <p>© js13kGames 2012-2020, creado y mantenido por <a href="http://end3r.com">Andrzej Mazur</a> de <a href="http://enclavegames.com">Enclave Games</a>.</p>
-</footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>js13kGames — Entradas del marco A</title>
+    <meta
+      name="description"
+      content="Una lista de las entradas del marco A enviadas a la competencia js13kGames 2017, que se utiliza como ejemplo para los artículos de MDN sobre Aplicaciones Web Progresivas"
+    />
+    <meta name="author" content="end3r" />
+    <meta name="theme-color" content="#B12A34" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="icons/icon-512.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="js13kpwa.webmanifest" />
+    <script src="data/games.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p>
+        <a class="logo" href="http://js13kgames.com"
+          ><img src="img/js13kgames.png" alt="js13kGames"
+        /></a>
+      </p>
+    </header>
+    <main>
+      <h1>js13kGames — Entradas del marco A</h1>
+      <p class="description">
+        Lista de juegos enviada a
+        <a href="http://js13kgames.com/aframe">categoría Marco A</a> en la
+        competencia de <a href="http://2017.js13kgames.com">js13kGames 2017</a>.
+        Puedes
+        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa"
+          >bifurcar js13kPWA en GitHub</a
+        >
+        para revisar su código fuente.
+      </p>
+      <button id="notifications">Solicitar notificaciones ficticias</button>
+      <section id="content">// Contenido insertado aquí</section>
+    </main>
+    <footer>
+      <p>
+        © js13kGames 2012-2020, creado y mantenido por
+        <a href="http://end3r.com">Andrzej Mazur</a> de
+        <a href="http://enclavegames.com">Enclave Games</a>.
+      </p>
+    </footer>
+  </body>
 </html>
 ```
 
@@ -121,7 +140,8 @@ El CSS también es lo más sencillo posible: usa {{CSSxRef("@font-face")}} para 
 El archivo `app.js` hace algunas cosas que veremos de cerca en los próximos artículos. En primer lugar, genera el contenido en base a esta plantilla:
 
 ```js
-var template = "<article>\n\
+var template =
+  "<article>\n\
     <img src='data/img/SLUG.jpg' alt='NAME'>\n\
     <h3>#POS. NAME</h3>\n\
     <ul>\n\
@@ -132,39 +152,40 @@ var template = "<article>\n\
     <li><span>More:</span> <a href='http://js13kgames.com/entries/SLUG'>js13kgames.com/entries/SLUG</a></li>\n\
     </ul>\n\
 </article>";
-var content = '';
-for(var i=0; i<games.length; i++) {
-    var entry = template.replace(/POS/g,(i+1))
-        .replace(/SLUG/g,games[i].slug)
-        .replace(/NAME/g,games[i].name)
-        .replace(/AUTHOR/g,games[i].author)
-        .replace(/TWITTER/g,games[i].twitter)
-        .replace(/WEBSITE/g,games[i].website)
-        .replace(/GITHUB/g,games[i].github);
-    entry = entry.replace('<a href=\'http:///\'></a>','-');
-    content += entry;
-};
-document.getElementById('content').innerHTML = content;
+var content = "";
+for (var i = 0; i < games.length; i++) {
+  var entry = template
+    .replace(/POS/g, i + 1)
+    .replace(/SLUG/g, games[i].slug)
+    .replace(/NAME/g, games[i].name)
+    .replace(/AUTHOR/g, games[i].author)
+    .replace(/TWITTER/g, games[i].twitter)
+    .replace(/WEBSITE/g, games[i].website)
+    .replace(/GITHUB/g, games[i].github);
+  entry = entry.replace("<a href='http:///'></a>", "-");
+  content += entry;
+}
+document.getElementById("content").innerHTML = content;
 ```
 
 A continuación, registra un servicio _works_:
 
 ```js
-if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
-};
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
+}
 ```
 
 El siguiente bloque de código solicita permiso para recibir notificaciones cuando se hace clic en un botón:
 
 ```js
 var button = document.getElementById("notifications");
-button.addEventListener('click', function(e) {
-    Notification.requestPermission().then(function(result) {
-        if(result === 'granted') {
-            randomNotification();
-        }
-    });
+button.addEventListener("click", function (e) {
+  Notification.requestPermission().then(function (result) {
+    if (result === "granted") {
+      randomNotification();
+    }
+  });
 });
 ```
 
@@ -172,16 +193,16 @@ El último bloque crea notificaciones que muestran un elemento seleccionado al a
 
 ```js
 function randomNotification() {
-    var randomItem = Math.floor(Math.random()*games.length);
-    var notifTitle = games[randomItem].name;
-    var notifBody = 'Creado por '+games[randomItem].author+'.';
-    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
-    var options = {
-        body: notifBody,
-        icon: notifImg
-    }
-    var notif = new Notification(notifTitle, options);
-    setTimeout(randomNotification, 30000);
+  var randomItem = Math.floor(Math.random() * games.length);
+  var notifTitle = games[randomItem].name;
+  var notifBody = "Creado por " + games[randomItem].author + ".";
+  var notifImg = "data/img/" + games[randomItem].slug + ".jpg";
+  var options = {
+    body: notifBody,
+    icon: notifImg,
+  };
+  var notif = new Notification(notifTitle, options);
+  setTimeout(randomNotification, 30000);
 }
 ```
 
@@ -190,36 +211,36 @@ function randomNotification() {
 El último archivo que veremos rápidamente es el servicio _worker_: `sw.js` — primero importa datos del archivo `games.js`:
 
 ```js
-self.importScripts('data/games.js');
+self.importScripts("data/games.js");
 ```
 
 A continuación, crea una lista de todos los archivos que se almacenarán en caché, tanto del intérprete de la aplicación como del contenido:
 
 ```js
-var cacheName = 'js13kPWA-v1';
+var cacheName = "js13kPWA-v1";
 var appShellFiles = [
-  '/pwa-examples/js13kpwa/',
-  '/pwa-examples/js13kpwa/index.html',
-  '/pwa-examples/js13kpwa/app.js',
-  '/pwa-examples/js13kpwa/style.css',
-  '/pwa-examples/js13kpwa/fonts/graduate.eot',
-  '/pwa-examples/js13kpwa/fonts/graduate.ttf',
-  '/pwa-examples/js13kpwa/fonts/graduate.woff',
-  '/pwa-examples/js13kpwa/favicon.ico',
-  '/pwa-examples/js13kpwa/img/js13kgames.png',
-  '/pwa-examples/js13kpwa/img/bg.png',
-  '/pwa-examples/js13kpwa/icons/icon-32.png',
-  '/pwa-examples/js13kpwa/icons/icon-64.png',
-  '/pwa-examples/js13kpwa/icons/icon-96.png',
-  '/pwa-examples/js13kpwa/icons/icon-128.png',
-  '/pwa-examples/js13kpwa/icons/icon-168.png',
-  '/pwa-examples/js13kpwa/icons/icon-192.png',
-  '/pwa-examples/js13kpwa/icons/icon-256.png',
-  '/pwa-examples/js13kpwa/icons/icon-512.png'
+  "/pwa-examples/js13kpwa/",
+  "/pwa-examples/js13kpwa/index.html",
+  "/pwa-examples/js13kpwa/app.js",
+  "/pwa-examples/js13kpwa/style.css",
+  "/pwa-examples/js13kpwa/fonts/graduate.eot",
+  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
+  "/pwa-examples/js13kpwa/fonts/graduate.woff",
+  "/pwa-examples/js13kpwa/favicon.ico",
+  "/pwa-examples/js13kpwa/img/js13kgames.png",
+  "/pwa-examples/js13kpwa/img/bg.png",
+  "/pwa-examples/js13kpwa/icons/icon-32.png",
+  "/pwa-examples/js13kpwa/icons/icon-64.png",
+  "/pwa-examples/js13kpwa/icons/icon-96.png",
+  "/pwa-examples/js13kpwa/icons/icon-128.png",
+  "/pwa-examples/js13kpwa/icons/icon-168.png",
+  "/pwa-examples/js13kpwa/icons/icon-192.png",
+  "/pwa-examples/js13kpwa/icons/icon-256.png",
+  "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 var gamesImages = [];
-for(var i=0; i<games.length; i++) {
-  gamesImages.push('data/img/'+games[i].slug+'.jpg');
+for (var i = 0; i < games.length; i++) {
+  gamesImages.push("data/img/" + games[i].slug + ".jpg");
 }
 var contentToCache = appShellFiles.concat(gamesImages);
 ```
@@ -227,11 +248,13 @@ var contentToCache = appShellFiles.concat(gamesImages);
 El siguiente bloque instala el servicio _worker_, que luego almacena en caché todos los archivos contenidos en la lista anterior:
 
 ```js
-self.addEventListener('install', function(e) {
-  console.log('[Service Worker] Install');
+self.addEventListener("install", function (e) {
+  console.log("[Service Worker] Install");
   e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[Servicio Worker] Almacena todo en caché: contenido e intérprete de la aplicación');
+    caches.open(cacheName).then(function (cache) {
+      console.log(
+        "[Servicio Worker] Almacena todo en caché: contenido e intérprete de la aplicación"
+      );
       return cache.addAll(contentToCache);
     })
   );
@@ -241,17 +264,22 @@ self.addEventListener('install', function(e) {
 Por último, el servicio _worker_ obtiene contenido de la caché si está disponible allí, lo cual proporciona una funcionalidad fuera de línea:
 
 ```js
-self.addEventListener('fetch', function(e) {
+self.addEventListener("fetch", function (e) {
   e.respondWith(
-    caches.match(e.request).then(function(r) {
-      console.log('[Servicio Worker] Obteniendo recurso: '+e.request.url);
-      return r || fetch(e.request).then(function(response) {
-        return caches.open(cacheName).then(function(cache) {
-          console.log('[Servicio Worker] Almacena el nuevo recurso: '+e.request.url);
-          cache.put(e.request, response.clone());
-          return response;
-        });
-      });
+    caches.match(e.request).then(function (r) {
+      console.log("[Servicio Worker] Obteniendo recurso: " + e.request.url);
+      return (
+        r ||
+        fetch(e.request).then(function (response) {
+          return caches.open(cacheName).then(function (cache) {
+            console.log(
+              "[Servicio Worker] Almacena el nuevo recurso: " + e.request.url
+            );
+            cache.put(e.request, response.clone());
+            return response;
+          });
+        })
+      );
     })
   );
 });
@@ -263,31 +291,31 @@ Los datos de los juegos están presentes en el directorio _data_ en forma de un 
 
 ```js
 var games = [
-    {
-        slug: 'perdido-en-el-ciberespacio',
-        name: 'Perdido en el ciberespacio',
-        author: 'Zosia y Bartek',
-        twitter: 'bartaz',
-        website: '',
-        github: 'github.com/bartaz/lost-in-cyberspace'
-    },
-    {
-        slug: 'vernissage',
-        name: 'Vernissage',
-        author: 'Platane',
-        twitter: 'platane_',
-        website: 'github.com/Platane',
-        github: 'github.com/Platane/js13k-2017'
-    },
-// ...
-    {
-        slug: 'emma-3d',
-        name: 'Emma-3D',
-        author: 'Prateek Roushan',
-        twitter: '',
-        website: '',
-        github: 'github.com/coderprateek/Emma-3D'
-    }
+  {
+    slug: "perdido-en-el-ciberespacio",
+    name: "Perdido en el ciberespacio",
+    author: "Zosia y Bartek",
+    twitter: "bartaz",
+    website: "",
+    github: "github.com/bartaz/lost-in-cyberspace",
+  },
+  {
+    slug: "vernissage",
+    name: "Vernissage",
+    author: "Platane",
+    twitter: "platane_",
+    website: "github.com/Platane",
+    github: "github.com/Platane/js13k-2017",
+  },
+  // ...
+  {
+    slug: "emma-3d",
+    name: "Emma-3D",
+    author: "Prateek Roushan",
+    twitter: "",
+    website: "",
+    github: "github.com/coderprateek/Emma-3D",
+  },
 ];
 ```
 

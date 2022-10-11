@@ -26,4 +26,4 @@ typeof null === 'object' // true
 
 - [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)
 - JavaScript のグローバルオブジェクト: {{jsxref("null")}}
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "Null")}}」
+- Wikipedia 上の記事「[Null](https://ja.wikipedia.org/wiki/Null)」

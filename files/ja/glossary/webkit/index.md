@@ -13,7 +13,7 @@ Webkit は Apple の商標であり、BSD ライセンスの下にあるフレ�
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "WebKit")}}
+- Wikipedia 上の [WebKit](https://ja.wikipedia.org/wiki/WebKit)
 
 ### 技術リファレンス
 

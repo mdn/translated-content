@@ -41,4 +41,4 @@ O evento `input` do DOM é disparado sincronicamente quando o valor de um elemen
 - {{event("keypress")}}
 - {{event("input")}}
 
-O evento de [`change`](/en-US/docs/Web/Reference/Events/change) é relacionado. `change` dispara com menos frequência que o `input` – ele só irá disparar quando as mudanças forem finalizadas pelo usuário.
+O evento de [`change`](/pt-BR/docs/Web/Reference/Events/change) é relacionado. `change` dispara com menos frequência que o `input` – ele só irá disparar quando as mudanças forem finalizadas pelo usuário.

@@ -13,4 +13,4 @@ slug: Glossary/FPS
 
 2. Wikipedia 記事
 
-    1. {{Interwiki("wikipedia", "フレームレート")}}
+    1. [フレームレート](https://ja.wikipedia.org/wiki/フレームレート)

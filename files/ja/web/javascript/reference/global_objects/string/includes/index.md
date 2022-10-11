@@ -48,7 +48,6 @@ includes(searchString, position)
 
 元の文字列と検索文字列の両方をすべて小文字に変換することで、この制約を回避することができます。
 
-
 ```js
 'Blue Whale'.toLowerCase().includes('blue')  // true を返す
 ```

@@ -41,5 +41,5 @@ _Нормальный поток (normal flow)_ или поточная раск
 
 - {{Glossary("Block/CSS", "Block (CSS)")}}
 
-1.  [**CSS**](/ru/docs/Web/CSS)
-2.  [**CSS Reference**](/ru/docs/Web/CSS/Reference)
+1. [CSS](/ru/docs/Web/CSS)
+2. [CSS Reference](/ru/docs/Web/CSS/Reference)

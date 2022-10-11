@@ -18,7 +18,7 @@ slug: Web/CSS/:host
 
 ## 構文
 
-```css
+```
 :host
 ```
 

@@ -8,7 +8,7 @@ translation_of: Web/CSS/list-style-image
 ---
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`list-style-image `**устанавливает изображение, используемое в качестве маркера списка.
+[CSS](/ru/docs/Web/CSS)-свойство **`list-style-image`** устанавливает изображение, используемое в качестве маркера списка.
 
 Чаще, удобнее использовать общее свойство {{ cssxref("list-style") }}.
 

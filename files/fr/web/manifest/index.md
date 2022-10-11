@@ -293,13 +293,11 @@ Les manifestes doivent être servies en utilisant l'`application/manifest+json` 
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire         |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Manifest')}} | {{Spec2('Manifest')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.manifest")}}
+{{Compat}}
 
 ## Voir aussi
 

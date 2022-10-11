@@ -17,4 +17,4 @@ function fun(){
 
 1. 一般知識
 
-    1. Wikipedia 上の{{interwiki("wikipedia", "ローカル変数")}}
+    1. Wikipedia 上の[ローカル変数](https://ja.wikipedia.org/wiki/ローカル変数)

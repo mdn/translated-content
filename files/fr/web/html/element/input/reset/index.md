@@ -1,12 +1,6 @@
 ---
 title: <input type="reset">
-slug: Web/HTML/Element/Input/reset
-tags:
-  - Element
-  - HTML
-  - Input
-  - Reference
-translation_of: Web/HTML/Element/input/reset
+slug: Web/HTML/Element/input/reset
 ---
 
 {{HTMLRef}}

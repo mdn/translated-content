@@ -83,7 +83,7 @@ class PopUpInfo extends HTMLElement {
 }
 ```
 
-O trecho de código anterior contém a definição do [`constructor()`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) da classe, que sempre começa chamando [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) para que a cadeia de protótipo correta seja estabelecida.
+O trecho de código anterior contém a definição do [`constructor()`](/pt-BR/docs/Web/JavaScript/Reference/Classes/constructor) da classe, que sempre começa chamando [`super()`](/pt-BR/docs/Web/JavaScript/Reference/Operators/super) para que a cadeia de protótipo correta seja estabelecida.
 
 Dentro do construtor, definimos toda a funcionalidade que o elemento terá quando uma instância dele for instanciada. Neste caso, anexamos uma shadow root ao custom element, usamos alguma manipulação de DOM para criar a estrutura de shadow DOM interna do elemento - que é então anexada à shadow root - e, finalmente, anexamos algum CSS à shadow root para estilizá-la.
 

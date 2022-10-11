@@ -7,11 +7,11 @@ tags:
 translation_of: Web/SVG/Namespaces_Crash_Course
 original_slug: Web/SVG/Intensivo_de_Namespaces
 ---
-Como um dialeto [XML](/pt-BR/docs/Glossario/XML "en-US/docs/Glossary/XML"), o [SVG](/pt-BR/docs/Web/SVG "en-US/docs/Web/SVG") tem _namespace_. É importante entender o conceito de _[namespaces](/pt-BR/docs/Web/SVG/Intensivo_de_Namespaces)_ e como eles são usados se você planeja criar seu próprio conteúdo em SVG. Versões de visualizadores SVG prévias ao lançamento do Firefox 1.5 infelizmente deu pouca atenção aos _namespaces_ mas eles são essenciais para dialetos multi-XML suportando agentes de usuários como navegadores baseados em [Gecko](/pt-BR/docs/Mozilla/Gecko "en-US/docs/Mozilla/Gecko") que devem ser muito rigorosos. Tome um tempo para entender _namespaces_ agora e irá te privar de muita dor de cabeça no futuro.
+Como um dialeto [XML](/pt-BR/docs/Glossario/XML), o [SVG](/pt-BR/docs/Web/SVG) tem _namespace_. É importante entender o conceito de _[namespaces](/pt-BR/docs/Web/SVG/Intensivo_de_Namespaces)_ e como eles são usados se você planeja criar seu próprio conteúdo em SVG. Versões de visualizadores SVG prévias ao lançamento do Firefox 1.5 infelizmente deu pouca atenção aos _namespaces_ mas eles são essenciais para dialetos multi-XML suportando agentes de usuários como navegadores baseados em [Gecko](/pt-BR/docs/Mozilla/Gecko) que devem ser muito rigorosos. Tome um tempo para entender _namespaces_ agora e irá te privar de muita dor de cabeça no futuro.
 
 ### Experiência
 
-Tem sido uma longa meta do W3C para fazer possível para diferentes tipos de conteúdo baseado em XML ser misturado no mesmo arquivo XML. Por exemplo, SVG e [MathML](/pt-BR/docs/Web/MathML "en-US/docs/Web/MathML") podem ser incorporados diretamente em um documento cientificamente baseado em XHTML. Ser apto de misturar tipos de conteúdo como este tem muitas vantagens, mas também requeriu problemas reais para serem resolvidos.
+Tem sido uma longa meta do W3C para fazer possível para diferentes tipos de conteúdo baseado em XML ser misturado no mesmo arquivo XML. Por exemplo, SVG e [MathML](/pt-BR/docs/Web/MathML) podem ser incorporados diretamente em um documento cientificamente baseado em XHTML. Ser apto de misturar tipos de conteúdo como este tem muitas vantagens, mas também requeriu problemas reais para serem resolvidos.
 
 Naturalmente, cada dialeto XML define o significado de um nome de tag de marcação descrito em sua especificação. O problema em misturar conteúdo de diferentes dialetos XML em um único documento XML é que as tags definidas por um dialeto podem ter o mesmo nome que as tags definidas por outro. Por exemplo, ambos XHTML e SVG tem uma tag `<title>`. Como o software deveria distinguir entre os dois? Na verdade, como o software conta quando o conteúdo XML é algo que ele conhece sobre, e não somente um arquivo XML sem significado contendo nomes de tags arbitrárias desconhecidas para ele?
 
@@ -119,7 +119,7 @@ Mas para recuperar o valor de atributo `x` em um elemento SVG `rect`, você deve
 rect.getAttributeNS(null, 'x');
 ```
 
-Note que isto não é o caso para atributos _com_ um prefixo de _namespace_ (atributos que não pertencem ao mesmo dialeto XML como a tag). Atributos como o `xlink:href` requerem o nome de _namespace_ que foi designado para aquele prefixo (http\://www\.w3.org/1999/xlink para XLink). Consequentemente para pegar o valor do atributo `xlink:href` de um elemento `<a>` em SVG você deveria escrever:
+Note que isto não é o caso para atributos _com_ um prefixo de _namespace_ (atributos que não pertencem ao mesmo dialeto XML como a tag). Atributos como o `xlink:href` requerem o nome de _namespace_ que foi designado para aquele prefixo (`http://www.w3.org/1999/xlink` para XLink). Consequentemente para pegar o valor do atributo `xlink:href` de um elemento `<a>` em SVG você deveria escrever:
 
 ```javascript
 elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');

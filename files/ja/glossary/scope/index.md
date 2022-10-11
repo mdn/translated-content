@@ -37,4 +37,4 @@ console.log(x);
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "スコープ")}}
+- Wikipedia の [スコープ](https://ja.wikipedia.org/wiki/スコープ)

@@ -15,13 +15,13 @@ translation_of: Web/HTML/Element/q
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Categorias de conteúdo</a>
+        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de conteúdo</a>
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Fluxo de conteúdo</a
         >,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >conteúdo textual</a
         >, conteúdo palpável.
       </td>
@@ -29,7 +29,7 @@ translation_of: Web/HTML/Element/q
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >Conteúdo textual</a
         >.
       </td>
@@ -42,7 +42,7 @@ translation_of: Web/HTML/Element/q
       <th scope="row">Parents permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >conteúdo textual</a
         >.
       </td>
@@ -74,7 +74,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 ```html
 <p>According to Mozilla's website,
   <q
-  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
+  cite="https://www.mozilla.org/pt-BR/about/history/details/">Firefox 1.0
   was released in 2004 and became a big success.</q></p>
 ```
 

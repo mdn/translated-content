@@ -475,6 +475,7 @@
 /es/docs/Glossary/DHTML	/es/docs/Glossary
 /es/docs/Glossary/Descifrado	/es/docs/Glossary/Decryption
 /es/docs/Glossary/Dynamic_programming_language	/es/docs/orphaned/Glossary/Dynamic_programming_language
+/es/docs/Glossary/Empty_element	/es/docs/Glossary/Void_element
 /es/docs/Glossary/Encriptación	/es/docs/Glossary/Encryption
 /es/docs/Glossary/Entidad	/es/docs/Glossary/Entity
 /es/docs/Glossary/Espacio_en_blanco	/es/docs/Glossary/Whitespace
@@ -1221,8 +1222,7 @@
 /es/docs/MDN/Contribute/Procesos	/es/docs/MDN/Contribute/Processes
 /es/docs/MDN/Contribute/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Contribute/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
-/es/docs/MDN/Contribute/Structures/Macros	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
-/es/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
+/es/docs/MDN/Contribute/Structures/Macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Contribute/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Contribute/Structures/Tablas_de_compatibilidad	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Enviar_feedback_sobre_MDN	/es/docs/MDN/Community
@@ -1239,7 +1239,7 @@
 /es/docs/MDN/Structures/Compatibility_tables	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
 /es/docs/MDN/Structures/Live_samples	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
-/es/docs/MDN/Structures/Macros	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
+/es/docs/MDN/Structures/Macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Structures/Macros/Commonly-used_macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Structures/Macros/Other	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
@@ -1888,6 +1888,7 @@
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Dibujando_formas	/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
+/es/docs/Web/Guide/HTML/Editable_content	/es/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /es/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form	/es/docs/Learn/Forms/How_to_structure_a_web_form
 /es/docs/Web/Guide/HTML/Forms/My_first_HTML_form	/es/docs/Learn/Forms/Your_first_form
 /es/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/es/docs/Learn/Forms/Sending_and_retrieving_form_data

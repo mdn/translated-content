@@ -9,7 +9,7 @@ Google Chrome は Google が開発した無償の{{glossary("browser", "ブラ�
 
 ### General knowledge
 
-- Wikipedia 上の {{interwiki("wikipedia", "Google Chrome", "Google Chrome")}} 記事
+- Wikipedia 上の [Google Chrome](https://ja.wikipedia.org/wiki/Google_Chrome) 記事
 
 ### Chrome の利用者へ
 
