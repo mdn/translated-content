@@ -70,7 +70,7 @@ button:hover {
 - {{CSSxRef(":user-invalid")}}
   - : Represents an element with incorrect input, but only when the user has interacted with it.
 
-## 语言式伪类
+## 语言的伪类
 
 这些伪类根据文档语言而反应，可以基于语言或书写方向来选择元素。
 
@@ -118,7 +118,7 @@ button:hover {
 - {{CSSxRef(":future")}}
   - : Represents an element that occurs entirely after the {{CSSxRef(":current")}} element.
 
-## 树结构式伪类
+## 树结构的伪类
 
 这些伪类与文档树中的元素位置有关。
 
@@ -164,7 +164,7 @@ button:hover {
 
 ## 函数式伪类
 
-这些伪类接受[可容错的选择器列表](/zh-CN/docs/Web/CSS/Selector_list)作为参数。
+这些伪类接受[可容错选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表)作为参数。
 
 - [`:is()`](/zh-CN/docs/Web/CSS/:is)
   - : 匹配与提供的列表中的任何选择器匹配的任何元素。
