@@ -5,9 +5,9 @@ slug: Web/API/TextDecoder/decode
 
 {{APIRef("Encoding API")}}
 
-**`TextDecoder.decode()`** 方法返回一个字符串，其包含作为参数传递给缓冲区解码后的文本。
+**`TextDecoder.decode()`** 方法返回一个字符串，其包含作为参数传递的缓冲区解码后的文本。
 
-解码方法在当前的 {{domxref("TextDecoder")}} 对象中定义。这包含了数据的预期编码，以及如何处理编码发生的错误。
+解码方法在当前的 {{domxref("TextDecoder")}} 对象中定义。这包含了数据的预期编码，以及如何处理解码时发生的错误。
 
 ## 语法
 
@@ -31,7 +31,7 @@ decode(buffer, options)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 当 {{DOMxRef("TextDecoder.fatal")}} 属性为 `true` 时，出现解码错误，则抛出。
+  - : 当 {{DOMxRef("TextDecoder.fatal")}} 属性为 `true` 时，若出现解码错误，则抛出该异常。
 
 ### 返回值
 
