@@ -1,21 +1,11 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
-page-type: css-property
-tags:
-  - CSS
-  - CSS Text Decoration
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - text-decoration
-  - text-underline-offset
-browser-compat: css.properties.text-underline-offset
 ---
 
 {{CSSRef}}
 
-**`text-underline-offset`** [CSS](/zh-CN/docs/Web/CSS) 属性设置下划线文本装饰线（使用 {{cssxref("text-decoration")}} 应用）与其原始位置的偏移距离。
+[CSS](/zh-CN/docs/Web/CSS) 的 **`text-underline-offset`** 属性设置下划线文本装饰线（使用 {{cssxref("text-decoration")}} 应用）与其原始位置的偏移距离。
 
 {{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}
 
@@ -53,11 +43,11 @@ text-underline-offset: unset;
 - `<percentage>`
   - : 指定下划线的偏移量为元素的字体中 **1 em** 的 {{cssxref('percentage')}}。百分比作为相对值继承，因此会随着字体的变化而缩放。作为此属性的规定用途，即使存在具有不同的字体大小或垂直对齐方式的子元素，偏移量在应用下划线的整个盒子内都是恒定的。
 
-## 正式定义
+## 形式定义
 
 {{CSSInfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -95,7 +85,7 @@ p {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{cssxref("text-decoration")}}
 - {{cssxref("text-decoration-thickness")}}
