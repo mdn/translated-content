@@ -32,7 +32,7 @@ text-underline-offset: revert-layer;
 text-underline-offset: unset;
 ```
 
-`text-underline-offset` 属性指定为下表中的单个值。
+`text-underline-offset` 属性指定为以下列出的单个值。
 
 ### 值
 
