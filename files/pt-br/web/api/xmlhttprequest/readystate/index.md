@@ -28,7 +28,7 @@ A propriedade **XMLHttpRequest.readyState** retorna o estado de um XMLHttpReques
 - HEADERS_RECEIVED
   - : O método send() foi chamado e os cabeçalhos de respostas foram recebidos.
 - LOADING
-  - : A resposta da requisição está sendo recebida. se o [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) for "text" ou um texto em branco, o [`responseText`](/en-US/docs/Web/API/XMLHttpRequest/responseText) terá o texto parcial da resposta conforme seu carregamento.
+  - : A resposta da requisição está sendo recebida. se o [`responseType`](/pt-BR/docs/Web/API/XMLHttpRequest/responseType) for "text" ou um texto em branco, o [`responseText`](/pt-BR/docs/Web/API/XMLHttpRequest/responseText) terá o texto parcial da resposta conforme seu carregamento.
 - DONE
   - : A Operação de busca está completa. Isso pode significar que a trasferência foi concluída com êxito ou que falhou.
 
