@@ -1,11 +1,11 @@
 ---
-title: TextEncoder.prototype.encode()
+title: TextEncoder.encode()
 slug: Web/API/TextEncoder/encode
 ---
 
 {{APIRef("Encoding API")}}
 
-**`TextEncoder.encode()`** 方法接受一个字符串作为输入，返回一个以给定的文本（字符串）参数，通过 `TextEncoder` 中指定的方法（默认 UTF-8）编码后的 {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}} 类型的值。
+**`TextEncoder.encode()`** 方法接受一个字符串作为输入，返回一个对参数中给定的文本的编码后的 {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}}，编码的方法通过 {{domxref("TextEncoder")}} 对象指定。
 
 ## 语法
 
@@ -40,7 +40,7 @@ let encoded = textEncoder.encode(string);
 resultPara.textContent += encoded;
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
@@ -50,6 +50,6 @@ resultPara.textContent += encoded;
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- The {{DOMxRef("TextEncoder")}} interface it belongs to.
+- 属于 {{DOMxRef("TextEncoder")}} 接口。
