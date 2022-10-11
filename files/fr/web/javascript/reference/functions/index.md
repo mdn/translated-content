@@ -560,35 +560,35 @@ Une déclaration de fonction peut très facilement (et souvent involontairement)
 
 ### Exemples :
 
-- ```js
-    // déclaration de fonction
-    function toto() {}
+```js
+  // déclaration de fonction
+  function toto() {}
 
+  // expression de fonction
+  (function truc() {})
+
+  // expression de fonction
+  var x = function bonjour() {}
+  ```
+
+```js
+if (x) {
+  // expression de fonction
+  function monde() {}
+}
+```
+
+```js
+// déclaration de fonction
+function a() {
+  // déclaration de fonction
+  function b() {}
+  if (0) {
     // expression de fonction
-    (function truc() {})
-
-    // expression de fonction
-    var x = function bonjour() {}
-    ```
-
-- ```js
-    if (x) {
-       // expression de fonction
-       function monde() {}
-    }
-    ```
-
-- ```js
-    // déclaration de fonction
-    function a() {
-       // déclaration de fonction
-       function b() {}
-       if (0) {
-          // expression de fonction
-          function c() {}
-       }
-    }
-    ```
+    function c() {}
+  }
+}
+```
 
 ## Définir une fonction de façon conditionnelle
 

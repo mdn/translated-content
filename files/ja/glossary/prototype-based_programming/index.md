@@ -11,4 +11,4 @@ slug: Glossary/Prototype-based_programming
 
 ### 一般知識
 
-- Wikipedia の{{Interwiki("wikipedia", "プロトタイプベース", "プロトタイプベース")}}の記事
+- Wikipedia の[プロトタイプベース](https://ja.wikipedia.org/wiki/プロトタイプベース)の記事

@@ -14,7 +14,7 @@ O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre 
   <tbody>
     <tr>
       <th>
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories"
           >Categoria de conteúdo</a
         >
       </th>

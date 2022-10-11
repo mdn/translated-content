@@ -14,4 +14,4 @@ W3C は 350 を超える加盟組織から成り、加盟組織は連帯して�
 ### 一般知識
 
 - [W3C のウェブサイト](https://www.w3.org/)
-- ウィキペディアの {{Interwiki("wikipedia", "World Wide Web Consortium", "W3C")}} の記事
+- ウィキペディアの [W3C](https://ja.wikipedia.org/wiki/World_Wide_Web_Consortium) の記事

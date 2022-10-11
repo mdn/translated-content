@@ -27,7 +27,7 @@ Uma {{domxref("USVString")}}.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples"
+  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/href#Examples"
 );
 console.log(url.hash); // Logs: '#Examples'
 ```

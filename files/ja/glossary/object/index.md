@@ -9,6 +9,6 @@ slug: Glossary/Object
 
 ### 一般知識
 
-- Wikipedia 上の記事 「{{Interwiki("wikipedia", "オブジェクト指向プログラミング")}}」
+- Wikipedia 上の記事 「[オブジェクト指向プログラミング](https://ja.wikipedia.org/wiki/オブジェクト指向プログラミング)」
 - [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)内の {{jsxref("Object")}}
 - [JavaScript におけるオブジェクトのデータ構造](/ja/docs/Web/JavaScript/Data_structures#Objects)

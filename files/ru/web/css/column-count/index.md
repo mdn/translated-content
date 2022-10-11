@@ -8,7 +8,7 @@ translation_of: Web/CSS/column-count
 ---
 {{CSSRef}}
 
-[CSS ](/ru/docs/Web/CSS)свойство **`column-count`** разбивает содержимое элемента на заданное число столбцов.
+[CSS](/ru/docs/Web/CSS) свойство **`column-count`** разбивает содержимое элемента на заданное число столбцов.
 
 {{EmbedInteractiveExample("pages/css/column-count.html")}}
 

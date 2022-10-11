@@ -1,8 +1,8 @@
 ---
 title: コンテンツを編集可能にする
-slug: Web/Guide/HTML/Editable_content
+slug: conflicting/Web/HTML/Global_attributes/contenteditable
+original_slug: Web/Guide/HTML/Editable_content
 ---
-
 > **警告:** [`execCommand()` 仕様書](https://w3c.github.io/editing/docs/execCommand/)で警告しているように、この機能は"すべてのユーザーエージェントで一貫した、または完全な実装が行われているわけではなく"、それに加えて、 [`Document.execCommand()`](/ja/docs/Web/API/Document/execCommand) リファレンスページでは非推奨とされています。したがって、このページの内容の多くは、本番コードで使用するには信頼できません。
 
 HTML では、すべての要素を編集可能状態 (editable) にすることができます。 JavaScript のいくつかのイベントハンドラーと併用することで、ウェブページを多機能でかつ高速に動作するリッチテキストエディターにしてしまうことも可能です。本記事では、この機能に関する情報を提供します。

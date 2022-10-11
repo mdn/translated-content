@@ -9,7 +9,7 @@ slug: Glossary/BiDi
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "双方向テキスト")}}
+- Wikipedia 上の [双方向テキスト](https://ja.wikipedia.org/wiki/双方向テキスト)
 
 ### 技術文書
 

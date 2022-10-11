@@ -23,7 +23,7 @@ controle de versão do código pode ser menos problemático.
 O JavaScript tem permitido o uso de trailing commas em arrays literais desde o início, e posteriormente adicionou-as aos objetos literais, e mais recentemente, a
 parâmetros da função e a importações nomeadas e exportações nomeadas.
 
-[JSON](/en-US/docs/Glossary/JSON), no entanto, não permitem o uso de trailing comma.
+[JSON](/pt-BR/docs/Glossary/JSON), no entanto, não permitem o uso de trailing comma.
 
 ## Syntax
 
@@ -84,7 +84,7 @@ function f(p) {}
 (p) => {};
 ```
 
-As trailing commas também funcionam como [definições de métodos](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) para classes ou objetos:
+As trailing commas também funcionam como [definições de métodos](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions) para classes ou objetos:
 
 ```js
 class C {
@@ -111,7 +111,7 @@ Math.max(10, 20);
 #### Trailing commas inválidas
 
 Definições de parâmetros de funções ou invocações de funções que contenham apenas uma vírgula
-lançam um {{{Jsxref("SyntaxError")}}}. Além disso, ao utilizar um [parâmetros rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), não são permitidas trailling commas:
+lançam um {{{Jsxref("SyntaxError")}}}. Além disso, ao utilizar um [parâmetros rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), não são permitidas trailling commas:
 
 ```js example-bad
 function f(,) {} // SyntaxError: parâmetro formal em falta
@@ -124,7 +124,7 @@ function f(...p,) {} // SyntaxError: parâmetro após parâmetro de repouso
 ### Trailing commas em desestruturação
 
 Também é permitida uma vírgula no lado esquerdo quando se usa
-[atribuição de desestruturação](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+[atribuição de desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
 ```js
 // desestruturação de array com trailing comma

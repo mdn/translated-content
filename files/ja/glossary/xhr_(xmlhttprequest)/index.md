@@ -9,7 +9,7 @@ slug: Glossary/XHR_(XMLHttpRequest)
 
 ### 一般知識
 
-- Wikipedia での {{interwiki("wikipedia", "XMLHttpRequest")}}
+- Wikipedia での [XMLHttpRequest](https://ja.wikipedia.org/wiki/XMLHttpRequest)
 - [Synchronous vs. Asynchronous Communications](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
 
 ### 技術リファレンス

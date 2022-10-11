@@ -9,11 +9,12 @@ tags:
 translation_of: MDN/Structures/Macros/Commonly-used_macros
 original_slug: MDN/Structures/Macros/Commonly-used_macros
 ---
+
 {{MDNSidebar}}
 
-Esta página enumera muchas de las macros de propósito general creadas para usarlas en MDN. Para obtener información sobre cómo usar estas macros, consulta {{web.link("/es/docs/MDN/Contribute/Structures/Macros", "Uso de macros")}} y {{web.link("/es/docs/MDN/Contribute/Editor/Links#Usar_macros_de_enlaces", "Usar macros de enlaces")}}. Consulta {{web.link("/es/docs/MDN/Contribute/Structures/Macros/Other", "Otras macros")}} para obtener información sobre las macros que se utilizan con poca frecuencia, que se utilizan solo en contextos especiales o, están en desuso. También hay una {{web.link("/es/dashboards/macros", "lista completa de todas las macros en MDN")}}.
+Esta página enumera muchas de las macros de propósito general creadas para usarlas en MDN. Para obtener información sobre cómo usar estas macros, consulta [Uso de macros](/es/docs/MDN/Contribute/Structures/Macros) y [Usar macros de enlaces](/es/docs/MDN/Contribute/Editor/Links#Usar_macros_de_enlaces). Consulta [Otras macros](/es/docs/MDN/Contribute/Structures/Macros/Other) para obtener información sobre las macros que se utilizan con poca frecuencia, que se utilizan solo en contextos especiales o, están en desuso. También hay una [lista completa de todas las macros en MDN](/es/dashboards/macros).
 
-Consulta también la {{web.link("/es/docs/MDN/Contribute/Guidelines/CSS_style_guide", "guía de estilo CSS")}} para conocer los estilos disponibles para usarlos.
+Consulta también la [guía de estilo CSS](/es/docs/MDN/Contribute/Guidelines/CSS_style_guide) para conocer los estilos disponibles para usarlos.
 
 ## Enlaces
 
@@ -21,7 +22,7 @@ Consulta también la {{web.link("/es/docs/MDN/Contribute/Guidelines/CSS_style_gu
 
 En general, no es necesario utilizar macros para crear enlaces arbitrarios. Utiliza el botón **Enlace** en la interfaz del editor para crear enlaces.
 
-- La macro {{TemplateLink("Glossary")}} crea un vínculo a la entrada de un término específico en el {{web.link("/es/docs/Glossary", "glosario")}} de MDN. Esta macro acepta un parámetro obligatorio y dos opcionales:
+- La macro {{TemplateLink("Glossary")}} crea un vínculo a la entrada de un término específico en el [glosario](/es/docs/Glossary) de MDN. Esta macro acepta un parámetro obligatorio y dos opcionales:
 
   Ejemplos:
 
@@ -46,9 +47,9 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 - {{TemplateLink("jsxref")}} enlaza a una página en la {{JSxRef("Referencia", "Referencia de JavaScript")}}.
 - {{TemplateLink("SVGAttr")}} enlaza a un atributo SVG específico. Por ejemplo, `\{{SVGAttr("d")}}` crea este enlace: {{SVGAttr("d")}}.
 - {{TemplateLink("SVGElement")}} enlaza a un elemento SVG en la Referencia SVG.
-- {{TemplateLink("httpheader")}} enlaza a un {{web.link("/es/docs/Web/HTTP/Headers", "header de HTTP")}}.
-- {{TemplateLink("HTTPMethod")}} enlaza a un {{web.link("/es/docs/Web/HTTP/Methods", "método de solicitud HTTP")}}.
-- {{TemplateLink("HTTPStatus")}} enlaces a un {{web.link("/es/docs/Web/HTTP/Status", "código de estado de respuesta HTTP")}}.
+- {{TemplateLink("httpheader")}} enlaza a un [header de HTTP](/es/docs/Web/HTTP/Headers).
+- {{TemplateLink("HTTPMethod")}} enlaza a un [método de solicitud HTTP](/es/docs/Web/HTTP/Methods).
+- {{TemplateLink("HTTPStatus")}} enlaces a un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Status).
 
 ### Enlazar a errores
 
@@ -65,8 +66,8 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 
 ### Ejemplos en vivo
 
-- {{TemplateLink("EmbedLiveSample")}} te permite insertar la salida de un ejemplo de código en una página, como se describe en {{web.link("/es/docs/MDN/Contribute/Structures/Live_samples", "Ejemplos en vivo")}}.
-- {{TemplateLink("LiveSampleLink")}} crea un vínculo a una página que contiene el resultado de un ejemplo de código en una página, como se describe en {{web.link("/es/docs/MDN/Contribute/Structures/Live_samples", "Ejemplos en vivo")}}.
+- {{TemplateLink("EmbedLiveSample")}} te permite insertar la salida de un ejemplo de código en una página, como se describe en [Ejemplos en vivo](/es/docs/MDN/Contribute/Structures/Live_samples).
+- {{TemplateLink("LiveSampleLink")}} crea un vínculo a una página que contiene el resultado de un ejemplo de código en una página, como se describe en [Ejemplos en vivo](/es/docs/MDN/Contribute/Structures/Live_samples).
 
 ## Generar la barra lateral
 
@@ -153,14 +154,14 @@ No utilices el parámetro en ningún área independiente del navegador (HTML, AP
 
 ### Plantilla de insignias
 
-Estas macros se utilizan principalmente en la página {{web.link("/es/docs/Web/API", "WebAPI")}}. Consulta [Creación de nuevas insignias](#creación_de_nuevas_insignias) para obtener información sobre cómo crear una nueva insignia (`Badge`).
+Estas macros se utilizan principalmente en la página [WebAPI](/es/docs/Web/API). Consulta [Creación de nuevas insignias](#creación_de_nuevas_insignias) para obtener información sobre cómo crear una nueva insignia (`Badge`).
 
 ### Indicadores de encabezado de página o sección
 
 Estas plantillas tienen la misma semántica que sus contrapartes en línea descritas anteriormente. Las plantillas se deben colocar directamente debajo del título de la página principal (o la ruta de navegación si está disponible) en la página de referencia. También se pueden utilizar para marcar una sección en una página.
 
 - {{TemplateLink("Non-standard_Header")}}: `\{{Non-standard_Header}}` {{Non-standard_Header}}
-- {{TemplateLink("SeeCompatTable")}} se debe usar en páginas que documentan {{web.link("/es/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental", "características experimentales")}}. Ejemplo: `\{{SeeCompatTable}}` {{SeeCompatTable}}
+- {{TemplateLink("SeeCompatTable")}} se debe usar en páginas que documentan [características experimentales](/es/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental). Ejemplo: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - {{TemplateLink("Deprecated_Header")}}: `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - {{TemplateLink("Deprecated_Header")}} con parámetro: `\{{Deprecated_Header("gecko5")}}` {{Deprecated_Header("gecko5")}} No utilices el parámetro en ninguna área de diagnóstico del navegador (HTML, APIs, JS, CSS, …).
 - {{TemplateLink("Obsolete_Header")}}: `\{{Obsolete_Header}}` {{Obsolete_Header}}
@@ -169,6 +170,6 @@ Estas plantillas tienen la misma semántica que sus contrapartes en línea descr
 
 ### Indica que una función está disponible en `workers` web
 
-La macro {{TemplateLink("AvailableInWorkers")}} inserta un cuadro de nota localizado que indica que una función está disponible en el contexto de {{web.link("/es/docs/Web/API/Web_Workers_API", "workers web")}}.
+La macro {{TemplateLink("AvailableInWorkers")}} inserta un cuadro de nota localizado que indica que una función está disponible en el contexto de [workers web](/es/docs/Web/API/Web_Workers_API).
 
 {{AvailableInWorkers}}
