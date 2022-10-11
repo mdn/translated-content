@@ -17,4 +17,3 @@ The **actual value** of a CSS property is the [used value](/pt-BR/docs/Web/CSS/u
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
-- {{CSS_key_concepts}}
