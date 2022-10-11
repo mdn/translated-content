@@ -164,7 +164,7 @@ button:hover {
 
 ## 函数式伪类
 
-这些伪类接受 [宽容的选择器列表](/zh-CN/docs/Web/CSS/Selector_list) 作为参数。
+这些伪类接受[可容错的选择器列表](/zh-CN/docs/Web/CSS/Selector_list)作为参数。
 
 - [`:is()`](/zh-CN/docs/Web/CSS/:is)
   - : 匹配与提供的列表中的任何选择器匹配的任何元素。
