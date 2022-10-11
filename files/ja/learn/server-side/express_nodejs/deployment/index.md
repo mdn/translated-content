@@ -265,11 +265,11 @@ The final step is to copy in your application and then add the files to your rep
 1. Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from NPM as needed).
 2. Open a command prompt/terminal and use the `add` command to add all files to git.
 
-3. ```bash
+   ```bash
     git add -A
     ```
 
-4. Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
+3. Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
 
     ```
     > git status
@@ -281,15 +281,15 @@ The final step is to copy in your application and then add the files to your rep
             new file:   ...
     ```
 
-5. When you're satisfied commit the files to your local repository:
+4. When you're satisfied commit the files to your local repository:
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6. Then synchronize your local repository to the Github website, using the following:
+5. Then synchronize your local repository to the Github website, using the following:
 
-    ```
+    ```bash
     git push origin master
     ```
 
