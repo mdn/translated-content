@@ -44,7 +44,7 @@ O elemento `altGlyph` habilita a seleção sofisticada de símbolos utilizada pa
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGAltGlyphElement`](/en-US/docs/Web/API/SVGAltGlyphElement).
+Este elemento implementa a interface do [`SVGAltGlyphElement`](/pt-BR/docs/Web/API/SVGAltGlyphElement).
 
 ## Compatibilidade com navegadores
 

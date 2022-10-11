@@ -57,7 +57,7 @@ Resultado:
 
 ## Interface DOM
 
-Este elemento implementa a interace do [`SVGPathElement`](/en-US/docs/DOM/SVGPathElement).
+Este elemento implementa a interace do [`SVGPathElement`](/pt-BR/docs/DOM/SVGPathElement).
 
 ## Compatibilidade dos navegadores
 

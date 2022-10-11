@@ -1222,8 +1222,7 @@
 /es/docs/MDN/Contribute/Procesos	/es/docs/MDN/Contribute/Processes
 /es/docs/MDN/Contribute/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Contribute/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
-/es/docs/MDN/Contribute/Structures/Macros	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
-/es/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
+/es/docs/MDN/Contribute/Structures/Macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Contribute/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Contribute/Structures/Tablas_de_compatibilidad	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Enviar_feedback_sobre_MDN	/es/docs/MDN/Community
@@ -1240,7 +1239,7 @@
 /es/docs/MDN/Structures/Compatibility_tables	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
 /es/docs/MDN/Structures/Live_samples	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
-/es/docs/MDN/Structures/Macros	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
+/es/docs/MDN/Structures/Macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Structures/Macros/Commonly-used_macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Structures/Macros/Other	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
