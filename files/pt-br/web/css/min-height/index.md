@@ -42,7 +42,7 @@ min-height: inherit
 - `fill-available` {{ experimental_inline() }}
   - : The containing block height minus horizontal margin, border and padding. Some browsers implement an ancient name for this keyword, `available`.
 - `fit-content` {{ experimental_inline() }}
-  - : According CSS3 Box, this is a synonym of `min-content.` CSS3 Sizing defines a more complex algorithm, but no browser implements it, even in an experimental way.
+  - : According CSS3 Box, this is a synonym of `min-content`. CSS3 Sizing defines a more complex algorithm, but no browser implements it, even in an experimental way.
 
 ## Exemplos
 

@@ -17,5 +17,5 @@ CSRF を防止するには、 {{glossary("REST", "RESTful API")}} を使用す�
 
 ## 関連情報
 
-- {{Interwiki("wikipedia", "クロスサイトリクエストフォージェリ")}} (Wikipedia)
+- [クロスサイトリクエストフォージェリ](https://ja.wikipedia.org/wiki/クロスサイトリクエストフォージェリ) (Wikipedia)
 - [Prevention measures](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)

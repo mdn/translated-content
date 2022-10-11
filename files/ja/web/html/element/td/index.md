@@ -87,7 +87,7 @@ slug: Web/HTML/Element/td
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
-    > **Note:**
+    > **メモ:**
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
     > - 同様の効果を得るには、 {{cssxref("text-align")}} プロパティの値 {{htmlattrxref("char", "td")}} を使用できます。 CSS3 では {{unimplemented_inline}} です。

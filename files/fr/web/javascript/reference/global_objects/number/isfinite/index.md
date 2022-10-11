@@ -85,14 +85,11 @@ if (Number.isFinite === undefined) Number.isFinite = function(value) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.isFinite")}}
+{{Compat}}
 
 ## Voir aussi
 

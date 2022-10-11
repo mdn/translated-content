@@ -745,23 +745,23 @@ interface VTTRegion {
 
 WebVTT で使用するメソッドは、両方のインターフェイスの属性が異なるため、キューまたは領域を変更するために使用するものです。WebVTT の各インターフェイスに関する理解を深めるために、それらを分類することができます。
 
-- ### VTTCue
+### VTTCue
 
-  - このインターフェイスで利用できるメソッドは次のとおりです。
+- このインターフェイスで利用できるメソッドは次のとおりです。
 
-    - そのキューの HTML を取得するための getCueAsHTML。
-    - キューの新しいオブジェクトを作成するための VTT コンストラクタ。
-    - Autokeyword。
-    - DirectionSetting: ファイル内のキャプションまたはテキストの方向を設定します。
-    - LineAlignment: 行の配置を調整します。
-    - PositionAlignSetting: テキストの位置を調整します。
+  - そのキューの HTML を取得するための getCueAsHTML。
+  - キューの新しいオブジェクトを作成するための VTT コンストラクタ。
+  - Autokeyword。
+  - DirectionSetting: ファイル内のキャプションまたはテキストの方向を設定します。
+  - LineAlignment: 行の配置を調整します。
+  - PositionAlignSetting: テキストの位置を調整します。
 
-- ### VTTRegion
+### VTTRegion
 
-  - 領域に使用するメソッドは、それらの機能の説明とともに以下にリストされています。
+- 領域に使用するメソッドは、それらの機能の説明とともに以下にリストされています。
 
-    - ScrollSetting: 特定の領域に存在するすべてのノードのスクロール設定を調整します。
-    - VTT Region コンストラクタ: 新しい VTT Region の構築用。
+  - ScrollSetting: 特定の領域に存在するすべてのノードのスクロール設定を調整します。
+  - VTT Region コンストラクタ: 新しい VTT Region の構築用。
 
 ## WebVTT ファイルの書き方に関するチュートリアル
 

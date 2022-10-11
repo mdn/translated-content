@@ -9,5 +9,5 @@ slug: Glossary/Validator
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "en:Validator", "Validator")}} (英語)
+- Wikipedia の [Validator](https://en.wikipedia.org/wiki/Validator) (英語)
 - [バリデーターの例](/ja/docs/Tools/Validators)

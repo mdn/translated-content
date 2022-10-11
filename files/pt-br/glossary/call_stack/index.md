@@ -64,9 +64,6 @@ Começamos com uma pilha de chamadas vazia, e sempre que chamamos uma função, 
 ### General knowledge
 
 - {{Interwiki("wikipedia", "Call stack")}} on Wikipedia
-
-<!---->
-
 - [MDN Web Docs Glossary](/pt-BR/docs/Glossary)
 
   - {{Glossary("Call stack")}}

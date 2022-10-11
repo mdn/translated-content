@@ -646,7 +646,8 @@
 /ko/docs/Web/Guide/CSS/Visual_formatting_model	/ko/docs/Web/CSS/Visual_formatting_model
 /ko/docs/Web/Guide/DOM/Using_full_screen_mode	/ko/docs/Web/API/Fullscreen_API
 /ko/docs/Web/Guide/HTML	/ko/docs/Learn/HTML
-/ko/docs/Web/Guide/HTML/Content_Editable	/ko/docs/Web/Guide/HTML/Editable_content
+/ko/docs/Web/Guide/HTML/Content_Editable	/ko/docs/conflicting/Web/HTML/Global_attributes/contenteditable
+/ko/docs/Web/Guide/HTML/Editable_content	/ko/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /ko/docs/Web/Guide/HTML/컨텐트_카테고리	/ko/docs/Web/Guide/HTML/Content_categories
 /ko/docs/Web/Guide/HTML/폼	/ko/docs/Learn/Forms
 /ko/docs/Web/Guide/HTML/폼/HTML_폼_구성_방법	/ko/docs/Learn/Forms/How_to_structure_a_web_form

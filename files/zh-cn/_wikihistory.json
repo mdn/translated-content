@@ -1599,10 +1599,6 @@
     "modified": "2020-11-06T23:30:24.170Z",
     "contributors": ["liguorain"]
   },
-  "HTML_in_XMLHttpRequest": {
-    "modified": "2019-03-24T00:17:24.579Z",
-    "contributors": ["OoOoOoOo", "ziyunfei"]
-  },
   "Learn": {
     "modified": "2020-07-16T22:43:49.854Z",
     "contributors": [
@@ -21752,21 +21748,6 @@
       "FredWe"
     ]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2020-09-22T00:31:12.632Z",
-    "contributors": [
-      "imarco",
-      "YogurtQ",
-      "xianghui-ma",
-      "Hew007",
-      "zhuangyin",
-      "jamesxu",
-      "ziyunfei",
-      "teoli",
-      "sunnylost",
-      "ethertank"
-    ]
-  },
   "Web/Guide/Houdini": {
     "modified": "2020-11-21T05:08:58.458Z",
     "contributors": ["xusy", "bingoYB", "cutefcc", "sunfeel", "xgqfrms"]
@@ -23347,22 +23328,6 @@
   "Web/HTML/Reference": {
     "modified": "2019-09-09T07:23:44.694Z",
     "contributors": ["SphinxKnight", "wbamberg", "FredWe", "Breezewish"]
-  },
-  "Web/HTML/Using_the_application_cache": {
-    "modified": "2019-10-29T05:43:20.065Z",
-    "contributors": [
-      "7NZ",
-      "xgqfrms-GitHub",
-      "eforegist",
-      "liuzeyafzy",
-      "nianiaJR",
-      "shajiquan",
-      "hdwills",
-      "teoli",
-      "fsy0718",
-      "sunnylost",
-      "karsa.si"
-    ]
   },
   "Web/HTTP": {
     "modified": "2020-08-27T09:08:49.830Z",

@@ -33,7 +33,7 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 ### XHTML
 
-Если страница написана в [XHTML](/ru/docs/XHTML "XHTML") формате с указанием типа MIME `application/xhtml+xml` в заголовке `Content-Type`, то не нужно указывать DOCTYPE для активации стандартного режима, так как подобные документы всегда отображаются в стандартном режиме. Важно иметь в виду, что Internet Explorer 8 вместо контента такой страницы отображает [диалоговое окно загрузки](/ru/docs/XHTML#Support "XHTML") как для неизвестного формата, поскольку поддержка XHTML реализована в Internet Explorer, начиная с 9 версии.
+Если страница написана в [XHTML](/ru/docs/XHTML) формате с указанием типа MIME `application/xhtml+xml` в заголовке `Content-Type`, то не нужно указывать DOCTYPE для активации стандартного режима, так как подобные документы всегда отображаются в стандартном режиме. Важно иметь в виду, что Internet Explorer 8 вместо контента такой страницы отображает [диалоговое окно загрузки](/ru/docs/XHTML#Support) как для неизвестного формата, поскольку поддержка XHTML реализована в Internet Explorer, начиная с 9 версии.
 
 Если страница написана в XHTML формате с использованием типа MIME `text/html`, браузер будет интерпретировать его как HTML, поэтому для использования браузером стандартного режима отображения необходимо указать тег DOCTYPE.
 
@@ -45,4 +45,4 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 ## В чем разница между режимами?
 
-См. [список странностей (list of quirks)](/ru/docs/Mozilla_Quirks_Mode_Behavior "Mozilla_Quirks_Mode_Behavior") и [частично стандартный режим](/ru/docs/Gecko's_"Almost_Standards"_Mode "Gecko%27s_%22Almost_Standards%22_Mode") для того, чтобы увидеть разницу между режимами.
+См. [список странностей (list of quirks)](/ru/docs/Mozilla_Quirks_Mode_Behavior) и [частично стандартный режим](/ru/docs/Gecko's_"Almost_Standards"_Mode "Gecko%27s_%22Almost_Standards%22_Mode") для того, чтобы увидеть разницу между режимами.

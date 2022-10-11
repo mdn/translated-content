@@ -18,7 +18,9 @@ input:invalid {
 
 ## 構文
 
-{{csssyntax}}
+```
+:invalid
+```
 
 ## 例
 

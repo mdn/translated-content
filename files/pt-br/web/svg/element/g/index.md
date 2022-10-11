@@ -36,10 +36,10 @@ O elemento `g` é um recipiente utilizado para agrupar objetos. Transformações
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#ConditionalProccessing "SVG/Attribute#ConditionalProccessing") »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#Core "SVG/Attribute#Core") »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#GraphicalEvent "SVG/Attribute#GraphicalEvent") »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#Presentation "SVG/Attribute#Presentation") »
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#ConditionalProccessing) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#Core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#GraphicalEvent) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#Presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -51,7 +51,7 @@ _There is no specific attributes_
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGGElement`](/pt-BR/docs/DOM/SVGGElement "DOM/SVGGElement").
+Este elemento implementa a interface do [`SVGGElement`](/pt-BR/docs/DOM/SVGGElement).
 
 ## Compatibilidade com navegadores
 

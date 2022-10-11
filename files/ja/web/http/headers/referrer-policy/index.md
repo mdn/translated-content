@@ -184,7 +184,7 @@ Firefox のユーザー設定では*既定の*リファラーポリシーを構�
 ## 関連情報
 
 - [ウェブセキュリティ > Referer ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
-- {{interwiki("wikipedia", "HTTPリファラ", "Wikipedia の HTTP リファラ")}}
+- [Wikipedia の HTTP リファラ](https://ja.wikipedia.org/wiki/HTTPリファラ)
 - [Fetch](/ja/docs/Web/API/Fetch_API) の使用時: {{domxref("Request.referrerPolicy")}}
 - 廃止された {{HTTPHeader("Content-Security-Policy")}} の {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} ディレクティブ
 - [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)

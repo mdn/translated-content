@@ -11,11 +11,15 @@ translation_of: Web/CSS/Class_selectors
 
 ## Синтаксис
 
-    .classname { style properties }
+```
+.classname { style properties }
+```
 
 Это эквивалентно следующему {{ Cssxref("Attribute_selectors", "селектор по атрибуту") }}:
 
-    [class~=classname] { style properties }
+```
+[class~=classname] { style properties }
+```
 
 ## Пример
 

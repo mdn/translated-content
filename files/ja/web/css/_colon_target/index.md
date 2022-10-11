@@ -28,7 +28,9 @@ http://www.example.com/index.html#section2
 
 ## 構文
 
-{{csssyntax}}
+```
+:target
+```
 
 ## 例
 

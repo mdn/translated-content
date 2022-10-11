@@ -348,7 +348,7 @@ The `h-event` is for events on the web. h-event is often used with both event li
 ## 関連情報
 
 - [class 属性](/ja/docs/Web/HTML/Global_attributes/class)
-- Wikipedia の {{interwiki("wikipedia", "Microformat")}}
+- Wikipedia の [Microformat](https://ja.wikipedia.org/wiki/Microformat)
 - [Microformats 公式ウェブサイト](http://microformats.org/)
 - [Search engines support](http://microformats.org/wiki/search_engines) on Microformats official website
 - [Microformats on IndieWebCamp](https://indiewebcamp.com/microformats)
