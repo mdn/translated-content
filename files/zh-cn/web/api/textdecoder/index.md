@@ -12,7 +12,7 @@ slug: Web/API/TextDecoder
 ## 构造函数
 
 - {{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}
-  - : 返回一个新构造的 `TextDecoder`，它使用参数中指定的解码方法生成代码点流。
+  - : 返回一个新构造的 `TextDecoder`，它使用参数中指定的解码方法生成码位流。
 
 ## 属性
 
