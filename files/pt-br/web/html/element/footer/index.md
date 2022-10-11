@@ -26,7 +26,7 @@ Este elemento não tem outros atributos que os [global attributes](/pt-BR/docs/H
 
 ## DOM Interface
 
-Este elemento implementa a interface [`HTMLElement`](/en-US/docs/DOM/element).
+Este elemento implementa a interface [`HTMLElement`](/pt-BR/docs/DOM/element).
 
 ## Exemplos
 

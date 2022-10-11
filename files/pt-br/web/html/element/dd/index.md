@@ -52,7 +52,7 @@ O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do t
       <th scope="row">Ancestrais permitidos</th>
       <td>
         {{HTMLElement("dl")}} ou (em
-        <a href="/en-US/docs/Glossary/WHATWG">WHATWG</a> HTML) uma
+        <a href="/pt-BR/docs/Glossary/WHATWG">WHATWG</a> HTML) uma
         {{HTMLElement("div")}} que está dentro de uma
         {{HTMLElement("dl")}}.
       </td>
