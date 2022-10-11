@@ -77,7 +77,7 @@ slug: Web/CSS/CSS_Grid_Layout
 }
 ```
 
-{{ EmbedLiveSample('example', '500', '440') }}
+{{EmbedLiveSample("Basic_example", "100%", "460")}}
 
 ## 参考
 
