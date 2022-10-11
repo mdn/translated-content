@@ -94,7 +94,7 @@ foo()
 
 注意：promise 链不是一次就构建好的，相反，promise 链是分阶段构造的，因此在处理异步函数时必须注意对错误函数的处理。
 
-例如，在下面的代码中，在 promise 链上配置了`.catch`处理程序，将抛出未处理的 promise 错误。这是因为`p2`返回的结果不会被 await 处理。
+例如，在下面代码中，即使在 promise 链中进一步配置了 .catch 方法处理，也会抛出一个未处理的 promise rejection 错误。这是因为p2直到控制从p1返回后才会连接到 promise 链。
 
 ```plain
 async function foo() {
