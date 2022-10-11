@@ -79,7 +79,7 @@ Toda instância `Number` herdam de {{jsxref("Number.prototype")}}. O objeto 'pro
 
 ### Métodos
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}
 
 ## Exemplos
 

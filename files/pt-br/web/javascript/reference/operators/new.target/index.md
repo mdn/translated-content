@@ -80,5 +80,5 @@ A partir do exemplo acima das classes C e D, mostra que new\.target aponta para 
 
 - [funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
 - [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)
-- [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)
-- [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)
+- [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)

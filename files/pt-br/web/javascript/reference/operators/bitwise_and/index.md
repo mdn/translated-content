@@ -71,4 +71,4 @@ A operação AND bit a bit (Bitwase) de qualquer número `x` com `0` produz
 ## Veja também
 
 - [Operadores Bitwise no JS guide](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
-- [Operador de atribuição Bitwise AND](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+- [Operador de atribuição Bitwise AND](/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
