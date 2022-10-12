@@ -13,7 +13,7 @@ slug: Web/API/TextDecoder/encoding
 
 小写的 ASCII 字符，可以是以下值之一：
 
-- Web 推荐的编码： `'utf-8'`。
+- Web 推荐的编码：`'utf-8'`。
 - 传统的单字节编码：
   [`'ibm866'`](https://zh.wikipedia.org/wiki/Code_page_866)、
   [`'iso-8859-2'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-2)、
