@@ -24,7 +24,7 @@ Ferramentas como [HTML Tidy](http://tidy.sourceforge.net/) podem automaticamente
 
 ### Minimize o número de arquivos
 
-Reduzir o número de arquivos referenciados por uma página diminui o número de conexões [HTTP](/pt-BR/docs/HTTP "en-US/docs/HTTP") requeridas para realizar o download da página.
+Reduzir o número de arquivos referenciados por uma página diminui o número de conexões [HTTP](/pt-BR/docs/HTTP) requeridas para realizar o download da página.
 
 Dependendo das configurações de cache do _browser_, este pode enviar uma requisição `If-Modified-Since` ao servidor para cada arquivo CSS, JavaScript ou de imagem, perguntando se o arquivo foi modificado desde a última vez que foi baixado.
 
@@ -50,9 +50,9 @@ Então, para essas páginas que são geradas dinamicamente, alguma pesquisa adic
 
 Mais informações:
 
-1.  [Get HTTP Condicional para Hackers RSS](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2.  [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
-3.  [Sobre o Last-Modified HTTP e ETag](http://www.cmlenz.net/archives/2005/05/on-http-last-modified-and-etag)
+1. [Get HTTP Condicional para Hackers RSS](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
+2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
+3. [Sobre o Last-Modified HTTP e ETag](http://www.cmlenz.net/archives/2005/05/on-http-last-modified-and-etag)
 
 ### Estabeleça a ordem dos componentes da página de forma otimizada
 
@@ -62,7 +62,7 @@ Quaisquer elementos dinâmicos que requeiram que a página complete seu carregam
 
 ### Reduza o número de scripts _inline_
 
-Scripts _inline_ podem ser custosos para o carregamento, uma vez que o parser deve assumir que o script pode modificar a estrutura da página enquanto o processo de _parsing_ está em andamento. Reduzir o número de scripts _inline_ no geral e reduzir o uso de `document.write()` para a saída de conteúdo pode melhorar o carregamento da página. Use métodos [AJAX](/pt-BR/docs/AJAX "en-US/docs/AJAX") modernos para manipular o conteúdo da página, ao invés de abordagens antigas baseadas em `document.write()`.
+Scripts _inline_ podem ser custosos para o carregamento, uma vez que o parser deve assumir que o script pode modificar a estrutura da página enquanto o processo de _parsing_ está em andamento. Reduzir o número de scripts _inline_ no geral e reduzir o uso de `document.write()` para a saída de conteúdo pode melhorar o carregamento da página. Use métodos [AJAX](/pt-BR/docs/AJAX) modernos para manipular o conteúdo da página, ao invés de abordagens antigas baseadas em `document.write()`.
 
 ### Use CSS moderno e marcação validada
 
@@ -74,7 +74,7 @@ Além do mais, marcação válida permite o livre uso de outras ferramentas que 
 
 ### Divida seu conteúdo
 
-Layout de tabelas é um método legado que não deve mais ser empregado. Layouts utilizando blocos {{ HTMLElement("div") }} e, no futuro próximo, [layout multi-colunas CSS3](/pt-BR/docs/CSS/Using_CSS_multi-column_layouts "en-US/docs/CSS3_Columns") ou [layout de caixas flexíveis CSS3](/pt-BR/docs/Usando_caixas_flexiveis_css "pt-BR/docs/Usando_caixas_flexiveis_css"), devem ser utilizadas ao invés disso.
+Layout de tabelas é um método legado que não deve mais ser empregado. Layouts utilizando blocos {{ HTMLElement("div") }} e, no futuro próximo, [layout multi-colunas CSS3](/pt-BR/docs/CSS/Using_CSS_multi-column_layouts) ou [layout de caixas flexíveis CSS3](/pt-BR/docs/Usando_caixas_flexiveis_css), devem ser utilizadas ao invés disso.
 
 Tabelas ainda são consideradas marcações válidas, mas devem ser usadas para exibir dados tabulares. Para ajudar o browser a renderizar sua página mais rapidamente, você deve evitar aninhar suas tabelas.
 
@@ -122,33 +122,27 @@ Note, contudo, que muitas das dicas listadas neste artigo são técnicas de sens
 
 ## Exemplo de estrutura de página
 
-· `HTML`
+- `HTML`
 
-- · `HEAD`
-- - · `LINK `...
+- `HEAD`
+  - `LINK`...
     Arquivos CSS requeridos para a aparência da página. Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.
 
-<!---->
-
-- - · `SCRIPT `...
+  - `SCRIPT`...
     Arquivos JavaScript para funções **requeridas** durante o carregamento da página, sem qualquer DHTML que só pode ser executado após o carregamento completo.
-  - Minimize o número de arquivos para performance enquanto mantém JavaScript não-relacionado em arquivos separados para manutenção.
+- Minimize o número de arquivos para performance enquanto mantém JavaScript não-relacionado em arquivos separados para manutenção.
 
-<!---->
+- `BODY`
+- Páginas de conteúdo visíveis ao usuário em pequenas divisões (tabelas / divs) que podem ser exibidas sem esperar a página inteira ser baixada.
 
-- · `BODY`
-- · Páginas de conteúdo visíveis ao usuário em pequenas divisões (tabelas / divs) que podem ser exibidas sem esperar a página inteira ser baixada.
-
-<!---->
-
-- - · `SCRIPT `...
+  - `SCRIPT`...
     Quaisquer scripts que forem usados para realizar DHTML. Um script DHTML geralmente só pode ser executado após o carregamento completo da página e a inicialização de todos os objetos necessários. Não há necessidade de carregar esses scripts antes do conteúdo. Isso apenas desacelera a aparência inicial do carregamento da página.
-  - Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.
-  - Se uma ou mais imagens forem usadas para efeitos de _rollover_, você deve pré-carregá-las aqui após o conteúdo da página ter sido baixado.
+- Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.
+- Se uma ou mais imagens forem usadas para efeitos de _rollover_, você deve pré-carregá-las aqui após o conteúdo da página ter sido baixado.
 
 ## Use async and defer, se possível
 
-Faça com que scripts JavaScript sejam compatíveis tanto com [async](/pt-BR/docs/HTML/Element/script#Attributes "https://developer.mozilla.org/en-US/docs/HTML/Element/script") como [defer](/pt-BR/docs/HTML/Element/script#Attributes "https://developer.mozilla.org/en-US/docs/HTML/Element/script") e use [async](/pt-BR/docs/HTML/Element/script#Attributes "https://developer.mozilla.org/en-US/docs/HTML/Element/script") sempre que possível, especialmente se você tiver múltiplas tags de script.
+Faça com que scripts JavaScript sejam compatíveis tanto com [async](/pt-BR/docs/HTML/Element/script#Attributes) como [defer](/pt-BR/docs/HTML/Element/script#Attributes) e use [async](/pt-BR/docs/HTML/Element/script#Attributes) sempre que possível, especialmente se você tiver múltiplas tags de script.
 
 Com isso, a página pode parar de renderizar enquanto o JavaScript ainda estiver sendo carregado. Do contrário, o _browser_ não renderizará nada que estiver após as tags de script sem esses atributos.
 

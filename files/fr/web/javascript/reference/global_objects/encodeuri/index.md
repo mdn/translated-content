@@ -81,16 +81,11 @@ function fixedEncodeURI(str) {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-encodeuri-uri', 'encodeURI')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES6', '#sec-encodeuri-uri', 'encodeURI')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ES5.1', '#sec-15.1.3.3', 'encodeURI')}}         | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES3')}}                                                     | {{Spec2('ES3')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.encodeURI")}}
+{{Compat}}
 
 ## Voir aussi
 

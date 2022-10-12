@@ -365,7 +365,7 @@ Access-Control-Allow-Origin: <origin> | *
 Access-Control-Allow-Origin: https://mozilla.org
 ```
 
-서버가 "`*`" 와일드카드 대신에 하나의 origin을 지정하는 경우, 서버는 {{HTTPHeader("Vary")}} 응답 헤더에 `Origin` 을 포함해야 합니다. 이 origin은 화이트 리스트의 일부로 요청 orgin에 따라 동적으로 변경될 수 있습니다. 서버 응답이 {{HTTPHeader("Origin")}} 요청 헤더에 따라 다르다는것을 클라이언트에 알려줍니다.
+서버가 "`*`" 와일드카드 대신에 하나의 origin을 지정하는 경우, 서버는 {{HTTPHeader("Vary")}} 응답 헤더에 `Origin` 을 포함해야 합니다. 이 origin은 화이트 리스트의 일부로 요청 origin에 따라 동적으로 변경될 수 있습니다. 서버 응답이 {{HTTPHeader("Origin")}} 요청 헤더에 따라 다르다는것을 클라이언트에 알려줍니다.
 
 ### Access-Control-Expose-Headers
 

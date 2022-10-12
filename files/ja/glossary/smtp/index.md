@@ -16,4 +16,4 @@ slug: Glossary/SMTP
 
 2. Wikipedia の記事
 
-    1. {{Interwiki("wikipedia", "SMTP")}}
+    1. [SMTP](https://ja.wikipedia.org/wiki/SMTP)

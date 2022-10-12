@@ -9,7 +9,7 @@ slug: Glossary/SOAP
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "SOAP")}}
+- Wikipedia の [SOAP](https://ja.wikipedia.org/wiki/SOAP)
 - [SOAP in Gecko-based Browsers](/ja//docs/SOAP_in_Gecko-based_Browsers)
 
 ### 技術リファレンス

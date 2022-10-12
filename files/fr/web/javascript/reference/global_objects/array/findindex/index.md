@@ -149,14 +149,11 @@ S'il est vraiment nécessaire de prendre en charge les moteurs JavaScript qui ne
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.findindex', 'Array.prototype.findIndex')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.findIndex', 'Array.prototype.findIndex')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.findIndex")}}
+{{Compat}}
 
 ## Voir aussi
 

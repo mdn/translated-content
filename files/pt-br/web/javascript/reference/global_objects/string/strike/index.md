@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/strike
 ---
 {{JSRef}} {{deprecated_header}}
 
-O método `strike()` cria um elemento HTML [`<strike>`](/en-US/docs/Web/HTML/Element/strike) que faz com que uma string seja exibida com o texto riscado.
+O método `strike()` cria um elemento HTML [`<strike>`](/pt-BR/docs/Web/HTML/Element/strike) que faz com que uma string seja exibida com o texto riscado.
 
 ## Sintaxe
 
@@ -22,7 +22,7 @@ str.strike()
 
 ### Valor retornado
 
-Uma string contendo um elemento HTML [`<strike>`](/en-US/docs/Web/HTML/Element/strike).
+Uma string contendo um elemento HTML [`<strike>`](/pt-BR/docs/Web/HTML/Element/strike).
 
 ## Descrição
 

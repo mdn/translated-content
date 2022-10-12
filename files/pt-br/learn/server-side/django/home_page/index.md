@@ -57,7 +57,7 @@ Como você verá na próxima seção, temos 5 páginas para exibir, o que é mui
 
 ## Definindo os URLs do recurso
 
-Como esta versão do [LocalLibrary ](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)é essencialmente somente leitura para usuários finais, precisamos fornecer uma página de destino para o site (uma página inicial) e páginas que exibam visualizações de lista e detalhes de livros e autores.
+Como esta versão do [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) é essencialmente somente leitura para usuários finais, precisamos fornecer uma página de destino para o site (uma página inicial) e páginas que exibam visualizações de lista e detalhes de livros e autores.
 
 As URLs que iremos precisar na nossa página são:
 
@@ -65,7 +65,7 @@ As URLs que iremos precisar na nossa página são:
 - `catalog/books/` — Uma lista de todos os livros.
 - `catalog/authors/` — Uma lista de todos os autores.
 - `catalog/book/<id>` — A exibição de detalhes de um livro específico, com uma chave primária de campo `<id>` (o padrão). Por exemplo, o URL do terceiro livro adicionado à lista será `/catalog/book/3`.
-- `catalog/author/<id>`\_ _— A exibição de detalhes para o autor específico com um campo de chave primária de _`<id>. `\_Por exemplo, o URL do 11º autor adicionado à lista será `/catalog/author/11`.
+- `catalog/author/<id>` — A exibição de detalhes para o autor específico com um campo de chave primária de _`<id>`. Por exemplo, o URL do 11º autor adicionado à lista será `/catalog/author/11`.
 
 Os três primeiros URLs retornarão a página de índice, a lista de livros e a lista de autores. Esses URLs não codificam nenhuma informação adicional e as consultas que buscam dados no banco de dados sempre serão as mesmas. No entanto, os resultados retornados pelas consultas dependerão do conteúdo do banco de dados.
 
@@ -94,7 +94,7 @@ urlpatterns += [
 ]
 ```
 
-> **Nota:** Sempre que o Django encontra a função de importação [`django.urls.include()`](https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include "django.conf.urls.include"), divide a string da URL no caractere final designado e envia a subsequência restante para o módulo URLconf incluído para processamento adicional.
+> **Nota:** Sempre que o Django encontra a função de importação [`django.urls.include()`](https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include), divide a string da URL no caractere final designado e envia a subsequência restante para o módulo URLconf incluído para processamento adicional.
 
 Também criamos um arquivo de espaço reservado para o modulo _URLConf_, chamado **/catalog/urls.py**. Adicione as seguintes linhas a esse arquivo:
 
@@ -174,7 +174,7 @@ Falaremos mais sobre modelos e variáveis `context` na próxima seção. Vamos c
 
 Um template é um arquivo de texto que define a estrutura ou o layout de um arquivo (como uma página HTML), usa espaços reservados para representar o conteúdo real.
 
-Django irá procurar automaticamente templates na pasta chamada '**templates**' em sua aplicação. Por exemplo, na exibição de index que acabamos de adicionar, a função `render()` espera encontrar o arquivo _**index.html** em\_\_ _**/locallibrary/catalog/templates/** e gera um erro se o arquivo não estiver presente.
+Django irá procurar automaticamente templates na pasta chamada '**templates**' em sua aplicação. Por exemplo, na exibição de index que acabamos de adicionar, a função `render()` espera encontrar o arquivo **index.html** em **/locallibrary/catalog/templates/** e gera um erro se o arquivo não estiver presente.
 
 Você pode verificar isso salvando as alterações anteriores e acessando `127.0.0.1:8000` no seu navegador - ele exibirá uma mensagem de erro bastante intuitiva: "`TemplateDoesNotExist at /catalog/`", e outros detalhes.
 
@@ -257,7 +257,7 @@ Crie um novo arquivo **_base_generic.html_ **em **/locallibrary/catalog/template
 
 O template inclui CSS de [Bootstrap](http://getbootstrap.com/) para melhorar o layout e a apresentação da página HTML. O uso do Bootstrap (ou outra estrutura da Web do lado do cliente) é uma maneira rápida de criar uma página atraente que é exibida bem em diferentes tamanhos de tela.
 
-O template base também faz referência a um arquivo css local (**styles.css**) que fornece estilo adicional. Criar um arquivo **styles.css** em** \*\***/locallibrary/catalog/static/css/\*\* e cole o seguinte código no arquivo:
+O template base também faz referência a um arquivo css local (**styles.css**) que fornece estilo adicional. Criar um arquivo **styles.css** em** **/locallibrary/catalog/static/css/** e cole o seguinte código no arquivo:
 
 ```css
 .sidebar-nav {
@@ -364,7 +364,7 @@ TEMPLATES = [
 
 ## Com o que se parece?
 
-Neste ponto, criamos todos os recursos necessários para exibir a página index. Execute o servidor (`python3 manage.py runserver`) e abra <http://127.0.0.1:8000/> no seu navegador. Se tudo estiver configurado corretamente, seu site deverá ter a seguinte captura de tela.
+Neste ponto, criamos todos os recursos necessários para exibir a página index. Execute o servidor (`python3 manage.py runserver`) e abra `http://127.0.0.1:8000/` no seu navegador. Se tudo estiver configurado corretamente, seu site deverá ter a seguinte captura de tela.
 
 ![Index page for LocalLibrary website](https://mdn.mozillademos.org/files/14045/index_page_ok.png)
 
@@ -374,9 +374,9 @@ Neste ponto, criamos todos os recursos necessários para exibir a página index.
 
 Temos duas tarefas para testar a sua familiaridade com as consultas de modelos, views e templates
 
-1.  O modelo de [base](/pt-BR/docs/Learn/Server-side/Django/Home_page#The_LocalLibrary_base_template) da BibliotecaLocal inclui um bloco de `título`. Substitua este bloco no modelo de índice e crie um novo título para a página.
-2.  > **Nota:** **Dica:** A seção[ Extendendo Templates](#Extending_templates) explica como criar blocos e extender um bloco em outro template.
-3.  Modifique a [view](<#View_(function-based)>) para gerar contagens para gêneros e livros que contenham uma palavra específica (case insensitive), e passe o resultado para o `contexto.` Isso é feito de maneira semelhante à criação e uso de `num_books` e `num_instances_available`. Em seguida, atualize o template do index para incluir essas variáveis.
+1. O modelo de [base](/pt-BR/docs/Learn/Server-side/Django/Home_page#The_LocalLibrary_base_template) da BibliotecaLocal inclui um bloco de `título`. Substitua este bloco no modelo de índice e crie um novo título para a página.
+2. > **Nota:** **Dica:** A seção [Extendendo Templates](#Extending_templates) explica como criar blocos e extender um bloco em outro template.
+3. Modifique a [view](<#View_(function-based)>) para gerar contagens para gêneros e livros que contenham uma palavra específica (case insensitive), e passe o resultado para o `contexto`. Isso é feito de maneira semelhante à criação e uso de `num_books` e `num_instances_available`. Em seguida, atualize o template do index para incluir essas variáveis.
 
 ## Resumo
 
@@ -388,7 +388,7 @@ No próximo artigo, continuaremos sobre esse conhecimento para criar as quatro p
 
 - [Escrevendo sua primeira aplicação Django, parte 3: View e Templates](https://docs.djangoproject.com/pt-br/3.1/intro/tutorial03/) (documentação do Django)
 - [Despachante de URL](https://docs.djangoproject.com/pt-br/3.1/topics/http/urls/) (Django docs)
-- [Funções das Views ](https://docs.djangoproject.com/pt-br/3.1/topics/http/views/)(DJango docs)
+- [Funções das Views](https://docs.djangoproject.com/pt-br/3.1/topics/http/views/) (DJango docs)
 - [Templates](https://docs.djangoproject.com/pt-br/3.1/topics/templates/) (Django docs)
 - [Gerenciando arquivos estáticos](https://docs.djangoproject.com/en/2.1/howto/static-files/) (Django docs)
 - [Funções de atalho do Django](https://docs.djangoproject.com/en/2.1/topics/http/shortcuts/#django.shortcuts.render) (Django docs)

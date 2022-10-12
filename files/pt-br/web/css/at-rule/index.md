@@ -28,5 +28,3 @@ Grupos condicionais de regras são definidos pelo CSS3 e são:
 - {{ cssxref("@supports") }}.
 
 Cada uma delas sendo também uma regra aninhada, pode haver uma quantidade indeterminada de aninhamentos.
-
-{{ languages( { "ja": "ja/CSS/At-rule" } ) }}

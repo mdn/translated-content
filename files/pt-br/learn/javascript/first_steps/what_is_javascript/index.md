@@ -143,7 +143,7 @@ Vamos recaptular brevemente a história do que acontece quando você carrega uma
 
 ![](execution.png)
 
-Um uso muito comum do JavaScript é modificar dinamicamente HTML e CSS para atualizar uma interface do usuário, por meio da API do Document Object Model (conforme mencionado acima). Observe que o código em seus documentos web geralmente é carregado e executado na ordem em que aparece na página. Se o JavaScript carregar e tentar executar antes do carregamento do HTML e CSS afetado, poderão ocorrer erros. Você aprenderá maneiras de contornar isso mais adiante neste artigo, na seção [Estratégias de carregamento de scripts ](#script_loading_strategies).
+Um uso muito comum do JavaScript é modificar dinamicamente HTML e CSS para atualizar uma interface do usuário, por meio da API do Document Object Model (conforme mencionado acima). Observe que o código em seus documentos web geralmente é carregado e executado na ordem em que aparece na página. Se o JavaScript carregar e tentar executar antes do carregamento do HTML e CSS afetado, poderão ocorrer erros. Você aprenderá maneiras de contornar isso mais adiante neste artigo, na seção [Estratégias de carregamento de scripts](#script_loading_strategies).
 
 ### Segurança do navegador
 
@@ -186,7 +186,7 @@ Há vantagens em ambos os tipos de linguagem, mas nós não iremos discutir no m
 
 Você pode também ouvir os termos **lado do servidor (_server-side_)** e **lado do cliente (_client-side_)**, especialmente no contexto de desenvolvimento web. Códigos do lado do cliente são executados no computador do usuário — quando uma página web é visualizada, o código do lado do cliente é baixado, executado e exibido pelo navegador. Nesse módulo JavaScript nós estamos explicitamente falando sobre **JavaScript do lado do cliente**.
 
-Códigos do lado do servidor, por outro lado, são executados no servidor e o resultado da execução é baixado e exibido no navegador. Exemplos de linguagens do lado do servidor populares incluem PHP, Python, Ruby, e ASP.NET. E JavaScript! JavaScript também pode ser usada como uma linguagem _server\_\_-side_, por exemplo, no popular ambiente Node.js — você pode encontrar mais sobre JavaScript do lado do servidor no nosso tópico [Websites dinâmicos - Programação do lado do servidor](/pt-BR/docs/Learn/Server-side).
+Códigos do lado do servidor, por outro lado, são executados no servidor e o resultado da execução é baixado e exibido no navegador. Exemplos de linguagens do lado do servidor populares incluem PHP, Python, Ruby, e ASP.NET. E JavaScript! JavaScript também pode ser usada como uma linguagem _server-side_, por exemplo, no popular ambiente Node.js — você pode encontrar mais sobre JavaScript do lado do servidor no nosso tópico [Websites dinâmicos - Programação do lado do servidor](/pt-BR/docs/Learn/Server-side).
 
 ### Código dinâmico x estático
 
@@ -200,9 +200,9 @@ O JavaScript é inserido na sua página de uma maneira similar ao CSS. Enquanto 
 
 ### JavaScript interno
 
-1.  Antes de tudo, faça uma cópia local do nosso arquivo de exemplo [aplicando-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Salve-o em alguma pasta, de uma forma sensata.
-2.  Abra o arquivo no seu navegador web e no seu editor de texto. Você verá que o HTML cria uma simples página web contendo um botão clicável.
-3.  Agora, vá até o seu editor de texto e adicione o código a seguir antes da tag de fechamento `</body>`:
+1. Antes de tudo, faça uma cópia local do nosso arquivo de exemplo [aplicando-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Salve-o em alguma pasta, de uma forma sensata.
+2. Abra o arquivo no seu navegador web e no seu editor de texto. Você verá que o HTML cria uma simples página web contendo um botão clicável.
+3. Agora, vá até o seu editor de texto e adicione o código a seguir antes da tag de fechamento `</body>`:
 
     ```html
     <script>
@@ -212,7 +212,7 @@ O JavaScript é inserido na sua página de uma maneira similar ao CSS. Enquanto 
     </script>
     ```
 
-4.  Agora nós vamos adicionar um pouco de JavaScript dentro do nosso elemento {{htmlelement("script")}} para que a página faça algo mais interessante — adicione o seguinte código abaixo da linha "// O JavaScript fica aqui":
+4. Agora nós vamos adicionar um pouco de JavaScript dentro do nosso elemento {{htmlelement("script")}} para que a página faça algo mais interessante — adicione o seguinte código abaixo da linha "// O JavaScript fica aqui":
 
     ```js
     function criarParagrafo() {
@@ -228,7 +228,7 @@ O JavaScript é inserido na sua página de uma maneira similar ao CSS. Enquanto 
     }
     ```
 
-5.  Salve seu arquivo e recarregue a página — agora você deveria ver que quando você clique no botão, um novo parágrafo é gerado e colocado logo abaixo.
+5. Salve seu arquivo e recarregue a página — agora você deveria ver que quando você clique no botão, um novo parágrafo é gerado e colocado logo abaixo.
 
 > **Nota:** Se seu exemplo não parece funcionar, leia cada passo novamente e confira que você fez tudo certo. Você salvou sua cópia local do código inicial como um arquivo .html? Você adicionou o elemento {{htmlelement("script")}} imediatamente antes da tag `</body>`? Você digitou o código JavaScript exatamente como ele está sendo mostrado? **JavaScript é uma linguagem case sensitive (isso significa que a linguagem vê diferença entre letras maiúsculas e minúsculas) e muito confusa, então você precisa digitar a sintaxe exatamente como foi mostrada, senão não vai funcionar.**
 
@@ -238,14 +238,14 @@ O JavaScript é inserido na sua página de uma maneira similar ao CSS. Enquanto 
 
 Isso funciona muito bem, mas e se nós quiséssemos colocar nosso JavaScript em um arquivo externo? Vamos explorar isso agora.
 
-1.  Primeiro, crie um novo arquivo na mesma pasta que está o arquivo HTML de exemplo. Chame-o de `script.js` — tenha certeza de que o nome do arquivo tem a extensão `.js`, pois é assim que ele será reconhecido como JavaScript.
-2.  Agora substitua o elemento atual {{htmlelement("script")}} pelo seguinte código:
+1. Primeiro, crie um novo arquivo na mesma pasta que está o arquivo HTML de exemplo. Chame-o de `script.js` — tenha certeza de que o nome do arquivo tem a extensão `.js`, pois é assim que ele será reconhecido como JavaScript.
+2. Agora substitua o elemento atual {{htmlelement("script")}} pelo seguinte código:
 
     ```html
     <script src="script.js" defer></script>
     ```
 
-3.  Em `script.js`, adicione o seguinte script:
+3. Em `script.js`, adicione o seguinte script:
 
     ```js
     function createParagraph() {
@@ -261,7 +261,7 @@ Isso funciona muito bem, mas e se nós quiséssemos colocar nosso JavaScript em 
     }
     ```
 
-4.  Salve e atualize seu navegador, e você deverá ver a mesma coisa! Funciona igualmente, mas agora nós temos o JavaScript em um arquivo externo. Isso é geralmente uma coisa boa em termos de organização de código, e faz com que seja possível reutilizar o código em múltiplos arquivos HTML. Além disso, o HTML fica mais legível sem grandes pedaços de script no meio dele.
+4. Salve e atualize seu navegador, e você deverá ver a mesma coisa! Funciona igualmente, mas agora nós temos o JavaScript em um arquivo externo. Isso é geralmente uma coisa boa em termos de organização de código, e faz com que seja possível reutilizar o código em múltiplos arquivos HTML. Além disso, o HTML fica mais legível sem grandes pedaços de script no meio dele.
 
 > **Nota:** Você pode ver essa versão no GitHub como [aplicando-javascript-externo.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) e [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js) ([veja funcionar também](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
 
@@ -365,7 +365,7 @@ Todos os scripts com o atributo `defer` irão carregar na ordem que aparecem na 
 
 Resumindo:
 
-- `async` e `defer` istruem o _browser_ a baixar os scripts numa _thread_ (processo)\_ \_à parte, enquanto o resto da página (o DOM, etc.) está sendo baixado e disponibilizado de forma não bloqueante.
+- `async` e `defer` istruem o _browser_ a baixar os scripts numa _thread_ (processo) à parte, enquanto o resto da página (o DOM, etc.) está sendo baixado e disponibilizado de forma não bloqueante.
 - Se os seus scripts precisam rodar imediatamente, sem que dependam de outros para serem executados, use `async`.
 - Se seus scripts dependem de outros scripts ou do DOM completamente disponível em tela, carregue-os usando `defer` e coloque os elementos `<script>` na ordem exata que deseja que sejam carregados.
 
@@ -374,9 +374,11 @@ Resumindo:
 Assim como HTML e CSS, é possível escrever comentários dentro do seu código JavaScript que serão ignorados pelo navegador, e existirão simplesmente para prover instruções aos seus colegas desenvolvedores sobre como o código funciona (e pra você, se você tiver que voltar ao seu código depois de 6 meses e não se lembrar do que fez). Comentários são muito úteis, e você deveria usá-los frequentemente, principalmente quando seus códigos forem muito grandes. Há dois tipos:
 
 - Um comentário de uma linha é escrito depois de duas barras. Por exemplo:
-- ```js
+
+  ```js
   // Eu sou um comentário
   ```
+
 - Um comentário de múltiplas linhas é escrito entre os caracteres /\* e \*/. Por exemplo:
 
   ```js

@@ -23,25 +23,24 @@ Em {{Glossary("CSS")}}, os seletores são usados ​​para direcionar os elemen
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <font
-          ><font>Conhecimento </font><font>básico de informática, </font></font
-        ><a
+        Conhecimento básico de informática,
+        <a
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
-          ><font><font>software básico instalado</font></font></a
-        ><font><font> , conhecimento básico de como </font></font
-        ><a
+          >software básico instalado</a
+        > , conhecimento básico de como
+        <a
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
-          ><font><font>trabalhar com arquivos</font></font></a
-        ><font><font> , conceitos básicos de HTML (estude </font></font
-        ><a
+          >trabalhar com arquivos</a
+        > , conceitos básicos de HTML (estude
+        <a
           href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          ><font><font>Introdução ao HTML</font></font></a
-        ><font
-          ><font> ) e uma ideia de como o CSS funciona (estude os </font></font
-        ><a
+          >Introdução ao HTML</a
+        >
+        ) e uma ideia de como o CSS funciona (estude os
+        <a
           href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps"
-          ><font><font>primeiros passos do CSS</font></font></a
-        ><font><font> ).</font></font>
+          >primeiros passos do CSS</a
+        > ).
       </td>
     </tr>
     <tr>
@@ -204,21 +203,21 @@ A tabela a seguir fornece uma visão geral dos seletores disponíveis para uso, 
 
 ## In this module
 
-1.  [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/pt-BR/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/pt-BR/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/pt-BR/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/pt-BR/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/pt-BR/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/pt-BR/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Organizing)

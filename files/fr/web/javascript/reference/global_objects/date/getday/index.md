@@ -52,16 +52,11 @@ console.log(jourSemaine); //1
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getday', 'Date.prototype.getDay')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.getday', 'Date.prototype.getDay')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-15.9.5.16', 'Date.prototype.getDay')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES1')}}                                                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.getDay")}}
+{{Compat}}
 
 ## Voir aussi
 

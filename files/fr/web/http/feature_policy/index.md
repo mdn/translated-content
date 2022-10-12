@@ -124,13 +124,11 @@ Les fonctionnalités incluent (voir la [liste des Features](/fr/docs/Web/HTTP/He
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                               | Commentaire                                                                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("Feature Policy","#feature-policy-http-header-field","Feature-Policy")}} | {{Spec2("Feature Policy")}} | Définition initiale. Définit l'en-tête {{httpheader("Feature-Policy")}}. Les directives sont définies dans la spécification pour les fonctionnalités qu'elles contrôlent. Voir les pages individuelles des directives pour plus de détails. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Feature-Policy")}}
+{{Compat}}
 
 ## Voir aussi
 

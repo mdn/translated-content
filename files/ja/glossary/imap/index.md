@@ -13,4 +13,4 @@ Mark Crispin は、1986 年に _Interim Mail Access Protocol_ として IMAP を
 
 - {{RFC(3501)}}
 - {{Glossary("POP3")}}
-- {{interwiki("wikipedia", "Internet Message Access Protocol", "IMAP")}} on Wikipedia
+- [IMAP](https://ja.wikipedia.org/wiki/Internet_Message_Access_Protocol) on Wikipedia
