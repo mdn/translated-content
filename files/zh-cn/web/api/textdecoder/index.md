@@ -21,7 +21,7 @@ _`TextDecoder` 接口不继承任何属性。_
 - {{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}
   - : 一个包含的解码器名称的字符串，即描述 `TextDecoder` 将使用的方法的字符串。
 - {{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}
-  - : 布尔值（{{jsxref('Boolean')}}），是否显示致命错误。
+  - : 一个布尔值（{{jsxref('Boolean')}}），表示错误模式是否致命。
 - {{DOMxRef("TextDecoder.prototype.ignoreBOM")}} {{ReadOnlyInline}}
   - : 布尔值，{{jsxref('Boolean')}}，是否忽略 BOM（byte order marker）标记。
 
