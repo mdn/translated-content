@@ -502,7 +502,7 @@ email.addEventListener("input", function (event) {
     // Caso haja uma mensagem de erro visível, se o campo
     // é válido, removemos a mensagem de erro.
     error.innerHTML = ""; // Reinicia o conteúdo da mensagem
-    error.className = "erro"; // Redefinir o estado visual da mensagem
+    error.className = "error"; // Redefinir o estado visual da mensagem
   }
 }, false);
 form.addEventListener("submit", function (event) {
@@ -513,7 +513,7 @@ form.addEventListener("submit", function (event) {
     // Se o campo não for válido, exibimos um personalizado
     // mensagem de erro.
     error.innerHTML = "Espero um e-mail, querida!";
-    error.className = "erro ativo";
+    error.className = "error active";
     // E evitamos que o formulário seja enviado cancelando o evento
     event.preventDefault();
   }
