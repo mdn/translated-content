@@ -134,9 +134,9 @@ Isso faz com que a entrada tenha uma borda tracejada vermelha brilhante quando f
 
 ### Validando em uma expressão regular
 
-Outro recurso de validação muito comum é o atributo {{htmlattrxref("pattern","input")}}, que espera uma [Expressão Regular](/pt-BR/docs/JavaScript/Guide/Regular_Expressions) como seu valor. Um expresso regular sion (regex) é um padrão que pode ser usado para combinar combinações de caracteres em strings de texto, então eles são ideais para validação de formulários (assim como uma variedade de outros usos em JavaScript).
+Outro recurso de validação muito comum é o atributo {{htmlattrxref("pattern", "input")}}, que espera uma [Expressão Regular](/pt-BR/docs/JavaScript/Guide/Regular_Expressions) como seu valor. Uma expressão regular (regex) é um padrão que pode ser usado para identificar combinações de caracteres em strings de texto, então eles são ideais para validação de formulários (assim como uma variedade de outros usos em JavaScript).
 
-Regexs são bastante complexas e não pretendemos ensiná-las exaustivamente neste artigo. Abaixo estão alguns exemplos para dar uma ideia básica de como eles funcionam:
+RegExp's são bastante complexas e não pretendemos ensiná-las exaustivamente neste artigo. Abaixo estão alguns exemplos para dar uma ideia básica de como eles funcionam:
 
 - `a` — corresponde a um caractere que é `a` (não `b`, não `aa`, etc.)
 - `abc` — corresponde a `a`, seguido por `b`, seguido por `c`.
@@ -147,7 +147,7 @@ Regexs são bastante complexas e não pretendemos ensiná-las exaustivamente nes
 De qualquer forma, vamos implementar um exemplo — atualize seu HTML para adicionar um atributo `pattern`, assim:
 
 ```html
-<<form>>
+<form>
   <label for="choose">Você prefere uma banana ou uma cereja?</label>
   <input id="choose" name="i_like" required pattern="banana|cherry">
   <button>Enviar</button>
