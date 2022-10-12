@@ -1,5 +1,5 @@
 ---
-title: CSS 第一步概述
+title: CSS 入门概述
 slug: Learn/CSS/First_steps
 ---
 
