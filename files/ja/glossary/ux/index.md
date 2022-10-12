@@ -11,4 +11,4 @@ slug: Glossary/UX
 
 ### 一般的な知識
 
-- {{Interwiki("wikipedia", "User experience")}} ([日本語版](https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%AA%E3%82%A8%E3%83%B3%E3%82%B9%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3)) - Wikipedia
+- [ユーザーエクスペリエンス](https://ja.wikipedia.org/wiki/ユーザーエクスペリエンス) - Wikipedia

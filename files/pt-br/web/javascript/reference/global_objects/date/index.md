@@ -30,42 +30,26 @@ Nota: Quando Date for chamado como um construtor com mais de um argumento, se os
 - _`value`_
   - : Um valor inteiro representando o número de milisegundos desde 1 de Janeiro de 1970 00:00:00 UTC (Era Unix ou Marco Zero).
 
-<!---->
-
 - _`dataString`_
   - : Um valor do tipo String que representa uma data. A string deverá estar uma formato reconhecido pelo método {{jsxref("Date.parse()")}} ([IETF-compliant RFC 2822 timestamps](http://tools.ietf.org/html/rfc2822#page-14) e também uma [versão da ISO8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)).
-
-<!---->
 
 - _`year`_
   - : Um valor inteiro que representa o ano. Valores de 0 a 99 correspondem aos anos de 1900 a 1999. Veja o [exemplo abaixo](<#Two digit years>).
 
-<!---->
-
 - _`month`_
   - : Um valor inteiro que representa o mês, começando com 0 para Janeiro até 11 para Dezembro.
-
-<!---->
 
 - _`day`_
   - : Um valor inteiro que representa o dia do mês.
 
-<!---->
-
 - _`hour`_
   - : Um valor inteiro que representa a hora do dia.
-
-<!---->
 
 - _`minute`_
   - : Um valor inteiro que representa o segmento de um minuto de tempo.
 
-<!---->
-
 - _`second`_
   - : Um valor inteiro que representa o segmento de segundo do tempo.
-
-<!---->
 
 - _`millisecond`_
   - : Um valor inteiro que representa o segmento de milisegundo do tempo.
@@ -105,7 +89,7 @@ Todas as instâncias `Date` são herdadas de {{jsxref("Date.prototype")}}. O obj
 
 ### Métodos
 
-{{ page("/en-US/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}
+{{ page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}
 
 ## Exemplos
 

@@ -11,7 +11,7 @@ slug: Glossary/Regular_expression
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "Regular expressions")}}
+- Wikipedia の [正規表現](https://ja.wikipedia.org/wiki/正規表現)
 - [Interactive tutorial](http://regexone.com/)
 - [可視化された正規表現](http://regexper.com/)
 

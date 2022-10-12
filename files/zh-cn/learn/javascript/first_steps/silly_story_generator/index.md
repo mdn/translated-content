@@ -181,7 +181,7 @@ function result() {
 - 除了在 HTML 文件中引入这个 JavaScript 文件之外，完全不需要编辑 HTML。
 - 如果你不确定当前 JavaScript 是否正确添加到了你的 HTML 中，可以尝试暂时删除 JavaScript 文件的所有内容，然后加上一些简单但效果显著的 JavaScript 代码，保存文件并刷新浏览器。下面的示例会让 {{htmlelement("html")}} 背景变为红色，如果 JavaScript 成功加载，那么整个浏览器窗口将变红：
 
-- ```js
+  ```js
   document.querySelector('html').style.backgroundColor = 'red';
   ```
 

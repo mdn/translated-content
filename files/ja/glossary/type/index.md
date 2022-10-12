@@ -22,5 +22,5 @@ slug: Glossary/Type
     7. {{Glossary("undefined")}}
     8. {{Glossary("symbol")}}
 
-2. Wikipedia の {{Interwiki("wikipedia", "Data type")}}
+2. Wikipedia の [データ型](https://ja.wikipedia.org/wiki/データ型)
 3. [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)

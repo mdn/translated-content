@@ -4164,6 +4164,7 @@
 /fr/docs/Web/CSS/:host()	/fr/docs/Web/CSS/:host_function
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/Privacy_and_the_:visited_selector
+/fr/docs/Web/CSS/@font-face/font-variant	/fr/docs/Web/CSS/@font-face
 /fr/docs/Web/CSS/@styleset	/fr/docs/Web/CSS/@font-feature-values
 /fr/docs/Web/CSS/@viewport/height	/fr/docs/Web/CSS/@viewport
 /fr/docs/Web/CSS/@viewport/max-height	/fr/docs/Web/CSS/@viewport
@@ -6322,6 +6323,7 @@
 /fr/docs/conflicting/Web/CSS/::placeholder	/fr/docs/Web/CSS/::placeholder
 /fr/docs/conflicting/Web/CSS/:is	/fr/docs/Web/CSS/:is
 /fr/docs/conflicting/Web/CSS/:placeholder-shown	/fr/docs/Web/CSS/:placeholder-shown
+/fr/docs/conflicting/Web/CSS/@font-face	/fr/docs/Web/CSS/@font-face
 /fr/docs/conflicting/Web/CSS/@viewport	/fr/docs/Web/CSS/@viewport
 /fr/docs/conflicting/Web/CSS/@viewport_3ecbd2877baedebcfaffc13eaa7d61ce	/fr/docs/Web/CSS/@viewport
 /fr/docs/conflicting/Web/CSS/@viewport_516ab4b0283b5b2231fb657505e22440	/fr/docs/Web/CSS/@viewport

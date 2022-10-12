@@ -10,7 +10,7 @@ _Web アクセシビリティ_ (略語: **A11Y**、Accessibility の A から Y 
 ### 一般知識
 
 - [MDN 上 の アクセシビリティについてのリソース](/ja/docs/Web/Accessibility)
-- Wikipedia 上の {{Interwiki("wikipedia", "アクセシビリティ")}}
+- Wikipedia 上の [アクセシビリティ](https://ja.wikipedia.org/wiki/アクセシビリティ)
 
 ### Web アクセシビリティについて学ぶ
 

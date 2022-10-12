@@ -27,7 +27,7 @@ if (field==empty) {
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "制御構造")}}
+- Wikipedia 上の [制御構造](https://ja.wikipedia.org/wiki/制御構造)
 
 ### 技術文書
 

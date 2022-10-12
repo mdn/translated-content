@@ -14,7 +14,9 @@ original_slug: Web/CSS/transform-function/scale3d()
 
 ## Синтаксис
 
-    scale3d(sx, sy, sz)
+```
+scale3d(sx, sy, sz)
+```
 
 ## Значения
 

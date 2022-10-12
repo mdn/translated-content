@@ -10,7 +10,8 @@ tags:
 translation_of: Web/Guide/HTML/Content_categories
 original_slug: Web/Guide/HTML/categorias_de_contenido
 ---
-Cada elemento {{web.link("/es/docs/Web/HTML", "HTML")}} es miembro de una o más **categorías de contenido** — estas categorías agrupan elementos que comparten características comunes. Esta es una agrupación flexible (en realidad no crea una relación entre los elementos de estas categorías), pero ayuda a definir y describir el comportamiento compartido de las categorías y sus reglas asociadas, especialmente cuando te encuentras con sus intrincados detalles. También es posible que los elementos no sean miembros de _ninguna_ de estas categorías.
+
+Cada elemento [HTML](/es/docs/Web/HTML) es miembro de una o más **categorías de contenido** — estas categorías agrupan elementos que comparten características comunes. Esta es una agrupación flexible (en realidad no crea una relación entre los elementos de estas categorías), pero ayuda a definir y describir el comportamiento compartido de las categorías y sus reglas asociadas, especialmente cuando te encuentras con sus intrincados detalles. También es posible que los elementos no sean miembros de _ninguna_ de estas categorías.
 
 Hay tres tipos de categorías de contenido:
 
@@ -37,17 +38,17 @@ Los elementos que pertenecen a la categoría de flujo de contenido suelen conten
 Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una condición específica:
 
 - {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
-- {{HTMLElement("link")}}, si está presente el atributo {{web.link("/es/docs/HTML/Global_attributes#attr-itemprop", "itemprop")}}
-- {{HTMLElement("meta")}}, si está presente el atributo {{web.link("/es/docs/HTML/Global_attributes#attr-itemprop", "itemprop")}}
+- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#attr-itemprop)
+- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#attr-itemprop)
 - {{HTMLElement("style")}}, si está presente el atributo {{deprecated_inline()}} {{HTMLAttrxRef("scoped", "style")}}
 
 ### Contenido de sección
 
-Los elementos que pertenecen al modelo de contenido de secciones crean una {{web.link("/es/docs/Sections_and_Outlines_of_an_HTML5_document", "sección en el esquema actual")}} que define el alcance de los elementos {{HTMLElement("header")}}, {{HTMLElement("footer")}} y [Contenido del encabezado](#contenido_del_encabezado).
+Los elementos que pertenecen al modelo de contenido de secciones crean una [sección en el esquema actual](/es/docs/Sections_and_Outlines_of_an_HTML5_document) que define el alcance de los elementos {{HTMLElement("header")}}, {{HTMLElement("footer")}} y [Contenido del encabezado](#contenido_del_encabezado).
 
 Los elementos que pertenecen a esta categoría son {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} y {{HTMLElement("section")}}.
 
-> **Nota:** No confundas este modelo de contenido con la categoría de {{web.link("/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_roots", "seccionado raíz")}}, que aísla su contenido del esquema regular.
+> **Nota:** No confundas este modelo de contenido con la categoría de [seccionado raíz](/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_roots), que aísla su contenido del esquema regular.
 
 ### Contenido del encabezado
 
@@ -71,9 +72,9 @@ Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una
 - {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
 - {{HTMLElement("del")}}, si solo incluye contenido de redacción
 - {{HTMLElement("ins")}}, si solo incluye contenido de redacción
-- {{HTMLElement("link")}}, si está presente el atributo {{web.link("/es/docs/HTML/Global_attributes#itemprop", "itemprop")}}
+- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#itemprop)
 - {{HTMLElement("map")}}, si solo incluye contenido de redacción
-- {{HTMLElement("meta")}}, si está presente el atributo {{web.link("/es/docs/HTML/Global_attributes#itemprop", "itemprop")}}
+- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#itemprop)
 
 ### Contenido incrustado
 
