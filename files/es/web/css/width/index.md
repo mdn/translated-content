@@ -55,7 +55,7 @@ width: unset;
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Utiliza la fórmula de `fit-content` con el espacio disponible reemplazado por el argumento especificado, ejemplo, `min(max-content, max(min-content, <longitud-porcentaje>))`.
 
-## Accessibility concerns
+## Problemas de accesibilidad
 
 Ensure that elements set with a `width` aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.
 Asegúrese de que los elementos establecidos con un `width` no se trunquen y/o no oscurezcan otro contenido cuando se amplía la página para aumentar el tamaño del texto.
