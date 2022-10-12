@@ -333,7 +333,7 @@ Essas mensagens automatizadas têm duas desvantagens:
 - Eles dependem da localidade do navegador, o que significa que você pode ter uma página em um idioma, mas uma mensagem de erro exibida em outro idioma.
 
 | Navegador | Renderização |
-| ---------------------- | -------------------------------------------------- -------------------------------------------------- -------- |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Firefox 17 (Windows 7) | ![Exemplo de uma mensagem de erro com o Firefox em francês em uma página em inglês](/files/4329/error-firefox-win7.png) |
 | Chrome 22 (Windows 7) | ![Exemplo de mensagem de erro com o Chrome em francês em uma página em inglês](/files/4327/error-chrome-win7.png) |
 | Opera 12.10 (Mac OSX) | ![Exemplo de uma mensagem de erro com o Opera em francês em uma página em inglês](/files/4331/error-opera-macos.png) |
@@ -384,7 +384,7 @@ Mais e mais navegadores agora suportam a API de validação de restrição, e el
 #### Propriedades da API de validação de restrições
 
 | Propriedade | Descrição |
-| ------------------- | -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ---------- |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `mensagem de validação` | Uma mensagem localizada descrevendo as restrições de validação que o controle não atende (se houver), ou a string vazia se o controle não for um candidato para validação de restrição (`willValidate` é `false`), ou o valor do elemento satisfaz suas restrições. |
 | `validade` | Um objeto {{domxref("ValidityState")}} descrevendo o estado de validade do elemento. Consulte esse artigo para obter detalhes de possíveis estados de validade. |
 | `vai Validar` | Retorna `true` se o elemento for validado quando o formulário for enviado; `falso` caso contrário. |
@@ -392,7 +392,7 @@ Mais e mais navegadores agora suportam a API de validação de restrição, e el
 #### Métodos de API de validação de restrições
 
 | Método | Descrição |
-| -------------------------------------------------- -------------- | -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------- |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `checkValidade()` | Retorna `true` se o valor do elemento não tiver problemas de validade; `falso` caso contrário. Se o elemento for inválido, este método também causará um evento {{event("invalid")}} no elemento. |
 | {{domxref("HTMLFormElement.reportValidity()")}} | Retorna `true` se o elemento ou seus controles filho atendem às restrições de validação. Quando `false` é retornado, eventos canceláveis ​​{{event("invalid")}} são acionados para cada elemento inválido e problemas de validação são relatados ao usuário. |
 | `setCustomValidity(mensagem)` | Adiciona uma mensagem de erro personalizada ao elemento; se você definir uma mensagem de erro personalizada, o elemento será considerado inválido e o erro especificado será exibido. Isso permite que você use o código JavaScript para estabelecer uma falha de validação diferente daquelas oferecidas pela API de validação de restrição padrão. A mensagem é mostrada ao usuário ao relatar o problema. Se o argumento for a string vazia, o erro personalizado será apagado. |
