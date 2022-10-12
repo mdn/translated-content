@@ -28,7 +28,7 @@ O valor de retorno da sua função **reducer** é atribuída ao acumulador. O ac
 ## Sintaxe
 
 ```js
-array.reduce(callback( acumulador, valorAtual[, index[, array]] )[, valorInicial]))
+array.reduce(callback( acumulador, valorAtual[, index[, array]] )[, valorInicial])
 ```
 
 ### Parâmetros
