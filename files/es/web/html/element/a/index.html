@@ -18,7 +18,7 @@ original_slug: Web/HTML/Elemento/a
 
 <div>{{EmbedInteractiveExample("pages/tabbed/a.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <table class="properties">
  <tbody>
@@ -66,9 +66,11 @@ original_slug: Web/HTML/Elemento/a
  </div>
  </dd>
  <dt>{{htmlattrdef("href")}}</dt>
- <dd>Contiene una URL o un fragmento de URL al cual apunta el enlace.</dd>
- <dd>Un fragmento de URL es un nombre ("name") precedido por el símbolo de número (<code>#</code>), el cual especifíca una ubicación interna objetivo (un <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes#attr-id">ID</a> de un elemento HTML) dentro del actual documento. Las URLs no están restringidas sólo a documentos de internet basados en HTTP, sin embargo pueden utilizar cualquier protocolo soportado por el navegador. Por ejemplo, <a class="external external-icon" href="https://en.wikipedia.org/wiki/File_URI_scheme"><code>file:</code></a>, <code>ftp:</code>, and <code>mailto:</code> funcionan en la mayoría de los navegadores.</dd>
- <dd>Este atributo puede ser omitido (a partir de HTML5) para crear un enlace de marcador de posición. Un enlace de marcador de posición se parece a un enlace tradicional, pero que no dirige a algún lugar.
+ <dd>Contiene una URL o un fragmento de URL al cual apunta el enlace.
+ 
+  Un fragmento de URL es un nombre ("name") precedido por el símbolo de número (<code>#</code>), el cual especifíca una ubicación interna objetivo (un <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes#attr-id">ID</a> de un elemento HTML) dentro del actual documento. Las URLs no están restringidas sólo a documentos de internet basados en HTTP, sin embargo pueden utilizar cualquier protocolo soportado por el navegador. Por ejemplo, <a class="external external-icon" href="https://en.wikipedia.org/wiki/File_URI_scheme"><code>file:</code></a>, <code>ftp:</code>, and <code>mailto:</code> funcionan en la mayoría de los navegadores.
+ 
+  Este atributo puede ser omitido (a partir de HTML5) para crear un enlace de marcador de posición. Un enlace de marcador de posición se parece a un enlace tradicional, pero que no dirige a algún lugar.
  <div class="note">
  <p><strong>Nota:</strong> Puede ser utilizado <code>href="#top"</code> o un fragmento vacío <code>href="#"</code> para enlazar a la parte superior de la página actual. <a href="https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid">Este comportamiento está especficado en HTML5</a>.</p>
  </div>
@@ -105,6 +107,7 @@ original_slug: Web/HTML/Elemento/a
  <dt>
  <h3 id="Obsoleto">Obsoleto</h3>
  </dt>
+ <dd>Empty</dd>
  <dt>{{htmlattrdef("charset")}} {{obsoleteGeneric("inline","HTML5")}}</dt>
  <dd>Este atributo define la <a href="https://developer.mozilla.org/en-US/docs/Glossary/character_encoding">codificación de caracteres (character encoding)</a> de la URL enlazada. El valor debe de ser una lista delimitada por espacio y/o coma de caracteres definidos en <a class="external external-icon" href="https://tools.ietf.org/html/rfc2045">RFC 2045</a>. El valor por defecto es <code>ISO-8859-1</code>.
  <div class="note">

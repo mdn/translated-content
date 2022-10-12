@@ -69,15 +69,14 @@ original_slug: Web/HTML/Elemento/iframe
  <dt>{{htmlattrdef("allow")}}</dt>
  <dd>Especifíca una <a href="/en-US/docs/Web/HTTP/Feature_Policy">política de características</a> para el <code>&lt;iframe&gt;</code>. Vea el articulo <a href="/en-US/docs/Web/Privacy">Privacy, permissions, and information security</a> para detalles en temas de seguridad y como <code>&lt;iframe&gt;</code> funciona con las Politicas de Herramientas para mantener los sistemas seguros.</dd>
  <dt>{{htmlattrdef("allowfullscreen")}}</dt>
- <dd>Definido como <code>true</code> si el <code>&lt;iframe&gt;</code> puede activar el modo a pantalla completa llamando al método {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.</dd>
- <dd>
+ <dd>Definido como <code>true</code> si el <code>&lt;iframe&gt;</code> puede activar el modo a pantalla completa llamando al método {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.
+ 
  <div class="blockIndicator note">
  <p>Se considera un atributo heredado y se redefine como <code>allow="fullscreen"</code>.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("allowpaymentrequest")}}</dt>
- <dd>Definido como <code>true</code> si se debe permitir que un <code>&lt;iframe&gt;</code> de origen cruzado pueda invocar el <a href="/en-US/docs/Web/API/Payment_Request_API">API de solicitud de pago</a>. </dd>
- <dd>
+ <dd>Definido como <code>true</code> si se debe permitir que un <code>&lt;iframe&gt;</code> de origen cruzado pueda invocar el <a href="/en-US/docs/Web/API/Payment_Request_API">API de solicitud de pago</a>. <
  <div class="blockIndicator note">
  <p>Se considera un atributo heredado y se redefine como <code>allow="payment"</code>.</p>
  </div>
@@ -94,8 +93,6 @@ original_slug: Web/HTML/Elemento/iframe
   <li><code>low</code>: El recurso debe ser descargado después de otros recursos de alta-prioridad de los recursos de la página.</li>
  </ul>
 
- <dl>
- </dl>
  </dd>
  <dt>{{ htmlattrdef("name") }}</dt>
  <dd>Nombre objetivo para el contexto de navegación incrustado. Se puede utilizar:
@@ -116,10 +113,6 @@ original_slug: Web/HTML/Elemento/iframe
   <li><code>strict-origin</code>: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).</li>
   <li><code>strict-origin-when-cross-origin</code>: Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).</li>
   <li><code>unsafe-url</code>: The referrer will include the origin <em>and</em> the path (but not the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash">fragment</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password">password</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">username</a>). <strong>This value is unsafe</strong>, because it leaks origins and paths from TLS-protected resources to insecure origins.</li>
- </ul>
- </dd>
- <dd>
- <ul>
  </ul>
  </dd>
  <dt>{{htmlattrdef("sandbox")}}</dt>
@@ -166,7 +159,7 @@ original_slug: Web/HTML/Elemento/iframe
  <dt>{{htmlattrdef("align")}} {{deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
  <dd><span id="result_box" lang="es"><span class="hps">La alineación</span> <span class="hps">de este elemento</span> <span class="hps">con respecto al</span> <span class="hps">contexto que lo rodea.</span></span></dd>
  <dt>{{ htmlattrdef("frameborder") }} {{ obsolete_inline("html5")}} </dt>
- <dd>El valor 1 (por defecto) indica al navegador establecer una frontera entre este marco y todo otro marco. <span class="long_text" id="result_box" lang="es"><span class="gt-trans-draggable hps">El valor 0</span> <span class="gt-trans-draggable hps">indica</span> <span class="gt-trans-draggable hps">que el navegador no</span> establece<span class="gt-trans-draggable hps"> una</span> <span class="gt-trans-draggable hps">frontera</span> <span class="gt-trans-draggable hps">entre este marco y</span> <span class="gt-trans-draggable hps">otros marcos.</span></span></dd>
+ <dd>El valor 1 (por defecto) indica al navegador establecer una frontera entre este marco y todo otro marco. <span class="" id="result_box" lang="es"><span class="gt-trans-draggable hps">El valor 0</span> <span class="gt-trans-draggable hps">indica</span> <span class="gt-trans-draggable hps">que el navegador no</span> establece<span class="gt-trans-draggable hps"> una</span> <span class="gt-trans-draggable hps">frontera</span> <span class="gt-trans-draggable hps">entre este marco y</span> <span class="gt-trans-draggable hps">otros marcos.</span></span></dd>
  <dt>{{ htmlattrdef("longdesc") }} {{ obsolete_inline("html5")}} </dt>
  <dd>Una URI de una descripción larga del marco. Debido al mal uso generalizado, esto no es útil para navegadores no visuales.</dd>
  <dt>{{ htmlattrdef("marginheight") }} {{ obsolete_inline("html5") }} </dt>
@@ -292,7 +285,7 @@ original_slug: Web/HTML/Elemento/iframe
 
 <h2 id="Notes">Notes</h2>
 
-<div class="geckoVersionNote">
+<div class="">
 <p>Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{ cssxref("border-radius") }}.</p>
 </div>
 
