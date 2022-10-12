@@ -5,7 +5,7 @@ slug: Web/API/TextDecoder/ignoreBOM
 
 {{APIRef("Encoding API")}}
 
-{{domxref("TextDecoder")}} 接口的只读属性 **`ignoreBOM`** 是一个 {{jsxref('Boolean')}}，表示是否忽略[字节顺序标记](https://www.w3.org/International/questions/qa-byte-order-mark)。
+{{domxref("TextDecoder")}} 接口的只读属性 **`ignoreBOM`** 是一个{{jsxref('Boolean', '布尔值', '', '1')}}，表示是否忽略[字节顺序标记](https://www.w3.org/International/questions/qa-byte-order-mark)。
 
 ## 值
 
