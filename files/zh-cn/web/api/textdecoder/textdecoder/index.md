@@ -24,7 +24,7 @@ new TextDecoder(utfLabel, options)
   - : 一个具有属性的对象：
 
     - `fatal`
-      - : 一个布尔值，表示在编码无效数据时，{{DOMxRef("TextDecoder.decode()")}} 方法是否必须抛出 {{jsxref("TypeError")}}。默认是 `false`，这意味着解码器将用替换字符替换错误的数据。
+      - : 一个布尔值，表示在解码无效数据时，{{DOMxRef("TextDecoder.decode()")}} 方法是否必须抛出 {{jsxref("TypeError")}}。默认是 `false`，这意味着解码器将用替换字符替换错误的数据。
 
 ### 异常
 
