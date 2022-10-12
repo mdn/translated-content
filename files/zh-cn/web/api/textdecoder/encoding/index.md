@@ -7,7 +7,7 @@ slug: Web/API/TextDecoder/encoding
 
 只读属性 **`TextDecoder.encoding`** 返回一个字符串，其中包含了指定的 decoder 解码算法的名称。
 
-编码由 [constructor](/zh-CN/docs/Web/API/TextDecoder/TextDecoder) 的 `label` 参数设置，并且默认是 `utf-8`。
+编码由[构造函数](/zh-CN/docs/Web/API/TextDecoder/TextDecoder)的 `label` 参数设置，并且默认是 `utf-8`。
 
 ## 值
 
