@@ -7,101 +7,103 @@ tags:
 translation_of: Web/HTML/Element/datalist
 original_slug: Web/HTML/Elemento/datalist
 ---
-<p>El <strong>elemento HTML <code>&lt;datalist&gt;</code> </strong>contiene un conjunto de elementos {{HTMLElement("option")}} que representan los valores disponibles para otros controles.</p>
+El **elemento HTML `<datalist>` **contiene un conjunto de elementos {{HTMLElement("option")}} que representan los valores disponibles para otros controles.
 
-<p><span class="tlid-translation translation" lang="es"><span title="">La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub.</span> <span title="">Si desea contribuir al proyecto de ejemplos interactivos, copia https://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.</span></span></p>
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, copia https\://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Contenido de las categorías</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Contenido de flujo</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">contenido de fraseo</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenido permitido</th>
-   <td>O bien <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">contenido de fraseo</a> o, cero o más elementos {{HTMLElement("option")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omisión de etiqueta</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Elementos padre permitidos</th>
-   <td>Cualquier elemento que acepte <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">contenido de fraseo</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Roles ARIA permitidos</th>
-   <td>Ninguno</td>
-  </tr>
-  <tr>
-   <th scope="row">Interfaz DOM</th>
-   <td>{{domxref("HTMLDataListElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/HTML/Content_categories"
+          >Contenido de las categorías</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+          >Contenido de flujo</a
+        >,
+        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+          >contenido de fraseo</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenido permitido</th>
+      <td>
+        O bien
+        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+          >contenido de fraseo</a
+        >
+        o, cero o más elementos {{HTMLElement("option")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omisión de etiqueta</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Elementos padre permitidos</th>
+      <td>
+        Cualquier elemento que acepte
+        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+          >contenido de fraseo</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Roles ARIA permitidos</th>
+      <td>Ninguno</td>
+    </tr>
+    <tr>
+      <th scope="row">Interfaz DOM</th>
+      <td>{{domxref("HTMLDataListElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento no tiene otros atributos mas que los <a href="/en-US/docs/HTML/Global_attributes">atributos globales</a>, comunes a todos los elementos.</p>
+Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs/HTML/Global_attributes), comunes a todos los elementos.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: html">&lt;label&gt;Choose a browser from this list:
-&lt;input list="browsers" name="myBrowser" /&gt;&lt;/label&gt;
-&lt;datalist id="browsers"&gt;
-  &lt;option value="Chrome"&gt;
-  &lt;option value="Firefox"&gt;
-  &lt;option value="Internet Explorer"&gt;
-  &lt;option value="Opera"&gt;
-  &lt;option value="Safari"&gt;
-  &lt;option value="Microsoft Edge"&gt;
-&lt;/datalist&gt;
-</pre>
+```html
+<label>Choose a browser from this list:
+<input list="browsers" name="myBrowser" /></label>
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+  <option value="Microsoft Edge">
+</datalist>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                           | Comentario |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
 
-<h2 id="Compatibilidad_con_los_distintos_navegadoresEdit">Compatibilidad con los distintos navegadores<a class="" href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/option$edit#Compatibilidad_con_los_distintos_navegadores" rel="nofollow, noindex"><span>Edit</span></a></h2>
+## Compatibilidad con los distintos navegadores[Edit](/es/docs/Web/HTML/Elemento/option$edit#Compatibilidad_con_los_distintos_navegadores)
 
+{{Compat("html.elements.datalist")}}
 
+## sección de relleno
 
-<p>{{Compat("html.elements.datalist")}}</p>
+Incluya este polyfill para proporcionar soporte para navegadores antiguos y actualmente incompatibles:
+[datalist-polyfill](https://github.com/mfranzke/datalist-polyfill)
 
-<h2 id="sección_de_relleno">sección de relleno</h2>
+## Ver también
 
-<p>Incluya este polyfill para proporcionar soporte para navegadores antiguos y actualmente incompatibles:<br>
- <a href="https://github.com/mfranzke/datalist-polyfill">datalist-polyfill</a></p>
+- El elemento {{HTMLElement("input")}}, y más especificamente este atributo {{htmlattrxref("list", "input")}};
+- El elemento {{HTMLElement("option")}}.
 
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li class="last">El elemento {{HTMLElement("input")}}, y más especificamente este atributo {{htmlattrxref("list", "input")}};</li>
- <li class="last">El elemento {{HTMLElement("option")}}.</li>
-</ul>
-
-<p class="last">{{HTMLRef}}</p>
+{{HTMLRef}}

@@ -12,412 +12,407 @@ tags:
 translation_of: Web/HTML/Element/input
 original_slug: Web/HTML/Elemento/input
 ---
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El elemento HTML <code>&lt;input&gt;</code> se usa para crear controles interactivos para formularios basados en la web con el fin de recibir datos del usuario.<span class="tlid-translation translation" lang="es"><span title="">Hay disponible una amplia variedad de tipos de datos de entrada y widgets de control, que dependen del dispositivo y el agente de usuario (<a href="/en-US/docs/Glossary/user_agent">user agent</a>).El elemento </span></span><code>&lt;input&gt;</code><span class="tlid-translation translation" lang="es"><span title=""> es uno de los más potentes y complejos en todo HTML debido a la gran cantidad de combinaciones de tipos y atributos de entrada.</span></span></p>
-
-<p> </p>
+El elemento HTML `<input>` se usa para crear controles interactivos para formularios basados en la web con el fin de recibir datos del usuario.Hay disponible una amplia variedad de tipos de datos de entrada y widgets de control, que dependen del dispositivo y el agente de usuario ([user agent](/es/docs/Glossary/user_agent)).El elemento `<input>` es uno de los más potentes y complejos en todo HTML debido a la gran cantidad de combinaciones de tipos y atributos de entrada.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido">Categorías de contenido</a></th>
-   <td><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico">Contenido dinámico</a>, enlistado, presentable, reajustable, elemento asociado a formulario, <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático">contenido textual</a>. Si su atributo {{htmlattrxref("type", "input")}} no es <code>hidden</code>, entonces contenido etiquetable, contenido palpable.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenido permitido</th>
-   <td>Ninguno, pues es un {{Glossary("empty element", "elemento vacío")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omisión de etiqueta</th>
-   <td>Debe tener una etiqueta de apertura y no debe tener etiqueta de cierre.</td>
-  </tr>
-  <tr>
-   <th scope="row">Elementos padre permitidos</th>
-   <td>Cualquier elemento que acepte <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático">contenido textual</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interfaz DOM</th>
-   <td>{{domxref("HTMLInputElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+          >Categorías de contenido</a
+        >
+      </th>
+      <td>
+        <a
+          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
+          >Contenido dinámico</a
+        >, enlistado, presentable, reajustable, elemento asociado a formulario,
+        <a
+          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático"
+          >contenido textual</a
+        >. Si su atributo {{htmlattrxref("type", "input")}} no es
+        <code>hidden</code>, entonces contenido etiquetable, contenido palpable.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenido permitido</th>
+      <td>
+        Ninguno, pues es un
+        {{Glossary("empty element", "elemento vacío")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omisión de etiqueta</th>
+      <td>
+        Debe tener una etiqueta de apertura y no debe tener etiqueta de cierre.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Elementos padre permitidos</th>
+      <td>
+        Cualquier elemento que acepte
+        <a
+          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático"
+          >contenido textual</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interfaz DOM</th>
+      <td>{{domxref("HTMLInputElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento incluye los <a href="/es/docs/Web/HTML/Atributos_Globales" rel="internal" title="en/HTML/Global attributes">atributos globales</a>, y los indicados a continuación.</p>
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales "en/HTML/Global attributes"), y los indicados a continuación.
 
-<dl>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>El tipo de control a mostrar. Su valor predeterminado es <code>text</code>, si no se especifica este atributo. Los posibles valores son:
- <ul>
-  <li><code>button</code>: Botón sin un comportamiento específico.</li>
-  <li><code>checkbox</code>: Casilla de selección. Se debe usar el atributo <strong>value</strong> para definir el valor que se enviará por este elemento. Se usa el atributo <strong>checked</strong> para indicar si el elemento está seleccionado. También se puede usar el atributo <strong>indeterminate</strong> (el cual solo se puede establecer programaticamente) para indicar que la casilla está en un estado indeterminado (en la mayoría de las plataformas, se dibuja una línea horizontal a través de la casilla).</li>
-  <li><code>color</code>: {{HTMLVersionInline("5")}} Control para espicificar un color. Una interfaz de selección de color no requiere más funcionalidad que la de aceptar colores simples como texto (<a href="http://www.w3.org/TR/html5/forms.html#color-state-(type=color)">más información</a>).</li>
-  <li><code>date</code>: {{HTMLVersionInline("5")}} Control para introducir una fecha (año, mes y día, sin tiempo).</li>
-  <li><code>datetime</code>: {{HTMLVersionInline("5")}} {{deprecated_inline}} {{obsolete_inline}} Control para introducir una fecha y hora (horas, minutos, segundos y fracción de segundo), basado en la zona horaria UTC. <strong>Esta característica ha sido <a href="https://github.com/whatwg/html/issues/336">removida de WHATWG HTML.</a></strong></li>
-  <li><code>datetime-local</code>: {{HTMLVersionInline("5")}} Control para introducir fecha y hora, sin zona horaria específica.</li>
-  <li><code>email</code>: {{HTMLVersionInline("5")}} Campo para introducir una dirección de correo electrónico. El valor introducido se valida para que contenga una cadena vacía o una dirección de correo válida antes de enviarse. Las pseudo-clases {{cssxref(":valid")}} y {{cssxref(":invalid")}} son aplicadas segun corresponda.</li>
-  <li><code>file</code>: Control que permite al usuario seleccionar un archivo. Se puede usar el atributo <strong>accept</strong> para definir los tipos de archivo que el control podrá seleccionar.</li>
-  <li><code>hidden</code>: Control que no es mostrado en pantalla, pero cuyo valor es enviado al servidor.</li>
-  <li><code>image</code>: Botón de envío de formulario con gráfico. Se debe usar el atributo <strong>src</strong> para definir el origen de la imagen y el atributo <strong>alt</strong> para definir un texto alternativo. Se puede usar los atributos <strong>height</strong> y <strong>width</strong> para definir el tamaño de la imagen en píxeles.</li>
-  <li><code>month</code>: {{HTMLVersionInline("5")}} Control para introducir un mes y año, sin zona horaria específica.</li>
-  <li><code>number</code>: {{HTMLVersionInline("5")}} Control para introducir un número de punto flotante.</li>
-  <li><code>password</code>: Control de línea simple cuyo valor permanece oculto. Se puede usar el atributo <strong>maxlength</strong> para especificar la longitud máxima del valor que se puede introducir.</li>
-  <li><code>radio</code>: Botón radio. Se debe usar el atributo <strong>value</strong> para definir el valor que se enviará por este elemento. Se usa el atributo <strong>checked</strong> para indicar si el elemento está seleccionado de forma predeterminada. Los botones radio que tengan el mismo valor para su atributo <strong>name</strong> están dentro del mismo "grupo de botones radio". Solo un botón radio dentro de un grupo puede ser seleccionado a la vez.</li>
-  <li><code>range</code>: {{HTMLVersionInline("5")}} Control para introducir un número cuyo valor exacto no es importante. Este control usa los siguientes valores predeterminados si no se especifica cada atributo:
-   <ul>
-    <li><code>min</code>: 0</li>
-    <li><code>max</code>: 100</li>
-    <li><code>value</code>: <code>min</code> + (<code>max -</code> <code>min</code>) / 2, o <code>min</code> si <code>max</code> es menor que <code>min</code></li>
-    <li><code>step</code>: 1</li>
-   </ul>
-  </li>
-  <li><code>reset</code>: Botón que restaura los contenidos de un formulario a sus valores predeterminados.</li>
-  <li><code>search</code>: {{HTMLVersionInline("5")}} Cuadro de texto de línea simple para introducir textos de búsqueda. Los saltos de línea son eliminados automáticamente del valor introducido.</li>
-  <li><code>submit</code>: Botón que envía el formulario.</li>
-  <li><code>tel</code>: {{HTMLVersionInline("5")}} Control para introducir un número telefónico. Los saltos de línea son eliminados automáticamente del valor introducido, pero no hay otra sintaxis forzada. Se pueden usar atributos como <strong>pattern</strong> y <strong>maxlength</strong> para restringir los valores introducidos en este control. Las pseudo-clases CSS {{cssxref(":valid")}} y {{cssxref(":invalid")}} son aplicadas segun corresponda.</li>
-  <li><code>text</code>: Campo de texto de línea simple. Los saltos de línea son eliminados automáticamente del valor introducido.</li>
-  <li><code>time</code>: {{HTMLVersionInline("5")}} Control para introducir un valor de tiempo sin zona horaria específica.</li>
-  <li><code>url</code>: {{HTMLVersionInline("5")}} Campo para editar una URL. El valor introducido se valida para que contenga una cadena vacía o una ruta URL absoluta antes de enviarse. Los saltos de línea y espacios en blanco al principio o al final del valor son eliminados automáticamente. Se pueden usar atributos como <strong>pattern</strong> y <strong>maxlength</strong> para restringir los valores introducidos en el control. Las pseudo-clases {{cssxref(":valid")}} y {{cssxref(":invalid")}} son aplicadas segun corresponda.</li>
-  <li><code>week</code>: {{HTMLVersionInline("5")}} Control para introducir una fecha que consiste en número de semana del año y número de semana sin zona horaria específica.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("accept")}}</dt>
- <dd>Si el valor del atributo <strong>type</strong> es <code>file</code>, este atributo indica los tipos de archivo que el servidor acepta, de otra manera será ignorado. El valor debe ser una lista de tipos de contenido únicos, separados por coma:
- <ul>
-  <li>Una extensión de archivo, comenzando por el caracter STOP (U+002E). (Ejemplos: ".jpg,.png,.doc")</li>
-  <li>Un tipo MIME válido sin extensiones</li>
-  <li><code>audio/*</code>, que representa archivos de audio {{HTMLVersionInline("5")}}</li>
-  <li><code>video/*</code>, que representa archivos de vídeo {{HTMLVersionInline("5")}}</li>
-  <li><code>image/*</code>, que representa archivos de imagen {{HTMLVersionInline("5")}}</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("accesskey")}} sólo {{HTMLVersionInline(4)}}, {{obsoleteGeneric("inline", "HTML5")}}</dt>
- <dd>Un caracter que el usuario puede presionar para establecer el cursor en el control. Este atributo es global en HTML5.</dd>
- <dt>{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</dt>
- <dd>Especifica una "pista de acción" usada para determinar cómo etiquetar la tecla "enter" en dispositivos móviles con teclados virtuales. Los valores soportados son <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, y <code>send</code>. Esto queda automáticamente mapeado al texto apropiado y no son sensibles al uso de mayúsculas.</dd>
- <dt>{{htmlattrdef("autocapitalize")}} {{non-standard_inline}}</dt>
- <dd>Atributo no estándar usado por <a href="https://developers.google.com/web/updates/2015/04/autocapitalize">Chrome</a> e iOS Safari Mobile, el cual controla si se deben cambiar los textos a mayúsculas automáticamente mientras son introducidos/editados por el usuario, y la forma en que esto se hará. Los valores no obsoletos están disponibles en iOS5 y superior. Los valores posibles son:
- <ul>
-  <li><code>none</code>: Deshabilita completamente las mayúsculas automáticas.</li>
-  <li><code>sentences</code>: Cambia automáticamente a mayúscula la primera letra de la sentencia.</li>
-  <li><code>words</code>: Cambia automáticamente a mayúscula la primera letra de cada palabra.</li>
-  <li><code>characters</code>: Cambia automáticamente a mayúscula todos los caracteres.</li>
-  <li><code>on</code>: {{deprecated_inline}} Obsoleto desde iOS 5.</li>
-  <li><code>off</code>: {{deprecated_inline}} Obsoleto desde iOS 5.</li>
- </ul>
- <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize">Documentation sobre <code>autocapitalize</code> en la Referencia HTML de Safari</a></dd>
- <dt>{{htmlattrdef("autocomplete")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Este atributo indica si el valor del control puede ser completado automáticamente por el navegador.
+- {{htmlattrdef("type")}}
 
- Los valores posibles son:
- <ul>
-  <li><code>off</code>: El usuario debe explícitamente introducir un valor en este campo para cualquier uso, o el documento provee su propio método de auto-completado. El navegador no completa automáticamente lo introducido.</li>
-  <li><code>on</code>: Se permite al navegador completar automáticamente el valor basado en los valores que se han introducido previamente. Sin embargo, <code>on</code> no provee mayor información sobre qué clase de datos podría esperar el usuario introducir.</li>
-  <li><code>name</code>: Nombre completo.</li>
-  <li><code>honorific-prefix</code>: Prefixo o título (Ejemplos: "Sr.", "Sra.", "Dr.", "Srita.").</li>
-  <li><code>given-name</code>: Nombre de pila.</li>
-  <li><code>additional-name</code>: Segundo nombre.</li>
-  <li><code>family-name</code>: Apellido.</li>
-  <li><code>honorific-suffix</code>: Sufijo (Ejemplos: "Hijo", "Señor", "II").</li>
-  <li><code>nickname</code>: Apodo.</li>
-  <li><code>email</code>: Correo electrónico.</li>
-  <li><code>username</code>: Nombre de usuario.</li>
-  <li><code>new-password</code>: Nueva contraseña (por ejemplo, al crear una cuenta o cambiar la contraseña).</li>
-  <li><code>current-password</code>: Contraseña actual.</li>
-  <li><code>organization-title</code>: Título de organización (Ejemplos: "Ingeniero de Software", "Vicepresidente", "Director General Adjunto").</li>
-  <li><code>organization</code>: Organización.</li>
-  <li><code>street-address</code>: Calle (en dirección).</li>
-  <li><code>address-line1</code>, <code>address-line2</code>, <code>address-line3</code>, <code>address-level4</code>, <code>address-level3</code>, <code>address-level2</code>, <code>address-level1</code>: Valores para dirección.</li>
-  <li><code>country</code>: País.</li>
-  <li><code>country-name</code>: Nombre del país.</li>
-  <li><code>postal-code</code>: Código postal.</li>
-  <li><code>cc-name</code>: Nombre completo en un instrumento de pago.</li>
-  <li><code>cc-given-name</code>: Nombre de pila en un instrumento de pago.</li>
-  <li><code>cc-additional-name</code>: Segundo nombre en un instrumento de pago.</li>
-  <li><code>cc-family-name</code>: Apellido en un instrumento de pago.</li>
-  <li><code>cc-number</code>: Código de identificación de un instrumento de pago(por ejemplo, el número de tarjeta de crédito).</li>
-  <li><code>cc-exp:</code> Fecha de expiración de un instrumento de pago.</li>
-  <li><code>cc-exp-month</code>: Mes de expiración en un instrumento de pago.</li>
-  <li><code>cc-exp-year</code>: Año de expiración en un instrumento de pago.</li>
-  <li><code>cc-csc</code>: Código de seguridad en un instrumento de pago.</li>
-  <li><code>cc-type</code>: Tipo de instrumento de pago (por ejemplo, Visa).</li>
-  <li><code>transaction-currency</code>: Tipo de moneda de la transacción.</li>
-  <li><code>transaction-amount</code>: Monto de la transacción.</li>
-  <li><code>language</code>: Idioma preferido, etiqueta BCP 47 válida.</li>
-  <li><code>bday</code>: Fecha de cumpleaños.</li>
-  <li><code>bday-day</code>: Día de cumpleaños.</li>
-  <li><code>bday-month</code>: Mes de cumpleaños.</li>
-  <li><code>bday-year</code>: Año de cumpleaños.</li>
-  <li><code>sex</code>: Sexo (ejemplos, Femenino, Female, Fa'afafine), texto libre, sin líneas nuevas.</li>
-  <li><code>tel</code>: Teléfono.</li>
-  <li><code>url</code>: Dirección web correspondiente a la compañía, persona, dirección o información de contacto en los demás campos asociados a éste.</li>
-  <li><code>photo</code>: Fotografía, ícono u otra imagen correspondiente a la compañía, persona, dirección o información de contacto en los otros campos asociados a éste.</li>
- </ul>
+  - : El tipo de control a mostrar. Su valor predeterminado es `text`, si no se especifica este atributo. Los posibles valores son:
 
- <p>Véase el <a href="https://html.spec.whatwg.org/multipage/forms.html#autofill">Estándar WHATWG</a> para információn más detallada.</p>
+    - `button`: Botón sin un comportamiento específico.
+    - `checkbox`: Casilla de selección. Se debe usar el atributo **value** para definir el valor que se enviará por este elemento. Se usa el atributo **checked** para indicar si el elemento está seleccionado. También se puede usar el atributo **indeterminate** (el cual solo se puede establecer programaticamente) para indicar que la casilla está en un estado indeterminado (en la mayoría de las plataformas, se dibuja una línea horizontal a través de la casilla).
+    - `color`: {{HTMLVersionInline("5")}} Control para espicificar un color. Una interfaz de selección de color no requiere más funcionalidad que la de aceptar colores simples como texto ([más información](<http://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
+    - `date`: {{HTMLVersionInline("5")}} Control para introducir una fecha (año, mes y día, sin tiempo).
+    - `datetime`: {{HTMLVersionInline("5")}} {{deprecated_inline}} {{obsolete_inline}} Control para introducir una fecha y hora (horas, minutos, segundos y fracción de segundo), basado en la zona horaria UTC. **Esta característica ha sido [removida de WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
+    - `datetime-local`: {{HTMLVersionInline("5")}} Control para introducir fecha y hora, sin zona horaria específica.
+    - `email`: {{HTMLVersionInline("5")}} Campo para introducir una dirección de correo electrónico. El valor introducido se valida para que contenga una cadena vacía o una dirección de correo válida antes de enviarse. Las pseudo-clases {{cssxref(":valid")}} y {{cssxref(":invalid")}} son aplicadas segun corresponda.
+    - `file`: Control que permite al usuario seleccionar un archivo. Se puede usar el atributo **accept** para definir los tipos de archivo que el control podrá seleccionar.
+    - `hidden`: Control que no es mostrado en pantalla, pero cuyo valor es enviado al servidor.
+    - `image`: Botón de envío de formulario con gráfico. Se debe usar el atributo **src** para definir el origen de la imagen y el atributo **alt** para definir un texto alternativo. Se puede usar los atributos **height** y **width** para definir el tamaño de la imagen en píxeles.
+    - `month`: {{HTMLVersionInline("5")}} Control para introducir un mes y año, sin zona horaria específica.
+    - `number`: {{HTMLVersionInline("5")}} Control para introducir un número de punto flotante.
+    - `password`: Control de línea simple cuyo valor permanece oculto. Se puede usar el atributo **maxlength** para especificar la longitud máxima del valor que se puede introducir.
+    - `radio`: Botón radio. Se debe usar el atributo **value** para definir el valor que se enviará por este elemento. Se usa el atributo **checked** para indicar si el elemento está seleccionado de forma predeterminada. Los botones radio que tengan el mismo valor para su atributo **name** están dentro del mismo "grupo de botones radio". Solo un botón radio dentro de un grupo puede ser seleccionado a la vez.
+    - `range`: {{HTMLVersionInline("5")}} Control para introducir un número cuyo valor exacto no es importante. Este control usa los siguientes valores predeterminados si no se especifica cada atributo:
 
- <p>Si el atributo <strong>autocomplete</strong> no está especificado en un elemento input, el navegador usa el atributo <strong>autocomplete</strong> del formulario al que pertenece el elemento <code>&lt;input&gt;</code>, es decir, el elemento <code>form</code> del cual es descendiente el elemento <code>&lt;input&gt;</code>, o aquél cuyo <strong>id</strong> está especificado en el atributo <strong>form</strong> del elemento input. Para mayor información, véase el atributo {{htmlattrxref("autocomplete", "form")}} en {{HTMLElement("form")}}.</p>
+      - `min`: 0
+      - `max`: 100
+      - `value`: `min` + (`max -` `min`) / 2, o `min` si `max` es menor que `min`
+      - `step`: 1
 
- <p>El atributo <strong>autocomplete</strong> también controla si Firefox, a diferencia de otros navegadores, <a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persistirá el estado deshabilitado dinámico, y (si aplica) la selección dinámica</a> de un <code>&lt;input&gt;</code> a través de las cargas de la página. La característica de persistencia está habilitada de forma predeterminada. Estableciendo el valor de <strong>autocomplete</strong> como <code>off</code> se deshabilita esta característica. Esto funciona aún cuando el atributo <strong>autocomplete</strong> no se aplicaría normalmente al <code>&lt;input&gt;</code> en virtud de su atributo <strong>type</strong>. Véase {{bug(654072)}}.</p>
+    - `reset`: Botón que restaura los contenidos de un formulario a sus valores predeterminados.
+    - `search`: {{HTMLVersionInline("5")}} Cuadro de texto de línea simple para introducir textos de búsqueda. Los saltos de línea son eliminados automáticamente del valor introducido.
+    - `submit`: Botón que envía el formulario.
+    - `tel`: {{HTMLVersionInline("5")}} Control para introducir un número telefónico. Los saltos de línea son eliminados automáticamente del valor introducido, pero no hay otra sintaxis forzada. Se pueden usar atributos como **pattern** y **maxlength** para restringir los valores introducidos en este control. Las pseudo-clases CSS {{cssxref(":valid")}} y {{cssxref(":invalid")}} son aplicadas segun corresponda.
+    - `text`: Campo de texto de línea simple. Los saltos de línea son eliminados automáticamente del valor introducido.
+    - `time`: {{HTMLVersionInline("5")}} Control para introducir un valor de tiempo sin zona horaria específica.
+    - `url`: {{HTMLVersionInline("5")}} Campo para editar una URL. El valor introducido se valida para que contenga una cadena vacía o una ruta URL absoluta antes de enviarse. Los saltos de línea y espacios en blanco al principio o al final del valor son eliminados automáticamente. Se pueden usar atributos como **pattern** y **maxlength** para restringir los valores introducidos en el control. Las pseudo-clases {{cssxref(":valid")}} y {{cssxref(":invalid")}} son aplicadas segun corresponda.
+    - `week`: {{HTMLVersionInline("5")}} Control para introducir una fecha que consiste en número de semana del año y número de semana sin zona horaria específica.
 
- <p>Para navegadores más modernos (incluyendo Firefox 38+, Google Chrome 34+, IE 11+), establecer el atributo <strong>autocomplete</strong> <em>no</em> previene que el administrador de contraseñas del navegador le pregunte al usuario si desea guardar la información de inicio de sesión (usuario y contraseña), ni tampoco, de permitirlo el usuario, que se autocompleten estos campos la próxima vez que el usuario visite la página. Véase <a href="/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">El atributo autocomplete y campos de inicio de sesión</a>.</p>
- </dd>
- <dt>{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</dt>
- <dd>Es un atributo no estándar, soportado por Safari, que es usado para controlar si la autocorrección debe estar habilitada cuando el usuario está introduciendo/editando el texto de un <code>&lt;input&gt;</code>. Los valores posibles de este atributo son:
- <ul>
-  <li><code>on</code>: Habilita la autocorrección</li>
-  <li><code>off</code>: Deshabilita la autocorrección</li>
- </ul>
- <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect">Documentación de <code>autocorrect</code> en la Referencia HTML de Safari</a></dd>
- <dt>{{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Este atributo Booleano permite especificar que un control de formulario tenga el cursor cuando la página se carga, a menos que el usuario lo reemplace, por ejemplo, escribiendo en un control diferente. Solo un elemento de formulario en un mismo documento puede tener el atributo <strong>autofocus</strong>, el cual es Booleano. No puede ser aplicado si el atributo <strong>type</strong> tiene valor <code>hidden</code> (es decir, no se puede establecer automáticamente el cursor en un control oculto). Nótese que el cursor se podría establecer en el control antes de disparar el evento <a href="/es/docs/Web/Events/DOMContentLoaded"><code>DOMContentLoaded</code>.</a></dd>
- <dt>{{htmlattrdef("capture")}}</dt>
- <dd>
- <p>Cuando el valor del atributo <strong>type</strong> es <code>file</code>, la presencia de este atributo Booleano indica que se le dará preferencia a la captura del medio directamente del ambiente del dispositivo, usando algún <a href="https://www.w3.org/TR/html-media-capture/#dfn-media-capture-mechanism">mecanismo de captura de medios</a>.</p>
- </dd>
- <dt>{{htmlattrdef("checked")}}</dt>
- <dd>
- <p>Cuando el valor del atributo <strong>type</strong> es <code>radio</code> o <code>checkbox</code>, la presencia de este atributo Booleano indica que el control está seleccionado de forma predeterminada. De lo contrario, será ignorado.</p>
+- {{htmlattrdef("accept")}}
 
- <p>En Firefox, a diferencia de otros navegadores, de forma predeterminada, <a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">se persiste el estado de selección dinámico</a> en un <code>&lt;input&gt;</code> a través de las cargas de la página. Para controlar esta característica se usa el atributo {{htmlattrxref("autocomplete","input")}}.</p>
- </dd>
- <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>
- <p>Este atributo Booleano indica que el control no está disponible para interacción. En particular, el evento <code>click</code> <a class="external" href="https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute">no será invocado</a> en controles deshabilitados. De igual forma, el valor de un control deshabilitado no es enviado con el formulario.</p>
+  - : Si el valor del atributo **type** es `file`, este atributo indica los tipos de archivo que el servidor acepta, de otra manera será ignorado. El valor debe ser una lista de tipos de contenido únicos, separados por coma:
 
- <p>En Firefox, a diferencia de otros navegadores, de forma predeterminada, <a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">se persiste el estado de selección dinámico</a> en un <code>&lt;input&gt;</code> a través de las cargas de la página. Para controlar esta característica se usa el atributo {{htmlattrxref("autocomplete","input")}}.</p>
- </dd>
- <dt>{{htmlattrdef("form")}} {{HTMLVersionInline("5")}}</dt>
- <dd>El elemento form al que está asociado el elemento (su <em>formulario propietario</em>). El valor del atributo debe ser el <strong>id</strong> de un elemento {{HTMLElement("form")}} en el mismo documento. Si el atributo no es especificado, este elemento <code>&lt;input&gt;</code> deberá ser descendiente de un elemento {{HTMLElement("form")}}. Este atributo permite poner elementos <code>&lt;input&gt;</code> en cualquier parte dentro de un documento, no solamente como descendientes de su formulario. Un input puede ser asociado sólo con un formulario.</dd>
- <dt>{{htmlattrdef("formaction")}} {{HTMLVersionInline("5")}}</dt>
- <dd>El URI de un programa que procesa la información enviada por el elemento input, cuando es un botón de tipo <code>submit</code> o <code>image</code>. Si se especifica, reemplaza al atributo {{htmlattrxref("action","form")}} del formulario al que pertenece el elemento.</dd>
- <dt>{{htmlattrdef("formenctype")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Si el elemento es de tipo <code>submit</code> o <code>image</code>, este atributo especifica el tipo de contenido que es usado para enviar el formulario al servidor. Los valores posibles son:
- <ul>
-  <li><code>application/x-www-form-urlencoded</code>: El valor predeterminado si el atributo no es especificado.</li>
-  <li><code>multipart/form-data</code>: Se usa este valor cuando se tiene un elemento <code>&lt;input&gt;</code> con atributo {{htmlattrxref("type","input")}} de valor <code>file</code>.</li>
-  <li><code>text/plain</code></li>
- </ul>
+    - Una extensión de archivo, comenzando por el caracter STOP (U+002E). (Ejemplos: ".jpg,.png,.doc")
+    - Un tipo MIME válido sin extensiones
+    - `audio/*`, que representa archivos de audio {{HTMLVersionInline("5")}}
+    - `video/*`, que representa archivos de vídeo {{HTMLVersionInline("5")}}
+    - `image/*`, que representa archivos de imagen {{HTMLVersionInline("5")}}
 
- <p>Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("enctype","form")}} del formulario al que pertenece el elemento.</p>
- </dd>
- <dt>{{htmlattrdef("formmethod")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Si el elemento input es un botón de tipo <code>submit</code> o <code>image</code>, este atributo especifica el método HTTP que el navegador usará para enviar el formulario. Los valores posibles son:
- <ul>
-  <li><code>post</code>: Los datos del formulario son incluidos en el cuerpo del formulario, y enviados al servidor.</li>
-  <li><code>get</code>: Los datos del formulario son añadidos al URI del <strong>form</strong> con un símbolo '?' como separador, y el URI resultante es enviado al servidor. Se usa este método cuando el formulario no tiene efectos secundarios y contiene solamente caracteres ASCII.</li>
- </ul>
+- {{htmlattrdef("accesskey")}} sólo {{HTMLVersionInline(4)}}, {{obsoleteGeneric("inline", "HTML5")}}
+  - : Un caracter que el usuario puede presionar para establecer el cursor en el control. Este atributo es global en HTML5.
+- {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
+  - : Especifica una "pista de acción" usada para determinar cómo etiquetar la tecla "enter" en dispositivos móviles con teclados virtuales. Los valores soportados son `go`, `done`, `next`, `search`, y `send`. Esto queda automáticamente mapeado al texto apropiado y no son sensibles al uso de mayúsculas.
+- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
 
- <p>Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("method","form")}} del formulario al que pertenece el elemento.</p>
- </dd>
- <dt>{{htmlattrdef("formnovalidate")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Si el elemento input es de tipo <code>submit</code> o <code>image</code>, este atributo Booleano especifica que el formulario no será validado cuando se envíe. Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("novalidate","form")}} del formulario al que pertenece el elemento.</dd>
- <dt>{{htmlattrdef("formtarget")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Si el elemento input es de tipo <code>submit</code> o <code>image</code>, este atributo es el nombre o palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario. Este es el nombre, o palabra clave, de un <em>contexto de navegación</em> (por ejemplo, pestaña, ventana o frame incrustado). Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("target", "form")}} del formulario al que pertenece el elemento. Las siguientes palabras clave tienen significado especial:
- <ul>
-  <li>_<code>self</code>: Carga la respuesta en el mismo contexto de navegación actual. Este valor es el predeterminado cuando no se especifica el atributo.</li>
-  <li><code>_blank</code>: Carga la respuesta en un contexto de navegación nuevo.</li>
-  <li><code>_parent</code>: Carga la respuesta en el contexto de navegación padre del actual. Si no hay contexto padre, se comporta de la misma forma que <code>_self</code>.</li>
-  <li><code>_top</code>: Carga la respuesta en el contexto de navegación principal (es decir, el contexto que es ancestro del actual y que no tenga padre). Si no hay contexto padre, se comporta de la misma forma que <code>_self</code>.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("height")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Si el valor del atributo <strong>type</strong> es <code>image</code>, este atributo define la altura de la imagen mostrada para el botón.</dd>
- <dt>{{htmlattrdef("incremental")}} {{non-standard_inline}}</dt>
- <dd>Es un atributo no estándar, soportado por WebKit (Safari) y Blink (Chrome), que solo aplica cuando el atributo <strong>type</strong> es <code>search</code>. Si el atributo está presente, sin importar su valor, el <code>&lt;input&gt;</code> dispara eventos <a href="/en-US/docs/Web/Events/search"><code>search</code></a> conforme el usuario edita el valor. El evento solo es disparado después de que un tiempo definido en implementación haya pasado desde la última vez que se presionó una tecla. Si el atributo está ausente, el evento <a href="/en-US/docs/Web/Events/search"><code>search</code></a> solo se disparará cuando el usuario explícitamente inicie una búsqueda (por ejemplo, presionando la tecla Enter dentro del control). <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-incremental"> Documentación de <code>incremental en la Referencia HTML de Safari</code></a></dd>
- <dt>{{htmlattrdef("inputmode")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Una pista para el navegador sobre qué teclado mostrar. Este atributo aplica cuando el valor del atributo <strong>type</strong> es text, password, email, o url. Los valores posibles son:
- <ul>
-  <li><code>verbatim</code>: Alfanumérico, sin contenido con significado, como nombres de usuario o contraseñas.</li>
-  <li><code>latin</code>: Escritura en caracteres de latín, en el lenguaje de elección del usuario, con ayuda de escritura, como predicción de texto. Para comunicación humano-computadora, como en cuadros de búsqueda.</li>
-  <li><code>latin-name</code>: Como <em>latin</em>, pero con nombres de personas.</li>
-  <li><code>latin-prose</code>: Como <em>latin</em>, pero con ayuda de escritura más agresiva. Para comunicación humano-humano, como mensajería instantánea o correo electrónico.</li>
-  <li><code>full-width-latin</code>: Como <em>latin-prose</em>, pero para idiomas secundarios del usuario.</li>
-  <li><code>kana</code>: Escritura en kana o romaji, típicamente escritura en hiragana, usando caracteres de anchura completa, con soporte para conversión a kanji. Usado para escritura en japonés.</li>
-  <li><code>katakana</code>: Escritura en katakana, usando caracteres de anchura completa, con soporte para conversión a kanji. Usado para escritura en japonés.</li>
-  <li><code>numeric</code>: Escritura en caracteres numéricos, incluyendo teclas para los dígitos de 0 a 9, el separador de miles segun las preferencias del usuario, y el caracter para indicar números negativos. Destinado a códigos numéricos, por ejemplo, números de tarjeta de crédito. Para valores numéricos reales, es preferible usar &lt;input type="number"&gt; en lugar de este atributo.</li>
-  <li><code>tel</code>: Escritura de teléfonos, incluído las teclas de asterisco y gato. Es preferible el uso de &lt;input type="tel"&gt; en lugar de este atributo.</li>
-  <li><code>email</code>: Escritura de correo electrónico. Es preferible el uso de &lt;input type="email"&gt; en lugar de este atributo.</li>
-  <li><code>url</code>: Escritura de URL. Es preferible el uso de &lt;input type="url"&gt; en lugar de este atributo.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("list")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Identifica una lista de opciones predefinidas como sugerencias al usuario. El valor debe ser el <strong>id</strong> de un elemento {{HTMLElement("datalist")}} en el mismo documento. El navegador muestra solamente las opciones que son válidas para el elemento. Este atributo es ignorado cuando el atributo <strong>type</strong> tiene valor <code>hidden</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, o algun tipo de botón.</dd>
- <dt>{{htmlattrdef("max")}} {{HTMLVersionInline("5")}}</dt>
- <dd>El valor máximo (numérico o fecha-hora) para este elemento, el cual no debe ser menor que su valor mínimo (atributo <strong>min</strong>).</dd>
- <dt>{{htmlattrdef("maxlength")}}</dt>
- <dd>
- <p>Si el valor del atributo <strong>type</strong> es <code>text</code>, <code>email</code>, <code>search</code>, <code>password</code>, <code>tel</code>, o <code>url</code>, este atributo especifica el número máximo de caracteres (en puntos de código Unicode) que el usuario puede introducir. Para los otros tipos de control, es ignorado. Puede exceder el valor del atributo <strong>size</strong>. Si no se especifica, el usuario puede introducir una cantidad ilimitada de caracteres. Especificar un número negativo resulta en el comportamiento predeterminado (es decir, el usuario puede introducir una cantidad ilimitada de caracteres). La restricción es evaluada sólo cuando el valor del atributo ha sido modificado.</p>
- </dd>
- <dt>{{htmlattrdef("min")}} {{HTMLVersionInline("5")}}</dt>
- <dd>El valor mínimo (numérico o fecha-hora) para este elemento, el cual no debe ser mayor a su valor máximo (atributo <strong>max</strong>).</dd>
- <dt>{{htmlattrdef("minlength")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Si el valor del atributo <strong>type</strong> es <code>text</code>, <code>email</code>, <code>search</code>, <code>password</code>, <code>tel</code>, o <code>url</code>, este atributo especifica la longitud mínima de caracteres (en puntos de código Unicode) que el usuario puede introducir. Para los otros tipos de control, es ignorado.</dd>
- <dt>{{htmlattrdef("multiple")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Este atributo Booleano indica si el usuario puede introducir más de un valor. Este atributo aplica cuando el atributo <strong>type</strong> es <code>email</code> o <code>file</code>, y en caso contrario es ignorado.</dd>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd>El nombre del control, el cual es enviado con los datos del formulario.</dd>
- <dt>{{htmlattrdef("pattern")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Una expresión regular contra la que el valor es evaluado. El patrón debe coincidir con el valor completo, no solo una parte. Se puede usar el atributo <strong>title</strong> para describir el patrón como ayuda al usuario. Este atributo aplica cuando el atributo <strong>type</strong> es <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>email</code>, o <code>password</code>, y en caso contrario es ignorado. El lenguaje de expresión regular es el mismo que el algoritmo {{jsxref("RegExp")}} de JavaScript, con el parámetro <code>'u'</code> que permite tratar al patrón como una secuencia de código Unicode. El patrón no va rodeado por diagonales.</dd>
- <dt>{{htmlattrdef("placeholder")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Una pista para el usuario sobre lo que puede introducir en el control. El texto no debe contener saltos de línea.
- <div class="note"><strong>Nota:</strong> No se debe usar el atributo <code>placeholder</code> en lugar de un elemento {{HTMLElement("label")}}, pues sus propósitos son diferentes. El elemento {{HTMLElement("label")}} describe el rol del elemento en el formulario (es decir, indica qué tipo de información se espera), y el atributo <code>placeholder</code> es una pista sobre el formato que debe tener el contenido. Hay casos en los que el atributo <code>placeholder</code> no es visible para el usuario, por lo que el formulario debe ser comprensible para el usuario aunque este atributo no esté presente.</div>
- </dd>
- <dt>{{htmlattrdef("readonly")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Este atributo indica que el usuario no puede modificar el valor del control. El valor del atributo es irrelevante. De ser necesario el acceso lectura-escritura al valor, <em>no</em> se debe agregar el atributo "<strong>readonly</strong>". Es ignorado si el atributo <strong>type</strong> es <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, o de tipo botón (como <code>button</code> o <code>submit</code>).</dd>
- <dt>{{htmlattrdef("required")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Este atributo especifica que el usuario debe llenar el control antes de enviarlo al formulario. No puede ser usado cuando el atributo <strong>type</strong> es <code>hidden</code>, <code>image</code>, o de tipo botón (<code>submit</code>, <code>reset</code>, o <code>button</code>). Las pseudo-clases {{cssxref(":optional")}} y {{cssxref(":required")}} se aplicarán al campo según sea apropiado.</dd>
- <dt>{{htmlattrdef("results")}} {{non-standard_inline}}</dt>
- <dd>Este es un atributo no estándar, soportado por Safari, que sólo aplica cuando el atributo <strong>type</strong> es <code>search</code>. Es usado para controlar el máximo número de entradas que se deben mostrar en el listado nativo del <code>&lt;input&gt;</code> de búsquedas pasadas. Este valor debe ser un número entero no negativo.</dd>
- <dt>{{htmlattrdef("selectionDirection")}} {{HTMLVersionInline("5")}}</dt>
- <dd>La dirección en la que ocurre la selección. Esto es "forward" (hacia adelante) si la selección fue hecha de izquierda a derecha en una escritura LTR o izquierda a derecha en una escritura RTL, o "backward" (hacia atrás) si la selección fue hecha de forma opuesta. Puede ser "none" si la dirección de selección es desconocida.</dd>
- <dt>{{htmlattrdef("selectionEnd")}}</dt>
- <dd>La separación dentro del contenido de texto del último caracter seleccionado. Si no hay selección, este valor indica la separación para el caracter que sigue a la posición actual del cursor (es decir, la posición que el siguiente caracter que se escriba ocupará).</dd>
- <dt>{{htmlattrdef("selectionStart")}}</dt>
- <dd>La separación dentro del contenido del primer caracter seleccionado. Si no hay selección, este valor indica la separación para el caracter que sigue a la posición actual del cursor (es decir, la posición que el siguiente caracter que se escriba ocupará).</dd>
- <dt>{{htmlattrdef("size")}}</dt>
- <dd>El tamaño inicial del control. Este valor es en píxeles, a menos que el atributo <strong>type</strong> sea <code>text</code> o <code>password</code>, en cuyo caso será el número entero de caracteres. A partir de HTML5, este atributo aplica sólo cuando el atributo <strong>type</strong> es <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>email</code>, o <code>password</code>, de otro modo es ignorado. Además, el tamaño debe ser mayor a cero. Si no se especifica un tamaño, se usa un valor predeterminado de 20. HTML5 simplemente establece que "el agente usuario debe asegurarse que al menos esa cantidad de caracteres sea visible", pero los caracteres pueden tener anchuras diferentes en ciertas fuentes. En algunos navegadores, una cadena con <em>x</em> caracteres no será completamente visible aunque su tamaño esté definido con un mínimo de <em>x</em>.</dd>
- <dt>{{htmlattrdef("spellcheck")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Si se establece este atributo con valor <code>true</code>, se está indicando que se debe revisar la ortografía y gramática del elemento. El valor <code>default</code> indica que el elemento va a actuar acorde al comportamiento predeterminado del navegador, posiblemente basado en el valor del atributo <code>spellcheck</code> de su elemento padre. El valor <code>false</code> indica que el elemento no debe ser revisado.</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>Si el atributo <strong>type</strong> es <code>image</code>, este atributo especifica el URI para la ubicación de la imagen a mostrar en el botón de envío gráfico. En caso contrario, es ignorado.</dd>
- <dt>{{htmlattrdef("step")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Trabaja con los atributos <strong>min</strong> y <strong>max</strong>, para limitar el incremento de valores numéricos o de fecha-hora. Puede ser el valor <code>any</code> o un número positivo de punto flotante. Si no se establece este atributo como <code>any</code>, el control acepta solamente valores múltiplos del valor del atributo, mayores al mínimo.</dd>
- <dt>{{htmlattrdef("tabindex")}} específico para el elemento en {{HTMLVersionInline(4)}}, global en {{HTMLVersionInline("5")}}</dt>
- <dd>La posición del elemento en el orden de navegación por la tecla Tab dentro del documento.</dd>
- <dt>{{htmlattrdef("usemap")}} solo para {{HTMLVersionInline(4)}}, {{obsoleteGeneric("inline", "HTML5")}}</dt>
- <dd>El nombre de un elemento {{HTMLElement("map")}} usado como mapa de imagen.</dd>
- <dt>{{htmlattrdef("value")}}</dt>
- <dd>El valor inicial del control. Este atributo es opcional, excepto cuando el atributo <strong>type</strong> es <code>radio</code> o <code>checkbox</code>.<br>
- Nótese que cuando se recarga la página, Gecko e IE <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">ignorarán el valor especificado en el código fuente HTML</a>, si el valor fue modificado antes de recargar.</dd>
- <dt>{{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}</dt>
- <dd>Este atributo Booleano indica si el selector usado cuando el atributo <strong>type</strong> es <code>file</code> debe permitir la selección de directorios solamente.</dd>
- <dt>{{htmlattrdef("width")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Si el valor del atributo <strong>type</strong> es <code>image</code>, este atributo define la anchura de la imagen mostrada en el botón.</dd>
- <dt>{{htmlattrdef("x-moz-errormessage")}} {{non-standard_inline}}</dt>
- <dd>Esta extensión de Mozilla permite especificar el mensaje de error cuando un campo no es validado exitosamente.</dd>
-</dl>
+  - : Atributo no estándar usado por [Chrome](https://developers.google.com/web/updates/2015/04/autocapitalize) e iOS Safari Mobile, el cual controla si se deben cambiar los textos a mayúsculas automáticamente mientras son introducidos/editados por el usuario, y la forma en que esto se hará. Los valores no obsoletos están disponibles en iOS5 y superior. Los valores posibles son:
 
-<h2 id="Notas">Notas</h2>
+    - `none`: Deshabilita completamente las mayúsculas automáticas.
+    - `sentences`: Cambia automáticamente a mayúscula la primera letra de la sentencia.
+    - `words`: Cambia automáticamente a mayúscula la primera letra de cada palabra.
+    - `characters`: Cambia automáticamente a mayúscula todos los caracteres.
+    - `on`: {{deprecated_inline}} Obsoleto desde iOS 5.
+    - `off`: {{deprecated_inline}} Obsoleto desde iOS 5.
 
-<h3 id="Introducción_de_archivos">Introducción de archivos</h3>
+    [Documentation sobre `autocapitalize` en la Referencia HTML de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize)
 
-<div class="note">
-<p><strong>Nota:</strong> A partir de {{Gecko("2.0")}}, llamar al método <code>click()</code> en un elemento <code>&lt;input&gt;</code> de tipo "file" abre el selector de archivos y permite al usuario seleccionar archivos. Véase <a href="/es/docs/Using_files_from_web_applications">Utilizar ficheros desde aplicaciones web</a> para ejemplos y más detalles.</p>
-</div>
+- {{htmlattrdef("autocomplete")}} {{HTMLVersionInline("5")}}
 
-<p>No se puede establecer el valor de un selector de archivos desde un script. Hacer algo como lo siguiente no tiene efecto alguno:</p>
+  - : Este atributo indica si el valor del control puede ser completado automáticamente por el navegador.
+    Los valores posibles son:
 
-<pre class="brush: js notranslate">var e = getElementById("someFileInputElement");
+    - `off`: El usuario debe explícitamente introducir un valor en este campo para cualquier uso, o el documento provee su propio método de auto-completado. El navegador no completa automáticamente lo introducido.
+    - `on`: Se permite al navegador completar automáticamente el valor basado en los valores que se han introducido previamente. Sin embargo, `on` no provee mayor información sobre qué clase de datos podría esperar el usuario introducir.
+    - `name`: Nombre completo.
+    - `honorific-prefix`: Prefixo o título (Ejemplos: "Sr.", "Sra.", "Dr.", "Srita.").
+    - `given-name`: Nombre de pila.
+    - `additional-name`: Segundo nombre.
+    - `family-name`: Apellido.
+    - `honorific-suffix`: Sufijo (Ejemplos: "Hijo", "Señor", "II").
+    - `nickname`: Apodo.
+    - `email`: Correo electrónico.
+    - `username`: Nombre de usuario.
+    - `new-password`: Nueva contraseña (por ejemplo, al crear una cuenta o cambiar la contraseña).
+    - `current-password`: Contraseña actual.
+    - `organization-title`: Título de organización (Ejemplos: "Ingeniero de Software", "Vicepresidente", "Director General Adjunto").
+    - `organization`: Organización.
+    - `street-address`: Calle (en dirección).
+    - `address-line1`, `address-line2`, `address-line3`, `address-level4`, `address-level3`, `address-level2`, `address-level1`: Valores para dirección.
+    - `country`: País.
+    - `country-name`: Nombre del país.
+    - `postal-code`: Código postal.
+    - `cc-name`: Nombre completo en un instrumento de pago.
+    - `cc-given-name`: Nombre de pila en un instrumento de pago.
+    - `cc-additional-name`: Segundo nombre en un instrumento de pago.
+    - `cc-family-name`: Apellido en un instrumento de pago.
+    - `cc-number`: Código de identificación de un instrumento de pago(por ejemplo, el número de tarjeta de crédito).
+    - `cc-exp:` Fecha de expiración de un instrumento de pago.
+    - `cc-exp-month`: Mes de expiración en un instrumento de pago.
+    - `cc-exp-year`: Año de expiración en un instrumento de pago.
+    - `cc-csc`: Código de seguridad en un instrumento de pago.
+    - `cc-type`: Tipo de instrumento de pago (por ejemplo, Visa).
+    - `transaction-currency`: Tipo de moneda de la transacción.
+    - `transaction-amount`: Monto de la transacción.
+    - `language`: Idioma preferido, etiqueta BCP 47 válida.
+    - `bday`: Fecha de cumpleaños.
+    - `bday-day`: Día de cumpleaños.
+    - `bday-month`: Mes de cumpleaños.
+    - `bday-year`: Año de cumpleaños.
+    - `sex`: Sexo (ejemplos, Femenino, Female, Fa'afafine), texto libre, sin líneas nuevas.
+    - `tel`: Teléfono.
+    - `url`: Dirección web correspondiente a la compañía, persona, dirección o información de contacto en los demás campos asociados a éste.
+    - `photo`: Fotografía, ícono u otra imagen correspondiente a la compañía, persona, dirección o información de contacto en los otros campos asociados a éste.
+
+    Véase el [Estándar WHATWG](https://html.spec.whatwg.org/multipage/forms.html#autofill) para információn más detallada.
+
+    Si el atributo **autocomplete** no está especificado en un elemento input, el navegador usa el atributo **autocomplete** del formulario al que pertenece el elemento `<input>`, es decir, el elemento `form` del cual es descendiente el elemento `<input>`, o aquél cuyo **id** está especificado en el atributo **form** del elemento input. Para mayor información, véase el atributo {{htmlattrxref("autocomplete", "form")}} en {{HTMLElement("form")}}.
+
+    El atributo **autocomplete** también controla si Firefox, a diferencia de otros navegadores, [persistirá el estado deshabilitado dinámico, y (si aplica) la selección dinámica](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un `<input>` a través de las cargas de la página. La característica de persistencia está habilitada de forma predeterminada. Estableciendo el valor de **autocomplete** como `off` se deshabilita esta característica. Esto funciona aún cuando el atributo **autocomplete** no se aplicaría normalmente al `<input>` en virtud de su atributo **type**. Véase {{bug(654072)}}.
+
+    Para navegadores más modernos (incluyendo Firefox 38+, Google Chrome 34+, IE 11+), establecer el atributo **autocomplete** _no_ previene que el administrador de contraseñas del navegador le pregunte al usuario si desea guardar la información de inicio de sesión (usuario y contraseña), ni tampoco, de permitirlo el usuario, que se autocompleten estos campos la próxima vez que el usuario visite la página. Véase [El atributo autocomplete y campos de inicio de sesión](/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields).
+
+- {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
+
+  - : Es un atributo no estándar, soportado por Safari, que es usado para controlar si la autocorrección debe estar habilitada cuando el usuario está introduciendo/editando el texto de un `<input>`. Los valores posibles de este atributo son:
+
+    - `on`: Habilita la autocorrección
+    - `off`: Deshabilita la autocorrección
+
+    [Documentación de `autocorrect` en la Referencia HTML de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect)
+
+- {{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}
+  - : Este atributo Booleano permite especificar que un control de formulario tenga el cursor cuando la página se carga, a menos que el usuario lo reemplace, por ejemplo, escribiendo en un control diferente. Solo un elemento de formulario en un mismo documento puede tener el atributo **autofocus**, el cual es Booleano. No puede ser aplicado si el atributo **type** tiene valor `hidden` (es decir, no se puede establecer automáticamente el cursor en un control oculto). Nótese que el cursor se podría establecer en el control antes de disparar el evento [`DOMContentLoaded`.](/es/docs/Web/Events/DOMContentLoaded)
+- {{htmlattrdef("capture")}}
+  - : Cuando el valor del atributo **type** es `file`, la presencia de este atributo Booleano indica que se le dará preferencia a la captura del medio directamente del ambiente del dispositivo, usando algún [mecanismo de captura de medios](https://www.w3.org/TR/html-media-capture/#dfn-media-capture-mechanism).
+- {{htmlattrdef("checked")}}
+
+  - : Cuando el valor del atributo **type** es `radio` o `checkbox`, la presencia de este atributo Booleano indica que el control está seleccionado de forma predeterminada. De lo contrario, será ignorado.
+
+    En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo {{htmlattrxref("autocomplete","input")}}.
+
+- {{htmlattrdef("disabled")}}
+
+  - : Este atributo Booleano indica que el control no está disponible para interacción. En particular, el evento `click` [no será invocado](https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute) en controles deshabilitados. De igual forma, el valor de un control deshabilitado no es enviado con el formulario.
+
+    En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo {{htmlattrxref("autocomplete","input")}}.
+
+- {{htmlattrdef("form")}} {{HTMLVersionInline("5")}}
+  - : El elemento form al que está asociado el elemento (su _formulario propietario_). El valor del atributo debe ser el **id** de un elemento {{HTMLElement("form")}} en el mismo documento. Si el atributo no es especificado, este elemento `<input>` deberá ser descendiente de un elemento {{HTMLElement("form")}}. Este atributo permite poner elementos `<input>` en cualquier parte dentro de un documento, no solamente como descendientes de su formulario. Un input puede ser asociado sólo con un formulario.
+- {{htmlattrdef("formaction")}} {{HTMLVersionInline("5")}}
+  - : El URI de un programa que procesa la información enviada por el elemento input, cuando es un botón de tipo `submit` o `image`. Si se especifica, reemplaza al atributo {{htmlattrxref("action","form")}} del formulario al que pertenece el elemento.
+- {{htmlattrdef("formenctype")}} {{HTMLVersionInline("5")}}
+
+  - : Si el elemento es de tipo `submit` o `image`, este atributo especifica el tipo de contenido que es usado para enviar el formulario al servidor. Los valores posibles son:
+
+    - `application/x-www-form-urlencoded`: El valor predeterminado si el atributo no es especificado.
+    - `multipart/form-data`: Se usa este valor cuando se tiene un elemento `<input>` con atributo {{htmlattrxref("type","input")}} de valor `file`.
+    - `text/plain`
+
+    Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("enctype","form")}} del formulario al que pertenece el elemento.
+
+- {{htmlattrdef("formmethod")}} {{HTMLVersionInline("5")}}
+
+  - : Si el elemento input es un botón de tipo `submit` o `image`, este atributo especifica el método HTTP que el navegador usará para enviar el formulario. Los valores posibles son:
+
+    - `post`: Los datos del formulario son incluidos en el cuerpo del formulario, y enviados al servidor.
+    - `get`: Los datos del formulario son añadidos al URI del **form** con un símbolo '?' como separador, y el URI resultante es enviado al servidor. Se usa este método cuando el formulario no tiene efectos secundarios y contiene solamente caracteres ASCII.
+
+    Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("method","form")}} del formulario al que pertenece el elemento.
+
+- {{htmlattrdef("formnovalidate")}} {{HTMLVersionInline("5")}}
+  - : Si el elemento input es de tipo `submit` o `image`, este atributo Booleano especifica que el formulario no será validado cuando se envíe. Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("novalidate","form")}} del formulario al que pertenece el elemento.
+- {{htmlattrdef("formtarget")}} {{HTMLVersionInline("5")}}
+
+  - : Si el elemento input es de tipo `submit` o `image`, este atributo es el nombre o palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario. Este es el nombre, o palabra clave, de un _contexto de navegación_ (por ejemplo, pestaña, ventana o frame incrustado). Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("target", "form")}} del formulario al que pertenece el elemento. Las siguientes palabras clave tienen significado especial:
+
+    - \_`self`: Carga la respuesta en el mismo contexto de navegación actual. Este valor es el predeterminado cuando no se especifica el atributo.
+    - `_blank`: Carga la respuesta en un contexto de navegación nuevo.
+    - `_parent`: Carga la respuesta en el contexto de navegación padre del actual. Si no hay contexto padre, se comporta de la misma forma que `_self`.
+    - `_top`: Carga la respuesta en el contexto de navegación principal (es decir, el contexto que es ancestro del actual y que no tenga padre). Si no hay contexto padre, se comporta de la misma forma que `_self`.
+
+- {{htmlattrdef("height")}} {{HTMLVersionInline("5")}}
+  - : Si el valor del atributo **type** es `image`, este atributo define la altura de la imagen mostrada para el botón.
+- {{htmlattrdef("incremental")}} {{non-standard_inline}}
+  - : Es un atributo no estándar, soportado por WebKit (Safari) y Blink (Chrome), que solo aplica cuando el atributo **type** es `search`. Si el atributo está presente, sin importar su valor, el `<input>` dispara eventos [`search`](/es/docs/Web/Events/search) conforme el usuario edita el valor. El evento solo es disparado después de que un tiempo definido en implementación haya pasado desde la última vez que se presionó una tecla. Si el atributo está ausente, el evento [`search`](/es/docs/Web/Events/search) solo se disparará cuando el usuario explícitamente inicie una búsqueda (por ejemplo, presionando la tecla Enter dentro del control). [Documentación de `incremental en la Referencia HTML de Safari`](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-incremental)
+- {{htmlattrdef("inputmode")}} {{HTMLVersionInline("5")}}
+
+  - : Una pista para el navegador sobre qué teclado mostrar. Este atributo aplica cuando el valor del atributo **type** es text, password, email, o url. Los valores posibles son:
+
+    - `verbatim`: Alfanumérico, sin contenido con significado, como nombres de usuario o contraseñas.
+    - `latin`: Escritura en caracteres de latín, en el lenguaje de elección del usuario, con ayuda de escritura, como predicción de texto. Para comunicación humano-computadora, como en cuadros de búsqueda.
+    - `latin-name`: Como _latin_, pero con nombres de personas.
+    - `latin-prose`: Como _latin_, pero con ayuda de escritura más agresiva. Para comunicación humano-humano, como mensajería instantánea o correo electrónico.
+    - `full-width-latin`: Como _latin-prose_, pero para idiomas secundarios del usuario.
+    - `kana`: Escritura en kana o romaji, típicamente escritura en hiragana, usando caracteres de anchura completa, con soporte para conversión a kanji. Usado para escritura en japonés.
+    - `katakana`: Escritura en katakana, usando caracteres de anchura completa, con soporte para conversión a kanji. Usado para escritura en japonés.
+    - `numeric`: Escritura en caracteres numéricos, incluyendo teclas para los dígitos de 0 a 9, el separador de miles segun las preferencias del usuario, y el caracter para indicar números negativos. Destinado a códigos numéricos, por ejemplo, números de tarjeta de crédito. Para valores numéricos reales, es preferible usar \<input type="number"> en lugar de este atributo.
+    - `tel`: Escritura de teléfonos, incluído las teclas de asterisco y gato. Es preferible el uso de \<input type="tel"> en lugar de este atributo.
+    - `email`: Escritura de correo electrónico. Es preferible el uso de \<input type="email"> en lugar de este atributo.
+    - `url`: Escritura de URL. Es preferible el uso de \<input type="url"> en lugar de este atributo.
+
+- {{htmlattrdef("list")}} {{HTMLVersionInline("5")}}
+  - : Identifica una lista de opciones predefinidas como sugerencias al usuario. El valor debe ser el **id** de un elemento {{HTMLElement("datalist")}} en el mismo documento. El navegador muestra solamente las opciones que son válidas para el elemento. Este atributo es ignorado cuando el atributo **type** tiene valor `hidden`, `checkbox`, `radio`, `file`, o algun tipo de botón.
+- {{htmlattrdef("max")}} {{HTMLVersionInline("5")}}
+  - : El valor máximo (numérico o fecha-hora) para este elemento, el cual no debe ser menor que su valor mínimo (atributo **min**).
+- {{htmlattrdef("maxlength")}}
+  - : Si el valor del atributo **type** es `text`, `email`, `search`, `password`, `tel`, o `url`, este atributo especifica el número máximo de caracteres (en puntos de código Unicode) que el usuario puede introducir. Para los otros tipos de control, es ignorado. Puede exceder el valor del atributo **size**. Si no se especifica, el usuario puede introducir una cantidad ilimitada de caracteres. Especificar un número negativo resulta en el comportamiento predeterminado (es decir, el usuario puede introducir una cantidad ilimitada de caracteres). La restricción es evaluada sólo cuando el valor del atributo ha sido modificado.
+- {{htmlattrdef("min")}} {{HTMLVersionInline("5")}}
+  - : El valor mínimo (numérico o fecha-hora) para este elemento, el cual no debe ser mayor a su valor máximo (atributo **max**).
+- {{htmlattrdef("minlength")}} {{HTMLVersionInline("5")}}
+  - : Si el valor del atributo **type** es `text`, `email`, `search`, `password`, `tel`, o `url`, este atributo especifica la longitud mínima de caracteres (en puntos de código Unicode) que el usuario puede introducir. Para los otros tipos de control, es ignorado.
+- {{htmlattrdef("multiple")}} {{HTMLVersionInline("5")}}
+  - : Este atributo Booleano indica si el usuario puede introducir más de un valor. Este atributo aplica cuando el atributo **type** es `email` o `file`, y en caso contrario es ignorado.
+- {{htmlattrdef("name")}}
+  - : El nombre del control, el cual es enviado con los datos del formulario.
+- {{htmlattrdef("pattern")}} {{HTMLVersionInline("5")}}
+  - : Una expresión regular contra la que el valor es evaluado. El patrón debe coincidir con el valor completo, no solo una parte. Se puede usar el atributo **title** para describir el patrón como ayuda al usuario. Este atributo aplica cuando el atributo **type** es `text`, `search`, `tel`, `url`, `email`, o `password`, y en caso contrario es ignorado. El lenguaje de expresión regular es el mismo que el algoritmo {{jsxref("RegExp")}} de JavaScript, con el parámetro `'u'` que permite tratar al patrón como una secuencia de código Unicode. El patrón no va rodeado por diagonales.
+- {{htmlattrdef("placeholder")}} {{HTMLVersionInline("5")}}
+
+  - : Una pista para el usuario sobre lo que puede introducir en el control. El texto no debe contener saltos de línea.
+
+    > **Nota:** No se debe usar el atributo `placeholder` en lugar de un elemento {{HTMLElement("label")}}, pues sus propósitos son diferentes. El elemento {{HTMLElement("label")}} describe el rol del elemento en el formulario (es decir, indica qué tipo de información se espera), y el atributo `placeholder` es una pista sobre el formato que debe tener el contenido. Hay casos en los que el atributo `placeholder` no es visible para el usuario, por lo que el formulario debe ser comprensible para el usuario aunque este atributo no esté presente.
+
+- {{htmlattrdef("readonly")}} {{HTMLVersionInline("5")}}
+  - : Este atributo indica que el usuario no puede modificar el valor del control. El valor del atributo es irrelevante. De ser necesario el acceso lectura-escritura al valor, _no_ se debe agregar el atributo "**readonly**". Es ignorado si el atributo **type** es `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, o de tipo botón (como `button` o `submit`).
+- {{htmlattrdef("required")}} {{HTMLVersionInline("5")}}
+  - : Este atributo especifica que el usuario debe llenar el control antes de enviarlo al formulario. No puede ser usado cuando el atributo **type** es `hidden`, `image`, o de tipo botón (`submit`, `reset`, o `button`). Las pseudo-clases {{cssxref(":optional")}} y {{cssxref(":required")}} se aplicarán al campo según sea apropiado.
+- {{htmlattrdef("results")}} {{non-standard_inline}}
+  - : Este es un atributo no estándar, soportado por Safari, que sólo aplica cuando el atributo **type** es `search`. Es usado para controlar el máximo número de entradas que se deben mostrar en el listado nativo del `<input>` de búsquedas pasadas. Este valor debe ser un número entero no negativo.
+- {{htmlattrdef("selectionDirection")}} {{HTMLVersionInline("5")}}
+  - : La dirección en la que ocurre la selección. Esto es "forward" (hacia adelante) si la selección fue hecha de izquierda a derecha en una escritura LTR o izquierda a derecha en una escritura RTL, o "backward" (hacia atrás) si la selección fue hecha de forma opuesta. Puede ser "none" si la dirección de selección es desconocida.
+- {{htmlattrdef("selectionEnd")}}
+  - : La separación dentro del contenido de texto del último caracter seleccionado. Si no hay selección, este valor indica la separación para el caracter que sigue a la posición actual del cursor (es decir, la posición que el siguiente caracter que se escriba ocupará).
+- {{htmlattrdef("selectionStart")}}
+  - : La separación dentro del contenido del primer caracter seleccionado. Si no hay selección, este valor indica la separación para el caracter que sigue a la posición actual del cursor (es decir, la posición que el siguiente caracter que se escriba ocupará).
+- {{htmlattrdef("size")}}
+  - : El tamaño inicial del control. Este valor es en píxeles, a menos que el atributo **type** sea `text` o `password`, en cuyo caso será el número entero de caracteres. A partir de HTML5, este atributo aplica sólo cuando el atributo **type** es `text`, `search`, `tel`, `url`, `email`, o `password`, de otro modo es ignorado. Además, el tamaño debe ser mayor a cero. Si no se especifica un tamaño, se usa un valor predeterminado de 20. HTML5 simplemente establece que "el agente usuario debe asegurarse que al menos esa cantidad de caracteres sea visible", pero los caracteres pueden tener anchuras diferentes en ciertas fuentes. En algunos navegadores, una cadena con _x_ caracteres no será completamente visible aunque su tamaño esté definido con un mínimo de _x_.
+- {{htmlattrdef("spellcheck")}} {{HTMLVersionInline("5")}}
+  - : Si se establece este atributo con valor `true`, se está indicando que se debe revisar la ortografía y gramática del elemento. El valor `default` indica que el elemento va a actuar acorde al comportamiento predeterminado del navegador, posiblemente basado en el valor del atributo `spellcheck` de su elemento padre. El valor `false` indica que el elemento no debe ser revisado.
+- {{htmlattrdef("src")}}
+  - : Si el atributo **type** es `image`, este atributo especifica el URI para la ubicación de la imagen a mostrar en el botón de envío gráfico. En caso contrario, es ignorado.
+- {{htmlattrdef("step")}} {{HTMLVersionInline("5")}}
+  - : Trabaja con los atributos **min** y **max**, para limitar el incremento de valores numéricos o de fecha-hora. Puede ser el valor `any` o un número positivo de punto flotante. Si no se establece este atributo como `any`, el control acepta solamente valores múltiplos del valor del atributo, mayores al mínimo.
+- {{htmlattrdef("tabindex")}} específico para el elemento en {{HTMLVersionInline(4)}}, global en {{HTMLVersionInline("5")}}
+  - : La posición del elemento en el orden de navegación por la tecla Tab dentro del documento.
+- {{htmlattrdef("usemap")}} solo para {{HTMLVersionInline(4)}}, {{obsoleteGeneric("inline", "HTML5")}}
+  - : El nombre de un elemento {{HTMLElement("map")}} usado como mapa de imagen.
+- {{htmlattrdef("value")}}
+  - : El valor inicial del control. Este atributo es opcional, excepto cuando el atributo **type** es `radio` o `checkbox`.
+    Nótese que cuando se recarga la página, Gecko e IE [ignorarán el valor especificado en el código fuente HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186), si el valor fue modificado antes de recargar.
+- {{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}
+  - : Este atributo Booleano indica si el selector usado cuando el atributo **type** es `file` debe permitir la selección de directorios solamente.
+- {{htmlattrdef("width")}} {{HTMLVersionInline("5")}}
+  - : Si el valor del atributo **type** es `image`, este atributo define la anchura de la imagen mostrada en el botón.
+- {{htmlattrdef("x-moz-errormessage")}} {{non-standard_inline}}
+  - : Esta extensión de Mozilla permite especificar el mensaje de error cuando un campo no es validado exitosamente.
+
+## Notas
+
+### Introducción de archivos
+
+> **Nota:** A partir de {{Gecko("2.0")}}, llamar al método `click()` en un elemento `<input>` de tipo "file" abre el selector de archivos y permite al usuario seleccionar archivos. Véase [Utilizar ficheros desde aplicaciones web](/es/docs/Using_files_from_web_applications) para ejemplos y más detalles.
+
+No se puede establecer el valor de un selector de archivos desde un script. Hacer algo como lo siguiente no tiene efecto alguno:
+
+```js
+var e = getElementById("someFileInputElement");
 e.value = "foo";
-</pre>
+```
 
-<h3 id="Mensajes_de_error">Mensajes de error</h3>
+### Mensajes de error
 
-<p>Para que Firefox presente un mensaje de error personalizado cuando la validación de un campo falla, se puede usar el atributo <code>x-moz-errormessage</code>:</p>
+Para que Firefox presente un mensaje de error personalizado cuando la validación de un campo falla, se puede usar el atributo `x-moz-errormessage`:
 
-<pre class="brush: html notranslate">&lt;input type="email" x-moz-errormessage="Por favor, especifique una dirección de correo válida."&gt;
-</pre>
+```html
+<input type="email" x-moz-errormessage="Por favor, especifique una dirección de correo válida.">
+```
 
-<p>Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros navegadores.</p>
+Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros navegadores.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h2 id="Ejemplo_1_Cuadro_de_texto_simple">Ejemplo 1: Cuadro de texto simple</h2>
+## Ejemplo 1: Cuadro de texto simple
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Simple input box&lt;/p&gt;
-&lt;input type="text" value="Type here"&gt;
-</pre>
+```html
+<p>Simple input box</p>
+<input type="text" value="Type here">
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Example_1_Simple_input_box', '', '100', '', 'Web/HTML/Element/input') }}</p>
+{{ EmbedLiveSample('Example_1_Simple_input_box', '', '100', '', 'Web/HTML/Element/input') }}
 
-<h2 id="Ejemplo_2_Escenario_de_uso_común">Ejemplo 2: Escenario de uso común</h2>
+## Ejemplo 2: Escenario de uso común
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;A common form that includes input tags&lt;/p&gt;
-&lt;form action="getform.php" method="get"&gt;
-    &lt;label&gt;First name: &lt;input type="text"&gt;&lt;/label&gt;&lt;br&gt;
-     &lt;label&gt;Last name: &lt;input type="text"&gt;&lt;/label&gt;&lt;br&gt;
-        &lt;label&gt;E-mail: &lt;input type="email"&gt;&lt;/label&gt;&lt;br&gt;
-&lt;input type="submit" value="Submit"&gt;
-&lt;/form&gt;
-</pre>
+```html
+<p>A common form that includes input tags</p>
+<form action="getform.php" method="get">
+    <label>First name: <input type="text"></label><br>
+     <label>Last name: <input type="text"></label><br>
+        <label>E-mail: <input type="email"></label><br>
+<input type="submit" value="Submit">
+</form>
+```
 
-<h3 id="Resultado_2">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Example_2_Common_use-case_scenario', '', '200', '', 'Web/HTML/Element/input') }}</p>
+{{ EmbedLiveSample('Example_2_Common_use-case_scenario', '', '200', '', 'Web/HTML/Element/input') }}
 
-<h3 id="Usando_mozactionhint_en_Firefox_mobile">Usando mozactionhint en Firefox mobile</h3>
+### Usando mozactionhint en Firefox mobile
 
-<p>Se puede usar el atributo {{htmlattrxref("mozactionhint", "input")}} para especificar el texto para la etiqueta de la tecla Enter en el teclado virtual cuando el formulario es mostrado en Firefox mobile. Por ejemplo, para mostrar una etiqueta "Next", se puede hacer esto:</p>
+Se puede usar el atributo {{htmlattrxref("mozactionhint", "input")}} para especificar el texto para la etiqueta de la tecla Enter en el teclado virtual cuando el formulario es mostrado en Firefox mobile. Por ejemplo, para mostrar una etiqueta "Next", se puede hacer esto:
 
-<pre class="brush: html notranslate">&lt;input type="text" mozactionhint="next"&gt;
-</pre>
+```html
+<input type="text" mozactionhint="next">
+```
 
-<p>El resultado es:</p>
+El resultado es:
 
-<p><a href="/@api/deki/files/4970/=mozactionhint.png"><img alt="mozactionhint.png" class="default internal" src="/@api/deki/files/4970/=mozactionhint.png?size=webview" style="border: 1px solid black; height: 350px; width: 210px;"></a></p>
+[![mozactionhint.png](/@api/deki/files/4970/=mozactionhint.png?size=webview)](/@api/deki/files/4970/=mozactionhint.png)
 
-<h2 id="Regionalización">Regionalización</h2>
+## Regionalización
 
-<p>Los valores permitidos para ciertos tipos de &lt;input&gt; dependen de la región. En algunos casos, 1,000.00 is a valid number, mientras en otros la manera válida de escribir un número es 1.000,00.</p>
+Los valores permitidos para ciertos tipos de \<input> dependen de la región. En algunos casos, 1,000.00 is a valid number, mientras en otros la manera válida de escribir un número es 1.000,00.
 
-<p>Firefox usa la siguiente heurística para determinar la región con la cual validar los datos introducidos por el usuario (por lo menos para <code>type="number"</code>):</p>
+Firefox usa la siguiente heurística para determinar la región con la cual validar los datos introducidos por el usuario (por lo menos para `type="number"`):
 
-<ul>
- <li>Intenta con el lenguaje especificado por el atributo <code>lang</code>/<code>xml:lang</code> del elemento o de sus elementos ascendentes.</li>
- <li>Intenta con el lenguaje especificado en algun encabezado HTTP Content-Language o</li>
- <li>Si ninguno está especificado, usa la región definida en el navegador.</li>
-</ul>
+- Intenta con el lenguaje especificado por el atributo `lang`/`xml:lang` del elemento o de sus elementos ascendentes.
+- Intenta con el lenguaje especificado en algun encabezado HTTP Content-Language o
+- Si ninguno está especificado, usa la región definida en el navegador.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-input-element', '&lt;input&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Media Capture', '#the-capture-attribute','&lt;input capture&gt;')}}</td>
-   <td>{{Spec2('HTML Media Capture')}}</td>
-   <td>Añade el elemento <code>capture</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-input-element', '&lt;input&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   | Estatus                                  | Comentarios                 |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------- |
+| {{SpecName('HTML WHATWG', 'forms.html#the-input-element', '&lt;input&gt;')}}             | {{Spec2('HTML WHATWG')}}         |                             |
+| {{SpecName('HTML Media Capture', '#the-capture-attribute','&lt;input capture&gt;')}} | {{Spec2('HTML Media Capture')}} | Añade el elemento `capture` |
+| {{SpecName('HTML5 W3C', 'forms.html#the-input-element', '&lt;input&gt;')}}             | {{Spec2('HTML5 W3C')}}             |                             |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}                     | {{Spec2('HTML4.01')}}             |                             |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("html.elements.input")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li>Otros elementos relacionados con formularios: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.</li>
- <li><a class="external" href="http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text">Cross-browser HTML5 placeholder text</a></li>
-</ul>
+- Otros elementos relacionados con formularios: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)

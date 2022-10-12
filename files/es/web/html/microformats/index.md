@@ -4,27 +4,25 @@ slug: Web/HTML/microformats
 translation_of: Web/HTML/microformats
 original_slug: Web/HTML/microformatos
 ---
-<p><span class="seoSummary"><span class=""><dfn>Los <a href="http://microformats.org">Microformatos</a></dfn> (en ocasiones abreviados como  <strong>μF) </strong>son convenciones simples para incrustar semántica en HTML y para brindar rápidamente un API utilizable por los motores de búsqueda, agregadores y otras herramientas</span></span>  Estos pequeños patrones de HTML son usados para marcar entidades que varían entre fundamentales hasta información específica de un dominio, tales como personas, organizaciones, eventos y ubicaciones.</p>
+_Los [Microformatos](http://microformats.org)_ (en ocasiones abreviados como **μF)** son convenciones simples para incrustar semántica en HTML y para brindar rápidamente un API utilizable por los motores de búsqueda, agregadores y otras herramientas Estos pequeños patrones de HTML son usados para marcar entidades que varían entre fundamentales hasta información específica de un dominio, tales como personas, organizaciones, eventos y ubicaciones.
 
-<p>Su formato simple busca ser útil para máquinas y también legible para humanos.</p>
+Su formato simple busca ser útil para máquinas y también legible para humanos.
 
-<p>Muchas librerías en existencia se han desarrollado para estos microformatos incluyendo pero sin limitarse a hCard y hCalendar.</p>
+Muchas librerías en existencia se han desarrollado para estos microformatos incluyendo pero sin limitarse a hCard y hCalendar.
 
-<p>Los microformatos son soportados por la mayoría de motores de búsqueda.</p>
+Los microformatos son soportados por la mayoría de motores de búsqueda.
 
-<h2 id="Microformats_microdata_and_RDFa">Microformats, microdata and RDFa</h2>
+## Microformats, microdata and RDFa
 
-<p><strong>Microdata</strong> are a WHATWG HTML specification also used to nest metadata within existing content on web pages.<br>
- <strong>RDFa</strong> is a W3C standard, applying RDF to web pages.<br>
- <strong>Microformats</strong> are no standard, although hCard and hCalendar conventions are widely used.</p>
+**Microdata** are a WHATWG HTML specification also used to nest metadata within existing content on web pages.
+**RDFa** is a W3C standard, applying RDF to web pages.
+**Microformats** are no standard, although hCard and hCalendar conventions are widely used.
 
-<p> They all aim at adding semantics to web documents.</p>
+They all aim at adding semantics to web documents.
 
-<h2 id="See_also" style="line-height: 30px; font-size: 2.14285714285714rem;">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Microformat")}} on Wikipedia</li>
- <li><a href="http://www.microformats.org">Microformats official website</a></li>
- <li><a href="http://microformats.org/wiki/search_engines">Search engines support</a> on Microformats official website</li>
- <li><a href="https://indiewebcamp.com/microformats">IndieWebCamp</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Microformat")}} on Wikipedia
+- [Microformats official website](http://www.microformats.org)
+- [Search engines support](http://microformats.org/wiki/search_engines) on Microformats official website
+- [IndieWebCamp](https://indiewebcamp.com/microformats)

@@ -4,101 +4,77 @@ slug: Web/HTML/Element/main
 translation_of: Web/HTML/Element/main
 original_slug: Web/HTML/Elemento/main
 ---
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El <strong>elemento</strong> <strong>HTML <code>&lt;main&gt;</code> </strong>representa el contenido principal del {{HTMLElement("body")}} de un documento o aplicación. El área principal del contenido consiste en el contenido que está directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicación. Este contenido debe ser único al documento, excluyendo cualquier contenido que se repita a través de un conjunto de documentos como barras laterales, enlaces de navegación, información de derechos de autor, logos del sitio y formularios de búsqueda (a menos, claro, que la función principal del documento sea un formulario de búsqueda).</p>
+El **elemento** **HTML `<main>` **representa el contenido principal del {{HTMLElement("body")}} de un documento o aplicación. El área principal del contenido consiste en el contenido que está directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicación. Este contenido debe ser único al documento, excluyendo cualquier contenido que se repita a través de un conjunto de documentos como barras laterales, enlaces de navegación, información de derechos de autor, logos del sitio y formularios de búsqueda (a menos, claro, que la función principal del documento sea un formulario de búsqueda).
 
-<div class="note">
-<p><strong>Nota:</strong> <strong>no debe haber</strong> más de un elemento <code>&lt;main&gt;</code> en un documento, y este <strong>no debe ser</strong> descendiente de un elemento  {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.</p>
-</div>
+> **Nota:** **no debe haber** más de un elemento `<main>` en un documento, y este **no debe ser** descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.
 
-<ul class="">
- <li><dfn><a href="/en-US/docs/Web/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content" title="HTML/Content_categories#Flow_content">Flow content</a>, palpable content.</li>
- <li><dfn>Contenido permitido</dfn> <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content" title="HTML/Content_categories#Flow_content">Flow content</a>.</li>
- <li><dfn>Omisión de etiquetas</dfn> Ninguna; ambas etiqueta inical y de fin son obligatorias.</li>
- <li><dfn>Elementos padres permitidos</dfn> Cualquier elemento que acepte <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content" title="HTML/Content_categories#Flow_content">flow content</a>, pero no debe ser un descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.</li>
- <li><dfn>Interfaz DOM</dfn> {{domxref("HTMLElement")}}</li>
-</ul>
+- _[Content categories](/es/docs/Web/HTML/Content_categories "HTML/Content_categories")_[Flow content](/es/docs/Web/HTML/Content_categories#Flow_content "HTML/Content_categories#Flow_content"), palpable content.
+- _Contenido permitido_ [Flow content](/es/docs/Web/HTML/Content_categories#Flow_content "HTML/Content_categories#Flow_content").
+- _Omisión de etiquetas_ Ninguna; ambas etiqueta inical y de fin son obligatorias.
+- _Elementos padres permitidos_ Cualquier elemento que acepte [flow content](/es/docs/Web/HTML/Content_categories#Flow_content "HTML/Content_categories#Flow_content"), pero no debe ser un descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.
+- _Interfaz DOM_ {{domxref("HTMLElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento solo incluye  </span><a href="/en-US/docs/Web/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">atributos globales.</a></p>
+Este elemento solo incluye [atributos globales.](/es/docs/Web/HTML/Global_attributes "HTML/Global attributes")
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: html">&lt;!-- other content --&gt;
+```html
+<!-- other content -->
 
-<span class="highlight">&lt;main&gt;</span>
-  &lt;h1&gt;Apples&lt;/h1&gt;
-  &lt;p&gt;The apple is the pomaceous fruit of the apple tree.&lt;/p&gt;
+<main>
+  <h1>Apples</h1>
+  <p>The apple is the pomaceous fruit of the apple tree.</p>
 
-  &lt;article&gt;
-    &lt;h2&gt;Red Delicious&lt;/h2&gt;
-    &lt;p&gt;These bright red apples are the most common found in many
-    supermarkets.&lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-  &lt;/article&gt;
+  <article>
+    <h2>Red Delicious</h2>
+    <p>These bright red apples are the most common found in many
+    supermarkets.</p>
+    <p>... </p>
+    <p>... </p>
+  </article>
 
-  &lt;article&gt;
-    &lt;h2&gt;Granny Smith&lt;/h2&gt;
-    &lt;p&gt;These juicy, green apples make a great filling for
-    apple pies.&lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-  &lt;/article&gt;
+  <article>
+    <h2>Granny Smith</h2>
+    <p>These juicy, green apples make a great filling for
+    apple pies.</p>
+    <p>... </p>
+    <p>... </p>
+  </article>
 
-<span class="highlight">&lt;/main&gt;</span>
+</main>
 
-&lt;!-- other content --&gt;</pre>
+<!-- other content -->
+```
 
-<h2 id="Specifications" name="Specifications">Sobre Accesibilidad</h2>
+## Sobre Accesibilidad
 
-<p>Algunos lectores de pantalla reconocen la etiqueta <code>main</code> y proveen un atajo para que el usuario pueda saltar directamente al contenido de esta etiqueta sin tener que pasar por el resto.</p>
+Algunos lectores de pantalla reconocen la etiqueta `main` y proveen un atajo para que el usuario pueda saltar directamente al contenido de esta etiqueta sin tener que pasar por el resto.
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#the-main-element', '&lt;main&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Eliminada la restricción acerca de usar  <code>&lt;main&gt;</code> como un descendente del elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Sin cambios desde {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   | Estado                           | Comentario                                                                                                                                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#the-main-element', '&lt;main&gt;')}}                             | {{Spec2('HTML WHATWG')}} | Eliminada la restricción acerca de usar `<main>` como un descendente del elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}. |
+| {{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}     | {{Spec2('HTML5.1')}}     | Sin cambios desde {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                            |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}} | {{Spec2('HTML5 W3C')}}     | Definición inicial.                                                                                                                                                                                                                                           |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
-<p>Como una caracterisca nueva propuesta para HTML, el elemento <code>&lt;main&gt;</code> no está todavía ampliamente soportado. Es sumamente recomendable añadir el rol ARIA <code>"main"</code> a cualquier elemento <code>&lt;main&gt;</code>:</p>
+Como una caracterisca nueva propuesta para HTML, el elemento `<main>` no está todavía ampliamente soportado. Es sumamente recomendable añadir el rol ARIA `"main"` a cualquier elemento `<main>`:
 
-<pre class="brush: html">&lt;main role="main"&gt;
+```html
+<main role="main">
   ...
-&lt;/main&gt;
-</pre>
+</main>
+```
 
 {{Compat("html.elements.main")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>Basic structural elements: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}</li>
- <li>Section-related elements: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, or {{HTMLElement("nav")}}</li>
-</ul>
+- Basic structural elements: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}
+- Section-related elements: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, or {{HTMLElement("nav")}}

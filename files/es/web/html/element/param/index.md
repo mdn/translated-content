@@ -8,116 +8,163 @@ tags:
 translation_of: Web/HTML/Element/param
 original_slug: Web/HTML/Elemento/param
 ---
-<h3 id="Definici.C3.B3n" name="Definici.C3.B3n">Definición</h3>
+### Definición
 
-<dl>
-<dt><strong>param</strong> de "parameter" = parámetro. Permite especificar parámetros de ejecución para un objeto.</dt>
+- **param** de "parameter" = parámetro. Permite especificar parámetros de ejecución para un objeto.
+  - : **Sus etiquetas son**: `<param>` (solo tiene una).
+    **Crea una caja**: No.
+    **Está definido como**: .
+    **Puede contener**: Nada.
+    **Puede ser contenido por**: El elemento [object](es/HTML/Elemento/object), y el desaprobado [applet](es/HTML/Elemento/applet).
 
- <dd><strong>Sus etiquetas son</strong>: <code>&lt;param&gt;</code> (solo tiene una).
- 
- <strong>Crea una caja</strong>: No.
- 
- <strong>Está definido como</strong>: .
- 
- <strong>Puede contener</strong>: Nada.
-
- <strong>Puede ser contenido por</strong>: El elemento <a href="es/HTML/Elemento/object">object</a>, y el desaprobado <a href="es/HTML/Elemento/applet">applet</a>.</dd>
-</dl>
-
-<h4 id="Atributos" name="Atributos">Atributos</h4>
+#### Atributos
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th>atributo</th>
-   <th>descripción</th>
-   <th>valor</th>
-  </tr>
-  <tr>
-   <th colspan="3">Genéricos</th>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"><span style="color: green;">id </span></a></td>
-   <td>Le da un nombre al elemento que lo diferencia de todos los demás del documento.</td>
-   <td>Un <a class="external" href="http://html.conclase.net/w3c/html401-es/types.html#type-id">nombre único</a>. Sensible a <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> Por defecto: Lo fija el navegador.</td>
-  </tr>
-  <tr>
-   <td colspan="3"><strong>Eventos</strong>: <code style="color: green;">onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup. </code></td>
-  </tr>
-  <tr>
-   <th colspan="3">Específicos</th>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-name-PARAM"><span style="color: green;">name </span></a></td>
-   <td>Referencia un nombre de parámetro de ejecución conocido por el objeto insertado.</td>
-   <td>Un nombre de parámetro de ejecución. Puede ser sensible a <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> (o no). <s>Por defecto</s>: Debe indicarlo el autor.</td>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-value-PARAM"><span style="color: green;">value </span></a></td>
-   <td>Especifica un valor para el parámetro referenciado por name</td>
-   <td>Los valores de este atributo dependen del objeto a insertar</td>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-valuetype"><span style="color: green;">valuetype </span></a></td>
-   <td>especifica el tipo de atributo value.</td>
-   <td>Uno de los siguientes: <code>'data', 'ref' o 'object'</code>. Por defecto: <code>'data'</code>.</td>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-type-PARAM"><span style="color: green;">type </span></a></td>
-   <td>Si el <code>valuetype</code> es 'ref', <code>type</code> sirve para indicar el tipo MIME del recurso referenciado.</td>
-   <td>Un tipo MIME. Por defecto: Lo fija el navegador.</td>
-  </tr>
-  <tr>
-   <th colspan="3">De transición</th>
-  </tr>
-  <tr>
-   <td colspan="3">No tiene</td>
-  </tr>
-  <tr>
-   <th>atributo</th>
-   <th>descripción</th>
-   <th>valor</th>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>atributo</th>
+      <th>descripción</th>
+      <th>valor</th>
+    </tr>
+    <tr>
+      <th colspan="3">Genéricos</th>
+    </tr>
+    <tr>
+      <td>
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
+          ><span style="color: green">id</span></a
+        >
+      </td>
+      <td>
+        Le da un nombre al elemento que lo diferencia de todos los demás del
+        documento.
+      </td>
+      <td>
+        Un
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/types.html#type-id"
+          >nombre único</a
+        >. Sensible a
+        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> Por
+        defecto: Lo fija el navegador.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <strong>Eventos</strong>:
+        <code style="color: green"
+          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
+          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th colspan="3">Específicos</th>
+    </tr>
+    <tr>
+      <td>
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-name-PARAM"
+          ><span style="color: green">name</span></a
+        >
+      </td>
+      <td>
+        Referencia un nombre de parámetro de ejecución conocido por el objeto
+        insertado.
+      </td>
+      <td>
+        Un nombre de parámetro de ejecución. Puede ser sensible a
+        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> (o
+        no). <s>Por defecto</s>: Debe indicarlo el autor.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-value-PARAM"
+          ><span style="color: green">value</span></a
+        >
+      </td>
+      <td>Especifica un valor para el parámetro referenciado por name</td>
+      <td>Los valores de este atributo dependen del objeto a insertar</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-valuetype"
+          ><span style="color: green">valuetype</span></a
+        >
+      </td>
+      <td>especifica el tipo de atributo value.</td>
+      <td>
+        Uno de los siguientes: <code>'data', 'ref' o 'object'</code>. Por
+        defecto: <code>'data'</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-type-PARAM"
+          ><span style="color: green">type</span></a
+        >
+      </td>
+      <td>
+        Si el <code>valuetype</code> es 'ref', <code>type</code> sirve para
+        indicar el tipo MIME del recurso referenciado.
+      </td>
+      <td>Un tipo MIME. Por defecto: Lo fija el navegador.</td>
+    </tr>
+    <tr>
+      <th colspan="3">De transición</th>
+    </tr>
+    <tr>
+      <td colspan="3">No tiene</td>
+    </tr>
+    <tr>
+      <th>atributo</th>
+      <th>descripción</th>
+      <th>valor</th>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Ejemplos_de_uso" name="Ejemplos_de_uso">Ejemplos de uso</h3>
+### Ejemplos de uso
 
-<div class="highlight">
-<h4 id="bla_bla" name="bla_bla">bla bla</h4>
+#### bla bla
 
-<pre class="eval"><span class="nowiki">
+```
 
- </span>
-</pre>
-</div>
 
-<h3 id="Estilo_predeterminado" name="Estilo_predeterminado">Estilo predeterminado</h3>
 
-<h3 id="Notas" name="Notas">Notas</h3>
+```
 
-<h3 id="Referencia" name="Referencia">Referencia</h3>
+### Estilo predeterminado
 
-<ul>
- <li>El elemento <a class="external" href="http://html.conclase.net/w3c/html401-es/struct/objects.html#h-13.3.2."><strong>param</strong> en la especificación</a> de html 4.01</li>
-</ul>
+### Notas
 
-<h3 id="Soporte" name="Soporte">Soporte</h3>
+### Referencia
 
-<p>Puede consultar esta <a class="external" href="http://www.webdevout.net/browser_support_html.php#support-html401-param">comparativa</a>: IE6 vs IE7 vs FF1.5 vs OP9.</p>
+- El elemento [**param** en la especificación](http://html.conclase.net/w3c/html401-es/struct/objects.html#h-13.3.2.) de html 4.01
 
-<p> </p>
+### Soporte
 
-<hr>
-<div class="note">
-<p>Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.</p>
+Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html.php#support-html401-param): IE6 vs IE7 vs FF1.5 vs OP9.
 
-<p>¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta <a>MDC:Como ayudar</a>.</p>
-</div>
+---
 
-<p><br>
- <span class="comment">Categoría</span></p>
+> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+>
+> ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 
-<p><span class="comment">interwiki links</span></p>
+Categoría
 
-<p><span class="comment">automatismos</span></p>
+interwiki links
+
+automatismos

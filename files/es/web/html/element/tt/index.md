@@ -8,44 +8,35 @@ tags:
 translation_of: Web/HTML/Element/tt
 original_slug: Web/HTML/Elemento/tt
 ---
-<p> </p>
+### Definición
 
-<h3 id="Definici.C3.B3n" name="Definici.C3.B3n">Definición</h3>
+- Muestra el texto marcado con una fuente de ancho fijo.
+  - : **Sus etiquetas son**: \<tt> y \</tt> (Ambas obligatorias)
+    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Está definido como**: [Elemento de estilo de fuente](es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
+    **Puede contener**: cero o más elementos [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
-<dl>
-<dt>Muestra el texto marcado con una fuente de ancho fijo.</dt>
+##### Atributos Genéricos
 
- <dd><strong>Sus etiquetas son</strong>: &lt;tt&gt; y &lt;/tt&gt; (Ambas obligatorias)
- 
- <strong>Crea una caja</strong>: <a href="es/HTML/Elemento/Tipos_de_elementos#en_linea">en linea</a>.
- 
- <strong>Está definido como</strong>: <a href="es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente">Elemento de estilo de fuente</a>.
- 
- <strong>Puede contener</strong>: cero o más elementos <a href="es/HTML/Elemento/Tipos_de_elementos#en_linea">en linea</a></dd>
-</dl>
+- title (título del elemento)
+- style (información de estilo en línea)
 
-<h5 id="Atributos_Gen.C3.A9ricos" name="Atributos_Gen.C3.A9ricos">Atributos Genéricos</h5>
+**Identificadores**: id, class (identificadores a nivel de documento)
+**Idioma**: lang (información sobre el idioma), dir (dirección del texto)
+**Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
 
-<ul>
- <li>title (título del elemento)</li>
- <li>style (información de estilo en línea)</li>
-</ul>
+##### Atributos Específicos - No tiene
 
-<strong>Identificadores</strong>: id, class (identificadores a nivel de documento)
-<strong>Idioma</strong>: lang (información sobre el idioma), dir (dirección del texto)
-<strong>Eventos</strong>: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
+##### Atributos Transicionales - No tiene
 
-<h5 id="Atributos_Espec.C3.ADficos_-_No_tiene" name="Atributos_Espec.C3.ADficos_-_No_tiene">Atributos Específicos - No tiene</h5>
+### Ejemplos
 
-<h5 id="Atributos_Transicionales_-_No_tiene" name="Atributos_Transicionales_-_No_tiene">Atributos Transicionales - No tiene</h5>
+```
+  <p>
+       Texto normal y... <tt>Texto con formato teletipo</tt>
+  </p>
+```
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+### Comentarios
 
-<pre class="eval">  &lt;p&gt;
-       Texto normal y... &lt;tt&gt;Texto con formato teletipo&lt;/tt&gt;
-  &lt;/p&gt;
-</pre>
-
-<h3 id="Comentarios" name="Comentarios">Comentarios</h3>
-
-<p><span class="comment">de momento no funciona </span></p>
+de momento no funciona

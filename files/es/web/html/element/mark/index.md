@@ -10,134 +10,131 @@ tags:
 translation_of: Web/HTML/Element/mark
 original_slug: Web/HTML/Elemento/mark
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>El <strong> Elemento HTML Mark <code>&lt;mark&gt;</code></strong> representa un texto <strong>marcado</strong> o <strong>resaltado</strong> como referencia o anotación, debido a su relevancia o importancia en un contexto particular.</p>
+El **Elemento HTML Mark `<mark>`** representa un texto **marcado** o **resaltado** como referencia o anotación, debido a su relevancia o importancia en un contexto particular.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/mark.html", "tabbed-shorter")}}</div>
-
-<div class="">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+{{EmbedInteractiveExample("pages/tabbed/mark.html", "tabbed-shorter")}}The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Categorías de contenido</th>
-   <td>Contenido de flujo,  contenido de párrafo,  contenido palpable</td>
-  </tr>
-  <tr>
-   <th>Contenido permitido</th>
-   <td><a href="/en/Dom/Content_categories#Phrasing_content" title="en/Dom/Content categories#Phrasing content">Contenido estático</a></td>
-  </tr>
-  <tr>
-   <th>Omisión de etiquetas</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th>Elementos padre permitidos</th>
-   <td>Cualquier elemento que acepte <a href="/en/Dom/Content_categories#Phrasing_content" title="en/Dom/Content categories#Phrasing content">contenido estático</a></td>
-  </tr>
-  <tr>
-   <th>Roles ARIA permitidos</th>
-   <td>Cualquiera</td>
-  </tr>
-  <tr>
-   <th>Documento normativo</th>
-   <td><a class="external" href="http://www.google.com/url?q=http%3A%2F%2Fwww.whatwg.org%2Fspecs%2Fweb-apps%2Fcurrent-work%2Fmultipage%2Ftext-level-semantics.html%23the-mark-element&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFWrrJ-Y17m5GxNva7WqE-i6zuWcA" rel="external nofollow">HTML 5, sección 4.6.17</a></td>
-  </tr>
-  <tr>
-   <th>DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Categorías de contenido</th>
+      <td>Contenido de flujo, contenido de párrafo, contenido palpable</td>
+    </tr>
+    <tr>
+      <th>Contenido permitido</th>
+      <td>
+        <a
+          href="/en/Dom/Content_categories#Phrasing_content"
+          title="en/Dom/Content categories#Phrasing content"
+          >Contenido estático</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th>Omisión de etiquetas</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th>Elementos padre permitidos</th>
+      <td>
+        Cualquier elemento que acepte
+        <a
+          href="/en/Dom/Content_categories#Phrasing_content"
+          title="en/Dom/Content categories#Phrasing content"
+          >contenido estático</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th>Roles ARIA permitidos</th>
+      <td>Cualquiera</td>
+    </tr>
+    <tr>
+      <th>Documento normativo</th>
+      <td>
+        <a
+          class="external"
+          href="http://www.google.com/url?q=http%3A%2F%2Fwww.whatwg.org%2Fspecs%2Fweb-apps%2Fcurrent-work%2Fmultipage%2Ftext-level-semantics.html%23the-mark-element&#x26;sa=D&#x26;sntz=1&#x26;usg=AFQjCNFWrrJ-Y17m5GxNva7WqE-i6zuWcA"
+          rel="external nofollow"
+          >HTML 5, sección 4.6.17</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th>DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento no tiene atributos que no sean los <a class="new " href="https://developer.mozilla.org/es/docs/Web/HTML/Atributos_Globales" rel="internal">atributos globales</a>, comunes a todos los elementos.</p>
+Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Atributos_Globales), comunes a todos los elementos.
 
-<h2 id="Notas_de_uso">Notas de uso</h2>
+## Notas de uso
 
-<ul>
- <li>En una cita ({{HTMLElement("q")}})  o en otro bloque ({{HTMLElement("blockquote")}}), generalmente indica texto que es de especial interés pero que no está destacado en el material de origen, o material que necesita especial escrutinio, aunque el autor original no lo considerase importante.</li>
- <li>Por otro lado, <code>&lt;mark&gt;</code> indica una parte del contenido del documento que probablemente sea relevante para el usuario. Por ejemplo, se puede utilizar en una página que muestra los resultados de búsqueda para resaltar cada uno de estos por palabra.</li>
- <li>No uses el elemento <code>&lt;mark&gt;</code> para resaltado de sintaxis; usa el elemento {{ HTMLElement("span") }}  para este fin.</li>
-</ul>
+- En una cita ({{HTMLElement("q")}}) o en otro bloque ({{HTMLElement("blockquote")}}), generalmente indica texto que es de especial interés pero que no está destacado en el material de origen, o material que necesita especial escrutinio, aunque el autor original no lo considerase importante.
+- Por otro lado, `<mark>` indica una parte del contenido del documento que probablemente sea relevante para el usuario. Por ejemplo, se puede utilizar en una página que muestra los resultados de búsqueda para resaltar cada uno de estos por palabra.
+- No uses el elemento `<mark>` para resaltado de sintaxis; usa el elemento {{ HTMLElement("span") }} para este fin.
 
-<div class="blockIndicator note">
-<p>No se debe confundir el elemento <code><span style="font-family: Courier New;">&lt;mark&gt;</span></code> con el elemento {{ HTMLElement("strong") }}. El elemento {{ HTMLElement("strong") }} se utiliza para denotar intervalos de texto de especial <em>importancia,</em> mientras que el elemento <code>&lt;mark&gt;</code> se utiliza para denotar intervalos de texto de especial <em>relevancia.</em></p>
-</div>
+> **Nota:** No se debe confundir el elemento `<mark>` con el elemento {{ HTMLElement("strong") }}. El elemento {{ HTMLElement("strong") }} se utiliza para denotar intervalos de texto de especial _importancia,_ mientras que el elemento `<mark>` se utiliza para denotar intervalos de texto de especial _relevancia._
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Marcar_texto_de_interés">Marcar texto de interés</h3>
+### Marcar texto de interés
 
-<p>En este ejemplo, &lt;mark&gt; se utiliza para resaltar texto en una cita que es de particular insterés para el usuario.</p>
+En este ejemplo, \<mark> se utiliza para resaltar texto en una cita que es de particular insterés para el usuario.
 
-<pre class="brush: html">&lt;blockquote&gt;
+```html
+<blockquote>
   It is a period of civil war. Rebel spaceships, striking from a
   hidden base, have won their first victory against the evil
-  Galactic Empire. During the battle, &lt;mark&gt;Rebel spies managed
-  to steal secret plans&lt;/mark&gt; to the Empire’s ultimate weapon,
+  Galactic Empire. During the battle, <mark>Rebel spies managed
+  to steal secret plans</mark> to the Empire’s ultimate weapon,
   the DEATH STAR, an armored space station with enough power to
   destroy an entire planet.
-&lt;/blockquote&gt;</pre>
+</blockquote>
+```
 
-<p>El resultado sería:</p>
+El resultado sería:
 
-<p>{{EmbedLiveSample("Marking_text_of_interest", 650, 130)}}</p>
+{{EmbedLiveSample("Marking_text_of_interest", 650, 130)}}
 
-<h3 id="Identificando_fragmentos_sensibles_al_contexto">Identificando fragmentos sensibles al contexto</h3>
+### Identificando fragmentos sensibles al contexto
 
-<p>Este ejemplo demuestra el uso de <code>&lt;mark&gt;</code> para marcar resultados de búsqueda en el fragmento.</p>
+Este ejemplo demuestra el uso de `<mark>` para marcar resultados de búsqueda en el fragmento.
 
-<pre class="brush: html">&lt;p&gt;It is a dark time for the Rebellion. Although the Death
-Star has been destroyed, &lt;mark class="match"&gt;Imperial&lt;/mark&gt;
+```html
+<p>It is a dark time for the Rebellion. Although the Death
+Star has been destroyed, <mark class="match">Imperial</mark>
 troops have driven the Rebel forces from their hidden base and
-pursued them across the galaxy.&lt;/p&gt;
+pursued them across the galaxy.</p>
 
-&lt;p&gt;Evading the dreaded &lt;mark class="match"&gt;Imperial&lt;/mark&gt;
+<p>Evading the dreaded <mark class="match">Imperial</mark>
 Starfleet, a group of freedom fighters led by Luke Skywalker
 has established a new secret base on the remote ice world of
-Hoth.&lt;/p&gt;</pre>
+Hoth.</p>
+```
 
-<p>Para ayudar a distinguir el uso de <code>&lt;mark&gt;</code> en los resultados de búsqueda de otro uso potencial, este ejemplo aplica la clase "match" a cada coincidencia.</p>
+Para ayudar a distinguir el uso de `<mark>` en los resultados de búsqueda de otro uso potencial, este ejemplo aplica la clase "match" a cada coincidencia.
 
-<p>El resultado se vería:</p>
+El resultado se vería:
 
-<p>{{EmbedLiveSample("Identifying_context-sensitive_passages", 650, 130)}}</p>
+{{EmbedLiveSample("Identifying_context-sensitive_passages", 650, 130)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
 
-<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
+## Compatibilidad de navegador
 
+{{Compat("html.elements.mark")}}
 
+## Consulta también
 
-<p>{{Compat("html.elements.mark")}}</p>
-
-<h2 id="Consulta_también">Consulta también</h2>
-
-<ul>
- <li>Otros <a href="/en/HTML/Text-level_semantics_elements" title="en/HTML/Text-level semantics elements">elementos de la semántica a nivel de texto</a> : {{ HTMLElement("a") }}, {{ HTMLElement("em") }}, {{ HTMLElement("strong") }}, {{ HTMLElement("cite") }}  , {{ HTMLElement("q") }} , {{ HTMLElement("dfn") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("time") }} , {{ HTMLElement("code") }} ,{{ HTMLElement("var") }}, {{ HTMLElement("samp") }} ,{{ HTMLElement("kbd") }} ,{{ HTMLElement("sub") }} , {{ HTMLElement("sup") }} ,{{ HTMLElement("i") }} , {{ HTMLElement("b") }}, {{ HTMLElement("mark") }} , {{ HTMLElement("ruby") }} , {{ HTMLElement("rp") }} , {{ HTMLElement("rt") }} , {{ HTMLElement("bdo") }}, {{ HTMLElement("span") }} , {{ HTMLElement("br") }} , {{ HTMLElement("wbr") }}.</li>
-</ul>
+- Otros [elementos de la semántica a nivel de texto](/en/HTML/Text-level_semantics_elements "en/HTML/Text-level semantics elements") : {{ HTMLElement("a") }}, {{ HTMLElement("em") }}, {{ HTMLElement("strong") }}, {{ HTMLElement("cite") }} , {{ HTMLElement("q") }} , {{ HTMLElement("dfn") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("time") }} , {{ HTMLElement("code") }} ,{{ HTMLElement("var") }}, {{ HTMLElement("samp") }} ,{{ HTMLElement("kbd") }} ,{{ HTMLElement("sub") }} , {{ HTMLElement("sup") }} ,{{ HTMLElement("i") }} , {{ HTMLElement("b") }}, {{ HTMLElement("mark") }} , {{ HTMLElement("ruby") }} , {{ HTMLElement("rp") }} , {{ HTMLElement("rt") }} , {{ HTMLElement("bdo") }}, {{ HTMLElement("span") }} , {{ HTMLElement("br") }} , {{ HTMLElement("wbr") }}.

@@ -11,96 +11,94 @@ tags:
 translation_of: Web/HTML/Element/details
 original_slug: Web/HTML/Elemento/details
 ---
-<p>{{ SeeCompatTable() }}</p>
+{{ SeeCompatTable() }}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El elemento HTML Details<strong> &lt;details&gt; </strong>es usado como un widget de revelación a través del cual el usuario puede obtener información adicional .</p>
+El elemento HTML Details **\<details>** es usado como un widget de revelación a través del cual el usuario puede obtener información adicional .
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido">Categorías de contenido</a></th>
-   <td><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido">Contenido dinámico</a> , contenido de seccionamiento, contenido interactivo, contenido palpable .</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenido permitido</th>
-   <td>Un elemento  {{HTMLElement("summary")}}  seguido de <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido">contenido dinámico</a> </td>
-  </tr>
-  <tr>
-   <th scope="row">Omisión de etiquetas</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Elementos padres permitidos</th>
-   <td>Cualquier elemento que acepte  <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido">contenido dinámico</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interfaz DOM</th>
-   <td>{{domxref("HTMLDetailsElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+          >Categorías de contenido</a
+        >
+      </th>
+      <td>
+        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+          >Contenido dinámico</a
+        >
+        , contenido de seccionamiento, contenido interactivo, contenido palpable
+        .
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenido permitido</th>
+      <td>
+        Un elemento {{HTMLElement("summary")}} seguido de
+        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+          >contenido dinámico</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omisión de etiquetas</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Elementos padres permitidos</th>
+      <td>
+        Cualquier elemento que acepte
+        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+          >contenido dinámico</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interfaz DOM</th>
+      <td>{{domxref("HTMLDetailsElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento incluye los <a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales</a> .</p>
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales) .
 
-<dl>
- <dt>{{htmlattrdef("open")}}</dt>
- <dd>Este atributo Booleano indica si los detalles serán mostrados al usuario cuando la página se cargue . Por default el valor es <code>false </code>y por lo tanto los detalles estarán ocultos.</dd>
-</dl>
+- {{htmlattrdef("open")}}
+  - : Este atributo Booleano indica si los detalles serán mostrados al usuario cuando la página se cargue . Por default el valor es `false `y por lo tanto los detalles estarán ocultos.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;summary&gt;Some details&lt;/summary&gt;
-  &lt;p&gt;More info about the details.&lt;/p&gt;
-&lt;/details&gt;
-</pre>
+```html
+<details>
+  <summary>Some details</summary>
+  <p>More info about the details.</p>
+</details>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<div class="note">
-<p><strong>Nota:</strong> Si el el ejemplo de arriba no funciona , ver <a href="#compatibilidad_con_navegadores">Compatibilidad con navegadores</a>  para determinar si el navegador soporta esta característica .</p>
-</div>
+> **Nota:** Si el el ejemplo de arriba no funciona , ver [Compatibilidad con navegadores](#compatibilidad_con_navegadores) para determinar si el navegador soporta esta característica .
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificaciones</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interactive-elements.html#the-details-element', '&lt;details&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'semantics.html#the-details-element', '&lt;details&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificaciones                                                                                                                 | Estatus                          | Comentario |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'interactive-elements.html#the-details-element', '&lt;details&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5.1', 'semantics.html#the-details-element', '&lt;details&gt;')}}                     | {{Spec2('HTML5.1')}}     |            |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("html.elements.details")}}
 
-<h2 id="sect1"></h2>
+##
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{HTMLElement("summary")}}</li>
-</ul>
+- {{HTMLElement("summary")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

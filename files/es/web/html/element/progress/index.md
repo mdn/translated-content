@@ -4,95 +4,68 @@ slug: Web/HTML/Element/progress
 translation_of: Web/HTML/Element/progress
 original_slug: Web/HTML/Elemento/progress
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>La etiqueta <strong>HTML<em> </em><code>&lt;progress&gt;</code></strong> se utiliza para visualizar el progreso de una tarea. Aunque los detalles de como se muestran depende directamente del navegador que utiliza el cliente, aunque básicamente aparece una barra de progreso.</p>
+La etiqueta **HTML\_ \_`<progress>`** se utiliza para visualizar el progreso de una tarea. Aunque los detalles de como se muestran depende directamente del navegador que utiliza el cliente, aunque básicamente aparece una barra de progreso.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
 
-<p class="">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
+The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)and send us a pull request.
 
-<ul class="">
- <li><dfn><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Flujo_de_contenido" title="HTML/Content_categories">Categorias de contenido </a></dfn><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Flujo_de_contenido" title="HTML/Content_categories">Flujo de contenido</a><span>, </span><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_de_redacci%C3%B3n">contenido de redacción</a><span style="font-style: normal; line-height: 1.5em;">, contenido etiquetable, contenido palpable.</span></li>
- <li><dfn>Contenido permitido</dfn> <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">Contenido de redacción</a>, pero no debe haber ningún elemento de progreso entre sus descendientes</li>
- <li><dfn>Etiquetas por omisión</dfn> {{no_tag_omission}}</li>
- <li><dfn>Elementos padres permitidos</dfn> Cualquier elemento que acepte <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">contenido de redacción</a>.</li>
- <li><dfn>DOM interfaz</dfn> {{domxref("HTMLProgressElement")}}</li>
-</ul>
+- _[Categorias de contenido ](/es/docs/Web/Guide/HTML/categorias_de_contenido#Flujo_de_contenido "HTML/Content_categories")_[Flujo de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido#Flujo_de_contenido "HTML/Content_categories"), [contenido de redacción](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_de_redacci%C3%B3n), contenido etiquetable, contenido palpable.
+- _Contenido permitido_ [Contenido de redacción](/es/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content"), pero no debe haber ningún elemento de progreso entre sus descendientes
+- _Etiquetas por omisión_ {{no_tag_omission}}
+- _Elementos padres permitidos_ Cualquier elemento que acepte [contenido de redacción](/es/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _DOM interfaz_ {{domxref("HTMLProgressElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento incluye <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">Atributos Globales</a></span><span style="line-height: 21px;">.</span></p>
+Este elemento incluye [Atributos Globales](/es/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{ htmlattrdef("max") }}</dt>
- <dd>Este atributo indica la cantidad de trabajo que demorá la carga, se define en el elemento <code>progress</code>. Por ejemplo max="100".</dd>
- <dt>{{ htmlattrdef("value") }}</dt>
- <dt></dt>
- <dd><span style="font-weight: normal; line-height: inherit;">Este atributo indica que parte de la tarea ya se ha completado o cargado. Debe especificarse un valor entre 0  y </span><code style="font-size: 14px; line-height: inherit;">max</code><span style="font-weight: normal; line-height: inherit;">, o entre 0 y 1.0 si </span><code style="font-size: 14px; line-height: inherit;">max</code><span style="font-weight: normal; line-height: inherit;"> está omitido. Si al atributo </span><code style="font-size: 14px; line-height: inherit;">value</code><span style="font-weight: normal; line-height: inherit;"> no se le especifica ningún valor, se estara llevando a cabo la tarea sin que el elemento mueste funcionamiento alguno. Por ejemplo si la carga está al 50% será de 0.5 el valor, en el caso de no especificar max. </span></dd>
-</dl>
+- {{ htmlattrdef("max") }}
+  - : Este atributo indica la cantidad de trabajo que demorá la carga, se define en el elemento `progress`. Por ejemplo max="100".
+- {{ htmlattrdef("value") }}
 
-<p>Puedes usar la propiedad CSS {{ cssxref("orient") }} permite especificar la orientacion de la barra de progreso (horizontal o vertical) con horizontal por defecto. La pseudo-clase {{ cssxref(":indeterminate") }} se puede utiliza para hacer que coincida con las barras de progreso indeterminadas.</p>
+  - : Este atributo indica que parte de la tarea ya se ha completado o cargado. Debe especificarse un valor entre 0 y `max`, o entre 0 y 1.0 si `max` está omitido. Si al atributo `value` no se le especifica ningún valor, se estara llevando a cabo la tarea sin que el elemento mueste funcionamiento alguno. Por ejemplo si la carga está al 50% será de 0.5 el valor, en el caso de no especificar max.
 
-<dl>
-</dl>
+Puedes usar la propiedad CSS {{ cssxref("orient") }} permite especificar la orientacion de la barra de progreso (horizontal o vertical) con horizontal por defecto. La pseudo-clase {{ cssxref(":indeterminate") }} se puede utiliza para hacer que coincida con las barras de progreso indeterminadas.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: html notranslate">&lt;progress value="70" max="100"&gt;70 %&lt;/progress&gt;
-</pre>
+```html
+<progress value="70" max="100">70 %</progress>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
 
-<p>En Mac OS X, Se vería como esto:</p>
+En Mac OS X, Se vería como esto:
 
-<p><img alt="progress-1.png" class="default internal" src="/@api/deki/files/4946/=progress-1.png"></p>
+![progress-1.png](/@api/deki/files/4946/=progress-1.png)
 
-<p>En Windows, el resultante sería este:</p>
+En Windows, el resultante sería este:
 
-<p><img alt="progress-firefox.JPG" class="default internal" src="/@api/deki/files/6031/=progress-firefox.JPG"></p>
+![progress-firefox.JPG](/@api/deki/files/6031/=progress-firefox.JPG)
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-progress-element', '&lt;progress&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#the-progress-element', '&lt;progress&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   | Status                           | Comment            |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', 'forms.html#the-progress-element', '&lt;progress&gt;')}}     | {{Spec2('HTML WHATWG')}} |                    |
+| {{SpecName('HTML5 W3C', 'sec-forms.html#the-progress-element', '&lt;progress&gt;')}} | {{Spec2('HTML5 W3C')}}     | Initial definition |
 
-<h2 id="Compatibilidad_en_los_navegadores">Compatibilidad en los navegadores</h2>
+## Compatibilidad en los navegadores
 
+{{Compat("html.elements.progress")}}
 
+## Mira también
 
-<p>{{Compat("html.elements.progress")}}</p>
-
-<h2 id="Mira_también">Mira también</h2>
-
-<ul>
- <li>{{htmlelement("meter")}}</li>
- <li>{{ cssxref(":indeterminate") }}</li>
- <li>{{ cssxref("-moz-orient") }}</li>
- <li>{{ cssxref("::-moz-progress-bar") }}</li>
- <li>{{ cssxref("::-ms-fill") }}</li>
- <li>{{ cssxref("::-webkit-progress-bar") }}</li>
- <li>{{ cssxref("::-webkit-progress-value") }}</li>
- <li>{{ cssxref("::-webkit-progress-inner-element") }}</li>
-</ul>
+- {{htmlelement("meter")}}
+- {{ cssxref(":indeterminate") }}
+- {{ cssxref("-moz-orient") }}
+- {{ cssxref("::-moz-progress-bar") }}
+- {{ cssxref("::-ms-fill") }}
+- {{ cssxref("::-webkit-progress-bar") }}
+- {{ cssxref("::-webkit-progress-value") }}
+- {{ cssxref("::-webkit-progress-inner-element") }}

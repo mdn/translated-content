@@ -9,48 +9,41 @@ tags:
 translation_of: Web/HTML/Element/samp
 original_slug: Web/HTML/Elemento/samp
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary">El elemento HTML Sample (<strong><code>&lt;samp&gt;</code></strong>) se utiliza para incluir texto en línea que representa una muestra (o cita) de la salida de un programa de ordenador. El contenido de esta etiqueta es renderizado generalmente usando la tipografía monoespaciada por defecto del navegador.</span></p>
+El elemento HTML Sample (**`<samp>`**) se utiliza para incluir texto en línea que representa una muestra (o cita) de la salida de un programa de ordenador. El contenido de esta etiqueta es renderizado generalmente usando la tipografía monoespaciada por defecto del navegador.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
 
-<p class="">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
+The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)and send us a pull request.
 
-<h3 id="Definici.C3.B3n" name="Definici.C3.B3n">Definición</h3>
+### Definición
 
-<dl>
-<dt>Señala lo que es una salida de un programa.</dt>
+- Señala lo que es una salida de un programa.
+  - : **Sus etiquetas son**: \<samp> y \</samp> (ambas obligatorias)
+    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Puede contener**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
- <dd><strong>Sus etiquetas son</strong>: &lt;samp&gt; y &lt;/samp&gt; (ambas obligatorias)
- 
- <strong>Crea una caja</strong>: <a href="es/HTML/Elemento/Tipos_de_elementos#en_linea">en linea</a>.
- 
- <strong>Está definido como</strong>: <a href="es/HTML/Elemento/Tipos_de_elementos#de_frase">Elemento de frase</a>.
- 
- <strong>Puede contener</strong>: <a href="es/HTML/Elemento/Tipos_de_elementos#en_linea">en linea</a></dd>
-</dl>
+##### Atributos Genéricos
 
-<h5 id="Atributos_Gen.C3.A9ricos" name="Atributos_Gen.C3.A9ricos">Atributos Genéricos</h5>
+- title (título del elemento)
+- style (información de estilo en línea)
 
-<ul>
- <li>title (título del elemento)</li>
- <li>style (información de estilo en línea)</li>
-</ul>
+**Identificadores**: id, class (identificadores a nivel de documento)
+**Idioma**: lang (información sobre el idioma), dir (dirección del texto)
+**Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
 
-<strong>Identificadores</strong>: id, class (identificadores a nivel de documento)
-<strong>Idioma</strong>: lang (información sobre el idioma), dir (dirección del texto)
-<strong>Eventos</strong>: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
+##### Atributos Específicos - No tiene.
 
-<h5 id="Atributos_Espec.C3.ADficos_-_No_tiene." name="Atributos_Espec.C3.ADficos_-_No_tiene.">Atributos Específicos - No tiene.</h5>
+##### Atributos Transicionales - No tiene.
 
-<h5 id="Atributos_Transicionales_-_No_tiene." name="Atributos_Transicionales_-_No_tiene.">Atributos Transicionales - No tiene.</h5>
+### Ejemplos
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+```
+<p>
+... entonces aparecerá una ventana con el mensaje: <samp>Hola mundo</samp>
+</p>
+```
 
-<pre class="eval">&lt;p&gt;
-... entonces aparecerá una ventana con el mensaje: &lt;samp&gt;Hola mundo&lt;/samp&gt;
-&lt;/p&gt;
-</pre>
-
-<h3 id="Comentarios" name="Comentarios">Comentarios</h3>
+### Comentarios

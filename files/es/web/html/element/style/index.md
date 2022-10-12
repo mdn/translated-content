@@ -8,117 +8,184 @@ tags:
 translation_of: Web/HTML/Element/style
 original_slug: Web/HTML/Elemento/style
 ---
-<h3 id="Definici.C3.B3n" name="Definici.C3.B3n">Definición</h3>
+### Definición
 
-<dl>
-<dt><strong>style</strong> - estilo. Es el elemento encargado de indicar la información de estilo.</dt>
+- **style** - estilo. Es el elemento encargado de indicar la información de estilo.
+  - : **Sus etiquetas son**: `<style>` y `</style>` (ambas obligatorias).
+    **Está definido como**: Elemento [de cabecera](es/HTML/Elemento/Tipos_de_elementos#decabecera).
+    **Crea una caja**: No.
+    **Puede contener**: Declaraciones de estilo.
+    **Debe ser contenido por**: Elementos [head](es/HTML/Elemento/Tipos_de_elementos#head).
 
- <dd><strong>Sus etiquetas son</strong>: <code>&lt;style&gt;</code> y <code>&lt;/style&gt;</code> (ambas obligatorias).
+#### Atributos
 
- <strong>Está definido como</strong>: Elemento <a href="es/HTML/Elemento/Tipos_de_elementos#decabecera">de cabecera</a>.
- 
- <strong>Crea una caja</strong>: No.
-
- <strong>Puede contener</strong>: Declaraciones de estilo.
-
- <strong>Debe ser contenido por</strong>: Elementos <a href="es/HTML/Elemento/Tipos_de_elementos#head">head</a>.</dd>
-</dl>
-
-<h4 id="Atributos" name="Atributos">Atributos</h4>
-
-<p><del>Por defecto:</del> Debe indicarlo el autor.</p>
+~~Por defecto:~~ Debe indicarlo el autor.
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th>atributo</th>
-   <th>descripción</th>
-   <th>valor</th>
-  </tr>
-  <tr>
-   <th colspan="3">Genéricos</th>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"><span style="color: green;">title </span></a></td>
-   <td>Texto informativo o título del elemento. Suele mostrarse a modo de "tool tip".</td>
-   <td>Texto legible por personas. Sensible a <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr>. Por defecto: Lo fija el navegador.</td>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"><span style="color: green;">lang </span></a></td>
-   <td>Información sobre el <a class="external" href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html">idioma del contenido</a> del elemento y del valor de sus atributos.</td>
-   <td>Un <a class="external" href="http://html.conclase.net/w3c/html401-es/types.html#type-langcode">código de idioma</a>. Por defecto: "desconocido". Lo fija el navegador.</td>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"><span style="color: green;">dir </span></a></td>
-   <td>Indica la <a class="external" href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html">dirección de texto</a> y tablas.</td>
-   <td>Uno de los siguientes: <abbr title="Left-to-right"> 'ltr' </abbr> o <abbr title="Right-to-left"> 'rtl'. </abbr> Por defecto: En castellano 'ltr'. Lo fija el navegador.</td>
-  </tr>
-  <tr>
-   <th colspan="3">Específicos</th>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-type-STYLE"><code style="color: green;">type </code></a></td>
-   <td>Indica el lenguaje de hojas de estilo usado.</td>
-   <td>Un tipo <a class="external" href="http://html.conclase.net/w3c/html401-es/types.html#type-content-type">MIME</a>. Para CSS es: "text/css".</td>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-media"><code style="color: green;">media </code></a></td>
-   <td>Indica el/los medios a los que está destinada la información de estilo.</td>
-   <td>Uno o más <a class="external" href="http://html.conclase.net/w3c/html401-es/types.html#type-media-descriptors">descriptores de medio</a> separados por coma. Por defecto: 'screen'. Lo fija el navegador</td>
-  </tr>
-  <tr>
-   <th colspan="3">De transición</th>
-  </tr>
-  <tr>
-   <td colspan="3">No tiene</td>
-  </tr>
-  <tr>
-   <th>atributo</th>
-   <th>descripción</th>
-   <th>valor</th>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>atributo</th>
+      <th>descripción</th>
+      <th>valor</th>
+    </tr>
+    <tr>
+      <th colspan="3">Genéricos</th>
+    </tr>
+    <tr>
+      <td>
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
+          ><span style="color: green">title</span></a
+        >
+      </td>
+      <td>
+        Texto informativo o título del elemento. Suele mostrarse a modo de "tool
+        tip".
+      </td>
+      <td>
+        Texto legible por personas. Sensible a
+        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr>. Por
+        defecto: Lo fija el navegador.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
+          ><span style="color: green">lang</span></a
+        >
+      </td>
+      <td>
+        Información sobre el
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
+          >idioma del contenido</a
+        >
+        del elemento y del valor de sus atributos.
+      </td>
+      <td>
+        Un
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/types.html#type-langcode"
+          >código de idioma</a
+        >. Por defecto: "desconocido". Lo fija el navegador.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
+          ><span style="color: green">dir</span></a
+        >
+      </td>
+      <td>
+        Indica la
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
+          >dirección de texto</a
+        >
+        y tablas.
+      </td>
+      <td>
+        Uno de los siguientes: <abbr title="Left-to-right">'ltr' </abbr>o
+        <abbr title="Right-to-left">'rtl'. </abbr>Por defecto: En castellano
+        'ltr'. Lo fija el navegador.
+      </td>
+    </tr>
+    <tr>
+      <th colspan="3">Específicos</th>
+    </tr>
+    <tr>
+      <td>
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-type-STYLE"
+          ><code style="color: green">type</code></a
+        >
+      </td>
+      <td>Indica el lenguaje de hojas de estilo usado.</td>
+      <td>
+        Un tipo
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/types.html#type-content-type"
+          >MIME</a
+        >. Para CSS es: "text/css".
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-media"
+          ><code style="color: green">media</code></a
+        >
+      </td>
+      <td>
+        Indica el/los medios a los que está destinada la información de estilo.
+      </td>
+      <td>
+        Uno o más
+        <a
+          class="external"
+          href="http://html.conclase.net/w3c/html401-es/types.html#type-media-descriptors"
+          >descriptores de medio</a
+        >
+        separados por coma. Por defecto: 'screen'. Lo fija el navegador
+      </td>
+    </tr>
+    <tr>
+      <th colspan="3">De transición</th>
+    </tr>
+    <tr>
+      <td colspan="3">No tiene</td>
+    </tr>
+    <tr>
+      <th>atributo</th>
+      <th>descripción</th>
+      <th>valor</th>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Ejemplos_de_uso" name="Ejemplos_de_uso">Ejemplos de uso</h3>
+### Ejemplos de uso
 
-<div class="highlight">
-<h4 id="Ejemplo_simple" name="Ejemplo_simple">Ejemplo simple</h4>
+#### Ejemplo simple
 
-<pre class="eval">&lt;<strong>style</strong> type="text/css"&gt;
+```
+<style type="text/css">
  p { color: red; }
-&lt;/<strong>style</strong>&gt;
-&lt;p&gt; Texto en rojo &lt;/p&gt;
-</pre>
-</div>
+</style>
+<p> Texto en rojo </p>
+```
 
-<h3 id="Estilo_predeterminado" name="Estilo_predeterminado">Estilo predeterminado</h3>
+### Estilo predeterminado
 
-<h3 id="Notas" name="Notas">Notas</h3>
+### Notas
 
-<h3 id="Referencia" name="Referencia">Referencia</h3>
+### Referencia
 
-<ul>
- <li>El elemento <a class="external" href="http://html.conclase.net/w3c/html401-es/present/styles.html#edef-STYLE"><strong>style</strong> en la especificación</a> de html 4.01</li>
- <li>Especificación de <a class="external" href="http://www.sidar.org/recur/desdi/traduc/es/css/cover.html">CSS 2</a></li>
-</ul>
+- El elemento [**style** en la especificación](http://html.conclase.net/w3c/html401-es/present/styles.html#edef-STYLE) de html 4.01
+- Especificación de [CSS 2](http://www.sidar.org/recur/desdi/traduc/es/css/cover.html)
 
-<h3 id="Soporte" name="Soporte">Soporte</h3>
+### Soporte
 
-<p>Puede consultar esta <a class="external" href="http://www.webdevout.net/browser_support_html.php#support-html401-style">comparativa</a>: IE 6 - IE 7 - FF 1.5 - OP 9.</p>
+Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html.php#support-html401-style): IE 6 - IE 7 - FF 1.5 - OP 9.
 
-<p> </p>
+---
 
-<hr>
-<div class="note">
-<p>Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.</p>
+> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+>
+> ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 
-<p>¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta <a>MDC:Como ayudar</a>.</p>
-</div>
+Categoría
 
-<p><br>
- <span class="comment">Categoría</span></p>
+interwiki links
 
-<p><span class="comment">interwiki links</span></p>
-
-<p><span class="comment">automatismos</span></p>
+automatismos

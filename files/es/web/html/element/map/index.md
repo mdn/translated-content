@@ -8,121 +8,112 @@ tags:
 translation_of: Web/HTML/Element/map
 original_slug: Web/HTML/Elemento/map
 ---
-<h3 id="Definici.C3.B3n" name="Definici.C3.B3n">Definición</h3>
+### Definición
 
-<dl>
-<dt><span class="comment">descripción de uno o dos párrafos</span></dt>
+- descripción de uno o dos párrafos
+  - : **Sus etiquetas son**: \<map> y \</map> (ambas obligatorias).
+    **Crea una caja**: [En bloque ](es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Está definido como**: [Elemento especial](es/HTML/Elemento/Tipos_de_elementos#especial).
+    **Puede contener**: Uno o más elementos [en bloque ](es/HTML/Elemento/Tipos_de_elementos#en_bloque), o elementos [area](es/HTML/Elemento/area)
 
- <dd><strong>Sus etiquetas son</strong>: &lt;map&gt; y &lt;/map&gt; (ambas obligatorias).
- 
- <strong>Crea una caja</strong>: <a href="es/HTML/Elemento/Tipos_de_elementos#en_bloque"> En bloque </a>.
- 
- <strong>Está definido como</strong>: <a href="es/HTML/Elemento/Tipos_de_elementos#especial"> Elemento especial</a>.
- 
- <strong>Puede contener</strong>: Uno o más elementos <a href="es/HTML/Elemento/Tipos_de_elementos#en_bloque">en bloque </a>, o elementos <a href="es/HTML/Elemento/area">area</a></dd>
-</dl>
-
-<h4 id="Atributos" name="Atributos">Atributos</h4>
+#### Atributos
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Atributo</th>
-   <th colspan="2">Valor</th>
-   <th>Descripción</th>
-  </tr>
-  <tr>
-   <th colspan="4">Genéricos</th>
-  </tr>
-  <tr>
-   <td><code style="color: green;">title </code></td>
-   <td>Texto</td>
-   <td>Implícito</td>
-   <td>Título consultivo del elemento.</td>
-  </tr>
-  <tr>
-   <td><code style="color: green;">style </code></td>
-   <td>Declaraciones de estilo</td>
-   <td>Implícito</td>
-   <td>Información de estilo en línea.</td>
-  </tr>
-  <tr>
-   <td><code style="color: green;">id </code></td>
-   <td>Un 'nombre'</td>
-   <td>Implícito</td>
-   <td>Identificador único a nivel de documento.</td>
-  </tr>
-  <tr>
-   <td><code style="color: green;">class </code></td>
-   <td>Lista de clases CSS</td>
-   <td>implícito</td>
-   <td>Identificador a nivel de documento.</td>
-  </tr>
-  <tr>
-   <td><code style="color: green;">dir </code></td>
-   <td>Uno de los siguientes: "ltr" o "rtl"</td>
-   <td>Implícito</td>
-   <td>Dirección del texto.</td>
-  </tr>
-  <tr>
-   <td><code style="color: green;">lang </code></td>
-   <td>Código de idioma</td>
-   <td>Implícito</td>
-   <td>Información sobre el idioma.</td>
-  </tr>
-  <tr>
-   <td colspan="4"><strong>Eventos</strong>: <code style="color: green;">onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup. </code></td>
-  </tr>
-  <tr>
-   <th colspan="4">Específicos</th>
-  </tr>
-  <tr>
-   <td><code style="color: green;">name </code></td>
-   <td>Un 'nombre'</td>
-   <td>Necesario</td>
-   <td>Sirve de referencia al atributo usemap</td>
-  </tr>
-  <tr>
-   <th colspan="4">De transición</th>
-  </tr>
-  <tr>
-   <td colspan="4">No tiene</td>
-  </tr>
-  <tr>
-   <th>Atributo</th>
-   <th colspan="2">Valor</th>
-   <th>Descripción</th>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Atributo</th>
+      <th colspan="2">Valor</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <th colspan="4">Genéricos</th>
+    </tr>
+    <tr>
+      <td><code style="color: green">title</code></td>
+      <td>Texto</td>
+      <td>Implícito</td>
+      <td>Título consultivo del elemento.</td>
+    </tr>
+    <tr>
+      <td><code style="color: green">style</code></td>
+      <td>Declaraciones de estilo</td>
+      <td>Implícito</td>
+      <td>Información de estilo en línea.</td>
+    </tr>
+    <tr>
+      <td><code style="color: green">id</code></td>
+      <td>Un 'nombre'</td>
+      <td>Implícito</td>
+      <td>Identificador único a nivel de documento.</td>
+    </tr>
+    <tr>
+      <td><code style="color: green">class</code></td>
+      <td>Lista de clases CSS</td>
+      <td>implícito</td>
+      <td>Identificador a nivel de documento.</td>
+    </tr>
+    <tr>
+      <td><code style="color: green">dir</code></td>
+      <td>Uno de los siguientes: "ltr" o "rtl"</td>
+      <td>Implícito</td>
+      <td>Dirección del texto.</td>
+    </tr>
+    <tr>
+      <td><code style="color: green">lang</code></td>
+      <td>Código de idioma</td>
+      <td>Implícito</td>
+      <td>Información sobre el idioma.</td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <strong>Eventos</strong>:
+        <code style="color: green"
+          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
+          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th colspan="4">Específicos</th>
+    </tr>
+    <tr>
+      <td><code style="color: green">name</code></td>
+      <td>Un 'nombre'</td>
+      <td>Necesario</td>
+      <td>Sirve de referencia al atributo usemap</td>
+    </tr>
+    <tr>
+      <th colspan="4">De transición</th>
+    </tr>
+    <tr>
+      <td colspan="4">No tiene</td>
+    </tr>
+    <tr>
+      <th>Atributo</th>
+      <th colspan="2">Valor</th>
+      <th>Descripción</th>
+    </tr>
+  </tbody>
 </table>
 
-<p> </p>
+### Ejemplos
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
-
-<pre class="eval">  &lt;&gt;
-
+```
+  <>
 
 
-  &lt;/&gt;
-</pre>
 
-<p> </p>
+  </>
+```
 
-<h3 id="Comentarios" name="Comentarios">Comentarios</h3>
+### Comentarios
 
-<h3 id="Referencia" name="Referencia">Referencia</h3>
+### Referencia
 
-<ul>
- <li>El elemento <a class="external" href="http://html.conclase.net/w3c/html401-es/struct/objects.html#edef-MAP"><strong>map</strong> en la especificación</a> de html 4.01.</li>
-</ul>
+- El elemento [**map** en la especificación](http://html.conclase.net/w3c/html401-es/struct/objects.html#edef-MAP) de html 4.01.
 
-<p><span class="comment">secciones futuras: == Soporte de los navegadores == == Valores por defecto y visualización en Firefox ==</span></p>
+secciones futuras: == Soporte de los navegadores == == Valores por defecto y visualización en Firefox ==
 
-<div class="note">
-<p>Este documento está siendo editado, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.</p>
-
-<p>¿Quieres participar en la elaboración de este documento? Para saber como hacerlo consulta <a>MDC:Como ayudar</a>.</p>
-</div>
-
-<p> </p>
+> **Nota:** Este documento está siendo editado, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+>
+> ¿Quieres participar en la elaboración de este documento? Para saber como hacerlo consulta MDC:Como ayudar.

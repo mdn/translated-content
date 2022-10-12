@@ -9,83 +9,79 @@ tags:
 translation_of: Web/HTML/Element/figcaption
 original_slug: Web/HTML/Elemento/figcaption
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p>El elemento <strong>HTML <code>&lt;figcaption&gt;</code>  </strong>representa un subtítulo o leyenda asociado al contenido del elemento padre {{HTMLElement("figure")}}, pudiendo ser colocado como primer o último hijo. Es importante destacar que el elemento <strong><code>&lt;figcaption&gt;</code></strong> es opcional.</p>
+El elemento **HTML `<figcaption>` **representa un subtítulo o leyenda asociado al contenido del elemento padre {{HTMLElement("figure")}}, pudiendo ser colocado como primer o último hijo. Es importante destacar que el elemento **`<figcaption>`** es opcional.
 
-<p>{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></th>
-   <td>Ninguna</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenido Permitido</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omisión de etiqueta</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Elementos padre permitidos</th>
-   <td>En un  elemento {{HTMLElement("figure")}} el elemento <code>&lt;figcaption&gt;</code> debe ser el primero o el último hijo.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interfaz DOM</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Contento en el que puede ser usado</th>
-   <td>Como the first o last child de un <strong>&lt;figure&gt;</strong> element</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a
+          href="/en-US/docs/HTML/Content_categories"
+          title="HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>Ninguna</td>
+    </tr>
+    <tr>
+      <th scope="row">Contenido Permitido</th>
+      <td>
+        <a
+          href="/en-US/docs/HTML/Content_categories#Flow_content"
+          title="HTML/Content categories#Flow content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omisión de etiqueta</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Elementos padre permitidos</th>
+      <td>
+        En un elemento {{HTMLElement("figure")}} el elemento
+        <code>&#x3C;figcaption></code> debe ser el primero o el último hijo.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interfaz DOM</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Contento en el que puede ser usado</th>
+      <td>
+        Como the first o last child de un <strong>&#x3C;figure></strong> element
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento sólo incluye los </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">global attributes</a><span style="line-height: 21px;">.</span></p>
+Este elemento sólo incluye los [global attributes](/es/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Para ejemplos con <code>&lt;figcaption&gt;</code>, por favor ver la página {{HTMLElement("figure")}}.</p>
+Para ejemplos con `<figcaption>`, por favor ver la página {{HTMLElement("figure")}}.
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                   | Estado                           | Comentario |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
-<div class="">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
+The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
 
-<p>{{Compat("html.elements.figcaption")}}</p>
+{{Compat("html.elements.figcaption")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>El elemento {{HTMLElement("figure")}}.</li>
-</ul>
+- El elemento {{HTMLElement("figure")}}.

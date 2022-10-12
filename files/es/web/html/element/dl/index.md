@@ -10,211 +10,219 @@ tags:
 translation_of: Web/HTML/Element/dl
 original_slug: Web/HTML/Elemento/dl
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>El elemento <strong>HTML <code>&lt;dl&gt;</code>  </strong>representa una lista descriptiva. El elemento encierra una lista de grupos de términos (especificados con el uso del elemento {{HTMLElement("dt")}}) y de descripciones (proveídas con elementos {{HTMLElement("dd")}}). Algunos usos comunes para este elemento son implementar un glosario o para desplegar metadatos (lista de pares llave-valor).</p>
+El elemento **HTML `<dl>` **representa una lista descriptiva. El elemento encierra una lista de grupos de términos (especificados con el uso del elemento {{HTMLElement("dt")}}) y de descripciones (proveídas con elementos {{HTMLElement("dd")}}). Algunos usos comunes para este elemento son implementar un glosario o para desplegar metadatos (lista de pares llave-valor).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
 
-<p class="">El contenido para este ejemplo interactivo se encuentra almacenado en un repositorio GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> y envía la petición de extración (pull request).</p>
+El contenido para este ejemplo interactivo se encuentra almacenado en un repositorio GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, por favor clona [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)y envía la petición de extración (pull request).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido">Categorías de contenido</a></th>
-   <td><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico">Contenido de flujo</a>, y si los elementos hijos de <code>&lt;dl&gt;</code> incluyen un grupo nombre-valor, contenido palpable.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenido permitido</th>
-   <td>
-    <p>Ya sea: Cero o más grupos cada uno consistiendo en uno o más elementos {{HTMLElement("dt")}} seguidos por uno o más elementos {{HTMLElement("dd")}}, opcionalmente intercalados con elementos {{HTMLElement("script")}} y elementos {{HTMLElement("template")}}.<br>
-     O: Uno o más elementos {{HTMLElement("div")}}, opcionalmente entremezclados con elementos {{HTMLElement("script")}} y elementos {{HTMLElement("template")}}.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Omisión de Tag</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Padres permitidos</th>
-   <td>Cualquier elemento que acepte <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico">contenido de flujo</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Roles ARIA permitidos</th>
-   <td>{{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Interfaz DOM</th>
-   <td>{{domxref("HTMLDListElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+          >Categorías de contenido</a
+        >
+      </th>
+      <td>
+        <a
+          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
+          >Contenido de flujo</a
+        >, y si los elementos hijos de <code>&#x3C;dl></code> incluyen un grupo
+        nombre-valor, contenido palpable.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenido permitido</th>
+      <td>
+        <p>
+          Ya sea: Cero o más grupos cada uno consistiendo en uno o más elementos
+          {{HTMLElement("dt")}} seguidos por uno o más elementos
+          {{HTMLElement("dd")}}, opcionalmente intercalados con elementos
+          {{HTMLElement("script")}} y elementos
+          {{HTMLElement("template")}}.<br />O: Uno o más elementos
+          {{HTMLElement("div")}}, opcionalmente entremezclados con
+          elementos {{HTMLElement("script")}} y elementos
+          {{HTMLElement("template")}}.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omisión de Tag</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Padres permitidos</th>
+      <td>
+        Cualquier elemento que acepte
+        <a
+          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
+          >contenido de flujo</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Roles ARIA permitidos</th>
+      <td>
+        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interfaz DOM</th>
+      <td>{{domxref("HTMLDListElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Los atributos de este elemento incluyen los <a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales</a>.</p>
+Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Término_sencillo_y_descripción">Término sencillo y descripción</h3>
+### Término sencillo y descripción
 
-<pre class="brush: html notranslate">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dd&gt;
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dd>
     A free, open source, cross-platform,
     graphical web browser developed by the
     Mozilla Corporation and hundreds of
     volunteers.
-  &lt;/dd&gt;
+  </dd>
 
-  &lt;!-- Other terms and descriptions --&gt;
-&lt;/dl&gt;
-</pre>
+  <!-- Other terms and descriptions -->
+</dl>
+```
 
-<p>Salida:</p>
+Salida:
 
-<p><img alt="Image:HTML-dl1.png" src="/@api/deki/files/241/=HTML-dl1.png"></p>
+![Image:HTML-dl1.png](/@api/deki/files/241/=HTML-dl1.png)
 
-<h3 id="Múltiples_términos_descripción_sencilla">Múltiples términos, descripción sencilla</h3>
+### Múltiples términos, descripción sencilla
 
-<pre class="brush: html notranslate">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dt&gt;Mozilla Firefox&lt;/dt&gt;
-  &lt;dt&gt;Fx&lt;/dt&gt;
-  &lt;dd&gt;
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dt>Mozilla Firefox</dt>
+  <dt>Fx</dt>
+  <dd>
     A free, open source, cross-platform,
     graphical web browser developed by the
     Mozilla Corporation and hundreds of
     volunteers.
-  &lt;/dd&gt;
+  </dd>
 
-  &lt;!-- Other terms and descriptions --&gt;
-&lt;/dl&gt;
-</pre>
+  <!-- Other terms and descriptions -->
+</dl>
+```
 
-<p>Salida:</p>
+Salida:
 
-<p><img alt="Image:HTML-dl2.png" src="/@api/deki/files/242/=HTML-dl2.png"></p>
+![Image:HTML-dl2.png](/@api/deki/files/242/=HTML-dl2.png)
 
-<h3 id="Término_sencillo_múltiples_descripciones">Término sencillo, múltiples descripciones</h3>
+### Término sencillo, múltiples descripciones
 
-<pre class="brush: html notranslate">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dd&gt;
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dd>
     A free, open source, cross-platform,
     graphical web browser developed by the
     Mozilla Corporation and hundreds of
     volunteers.
-  &lt;/dd&gt;
-  &lt;dd&gt;
+  </dd>
+  <dd>
     The Red Panda also known as the Lesser
     Panda, Wah, Bear Cat or Firefox, is a
     mostly herbivorous mammal, slightly larger
     than a domestic cat (60 cm long).
-  &lt;/dd&gt;
+  </dd>
 
-  &lt;!-- Other terms and descriptions --&gt;
-&lt;/dl&gt;
-</pre>
+  <!-- Other terms and descriptions -->
+</dl>
+```
 
-<p>Output:</p>
+Output:
 
-<p><img alt="Image:HTML-dl3.png" src="/@api/deki/files/243/=HTML-dl3.png"></p>
+![Image:HTML-dl3.png](/@api/deki/files/243/=HTML-dl3.png)
 
-<h3 id="Múltiples_términos_y_descripciones">Múltiples términos y descripciones</h3>
+### Múltiples términos y descripciones
 
-<p>También es posible definir múltiples términos con múltiples descripciones correspondientes, combinando los ejemplos de arriba.</p>
+También es posible definir múltiples términos con múltiples descripciones correspondientes, combinando los ejemplos de arriba.
 
-<h3 id="Metadatos">Metadatos</h3>
+### Metadatos
 
-<p>Las listas descriptivas son útiles para desplegar metadatos como una lista de pares llave-valor.</p>
+Las listas descriptivas son útiles para desplegar metadatos como una lista de pares llave-valor.
 
-<pre class="brush: html notranslate">&lt;dl&gt;
-  &lt;dt&gt;Name&lt;/dt&gt;
-  &lt;dd&gt;Godzilla&lt;/dd&gt;
-  &lt;dt&gt;Born&lt;/dt&gt;
-  &lt;dd&gt;1952&lt;/dd&gt;
-  &lt;dt&gt;Birthplace&lt;/dt&gt;
-  &lt;dd&gt;Japan&lt;/dd&gt;
-  &lt;dt&gt;Color&lt;/dt&gt;
-  &lt;dd&gt;Green&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+```html
+<dl>
+  <dt>Name</dt>
+  <dd>Godzilla</dd>
+  <dt>Born</dt>
+  <dd>1952</dd>
+  <dt>Birthplace</dt>
+  <dd>Japan</dd>
+  <dt>Color</dt>
+  <dd>Green</dd>
+</dl>
+```
 
-<p>Tip: Puede ser útil definir un separador llave-valor en el CSS, como:</p>
+Tip: Puede ser útil definir un separador llave-valor en el CSS, como:
 
-<pre class="brush: css notranslate">dt::after {
+```css
+dt::after {
   content: ": ";
-}</pre>
+}
+```
 
-<h3 id="Encapsulado_de_grupos_nombre-valor_en_elementos_HTMLElementdiv">Encapsulado de grupos nombre-valor en elementos {{HTMLElement("div")}}</h3>
+### Encapsulado de grupos nombre-valor en elementos {{HTMLElement("div")}}
 
-<p><a href="/es/docs/Glossary/WHATWG">WHATWG</a> HTML permite encapsular cada grupo nombre-valor de un elemento {{HTMLElement("dl")}} en un elemento {{HTMLElement("div")}}. Esto puede ser útil cuando se utilizan <a href="/es/docs/Web/HTML/Microdata">microdatos</a>, o cuando <a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales</a> apliquen a todo el grupo, o por motivos de estilo.</p>
+[WHATWG](/es/docs/Glossary/WHATWG) HTML permite encapsular cada grupo nombre-valor de un elemento {{HTMLElement("dl")}} en un elemento {{HTMLElement("div")}}. Esto puede ser útil cuando se utilizan [microdatos](/es/docs/Web/HTML/Microdata), o cuando [atributos globales](/es/docs/Web/HTML/Atributos_Globales) apliquen a todo el grupo, o por motivos de estilo.
 
-<pre class="brush: html notranslate">&lt;dl&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Name&lt;/dt&gt;
-    &lt;dd&gt;Godzilla&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Born&lt;/dt&gt;
-    &lt;dd&gt;1952&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Birthplace&lt;/dt&gt;
-    &lt;dd&gt;Japan&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Color&lt;/dt&gt;
-    &lt;dd&gt;Green&lt;/dd&gt;
-  &lt;/div&gt;
-&lt;/dl&gt;
-</pre>
+```html
+<dl>
+  <div>
+    <dt>Name</dt>
+    <dd>Godzilla</dd>
+  </div>
+  <div>
+    <dt>Born</dt>
+    <dd>1952</dd>
+  </div>
+  <div>
+    <dt>Birthplace</dt>
+    <dd>Japan</dd>
+  </div>
+  <div>
+    <dt>Color</dt>
+    <dd>Green</dd>
+  </div>
+</dl>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>No use este elemento (ni elementos {{HTMLElement("ul")}}) solo para crear sangría en una página. Si bien funciona, es una mala práctica y obscurece el signinifcado de las listas descriptivas.</p>
+No use este elemento (ni elementos {{HTMLElement("ul")}}) solo para crear sangría en una página. Si bien funciona, es una mala práctica y obscurece el signinifcado de las listas descriptivas.
 
-<p>Para cambiar la indentación de un término, usa la propiedad {{cssxref("margin")}} de <a href="/es/docs/Web/CSS">CSS</a>.</p>
+Para cambiar la indentación de un término, usa la propiedad {{cssxref("margin")}} de [CSS](/es/docs/Web/CSS).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-dl-element', '&lt;dl&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-dl-element', '&lt;dl&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dl&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estatus                          | Comentarios        |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-dl-element', '&lt;dl&gt;')}}     | {{Spec2('HTML WHATWG')}} |                    |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dl-element', '&lt;dl&gt;')}} | {{Spec2('HTML5 W3C')}}     |                    |
+| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dl&gt;')}}                 | {{Spec2('HTML4.01')}}     | Definición inicial |
 
-<h2 id="Compatibilidad_Web">Compatibilidad Web</h2>
+## Compatibilidad Web
 
+{{Compat("html.elements.dl")}}
 
+## See also
 
-<p>{{Compat("html.elements.dl")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{HTMLElement("dt")}} element</li>
- <li>{{HTMLElement("dd")}} element</li>
-</ul>
+- {{HTMLElement("dt")}} element
+- {{HTMLElement("dd")}} element

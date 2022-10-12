@@ -13,103 +13,79 @@ tags:
 translation_of: Web/HTML/Element/marquee
 original_slug: Web/HTML/Elemento/marquee
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}{{obsolete_header}}
 
-<div>{{obsolete_header}}</div>
+## Resumen
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+La etiqueta html `<marquee>` se utiliza para insertar un area de texto en movimiento. También se la conoce como marquesina.
 
-<p>La etiqueta html <code>&lt;marquee&gt;</code> se utiliza para insertar un area de texto en movimiento. También se la conoce como marquesina.</p>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+- {{htmlattrdef("behavior")}}
+  - : Establece cómo se desplazará el texto en la etiqueta marquee. Los valores posibles son scroll, slide, y alternate. Si no hay un valor especificado, el valor por defecto establecido es scroll.
+    Scroll: Hara que lo que este en la marquesina se mueva de derecha a izquierda, de manera ininterrumpida.
+    Slide: Una vez que completa el recorrido de derecha a izquierda(por defecto) se detiene.
+    Alternate: Se movera de una esquina a la otra, dando el efecto de rebote.
+- {{htmlattrdef("bgcolor")}}
+  - : Establece el color de fondo, puede utilizarse el nombre, o su valor hexadecimal.
+- {{htmlattrdef("direction")}}
+  - : Establece la dirección en la que el texto contenido se desplazará. Los valores posibles son left (para moverse hacia la izquierda), right (para moverse a la derecha), up (hacia arriba) y down (hacia abajo). Si no se especifica un valor, por defecto será left.
+- {{htmlattrdef("height")}}
+  - : Establece la altura de la etiqueta en pixeles, o en un valor porcentual.
+- {{htmlattrdef("hspace")}}
+  - : Establece el margen horizontal.
+- {{htmlattrdef("loop")}}
+  - : Establece el número de veces que la marquesina realizará el desplazamiento. Sino se especifica esta propiedad, por defecto es -1, lo que quiere decir que la marquesina se desplazará continuamente.
+- {{htmlattrdef("scrollamount")}}
+  - : Establece el valor de movimiento para cada intervalo en pixeles. Por defecto su valor es 6.
+- {{htmlattrdef("scrolldelay")}}
+  - : Establece el intervalo entre cada desplazamiento, en milisegundos. El valor por defecto es 85. Nota: Cualquier valor inferior a 60 será ignorado, (puesto que el valor minimo es 60) y se establecerá 60 en su lugar. Salvo que se especifique` truespeed.`
+- {{htmlattrdef("truespeed")}}
+  - : Por defecto, si los valores de `scrolldelay son inferiores a 60 serán ignorados. Pero si truespeed está presente, esos valores inferiores a 60 serán aceptados.`
+- {{htmlattrdef("vspace")}}
+  - : Establece el margen vertical en pixeles o en un valor porcentual.
+- {{htmlattrdef("width")}}
+  - : Establece el ancho de la etiqueta en pixeles o un valor porcentual.
 
-<dl>
- <dt>{{htmlattrdef("behavior")}}</dt>
- <dd>Establece cómo se desplazará el texto en la etiqueta marquee. Los valores posibles son scroll, slide, y alternate. Si no hay un valor especificado, el valor por defecto establecido es scroll.
- 
- Scroll: Hara que lo que este en la marquesina se mueva de derecha a izquierda, de manera ininterrumpida.<br>
- Slide: Una vez que completa el recorrido de derecha a izquierda(por defecto) se detiene.<br>
- Alternate: Se movera de una esquina a la otra, dando el efecto de rebote.</dd>
- <dt>{{htmlattrdef("bgcolor")}}</dt>
- <dd>Establece el color de fondo, puede utilizarse el nombre, o su  valor hexadecimal.</dd>
- <dt>{{htmlattrdef("direction")}}</dt>
- <dd>Establece la dirección en la que el texto contenido se desplazará. Los valores posibles son left (para moverse hacia la izquierda), right (para moverse a la derecha), up (hacia arriba) y down (hacia abajo). Si no se especifica un valor, por defecto será left.</dd>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>Establece la altura de la etiqueta en pixeles, o en un valor porcentual.</dd>
- <dt>{{htmlattrdef("hspace")}}</dt>
- <dd>Establece el margen horizontal.</dd>
- <dt>{{htmlattrdef("loop")}}</dt>
- <dd>Establece el número de veces que la marquesina realizará el desplazamiento. Sino se especifica esta propiedad, por defecto es -1, lo que quiere decir que la marquesina se desplazará continuamente.</dd>
- <dt>{{htmlattrdef("scrollamount")}}</dt>
- <dd>Establece el valor de movimiento para cada intervalo en pixeles. Por defecto su valor es 6.</dd>
- <dt>{{htmlattrdef("scrolldelay")}}</dt>
- <dd>Establece el intervalo entre cada desplazamiento, en milisegundos. El valor por defecto es 85. Nota: Cualquier valor inferior a 60 será ignorado, (puesto que el valor minimo es 60) y se establecerá 60 en su lugar. Salvo que se especifique<code> truespeed.</code></dd>
- <dt>{{htmlattrdef("truespeed")}}</dt>
- <dd>Por defecto, si los valores de <code>scrolldelay son inferiores a 60 serán ignorados. Pero si truespeed está presente, esos valores inferiores a 60 serán aceptados.</code></dd>
- <dt>{{htmlattrdef("vspace")}}</dt>
- <dd>Establece el margen vertical en pixeles o en un valor porcentual.</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>Establece el ancho de la etiqueta en pixeles o un valor porcentual.</dd>
-</dl>
+## Controladores de eventos
 
-<h2 id="Event_handlers" name="Event_handlers">Controladores de eventos</h2>
+- {{htmlattrdef("onbounce")}}
+  - : Este evento se lanza cuando la marquesina llegó al final del desplazamiento. Ésto solo se activa cuando el atributo `behavior `está establecido en `alternate`.
+- {{htmlattrdef("onfinish")}}
+  - : Este evento se lanza cuando la marquesina repitió el desplazamiento la cantidad de veces establecidas en el atributo `loop`. El evento se lanza solo si el atributo `loop` tiene un valor mayor a 0.
+- {{htmlattrdef("onstart")}}
+  - : Este evento se lanza cuando la marquesina comienza su desplazamiento.
 
-<dl>
- <dt>{{htmlattrdef("onbounce")}}</dt>
- <dd>Este evento se lanza cuando la marquesina llegó al final del desplazamiento. Ésto solo se activa cuando el atributo <code>behavior </code>está establecido en <code>alternate</code>.</dd>
- <dt>{{htmlattrdef("onfinish")}}</dt>
- <dd>Este evento se lanza cuando la marquesina repitió el desplazamiento la cantidad de veces establecidas en el atributo <code>loop</code>. El evento se lanza solo si el atributo <code>loop</code> tiene un valor mayor a 0.</dd>
- <dt>{{htmlattrdef("onstart")}}</dt>
- <dd>Este evento se lanza cuando la marquesina comienza su desplazamiento.</dd>
-</dl>
+## Métodos
 
-<h2 id="Methods" name="Methods">Métodos</h2>
+- start
+  - : Comienza el desplazamiento de la marquesina.
+- stop
+  - : Para el desplazamiento de la marquesina
 
-<dl>
- <dt>start</dt>
- <dd>Comienza el desplazamiento de la marquesina.</dd>
- <dt>stop</dt>
- <dd>Para el desplazamiento de la marquesina</dd>
-</dl>
+## Ejemplos
 
-<h2 id="Ejemplos">Ejemplos</h2>
+```html
+<marquee>Este texto se mueve de derecha a izquierda</marquee>
 
-<pre class="brush: html">&lt;marquee&gt;Este texto se mueve de derecha a izquierda&lt;/marquee&gt;
+<marquee direction="up">Este texto se mueve de abajo hacia arriba</marquee>
 
-&lt;marquee direction="up"&gt;Este texto se mueve de abajo hacia arriba&lt;/marquee&gt;
-
-&lt;marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid"&gt;
-  &lt;marquee behavior="alternate"&gt;
+<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+  <marquee behavior="alternate">
     Este texto rebotará dentro de la marquesina.
-  &lt;/marquee&gt;
-&lt;/marquee&gt;</pre>
+  </marquee>
+</marquee>
+```
 
-<p>{{EmbedLiveSample("Examples", 600, 450)}}</p>
+{{EmbedLiveSample("Examples", 600, 450)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'obsolete.html#the-marquee-element-2', '&lt;marquee&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Marcada como obsoleta en favor de CSS. Comportamiento esperado definido por razones de retrocompatibilidad.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'obsolete.html#the-marquee-element-0', '&lt;marquee&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Marcada como obsoleta en favor de CSS. Comportamiento esperado definido por razones de retrocompatibilidad.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                           | Comment                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'obsolete.html#the-marquee-element-2', '&lt;marquee&gt;')}} | {{Spec2('HTML WHATWG')}} | Marcada como obsoleta en favor de CSS. Comportamiento esperado definido por razones de retrocompatibilidad. |
+| {{SpecName('HTML5 W3C', 'obsolete.html#the-marquee-element-0', '&lt;marquee&gt;')}} | {{Spec2('HTML5 W3C')}}     | Marcada como obsoleta en favor de CSS. Comportamiento esperado definido por razones de retrocompatibilidad. |
 
-<h2 id="Navegadores_compatibles">Navegadores compatibles</h2>
+## Navegadores compatibles
 
 {{Compat("html.elements.marquee")}}

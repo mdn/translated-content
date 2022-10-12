@@ -4,80 +4,57 @@ slug: Web/HTML/Element/pre
 translation_of: Web/HTML/Element/pre
 original_slug: Web/HTML/Elemento/pre
 ---
-<h2 id="Sumario">Sumario</h2>
+## Sumario
 
-<p>El <strong>Elemento</strong> <strong>HTML &lt;pre&gt;</strong> (o <em>Texto HTML Preformateado</em>) representa texto preformateado. El texto en este elemento típicamente se muestra en una fuente fija, no proporcional, exactamente como es mostrado en el archivo. Los espacios dentro de este elemento también son mostrados como están escritos.</p>
+El **Elemento** **HTML \<pre>** (o _Texto HTML Preformateado_) representa texto preformateado. El texto en este elemento típicamente se muestra en una fuente fija, no proporcional, exactamente como es mostrado en el archivo. Los espacios dentro de este elemento también son mostrados como están escritos.
 
-<ul class="">
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn> {{todo}}<a href="/en-US/docs/HTML/Content_categories#Flowing_content" title="HTML/Content_categories#Phrasing_content">Flow content</a>, palpable content.</li>
- <li><dfn>Permitted content</dfn> <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="/en-US/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</li>
- <li><dfn>Tag omission</dfn> {{no_tag_omission}}</li>
- <li><dfn>Permitted parent elements</dfn> Any element that accepts <a href="/en-US/docs/HTML/Content_categories#flow_content" title="HTML/Content categories#flow content">flow content</a>.</li>
- <li><dfn>DOM interface</dfn> {{domxref("HTMLPreElement")}}</li>
-</ul>
+- _[Content categories](/es/docs/HTML/Content_categories "HTML/Content_categories")_ {{todo}}[Flow content](/es/docs/HTML/Content_categories#Flowing_content "HTML/Content_categories#Phrasing_content"), palpable content.
+- _Permitted content_ [Phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).
+- _Tag omission_ {{no_tag_omission}}
+- _Permitted parent elements_ Any element that accepts [flow content](/es/docs/HTML/Content_categories#flow_content "HTML/Content categories#flow content").
+- _DOM interface_ {{domxref("HTMLPreElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento solo incluye los <a href="/en-US/docs/HTML/Global_attributes" title="/en-US/docs/">atributos globales</a>.</span></p>
+Este elemento solo incluye los [atributos globales](/es/docs/HTML/Global_attributes "/en-US/docs/").
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: html">&lt;!-- Un poco de codigo CSS --&gt;
-&lt;pre&gt;
+```html
+<!-- Un poco de codigo CSS -->
+<pre>
 body{
   color:  red;
 }
 a   {
   color:green;
 }
-&lt;/pre&gt;
 </pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<pre>body{
+```
+body{
   color:  red;
 }
 a   {
   color:green;
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Epecificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'the-pre-element.html#the-pre-element', '&lt;pre&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'text.html#h-9.3.4', '&lt;dl&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Epecificación                                                                                                    | Estado                           | Comentarios |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML5 W3C', 'the-pre-element.html#the-pre-element', '&lt;pre&gt;')}}     | {{Spec2('HTML5 W3C')}}     |             |
+| {{SpecName('HTML4.01', 'text.html#h-9.3.4', '&lt;dl&gt;')}}                                 | {{Spec2('HTML4.01')}}     |             |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con exploradores</h2>
+## Compatibilidad con exploradores
 
 {{Compat("html.elements.pre")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li>CSS: {{ Cssxref('white-space') }}, {{ Cssxref('word-break') }}</li>
-</ul>
+- CSS: {{ Cssxref('white-space') }}, {{ Cssxref('word-break') }}

@@ -8,17 +8,15 @@ tags:
 translation_of: Web/HTML/Reference
 original_slug: Web/HTML/Referencia
 ---
-<div>{{HTMLSidebar}}</div>
+{{HTMLSidebar}}
 
-<p>Esta referencia <a href="/es/docs/Web/HTML">HTML</a> describe todos los <strong>elementos</strong> y <strong>atributos</strong> de HTML, incluyendo los <strong>atributos globales</strong> que se aplican a todos los elementos.</p>
+Esta referencia [HTML](/es/docs/Web/HTML) describe todos los **elementos** y **atributos** de HTML, incluyendo los **atributos globales** que se aplican a todos los elementos.
 
-<dl>
- <dt><a href="/es/docs/Web/HTML/Elemento">Referencia de Elementos HTML</a></dt>
- <dd>Esta página lista todos los elementos HTML</dd>
- <dt><a href="/es/docs/Web/HTML/Atributos">Referencia de Atributos HTML</a></dt>
- <dd>Los elementos en HTML tienen atributos; estos son valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas para cumplir los criterios de los usuarios.</dd>
- <dt><a href="/es/docs/Web/HTML/Atributos_Globales">Atributos Globales</a></dt>
- <dd>Los atributos globales son atributos comunes a todos los elementos HTML; pueden usarse en todos los elementos, aunque pueden no tener efecto en algunos de ellos.</dd>
- <dt><a href="/es/docs/Web/HTML/Tipos_de_enlaces">Tipos de enlaces</a></dt>
- <dd>En HTML, los siguientes tipos de enlaces indican la relación entre dos documentos, de los cuales uno enlaza al otro usando un elemento &lt;a&gt; o bien &lt;area&gt;, o bien &lt;link&gt;.</dd>
-</dl>
+- [Referencia de Elementos HTML](/es/docs/Web/HTML/Elemento)
+  - : Esta página lista todos los elementos HTML
+- [Referencia de Atributos HTML](/es/docs/Web/HTML/Atributos)
+  - : Los elementos en HTML tienen atributos; estos son valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas para cumplir los criterios de los usuarios.
+- [Atributos Globales](/es/docs/Web/HTML/Atributos_Globales)
+  - : Los atributos globales son atributos comunes a todos los elementos HTML; pueden usarse en todos los elementos, aunque pueden no tener efecto en algunos de ellos.
+- [Tipos de enlaces](/es/docs/Web/HTML/Tipos_de_enlaces)
+  - : En HTML, los siguientes tipos de enlaces indican la relación entre dos documentos, de los cuales uno enlaza al otro usando un elemento \<a> o bien \<area>, o bien \<link>.

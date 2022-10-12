@@ -9,50 +9,45 @@ tags:
 translation_of: Web/HTML/Element/bgsound
 original_slug: Web/HTML/Elemento/bgsound
 ---
-<div>{{non-standard_header}}</div>
+{{non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El elemento HTML de sonido de fondo (&lt;bgsound&gt;) es un elemento de Internet Explorer que asocia  un sonido de fondo con un página .</p>
+El elemento HTML de sonido de fondo (\<bgsound>) es un elemento de Internet Explorer que asocia un sonido de fondo con un página .
 
-<div class="note">
-<p><strong>No usar esto ! </strong>Para incrustar un elemento en una página web , se debe  de usar el elemento  {{HTMLElement("audio")}}</p>
-</div>
+> **Nota:** **No usar esto !** Para incrustar un elemento en una página web , se debe de usar el elemento {{HTMLElement("audio")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<dl>
- <dt>{{htmlattrdef("balance")}}</dt>
- <dd>Este atributo define un número entre -10,000 y + 10,000 que determina como el volumen será dividido entre los altavoces .</dd>
- <dt>{{htmlattrdef("loop")}}</dt>
- <dd>Este atributo indica el número de veces que un soinido será reproducido ya sea como un valor numérico o la palabra clave <em>infinite</em> .</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>Este atributo especifica la URL del archivo de sonido que será reproducido , el cual debe ser uno de los siguientes tipos : wav, .au, o .mid.</dd>
- <dt>{{htmlattrdef("volume")}}</dt>
- <dd>Este atributo define un número entre -10,000 y 0 que determina la fuerza del sonido de fondo de una página .</dd>
-</dl>
+- {{htmlattrdef("balance")}}
+  - : Este atributo define un número entre -10,000 y + 10,000 que determina como el volumen será dividido entre los altavoces .
+- {{htmlattrdef("loop")}}
+  - : Este atributo indica el número de veces que un soinido será reproducido ya sea como un valor numérico o la palabra clave _infinite_ .
+- {{htmlattrdef("src")}}
+  - : Este atributo especifica la URL del archivo de sonido que será reproducido , el cual debe ser uno de los siguientes tipos : wav, .au, o .mid.
+- {{htmlattrdef("volume")}}
+  - : Este atributo define un número entre -10,000 y 0 que determina la fuerza del sonido de fondo de una página .
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush:html">&lt;bgsound src="sound1.mid"&gt;
+```html
+<bgsound src="sound1.mid">
 
-&lt;bgsound src="sound2.au" loop="infinite"&gt;
-</pre>
+<bgsound src="sound2.au" loop="infinite">
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Funcionalidad similar puede ser lograda en algunas versiones de Netscape usando la etiqueta &lt;embed&gt; para invocar un reproductor de audio .</p>
+Funcionalidad similar puede ser lograda en algunas versiones de Netscape usando la etiqueta \<embed> para invocar un reproductor de audio .
 
-<p>Puedes escribir bgsound con una etiqueta de cierre automático &lt;bgsound /&gt; . Ahora bien , desde que este elemento no es parte de un estándar , haciendolo como XHTML no lo hará valido. </p>
+Puedes escribir bgsound con una etiqueta de cierre automático \<bgsound /> . Ahora bien , desde que este elemento no es parte de un estándar , haciendolo como XHTML no lo hará valido.
 
-<h2 id="Compatibilidad_en_exploradores">Compatibilidad en exploradores </h2>
+## Compatibilidad en exploradores
 
 {{Compat("html.elements.bgsound")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li> {{htmlelement("audio")}}, el cual es el elemento estándar para incrustar audio en un documento.</li>
-</ul>
+- {{htmlelement("audio")}}, el cual es el elemento estándar para incrustar audio en un documento.
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

@@ -4,90 +4,103 @@ slug: Web/HTML/Element/dialog
 translation_of: Web/HTML/Element/dialog
 original_slug: Web/HTML/Elemento/dialog
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>El <strong>elemento</strong> <strong>HTML <code>&lt;dialog&gt;</code> </strong>representa una caja de diálogo u otro componente interactivo, como inspector o ventana.</p>
+El **elemento** **HTML `<dialog>` **representa una caja de diálogo u otro componente interactivo, como inspector o ventana.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots">sectioning root</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parent elements</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLDialogElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          >Flow content</a
+        >,
+        <a
+          href="/en-US/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
+          >sectioning root</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          >Flow content</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parent elements</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          >flow content</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLDialogElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento incluye los <a href="/en-US/docs/Web/HTML/Global_attributes">atributos globales</a>. El atributo <code>tabindex</code> no debe utilizarse en el elemento <code>&lt;dialog&gt;</code>.</p>
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes). El atributo `tabindex` no debe utilizarse en el elemento `<dialog>`.
 
-<dl>
- <dt>{{htmlattrdef("open")}}</dt>
- <dd>Indica que el diálogo está activo y disponible para interactuar. Cuando el atributo open no está asignado, no debe mostrarse al usuario.</dd>
-</dl>
+- {{htmlattrdef("open")}}
+  - : Indica que el diálogo está activo y disponible para interactuar. Cuando el atributo open no está asignado, no debe mostrarse al usuario.
 
-<h2 id="Notas_de_uso">Notas de uso</h2>
+## Notas de uso
 
-<p> </p>
+- Los elementos `<form>` pueden integrarse dentro de un diálogo especificándolos con el atributo `method="dialog"`. Cuando se envía un formulario, el diálogo se cierra con un atributo {{domxref("HTMLDialogElement.returnValue", "returnValue")}} asignado con el `value` del botón utilizado.
+- El pseudo-elemento {{cssxref('::backdrop')}} de CSS puede utilizarse para dar estilos al elemento `<dialog>`, por ejemplo para atenuar contenido inaccesible mientras el diálogo modal esté activo.
 
-<ul>
- <li>Los elementos <code>&lt;form&gt;</code> pueden integrarse dentro de un diálogo  especificándolos con el atributo <code>method="dialog"</code>. Cuando se envía un formulario, el diálogo se cierra con un atributo {{domxref("HTMLDialogElement.returnValue", "returnValue")}} asignado con el <code>value</code> del botón utilizado.</li>
- <li>El pseudo-elemento {{cssxref('::backdrop')}} de CSS puede utilizarse para dar estilos al elemento <code>&lt;dialog&gt;</code>, por ejemplo para atenuar contenido inaccesible mientras el diálogo modal esté activo.</li>
-</ul>
+## Ejemplos
 
-<p> </p>
+### Ejemplo 1
 
-<h2 id="Ejemplos">Ejemplos</h2>
+```html
+<dialog open>
+  <p>Greetings, one and all!</p>
+</dialog>
+```
 
-<h3 id="Ejemplo_1">Ejemplo 1</h3>
+### Ejemplo 2
 
-<pre class="brush: html">&lt;dialog open&gt;
-  &lt;p&gt;Greetings, one and all!&lt;/p&gt;
-&lt;/dialog&gt;
-</pre>
+```html
+<!-- Simple pop-up dialog box, containing a form -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <section>
+      <p><label for="favAnimal">Favorite animal:</label>
+      <select id="favAnimal">
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select></p>
+    </section>
+    <menu>
+      <button id="cancel" type="reset">Cancel</button>
+      <button type="submit">Confirm</button>
+    </menu>
+  </form>
+</dialog>
 
-<h3 id="Ejemplo_2">Ejemplo 2</h3>
+<menu>
+  <button id="updateDetails">Update details</button>
+</menu>
 
-<pre class="brush: html">&lt;!-- Simple pop-up dialog box, containing a form --&gt;
-&lt;dialog id="favDialog"&gt;
-  &lt;form method="dialog"&gt;
-    &lt;section&gt;
-      &lt;p&gt;&lt;label for="favAnimal"&gt;Favorite animal:&lt;/label&gt;
-      &lt;select id="favAnimal"&gt;
-        &lt;option&gt;&lt;/option&gt;
-        &lt;option&gt;Brine shrimp&lt;/option&gt;
-        &lt;option&gt;Red panda&lt;/option&gt;
-        &lt;option&gt;Spider monkey&lt;/option&gt;
-      &lt;/select&gt;&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;menu&gt;
-      &lt;button id="cancel" type="reset"&gt;Cancel&lt;/button&gt;
-      &lt;button type="submit"&gt;Confirm&lt;/button&gt;
-    &lt;/menu&gt;
-  &lt;/form&gt;
-&lt;/dialog&gt;
-
-&lt;menu&gt;
-  &lt;button id="updateDetails"&gt;Update details&lt;/button&gt;
-&lt;/menu&gt;
-
-&lt;script&gt;
+<script>
   (function() {
     var updateButton = document.getElementById('updateDetails');
     var cancelButton = document.getElementById('cancel');
@@ -104,50 +117,25 @@ original_slug: Web/HTML/Elemento/dialog
     });
 
   })();
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'semantics.html#the-dialog-element', '&lt;dialog&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                           | Comentario         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML WHATWG')}} |                    |
+| {{SpecName('HTML5.1', 'semantics.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.1')}}     | Definición inicial |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-<p> </p>
+The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
 
-<div class="">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
+{{Compat("html.elements.dialog")}}
 
-<p>{{Compat("html.elements.dialog")}}</p>
+## Ver también
 
-<p> </p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms">Formularios HTML</a>.</li>
- <li>El evento {{event("close")}}</li>
- <li>El evento {{event("cancel")}}</li>
- <li>El pseudo-elemento {{cssxref("::backdrop")}}</li>
-</ul>
+- [Formularios HTML](/es/docs/Web/Guide/HTML/Forms).
+- El evento {{event("close")}}
+- El evento {{event("cancel")}}
+- El pseudo-elemento {{cssxref("::backdrop")}}

@@ -9,236 +9,222 @@ tags:
 translation_of: Web/HTML/Element/img
 original_slug: Web/HTML/Elemento/img
 ---
-<p>El elemento de imagen HTML <span class="seoSummary"><code><strong>&lt;img&gt;</strong></code></span> representa una imagen en el documento.</p>
+El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
 
-<div class="note">
-<p><strong>Nota:</strong><br>
- Los navegadores no siempre muestran la imagen a la que el elemento hace referencia. Es el caso de los navegadores no gráficos (incluyendo aquellos usados por personas con problemas de visión), sí el usuario elige no mostrar la imagen, o sí el navegador es incapaz de mostrarla porque no es válida o <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/img#Supported_image_formats">soportada</a>. En ese caso, el navegador la reemplazará con el texto definido en el atributo {{htmlattrdef("alt", "img")}}.</p>
-</div>
+> **Nota:**
+> Los navegadores no siempre muestran la imagen a la que el elemento hace referencia. Es el caso de los navegadores no gráficos (incluyendo aquellos usados por personas con problemas de visión), sí el usuario elige no mostrar la imagen, o sí el navegador es incapaz de mostrarla porque no es válida o [soportada](/es/docs/Web/HTML/Elemento/img#Supported_image_formats). En ese caso, el navegador la reemplazará con el texto definido en el atributo {{htmlattrdef("alt", "img")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories">Cotenido de las categorias</a></th>
-   <td><a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content">Contenido dinámico</a>, <a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content">contenido estático</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Embedded_content">contenido incrustado</a>, contenido palpable. Si el elemento tiene un atributo {{htmlattrdef("usemap", "img")}}, it also is a part of the interactive content category.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenido permitido</th>
-   <td>Ninguno, es {{Glossary("empty element")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omisión de etiqueta</th>
-   <td>Debe tener etiqueta de de inicio pero no tiene por qué haber de cierre.</td>
-  </tr>
-  <tr>
-   <th scope="row">Elementos padre permitidos</th>
-   <td>Cualquier elemento que acepte contenido incrustado.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interfaz DOM</th>
-   <td>{{domxref("HTMLImageElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories"
+          >Cotenido de las categorias</a
+        >
+      </th>
+      <td>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content"
+          >Contenido dinámico</a
+        >,
+        <a
+          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content"
+          >contenido estático</a
+        >,
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Embedded_content"
+          >contenido incrustado</a
+        >, contenido palpable. Si el elemento tiene un atributo
+        {{htmlattrdef("usemap", "img")}}, it also is a part of the
+        interactive content category.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenido permitido</th>
+      <td>Ninguno, es {{Glossary("empty element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Omisión de etiqueta</th>
+      <td>
+        Debe tener etiqueta de de inicio pero no tiene por qué haber de cierre.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Elementos padre permitidos</th>
+      <td>Cualquier elemento que acepte contenido incrustado.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interfaz DOM</th>
+      <td>{{domxref("HTMLImageElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento incluye atributos globales.</p>
+Este elemento incluye atributos globales.
 
-<dl>
- <dt>{{htmlattrdef("align")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}} Use the {{cssxref('vertical-align')}} CSS property</dt>
- <dd>Alineamiento de la texto respecto al contexto que la rodea.</dd>
-</dl>
+- {{htmlattrdef("align")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}} Use the {{cssxref('vertical-align')}} CSS property
+  - : Alineamiento de la texto respecto al contexto que la rodea.
 
-<dl>
- <dt>{{htmlattrdef("alt")}}</dt>
- <dd>Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un <a href="/es/docs/Web/HTML/Elemento/img$edit#Supported_image_formats">formato no soportado</a> o si la imagen aún no se ha descargado.</dd>
- <dt>
- <div class="note">
- <p><strong>Nota: </strong>Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.</p>
- </div>
- </dt>
- <dt>{{htmlattrdef("border")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}</dt>
- <dd>Anchura del borde alrededor de la imagen.</dd>
- <dt>{{htmlattrdef("crossorigin")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Este atributo enumerado indica si la búsqueda de la imagen debe ser por CORS o no. <a href="https://developer.mozilla.org/es/docs/Web/HTML/Imagen_con_CORS_habilitado">Imagen hablidata CORS</a> puede ser usada en el elemento {{HTMLElement("canvas")}} sin ser pintada. Los valores permitidos son:
- <dl>
-  <dt><code>"anonymous"</code></dt>
-  <dd>Una petición cross-origin (i.e., with <code>Origin:</code> HTTP header) es realizada. Sin embargo, no fueron enviadas credenciales "<em>(i.e., no cookie, no X.509 certificate, and no HTTP Basic authentication is sent)</em>". Sí el servidor no emite credenciales al sitio de origen (no ajustando el <code>Access-Control-Allow-Origin:</code> HTTP header), la imagen será pintada y su uso restringido.</dd>
-  <dt><code>"use-credentials"</code></dt>
-  <dd>Una petición cross-origin (i.e., with <code>Origin:</code> HTTP header) es realizada con credenciales (i.e., a cookie, a certificate, and HTTP Basic authentication is performed). Sí el servidor no emite credenciales al sitio de origen (a través del <code>Access-Control-Allow-Credentials:</code> HTTP header), la imagen será pintada y su uso restringido.</dd>
- </dl>
+<!---->
 
- <p>Cuando no existe, el recurso es buscado sin petición CORS (i.e., <code>sin enviar el Origen:</code> HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado <strong>anonymous</strong>. Ver <a href="https://developer.mozilla.org/es/docs/HTML/CORS_settings_attributes">atributos de configuración CORS</a> para más información.</p>
- </dd>
-</dl>
+- {{htmlattrdef("alt")}}
+  - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](/es/docs/Web/HTML/Elemento/img$edit#Supported_image_formats) o si la imagen aún no se ha descargado.
+- > **Nota:**Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.
 
-<dl>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>La altura de la imagen en píxeles CSS {{HTMLVersionInline(5)}} o píxeles o como porcentaje en {{HTMLVersionInline(4)}}.</dd>
- <dt>{{htmlattrdef("hspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}</dt>
- <dd>El número de píxeles de espaciado a la izquierda y la derecha de la imagen.</dd>
- <dt>{{htmlattrdef("ismap")}}</dt>
- <dd>Este atributo boleano indica que la imagen es parte del mapa del lado del servidor. Así que, se envían las coordenadas precisas de un clic.
- <div class="note">
- <p><strong>Nota: </strong>Este atributo está permitido solo si el elemento<code> &lt;img&gt;</code> es descendiente de un elemento {{htmlelement("a")}} con un atributo {{htmlattrxref("href","a")}} válido.</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("longdesc")}}</dt>
- <dd>La URL como descripción de una imagen mostrada, complementa al texto de {{htmlattrdef("alt", "img")}}.</dd>
- <dt>{{htmlattrdef("name")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}</dt>
- <dd>El nombre para el elemento. Soportado en {{HTMLVersionInline(4)}} solo para compatibilidad con versiones anteriores. En su lugar, usa el atributo <code><strong>id</strong></code>.</dd>
- <dt>{{htmlattrdef("referrerpolicy")}} {{experimental_inline}}</dt>
- <dd>Una cadena indicando que referencia usar cuando buscas un recurso:
- <ul>
-  <li><code>"no-referrer"</code>: la cabecera no se envia.</li>
-  <li>"<code>no-referrer-when-downgrade</code>": la cabecera no será enviada cuando navegas hacia un origen sin TLS (HTTPS). <span id="result_box" lang="es"><span class="hps">E</span>s<span class="hps"> el comportamiento</span> <span class="hps">predeterminado</span><span class="hps">, si no se especifica en ninguna política.</span></span></li>
-  <li><code>"origin"</code>: el referente será el origen de la página; lo que sería el esquema, el anfitrión (host) y el puerto.</li>
-  <li>"origin-when-cross-origin": navega hacia otro origen limitado por el esquema, el anfitrión y el puerto, mientras navegas en el mismo origen incluirá el camino del referente.</li>
-  <li><code>"unsafe-url"</code>: el referente incluirá el origen y el camino (pero no el fragment, contraseña, o nombre de usuario). Este caso es arriegasdo porque puede haber una fuga del origen o el camino desde los recursos protegidos por TLS desde orígenes inseguros.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("sizes")}}{{HTMLVersionInline(5)}}</dt>
- <dd>Una lista de una o más cadenas separadas por comas indicando el tamaño de la fuente. Cada tamaño de la fuente consiste en:
- <ol>
-  <li>Codición de medios. Debe omitirse en el último ítem.</li>
-  <li>Valor del tamaño.</li>
- </ol>
+  {{htmlattrdef("border")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
 
- <p>El valor del tamaño de la fuente especifica el tamaño de la imagen incrustada. Se usa el tamaño actual de la fuente para seleccionar las fuentes soportadas por el atributo <code>srcset</code>, cuando esas fuentes son descritas usando el ancho (width). El tamaño de la fuente afecta al tamaño de la imagen (la imagen muestra tamaño si no se aplican estilos CSS). Si no hay atributo <code>srcset</code>, o no contiene valores con el ancho definido, entonces el atributo sizes no funciona.</p>
- </dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>La URL de la imagen. Este atributo es obligatorio para el elemento &lt;img&gt;. En navegadores que soportan <code>srcset</code>, <code>src</code> es tratado como imagen candidata con una densidad del píxel <code>1x</code> sino una imagen estará definida en <code>srcset</code> o <code>srcset</code> contiene ancho.</dd>
- <dt></dt>
- <dt>{{htmlattrdef("srcset")}}{{HTMLVersionInline(5)}}</dt>
- <dd>Una lista de una o más cadenas separadas por comas indicando las posibles fuentes para usar. Cada cadena está compuesta por:
- <ol>
-  <li>URL de la imagen</li>
-  <li>Opcionalmente, espacios en blanco seguidos de:
-   <ul>
-    <li>Un ancho, que es un entero positivo seguido directamente por <code>'w'</code>. El ancho está dividido por el tamaño de la fuente dada en el atributo <code>sizes</code> para calcular la densidad del píxel.</li>
-    <li>Densidad del píxel, un positivo decimal seguido directamente de <code>'x'</code>.</li>
-   </ul>
-  </li>
- </ol>
+  - : Anchura del borde alrededor de la imagen.
 
- <p>Si no hay descriptores especificados, la fuente es asignada por defecto a <code>1x</code>.</p>
+- {{htmlattrdef("crossorigin")}} {{HTMLVersionInline(5)}}
 
- <p>Es inválido mezclar ancho y densidad del píxel en el mismo atributo <code>srcset</code>. Descriptores duplicados (por ejemplo, dos fuentes en el mismo <code>srcset</code> definidos ambos con '<code>2x</code>') son inválidos, también.</p>
+  - : Este atributo enumerado indica si la búsqueda de la imagen debe ser por CORS o no. [Imagen hablidata CORS](/es/docs/Web/HTML/Imagen_con_CORS_habilitado) puede ser usada en el elemento {{HTMLElement("canvas")}} sin ser pintada. Los valores permitidos son:
 
- <p>Los agentes de usuario son discretos al elegir cualquiera de las fuentes disponibles. <span id="result_box" lang="es"><span class="hps">Esto les proporciona</span> <span class="hps">un margen</span> <span class="hps">significativo para</span> <span class="hps">adaptar su</span> <span class="hps">selección basada en</span> <span class="hps">cosas como</span> <span class="hps">las preferencias del usuario</span> <span class="hps">o las condiciones</span> <span class="hps">de ancho de banda</span><span>.</span></span></p>
- </dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>El ancho de la imagen en píxeles CSS {{HTMLVersionInline(5)}}, o píxeles o porcentaje en {{HTMLVersionInline(4)}}.</dd>
- <dt>{{htmlattrdef("usemap")}}</dt>
- <dd>La URL parcial (empezando con '#') de un <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/map">mapa de imagea</a> asociado a un elemento.
- <div class="note">
- <p><strong>Nota: </strong>No puedes usar este atributo si el elemento <code>&lt;img&gt;</code> es descendiente de un elemento {{htmlelement("a")}} o {{HTMLElement("button")}}.</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("vspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}</dt>
- <dd>El número de píxeles de espacio blanco insertado sobre y bajo la imagen.</dd>
-</dl>
+    - `"anonymous"`
+      - : Una petición cross-origin (i.e., with `Origin:` HTTP header) es realizada. Sin embargo, no fueron enviadas credenciales "_(i.e., no cookie, no X.509 certificate, and no HTTP Basic authentication is sent)_". Sí el servidor no emite credenciales al sitio de origen (no ajustando el `Access-Control-Allow-Origin:` HTTP header), la imagen será pintada y su uso restringido.
+    - `"use-credentials"`
+      - : Una petición cross-origin (i.e., with `Origin:` HTTP header) es realizada con credenciales (i.e., a cookie, a certificate, and HTTP Basic authentication is performed). Sí el servidor no emite credenciales al sitio de origen (a través del `Access-Control-Allow-Credentials:` HTTP header), la imagen será pintada y su uso restringido.
 
-<h2 id="Formatos_de_imagen_soportada">Formatos de imagen soportada</h2>
+    Cuando no existe, el recurso es buscado sin petición CORS (i.e., `sin enviar el Origen:` HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado **anonymous**. Ver [atributos de configuración CORS](/es/docs/HTML/CORS_settings_attributes) para más información.
 
-<p>El estándar de HTML no ofrece una lista de formatos de imagen soportados, de modo que cada agente de usuario soporta diferentes conjuntos de formatos. Gecko soporta:</p>
+<!---->
 
-<ul>
- <li><a class="external external-icon" href="http://en.wikipedia.org/wiki/JPEG">JPEG</a></li>
- <li><a class="external external-icon" href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format">GIF</a>, including animated GIFs</li>
- <li><a class="external external-icon" href="http://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Animated_PNG_graphics">APNG</a> {{gecko_minversion_inline("1.9.2")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/SVG">SVG</a> {{gecko_minversion_inline("2.0")}}</li>
- <li><a class="external external-icon" href="http://en.wikipedia.org/wiki/BMP_file_format">BMP</a></li>
- <li><a class="external external-icon" href="http://en.wikipedia.org/wiki/ICO_%28file_format%29">BMP ICO</a></li>
- <li><a class="external external-icon" href="http://en.wikipedia.org/wiki/ICO_%28file_format%29">PNG ICO</a> {{gecko_minversion_inline("9.0")}}</li>
-</ul>
+- {{htmlattrdef("height")}}
+  - : La altura de la imagen en píxeles CSS {{HTMLVersionInline(5)}} o píxeles o como porcentaje en {{HTMLVersionInline(4)}}.
+- {{htmlattrdef("hspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
+  - : El número de píxeles de espaciado a la izquierda y la derecha de la imagen.
+- {{htmlattrdef("ismap")}}
 
-<div class="note">
-<p><strong>Nota:</strong><br>
- Soporte para formato <a class="external external-icon" href="http://en.wikipedia.org/wiki/X_BitMap">XBM</a> fue eliminado en Gecko 1.9.2.</p>
-</div>
+  - : Este atributo boleano indica que la imagen es parte del mapa del lado del servidor. Así que, se envían las coordenadas precisas de un clic.
 
-<h2 id="Interacción_con_CSS">Interacción con CSS</h2>
+    > **Nota:**Este atributo está permitido solo si el elemento` <img>` es descendiente de un elemento {{htmlelement("a")}} con un atributo {{htmlattrxref("href","a")}} válido.
 
-<p>Respecto a CSS, <code>una &lt;img&gt;</code> es un <a href="https://developer.mozilla.org/es/docs/Web/CSS/Elemento_reemplazo">elemento de reemplazo</a>. No tiene base, asi que cuando las imágenes se usan en un contexto de formato en línea con {{cssxref("vertical-align")}}: <code>baseline</code>, el bajo de la imagen se posa sobre la base del contenedor.</p>
+- {{htmlattrdef("longdesc")}}
+  - : La URL como descripción de una imagen mostrada, complementa al texto de {{htmlattrdef("alt", "img")}}.
+- {{htmlattrdef("name")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
+  - : El nombre para el elemento. Soportado en {{HTMLVersionInline(4)}} solo para compatibilidad con versiones anteriores. En su lugar, usa el atributo **`id`**.
+- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
 
-<p>Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no necesariamente. Por ejempo, las imagenes SVG no tienen dimensiones intrínsecas.</p>
+  - : Una cadena indicando que referencia usar cuando buscas un recurso:
 
-<h2 id="Ejemplo_1">Ejemplo 1</h2>
+    - `"no-referrer"`: la cabecera no se envia.
+    - "`no-referrer-when-downgrade`": la cabecera no será enviada cuando navegas hacia un origen sin TLS (HTTPS). Es el comportamiento predeterminado, si no se especifica en ninguna política.
+    - `"origin"`: el referente será el origen de la página; lo que sería el esquema, el anfitrión (host) y el puerto.
+    - "origin-when-cross-origin": navega hacia otro origen limitado por el esquema, el anfitrión y el puerto, mientras navegas en el mismo origen incluirá el camino del referente.
+    - `"unsafe-url"`: el referente incluirá el origen y el camino (pero no el fragment, contraseña, o nombre de usuario). Este caso es arriegasdo porque puede haber una fuga del origen o el camino desde los recursos protegidos por TLS desde orígenes inseguros.
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>img</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>mdn-logo-sm.png<span class="punctuation token">"</span></span> <span class="attr-name token">alt</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>MDN<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+- {{htmlattrdef("sizes")}}{{HTMLVersionInline(5)}}
 
-<p><img alt="MDN" src="https://developer.mozilla.org/static/img/favicon144.png"></p>
+  - : Una lista de una o más cadenas separadas por comas indicando el tamaño de la fuente. Cada tamaño de la fuente consiste en:
 
-<h2 id="Ejemplo_2_Enlace_con_imagen">Ejemplo 2: Enlace con imagen</h2>
+    1.  Codición de medios. Debe omitirse en el último ítem.
+    2.  Valor del tamaño.
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>a</span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>https://developer.mozilla.org/<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>img</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>mdn-logo-sm.png<span class="punctuation token">"</span></span> <span class="attr-name token">alt</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>MDN<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt;</span></span></code></pre>
+    El valor del tamaño de la fuente especifica el tamaño de la imagen incrustada. Se usa el tamaño actual de la fuente para seleccionar las fuentes soportadas por el atributo `srcset`, cuando esas fuentes son descritas usando el ancho (width). El tamaño de la fuente afecta al tamaño de la imagen (la imagen muestra tamaño si no se aplican estilos CSS). Si no hay atributo `srcset`, o no contiene valores con el ancho definido, entonces el atributo sizes no funciona.
 
-<p><a href="https://developer.mozilla.org/"><img alt="MDN" src="https://developer.mozilla.org/static/img/favicon144.png"> </a></p>
+- {{htmlattrdef("src")}}
+  - : La URL de la imagen. Este atributo es obligatorio para el elemento \<img>. En navegadores que soportan `srcset`, `src` es tratado como imagen candidata con una densidad del píxel `1x` sino una imagen estará definida en `srcset` o `srcset` contiene ancho.
+- {{htmlattrdef("srcset")}}{{HTMLVersionInline(5)}}
 
-<h2 id="Ejemplo_3_Uso_del_atributo_srcset">Ejemplo 3: Uso del atributo <code>srcset</code></h2>
+  - : Una lista de una o más cadenas separadas por comas indicando las posibles fuentes para usar. Cada cadena está compuesta por:
 
-<p>El atributo <code>src</code> es un candidato en agentes de usuario <code>1x</code> que soporta <code>srcset.</code></p>
+    1.  URL de la imagen
+    2.  Opcionalmente, espacios en blanco seguidos de:
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>img</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>mdn-logo-sm.png<span class="punctuation token">"</span></span>
-      <span class="attr-name token">alt</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>MDN<span class="punctuation token">"</span></span>
-      <span class="attr-name token">srcset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>mdn-logo-HD.png 2x<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+        - Un ancho, que es un entero positivo seguido directamente por `'w'`. El ancho está dividido por el tamaño de la fuente dada en el atributo `sizes` para calcular la densidad del píxel.
+        - Densidad del píxel, un positivo decimal seguido directamente de `'x'`.
 
-<h2 id="Ejemplo_4_Uso_de_atributos_srcset_y_sizes">Ejemplo 4: Uso de atributos <code>srcset</code> y <code>sizes</code></h2>
+    Si no hay descriptores especificados, la fuente es asignada por defecto a `1x`.
 
-<p>El atributo<code> src</code> es ignorado en agentes de usuario que soportan <code>srcset</code> cuando usan descriptores <code>'w'</code>. Cuando la condición de media <code>(min-width: 600px)</code> encaja, la imagen será 200px de ancho, de otra manera será 50vw de ancho (50% del ancho del dispositivo).</p>
+    Es inválido mezclar ancho y densidad del píxel en el mismo atributo `srcset`. Descriptores duplicados (por ejemplo, dos fuentes en el mismo `srcset` definidos ambos con '`2x`') son inválidos, también.
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>img</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>clock-demo-thumb-200.png<span class="punctuation token">"</span></span>
-      <span class="attr-name token">alt</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Clock<span class="punctuation token">"</span></span>
-      <span class="attr-name token">srcset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>clock-demo-thumb-200.png 200w, clock-demo-thumb-400.png 400w<span class="punctuation token">"</span></span>
-      <span class="attr-name token">sizes</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>(min-width: 600px) 200px, 50vw<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+    Los agentes de usuario son discretos al elegir cualquiera de las fuentes disponibles. Esto les proporciona un margen significativo para adaptar su selección basada en cosas como las preferencias del usuario o las condiciones de ancho de banda.
 
-<article class="">
-<div class="boxed translate-rendered">
-<h2 id="Especificaciones">Especificaciones</h2>
+- {{htmlattrdef("width")}}
+  - : El ancho de la imagen en píxeles CSS {{HTMLVersionInline(5)}}, o píxeles o porcentaje en {{HTMLVersionInline(4)}}.
+- {{htmlattrdef("usemap")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}</td>
-   <td>{{Spec2('Referrer Policy')}}</td>
-   <td>Añadida la política del atributo<code> referrer</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#the-img-element', '&lt;img&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#the-img-element', '&lt;img&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+  - : La URL parcial (empezando con '#') de un [mapa de imagea](/es/docs/HTML/Element/map) asociado a un elemento.
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+    > **Nota:**No puedes usar este atributo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} o {{HTMLElement("button")}}.
+
+- {{htmlattrdef("vspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
+  - : El número de píxeles de espacio blanco insertado sobre y bajo la imagen.
+
+## Formatos de imagen soportada
+
+El estándar de HTML no ofrece una lista de formatos de imagen soportados, de modo que cada agente de usuario soporta diferentes conjuntos de formatos. Gecko soporta:
+
+- [JPEG](http://en.wikipedia.org/wiki/JPEG)
+- [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format), including animated GIFs
+- [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
+- [APNG](/es/docs/Animated_PNG_graphics) {{gecko_minversion_inline("1.9.2")}}
+- [SVG](/es/docs/SVG) {{gecko_minversion_inline("2.0")}}
+- [BMP](http://en.wikipedia.org/wiki/BMP_file_format)
+- [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
+- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29) {{gecko_minversion_inline("9.0")}}
+
+> **Nota:**
+> Soporte para formato [XBM](http://en.wikipedia.org/wiki/X_BitMap) fue eliminado en Gecko 1.9.2.
+
+## Interacción con CSS
+
+Respecto a CSS, `una <img>` es un [elemento de reemplazo](/es/docs/Web/CSS/Elemento_reemplazo). No tiene base, asi que cuando las imágenes se usan en un contexto de formato en línea con {{cssxref("vertical-align")}}: `baseline`, el bajo de la imagen se posa sobre la base del contenedor.
+
+Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no necesariamente. Por ejempo, las imagenes SVG no tienen dimensiones intrínsecas.
+
+## Ejemplo 1
+
+```html
+<img src="mdn-logo-sm.png" alt="MDN">
+```
+
+![MDN](https://developer.mozilla.org/static/img/favicon144.png)
+
+## Ejemplo 2: Enlace con imagen
+
+```html
+<a href="https://developer.mozilla.org/"><img src="mdn-logo-sm.png" alt="MDN"></a>
+```
+
+[![MDN](https://developer.mozilla.org/static/img/favicon144.png)](https://developer.mozilla.org/)
+
+## Ejemplo 3: Uso del atributo `srcset`
+
+El atributo `src` es un candidato en agentes de usuario `1x` que soporta `srcset.`
+
+```html
+<img src="mdn-logo-sm.png"
+      alt="MDN"
+      srcset="mdn-logo-HD.png 2x">
+```
+
+## Ejemplo 4: Uso de atributos `srcset` y `sizes`
+
+El atributo` src` es ignorado en agentes de usuario que soportan `srcset` cuando usan descriptores `'w'`. Cuando la condición de media `(min-width: 600px)` encaja, la imagen será 200px de ancho, de otra manera será 50vw de ancho (50% del ancho del dispositivo).
+
+```html
+<img src="clock-demo-thumb-200.png"
+      alt="Clock"
+      srcset="clock-demo-thumb-200.png 200w, clock-demo-thumb-400.png 400w"
+      sizes="(min-width: 600px) 200px, 50vw">
+```
+
+## Especificaciones
+
+| Especificación                                                                                                                           | Estado                               | Comentario                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------- |
+| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}} | {{Spec2('Referrer Policy')}} | Añadida la política del atributo` referrer` |
+| {{SpecName('HTML WHATWG', 'embedded-content.html#the-img-element', '&lt;img&gt;')}}                         | {{Spec2('HTML WHATWG')}}     |                                             |
+| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-img-element', '&lt;img&gt;')}}                         | {{Spec2('HTML5 W3C')}}         |                                             |
+| {{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}                                             | {{Spec2('HTML4.01')}}         |                                             |
+
+## Compatibilidad con navegadores
 
 {{Compat("html.elements.img")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{HTMLElement("picture")}}, {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements</li>
-</ul>
-</div>
-</article>
+- {{HTMLElement("picture")}}, {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements

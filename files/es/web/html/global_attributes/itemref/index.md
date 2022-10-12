@@ -4,104 +4,88 @@ slug: Web/HTML/Global_attributes/itemref
 translation_of: Web/HTML/Global_attributes/itemref
 original_slug: Web/HTML/Atributos_Globales/itemref
 ---
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>Las propiedades que no son descendientes de un elemento con el atributo <code>itemscope</code> pueden ser asociadas con el elemento usando un <strong>itemref</strong> . <strong>Itemref</strong> provee una lista de ids de los elementos (no <code>itemids</code>) con propiedades adicionales en otras partes dentro del documento .</p>
+Las propiedades que no son descendientes de un elemento con el atributo `itemscope` pueden ser asociadas con el elemento usando un **itemref** . **Itemref** provee una lista de ids de los elementos (no `itemids`) con propiedades adicionales en otras partes dentro del documento .
 
-<p>El atributo itemref puede ser solo especificado en elementos que tienen un atributo itemscope especificado .</p>
+El atributo itemref puede ser solo especificado en elementos que tienen un atributo itemscope especificado .
 
-<p class="note"><strong>Nota: </strong>el atributo itemref no es parte del modelo de micro datos . Es solamente un constructor sintáctico que ayuda a los autores en el ingreso de anotaciones a las páginas donde los datos que se van a anotar no siguen una estructura de arbol conveniente . Por ejemplo , permite a los autores marcar los datos en una tabla para que cada columna defina un item separado mientras se mantienen las propiedades en las celdas .</p>
+> **Nota:**el atributo itemref no es parte del modelo de micro datos . Es solamente un constructor sintáctico que ayuda a los autores en el ingreso de anotaciones a las páginas donde los datos que se van a anotar no siguen una estructura de arbol conveniente . Por ejemplo , permite a los autores marcar los datos en una tabla para que cada columna defina un item separado mientras se mantienen las propiedades en las celdas .
 
-<div class="">
-<h2 class="" id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<div class="">
-<pre class="brush: html">&lt;div itemscope id="amanda" itemref="a b"&gt;&lt;/div&gt;
-&lt;p id="a"&gt;Name: &lt;span itemprop="name"&gt;Amanda&lt;/span&gt; &lt;/p&gt;
-&lt;div id="b" itemprop="band" itemscope itemref="c"&gt;&lt;/div&gt;
-&lt;div id="c"&gt;
-    &lt;p&gt;Band: &lt;span itemprop="name"&gt;Jazz Band&lt;/span&gt; &lt;/p&gt;
-    &lt;p&gt;Size: &lt;span itemprop="size"&gt;12&lt;/span&gt; players&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div itemscope id="amanda" itemref="a b"></div>
+<p id="a">Name: <span itemprop="name">Amanda</span> </p>
+<div id="b" itemprop="band" itemscope itemref="c"></div>
+<div id="c">
+    <p>Band: <span itemprop="name">Jazz Band</span> </p>
+    <p>Size: <span itemprop="size">12</span> players</p>
 </div>
+```
 
-<article id="wikiArticle">
-<h3 id="Datos_estructurados">Datos estructurados </h3>
+### Datos estructurados
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>id's</th>
-   <th>itemscope</th>
-   <th>itemref</th>
-   <th> </th>
-   <th>(nombre de itemprop )</th>
-   <th>(valor de itemprop)</th>
-  </tr>
-  <tr>
-   <td>id=amanda</td>
-   <td>itemscope</td>
-   <td>itemref=a,b</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>id=a</td>
-   <td> </td>
-   <td> </td>
-   <td>itemprop</td>
-   <td>name</td>
-   <td><span>Amanda</span></td>
-  </tr>
-  <tr>
-   <td>id=b</td>
-   <td>itemscope</td>
-   <td>itemref=c</td>
-   <td> </td>
-   <td>band</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td colspan="1" rowspan="2">id=c</td>
-   <td> </td>
-   <td> </td>
-   <td>itemprop</td>
-   <td>Band</td>
-   <td><span>Jazz Band</span></td>
-  </tr>
-  <tr>
-   <td> </td>
-   <td> </td>
-   <td>itemprop</td>
-   <td>Size</td>
-   <td><span>12</span></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>id's</th>
+      <th>itemscope</th>
+      <th>itemref</th>
+      <th></th>
+      <th>(nombre de itemprop )</th>
+      <th>(valor de itemprop)</th>
+    </tr>
+    <tr>
+      <td>id=amanda</td>
+      <td>itemscope</td>
+      <td>itemref=a,b</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>id=a</td>
+      <td></td>
+      <td></td>
+      <td>itemprop</td>
+      <td>name</td>
+      <td><span>Amanda</span></td>
+    </tr>
+    <tr>
+      <td>id=b</td>
+      <td>itemscope</td>
+      <td>itemref=c</td>
+      <td></td>
+      <td>band</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="2">id=c</td>
+      <td></td>
+      <td></td>
+      <td>itemprop</td>
+      <td>Band</td>
+      <td><span>Jazz Band</span></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>itemprop</td>
+      <td>Size</td>
+      <td><span>12</span></td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref') }}</p>
+{{ EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref') }}
 
-<h2 id="EspecificaciónEditEdit">Especificación<a class="" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates$edit#Specifications"><span>Edit</span></a><a class="" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemid$edit#SpecificationsEdit"><span>Edit</span></a></h2>
+## Especificación[Edit](/es/docs/Web/CSS/font-variant-alternates$edit#Specifications)[Edit](/es/docs/Web/HTML/Global_attributes/itemid$edit#SpecificationsEdit)
 
-<table class="standard-table" style="height: 105px; width: 490px;">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td style="text-align: left; vertical-align: middle;"><a class="external-icon external" href="https://html.spec.whatwg.org/multipage/microdata.html#items">itemref</a></td>
-   <td style="text-align: left; vertical-align: middle; white-space: nowrap;">Nota WG  - No se encuentra activamente en desarrollo</td>
-  </tr>
- </tbody>
-</table>
-</article>
-</div>
+| Especificación                                                         | Estatus                                             |
+| ---------------------------------------------------------------------- | --------------------------------------------------- |
+| [itemref](https://html.spec.whatwg.org/multipage/microdata.html#items) | Nota WG - No se encuentra activamente en desarrollo |

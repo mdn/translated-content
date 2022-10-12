@@ -10,121 +10,118 @@ tags:
 translation_of: Web/HTML/Element/source
 original_slug: Web/HTML/Elemento/source
 ---
-<p>El <strong>elemento HTML <code>&lt;source&gt;</code> </strong> especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en <a href="/en-US/docs/Media_formats_supported_by_the_audio_and_video_elements">varios formatos soportados por diferentes navegadores</a>.</p>
+El **elemento HTML `<source>` **especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Media_formats_supported_by_the_audio_and_video_elements).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
-<p class="">La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> y envíenos una solicitud de pull.</p>
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)y envíenos una solicitud de pull.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Categorías de contenido</a></th>
-   <td>Ninguna.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenido permitido</th>
-   <td>Ninguno, esto es un {{Glossary("empty element")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omisión de Etiqueta</th>
-   <td>Debe tener una etiqueta inicial, pero no debe tener una etiqueta final.</td>
-  </tr>
-  <tr>
-   <th scope="row"><dfn>Padres permitidos</dfn></th>
-   <td>
-    <div>Un elemento multimedia—{{HTMLElement("audio")}} o {{HTMLelement("video")}}—y se debe colocar antes que cualquier <a href="/en-US/docs/HTML/Content_categories#Flow_content">contenido de flujo</a> o elemento {{HTMLElement("track")}}.</div>
-
-    <div>Un elemento {{HTMLElement("picture")}}, y se debe colocar antes del elemento {{HTMLElement("img")}}.</div>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Roles ARIA permitidos</th>
-   <td>Ninguno</td>
-  </tr>
-  <tr>
-   <th scope="row">Interfaz DOM</th>
-   <th> </th>
-   <td>{{domxref("HTMLSourceElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Categorías de contenido</a
+        >
+      </th>
+      <td>Ninguna.</td>
+    </tr>
+    <tr>
+      <th scope="row">Contenido permitido</th>
+      <td>Ninguno, esto es un {{Glossary("empty element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Omisión de Etiqueta</th>
+      <td>
+        Debe tener una etiqueta inicial, pero no debe tener una etiqueta final.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><dfn>Padres permitidos</dfn></th>
+      <td>
+        <div>
+          Un elemento multimedia—{{HTMLElement("audio")}} o
+          {{HTMLelement("video")}}—y se debe colocar antes que cualquier
+          <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+            >contenido de flujo</a
+          >
+          o elemento {{HTMLElement("track")}}.
+        </div>
+        <div>
+          Un elemento {{HTMLElement("picture")}}, y se debe colocar
+          antes del elemento {{HTMLElement("img")}}.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Roles ARIA permitidos</th>
+      <td>Ninguno</td>
+    </tr>
+    <tr>
+      <th scope="row">Interfaz DOM</th>
+      <th></th>
+      <td>{{domxref("HTMLSourceElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento incluye los <a href="/en-US/docs/HTML/Global_attributes">atributos globales</a>.</p>
+Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("sizes")}} {{experimental_inline}}</dt>
- <dd>Es una lista de tamaños del origen que describe el ancho renderizado final de la imagen representada por el origen. Cada tamaño de origen consiste de una lista separada por comas de pares de longitud de condición de medios. Esta información es utilizada por el navegador para determinar, antes de distribuir la página, qué imagen definida en {{htmlattrxref("srcset", "source")}} se utilizará.<br>
- El atributo <code>sizes</code> tiene un efecto solo cuando el elemento {{HTMLElement("source")}} es hijo directo de un elemento {{HTMLElement("picture")}}.</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>Es la ubicación del recurso multimedia, requerido por los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}}. El valor de este atributo es ignorado cuando el elemento <code>&lt;source&gt;</code> se coloca dentro de un elemento {{HTMLElement("picture")}}.</dd>
- <dt>{{htmlattrdef("srcset")}} {{experimental_inline}}</dt>
- <dd>Una lista de una o más cadenas separadas por comas que indican un conjunto de posibles imágenes representadas por la fuente para que las utilice el navegador. Cada cadena se compone de:
- <ol>
-  <li>una URL a una imagen,</li>
-  <li>un descriptor de ancho, que es un entero positivo seguido directamente por <code>'w'</code>. El valor predeterminado, si falta, es el infinito.</li>
-  <li>un descriptor de densidad de píxeles, que es un número flotante positivo seguido directamente por <code>'x'</code>. El valor predeterminado, si falta, es <code>1x</code>.</li>
- </ol>
+- {{htmlattrdef("sizes")}} {{experimental_inline}}
+  - : Es una lista de tamaños del origen que describe el ancho renderizado final de la imagen representada por el origen. Cada tamaño de origen consiste de una lista separada por comas de pares de longitud de condición de medios. Esta información es utilizada por el navegador para determinar, antes de distribuir la página, qué imagen definida en {{htmlattrxref("srcset", "source")}} se utilizará.
+    El atributo `sizes` tiene un efecto solo cuando el elemento {{HTMLElement("source")}} es hijo directo de un elemento {{HTMLElement("picture")}}.
+- {{htmlattrdef("src")}}
+  - : Es la ubicación del recurso multimedia, requerido por los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}}. El valor de este atributo es ignorado cuando el elemento `<source>` se coloca dentro de un elemento {{HTMLElement("picture")}}.
+- {{htmlattrdef("srcset")}} {{experimental_inline}}
 
- <p>Cada cadena en la lista debe tener al menos un descriptor de ancho o un descriptor de densidad de píxeles para que sea válido. Entre los elementos de la lista, solo debe haber una cadena que contenga la misma tupla de descriptor de ancho y descriptor de densidad de píxeles.<br>
-  El navegador elige la imagen más adecuada para mostrar en un momento determinado.<br>
-  El atributo <code>srcset</code> solo tiene efecto cuando el elemento {{HTMLElement("source")}} es hijo directo de un elemento {{HTMLElement("picture")}}.</p>
- </dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>El tipo MIME del recurso, opcionalmente con un parámetro <code>codecs</code>. Consultar <a class="external" href="https://tools.ietf.org/html/rfc4281"> RFC 4281 </a> para obtener información sobre cómo especificar los códecs.</dd>
- <dt>{{htmlattrdef("media")}} {{experimental_inline}}</dt>
- <dd><a class="internal" href="/en-US/docs/CSS/Media_queries">Consulta multimedia</a> de los medios destinados al recurso; esto solo debe usarse en un elemento {{HTMLElement("picture")}}.</dd>
-</dl>
+  - : Una lista de una o más cadenas separadas por comas que indican un conjunto de posibles imágenes representadas por la fuente para que las utilice el navegador. Cada cadena se compone de:
 
-<p>Si el atributo <code>type</code> no se especifica, el tipo de medio se recupera del servidor y se verifica para ver si el agente de usuario puede manejarlo; si no se puede procesar, se comprueba el siguiente <code>&lt;source&gt;</code>. Si se especifica el atributo <code>type</code>, se compara con los tipos que puede presentar el agente de usuario y, si no se reconoce, el servidor ni siquiera recibe consultas; en su lugar, el siguiente elemento <code>&lt;source&gt;</code> se comprueba a la vez.</p>
+    1.  una URL a una imagen,
+    2.  un descriptor de ancho, que es un entero positivo seguido directamente por `'w'`. El valor predeterminado, si falta, es el infinito.
+    3.  un descriptor de densidad de píxeles, que es un número flotante positivo seguido directamente por `'x'`. El valor predeterminado, si falta, es `1x`.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+    Cada cadena en la lista debe tener al menos un descriptor de ancho o un descriptor de densidad de píxeles para que sea válido. Entre los elementos de la lista, solo debe haber una cadena que contenga la misma tupla de descriptor de ancho y descriptor de densidad de píxeles.
+    El navegador elige la imagen más adecuada para mostrar en un momento determinado.
+    El atributo `srcset` solo tiene efecto cuando el elemento {{HTMLElement("source")}} es hijo directo de un elemento {{HTMLElement("picture")}}.
 
-<p>Este ejemplo muestra cómo ofrecer un video en formato Ogg para usuarios cuyos navegadores admiten el formato Ogg, y un video en formato QuickTime para usuarios cuyos navegadores lo admiten. Si el navegador no admite los elementos <code>audio</code> o <code>video</code>, se muestra un aviso. Si el navegador admite los elementos pero no admite ninguno de los formatos especificados, se genera un evento <code>error</code> y los controles de medios predeterminados (si están habilitados) indicarán un error. Consulte también la lista de <a href="/en-US/docs/Media_formats_supported_by_the_audio_and_video_elements">formatos de medios compatibles con los elementos de audio y video</a> en varios navegadores.</p>
+- {{htmlattrdef("type")}}
+  - : El tipo MIME del recurso, opcionalmente con un parámetro `codecs`. Consultar [RFC 4281 ](https://tools.ietf.org/html/rfc4281)para obtener información sobre cómo especificar los códecs.
+- {{htmlattrdef("media")}} {{experimental_inline}}
+  - : [Consulta multimedia](/es/docs/CSS/Media_queries) de los medios destinados al recurso; esto solo debe usarse en un elemento {{HTMLElement("picture")}}.
 
-<pre class="brush: html">&lt;video controls&gt;
-  &lt;source src="foo.webm" type="video/webm"&gt;
-  &lt;source src="foo.ogg" type="video/ogg"&gt;
-  &lt;source src="foo.mov" type="video/quicktime"&gt;
+Si el atributo `type` no se especifica, el tipo de medio se recupera del servidor y se verifica para ver si el agente de usuario puede manejarlo; si no se puede procesar, se comprueba el siguiente `<source>`. Si se especifica el atributo `type`, se compara con los tipos que puede presentar el agente de usuario y, si no se reconoce, el servidor ni siquiera recibe consultas; en su lugar, el siguiente elemento `<source>` se comprueba a la vez.
+
+## Ejemplos
+
+Este ejemplo muestra cómo ofrecer un video en formato Ogg para usuarios cuyos navegadores admiten el formato Ogg, y un video en formato QuickTime para usuarios cuyos navegadores lo admiten. Si el navegador no admite los elementos `audio` o `video`, se muestra un aviso. Si el navegador admite los elementos pero no admite ninguno de los formatos especificados, se genera un evento `error` y los controles de medios predeterminados (si están habilitados) indicarán un error. Consulte también la lista de [formatos de medios compatibles con los elementos de audio y video](/es/docs/Media_formats_supported_by_the_audio_and_video_elements) en varios navegadores.
+
+```html
+<video controls>
+  <source src="foo.webm" type="video/webm">
+  <source src="foo.ogg" type="video/ogg">
+  <source src="foo.mov" type="video/quicktime">
   Lo lamento; su navegador no soporta video HTML5.
-&lt;/video&gt;
-</pre>
+</video>
+```
 
-<p>Para obtener más ejemplos, consulte <a class="internal" href="/en-US/docs/Using_HTML5_audio_and_video">Uso de audio y video en Firefox</a>.</p>
+Para obtener más ejemplos, consulte [Uso de audio y video en Firefox](/es/docs/Using_HTML5_audio_and_video).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#the-source-element', '&lt;source&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                           | Estado                           | Comentario |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'embedded-content.html#the-source-element', '&lt;source&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Compaibilidad_entre_navegadores">Compaibilidad entre navegadores</h2>
+## Compaibilidad entre navegadores
 
+{{Compat("html.elements.source")}}
 
+## Ver también
 
-<p>{{Compat("html.elements.source")}}</p>
+- Elemento {{HTMLElement("picture")}}
+- Elemento {{HTMLElement("audio")}}
+- Elemento {{HTMLElement("video")}}
 
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>Elemento {{HTMLElement("picture")}}</li>
- <li>Elemento {{HTMLElement("audio")}}</li>
- <li>Elemento {{HTMLElement("video")}}</li>
-</ul>
-
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

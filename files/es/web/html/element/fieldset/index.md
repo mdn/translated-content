@@ -8,112 +8,113 @@ tags:
 translation_of: Web/HTML/Element/fieldset
 original_slug: Web/HTML/Elemento/fieldset
 ---
-<h3 id="Definici.C3.B3n" name="Definici.C3.B3n">Definición</h3>
+### Definición
 
-<dl>
-<dt>El elemento <a href="/es/HTML/Elemento/fieldset" title="es/HTML/Elemento/fieldset">fieldset</a> (grupo de campos) permite organizar en grupos los campos de un formulario.</dt>
+- El elemento [fieldset](/es/HTML/Elemento/fieldset "es/HTML/Elemento/fieldset") (grupo de campos) permite organizar en grupos los campos de un formulario.
+  - : **Sus etiquetas son**: \<fieldset> y \</fieldset> (ambas obligatorias).
+    **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque "es/HTML/Elemento/Tipos_de_elementos#en_bloque").
+    **Está definido como**: [Elemento en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque "es/HTML/Elemento/Tipos_de_elementos#en_bloque").
+    **Puede contener**: un elemento [legend](/es/HTML/Elemento/legend "es/HTML/Elemento/legend") (opcional), y despues cero o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque "es/HTML/Elemento/Tipos_de_elementos#en_bloque") o [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea "es/HTML/Elemento/Tipos_de_elementos#en_linea")
 
- <dd><strong>Sus etiquetas son</strong>: &lt;fieldset&gt; y &lt;/fieldset&gt; (ambas obligatorias).
- 
- <strong>Crea una caja</strong>: <a href="/es/HTML/Elemento/Tipos_de_elementos#en_bloque" title="es/HTML/Elemento/Tipos_de_elementos#en_bloque">en bloque</a>.
- 
- <strong>Está definido como</strong>: <a href="/es/HTML/Elemento/Tipos_de_elementos#en_bloque" title="es/HTML/Elemento/Tipos_de_elementos#en_bloque">Elemento en bloque</a>.
- 
- <strong>Puede contener</strong>: un elemento <a href="/es/HTML/Elemento/legend" title="es/HTML/Elemento/legend">legend</a> (opcional), y despues cero o más elementos <a href="/es/HTML/Elemento/Tipos_de_elementos#en_bloque" title="es/HTML/Elemento/Tipos_de_elementos#en_bloque">en bloque</a> o <a href="/es/HTML/Elemento/Tipos_de_elementos#en_linea" title="es/HTML/Elemento/Tipos_de_elementos#en_linea">en linea</a></dd>
-</dl>
-
-<h4 id="Atributos" name="Atributos">Atributos</h4>
+#### Atributos
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Atributo</th>
-   <th colspan="2">valor</th>
-   <th>descripción</th>
-  </tr>
-  <tr>
-   <th colspan="4">Genéricos</th>
-  </tr>
-  <tr>
-   <td><code style="color: green;">title</code></td>
-   <td>texto</td>
-   <td>implícito</td>
-   <td>título consultivo del elemento.</td>
-  </tr>
-  <tr>
-   <td><code style="color: green;">style</code></td>
-   <td>reglas de estilo</td>
-   <td>implícito</td>
-   <td>información de estilo en línea.</td>
-  </tr>
-  <tr>
-   <td><code style="color: green;">id</code></td>
-   <td>ID</td>
-   <td>implícito</td>
-   <td>identificador único a nivel de documento.</td>
-  </tr>
-  <tr>
-   <td><code style="color: green;">class</code></td>
-   <td>lista de clases separadas por espacios</td>
-   <td>implícito</td>
-   <td>identificador a nivel de documento</td>
-  </tr>
-  <tr>
-   <td><code style="color: green;">dir</code></td>
-   <td>uno de los siguientes:"ltr" o "rtl"</td>
-   <td>implícito</td>
-   <td>dirección del texto débil/neutral</td>
-  </tr>
-  <tr>
-   <td><code style="color: green;">lang</code></td>
-   <td>código de idioma</td>
-   <td>implícito</td>
-   <td>información sobre el idioma</td>
-  </tr>
-  <tr>
-   <td colspan="4"><strong>Eventos</strong>: <code style="color: green;">onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code></td>
-  </tr>
-  <tr>
-   <th colspan="4">Específicos</th>
-  </tr>
-  <tr>
-   <td colspan="4">No tiene</td>
-  </tr>
-  <tr>
-   <th colspan="4">de transición</th>
-  </tr>
-  <tr>
-   <td colspan="4">No tiene</td>
-  </tr>
-  <tr>
-   <th>Atributo</th>
-   <th colspan="2">valor</th>
-   <th>descripción</th>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Atributo</th>
+      <th colspan="2">valor</th>
+      <th>descripción</th>
+    </tr>
+    <tr>
+      <th colspan="4">Genéricos</th>
+    </tr>
+    <tr>
+      <td><code style="color: green">title</code></td>
+      <td>texto</td>
+      <td>implícito</td>
+      <td>título consultivo del elemento.</td>
+    </tr>
+    <tr>
+      <td><code style="color: green">style</code></td>
+      <td>reglas de estilo</td>
+      <td>implícito</td>
+      <td>información de estilo en línea.</td>
+    </tr>
+    <tr>
+      <td><code style="color: green">id</code></td>
+      <td>ID</td>
+      <td>implícito</td>
+      <td>identificador único a nivel de documento.</td>
+    </tr>
+    <tr>
+      <td><code style="color: green">class</code></td>
+      <td>lista de clases separadas por espacios</td>
+      <td>implícito</td>
+      <td>identificador a nivel de documento</td>
+    </tr>
+    <tr>
+      <td><code style="color: green">dir</code></td>
+      <td>uno de los siguientes:"ltr" o "rtl"</td>
+      <td>implícito</td>
+      <td>dirección del texto débil/neutral</td>
+    </tr>
+    <tr>
+      <td><code style="color: green">lang</code></td>
+      <td>código de idioma</td>
+      <td>implícito</td>
+      <td>información sobre el idioma</td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <strong>Eventos</strong>:
+        <code style="color: green"
+          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
+          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th colspan="4">Específicos</th>
+    </tr>
+    <tr>
+      <td colspan="4">No tiene</td>
+    </tr>
+    <tr>
+      <th colspan="4">de transición</th>
+    </tr>
+    <tr>
+      <td colspan="4">No tiene</td>
+    </tr>
+    <tr>
+      <th>Atributo</th>
+      <th colspan="2">valor</th>
+      <th>descripción</th>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+### Ejemplos
 
-<p>El siguiente código:</p>
+El siguiente código:
 
-<pre>&lt;form&gt;
+```
+<form>
 
- &lt;fieldset&gt;
-  &lt;legend&gt;Información Personal&lt;/legend&gt;
-  Nombre: &lt;input name='nombre' type='text' tabindex='1'&gt;
-  Apellidos: &lt;input name='apellidos' type='text' tabindex='2'&gt;
- &lt;/fieldset&gt;
+ <fieldset>
+  <legend>Información Personal</legend>
+  Nombre: <input name='nombre' type='text' tabindex='1'>
+  Apellidos: <input name='apellidos' type='text' tabindex='2'>
+ </fieldset>
 
- &lt;fieldset&gt;
-  &lt;legend&gt;edad&lt;/legend&gt;
-  &lt;input type='checkbox' tabindex='20'
-            name='edad' value='20-39' &gt; 20-39
-  &lt;input type='checkbox' tabindex='21'
-            name='edad' value='40-59' &gt; 40-59
-  &lt;input type='checkbox' tabindex='22'
-            name='edad' value='60-79' &gt; 60-79
- &lt;/fieldset&gt;
+ <fieldset>
+  <legend>edad</legend>
+  <input type='checkbox' tabindex='20'
+            name='edad' value='20-39' > 20-39
+  <input type='checkbox' tabindex='21'
+            name='edad' value='40-59' > 40-59
+  <input type='checkbox' tabindex='22'
+            name='edad' value='60-79' > 60-79
+ </fieldset>
 
-&lt;/form&gt;
-</pre>
+</form>
+```

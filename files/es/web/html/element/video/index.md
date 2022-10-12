@@ -9,121 +9,100 @@ tags:
 translation_of: Web/HTML/Element/video
 original_slug: Web/HTML/Elemento/video
 ---
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-3"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">El elemento <code>video</code> se utiliza para incrustar vídeos en un documento HTML o XHTML.</span></span></p>
+El elemento `video` se utiliza para incrustar vídeos en un documento HTML o XHTML.
 
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-4"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Para obtener una lista de formatos compatibles, consulta <a href="/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio" title="es/Formatos multimedia admitidos por los elementos de video y audio">Formatos multimedia admitidos por los elementos de audio y vídeo</a> .</span></span></p>
+Para obtener una lista de formatos compatibles, consulta [Formatos multimedia admitidos por los elementos de audio y vídeo](/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio "es/Formatos multimedia admitidos por los elementos de video y audio") .
 
-<h2 id="Contexto_de_uso"><span class="goog-gtc-unit" id="goog-gtc-unit-5"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Contexto de uso</span></span></h2>
+## Contexto de uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><span class="goog-gtc-unit" id="goog-gtc-unit-6"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Contenido permitido</span></span></td>
-   <td><span class="goog-gtc-unit" id="goog-gtc-unit-7"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr"><a href="/en/HTML/Content_categories#transparent_content" title="en/HTML/Content categories#transparent content">Contenido transparente</a> , que contiene un atributo <strong>src</strong> o uno o más elementos {{ HTMLElement ("source") }}, seguidos por <a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">contenido dinámico</a> o <a href="/en/HTML/Content_categories#phrasing_content" title="en/HTML/Content categories#phrasing content">el contenido estático</a> , sin elementos <code> &lt;video&gt;</code> ni  {{ HTMLElement ("audio") }}.</span></span></td>
-  </tr>
-  <tr>
-   <td><span class="goog-gtc-unit" id="goog-gtc-unit-8"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Omisión de etiquetas</span></span></td>
-   <td><span class="goog-gtc-unit" id="goog-gtc-unit-9"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre</span></span></td>
-  </tr>
-  <tr>
-   <td><span class="goog-gtc-unit" id="goog-gtc-unit-10"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Elementos primarios permitidos</span></span></td>
-   <td><span class="goog-gtc-unit" id="goog-gtc-unit-11"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Cualquier elemento que acepte <a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">contenido dinámico</a> o cualquier otro elemento que acepte <a href="/en/HTML/Content_categories#phrasing_content" title="en/HTML/Content categories#phrasing content">contenido estático</a> .</span></span></td>
-  </tr>
-  <tr>
-   <td><span class="goog-gtc-unit" id="goog-gtc-unit-12"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Documento normativo</span></span></td>
-   <td><a class="external" href="http://www.w3.org/TR/html5/video.html#video"><span class="goog-gtc-unit" id="goog-gtc-unit-13"><span class="goog-gtc-from-mt goog-gtc-translatable" dir="ltr">HTML 5, sección 4.8.6</span></span></a></td>
-  </tr>
- </tbody>
-</table>
+| Contenido permitido            | [Contenido transparente](/en/HTML/Content_categories#transparent_content "en/HTML/Content categories#transparent content") , que contiene un atributo **src** o uno o más elementos {{ HTMLElement ("source") }}, seguidos por [contenido dinámico](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content") o [el contenido estático](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content") , sin elementos `<video>` ni {{ HTMLElement ("audio") }}. |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content") o cualquier otro elemento que acepte [contenido estático](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content") .                                                                                                                                                                                                                                           |
+| Documento normativo            | [HTML 5, sección 4.8.6](http://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
-<h2 id="Atributos"><span class="goog-gtc-unit" id="goog-gtc-unit-14"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Atributos</span></span></h2>
+## Atributos
 
-<dl>
- <dt><span class="goog-gtc-unit" id="goog-gtc-unit-15"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">{{ htmlattrdef("autoplay") }}</span></span></dt>
- <dd><span class="goog-gtc-unit" id="goog-gtc-unit-16"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Un atributo booleano; si se especifica, el video comenzará a reproducirse automáticamente tan pronto como sea posible, sin detenerse para terminar de cargar los datos.</span></span></dd>
- <dt><span class="goog-gtc-unit" id="goog-gtc-unit-17"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">{{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }} {{ obsolete_inline() }}</span></span></dt>
- <dd><span class="goog-gtc-unit" id="goog-gtc-unit-18"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Un atributo booleano; si se especifica, el video comenzará automáticamente a almacenarse en el búfer, incluso si no está listo para reproducirse de forma automática.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-19"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Esto se debe utilizar para los casos en los que se considera probable que el video se reproduzca (por ejemplo, si el usuario accedió a esa página específica para reproducir el video, no si hay un video insertado junto con otros contenidos). </span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-20"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">El video se almacena en el búfer hasta que el caché de medios esté lleno.</span></span>
- <div class="note"><span class="goog-gtc-unit" id="goog-gtc-unit-21"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr"><strong>Nota de implementación:</strong> aunque forma parte de los primeros borradores de la especificación HTML 5, el atributo <strong>autobuffer</strong> se ha eliminado en versiones posteriores.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-22"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Se ha quitado de Gecko 2.0 y otros navegadores, y en algunos nunca llegó a implementarse.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-23"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">La especificación define un nuevo atributo enumerado, <strong>preload,</strong> para sustituir el atributo <strong>autobuffer,</strong> con una sintaxis diferente. {{ bug (548523) }}</span></span></div>
- </dd>
- <dt><span class="goog-gtc-unit" id="goog-gtc-unit-24"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">{{ htmlattrdef("buffered") }} {{ gecko_minversion_inline("2.0") }}</span></span></dt>
- <dd><span class="goog-gtc-unit" id="goog-gtc-unit-25"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Un atributo que se puede leer para determinar qué intervalos de tiempo del multimedia se han almacenado en búfer.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-26"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Este atributo contiene un objeto </span></span>{{ domxref("TimeRanges") }}<span class="goog-gtc-unit" id="goog-gtc-unit-26"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr"> .</span></span></dd>
- <dt><span class="goog-gtc-unit" id="goog-gtc-unit-27"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">{{ htmlattrdef("controls") }}</span></span></dt>
- <dd><span class="goog-gtc-unit" id="goog-gtc-unit-28"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Si está presente este atributo, Gecko ofrecerá controles para permitir que el usuario controle la reproducción de video, incluyendo volumen, búsqueda y pausar/reanudar reproducción.</span></span></dd>
- <dt><span class="goog-gtc-unit" id="goog-gtc-unit-29"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">{{ htmlattrdef("height") }}</span></span></dt>
- <dd><span class="goog-gtc-unit" id="goog-gtc-unit-30"><span class="goog-gtc-from-mt goog-gtc-translatable" dir="ltr">La altura del área de visualización del vídeo en píxeles CSS.</span></span></dd>
- <dt><span class="goog-gtc-unit" id="goog-gtc-unit-31"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">{{ htmlattrdef("loop") }}</span></span></dt>
- <dd><span class="goog-gtc-unit" id="goog-gtc-unit-32"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Un atributo booleano; si se especifica, al alcanzar el final del video, buscaremos automáticamente hasta el principio.</span></span></dd>
- <dt><span class="goog-gtc-unit" id="goog-gtc-unit-33"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">{{ htmlattrdef("preload") }} {{ gecko_minversion_inline("2.0") }} {{ bug(548523) }}</span></span></dt>
- <dd><span class="goog-gtc-unit" id="goog-gtc-unit-34"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">El objetivo de este atributo enumerado es proporcionar una sugerencia al navegador sobre qué cree el autor que llevará a la mejor experiencia para el usuario .</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-35"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Puede tener uno de los siguientes valores:</span></span>
- <ul>
-  <li><span class="goog-gtc-unit" id="goog-gtc-unit-36"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr"><span style="font-family: courier new;">none</span>: sugiere bien que el autor cree que el usuario no tendrá que consultar ese video, bien que el servidor desea minimizar su tráfico; es decir, esta sugerencia indica que no se debe almacenar en caché este video.</span></span></li>
-  <li><span class="goog-gtc-unit" id="goog-gtc-unit-37"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr"><span style="font-family: courier new;">metadatos:</span> sugiere que aunque el autor piensa que el usuario no tendrá que consultar este video, es razonable capturar los metadatos (p. ej. longitud).</span></span></li>
-  <li><span class="goog-gtc-unit" id="goog-gtc-unit-38"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr"><span style="font-family: courier new;">auto:</span> sugiere que el usuario necesita tener prioridad; es decir, esta sugerencia indica que, si es necesario, se puede descargar el video completo, incluso aunque el usuario no vaya a usarlo.</span></span></li>
-  <li><span class="goog-gtc-unit" id="goog-gtc-unit-39"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">la <em>cadena vacía:</em> que es un sinónimo del valor <span style="font-family: courier new;">auto</span>.</span></span></li>
- </ul>
+- {{ htmlattrdef("autoplay") }}
+  - : Un atributo booleano; si se especifica, el video comenzará a reproducirse automáticamente tan pronto como sea posible, sin detenerse para terminar de cargar los datos.
+- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }} {{ obsolete_inline() }}
 
- <p><span class="goog-gtc-unit" id="goog-gtc-unit-40"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Si no está configurado, su valor predeterminado está definido por el navegador (es decir, cada navegador puede elegir su propio valor predeterminado), aunque la especificación aconseje que se establezca a <span style="font-family: courier new;">metadata</span>.</span></span></p>
+  - : Un atributo booleano; si se especifica, el video comenzará automáticamente a almacenarse en el búfer, incluso si no está listo para reproducirse de forma automática. Esto se debe utilizar para los casos en los que se considera probable que el video se reproduzca (por ejemplo, si el usuario accedió a esa página específica para reproducir el video, no si hay un video insertado junto con otros contenidos). El video se almacena en el búfer hasta que el caché de medios esté lleno.
 
- <div class=""><strong><span class="goog-gtc-unit" id="goog-gtc-unit-41"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Notas de uso:</span></span></strong>
+    > **Nota:** **Nota de implementación:** aunque forma parte de los primeros borradores de la especificación HTML 5, el atributo **autobuffer** se ha eliminado en versiones posteriores. Se ha quitado de Gecko 2.0 y otros navegadores, y en algunos nunca llegó a implementarse. La especificación define un nuevo atributo enumerado, **preload,** para sustituir el atributo **autobuffer,** con una sintaxis diferente. {{ bug (548523) }}
 
- <ul>
-  <li><span class="goog-gtc-unit" id="goog-gtc-unit-42"><span class="goog-gtc-from-human goog-gtc-ph-missing goog-gtc-translatable" dir="ltr">El atributo <strong>autoplay</strong>  tiene prioridad sobre éste si se desea reproducir automáticamente un video, el navegador obviamente tendrá que descargarlo.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-43"><span class="goog-gtc-from-human goog-gtc-ph-missing goog-gtc-translatable" dir="ltr">La especificación permite establecer los atributos <strong>autoplay</strong> y <strong>preload</strong>.</span></span></li>
-  <li><span class="goog-gtc-unit" id="goog-gtc-unit-44"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">La especificación no fuerza al navegador a seguir el valor de este atributo; es tan sólo una sugerencia.</span></span></li>
- </ul>
- </div>
- </dd>
- <dt><span class="goog-gtc-unit" id="goog-gtc-unit-45"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">{{ htmlattrdef("poster") }} {{ gecko_minversion_inline("1.9.2") }}</span></span></dt>
- <dd><span class="goog-gtc-unit" id="goog-gtc-unit-46"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Una URL que indica un marco de póster para mostrar el resultado hasta que el usuario reproduzca o busque.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-47"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Si este atributo no se especifica, no se muestra nada hasta que el primer cuadro está disponible, entonces se muestra el primer marco como el marco de póster.</span></span></dd>
- <dt><span class="goog-gtc-unit" id="goog-gtc-unit-48"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">{{ htmlattrdef("src") }}</span></span></dt>
- <dd><span class="goog-gtc-unit" id="goog-gtc-unit-49"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">La URL del vídeo que se va a insertar.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-50"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Es opcional; podrás optar, en su lugar, por el elemento {{ HTMLElement("source") }} dentro del bloque de vídeo para especificar el video que se va a incrustar.</span></span></dd>
- <dt><span class="goog-gtc-unit" id="goog-gtc-unit-51"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">{{ htmlattrdef("width") }}</span></span></dt>
- <dd><span class="goog-gtc-unit" id="goog-gtc-unit-52"><span class="goog-gtc-from-mt goog-gtc-translatable" dir="ltr">La anchura del área de visualización del vídeo en píxeles CSS.</span></span></dd>
-</dl>
+- {{ htmlattrdef("buffered") }} {{ gecko_minversion_inline("2.0") }}
+  - : Un atributo que se puede leer para determinar qué intervalos de tiempo del multimedia se han almacenado en búfer. Este atributo contiene un objeto {{ domxref("TimeRanges") }} .
+- {{ htmlattrdef("controls") }}
+  - : Si está presente este atributo, Gecko ofrecerá controles para permitir que el usuario controle la reproducción de video, incluyendo volumen, búsqueda y pausar/reanudar reproducción.
+- {{ htmlattrdef("height") }}
+  - : La altura del área de visualización del vídeo en píxeles CSS.
+- {{ htmlattrdef("loop") }}
+  - : Un atributo booleano; si se especifica, al alcanzar el final del video, buscaremos automáticamente hasta el principio.
+- {{ htmlattrdef("preload") }} {{ gecko_minversion_inline("2.0") }} {{ bug(548523) }}
 
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-53"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Las compensaciones de tiempo se especifican actualmente como valores float que representan el número de segundos que se va a compensar.</span></span></p>
+  - : El objetivo de este atributo enumerado es proporcionar una sugerencia al navegador sobre qué cree el autor que llevará a la mejor experiencia para el usuario . Puede tener uno de los siguientes valores:
 
-<div class="note"><span class="goog-gtc-unit" id="goog-gtc-unit-54"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr"><strong>Nota:</strong> la definición del valor de compensación de tiempo no se ha completado en HTML 5 aún y está sujeta a cambios.</span></span></div>
+    - none: sugiere bien que el autor cree que el usuario no tendrá que consultar ese video, bien que el servidor desea minimizar su tráfico; es decir, esta sugerencia indica que no se debe almacenar en caché este video.
+    - metadatos: sugiere que aunque el autor piensa que el usuario no tendrá que consultar este video, es razonable capturar los metadatos (p. ej. longitud).
+    - auto: sugiere que el usuario necesita tener prioridad; es decir, esta sugerencia indica que, si es necesario, se puede descargar el video completo, incluso aunque el usuario no vaya a usarlo.
+    - la _cadena vacía:_ que es un sinónimo del valor auto.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+    Si no está configurado, su valor predeterminado está definido por el navegador (es decir, cada navegador puede elegir su propio valor predeterminado), aunque la especificación aconseje que se establezca a metadata.
 
-<pre class="brush: html">&lt;video src="videofile.ogg" autoplay poster="posterimage.jpg"&gt;
-  Tu navegador no admite el elemento &lt;code&gt;video&lt;/code&gt;.
-&lt;/video&gt;
-</pre>
+    **Notas de uso:**
 
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-59"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Reproduce un vídeo, comenzando tan pronto como la recepción de video sea suficiente para permitir la reproducción sin pausas para descargar más.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-60"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Mientras que el video comienza a reproducirse, se mostrará la imagen "posterimage.jpg" en su lugar.</span></span></p>
+    - El atributo **autoplay** tiene prioridad sobre éste si se desea reproducir automáticamente un video, el navegador obviamente tendrá que descargarlo. La especificación permite establecer los atributos **autoplay** y **preload**.
+    - La especificación no fuerza al navegador a seguir el valor de este atributo; es tan sólo una sugerencia.
 
-<h2 id="Compatibilidad_con_servidores"><span class="goog-gtc-unit" id="goog-gtc-unit-61"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Compatibilidad con servidores</span></span></h2>
+- {{ htmlattrdef("poster") }} {{ gecko_minversion_inline("1.9.2") }}
+  - : Una URL que indica un marco de póster para mostrar el resultado hasta que el usuario reproduzca o busque. Si este atributo no se especifica, no se muestra nada hasta que el primer cuadro está disponible, entonces se muestra el primer marco como el marco de póster.
+- {{ htmlattrdef("src") }}
+  - : La URL del vídeo que se va a insertar. Es opcional; podrás optar, en su lugar, por el elemento {{ HTMLElement("source") }} dentro del bloque de vídeo para especificar el video que se va a incrustar.
+- {{ htmlattrdef("width") }}
+  - : La anchura del área de visualización del vídeo en píxeles CSS.
 
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-62"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Vale la pena volver a hacer hincapié, por el momento, en que si los tipos MIME para vídeo Theora no se establecen en el servidor, tal vez el vídeo no se muestre o muestre un cuadro gris con una X (si JavaScript está activado).</span></span></p>
+Las compensaciones de tiempo se especifican actualmente como valores float que representan el número de segundos que se va a compensar.
 
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-63"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Puedes solucionar este problema para el servidor Web Apache añadiendo la extensión utilizada por tus archivos de vídeo Theora (".ogm", ".ogv", o ".ogg" son los más comunes) al tipo MIME "video / ogg" a través del archivo "mime.types" en "/ etc / apache" o por medio de la directiva de configuración "AddType" en httpd.conf.</span></span></p>
+> **Nota:** **Nota:** la definición del valor de compensación de tiempo no se ha completado en HTML 5 aún y está sujeta a cambios.
 
-<pre><span class="goog-gtc-unit" id="goog-gtc-unit-64-goog-gtc-unit-65-goog-gtc-unit-66"><span class="goog-gtc-from-human goog-gtc-translatable">AddType video/ogg .ogm
+## Ejemplos
+
+```html
+<video src="videofile.ogg" autoplay poster="posterimage.jpg">
+  Tu navegador no admite el elemento <code>video</code>.
+</video>
+```
+
+Reproduce un vídeo, comenzando tan pronto como la recepción de video sea suficiente para permitir la reproducción sin pausas para descargar más. Mientras que el video comienza a reproducirse, se mostrará la imagen "posterimage.jpg" en su lugar.
+
+## Compatibilidad con servidores
+
+Vale la pena volver a hacer hincapié, por el momento, en que si los tipos MIME para vídeo Theora no se establecen en el servidor, tal vez el vídeo no se muestre o muestre un cuadro gris con una X (si JavaScript está activado).
+
+Puedes solucionar este problema para el servidor Web Apache añadiendo la extensión utilizada por tus archivos de vídeo Theora (".ogm", ".ogv", o ".ogg" son los más comunes) al tipo MIME "video / ogg" a través del archivo "mime.types" en "/ etc / apache" o por medio de la directiva de configuración "AddType" en httpd.conf.
+
+```
+AddType video/ogg .ogm
 AddType video/ogg .ogv
 AddType video/ogg .ogg
-</span></span>
-</pre>
+```
 
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-67"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Su proveedor de alojamiento web puede proporcionar una interfaz fácil para los cambios de configuración de tipo MIME que presentan las nuevas tecnologías hasta que tenga lugar una actualización global de forma natural.</span></span></p>
+Su proveedor de alojamiento web puede proporcionar una interfaz fácil para los cambios de configuración de tipo MIME que presentan las nuevas tecnologías hasta que tenga lugar una actualización global de forma natural.
 
-<h2 id="Interfaz_DOM"><span class="goog-gtc-unit" id="goog-gtc-unit-68"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Interfaz DOM</span></span></h2>
+## Interfaz DOM
 
-<ul>
- <li><a href="/en/DOM/HTMLVideoElement" title="en/DOM/HTMLVideoElement"><span class="goog-gtc-unit" id="goog-gtc-unit-69"><span class="goog-gtc-from-mt goog-gtc-translatable" dir="ltr">HTMLVideoElement</span></span></a></li>
-</ul>
+- [HTMLVideoElement](/en/DOM/HTMLVideoElement "en/DOM/HTMLVideoElement")
 
-<h2 id="Consulta_también"><span class="goog-gtc-unit" id="goog-gtc-unit-70"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Consulta también</span></span></h2>
+## Consulta también
 
-<ul>
- <li><a class="internal" href="/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio" title="es/Formatos multimedia admitidos por los elementos de video y audio"><span class="goog-gtc-unit" id="goog-gtc-unit-71"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Formatos multimedia admitidos por los elementos de audio y video</span></span></a></li>
- <li><a class="internal" href="/es/HTML/Elemento/Audio" title="es/HTML/Elemento/Audio"><code>audio</code></a></li>
- <li><a class="internal" href="/Es/Usar_audio_y_vídeo_en_Firefox" title="es/Usar audio y video en Firefox"><span class="goog-gtc-unit" id="goog-gtc-unit-72"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Usar audio y vídeo en Firefox</span></span></a></li>
- <li><a class="internal" href="/En/Manipulating_video_using_canvas" title="En/Manipulating video using canvas"><span class="goog-gtc-unit" id="goog-gtc-unit-73"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Manipular vídeo por medio de canvas</span></span></a></li>
- <li><a class="internal" href="/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" title="En/XPCOM Interface Reference/NsIDOMHTMLMediaElement"><code>nsIDOMHTMLMediaElement</code></a></li>
- <li><span class="goog-gtc-unit" id="goog-gtc-unit-74"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr"><a class="external" href="http://tinyvid.tv/">TinyVid</a>:ejemplos de uso de ogg en HTML 5.</span></span></li>
- <li><span class="goog-gtc-unit" id="goog-gtc-unit-75"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr"><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#video">El elemento <code>video</code></a> (especificación de HTML 5)</span></span></li>
- <li><a class="internal" href="/en/Configuring_servers_for_Ogg_media" title="en/Configuring servers for Ogg media"><span class="goog-gtc-unit" id="goog-gtc-unit-76"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Configuración de servidores para medios Ogg</span></span></a></li>
-</ul>
+- [Formatos multimedia admitidos por los elementos de audio y video](/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio "es/Formatos multimedia admitidos por los elementos de video y audio")
+- [`audio`](/es/HTML/Elemento/Audio "es/HTML/Elemento/Audio")
+- [Usar audio y vídeo en Firefox](/Es/Usar_audio_y_vídeo_en_Firefox "es/Usar audio y video en Firefox")
+- [Manipular vídeo por medio de canvas](/En/Manipulating_video_using_canvas "En/Manipulating video using canvas")
+- [`nsIDOMHTMLMediaElement`](/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement "En/XPCOM Interface Reference/NsIDOMHTMLMediaElement")
+- [TinyVid](http://tinyvid.tv/):ejemplos de uso de ogg en HTML 5.
+- [El elemento `video`](http://www.whatwg.org/specs/web-apps/current-work/#video) (especificación de HTML 5)
+- [Configuración de servidores para medios Ogg](/en/Configuring_servers_for_Ogg_media "en/Configuring servers for Ogg media")
 
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-77"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">{{ languages( { "fr": "fr/HTML/Element/video","en": "en/HTML/Element/video" } ) }}</span></span></p>
+{{ languages( { "fr": "fr/HTML/Element/video","en": "en/HTML/Element/video" } ) }}

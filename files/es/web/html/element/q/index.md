@@ -15,108 +15,104 @@ tags:
 translation_of: Web/HTML/Element/q
 original_slug: Web/HTML/Elemento/q
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary">El <strong>elemento HTML <code>&lt;q&gt;</code></strong> indica que el texto adjunto es una cita corta en línea. La mayoría de los navegadores modernos implementan esto rodeando el texto entre comillas. </span> Este elemento está destinado a citas breves que no requieren saltos de párrafo; para citas de bloque independiente, utiliza el elemento {{HTMLElement("blockquote")}}.</p>
+El **elemento HTML `<q>`** indica que el texto adjunto es una cita corta en línea. La mayoría de los navegadores modernos implementan esto rodeando el texto entre comillas. Este elemento está destinado a citas breves que no requieren saltos de párrafo; para citas de bloque independiente, utiliza el elemento {{HTMLElement("blockquote")}}.
 
-<div>{{ EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter") }}</div>
+{{ EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter") }}
 
-<p class="">La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una solicitud de extracción.</p>
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/es/docs/Web/HTML/Content_categories">Categorías de contenido</a></th>
-   <td><a href="/es/docs/Web/HTML/Content_categories#Flow_content">Flujo de contenido</a>, <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content">redacción de contenido</a>, contenido palpable.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenido permitido</th>
-   <td><a href="/es/docs/Web/HTML/Content_categories#Phrasing_content">Redacción de contenido</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omisión de etiqueta</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Padres autorizados</th>
-   <td>Cualquier elemento que acepte <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content">redacción de contenido</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Rol de ARIA implícito</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Rol no correspondiente</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Roles ARIA permitidos</th>
-   <td>Algunos</td>
-  </tr>
-  <tr>
-   <th scope="row">Interfaz DOM</th>
-   <td>{{DOMxRef("HTMLQuoteElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/es/docs/Web/HTML/Content_categories"
+          >Categorías de contenido</a
+        >
+      </th>
+      <td>
+        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
+          >Flujo de contenido</a
+        >,
+        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
+          >redacción de contenido</a
+        >, contenido palpable.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenido permitido</th>
+      <td>
+        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
+          >Redacción de contenido</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omisión de etiqueta</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Padres autorizados</th>
+      <td>
+        Cualquier elemento que acepte
+        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
+          >redacción de contenido</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rol de ARIA implícito</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >Rol no correspondiente</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Roles ARIA permitidos</th>
+      <td>Algunos</td>
+    </tr>
+    <tr>
+      <th scope="row">Interfaz DOM</th>
+      <td>{{DOMxRef("HTMLQuoteElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Nota de uso</strong>: La mayoría de los navegadores modernos automáticamente agregarán comillas alrededor del texto dentro de un elemento <code>&lt;q&gt;</code>. Es posible que se necesite una regla de estilo para agregar comillas en navegadores antiguos.</p>
-</div>
+> **Nota:** **Nota de uso**: La mayoría de los navegadores modernos automáticamente agregarán comillas alrededor del texto dentro de un elemento `<q>`. Es posible que se necesite una regla de estilo para agregar comillas en navegadores antiguos.
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento incluye los <a href="/es/docs/Web/HTML/Global_attributes">atributos globales</a>.</p>
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{HTMLAttrDef("cite")}}</dt>
- <dd>El valor de este atributo es una URL que designa un documento o mensaje fuente para la información citada. Este atributo está destinado a señalar información que explica el contexto o la referencia de la cita.</dd>
-</dl>
+- {{HTMLAttrDef("cite")}}
+  - : El valor de este atributo es una URL que designa un documento o mensaje fuente para la información citada. Este atributo está destinado a señalar información que explica el contexto o la referencia de la cita.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: html notranslate">&lt;p&gt;Conforme al sitio web de Mozilla,
-  &lt;q
-  cite="https://www.mozilla.org/en-US/about/history/details/"&gt;Firefox 1.0
-  fue lanzado en 2004 y se convirtió en un gran éxito.&lt;/q&gt;&lt;/p&gt;
-</pre>
+```html
+<p>Conforme al sitio web de Mozilla,
+  <q
+  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
+  fue lanzado en 2004 y se convirtió en un gran éxito.</q></p>
+```
 
-<p>{{EmbedLiveSample('Ejemplo')}}</p>
+{{EmbedLiveSample('Ejemplo')}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', 'textlevel-semantics.html#the-q-element', '&lt;q&gt;') }}</td>
-   <td>{{ Spec2('HTML5 W3C') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;q&gt;') }}</td>
-   <td>{{ Spec2('HTML4.01') }}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                               | Comentario         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| {{ SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;') }}         | {{ Spec2('HTML WHATWG') }} |                    |
+| {{ SpecName('HTML5 W3C', 'textlevel-semantics.html#the-q-element', '&lt;q&gt;') }} | {{ Spec2('HTML5 W3C') }}     |                    |
+| {{ SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;q&gt;') }}                     | {{ Spec2('HTML4.01') }}     | Definición inicial |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
+{{ Compat("html.elements.q") }}
 
+## Ve también
 
-<p>{{ Compat("html.elements.q") }}</p>
-
-<h2 id="Ve_también">Ve también</h2>
-
-<ul>
- <li>El elemento {{HTMLElement("blockquote")}} para citas de bloque independiente.</li>
- <li>El elemento {{HTMLElement("cite")}} para citas de fuentes.</li>
-</ul>
+- El elemento {{HTMLElement("blockquote")}} para citas de bloque independiente.
+- El elemento {{HTMLElement("cite")}} para citas de fuentes.

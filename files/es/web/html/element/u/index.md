@@ -8,63 +8,53 @@ tags:
 translation_of: Web/HTML/Element/u
 original_slug: Web/HTML/Elemento/u
 ---
-<p> </p>
+### Definición
 
-<h3 id="Definici.C3.B3n" name="Definici.C3.B3n">Definición</h3>
+- Muestra el texto subrayado.
+  - : **Sus etiquetas son**: \<u> y \</u> (Ambas obligatorias)
+    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Está definido como**
+    [de estilo de fuente](es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
+    [Desaprobado](es/HTML/Elemento/Tipos_de_elementos#Desaprobado)
+    **Puede contener**: cero o más elementos [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
-<dl>
-<dt>Muestra el texto subrayado.</dt>
+##### Atributos Genéricos
 
- <dd><strong>Sus etiquetas son</strong>: &lt;u&gt; y &lt;/u&gt; (Ambas obligatorias)
- 
- <strong>Crea una caja</strong>: <a href="es/HTML/Elemento/Tipos_de_elementos#en_linea">en linea</a>.
- 
- <strong>Está definido como</strong>
+- title (título del elemento)
+- style (información de estilo en línea)
 
- <a href="es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente">de estilo de fuente</a>.
- 
- <a href="es/HTML/Elemento/Tipos_de_elementos#Desaprobado">Desaprobado</a>
- 
- <strong>Puede contener</strong>: cero o más elementos <a href="es/HTML/Elemento/Tipos_de_elementos#en_linea">en linea</a></dd>
-</dl>
+**Identificadores**: id, class (identificadores a nivel de documento)
+**Idioma**: lang (información sobre el idioma), dir (dirección del texto)
+**Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
 
-<h5 id="Atributos_Gen.C3.A9ricos" name="Atributos_Gen.C3.A9ricos">Atributos Genéricos</h5>
+##### Atributos Específicos - No tiene
 
-<ul>
- <li>title (título del elemento)</li>
- <li>style (información de estilo en línea)</li>
-</ul>
+##### Atributos Transicionales - No tiene
 
-<strong>Identificadores</strong>: id, class (identificadores a nivel de documento)
-<strong>Idioma</strong>: lang (información sobre el idioma), dir (dirección del texto)
-<strong>Eventos</strong>: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
+### Ejemplos
 
-<h5 id="Atributos_Espec.C3.ADficos_-_No_tiene" name="Atributos_Espec.C3.ADficos_-_No_tiene">Atributos Específicos - No tiene</h5>
+Uso de u:
 
-<h5 id="Atributos_Transicionales_-_No_tiene" name="Atributos_Transicionales_-_No_tiene">Atributos Transicionales - No tiene</h5>
+```
+  <p>
+       Texto normal y... <u>Texto subrayado</u>
+  </p>
+```
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+Uso de CSS:
 
-<p>Uso de u:</p>
+```
+  <p>
+       Texto normal y... <span style='text-decoration: underline'>Texto subrayado</span>
+  </p>
+```
 
-<pre class="eval">  &lt;p&gt;
-       Texto normal y... &lt;u&gt;Texto subrayado&lt;/u&gt;
-  &lt;/p&gt;
-</pre>
+### Comentarios
 
-<p>Uso de CSS:</p>
+Para obtener el mismo resultado puede usarse La propiedad CSS text-decoration: underline;
 
-<pre class="eval">  &lt;p&gt;
-       Texto normal y... &lt;span style='text-decoration: underline'&gt;Texto subrayado&lt;/span&gt;
-  &lt;/p&gt;
-</pre>
+Si por algún motivo necesita usar elementos desaprobados como u, recuerde que debe declarar un DOCTYPE transicional.
 
-<h3 id="Comentarios" name="Comentarios">Comentarios</h3>
+> **Advertencia:** DESAPROBADO
 
-<p>Para obtener el mismo resultado puede usarse La propiedad CSS text-decoration: underline;</p>
-
-<p>Si por algún motivo necesita usar elementos desaprobados como u, recuerde que debe declarar un DOCTYPE transicional.</p>
-
-<div class="warning">DESAPROBADO</div>
-
-<p><span class="comment">de momento no funciona </span></p>
+de momento no funciona
