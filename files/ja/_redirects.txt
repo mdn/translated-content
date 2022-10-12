@@ -4010,7 +4010,7 @@
 /ja/docs/Web/CSS/:host()	/ja/docs/Web/CSS/:host_function
 /ja/docs/Web/CSS/:host-context()	/ja/docs/orphaned/Web/CSS/:host-context()
 /ja/docs/Web/CSS/:matches	/ja/docs/Web/CSS/:is
-/ja/docs/Web/CSS/@font-face/font-variant	/ja/docs/conflicting/Web/CSS/@font-face
+/ja/docs/Web/CSS/@font-face/font-variant	/ja/docs/Web/CSS/@font-face
 /ja/docs/Web/CSS/@media/scan	/ja/docs/orphaned/Web/CSS/@media/scan
 /ja/docs/Web/CSS/@page/bleed	/ja/docs/orphaned/Web/CSS/@page/bleed
 /ja/docs/Web/CSS/@page/marks	/ja/docs/orphaned/Web/CSS/@page/marks
