@@ -21,22 +21,22 @@ _`TextDecoder` 接口不继承任何属性。_
 - {{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}
   - : 一个包含的解码器名称的字符串，即描述 `TextDecoder` 将使用的方法的字符串。
 - {{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}
-  - : 一个布尔值（{{jsxref('Boolean')}}），表示错误模式是否致命。
+  - : 一个{{jsxref('Boolean', '布尔值', '', '1')}}，表示错误模式是否致命。
 - {{DOMxRef("TextDecoder.prototype.ignoreBOM")}} {{ReadOnlyInline}}
-  - : 布尔值，{{jsxref('Boolean')}}，是否忽略 BOM（byte order marker）标记。
+  - : 一个{{jsxref('Boolean', '布尔值', '', '1')}}，表示是否忽略[字节顺序标记（BOM）](https://www.w3.org/International/questions/qa-byte-order-mark)标记。
 
 ## 方法
 
 _`TextDecoder` 接口不继承任何方法_。
 
 - {{DOMxRef("TextDecoder.prototype.decode()")}}
-  - : 返回一个{{DOMxRef("DOMString")}}，其中包含使用特定 `TextDecoder` 对象的方法解码的文本。
+  - : 返回一个字符串，其中包含使用特定 `TextDecoder` 对象的方法解码的文本。
 
 ## 示例
 
 ### 用类型化数组表示文本
 
-本示例展示如何解码中文/日语字符![](2019-05-21_191907.png)，用五个不同的数组类型表示： {{jsxref("Uint8Array")}}、{{jsxref("Int8Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int16Array")}} 和 {{jsxref("Int32Array")}}
+本示例展示如何解码中文/日语字符![](2019-05-21_191907.png)，用五个不同的类型化数组表示：{{jsxref("Uint8Array")}}、{{jsxref("Int8Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int16Array")}} 和 {{jsxref("Int32Array")}}。
 
 ```js
 let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'
@@ -56,7 +56,7 @@ console.log(utf8decoder.decode(i32arr));
 
 ### 处理非 UTF8 文本
 
-在此示例中，我们对俄语文本“Привет，мир！”进行编码，它的意思是（"Hello, world."）。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定适用于西里尔字母脚本的 Windows-1251 字符编码，。
+在此示例中，我们对俄语文本“Привет，мир！”进行编码，它的意思是（"Hello, world."）。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定适用于西里尔字母的 Windows-1251 字符编码。
 
 ```js
 const win1251decoder = new TextDecoder("windows-1251");
@@ -78,4 +78,4 @@ console.log(win1251decoder.decode(bytes)); // Привет, мир!
 
 - {{DOMxRef("TextEncoder")}} 接口描述了逆操作。
 - 一个[垫片](http://code.google.com/p/stringencoding/)，允许在不支持它的浏览器使用这个接口。
-- [Node.js 支持从 v11.0.0 全局导出](https://nodejs.org/api/util.html#util_class_util_textdecoder)
+- [Node.js 从 v11.0.0 开始支持全局导出](https://nodejs.org/api/util.html#util_class_util_textdecoder)
