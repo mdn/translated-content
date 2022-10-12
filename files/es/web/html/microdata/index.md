@@ -57,7 +57,7 @@ _[itemprop](/es/docs/Web/HTML/Global_attributes/itemprop)_: utilizado para añad
 
 _[itemref](/es/docs/Web/HTML/Global_attributes/itemref)_: las propiedades que no desciendan de un elemento y contengan el atributo `itemscope` pueden asociarse con el elemento a través de una _**itemref**_. _Itemref_ proporciona una lista de identificadores de elementos (distintos de los `itemid`s) con propiedades adicionales en otras partes del documento.
 
-[_itemscope_](/es/docs/Web/HTML/Global_attributes/itemscope): _Itemscope_ (por lo general) funciona en conjunto con [_itemtype_ ](/es/docs/Web/HTML/Global_attributes/itemtype)para especificar que el HTML contenido en un bloque se refiere a un término concreto. _itemscope_ crea el elemento y define el alcance del _itemtype_ asociado con él. _itemtype_ es un URL válido de un vocabulario (como [Schema.org](http://schema.org/)) que describe el elemento y el contexto de sus propiedades.
+[_itemscope_](/es/docs/Web/HTML/Global_attributes/itemscope): _Itemscope_ (por lo general) funciona en conjunto con [_itemtype_](/es/docs/Web/HTML/Global_attributes/itemtype)para especificar que el HTML contenido en un bloque se refiere a un término concreto. _itemscope_ crea el elemento y define el alcance del _itemtype_ asociado con él. _itemtype_ es un URL válido de un vocabulario (como [Schema.org](http://schema.org/)) que describe el elemento y el contexto de sus propiedades.
 
 [_itemtype_](/es/docs/Web/HTML/Global_attributes/itemtype): Especifica el URL del vocabulario que se empleará para definir _itemprops_ (‘propiedades de elementos’) en la estructura de datos. Se emplea _[Itemscope](/es/docs/Web/HTML/Global_attributes/itemscope)_ para establecer el alcance del área de funcionamiento del vocabulario establecido por _itemtype_ dentro de la estructura de datos.
 
@@ -67,19 +67,19 @@ _[itemref](/es/docs/Web/HTML/Global_attributes/itemref)_: las propiedades que no
 
 ```html
 <div itemscope itemtype="http://schema.org/SoftwareApplication">
-  <span itemprop="name">Angry Birds</span> -
+  <span itemprop="name">Angry Birds -
 
-  REQUIRES <span itemprop="operatingSystem">ANDROID</span><br>
+  REQUIRES <span itemprop="operatingSystem">ANDROID<br>
   <link itemprop="applicationCategory" href="http://schema.org/GameApplication"/>
 
   <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
     RATING:
-    <span itemprop="ratingValue">4.6</span> (
-    <span itemprop="ratingCount">8864</span> ratings )
+    <span itemprop="ratingValue">4.6 (
+    <span itemprop="ratingCount">8864 ratings )
   </div>
 
   <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-    Price: $<span itemprop="price">1.00</span>
+    Price: $<span itemprop="price">1.00
     <meta itemprop="priceCurrency" content="MXN" />
   </div>
 </div>
@@ -93,55 +93,55 @@ _[itemref](/es/docs/Web/HTML/Global_attributes/itemref)_: las propiedades que no
       <td colspan="1" rowspan="4">itemscope</td>
       <td>itemtype</td>
       <td colspan="2" rowspan="1">
-        <span>SoftwareApplication (</span>http://schema.org/SoftwareApplication)
+        SoftwareApplication (http://schema.org/SoftwareApplication)
       </td>
     </tr>
     <tr>
       <td>itemprop</td>
-      <td><span>name</span></td>
-      <td><span>Angry Birds</span></td>
+      <td>name</td>
+      <td>Angry Birds</td>
     </tr>
     <tr>
       <td>itemprop</td>
-      <td><span>operatingSystem</span></td>
-      <td><span>ANDROID</span></td>
+      <td>operatingSystem</td>
+      <td>ANDROID</td>
     </tr>
     <tr>
       <td>itemprop</td>
-      <td><span>applicationCategory</span></td>
-      <td><span>GameApplication (http://schema.org/GameApplication)</span></td>
+      <td>applicationCategory</td>
+      <td>GameApplication (http://schema.org/GameApplication)</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="3">itemscope</td>
       <td>itemprop[itemtype]</td>
       <td colspan="2" rowspan="1">
-        <span>aggregateRating</span> [<span>AggregateRating</span>]
+        aggregateRating [AggregateRating]
       </td>
     </tr>
     <tr>
       <td>itemprop</td>
-      <td><span>ratingValue</span></td>
-      <td><span>4.6</span></td>
+      <td>ratingValue</td>
+      <td>4.6</td>
     </tr>
     <tr>
       <td>itemprop</td>
-      <td><span>ratingCount</span></td>
-      <td><span>8864</span></td>
+      <td>ratingCount</td>
+      <td>8864</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="3">itemscope</td>
       <td>itemprop[itemtype]</td>
-      <td colspan="2" rowspan="1"><span>offers</span> [<span>Offer</span>]</td>
+      <td colspan="2" rowspan="1">offers [Offer]</td>
     </tr>
     <tr>
       <td>itemprop</td>
-      <td><span>price</span></td>
-      <td><span>1.00</span></td>
+      <td>price</td>
+      <td>1.00</td>
     </tr>
     <tr>
       <td>itemprop</td>
-      <td><span>priceCurrency</span></td>
-      <td><span>USD</span></td>
+      <td>priceCurrency</td>
+      <td>USD</td>
     </tr>
   </tbody>
 </table>
