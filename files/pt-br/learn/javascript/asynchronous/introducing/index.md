@@ -12,8 +12,8 @@ Neste artigo, explicaremos o que é programação assíncrona, por que precisamo
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        Conhecimento básico de informática, uma compreensão razoável de JavaScript
-        fundamentos, incluindo funções e manipuladores de eventos.
+        Conhecimento básico de informática, uma compreensão razoável de fundamentos de 
+        JavaScript, incluindo funções e manipuladores de eventos.
       </td>
     </tr>
     <tr>
