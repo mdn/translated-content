@@ -11,7 +11,7 @@ CSS（层叠样式表）用于设置和布置网页——例如，更改内容�
 
 在开始本单元之前，你应该：
 
-1. 基本熟悉使用计算机，并被动地使用 Web（即查看它，使用其内容）。
+1. 基本熟悉使用计算机，并被动地使用 Web（即查看它、了解其内容）。
 2. 基本工作环境的设置详见[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)，并了解如何创建和管理文件，详见[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)。
 3. 熟悉 [HTML 概述](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 章节中提到的基本 HTML 知识。
 
