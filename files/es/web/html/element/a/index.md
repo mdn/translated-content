@@ -73,7 +73,7 @@ El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de interne
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes "HTML/Global attributes").
+Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("download")}} {{HTMLVersionInline(5)}}
 
@@ -94,7 +94,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes "
     > **Nota:** Puede ser utilizado `href="#top"` o un fragmento vacío `href="#"` para enlazar a la parte superior de la página actual. [Este comportamiento está especficado en HTML5](https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid).
 
 - {{htmlattrdef("hreflang")}}
-  - : Este atributo indica el lenguaje humano del recurso al que se enlaza. Este es únicamente informativo, sin ninguna funcionalidad incorporada. Los valores permitidos están determinados por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt "Tags for Identifying Languages").
+  - : Este atributo indica el lenguaje humano del recurso al que se enlaza. Este es únicamente informativo, sin ninguna funcionalidad incorporada. Los valores permitidos están determinados por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt).
 - {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
 
   - : Indica que [referencia (_referer_)](/es/docs/Web/HTTP/Headers/Referer) enviar cuado la URL es recuperada:
@@ -246,7 +246,7 @@ Cuando se clicea sobre un {{HTMLElement("a")}} las consecuencias varían de acue
 | Navegadores de escritorio                                                                                                                             | Windows 8.1 | OS X 10.9                       |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------- |
 | Firefox 30.0                                                                                                                                          | Si          | Si                              |
-| Chrome ≥39 ([Chromium bug 388666](https://code.google.com/p/chromium/issues/detail?id=388666 "Issue 388666: Focus anchor (A) elements on mousedown")) | Si          | Si                              |
+| Chrome ≥39 ([Chromium bug 388666](https://code.google.com/p/chromium/issues/detail?id=388666)) | Si          | Si                              |
 | Safari 7.0.5                                                                                                                                          | N/A         | Sólo cuando tiene un `tabindex` |
 | Internet Explorer 11                                                                                                                                  | Si          | N/A                             |
 | Presto (Opera 12)                                                                                                                                     | Si          | Si                              |

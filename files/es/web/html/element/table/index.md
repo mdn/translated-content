@@ -8,15 +8,65 @@ original_slug: Web/HTML/Elemento/table
 
 El _Elemento de Tabla HTML_ (`<table>`) representa datos en dos o mas dimensiones.
 
-> **Nota:**Antes de la creación de [CSS](/es/docs/CSS "CSS"), los elementos HTML {{HTMLElement("table")}} eran frecuentemente utilizados para la disposición (posicionamiento) de una página. Este uso ha sido desalentado desde HTML 4, y el elemento no debe ser usado para dichos fines.
+> **Nota:**Antes de la creación de [CSS](/es/docs/CSS), los elementos HTML {{HTMLElement("table")}} eran frecuentemente utilizados para la disposición (posicionamiento) de una página. Este uso ha sido desalentado desde HTML 4, y el elemento no debe ser usado para dichos fines.
 
 ## Contexto de uso
 
-((Tabla))
+<table class="standard-table">
+    <tbody>
+      <tr>
+        <td><a href="/es/docs/HTML/Content_categories" title="HTML/Content categories">Categoria del contenido</a></td>
+        <td><a href="/es/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flujo del contenido</a></td>
+      </tr>
+      <tr>
+        <td>Contenido permitido</td>
+        <td>
+          <div class="">
+            <div id="table-mdls">
+              En este orden:
+              <ul>
+                <li>un elemento opcional {{HTMLElement("caption")}},</li>
+                <li>cero o mas elementos {{HTMLElement("colgroup")}},</li>
+                <li>un elemento opcional {{HTMLElement("thead")}},</li>
+                <li>una de las dos alternativas:
+                  <ul>
+                    <li>un elemento {{HTMLElement("tfoot")}}, seguido por:
+                      <ul>
+                        <li>cero o mas elementos {{HTMLElement("tbody")}},</li>
+                        <li>o uno o mas elementos {{HTMLElement("tr")}},</li>
+                      </ul>
+                    </li>
+                    <li>una segunda alternativa seguida por un elemento opcional {{HTMLElement("tfoot")}}:
+                      <ul>
+                        <li>cualquier cero o mas elementos {{HTMLElement("tbody")}},</li>
+                        <li>uno o mas elementos {{HTMLElement("tr")}}</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Omisión de etiqueta</td>
+        <td>Ninguna, ambas la <span title="syntax-start-tag">etiqueta de inicio</span> y <span title="syntax-end-tag">de fin</span> son obligatorias</td>
+      </tr>
+      <tr>
+        <td>Elementos padre permitidos</td>
+        <td>cualquier elemento que acepte elementos de flujo</td>
+      </tr>
+      <tr>
+        <td>Documento normativo</td>
+        <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element" rel="external nofollow">HTML5, section 4.9.1</a> (<a class="external" href="http://www.w3.org/TR/REC-html40/struct/tables.html#edef-TABLE">HTML4.01, section 11.2.1</a>)</td>
+      </tr>
+    </tbody>
+  </table>
 
 ### Atributos
 
-Al igual que otros elementos HTML, este elemento también soporta [atributos globales](/es/docs/HTML/Global_attributes "HTML/Global attributes").
+Al igual que otros elementos HTML, este elemento también soporta [atributos globales](/es/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("align")}} {{Deprecated_inline}}
 
@@ -26,7 +76,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
     - center, significa que la tabla será mostrada al centro del documento;
     - right, significa que la tabla será mostrada a la derecha del documento.
 
-    > **Nota:**- **No usar este atributo**, ya que ha sido declarado obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS "CSS"). A fin de dar un efecto similar al atributo align, las propiedades {{cssxref("text-align")}} y {{cssxref("vertical-align")}} deben ser usadas.
+    > **Nota:**- **No usar este atributo**, ya que ha sido declarado obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). A fin de dar un efecto similar al atributo align, las propiedades {{cssxref("text-align")}} y {{cssxref("vertical-align")}} deben ser usadas.
     >
     > - Antes de la version 4 de Firefox, este ya soportaba sólo en el modo quirks (compatibilidad con navegadores antiguos) los valores `middle`, `absmiddle`, and `abscenter` como sinónimos de `center`_._
 
@@ -46,7 +96,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
     |     | purple (púrpura) = "#800080" |     | teal (verde esmeralda) = "#008080" |
     |     | fuchsia (fucsia) = "#FF00FF" |     | aqua (verde agua) = "#00FFFF"      |
 
-    > **Nota:** **Nota de uso:** No usar este atributo, dado que ha sido declarado obsoleto. El elemento {{HTMLElement("table")}} debe ser estilizado utilizando [CSS](/es/docs/CSS "CSS"). A fin de dar un efecto similar al atributo bgcolor, la propiedad [CSS](/es/docs/CSS "CSS") {{cssxref("background-color")}} debe ser usada.
+    > **Nota:** **Nota de uso:** No usar este atributo, dado que ha sido declarado obsoleto. El elemento {{HTMLElement("table")}} debe ser estilizado utilizando [CSS](/es/docs/CSS). A fin de dar un efecto similar al atributo bgcolor, la propiedad [CSS](/es/docs/CSS) {{cssxref("background-color")}} debe ser usada.
 
 <!---->
 
@@ -54,7 +104,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
   - : Este atributo entero define el tamaño del cuadro alrededor de la tabla . Si estuviese puesta en 0, implicaría que dicho atributo sería nulo.
 
-    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS "CSS"). A fin de dar un efecto similar al atributo, las propiedades CSS nativas {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} y {{cssxref("border-style")}} deben ser usadas.
+    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). A fin de dar un efecto similar al atributo, las propiedades CSS nativas {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} y {{cssxref("border-style")}} deben ser usadas.
 
 <!---->
 
@@ -62,7 +112,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
   - : Este atributo define el espacio entre el contenido de una celda y su borde (mostrado o no), si fuese la longitud de un pixel, dicho espacio será aplicado en los 4 costados, caso que fuese un porcentaje, el contenido será centrado y todo el espacio vertical representará a este porcentaje. Lo mismo será válido para todo el espacio horizontal
 
-    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS "CSS"). Para dar un efecto similar al atributo border, use la propiedad CSS {{cssxref("border-collapse")}} con el valor collapse en el mismo elemento {{HTMLElement("table")}}, y la propiedad {{cssxref("padding")}} en el elemento {{HTMLElement("td")}}.
+    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Para dar un efecto similar al atributo border, use la propiedad CSS {{cssxref("border-collapse")}} con el valor collapse en el mismo elemento {{HTMLElement("table")}}, y la propiedad {{cssxref("padding")}} en el elemento {{HTMLElement("td")}}.
 
 <!---->
 
@@ -70,7 +120,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
   - : Este atributo define el espacio entre el contenido de una celda y su borde (mostrado o no), si fuese la longitud de un pixel, dicho espacio será aplicado en los 4 costados, caso que fuese un porcentaje, el contenido será centrado y todo el espacio vertical representará a este porcentaje. Lo mismo será válido para todo el espacio horizontal.
 
-    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS "CSS"). Para dar un efecto similar al atributo border, use la propiedad {{cssxref("border-collapse")}} con el valor collapse en el mismo elemento {{HTMLElement("table")}}, y la propiedad {{cssxref("margin")}} en el elemento {{HTMLElement("td")}}.
+    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Para dar un efecto similar al atributo border, use la propiedad {{cssxref("border-collapse")}} con el valor collapse en el mismo elemento {{HTMLElement("table")}}, y la propiedad {{cssxref("margin")}} en el elemento {{HTMLElement("td")}}.
 
 <!---->
 
@@ -85,7 +135,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
     |     | border |     | box    |
     |     | void   |     |        |
 
-    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS "CSS"). Para dar un efecto similar al atributo frame use las propiedades CSS {{cssxref("border-style")}} y {{cssxref("border-width")}}.
+    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Para dar un efecto similar al atributo frame use las propiedades CSS {{cssxref("border-style")}} y {{cssxref("border-width")}}.
 
 <!---->
 
@@ -101,7 +151,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
     > **Nota:** :- El estilo de las reglas depende del navegador usado y no puede ser modificado.
     >
-    > - Nota de uso: No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS "CSS"). Use la propiedad {{cssxref("border")}} en los elementos adecuados {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}} o {{HTMLElement("colgroup")}}.
+    > - Nota de uso: No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Use la propiedad {{cssxref("border")}} en los elementos adecuados {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}} o {{HTMLElement("colgroup")}}.
 
 <!---->
 
@@ -123,11 +173,11 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
   - : Este atributo define el ancho de una tabla, pudiendo contener una longitud de píxeles o un porcentaje, que representa un porcentaje de anchura del contenedor que la tabla debiera usar.
 
-    > **Nota:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS "CSS"). Para dar un efecto similar al atributo frame use la propiedad CSS {{cssxref("width")}} en su lugar.
+    > **Nota:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Para dar un efecto similar al atributo frame use la propiedad CSS {{cssxref("width")}} en su lugar.
 
 ### Interfaz DOM
 
-Este elemento implementa la interfaz [`HTMLTableElement`](/es/docs/DOM/HTMLTableElement "DOM/HTMLTableElement").
+Este elemento implementa la interfaz [`HTMLTableElement`](/es/docs/DOM/HTMLTableElement).
 
 ### Ejemplos
 

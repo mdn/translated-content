@@ -10,15 +10,15 @@ El **elemento** **HTML `<main>` **representa el contenido principal del {{HTMLEl
 
 > **Nota:** **no debe haber** más de un elemento `<main>` en un documento, y este **no debe ser** descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.
 
-- _[Content categories](/es/docs/Web/HTML/Content_categories "HTML/Content_categories")_[Flow content](/es/docs/Web/HTML/Content_categories#Flow_content "HTML/Content_categories#Flow_content"), palpable content.
-- _Contenido permitido_ [Flow content](/es/docs/Web/HTML/Content_categories#Flow_content "HTML/Content_categories#Flow_content").
+- _[Content categories](/es/docs/Web/HTML/Content_categories)_[Flow content](/es/docs/Web/HTML/Content_categories#Flow_content), palpable content.
+- _Contenido permitido_ [Flow content](/es/docs/Web/HTML/Content_categories#Flow_content).
 - _Omisión de etiquetas_ Ninguna; ambas etiqueta inical y de fin son obligatorias.
-- _Elementos padres permitidos_ Cualquier elemento que acepte [flow content](/es/docs/Web/HTML/Content_categories#Flow_content "HTML/Content_categories#Flow_content"), pero no debe ser un descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.
+- _Elementos padres permitidos_ Cualquier elemento que acepte [flow content](/es/docs/Web/HTML/Content_categories#Flow_content), pero no debe ser un descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.
 - _Interfaz DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos
 
-Este elemento solo incluye [atributos globales.](/es/docs/Web/HTML/Global_attributes "HTML/Global attributes")
+Este elemento solo incluye [atributos globales.](/es/docs/Web/HTML/Global_attributes)
 
 ## Ejemplo
 

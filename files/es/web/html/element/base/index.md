@@ -72,7 +72,7 @@ La dirección URL base de un documento puede ser consultado a partir de una secu
 
 ## Attributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales "HTML/Global attributes").
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
 - {{htmlattrdef("href")}}
   - : La dirección URL base que se usa en todo el documento para las direcciones URL relativas. Si no se especifica este atributo, este elemento debe venir antes de cualesquiera otros elementos con atributos cuyos valores son direcciones URL. Se permiten las direcciones URL absolutas y relativas.

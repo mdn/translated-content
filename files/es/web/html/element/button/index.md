@@ -17,8 +17,8 @@ Es el elemento crea botones marcadores.
 - La etiqueta de **HTML `<button>`**representa un elemento cliqueable de tipo botón que puede ser utilizado en formularios o en cualquier parte de la página que necesite un botón estándar y simple de aplicar. De forma predeterminada, los botones HTML se presentan con un estilo similar en todas las plataformas, estos estilos se pueden cambiar utilizando [CSS](/es/docs/Web/CSS).
   - : **Sus etiquetas son**: \<button> y \</button> (ambas obligatorias).
     **Crea una caja**: en linea.
-    **Está definido como**: [Elemento de control para formulario](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase "HTML/Elemento/Tipos_de_elementos#de_frase").
-    **Puede contener**: Texto y/o cero o más elementos [en Bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea "HTML/Elemento/Tipos_de_elementos#en_linea") o [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea "HTML/Elemento/Tipos_de_elementos#en_linea"), con las siguientes excepciones: (A|%formctrl;|FORM|FIELDSET)
+    **Está definido como**: [Elemento de control para formulario](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Puede contener**: Texto y/o cero o más elementos [en Bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea) o [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea), con las siguientes excepciones: (A|%formctrl;|FORM|FIELDSET)
 
 ## Atributos
 
@@ -365,10 +365,10 @@ Más información (en inglés):
 
 ## Referencia
 
-- El elemento [button](/es/docs/HTML/Elemento/button "HTML/Elemento/button") en el estándar [HTML 4.01](http://html.conclase.net/w3c/html401-es/interact/forms.html#h-17.5)
+- El elemento [button](/es/docs/HTML/Elemento/button) en el estándar [HTML 4.01](http://html.conclase.net/w3c/html401-es/interact/forms.html#h-17.5)
 
 ---
 
 > **Nota:** Estamos ampliando este documento, posiblemente contenga carencias y defectos. ¡Estamos en obras!... disculpen las molestias.
 >
-> ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta [MDC:Como ayudar](/es/docs/Project:Como_ayudar "Project:Como_ayudar").
+> ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta [MDC:Como ayudar](/es/docs/Project:Como_ayudar).

@@ -11,14 +11,14 @@ original_slug: Web/HTML/Elemento/video
 ---
 El elemento `video` se utiliza para incrustar vídeos en un documento HTML o XHTML.
 
-Para obtener una lista de formatos compatibles, consulta [Formatos multimedia admitidos por los elementos de audio y vídeo](/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio "es/Formatos multimedia admitidos por los elementos de video y audio") .
+Para obtener una lista de formatos compatibles, consulta [Formatos multimedia admitidos por los elementos de audio y vídeo](/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio) .
 
 ## Contexto de uso
 
-| Contenido permitido            | [Contenido transparente](/en/HTML/Content_categories#transparent_content "en/HTML/Content categories#transparent content") , que contiene un atributo **src** o uno o más elementos {{ HTMLElement ("source") }}, seguidos por [contenido dinámico](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content") o [el contenido estático](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content") , sin elementos `<video>` ni {{ HTMLElement ("audio") }}. |
+| Contenido permitido            | [Contenido transparente](/en/HTML/Content_categories#transparent_content) , que contiene un atributo **src** o uno o más elementos {{ HTMLElement ("source") }}, seguidos por [contenido dinámico](/en/HTML/Content_categories#flow_content) o [el contenido estático](/en/HTML/Content_categories#phrasing_content) , sin elementos `<video>` ni {{ HTMLElement ("audio") }}. |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content") o cualquier otro elemento que acepte [contenido estático](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content") .                                                                                                                                                                                                                                           |
+| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/en/HTML/Content_categories#flow_content) o cualquier otro elemento que acepte [contenido estático](/en/HTML/Content_categories#phrasing_content) .                                                                                                                                                                                                                                           |
 | Documento normativo            | [HTML 5, sección 4.8.6](http://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 ## Atributos
@@ -92,17 +92,17 @@ Su proveedor de alojamiento web puede proporcionar una interfaz fácil para los 
 
 ## Interfaz DOM
 
-- [HTMLVideoElement](/en/DOM/HTMLVideoElement "en/DOM/HTMLVideoElement")
+- [HTMLVideoElement](/en/DOM/HTMLVideoElement)
 
 ## Consulta también
 
-- [Formatos multimedia admitidos por los elementos de audio y video](/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio "es/Formatos multimedia admitidos por los elementos de video y audio")
-- [`audio`](/es/HTML/Elemento/Audio "es/HTML/Elemento/Audio")
-- [Usar audio y vídeo en Firefox](/Es/Usar_audio_y_vídeo_en_Firefox "es/Usar audio y video en Firefox")
-- [Manipular vídeo por medio de canvas](/En/Manipulating_video_using_canvas "En/Manipulating video using canvas")
-- [`nsIDOMHTMLMediaElement`](/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement "En/XPCOM Interface Reference/NsIDOMHTMLMediaElement")
+- [Formatos multimedia admitidos por los elementos de audio y video](/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio)
+- [`audio`](/es/HTML/Elemento/Audio)
+- [Usar audio y vídeo en Firefox](/Es/Usar_audio_y_vídeo_en_Firefox)
+- [Manipular vídeo por medio de canvas](/En/Manipulating_video_using_canvas)
+- [`nsIDOMHTMLMediaElement`](/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
 - [TinyVid](http://tinyvid.tv/):ejemplos de uso de ogg en HTML 5.
 - [El elemento `video`](http://www.whatwg.org/specs/web-apps/current-work/#video) (especificación de HTML 5)
-- [Configuración de servidores para medios Ogg](/en/Configuring_servers_for_Ogg_media "en/Configuring servers for Ogg media")
+- [Configuración de servidores para medios Ogg](/en/Configuring_servers_for_Ogg_media)
 
 {{ languages( { "fr": "fr/HTML/Element/video","en": "en/HTML/Element/video" } ) }}

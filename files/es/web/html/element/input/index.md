@@ -68,7 +68,7 @@ El elemento HTML `<input>` se usa para crear controles interactivos para formula
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales "en/HTML/Global attributes"), y los indicados a continuación.
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales), y los indicados a continuación.
 
 - {{htmlattrdef("type")}}
 

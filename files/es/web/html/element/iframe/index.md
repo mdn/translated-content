@@ -203,7 +203,7 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
 - {{ htmlattrdef("webkitallowfullscreen") }} {{ non-standard_inline() }}
   - : In Chrome 17 or later (and maybe earlier), this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{ domxref("element.webkitRequestFullScreen()") }} method. If this isn't set, the element can't be placed into full screen mode.
 - {{ htmlattrdef("mozapp") }} {{ non-standard_inline() }}
-  - : For frames hosting an [open web app](/en/Apps "https://developer.mozilla.org/en/OpenWebApps"), this specifies the URL of the [app manifest](/en/Apps/Manifest "https://developer.mozilla.org/en/Apps/Manifest"). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/en/DOM/Using_the_Browser_API "https://developer.mozilla.org/en/DOM/Using_the_Browser_API") for details. Available in Gecko 13.0 and later.
+  - : For frames hosting an [open web app](/en/Apps), this specifies the URL of the [app manifest](/en/Apps/Manifest). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/en/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
 - {{ htmlattrdef("remote") }} {{ non-standard_inline() }}
   - : Load the frame's page in a separate content process.
 
