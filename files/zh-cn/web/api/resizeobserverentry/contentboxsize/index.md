@@ -16,7 +16,7 @@ slug: Web/API/ResizeObserverEntry/contentBoxSize
 - `inlineSize`
   - : 被监听的元素在 inline 方向上内容盒的长度。对于具有水平 {{cssxref("writing-mode")}} 的盒子，这是垂直尺寸或者高度；如果 writing-mode 是垂直的，这是水平的尺寸或者宽度。
 
-> **备注：** 更多关于 writing mode 和 block 以及 inline 方面的解释，请读[处理不同的文本方向](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)。
+> **备注：** 更多关于 writing mode 和 block 以及 inline 方面的解释，请阅读[处理不同的文本方向](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)。
 
 ## 示例
 
