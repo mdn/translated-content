@@ -132,11 +132,11 @@ Isso faz com que a entrada tenha uma borda tracejada vermelha brilhante quando f
 
 {{EmbedLiveSample("The_required_attribute", "100%", 80)}}
 
-### Validating against a regular expression
+### Validando em uma expressão regular
 
-Another very common validation feature is the {{htmlattrxref("pattern","input")}} attribute, which expects a [Regular Expression](/pt-BR/docs/JavaScript/Guide/Regular_Expressions) as its value. A regular expression (regex) is a pattern that can be used to match character combinations in text strings, so they are ideal for form validation (as well as a variety of other uses in JavaScript).
+Outro recurso de validação muito comum é o atributo {{htmlattrxref("pattern", "input")}} que espera uma [Expressão Regular](/pt-BR/docs/JavaScript/Guide/Regular_Expressions) como seu valor. Uma expressão regular (regex) é um padrão que pode ser usado para identificar combinações de caracteres em strings de texto, então elas são ideais para validação de formulários (assim como uma variedade de outros usos em JavaScript)
 
-Regexs are quite complex, and we do not intend to teach you them exhaustively in this article. Below are some examples to give you a basic idea of how they work:
+RegExp's são bastante complexas e não pretendemos ensiná-las exaustivamente neste artigo. Abaixo estão alguns exemplos para dar uma ideia básica de como eles funcionam:
 
 - `a` — corresponde a um caractere que é `a` (não `b`, não `aa`, etc.)
 - `abc` — corresponde a `a`, seguido por `b`, seguido por `c`.
