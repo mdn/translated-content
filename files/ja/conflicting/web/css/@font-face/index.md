@@ -1,8 +1,8 @@
 ---
 title: font-variant
-slug: Web/CSS/@font-face/font-variant
+slug: conflicting/Web/CSS/@font-face
+original_slug: Web/CSS/@font-face/font-variant
 ---
-
 {{CSSRef}}
 
 **`font-variant`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、 {{cssxref("@font-face")}} ルールで指定されたフォントのすべての変化形を設定することができます。
