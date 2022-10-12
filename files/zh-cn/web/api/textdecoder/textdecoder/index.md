@@ -29,7 +29,7 @@ new TextDecoder(utfLabel, options)
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - 如果 _label_ 值是未知的，或是使用了“`replacement`”编码（“`iso-2022-cn`”或“`iso-2022-cn-ext`”）的两个值之一，则会抛出。
+  - : 如果 `label` 值是未知的，或是使用了 `'replacement'` 解码算法（“`iso-2022-cn`”或“`iso-2022-cn-ext`”两个值之一），则会抛出。
 
 ## 示例
 
