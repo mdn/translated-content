@@ -40,5 +40,4 @@ Finalmente, note que, para elementos não substituídos inline, o total de espa�
 ## Veja também
 
 - [Referência CSS](/pt-BR/docs/Web/CSS/CSS_Reference)
-- {{ CSS_key_concepts() }}
 - Propriedades CSS relacionadas: {{ cssxref("box-sizing") }}, {{ cssxref("background-clip") }}, {{ cssxref("height") }}, {{ cssxref("max-height") }}, {{ cssxref("min-height") }}, {{ cssxref("width") }}, {{ cssxref("max-height") }}, {{ cssxref("min-height") }}, {{ cssxref("padding") }}, {{ cssxref("padding-top") }}, {{ cssxref("padding-right") }}, {{ cssxref("padding-bottom") }}, {{ cssxref("padding-left") }}, {{ cssxref("border") }}, {{ cssxref("border-top") }}, {{ cssxref("border-right") }}, {{ cssxref("border-bottom") }}, {{ cssxref("border-left") }}, {{ cssxref("border-width") }}, {{ cssxref("border-top-width") }}, {{ cssxref("border-right-width") }}, {{ cssxref("border-bottom-width") }}, {{ cssxref("border-left-width") }}, {{ cssxref("margin") }}, {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }}
