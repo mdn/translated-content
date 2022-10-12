@@ -5,7 +5,7 @@ slug: Web/API/ResizeObserverEntry/borderBoxSize
 
 {{APIRef("Resize Observer API")}}
 
-{{domxref("ResizeObserverEntry")}} 接口的只读属性 **`borderBoxSize`** 在回调运行时，返回一个包含被监听元素的边框盒大小的数组。
+{{domxref("ResizeObserverEntry")}} 接口的只读属性 **`borderBoxSize`** 在回调运行时，返回一个包含被监听元素的新的边框盒大小的数组。
 
 ## 值
 
