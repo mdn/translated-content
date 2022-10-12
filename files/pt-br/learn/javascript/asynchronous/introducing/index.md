@@ -328,5 +328,5 @@ Por esses motivos, as APIs assíncronas mais modernas não usam retornos de cham
 - **Introduzindo JavaScript assíncrono**
 - [Como usar Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
 - [Implementando uma API baseada em Promise](/pt-BR/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introdução aos trabalhadores](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+- [Introdução aos workers](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
 - [Avaliação: sequenciamento de animações](/pt-BR/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
