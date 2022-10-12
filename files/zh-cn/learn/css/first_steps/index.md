@@ -34,5 +34,5 @@ CSS（层叠样式表）用于设置和布置网页——例如，更改内容�
 
 以下评估将测试你对上述指南中涵盖的 CSS 基础知识的理解。
 
-- [设计传记页面](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+- [为传记页面添加样式](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)
   - : 借助你在最近几篇文章中学到的内容，你应该发现可以使用 CSS 格式化简单的文本文档，从而为它们添加自己的样式。该评估为你提供了这样做的机会。
