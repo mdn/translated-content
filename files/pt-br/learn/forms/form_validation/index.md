@@ -132,10 +132,11 @@ Isso faz com que a entrada tenha uma borda tracejada vermelha brilhante quando f
 
 {{EmbedLiveSample("The_required_attribute", "100%", 80)}}
 
-### Validando em uma expressão regular
+### Validando com uma expressão regular
 
+Outro recurso de validação muito comum é o atributo {{htmlattrxref("pattern", "input")}} que espera uma [Expressão Regular](/pt-BR/docs/JavaScript/Guide/Regular_Expressions) como seu valor. Uma expressão regular (regex) é um padrão que pode ser usado para identificar combinações de caracteres em strings de texto, então elas são ideais para validação de formulários (assim como uma variedade de outros usos em JavaScript)
 
-RegExp's são bastante complexas e não pretendemos ensiná-las exaustivamente neste artigo. Abaixo estão alguns exemplos para dar uma ideia básica de como eles funcionam:
+Regexes são bastante complexas e não pretendemos ensiná-las exaustivamente neste artigo. Abaixo estão alguns exemplos para dar uma ideia básica de como eles funcionam:
 
 - `a` — corresponde a um caractere que é `a` (não `b`, não `aa`, etc.)
 - `abc` — corresponde a `a`, seguido por `b`, seguido por `c`.
