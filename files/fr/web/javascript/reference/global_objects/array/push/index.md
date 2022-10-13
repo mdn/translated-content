@@ -76,8 +76,8 @@ console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
 L'exemple qui suit utilise [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) pour ajouter les éléments d'un second tableau à la fin du premier tableau.
 
 ```js
-var legumes = ['navet', 'pomme de terre'];
-var autresLegumes = ['céleri', 'radis'];
+const legumes = ['navet', 'pomme de terre'];
+const autresLegumes = ['céleri', 'radis'];
 
 // On fusionne les deux tableaux
 // Équivalent à legumes.push('céleri', 'radis');
