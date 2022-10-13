@@ -56,10 +56,12 @@ La propriété `all` est définie avec un des mots-clés globaux de CSS. On note
 ### HTML
 
 ```html
-<blockquote id="quote">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-Phasellus eget velit sagittis.
+<body>
+  <blockquote id="quote">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </blockquote>
+  Phasellus eget velit sagittis.
+</body>
 ```
 
 ### CSS
