@@ -7,7 +7,7 @@ WebSocket 客户端应用程序使用 WebSocket API 通过 WebSocket 协议与 W
 
 {{AvailableInWorkers}}
 
-> **警告：** 本文中的示例代码片段来自我们的 WebSocket 聊天应用示例，[源代码在此处](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)，then [也可以在这里试一试](https://mdn-samples.mozilla.org/s/websocket-chat)。现在示例中有一个 bug，使用不安全的 WebSockets 连接需要更新使用安全的 WebSocket，我们将很快修复。
+> **警告：** 本文中的示例代码片段来自我们的 WebSocket 聊天应用示例，[源代码在此处](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
 
 ## 创建 WebSocket 对象
 
