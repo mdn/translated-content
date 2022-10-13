@@ -205,7 +205,7 @@ slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 
 正如我们需要处理画布内容的情况一样，我们首先得到隐藏画布的 {{domxref("CanvasRenderingContext2D","2D 绘图上下文")}}。
 
-然后，如果宽度和高度都是非零（意味着至少有潜在有效的图像数据），我们将画布的宽度和高度设置为与捕获帧的宽度和高度相匹配，然后调用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 来绘制当前的 将视频帧放入上下文中，用帧图像填充整个画布。
+然后，如果宽度和高度都是非零（意味着至少有潜在有效的图像数据），我们将画布的宽度和高度设置为与捕获帧的宽度和高度相匹配，然后调用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 将视频的当前帧绘制到上下文中，用帧图像填充整个画布。
 
 > **备注：** 这可以利用 {{domxref("HTMLVideoElement")}} 接口看起来像任何接受 {{domxref("HTMLImageElement")}} 作为参数的 API 的 `HTMLImageElement`，将视频的当前帧渲染为图像的内容。
 
