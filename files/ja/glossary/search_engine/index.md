@@ -2,6 +2,7 @@
 title: Search engine (検索エンジン)
 slug: Glossary/Search_engine
 ---
+
 検索エンジンは {{Glossary("World Wide Web")}} から情報を集めて、特定の情報を探しているユーザーに表示するソフトウェアです。
 
 検索エンジンは下記のプロセスを実行します:

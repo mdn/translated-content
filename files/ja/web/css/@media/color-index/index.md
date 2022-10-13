@@ -2,6 +2,7 @@
 title: color-index
 slug: Web/CSS/@media/color-index
 ---
+
 {{CSSRef}}
 
 **`color-index`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力端末の色参照テーブルの項目数を調べるために使用します。

@@ -2,6 +2,7 @@
 title: number
 slug: Web/XPath/Functions/number
 ---
+
 {{ XsltRef() }}
 
 `number` 関数はオブジェクトを数値に変換し、その数値を返します。

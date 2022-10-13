@@ -2,6 +2,7 @@
 title: Firefox 95 for developers
 slug: Mozilla/Firefox/Releases/95
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 95 の変更点をまとめています。

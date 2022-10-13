@@ -20,7 +20,7 @@ Intl.DateTimeFormat.call(this[, locales[, options]])
 
 - `locales`
 
-  - : 可选。缩写语言代码 (BCP 47 language tag，例如:cmn-Hans-CN) 的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. 下面的这些 Unicode 扩展键也是被允许的：
+  - : 可选。缩写语言代码 (BCP 47 language tag，例如:cmn-Hans-CN) 的字符串或者这些字符串组成的数组。关于参数 locales 的一般形式和解释请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. 下面的这些 Unicode 扩展键也是被允许的：
 
     译者注：下面这两种扩展的使用方式是 language\[-scripts]\[-region]-u-nu-\* 和 language\[-scripts]\[-region]-u-ca-\* ,例如:zh-u-nu-hanidec(表示中文十进制数字) 和 zh-u-ca-chinese(表示中国日历，比如壬辰年冬月 8 日) ,也可以 nu 和 ca 组合使用 比如 使用 zh-u-ca-chinese-nu-hanidec 格式化 Date.now() 的返回值类似于"丙申年冬月九日"
 
@@ -50,7 +50,7 @@ Intl.DateTimeFormat.call(this[, locales[, options]])
         - `hour`, `minute`, `second`
         - `hour`, `minute`
 
-        实现可能支持其他的子集，并通过对所有可用的子集对比找到最匹配的子集。通过 formatMatcher 属性可以设置两种算法用于对比和选择子集: [完全匹配`"basic"算法`](http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher) 和 一种依赖于“best fit”算法的实现。
+        实现可能支持其他的子集，并通过对所有可用的子集对比找到最匹配的子集。通过 formatMatcher 属性可以设置两种算法用于对比和选择子集：[完全匹配`"basic"算法`](http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher) 和 一种依赖于“best fit”算法的实现。
 
         - `weekday`
           - : 工作日的展现方式：可能的值有 `"narrow"`, `"short"`, `"long"`

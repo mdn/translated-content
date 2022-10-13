@@ -18,10 +18,10 @@ O método **`reduce()`** executa uma função **reducer** (fornecida por você) 
 
 A função **reducer** recebe quatro parâmetros:
 
-1.  Acumulador (`acc`)
-2.  Valor Atual (`cur`)
-3.  Index Atual (`idx`)
-4.  Array original (`src`)
+1. Acumulador (`acc`)
+2. Valor Atual (`cur`)
+3. Index Atual (`idx`)
+4. Array original (`src`)
 
 O valor de retorno da sua função **reducer** é atribuída ao acumulador. O acumulador, com seu valor atualizado, é repassado para cada iteração subsequente pelo array, que por fim, se tornará o valor resultante, único, final.
 
@@ -35,19 +35,10 @@ array.reduce(callback( acumulador, valorAtual[, index[, array]] )[, valorInicial
 
 - `callback`
   - : Função que é executada em cada valor no array (exceto no primeiro, se nenhum `valorInicial` for passado); recebe quatro argumentos:
-
-<!---->
-
 - `acumulador`
   - : É o valor inicial (ou o valor do callback anterior). Este valor inicia com o `valorInicial` e será retornado na última iteração.
-
-<!---->
-
 - `valorAtual`
   - : Opcional. O índice do elemento atual que está sendo processado no array. Começa a partir do index `0` se um `valorInicial` for fornecido. Do contrário, começa do index `1`.
-
-<!---->
-
 - `valorInicial`
   - : Opcional. Valor a ser usado como o primeiro argumento da primeira chamada da função `callback`. Se nenhum `valorInicial` é fornecido, o primeiro elemento do array será usado como o valor inicial do `acumulador` e o `valorAtual` não será lido. Chamar `reduce()` em uma array vazia sem valor inicial retornará um erro.
 
@@ -59,10 +50,10 @@ O valor que resulta da execução da função de callback do "reducer" até a co
 
 O método `reduce()` executa a função de `callback` uma vez para cada elemento presente no array, excluindo furos (valores indefinidos), recebendo quatro argumentos:
 
-1.  _acumulador_ - valor inicial (ou o valor do callback anterior),
-2.  _valorAtual_ - o valor do elemento atual
-3.  _index_ - o índice atual e
-4.  `array` - o array onde a iteração está ocorrendo.
+1. _acumulador_ - valor inicial (ou o valor do callback anterior),
+2. _valorAtual_ - o valor do elemento atual
+3. _index_ - o índice atual e
+4. `array` - o array onde a iteração está ocorrendo.
 
 A primeira vez que o callback é chamado, o `acumulador` e o `valorAtual` podem ter um de dois valores possíveis. Se o `valorInicial` tiver sido fornecido na chamada à função `reduce()`, então o `acumulador` será igual ao `valorInicial` e o `valorAtual` será igual ao primeiro valor no array. Caso nenhum `valorInicial` seja fornecido, `acumulador` será igual ao primeiro valor no array, e `valorAtual` será igual ao segundo.
 

@@ -48,7 +48,7 @@ evtSource.addEventListener("ping", function(event) {
 
 This code is similar, except that it will be called automatically whenever the server sends a message with the `event` field set to "ping"; it then parses the JSON in the `data` field and outputs that information.
 
-> **Aviso:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be specially painful when opening various tabs as the limit is _per browser_ and set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, so that means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com.` (from [Stackoverflow](https://stackoverflow.com/a/5326159/1905229)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
+> **Aviso:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be specially painful when opening various tabs as the limit is _per browser_ and set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, so that means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (from [Stackoverflow](https://stackoverflow.com/a/5326159/1905229)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
 
 ## Sending events from the server
 
@@ -124,7 +124,7 @@ Each message received has some combination of the following fields, one per line
 - `data`
   - : The data field for the message. When the `EventSource` receives multiple consecutive lines that begin with `data:`, [it will concatenate them](http://www.w3.org/TR/eventsource/#dispatchMessage), inserting a newline character between each one. Trailing newlines are removed.
 - `id`
-  - : The event ID to set the [`EventSource`](/en/Server-sent_events/EventSource "en/Server-sent events/EventSource") object's last event ID value.
+  - : The event ID to set the [`EventSource`](/en/Server-sent_events/EventSource) object's last event ID value.
 - `retry`
   - : The reconnection time to use when attempting to send the event. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.
 

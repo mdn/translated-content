@@ -2,6 +2,7 @@
 title: 'Window: focus イベント'
 slug: Web/API/Window/focus_event
 ---
+
 {{APIRef}}
 
 **`focus`** イベントは、要素がフォーカスを受け取ったときに発生します。

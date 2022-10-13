@@ -3,6 +3,7 @@ title: WebAssembly.CompileError() コンストラクター
 slug: WebAssembly/JavaScript_interface/CompileError/CompileError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError
 ---
+
 {{JSRef}}
 
 **`WebAssembly.CompileError()`** コンストラクターは、新しい WebAssembly の `CompileError` オブジェクトを生成します。これは WebAssembly のデコードまたは検証中のエラーを示します。

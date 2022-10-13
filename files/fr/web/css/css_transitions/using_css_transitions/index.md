@@ -312,9 +312,7 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## Spécifications
 
-| Spécification                                        | État                                     | Commentaires         |
-| ---------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Transitions', '', '')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

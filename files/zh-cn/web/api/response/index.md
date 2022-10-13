@@ -88,7 +88,7 @@ const response = new Response();
 
 ## 浏览器兼容性
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## 相关链接
 

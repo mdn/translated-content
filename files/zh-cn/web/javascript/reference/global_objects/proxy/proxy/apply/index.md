@@ -32,7 +32,7 @@ var p = new Proxy(target, {
 
 ### 返回值
 
-`apply 方法可以返回任何值。`
+`apply` 方法可以返回任何值。
 
 ## 描述
 

@@ -2,6 +2,7 @@
 title: Node
 slug: Web/API/Node
 ---
+
 {{APIRef("DOM")}}
 
 {{Glossary("DOM")}} の **`Node`** インターフェイスは、他の多くの DOM API オブジェクトのベースとなる抽象的な基底クラスです。したがって、これらのオブジェクト型と類似しており、しばしば交換して使用することができます。抽象クラスであるため、単なる `Node` オブジェクトというものは存在しません。 `Node` の機能を実装しているオブジェクトはすべて、何れかのサブクラスに基づいています。最も注目すべきものは、 {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}} です。

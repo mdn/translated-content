@@ -2,6 +2,7 @@
 title: BlobEvent()
 slug: Web/API/BlobEvent/BlobEvent
 ---
+
 {{APIRef("Media Capture and Streams")}}{{seeCompatTable}}
 
 **`BlobEvent()`** コンストラクターは、新たに生成され {{domxref("Blob")}} に関連付けられた {{domxref("BlobEvent")}} オブジェクトを返します。

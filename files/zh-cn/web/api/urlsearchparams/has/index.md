@@ -37,4 +37,4 @@ params.has('bar') === true; //true
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.has")}}
+{{Compat}}

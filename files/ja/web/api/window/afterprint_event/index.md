@@ -2,6 +2,7 @@
 title: 'Window: afterprint イベント'
 slug: Web/API/Window/afterprint_event
 ---
+
 {{APIRef}}
 
 **`afterprint`** イベントは、関連する文書の印刷が開始されたか、印刷プレビューが閉じた後に発生します。

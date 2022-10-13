@@ -2,6 +2,7 @@
 title: WakeLockSentinel.released
 slug: Web/API/WakeLockSentinel/released
 ---
+
 {{DefaultAPISidebar("Screen Wake Lock API")}}
 
 **`released`** は {{domxref("WakeLockSentinel")}} インターフェイスのプロパティで、 {{domxref("WakeLockSentinel")}} がまだ解放されていないかどうかを示す論理値を返します。

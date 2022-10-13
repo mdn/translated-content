@@ -2,11 +2,12 @@
 title: SharedWorker
 slug: Web/API/SharedWorker
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`SharedWorker`** インターフェースは複数のブラウザコンテキストからアクセス可能な Worker を提供します。複数のブラウザコンテキストとは、複数のウィンドウや iframe、Worker などを指します。Dedicated Worker とは異なるインタフェースと、異なるグローバルスコープを持ちます。スコープに関しては {{domxref("SharedWorkerGlobalScope")}} を参照してください。
 
-> **Note:** **付記：**同じオリジン、つまりプロトコル、ホスト名、ポートが全て同じ場合にのみ、SharedWorker は異なるブラウザコンテキスト間で共有されます。
+> **メモ:** 同じオリジン、つまりプロトコル、ホスト名、ポートが全て同じ場合にのみ、SharedWorker は異なるブラウザコンテキスト間で共有されます。
 
 ## コンストラクタ
 

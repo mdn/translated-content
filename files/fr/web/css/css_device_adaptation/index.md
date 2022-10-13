@@ -19,12 +19,8 @@ translation_of: Web/CSS/CSS_Device_Adaptation
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires         |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("CSS3 Device")}} | {{Spec2("CSS3 Device")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `@viewport`
-
-{{Compat("css.at-rules.viewport")}}
+{{Compat}}

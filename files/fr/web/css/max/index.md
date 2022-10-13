@@ -93,13 +93,11 @@ Avec ces règles, la valeur pour `font-size` vaudra au moins `2rems` ou deux foi
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Values', '#calc-notation', 'max()')}} | {{Spec2('CSS4 Values')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.max")}}
+{{Compat}}
 
 ## Voir aussi
 

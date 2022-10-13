@@ -37,9 +37,13 @@ La propriété `box-decoration-break` est définie avec l'un des mots-clés déf
 - `slice`
   - : L'élément est initialement affiché comme si la boîte n'était pas fragmentée puis le rendu de cette boîte hypothétique est découpé en fragments pour chaque ligne/colonne/page. On notera que la boîte hypothétique peut être différente pour chaque fragment car elle utilise sa propre hauteur (si la rupture apparaît dans la direction de l'élément) ou sa propre largeur (si la rupture apparaît dans la direction orthogonale). C'est la valeur initiale de la propriété.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -127,15 +131,11 @@ Si on applique `box-decoration-break:clone`, voici le résultat :
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Fragmentation', '#break-decoration', 'box-decoration-break')}} | {{Spec2('CSS3 Fragmentation')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.box-decoration-break")}}
+{{Compat}}
 
 ## Voir aussi
 

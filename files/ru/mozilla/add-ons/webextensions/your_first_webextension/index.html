@@ -58,7 +58,7 @@ cd borderify</pre>
  <li>Первые три ключа: <code><a href="/ru/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="/ru/Add-ons/WebExtensions/manifest.json/name">name</a> и <a href="/ru/Add-ons/WebExtensions/manifest.json/version">version</a></code>, являются обязательными и содержат основные метаданные о дополнении.</li>
  <li><code><a href="/ru/Add-ons/WebExtensions/manifest.json/description">description</a></code> не обязателен, но рекомендуется: это описание отображается в Менеджере Дополнений.</li>
  <li><code><a href="/ru/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> не обязателен, но рекомендуется: позволяет указать значок для дополнения, который будет виден в Менеджере Дополнений.</li>
- <li><code><a href="/ru/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> <span id="result_box" lang="ru"><span>является обязательным для</span> <span>Firefox</span><span>,</span> <span>и</span> <span>определяет</span></span> ID дополнения. Он так же может использоваться для указания минимальной и максимальной версии Firefox, поддерживаемой расширением.</li>
+ <li><code><a href="/ru/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> является обязательным для Firefox, и определяет ID дополнения. Он так же может использоваться для указания минимальной и максимальной версии Firefox, поддерживаемой расширением.</li>
 </ul>
 
 <p>Самый интересный ключ здесь - это <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, который говорит Firefox загружать скрипт на Web страницах, чей URL совпадает с заданным шаблоном. В нашем случае, мы просим Firefox загрузить скрипт с названием "borderify.js" на всех HTTP или HTTPS страницах, полученных с "mozilla.org" или любого из его поддоменов.</p>
@@ -86,10 +86,10 @@ cd borderify</pre>
 
 <p>Вы можете использовать собственную иконку. Её размер должен быть 48x48 пикселей. Вы можете также использовать иконку размером 96x96 пикселей для отображения на мониторах высокого разрешения. В этом случае вам необходимо указать её в качестве свойства "96" объекта "<code>icons"</code> в файле manifest.json:</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-  <span class="key token">"48":</span> <span class="string token">"icons/border-48.png",
-  "96": "icons/border-96.png"</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">"icons": {
+  "48": "icons/border-48.png",
+  "96": "icons/border-96.png"
+}</code></pre>
 
 <p>Также вы можете создать иконку в формате SVG и она будет корректно масштабироваться.</p>
 
@@ -155,15 +155,11 @@ cd borderify</pre>
 
 <h2 id="Упаковка_и_публикация">Упаковка и публикация</h2>
 
-<div class="hidden">
-<p>Оригинальная статья ссылается на отдельную статью. Убрать параграф туда?</p>
-</div>
-
 <p>Чтобы другие люди могли использовать ваше дополнение, вам необходимо запаковать его. Дополнения Firefox в запакованном виде являются XPI файлами, которые представляют собой обычные ZIP архивы с расширением "xpi".</p>
 
 <p>При упаковке необходимо учитывать следующее: в ZIP архиве должны быть только файлы, а не содержащая их директория (директория "borderify" не должна попасть в архив). Для того, чтобы создать правильный XPI файл из вашего дополнения, в командной строке перейдите в директорию "borderify" и выполните следующую команду:</p>
 
-<p><code class="language-bash">zip -r ../borderify.xpi *</code></p>
+<pre>zip -r ../borderify.xpi *</pre>
 
 <p>Начиная с Firefox 43 все дополнения должны быть подписаны прежде чем они будут установлены в браузер. Вы можете снять это ограничение <em>только</em> в <a class="external external-icon" href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a> или  <a class="text external external-icon" href="https://nightly.mozilla.org/" rel="nofollow">Firefox Nightly</a> при помощи следующих шагов:  </p>
 

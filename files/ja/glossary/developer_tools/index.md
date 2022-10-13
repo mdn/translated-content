@@ -2,6 +2,7 @@
 title: 開発者ツール
 slug: Glossary/Developer_Tools
 ---
+
 開発者ツール（"DevTools"と略されます）は開発者がソフトウェアを作成、テスト、{{Glossary("debug", "デバッグ")}} するのを助けるプログラムです。
 
 現在のブラウザーには、ウェブサイトの調査を可能にする開発者ツールが統合されています。ブラウザーの開発者ツールによって、ウェブサイトの{{Glossary("HTML")}}/{{Glossary("CSS")}}/{{Glossary("JavaScript")}}の調査やデバッグ、ウェブサイトによって発生したネットワークトラフィックの調査、ウェブサイトのパフォーマンスの計測など、たくさんのことが可能となります。
@@ -10,7 +11,7 @@ slug: Glossary/Developer_Tools
 
 ### 基礎知識
 
-- Wikipedia 上の記事：{{interwiki("wikipedia", "Web development tools", "Web development tools")}}
+- Wikipedia 上の記事：[Web development tools](https://en.wikipedia.org/wiki/Web_development_tools)
 
 ### 技術リファレンス
 

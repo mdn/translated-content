@@ -13,7 +13,7 @@ translation_of: Web/API/KeyboardEvent
 
 `Objetos do tipo KeyboardEvent` descrevem a interação do usuário com o teclado. Cada evento descreve uma tecla; o tipo de evento (`keydown`, `keypress`, ou `keyup`) identifica qual tipo de ação foi executada.
 
-> **Nota:** O `KeyboardEvent` indica o que está havendo com a tecla. Quando você precisar lidar com entrada de texto, use o evento `input do `HTML5 . Por exemplo, se o usuário envia texto por meio de um sistema manuscrito como um tablet PC, eventos das teclas podem não ser disparados.
+> **Nota:** O `KeyboardEvent` indica o que está havendo com a tecla. Quando você precisar lidar com entrada de texto, use o evento `input` do HTML5. Por exemplo, se o usuário envia texto por meio de um sistema manuscrito como um tablet PC, eventos das teclas podem não ser disparados.
 
 ## Construtor
 
@@ -26,19 +26,19 @@ _Essa interface também herda métodos dos seus pais, {{domxref("UIEvent")}} e {
 
 - {{domxref("KeyboardEvent.getModifierState()")}}
 
-  - : Retorna um {{jsxref("Boolean")}} indicando se uma tecla, como&#x20;
+  - : Retorna um {{jsxref("Boolean")}} indicando se uma tecla, como
 
     <kbd>Alt</kbd>
 
-    ,&#x20;
+    ,
 
     <kbd>Shift</kbd>
 
-    ,&#x20;
+    ,
 
     <kbd>Ctrl</kbd>
 
-    , ou&#x20;
+    , ou
 
     <kbd>Meta</kbd>
 
@@ -55,19 +55,19 @@ _Essa interface também herda métodos dos seus pais, {{domxref("UIEvent")}} e {
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
 
-  - : Retorna um {{jsxref("Boolean")}} que é `true` se a tecla&#x20;
+  - : Retorna um {{jsxref("Boolean")}} que é `true` se a tecla
 
     <kbd>Alt</kbd>
 
-    &#x20;(&#x20;
+    (
 
     <kbd>Option</kbd>
 
-    &#x20;ou&#x20;
+    ou
 
     <kbd>⌥</kbd>
 
-    &#x20;no OS X) estava ativa quando o evento foi acionado.
+    no OS X) estava ativa quando o evento foi acionado.
 
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
 
@@ -87,11 +87,11 @@ _Essa interface também herda métodos dos seus pais, {{domxref("UIEvent")}} e {
   - : Returns a {{domxref("DOMString")}} with the code value of the key represented by the event.
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the&#x20;
+  - : Returns a {{jsxref("Boolean")}} that is `true` if the
 
     <kbd>Ctrl</kbd>
 
-    &#x20;key was active when the key event was generated.
+    key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
   - : Returns a {{jsxref("Boolean")}} that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
@@ -113,25 +113,25 @@ _Essa interface também herda métodos dos seus pais, {{domxref("UIEvent")}} e {
   - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device.
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
 
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the&#x20;
+  - : Returns a {{jsxref("Boolean")}} that is `true` if the
 
     <kbd>Meta</kbd>
 
-    &#x20;(or&#x20;
+    (or
 
     <kbd>Command</kbd>
 
-    &#x20;on OS X) key was active when the key event was generated.
+    on OS X) key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
   - : Returns a {{jsxref("Boolean")}} that is `true` if the key is being held down such that it is automatically repeating.
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
 
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the&#x20;
+  - : Returns a {{jsxref("Boolean")}} that is `true` if the
 
     <kbd>Shift</kbd>
 
-    &#x20;key was active when the key event was generated.
+    key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.which")}} {{deprecated_inline}}{{Readonlyinline}}
 
@@ -143,9 +143,9 @@ _Essa interface também herda métodos dos seus pais, {{domxref("UIEvent")}} e {
 
 There are `keydown`, `keypress`, and `keyup` events. For most keys, Gecko dispatches a sequence of key events like this:
 
-1.  When the key is first depressed, the `keydown` event is sent.
-2.  If the key is not a modifier key, the `keypress` event is sent.
-3.  When the user releases the key, the `keyup` event is sent.
+1. When the key is first depressed, the `keydown` event is sent.
+2. If the key is not a modifier key, the `keypress` event is sent.
+3. When the user releases the key, the `keyup` event is sent.
 
 ### Special cases
 
@@ -157,10 +157,10 @@ On Mac, however, Caps Lock dispatches only the `keydown` event due to a platform
 
 When a key is pressed and held down, it begins to auto-repeat. This results in a sequence of events similar to the following being dispatched:
 
-1.  `keydown`
-2.  `keypress`
-3.  <\<repeating until the user releases the key>>
-4.  `keyup`
+1. `keydown`
+2. `keypress`
+3. <\<repeating until the user releases the key>>
+4. `keyup`
 
 This is what the DOM Level 3 specification says should happen. There are some caveats, however, as described below.
 
@@ -168,10 +168,10 @@ This is what the DOM Level 3 specification says should happen. There are some ca
 
 In some GTK-based environments, auto-repeat dispatches a native key-up event automatically during auto-repeat, and there's no way for Gecko to know the difference between a repeated series of keypresses and an auto-repeat. On those platforms, then, an auto-repeat key will generate the following sequence of events:
 
-1.  `keydown`
-2.  `keypress`
-3.  <\<repeating until the user releases the key>>
-4.  `keyup`
+1. `keydown`
+2. `keypress`
+3. <\<repeating until the user releases the key>>
+4. `keyup`
 
 In these environments, unfortunately, there's no way for web content to tell the difference between auto-repeating keys and keys that are just being pressed repeatedly.
 

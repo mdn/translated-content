@@ -2,6 +2,7 @@
 title: InputEvent
 slug: Web/API/InputEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`InputEvent`** インターフェイスは、編集可能なコンテンツが変更されたことを通知するイベントを表します。

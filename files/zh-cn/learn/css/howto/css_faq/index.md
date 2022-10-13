@@ -53,7 +53,7 @@ original_slug: Web/CSS/Common_CSS_Questions
 
 ## `id` 和 `class` 有什么不同？
 
-HTML 元素可以拥有一个 `id`/或 `class` 属性。 `id` 属性为元素指定应用一个有效名称，只能有一个具有该名称的元素。`class` 属性指定一个类名的元素，而这个名称可以被页面内的许多元素被使用。 CSS 允许你可以对特定的 `id` 和/或类名的元素应用样式。
+HTML 元素可以拥有一个 `id`/或 `class` 属性。 `id` 属性为元素指定应用一个有效名称，只能有一个具有该名称的元素。`class` 属性指定一个类名的元素，而这个名称可以被页面内的许多元素被使用。CSS 允许你可以对特定的 `id` 和/或类名的元素应用样式。
 
 - 当你想要将样式规则应用于多个块和元素时，你应该使用 class 选择符。
 
@@ -237,6 +237,6 @@ transform: rotate(90deg);
 
 z-index 属性指定了元素的栈序。
 
-有较高 z-index/栈序的元素总是在有着较低 z-index/栈序的元素之前。 z-index 只会在有着指定 position（`position:absolute`、`position:relative` 或 `position:fixed`）的元素上工作。
+有较高 z-index/栈序的元素总是在有着较低 z-index/栈序的元素之前。z-index 只会在有着指定 position（`position:absolute`、`position:relative` 或 `position:fixed`）的元素上工作。
 
 > **备注：** 请参阅 [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning) 文章，特别是 [介绍 z-index](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning#介绍_z-index) 部分来深入学习。

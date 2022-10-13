@@ -16,7 +16,7 @@ tags:
 translation_of: MDN/Contribute/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
-{{MDNSidebar}}{{IncludeSubnav("/pt-BR/docs/MDN")}}
+{{MDNSidebar}}
 
 As etiquetas dos artigos são uma forma importante de ajudar visitantes a encontrar o conteúdo procurado. Há muitas etiquetas usadas para ajudar a organizar as informações na MDN. Esta página vai lhe ensinar a melhor maneira de rotular as páginas, a fim de fazer com que as informações sejam organizadas, classificadas e localizadas mais facilmente. Cada página pode ser marcada por etiquetas que ajudam a classificar seu conteúdo.
 
@@ -88,7 +88,7 @@ Apesar de ser permitida certa flexibilidade, ao passo que novos assuntos são id
 - `Tools` ferramentas
 - `Web`
 
-No geral, se uma interface que possui várias páginas relacionadas a ela, como [Node](/pt-BR/docs/Web/API/Node "/en-US/docs/Web/API/Node") (que possui várias páginas sobre seus muitos métodos e propriedades), seu nome é uma boa etiqueta para identificar um tópico, assim como o nome de uma tecnologia abragente, ou seu tipo. Uma página sobre _WebGL_ pode ser marcada com as tags `Gráficos/Graphics` e `WebGL`, por exemplo, e uma página sobre elementos {{HTMLElement("canvas")}} pode ser marcada com as etiquetas `HTML`, `Elementos/Element`, `Tela/Canvas`, e `Gráficos/Graphics`.
+No geral, se uma interface que possui várias páginas relacionadas a ela, como [Node](/pt-BR/docs/Web/API/Node) (que possui várias páginas sobre seus muitos métodos e propriedades), seu nome é uma boa etiqueta para identificar um tópico, assim como o nome de uma tecnologia abragente, ou seu tipo. Uma página sobre _WebGL_ pode ser marcada com as tags `Gráficos/Graphics` e `WebGL`, por exemplo, e uma página sobre elementos {{HTMLElement("canvas")}} pode ser marcada com as etiquetas `HTML`, `Elementos/Element`, `Tela/Canvas`, e `Gráficos/Graphics`.
 
 ### Estado da tecnologia
 
@@ -98,9 +98,6 @@ Alguns valores possíveis para estas etiquetas:
 
 - `Read-only`
   - : Aplique esta etiqueta para páginas que descrevem atributos ou propriedades que são "somente leitura".
-
-<!---->
-
 - `Non-standard`
   - : Indica que a tecnologia ou API não pertence a qualquer padrão, mas é considerada estável no(s) navegador(es) que a tem implementada. Se você não usar esta etiqueta os leitores vão presumir que o artigo é padronizado. A tabela de compatibilidade da página deve esclarecer quais navegadores suportam essa tecnologia ou API.
 - `Deprecated`
@@ -219,7 +216,7 @@ Filtros de busca não vão funcionar apropriadamente, a não ser que marquemos a
 |                     | Firefox OS                 | `Firefox OS`                                                                                         |
 |                     | Dispositivos Móveis        | `Mobile`                                                                                             |
 |                     | Desenvolvimento _Web_      | `Web Development`                                                                                    |
-|                     | Complementos & Extensões   | `Add-ons `\|\| `Extensions` \|\| `Plugins` \|\| `Themes`                                             |
+|                     | Complementos & Extensões   | `Add-ons` \|\| `Extensions` \|\| `Plugins` \|\| `Themes`                                             |
 |                     | Jogos                      | `Games`                                                                                              |
 | Nível de habilidade | Sou Especialista           | `Advanced`                                                                                           |
 |                     | Nível Intermediário        | `Intermediate`                                                                                       |

@@ -3,6 +3,7 @@ title: ServiceWorkerGlobalScope.onactivate
 slug: orphaned/Web/API/ServiceWorkerGlobalScope/onactivate
 original_slug: Web/API/ServiceWorkerGlobalScope/onactivate
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **onactivate** プロパティは、（Service Worker がアクティブになったときの）{{Event("activate")}} イベントが発生したとき常に発火されるイベントハンドラーです。これは、Service Worker に制御されたページがリフレッシュされるインストール後に発生します。

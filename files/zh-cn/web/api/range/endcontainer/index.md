@@ -29,7 +29,7 @@ endRangeNode = range.endContainer;
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.endContainer")}}
+{{Compat}}
 
 ## 相关链接
 

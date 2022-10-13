@@ -48,9 +48,9 @@ Para usar esta API, uma extensão especificar a "cookies" [API permission](/en-U
 
 Cookies de terceiros são aquleles enviados por sites em que você está num dado momento, por exemplo:
 
-1.  Você acessa [bbc.com](http://bbc.com). Ele contém uma publicidade do [tracker.com](http://tracker.com) que atribui um cookie associado com o domínio "[tracker.com](http://tracker.com)".
-2.  Você acessa [cnn.com](http://cnn.com). Ele também contém uma publicidade do [tracker.com](http://tracker.com) que atribui um cookie associado ao domínio "[tracker.com](http://tracker.com)".
-3.  Eventualmente ambos os cookies podem ser enviados para [tracker.com](http://tracker.com). Quem então pode descobrir que o mesmo usuário visitou ambos os sites.
+1. Você acessa [bbc.com](http://bbc.com). Ele contém uma publicidade do [tracker.com](http://tracker.com) que atribui um cookie associado com o domínio "[tracker.com](http://tracker.com)".
+2. Você acessa [cnn.com](http://cnn.com). Ele também contém uma publicidade do [tracker.com](http://tracker.com) que atribui um cookie associado ao domínio "[tracker.com](http://tracker.com)".
+3. Eventualmente ambos os cookies podem ser enviados para [tracker.com](http://tracker.com). Quem então pode descobrir que o mesmo usuário visitou ambos os sites.
 
 Quando um isolamento de primeira parte está ativo, cookies são ainda qualificados pelo domínio da página original visitada pelo usuário (essencialmente, o domínio exibe o usuário na barra da URL, também conhecido como "domínio de primeira parte). Isto significa que não é possivel para um rastreador correlacionar o cookie da [bbc.com](http://bbc.com) com o cookie da [cnn.com](http://cnn.com), então o rastreador não pode monitorar um simples usuários através de ambos os sites.
 
@@ -99,19 +99,20 @@ Quando o isolamento de primeira parte está desabilitado, o parâmetro `firstPar
 
 > **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) do Chromium. Esta documentação é derivada do [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) no código do Chromium.
 
-<div class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
-// * Redistributions of source code must retain the above copyright
+//    * Redistributions of source code must retain the above copyright
 // notice, this list of conditions and the following disclaimer.
-// * Redistributions in binary form must reproduce the above
+//    * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-// * Neither the name of Google Inc. nor the names of its
+//    * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
@@ -125,4 +126,5 @@ Quando o isolamento de primeira parte está desabilitado, o parâmetro `firstPar
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->

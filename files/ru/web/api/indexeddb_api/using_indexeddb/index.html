@@ -74,7 +74,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 <div class="warning">
 <p>Версия базы данных имеет внутреннее представление <code>unsigned long long</code> number (длинное длинное целое без знака), то есть может принимать очень большие целые значения. Имейте в виду также, что нет смысла использовать в качестве версии базы данных значение с плавающей точкой (float), потому что оно будет сконвертировано в ближайшее меньшее целое. В результате неожиданно может не запуститься транзакция или сработать триггер события <code>upgradeneeded</code>. Например, не используйте значение  2.4 как версию базы данных:</p>
 
-<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">var</span> request <span class="operator token">=</span> indexedDB<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span><span class="string token">"MyTestDatabase"</span><span class="punctuation token">,</span> <span class="number token">2.4</span><span class="punctuation token">)</span><span class="punctuation token">;</span><span class="comment token"> // <code class="language-js"><span class="comment token">не делайте так, потому что версия будет округлена до 2</span></code></span></code></pre>
+<pre class="brush: js">var request = indexedDB.open("MyTestDatabase", 2.4); // не делайте так, потому что версия будет округлена до 2</pre>
 </div>
 
 <h4 id="Установка_обработчиков">Установка обработчиков</h4>
@@ -96,14 +96,14 @@ request.onsuccess = function(event) {
 
 <p>А теперь предположим, что пользователь разрешил вашему запросу создать базу данных и состоялось событие успеха, запустившее обработчик события успеха. Что дальше? Так как ваш запрос был сгенерирован с вызовом метода <code>indexedDB.open(), то </code><code>request.result</code>   является экземпляром объекта <code>IDBDatabase</code> и вы определённо захотите сохранить его для будущего использования. Ваш код может выглядеть примерно так:</p>
 
-<pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> db<span class="punctuation token">;</span>
-<span class="keyword token">var</span> request <span class="operator token">=</span> indexedDB<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span><span class="string token">"MyTestDatabase"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-request<span class="punctuation token">.</span>onerror <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="function token">alert<span class="punctuation token">(</span></span><span class="string token">"Почему вы не позволяете моему веб-приложению использовать IndexedDB?!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
-request<span class="punctuation token">.</span>onsuccess <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  db <span class="operator token">=</span> event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>result<span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code>
+<pre class="brush: js">var db;
+var request = indexedDB.open("MyTestDatabase");
+request.onerror = function(event) {
+  alert("Почему вы не позволяете моему веб-приложению использовать IndexedDB?!");
+};
+request.onsuccess = function(event) {
+  db = event.target.result;
+};
 </pre>
 
 <h4 id="Обработка_ошибок">Обработка ошибок</h4>
@@ -140,7 +140,7 @@ request.onupgradeneeded = function(event) {
 
 <p>Когда вы увеличиваете номер версии, будет инициировано событие onupgradeneeded. В этот момент БД будет хранить старые объекты. Но для всякого объекта прошлой версии стоит создать новый объект, совместимый с новой версией. Если вам необходимо исправить существующий объект в БД (например, для изменения keyPath), то вы можете удалить объект и создать его вновь с новыми параметрами (помните, что удаление стирает информацию, так что не забывайте сохранять то, что вам нужно).</p>
 
-<p>WebKit поддерживает текущую версию спецификации в Google Chrome 23 и старше. Так что там нет события <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;">indexedDB.open(name, version).onupgradeneeded. Однако, вы можете ознакомиться с инструкцией <a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">о том, что делать со старым </a></span><a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">Webkit</a>.</p>
+<p>WebKit поддерживает текущую версию спецификации в Google Chrome 23 и старше. Так что там нет события indexedDB.open(name, version).onupgradeneeded. Однако, вы можете ознакомиться с инструкцией <a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">о том, что делать со старым </a><a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">Webkit</a>.</p>
 
 <h3 id="Структура_базы_данных">Структура базы данных</h3>
 
@@ -1181,7 +1181,7 @@ input {
 <p>Tutorials</p>
 
 <ul>
- <li><a class="external" href="http://www.html5rocks.com/tutorials/indexeddb/todo/">A simple TODO list using HTML5 IndexedDB</a><span class="external">. {{Note("This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed <code>setVersion()</code> method.") }}</span></li>
+ <li><a class="external" href="http://www.html5rocks.com/tutorials/indexeddb/todo/">A simple TODO list using HTML5 IndexedDB</a>. {{Note("This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed <code>setVersion()</code> method.") }}</li>
  <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
 </ul>
 

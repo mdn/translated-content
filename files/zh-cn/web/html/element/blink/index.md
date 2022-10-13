@@ -21,7 +21,7 @@ HTML Blink Element (`<blink>`) 不是标准元素，它会使包含其中的文�
 
 ### 结果 (淡化！)
 
-![Image:HTMLBlinkElement.gif](/@api/deki/files/247/=HTMLBlinkElement.gif)
+![Image:HTMLBlinkElement.gif](htmlblinkelement.gif)
 
 ## 规范
 

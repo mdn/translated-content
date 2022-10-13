@@ -2,6 +2,7 @@
 title: circle
 slug: Web/SVG/Element/circle
 ---
+
 {{SVGRef}}
 
 **`<circle>`** [SVG](/ja/docs/Web/SVG) 要素は SVG の基本的な図形を表すものであり、中心座標と半径を指定して円を描画します。

@@ -2,6 +2,7 @@
 title: 417 Expectation Failed
 slug: Web/HTTP/Status/417
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`417 Expectation Failed`** クライアントエラーレスポンスコードは、リクエストの {{HTTPHeader("Expect")}} ヘッダーに期待された値が設定されていなかったことを示します。

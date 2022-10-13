@@ -2,6 +2,7 @@
 title: <msqrt>
 slug: Web/MathML/Element/msqrt
 ---
+
 {{MathMLRef()}}
 
 MathML の `<msqrt>` 要素は平方根（根指数のついていない累乗根）を表示するために用いられます。 引数は一つだけで、構文は `<msqrt> base </msqrt>` となります。

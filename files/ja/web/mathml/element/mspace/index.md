@@ -2,6 +2,7 @@
 title: <mspace>
 slug: Web/MathML/Element/mspace
 ---
+
 {{MathMLRef()}}
 
 MathML の `<mspace>` 要素は，空白を作るために使われます。空白のサイズ（訳注：幅だけでなくベースラインからの高さ，深さも）は属性で指定します。

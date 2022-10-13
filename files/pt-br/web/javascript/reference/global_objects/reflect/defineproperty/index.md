@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
 {{JSRef}}
 
-O método estático **`Reflect`\*\***`.defineProperty()`\*\* é como o {{jsxref("Object.defineProperty()")}}, mas retorna um {{jsxref("Boolean")}}.
+O método estático **`Reflect.defineProperty()`** é como o {{jsxref("Object.defineProperty()")}}, mas retorna um {{jsxref("Boolean")}}.
 
 {{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
 
@@ -58,7 +58,7 @@ obj.x                                         // 7
 
 Com o {{jsxref ("Object.defineProperty")}}, que retorna um objeto se for bem-sucedido ou lança um {{jsxref ("TypeError")}}, você usaria um bloco [try...catch](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch) para detectar qualquer erro que ocorreu ao definir uma propriedade.
 
-Como `Reflect.defineProperty` retorna um status de sucesso booleano, você pode usar apenas um bloco [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) aqui:
+Como `Reflect.defineProperty` retorna um status de sucesso booleano, você pode usar apenas um bloco [`if...else`](/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else) aqui:
 
 ```js
 if (Reflect.defineProperty(target, property, attributes)) {

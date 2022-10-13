@@ -7,12 +7,12 @@ original_slug: Web/API/Canvas_API/Tutorial/Применение_стилей_и_
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}</div>
 
 <div class="summary">
-<p>В главе о <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes" title="Web/Guide/HTML/Canvas_tutorial/Drawing_shapes">рисовании фигур</a>, <span id="result_box" lang="ru"><span>мы использовали</span></span><span lang="ru"><span class="hps"> для линий</span> <span class="hps">и</span><span class="hps"> заполнения</span> <span class="hps">только</span> <span class="hps">стили<span> </span>по умолчанию</span><span>.</span></span> <span id="result_box" lang="ru"><span class="hps">Здесь</span> <span class="hps">мы будем исследовать</span> <span class="hps">опции </span></span>canvas<span lang="ru">, которые <span class="hps">мы</span> <span class="hps">имеем в нашем</span> <span class="hps">распоряжении, чтобы сделать</span> <span class="hps">наши</span> <span class="hps">рисунки</span> <span class="hps">немного</span> <span class="hps">более привлекательными. </span></span><span id="result_box" lang="ru"><span class="hps">Вы узнаете, как</span> <span class="hps">добавлять различные</span> <span class="hps">цвета,</span> <span class="hps">стили линий</span><span>, градиенты</span><span>, узоры</span> <span class="hps">и тени</span> <span class="hps">вашим рисункам</span><span>.</span></span></p>
+<p>В главе о <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes" title="Web/Guide/HTML/Canvas_tutorial/Drawing_shapes">рисовании фигур</a>, мы использовали для линий и заполнения только стили по умолчанию. Здесь мы будем исследовать опции canvas, которые мы имеем в нашем распоряжении, чтобы сделать наши рисунки немного более привлекательными. Вы узнаете, как добавлять различные цвета, стили линий, градиенты, узоры и тени вашим рисункам.</p>
 </div>
 
 <h2 id="Colors">Цвета</h2>
 
-<p><span id="result_box" lang="ru"><span class="hps">До сих пор</span> <span class="hps">мы</span> <span class="hps">видели только</span> <span class="hps">методы</span> <span class="hps">рисования контекста. </span></span><span id="result_box" lang="ru"><span class="hps">Если</span> <span class="hps">мы хотим применить</span> <span class="hps">цвета</span> <span class="hps">к фигуре</span><span>,</span> то <span class="hps">есть два важных</span> <span class="hps">свойства</span>, которые <span class="hps">мы можем</span> <span class="hps">использовать:</span></span> <code>fillStyle</code> и <code>strokeStyle</code>.</p>
+<p>До сих пор мы видели только методы рисования контекста. Если мы хотим применить цвета к фигуре, то есть два важных свойства, которые мы можем использовать: <code>fillStyle</code> и <code>strokeStyle</code>.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}</dt>
@@ -41,7 +41,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 <p>В этом примере мы опять воспользуемся двойным циклом, чтобы нарисовать сетку из прямоугольников, каждый из которых имеет свой цвет. Окончательное изображение должно иметь вид, как показано на скриншоте. Здесь не происходит ничего сверхъестественного. Мы используем две переменные <code>i</code> и <code>j</code> для генерации уникального RGB цвета для каждого квадрата и изменяем только красные и зелёные значения. Синий канал представляет собой фиксированное значение. Путём изменения каналов вы можете генерировать всю палитру. Увеличив количество шагов вы можете достигнуть такого вида палитры, какая используется в Photoshop.</p>
 
-<pre class="brush: js;highlight[5,6]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i=0;i&lt;6;i++){
     for (var j=0;j&lt;6;j++){
@@ -66,7 +66,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 <p>Этот пример похож на предыдущий, но мы используем свойство <code>strokeStyle</code> чтобы изменить цвета очертаний фигур. Так же мы используем метод <code>arc()</code> для рисования окружностей вместо квадратов.</p>
 
-<pre class="brush: js;highlight[5,6]">  function draw() {
+<pre class="brush: js;">  function draw() {
     var ctx = document.getElementById('canvas').getContext('2d');
     for (var i=0;i&lt;6;i++){
       for (var j=0;j&lt;6;j++){
@@ -115,7 +115,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>В данном примере мы нарисуем фон и четыре квадрата с различными цветами.  Сверху изображения будет выведен набор полупрозрачных кругов. Установим свойство <code>globalAlpha</code> значением 0.2, которое будет использовано для всех последующих форм. Каждый шаг цикла рисует круг с большим радиусом. По окончанию получим радиальный градиент. Накладывая ещё больше кругов друг на друга, мы фактически сможем уменьшить прозрачность ранее нарисованных кругов. Увеличив счётчик итераций, при этом рисуя ещё круги, мы сможем добиться исчезновение центра изображения.</p>
 
-<pre class="brush: js;highlight[15]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   // фон изображения
   ctx.fillStyle = '#FD0';
@@ -151,7 +151,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>В этом втором примере мы делаем что-то похожее на предыдущее, но вместо рисования кругов друг над другом, я рисовал маленькие прямоугольники с увеличением непрозрачности. Использование <code>rgba()</code> добавляет контроля и гибкости, поскольку мы можем индивидуально настраивать стиль заливки и штриха.</p>
 
-<pre class="brush: js;highlight[16]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Нарисовать фон
@@ -212,7 +212,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>В приведённом ниже примере 10 прямых линий рисуются с увеличением ширины линий. Линия в крайнем левом углу - 1.0 единицы. Тем не менее, толщина левой и всех других линий нечётной ширины не выглядят чёткими из-за позиционирования пути.</p>
 
-<pre class="brush: js;highlight[4]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 10; i++){
     ctx.lineWidth = 1+i;
@@ -269,7 +269,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>Строка слева использует <code>butt</code> опцию по умолчанию. Вы заметите, что она полностью очищена от направляющих. Второй вариант -  <code>round</code> опция. Это добавляет полукруг к концу, который имеет радиус, равный половине ширины линии. Строка справа использует <code>square</code> опцию. Это добавляет поле с равной шириной и половиной высоты толщины линии.</p>
 
-<pre class="brush: js;highlight[18]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineCap = ['butt','round','square'];
 
@@ -322,7 +322,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>В приведённом ниже примере показаны три разных пути, демонстрирующие каждый из этих трёх свойств <code>lineJoin</code>; результат - выше. </p>
 
-<pre class="brush: js;highlight[6]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineJoin = ['round','bevel','miter'];
   ctx.lineWidth = 10;
@@ -367,7 +367,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>Если вы укажете в этой демонстрации значение <code>miterLimit</code> ниже 4.2, ни один из видимых углов не присоединится к расширению митры, но только с небольшим скосом рядом с синими линиями; с отметкой <code>miterLimit</code> выше 10, большинство углов в этой демонстрации должны соединяться с митрой, удалённой от синих линий, высота которой уменьшается между углами слева направо, потому что они соединяются с растущими углами; с промежуточными значениями углы с левой стороны будут соединяться только с скосом рядом с синими линиями, а углы с правой стороны с удлинителем митры (также с уменьшающейся высотой).</p>
 
-<pre class="brush: js;highlight[18]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Clear canvas
@@ -431,7 +431,7 @@ draw();</pre>
 <pre class="brush: html">&lt;canvas id="canvas" width="110" height="110"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<pre class="brush: js;highlight[6]">var ctx = document.getElementById('canvas').getContext('2d');
+<pre class="brush: js;">var ctx = document.getElementById('canvas').getContext('2d');
 var offset = 0;
 
 function draw() {
@@ -489,7 +489,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>In this example, we'll create two different gradients. As you can see here, both the <code>strokeStyle</code> and <code>fillStyle</code> properties can accept a <code>canvasGradient</code> object as valid input.</p>
 
-<pre class="brush: js;highlight[5,11]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Create gradients
@@ -530,7 +530,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>In this example, we'll define four different radial gradients. Because we have control over the start and closing points of the gradient, we can achieve more complex effects than we would normally have in the "classic" radial gradients we see in, for instance, Photoshop (that is, a gradient with a single center point where the gradient expands outward in a circular shape).</p>
 
-<pre class="brush: js;highlight[5,10,15,20]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Create gradients
@@ -615,7 +615,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 <p>In this last example, we'll create a pattern to assign to the <code>fillStyle</code> property. The only thing worth noting is the use of the image's <code>onload</code> handler. This is to make sure the image is loaded before it is assigned to the pattern.</p>
 
-<pre class="brush: js;highlight[10]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // create new image object to use as pattern
@@ -637,7 +637,6 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 <pre class="brush: js">draw();</pre>
 
-<p>The result looks like this:</p>
 </div>
 
 <p>{{EmbedLiveSample("Пример_createPattern", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}</p>
@@ -671,7 +670,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 <p>This example draws a text string with a shadowing effect.</p>
 
-<pre class="brush: js;highlight[4,5,6,7]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.shadowOffsetX = 2;
@@ -708,7 +707,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 <p>In this example we are using the <code>evenodd</code> rule.</p>
 
-<pre class="brush: js;highlight[6]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI*2, true);

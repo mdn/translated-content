@@ -41,11 +41,8 @@ L'élément MathML `<merror>` est utilisé afin d'afficher des contenus en tant 
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                       | Commentaires           |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ---------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.merror', 'merror') }} | {{ Spec2('MathML3') }} | Spécification actuelle |
-| {{ SpecName('MathML2', 'chapter3.html#presm.merror', 'merror') }} | {{ Spec2('MathML2') }} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.merror")}}
+{{Compat}}

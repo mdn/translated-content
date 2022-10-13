@@ -2,6 +2,7 @@
 title: <display-internal>
 slug: Web/CSS/display-internal
 ---
+
 {{CSSRef}}
 
 `table` や `ruby` のような一部のレイアウトモデルでは、複雑な内部構造があり、様々なその子要素や子孫要素が担う様々な役割があります。このページではこれらを「内部の」表示値として定義し、特定のレイアウトモードでのみ意味を持ちます。

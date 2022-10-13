@@ -73,7 +73,7 @@ A basic link is created by wrapping the text (or other content, see [Block level
 
 이것은 그리고 마우스를 오버했을때에 툴팁에 대한 기능도 제공해줄 수 있다.
 
-제가 만든 링크 입니다. [the Mozilla homepage](https://www.mozilla.org/en-US/ "The best place to find more information about Mozilla's mission and how to contribute").
+제가 만든 링크 입니다. [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
 > **참고:** 링크 제목은 마우스 호버시에만 공개 된다. 이것은 웹 페이지를 탐색하기 위해 키보드에만 의존하는 사람들이 타이틀 정보에 접근하는데 어려움을 겪게 된다는 것을 의미한다. 만약 title의 정보가 페이지 사용에 있어서 정말로 중요하다면, 해당하는 정보를 일반 텍스트에 넣어줌으로써 모든 사용자가 접근할 수 있는 방식으로 제시해주어야한다.
 

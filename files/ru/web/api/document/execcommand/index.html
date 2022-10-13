@@ -13,7 +13,7 @@ translation_of: Web/API/Document/execCommand
 <div>
 <h2 id="Summary">Обзор</h2>
 
-<p>Когда HTML документ переключён в режим редактирования ({{domxref("document.designMode")}}), для него будет доступен метод <code>execCommand</code>, который предоставляет команды для работы с контентом в редактируемой области. Большинство команд влияют на выделение (bold, italics, и т. п.), другие вставляют новые элементы (createLink) или влияют на всю строку (<span style="font-family: segoe ui;">indenting</span>). При использовании <code>contentEditable</code>, вызов <code>execCommand</code> влияет на активный редактируемый элемент.</p>
+<p>Когда HTML документ переключён в режим редактирования ({{domxref("document.designMode")}}), для него будет доступен метод <code>execCommand</code>, который предоставляет команды для работы с контентом в редактируемой области. Большинство команд влияют на выделение (bold, italics, и т. п.), другие вставляют новые элементы (createLink) или влияют на всю строку (indenting). При использовании <code>contentEditable</code>, вызов <code>execCommand</code> влияет на активный редактируемый элемент.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/Document/execCommand
 
 <dl>
  <dt>String aValueArgument</dt>
- <dd>некоторым командам (например insertimage) также требуется значение аргумента (url картинки). Е<span style="line-height: 1.5;">сли аргумент не нужен введите</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">null</code><span style="line-height: 1.5;">.</span></dd>
+ <dd>некоторым командам (например insertimage) также требуется значение аргумента (url картинки). Если аргумент не нужен введите <code style="font-style: normal; line-height: 1.5;">null</code>.</dd>
 </dl>
 </blockquote>
 
@@ -278,7 +278,7 @@ translation_of: Web/API/Document/execCommand
 
 <h2 id="Specification">Спецификация</h2>
 
-<table class="spectable standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="col">Спецификация</th>

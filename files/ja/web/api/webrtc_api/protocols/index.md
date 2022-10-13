@@ -2,6 +2,7 @@
 title: WebRTC プロトコル入門
 slug: Web/API/WebRTC_API/Protocols
 ---
+
 {{WebRTCSidebar}}
 
 この記事では、 WebRTC API の基礎となっているプロトコルについて説明します。

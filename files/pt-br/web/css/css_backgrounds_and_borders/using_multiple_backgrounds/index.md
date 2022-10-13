@@ -13,7 +13,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
 ---
 {{CSSRef}}
 
-Com [CSS3](/en/CSS/CSS3 "CSS3"), você pode aplicar aos elementos multiplos planos de fundo. Estes ficam em camadas empilhadas uma acima da outra onde o o primeiro fundo dado será desenhado no topo e apenas o último fundo da lista poderá definir uma cor sólida de fundo.
+Com [CSS3](/en/CSS/CSS3), você pode aplicar aos elementos multiplos planos de fundo. Estes ficam em camadas empilhadas uma acima da outra onde o o primeiro fundo dado será desenhado no topo e apenas o último fundo da lista poderá definir uma cor sólida de fundo.
 
 Especificar planos de fundo múltplos é fácil:
 
@@ -23,7 +23,7 @@ Especificar planos de fundo múltplos é fácil:
 }
 ```
 
-Você pode fazer isso com a propriedade reduzida {{ cssxref("background") }} e também com as propriedade individuais, com a excessão de {{ cssxref("background-color") }}. Isto é, as seguintes propriedades de plano de fundo podem ser especificadas com uma lista, uma por fundo: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }},` `{{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
+Você pode fazer isso com a propriedade reduzida {{ cssxref("background") }} e também com as propriedade individuais, com a excessão de {{ cssxref("background-color") }}. Isto é, as seguintes propriedades de plano de fundo podem ser especificadas com uma lista, uma por fundo: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
 
 ## Exemplo
 
@@ -47,4 +47,4 @@ Como pode ver, o logo do firefox (listado primeiro) está no topo, seguido do gr
 
 ## Veja também
 
-- [Usando degradês](/en/CSS/Using_CSS_gradients "en/Using gradients")
+- [Usando degradês](/en/CSS/Using_CSS_gradients)

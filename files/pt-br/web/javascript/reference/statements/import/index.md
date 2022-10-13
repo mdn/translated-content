@@ -15,9 +15,9 @@ translation_of: Web/JavaScript/Reference/Statements/import
 
 A declaração estática **`import`** é usada para importar vínculos que são exportados por um outro módulo. Os módulos importados estão em {{JSxRef("Strict_mode","strict mode")}}, declarado como tal ou não. A declaração `import` não pode ser usada em scripts embutidos, a menos que tal script tenha um `type="module"`.
 
-Há também uma função dinâmica** \*\***`import()`\*\*, que não requer scripts de `type="module"`.
+Há também uma função dinâmica **`import()`**, que não requer scripts de `type="module"`.
 
-A compatibilidade com versões anteriores pode ser garantida usando o atributo `nomodule `na tag de script.
+A compatibilidade com versões anteriores pode ser garantida usando o atributo `nomodule` na tag de script.
 
 A importação dinâmica é útil em situações em que você deseja carregar um módulo condicionalmente ou sob demanda. A forma estática é preferível para carregar dependências iniciais e pode se beneficiar mais prontamente de ferramentas de análise estática e [tree shaking](/pt-BR/docs/Glossary/Tree_shaking).
 

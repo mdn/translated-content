@@ -7,9 +7,9 @@ translation_of: Learn/CSS/Styling_text/Fundamentals
 
 <div>{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary"><span class="seoSummary">В данной статье мы начнём путь к овладению стилизацией текста при помощи {{glossary("CSS")}}.</span> Мы подробно изучим основы стилизации текста и шрифта, такие как толщина, начертание, семейство, стенография, выравнивание текста и другие эффекты, а также рассмотрим междустрочный и межбуквенный интервалы.</p>
+<p class="summary">В данной статье мы начнём путь к овладению стилизацией текста при помощи {{glossary("CSS")}}. Мы подробно изучим основы стилизации текста и шрифта, такие как толщина, начертание, семейство, стенография, выравнивание текста и другие эффекты, а также рассмотрим междустрочный и межбуквенный интервалы.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Необходимые знания:</th>
@@ -155,7 +155,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <h4 id="Default_fonts">Default fonts</h4>
 
-<p>CSS defines five generic names for fonts:  <code>serif</code><font face="Open Sans, Arial, sans-serif">, </font><code>sans-serif</code>,<font face="Open Sans, Arial, sans-serif"> </font><code>monospace</code>, <code>cursive</code> and <code>fantasy</code>. Those are very generic and the exact font face used when using those generic names is up to each browser and can vary for each operating system they are running on. It represents a <em>worst case scenario</em> where the browser will try to do its best to provide at least a font that looks appropriate. <code>serif</code>, <code>sans-serif</code> and <code>monospace</code> are quite predictable and should provide something reasonable. On the other hand, <code>cursive</code> and <code>fantasy</code> are less predictable and we recommend using them very carefully, testing as you go.</p>
+<p>CSS defines five generic names for fonts:  <code>serif</code>, <code>sans-serif</code>, <code>monospace</code>, <code>cursive</code> and <code>fantasy</code>. Those are very generic and the exact font face used when using those generic names is up to each browser and can vary for each operating system they are running on. It represents a <em>worst case scenario</em> where the browser will try to do its best to provide at least a font that looks appropriate. <code>serif</code>, <code>sans-serif</code> and <code>monospace</code> are quite predictable and should provide something reasonable. On the other hand, <code>cursive</code> and <code>fantasy</code> are less predictable and we recommend using them very carefully, testing as you go.</p>
 
 <p>The five names are defined as follows:</p>
 
@@ -171,27 +171,27 @@ occasion such as this that he did.&lt;/p&gt;</pre>
   <tr>
    <td><code>serif</code></td>
    <td>Fonts that have serifs (the flourishes and other small details you see at the ends of the strokes in some typefaces)</td>
-   <td><span style="font-family: serif;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>sans-serif</code></td>
    <td>Fonts that don't have serifs.</td>
-   <td><span style="font-family: sans-serif;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>monospace</code></td>
    <td>Fonts where every character has the same width, typically used in code listings.</td>
-   <td><span style="font-family: monospace;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>cursive</code></td>
    <td>Fonts that are intended to emulate handwriting, with flowing, connected strokes.</td>
-   <td><span style="font-family: cursive;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>fantasy</code></td>
    <td>Fonts that are intended to be decorative.</td>
-   <td><span style="font-family: fantasy;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
  </tbody>
 </table>
@@ -304,7 +304,7 @@ p {
   <ul>
    <li><code>normal</code>: Sets the text to the normal font (turns existing italics off.)</li>
    <li><code>italic</code>: Sets the text to use the <em>italic version of the font</em> if available; if not available, it will simulate italics with oblique instead.</li>
-   <li><code>oblique</code>: Sets the text to use a simulated version of an italic font, created by <span style="font-style: oblique;">slanting the normal version</span>.</li>
+   <li><code>oblique</code>: Sets the text to use a simulated version of an italic font, created by slanting the normal version.</li>
   </ul>
  </li>
  <li>{{cssxref("font-weight")}}: Sets how bold the text is. This has many values available in case you have many font variants available (such as <em>-light</em>, <em>-normal</em>, <em>-bold</em>, <em>-extrabold</em>, <em>-black</em>, etc.), but realistically you'll rarely use any of them except for <code>normal</code> and <code>bold</code>:
@@ -317,20 +317,20 @@ p {
  <li>{{cssxref("text-transform")}}: Allows you to set your font to be transformed. Values include:
   <ul>
    <li><code>none</code>: Prevents any transformation.</li>
-   <li><code>uppercase</code>: Transforms <span style="text-transform: uppercase;">all text to capitals</span>.</li>
+   <li><code>uppercase</code>: Transforms all text to capitals.</li>
    <li><code>lowercase</code>: Transforms all text to lower case.</li>
-   <li><code>capitalize</code>: Transforms all words to <span style="text-transform: capitalize;">have the first letter capitalized</span>.</li>
-   <li><code>full-width</code>: Transforms all glyphs to be <span style="text-transform: full-width;">written inside a fixed-width square</span>, similar to a monospace font, allowing aligning of e.g. Latin characters along with Asian language glyphs (like Chinese, Japanese, Korean).</li>
+   <li><code>capitalize</code>: Transforms all words to have the first letter capitalized.</li>
+   <li><code>full-width</code>: Transforms all glyphs to be written inside a fixed-width square, similar to a monospace font, allowing aligning of e.g. Latin characters along with Asian language glyphs (like Chinese, Japanese, Korean).</li>
   </ul>
  </li>
  <li>{{cssxref("text-decoration")}}: Sets/unsets text decorations on fonts (you'll mainly use this to unset the default underline on links when styling them.) Available values are:
   <ul>
    <li><code>none</code>: Unsets any text decorations already present.</li>
    <li><code>underline</code>: <u>Underlines the text</u>.</li>
-   <li><code>overline</code>: <span style="text-decoration: overline;">Gives the text an overline</span>.</li>
+   <li><code>overline</code>: Gives the text an overline.</li>
    <li><code>line-through</code>: Puts a <s style="text-decoration: line-through;">strikethrough over the text</s>.</li>
   </ul>
-  You should note that {{cssxref("text-decoration")}} can accept multiple values at once, if you want to add multiple decorations simultaneously, for example <span style="text-decoration: underline overline;"><code>text-decoration: underline overline</code></span>. Also note that {{cssxref("text-decoration")}} is a shorthand property for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-color")}}. You can use combinations of these property values to create interesting effects, for example <span style="text-decoration: line-through red wavy;"><code>text-decoration: line-through red wavy</code>.</span></li>
+  You should note that {{cssxref("text-decoration")}} can accept multiple values at once, if you want to add multiple decorations simultaneously, for example <code>text-decoration: underline overline</code>. Also note that {{cssxref("text-decoration")}} is a shorthand property for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-color")}}. You can use combinations of these property values to create interesting effects, for example <code>text-decoration: line-through red wavy</code>.</li>
 </ul>
 
 <p>Let's look at adding a couple of these properties to our example:</p>

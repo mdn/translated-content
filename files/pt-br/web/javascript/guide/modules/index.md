@@ -30,7 +30,7 @@ O uso de módulos JavaScript nativos depende do{{JSxRef("Statements/import", "im
 
 ## Apresentando um exemplo
 
-Para demonstrar o uso dos módulos, criamos um [conjunto simples de exemplos](https://github.com/mdn/js-examples/tree/master/module-examples) que você pode encontrar no GitHub. Estes exemplos demonstram um conjunto simples de módulos que criam um[`<canvas>`](/pt-BR/docs/Web/HTML/Element/canvas "Use the HTML <canvas> element with either the canvas scripting API or the WebGL API to draw graphics and animations.") em uma página da Web e desenhe (e relate informações sobre) formas diferentes na tela.
+Para demonstrar o uso dos módulos, criamos um [conjunto simples de exemplos](https://github.com/mdn/js-examples/tree/master/module-examples) que você pode encontrar no GitHub. Estes exemplos demonstram um conjunto simples de módulos que criam um[`<canvas>`](/pt-BR/docs/Web/HTML/Element/canvas) em uma página da Web e desenhe (e relate informações sobre) formas diferentes na tela.
 
 Estes são bastante triviais, mas foram mantidos deliberadamente simples para demonstrar claramente os módulos.
 
@@ -54,7 +54,7 @@ Os dois módulos do diretório modules são descritos abaixo:
 
 - `canvas.js` — contém funções relacionadas à configuração da tela:
 
-  - `create()` — cria uma tela com uma largura e altura especificadas dentro de um invólucro [`<div>`](/pt-BR/docs/Web/HTML/Element/div "The HTML Content Division element (<div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS.") com um ID especificado, que é anexado dentro de um elemento pai especificado. Retorna um objeto que contém o contexto 2D da tela e o ID do [wrapper](/pt-BR/docs/Glossario/Wrapper).
+  - `create()` — cria uma tela com uma largura e altura especificadas dentro de um invólucro [`<div>`](/pt-BR/docs/Web/HTML/Element/div) com um ID especificado, que é anexado dentro de um elemento pai especificado. Retorna um objeto que contém o contexto 2D da tela e o ID do [wrapper](/pt-BR/docs/Glossario/Wrapper).
   - `createReportList()` — cria uma lista não ordenada anexada dentro de um elemento de wrapper especificado, que pode ser usado para gerar dados de relatório. Retorna o ID da lista.
 
 - `square.js` — contém:
@@ -73,7 +73,7 @@ Neste artigo, usamos extensões .js para nossos arquivos de módulo, mas em outr
 
 No entanto, decidimos continuar usando .js, pelo menos por enquanto. Para que os módulos funcionem corretamente em um navegador, você precisa garantir que seu servidor os esteja servindo com um cabeçalho Content-Type que contenha um tipo MIME JavaScript, como text / javascript. Caso contrário, você receberá um erro estrito de verificação do tipo MIME, de acordo com as linhas "O servidor respondeu com um tipo MIME não JavaScript" e o navegador não executará seu JavaScript. A maioria dos servidores já define o tipo correto para arquivos .js, mas ainda não para arquivos .mjs. Servidores que já veiculam arquivos .mjs incluem corretamente [GitHub Pages](https://pages.github.com/) e [`http-server`](https://github.com/http-party/http-server#readme) para Node.js.
 
-Tudo bem se você já estiver usando esse ambiente ou se não estiver, mas souber o que está fazendo e tiver acesso (ou seja, você pode configurar o servidor para definir a configuração correta [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type) para arquivos `.mjs`). No entanto, isso pode causar confusão se você não controlar o servidor do qual está servindo arquivos ou publicar arquivos para uso público, como estamos aqui.
+Tudo bem se você já estiver usando esse ambiente ou se não estiver, mas souber o que está fazendo e tiver acesso (ou seja, você pode configurar o servidor para definir a configuração correta [`Content-Type`](/pt-BR/docs/Web/HTTP/Headers/Content-Type) para arquivos `.mjs`). No entanto, isso pode causar confusão se você não controlar o servidor do qual está servindo arquivos ou publicar arquivos para uso público, como estamos aqui.
 
 Para fins de aprendizado e portabilidade, decidimos manter o`.js`.
 
@@ -160,7 +160,7 @@ reportPerimeter(square1.length, reportList);
 
 Agora, apenas precisamos aplicar o módulo main.js. à nossa página HTML. Isso é muito semelhante ao modo como aplicamos um script regular a uma página, com algumas diferenças notáveis.
 
-Primeiro de tudo, você precisa incluir `type="module"` no [`<script>`](/pt-BR/docs/Web/HTML/Element/script "The HTML <script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code.") elemento, para declarar esse script como um módulo. Para importar o `main.js` script, usamos este:
+Primeiro de tudo, você precisa incluir `type="module"` no [`<script>`](/pt-BR/docs/Web/HTML/Element/script) elemento, para declarar esse script como um módulo. Para importar o `main.js` script, usamos este:
 
 ```html
 <script type="module" src="main.js"></script>
@@ -182,7 +182,7 @@ Você só pode usar `import` e `export` instruções dentro de módulos, não sc
 
 - Você precisa prestar atenção nos testes locais - se você tentar carregar o arquivo HTML localmente (i.e. com um arquivo`://` URL), você encontrará erros do CORS devido a requisitos de segurança do módulo JavaScript. Você precisa fazer seus testes através de um servidor.
 - Além disso, observe que você pode obter um comportamento diferente das seções de script definidas dentro dos módulos e não nos scripts padrão. Isso ocorre porque os módulos usam {{JSxRef("Strict_mode", "strict mode", "", 1)}} automaticamente.
-- Não há necessidade de usar o atributo deferir (consulte [`<script>` attributes](/pt-BR/docs/Web/HTML/Element/script#Attributes "The HTML <script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code.")) ao carregar um script de módulo; módulos são adiados automaticamente.
+- Não há necessidade de usar o atributo deferir (consulte [`<script>` attributes](/pt-BR/docs/Web/HTML/Element/script#Attributes)) ao carregar um script de módulo; módulos são adiados automaticamente.
 - Os módulos são executados apenas uma vez, mesmo que tenham sido referenciados em várias tags \<script>.
 - Por último, mas não menos importante, vamos esclarecer: os recursos do módulo são importados para o escopo de um único script - eles não estão disponíveis no escopo global. Portanto, você poderá acessar apenas os recursos importados no script para o qual eles foram importados e não poderá acessá-los no console JavaScript, por exemplo. Você ainda receberá erros de sintaxe mostrados no DevTools, mas não poderá usar algumas das técnicas de depuração que você esperava usar.
 

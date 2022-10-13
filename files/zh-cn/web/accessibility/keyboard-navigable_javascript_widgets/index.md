@@ -3,7 +3,9 @@ title: 键盘导航的 JavaScript 组件
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 ---
 
-键盘导航 JavaScript 组件
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
 
 ### 概况
 
@@ -39,7 +41,7 @@ slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
       <td>Yes</td>
       <td>
         No; 必须通过
-        <code><a href="../../../../En/DOM/Element.focus">focus()</a></code>
+        <a href="/zh-CN/docs/Web/API/HTMLElement/focus"><code>focus()</code></a>
         来聚焦该元素。可以在方向键或者其他键的响应里面做。
       </td>
     </tr>

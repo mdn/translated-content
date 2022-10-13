@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 ## Introdução
 
-Por que uma reintrodução? Porque [JavaScript](/en/JavaScript "en/JavaScript") é conhecida como [a mais incompreendida linguagem de programação do mundo](http://javascript.crockford.com/javascript.html). Embora muitas vezes ridicularizada como um brinquedo, por baixo de sua simplicidade enganosa estão alguns recursos poderosos da linguagem, que agora é usado por um número incrível de aplicações de alto nível, mostrando que o conhecimento mais profundo desta tecnologia é uma habilidade importante para qualquer desenvolvedor web, mobile ou desktop.
+Por que uma reintrodução? Porque [JavaScript](/en/JavaScript) é conhecida como [a mais incompreendida linguagem de programação do mundo](http://javascript.crockford.com/javascript.html). Embora muitas vezes ridicularizada como um brinquedo, por baixo de sua simplicidade enganosa estão alguns recursos poderosos da linguagem, que agora é usado por um número incrível de aplicações de alto nível, mostrando que o conhecimento mais profundo desta tecnologia é uma habilidade importante para qualquer desenvolvedor web, mobile ou desktop.
 
 É sempre bom começar com a história da linguagem. A JavaScript foi criada em 1995 por Brendan Eich, um engenheiro da Netscape, e lançada pela primeira vez com o Netscape 2 no início de 1996. Foi inicialmente chamada de LiveScript, mas logo foi rebatizada, em uma decisão de marketing malfeita, para tentar crescer sobre a popularidade da linguagem Java da Sun Microsystem - apesar das duas terem muito pouco em comum. Esta tem sido uma fonte de confusão desde então.
 
@@ -62,7 +62,7 @@ Math.sin(3.5);
 var d = Math.PI * r * r;
 ```
 
-Você pode converter uma string em um inteiro usando a função embutida [`parseInt()`](/en/JavaScript/Reference/Global_Objects/parseInt "en/Core_JavaScript_1.5_Reference/Global_Functions/parseInt"). Ela tem um segundo parâmetro opcional para a base da conversão, parâmetro esse que você deveria sempre prover:
+Você pode converter uma string em um inteiro usando a função embutida [`parseInt()`](/en/JavaScript/Reference/Global_Objects/parseInt). Ela tem um segundo parâmetro opcional para a base da conversão, parâmetro esse que você deveria sempre prover:
 
 ```js
 > parseInt("123", 10)
@@ -76,7 +76,7 @@ Se você quiser converter um número binário em um inteiro, basta mudar a base:
 3
 ```
 
-Similarmente, você pode fazer a conversão de números de ponto flutuante usando a função embutida [`parseFloat()`](/en/JavaScript/Reference/Global_Objects/parseFloat "en/JavaScript/Reference/Global Objects/parseFloat") que usa a base 10 sempre, ao contrário de seu primo [`parseInt()`](/en/JavaScript/Reference/Global_Objects/parseInt "en/JavaScript/Reference/Global Objects/parseInt").
+Similarmente, você pode fazer a conversão de números de ponto flutuante usando a função embutida [`parseFloat()`](/en/JavaScript/Reference/Global_Objects/parseFloat) que usa a base 10 sempre, ao contrário de seu primo [`parseInt()`](/en/JavaScript/Reference/Global_Objects/parseInt).
 
 Você também pode usar o operador unário `+` para converter valores em números:
 
@@ -85,7 +85,7 @@ Você também pode usar o operador unário `+` para converter valores em número
 42
 ```
 
-Um valor especial chamado [`NaN`](/en/JavaScript/Reference/Global_Objects/NaN "en/Core_JavaScript_1.5_Reference/Global_Properties/NaN") (sigla de "Not a Number ou Não é Número") é retornado se a string não é um valor numérico:
+Um valor especial chamado [`NaN`](/en/JavaScript/Reference/Global_Objects/NaN) (sigla de "Not a Number ou Não é Número") é retornado se a string não é um valor numérico:
 
 ```js
 > parseInt("hello", 10)
@@ -99,14 +99,14 @@ NaN
 NaN
 ```
 
-Você pode testar se é `NaN` usando a função embutida [`isNaN()`](/en/JavaScript/Reference/Global_Objects/isNaN "en/Core_JavaScript_1.5_Reference/Global_Functions/isNaN"):
+Você pode testar se é `NaN` usando a função embutida [`isNaN()`](/en/JavaScript/Reference/Global_Objects/isNaN):
 
 ```js
 > isNaN(NaN)
 true
 ```
 
-JavaScript também tem os valores especiais [`Infinity`](/en/JavaScript/Reference/Global_Objects/Infinity "en/Core_JavaScript_1.5_Reference/Global_Properties/Infinity") e `-Infinity`:
+JavaScript também tem os valores especiais [`Infinity`](/en/JavaScript/Reference/Global_Objects/Infinity) e `-Infinity`:
 
 ```js
 > 1 / 0
@@ -115,7 +115,7 @@ Infinity
 -Infinity
 ```
 
-Você pode testar se o valor é `Infinity`, `-Infinity` e `NaN` usando a função embutida [`isFinite()`](/en/JavaScript/Reference/Global_Objects/isFinite "en/Core_JavaScript_1.5_Reference/Global_Functions/isFinite"):
+Você pode testar se o valor é `Infinity`, `-Infinity` e `NaN` usando a função embutida [`isFinite()`](/en/JavaScript/Reference/Global_Objects/isFinite):
 
 ```js
 > isFinite(1/0)
@@ -126,15 +126,15 @@ false
 false
 ```
 
-> **Nota:** As funções [`parseInt()`](/en/JavaScript/Reference/Global_Objects/parseInt "en/JavaScript/Reference/Global Objects/parseInt") e [`parseFloat()`](/en/JavaScript/Reference/Global_Objects/parseFloat "en/JavaScript/Reference/Global Objects/parseFloat") fazem a conversão da string até alcançarem um caracter que não é válido para o formato numérico especificado, então elas retornam o número convertido até aquele ponto. Contudo, o operador "+" simplesmente converte a string em `NaN` se tiver algum caracter inválido nela. Apenas tente por si mesmo converter a string "10.2abc" usando cada um desses métodos no console e entenderá melhor essas diferenças.
+> **Nota:** As funções [`parseInt()`](/en/JavaScript/Reference/Global_Objects/parseInt) e [`parseFloat()`](/en/JavaScript/Reference/Global_Objects/parseFloat) fazem a conversão da string até alcançarem um caracter que não é válido para o formato numérico especificado, então elas retornam o número convertido até aquele ponto. Contudo, o operador "+" simplesmente converte a string em `NaN` se tiver algum caracter inválido nela. Apenas tente por si mesmo converter a string "10.2abc" usando cada um desses métodos no console e entenderá melhor essas diferenças.
 
 ## Strings
 
-Strings em JavaScript são sequências de caracteres. Para ser mais exato, elas são sequências de [Unicode characters](/en/JavaScript/Guide/Obsolete_Pages/Unicode "en/Core_JavaScript_1.5_Guide/Unicode"), em que cada um deles é representado por um número de 16-bits. Isso deveria ser uma notícia bem-vinda para aqueles que tiveram que lidar com internacionalização.
+Strings em JavaScript são sequências de caracteres. Para ser mais exato, elas são sequências de [Unicode characters](/en/JavaScript/Guide/Obsolete_Pages/Unicode), em que cada um deles é representado por um número de 16-bits. Isso deveria ser uma notícia bem-vinda para aqueles que tiveram que lidar com internacionalização.
 
 Se você quiser representar um único caractere, você só tem que usar uma string de tamanho 1.
 
-Para obter o tamanho de uma string, acesse sua propriedade [`length`](/en/JavaScript/Reference/Global_Objects/String/length "en/Core_JavaScript_1.5_Reference/Global_Objects/String/length"):
+Para obter o tamanho de uma string, acesse sua propriedade [`length`](/en/JavaScript/Reference/Global_Objects/String/length):
 
 ```js
 > "hello".length
@@ -158,8 +158,8 @@ No JavaScript há distinção entre `null`, que é um objeto do tipo 'object' pa
 
 JavaScript tem um tipo boolean, ao qual são possíveis os valores `true` e `false` (ambos são palavras-chave). Qualquer valor pode ser convertido em um boolean, de acordo com as seguintes regras:
 
-1.  `false`, `0`, a string vazia(`""`), `NaN`, `null`, e `undefined` todos tornam-se `false`
-2.  todos os outros valores tornam-se `true`
+1. `false`, `0`, a string vazia(`""`), `NaN`, `null`, e `undefined` todos tornam-se `false`
+2. todos os outros valores tornam-se `true`
 
 Você pode fazer essa conversão explicitamente usando a função `Boolean()`:
 
@@ -176,7 +176,7 @@ Operações booleanas como `&&` (_and_ lógico), `||` (_or_ lógico), e `!` (_no
 
 ## Variáveis
 
-Novas variáveis em JavaScript são declaradas usando a palavra-chave [`var`](/en/JavaScript/Reference/Statements/var "en/Core_JavaScript_1.5_Reference/Statements/var"):
+Novas variáveis em JavaScript são declaradas usando a palavra-chave [`var`](/en/JavaScript/Reference/Statements/var):
 
 ```js
 var a;
@@ -200,7 +200,7 @@ x = x + 5
 
 Você pode usar `++` e `--` para incrementar ou decrementar respectivamente. Eles podem ser usados como operadores tanto antes como depois.
 
-O [operador](/en/JavaScript/Reference/Operators/String_Operators "en/Core_JavaScript_1.5_Reference/Operators/String_Operators") `+ `também faz concatenação de string:
+O [operador](/en/JavaScript/Reference/Operators/String_Operators) `+` também faz concatenação de string:
 
 ```js
 > "hello" + " world"
@@ -218,7 +218,7 @@ Se você adicionar uma string a uma número (ou outro valor) tudo será converti
 
 Adicionar uma string em branco a algo é uma maneira melhor de fazer a conversão.
 
-[Comparações](/en/JavaScript/Reference/Operators/Comparison_Operators "en/Core_JavaScript_1.5_Reference/Operators/Comparison_Operators") em JavaScript podem ser feitas usando `<`, `>`, `<=` e `>=`. Isso funciona tanto para strings como para números. A igualdade é um pouco menos simples. O operador igual-duplo faz a coersão de tipo se você colocar tipos diferentes, algumas vezes com resultados interessantes:
+[Comparações](/en/JavaScript/Reference/Operators/Comparison_Operators) em JavaScript podem ser feitas usando `<`, `>`, `<=` e `>=`. Isso funciona tanto para strings como para números. A igualdade é um pouco menos simples. O operador igual-duplo faz a coersão de tipo se você colocar tipos diferentes, algumas vezes com resultados interessantes:
 
 ```js
 > "dog" == "dog"
@@ -238,7 +238,7 @@ true
 
 Temos também os operadores `!=` e `!==` .
 
-JavaScript também tem [operações de bit-a-bit](/en/JavaScript/Reference/Operators/Bitwise_Operators "en/Core_JavaScript_1.5_Reference/Operators/Bitwise_Operators"). Se quiser usá-las, elas estarão lá.
+JavaScript também tem [operações de bit-a-bit](/en/JavaScript/Reference/Operators/Bitwise_Operators). Se quiser usá-las, elas estarão lá.
 
 ## Estruturas de Controle
 
@@ -377,7 +377,7 @@ obj["name"] = "Simon";
 var name = obj["name"];
 ```
 
-Estas também são semânticamente equivalentes. A segunda forma tem a vantagem de que o valor da chave é passado através de uma string, que pode ser calculada em tempo de execução, muito embora esse método previna o uso de alguns mecanismos tais como a otimização e a minificação. Outra vantagem é a possibilidade de se atribuir [palavras-reservadas](/en/JavaScript/Reference/Reserved_Words "en/Core_JavaScript_1.5_Reference/Reserved_Words") aos nomes das propriedades:
+Estas também são semânticamente equivalentes. A segunda forma tem a vantagem de que o valor da chave é passado através de uma string, que pode ser calculada em tempo de execução, muito embora esse método previna o uso de alguns mecanismos tais como a otimização e a minificação. Outra vantagem é a possibilidade de se atribuir [palavras-reservadas](/en/JavaScript/Reference/Reserved_Words) aos nomes das propriedades:
 
 ```js
 obj.for = "Simon"; // Erro de sintaxe, pois 'for' é uma palavra reservada
@@ -475,9 +475,9 @@ for (var i = 0, item; item = a[i++];) {
 
 Aqui nós estamos declarando duas variáveis. A atribuição na parte do meio do laço `for` é também testada — se for verdadeira, o laço continuará. Uma vez que o `i` é incrementado toda vez, os itens do array serão atribuídos a variável item sequencialmente. A iteração é finalizada quando item "falsy" é encontrado (tal como o `undefined`, false ou zero).
 
-Note que esse truque só deveria ser usado em vetores que você sabe não conter valores "falsy" (vetores de objeto ou nós [DOM](/en/DOM "en/DOM") por exemplo). Se você iterar sobre dados numéricos que possam ter o 0 ou sobre dados string que possam ter uma string vazia, você deveria usar a segunda forma como alternativa.
+Note que esse truque só deveria ser usado em vetores que você sabe não conter valores "falsy" (vetores de objeto ou nós [DOM](/en/DOM) por exemplo). Se você iterar sobre dados numéricos que possam ter o 0 ou sobre dados string que possam ter uma string vazia, você deveria usar a segunda forma como alternativa.
 
-Uma outra forma de iterar é usar o laço [`for...in`](/en/JavaScript/Reference/Statements/for...in "en/Core_JavaScript_1.5_Reference/Statements/for...in"). Note que se alguém adicionou novas propriedades ao `Array.prototype`, elas também podem ser iteradas usando este laço:
+Uma outra forma de iterar é usar o laço [`for...in`](/en/JavaScript/Reference/Statements/for...in). Note que se alguém adicionou novas propriedades ao `Array.prototype`, elas também podem ser iteradas usando este laço:
 
 ```js
 for (var i in a) {
@@ -535,7 +535,7 @@ Você também pode passar mais argumentos do que a função está esperando:
 5 // adicionado os dois primeiros; 4 foi ignorado
 ```
 
-Pode parecer um pouco bobo, mas no corpo da função você tem acesso a uma variável adicional chamada [`arguments`](/en/JavaScript/Reference/Functions_and_function_scope/arguments "En/Core_JavaScript_1.5_Reference/Functions_and_function_scope/arguments"), que é um objeto parecido com um vetor que contém todos os valores passados para a função. Vamos rescrever a função add para tomarmos tantos valores quanto quisermos:
+Pode parecer um pouco bobo, mas no corpo da função você tem acesso a uma variável adicional chamada [`arguments`](/en/JavaScript/Reference/Functions_and_function_scope/arguments), que é um objeto parecido com um vetor que contém todos os valores passados para a função. Vamos rescrever a função add para tomarmos tantos valores quanto quisermos:
 
 ```js
 function add() {
@@ -578,7 +578,7 @@ function avgArray(arr) {
 3.5
 ```
 
-Porém, seria legal se pudéssemos reusar a função que já tínhamos criado. Felizmente, JavaScript lhe permite chamar a função, e chamá-la com um conjunto arbitrário de argumentos, usando o método [`apply()`](/en/JavaScript/Reference/Global_Objects/Function/apply "en/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply") presente em qualquer objeto função.
+Porém, seria legal se pudéssemos reusar a função que já tínhamos criado. Felizmente, JavaScript lhe permite chamar a função, e chamá-la com um conjunto arbitrário de argumentos, usando o método [`apply()`](/en/JavaScript/Reference/Global_Objects/Function/apply) presente em qualquer objeto função.
 
 ```js
 > avg.apply(null, [2, 3, 4, 5])
@@ -614,7 +614,7 @@ Isso é semanticamente equivalente a forma `function avg()`. É extremamente pod
 2
 ```
 
-JavaScript lhe permite chamar funções recursivamente. Isso é particularmente útil quando estamos lidando com estruturas de árvore, como quando estavamos navegando no [DOM](/en/DOM "en/DOM").
+JavaScript lhe permite chamar funções recursivamente. Isso é particularmente útil quando estamos lidando com estruturas de árvore, como quando estavamos navegando no [DOM](/en/DOM).
 
 ```js
 function countChars(elm) {
@@ -648,7 +648,7 @@ O nome provido para a função anônima conforme acima só é (ou no mínimo só
 
 ## Objetos Personalizados
 
-> **Nota:** Para uma discursão mais detalhada de programação orientada a objetos em JavaScript, veja [Introdução a JavaScript Orientado a Objeto](/en/JavaScript/Introduction_to_Object-Oriented_JavaScript "https://developer.mozilla.org/en/Introduction_to_Object-Oriented_JavaScript").
+> **Nota:** Para uma discursão mais detalhada de programação orientada a objetos em JavaScript, veja [Introdução a JavaScript Orientado a Objeto](/en/JavaScript/Introduction_to_Object-Oriented_JavaScript).
 
 Na clássica Programação Orientada a Objetos, objetos são coleções de dados e métodos que operam sobre esses dados. JavaScript é uma linguagem baseada em protótipos que não contém a estrutura de classe, como tem em C++ e Java. (Algumas vezes isso é algo confuso para o programador acostumado a linguagens com estrutura de classe). Em vez disso, JavaScript usa funções como classes. Vamos considerar um objeto pessoa com os campos primeiro e último nome. Há duas formas em que o nome talvez possa ser exibido: como "primeiro nome segundo nome" ou como "último nome, primeiro nome". Usando as funções e objetos que discutimos anteriormente, aqui está uma forma de fazer isso:
 
@@ -694,7 +694,7 @@ Simon Willison
 Willison, Simon
 ```
 
-Há algo aqui que não havíamos visto anteriormente: a palavra-chave '[`this`](/en/JavaScript/Reference/Operators/this "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator")'. Usada dentro de uma função, '`this`' refere-se ao objeto corrente. O que aquilo de fato significa é especificado pelo modo em que você chamou aquela função. Se você chamou-a usando [notação ponto ou notação colchete](/en/JavaScript/Reference/Operators/Member_Operators "en/Core_JavaScript_1.5_Reference/Operators/Member_Operators") em um objeto, aquele objeto torna-se '`this`'. Se a notação ponto não foi usada pela chamada, '`this`' refere-se ao objeto global. Isso é uma frequente causa de erros. Por exemplo:
+Há algo aqui que não havíamos visto anteriormente: a palavra-chave '[`this`](/en/JavaScript/Reference/Operators/this)'. Usada dentro de uma função, '`this`' refere-se ao objeto corrente. O que aquilo de fato significa é especificado pelo modo em que você chamou aquela função. Se você chamou-a usando [notação ponto ou notação colchete](/en/JavaScript/Reference/Operators/Member_Operators) em um objeto, aquele objeto torna-se '`this`'. Se a notação ponto não foi usada pela chamada, '`this`' refere-se ao objeto global. Isso é uma frequente causa de erros. Por exemplo:
 
 ```js
 > s = makePerson("Simon", "Willison")
@@ -721,7 +721,7 @@ function Person(first, last) {
 var s = new Person("Simon", "Willison");
 ```
 
-Nós introduzimos uma outra palavra-chave: '[`new`](/en/JavaScript/Reference/Operators/new "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator")'. `new` é fortemente relacionada a '`this`'. O que ele faz é criar um novo objeto vazio, e então chamar a função especificada com '`this`' para atribuir aquele novo objeto. Funções que são desenhadas para ser chamadas pelo '`new`' são chamadas de funções construtoras. Uma prática comum é capitular essas funções como um lembrete de chamá-las com o `new`.
+Nós introduzimos uma outra palavra-chave: '[`new`](/en/JavaScript/Reference/Operators/new)'. `new` é fortemente relacionada a '`this`'. O que ele faz é criar um novo objeto vazio, e então chamar a função especificada com '`this`' para atribuir aquele novo objeto. Funções que são desenhadas para ser chamadas pelo '`new`' são chamadas de funções construtoras. Uma prática comum é capitular essas funções como um lembrete de chamá-las com o `new`.
 
 Nossos objetos pessoa estão ficando melhor mas ainda existem algumas arestas feias. Toda vez que criamos um objeto pessoa, criamos duas marcas de nova função dentro dele — não seria melhor se este código fosse compartilhado?
 
@@ -834,7 +834,7 @@ var bill = trivialNew(Person, 'Willian', 'Orange');
 var bill = new Person('Willian', 'Orange');
 ```
 
-`apply()` tem uma função irmã de nome [`call`](/en/JavaScript/Reference/Global_Objects/Function/call "en/Core_JavaScript_1.5_Reference/Global_Objects/Function/call"), que novamente permite você configurar o '`this`' mas toma uma lista expandida de argumentos, ao invés de um array.
+`apply()` tem uma função irmã de nome [`call`](/en/JavaScript/Reference/Global_Objects/Function/call), que novamente permite você configurar o '`this`' mas toma uma lista expandida de argumentos, ao invés de um array.
 
 ```js
 function lastNameCaps() {

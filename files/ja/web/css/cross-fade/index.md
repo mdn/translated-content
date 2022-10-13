@@ -3,6 +3,7 @@ title: cross-fade()
 slug: Web/CSS/cross-fade
 original_slug: Web/CSS/cross-fade()
 ---
+
 {{CSSRef}}
 
 **`cross-fade()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、2 枚以上の画像を所定の透過度で合成するために使用することができます。これは単色で色を薄めたり、放射状グラデーションとの組み合わせでページの特定の領域を強調させたりするような、数多くの単純な画像加工に使用することができます。

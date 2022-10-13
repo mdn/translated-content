@@ -2,6 +2,7 @@
 title: Callback function (コールバック関数)
 slug: Glossary/Callback_function
 ---
+
 コールバック関数は他の関数に引数として渡される関数で、外側の関数で何らかの処理やアクションを実行します。
 
 簡単な例を以下に示します:
@@ -27,4 +28,4 @@ processUserInput(greeting);
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "Callback_(computer_programming)", "コールバック_(情報工学)")}}
+- Wikipedia の [コールバック](https://ja.wikipedia.org/wiki/コールバック_(情報工学))

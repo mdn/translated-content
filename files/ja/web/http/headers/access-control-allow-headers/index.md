@@ -2,6 +2,7 @@
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Allow-Headers`** レスポンスヘッダーは、 {{HTTPHeader("Access-Control-Request-Headers")}} を含む{{glossary("preflight request", "プリフライトリクエスト")}}へのレスポンスで、実際のリクエストの間に使用できる HTTP ヘッダーを示すために使用されます。

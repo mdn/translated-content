@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 {{JSRef}}
 
-O **construtor** **`Async`\*\***`Function` \*\*cria um novo objeto {{jsxref("Statements/async_function", "async function")}}. Em JavaScript cada função assíncrona é atualmente um objeto do tipo `AsyncFunction`.
+O **construtor `AsyncFunction`** cria um novo objeto {{jsxref("Statements/async_function", "async function")}}. Em JavaScript cada função assíncrona é atualmente um objeto do tipo `AsyncFunction`.
 
 Note que`AsyncFunction` não é um objeto global. Ele poderia ser obtido analisando o seguinte código:
 
@@ -50,11 +50,11 @@ Invocar o construtor `AsyncFunction` como uma função (sem usar o operador `new
 - {{jsxref("AsyncFunction.prototype")}}
   - : Permite a adição de propriedades para todos os objetos async function.
 
-## `AsyncFunction `prototype object
+## `AsyncFunction` prototype object
 
 ### Propriedades
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades')}}
 
 ## `AsyncFunction` instances
 

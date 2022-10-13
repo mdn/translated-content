@@ -21,19 +21,18 @@ Pense no template como um fragmento de conteúdo, que é armazenado para um poss
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/HTML/Content_categories"
-          title="HTML/Content_categories"
+          href="/pt-BR/docs/Web/HTML/Content_categories"
           >Conteúdo de categorias</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
           >Metadata content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >, script-supporting element
       </td>
@@ -41,10 +40,10 @@ Pense no template como um fragmento de conteúdo, que é armazenado para um poss
     <tr>
       <th scope="row">Conteúdo Permitido</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
           >Metadata content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content, </a
         >qualquer conteúdo HTML válido que é permitido para ocorrer dentro do
         {{HTMLElement("ol")}}, {{HTMLElement("dl")}},

@@ -3,6 +3,7 @@ title: ServiceWorkerGlobalScope.onfetch
 slug: orphaned/Web/API/ServiceWorkerGlobalScope/onfetch
 original_slug: Web/API/ServiceWorkerGlobalScope/onfetch
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`onfetch`** プロパティは、{{Event("fetch")}} イベントが発生するたびに（通常、{{domxref("WindowOrWorkerGlobalScope.fetch()")}} メソッドが呼び出されたときに）発火するイベントハンドラーです。

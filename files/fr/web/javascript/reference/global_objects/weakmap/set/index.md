@@ -50,18 +50,11 @@ wm.set(obj, "machin");
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WeakMap.set")}}
-
-## Notes relatives à Firefox
-
-- Avant Firefox 33 {{geckoRelease("33")}}, `WeakMap.prototype.set` renvoyait `undefined` et ne pouvait donc pas être utilisé à la chaîne (voir l'exemple ci-avant). Ceci a été corrigé avec le {{bug(1031632)}}. Ce comportement a été le même pour Chrome/v8 et fut également corrigé ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
+{{Compat}}
 
 ## Voir aussi
 

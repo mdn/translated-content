@@ -26,7 +26,7 @@ var canShare = navigator.canShare(data);
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.canShare")}}
+{{Compat}}
 
 ## 相关连接
 

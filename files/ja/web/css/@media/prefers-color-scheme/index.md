@@ -2,6 +2,7 @@
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
 ---
+
 **`prefers-color-scheme`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーがシステムに要求したカラーテーマが明色か暗色かを検出するために使用します。
 
 ユーザーはオペレーティングシステムの設定 (ライトまたはダークモードなど) やユーザーエージェントの設定で、この設定を示す場合があります。

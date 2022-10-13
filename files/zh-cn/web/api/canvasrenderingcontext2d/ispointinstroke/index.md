@@ -32,7 +32,7 @@ boolean ctx.isPointInStroke(path, x, y);
 
 ### 使用 `isPointInStroke` 方法
 
-这只是一个使用 **isPointInStroke** 方法的简单的代码片段，用于检测一个点是否在路径的描边线上`。`
+这只是一个使用 **`isPointInStroke`** 方法的简单的代码片段，用于检测一个点是否在路径的描边线上。
 
 #### HTML
 

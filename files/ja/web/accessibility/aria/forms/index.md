@@ -2,6 +2,7 @@
 title: フォーム
 slug: Web/Accessibility/ARIA/forms
 ---
+
 以下のページでは、ウェブフォームのアクセシビリティを向上させるさまざまなテクニックを紹介します。
 
 - [基本的なフォームのヒント](/ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints): 値が無効あるいは必須のフィールドに、ヒントや説明を追加します。

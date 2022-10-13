@@ -14,13 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 
 <p>Функция <code><strong>parseInt()</strong></code> принимает строку в качестве аргумента и возвращает целое число в соответствии с указанным основанием системы счисления.</p>
 
-<p> </p>
-
 <p>{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}</p>
-
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-
-<p> </p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -105,9 +99,9 @@ parseInt("-12", 13);
 
 <p>Все следующие примеры возвращают <strong><code>4</code></strong>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="function token">parseInt</span><span class="punctuation token">(</span><span class="number token">4.7</span><span class="punctuation token">,</span> <span class="number token">10</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="function token">parseInt</span><span class="punctuation token">(</span><span class="number token">4.7</span> <span class="operator token">*</span> <span class="number token">1e22</span><span class="punctuation token">,</span> <span class="number token">10</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Очень большие числа становятся 4</span>
-<span class="function token">parseInt</span><span class="punctuation token">(</span><span class="number token">0.00000000000434</span><span class="punctuation token">,</span> <span class="number token">10</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Очень маленькие числа становятся 4</span></code></pre>
+<pre class="brush: js">parseInt(4.7, 10);
+parseInt(4.7 * 1e22, 10); // Очень большие числа становятся 4
+parseInt(0.00000000000434, 10); // Очень маленькие числа становятся 4</pre>
 
 <p>Следующий пример возвращает <strong><code>224</code></strong>:</p>
 
@@ -157,8 +151,6 @@ console.log(filterInt('1.61803398875'));     // NaN
 {{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-
-
 
 <p>{{Compat}}</p>
 

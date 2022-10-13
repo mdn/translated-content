@@ -3,6 +3,7 @@ title: 'Reason: missing token ‘xyz’ in CORS header ‘Access-Control-Allow-H
   from CORS preflight channel'
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 ---
+
 {{HTTPSidebar}}
 
 ## 理由

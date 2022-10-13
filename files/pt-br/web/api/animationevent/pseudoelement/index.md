@@ -14,7 +14,7 @@ translation_of: Web/API/AnimationEvent/pseudoElement
 
 ## Sumário
 
-O **`AnimationEvent.pseudoElement`** é uma propriedade só de leitura do {{domxref("DOMString")}}, começando com `'::'`, contendo o nome do [pseudo-element](/pt-BR/docs/Web/CSS/Pseudo-elements) em que a animação roda. Se a animação não roda em um pseudo-elemento mas em um elemento, então temos uma _string_ vazia : ` ''``. `
+O **`AnimationEvent.pseudoElement`** é uma propriedade só de leitura do {{domxref("DOMString")}}, começando com `'::'`, contendo o nome do [pseudo-element](/pt-BR/docs/Web/CSS/Pseudo-elements) em que a animação roda. Se a animação não roda em um pseudo-elemento mas em um elemento, então temos uma _string_ vazia : `''`.
 
 ## Síntaxe
 

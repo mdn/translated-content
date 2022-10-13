@@ -7,7 +7,7 @@ slug: Web/API/HTMLMediaElement/buffered
 
 **`buffered`** は {{domxref("HTMLMediaElement")}} オブジェクトの読み取り専用プロパティで、この `buffered` プロパティがアクセスされた時点でユーザーエージェントがバッファリングしているメディアリソースの範囲があれば，それを表す新しい静的な[正規化された `TimeRanges` オブジェクト](/ja/docs/Web/API/TimeRanges#normalized_timeranges_objects)を返します。
 
-> **Note:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では利用できません。
+> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では利用できません。
 
 ## 値
 

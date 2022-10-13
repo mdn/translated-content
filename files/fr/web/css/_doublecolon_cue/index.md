@@ -56,13 +56,11 @@ La règle CSS suivante permet d'avoir les indications textuelles dans un texte b
 
 ## Spécifications
 
-| Spécification                                                                | État                     | Commentaires         |
-| ---------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName("WebVTT", "#the-cue-pseudo-element", "::cue")}} | {{Spec2("WebVTT")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.cue")}}
+{{Compat}}
 
 ## Voir aussi
 

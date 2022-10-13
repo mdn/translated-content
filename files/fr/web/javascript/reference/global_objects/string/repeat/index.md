@@ -60,11 +60,8 @@ Une nouvelle chaîne de caractères composée du nombre indiqué de copies de la
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ES2015')}}     | Première définition. |
-| {{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.repeat")}}
+{{Compat}}

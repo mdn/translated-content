@@ -2,6 +2,7 @@
 title: SourceBuffer.textTracks
 slug: Web/API/SourceBuffer/textTracks
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`textTracks`** 読み取り専用プロパティは、`SourceBuffer` 内に現在含まれているテキストトラックのリストを返します。

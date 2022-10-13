@@ -45,8 +45,6 @@ p ~ span {
 
 {{Compat("css.selectors.general_sibling")}}
 
-##
-
 ## Veja mais
 
 - [Adjacent sibling selectors](/pt-BR/docs/Web/CSS/Adjacent_sibling_selectors)

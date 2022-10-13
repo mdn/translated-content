@@ -2,6 +2,7 @@
 title: WritableStream.getWriter()
 slug: Web/API/WritableStream/getWriter
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("WritableStream")}} インターフェイスの **`getWriter()`** メソッドは、{{domxref("WritableStreamDefaultWriter")}} の新しいインスタンスを返し、そのインスタンスにストリームをロックします。 ストリームがロックされている間、このライターが開放されるまで他のライターを取得することはできません。

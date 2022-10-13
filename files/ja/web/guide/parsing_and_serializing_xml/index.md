@@ -2,6 +2,7 @@
 title: XML のパースとシリアライズ
 slug: Web/Guide/Parsing_and_serializing_XML
 ---
+
 場合によっては、{{Glossary("XML")}} のコンテンツを解析して {{Glossary("DOM")}} ツリーに変換する必要があるでしょう。または逆に、既存の DOM ツリーを XML にシリアライズすることもあります。この記事では、XML のシリアライズと解析の一般的な作業を容易にするため、ウェブプラットフォームで提供されるオブジェクトに注目します。
 
 - {{domxref("XMLSerializer")}}
@@ -55,7 +56,7 @@ xhr.send();
 
 document が {{Glossary("HTML")}} である場合、上記のコードは {{domxref("Document")}} を返します。document が XML である場合、返されるオブジェクトは {{domxref("XMLDocument")}} になります。この 2 種類は基本的に同じですが、その違いは主に歴史的な部分であり、差別化にはいくつかの実用的な利点があります。
 
-> **Note:** There is in fact an {{domxref("HTMLDocument")}} interface as well, but it is not necessarily an independent type. In some browsers it is, while in others it is simply an alias for the `Document` interface.
+> **メモ:** There is in fact an {{domxref("HTMLDocument")}} interface as well, but it is not necessarily an independent type. In some browsers it is, while in others it is simply an alias for the `Document` interface.
 
 ## XML 文書のシリアライズ
 

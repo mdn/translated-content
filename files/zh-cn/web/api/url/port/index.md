@@ -31,7 +31,7 @@ var result = url.port; // Returns:'80'
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.port")}}
+{{Compat}}
 
 ## 相关链接
 

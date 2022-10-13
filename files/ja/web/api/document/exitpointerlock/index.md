@@ -2,6 +2,7 @@
 title: Document.exitPointerLock()
 slug: Web/API/Document/exitPointerLock
 ---
+
 {{APIRef("DOM")}} {{seeCompatTable}}
 
 **`exitPointerLock()`** メソッドは、以前 {{domxref("Element.requestPointerLock")}} でリクエストされたポインターロックを非同期に解放します。

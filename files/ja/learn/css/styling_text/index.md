@@ -2,6 +2,7 @@
 title: テキストの装飾
 slug: Learn/CSS/Styling_text
 ---
+
 {{LearnSidebar}}
 
 CSS 言語の基本を習得したら、次に取り組むべき CSS のトピックはテキストの装飾です — これは、CSS で行う最も一般的なことの一つです。 ここでは、フォント、太字、イタリック体、ラインと文字の間隔、ドロップシャドウやその他のテキスト機能の設定を含む、テキストの装飾の基本を見ていきます。あなたのページにカスタムフォントを適用し、リストとリンクを装飾するところを見ることによって、このモジュールを締めくくります。
@@ -10,7 +11,7 @@ CSS 言語の基本を習得したら、次に取り組むべき CSS のトピ�
 
 このモジュールを始める前に、[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)のモジュールで説明したようにすでに HTML についての基本的な知識があり、[CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)で説明したように CSS の基本に慣れている必要があります。
 
-> **Note:** 自分のファイルを作成できないコンピューター/タブレット/その他の端末で作業している場合、[JSBin](https://jsbin.com/)、[CodePen](https://codepen.io/)、[Thimble](https://thimble.mozilla.org/) のようなオンラインコーディングプログラムで (ほとんどの) サンプルコードを試せます。
+> **メモ:** 自分のファイルを作成できないコンピューター/タブレット/その他の端末で作業している場合、[JSBin](https://jsbin.com/)、[CodePen](https://codepen.io/)、[Thimble](https://thimble.mozilla.org/) のようなオンラインコーディングプログラムで (ほとんどの) サンプルコードを試せます。
 
 ## ガイド
 

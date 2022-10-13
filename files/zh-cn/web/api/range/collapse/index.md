@@ -38,7 +38,7 @@ range.collapse(true);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.collapse")}}
+{{Compat}}
 
 ## 参阅
 

@@ -67,13 +67,11 @@ La portée des propriétés personnalisées est celle des éléments sur lesquel
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS3 Variables", "#defining-variables", "--*")}} | {{Spec2("CSS3 Variables")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
 ## Voir aussi
 

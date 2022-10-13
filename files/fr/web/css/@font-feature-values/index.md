@@ -61,13 +61,11 @@ La règle @ `@font-feature-values` peut être utilisée au plus haut niveau d'un
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#font-feature-values', '@font-feature-values')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-feature-values")}}
+{{Compat}}
 
 ## Voir aussi
 

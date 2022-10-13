@@ -2,6 +2,7 @@
 title: CSSStyleRule.style
 slug: Web/API/CSSStyleRule/style
 ---
+
 {{ APIRef("CSSOM") }}
 
 ## 概要

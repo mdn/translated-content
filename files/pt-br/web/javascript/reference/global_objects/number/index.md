@@ -73,13 +73,13 @@ Os principais usos para o objeto `Number` são:
 
 {{jsOverrides("Function", "methods", "isNaN")}}
 
-## Instâncias` Number`
+## Instâncias `Number`
 
 Toda instância `Number` herdam de {{jsxref("Number.prototype")}}. O objeto 'prototype' do construtor `Number` pode ser modificado para afetar todas as instâncias `Number`.
 
 ### Métodos
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}
 
 ## Exemplos
 
@@ -104,7 +104,7 @@ var maxInt = 9007199254740992;
 var minInt = -9007199254740992;
 ```
 
-Ao analisar dados que foram serializados para JSON, valores inteiros que caem fora desse intervalo podem ser corrompidos quando o analisador JSON os converte ao tipo `Number`. Usando `String `em vez disso é uma possível alternativa para se evitar um resultado indesejado.
+Ao analisar dados que foram serializados para JSON, valores inteiros que caem fora desse intervalo podem ser corrompidos quando o analisador JSON os converte ao tipo `Number`. Usando `String` em vez disso é uma possível alternativa para se evitar um resultado indesejado.
 
 ### Exemplo: Usando `Number para converter um objeto Date`
 

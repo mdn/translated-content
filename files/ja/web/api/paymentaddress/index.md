@@ -4,9 +4,10 @@ slug: Web/API/PaymentAddress
 l10n:
   sourceCommit: da3e8fe86e7ae4bb7342c6ccb56188b25f9be55c
 ---
+
 {{APIRef("Payment Request API")}}{{SecureContext_Header}} {{Deprecated_header}}{{Non-standard_header}}
 
-**`PaymentAddress`** は[支払いリクエスト API](/en-US/docs/Web/API/Payment_Request_API) のインターフェイスで、配送先または支払い先住所情報を保存するために使用されます。
+**`PaymentAddress`** は[支払いリクエスト API](/ja/docs/Web/API/Payment_Request_API) のインターフェイスで、配送先または支払い先住所情報を保存するために使用されます。
 
 万国郵便連合のウェブページにある [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) という、郵便宛名の国際標準に関する資料を参照すると便利かもしれません。
 
@@ -33,7 +34,7 @@ l10n:
 - {{domxref('PaymentAddress.sortingCode')}} {{readonlyinline}} {{deprecated_inline}}
   - : 文字列で、フランスで使用されているような郵便ソートコードを提供します。
 
-> **Note:** 値が指定されていないプロパティには、空の文字列が含まれています。
+> **メモ:** 値が指定されていないプロパティには、空の文字列が含まれています。
 
 ## メソッド
 

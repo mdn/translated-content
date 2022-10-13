@@ -133,13 +133,11 @@ onmessage = function(e) {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires                      |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblyinstantiate', 'instantiate()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.instantiate")}}
+{{Compat}}
 
 ## Voir aussi
 

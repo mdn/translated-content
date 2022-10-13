@@ -93,7 +93,7 @@ class JSTextEncoderStream extends TransformStream {
 }
 ```
 
-类似地，`TextDecoderStream` 可以这样写:
+类似地，`TextDecoderStream` 可以这样写：
 
 ```js
 const tds = {

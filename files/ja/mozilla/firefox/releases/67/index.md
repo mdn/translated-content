@@ -2,6 +2,7 @@
 title: Firefox 67 for developers
 slug: Mozilla/Firefox/Releases/67
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 67 は、米国時間 2019 年 5 月 21 日 にリリースされました。このページでは、開発者に影響する Firefox 67 の変更点をまとめています。

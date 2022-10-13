@@ -2,6 +2,7 @@
 title: <mtd>
 slug: Web/MathML/Element/mtd
 ---
+
 {{MathMLRef()}}
 
 MathML の `<mtd>` 要素は表組み・行列のセルを表します。{{ MathMLElement("mtr") }} 要素の中にしか現れません。この要素は [HTML](/ja/docs/HTML) の {{ HTMLElement("td") }} 要素に似ています。

@@ -2,6 +2,7 @@
 title: 画面の向きを制御する
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
+
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 
 画面の向きは、[端末の向き](/ja/docs/WebAPI/Detecting_device_orientation)と異なる場合があります。端末が自身の向きを検知することができない場合でも、画面には向きがあります。また端末が自身の向きを知ることが可能であっても、Web アプリケーションのインターフェイスを維持または適合するために画面の向きを制御できるとよいでしょう。
@@ -106,11 +107,11 @@ li {
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 180, 350) }} | {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 350, 180) }} |
 
-> **Note:** **メモ:** orientation メディアクエリは、実際は端末の向きではなくブラウザウィンドウ (または iframe) の向きに応じて適用されます。
+> **メモ:** orientation メディアクエリは、実際は端末の向きではなくブラウザウィンドウ (または iframe) の向きに応じて適用されます。
 
 ## 画面の向きを固定する
 
-> **Warning:** **警告:** この API は実験的であり現在は `moz` 接頭辞付きで、[Firefox OS](/ja/docs/Mozilla/Firefox_OS) および [Android 版 Firefox](/ja/docs/Mozilla/Firefox_for_Android) で使用できます。また、Windows 8.1 以降の Internet Explorer では `ms` 接頭辞付きで使用できます。
+> **警告:** この API は実験的であり現在は `moz` 接頭辞付きで、[Firefox OS](/ja/docs/Mozilla/Firefox_OS) および [Android 版 Firefox](/ja/docs/Mozilla/Firefox_for_Android) で使用できます。また、Windows 8.1 以降の Internet Explorer では `ms` 接頭辞付きで使用できます。
 
 一部の端末 (主にモバイル端末) は、画面に表示している内容をいつでも読めるようにするため、端末の向きに基づいて画面の向きを動的に変更できます。この動作はテキストコンテンツにはとても適していますが、そのような変化を好まないコンテンツも存在します。例えば端末の向きに基づくゲームでは、そのような向きの変化によって混乱してしまうでしょう。
 
@@ -136,7 +137,7 @@ screen.addEventListener("orientationchange", function () {
 Screen.lockOrientation('landscape');
 ```
 
-> **Note:** **メモ:** 画面の固定はウェブアプリケーションに従属します。アプリケーション A が `landscape` に固定、またアプリケーション B が `portrait` に固定した場合は、アプリケーション A から B に、または B から A に切り替えても {{event("orientationchange")}} イベントは発生しません。これは、双方のアプリケーションが自身の向きを維持しているためです。
+> **メモ:** 画面の固定はウェブアプリケーションに従属します。アプリケーション A が `landscape` に固定、またアプリケーション B が `portrait` に固定した場合は、アプリケーション A から B に、または B から A に切り替えても {{event("orientationchange")}} イベントは発生しません。これは、双方のアプリケーションが自身の向きを維持しているためです。
 >
 > ただし、固定の要求を満たすために向きを変更しなければならない場合は、向きの固定で {{event("orientationchange")}} イベントが発生してもかまいません。
 

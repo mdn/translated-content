@@ -31,9 +31,13 @@ orphans: unset;
 - `<integer>`
   - : Seules les valeurs positives sont autorisées. Le nombre de lignes qu'on souhaite avoir au minimum avant une rupture.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -77,16 +81,11 @@ orphans: unset;
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires                                                                                                                |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Fragmentation', '#widows-orphans', 'orphans')}} | {{Spec2('CSS3 Fragmentation')}} | La propriété `orphans` est étendue pour s'appliquer à n'importe quel fragment comme les pages, les régions ou les colonnes. |
-| {{SpecName('CSS2.1', 'page.html#break-inside', 'orphans')}}     | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.orphans")}}
+{{Compat}}
 
 ## Voir aussi
 

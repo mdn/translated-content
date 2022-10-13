@@ -2,6 +2,7 @@
 title: top
 slug: Web/CSS/top
 ---
+
 {{CSSRef}}
 
 **`top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の垂直位置の決定に関与します。位置指定されていない要素には効果はありません。

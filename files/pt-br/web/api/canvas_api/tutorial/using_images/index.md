@@ -10,8 +10,8 @@ Até agora nós criamos nossos próprios [shapes](/pt-BR/docs/Web/API/Canvas_API
 
 A importação de imagens para o canvas é basicamente um processo de duas etapas:
 
-1.  Obter uma referência a um objeto {{domxref("HTMLImageElement")}} ou a outro elemento do canvas como fonte. Também é possível usar imagens fornecendo uma URL.
-2.  Desenhar a imagem no canvas usando a função `drawImage()` .
+1. Obter uma referência a um objeto {{domxref("HTMLImageElement")}} ou a outro elemento do canvas como fonte. Também é possível usar imagens fornecendo uma URL.
+2. Desenhar a imagem no canvas usando a função `drawImage()` .
 
 Vamos dar uma olhada em como fazer isso.
 
@@ -75,7 +75,7 @@ If you're only using one external image this can be a good approach, but once yo
 
 ### Embedding an image via data: URL
 
-Another possible way to include images is via the [data: url](/pt-BR/docs/Web/HTTP/data_URIs "http://en.wikipedia.org/wiki/Data:_URL"). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: url](/pt-BR/docs/Web/HTTP/data_URIs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
 var img = new Image();   // Create new img element

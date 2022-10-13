@@ -5,7 +5,7 @@ translation_of: Web/API/Blob
 ---
 <div>{{APIRef("File API")}}</div>
 
-<p><font face="Open Sans, Arial, sans-serif">Объект </font><code>Blob</code> представляет из себя подобный файлу объект с неизменяемыми, необработанными данными; они могут читаться как текст или двоичные данные, либо могут быть преобразованы в {{DOMxRef("ReadableStream")}}, таким образом, его методы могут быть использованы для обработки данных.</p>
+<p>Объект <code>Blob</code> представляет из себя подобный файлу объект с неизменяемыми, необработанными данными; они могут читаться как текст или двоичные данные, либо могут быть преобразованы в {{DOMxRef("ReadableStream")}}, таким образом, его методы могут быть использованы для обработки данных.</p>
 
 <p>Blob-ы могут представлять данные, которые не обязательно должны быть в родном для JavaScript формате. Интерфейс {{domxref("File")}} основан на <code>Blob</code>, наследует функциональность <code>Blob</code> и расширяет его для поддержки файлов на стороне пользователя.</p>
 
@@ -117,7 +117,7 @@ var url = URL.createObjectURL(blob);
 
 <h3 id="Извлечение_данных_из_Blob">Извлечение данных из Blob</h3>
 
-<p>Один из способов прочесть содержимое <code>Blob</code> <span lang="EN-US" style='font-family: "Calibri",sans-serif; font-size: 11.0pt; line-height: 107%;'>–</span> это использовать {{domxref("FileReader")}}. Следующий код читает содержимое <code>Blob</code> как типизированный массив.</p>
+<p>Один из способов прочесть содержимое <code>Blob</code> – это использовать {{domxref("FileReader")}}. Следующий код читает содержимое <code>Blob</code> как типизированный массив.</p>
 
 <pre class="brush: js">var reader = new FileReader();
 reader.addEventListener("loadend", function() {
@@ -125,7 +125,7 @@ reader.addEventListener("loadend", function() {
 });
 reader.readAsArrayBuffer(blob);</pre>
 
-<p>Другой способ прочитать содержимое из <code>Blob</code> <span lang="EN-US" style='font-family: "Calibri",sans-serif; font-size: 11.0pt; line-height: 107%;'>–</span> это использовать {{domxref("Response")}}. Следующий код читает содержимое <code>Blob</code> как текст:</p>
+<p>Другой способ прочитать содержимое из <code>Blob</code> – это использовать {{domxref("Response")}}. Следующий код читает содержимое <code>Blob</code> как текст:</p>
 
 <pre class="brush: js">const text = await (new Response(blob)).text();
 </pre>

@@ -9,7 +9,7 @@ slug: Web/HTML/Element/abbr
 
 {{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
 
-这篇文章： _[How to mark abbreviations and make them understandable](/zh-CN/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable)_ 是一份学习使用 `<abbr>` 与其他相关元素的指南。
+这篇文章：_[How to mark abbreviations and make them understandable](/zh-CN/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable)_ 是一份学习使用 `<abbr>` 与其他相关元素的指南。
 
 <table class="properties">
  <tbody>
@@ -55,7 +55,7 @@ slug: Web/HTML/Element/abbr
 - 当你想为缩写在文档流外提供一段扩展或定义的时候，为 `<abbr>` 设置一个合适的{{htmlattrxref("title")}}。
 - 在定义一个读者可能不太熟悉的缩写时，使用 `<abbr>` 和`title`属性或内联的文本来表现这个术语。
 - 当文本中出现需要进行语义上的标注的缩写词时，`<abbr>`元素可用于依次将其作用样式和脚本。
-- 可以将 `<abbr>` 与 {{HTMLElement("dfn")}} 配合使用来建立缩写或首字母缩略词的定义。 请参阅下面的示例 [定义一个缩写](#定义一个缩写)。
+- 可以将 `<abbr>` 与 {{HTMLElement("dfn")}} 配合使用来建立缩写或首字母缩略词的定义。请参阅下面的示例 [定义一个缩写](#定义一个缩写)。
 
 ### 语法注意事项
 
@@ -66,7 +66,7 @@ slug: Web/HTML/Element/abbr
 虽然完全为了网站制作者的方便，所有的浏览器都默认把这个元素显示为行内元素 ({{cssxref('display')}}`: inline`) ，但是默认样式在不同浏览器中存在差别：
 
 - 一些浏览器，比如 IE，对它的添加的样式和{{HTMLElement("span")}} 元素的样式完全相同。
-- Opera、Firefox 和其他一些浏览器给这个元素的内容添加一条点状下划线 。
+- Opera、Firefox 和其他一些浏览器给这个元素的内容添加一条点状下划线。
 - 一些浏览器不仅添加点状下划线，而且还把元素的内容添加小写大写字母的样式。若要避免这种样式，在 CSS 中添加 {{cssxref('font-variant')}}`: none` 。
 
 ## 例子

@@ -21,7 +21,7 @@ To get started, you need:
   - Dedicated hardware can be costly, but it does provide a better experience. The most WebVR-compatible hardware at the moment is the HTC VIVE, and The Oculus Rift. The frontpage of [webvr.info](https://webvr.info/) has some further useful information about available hardware, and what browser support them.
 
 - A computer powerful enough to handle rendering/displaying of VR scenes using your dedicated VR Hardware, if required. To give you an idea of what you need, look at the relevant guide for the VR you are purchasing (e.g. [VIVE READY Computers](https://www.vive.com/us/ready/)).
-- A supporting browser installed — the latest [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) or [Chrome](https://www.google.com/chrome/index.html) are your best options right now, on desktop or mobile.
+- A supporting browser installed — the latest [Firefox Nightly](https://www.mozilla.org/pt-BR/firefox/channel/desktop/) or [Chrome](https://www.google.com/chrome/index.html) are your best options right now, on desktop or mobile.
 
 Once you have everything assembled, you can test to see whether your setup works with WebVR by going to our [simple A-Frame demo](https://mdn.github.io/webvr-tests/aframe-demo/), and seeing whether the scene renders and whether you can enter VR display mode by pressing the button at the bottom right.
 
@@ -54,10 +54,10 @@ At this point, let's look at how the WebVR parts of the code work.
 
 A typical (simple) WebVR app works like this:
 
-1.  {{domxref("Navigator.getVRDisplays()")}} is used to get a reference to your VR display.
-2.  {{domxref("VRDisplay.requestPresent()")}} is used to start presenting to the VR display.
-3.  WebVR's dedicated {{domxref("VRDisplay.requestAnimationFrame()")}} method is used to run the app's rendering loop at the correct refresh rate for the display.
-4.  Inside the rendering loop, you grab the data required to display the current frame ({{domxref("VRDisplay.getFrameData()")}}), draw the displayed scene twice — once for the view in each eye — then submit the rendered view to the display to show to the user via ({{domxref("VRDisplay.submitFrame()")}}).
+1. {{domxref("Navigator.getVRDisplays()")}} is used to get a reference to your VR display.
+2. {{domxref("VRDisplay.requestPresent()")}} is used to start presenting to the VR display.
+3. WebVR's dedicated {{domxref("VRDisplay.requestAnimationFrame()")}} method is used to run the app's rendering loop at the correct refresh rate for the display.
+4. Inside the rendering loop, you grab the data required to display the current frame ({{domxref("VRDisplay.getFrameData()")}}), draw the displayed scene twice — once for the view in each eye — then submit the rendered view to the display to show to the user via ({{domxref("VRDisplay.submitFrame()")}}).
 
 In the below sections we'll look at our raw-webgl-demo in detail, and see where exactly the above features are used.
 
@@ -158,7 +158,7 @@ Inside the promise `then()` block, we check whether the array length is more tha
 
 Now we have a {{domxref("VRDisplay")}} object, we can use it do a number of things. The next thing we want to do is wire up functionality to start and stop presentation of the WebGL content to the display.
 
-Continuing on with the previous code block, we now add an event listener to our start/stop button (`btn`) — when this button is clicked we want to check whether we are presenting to the display already (we do this in a fairly dumb fashion, by checking what the button [`textContent`](/en-US/docs/Web/API/Node/textContent) contains).
+Continuing on with the previous code block, we now add an event listener to our start/stop button (`btn`) — when this button is clicked we want to check whether we are presenting to the display already (we do this in a fairly dumb fashion, by checking what the button [`textContent`](/pt-BR/docs/Web/API/Node/textContent) contains).
 
 If the display is not already presenting, we use the {{domxref("VRDisplay.requestPresent()")}} method to request that the browser start presenting content to the display. This takes as a parameter an array of the {{domxref("VRLayerInit")}} objects representing the layers you want to present in the display.
 
@@ -416,7 +416,7 @@ function displayPoseStats(pose) {
   var angAcc = pose.angularAcceleration;
 ```
 
-We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), as the values are hard to read otherwise.
+We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using [`toFixed()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), as the values are hard to read otherwise.
 
 You should note that we've used a conditional expression to detect whether the linear acceleration and angular acceleration arrays are successfully returned before we display the data. These values are not reported by most VR hardware as yet, so the code would throw an error if we did not do this (the arrays return `null` if they are not successfully reported).
 

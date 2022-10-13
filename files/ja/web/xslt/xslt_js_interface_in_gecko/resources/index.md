@@ -2,6 +2,7 @@
 title: リソース
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 ---
+
 ## リソース
 
 - [Mozilla JavaScript インターフェイスを使用した XSL 変換](/ja/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)

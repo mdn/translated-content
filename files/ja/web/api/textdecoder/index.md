@@ -2,6 +2,7 @@
 title: TextDecoder
 slug: Web/API/TextDecoder
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextDecoder`** インターフェイスは特定のテキストエンコーディング、例えば `UTF-8`, `ISO-8859-2`, `KOI8-R`, `GBK`, 等のデコーダーを表します。デコーダーは入力としてバイトのストリームを取り、コードポイントのストリームを出力します。

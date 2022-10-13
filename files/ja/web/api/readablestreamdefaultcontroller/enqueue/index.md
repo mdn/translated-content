@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultController.enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultController")}} インターフェイスの **`enqueue()`** メソッドは、所与のチャンクを関連するストリームのキューに入れます。

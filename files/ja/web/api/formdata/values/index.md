@@ -7,7 +7,7 @@ slug: Web/API/FormData/values
 
 **`FormData.values()`** メソッドは {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれる全ての値を通過できるようにします。値は {{domxref("USVString")}} または {{domxref("Blob")}} オブジェクトです。
 
-> **Note:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
+> **メモ:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
 
 ## 構文
 

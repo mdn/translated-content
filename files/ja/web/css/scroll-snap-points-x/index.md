@@ -2,6 +2,7 @@
 title: scroll-snap-points-x
 slug: Web/CSS/scroll-snap-points-x
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`scroll-snap-points-x`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用先のスクロールコンテナーの内容物におけるスナップ点の水平位置を定義します。

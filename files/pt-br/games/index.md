@@ -18,7 +18,7 @@ Jogar é uma das atividades mais populares em computadores. Novas tecnologias ap
 
 Bem-vindas ao centro de desenvolvimento de jogos MDN! Nesta área da página oferecemos recursos para desenvolvedores web que querem dedicar-se a jogos. Você encontrará muitos tutoriais úteis e artigos técnicos no menu principal à sua esquerda - sinta-se livre para explorá-los.
 
-Também incluímos uma seção de referências para que você possa, facilmente, encontrar informações sobre todas APIs mais usadas no desenvolvimento de jogos, acompanhadas de uma lista de [ferramentas e engines](/pt-BR/docs/Games/Tools) úteis e,[ exemplos de jogos](/pt-BR/docs/Games/Examples).
+Também incluímos uma seção de referências para que você possa, facilmente, encontrar informações sobre todas APIs mais usadas no desenvolvimento de jogos, acompanhadas de uma lista de [ferramentas e engines](/pt-BR/docs/Games/Tools) úteis e, [exemplos de jogos](/pt-BR/docs/Games/Examples).
 
 > **Nota:** Você já deve ter um conhecimento básico sobre as principais tecnologias web — tais como HTML, CSS e Javascript — antes de tentar criar jogos web. A [Área de aprendizado](/pt-BR/docs/Learn) é o melhor para você, se você for completamente principiante.
 

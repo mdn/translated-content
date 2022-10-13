@@ -2,6 +2,7 @@
 title: ウェブアプリマニフェスト
 slug: Web/Manifest
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 **ウェブアプリマニフェスト**は、[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) と呼ばれる一連のウェブ技術の一部であり、アプリストアを通さずに端末のホーム画面にインストールすることができるものです。単純なホーム画面リンクやブックマークを持つ通常のウェブアプリとは異なり、 PWA は事前にダウンロードしてオフラインでも動作するだけでなく、通常の [Web API](/ja/docs/Web/API) を使用することもできます。

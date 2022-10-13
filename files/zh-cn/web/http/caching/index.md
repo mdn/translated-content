@@ -18,7 +18,7 @@ HTTP 缓存存储与请求关联的响应，并将存储的响应复用于后续
 
 ## 不同种类的缓存
 
-在 [HTTP Caching](https://httpwg.org/specs/rfc9111.html) 标准中, 有两种不同类型的缓存：**私有缓存**和**共享缓存**。
+在 [HTTP Caching](https://httpwg.org/specs/rfc9111.html) 标准中，有两种不同类型的缓存：**私有缓存**和**共享缓存**。
 
 ### 私有缓存
 
@@ -114,7 +114,7 @@ Cache-Control: max-age=604800
 …
 ```
 
-存储示例响应的缓存计算响应生成后经过的时间，并将结果用作响应的 _age_ 。
+存储示例响应的缓存计算响应生成后经过的时间，并将结果用作响应的 _age_。
 
 对于示例响应，`max-age` 的含义如下：
 
@@ -160,7 +160,7 @@ Expires: Tue, 28 Feb 2022 22:22:22 GMT
 
 但是响应的内容并不总是相同的，即使它们具有相同的 URL。特别是在执行内容协商时，来自服务器的响应可能取决于 `Accept`、`Accept-Language` 和 `Accept-Encoding` 请求标头的值。
 
-例如，对于带有 `Accept-Language: en` 标头并已缓存的英语内容，不希望再对具有 `Accept-Language: ja` 请求标头的请求重用该缓存响应。在这种情况下，您可以通过在 `Vary` 标头的值中添加 “`Accept-Language`”，根据语言单独缓存响应。
+例如，对于带有 `Accept-Language: en` 标头并已缓存的英语内容，不希望再对具有 `Accept-Language: ja` 请求标头的请求重用该缓存响应。在这种情况下，您可以通过在 `Vary` 标头的值中添加“`Accept-Language`”，根据语言单独缓存响应。
 
 ```http
 Vary: Accept-Language
@@ -170,13 +170,13 @@ Vary: Accept-Language
 
 ![keyed with url and language](keyed-with-url-and-language.png)
 
-此外，如果你基于用户代理提供内容优化（例如，响应式设计），你可能会想在 `Vary` 标头的值中包含 “`User-Agent`”。但是，`User-Agent` 请求标头通常具有非常多的变体，这大大降低了缓存被重用的机会。因此，如果可能，请考虑一种基于特征检测而不是基于 `User-Agent` 请求标头来改变行为的方法。
+此外，如果你基于用户代理提供内容优化（例如，响应式设计），你可能会想在 `Vary` 标头的值中包含“`User-Agent`”。但是，`User-Agent` 请求标头通常具有非常多的变体，这大大降低了缓存被重用的机会。因此，如果可能，请考虑一种基于特征检测而不是基于 `User-Agent` 请求标头来改变行为的方法。
 
 对于使用 cookie 来防止其他人重复使用缓存的个性化内容的应用程序，你应该指定 `Cache-Control: private` 而不是为 `Vary` 指定 cookie。
 
 ## 验证响应
 
-过时的响应不会立即被丢弃。 HTTP 有一种机制，可以通过询问源服务器将陈旧的响应转换为新的响应。这称为**验证**，有时也称为**重新验证**。
+过时的响应不会立即被丢弃。HTTP 有一种机制，可以通过询问源服务器将陈旧的响应转换为新的响应。这称为**验证**，有时也称为**重新验证**。
 
 验证是通过使用包含 `If-Modified-Since` 或 `If-None-Match` 请求标头的**条件请求**完成的。
 
@@ -217,7 +217,7 @@ Cache-Control: max-age=3600
 
 `ETag` 响应头的值是服务器生成的任意值。服务器对于生成值没有任何限制，因此服务器可以根据他们选择的任何方式自由设置值 - 例如正文内容的哈希或版本号。
 
-举个例子，如果 `ETag` 头使用了 hash 值，`index.html` 资源的hash值是 `deadbeef`，响应如下：
+举个例子，如果 `ETag` 头使用了 hash 值，`index.html` 资源的 hash 值是 `deadbeef`，响应如下：
 
 ```http
 HTTP/1.1 200 OK
@@ -400,7 +400,7 @@ Cache-Control: no-cache
 该行为也在 [Fetch](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch) 标准中定义，并且可以通过使用缓存模式设置为 `reload`（注意它不是`force-reload`）：
 
 ```js
-// 注意：“reload”——而不是 “no-cache”——是 “强制重新加载” 的正确模式
+// 注意：“reload”——而不是“no-cache”——是“强制重新加载”的正确模式
 fetch("/", { cache: "reload" });
 ```
 
@@ -484,7 +484,7 @@ Cache-Control: no-cache, private
 
 ### 缓存破坏
 
-最适合缓存的资源是静态不可变文件，其内容永远不会改变。而对于会变化的资源，通常的最佳实践是每次内容变化时都改变URL，这样URL单元可以被缓存更长的时间。
+最适合缓存的资源是静态不可变文件，其内容永远不会改变。而对于会变化的资源，通常的最佳实践是每次内容变化时都改变 URL，这样 URL 单元可以被缓存更长的时间。
 
 例如，考虑以下 HTML：
 
@@ -526,7 +526,7 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 </body>
 ```
 
-通过这种设计，JavaScript 和 CSS 资源都可以被缓存很长时间。那么 `max-age` 应该设置多长时间呢？ QPACK 规范提供了该问题的答案。
+通过这种设计，JavaScript 和 CSS 资源都可以被缓存很长时间。那么 `max-age` 应该设置多长时间呢？QPACK 规范提供了该问题的答案。
 
 [QPACK](https://datatracker.ietf.org/doc/html/rfc9204) 是一种用于压缩 HTTP 标头字段的标准，其中定义了常用字段值表。
 
@@ -543,17 +543,17 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 如果你选择其中一个编号选项，则可以在通过 HTTP3 传输时将值压缩为 1 个字节。
 
-数字 “37”、“38” 和 “41” 分别代表一周、一个月和一年。
+数字“37”、“38”和“41”分别代表一周、一个月和一年。
 
 因为缓存会在保存新条目时删除旧条目，所以一周后存储的响应仍然存在的可能性并不高——即使 `max-age` 设置为 1 周。因此，在实践中，你选择哪一种并没有太大的区别。
 
-请注意，数字 “41” 具有最长的 `max-age`（1 年），但具有 `public`。
+请注意，数字“41”具有最长的 `max-age`（1 年），但具有 `public`。
 
 `public` 值具有使响应可存储的效果，即使存在 `Authorization` 标头。
 
 > **备注：** 只有在设置了 `Authorization` 标头时需要存储响应时才应使用 `public` 指令。否则不需要，因为只要给出了 `max-age`，响应就会存储在共享缓存中。
 
-因此，如果响应是使用基本身份验证进行个性化的，`public` 的存在可能会导致问题。如果您对此感到担忧，您可以选择第二长的值 “38”（1 个月）。
+因此，如果响应是使用基本身份验证进行个性化的，`public` 的存在可能会导致问题。如果您对此感到担忧，您可以选择第二长的值“38”（1 个月）。
 
 ```http
 # response for bundle.v123.js
@@ -645,7 +645,7 @@ Set-Cookie: __Host-SID=AHNtAyt3fvJrUL5g5tnGwER; Secure; Path=/; HttpOnly
 
 ### 有关托管缓存的更多信息
 
-使用前面章节描述的方法，子资源可以通过缓存破坏来缓存很长时间，但主资源（通常是HTML文档）不能。
+使用前面章节描述的方法，子资源可以通过缓存破坏来缓存很长时间，但主资源（通常是 HTML 文档）不能。
 
 缓存主要资源很困难，因为仅使用 HTTP 缓存规范中的标准指令，在服务器上更新内容时无法主动删除缓存内容。
 

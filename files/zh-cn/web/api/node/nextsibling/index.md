@@ -67,4 +67,4 @@ The possible inclusion of text nodes in the DOM must be allowed for when travers
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.nextSibling")}}
+{{Compat}}

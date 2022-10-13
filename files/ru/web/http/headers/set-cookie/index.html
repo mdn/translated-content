@@ -4,7 +4,6 @@ slug: Web/HTTP/Headers/Set-Cookie
 translation_of: Web/HTTP/Headers/Set-Cookie
 original_slug: Web/HTTP/Заголовки/Set-Cookie
 ---
-<div>
 <p>{{HTTPSidebar}}</p>
 
 <p>HTTP заголовок <strong><code>Set-Cookie</code></strong> используется для отправки cookies с сервера на агент пользователя.</p>
@@ -84,30 +83,24 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  Cookie будут отправляться также на поддомены указанного хоста<br>
  Указывать несколько хостов недопустимо.</dd>
  <dt><code>Path=&lt;path-value&gt;</code> {{optional_inline}}</dt>
- <dd>Путь, который должен существовать в запрошенном URL, иначе браузер не отправит заголовок Cookie.</dd>
- <dd>Пример: <code>/</code> - cookie будет отправляться со всеми запросами<br>
- Пример: <code>/docs/</code> - cookie будет отправляться с запросами к директории docs и её поддиректориям</dd>
+ <dd><p>Путь, который должен существовать в запрошенном URL, иначе браузер не отправит заголовок Cookie.</p>
+ <p>Пример: <code>/</code> - cookie будет отправляться со всеми запросами<br>
+ Пример: <code>/docs/</code> - cookie будет отправляться с запросами к директории docs и её поддиректориям</p></dd>
  <dt><code>Secure</code> {{optional_inline}}</dt>
- <dd>Cookie будет отправлен на сервер только с запросами c использованием SSL и протокола HTTPS.<br>
- <br>
- Cookie не будет дополнительно шифроваться, поэтому в нем не стоит хранить конфиденциальную информацию.</dd>
- <dd>
+ <dd><p>Cookie будет отправлен на сервер только с запросами c использованием SSL и протокола HTTPS.</p>
+ <p>Cookie не будет дополнительно шифроваться, поэтому в нем не стоит хранить конфиденциальную информацию.</p>
  <p><strong>Note:</strong> небезопасные сайты (<code>http:</code>) не могут использовать cookie с атрибутом "secure" (начиная с Chrome 52+ и Firefox 52+).</p>
  </dd>
  <dt><code>HttpOnly</code> {{optional_inline}}</dt>
- <dd>Запрещает JavaScript доступ к cookie</dd>
- <dd>Полезно для защиты от XSS-атак.</dd>
+ <dd><p>Запрещает JavaScript доступ к cookie</p>
+ <p>Полезно для защиты от XSS-атак.</p></dd>
  <dt><code>SameSite=&lt;samesite-value&gt;</code> {{optional_inline}}</dt>
-</dl>
-
+<dd>
 <ul>
  <li><code>Strict</code>: The browser sends the cookie only for same-site requests (that is, requests originating from the same site that set the cookie). If the request originated from a different URL than the current one, no cookies with the <code>SameSite=Strict</code> attribute are sent.</li>
  <li><code>Lax</code>: The cookie is withheld on cross-site subrequests, such as calls to load images or frames, but is sent when a user navigates to the URL from an external site, such as by following a link</li>
  <li><code>None</code>: The browser sends the cookie with both cross-site and same-site requests</li>
 </ul>
-
-<dl>
- <dd>
  <p>Allows servers to assert that a cookie ought not to be sent along with cross-site requests, which provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).</p>
 
  <p>Современные браузеры используют <code>SameSite=Lax</code>. Если необходима работа <code>SameSite=</code><code>None</code> cookie должна быть установлена с атрибутом <code>Secure</code>.</p>
@@ -189,4 +182,3 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
  <li>{{HTTPHeader("Cookie")}}</li>
  <li>{{domxref("Document.cookie")}}</li>
 </ul>
-</div>

@@ -28,7 +28,7 @@ window.requestAnimationFrame(callback);
 
 ### 返回值
 
-一个 `long` 整数，请求 ID ，是回调列表中唯一的标识。是个非零值，没别的意义。你可以传这个值给 {{domxref("window.cancelAnimationFrame()")}} 以取消回调函数。
+一个 `long` 整数，请求 ID，是回调列表中唯一的标识。是个非零值，没别的意义。你可以传这个值给 {{domxref("window.cancelAnimationFrame()")}} 以取消回调函数。
 
 ## 范例
 

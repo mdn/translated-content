@@ -40,4 +40,4 @@ var buffer = gl.createFramebuffer();
 - {{domxref("WebGLRenderingContext.createFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-- 其他缓冲区: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- 其他缓冲区：{{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}

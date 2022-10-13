@@ -2,6 +2,7 @@
 title: CSS リスト
 slug: Web/CSS/CSS_Lists_and_Counters
 ---
+
 {{CSSRef}}
 
 **CSS リスト** (CSS List) は CSS モジュールの一つで、リストのレイアウトとスタイル付け方法を定義します。

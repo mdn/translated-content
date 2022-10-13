@@ -72,13 +72,11 @@ On accède alors à la propriété de l'instance `ResultObject` puis on appelle 
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------- |
-| {{SpecName('WebAssembly JS', '#the-webassembly-object', 'WebAssembly')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Voir aussi
 

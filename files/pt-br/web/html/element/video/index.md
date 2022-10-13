@@ -55,7 +55,7 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/en/HT
 
     Se não definido, seu valor padrão será definido pelo navegador (isto é, cada navegador pode escolher seu valor padrão), embora a especificação recomenda que seja definido para o metadata.
 
-    > **Note:** **Notas de uso:**- O atributo `autoplay` tem precedência sobre o `preload,`pois se é necessário executar o vídeo automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
+    > **Note:** **Notas de uso:**- O atributo `autoplay` tem precedência sobre o `preload`, pois se é necessário executar o vídeo automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
     >
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
 
@@ -129,5 +129,3 @@ Esse elemento implementa a interface [`HTMLVideoElement`](/en/DOM/HTMLVideoEleme
 - [TinyVid](http://tinyvid.tv/) - exemplos utilizando arquivos ogg em HTML5.
 - [The `video` element](http://www.whatwg.org/specs/web-apps/current-work/#video) (Especificação HTML 5)
 - [Configuring servers for Ogg media](/en/Configuring_servers_for_Ogg_media)
-
-{{ languages( { "fr": "fr/HTML/Element/video","es": "es/HTML/Elemento/video" } ) }}

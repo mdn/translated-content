@@ -22,13 +22,11 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:blank`** permet de séle
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#blank-pseudo", ":blank")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.blank")}}
+{{Compat}}
 
 ## Voir aussi
 

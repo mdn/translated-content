@@ -2,6 +2,7 @@
 title: WritableStreamDefaultWriter.desiredSize
 slug: Web/API/WritableStreamDefaultWriter/desiredSize
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`desiredSize`** 読み取り専用プロパティは、ストリームの内部キューを埋めるために必要な希望サイズを返します。

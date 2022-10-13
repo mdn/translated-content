@@ -2,6 +2,7 @@
 title: Screen.colorDepth
 slug: Web/API/Screen/colorDepth
 ---
+
 {{APIRef("CSSOM")}}
 
 **`Screen.colorDepth`** は読み取り専用プロパティで、画面の色震度を返します。 CSSOM により、互換性の理由から `24` を返す実装もあります。そうでないものについては、ブラウザーの互換性の節を参照してください。

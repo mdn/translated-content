@@ -40,7 +40,7 @@ key2, value2
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.entries")}}
+{{Compat}}
 
 ## 另请参阅
 

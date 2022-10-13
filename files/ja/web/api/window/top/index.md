@@ -2,6 +2,7 @@
 title: window.top
 slug: Web/API/Window/top
 ---
+
 {{APIRef}}
 
 ウィンドウ階層における最上位のウィンドウへの参照を返します。

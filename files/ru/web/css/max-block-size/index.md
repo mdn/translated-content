@@ -5,7 +5,7 @@ translation_of: Web/CSS/max-block-size
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-[CSS](/ru/docs/Web/CSS "CSS") свойство** `max-block-size`** определяет максимальный горизонтальный или вертикальный размер блока в зависимости от вида ориентации экрана. Это свойство соответствует либо {{cssxref("max-width")}}, либо {{cssxref("max-height")}}, в зависимости от значения определённого в {{cssxref("writing-mode")}}. Если последнее свойство вертикально ориентировано, значит значение свойства `max-block-size` относится к максимальной ширине блока, в противном случае относится к максимальной высоте блока. It relates to {{cssxref("max-inline-size")}}, which defines the other dimension of the element.
+[CSS](/ru/docs/Web/CSS) свойство **`max-block-size`** определяет максимальный горизонтальный или вертикальный размер блока в зависимости от вида ориентации экрана. Это свойство соответствует либо {{cssxref("max-width")}}, либо {{cssxref("max-height")}}, в зависимости от значения определённого в {{cssxref("writing-mode")}}. Если последнее свойство вертикально ориентировано, значит значение свойства `max-block-size` относится к максимальной ширине блока, в противном случае относится к максимальной высоте блока. It relates to {{cssxref("max-inline-size")}}, which defines the other dimension of the element.
 
 ```css
 /* <length> values */

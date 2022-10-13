@@ -42,7 +42,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 <h2 id="Разбор_SVG_или_HTML">Разбор SVG или HTML</h2>
 
-<p><code>DOMParser</code> так же может быть использован для разбора SVG документа {{geckoRelease("10.0")}} или HTML документа {{geckoRelease("12.0")}}. На выходе возможны 3 варианта, в зависимости от переданного MIME типа. Если MIME тип передан как <code>text/xml</code>, результирующий объект будет типа <code>XMLDocument</code>, если <code>image/svg+xml</code>, соответственно <code>SVGDocument,</code> а для MIME типа <code>text/html<font face="Open Sans, Arial, sans-serif"> - </font></code><code>HTMLDocument</code>.</p>
+<p><code>DOMParser</code> так же может быть использован для разбора SVG документа {{geckoRelease("10.0")}} или HTML документа {{geckoRelease("12.0")}}. На выходе возможны 3 варианта, в зависимости от переданного MIME типа. Если MIME тип передан как <code>text/xml</code>, результирующий объект будет типа <code>XMLDocument</code>, если <code>image/svg+xml</code>, соответственно <code>SVGDocument,</code> а для MIME типа <code>text/html - </code><code>HTMLDocument</code>.</p>
 
 <pre class="brush: js">var parser = new DOMParser();
 var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
@@ -76,7 +76,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 	var
 	  proto = DOMParser.prototype
-	, nativeParse = <span style="font-size: 1rem;">proto</span><span style="font-size: 1rem;">.parseFromString</span>
+	, nativeParse = proto.parseFromString
 	;
 
 	// Firefox/Opera/IE throw errors on unsupported types
@@ -88,7 +88,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 		}
 	} catch (ex) {}
 
-	<span style="font-size: 1rem;">proto</span><span style="font-size: 1rem;">.parseFromString = function(markup, type) {</span>
+	proto.parseFromString = function(markup, type) {
 		if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
 			var
 			  doc = document.implementation.createHTMLDocument("")
@@ -101,7 +101,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
       			}
 			return doc;
 		} else {
-			return <span style="font-size: 1rem;">nativeParse</span><span style="font-size: 1rem;">.apply(this, arguments);</span>
+			return nativeParse.apply(this, arguments);
 		}
 	};
 }(DOMParser));

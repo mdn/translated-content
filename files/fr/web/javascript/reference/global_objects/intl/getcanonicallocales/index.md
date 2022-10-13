@@ -44,13 +44,11 @@ Intl.getCanonicalLocales("EN_US");
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('ES Int Draft', '#sec-intl.getcanonicallocales', 'Intl.getCanonicalLocales')}} | {{Spec2('ES Int Draft')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.getCanonicalLocales")}}
+{{Compat}}
 
 ## Voir aussi
 

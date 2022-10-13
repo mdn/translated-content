@@ -2,6 +2,7 @@
 title: <footer>
 slug: Web/HTML/Element/footer
 ---
+
 {{HTMLRef}}
 
 **HTML の `<footer>` 要素**は、直近の[区分コンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_root)要素のフッターを表します。フッターには通常、そのセクションの著作者に関する情報、関連文書へのリンク、著作権情報等を含めます。
