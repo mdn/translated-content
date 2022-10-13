@@ -1,51 +1,51 @@
 ---
-title: Subtraction (-)
+title: 减法（-）
 slug: Web/JavaScript/Reference/Operators/Subtraction
 ---
 
 {{jsSidebar("Operators")}}
 
-The subtraction operator (`-`) subtracts the two operands, producing their difference.
+减法运算符（`-`）对两个操作数进行减法，产生它们的差值。
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
 
 ## 语法
 
-```plain
-Operator: x - y
+```js-nolint
+x - y
 ```
 
-## Examples
+## 示例
 
-### Subtraction with numbers
+### 减法与数值
 
 ```js
 5 - 3     // 2
 3 - 5     // -2
 ```
 
-### Subtraction with non-numbers
+### 减法与非数值
 
 ```js
 'foo' - 3 // NaN
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Addition operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Division operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
+- [除法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [乘法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [取余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [求幂运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [自增运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
+- [自减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [一元否运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [一元加运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)
