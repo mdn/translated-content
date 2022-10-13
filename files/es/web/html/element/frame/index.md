@@ -12,8 +12,11 @@ original_slug: Web/HTML/Elemento/frame
 
 - **frame** -_marcos_ . Define la organización de los marcos dentro de la ventana del usuario.
   - : **Sus etiquetas son**: `<frame>` (solo tiene una).
+  
     **Está definido como**: Elemento [para marcos](es/HTML/Elemento/Tipos_de_elementos#paramarcos).
+    
     **Crea una caja**: .
+    
     **Puede contener**: Nada.
 
 #### Atributos

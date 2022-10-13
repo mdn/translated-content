@@ -76,8 +76,9 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
     - center, significa que la tabla será mostrada al centro del documento;
     - right, significa que la tabla será mostrada a la derecha del documento.
 
-    > **Nota:**- **No usar este atributo**, ya que ha sido declarado obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). A fin de dar un efecto similar al atributo align, las propiedades {{cssxref("text-align")}} y {{cssxref("vertical-align")}} deben ser usadas.
+    > **Nota:**
     >
+    > - **No usar este atributo**, ya que ha sido declarado obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). A fin de dar un efecto similar al atributo align, las propiedades {{cssxref("text-align")}} y {{cssxref("vertical-align")}} deben ser usadas.
     > - Antes de la version 4 de Firefox, este ya soportaba sólo en el modo quirks (compatibilidad con navegadores antiguos) los valores `middle`, `absmiddle`, and `abscenter` como sinónimos de `center`_._
 
 <!---->
@@ -149,8 +150,9 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
     - columns, que mostrará las reglas entre columnas;
     - all, que mostrará las reglas entre filas y columnas.
 
-    > **Nota:** :- El estilo de las reglas depende del navegador usado y no puede ser modificado.
+    > **Nota:**
     >
+    > - El estilo de las reglas depende del navegador usado y no puede ser modificado.
     > - Nota de uso: No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Use la propiedad {{cssxref("border")}} en los elementos adecuados {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}} o {{HTMLElement("colgroup")}}.
 
 <!---->
@@ -159,8 +161,9 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
   - : Este atributo define un texto alternativo para describir una tabla en un usuario incapaz de mostrarlo, corrientemente contiene una descripcion de él que posibilita a discapacitaos visulaes (como invidentes navegando en pantallas braile) a obtener la información que necesitan.Si la información añadida en este atributo puede ser útil a otras personas, considere el utilizar el elemento {{HTMLElement("caption")}} en vez de este. instead. El atributo de resumen no es obligatorio usuarlo, pudiendo ser omitido si un elemento {{HTMLElement("caption")}} realiza similar labor.
 
-    > **Nota:** **Nota de uso:** No use este atributo, dado que ha sido declarado obsoleto. En su lugar, use alguna de estas formas de describir una tabla:- En prosa, rodeando la tabla (esta es la forma menos semántica de lograrlo).
+    > **Nota:** **Nota de uso:** No use este atributo, dado que ha sido declarado obsoleto. En su lugar, use alguna de estas formas de describir una tabla:
     >
+    > - En prosa, rodeando la tabla (esta es la forma menos semántica de lograrlo).
     > - En el elemento {{HTMLElement("caption")}} de la tabla.
     > - En un elemento {{HTMLElement("details")}}, dentro del elemento {{HTMLElement("caption")}} de la tabla.
     > - Incluye el elemento {{HTMLElement("table")}} en un elemento {{HTMLElement("figure")}} y añada la descripción en prosa al lado de él.
@@ -282,33 +285,20 @@ Este elemento implementa la interfaz [`HTMLTableElement`](/es/docs/DOM/HTMLTable
 </table>
 ```
 
-#### Resultado
+```css hidden
+* {
+  border-collapse: collapse;
+}
+table {
+  width: 100%;
+  margin-top: 1rem;
+}
+td, th {
+  border: 1px solid black;
+}
+```
 
-| John | Doe |
-| ---- | --- |
-| Jane | Doe |
-
-| First name | Last name |
-| ---------- | --------- |
-| John       | Doe       |
-| Jane       | Doe       |
-
-| Header content 1 | Header content 2 |
-| ---------------- | ---------------- |
-| Footer content 1 | Footer content 2 |
-| Body content 1   | Body content 2   |
-
-| Countries | Capitals        | Population  | Language |
-| --------- | --------------- | ----------- | -------- |
-| USA       | Washington D.C. | 309 million | English  |
-| Sweden    | Stockholm       | 9 million   | Swedish  |
-
-| Lime  | Lemon  | Orange |
-| ----- | ------ | ------ |
-| Green | Yellow | Orange |
-
-| Awesome data |
-| ------------ |
+{{EmbedLiveSample("",500,500)}}
 
 ### Compatibilidad de navegadores
 

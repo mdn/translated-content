@@ -73,7 +73,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
     El valor por defecto cuando no se especifica este atributo es `left`.
 
-    > **Nota:**No usar este atributo, ya que está obsoleto en el último estándar.
+    > **Nota:** No usar este atributo, ya que está obsoleto en el último estándar.
     >
     > - Para lograr el mismo efecto que con los valores `left`, `center`, `right `o `justify`, aplicar la propiedad CSS {{cssxref("text-align")}} al elemento.
     > - Para lograr el mismo efecto que con el valor `char`, dar a la propiedad {{cssxref("text-align")}} el mismo valor que usarías para {{htmlattrxref("char", "th")}}. {{unimplemented_inline}} in CSS3.
@@ -82,7 +82,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
   - : Este atributo contiene una lista de cadenas separadas por espacios. Cada cadena es el `id` de un grupo de celdas a las que se les aplica esta cabecera.
 
-    > **Nota:**Este atributo está obsoleto en el último estándar y no debe usarse. Puedes sustituirlo por {{htmlattrxref("scope", "th")}}.
+    > **Nota:** Este atributo está obsoleto en el último estándar y no debe usarse. Puedes sustituirlo por {{htmlattrxref("scope", "th")}}.
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
@@ -106,7 +106,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
   - : El contenido de la celda se alinea con un caracter en el elemento `<th>`. Los valores típicos incluyen un punto (.) para alinear números o valores monetarios. Si no se establece {{htmlattrxref("align", "th")}} como char, el atributo es ignorado.
 
-    > **Nota:**No usar este atributo, ya que no está soportado por el último estándar. Para lograr el mismo efecto, puedes especificar el caracter como el primer valor de la propiedad {{cssxref("text-align")}}, {{unimplemented_inline}} en CSS3.
+    > **Nota:** No usar este atributo, ya que no está soportado por el último estándar. Para lograr el mismo efecto, puedes especificar el caracter como el primer valor de la propiedad {{cssxref("text-align")}}, {{unimplemented_inline}} en CSS3.
 
 <!---->
 

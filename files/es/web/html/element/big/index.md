@@ -14,8 +14,11 @@ original_slug: Web/HTML/Elemento/big
 
 - Muestra el texto marcado con un tamaño de fuente más grande. El tamaño de la fuente puede definirse en una escala del 1 al 7, **big** aumenta este valor en un punto.
   - : **Sus etiquetas son**: `<big>` y `</big>` (Ambas obligatorias).
+  
     **Crea una caja**: En línea.
+    
     **Está definido como**: Elemento [de estilo de fuente](es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente) y por lo tanto [en línea](es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    
     **Puede contener**: Texto y/o cero o más elementos [en línea](es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
 
 #### Atributos
@@ -225,19 +228,15 @@ original_slug: Web/HTML/Elemento/big
 
 **big** puede contener otros elementos en línea, por ejemplo... **big**:
 
-```
-
-  <p>
-
-   Texto normal y texto <big> cada <big> vez <big> más <big> grande. </big></big></big></big>
-
-  </p>
-
+```html
+<p>
+  Texto normal y texto <big> cada <big> vez <big> más <big> grande. </big></big></big></big>
+</p>
 ```
 
 Se visualiza así:
 
-Texto normal y texto cada vez más grande.
+{{EmbedLiveSample}}
 
 ### Soporte
 

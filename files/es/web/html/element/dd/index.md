@@ -17,7 +17,7 @@ original_slug: Web/HTML/Elemento/dd
 ---
 {{HTMLRef}}
 
-El **elemento HTML `<dd>` **provee detalles acerca de o la definición de un término precedente ({{HTMLElement("dt")}}) en una lista de descripciones ({{HTMLElement("dl")}}).
+El **elemento HTML `<dd>`** provee detalles acerca de o la definición de un término precedente ({{HTMLElement("dt")}}) en una lista de descripciones ({{HTMLElement("dl")}}).
 
 {{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}
 

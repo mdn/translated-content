@@ -79,8 +79,9 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
   - : Este atributo, indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para salvarla como un archivo local. Si el atributo tiene un valor, éste se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace (sin embargo, el usuario puede cambiar el nombre antes de guardar el archivo). No hay restricciones sobre los valores permitidos, aunque: / y: \ se convertirán en guiones bajos (_underscores_), lo que evitará sugerencias de ruta específicas. Se debe tener en cuenta que la mayoría de los sistemas de archivos tienen limitaciones con respecto a los símbolos de puntuación admitidos en los nombres de archivo, por lo que los navegadores ajustarán los nombres de los archivos en consecuencia.
 
-    > **Nota:** **Notas:**- Este atributo sólo funciona para las [políticas de mismo origen (same-origin URLs)](/es/docs/Web/Security/Same-origin_policy).
+    > **Nota:** 
     >
+    > - Este atributo sólo funciona para las [políticas de mismo origen (same-origin URLs)](/es/docs/Web/Security/Same-origin_policy).
     > - Este atributo puede ser utilizado con [`blob:` URLs](/es/docs/Web/API/URL.createObjectURL) y [`data:` URLs](/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.
     > - Si el encabezado (_header_) HTTP [`Content-Disposition:`](/es/docs/Web/HTTP/Headers/Content-Disposition) proporciona un nombre de archivo diferente al de este atributo, el encabezado HTTP tiene prioridad sobre este atributo.
     > - Si `Content-Disposition:` está ajustado a `inline`, Firefox prioriza `Content-Disposition`, como en el caso del nombre de archivo, mientras que Chrome prioriza el atributo `download`.
@@ -120,8 +121,9 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("type")}}
   - : Especifica el tipo de medio (_media type_) en la forma de {{Glossary("MIME type")}} para la URL enlazada. Esto es únicamente informativo, sin ninguna funcionalidad incorporada.
-- ### Obsoleto
-  - : Empty
+
+### Atributos obsoletos
+
 - {{htmlattrdef("charset")}} {{obsoleteGeneric("inline","HTML5")}}
 
   - : Este atributo define la [codificación de caracteres (character encoding)](/es/docs/Glossary/character_encoding) de la URL enlazada. El valor debe de ser una lista delimitada por espacio y/o coma de caracteres definidos en [RFC 2045](https://tools.ietf.org/html/rfc2045). El valor por defecto es `ISO-8859-1`.
@@ -243,6 +245,8 @@ Se abusa frecuntemente de las etiquetas de ancla (_anchor tags_) con el uso de l
 
 Cuando se clicea sobre un {{HTMLElement("a")}} las consecuencias varían de acuerdo al navegador y el sistema operativo.
 
+¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
+
 | Navegadores de escritorio                                                                                                                             | Windows 8.1 | OS X 10.9                       |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------- |
 | Firefox 30.0                                                                                                                                          | Si          | Si                              |
@@ -250,6 +254,8 @@ Cuando se clicea sobre un {{HTMLElement("a")}} las consecuencias varían de acue
 | Safari 7.0.5                                                                                                                                          | N/A         | Sólo cuando tiene un `tabindex` |
 | Internet Explorer 11                                                                                                                                  | Si          | N/A                             |
 | Presto (Opera 12)                                                                                                                                     | Si          | Si                              |
+
+¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
 
 | Navegadores móviles | iOS 7.1.2                       | Android 4.4.4                   |
 | ------------------- | ------------------------------- | ------------------------------- |

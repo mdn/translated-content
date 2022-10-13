@@ -59,9 +59,7 @@ Este elemento implementa la interfaz `HTMLSelectElement.`
 </select>
 ```
 
-#### Resultado
-
-`Value 1Value 2Value 3`
+{{EmbedLiveSample}}
 
 ### Notas
 

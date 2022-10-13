@@ -12,8 +12,11 @@ original_slug: Web/HTML/Elemento/del
 
 - El elemento `del` (deleted-borrado) marca las partes de un texto o documento que han sido suprimidas o sustituidas.
   - : **Sus etiquetas son**: \<del> y \</del> (ambas obligatorias).
+  
     **Crea una caja**: a veces [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    
     **Está definido como**:
+    
     **Puede contener**: depende, si actua como un elemento en bloque puede contener elementos en bloque y en linea. Pero si actua como un elemento en linea solo podrá contener elementos en linea.
 
 #### Atributos
@@ -112,39 +115,27 @@ original_slug: Web/HTML/Elemento/del
 
 El siguiente código:
 
-```
- Ejemplo de ins en linea:
+```html
+Ejemplo de ins en linea:
+<p>
+  El agua es insípida <del>y húmeda.</del> <ins>inodora e incolora.</ins>
+</p>
 
-   <p>
-       El agua es insípida <del>y húmeda.</del> <ins>inodora e incolora.</ins>
-   </p>
+Ejemplo de ins en bloque:
+<p>
+  El agua es insípida.
+</p>
 
- Ejemplo de ins en bloque:
-
-   <p>
-       El agua es insípida.
-   </p>
-
- <del>
-   <p>
-       y húmeda.
-   </p>
- </del>
+<del>
+  <p>
+    y húmeda.
+  </p>
+</del>
 ```
 
 Se visualiza así:
 
-Ejemplo de ins en linea:
-
-El agua es insípida
-
-~~y húmeda.~~ inodora e incolora.
-
-Ejemplo de ins en bloque:
-
-El agua es insípida.
-
-~~y húmeda.~~
+{{EmbedLiveSample}}
 
 ### Comentarios
 

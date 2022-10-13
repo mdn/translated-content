@@ -6,7 +6,7 @@ original_slug: Web/HTML/Elemento/label
 ---
 ## Resumen
 
-El\_ \_**Elemento** **HTML** **`<label> `**representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo for, o ubicando el control dentro del elemento label. Tal control es llamado "el control etiquetado" del elemento label.
+El **Elemento HTML `<label> `** representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo for, o ubicando el control dentro del elemento label. Tal control es llamado "el control etiquetado" del elemento label.
 
 - _[Categorias](/es/docs/Web/HTML/Content_categories)_ [Contenido de flujo](/es/docs/Web/HTML/Content_categories#Flow_content), [contenido de fraseo](/es/docs/Web/HTML/Content_categories#Phrasing_content), [contenido interactivo](/es/docs/Web/HTML/Content_categories#Interactive_content), [elemento de formulario asociado](/es/docs/Web/HTML/Content_categories#Form-associated_content), contenido palpable.
 - _Contenido permitido_ [Contenido de fraseo](/es/docs/Web/HTML/Content_categories#Phrasing_content), pero no otros componentes `label` ni otros elementos etiquetables a parte del de control ya etiquetado.
@@ -40,9 +40,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 <label>Click me <input type="text" id="Name" name="Name" /></label>
 ```
 
-### Resultado
-
-Click me
+{{EmbedLiveSample}}
 
 ## Especificaciones
 

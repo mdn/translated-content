@@ -12,8 +12,11 @@ original_slug: Web/HTML/Elemento/ins
 
 - El elemento `ins` (insertado) marca las partes de un texto que han sido añadidos al documento.
   - : **Sus etiquetas son**: \<ins> e \</ins> (ambas obligatorias).
+  
     **Crea una caja**: a veces [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    
     **Está definido como**:
+    
     **Puede contener**: depende, si actua como un elemento en bloque puede contener elementos en bloque. Pero si actua como un elemento en linea solo podrá contener elementos en linea.
 
 #### Atributos
@@ -112,7 +115,7 @@ original_slug: Web/HTML/Elemento/ins
 
 El siguiente código:
 
-```
+```html
  Ejemplo de ins en linea:
    <p> El agua es insipida, <ins>inodora e incolora.</ins> </p>
 
@@ -123,14 +126,6 @@ El siguiente código:
 
 Se visualiza así:
 
-Ejemplo de ins en linea:
-
-El agua es insipida, inodora e incolora.
-
-Ejemplo de ins en bloque:
-
-El agua es insipida.
-
-y además inodora e incolora.
+{{EmbedLiveSample}}
 
 ### Comentarios

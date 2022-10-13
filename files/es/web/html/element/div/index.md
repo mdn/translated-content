@@ -12,8 +12,11 @@ original_slug: Web/HTML/Elemento/div
 
 - **div** de "division" -_división_ . Sirve para crear secciones o agrupar contenidos.
   - : **Sus etiquetas son**: `<div>` y `</div>` (ambas obligatorias).
+  
     **Está definido como**: [Elemento en bloque](/es/docs/Web/HTML/Block-level_elements).
+    
     **Crea una caja**: En bloque.
+    
     **Puede contener**: Texto, y/o cero o más elementos [en bloque](es/HTML/Elemento/Tipos_de_elementos#enbloque) o [en linea](es/HTML/Elemento/Tipos_de_elementos#enlinea).
 
 #### Atributos
@@ -227,7 +230,7 @@ original_slug: Web/HTML/Elemento/div
 
 código:
 
-```
+```html
 <div style="color: blue;">
  <h2> Ejemplo de div y span </h2>
   <p>
@@ -237,7 +240,9 @@ código:
 </div>
 ```
 
-el wiki causa interferencias Resultado: \<div style='border: solid silver 1px;'> \<div style="color: blue;"> \<h2> Ejemplo de div y span \</h2> \<p> Esto es un párrafo dentro de un div, \<span style="color: red;"> y esto un span dentro de un párrafo.\</span> \</p> \</div> \</div>
+Resultado: 
+
+{{EmbedLiveSample}}
 
 ### Estilo predeterminado
 

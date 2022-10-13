@@ -15,7 +15,7 @@ original_slug: Web/HTML/Elemento/content
 
 El elemento [HTML](/es/docs/Web/HTML) `<content> es usado dentro de un `[Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) como un {{glossary("insertion point")}} . No está pensado para ser usado en HTML ordinario . Es usado con [Web Components](/es/docs/Web/Web_Components).
 
-> **Nota:**Aunque está presente en un draft inicial de las especificaciones e implementado en varios exploradores , este elemento ha sido removido en versiones posteriores a la especificación .
+> **Nota:** Aunque está presente en un draft inicial de las especificaciones e implementado en varios exploradores , este elemento ha sido removido en versiones posteriores a la especificación .
 
 <table class="properties">
   <tbody>
@@ -59,7 +59,7 @@ Este elemento incluye los [atributos globales ](/es/docs/Web/HTML/Global_attribu
 
 Aquí hay un ejemplo simple del uso del elemento \<content> . Es un archivo HTML con todo lo necesario en el .
 
-> **Nota:**Para que este código funcione , el explorador en el que se muestre debe de soportar Web Components . Ver [Enabling Web Components in Firefox](/es/docs/Web/Web_Components#enabling_web_components_in_firefox) .
+> **Nota:** Para que este código funcione , el explorador en el que se muestre debe de soportar Web Components . Ver [Enabling Web Components in Firefox](/es/docs/Web/Web_Components#enabling_web_components_in_firefox) .
 
 ```html
 <html>

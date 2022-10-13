@@ -11,7 +11,7 @@ original_slug: Web/HTML/Elemento/figcaption
 ---
 {{HTMLRef}}
 
-El elemento **HTML `<figcaption>` **representa un subtítulo o leyenda asociado al contenido del elemento padre {{HTMLElement("figure")}}, pudiendo ser colocado como primer o último hijo. Es importante destacar que el elemento **`<figcaption>`** es opcional.
+El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado al contenido del elemento padre {{HTMLElement("figure")}}, pudiendo ser colocado como primer o último hijo. Es importante destacar que el elemento **`<figcaption>`** es opcional.
 
 {{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 

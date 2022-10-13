@@ -6,7 +6,7 @@ original_slug: Web/HTML/Elemento/progress
 ---
 {{HTMLRef}}
 
-La etiqueta **HTML\_ \_`<progress>`** se utiliza para visualizar el progreso de una tarea. Aunque los detalles de como se muestran depende directamente del navegador que utiliza el cliente, aunque básicamente aparece una barra de progreso.
+La etiqueta **HTML `<progress>`** se utiliza para visualizar el progreso de una tarea. Aunque los detalles de como se muestran depende directamente del navegador que utiliza el cliente, aunque básicamente aparece una barra de progreso.
 
 {{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
 

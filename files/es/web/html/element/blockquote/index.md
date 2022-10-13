@@ -12,9 +12,13 @@ original_slug: Web/HTML/Elemento/blockquote
 
 - **blockquote** -_cita en bloque_ . Crea citas en bloque, marca las citas a otros autores o documentos.
   - : **Sus etiquetas son**: `<blockquote>` y `</blockquote>` (ambas obligatorias).
+  
     **Está definido como**: Elemento [en bloque](es/HTML/Elemento/Tipos_de_elementos#enbloque).
+    
     **Crea una caja**: En bloque.
+    
     **Puede y debe contener**: Uno o más elementos [en bloque](es/HTML/Elemento/Tipos_de_elementos#enbloque) o [script](es/HTML/Elemento/script)
+    
     Con un doctype transicional **Puede contener**: texto, y/o cero o más elementos [en bloque](es/HTML/Elemento/Tipos_de_elementos#enbloque) o [en línea](es/HTML/Elemento/Tipos_de_elementos#enlinea)
 
 #### Atributos

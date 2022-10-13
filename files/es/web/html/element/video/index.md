@@ -50,10 +50,10 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 
     Si no está configurado, su valor predeterminado está definido por el navegador (es decir, cada navegador puede elegir su propio valor predeterminado), aunque la especificación aconseje que se establezca a metadata.
 
-    **Notas de uso:**
-
-    - El atributo **autoplay** tiene prioridad sobre éste si se desea reproducir automáticamente un video, el navegador obviamente tendrá que descargarlo. La especificación permite establecer los atributos **autoplay** y **preload**.
-    - La especificación no fuerza al navegador a seguir el valor de este atributo; es tan sólo una sugerencia.
+    > **Nota:**
+    >
+    > - El atributo **autoplay** tiene prioridad sobre éste si se desea reproducir automáticamente un video, el navegador obviamente tendrá que descargarlo. La especificación permite establecer los atributos **autoplay** y **preload**.
+    > - La especificación no fuerza al navegador a seguir el valor de este atributo; es tan sólo una sugerencia.
 
 - {{ htmlattrdef("poster") }} {{ gecko_minversion_inline("1.9.2") }}
   - : Una URL que indica un marco de póster para mostrar el resultado hasta que el usuario reproduzca o busque. Si este atributo no se especifica, no se muestra nada hasta que el primer cuadro está disponible, entonces se muestra el primer marco como el marco de póster.

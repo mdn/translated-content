@@ -12,8 +12,11 @@ original_slug: Web/HTML/Elemento/caption
 
 - Es el encargado de darle un título descriptivo a las tablas.
   - : **Sus etiquetas son**: `<caption>` y `</caption>` (ambas obligatorias).
+  
     **Crea una caja**: .
+    
     **Está definido como**: Elemento [para tablas](es/HTML/Elemento/Tipos_de_elementos#para_tablas).
+    
     **Puede contener**: Texto y/o cero o más elementos [en línea](es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
 
 #### Atributos
@@ -220,19 +223,22 @@ original_slug: Web/HTML/Elemento/caption
 
 El siguiente código:
 
+```html
+<table border='1'>
+  <caption>Tabla con caption</caption>
+  <tr> <td> tabla de una celda. </td>  </tr>
+</table>
 ```
 
-  <table border='1'>
-   <caption>Tabla con caption</caption>
-    <tr> <td> tabla de una celda. </td>  </tr>
-  </table>
-
+```css hidden
+table {
+  width: 100%;
+}
 ```
 
 Se visualiza así:
 
-| tabla de una celda. |
-| ------------------- |
+{{EmbedLiveSample}}
 
 ### Estilo predeterminado
 

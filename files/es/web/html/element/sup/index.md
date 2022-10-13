@@ -102,17 +102,11 @@ Este elemento sólo incluye los [atributos globales](/es/docs/HTML/Global_attrib
 <p>Este texto es <sup>superíndice</sup></p>
 ```
 
-#### Resultado
-
-Este texto es superíndice
-
 ```html
 <p>Notas al pie<sup>1</sup></p>
 ```
 
-#### Resultado
-
-Notas al pie1
+{{EmbedLiveSample}}
 
 ## Especificaciones
 

@@ -151,8 +151,9 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
     - `allow-top-navigation`: Lets the resource navigate the top-level browsing context (the one named `_top`).
     - `allow-top-navigation-by-user-activation`: Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
 
-    > **Nota:** **Notes about sandboxing:**- When the embedded document has the same origin as the embedding page, it is **strongly discouraged** to use both `allow-scripts` and `allow-same-origin`, as that lets the embedded document remove the `sandbox` attribute — making it no more secure than not using the `sandbox` attribute at all.
+    > **Nota:**
     >
+    > - When the embedded document has the same origin as the embedding page, it is **strongly discouraged** to use both `allow-scripts` and `allow-same-origin`, as that lets the embedded document remove the `sandbox` attribute — making it no more secure than not using the `sandbox` attribute at all.
     > - Sandboxing is useless if the attacker can display content outside a sandboxed `iframe` — such as if the viewer opens the frame in a new tab. Such content should be also served from a _separate origin_ to limit potential damage.
     > - The `sandbox` attribute is unsupported in Internet Explorer 9 and earlier.
 
@@ -225,7 +226,7 @@ Un `<iframe>` en acción. Después de crear el marco, cuando el usuario hace cli
 
 #### HTML
 
-```
+```html
 <iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" title="iframe Example 1" width="400" height="300">
   <p>Your browser does not support iframes.</p>
 </iframe>
@@ -241,7 +242,7 @@ En este ejemplo, se muestra un mapa de Google en un marco.
 
 #### HTML
 
-```
+```html
 <iframe id="Example2"
     title="iframe Example 2"
     width="400" height="300"

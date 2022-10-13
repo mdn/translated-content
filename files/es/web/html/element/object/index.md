@@ -13,7 +13,7 @@ original_slug: Web/HTML/Elemento/object
 ---
 {{HTMLRef}}
 
-El **elemento HTML `<object>` **representa un recurso externo, que puede ser tratado como una imagen, un contexto de navegación anidado, o como un recurso que debe ser manejado por un plugin.
+El **elemento HTML `<object>`** representa un recurso externo, que puede ser tratado como una imagen, un contexto de navegación anidado, o como un recurso que debe ser manejado por un plugin.
 
 {{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
 

@@ -67,14 +67,12 @@ Este elemento incluye atributos globales.
 
 - {{htmlattrdef("align")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}} Use the {{cssxref('vertical-align')}} CSS property
   - : Alineamiento de la texto respecto al contexto que la rodea.
-
-<!---->
-
 - {{htmlattrdef("alt")}}
   - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](/es/docs/Web/HTML/Elemento/img$edit#Supported_image_formats) o si la imagen aún no se ha descargado.
-- > **Nota:**Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.
+  
+    > **Nota:** Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.
 
-  {{htmlattrdef("border")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("border")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
 
   - : Anchura del borde alrededor de la imagen.
 
@@ -88,9 +86,6 @@ Este elemento incluye atributos globales.
       - : Una petición cross-origin (i.e., with `Origin:` HTTP header) es realizada con credenciales (i.e., a cookie, a certificate, and HTTP Basic authentication is performed). Sí el servidor no emite credenciales al sitio de origen (a través del `Access-Control-Allow-Credentials:` HTTP header), la imagen será pintada y su uso restringido.
 
     Cuando no existe, el recurso es buscado sin petición CORS (i.e., `sin enviar el Origen:` HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado **anonymous**. Ver [atributos de configuración CORS](/es/docs/HTML/CORS_settings_attributes) para más información.
-
-<!---->
-
 - {{htmlattrdef("height")}}
   - : La altura de la imagen en píxeles CSS {{HTMLVersionInline(5)}} o píxeles o como porcentaje en {{HTMLVersionInline(4)}}.
 - {{htmlattrdef("hspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
@@ -99,7 +94,7 @@ Este elemento incluye atributos globales.
 
   - : Este atributo boleano indica que la imagen es parte del mapa del lado del servidor. Así que, se envían las coordenadas precisas de un clic.
 
-    > **Nota:**Este atributo está permitido solo si el elemento` <img>` es descendiente de un elemento {{htmlelement("a")}} con un atributo {{htmlattrxref("href","a")}} válido.
+    > **Nota:** Este atributo está permitido solo si el elemento` <img>` es descendiente de un elemento {{htmlelement("a")}} con un atributo {{htmlattrxref("href","a")}} válido.
 
 - {{htmlattrdef("longdesc")}}
   - : La URL como descripción de una imagen mostrada, complementa al texto de {{htmlattrdef("alt", "img")}}.
@@ -148,7 +143,7 @@ Este elemento incluye atributos globales.
 
   - : La URL parcial (empezando con '#') de un [mapa de imagea](/es/docs/HTML/Element/map) asociado a un elemento.
 
-    > **Nota:**No puedes usar este atributo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} o {{HTMLElement("button")}}.
+    > **Nota:** No puedes usar este atributo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} o {{HTMLElement("button")}}.
 
 - {{htmlattrdef("vspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
   - : El número de píxeles de espacio blanco insertado sobre y bajo la imagen.

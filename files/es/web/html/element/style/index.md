@@ -12,9 +12,13 @@ original_slug: Web/HTML/Elemento/style
 
 - **style** - estilo. Es el elemento encargado de indicar la información de estilo.
   - : **Sus etiquetas son**: `<style>` y `</style>` (ambas obligatorias).
+  
     **Está definido como**: Elemento [de cabecera](es/HTML/Elemento/Tipos_de_elementos#decabecera).
+    
     **Crea una caja**: No.
+    
     **Puede contener**: Declaraciones de estilo.
+    
     **Debe ser contenido por**: Elementos [head](es/HTML/Elemento/Tipos_de_elementos#head).
 
 #### Atributos

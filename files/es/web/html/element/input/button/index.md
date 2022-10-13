@@ -144,12 +144,12 @@ Este elemento puede tener cualquiera de los [atributos globales](/es/docs/HTML/G
     Si se especifica, este atributo anula el atributo {{htmlattrxref("method","form")}} del formulario dueño del elemento.
 
 - {{htmlattrdef("formnovalidate")}}
-  - : Debido a que el elemento de input es un botón de envío, el atributo **`formnovalidate `**especifica que el formulario no debe ser validado cuando sea enviado. Si este atributo es especificado, se anula el atributo {{htmlattrxref("novalidate","form")}} del formulario dueño del elemento. Este atributo es Booleano.
+  - : Debido a que el elemento de input es un botón de envío, el atributo **`formnovalidate `** especifica que el formulario no debe ser validado cuando sea enviado. Si este atributo es especificado, se anula el atributo {{htmlattrxref("novalidate","form")}} del formulario dueño del elemento. Este atributo es Booleano.
 - {{htmlattrdef("formtarget")}}
 
   - : Debido a que el elemento de input es un botón de envío, el atributo **`formtarget`** es un nombre o palabra clave que indica donde mostrar la respuesta recibida después de enviar el formulario. Este es un nombre de, o palabra clave para, un _contexto navegable_ (por ejemplo, pestaña, ventana, o inline frame). Si este atributo es especificado, se sobreescribirá el atributo {{htmlattrxref("target", "form")}} del formulario dueño del elemento. Las siguientes palabras claves tienen significados especiales:
 
-    - \_`self`: Carga la respuesta en el mismo contexto navegable\_ \_que el actual. Este valor es el predeterminado si el atributo no es especificado.
+    - `_self`: Carga la respuesta en el mismo contexto navegable que el actual. Este valor es el predeterminado si el atributo no es especificado.
     - `_blank`: Carga la respuesta en un nuevo contexto navegable sin nombre.
     - `_parent`: Carga la respuesta en el contexto navegable padre del actual. Si no hay padre, esta opción se comporta igual que `_self`.
     - `_top`: Carga la respuesta en el contexto navegable superior (es el contexto navegable que es un ancestro del actual y no tiene padre). Si no hay padre, esta opción se comporta igual que `_self`.

@@ -12,9 +12,13 @@ original_slug: Web/HTML/Elemento/font
 
 - **font** -_fuente_ . Indica el tamaño, color, o fuente del texto que contiene.
   - : **Sus etiquetas son**: \<font> y \</font> (ambas obligatorias).
-    **Está definido como**: Elemento [desaprobado](es/HTML/Elemento/Tipos_de_elementos#desaprobado).
-    En un doctype transicional está definido como un elemento [especial](es/HTML/Elemento/Tipos_de_elementos#especial) y por lo tanto [en línea](es/HTML/Elemento/Tipos_de_elementos#enlinea).
+
+    - **Está definido como**: Elemento [desaprobado](es/HTML/Elemento/Tipos_de_elementos#desaprobado).
+    
+      - : En un doctype transicional está definido como un elemento [especial](es/HTML/Elemento/Tipos_de_elementos#especial) y por lo tanto [en línea](es/HTML/Elemento/Tipos_de_elementos#enlinea).
+
     **Crea una caja**: En línea.
+
     **Puede contener**: Texto, y/o cero o más elementos [en línea ](es/HTML/Elemento/Tipos_de_elementos#enlinea).
 
 #### Atributos
@@ -227,7 +231,7 @@ original_slug: Web/HTML/Elemento/font
 
 código:
 
-```
+```html
 <p>
  Texto normal y ...
  <font size="5" color="#0000ff"> Texto distinto. </font>
@@ -236,7 +240,7 @@ código:
 
 Resultado:
 
-Texto normal y ... Texto distinto.
+{{EmbedLiveSample}}
 
 ### Estilo predeterminado
 

@@ -14,8 +14,11 @@ original_slug: Web/HTML/Elemento/var
 
 - Marca variables de programas y similares.
   - : **Sus etiquetas son**: \<var> y \</var> (ambas obligatorias)
+  
     **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    
     **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    
     **Puede contener**: cero o más elementos[en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 ##### Atributos Genéricos
@@ -24,7 +27,9 @@ original_slug: Web/HTML/Elemento/var
 - style (información de estilo en línea)
 
 **Identificadores**: id, class (identificadores a nivel de documento)
+
 **Idioma**: lang (información sobre el idioma), dir (dirección del texto)
+
 **Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
 
 ##### Atributos Específicos - No tiene.

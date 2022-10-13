@@ -39,29 +39,22 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
     Si este atributo no se define, se selecciona por defecto `left`
 
-    > **Nota:** No usar este atributo ya que esta obsoleto en la ultima version.- Para lograr el mismo efecto de los valores `left`, `center`, `right`, o `justify` , usa la propiedad CSS {{cssxref("text-align")}} en el.
+    > **Nota:** No usar este atributo ya que esta obsoleto en la ultima version.
     >
+    > - Para lograr el mismo efecto de los valores `left`, `center`, `right`, o `justify` , usa la propiedad CSS {{cssxref("text-align")}} en el.
     > - Para lograr el mismo efecto que el valor `char` , en CSS3,puedes usar el valor de la {{htmlattrxref("char", "td")}} como el valor de la propiedad {{cssxref("text-align")}} {{unimplemented_inline}}.
 
 <!---->
 
 - {{htmlattrdef("axis")}} {{obsolete_inline}} en {{HTMLVersionInline(5)}}
 
-  - :&#x20;
+  - : Este atributo contiene una lista de cadenas separadas por espacios . Cada cadena es el ID de un grupo de celdas a las que esta cabecera se aplica.
 
-    ```
-    Este atributo contiene una lista de cadenas separadas por espacios . Cada cadena es el ID de un grupo de celdas a las que esta cabecera se aplica.
-    ```
-
-    > **Nota:**No usar este atributo ya que esta obsoleto en la ultima version. En su lugar use el atributo {{htmlattrxref("scope", "td")}} .
+    > **Nota:** No usar este atributo ya que esta obsoleto en la ultima version. En su lugar use el atributo {{htmlattrxref("scope", "td")}} .
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
-  - :&#x20;
-
-    ```
-    Este atributo define el color de fondo de cada celda de la columna. Es uno de los códigos de 6 dígitos hexadecimales como se definen en sRGB , prefijado por un '# ' . Una de las cadenas de color predefinidos dieciséis se pueden utilizar :
-    ```
+  - : Este atributo define el color de fondo de cada celda de la columna. Es uno de los códigos de 6 dígitos hexadecimales como se definen en sRGB , prefijado por un '# ' . Una de las cadenas de color predefinidos dieciséis se pueden utilizar :
 
     |     | `Negro` = "#000000"   |     | Verde = "#008000"           |
     | --- | --------------------- | --- | --------------------------- |
@@ -97,11 +90,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 - {{htmlattrdef("colspan")}}
 
-  - :&#x20;
-
-    ```
-    Este atributo contiene un valor entero no negativo que indica por el número de columnas se extiende la célula. Su valor por defecto es 1 ; si su valor se establece en 0 , se extiende hasta el final de la { { HTMLElement ( " colgroup " ) } } , aunque implícitamente definido , que la célula pertenece. Los valores superiores a 1000 serán consideradas como incorrectas y se establecen en el valor predeterminado ( 1 ) .
-    ```
+  - :  Este atributo contiene un valor entero no negativo que indica por el número de columnas se extiende la célula. Su valor por defecto es 1 ; si su valor se establece en 0 , se extiende hasta el final de la { { HTMLElement ( " colgroup " ) } } , aunque implícitamente definido , que la célula pertenece. Los valores superiores a 1000 serán consideradas como incorrectas y se establecen en el valor predeterminado ( 1 ) .
 
     > **Nota:** **Nota: En** {{HTMLVersionInline(5)}} este atributo solo acepta valores mayores que 0 this attribute only accepts values greater than zero since it [must not be used to overlap cells](http://dev.w3.org/html5/spec/single-page.html#attr-tdth-colspan). Además, Firefox is the only browser to support the 0 value as defined in the {{HTMLVersionInline(4.01)}} specification.
 
@@ -123,7 +112,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     - `middle`, centra el texto de la celda
     - and `top`, pone el texto como cerca de la parte superior de la celda como es posible .
 
-    > **Nota:**Do not use this attribute as it is obsolete (and not supported) in the latest standard: instead set the CSS {{cssxref("vertical-align")}} property on it.
+    > **Nota:** Do not use this attribute as it is obsolete (and not supported) in the latest standard: instead set the CSS {{cssxref("vertical-align")}} property on it.
 
 - {{htmlattrdef("width")}} {{Deprecated_inline}} in {{HTMLVersionInline(4.01)}}
 

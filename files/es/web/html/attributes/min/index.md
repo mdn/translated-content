@@ -51,7 +51,7 @@ input:invalid {
 
 Luego define un {{HTMLElement("input")}} con un valor mínimo de 7.2, omitiendo el atributo `step`, en donde el valor predeterminado es 1.
 
-```
+```html
 <input id="myNumber" name="myNumber" type="number" min="7.2" value="8">
 ```
 

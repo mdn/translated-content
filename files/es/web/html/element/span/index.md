@@ -12,8 +12,11 @@ original_slug: Web/HTML/Elemento/span
 
 - **span** - _abarcar_. Es un contenedor en línea. Sirve para aplicar estilo al texto o agrupar elementos en línea.
   - : **Sus etiquetas son**: `<span>` y `</span>` (ambas obligatorias).
+  
     **Está definido como**: Elemento [especial](/es/HTML/Elemento/Tipos_de_elementos#especial), y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    
     **Crea una caja**: En línea.
+    
     **Puede contener**: Texto, y/o Elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
 
 #### Atributos
@@ -222,21 +225,17 @@ original_slug: Web/HTML/Elemento/span
 
 código:
 
-```
+```html
 <div style="border: 1px dotted blue;">
   <h4>Ejemplo de div y span </h4>
-   <p>
+  <p>
     Esto es un párrafo dentro de un div,
-     <span style="color: red;"> y esto un span dentro de un párrafo. </span>
-   </p>
- </div>
+    <span style="color: red;"> y esto un span dentro de un párrafo. </span>
+  </p>
+</div>
 ```
 
-Resultado:
-
-##### Ejemplo de div y span
-
-Esto es un párrafo dentro de un div, y esto un span dentro de un párrafo.
+{{EmbedLiveSample}}
 
 ### Estilo predeterminado
 

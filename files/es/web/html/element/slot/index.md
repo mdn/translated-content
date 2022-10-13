@@ -14,7 +14,7 @@ original_slug: Web/HTML/Elemento/slot
 ---
 {{HTMLRef}}
 
-**El elemento HTML `<slot>` **—parte de la suite tecnologica [Web Components](/es/docs/Web/Web_Components) — es un placeholder en un componente que tu puedes llenar con tu propio marcado, que te permite crear árboles DOM por separado y presentarlos juntos.
+**El elemento HTML `<slot>`** —parte de la suite tecnologica [Web Components](/es/docs/Web/Web_Components) — es un placeholder en un componente que tu puedes llenar con tu propio marcado, que te permite crear árboles DOM por separado y presentarlos juntos.
 
 <table class="properties">
   <tbody>
@@ -83,7 +83,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("name")}}
   - : El nombre del slot.
-    _Un\*\* \*\*_**_slot nombrado_** es un elemento `<slot>` con el atributo `name`.
+  
+    Un **slot nombrado** es un elemento `<slot>` con el atributo `name`.
 
 ## Ejemplos
 

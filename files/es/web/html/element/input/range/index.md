@@ -20,6 +20,8 @@ original_slug: Web/HTML/Elemento/input/range
 
 El elemento {{HTMLElement("input")}} del tipo **`"range"`** permite que el usuario especifique un valor numérico comprendido entre un valor mínimo y máximo. El valor exacto, sin embargo, no se considera importante. Se repesenta típicamente como un "tirador" o un control deslizante en lugar de un campo de texto como otros tipos de {{HTMLElement("input")}}. Como este tipo de widget es bastante inmpreciso, no debe utilizarse normalmente a menos que el valor exacto del control no sea importante.
 
+### Ejemplo
+
 ```html
 <input type="range">
 ```
@@ -116,6 +118,8 @@ Por defecto, cada salto tiene valor 1, es decir el valor será siempre un númer
 ```
 
 {{EmbedLiveSample("Granularity_sample1", 600, 40)}}
+
+#### Valor `any`
 
 Si quieres aceptar cualquier valor independientemente de la cantidad de decimales, puede especificar un valor de `"any"` al atrtibuto {{htmlattrxref("step", "input")}}:
 
