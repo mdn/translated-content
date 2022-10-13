@@ -29,7 +29,7 @@ Math.acosh(x)
 
 ## 描述
 
-因为 `acosh()` 是 `Math` 的静态方法，所以你应该通过 `Math.acosh()` 调用，而不是作为你创建的 `Math` 对象的方法（`Math` 不是构造器）。
+因为 `acosh()` 是 `Math` 的静态方法，所以你应该通过 `Math.acosh()` 调用，而不是作为你创建的 `Math` 对象的方法（`Math` 不是构造函数）。
 
 ## 示例
 
