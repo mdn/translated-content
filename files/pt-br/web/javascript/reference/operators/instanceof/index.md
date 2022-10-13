@@ -15,9 +15,6 @@ objeto instanceof construtor
 
 - `objeto`
   - : O objeto a ser testado
-
-<!---->
-
 - `construtor`
   - : Função construtora a ser verificada
 
@@ -123,4 +120,4 @@ var b = mycar instanceof Object; // retorna true
 
 ## Veja também
 
-- [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+- [`typeof`](/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof)

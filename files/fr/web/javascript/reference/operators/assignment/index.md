@@ -40,15 +40,13 @@ x = y = z;
 // x, y et z sont égales à 25
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-assignment-operators', 'Assignment operators')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.assignment")}}
+{{Compat}}
 
 ## Voir aussi
 

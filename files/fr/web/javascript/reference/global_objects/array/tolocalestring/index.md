@@ -150,14 +150,11 @@ S'il faut absolument prendre en charge les moteurs JavaScript qui ne supportent 
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                             | Commentaires                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}         | {{Spec2('ESDraft')}}     | Définition initiale dans ECMAScript 3.                         |
-| {{SpecName('ES Int Draft', '#sup-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} | Cette définition remplace la définition fournit dans ECMA-262. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.toLocaleString")}}
+{{Compat}}
 
 ## Voir aussi
 

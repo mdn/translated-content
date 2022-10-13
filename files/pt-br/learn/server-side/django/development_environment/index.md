@@ -88,7 +88,7 @@ Este artigo mostra a instalação pelo Pypi, pois queremos a última versão est
 
 Django suporta (principalmente) quatro bancos de dados (PostgreSQL, MySQL, Oracle, e SQLite ), contudo, existem bibliotecas community que fornecem níveis variados de suporte para outros populares bancos de dados SQL e NoSQL. Nós recomendamos que você use o mesmo banco de dados tanto para produção quanto para desenvolvimento (embora o Django abstraia muitas das diferenças dos bancos de dados usando seu Object-Relational Mapper (ORM), ainda há [problemas em potencial](https://docs.djangoproject.com/en/2.1/ref/databases/) que é melhor evitar).
 
-Neste artigo (e na maior parte deste módulo) nós usaremos o banco de Dados _SQL\_\_ite_, que armazena dados em um arquivo. SQLite é destinado para uso sendo um banco de dados leve e que não consegue suportar uma demanda muito alta. Entretanto, uma excelente opção para aplicações de que focam em leitura de dados.
+Neste artigo (e na maior parte deste módulo) nós usaremos o banco de Dados _SQLite_, que armazena dados em um arquivo. SQLite é destinado para uso sendo um banco de dados leve e que não consegue suportar uma demanda muito alta. Entretanto, uma excelente opção para aplicações de que focam em leitura de dados.
 
 > **Nota:** Django é configurado por padrão a usar SQLite ao iniciar seu projeto usando as ferramentas padrão (django-admin). É uma ótima escolha quando você está começando, porque não requer configurações adicionais ou instalações.
 
@@ -138,12 +138,12 @@ python3 -V
 
 Você pode instalar Python 3 (com a ferramenta pip3) facilmente em [python.org](https://www.python.org/):
 
-1.  Baixe o instalador exigido:
+1. Baixe o instalador exigido:
 
-    1.  Acesse <https://www.python.org/downloads/>
-    2.  Selecione o botão **Download Python 3.7.1** (o número exato da versão menor pode diferir).
+    1. Acesse <https://www.python.org/downloads/>
+    2. Selecione o botão **Download Python 3.7.1** (o número exato da versão menor pode diferir).
 
-2.  Localize o arquivo usando _o Finder_, e clique duplo no arquivo do pacote. Siga os passos da instalação dos prompts.
+2. Localize o arquivo usando _o Finder_, e clique duplo no arquivo do pacote. Siga os passos da instalação dos prompts.
 
 Agora você pode confirmar se tudo deu certo checando o _Python 3_ como mostrado abaixo:
 
@@ -162,13 +162,13 @@ pip3 list
 
 Windows não inclui Python por padrão, mas você pode instalá-lo facilmente (com a ferramenta _pip3_) em [python.org](https://www.python.org/):
 
-1.  Baixe o instalador exigido:
+1. Baixe o instalador exigido:
 
-    1.  Acesse <https://www.python.org/downloads/>
-    2.  Selecione o botão **Download Python 3.7.1** (o número exato da versão menor pode diferir).
+    1. Acesse <https://www.python.org/downloads/>
+    2. Selecione o botão **Download Python 3.7.1** (o número exato da versão menor pode diferir).
 
-2.  Instale Python com um clique duplo no arquivo baixado e siga a instalação dos prompts.
-3.  Tenha certeza que a caixa "Add Python to PATH" está checada.
+2. Instale Python com um clique duplo no arquivo baixado e siga a instalação dos prompts.
+3. Tenha certeza que a caixa "Add Python to PATH" está checada.
 
 Você pode verificar se o Python 3 foi instalado colocando o seguinte texto no Prompt de Comando
 
@@ -211,7 +211,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **Nota:** As variáveis `VIRTUALENVWRAPPER_PYTHON` e `VIRTUALENVWRAPPER_VIRTUALENV_ARGS `apontam para a localização em uma instalação normal de Python 3, e `source /usr/local/bin/virtualenvwrapper.sh` aponta para a localização normal do script `virtualenvwrapper.sh` Se _virtualenv_ não funciona quando você testa, uma coisa a se verificar é se o Python e o script estão na localização esperada (e então alterar o arquivo de startup com os caminhos corretos).
+> **Nota:** As variáveis `VIRTUALENVWRAPPER_PYTHON` e `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` apontam para a localização em uma instalação normal de Python 3, e `source /usr/local/bin/virtualenvwrapper.sh` aponta para a localização normal do script `virtualenvwrapper.sh` Se _virtualenv_ não funciona quando você testa, uma coisa a se verificar é se o Python e o script estão na localização esperada (e então alterar o arquivo de startup com os caminhos corretos).
 >
 > Você pode encontrar a localização correta no seu sistema usando os comandos `which virtualenvwrapper.sh` e `which python3`.
 
@@ -236,7 +236,7 @@ Agora você pode criar um novo ambiente virtual com o comando `mkvirtualenv`.
 
 #### Instalação do ambiente virtual no macOS
 
-Instalar _virtualenvwrapper_ no macOS é quase a mesma coisa que instalar no Ubuntu (novamente, você pode seguir as instruções do [guia oficial de instalação ](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)ou as instruções abaixo).
+Instalar _virtualenvwrapper_ no macOS é quase a mesma coisa que instalar no Ubuntu (novamente, você pode seguir as instruções do [guia oficial de instalação](http://virtualenvwrapper.readthedocs.io/en/latest/install.html) ou as instruções abaixo).
 
 Instale _virtualenvwrapper_ (e _virtualenv_) usando _pip_ como abaixo.
 

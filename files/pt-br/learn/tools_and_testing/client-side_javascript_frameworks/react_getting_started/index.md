@@ -58,17 +58,17 @@ Enquanto React pode ser utilizado por [pequenos pedaços de interface](https://r
 
 Além disso, muitos dos beneficios da experiencias de desenvolvimento de uma aplicação React, tais como escrever interfaces com JSX, requerem um processo de compilação. Adicionar um compilador como o Babel em um website faz o código funcionar lentamente, então os desenvolvedores geralmente configuram algumas ferramentas para fazer compilações em etapas. React, sem duvídas, tem um grande ecossistema de ferramentas, mas isso pode ser aprendido.
 
-Este artigo será focado no caso de uso do React para renderizar toda a interface do usuario de um aplicativo, usando ferramentas fornecidas pelo prórpio [create-react-app](https://create-react-app.dev/) do Facebook.
+Este artigo será focado no caso de uso do React para renderizar toda a interface do usuario de um aplicativo, usando ferramentas fornecidas pelo próprio [create-react-app](https://create-react-app.dev/) do Facebook.
 
 ## Como React usa JavaScript?
 
-React utiliza características de JavaScript moderno para muitos de seus padrões. O maior desvio do React para o JavaScript dá-se pela utilização sintaxe[ JSX](https://reactjs.org/docs/introducing-jsx.html). O JSX estende a sintaxe padrão do JavaScript hablitando-o a utilizar código similar a HTML que pode viver lado a lado ao JSX. Por exemplo:
+React utiliza características de JavaScript moderno para muitos de seus padrões. O maior desvio do React para o JavaScript dá-se pela utilização sintaxe [JSX](https://reactjs.org/docs/introducing-jsx.html). O JSX estende a sintaxe padrão do JavaScript hablitando-o a utilizar código similar a HTML que pode viver lado a lado ao JSX. Por exemplo:
 
 ```js
 const heading = <h1> Mozilla Developer Network</h1>;
 ```
 
-A constante _heading_ acima é conhecida como uma **expressão JSX.** React pode utilizá-la para renderizar a _tag_ [`<h1> `](/en-US/docs/Web/HTML/Element/Heading_Elements)em nosso aplicativo.
+A constante _heading_ acima é conhecida como uma **expressão JSX.** React pode utilizá-la para renderizar a _tag_ [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) em nosso aplicativo.
 
 Suponha que quiséssemos conter nosso cabeçalho em uma tag [`<header>`](/en-US/docs/Web/HTML/Element/header), por razões semânticas? A aproximação em JSX permite-nos aninhar nossos elementos dentro uns dos outros, do mesmo jeito que fazemos com o HTML:
 
@@ -90,7 +90,7 @@ const header = (
 >
 > Entretanto, isso é meio estranho, porquê a tag [`<header>`](/en-US/docs/Web/HTML/Element/header) que inicia a expressão não está alinhada na mesma posição que sua tag de fechamento correspondente.
 
-Claro, seu navegador não é capaz de ler o JSX sem alguma ajuda. Quando compilado (utilizando uma ferramenta como [Babel](https://babeljs.io/) ou [Parcel ](https://parceljs.org/)), nossa expressão de cabeçalho ficaria assim:
+Claro, seu navegador não é capaz de ler o JSX sem alguma ajuda. Quando compilado (utilizando uma ferramenta como [Babel](https://babeljs.io/) ou [Parcel](https://parceljs.org/)), nossa expressão de cabeçalho ficaria assim:
 
 ```js
 const header = React.createElement("header", null,
@@ -98,7 +98,7 @@ const header = React.createElement("header", null,
 );
 ```
 
-É _possível_ pular o processo de compilação e utilizar [`React.createElement() `](https://reactjs.org/docs/react-api.html#createelement)para escrever sua UI você mesmo. Ao fazer isso, entretanto, você perde o benefício declarativo do JSX, e seu código torna-se mais difícil de ler. Compilação é um passo adicional no processo de desenvolvimento, porém muitos desenvolvedores na comunidade do React acham que a legibilidade do JSX vale a pena. Ainda mais, ferramentas populares fazem a parte de compilar JSX-para-JavaScript parte do próprio processo de configuração. Você não vai ter que configurar a compilação você mesmo, a não ser que você queira.
+É _possível_ pular o processo de compilação e utilizar [`React.createElement()`](https://reactjs.org/docs/react-api.html#createelement) para escrever sua UI você mesmo. Ao fazer isso, entretanto, você perde o benefício declarativo do JSX, e seu código torna-se mais difícil de ler. Compilação é um passo adicional no processo de desenvolvimento, porém muitos desenvolvedores na comunidade do React acham que a legibilidade do JSX vale a pena. Ainda mais, ferramentas populares fazem a parte de compilar JSX-para-JavaScript parte do próprio processo de configuração. Você não vai ter que configurar a compilação você mesmo, a não ser que você queira.
 
 Por conta do JSX ser uma mistura de HTML e JavaScript, muitos desenvolvedores acham o JSX intuitivo. Outros dizem que a natureza mista torna o mesmo mais confuso. Entretanto, assim que você estiver confortável com o JSX, este irá permitir que você construa interfaces de usuários mais rapidamente e intuitivamente, e permitirá que outros melhor entendam seu código com apenas algumas olhadas.
 
@@ -108,17 +108,17 @@ Para ler mais sobre o JSX, confira este artigo do time do React, [JSX In Depth](
 
 Existem muitos jeitos de utilizar o React, mas nós iremos utilizar a ferramenta de interface de linha de comando (CLI), _create-react-app_, como mencionado anteriormente, que acelera o processo de desenvolvimento da aplicação em React instalando alguns pacotes e criando alguns arquivos para você, lidando com os processos de automação mencionados acima.
 
-É possível [adicionar React á um website sem create-react-app](https://reactjs.org/docs/add-react-to-a-website.html) copiando alguns elementos [`<script> `](/en-US/docs/Web/HTML/Element/script)em um arquivo HTML, mas o a interface de linha de comando _create-react-app_ é um ponto de partida comum para aplicações em React. Utilizar-lo vai permitir que você passe mais tempo construindo seu aplicativo e menos tempo incomodando-se com configurações.
+É possível [adicionar React á um website sem create-react-app](https://reactjs.org/docs/add-react-to-a-website.html) copiando alguns elementos [`<script>`](/en-US/docs/Web/HTML/Element/script) em um arquivo HTML, mas o a interface de linha de comando _create-react-app_ é um ponto de partida comum para aplicações em React. Utilizar-lo vai permitir que você passe mais tempo construindo seu aplicativo e menos tempo incomodando-se com configurações.
 
 ### Requisitos
 
-Para começar a utilizar o _create-react-app,_ você precisa ter o [Node.js ](https://nodejs.org/en/)instalado. É recomendado que você utilize a versão com suporte de longa data (LTS). _Node_ inclui o _npm_ (o gerenciador de pacotes node), e o _npx_ (o executador de pacotes do node).
+Para começar a utilizar o _create-react-app,_ você precisa ter o [Node.js](https://nodejs.org/en/) instalado. É recomendado que você utilize a versão com suporte de longa data (LTS). _Node_ inclui o _npm_ (o gerenciador de pacotes node), e o _npx_ (o executador de pacotes do node).
 
-Você também pode utilizar o gerenciador de pacotes _Yarn_ como uma alternativa, mas nós iremos assumir que você está utilizando o _npm_ para esta série de tutoriais. Veja [Gerenciador de pacotes - básico ](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)para mais informações sobre o _npm_ ou o _Yarn_.
+Você também pode utilizar o gerenciador de pacotes _Yarn_ como uma alternativa, mas nós iremos assumir que você está utilizando o _npm_ para esta série de tutoriais. Veja [Gerenciador de pacotes - básico](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) para mais informações sobre o _npm_ ou o _Yarn_.
 
-Se você está utilizando o Windows, você vai precisar instalar alguns softwares adicionais para que você tenha as mesmas capacidades de um terminal Unix/macOS e utilizar os comandos de terminal que serão mencionados neste tutorial. **Gitbash** (que vem junto como parte do pacote de ferramentas [Git para o Windows ](https://gitforwindows.org/)) ou o [subsistema Windows para Linux ](https://docs.microsoft.com/en-us/windows/wsl/about)(**WSL**) ambos são adequados. Veja o [Curso intensivo - Linha de comando ](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)para mais informações sobre estes e sobre comandos de terminal no geral.
+Se você está utilizando o Windows, você vai precisar instalar alguns softwares adicionais para que você tenha as mesmas capacidades de um terminal Unix/macOS e utilizar os comandos de terminal que serão mencionados neste tutorial. **Gitbash** (que vem junto como parte do pacote de ferramentas [Git para o Windows](https://gitforwindows.org/)) ou o [subsistema Windows para Linux](https://docs.microsoft.com/en-us/windows/wsl/about) (**WSL**) ambos são adequados. Veja o [Curso intensivo - Linha de comando](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)para mais informações sobre estes e sobre comandos de terminal no geral.
 
-Mantenha em mente também que React e ReactDOM produzem aplicativos que funcionam apenas em navegadores consideravelmente modernos, IE9+ (Internet Explorer 9) com o auxílio de alguns _[polyfills](https://en.wikipedia.org/wiki/Polyfill_\(programming\)).\_ É recomendado que você utilize um navegador moderno com o Firefox, Safari, Chrome ou Edge enquanto estiver trabalhando nestes tutoriais.
+Mantenha em mente também que React e ReactDOM produzem aplicativos que funcionam apenas em navegadores consideravelmente modernos, IE9+ (Internet Explorer 9) com o auxílio de alguns _[polyfills](https://en.wikipedia.org/wiki/Polyfill_\(programming\))_. É recomendado que você utilize um navegador moderno com o Firefox, Safari, Chrome ou Edge enquanto estiver trabalhando nestes tutoriais.
 
 Veja também os seguintes artigos para mais informações:
 
@@ -149,7 +149,7 @@ Isto criará a pasta `moz-todo-react`, e também faz mais algumas coisas dentro 
 
 _create-react-app_ vai mostrar várias mensagens em seu terminal enquanto ele trabalha; isto é normal! Isso pode levar alguns minutos, agora pode ser uma boa hora para ir preparar uma xícara de chá.
 
-Quando o processo finalizar, dê um `cd` para dentro da pasta `moz-todo-react `e execute o comando `npm start`. Os scripts instalados pelo _create-react-app_ vão começar a serem servidos em um servidor local, no endereço _localhost:3000,_ e abrirão o aplicativo em uma nova aba em seu navegador. Seu navegador vai mostrar algo como isto:
+Quando o processo finalizar, dê um `cd` para dentro da pasta `moz-todo-react` e execute o comando `npm start`. Os scripts instalados pelo _create-react-app_ vão começar a serem servidos em um servidor local, no endereço _localhost:3000,_ e abrirão o aplicativo em uma nova aba em seu navegador. Seu navegador vai mostrar algo como isto:
 
 ![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](https://mdn.mozillademos.org/files/17203/default-create-react-app.png)
 
@@ -178,11 +178,11 @@ moz-todo-react
     └── serviceWorker.js
 ```
 
-A pasta `src `é onde nós iremos ficar a maior parte do nosso tempo, é onde o código fonte da nossa aplicação vive.
+A pasta `src` é onde nós iremos ficar a maior parte do nosso tempo, é onde o código fonte da nossa aplicação vive.
 
-A pasta `public `contém arquivos que serão lidos pelo navegador enquanto você desenvolve o aplicativo; o mais importante de todos estes arquivos é o `index.html`. O React irá injetar seu código neste arquivo para que seu navegador possa executá-lo. Existem outras marcações que ajudam o _create-react-app_ a funcionar, então cuidado para não editar estas, a não ser que você saiba o que você está fazendo. Você é encorajado a mudar o texto dentro do elemento [`<title> `](/en-US/docs/Web/HTML/Element/title)neste arquivo, esta mudança irá refletir no título de sua aplicação. Títulos de páginas precisos são importante para acessibilidade!
+A pasta `public` contém arquivos que serão lidos pelo navegador enquanto você desenvolve o aplicativo; o mais importante de todos estes arquivos é o `index.html`. O React irá injetar seu código neste arquivo para que seu navegador possa executá-lo. Existem outras marcações que ajudam o _create-react-app_ a funcionar, então cuidado para não editar estas, a não ser que você saiba o que você está fazendo. Você é encorajado a mudar o texto dentro do elemento [`<title>`](/en-US/docs/Web/HTML/Element/title) neste arquivo, esta mudança irá refletir no título de sua aplicação. Títulos de páginas precisos são importante para acessibilidade!
 
-A pasta `public `também será publicada quando você construir e lançar uma versão de produção de seu aplicativo. Nós não cobriremos _lançamento_ (deploy) de aplicações neste tutorial, entretanto você provavelmente conseguirá implementar uma solução similar para isso descrito em nosso tutorial [Lançando nosso app](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
+A pasta `public` também será publicada quando você construir e lançar uma versão de produção de seu aplicativo. Nós não cobriremos _lançamento_ (deploy) de aplicações neste tutorial, entretanto você provavelmente conseguirá implementar uma solução similar para isso descrito em nosso tutorial [Lançando nosso app](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
 
 O arquivo `package.json` contém informações sobre o nosso projeto, dentre as quais, o nome do projeto e os pacotes instalados. O Node.js/npm usa esse aquivo para manter tudo organizado. O arquivo `package.json` não é exclusivo para aplicações em React; o _create-react-app_ simplesmente encarrega-se de criá-lo. Você não precisa entender este arquivo para completar este tutorial, entretanto, se você estiver interessado em aprender mais sobre este, você pode ler [O que é o arquivo 'package.json'? no NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/); nós também falamos sobre ele no nosso tutorial [Básico sobre gerenciamento de pacotes.](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
 
@@ -271,7 +271,7 @@ function App() {
 
 A função `App` retrona uma expressão JSX. Essa expressão define o que, no fim, o seu navegador irá renderizar para o DOM.
 
-Alguns elementos na expressão têm atributos, que são escritos assim como no HTML, seguindo o seguinte padrão de `atributo="valor"`. Na linha 3, a tag [`<div> `](/en-US/docs/Web/HTML/Element/div)de abertaura tem o atributo _`className`_. Isso é o mesmo que o atributo [`class`](/pt-BR/docs/Web/HTML/Global_attributes/class)no HTML, porém por conta do JSX ser Javascript, nós não podemos utilizar a palavra `class` — esta é reservada, isso quer dizer que o JavaScript já utiliza-a para um propósito específico e causaria problemas no nosso código inseri-lá aqui. Alguns outros atributos de HTML são escritos diferentes em JSX em comparação com o HTML, pela mesma razão. Nós falaremos sobre estes quando encontrarmos os mesmos.
+Alguns elementos na expressão têm atributos, que são escritos assim como no HTML, seguindo o seguinte padrão de `atributo="valor"`. Na linha 3, a tag [`<div>`](/en-US/docs/Web/HTML/Element/div) de abertaura tem o atributo _`className`_. Isso é o mesmo que o atributo [`class`](/pt-BR/docs/Web/HTML/Global_attributes/class)no HTML, porém por conta do JSX ser Javascript, nós não podemos utilizar a palavra `class` — esta é reservada, isso quer dizer que o JavaScript já utiliza-a para um propósito específico e causaria problemas no nosso código inseri-lá aqui. Alguns outros atributos de HTML são escritos diferentes em JSX em comparação com o HTML, pela mesma razão. Nós falaremos sobre estes quando encontrarmos os mesmos.
 
 Tome um momento para mudar a _tag_ [`<p>`](/en-US/docs/Web/HTML/Element/p) na linha 6 para que esta diga "Hello, world!", e então salve o arquivo. Você irá notar que esta mudança é imediatamente refletida e renderiza no servidor de desenvolvimento executando em `http://localhost:3000` em seu navegador. Agora delete a _tag_ [`<a>`](/en-US/docs/Web/HTML/Element/a) e salve; o link _"Learn React"_ vai desaparecer.
 
@@ -403,7 +403,7 @@ Adicione a _prop_ `subject` na invocação do componente `<App/>`, com o valor d
 ReactDOM.render(<App subject="Clarice" />, document.getElementById('root'));
 ```
 
-De volta ao `App.js`, vamos revisitar a própria função App, que é lida da seuginte forma (com a declaração de `return `encurtada, a fim de ser breve.)
+De volta ao `App.js`, vamos revisitar a própria função App, que é lida da seuginte forma (com a declaração de `return` encurtada, a fim de ser breve.)
 
 ```js
 function App() {

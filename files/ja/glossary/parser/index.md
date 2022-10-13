@@ -12,4 +12,4 @@ slug: Glossary/Parser
 ### 一般知識
 
 - Wikipedia 上の [Parser](http://en.wikipedia.org/wiki/Parsing#Parser)（英語）
-- Wikipedia 上の {{Interwiki("wikipedia", "構文解析器")}}
+- Wikipedia 上の [構文解析器](https://ja.wikipedia.org/wiki/構文解析器)

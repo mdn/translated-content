@@ -73,13 +73,11 @@ console.log((new Intl.DisplayNames()).of('US'));
 
 ## Spécifications
 
-| Spécification                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Intl.DisplayNames', '#sec-intl-displaynames-constructor', 'the Intl.DisplayNames constructor')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DisplayNames.DisplayNames")}}
+{{Compat}}
 
 ## Voir aussi
 

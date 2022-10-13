@@ -221,7 +221,7 @@ bigmouth;
 
 1. 連接（Concatenate）是一個新潮的程式用語。在 JavaScript 中，使用加號（+）將字串連接；這也是我們做數字相加的方式。但在這個狀況下，它有不同的作用。讓我們在 console 中示範：
 
-2. ```js
+    ```js
     let one = 'Hello, ';
     let two = 'how are you?';
     let joined = one + two;
@@ -230,14 +230,14 @@ bigmouth;
 
     這邊的結果是 `joined` 這個變數中，有了 「Hello, how are you?」這個值。
 
-3. 在上一個範例中，我們只連接了兩個字串。但只要你在兩個字串之間加上 `+` ，那你要連接幾個都可以。試試看這個：
+2. 在上一個範例中，我們只連接了兩個字串。但只要你在兩個字串之間加上 `+` ，那你要連接幾個都可以。試試看這個：
 
     ```js
     let multiple = one + one + one + one + two;
     multiple;
     ```
 
-4. 你也可以結合變數和字串。試試看這個：
+3. 你也可以結合變數和字串。試試看這個：
 
     ```js
     let response = one + 'I am fine — ' + two;

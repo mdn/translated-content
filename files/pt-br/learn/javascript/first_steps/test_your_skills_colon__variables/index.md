@@ -61,8 +61,8 @@ Você pode praticar esses exemplos nos editores interativos acima.
 
 Se você gostaria que seu trabalho fosse avaliado, ou está travado e quer pedir ajuda:
 
-1.  Coloque seu trabalho em um editor compartilhável on-line, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/). Você pode escrever o código você mesmo ou usar os arquivos de ponto de partida vinculados nas seções acima.
-2.  Escreva um post pedindo avaliação e/ou ajuda na categoria [MDN Discourse forum Learning](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
+1. Coloque seu trabalho em um editor compartilhável on-line, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/). Você pode escrever o código você mesmo ou usar os arquivos de ponto de partida vinculados nas seções acima.
+2. Escreva um post pedindo avaliação e/ou ajuda na categoria [MDN Discourse forum Learning](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
 
     - Um título descritivo como "Avaliação desejada para o teste de habilidade Variáveis 1".
     - Detalhes do que você já tentou e o que gostaria que fizéssemos. Por exemplo, se você está travado e precisa de ajuda ou deseja uma avaliação.

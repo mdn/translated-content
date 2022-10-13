@@ -5,8 +5,6 @@ translation_of: Games/Anatomy
 ---
 {{GamesSidebar}}
 
-{{IncludeSubnav("/pt-BR/docs/Games")}}
-
 Este artigo analisa a anatomia e o fluxo de trabalho do vídeo game médio de um ponto de vista técnico, em termos de como o loop principal deve ser executado. Isso ajuda os iniciantes da arena do desenvolvimento de jogos modernos a entender o que é necessário ao construir um jogo e como os padrões da web como o JavaScript se prestam como ferramentas. Os programadores de jogos experientes que são novos no desenvolvimento da web também podem se beneficiar.
 
 ## Apresentar, aceitar, interpretar, calcular, repetir
@@ -27,7 +25,7 @@ JavaScript Moderno — como descrito nas próximas seções — felizmente, faci
 
 JavaScript trabalaha melhor com eventos e chamadas de funções. Navegadores modernos esforçam-se para chamar métodos à medida que são necessários e ociosos (ou fazem suas outras tarefas) nos intervalos. É uma excelente ideia ligar seu código aos momentos apropriados a eles. Pense se a sua função realmente precisa ser chamada em um estrito intervalo de tempo, a cada frame, ou somente após algo acontecer. Ser mais específico com o navegador sobre quando a sua função precisa ser chamada permite que o navegador otimize essa chamada. Também, isso facilitará o seu trabalho.
 
-Alguns códigos precisam ser rodados frame por frame, então por quê ligar essas funções a qualquer coisa que não seja a atualização de tela do navegador? Na web, `{{ domxref("window.requestAnimationFrame()") }} será a base da maioria dos mais bem programados loops principais do tipo frame por frame.` Uma chamada de função deve ser passada dentro da função anterior quando a mesma for chamada. Esta chamdada de função será executada em um tempo adequado antes da próxima atualização de tela. Eis um exemplo de um loop principal simples:
+Alguns códigos precisam ser rodados frame por frame, então por quê ligar essas funções a qualquer coisa que não seja a atualização de tela do navegador? Na web, {{ domxref("window.requestAnimationFrame()") }} será a base da maioria dos mais bem programados loops principais do tipo frame por frame. Uma chamada de função deve ser passada dentro da função anterior quando a mesma for chamada. Esta chamdada de função será executada em um tempo adequado antes da próxima atualização de tela. Eis um exemplo de um loop principal simples:
 
 ```
 window.main = function () {

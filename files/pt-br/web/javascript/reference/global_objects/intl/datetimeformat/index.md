@@ -11,7 +11,7 @@ O objeto Intl.DateTimeFormat é um constructor para objetos que habilita o forma
 
 ## Constructor
 
-- [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat)
+- [`Intl.DateTimeFormat()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat)
   - : Creates a new `DateTimeFormat` object.
 
 ## Static methods
@@ -166,4 +166,4 @@ console.log(usedOptions.timeZone);
 
 ## See also
 
-- [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`Intl`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl)

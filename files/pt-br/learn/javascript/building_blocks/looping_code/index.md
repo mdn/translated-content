@@ -186,14 +186,14 @@ for (inicializador; condição-saída; expressão-final) {
 
 Aqui nós temos:
 
-1.  A palavra-chave `for`, seguido por parênteses.
-2.  Dentro do parênteses temos três itens, separados por ponto e vírgula:
+1. A palavra-chave `for`, seguido por parênteses.
+2. Dentro do parênteses temos três itens, separados por ponto e vírgula:
 
-    1.  O **inicializador**— geralmente é uma variável configurada para um número, que é incrementado para contar o número de vezes que o loop foi executado. É também por vezes referido como uma **variável de contador**.
-    2.  A **condição-saída** — como mencionado anteriormente, aqui é definido quando o loop deve parar de executar. Geralmente, essa é uma expressão que apresenta um operador de comparação, um teste para verificar se a condição de saída foi atendida.
-    3.  A **expressão-final** — isso sempre é avaliado (ou executado) cada vez que o loop passou por uma iteração completa. Geralmente serve para incrementar (ou, em alguns casos, decrementar) a variável do contador, aproximando-a do valor da condição de saída.
+    1. O **inicializador**— geralmente é uma variável configurada para um número, que é incrementado para contar o número de vezes que o loop foi executado. É também por vezes referido como uma **variável de contador**.
+    2. A **condição-saída** — como mencionado anteriormente, aqui é definido quando o loop deve parar de executar. Geralmente, essa é uma expressão que apresenta um operador de comparação, um teste para verificar se a condição de saída foi atendida.
+    3. A **expressão-final** — isso sempre é avaliado (ou executado) cada vez que o loop passou por uma iteração completa. Geralmente serve para incrementar (ou, em alguns casos, decrementar) a variável do contador, aproximando-a do valor da condição de saída.
 
-3.  Algumas chaves contêm um bloco de código - esse código será executado toda vez que o loop for iterado.
+3. Algumas chaves contêm um bloco de código - esse código será executado toda vez que o loop for iterado.
 
 Vejamos um exemplo real para podermos visualizar o que isso faz com mais clareza.
 
@@ -245,19 +245,19 @@ Isso nos dá a seguinte saída:
 
 {{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}
 
-> **Nota:**Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) (também [veja em execução ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
+> **Nota:**Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
 
 Aqui mostra um loop sendo usado para iterar os itens em uma matriz e fazer algo com cada um deles - um padrão muito comum em JavaScript. Aqui:
 
-1.  O iterador, `i`, começa em `0` (`var i = 0`).
-2.  Foi dito para executar até que não seja menor que o comprimento do array dos gatos. Isso é importante - a condição de saída mostra a condição sob a qual o loop ainda será executado. No caso, enquanto `i < cats.length` for verdadeiro, o loop continuará executando.
-3.  Dentro do loop, nós concatenamos o item de loop atual (`cats[i]` é `cats[o nome do item que está iterado no momento]`) junto com uma vírgula e um espaço, no final da variável `info` . Assim:
+1. O iterador, `i`, começa em `0` (`var i = 0`).
+2. Foi dito para executar até que não seja menor que o comprimento do array dos gatos. Isso é importante - a condição de saída mostra a condição sob a qual o loop ainda será executado. No caso, enquanto `i < cats.length` for verdadeiro, o loop continuará executando.
+3. Dentro do loop, nós concatenamos o item de loop atual (`cats[i]` é `cats[o nome do item que está iterado no momento]`) junto com uma vírgula e um espaço, no final da variável `info` . Assim:
 
-    1.  Durante a primeira execução, `i = 0`, então `cats[0] + ', '` será concatenado na variável info ("Bill").
-    2.  Durante a segunda execução, `i = 1`, so `cats[1] + ', '` será concatenado na variável info ("Jeff, ")
-    3.  E assim por diante. Após cada execução do loop, 1 será adicionado à `i` (`i++`), então o processo será iniciado novamente.
+    1. Durante a primeira execução, `i = 0`, então `cats[0] + ', '` será concatenado na variável info ("Bill").
+    2. Durante a segunda execução, `i = 1`, so `cats[1] + ', '` será concatenado na variável info ("Jeff, ")
+    3. E assim por diante. Após cada execução do loop, 1 será adicionado à `i` (`i++`), então o processo será iniciado novamente.
 
-4.  Quando `i` torna-se igual a `cats.length`, o loop é interrompido e o navegador passará para o próximo trecho de código abaixo do loop.
+4. Quando `i` torna-se igual a `cats.length`, o loop é interrompido e o navegador passará para o próximo trecho de código abaixo do loop.
 
 > **Nota:** :Nós fizemos a condição de saída `i < cats.length`, e não `i <= cats.length`, porque os computadores contam a partir de 0, não 1 - estamos começando `i` em `0`, e indo até `i = 4` (o index do último item do array). `cats.length` retorna 5, pois há 5 itens no array, mas não queremos chegar até `i = 5`, pois isso retornaria `undefined` para o último item (não há nenhum item no índice 5 do array). Então, portanto, queremos ir até 1 a menos de `cats.length` (`i <`), não é o mesmo que `cats.length` (`i <=`).
 
@@ -279,7 +279,7 @@ for (var i = 0; i < cats.length; i++) {
 }
 ```
 
-> **Nota:**Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) (também [veja em execução ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
+> **Nota:**Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
 
 > **Aviso:** **Importante**: Com **for** - como acontece com todos os loops - você deve certificar-se de que o inicializador está iterado(configurado) para que ele atinja a condição de saída. Caso contrário, o loop continuará indefinidamente executando e o navegador irá forçá-lo a parar ou falhará. Isso é chamado de **loop infinito**.
 
@@ -369,16 +369,16 @@ btn.addEventListener('click', function() {
 
 {{ EmbedLiveSample('Hidden_code_3', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-1.  Primeiramente, temos algumas definições de variáveis — temos um array com as informações dos contatos, cada item é uma string e contém um nome e um número de telefone separados por dois pontos.
-2.  Em seguida, anexamos um ouvinte de evento ao botão (`btn`), de modo que quando ele é pressionado, algum código é invocado para executar a pesquisa e retornar os resultados.
-3.  Armazenamos o valor que foi inserido no input de texto em uma variável chamada `searchName`, antes de limpar a entrada de texto e focar novamente, deixando o campo pronto para a próxima pesquisa.
-4.  Agora, na parte interessante, o loop for:
+1. Primeiramente, temos algumas definições de variáveis — temos um array com as informações dos contatos, cada item é uma string e contém um nome e um número de telefone separados por dois pontos.
+2. Em seguida, anexamos um ouvinte de evento ao botão (`btn`), de modo que quando ele é pressionado, algum código é invocado para executar a pesquisa e retornar os resultados.
+3. Armazenamos o valor que foi inserido no input de texto em uma variável chamada `searchName`, antes de limpar a entrada de texto e focar novamente, deixando o campo pronto para a próxima pesquisa.
+4. Agora, na parte interessante, o loop for:
 
-    1.  Iniciamos o contador em `0`, executamos o loop até que o contador não seja menor que `contacts.length`, e incrementamos `i` com 1 depois e cada iteração do loop.
-    2.  Dentro do loop, primeiro dividimos o contato atual (`contacts[i]`) no caractere " : " e armazenamos os dois valores resultantes em uma matriz chamada `splitContact`.
-    3.  Em seguida, usamos uma instrução condicional para testar se o `splitContact[0]` (nome do contato) é igual ao `searchName`. Se for igual, inserimos uma string no parágrafo para mostrar em tela qual é o número do contato e usamos o `break` para encerrar o loop.
+    1. Iniciamos o contador em `0`, executamos o loop até que o contador não seja menor que `contacts.length`, e incrementamos `i` com 1 depois e cada iteração do loop.
+    2. Dentro do loop, primeiro dividimos o contato atual (`contacts[i]`) no caractere " : " e armazenamos os dois valores resultantes em uma matriz chamada `splitContact`.
+    3. Em seguida, usamos uma instrução condicional para testar se o `splitContact[0]` (nome do contato) é igual ao `searchName`. Se for igual, inserimos uma string no parágrafo para mostrar em tela qual é o número do contato e usamos o `break` para encerrar o loop.
 
-5.  Após `(contacts.length-1)` iterações, se o nome do contato não corresponder à pesquisa inserida, o texto do parágrafo será definido como "Contato não encontrado" e o loop continuará a iterar.
+5. Após `(contacts.length-1)` iterações, se o nome do contato não corresponder à pesquisa inserida, o texto do parágrafo será definido como "Contato não encontrado" e o loop continuará a iterar.
 
 > **Nota:** Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html) ).
 
@@ -449,10 +449,10 @@ Aqui está a saída:
 
 {{ EmbedLiveSample('Hidden_code_4', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-1.  Nesse caso, a entrada deve ser um número (`num`). O loop `for` recebe um contador começando em 1 (como não estamos interessados em 0 neste caso), uma condição de saída que diz que o loop irá parar quando o contador se tornar maior que o input `num`, e um iterador que adiciona 1 ao contador a cada vez.
-2.  Dentro do loop, encontramos a raiz quadrada de cada número usando [Math.sqrt(i)](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), e, em seguida, verificamos se a raiz quadrada é um inteiro, testando se é igual a ela mesma quando foi arredondada para o inteiro mais próximo é o que [Math.floor()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) faz com o número que é passado).
-3.  Se a raiz quadrada e a raiz quadrada arredondada não forem iguais (`! ==`), isso significa que a raiz quadrada não é um número inteiro, portanto, não estamos interessados nela. Nesse caso, usamos a instrução `continue` para pular para a próxima iteração de loop sem registrar o número em nenhum lugar.
-4.  Se a raiz quadrada é um inteiro, nós pulamos o bloco if inteiramente para que a instrução `continue` não seja executada; em vez disso, concatenamos o valor `i` atual mais um espaço até o final do conteúdo do parágrafo.
+1. Nesse caso, a entrada deve ser um número (`num`). O loop `for` recebe um contador começando em 1 (como não estamos interessados em 0 neste caso), uma condição de saída que diz que o loop irá parar quando o contador se tornar maior que o input `num`, e um iterador que adiciona 1 ao contador a cada vez.
+2. Dentro do loop, encontramos a raiz quadrada de cada número usando [Math.sqrt(i)](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), e, em seguida, verificamos se a raiz quadrada é um inteiro, testando se é igual a ela mesma quando foi arredondada para o inteiro mais próximo é o que [Math.floor()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) faz com o número que é passado).
+3. Se a raiz quadrada e a raiz quadrada arredondada não forem iguais (`! ==`), isso significa que a raiz quadrada não é um número inteiro, portanto, não estamos interessados nela. Nesse caso, usamos a instrução `continue` para pular para a próxima iteração de loop sem registrar o número em nenhum lugar.
+4. Se a raiz quadrada é um inteiro, nós pulamos o bloco if inteiramente para que a instrução `continue` não seja executada; em vez disso, concatenamos o valor `i` atual mais um espaço até o final do conteúdo do parágrafo.
 
 > **Nota:** Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html) ).
 
@@ -524,7 +524,7 @@ do {
 } while (i < cats.length);
 ```
 
-> **Nota:**Novamente, isso funciona exatamente como esperado - dê uma olhada nele [executando no GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (veja também o[ código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
+> **Nota:**Novamente, isso funciona exatamente como esperado - dê uma olhada nele [executando no GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (veja também o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
 
 > **Aviso:** **Importante:** Com while e do ... while - como em todos os loops - você deve certificar-se de que o inicializador esteja iterado para que ele atinja a condição de saída. Caso contrário, o loop continuará indefinidamente e o navegador irá forçá-lo a parar ou falhará. Isso é chamado de loop infinito.
 

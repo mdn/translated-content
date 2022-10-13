@@ -37,13 +37,11 @@ sab.byteLength; // 1024
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                       | Commentaires                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-sharedarraybuffer.prototype.bytelength', 'SharedArrayBuffer.prototype.byteLength')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.SharedArrayBuffer.byteLength")}}
+{{Compat}}
 
 ## Voir aussi
 

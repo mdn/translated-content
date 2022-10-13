@@ -596,21 +596,6 @@ Carriage returns added here and there for clarity.
 ```
 
 ```js
-// From ReleaseChannelInfo() template
-// Before:
-web.html("<p>Firefox " + $0 + ", based on Gecko " + $1 + ", will ship in " + $2 + ". This article provides information about the changes in this release that will affect developers. Nightly builds of what will become Firefox " + $0 + " are " + web.link(url, "currently available") + " on the " + string.ToUpperFirst($3) + " channel.</p>");
-```
-
-```js
-// After:
-<p>Firefox <%= $0 %>, based on Gecko <%= $1 %>, will ship in <%= $2 %>. This
- article provides information about the changes in this release that will
- affect developers. Nightly builds of what will become Firefox <%= $0 %>
- are <%- web.link(url, "currently available")%>  on the
- <%= string.ToUpperFirst($3) %> channel.</p>
-```
-
-```js
 // Before: old Dekiscript snippet
 if ($1 && string.length($1)) {
   optionsText = optionsText + "<li>" + LXRSearch("ident", "i", $1) + "</li>";

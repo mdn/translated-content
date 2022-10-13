@@ -11,4 +11,4 @@ MIME（Multipurpose internet mail extensions、多目的インターネットメ
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "MIME")}}
+- Wikipedia 上の [MIME](https://ja.wikipedia.org/wiki/MIME)

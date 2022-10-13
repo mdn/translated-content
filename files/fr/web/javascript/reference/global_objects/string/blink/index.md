@@ -58,14 +58,11 @@ Cet exemple produira le code HTML suivant :
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES6', '#sec-string.prototype.blink', 'String.prototype.blink')}}         | {{Spec2('ES6')}}         | Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web. |
-| {{SpecName('ESDraft', '#sec-string.prototype.blink', 'String.prototype.blink')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web.                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.blink")}}
+{{Compat}}
 
 ## Voir aussi
 

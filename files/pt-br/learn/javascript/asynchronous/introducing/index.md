@@ -44,13 +44,13 @@ btn.addEventListener('click', () => {
 
 Neste bloco, as linhas são executadas uma após a outra:
 
-1.  Nós damos referência à um elemento {{htmlelement("button")}} que já está disponível na DOM.
-2.  Nós adicionamos um evento de [`click`](/en-US/docs/Web/API/Element/click_event), e quando ele for clicado ele fará o seguinte:
+1. Nós damos referência à um elemento {{htmlelement("button")}} que já está disponível na DOM.
+2. Nós adicionamos um evento de [`click`](/en-US/docs/Web/API/Element/click_event), e quando ele for clicado ele fará o seguinte:
 
-    1.  Mostrar uma mensagem no [`alert()`](/en-US/docs/Web/API/Window/alert).
-    2.  Uma vez que o alert for dispensado, nós criamos um elemento {{htmlelement("p")}}.
-    3.  Depois nós o preenchemos com um texto.
-    4.  E finalmente, o adicionamos no body.
+    1. Mostrar uma mensagem no [`alert()`](/en-US/docs/Web/API/Window/alert).
+    2. Uma vez que o alert for dispensado, nós criamos um elemento {{htmlelement("p")}}.
+    3. Depois nós o preenchemos com um texto.
+    4. E finalmente, o adicionamos no body.
 
 Enquanro cada operação é processada, nada mais pode acontecer — a renderização é pausada. Isso acontece porque o JavaScript opera em uma única thread ([JavaScript é single threaded](/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts#JavaScript_is_single_threaded)). Apenas uma coisa pode acontecer por vez, em uma única thread principal, e tudo é bloqueado até que a operação seja concluída.
 
@@ -100,7 +100,7 @@ O primeiro parâmetro é o tipo de evento a ser executado e o segundo parâmetro
 
 Quando passamos uma função callback como um parâmetro em outra função, nós apenas estamos passando a rêferencia da função como argumento, ou seja, a função callback **não** **é** executada imediatamente. Ela é chamada de volta assíncronamente dentro do corpo da função que a contém, que é responsável por executar a função callback quando for necessário.
 
-Você pode escrever a sua própria função que contém uma callback facilmente. Vamos dar uma olhada em outro exemplo que carrega uma arquivo usando a [API `XMLHttpRequest` ](/pt-BR/docs/Web/API/XMLHttpRequest)([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html), and [veja o código fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html)):
+Você pode escrever a sua própria função que contém uma callback facilmente. Vamos dar uma olhada em outro exemplo que carrega uma arquivo usando a [API `XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest) ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html), and [veja o código fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html)):
 
 ```js
 function loadAsset(url, type, callback) {
@@ -159,7 +159,7 @@ fetch('products.json').then(function(response) {
 
 > **Nota:** Você pode encontrar a versão finalizada no GitHub ([veja aqui](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js), e também [seja a execução](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/)).
 
-Aqui nós vemos ` fetch``() ` pegando um único parâmetro — a URL de um recurso que você quer pegar da rede — e retornando uma [promise](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). A promise é um objeto que representa a conclusão ou falha da operação assíncrona. Ela represente um estado intermediário, por assim dizer. É praticamente o jetio do navegador de dizer "Eu prometo voltar para você com a resposta o mais rápido possível", daí o nome "promessa".
+Aqui nós vemos `fetch()` pegando um único parâmetro — a URL de um recurso que você quer pegar da rede — e retornando uma [promise](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). A promise é um objeto que representa a conclusão ou falha da operação assíncrona. Ela represente um estado intermediário, por assim dizer. É praticamente o jetio do navegador de dizer "Eu prometo voltar para você com a resposta o mais rápido possível", daí o nome "promessa".
 
 Você pode levar um tempo para se acostumar com esse conceito; Ele se parece um pouco com o {{interwiki("wikipedia", "Gato de Schrödinger")}} em ação. Nenhum dos possíveis resultados aconteceu ainda, então a operação fetch está esperando pelo resultado do navegador que vai completar a operação em algum ponto no futuro.
 

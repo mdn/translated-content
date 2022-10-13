@@ -10,7 +10,7 @@ translation_of: Web/CSS/font-weight
 ---
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS "CSS") свойство **`font-weight`** устанавливает начертание шрифта. Некоторые шрифты доступны только в нормальном или полужирном начертании.
+[CSS](/ru/docs/Web/CSS) свойство **`font-weight`** устанавливает начертание шрифта. Некоторые шрифты доступны только в нормальном или полужирном начертании.
 
 {{EmbedInteractiveExample("pages/css/font-weight.html")}}
 

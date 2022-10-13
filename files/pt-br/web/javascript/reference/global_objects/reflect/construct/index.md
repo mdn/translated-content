@@ -22,7 +22,7 @@ Reflect.construct(target, argumentsList[, newTarget])
 - `argumentsList`
   - : Um objeto tipo array que especifica com quais argumentos `target` deveria ser chamada.
 - `newTarget` {{optional_inline}}
-  - : O construtor de quem o protótipo deveria ser usado. Veja também o [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) operador. Se `newTarget` não estiver presente, será `target`.
+  - : O construtor de quem o protótipo deveria ser usado. Veja também o [`new.target`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target) operador. Se `newTarget` não estiver presente, será `target`.
 
 ### Return value
 
@@ -127,4 +127,4 @@ d.getFullYear(); // 1776
 
 - {{jsxref("Reflect")}}
 - [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)
-- [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target)
+- [`new.target`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target)

@@ -11,4 +11,4 @@ JavaScript では、グローバル変数は{{glossary("global object","グロ�
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "グローバル変数")}}
+- Wikipedia の [グローバル変数](https://ja.wikipedia.org/wiki/グローバル変数)
