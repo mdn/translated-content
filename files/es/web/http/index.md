@@ -23,7 +23,7 @@ Aprende cómo utilizar HTTP con guías y tutoriales.
   - : Se presentan las características básicas del protocolo y su estructura cliente-servidor: qué puede hacer y cuáles son sus usos.
 - [Caché HTTP](/es/docs/Web/HTTP/Caching)
   - : La gestión de la Caché es fundamental para la eficiencia de sitios Web. Este artículo presenta los distintos tipos de caché y cómo usar las cabeceras HTTP para su configuración y control.
-- [*Cookies*&nbsp;HTTP](/es/docs/Web/HTTP/Cookies)
+- [Cookies HTTP](/es/docs/Web/HTTP/Cookies)
   - : El funcionamiento de las *cookies* se define en [RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265). Al recibir una petición HTTP, un servidor puede enviar una cabecera `Set-Cookie` junto con la respuesta. Posteriormente el cliente devuelve el valor de la *cookie* en cada petición al mismo servidor en forma de cabecera de solicitud `Cookie`. La *cookie* también puede determinar una fecha de caducidad, o puede estar restringida a un dominio y ruta específica.
 - [Intercambio de recursos de origen cruzado (CORS)](/es/docs/Web/HTTP/CORS)
   - : Las **Solicitudes Inter-Sitio HTTP** (*Cross-site HTTP requests* en inglés), son peticiones HTTP por recursos pertenecientes a un dominio distinto al dominio del recurso que está haciendo la petición. Por ejemplo, una página HTML de un dominio A (`http://dominioa.ejemplo/`) hace una solicitud por una imagen en un dominio B (`http://dominiob.foo/imagen.jpg`) a través del elemento `img`. Hoy día, las webs utilizan recursos de otros orígenes muy a menudo, incluyendo hojas de estilo CSS, imágenes, scripts y otros recursos. El Control de Acceso HTTP posibilita a los desarrolladores web a controlar cómo su sitio web responde a solicitudes de otros orígenes.
@@ -41,7 +41,7 @@ Aprende cómo utilizar HTTP con guías y tutoriales.
 - [Manejo de conexión en HTTP/1.X](/es/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
   - : Describe los tres tipos de gestión posibles en una sesión HTTP/1.x, sus principales ventajas e inconvenientes.
 
-## Referencia
+## Referencias
 
 Explora la detallada documentación de referencia HTTP.
 
