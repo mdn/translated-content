@@ -4,7 +4,7 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 translation_of: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 ---
 
-{{DefaultAPISidebar("Web Workers API") }}
+{{DefaultAPISidebar("Web Workers API")}}
 
 In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}}, etc.), there are a variety of functions available from the DOM to workers. This article provides a list of those.
 
