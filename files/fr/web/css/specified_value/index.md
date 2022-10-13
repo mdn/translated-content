@@ -54,10 +54,7 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                   | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName("CSS2.2", "cascade.html#specified-value", "cascaded value")}} | {{Spec2("CSS2.2")}} |                      |
-| {{SpecName("CSS2.1", "cascade.html#specified-value", "cascaded value")}} | {{Spec2("CSS2.1")}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

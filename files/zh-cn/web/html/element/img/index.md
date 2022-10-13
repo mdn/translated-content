@@ -95,12 +95,12 @@ HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{g
     - `origin-when-cross-origin`: Navigating to other origins will limit the included referral data to the scheme, host, and port, while navigating from the same origin will include the full path and query string.
     - `unsafe-url`: The `Referer` header will always include the origin, path and query string, but not the fragment, password, or username. **This is unsafe** because it can leak information from TLS-protected resources to insecure origins.
 - {{htmlattrdef("sizes")}}
-  - : 表示资源大小的、以逗号隔开的一个或多个字符串。每一个资源大小包括：1. 一个[媒体条件](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax)。最后一项一定是被忽略的。 2. 一个资源尺寸的值。Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px.资源尺寸的值被用来指定图像的预期尺寸。当 `srcset` 中的资源使用了宽度描述符 `w` 时，{{glossary("User agent", "用户代理")}}会使用当前图像大小来选择 `srcset` 中合适的一个图像 URL。被选中的尺寸影响图像的{{glossary("intrinsic size", "显示大小")}}（如果没有影响大小的 {{glossary("CSS")}} 样式被应用的话）。如果没有设置 `srcset` 属性，或者没有属性值，那么 `sizes` 属性也将不起作用。
+  - : 表示资源大小的、以逗号隔开的一个或多个字符串。每一个资源大小包括：1. 一个[媒体条件](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax)。最后一项一定是被忽略的。2. 一个资源尺寸的值。Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px.资源尺寸的值被用来指定图像的预期尺寸。当 `srcset` 中的资源使用了宽度描述符 `w` 时，{{glossary("User agent", "用户代理")}}会使用当前图像大小来选择 `srcset` 中合适的一个图像 URL。被选中的尺寸影响图像的{{glossary("intrinsic size", "显示大小")}}（如果没有影响大小的 {{glossary("CSS")}} 样式被应用的话）。如果没有设置 `srcset` 属性，或者没有属性值，那么 `sizes` 属性也将不起作用。
 - {{htmlattrdef("src")}}
   - : 图像的 {{glossary("URL")}}，这个属性对 `<img>` 元素来说是必需的。在支持 `srcset` 的浏览器中，`src` 被当做拥有一个像素密度的描述符 `1x` 的候选图像处理，除非一个图像拥有这个像素密度描述符已经被在 `srcset` 或者 `srcset` 包含 `w` 描述符中定义了。
 - {{htmlattrdef("srcset")}}
 
-  - : 以逗号分隔的一个或多个字符串列表表明一系列用户代理使用的可能的图像。每一个字符串由以下组成：1. 指向图像的 {{glossary("URL")}}。 2. 可选地，再加一个空格之后，附加以下的其一：
+  - : 以逗号分隔的一个或多个字符串列表表明一系列用户代理使用的可能的图像。每一个字符串由以下组成：1. 指向图像的 {{glossary("URL")}}。2. 可选地，再加一个空格之后，附加以下的其一：
 
     - 一个宽度描述符，这是一个正整数，后面紧跟 '`w`' 符号。该整数宽度除以 sizes 属性给出的资源（source）大小来计算得到有效的像素密度，即换算成和 x 描述符等价的值。
     - 一个像素密度描述符，这是一个正浮点数，后面紧跟 '`x`' 符号。如果没有指定源描述符，那它会被指定为默认的 `1x`。在相同的 `srcset` 属性中混合使用宽度描述符和像素密度描述符时，会导致该值无效。重复的描述符（比如，两个源在相同的 `srcset` 两个源都是 `2x`）也是无效的。The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial for an example.
@@ -213,7 +213,7 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 
 ### 使用有实际意义的备用描述
 
-`alt` 属性的值应该清晰、简洁地描述图像的内容。它不应该描述 “图像的存在”，或仅仅包含图像的文件名。如果因为图像没有等价的文本描述， `alt` 属性只得不写或留白，那么可以考虑使用其他方法来呈现图像试图传递的内容。
+`alt` 属性的值应该清晰、简洁地描述图像的内容。它不应该描述“图像的存在”，或仅仅包含图像的文件名。如果因为图像没有等价的文本描述， `alt` 属性只得不写或留白，那么可以考虑使用其他方法来呈现图像试图传递的内容。
 
 #### 不要
 

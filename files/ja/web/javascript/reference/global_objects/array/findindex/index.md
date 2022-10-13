@@ -63,7 +63,7 @@ findIndex(function(element, index, array) { /* … */ }, thisArg)
 
 そのような要素が見つかったら、 `findIndex()` はすぐにその要素の位置を返します。 `callbackFn` が真値を返すものがなかった場合（または配列の `length` が `0` であった場合）、 `findIndex()` は `-1` を返します。
 
-> **Note:** {{jsxref("Array/some", "some()")}} などの他の配列メソッドとは異なり、 `callbackFn` は値が割り当てられていない位置でも実行されます。
+> **メモ:** {{jsxref("Array/some", "some()")}} などの他の配列メソッドとは異なり、 `callbackFn` は値が割り当てられていない位置でも実行されます。
 
 `callbackFn` は 3 つの引数で呼び出されます。
 
@@ -75,7 +75,7 @@ findIndex(function(element, index, array) { /* … */ }, thisArg)
 
 `findIndex()` で処理される要素の範囲は、 `callbackFn` が最初に呼び出される前に設定されます。既に処理済みの位置に割り当てられた要素や、その範囲を超えた要素に対しては、 `callbackFn` が実行されません。 `callbackFn` は最初の `findIndex()` の呼び出し以降に配列に追加された要素は処理しません。配列内で未処理の既存の要素が `callbackFn` によって変更された場合、 `callbackFn` へ渡される値は `findIndex()` がその要素の位置を処理する時点での値になります。{{jsxref("Operators/delete", "削除", "", 1)}}された値も処理対象になります。
 
-> **Warning:** 前の段落で説明したような同時進行の修正は、理解しにくいコードになることが多いので、一般的には避けるべきです（特殊な場合を除く）。
+> **警告:** 前の段落で説明したような同時進行の修正は、理解しにくいコードになることが多いので、一般的には避けるべきです（特殊な場合を除く）。
 
 ## 例
 

@@ -42,7 +42,7 @@ _A inteface `Location` não herda nenhuma propriedade, mas implementa as proprie
 
 ## Métodos
 
-_A inteface `Location`_ _não herda nenhum método, mas implementa os métodos de _{{domxref("URLUtils")}}\_\_
+_A inteface `Location` não herda nenhum método, mas implementa os métodos de {{domxref("URLUtils")}}_
 
 - {{domxref("Location.assign()")}}
   - : Carrega o recurso na URL fornecida como parâmetro.

@@ -17,7 +17,7 @@ x == y
 
 ## 描述
 
-相等运算符（`==` 和 `!=`）提供[非严格相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#非严格相等)语义。这可以大致总结如下:
+相等运算符（`==` 和 `!=`）提供[非严格相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#非严格相等)语义。这可以大致总结如下：
 
 1. 如果操作数具有相同的类型，则按如下方式进行比较：
    - 对象（Object）：仅当两个操作数引用同一个对象时返回 `true`。

@@ -334,7 +334,7 @@ Neste caso o valor de `var(--test)` são:
 
 O conceito clássico de validade, ligado a cada propriedade, não é muito útil em relação a propriedades customizadas. Quando os valores das propriedades customizadas são analizados, o _browser_ não sabe onde a mesma será usada, logo, deve considerar quase todos os valores como _válidos_.
 
-Infelizmente estes valores podem ser usados, via a notação funcional `var(),` em um contexto em que não façam sentido. Propriedades e variáveis customizadas podem levar a declações CSS inválidas, criando um novo conceito de _válido no momento da computação_.\_\_
+Infelizmente estes valores podem ser usados, via a notação funcional `var()`, em um contexto em que não façam sentido. Propriedades e variáveis customizadas podem levar a declações CSS inválidas, criando um novo conceito de _válido no momento da computação_.
 
 ## Compatibilidade com navegadores
 

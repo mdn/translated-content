@@ -46,5 +46,3 @@ Esse elemento implemena a interface[`HTMLDetailsElement`](/en/DOM/HTMLDetailsEle
 ## Veja também
 
 - {{ HTMLElement("summary") }}
-
-{{ languages({ "en": "en/HTML/Element/details", "ja": "ja/HTML/Element/details" }) }}

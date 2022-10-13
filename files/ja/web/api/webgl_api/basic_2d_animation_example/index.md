@@ -203,7 +203,7 @@ function buildShaderProgram(shaderInfo) {
 
 次に、指定されたシェーダーのリスト内の各シェーダーに対して、`compileShader()` 関数を呼び出してコンパイルし、ビルドするシェーダー関数の ID とタイプを渡します。前述のように、これらの各オブジェクトには、シェーダーコードが存在する `<script>` 要素の ID とシェーダーのタイプが含まれます。コンパイルされたシェーダーは、{{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}} へ渡すことでシェーダープログラムにアタッチされます。
 
-> **Note:** 実際には、ここよりさらに一歩進んで、`<script>` 要素の `type` 属性の値を見て、シェーダーのタイプを判断できます。
+> **メモ:** 実際には、ここよりさらに一歩進んで、`<script>` 要素の `type` 属性の値を見て、シェーダーのタイプを判断できます。
 
 すべてのシェーダーがコンパイルされると、{{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}} を使用してプログラムがリンクされます。
 
@@ -291,7 +291,7 @@ function animateScene() {
 
 アニメーションのフレームを描画するために最初に行う必要があるのは、背景を目的の色にクリアすることです。この場合、{{HTMLElement("canvas")}} のサイズに基づいてビューポートを設定し、{{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} を呼び出して使用する色を設定します。コンテンツをクリアするとき、{{domxref("WebGLRenderingContext.clear", "clear()")}} でバッファーをクリアします。
 
-次に、現在の回転ベクトルは、現在の回転角度 (`currentAngle`) を {{interwiki("wikipedia", "ラジアン")}} に変換し、回転ベクトルの最初のコンポーネントを {{interwiki("wikipedia", "三角関数", "sin")}} に設定し、2 番目のコンポーネントを {{interwiki("wikipedia", "三角関数", "cos")}} へ設定します。`currentRotation` ベクトルは、現在の角度 `currentAngle` にある {{interwiki("wikipedia", "単位円")}} 上のポイントの位置です。
+次に、現在の回転ベクトルは、現在の回転角度 (`currentAngle`) を [ラジアン](https://ja.wikipedia.org/wiki/ラジアン) に変換し、回転ベクトルの最初のコンポーネントを [sin](https://ja.wikipedia.org/wiki/三角関数) に設定し、2 番目のコンポーネントを [cos](https://ja.wikipedia.org/wiki/三角関数) へ設定します。`currentRotation` ベクトルは、現在の角度 `currentAngle` にある [単位円](https://ja.wikipedia.org/wiki/単位円) 上のポイントの位置です。
 
 {{domxref("WebGLRenderingContext.useProgram", "useProgram()")}} は、以前に確立した GLSL シェーディングプログラムをアクティブにするために呼び出されます。次に、JavaScript コードとシェーダー間 ({{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}} を使用) で情報を共有するために使用される各 uniform の位置を取得します。
 

@@ -33,4 +33,4 @@ html = d.documentElement;
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.ownerDocument")}}
+{{Compat}}

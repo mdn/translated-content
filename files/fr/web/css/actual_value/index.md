@@ -25,9 +25,7 @@ La valeur réelle est la valeur finale obtenue lors de la détermination d'une p
 
 ## Spécifications
 
-| Spécification                                                                            | État                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

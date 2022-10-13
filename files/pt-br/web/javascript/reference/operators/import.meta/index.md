@@ -48,7 +48,7 @@ import './index.mjs?someURLInfo=5';
 </script>
 ```
 
-O arquivo JavaScript a seguir vai registrar o parâmetro \``someURLInfo`:
+O arquivo JavaScript a seguir vai registrar o parâmetro `someURLInfo`:
 
 ```js
 // index.mjs

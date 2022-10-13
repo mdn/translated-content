@@ -2,6 +2,7 @@
 title: location.protocol
 slug: Web/API/Location/protocol
 ---
+
 {{ApiRef("Location")}}
 
 **`protocol`** は {{domxref("Location")}} インターフェイスのプロパティで、 URL のプロトコルスキームを、最後の `':'` を含めて表す {{domxref("USVString")}} です。

@@ -22,13 +22,11 @@ La différence entre `:where()` et {{CSSxRef(":is", ":is()")}} est la suivante :
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#zero-matches", ":where()")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.where")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -68,7 +68,7 @@ Infinity
 -Infinity
 ```
 
-Apesar de um número frequentemente representar somente seu valor, JavaScript fornece [alguns operadores binários](/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators). Estes podem ser usados para representar muitos valores booleanos dentro de um único número usando _[bit masking](http://en.wikipedia.org/wiki/Mask_%28computing%29).\_ Entretanto, isto é usualmente considerado uma má prática, desde que JavaScript oferece outros meios para representar uma configuração de booleanos (como uma array de booleanos ou um objeto com valores booleanos assinalados em propriedades). Bit masking também tende a fazer o código mais difícil de ler, entender e de realizar manutenção. Isto pode ser necessário em um ambiente bastante limitado, como quando tentamos lidar com limitação de armazenamento ou armazenamento local ou em casos extremos quando cada bit na rede conta. Esta técnica somente deveria ser considerada quando é a última medida possível para otimizar o tamanho.
+Apesar de um número frequentemente representar somente seu valor, JavaScript fornece [alguns operadores binários](/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators). Estes podem ser usados para representar muitos valores booleanos dentro de um único número usando [bit masking](http://en.wikipedia.org/wiki/Mask_%28computing%29). Entretanto, isto é usualmente considerado uma má prática, desde que JavaScript oferece outros meios para representar uma configuração de booleanos (como uma array de booleanos ou um objeto com valores booleanos assinalados em propriedades). Bit masking também tende a fazer o código mais difícil de ler, entender e de realizar manutenção. Isto pode ser necessário em um ambiente bastante limitado, como quando tentamos lidar com limitação de armazenamento ou armazenamento local ou em casos extremos quando cada bit na rede conta. Esta técnica somente deveria ser considerada quando é a última medida possível para otimizar o tamanho.
 
 ### Tipo "String"
 
@@ -139,11 +139,11 @@ Quando reprensentando datas, a melhor escolha é utilizar o [`Date` utility](/pt
 
 ### Coleções indexadas: Arrays e Arrays tipados
 
-[Arrays](/pt-BR/docs/JavaScript/Reference/Global_Objects/Array) são objetos comuns nos quais existe uma relação particular entre propriedades de chaveamento inteiro e a propriedade 'length'. Além disso, arrays herdam de `Array.prototype` que nos dá vários metodos úteis para manipulação de arrays. Por exemplo, [`indexOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (procura um valor no array) ou [`push`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/push) (adiciona um valor no array), etc. Isso faz com que os Arrays sejam candidatos perfeitos para representação de listas e conjuntos.
+[Arrays](/pt-BR/docs/JavaScript/Reference/Global_Objects/Array) são objetos comuns nos quais existe uma relação particular entre propriedades de chaveamento inteiro e a propriedade 'length'. Além disso, arrays herdam de `Array.prototype` que nos dá vários metodos úteis para manipulação de arrays. Por exemplo, [`indexOf`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (procura um valor no array) ou [`push`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/push) (adiciona um valor no array), etc. Isso faz com que os Arrays sejam candidatos perfeitos para representação de listas e conjuntos.
 
 [Typed Arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays) (arrays tipados) são novos no JavaScript com ECMAScript Edition 6 e apresenta uma visão básica similar a de um array para um data buffer binário. A tabela a seguir mostra o equivalente aos tipos de dados em C:
 
-{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects", "", 0, 3)}}
+{{page("/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects", "", 0, 3)}}
 
 ### Coleções chaveadas: Maps, Sets, WeakMaps, WeakSets
 

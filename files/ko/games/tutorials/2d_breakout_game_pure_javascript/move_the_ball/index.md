@@ -1,16 +1,6 @@
 ---
 title: 공 움직이기
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-tags:
-  - 2D
-  - 게임
-  - 루프
-  - 비기너
-  - 움직임
-  - 자바스크립트
-  - 캔버스
-  - 튜토리얼
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기
 ---
 {{GamesSidebar}}

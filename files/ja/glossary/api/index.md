@@ -2,6 +2,7 @@
 title: API
 slug: Glossary/API
 ---
+
 API (Application Programming Interface) とは、あるソフトウェアプログラム(アプリケーション)が、他のソフトウェアやハードウェア等、外部とやりとりをするために備えている機能や規則の集まりです - 人間のユーザーインターフェイスと比較されます。API は、それを提供するアプリケーションと、第 3 者のソフトウェアやハードウェアといった他の項目との間の、単純な契約(インターフェイス)です。
 
 Web 開発においては、API と言えば一般的にはコーディング上の取り決めです (例えば {{glossary("method","メソッド")}} 、{{Glossary("property","プロパティ")}} 、 events、{{Glossary("URL","URL")}}) が挙げられます。ブラウザーのコンポーネントやユーザーのコンピューター上にあるソフトやハード、第 3 者のウェブサイトやサービスとやり取りするアプリケーションを開発するには API を使います。
@@ -17,7 +18,7 @@ Web 開発においては、API と言えば一般的にはコーディング上
 
 ### 一般知識
 
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "Application_programming_interface", "API")}} 」
+- Wikipedia 上の記事「[API](https://ja.wikipedia.org/wiki/Application_programming_interface) 」
 
 ### 技術リファレンス
 

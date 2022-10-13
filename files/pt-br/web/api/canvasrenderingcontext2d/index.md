@@ -273,8 +273,6 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`
   - : Intended for HD backing stores, but removed from canvas specifications.
 
-<!---->
-
 ### Gecko only
 
 - {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.filter")}}
@@ -331,7 +329,7 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 ## Compatibility notes
 
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, ` rotate(), ``scale(), ` `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
+- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, `rotate()`, `scale()`, `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
 
 ## Veja também
 

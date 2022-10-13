@@ -20,7 +20,9 @@ slug: Web/CSS/:not
 
 `:not()` 擬似クラスは引数として、1つまたは複数のセレクターをカンマで区切ったものを要求します。リストには否定セレクターや[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含めることはできません。
 
-{{csssyntax}}
+```
+:not( <complex-selector-list> )
+```
 
 ## 解説
 

@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 l10n:
   sourceCommit: 358158b18ad8c2b90b83fe4dc03bdd7fd2e423da
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
 
 私たちはみんな遅かれ早かれ手紙を書くことを学びます。テキストの書式設定のスキルを試すのも便利な例です。この課題では手紙をマークアップして、ハイパーリンクや HTML の `<head>` 要素の適切な使用と同様に、 HTML テキスト整形のスキルをテストしてみます。
@@ -48,7 +49,7 @@ l10n:
 
 この課題を開始するには、[マークアップする必要がある生のテキスト](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt)と、HTML に[含める必要がある CSS](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/css.txt) を入手します。テキストエディターを使用して新しい `.html` ファイルを作成し、作業を行います（または、 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) などのサイトを使用して課題を行います）。
 
-> **Note:** もし行き詰まったら、私たちに助けを求めてください。このページの下にある[評価またはさらなるヘルプ](#評価またはさらなるヘルプ)の節をご覧ください。
+> **メモ:** もし行き詰まったら、私たちに助けを求めてください。このページの下にある[評価またはさらなるヘルプ](#評価またはさらなるヘルプ)の節をご覧ください。
 
 ## 簡単なプロジェクト
 

@@ -85,7 +85,7 @@ _Herda propriedades de seus parentes {{domxref("Node")}}, e seu próprio parente
 
 ## Métodos
 
-_Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{domxref("EventTarget")}}_, e implementa aqueles de {{domxref("ParentNode")}}, {{domxref("ChildNode")}}_, {{domxref("NonDocumentTypeChildNode")}}, e\_\_ {{domxref("Animatable")}}._
+_Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{domxref("EventTarget")}}, e implementa aqueles de {{domxref("ParentNode")}}, {{domxref("ChildNode")}}, {{domxref("NonDocumentTypeChildNode")}}, e {{domxref("Animatable")}}._
 
 - {{ domxref("EventTarget.addEventListener()") }}
   - : Registra um manipulador de evento para um tipo específico de evento no elemento.
@@ -149,9 +149,6 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Assíncronamente pede o navegador para fazer o elemento tela cheia.
 - {{ domxref("Element.requestPointerLock()")}} {{experimental_inline}}
   - : Permite assíncronamente pedir pelo apontador para ser bloqueado em um dado elemento.
-
-<!---->
-
 - {{ domxref("Element.scrollIntoView()") }} {{experimental_inline}}
   - : Rola a página até que o elemento apareça na visão.
 - {{ domxref("Element.setAttribute()") }}

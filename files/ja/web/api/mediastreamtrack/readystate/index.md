@@ -2,6 +2,7 @@
 title: MediaStreamTrack.readyState
 slug: Web/API/MediaStreamTrack/readyState
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack.readyState`** は読み取り専用のプロパティであり、トラックの状態を表す列挙値を返します。

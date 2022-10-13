@@ -55,10 +55,8 @@ La caractéristique `resolution` est une valeur de type {{cssxref("&lt;resolutio
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Media Queries', '#resolution', 'resolution')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.resolution")}}
+{{Compat}}

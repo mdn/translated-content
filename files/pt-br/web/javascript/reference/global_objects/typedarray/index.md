@@ -47,7 +47,7 @@ Float64Array();
 
 ## Description
 
-ECMAScript 2015 defines a _TypedArray_ constructor that serves as the `[[Prototype]]` of all _TypedArray_ constructors. This constructor is not directly exposed: there is no global `%TypedArray%` or `TypedArray` property. It is only directly accessible through `Object.getPrototypeOf(Int8Array)` and similar. All _TypedArray_s constructors inherit common properties from the `%TypedArray%` constructor function. Additionally, all typed array prototypes (\_TypedArray_`.prototype`) have `%TypedArray%.prototype` as their `[[Prototype]]`.
+ECMAScript 2015 defines a _TypedArray_ constructor that serves as the `[[Prototype]]` of all _TypedArray_ constructors. This constructor is not directly exposed: there is no global `%TypedArray%` or `TypedArray` property. It is only directly accessible through `Object.getPrototypeOf(Int8Array)` and similar. All _TypedArray_s constructors inherit common properties from the `%TypedArray%` constructor function. Additionally, all typed array prototypes (`TypedArray.prototype`) have `%TypedArray%.prototype` as their `[[Prototype]]`.
 
 The `%TypedArray%` constructor on its own is not particularly useful. Calling it or using it in a `new` expression will throw a `TypeError`, except when used during object creation in JS engines that support subclassing. There are at present no such engines, so `%TypedArray%` is only useful to polyfill functions or properties onto all _TypedArray_ constructors.
 
@@ -114,7 +114,7 @@ Int8Array.prototype.foo = 'bar';
 
 ## TypedArray prototype
 
-All \_TypedArray_s inherit from {{jsxref("TypedArray.prototype")}}.
+All _TypedArrays_ inherit from {{jsxref("TypedArray.prototype")}}.
 
 ### Properties
 

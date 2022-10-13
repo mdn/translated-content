@@ -42,7 +42,7 @@ MDN Web Docs チームやコミュニティと連絡を取るには、 [Matrix �
 
 私たちは小さなチームで、絶えず変化するウェブのエコシステムの文書化の要求に追いつくために、一所懸命作業しています。残念ながら、私たちは一般的なサポートに関する質問には対応できません。コードを学んでいる間の一般的なヘルプについては、以下のリソースを参照してください。
 
-- [ウェブ開発を学ぶ](https://developer.mozilla.org/docs/Learn)
+- [ウェブ開発を学ぶ](/ja/docs/Learn)
 - [MDN Web Docs 学習フォーラム](https://discourse.mozilla.org/c/mdn/learn/250)
 - [Stackoverflow](https://stackoverflow.com/questions/)
 

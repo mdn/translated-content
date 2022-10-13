@@ -185,7 +185,7 @@ Quando o atributo `alt` não estiver presente em uma imagem, alguns programas le
 
 O atributo {{htmlattrxref("title")}} não é um substituto aceitável para o atributo `alt`. Além disso, evite duplicar o valor do atributo `alt` no atributo `title` para uma mesma imagem. Isso pode fazer com que alguns programas leitores de tela narrem duas vezes a descrição, o que pode criar uma experiência confusa para usuários.
 
-Evite usar o atributo `title` como uma forma suplementar de legenda para a descrição do `alt`. Caso a imagem precise de uma legenda, prefisa os elementos [`figure`](/en-US/docs/Web/HTML/Element/figure) e [`figcaption`](/en-US/docs/Web/HTML/Element/figcaption).
+Evite usar o atributo `title` como uma forma suplementar de legenda para a descrição do `alt`. Caso a imagem precise de uma legenda, prefisa os elementos [`figure`](/pt-BR/docs/Web/HTML/Element/figure) e [`figcaption`](/pt-BR/docs/Web/HTML/Element/figcaption).
 
 O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, que aparece após o usuário parar o cursor sobre a imagem. Apesar de _poder_ _prover_ informações adicionais ao usuário, não se deve assumir todos os usuários vão vê-lo, pois o mesmo pode possuir apenas um teclado ou uma tela de toque (touchscreen). Se você considera a informação particularmente importante para o usuário, prefira o uso de elementos inline.
 

@@ -86,13 +86,11 @@ WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires                                       |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblymemory-objects', 'Memory')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Memory")}}
+{{Compat}}
 
 ## Voir aussi
 

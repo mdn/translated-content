@@ -50,9 +50,13 @@ La propriété `counter-set` est définit avec l'une de ces deux valeurs :
 - `none`
   - : Aucune définition ou modification de compteur ne doit être appliquée. Cette valeur peut être utilisée afin de surcharger une déclaration `counter-set` d'une règle moins spécifique.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -67,15 +71,11 @@ h1 {
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires         |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Lists', '#counter-set', 'counter-set')}} | {{Spec2('CSS3 Lists')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.counter-set")}}
+{{Compat}}
 
 ## Voir aussi
 

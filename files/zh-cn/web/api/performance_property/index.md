@@ -17,6 +17,6 @@ slug: Web/API/performance_property
 - {{domxref("Performance.timing", "performance.timing")}}
   - : 是一个{{domxref("PerformanceTiming")}} 对象，包含延迟相关的性能信息。
 - {{domxref("Performance.navigation", "performance.navigation")}}
-  - : 是一个 {{domxref("PerformanceNavigation")}} 对象，该对象表示在当前给定浏览上下文中网页导航的类型（译者注：TYPE_BACK_FORWARD，TYPE_NAVIGATE， TYPE_RELOAD，TYPE_RESERVED）以及次数。
+  - : 是一个 {{domxref("PerformanceNavigation")}} 对象，该对象表示在当前给定浏览上下文中网页导航的类型（译者注：TYPE_BACK_FORWARD，TYPE_NAVIGATE，TYPE_RELOAD，TYPE_RESERVED）以及次数。
 - [performance.memory](https://docs.webplatform.org/apis/timing/properties/memory)
   - : 在 Chrome 中添加的一个非标准扩展。

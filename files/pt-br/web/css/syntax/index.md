@@ -17,7 +17,7 @@ Tanto as propriedades como os valores são case-sensitive no CSS. Os pares se se
 
 ![css syntax - declaration.png](/@api/deki/files/6164/=css_syntax_-_declaration.png)
 
-Existem mais de [100 propriedades diferentes](https://developer.mozilla.org/en/CSS/CSS_Reference) no CSS e um número quase infinito de diferentes valores. Nem todos os pares de propriedades e valores são permitidos em cada propriedade define o que são valores válidos. Quando um valor não é válido para uma determinada propriedade, a declaração é considerada inválida e é totalmente ignorada pelo motor do CSS.
+Existem mais de [100 propriedades diferentes](/en/CSS/CSS_Reference) no CSS e um número quase infinito de diferentes valores. Nem todos os pares de propriedades e valores são permitidos em cada propriedade define o que são valores válidos. Quando um valor não é válido para uma determinada propriedade, a declaração é considerada inválida e é totalmente ignorada pelo motor do CSS.
 
 ## Blocos de declaração CSS
 
@@ -59,7 +59,3 @@ There are different kinds of statements:
 Any statement which isn't a rule or an at-rule is invalid and ignored.
 
 There is another group of statements, the **nested statements**, these are statements that can be used in a specific subset of at-rules, the _conditional group rules_. These statements only apply if a specific condition is matched: the `@media` at-rule content is applied only if the device on which runs the browser matches the expressed condition; the `@document` at-rule content is applied only if the current page matches some conditions, and so on. In CSS1 and CSS2.1, only _rulesets_ could be used inside a conditional group rules. That was very restrictive and this restriction was lifted in [_CSS Conditionals Level 3_](/en/CSS/CSS3#Conditionals). Now, though it still is experimental and not support by every browser, a conditional group rules can contain a wider range of content, rulesets but also some, but not all, at-rules.
-
-## See also
-
-- {{ CSS_key_concepts()}}

@@ -38,9 +38,13 @@ scale: 2 0.5 2;
 - `none`
   - : Cette valeur indique qu'aucune mise à l'échelle ne devrait être appliquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -92,15 +96,11 @@ div:hover .scale {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS Transforms 2', '#individual-transforms', 'individual transforms')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scale")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -263,7 +263,7 @@ window.addEventListener('load', function () {
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## 参考
 

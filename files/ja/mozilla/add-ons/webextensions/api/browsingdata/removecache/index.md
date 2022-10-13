@@ -51,7 +51,7 @@ then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **メモ:** この API は Chromium の [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

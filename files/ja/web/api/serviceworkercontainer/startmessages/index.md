@@ -11,7 +11,7 @@ slug: Web/API/ServiceWorkerContainer/startMessages
 
 デフォルトでは、ページの読み込み中に、ページを制御するサービスワーカーから（{{domxref("Client.postMessage()")}} を使用して）ページに送信されたすべてのメッセージはキューに入れられ、ページの HTML 文書が読み込まれて解析されると（つまり、{{event("DOMContentLoaded")}} イベント発生の後に）ディスパッチされます。 例えば、ページの読み込みが完了する前に {{domxref("EventTarget.addEventListener()")}} を使用してメッセージハンドラーを呼び出したが、すぐにメッセージの処理を開始したい場合は、{{domxref("ServiceWorkerContainer.startMessages()")}} を呼び出すことで、これらのメッセージのディスパッチを開始できます。
 
-> **Note:** {{domxref("ServiceWorkerContainer.onmessage")}} を使用してハンドラーを直接設定すると、メッセージの送信が自動的に開始されます。 この場合、`startMessages()` は必要ありません。
+> **メモ:** {{domxref("ServiceWorkerContainer.onmessage")}} を使用してハンドラーを直接設定すると、メッセージの送信が自動的に開始されます。 この場合、`startMessages()` は必要ありません。
 
 ## 構文
 

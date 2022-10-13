@@ -53,10 +53,11 @@ Chaque groupe conditionnel peut également contenir des instructions imbriquées
 
 ## Spécifications
 
-| Spécification                                                            | État                                     | Définition                               |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------- |
-| {{SpecName('CSS3 Conditional')}}                             | {{Spec2('CSS3 Conditional')}} | Définition initiale.                     |
-| {{SpecName('Compat', '#css-at-rules', 'CSS At-rules')}} | {{Spec2('Compat')}}                 | Standardisation de `@-webkit-keyframes`. |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

@@ -13,7 +13,7 @@ slug: Web/HTML/Element/input/radio
 
 ![古い時代のラジオボタンの外観を示します。](https://mdn.mozillademos.org/files/15610/old-radio.jpg)
 
-> **Note:** [**注**:](https://github.com/mdn/interactive-examples) [チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)はラジオボタンに似ていますが、重要な違いがあります。ラジオボタンは一組の中で一つの値を選択するように設計されているのに対し、チェックボックスは個別に値をオンまたはオフに設定できます。複数のコントロールが存在するところでは、ラジオボタンは全体の中で一つを選択できますが、チェックボックスは複数の値を選択することができます。
+> **メモ:** [**注**:](https://github.com/mdn/interactive-examples) [チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)はラジオボタンに似ていますが、重要な違いがあります。ラジオボタンは一組の中で一つの値を選択するように設計されているのに対し、チェックボックスは個別に値をオンまたはオフに設定できます。複数のコントロールが存在するところでは、ラジオボタンは全体の中で一つを選択できますが、チェックボックスは複数の値を選択することができます。
 
 <table class="properties">
   <tbody>
@@ -95,7 +95,7 @@ slug: Web/HTML/Element/input/radio
 
 HTML で `value` 属性を省略すると、送信されたフォームデータのそのグループには `on` の値が割り当てられます。この場合、ユーザーが「電話」をクリックしてフォームを送信したのに、結果のフォームデータが `contact=on` となるため有益ではありません。ですから、 `value` 属性を設定することを忘れないようにしてください。
 
-> **Note:** フォームが送信されたときにラジオボタンが全く選択されていないと、ラジオグループが送信されたフォームにまったく含まれず、報告される値がなくなります。
+> **メモ:** フォームが送信されたときにラジオボタンが全く選択されていないと、ラジオグループが送信されたフォームにまったく含まれず、報告される値がなくなります。
 
 実際には、フォームがグループ内のラジオボタンをまったく選択しない状態で送信するのを許可することは一般的ではないので、既定で一つを `checked` 状態を設定しておくことには意味があります。下記の[既定のラジオボタンの選択](#selecting_a_radio_button_by_default)を参照してください。
 
@@ -197,7 +197,7 @@ form.addEventListener("submit", function(event) {
 
 In this case, the first radio button is now selected by default.
 
-> **Note:** If you put the `checked` attribute on more than one radio button, later instances will override earlier ones; that is, the last `checked` radio button will be the one that is selected. This is because only one radio button in a group can ever be selected at once, and the user agent automatically deselects others each time a new one is marked as checked.
+> **メモ:** If you put the `checked` attribute on more than one radio button, later instances will override earlier ones; that is, the last `checked` radio button will be the one that is selected. This is because only one radio button in a group can ever be selected at once, and the user agent automatically deselects others each time a new one is marked as checked.
 
 ### ラジオボタンのヒット領域を大きくする
 
@@ -302,7 +302,7 @@ button:active {
 
 Most notable here is the use of the {{cssxref("-moz-appearance")}} property (with prefixes needed to support some browsers). By default, radio buttons (and [checkboxes](/ja/docs/Web/HTML/Element/input/checkbox)) are styled with the operating system's native styles for those controls. By specifying `appearance: none`, you can remove the native styling altogether, and create your own styles for them. Here we've used a {{cssxref("border")}} along with {{cssxref("border-radius")}} and a {{cssxref("transition")}} to create a nice animating radio selection. Notice also how the {{cssxref(":checked")}} pseudo-class is used to specify the styles for the radio button's appearance when selected.
 
-> **Note:** **Compatibility note**: If you wish to use the {{cssxref("appearance")}} property, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword `none` does not have the same effect across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.
+> **メモ:** **Compatibility note**: If you wish to use the {{cssxref("appearance")}} property, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword `none` does not have the same effect across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.
 
 {{EmbedLiveSample('Styling_radio_inputs', 600, 120)}}
 

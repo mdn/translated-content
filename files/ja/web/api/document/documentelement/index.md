@@ -2,6 +2,7 @@
 title: Document.documentElement
 slug: Web/API/Document/documentElement
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.documentElement`** は、その {{domxref("document")}} のルート要素 (例えば、 HTML 文書の場合は {{HTMLElement("html")}} 要素) である {{domxref("Element")}} を返します。

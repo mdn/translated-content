@@ -135,13 +135,11 @@ L'exemple suivant, utilisant le marqueur `g`, fonctionnera :
 
 ## Spécifications
 
-| Spécification                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.replaceAll")}}
+{{Compat}}
 
 ## Voir aussi
 

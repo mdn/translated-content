@@ -11,7 +11,7 @@ translation_of: Web/CSS/border
 ---
 {{CSSRef("CSS Borders")}}
 
-Свойство [CSS](/ru/docs/CSS "CSS") **`border`** это [универсальное свойство](/ru/docs/Web/CSS/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
+Свойство [CSS](/ru/docs/CSS) **`border`** это [универсальное свойство](/ru/docs/Web/CSS/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
 
 {{EmbedInteractiveExample("pages/css/border.html")}}
 
@@ -27,7 +27,7 @@ border: medium dashed green;
 
 ## Синтаксис
 
-Свойство `border` указывается используя одно или более значений [`<br-width>`](#<br-width>), [`<br-style>`](#<br-style>), и [`<color>`](#<color>) указанных ниже.
+Свойство `border` указывается используя одно или более значений [`<br-width>`](#br-width), [`<br-style>`](#br-style), и [`<color>`](#color) указанных ниже.
 
 ### Значения
 
@@ -40,7 +40,7 @@ border: medium dashed green;
 
 ### Обычный синтаксис
 
-    {{csssyntax}}
+{{csssyntax}}
 
 ## Примеры
 

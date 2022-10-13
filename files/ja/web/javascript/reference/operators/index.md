@@ -123,7 +123,7 @@ JavaScript の基本的なキーワードと一般的な式です。
 - {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
   - : 大なりイコール演算子です。
 
-> **Note:** `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)のための記法です。
+> **メモ:** `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)のための記法です。
 
 <h3 id="Equality_operators">等値演算子</h3>
 

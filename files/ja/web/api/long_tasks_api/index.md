@@ -2,6 +2,7 @@
 title: Long Tasks API
 slug: Web/API/Long_Tasks_API
 ---
+
 {{DefaultAPISidebar("Long Tasks")}}
 
 ## 動機

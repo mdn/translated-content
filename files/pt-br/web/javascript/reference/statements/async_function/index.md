@@ -23,14 +23,8 @@ async function nome([param[, param[, ... param]]]) {
 
 - `nome`
   - : O nome da função.
-
-<!---->
-
 - `param`
   - : O nome de um parâmetro a ser passado para a função.
-
-<!---->
-
 - `instruções`
   - : As instruções que compõem o corpo da função.
 

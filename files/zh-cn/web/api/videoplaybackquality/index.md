@@ -34,7 +34,7 @@ _`VideoPlaybackQuality` 对象没有实现任何特定方法，也没有继承�
 
 ## 浏览器兼容性
 
-{{Compat("api.VideoPlaybackQuality")}}
+{{Compat}}
 
 ## 另见
 

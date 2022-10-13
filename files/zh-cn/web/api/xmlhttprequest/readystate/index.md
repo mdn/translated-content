@@ -16,9 +16,9 @@ slug: Web/API/XMLHttpRequest/readyState
 | `4` | `DONE`             | 下载操作已完成。                                    |
 
 - UNSENT
-  - : XMLHttpRequest 代理已被创建， 但尚未调用 open() 方法。
+  - : XMLHttpRequest 代理已被创建，但尚未调用 open() 方法。
 - OPENED
-  - : open() 方法已经被触发。在这个状态中，可以通过 [setRequestHeader()](/zh-CN/docs/Web/API/XMLHttpRequest/setRequestHeader) 方法来设置请求的头部， 可以调用 [send()](/zh-CN/docs/Web/API/XMLHttpRequest/send) 方法来发起请求。
+  - : open() 方法已经被触发。在这个状态中，可以通过 [setRequestHeader()](/zh-CN/docs/Web/API/XMLHttpRequest/setRequestHeader) 方法来设置请求的头部，可以调用 [send()](/zh-CN/docs/Web/API/XMLHttpRequest/send) 方法来发起请求。
 - HEADERS_RECEIVED
   - : send() 方法已经被调用，响应头也已经被接收。
 - LOADING

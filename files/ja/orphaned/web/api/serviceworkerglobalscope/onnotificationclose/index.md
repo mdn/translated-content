@@ -10,7 +10,7 @@ original_slug: Web/API/ServiceWorkerGlobalScope/onnotificationclose
 
 メインスレッドや {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用した service worker ではない worker で生成された通知は、`Notification` オブジェクト自身の {{Event("close")}} イベントを受け取ります。
 
-> **Note:** {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して {{domxref("ServiceWorkerGlobalScope")}} 内で通知を生成しようとすると、エラーがスローされます。
+> **メモ:** {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して {{domxref("ServiceWorkerGlobalScope")}} 内で通知を生成しようとすると、エラーがスローされます。
 
 ## 構文
 

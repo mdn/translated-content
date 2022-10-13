@@ -62,7 +62,7 @@ play.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.arrayBuffer")}}
+{{Compat}}
 
 ## 参考
 

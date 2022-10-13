@@ -127,6 +127,6 @@ collisionDetection();
 
 ## Следующие шаги
 
-Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться [отслеживать счёт и выигрывать](https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=ru&ie=UTF8&prev=_t&rurl=translate.google.com&sl=en&sp=nmt4&tl=ru&u=https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win&xid=25657,15700022,15700124,15700149,15700168,15700186,15700190,15700201,15700205&usg=ALkJrhhN9U9TuRM07dQaU3Oyqz2-F5ctig) .
+Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться [отслеживать счёт и выигрывать](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

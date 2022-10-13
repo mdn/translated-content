@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 l10n:
   sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
 テキストの書式設定のための HTML には他にも多くの要素がありますが、これは [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます。（これはまだいかなる意味でも完全なリストではありません）。ここでは、注釈、説明リスト、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマークアップについて学習します。
@@ -438,7 +439,7 @@ textarea.onkeyup = () => {
 
 {{EmbedLiveSample('Abbreviation_example', '100%', '150')}}
 
-> **Note:** 以前のバージョンの HTML では {{htmlelement("acronym")}} 要素にも対応していましたが、省略形と頭字語の両方を表現するために `<abbr>` を使用することにしたため、 HTML 仕様から削除されました。`<acronym>` は使用すべきではありません。
+> **メモ:** 以前のバージョンの HTML では {{htmlelement("acronym")}} 要素にも対応していましたが、省略形と頭字語の両方を表現するために `<abbr>` を使用することにしたため、 HTML 仕様から削除されました。`<acronym>` は使用すべきではありません。
 
 ### アクティブラーニング: 略語のマークアップ
 
@@ -602,7 +603,7 @@ HTML には連絡先の詳細をマークアップするための要素 — {{ht
 </address>
 ```
 
-> **Note:** {{htmlelement("address")}} 要素は、最も近い {{htmlelement("article")}} または {{htmlelement("body")}} 要素で含まれる文書の連絡先情報を提供するためにのみ使用すべきです。サイト全体の連絡先を記載するためにサイトのフッターに使用したり、著者の連絡先を記載するために記事の中で使用することは正しいことですが、そのページの内容に関係のないアドレスのリストをマークアップすることはできません。
+> **メモ:** {{htmlelement("address")}} 要素は、最も近い {{htmlelement("article")}} または {{htmlelement("body")}} 要素で含まれる文書の連絡先情報を提供するためにのみ使用すべきです。サイト全体の連絡先を記載するためにサイトのフッターに使用したり、著者の連絡先を記載するために記事の中で使用することは正しいことですが、そのページの内容に関係のないアドレスのリストをマークアップすることはできません。
 
 ## 上付きと下付き
 

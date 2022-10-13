@@ -83,7 +83,7 @@ Para criar um link para uma "página inexistente":
 _Para criar uma nova página sem linkar de outra página_, informe o nome único de uma página na barra de endereços do seu navegador. Por exemplo, se você inserir:
 
 ```html
-https://developer.mozilla.org/en-US/docs/FooBar
+https://developer.mozilla.org/pt-BR/docs/FooBar
 ```
 
 O MDN cria uma nova página com o título "FooBar" e abre o editor para você inserir o conteúdo nessa página. Veja a sessão "[Editando uma página existente](<#Editando uma págia existente>)" nesse artigo para ver como usar o editor.
@@ -111,7 +111,7 @@ Se houver uma página existente cujo formato você quer usar numa página nova, 
 Esse método é um pouco híbrido. Você pode criar um link em outra página, e clicar no link que você inseriu, para criar a nova página.
 
 1. Digite o nome da página nova em qualquer lugar (que faça sentido) no texto de uma página existente.
-2. Selecione o nome e clique no **ícone de link (![](https://developer.mozilla.org/files/3810/link-icon.png))** na barra de ferramentas do editor. A caixa de diálogo para "**Atualizar Link"** vai abrir com o texto selecionado no campo "**Linkar para**".
+2. Selecione o nome e clique no **ícone de link (![](/files/3810/link-icon.png))** na barra de ferramentas do editor. A caixa de diálogo para "**Atualizar Link"** vai abrir com o texto selecionado no campo "**Linkar para**".
 3. "/pt-BR/docs/" é inserido por padrão no começo do campo URL. Insira o nome da página depois de "/pt-BR/docs/". (O nome da página não tem de ser o mesmo texto do link).
 4. Clique em OK para criar e inserir o link.
 

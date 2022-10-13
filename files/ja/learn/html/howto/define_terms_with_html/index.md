@@ -2,6 +2,7 @@
 title: HTML で用語を定義する
 slug: Learn/HTML/Howto/Define_terms_with_HTML
 ---
+
 HTML は、インラインであろうと構造化された用語集であろうと、記述の意味を伝達するいくつかの方法を提供します。 この記事では、キーワードを定義する際に適切にマークアップする方法について説明します。
 
 <table class="learn-box nostripe standard-table">
@@ -49,7 +50,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 <p><dfn>Firefox</dfn> は、Mozilla Foundation によって作成されたウェブブラウザーです。</p>
 ```
 
-> **Note:** 太字のもう 1 つの用途はコンテンツを強調することです。 太字自体は HTML の概念ではありませんが、[強調を示すタグ](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)があります。
+> **メモ:** 太字のもう 1 つの用途はコンテンツを強調することです。 太字自体は HTML の概念ではありませんが、[強調を示すタグ](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)があります。
 
 ### 特別な場合: 略語
 
@@ -62,7 +63,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 </p>
 ```
 
-> **Note:** HTML 仕様は実際には略語を拡張するために [`title` 属性を用意しています](http://www.w3.org/TR/html/text-level-semantics.html#the-abbr-element)（英語）。 ただし、これはインライン展開を提供するための許容可能な代替方法ではありません。 `title` の内容は、マウスを使用していない限り、ユーザーには完全に隠されています。 この仕様も同様に[これを認めています](https://www.w3.org/TR/html/dom.html#the-title-attribute)（英語）。
+> **メモ:** HTML 仕様は実際には略語を拡張するために [`title` 属性を用意しています](http://www.w3.org/TR/html/text-level-semantics.html#the-abbr-element)（英語）。 ただし、これはインライン展開を提供するための許容可能な代替方法ではありません。 `title` の内容は、マウスを使用していない限り、ユーザーには完全に隠されています。 この仕様も同様に[これを認めています](https://www.w3.org/TR/html/dom.html#the-title-attribute)（英語）。
 
 ### アクセシビリティの向上
 
@@ -84,7 +85,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 
 説明リストは、用語とそれに対応する説明のリスト（例: 定義リスト、辞書エントリ、よくある質問、およびキーと値のペア）です。
 
-> **Note:** 説明リストは、対話が話し手を直接記述しないため、[対話をマークアップするのには適していません](http://www.w3.org/TR/html5/grouping-content.html#the-dl-element)（英語）。 ここには、[対話をマークアップするための推奨事項](http://www.w3.org/TR/html5/common-idioms.html#conversations)（英語）があります。
+> **メモ:** 説明リストは、対話が話し手を直接記述しないため、[対話をマークアップするのには適していません](http://www.w3.org/TR/html5/grouping-content.html#the-dl-element)（英語）。 ここには、[対話をマークアップするための推奨事項](http://www.w3.org/TR/html5/common-idioms.html#conversations)（英語）があります。
 
 説明された用語は、{{htmlelement("dt")}} 要素内にあります。 対応する説明は直ちに続き、1 つ以上の {{htmlelement("dd")}} 要素に含まれています。 説明リスト全体を {{htmlelement("dl")}} 要素で囲みます。
 
@@ -113,7 +114,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 </dl>
 ```
 
-> **Note:** ご覧のとおり、基本パターンは `<dt>` の用語を `<dd>` の説明で置き換えることです。 行内に 2 つ以上の用語が存在する場合は、以下の説明はそれらのすべてに適用されます。 行内に 2 つ以上の説明が存在する場合、それらはすべて最後に指定された用語に適用されます。
+> **メモ:** ご覧のとおり、基本パターンは `<dt>` の用語を `<dd>` の説明で置き換えることです。 行内に 2 つ以上の用語が存在する場合は、以下の説明はそれらのすべてに適用されます。 行内に 2 つ以上の説明が存在する場合、それらはすべて最後に指定された用語に適用されます。
 
 ### 視覚的な出力を改善する
 

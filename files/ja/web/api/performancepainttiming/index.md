@@ -2,6 +2,7 @@
 title: PerformancePaintTiming
 slug: Web/API/PerformancePaintTiming
 ---
+
 {{SeeCompatTable}}{{APIRef("Performance Timeline API")}}
 
 [Paint Timing](</ja/docs/Web/API/Paint Timing>) の **`PerformancePaintTiming`** インタフェースは、Web ページ構築中の "paint" ("render" とも呼ばれる) 操作に関するタイミング情報を提供します。「ペイント」とは、レンダリングツリーを画面上のピクセルに変換することです。

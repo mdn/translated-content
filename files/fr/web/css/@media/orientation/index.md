@@ -61,11 +61,8 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Media Queries', '#orientation', 'orientation')}} | {{Spec2('CSS4 Media Queries')}} | Aucune modification. |
-| {{SpecName('CSS3 Media Queries', '#orientation', 'orientation')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.orientation")}}
+{{Compat}}

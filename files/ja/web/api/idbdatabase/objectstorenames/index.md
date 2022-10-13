@@ -2,6 +2,7 @@
 title: IDBDatabase.objectStoreNames
 slug: Web/API/IDBDatabase/objectStoreNames
 ---
+
 {{ APIRef("IDBDatabase") }}
 
 {{domxref("IDBDatabase")}}インターフェイスの`objectStoreNames`プロパティは、現在接続しているデータベースの[object stores](/ja/docs/IndexedDB#gloss_object_store)名のリストを含む{{ domxref("DOMStringList") }}です。

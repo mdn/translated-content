@@ -2,6 +2,7 @@
 title: CompositionEvent.initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
 ---
+
 {{deprecated_header}}{{APIRef("DOM Events")}}
 
 {{domxref("CompositionEvent")}} インターフェイスの **`initCompositionEvent()`** メソッドは、`CompositionEvent` オブジェクトインスタンスの属性を初期化します。

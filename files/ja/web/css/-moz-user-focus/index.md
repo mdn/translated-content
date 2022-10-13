@@ -22,8 +22,6 @@ slug: Web/CSS/-moz-user-focus
 
 {{cssinfo}}
 
-> **Note:** このプロパティは XUL の {{XULElem("textbox")}} 要素では動作しません。`textbox` 自体はフォーカスを受けないからです。代わりに、XBL は無名の HTML {{HTMLElement("input")}} 要素を `textbox` の中に作成し、その要素がフォーカスを受けます。`textbox` がキーボードのフォーカスを受けないようにするには、そのタブインデックスを `-1` に設定することで、またマウスのフォーカスを受けないようにするには、`mousedown` イベントの既定のアクションを防ぐことで可能です。
-
 ## 構文
 
 ### 値

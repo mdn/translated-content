@@ -20,7 +20,7 @@ Firefox 14 は 米国時間 2012 年 7 月 17 日にリリースされました�
 - {{domxref("DOMException", "DOMException.code")}} は最新の DOM Level 4 仕様に従って非推奨になりました。
 - {{domxref("Range.insertNode()")}} が 折り畳まれた (collapsed) 範囲上で用いられたときに正しく動作するようになりました。
 - {{domxref("BlobBuilder", "MozBlobBuilder")}} インターフェイスが {{domxref("Blob")}} コンストラクターの利用を促すために非推奨になりました。 `MozBlobBuilder` を利用した場合、ウェブコンソールに警告が表示されます。
-- [Mutation Observers](/en-US/docs/Web/API/MutationObserver) のサポートが導入されました。これは、パフォーマンスに関する多くの問題がある DOM3  の Mutation Events の置き換えとして設計されました。
+- [Mutation Observers](/ja/docs/Web/API/MutationObserver) のサポートが導入されました。これは、パフォーマンスに関する多くの問題がある DOM3  の Mutation Events の置き換えとして設計されました。
 - {{domxref("HTMLImageElement")}} インターフェイスの `x` プロパティおよび `y` プロパティは Gecko 7.0 で削除されましたが、互換性の理由でこのリリースから復活しました。
 - {{domxref("Document")}} のメソッドである `execCommandShowHelp()` と `queryCommandText()` は、今まで何もしませんでしたが、削除されました。`
 - `GeoPositionAddress` インターフェイスは、 [Geolocation](/ja/docs/Web/API/Geolocation_API) API で廃止された仕様の一部であり、削除されました。

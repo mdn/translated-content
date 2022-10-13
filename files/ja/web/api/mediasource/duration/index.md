@@ -2,6 +2,7 @@
 title: MediaSource.duration
 slug: Web/API/MediaSource/duration
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイスの **`duration`** プロパティは、現在表示されているメディアの期間（長さ）を取得および設定します。

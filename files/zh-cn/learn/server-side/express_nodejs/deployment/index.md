@@ -279,11 +279,11 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 1. 将 Express 应用程序，复制到此文件夹中（不包括**/node_modules**，其中包含您应根据需要，从 NPM 获取的依赖项文件）。
 2. 打开命令提示符/终端，并使用`add`命令，将所有文件添加到 git。
 
-3. ```bash
+    ```bash
     git add -A
     ```
 
-4. 使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
+3. 使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
 
     ```plain
     > git status
@@ -295,13 +295,13 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
             new file:   ...
     ```
 
-5. 如果您满意，请将文件提交到本地存储库：
+4. 如果您满意，请将文件提交到本地存储库：
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6. 然后使用以下内容，将本地存储库同步到 Github 网站：
+5. 然后使用以下内容，将本地存储库同步到 Github 网站：
 
     ```bash
     git push origin master

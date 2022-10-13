@@ -93,7 +93,7 @@ Note que previnir um elemento de ser o alvo de eventos de mouse usando `pointer-
 
 Nós gostaríamos de fornecer um controle de textura mais refinado (do que apenas `auto` e `none`) em HTML para que partes de um elemento fizessem com que os eventos mouse “capturem” , e quando. Para nos ajudar a decidir como `pointer-events` devem ser estendido para HTML, se você tem qualquer coisa particular que você gostaria de fazer com essa propriedade, então por favor adicione na seção Caso de Uso [dessa wiki page](https://wiki.mozilla.org/SVG:pointer-events) (não se preocupe sobre ficar organizado ).
 
-Esta propriedade pode também ser usada para alcançar melhores taxas de quadros durante a rolagem. De fato, enquanto rola a página, o mouse passa sobre alguns elementos, então efeitos [hover](/pt-BR/docs/Web/CSS/:hover) se aplicam. Contudo, esses efeitos são muitas vezes despercebidas pelo usuário e principalmente resultam em uma rolagem ruim. Aplicar `pointer-events:` `none` no `body` desabilita eventos de mouse incluindo hover que resultam em uma performance melhor de rolagem.
+Esta propriedade pode também ser usada para alcançar melhores taxas de quadros durante a rolagem. De fato, enquanto rola a página, o mouse passa sobre alguns elementos, então efeitos [hover](/pt-BR/docs/Web/CSS/:hover) se aplicam. Contudo, esses efeitos são muitas vezes despercebidas pelo usuário e principalmente resultam em uma rolagem ruim. Aplicar `pointer-events: none` no `body` desabilita eventos de mouse incluindo hover que resultam em uma performance melhor de rolagem.
 
 ## Especificações
 

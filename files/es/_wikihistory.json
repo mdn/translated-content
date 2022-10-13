@@ -457,10 +457,6 @@
     "modified": "2019-03-18T21:31:18.857Z",
     "contributors": ["eddieurbina", "carllewisc"]
   },
-  "Glossary/Empty_element": {
-    "modified": "2019-03-23T22:10:52.378Z",
-    "contributors": ["juanmmendez", "DaniNz"]
-  },
   "Glossary/Encapsulation": {
     "modified": "2019-03-18T21:19:13.092Z",
     "contributors": ["PabloDeTorre"]
@@ -964,6 +960,10 @@
   "Glossary/Viewport": {
     "modified": "2019-07-22T14:35:59.639Z",
     "contributors": ["EBregains", "ffcc"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2019-03-23T22:10:52.378Z",
+    "contributors": ["juanmmendez", "DaniNz"]
   },
   "Glossary/WCAG": {
     "modified": "2019-03-18T21:19:06.839Z",
@@ -8866,10 +8866,6 @@
       "eliasrodeloso"
     ]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2019-03-23T22:09:49.599Z",
-    "contributors": ["vinyetcg", "JoaquinGiordano", "V.Morantes"]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-03-23T22:48:50.706Z",
     "contributors": ["miguelsp"]
@@ -14871,6 +14867,10 @@
   "conflicting/Web/HTML/Global_attributes": {
     "modified": "2019-03-18T21:19:21.658Z",
     "contributors": ["PabloDeTorre"]
+  },
+  "conflicting/Web/HTML/Global_attributes/contenteditable": {
+    "modified": "2019-03-23T22:09:49.599Z",
+    "contributors": ["vinyetcg", "JoaquinGiordano", "V.Morantes"]
   },
   "conflicting/Web/HTML/Global_attributes/spellcheck": {
     "modified": "2019-03-23T23:54:20.583Z",

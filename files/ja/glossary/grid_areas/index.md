@@ -4,6 +4,7 @@ slug: Glossary/Grid_Areas
 l10n:
   sourceCommit: 4a9f9d2e9c1811ce3519a7061e906db9200a5e97
 ---
+
 **グリッド領域**はグリッド上で一つ以上の {{glossary("grid cell", "グリッドセル")}} からなる長方形の領域です。グリッド領域は [ライン指定による配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) や [名前付きグリッド領域](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)で領域を定義すると作成されます。
 
 ![Image showing a highlighted grid area](1_grid_area.png)

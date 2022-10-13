@@ -2,6 +2,7 @@
 title: AudioBuffer.numberOfChannels
 slug: Web/API/AudioBuffer/numberOfChannels
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `numberOfChannels` は {{ domxref("AudioBuffer") }} インターフェイスのプロパティで、バッファーに格納された PCM データのチャンネルの数を整数で返します。

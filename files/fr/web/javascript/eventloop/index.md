@@ -139,7 +139,4 @@ Il existe certaines exceptions historiques comme `alert` ou des appels XHR synch
 
 ## Spécifications
 
-| Spécification                                                                                                                | É tat                            | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'webappapis.html#event-loops', 'Event loops')}}                             | {{Spec2('HTML WHATWG')}} |              |
-| [Boucle d'évènements pour Node.js](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#what-is-the-event-loop) | Standard évolutif                |              |
+{{Specifications}}

@@ -2,6 +2,7 @@
 title: 位置指定
 slug: Learn/CSS/CSS_layout/Positioning
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
 
 位置指定を使用すると、通常のドキュメントレイアウトフローから要素を取り出して異なるふるまいをさせることができます。 例えば、互いの上に重なったり、常にブラウザーのビューポート内の同じ場所に留まったりします。 この記事では、さまざまな {{cssxref("position")}} の値とその使い方について説明します。
@@ -39,7 +40,7 @@ HTML 要素に適用できるさまざまな種類の位置指定があります
 
 保存してリフレッシュしても、2 段落目の背景色が更新されていることを除けば、まったく違いはありません。 これは問題ありません。 前にも述べたように、静的位置指定はデフォルトのふるまいです！
 
-> **Note:** この時点でのライブの例は [`1_static-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)）。
+> **メモ:** この時点でのライブの例は [`1_static-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)）。
 
 ### 相対位置指定
 
@@ -60,7 +61,7 @@ top: 30px;
 left: 30px;
 ```
 
-> **Note:** これらのプロパティの値は、論理的に想定される任意の[単位](/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)（ピクセル、mm、rem、% など）をとることができます。
+> **メモ:** これらのプロパティの値は、論理的に想定される任意の[単位](/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)（ピクセル、mm、rem、% など）をとることができます。
 
 保存してリフレッシュすると、次のような結果になります。
 
@@ -106,7 +107,7 @@ span {
 
 クールだよね？ Ok、おそらくこれはあなたが期待していたものではなかったでしょう — 上と左を指定したのに、なぜ下と右に移動したのでしょうか？ 最初は非論理的に聞こえるかもしれませんが、これは相対的位置指定が機能する方法です — 位置指定したボックスの指定した側を反対方向に押す見えない力を考える必要があります。 例えば、`top: 30px;` と指定した場合、力がボックスの上側を押して、箱の上側が 30px 下向きに移動します。
 
-> **Note:** この時点でのライブの例は [`2_relative-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)）。
+> **メモ:** この時点でのライブの例は [`2_relative-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)）。
 
 ### 絶対位置指定
 
@@ -162,11 +163,11 @@ span {
 
 次に、要素の位置が変更されたことに注意してください。 これは、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} の絶対位置指定でのふるまいが異なるためです。 通常のドキュメントレイアウトフロー内での相対的な位置に基づいて要素を配置するのではなく, 要素がそれぞれの包含要素の側からあるべき距離を指定します。 したがって、この場合は、絶対位置指定要素は「包含要素」の上側から 30 ピクセル、左側から 30 ピクセルとなるようにします。 (この場合、「包含要素」とは、**最初の包含ブロック**（initial containing block）のことです。詳細については、以下のセクションを参照してください。)
 
-> **Note:** 必要に応じて、要素のサイズを変更するために {{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} を使用できます。 位置指定要素に `top: 0; bottom: 0; left: 0; right: 0; margin: 0;` を設定して、何が起こるか見てください！ 後で元に戻します。
+> **メモ:** 必要に応じて、要素のサイズを変更するために {{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} を使用できます。 位置指定要素に `top: 0; bottom: 0; left: 0; right: 0; margin: 0;` を設定して、何が起こるか見てください！ 後で元に戻します。
 
-> **Note:** はい、マージンはまだ位置指定要素に影響します。 しかしながら、マージンの相殺はそうではありません。
+> **メモ:** はい、マージンはまだ位置指定要素に影響します。 しかしながら、マージンの相殺はそうではありません。
 
-> **Note:** この時点でのライブの例は [`3_absolute-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)）。
+> **メモ:** この時点でのライブの例は [`3_absolute-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)）。
 
 ### 位置指定コンテキスト
 
@@ -225,7 +226,7 @@ span {
 
 位置指定要素は、{{htmlelement("body")}} 要素を基準にして配置されます。
 
-> **Note:** この時点でのライブの例は [`4_positioning-context.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)）。
+> **メモ:** この時点でのライブの例は [`4_positioning-context.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)）。
 
 ### z-index の紹介
 
@@ -307,7 +308,7 @@ p:nth-of-type(1) {
 
 `z-index` は、無単位のインデックス値のみを受け入れることに注意してください。 1 つの要素を z 軸の 23 ピクセル上に配置するように指定することはできません — そのようには機能しません。 より大きい値はより小さい値より上になり、どんな値を使うかはあなた次第です。 2 と 3 を使用するのと、300 と 40000 では同じ効果が得られます。
 
-> **Note:** この時点でのライブの例は [`5_z-index.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)）。
+> **メモ:** この時点でのライブの例は [`5_z-index.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)）。
 
 ### 固定位置指定
 
@@ -396,7 +397,7 @@ p:nth-of-type(1) {
 
 {{ EmbedLiveSample('Fixed_positioning', '100%', 400) }}
 
-> **Note:** この時点でのライブの例は [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)）。
+> **メモ:** この時点でのライブの例は [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)）。
 
 ### position: sticky
 
@@ -539,7 +540,7 @@ dt {
 
 {{ EmbedLiveSample('Sticky_2', '100%', 200) }}
 
-> **Note:** このライブの例は [`7_sticky-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html)）。
+> **メモ:** このライブの例は [`7_sticky-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html)）。
 
 ## スキルをテストしましょう!
 

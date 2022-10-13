@@ -2,6 +2,7 @@
 title: CharacterData.after()
 slug: Web/API/CharacterData/after
 ---
+
 {{APIRef("DOM")}}
 
 **`after()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `CharacterData` の親ノードの子リストの、この `CharacterData` の直後に挿入します。
@@ -43,7 +44,7 @@ h1TextNode.data;
 // "CharacterData.after()"
 ```
 
-> **Note:** 現在のノードにテキストを追加したい場合は、 [`appendData()`](/ja/docs/Web/API/CharacterData/appendData) メソッドを使用すると現在のノードにデータを追加することができます。
+> **メモ:** 現在のノードにテキストを追加したい場合は、 [`appendData()`](/ja/docs/Web/API/CharacterData/appendData) メソッドを使用すると現在のノードにデータを追加することができます。
 
 ## 仕様書
 

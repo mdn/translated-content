@@ -2,6 +2,7 @@
 title: CacheStorage
 slug: Web/API/CacheStorage
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`CacheStorage`** インターフェイスは、{{domxref("Cache")}} オブジェクトのストレージを表します。
@@ -10,7 +11,7 @@ slug: Web/API/CacheStorage
 
 - {{domxref("ServiceWorker")}} や他のタイプのワーカーまたは {{domxref("window")}} のスコープからアクセスできるすべての名前付きキャッシュのマスターディレクトリを提供します（{{SpecName('Service Workers')}} の仕様で定義されていても、サービスワーカーでのみの使用に限定されません）。
 
-  > **Note:** [Chrome と Safari は、HTTPS を介したウィンドウコンテキストにのみ \`CacheStorage\` を公開します](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063)（英語）。 SSL 証明書が設定されていない限り、{{domxref("window.caches")}} は `undefined` になります。
+  > **メモ:** [Chrome と Safari は、HTTPS を介したウィンドウコンテキストにのみ \`CacheStorage\` を公開します](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063)（英語）。 SSL 証明書が設定されていない限り、{{domxref("window.caches")}} は `undefined` になります。
 
 - 対応する {{domxref("Cache")}} オブジェクトへの文字列名のマッピングを維持します。
 
@@ -20,9 +21,9 @@ slug: Web/API/CacheStorage
 
 グローバルな {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} プロパティを介して `CacheStorage` にアクセスできます。
 
-> **Note:** CacheStorage は、信頼されていないオリジン（つまり、この定義は将来より複雑になる可能性がありますが、HTTPS を使用しないオリジン）で `SecurityError` で常に拒否します。 テストするときは、 Firefox 開発ツールの設定/歯車印メニューの「HTTP による Service Worker を有効化（ツールボックスを開いた時）」オプションをチェックすることで、この問題を回避できます。
+> **メモ:** CacheStorage は、信頼されていないオリジン（つまり、この定義は将来より複雑になる可能性がありますが、HTTPS を使用しないオリジン）で `SecurityError` で常に拒否します。 テストするときは、 Firefox 開発ツールの設定/歯車印メニューの「HTTP による Service Worker を有効化（ツールボックスを開いた時）」オプションをチェックすることで、この問題を回避できます。
 
-> **Note:** {{domxref("CacheStorage.match()")}} は便利なメソッドです。 キャッシュエントリと一致する同等の機能を実装するには、{{domxref("CacheStorage.keys()")}} からキャッシュ名の配列を返し、{{domxref("CacheStorage.open()")}} で各キャッシュを開き、{{domxref("Cache.match()")}} で必要なものと一致させます。
+> **メモ:** {{domxref("CacheStorage.match()")}} は便利なメソッドです。 キャッシュエントリと一致する同等の機能を実装するには、{{domxref("CacheStorage.keys()")}} からキャッシュ名の配列を返し、{{domxref("CacheStorage.open()")}} で各キャッシュを開き、{{domxref("Cache.match()")}} で必要なものと一致させます。
 
 ## メソッド
 

@@ -30,7 +30,7 @@ original_slug: Web/CSS/box_model
 
 Величина отступов задаётся по отдельности в разных направлениях свойствами {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }} или общим свойством {{ cssxref("margin") }}.
 
-Отступы двух соседних элементов, расположенных друг над другом или вложенных друг в друга, могут накладываться. Это называется схлопывание границ ([margin collapsing](/ru/docs/Web/CSS/margin_collapsing "ru/CSS/margin_collapsing")). Схлопываются только вертикальные отступы.
+Отступы двух соседних элементов, расположенных друг над другом или вложенных друг в друга, могут накладываться. Это называется схлопывание границ ([margin collapsing](/ru/docs/Web/CSS/margin_collapsing)). Схлопываются только вертикальные отступы.
 
 Для элементов с {{ cssxref("display") }}`: inline` (или `inline-block, inline-table`) на занимаемое по высоте место также влияет значение свойства {{ cssxref('line-height') }}.
 

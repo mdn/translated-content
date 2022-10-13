@@ -2,6 +2,7 @@
 title: AudioBuffer.copyToChannel()
 slug: Web/API/AudioBuffer/copyToChannel
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `copyToChannel()` は {{ domxref("AudioBuffer") }} インターフェイスのメソッドで、元の配列から指定の `AudioBuffer` のチャンネルへとコピーします。

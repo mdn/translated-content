@@ -25,14 +25,13 @@ Não há nenhuma limitação para a profundidade e a imbricação das listas def
   <tbody>
     <tr>
       <td>
-        <a href="/en/HTML/Content_categories" title="en/HTML/Content categories"
+        <a href="/en/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </td>
       <td>
         <a
           href="/en/HTML/Content_categories#flow_content"
-          title="en/HTML/Content categories#Flow content"
           >Flutuantes</a
         >
       </td>
@@ -179,7 +178,5 @@ A saída HTML acima será:
   - [CSS counters](/en/CSS_Counters), eficientes para guiar listas complexas aninhadas,
   - a propriedade [line-height](/en/CSS/line-height), válida para simular o atributo ultrapassado {{ htmlattrxref("compact", "ul") }},
   - a propriedade [margin](/en/CSS/margin), proveitosa para controlar a indentação da lista.
-
-{{ languages({ "en":"en/HTML/Element/ul", "de":"de/HTML/Element/ul", "ja":"ja/HTML/Element/ul", "pl":"pl/HTML/Element/ul"}) }}
 
 {{ HTMLRef }}

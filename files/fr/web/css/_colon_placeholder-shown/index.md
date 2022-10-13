@@ -183,13 +183,11 @@ input.studentid:placeholder-shown {
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#placeholder", ":placeholder-shown")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.placeholder-shown")}}
+{{Compat}}
 
 ## Voir aussi
 

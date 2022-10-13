@@ -124,7 +124,7 @@ fetch(myRequest)
 
 ## 浏览器兼容性
 
-{{Compat("api.Request")}}
+{{Compat}}
 
 ## 相关链接
 

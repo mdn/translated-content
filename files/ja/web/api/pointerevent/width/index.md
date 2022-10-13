@@ -2,6 +2,7 @@
 title: PointerEvent.width
 slug: Web/API/PointerEvent/width
 ---
+
 {{ APIRef("Pointer Events") }}
 
 {{domxref("PointerEvent")}} インターフェイスの **`width`** 読み取り専用プロパティは、CSS ピクセルで測定された、x 軸に沿ったポインタの接触ジオメトリの幅を表します。 ポインタデバイスのソース（指など）に応じて、特定のポインタに対して、各イベントは異なる値を生成することがあります。
