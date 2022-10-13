@@ -40,7 +40,7 @@ original_slug: MDN/Kuma/Troubleshooting_KumaScript_errors
 - Опечатка в имени макроса или он был переименован.
   - : Вы можете взглянуть на список известных макросов в [GitHub репозитории](https://github.com/mdn/kumascript/tree/master/macros).
 
-> **Примечание:** **Совет:** вы можете легко и быстро перейти к определённому макросу, используя [поиск по ключевым словам](http://kb.mozillazine.org/Using_keyword_searches) в Firefox. Смотрите {{SectionOnPage("/ru/docs/MDN/Contribute/Tools/KumaScript", "Использование поиска по ключевым словам для открытия шаблона страницы")}} для пошагового справочника по созданию поиска по ключевым словам.
+> **Совет:** вы можете легко и быстро перейти к определённому макросу, используя [поиск по ключевым словам](http://kb.mozillazine.org/Using_keyword_searches) в Firefox. Смотрите {{SectionOnPage("/ru/docs/MDN/Contribute/Tools/KumaScript", "Использование поиска по ключевым словам для открытия шаблона страницы")}} для пошагового справочника по созданию поиска по ключевым словам.
 
 ## TemplateExecutionError
 
