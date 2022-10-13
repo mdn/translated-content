@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Subtraction
 
 {{jsSidebar("Operators")}}
 
-减法运算符（`-`）对两个操作数进行减法，产生它们的差值。
+减法运算符（`-`）将两个操作数相减，并产生它们之差。
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
 
@@ -17,14 +17,14 @@ x - y
 
 ## 示例
 
-### 减法与数值
+### 数值减法
 
 ```js
 5 - 3     // 2
 3 - 5     // -2
 ```
 
-### 减法与非数值
+### 非数值减法
 
 ```js
 'foo' - 3 // NaN
