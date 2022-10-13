@@ -228,7 +228,7 @@ Each of these methods have similar tradeoffs:
 
 A separate update and draw method could look like the following example. For the sake of demonstration, the example is based on the third bullet point, just without using Web Workers for readability (and, let's be honest, writability).
 
-> **Предупреждение:** **Note:** This example, specifically, is in need of technical review.
+> **Предупреждение:** This example, specifically, is in need of technical review.
 
 ```js
 /*
