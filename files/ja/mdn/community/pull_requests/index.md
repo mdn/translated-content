@@ -30,25 +30,25 @@ l10n:
 コンテンツの変更がどのように行われるかにかかわらず、このリポジトリーで [プルリクエスト](https://github.com/mdn/content/pulls) として提出されます。サイトが古くならないように、迅速なレビューとマージが必要になります。これは以下のように扱われています。
 
 1. MDN の様々なスタッフやボランティアが「トピックレビューオーナー」として割り当てられています。つまり、サイトの特定のトピック領域 (例: CSS リファレンスや学習領域) に関連する pull request が来た場合、その領域のトピックレビューオーナーに割り当てられ、レビュー依頼のメールが届くことになります。これは [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS) ファイルを使用して処理されます。このファイルでは、特定のコンテンツディレクトリーがトピックレビューオーナーの GitHub ユーザーネームに割り当てられています。
-1. レビューが行われ、プルリクエストが承認されたら、レビュアーはプルリクエストをマージする必要もあります。
-1. このサイトは、コンテンツが古くならないように、 24 時間に一度、再構築されます。
+2. レビューが行われ、プルリクエストが承認されたら、レビュアーはプルリクエストをマージする必要もあります。
+3. このサイトは、コンテンツが古くならないように、 24 時間に一度、再構築されます。
 
 ## レビューのガイドライン
 
 MDN コンテンツの変更をレビューする場合、以下のガイドラインに目を通してください。ここにはかなり多くのことが書かれていますが、すぐにこの点すべてに完璧に従ったレビューができなくても気にしないでください。コンテンツが読みやすく、有用で、正しく、不適切でないことを確認することは、すべてのガイドラインに忠実に従うことよりも重要なことです。
 
 1. [MDN のコード例のガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)に目を通して、コード例がガイドラインに沿っていることを確認 してください。いずれは使用されるようになりますし、将来的にはガイドラインに対して自動的にリントを行う予定です。
-1. [MDN の執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)に目を通し、新しいテキストコンテンツのレビューに情報を使用してください。
-1. MDN の[プルリクエストガイドライン](https://github.com/mdn/content/blob/main/README.md#pull-request-etiquette)をよく理解すること。
+2. [MDN の執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)に目を通し、新しいテキストコンテンツのレビューに情報を使用してください。
+3. MDN の[プルリクエストガイドライン](https://github.com/mdn/content/blob/main/README.md#pull-request-etiquette)をよく理解すること。
    この点の要点は以下の通りです。
    - 投稿者がこの変更を行う理由を説明していない場合、あなたにはレビューのためにさらなる情報を要求する権利があります。
    - あなたは、プルリクエストが複雑すぎる場合、および/または、無関係な複数の変更を含んでいる場合、プルリクエストを閉じることができ、より小さい原始的な塊で変更を提出するように依頼する権利があります。
-1. プルリクエストをレビューするときは、 [GitHub レビューツール](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)を使用してください。投稿者にもう少し作業をしてもらう必要があるようなレビューを投稿する場合は "Request changes"、投稿が追加できる状態になっており、マージしたい場合は "Approve" を使用してください。より多くの情報が欲しい場合は、[Reviewing proposed changes in a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) も有用です。
-1. レビューコメントを書くとき、あるいは投稿者や他のコミュニティメンバーと対話するときは、常に礼儀正しく、建設的であること。私たちは MDN に貢献するとき、Mozilla の[コミュニティ参加ガイドライン](https://www.mozilla.org/ja/about/governance/policies/participation/)を遵守することを意味する行動規範に拘束されます。もし誰かが違法となりうる行為や、あなたや他の誰かを危険、歓迎されない、不快にさせるような行為に及んだ場合には、[通報](https://www.mozilla.org/ja/about/governance/policies/participation/reporting/)することが推奨されます。私たちは MDN が、私たち全員が誇りに思えるような、歓迎され、友好的なコミュニティであることを望んでいます。
-1. もしプルリクエストが小さなタイプミスや他にも小さな問題を除けば問題ない場合、提出者に修正を依頼するのではなく、自分で問題を修正したいと思うかもしれません。 PR が変更を許可するように設定されていれば、これは可能です（詳しくは [フォークから作成されたプルリクエストブランチへの変更を許可する](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork) をご覧ください）。もし、他の人のプルリクエストに変更を加える方法がわからなければ、 [@vkWeb](https://github.com/vkWeb/) がコマンドラインでの簡単な方法を書いています。 [ReviewPRCommands](https://gist.github.com/vkWeb/dcec82b079f1edc19478ddb58b0ffc5e) をご覧ください。
+4. プルリクエストをレビューするときは、 [GitHub レビューツール](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)を使用してください。投稿者にもう少し作業をしてもらう必要があるようなレビューを投稿する場合は "Request changes"、投稿が追加できる状態になっており、マージしたい場合は "Approve" を使用してください。より多くの情報が欲しい場合は、[Reviewing proposed changes in a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) も有用です。
+5. レビューコメントを書くとき、あるいは投稿者や他のコミュニティメンバーと対話するときは、常に礼儀正しく、建設的であること。私たちは MDN に貢献するとき、Mozilla の[コミュニティ参加ガイドライン](https://www.mozilla.org/ja/about/governance/policies/participation/)を遵守することを意味する行動規範に拘束されます。もし誰かが違法となりうる行為や、あなたや他の誰かを危険、歓迎されない、不快にさせるような行為に及んだ場合には、[通報](https://www.mozilla.org/ja/about/governance/policies/participation/reporting/)することが推奨されます。私たちは MDN が、私たち全員が誇りに思えるような、歓迎され、友好的なコミュニティであることを望んでいます。
+6. もしプルリクエストが小さなタイプミスや他にも小さな問題を除けば問題ない場合、提出者に修正を依頼するのではなく、自分で問題を修正したいと思うかもしれません。 PR が変更を許可するように設定されていれば、これは可能です（詳しくは [フォークから作成されたプルリクエストブランチへの変更を許可する](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork) をご覧ください）。もし、他の人のプルリクエストに変更を加える方法がわからなければ、 [@vkWeb](https://github.com/vkWeb/) がコマンドラインでの簡単な方法を書いています。 [ReviewPRCommands](https://gist.github.com/vkWeb/dcec82b079f1edc19478ddb58b0ffc5e) をご覧ください。
    - プルリクエストの "Files changed" タブで編集したいファイルを探し、三点メニュー (...) > Edit file を選択してください。
-1. 自分がレビューするよう選択されたコンテンツの変更について理解できない場合、またはその変更が自分にとって大きすぎ、複雑すぎると感じた場合でも、慌てないでください。同僚や、トピックレビューオーナーグループの誰か（誰か知っている場合）など、他の人に助けを依頼するために気軽に声をかけてみてください。もし、誰に助けを求めたらいいのかわからない場合は、私たちの `@core-yari-content` グループに ping を送って助けを求めてください。
-1. この点に関連して、ページの完全な書き換えや、いくつかの新しい参照ページやチュートリアルの追加など、大規模で複雑なコンテンツの変更を予告なしにレビューする必要があることは稀です。通常、このような変更は、コンテンツの追加が承認され、レビュー担当者がすでに割り当てられているような、特定の作業の流れの中で行われます。このような場合、PRは、これらの詳細を説明する課題にリンクすべきです。よくわからない場合は、コンテンツのレビューが必要かどうか、また変更の根拠がどこに説明されているか、投稿者に依頼してください。それでもわからない場合、あるいはコンテンツが疑わしいと思われる場合は、 [MDN Web Docs チャットルーム](https://chat.mozilla.org/#/room/#mdn:mozilla.org) で私たちのチームに助けを求めてください。
+7. 自分がレビューするよう選択されたコンテンツの変更について理解できない場合、またはその変更が自分にとって大きすぎ、複雑すぎると感じた場合でも、慌てないでください。同僚や、トピックレビューオーナーグループの誰か（誰か知っている場合）など、他の人に助けを依頼するために気軽に声をかけてみてください。もし、誰に助けを求めたらいいのかわからない場合は、私たちの `@core-yari-content` グループに ping を送って助けを求めてください。
+8. この点に関連して、ページの完全な書き換えや、いくつかの新しい参照ページやチュートリアルの追加など、大規模で複雑なコンテンツの変更を予告なしにレビューする必要があることは稀です。通常、このような変更は、コンテンツの追加が承認され、レビュー担当者がすでに割り当てられているような、特定の作業の流れの中で行われます。このような場合、PRは、これらの詳細を説明する課題にリンクすべきです。よくわからない場合は、コンテンツのレビューが必要かどうか、また変更の根拠がどこに説明されているか、投稿者に依頼してください。それでもわからない場合、あるいはコンテンツが疑わしいと思われる場合は、 [MDN Web Docs チャットルーム](https://chat.mozilla.org/#/room/#mdn:mozilla.org) で私たちのチームに助けを求めてください。
 
 注意: プルリクエストをレビューしていると、同じファイルのいくつかに触れている別のプルリクエストが、あなたがレビューしているものよりも先にマージされている場合、マージの競合に遭遇するかもしれません。 [Addressing merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts) は、あなたの助けとなる有用なリソースです。必要であれば、気軽にあなたのチームに助けを求めてください。
 
