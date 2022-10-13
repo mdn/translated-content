@@ -162,7 +162,7 @@ slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
   }
 ```
 
-这就是我们在 `clearphoto()` 方法中，我们将在下面的[清理照片框](#清理照片框)部分进行描述。
+这就是我们调用 `clearphoto()` 方法的地方，我们将在下面的[清理照片框](#清理照片框)部分进行描述。
 
 ### 清理照片框
 
