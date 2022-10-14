@@ -81,7 +81,7 @@ p.goldie {
 ```
 
 ```html
-<p class="goldie">The Mozilla community produces a lot of great software.</p>
+<p class="goldie">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
 ```
 
 {{EmbedLiveSample('Default_width', '500px', '64px')}}
@@ -105,8 +105,8 @@ p.goldie {
 ```
 
 ```html
-<div class="px_length">Width measured in px</div>
-<div class="em_length">Width measured in em</div>
+<div class="px_length">Ancho medido en px</div>
+<div class="em_length">Ancho medido en em</div>
 ```
 
 {{EmbedLiveSample('Ejemplo usando píxeles y ems', '500px', '64px')}}
@@ -122,7 +122,7 @@ p.goldie {
 ```
 
 ```html
-<div class="percent">Width in percentage</div>
+<div class="percent">Ancho en porcentaje</div>
 ```
 
 {{EmbedLiveSample('Ejemplo usando porcentaje', '500px', '64px')}}
@@ -140,7 +140,7 @@ p.maxgreen {
 ```
 
 ```html
-<p class="maxgreen">The Mozilla community produces a lot of great software.</p>
+<p class="maxgreen">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
 ```
 
 {{EmbedLiveSample('Ejemplo usando "max-content"', '500px', '64px')}}
@@ -157,7 +157,7 @@ p.minblue {
 ```
 
 ```html
-<p class="minblue">The Mozilla community produces a lot of great software.</p>
+<p class="minblue">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
 ```
 
 {{EmbedLiveSample('Ejemplo usando "min-content"', '500px', '155px')}}
