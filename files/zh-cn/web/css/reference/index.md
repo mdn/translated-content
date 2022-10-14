@@ -5,7 +5,7 @@ slug: Web/CSS/Reference
 
 {{CSSRef}}
 
-使用此**CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_Functions)以及[@ 规则](/zh-CN/docs/Web/CSS/At-rule)。你也可以浏览[CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
+使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_Functions)以及[@ 规则](/zh-CN/docs/Web/CSS/At-rule)。你也可以浏览[CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
 
 ## 基本规则语法
 
@@ -29,7 +29,7 @@ properties-list ::=
     [property : value] [; properties-list]
 ```
 
-参阅后面的 [_selector_](#选择器)、[_pseudo-element_](#伪类)、[_pseudo-class_](#伪元素) 列表。每个指定*值*的语法取决于为每个指定*属性*定义的数据类型。
+参阅后面的 [_选择器_](#选择器)、[_伪元素_](#伪元素)、[_伪类_](#伪类) 列表。每个指定*值*的语法取决于为每个指定*属性*定义的数据类型。
 
 #### 样式规则示例
 
