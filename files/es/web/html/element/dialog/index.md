@@ -6,7 +6,7 @@ original_slug: Web/HTML/Elemento/dialog
 ---
 {{HTMLRef}}
 
-El **elemento** **HTML `<dialog>` **representa una caja de diálogo u otro componente interactivo, como inspector o ventana.
+El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro componente interactivo, como inspector o ventana.
 
 <table class="properties">
   <tbody>

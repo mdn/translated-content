@@ -12,7 +12,7 @@ original_slug: Web/HTML/Elemento/dl
 ---
 {{HTMLRef}}
 
-El elemento **HTML `<dl>` **representa una lista descriptiva. El elemento encierra una lista de grupos de términos (especificados con el uso del elemento {{HTMLElement("dt")}}) y de descripciones (proveídas con elementos {{HTMLElement("dd")}}). Algunos usos comunes para este elemento son implementar un glosario o para desplegar metadatos (lista de pares llave-valor).
+El elemento **HTML `<dl>`** representa una lista descriptiva. El elemento encierra una lista de grupos de términos (especificados con el uso del elemento {{HTMLElement("dt")}}) y de descripciones (proveídas con elementos {{HTMLElement("dd")}}). Algunos usos comunes para este elemento son implementar un glosario o para desplegar metadatos (lista de pares llave-valor).
 
 {{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
 

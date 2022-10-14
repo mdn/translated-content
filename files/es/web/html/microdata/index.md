@@ -67,15 +67,15 @@ _[itemref](/es/docs/Web/HTML/Global_attributes/itemref)_: las propiedades que no
 
 ```html
 <div itemscope itemtype="http://schema.org/SoftwareApplication">
-  <span itemprop="name">Angry Birds -
+  <span itemprop="name">Angry Birds</span> -
 
-  REQUIRES <span itemprop="operatingSystem">ANDROID<br>
+  REQUIRES <span itemprop="operatingSystem">ANDROID</span><br>
   <link itemprop="applicationCategory" href="http://schema.org/GameApplication"/>
 
   <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
     RATING:
-    <span itemprop="ratingValue">4.6 (
-    <span itemprop="ratingCount">8864 ratings )
+    <span itemprop="ratingValue">4.6</span> (
+    <span itemprop="ratingCount">8864</span> ratings )
   </div>
 
   <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">

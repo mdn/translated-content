@@ -247,6 +247,8 @@ Cuando se clicea sobre un {{HTMLElement("a")}} las consecuencias varían de acue
 
 ¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
 
+¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
+
 | Navegadores de escritorio                                                                                                                             | Windows 8.1 | OS X 10.9                       |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------- |
 | Firefox 30.0                                                                                                                                          | Si          | Si                              |
@@ -254,6 +256,8 @@ Cuando se clicea sobre un {{HTMLElement("a")}} las consecuencias varían de acue
 | Safari 7.0.5                                                                                                                                          | N/A         | Sólo cuando tiene un `tabindex` |
 | Internet Explorer 11                                                                                                                                  | Si          | N/A                             |
 | Presto (Opera 12)                                                                                                                                     | Si          | Si                              |
+
+¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
 
 ¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
 

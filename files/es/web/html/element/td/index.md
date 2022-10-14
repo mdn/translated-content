@@ -73,13 +73,9 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 - {{htmlattrdef("char")}} {{Deprecated_inline}} in {{HTMLVersionInline(4.01)}}, {{obsolete_inline}} in {{HTMLVersionInline(5)}}
 
-  - :&#x20;
+  - : Este atributo se utiliza para establecer el carácter para alinear las celdas de una columna . Los valores típicos de esto incluyen un punto (. ) al intentar alinear los números o valores monetarios . Si { { htmlattrxref ( " align " , " td " ) } } no está ajustado a char, este atributo se ignora.
 
-    ```
-    Este atributo se utiliza para establecer el carácter para alinear las celdas de una columna . Los valores típicos de esto incluyen un punto (. ) al intentar alinear los números o valores monetarios . Si { { htmlattrxref ( " align " , " td " ) } } no está ajustado a char, este atributo se ignora.
-    ```
-
-    > **Nota:**No usar este atributo ya que está obsoleto (y no soportado) en las últimas versiones estándares). Para lograr el mismo que el {{htmlattrxref("char", "thead")}}, en CSS3, puedes usar el character set usando el atributo {{htmlattrxref("char", "th")}} como el valor de la propiedad {{cssxref("text-align")}} {{unimplemented_inline}}.
+    > **Nota:** No usar este atributo ya que está obsoleto (y no soportado) en las últimas versiones estándares). Para lograr el mismo que el {{htmlattrxref("char", "thead")}}, en CSS3, puedes usar el character set usando el atributo {{htmlattrxref("char", "th")}} como el valor de la propiedad {{cssxref("text-align")}} {{unimplemented_inline}}.
 
 - {{htmlattrdef("charoff")}} {{Deprecated_inline}} in {{HTMLVersionInline(4.01)}}, {{obsolete_inline}} in {{HTMLVersionInline(5)}}
 
@@ -119,7 +115,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
   - :&#x20;
     Este atributo se utiliza para definir una anchura de celda recomendada. Propiedades CELLSPACING y cellpadding pueden añadir espacio adicional, y el elemento { { HTMLElement ( "col " ) } } anchura pueden también tener algún efecto . En general, si el ancho de una columna es demasiado estrecha para mostrar una célula particular correctamente, y por lo tanto las células en el mismo, se puede ensanchar cuando se muestra .
 
-    > **Nota:**Do not use this attribute in the latest standard: instead set the CSS {{cssxref("width")}} property.
+    > **Nota:** Do not use this attribute in the latest standard: instead set the CSS {{cssxref("width")}} property.
 
 ## DOM interfaz
 

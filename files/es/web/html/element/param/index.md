@@ -12,10 +12,14 @@ original_slug: Web/HTML/Elemento/param
 
 - **param** de "parameter" = parámetro. Permite especificar parámetros de ejecución para un objeto.
   - : **Sus etiquetas son**: `<param>` (solo tiene una).
+  
     **Crea una caja**: No.
+    
     **Está definido como**: .
-    **Puede contener**: Nada.
-    **Puede ser contenido por**: El elemento [object](es/HTML/Elemento/object), y el desaprobado [applet](es/HTML/Elemento/applet).
+    
+    - **Puede contener**: Nada.
+    
+      - : **Puede ser contenido por**: El elemento [object](es/HTML/Elemento/object), y el desaprobado [applet](es/HTML/Elemento/applet).
 
 #### Atributos
 

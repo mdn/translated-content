@@ -8,7 +8,7 @@ original_slug: Web/HTML/Elemento/table
 
 El _Elemento de Tabla HTML_ (`<table>`) representa datos en dos o mas dimensiones.
 
-> **Nota:**Antes de la creación de [CSS](/es/docs/CSS), los elementos HTML {{HTMLElement("table")}} eran frecuentemente utilizados para la disposición (posicionamiento) de una página. Este uso ha sido desalentado desde HTML 4, y el elemento no debe ser usado para dichos fines.
+> **Nota:** Antes de la creación de [CSS](/es/docs/CSS), los elementos HTML {{HTMLElement("table")}} eran frecuentemente utilizados para la disposición (posicionamiento) de una página. Este uso ha sido desalentado desde HTML 4, y el elemento no debe ser usado para dichos fines.
 
 ## Contexto de uso
 

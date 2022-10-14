@@ -22,6 +22,8 @@ El elemento {{HTMLElement("input")}} del tipo **`"range"`** permite que el usuar
 
 ### Ejemplo
 
+### Ejemplo
+
 ```html
 <input type="range">
 ```
@@ -118,6 +120,8 @@ Por defecto, cada salto tiene valor 1, es decir el valor será siempre un númer
 ```
 
 {{EmbedLiveSample("Granularity_sample1", 600, 40)}}
+
+#### Valor `any`
 
 #### Valor `any`
 
