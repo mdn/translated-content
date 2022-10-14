@@ -114,7 +114,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
   - : This attribute is used to shift column data to the right of the character specified by the **char** attribute. Its value specifies the length of this shift.
 
-    > **Nota:**No usar este atributo, ya que no está soportado por el último estándar.
+    > **Nota:** No usar este atributo, ya que no está soportado por el último estándar.
 
 <!---->
 

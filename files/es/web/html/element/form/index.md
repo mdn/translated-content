@@ -40,7 +40,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
   - : Indica cuales de los controles en este formulario puede tener sus valores automáticamente completados por el navegador. Esta configuración puede ser sobreescrita por un atributo `autocomplete` en un elemento que pertenezca al formulario:
 
-    - `off': El usuario debe ingresar explicitamente cada valor dentro de cada campo por cada uso, o el documento provee su propio método de autocompletado; el navegador no autocompleta las entradas.
+    - `off`: El usuario debe ingresar explicitamente cada valor dentro de cada campo por cada uso, o el documento provee su propio método de autocompletado; el navegador no autocompleta las entradas.
     - `on`: El navegador puede completar automáticamente valores basados en lo que el usuario ha ingresado durante entradas previas al formulario.
 
     > **Nota:** si se establece `autocomplete` a un valor de `off` en un formulario porque el documento provee su propio auto-completado entonces también se debería establecer `autocomplete` al valor `off` para cada uno de los elementos de formulario `input` que el documento pueda autocompletar [Notas para Google Chrome](#notas_para_google_chrome).
@@ -52,7 +52,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
     - `application/x-www-form-urlencoded`: El valor por defecto si un atributo no está especificado.
     - `multipart/form-data`: Usar este valor si se está usando el elemento {{ HTMLElement("input") }} con el atributo `type` ajustado a "file".
-    -`text/plain` (HTML5)
+    - `text/plain` (HTML5)
 
     Este valor puede ser sobreescrito por un atributo{{ htmlattrxref("formenctype", "button") }}en un {{ HTMLElement("button") }} o un elemento {{ HTMLElement("input") }}.
 
