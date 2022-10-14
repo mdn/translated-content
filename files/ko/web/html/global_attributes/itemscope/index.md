@@ -78,7 +78,7 @@ translation_of: Web/HTML/Global_attributes/itemscope
 
 ### 예제
 
-다음 예제는 네 개의 `itemscope` 특성을 가지고 있습니다. 각각의 `itemscope` 특성은 대응하는 `itemtype` 특성의 범위를 지정합니다. `itemtype`, `Recipe`, `AggregateRating`, `NutritionInformation`은 요리법에 관한 [schema.org](https://www.schema.org) 구조화된 데이터로, 첫 번째 `itemtype`의 값인 http\://schema.org/Recipe에 정의되어 있습니다.
+다음 예제는 네 개의 `itemscope` 특성을 가지고 있습니다. 각각의 `itemscope` 특성은 대응하는 `itemtype` 특성의 범위를 지정합니다. `itemtype`, `Recipe`, `AggregateRating`, `NutritionInformation`은 요리법에 관한 [schema.org](https://www.schema.org) 구조화된 데이터로, 첫 번째 `itemtype`의 값인 `http://schema.org/Recipe` 에 정의되어 있습니다.
 
 ```html
 <div itemscope itemtype="http://schema.org/Recipe">
