@@ -29,7 +29,7 @@ properties-list ::=
     [property : value] [; properties-list]
 ```
 
-参阅后面的 [_选择器_](#选择器)、[_伪元素_](#伪元素)、[_伪类_](#伪类) 列表。每个指定*值*的语法取决于为每个指定*属性*定义的数据类型。
+参阅后面的[_选择器_](#选择器)、[_伪元素_](#伪元素)、[_伪类_](#伪类)列表。每个指定*值*的语法取决于为每个指定*属性*定义的数据类型。
 
 #### 样式规则示例
 
@@ -51,7 +51,7 @@ div.menu-bar li:hover > ul {
 
 ## 索引
 
-> **备注：** 此索引中的属性名称**不包括**与 CSS 标准名称不同的 [JavaScript 名称](/zh-CN/docs/Web/CSS/Reference#索引)。
+> **备注：** 此索引中的属性名称**不包括**与 CSS 标准名称不同的 [JavaScript 名称](#索引)。
 
 {{CSS_Ref}}
 
@@ -61,7 +61,7 @@ div.menu-bar li:hover > ul {
 
 ### 基本选择器
 
-[基本选择器](/zh-CN/docs/Web/CSS/CSS_Selectors#Simple_selectors)是选择器中最初级的，通常由它们的组合构成其他更复杂的选择器。
+[基本选择器](/zh-CN/docs/Web/CSS/CSS_Selectors#基本选择器)是选择器中最初级的，通常由它们的组合构成其他更复杂的选择器。
 
 - [通配选择器](/zh-CN/docs/Web/CSS/Universal_selectors) `*`
 - [元素选择器](/zh-CN/docs/Web/CSS/Type_selectors) `elementname`（元素名称）
@@ -108,7 +108,7 @@ div.menu-bar li:hover > ul {
 - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
 - [层叠](/zh-CN/docs/Web/CSS/Cascade)
 - [注释](/zh-CN/docs/Web/CSS/Comments)
-- [解释器](/zh-CN/docs/Glossary/Descriptor_(CSS))
+- [解释器](</zh-CN/docs/Glossary/Descriptor_(CSS)>)
 - [继承](/zh-CN/docs/Web/CSS/inheritance)
 - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
 - [优先级](/zh-CN/docs/Web/CSS/Specificity)
