@@ -33,7 +33,7 @@ const resizeObserver = new ResizeObserver((entries) => {
 resizeObserver.observe(divElem);
 ```
 
-## 参考
+## 规范
 
 {{Specifications}}
 
