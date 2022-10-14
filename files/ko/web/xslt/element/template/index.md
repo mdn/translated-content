@@ -14,12 +14,12 @@ original_slug: Web/XSLT/template
 
 ```
 <xsl:template
-	match=PATTERN
-	name=NAME
-	mode=NAME
-	priority=NUMBER>
-	<xsl:param> [optional]
-	TEMPLATE
+  match=PATTERN
+  name=NAME
+  mode=NAME
+  priority=NUMBER>
+  <xsl:param> [optional]
+  TEMPLATE
 </xsl:template>
 ```
 

@@ -27,7 +27,6 @@ translation_of: Web/XSLT/Element
 
 뒤따르는 요소 주석은 설명과 문법 나열, 필수 속성과 선택 속성 목록, 타입과 자리 설명, W3C 권고안 속 요소 소스와 현 Gecko의 지원 정도에 대한 설명을 포함합니다.
 
-
 - [`<xsl:apply-imports>`](/ko/docs/Web/XSLT/Element/apply-imports)
 - [`<xsl:apply-templates>`](/ko/docs/Web/XSLT/Element/apply-templates)
 - [`<xsl:attribute>`](/ko/docs/Web/XSLT/Element/attribute)

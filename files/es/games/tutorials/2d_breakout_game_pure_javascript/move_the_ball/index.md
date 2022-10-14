@@ -4,7 +4,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola
 ---
-{{GamesSidebar}}{{IncludeSubnav("/es-ES/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls")}}
 
