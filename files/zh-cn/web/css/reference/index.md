@@ -43,7 +43,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-有关 CSS 选择器语法的初学者介绍，请参阅 [CSS 选择器教程](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)。注意，规则定义中的任何 [CSS 语法](/zh-CN/docs/Web/CSS/syntax)错误都将使整个规则无效，无效的规则将被浏览器忽略。注意 CSS 定义完全是[基于（ASCII）文本](https://www.w3.org/TR/css-syntax-3/#intro)的，而 DOM-CSS / CSSOM（规则管理系统） 是[基于对象](https://www.w3.org/TR/cssom/#introduction)的。
+有关 CSS 选择器语法的初学者介绍，请参阅 [CSS 选择器教程](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)。注意，规则定义中的任何 [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)错误都将使整个规则无效，无效的规则将被浏览器忽略。注意 CSS 定义完全是[基于（ASCII）文本](https://www.w3.org/TR/css-syntax-3/#intro)的，而 DOM-CSS / CSSOM（规则管理系统） 是[基于对象](https://www.w3.org/TR/cssom/#introduction)的。
 
 ### @规则语法
 
@@ -51,7 +51,7 @@ div.menu-bar li:hover > ul {
 
 ## 索引
 
-> **备注：** 此索引中的属性名称**不包括**与 CSS 标准名称不同的 [JavaScript 名称](/zh-CN/docs/Web/CSS/CSS_Properties_Reference)。
+> **备注：** 此索引中的属性名称**不包括**与 CSS 标准名称不同的 [JavaScript 名称](/zh-CN/docs/Web/CSS/Reference#索引)。
 
 {{CSS_Ref}}
 
@@ -78,13 +78,13 @@ div.menu-bar li:hover > ul {
 
 组合选择器是在两个或多个简单选择器之间建立关系的选择器，例如“`A` 是 `B` 的子代”或“`A` 与 `B` 相邻”，它们构成了比较复杂的选择器。
 
-- [相邻兄弟选择器](/zh-CN/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
+- [相邻兄弟选择器](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
   - : 指定 `A` 和 `B` 选择的元素具有相同的父元素，并且 `B` 选择的元素在水平方向上紧随 `A` 选择的元素。
-- [普通兄弟选择器](/zh-CN/docs/Web/CSS/General_sibling_selectors) `A ~ B`
+- [普通兄弟选择器](/zh-CN/docs/Web/CSS/General_sibling_combinator) `A ~ B`
   - : 指定由 `A` 和 `B` 选择的元素共享相同的父元素，并指定 `A` 选择的元素在 `B` 选择的元素之前（但不一定紧接在 `B` 之前）。
-- [子选择器](/zh-CN/docs/Web/CSS/Child_selectors) `A > B`
+- [子选择器](/zh-CN/docs/Web/CSS/Child_combinator) `A > B`
   - : 指定 `B` 选择的元素是 `A` 选择的元素的直接子元素。
-- [后代选择器](/zh-CN/docs/Web/CSS/Descendant_selectors) `A B`
+- [后代选择器](/zh-CN/docs/Web/CSS/Descendant_combinator) `A B`
   - : 指定 `B` 选择的元素是 `A` 选择的元素的后代，但不一定是直接子代。
 - [列选择器](/zh-CN/docs/Web/CSS/Column_combinator) `A || B` {{Experimental_Inline}}
   - : 指定 `B` 选择的元素在 `A` 指定的表格列中，跨越多列的元素被认为是所有这些列的成员。
@@ -128,8 +128,8 @@ div.menu-bar li:hover > ul {
 ### 布局
 
 - [块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
-- [盒模型](/zh-CN/docs/Web/CSS/box_model)
-- [包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)
+- [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [包含块](/zh-CN/docs/Web/CSS/Containing_block)
 - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
 - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 - [替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
@@ -157,7 +157,7 @@ div.menu-bar li:hover > ul {
 ## 参见
 
 - [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)（以 `-moz` 前缀）
-- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/Webkit_Extensions)（大多数时候以 `-webkit` 前缀）
+- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)（大多数时候以 `-webkit` 前缀）
 - [Microsoft CSS 扩展](/zh-CN/docs/Web/CSS/Microsoft_CSS_extensions)（以 `-ms` 前缀）
 
 ## 外部链接
