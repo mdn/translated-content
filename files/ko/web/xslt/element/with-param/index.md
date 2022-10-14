@@ -14,7 +14,7 @@ original_slug: Web/XSLT/with-param
 
 ```
 <xsl:with-param name=NAME select=EXPRESSION>
-	TEMPLATE
+  TEMPLATE
 </xsl:with-param>
 ```
 

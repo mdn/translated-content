@@ -14,7 +14,7 @@ original_slug: Web/XSLT/call-template
 
 ```
 <xsl:call-template name=NAME>
-	<xsl:with-param> [optional]
+  <xsl:with-param> [optional]
 </xsl:call-template>
 ```
 
