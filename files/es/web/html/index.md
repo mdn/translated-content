@@ -34,7 +34,11 @@ Los siguientes artículos pueden ayudarte a obtener más información sobre HTML
 - Referencia HTML
   - : En nuestra extensa sección [referencia HTML](/es/docs/Web/HTML/Referencia) encontrarás los detalles sobre cada elemento y atributo en HTML.
 
-> **Observación:** ### ¿Quieres transformarte en un desarrollador de la interfaz de usuario web?Hemos elaborado un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.[Empieza aquí](/docs/Learn/Front-end_web_developer)
+> **Observación:** 
+> ### ¿Quieres transformarte en un desarrollador de la interfaz de usuario web?
+> Hemos elaborado un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
+>
+> [Empieza aquí](/docs/Learn/Front-end_web_developer)
 
 ## Tutoriales para principiantes
 
