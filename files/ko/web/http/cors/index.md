@@ -287,7 +287,7 @@ function callOtherDomain() {
 }
 ```
 
-7행은 쿠키와 함께 호출하기위한 {{domxref("XMLHttpRequest")}} 의 플래그를 보여줍니다. 이 플래그는 `withCredentials` 라고 불리며 부울 값을 갖습니다. 기본적으로 호출은 쿠키 없이 이루어집니다. 이것은 simple `GET` request이기 때문에 preflighted 되지 않습니다. 그러나 브라우저는 {{HTTPHeader("Access-Control-Allow-Credentials")}}: `true` 헤더가 없는 응답을 **거부합니다**.\*\* **따라서 호출된 웹 컨텐츠에 응답을 제공하지 **않습니다\*\*.
+7행은 쿠키와 함께 호출하기위한 {{domxref("XMLHttpRequest")}} 의 플래그를 보여줍니다. 이 플래그는 `withCredentials` 라고 불리며 부울 값을 갖습니다. 기본적으로 호출은 쿠키 없이 이루어집니다. 이것은 simple `GET` request이기 때문에 preflighted 되지 않습니다. 그러나 브라우저는 {{HTTPHeader("Access-Control-Allow-Credentials")}}: `true` 헤더가 없는 응답을 **거부합니다**. 따라서 호출된 웹 컨텐츠에 응답을 제공하지 **않습니다.**
 
 ![](cred-req-updated.png)
 
