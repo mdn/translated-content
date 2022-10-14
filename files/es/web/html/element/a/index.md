@@ -257,8 +257,6 @@ Cuando se clicea sobre un {{HTMLElement("a")}} las consecuencias varían de acue
 
 ¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
 
-¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
-
 | Navegadores móviles | iOS 7.1.2                       | Android 4.4.4                   |
 | ------------------- | ------------------------------- | ------------------------------- |
 | Safari Mobile       | Sólo cuando tiene un `tabindex` | N/A                             |
