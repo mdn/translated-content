@@ -5,7 +5,7 @@ slug: Web/API/ResizeObserverEntry/contentRect
 
 {{APIRef("Resize Observer API")}}
 
-{{domxref("ResizeObserverEntry")}} 接口的只读属性 `contentRect` 在回调运行时，返回一个包含被监听元素大小的 {{domxref('DOMRectReadOnly')}} 对象。注意，该属性比 {{domxref("ResizeObserverEntry.borderBoxSize")}} 或 {{domxref("ResizeObserverEntry.contentBoxSize")}} 有着更好的支持，但是它是在 Resize Observer API 早期实现遗留下来的，处于对浏览器的兼容性原因，仍然保留在规范中，并且在未来的版本中可能被弃用。
+{{domxref("ResizeObserverEntry")}} 接口的只读属性 `contentRect` 在回调运行时，返回一个包含被监听元素大小的 {{domxref('DOMRectReadOnly')}} 对象。注意，该属性比 {{domxref("ResizeObserverEntry.borderBoxSize")}} 或 {{domxref("ResizeObserverEntry.contentBoxSize")}} 有着更好的支持，但是它是在 Resize Observer API 早期实现遗留下来的，出于对浏览器的兼容性原因，仍然保留在规范中，并且在未来的版本中可能被弃用。
 
 ## 值
 
