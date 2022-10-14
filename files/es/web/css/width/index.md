@@ -57,7 +57,6 @@ width: unset;
 
 ## Problemas de accesibilidad
 
-Ensure that elements set with a `width` aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.
 Asegúrese de que los elementos establecidos con un `width` no se trunquen y/o no oscurezcan otro contenido cuando se amplía la página para aumentar el tamaño del texto.
 
 - [MDN Entendiendo WCAG, Pauta 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
@@ -133,7 +132,7 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+  width: intrinsic;           /* Safari/WebKit usa un nombre no estándar */
   width: -moz-max-content;    /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   width: max-content;
@@ -173,7 +172,7 @@ p.minblue {
 
 ## Véase también
 
-- [El box model](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [El modelo de caja](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 - {{cssxref("height")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}
