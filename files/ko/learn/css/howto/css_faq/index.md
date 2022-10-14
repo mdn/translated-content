@@ -62,7 +62,7 @@ h1 { color: red; }
 h1 { color: black; }
 ```
 
-이것은 CSS 2에서 변경되었다. 키워드 [initial](https://developer.mozilla.org/es/CSS/initial)은 이제 CSS 속성에서 유효한 값이다. 지정된 속성의 CSS 사양에 정의 된 기본값으로 재설정된다.
+이것은 CSS 2에서 변경되었다. 키워드 [initial](/ko/CSS/initial)은 이제 CSS 속성에서 유효한 값이다. 지정된 속성의 CSS 사양에 정의 된 기본값으로 재설정된다.
 
 ```
 /* Heading default color is black */
