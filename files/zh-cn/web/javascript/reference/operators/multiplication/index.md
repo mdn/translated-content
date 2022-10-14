@@ -24,7 +24,7 @@ x * y
 -2 * 2     // -4
 ```
 
-### Infinity 乘法
+### 与 Infinity 相乘
 
 ```js
 Infinity * 0         // NaN
