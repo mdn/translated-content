@@ -14,11 +14,11 @@ original_slug: Web/HTML/Elemento/style
   - : **Sus etiquetas son**: `<style>` y `</style>` (ambas obligatorias).
   
     **Está definido como**: Elemento [de cabecera](es/HTML/Elemento/Tipos_de_elementos#decabecera).
-    
+
     **Crea una caja**: No.
-    
+
     **Puede contener**: Declaraciones de estilo.
-    
+
     **Debe ser contenido por**: Elementos [head](es/HTML/Elemento/Tipos_de_elementos#head).
 
 #### Atributos
@@ -40,7 +40,7 @@ original_slug: Web/HTML/Elemento/style
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          ><span style="color: green">title</span></a
+          >title</a
         >
       </td>
       <td>
@@ -58,7 +58,7 @@ original_slug: Web/HTML/Elemento/style
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          ><span style="color: green">lang</span></a
+          >lang</a
         >
       </td>
       <td>
@@ -84,7 +84,7 @@ original_slug: Web/HTML/Elemento/style
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">dir</span></a
+          >dir</a
         >
       </td>
       <td>

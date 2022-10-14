@@ -14,11 +14,11 @@ original_slug: Web/HTML/Elemento/param
   - : **Sus etiquetas son**: `<param>` (solo tiene una).
   
     **Crea una caja**: No.
-    
+
     **Está definido como**: .
-    
+
     - **Puede contener**: Nada.
-    
+
       - : **Puede ser contenido por**: El elemento [object](es/HTML/Elemento/object), y el desaprobado [applet](es/HTML/Elemento/applet).
 
 #### Atributos
@@ -38,7 +38,7 @@ original_slug: Web/HTML/Elemento/param
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          ><span style="color: green">id</span></a
+          >id</a
         >
       </td>
       <td>
@@ -73,7 +73,7 @@ original_slug: Web/HTML/Elemento/param
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-name-PARAM"
-          ><span style="color: green">name</span></a
+          >name</a
         >
       </td>
       <td>
@@ -83,7 +83,7 @@ original_slug: Web/HTML/Elemento/param
       <td>
         Un nombre de parámetro de ejecución. Puede ser sensible a
         <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> (o
-        no). <s>Por defecto</s>: Debe indicarlo el autor.
+        no). Por defecto: Debe indicarlo el autor.
       </td>
     </tr>
     <tr>
@@ -91,7 +91,7 @@ original_slug: Web/HTML/Elemento/param
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-value-PARAM"
-          ><span style="color: green">value</span></a
+          >value</a
         >
       </td>
       <td>Especifica un valor para el parámetro referenciado por name</td>
@@ -102,7 +102,7 @@ original_slug: Web/HTML/Elemento/param
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-valuetype"
-          ><span style="color: green">valuetype</span></a
+          >valuetype</a
         >
       </td>
       <td>especifica el tipo de atributo value.</td>
@@ -116,7 +116,7 @@ original_slug: Web/HTML/Elemento/param
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-type-PARAM"
-          ><span style="color: green">type</span></a
+          >type</a
         >
       </td>
       <td>

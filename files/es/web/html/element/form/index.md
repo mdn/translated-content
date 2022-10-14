@@ -52,7 +52,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
     - `application/x-www-form-urlencoded`: El valor por defecto si un atributo no está especificado.
     - `multipart/form-data`: Usar este valor si se está usando el elemento {{ HTMLElement("input") }} con el atributo `type` ajustado a "file".
-    -` text/plain` (HTML5)
+    -`text/plain` (HTML5)
 
     Este valor puede ser sobreescrito por un atributo{{ htmlattrxref("formenctype", "button") }}en un {{ HTMLElement("button") }} o un elemento {{ HTMLElement("input") }}.
 

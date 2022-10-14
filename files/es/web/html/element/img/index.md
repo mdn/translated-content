@@ -94,7 +94,7 @@ Este elemento incluye atributos globales.
 
   - : Este atributo boleano indica que la imagen es parte del mapa del lado del servidor. Así que, se envían las coordenadas precisas de un clic.
 
-    > **Nota:** Este atributo está permitido solo si el elemento` <img>` es descendiente de un elemento {{htmlelement("a")}} con un atributo {{htmlattrxref("href","a")}} válido.
+    > **Nota:** Este atributo está permitido solo si el elemento`<img>` es descendiente de un elemento {{htmlelement("a")}} con un atributo {{htmlattrxref("href","a")}} válido.
 
 - {{htmlattrdef("longdesc")}}
   - : La URL como descripción de una imagen mostrada, complementa al texto de {{htmlattrdef("alt", "img")}}.
@@ -114,8 +114,8 @@ Este elemento incluye atributos globales.
 
   - : Una lista de una o más cadenas separadas por comas indicando el tamaño de la fuente. Cada tamaño de la fuente consiste en:
 
-    1.  Codición de medios. Debe omitirse en el último ítem.
-    2.  Valor del tamaño.
+    1. Codición de medios. Debe omitirse en el último ítem.
+    2. Valor del tamaño.
 
     El valor del tamaño de la fuente especifica el tamaño de la imagen incrustada. Se usa el tamaño actual de la fuente para seleccionar las fuentes soportadas por el atributo `srcset`, cuando esas fuentes son descritas usando el ancho (width). El tamaño de la fuente afecta al tamaño de la imagen (la imagen muestra tamaño si no se aplican estilos CSS). Si no hay atributo `srcset`, o no contiene valores con el ancho definido, entonces el atributo sizes no funciona.
 
@@ -125,8 +125,8 @@ Este elemento incluye atributos globales.
 
   - : Una lista de una o más cadenas separadas por comas indicando las posibles fuentes para usar. Cada cadena está compuesta por:
 
-    1.  URL de la imagen
-    2.  Opcionalmente, espacios en blanco seguidos de:
+    1. URL de la imagen
+    2. Opcionalmente, espacios en blanco seguidos de:
 
         - Un ancho, que es un entero positivo seguido directamente por `'w'`. El ancho está dividido por el tamaño de la fuente dada en el atributo `sizes` para calcular la densidad del píxel.
         - Densidad del píxel, un positivo decimal seguido directamente de `'x'`.
@@ -198,7 +198,7 @@ El atributo `src` es un candidato en agentes de usuario `1x` que soporta `srcset
 
 ## Ejemplo 4: Uso de atributos `srcset` y `sizes`
 
-El atributo` src` es ignorado en agentes de usuario que soportan `srcset` cuando usan descriptores `'w'`. Cuando la condición de media `(min-width: 600px)` encaja, la imagen será 200px de ancho, de otra manera será 50vw de ancho (50% del ancho del dispositivo).
+El atributo`src` es ignorado en agentes de usuario que soportan `srcset` cuando usan descriptores `'w'`. Cuando la condición de media `(min-width: 600px)` encaja, la imagen será 200px de ancho, de otra manera será 50vw de ancho (50% del ancho del dispositivo).
 
 ```html
 <img src="clock-demo-thumb-200.png"
@@ -211,7 +211,7 @@ El atributo` src` es ignorado en agentes de usuario que soportan `srcset` cuando
 
 | Especificación                                                                                                                           | Estado                               | Comentario                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}} | {{Spec2('Referrer Policy')}} | Añadida la política del atributo` referrer` |
+| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}} | {{Spec2('Referrer Policy')}} | Añadida la política del atributo`referrer` |
 | {{SpecName('HTML WHATWG', 'embedded-content.html#the-img-element', '&lt;img&gt;')}}                         | {{Spec2('HTML WHATWG')}}     |                                             |
 | {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-img-element', '&lt;img&gt;')}}                         | {{Spec2('HTML5 W3C')}}         |                                             |
 | {{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}                                             | {{Spec2('HTML4.01')}}         |                                             |

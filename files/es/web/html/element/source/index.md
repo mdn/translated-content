@@ -14,7 +14,7 @@ El **elemento HTML `<source>`** especifica recursos de medios múltiples para lo
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)y envíenos una solicitud de pull.
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíenos una solicitud de pull.
 
 <table class="properties">
   <tbody>
@@ -78,16 +78,16 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
   - : Una lista de una o más cadenas separadas por comas que indican un conjunto de posibles imágenes representadas por la fuente para que las utilice el navegador. Cada cadena se compone de:
 
-    1.  una URL a una imagen,
-    2.  un descriptor de ancho, que es un entero positivo seguido directamente por `'w'`. El valor predeterminado, si falta, es el infinito.
-    3.  un descriptor de densidad de píxeles, que es un número flotante positivo seguido directamente por `'x'`. El valor predeterminado, si falta, es `1x`.
+    1. una URL a una imagen,
+    2. un descriptor de ancho, que es un entero positivo seguido directamente por `'w'`. El valor predeterminado, si falta, es el infinito.
+    3. un descriptor de densidad de píxeles, que es un número flotante positivo seguido directamente por `'x'`. El valor predeterminado, si falta, es `1x`.
 
     Cada cadena en la lista debe tener al menos un descriptor de ancho o un descriptor de densidad de píxeles para que sea válido. Entre los elementos de la lista, solo debe haber una cadena que contenga la misma tupla de descriptor de ancho y descriptor de densidad de píxeles.
     El navegador elige la imagen más adecuada para mostrar en un momento determinado.
     El atributo `srcset` solo tiene efecto cuando el elemento {{HTMLElement("source")}} es hijo directo de un elemento {{HTMLElement("picture")}}.
 
 - {{htmlattrdef("type")}}
-  - : El tipo MIME del recurso, opcionalmente con un parámetro `codecs`. Consultar [RFC 4281 ](https://tools.ietf.org/html/rfc4281)para obtener información sobre cómo especificar los códecs.
+  - : El tipo MIME del recurso, opcionalmente con un parámetro `codecs`. Consultar [RFC 4281](https://tools.ietf.org/html/rfc4281)para obtener información sobre cómo especificar los códecs.
 - {{htmlattrdef("media")}} {{experimental_inline}}
   - : [Consulta multimedia](/es/docs/CSS/Media_queries) de los medios destinados al recurso; esto solo debe usarse en un elemento {{HTMLElement("picture")}}.
 

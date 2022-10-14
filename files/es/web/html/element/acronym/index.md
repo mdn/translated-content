@@ -18,7 +18,7 @@ original_slug: Web/HTML/Elemento/acronym
     **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
     **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
-    
+
     **Puede contener**: cero o más elementos [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 #### Atributos
@@ -39,7 +39,7 @@ original_slug: Web/HTML/Elemento/acronym
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          ><span style="color: green">title</span></a
+          >title</a
         >
       </td>
       <td>
@@ -61,7 +61,7 @@ original_slug: Web/HTML/Elemento/acronym
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          ><span style="color: green">id</span></a
+          >id</a
         >
       </td>
       <td>
@@ -84,7 +84,7 @@ original_slug: Web/HTML/Elemento/acronym
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          ><span style="color: green">class</span></a
+          >class</a
         >
       </td>
       <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
@@ -104,7 +104,7 @@ original_slug: Web/HTML/Elemento/acronym
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          ><span style="color: green">style</span></a
+          >style</a
         >
       </td>
       <td>
@@ -129,7 +129,7 @@ original_slug: Web/HTML/Elemento/acronym
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          ><span style="color: green">lang</span></a
+          >lang</a
         >
       </td>
       <td>
@@ -159,7 +159,7 @@ original_slug: Web/HTML/Elemento/acronym
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">dir</span></a
+          >dir</a
         >
       </td>
       <td>

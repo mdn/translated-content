@@ -14,9 +14,9 @@ original_slug: Web/HTML/Elemento/strong
   - : **Sus etiquetas son**: \<strong> y \</strong> (ambas obligatorias)
   
     **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
-    
+
     **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
-    
+
     **Puede contener**: cero o más elementos [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 ##### Atributos Genéricos

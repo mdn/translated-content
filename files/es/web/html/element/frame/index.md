@@ -14,9 +14,9 @@ original_slug: Web/HTML/Elemento/frame
   - : **Sus etiquetas son**: `<frame>` (solo tiene una).
   
     **Está definido como**: Elemento [para marcos](es/HTML/Elemento/Tipos_de_elementos#paramarcos).
-    
+
     **Crea una caja**: .
-    
+
     **Puede contener**: Nada.
 
 #### Atributos
@@ -36,7 +36,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          ><span style="color: green">title</span></a
+          >title</a
         >
       </td>
       <td>
@@ -54,7 +54,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          ><span style="color: green">id</span></a
+          >id</a
         >
       </td>
       <td>
@@ -77,7 +77,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          ><span style="color: green">class</span></a
+          >class</a
         >
       </td>
       <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
@@ -92,7 +92,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          ><span style="color: green">style</span></a
+          >style</a
         >
       </td>
       <td>
@@ -125,7 +125,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-longdesc-FRAME"
-          ><span style="color: green">longdesc</span></a
+          >longdesc</a
         >
       </td>
       <td>
@@ -146,7 +146,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-name-FRAME"
-          ><span style="color: green">name</span></a
+          >name</a
         >
       </td>
       <td>
@@ -165,7 +165,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-src-FRAME"
-          ><span style="color: green">src</span></a
+          >src</a
         >
       </td>
       <td>Especifica la localización de los contenidos iniciales del marco.</td>
@@ -183,7 +183,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-frameborder"
-          ><span style="color: green">frameborder</span></a
+          >frameborder</a
         >
       </td>
       <td>Indica si el marco tendrá o no borde.</td>
@@ -194,7 +194,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-marginwidth"
-          ><span style="color: green">marginwidth</span></a
+          >marginwidth</a
         >
       </td>
       <td>Indica el margen izquierdo y derecho entre contenido y borde.</td>
@@ -207,7 +207,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-marginheight"
-          ><span style="color: green">marginheight</span></a
+          >marginheight</a
         >
       </td>
       <td>Indica el margen superior e inferior entre contenido y borde.</td>
@@ -220,7 +220,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-noresize"
-          ><span style="color: green">noresize</span></a
+          >noresize</a
         >
       </td>
       <td>Hace que la ventana del marco no sea redimensionable.</td>
@@ -231,7 +231,7 @@ original_slug: Web/HTML/Elemento/frame
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-scrolling"
-          ><span style="color: green">scrolling</span></a
+          >scrolling</a
         >
       </td>
       <td>

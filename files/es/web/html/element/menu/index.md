@@ -14,11 +14,11 @@ original_slug: Web/HTML/Elemento/menu
   - : **Sus etiquetas son**: \<menu> y \</menu> (ambas obligatorias).
   
     **Crea una caja**: [en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque).
-    
+
     **Está definido como**: [Elemento DESAPROBADO](es/HTML/Elemento/Tipos_de_elementos#desaprobado).
-    
+
     **Puede contener**: uno o más elementos [li](es/HTML/Elemento/li)
-    
+
     **NO puede contener**: [Elementos en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque)
 
 #### Atributos

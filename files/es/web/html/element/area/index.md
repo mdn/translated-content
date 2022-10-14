@@ -16,11 +16,11 @@ original_slug: Web/HTML/Elemento/area
   - : **Sus etiquetas son**: \<area> (solo tiene una).
   
     **Crea una caja**: No.
-    
+
     **Es un**: Elemento para mapas de imágenes.
-    
+
     **Puede contener**: Nada.
-    
+
     **Solo puede ser hijo de**: Elementos [map](es/HTML/Elemento/map).
 
 #### Atributos
@@ -41,7 +41,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          ><span style="color: green">title</span></a
+          >title</a
         >
       </td>
       <td>
@@ -63,7 +63,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          ><span style="color: green">id</span></a
+          >id</a
         >
       </td>
       <td>
@@ -86,7 +86,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          ><span style="color: green">class</span></a
+          >class</a
         >
       </td>
       <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
@@ -106,7 +106,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          ><span style="color: green">style</span></a
+          >style</a
         >
       </td>
       <td>
@@ -131,7 +131,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          ><span style="color: green">lang</span></a
+          >lang</a
         >
       </td>
       <td>
@@ -161,7 +161,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">dir</span></a
+          >dir</a
         >
       </td>
       <td>
@@ -199,7 +199,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-shape"
-          ><span style="color: green">shape</span></a
+          >shape</a
         >
       </td>
       <td>Indica la forma del área del mapa.</td>
@@ -214,7 +214,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-coords"
-          ><span style="color: green">coords</span></a
+          >coords</a
         >
       </td>
       <td>Indica las coordenadas (x,y) del área del mapa.</td>
@@ -229,7 +229,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/links.html#adef-href"
-          ><span style="color: green">href</span></a
+          >href</a
         >
       </td>
       <td>La dirección del recurso vínculado.</td>
@@ -250,7 +250,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-nohref"
-          ><span style="color: green">nohref</span></a
+          >nohref</a
         >
       </td>
       <td>Indica que el área no es activa, no tiene enlace.</td>
@@ -262,7 +262,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-alt"
-          ><span style="color: green">alt</span></a
+          >alt</a
         >
       </td>
       <td>
@@ -280,7 +280,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/interact/forms.html#adef-accesskey"
-          ><span style="color: green">accesskey</span></a
+          >accesskey</a
         >
       </td>
       <td>
@@ -303,7 +303,7 @@ original_slug: Web/HTML/Elemento/area
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/interact/forms.html#adef-tabindex"
-          ><span style="color: green">tabindex</span></a
+          >tabindex</a
         >
       </td>
       <td>Asigna un número de posición en el orden de tabulación.</td>

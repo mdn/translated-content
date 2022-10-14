@@ -14,12 +14,12 @@ original_slug: Web/HTML/Elemento/font
   - : **Sus etiquetas son**: \<font> y \</font> (ambas obligatorias).
 
     - **Está definido como**: Elemento [desaprobado](es/HTML/Elemento/Tipos_de_elementos#desaprobado).
-    
+
       - : En un doctype transicional está definido como un elemento [especial](es/HTML/Elemento/Tipos_de_elementos#especial) y por lo tanto [en línea](es/HTML/Elemento/Tipos_de_elementos#enlinea).
 
     **Crea una caja**: En línea.
 
-    **Puede contener**: Texto, y/o cero o más elementos [en línea ](es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **Puede contener**: Texto, y/o cero o más elementos [en línea](es/HTML/Elemento/Tipos_de_elementos#enlinea).
 
 #### Atributos
 
@@ -38,7 +38,7 @@ original_slug: Web/HTML/Elemento/font
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          ><span style="color: green">title</span></a
+          >title</a
         >
       </td>
       <td>
@@ -56,7 +56,7 @@ original_slug: Web/HTML/Elemento/font
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          ><span style="color: green">id</span></a
+          >id</a
         >
       </td>
       <td>
@@ -79,7 +79,7 @@ original_slug: Web/HTML/Elemento/font
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          ><span style="color: green">class</span></a
+          >class</a
         >
       </td>
       <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
@@ -94,7 +94,7 @@ original_slug: Web/HTML/Elemento/font
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          ><span style="color: green">style</span></a
+          >style</a
         >
       </td>
       <td>
@@ -118,7 +118,7 @@ original_slug: Web/HTML/Elemento/font
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          ><span style="color: green">lang</span></a
+          >lang</a
         >
       </td>
       <td>
@@ -144,7 +144,7 @@ original_slug: Web/HTML/Elemento/font
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">dir</span></a
+          >dir</a
         >
       </td>
       <td>
@@ -176,13 +176,13 @@ original_slug: Web/HTML/Elemento/font
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/graphics.html#adef-size-FONT"
-          ><span style="color: green">size</span></a
+          >size</a
         >
       </td>
       <td>Tamaño de la fuente. Según una tabla del 1 al 7.</td>
       <td>
         Un número entero (ej. 1), o un valor incremental (ej. +1).
-        <s>Por defecto:</s> debe indicarlo el autor.
+        Por defecto: debe indicarlo el autor.
       </td>
     </tr>
     <tr>
@@ -190,7 +190,7 @@ original_slug: Web/HTML/Elemento/font
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/graphics.html#adef-color-FONT"
-          ><span style="color: green">color</span></a
+          >color</a
         >
       </td>
       <td>El color del texto.</td>
@@ -208,7 +208,7 @@ original_slug: Web/HTML/Elemento/font
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/graphics.html#adef-face-FONT"
-          ><span style="color: green">face</span></a
+          >face</a
         >
       </td>
       <td>Especifica la/s fuentes para el texto.</td>

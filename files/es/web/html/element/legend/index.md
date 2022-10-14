@@ -14,11 +14,11 @@ original_slug: Web/HTML/Elemento/legend
   - : **Sus etiquetas son**: \<legend> y \</legend> (ambas obligatorias).
   
     **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque)
-    
+
     **Está definido como**:
-    
+
     **Debe contener**: cero o más elementos [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
-    
+
     **Debe estar contenido por**: debe ser el primer hijo de un elemento {{ HTMLElement("fieldset") }}
 
 #### Atributos

@@ -21,7 +21,7 @@ El **elemento HTML `<dd>`** provee detalles acerca de o la definición de un té
 
 {{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}
 
-La fuente para este ejemplo interactivo esta almacenado en un repositorio GitHub. Si desea contribuir al poryecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)y envíe una petición de extracción (pull request).
+La fuente para este ejemplo interactivo esta almacenado en un repositorio GitHub. Si desea contribuir al poryecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíe una petición de extracción (pull request).
 
 <table class="properties">
   <tbody>

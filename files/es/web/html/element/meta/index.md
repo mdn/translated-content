@@ -14,11 +14,11 @@ original_slug: Web/HTML/Elemento/meta
   - : **Sus etiquetas son**: `<meta>` (solo tiene una).
   
     **Está definido como**: Elemento [de cabecera](es/HTML/Elemento/Tipos_de_elementos#de_cabecera).
-    
+
     **Crea una caja**: No.
-    
+
     **Puede contener**: Nada.
-    
+
     **Puede ser contenido por**: Elementos [head](es/HTML/Elemento/head)
 
 #### Atributos
@@ -42,7 +42,7 @@ name = name {{ mediawiki.external('CS') }} Este atributo identifica un nombre de
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          ><span style="color: green">lang</span></a
+          >lang</a
         >
       </td>
       <td>
@@ -68,7 +68,7 @@ name = name {{ mediawiki.external('CS') }} Este atributo identifica un nombre de
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">dir</span></a
+          >dir</a
         >
       </td>
       <td>
@@ -94,7 +94,7 @@ name = name {{ mediawiki.external('CS') }} Este atributo identifica un nombre de
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-name-META"
-          ><span style="color: green">name</span></a
+          >name</a
         >
       </td>
       <td>Nombre al que se asocia la metainformación</td>
@@ -109,7 +109,7 @@ name = name {{ mediawiki.external('CS') }} Este atributo identifica un nombre de
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-content"
-          ><span style="color: green">content</span></a
+          >content</a
         >
       </td>
       <td>
@@ -126,7 +126,7 @@ name = name {{ mediawiki.external('CS') }} Este atributo identifica un nombre de
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-http-equiv"
-          ><span style="color: green">http-equiv</span></a
+          >http-equiv</a
         >
       </td>
       <td>
@@ -140,7 +140,7 @@ name = name {{ mediawiki.external('CS') }} Este atributo identifica un nombre de
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-scheme"
-          ><span style="color: green">scheme</span></a
+          >scheme</a
         >
       </td>
       <td>Indica un esquema de interpretación para los metadatos.</td>

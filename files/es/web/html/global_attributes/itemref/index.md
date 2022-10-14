@@ -52,7 +52,7 @@ El atributo itemref puede ser solo especificado en elementos que tienen un atrib
       <td></td>
       <td>itemprop</td>
       <td>name</td>
-      <td><span>Amanda</span></td>
+      <td>Amanda</td>
     </tr>
     <tr>
       <td>id=b</td>
@@ -68,14 +68,14 @@ El atributo itemref puede ser solo especificado en elementos que tienen un atrib
       <td></td>
       <td>itemprop</td>
       <td>Band</td>
-      <td><span>Jazz Band</span></td>
+      <td>Jazz Band</td>
     </tr>
     <tr>
       <td></td>
       <td></td>
       <td>itemprop</td>
       <td>Size</td>
-      <td><span>12</span></td>
+      <td>p</td>
     </tr>
   </tbody>
 </table>

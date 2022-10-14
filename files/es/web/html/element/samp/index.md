@@ -15,7 +15,7 @@ El elemento HTML Sample (**`<samp>`**) se utiliza para incluir texto en línea q
 
 {{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
 
-The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)and send us a pull request.
+The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)and send us a pull request.
 
 ### Definición
 
@@ -23,9 +23,9 @@ The source for this interactive example is stored in a GitHub repository. If you
   - : **Sus etiquetas son**: \<samp> y \</samp> (ambas obligatorias)
   
     **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
-    
+
     **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
-    
+
     **Puede contener**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 ##### Atributos Genéricos

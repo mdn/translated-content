@@ -14,9 +14,9 @@ original_slug: Web/HTML/Elemento/li
   - : **Sus etiquetas son**: \<li> y \</li> (la de cierre es opcional).
   
     **Crea una caja**: [en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque).
-    
+
     **Está definido como**:
-    
+
     **Puede contener**: cero o más elementos [en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque) o en [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
 #### Atributos

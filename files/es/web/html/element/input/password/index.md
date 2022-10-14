@@ -119,5 +119,3 @@ El ejemplo de arriba creará un elemento password que deberá contener 6 o más 
 | {{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}                         | {{Spec2('HTML4.01')}}     |            |
 
 > **Nota:** **Fix me:** Insert Browser Compatibility table here.
-
-##

@@ -14,9 +14,9 @@ original_slug: Web/HTML/Elemento/ins
   - : **Sus etiquetas son**: \<ins> e \</ins> (ambas obligatorias).
   
     **Crea una caja**: a veces [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
-    
+
     **Está definido como**:
-    
+
     **Puede contener**: depende, si actua como un elemento en bloque puede contener elementos en bloque. Pero si actua como un elemento en linea solo podrá contener elementos en linea.
 
 #### Atributos

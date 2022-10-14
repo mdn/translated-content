@@ -14,9 +14,9 @@ original_slug: Web/HTML/Elemento/applet
   - : **Sus etiquetas son**: \<applet> y \</applet> (ambas obligatorias)
   
     **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
-    
+
     **Está definido como**: [Elemento especial](es/HTML/Elemento/Tipos_de_elementos#Especiales). [Desaprobado](es/HTML/Elemento/Tipos_de_elementos#Desaprobado)
-    
+
     **Puede contener** cero o más elementos param o del tipo 'en flujo'.
 
 #### Atributos

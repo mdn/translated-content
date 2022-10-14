@@ -51,7 +51,7 @@ El _Elemento de Tabla HTML_ (`<table>`) representa datos en dos o mas dimensione
       </tr>
       <tr>
         <td>Omisión de etiqueta</td>
-        <td>Ninguna, ambas la <span title="syntax-start-tag">etiqueta de inicio</span> y <span title="syntax-end-tag">de fin</span> son obligatorias</td>
+        <td>Ninguna, ambas la etiqueta de inicio y de fin son obligatorias</td>
       </tr>
       <tr>
         <td>Elementos padre permitidos</td>

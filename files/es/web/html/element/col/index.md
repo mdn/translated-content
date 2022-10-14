@@ -14,9 +14,9 @@ original_slug: Web/HTML/Elemento/col
   - : **Sus etiquetas son**: `<col>` (solo tiene una).
   
     **Crea una caja**: No.
-    
+
     **Está definido como**: Elemento [para tablas.](es/HTML/Elemento/Tipos_de_elementos#para_tablas).
-    
+
     **Puede contener**: Nada.
 
 #### Atributos
@@ -37,7 +37,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          ><span style="color: green">title</span></a
+          >title</a
         >
       </td>
       <td>
@@ -59,7 +59,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          ><span style="color: green">id</span></a
+          >id</a
         >
       </td>
       <td>
@@ -82,7 +82,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          ><span style="color: green">class</span></a
+          >class</a
         >
       </td>
       <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
@@ -102,7 +102,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          ><span style="color: green">style</span></a
+          >style</a
         >
       </td>
       <td>
@@ -127,7 +127,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          ><span style="color: green">lang</span></a
+          >lang</a
         >
       </td>
       <td>
@@ -157,7 +157,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">dir</span></a
+          >dir</a
         >
       </td>
       <td>
@@ -195,7 +195,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/tables.html#adef-span-COL"
-          ><span style="color: green">span</span></a
+          >span</a
         >
       </td>
       <td>Indica el número de columnas afectadas.</td>
@@ -207,7 +207,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/tables.html#adef-width-COL"
-          ><span style="color: green">width</span></a
+          >width</a
         >
       </td>
       <td>Indica la anchura de las columnas.</td>
@@ -219,7 +219,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/tables.html#adef-align-TD"
-          ><span style="color: green">align</span></a
+          >align</a
         >
       </td>
       <td>Indica la alineación horizontal.</td>
@@ -231,7 +231,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/tables.html#adef-char"
-          ><span style="color: green">char</span></a
+          >char</a
         >
       </td>
       <td>Carácter que se usará como punto de alineación.</td>
@@ -246,7 +246,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/tables.html#adef-charoff"
-          ><span style="color: green">charoff</span></a
+          >charoff</a
         >
       </td>
       <td>offset del carácter de alineación.</td>
@@ -258,7 +258,7 @@ original_slug: Web/HTML/Elemento/col
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/tables.html#adef-valign"
-          ><span style="color: green">valign</span></a
+          >valign</a
         >
       </td>
       <td>Indica la alineación vertical de los contenidos de las celdas.</td>

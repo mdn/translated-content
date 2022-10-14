@@ -79,7 +79,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
   - : Este atributo, indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para salvarla como un archivo local. Si el atributo tiene un valor, éste se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace (sin embargo, el usuario puede cambiar el nombre antes de guardar el archivo). No hay restricciones sobre los valores permitidos, aunque: / y: \ se convertirán en guiones bajos (_underscores_), lo que evitará sugerencias de ruta específicas. Se debe tener en cuenta que la mayoría de los sistemas de archivos tienen limitaciones con respecto a los símbolos de puntuación admitidos en los nombres de archivo, por lo que los navegadores ajustarán los nombres de los archivos en consecuencia.
 
-    > **Nota:** 
+    > **Nota:**
     >
     > - Este atributo sólo funciona para las [políticas de mismo origen (same-origin URLs)](/es/docs/Web/Security/Same-origin_policy).
     > - Este atributo puede ser utilizado con [`blob:` URLs](/es/docs/Web/API/URL.createObjectURL) y [`data:` URLs](/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.
@@ -107,7 +107,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
     - `'unsafe-url'` significa que la referencia (_referrer_) incuirá el origen(`origin`) y la trayectoria (_path_), pero no el fragmento, contraseña o nombre de usuario. Esto es inseguro, ya que puede filtrar datos desde una URL segura hacia URLs inseguras.
 
 - {{htmlattrdef("rel")}}
-  - : Especifica la relación del objeto de destino con el objeto de enlace. El valor es una lista separada por espacios de tipos de enlace[ tipos de enlace (link types)](/es/docs/Web/HTML/Link_types).
+  - : Especifica la relación del objeto de destino con el objeto de enlace. El valor es una lista separada por espacios de tipos de enlace[tipos de enlace (link types)](/es/docs/Web/HTML/Link_types).
 - {{htmlattrdef("target")}}
 
   - : Especifica en donde desplegar la URL enlazada. Es un nombre (_name of_), o palabra clave (_keyword for_), un contexto de navegación _(browsing context)_: una pestaña, ventana, o `<iframe>`. Las siguientes palabras clave (_keywords_) tienen significado especial:
@@ -145,8 +145,6 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
   - : Este atributo era utilizado para definir una región de enlaces para crear un mapa de imagen. El valore es `circle`, `default`, `polygon`, y `rect`. El formato del atributo `coords` depende del valor de la forma geométrica. Para `circle`, el valor es `x,y,r` donde `x` y `y` son las coordenadas en pixel para el centro del círculo y `r` es el valor del radio en pixeles. Para `rect`, el atributo `coords` debe ser `x,y,w,h`. Los valores `x y y` definen la esquina superior izquierda del rectángulo, mientras que `w` y `h` definen el ancho y el alto respectivamente. Un valor del `polygon` para `shape` requiere los valores `x1,y1,x2,y2,...`para `coords`. Cada uno de los pares `x,y` definen un punto en el polígono, con puntos sucesivos que son unidos por líneas rectas y el útlimo punto se une al primer punto. El valor `default` para `shape` Requiere que el área encerrada, típicamente una imágen, sea utilizada.
 
     > **Nota:** Utilice el [atributo `usemap`](/es/docs/Web/HTML/Element/img#attr-usemap) para el elemento {{HTMLElement("img")}} y el elemento asociado {{HTMLElement("map")}} para definir puntos de acceso (_hotspots_) en lugar del atributo `shape`.
-
-##
 
 ## Ejemplos
 

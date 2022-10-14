@@ -14,9 +14,9 @@ original_slug: Web/HTML/Elemento/kbd
   - : **Sus etiquetas son**: \<kbd> y \</kbd> (ambas obligatorias)
   
     **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
-    
+
     **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
-    
+
     **Puede contener**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 #### Atributos
@@ -107,8 +107,6 @@ Si está conforme escriba <kbd>sí</kbd>. Si no, pulse <kbd>esc</kbd>
 Se visualiza asi
 
 Si esta conforme escriba <kbd>si</kbd>. Si no, pulse <kbd>esc</kbd>
-
-###
 
 ### Comentarios
 

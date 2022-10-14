@@ -40,7 +40,7 @@ original_slug: Web/HTML/Elemento/frameset
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          ><span style="color: green">title</span></a
+          >title</a
         >
       </td>
       <td>
@@ -58,7 +58,7 @@ original_slug: Web/HTML/Elemento/frameset
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          ><span style="color: green">id</span></a
+          >id</a
         >
       </td>
       <td>
@@ -81,7 +81,7 @@ original_slug: Web/HTML/Elemento/frameset
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          ><span style="color: green">class</span></a
+          >class</a
         >
       </td>
       <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
@@ -96,7 +96,7 @@ original_slug: Web/HTML/Elemento/frameset
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          ><span style="color: green">style</span></a
+          >style</a
         >
       </td>
       <td>
@@ -129,7 +129,7 @@ original_slug: Web/HTML/Elemento/frameset
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-rows-FRAMESET"
-          ><span style="color: green">rows</span></a
+          >rows</a
         >
       </td>
       <td>Asigna la disposición horizontal de los marcos.</td>
@@ -149,7 +149,7 @@ original_slug: Web/HTML/Elemento/frameset
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-cols-FRAMESET"
-          ><span style="color: green">cols</span></a
+          >cols</a
         >
       </td>
       <td>Asigna la disposición horizontal de los marcos.</td>

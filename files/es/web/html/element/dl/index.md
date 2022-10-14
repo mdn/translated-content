@@ -16,7 +16,7 @@ El elemento **HTML `<dl>`** representa una lista descriptiva. El elemento encier
 
 {{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
 
-El contenido para este ejemplo interactivo se encuentra almacenado en un repositorio GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, por favor clona [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)y envía la petición de extración (pull request).
+El contenido para este ejemplo interactivo se encuentra almacenado en un repositorio GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, por favor clona [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envía la petición de extración (pull request).
 
 <table class="properties">
   <tbody>

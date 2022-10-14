@@ -18,9 +18,9 @@ Es el elemento crea botones marcadores.
   - : **Sus etiquetas son**: \<button> y \</button> (ambas obligatorias).
   
     **Crea una caja**: en linea.
-    
+
     **Está definido como**: [Elemento de control para formulario](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
-    
+
     **Puede contener**: Texto y/o cero o más elementos [en Bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea) o [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea), con las siguientes excepciones: (A|%formctrl;|FORM|FIELDSET)
 
 ## Atributos
@@ -41,7 +41,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          ><span style="color: green">title</span></a
+          >title</a
         >
       </td>
       <td>
@@ -63,7 +63,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          ><span style="color: green">id</span></a
+          >id</a
         >
       </td>
       <td>
@@ -86,7 +86,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          ><span style="color: green">class</span></a
+          >class</a
         >
       </td>
       <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
@@ -106,7 +106,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          ><span style="color: green">style</span></a
+          >style</a
         >
       </td>
       <td>
@@ -131,7 +131,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          ><span style="color: green">lang</span></a
+          >lang</a
         >
       </td>
       <td>
@@ -161,7 +161,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">dir</span></a
+          >dir</a
         >
       </td>
       <td>
@@ -199,7 +199,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">name</span></a
+          >name</a
         >
       </td>
       <td>
@@ -225,7 +225,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">value</span></a
+          >value</a
         >
       </td>
       <td>Asigna un valor inicial que será enviado con el formulario.</td>
@@ -237,7 +237,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">type</span></a
+          >type</a
         >
       </td>
       <td>Indica el tipo de botón.</td>
@@ -249,7 +249,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">disabled</span></a
+          >disabled</a
         >
       </td>
       <td>Indica que el control está desabilitado.</td>
@@ -261,7 +261,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/interact/forms.html#adef-accesskey"
-          ><span style="color: green">accesskey</span></a
+          >accesskey</a
         >
       </td>
       <td>
@@ -285,7 +285,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/interact/forms.html#adef-tabindex"
-          ><span style="color: green">tabindex</span></a
+          >tabindex</a
         >
       </td>
       <td>Asigna un número de posición en el orden de tabulación.</td>
@@ -297,7 +297,7 @@ Es el elemento crea botones marcadores.
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">reserved</span></a
+          >reserved</a
         >
       </td>
       <td>Reservado para un uso futuro que nunca tubo. Inútil</td>

@@ -67,7 +67,7 @@ El elemento HTML Details **\<details>** es usado como un widget de revelación a
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales) .
 
 - {{htmlattrdef("open")}}
-  - : Este atributo Booleano indica si los detalles serán mostrados al usuario cuando la página se cargue . Por default el valor es `false `y por lo tanto los detalles estarán ocultos.
+  - : Este atributo Booleano indica si los detalles serán mostrados al usuario cuando la página se cargue . Por default el valor es `false`y por lo tanto los detalles estarán ocultos.
 
 ## Ejemplo
 
@@ -94,8 +94,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 ## Compatibilidad con navegadores
 
 {{Compat("html.elements.details")}}
-
-##
 
 ## Ver también
 

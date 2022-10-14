@@ -22,7 +22,7 @@ Puede representar uno de los contenidos siguientes:
 
 {{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-standard")}}
 
-La fuente de este ejemplo interactivo está almacenada en un repositorio de GitHub. Si desea contribuir al projecto, por favor clone [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)y envíe su solicitud de extracción (pull request).
+La fuente de este ejemplo interactivo está almacenada en un repositorio de GitHub. Si desea contribuir al projecto, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíe su solicitud de extracción (pull request).
 
 <table class="properties">
   <tbody>
@@ -108,7 +108,7 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
   - : `14:54`
   
     `14:54:39`
-    
+
     `14:54:39.929`
 - una cadena de fecha y hora local válida
   - : `2011-11-18T14:54:39.929`
@@ -118,13 +118,13 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
   - : `2011-11-18T14:54:39.929Z`
   
     `2011-11-18T14:54:39.929-0400`
-    
+
     `2011-11-18T14:54:39.929-04:00`
-    
+
     `2011-11-18 14:54:39.929Z`
-    
+
     `2011-11-18 14:54:39.929-0400`
-    
+
     `2011-11-18 14:54:39.929-04:00`
 - una cadena valida de duración
   - : `PT4H18M3S`

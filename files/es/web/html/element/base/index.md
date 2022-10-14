@@ -30,7 +30,7 @@ La dirección URL base de un documento puede ser consultado a partir de una secu
       </th>
       <td>
         <span class="short_text" id="result_box" lang="es"
-          ><span>Contenido de Metadatos</span></span
+          >Contenido de Metadatos</span
         >
       </td>
     </tr>
@@ -38,7 +38,7 @@ La dirección URL base de un documento puede ser consultado a partir de una secu
       <th>Contenido permitido</th>
       <td>
         <span class="short_text" id="result_box" lang="es"
-          ><span>Ninguno</span><span>, es un</span></span
+          >Ninguno, es un</span
         >
         {{Glossary("empty element")}}.
       </td>
@@ -47,19 +47,19 @@ La dirección URL base de un documento puede ser consultado a partir de una secu
       <th>Omisión de etiqueta</th>
       <td>
         <span class="short_text" id="result_box" lang="es"
-          ><span>No debe haber ninguna</span> <span>etiqueta de cierre</span
-          ><span>.</span></span
+          >No debe haber ninguna etiqueta de cierre</span
+          >.</span
         >
       </td>
     </tr>
     <tr>
       <th>Elementos padres permitidos</th>
       <td>
-        <span id="result_box" lang="es"><span>Cualquier</span></span>
+        Cualquier
         {{HTMLElement("head")}}
         <span id="result_box" lang="es"
-          ><span>que</span> <span>no contenga ningún</span>
-          <span>elemento </span></span
+          >que no contenga ningún
+          elemento </span
         >{{HTMLElement("base")}}
       </td>
     </tr>

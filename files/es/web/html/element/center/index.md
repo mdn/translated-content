@@ -16,7 +16,7 @@ original_slug: Web/HTML/Elemento/center
   - : **Sus etiquetas son**: \<center> y \</center> (ambas obligatorias).
   
     **Crea una caja**: [en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque).
-    
+
     **Está definido como**: [Elemento desaprobado](es/HTML/Elemento/Tipos_de_elementos#desaprobado).
 
     > Actualmente la mejor [forma de centrar texto no es con html](https://juanmcastro.es/tutoriales/como-centrar-texto-en-html/), con css tenemos infinidad de posibilidales para centrar el texto vertical, horizontal, izquierda, dercha, justificado y todo lo que necesitemos.

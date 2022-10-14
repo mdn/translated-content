@@ -63,10 +63,10 @@ El **elemento HTML** \<sup> define un fragmento de texto que se debe mostrar, po
     </tr>
     <tr>
       <th scope="row">
-        <font><font>Roles ARIA permitidos</font></font>
+        Roles ARIA permitidos
       </th>
       <td>
-        <font><font>Cualquiera</font></font>
+        Cualquiera
       </td>
     </tr>
     <tr>
@@ -94,7 +94,7 @@ Este elemento sólo incluye los [atributos globales](/es/docs/HTML/Global_attrib
 
 - Este elemento debe ser utilizado sólo por razones tipográficas, es decir, cambiar la posición del texto cambia su significado como en matemática (por ejemplo la fórmula matemática _f4_, aunque se debe considerar el uso de [MathML](/es/docs/Web/MathML)) o en las abreviaturas francesas (por ejemplo Mlle, Mme or Cie).
 - Este elemento también se puede encontrar siguiendo palabras o frases. Estas anotaciones indican una entrada bibliográfica y se conocen como "notas al pie."
-- Este elemento no debe ser utilizado para propósitos meramente visuales, como el estilo del logo del software[ LaTeX](https://es.wikipedia.org/wiki/LaTeX) [![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png). En ese caso debe usarse la propiedad de [CSS](/es/docs/CSS) `vertical-align` para lograr el mismo efecto.
+- Este elemento no debe ser utilizado para propósitos meramente visuales, como el estilo del logo del software[LaTeX](https://es.wikipedia.org/wiki/LaTeX) [![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png). En ese caso debe usarse la propiedad de [CSS](/es/docs/CSS) `vertical-align` para lograr el mismo efecto.
 
 ## Ejemplos
 

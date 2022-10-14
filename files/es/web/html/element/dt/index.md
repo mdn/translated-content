@@ -23,7 +23,7 @@ El subsecuente elemento {{HTMLElement("dd")}} (**Detalles de la descripción**) 
 
 {{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
 
-La fuente para este ejemplo interactivo se encuetra almacenado en un repositorio GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)y envíe una petición de extración (pull request).
+La fuente para este ejemplo interactivo se encuetra almacenado en un repositorio GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíe una petición de extración (pull request).
 
 <table class="properties">
   <tbody>

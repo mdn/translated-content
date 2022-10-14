@@ -94,7 +94,7 @@ Los navegadores generan un controlador para un botón clickable sin valor por de
       <td>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement"
-          title="The HTMLButtonElement interface provides properties and methods (beyond the <button> object interface it also has available to them by inheritance) for manipulating the layout and presentation of button elements."
+          title="The HTMLButtonElement interface provides properties and methods (beyond the \<button> object interface it also has available to them by inheritance) for manipulating the layout and presentation of button elements."
           ><code>HTMLButtonElement</code></a
         >
       </td>
@@ -121,7 +121,7 @@ Este elemento puede tener cualquiera de los [atributos globales](/es/docs/HTML/G
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
   - : El uso de este atributo en un {{HTMLElement("button")}} es algo fuera de lo común, y específico de Firefox. Firefox, por defecto y al contrario de otros navegadores, [mantiene por defecto el estado de desactivación dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un {{HTMLElement("button")}} a lo largo de las cargas de la página. Establecer el valor de este atributo a `off` (`autocomplete="off"`) desactiva esta característica.
 - {{htmlattrdef("form")}} {{HTMLVersionInline(5)}}
-  - : El elemento del formulario con el que el botón está asociado (es _dueño del formulario_). El valor del atributo debe ser el atributo **id** de un elemento {{HTMLElement("form")}} en el mismo documento. Si este atributo no está especificado, el elemento `<button> `debe ser hijo de un elemento "formulario". Este atributo le permite colocar elementos `<button>` en cualquier lugar de un documento, y no únicamento como hijos del elemento {{HTMLElement("form")}}.
+  - : El elemento del formulario con el que el botón está asociado (es _dueño del formulario_). El valor del atributo debe ser el atributo **id** de un elemento {{HTMLElement("form")}} en el mismo documento. Si este atributo no está especificado, el elemento `<button>`debe ser hijo de un elemento "formulario". Este atributo le permite colocar elementos `<button>` en cualquier lugar de un documento, y no únicamento como hijos del elemento {{HTMLElement("form")}}.
 - {{htmlattrdef("formenctype")}}
 
   - : Debido a que el elemento de input es un botón de envío, el atributo **`formenctype`** especifica el tipo de contenido que se usa para enviar el formulario al servidor. Los valores posibles son:
@@ -144,7 +144,7 @@ Este elemento puede tener cualquiera de los [atributos globales](/es/docs/HTML/G
     Si se especifica, este atributo anula el atributo {{htmlattrxref("method","form")}} del formulario dueño del elemento.
 
 - {{htmlattrdef("formnovalidate")}}
-  - : Debido a que el elemento de input es un botón de envío, el atributo **`formnovalidate `** especifica que el formulario no debe ser validado cuando sea enviado. Si este atributo es especificado, se anula el atributo {{htmlattrxref("novalidate","form")}} del formulario dueño del elemento. Este atributo es Booleano.
+  - : Debido a que el elemento de input es un botón de envío, el atributo **`formnovalidate`** especifica que el formulario no debe ser validado cuando sea enviado. Si este atributo es especificado, se anula el atributo {{htmlattrxref("novalidate","form")}} del formulario dueño del elemento. Este atributo es Booleano.
 - {{htmlattrdef("formtarget")}}
 
   - : Debido a que el elemento de input es un botón de envío, el atributo **`formtarget`** es un nombre o palabra clave que indica donde mostrar la respuesta recibida después de enviar el formulario. Este es un nombre de, o palabra clave para, un _contexto navegable_ (por ejemplo, pestaña, ventana, o inline frame). Si este atributo es especificado, se sobreescribirá el atributo {{htmlattrxref("target", "form")}} del formulario dueño del elemento. Las siguientes palabras claves tienen significados especiales:

@@ -14,9 +14,9 @@ original_slug: Web/HTML/Elemento/ol
   - : **Sus etiquetas son**: \<ol> y \</ol> (ambas obligatorias).
   
     **Crea una caja**: [en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque).
-    
+
     **Está definido como**: [Elemento de lista](es/HTML/Elemento/Tipos_de_elementos#de_lista).
-    
+
     **Puede contener**: uno o más elementos [li](es/HTML/Elemento/li)
 
 #### Atributos
@@ -120,8 +120,8 @@ El siguiente código:
 
 Se visualiza así:
 
-1.  punto uno
-2.  punto dos
-3.  punto tres
+1. punto uno
+2. punto dos
+3. punto tres
 
 ### Comentarios

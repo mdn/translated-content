@@ -14,9 +14,9 @@ original_slug: Web/HTML/Elemento/ul
   - : **Sus etiquetas son**: `<ul> y </ul>` (ambas obligatorias).
   
     **Está definido como**: Elemento [para listas](es/HTML/Elemento/Tipos_de_elementos#delista).
-    
+
     **Crea una caja**: En bloque.
-    
+
     **Puede contener**: Uno o más elementos [li](es/HTML/Elemento/li)
 
 #### Atributos
@@ -36,7 +36,7 @@ original_slug: Web/HTML/Elemento/ul
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          ><span style="color: green">title</span></a
+          >title</a
         >
       </td>
       <td>
@@ -54,7 +54,7 @@ original_slug: Web/HTML/Elemento/ul
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          ><span style="color: green">id</span></a
+          >id</a
         >
       </td>
       <td>
@@ -77,7 +77,7 @@ original_slug: Web/HTML/Elemento/ul
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          ><span style="color: green">class</span></a
+          >class</a
         >
       </td>
       <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
@@ -92,7 +92,7 @@ original_slug: Web/HTML/Elemento/ul
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          ><span style="color: green">style</span></a
+          >style</a
         >
       </td>
       <td>
@@ -116,7 +116,7 @@ original_slug: Web/HTML/Elemento/ul
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          ><span style="color: green">lang</span></a
+          >lang</a
         >
       </td>
       <td>
@@ -142,7 +142,7 @@ original_slug: Web/HTML/Elemento/ul
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          ><span style="color: green">dir</span></a
+          >dir</a
         >
       </td>
       <td>
@@ -165,7 +165,7 @@ original_slug: Web/HTML/Elemento/ul
         <a
           class="external"
           href="http://html.conclase.net/w3c/html401-es/interact/scripts.html#events"
-          ><span style="color: green">Eventos:</span></a
+          >Eventos:</a
         >
         <code style="color: green"
           >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
